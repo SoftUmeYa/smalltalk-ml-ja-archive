@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2954] Re: セキュリティについての質問です
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202954%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU7JS0lZSVqJUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSMkSyREJCQkRiROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=7aa126770605140852j4a92be8el4f2b8ebcf44c0f81%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002953.html">
+   <LINK REL="Next"  HREF="002977.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2954] Re: セキュリティについての質問です</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202954%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU7JS0lZSVqJUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSMkSyREJCQkRiROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=7aa126770605140852j4a92be8el4f2b8ebcf44c0f81%40mail.gmail.com"
+       TITLE="[Squeak-ja: 2954] Re: セキュリティについての質問です">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2006年 5月 15日 (月) 20:10:32 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002953.html">[Squeak-ja: 2953] Re: セキュリティについての質問です
+</A></li>
+        <LI>次の記事 <A HREF="002977.html">[Squeak-ja: 2977] Re: セキュリティについての質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2954">[ 日付 ]</a>
+              <a href="thread.html#2954">[ スレッド ]</a>
+              <a href="subject.html#2954">[ 件名 ]</a>
+              <a href="author.html#2954">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+&gt;<i> scamperを立ち上げて操作する場合のセキュリティリスクについての質問と
+</I>&gt;<i> 記述すべきでした。要領が悪くお手数をおかけしてしまいました。ごめんなさい。
+</I>&gt;<i> 投稿時には、もしかしたらscamper以外にもsqueakのブラウザは複数存在する
+</I>&gt;<i> のかも知れないと思っており、曖昧な記述となりましたことをお詫びいたします。
+</I>
+  いえいえ。かまわないですよ。
+
+  ただ、「子供がScamperを使う」というその状況があまり想像できなかった
+ので、おもわず逆の状況を想定してしまいました。すみません。
+
+  Scamperは実験的なもので、そもそもBasic認証程度以上のことをしているサ
+イトではほとんど何もできないと思います。そもそも、なぜScamperを使おう
+と思われたのか、使ってみて「これは役に立たないな」と思われなかったのか
+^^;そこが気になります。
+
+&gt;<i> その後、少し書籍なども読みつつ、まだよく理解できていないのですが、
+</I>&gt;<i> ブロードバンドルータや、セキュリティソフトの設定があれば十分安全そうだと
+</I>&gt;<i> 解釈しました。
+</I>
+  そうですね。ただ、それを実行しているSqueakイメージの状態を変えるよう
+な事は、セキュリティソフトなどの感知しない範囲でやろうと思えばできると
+思います。
+
+&gt;<i> 例えば、特定のポータルサイトにはセキュリティを緩和しないとログインできない例の
+</I>&gt;<i> ように、scamperにもそういうことがあるのでは？などとも思いつつ、まだ簡単なテストしか
+</I>&gt;<i> 出来ていません。
+</I>&gt;<i> （しかも、scamperを立ち上げてみたら、接続できませんでした。前回は接続できたので
+</I>&gt;<i> 何が違うのか、時間のあるときに原因を調べなければと勉強中です）
+</I>
+  Scamperにはセキュリティレベルの緩和というような機能はないです。basic 
+認証でアクセスできる、という程度ですので。
+
+&gt;<i> ウイルス的なものをとりあえず心配せずとも良い。というのは、技術的に悪意のある
+</I>&gt;<i> プログラムを進入させることが極めて困難であり、他のブラウザよりも安全だと言うこと
+</I>&gt;<i> なのか、又はユーザの傾向やシェアの規模から前例が無く、可能性が低いのか、
+</I>&gt;<i> 誠に申し訳ないのですが、もう少しご教授願えませんでしょうか？
+</I>
+  これは、両方です。例えばIEのように、Windowsのことをよく知っているが
+ために、悪意のあるプログラムにIEの弱点経由でWindowsの弱いところをつか
+せてしまう、というようなことはありません。ScamperはWindowsのことは何も
+知りませんので。
+
+  しかし、ユーザの不注意により、例えばScamper中に表示されているページ
+をSqueakの式として評価してしまって、その式がSqueakイメージの何かを書き
+換えてしまうようなものだったというようなことがあれば、そのSqueak イメー
+ジには問題が及ぶ可能性はありますし、もしIEのようなブラウザの中で動かし
+ていなければ、ファイルを書き換えることによってOS に影響を与えることも
+可能とは思います。それでも普通のブラウザより危険、ということはないです。
+
+  もちろん、Scamperを狙った「悪いページ」というのはまずほとんどないと
+思いますので、そういう面ではとりあえず安心はできます。
+
+&gt;<i> 前者ならば、子供達と家庭にその旨伝えて、scamperの使用を推奨したいと思います。
+</I>
+  なぜScamperなのか、というところにまだ疑問を感じてしまうので、よろし
+ければScamperを使いたい理由をお聞かせください。
+
+-- Yoshiki
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002953.html">[Squeak-ja: 2953] Re: セキュリティについての質問です
+</A></li>
+	<LI>次の記事 <A HREF="002977.html">[Squeak-ja: 2977] Re: セキュリティについての質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2954">[ 日付 ]</a>
+              <a href="thread.html#2954">[ スレッド ]</a>
+              <a href="subject.html#2954">[ 件名 ]</a>
+              <a href="author.html#2954">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

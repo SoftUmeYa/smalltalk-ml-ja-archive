@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3749] Re: Unix用のリクエストいくつか
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203749%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVuaXgbJEJNUSROJWobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lKCU5JUgkJCQvJEQkKxsoQg%3D%3D%3F%3D&In-Reply-To=JC200710222352313.4754328%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003710.html">
+   <LINK REL="Next"  HREF="003671.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3749] Re: Unix用のリクエストいくつか</H1>
+    <B>Tsutomu Hiroshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203749%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVuaXgbJEJNUSROJWobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lKCU5JUgkJCQvJEQkKxsoQg%3D%3D%3F%3D&In-Reply-To=JC200710222352313.4754328%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3749] Re: Unix用のリクエストいくつか">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2007年 10月 29日 (月) 13:34:14 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003710.html">[Squeak-ja: 3710] Re: Unix用のリクエストいくつか
+</A></li>
+        <LI>次の記事 <A HREF="003671.html">[Squeak-ja: 3671] Re: お待たせしました Mac 版 2005J2 です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3749">[ 日付 ]</a>
+              <a href="thread.html#3749">[ スレッド ]</a>
+              <a href="subject.html#3749">[ 件名 ]</a>
+              <a href="author.html#3749">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>廣島です．お久しぶりです．
+遅ればせながら，エラーをこちらでも確認しました．
+
+platforms/unix/vm/sqUnixEvent.c
+
+で，インプットイベントの循環バッファのサイズが，
+
+#define IEB_SIZE         64     /* must be power of 2 */
+
+となっています．
+変換文字列が一定数以上だとバッファを1周して
+変換文字列の最初を上書きしてしまい問題が生じるようです．
+utf8 あ 11文字で 33 バイト，
+EventKeyDown と EventKeyChar のイベントが各バイトで生じるので，
+66個のイベントが一度に生じます．計算はぴったり合います．
+
+さて，どう対処したものか？
+=================
+廣島　勉
+Tsutomu Hiroshima
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003710.html">[Squeak-ja: 3710] Re: Unix用のリクエストいくつか
+</A></li>
+	<LI>次の記事 <A HREF="003671.html">[Squeak-ja: 3671] Re: お待たせしました Mac 版 2005J2 です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3749">[ 日付 ]</a>
+              <a href="thread.html#3749">[ スレッド ]</a>
+              <a href="subject.html#3749">[ 件名 ]</a>
+              <a href="author.html#3749">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

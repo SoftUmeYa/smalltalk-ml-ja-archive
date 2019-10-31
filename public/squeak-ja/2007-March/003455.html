@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3455] Re: MorphとMVCについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203455%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1vcnBoGyRCJEgbKEJNVkM%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=JK200703091729504.15660109%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003448.html">
+   <LINK REL="Next"  HREF="003456.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3455] Re: MorphとMVCについて</H1>
+    <B>Sho Yoshida</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203455%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1vcnBoGyRCJEgbKEJNVkM%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=JK200703091729504.15660109%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3455] Re: MorphとMVCについて">newapplesho ＠ gmail.com
+       </A><BR>
+    <I>2007年 3月 10日 (土) 21:48:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003448.html">[Squeak-ja: 3448] Re: MorphとMVCについて
+</A></li>
+        <LI>次の記事 <A HREF="003456.html">[Squeak-ja: 3456] Re: MorphとMVCについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3455">[ 日付 ]</a>
+              <a href="thread.html#3455">[ スレッド ]</a>
+              <a href="subject.html#3455">[ 件名 ]</a>
+              <a href="author.html#3455">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは、吉田です。
+梅沢さんありがとうございました。
+疑問はわかりました。
+Morphicは本当に奥が深いですね。
+
+ただ、MVCもしっかり理解できていないためか実際にそのような 
+作り方ができません。
+何かSqueakにいいサンプルはないでしょうか。
+
+
+On 2007/03/09, at 17:29, Masashi Umezawa wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;<i> Sho Yoshida &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>&gt; wrote:
+</I>&gt;&gt;<i> はじめまして、吉田と言います。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 大学のゼミでSqueakを知り,勉強しているものです.
+</I>&gt;&gt;<i> Smalltalkを最近勉強して疑問に思ったのですが,Squeakの
+</I>&gt;&gt;<i> MorphでのアプリケーションはSmalltalkのMVCのような開
+</I>&gt;&gt;<i> 発をしているのでしょうか.
+</I>&gt;<i>
+</I>&gt;<i> これは時と場合によりけりだと思います。Morphicは、M 
+</I>&gt;<i> とVとCが一体化したところ
+</I>&gt;<i> に強みがあるのですが、そうとはいえ、一つのモデルを複数のビュー 
+</I>&gt;<i> で見たいと
+</I>&gt;<i> いう場合もあるでしょう。
+</I>&gt;<i>
+</I>&gt;<i> そのようなときには、MorphをMVCでいうところの 
+</I>&gt;<i> VC一体型のコンポーネントと
+</I>&gt;<i> みなし、モデルを別のオブジェクトとして分離させるということをし 
+</I>&gt;<i> ます。
+</I>&gt;<i>
+</I>&gt;<i> ちょっと古くて恐縮ですが、以下のようなことを以前書きました。
+</I>&gt;<i> こちらも参考になるかもしれません。
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.ogis-ri.co.jp/otc/otc2/oosquare-ml/Archive/200111.month/">http://www.ogis-ri.co.jp/otc/otc2/oosquare-ml/Archive/200111.month/</A> 
+</I>&gt;<i> 2424.html
+</I>&gt;<i>
+</I>&gt;&gt;<i> またSystem Browserのインスペクターにinspect modelと
+</I>&gt;&gt;<i> いう項目はMVCと関係あるものなのでしょうか.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> これは関係がありますね。モデルとしてはBrowser(クラスカテ 
+</I>&gt;<i> ゴリやクラス群、
+</I>&gt;<i> 現在の選択などを表示に関係なく保持しているもの)、ビュー 
+</I>&gt;<i> としてはMorph
+</I>&gt;<i> の集合体でできているというのが、普段私たちがMorphic環境 
+</I>&gt;<i> で見ているブラウザ
+</I>&gt;<i> です。
+</I>&gt;<i>
+</I>&gt;<i> 同じBrowserというモデルは、MVCの環境でも使われま 
+</I>&gt;<i> す。この場合、古典的な
+</I>&gt;<i> ViewとCcontroller群がMorph達の代わりにくっついてい 
+</I>&gt;<i> るのです。
+</I>&gt;<i>
+</I>&gt;<i> ではでは。
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa]
+</I>&gt;<i>
+</I>
+- - - -
+Sho Yoshida
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003448.html">[Squeak-ja: 3448] Re: MorphとMVCについて
+</A></li>
+	<LI>次の記事 <A HREF="003456.html">[Squeak-ja: 3456] Re: MorphとMVCについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3455">[ 日付 ]</a>
+              <a href="thread.html#3455">[ スレッド ]</a>
+              <a href="subject.html#3455">[ 件名 ]</a>
+              <a href="author.html#3455">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

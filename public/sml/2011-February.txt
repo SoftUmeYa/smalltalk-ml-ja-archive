@@ -1,0 +1,291 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Feb  2 00:41:38 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 02 Feb 2011 00:41:38 +0900
+Subject: [SML 7894] Re:
+ 第28回Smalltalk勉強会＠京都
+In-Reply-To: <4D3F7509.2090002@cc.kyoto-su.ac.jp>
+References: <4D3F7509.2090002@cc.kyoto-su.ac.jp>
+Message-ID: <4D4829B2.4000800@cc.kyoto-su.ac.jp>
+
+リマインダーです。本日、開催。
+
+--- 青木淳
+
+(11/01/26 10:12), AOKI Atsushi wrote:
+> せっかくの年明け早々の勉強会を休会してしまい、申し訳ありませ
+> んでした。
+> 
+> 第28回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+> JR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto28
+> 
+> 場所はキャンプラ6階の第3講習室になります。
+> 
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+> 
+> 第28回 Smalltalk勉強会＠京都
+> 日時：2011年02月02日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 古風なブラウザをもう少しだけリファクタリングしようと思います。
+> キーボートのフッキングやメニューのインディケーションなどを扱
+> い、さらにメソッドやクラスの登録および変更ができるようにして、
+> リフレクティブなプログラミングや開発環境の本質を勉強しましょ
+> う。ノート型のパーソナルコンピュータ（Windows 7/Vista/XP また
+> は Mac OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Feb  3 08:50:19 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 03 Feb 2011 08:50:19 +0900
+Subject: [SML 7895] Re:
+ 第28回Smalltalk勉強会＠京都
+In-Reply-To: <4D3F7509.2090002@cc.kyoto-su.ac.jp>
+References: <4D3F7509.2090002@cc.kyoto-su.ac.jp>
+Message-ID: <4D49EDBB.7090507@cc.kyoto-su.ac.jp>
+
+おはようございます、青木＠京都上賀茂です。
+
+昨日に行ったSmalltalk勉強会@京都の報告です。そのメインテーマ
+は「Hook」になります。フックやホックと呼び慣わされています。
+
+このメールに昨夜に作成したプログラムを添付しておきます。
+2011年1月4日(火)にポストさせていただいた添付コード(SSK10.st)
+http://www.smalltalk.jp/pipermail/sml/2011-January/007890.html
+を改良しているところです。（差分をとってくださいませ。）
+
+また、安田さんからの詳細なログがあります。（すごい↓）
+http://aokilab.kyoto-su.ac.jp/aoki/misc/pdfs/SSK10_fromYasuda.pdf
+Ustreamなどで勉強会の模様を生中継しなくともイケるほどです。
+
+京都の勉強会のモットーは「Smalltalkをゆっくりと深く！」
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SSK10_20110202.st
+型:         text/xml
+サイズ:     9577 バイト
+説明:       無し
+URL:        <http://www.smalltalk.jp/pipermail/sml/attachments/20110203/99b9e38e/attachment.bin>
+
+From yasuda ＠ mfc.bakkers.gr.jp  Thu Feb  3 10:48:30 2011
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu, 3 Feb 2011 10:48:30 +0900
+Subject: [SML 7896] Re:
+ 第28回Smalltalk勉強会＠京都
+In-Reply-To: <4D49EDBB.7090507@cc.kyoto-su.ac.jp>
+References: <4D3F7509.2090002@cc.kyoto-su.ac.jp>
+ <4D49EDBB.7090507@cc.kyoto-su.ac.jp>
+Message-ID: <BCB68EF3-EDAB-49EA-90FD-31B4DB18436D@mfc.bakkers.gr.jp>
+
+安田です。
+
+今回はフックルーチンにフックルーチンを登録するというのが
+面白かったです。
+
+1. 目標となるテキストフィールドのキーイベントハンドラを、
+　そのテキストフィールドのコントローラに登録するのだが、
+2. その処理自体をテキストフィールドがビルダーによって組み
+　立てられている際に呼ばれるフックルーチンに登録する
+　（ビルダーはその時そいつのコントローラを知っているから）
+
+という入れ子になっている。。。
+
+登録方法も前者はクロージャによるもので、後者はメソッドの
+登録だった。
+
+なお僕のログはあくまで私の脳内ログですので誤りなどあるかと
+思いますがご容赦下さいませ。
+
+（2 hours のライブをノートして、帰宅して（判ってない奴が！）
+　また2 hours でざっとまとめてるので、、はい、、いま見直したら
+　違うメソッドの図を引っ張ってるのが一つあったり、メソッドの
+　コロンがあったりなかったりですね、、ま、大筋は間違ってない
+　と思いますが、、(^_^!) ）
+
+でわでわ									Yasu.
+
+
+On 2011/02/03, at 8:50, AOKI Atsushi wrote:
+
+> おはようございます、青木＠京都上賀茂です。
+> 
+> 昨日に行ったSmalltalk勉強会@京都の報告です。そのメインテーマ
+> は「Hook」になります。フックやホックと呼び慣わされています。
+> 
+> このメールに昨夜に作成したプログラムを添付しておきます。
+> 2011年1月4日(火)にポストさせていただいた添付コード(SSK10.st)
+> http://www.smalltalk.jp/pipermail/sml/2011-January/007890.html
+> を改良しているところです。（差分をとってくださいませ。）
+> 
+> また、安田さんからの詳細なログがあります。（すごい↓）
+> http://aokilab.kyoto-su.ac.jp/aoki/misc/pdfs/SSK10_fromYasuda.pdf
+> Ustreamなどで勉強会の模様を生中継しなくともイケるほどです。
+> 
+> 京都の勉強会のモットーは「Smalltalkをゆっくりと深く！」
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+> <SSK10_20110202.st>
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Feb  3 14:54:15 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 03 Feb 2011 14:54:15 +0900
+Subject: [SML 7897] Re:
+ 第28回Smalltalk勉強会＠京都
+In-Reply-To: <BCB68EF3-EDAB-49EA-90FD-31B4DB18436D@mfc.bakkers.gr.jp>
+References: <4D3F7509.2090002@cc.kyoto-su.ac.jp>
+ <4D49EDBB.7090507@cc.kyoto-su.ac.jp>
+ <BCB68EF3-EDAB-49EA-90FD-31B4DB18436D@mfc.bakkers.gr.jp>
+Message-ID: <4D4A4307.4010003@cc.kyoto-su.ac.jp>
+
+ウェブページからも容易に題材プログラムや補足資料を
+アクセスできるようにしておきました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto28
+
+--- 青木淳＠京都上賀茂：今夜は修学サポータたちと打ち上げ
+
+(11/02/03 10:48), Yasuda Yutaka wrote:
+> 安田です。
+> 
+> 今回はフックルーチンにフックルーチンを登録するというのが
+> 面白かったです。
+> 
+> 1. 目標となるテキストフィールドのキーイベントハンドラを、
+> 　そのテキストフィールドのコントローラに登録するのだが、
+> 2. その処理自体をテキストフィールドがビルダーによって組み
+> 　立てられている際に呼ばれるフックルーチンに登録する
+> 　（ビルダーはその時そいつのコントローラを知っているから）
+> 
+> という入れ子になっている。。。
+> 
+> 登録方法も前者はクロージャによるもので、後者はメソッドの
+> 登録だった。
+> 
+> なお僕のログはあくまで私の脳内ログですので誤りなどあるかと
+> 思いますがご容赦下さいませ。
+> 
+> （2 hours のライブをノートして、帰宅して（判ってない奴が！）
+> 　また2 hours でざっとまとめてるので、、はい、、いま見直したら
+> 　違うメソッドの図を引っ張ってるのが一つあったり、メソッドの
+> 　コロンがあったりなかったりですね、、ま、大筋は間違ってない
+> 　と思いますが、、(^_^!) ）
+> 
+> でわでわ									Yasu.
+> 
+> 
+> On 2011/02/03, at 8:50, AOKI Atsushi wrote:
+> 
+>> おはようございます、青木＠京都上賀茂です。
+>>
+>> 昨日に行ったSmalltalk勉強会@京都の報告です。そのメインテーマ
+>> は「Hook」になります。フックやホックと呼び慣わされています。
+>>
+>> このメールに昨夜に作成したプログラムを添付しておきます。
+>> 2011年1月4日(火)にポストさせていただいた添付コード(SSK10.st)
+>> http://www.smalltalk.jp/pipermail/sml/2011-January/007890.html
+>> を改良しているところです。（差分をとってくださいませ。）
+>>
+>> また、安田さんからの詳細なログがあります。（すごい↓）
+>> http://aokilab.kyoto-su.ac.jp/aoki/misc/pdfs/SSK10_fromYasuda.pdf
+>> Ustreamなどで勉強会の模様を生中継しなくともイケるほどです。
+>>
+>> 京都の勉強会のモットーは「Smalltalkをゆっくりと深く！」
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>> <SSK10_20110202.st>
+
+From umejava ＠ mars.dti.ne.jp  Sun Feb 20 23:01:17 2011
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun, 20 Feb 2011 23:01:17 +0900
+Subject: [SML 7898]
+	第29回Smalltalk勉強会のお知らせ
+Message-ID: <JxZ6cJ6WsaY2.hybFr6swYMg8@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/2/28(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai29kaismalltalkbenkyoukai
+
+今回のテーマはJNIPortです。
+SmalltalkからJavaのオブジェクトにメッセージを送るための仕組みです。
+豊富なJavaのライブラリをSmalltalkのいつもの書き方で気軽に活用できます。
+ワークスペースから対話的に実行できるので、Javaが動的な感じになります。
+なかなか新鮮ですよ。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From poketo7878 ＠ yahoo.co.jp  Mon Feb 21 23:20:40 2011
+From: poketo7878 ＠ yahoo.co.jp (Pocket)
+Date: Mon, 21 Feb 2011 23:20:40 +0900
+Subject: [SML 7899]
+	自己紹介 十亀 眞怜
+Message-ID: <4D6274B8.6000104@yahoo.co.jp>
+
+ 　はじめまして、MLに登録させていただきました。十亀　眞怜(そがめ　まさ
+と)ともうします。
+ネット上ではPocket(7878)やポケットというハンドルネーム
+を使っています。(TwitterはPocketがとれなかったのでHannibal7878になってい
+ます)
+最近Smalltalkをはじめたばかりで、まだ解らない事だらけですが、宜しくお願
+い致します。
+
+Twitter: Hannibal7878
+
+-- 
+Masato Sogame
+<poketo7878 ＠ yahoo.co.jp>
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Feb 23 10:20:39 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 23 Feb 2011 10:20:39 +0900
+Subject: [SML 7900]
+ 第29回Smalltalk勉強会＠京都
+Message-ID: <4D6460E7.2080501@cc.kyoto-su.ac.jp>
+
+第29回Smalltalk勉強会＠京都を開催します。
+万障繰り合わせてJR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto29
+
+場所はキャンプラ6階の第3講習室になります。
+
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第29回 Smalltalk勉強会＠京都
+日時：2011年03月02日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+前回はキーボートのフッキングやメニューのインディケーションなどを行いましたので、
+今回はメソッドやクラスの登録および変更ができるようにして、
+リフレクティブなプログラミングや開発環境の本質を勉強しましょう。
+ノート型のパーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+

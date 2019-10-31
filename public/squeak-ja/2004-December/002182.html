@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2182] Re: SuperSwiki 日本語パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202182%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsJVElQyVBGyhC%3F%3D&In-Reply-To=41CCC555.5000806%40asu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002175.html">
+   <LINK REL="Next"  HREF="002176.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2182] Re: SuperSwiki 日本語パッチ</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202182%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsJVElQyVBGyhC%3F%3D&In-Reply-To=41CCC555.5000806%40asu.ac.jp"
+       TITLE="[Squeak-ja: 2182] Re: SuperSwiki 日本語パッチ">tak ＠ metatoys.org
+       </A><BR>
+    <I>2004年 12月 25日 (土) 17:32:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002175.html">[Squeak-ja: 2175] Re: SuperSwiki 日本語パッチ
+</A></li>
+        <LI>次の記事 <A HREF="002176.html">[Squeak-ja: 2176] Squeak Nihongo 6.1 のInitialize
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2182">[ 日付 ]</a>
+              <a href="thread.html#2182">[ スレッド ]</a>
+              <a href="subject.html#2182">[ 件名 ]</a>
+              <a href="author.html#2182">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+
+お返事有難うございます。なるほど。ファイルを普通にオープンした時のファイル名は
+勝手にプラットフォーム依存になる事 (FilePath&gt;&gt;asSystemPathName) からですね。
+深い。。。
+しかしこのプロジェクト保存のプログラムはややこしすぎて誰も手をつけたがらない
+Squeak の暗黒面になっていて、これを解読されたのはすばらしいと思います。
+
+&gt;<i> こんにちは蜂須賀です。
+</I>&gt;<i> 
+</I>&gt;<i> 　うる覚えなのですが、確か、archiveMembers の ZipFileMember が持っている
+</I>&gt;<i> ファイル名(fileName)がMultiStringではなくて、プラットフォームに依存する
+</I>&gt;<i> Stringだったからだったような覚えがあります。
+</I>&gt;<i> 
+</I>&gt;<i> 　&quot;SuperSwikiServer&gt;&gt;upLoadProject:members:retry:&quot;の中では、&quot;アップロー
+</I>&gt;<i> ド中 ○○○...&quot;という表示を発していますので、entry fileName
+</I>&gt;<i> convertFromSystemString でMultiStringに戻した結果を表示させて、
+</I>&gt;<i> 
+</I>&gt;<i> 　さらに、SuperSwikiに送信する際には、entry fileName
+</I>&gt;<i> convertFromSystemString convertToSuperSwikiServerString として
+</I>&gt;<i> MultiStringに変換して、さらにサーバ側の文字コード(シフトJIS)に変換したよ
+</I>&gt;<i> うな記憶があります。
+</I>&gt;<i> 
+</I>&gt;<i> 今思うと、力任せというかその場限りのトリッキーなfixで、ちょっと恥ずかし
+</I>&gt;<i> くなってきますね....
+</I>&gt;<i>
+</I>&gt;&gt;<i>こんにちは。山宮です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>先日は SuperSwiki で日本語が使えるパッチを頂いて有難うございました。色々
+</I>&gt;&gt;<i>試してみて、蜂須賀さんのコードが大変上手く動作する事を確認しました。そ
+</I>&gt;&gt;<i>こで一つ質問しても宜しいでしょうか?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>SuperSwikiServer&gt;&gt;upLoadProject:members:retry:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>の中で内部文字コードを sjis に変換する時に convertFromSystemString を
+</I>&gt;&gt;<i>使っているようなのですが、他の部分では convertFromSuperSwikiServerString
+</I>&gt;&gt;<i>を使っています。ここだけあえてプラットフォームに依存する 
+</I>&gt;&gt;<i>convertFromSystemString を使っておられるのはどのような理由でしょ
+</I>&gt;&gt;<i>うか?教えてください。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>蜂須賀さんのコードを元に、もう少し実験や修正を加えましたらその分もまた
+</I>&gt;&gt;<i>公開いたします。よろしくお願いします。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i># 多くの方が興味をもたれる話題ですので ML に投稿しました。蜂須賀さんの
+</I>&gt;&gt;<i># コードは <A HREF="http://www.asu.ac.jp/hachi/5.html">http://www.asu.ac.jp/hachi/5.html</A> でご覧になれます。
+</I>
+-- 
+山宮 隆 ::= <A HREF="http://yuri.sakura.ne.jp/~propella/">http://yuri.sakura.ne.jp/~propella/</A>
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002175.html">[Squeak-ja: 2175] Re: SuperSwiki 日本語パッチ
+</A></li>
+	<LI>次の記事 <A HREF="002176.html">[Squeak-ja: 2176] Squeak Nihongo 6.1 のInitialize
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2182">[ 日付 ]</a>
+              <a href="thread.html#2182">[ スレッド ]</a>
+              <a href="subject.html#2182">[ 件名 ]</a>
+              <a href="author.html#2182">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

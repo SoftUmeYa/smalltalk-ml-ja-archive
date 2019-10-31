@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2245] Re: プラグイン中のFormのインスタンス変数の値について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202245%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJWklMCUkJXMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQ2YkThsoQkZvcm0bJEIkTiUkJXMlOSU/JXMlOUpRP3QkTkNNGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=56FB9938-62D0-11D9-9C90-000A95AD0BEA%40sie.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002244.html">
+   <LINK REL="Next"  HREF="002246.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2245] Re: プラグイン中のFormのインスタンス変数の値について</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202245%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJWklMCUkJXMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQ2YkThsoQkZvcm0bJEIkTiUkJXMlOSU/JXMlOUpRP3QkTkNNGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=56FB9938-62D0-11D9-9C90-000A95AD0BEA%40sie.dendai.ac.jp"
+       TITLE="[Squeak-ja: 2245] Re: プラグイン中のFormのインスタンス変数の値について">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2005年 1月 10日 (月) 15:29:06 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002244.html">[Squeak-ja: 2244] プラグイン中のFormのインスタンス変数の値について
+</A></li>
+        <LI>次の記事 <A HREF="002246.html">[Squeak-ja: 2246] Re: プラグイン中のFormのインスタンス変数の値について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2245">[ 日付 ]</a>
+              <a href="thread.html#2245">[ スレッド ]</a>
+              <a href="subject.html#2245">[ 件名 ]</a>
+              <a href="author.html#2245">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+  1ビットのSmallInteger tagがあるからですね。
+
+&gt;<i> TestPlugin&gt;&gt;formTest:
+</I>&gt;<i> formTest: aForm
+</I>&gt;<i> |width height depth|
+</I>&gt;<i> self export: true.
+</I>&gt;<i> self primitive: 'formTest' parameters: #(Oop).
+</I>&gt;<i> width _ interpreterProxy fetchPointer: 1 ofObject: aForm.
+</I>&gt;<i> height _ interpreterProxy fetchPointer: 2 ofObject: aForm.
+</I>&gt;<i> depth _ interpreterProxy fetchPointer: 3 ofObject: aForm.
+</I>&gt;<i> self cCode: 'printf(&quot;%d,%d,%d\n&quot;,width,height,depth)'
+</I>
+  Formのwidth, height, depthはSmallIntegerのはずなので、
+
+width _ interpreterProxy fetchInteger: 1 ofObject: aForm.
+height _ interpreterProxy fetchInteger: 2 ofObject: aForm.
+depth _ interpreterProxy fetchInteger: 3 ofObject: aForm.
+self cCode: 'printf(&quot;%d,%d,%d\n&quot;,width,height,depth)'
+
+のようにfetchInteger:ofObject:を使うのが正しいです。
+
+-- Yoshiki
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002244.html">[Squeak-ja: 2244] プラグイン中のFormのインスタンス変数の値について
+</A></li>
+	<LI>次の記事 <A HREF="002246.html">[Squeak-ja: 2246] Re: プラグイン中のFormのインスタンス変数の値について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2245">[ 日付 ]</a>
+              <a href="thread.html#2245">[ スレッド ]</a>
+              <a href="subject.html#2245">[ 件名 ]</a>
+              <a href="author.html#2245">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,1103 @@
+From csdpp363 ＠ ybb.ne.jp  Wed Jul  1 06:31:18 2009
+From: csdpp363 ＠ ybb.ne.jp (藤岡　董)
+Date: Wed Jul  1 06:31:19 2009
+Subject: [Squeak-ja: 4274] Re: owner または自分の名前の変更の方法を教えて！
+References: <20090627172607.32331.qmail@web10515.mail.ogk.yahoo.co.jp>
+	<2d5d52a80906300457v7191eadap7eb3c15a757636f4@mail.gmail.com>
+Message-ID: <001101c9f9ca$1af84cc0$0703a8c0@soteca0dd8fde5>
+
+早速のご回答ありがとうございます。
+
+以前にも、　阿部様の回答の「仮にWindows XPであれば、「スタート」メニューから「コントロールパネル」を選び「ユーザー
+ アカウント」の「変更するアカウントを選びます」から「名前を変更する」で設定します。他のOSにも同様の機能があります。」を何回か試しましたが、アカウント名は変わるのですが「探す」からの名前（藤岡董）が変わりません。何故でしょうか？今回も、もう1度やりましたが、同じ結果で変わりません。他に方法は無いでしょうか？　宜しくお願いします。> こんにちは、阿部です。> 「ナビゲータ」の「探す」で表示される一覧の下にあるものは、以下のディレクトリを参照しています(Windows XPの場合)。>> C:\My Squeak\ユーザーアカウント名>> このユーザーアカウント名はSqueakではなく、藤岡さんご自身が設定したか、デフォルトの値がそのまま使われています。ホストOS側に設定されているので、この名前を変更するのであれば、そちらで行います。> 仮にWindows XPであれば、「スタート」メニューから「コントロールパネル」を選び「ユーザー> アカウント」の「変更するアカウントを選びます」から「名前を変更する」で設定します。他のOSにも同様の機能があります。>> //abee> --> 阿部 和広  EMAIL abee@squeakland.jp>> 2009/06/28 2:26 に <csdpp363@ybb.ne.jp> さんは書きました:>> 藤岡　董（フジオカ　タダス）と申します。>>>> 初歩的な質問で申し訳ありませんが、教えて下さい。>>>> 自分で作ったスクイークの作品を読み込む時のことですが、順序として、“ナビゲータ”→“探す”→“squeakland.jp”とその下に“owner”または、私の場合は自分の名前“藤岡董”が表示されていますねぇ！その“owner”または“藤岡董”の名前を変更>> する方法を教えてください。>>>>>>>> ***************************>> 藤岡　董(Fujioka Tadasu)>> E-Mail：csdpp363@ybb.ne.jp>> Tel/Fax：072-622-6826>> 携帯電話：090-8658-7113>> ***************************>
+From abee.abe ＠ nifty.ne.jp  Thu Jul  2 00:21:57 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Jul  2 00:22:31 2009
+Subject: [Squeak-ja: 4275] Re: owner または自分の名前の変更の方法を教えて！
+In-Reply-To: <001101c9f9ca$1af84cc0$0703a8c0@soteca0dd8fde5>
+References: <20090627172607.32331.qmail@web10515.mail.ogk.yahoo.co.jp> 
+	<2d5d52a80906300457v7191eadap7eb3c15a757636f4@mail.gmail.com> 
+	<001101c9f9ca$1af84cc0$0703a8c0@soteca0dd8fde5>
+Message-ID: <2d5d52a80907010821p3126d23esffe148303a9c81ef@mail.gmail.com>
+
+こんにちは、阿部です。
+失礼しました。この場合、ユーザープロファイル名の変更を行う必要があるようです。
+以下にMicrosoftの解説がありますので参考にされてください。
+http://support.microsoft.com/default.aspx?scid=kb;ja;882563
+この作業を行うと、C:\My Squeak以下だけでなく、C:\Documents and
+Settingsの下にあるユーザのフォルダ名も変更されます。これに依存する他のアプリケーションにも影響が出るかもしれません。
+ここで行っていることの意味を十分理解した上で、あらかじめバックアップを取るなどして慎重に作業することをお勧めします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/07/01 6:31 に 藤岡　董<csdpp363@ybb.ne.jp> さんは書きました:
+> 早速のご回答ありがとうございます。
+>
+> 以前にも、　阿部様の回答の「仮にWindows XPであれば、「スタート」メニューから「コントロールパネル」を選び「ユーザー
+> アカウント」の「変更するアカウントを選びます」から「名前を変更する」で設定します。他のOSにも同様の機能があります。」を何回か試しましたが、アカウント名は変わるのですが「探す」からの名前（藤岡董）が変わりません。何故でしょうか？今回も、もう1度やりましたが、同じ結果で変わりません。他に方法は無いでしょうか？　宜しくお願いします。>
+> こんにちは、阿部です。> 「ナビゲータ」の「探す」で表示される一覧の下にあるものは、以下のディレクトリを参照しています(Windows
+> XPの場合)。>> C:\My Squeak\ユーザーアカウント名>>
+> このユーザーアカウント名はSqueakではなく、藤岡さんご自身が設定したか、デフォルトの値がそのまま使われています。ホストOS側に設定されているので、この名前を変更するのであれば、そちらで行います。>
+> 仮にWindows XPであれば、「スタート」メニューから「コントロールパネル」を選び「ユーザー>
+> アカウント」の「変更するアカウントを選びます」から「名前を変更する」で設定します。他のOSにも同様の機能があります。!
+>>> //abee> --> 阿部 和広  EMAIL abee@squeakland.jp>> 2009/06/28 2:26 に
+>>> <csdpp363@ybb.ne.jp> さんは書きました:>> 藤岡　董（フジオカ　タダス）と申します。>>>>
+>>> 初歩的な質問で申し訳ありませんが、教えて下さい。>>>>
+>>> 自分で作ったスクイークの作品を読み込む時のことですが、順序として、"ナビゲータ"→"探す"→"squeakland.jp"とその下に"owner"または、私の場合は自分の名前"藤岡董"が表示されていますねぇ！その"owner"または"藤岡董"の名前を変更>>
+>>> する方法を教えてください。>>>>>>>> ***************************>> 藤岡　董(Fujioka Tadasu)>>
+>>> E-Mail：csdpp363@ybb.ne.jp>> Tel/Fax：072-622-6826>> 携帯電話：090-8658-7113>>
+>>> ***************************>
+>
+From abee ＠ squeakland.jp  Sat Jul  4 00:01:13 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sat Jul  4 00:01:35 2009
+Subject: [Squeak-ja: 4276] Scratch 1.4がリリースされました。
+Message-ID: <2d5d52a80907030801m4950a973w9dea2770fceb9c93@mail.gmail.com>
+
+こんにちは、阿部です。
+さきほど、MIT Media LabからScratch 1.4がリリースされました。
+http://info.scratch.mit.edu/Scratch_1.4_Release_Notes
+
+Scratch 1.4には、多くの新機能が含まれています。特に、低解像度(ネットブック)対応、文字入力と文字列操作ブロック追加、Webカメラ対応、ロボット(WeDo)対応は大きな進歩です。
+まずはお試しください。
+
+私は文字列操作を使ったタイムリーな題材ということで、大人の科学マガジン vol.24の付録の4ビットマイコン(GMC-4)用アセンブラを作ってみました。
+http://scratch.mit.edu/projects/abee/591249
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From makoto ＠ kobe-u.ac.jp  Sun Jul  5 13:35:42 2009
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Sun Jul  5 13:35:45 2009
+Subject: [Squeak-ja: 4277] Re: Scratch 1.4がリリースされました。
+In-Reply-To: <2d5d52a80907030801m4950a973w9dea2770fceb9c93@mail.gmail.com>
+References: <2d5d52a80907030801m4950a973w9dea2770fceb9c93@mail.gmail.com>
+Message-ID: <20090705133542699653.3677b47b@kobe-u.ac.jp>
+
+神戸大学の高橋真です。
+
+阿部さん，情報ありがとうございます。
+文字列の操作ができるようになったのは，うれしい進歩です。
+
+例によって例の如しで，私はTuringMachineを作ってみました。
+http://scratch.mit.edu/projects/rokko/594610
+
+++ Kazuhiro ABEさんの『[Squeak-ja: 4276] Scratch 1.4がリリースされました。』
+| (Sat, 4 Jul 2009 00:01:13 +0900)の件について
+--
+> こんにちは、阿部です。
+> さきほど、MIT Media LabからScratch 1.4がリリースされました。
+> http://info.scratch.mit.edu/Scratch_1.4_Release_Notes
+> 
+> Scratch 1.4には、多くの新機能が含まれています。特に、低解像度(ネット
+> ブック)対応、文字入力と文字列操作ブロック追加、Webカメラ対応、ロボット
+> (WeDo)対応は大きな進歩です。
+> まずはお試しください。
+> 
+> 私は文字列操作を使ったタイムリーな題材ということで、大人の科学マガジ
+> ン vol.24の付録の4ビットマイコン(GMC-4)用アセンブラを作ってみました。
+> http://scratch.mit.edu/projects/abee/591249
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+From umejava ＠ mars.dti.ne.jp  Mon Jul  6 23:02:12 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jul  6 23:02:18 2009
+Subject: [Squeak-ja: 4278] Web Velocity評価版がでています
+Message-ID: <Jx_KPVjpMGoHwIDJk0U3LpEA6@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Cincomの新製品"Web Velocity"をご存じでしょうか?
+
+一言で言えばSeasideを拡張したフルスタックの
+Webアプリケーションフレームワークです。
+
+SmalltalkでRuby on Railsをやってみたらこうなったという感じで
+Smalltalkならではの強みが十分に発揮されたものになっています。
+
+特徴や触ってみた印象をブログに書いてみました。
+よろしければご覧下さい。
+http://ani.blueplane.jp/ume/152
+
+評価版は下記からダウンロードできます。Win, Mac, Linuxで動きます。
+http://www.web-velocity.com/WVAccess/Main
+
+フィードバック等はGoogle Groupがあるので、そこに送ることができます。
+http://groups.google.com/group/webvelocity
+
+動画もありますよ。
+http://www.cincomsmalltalk.com/userblogs/cincom/blogView?content=smalltalk_videos_web_velocity
+
+SmalltalkとWebは実は結構相性がよいです。ぜひぜひ、お楽しみ下さい。
+
+---
+[:masashi | ^umezawa]
+From "土本 (Florian) 強  Thu Jul  9 08:47:21 2009
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Jul  9 08:47:31 2009
+Subject: [Squeak-ja: 4279] swiki1.5でa Primitive Has failed
+Message-ID: <20090709084023.0B5F.41E77AC0@seagreen.ocn.ne.jp>
+
+　土本です。
+
+　長いこと使っているswiki1.5のサーバーを再起動させたら、a Primitive has
+failedのエラーが出るようになってしまいました。
+　自分で作ったWikiを削除し、refs,ani,defaultだけにしたところ起動するよう
+ですが、せっかくのデータが亡くなってしまうのは残念です。
+　何か似たような状況になった方はおられますでしょうか？
+
+　errorの直前では、
+
+String class(Behavior)>>basicNew:
+String class(Behavior)>>new;
+String(SequenceableCollection)>>copyFrom:to:
+XmlSwikiStorage>>loadPage:from:startingAt:
+
+　辺りからのエラーのようです。basicNew(<primitive: 71>)が正常に動かない
+状況というとオブジェクトメモリが不足しているのでしょうか？
+
+　では、失礼します。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+From yoshiki ＠ vpri.org  Thu Jul  9 09:09:14 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Jul  9 09:09:30 2009
+Subject: [Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed
+In-Reply-To: <20090709084023.0B5F.41E77AC0@seagreen.ocn.ne.jp>
+References: <20090709084023.0B5F.41E77AC0@seagreen.ocn.ne.jp>
+Message-ID: <uws6i4t05.wl%yoshiki@vpri.org>
+
+At Thu, 09 Jul 2009 08:47:21 +0900,
+土本 (Florian) 強 wrote:
+> 
+> 　土本です。
+> 
+> 　長いこと使っているswiki1.5のサーバーを再起動させたら、a Primitive has
+> failedのエラーが出るようになってしまいました。
+> 　自分で作ったWikiを削除し、refs,ani,defaultだけにしたところ起動するよう
+> ですが、せっかくのデータが亡くなってしまうのは残念です。
+> 　何か似たような状況になった方はおられますでしょうか？
+> 
+> 　errorの直前では、
+> 
+> String class(Behavior)>>basicNew:
+> String class(Behavior)>>new;
+> String(SequenceableCollection)>>copyFrom:to:
+> XmlSwikiStorage>>loadPage:from:startingAt:
+> 
+> 　辺りからのエラーのようです。basicNew(<primitive: 71>)が正常に動かない
+> 状況というとオブジェクトメモリが不足しているのでしょうか？
+
+  プラットフォームによってはそうかもしれませんが、new: (new;ではないで
+すよね)でのエラーの場合、インデックスの計算が間違っていて負の数がnew:
+に渡っているということもありますね。やはり実際のデータと渡っている引数
+の値を見てみるのが良いのではないでしょうか。
+
+-- Yoshiki
+From "土本 (Florian) 強  Thu Jul  9 21:37:38 2009
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Jul  9 21:37:45 2009
+Subject: [Squeak-ja: 4281] Re: swiki1.5でa  Primitive Has failed
+In-Reply-To: <uws6i4t05.wl%yoshiki@vpri.org>
+References: <20090709084023.0B5F.41E77AC0@seagreen.ocn.ne.jp>
+	<uws6i4t05.wl%yoshiki@vpri.org>
+Message-ID: <20090709210435.B0EB.41E77AC0@seagreen.ocn.ne.jp>
+
+　土本です。
+　ちょっと時間を使って追いかけてみました。
+
+メール「[Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed」(2009/07/09 09:09) に於いて
+「Yoshiki Ohshima」 語りて曰く、
+
+Yoshiki> > String class(Behavior)>>basicNew:
+Yoshiki> > String class(Behavior)>>new;
+Yoshiki> > String(SequenceableCollection)>>copyFrom:to:
+Yoshiki> > XmlSwikiStorage>>loadPage:from:startingAt:
+Yoshiki> > 
+Yoshiki> > 　辺りからのエラーのようです。basicNew(<primitive: 71>)が正常に動かない
+Yoshiki> > 状況というとオブジェクトメモリが不足しているのでしょうか？
+Yoshiki> 
+Yoshiki>   プラットフォームによってはそうかもしれませんが、new: (new;ではないで
+Yoshiki> すよね)でのエラーの場合、インデックスの計算が間違っていて負の数がnew:
+Yoshiki> に渡っているということもありますね。やはり実際のデータと渡っている引数
+Yoshiki> の値を見てみるのが良いのではないでしょうか。
+
+　具体的には、String>>copyFrom:to:する際にコピー先サイズがマイナスになっ
+ているためにprimitive:71に失敗しているようです。なぜこんな変な値になって
+いるかというと、
+
+---
+	t4 := t2 findString: '<version date="' startingAt: t3.
+	t5 := t2 findString: '" time="' staringAt: t4.
+---
+
+　として見ているため、「<version date="」も「" time="」もないページ(ファ
+イルが壊れているとか)でおかしな値になっているようです。
+　とりあえず、
+
+	swiki/<wiki名>/pages/*.xml
+
+　で、明らかに壊れているページのデータを補完してやることで解決しました。
+　なんというか……、Swikiは便利なんですがエラー処理甘いですね。
+
+　では。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+From cyocyoring ＠ wwis.jp  Fri Jul 10 07:09:29 2009
+From: cyocyoring ＠ wwis.jp (iimori)
+Date: Fri Jul 10 07:09:34 2009
+Subject: [Squeak-ja: 4282] Squeakの指導の件
+Message-ID: <2f6931152b527f18d60d8fb630ca08f3@wwis.jp>
+
+大阪市西区交流スペースの飯森です
+http://wwis.jp/
+
+来年にミニミュンヘンの小規模版となる「ミニ・ウエスト」を企画しています
+http://www.mi-mue.com/
+
+日本でも文部科学省や自治体を巻き込んだミニ・○○はここ数年各地で開催されています
+
+今年のゴールデンウィークには他地区ですが「ミニ大阪」も開催されました
+http://www.bombsight.net/xoops/modules/pukiwiki/
+
+今回の我々の目標は、地元大阪市西区を中心に活動しているNPOやボランティア集団だけでどこまで子供たちに受け入れられるイベントを開催できるか？と 
+いうことです
+
+スナックコーナーやゲームコーナーと並んで、柱となるコーナーにPCを利用した「自己表現コーナー」を作ってみようと思いました
+
+そこで模索した結果「Squeak」に出会った訳です
+
+この夏から順次プレイベントを開催し、参加した子供たちには本番当日に使用できる通貨（6マイド/hour）を支給します
+（そのうち2マイドは税金として徴収し、役所や裁判所といった行政側や銀行で働く子供の時給とします）
+（食べ物やゲームは4マイドで楽しむ事ができるようにします）
+
+食べ物やゲームや体験コーナーは人材が揃っており、ほぼ見通しが付いています
+
+パソコンも二十数台常設しており、サーバーも自主運営しています
+
+ただ悲しいかな、「Squeak」を誰も使いこなすものが居ないという現実を知りました
+
+そこで、どなたかに手解きを頂きたいと思った次第です
+
+もちろん我々大人も参加したいので、土日を利用した数回のカリキュラムの指導者を紹介・派遣して頂けないでしょうか？
+
+充分とは言えないかもしれませんが、昼食代プラスα程度の謝礼は準備させて頂きます
+
+またここで聞くのがお門違いでしたら、どこにお願いすれば良いか個人的に教えて頂くと助かります
+
+よろしくお願いします
+
+From hayasaka ＠ pluto.dti.ne.jp  Fri Jul 10 22:57:47 2009
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Fri Jul 10 22:58:01 2009
+Subject: [Squeak-ja: 4283] Squeakの指導の件（ご参考）
+References: <200907100300.n6A30N5M016392@pop.pluto.dti.ne.jp>
+Message-ID: <E9896E00B38E4E62B0E7D4E950616BD3@computer>
+
+大阪箕面市の早坂です。
+
+　Ｓｑｕｅａｋの手解きとのことですが、
+東京では、「みんなでたのしくＳｑｕｅａｋ」と言う会がありますが、
+http://mts-j.hiho.jp/
+大阪まで来ていただけるかわかりません。
+
+　来阪をお問い合わせ頂くか、東京のWorkshopを見学されるか
+ご検討下さい。　
+
+ご参考まで。
+
+早坂　吉昭
+
+> ------------------------------
+>
+> Message: 2
+> Date: Fri, 10 Jul 2009 07:09:29 +0900
+> From: iimori <cyocyoring@wwis.jp>
+> Subject: [Squeak-ja: 4282] Squeakの指導の件
+> To: squeak-ja@smalltalk.jp
+> Message-ID: <2f6931152b527f18d60d8fb630ca08f3@wwis.jp>
+> Content-Type: text/plain; charset=ISO-2022-JP; delsp=yes;
+> format=flowed
+>
+> 大阪市西区交流スペースの飯森です
+> http://wwis.jp/
+>
+> 来年にミニミュンヘンの小規模版となる「ミニ・ウエスト」を企画しています
+> http://www.mi-mue.com/
+>
+> 日本でも文部科学省や自治体を巻き込んだミニ・○○はここ数年各地で開催されています
+>
+> 今年のゴールデンウィークには他地区ですが「ミニ大阪」も開催されました
+> http://www.bombsight.net/xoops/modules/pukiwiki/
+>
+> 今回の我々の目標は、地元大阪市西区を中心に活動しているNPOやボランティア集団だけでどこまで子供たちに受け入れられるイベントを開催できるか？と
+> いうことです
+>
+> スナックコーナーやゲームコーナーと並んで、柱となるコーナーにPCを利用した「自己表現コーナー」を作ってみようと思いました
+>
+> そこで模索した結果「Squeak」に出会った訳です
+>
+> この夏から順次プレイベントを開催し、参加した子供たちには本番当日に使用できる通貨（6マイド/hour）を支給します
+> （そのうち2マイドは税金として徴収し、役所や裁判所といった行政側や銀行で働く子供の時給とします）
+> （食べ物やゲームは4マイドで楽しむ事ができるようにします）
+>
+> 食べ物やゲームや体験コーナーは人材が揃っており、ほぼ見通しが付いています
+>
+> パソコンも二十数台常設しており、サーバーも自主運営しています
+>
+> ただ悲しいかな、「Squeak」を誰も使いこなすものが居ないという現実を知りました 
+> 
+>
+> そこで、どなたかに手解きを頂きたいと思った次第です
+>
+> もちろん我々大人も参加したいので、土日を利用した数回のカリキュラムの指導者を紹介・派遣して頂けないでしょうか？
+>
+> 充分とは言えないかもしれませんが、昼食代プラスα程度の謝礼は準備させて頂きます
+>
+> またここで聞くのがお門違いでしたら、どこにお願いすれば良いか個人的に教えて頂くと助かります
+>
+> よろしくお願いします
+>
+>
+>
+> ------------------------------
+>
+> _______________________________________________
+> Squeak-ja mailing list
+> Squeak-ja@smalltalk.jp
+> http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+>
+>
+> 以上: Squeak-ja まとめ読み, 57 巻, 7 号
+> *************************************** 
+
+From cyocyoring ＠ wwis.jp  Sat Jul 11 09:18:48 2009
+From: cyocyoring ＠ wwis.jp (いーもり)
+Date: Sat Jul 11 09:18:54 2009
+Subject: [Squeak-ja: 4284] Re: Squeakの指導の件（ご参考）
+In-Reply-To: <E9896E00B38E4E62B0E7D4E950616BD3@computer>
+References: <200907100300.n6A30N5M016392@pop.pluto.dti.ne.jp>
+	<E9896E00B38E4E62B0E7D4E950616BD3@computer>
+Message-ID: <4A57DA68.2040009@wwis.jp>
+
+早坂様、情報ありがとうございます
+
+本格的な指導者？でなくても、「少しご存知な方」で子供達と接するのが嫌いで
+ない方なら良いな、と思っています
+
+関西地方でも東京の様なサークルが出来ればもっと広がるのに、、、
+
+飯森
+
+早坂　吉昭 さんは書きました:
+> 来阪をお問い合わせ頂くか、東京のWorkshopを見学されるか
+> ご検討下さい。　
+From csdpp363 ＠ ybb.ne.jp  Sat Jul 11 09:57:57 2009
+From: csdpp363 ＠ ybb.ne.jp (藤岡　董)
+Date: Sat Jul 11 09:58:05 2009
+Subject: [Squeak-ja: 4285] Re: Squeakの指導の件
+References: <2f6931152b527f18d60d8fb630ca08f3@wwis.jp>
+Message-ID: <001701ca01c2$a1e8c430$0b03a8c0@DDNQFBBX>
+
+飯森様、藤岡　董（ふじおか　ただす）と申します。はじめまして・・・
+
+私は大阪府茨木市春日５−４−４０に自宅があり、今、初心者対象に「Ｓｑｕｅａｋ」の講座をしています。
+
+場所は大阪府茨木市鮎川１−８−１７、東雲パソコンクラブ　電話番号０７２−６３２−７８７０です。
+
+「Ｓｑｕｅａｋ」の初めての人対象に初期からの講座を実施しております。よければ見学に来られませんか？７月中までですが・・・
+
+まったくの一からの授業です。私が作ったオブジェクトを作る”手順書”もよければ差し上げますが！・・・
+
+私の電話番号　：　０７２−６２２−６８２６　携帯電話　：　０９０−８６５８−７１１３　Ｅ−Ｍａｉｌ：csdpp363@ybb.ne.jp
+
+私も、今、目下勉強中の初心者の素人です。よろしくお願いします。詳細はお電話ください。　　藤岡　董
+>
+> そこで、どなたかに手解きを頂きたいと思った次第です
+>
+> もちろん我々大人も参加したいので、土日を利用した数回のカリキュラムの指導者を紹介・派遣して頂けないでしょうか？
+>
+> 充分とは言えないかもしれませんが、昼食代プラスα程度の謝礼は準備させて頂きます
+>
+> またここで聞くのがお門違いでしたら、どこにお願いすれば良いか個人的に教えて頂くと助かります
+>
+> よろしくお願いします
+> 
+
+From cyocyoring ＠ wwis.jp  Sat Jul 11 15:16:07 2009
+From: cyocyoring ＠ wwis.jp (iimori)
+Date: Sat Jul 11 15:16:10 2009
+Subject: [Squeak-ja: 4286] Re: Squeakの指導の件
+In-Reply-To: <001701ca01c2$a1e8c430$0b03a8c0@DDNQFBBX>
+References: <2f6931152b527f18d60d8fb630ca08f3@wwis.jp>
+	<001701ca01c2$a1e8c430$0b03a8c0@DDNQFBBX>
+Message-ID: <4A582E27.40206@wwis.jp>
+
+飯森です
+
+藤岡様、ありがとうございます
+
+連絡させて頂きます
+
+
+藤岡　董 さんは書きました:
+> 「Ｓｑｕｅａｋ」の初めての人対象に初期からの講座を実施しております。
+From abee.abe ＠ nifty.ne.jp  Sun Jul 12 16:57:33 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Jul 12 16:58:02 2009
+Subject: [Squeak-ja: 4287] Re: スクラッチ in 世田谷
+In-Reply-To: <2BECCAF420ED41A981B5F92FA13F1565@LENOVO0DFC6E3B>
+References: <2d5d52a80906062219m6b1bc0a1oc245ca005839bec1@mail.gmail.com> 
+	<2BECCAF420ED41A981B5F92FA13F1565@LENOVO0DFC6E3B>
+Message-ID: <2d5d52a80907120057r62958bdo288b620e04a32378@mail.gmail.com>
+
+こんにちは、阿部です。
+広報せたがややGoogleを検索しても見つからなかったのですが、せたがや情報ガイドで見つけました。こどもプログラミング「サークル」ですね。
+http://www.setagaya-bunka.jp/photo/guide/G0000024.pdf
+
+こどもプログラミングサークル スクラッチ in 世田谷
+7月25日〓13：00〓17：00　生活工房4F
+パソコンの動きやゲームのしくみのもとになっている「プロ
+グラミング」を体験！　パソコンがはじめての人も大歓迎。
+■講倉本大資（プログラマー）、中山晴奈（メディアセブンス
+タッフ）■対小学３年生以上（発表会は保護者も参加可）
+■¥1,000円／抽選18名
+■問メディアセブン〓048-227-7622　■締7月15日必着
+
+これを行われているのは、以前にご案内したScratch Day in Tokyoのときにもお世話になった川口市のメディアセブンの皆さんです。
+http://www.smalltalk.jp/pipermail/squeak-ja/2009-May/004218.html
+
+当日は私もお手伝いすることになりました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/06/25 22:53 に SUGIMOTO Kenji<jg1gwl@mx3.ttcn.ne.jp> さんは書きました:
+> 場違いのお尋ねで申し訳ありません。世田谷の一隅でほそぼそと
+> スクイークを小学生に伝えている者です。
+>
+> 今日の世田谷区報に「スクラッチ in 世田谷」がこどもプログラミング
+> スクールを開くと紹介されていました。残念ながら対象の孫がいない
+> ので、私は応募できません。期日は7月25日だけだそうです。
+>
+> どなたがこのグループを主宰されているかご存知の方はお教え
+> いただけないでしょうか。お願い申し上げます。
+>
+> 杉本 賢冶
+>
+>
+From jg1gwl ＠ mx3.ttcn.ne.jp  Sun Jul 12 20:41:53 2009
+From: jg1gwl ＠ mx3.ttcn.ne.jp (SUGIMOTO Kenji)
+Date: Sun Jul 12 20:41:58 2009
+Subject: Re: [Squeak-ja: 4287] Re: スクラッチ in 世田谷
+References: <2d5d52a80906062219m6b1bc0a1oc245ca005839bec1@mail.gmail.com>
+	<2BECCAF420ED41A981B5F92FA13F1565@LENOVO0DFC6E3B>
+	<2d5d52a80907120057r62958bdo288b620e04a32378@mail.gmail.com>
+Message-ID: <D6EDDCFE9C1C420294196A7762EB2B2E@LENOVO0DFC6E3B>
+
+ー、ノオ、「ソワ、ヌ、ケ。」
+
+サ荀ホエヨー网テ、ソフ荀、ケ遉錣擦鬚潅杦㎠砲瓦戮い燭世い突㌃颪Δ瓦兇い泙靴拭０ど瑤気鵑盪臆辰気譴襪箸いΔ海箸如鬚靴い任后箸いい泙垢里蓮覿疋瓮妊▲札屮鵑気鵑砲蠅い鬚靴董㎳悗世韻気擦討い燭世海箸砲覆辰燭㎠蕕任后呂犬瓩謄好薀奪舛亮尊櫃魍悗戮修Δ如擇靴にしています。
+
+有難うございました。
+
+> こんにちは、阿部です。
+> 広報せたがややGoogleを検索しても見つからなかったのですが、せたがや情報ガイドで見つけました。こどもプログラミング「サークル」ですね。
+> http://www.setagaya-bunka.jp/photo/guide/G0000024.pdf
+>
+> こどもプログラミングサークル スクラッチ in 世田谷
+> 7月25日〓13：00〓17：00　生活工房4F
+> パソコンの動きやゲームのしくみのもとになっている「プロ
+> グラミング」を体験！　パソコンがはじめての人も大歓迎。
+> ■講倉本大資（プログラマー）、中山晴奈（メディアセブンス
+> タッフ）■対小学３年生以上（発表会は保護者も参加可）
+> ■¥1,000円／抽選18名
+> ■問メディアセブン〓048-227-7622　■締7月15日必着
+>
+> これを行われているのは、以前にご案内したScratch Day in Tokyoのときにもお世話になった川口市のメディアセブンの皆さんです。
+> http://www.smalltalk.jp/pipermail/squeak-ja/2009-May/004218.html
+>
+> 当日は私もお手伝いすることになりました。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 2009/06/25 22:53 に SUGIMOTO Kenji<jg1gwl@mx3.ttcn.ne.jp> さんは書きました:
+>> 場違いのお尋ねで申し訳ありません。世田谷の一隅でほそぼそと
+>> スクイークを小学生に伝えている者です。
+>>
+>> 今日の世田谷区報に「スクラッチ in 世田谷」がこどもプログラミング
+>> スクールを開くと紹介されていました。残念ながら対象の孫がいない
+>> ので、私は応募できません。期日は7月25日だけだそうです。
+>>
+>> どなたがこのグループを主宰されているかご存知の方はお教え
+>> いただけないでしょうか。お願い申し上げます。
+>>
+>> 杉本 賢冶
+>>
+>>
+>
+
+From umejava ＠ mars.dti.ne.jp  Mon Jul 13 21:43:43 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jul 13 21:43:47 2009
+Subject: [Squeak-ja: 4289] 第11回Smalltalk勉強会のお知らせ
+Message-ID: <JxbHURqDf1M19fDlDMcMtNEw3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2009/7/24(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai11kaismalltalkbenkyoukai
+
+今回のテーマは「SmalltalkでWeb-その2 フルスタック編」です。
+
+SeasideをベースとしたフルスタックのWebアプリフレームワーク、
+"Web Velocity"を中心に扱います。
+
+Web Velocityの持つWebブラウザ上での統合開発環境、Scaffolding、
+ORマッピング等を取り上げる予定でいます。
+
+余裕があれば"Glass"の話になるかもしれません。上から下まで全てが
+オブジェクトのWebという世界を味わってみるのも良いでしょう
+
+補足:
+Web Velocityは下記からインストールできます。
+http://www.web-velocity.com/WVAccess/Main
+Glassは下記からインストールできます。
+http://seaside.gemstone.com/
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+気になる方はこのMLにメールを送っていただいても良いです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From yoshiki ＠ vpri.org  Tue Jul 14 12:21:57 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Jul 14 12:22:25 2009
+Subject: [Squeak-ja: 4290] Re: Squeakの指導の件（ご参考）
+In-Reply-To: <4A57DA68.2040009@wwis.jp>
+References: <200907100300.n6A30N5M016392@pop.pluto.dti.ne.jp>
+	<E9896E00B38E4E62B0E7D4E950616BD3@computer>
+	<4A57DA68.2040009@wwis.jp>
+Message-ID: <uzlb80x0q.wl%yoshiki@vpri.org>
+
+At Sat, 11 Jul 2009 09:18:48 +0900,
+いーもり wrote:
+> 
+> 早坂様、情報ありがとうございます
+> 
+> 本格的な指導者？でなくても、「少しご存知な方」で子供達と接するのが嫌いで
+> ない方なら良いな、と思っています
+> 
+> 関西地方でも東京の様なサークルが出来ればもっと広がるのに、、、
+
+  私はそれぞれの地域での活動などについて十分に情報を持っているわけでは
+ありませんが、関西地方でもさまざまな段階での学校で使用していたり、週末
+などのワークショップなどが開かれていると聞いています。このメーリングリ
+ストに参加している方もたくさんいらっしゃるはずですので、飯森さんの今回
+の話とは別に、情報交換の輪が広がると良いですね。
+
+-- Yoshiki
+From cyocyoring ＠ wwis.jp  Tue Jul 14 15:35:00 2009
+From: cyocyoring ＠ wwis.jp (iimori)
+Date: Tue Jul 14 15:35:04 2009
+Subject: [Squeak-ja: 4291] Re: Squeakの指導の件（ご参考）
+In-Reply-To: <uzlb80x0q.wl%yoshiki@vpri.org>
+References: <200907100300.n6A30N5M016392@pop.pluto.dti.ne.jp>
+	<E9896E00B38E4E62B0E7D4E950616BD3@computer>
+	<4A57DA68.2040009@wwis.jp> <uzlb80x0q.wl%yoshiki@vpri.org>
+Message-ID: <2c7deb9e4bd671ad78174d554fffe199@wwis.jp>
+
+Yoshiki Ohshimaさま、ありがとうございます
+
+関西地方でワークショップが開かれる時は是非紹介して頂きたいですね
+
+最近のパソコン教室は「操作技術」の取得が主眼のため、バージョンが変わってインターフェイスが少し変わった途端どうして良いか分からなくなる、という 
+事態に陥ります
+
+今回の目的は、パソコンはあくまで「道具」でしかなくて、アラン・ケイ氏が意図する「数学と科学の教育」を子供たちに伝えるのに少しでも役立てれば良い 
+かな、ということもあります
+（参考）
+http://itpro.nikkeibp.co.jp/free/ITPro/OPINION/20050203/155666/
+ちなみにこれは2005年2月の記事ですが、この状態が現在でも続いている（少なくとも大阪市西区内の小学校）のが寂しい限りです
+
+ではでは
+
+On 2009/07/14, at 12:21, Yoshiki Ohshima さまwrote:
+> 関西地方でもさまざまな段階での学校で使用していたり、週末
+> などのワークショップなどが開かれていると聞いています。
+
+From abee.abe ＠ nifty.ne.jp  Tue Jul 14 15:59:29 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Tue Jul 14 15:59:54 2009
+Subject: [Squeak-ja: 4292] Re: Squeakの指導の件（ご参考）
+In-Reply-To: <2c7deb9e4bd671ad78174d554fffe199@wwis.jp>
+References: <200907100300.n6A30N5M016392@pop.pluto.dti.ne.jp> 
+	<E9896E00B38E4E62B0E7D4E950616BD3@computer> <4A57DA68.2040009@wwis.jp> 
+	<uzlb80x0q.wl%yoshiki@vpri.org>
+	<2c7deb9e4bd671ad78174d554fffe199@wwis.jp>
+Message-ID: <2d5d52a80907132359j35ed39ebw845922668e741223@mail.gmail.com>
+
+こんにちは、阿部です。
+日本におけるスクイークの普及は京都のALAN-Kプロジェクトから始まったということもありますし、今でも関西の活動はぽつぽつとあるようで、「squeak
+京都」「squeak 大阪」などで検索するといくつか見つかります。
+
+日本のパソコン教育について、先に内田洋行とインテルが発表した「児童1人に1台のPC」についての記事を読むと、昔と変わっていないどころか後退しているような気すらします。
+http://d.hatena.ne.jp/abee2/20090608/1244399175
+
+これと本家OLPC(One Laptop per Child)の理念を比較するとめまいを感じます。
+http://wiki.laptop.org/go/The_OLPC_Wiki/lang-ja
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/07/14 15:35 に iimori<cyocyoring@wwis.jp> さんは書きました:
+> Yoshiki Ohshimaさま、ありがとうございます
+>
+> 関西地方でワークショップが開かれる時は是非紹介して頂きたいですね
+>
+> 最近のパソコン教室は「操作技術」の取得が主眼のため、バージョンが変わってインターフェイスが少し変わった途端どうして良いか分からなくなる、という事態に陥ります
+>
+> 今回の目的は、パソコンはあくまで「道具」でしかなくて、アラン・ケイ氏が意図する「数学と科学の教育」を子供たちに伝えるのに少しでも役立てれば良いかな、ということもあります
+> （参考）
+> http://itpro.nikkeibp.co.jp/free/ITPro/OPINION/20050203/155666/
+> ちなみにこれは2005年2月の記事ですが、この状態が現在でも続いている（少なくとも大阪市西区内の小学校）のが寂しい限りです
+>
+> ではでは
+>
+> On 2009/07/14, at 12:21, Yoshiki Ohshima さまwrote:
+>>
+>> 関西地方でもさまざまな段階での学校で使用していたり、週末
+>> などのワークショップなどが開かれていると聞いています。
+>
+>
+From yhousako ＠ mx2.ttcn.ne.jp  Tue Jul 14 23:46:18 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Tue Jul 14 23:46:24 2009
+Subject: [Squeak-ja: 4293] Re: Squeakの指導の件（ご参考）
+In-Reply-To: <2d5d52a80907132359j35ed39ebw845922668e741223@mail.gmail.com>
+References: <200907100300.n6A30N5M016392@pop.pluto.dti.ne.jp>
+	<E9896E00B38E4E62B0E7D4E950616BD3@computer>
+	<4A57DA68.2040009@wwis.jp>
+	<uzlb80x0q.wl%yoshiki@vpri.org>	<2c7deb9e4bd671ad78174d554fffe199@wwis.jp>
+	<2d5d52a80907132359j35ed39ebw845922668e741223@mail.gmail.com>
+Message-ID: <4A5C9A3A.8070003@mx2.ttcn.ne.jp>
+
+寳迫＠時間がないので少しだけです。
+
+部分的に反応します。
+
+Kazuhiro ABE さんは書きました:
+> 日本のパソコン教育について、先に内田洋行とインテルが発表した「児童1人に1台のPC」についての記事を読むと、昔と変わっていないどころか後退しているような気すらします。
+> http://d.hatena.ne.jp/abee2/20090608/1244399175
+> 
+> これと本家OLPC(One Laptop per Child)の理念を比較するとめまいを感じます。
+> http://wiki.laptop.org/go/The_OLPC_Wiki/lang-ja
+
+阿部さんの書かれていることにとても共感しました。
+
+今私が考えていることを話すと長くなりそうなので触りだけですが、「黒板を
+SqueakEtoysに」という発想で何かおもしろいことができないだろうかと思考し
+始めています。
+＃たぶん、私よりも先にそういうことを考えて実践されている方がこの中にもい
+らっしゃるだろうと推察します。
+
+考え始めると、学校現場の機器の導入状況などが枷となって、あれもこれも足り
+ないと思えてくるのですが、現段階で何ができるのか、これからどういう環境に
+していくべきなのかということも含めて、考えてみたいと思っています。
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Tue Jul 21 11:36:31 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Tue Jul 21 11:36:00 2009
+Subject: [Squeak-ja: 4294] Re: Squeakの指導の件
+In-Reply-To: <2f6931152b527f18d60d8fb630ca08f3@wwis.jp>
+Message-ID: <mailman.88.1248143760.18836.squeak-ja@smalltalk.jp>
+
+はじめまして、飯森さん。
+その後、Squeakの勉強は進んでいますか。
+もし、お手伝いできることがありましたら、
+と思ってご連絡しました。
+わたしはベテランではなく、
+Thoruさんの「スクイークで遊ぼう」が、
+どうやら理解できる程度です。
+イベントなどで助手的に使っていただけるかも？
+（足手まといになるかも）しれません。
+お問い合わせからだいぶん経っていて、
+ピンボケのようなことですが、
+よろしくお願いします。
+住まいは京都です。
+久保　道（おさむ）
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of iimori
+Sent: Friday, July 10, 2009 7:09 AM
+To: squeak-ja@smalltalk.jp
+Subject: [Squeak-ja: 4282] Squeakの指導の件
+
+大阪市西区交流スペースの飯森です
+http://wwis.jp/
+
+来年にミニミュンヘンの小規模版となる「ミニ・ウエスト」を企画しています
+http://www.mi-mue.com/
+
+日本でも文部科学省や自治体を巻き込んだミニ・○○はここ数年各地で開催されてい
+ます
+
+今年のゴールデンウィークには他地区ですが「ミニ大阪」も開催されました
+http://www.bombsight.net/xoops/modules/pukiwiki/
+
+今回の我々の目標は、地元大阪市西区を中心に活動しているNPOやボランティア集団
+だけでどこまで子供たちに受け入れられるイベントを開催できるか？と
+いうことです
+
+スナックコーナーやゲームコーナーと並んで、柱となるコーナーにPCを利用した「自
+己表現コーナー」を作ってみようと思いました
+
+そこで模索した結果「Squeak」に出会った訳です
+
+この夏から順次プレイベントを開催し、参加した子供たちには本番当日に使用できる
+通貨（6マイド/hour）を支給します
+（そのうち2マイドは税金として徴収し、役所や裁判所といった行政側や銀行で働く
+子供の時給とします）
+（食べ物やゲームは4マイドで楽しむ事ができるようにします）
+
+食べ物やゲームや体験コーナーは人材が揃っており、ほぼ見通しが付いています
+
+パソコンも二十数台常設しており、サーバーも自主運営しています
+
+ただ悲しいかな、「Squeak」を誰も使いこなすものが居ないという現実を知りました
+
+そこで、どなたかに手解きを頂きたいと思った次第です
+
+もちろん我々大人も参加したいので、土日を利用した数回のカリキュラムの指導者を
+紹介・派遣して頂けないでしょうか？
+
+充分とは言えないかもしれませんが、昼食代プラスα程度の謝礼は準備させて頂きま
+す
+
+またここで聞くのがお門違いでしたら、どこにお願いすれば良いか個人的に教えて頂
+くと助かります
+
+よろしくお願いします
+
+
+
+
+内部ウイルスデータベースは最新ではありません。
+Checked by AVG.
+Version: 8.0.100 / Virus Database: 269.23.2/1392 - Release Date: 2008/04/22
+15:51
+
+
+
+From cyocyoring ＠ wwis.jp  Tue Jul 21 19:41:25 2009
+From: cyocyoring ＠ wwis.jp (iimori)
+Date: Tue Jul 21 19:41:28 2009
+Subject: [Squeak-ja: 4295] Re: Squeakの指導の件
+In-Reply-To: <200907210238.n6L2c2TH007430@mail.wwis.jp>
+References: <200907210238.n6L2c2TH007430@mail.wwis.jp>
+Message-ID: <4A659B55.7080401@wwis.jp>
+
+久保様、ありがとうございます
+
+この連休中にも新しいイベントについて各団体の方々と話し合いをしました
+
+芯になる予定の３つの学童さん（各２０名前後）、子供絵画教室（５０名）、総
+合ダンス教室、ダウン症児者のダンス教室等々それぞれが予定している行事の合
+間を縫っての日程調整は、予想通り大変です
+
+イベントの一つとしてのSqueakの最終目標は、「子供たちが地域の大人たち（リ
+タイアされた方々が中心？）にSqueakを指導出来るようにする」ということにな
+りそうです
+
+久保　道 さんは書きました:
+> もし、お手伝いできることがありましたら、
+> と思ってご連絡しました。
+
+まだまだ調整段階ですので、具体的になってきたらよろしくお願いします
+
+> イベントなどで助手的に使っていただけるかも？
+> （足手まといになるかも）しれません。
+
+とんでもありません
+大阪に来られるついでがあったらお気軽に西区民センターにお立ち寄りください
+
+といっても私自身は自営業をしているので、夜か週末しか顔を出せませんが、館
+長と職員さんの一部には協力してもらっていますので話が通じると思います
+
+> 住まいは京都です。
+
+昨日、ルーブル美術館展に行き、祇園であなご天丼を３０分並んで頂きました
+外人さんの浴衣姿も多く見られましたね
+
+ではでは
+From umejava ＠ mars.dti.ne.jp  Tue Jul 21 21:32:46 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jul 21 21:32:50 2009
+Subject: [Squeak-ja: 4296] Re: 第11回Smalltalk勉強会のお知らせ
+In-Reply-To: <JxbHURqDf1M19fDlDMcMtNEw3@mars.dti.ne.jp>
+References: <JxbHURqDf1M19fDlDMcMtNEw3@mars.dti.ne.jp>
+Message-ID: <JxacQKyrwFJ7DSUmNDIzKFQw2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+24日の勉強会なのですが、Web Velocityに加え、PostgreSQLかMySQLを
+事前にインストールしておいていただけると助かります。
+
+当日は皆で簡単なサンプルアプリ(ブログ)を作っていきます。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。
+> 
+> 日時: 2009/7/24(金) 19:00- (2,3時間程度)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> または「自由自在Squeakプログラミング」
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai11kaismalltalkbenkyoukai
+> 
+> 今回のテーマは「SmalltalkでWeb-その2 フルスタック編」です。
+> 
+> SeasideをベースとしたフルスタックのWebアプリフレームワーク、
+> "Web Velocity"を中心に扱います。
+> 
+> Web Velocityの持つWebブラウザ上での統合開発環境、Scaffolding、
+> ORマッピング等を取り上げる予定でいます。
+> 
+> 余裕があれば"Glass"の話になるかもしれません。上から下まで全てが
+> オブジェクトのWebという世界を味わってみるのも良いでしょう
+> 
+> 補足:
+> Web Velocityは下記からインストールできます。
+> http://www.web-velocity.com/WVAccess/Main
+> Glassは下記からインストールできます。
+> http://seaside.gemstone.com/
+> 
+> 参加表明は特に必要ありません。ふらりとどうぞ。
+> 気になる方はこのMLにメールを送っていただいても良いです。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Wed Jul 22 00:23:19 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Jul 22 00:30:53 2009
+Subject: [Squeak-ja: 4297] Scratch 1.4の日本語翻訳ファイルの誤りについて
+Message-ID: <2d5d52a80907210823l6ee82f9bx541e8819854443bc@mail.gmail.com>
+
+こんにちは、阿部です。
+ユーザのご指摘によりScratch 1.4の日本語翻訳ファイルに間違いが見つかりましたのでお知らせします。
+
+・演算カテゴリのブロック[( ) を ( ) で割った余り]の引数順が逆になっている。
+たとえば、[(9) を (7) で割った余り]が2となるべきところ(9 \\ 7)、7になります(7 \\ 9)。
+これは言語を「日本語」にした場合のみ起こり、「にほんご」(ひらがな)では大丈夫です。
+
+・見た目カテゴリのブロック[( ) 番目にする]は[( ) 層下げる]の誤り。
+スプライトの前後関係に関する機能ですが、表示レイヤの絶対位置ではなく相対位置を変えるものでした。
+「日本語」と「にほんご」の両方に問題があります。
+
+これらを修正した翻訳ファイルを以下に置きました。
+http://squeakland.jp/abee/tmp/japo090721.zip
+
+展開したファイルを、Scratchをインストールした場所にあるlocaleフォルダ内の同名のファイルと置き換えてお使いください。
+たぶん次バージョンにこの修正も含まれると思われますが、しばらくの間はインストール後に手動でこの作業をお願いします。
+
+これに限らず、なにか気づかれたことがありましたら、お気軽にお寄せください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From hayasaka ＠ pluto.dti.ne.jp  Wed Jul 22 13:48:43 2009
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Wed Jul 22 13:48:48 2009
+Subject: [Squeak-ja: 4298] Re: Squeakの指導の件
+References: <200907220300.n6M30Rnu002653@pop.pluto.dti.ne.jp>
+Message-ID: <336156315D4D4205B41D77B51658A16B@computer>
+
+飯森　様
+
+　箕面の早坂です。
+
+　Squeak指導を支援する方々が、関西にも多数おられることは
+うれしいです。関西でもSqueakやScratchが広まれば良いなと
+思っています。
+　飯森様がｓ書かれたことで奇異に感じたことは、
+> イベントの一つとしてのSqueakの最終目標は、「子供たちが地域の大人たち（リ
+> タイアされた方々が中心？）にSqueakを指導出来るようにする」ということにな
+> りそうです
+　SqueakやScratchは、子ども達の創造性を開発するためのプログラムで
+私も含めてリタイアされた方のプログラムではないので、逆ではないかな
+という点です。
+　Squeak指導やイベントのスケジュールが決まりましたら、このメールリストに
+お知らせ下さい。都合がつけば、私も見学（お手伝い？）に行きます。
+
+早坂　吉昭
+　
+
+
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Wed Jul 22 15:31:23 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo)
+Date: Wed Jul 22 15:31:26 2009
+Subject: [Squeak-ja: 4299] Re: Squeakの指導の件
+In-Reply-To: <4A659B55.7080401@wwis.jp>
+Message-ID: <000001ca0a96$0996cb50$0d01a8c0@cjaqnts64hkrh45>
+
+飯森さん、お返事をありがとうございました。
+どのような内容になるのか、
+決まりましたらお知らせください。
+もっとも、早坂さんからの疑問？がありましたが、
+この点については、
+前に飯森さんが書かれていたように、squeakの使い方を教えることよりも、
+squeakを使って発想を羽ばたかせることにポイントをおくのでしたら、
+子どもさんの方が得意かもしれません。
+わたしはリタイア組ですので、その点をお含みください。
+PS:ルーブル美術館展もあなご天丼も、お楽しみでしたね〜
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of iimori
+Sent: Tuesday, July 21, 2009 7:41 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4295] Re: Squeakの指導の件
+
+
+久保様、ありがとうございます
+
+この連休中にも新しいイベントについて各団体の方々と話し合いをしました
+
+芯になる予定の３つの学童さん（各２０名前後）、子供絵画教室（５０名）、総
+合ダンス教室、ダウン症児者のダンス教室等々それぞれが予定している行事の合
+間を縫っての日程調整は、予想通り大変です
+
+イベントの一つとしてのSqueakの最終目標は、「子供たちが地域の大人たち（リ
+タイアされた方々が中心？）にSqueakを指導出来るようにする」ということにな
+りそうです
+
+久保　道 さんは書きました:
+> もし、お手伝いできることがありましたら、
+> と思ってご連絡しました。
+
+まだまだ調整段階ですので、具体的になってきたらよろしくお願いします
+
+> イベントなどで助手的に使っていただけるかも？
+> （足手まといになるかも）しれません。
+
+とんでもありません
+大阪に来られるついでがあったらお気軽に西区民センターにお立ち寄りください
+
+といっても私自身は自営業をしているので、夜か週末しか顔を出せませんが、館
+長と職員さんの一部には協力してもらっていますので話が通じると思います
+
+> 住まいは京都です。
+
+昨日、ルーブル美術館展に行き、祇園であなご天丼を３０分並んで頂きました
+外人さんの浴衣姿も多く見られましたね
+
+ではでは
+
+
+
+
+
+From cyocyoring ＠ wwis.jp  Wed Jul 22 15:51:37 2009
+From: cyocyoring ＠ wwis.jp (iimori)
+Date: Wed Jul 22 15:51:42 2009
+Subject: [Squeak-ja: 4300] Re: Squeakの指導の件
+In-Reply-To: <336156315D4D4205B41D77B51658A16B@computer>
+References: <200907220300.n6M30Rnu002653@pop.pluto.dti.ne.jp>
+	<336156315D4D4205B41D77B51658A16B@computer>
+Message-ID: <b3ccce6ba823c0be27dd5ac3f82849e4@wwis.jp>
+
+早坂様、ご意見頂けたこと非常に喜んでいます
+ありがとうございます
+
+On 2009/07/22, at 13:48, 早坂　吉昭 さまwrote:
+> SqueakやScratchは、子ども達の創造性を開発するためのプログラムで
+> 逆ではないかなという点です。
+
+他地域で行われたミニミュンヘン関連の報告を見ると、原則子供のみしか入れない行事にも関わらず、親御さんはじめ祖父母の方々も「何とか客として参加さ 
+せて欲しい」と強い要望があることに配慮すべきと思い至ったのです
+
+でも、子供たち（全員ではありませんが）が大人の前で「先生ごっこ」をしている時の顔はとても生き生きしていますよ
+
+そもそも「ミニミュンヘン」自体、子供だけの世界なんて現実にはあり得ないのですから、疑似世界観です
+それ以前に、フィリップ・アリエスの言うところの「子供」の概念自体、つい最近確立したもので本来は不自然な区分かもしれませんね
+（これは最近大阪２１世紀協会の方と話をした時に「ミニミュンヘンの考え方はおかしいのでは？」との意見を頂いた時の受け売りです）
+
+いずれにせよ、全員一致の話は刺激も面白味も平均点を超えることはないと思っているので、これも非常にありがたい意見の一つでした
+
+> Squeak指導やイベントのスケジュールが決まりましたら、お知らせ下さい。
+
+はい、よろしくお願いします
+
+飯森
+
+From umejava ＠ mars.dti.ne.jp  Tue Jul 28 22:02:54 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jul 28 22:03:01 2009
+Subject: [Squeak-ja: 4301] 第1回Smalltalkハッカソンのお知らせ
+Message-ID: <JxQ7QV8UU.wwC4eePGNElCeA3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+暑い季節がやってきました。こんな時こそSmalltalkでガンガンコーディングを
+して、代謝を高めることが重要です。
+
+さて、そんなわけで第1回Smalltalkハッカソンのお知らせです。
+
+日時: 2009/8/8(土) 13:00-18:00
+場所: 株式会社フルネス トレーニングルーム
+
+詳しくは
+http://www.smalltalk-users.jp/Home/gao-zhi/smalltalk-hackathon-1
+をどうぞ。
+
+なお、参加人数に限りがありますのでご希望の方はお早めにお申し込みください。
+
+ではでは。
+---
+[:masashi | ^umezawa]

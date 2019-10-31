@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3287] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203287%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQj1pPzQ8VCROPEEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTGQhJxsoQiBCUmVnZXhwIGZvciBTcXVlYWsgGyRCJE4lJCVzGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklSCE8JWskLD5lPGokLyQkJCskSiQkGyhC%3F%3D&In-Reply-To=7c3599130612110452m7ffddad3hfe31dacb716d3fd%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003285.html">
+   <LINK REL="Next"  HREF="003289.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3287] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203287%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQj1pPzQ8VCROPEEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTGQhJxsoQiBCUmVnZXhwIGZvciBTcXVlYWsgGyRCJE4lJCVzGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklSCE8JWskLD5lPGokLyQkJCskSiQkGyhC%3F%3D&In-Reply-To=7c3599130612110452m7ffddad3hfe31dacb716d3fd%40mail.gmail.com"
+       TITLE="[Squeak-ja: 3287] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2006年 12月 12日 (火) 01:04:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003285.html">[Squeak-ja: 3285] 初心者の質問：BRegexp for Squeakのインストールが上手くいかない
+</A></li>
+        <LI>次の記事 <A HREF="003289.html">[Squeak-ja: 3289] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3287">[ 日付 ]</a>
+              <a href="thread.html#3287">[ スレッド ]</a>
+              <a href="subject.html#3287">[ 件名 ]</a>
+              <a href="author.html#3287">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Mon, 11 Dec 2006 21:52:51 +0900
+&quot;濱口裕史&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hamaguchi.u2 ＠ gmail.com</A>&gt; wrote:
+&gt;<i>よろしく御願いします。
+</I>
+よろしくお願いします。
+
+# サブジェクトに「初心者の質問：」と入れないといけないというローカルルー
+# ルは無いと思いますので適当にお願いします。もちろんつけても結構です。
+
+&gt;<i>Squeak(Squeak3.7.1)をはじめて3日、文法を一通りおさえ、
+</I>&gt;<i>現在クラスライブラリ探索中です。
+</I>&gt;<i>
+</I>&gt;<i>正規表現モジュールがデフォルトでSqueakには含まれていないようなので、
+</I>&gt;<i>BRegexp for Squeak(
+</I>&gt;<i><A HREF="http://kminami.fc2web.com/Squeak/Goodies/BRegexp/index.html">http://kminami.fc2web.com/Squeak/Goodies/BRegexp/index.html</A>)
+</I>&gt;<i>の.sarファイルをダウンロードし、
+</I>&gt;<i>ファイルリストからインストールしてみました。
+</I>&gt;<i>
+</I>&gt;<i>すると、インストールのプログレスバーの進捗が8割進んだくらいでストップし、&quot;Syntax Error&quot;ウィンドに、以下の文言が現れました。
+</I>&gt;<i>
+</I>&gt;<i>&lt;上の枠&gt;
+</I>&gt;<i>BWin32Adapter api call apiBREWVERSION
+</I>&gt;<i>
+</I>&gt;<i>&lt;下の枠&gt;
+</I>&gt;<i>apiBREWVERSION
+</I>&gt;<i>    &lt;&gt; expected -&gt;apicall: char* 'BRE_BREWVERSION' () module:
+</I>&gt;<i>'BRE_Wrap.dll'&gt;
+</I>&gt;<i>    ^ self externalCallFailed
+</I>
+BRegexp for Squeakのページには動作確認として、Squeak3.6と
+SqueakNihongo6.1が挙げられています。お使いの3.7.1は未対応のため上のエラー
+が発生したものと思われます。
+手元のNihongo6.1にインストールして確認したところ、問題なくテストケースを
+実行することができました。
+
+特に3.7.1にこだわることが無いのなら、3.6あるいはNihongo6.1にダウングレー
+ドしても良いのではないでしょうか。
+
+<A HREF="http://squeakland.jp/plugin/installers/SqueakNihongo6.1.zip">http://squeakland.jp/plugin/installers/SqueakNihongo6.1.zip</A>
+
+代替のライブラリ、あるいはBRegexp for Squeakを3.7.1以降で動作させる方法に
+ついては、他の方にお任せします。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003285.html">[Squeak-ja: 3285] 初心者の質問：BRegexp for Squeakのインストールが上手くいかない
+</A></li>
+	<LI>次の記事 <A HREF="003289.html">[Squeak-ja: 3289] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3287">[ 日付 ]</a>
+              <a href="thread.html#3287">[ スレッド ]</a>
+              <a href="subject.html#3287">[ 件名 ]</a>
+              <a href="author.html#3287">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

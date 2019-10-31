@@ -1,0 +1,264 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Oct  5 05:18:20 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 05 Oct 2011 05:18:20 +0900
+Subject: [SML 7969] Re:
+	第36回Smalltalk勉強会＠京都
+In-Reply-To: <4E8248DA.1030702@cc.kyoto-su.ac.jp>
+References: <4E8248DA.1030702@cc.kyoto-su.ac.jp>
+Message-ID: <4E8B6A0C.1050307@cc.kyoto-su.ac.jp>
+
+本日です。
+
+--- 青木淳
+
+(11/09/28 7:06), AOKI Atsushi wrote:
+> 第36回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto36
+>
+> 場所(部屋)は京都産業大学サテライト講習室(6階第3講習室)になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第36回 Smalltalk勉強会＠京都
+> 日時：2011年10月05日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 窓MVCが完成しましたので、それを用いたアプリケーションの作成に
+> 移行してゆきたいと思います。バンドルやパッケージなどを上手に
+> 操るプログラムマネージャを紹介しながら、いままで作成してきた
+> 窓MVCを複数利用するアプリケーションの説明をし、さっそくプログ
+> ラミングに入ります。いつものごとく、勉強会に参加している皆さ
+> ん全員で一緒にプログラミングしてゆきます。ノート型のパーソナ
+> ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>
+> --- 青木淳
+
+From serge.stinckwich ＠ gmail.com  Wed Oct  5 11:17:14 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 5 Oct 2011 09:17:14 +0700
+Subject: [SML 7970] Re:
+	第36回Smalltalk勉強会＠京都
+In-Reply-To: <4E8248DA.1030702@cc.kyoto-su.ac.jp>
+References: <4E8248DA.1030702@cc.kyoto-su.ac.jp>
+Message-ID: <CAOysuxVk5mkaq8WgTOd_PuHzvO1Fcce2bYB+UOYbhCO1Dat1Bg@mail.gmail.com>
+
+Hi all,
+
+i will stay 2 month in Kyoto from October 25th to December 25th.
+I would like to join you for your monthly meetings and also the
+meetings in Tokyo or elsewhere.
+
+See you all
+Happy Smalltalking !
+
+2011/9/28 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 第36回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto36
+>
+> 場所(部屋)は京都産業大学サテライト講習室(6階第3講習室)になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第36回 Smalltalk勉強会＠京都
+> 日時：2011年10月05日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 窓MVCが完成しましたので、それを用いたアプリケーションの作成に
+> 移行してゆきたいと思います。バンドルやパッケージなどを上手に
+> 操るプログラムマネージャを紹介しながら、いままで作成してきた
+> 窓MVCを複数利用するアプリケーションの説明をし、さっそくプログ
+> ラミングに入ります。いつものごとく、勉強会に参加している皆さ
+> ん全員で一緒にプログラミングしてゆきます。ノート型のパーソナ
+> ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>
+> --- 青木淳
+>
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From tomohiro ＠ sra.co.jp  Wed Oct 12 14:40:18 2011
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Wed, 12 Oct 2011 14:40:18 +0900
+Subject: [SML 7971]
+ 平滑化粒子モデルによる粘性流体シミュレーション環境HoneyGinger
+Message-ID: <4E952842.1010102@sra.co.jp>
+
+おだです。
+
+平滑化粒子モデルによる粘性流体シミュレーション環境HoneyGingerを
+MITライセンスでリリースしました。
+http://squeaksource.blueplane.jp/HoneyGinger.html
+
+まだ作りかけ状態ですが、「全てのソフトウェアは作りかけ」の精神で、
+さっさと公開することにしました。
+
+物理シミュレーションというと、大規模高速なものが科学の諸領域で
+応用されていますが、HoneyGingerは計算モデルはさておき、
+「流体との対話」をどうやっておこなうか、「流れ」をどう感じ、
+流体をどう乱すのかを、実験的に実装していくプロジェクトです。
+
+動作環境はSqueakおよびPharoで、CogVMを強く推奨します。
+ライセンスはMITライセンスです。
+Monticelloレポジトリは
+http://squeaksource.blueplane.jp/HoneyGinger
+です。
+
+HGSimulatorのクラスメソッドをいくつか試して
+ぜひ流体と戯れてみてください。
+---
+おだ
+
+From ume ＠ softumeya.com  Tue Oct 18 23:36:18 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 18 Oct 2011 23:36:18 +0900
+Subject: [SML 7972]
+	第37回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdS3Dfw0qUtyGiC+aTGuRxjh_ZwLQ=ZoOYN2xn2bOW3ynA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/10/31(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai37kaismalltalkbenkyoukai
+
+今回のテーマは久しぶりにScratchです。サイバー大学の阿部さんにご講演いただきます。
+タイトル: 「簡単だけど奥深い！Scratchプログラミングの魅力」
+10月24日からITpro(http://itpro.nikkeibp.co.jp/)で連載される同名記事のライブな解説となるようです。お楽しみに。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Thu Oct 20 00:22:12 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Thu, 20 Oct 2011 00:22:12 +0900
+Subject: [SML 7973] Re:
+	第37回Smalltalk勉強会のお知らせ
+In-Reply-To: <CAH3eEdS3Dfw0qUtyGiC+aTGuRxjh_ZwLQ=ZoOYN2xn2bOW3ynA@mail.gmail.com>
+References: <CAH3eEdS3Dfw0qUtyGiC+aTGuRxjh_ZwLQ=ZoOYN2xn2bOW3ynA@mail.gmail.com>
+Message-ID: <CAH3eEdSxiSN8HyYXh7fMe+76eAeCYWiaBhutksvSjwTOzt_rUg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+今回は人数が少し多めになりそうですので、ATNDで事前参加登録することにしました。
+http://atnd.org/events/21154
+
+お手数ですがよろしくお願いします。
+
+2011年10月18日23:36 Masashi Umezawa <ume ＠ softumeya.com>:
+> こんにちは
+> 梅澤です。
+>
+> 定例のSmalltalk勉強会のお知らせです。
+>
+> 日時: 2011/10/31(月) 19:00-21:00 (2時間)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト:
+>  「自由自在Squeakプログラミング」
+>  「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai37kaismalltalkbenkyoukai
+>
+> 今回のテーマは久しぶりにScratchです。サイバー大学の阿部さんにご講演いただきます。
+> タイトル: 「簡単だけど奥深い！Scratchプログラミングの魅力」
+> 10月24日からITpro(http://itpro.nikkeibp.co.jp/)で連載される同名記事のライブな解説となるようです。お楽しみに。
+>
+> 参加表明は特に必要ありません。ふらりとお越しください。
+> --
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+>
+
+
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Oct 27 08:57:22 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 27 Oct 2011 08:57:22 +0900
+Subject: [SML 7974]
+	第37回Smalltalk勉強会＠京都
+Message-ID: <4EA89E62.6000609@cc.kyoto-su.ac.jp>
+
+第37回Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto36
+
+場所(部屋)は京都産業大学サテライト講習室(6階第3講習室)になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第37回 Smalltalk勉強会＠京都
+日時：2011年11月02日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ変換のGUI)を続けたいと思います。スペクトル表示とペインレイアウトの算段をしております。いつものごとく、勉強会に参加している皆さん全員で一緒にプログラミングしてゆきます。ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+--- 青木淳
+
+From serge.stinckwich ＠ gmail.com  Thu Oct 27 10:10:06 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Thu, 27 Oct 2011 10:10:06 +0900
+Subject: [SML 7975] Re:
+	第37回Smalltalk勉強会＠京都
+In-Reply-To: <4EA89E62.6000609@cc.kyoto-su.ac.jp>
+References: <4EA89E62.6000609@cc.kyoto-su.ac.jp>
+Message-ID: <CAOysuxU_nzRh28rT-fREwvjSzcA0rBRHAToURjeR-Kr7YRuAzA@mail.gmail.com>
+
+Hi,
+
+i will try to come. Not sure, because i'm attending a conference from
+Nov 1 to 5.
+
+Regards,
+
+2011/10/27 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 第37回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto36
+>
+> 場所(部屋)は京都産業大学サテライト講習室(6階第3講習室)になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第37回 Smalltalk勉強会＠京都
+> 日時：2011年11月02日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ変換のGUI)を続けたいと思います。スペクトル表示とペインレイアウトの算段をしております。いつものごとく、勉強会に参加している皆さん全員で一緒にプログラミングしてゆきます。ノート型のパーソナルコンピュータ（Windows
+> 7 または Mac OS X）をご持参ください。
+>
+> --- 青木淳
+>
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+

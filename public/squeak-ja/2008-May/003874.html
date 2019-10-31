@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3874] Re: Object特異的な情報を含むメッセージの発信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203874%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uJEskRCQkGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=002d01c8b28e%2465111e60%244da415ca%40hbyori2c37">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003878.html">
+   <LINK REL="Next"  HREF="003876.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3874] Re: Object特異的な情報を含むメッセージの発信について</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203874%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uJEskRCQkGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=002d01c8b28e%2465111e60%244da415ca%40hbyori2c37"
+       TITLE="[Squeak-ja: 3874] Re: Object特異的な情報を含むメッセージの発信について">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 5月 11日 (日) 01:07:19 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003878.html">[Squeak-ja: 3878] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+        <LI>次の記事 <A HREF="003876.html">[Squeak-ja: 3876]  Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3874">[ 日付 ]</a>
+              <a href="thread.html#3874">[ スレッド ]</a>
+              <a href="subject.html#3874">[ 件名 ]</a>
+              <a href="author.html#3874">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  鶴井さん
+
+&gt;<i> 例として、月と地球の運動をシミュレートすることを考えています。それぞれは、インスタンス変数として、質量、現在位置及び現在の速度を持つとします。月は、現在の地球の位置と質量（これは一回伝達されれば十分ですが）の情報が得られると、自身の質量、位置、速度から微小時間後の位置、速度が求まります。地球に関しても同じことです。この微小時間のメッセージのやり取り繰りを返すことにより有限時間での両者の動きをシミュレートしたいと考えているわけです。端的に言って、地球がその質量及び位置を月へ、月がその質量及び位置を地球へ直接に伝達する方法はないのでしょうか、という質問です。assureUniClass, compile: classified:を用いますと、（まだ十分把握できてい 
+</I>&gt;<i> ないのですが）、間に介在するものが、月の位置を月から聞き出して地球に教え、地球の位置を地球から聞き出しつきに教える、という形になるような気がいたします。より一般的には、Object間で直接情報のやり取りをする方法はあるのでしょうか、ということになります。
+</I>
+  オブジェクト間のやりとりというものは、すべて「メッセージ」という概念
+で抽象化されていますが、メッセージには「引数」を付けて送ることができ、
+メッセージ送信者自身を現す&quot;self&quot;を含め、送信者が「知っている」(送信者
+が参照可能である)任意のオブジェクト、またはそれらを含む任意の式を引数
+とすることができます。というわけで、阿部さんの言うように一般的には
+
+	b message: self.
+
+というメッセージをaが実行すれば良いことになります。
+
+  が、重力のシミュレーションのときはもう少し工夫が必要でしょうね。
+
+月   位置と速度を計算する: 地球.
+地球 位置と速度を計算する: 月.
+
+という二つの式を順番に実行するとしたとき、最初の式を実行した時点で月の
+位置と速度が時刻tにおけるものでなくt+dにおけるものになってしまった場合、
+下の式で地球の位置が間違ったものになってしまいます。また、いずれ3体以
+上のものをシミュレートしたくなるのが人情ですので、存在する質点のリスト
+を管理する「仲介者」のようなオブジェクトを用意して、それぞれの質点の一
+ステップ前の値を覚えておくか、それぞれのオブジェクトが新しい値と古い値
+の両方を持てるようにすることが考えられます。
+
+  さらには重力の伝播速度を考
+慮したくなると、メッセージの引数のひとつに時間を指定できるようにしたく
+なったりするかもしれません。その場合質点オブジェクトに時刻tにおける位
+置を返す
+
+  positionAtTimeT: t
+
+のようなメソッドを定義して、内部で以前の位置を(補完して返す)ということ
+になるでしょうか。(もちろん3体以上の問題では物理的に正確なシミュレーショ
+ンは不可能ですが、それでも楽しければよいですし、それなりに良い結果を得
+ることはできると思います。)
+
+  Squeak/Smalltalk側のことに関しては、梅澤さんの書かれた本、「自由自在
+Squeakプログラミング」などを参考にすると良いのではないかと思います。
+
+  (思うに、これはEtoysでやりたいという話ではなく、Smalltalkで、という
+ことで良かったのですよね。)
+
+-- Yoshiki
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003878.html">[Squeak-ja: 3878] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+	<LI>次の記事 <A HREF="003876.html">[Squeak-ja: 3876]  Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3874">[ 日付 ]</a>
+              <a href="thread.html#3874">[ スレッド ]</a>
+              <a href="subject.html#3874">[ 件名 ]</a>
+              <a href="author.html#3874">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

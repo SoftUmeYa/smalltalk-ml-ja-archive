@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3082] Re: source of ImmX11Plugin
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203082%5D%20Re%3A%20source%20of%20ImmX11Plugin&In-Reply-To=86odunee7f.wl%25mutoh%40openedu.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003077.html">
+   <LINK REL="Next"  HREF="003085.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3082] Re: source of ImmX11Plugin</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203082%5D%20Re%3A%20source%20of%20ImmX11Plugin&In-Reply-To=86odunee7f.wl%25mutoh%40openedu.org"
+       TITLE="[Squeak-ja: 3082] Re: source of ImmX11Plugin">kawa90 ＠ yahoo.co.jp
+       </A><BR>
+    <I>2006年 8月 20日 (日) 21:30:10 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003077.html">[Squeak-ja: 3077] Re: source of ImmX11Plugin
+</A></li>
+        <LI>次の記事 <A HREF="003085.html">[Squeak-ja: 3085] 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3082">[ 日付 ]</a>
+              <a href="thread.html#3082">[ スレッド ]</a>
+              <a href="subject.html#3082">[ 件名 ]</a>
+              <a href="author.html#3082">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。夏期休暇で返事が遅れました。
+
+おそらくFreeBSDでは問題ないと思われますが。。。
+
+まずUbuntu(Linux)でsqueak.の症状はwww.squeakland.jp/から
+ダウンロード・展開したオブジェクトで起動するとキーボード
+入力した時点でSegmentation faultになってしまうというもの
+でした。そこでgdbで調査するとsqUnixX11.cのXCreateFontSet
+関数がNULLを返すのが原因だと分かったので、応急処置として
+
+#define FONTNAME      &quot;-*-Fixed-Medium-R-Normal--14-*-ISO8859-1&quot;
+と変更しました。思うにUbuntuのデフォルトロケールがUTF8
+なので、いけなかったのではと思ってたり。ただ、EUC-JPに変
+更するのもいろいろ大変そうだったので、ソースを変更しまし
+た。XLibやXIMに詳しくないので、あくまでも対処療法です。
+
+それでは
+
+On Mon, 14 Aug 2006 20:42:12 +0900
+Takeshi MUTOH &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>&gt; wrote:
+
+&gt;<i> むとう＠おうちです。
+</I>&gt;<i> 
+</I>&gt;<i> 夏休みの宿題として、XIM入りのsqueakをFreeBSDに入れようと考えてます;-)
+</I>&gt;<i> 
+</I>&gt;<i> At Thu, 10 Aug 2006 01:15:06 +0900 (JST),
+</I>&gt;<i> ・ ひでお &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kawa90 ＠ yahoo.co.jp</A>&gt; wrote:
+</I>&gt;<i> &gt; 武藤さんのページ
+</I>&gt;<i> &gt; <A HREF="http://qml.610t.org/squeak/VM.html">http://qml.610t.org/squeak/VM.html</A>
+</I>&gt;<i> &gt; 経由でXIM用パッチは
+</I>&gt;<i> &gt; <A HREF="http://squeak.hp.infoseek.co.jp/squeak/linux/SqueakImmX11Plugin2a.tar.gz">http://squeak.hp.infoseek.co.jp/squeak/linux/SqueakImmX11Plugin2a.tar.gz</A>
+</I>&gt;<i> &gt; にあるようです。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 老婆心ながら最新Ubuntu(Linux)ではうまく日本語入力できなかったです。という
+</I>&gt;<i> &gt; よりSegmentation faultになってしまったので、一部ソースを修正した記憶があ
+</I>&gt;<i> &gt; ります。
+</I>&gt;<i> 
+</I>&gt;<i> この症状ってどんな感じでしたでしょうか?
+</I>&gt;<i> 
+</I>&gt;<i> あと、ソースの修正ってなにを修正されたか覚えておられてますか?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 僕の把握している範囲だと、
+</I>&gt;<i> 
+</I>&gt;<i> - 3.6-3 -&gt; 3.7-7
+</I>&gt;<i> -- src/plugins.extがplatforms/unix/src/plugins.extに移動したので最初のパッチがあたらない
+</I>&gt;<i> -- EXTERNAL_PLUGINSにSqueak3Dが追加されている
+</I>&gt;<i> 
+</I>&gt;<i> - 3.7-7 -&gt; 3.9-7
+</I>&gt;<i> -- SqueakFFIPrimsがINTERNAL_PLUGINに変わった
+</I>&gt;<i> # なんか、今イメージの方でFFI削除されているみたいですが…
+</I>&gt;<i> -- PseudoTTYPlugin, UnixOSProcessPlugin, AioPluginがEXTERNAL PLUGINSに追加
+</I>&gt;<i> ぐらいだったと思うんですが。
+</I>&gt;<i> 
+</I>&gt;<i> 参考までに。
+</I>&gt;<i> 
+</I>&gt;<i> では。
+</I>&gt;<i> --
+</I>&gt;<i> 武藤 武士＠「あおによし」自宅より 
+</I>&gt;<i>  E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://610T.org/">http://610T.org/</A>
+</I>&gt;<i>  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+</I>&gt;<i>  ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+<A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003077.html">[Squeak-ja: 3077] Re: source of ImmX11Plugin
+</A></li>
+	<LI>次の記事 <A HREF="003085.html">[Squeak-ja: 3085] 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3082">[ 日付 ]</a>
+              <a href="thread.html#3082">[ スレッド ]</a>
+              <a href="subject.html#3082">[ 件名 ]</a>
+              <a href="author.html#3082">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

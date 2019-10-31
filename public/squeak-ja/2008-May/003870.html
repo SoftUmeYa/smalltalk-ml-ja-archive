@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3870] Re: Object特異的な情報を含むメッセージの発信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203870%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=000d01c8b258%243ccb1ef0%244da415ca%40hbyori2c37">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003869.html">
+   <LINK REL="Next"  HREF="003871.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3870] Re: Object特異的な情報を含むメッセージの発信について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203870%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=000d01c8b258%243ccb1ef0%244da415ca%40hbyori2c37"
+       TITLE="[Squeak-ja: 3870] Re: Object特異的な情報を含むメッセージの発信について">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 5月 10日 (土) 14:20:16 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003869.html">[Squeak-ja: 3869] Object特異的な情報を含むメッセージの発信について
+</A></li>
+        <LI>次の記事 <A HREF="003871.html">[Squeak-ja: 3871] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3870">[ 日付 ]</a>
+              <a href="thread.html#3870">[ スレッド ]</a>
+              <a href="subject.html#3870">[ 件名 ]</a>
+              <a href="author.html#3870">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+ここでいう「Bがある変化をする」とは、単にBの属性値が変化するだけでなく、Aの情報をもとにBの振る舞いが変わるという解釈でよいでしょうか。
+また、オブジェクト特異的ということなので、Bのみが変化するのであって、Bが属するクラスおよびそのインスタンスは変化しないということですね。
+そのような場合、Squeak Smalltalkのインスタンスに、assureUniClassメッセージを送ることでインスタンス特異的クラスを得ることができます。このクラスに特異的メソッドを追加するには、compile:classified:を送ります。このとき、compile:の引数はソースコードの文字列、classified:の引数は任意のメソッドカテゴリ(プロトコル)の文字列です。したがって、このソースコードにAの情報を含めれば目的は達すると思われます。
+詳しくは以下の鷲見さんの解説を参照してください。
+<A HREF="http://d.hatena.ne.jp/sumim/20060420/p1">http://d.hatena.ne.jp/sumim/20060420/p1</A>
+
+なお、2004年末の議論は、マルチエージェントの扱いに関するもので、今回の話とは直接関係ないと思います。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+08/05/10 に Hiromichi Tsurui&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tsurui ＠ med.juntendo.ac.jp</A>&gt; さんは書きました:
+&gt;<i>
+</I>&gt;<i> Object Aからobject
+</I>&gt;<i> BへAに関する情報を含むメッセージを送り、その情報に基づいてBがある変化をする、というような場合、どのように記述するべきでしょうか？Object特異的な情報を含むメッセージをそのObjectから発信する方法についてです。何冊かの本を読んだのですがはっきり触れていませんでした。２００４年１２月末から２００５年１月に掛けてのKondo
+</I>&gt;<i> Fumito, Kazuhiro ABE, Takashi
+</I>&gt;<i> Yamamiyaさんたちの議論はこの問題に関するものだと思うのですが、殆んど文字化けしていて読めませんでした。あるいは、Smalltalkにはこのような機能はないのでしょうか？
+</I>&gt;<i>
+</I>&gt;<i> 鶴井　博理
+</I>&gt;<i> Hiromichi Tsurui MD, PhD
+</I>&gt;<i> Dept. Pathology,
+</I>&gt;<i> Juntendo University
+</I>&gt;<i> Phone:81-3-5802-1039
+</I>&gt;<i> Fax:81-3-3813-3164
+</I>&gt;<i> <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tsurui ＠ med.juntendo.ac.jp</A>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003869.html">[Squeak-ja: 3869] Object特異的な情報を含むメッセージの発信について
+</A></li>
+	<LI>次の記事 <A HREF="003871.html">[Squeak-ja: 3871] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3870">[ 日付 ]</a>
+              <a href="thread.html#3870">[ スレッド ]</a>
+              <a href="subject.html#3870">[ 件名 ]</a>
+              <a href="author.html#3870">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

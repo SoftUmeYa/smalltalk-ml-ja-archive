@@ -1,0 +1,1750 @@
+From nisinaka ＠ sra.co.jp  Tue Sep 12 17:13:49 2006
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7166] [ANNOUNCE] Jun for Java (Jun607)
+In-Reply-To: <20060719192147.AA64.NISINAKA@sra.co.jp>
+References: <20060719192147.AA64.NISINAKA@sra.co.jp>
+Message-ID: <20060912170928.CCA2.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン607を公開します。
+
+  バージョン579からの主な変更点は、以下の通りです。
+
+    * (new feature) Jun2dPolyline および Jun3dPolyline を実装。制
+      約付きドロネー三角形分割(Constraint Delaunay Triangulation)
+      により、2次元および3次元のポリラインから、3角形パッチによる
+      平面を生成します。詳細は以下のURLを参照して下さい:
+
+        http://www.sra.co.jp/people/aoki/Jun/Topics/TriangulationOfPolyline/index.html
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/607/Jun2dPolyline.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/607/Jun3dPolyline.png
+
+    * (bug fix) JunOpenGLRenderingContext を Jun604 相当に更新し
+      ました。下記メソッドのバグを修正しています。
+        productTransformation_while_(Jun3dTransformation, StBlockClosure)
+
+    * (incompatibility) Jun603 で行われた DXF パッケージのリファ
+      クタリングを行いました。パッケージ 'jp.co.sra.jun.dxf.*' の
+      クラス群を 'jp.co.sra.jun.dxf.support.*' に移動しました。
+
+    * (modification) JunOpaqueImageIcons を Jun591 相当に更新しま
+      した。アイコンを追加しています。
+
+    * (new feature) JunOpenGLDisplayObjects は、典型的な三次元表
+      示オブジェクトのリストを持ち、項目の選択により表示を切り替
+      えることのできる表示モデルです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/607/JunOpenGLDisplayObjects.png
+
+    * (modification) Jun3dTransformation/Jun2dTransformation を 
+      Jun586 相当に更新しました。典型的な座標変換を追加しています。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From aoki ＠ sra.co.jp  Thu Sep 14 16:19:25 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7167] Jun694 for Smalltalk
+Message-ID: <4509027D.6070602@sra.co.jp>
+
+青木です。
+
+【Jun694】をアップロードしています。どうぞお試しくださいませ。
+
+http://www.sra.co.jp/public/sra/technical/jun/
+
+【じゅんシティ】を作ってみました。およそ百バージョン毎に撮影
+しました。GIF アニメーションにしておきましたので、どうぞ皆さ
+んもご覧ください。1996年から2006年の十年間の推移になります。
+
+http://www.sra.co.jp/people/aoki/misc/gifs/CityOfJun.gif
+
+【VisualWorks 3.x → 5i.x → 7.x】とインフラが推移するにつれ
+て、【じゅん for Smalltalk】のビル群が立ち上がって増えてゆく
+のがわかります。（開発プロセスの可視化の一種になるでしょ！）
+
+そうそう、最近、Smalltalk で機器制御プログラムも書きましたよ。
+３次元の力覚デバイスで、８本の糸の長さを計測し、８個のモータ
+のトルクを制御して力を提示します。2キロヘルツ（0.5 msec.）の
+制御速度をノートマシン（Pentium M 2GHz）で出すことに成功しま
+した。
+
+＃制御プログラムというと C や C++ などが向いていると思われが
+＃ちですが、これぐらいならば、Smalltalk でもやれるぞ！という
+＃証拠になります。
+
+試しに【スパイダー・タートル】を作成してみました。タートル・
+グラフィックスのタートル（亀）です。スパイダーのグリップを亀
+に見立て、ここへゆきなさい、あそこにいきなさい、と指示すると、
+そのように動くという代物です。次のようなプログラムになります。
+
+    | spidarTurtle |
+    spidarTurtle := SpidarTurtle new.
+    spidarTurtle openIn: (100 @ 250 extent: 400 @ 400).
+    spidarTurtle
+        assert: [spidarTurtle resume]
+        do:
+            [| amount |
+            amount := 6.
+            spidarTurtle home.
+            spidarTurtle goto: amount , 0 , 0.
+            spidarTurtle goto: amount negated , 0 , 0.
+            spidarTurtle home.
+            spidarTurtle goto: 0 , amount , 0.
+            spidarTurtle goto: 0 , amount negated , 0.
+            spidarTurtle home.
+            spidarTurtle goto: 0 , 0 , amount.
+            spidarTurtle goto: 0 , 0 , amount negated.
+            spidarTurtle home]
+        ensure: [spidarTurtle terminate].
+    ^spidarTurtle
+
+このプログラムを実行すると、真ん中にあったグリップが６センチ
+だけＸ軸の正方向に動き、その次に１２センチ分、Ｘ軸の負方向に
+動き、また真ん中に戻り・・・、という具合に、３次元座標軸の上
+を行ったり来たりします。
+
+円（正18角形）と星（一筆書き）の GIF アニメーションを置きま
+したので、仮想スパイダーの映像として、ご覧になってください。
+
+http://www.sra.co.jp/people/aoki/misc/gifs/circle.gif
+http://www.sra.co.jp/people/aoki/misc/gifs/star.gif
+
+計算方式ですが、goto: と言われると、現在の地点から指定された
+地点までのまわりに、カテナリー（懸垂線）形状のポテンシャル・
+フィールドを作り、垂れ下がった底へ向かって落ちてゆく、という
+収斂演算です。８個のモータを操って、糸の張力（並進力とトルク）
+を調整するプログラムになります。
+
+【参考ＵＲＬ】
+http://resource.renesas.com/lib/jpn/superh/visit/03.html
+http://www.pi.titech.ac.jp/press/press0347.html
+http://sklab-www.pi.titech.ac.jp/frame_index-j.html
+
+以上、最近の青木の Smalltalk プログラミング報告でした。
+
+【じゅんシティ】や【スパイダー・タートル】にご興味がある方は
+ご連絡くださいませ。一緒に頑張ってゆきませう！
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From umejava ＠ mars.dti.ne.jp  Thu Sep 21 08:13:18 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7168] Vista Smalltalk
+Message-ID: <JZ200609210813184.2017421@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+久しぶりに新たなSmalltalkの実装が出ているようなので、お知らせしておきます。
+
+Vista Smalltalk
+http://vmx-net.com/vistascript/docuwiki/doku.php
+
+名前の通り、Windows Vistaに特化したSmalltalkです。IE 7上で動いたりする
+ようですね。フットプリントの小ささが魅力の一つかと思います。
+
+Windows VistaもIE 7も手元にないのでこれ以上なんともいえません。
+どなたか動かしてみたという方は、レポートしていただけるとありがたいです。
+
+では。
+---
+[:masashi | ^umezawa]
+
+From europa ＠ ps.inforyoma.or.jp  Sat Sep 23 01:13:48 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7169] "0 @ 0" について
+Message-ID: <45140BBC.2040301@ps.inforyoma.or.jp>
+
+初めまして。寺内と申します。
+
+数年前に投稿したきりでROMのみでしたが、一度は挫折した
+Smalltalkを青木さん「Smalltalkイディオム」で再挑戦しています。
+
+しかし、いきなり躓いてしまいました。
+「2.基本->do it」の最初のプログラムの"0 @ 0"でメッセージの
+遣り取りを調べていくと、"self basicNew"が出てきたところで追い
+かけられなくなりました。
+
+私の調べ方が間違っている可能性がありますので、追いかけた順番、
+考え方を下記に記します。
+使用しているSmalltalkは、"VisualWorks NonCommercial, 7.4.1"です。
+
+--------------------------------------------------------------------
+0 @ 0
+--------------------------------------------------------------------
+0 is a SmallInteger
+0はSmallInteterのインスタンスと考えています。
+次に示す二項メッセージ式"@ 0"がインスタンスメソッドだからです。
+--------------------------------------------------------------------
+@ y
+ "Answer a new Point whose x value is the receiver and whose y value
+ is the argument."
+
+ <primitive: 18>
+ ^Point x: self y: y
+
+このメッセージは、Numberに定義されているインスタンスメソッドでした。
+Number -> Integer -> SmallIntegerの流れで継承しているとわかりました。
+ただ、superclassの定義で "Core."が付加されている意味がわかりません。
+--------------------------------------------------------------------
+x: xInteger y: yInteger
+ "Answer a new instance of a Point with coordinates xInteger and yInteger."
+
+ ^self basicNew setX: xInteger setY: yInteger
+
+basicNewというメッセージはPointのsuperclassで定義されていると
+考えて調べると、
+
+AbsentClassImporter class basicNew
+Behavior basicNew
+BehaviorShell basicNew
+Character class basicNew
+LimitedPrecisionReal class basicNew
+SmallInterger class basicNew
+
+で定義されていました。
+最初は、SmallIntegerに定義されているbasicNewと思いましたが、
+System Browser -> Class -> Spawn HierarchyでPointを表示すると
+
+Object
+  Magnitude
+    ArithmeticValue
+      Point
+
+と表示され、上記のクラスがスーパークラスに存在しませんでした。
+ここで完全に行き詰まってしまいました。
+--------------------------------------------------------------------
+
+Pointの"x: xInteger y: yInteger"で使われているメッセージ"self basicNew"
+はどこから継承してきたのでしょうか。
+
+かなり長くなってしまいましたが、よろしくお願いします。
+
+また、考え方、調べ方が「回りくどい、間違っている、質問が長い、もっと
+いい方法がある」等ありましたら指摘してください。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+
+
+
+
+From aoki ＠ sra.co.jp  Sat Sep 23 02:37:41 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7170] Re: "0 @ 0" について
+In-Reply-To: <45140BBC.2040301@ps.inforyoma.or.jp>
+References: <45140BBC.2040301@ps.inforyoma.or.jp>
+Message-ID: <45141F65.4070906@sra.co.jp>
+
+青木です。
+
+> 数年前に投稿したきりでROMのみでしたが、一度は挫折した
+> Smalltalkを青木さん「Smalltalkイディオム」で再挑戦しています。
+
+拙著「Smalltalk イディオム」は上級者向けに書き下ろしましたの
+で、これから取り組もうという方々には難しいように思います。
+
+> しかし、いきなり躓いてしまいました。
+> 「2.基本->do it」の最初のプログラムの"0 @ 0"でメッセージの
+> 遣り取りを調べていくと、"self basicNew"が出てきたところで追い
+> かけられなくなりました。
+
+なるほど。ミイラ取りがミイラになる感じですよね。ここを切り抜
+けないと、どうしようもないのですが、後回しにして進むのも良策
+ですよ。
+
+どうしても追いかけられないのがイヤ（気にくわない）というので
+あれば、メタクラス系列へ歩を進める必要があります、次のＰＤＦ
+の２ページ目から５ページ目が参考になりますので、どうぞご覧に
+なってください。特に３ページ目が重要です。
+
+http://www.sra.co.jp/people/aoki/SmalltalkLecture/SmalltalkLecture06.pdf
+
+『new』や『basicNew』はインスタンスに送るメッセージではなく、
+クラスに送るメッセージですから、メソッドサーチの系列はメタク
+ラス階層をたどるのです。クラス階層ではありません。寺内さんは
+道を間違えて遭難している状態です。
+
+［aPoint］〜＞【Point】→ 【ArithmeticValue】→ 【Magnitude】
+→ 【Object】→【nil】という「クラス階層」をたどっていて、
+
+［Point］〜＞【Point class】→ 【ArithmeticValue class】→
+【Magnitude class】→ 【Object class】→ 【Cass】→
+【ClassDescription】→【Behavior】→ 【Object】→【nil】とい
+うメタクラス階層をたどっていないのです。
+
+もっとも大切なことは、［インスタンス］〜＞【クラス】のところ
+でして、(100 @ 200) がレシーバであれば［aPoint］〜＞【Point】
+であり、Point がレシーバであれば［Point］〜＞【Point class】
+になります。
+
+Smalltalk では、クラスといえども、インスタンスなので、メタ
+クラスの「唯一のインスタンス（シングルトン）」なんです。
+
+> "Core."が付加されている意味がわかりません。
+
+名前空間（NameSpace）です。クラス名に幾つも前置できます。たと
+えば、今、寺内さんが用いているブラウザ（プログラミング）の環
+境は「Refactory.Browser.BrowserEnvironment」というようにです。
+
+名前にスコープを与えて、衝突（自分がつけた名前と他人がつけた
+名前が同じになること）を避ける目的で VisualWorks 5i.x から導
+入されました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From kondo ＠ sra.co.jp  Sat Sep 23 06:30:11 2006
+From: kondo ＠ sra.co.jp (Kondo Hirotsugu)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7171] Re: "0 @ 0" について
+In-Reply-To: <45140BBC.2040301@ps.inforyoma.or.jp>
+References: <45140BBC.2040301@ps.inforyoma.or.jp>
+Message-ID: <20060923062217.39F8.KONDO@sra.co.jp>
+
+近藤です。
+
+メタクラスのないJavaな世界に来て久しい私ですが、
+
+>Pointの"x: xInteger y: yInteger"で使われているメッセージ"self basicNew"
+>はどこから継承してきたのでしょうか。
+
+私が10年くらい前に書いた奴を紹介しておきます。
+ご質問の件は「クラス・メッセージの継承」のあたりの話ですね。
+
+http://www.sra.co.jp/people/kondo/business/VW/library7/2-2/index.html
+
+Smalltalkの階層ブラウザでclassをスイッチさせるというのがポイントですね。
+古い文書なので最新のVisualWorksと画面やメニューなどが違うかもしれませ
+んが、中身は同じだと思います。
+
+それでは。
+
+-- 
+Kondo Hirotsugu <kondo@sra.co.jp>
+
+
+From aoki ＠ sra.co.jp  Sat Sep 23 09:22:35 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7172] Re: "0 @ 0" について
+In-Reply-To: <20060923062217.39F8.KONDO@sra.co.jp>
+References: <45140BBC.2040301@ps.inforyoma.or.jp>
+	<20060923062217.39F8.KONDO@sra.co.jp>
+Message-ID: <45147E4B.5040708@sra.co.jp>
+
+青木です。
+
+> > Pointの"x: xInteger y: yInteger"で使われているメッセージ"self basicNew"
+> > はどこから継承してきたのでしょうか。
+>
+> 私が10年くらい前に書いた奴を紹介しておきます。
+> ご質問の件は「クラス・メッセージの継承」のあたりの話ですね。
+>
+> http://www.sra.co.jp/people/kondo/business/VW/library7/2-2/index.html
+>
+> Smalltalkの階層ブラウザでclassをスイッチさせるというのがポイントですね。
+
+いい文章です。ブラウザの Class / Instance のタックインデック
+ス（またはボタン）を押す意味が会得できる文章だと思いますので、
+寺内さん！ぜひとも参考にされてくださいまし。
+
+私も大学などで教える際には、下記の資料を使って、９ページ目の
+「オブジェクト指向ＣＰＵ」を援用します。直弟子たちには徹底的
+に仕込みます。
+
+http://www.sra.co.jp/people/aoki/OOAOOD/01.pdf
+
+メソッド・サーチが息をするように無意識な行動域へと入っていな
+いと、つまり、あなたの頭がオブジェクト指向ＣＰＵに成り切って
+いないと、クラス階層とメタクラス階層がシームレスにつながらな
+いんだよ、ということを説くための資料になります。
+
+仮想マシンを作ったり、ブルーブックを熟読したり、ちゃんとした
+師匠に弟子入りしない限り、多くの方々が道を間違えて、ミイラ取
+りがミイラになっちゃいますから。
+
+インスタンス／クラス／メタクラス／メタメタクラス／メタメタク
+ラス／・・・の隘路（あいろ）に陥ってしまい、なんて分かりづら
+いだぁ〜、分別ができないよぉ〜、難しいなぁ〜、と嘆くことにな
+ります。実は、そんな分別などを一切必要としないのが Smalltalk
+なんです。
+
+Smalltalk は『すべてがオブジェクト』の世界で、全部がインスタ
+ンスであり、クラスは存在しない、便宜上、あるインスタンス群を
+クラスと呼んだり、メタクラスと呼んでるだけなんだ、ということ
+が分かるまでには、長ぁ〜い時間（鍛錬）が必要でしょう。
+
+ちょっとカジっただけだと、Smalltalk をクラスベースのオブジェ
+クト指向プログラミング言語と見間違ってしまいます。（昔、そう
+いう間違いをした人（学者）たちが多かったなぁ〜。無明を指摘し
+ても馬耳東風。縁なき衆生は度し難し、を得心させられました。）
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Sat Sep 23 17:53:31 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7173] Re: "0 @ 0" について
+In-Reply-To: <20060923062217.39F8.KONDO@sra.co.jp>
+References: <45140BBC.2040301@ps.inforyoma.or.jp>
+	<20060923062217.39F8.KONDO@sra.co.jp>
+Message-ID: <4514F60B.1040800@ps.inforyoma.or.jp>
+
+こんにちは。寺内です。
+近藤さん、このような質問に時間を割いて頂きありがとうございます。
+
+
+> 私が10年くらい前に書いた奴を紹介しておきます。
+> ご質問の件は「クラス・メッセージの継承」のあたりの話ですね。
+> 
+> http://www.sra.co.jp/people/kondo/business/VW/library7/2-2/index.html
+> 
+> Smalltalkの階層ブラウザでclassをスイッチさせるというのがポイントですね。
+> 古い文書なので最新のVisualWorksと画面やメニューなどが違うかもしれませ
+> んが、中身は同じだと思います。
+
+VisualWorks環境の使い方自体もあまり理解できていないので、大変
+助かります。
+紹介された内容を参考にして進めていきます。
+
+ありがとうございました。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Sat Sep 23 17:54:12 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7174] Re: "0 @ 0" について
+In-Reply-To: <45141F65.4070906@sra.co.jp>
+References: <45140BBC.2040301@ps.inforyoma.or.jp> <45141F65.4070906@sra.co.jp>
+Message-ID: <4514F634.6050700@ps.inforyoma.or.jp>
+
+こんにちは。寺内です。
+青木さん、このような質問に時間を割いて頂きありがとうございます。
+
+
+> 拙著「Smalltalk イディオム」は上級者向けに書き下ろしましたの
+> で、これから取り組もうという方々には難しいように思います。
+
+そうでしたか。
+初心者はこの書籍、Webページというものがあれば、紹介して頂けれ
+ば幸いです。
+
+> なるほど。ミイラ取りがミイラになる感じですよね。ここを切り抜
+> けないと、どうしようもないのですが、後回しにして進むのも良策
+> ですよ。
+> 
+> どうしても追いかけられないのがイヤ（気にくわない）というので
+> あれば、メタクラス系列へ歩を進める必要があります、次のＰＤＦ
+> の２ページ目から５ページ目が参考になりますので、どうぞご覧に
+> なってください。特に３ページ目が重要です。
+> 
+> http://www.sra.co.jp/people/aoki/SmalltalkLecture/SmalltalkLecture06.pdf
+
+確かに、ミイラになっていました。
+後回しにするというのも宿題をためているようで落ち着かないので、
+紹介されたPDFを参考にして進めていきます。
+
+進めていく中でミイラになってしまった場合は、ご忠告通り後回しに
+します。
+ただ、その時は、どこまで追いかければよいのでしょうか。
+"0 @ 0"で、"0"というaSmallIntegerインスタンスに"@ 0 "という二
+項メッセージを送信した場合、aPointというインスタンスを返してく
+ると理解すれば良いのでしょうか。
+
+
+お礼の返信のつもりが、質問になってしまいました。
+とりあえず、ミイラにならないことを祈りながら、紹介されたPDFを
+参考に進めていきます。
+
+ありがとうございました。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+
+
+From aoki ＠ sra.co.jp  Sat Sep 23 18:27:42 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7175] Re: "0 @ 0" について
+In-Reply-To: <4514F634.6050700@ps.inforyoma.or.jp>
+References: <45140BBC.2040301@ps.inforyoma.or.jp> <45141F65.4070906@sra.co.jp>
+	<4514F634.6050700@ps.inforyoma.or.jp>
+Message-ID: <82F755AB-19B5-4723-8F7B-C4C4E68752AC@sra.co.jp>
+
+On 2006/09/23, at 17:54, NOBUTAKA Terauchi wrote:
+> "0 @ 0"で、"0"というaSmallIntegerインスタンスに"@  
+> 0 "という二
+> 項メッセージを送信した場合、aPointというインスタンスを返 
+> してく
+> ると理解すれば良いのでしょうか。
+
+はい、それで当分は大丈夫だと思いますよ。
+ただし、当分の間だけなんだ、と肝に命じておくのも大切です。
+
+> お礼の返信のつもりが、質問になってしまいました。
+> とりあえず、ミイラにならないことを祈りながら、紹介された 
+> PDFを
+> 参考に進めていきます。
+
+いつでも、このメーリングリストを使ってくださいまし。
+
+また、日経ソフトウェアの連載も始めますので、
+そちらも参考にされてくださいませ。
+初心者のために書き下ろします。
+
+// R2D2 (AOKI Atsushi)
+
+From aoki ＠ sra.co.jp  Sat Sep 23 19:02:00 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7176] じゅんシティ
+Message-ID: <45150618.1080302@sra.co.jp>
+
+青木です。
+
+当社の岸田が来月にフィンランドで基調講演をするということで、
+
+European Systems & Software Process Improvement and Innovation
+11-13 October 2006, Joensuu, Finland
+http://www.iscn.com/conferences/eurospi2006/
+
+The Evolution of Improved Systems and Processes in Open Source Development
+http://www.iscn.com/conferences/eurospi2006/main.html#keynote
+
+じゅんシティをベースに、ウェブやＦＴＰサーバのアクセス状況を
+まとめて、じゅん上に多くのシステムが構築されていることを示す
+簡単な資料を作成しました。（じゅんは国内よりも国外で使われて
+いるんですよ。パリ大学などからの寄贈コードもありますしね。）
+
+http://www.sra.co.jp/people/aoki/misc/pdfs/k2_20060924.pdf
+
+オープンソースにおける発展過程が少しでも明らかになればと思っ
+て作成しました。皆さんも観てくださいまし。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+
+From osamu_hamasaki ＠ nifty.com  Sun Sep 24 11:27:37 2006
+From: osamu_hamasaki ＠ nifty.com (Osamu Hamasaki)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7177] Re: "0 @ 0" について
+In-Reply-To: <45140BBC.2040301@ps.inforyoma.or.jp>
+References: <45140BBC.2040301@ps.inforyoma.or.jp>
+Message-ID: <D9A57758-3B09-49D2-A092-A345A2234D3F@nifty.com>
+
+濱崎です。
+寺内さん、初めまして。
+
+On 2006/09/23, at 1:13, NOBUTAKA Terauchi wrote:
+
+> 「2.基本->do it」の最初のプログラムの"0 @  
+> 0"でメッセージの
+> 遣り取りを調べていくと、"self basicNew"が出てきたところ 
+> で追い
+> かけられなくなりました。
+
+中略
+
+> 最初は、SmallIntegerに定義されているbasicNewと思い 
+> ましたが、
+> System Browser -> Class -> Spawn HierarchyでPointを表示 
+> すると
+>
+> Object
+>   Magnitude
+>     ArithmeticValue
+>       Point
+>
+> と表示され、上記のクラスがスーパークラスに存在しませんでした。
+> ここで完全に行き詰まってしまいました。
+
+HierarchyBrowserで"Class"のタブを選択していても、 
+Objectに辿り着いてしまうと
+そこで打ち止めになってしまって、その先が探せなくて困りますよね。
+
+SmalltalkのVMが、あるオブジェクトに送られたメッセージに対 
+応するメソッドを
+見つける手順は、基本的には次の通りです。
+
+１．そのオブジェクトのクラスのメソッド辞書中からそのメッセージを 
+探す
+　　見つかれば、そのクラスで対応するメソッドが定義されている
+２．見つからなければ、そのクラスのスーパークラスのメソッド辞書中 
+から探す。
+　　見つからなければ、そのまたスーパークラスのメソッド辞書中から 
+探す。
+　　という具合に、見つかるまで繰り返す。
+３．クラス階層の頂点まで達しても（つまりスーパークラスが 
+nilになるクラスまで
+　　辿り着いてしまっても）見つからなければ、そのオブジェクトは 
+メッセージに
+　　答えられない。
+
+これは、Smalltalkイディオムの"3.3 インヘリタン 
+ス"のメソッドサーチのくだりの
+ところにも書かれています。
+
+これをそのままSmalltalkのコードで書いてみました。
+幸い、クラスのスーパークラスを求めるためのメソッドや、クラスのメ 
+ソッド辞書に
+書かれているメッセージセレクタの集合を求めるためのメソッドがある 
+ので、これを
+使っています。
+
+
+| methodSearchBlock aBlock |
+
+methodSearchBlock := [ :aStream :aClass :messageSelector |
+	aStream nextPutAll: aClass printString.
+	(aClass selectors includes: messageSelector)
+		ifTrue: [true]
+		ifFalse: [
+			aClass superclass isNil
+				ifTrue: [false]
+				ifFalse: [
+					aStream nextPutAll: ' -> '.
+					methodSearchBlock
+						value: aStream
+						value: aClass superclass
+						value: messageSelector]]].
+
+aBlock := [ :anObject :messageSelector |
+	| aStream |
+	aStream := WriteStream on: String new.
+	(methodSearchBlock value: aStream value: anObject class value:  
+messageSelector)
+		ifTrue: [aStream contents]
+		ifFalse: [anObject printString, ' can not understand ',  
+messageSelector printString]].
+
+aBlock value: foo value: bar
+
+最後の行のfooをメッセージを受け取るオブジェクト（クラスでも 
+OK。Smalltalkでは
+クラスもオブジェクトですから。）、barを送るメッセージセレ 
+クタに置き換えてから、
+全体をセレクトしてprintItして下さい。
+
+例1：　aBlock value: 1@1 value: #printString
+例2：　aBlock value: Point value: #basicNew
+
+そうすると、クラス階層のどこかで見つかった場合、見つかるまでに 
+辿っていった
+クラス階層が出力されます。
+
+例１でやってみると、ブラウザで探すのと同じように、Objectま 
+で遡っていくのが
+お分かり頂けると思います。
+例２でやってみると、”Object class"の次が"Class"とい 
+うクラスになって、ブラウザ
+では遡れない、さらにその先に遡っているのがお分かりいただけると思 
+います。
+
+この結果から判ることは、ブラウザのクラス側で遡って行って、 
+Objectまで辿り着い
+ても見つからなかったら、Classというクラスのインスタンス側 
+に移ってさらに辿って
+いく、という方法を覚えておけば当面は幸せになれる、ということです 
+ね。
+
+こんな風に自分でコードを書いてSmalltalkの仕組みを理解して 
+いけるのも、Smalltalkの
+面白いところですね。
+
+以上です。ご参考になれば幸いです。
+
+
+From aoki ＠ sra.co.jp  Sun Sep 24 12:31:25 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7178] Re: "0 @ 0" について
+In-Reply-To: <D9A57758-3B09-49D2-A092-A345A2234D3F@nifty.com>
+References: <45140BBC.2040301@ps.inforyoma.or.jp>
+	<D9A57758-3B09-49D2-A092-A345A2234D3F@nifty.com>
+Message-ID: <4515FC0D.9090908@sra.co.jp>
+
+青木です。
+
+いいプログラムです。さすが濱崎さん！
+ブロックの再帰構造プログラムで、座布団一枚！いや二枚！！
+
+> こんな風に自分でコードを書いてSmalltalkの仕組みを理解していけるのも、
+> Smalltalkの面白いところですね。
+
+はい、Smalltalk のことは Smalltalk に訊ねなさい！、ですよね。
+
+出力先をブロックに加え、引数並びを整えて、クラス名を名前空間
+も含めたフルネームで出すようにしてみました。
+
+| methodSearchBlock aBlock |
+methodSearchBlock :=
+        [:aClass :messageSelector :aStream |
+        | aBoolean |
+        aStream nextPutAll: aClass fullName.
+        (aClass selectors includes: messageSelector)
+            ifTrue: [aBoolean := true]
+            ifFalse:
+                [aClass superclass isNil
+                    ifTrue: [aBoolean := false]
+                    ifFalse:
+                        [aStream nextPutAll: ' -> '.
+                        aBoolean := methodSearchBlock
+                                    value: aClass superclass
+                                    value: messageSelector
+                                    value: aStream]].
+        aStream flush.
+        aBoolean yourself].
+aBlock :=
+        [:anObject :messageSelector :aStream |
+        (methodSearchBlock
+            value: anObject class "<-- It's very important to beginners."
+            value: messageSelector
+            value: aStream)
+                ifFalse:
+                    [aStream
+                        cr;
+                        nextPutAll: anObject printString;
+                        nextPutAll: ' can''t understand ';
+                        nextPutAll: messageSelector printString;
+                        flush].
+        aStream yourself].
+aBlock
+    value: Point
+    value: #basicNew
+    value: (Transcript
+            clear;
+            yourself)
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Sun Sep 24 16:53:53 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7179] Re: "0 @ 0" について
+In-Reply-To: <D9A57758-3B09-49D2-A092-A345A2234D3F@nifty.com>
+References: <45140BBC.2040301@ps.inforyoma.or.jp>
+	<D9A57758-3B09-49D2-A092-A345A2234D3F@nifty.com>
+Message-ID: <45163991.3080806@ps.inforyoma.or.jp>
+
+こんにちは。寺内です。
+濱崎さん、このような質問に時間を割いて頂きありがとうございます。
+
+
+> これは、Smalltalkイディオムの"3.3 インヘリタンス"のメソッドサーチのくだりの
+> ところにも書かれています。
+
+すみません。
+まだ、そこまで辿り着けていません。
+
+> これをそのままSmalltalkのコードで書いてみました。
+> 幸い、クラスのスーパークラスを求めるためのメソッドや、クラスのメソッド辞 
+> 書に
+> 書かれているメッセージセレクタの集合を求めるためのメソッドがあるので、こ 
+> れを
+> 使っています。
+
+ありがたく使用させて頂きます。
+このプログラムも「どうしてこの結果がでてくるのか」を調べたいで
+すが、調べると本当にミイラになりそうなのでやめておきます。
+後日（何年後かわかりませんが）の楽しみとしてとっておきます。
+
+> こんな風に自分でコードを書いてSmalltalkの仕組みを理解していけるのも、 
+> Smalltalkの
+> 面白いところですね。
+
+なるほど、Smalltalkを理解していけば、Smalltalkの仕組み以外にも
+オブジェクト指向（思考？）、アルゴリズムなども理解できるように
+なる可能性があると不埒な考えを持った私は甘いでしょうか？
+
+
+それでは、上記のような不埒な考えを持ったまま進めていきたいと思
+います。
+ありがとうございました。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+From europa ＠ ps.inforyoma.or.jp  Sun Sep 24 18:56:55 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7180] "0 @ 0"に対する集中砲火に対して
+Message-ID: <45165667.7040406@ps.inforyoma.or.jp>
+
+こんにちは。寺内です。
+私の投稿に対して集中砲火して頂きありがとうございます。
+おかげで、私の脳みそは包囲殲滅の危機（パンク寸前）にあります。
+
+青木さん、近藤さん、濱崎さん、本当にありがとうございました。
+
+まだ、紹介された内容、指摘された内容を理解していると思えません
+が、皆様から指摘されたことを私なりに下記にまとめてみます。
+
+-----
+あるオブジェクトにメッセージが送信されたとします。
+
+あるオブジェクトが、インスタンスならインスタンスメッセージなの
+でSystemBrowserのHierarchyを遡る。
+
+あるオブジェクトが、クラスならクラスメッセージなので
+SystemBrowserのClassタブをクリック->Hierarchy Diagramに表示さ
+れているものを遡る。
+
+SystemBrowser->Instanceをクリックすると、タイトルバーに表示さ
+れるのがPoint（クラス）になるので、インスタンスメッセージはク
+ラスに定義されている。
+
+SystemBrowser->Classをクリックすると、タイトルバーに表示される
+のがPoint class（メタクラス）になるので、クラスメッセージはメ
+タクラスに定義されている。
+ただ、Object class（メタクラス）まで遡って見つからない場合は、
+Class（クラス）に移り、メタクラスではなくクラスを遡る。
+-----
+
+上記のことを理解した上で、濱崎さんの作成されたプログラムを使用
+すれば一発なので助かります。
+
+進めていく中で不明な点が出てきたら、また投稿すると思いますので
+よろしくお願いします。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Sep 24 21:06:12 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7181] Re: "0 @ 0"に対する集中砲火に対して
+In-Reply-To: <45165667.7040406@ps.inforyoma.or.jp>
+References: <45165667.7040406@ps.inforyoma.or.jp>
+Message-ID: <JK200609242106124.4544375@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ちょっと古い記事ですが、メタクラスの階層については、私が昔書いた
+"Happy Squeaking!!"の以下のあたりでも解説してあります。
+
+http://www.ogis-ri.co.jp/otc/hiroba/technical/Squeak4/S4-5-4_1.html
+
+特にObject classのスーパークラスがなぜClassなのか、気になっている
+場合は見てみると良いかもしれません。
+
+> -----
+> あるオブジェクトにメッセージが送信されたとします。
+> 
+> あるオブジェクトが、インスタンスならインスタンスメッセージなの
+> でSystemBrowserのHierarchyを遡る。
+> 
+> あるオブジェクトが、クラスならクラスメッセージなので
+> SystemBrowserのClassタブをクリック->Hierarchy Diagramに表示さ
+> れているものを遡る。
+> 
+> SystemBrowser->Instanceをクリックすると、タイトルバーに表示さ
+> れるのがPoint（クラス）になるので、インスタンスメッセージはク
+> ラスに定義されている。
+> 
+> SystemBrowser->Classをクリックすると、タイトルバーに表示される
+> のがPoint class（メタクラス）になるので、クラスメッセージはメ
+> タクラスに定義されている。
+> ただ、Object class（メタクラス）まで遡って見つからない場合は、
+> Class（クラス）に移り、メタクラスではなくクラスを遡る。
+> -----
+> 
+> 上記のことを理解した上で、濱崎さんの作成されたプログラムを使用
+> すれば一発なので助かります。
+> 
+> 進めていく中で不明な点が出てきたら、また投稿すると思いますので
+> よろしくお願いします。
+> 
+
+---
+[:masashi | ^umezawa]
+
+From aoki ＠ sra.co.jp  Mon Sep 25 00:23:56 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7182] Re: "0 @ 0" について
+In-Reply-To: <45163991.3080806@ps.inforyoma.or.jp>
+References: <45140BBC.2040301@ps.inforyoma.or.jp>	<D9A57758-3B09-49D2-A092-A345A2234D3F@nifty.com>
+	<45163991.3080806@ps.inforyoma.or.jp>
+Message-ID: <4516A30C.90807@sra.co.jp>
+
+青木です。
+
+> ありがたく使用させて頂きます。
+> このプログラムも「どうしてこの結果がでてくるのか」を調べたいで
+> すが、調べると本当にミイラになりそうなのでやめておきます。
+> 後日（何年後かわかりませんが）の楽しみとしてとっておきます。
+
+この何年後かわからないのですが、楽しみにとっておくというのが
+かなり大切だと思うんです。それでいいと思いますね。
+
+> なるほど、Smalltalkを理解していけば、Smalltalkの仕組み以外にも
+> オブジェクト指向（思考？）、アルゴリズムなども理解できるように
+> なる可能性があると不埒な考えを持った私は甘いでしょうか？
+
+甘くありません、おっしゃる通りです。Smalltalk の仕組みを理解
+した人たちが、オブジェクト指向を操れるというのは、本当のこと
+ですよ。（ゴスリンさんも、まつもとさんも、かなり時間がかかり
+ましたが、この道を歩んでいるんです。Java や Ruby はその賜物）
+
+> それでは、上記のような不埒な考えを持ったまま進めていきたいと思
+> います。
+> ありがとうございました。
+
+はい、頑張ってください、王道は外していませんから、大丈夫です。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Mon Sep 25 00:23:59 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7183] Re: "0 @ 0"に対する集中砲火に対して
+In-Reply-To: <45165667.7040406@ps.inforyoma.or.jp>
+References: <45165667.7040406@ps.inforyoma.or.jp>
+Message-ID: <4516A30F.8040507@sra.co.jp>
+
+NOBUTAKA Terauchi wrote:
+> 私の投稿に対して集中砲火して頂きありがとうございます。
+> おかげで、私の脳みそは包囲殲滅の危機（パンク寸前）にあります。
+> 青木さん、近藤さん、濱崎さん、本当にありがとうございました。
+
+どういたしまして。これに懲りずに（怖いと思わずに）このメーリ
+ングリストを用いるのが得策ですよ。みんな初心者の頃があったか
+らこそ、それをなつかしむ人がいたとしても、それをなじる人は
+いないはず、と思います。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Mon Sep 25 00:31:56 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7184] Re: "0 @ 0"に対する集中砲火に対して
+In-Reply-To: <JK200609242106124.4544375@mars.dti.ne.jp>
+References: <45165667.7040406@ps.inforyoma.or.jp>
+	<JK200609242106124.4544375@mars.dti.ne.jp>
+Message-ID: <4516A4EC.7080704@sra.co.jp>
+
+Masashi Umezawa wrote:
+> ちょっと古い記事ですが、メタクラスの階層については、私が昔書いた
+> "Happy Squeaking!!"の以下のあたりでも解説してあります。
+> http://www.ogis-ri.co.jp/otc/hiroba/technical/Squeak4/S4-5-4_1.html
+> 特にObject classのスーパークラスがなぜClassなのか、気になっている
+> 場合は見てみると良いかもしれません。
+
+いいものには、古いも新しいもないものです。この梅澤さんの資料
+も佳いものの範疇に入ると思います。（みんな悩んで大きくなる！）
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Mon Sep 25 02:39:53 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7185] Re: "0 @ 0"に対する集中砲火に対して
+In-Reply-To: <JK200609242106124.4544375@mars.dti.ne.jp>
+References: <45165667.7040406@ps.inforyoma.or.jp>
+	<JK200609242106124.4544375@mars.dti.ne.jp>
+Message-ID: <4516C2E9.90600@ps.inforyoma.or.jp>
+
+こんばんは、寺内です。
+
+梅澤さん、参考になる記事の紹介ありがとうございます。
+
+> ちょっと古い記事ですが、メタクラスの階層については、私が昔書いた
+> "Happy Squeaking!!"の以下のあたりでも解説してあります。
+> 
+> http://www.ogis-ri.co.jp/otc/hiroba/technical/Squeak4/S4-5-4_1.html
+> 
+> 特にObject classのスーパークラスがなぜClassなのか、気になっている
+> 場合は見てみると良いかもしれません。
+
+参考にさせて頂いた結果、
+
+クラスの親分はObject。
+メタクラスの親分はObject classではなく、Object。
+メタクラスでは、Object classの上に、
+
+Object
+  Behavior
+    ClassDescription
+      Class
+
+という継承関係が存在する。
+
+メタクラスの継承関係にクラスが存在していることに対して違和感
+（なぜクラスが）がありますが、Object classから上の継承関係は仕
+様として脳みそにコピー&ペーストしておきます。
+
+これからも紹介された記事を参考にさせて頂くと思います。
+また、理解できない部分があれば投稿しますので、よろしくお願いし
+ます。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+From europa ＠ ps.inforyoma.or.jp  Mon Sep 25 04:08:08 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7186] "Rectangle class>>new"について
+Message-ID: <4516D798.9080407@ps.inforyoma.or.jp>
+
+こんばんは。寺内です。
+
+"0 @ 0 extent: 300 @ 300"を調査中にRectangle classのnewで疑問
+に思うことが出てきました。
+## 「全然進んでいないじゃないか」というツッコミは無しの方向で
+## お願いします。
+
+疑問点を下記に記します。
+
+-----
+Rectangle class>>newは、
+
+new
+	"Override for backwards compatability"
+
+	^self basicNew
+
+と定義されています。
+
+このnewは、Rectangle class>>origin:extent:で使われていました。
+basicNewを使わずに、newをオーバーライドして使用するのは、過去
+の資産との互換性を保つためと考えてよろしいのでしょうか？
+-----
+
+コメントにそう書かれている思いますが、英語力（単語の訳を並べる
+だけしかできない）に自信がないので確認をとりたいと思い投稿しま
+した。
+あと、compatabilityは私の入力ミスではありません。定義内容をそ
+のままコピーしています。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+From aoki ＠ sra.co.jp  Mon Sep 25 08:06:46 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7187] Re: "Rectangle class>>new"について
+In-Reply-To: <4516D798.9080407@ps.inforyoma.or.jp>
+References: <4516D798.9080407@ps.inforyoma.or.jp>
+Message-ID: <45170F86.5050705@sra.co.jp>
+
+青木です。
+
+> 疑問点を下記に記します。
+> -----
+> Rectangle class>>newは、
+> 
+> new
+> 	"Override for backwards compatability"
+> 
+> 	^self basicNew
+> 
+> と定義されています。
+> 
+> このnewは、Rectangle class>>origin:extent:で使われていました。
+> basicNewを使わずに、newをオーバーライドして使用するのは、過去
+> の資産との互換性を保つためと考えてよろしいのでしょうか？
+> -----
+
+はい、それでいいと思います。
+
+昔、Rectangle のスーパクラスは Object でした。そして、new と
+いうメッセージは、Rectangle には定義されていませんでした。し
+たがって、Rectangle に new を送ると、Behavior の new が動いて
+いました。それは basicNew と同義になります。
+
+今、Rectangle のスーパクラスは Geometric です。この Geometric
+には new が定義されています。エラーを起こすように書かれていま
+す。new で幾何的なものを生成してはなりませんぞ、という旨です。
+
+昔のプログラムコードの中には、Rectangle に new を送ることがで
+きると思って、書かれているものがあります。Geometric の存在を
+知らない時代のプログラマが書いたコードです。それらを吸収する
+目的があるのでしょう。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Mon Sep 25 08:35:12 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7188] Re: "Rectangle class>>new"について
+In-Reply-To: <45170F86.5050705@sra.co.jp>
+References: <4516D798.9080407@ps.inforyoma.or.jp> <45170F86.5050705@sra.co.jp>
+Message-ID: <45171630.5070900@ps.inforyoma.or.jp>
+
+寺内です。
+
+青木さん、素早い返信（回答？）ありがとうございます。
+
+> 昔、Rectangle のスーパクラスは Object でした。そして、new と
+> いうメッセージは、Rectangle には定義されていませんでした。し
+> たがって、Rectangle に new を送ると、Behavior の new が動いて
+> いました。それは basicNew と同義になります。
+> 
+> 今、Rectangle のスーパクラスは Geometric です。この Geometric
+> には new が定義されています。エラーを起こすように書かれていま
+> す。new で幾何的なものを生成してはなりませんぞ、という旨です。
+> 
+> 昔のプログラムコードの中には、Rectangle に new を送ることがで
+> きると思って、書かれているものがあります。Geometric の存在を
+> 知らない時代のプログラマが書いたコードです。それらを吸収する
+> 目的があるのでしょう。
+
+なるほど、そういう背景があったんですか。
+
+ありがとうございます。
+これで、次へ進めます。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+From europa ＠ ps.inforyoma.or.jp  Mon Sep 25 09:06:29 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7189] SystemBrowserの"▲▼"について
+Message-ID: <45171D85.2010105@ps.inforyoma.or.jp>
+
+おはようございます。
+寺内です。
+
+早朝の忙しいときに質問しますが、時間のあるときで構いませんので
+よろしくお願いします。
+
+-----
+SystemBrowserを眺めているときに、インスタンスメソッド、クラス
+メソッドの中に"▲，▼"という記号が付いている場合があります。
+
+最初は、オーバーライドしているメソッドかな？と思ったのですが、
+"▲▼"などの記号もあり、オーバーライドだけを表している記号と
+は違うようです。
+
+この記号は何を表しているのでしょうか？
+-----
+
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+
+From aoki ＠ sra.co.jp  Mon Sep 25 10:43:32 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7190] Re: SystemBrowserの"▲▼"について
+In-Reply-To: <45171D85.2010105@ps.inforyoma.or.jp>
+References: <45171D85.2010105@ps.inforyoma.or.jp>
+Message-ID: <45173444.5050400@sra.co.jp>
+
+青木です。
+
+リスト・アイコン・ライブラリを用いた表示のことですね。きっと
+以下の３つのことでしょ。
+
+    (ListIconLibrary visualFor: #upDownArrow) inspect
+
+    (ListIconLibrary visualFor: #upArrow) inspect
+
+    (ListIconLibrary visualFor: #downArrow) inspect
+
+これらのアイコンを「iconFor:」のメッセージでひくことが多いの
+で、実装者（implementors）を探せばいいわけです。
+
+    MethodCollector new browseAllImplementorsOf: #iconFor:
+
+Refactory.Browser.ProtocolItemNavigatorPart の iconFor: をご
+覧になってくださいませ。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From osamu_hamasaki ＠ nifty.com  Tue Sep 26 01:03:22 2006
+From: osamu_hamasaki ＠ nifty.com (Osamu Hamasaki)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7191] Re: "Rectangle class>>new"について
+In-Reply-To: <4516D798.9080407@ps.inforyoma.or.jp>
+References: <4516D798.9080407@ps.inforyoma.or.jp>
+Message-ID: <370A6D7B-D474-4D50-A035-7F7D45D7E1DE@nifty.com>
+
+濱崎です。こんばんは。
+
+On 2006/09/25, at 4:08, NOBUTAKA Terauchi wrote:
+
+> こんばんは。寺内です。
+>
+> "0 @ 0 extent: 300 @ 300"を調査中にRectangle classの 
+> newで疑問
+> に思うことが出てきました。
+
+寺内さんの疑問点とは直接関係はないのですが、一度挫折されての再挑 
+戦という
+ことですので。。。
+
+この"0@0 extent: 300@300"はSmalltalkイディオムの2.1  
+doItの最初のところに
+出てくるコードの一行目の部分ですよね。
+
+このコードがどのように実行されて本に出てくる図のような表示がされ 
+るのか、
+これを解明しよう、という学び方も確かにあるとは思います。
+
+が、それはSmalltalkイディオムのこの章で受け取って欲しいと 
+意図されている
+事とは違うような気がします。一度、本に書かれている意図に沿って読 
+み進め
+られてはいかがでしょうか。
+
+寺内さんがしようとなさっている事は、C言語を学ぶために読み 
+始めたK&Rの
+「プログラミング言語C」の最初に出てくるHelloWorldプ 
+ログラムを見て、printf
+関数はどうやって標準出力に文字列を出力しているのか、これを解明し 
+ようと
+するのに近いと、私は思います。
+
+もちろん一度は本の意図に沿って読んだ上で、今また別の方法で学ぼう 
+とされて
+いるなら、私の思い違いですので申し訳ありません。ご容赦ください。
+
+あと、これは現実問題として考えないといけないのですが、 
+Smalltalkiイディオムの
+中で出てくる例題はVisualWorks2.5Jを使って書かれています。
+
+2003年のゴールデンウィークに私が書いたメール[SML 6218]から 
+始まる一連の
+スレッドを見て頂きたいのですが、VisualWorks7.1では、 
+Smalltalkイディオムの
+例題の一部は意図通りには動作しませんでした。
+
+私はVisualWorksの2.5と3.0の違いが何かは知りま 
+せんが、VisualWorks3.0NCで
+ほとんどの例題を動かしたように記憶しています。（ずいぶん前なので 
+あまり確か
+ではないですが。）ですので、Smalltalkイディオムを教材にす 
+るのであれば、
+VisualWorks7.4.1NCではなく、VisualWorks3.0NCを使われる事を 
+お勧めします。
+
+幸いな事に、以下のURLから辿ればVisualWorks3.0は今で 
+も入手できるようです。
+
+　　http://www.sra.co.jp/people/h-asaoka/study/ 
+VisualWorksInstall/vwnc3xWin/index.html
+
+以上、老婆心ながら。今回は挫折されないよう、がんばって下さい。
+
+
+From europa ＠ ps.inforyoma.or.jp  Tue Sep 26 21:02:35 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7192] Re: SystemBrowserの"▲▼"について
+In-Reply-To: <45173444.5050400@sra.co.jp>
+References: <45171D85.2010105@ps.inforyoma.or.jp> <45173444.5050400@sra.co.jp>
+Message-ID: <451916DB.5020709@ps.inforyoma.or.jp>
+
+こんばんは、寺内です。
+
+返信が遅くなり、申し訳ありません。
+
+> Refactory.Browser.ProtocolItemNavigatorPart の iconFor: をご
+> 覧になってくださいませ。
+
+Refactory.Browser.ProtocolItemNavigatorPart>>iconFor:の中で確認
+したい部分を下記に記します。
+
+-----
+isOverridden := self isMethodOverridden: aMethodDefinition.
+(self isOverridingMethod: aMethodDefinition)
+	ifTrue:
+		[^isOverridden
+			ifTrue: [ListIconLibrary visualFor: #upDownArrow]
+			ifFalse: [ListIconLibrary visualFor: #upArrow]]
+	ifFalse: [isOverridden ifTrue: [^ListIconLibrary visualFor: #downArrow]].
+
+isOverridingMethod: は aMethodDefinition がスーパークラスから継承
+してきたメソッドをオーバーライドしているか？を判定するメソッド。
+
+isMethodOverridden: は aMethodDefinition がサブクラスでメソッドが
+オーバーライドされているか？を判定するメソッド。
+
+上記内容が正しいとするなら、
+
+1. "▲"は、スーパークラスから継承してきたメソッドをオーバーライド
+   している場合に表示される。
+
+2. "▼"は、サブクラスでメソッドがオーバーライドされている場合に表
+   示される。
+
+3. "▲▼"は、1,2の両方が当てはまる場合。
+-----
+
+という理解で良いのでしょうか？
+Refactory.Browser.ProtocolItemNavigatorPart>>iconFor:の一部だけを
+参照、メッセージ名を参考にして考えていますので、間違いがあるかも
+しれません。
+ほかの部分は追いかけきれていません。
+もし、間違いがあれば指摘していただきたいと思います。
+
+あと、濱崎さんに指摘されたことですが、確かにSmalltalkイディオムを
+全然進めることができていません。
+そのため、本に回答が載っていることなども質問してしまったかもしれ
+ません。
+まずは、Smalltalkイディオムを読み進め、そこで理解できない箇所が
+出てくれば投稿したいと思います。
+たぶん、すぐに出てくると思いますが。
+
+ありがとうございました。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Tue Sep 26 21:02:44 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7193] Re: "Rectangle class>>new"について
+In-Reply-To: <370A6D7B-D474-4D50-A035-7F7D45D7E1DE@nifty.com>
+References: <4516D798.9080407@ps.inforyoma.or.jp>
+	<370A6D7B-D474-4D50-A035-7F7D45D7E1DE@nifty.com>
+Message-ID: <451916E4.7070508@ps.inforyoma.or.jp>
+
+こんばんは、寺内です。
+
+> もちろん一度は本の意図に沿って読んだ上で、今また別の方法で学ぼうとされて
+> いるなら、私の思い違いですので申し訳ありません。ご容赦ください。
+
+こちらこそ、指摘してもらい感謝することはあっても、不快になることなどは決
+してありません。
+逆に容赦されしまうと、私が困ります。
+
+数年前に購入して読んだときは、本に載っているプログラムをdo itして理解し
+た気になっていました。ワークスペースに入力するという行為自体が読んだこと
+になっていました。
+これでは、読んだというより本に載っているプログラムを実行しただけにしかな
+らないということに気づきませんでした。あるいは、私自身が気づきたくなかっ
+たかもしれません。
+そのため、皆様が"ハァ？"と思うような質問をしてしまったかもしれません。
+こちらこそ、申し訳なく思います。
+
+このような次第ですので、どの様に進めていけば良いのか？手探り状態にありま
+す。Smalltalkイディオムも2行しか進んでいません。
+
+厚かましいとは思いますが、「Smalltalkイディオムの次はこれ、Smalltalkイ
+ディオムを読む前にこれを読め」等があれば、教えていただきたいと思います。
+
+> 以上、老婆心ながら。今回は挫折されないよう、がんばって下さい。
+
+このような問題提起をしていただき、本当にありがとうございます。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+From osamu_hamasaki ＠ nifty.com  Wed Sep 27 00:24:13 2006
+From: osamu_hamasaki ＠ nifty.com (Osamu Hamasaki)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7194] Re: "Rectangle class>>new"について
+In-Reply-To: <451916E4.7070508@ps.inforyoma.or.jp>
+References: <4516D798.9080407@ps.inforyoma.or.jp>
+	<370A6D7B-D474-4D50-A035-7F7D45D7E1DE@nifty.com>
+	<451916E4.7070508@ps.inforyoma.or.jp>
+Message-ID: <6C9E270F-0827-47F9-B54F-64FFF0C6F83E@nifty.com>
+
+濱崎です。こんばんは。
+
+On 2006/09/26, at 21:02, NOBUTAKA Terauchi wrote:
+
+> こんばんは、寺内です。
+
+中略
+
+> そのため、皆様が"ハァ？"と思うような質問をしてし 
+> まったかもしれません。
+> こちらこそ、申し訳なく思います。
+
+そんな風に思った訳ではありません。ここまでご質問なさったことは、 
+Smalltalk
+イディオムの中に直接的に書いてある訳でもないので、ご質問されるこ 
+と自体を
+遠慮される事は全くないと思います。また私個人としては、自分の理解 
+を再確認
+する目的でコードを書いたりして結構楽しんでます。
+
+ただ、寺内さんが本を教材にして学ぶ方法としては、遠回りなことをさ 
+れているような
+気がしました。
+
+> このような次第ですので、どの様に進めていけば良いのか？手探り状 
+> 態にありま
+> す。Smalltalkイディオムも2行しか進んでいません。
+
+私が、「本に書かれている意図に沿って読む」と表現したのでは、正確 
+に伝わりにく
+かったかもしれません。もう少し正確に書くと、
+
+　著者である青木さんが、例えば2.1 do itの節で、読者（寺内 
+さん）に伝えたい事を、
+　きちんと受け取って読み進める
+
+ということです。何を伝えたいのかは、（Smalltalkのコードの 
+前後の）日本語の文章の
+中に書かれていますし、1.1節や1.2節に本全体を通して何 
+を伝えたいかが、書かれて
+います。（著者ご本人と直接コミュニケーションできる場で、私がこん 
+なことを書くのも
+おこがましい気はするのですが 。）そこのところを理解してお 
+けば、「ここのSmalltalkの
+コードは、文法の理解を確認するための例だな」とか、「こういうこと 
+をしたい時は、
+このコードのパターンを憶えておけばいいんだな」とかが、分かってく 
+ると思います。
+
+そういう風にして一通り読んだ上で、クラスライブラリの中を探検する 
+と、より早く理解が
+進むのではないかと思います。
+
+> 厚かましいとは思いますが、「Smalltalkイディオムの次はこ 
+> れ、Smalltalkイ
+> ディオムを読む前にこれを読め」等があれば、教えていただきたいと 
+> 思います。
+
+日本語の本で現在新品で入手可能なのは、梅澤さんの書かれた「自由自 
+在Squeak
+プログラミング」しかない状況のようです。ですが、こちらもとても良 
+い内容だと
+思います。Smalltalkイディオムは青木さん自身が「上級者向 
+け」と仰っていますので、
+まずは梅澤さんの本を読まれるのも良いかもしれません。
+
+以上です。ご参考になれば嬉しいです。
+
+
+
+
+
+From abee.abe ＠ nifty.ne.jp  Wed Sep 27 02:41:16 2006
+From: abee.abe ＠ nifty.ne.jp (abee.abe@nifty.ne.jp)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7195] Re: "Rectangle class>>new" について
+In-Reply-To: <6C9E270F-0827-47F9-B54F-64FFF0C6F83E@nifty.com>
+References: <451916E4.7070508@ps.inforyoma.or.jp>
+	<6C9E270F-0827-47F9-B54F-64FFF0C6F83E@nifty.com>
+Message-ID: <4519663C141.C008ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 27 Sep 2006 00:24:13 +0900
+Osamu Hamasaki <osamu_hamasaki@nifty.com> wrote:
+>日本語の本で現在新品で入手可能なのは、梅澤さんの書かれた「自由自 
+>在Squeakプログラミング」しかない状況のようです。
+
+いちおう、「Squeakプログラミング入門 - オブジェクトランドへの招待」
+(ISBN 4-434-04330-7)もまだありますが、「自由自在〜」の登場によりその役割
+を終えたと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From aoki ＠ sra.co.jp  Wed Sep 27 18:04:47 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7196] Re: SystemBrowserの"▲▼"について
+In-Reply-To: <451916DB.5020709@ps.inforyoma.or.jp>
+References: <45171D85.2010105@ps.inforyoma.or.jp> <45173444.5050400@sra.co.jp>
+	<451916DB.5020709@ps.inforyoma.or.jp>
+Message-ID: <451A3EAF.4070106@sra.co.jp>
+
+ちょいとゴタゴタしていて返信が遅くなりましたが、青木です。
+
+> 1. "▲"は、スーパークラスから継承してきたメソッドをオーバーライド
+>    している場合に表示される。
+> 2. "▼"は、サブクラスでメソッドがオーバーライドされている場合に表
+>    示される。
+> 3. "▲▼"は、1,2の両方が当てはまる場合。
+> という理解で良いのでしょうか？
+
+はい、それで良いと思います。（気に食わなければ、寺内さんご自
+身が直せるのですから、正誤を問うのは外れた道かもしれません。）
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Wed Sep 27 18:05:37 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7197] Re: "Rectangle class>>new"について
+In-Reply-To: <6C9E270F-0827-47F9-B54F-64FFF0C6F83E@nifty.com>
+References: <4516D798.9080407@ps.inforyoma.or.jp>	<370A6D7B-D474-4D50-A035-7F7D45D7E1DE@nifty.com>	<451916E4.7070508@ps.inforyoma.or.jp>
+	<6C9E270F-0827-47F9-B54F-64FFF0C6F83E@nifty.com>
+Message-ID: <451A3EE1.3030102@sra.co.jp>
+
+> 私が、「本に書かれている意図に沿って読む」と表現したのでは、正確に伝わりにく
+> かったかもしれません。もう少し正確に書くと、
+>
+> 　著者である青木さんが、例えば2.1 do itの節で、読者（寺内さん）に伝えたい事を、
+> 　きちんと受け取って読み進める
+>
+> ということです。何を伝えたいのかは、（Smalltalkのコードの前後の）日本語の文章の
+> 中に書かれていますし、1.1節や1.2節に本全体を通して何を伝えたいかが、書かれて
+> います。（著者ご本人と直接コミュニケーションできる場で、私がこんなことを書くのも
+> おこがましい気はするのですが 。）そこのところを理解しておけば、「ここのSmalltalkの
+> コードは、文法の理解を確認するための例だな」とか、「こういうことをしたい時は、
+> このコードのパターンを憶えておけばいいんだな」とかが、分かってくると思います。
+
+おこがましいもなく、さしでがましくもありません。すばらしい！
+まさに濱崎さんの仰せの通りなんです。そもそも、本のタイトルの
+「Smalltalk イディオム」が、それを物語っているんです。
+
+内部の作りがどうなっているのかを調べる前に、コードのフレーズ
+やパターンを、何回も声に出して、口ずさんで、丸暗記しなさい、
+ということです。黙読はダメ、音読ですよ、とね。
+
+理解はしなくていいの、まず暗記、理解はその後。見た先から覚え
+なさい、聞いた先から憶えなさい。まず行を熟（こな）しなさい。
+行解の後から理解はついて来る、迷いなさんな、ということです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From abee.abe ＠ nifty.ne.jp  Wed Sep 27 21:14:16 2006
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7198] 多言語化 Squeak のホームページが削除されました。
+Message-ID: <451A6B182B5.59E5ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+# Squeak-jaとのマルチポストです。
+
+2006/8/18頃、infoseekにより多言語化Squeakのホームページ
+(http://squeak.hp.infoseek.co.jp/)が削除されました。理由は規約違反とのこ
+とです。私はこれに異議がありますが、一切の質問や苦情は受け付けられないと
+のことなので、回復は困難と思われます。
+
+長い間、皆さんのご支援で続けてきたサイトがこのような形で終わることになり
+残念です。
+思えば、このサイトは2002/4にNHK教育で放送された「未来への教室」に合わせて、
+番組を見た人がダウンロードしてすぐ使えるようにと大島さんと相談して急遽開
+設したものでした。それまでの多言語化Squeak(当時は多国語化Squeakと呼称)は
+ソースファイルの形でしか提供されておらず、一般の人が使うには敷居が高いも
+のでした。
+
+http://www.akademia.co.jp/Smalltalk/SML/archives/SRA.archives/2002-April/005597.html
+
+初期のSqueakNihongoにはいろいろな問題がありましたが、皆さんのフィードバッ
+クを受けて改善され、現在は Squeakland 2005Jになっています。
+
+http://www.squeakland.jp/images/news/html/SqL05JRelease.htm
+
+その後も、ニュースや平井さんの記事を掲載するなど、 2004/12のスクイークラ
+ンド開設まではポータルサイトとして機能してました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2004-December/002143.html
+
+現在はSqueakの利用者数も当時とは桁違いで、メディアで取り上げられる機会も
+多くなり、教育の現場にも浸透して来ました。これに合わせて、利用者層も開発
+者から子供や先生にシフトしてきたのも事実です。このサイト自体、最近はほと
+んど更新されることもなくなっていたので、ちょうどよい頃合だったのかもしれ
+ません。
+
+もし、多言語化Squeakのホームページの情報が必要な方がいらっしゃいましたら、
+Internet Archiveをお使いください。上記の平井さんの記事のほか、書籍の紹介、
+多言語化Squeakの歴史などが載っています。
+
+http://web.archive.org/web/*/http://squeak.hoops.ne.jp/
+http://web.archive.org/web/*/http://squeak.hp.infoseek.co.jp/
+
+また、リンク先としてこのページのURLを載せている方がいらっしゃいましたら、
+大変お手数ですが、削除していただくか、上記のInternet ArchiveのURLに変更願
+います。
+
+長い間ありがとうございました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From nishis ＠ zephyr.dti.ne.jp  Wed Sep 27 21:37:36 2006
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7199] Re: 多言語化 Squeak のホームページが削除されました。
+In-Reply-To: <451A6B182B5.59E5ABEE.ABE@smtp.nifty.com>
+References: <451A6B182B5.59E5ABEE.ABE@smtp.nifty.com>
+Message-ID: <451A7090.9040106@zephyr.dti.ne.jp>
+
+on 06.9.27 9:14 PM, Kazuhiro ABE wrote:
+> 2006/8/18頃、infoseekにより多言語化Squeakのホームページ
+> (http://squeak.hp.infoseek.co.jp/)が削除されました。理由は規約違反とのこ
+> とです。私はこれに異議がありますが、一切の質問や苦情は受け付けられないと
+> のことなので、回復は困難と思われます。
+
+ええと，いったいどういう理由で削除対象になっちゃったんでしょう
+か．気になります．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From abee.abe ＠ nifty.ne.jp  Wed Sep 27 22:14:36 2006
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7200] Re: 多言語化 Squeak のホームページが削除されました。
+In-Reply-To: <451A7090.9040106@zephyr.dti.ne.jp>
+References: <451A6B182B5.59E5ABEE.ABE@smtp.nifty.com>
+	<451A7090.9040106@zephyr.dti.ne.jp>
+Message-ID: <451A793C256.59EBABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 27 Sep 2006 21:37:36 +0900
+NISHIHARA Satoshi <nishis@zephyr.dti.ne.jp> wrote:
+>> 2006/8/18頃、infoseekにより多言語化Squeakのホームページ
+>> (http://squeak.hp.infoseek.co.jp/)が削除されました。理由は規約違反とのこ
+>> とです。私はこれに異議がありますが、一切の質問や苦情は受け付けられないと
+>> のことなので、回復は困難と思われます。
+>
+>ええと，いったいどういう理由で削除対象になっちゃったんでしょう
+>か．気になります．
+
+明確には教えてくれないのですが、可能性としてあげられたのは、
+
+・isweb指定の広告バナー未表示、または不当な表示逃れ、あるいは
+　isweb事務局指定以外の広告が掲載されている(自社の宣伝広告以外)の可能性
+
+です。この規約自体を認識していませんでしたが、書籍の紹介にamazonやbk1への
+アフィリエイトリンクを張っていたので、これに異議はありません。
+私が問題視しているのは、事前に送られたという警告メールの宛先が、変更前の
+古いものだったということです。それ以外のinfoseekからお知らせは新しいアド
+レスに届いており、警告メールの宛先だけがなぜ更新されていなかったのかが分
+かりません。
+
+あまりSML向きのネタではないと思うので、続くようでしたら他の場所に移りたい
+と思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From aoki ＠ sra.co.jp  Thu Sep 28 16:43:06 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7201] じゅんのVisualWorks5i.x対応を打ち止め
+Message-ID: <451B7D0A.8040400@sra.co.jp>
+
+青木です。
+
+現在の じゅん のバージョンは【Jun698】です。VisualWorks 5i.x
+と 7.x を一緒にサポートするのが難しい状況になってきました。
+
+次期バージョンの【Jun699】で VisualWorks 5i.x の対応を打ち止
+めにし、VisualWorks 7.x のみをサポートしてゆくことにしたいと
+思います。
+
+VisualWorks と じゅん のバージョンの対応関係は以下の通りです。
+
+	VisualWorks 2.5  : Jun005 〜 Jun234
+	VisualWorks 3.x  : Jun300 〜 Jun499
+	VisualWorks 5i.x : Jun413 〜 Jun699
+	VisualWorks 7.x  : Jun538 〜
+
+ネットワーク周りが 5i.x と 7.x では、あまりに異なりますので、
+仕方がないという状況です。どうぞよろしくお願い申し上げます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+

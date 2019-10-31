@@ -1,0 +1,362 @@
+From umejava ＠ mars.dti.ne.jp  Wed May  2 17:40:56 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3487] blueplane.jp, swikis.ddo.jpを一時停止します
+Message-ID: <JD200705021740565.12027015@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、直前のアナウンスになってしまいましたが、本日の夜からメンテナンス
+のため、blueplane.jp, swikis.ddo.jpのサーバを一時停止したいと思います。
+
+SqueakSourceJやプロジェクト置き場に一時的にアクセスできなくなりますが
+ご了承ください。
+
+GW中にプログラミングしてやろうと思っていた方の期待をくじかないように、
+なるべくすみやかに復旧したいと思います。運が悪ければ明日の朝くらいまで
+かかる可能性もありますが、きっと大丈夫でしょう。
+
+よろしくお願い申し上げます。
+---
+[:masashi | ^umezawa]
+
+From ro ＠ bjbsh.com  Wed May  2 18:07:23 2007
+From: ro ＠ bjbsh.com (Lu Yifeng)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3488] ＯＳ言語の自動判別
+Message-ID: <002e01c78c99$4c1cf6c0$0800a8c0@crop.bjbsh.com>
+
+初心者の盧です。
+
+ＯＳ言語の自動判別について、教えてください。
+
+中国語版Windows2000で、最新のSqueaklandを
+中国語に翻訳し、イメージとして、保存して、
+Squeakを閉じて、再度保存されたイメージを
+起動すると、一瞬、中国語に翻訳された
+フラップ名が表示されたが、自動的にまた
+英語名のフラップに切替えられる現象があります。
+
+ちなみに、日本語Windows2000では、同じイメージを
+起動すると、同じく中国語のフラップ名を一瞬表示後、
+自動的に日本語のフラップ名に切替えられます。
+
+たぶんSqueakがどこかでOS言語を自動判別し、
+切替えを行っていますが、どこでこの設定を
+行っているでしょうか。このような言語自動判別
+を辞めたい場合、どうしたらいいでしょうか。
+
+よろしくお願い致します。
+
+盧　屹峰
+
+
+
+From korakurider ＠ yahoo.co.jp  Wed May  2 18:33:38 2007
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3489] Re: ＯＳ言語の自動判別
+In-Reply-To: <002e01c78c99$4c1cf6c0$0800a8c0@crop.bjbsh.com>
+References: <002e01c78c99$4c1cf6c0$0800a8c0@crop.bjbsh.com>
+Message-ID: <JE200705021833383.28168474@yahoo.co.jp>
+
+Korakuriderです、こんにちは。
+
+"Lu Yifeng" <ro@bjbsh.com>さん：
+> たぶんSqueakがどこかでOS言語を自動判別し、
+> 切替えを行っていますが、どこでこの設定を
+> 行っているでしょうか。このような言語自動判別
+> を辞めたい場合、どうしたらいいでしょうか。
+
+Squeak本体というよりは、Locale Pluginの機能で起動時に判別しています。
+Preferencesの General→useLocale をOffにするか、Pluginをはずせばこの動作
+を止められます。
+
+/korakurider
+--------------------------------------
+Big Chance to Win 50,000 Yahoo! Points!
+http://pr.mail.yahoo.co.jp/nlcp/
+
+
+From umejava ＠ mars.dti.ne.jp  Thu May  3 14:23:11 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3490] Re: blueplane.jp, swikis.ddo.jpを一時停止します
+In-Reply-To: <JD200705021740565.12027015@mars.dti.ne.jp>
+References: <JD200705021740565.12027015@mars.dti.ne.jp>
+Message-ID: <JK200705031423113.1230937@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+アナウンスが遅れましたが、サービス再開しています。どしどしお使いください。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> さて、直前のアナウンスになってしまいましたが、本日の夜からメンテナンス
+> のため、blueplane.jp, swikis.ddo.jpのサーバを一時停止したいと思います。
+> 
+> SqueakSourceJやプロジェクト置き場に一時的にアクセスできなくなりますが
+> ご了承ください。
+> 
+> GW中にプログラミングしてやろうと思っていた方の期待をくじかないように、
+> なるべくすみやかに復旧したいと思います。運が悪ければ明日の朝くらいまで
+> かかる可能性もありますが、きっと大丈夫でしょう。
+> 
+> よろしくお願い申し上げます。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From ro ＠ bjbsh.com  Thu May  3 16:29:06 2007
+From: ro ＠ bjbsh.com (Lu Yifeng)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3491] Re: ＯＳ言語の自動判別
+Message-ID: <009001c78d54$bba17b40$0800a8c0@crop.bjbsh.com>
+
+盧です。こんにちは
+
+ありがとうございます。
+useLocaleをOffしましたら、うまく行きました。
+> Squeak本体というよりは、Locale Pluginの機能で起動時に判別しています。
+> Preferencesの General→useLocale をOffにするか、Pluginをはずせばこの動作
+> を止められます。
+
+盧　屹峰
+
+
+
+From takeda.toshiyuki ＠ gmail.com  Mon May  7 13:46:50 2007
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3492] Re: 1/31( 水 ) Squeakland.jp サーバメンテナンスについて
+In-Reply-To: <45BE93F8A1.B116ABEE@smtp.nifty.com>
+References: <45BE93F8A1.B116ABEE@smtp.nifty.com>
+Message-ID: <6544a1da0705062146m76c94d0qdbfb3a9496e9479f@mail.gmail.com>
+
+武田です。
+
+On 1/30/07, Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> また、現在非公式にサービスを行っているSuperSwikiおよびSuperSwiki2が同日よ
+> り当面の間停止します。
+
+再開の計画はどうなっているのでしょうか？
+
+再開の予定がないなら「いちかわさんのリファレンス」のような
+誰にも役立つものはアクセスできるところに置いていただけたらと思います。
+
+たけだとしゆき
+
+From motonao ＠ mx2.tiki.ne.jp  Thu May 10 07:37:29 2007
+From: motonao ＠ mx2.tiki.ne.jp (M_Takada)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3493] Windows 版での日本語入力
+Message-ID: <200705092237.l49MbWRY072260@smtp9.tiki.ne.jp>
+
+高田と申します。よろしくお願いします。
+
+日本語入力について質問させていただきます。
+日本語の入力・表示はできているのですが、インラインでの入力がうま
+くいきません。インライン入力は可能でしょうか？
+
+使用しているのは、
+・Windows版
+・イメージのバージョンは3.9
+の環境に、SqueakMap Package Loaderで日本語環境をインストールしま
+した。
+
+他、設定などが必要でしょうか？
+
+よろしくご教授お願いします。
+
+
+
+From ka.minami ＠ nifty.com  Thu May 10 12:05:49 2007
+From: ka.minami ＠ nifty.com (Kazuki Minamitani)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3494] Re: Windows 版での日本語入力
+In-Reply-To: <200705092237.l49MbWRY072260@smtp9.tiki.ne.jp>
+References: <200705092237.l49MbWRY072260@smtp9.tiki.ne.jp>
+Message-ID: <CBC792B01C5A72ka.minami@nifty.com>
+
+こんにちは、南谷です。
+
+
+On Thu, 10 May 2007 07:37:29 +0900 
+M_Takada <motonao@mx2.tiki.ne.jp> wrote:
+
+>日本語入力について質問させていただきます。
+>日本語の入力・表示はできているのですが、インラインでの入力がうま
+>くいきません。インライン入力は可能でしょうか？
+>
+>使用しているのは、
+>・Windows版
+>・イメージのバージョンは3.9
+>の環境に、SqueakMap Package Loaderで日本語環境をインストールしま
+>した。
+>
+>他、設定などが必要でしょうか？
+
+おそらく、インライン入力時の表示座標を求める、ImmWin32Plugin.dll が
+無いからだと思います。
+
+Squeaklandから、Windows用のVMをダウンロードしてください。
+http://squeakland.jp/developer の Squeak-Win32-3.7.1-VM-Imm.zip です。
+
+
+以下のいずれかでインライン入力ができるようになると思います。
+
+・ダウンロードしたVMをそのまま使用する
+・解凍して得られたファイルから、ImmWin32Plugin.dllを抜き出して、
+　現在ご使用のSqueakVMと同じフォルダにコピーする
+
+お試しください。
+
+
+--
+南谷 千城
+e-mail: ka.minami@nifty.com
+
+From motonao ＠ mx2.tiki.ne.jp  Thu May 10 15:10:17 2007
+From: motonao ＠ mx2.tiki.ne.jp (M_Takada)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3495] Re: Windows 版での日本語入力
+In-Reply-To: <CBC792B01C5A72ka.minami@nifty.com>
+References: <CBC792B01C5A72ka.minami@nifty.com>
+Message-ID: <200705100610.l4A6AM0M087794@smtp10.tiki.ne.jp>
+
+こんにちは、高田です。
+
+早速のご回答ありがとうございます。
+
+DLLを抜き出してVMのフォルダにコピーするとうまくいきました。
+
+ありがとうとうございました。
+またわからないことがありましたら質問させていただく
+かと思いますが、その際はよろしくお願いします。
+
+
+
+Kazuki Minamitani <ka.minami@nifty.com> wrote:
+
+> こんにちは、南谷です。
+> 
+> 
+> On Thu, 10 May 2007 07:37:29 +0900 
+> M_Takada <motonao@mx2.tiki.ne.jp> wrote:
+> 
+> >日本語入力について質問させていただきます。
+> >日本語の入力・表示はできているのですが、インラインでの入力がうま
+> >くいきません。インライン入力は可能でしょうか？
+> >
+> >使用しているのは、
+> >・Windows版
+> >・イメージのバージョンは3.9
+> >の環境に、SqueakMap Package Loaderで日本語環境をインストールしま
+> >した。
+> >
+> >他、設定などが必要でしょうか？
+> 
+> おそらく、インライン入力時の表示座標を求める、ImmWin32Plugin.dll が
+> 無いからだと思います。
+> 
+> Squeaklandから、Windows用のVMをダウンロードしてください。
+> http://squeakland.jp/developer の Squeak-Win32-3.7.1-VM-Imm.zip です。
+> 
+> 
+> 以下のいずれかでインライン入力ができるようになると思います。
+> 
+> ・ダウンロードしたVMをそのまま使用する
+> ・解凍して得られたファイルから、ImmWin32Plugin.dllを抜き出して、
+> 　現在ご使用のSqueakVMと同じフォルダにコピーする
+> 
+> お試しください。
+> 
+> 
+> --
+> 南谷 千城
+> e-mail: ka.minami@nifty.com
+
+
+From abee ＠ squeakland.jp  Fri May 25 10:56:36 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3496] Re: SqueakFest '07 のご案内
+In-Reply-To: <4630512D11D.2870ABEE@smtp.nifty.com>
+References: <4602A37A157.5CAAABEE@smtp.nifty.com>
+	<4630512D11D.2870ABEE@smtp.nifty.com>
+Message-ID: <46564254320.7DCDABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+先日ご案内したSqueakFest '07ですが、
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-March/003467.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-April/003483.html
+
+公式ページで一般参加者の登録が始まっています(左のRegisterから)。
+
+http://imamp.colum.edu/eceim/squeakfest07/index.php
+
+登録料は$125です。なるべくお早目の登録をお願いします。
+Alan Kay博士によるOLPCの講演も決定し、日本からの講演やハンズオンも何件か
+予定されています。
+
+なお、ホテルの状況はかなり厳しいです。今年はSqueakFestとして部屋を確保で
+きなかったようなので各人で予約する必要があります(近くのホテルのリストは
+Accommodationsから)。航空券の予約も急がれたほうが良いと思います。
+
+それでは、多くの方とシカゴでお会いできることを楽しみにしております。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu May 31 20:05:48 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3497] Re: 1/31( 水 ) Squeakland.jp サーバメンテナンスについて
+In-Reply-To: <6544a1da0705062146m76c94d0qdbfb3a9496e9479f@mail.gmail.com>
+References: <45BE93F8A1.B116ABEE@smtp.nifty.com>
+	<6544a1da0705062146m76c94d0qdbfb3a9496e9479f@mail.gmail.com>
+Message-ID: <465EAC0C194.898FABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 7 May 2007 13:46:50 +0900
+"Toshiyuki Takeda" <takeda.toshiyuki@gmail.com> wrote:
+>> また、現在非公式にサービスを行っているSuperSwikiおよびSuperSwiki2が同日よ
+>> り当面の間停止します。
+>
+>再開の計画はどうなっているのでしょうか？
+>
+>再開の予定がないなら「いちかわさんのリファレンス」のような
+>誰にも役立つものはアクセスできるところに置いていただけたらと思います。
+
+ご迷惑をおかけして申し訳ありません。
+さきほど、梅澤さんのご協力によりSuperSwiki2が復旧しました。
+
+http://squeakland.jp/super2/
+
+作品の固定リンクなども含めて、URLは従来と同じです。
+ただし、今までは専用サーバ上で稼動していたのに対して、今回は梅澤さんの自
+宅サーバ上で動いています。したがって、プロジェクト置き場などと同じく、予
+告なく不定期に停止することがあります。
+非公式の実験サービスという位置付けは従来と同じですので、その点はご了承く
+ださい。
+
+なお、SuperSwikiの復旧についてはいまのところ未定です。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+

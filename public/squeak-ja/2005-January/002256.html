@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202256%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUglVSUhJSQlaxsoQigucHIpGyRCJEdKXUI4JDUkbCRrJGIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEI%3D%3F%3D&In-Reply-To=20050111210531.DBFF.FLORIAN%40seagreen.ocn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002255.html">
+   <LINK REL="Next"  HREF="002258.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202256%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUglVSUhJSQlaxsoQigucHIpGyRCJEdKXUI4JDUkbCRrJGIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEI%3D%3F%3D&In-Reply-To=20050111210531.DBFF.FLORIAN%40seagreen.ocn.ne.jp"
+       TITLE="[Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2005年 1月 12日 (水) 15:18:23 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002255.html">[Squeak-ja: 2255] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+        <LI>次の記事 <A HREF="002258.html">[Squeak-ja: 2258] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2256">[ 日付 ]</a>
+              <a href="thread.html#2256">[ スレッド ]</a>
+              <a href="subject.html#2256">[ 件名 ]</a>
+              <a href="author.html#2256">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+&gt;<i> Takashi&gt; &gt; (1)サウンド、グラフィック、スクリプトデータなどの保存に付いての質問
+</I>&gt;<i> Takashi&gt; &gt; 　サウンドに関しては、阿部さん曰く、
+</I>&gt;<i> Takashi&gt; &gt; 
+</I>&gt;<i> Takashi&gt; &gt; 	6x以降はプロジェクトファイルに音も一緒に保存されるので自分の作品に新しい音を追加できます。
+</I>&gt;<i> Takashi&gt; &gt; 
+</I>&gt;<i> Takashi&gt; &gt; 　とのことですので含めることは可能と思われますが、クラス変数内に含まれ
+</I>&gt;<i> Takashi&gt; &gt; る(あらかじめロードした)ColorFormなどをProjectファイル内に含めることは
+</I>&gt;<i> Takashi&gt; &gt; 可能でしょうか。
+</I>&gt;<i> Takashi&gt; &gt; 　また、マップデータやシナリオなどの情報をCollectionとしてクラス変数内
+</I>&gt;<i> Takashi&gt; &gt; に(あらかじめロードして)持ったものについても同様に可能でしょうか。
+</I>&gt;<i> Takashi&gt; 
+</I>&gt;<i> Takashi&gt; 一番簡単なのは World のプロパティ(モーフはみんなプロパティ辞書を持っています。)
+</I>&gt;<i> Takashi&gt; に入れる事だと思います。オブジェックトなら何でも入ります。プログラムを書いていて
+</I>&gt;<i> Takashi&gt; 使いやすいのは storeString かなんかでシリアライズした文字列を ChangeSet に
+</I>&gt;<i> Takashi&gt; クラスメソッドとして持たせる事です。
+</I>&gt;<i> 
+</I>&gt;<i> 　なるほど。
+</I>&gt;<i> 　Worldに限らず、どこかのMorphのプロパティ辞書に一括してリソースを持た
+</I>&gt;<i> せる方針で問題なさそうですね。
+</I>
+  どこかのMorphの(sub)instanceの辞書に、ということですよね。
+
+&gt;<i> ・3.6ベースのイメージでSystemBrowserを開いたままプロジェクト(prファイ
+</I>&gt;<i> ル)としてセーブ
+</I>&gt;<i> ・3.8ベースのイメージでプロジェクトをロード
+</I>&gt;<i> 
+</I>&gt;<i> 　すると、実際のアプリ(いつものRainDrop)とSystemBrowserが開いたままプ
+</I>&gt;<i> ロジェクトが生成されます。Look &amp; Feelが変化してなかなか楽しい……ので
+</I>&gt;<i> すが、よく見ると、なんかSystemBrowserが3.6の見かけをしているような……。
+</I>&gt;<i> 
+</I>&gt;<i> 　試しに別のWorldに移って新たにSystemBrowserを開いても3.6の
+</I>&gt;<i> SystemBrowserが。ってことは、これは、
+</I>&gt;<i> 
+</I>&gt;<i> ・3.6のSystemBrowserのクラスがChangeSetの形でprファイルに含まれていた
+</I>&gt;<i> 
+</I>&gt;<i> 　……ということなのでしょうか。
+</I>
+  Browserというクラスのインスタンスがserializeされて入っていて、それを
+  ロードするときに「がっちゃん」と読み込んだ側のイメージに入っている同
+  じ名前のクラスのインスタンスとして読み込んだ、ということです。コード
+  は運ばれていません。
+
+&gt;<i> 　Projectの形でセーブすると、確かに一見さんには判りやすい形になるので
+</I>&gt;<i> すが、下手なもの開いたままプロジェクト公開しちゃうと他の人の環境を破壊
+</I>&gt;<i> する羽目になるような気がします。たとえば、workspaceを開いた状態で今プ
+</I>&gt;<i> ロジェクトを公開していますが、まさか、workspaceのクラスの中身がプロジェ
+</I>&gt;<i> クトのロード時に書き換わってしまうとかいうことすらも考えられます。
+</I>&gt;<i> 　この辺り、どのようなルール付けで保管されているのかが少し気になりま
+</I>&gt;<i> す。
+</I>
+  コードは、そのprojectに関連付けられているchange setに入っているもの
+のみが入ります。ですので、必ずしも破壊されることを心配する必要はありま
+せん。
+
+&gt;<i> Takashi&gt; 見てのとおりかなり気軽な物も多いので、相当気軽だと思っています。説明を
+</I>&gt;<i> Takashi&gt; ちゃんと書けば特に迷惑では無いと思います。
+</I>&gt;<i> 
+</I>&gt;<i> 　諒解しました。
+</I>&gt;<i> 　説明……。やっぱり、abstructに関しては英語ですよね……。善処します
+</I>&gt;<i> (^^;)。
+</I>
+&gt;<i> 　諒解しました。
+</I>&gt;<i> 　基本的にはsarで、デモとしてプラグインで見せる時にはprで公開するポリ
+</I>&gt;<i> シーにします。
+</I>
+  そうですね。
+
+  期待しています。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002255.html">[Squeak-ja: 2255] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+	<LI>次の記事 <A HREF="002258.html">[Squeak-ja: 2258] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2256">[ 日付 ]</a>
+              <a href="thread.html#2256">[ スレッド ]</a>
+              <a href="subject.html#2256">[ 件名 ]</a>
+              <a href="author.html#2256">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4477] Re: Etoysでのモーフの複製でトラブル
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204477%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3lzGyRCJEckTiViGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlVSROSiNAPSRHJUglaSVWJWsbKEI%3D%3F%3D&In-Reply-To=20100720005919653800.GyazMail.inoue%40ma.ns.tcu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004476.html">
+   <LINK REL="Next"  HREF="004478.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4477] Re: Etoysでのモーフの複製でトラブル</H1>
+    <B>TAKAHASHI Makoto</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204477%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3lzGyRCJEckTiViGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlVSROSiNAPSRHJUglaSVWJWsbKEI%3D%3F%3D&In-Reply-To=20100720005919653800.GyazMail.inoue%40ma.ns.tcu.ac.jp"
+       TITLE="[Squeak-ja: 4477] Re: Etoysでのモーフの複製でトラブル">makoto ＠ kobe-u.ac.jp
+       </A><BR>
+    <I>2010年 7月 20日 (火) 14:38:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004476.html">[Squeak-ja: 4476]  Etoysでのモーフの複製でトラブル
+</A></li>
+        <LI>次の記事 <A HREF="004478.html">[Squeak-ja: 4478] Re: Etoysでのモーフの複製でトラブル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4477">[ 日付 ]</a>
+              <a href="thread.html#4477">[ スレッド ]</a>
+              <a href="subject.html#4477">[ 件名 ]</a>
+              <a href="author.html#4477">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>神戸大学の高橋です。
+
+Etoys3 と SqueakLand2005J2 で式の計算の順序の約束が異なる
+のが原因ではないでしょうか。2005J2では，演算子に関わらず右結合
+で計算しますが，Etoys3ではそれが通常の計算規約（足し算より
+かけ算の方が結合の強さが大きいなど）に変更されています。
+2005J2で作られた作品のスクリプトは，Etoys3でも2005J2での順序を
+尊重して実行されるが，そこで複製したオブジェクトのスクリプトは
+Etoys3での規則で計算されてしまうようです。
+井上さんのsolarsysytemのプロジェクトのスクリプトに質量をgmrの
+３乗で割る部分がありますが，ここがそのように計算されていないために
+他の変数が巨大な値をとってしまいフリーズしているように思います。
+
+複製ではなく兄弟を作るともとのスクリプトを共有するためそのまま
+でも動くようです。
+
+変数が多い場合やスクリプトが巨大になると全体が一度に表示できないのは
+私も困っていますが，私は以下のような対処をしています。
+
+１　変数のカテゴリのモーフを取り出して，そのy座標を動かすことで全体をみる。
+２　変数のカテゴリのモーフを取り出して，その拡大率を小さくして（縮小して）
+　　全体をみる。
+
+iNOUE Koich!さんの『[Squeak-ja: 4476]  Etoysでのモーフの複製でトラブル』
+ (2010年7月20日 00:59:19GMT+09:00)の件について
+&gt;<i> 東京都市大の井上です。
+</I>&gt;<i> 
+</I>&gt;<i> 最近ようやくSqueak Etoys 3.0をMacOSX10.6.4にインストールしました。そこで
+</I>&gt;<i> 問題が発生して困っているのですが、どなたか助言をいただけないでしょうか。
+</I>&gt;<i> 問題とは、以下のプロジェクトでモーフを複製すると、その後フリーズしてしま
+</I>&gt;<i> うというものです。今まで以前のSqueakLand2005J2で開発していて、そちらでは
+</I>&gt;<i> 複製してもフリーズすることなく同じ動作をしてくれました。
+</I>&gt;<i> <A HREF="http://www.ns.tcu.ac.jp/~inoue/Squeak_Seminar/solarsystem.010.pr">http://www.ns.tcu.ac.jp/~inoue/Squeak_Seminar/solarsystem.010.pr</A>
+</I>&gt;<i> 
+</I>&gt;<i> 具体的にはこれはeToysにおいて運動方程式をRunge-Kutta法により逐次近似で解
+</I>&gt;<i> かせて軌道計算させるというもので、マアマアうまく動くようになりましたので
+</I>&gt;<i> 惑星をもっと増やそうとして複製を試みたというところです。最初に惑星を作
+</I>&gt;<i> り、複製して恒星にして、惑星が恒星の周りを公転するようになるまでは
+</I>&gt;<i> SqueakLand2005J2でやりました。ここまでは特に問題はなかったのですが、
+</I>&gt;<i> Etoys3.0で惑星を複製してみたところ、全スクリプトでgoを押した途端にフリー
+</I>&gt;<i> ズしてしまうのです。OS自体は動いているようで、Etoysを強制終了させること
+</I>&gt;<i> はできました。
+</I>&gt;<i> 
+</I>&gt;<i> あと、この問題とは関係ないのですが、ビューアのカテゴリ欄で表示される項目
+</I>&gt;<i> が多すぎて（変数を26も使ってます。）通常サイズでは表示しきれない場合、全
+</I>&gt;<i> 部見る方法はあるのでしょうか。
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004476.html">[Squeak-ja: 4476]  Etoysでのモーフの複製でトラブル
+</A></li>
+	<LI>次の記事 <A HREF="004478.html">[Squeak-ja: 4478] Re: Etoysでのモーフの複製でトラブル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4477">[ 日付 ]</a>
+              <a href="thread.html#4477">[ スレッド ]</a>
+              <a href="subject.html#4477">[ 件名 ]</a>
+              <a href="author.html#4477">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

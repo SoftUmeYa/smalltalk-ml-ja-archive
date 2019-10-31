@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3599] Re: Seasideでローカルディレクトリのファイルを扱うには
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203599%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYXNpZGUbJEIkRyVtGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyVrJUclIyVsJS8lSCVqJE4lVSUhJSQlayRyMDckJiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE8bKEI%3D%3F%3D&In-Reply-To=JL200709121144005.14551828%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003598.html">
+   <LINK REL="Next"  HREF="003595.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3599] Re: Seasideでローカルディレクトリのファイルを扱うには</H1>
+    <B>Sho Yoshida</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203599%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYXNpZGUbJEIkRyVtGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyVrJUclIyVsJS8lSCVqJE4lVSUhJSQlayRyMDckJiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE8bKEI%3D%3F%3D&In-Reply-To=JL200709121144005.14551828%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3599] Re: Seasideでローカルディレクトリのファイルを扱うには">newapplesho ＠ gmail.com
+       </A><BR>
+    <I>2007年 9月 13日 (木) 21:06:20 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003598.html">[Squeak-ja: 3598] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+        <LI>次の記事 <A HREF="003595.html">[Squeak-ja: 3595] [イベント関連] チラシとポスター
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3599">[ 日付 ]</a>
+              <a href="thread.html#3599">[ スレッド ]</a>
+              <a href="subject.html#3599">[ 件名 ]</a>
+              <a href="author.html#3599">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>吉田 翔です．
+
+梅澤さんありがとうございます．
+
+もっと探索能力を身に付けないといけないと改めて思いました．
+
+
+
+
+On 2007/09/12, at 11:44, Masashi Umezawa wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;&gt;&gt;<i> ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot')
+</I>&gt;&gt;&gt;<i> fullName.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> serverRoot:とはApacheの設定でよく見かけるserverRoot
+</I>&gt;&gt;<i> と同じものなのでしょうか．
+</I>&gt;<i>
+</I>&gt;<i> そうですね。
+</I>&gt;<i>
+</I>&gt;&gt;&gt;<i> ma alias: '/seaside' to: [ma addPlug: [:request | seaside process:
+</I>&gt;&gt;&gt;<i> request]].
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> alias:to:もApacheの設定のaliasと同じものなので 
+</I>&gt;&gt;<i> しょう
+</I>&gt;&gt;<i> か．
+</I>&gt;&gt;<i> そうするとblockのところにdocumentRoot:を記述すれ 
+</I>&gt;&gt;<i> ばす
+</I>&gt;&gt;<i> ることもできる好きなURLでdocumentRootにアクセスでき
+</I>&gt;&gt;<i> るのでしょうか．
+</I>&gt;<i>
+</I>&gt;<i> 微妙に違います。ModAliasのコメントを見てみると良いと思い 
+</I>&gt;<i> ます。
+</I>&gt;<i>
+</I>&gt;&gt;<i> この設定をしたあと
+</I>&gt;&gt;<i> KomSeasideJ stop.
+</I>&gt;&gt;<i> でサーバと止まらなくなりました．
+</I>&gt;&gt;<i> HttpServiceで起動したので，HttpServiceを止めればいいと 
+</I>&gt;&gt;<i> 思っ
+</I>&gt;&gt;<i> たのですが止め方がわかりません．
+</I>&gt;<i>
+</I>&gt;<i> HttpServiceに望むメソッドがない場合は、スーパークラスをたどっ 
+</I>&gt;<i> てみると
+</I>&gt;<i> 答えがあったりします。
+</I>&gt;<i>
+</I>&gt;<i> HttpService serviceOnPort: 9090.
+</I>&gt;<i> HttpService servicesNamed: 'httpd'.
+</I>&gt;<i>
+</I>&gt;<i> あたりで、起動したサービスを捕まえられます。捕まえた後でstop 
+</I>&gt;<i> (またはunregister)
+</I>&gt;<i> ですね。
+</I>&gt;<i>
+</I>&gt;<i> (HttpService serviceOnPort: 9090) ifNotNilDo: [:service | service  
+</I>&gt;<i> stop].
+</I>&gt;<i>
+</I>&gt;<i> では。
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa]
+</I>
+- - - -
+Sho Yoshida
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003598.html">[Squeak-ja: 3598] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+	<LI>次の記事 <A HREF="003595.html">[Squeak-ja: 3595] [イベント関連] チラシとポスター
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3599">[ 日付 ]</a>
+              <a href="thread.html#3599">[ スレッド ]</a>
+              <a href="subject.html#3599">[ 件名 ]</a>
+              <a href="author.html#3599">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

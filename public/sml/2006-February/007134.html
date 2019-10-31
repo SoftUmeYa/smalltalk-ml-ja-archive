@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7134] Re: Smalltalk システムでのデータの保存、データベースについての質問
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207134%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsayAbJEIlNyU5JUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWAkRyROJUchPCU/JE5KXUI4ISIlRyE8JT8lWSE8JTkkSyREGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkRiROPEFMZBsoQg%3D%3D%3F%3D&In-Reply-To=20060221221941huQpSR%40saesoft.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007133.html">
+   <LINK REL="Next"  HREF="007135.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7134] Re: Smalltalk システムでのデータの保存、データベースについての質問</H1>
+    <B>鈴木 藍</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207134%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsayAbJEIlNyU5JUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWAkRyROJUchPCU/JE5KXUI4ISIlRyE8JT8lWSE8JTkkSyREGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkRiROPEFMZBsoQg%3D%3D%3F%3D&In-Reply-To=20060221221941huQpSR%40saesoft.jp"
+       TITLE="[SML 7134] Re: Smalltalk システムでのデータの保存、データベースについての質問">tar_zcvf ＠ yahoo.co.jp
+       </A><BR>
+    <I>2006年 2月 23日 (木) 01:05:44 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007133.html">[SML 7133] Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+        <LI>次の記事 <A HREF="007135.html">[SML 7135] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7134">[ 日付 ]</a>
+              <a href="thread.html#7134">[ スレッド ]</a>
+              <a href="subject.html#7134">[ 件名 ]</a>
+              <a href="author.html#7134">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+  鈴木 藍と申します。誰も答えないので、おそれながらお答えします。
+  以前、ちょっといじったので。
+
+&gt;<i> はじめまして。このMLに参加させていただきました。
+</I>&gt;<i> さえぐさともうします。
+</I>
+  はじめまして。
+
+&gt;<i> ネットワーク上のデータ（データベース）を扱うには
+</I>&gt;<i> どのようにするのでしょうか。
+</I>
+  ネットワーク上のデータ(データベース)が、一般的によく使われている
+  リレーショナルデータベースとしてお答えします。
+  
+  私は VisualWorks 7.3(秘密)を使用していますが、はじめから
+  PostgreSQLEXDI というパーセル(PostgreSQL のドライバ)がインストールされているので
+  これを使用して PostgreSQL サーバに接続できます。パッケージ PostgreSQLDriver の
+  クラス PostgreSQLTest のクラスメソッドのカテゴリ &quot;testing&quot; に、テストコードが
+  たくさん用意されているので、接続パラメタの設定を自分が使用するデータベース用に変更すると、
+  接続テストを行うことができます。接続パラメタの設定の変更は、クラス PostgreSQLTest の
+  クラスメソッドのカテゴリ &quot;testing - defaults&quot; で行うことができます。
+
+  たとえば選択の問い合わせを一連のコードであらわすと、以下のような感じになります。
+  (オブジェクトデータベースではないので、やはり表示部分が面倒)
+
+---------------------------------
+|<i> parameterSet connection queryMessage aResultList resultData |
+</I>
+&quot; 接続パラメタの設定 &quot;
+parameterSet := ConnectionParameterSet new.
+parameterSet
+	host: 'localhost';
+	port: 5432;
+	databaseName: 'nethack';
+	userName: 'spiral';
+	password: 'Elbereth'.
+
+&quot; 問い合わせ開始 &quot;
+connection := PostgreSQLConnection using: parameterSet.
+queryMessage := connection newQuery.
+queryMessage queryString: 'SELECT name, alignment, effect FROM artifact;'.
+aResultList := queryMessage execute.
+connection close.
+
+&quot; 表示 &quot;
+resultData := WriteStream on: String new.
+aResultList do: 
+		[:aResult | 
+		&quot; カラム名表示 &quot;
+		aResult rowDescription isNil 
+			ifFalse: 
+				[aResult rowDescription fieldDescriptions do: 
+						[:aFieldDescription | 
+						resultData
+							nextPutAll: aFieldDescription name;
+							tab;
+							nextPutAll: '|';
+							tab].
+				resultData
+					cr;
+					nextPutAll: '-------------------------------------------------------------------';
+					cr.
+				&quot; データ表示 &quot;
+				aResult rows do: 
+						[:aRow | 
+						aRow fields do: 
+								[:aField | 
+								aField isNil 
+									ifTrue: 
+										[resultData
+											tab;
+											tab]
+									ifFalse: 
+										[resultData
+											nextPutAll: aField asString;
+											tab;
+											tab]].
+						resultData cr]]].
+Transcript
+	cr;
+	show: resultData contents
+---------------------------------
+
+  実行結果は以下の感じ。
+
+---------------------------------
+name	|	alignment	|	effect	|	
+-------------------------------------------------------------------
+Excalibur		lawful		automatic searching, level-drain resistance		
+Magicbane		neutral		magic resistance		
+Stormbringer		chaotic		level-drain resistance		
+Frost Brand		maverick		cold resistance		
+---------------------------------
+
+  他にも、リレーショナルデータベースでしたら DB2 や Oracle が、オブジェクトデータベースでしたら
+  OmniBase (梅澤さんが日本語化されたらしいです)のドライバがあるみたいです。
+  これらは、パーセルブラウザの Suggestions の &quot;DataBase&quot; にリストされています。
+  Oracle も試してみようと思ったのですが、テストコードが見つからなかったのでまた今度。
+
+  実際にアプリケーションで使用する場合には、コネクションプーリング機構
+  (Oracle でいう暗黙的キャッシュ)が必要になることが多いと思いますが、
+  それっぽいモノは見当たらないので自分で作る必要がありそうですね。
+
+&gt;<i> あるいは、ベテランの方は、どのようなものをつかったり、
+</I>&gt;<i> コーディングなど、されていますか？
+</I>
+  エセユーザなのでごめんなさい。
+
+
+//鈴木 藍
+
+-- <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">tar_zcvf ＠ yahoo.co.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007133.html">[SML 7133] Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+	<LI>次の記事 <A HREF="007135.html">[SML 7135] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7134">[ 日付 ]</a>
+              <a href="thread.html#7134">[ スレッド ]</a>
+              <a href="subject.html#7134">[ 件名 ]</a>
+              <a href="author.html#7134">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

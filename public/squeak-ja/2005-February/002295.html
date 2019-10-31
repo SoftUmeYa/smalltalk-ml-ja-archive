@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2295] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202295%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283OiBTcXVlYWtW%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FTTMuNi4zLUpQYXRjaGVkIBskQiRHRjA6biQ7JDobKEI%3D%3F%3D&In-Reply-To=018718d0465be8cefc869889317315d0%40kwansei.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002294.html">
+   <LINK REL="Next"  HREF="002296.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2295] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202295%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283OiBTcXVlYWtW%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FTTMuNi4zLUpQYXRjaGVkIBskQiRHRjA6biQ7JDobKEI%3D%3F%3D&In-Reply-To=018718d0465be8cefc869889317315d0%40kwansei.ac.jp"
+       TITLE="[Squeak-ja: 2295] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず">itoh-private ＠ itolab.com
+       </A><BR>
+    <I>2005年 2月  3日 (木) 17:33:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002294.html">[Squeak-ja: 2294] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+</A></li>
+        <LI>次の記事 <A HREF="002296.html">[Squeak-ja: 2296] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2295">[ 日付 ]</a>
+              <a href="thread.html#2295">[ スレッド ]</a>
+              <a href="subject.html#2295">[ 件名 ]</a>
+              <a href="author.html#2295">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>伊藤です。
+
+At Thu, 3 Feb 2005 13:28:11 +0900,
+Takeda Toshiyuki wrote:
+&gt;<i> 武田です。
+</I>&gt;<i> On 2005/01/30, at 22:46, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">e-itoh ＠ ygu.ac.jp</A> wrote:
+</I>&gt;<i> &gt; ということでUnix版のimmパッチに問題があるようなのですが、ちょっと
+</I>&gt;<i> &gt; 中身を覗いてみてもよくわかりませんでした。
+</I>&gt;<i> immパッチの問題ではなく、converterを返すところで文字列を返していました。
+</I>&gt;<i> 添付のチェンジセットを当てると、とりあえず立ち上がるようにはなります。
+</I>　添付のチェンジセットでの動作を確認いたしました。ありがとうございます。
+＃パッチあてたVMでおかしくなったのでパッチのせいと考えてしまいました。
+
+&gt;<i> 日本語入力はうまくいかなかったので、他の問題もあると思います。
+</I>　私のところでも日本語入力するとエラーがでました。
+具体的には、
+1. Shift-Spaceを押す→左下に入力ウィンドウが出る(たぶんanthy-UIMのため)
+2. 適当に入力する。例えば「あいうえお」は問題なく表示される。
+3. Enterを押して確定する
+3の操作の後で、デスクトップ上に直接表示されるエラーとともにデバッグ
+ウィンドウが表れます。
+　デスクトップ上の表示は崩れてしまって見えませんが、デバッグウィンドウ
+では、MessageNotUnderstood: EUCJPTextConverterのエラーとなっています。
+EUCJPTextConverter(Object)&gt;&gt;doesNotUnderstand: #unicodeClass
+EUCJPTextConverter(EUCTextConverter)&gt;&gt;nextFromStream:
+...
+
+&gt;<i> 取り急ぎ。
+</I>  お忙しいところありがとうございました。
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002294.html">[Squeak-ja: 2294] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+</A></li>
+	<LI>次の記事 <A HREF="002296.html">[Squeak-ja: 2296] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2295">[ 日付 ]</a>
+              <a href="thread.html#2295">[ スレッド ]</a>
+              <a href="subject.html#2295">[ 件名 ]</a>
+              <a href="author.html#2295">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

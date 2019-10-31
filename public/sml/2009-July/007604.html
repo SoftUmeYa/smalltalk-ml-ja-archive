@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7604] Re: 第9回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207604%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCORskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A4C5634.8080000%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007596.html">
+   <LINK REL="Next"  HREF="007607.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7604] Re: 第9回Smalltalk勉強会＠京都</H1>
+    <B>Takafumi Saikawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207604%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCORskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A4C5634.8080000%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7604] Re: 第9回Smalltalk勉強会＠京都">tscompor ＠ gmail.com
+       </A><BR>
+    <I>2009年 7月  5日 (日) 17:49:38 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007596.html">[SML 7596] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007607.html">[SML 7607] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7604">[ 日付 ]</a>
+              <a href="thread.html#7604">[ スレッド ]</a>
+              <a href="subject.html#7604">[ 件名 ]</a>
+              <a href="author.html#7604">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>今日は
+
+From: AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;
+Subject: [SML 7584] Re: 第9回Smalltalk勉強会＠京都
+Date: Thu, 02 Jul 2009 15:39:48 +0900
+Message-ID: &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">4A4C5634.8080000 ＠ cc.kyoto-su.ac.jp</A>&gt;
+
+atsushi&gt; | aValue aBlock |
+atsushi&gt; aValue := 2.
+atsushi&gt; aBlock :=
+atsushi&gt;         [| a b c |
+atsushi&gt;         a := b := c := aValue.
+atsushi&gt;         (a * b * c) yourself].
+atsushi&gt; anInspector := Tools.Trippy.InspectorShell new.
+atsushi&gt; ((anInspector class classPool)
+atsushi&gt;     at: #EvaluationPaneWasLastShown put: true;
+atsushi&gt;     at: #SharedTextHolder) value: 'self value'.
+atsushi&gt; anInspector
+atsushi&gt;     open;
+atsushi&gt;     inspect: aBlock
+
+ここの
+a := b := c := aValue.
+というような代入が連なる文を初めて見たのですが、意味としては
+c := aValue.
+b := c.
+a := b.
+と同じなのですよね？
+
+(特に2項の)メッセージ式についての一貫した左結合性を思い出すと、
+aValue =: c =: b =: a.
+と書きたくなります。
+
+
+才川隆文
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007596.html">[SML 7596] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007607.html">[SML 7607] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7604">[ 日付 ]</a>
+              <a href="thread.html#7604">[ スレッド ]</a>
+              <a href="subject.html#7604">[ 件名 ]</a>
+              <a href="author.html#7604">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

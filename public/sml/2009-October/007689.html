@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7689] Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207689%5D%20%3D%3Fiso-2022-jp%3Fb%3FU21hbGx0YWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FIBskQjJdQmobKEIgGyRCIVYbKEJDU1YgdG8gSFRNTBskQiFXJEcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJC0kXiQ3JD8bKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007686.html">
+   <LINK REL="Next"  HREF="007690.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7689] Smalltalk勉強会＠京都 課題 「CSV to HTML」できました</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207689%5D%20%3D%3Fiso-2022-jp%3Fb%3FU21hbGx0YWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FIBskQjJdQmobKEIgGyRCIVYbKEJDU1YgdG8gSFRNTBskQiFXJEcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJC0kXiQ3JD8bKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7689] Smalltalk勉強会＠京都 課題 「CSV to HTML」できました">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2009年 10月 19日 (月) 19:21:38 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007686.html">[SML 7686] 第14回Smalltalk勉強会のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="007690.html">[SML 7690] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7689">[ 日付 ]</a>
+              <a href="thread.html#7689">[ スレッド ]</a>
+              <a href="subject.html#7689">[ 件名 ]</a>
+              <a href="author.html#7689">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+#プログラムとクラスダイアグラム添付して投稿したのですが、40KBの制限に
+引っかかってしまったので、このメールにはプログラムのみを添付して再送いた
+します。後ほどダイアグラムを添付したメールを送らせていただきます。
+
+Smalltalk勉強会＠京都での課題プログラムが一応できましたので、クラスダイ
+アグラムとともにプログラムを添付させていただきました。ご覧いただいて、ご
+指摘などいただけましたら幸いです。私としては、Tableクラスを工夫したつも
+りなんですがどうでしょうか?
+クラスダイアグラムはJunのToolsを使って描きましたが、UMLはあまりよく知ら
+ないので書き方が間違っているかもしれません。
+なお、パッケージ名はTranslatorsになっていますのでFile inされるときには上
+書きにご注意ください。
+
+Tableクラスの概略は以下のとおりです:
+・Tableクラスのtranslateにあるように以下のようにすると、CSVファイから
+index.htmlを生成します。
+	| aTable |
+	aTable := PrimeMinisters.Reader table.
+	PrimeMinisters.Writer table: aTable.
+	^aTable
+・TableクラスにCSVファイルの1行目の項目名一覧をからTableのインスタンスを
+生成しています。
+	Table titles: 項目名一覧の配列
+このとき、項目名に対応させてTableDataのインスタンスを生成しますが、'画像
+'と'在位期間'の項目に対してはそれぞれTableDataのサブクラスである
+TableDataForImageLink,TableDataForPeriodのインスタンスを生成します。
+・Tableのインスタンスに、CSVファイルの2行目以降のデータを追加します。
+	(aTable addDataRecord: 1行分のデータ配列) を各行について繰り返す
+・TableのインスタンスにhtmlRecordsを送ると、HTMLの表本体に含まれるべき
+HTML要素を行ごとにまとめて返します(&lt;tr&gt;タグは含まず)。
+	 aTable htmlRecords
+TableData(もしくは、サブクラスであるTableDataForImageLink,
+TableDataForPeriod)のインスタンスが対応する項目名と項目の値をHTML要素に
+変換しています。
+
+以下の点はもう少し考えたいと思っています:
+・TableとDownloader, Reader, Writerの関係がしっくりしない感じがしています。
+・&lt;img&gt;タグのheightとwidthは固定値を設定してしまっています。(ブラウザ上
+でサムネールが同じ大きさで表示されるようにしているのだと完成版の
+index.htmlを見てかってに思い込んでしまい、プログラムの方をよく見ていませ
+んでした。)
+
+当方の作成環境は以下のとおりです:
+  Ubuntu 9.04(i386版)
+  VisualWorks7.6NC
+  Jun781
+  Jpl023
+
+また、他の方も課題について作成されたプログラムや作成する際の考え方等を投
+稿されるのを楽しみにしています。
+
+-- hirowadenden
+
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: HirowadendenVersionOfPrimeMinisters.st
+型:         text/xml
+サイズ:     27158 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20091019/8753517f/HirowadendenVersionOfPrimeMinisters-0001.xml">http://www.smalltalk.jp/pipermail/sml/attachments/20091019/8753517f/HirowadendenVersionOfPrimeMinisters-0001.xml</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007686.html">[SML 7686] 第14回Smalltalk勉強会のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="007690.html">[SML 7690] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7689">[ 日付 ]</a>
+              <a href="thread.html#7689">[ スレッド ]</a>
+              <a href="subject.html#7689">[ 件名 ]</a>
+              <a href="author.html#7689">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

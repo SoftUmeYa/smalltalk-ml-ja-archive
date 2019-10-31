@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2671] Re: MacOSX Squeak 3.0
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202671%5D%20Re%3A%20MacOSX%20Squeak%203.0&In-Reply-To=20051002140507149944.GyazMail.inoue%40ma.ns.musashi-tech.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002670.html">
+   <LINK REL="Next"  HREF="002672.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2671] Re: MacOSX Squeak 3.0</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202671%5D%20Re%3A%20MacOSX%20Squeak%203.0&In-Reply-To=20051002140507149944.GyazMail.inoue%40ma.ns.musashi-tech.ac.jp"
+       TITLE="[Squeak-ja: 2671] Re: MacOSX Squeak 3.0">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 10月  2日 (日) 20:12:03 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002670.html">[Squeak-ja: 2670] Re: ゲームを使用不可にしたい
+</A></li>
+        <LI>次の記事 <A HREF="002672.html">[Squeak-ja: 2672] Re: MacOSX Squeak 3.0
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2671">[ 日付 ]</a>
+              <a href="thread.html#2671">[ スレッド ]</a>
+              <a href="subject.html#2671">[ 件名 ]</a>
+              <a href="author.html#2671">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>井上さん、こんにちは
+林徹也です。
+
+# 新しい環境へ移行中でちょっと出遅れました。
+# (なんかヘンな変換とか化け文字が出るかもしれません、ご容赦のほど。す 
+でに、ことえりがヘン)
+
+On 2005/10/02, at 14:05, iNOUE Koich! wrote:
+
+&gt;<i> 井上です。
+</I>&gt;<i>
+</I>&gt;<i> 遅ればせながらSqueakNihongo7Mac10.x.x.dmgを試しています。まず自分の 
+</I>&gt;<i> アカ
+</I>&gt;<i> ウントでインストールして、それから子供のアカウントでも使えるようにし 
+</I>&gt;<i> よう
+</I>&gt;<i> として少し悩みました。
+</I>&gt;<i>
+</I>&gt;<i> １）~/Library/Internet Plugin/に
+</I>&gt;<i> ditto -rsrcFork  &quot;$squeakpath/NPSqueakStubCFM&quot; ~/Library/Internet\
+</I>&gt;<i> Plug-Ins/
+</I>&gt;<i> ln -sf &quot;$squeakpath/NPSqueak.bundle&quot; ~/Library/Internet\
+</I>&gt;<i> Plug-Ins/NPSqueak.bundle
+</I>&gt;<i> と作られますが、これは/Library/Internet Plugin/にしてはおけないもので
+</I>&gt;<i> しょうか。複数のユーザが使う場合にそれぞれ別々に用意しなくてすむので 
+</I>&gt;<i> はな
+</I>&gt;<i> いかと思ったのですが、それぞれに必要なのでしょうか？
+</I>
+　おそらく同梱されてるインストールコマンドを拝見してらっしゃるだろうと 
+推測してるのですが…
+どうやら痛し痒しのようです。
+
+　早い話、このコマンドは、あまり井上さんが期待されてる（実は、多くの学 
+校などでも期待している）運用を考えて作られてないように見受けられます。
+
+　このコマンドの挙動としては、アドミ権限を持ったユーザならグローバルに 
+入れて、そうでないならホームの下に入れておこう程度の切り分けになってる 
+ようです。
+
+確かに、ご指摘の通り、NPSqueak.bundle自体はグローバルに一個あれば動く 
+はずです。
+その一方で、各人ごとに、2)のところで説明する作業用の 'My Squeak'フォル 
+ダを作る必要があります。
+
+当面の案としては…
+
+案１）アドミの人が一回インストールして、各ユーザごとに My Squeak ディ 
+レクトリとエイリアスを作って回る
+
+案２）ファイルが重複してインストールされて気持ち悪いですが、各ユーザご 
+とにインストールコマンドを実行する
+
+のどちらかのようです。
+
+# なお、井上さんが抱えてる問題を取り違えていましたらご容赦のうえご指摘 
+ください。
+
+&gt;<i> ２）~/Library/Preferences/Squeakがないと起動時に「○○でゴメンね」が 
+</I>&gt;<i> 出ま
+</I>&gt;<i> すが、ない場合にはこれを自動的に作るようにはできないでしょうか。
+</I>
+　セキュリティモデル（かなり怪しげではありますが）上、SqueakLand版で 
+は、デスクトップに作られるエイリアス 'My Squeak' の中にしかイメージの 
+保存やファイルの操作が出来ないようになっています。
+この 'My Squeak' の実体が、上記のディレクトリの下に設定されてます。
+　実験してないので、はっきり言えなくて恐縮ですが、デスクトップ上に My  
+Squeak のフォルダを作成しても多分、アクセスには実体のフルパスを使って 
+るのでやはり、上記のディレクトリの下にインストール（案２に相当）をする 
+必要があるように思えます。
+
+以上、何かのお役たてれば幸いです。
+
+# 逆にこのあたりをスマートに解決できるインストールのための Shellスクリ 
+プトか Appleスクリプトを作ると JMM さんや多くの人たちが喜ぶと思われま 
+す。
+
+では。
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002670.html">[Squeak-ja: 2670] Re: ゲームを使用不可にしたい
+</A></li>
+	<LI>次の記事 <A HREF="002672.html">[Squeak-ja: 2672] Re: MacOSX Squeak 3.0
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2671">[ 日付 ]</a>
+              <a href="thread.html#2671">[ スレッド ]</a>
+              <a href="subject.html#2671">[ 件名 ]</a>
+              <a href="author.html#2671">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2716] Squeak の文字コードの扱いについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202716%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiROSjg7eiUzGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlSSROMDckJCRLJEQkJCRGGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002715.html">
+   <LINK REL="Next"  HREF="002726.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2716] Squeak の文字コードの扱いについて</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202716%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiROSjg7eiUzGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlSSROMDckJCRLJEQkJCRGGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2716] Squeak の文字コードの扱いについて">tak ＠ metatoys.org
+       </A><BR>
+    <I>2005年 11月  5日 (土) 18:46:00 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002715.html">[Squeak-ja: 2715] HPSSK ワークショップ
+</A></li>
+        <LI>次の記事 <A HREF="002726.html">[Squeak-ja: 2726] Re: Squeak の文字コードの扱いについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2716">[ 日付 ]</a>
+              <a href="thread.html#2716">[ スレッド ]</a>
+              <a href="subject.html#2716">[ 件名 ]</a>
+              <a href="author.html#2716">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>主に大島さんや林さん。
+
+山宮です。もしかして FAQ なのかも知れませんが、
+<A HREF="http://www.kukakuka.jp/squeak/bugs/view.php?id=18">http://www.kukakuka.jp/squeak/bugs/view.php?id=18</A> のバグ(クリップボー
+ドで'×'の文字が使えない)に関して難しい部分があるので教えて頂けません
+でしょうか。
+
+1) WinShiftJISClipboardInterpreter&gt;&gt;toSystemClipboard: の中では 
+   squeakToMac が使われ、 逆に
+   MacShiftJISClipboardInterpreter&gt;&gt;toSystemClipboard: では使われてい
+   ないのですが、MacRoman を使う時の方針はどうなっているのでしょうか。
+
+2) 例えば '×' convertToWithConverter: ShiftJISTextConverter new がき
+   ちんとマルチバイトに変換されない原因として、
+   EncodedCharSet class&gt;&gt;charFromUnicode: の中で意図的に 128-255 の文
+   字を変換していないように見えるのですが、意図を教えてください。
+
+よろしくお願いします。
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002715.html">[Squeak-ja: 2715] HPSSK ワークショップ
+</A></li>
+	<LI>次の記事 <A HREF="002726.html">[Squeak-ja: 2726] Re: Squeak の文字コードの扱いについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2716">[ 日付 ]</a>
+              <a href="thread.html#2716">[ スレッド ]</a>
+              <a href="subject.html#2716">[ 件名 ]</a>
+              <a href="author.html#2716">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

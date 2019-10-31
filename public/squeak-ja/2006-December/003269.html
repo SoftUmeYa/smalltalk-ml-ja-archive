@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3269] Re: squeak 初心者の質問：モーフの指定
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203269%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHNxdWVhayAbJEI9aT80GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPFQkTjxBTGQhJyViITwlVSROO1hEahsoQg%3D%3D%3F%3D&In-Reply-To=p04320447c19d1d50d046%40amateras.ma.ns.musashi-tech.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003272.html">
+   <LINK REL="Next"  HREF="003270.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3269] Re: squeak 初心者の質問：モーフの指定</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203269%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHNxdWVhayAbJEI9aT80GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPFQkTjxBTGQhJyViITwlVSROO1hEahsoQg%3D%3D%3F%3D&In-Reply-To=p04320447c19d1d50d046%40amateras.ma.ns.musashi-tech.ac.jp"
+       TITLE="[Squeak-ja: 3269] Re: squeak 初心者の質問：モーフの指定">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2006年 12月  7日 (木) 18:53:13 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003272.html">[Squeak-ja: 3272] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+        <LI>次の記事 <A HREF="003270.html">[Squeak-ja: 3270] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3269">[ 日付 ]</a>
+              <a href="thread.html#3269">[ スレッド ]</a>
+              <a href="subject.html#3269">[ 件名 ]</a>
+              <a href="author.html#3269">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>井上さん、こんばんは。
+林です。
+
+On 2006/12/07, at 11:09, iNOUE Koich! wrote:
+
+&gt;<i> ワールドに出した場合、他のものはゴミ箱行きにならないのですが、星と曲線
+</I>&gt;<i> と多角形は何度やってもゴミ箱直行です。たまにゴミ箱の中からも消えている
+</I>&gt;<i> ことがあります。
+</I>
+　バージョンが古いと、強制的にゴミ箱に行ってしまうことがあるようです。
+　ワールドメニューの「ヘルプ...」から「サーバーからアップデートを取得」で
+パッチをあてた場合、どうでしょう？
+
+&gt;<i> これは変数名だったのですね。もう少し初心者の質問をよろしいでしょうか。
+</I>&gt;<i> 変数というものはオブジェクトではない、squeakプログラムの構成要素の一つ
+</I>&gt;<i> だと認識しているのですが、そこに代入されるオブジェクトそのものを直接に
+</I>&gt;<i> 指定する（リテラルとして）ことはできないのでしょうか。普通の数だとか文
+</I>&gt;<i> 字列だとか配列だとかにはリテラル表現がありますが、もしかしてシンボルと
+</I>&gt;<i> いうものがそれなのでしょうか？
+</I>&gt;<i> a星811が星のモーフを代入した変数名だとすると、Workspaceがモーフのドロ
+</I>&gt;<i> ップを受けたときにそれを自動生成してくれたということですよね？この手段
+</I>&gt;<i> 以外で星のモーフをプログラム内で指定することはできるのだろうかというの
+</I>&gt;<i> が質問の趣旨です。
+</I>
+　私よりも旨く正確に説明出来る方がほかにいらっしゃると思いますが(^^;;
+
+　結論としては、リテラルのように指定する方法は残念ながら無いと思います。
+（言語仕様を拡張して、分散オブジェクトのIDみたいなものを導入すれば出来る
+のかもしれませんが、結構負担も大きそうです）
+
+　ワールドの中からモーフを探し出す方法としては、モーフは、Morphic のフレ
+ームワークで実現されてますので、その仕組みを利用します。
+例えばモーフ／サブモーフの関係とモーフの持つ名前を利用して検索する方法が
+あるかと思います（ここでいう名前は普段ハロなどで表示されているモーフの名前
+です）。
+	star := ActiveWorld submorphNamed: '星'
+とかです。
+# もっといいやり方もありそうですが…ほかの方お願いします。
+# これって結構、私も悩むところだったりします(^^;;
+
+
+&gt;<i> それから、ActiveWorldやSmalltalkはグローバル変数だそうですが、
+</I>&gt;<i> Transcriptもそうなのでしょうか。trueやfalseやnilは変数じゃなくてオブジ
+</I>&gt;<i> ェクトそのものなのですよね？
+</I>
+Transcript もグローバル変数です。
+選択してインスペクトするとオブジェクトがバインドされてるか分かります。
+
+true や false や nil についてですけど、変数というものが中身が入れ替え
+可能なものという定義であるならば、変数ではないということになるかと思います。
+書き換えができませんので。
+でも、それぞれインスペクトするとオブジェクトを見ることができます。
+
+　個人的には、乱暴な言い方をしますと上記のtrueや偽変数や変数、それにクラ
+ス名など全部ひっくるめて「変数のようなもの」（オブジェクトがぶら下がって
+いるもの＝ひもつきのラベル）と捉えてます。
+
+こう見ると、Smalltalkの構文は
+    「変数のようなもの（オブジェクトがぶら下がってる）」＋「メッセージ」 
+とシンプルになります。
+逆にメッセージ以外はすべて「変数のようなもの」ということでもいいのかもし
+れません（実際はリテラルがありますが限定されてますし）。
+
+例えば、クラス名もグローバル変数だったりします。
+
+&gt;<i> いろいろありました。ありがとうございます。googleのトップに出てきたペー
+</I>&gt;<i> ジではグローバル変数の一種と書かれていましたが、Workspaceのインスタン
+</I>&gt;<i> ス変数であると書かれているページもありちょっと混乱します。もしかして、
+</I>&gt;<i> プログラムの中で使う変数というものはどれも何らかのオブジェクトのインス
+</I>&gt;<i> タンス変数になるのでしょうか？
+</I>
+Workspace のインスタンス変数というのは、おそらくクラスWorkspace に
+定義された bindings のことだと思います。これは『ワークスペース変数の
+仕組み』を実現しているものです。このインスタンス変数には連想配列のオブジ
+ェクト(Dictionary)がぶら下がってます。
+ワークスペースで式を実行すると、式の中で出現したワークスペース変数名を
+キー（添字）にして、そのワークスペース変数に代入（バインド）されたオブ
+ジェクトが、この連想配列に登録されていきます。
+
+	キー		値
+	#a星2142   -&gt; {星のオブジェクト}
+	#a四角形233  -&gt; {四角形のオブジェクト}
+	#a楕円1482  -&gt; {楕円のオブジェクト}
+	...
+
+という感じです。
+次の実行時には、式の中の変数名でこの連想配列を辞書引きして、その連想値で
+あるオブジェクトに置き換えてるということですね。こうすると変数として機能
+する見えるという仕掛けです。
+また、bindings は Workspace のインスタンス変数なので、一枚一枚のワークス
+ペース(Workspaceのインスタンス）ごとに別なオブジェクトになりますので、必
+然的にスコープはワークスペースごととなります。ですのでグローバル変数ほど
+スコープは広くはないです。
+
+Smalltalk はそれ自身で言語が実装されてますので、変数の内、グローバル変数
+なども同じように連想配列オブジェクト(辞書)を使って実現してたりします。
+この辺りの実現方式の話が言語仕様と絡むとわやくちゃになってしまうのですが。
+（ブートストラップといいましょうか、メビウスの輪といいましょうか）
+
+&gt;<i> このML以外に初心者質問用の場所がないようでしたら、今後もちょびちょび質
+</I>&gt;<i> 問させていただこうと思いますのでよろしくお願いします。
+</I>
+こちらこそよろしくお願いします。
+他の言語系のMLに比べればまだまだおとなしめかと思いますし…。
+
+--
+林 徹也 Tetsuya HAYASHI 
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003272.html">[Squeak-ja: 3272] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+	<LI>次の記事 <A HREF="003270.html">[Squeak-ja: 3270] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3269">[ 日付 ]</a>
+              <a href="thread.html#3269">[ スレッド ]</a>
+              <a href="subject.html#3269">[ 件名 ]</a>
+              <a href="author.html#3269">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

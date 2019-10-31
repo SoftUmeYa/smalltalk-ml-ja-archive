@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4323] Re: ScratchからMYUロボを制御
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204323%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2gbJEIkKyRpGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FTVlVGyRCJW0lXCRyQCk4ZhsoQg%3D%3D%3F%3D&In-Reply-To=e3642c180909020432n19b1bbb0p7b98da6a3526b0e5%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004322.html">
+   <LINK REL="Next"  HREF="004328.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4323] Re: ScratchからMYUロボを制御</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204323%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2gbJEIkKyRpGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FTVlVGyRCJW0lXCRyQCk4ZhsoQg%3D%3D%3F%3D&In-Reply-To=e3642c180909020432n19b1bbb0p7b98da6a3526b0e5%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4323] Re: ScratchからMYUロボを制御">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2009年 9月  4日 (金) 13:08:37 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004322.html">[Squeak-ja: 4322] Re: ScratchからMYUロボを制御
+</A></li>
+        <LI>次の記事 <A HREF="004328.html">[Squeak-ja: 4328] Re: ScratchからMYUロボを制御
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4323">[ 日付 ]</a>
+              <a href="thread.html#4323">[ スレッド ]</a>
+              <a href="subject.html#4323">[ 件名 ]</a>
+              <a href="author.html#4323">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+お役に立てて何よりです。本番で試されるときはぜひお声掛けください。
+
+Linuxのジョイスティックについて、Mantisによるとリクエストはあがっているものの、まだ対応されていないようです。
+
+0005650: No Joystick support on Unix machines
+<A HREF="http://bugs.squeak.org/view.php?id=5650">http://bugs.squeak.org/view.php?id=5650</A>
+
+ところで、韓国のDonghee Parkさんが、RtoysというEtoysからMYUロボを制御するソフトを作っています。
+<A HREF="http://www.squeaksource.com/@KEtaAA8Q_xu82fHu/VpWO32Tt">http://www.squeaksource.com/@KEtaAA8Q_xu82fHu/VpWO32Tt</A>
+
+ちょっと使ってみましたが、少しの変更でLinuxでもいけそうです。自律モードも使えるところが私のより優れています。
+# これって横川さんのSqueak+Gainerを使ってますよね?
+
+プリインストールイメージはこちら。
+<A HREF="http://squeak.kr/data/donghee/etoysformyurobo.zip">http://squeak.kr/data/donghee/etoysformyurobo.zip</A>
+
+スクリーンショット。
+<A HREF="http://squeak.kr/data/donghee/EtoysForMYUROBO.PNG">http://squeak.kr/data/donghee/EtoysForMYUROBO.PNG</A>
+
+これを使ったワークショップも開かれています。
+<A HREF="http://picasaweb.google.com/JangGoons/095#">http://picasaweb.google.com/JangGoons/095#</A>
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2009年9月2日20:32 Yoshito Housako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt;:
+&gt;<i> 宝迫です。
+</I>&gt;<i>
+</I>&gt;<i> 阿部さんのおかげで楽しい実践ができそうで、大変感謝しております。
+</I>&gt;<i>
+</I>&gt;<i> Ubuntu9.04に「joystick」というプログラムを入れたり、それに関連していそうなライブラリなどもインストールして、Ubuntu自体がジョイスティックを認識するところまではできましたが、いろいろやってもScratchでは、うまくいきません。
+</I>&gt;<i> ＃ジョイスティックが接続されている場所は、「/dev/input/js0」でした。
+</I>&gt;<i>
+</I>&gt;<i> 別のゲームでは、ジョイスティックで操作できる（といっても方向がトンチンカンだったりします...）ものもあるのですが...。KNOPPIX6.0.1でもジョイスティックまでは使えていません。
+</I>&gt;<i>
+</I>&gt;<i> 2009年8月30日15:28 Kazuhiro ABE &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt;:
+</I>&gt;&gt;<i> こんにちは、阿部です。
+</I>&gt;&gt;<i> 夏休みも終わりが近づいてきましたが、ScratchSource
+</I>&gt;&gt;<i> 1.3.1を使って、ミュウスタジオのMYUロボを制御できるようにしてみました。二軸のMYU-503と三軸のMYU-507に対応しています。
+</I>&gt;&gt;<i> <A HREF="http://www.studiomyu.com/">http://www.studiomyu.com/</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 合わせて、ジョイスティックも使えるようになります。必要なファイルは以下に置きました。
+</I>&gt;&gt;<i> <A HREF="http://squeakland.jp/abee/tmp/ScratchMyuRobo.zip">http://squeakland.jp/abee/tmp/ScratchMyuRobo.zip</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> これをScratchをインストールしたディレクトリに展開し、Scratch.imageの代わりにScratchMyuRobo.imageを使ってください。追加したブロックはステージの「動き」カテゴリにまとめてあります。言語メニューから「日本語(MYUロボ)」を選択すると日本語表示になります。使い方はProjectsの中のサンプルをご覧ください。ポート番号は、お使いのプラットホームや環境で異なるので、調べて置き換えてください。
+</I>&gt;&gt;<i> MYUロボの機能のうち、使えるのはリモコンモードだけです。したがって、自律モードでは動かすことができず、常にシリアルケーブルでつないだ状態で、Scratchのスクリプトから制御することになります。
+</I>&gt;&gt;<i> 動作確認はWindows XP SP3とUbuntu
+</I>&gt;&gt;<i> 9.04、KNOPPIX6.0.1で取れています(寶迫さん、ありがとうございます)。ただし、Linuxでジョイスティックは使えないかもしれません。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> では、お楽しみください。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>  //abee
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --------------------------------------------------------
+</I>&gt;<i>  寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+</I>&gt;<i>  みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+</I>&gt;<i>  指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+</I>&gt;<i>  全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+</I>&gt;<i>  つれづれなるままに...：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</I>&gt;<i>
+</I></PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004322.html">[Squeak-ja: 4322] Re: ScratchからMYUロボを制御
+</A></li>
+	<LI>次の記事 <A HREF="004328.html">[Squeak-ja: 4328] Re: ScratchからMYUロボを制御
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4323">[ 日付 ]</a>
+              <a href="thread.html#4323">[ スレッド ]</a>
+              <a href="subject.html#4323">[ 件名 ]</a>
+              <a href="author.html#4323">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

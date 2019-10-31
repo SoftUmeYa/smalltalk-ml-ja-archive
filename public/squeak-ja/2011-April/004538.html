@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4538] Re: 第31回Smalltalk勉強会のお知らせ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204538%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIzMRskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxJE4kKkNOJGkkOxsoQg%3D%3D%3F%3D&In-Reply-To=%3C4DB8A592.6000802%40sra.co.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004539.html">
+   <LINK REL="Next"  HREF="004521.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4538] Re: 第31回Smalltalk勉強会のお知らせ</H1>
+    <B>Tomohiro Oda</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204538%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIzMRskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxJE4kKkNOJGkkOxsoQg%3D%3D%3F%3D&In-Reply-To=%3C4DB8A592.6000802%40sra.co.jp%3E"
+       TITLE="[Squeak-ja: 4538] Re: 第31回Smalltalk勉強会のお知らせ">tomohiro ＠ sra.co.jp
+       </A><BR>
+    <I>2011年 4月 28日 (木) 08:24:02 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004539.html">[Squeak-ja: 4539] Re: 第31回Smalltalk勉強会のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="004521.html">[Squeak-ja: 4521]	Seaside3.xについてご質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4538">[ 日付 ]</a>
+              <a href="thread.html#4538">[ スレッド ]</a>
+              <a href="subject.html#4538">[ 件名 ]</a>
+              <a href="author.html#4538">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは。
+昨晩のSmalltalk勉強会でお世話になりました、おだです。
+
+下記メールを送ったつもりでしたが、配送されていないようなので
+再送します。もし重なっていたら、すみません。
+
+HandMorphの位置を変更する件についてですが、
+
+aHandMorph showTemporaryCursor: aForm.
+として、*Cursorのインスタンスでない* Formを指定してあげると、
+ソフトウェアカーソルを使うようになります。
+＃ Cursorのインスタンスだと、ハードウェアにビットマップを渡して
+＃ 直接描画させます。
+そして、
+aHandMorph position: aPoint
+とすると、HandMorphの位置がaPointに移動します。
+
+しかし、これは単にMorphの位置が変化しただけで、
+マウスを動かすと、aPointではなく元の位置を基準にして動きます。
+マウスを動かさずにクリックしても、元の位置でイベントが発生します。
+
+まとめると、
+HandMorphのpositionを一時的に変更することはできますが、
+OSが管理しているマウスカーソルの位置には反映されず、
+マウスを動かしたりクリックしても、HandMorphに渡した位置は
+マウスの動きに影響を与えることはない、
+という振舞いのようです。
+---
+おだ
+
+(2011年04月18日 10:06), Masashi Umezawa wrote:
+&gt;<i> &gt; こんにちは
+</I>&gt;<i> &gt; 梅澤です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 定例のSmalltalk勉強会のお知らせです。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 日時: 2011/4/27(水) 19:00-21:00 (2時間)
+</I>&gt;<i> &gt; 場所: シンコム・システムズ・ジャパン株式会社
+</I>&gt;<i> &gt; テキスト:
+</I>&gt;<i> &gt;   「自由自在Squeakプログラミング」
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 詳しくは下記をどうぞ。
+</I>&gt;<i> &gt; <A HREF="http://www.smalltalk-users.jp/Home/gao-zhi/dai31kaismalltalkbenkyoukai">http://www.smalltalk-users.jp/Home/gao-zhi/dai31kaismalltalkbenkyoukai</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 今回のテーマは「Morphicチュートリアル」です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; MVCに取って代わってSqueakの標準UIフレームワークとなったMorphicですが、
+</I>&gt;<i> &gt; 実のところどうなのか、その光と闇についてのお話が聞けることでしょう。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 参加表明は特に必要ありません。ふらりとお越しください。
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004539.html">[Squeak-ja: 4539] Re: 第31回Smalltalk勉強会のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="004521.html">[Squeak-ja: 4521]	Seaside3.xについてご質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4538">[ 日付 ]</a>
+              <a href="thread.html#4538">[ スレッド ]</a>
+              <a href="subject.html#4538">[ 件名 ]</a>
+              <a href="author.html#4538">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

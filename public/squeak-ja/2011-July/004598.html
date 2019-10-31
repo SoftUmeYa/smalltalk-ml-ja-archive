@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4598]	Scratch + Arduinoいろいろ試してます
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204598%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCArIEFyZHVpbm8bJEIkJCRtJCQkbTtuJDcbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYkXiQ5GyhC%3F%3D&In-Reply-To=%3CCADog4RwAjHjTqabZTs%3D74uSZqC4F3E1f0-W%2B8AiWDx_ouOvabA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004597.html">
+   <LINK REL="Next"  HREF="004599.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4598]	Scratch + Arduinoいろいろ試してます</H1>
+    <B>Toshiyuki Kamada</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204598%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCArIEFyZHVpbm8bJEIkJCRtJCQkbTtuJDcbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYkXiQ5GyhC%3F%3D&In-Reply-To=%3CCADog4RwAjHjTqabZTs%3D74uSZqC4F3E1f0-W%2B8AiWDx_ouOvabA%40mail.gmail.com%3E"
+       TITLE="[Squeak-ja: 4598]	Scratch + Arduinoいろいろ試してます">tkamada ＠ gmail.com
+       </A><BR>
+    <I>2011年 7月 21日 (木) 17:32:35 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004597.html">[Squeak-ja: 4597]	第34回Smalltalk勉強会のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="004599.html">[Squeak-ja: 4599] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4598">[ 日付 ]</a>
+              <a href="thread.html#4598">[ スレッド ]</a>
+              <a href="subject.html#4598">[ 件名 ]</a>
+              <a href="author.html#4598">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>鎌田と申します。
+
+Squeakのリストに対して、Scratchの話題で恐縮です。阿部さんに直接お話できる場所がここぐらいかと思い、参加させていただきました。
+
+Scratch + Arduinoで、横川さん＋阿部さんのScratchBoard+WeDo互換拡張を触っていて、blog
+
+<A HREF="http://tkamada.blogspot.com/">http://tkamada.blogspot.com/</A>
+
+に、拙いことを書いています。
+
+モーター制御で、サーボモーターを追加しようと思い、ArduinoのServo標準オブジェクトを使えばArduino側はなんとかなる見込みが立ったのですが、Scratch側をどうしようということで、Smalltalkのブラウザを開いてコードを追いかけています。
+
+そこで、コードを見ていると、#(84 254 xx
+xx)というバイト列をScratchは送信しているように思うのですが、Arduino側では最後の1バイトだけを見ているように見えます。
+
+また、モータ番号として1〜6が設定されるようなのですが、このあたりをうまく受け取ってサーボモーター番号決め打ちみたいなhackができるのかどうか、といったあたりも含めてお伺いしたくメールさせていただいている次第です。
+
+ただ、モータ番号を指定するブロック（Morph）はありませんので、現在の実装がどうなっているのか、変更するならどのあたりか、といったことを若干ご示唆いただければと思っております。
+
+Smalltalkは学部のとき少しDolphin Machineでいじった程度ですが、そのうちなんとかなるだろうと思っています。
+
+ぶしつけな質問で申し訳ありませんが、どうかよろしくお願いいたします。
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004597.html">[Squeak-ja: 4597]	第34回Smalltalk勉強会のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="004599.html">[Squeak-ja: 4599] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4598">[ 日付 ]</a>
+              <a href="thread.html#4598">[ スレッド ]</a>
+              <a href="subject.html#4598">[ 件名 ]</a>
+              <a href="author.html#4598">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,1545 @@
+From umejava ＠ mars.dti.ne.jp  Thu May  1 09:04:47 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jun  3 18:59:30 2008
+Subject: [Squeak-ja: 3866] Re: 5/3-4にします was: 4/30-5/1にswikis.ddo.jpと、blueplane.jpのメンテナンス
+In-Reply-To: <2d5d52a80804300519n6274e70bhac50e8c1d8c8cad3@mail.gmail.com>
+References: <JC200804281041344.491796@mars.dti.ne.jp>
+	<JY200804302100466.18110046@mars.dti.ne.jp>
+	<2d5d52a80804300519n6274e70bhac50e8c1d8c8cad3@mail.gmail.com>
+Message-ID: <JP200805010904433.1172265@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+"Kazuhiro ABE" <abee@squeakland.jp> wrote:
+> こんにちは。阿部です。
+> 
+> 正確に何時からか分からないのですが、SuperSwiki2が落ちているようです。
+> 
+> Cannot Connect
+> Connection failed by DeleGate on `superswiki2.blueplane.jp:80'
+> Tried from the client 202.171.145.123.static.zoot.jp:59578 to the
+> server http://192.168.1.8:9090.
+> 
+> Connection to the port on the server host is refused.
+> Are you sure that the server port number is correct?
+> If so, the server may be down now (temporarily)...
+> 
+> てっきりこのメンテナンスのためかと思っていました。
+> よろしくお願いします。
+
+ご報告ありがとうございます。さきほど復活しました。
+
+原因はよくわからないですが、アクセス解析を見るに最近はSuperSwiki2の
+人気が一番あるのですよね(robotも含め)
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Fri May  2 11:18:34 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jun  3 19:01:45 2008
+Subject: [Squeak-ja: 3867] SuperSwik2壊れていました was: Re: 5/3-4にします
+In-Reply-To: <JP200805010904433.1172265@mars.dti.ne.jp>
+References: <JC200804281041344.491796@mars.dti.ne.jp>
+	<JY200804302100466.18110046@mars.dti.ne.jp>
+	<2d5d52a80804300519n6274e70bhac50e8c1d8c8cad3@mail.gmail.com>
+	<JP200805010904433.1172265@mars.dti.ne.jp>
+Message-ID: <JR200805021118275.10141265@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+どうやら4/30近辺にDBが壊れていた模様です。
+動作が不安定なので4/26日のデータに戻しました。
+
+その間のデータは失われてしまいましたので、お手数ですが再アップなどを
+お願いします。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> "Kazuhiro ABE" <abee@squeakland.jp> wrote:
+> > こんにちは。阿部です。
+> > 
+> > 正確に何時からか分からないのですが、SuperSwiki2が落ちているようです。
+> > 
+> > Cannot Connect
+> > Connection failed by DeleGate on `superswiki2.blueplane.jp:80'
+> > Tried from the client 202.171.145.123.static.zoot.jp:59578 to the
+> > server http://192.168.1.8:9090.
+> > 
+> > Connection to the port on the server host is refused.
+> > Are you sure that the server port number is correct?
+> > If so, the server may be down now (temporarily)...
+> > 
+> > てっきりこのメンテナンスのためかと思っていました。
+> > よろしくお願いします。
+> 
+> ご報告ありがとうございます。さきほど復活しました。
+> 
+> 原因はよくわからないですが、アクセス解析を見るに最近はSuperSwiki2の
+> 人気が一番あるのですよね(robotも含め)
+> 
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Sat May  3 15:30:19 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jun  3 19:03:21 2008
+Subject: [Squeak-ja: 3868] swikis.ddo.jpと、blueplane.jpのメンテナンス終了しました
+In-Reply-To: <JY200804302100466.18110046@mars.dti.ne.jp>
+References: <JC200804281041344.491796@mars.dti.ne.jp>
+	<JY200804302100466.18110046@mars.dti.ne.jp>
+Message-ID: <JU200805031530134.16210359@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ただいまディスク換装を終え、サービス再会しました。
+
+何か問題等ありましたら、お知らせください。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> すみません。体制が整わないため、メンテナンス作業を5/3-4に延期します。
+> 
+> ご迷惑をおかけしますが、ご了承ください。
+> 
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> > こんにちは
+> > 梅澤です。
+> > 
+> > 4/30-5/1にかけて、サーバのメンテナンス作業をする予定です。
+> > 
+> > 期間中はswikis.ddo.jpおよび、blueplane.jpでのサービスが一時的に
+> > 使えなくなります。(SuperSwiki2やプロジェクト置き場、SqueakSourceJなど)
+> > 
+> > 基本的にバックアップはこちらで取りますが、万一のことを考えて心配という
+> > 方は、ダウンロードしておくなどの対策をお取り下さい。
+> > 
+> > それでは。
+> > ---
+
+---
+[:masashi | ^umezawa]
+From tsurui ＠ med.juntendo.ac.jp  Sat May 10 13:38:23 2008
+From: tsurui ＠ med.juntendo.ac.jp (Hiromichi Tsurui)
+Date: Tue Jun  3 19:16:34 2008
+Subject: [Squeak-ja: 3869] Object特異的な情報を含むメッセージの発信について
+Message-ID: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+
+Object Aからobject BへAに関する情報を含むメッセージを送り、その情報に基づいてBがある変化をする、というような場合、どのように記述するべきでしょうか？Object特異的な情報を含むメッセージをそのObjectから発信する方法についてです。何冊かの本を読んだのですがはっきり触れていませんでした。２００４年１２月末から２００５年１月に掛けてのKondo Fumito, Kazuhiro ABE, Takashi 
+Yamamiyaさんたちの議論はこの問題に関するものだと思うのですが、殆んど文字化けしていて読めませんでした。あるいは、Smalltalkにはこのような機能はないのでしょうか？
+
+鶴井　博理
+Hiromichi Tsurui MD, PhD
+Dept. Pathology,
+Juntendo University
+Phone:81-3-5802-1039
+Fax:81-3-3813-3164
+tsurui@med.juntendo.ac.jp 
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080510/8c53a67e/attachment-0001.html
+From abee ＠ squeakland.jp  Sat May 10 14:20:16 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 19:16:35 2008
+Subject: [Squeak-ja: 3870] Re: Object特異的な情報を含むメッセージの発信について
+In-Reply-To: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+Message-ID: <2d5d52a80805092219v7d6a5100xdeae5b8c1e198b71@mail.gmail.com>
+
+こんにちは、阿部です。
+ここでいう「Bがある変化をする」とは、単にBの属性値が変化するだけでなく、Aの情報をもとにBの振る舞いが変わるという解釈でよいでしょうか。
+また、オブジェクト特異的ということなので、Bのみが変化するのであって、Bが属するクラスおよびそのインスタンスは変化しないということですね。
+そのような場合、Squeak Smalltalkのインスタンスに、assureUniClassメッセージを送ることでインスタンス特異的クラスを得ることができます。このクラスに特異的メソッドを追加するには、compile:classified:を送ります。このとき、compile:の引数はソースコードの文字列、classified:の引数は任意のメソッドカテゴリ(プロトコル)の文字列です。したがって、このソースコードにAの情報を含めれば目的は達すると思われます。
+詳しくは以下の鷲見さんの解説を参照してください。
+http://d.hatena.ne.jp/sumim/20060420/p1
+
+なお、2004年末の議論は、マルチエージェントの扱いに関するもので、今回の話とは直接関係ないと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+08/05/10 に Hiromichi Tsurui<tsurui@med.juntendo.ac.jp> さんは書きました:
+>
+> Object Aからobject
+> BへAに関する情報を含むメッセージを送り、その情報に基づいてBがある変化をする、というような場合、どのように記述するべきでしょうか？Object特異的な情報を含むメッセージをそのObjectから発信する方法についてです。何冊かの本を読んだのですがはっきり触れていませんでした。２００４年１２月末から２００５年１月に掛けてのKondo
+> Fumito, Kazuhiro ABE, Takashi
+> Yamamiyaさんたちの議論はこの問題に関するものだと思うのですが、殆んど文字化けしていて読めませんでした。あるいは、Smalltalkにはこのような機能はないのでしょうか？
+>
+> 鶴井　博理
+> Hiromichi Tsurui MD, PhD
+> Dept. Pathology,
+> Juntendo University
+> Phone:81-3-5802-1039
+> Fax:81-3-3813-3164
+> tsurui@med.juntendo.ac.jp
+From tak ＠ metatoys.org  Sat May 10 15:28:52 2008
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Tue Jun  3 19:16:36 2008
+Subject: [Squeak-ja: 3871] Re: Object特異的な情報を含むメッセージの発信について
+In-Reply-To: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+Message-ID: <48254081.5040905@metatoys.org>
+
+山宮です。
+
+Hiromichi Tsurui wrote:
+> Object Aからobject BへAに関する情報を含むメッセージを送り、その情報に基 
+> づいてBがある変化をする、というような場合、どのように記述するべきでしょ 
+> うか？Object特異的な情報を含むメッセージをそのObjectから発信する方法につ 
+> いてです。何冊かの本を読んだのですがはっきり触れていませんでした。 
+
+「メッセージ」や、「Object特異的」と言った言葉は、一般で使われる意味と
+Smalltalk 言語の文脈の使われ方が違う時がありますので、
+Object A, B やメッセージの具体例を挙げて頂くか、背景にある問題を教えて
+頂ければお話が分かりやすくなると思います。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+From tsurui ＠ med.juntendo.ac.jp  Sat May 10 20:05:57 2008
+From: tsurui ＠ med.juntendo.ac.jp (Hiromichi Tsurui)
+Date: Tue Jun  3 19:16:48 2008
+Subject: [Squeak-ja: 3872] Re: Object特異的な情報を含むメッセージの発信について
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+	<48254081.5040905@metatoys.org>
+Message-ID: <002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+
+
+阿部さん、山宮さん、早速のお返事ありがとうございます。
+
+例として、月と地球の運動をシミュレートすることを考えています。それぞれは、インスタンス変数として、質量、現在位置及び現在の速度を持つとします。月は、現在の地球の位置と質量（これは一回伝達されれば十分ですが）の情報が得られると、自身の質量、位置、速度から微小時間後の位置、速度が求まります。地球に関しても同じことです。この微小時間のメッセージのやり取り繰りを返すことにより有限時間での両者の動きをシミュレートしたいと考えているわけです。端的に言って、地球がその質量及び位置を月へ、月がその質量及び位置を地球へ直接に伝達する方法はないのでしょうか、という質問です。assureUniClass, compile: classified:を用いますと、（まだ十分把握できてい 
+ないのですが）、間に介在するものが、月の位置を月から聞き出して地球に教え、地球の位置を地球から聞き出しつきに教える、という形になるような気がいたします。より一般的には、Object間で直接情報のやり取りをする方法はあるのでしょうか、ということになります。
+
+
+
+鶴井
+
+
+
+> 山宮です。
+>
+> Hiromichi Tsurui wrote:
+>> Object Aからobject BへAに関する情報を含むメッセージを送り、その情報に基
+>> づいてBがある変化をする、というような場合、どのように記述するべきでしょ
+>> うか？Object特異的な情報を含むメッセージをそのObjectから発信する方法につ
+>> いてです。何冊かの本を読んだのですがはっきり触れていませんでした。
+>
+> 「メッセージ」や、「Object特異的」と言った言葉は、一般で使われる意味と
+> Smalltalk 言語の文脈の使われ方が違う時がありますので、
+> Object A, B やメッセージの具体例を挙げて頂くか、背景にある問題を教えて
+> 頂ければお話が分かりやすくなると思います。
+>
+> -- 
+> Takashi Yamamiya := http://metatoys.org/
+
+
+
+> こんにちは、阿部です。
+> ここでいう「Bがある変化をする」とは、単にBの属性値が変化するだけでなく、Aの情報をもとにBの振る舞いが変わるという解釈でよいでしょうか。
+> また、オブジェクト特異的ということなので、Bのみが変化するのであって、Bが属するクラスおよびそのインスタンスは変化しないということですね。
+> そのような場合、Squeak Smalltalkのインスタンスに、assureUniClassメッセージを送ることでインスタンス特異的クラスを得ることができます。このクラスに特異的メソッドを追加するには、compile:classified:を送ります。このとき、compile:の引数はソースコードの文字列、classified:の引数は任意のメソッドカテゴリ(プロトコル)の文字列です。したがって、このソースコードにAの情報を含めれば目的は達すると思われます。
+> 詳しくは以下の鷲見さんの解説を参照してください。
+> http://d.hatena.ne.jp/sumim/20060420/p1
+>
+> なお、2004年末の議論は、マルチエージェントの扱いに関するもので、今回の話とは直接関係ないと思います。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 08/05/10 に Hiromichi Tsurui<tsurui@med.juntendo.ac.jp> さんは書きました:
+>>
+>> Object Aからobject
+>> BへAに関する情報を含むメッセージを送り、その情報に基づいてBがある変化をする、というような場合、どのように記述するべきでしょうか？Object特異的な情報を含むメッセージをそのObjectから発信する方法についてです。何冊かの本を読んだのですがはっきり触れていませんでした。２００４年１２月末から２００５年１月に掛けてのKondo
+>> Fumito, Kazuhiro ABE, Takashi
+>> Yamamiyaさんたちの議論はこの問題に関するものだと思うのですが、殆んど文字化けしていて読めませんでした。あるいは、Smalltalkにはこのような機能はないのでしょうか？
+
+
+From abee ＠ squeakland.jp  Sat May 10 20:41:16 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 19:16:49 2008
+Subject: [Squeak-ja: 3873] Re: Object特異的な情報を含むメッセージの発信について
+In-Reply-To: <002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+	<48254081.5040905@metatoys.org>
+	<002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+Message-ID: <2d5d52a80805100441s3e51960ctefb5248ab1cbef22@mail.gmail.com>
+
+こんにちは、阿部です。
+そういうことでしたら、単にメッセージの引数として必要なオブジェクトを渡してやればよいように思います。
+
+月 位置と速度を計算する: 地球.
+
+のような感じです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+08/05/10 に Hiromichi Tsurui<tsurui@med.juntendo.ac.jp> さんは書きました:
+>
+> 阿部さん、山宮さん、早速のお返事ありがとうございます。
+>
+> 例として、月と地球の運動をシミュレートすることを考えています。それぞれは、インスタンス変数として、質量、現在位置及び現在の速度を持つとします。月は、現在の地球の位置と質量（これは一回伝達されれば十分ですが）の情報が得られると、自身の質量、位置、速度から微小時間後の位置、速度が求まります。地球に関しても同じことです。この微小時間のメッセージのやり取り繰りを返すことにより有限時間での両者の動きをシミュレートしたいと考えているわけです。端的に言って、地球がその質量及び位置を月へ、月がその質量及び位置を地球へ直接に伝達する方法はないのでしょうか、という質問です。assureUniClass,
+> compile: classified:を用いますと、（まだ十分把握できてい
+> ないのですが）、間に介在するものが、月の位置を月から聞き出して地球に教え、地球の位置を地球から聞き出しつきに教える、という形になるような気がいたします。より一般的には、Object間で直接情報のやり取りをする方法はあるのでしょうか、ということになります。
+>
+>
+>
+> 鶴井
+From yoshiki ＠ vpri.org  Sun May 11 01:07:19 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Jun  3 19:16:49 2008
+Subject: [Squeak-ja: 3874] Re: Object特異的な情報を含むメッセージの発信について
+In-Reply-To: <002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+	<48254081.5040905@metatoys.org>
+	<002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+Message-ID: <umymy16uf.wl%yoshiki@vpri.org>
+
+  鶴井さん
+
+> 例として、月と地球の運動をシミュレートすることを考えています。それぞれは、インスタンス変数として、質量、現在位置及び現在の速度を持つとします。月は、現在の地球の位置と質量（これは一回伝達されれば十分ですが）の情報が得られると、自身の質量、位置、速度から微小時間後の位置、速度が求まります。地球に関しても同じことです。この微小時間のメッセージのやり取り繰りを返すことにより有限時間での両者の動きをシミュレートしたいと考えているわけです。端的に言って、地球がその質量及び位置を月へ、月がその質量及び位置を地球へ直接に伝達する方法はないのでしょうか、という質問です。assureUniClass, compile: classified:を用いますと、（まだ十分把握できてい 
+> ないのですが）、間に介在するものが、月の位置を月から聞き出して地球に教え、地球の位置を地球から聞き出しつきに教える、という形になるような気がいたします。より一般的には、Object間で直接情報のやり取りをする方法はあるのでしょうか、ということになります。
+
+  オブジェクト間のやりとりというものは、すべて「メッセージ」という概念
+で抽象化されていますが、メッセージには「引数」を付けて送ることができ、
+メッセージ送信者自身を現す"self"を含め、送信者が「知っている」(送信者
+が参照可能である)任意のオブジェクト、またはそれらを含む任意の式を引数
+とすることができます。というわけで、阿部さんの言うように一般的には
+
+	b message: self.
+
+というメッセージをaが実行すれば良いことになります。
+
+  が、重力のシミュレーションのときはもう少し工夫が必要でしょうね。
+
+月   位置と速度を計算する: 地球.
+地球 位置と速度を計算する: 月.
+
+という二つの式を順番に実行するとしたとき、最初の式を実行した時点で月の
+位置と速度が時刻tにおけるものでなくt+dにおけるものになってしまった場合、
+下の式で地球の位置が間違ったものになってしまいます。また、いずれ3体以
+上のものをシミュレートしたくなるのが人情ですので、存在する質点のリスト
+を管理する「仲介者」のようなオブジェクトを用意して、それぞれの質点の一
+ステップ前の値を覚えておくか、それぞれのオブジェクトが新しい値と古い値
+の両方を持てるようにすることが考えられます。
+
+  さらには重力の伝播速度を考
+慮したくなると、メッセージの引数のひとつに時間を指定できるようにしたく
+なったりするかもしれません。その場合質点オブジェクトに時刻tにおける位
+置を返す
+
+  positionAtTimeT: t
+
+のようなメソッドを定義して、内部で以前の位置を(補完して返す)ということ
+になるでしょうか。(もちろん3体以上の問題では物理的に正確なシミュレーショ
+ンは不可能ですが、それでも楽しければよいですし、それなりに良い結果を得
+ることはできると思います。)
+
+  Squeak/Smalltalk側のことに関しては、梅澤さんの書かれた本、「自由自在
+Squeakプログラミング」などを参考にすると良いのではないかと思います。
+
+  (思うに、これはEtoysでやりたいという話ではなく、Smalltalkで、という
+ことで良かったのですよね。)
+
+-- Yoshiki
+From tsurui ＠ med.juntendo.ac.jp  Sun May 11 18:38:16 2008
+From: tsurui ＠ med.juntendo.ac.jp (Hiromichi Tsurui)
+Date: Tue Jun  3 19:17:42 2008
+Subject: [Squeak-ja: 3875] Re: Object特異的な情報を含むメッセージの発信について
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37><48254081.5040905@metatoys.org><002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+	<2d5d52a80805100441s3e51960ctefb5248ab1cbef22@mail.gmail.com>
+Message-ID: <002e01c8b34b$51054c80$4da415ca@hbyori2c37>
+
+
+阿部さん、何時もながら迅速な応答をありがとうございます。
+メッセージが引数として受信側と同じクラスのものを送れるとは思いも拠りませんでした。
+このような扱いが可能でしたら、object間の極めて複雑な相互作用も扱える、ということですね。
+早速トライしてみます。
+
+> こんにちは、阿部です。
+> そういうことでしたら、単にメッセージの引数として必要なオブジェクトを渡してやればよいように思います。
+>
+> 月 位置と速度を計算する: 地球.
+>
+> のような感じです。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 08/05/10 に Hiromichi Tsurui<tsurui@med.juntendo.ac.jp> さんは書きました:
+>>
+>> 阿部さん、山宮さん、早速のお返事ありがとうございます。
+>>
+>> 例として、月と地球の運動をシミュレートすることを考えています。それぞれは、インスタンス変数として、質量、現在位置及び現在の速度を持つとします。月は、現在の地球の位置と質量（これは一回伝達されれば十分ですが）の情報が得られると、自身の質量、位置、速度から微小時間後の位置、速度が求まります。地球に関しても同じことです。この微小時間のメッセージのやり取り繰りを返すことにより有限時間での両者の動きをシミュレートしたいと考えているわけです。端的に言って、地球がその質量及び位置を月へ、月がその質量及び位置を地球へ直接に伝達する方法はないのでしょうか、という質問です。assureUniClass,
+>> compile: classified:を用いますと、（まだ十分把握できてい
+>> ないのですが）、間に介在するものが、月の位置を月から聞き出して地球に教え、地球の位置を地球から聞き出しつきに教える、という形になるような気がいたします。より一般的には、Object間で直接情報のやり取りをする方法はあるのでしょうか、ということになります。
+>>
+>>
+>>
+>> 鶴井
+> 
+
+
+From tsurui ＠ med.juntendo.ac.jp  Sun May 11 19:00:56 2008
+From: tsurui ＠ med.juntendo.ac.jp (Hiromichi Tsurui)
+Date: Tue Jun  3 19:17:43 2008
+Subject: [Squeak-ja: 3876]  Re: Object特異的な情報を含むメッセージの発信について
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37><48254081.5040905@metatoys.org><002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+	<umymy16uf.wl%yoshiki@vpri.org>
+Message-ID: <003401c8b34e$7c232c40$4da415ca@hbyori2c37>
+
+Yoshikiさん
+
+懇切なお返事ありがとうございます。
+
+>  オブジェクト間のやりとりというものは、すべて「メッセージ」という概念
+> で抽象化されていますが、メッセージには「引数」を付けて送ることができ、
+> メッセージ送信者自身を現す"self"を含め、送信者が「知っている」(送信者
+> が参照可能である)任意のオブジェクト、またはそれらを含む任意の式を引数
+> とすることができます。というわけで、阿部さんの言うように一般的には
+>
+> b message: self.
+>
+> というメッセージをaが実行すれば良いことになります。
+この場合、送信者ａを指定するにはどうすれば宜しいですか？
+送信者は暗黙にプログラマーだけかと思っていました。GUIでのevent handlingで予め用意されている場合以外は。
+
+>  が、重力のシミュレーションのときはもう少し工夫が必要でしょうね。
+>
+> 月   位置と速度を計算する: 地球.
+> 地球 位置と速度を計算する: 月.
+>
+> という二つの式を順番に実行するとしたとき、最初の式を実行した時点で月の
+> 位置と速度が時刻tにおけるものでなくt+dにおけるものになってしまった場合、
+> 下の式で地球の位置が間違ったものになってしまいます。また、いずれ3体以
+> 上のものをシミュレートしたくなるのが人情ですので、存在する質点のリスト
+> を管理する「仲介者」のようなオブジェクトを用意して、それぞれの質点の一
+> ステップ前の値を覚えておくか、それぞれのオブジェクトが新しい値と古い値
+> の両方を持てるようにすることが考えられます。
+おっしゃるとおりです。
+
+>  さらには重力の伝播速度を考
+> 慮したくなると、メッセージの引数のひとつに時間を指定できるようにしたく
+> なったりするかもしれません。その場合質点オブジェクトに時刻tにおける位
+> 置を返す
+>
+>  positionAtTimeT: t
+>
+> のようなメソッドを定義して、内部で以前の位置を(補完して返す)ということ
+> になるでしょうか。(もちろん3体以上の問題では物理的に正確なシミュレーショ
+> ンは不可能ですが、それでも楽しければよいですし、それなりに良い結果を得
+> ることはできると思います。)
+そこまでは考えが及びませんでした。
+
+
+>  Squeak/Smalltalk側のことに関しては、梅澤さんの書かれた本、「自由自在
+> Squeakプログラミング」などを参考にすると良いのではないかと思います。
+今、読ませていただいています。
+
+
+>  (思うに、これはEtoysでやりたいという話ではなく、Smalltalkで、という
+> ことで良かったのですよね。)
+
+VisualWorksでJunを動かしています。
+鶴井 
+
+
+From abee ＠ squeakland.jp  Sun May 11 21:11:21 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 19:17:43 2008
+Subject: [Squeak-ja: 3877] Re: Object特異的な情報を含むメッセージの発信について
+In-Reply-To: <002e01c8b34b$51054c80$4da415ca@hbyori2c37>
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+	<48254081.5040905@metatoys.org>
+	<002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+	<2d5d52a80805100441s3e51960ctefb5248ab1cbef22@mail.gmail.com>
+	<002e01c8b34b$51054c80$4da415ca@hbyori2c37>
+Message-ID: <2d5d52a80805110511t682b575bs7d62a32f2296fa5f@mail.gmail.com>
+
+こんにちは、阿部です。
+Smallralkの場合、メッセージを受け取るレシーバも、送るセンダも、その引数もすべてオブジェクトであり、それが特定のクラスに属す必要があるなどの制約はありません。
+もし、引数にレシーバと同じクラスのインスタンスが使えないとなると、3 +
+4も計算できないことになります(3と4はいずれもSmallIntegerのインスタンス。3がレシーバで+
+4がメッセージ。+がメッセージセレクタで、4がその引数。センダはコンテキストに依存。もしワークスペースでdo
+itしたならnil。レシーバは受け取ったメッセージのセレクタにマッチするメソッドを探索して実行します)。
+もしかすると、Smalltalk(とそのオブジェクト指向)の考え方に関して、すこしずれがあるのかもしれません。たとえば、青木淳さんの「オブジェクト指向システム分析設計入門」や「Smalltalkイディオム」をお読みになることをお勧めします。これらの本は絶版ですが、幸いなことにWebで全文が公開されています。
+
+http://www.sra.co.jp/people/aoki/IntroductionToOOAOOD/index.htm
+http://www.sra.co.jp/people/aoki/SmalltalkIdioms/index.htm
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+08/05/11 に Hiromichi Tsurui<tsurui@med.juntendo.ac.jp> さんは書きました:
+> 阿部さん、何時もながら迅速な応答をありがとうございます。
+> メッセージが引数として受信側と同じクラスのものを送れるとは思いも拠りませんでした。
+> このような扱いが可能でしたら、object間の極めて複雑な相互作用も扱える、ということですね。
+> 早速トライしてみます。
+From tsurui ＠ med.juntendo.ac.jp  Mon May 12 08:47:12 2008
+From: tsurui ＠ med.juntendo.ac.jp (Hiromichi Tsurui)
+Date: Tue Jun  3 19:18:49 2008
+Subject: [Squeak-ja: 3878] Re: Object特異的な情報を含むメッセージの発信について
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37><48254081.5040905@metatoys.org><002d01c8b28e$65111e60$4da415ca@hbyori2c37><2d5d52a80805100441s3e51960ctefb5248ab1cbef22@mail.gmail.com><002e01c8b34b$51054c80$4da415ca@hbyori2c37>
+	<2d5d52a80805110511t682b575bs7d62a32f2296fa5f@mail.gmail.com>
+Message-ID: <000701c8b3c1$e8eaa150$4da415ca@hbyori2c37>
+
+阿部さん
+　
+何時もながら迅速にして適切なな応答をありがとうございます。
+「Smalltalkイディオム」は読み始めたところです。「オブジェクト指向システム分析設計入門」は以前読もうとしてややハードルが高く感じたのですが、おいおい目を通すようにします。
+
+鶴井
+
+
+> こんにちは、阿部です。
+> Smallralkの場合、メッセージを受け取るレシーバも、送るセンダも、その引数もすべてオブジェクトであり、それが特定のクラスに属す必要があるなどの制約はありません。
+> もし、引数にレシーバと同じクラスのインスタンスが使えないとなると、3 +
+> 4も計算できないことになります(3と4はいずれもSmallIntegerのインスタンス。3がレシーバで+
+> 4がメッセージ。+がメッセージセレクタで、4がその引数。センダはコンテキストに依存。もしワークスペースでdo
+> itしたならnil。レシーバは受け取ったメッセージのセレクタにマッチするメソッドを探索して実行します)。
+> もしかすると、Smalltalk(とそのオブジェクト指向)の考え方に関して、すこしずれがあるのかもしれません。たとえば、青木淳さんの「オブジェクト指向システム分析設計入門」や「Smalltalkイディオム」をお読みになることをお勧めします。これらの本は絶版ですが、幸いなことにWebで全文が公開されています。
+>
+> http://www.sra.co.jp/people/aoki/IntroductionToOOAOOD/index.htm
+> http://www.sra.co.jp/people/aoki/SmalltalkIdioms/index.htm
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 08/05/11 に Hiromichi Tsurui<tsurui@med.juntendo.ac.jp> さんは書きました:
+>> 阿部さん、何時もながら迅速な応答をありがとうございます。
+>> メッセージが引数として受信側と同じクラスのものを送れるとは思いも拠りませんでした。
+>> このような扱いが可能でしたら、object間の極めて複雑な相互作用も扱える、ということですね。
+>> 早速トライしてみます。
+> 
+
+
+From yoshiki ＠ vpri.org  Tue May 13 02:49:15 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Jun  3 19:20:07 2008
+Subject: [Squeak-ja: 3879] Re: Object特異的な情報を含むメッセージの発信について
+In-Reply-To: <003401c8b34e$7c232c40$4da415ca@hbyori2c37>
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37>
+	<48254081.5040905@metatoys.org>
+	<002d01c8b28e$65111e60$4da415ca@hbyori2c37>
+	<umymy16uf.wl%yoshiki@vpri.org>
+	<003401c8b34e$7c232c40$4da415ca@hbyori2c37>
+Message-ID: <ud4nr1ki1.wl%yoshiki@vpri.org>
+
+  鶴井さん
+
+> >  オブジェクト間のやりとりというものは、すべて「メッセージ」という概念
+> > で抽象化されていますが、メッセージには「引数」を付けて送ることができ、
+> > メッセージ送信者自身を現す"self"を含め、送信者が「知っている」(送信者
+> > が参照可能である)任意のオブジェクト、またはそれらを含む任意の式を引数
+> > とすることができます。というわけで、阿部さんの言うように一般的には
+> >
+> > b message: self.
+> >
+> > というメッセージをaが実行すれば良いことになります。
+> この場合、送信者ａを指定するにはどうすれば宜しいですか？
+> 送信者は暗黙にプログラマーだけかと思っていました。GUIでのevent handlingで予め用意されている場合以外は。
+
+  あるメソッドの中でaという変数にあるオブジェクトが束縛されているなら、
+
+  b message: a
+
+と書けばよいということでしょうか。
+
+  (私の書いたのは微妙に間違いがあって、「送信者を現すself」と書いたの
+は話をややこしくしたかもしれません。厳密に言えば「送信者」は「メソッド
+を実行しているコンテキスト」ということになりますので。ただ、その辺は今
+はあまり気にする必要はないと思われます。)
+
+  例えばWorkspaceとTranscriptを開き(VisualWorksならデフォルトですで
+に開かれていると思いますが)、Workspaceのほうに
+
+  Transcript show: 'abc'.
+
+と書いてdo it したり、
+
+  Transcript show: 3 printString.
+
+と書いてdo it したり、
+
+  | a b |
+  a := 'abc'.
+  b := 'def'.
+  Transcript show: a.
+  Transcript space.
+  Transcript show: b.
+  Transcript space.
+  Transcript show: a, b.
+
+という8行を書いてそれを選択してdo it してみてください。aやbやそれを演
+算した結果をTranscriptオブジェクトへのメッセージ送信に付加できることが
+わかるかと思います。
+
+-- Yoshiki
+From tsurui ＠ med.juntendo.ac.jp  Tue May 13 09:38:18 2008
+From: tsurui ＠ med.juntendo.ac.jp (Hiromichi Tsurui)
+Date: Tue Jun  3 19:21:10 2008
+Subject: [Squeak-ja: 3880] Re: Object特異的な情報を含むメッセージの発信について
+References: <000d01c8b258$3ccb1ef0$4da415ca@hbyori2c37><48254081.5040905@metatoys.org><002d01c8b28e$65111e60$4da415ca@hbyori2c37><umymy16uf.wl%yoshiki@vpri.org><003401c8b34e$7c232c40$4da415ca@hbyori2c37>
+	<ud4nr1ki1.wl%yoshiki@vpri.org>
+Message-ID: <004d01c8b492$378b2570$4da415ca@hbyori2c37>
+
+
+Yoshikiさん
+
+懇切なお返事ありがとうございます。
+メッセージの引数としてobjectをとれ、その結果object間で極めて一般的な情報のやり取りができることがわかりました。
+このことを年頭におきますと、プログラムの記述が見通しが良く簡潔になることが納得できます。
+
+鶴井
+
+
+
+>  鶴井さん
+>
+>> >  オブジェクト間のやりとりというものは、すべて「メッセージ」という概念
+>> > で抽象化されていますが、メッセージには「引数」を付けて送ることができ、
+>> > メッセージ送信者自身を現す"self"を含め、送信者が「知っている」(送信者
+>> > が参照可能である)任意のオブジェクト、またはそれらを含む任意の式を引数
+>> > とすることができます。というわけで、阿部さんの言うように一般的には
+>> >
+>> > b message: self.
+>> >
+>> > というメッセージをaが実行すれば良いことになります。
+>> この場合、送信者ａを指定するにはどうすれば宜しいですか？
+>> 送信者は暗黙にプログラマーだけかと思っていました。GUIでのevent handlingで予め用意されている場合以外は。
+>
+>  あるメソッドの中でaという変数にあるオブジェクトが束縛されているなら、
+>
+>  b message: a
+>
+> と書けばよいということでしょうか。
+>
+>  (私の書いたのは微妙に間違いがあって、「送信者を現すself」と書いたの
+> は話をややこしくしたかもしれません。厳密に言えば「送信者」は「メソッド
+> を実行しているコンテキスト」ということになりますので。ただ、その辺は今
+> はあまり気にする必要はないと思われます。)
+>
+>  例えばWorkspaceとTranscriptを開き(VisualWorksならデフォルトですで
+> に開かれていると思いますが)、Workspaceのほうに
+>
+>  Transcript show: 'abc'.
+>
+> と書いてdo it したり、
+>
+>  Transcript show: 3 printString.
+>
+> と書いてdo it したり、
+>
+>  | a b |
+>  a := 'abc'.
+>  b := 'def'.
+>  Transcript show: a.
+>  Transcript space.
+>  Transcript show: b.
+>  Transcript space.
+>  Transcript show: a, b.
+>
+> という8行を書いてそれを選択してdo it してみてください。aやbやそれを演
+> 算した結果をTranscriptオブジェクトへのメッセージ送信に付加できることが
+> わかるかと思います。
+>
+> -- Yoshiki
+> 
+
+
+From mutoh ＠ openedu.org  Sun May 18 19:52:44 2008
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Tue Jun  3 19:27:53 2008
+Subject: [Squeak-ja: 3881] ことだま on Squeakの本
+Message-ID: <AB60ECC0-5404-43B1-9EB2-9D13DC459662@openedu.org>
+
+むとう＠おうちです。
+
+ごぶさたしてます。
+
+なんか、情報基礎と技術家庭を担当することになったので、そのうち 
+Etoysでもやろうかなぁと思っております。
+また、みなさん、いろいろ教えてください。
+# というか、もっと他に大変な所はあったりするのですが…
+
+
+で、本題です。
+amazonさんにお薦めされて気がついたのですが、以下のような本が 
+出ているのですね。
+- ことだま on Squeakで学ぶ論理思考とプログラミング
+- 大岩元監修, 松澤芳昭・杉浦学編著
+- ISBN: 978-4-904013-01-4
+- 950円+税
+
+慶応SFCなどの教科書として使われてきたものらしいです。
+
+
+で、また余談。
+Computer Science Unpluggedな方向も面白いかなと思って、一緒に本を買ってたら、出版社 
+(http://www.etext.jp/)が一緒でびっくりしました。
+まだ、この2冊しか出していないようですが、教育関係では面 
+白そうな出版社ですね。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080518/f4651c74/attachment-0001.html
+From manabu ＠ sfc.keio.ac.jp  Mon May 19 19:14:17 2008
+From: manabu ＠ sfc.keio.ac.jp (Manabu Sugiura)
+Date: Tue Jun  3 19:28:05 2008
+Subject: [Squeak-ja: 3882] Re: ことだま on Squeakの本
+In-Reply-To: <200805190300.m4J30K03012921@mail.sfc.keio.ac.jp>
+References: <200805190300.m4J30K03012921@mail.sfc.keio.ac.jp>
+Message-ID: <20080519185225.986A.8CDE0663@sfc.keio.ac.jp>
+
+慶應義塾大学 大岩研究室の杉浦（ことだま on Squeak開発チーム）です．
+
+> amazonさんにお薦めされて気がついたのですが、以下のような本が 
+> 出ているのですね。
+> - ことだま on Squeakで学ぶ論理思考とプログラミング
+> - 大岩元監修, 松澤芳昭・杉浦学編著
+> - ISBN: 978-4-904013-01-4
+> - 950円+税
+
+とくにSqueak-jaでは宣伝をしていませんでしたが，上記の書籍が今年の4月に出
+版されました．武藤様，ご紹介ありがとうございます．
+
+http://amazon.co.jp/dp/4904013018
+
+現在も，慶應SFCでは文系学生向けのプログラミングの入門コースの前半に利用
+しています（文系といえども，大学生でSqueakだけでは．．．ということで，後
+半はJavaを利用しています．まだ詳細な分析をしてはいませんが，Squeakから入
+ると，スムーズに授業が進むような感触はあります．）
+
+「論理思考とプログラミング」の授業ページ：
+http://lms.crew.sfc.keio.ac.jp/course/view.php?id=52
+
+> 慶応SFCなどの教科書として使われてきたものらしいです。
+
+執筆関係者が担当した授業が多いですが，（前の版も含めた）利用実績は以下の
+とおりです．
+
+■大学
+帝京平成大学「コンピュータ基礎」（2008年度 春学期〜）
+慶應義塾大学 SFC 「論理思考とプログラミング」（2007年度 春学期〜）
+関西大学 文学部 「アルゴリズムとプログラミング」（2007年度〜）
+獨協大学 「コンピュータ入門」岡田（2006年度 秋学期〜）
+慶應義塾大学 SFC 「情報技術ワークショップ」（2004年度 秋学期〜2006年度 秋学期）
+千葉商科大学 政策情報学部 「プログラミングC（I，II）」（2004年度 秋学期〜）
+千葉商科大学 商経学部 「プログラミングI，II」（2003年度 秋学期〜）
+
+■高校
+学習院高等科 「情報I，II」杉浦（2005年度 一学期〜）
+
+■中学
+藤沢市立 村岡中学校「選択授業」（2006年度 一，二学期）
+藤沢市立 村岡中学校「総合の時間」（2005年度 一学期）
+
+> Computer Science Unpluggedな方向も面白いかなと思って、一緒に本を買ってたら、出版社 
+> (http://www.etext.jp/)が一緒でびっくりしました。
+> まだ、この2冊しか出していないようですが、教育関係では面 
+> 白そうな出版社ですね。
+
+イーテキスト研究所の原様に大岩先生がお願いして，出版が実現しました．
+原様には定価を押さえるために色々と努力していただきました．
+
+ネットからPDFバージョンもダウンロードできる（「論理思考とプログラミング」の授業ページ
+からできます）ので，本はあまり売れないという状況ではありますが，
+是非手にとっていただけると幸いです．
+
+失礼致します．
+
+-- 
+Manabu Sugiura <manabu@sfc.keio.ac.jp>
+
+From hayasaka ＠ pluto.dti.ne.jp  Tue May 20 13:22:50 2008
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Tue Jun  3 19:29:32 2008
+Subject: [Squeak-ja: 3883] プログラミングの後半コースについて
+References: <200805200300.m4K30djx007668@pop.pluto.dti.ne.jp>
+Message-ID: <000301c8ba31$2a6783d0$020ba8c0@computer>
+
+　ネパールの子ども達のIT教育支援を行なっている早坂吉昭です。
+
+　慶應義塾大学 大岩研究室の杉浦（ことだま on Squeak開発チーム）様の
+
+> 現在も，慶應SFCでは文系学生向けのプログラミングの入門コースの前半に利用
+> しています（文系といえども，大学生でSqueakだけでは．．．ということで，後
+> 半はJavaを利用しています．まだ詳細な分析をしてはいませんが，Squeakから入
+> ると，スムーズに授業が進むような感触はあります．）
+
+と書かれていますが、Squeakを学んだ後は、Javaを学ばせるのが良いのか、
+Smalltalkに進ませた方が良いのか迷っています。
+最終目的にもよると思いますが、JavaはWebアプリケーションでつまずき、
+Ruby on Railsに押されています。
+　SmalltalKは、SeaSideというWebアプリケーションを開発中ですが、
+SmalltalkもSeaSideもどちらも良い日本語解説書がないのが難点です。
+ご意見頂けるとありがたいです。
+
+早坂　吉昭
+
+From takeda.toshiyuki ＠ gmail.com  Tue May 20 15:10:55 2008
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Tue Jun  3 19:29:33 2008
+Subject: [Squeak-ja: 3884] Re: プログラミングの後半コースについて
+In-Reply-To: <000301c8ba31$2a6783d0$020ba8c0@computer>
+References: <200805200300.m4K30djx007668@pop.pluto.dti.ne.jp>
+	<000301c8ba31$2a6783d0$020ba8c0@computer>
+Message-ID: <6544a1da0805192310n28ff9cep9a0656d974218b32@mail.gmail.com>
+
+On 5/20/08, 早坂　吉昭 <hayasaka@pluto.dti.ne.jp> wrote:
+
+> 最終目的にもよると思いますが、JavaはWebアプリケーションでつまずき、
+> Ruby on Railsに押されています。
+
+＃Ruby on Railsは宣伝上手なので過大評価しがちなのと、
+＃JavaはWebアプリでつまづいていないと思う、ってことは置いておいて、
+
+私も日夜悩んでいるところではありますが、この「最終目的」が重要なんじゃないでしょうか。
+
+就職に直結する職業教育か、教養か、研究者養成か、などでかなり違うと思います。
+
+たとえば、Webアプリの職業訓練だとすると、PHP、Perl、ASPなども候補でしょう。
+JavaScriptを教えておられる方も大勢いらっしゃいます。
+
+経験的にはRuby、Pythonは比較的敷居が低いです。
+
+ただし、それにEtoysで学んだことが役に立つかどうかは、カリキュラムの
+作り方にもよりますが、なかなかむずかしいです。（まだ検証した人も
+いないと思います）
+
+Smalltalkの本については、梅澤さんの本をマスターすれば、かなりのレベルに
+なれますので、いかがでしょうか。
+
+
+武田俊之
+From takeda.toshiyuki ＠ gmail.com  Tue May 20 15:12:57 2008
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Tue Jun  3 19:29:33 2008
+Subject: [Squeak-ja: 3885] Re: プログラミングの後半コースについて
+In-Reply-To: <000301c8ba31$2a6783d0$020ba8c0@computer>
+References: <200805200300.m4K30djx007668@pop.pluto.dti.ne.jp>
+	<000301c8ba31$2a6783d0$020ba8c0@computer>
+Message-ID: <6544a1da0805192312k69851ea9k7c49858aad225f9a@mail.gmail.com>
+
+On 5/20/08, 早坂　吉昭 <hayasaka@pluto.dti.ne.jp> wrote:
+
+> 最終目的にもよると思いますが、JavaはWebアプリケーションでつまずき、
+> Ruby on Railsに押されています。
+
+＃Ruby on Railsは宣伝上手なので過大評価しがちなのと、
+＃JavaはWebアプリでつまづいていないと思う、ってことは置いておいて、
+
+私も日夜悩んでいるところではありますが、この「最終目的」が重要なんじゃないでしょうか。
+
+就職に直結する職業教育か、教養か、研究者養成か、などでかなり違うと思います。
+
+たとえば、Webアプリの職業訓練だとすると、PHP、Perl、ASPなども候補でしょう。
+JavaScriptを教えておられる方も大勢いらっしゃいます。
+
+経験的にはRuby、Pythonは比較的敷居が低いです。
+
+ただし、それにEtoysで学んだことが役に立つかどうかは、カリキュラムの
+作り方にもよりますが、なかなかむずかしいです。（まだ検証した人も
+いないと思います）
+
+Smalltalkの本については、梅澤さんの本をマスターすれば、かなりのレベルに
+なれますので、いかがでしょうか。
+
+
+武田俊之
+From umejava ＠ mars.dti.ne.jp  Tue May 20 17:19:41 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jun  3 19:29:34 2008
+Subject: [Squeak-ja: 3886] Re: プログラミングの後半コースについて
+In-Reply-To: <000301c8ba31$2a6783d0$020ba8c0@computer>
+References: <200805200300.m4K30djx007668@pop.pluto.dti.ne.jp>
+	<000301c8ba31$2a6783d0$020ba8c0@computer>
+Message-ID: <JA200805201719415.3845875@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+早坂　吉昭 <hayasaka@pluto.dti.ne.jp> wrote:
+> 　ネパールの子ども達のIT教育支援を行なっている早坂吉昭です。
+> 
+> 　慶應義塾大学 大岩研究室の杉浦（ことだま on Squeak開発チーム）様の
+> 
+> > 現在も，慶應SFCでは文系学生向けのプログラミングの入門コースの前半に利用
+> > しています（文系といえども，大学生でSqueakだけでは．．．ということで，後
+> > 半はJavaを利用しています．まだ詳細な分析をしてはいませんが，Squeakから入
+> > ると，スムーズに授業が進むような感触はあります．）
+> 
+> と書かれていますが、Squeakを学んだ後は、Javaを学ばせるのが良いのか、
+> Smalltalkに進ませた方が良いのか迷っています。
+> 最終目的にもよると思いますが、JavaはWebアプリケーションでつまずき、
+> Ruby on Railsに押されています。
+> 　SmalltalKは、SeaSideというWebアプリケーションを開発中ですが、
+> SmalltalkもSeaSideもどちらも良い日本語解説書がないのが難点です。
+> ご意見頂けるとありがたいです。
+> 
+
+Seasideに関してはシンコムのチュートリアルが参考になるのではないでしょうか。
+http://smalltalk.cincom.jp/scripts/smalltalk.dll/tutorials/vw7.6/seaside/seaside_intro.ssp
+
+前提となっているSmalltalk実装系はSqueakでなくVisualWorksですが、読み替えは
+可能でしょう。
+
+また、もう少し先になりますが、オージス総研「オブジェクトの広場」にて、Seaside
+の解説記事の連載予定があります。(私が執筆します)
+http://www.ogis-ri.co.jp/otc/hiroba/
+
+
+ただし最も重要なのは、武田さんのメールにもありましたように、「何のために」
+ということなのだと思います。
+
+Railsを使えば、確かになんとなくWebアプリケーションを作ることはできます。
+開発者にとっては非常に実用的ではありますが、それによって何を学べているのか
+ということが、学習の場においては重要と思います。
+
+Railsに限らずJavaのフレームワークもSmalltalkのフレームワーク(Seaside)も
+Webならではの変な約束事に満ちています。派手で見栄えはするかもしれませんが、
+テキストによるプログラミングの基礎を学ぶという観点からは、不要なノイズが
+たくさん入ってしまっているものかもしれません。
+
+サーバ側であればSQL、クライアント側であればJavaScriptあたりが、フィード
+バックもすぐに得られ、ある程度実用的で関心も出てきやすいのではないか、
+と個人的には思います。(書籍の類もたくさんありますし、処理系もフリーです)
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From manabu ＠ sfc.keio.ac.jp  Tue May 20 22:34:59 2008
+From: manabu ＠ sfc.keio.ac.jp (Manabu Sugiura)
+Date: Tue Jun  3 19:29:57 2008
+Subject: [Squeak-ja: 3887] Re: プログラミングの後半コースについて
+In-Reply-To: <JA200805201719415.3845875@mars.dti.ne.jp>
+References: <000301c8ba31$2a6783d0$020ba8c0@computer>
+	<JA200805201719415.3845875@mars.dti.ne.jp>
+Message-ID: <20080520221143.E8D5.8CDE0663@sfc.keio.ac.jp>
+
+慶應大学 大岩研の杉浦です．
+
+> と書かれていますが、Squeakを学んだ後は、Javaを学ばせるのが良いのか、
+> Smalltalkに進ませた方が良いのか迷っています。
+
+Javaを選択した理由は幾つかあります．
+# 私個人としては，Smalltalkでもいいかなと思っています．
+# 高校生相手に挑戦してみたいと思っています．
+
+> ただし最も重要なのは、武田さんのメールにもありましたように、「何のために」
+> ということなのだと思います。
+
+大岩研のメンバーもMLは読んでいると思うので，何か勘違いや補足があれば，指
+摘してください．
+
+ご紹介した授業「論理思考とプログラミング」に関しては，職業プログラマの育
+成を目的にしたものではありません．ですから，採用する言語としては，少し乱
+暴な言い方ですが「JavaでもSmalltalkでもよかった」と考えています．
+
+当初，後半はJavaだけではなく，日本語プログラミング言語「言霊」も学習し，
+その後にJavaを学習する予定でしたが，「言霊」の処理系の実装に関する問題が
+発生したこと，半期で3つの言語を学ぶのは少し時間的にきついということで，
+SqueakとJavaに落ち着きました．
+
+ことだま on Squeakのタイルスクリプティングだけではなく，テキストによるプ
+ログラミングを経験すること．また，同時に，基礎的なプログラミングの概念を
+学習（ことだま on Squeakで学習したことの復習）しつつ，論理的に考える訓練
+をするということを目的に授業を展開しています．
+「論理思考とプログラミング」は文系クラスですが，理系クラスの入門科目では
+最初から最後までC言語で授業をしています．
+
+Java選択の他の理由として，
+
+・同じ研究室の松澤さんが作成してあった，Javaの拡張タートルフレームワーク
+があったので，Squeakと同じようなことがJavaで簡単に実現できる（ある程度イ
+ンパクトのある画面を出せるが，煩雑な記述をすることは避けられる）
+
+・300人近くの学生を複数の非常勤講師で分担するので，あまりマイナーな環境
+で授業をしてくれとは言いにくい
+
+という点もあります．
+
+# 少しSqueak-jaからは話がそれるのですが，前半は日本語プログラミング言語#
+# 「言霊」，後半は「Java」で授業をしたクラスもありました．
+# http://web.sfc.keio.ac.jp/~minohara/lecture/logical07/
+
+
+あまり答えになっていないとは思いますが，梅澤さんの，
+
+> Railsを使えば、確かになんとなくWebアプリケーションを作ることはできます。
+> 開発者にとっては非常に実用的ではありますが、それによって何を学べているのか
+> ということが、学習の場においては重要と思います。
+
+に（私個人としては）賛成です．
+
+失礼致します．
+
+-- 
+Manabu Sugiura <manabu@sfc.keio.ac.jp>
+
+From hayasaka ＠ pluto.dti.ne.jp  Wed May 21 14:51:47 2008
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Tue Jun  3 19:30:53 2008
+Subject: [Squeak-ja: 3888] ご意見ありがとうございました。
+References: <200805210300.m4L30rwj004587@pop.pluto.dti.ne.jp>
+Message-ID: <000701c8bb06$c1c85a30$020ba8c0@computer>
+
+早坂です。
+
+　いろいろと皆さんに物議を醸してしまい、申し訳ありませんでした。
+皆さんのご意見は大変参考になりました。
+
+　私の「最終目的」と書いたのは、「用途により」と書いた方が
+正しかったかなと思います。
+Javaは、企業業務などのエンタープライズ分野で成功しています
+（ネパールのIT開発会社もJavaで開発しています）が、
+WebアプリケーションのサーバーサイドJavaは、仕様が煩雑で
+素人の私は、挫折していました。
+
+　梅澤さんが、Seasideが解説記事を書いて頂けるとのことで
+期待してお待ちしています。
+> また、もう少し先になりますが、オージス総研「オブジェクトの広場」にて、Seaside
+> の解説記事の連載予定があります。(私が執筆します)
+> http://www.ogis-ri.co.jp/otc/hiroba/
+
+　Webアプリケーションは、大きな応用分野ですので、Squeakを学んだ子ども達が、
+将来「職業的目的」のために、スムーズにSqueak→SmallTalk→Seasideに進めれば
+良いなと考えています。　ありがとうございました。
+
+早坂　吉昭
+
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Tue, 20 May 2008 13:22:50 +0900
+> From: 早坂　吉昭 <hayasaka@pluto.dti.ne.jp>
+> Subject: [Squeak-ja: 3883] プログラミングの後半コースについて
+> To: <squeak-ja@smalltalk.jp>
+> Message-ID: <000301c8ba31$2a6783d0$020ba8c0@computer>
+> Content-Type: text/plain; format=flowed; charset="iso-2022-jp";
+> reply-type=original
+>
+> 　ネパールの子ども達のIT教育支援を行なっている早坂吉昭です。
+>
+> 　慶應義塾大学 大岩研究室の杉浦（ことだま on Squeak開発チーム）様の
+>
+>> 現在も，慶應SFCでは文系学生向けのプログラミングの入門コースの前半に利用
+>> しています（文系といえども，大学生でSqueakだけでは．．．ということで，後
+>> 半はJavaを利用しています．まだ詳細な分析をしてはいませんが，Squeakから入
+>> ると，スムーズに授業が進むような感触はあります．）
+>
+> と書かれていますが、Squeakを学んだ後は、Javaを学ばせるのが良いのか、
+> Smalltalkに進ませた方が良いのか迷っています。
+> 最終目的にもよると思いますが、JavaはWebアプリケーションでつまずき、
+> Ruby on Railsに押されています。
+> 　SmalltalKは、SeaSideというWebアプリケーションを開発中ですが、
+> SmalltalkもSeaSideもどちらも良い日本語解説書がないのが難点です。
+> ご意見頂けるとありがたいです。
+>
+> 早坂　吉昭
+>
+>
+>
+> ------------------------------
+>
+> Message: 2
+> Date: Tue, 20 May 2008 15:10:55 +0900
+> From: "Toshiyuki Takeda" <takeda.toshiyuki@gmail.com>
+> Subject: [Squeak-ja: 3884] Re: プログラミングの後半コースについて
+> To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+> Message-ID:
+> <6544a1da0805192310n28ff9cep9a0656d974218b32@mail.gmail.com>
+> Content-Type: text/plain; charset=ISO-2022-JP
+>
+> On 5/20/08, 早坂　吉昭 <hayasaka@pluto.dti.ne.jp> wrote:
+>
+>> 最終目的にもよると思いますが、JavaはWebアプリケーションでつまずき、
+>> Ruby on Railsに押されています。
+>
+> ＃Ruby on Railsは宣伝上手なので過大評価しがちなのと、
+> ＃JavaはWebアプリでつまづいていないと思う、ってことは置いておいて、
+>
+> 私も日夜悩んでいるところではありますが、この「最終目的」が重要なんじゃないでしょうか。
+>
+> 就職に直結する職業教育か、教養か、研究者養成か、などでかなり違うと思います。 
+> 
+>
+>
+> たとえば、Webアプリの職業訓練だとすると、PHP、Perl、ASPなども候補でしょう。 
+> 
+>
+> JavaScriptを教えておられる方も大勢いらっしゃいます。
+>
+> 経験的にはRuby、Pythonは比較的敷居が低いです。
+>
+> ただし、それにEtoysで学んだことが役に立つかどうかは、カリキュラムの
+> 作り方にもよりますが、なかなかむずかしいです。（まだ検証した人も
+> いないと思います）
+>
+> Smalltalkの本については、梅澤さんの本をマスターすれば、かなりのレベルに
+> なれますので、いかがでしょうか。
+>
+>
+> 武田俊之
+>
+>
+> ------------------------------
+>
+> Message: 3
+> Date: Tue, 20 May 2008 15:12:57 +0900
+> From: "Toshiyuki Takeda" <takeda.toshiyuki@gmail.com>
+> Subject: [Squeak-ja: 3885] Re: プログラミングの後半コースについて
+> To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+> Message-ID:
+> <6544a1da0805192312k69851ea9k7c49858aad225f9a@mail.gmail.com>
+> Content-Type: text/plain; charset=ISO-2022-JP
+>
+> On 5/20/08, 早坂　吉昭 <hayasaka@pluto.dti.ne.jp> wrote:
+>
+>> 最終目的にもよると思いますが、JavaはWebアプリケーションでつまずき、
+>> Ruby on Railsに押されています。
+>
+> ＃Ruby on Railsは宣伝上手なので過大評価しがちなのと、
+> ＃JavaはWebアプリでつまづいていないと思う、ってことは置いておいて、
+>
+> 私も日夜悩んでいるところではありますが、この「最終目的」が重要なんじゃないでしょうか。
+>
+> 就職に直結する職業教育か、教養か、研究者養成か、などでかなり違うと思います。 
+> 
+>
+>
+> たとえば、Webアプリの職業訓練だとすると、PHP、Perl、ASPなども候補でしょう。 
+> 
+>
+> JavaScriptを教えておられる方も大勢いらっしゃいます。
+>
+> 経験的にはRuby、Pythonは比較的敷居が低いです。
+>
+> ただし、それにEtoysで学んだことが役に立つかどうかは、カリキュラムの
+> 作り方にもよりますが、なかなかむずかしいです。（まだ検証した人も
+> いないと思います）
+>
+> Smalltalkの本については、梅澤さんの本をマスターすれば、かなりのレベルに
+> なれますので、いかがでしょうか。
+>
+>
+> 武田俊之
+>
+>
+> ------------------------------
+>
+> Message: 4
+> Date: Tue, 20 May 2008 17:19:41 +0900
+> From: Masashi Umezawa <umejava@mars.dti.ne.jp>
+> Subject: [Squeak-ja: 3886] Re: プログラミングの後半コースについて
+> To: Squeak discussion in Japanese <squeak-ja@smalltalk.jp>
+> Message-ID: <JA200805201719415.3845875@mars.dti.ne.jp>
+> Content-Type: text/plain; charset=ISO-2022-JP
+>
+> こんにちは
+> 梅澤です。
+>
+> 早坂　吉昭 <hayasaka@pluto.dti.ne.jp> wrote:
+>> 　ネパールの子ども達のIT教育支援を行なっている早坂吉昭です。
+>>
+>> 　慶應義塾大学 大岩研究室の杉浦（ことだま on Squeak開発チーム）様の
+>>
+>> > 現在も，慶應SFCでは文系学生向けのプログラミングの入門コースの前半に利用
+>> > しています（文系といえども，大学生でSqueakだけでは．．．ということで，後 
+>> > 
+>> >
+>> > 半はJavaを利用しています．まだ詳細な分析をしてはいませんが，Squeakから入 
+>> > 
+>> >
+>> > ると，スムーズに授業が進むような感触はあります．）
+>>
+>> と書かれていますが、Squeakを学んだ後は、Javaを学ばせるのが良いのか、
+>> Smalltalkに進ませた方が良いのか迷っています。
+>> 最終目的にもよると思いますが、JavaはWebアプリケーションでつまずき、
+>> Ruby on Railsに押されています。
+>> 　SmalltalKは、SeaSideというWebアプリケーションを開発中ですが、
+>> SmalltalkもSeaSideもどちらも良い日本語解説書がないのが難点です。
+>> ご意見頂けるとありがたいです。
+>>
+>
+> Seasideに関してはシンコムのチュートリアルが参考になるのではないでしょうか。 
+> 
+>
+> http://smalltalk.cincom.jp/scripts/smalltalk.dll/tutorials/vw7.6/seaside/seaside_intro.ssp
+>
+> 前提となっているSmalltalk実装系はSqueakでなくVisualWorksですが、読み替えは
+> 可能でしょう。
+>
+> また、もう少し先になりますが、オージス総研「オブジェクトの広場」にて、Seaside
+> の解説記事の連載予定があります。(私が執筆します)
+> http://www.ogis-ri.co.jp/otc/hiroba/
+>
+>
+> ただし最も重要なのは、武田さんのメールにもありましたように、「何のために」
+> ということなのだと思います。
+>
+> Railsを使えば、確かになんとなくWebアプリケーションを作ることはできます。
+> 開発者にとっては非常に実用的ではありますが、それによって何を学べているのか
+> ということが、学習の場においては重要と思います。
+>
+> Railsに限らずJavaのフレームワークもSmalltalkのフレームワーク(Seaside)も
+> Webならではの変な約束事に満ちています。派手で見栄えはするかもしれませんが、 
+> 
+>
+> テキストによるプログラミングの基礎を学ぶという観点からは、不要なノイズが
+> たくさん入ってしまっているものかもしれません。
+>
+> サーバ側であればSQL、クライアント側であればJavaScriptあたりが、フィード
+> バックもすぐに得られ、ある程度実用的で関心も出てきやすいのではないか、
+> と個人的には思います。(書籍の類もたくさんありますし、処理系もフリーです)
+>
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+>
+>
+> ------------------------------
+>
+> Message: 5
+> Date: Tue, 20 May 2008 22:34:59 +0900
+> From: Manabu Sugiura <manabu@sfc.keio.ac.jp>
+> Subject: [Squeak-ja: 3887] Re: プログラミングの後半コースについて
+> To: Squeak discussion in Japanese <squeak-ja@smalltalk.jp>
+> Message-ID: <20080520221143.E8D5.8CDE0663@sfc.keio.ac.jp>
+> Content-Type: text/plain; charset="ISO-2022-JP"
+>
+> 慶應大学 大岩研の杉浦です．
+>
+>> と書かれていますが、Squeakを学んだ後は、Javaを学ばせるのが良いのか、
+>> Smalltalkに進ませた方が良いのか迷っています。
+>
+> Javaを選択した理由は幾つかあります．
+> # 私個人としては，Smalltalkでもいいかなと思っています．
+> # 高校生相手に挑戦してみたいと思っています．
+>
+>> ただし最も重要なのは、武田さんのメールにもありましたように、「何のために」 
+>> 
+>>
+>> ということなのだと思います。
+>
+> 大岩研のメンバーもMLは読んでいると思うので，何か勘違いや補足があれば，指
+> 摘してください．
+>
+> ご紹介した授業「論理思考とプログラミング」に関しては，職業プログラマの育
+> 成を目的にしたものではありません．ですから，採用する言語としては，少し乱
+> 暴な言い方ですが「JavaでもSmalltalkでもよかった」と考えています．
+>
+> 当初，後半はJavaだけではなく，日本語プログラミング言語「言霊」も学習し，
+> その後にJavaを学習する予定でしたが，「言霊」の処理系の実装に関する問題が
+> 発生したこと，半期で3つの言語を学ぶのは少し時間的にきついということで，
+> SqueakとJavaに落ち着きました．
+>
+> ことだま on Squeakのタイルスクリプティングだけではなく，テキストによるプ
+> ログラミングを経験すること．また，同時に，基礎的なプログラミングの概念を
+> 学習（ことだま on Squeakで学習したことの復習）しつつ，論理的に考える訓練
+> をするということを目的に授業を展開しています．
+> 「論理思考とプログラミング」は文系クラスですが，理系クラスの入門科目では
+> 最初から最後までC言語で授業をしています．
+>
+> Java選択の他の理由として，
+>
+> ・同じ研究室の松澤さんが作成してあった，Javaの拡張タートルフレームワーク
+> があったので，Squeakと同じようなことがJavaで簡単に実現できる（ある程度イ
+> ンパクトのある画面を出せるが，煩雑な記述をすることは避けられる）
+>
+> ・300人近くの学生を複数の非常勤講師で分担するので，あまりマイナーな環境
+> で授業をしてくれとは言いにくい
+>
+> という点もあります．
+>
+> # 少しSqueak-jaからは話がそれるのですが，前半は日本語プログラミング言語#
+> # 「言霊」，後半は「Java」で授業をしたクラスもありました．
+> # http://web.sfc.keio.ac.jp/~minohara/lecture/logical07/
+>
+>
+> あまり答えになっていないとは思いますが，梅澤さんの，
+>
+>> Railsを使えば、確かになんとなくWebアプリケーションを作ることはできます。
+>> 開発者にとっては非常に実用的ではありますが、それによって何を学べているのか 
+>> 
+>>
+>> ということが、学習の場においては重要と思います。
+>
+> に（私個人としては）賛成です．
+>
+> 失礼致します．
+>
+> -- 
+> Manabu Sugiura <manabu@sfc.keio.ac.jp>
+>
+
+From Fumito.Kondo ＠ hp.com  Mon May 26 18:09:18 2008
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Tue Jun  3 19:47:17 2008
+Subject: [Squeak-ja: 3889] プログラミングの質問です
+Message-ID: <1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C@G6W0270.americas.hpqcorp.net>
+
+今日は、ご無沙汰してます。
+日本HPの近藤です。
+
+Sound Objectというおもちゃを作ろうとしています。
+
+ActiveWolrdの上に絵（音オブジェクト）を載せると完全四度の音程関係や、それらの間を経過する音程
+のところにその絵（音オブジェクト）が収まり、いくつかの絵（音オブジェクト）がActiveWorldに乗るとある割合で、
+その絵（音オブジェクト）をスキャンして、絵（音オブジェクト）の高さ（Y軸が音の高さ）に応じた音を出す。
+
+こんなことをしたいと思っております。
+
+絵（音オブジェクト）は、できて、とりあえず、ActiveWorldに乗せるとその高さに応じた音を出すことまでは出来たのですが、
+現在は、MorphのdrawOn: aCanvasメソッドで、マウスで絵（音オブジェクト）を動かしたときに音が出るようになっています。
+
+これをActiveWorldにあるすべての絵（音オブジェクト）をスキャンして音が出るようにしたいのですが、
+どのように実現したらいいでしょうか？という質問です。
+
+万博のときにEnvironmentというクラスを作って、そこからエージェントを生成するということをやったのですが、
+今回、できる限りクラス間の依存関係のない方法でやりたいと思っております。
+Environmentがまさに環境、意識しないでそこに包まれているというような関係です。
+
+AllScriptsToolが何か可能性を感じさせてくれるのですが、何をどうしてよいやらさっぱり分かりません。
+
+どなたかいい智慧貸していただけないでしょうか？
+
+
+近藤史人
+fumito.kondo@hp.com
+コンサルタント
+コンサルティング＆インテグレーション統括本部
+日本ヒューレット・パッカード株式会社
+Fumito Kondo
+Consultant
+Consulting&Integration
+From abee ＠ squeakland.jp  Mon May 26 19:02:41 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 19:47:18 2008
+Subject: [Squeak-ja: 3890] Re: プログラミングの質問です
+In-Reply-To: <1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C@G6W0270.americas.hpqcorp.net>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C@G6W0270.americas.hpqcorp.net>
+Message-ID: <2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8@mail.gmail.com>
+
+こんにちは、阿部です。
+これはSqueak Etoysではなく、Smalltalkの話ですね。
+
+すべてのMorphは入れ子構造を持つことができ、submorphsというメッセージを送ることで子集合にアクセスできます。
+ActiveWorldはPasteUpMorphのインスタンスですから、これも例外ではありません。以下の式を評価してみてください。
+
+ActiveWorld submorphs.
+
+この戻り値はワールドに表示されているすべてのMorphの集合です。
+もし、この中の特定のクラスのインスタンスにのみ特定の処理をさせたい場合は以下のようにします。
+
+ActiveWorld submorphs do: [:each |
+    [each isKindOf: クラス] ifTrue: [each 特定の処理]].
+
+isKindOf:は指定したクラスのサブクラスも含むので、そのクラスのインスタンスのみにしたいときは、代わりにisMemberOf:を使います。
+
+//abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080526/fe8ee8fe/attachment-0001.html
+From tomohiro ＠ sra.co.jp  Tue May 27 09:54:01 2008
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue Jun  3 19:50:19 2008
+Subject: [Squeak-ja: 3891] Re: プログラミングの質問です
+In-Reply-To: <2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8@mail.gmail.com>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C@G6W0270.americas.hpqcorp.net>
+	<2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8@mail.gmail.com>
+Message-ID: <483B5BA9.8050203@sra.co.jp>
+
+おだです。
+
+> ActiveWorld submorphs do: [:each |
+>     [each isKindOf: クラス] ifTrue: [each 特定の処理]].
+
+たぶん、
+ActiveWorld submorphs do: [:each |
+    (each isKindOf: クラス) ifTrue: [each 特定の処理]].
+ですね。
+
+> isKindOf:は指定したクラスのサブクラスも含むので、そのクラスのインスタン 
+> スのみにしたいときは、代わりにisMemberOf:を使います。
+
+クラス名などを決め打ちしたくない場合には、
+音を出すメッセージセレクタ名をmakeNoiseとすると、
+
+ActiveWorld submorphsDo: [:each |
+     (each respondsTo: #makeNoise) ifTrue: [each makeNoise]].
+
+とすると、makeNoiseできるオブジェクトのみがmakeNoiseします。
+(変な日本語ですね :-)
+---
+おだ
+From Fumito.Kondo ＠ hp.com  Tue May 27 10:08:58 2008
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Tue Jun  3 19:50:23 2008
+Subject: [Squeak-ja: 3892] Re: プログラミングの質問です
+In-Reply-To: <483B5BA9.8050203@sra.co.jp>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C@G6W0270.americas.hpqcorp.net>
+	<2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8@mail.gmail.com>
+	<483B5BA9.8050203@sra.co.jp>
+Message-ID: <1BBA03CC61D1E541ABC7C2BA63A3F774275535B1E1@G6W0270.americas.hpqcorp.net>
+
+阿部さん、おださん、
+
+早速のご教示、誠にありがとうございます。
+
+可能性が見えてきました。
+
+早速家に帰ったら試してみます。
+
+近藤
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Tomohiro Oda
+Sent: Tuesday, May 27, 2008 9:54 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3891] Re: プログラミングの質問です
+
+おだです。
+
+> ActiveWorld submorphs do: [:each |
+>     [each isKindOf: クラス] ifTrue: [each 特定の処理]].
+
+たぶん、
+ActiveWorld submorphs do: [:each |
+    (each isKindOf: クラス) ifTrue: [each 特定の処理]].
+ですね。
+
+> isKindOf:は指定したクラスのサブクラスも含むので、そのクラスのインスタン
+> スのみにしたいときは、代わりにisMemberOf:を使います。
+
+クラス名などを決め打ちしたくない場合には、
+音を出すメッセージセレクタ名をmakeNoiseとすると、
+
+ActiveWorld submorphsDo: [:each |
+     (each respondsTo: #makeNoise) ifTrue: [each makeNoise]].
+
+とすると、makeNoiseできるオブジェクトのみがmakeNoiseします。
+(変な日本語ですね :-)
+---
+おだ
+From abee ＠ squeakland.jp  Tue May 27 12:44:31 2008
+From: abee ＠ squeakland.jp (abee@squeakland.jp)
+Date: Tue Jun  3 19:50:24 2008
+Subject: [Squeak-ja: 3893] Re: プログラミングの質問です
+In-Reply-To: <483B5BA9.8050203@sra.co.jp>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C@G6W0270.americas.hpqcorp.net>
+	<2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8@mail.gmail.com>
+	<483B5BA9.8050203@sra.co.jp>
+Message-ID: <2d5d52a80805262044i69f0d60dv8a652685bd1d8efd@mail.gmail.com>
+
+こんにちは、阿部です。
+おださんの書かれたとおりです。なんかすごい焼きが回った気がします。かなりやばい。
+
+私もrespondsTo:の方が好きです。もっとポリモフィックにするなら、Object>>makeNoiseをなにもしないメソッドとして定義すると(単にselfを返すなど)、ifTrue:がいらなくなって、each
+makeNoiseだけででいけます。
+
+
+
+-- 
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From Fumito.Kondo ＠ hp.com  Tue May 27 13:12:39 2008
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Tue Jun  3 19:50:26 2008
+Subject: [Squeak-ja: 3894] Re: プログラミングの質問です
+In-Reply-To: <2d5d52a80805262044i69f0d60dv8a652685bd1d8efd@mail.gmail.com>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C@G6W0270.americas.hpqcorp.net>
+	<2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8@mail.gmail.com>
+	<483B5BA9.8050203@sra.co.jp>
+	<2d5d52a80805262044i69f0d60dv8a652685bd1d8efd@mail.gmail.com>
+Message-ID: <1BBA03CC61D1E541ABC7C2BA63A3F774275535B429@G6W0270.americas.hpqcorp.net>
+
+近藤です。
+
+先ほど、ちょっとやってみたらうまくいきました。
+ありがとうございました。
+
+
+だんだん専門的になってきたのでついていけなくなっていますが、
+respondsTo:にするとクラスで定義しているメッセージセレクター名を探しにいくということでしょうか？
+例えば、makeNoiseというような。
+
+そこでmakeNoiseで何もしなくてselfだけを返すと、音は出なくなりますよね？
+
+近藤
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of abee@squeakland.jp
+Sent: Tuesday, May 27, 2008 12:45 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3893] Re: プログラミングの質問です
+
+こんにちは、阿部です。
+おださんの書かれたとおりです。なんかすごい焼きが回った気がします。かなりやばい。
+
+私もrespondsTo:の方が好きです。もっとポリモフィックにするなら、Object>>makeNoiseをなにもしないメソッドとして定義すると(単にselfを返すなど)、ifTrue:がいらなくなって、each
+makeNoiseだけででいけます。
+
+
+
+--
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From tomohiro ＠ sra.co.jp  Tue May 27 13:46:47 2008
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue Jun  3 19:50:28 2008
+Subject: [Squeak-ja: 3895] Re: プログラミングの質問です
+In-Reply-To: <1BBA03CC61D1E541ABC7C2BA63A3F774275535B429@G6W0270.americas.hpqcorp.net>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C@G6W0270.americas.hpqcorp.net>	<2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8@mail.gmail.com>	<483B5BA9.8050203@sra.co.jp>	<2d5d52a80805262044i69f0d60dv8a652685bd1d8efd@mail.gmail.com>
+	<1BBA03CC61D1E541ABC7C2BA63A3F774275535B429@G6W0270.americas.hpqcorp.net>
+Message-ID: <483B9237.6090902@sra.co.jp>
+
+おだです。
+
+Kondo, Fumito wrote:
+> 先ほど、ちょっとやってみたらうまくいきました。
+> ありがとうございました。
+
+よかった。
+
+> だんだん専門的になってきたのでついていけなくなっていますが、
+> respondsTo:にするとクラスで定義しているメッセージセレクター名を探しにいくということでしょうか？
+> 例えば、makeNoiseというような。
+
+はい。
+
+> そこでmakeNoiseで何もしなくてselfだけを返すと、音は出なくなりますよね？
+
+その通りです。
+---
+おだ

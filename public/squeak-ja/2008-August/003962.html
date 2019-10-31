@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3962] Re: Etoy 回転させながらすすむ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203962%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3kgGyRCMnNFPiQ1GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJDskSiQsJGkkOSQ5JGAbKEI%3D%3F%3D&In-Reply-To=2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003961.html">
+   <LINK REL="Next"  HREF="003963.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3962] Re: Etoy 回転させながらすすむ</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203962%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3kgGyRCMnNFPiQ1GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJDskSiQsJGkkOSQ5JGAbKEI%3D%3F%3D&In-Reply-To=2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96%40mail.gmail.com"
+       TITLE="[Squeak-ja: 3962] Re: Etoy 回転させながらすすむ">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 8月 12日 (火) 11:42:56 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003961.html">[Squeak-ja: 3961] Re: Etoy 回転させながらすすむ
+</A></li>
+        <LI>次の記事 <A HREF="003963.html">[Squeak-ja: 3963] Re: Etoy 回転させながらすすむ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3962">[ 日付 ]</a>
+              <a href="thread.html#3962">[ スレッド ]</a>
+              <a href="subject.html#3962">[ 件名 ]</a>
+              <a href="author.html#3962">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Tue, 12 Aug 2008 11:37:26 +0900,
+Kazuhiro ABE wrote:
+&gt;<i> 
+</I>&gt;<i> こんにちは、阿部です。
+</I>&gt;<i> こちらこそ、ボストンではお世話になりました。また貴重なバグレポートをありがとうございました。
+</I>&gt;<i> 
+</I>&gt;<i> 2008/08/12 11:28 Kazuhiro Oyamatsu &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">oyak ＠ asu.aasa.ac.jp</A>&gt;:
+</I>&gt;<i> &gt; Etoyに関する質問です。
+</I>&gt;<i> &gt; 図形を、例えば楕円を、回転させながら一方向に進めることは可能でしょうか？
+</I>&gt;<i> &gt; 進行方向（重心運動）と図形の回転（内部運動）は別々にとれないのでしょうか？
+</I>&gt;<i> 
+</I>&gt;<i> 「回す」と「進める」の組み合わせだと難しいですが、「回す」と「x座標に以下を足す」の組み合わせで可能です。たとえば、サイクロイドは以下のようになります。
+</I>&gt;<i> <A HREF="http://squeakland.jp/seaside/SBSuperSwiki/4c7bfb6d-00a3-4e1f-b403-61325adfe269">http://squeakland.jp/seaside/SBSuperSwiki/4c7bfb6d-00a3-4e1f-b403-61325adfe269</A>
+</I>&gt;<i> もし斜めに動かしたい場合は「y座標に以下を足す」も使ってベクトルを合
+</I>&gt;<i> 成します。
+</I>
+  最新のEtoysであれば、&quot;forward direction&quot;もタイルで操作できますので、
+
+Ellipse forward by 5
+Ellipse forward direction increase by -5
+Ellipse turn by 5
+
+というスクリプトを作ることはできます。
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003961.html">[Squeak-ja: 3961] Re: Etoy 回転させながらすすむ
+</A></li>
+	<LI>次の記事 <A HREF="003963.html">[Squeak-ja: 3963] Re: Etoy 回転させながらすすむ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3962">[ 日付 ]</a>
+              <a href="thread.html#3962">[ スレッド ]</a>
+              <a href="subject.html#3962">[ 件名 ]</a>
+              <a href="author.html#3962">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

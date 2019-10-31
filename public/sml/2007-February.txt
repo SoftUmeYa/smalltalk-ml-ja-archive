@@ -1,0 +1,1536 @@
+From umejava ＠ mars.dti.ne.jp  Sun Feb  4 22:04:06 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7264] Jpl適用後のPublic Store Repositoryアクセス対応パッチ
+Message-ID: <JR200702042204068.5604718@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Jplをロードした後に、Cincom Public Store Repositoryにつながらなくなるという
+現象が起こるようです。
+(ランチャーの"Store"-"Connect to Repository..."でCincom Public Repository
+を選択)
+
+Cincom Public Store Repositoryにはフリーで利用できるVWのツールやクラス
+ライブラリ群が多く収められているので、これはよからぬ事態です。
+
+ざっと見たところ、Postgresとの接続を行っている部分に問題がありそうだったので
+パッチを書いてみました。
+
+このパッチ適用後は、 Public Store Repositoryからのロードが通常通り行えるよう
+になります。
+
+お試しください。
+
+今ひとつこの修正でよいのか自信がないので、過去にVisualWorks+Postgres+日本語
+で接続を行ったノウハウをお持ちの方がいらっしゃれば、情報をお寄せいただける
+とありがたいです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: 070204-PatchForPostgresWithJpl.st
+型:         application/octet-stream
+サイズ:     2485 バイト
+説明:       無し
+URL:        http://www.akademia.co.jp/pipermail/sml/attachments/20070204/4adb3920/070204-PatchForPostgresWithJpl.obj
+From aoki ＠ sra.co.jp  Thu Feb  8 14:12:02 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7265] メッセージパッシング
+Message-ID: <45CAB122.3030207@sra.co.jp>
+
+皆さんへ
+
+じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+にさせてください。message passing の良い日本語訳を捜してます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+-------- Original Message --------
+Subject: [Jun 5807] メッセージパッシング
+Date: Wed, 07 Feb 2007 14:17:02 +0900
+From: AOKI Atsushi
+
+青木です。
+
+ちょっと術語の日本語訳で助力をお願いします。message passing
+も、message sending も、共にメッセージ送信と訳されていると思
+いますが、パッシングの意味をより強く表出するような言葉があり
+ませんかね？
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+-------- Original Message --------
+Subject: [Jun 5809] Re: メッセージパッシング
+Date: Wed, 7 Feb 2007 14:50:00 +0900
+From: Tomohiro Oda
+
+計算モデル寄りの話ならメッセージ送受、
+処理系実装寄りの話ならメッセージ配送、
+などはどうでしょう。
+
+
+-------- Original Message --------
+Subject: Re: [Jun 5809] Re: メッセージパッシング
+Date: Thu, 08 Feb 2007 13:40:47 +0900
+From: AOKI Atsushi
+
+Tomohiro Oda wrote:
+> 計算モデル寄りの話ならメッセージ送受、
+> 処理系実装寄りの話ならメッセージ配送、
+> などはどうでしょう。
+
+なかなか！いい感じですね。伝送や推移そして経路や並行などが計
+り知れる言葉が好ましいのです。
+
+大胆にも浅岡さんが日経ソフトウエア連載の第６回で、シュード変
+数（pseudo variable：模擬変数）の【thisContext】を紹介してい
+ます。メッセージパッシングへと誘（いさな）う良い切り口でしょ。
+
+あるオブジェクトがこのメッセージをすでに受信していますか？と
+いうプログラミングは以下のようになります。たぶん Java で書き
+直そうとするときに嫌われるであろう Smalltalk のプログラム。
+
+has: anObject alreadyReceived: thisMessage
+    aContext := thisContext.
+    aBlock := [:context |
+            (anObject == context receiver and: [thisMessage == context selector])
+                ifTrue: [^true].
+            context sender ifNotNil: [:it | aBlock value: it sender]].
+    aBlock value: aContext sender.
+    ^false
+
+自分の実行環境（実行文脈／実行経緯）＝過去をたどって調べあげ、
+真偽を答えますので、模擬変数【thisContext】を引いていますね。
+
+上記のプログラムは、調べ上げるスコープを、自分のプロセス（ス
+レッド）内に閉じていますが、最近の私は、これまた大胆にも並行
+プロセス（マルチスレッド）の実行環境下でも動くようなプログラ
+ミングをしました。ターボなスパイダーを実現するプログラミング
+でやったのです。ためになりましたよぉ〜！（並行で動作するマル
+チスレッドのソースコードデバッガの自作ですから。）
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From kkom ＠ fiberbit.net  Fri Feb  9 13:19:40 2007
+From: kkom ＠ fiberbit.net (Kumiko Komatsu)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7266] Re: メッセージパッシング
+In-Reply-To: <45CAB122.3030207@sra.co.jp>
+References: <45CAB122.3030207@sra.co.jp>
+Message-ID: <20070209131940.E3413DB8.kkom@fiberbit.net>
+
+小松＠大阪市立大学です。
+
+C言語の本などでは、parameter passing は、「引数渡し」と訳されているよ
+うに思います。
+そうすると、message passing は、「メッセージ渡し」でしょうか？
+
+
+
+AOKI Atsushi <aoki@sra.co.jp> wrote:
+(2007/02/08 14:12)
+
+>皆さんへ
+>
+>じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+>にさせてください。message passing の良い日本語訳を捜してます。
+>
+>------------------------------------------------------------
+>R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+>-------- Original Message --------
+>Subject: [Jun 5807] メッセージパッシング
+>Date: Wed, 07 Feb 2007 14:17:02 +0900
+>From: AOKI Atsushi
+>
+>青木です。
+>
+>ちょっと術語の日本語訳で助力をお願いします。message passing
+>も、message sending も、共にメッセージ送信と訳されていると思
+>いますが、パッシングの意味をより強く表出するような言葉があり
+>ませんかね？
+>
+>------------------------------------------------------------
+>R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+>-------- Original Message --------
+>Subject: [Jun 5809] Re: メッセージパッシング
+>Date: Wed, 7 Feb 2007 14:50:00 +0900
+>From: Tomohiro Oda
+>
+>計算モデル寄りの話ならメッセージ送受、
+>処理系実装寄りの話ならメッセージ配送、
+>などはどうでしょう。
+>
+>
+>-------- Original Message --------
+>Subject: Re: [Jun 5809] Re: メッセージパッシング
+>Date: Thu, 08 Feb 2007 13:40:47 +0900
+>From: AOKI Atsushi
+>
+>Tomohiro Oda wrote:
+>> 計算モデル寄りの話ならメッセージ送受、
+>> 処理系実装寄りの話ならメッセージ配送、
+>> などはどうでしょう。
+>
+>なかなか！いい感じですね。伝送や推移そして経路や並行などが計
+>り知れる言葉が好ましいのです。
+>
+>大胆にも浅岡さんが日経ソフトウエア連載の第６回で、シュード変
+>数（pseudo variable：模擬変数）の【thisContext】を紹介してい
+>ます。メッセージパッシングへと誘（いさな）う良い切り口でしょ。
+>
+>あるオブジェクトがこのメッセージをすでに受信していますか？と
+>いうプログラミングは以下のようになります。たぶん Java で書き
+>直そうとするときに嫌われるであろう Smalltalk のプログラム。
+>
+>has: anObject alreadyReceived: thisMessage
+>    aContext := thisContext.
+>    aBlock := [:context |
+>            (anObject == context receiver and: [thisMessage == context selector])
+>                ifTrue: [^true].
+>            context sender ifNotNil: [:it | aBlock value: it sender]].
+>    aBlock value: aContext sender.
+>    ^false
+>
+>自分の実行環境（実行文脈／実行経緯）＝過去をたどって調べあげ、
+>真偽を答えますので、模擬変数【thisContext】を引いていますね。
+>
+>上記のプログラムは、調べ上げるスコープを、自分のプロセス（ス
+>レッド）内に閉じていますが、最近の私は、これまた大胆にも並行
+>プロセス（マルチスレッド）の実行環境下でも動くようなプログラ
+>ミングをしました。ターボなスパイダーを実現するプログラミング
+>でやったのです。ためになりましたよぉ〜！（並行で動作するマル
+>チスレッドのソースコードデバッガの自作ですから。）
+>
+>------------------------------------------------------------
+>R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From sakoh ＠ ba2.so-net.ne.jp  Fri Feb  9 16:02:12 2007
+From: sakoh ＠ ba2.so-net.ne.jp (Sako Hiroshi)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7267] Re: メッセージパッシング
+In-Reply-To: <45CAB122.3030207@sra.co.jp>
+References: <45CAB122.3030207@sra.co.jp>
+Message-ID: <63ae6a8d0702082302j161cb698w969959be590e879c@mail.gmail.com>
+
+酒匂です。
+
+message passing は
+直訳としてはメッセージを送ること、渡すことですから素直に考えると
+メッセージ送信、メッセージ渡し、などになるのだと思います。
+
+> ちょっと術語の日本語訳で助力をお願いします。message passing
+> も、message sending も、共にメッセージ送信と訳されていると思
+> いますが、パッシングの意味をより強く表出するような言葉があり
+> ませんかね？
+
+でもそれでは物足りない（単に「渡す」「送る」では伝わらない）ということなの
+でしょうから（笑）、もう少し考えてみましょう。
+
+メッセージの「受け渡し」が及ぼす意味まで考えを広げると、
+単に「メッセージを相手の玄関先に放り出す」だけではなくて、それを相手に
+「渡し」そしてその処置を「託する」という気持ちも含まれていると思います。
+球技の「パス」だって、闇雲に相手に向かって投げつけるのではなくて、それがその
+先の展開につながることを期待して相手に「託して」いるのですよね。
+
+ということで、もしその「気持ち」をより強く考えるとすれば、
+まあ結論としては簡単なのですが
+
+「メッセージ委託」
+
+とかはいかがでしょうか。
+
+以上。
+
+07/02/08 に AOKI Atsushi<aoki@sra.co.jp> さんは書きました:
+> 皆さんへ
+>
+> じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+> にさせてください。message passing の良い日本語訳を捜してます。
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+> -------- Original Message --------
+> Subject: [Jun 5807] メッセージパッシング
+> Date: Wed, 07 Feb 2007 14:17:02 +0900
+> From: AOKI Atsushi
+>
+> 青木です。
+>
+> ちょっと術語の日本語訳で助力をお願いします。message passing
+> も、message sending も、共にメッセージ送信と訳されていると思
+> いますが、パッシングの意味をより強く表出するような言葉があり
+> ませんかね？
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+> -------- Original Message --------
+> Subject: [Jun 5809] Re: メッセージパッシング
+> Date: Wed, 7 Feb 2007 14:50:00 +0900
+> From: Tomohiro Oda
+>
+> 計算モデル寄りの話ならメッセージ送受、
+> 処理系実装寄りの話ならメッセージ配送、
+> などはどうでしょう。
+>
+>
+> -------- Original Message --------
+> Subject: Re: [Jun 5809] Re: メッセージパッシング
+> Date: Thu, 08 Feb 2007 13:40:47 +0900
+> From: AOKI Atsushi
+>
+> Tomohiro Oda wrote:
+> > 計算モデル寄りの話ならメッセージ送受、
+> > 処理系実装寄りの話ならメッセージ配送、
+> > などはどうでしょう。
+>
+> なかなか！いい感じですね。伝送や推移そして経路や並行などが計
+> り知れる言葉が好ましいのです。
+>
+> 大胆にも浅岡さんが日経ソフトウエア連載の第６回で、シュード変
+> 数（pseudo variable：模擬変数）の【thisContext】を紹介してい
+> ます。メッセージパッシングへと誘（いさな）う良い切り口でしょ。
+>
+> あるオブジェクトがこのメッセージをすでに受信していますか？と
+> いうプログラミングは以下のようになります。たぶん Java で書き
+> 直そうとするときに嫌われるであろう Smalltalk のプログラム。
+>
+> has: anObject alreadyReceived: thisMessage
+>     aContext := thisContext.
+>     aBlock := [:context |
+>             (anObject == context receiver and: [thisMessage == context selector])
+>                 ifTrue: [^true].
+>             context sender ifNotNil: [:it | aBlock value: it sender]].
+>     aBlock value: aContext sender.
+>     ^false
+>
+> 自分の実行環境（実行文脈／実行経緯）＝過去をたどって調べあげ、
+> 真偽を答えますので、模擬変数【thisContext】を引いていますね。
+>
+> 上記のプログラムは、調べ上げるスコープを、自分のプロセス（ス
+> レッド）内に閉じていますが、最近の私は、これまた大胆にも並行
+> プロセス（マルチスレッド）の実行環境下でも動くようなプログラ
+> ミングをしました。ターボなスパイダーを実現するプログラミング
+> でやったのです。ためになりましたよぉ〜！（並行で動作するマル
+> チスレッドのソースコードデバッガの自作ですから。）
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+>
+
+
+-- 
+Sako Hiroshi
+http://d.hatena.ne.jp/ardbeg1958/
+
+From umr ＠ kyoto-sr.co.jp  Fri Feb  9 16:47:41 2007
+From: umr ＠ kyoto-sr.co.jp (hiroshi umeoka)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7268] Re: メッセージパッシング
+In-Reply-To: <45CAB122.3030207@sra.co.jp>
+Message-ID: <010201c74c1e$974b41d0$c9011bac@aji>
+
+梅岡といいます。
+私のイメージですと、本来の訳からはかけ離れてしまい恐縮なのですが、
+	「交信」
+です。パイロット同士や管制塔との通信の、あれです。一方通行で終わっても「交
+信」っていいますし（ホント？）。
+相手を活性させ、相互作用を期待する雰囲気が、なんとなくそう思わせるのだと感じ
+ています。
+
+> -----Original Message-----
+> From: sml-bounces@akademia.co.jp
+> [mailto:sml-bounces@akademia.co.jp] On Behalf Of AOKI Atsushi
+> Sent: Thursday, February 08, 2007 2:12 PM
+> To: Smalltalkers' Salon Mailing List
+> Subject: [SML 7265] メッセージパッシング
+>
+>
+> 皆さんへ
+>
+> じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+> にさせてください。message passing の良い日本語訳を捜してます。
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+> -------- Original Message --------
+> Subject: [Jun 5807] メッセージパッシング
+> Date: Wed, 07 Feb 2007 14:17:02 +0900
+> From: AOKI Atsushi
+>
+> 青木です。
+>
+> ちょっと術語の日本語訳で助力をお願いします。message passing
+> も、message sending も、共にメッセージ送信と訳されていると思
+> いますが、パッシングの意味をより強く表出するような言葉があり
+> ませんかね？
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+> -------- Original Message --------
+> Subject: [Jun 5809] Re: メッセージパッシング
+> Date: Wed, 7 Feb 2007 14:50:00 +0900
+> From: Tomohiro Oda
+>
+> 計算モデル寄りの話ならメッセージ送受、
+> 処理系実装寄りの話ならメッセージ配送、
+> などはどうでしょう。
+>
+>
+> -------- Original Message --------
+> Subject: Re: [Jun 5809] Re: メッセージパッシング
+> Date: Thu, 08 Feb 2007 13:40:47 +0900
+> From: AOKI Atsushi
+>
+> Tomohiro Oda wrote:
+> > 計算モデル寄りの話ならメッセージ送受、
+> > 処理系実装寄りの話ならメッセージ配送、
+> > などはどうでしょう。
+>
+> なかなか！いい感じですね。伝送や推移そして経路や並行などが計
+> り知れる言葉が好ましいのです。
+>
+> 大胆にも浅岡さんが日経ソフトウエア連載の第６回で、シュード変
+> 数（pseudo variable：模擬変数）の【thisContext】を紹介してい
+> ます。メッセージパッシングへと誘（いさな）う良い切り口でしょ。
+>
+> あるオブジェクトがこのメッセージをすでに受信していますか？と
+> いうプログラミングは以下のようになります。たぶん Java で書き
+> 直そうとするときに嫌われるであろう Smalltalk のプログラム。
+>
+> has: anObject alreadyReceived: thisMessage
+>     aContext := thisContext.
+>     aBlock := [:context |
+>             (anObject == context receiver and: [thisMessage
+> == context selector])
+>                 ifTrue: [^true].
+>             context sender ifNotNil: [:it | aBlock value: it sender]].
+>     aBlock value: aContext sender.
+>     ^false
+>
+> 自分の実行環境（実行文脈／実行経緯）＝過去をたどって調べあげ、
+> 真偽を答えますので、模擬変数【thisContext】を引いていますね。
+>
+> 上記のプログラムは、調べ上げるスコープを、自分のプロセス（ス
+> レッド）内に閉じていますが、最近の私は、これまた大胆にも並行
+> プロセス（マルチスレッド）の実行環境下でも動くようなプログラ
+> ミングをしました。ターボなスパイダーを実現するプログラミング
+> でやったのです。ためになりましたよぉ〜！（並行で動作するマル
+> チスレッドのソースコードデバッガの自作ですから。）
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+>
+
+
+
+From shin-sahara ＠ kuzo.csk.com  Fri Feb  9 17:05:48 2007
+From: shin-sahara ＠ kuzo.csk.com (佐原 伸)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7269] Re: メッセージパッシング
+In-Reply-To: <63ae6a8d0702082302j161cb698w969959be590e879c@mail.gmail.com>
+References: <45CAB122.3030207@sra.co.jp>
+	<63ae6a8d0702082302j161cb698w969959be590e879c@mail.gmail.com>
+Message-ID: <EEFAE8FE-0534-4EE9-93F5-20268FD95467@kuzo.csk.com>
+
+佐原です。
+
+On 2007/02/09, at 16:02, Sako Hiroshi wrote:
+
+> 酒匂です。
+>
+> message passing は
+> 直訳としてはメッセージを送ること、渡すことですから素直に考えると
+> メッセージ送信、メッセージ渡し、などになるのだと思います。
+
+サッカー用語だとpassingは「通し」ですかね :-)
+
+	93.5kg
+
+
+>> ちょっと術語の日本語訳で助力をお願いします。message passing
+>> も、message sending も、共にメッセージ送信と訳されてい 
+>> ると思
+>> いますが、パッシングの意味をより強く表出するような言葉があり
+>> ませんかね？
+>
+> でもそれでは物足りない（単に「渡す」「送る」では伝わらない）と 
+> いうことなの
+> でしょうから（笑）、もう少し考えてみましょう。
+>
+> メッセージの「受け渡し」が及ぼす意味まで考えを広げると、
+> 単に「メッセージを相手の玄関先に放り出す」だけではなくて、それ 
+> を相手に
+> 「渡し」そしてその処置を「託する」という気持ちも含まれていると 
+> 思います。
+> 球技の「パス」だって、闇雲に相手に向かって投げつけるのではなく 
+> て、それがその
+> 先の展開につながることを期待して相手に「託して」いるのですよね。
+>
+> ということで、もしその「気持ち」をより強く考えるとすれば、
+> まあ結論としては簡単なのですが
+>
+> 「メッセージ委託」
+>
+> とかはいかがでしょうか。
+>
+> 以上。
+>
+> 07/02/08 に AOKI Atsushi<aoki@sra.co.jp> さんは書きました:
+>> 皆さんへ
+>>
+>> じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+>> にさせてください。message passing の良い日本語訳を捜し 
+>> てます。
+>>
+>> ------------------------------------------------------------
+>> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>>
+>>
+>> -------- Original Message --------
+>> Subject: [Jun 5807] メッセージパッシング
+>> Date: Wed, 07 Feb 2007 14:17:02 +0900
+>> From: AOKI Atsushi
+>>
+>> 青木です。
+>>
+>> ちょっと術語の日本語訳で助力をお願いします。message passing
+>> も、message sending も、共にメッセージ送信と訳されてい 
+>> ると思
+>> いますが、パッシングの意味をより強く表出するような言葉があり
+>> ませんかね？
+>>
+>> ------------------------------------------------------------
+>> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>>
+>>
+>> -------- Original Message --------
+>> Subject: [Jun 5809] Re: メッセージパッシング
+>> Date: Wed, 7 Feb 2007 14:50:00 +0900
+>> From: Tomohiro Oda
+>>
+>> 計算モデル寄りの話ならメッセージ送受、
+>> 処理系実装寄りの話ならメッセージ配送、
+>> などはどうでしょう。
+>>
+>>
+>> -------- Original Message --------
+>> Subject: Re: [Jun 5809] Re: メッセージパッシング
+>> Date: Thu, 08 Feb 2007 13:40:47 +0900
+>> From: AOKI Atsushi
+>>
+>> Tomohiro Oda wrote:
+>> > 計算モデル寄りの話ならメッセージ送受、
+>> > 処理系実装寄りの話ならメッセージ配送、
+>> > などはどうでしょう。
+>>
+>> なかなか！いい感じですね。伝送や推移そして経路や並行などが計
+>> り知れる言葉が好ましいのです。
+>>
+>> 大胆にも浅岡さんが日経ソフトウエア連載の第６回で、シュード変
+>> 数（pseudo variable：模擬変数）の【thisContext】 
+>> を紹介してい
+>> ます。メッセージパッシングへと誘（いさな）う良い切り口でしょ。
+>>
+>> あるオブジェクトがこのメッセージをすでに受信していますか？と
+>> いうプログラミングは以下のようになります。たぶん Java  
+>> で書き
+>> 直そうとするときに嫌われるであろう Smalltalk のプログラ 
+>> ム。
+>>
+>> has: anObject alreadyReceived: thisMessage
+>>     aContext := thisContext.
+>>     aBlock := [:context |
+>>             (anObject == context receiver and: [thisMessage ==  
+>> context selector])
+>>                 ifTrue: [^true].
+>>             context sender ifNotNil: [:it | aBlock value: it  
+>> sender]].
+>>     aBlock value: aContext sender.
+>>     ^false
+>>
+>> 自分の実行環境（実行文脈／実行経緯）＝過去をたどって調べあげ、
+>> 真偽を答えますので、模擬変数【thisContext】を引いていま 
+>> すね。
+>>
+>> 上記のプログラムは、調べ上げるスコープを、自分のプロセス（ス
+>> レッド）内に閉じていますが、最近の私は、これまた大胆にも並行
+>> プロセス（マルチスレッド）の実行環境下でも動くようなプログラ
+>> ミングをしました。ターボなスパイダーを実現するプログラミング
+>> でやったのです。ためになりましたよぉ〜！（並行で動作するマル
+>> チスレッドのソースコードデバッガの自作ですから。）
+>>
+>> ------------------------------------------------------------
+>> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>>
+>>
+>>
+>
+>
+> -- 
+> Sako Hiroshi
+> http://d.hatena.ne.jp/ardbeg1958/
+>
+>
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.akademia.co.jp/pipermail/sml/attachments/20070209/95146831/attachment.html
+From jsasaki ＠ coral.ocn.ne.jp  Fri Feb  9 23:15:50 2007
+From: jsasaki ＠ coral.ocn.ne.jp (Yoshiya Sasaki)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7270] Re: メッセージパッシング
+In-Reply-To: <EEFAE8FE-0534-4EE9-93F5-20268FD95467@kuzo.csk.com>
+References: <45CAB122.3030207@sra.co.jp>
+	<63ae6a8d0702082302j161cb698w969959be590e879c@mail.gmail.com>
+	<EEFAE8FE-0534-4EE9-93F5-20268FD95467@kuzo.csk.com>
+Message-ID: <20070209.231550.730555844.jsasaki@coral.ocn.ne.jp>
+
+佐々木です。
+
+青木さんはじめ諸賢が種々のお言葉を出されていますが。
+
+単純に「通信」じゃ駄目ですかね。
+単に送るだけや、渡すだけではなく、相互にやり取りが
+あるという意味合いから。
+
+並行プログラミングや並列プログラミングや
+モデルとしてのアクターモデルやプロセス代数
+までも、考えが広がりますので。
+
+HPC(高性能計算)でも、MPI なんてあるようですし。
+
+膨らみますね、用いる範囲で。
+
+
+佐々木 由也(Sasaki Yoshiya)
+
+
+
+
+> 佐原です。
+> 
+> On 2007/02/09, at 16:02, Sako Hiroshi wrote:
+> 
+> > 酒匂です。
+> >
+> > message passing は
+> > 直訳としてはメッセージを送ること、渡すことですから素直に考えると
+> > メッセージ送信、メッセージ渡し、などになるのだと思います。
+> 
+> サッカー用語だとpassingは「通し」ですかね :-)
+> 
+> 	93.5kg
+> 
+> 
+> >> ちょっと術語の日本語訳で助力をお願いします。message passing
+> >> も、message sending も、共にメッセージ送信と訳されてい 
+> >> ると思
+> >> いますが、パッシングの意味をより強く表出するような言葉があり
+> >> ませんかね？
+> >
+> > でもそれでは物足りない（単に「渡す」「送る」では伝わらない）と 
+> > いうことなの
+> > でしょうから（笑）、もう少し考えてみましょう。
+> >
+> > メッセージの「受け渡し」が及ぼす意味まで考えを広げると、
+> > 単に「メッセージを相手の玄関先に放り出す」だけではなくて、それ 
+> > を相手に
+> > 「渡し」そしてその処置を「託する」という気持ちも含まれていると 
+> > 思います。
+> > 球技の「パス」だって、闇雲に相手に向かって投げつけるのではなく 
+> > て、それがその
+> > 先の展開につながることを期待して相手に「託して」いるのですよね。
+> >
+> > ということで、もしその「気持ち」をより強く考えるとすれば、
+> > まあ結論としては簡単なのですが
+> >
+> > 「メッセージ委託」
+> >
+> > とかはいかがでしょうか。
+> >
+> > 以上。
+> >
+> > 07/02/08 に AOKI Atsushi<aoki@sra.co.jp> さんは書きました:
+> >> 皆さんへ
+> >>
+> >> じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+> >> にさせてください。message passing の良い日本語訳を捜し 
+> >> てます。
+> >>
+> >> ------------------------------------------------------------
+> >> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+> >>
+> >>
+> >> -------- Original Message --------
+> >> Subject: [Jun 5807] メッセージパッシング
+> >> Date: Wed, 07 Feb 2007 14:17:02 +0900
+> >> From: AOKI Atsushi
+> >>
+> >> 青木です。
+> >>
+> >> ちょっと術語の日本語訳で助力をお願いします。message passing
+> >> も、message sending も、共にメッセージ送信と訳されてい 
+> >> ると思
+> >> いますが、パッシングの意味をより強く表出するような言葉があり
+> >> ませんかね？
+> >>
+> >> ------------------------------------------------------------
+> >> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+> >>
+> >>
+> >> -------- Original Message --------
+> >> Subject: [Jun 5809] Re: メッセージパッシング
+> >> Date: Wed, 7 Feb 2007 14:50:00 +0900
+> >> From: Tomohiro Oda
+> >>
+> >> 計算モデル寄りの話ならメッセージ送受、
+> >> 処理系実装寄りの話ならメッセージ配送、
+> >> などはどうでしょう。
+> >>
+> >>
+> >> -------- Original Message --------
+> >> Subject: Re: [Jun 5809] Re: メッセージパッシング
+> >> Date: Thu, 08 Feb 2007 13:40:47 +0900
+> >> From: AOKI Atsushi
+> >>
+> >> Tomohiro Oda wrote:
+> >> > 計算モデル寄りの話ならメッセージ送受、
+> >> > 処理系実装寄りの話ならメッセージ配送、
+> >> > などはどうでしょう。
+> >>
+> >> なかなか！いい感じですね。伝送や推移そして経路や並行などが計
+> >> り知れる言葉が好ましいのです。
+> >>
+> >> 大胆にも浅岡さんが日経ソフトウエア連載の第６回で、シュード変
+> >> 数（pseudo variable：模擬変数）の【thisContext】 
+> >> を紹介してい
+> >> ます。メッセージパッシングへと誘（いさな）う良い切り口でしょ。
+> >>
+> >> あるオブジェクトがこのメッセージをすでに受信していますか？と
+> >> いうプログラミングは以下のようになります。たぶん Java  
+> >> で書き
+> >> 直そうとするときに嫌われるであろう Smalltalk のプログラ 
+> >> ム。
+> >>
+> >> has: anObject alreadyReceived: thisMessage
+> >>     aContext := thisContext.
+> >>     aBlock := [:context |
+> >>             (anObject == context receiver and: [thisMessage ==  
+> >> context selector])
+> >>                 ifTrue: [^true].
+> >>             context sender ifNotNil: [:it | aBlock value: it  
+> >> sender]].
+> >>     aBlock value: aContext sender.
+> >>     ^false
+> >>
+> >> 自分の実行環境（実行文脈／実行経緯）＝過去をたどって調べあげ、
+> >> 真偽を答えますので、模擬変数【thisContext】を引いていま 
+> >> すね。
+> >>
+> >> 上記のプログラムは、調べ上げるスコープを、自分のプロセス（ス
+> >> レッド）内に閉じていますが、最近の私は、これまた大胆にも並行
+> >> プロセス（マルチスレッド）の実行環境下でも動くようなプログラ
+> >> ミングをしました。ターボなスパイダーを実現するプログラミング
+> >> でやったのです。ためになりましたよぉ〜！（並行で動作するマル
+> >> チスレッドのソースコードデバッガの自作ですから。）
+> >>
+> >> ------------------------------------------------------------
+> >> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+> >>
+> >>
+> >>
+> >
+> >
+> > -- 
+> > Sako Hiroshi
+> > http://d.hatena.ne.jp/ardbeg1958/
+> >
+> >
+> 
+> -----------------------------------------------------------------------
+> Imagine the World Movement!
+> Shin Sahara
+> E-Mail: ss@shinsahara.com    http://shinsahara.com
+> Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+> world except Corea)
+>                +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+> ------------------------------------------------------------------------
+> 
+> 
+> 
+
+From katta ＠ diana.dti.ne.jp  Sat Feb 10 17:18:58 2007
+From: katta ＠ diana.dti.ne.jp (KATTA Hitoshi)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7271] Re: メッセージパッシング
+In-Reply-To: <EEFAE8FE-0534-4EE9-93F5-20268FD95467@kuzo.csk.com>
+References: <45CAB122.3030207@sra.co.jp>	<63ae6a8d0702082302j161cb698w969959be590e879c@mail.gmail.com>
+	<EEFAE8FE-0534-4EE9-93F5-20268FD95467@kuzo.csk.com>
+Message-ID: <45CD7FF2.1050004@diana.dti.ne.jp>
+
+佐原 伸 wrote:
+> 佐原です。
+> 
+> On 2007/02/09, at 16:02, Sako Hiroshi wrote:
+> 
+>> 酒匂です。
+>>
+>> message passing は
+>> 直訳としてはメッセージを送ること、渡すことですから素直に考えると
+>> メッセージ送信、メッセージ渡し、などになるのだと思います。
+> 
+> サッカー用語だとpassingは「通し」ですかね :-)
+
+パスを回すともいいますよね。メッセージ回し？
+
+//勝田
+
+From shinsahara ＠ shinsahara.com  Sat Feb 10 23:25:52 2007
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7272] Re: メッセージパッシング
+In-Reply-To: <45CD7FF2.1050004@diana.dti.ne.jp>
+References: <45CAB122.3030207@sra.co.jp>	<63ae6a8d0702082302j161cb698w969959be590e879c@mail.gmail.com>
+	<EEFAE8FE-0534-4EE9-93F5-20268FD95467@kuzo.csk.com>
+	<45CD7FF2.1050004@diana.dti.ne.jp>
+Message-ID: <D0844328-769D-4C5E-992B-1D81F082508C@shinsahara.com>
+
+佐原です。
+
+On 2007/02/10, at 17:18, KATTA Hitoshi wrote:
+
+> 佐原 伸 wrote:
+>> 佐原です。
+>>
+>> On 2007/02/09, at 16:02, Sako Hiroshi wrote:
+>>
+>>> 酒匂です。
+>>>
+>>> message passing は
+>>> 直訳としてはメッセージを送ること、渡すことですから素直に考え 
+>>> ると
+>>> メッセージ送信、メッセージ渡し、などになるのだと思います。
+>>
+>> サッカー用語だとpassingは「通し」ですかね :-)
+>
+> パスを回すともいいますよね。メッセージ回し？
+>
+> //勝田
+
+日本的サッカーですね :-)
+
+どうせなら、メッセージたらい回し :-)
+
+	93.7kg
+
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+
+From aoki ＠ sra.co.jp  Sun Feb 11 18:29:09 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7273] Jun721 for Smalltalk
+Message-ID: <45CEE1E5.606@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+オランダから届いた寄贈プログラムおよびドイツとスイスからの改
+善提案を組み込んで【Jun721】を作成しました。
+
+　　　　　　　　　　　　クラス数：    903
+　　　　　　　　　　　メソッド数： 30,921
+　　　　　　　　　　　ステップ数：412,056
+　　１メソッドあたりのステップ数：     13.3
+
+　　http://www.sra.co.jp/public/sra/technical/jun/
+　　ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+　　ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+フレームバッファ・オブジェクト拡張における画像化が高速になり
+ました。フレームバッファによる高速３次元描画が可能なディスプ
+レイアダプタ（グラフィックカード）を搭載しているマシンを使用
+しているならば、次のメッセージ式をぜひお試しください。
+
+　JunClassGraphUtility showBigCityOf: Object
+
+Windows Vista / XP / 2000 & VisualWorks 7.4.1 以上の組み合わ
+せのみの拡張となります。ただし、新しいバージョンの opengl32.
+dll ならびに glu32.dll をお使いください。
+
+　○最適：　opengl32.dll　5.1　OpenGL Client DLL
+　○最適：　glu32.dll 　　5.1　OpenGL Utility Library DLL
+
+　×不可：　opengl32.dll　4.0　OpenGL Client DLL
+　×不可：　glu32.dll 　　4.0　OpenGL Utility Library DLL
+
+また、テクスチャ・マッピングの描画を、より軽快に行う改善も施
+しました。
+
+さらに、材質（*.mtl）と物体（*.obj）のパーザも組み込んでいま
+す。サブセットですが、とても役に立つと思います。
+
+そして、幾何オブジェクトの文字列へのシリアライズ化（Ｓ式への
+変換）も強化しました。
+
+＃ヨーロッパの方々はプログラムコードをきちんと読んでいると思
+＃います。寄贈してくるコードの質も高いし量もあります。こちら
+＃に噛み砕く牙が無いと切羽詰ってしまうでしょうね。それにして
+＃も有り難や！感謝！です。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Mon Feb 12 04:53:47 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7274] Re: メッセージパッシング
+In-Reply-To: <45CAB122.3030207@sra.co.jp>
+References: <45CAB122.3030207@sra.co.jp>
+Message-ID: <45CF744B.40505@sra.co.jp>
+
+青木です。
+
+小松さん、酒匂さん、梅岡さん、佐原さん、佐々木さん、勝田さん、
+ありがとうございます。皆さんからの言葉遣いをリストしてみます。
+
+	メッセージ渡し
+	メッセージ委託
+	交信｜メッセージ交信
+	通信｜メッセージ通信
+	メッセージ回し
+	メッセージたらい回し
+
+	メッセージ送受
+	メッセージ配送
+	通流｜メッセージ通流
+	メッセージ通し
+
+日経ソフトウエア連載の第２回では、message passing の訳語とし
+て、メッセージ送信を用いましたが、１２月末を目標に浅岡さんと
+共著で書き下ろす新たな本では、できるかぎりパッシングの意味が
+上手く取れる（関数の呼び出しと見まごうのを避けるような）言葉
+遣いをしたいと思います。
+
+データの型…→それらをまとめた構造体…→その構造体に関数を付
+属させてカプセル化…→抽象データ型…→クラス＆インスタンス…
+→インヘリタンス…→ポリモーフィズム…→デザインパターン…→
+…という、今、一般プログラマに受け入れられているオブジェクト
+指向プログラミングから遠離（厭離）すること、それも書き綴ろう
+と考えています。
+
+Smalltalk で行解できる元々（そもそも）のオブジェクト指向プロ
+グラミングをめざします。message passing は鍵となる重要な言葉
+になりますから。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From takaoki ＠ aisoft.co.jp  Tue Feb 13 18:04:19 2007
+From: takaoki ＠ aisoft.co.jp (takaoki@aisoft.co.jp)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7275] Re: メッセージパッシング 
+In-Reply-To: Your message of "Thu, 08 Feb 2007 14:12:02 JST."
+	<45CAB122.3030207@sra.co.jp> 
+Message-ID: <200702130904.SAA06012@basashi.aisoft.co.jp>
+
+成田です。
+
+In message <45CAB122.3030207@sra.co.jp>you write:
+>じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+>にさせてください。message passing の良い日本語訳を捜してます。
+	:
+>Tomohiro Oda wrote:
+>> 計算モデル寄りの話ならメッセージ送受、
+>> 処理系実装寄りの話ならメッセージ配送、
+>> などはどうでしょう。
+>
+>なかなか！いい感じですね。伝送や推移そして経路や並行などが計
+>り知れる言葉が好ましいのです。
+
+「レシーブ、トス、スパイク」的にメッセージが「ポンッ...ボンッ...
+ポンッ...」とパスされて行く感が欲しいのですよね？
+
+既存の言葉であるのでしょうか？まさしく上に書かれている「伝送」が
+分解解釈すれば「伝え送る」のでそういう感じではあるのですが、躍動
+感には欠けるか？
+
+# 造語して経送とか継送とか、「並行」入れて継配送とか？なんかピン
+# とこんなぁ...
+
+--
+    Narita Takaoki @
+      Imaging Products Software Engineering Development Department,
+        IPSEDC, SEIKO EPSON CORPORATION
+    mailto:Narita.Takaoki@exc.epson.co.jp
+
+From umejava ＠ mars.dti.ne.jp  Wed Feb 14 20:30:10 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7276] Re: メッセージパッシング
+In-Reply-To: <45CF744B.40505@sra.co.jp>
+References: <45CAB122.3030207@sra.co.jp> <45CF744B.40505@sra.co.jp>
+Message-ID: <JY200702142030104.24729265@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+個人的には「メッセージ渡し」あたりが好きですね。
+あとは「メッセージ配信」、「メッセージ伝達」などはいかがでしょうか。
+
+AOKI Atsushi <aoki@sra.co.jp> wrote:
+> 青木です。
+> 
+> 小松さん、酒匂さん、梅岡さん、佐原さん、佐々木さん、勝田さん、
+> ありがとうございます。皆さんからの言葉遣いをリストしてみます。
+> 
+>   メッセージ渡し
+>   メッセージ委託
+>   交信｜メッセージ交信
+>   通信｜メッセージ通信
+>   メッセージ回し
+>   メッセージたらい回し
+> 
+>   メッセージ送受
+>   メッセージ配送
+>   通流｜メッセージ通流
+>   メッセージ通し
+> 
+
+---
+[:masashi | ^umezawa]
+
+
+From tomohiro ＠ sra.co.jp  Wed Feb 14 22:27:40 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7277] Re: メッセージパッシング
+In-Reply-To: <JY200702142030104.24729265@mars.dti.ne.jp>
+References: <45CAB122.3030207@sra.co.jp> <45CF744B.40505@sra.co.jp>
+	<JY200702142030104.24729265@mars.dti.ne.jp>
+Message-ID: <200702142227.40317.tomohiro@sra.co.jp>
+
+おだです。
+
+> あとは「メッセージ配信」、「メッセージ伝達」などはいかがでしょうか。
+
+メッセージ伝達はいいですね。
+神経伝達物質を介したシナプスの働きのイメージが
+OOでのオブジェクト間の協調結合のメタファーとして
+おもしろいと思いました。
+---
+おだ
+
+From masuda ＠ im.dendai.ac.jp  Thu Feb 15 00:38:17 2007
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7278] Re: メッセージパッシング
+In-Reply-To: <JY200702142030104.24729265@mars.dti.ne.jp>
+References: <45CAB122.3030207@sra.co.jp> <45CF744B.40505@sra.co.jp>
+	<JY200702142030104.24729265@mars.dti.ne.jp>
+Message-ID: <20070215.003817.74742347.masuda@im.dendai.ac.jp>
+
+出遅れました。
+
+メッセージ伝信 とか、メッセージ伝心 とかですかね。
+
+------
+〒101-8457 東京電機大学 工学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp            TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/ FAX 03-5280-3592
+It's more fun to compute!
+
+> From: Masashi Umezawa <umejava@mars.dti.ne.jp>
+> 
+> こんにちは
+> 梅澤です。
+> 
+> 個人的には「メッセージ渡し」あたりが好きですね。
+> あとは「メッセージ配信」、「メッセージ伝達」などはいかがでしょうか。
+> 
+> AOKI Atsushi <aoki@sra.co.jp> wrote:
+> > 青木です。
+> > 
+> > 小松さん、酒匂さん、梅岡さん、佐原さん、佐々木さん、勝田さん、
+> > ありがとうございます。皆さんからの言葉遣いをリストしてみます。
+> > 
+> >   メッセージ渡し
+> >   メッセージ委託
+> >   交信｜メッセージ交信
+> >   通信｜メッセージ通信
+> >   メッセージ回し
+> >   メッセージたらい回し
+> > 
+> >   メッセージ送受
+> >   メッセージ配送
+> >   通流｜メッセージ通流
+> >   メッセージ通し
+
+From shinsahara ＠ shinsahara.com  Thu Feb 15 01:26:34 2007
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7279] Re: メッセージパッシング
+In-Reply-To: <45CF744B.40505@sra.co.jp>
+References: <45CAB122.3030207@sra.co.jp> <45CF744B.40505@sra.co.jp>
+Message-ID: <4F3C9661-33FE-414D-9B1B-64E8EAB13F93@shinsahara.com>
+
+佐原です。
+
+On 2007/02/12, at 4:53, AOKI Atsushi wrote:
+
+> 青木です。
+>
+> 小松さん、酒匂さん、梅岡さん、佐原さん、佐々木さん、勝田さん、
+> ありがとうございます。皆さんからの言葉遣いをリストしてみます。
+>
+> 	メッセージ渡し
+> 	メッセージ委託
+> 	交信｜メッセージ交信
+> 	通信｜メッセージ通信
+> 	メッセージ回し
+> 	メッセージたらい回し
+>
+> 	メッセージ送受
+> 	メッセージ配送
+> 	通流｜メッセージ通流
+> 	メッセージ通し
+
+Mac上のOxford American Dictionariesによると、passで 
+Smalltalkのメッセージパッシングに近い意味は
+
+	[ trans. ] transfer (something) to someone, esp. by handing or  
+bequeathing it to the next person in a series
+
+なので、
+
+	移行、 移動、移転、運び、転嫁、転写、振替
+
+といった単語が対応し得ると思います。
+
+　感覚的には「運び」が良いなー。
+
+	運べない92.8kg
+
+
+
+> 日経ソフトウエア連載の第２回では、message passing の訳語 
+> とし
+> て、メッセージ送信を用いましたが、１２月末を目標に浅岡さんと
+> 共著で書き下ろす新たな本では、できるかぎりパッシングの意味が
+> 上手く取れる（関数の呼び出しと見まごうのを避けるような）言葉
+> 遣いをしたいと思います。
+>
+> データの型…→それらをまとめた構造体…→その構造体に関数を付
+> 属させてカプセル化…→抽象データ型…→クラス＆インスタンス…
+> →インヘリタンス…→ポリモーフィズム…→デザインパターン…→
+> …という、今、一般プログラマに受け入れられているオブジェクト
+> 指向プログラミングから遠離（厭離）すること、それも書き綴ろう
+> と考えています。
+>
+> Smalltalk で行解できる元々（そもそも）のオブジェクト指向プロ
+> グラミングをめざします。message passing は鍵となる重要な 
+> 言葉
+> になりますから。
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+
+From itoh-private ＠ itolab.com  Thu Feb 15 10:21:27 2007
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7280] Re: メッセージパッシング
+In-Reply-To: <45CAB122.3030207@sra.co.jp>
+References: <45CAB122.3030207@sra.co.jp>
+Message-ID: <45D3B597.9030301@itolab.com>
+
+伊藤です。こんにちは。
+
+やはりmessageには「メッセージ」を使わないとならないんですよね。
+「言伝て」というのは良い言葉だし意味合いも近いと思うんですが。
+
+AOKI Atsushi wrote:
+> > 青木です。
+> >
+> > 小松さん、酒匂さん、梅岡さん、佐原さん、佐々木さん、勝田さん、
+> > ありがとうございます。皆さんからの言葉遣いをリストしてみます。
+> >
+> > 	メッセージ渡し
+> > 	メッセージ委託
+> > 	交信｜メッセージ交信
+> > 	通信｜メッセージ通信
+> > 	メッセージ回し
+> > 	メッセージたらい回し
+> >
+> > 	メッセージ送受
+> > 	メッセージ配送
+> > 	通流｜メッセージ通流
+> > 	メッセージ通し
+> >
+> > 日経ソフトウエア連載の第２回では、message passing の訳語とし
+> > て、メッセージ送信を用いましたが、１２月末を目標に浅岡さんと
+> > 共著で書き下ろす新たな本では、できるかぎりパッシングの意味が
+> > 上手く取れる（関数の呼び出しと見まごうのを避けるような）言葉
+> > 遣いをしたいと思います。
+> >
+> > データの型…→それらをまとめた構造体…→その構造体に関数を付
+> > 属させてカプセル化…→抽象データ型…→クラス＆インスタンス…
+> > →インヘリタンス…→ポリモーフィズム…→デザインパターン…→
+> > …という、今、一般プログラマに受け入れられているオブジェクト
+> > 指向プログラミングから遠離（厭離）すること、それも書き綴ろう
+> > と考えています。
+> >
+> > Smalltalk で行解できる元々（そもそも）のオブジェクト指向プロ
+> > グラミングをめざします。message passing は鍵となる重要な言葉
+> > になりますから。
+> >
+> > ------------------------------------------------------------
+> > R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+> >
+> >
+> >
+
+
+
+From koubo2006 ＠ yengawa.jpn.org  Sun Feb 18 02:09:57 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7281] Re: メッセージパッシング
+In-Reply-To: <45CAB122.3030207@sra.co.jp>
+References: <45CAB122.3030207@sra.co.jp>
+Message-ID: <20070218004408.EE39.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+今更だし、ちょっと水を差すような気もして躊躇してましたが、いちおう一言い
+わせてください。
+
+概念が英語で固まっているならばカタカナ読みで表記するだけを支持します(つ
+まり「メッセージ・パッシング」)。
+
+日本語で読めると理解が速いかもしれませんが、容易に元のmessage passingに
+たどり着けるほうが後で他の国の人と議論したり調べたりするときに便利です。
+たとえ訳語がよく考えてあっても、他でいろいろな訳語が出てしまって否応無く
+混乱に巻き込まれることもあります。
+
+
+さらに、これと日本語の性質を考慮して元の動詞(pass)を日本語的に名詞化した
+「パスり」というのも考えました。
+「メッセのパスり」などとすれば、これからの世界を担う携帯世代にもウケる表
+現になると思いますよ;-)
+
+
+On Thu, 08 Feb 2007 14:12:02 +0900
+AOKI Atsushi <aoki@sra.co.jp> wrote:
+
+> 皆さんへ
+> 
+> じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+> にさせてください。message passing の良い日本語訳を捜してます。
+> 
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+> 
+> 
+> -------- Original Message --------
+> Subject: [Jun 5807] メッセージパッシング
+> Date: Wed, 07 Feb 2007 14:17:02 +0900
+> From: AOKI Atsushi
+> 
+> 青木です。
+> 
+> ちょっと術語の日本語訳で助力をお願いします。message passing
+> も、message sending も、共にメッセージ送信と訳されていると思
+> いますが、パッシングの意味をより強く表出するような言葉があり
+> ませんかね？
+> 
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From jsasaki ＠ coral.ocn.ne.jp  Sun Feb 18 03:34:28 2007
+From: jsasaki ＠ coral.ocn.ne.jp (Yoshiya Sasaki)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7282] Re: メッセージパッシング
+In-Reply-To: <20070218004408.EE39.KOUBO2006@yengawa.jpn.org>
+References: <45CAB122.3030207@sra.co.jp>
+	<20070218004408.EE39.KOUBO2006@yengawa.jpn.org>
+Message-ID: <45D74AB4.4040208@coral.ocn.ne.jp>
+
+佐々木です。
+
+　　前メールで「メッセージ通信」と書きましたが。
+
+　　横川さんの御意見並びに青木さんのもとメールを
+　　みて、考えたことです。（半分、眠りながら書いております）
+　　軽く読み流して頂ければとおもいます。
+
+>概念が英語で固まっているならばカタカナ読みで表記するだけを支持します(つ
+>まり「メッセージ・パッシング」)。
+>
+　　私も、比較的この考えに近いのですが。
+
+　　青木さん、曰く　『述語』に少しひかかっております。
+
+　　西欧文明（そこまで大げさな事をいわずとも、科学技術）を
+　　明治以来輸入してきた、日本ですが。
+　　その度に日本語の（学術）用語・述語を、その時代の識者が
+　　　創生して来たという歴史があります。
+　　
+　　一方で、カタカナという立派な表記方法も持っています。
+
+　　そこで、考えるに、日本原産でない概念に無理な漢字述語を
+　　創生いたすのは、如何なものでしょうか。
+
+　　　＊少なくとも、1975年頃まで、Informationの訳語である
+　　　　　『情報』という言葉には、日本語として否定的な
+　　　　　感覚があったことを、しっております。
+　　　　　1960年代（万博前ですね）には、論外でしたよね。
+
+　　　＊とはいえ、最近の『IT』って言葉の流行も、違和感がありますが。
+　　　　　
+　　　眠る前の、まとまらないメールで申し訳御座いません。
+
+佐々木　由也（Sasaki　Yoshiya）
+　
+
+
+
+Koji Yokokawa wrote:
+
+>横川です。
+>今更だし、ちょっと水を差すような気もして躊躇してましたが、いちおう一言い
+>わせてください。
+>
+>概念が英語で固まっているならばカタカナ読みで表記するだけを支持します(つ
+>まり「メッセージ・パッシング」)。
+>
+>日本語で読めると理解が速いかもしれませんが、容易に元のmessage passingに
+>たどり着けるほうが後で他の国の人と議論したり調べたりするときに便利です。
+>たとえ訳語がよく考えてあっても、他でいろいろな訳語が出てしまって否応無く
+>混乱に巻き込まれることもあります。
+>
+>
+>さらに、これと日本語の性質を考慮して元の動詞(pass)を日本語的に名詞化した
+>「パスり」というのも考えました。
+>「メッセのパスり」などとすれば、これからの世界を担う携帯世代にもウケる表
+>現になると思いますよ;-)
+>
+>
+>On Thu, 08 Feb 2007 14:12:02 +0900
+>AOKI Atsushi <aoki@sra.co.jp> wrote:
+>
+>  
+>
+>>皆さんへ
+>>
+>>じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+>>にさせてください。message passing の良い日本語訳を捜してます。
+>>
+>>------------------------------------------------------------
+>>R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>>
+>>
+>>-------- Original Message --------
+>>Subject: [Jun 5807] メッセージパッシング
+>>Date: Wed, 07 Feb 2007 14:17:02 +0900
+>>From: AOKI Atsushi
+>>
+>>青木です。
+>>
+>>ちょっと術語の日本語訳で助力をお願いします。message passing
+>>も、message sending も、共にメッセージ送信と訳されていると思
+>>いますが、パッシングの意味をより強く表出するような言葉があり
+>>ませんかね？
+>>
+>>------------------------------------------------------------
+>>R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>>    
+>>
+>
+>-- !
+>Koji Yokokawa <koubo2006@yengawa.jpn.org>
+>    http://yengawa.com/
+>    ^self new!
+>
+>
+>  
+>
+
+
+From masuda ＠ im.dendai.ac.jp  Sun Feb 18 08:53:43 2007
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7283] Re: メッセージパッシング
+In-Reply-To: <20070218004408.EE39.KOUBO2006@yengawa.jpn.org>
+References: <45CAB122.3030207@sra.co.jp>
+	<20070218004408.EE39.KOUBO2006@yengawa.jpn.org>
+Message-ID: <200702180853.GDG51417.ENBTBV@im.dendai.ac.jp>
+
+増田＠電大です。
+
+"[SML 7281] Re: メッセージパッシング" において、
+"Koji Yokokawa <koubo2006@yengawa.jpn.org>"さんは書きました：
+
+> 概念が英語で固まっているならばカタカナ読みで表記するだけを支持します(つ
+> まり「メッセージ・パッシング」)。
+
+これには反対しておきます。初心者や分野が違う人が意味を調べたいときにカ
+タカナになっているとお手上げだからです。コンピュータ関係の語はカタカナ
+だらけでわからん、元の綴りもわからんから調べられんとよく言われます。
+
+> 日本語で読めると理解が速いかもしれませんが、容易に元のmessage passingに
+> たどり着けるほうが後で他の国の人と議論したり調べたりするときに便利です。
+> たとえ訳語がよく考えてあっても、他でいろいろな訳語が出てしまって否応無く
+> 混乱に巻き込まれることもあります。
+
+原語が示されていればそちらで調べることができますので、message passing 
+のまま、もしくは メッセージパッシング (message passing) の方が親切だと
+思います。
+
+------
+〒101-8457 東京電機大学 工学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp            TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7emasuda/ FAX 03-5280-3592
+It's more fun to compute!
+
+From aoki ＠ sra.co.jp  Sun Feb 18 14:56:43 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7284] Jun723 for Smalltalk
+Message-ID: <45D7EA9B.2060604@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+先ほど【Jun723】のアップロードを完了しました。
+
+http://www.sra.co.jp/public/sra/technical/jun/
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+様々な色彩立体を用意しています。（次のウェブページを参照）
+
+http://www.sra.co.jp/people/aoki/Jun/Topics/ColorBodies/
+
+	1) colorBox (colorCube)
+	2) colorBevel (colorCone)
+	3) colorBall (colorBall: 4)
+	4) colorTorus
+	5) colorMobius
+	6) colorMobiusStrip
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From koubo2006 ＠ yengawa.jpn.org  Mon Feb 19 01:32:53 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7285] Re: メッセージパッシング
+In-Reply-To: <200702180853.GDG51417.ENBTBV@im.dendai.ac.jp>
+References: <20070218004408.EE39.KOUBO2006@yengawa.jpn.org>
+	<200702180853.GDG51417.ENBTBV@im.dendai.ac.jp>
+Message-ID: <20070219011018.EE3C.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+
+On Sun, 18 Feb 2007 08:53:43 +0900
+Hidetaka MASUDA <masuda@im.dendai.ac.jp> wrote:
+
+> 増田＠電大です。
+> 
+> "[SML 7281] Re: メッセージパッシング" において、
+> "Koji Yokokawa <koubo2006@yengawa.jpn.org>"さんは書きました：
+> 
+> > 概念が英語で固まっているならばカタカナ読みで表記するだけを支持します(つ
+> > まり「メッセージ・パッシング」)。
+> 
+> これには反対しておきます。初心者や分野が違う人が意味を調べたいときにカ
+> タカナになっているとお手上げだからです。コンピュータ関係の語はカタカナ
+> だらけでわからん、元の綴りもわからんから調べられんとよく言われます。
+
+確かに、よく出来た熟語は初めて見ても意味がなんとなく推測できる利点があり
+ますね。
+
+カタカナでは元の綴りがわからないこともあるのも確かです。でも、message
+sendingとの混同くらいは容易に避けられるようになります。
+
+その分野を初めて学ぶ人向けか、ある程度知っている人向けかで代えるといいの
+かもしれません。
+
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+

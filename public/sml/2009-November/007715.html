@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7715] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207715%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRvIEhUTUw%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVckRyQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=1bc06fd30911150403x43eb71av881eb2143053b98a%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007714.html">
+   <LINK REL="Next"  HREF="007716.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7715] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207715%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRvIEhUTUw%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVckRyQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=1bc06fd30911150403x43eb71av881eb2143053b98a%40mail.gmail.com"
+       TITLE="[SML 7715] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 11月 15日 (日) 22:45:42 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007714.html">[SML 7714] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+        <LI>次の記事 <A HREF="007716.html">[SML 7716] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7715">[ 日付 ]</a>
+              <a href="thread.html#7715">[ スレッド ]</a>
+              <a href="subject.html#7715">[ 件名 ]</a>
+              <a href="author.html#7715">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎治 さんは書きました:
+&gt;<i> 私もようやく皆さんに見て頂けるレベルのコードになったので、
+</I>&gt;<i> プログラムをポストします。SUnitのテストケース付きです。
+</I>
+xUnit（SUnitやJUnitなど）での単体テスト法。濱崎さんらしい。
+
+&gt;<i> （といってもHTML周りはテストを書いていません。complete.htmlと
+</I>&gt;<i> プログラムが出力するindex.htmlをdiffで比較して、テストしていま
+</I>&gt;<i> したので。）
+</I>
+なるほど、出力結果を維持しむ回帰テスト法。こちらも濱崎さんら
+しい。
+
+&gt;<i>  (^^;; Junがやって
+</I>&gt;<i> いることを自力で書くのも勉強になると思ってやってみました。）
+</I>
+とてもいいことです。不遜な物言いかもしれませんが、このMLを読
+んでいる皆さんにも濱崎さんのようにやっていただきたいと願って
+おります。
+
+emacsをご利用の方々が多いと思います。そのemacsのソースコード
+を垣間見て、自分で書き直して勉強しようとした人がいます。Java
+を作成したGoslingさんにはGosling Emacsがあり、彼も書き直しな
+がら勉強したひとりです。Greenbergさんも同様ですね。
+
+使うだけ（利用ばかり）ではいけません。技術を志す人には、同じ
+ものを自分で書き直してみるプロセスを踏むことが大薬になります。
+
+世の中、フレームワークの嵐ですが、こちらも使うだけ（利用ばか
+り）ではどうしようもありません。それこそマスタープランになっ
+てしまい、金太郎飴。フレームワークやパターンが本来にめざした
+ことではなくなってしまいます。
+
+&gt;<i> このCSVからHTMLへの変換の課題のポイントは、
+</I>&gt;<i> ・CSVとHTMLに関する知識をアプリケーションのロジックから
+</I>&gt;<i> 　如何に分離するか？
+</I>&gt;<i> 　うまく分離出来るとCSVやHTMLに関するコードが汎用的な
+</I>&gt;<i> 　ものになって再利用することが出来る。
+</I>&gt;<i> ・CSVの表の形式と、HTMLの表の形式の違いをアプリケーションの
+</I>&gt;<i> 　ロジックで如何に変換するか？
+</I>&gt;<i> 　巧くやらないとロジックが複雑になり、将来表の形式を変えたく
+</I>&gt;<i> 　なった時にプログラムの変更が大変になる。
+</I>&gt;<i> だと思っています。これらのポイントを考えてクラスの分割をして
+</I>&gt;<i> みました。クラス名の最初にCSV,HTML,PrimeMinisterをつけて
+</I>&gt;<i> 分離を明確にしてあります。
+</I>
+仰せの通りです。プログラムコードを拝見して分離されていること
+を確認しました。
+
+&gt;<i> では、次回勉強会の時にでもご意見を頂けるとありがたいです。
+</I>
+次回(12月02日)の勉強会にて、critiquingの対象プログラムといた
+しませう。有り難うございます。
+
+３回にわたる簡単な課題の解決ですが、これで今年の勉強会は有終
+の美（師走）を迎えますね。hirowadendenさんと濱崎さん、お二人
+に感謝いたします。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007714.html">[SML 7714] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+	<LI>次の記事 <A HREF="007716.html">[SML 7716] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7715">[ 日付 ]</a>
+              <a href="thread.html#7715">[ スレッド ]</a>
+              <a href="subject.html#7715">[ 件名 ]</a>
+              <a href="author.html#7715">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

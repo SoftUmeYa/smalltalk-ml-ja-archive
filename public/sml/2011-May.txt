@@ -1,0 +1,380 @@
+From x19290 ＠ gmail.com  Sun May  8 10:48:53 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sun, 08 May 2011 10:48:53 +0900
+Subject: [SML 7924]
+ Pharo上での簡単なプラグイン作成手順をまとめました
+Message-ID: <4DC5F685.1040109@gmail.com>
+
+こんにちは。
+
+Pharo + Debian系のGNU/Linuxで、いちばん簡単な外部プラグインを作る手順を
+例によって拙ブログにまとめました。
+http://19290.net/wpmu/blog/2011/05/building-simplest-pharo-plugin-on-debian-gnu-linux.html
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+
+From x19290 ＠ gmail.com  Sun May  8 10:51:29 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sun, 08 May 2011 10:51:29 +0900
+Subject: [SML 7925]
+ Pharo上での簡単なプラグイン作成手順をまとめました
+Message-ID: <4DC5F721.9000002@gmail.com>
+
+こんにちは。先程は、UTF-8で送ってしまったので、念のため再送します。
+
+Pharo + Debian系のGNU/Linuxで、いちばん簡単な外部プラグインを作る手順を
+例によって拙ブログにまとめました。
+http://19290.net/wpmu/blog/2011/05/building-simplest-pharo-plugin-on-debian-gnu-linux.html
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+From abee ＠ squeakland.jp  Sun May  8 15:54:58 2011
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sun, 8 May 2011 15:54:58 +0900
+Subject: [SML 7926]
+	オブジェクト指向の思想と方法論
+Message-ID: <BANLkTimzLBZgSwJ-EA7=mZ6z6X7eN-PFsw@mail.gmail.com>
+
+こんにちは、阿部です。
+私も関係している「かわうそ兄弟商會」(本業は藍染製品)のサイトで、羽生田栄一さんが20年前に「TURING
+MACHINE」誌に連載した「オブジェクト指向の思想と方法論」の公開を始めました。
+http://www.kawauso.co.jp/OOHanyuda
+当時の雰囲気がよくわかります。どうぞお読みください。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed May 11 07:36:09 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 11 May 2011 07:36:09 +0900
+Subject: [SML 7927] Re:
+ 第31回Smalltalk勉強会＠京都
+In-Reply-To: <4DB7ECC8.8040807@cc.kyoto-su.ac.jp>
+References: <4DB7ECC8.8040807@cc.kyoto-su.ac.jp>
+Message-ID: <4DC9BDD9.3090501@cc.kyoto-su.ac.jp>
+
+本日です！
+
+--- 青木淳
+
+(11/04/27 19:15), AOKI Atsushi wrote:
+> 2週間後になりますが、第31回Smalltalk勉強会＠京都を開催します。
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto31
+> 
+> 場所はキャンプラ6階の第3講習室になります。
+> 
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+> 
+> 第31回 Smalltalk勉強会＠京都
+> 日時：2011年05月11日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 窓MVCの続きを行ってゆきたいと思います。コンポジットパートや
+> 各種ラッパー、そして、レイアウトフレームなどにフォーカスしま
+> す。その上で、インタフェースビルダであるキャンバスでウィンド
+> ウ仕様を用いてみましょう。ノート型のパーソナルコンピュータ
+> （Windows 7 または Mac OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu May 12 06:40:35 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 12 May 2011 06:40:35 +0900
+Subject: [SML 7928] Re:
+ 第31回Smalltalk勉強会＠京都
+In-Reply-To: <4DC9BDD9.3090501@cc.kyoto-su.ac.jp>
+References: <4DB7ECC8.8040807@cc.kyoto-su.ac.jp>
+ <4DC9BDD9.3090501@cc.kyoto-su.ac.jp>
+Message-ID: <4DCB0253.7080706@cc.kyoto-su.ac.jp>
+
+昨夜はJR京都駅前のキャンパスプラザ京都にお集まりいただきまし
+て、ありがとうございました。
+
+昨夜の勉強会で作成したプログラムを、以下のページに載せました。
+安田豊さんからの勉強ログも収録してあります。このログはすごい。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto31
+
+安田さん曰く「毎度のログです。今回も文字でなくスクリーン（画
+像）を追うことが多くてログ取りはなかなか難でした。。。いい修
+行になっています。。。(x_x!)」。
+
+そして、今月の勉強会には、なんと！酒匂寛さんがいらっしゃいま
+した。先月の梅澤真史さんに引き続き、東京からのお客さま。有り
+難いことです。以前には佐原伸さんや大島芳樹さんもいらっしゃい
+ましたしね。
+
+【酒匂さんの著作のご紹介】
+http://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=%83J%83%5E%83J%83i&url=search-alias%3Daps&field-keywords=%8E%F0%93%F5%8A%B0&x=0&y=0
+
+【梅澤さんの著作のご紹介】
+http://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=%83J%83%5E%83J%83i&url=search-alias%3Daps&field-keywords=%94%7E%E0V%90%5E%8Ej&x=0&y=0
+
+【佐原さんの著作のご紹介】
+http://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=%83J%83%5E%83J%83i&url=search-alias%3Daps&field-keywords=%8D%B2%8C%B4%90L&x=0&y=0
+
+【大島さんの著作のご紹介】
+http://www.amazon.co.jp/dp/4872902114/
+
+京都産業大学からも若者たちの参加がありますので、いと、うれし。
+
+そうそう、京都大学大学院の宮坂さんより、ご指摘をいただいたこ
+とを書き記します。Mac OS X で Smalltalk (VisualWorks) を立ち
+上げるための以下の AppleScript ですが、
+
+tell application "Finder"
+	set aPath to get (path to me)
+	set aFolder to get (folder of aPath as Unicode text)
+	set aFolder to get (aFolder & "VisualWorksWithJun")
+	set aDirectory to get (POSIX path of aFolder)
+end tell
+set aShellScript to "(cd " & aDirectory & "; ./visual.app/Contents/MacOS/visual ./visualnc.im 2>/dev/null)"
+do shell script aShellScript
+
+上記の「POSIX path」のくだりを、「quoted form プロパティ」で
+ラップしたほうが無難だそうです。フォルダへのパスの中にスペー
+ス（ブランク）などの文字が含まれる場合にも対応できますのでね。
+
+詳しくは次のページの「テキストの扱い」のあたりを参照してくだ
+さいませ。http://developer.apple.com/jp/technotes/tn2065.html#Section4
+
+以上、昨夜のSmalltalk勉強会@京都の報告でした。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From ume ＠ softumeya.com  Wed May 18 15:57:04 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 18 May 2011 15:57:04 +0900
+Subject: [SML 7929]
+	Appleストア銀座でSmalltalkセミナ
+Message-ID: <BANLkTim4ifqY=md=Hqo8M+2oHpRCAVVpQw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+このたびAppleストア銀座でObjective-Cな人向けにCincom Smalltalkの紹介セミナをすることになりました。
+http://www.cincom.co.jp/products/seminar/smalltalk_seminar.html
+
+Objective-CとSmalltalkとの共通点はよく語られるところですが、Smalltalk側からの視点でというのはあまりないと思います。
+皆さんにとっても興味深いものになるのではないでしょうか。
+
+さらに、特典として(?)、最近入手しにくくなってしまったNC版のVisualWorks(最新の7.8です)もその場で申し込めます。
+
+27(金) 19:00からです。無料ですので、会社帰りなどにふらっとどうぞ。
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed May 18 21:34:46 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 18 May 2011 21:34:46 +0900
+Subject: [SML 7930] Re:
+ Appleストア銀座でSmalltalkセミナ
+In-Reply-To: <BANLkTim4ifqY=md=Hqo8M+2oHpRCAVVpQw@mail.gmail.com>
+References: <BANLkTim4ifqY=md=Hqo8M+2oHpRCAVVpQw@mail.gmail.com>
+Message-ID: <4DD3BCE6.6040402@cc.kyoto-su.ac.jp>
+
+おきばりやしとくれやす。
+
+--- 青木淳＠京都宇治
+
+(11/05/18 15:57), Masashi Umezawa wrote:
+> こんにちは
+> 梅澤です。
+> 
+> このたびAppleストア銀座でObjective-Cな人向けにCincom Smalltalkの紹介セミナをすることになりました。
+> http://www.cincom.co.jp/products/seminar/smalltalk_seminar.html
+> 
+> Objective-CとSmalltalkとの共通点はよく語られるところですが、Smalltalk側からの視点でというのはあまりないと思います。
+> 皆さんにとっても興味深いものになるのではないでしょうか。
+> 
+> さらに、特典として(?)、最近入手しにくくなってしまったNC版のVisualWorks(最新の7.8です)もその場で申し込めます。
+> 
+> 27(金) 19:00からです。無料ですので、会社帰りなどにふらっとどうぞ。
+> 
+> ではでは。
+
+
+From shinsahara ＠ shinsahara.com  Thu May 19 11:22:55 2011
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Thu, 19 May 2011 11:22:55 +0900
+Subject: [SML 7931] Re:
+ Appleストア銀座でSmalltalkセミナ
+In-Reply-To: <4DD3BCE6.6040402@cc.kyoto-su.ac.jp>
+References: <BANLkTim4ifqY=md=Hqo8M+2oHpRCAVVpQw@mail.gmail.com>
+ <4DD3BCE6.6040402@cc.kyoto-su.ac.jp>
+Message-ID: <1DEB9D17-9E01-4359-8EF2-F79162C82239@shinsahara.com>
+
+佐原です。
+
+京都語がよく分かりませんが、武蔵野語では「参加しろ」という意味かと解釈し、申し込みました :-)
+
+On 2011/05/18, at 21:34, AOKI Atsushi wrote:
+
+> おきばりやしとくれやす。
+> 
+> --- 青木淳＠京都宇治
+> 
+> (11/05/18 15:57), Masashi Umezawa wrote:
+>> こんにちは
+>> 梅澤です。
+>> 
+>> このたびAppleストア銀座でObjective-Cな人向けにCincom Smalltalkの紹介セミナをすることになりました。
+>> http://www.cincom.co.jp/products/seminar/smalltalk_seminar.html
+>> 
+>> Objective-CとSmalltalkとの共通点はよく語られるところですが、Smalltalk側からの視点でというのはあまりないと思います。
+>> 皆さんにとっても興味深いものになるのではないでしょうか。
+>> 
+>> さらに、特典として(?)、最近入手しにくくなってしまったNC版のVisualWorks(最新の7.8です)もその場で申し込めます。
+>> 
+>> 27(金) 19:00からです。無料ですので、会社帰りなどにふらっとどうぞ。
+>> 
+>> ではでは。
+> 
+
+
+
+------------------------------------------------------------------------
+Shin Sahara
+Senior Consultant
+Planning Section - 1, Development Department, Development Division
+CSK Corporation
+E-Mail: ss @ shinsahara.com(I can read anywhere), shin-sahara @ kuzo.csk.com (I can read in CSK only)
+Phone: +81-3-3479-9021
+Mobile:  +81-80-1114-3378(in the world), +81-80-3089-7518(in the world),
+------------------------------------------------------------------------
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu May 19 14:01:02 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 19 May 2011 14:01:02 +0900
+Subject: [SML 7932] Re:
+ Appleストア銀座でSmalltalkセミナ
+In-Reply-To: <1DEB9D17-9E01-4359-8EF2-F79162C82239@shinsahara.com>
+References: <BANLkTim4ifqY=md=Hqo8M+2oHpRCAVVpQw@mail.gmail.com>
+ <4DD3BCE6.6040402@cc.kyoto-su.ac.jp>
+ <1DEB9D17-9E01-4359-8EF2-F79162C82239@shinsahara.com>
+Message-ID: <4DD4A40E.4080501@cc.kyoto-su.ac.jp>
+
+(11/05/19 11:22), Shin Sahara from Home wrote:
+> 京都語がよく分かりませんが、武蔵野語では「参加しろ」という意味かと解釈し、申し込みました :-)
+
+That's it! :-)
+
+--- AOKI Atsushi
+
+From shinsahara ＠ shinsahara.com  Thu May 19 16:33:58 2011
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Thu, 19 May 2011 16:33:58 +0900
+Subject: [SML 7933] Re:
+ Appleストア銀座でSmalltalkセミナ
+In-Reply-To: <4DD4A40E.4080501@cc.kyoto-su.ac.jp>
+References: <BANLkTim4ifqY=md=Hqo8M+2oHpRCAVVpQw@mail.gmail.com>
+ <4DD3BCE6.6040402@cc.kyoto-su.ac.jp>
+ <1DEB9D17-9E01-4359-8EF2-F79162C82239@shinsahara.com>
+ <4DD4A40E.4080501@cc.kyoto-su.ac.jp>
+Message-ID: <6264A5A4-9C8B-4D89-933E-1B36CC1ABD8D@shinsahara.com>
+
+佐原です。
+
+Michael Jackson語も、どのMichael Jacksonが言ったかで意味が異なるので、難しいなー :-)
+もっとも、今、生きてるのはソフトウェア界のMichael Jacksonだけかー...
+
+On 2011/05/19, at 14:01, AOKI Atsushi wrote:
+
+> (11/05/19 11:22), Shin Sahara from Home wrote:
+>> 京都語がよく分かりませんが、武蔵野語では「参加しろ」という意味かと解釈し、申し込みました :-)
+> 
+> That's it! :-)
+> 
+> --- AOKI Atsushi
+> 
+
+
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss @ shinsahara.com    http://shinsahara.com
+Mobile:  +81-80-1114-3378(in the world), +81-80-3089-7518(in the world)
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+From ume ＠ softumeya.com  Fri May 20 12:32:11 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 20 May 2011 12:32:11 +0900
+Subject: [SML 7934]
+	第32回Smalltalk勉強会のお知らせ
+Message-ID: <BANLkTikuac09poLsVFEONU-SQycQYP27Mw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/5/30(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai32kaismalltalkbenkyoukai
+
+今回のテーマは「Pharo」です。
+27日にAppleでのセミナがあるので、新しい人向けに組み込みのProfStefを使ってチュートリアル的なことをしようと思います。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed May 25 10:55:26 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 25 May 2011 10:55:26 +0900
+Subject: [SML 7935]
+ 第32回Smalltalk勉強会＠京都
+Message-ID: <4DDC618E.6090506@cc.kyoto-su.ac.jp>
+
+第32回Smalltalk勉強会＠京都を開催します。
+万障繰り合わせてJR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto32
+
+場所はキャンプラ2階の第3会議室になります。（場所が一時的に変わりますので、ご注意を）
+
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+
+第32回 Smalltalk勉強会＠京都
+日時：2011年06月01日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第3会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+窓MVCのアプリケーションモデルであるPaneExample、そして、
+窓MVCのモデルであるPaneModelを中心に一緒にプログラミングしてゆきます。
+画像の読み書き、高速な拡大縮小、整列法などを会得しましょう。
+ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+

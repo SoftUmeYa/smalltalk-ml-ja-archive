@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4393] Re: SqueakDBXの導入について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204393%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0RCWBskQiROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRjNGfiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004395.html">
+   <LINK REL="Next"  HREF="004391.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4393] Re: SqueakDBXの導入について</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204393%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0RCWBskQiROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRjNGfiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4393] Re: SqueakDBXの導入について">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2009年 10月 30日 (金) 00:09:21 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004395.html">[Squeak-ja: 4395] Re: 日本語版SqueakとEtoyの違い
+</A></li>
+        <LI>次の記事 <A HREF="004391.html">[Squeak-ja: 4391] Re: Smalltalk合同勉強会@名古屋
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4393">[ 日付 ]</a>
+              <a href="thread.html#4393">[ スレッド ]</a>
+              <a href="subject.html#4393">[ 件名 ]</a>
+              <a href="author.html#4393">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+発生しているエラーについてですが、SqueakDebug.logというファイルが書かれて
+いるはずですので、まずはそれを添付してもらうとよいのではないでしょうか。
+
+もしくはDebugReportをインストールしておくと、さらに詳しい情報をダンプ
+できますのでお勧めです。(MLに送るにはちょっと大きすぎるかもしれませんが)
+<A HREF="http://squeaksource.blueplane.jp/DebugReport.html">http://squeaksource.blueplane.jp/DebugReport.html</A>
+<A HREF="http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt">http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt</A>
+
+SqueakDBXですが、日本語環境ではわたしも試したことがありませんので、果たして
+うまくつながるのか、非常に興味があります。
+
+daisuke yamashita &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">y.daisuke.homeaddres ＠ gmail.com</A>&gt; wrote:
+&gt;<i> 初めまして。
+</I>&gt;<i> 
+</I>&gt;<i> ヤマシタと申します。
+</I>&gt;<i> 
+</I>&gt;<i> 最近、squeakを始めました、初心者です。
+</I>&gt;<i> その中で、SqueakDBXを使用してDB(Postgres)操作をしたいと思っています。
+</I>&gt;<i> すでにOpenDBXは導入しているのですが、DBにconnectしようとすると、エラーが発生します。
+</I>&gt;<i> なんとか解決しようと試みましたが解決できず、お力をお貸し頂ければと思い投稿致しました。
+</I>&gt;<i> 
+</I>&gt;<i> 環境：MacOSX 10.6.1
+</I>&gt;<i> DB; PostgreSQL 8.4.1 ソースコンパイル（configureオプションなし)
+</I>&gt;<i> 使用Squeak:  SeasideJOne-090425-plusDB
+</I>&gt;<i> 他: pgAdminで接続できるのは確認済み。 PostgresはPostmasterによるDaemon起動 -i　オプション付き
+</I>&gt;<i> 
+</I>&gt;<i> OpenDBXの導入手順は以下に記載しました。
+</I>&gt;<i> <A HREF="http://d.hatena.ne.jp/dai_yamashita/20091015/1255617048">http://d.hatena.ne.jp/dai_yamashita/20091015/1255617048</A>
+</I>&gt;<i> 
+</I>&gt;<i> 他、以下に記載されているMacでのVW内にシンボリックリンクは設定。
+</I>&gt;<i> （他は場所がさがしたのですが、不明のため設定できず。squeakdbxに最近つながるようになって設定をみれましたw）
+</I>&gt;<i> <A HREF="http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX">http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX</A>
+</I>&gt;<i> 
+</I>&gt;<i> 以下がコードです。
+</I>&gt;<i> connectionSettings := DBXConnectionSettings host: '127.0.0.1' port:
+</I>&gt;<i> '5432' database: 'dbname'  userName: 'user' userPassword: 'pass'.
+</I>&gt;<i> 
+</I>&gt;<i> conn := DBXConnection platform: DBXPostgresPlatform new settings:
+</I>&gt;<i> connectionSettings.
+</I>&gt;<i> 
+</I>&gt;<i> conn connect. &lt;= エラー発生
+</I>&gt;<i> 
+</I>&gt;<i> Error内容(全部のdumpをするにはどうしたらよいか不明です。。。）
+</I>&gt;<i> OpenDBXMacOSX(object)&gt;&gt;error:
+</I>&gt;<i> 
+</I>&gt;<i> inspectでみるとconnでresultがnilなので、初期の設定等に問題があると思うのですが。。。
+</I>&gt;<i> 他、情報の不足等があり、不明な点で切り分けができない等がありましたら、ご指摘頂ければ幸いです。
+</I>&gt;<i> 
+</I>&gt;<i> 以上、何卒よろしくお願い致します。
+</I>&gt;<i> また、今後学んでいくにあたり、どうしても自分で解決できない点がありましたら、お力沿え頂ければ幸いです。
+</I>
+
+
+---
+[:masashi | ^umezawa]
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004395.html">[Squeak-ja: 4395] Re: 日本語版SqueakとEtoyの違い
+</A></li>
+	<LI>次の記事 <A HREF="004391.html">[Squeak-ja: 4391] Re: Smalltalk合同勉強会@名古屋
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4393">[ 日付 ]</a>
+              <a href="thread.html#4393">[ スレッド ]</a>
+              <a href="subject.html#4393">[ 件名 ]</a>
+              <a href="author.html#4393">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

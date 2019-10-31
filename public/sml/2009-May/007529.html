@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7529] Re: Cincom Smalltalk Daily: 11/1/06に関して
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207529%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IENpbmNvbSBTbWFsbHRhbGsgRGFpbHk6%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FIDExLzEvMDYbJEIkSzRYJDckRhsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007526.html">
+   <LINK REL="Next"  HREF="007527.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7529] Re: Cincom Smalltalk Daily: 11/1/06に関して</H1>
+    <B>Akinori Sugitani</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207529%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IENpbmNvbSBTbWFsbHRhbGsgRGFpbHk6%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FIDExLzEvMDYbJEIkSzRYJDckRhsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7529] Re: Cincom Smalltalk Daily: 11/1/06に関して">asugitan ＠ kh.rim.or.jp
+       </A><BR>
+    <I>2009年 5月  2日 (土) 14:58:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007526.html">[SML 7526] Re: Cincom Smalltalk Daily: 11/1/06に関して
+</A></li>
+        <LI>次の記事 <A HREF="007527.html">[SML 7527] Re: オーバロードはポリモフィズムか?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7529">[ 日付 ]</a>
+              <a href="thread.html#7529">[ スレッド ]</a>
+              <a href="subject.html#7529">[ 件名 ]</a>
+              <a href="author.html#7529">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎さん、コメントありがとうございます。
+濱崎治さんは書きました:
+&gt;<i>杉谷さんのメールを読むまで、こんなのがあるのを知りませんでした。
+</I>毎日みているわけではありませんが、Cincom Smalltalk Dailyは自分にはとても参考になります。
+
+&gt;<i>以下の理由により、どちらでも動作するようです。
+</I>&gt;<i> １．QueryExecutor class&gt;&gt;executeQueryが
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>　　　^self new executeQuery: aQuery
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>　　と書かれており、QueryExecutorのインスタンスもクラスも、どちらも同じメッセージに
+</I>&gt;<i>　　同じように応答できる。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>２．QueryExecutorの４つのインスタンス変数のうち、query,result,connectionは、#executeQuery:の
+</I>&gt;<i>　　中（およびそこから呼び出されるメソッドの中）で、参照される前に何らかの値がセットされる。
+</I>&gt;<i>　　また、インスタンス変数connectionClassは#initializeで初期化された後、書き換えられる事がない。
+</I>&gt;<i>　　したがって、QueryExecutor&gt;&gt;executeQuery:（インスタンスの方のメソッド）が再使用可能に
+</I>&gt;<i>　　なっている。（ビデオには映っていませんが、QueryExecutor class&gt;&gt;newが自動生成されていて、
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>　　　　^super new initialize
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>　　と書かれていると思います。）
+</I>実際にそうなっています。
+
+&gt;<i>「本来どう書くべきか」はよく分かりません。
+</I>&gt;<i>でも、今後の展開（コネクションを維持したまま複数のクエリを実行するように拡張する、など）を
+</I>&gt;<i>考えると、
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>　　self queryExecutor: QueryExecutor new
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>としておく方が良いように私は思います。
+</I>詳細な解説ありがとうございます。残念ながら濱崎さんの書かれたことが完全には理解できていないのですが、
+なんとなく解った気がします。「Smalltalk勉強会＠京都」等を通じてもっとSmalltalkのコードが読めるように、
+なっていきたいと思っています。 
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007526.html">[SML 7526] Re: Cincom Smalltalk Daily: 11/1/06に関して
+</A></li>
+	<LI>次の記事 <A HREF="007527.html">[SML 7527] Re: オーバロードはポリモフィズムか?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7529">[ 日付 ]</a>
+              <a href="thread.html#7529">[ スレッド ]</a>
+              <a href="subject.html#7529">[ 件名 ]</a>
+              <a href="author.html#7529">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

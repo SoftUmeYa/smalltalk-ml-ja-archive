@@ -1,0 +1,488 @@
+From tomohiro ＠ sra.co.jp  Sat Apr  7 10:09:57 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7296] Natural Smalltalk,
+	a natural language processing library on/against Squeak
+Message-ID: <200704071009.57513.tomohiro@sra.co.jp>
+
+おだです。
+
+Smalltalkや英語のテキストを自然言語処理の技術で分析する
+Squeak上のツールライブラリ Natural Smalltalkを開発しま
+したので公開します。
+
+http://map.squeak.org/package/624ed871-4e89-4343-8652-af38a873d0b4/autoversion/1
+
+Smalltalk（に限らずプログラミング言語）の自然言語的な側面
+に興味があり、Smalltalkプログラムに自然言語処理技術を適用
+して何ができるか試行錯誤をしているのですが、その試行錯誤で
+生まれたコードをまとめてライブラリとして公開することにしま
+した。
+
+NaturalSmalltalkではSmalltalkのプログラムを英単語に
+分解してクラスタリングやキーワード抽出、自動分類に用います。
+こうしてプログラムを単語に分解することで、
+* クラスタリング(K-means法)
+* 自動分類(tfidf, Naive Bayes)
+* キーワード抽出(tfidf, posterier probability)
+* 可視化(FastMap)
+をおこないます。
+
+また、実行された各メソッドの時間計測とキーワード抽出をおこなう
+MessageSpyや、Squeak環境内で実行中のプロセス群の実行コンテキスト
+のソースコードからキーワードを抽出するWhatyaDoingが応用例題として
+付属しています。
+
+実行の様子のスナップショットをいくつか添付します。
+ぜひ使ってみて感想をお聞かせください。
+---
+おだ
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Collection.png
+型:         image/png
+サイズ:     5710 バイト
+説明:       無し
+URL:        http://www.akademia.co.jp/pipermail/sml/attachments/20070407/3fc211e1/Collection.png
+From aoki ＠ sra.co.jp  Tue Apr 17 17:35:19 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7297] 無料セミナーの案内
+Message-ID: <462486C7.4010705@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+無料セミナーの案内です。なお、セミナーを終了した後、場所を当
+研究所の会議室に移して、デモンストレーションを行う予定です。
+２台のスパイダーを用意しますので、このデモに参加していただい
+た方々には、実際にスパイダーに触っていただけます。万障繰り合
+わせて、ご参加ください。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+各位：
+
+SRA 先端技術研究所（SRA-KTL）では，この４月から毎月１回，これまでの
+研究開発の成果発表を中心とする技術セミナーを開催することにいたしまし
+た．
+
+その第１回目として，来る４月２５日（水）午後に，フリー・ソフトウェア
+「じゅん」の最新の応用例の紹介をテーマとする下記のセミナーを開催しま
+す（今後、毎月第３水曜日・午後の開催を予定）．
+
+入場無料ですが，会場の定員や準備の都合もありますので，参加ご希望の方
+は必ず，あらかじめ申し込みをお願いいたします．受付は先着順です．申込
+み多数の場合には満員になり次第締め切らせていただきます．
+
+岸田孝一 @ SRA-KTL
+
+---------------- 第１回 SRA-KTL techinology Seminar -----------------
+
+                    ソフトウェアの可触化と可視化　
+
+                〜ハプティケム＋ケモじゅん＋じゅん〜
+
+               スピーカ：　青木淳 & 浅岡浩子 (SRA-KTL)
+
+　力覚（触覚）インタフェースを用いたシステムを紹介するとともに，それ
+　を支えている可視化ライブラリについて概説します．
+
+　「じゅん」は，オープンソース・ソフトウェアとして１９９５年に公開し
+　て以来，１２年の歳月をかけて着実に進化してきました．最近では、理学
+　分野特に化学分野への応用展開が進み，「ケモじゅん」と呼ばれる新しい
+　オープンソース・ソフトウェアが産み出されました。
+
+  そして，これら２つのオープンソース・ソフトウェアを土台にして，今年
+　の春（３月１５日）に「ハプティケム」が公開されました。分子に触れて
+　力を感じる体験型の化学教育教材です．
+
+  コンピュータの応用においては，「見てわかる」「聴いてわかる」という
+　ように，視覚および聴覚のインタフェースを利用することが進んでいます
+　が，「ハプティケム」は，そこに新たな「触ってわかる」という力覚のイ
+　ンタフェースを導入したものです．
+
+  [じゅん」についての情報は次の web page をご覧下さい：
+
+　　　http://www.sra.co.jp/public/sra/technical/jun/index.html
+
+【日時】２００７年４月２５日（水）14:00 〜 16:30
+
+	受付開始　　　　13:30 〜 14:00
+	セミナー　　　　14:00 〜 15:15
+	休　憩　　　　　15:15 〜 15:30
+	セミナー & Q/A　15:30 〜 16:30
+
+【会場】
+
+　新宿歴史博物館・２階講堂　
+　（地下鉄 丸の内線・四谷３丁目駅から徒歩７分)
+
+　http://www.regasu-shinjuku.or.jp/shinjuku-rekihaku.html
+　http://www.regasu-shinjuku.or.jp/shinjuku-rekihaku/public_html/img/access/map.jpg
+
+【申し込み方法】
+
+　下の申込み用紙に必要事項をご記入の上 4/23(月曜日) 17:30 までに、
+　akiko@sra.co.jp）宛てに e-mail でご連絡ください。
+
+　定員は 申込み順で３０名までとさせていただきます
+
+　------ SRA-KTL Technology Seminar April 申し込み--------------
+
+　氏　名：　　　　　　   （ふりがな：）
+　会社名：
+　部門名：
+　TEL   ：
+　--------------------------------------------------------------
+
+
+
+From shortsleeved ＠ mac.com  Wed Apr 18 22:11:03 2007
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7298] はじめまして & Jun  に関して質問
+Message-ID: <80BEB9B5-0008-48F6-8E1C-B8FAA8288E31@mac.com>
+
+はじめまして、佐藤と申します。
+
+最近、Jun for Smalltalk のコードを勉強させていただいていま 
+す。
+早速ですが、ひとつ質問があります。
+Jun740で、以下を do it すると、無限ループしてしまうように 
+みえます。
+
+----
+JunPlane on: 0 , 1 , 1 vertical: (0 , 0 , 0 to: -1 , 0 , 0)
+----
+
+コードを追っていくと、#on:vertical: メソッド中の p3  
+を再計算しいる以下の部分、
+
+-----
+     p3 := thePoint.
+     ((p1 to: p2) isParallelWithLine: (p1 to: p3))
+         ifTrue:
+             [thirdLine := firstLine.
+             threeAxes := Array
+                         with: (0 , 0 , 0 to: 0 , 0 , 1)
+                         with: (0 , 0 , 0 to: 1 , 0 , 0)
+                         with: (0 , 0 , 0 to: 0 , 1 , 0).
+             thirdAxis := threeAxes
+                         detect: [:line | (line to = firstAxis to)  
+not and: [(line to = secondAxis to) not]].
+             aTransformation := Jun3dTransformation translate:  
+thirdAxis to.
+             thePoint := nil.
+             [thePoint isNil or: [thePoint equal: p2]] whileTrue:
+                     [thirdLine := thirdLine transform: aTransformation.
+                     thePoint := aPlane intersectingPointWithLine:  
+thirdLine].
+             p3 := thePoint].
+-----
+
+が、おかしいように思われました。文章ではうまく説明しにくいのです 
+が、ここで、thirdAxis を求める必要はなく、最初の p3  
+の計算時とは違う方向に移動させれば良いだけだと判断し、上記部分を 
+以下のように書き換えてみました。
+
+-----
+     p3 := thePoint.
+     ((p1 to: p2) isParallelWithLine: (p1 to: p3))
+         ifTrue:
+             [thirdLine := firstLine.
+             aTransformation := Jun3dTransformation translate:  
+firstAxis to.
+             thePoint := nil.
+             [thePoint isNil or: [thePoint equal: p2]] whileTrue:
+                     [thirdLine := thirdLine transform: aTransformation.
+                     thePoint := aPlane intersectingPointWithLine:  
+thirdLine].
+             p3 := thePoint].
+-----
+
+このようにすると、無限ループしなくなったのですが、ここで質問があ 
+ります。
+この修正は、今回のケース "JunPlane on: 0 , 1 , 1 vertical: (0 ,  
+0 , 0 to: -1 , 0 , 0)" でたまたまうまくいっただけなのでしょう 
+か、それとも、あらゆるケースで通用するものなのでしょうか。
+どなたかご回答いただければ幸いです。
+
+以上、よろしくお願いします。
+
+
+
+--
+shortsleeved@mac.com
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.akademia.co.jp/pipermail/sml/attachments/20070418/7c3fefbc/attachment.html
+From aoki ＠ sra.co.jp  Thu Apr 19 05:05:46 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7298]
+	はじめまして & Jun  に関して質問
+In-Reply-To: <80BEB9B5-0008-48F6-8E1C-B8FAA8288E31@mac.com>
+References: <80BEB9B5-0008-48F6-8E1C-B8FAA8288E31@mac.com>
+Message-ID: <46267A1A.7020206@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。（現在、私事で有給休暇中。）
+
+無限ループの不具合を確認しました。佐藤さん、報告を有り難うご
+ざいました。
+
+まず、メソッドの修正案を云々する前に、当該のメッセージ式につ
+いて整理しておきましょう。
+
+aPlane := JunPlane on: aPoint vertical: aLine
+
+このメッセージ式は、ある点（aPoint）を通り、ある線（aLine）に
+垂直な平面（aPlane）を求めます。
+
+応答される平面を表現するオブジェクトの内部構成は、方程式型で
+あり、次のようなものです。
+
+ax + by + cz + d = 0
+
+ですから、インスタンス変数に a b c d を持ちます。数学であれば、
+これだけでいいのですが、じゅんにおける「可視化」したいという
+要求を満たすことができません。そこで、平面上の３点、p1 p2 p3
+をインスタンス変数に保持しています。
+
+さて、問題は、ある点（aPoint）を通り、ある線（aLine）に垂直な
+平面（aPlane）を求めた際に、p1 p2 p3 を求められるか、というこ
+とになります。
+
+p1 は、ある点（aPoint）そのままでいいでしょう。そして、p2 は、
+ある点（aPoint）から、ある線（aLine）への足（nearestPoint）で
+いいでしょう。残るは、p3 です。
+
+その p3 の求め方には、たくさんの方法があります。現在、実装さ
+れている方法は、紆余曲折を経て、今の状態になっているのでしょ
+う。開発ログを調べると、数人の方々の手を煩わせ、何回も修正が
+入っているメソッドでした。
+
+そこで、佐藤さんがお訊ねの件ですが、
+
+ > ここで質問があります。この修正は、今回のケース "JunPlane on:
+ > 0 , 1 , 1 vertical: (0 , 0 , 0 to: -1 , 0 , 0)" でたまたまう
+ > まくいっただけなのでしょうか、それとも、あらゆるケースで通用
+ > するものなのでしょうか。どなたかご回答いただければ幸いです。
+
+たまたまうまくいっただけ、だと思われます。あらゆるケースを確
+かめること自体が難しい上に、同次座標変換の回数を極力減らして、
+計算誤差の入り込みを抑える必要がありますから、なかなか手強い。
+
+以下に、佐藤さんからの不具合報告を鑑みて、私が考えたコードを
+示します。回転系を用いていますので、有効桁数が１６桁程度に落
+ちてしまいますが、あながち使えないこともないでしょう。
+
+| thePoint theLine p1 p2 line angle plane p3 |
+thePoint := 0 , 1 , 1.
+theLine := 0 , 0 , 0 to: -1 , 0 , 0.
+p1 := thePoint.
+p2 := theLine nearestPointFromPoint: p1.
+line := p1 to: p2.
+angle := 90 asDegrees.
+(p2 equal: theLine first)
+     ifTrue:
+         [plane := JunPlane
+                     on: p1
+                     on: p2
+                     on: theLine last.
+         plane := plane transform: (angle transformationToRotate: line).
+         (plane whichSide: theLine last) > 0
+             ifFalse:
+                 [plane := JunPlane
+                             on: p2
+                             on: p1
+                             on: theLine last.
+                 plane := plane transform: (angle transformationToRotate: line)].
+         p3 := plane p3]
+     ifFalse:
+         [plane := JunPlane
+                     on: p1
+                     on: p2
+                     on: theLine first.
+         plane := plane transform: (angle transformationToRotate: line).
+         (plane whichSide: theLine first) < 0
+             ifFalse:
+                 [plane := JunPlane
+                             on: p2
+                             on: p1
+                             on: theLine first.
+                 plane := plane transform: (angle transformationToRotate: line)].
+         p3 := plane p3].
+plane asJunOpenGL3dObjectWithPoints showWithUnitAxes.
+^p3
+
+最後のところで、求めた３点を平面と共に可視化しておきました。
+ご検討いただければ幸いです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Thu Apr 19 06:05:52 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7298]
+	はじめまして & Jun  に関して質問
+In-Reply-To: <46267A1A.7020206@sra.co.jp>
+References: <80BEB9B5-0008-48F6-8E1C-B8FAA8288E31@mac.com>
+	<46267A1A.7020206@sra.co.jp>
+Message-ID: <46268830.9000609@sra.co.jp>
+
+AOKI Atsushi wrote:
+ > 以下に、佐藤さんからの不具合報告を鑑みて、私が考えたコードを
+ > 示します。回転系を用いていますので、有効桁数が１６桁程度に落
+ > ちてしまいますが、あながち使えないこともないでしょう。
+
+面に対する表裏判定の際に、判定面を直線の始点まで平行移動する
+ことを忘れていました。そして、冗長なところを削減してみました。
+
+| thePoint theLine p1 p2 line angle p plane p3 |
+thePoint := 0 , 1 , 1.
+theLine := 0 , 0 , 0 to: -1 , 0 , 0.
+p1 := thePoint.
+p2 := theLine nearestPointFromPoint: p1.
+line := p1 to: p2.
+angle := 90 asDegrees.
+(theLine first distance: p2) > (theLine last distance: p2)
+     ifTrue: [p := theLine first]
+     ifFalse: [p := theLine last].
+plane := JunPlane
+             on: p1
+             on: p2
+             on: p.
+plane := plane transform: (angle transformationToRotate: line).
+((plane translatedBy: theLine first - p2) whichSide: theLine last) > 0
+     ifFalse:
+         [plane := JunPlane
+                     on: p2
+                     on: p1
+                     on: p.
+         plane := plane transform: (angle transformationToRotate: line)].
+p3 := plane p3.
+plane asJunOpenGL3dObjectWithPoints showWithUnitAxes.
+^p3
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From shortsleeved ＠ mac.com  Thu Apr 19 14:38:59 2007
+From: shortsleeved ＠ mac.com ("佐藤 隆志")
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7301] Re: はじめまして & Jun  に関して質問
+In-Reply-To: <46268830.9000609@sra.co.jp>
+References: <80BEB9B5-0008-48F6-8E1C-B8FAA8288E31@mac.com>
+	<46267A1A.7020206@sra.co.jp> <46268830.9000609@sra.co.jp>
+Message-ID: <4DAC92E9-0111-1000-EEF1-BCECE297FB37-Webmail-10021@mac.com>
+
+ 佐藤です。
+
+フォローアップありがとうございます。
+なかなか簡単にはいかない問題だったようですね。
+
+教えていただいたコードを私なりに読み解いてみました。
+
+>| thePoint theLine p1 p2 line angle p plane p3 |
+>thePoint := 0 , 1 , 1.
+>theLine := 0 , 0 , 0 to: -1 , 0 , 0.
+>p1 := thePoint.
+>p2 := theLine nearestPointFromPoint: p1.
+>line := p1 to: p2.
+
+p1を通りtheLineと直行する直線(line)と、その直線とtheLineとの交点(p2)を求める。
+
+>angle := 90 asDegrees.
+>(theLine first distance: p2) > (theLine last distance: p2)
+>     ifTrue: [p := theLine first]
+>     ifFalse: [p := theLine last].
+
+theLine の両端点のうち、p2からの距離が遠いほうを求める(p)。これはp2=pとなるのを避けるため（だと思います）。
+
+>plane := JunPlane
+>             on: p1
+>             on: p2
+>             on: p.
+
+p1,p2,pで平面(plane)を生成。
+この平面はthePoint,theLineで表される平面と直行する。
+
+>plane := plane transform: (angle transformationToRotate: line).
+
+lineを軸にして、planeを90度回転させる。原理的には、これが求める平面（というかp3が決定できた平面）。
+
+>((plane translatedBy: theLine first - p2) whichSide: theLine last) > 0
+>     ifFalse:
+>         [plane := JunPlane
+>                     on: p2
+>                     on: p1
+>                     on: p.
+>         plane := plane transform: (angle transformationToRotate: line)].
+
+表裏がひっくり返っている(法線ベクトルの向きが逆になっている)可能性があるので、その場合はp2,p1の順番を入れ替えて平面を作りなおす。
+
+一点だけ気になることがあります。
+教えていただいたコードの場合、thePoint が theLine 上にある場合についての考慮が必要になるかと思います。
+例えば、以下のような場合です。
+
+thePoint := 0 , 0 , 0.
+theLine := 0 , 0 , 0 to: -1 , 0 , 0.
+
+これをどうするかは、今、ちょっと頭の中がいっぱいになってしまっているので、後で考えたいと思います。
+また、質問するかもしれませんが、よろしくお願いします。
+
+
+From tomohiro ＠ sra.co.jp  Mon Apr 23 15:37:27 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7302] NaturalSmalltalk and ClassCreaser
+Message-ID: <200704231537.27942.tomohiro@sra.co.jp>
+
+おだです。
+
+Squeak上の自然言語処理ライブラリNaturalSmalltalkの
+リリースを更新しました。
+http://map.squeak.org/package/624ed871-4e89-4343-8652-af38a873d0b4
+
+今回のリリースでは、ClassCreaserというツールを追加しました。
+
+ClassCreaserは一種のリファクタリング補助ツールで、
+GUIの形で提供されます。
+ClassCreaerはその名の通り、クラスを分割する「折り目」
+を見つけ出すためのもので、具体的にはクラスに定義された
+メソッド群を分類する試行錯誤をおこなうためのツールです。
+
+通常のリファクタリングツールがクラスやメソッド等のプログ
+ラムの構造に着目し、構造に従って分割したり構造を変化させ
+るのに対し、ClassCreaserは「プログラムが扱う概念」に
+着目します。まずはユーザーであるプログラマがいくつかの
+メソッドを2-3グループに分類し、「分類のタネ」にします。
+ClassCreaserはその分類を、各グループのメソッド中に
+使われている英単語を統計的にモデリングすることで、
+残りのメソッドを自動的に分類していきます。
+その後、プログラマは自動分類の結果を見ながら、グループを
+細分化したり統合したり、あるいはメソッドをグループに追加
+したり除いたりすることで、「どういった概念を基準にクラス
+を分割すればいいか」を試行錯誤します。
+メソッドが分類されたらClassCreaserの仕事は終わりで、
+あとはBrowserを使ってグループを親子や兄弟クラスに分割
+したり、あるいはコンポジット関係に分割する、という筋書き
+になります。
+
+ぜひお試しください。
+
+NaturalSmalltalkはインストール後の言語モデル構築に
+時間がかかりますが、このClassCreaserは言語モデルは
+不要なので、言語モデル構築をバックグラウンド処理するか
+中断するかしても大丈夫です。
+---
+おだ
+

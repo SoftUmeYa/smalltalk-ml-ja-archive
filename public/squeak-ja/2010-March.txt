@@ -1,0 +1,240 @@
+From umejava ＠ mars.dti.ne.jp  Sat Mar 20 23:28:56 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Mar 20 23:29:04 2010
+Subject: [Squeak-ja: 4443] 第18回Smalltalk勉強会のお知らせ
+Message-ID: <Jx9oZS.MeNX_Jqk3ecx_j7gg2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/3/26(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai18kaismalltalkbenkyoukai
+
+テーマは「いろいろなDBにつなぐ」です。
+
+今回もハッカソン風にやります。皆でワイワイと好きなDBにつないで自慢する?
+という形式になります。オールドファンの方はObjectLensでやってみるのも
+良いでしょう。新しめの人はGlorp経由、もしくはCouchDBなどのKVSにつないで
+みるのも一興かと。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From itoh-private ＠ itolab.com  Mon Mar 22 23:19:20 2010
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Mon Mar 22 23:19:27 2010
+Subject: [Squeak-ja: 4444] drawOn中のエラーについて
+Message-ID: <B60AD8DC-890D-4D97-BC8E-32CE755C26D1@itolab.com>
+
+山梨学院大学の伊藤です。
+
+いつも質問ばかりですみません。
+PluggableTextMorphを使ってコンソール（あるいはTranscript）のようなモーフを
+作っています。テキスト入力のたびに、入力文字列を追加するようにしています。
+たいがいうまくいくのですが、何度か（数回〜十数回）入力しているうちにエラー
+が発生して、モーフが赤く塗りつぶされた×印となってしまいます。
+
+エラーの発生するタイミングは不定期ですが、いつもエラー内容は同じようです。
+MultiNewParagraph(NewParagraph)のfastFindFirstLineSuchThat: lineBlock
+でインスタンス変数linesにsizeを送った時点で、sizeのレシーバがnilだといって
+エラーになるのですが、デバッガで調べてもちゃんと値は入っているし、インス
+ペクタ上でsizeを送ってもきちんと値が出ます。
+
+Mantisでは過去のsqueakのバージョンで同様のエラーが出た指摘があるのですが、
+特にその後フォローされていないようです。（し、同じものかもわかりません）
+
+どなたか回避策をお持ちの方はいらっしゃいませんでしょうか。
+また、赤いエラー画面を解除する方法ってないのでしょうか。
+
+よろしくお願いいたします。
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     4462 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20100322/ecc647fb/SqueakDebug.obj
+-------------- next part --------------
+
+
+From abee ＠ squeakland.jp  Mon Mar 22 23:40:02 2010
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Mon Mar 22 23:40:26 2010
+Subject: [Squeak-ja: 4445] Re: drawOn中のエラーについて
+In-Reply-To: <B60AD8DC-890D-4D97-BC8E-32CE755C26D1@itolab.com>
+References: <B60AD8DC-890D-4D97-BC8E-32CE755C26D1@itolab.com>
+Message-ID: <2d5d52a81003220740w248b88bdo8470c548bced1bec@mail.gmail.com>
+
+こんにちは、阿部です。
+もしよろしければ再現させるためのプログラムをいただけないでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2010年3月22日23:19 Eiichiro Ito <itoh-private@itolab.com>:
+> 山梨学院大学の伊藤です。
+>
+> いつも質問ばかりですみません。
+> PluggableTextMorphを使ってコンソール（あるいはTranscript）のようなモーフを
+> 作っています。テキスト入力のたびに、入力文字列を追加するようにしています。
+> たいがいうまくいくのですが、何度か（数回〜十数回）入力しているうちにエラー
+> が発生して、モーフが赤く塗りつぶされた×印となってしまいます。
+>
+> エラーの発生するタイミングは不定期ですが、いつもエラー内容は同じようです。
+> MultiNewParagraph(NewParagraph)のfastFindFirstLineSuchThat: lineBlock
+> でインスタンス変数linesにsizeを送った時点で、sizeのレシーバがnilだといって
+> エラーになるのですが、デバッガで調べてもちゃんと値は入っているし、インス
+> ペクタ上でsizeを送ってもきちんと値が出ます。
+>
+> Mantisでは過去のsqueakのバージョンで同様のエラーが出た指摘があるのですが、
+> 特にその後フォローされていないようです。（し、同じものかもわかりません）
+>
+> どなたか回避策をお持ちの方はいらっしゃいませんでしょうか。
+> また、赤いエラー画面を解除する方法ってないのでしょうか。
+>
+> よろしくお願いいたします。
+From yoshiki ＠ vpri.org  Tue Mar 23 04:01:00 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Mar 23 04:01:22 2010
+Subject: [Squeak-ja: 4446] Re: drawOn中のエラーについて
+In-Reply-To: <B60AD8DC-890D-4D97-BC8E-32CE755C26D1@itolab.com>
+References: <B60AD8DC-890D-4D97-BC8E-32CE755C26D1@itolab.com>
+Message-ID: <umxy018r7.wl%yoshiki@vpri.org>
+
+At Mon, 22 Mar 2010 23:19:20 +0900,
+Eiichiro Ito wrote:
+> 
+> 山梨学院大学の伊藤です。
+> 
+> いつも質問ばかりですみません。
+
+  いえいえ、なにをおっしゃいますやら。
+
+> PluggableTextMorphを使ってコンソール（あるいはTranscript）のようなモーフを
+> 作っています。テキスト入力のたびに、入力文字列を追加するようにしています。
+> たいがいうまくいくのですが、何度か（数回〜十数回）入力しているうちにエラー
+> が発生して、モーフが赤く塗りつぶされた×印となってしまいます。
+> 
+> エラーの発生するタイミングは不定期ですが、いつもエラー内容は同じようです。
+> MultiNewParagraph(NewParagraph)のfastFindFirstLineSuchThat: lineBlock
+> でインスタンス変数linesにsizeを送った時点で、sizeのレシーバがnilだといって
+> エラーになるのですが、デバッガで調べてもちゃんと値は入っているし、インス
+> ペクタ上でsizeを送ってもきちんと値が出ます。
+> 
+> Mantisでは過去のsqueakのバージョンで同様のエラーが出た指摘があるのですが、
+> 特にその後フォローされていないようです。（し、同じものかもわかりません）
+> 
+> どなたか回避策をお持ちの方はいらっしゃいませんでしょうか。
+> また、赤いエラー画面を解除する方法ってないのでしょうか。
+
+  このエラーは、Processを使っていたりして、Morphicの通常のサイクルとは
+独立して描画要求が起こったときに出るものだと思います。そのMorphへの更新
+要求をしているところを、直接行うのではなく#addDeferredUIMessage:経由で
+行うと直るかもしれません。
+
+  赤いエラー画面は、ハロのデバッグメニューから"start drawing again"を
+選ぶと解除できます。
+
+-- Yoshiki
+
+From itoh-private ＠ itolab.com  Tue Mar 23 08:26:56 2010
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Tue Mar 23 08:27:01 2010
+Subject: [Squeak-ja: 4447] Re: drawOn中のエラーについて
+In-Reply-To: <umxy018r7.wl%yoshiki@vpri.org>
+References: <B60AD8DC-890D-4D97-BC8E-32CE755C26D1@itolab.com>
+	<umxy018r7.wl%yoshiki@vpri.org>
+Message-ID: <5B790DA8-654C-439F-85F2-8FD2A522E0D4@itolab.com>
+
+伊藤です。
+
+大島さん、阿部さん、こんにちは。
+さっそくアドバイスいただき、ありがとうございます。
+
+>> どなたか回避策をお持ちの方はいらっしゃいませんでしょうか。
+>> また、赤いエラー画面を解除する方法ってないのでしょうか。
+>   このエラーは、Processを使っていたりして、Morphicの通常のサイクルとは
+> 独立して描画要求が起こったときに出るものだと思います。そのMorphへの更新
+> 要求をしているところを、直接行うのではなく#addDeferredUIMessage:経由で
+> 行うと直るかもしれません。
+　まさにおっしゃる通りでした。ネットワーク経由のメッセージを別プロセス
+で受け取っていました。ネタをばらすと、ロボット上で動かしているLittleSmalltak
+のコマンド送受信に使っており、エラーの際の受信メッセージの多いときに発生して
+いたので何か変だなと思っていました。addDeferredUIMessageの使い方もわかって
+大変勉強になりました。
+
+>  赤いエラー画面は、ハロのデバッグメニューから"start drawing again"を
+> 選ぶと解除できます。
+　こちらも大変たすかります。このときに使うメニューなんですね。
+
+お忙しいところ本当にありがとうございました。
+
+From abee ＠ squeakland.jp  Fri Mar 26 00:11:38 2010
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Mar 26 00:12:05 2010
+Subject: [Squeak-ja: 4448] 【ご案内】米国タフツ大学の研究者を招いてのSTEMカンファレンスのご案内
+In-Reply-To: <db5c433b-5e46-490f-8275-5c4752a2fd56@y11g2000prf.googlegroups.com>
+References: <db5c433b-5e46-490f-8275-5c4752a2fd56@y11g2000prf.googlegroups.com>
+Message-ID: <2d5d52a81003250811m3d498bb5gb387607f838f2919@mail.gmail.com>
+
+こんにちは、阿部です。
+直前のご案内で申し訳ありませんが、3/27(土)に下記のイベントがJRサピアタワーで開催されます。
+私もScratchについて講演とワークショップを行います。他にも、タフツ大学の電子テキスト作成ソフトウェア
+ROBOBOOKのプレゼンテーションなど、興味深い講演やワークショップが多数予定されています。参加費は無料ですので、ご興味のある方はどうぞご参加ください。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+＝＝
+ロボラボを開発している米国タフツ大学CEEOから研究者を招いてSTEMカンファレンスを開催します！
+
+レゴマインドストームNXTのプログラミングに使われるロボラボ（RoboLabo）ソフトウェアの開発でも知られる米国タフツ大学CEEOから研究者をお二人お招きして，次世代ロボラボや，CEEOでの最新の研究についてお話をしていただく国際会議を開催します。また，近年注目されている米国MITメディアラボで開発が勧められているソフトウェア「スクラッチ」の改良に参加している日本の研究者の方にも，スクラッチで出来る楽しい活動についてお話をしていただきます。
+さらに，当日は，講演だけでなく，実際に米国タフツ大学CEEOの最新研究や，スクラッチ，レゴの新WeDoを触ってもらえるワークショップも行います。
+どなたでも参加できます。春休み，最新，最先端のロボット技術や科学技術教育について，教育の現場で実践されている方，これから自分でも使って指導してみたいと考えていらっしゃる方，レゴ等のものづくりにご興味のあるお子さんをお持ちの保護者のみなさま，ご家族でぜひご参加くだだき，体験していただければ幸いです。
+
+詳細は次の通りです。まだまだ余裕がありますので，多くの方々の参加をお待ちしています。
+
+■□■□■ STEM エデュケーションとテクノロジー教育カンファレンス 2010■□■□■
+
+３月２７日（土）ラーニングシステムでは、埼玉大学SCCIPものづくり教育センターと共催で教育テクノロジーに関するカンファレンスを開催いたします。
+このカンファレンスではタフツ大学より研究者を招いて、教材開発の最新情報について講演していただきます。
+教育関係者や、子供の教育に関心の高い方など、どなたでも参加できます。
+この機会に、どうぞご参加下さい。
+
+◆詳細案内、申込方法は、下記をご覧下さい。
+
+http://www.mdstorm.com/robolab/n-topics-stem-conference-2010.htm?id=10029800
+
+（参考）今回お話いただく内容に関係する米国タフツ大学CEEOのサイト
+Robobookサイト（英語）
+http://ceeo.tufts.edu/Products-Robobooks/robobooks.html
+SAM公式サイト（英語）
+http://www.samanimation.com/
+＝＝
+From jg1gwl ＠ mx3.ttcn.ne.jp  Fri Mar 26 08:27:30 2010
+From: jg1gwl ＠ mx3.ttcn.ne.jp (SUGIMOTO Kenji)
+Date: Fri Mar 26 08:36:38 2010
+Subject: [Squeak-ja: 4449] Re: 【ご案内】米国タフツ大学の研究者を招いてのSTEMカンファレンスのご案内
+References: <db5c433b-5e46-490f-8275-5c4752a2fd56@y11g2000prf.googlegroups.com>
+	<2d5d52a81003250811m3d498bb5gb387607f838f2919@mail.gmail.com>
+Message-ID: <8C661C11E6B343DB9672A70C750FEC34@LENOVO0DFC6E3B>
+
+阿部さん、杉本と申します。
+
+わーお、残念。当日は大阪です。Scratchについての講演とワークショップの記録が
+どこかで観られると有難いです。
+

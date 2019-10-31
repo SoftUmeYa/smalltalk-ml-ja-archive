@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7921] Re:	Squeak 4.2の日本語版
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207921%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIDQuMhskQiRORnxLXDhsSEcbKEI%3D%3F%3D&In-Reply-To=%3CBANLkTimZmgBjhQkW9fqT4up8DG9yF9rEPQ%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007920.html">
+   <LINK REL="Next"  HREF="007922.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7921] Re:	Squeak 4.2の日本語版</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207921%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIDQuMhskQiRORnxLXDhsSEcbKEI%3D%3F%3D&In-Reply-To=%3CBANLkTimZmgBjhQkW9fqT4up8DG9yF9rEPQ%40mail.gmail.com%3E"
+       TITLE="[SML 7921] Re:	Squeak 4.2の日本語版">ume ＠ softumeya.com
+       </A><BR>
+    <I>2011年 4月 19日 (火) 10:30:16 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007920.html">[SML 7920] Re:	Squeak 4.2の日本語版
+</A></li>
+        <LI>次の記事 <A HREF="007922.html">[SML 7922] Re:	Squeak 4.2の日本語版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7921">[ 日付 ]</a>
+              <a href="thread.html#7921">[ スレッド ]</a>
+              <a href="subject.html#7921">[ 件名 ]</a>
+              <a href="author.html#7921">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+&gt;<i> 別途ダウンロードしたバイナリのlinux版のVM、
+</I>&gt;<i> Squeak-4.4.7.2357-linux_i386.tar.gzと
+</I>&gt;<i> Cog VM(coglinux.tgz r2378)で、Squeak 4.2の日本語版のイメージを試した
+</I>&gt;<i> ところ、日本語入力が文字化けしました。調べたところso.ImmX11Plugin(Cog VM
+</I>&gt;<i> の場合はImmX11Plugin)が無いことが原因と分かりました。このプラグインは
+</I>&gt;<i> どこから入手すべきものでしょうか?
+</I>
+ImmX11Pluginですが、4.4.7では(おそらくライセンス確認などの理由で)一時的にソースツリーから消えたのです。
+SVNの過去のリビジョンをみると参照できます。
+<A HREF="http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/src/plugins/ImmX11Plugin/ImmX11Plugin.c?rev=2183&amp;sortby=log&amp;view=markup">http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/src/plugins/ImmX11Plugin/ImmX11Plugin.c?rev=2183&amp;sortby=log&amp;view=markup</A>
+
+&gt;<i> (Squeak 4.2の日本語版All-in-oneに含まれているlinux版のVMのファイル群が、
+</I>&gt;<i> このプラグインのファイルを除いて、Squeak-4.4.7.2357-linux_i386、Cog VM
+</I>&gt;<i> r2378のものと(md5が)同じであることと、以前から使っている一つ前(?)のVM
+</I>&gt;<i> Squeak-4.0.3.2202-linux_i386.tar.gzには含まれていたso.ImmX11Pluginが
+</I>&gt;<i> Squeak 4.2の日本語版All-in-oneに含まれているものと(md5が)同じことが分かっ
+</I>&gt;<i> たので、とりあえずはコピーして使っています。また、sourceforgeの変更履歴に
+</I>&gt;<i> 記述があったso.UUIDPluginはSegmentation faultを起こすことがあるので
+</I>&gt;<i> 削除しています。)
+</I>
+その方式で問題ないと思います。厳密にはSVNにおかれているプラグイン系のソースは少し古く、VMMakerというツールを使ってSqueak側から自動生成(トランスレート)してビルドする必要があったわけですが、All-in-oneでは皆が使っている実績あるバイナリをなるべくそのままの形で採用したかったということがあります。
+
+最新のVMをソースからビルドしてみたいということであれば、Unix Squeakのページに置いてあるイメージを元に
+<A HREF="http://www.squeakvm.org/unix/release/unix-4.4.7.image">http://www.squeakvm.org/unix/release/unix-4.4.7.image</A>
+<A HREF="http://www.squeakvm.org/unix/release/unix-4.4.7.changes">http://www.squeakvm.org/unix/release/unix-4.4.7.changes</A>
+
+VMMakerを最新のものに更新すれば、最新のプラグインのソース生成、ビルドを行うことができます。(できあがるVMはこのメールを書いている時点では4.4.12)になります。
+<A HREF="http://www.squeaksource.com/VMMaker.html">http://www.squeaksource.com/VMMaker.html</A>
+
+&gt;&gt;<i> 今回からCog VMも使えますので、いろいろと速くておすすめです。
+</I>&gt;<i>
+</I>&gt;<i> ReadMe-ja.txtには「Cog VMでイメージの保存を行うと従来のVMでは開けなイ
+</I>&gt;<i> メージに変換されます。Cog用として別名で保存されることをお勧めします。」
+</I>&gt;<i> とありましたが、上記VM Squeak-4.4.7.2357-linux_i386とCog VM r2378(Squeak
+</I>&gt;<i> 4.2 日本語版All-in-oneに同梱のVM)で、同じイメージに保存をして少し試しま
+</I>&gt;<i> したが、問題無いようです。問題なく開けているようでも、同じイメージを通常
+</I>&gt;<i> のVMとCog VMで使っていると問題が発生するのでしょうか?
+</I>&gt;<i> (ちなみに、Cog VM r2378で保存したイメージを、Squeak-4.0.3.2202-
+</I>&gt;<i> linux_i386のVMで開こうとすると、
+</I>&gt;<i>
+</I>&gt;<i> This interpreter (vers. 6502) cannot read image file (vers. 6505).
+</I>&gt;<i> Press CR to quit...
+</I>&gt;<i>
+</I>&gt;<i> のメッセージが出て、開けませんが、このCog VM r2378で保存したイメージを一旦
+</I>&gt;<i> Squeak-4.4.7.2357-linux_i386のVMで開いて保存し直すと、
+</I>&gt;<i> Squeak-4.0.3.2202-linux_i386のVMで開けるようになります。)
+</I>&gt;<i>
+</I>
+これはUnix 4.4.7のVMがCogの新フォーマットを旧フォーマットに変換して立ち上げるという機能を実装しているためです。すべてのプラットフォームでこの機能が利用できるわけではありません。
+
+原則は <A HREF="http://ftp.squeak.org/Cog/README">http://ftp.squeak.org/Cog/README</A> にあるように、
+&quot;once an image has been saved on Cog it cannot be run by an existing Squeak VM&quot;
+と考えておいた方が良いでしょう。
+
+-- 
+&quot;SoftUmeYa, LLC&quot;
+[:masashi | ^umezawa]
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007920.html">[SML 7920] Re:	Squeak 4.2の日本語版
+</A></li>
+	<LI>次の記事 <A HREF="007922.html">[SML 7922] Re:	Squeak 4.2の日本語版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7921">[ 日付 ]</a>
+              <a href="thread.html#7921">[ スレッド ]</a>
+              <a href="subject.html#7921">[ 件名 ]</a>
+              <a href="author.html#7921">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

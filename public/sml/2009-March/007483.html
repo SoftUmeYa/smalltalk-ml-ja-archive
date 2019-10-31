@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7483] Re: ブラックブック買いました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207483%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJWklQyUvJVYlQyUvR2MbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkXiQ3JD8bKEI%3D%3F%3D&In-Reply-To=1F940411C7064C548D7BBAEF01769333%40sunaoPC">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007484.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7483] Re: ブラックブック買いました</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207483%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJWklQyUvJVYlQyUvR2MbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkXiQ3JD8bKEI%3D%3F%3D&In-Reply-To=1F940411C7064C548D7BBAEF01769333%40sunaoPC"
+       TITLE="[SML 7483] Re: ブラックブック買いました">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 3月  4日 (水) 10:28:15 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007484.html">[SML 7484] Re: 第5回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7483">[ 日付 ]</a>
+              <a href="thread.html#7483">[ スレッド ]</a>
+              <a href="subject.html#7483">[ 件名 ]</a>
+              <a href="author.html#7483">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠京都産業大学です。
+
+sunao furukawa さんは書きました:
+&gt;<i> 　遅ればせながら、ブラックブックこと「Smalltalkで学ぶオブジェクト指向プ
+</I>&gt;<i> ログラミングの本質」を今日購入しました。近所の書店で注文してバレンタイン
+</I>&gt;<i> デーの今日購入できて、まるで誰かからブラックチョコレートをプレゼントされ
+</I>&gt;<i> たような感じです。
+</I>
+ブラックチョコ（ブラックブック）をバレンタインデーに買い求め
+ていただきまして有り難うございます。
+
+&gt;<i> 　そんな私が今日買ったブラックブックの中で一番興味深かったところはバイト
+</I>&gt;<i> コードのところです。
+</I>
+Smalltalk は仮想マシンの門からくぐってゆくのが王道だろうと思
+います。時間はかかりますが、プログラミングの粋や花に遭遇でき、
+とてもおすすめです。
+
+&gt;<i> 　私は、住所は岩手なので東京や京都での勉強会には出席するのは残念ながらか
+</I>&gt;<i> ないませんが、勉強会の資料などがありがたくも公開されているのでこれからも
+</I>&gt;<i> 勉強会の内容や様子をそのような形で知ることができれば幸せです。これからも
+</I>&gt;<i> 勉強会が盛り上がることを祈っています。
+</I>
+私の妻が盛岡出身なので、岩手に足を運ぶ機会が多々あります。こ
+れから相まみえることもあろうかと思いますので、よろしくです。
+
+今夜「第５回 Smalltalk 勉強会＠京都」があります。ブラックブッ
+クの第３章の基本的な文法のところを、時間をかけて進めています。
+
+おそらく、今夜は「変数」のあたりが主題になり、順調ならば「ブ
+ロック」までゆくかどうか、というところだと思います。
+
+そう言えば、特殊変数（模擬変数や擬似変数もしくはシュード変数
+と呼ばれることがあります）のくだりで、昨年８月に東京電機大学
+の久保田吉彦さんからご指摘がありました。
+
+８７ページのプログラムに間違いがあるのです。「it sender」の
+部分を「it」だけに改めていただけると幸いです。正しくは以下。
+
+|<i> aContext aBlock |
+</I>[:aClass :thisMessage |
+aContext := thisContext.
+aBlock := [:context |
+(aClass == context receiver class and: [thisMessage == context selector])
+    ifTrue: [^true].
+context sender ifNotNil: [:it | aBlock value: it]].
+aBlock value: aContext sender.
+^false]
+    value: TextEditorController
+    value: #printIt
+
+改めないと、コンテクストチェインを飛び飛びに追ってしまうこと
+になりますね。ご指摘を有り難うございました、久保田さん。この
+場を借りまして、皆さんにお知らせ、ということで。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+&gt;<i> 
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007484.html">[SML 7484] Re: 第5回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7483">[ 日付 ]</a>
+              <a href="thread.html#7483">[ スレッド ]</a>
+              <a href="subject.html#7483">[ 件名 ]</a>
+              <a href="author.html#7483">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

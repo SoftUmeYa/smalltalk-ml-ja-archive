@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7135] Re: Smalltalk システムでのデータの保存、データベースについての質問
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207135%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsayAbJEIlNyU5JUYbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWAkRyROJUchPCU/JE5KXUI4ISIlRyE8JT8lWSE8GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJTkkSyREJCQkRiROPEFMZBsoQg%3D%3D%3F%3D&In-Reply-To=20060223010544.7ba0fcd4.tar_zcvf%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007134.html">
+   <LINK REL="Next"  HREF="007140.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7135] Re: Smalltalk システムでのデータの保存、データベースについての質問</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207135%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsayAbJEIlNyU5JUYbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWAkRyROJUchPCU/JE5KXUI4ISIlRyE8JT8lWSE8GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJTkkSyREJCQkRiROPEFMZBsoQg%3D%3D%3F%3D&In-Reply-To=20060223010544.7ba0fcd4.tar_zcvf%40yahoo.co.jp"
+       TITLE="[SML 7135] Re: Smalltalk システムでのデータの保存、データベースについての質問">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2006年 2月 23日 (木) 09:01:42 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007134.html">[SML 7134] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+        <LI>次の記事 <A HREF="007140.html">[SML 7140] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7135">[ 日付 ]</a>
+              <a href="thread.html#7135">[ スレッド ]</a>
+              <a href="subject.html#7135">[ 件名 ]</a>
+              <a href="author.html#7135">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+&gt;<i>   他にも、リレーショナルデータベースでしたら DB2 や Oracle が、オブジェクトデータベースでしたら
+</I>&gt;<i>   OmniBase (梅澤さんが日本語化されたらしいです)のドライバがあるみたいです。
+</I>&gt;<i>   これらは、パーセルブラウザの Suggestions の &quot;DataBase&quot; にリストされています。
+</I>&gt;<i>   Oracle も試してみようと思ったのですが、テストコードが見つからなかったのでまた今度。
+</I>
+ご紹介いただきありがとうございます。
+
+OmniBaseJ (Squeak版です)
+<A HREF="http://swikis.ddo.jp/umejava/24">http://swikis.ddo.jp/umejava/24</A>
+
+OmniBaseの使い方
+<A HREF="http://swikis.ddo.jp/umejava/25">http://swikis.ddo.jp/umejava/25</A>
+
+です。
+
+リレーショナルデータベースよりもたいそう簡単に書けると思います。
+とはいえ、簡易なOODBなので、RDBで得意とする高度な検索には不向きです。
+
+VisualWorksであれば、GemStoneやObjectivity/DBがパーセルとして提供されています。
+これらは本格派のOODBなので、検索式実行も含めそれこそいろいろなことができます。
+
+&gt;<i>   実際にアプリケーションで使用する場合には、コネクションプーリング機構
+</I>&gt;<i>   (Oracle でいう暗黙的キャッシュ)が必要になることが多いと思いますが、
+</I>&gt;<i>   それっぽいモノは見当たらないので自分で作る必要がありそうですね。
+</I>&gt;<i> 
+</I>&gt;<i> &gt; あるいは、ベテランの方は、どのようなものをつかったり、
+</I>&gt;<i> &gt; コーディングなど、されていますか？
+</I>&gt;<i> 
+</I>&gt;<i>   エセユーザなのでごめんなさい。
+</I>
+わたしは、生まれ育った環境もあり、なるべくRDBの使用は避け、OODBを使うように
+しています。
+
+RDB系であればいわゆるO/Rマッパーは必須と思います。
+
+有名どころはなんといってもGLORPでしょう。
+<A HREF="http://glorp.org/">http://glorp.org/</A>
+
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007134.html">[SML 7134] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+	<LI>次の記事 <A HREF="007140.html">[SML 7140] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7135">[ 日付 ]</a>
+              <a href="thread.html#7135">[ スレッド ]</a>
+              <a href="subject.html#7135">[ 件名 ]</a>
+              <a href="author.html#7135">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

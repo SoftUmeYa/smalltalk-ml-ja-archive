@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7469] 第４回Smalltalk勉強会＠京都　ダイジェスト
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207469%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgjNDJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUISElQCUkJTglJyU5JUgbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007468.html">
+   <LINK REL="Next"  HREF="007470.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7469] 第４回Smalltalk勉強会＠京都　ダイジェスト</H1>
+    <B>SAWAMOTO Eri</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207469%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgjNDJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUISElQCUkJTglJyU5JUgbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7469] 第４回Smalltalk勉強会＠京都　ダイジェスト">eri ＠ sra.co.jp
+       </A><BR>
+    <I>2009年 2月  5日 (木) 23:12:19 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007468.html">[SML 7468] Smalltalk関係の古い本が読めるWEBサイトのご紹介
+</A></li>
+        <LI>次の記事 <A HREF="007470.html">[SML 7470] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7469">[ 日付 ]</a>
+              <a href="thread.html#7469">[ スレッド ]</a>
+              <a href="subject.html#7469">[ 件名 ]</a>
+              <a href="author.html#7469">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>澤本＠京都産業大学です。
+
+
+昨夜の「Smalltalk 勉強会＠京都」のダイジェストです。
+
+来ていただいた皆様、ありがとうございます。
+また、おやつを持ってきてくださった安田さん、ありがとうございます。
+京都産業大学の近く（？）にある、美味しいお店の焼き菓子でした。
+レ・フレール・ムトウ
+<A HREF="http://www.compage.co.jp/shop/muto/muto.htm">http://www.compage.co.jp/shop/muto/muto.htm</A>
+
+
+配布したアーカイブはJun774dのものです。
+また、補足資料として、プログラムコードが書かれたHTML資料もいっしょに配布しました。
+
+講義形式のまま継続して勉強会を進めています。
+初級者の方にも分かるように、
+スピードは気にせずに進めていこうというのが京都での勉強会の特徴です。
+ベテランの方は、再確認とともに、サポートにも回っていただけたらと考えています。
+
+昨夜は、
+ブラックブックの第３章、定数（リテラル）の途中までと、
+字句解析・構文解析・コード生成・最適化の説明を行いました。
+
+メソッドサーチの説明からスタートし、
+早速様々な質問や意見が飛び交っていました。
+特に、selfとsuperについて、
+今までSmalltalkに触れていなかった方には違和感あるところもあったようで、
+なかなか内容の濃いものになったのではないでしょうか？
+subclassResponsibilityやshouldNotImplementについても触れて、
+その一般的用途なども青木さんから説明がありました。
+
+その後、ブラックブックの説明は続き、
+定数（リテラル）に入っていきました。
+
+ブラックブックで定数（リテラル）の説明文の始めに
+どのようなものがそれに該当するか書かれています。
+そこになぜブロックが含まれていないのか、という質問があり、
+これは著者の間でももめた箇所で・・・という裏話が飛び出しました。
+
+数についての説明では、○進数、はどこまで正しく表示されるか？
+の話題が出ました。
+ブラックブックに、２〜３５進数までを表示するプログラムが紹介されていますが、
+なぜそれ３５までなのか、というところです。
+０〜９の９つの数字、そしてA〜Zのアルファベット２６個で数が表現できますが、
+すべてを使い切れば３５個まで、ということになります。
+ではそれ以上は・・・？？？
+さっそく試していた方もいらっしゃったようでした！
+
+また、
+文字列（String）とシンボル（Symbol）の違いで、
+文字列は複写（記述する度にオブジェクト生成する）
+シンボルは単写（どこで記述しても同じオブジェクトを指す）
+の性質があることを説明しました。
+
+最後１５分ほどで、
+字句解析してtoken（トークン）に分ける、
+構文解析をして構文木を出す、
+コード生成するとバイト配列になる、（その内部の説明つき）
+最適化を行う、
+という流れを資料で説明しながら
+配布したHTMLからプログラムコードをコピー＆ペーストして実際に実行し、
+試してみました。
+
+昨夜使用した資料は、
+<A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto4">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto4</A>
+からダウンロードできます。
+
+
+次回の勉強会は３月４日になります。
+ぜひ、京都駅前のキャンパスプラザへお集まりください。
+
+
+-- 
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+澤 本  依 里    SAWAMOTO Eri
+&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">eri ＠ sra.co.jp</A>&gt;
+
+株式会社SRA　関西事業部　開発部
+〒550-0011
+大阪市西区阿波座2-1-1 大阪本町西第一ビルディング5F
+TEL : 06-6536-2331
+FAX : 06-6536-2452
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007468.html">[SML 7468] Smalltalk関係の古い本が読めるWEBサイトのご紹介
+</A></li>
+	<LI>次の記事 <A HREF="007470.html">[SML 7470] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7469">[ 日付 ]</a>
+              <a href="thread.html#7469">[ スレッド ]</a>
+              <a href="subject.html#7469">[ 件名 ]</a>
+              <a href="author.html#7469">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

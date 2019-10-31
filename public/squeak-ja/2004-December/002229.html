@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2229] Re: SuperSwiki 活用計画
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202229%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM2hNUTdXMmgbKEI%3D%3F%3D&In-Reply-To=440C72BF-5A3A-11D9-AA85-000393B4B3DE%40kwansei.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002226.html">
+   <LINK REL="Next"  HREF="002191.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2229] Re: SuperSwiki 活用計画</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202229%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM2hNUTdXMmgbKEI%3D%3F%3D&In-Reply-To=440C72BF-5A3A-11D9-AA85-000393B4B3DE%40kwansei.ac.jp"
+       TITLE="[Squeak-ja: 2229] Re: SuperSwiki 活用計画">tak ＠ metatoys.org
+       </A><BR>
+    <I>2004年 12月 31日 (金) 22:57:19 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002226.html">[Squeak-ja: 2226] Re: SuperSwiki 活用計画
+</A></li>
+        <LI>次の記事 <A HREF="002191.html">[Squeak-ja: 2191] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2229">[ 日付 ]</a>
+              <a href="thread.html#2229">[ スレッド ]</a>
+              <a href="subject.html#2229">[ 件名 ]</a>
+              <a href="author.html#2229">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+
+アドバイス有難うございます。
+
+&gt;<i> それと、SuperSwikiを一つだけ提供するならあまり関係ないのですが、
+</I>&gt;<i> 今の方法だとBook (またはSuperSwiki)を追加する場合、httpd.confを
+</I>&gt;<i> 編集してapacheをリスタートさせなければなりません。
+</I>&gt;<i> Swiki全体へのProxyではなく/superだけへのProxyとなっているからです。
+</I>
+楽な手段を取ってしまいました。。。
+すっきりした手段としては、super.squeakland.jp のようなバーチャルドメインを
+作ってリクエストを振り分けた方が良いかも知れません。
+
+&gt;<i> ところで、文字リンクからページに飛ぶには、actions/gallery.bookの
+</I>&gt;<i>  ifNotNil: ['/super.',pg id printString].を ifNotNil: ['/super/',pg id 
+</I>&gt;<i> printString].
+</I>&gt;<i> に変えればよいと思います。mod_rewriteを使う方がよいのかもしれません。
+</I>
+そんな所にカスタマイズできる場所があるんですか。奥が深い。
+出来たら apache の設定はあまり触りたくないので、こっちにします。
+
+&gt;<i> あと、もう１箇所、
+</I>&gt;<i> 
+</I>&gt;<i> &lt;a href=&quot;http:/super/launcher?',を、&lt;a href=&quot;/super/launcher?',に修正して
+</I>&gt;<i> 使っています。
+</I>
+これもやってみます。
+
+&gt;<i> 私のところではdaemontoolsを使って、落ちたらすぐに起動しなおすように
+</I>&gt;<i> しています。もし必要なら設定ファイルをお渡しします。
+</I>
+よろしくお願いします。自宅サーバにも使いたいです。
+
+ところで、武田さんは SuperSwiki の changes ファイルは持ってませんでしょうか?
+ソースがダウンロード出来る場所が無くて困っています。.book のカスタマイズ
+くらいなら必要ないですが何かと気持ちが悪いので。
+
+-- 
+山宮 隆 ::= <A HREF="http://yuri.sakura.ne.jp/~propella/">http://yuri.sakura.ne.jp/~propella/</A>
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002226.html">[Squeak-ja: 2226] Re: SuperSwiki 活用計画
+</A></li>
+	<LI>次の記事 <A HREF="002191.html">[Squeak-ja: 2191] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2229">[ 日付 ]</a>
+              <a href="thread.html#2229">[ スレッド ]</a>
+              <a href="subject.html#2229">[ 件名 ]</a>
+              <a href="author.html#2229">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3598] Re: Seasideでローカルディレクトリのファイルを扱うには
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203598%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYXNpZGUbJEIkRyVtGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyVrJUclIyVsJS8lSCVqJE4lVSUhJSQlayRyGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMDckJiRLJE8bKEI%3D%3F%3D&In-Reply-To=237B76C9-E18E-4EB1-8909-E44B6A2FA9BE%40gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003597.html">
+   <LINK REL="Next"  HREF="003599.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3598] Re: Seasideでローカルディレクトリのファイルを扱うには</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203598%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYXNpZGUbJEIkRyVtGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyVrJUclIyVsJS8lSCVqJE4lVSUhJSQlayRyGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMDckJiRLJE8bKEI%3D%3F%3D&In-Reply-To=237B76C9-E18E-4EB1-8909-E44B6A2FA9BE%40gmail.com"
+       TITLE="[Squeak-ja: 3598] Re: Seasideでローカルディレクトリのファイルを扱うには">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2007年 9月 12日 (水) 11:44:00 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003597.html">[Squeak-ja: 3597] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+        <LI>次の記事 <A HREF="003599.html">[Squeak-ja: 3599] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3598">[ 日付 ]</a>
+              <a href="thread.html#3598">[ スレッド ]</a>
+              <a href="subject.html#3598">[ 件名 ]</a>
+              <a href="author.html#3598">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+&gt;<i> &gt; ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot')  
+</I>&gt;<i> &gt; fullName.
+</I>&gt;<i> 
+</I>&gt;<i> serverRoot:とはApacheの設定でよく見かけるserverRoot 
+</I>&gt;<i> と同じものなのでしょうか．
+</I>
+そうですね。
+
+&gt;<i> &gt; ma alias: '/seaside' to: [ma addPlug: [:request | seaside process:  
+</I>&gt;<i> &gt; request]].
+</I>&gt;<i> 
+</I>&gt;<i> alias:to:もApacheの設定のaliasと同じものなのでしょう 
+</I>&gt;<i> か．
+</I>&gt;<i> そうするとblockのところにdocumentRoot:を記述すればす 
+</I>&gt;<i> ることもできる好きなURLでdocumentRootにアクセスでき 
+</I>&gt;<i> るのでしょうか．
+</I>
+微妙に違います。ModAliasのコメントを見てみると良いと思います。
+
+&gt;<i> この設定をしたあと
+</I>&gt;<i> KomSeasideJ stop.
+</I>&gt;<i> でサーバと止まらなくなりました．
+</I>&gt;<i> HttpServiceで起動したので，HttpServiceを止めればいいと思っ 
+</I>&gt;<i> たのですが止め方がわかりません．
+</I>
+HttpServiceに望むメソッドがない場合は、スーパークラスをたどってみると
+答えがあったりします。
+
+HttpService serviceOnPort: 9090.
+HttpService servicesNamed: 'httpd'.
+
+あたりで、起動したサービスを捕まえられます。捕まえた後でstop(またはunregister)
+ですね。
+
+(HttpService serviceOnPort: 9090) ifNotNilDo: [:service | service stop].
+
+では。
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003597.html">[Squeak-ja: 3597] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+	<LI>次の記事 <A HREF="003599.html">[Squeak-ja: 3599] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3598">[ 日付 ]</a>
+              <a href="thread.html#3598">[ スレッド ]</a>
+              <a href="subject.html#3598">[ 件名 ]</a>
+              <a href="author.html#3598">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

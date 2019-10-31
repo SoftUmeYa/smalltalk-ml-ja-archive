@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3980] Scratch 1.3がリリースされました。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203980%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCAxLjMbJEIkLCVqGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWohPCU5JDUkbCReJDckPyEjGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003981.html">
+   <LINK REL="Next"  HREF="003982.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3980] Scratch 1.3がリリースされました。</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203980%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCAxLjMbJEIkLCVqGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWohPCU5JDUkbCReJDckPyEjGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3980] Scratch 1.3がリリースされました。">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 9月  3日 (水) 21:58:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003981.html">[Squeak-ja: 3981] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+</A></li>
+        <LI>次の記事 <A HREF="003982.html">[Squeak-ja: 3982] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3980">[ 日付 ]</a>
+              <a href="thread.html#3980">[ スレッド ]</a>
+              <a href="subject.html#3980">[ 件名 ]</a>
+              <a href="author.html#3980">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+
+さきほど、Scratchの公式サイトで、Scratch
+1.3がリリースされました。1.3には多くの新機能がありますが、今回初めてマルチバイト文字に対応したことで、日本語(漢字とひらがな)で使えるようになりました(私はこの部分を少しお手伝いしました。もともとのひらがなのアイデアは蜂須賀さんです)。
+
+<A HREF="http://scratch.wik.is/Scratch_1.3_Release_Notes">http://scratch.wik.is/Scratch_1.3_Release_Notes</A>
+
+Scratchは、MIT Media LabのLifelong Kindergarten
+groupによって開発されている子供向けの教育用言語です。開発にはSqueak Smalltalkが使われており、Squeak
+Etoysの影響を受けていますが、これらとは別のものです。
+Scratchは、シーモア・パパートさんの弟子で、LEGO
+MindstormsやCricket、StarLogoの開発者であるミチェル・レズニックさんの考える「Imagine-Create-Debug-Share-Refrect」のサイクルを支援するように作られています(主なプログラマはMorphicの開発者の一人であるジョン・マロニーさん)。
+Etoysと比較して、Scratchはよりシンプルで洗練されたユーザインタフェースを備え、音や視覚効果の扱いに優れています。プログラムの制御構造も普通で、Etoysのようにプログラミングに習熟している人ほど混乱するようなことがありません。
+また、YouTubeライクなWebサイトが用意されており、ローカルのディスクに保存するのと同じ要領で作品をアップロードできます(SuperSwikiでやろうとしていたことの完成形)。作品はWebブラウザ上でも実行でき、それにコメントを残したり、お気に入りに登録したり、ギャラリーを作ったりできます。サイトには既に約20万件の作品がアップロードされており、今も2分に1つのペースで増え続けています。
+
+<A HREF="http://scratch.mit.edu/">http://scratch.mit.edu/</A>
+
+ただし、Etoysが備えていたアラン・ケイ的なメタメディア(Dynabook)の側面、すなわち、環境と言語、アプリケーションの区別がなく、それらの間を自由に行き来できたり、同じオブジェクトである以上はすべて同じように扱えたり(開発ツール自体にスクリプトを書いて回転したり)といったことはできなくなっています(ScratchからSmalltalkへは降りられません)。また、Etoysの目的であるシミュレーションに特化した機能、たとえば、時計で同期する並列処理などもありません。
+つまり、ScratchはEtoysを完全に置き換えるものではなく、一部を補完して共存するものと考えた方がよいかもしれません。Etoysも、近日中にOLPC用に加えられた多くの改良を含む新しいバージョンがリリースされる予定です。
+
+リリース直後ということで、かなりサイトが重いですが、ぜひ試してみてください。
+また、ドキュメントの翻訳も有志の手で進められていますので、近日公開されると思います。
+
+ //abee
+--
+阿部 和広 EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003981.html">[Squeak-ja: 3981] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+</A></li>
+	<LI>次の記事 <A HREF="003982.html">[Squeak-ja: 3982] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3980">[ 日付 ]</a>
+              <a href="thread.html#3980">[ スレッド ]</a>
+              <a href="subject.html#3980">[ 件名 ]</a>
+              <a href="author.html#3980">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

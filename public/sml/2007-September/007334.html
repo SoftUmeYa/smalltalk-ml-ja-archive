@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7334] [ANNOUNCE] Jun for Java (Jun683)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207334%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun683%29&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007332.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7334] [ANNOUNCE] Jun for Java (Jun683)</H1>
+    <B>Yoshiyuki NISHINAKA</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207334%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun683%29&In-Reply-To="
+       TITLE="[SML 7334] [ANNOUNCE] Jun for Java (Jun683)">nisinaka ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 9月 18日 (火) 14:58:10 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007332.html">[SML 7332] Re: ブロック生成のメタプログラミング
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7334">[ 日付 ]</a>
+              <a href="thread.html#7334">[ スレッド ]</a>
+              <a href="subject.html#7334">[ 件名 ]</a>
+              <a href="author.html#7334">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>「じゅん for Java」のバージョン683を公開します。
+
+  バージョン668からの主な変更点は、以下の通りです。
+
+    * (modification) デフォルトのシェーディングを 'flat' から 
+      'smooth' に変更しました。
+
+    * (new feature) スムージング角度(smoothing angle)を指定して、
+      JunOpenGL3dObjectの頂点法線ベクトルの計算ができるようになり
+      ました。スムージング角度はビューファインダーからも指定する
+      ことが出来ます。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/SmoothingAngle.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/SmoothingAngle.png</A>
+
+    * (new feature) OpenGLバインディングとして、これまでのJunGLに
+      加えて、JOGL(<A HREF="https://jogl.dev.java.net/">https://jogl.dev.java.net/</A>)を使うことができる
+      ようにしました。JunOpenGLInterfaceが、JunGLとJOGLの両方に共
+      通するOpenGLインタフェースの抽象クラスになります。
+      JunOpenGLDrawableは、三次元の描画を行うコンポーネントを表す
+      インタフェースです。JunOpenGLDrawableを実装したクラスには
+      JOGLCanvas/JOGLJPanel/JunGLCanvas/JunGLJPanelなどがあります。
+      これらのいずれかを、デフォルトの描画コンポーネントとして、
+      ラウンチャのメニューから選ぶことができます。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/JOGL.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/JOGL.png</A>
+
+    * (incompatibility) JOGL対応の拡張にともない、
+      JunOpenGL3dViewAwt/JunOpenGL3dViewSwingが、それぞれ
+      JunAbstractViewPanel/JunAbstractViewJPanelのサブクラスに変
+      わりました。
+
+    * (incompatibility) JOGL対応の拡張にともない、レンダリングモー
+      ドの設定を廃止しました。
+
+    * (modification) JunOpenGL3dObjectとそのサブクラスをJun683相
+      当に更新しました。典型的なオブジェクトとして「メビウスの輪」
+      を定義してあります。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius1-1.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius1-1.png</A>
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius1-2.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius1-2.png</A>
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius2-1.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius2-1.png</A>
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius2-2.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius2-2.png</A>
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    <A HREF="ftp://ftp.sra.co.jp/pub/lang/java/jun4java/">ftp://ftp.sra.co.jp/pub/lang/java/jun4java/</A>
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html">http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html</A>
+
+
+                                 西中 芳幸 (<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">nisinaka ＠ sra.co.jp</A>)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007332.html">[SML 7332] Re: ブロック生成のメタプログラミング
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7334">[ 日付 ]</a>
+              <a href="thread.html#7334">[ スレッド ]</a>
+              <a href="subject.html#7334">[ 件名 ]</a>
+              <a href="author.html#7334">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

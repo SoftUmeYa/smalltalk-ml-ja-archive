@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4093] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204093%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjEbJEIhSyROM1o0bzI7JEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=2d5d52a80811270227qce51b83o63c33bf360a48a2a%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004092.html">
+   <LINK REL="Next"  HREF="004088.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4093] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について</H1>
+    <B>yhousako</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204093%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjEbJEIhSyROM1o0bzI7JEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=2d5d52a80811270227qce51b83o63c33bf360a48a2a%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4093] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について">yhousako ＠ mx2.ttcn.ne.jp
+       </A><BR>
+    <I>2008年 11月 29日 (土) 11:14:12 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004092.html">[Squeak-ja: 4092] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+        <LI>次の記事 <A HREF="004088.html">[Squeak-ja: 4088] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4093">[ 日付 ]</a>
+              <a href="thread.html#4093">[ スレッド ]</a>
+              <a href="subject.html#4093">[ 件名 ]</a>
+              <a href="author.html#4093">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>宝迫です．お世話になっております．
+
+ご存知の方にとっては「何を今さら」というようなことだと思いますが、一連の
+実験作業中に個人的に教えて頂いたことをこちらにもシェアしておきます．
+
+KNOPPIX5.3.1DVDで、Win版のScratch1.3.1をWine環境で動かし、Timidityをサウ
+ンドサーバとして動かしてMIDIの音を鳴らすことができました．
+
+＃WineとTimidityは、はじめから導入されています．
+
+【手順】
+1.Scratchのダウンロードサイトから、Win版のScratch1.3.1のインストーラをダ
+ウンロードし、Wineを使ってインストールする．
+＃一度、Scratchが起動するので、終了させておく．
+
+2.このままだと文字が豆腐になるので、「locale/ja.po」にWinで使うフォント
+を明示的に指定する．（今回は「IPAGothic」を使用）
+＃それでも、ボタンよりも文字が大きくて少し変ですが．
+＃Wineで使われるものは、「$HOME/.wine/drive_C/」の中にインストールされて
+います．
+
+3.コンソールから「timidity -Os -iA」として、Timidityを起動する．
+
+4.Scratch(Win)をWineで起動する．
+
+以上でMIDIの音が出るようになりました．ただし、「ニャー」の音がとぎれとぎ
+れになったり、スプライトの動きがぎこちなかったりします．また、Picoボード
+はやはりまともに動きませんでした．
+
+------------------------------------------------------------------
+寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004092.html">[Squeak-ja: 4092] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+	<LI>次の記事 <A HREF="004088.html">[Squeak-ja: 4088] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4093">[ 日付 ]</a>
+              <a href="thread.html#4093">[ スレッド ]</a>
+              <a href="subject.html#4093">[ 件名 ]</a>
+              <a href="author.html#4093">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

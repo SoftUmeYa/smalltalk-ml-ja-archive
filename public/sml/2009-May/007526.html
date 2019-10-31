@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7526] Re: Cincom Smalltalk Daily: 11/1/06に関して
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207526%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IENpbmNvbSBTbWFsbHRhbGsgRGFpbHk6%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FIDExLzEvMDYbJEIkSzRYJDckRhsoQg%3D%3D%3F%3D&In-Reply-To=611D290A04764AA7A3FF87139E5FAFA7%40SUGITPR60E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007525.html">
+   <LINK REL="Next"  HREF="007529.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7526] Re: Cincom Smalltalk Daily: 11/1/06に関して</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207526%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IENpbmNvbSBTbWFsbHRhbGsgRGFpbHk6%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FIDExLzEvMDYbJEIkSzRYJDckRhsoQg%3D%3D%3F%3D&In-Reply-To=611D290A04764AA7A3FF87139E5FAFA7%40SUGITPR60E"
+       TITLE="[SML 7526] Re: Cincom Smalltalk Daily: 11/1/06に関して">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 5月  1日 (金) 23:16:16 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007525.html">[SML 7525] Re: オーバロードはポリモフィズムか?
+</A></li>
+        <LI>次の記事 <A HREF="007529.html">[SML 7529] Re: Cincom Smalltalk Daily: 11/1/06に関して
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7526">[ 日付 ]</a>
+              <a href="thread.html#7526">[ スレッド ]</a>
+              <a href="subject.html#7526">[ 件名 ]</a>
+              <a href="author.html#7526">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+杉谷さんのメールを読むまで、こんなのがあるのを知りませんでした。
+ありがとうございます。
+
+で、問題のスクリーンキャストを見てみました。
+
+実際に操作しながら「撮影」されたもので、そのようなことが起りうるのか不思議です。
+
+
+編集されたビデオのようですから、映し出されたコードと、実際に動作している時点での
+コードは違っていたのかもしれませんね。
+
+あと、動作し始めてから
+&gt;<i> initialize
+</I>&gt;<i>
+</I>&gt;<i> self queryExecutor: QueryExecutor new
+</I>&gt;<i> を
+</I>&gt;<i> self queryExecutor: QueryExecutor
+</I>&gt;<i> に替えてみましたが、どちらも動作しました。これは本来どう書くべきなのでしょうか？
+</I>
+
+以下の理由により、どちらでも動作するようです。
+ １．QueryExecutor class&gt;&gt;executeQueryが
+
+^self new executeQuery: aQuery
+
+と書かれており、QueryExecutorのインスタンスもクラスも、どちらも同じメッセージに
+同じように応答できる。
+
+２．QueryExecutorの４つのインスタンス変数のうち、query,result,connectionは、#executeQuery:の
+中（およびそこから呼び出されるメソッドの中）で、参照される前に何らかの値がセットされる。
+また、インスタンス変数connectionClassは#initializeで初期化された後、書き換えられる事がない。
+したがって、QueryExecutor&gt;&gt;executeQuery:（インスタンスの方のメソッド）が再使用可能に
+なっている。（ビデオには映っていませんが、QueryExecutor class&gt;&gt;newが自動生成されていて、
+
+^super new initialize
+
+と書かれていると思います。）
+
+「本来どう書くべきか」はよく分かりません。
+でも、今後の展開（コネクションを維持したまま複数のクエリを実行するように拡張する、など）を
+考えると、
+
+self queryExecutor: QueryExecutor new
+
+としておく方が良いように私は思います。
+
+ただ、QueryExecutor class&gt;&gt;executeQuery:をわざわざ書いたところをみると、James Robertsonさんは、
+EmployeeUI&gt;&gt;initializeを
+
+self queryExecutor: QueryExecutor
+
+と書いた可能性もあります。（でも、QueryExecutor class&gt;&gt;executeQuery:を実際に実行しているのは
+一本前のビデオですからねえ。。。）
+
+以上です。
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20090501/b07f591e/attachment.htm">http://www.smalltalk.jp/pipermail/sml/attachments/20090501/b07f591e/attachment.htm</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007525.html">[SML 7525] Re: オーバロードはポリモフィズムか?
+</A></li>
+	<LI>次の記事 <A HREF="007529.html">[SML 7529] Re: Cincom Smalltalk Daily: 11/1/06に関して
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7526">[ 日付 ]</a>
+              <a href="thread.html#7526">[ スレッド ]</a>
+              <a href="subject.html#7526">[ 件名 ]</a>
+              <a href="author.html#7526">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

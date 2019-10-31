@@ -1,0 +1,2649 @@
+From koubo2006 ＠ yengawa.jpn.org  Tue Jan  3 12:42:04 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2787] 大喜利@海浜亭
+Message-ID: <20060103112304.630A.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+あけましておめでとうございます。
+
+これからはWeb2.0ということでSeaside/Squeakでどんなwebアプリがどうやって
+作れるのか試しています。
+トライアルとして(Web1.0の?)掲示板システム「大喜利@海浜亭」を作りました。
+笑点でおなじみの大喜利形式の掲示板です。
+下記で公開実験をしますので遊んでみてください。
+
+http://yengawa.homedns.org:8888/YengawaWiki/25
+
+よくある掲示板システムですが、拍手や座布団という機能が追加されてます。
+ユーザーアカウントを作ってログインすると発言したり拍手したりできるように
+なります。
+
+では。
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    self new!
+
+
+From vtalk ＠ mbox.kyoto-inet.or.jp  Tue Jan  3 12:46:40 2006
+From: vtalk ＠ mbox.kyoto-inet.or.jp (kenji nagai)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2788] Re: スクリーンダンプについて  (was: Re: SqueakNihongo7 についての感想・要望など  )
+References: <200511061727467160.317@edu.city.kyoto.jp><002401c5e2b5$75cc04f0$1401a8c0@NX9030>
+	<43B4FA0416D.E8A8ABEE@smtp.nifty.com>
+Message-ID: <01c301c61018$4e9adfb0$1401a8c0@NX9030>
+
+永井＠京都市です。
+皆様，あけましておめでとうございます。
+阿部様，いつもお世話になっています。
+また，この件，有り難うございます。
+（年越しのレスになってしまいました。m(_ _)m）
+
+
+> 阿部@新百合です。
+>
+> 古い話題で恐縮です。
+> 抜本的な解決法ではないのですが、もうすこし簡単な方法として、ワールドを画
+> 像ファイルとして書き出すことができます。
+> 具体的には、背景でワールドのハロを出し、赤ハロメニューの「書き出し・・・」か 
+> 
+> ら、任意の画像フォーマットを選びます。フォーマットはJPEG, GIF, BMP, PNGに
+> 対応しています。
+> プラグインイメージの場合、ファイルは「My Squeak」のアカウント名のフォルダ
+> にできます。
+> この方法はワールドに限らず、すべてのモーフで使えますので、ドキュメントを
+> 書くときなどに使うと便利です。
+>
+> お試しください。
+
+なるほど，直接，画像として出力できるのですね。
+これは使えそうです。
+有り難うございました。
+また，よろしくお願いします。
+
+--
+永井＠京都市
+vtalk@mbox.kyoto-inet.or.jp
+
+
+>
+> On Sun, 6 Nov 2005 18:35:44 +0900
+> "kenji nagai" <vtalk@mbox.kyoto-inet.or.jp> wrote:
+>>> Squeak　の印刷方法ですが、お知らせします。
+>>> ①キーボードで　Fn+Prt Sc（プリントスクリーン）を押して、閉じ
+>>> ②スタートからすべてのプログラム→アクセサリー→ペイントを起動
+>>> ③ペイントの編集から貼り付け
+>>> ④ファイル→印刷
+>>>
+>>> これは２００３からのPCの場合で、それ以前のPCはFｎキーは押す必要なく
+>>> Prt Scのキーのみで印刷が出来ます。
+>>> 上手くいかない時は下記へ連絡ください。
+>>
+>>これは，当方の説明不足でした。m(_ _)m
+>>上記は，Windowsの基本機能を使っての印刷ですね。
+>>当方のお教えいただきたいのは，スクイークから
+>>直接，印刷する方法なのです。
+>>
+>>ちなみに，現在のところは，当方でも上記の方法，
+>>もしくは，③で編集後，これをコピーして，ワー
+>>プロソフトに貼り付けて印刷という方法でやって
+>>います。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp 
+
+
+From y.ich ＠ f3.dion.ne.jp  Tue Jan  3 19:47:53 2006
+From: y.ich ＠ f3.dion.ne.jp (ICHIKAWA, Yuji)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2789] Scamperのリファクタリングしました。
+References: <200511061727467160.317@edu.city.kyoto.jp><002401c5e2b5$75cc04f0$1401a8c0@NX9030><43B4FA0416D.E8A8ABEE@smtp.nifty.com>
+	<01c301c61018$4e9adfb0$1401a8c0@NX9030>
+Message-ID: <029a01c61053$26403570$0b01a8c0@DDCR691X>
+
+市川です。
+
+あけましておめでとうございます。
+今年もよろしくお願いいたします。
+
+リファクタリングを習得したいと思って、習得するには説明できるようになるのが一番と、また小文を書き始めました。
+http://ich.homelinux.net:8080/squeak/49
+
+一区切りとして、Scamperのリファクタリングをしました。（Squeak3.8用）
+http://ich.homelinux.net:8080/squeak/98
+リファクタリングの肝である単体テストをサボったので、ちょっと遊んでみたところ良好ですが、エンバグしているかもしれません。
+何も機能追加していないので、あまり面白くないですが、レンダリング部分を独立させたのでフレーム対応とかしやすくなったはずと思っています。
+これから単体テスト、日本語化やScamperWorkspaceの追加、テーブルタグ対応などしていこうかと思っています。
+
+
+ところで、クラスの名前を変えたりと大きな変更をしたところ、チェンジセットがうまく機能しなくなってしまいました。
+チェンジセットを別のイメージで読み込むと、途中で、
+UndefinedObject(Object)>>doesNotUnderstand: #methodsFor:stamp:
+で止まってしまうのですが、これはどんな時に起こるのでしょうか？
+−
+市川雄二
+
+
+From yoshiki ＠ squeakland.org  Tue Jan  3 19:56:04 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2790] Re: Scamperのリファクタリングしました。
+In-Reply-To: <029a01c61053$26403570$0b01a8c0@DDCR691X>
+References: <200511061727467160.317@edu.city.kyoto.jp>
+	<002401c5e2b5$75cc04f0$1401a8c0@NX9030>
+	<43B4FA0416D.E8A8ABEE@smtp.nifty.com>
+	<01c301c61018$4e9adfb0$1401a8c0@NX9030>
+	<029a01c61053$26403570$0b01a8c0@DDCR691X>
+Message-ID: <uacedtwaj.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  明けましておめでとうございます。
+
+> ところで、クラスの名前を変えたりと大きな変更をしたところ、チェンジセットがうまく機能しなくなってしまいました。
+> チェンジセットを別のイメージで読み込むと、途中で、
+> UndefinedObject(Object)>>doesNotUnderstand: #methodsFor:stamp:
+> で止まってしまうのですが、これはどんな時に起こるのでしょうか？
+
+  普通は、イメージ内に存在しないクラスのメソッド定義がchange set内にあ
+るときに起こります。クラス名の変更も本当はちゃんとチェンジセットの頭と
+おしりのところでつじつまが合うようにしてくれるはずですが、何か問題があ
+るかもしれませんね。
+
+  問題の対処法は色々あり得ますが、然るべき名前のクラスを定義してからそ
+のチェンジセットをロードしてみるか、あるいはチェンジセットをエディタで
+編集することが考えられます。
+
+  これからもよろしくお願いします。
+
+-- Yoshiki
+
+
+From y.ich ＠ f3.dion.ne.jp  Tue Jan  3 22:54:00 2006
+From: y.ich ＠ f3.dion.ne.jp (ICHIKAWA, Yuji)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2791] Re: Scamperのリファクタリングしました。
+References: <200511061727467160.317@edu.city.kyoto.jp><002401c5e2b5$75cc04f0$1401a8c0@NX9030><43B4FA0416D.E8A8ABEE@smtp.nifty.com><01c301c61018$4e9adfb0$1401a8c0@NX9030><029a01c61053$26403570$0b01a8c0@DDCR691X>
+	<uacedtwaj.wl%yoshiki@squeakland.org>
+Message-ID: <02bd01c6106d$2669deb0$0b01a8c0@DDCR691X>
+
+大島さん、ありがとうございます。
+
+>  普通は、イメージ内に存在しないクラスのメソッド定義がchange set内にあ
+> るときに起こります。クラス名の変更も本当はちゃんとチェンジセットの頭と
+> おしりのところでつじつまが合うようにしてくれるはずですが、何か問題があ
+> るかもしれませんね。
+>
+>  問題の対処法は色々あり得ますが、然るべき名前のクラスを定義してからそ
+> のチェンジセットをロードしてみるか、あるいはチェンジセットをエディタで
+> 編集することが考えられます。
+
+ScamperをリネームしてからScamperを作ったのがチェンジセット的にまずかったような気がしてきました。
+Monticelloだとうまく行ったので、そちらを使おうかと思います。
+−
+市川雄二
+
+
+From abee ＠ squeakland.jp  Thu Jan  5 19:10:19 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2792] スクイークでロボット
+Message-ID: <43BCF08B1F0.97E6ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+今までも何度かスクイークからコントロールできるロボットをご紹介しましたが、
+その中のCロボについて、使い方などをまとめましたので、お知らせします。
+
+http://swikis.ddo.jp/WorldStethoscope/30
+
+ファームを書き換えて、ロボットの光センサの情報をスクイークで取れるように
+なりました。これにより、ライントレースをタイルスクリプトだけで書くことが
+できます。音経由ではないですが、世界聴診器的な使い方も可能となっています。
+
+お試しください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From y.ich ＠ f3.dion.ne.jp  Fri Jan  6 00:34:21 2006
+From: y.ich ＠ f3.dion.ne.jp (ICHIKAWA, Yuji)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2793] Re: Scamperのリファクタリングしました。
+References: <200511061727467160.317@edu.city.kyoto.jp><002401c5e2b5$75cc04f0$1401a8c0@NX9030><43B4FA0416D.E8A8ABEE@smtp.nifty.com><01c301c61018$4e9adfb0$1401a8c0@NX9030>
+	<029a01c61053$26403570$0b01a8c0@DDCR691X>
+Message-ID: <003e01c6120d$802cc3d0$0b01a8c0@DDCR691X>
+
+こんばんは。市川です。
+
+リファクタリングしたScamperで多言語化対応しました。
+http://ich.homelinux.net:8080/squeak/58
+残念ながら日本語しか動作確認していません。
+ウェブページがcharsetを定義していて、TextConverterとフォントがあればうまく機能すると思うのですが・・・
+
+従来のScamperを変更する方法を止めて、新しくクラスを用意したので、気楽にお試しください。
+と言いたいところですが、HTTPSocketやString（のencodeForHTTP)など変更が意外と飛び火していますので、大切なイメージでは使わないほうがいいかもしれません。
+
+やっていることはかなり前から変わっていないのですが、今回プログラミング的にかなり満足を得ることができました^^
+
+＃yahooとか、ユーザーがある単語の後次にどんな単語を検索するかデータを取っているんですね。びっくりしました。
+−
+市川雄二
+
+
+From kawa90 ＠ yahoo.co.jp  Fri Jan  6 23:19:34 2006
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2794] Re: スクリーンダンプについて
+In-Reply-To: <43B4FA0416D.E8A8ABEE@smtp.nifty.com>
+References: <200511061727467160.317@edu.city.kyoto.jp>	<002401c5e2b5$75cc04f0$1401a8c0@NX9030>
+	<43B4FA0416D.E8A8ABEE@smtp.nifty.com>
+Message-ID: <43BE7C76.3060805@yahoo.co.jp>
+
+川村です。
+
+いまさらながら遅いかもしれませんが、あけましておめでとうございます。
+
+最近Squeakごぶさた状態になっていたので、リハビリを兼ねてSqueakのポストス
+クリプト出力について調べていたら、 SqueakLand2005J、Squeak3.8ではもう正
+しいポストスクリプトを出力できなくなっているようです。ちょっと調べたとこ
+ろ、 Integer>>byteEncode: base: が改変されて正しく動かないですね。
+
+やはり、現状では画像での書き出しか、スクリーンダンプをとる方法しかないよ
+うです。
+
+#個人的にはMacromedia Flashで書き出せるといいなと思ってたりします。
+#だれか挑戦してくれないかなぁ
+
+それでは
+
+Kazuhiro ABE wrote:
+
+>阿部@新百合です。
+>
+>古い話題で恐縮です。
+>抜本的な解決法ではないのですが、もうすこし簡単な方法として、ワールドを画
+>像ファイルとして書き出すことができます。
+>具体的には、背景でワールドのハロを出し、赤ハロメニューの「書き出し・・・」か
+>ら、任意の画像フォーマットを選びます。フォーマットはJPEG, GIF, BMP, PNGに
+>対応しています。
+>プラグインイメージの場合、ファイルは「My Squeak」のアカウント名のフォルダ
+>にできます。
+>この方法はワールドに限らず、すべてのモーフで使えますので、ドキュメントを
+>書くときなどに使うと便利です。
+>
+>お試しください。
+>
+>On Sun, 6 Nov 2005 18:35:44 +0900
+>"kenji nagai" <vtalk@mbox.kyoto-inet.or.jp> wrote:
+>  
+>
+>>>Squeak　の印刷方法ですが、お知らせします。
+>>>①キーボードで　Fn+Prt Sc（プリントスクリーン）を押して、閉じ
+>>>②スタートからすべてのプログラム→アクセサリー→ペイントを起動
+>>>③ペイントの編集から貼り付け
+>>>④ファイル→印刷
+>>>
+>>>これは２００３からのPCの場合で、それ以前のPCはFｎキーは押す必要なく
+>>>Prt Scのキーのみで印刷が出来ます。
+>>>上手くいかない時は下記へ連絡ください。
+>>>      
+>>>
+>>これは，当方の説明不足でした。m(_ _)m
+>>上記は，Windowsの基本機能を使っての印刷ですね。
+>>当方のお教えいただきたいのは，スクイークから
+>>直接，印刷する方法なのです。
+>>
+>>ちなみに，現在のところは，当方でも上記の方法，
+>>もしくは，③で編集後，これをコピーして，ワー
+>>プロソフトに貼り付けて印刷という方法でやって
+>>います。
+>>    
+>>
+>
+> //abee
+>--
+>阿部 和広  EMAIL abee@squeakland.jp
+>
+>
+>  
+>
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.371 / Virus Database: 267.14.13/221 - Release Date: 2006/01/04
+
+--------------------------------------
+Yahoo! Mail - supported by 10million people
+http://pr.mail.yahoo.co.jp/mail_pr/
+
+From abee ＠ squeakland.jp  Fri Jan  6 23:36:24 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2795] Re: スクリーンダンプについて
+In-Reply-To: <43BE7C76.3060805@yahoo.co.jp>
+References: <43B4FA0416D.E8A8ABEE@smtp.nifty.com>
+	<43BE7C76.3060805@yahoo.co.jp>
+Message-ID: <43BE806888.1A8DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 06 Jan 2006 23:19:34 +0900
+Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+>#個人的にはMacromedia Flashで書き出せるといいなと思ってたりします。
+>#だれか挑戦してくれないかなぁ
+
+Viscuitはこれができるのですよね。
+
+http://www.viscuit.com/document/viscuitmanflash.pdf
+
+せめてアニメーションGIFができると面白いのですが(そんなに大変じゃないと思
+います。AnimatedGIFReadWriterは読むほうしか実装されていないので、これを拡
+張して)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kenk.ito41g31182 ＠ bc.wakwak.com  Sat Jan  7 17:34:05 2006
+From: kenk.ito41g31182 ＠ bc.wakwak.com (伊藤謙吉)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2796] Re: Scamperのリファクタリングしました。
+References: <200511061727467160.317@edu.city.kyoto.jp><002401c5e2b5$75cc04f0$1401a8c0@NX9030><43B4FA0416D.E8A8ABEE@smtp.nifty.com><01c301c61018$4e9adfb0$1401a8c0@NX9030>
+	<029a01c61053$26403570$0b01a8c0@DDCR691X>
+	<003e01c6120d$802cc3d0$0b01a8c0@DDCR691X>
+Message-ID: <000701c61365$1ec6fda0$0e01a8c0@KENHOST5>
+
+はじめまして　kenk (伊藤謙吉　本年年男です）　です。
+ScamperM　トライしました。
+
+----- Original Message ----- 
+From: "ICHIKAWA, Yuji" <y.ich@f3.dion.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Friday, January 06, 2006 12:34 AM
+Subject: [Squeak-ja: 2793] Re: Scamperのリファクタリングしました。
+
+
+> こんばんは。市川です。
+>
+> リファクタリングしたScamperで多言語化対応しました。
+> http://ich.homelinux.net:8080/squeak/58
+
+ダウンロードして　２００５Jの開発版に読み込みました。（WindowXP上です）
+MCZファイル初めてでしたので、解凍して、ｓｔファイルを　fileinしました。
+だいたい動きました。　私の　Comswiki　のHPでは文字化けです。
+なぜか、squeakland.org のHPが開けませんでした。
+
+> 残念ながら日本語しか動作確認していません。
+> ウェブページがcharsetを定義していて、TextConverterとフォントがあればうまく機能すると思うのですが・・・
+>
+市川さんのHPと私のHPのソースコード見てみたら、私のには charsetの指定が抜けておりました。 ref の　template　に　追加しましたら、うまく動くようになりました。
+ここ３年ぐらいのprファイルも直接オープンすることも確認しました。（２００５Jのおかげで
+今は必要となくなった動作ですが）。
+英語版　３.８ に　ScamperMを読み込んでテストしました。
+英語のwebは開くようです。squeakland.orgは開けません。
+（　Scamper　でも　開けませんでした）
+日本語は文字化けをしております。市川さんの読みどおりのようです。
+大雑把な結果ですがご報告します。
+
+kenk
+
+
+> 従来のScamperを変更する方法を止めて、新しくクラスを用意したので、気楽にお試しください。
+> と言いたいところですが、HTTPSocketやString（のencodeForHTTP)など変更が意外と飛び火していますので、大切なイメージでは使わないほうがいいかもしれません。
+>
+> やっていることはかなり前から変わっていないのですが、今回プログラミング的にかなり満足を得ることができました^^
+>
+> ＃yahooとか、ユーザーがある単語の後次にどんな単語を検索するかデータを取っているんですね。びっくりしました。
+> −
+> 市川雄二
+>
+> 
+
+
+From y.ich ＠ f3.dion.ne.jp  Sun Jan  8 00:00:58 2006
+From: y.ich ＠ f3.dion.ne.jp (ICHIKAWA, Yuji)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2797] Re: Scamperのリファクタリングしました。
+References: <200511061727467160.317@edu.city.kyoto.jp><002401c5e2b5$75cc04f0$1401a8c0@NX9030><43B4FA0416D.E8A8ABEE@smtp.nifty.com><01c301c61018$4e9adfb0$1401a8c0@NX9030><029a01c61053$26403570$0b01a8c0@DDCR691X><003e01c6120d$802cc3d0$0b01a8c0@DDCR691X>
+	<000701c61365$1ec6fda0$0e01a8c0@KENHOST5>
+Message-ID: <001a01c6139b$2b285540$0b01a8c0@DDCR691X>
+
+市川です。
+
+伊藤さん、はじめまして。
+試していただいてありがとうございます。
+
+> ダウンロードして　２００５Jの開発版に読み込みました。（WindowXP上です）
+> MCZファイル初めてでしたので、解凍して、ｓｔファイルを　fileinしました。
+> だいたい動きました。　私の　Comswiki　のHPでは文字化けです。
+
+日本語の自動判別は今時は必要ないかと思って、コメントアウトしていました。
+日本語swikiへのアクセスを考えると、自動判別入れたほうがいいですね。
+スクイークの言語設定が日本語の時には自動判別をオンにするようにしました。
+（ScamperWorkspaceも内蔵しました。）
+http://ich.homelinux.net:8080/squeak/58
+
+> なぜか、squeakland.org のHPが開けませんでした。
+
+squeakland.orgはHTMLのframeタグを使っているので、frame（枠）だけ表示して満足しているようです。
+なんとかなったらまた投稿しますね。
+−
+市川雄二
+
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Mon Jan  9 23:46:02 2006
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2798] Re: スクリーンダンプについて
+In-Reply-To: <43BE806888.1A8DABEE@smtp.nifty.com>
+Message-ID: <BFE8A638.3DF14%sumi@seagreen.ocn.ne.jp>
+
+阿部さん、皆さん、ごきげんよう。鷲見です。
+
+書くほうは GIFReadWriter のほうに実装されているようです。＞アニメーションGIF
+
+下は以前、GIFReadWriter で遊んだときに書いたブログのエントリーです。
+
+http://d.hatena.ne.jp/sumim/20050726/p1
+
+
+on 01/06/06 14:36, abee@squeakland.jp wrote:
+
+> せめてアニメーションGIFができると面白いのですが(そんなに大変じゃないと思
+> います。AnimatedGIFReadWriterは読むほうしか実装されていないので、これを拡
+> 張して)。
+
+--
+Masato Sumi
+
+
+From abee ＠ squeakland.jp  Wed Jan 11 01:05:42 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2799] Re: スクリーンダンプについて
+In-Reply-To: <BFE8A638.3DF14%sumi@seagreen.ocn.ne.jp>
+Message-ID: <20060110160542.80501.qmail@web3208.mail.bbt.yahoo.co.jp>
+
+阿部@広島です。
+
+--- Masato Sumi <sumi@seagreen.ocn.ne.jp> からのメッセー
+ジ：
+> 書くほうは GIFReadWriter
+> のほうに実装されているようです。＞アニメーションGIF
+
+ありがとうございます。
+
+> 下は以前、GIFReadWriter
+> で遊んだときに書いたブログのエントリーです。
+
+参考になります。BookMorphをeToysで拡張してアニメGIFプレ
+イヤを作ってみました。これは楽ですね。あとは画面のキャプ
+チャか。
+
+//abee
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: GIFAnimationPlayer.zip
+型:         application/x-stuffit
+サイズ:     16123 バイト
+説明:       GIFAnimationPlayer.zip
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060111/acd79ea3/GIFAnimationPlayer.sit
+From abee ＠ squeakland.jp  Mon Jan 16 14:53:31 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2800] 復活の  Nebraska
+In-Reply-To: <20060110160542.80501.qmail@web3208.mail.bbt.yahoo.co.jp>
+References: <BFE8A638.3DF14%sumi@seagreen.ocn.ne.jp>
+	<20060110160542.80501.qmail@web3208.mail.bbt.yahoo.co.jp>
+Message-ID: <43CB34DB38F.D0FFABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Squeakland 2005Jでは、大島さんのご尽力により、ネットワークコラボレーショ
+ン環境のNebraska(ネブラスカ)が復活しています。
+
+Nebraskaを使うと、ひとつのデスクトップ(ワールド)を同時に複数の人がネット
+ワーク越しに共有することが可能になります。たとえば、ひとつの作品を遠く離
+れた二人が協力して作ることもできます。やってみると分かりますが、これはと
+ても楽しいです(近所のお隣り同士でも)。
+
+3年半ぶりに鷲見さんのところの解説も少し直しました。
+
+http://swiki.no-ip.com:8080/collab/20
+
+お試しください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoneya ＠ cslab.co.jp  Tue Jan 17 17:06:03 2006
+From: yoneya ＠ cslab.co.jp (Masahiro Yoneya)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2801] 冬休み小学生IT教室のご報告
+Message-ID: <20060117170422.3BEA.YONEYA@cslab.co.jp>
+
+米谷＠シーズ・ラボです。
+
+お世話になっております。
+1/13(金)に「冬休み小学生IT教室」を開催しました。
+当日の札幌は穏やかな天気に恵まれ
+風邪をひいたお子さん以外は無事に教室に集合しました。
+
+教室では、ブロック崩しゲームを作ることを目標に
+スクリプトで命令することなどを勉強しました。
+スクイークは、動きを与えたり音を出したり
+色を変えたりといった事が簡単にできて、
+子供たちも時間いっぱい楽しんでくれました。
+スクイークの環境と作成物を子供たちに送付しますので
+自宅でも引き続きスクイークで遊んでくれると思います。
+
+この場をお借りしまして
+Squeak-jaコミュニティの有志の皆様に感謝とお礼申し上げます。
+以上、簡単ではございますがご報告まで。
+
++----------------------------------------+
+米谷 正広  yoneya@cslab.co.jp　[C's Lab Co.,Ltd] 
+
+From umejava ＠ mars.dti.ne.jp  Wed Jan 18 22:49:26 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2802] SeasideJ更新しました
+Message-ID: <JS200601182249264.1218937@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SqueakによるWebアプリケーションフレームワーク、Seasideの日本語版を
+久しぶりに更新しました。
+
+SeasideJ
+http://swikis.ddo.jp/umejava/22
+
+Squeakland 2005Jで、動作します。インストール済みのイメージも置いてあります
+ので、気軽に試せると思います。
+
+巷にはいろいろとWebアプリケーションを作るための環境があふれていますが、
+Seasideは、それらの中でもかなり優れた生産性を発揮してくれるものと実感
+しています。ぜひ、お試しください。
+
+Enjoy!
+---
+[:masashi | ^umezawa]
+
+From oyak ＠ asu.aasa.ac.jp  Fri Jan 20 23:24:26 2006
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2803] Mac OS X 用インストーラー
+Message-ID: <a06001000bff69b846935@asu.aasa.ac.jp>
+
+こんにちは、
+親松＠愛知淑徳大です。
+
+SqueakLand2005Jのリリースをありがとうございます。
+
+最初、私だけの問題かなとも思いましたが、念のため２つ報告します。
+Mac OS X 10.3.9、Safari 1.3(v312)です。
+
+１つめ☆
+昨日たまたまSqueakLand2005J(Mac OS X)をインストーラーでインストールし 
+ようとしましたが、
+/Appication/Squeakland
+の中身が空っぽでうまくいきませんでした。
+で、よくわからなかったのですがDouble-Click-To-Install.commandの６６行目の
+ditto -rsrcFork /Volumes/SqueakLand/SqueakLand /Applications/SqueakLand
+を
+ditto -rsrcFork /SqueakLand/SqueakLand /Applications/SqueakLand
+と変えたらインストールできました。
+
+２つめ☆
+Safariで
+squeakland.jpのチュートリアルのページ
+http://squeakland.jp/author/etoys.html
+の
+Etoys and Simstories in SqueakやPainting Tutorial
+を見ようとするとエラーが出ます。
+でも本家の
+http://www.squeakland.org/
+で見る分にはOKです。
+
+学生たちを見習って☆をつけてみましたが、特に意味はありません。
+以上ご参考まで
+-- 
+親松和浩
+愛知淑徳大学　現代社会学部　メディアプロデュースコース
+〒480-1197　愛知県愛知郡長久手町長湫片平９
+voice	: 0561-62-4111 ext. 489     fax : 0561-63-9308
+e-mail	: oyak@asu.aasa.ac.jp
+web page  http://www2.aasa.ac.jp/people/oyak/index-j.html
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060120/ae91cc02/attachment.html
+From mutoh ＠ openedu.org  Sun Jan 22 12:14:29 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2804] FreeBSD用XIM入力対応 ports (3.6VM)
+Message-ID: <43D2F895.9000608@openedu.org>
+
+むとうと申します。
+
+これまで、Linux用のSqueak-VMでFreeBSDでXIM入力を行っていたのですが、シス
+テムを6.0-STABLEに更新したら動かなくなってしまいました(;-;)
+# これはこれで原因究明中なんですが…
+
+
+で、余りに悔しいので、一念発起してFreeBSDでXIM入力が可能なVMを作るports
+をでっちあげました。
+FreeBSDのportでは、まだVMは3.6を使っているので、これをベースに作っています。
+まだ簡単なテストしか行っていませんが、興味のあるかたは試していただけると
+幸いです。
+
+情報はこちらです。
+http://qml.610t.org/squeak/1.html
+
+コメントやアドバイスなど、お待ちしております。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+E-mail:mutoh@openedu.org URL:http://610T.org/
+・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+From "土本 (Florian) 強  Sun Jan 22 20:01:22 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2805] Tweakについて
+Message-ID: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。 Florian (土本)です。
+
+　今、ゲーム業界を目指さない一般人向けのゲームデザインと実装の教育プロジェ
+クトを立ち上げようと思っています。まだ、構想段階ですので、単なるサイトに
+なるか、書籍の形になるかはまだ決まっていませんが。
+　これに対するツールとして「考えた物をすぐに実装する」ための枠組みとして、
+Squeak+TweakをSmalltalk経由で(eToyを使わずに)使うのが適当だと今は考えて
+います。
+
+＃はじめはMorphを生で触っていたのですが、ちょっとだけTweakを使ってみてす
+＃ぐに乗り換えました。
+
+　ここでいくつか知りたいことがあるのですが何か情報お持ちの方がいらしたら
+教えて頂けると幸いです。
+
+
+・Tweakが或る程度固まりそうな目処
+　今こちらで使っているTweakはiTweak3.8-6665というバージョンですが、この
+バージョン自体はまだちょっと安定しているとは言い難く、クラスライブラリの
+仕様自体もステーブルとは言えないようです。
+　一応公式サイトによると「アメリカの新学期に間に合わせるために2005年8月
+にTweak 1.0を、日本の新学期に間に合わせるために2006年の早期にTweak 1.1を
+リリース」とは書かれてありますが、これらについては実情はどのようになって
+いるのでしょうか？(先の6665がTweak 1.0でしょうか？)
+　また、これは実装としてはどのような物になる予定かご存じの方はいらっしゃ
+いますでしょうか？
+　また、以前阿部さんにお話を伺ったところによると、Squeak上でのエミュレー
+ション(の様な物)を離れてTweak単体で動く形が本来の姿とのことでしたが、こ
+れが、Tweak 1.1の目標である「自分自身でプログラミングアクティビティが完
+結(公式サイトより)」なのでしょうか？
+
+
+・不足している部品
+　現在Squeak3.8がMorphとして持っている部品(ヴィジェット)は、Tweak上にす
+べては実装されていないと思われますが、これらのもののうち、以下の機能は実
+装の予定があるかどうか、ご存じの方はいらっしゃいますでしょうか？
+
+	ジョイスティックモーフ(特に、Squeak3.8ではなく、Squeakland2005J
+のボタン等機能を持った物)
+
+
+・Croquetとの関係
+　Tweak自体はアプリケーションフレームワークとして見ていますが、Croquetと
+の関係はどのようになるのでしょうか？
+　CroquetはTweakのイベントアーキティクチャとは無関係に実装を続ける予定な
+のでしょうか？
+
+
+　質問ばかりになってしまいましたが、判る範囲で教えて頂けると幸いです。
+
+
+
+　あと、今回個人的に立ち上げようとしているこのプロジェクトの企画書等ほし
+い方がいらっしゃいましたらご連絡ください。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From koubo2006 ＠ yengawa.jpn.org  Sun Jan 22 21:06:42 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2806] Re: Tweakについて
+In-Reply-To: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+References: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <20060122202420.C8F1.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+今回のIPA未踏プロジェクトでTweakを利用しているので一言。
+たぶんやっていると思いますが念のため。Tweakはダウンロードした後でTweakの
+メニューバーから[?→Load Updates...]すると最新の状態になります。(それで
+も大きな進展はないのですが。。。)
+
+肝心の質問項目についてはわかりません。ぼくも知りたいところです。
+
+
+参考になるかどうかわかりませんが、Squeak/Tweakをゲームデザインの教育ツー
+ルとして利用した例が2005年のC5で発表されてました。
+
+Maic Masuch, Michael Rueger. "Challenges in Collaborative Game Design
+Developing Learning Environments for Creating Games," c5, pp. 67-74,
+Third International Conference on Creating, Connecting and Collaborating
+through Computing (C5'05),  2005.
+http://csdl2.computer.org/persagen/DLAbsToc.jsp?resourcePath=/dl/proceedings/c5/&toc=comp/proceedings/c5/2005/2325/00/2325toc.xml&DOI=10.1109/C5.2005.7
+
+
+ぼくもゲームデザインについて興味があるので、お話を聞かせていただけるとう
+れしいです。
+
+
+では。
+
+On Sun, 22 Jan 2006 20:01:22 +0900
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+
+> 　こんにちは。 Florian (土本)です。
+> 
+> 　今、ゲーム業界を目指さない一般人向けのゲームデザインと実装の教育プロジェ
+> クトを立ち上げようと思っています。まだ、構想段階ですので、単なるサイトに
+> なるか、書籍の形になるかはまだ決まっていませんが。
+> 　これに対するツールとして「考えた物をすぐに実装する」ための枠組みとして、
+> Squeak+TweakをSmalltalk経由で(eToyを使わずに)使うのが適当だと今は考えて
+> います。
+> 
+> ＃はじめはMorphを生で触っていたのですが、ちょっとだけTweakを使ってみてす
+> ＃ぐに乗り換えました。
+> 
+> 　ここでいくつか知りたいことがあるのですが何か情報お持ちの方がいらしたら
+> 教えて頂けると幸いです。
+> 
+> 
+> ・Tweakが或る程度固まりそうな目処
+> 　今こちらで使っているTweakはiTweak3.8-6665というバージョンですが、この
+> バージョン自体はまだちょっと安定しているとは言い難く、クラスライブラリの
+> 仕様自体もステーブルとは言えないようです。
+> 　一応公式サイトによると「アメリカの新学期に間に合わせるために2005年8月
+> にTweak 1.0を、日本の新学期に間に合わせるために2006年の早期にTweak 1.1を
+> リリース」とは書かれてありますが、これらについては実情はどのようになって
+> いるのでしょうか？(先の6665がTweak 1.0でしょうか？)
+> 　また、これは実装としてはどのような物になる予定かご存じの方はいらっしゃ
+> いますでしょうか？
+> 　また、以前阿部さんにお話を伺ったところによると、Squeak上でのエミュレー
+> ション(の様な物)を離れてTweak単体で動く形が本来の姿とのことでしたが、こ
+> れが、Tweak 1.1の目標である「自分自身でプログラミングアクティビティが完
+> 結(公式サイトより)」なのでしょうか？
+> 
+> 
+> ・不足している部品
+> 　現在Squeak3.8がMorphとして持っている部品(ヴィジェット)は、Tweak上にす
+> べては実装されていないと思われますが、これらのもののうち、以下の機能は実
+> 装の予定があるかどうか、ご存じの方はいらっしゃいますでしょうか？
+> 
+> 	ジョイスティックモーフ(特に、Squeak3.8ではなく、Squeakland2005J
+> のボタン等機能を持った物)
+> 
+> 
+> ・Croquetとの関係
+> 　Tweak自体はアプリケーションフレームワークとして見ていますが、Croquetと
+> の関係はどのようになるのでしょうか？
+> 　CroquetはTweakのイベントアーキティクチャとは無関係に実装を続ける予定な
+> のでしょうか？
+> 
+> 
+> 　質問ばかりになってしまいましたが、判る範囲で教えて頂けると幸いです。
+> 
+> 
+> 
+> 　あと、今回個人的に立ち上げようとしているこのプロジェクトの企画書等ほし
+> い方がいらっしゃいましたらご連絡ください。
+> 
+> 　では、失礼します。
+> 
+> -----------------------------------------------------------------
+> 土本( Florian )強/florian@seagreen.ocn.ne.jp
+> Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+> /* 朝には消えたあの歌声をいつまでも聞いてた
+>    僕らが残したあの足跡をいつまでも追ってた */
+> =================================================================
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    ^self new!
+
+
+From "土本 (Florian) 強  Sun Jan 22 21:56:18 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2807] Re: Tweakについて
+In-Reply-To: <20060122202420.C8F1.KOUBO2006@yengawa.jpn.org>
+References: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+	<20060122202420.C8F1.KOUBO2006@yengawa.jpn.org>
+Message-ID: <20060122212744.1EB1.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。土本( Florian )です。
+
+メール「[Squeak-ja: 2806] Re: Tweakについて」(2006/01/22 21:06) に於いて
+「Koji Yokokawa」 語りて曰く、
+
+koubo2006> 今回のIPA未踏プロジェクトでTweakを利用しているので一言。
+koubo2006> たぶんやっていると思いますが念のため。Tweakはダウンロードした後でTweakの
+koubo2006> メニューバーから[?→Load Updates...]すると最新の状態になります。(それで
+koubo2006> も大きな進展はないのですが。。。)
+
+　割合こまめに行っています。山宮さん出展なんだろうなぁ、というmcdのファ
+イル名が見つかりますね。
+
+koubo2006> 肝心の質問項目についてはわかりません。ぼくも知りたいところです。
+
+　ありがとうございます。
+
+koubo2006> 参考になるかどうかわかりませんが、Squeak/Tweakをゲームデザインの教育ツー
+koubo2006> ルとして利用した例が2005年のC5で発表されてました。
+koubo2006> 
+koubo2006> Maic Masuch, Michael Rueger. "Challenges in Collaborative Game Design
+koubo2006> Developing Learning Environments for Creating Games," c5, pp. 67-74,
+koubo2006> Third International Conference on Creating, Connecting and Collaborating
+koubo2006> through Computing (C5'05),  2005.
+koubo2006> http://csdl2.computer.org/persagen/DLAbsToc.jsp?resourcePath=/dl/proceedings/c5/&toc=comp/proceedings/c5/2005/2325/00/2325toc.xml&DOI=10.1109/C5.2005.7
+
+　ありがとうございます。こちらも調べてみます。
+
+koubo2006> ぼくもゲームデザインについて興味があるので、お話を聞かせていただけるとう
+koubo2006> れしいです。
+
+　後ほど企画書をお送りします。企画書だけでは内容については語られてはい
+ませんが、雰囲気だけでも掴めれば。
+
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From tetha ＠ st.rim.or.jp  Sun Jan 22 22:24:19 2006
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2808] Re: Mac OS X 用インストーラー
+In-Reply-To: <a06001000bff69b846935@asu.aasa.ac.jp>
+References: <a06001000bff69b846935@asu.aasa.ac.jp>
+Message-ID: <112F7CE1-2E09-455D-A1AA-0ED901C3A58E@st.rim.or.jp>
+
+親松さん、こんばんは。
+今回、Mac版のパッケージを作成しました林です。
+ご報告ありがとうございます。
+
+On 2006/01/20, at 23:24, Kazuhiro Oyamatsu wrote:
+
+> こんにちは、
+> 親松＠愛知淑徳大です。
+>
+> SqueakLand2005Jのリリースをありがとうございます。
+>
+> 最初、私だけの問題かなとも思いましたが、念のため２つ報告します。
+> Mac OS X 10.3.9、Safari 1.3(v312)です。
+>
+> １つめ☆
+> 昨日たまたまSqueakLand2005J(Mac OS X)をインストーラーで 
+> インストールしようとしましたが、
+> /Appication/Squeakland
+> の中身が空っぽでうまくいきませんでした。
+> で、よくわからなかったのですがDouble-Click-To- 
+> Install.commandの６６行目の
+> ditto -rsrcFork /Volumes/SqueakLand/SqueakLand /Applications/ 
+> SqueakLand
+> を
+> ditto -rsrcFork /SqueakLand/SqueakLand /Applications/SqueakLand
+> と変えたらインストールできました。
+
+残念ながら私は手持ちを全て Tiger に移行してしまっている 
+為、再現出来てないのですが、インストール時の障害として、 
+MANTIS に登録しておきたいと思います。
+余談ですが、今のインストーラーは英語版のものをそのまま使っていま 
+す。
+これがまた、シェルスクリプトなのでユーザとの対応が適切になされて 
+おらず（インストール失敗時のメッセージとか）、無愛想なのですが、 
+一方で、今回の親松さんの様にユーザが適宜修正することも出来るじゃ 
+ない。
+というのを狙っているのかなとか妄想してたりしてます。
+
+でもやはり、インストーラは最終的にはPKG形式になって欲しい 
+ですね…
+
+> ２つめ☆
+> Safariで
+> squeakland.jpのチュートリアルのページ
+> http://squeakland.jp/author/etoys.html
+> の
+> Etoys and Simstories in SqueakやPainting Tutorial
+> を見ようとするとエラーが出ます。
+> でも本家の
+> http://www.squeakland.org/
+> で見る分にはOKです。
+
+こちらは、再現できました。
+Safari, FireFox 共にプロジェクトのロードが失敗しました。
+
+一方、 VirtualPC + WinXP + IE + 2005J で試してみたら旨く 
+いってしまいました。
+
+イメージに違いは無いはずなので、ブラウザ・プラグインの造りが  
+Mac と Win で微妙に違ってるのではと疑ってます。
+少し、調べる必要があるようです。
+同時に、これは URL の指定方法の話になってくると思えるので、 
+SqueakLand.jp の管理の方たちとも相談して対応したいと思います。
+よく見ると両者で微妙に、URL が違ってるのですよね。
+
+squeakland.jp の場合
+http://www.squeakland.org/project.jsp?/projects/etoys/EtoysSimstories. 
+004.pr
+
+squeakland.org の場合
+http://www.squeakland.org/project.jsp?http://www.squeakland.org/ 
+projects/etoys/EtoysSimstories.004.pr
+
+
+今後ともよろしくお願いいたします。
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+From tak ＠ metatoys.org  Sun Jan 22 23:25:35 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2809] Re: Tweakについて
+In-Reply-To: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+References: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <43D395DF.4030700@metatoys.org>
+
+山宮です。
+
+大変素晴らしいお話だと思います。私もちょっと間別の物にかまけていて 
+Tweak から離れていましたが、最近また復活しました。今 Twaek 本家イメージ
+とは少し違ったイメージで作業しているのですが、出来るだけ本家にフィードバック
+しますので思った事があれば教えて下されば大変励みになります。
+
+> ・Tweakが或る程度固まりそうな目処
+> 　一応公式サイトによると「アメリカの新学期に間に合わせるために2005年8月
+> にTweak 1.0を、日本の新学期に間に合わせるために2006年の早期にTweak 1.1を
+> リリース」とは書かれてありますが、これらについては実情はどのようになって
+> いるのでしょうか？(先の6665がTweak 1.0でしょうか？)
+
+実はしばらく Tweak のメーリングリストも読んでなかったので、開発スピー
+ドがどんな物なのかまだ判断つかないです。もうちょっと待っていただければ
+お答え出来ると思います。ちなみに、リリース予定とは関係無くいつの間にか
+バージョン番号があがっています。
+1.0 - 最初に公開されたもの。
+1.1 - Croquet にマージされた 3.6 ベースのもの
+1.2 - 3.8 ベースのもの。
+
+> 　また、これは実装としてはどのような物になる予定かご存じの方はいらっしゃ
+> いますでしょうか？
+> 　また、以前阿部さんにお話を伺ったところによると、Squeak上でのエミュレー
+> ション(の様な物)を離れてTweak単体で動く形が本来の姿とのことでしたが、こ
+> れが、Tweak 1.1の目標である「自分自身でプログラミングアクティビティが完
+> 結(公式サイトより)」なのでしょうか？
+
+これも判断つかないですが、今の Morphic と Tweak が混在している状態はそ
+れなりに使えるので、確実な計画を立てるのであれば Morphic のブラウザを
+使う事を考えた方が良いと思います。逆に、ある日から急に Morphic のブラ
+ウザが使えなくなる状況は予想しなくて良いとです(今でもダウンロード出来る
+Squeak 2.8 あたりの、Morphic と MVC が混在している状況を見て想像して下さい)。
+
+> ・不足している部品
+> 　現在Squeak3.8がMorphとして持っている部品(ヴィジェット)は、Tweak上にす
+> べては実装されていないと思われますが、これらのもののうち、以下の機能は実
+> 装の予定があるかどうか、ご存じの方はいらっしゃいますでしょうか？
+> 
+> 	ジョイスティックモーフ(特に、Squeak3.8ではなく、Squeakland2005J
+> のボタン等機能を持った物)
+
+具体的にジョイスティックモーフをいつ作るかは聞いたことが無いです。ジョ
+イスティックくらい自分で作った方が早いと思いますよ。
+
+> ・Croquetとの関係
+> 　Tweak自体はアプリケーションフレームワークとして見ていますが、Croquetと
+> の関係はどのようになるのでしょうか？
+> 　CroquetはTweakのイベントアーキティクチャとは無関係に実装を続ける予定な
+> のでしょうか？
+
+作っているアンドレアスさんは、簡単にくっつくような事を言っています。
+
+> 　あと、今回個人的に立ち上げようとしているこのプロジェクトの企画書等ほし
+> い方がいらっしゃいましたらご連絡ください。
+
+大変興味があります。是非下さい！
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From abee ＠ squeakland.jp  Sun Jan 22 23:56:05 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2810] Re: Tweak について
+In-Reply-To: <43D395DF.4030700@metatoys.org>
+References: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+	<43D395DF.4030700@metatoys.org>
+Message-ID: <43D39D052DF.1454ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 22 Jan 2006 23:25:35 +0900
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>> 	ジョイスティックモーフ(特に、Squeak3.8ではなく、Squeakland2005J
+>> のボタン等機能を持った物)
+>
+>具体的にジョイスティックモーフをいつ作るかは聞いたことが無いです。ジョ
+>イスティックくらい自分で作った方が早いと思いますよ。
+
+eToy2でルナランダを作ろうとして泣きました。
+せめて遊び場があればこの中に置いた楕円のローカル座標で等価なものが作れる
+のですが。Windowは代わりにならないみたいだし。
+結局、ただの四角形と楕円を使ってグローバル座標とローカル座標の変換を自分
+で書きました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From "土本 (Florian) 強  Mon Jan 23 01:09:04 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2811] Re: Tweakについて
+In-Reply-To: <43D395DF.4030700@metatoys.org>
+References: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+	<43D395DF.4030700@metatoys.org>
+Message-ID: <20060123003725.3810.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんばんは。土本( Florian )です。
+
+＃名乗りが安定していないのは本名+ハンドルでメールを書くのが久しぶりだ
+＃からです。平にご容赦を。
+
+メール「[Squeak-ja: 2809] Re: Tweakについて」(2006/01/22 23:25) に於いて
+「Takashi Yamamiya」 語りて曰く、
+
+tak> 大変素晴らしいお話だと思います。私もちょっと間別の物にかまけていて 
+tak> Tweak から離れていましたが、最近また復活しました。今 Twaek 本家イメージ
+tak> とは少し違ったイメージで作業しているのですが、出来るだけ本家にフィードバック
+tak> しますので思った事があれば教えて下されば大変励みになります。
+
+　ありがとうございます。
+
+tak> > ・Tweakが或る程度固まりそうな目処
+tak> > 　一応公式サイトによると「アメリカの新学期に間に合わせるために2005年8月
+tak> > にTweak 1.0を、日本の新学期に間に合わせるために2006年の早期にTweak 1.1を
+tak> > リリース」とは書かれてありますが、これらについては実情はどのようになって
+tak> > いるのでしょうか？(先の6665がTweak 1.0でしょうか？)
+tak> 
+tak> 実はしばらく Tweak のメーリングリストも読んでなかったので、開発スピー
+tak> ドがどんな物なのかまだ判断つかないです。もうちょっと待っていただければ
+tak> お答え出来ると思います。ちなみに、リリース予定とは関係無くいつの間にか
+tak> バージョン番号があがっています。
+tak> 1.0 - 最初に公開されたもの。
+tak> 1.1 - Croquet にマージされた 3.6 ベースのもの
+tak> 1.2 - 3.8 ベースのもの。
+
+　つまり、今使っている6665はTweak 1.2 と内部では呼んで、公式サイトのロー
+ドマップのバージョンとはずれているわけですね。
+
+tak> > 　また、これは実装としてはどのような物になる予定かご存じの方はいらっしゃ
+tak> > いますでしょうか？
+tak> > 　また、以前阿部さんにお話を伺ったところによると、Squeak上でのエミュレー
+tak> > ション(の様な物)を離れてTweak単体で動く形が本来の姿とのことでしたが、こ
+tak> > れが、Tweak 1.1の目標である「自分自身でプログラミングアクティビティが完
+tak> > 結(公式サイトより)」なのでしょうか？
+tak> 
+tak> これも判断つかないですが、今の Morphic と Tweak が混在している状態はそ
+tak> れなりに使えるので、確実な計画を立てるのであれば Morphic のブラウザを
+tak> 使う事を考えた方が良いと思います。逆に、ある日から急に Morphic のブラ
+tak> ウザが使えなくなる状況は予想しなくて良いとです(今でもダウンロード出来る
+tak> Squeak 2.8 あたりの、Morphic と MVC が混在している状況を見て想像して下さい)。
+
+　諒解しました。
+　確かにTweakのSystem BrowserはMorphicのSystem Browserに比べて低機能で
+すし。
+　ただ、極力面倒な部分(コンピュータ的なお約束)を読者に押しつけない方向
+では考えていますので、低機能であってもTweak上のブラウザを使わざるを得
+ないと思っています。むしろ、現在のMorphicとMVCの関係のように、Squeakの
+全画面がTweakのみで完結している(フラップもタイトルバーもない状態)になっ
+てさえいれば、この際エミュレーション(のようなもの)によるパフォーマンス
+の低下には目をつぶってもいいと思っています。
+
+tak> > ・不足している部品
+tak> > 　現在Squeak3.8がMorphとして持っている部品(ヴィジェット)は、Tweak上にす
+tak> > べては実装されていないと思われますが、これらのもののうち、以下の機能は実
+tak> > 装の予定があるかどうか、ご存じの方はいらっしゃいますでしょうか？
+tak> > 
+tak> > 	ジョイスティックモーフ(特に、Squeak3.8ではなく、Squeakland2005J
+tak> > のボタン等機能を持った物)
+tak> 
+tak> 具体的にジョイスティックモーフをいつ作るかは聞いたことが無いです。ジョ
+tak> イスティックくらい自分で作った方が早いと思いますよ。
+
+　諒解しました。
+　やっぱり作った方が早いんですね。大域変数Sensor関係が無くならない(よ
+ね、きっと)ことを前提にでっち上げます。
+
+tak> > ・Croquetとの関係
+tak> > 　Tweak自体はアプリケーションフレームワークとして見ていますが、Croquetと
+tak> > の関係はどのようになるのでしょうか？
+tak> > 　CroquetはTweakのイベントアーキティクチャとは無関係に実装を続ける予定な
+tak> > のでしょうか？
+tak> 
+tak> 作っているアンドレアスさんは、簡単にくっつくような事を言っています。
+
+　先日のOOPSLAでのCroquet Hedgehogの記述を見る限りではいずれ統合されそ
+うだと考えていたため、このような質問になっています。
+　Croquetと統合されると、プレゼンテーションレイヤとして3D描画が使用で
+きるので幅が広がると思っています。
+
+tak> > 　あと、今回個人的に立ち上げようとしているこのプロジェクトの企画書等ほし
+tak> > い方がいらっしゃいましたらご連絡ください。
+tak> 
+tak> 大変興味があります。是非下さい！
+
+　諒解しました。
+　中身にあまりあまり期待せず(^^;)、2,3日お待ちください。ほんとに、目論
+見だけですので。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From "土本 (Florian) 強  Mon Jan 23 01:30:46 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2812] Re: Tweak について
+In-Reply-To: <43D39D052DF.1454ABEE@smtp.nifty.com>
+References: <43D395DF.4030700@metatoys.org>
+	<43D39D052DF.1454ABEE@smtp.nifty.com>
+Message-ID: <20060123010937.3815.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんばんは。土本( Florian )です。
+
+メール「[Squeak-ja: 2810] Re: Tweak について」(2006/01/22 23:56) に於いて
+「Kazuhiro ABE」 語りて曰く、
+
+abee> On Sun, 22 Jan 2006 23:25:35 +0900
+abee> Takashi Yamamiya <tak@metatoys.org> wrote:
+abee> >> 	ジョイスティックモーフ(特に、Squeak3.8ではなく、Squeakland2005J
+abee> >> のボタン等機能を持った物)
+abee> >
+abee> >具体的にジョイスティックモーフをいつ作るかは聞いたことが無いです。ジョ
+abee> >イスティックくらい自分で作った方が早いと思いますよ。
+abee> 
+abee> eToy2でルナランダを作ろうとして泣きました。
+abee> せめて遊び場があればこの中に置いた楕円のローカル座標で等価なものが作れる
+abee> のですが。Windowは代わりにならないみたいだし。
+abee> 結局、ただの四角形と楕円を使ってグローバル座標とローカル座標の変換を自分
+abee> で書きました。
+
+　Playfieldって、ローカル-ワールド変換機能があるんですか。知らなかった。
+確かにビューワではPlayfieldの左下を0,0にしたローカル座標で出ますね。
+メソッドとしてはpoint:in:とかかな？
+　去年RainDropを作ったときに知ってれば楽できたのになぁ。
+
+　ちなみに、MorphicのJoystickMorphは自前で
+
+---
+leftRight
+	^ (handleMorph center x - self center x) * xScale
+---
+
+　とやっているみたいですね。
+
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From abee ＠ squeakland.jp  Mon Jan 23 01:53:16 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2813] Re: Tweak について
+In-Reply-To: <20060123010937.3815.FLORIAN@seagreen.ocn.ne.jp>
+References: <43D39D052DF.1454ABEE@smtp.nifty.com>
+	<20060123010937.3815.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <43D3B87CD2.36D6ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 23 Jan 2006 01:30:46 +0900
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+>　Playfieldって、ローカル-ワールド変換機能があるんですか。知らなかった。
+>確かにビューワではPlayfieldの左下を0,0にしたローカル座標で出ますね。
+>メソッドとしてはpoint:in:とかかな？
+>　去年RainDropを作ったときに知ってれば楽できたのになぁ。
+
+おまけに原点を中心にすることもできます(赤ハロメニューの「遊び場の拡張機能
+」「原点を中心にする」)。幾何カテゴリの局座標関係のタイルはこれではじめて
+活きます。
+ワールドも遊び場も入れ物も実は同じもの(PasteUpMorph)というのが、eToysの面
+白いところです。
+
+余談ですが、eToysでジョイスティックを作るメリットがあるとすれば、スティッ
+クの動き自体もスクリプトで書けることかもしれません。
+
+http://squeakland.jp/super/launcher?MyOwnJoyStick.001.pr
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Mon Jan 23 20:26:19 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2814] デスクトップを飛び出したい
+Message-ID: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+井上です。
+
+さきほどクッキーにお願いされてしまったのですが、モーフをデスクトップの外
+に出せないでしょうか。何が望みかと問うてみたのですが、どうもコンピュータ
+の画面上のアイコンやら絵やらに触ってそれに反応するものを作ってみたいよう
+なのです。
+モーフを外に出すのではなくて、コンピュータのデスクトップを絵としてそのま
+まSqueakのデスクトップに表示できればいいのかもしれません。透明なデスク
+トップといいますか。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From yoshiki ＠ squeakland.org  Tue Jan 24 03:39:45 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2815] Re: 冬休み小学生IT教室のご報告
+In-Reply-To: <20060117170422.3BEA.YONEYA@cslab.co.jp>
+References: <20060117170422.3BEA.YONEYA@cslab.co.jp>
+Message-ID: <u64oa23gu.wl%yoshiki@squeakland.org>
+
+  米谷さん
+
+> お世話になっております。
+> 1/13(金)に「冬休み小学生IT教室」を開催しました。
+> 当日の札幌は穏やかな天気に恵まれ
+> 風邪をひいたお子さん以外は無事に教室に集合しました。
+
+> 教室では、ブロック崩しゲームを作ることを目標に
+> スクリプトで命令することなどを勉強しました。
+> スクイークは、動きを与えたり音を出したり
+> 色を変えたりといった事が簡単にできて、
+> 子供たちも時間いっぱい楽しんでくれました。
+> スクイークの環境と作成物を子供たちに送付しますので
+> 自宅でも引き続きスクイークで遊んでくれると思います。
+
+  すっかりおそくなってしまいましたが、教室が成功したようでなによりです。
+
+> この場をお借りしまして
+> Squeak-jaコミュニティの有志の皆様に感謝とお礼申し上げます。
+> 以上、簡単ではございますがご報告まで。
+
+  これからもがんばってください。
+
+-- Yoshiki
+
+From oyak ＠ asu.aasa.ac.jp  Tue Jan 24 15:27:06 2006
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2816] Re: Mac OS X 用インストーラー
+In-Reply-To: <112F7CE1-2E09-455D-A1AA-0ED901C3A58E@st.rim.or.jp>
+References: <a06001000bff69b846935@asu.aasa.ac.jp>
+	<112F7CE1-2E09-455D-A1AA-0ED901C3A58E@st.rim.or.jp>
+Message-ID: <a06001001bffb751ccb43@asu.aasa.ac.jp>
+
+林さん、
+こんにちは、親松です。
+ご対応ありがとうございます。
+
+なるほど、今はTigerなのですね。
+ここ数年持ち歩いていたPBG4 12"(800MHz?)の調子が悪くなり、2004年5月に買 
+ってあまり使っていなかったPBG4 15"(1.5GHz)に移行しました。でもこれも、 
+もう古いのだと気づきました。
+
+Tigerにしようかとも一瞬思いましたが、Intel Macがでたのでいろいろ変える 
+のはやめました。10.3.9の報告で役に立てるかもしれませんし。
+
+今後ともよろしくお願いいたします
+
+At 10:24 PM +0900 06.1.22, Tetsuya HAYASHI wrote:
+>親松さん、こんばんは。
+>今回、Mac版のパッケージを作成しました林です。
+>ご報告ありがとうございます。
+>
+>On 2006/01/20, at 23:24, Kazuhiro Oyamatsu wrote:
+>
+>>こんにちは、
+>>親松＠愛知淑徳大です。
+>>
+>>SqueakLand2005Jのリリースをありがとうございます。
+>>
+>>最初、私だけの問題かなとも思いましたが、念のため２つ報告します。
+>>Mac OS X 10.3.9、Safari 1.3(v312)です。
+>>
+>>１つめ☆
+>>昨日たまたまSqueakLand2005J(Mac OS X)をインストーラーでインストール 
+>>しようとしましたが、
+>>/Appication/Squeakland
+>>の中身が空っぽでうまくいきませんでした。
+>>で、よくわからなかったのですがDouble-Click-To-Install.commandの６６行目の
+>>ditto -rsrcFork /Volumes/SqueakLand/SqueakLand /Applications/SqueakLand
+>>を
+>>ditto -rsrcFork /SqueakLand/SqueakLand /Applications/SqueakLand
+>>と変えたらインストールできました。
+>
+>残念ながら私は手持ちを全て Tiger に移行してしまっている為、再現出来て 
+>ないのですが、インストール時の障害として、MANTIS に登録しておきたいと 
+>思います。
+>余談ですが、今のインストーラーは英語版のものをそのまま使っています。
+>これがまた、シェルスクリプトなのでユーザとの対応が適切になされておら 
+>ず（インストール失敗時のメッセージとか）、無愛想なのですが、一方で、 
+>今回の親松さんの様にユーザが適宜修正することも出来るじゃない。
+>というのを狙っているのかなとか妄想してたりしてます。
+>
+>でもやはり、インストーラは最終的にはPKG形式になって欲しいですね…
+
+-- 
+親松和浩
+愛知淑徳大学　現代社会学部　メディアプロデュースコース
+〒480-1197　愛知県愛知郡長久手町長湫片平９
+voice	: 0561-62-4111 ext. 489     fax : 0561-63-9308
+e-mail	: oyak@asu.aasa.ac.jp
+web page  http://www2.aasa.ac.jp/people/oyak/index-j.html
+
+From abee ＠ squeakland.jp  Tue Jan 24 15:55:19 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:23 2007
+Subject: [Squeak-ja: 2817] Re: Mac OS X 用インストーラー
+In-Reply-To: <112F7CE1-2E09-455D-A1AA-0ED901C3A58E@st.rim.or.jp>
+References: <a06001000bff69b846935@asu.aasa.ac.jp>
+	<112F7CE1-2E09-455D-A1AA-0ED901C3A58E@st.rim.or.jp>
+Message-ID: <43D5CF57384.44A3ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+この件、
+
+http://www.squeakland.jp/author/etoys.html
+http://www.squeakland.jp/kids/kidshome.html
+http://www.squeakland.jp/author/essays.html
+
+について、
+
+http://www.squeakland.org/project.jsp?http://www.squeakland.jp/projects/.../*.pr
+
+を参照するように変更しました。林さんの追試ではうまく行っているようです。
+
+# 一部のprファイルのロード時にリソースファイルが見つからないといわれるこ
+# とがありますが、これらはsqueakland.orgでもメンテされていないようです。
+
+ご確認ください。
+
+On Sun, 22 Jan 2006 22:24:19 +0900
+Tetsuya HAYASHI <tetha@st.rim.or.jp> wrote:
+>> ２つめ☆
+>> Safariで
+>> squeakland.jpのチュートリアルのページ
+>> http://squeakland.jp/author/etoys.html
+>> の
+>> Etoys and Simstories in SqueakやPainting Tutorial
+>> を見ようとするとエラーが出ます。
+>> でも本家の
+>> http://www.squeakland.org/
+>> で見る分にはOKです。
+>
+>こちらは、再現できました。
+>Safari, FireFox 共にプロジェクトのロードが失敗しました。
+>
+>一方、 VirtualPC + WinXP + IE + 2005J で試してみたら旨く 
+>いってしまいました。
+>
+>イメージに違いは無いはずなので、ブラウザ・プラグインの造りが  
+>Mac と Win で微妙に違ってるのではと疑ってます。
+>少し、調べる必要があるようです。
+>同時に、これは URL の指定方法の話になってくると思えるので、 
+>SqueakLand.jp の管理の方たちとも相談して対応したいと思います。
+>よく見ると両者で微妙に、URL が違ってるのですよね。
+>
+>squeakland.jp の場合
+>http://www.squeakland.org/project.jsp?/projects/etoys/EtoysSimstories. 
+>004.pr
+>
+>squeakland.org の場合
+>http://www.squeakland.org/project.jsp?http://www.squeakland.org/ 
+>projects/etoys/EtoysSimstories.004.pr
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From okumura ＠ edu.mie-u.ac.jp  Tue Jan 24 16:21:55 2006
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2818] Re: Mac OS X 用インストーラー
+In-Reply-To: <a06001001bffb751ccb43@asu.aasa.ac.jp>
+References: <a06001000bff69b846935@asu.aasa.ac.jp>
+	<112F7CE1-2E09-455D-A1AA-0ED901C3A58E@st.rim.or.jp>
+	<a06001001bffb751ccb43@asu.aasa.ac.jp>
+Message-ID: <20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+Kazuhiro Oyamatsu <oyak@asu.aasa.ac.jp> wrote:
+
+> >>で、よくわからなかったのですがDouble-Click-To-Install.commandの６６行目の
+> >>ditto -rsrcFork /Volumes/SqueakLand/SqueakLand /Applications/SqueakLand
+> >>を
+> >>ditto -rsrcFork /SqueakLand/SqueakLand /Applications/SqueakLand
+> >>と変えたらインストールできました。
+
+よくわからないのですが，これでうまくいくのでしょうか。
+
+10.4（Tiger）では /Volumes/SqueakLand としてマウントされるけれど，10.3
+では ~/Desktop/SqueakLand としてマウントされちゃうようで（~/Desktop/ に
+ダウンロードするからかもしれない），それに対してダブルクリックしたとき
+シェルは ~ で動くので，変えるとすれば
+
+ditto -rsrcFork Desktop/SqueakLand/SqueakLand /Applications/SqueakLand
+
+あるいは
+
+ditto -rsrcFork ~/Desktop/SqueakLand/SqueakLand /Applications/SqueakLand
+
+でしょうか。あまりちゃんと確かめてないので不安です。
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Tue Jan 24 19:07:32 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2819] Re: Mac OS X 用インストーラー
+In-Reply-To: <20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+References: <a06001000bff69b846935@asu.aasa.ac.jp>
+	<112F7CE1-2E09-455D-A1AA-0ED901C3A58E@st.rim.or.jp>
+	<a06001001bffb751ccb43@asu.aasa.ac.jp>
+	<20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+Message-ID: <20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+Haruhiko OkumuraさんがTue, 24 Jan 2006 16:21:55 +0900 (JST)に
+「[Squeak-ja: 2818] Re: Mac OS X 用インストーラー」の件で：
+> 10.4（Tiger）では /Volumes/SqueakLand としてマウントされるけれど，10.3
+> では ~/Desktop/SqueakLand としてマウントされちゃうようで（~/Desktop/ に
+
+マウントされる位置はどちらでも/Volumes/SqueakLandです。デスクトップに表
+示はされますが、Desktopフォルダの中にあるわけではありません。ですから、
+元のスクリプトでおかしくなるというのが解せません。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Tue Jan 24 20:06:46 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2820] Re: Mac OS X 用インストーラー
+In-Reply-To: <20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <a06001000bff69b846935@asu.aasa.ac.jp>
+	<112F7CE1-2E09-455D-A1AA-0ED901C3A58E@st.rim.or.jp>
+	<a06001001bffb751ccb43@asu.aasa.ac.jp>
+	<20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+	<20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <20060124200646329631.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+iNOUE Koich!さんがTue, 24 Jan 2006 19:07:32 +0900に
+「[Squeak-ja: 2819] Re: Mac OS X 用インストーラー」の件で：
+> マウントされる位置はどちらでも/Volumes/SqueakLandです。デスクトップに表
+
+すでに同名のディスクがマウントされている場合もデスクトップに同じ名前で出
+てきますが、マウントポイントは「 1」のような（だったと思います。うろ覚え
+です。(^^;）語尾が付くのだったと思います。もしかしてそれでうまく行ってい
+ないなんてことがありませんかね？何らかの手違いで/Volumesディレクトリにそ
+の名称のディレクトリなどがある場合もそうなったような気がします。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From oyak ＠ asu.aasa.ac.jp  Tue Jan 24 20:27:29 2006
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2821] Re: Mac OS X 用インストーラー
+In-Reply-To: <43D5CF57384.44A3ABEE@smtp.nifty.com>
+References: <a06001000bff69b846935@asu.aasa.ac.jp><112F7CE1-2E09-455D-A1AA-0ED901C3A58
+	E@st.rim.or.jp> <43D5CF57384.44A3ABEE@smtp.nifty.com>
+Message-ID: <a06001000bffbb6ba5876@asu.aasa.ac.jp>
+
+親松です。
+
+スクイークランドのチュートリアルについて、
+私のところMac OSX 10.3.9+Safari1.3.1でみることができました。
+ありがとうございます。
+
+（補足）見ることができるのは自宅(CATV)で、職場ではjpも本家orgも 
+（firewallのため？）エラーが出てみることができずちょっと残念でした。
+
+At 3:55 PM +0900 06.1.24, Kazuhiro ABE wrote:
+>阿部@新百合です。
+>
+>この件、
+>
+>http://www.squeakland.jp/author/etoys.html
+>http://www.squeakland.jp/kids/kidshome.html
+>http://www.squeakland.jp/author/essays.html
+>
+>について、
+>
+>http://www.squeakland.org/project.jsp?http://www.squeakland.jp/projects/.../*.pr
+>
+>を参照するように変更しました。林さんの追試ではうまく行っているようです。
+>
+># 一部のprファイルのロード時にリソースファイルが見つからないといわれるこ
+># とがありますが、これらはsqueakland.orgでもメンテされていないようです。
+>
+>ご確認ください。
+>
+>On Sun, 22 Jan 2006 22:24:19 +0900
+>Tetsuya HAYASHI <tetha@st.rim.or.jp> wrote:
+>>>  ２つめ☆
+>>>  Safariで
+>>>  squeakland.jpのチュートリアルのページ
+>>>  http://squeakland.jp/author/etoys.html
+>>>  の
+>>>  Etoys and Simstories in SqueakやPainting Tutorial
+>>>  を見ようとするとエラーが出ます。
+>>>  でも本家の
+>>>  http://www.squeakland.org/
+>>>  で見る分にはOKです。
+>>
+>>こちらは、再現できました。
+>>Safari, FireFox 共にプロジェクトのロードが失敗しました。
+>>
+>>一方、 VirtualPC + WinXP + IE + 2005J で試してみたら旨く
+>>いってしまいました。
+>>
+>>イメージに違いは無いはずなので、ブラウザ・プラグインの造りが
+>>Mac と Win で微妙に違ってるのではと疑ってます。
+>>少し、調べる必要があるようです。
+>>同時に、これは URL の指定方法の話になってくると思えるので、
+>>SqueakLand.jp の管理の方たちとも相談して対応したいと思います。
+>>よく見ると両者で微妙に、URL が違ってるのですよね。
+>>
+>>squeakland.jp の場合
+>>http://www.squeakland.org/project.jsp?/projects/etoys/EtoysSimstories.
+>>004.pr
+>>
+>>squeakland.org の場合
+>>http://www.squeakland.org/project.jsp?http://www.squeakland.org/
+>>projects/etoys/EtoysSimstories.004.pr
+>
+>  //abee
+>--
+>阿部 和広  EMAIL abee@squeakland.jp
+
+
+-- 
+親松和浩
+愛知淑徳大学　現代社会学部　メディアプロデュースコース
+〒480-1197　愛知県愛知郡長久手町長湫片平９
+voice	: 0561-62-4111 ext. 489     fax : 0561-63-9308
+e-mail	: oyak@asu.aasa.ac.jp
+web page  http://www2.aasa.ac.jp/people/oyak/index-j.html
+
+From oyak ＠ asu.aasa.ac.jp  Tue Jan 24 20:37:44 2006
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2822] Re: Mac OS X 用インストーラー
+In-Reply-To: <20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+References: <a06001000bff69b846935@asu.aasa.ac.jp><112F7CE1-2E09-455D-A1AA-0ED901C3A58
+	E@st.rim.or.jp><a06001001bffb751ccb43@asu.aasa.ac.jp>
+	<20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+Message-ID: <a06001002bffbbff782c2@asu.aasa.ac.jp>
+
+奥村さん、井上さん、
+
+ありがとうございます。親松です。
+
+実は、"Volumes"というのがわからなかったので、スクリプトやreadmeが入っ 
+ているSqueakLandフォルダをMacintosh HDにコピーしてスクリプトを書き換え 
+て実行しました。説明不足ですいません。
+
+~/Desktop/SqueakLand
+と書けばよかったようですね。ありがとうございます。
+
+At 4:21 PM +0900 06.1.24, Haruhiko Okumura wrote:
+>奥村です。
+>
+>Kazuhiro Oyamatsu <oyak@asu.aasa.ac.jp> wrote:
+>
+>>  >>で、よくわからなかったのですがDouble-Click-To-Install.commandの６６行目の
+>>  >>ditto -rsrcFork /Volumes/SqueakLand/SqueakLand /Applications/SqueakLand
+>>  >>を
+>>  >>ditto -rsrcFork /SqueakLand/SqueakLand /Applications/SqueakLand
+>>  >>と変えたらインストールできました。
+>
+>よくわからないのですが，これでうまくいくのでしょうか。
+>
+>10.4（Tiger）では /Volumes/SqueakLand としてマウントされるけれど，10.3
+>では ~/Desktop/SqueakLand としてマウントされちゃうようで（~/Desktop/ に
+>ダウンロードするからかもしれない），それに対してダブルクリックしたとき
+>シェルは ~ で動くので，変えるとすれば
+>
+>ditto -rsrcFork Desktop/SqueakLand/SqueakLand /Applications/SqueakLand
+>
+>あるいは
+>
+>ditto -rsrcFork ~/Desktop/SqueakLand/SqueakLand /Applications/SqueakLand
+>
+>でしょうか。あまりちゃんと確かめてないので不安です。
+
+-- 
+親松和浩
+愛知淑徳大学　現代社会学部　メディアプロデュースコース
+〒480-1197　愛知県愛知郡長久手町長湫片平９
+voice	: 0561-62-4111 ext. 489     fax : 0561-63-9308
+e-mail	: oyak@asu.aasa.ac.jp
+web page  http://www2.aasa.ac.jp/people/oyak/index-j.html
+
+From okumura ＠ edu.mie-u.ac.jp  Tue Jan 24 20:51:41 2006
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2823] Re: Mac OS X 用インストーラー
+In-Reply-To: <20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <a06001001bffb751ccb43@asu.aasa.ac.jp>
+	<20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+	<20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <20060124.205141.33590487.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+私も以前から/Volumes/にマウントされるとばかり思っていたのですが，少なく
+とも今日試した10.3のSafari 1.xから*.dmgをダウンロードして自動でマウント
+された場合には~/Desktop/にマウントされているように見えた（lsで）ので驚
+いた次第です。質問されたかたはさらに別のところ（/）にマウントされたよう
+に見えたということなので，さらに不思議です。
+
+iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp> wrote:
+
+> Haruhiko OkumuraさんがTue, 24 Jan 2006 16:21:55 +0900 (JST)に
+> 「[Squeak-ja: 2818] Re: Mac OS X 用インストーラー」の件で：
+> > 10.4（Tiger）では /Volumes/SqueakLand としてマウントされるけれど，10.3
+> > では ~/Desktop/SqueakLand としてマウントされちゃうようで（~/Desktop/ に
+> 
+> マウントされる位置はどちらでも/Volumes/SqueakLandです。デスクトップに表
+> 示はされますが、Desktopフォルダの中にあるわけではありません。ですから、
+> 元のスクリプトでおかしくなるというのが解せません。
+> -- 
+> https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+> .
+> 
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From okumura ＠ edu.mie-u.ac.jp  Tue Jan 24 20:54:42 2006
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2824] Re: Mac OS X 用インストーラー
+In-Reply-To: <a06001002bffbbff782c2@asu.aasa.ac.jp>
+References: <a06001001bffb751ccb43@asu.aasa.ac.jp>
+	<20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+	<a06001002bffbbff782c2@asu.aasa.ac.jp>
+Message-ID: <20060124.205442.192142563.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+すいません，行き違いに書いてしまいました。
+
+もしまだ10.3をお試しになれる環境にあるのでしたら，どこにマウントされた
+のか，mountコマンドでお調べいただければ何かわかるかもしれません。
+
+Kazuhiro Oyamatsu <oyak@asu.aasa.ac.jp> wrote:
+
+> 実は、"Volumes"というのがわからなかったので、スクリプトやreadmeが入っ 
+> ているSqueakLandフォルダをMacintosh HDにコピーしてスクリプトを書き換え 
+> て実行しました。説明不足ですいません。
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Tue Jan 24 21:24:31 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2825] Re: Mac OS X 用インストーラー
+In-Reply-To: <20060124.205141.33590487.okumura@edu.mie-u.ac.jp>
+References: <a06001001bffb751ccb43@asu.aasa.ac.jp>
+	<20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+	<20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20060124.205141.33590487.okumura@edu.mie-u.ac.jp>
+Message-ID: <20060124212431146887.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+Haruhiko OkumuraさんがTue, 24 Jan 2006 20:51:41 +0900 (JST)に
+「[Squeak-ja: 2823] Re: Mac OS X 用インストーラー」の件で：
+> 私も以前から/Volumes/にマウントされるとばかり思っていたのですが，少なく
+> とも今日試した10.3のSafari 1.xから*.dmgをダウンロードして自動でマウント
+> された場合には~/Desktop/にマウントされているように見えた（lsで）ので驚
+> いた次第です。質問されたかたはさらに別のところ（/）にマウントされたよう
+> に見えたということなので，さらに不思議です。
+
+それはおそらく自動解凍後にそのままフォルダになるタイプのものではないで
+しょうか。10.3.xのいつ頃からかそういうタイプのものが出来るようになったよ
+うです。あるいはSafariの機能なのかも知れません。マウントしてそのままフォ
+ルダとしてコピーされます。マウントされる位置はやはり/Volumesだと思います
+がコピーされるのはdmgファイルをダウンロードしたフォルダ内になります。実
+はまだ新しいバージョンを試してないんですが、そういうタイプのものだとする
+と私がさっき書いたのは外してましたね。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From tetha ＠ st.rim.or.jp  Tue Jan 24 21:40:18 2006
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2826] Re: Mac OS X 用インストーラー
+In-Reply-To: <20060124212431146887.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <a06001001bffb751ccb43@asu.aasa.ac.jp>
+	<20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+	<20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20060124.205141.33590487.okumura@edu.mie-u.ac.jp>
+	<20060124212431146887.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <67349835-5120-4BD7-B58C-8F9B524F8EF3@st.rim.or.jp>
+
+林です。みなさんお騒がせしてすみません。
+
+井上さんのご指摘の通り、自動解凍後、フォルダになってしまう  
+dmg として、私の方で作成してしまったようです。
+この件については、至急、dmg ファイルの再作成いたします。
+
+On 2006/01/24, at 21:24, iNOUE Koich! wrote:
+
+> Haruhiko OkumuraさんがTue, 24 Jan 2006 20:51:41 +0900  
+> (JST)に
+> 「[Squeak-ja: 2823] Re: Mac OS X 用インストーラー」の件 
+> で：
+>> 私も以前から/Volumes/にマウントされるとばかり思っていた 
+>> のですが，少なく
+>> とも今日試した10.3のSafari 1.xから*.dmgをダ 
+>> ウンロードして自動でマウント
+>> された場合には~/Desktop/にマウントされているように見え 
+>> た（lsで）ので驚
+>> いた次第です。質問されたかたはさらに別のところ（/）にマ 
+>> ウントされたよう
+>> に見えたということなので，さらに不思議です。
+>
+> それはおそらく自動解凍後にそのままフォルダになるタイプのもので 
+> はないで
+> しょうか。10.3.xのいつ頃からかそういうタイプのものが出来 
+> るようになったよ
+> うです。あるいはSafariの機能なのかも知れません。マウント 
+> してそのままフォ
+> ルダとしてコピーされます。マウントされる位置はやはり/ 
+> Volumesだと思います
+> がコピーされるのはdmgファイルをダウンロードしたフォルダ 
+> 内になります。実
+> はまだ新しいバージョンを試してないんですが、そういうタイプのも 
+> のだとする
+> と私がさっき書いたのは外してましたね。
+> -- 
+> https://www.ns.musashi-tech.ac.jp/%7einoue/ 
+> Signature/               井上
+> .
+
+
+From okumura ＠ edu.mie-u.ac.jp  Tue Jan 24 22:26:19 2006
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2827] Re: Mac OS X 用インストーラー
+In-Reply-To: <67349835-5120-4BD7-B58C-8F9B524F8EF3@st.rim.or.jp>
+References: <20060124.205141.33590487.okumura@edu.mie-u.ac.jp>
+	<20060124212431146887.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<67349835-5120-4BD7-B58C-8F9B524F8EF3@st.rim.or.jp>
+Message-ID: <20060124.222619.235292776.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+10.4だとマウントされて10.3だと展開後フォルダになるといったことがあるの
+ですか。10.3のほうは自分の部屋ではないので慌ててよく確認せずすみません。
+明日時間があったらまた見てみます。
+
+Tetsuya HAYASHI <tetha@st.rim.or.jp> wrote:
+
+> 林です。みなさんお騒がせしてすみません。
+> 
+> 井上さんのご指摘の通り、自動解凍後、フォルダになってしまう  
+> dmg として、私の方で作成してしまったようです。
+> この件については、至急、dmg ファイルの再作成いたします。
+> 
+> On 2006/01/24, at 21:24, iNOUE Koich! wrote:
+> 
+> > Haruhiko OkumuraさんがTue, 24 Jan 2006 20:51:41 +0900  
+> > (JST)に
+> > 「[Squeak-ja: 2823] Re: Mac OS X 用インストーラー」の件 
+> > で：
+> >> 私も以前から/Volumes/にマウントされるとばかり思っていた 
+> >> のですが，少なく
+> >> とも今日試した10.3のSafari 1.xから*.dmgをダ 
+> >> ウンロードして自動でマウント
+> >> された場合には~/Desktop/にマウントされているように見え 
+> >> た（lsで）ので驚
+> >> いた次第です。質問されたかたはさらに別のところ（/）にマ 
+> >> ウントされたよう
+> >> に見えたということなので，さらに不思議です。
+> >
+> > それはおそらく自動解凍後にそのままフォルダになるタイプのもので 
+> > はないで
+> > しょうか。10.3.xのいつ頃からかそういうタイプのものが出来 
+> > るようになったよ
+> > うです。あるいはSafariの機能なのかも知れません。マウント 
+> > してそのままフォ
+> > ルダとしてコピーされます。マウントされる位置はやはり/ 
+> > Volumesだと思います
+> > がコピーされるのはdmgファイルをダウンロードしたフォルダ 
+> > 内になります。実
+> > はまだ新しいバージョンを試してないんですが、そういうタイプのも 
+> > のだとする
+> > と私がさっき書いたのは外してましたね。
+> > -- 
+> > https://www.ns.musashi-tech.ac.jp/%7einoue/ 
+> > Signature/               井上
+> > .
+> 
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Tue Jan 24 22:37:00 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2828] Re: Mac OS X 用インストーラー
+In-Reply-To: <20060124.222619.235292776.okumura@edu.mie-u.ac.jp>
+References: <20060124.205141.33590487.okumura@edu.mie-u.ac.jp>
+	<20060124212431146887.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<67349835-5120-4BD7-B58C-8F9B524F8EF3@st.rim.or.jp>
+	<20060124.222619.235292776.okumura@edu.mie-u.ac.jp>
+Message-ID: <20060124223700388208.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+Haruhiko OkumuraさんがTue, 24 Jan 2006 22:26:19 +0900 (JST)に
+「[Squeak-ja: 2827] Re: Mac OS X 用インストーラー」の件で：
+> 10.4だとマウントされて10.3だと展開後フォルダになるといったことがあるの
+> ですか。10.3のほうは自分の部屋ではないので慌ててよく確認せずすみません。
+
+たぶん、dmgの作りに依るのだと思います。10.3でも10.4でも同様に解凍されて
+フォルダになります。もしかしたらdmgをマウントするアプリケーション
+DiskImageMounter.appの機能が強化されていて、マウントせずに中身の取り出し
+をするのかも知れません。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From tetha ＠ st.rim.or.jp  Tue Jan 24 22:54:21 2006
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2829] Re: Mac OS X 用インストーラー
+In-Reply-To: <67349835-5120-4BD7-B58C-8F9B524F8EF3@st.rim.or.jp>
+References: <a06001001bffb751ccb43@asu.aasa.ac.jp>
+	<20060124.162155.112724752.okumura@edu.mie-u.ac.jp>
+	<20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20060124.205141.33590487.okumura@edu.mie-u.ac.jp>
+	<20060124212431146887.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<67349835-5120-4BD7-B58C-8F9B524F8EF3@st.rim.or.jp>
+Message-ID: <32A1975E-3228-4B0B-A00B-0A050D01C10C@st.rim.or.jp>
+
+林です。どうも。
+
+先ほど以下のページのダウンロードリンク先のファイルを置き換えまし 
+た。
+
+http://www.squeakland.jp/plugin/installers/mac-x-std.html
+
+これで、Safari でダウンロード後、自動解凍する際にフォルダ 
+としてコピーせず、マウントするようになったはずです。
+
+問題の原因は、OS のバージョンに依存した問題ではなく、井上 
+さんがご指摘されているように dmg ファイルの作成上の問題で 
+した（問題があった dmg ファイルで、Tiger でも自動解凍 
+ONにした場合、かつ、ダウンロード先をデスクトップにするとデスク 
+トップにフォルダが作成されるのを確認いたしました）。
+お手数ですが、ダウンロード後、ボリュームとしてマウントされるかど 
+うか、ご確認いただけますでしょうか？
+
+On 2006/01/24, at 21:40, Tetsuya HAYASHI wrote:
+
+> 林です。みなさんお騒がせしてすみません。
+>
+> 井上さんのご指摘の通り、自動解凍後、フォルダになってしまう  
+> dmg として、私の方で作成してしまったようです。
+> この件については、至急、dmg ファイルの再作成いたします。
+>
+> On 2006/01/24, at 21:24, iNOUE Koich! wrote:
+>
+>> Haruhiko OkumuraさんがTue, 24 Jan 2006 20:51:41 +0900  
+>> (JST)に
+>> 「[Squeak-ja: 2823] Re: Mac OS X 用インストーラー」の件 
+>> で：
+>>> 私も以前から/Volumes/にマウントされるとばかり思ってい 
+>>> たのですが，少なく
+>>> とも今日試した10.3のSafari 1.xから*.dmgを 
+>>> ダウンロードして自動でマウント
+>>> された場合には~/Desktop/にマウントされているように見え 
+>>> た（lsで）ので驚
+>>> いた次第です。質問されたかたはさらに別のところ（/）に 
+>>> マウントされたよう
+>>> に見えたということなので，さらに不思議です。
+>>
+>> それはおそらく自動解凍後にそのままフォルダになるタイプのもの 
+>> ではないで
+>> しょうか。10.3.xのいつ頃からかそういうタイプのものが出 
+>> 来るようになったよ
+>> うです。あるいはSafariの機能なのかも知れません。マウン 
+>> トしてそのままフォ
+>> ルダとしてコピーされます。マウントされる位置はやはり/ 
+>> Volumesだと思います
+>> がコピーされるのはdmgファイルをダウンロードしたフォルダ 
+>> 内になります。実
+>> はまだ新しいバージョンを試してないんですが、そういうタイプの 
+>> ものだとする
+>> と私がさっき書いたのは外してましたね。
+>> -- 
+>> https://www.ns.musashi-tech.ac.jp/%7einoue/ 
+>> Signature/               井上
+>> .
+>
+
+
+From okumura ＠ edu.mie-u.ac.jp  Tue Jan 24 23:06:44 2006
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2830] Re: Mac OS X 用インストーラー
+In-Reply-To: <32A1975E-3228-4B0B-A00B-0A050D01C10C@st.rim.or.jp>
+References: <20060124212431146887.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<67349835-5120-4BD7-B58C-8F9B524F8EF3@st.rim.or.jp>
+	<32A1975E-3228-4B0B-A00B-0A050D01C10C@st.rim.or.jp>
+Message-ID: <20060124.230644.125171849.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+とんちんかんですみません。だんだん理解できてきました。私のTigerは安全の
+ためSafariでダウンロードしたファイルの自動オープンを禁止していて自分で
+ダブルクリックまたはopenしてmountしているので挙動が違ったのですね。
+
+Tetsuya HAYASHI <tetha@st.rim.or.jp> wrote:
+
+> 林です。どうも。
+> 
+> 先ほど以下のページのダウンロードリンク先のファイルを置き換えまし 
+> た。
+> 
+> http://www.squeakland.jp/plugin/installers/mac-x-std.html
+> 
+> これで、Safari でダウンロード後、自動解凍する際にフォルダ 
+> としてコピーせず、マウントするようになったはずです。
+> 
+> 問題の原因は、OS のバージョンに依存した問題ではなく、井上 
+> さんがご指摘されているように dmg ファイルの作成上の問題で 
+> した（問題があった dmg ファイルで、Tiger でも自動解凍 
+> ONにした場合、かつ、ダウンロード先をデスクトップにするとデスク 
+> トップにフォルダが作成されるのを確認いたしました）。
+> お手数ですが、ダウンロード後、ボリュームとしてマウントされるかど 
+> うか、ご確認いただけますでしょうか？
+> 
+> On 2006/01/24, at 21:40, Tetsuya HAYASHI wrote:
+> 
+> > 林です。みなさんお騒がせしてすみません。
+> >
+> > 井上さんのご指摘の通り、自動解凍後、フォルダになってしまう  
+> > dmg として、私の方で作成してしまったようです。
+> > この件については、至急、dmg ファイルの再作成いたします。
+> >
+> > On 2006/01/24, at 21:24, iNOUE Koich! wrote:
+> >
+> >> Haruhiko OkumuraさんがTue, 24 Jan 2006 20:51:41 +0900  
+> >> (JST)に
+> >> 「[Squeak-ja: 2823] Re: Mac OS X 用インストーラー」の件 
+> >> で：
+> >>> 私も以前から/Volumes/にマウントされるとばかり思ってい 
+> >>> たのですが，少なく
+> >>> とも今日試した10.3のSafari 1.xから*.dmgを 
+> >>> ダウンロードして自動でマウント
+> >>> された場合には~/Desktop/にマウントされているように見え 
+> >>> た（lsで）ので驚
+> >>> いた次第です。質問されたかたはさらに別のところ（/）に 
+> >>> マウントされたよう
+> >>> に見えたということなので，さらに不思議です。
+> >>
+> >> それはおそらく自動解凍後にそのままフォルダになるタイプのもの 
+> >> ではないで
+> >> しょうか。10.3.xのいつ頃からかそういうタイプのものが出 
+> >> 来るようになったよ
+> >> うです。あるいはSafariの機能なのかも知れません。マウン 
+> >> トしてそのままフォ
+> >> ルダとしてコピーされます。マウントされる位置はやはり/ 
+> >> Volumesだと思います
+> >> がコピーされるのはdmgファイルをダウンロードしたフォルダ 
+> >> 内になります。実
+> >> はまだ新しいバージョンを試してないんですが、そういうタイプの 
+> >> ものだとする
+> >> と私がさっき書いたのは外してましたね。
+> >> -- 
+> >> https://www.ns.musashi-tech.ac.jp/%7einoue/ 
+> >> Signature/               井上
+> >> .
+> >
+> 
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From oyak ＠ asu.aasa.ac.jp  Wed Jan 25 00:03:55 2006
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2831] Re: Mac OS X 用インストーラー
+In-Reply-To: <32A1975E-3228-4B0B-A00B-0A050D01C10C@st.rim.or.jp>
+References: <a06001001bffb751ccb43@asu.aasa.ac.jp><20060124.162155.112724752.okumura@e
+	du.mie-u.ac.jp><20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.
+	jp><20060124.205141.33590487.okumura@edu.mie-u.ac.jp><20060124212431146887
+	.GyazMail.inoue@ma.ns.musashi-tech.ac.jp><67349835-5120-4BD7-B58C-8F9B524F
+	8EF3@st.rim.or.jp> <32A1975E-3228-4B0B-A00B-0A050D01C10C@st.rim.or.jp>
+Message-ID: <a06001000bffbf11e07cf@asu.aasa.ac.jp>
+
+親松です。
+どうも私の理解と説明不足で混乱させてしまったようで恐縮です。
+
+At 10:54 PM +0900 06.1.24, Tetsuya HAYASHI wrote:
+>林です。どうも。
+>
+>先ほど以下のページのダウンロードリンク先のファイルを置き換えました。
+>
+>http://www.squeakland.jp/plugin/installers/mac-x-std.html
+>
+>これで、Safari でダウンロード後、自動解凍する際にフォルダとしてコピー 
+>せず、マウントするようになったはずです。
+>
+>問題の原因は、OS のバージョンに依存した問題ではなく、井上さんがご指摘 
+>されているように dmg ファイルの作成上の問題でした（問題があった dmg 
+>ファイルで、Tiger でも自動解凍ONにした場合、かつ、ダウンロード先をデ 
+>スクトップにするとデスクトップにフォルダが作成されるのを確認いたしま 
+>した）。
+>お手数ですが、ダウンロード後、ボリュームとしてマウントされるかどう 
+>か、ご確認いただけますでしょうか？
+
+確認しました（Mac OSX 10.3.9+Safari1.3.1）。
+Double-Click-To-Install.commandもちゃんと動作しました。
+
+林さん、井上さん、奥村さん、ありがとうございました。
+
+-- 
+親松和浩
+愛知淑徳大学　現代社会学部　メディアプロデュースコース
+〒480-1197　愛知県愛知郡長久手町長湫片平９
+voice	: 0561-62-4111 ext. 489     fax : 0561-63-9308
+e-mail	: oyak@asu.aasa.ac.jp
+web page  http://www2.aasa.ac.jp/people/oyak/index-j.html
+
+From tetha ＠ st.rim.or.jp  Wed Jan 25 00:23:07 2006
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2832] Re: Mac OS X 用インストーラー
+In-Reply-To: <20060124.230644.125171849.okumura@edu.mie-u.ac.jp>
+References: <20060124212431146887.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<67349835-5120-4BD7-B58C-8F9B524F8EF3@st.rim.or.jp>
+	<32A1975E-3228-4B0B-A00B-0A050D01C10C@st.rim.or.jp>
+	<20060124.230644.125171849.okumura@edu.mie-u.ac.jp>
+Message-ID: <EB3C761B-B82F-4E2D-8E01-6276509AE9D2@st.rim.or.jp>
+
+林です。
+
+On 2006/01/24, at 23:06, Haruhiko Okumura wrote:
+
+> 奥村です。
+>
+> とんちんかんですみません。だんだん理解できてきました。私の 
+> Tigerは安全の
+> ためSafariでダウンロードしたファイルの自動オープンを禁止 
+> していて自分で
+> ダブルクリックまたはopenしてmountしているので挙動 
+> が違ったのですね。
+
+私の方での説明が不足しておりました。
+ご指摘の通り、Safari の環境設定での自動オープンの有無に対 
+して、dmg ファイルのフォーマットの微妙な差異で結果が異なる 
+（マウントするか解凍するか）というのが原因でした。
+まったくもってこちらの認識不足でありました。すみません。
+（以前も同じような指摘があったような…。お恥ずかしいかぎりです）
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+From tetha ＠ st.rim.or.jp  Wed Jan 25 00:45:27 2006
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2833] Re: Mac OS X 用インストーラー
+In-Reply-To: <a06001000bffbf11e07cf@asu.aasa.ac.jp>
+References: <a06001001bffb751ccb43@asu.aasa.ac.jp><20060124.162155.112724752.okumura@e
+	du.mie-u.ac.jp><20060124190732440021.GyazMail.inoue@ma.ns.musashi-tech.ac.
+	jp><20060124.205141.33590487.okumura@edu.mie-u.ac.jp><20060124212431146887
+	.GyazMail.inoue@ma.ns.musashi-tech.ac.jp><67349835-5120-4BD7-B58C-8F9B524F
+	8EF3@st.rim.or.jp>
+	<32A1975E-3228-4B0B-A00B-0A050D01C10C@st.rim.or.jp>
+	<a06001000bffbf11e07cf@asu.aasa.ac.jp>
+Message-ID: <B2454845-879B-4ABB-9B92-7E1251AFC7FE@st.rim.or.jp>
+
+林です。
+
+On 2006/01/25, at 0:03, Kazuhiro Oyamatsu wrote:
+
+> 親松です。
+> どうも私の理解と説明不足で混乱させてしまったようで恐縮です。
+
+元はといえば、私の作業ミスとテスト不足でみなさまにご迷惑をおかけ 
+しました。
+あらためてお詫び申し上げます。
+
+今回初めに標準の「ディスクユーティリティ」を用いずに他のツールで  
+dmg ファイルを作成したのですが、それがそもそもの原因でした。
+標準の「ディスクユーティリティ」を使うことで適切にマウントするイ 
+メージファイルを作ることが出来ました。
+
+また、問題の報告／アドバイスいただきました親松さん、奥村さん、井 
+上さん、ありがとうございました。
+今後ともよろしくお願いいたします。
+
+なお、MANTIS の方も経過をアップデートしておきました。
+http://www.kukakuka.jp/squeak/bugs/view.php?id=68
+（ちょっと勝手に解決済みにしてしまいました(^^;;）
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+From yoshiki ＠ squeakland.org  Wed Jan 25 13:54:40 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2834] Re: デスクトップを飛び出したい
+In-Reply-To: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <upsmgzz3j.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> さきほどクッキーにお願いされてしまったのですが、モーフをデスクトップの外
+> に出せないでしょうか。何が望みかと問うてみたのですが、どうもコンピュータ
+> の画面上のアイコンやら絵やらに触ってそれに反応するものを作ってみたいよう
+> なのです。
+> モーフを外に出すのではなくて、コンピュータのデスクトップを絵としてそのま
+> まSqueakのデスクトップに表示できればいいのかもしれません。透明なデスク
+> トップといいますか。
+
+  技術的には、OS固有のやり方でやれば可能です。以前デスクトップでアニメー
+ションしたりするアクセサリを、WindowsのRegionを指定するAPIをpluginで呼
+ぶようにしてSqueakで書いたことがあります。
+
+  が、一般性のある形で、任意のモーフが出て行って、というのは少し難しい
+ですね。残念ながら。
+
+-- Yoshiki
+
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Wed Jan 25 16:12:15 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2835] Re: デスクトップを飛び出したい
+In-Reply-To: <upsmgzz3j.wl%yoshiki@squeakland.org>
+References: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<upsmgzz3j.wl%yoshiki@squeakland.org>
+Message-ID: <p043204c7bffcd3d9b3f3@amateras.ma.ns.musashi-tech.ac.jp>
+
+Yoshiki Ohshima さんが 2006.1.25ごろに
+「[Squeak-ja: 2834] Re: デスクトップを飛び出したい」の件で：
+>   技術的には、OS固有のやり方でやれば可能です。以前デスクトップでアニメー
+> ションしたりするアクセサリを、WindowsのRegionを指定するAPIをpluginで呼
+> ぶようにしてSqueakで書いたことがあります。
+
+外部にアプリケーションを用意して、それを内部から操るというイメージでしょうか？
+
+>   が、一般性のある形で、任意のモーフが出て行って、というのは少し難しい
+> ですね。残念ながら。
+
+そうだとすると確かに汎用性はありませんね。相当頑張って個別に作成すると
+いうことになるわけですね。Squeakのウィンドウに隠されてしまう画面を
+Squeakのデスクトップに画像として表示するというのは難しいでしょうか？
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Wed Jan 25 16:29:22 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2836] Re: デスクトップを飛び出したい
+In-Reply-To: <p043204c7bffcd3d9b3f3@amateras.ma.ns.musashi-tech.ac.jp>
+References: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp><upsmg
+	zz3j.wl%yoshiki@squeakland.org>
+	<p043204c7bffcd3d9b3f3@amateras.ma.ns.musashi-tech.ac.jp>
+Message-ID: <p043204c8bffcd7a397df@amateras.ma.ns.musashi-tech.ac.jp>
+
+iNOUE Koich! さんが 2006.1.25ごろに
+「[Squeak-ja: 2835] Re: デスクトップを飛び出したい」の件で：
+>> ションしたりするアクセサリを、WindowsのRegionを指定するAPIをpluginで呼
+>> ぶようにしてSqueakで書いたことがあります。
+>
+> 外部にアプリケーションを用意して、それを内部から操るというイメージで
+>しょうか？
+
+あ、APIを呼ぶということは内部のアプリケーションで行うということです
+か。必要なものを外部に表示させるようなアプリケーションをSqueakで作られ
+たのですね。
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From tango ＠ eggegg.co.jp  Wed Jan 25 19:07:36 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2837] Re: デスクトップを飛び出したい
+References: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <006301c62197$2fe430e0$6dc4d2ca@gomes>
+
+やまもとです。
+
+かわむらさんの「ド素人のためのど素人によるSqueak入門」でこうゆうのがありまし
+よん。
+どうなんでしょ？試したこと無いので何ともいえないですが・・・・。
+
+
+http://squeak.qp.land.to/index.php?cmd=read&page=Squeak%2FGallery%2FMisc%2FRootlessSqueak&word=%C6%A9%CC%C0
+
+たしかにSqueakのデスクトップが透明になればいろいろ面白いことできるかもです
+ね。
+＜さすがくっきーくん！！目の付け所がいつもおもしろいっす。
+おいらならWindowsのデスクトップのキャプチャがSqueakからとれるので
+それだけでうれぴ〜。＜Squeakって画像をぺーすとできないからに。
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+----- Original Message ----- 
+From: "iNOUE Koich!" <inoue@ma.ns.musashi-tech.ac.jp>
+To: <squeak-ja@smalltalk.jp>
+Sent: Monday, January 23, 2006 8:26 PM
+Subject: [Squeak-ja: 2814] デスクトップを飛び出したい
+
+
+> 井上です。
+>
+> さきほどクッキーにお願いされてしまったのですが、モーフをデスクトップの外
+> に出せないでしょうか。何が望みかと問うてみたのですが、どうもコンピュータ
+> の画面上のアイコンやら絵やらに触ってそれに反応するものを作ってみたいよう
+> なのです。
+> モーフを外に出すのではなくて、コンピュータのデスクトップを絵としてそのま
+> まSqueakのデスクトップに表示できればいいのかもしれません。透明なデスク
+> トップといいますか。
+> -- 
+> https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+> .
+>
+
+
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Wed Jan 25 19:32:36 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2838] Re: デスクトップを飛び出したい
+In-Reply-To: <006301c62197$2fe430e0$6dc4d2ca@gomes>
+References: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<006301c62197$2fe430e0$6dc4d2ca@gomes>
+Message-ID: <p043204c9bffd01ef893a@amateras.ma.ns.musashi-tech.ac.jp>
+
+Thoru Yamamoto さんが 2006.1.25ごろに
+「[Squeak-ja: 2837] Re: デスクトップを飛び出したい」の件で：
+> かわむらさんの「ド素人のためのど素人によるSqueak入門」でこうゆうのがありまし
+> よん。
+> どうなんでしょ？試したこと無いので何ともいえないですが・・・・。
+
+Thoruさん、ご紹介ありがとうございます。こういうものがあったんですね。
+これは望みのもののような気がします。MacOSX版が欲しい・・・・
+
+> たしかにSqueakのデスクトップが透明になればいろいろ面白いことできるかもです
+> ね。
+> ＜さすがくっきーくん！！目の付け所がいつもおもしろいっす。
+
+テスターのようなモーフを作ってその先にプローブらしきものがありまして、
+「ああダメだ」とか何回も言ってましたので、何をしているのか見てみたらモ
+ーフを保存してダブルクリックしてみたりウィンドウを縮退させてみたり
+（MacOSXでWindowShadeという機能拡張を使ってできます。昔のMacOS9ではシ
+ステムの機能でできていました。）していました。そこで、何をしたいのか聞
+いてみると、「お父さんこれをコンピュータの中に入れてよ」と言われたので
+最初は何のことかさっぱり分かりませんでしたが、いろいろ聞いてみるとやり
+たいことはどうもコンピュータの中のものを触って何か反応するようにしてみ
+たいということのようなので、こちらでお尋ねした次第です。
+阿部さんの「世界聴診器」にも興味を持っているようです。
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From kawa90 ＠ yahoo.co.jp  Wed Jan 25 21:24:55 2006
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2839] Re: デスクトップを飛び出したい
+In-Reply-To: <p043204c9bffd01ef893a@amateras.ma.ns.musashi-tech.ac.jp>
+References: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>	<006301c62197$2fe430e0$6dc4d2ca@gomes>
+	<p043204c9bffd01ef893a@amateras.ma.ns.musashi-tech.ac.jp>
+Message-ID: <43D76E17.5030602@yahoo.co.jp>
+
+はじめまして、かわむらです。
+
+「ド素人のためのど素人によるSqueak入門」で質問があったので、
+ＭＬの方に投げておきます。
+
+Rootless SqueakはWindowsで動くもので、まず拾ってきた
+Win32-Rootless.zip <http://www.d.umn.edu/%7Eareichow/squeak/Win32-Rootless.zip>を展開して、その中の*.stを１個ずつSqueakの
+デスクトップにドロップしてやります。ダイアログでは
+filein entire file（別のでもいいんですが...）を選びます。
+展開した２個のファイルを上記の操作をするとインストールが終了します。
+
+次にワークスペースに次の内容を打ち込んで、
+
+Win32SqueakNavMorph new openInWorld.
+
+Do-itして下さい。この時Squeakのデスクトップの色深度は8か16にするよう
+にします。このRootless Squeakはプロジェクト単位で行う必要があります。
+プロジェクトを移動すると解除されます（うる覚えです）。ただうまく動かない
+場合も
+あったりするので（画面が崩れたりする）、プロジェクトの移動はやらない
+ほうが無難です。
+
+あとはいろいろいじってみてください。ちなみに私はWindows XP Home上で
+動かしました。
+
+それでは。
+
+iNOUE Koich! wrote:
+> Thoru Yamamoto さんが 2006.1.25ごろに
+> 「[Squeak-ja: 2837] Re: デスクトップを飛び出したい」の件で：
+>   
+>> かわむらさんの「ド素人のためのど素人によるSqueak入門」でこうゆうのがありまし
+>> よん。
+>> どうなんでしょ？試したこと無いので何ともいえないですが・・・・。
+>>     
+>
+> Thoruさん、ご紹介ありがとうございます。こういうものがあったんですね。
+> これは望みのもののような気がします。MacOSX版が欲しい・・・・
+>
+>   
+>> たしかにSqueakのデスクトップが透明になればいろいろ面白いことできるかもです
+>> ね。
+>> ＜さすがくっきーくん！！目の付け所がいつもおもしろいっす。
+>>     
+>
+> テスターのようなモーフを作ってその先にプローブらしきものがありまして、
+> 「ああダメだ」とか何回も言ってましたので、何をしているのか見てみたらモ
+> ーフを保存してダブルクリックしてみたりウィンドウを縮退させてみたり
+> （MacOSXでWindowShadeという機能拡張を使ってできます。昔のMacOS9ではシ
+> ステムの機能でできていました。）していました。そこで、何をしたいのか聞
+> いてみると、「お父さんこれをコンピュータの中に入れてよ」と言われたので
+> 最初は何のことかさっぱり分かりませんでしたが、いろいろ聞いてみるとやり
+> たいことはどうもコンピュータの中のものを触って何か反応するようにしてみ
+> たいということのようなので、こちらでお尋ねした次第です。
+> 阿部さんの「世界聴診器」にも興味を持っているようです。
+> --
+> https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+> .
+>
+>
+>   
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.375 / Virus Database: 267.14.22/239 - Release Date: 2006/01/24
+
+--------------------------------------
+GANBARE! NIPPON!
+Yahoo! JAPAN JOC OFFICIAL INTERNET PORTAL SITE PARTNER
+http://pr.mail.yahoo.co.jp/ganbare-nippon/
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Thu Jan 26 08:52:17 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2840] Re: デスクトップを飛び出したい
+In-Reply-To: <43D76E17.5030602@yahoo.co.jp>
+References: <20060123202619231525.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<006301c62197$2fe430e0$6dc4d2ca@gomes><p043204c9bffd01ef893a@amatera
+	s.ma.ns.musashi-tech.ac.jp> <43D76E17.5030602@yahoo.co.jp>
+Message-ID: <p043204cabffdbdd9b60b@amateras.ma.ns.musashi-tech.ac.jp>
+
+Hideo Kawamura さんが 2006.1.25ごろに
+「[Squeak-ja: 2839] Re: デスクトップを飛び出したい」の件で：
+> 「ド素人のためのど素人によるSqueak入門」で質問があったので、
+> ＭＬの方に投げておきます。
+
+ありがとうございました。WindowsのSqueakで動作を確認できました。
+望んでいたことをするためには色か何かに反応するようにできなくてはなりま
+せんが、クリックするとWindowsのデスクトップが反応しますのでスポイトで
+色を吸い取ることはできませんでした。透明なデスクトップと、Windowsのデ
+スクトップをSqueakのデスクトップとして表示するというのは、見かけは似て
+いても仕組みなどが違うことになるのでしょうね。
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From abee ＠ squeakland.jp  Thu Jan 26 09:34:13 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2841] セカチョー no (was: Re: デスクトップを飛び出したい )
+In-Reply-To: <p043204c9bffd01ef893a@amateras.ma.ns.musashi-tech.ac.jp>
+Message-ID: <20060126003413.67754.qmail@web3204.mail.bbt.yahoo.co.jp>
+
+阿部@バークレーです。
+
+--- iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp> からの
+メッセージ：
+> 阿部さんの「世界聴診器」にも興味を持っているようです。
+
+それはうれしいですね。音に反応して何かするとかでしょうか
+。
+
+世界聴診器のハードについては、C5のデモセッションで発表す
+るために新型の量産試作機を持ってきているのですが、具体的
+なリリース時期については、まだ分かりません(すでに狼少年
+ですし)。
+
+//abee
+
+From abee ＠ squeakland.jp  Thu Jan 26 09:41:09 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2842] Re: セカチョーの状況 (was: Re: デスクトップを飛び出したい  )
+In-Reply-To: <20060126003413.67754.qmail@web3204.mail.bbt.yahoo.co.jp>
+Message-ID: <20060126004109.709.qmail@web3202.mail.bbt.yahoo.co.jp>
+
+阿部@バークレーです。
+
+Webメールを使っていて、サブジェクトを書き換えている途中
+に誤って送信されてしまいました。すみません。
+
+//abbe
+
+From "土本 (Florian) 強  Thu Jan 26 16:09:31 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2843] Re: Tweakについて
+In-Reply-To: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+References: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <20060126160748.A6AD.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。土本( Florian )です。
+
+メール「[Squeak-ja: 2805] Tweakについて」(2006/01/22 20:01) に於いて
+「土本 (Florian) 強」 語りて曰く、
+
+土本> 　あと、今回個人的に立ち上げようとしているこのプロジェクトの企画書等ほし
+土本> い方がいらっしゃいましたらご連絡ください。
+
+　こちらが一通り書き上がりましたので、横川さんと山宮さんにはお送りしまし
+た。
+　他にもほしい方がいらっしゃったらご連絡ください。PDFで30KByteほどの小さ
+な物です。
+
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From tango ＠ eggegg.co.jp  Thu Jan 26 17:49:17 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2844] Re: Tweakについて
+References: <20060122175643.748B.FLORIAN@seagreen.ocn.ne.jp>
+	<20060126160748.A6AD.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <003a01c62255$67821260$6dc4d2ca@gomes>
+
+やまもとです
+
+
+もし、興味本位でよろしければ＜こらこら。
+おいらにもおねがいいたしまする。
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+----- Original Message ----- 
+From: "土本 (Florian) 強" <florian@seagreen.ocn.ne.jp>
+To: <squeak-ja@smalltalk.jp>
+Sent: Thursday, January 26, 2006 4:09 PM
+Subject: [Squeak-ja: 2843] Re: Tweakについて
+
+
+> 　こんにちは。土本( Florian )です。
+>
+> メール「[Squeak-ja: 2805] Tweakについて」(2006/01/22 20:01) に於いて
+> 「土本 (Florian) 強」 語りて曰く、
+>
+> 土本> 　あと、今回個人的に立ち上げようとしているこのプロジェクトの企画書等
+ほし
+> 土本> い方がいらっしゃいましたらご連絡ください。
+>
+> 　こちらが一通り書き上がりましたので、横川さんと山宮さんにはお送りしまし
+> た。
+> 　他にもほしい方がいらっしゃったらご連絡ください。PDFで30KByteほどの小さ
+> な物です。
+>
+>
+> 　では、失礼します。
+>
+> -----------------------------------------------------------------
+> 土本( Florian )強/florian@seagreen.ocn.ne.jp
+> Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+> /* 朝には消えたあの歌声をいつまでも聞いてた
+>    僕らが残したあの足跡をいつまでも追ってた */
+> =================================================================
+>
+
+
+
+From "土本 (Florian) 強  Thu Jan 26 17:48:05 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2845] Re: Tweakについて
+In-Reply-To: <003a01c62255$67821260$6dc4d2ca@gomes>
+References: <20060126160748.A6AD.FLORIAN@seagreen.ocn.ne.jp>
+	<003a01c62255$67821260$6dc4d2ca@gomes>
+Message-ID: <20060126174732.A6B6.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+
+メール「[Squeak-ja: 2844] Re: Tweakについて」(2006/01/26 17:49) に於いて
+「Thoru Yamamoto」 語りて曰く、
+
+Thoru> もし、興味本位でよろしければ＜こらこら。
+Thoru> おいらにもおねがいいたしまする。
+
+　興味本位で構いませんよ(^^)。
+　お送りします。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+

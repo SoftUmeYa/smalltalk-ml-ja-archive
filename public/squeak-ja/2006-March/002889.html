@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2889] Re: PluggableListMorphについて教えてください。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202889%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZUxpc3RNb3Jw%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaBskQiRLJEQkJCRGNjUkKCRGJC8kQCQ1JCQhIxsoQg%3D%3D%3F%3D&In-Reply-To=BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o%40mbox.kyoto-inet.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002888.html">
+   <LINK REL="Next"  HREF="002892.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2889] Re: PluggableListMorphについて教えてください。</H1>
+    <B>Toshiyuki Takeda</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202889%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZUxpc3RNb3Jw%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaBskQiRLJEQkJCRGNjUkKCRGJC8kQCQ1JCQhIxsoQg%3D%3D%3F%3D&In-Reply-To=BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o%40mbox.kyoto-inet.or.jp"
+       TITLE="[Squeak-ja: 2889] Re: PluggableListMorphについて教えてください。">takeda.toshiyuki ＠ gmail.com
+       </A><BR>
+    <I>2006年 3月 24日 (金) 11:45:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002888.html">[Squeak-ja: 2888] PluggableListMorphについて教えてください。
+</A></li>
+        <LI>次の記事 <A HREF="002892.html">[Squeak-ja: 2892] Re: PluggableListMorphについて教えてください。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2889">[ 日付 ]</a>
+              <a href="thread.html#2889">[ スレッド ]</a>
+              <a href="subject.html#2889">[ 件名 ]</a>
+              <a href="author.html#2889">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>武田です。
+
+On 3/24/06, kubo-o &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kubo-o ＠ mbox.kyoto-inet.or.jp</A>&gt; wrote:
+&gt;<i> こんにちは。Squeakで簡単な思考過程のモデルを作りたいと思っている者です。
+</I>
+それはおもしろそうです。
+
+PluggableListMorphを使えばいいと思いますが、理解しづらいですよね。
+いつもどのクラスに定義するか私自身迷うのですが、表示用のクラスか、リストを
+ハンドルするクラスを作って、そのMorphを扱うメソッドで、
+
+list := PluggableListMorph new
+              on: self
+              list: #contents
+              selected: #index
+              changeSelected: #index:
+              menu: nil
+	      keystroke: nil.
+
+みたいのを入れてください。そのクラスで、リストを返すcontents、
+リストの位置を返すindex、位置を変更するindex:を定義すると
+希望通りの動作になると思います。index:は、
+
+index: anNumber
+    index := anNumber
+    self changed: #index
+
+のように、changed:を入れてください。
+
+また、上のコードを入れて、sendersをクリックすると例がいくつも出てくるので
+もっと複雑な例を調べることもできます。
+
+取りあえずそんなところでいかがでしょう。
+
+武田俊之
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002888.html">[Squeak-ja: 2888] PluggableListMorphについて教えてください。
+</A></li>
+	<LI>次の記事 <A HREF="002892.html">[Squeak-ja: 2892] Re: PluggableListMorphについて教えてください。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2889">[ 日付 ]</a>
+              <a href="thread.html#2889">[ スレッド ]</a>
+              <a href="subject.html#2889">[ 件名 ]</a>
+              <a href="author.html#2889">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

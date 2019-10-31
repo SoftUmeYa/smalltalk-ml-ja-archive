@@ -1,0 +1,1937 @@
+From abee ＠ squeakland.jp  Sun Jun  1 22:03:21 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 20:08:38 2008
+Subject: [Squeak-ja: 3896] 「便利なテンプレート」が素晴らしすぎる件
+Message-ID: <2d5d52a80806010603r56c8af17j3abf62dfe5f72164@mail.gmail.com>
+
+こんにちは、阿部です。
+
+みんなでたのしくスクイークで公開された「便利なテンプレート（画像やツール）」がとても素晴らしいです。
+
+http://mts-j.hiho.jp/2006/06/post_50.html
+「たくさんの画像や便利なツールが入ったテンプレートがあります。
+スクイークをインストールしたら、このテンプレートもダウンロードして使ってみましょう！」
+
+これだけのものを作るのは大変だった思います。たぶん、実際に現場で活動されている皆さんの豊富な経験が活かされているのでしょう。
+
+うまくつかえば、授業やワークショップを改善できるかもしれません。
+毎回、「じゃあ車、描いて」からスタートする状況から抜けられるような気がします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From sumi ＠ seagreen.ocn.ne.jp  Sun Jun  1 22:24:16 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Tue Jun  3 20:08:39 2008
+Subject: [Squeak-ja: 3897] OSC2008北海道
+Message-ID: <86c0320c0806010624h4adf3bb1vc0fc9f59187cb467@mail.gmail.com>
+
+皆さん、ごきげんよう。鷲見です。
+
+来たる2008年6月28日(土)、札幌市産業振興センターで
+オープンソースカンファレンス2008 Hokkaido が開催されます。
+
+http://www.ospn.jp/osc2008-do/
+
+今年は、Ruby札幌のリーダーで、このカンファレンスの運営に参加されている
+しまださんの熱意あるお取りはからいで、梅澤さんに東京からご足労いただき、
+是非とも Seaside のお話をしていただこう…という企画が進んでいるようで、
+個人的にはとても楽しみにしています。
+
+せっかくなので、Squeak-ja のブースも設けてははどうかという話もあるのですが、
+いつも積極的な活動をしてくださっている蒲田さんは今回は運営側として
+忙しく、梅澤さんと私だけで張り付くのもどうかな…と考えているところです。
+
+もし、参加を考えておられる方で、ブースで来訪者の応対をしてもいいよというかたが
+おられましたら、名のりをあげていただければと思います。
+
+-- 
+Masato Sumi
+From hirohito.araki ＠ attglobal.net  Sun Jun  1 22:36:41 2008
+From: hirohito.araki ＠ attglobal.net (Hirohito Araki)
+Date: Tue Jun  3 20:08:39 2008
+Subject: [Squeak-ja: 3898] Re: 「便利なテンプレート」が素晴らしすぎる件
+In-Reply-To: <2d5d52a80806010603r56c8af17j3abf62dfe5f72164@mail.gmail.com>
+References: <2d5d52a80806010603r56c8af17j3abf62dfe5f72164@mail.gmail.com>
+Message-ID: <4842A5E9.2020201@attglobal.net>
+
+こんにちは、HP荒木です。
+
+> こんにちは、阿部です。
+>
+> みんなでたのしくスクイークで公開された「便利なテンプレート（画像やツール）」がとても素晴らしいです。
+>   
+阿部さん、テンプレートの情報ありがとうございます。さっそくダウンロードし
+てみました。
+
+> うまくつかえば、授業やワークショップを改善できるかもしれません。
+> 毎回、「じゃあ車、描いて」からスタートする状況から抜けられるような気がします。
+>   
+ワークショップのベーシックコースがマンネリ化してきたみたいなので、テンプ
+レートをヒントに新しいワークショップの流れを
+模索していきたいと思います。
+From miyasaka ＠ iris.dti.ne.jp  Mon Jun  2 02:15:50 2008
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Tue Jun  3 20:09:12 2008
+Subject: [Squeak-ja: 3899] Re: 「便利なテンプレート」が素晴らしすぎる件
+In-Reply-To: <2d5d52a80806010603r56c8af17j3abf62dfe5f72164@mail.gmail.com>
+References: <2d5d52a80806010603r56c8af17j3abf62dfe5f72164@mail.gmail.com>
+Message-ID: <4b24f0d0806011015x95bedbdu50b6bd4b817dcd36@mail.gmail.com>
+
+阿部さん、みなさま
+
+こんばんは。
+デジタルハリウッド大学院「みんなでたのしくスクイーク」の宮坂です。
+今年度は、東芝科学館と昭和女子大学附属昭和小学校の２ヶ所で定期的にスクイークワークショップを行っています。
+従来の秋葉原でのワークショップもただいま企画しているところですので、近日中にWebサイトにてお知らせさせていただく予定です。
+
+阿部さん、「便利なテンプレー」トをご紹介いただきありがとうございます！！
+
+■「便利なテンプレート」について
+これは、いままで行ったワークショップで利用しながら、毎回修正向上しているものです。
+短い時間のワークショップでは、絵を描くだけでも以外と時間がかかってしまうので、登録されている画像を使うことで、効果的なワークショップの運営ができます。
+
+■かんたん文字入力
+あと、「便利な道具」フラップの「かんたん文字入力」はeToysの機能だけで作った簡単なソフトウェアキーボードですが、特に低学年の子供が作品を作るときには大活躍してます。
+いまはeToysだけで作った簡易的なものですが、どなたかちゃんとした部品に作り直してください〜。
+（余談ですが、早く日本語フォントの種類がもっと増えるといいですね）
+
+■スクリプトのサンプル
+フラップにスクリプトのサンプルを登録しておくだけで、これを見ながら作品を作ってしまう子もなかにはいます。
+「こんなこともできるんだ」という紹介にはなりますね。
+ちなみに、ジョイスティックのサンプルは、引っ張り出すとオブジェクトの名前とスクリプト上の名前が別のものとして表示されてしまうバグがあるみたいです。（なぜでしょう？）
+
+このテンプレートをワークショップなどで利用される場合には、事前にご一報ください。
+今後の改善のために、ご意見をいただきたいので。
+では、よろしくお願いいたします！！
+
+宮坂
+
+
+2008/06/01 22:03 Kazuhiro ABE <abee@squeakland.jp>:
+> こんにちは、阿部です。
+>
+> みんなでたのしくスクイークで公開された「便利なテンプレート（画像やツール）」がとても素晴らしいです。
+>
+> http://mts-j.hiho.jp/2006/06/post_50.html
+> 「たくさんの画像や便利なツールが入ったテンプレートがあります。
+> スクイークをインストールしたら、このテンプレートもダウンロードして使ってみましょう！」
+>
+> これだけのものを作るのは大変だった思います。たぶん、実際に現場で活動されている皆さんの豊富な経験が活かされているのでしょう。
+>
+> うまくつかえば、授業やワークショップを改善できるかもしれません。
+> 毎回、「じゃあ車、描いて」からスタートする状況から抜けられるような気がします。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+From Fumito.Kondo ＠ hp.com  Mon Jun  2 11:22:01 2008
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Tue Jun  3 20:10:08 2008
+Subject: [Squeak-ja: 3900] ゾンビインスタンス
+Message-ID: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068CD8@G6W0270.americas.hpqcorp.net>
+
+今日は、日本HPの近藤です。
+
+いつも質問ばかりで恐縮ですが、どなたか教えてください。
+
+Smalltalkでプログラミングしていると自分の作ったインスタンスが
+システムにどんどん増えて、プログラムを更新して新しいインスタンスが
+できたのに古いインスタンスが、どこかでゾンビのように生き残っていて
+新しい更新した機能が出てこないような気がすることがあります。
+
+いまシステムにいるインスタンスを表示して古いゾンビのインスタンス
+を殺したいのですが、こんなことできますでしょうか？
+
+近藤
+
+
+
+From tomohiro ＠ sra.co.jp  Mon Jun  2 11:44:18 2008
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue Jun  3 20:10:21 2008
+Subject: [Squeak-ja: 3901] Re: ゾンビインスタンス
+In-Reply-To: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068CD8@G6W0270.americas.hpqcorp.net>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068CD8@G6W0270.americas.hpqcorp.net>
+Message-ID: <48435E82.600@sra.co.jp>
+
+おだです。
+
+> いまシステムにいるインスタンスを表示して古いゾンビのインスタンス
+> を殺したいのですが、こんなことできますでしょうか？
+
+殺せるかどうかは別として、あるクラスのインスタンスを得るには
+
+クラス名 allInstances
+
+をインスペクトすればいいです。
+---
+おだ
+From Fumito.Kondo ＠ hp.com  Mon Jun  2 13:02:34 2008
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Tue Jun  3 20:10:21 2008
+Subject: [Squeak-ja: 3902] Re: ゾンビインスタンス
+In-Reply-To: <48435E82.600@sra.co.jp>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068CD8@G6W0270.americas.hpqcorp.net>
+	<48435E82.600@sra.co.jp>
+Message-ID: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068D9F@G6W0270.americas.hpqcorp.net>
+
+おださん、
+
+早速のご教示、誠にありがとうございます。
+
+家に帰ったら早速試してみます。
+
+近藤
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Tomohiro Oda
+Sent: Monday, June 02, 2008 11:44 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3901] Re: ゾンビインスタンス
+
+おだです。
+
+> いまシステムにいるインスタンスを表示して古いゾンビのインスタンス
+> を殺したいのですが、こんなことできますでしょうか？
+
+殺せるかどうかは別として、あるクラスのインスタンスを得るには
+
+クラス名 allInstances
+
+をインスペクトすればいいです。
+---
+おだ
+From Fumito.Kondo ＠ hp.com  Mon Jun  2 13:10:28 2008
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Tue Jun  3 20:10:22 2008
+Subject: [Squeak-ja: 3903] Re: ゾンビインスタンス
+In-Reply-To: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068D9F@G6W0270.americas.hpqcorp.net>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068CD8@G6W0270.americas.hpqcorp.net>
+	<48435E82.600@sra.co.jp>
+	<1BBA03CC61D1E541ABC7C2BA63A3F774275B068D9F@G6W0270.americas.hpqcorp.net>
+Message-ID: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068DB5@G6W0270.americas.hpqcorp.net>
+
+ついでにもうひとつ教えてください。
+
+ クラス名 allInstances
+
+上記をインスペクトしたらArrayというのが出て、all inst varsの中に43個ほど
+番号つきでクラス名（番号）というものが出てきたのですが、これ全部インスタンスで
+システムの中にいるってコトですか？
+
+デバッグすればするほどインスタンスの残骸がシステムに残るのでしょうか？
+掃除しなくても大丈夫なのでしょうか？
+
+近藤
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kondo, Fumito
+Sent: Monday, June 02, 2008 1:03 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3902] Re: ゾンビインスタンス
+
+おださん、
+
+早速のご教示、誠にありがとうございます。
+
+家に帰ったら早速試してみます。
+
+近藤
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Tomohiro Oda
+Sent: Monday, June 02, 2008 11:44 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3901] Re: ゾンビインスタンス
+
+おだです。
+
+> いまシステムにいるインスタンスを表示して古いゾンビのインスタンス
+> を殺したいのですが、こんなことできますでしょうか？
+
+殺せるかどうかは別として、あるクラスのインスタンスを得るには
+
+クラス名 allInstances
+
+をインスペクトすればいいです。
+---
+おだ
+From newapplesho ＠ gmail.com  Mon Jun  2 13:32:34 2008
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Tue Jun  3 20:10:23 2008
+Subject: [Squeak-ja: 3904] VMについて
+Message-ID: <B77BE901-3EC2-4C41-ABBE-F05800017A79@gmail.com>
+
+吉田 翔です．
+
+最近SqueakのVMについて興味があり勉強をしたいのですが，い 
+きなりVMのソースを読むよりInterpreterクラスを勉強 
+してプラグインをある程度作れるようになってからの方がいいで 
+しょうか．
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From yoshiki ＠ vpri.org  Mon Jun  2 14:09:31 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Jun  3 20:10:24 2008
+Subject: [Squeak-ja: 3905] Re: VMについて
+In-Reply-To: <B77BE901-3EC2-4C41-ABBE-F05800017A79@gmail.com>
+References: <B77BE901-3EC2-4C41-ABBE-F05800017A79@gmail.com>
+Message-ID: <u7id8whh0.wl%yoshiki@vpri.org>
+
+> 吉田 翔です．
+> 
+> 最近SqueakのVMについて興味があり勉強をしたいのですが，い 
+> きなりVMのソースを読むよりInterpreterクラスを勉強 
+> してプラグインをある程度作れるようになってからの方がいいで 
+> しょうか．
+
+  プラグインはおまけでしょう。もともとはなかった概念ですし。
+  Interpreterから行くのがよいと思います。
+
+Squeak2.8程度のイメージとある程度古めのVM、および
+
+ftp://st.cs.uiuc.edu/pub/Smalltalk/Squeak/SmallSqueaksForPDAs/MiniSqueak2.2/mini.image
+
+のようなmini.imageをダウンロードします。2.4cのイメージを起動し(たぶん
+お使いの機械はlittle endianのものだと思うので)、
+
+	(InterpreterSimulatorLSB new openOn: 'mini.image') test
+
+という式を実行すると、インタープリタのシミュレーションをイメージ内です
+ることができます。Interpreterのコードを読みつつ、実行しつつ、あるいは
+適当にbreak pointを入れて(実行しているselectorがある特定のものになった
+ら止まるように条件付きでself haltを入れたりすると便利)、様子をデバッガで
+観察したりするとかなりわかって来ると思います。
+
+  新しいVMやイメージではシミュレーションができないので(直すのもほ
+とんど無理というほど大変)、勉強のためには古いものがよいと思います。た
+だ、細かい修正は適宜行われているので、その工夫のところを学ぶためには古
+いものからの変更を理解しなくてはなりませんが。
+
+-- Yoshiki
+From abee ＠ squeakland.jp  Mon Jun  2 15:51:10 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 20:10:36 2008
+Subject: [Squeak-ja: 3906] Re: ゾンビインスタンス
+In-Reply-To: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068DB5@G6W0270.americas.hpqcorp.net>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068CD8@G6W0270.americas.hpqcorp.net>
+	<48435E82.600@sra.co.jp>
+	<1BBA03CC61D1E541ABC7C2BA63A3F774275B068D9F@G6W0270.americas.hpqcorp.net>
+	<1BBA03CC61D1E541ABC7C2BA63A3F774275B068DB5@G6W0270.americas.hpqcorp.net>
+Message-ID: <2d5d52a80806012351n7970c1f0y7f6801d13b12a340@mail.gmail.com>
+
+こんにちは、阿部です。
+
+08/06/02 に Kondo, Fumito<Fumito.Kondo@hp.com> さんは書きました:
+>  クラス名 allInstances
+>
+> 上記をインスペクトしたらArrayというのが出て、all inst varsの中に43個ほど
+> 番号つきでクラス名（番号）というものが出てきたのですが、これ全部インスタンスで
+> システムの中にいるってコトですか？
+
+はい、そうです。
+
+> デバッグすればするほどインスタンスの残骸がシステムに残るのでしょうか？
+> 掃除しなくても大丈夫なのでしょうか？
+
+Smalltalkには自動メモリ管理機能があるので、明示的にオブジェクトのメモリを確保したり、開放したりしなくてもよいという話は良く聞きます。これは事実そのとおりで、とても便利です。ただ、気をつけないといけないのは、Smalltalkがどのようにオブジェクトを管理しているかということです。
+たぶんここで問題にしているのはモーフのことだと思うので、例となるモーフのクラスを作ります。
+このメールの内容をワークスペースにコピー&ペーストして、以下の式をdo it(式を評価)してください。
+
+Morph subclass: #TestMorph
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Morphic-Test'
+
+まず、このクラスのインスタンスがないことを確認します。以下をprint it(式を表示)で評価します。
+
+TestMorph allInstances size
+
+結果はもちろん0です。
+続いて、インスタンスを作ります。このとき、必要なメモリが自動的に確保されます。
+
+TestMorph new.
+
+これでインスタンスができました。では、再度インスタンスの数を調べましょう。
+
+TestMorph allInstances size.
+
+1を期待したのに0が返りませんでしたか。それは、すでにインスタンスが消滅しているからです。Smalltalkは、このように他から参照されていないオブジェクトのメモリを自動的に開放してくれます。では、次はどうでしょうか。
+
+TestMorph new openInWorld.
+
+TestMorph allInstances size.
+
+今度は1が返ったと思います。TestMorphのインスタンスを画面に開いたとき、ActiveWorldやその他のオブジェクトから参照されたからです。では、これを画面から消して見ましょう。
+
+TestMorph allInstances first delete.
+
+TestMorph allInstances size.
+
+再び0に戻りました。これは何個でも同じことです。
+
+10 timesRepeat: [TestMorph new openInWorld].
+
+TestMorph allInstances size.
+
+TestMorph allInstances do: [:each | each delete].
+
+TestMorph allInstances size.
+
+ここでいう参照とは、どこかのオブジェクトの変数にインスタンスが束縛されていることです。次の式をprint itしてください。
+
+foo := TestMorph new.
+
+TestMorph allInstances size.
+
+この例では、fooはワークスペース変数なので、ワークスペースを閉じるか、明示的に変数を他で初期化するまで参照は切れません(インスタンスは消えません)。他の変数の場合もその寿命によります。
+
+foo := nil.
+
+TestMorph allInstances size.
+
+さきほど使ったdeleteは、その中でこのような変数の初期化を行っています。
+
+また、インスペクタやデバッガなどのツールも、対象のオブジェクトを参照するので、それらを閉じるまで参照は切れません。
+
+TestMorph new inspect.
+
+TestMorph allInstances size.
+
+1が返ると思います。では、インスペクタを閉じてから再び上の式をprint
+itすると0が返るかと思いきや、タイミングによっては1が返る場合があります。しばらく待てば、ガーベジコレクタが動いてゴミ収集されるのですが、これを明示的に行う場合は以下の式を評価します。
+
+Smalltalk garbageCollect.
+
+これで0に戻るはずです。
+
+以上のように、適切に扱えばSmalltalkに不要なオブジェクトが残ることはありません。よくあるのは、要らなくなったツールを開きっぱなしだったり、グローバル変数やクラス変数などの寿命の長い変数に束縛したのを忘れたり、自分で作成した部分について、不要になったときに参照を切る処理をしていなかったりなどです。このような状況のままイメージを保存すると、それらも含めて永続化されます。
+時間が経って、どのような状況か分からなくなった後に何百個、何千個とあるものを一個一個確認して消していくのは困難を極めます(遠い昔に恐ろしいものを見たことがあります)。
+早めの対処をお勧めします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From masuda ＠ im.dendai.ac.jp  Mon Jun  2 16:45:23 2008
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Tue Jun  3 20:10:47 2008
+Subject: [Squeak-ja: 3907] Re: ゾンビインスタンス
+In-Reply-To: <2d5d52a80806012351n7970c1f0y7f6801d13b12a340@mail.gmail.com>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068D9F@G6W0270.americas.hpqcorp.net>
+	<1BBA03CC61D1E541ABC7C2BA63A3F774275B068DB5@G6W0270.americas.hpqcorp.net>
+	<2d5d52a80806012351n7970c1f0y7f6801d13b12a340@mail.gmail.com>
+Message-ID: <20080602.164523.83623112.masuda@im.dendai.ac.jp>
+
+増田＠電大です。
+
+話は直接関係ありませんが、昔、Smalltalk-80 を使っていたころ、自分で作っ
+たクラスのインスタンスが大量に残っているのにそのクラスを消したことがあ
+り、イメージ中に Obsolete というオブジェクトがたくさんできたことがあ
+ります。(^.^;;)
+
+今、VisualWorks で Hoge というクラスを作って、H := Hoge new. して
+H をインスペクトした後に、クラス Hoge を消してみたら、インスペクタの表
+示が AnObsoleteHoge になりました。self class allInstances したら、
+インスタンスの一覧は捕まえられました。Smalltalk inspect してみても
+AnObsoleteHoge がみつからないのですが、どこにあるんでしょうね。
+
+それから、VisualWorks の時には、コントローラに close メッセージを送ら
+ないといけないのに、ビューに close を送ってしまうコードを書いていた人
+がいて、ScheduledControllers にコントローラだけ残りまくってたことがあ
+りましたね。ビューがないコントローラに release メッセージを投げまくり
+ました。
+
+> From: "Kazuhiro ABE" <abee@squeakland.jp>
+> 
+> 時間が経って、どのような状況か分からなくなった後に何百個、何千個とあ
+> るものを一個一個確認して消していくのは困難を極めます(遠い昔に恐ろし
+> いものを見たことがあります)。
+
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/     FAX 03-5280-3592
+It's more fun to compute!
+From Fumito.Kondo ＠ hp.com  Mon Jun  2 17:20:17 2008
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Tue Jun  3 20:10:48 2008
+Subject: [Squeak-ja: 3908] Re: ゾンビインスタンス
+In-Reply-To: <2d5d52a80806012351n7970c1f0y7f6801d13b12a340@mail.gmail.com>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068CD8@G6W0270.americas.hpqcorp.net>
+	<48435E82.600@sra.co.jp>
+	<1BBA03CC61D1E541ABC7C2BA63A3F774275B068D9F@G6W0270.americas.hpqcorp.net>
+	<1BBA03CC61D1E541ABC7C2BA63A3F774275B068DB5@G6W0270.americas.hpqcorp.net>
+	<2d5d52a80806012351n7970c1f0y7f6801d13b12a340@mail.gmail.com>
+Message-ID: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068FEF@G6W0270.americas.hpqcorp.net>
+
+阿部さん、
+
+丁寧な解説をどうもありがとうございます。
+理解がぐっと深まりました。
+
+今後ともよろしくお願いいたします。
+
+近藤
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kazuhiro ABE
+Sent: Monday, June 02, 2008 3:51 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3906] Re: ゾンビインスタンス
+
+こんにちは、阿部です。
+
+08/06/02 に Kondo, Fumito<Fumito.Kondo@hp.com> さんは書きました:
+>  クラス名 allInstances
+>
+> 上記をインスペクトしたらArrayというのが出て、all inst varsの中に43個ほど
+> 番号つきでクラス名（番号）というものが出てきたのですが、これ全部インスタンスで
+> システムの中にいるってコトですか？
+
+はい、そうです。
+
+> デバッグすればするほどインスタンスの残骸がシステムに残るのでしょうか？
+> 掃除しなくても大丈夫なのでしょうか？
+
+Smalltalkには自動メモリ管理機能があるので、明示的にオブジェクトのメモリを確保したり、開放したりしなくてもよいという話は良く聞きます。これは事実そのとおりで、とても便利です。ただ、気をつけないといけないのは、Smalltalkがどのようにオブジェクトを管理しているかということです。
+たぶんここで問題にしているのはモーフのことだと思うので、例となるモーフのクラスを作ります。
+このメールの内容をワークスペースにコピー&ペーストして、以下の式をdo it(式を評価)してください。
+
+Morph subclass: #TestMorph
+        instanceVariableNames: ''
+        classVariableNames: ''
+        poolDictionaries: ''
+        category: 'Morphic-Test'
+
+まず、このクラスのインスタンスがないことを確認します。以下をprint it(式を表示)で評価します。
+
+TestMorph allInstances size
+
+結果はもちろん0です。
+続いて、インスタンスを作ります。このとき、必要なメモリが自動的に確保されます。
+
+TestMorph new.
+
+これでインスタンスができました。では、再度インスタンスの数を調べましょう。
+
+TestMorph allInstances size.
+
+1を期待したのに0が返りませんでしたか。それは、すでにインスタンスが消滅しているからです。Smalltalkは、このように他から参照されていないオブジェクトのメモリを自動的に開放してくれます。では、次はどうでしょうか。
+
+TestMorph new openInWorld.
+
+TestMorph allInstances size.
+
+今度は1が返ったと思います。TestMorphのインスタンスを画面に開いたとき、ActiveWorldやその他のオブジェクトから参照されたからです。では、これを画面から消して見ましょう。
+
+TestMorph allInstances first delete.
+
+TestMorph allInstances size.
+
+再び0に戻りました。これは何個でも同じことです。
+
+10 timesRepeat: [TestMorph new openInWorld].
+
+TestMorph allInstances size.
+
+TestMorph allInstances do: [:each | each delete].
+
+TestMorph allInstances size.
+
+ここでいう参照とは、どこかのオブジェクトの変数にインスタンスが束縛されていることです。次の式をprint itしてください。
+
+foo := TestMorph new.
+
+TestMorph allInstances size.
+
+この例では、fooはワークスペース変数なので、ワークスペースを閉じるか、明示的に変数を他で初期化するまで参照は切れません(インスタンスは消えません)。他の変数の場合もその寿命によります。
+
+foo := nil.
+
+TestMorph allInstances size.
+
+さきほど使ったdeleteは、その中でこのような変数の初期化を行っています。
+
+また、インスペクタやデバッガなどのツールも、対象のオブジェクトを参照するので、それらを閉じるまで参照は切れません。
+
+TestMorph new inspect.
+
+TestMorph allInstances size.
+
+1が返ると思います。では、インスペクタを閉じてから再び上の式をprint
+itすると0が返るかと思いきや、タイミングによっては1が返る場合があります。しばらく待てば、ガーベジコレクタが動いてゴミ収集されるのですが、これを明示的に行う場合は以下の式を評価します。
+
+Smalltalk garbageCollect.
+
+これで0に戻るはずです。
+
+以上のように、適切に扱えばSmalltalkに不要なオブジェクトが残ることはありません。よくあるのは、要らなくなったツールを開きっぱなしだったり、グローバル変数やクラス変数などの寿命の長い変数に束縛したのを忘れたり、自分で作成した部分について、不要になったときに参照を切る処理をしていなかったりなどです。このような状況のままイメージを保存すると、それらも含めて永続化されます。
+時間が経って、どのような状況か分からなくなった後に何百個、何千個とあるものを一個一個確認して消していくのは困難を極めます(遠い昔に恐ろしいものを見たことがあります)。
+早めの対処をお勧めします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From newapplesho ＠ gmail.com  Mon Jun  2 23:24:00 2008
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Tue Jun  3 20:11:43 2008
+Subject: [Squeak-ja: 3909] Re: VMについて
+In-Reply-To: <u7id8whh0.wl%yoshiki@vpri.org>
+References: <B77BE901-3EC2-4C41-ABBE-F05800017A79@gmail.com>
+	<u7id8whh0.wl%yoshiki@vpri.org>
+Message-ID: <FA1F34EA-9DEF-4CDA-B42A-4BB8638E541D@gmail.com>
+
+吉田翔です．
+
+大島さんありがとうございます．
+メールの内容についてもう少し教えてください．
+
+ >2.4cのイメージを起動し(たぶんお使いの機械はlittle endian 
+のものだと思うので)
+
+必要なものはSqueak2.8のVMとimage,ftpに公開 
+されているmini.imageとSqueak2.4も必要なのでしょうか．
+little endianということはintel macだと古いVMはな 
+さそうなのでlinuxかwindowsの環境で実行した方がよ 
+いということでしょうか．
+
+
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From yoshiki ＠ vpri.org  Tue Jun  3 03:15:53 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Jun  3 20:12:48 2008
+Subject: [Squeak-ja: 3910] Re: VMについて
+In-Reply-To: <FA1F34EA-9DEF-4CDA-B42A-4BB8638E541D@gmail.com>
+References: <B77BE901-3EC2-4C41-ABBE-F05800017A79@gmail.com>
+	<u7id8whh0.wl%yoshiki@vpri.org>
+	<FA1F34EA-9DEF-4CDA-B42A-4BB8638E541D@gmail.com>
+Message-ID: <u1w3fwvmu.wl%yoshiki@vpri.org>
+
+>  >2.4cのイメージを起動し(たぶんお使いの機械はlittle endian 
+> のものだと思うので)
+> 
+> 必要なものはSqueak2.8のVMとimage,ftpに公開 
+> されているmini.imageとSqueak2.4も必要なのでしょうか．
+> little endianということはintel macだと古いVMはな 
+> さそうなのでlinuxかwindowsの環境で実行した方がよ 
+> いということでしょうか．
+
+  イメージはSqueak 2.8とmini.imageでよいと思います。VMはもしかしたら最
+新のものもSqueak2.8.imageを走らせることができるかもしれません。特に特
+殊な機能を必要とするわけでもないので、もしIntel Mac上で適当なVMで
+Squeak2.8.imageが起動できればそれでいけると思います。
+
+-- Yoshiki
+From tomohiro ＠ sra.co.jp  Tue Jun  3 10:57:05 2008
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue Jun  3 20:14:46 2008
+Subject: [Squeak-ja: 3911] Re: ゾンビインスタンス
+In-Reply-To: <20080602.164523.83623112.masuda@im.dendai.ac.jp>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068D9F@G6W0270.americas.hpqcorp.net>	<1BBA03CC61D1E541ABC7C2BA63A3F774275B068DB5@G6W0270.americas.hpqcorp.net>	<2d5d52a80806012351n7970c1f0y7f6801d13b12a340@mail.gmail.com>
+	<20080602.164523.83623112.masuda@im.dendai.ac.jp>
+Message-ID: <4844A4F1.2000903@sra.co.jp>
+
+おだです。
+
+> 今、VisualWorks で Hoge というクラスを作って、H := Hoge new. して
+> H をインスペクトした後に、クラス Hoge を消してみたら、インスペクタの表
+> 示が AnObsoleteHoge になりました。self class allInstances したら、
+> インスタンスの一覧は捕まえられました。Smalltalk inspect してみても
+> AnObsoleteHoge がみつからないのですが、どこにあるんでしょうね。
+
+Behaviorのクラス変数にObsoleteSubclassesというWeakKeyToCollection
+があって、それはキーがAnObsolete superclassに、値側にWeakArrayがあって、
+そのWeakArrayの中に格納されています。
+---
+おだ
+From tomohiro ＠ sra.co.jp  Tue Jun  3 11:07:21 2008
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue Jun  3 20:14:46 2008
+Subject: [Squeak-ja: 3912] Re: ゾンビインスタンス
+In-Reply-To: <4844A4F1.2000903@sra.co.jp>
+References: <1BBA03CC61D1E541ABC7C2BA63A3F774275B068D9F@G6W0270.americas.hpqcorp.net>	<1BBA03CC61D1E541ABC7C2BA63A3F774275B068DB5@G6W0270.americas.hpqcorp.net>	<2d5d52a80806012351n7970c1f0y7f6801d13b12a340@mail.gmail.com>	<20080602.164523.83623112.masuda@im.dendai.ac.jp>
+	<4844A4F1.2000903@sra.co.jp>
+Message-ID: <4844A759.20907@sra.co.jp>
+
+おだです。言い忘れてましたが、下記はSqueakの場合です。Visual Worksのほうは
+最近すっかりいじってないので忘れてしまいました :-)
+---
+おだ
+
+Tomohiro Oda wrote:
+> おだです。
+> 
+>> 今、VisualWorks で Hoge というクラスを作って、H := Hoge new. して
+>> H をインスペクトした後に、クラス Hoge を消してみたら、インスペクタの表
+>> 示が AnObsoleteHoge になりました。self class allInstances したら、
+>> インスタンスの一覧は捕まえられました。Smalltalk inspect してみても
+>> AnObsoleteHoge がみつからないのですが、どこにあるんでしょうね。
+> 
+> Behaviorのクラス変数にObsoleteSubclassesというWeakKeyToCollection
+> があって、それはキーがAnObsolete superclassに、値側にWeakArrayがあって、
+> そのWeakArrayの中に格納されています。
+> ---
+> おだ
+> 
+> 
+
+From abee ＠ squeakland.jp  Tue Jun  3 16:03:05 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 20:15:30 2008
+Subject: [Squeak-ja: 3913] Re: OSC2008北海道
+In-Reply-To: <86c0320c0806010624h4adf3bb1vc0fc9f59187cb467@mail.gmail.com>
+References: <86c0320c0806010624h4adf3bb1vc0fc9f59187cb467@mail.gmail.com>
+Message-ID: <2d5d52a80806030003k12f4769cv196c0b7a738004f0@mail.gmail.com>
+
+こんにちは、阿部です。
+
+最近極度の金欠なので迷っていたのですが、参加させていただきます。
+ブース展示ほかセミナの留守番など雑用一般なんでもしますのでよろしくお願いします。
+その際、よろしければOLPC XOも一緒に展示させてください(他の書籍とかの展示物の手配はされてますか)。
+また、せっかくなので、北海道でMacのユーザグループなどにOLPCの宣伝ができる機会がもしあれば嬉しいです。
+私の旅程は特典航空券を使う関係で、今のところ新千歳6/26夕入りの6/29朝発です(6/27は苫小牧でミールを見るつもり)。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From umejava ＠ mars.dti.ne.jp  Tue Jun  3 16:17:24 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jun  3 20:15:30 2008
+Subject: [Squeak-ja: 3914] Re: OSC2008北海道
+In-Reply-To: <2d5d52a80806030003k12f4769cv196c0b7a738004f0@mail.gmail.com>
+References: <86c0320c0806010624h4adf3bb1vc0fc9f59187cb467@mail.gmail.com>
+	<2d5d52a80806030003k12f4769cv196c0b7a738004f0@mail.gmail.com>
+Message-ID: <JD200806031617244.3980484@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ありがとうございます。阿部さんが来られるとなると、一気に状況は変わって
+きますね。
+
+実はブース展示はRuby札幌さんの間借りで良いかと考えていたのですが、
+Squeak-jaとして展示するという方向で進めてみましょうか。
+
+"Kazuhiro ABE" <abee@squeakland.jp> wrote:
+> こんにちは、阿部です。
+> 
+> 最近極度の金欠なので迷っていたのですが、参加させていただきます。
+> ブース展示ほかセミナの留守番など雑用一般なんでもしますのでよろしくお願いします。
+> その際、よろしければOLPC XOも一緒に展示させてください(他の書籍とかの展示物の手配はされてますか)。
+> また、せっかくなので、北海道でMacのユーザグループなどにOLPCの宣伝ができる機会がもしあれば嬉しいです。
+> 私の旅程は特典航空券を使う関係で、今のところ新千歳6/26夕入りの6/29朝発です(6/27は苫小牧でミールを見るつもり)。
+> 
+> よろしくお願いします。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+---
+[:masashi | ^umezawa]
+From sumi ＠ seagreen.ocn.ne.jp  Tue Jun  3 17:21:51 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Tue Jun  3 20:15:31 2008
+Subject: [Squeak-ja: 3915] Re: OSC2008北海道
+In-Reply-To: <2d5d52a80806030003k12f4769cv196c0b7a738004f0@mail.gmail.com>
+References: <86c0320c0806010624h4adf3bb1vc0fc9f59187cb467@mail.gmail.com>
+	<2d5d52a80806030003k12f4769cv196c0b7a738004f0@mail.gmail.com>
+Message-ID: <86c0320c0806030121w1b490db5k8fb71006ddf66918@mail.gmail.com>
+
+阿部さん、'ごきげんよう。鷲見です。
+
+2008/06/03 16:03 Kazuhiro ABE <abee@squeakland.jp>:
+> 最近極度の金欠なので迷っていたのですが、参加させていただきます。
+> ブース展示ほかセミナの留守番など雑用一般なんでもしますのでよろしくお願いします。
+
+阿部さんにおいでいただけるとなると、心強いですね。
+
+
+> その際、よろしければOLPC XOも一緒に展示させてください
+
+問題ないと思いますよ。私の XO もありますから連携した遊びも
+できますね。
+
+
+> (他の書籍とかの展示物の手配はされてますか)。
+
+とくにはしていません。古めの本は私の積ん読本コレクション(^_^;)が
+それなりにそろっていると思うのですが、最近刊行された書籍で
+置いたほうがよいものがあればご指示ください。購入しておきます。
+あるいは、荷物になりますが、お持ちいただくのが確実だと思います。
+
+
+> また、せっかくなので、北海道でMacのユーザグループなどにOLPCの宣伝ができる機会がもしあれば嬉しいです。
+
+くしくも同じ 28 日の 17:30  ごろから 20:00 まで（たいていは食事に
+流れるので、その後、場所を変えて 21:30 くらいまで）北海道マッキントシュ
+ユーザー会（HMUG）の定例会があります。ただ、最近はアクティビティが
+極度に下がっているので、望んでおられるような宣伝効果は期待できないと
+思いますが、参加を希望されるのでしたら事前の宣伝をして、当日ご一緒
+することは可能です。ご判断はお任せします。
+
+それと、せっかくの阿部さんの OLPC デモということであれば、
+研究熱心な教育関係者のご友人の多い蒲田さんに（急ですし OSC 準備で
+お忙しいとは思いますが…）なにかアイデアを出していただくことが
+できれば、よりベター＆有意義だとは思います。
+
+
+-- 
+Masato Sumi
+From abee ＠ squeakland.jp  Tue Jun  3 18:28:38 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 20:15:44 2008
+Subject: [Squeak-ja: 3916] Re: OSC2008北海道
+In-Reply-To: <86c0320c0806030121w1b490db5k8fb71006ddf66918@mail.gmail.com>
+References: <86c0320c0806010624h4adf3bb1vc0fc9f59187cb467@mail.gmail.com>
+	<2d5d52a80806030003k12f4769cv196c0b7a738004f0@mail.gmail.com>
+	<86c0320c0806030121w1b490db5k8fb71006ddf66918@mail.gmail.com>
+Message-ID: <2d5d52a80806030228q5f2e8990l5113a768f227a5be@mail.gmail.com>
+
+こんにちは、阿部です。
+
+08/06/03 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> 実はブース展示はRuby札幌さんの間借りで良いかと考えていたのですが、
+> Squeak-jaとして展示するという方向で進めてみましょうか。
+
+過去の例だと、瞬間的、局所的に盛り上がることがあるので、間借りだと少しご迷惑になるかもしれないですね。
+
+08/06/03 に Masato Sumi<sumi@seagreen.ocn.ne.jp> さんは書きました:
+> > その際、よろしければOLPC XOも一緒に展示させてください
+>
+> 問題ないと思いますよ。私の XO もありますから連携した遊びも
+> できますね。
+
+なんと、お持ちだったんですね。たしかに2台あると面白いです。そもそも、2台ないと意味のないアクティビティもありますし。その場合、ビルド番号を揃えたほうがよいので、適当なときにでも教えてください。
+
+> > (他の書籍とかの展示物の手配はされてますか)。
+>
+> とくにはしていません。古めの本は私の積ん読本コレクション(^_^;)が
+> それなりにそろっていると思うのですが、最近刊行された書籍で
+> 置いたほうがよいものがあればご指示ください。購入しておきます。
+> あるいは、荷物になりますが、お持ちいただくのが確実だと思います。
+
+了解です。いつもはアカデミアさんのご厚意で、商売物一式をお借りしていました。会場では販売できないことが多いので、申し込み用のチラシとセットです。
+http://www.academianetwork.co.jp/service/index.html
+http://www.academianetwork.co.jp/service/moe/
+必要ならば、今回もお願いすれば大丈夫だと思います。これは独自のブースを構えられるかどうかにも関係しますね。
+
+> > また、せっかくなので、北海道でMacのユーザグループなどにOLPCの宣伝ができる機会がもしあれば嬉しいです。
+>
+> くしくも同じ 28 日の 17:30  ごろから 20:00 まで（たいていは食事に
+> 流れるので、その後、場所を変えて 21:30 くらいまで）北海道マッキントシュ
+> ユーザー会（HMUG）の定例会があります。ただ、最近はアクティビティが
+> 極度に下がっているので、望んでおられるような宣伝効果は期待できないと
+> 思いますが、参加を希望されるのでしたら事前の宣伝をして、当日ご一緒
+> することは可能です。ご判断はお任せします。
+
+なるほど。たしか、同じ時間にOSCの懇親会もあったと思います。鷲見さんはHMUGの方へ行かれますか。梅澤さんは?
+もし皆さんが懇親会に行かれるのであれば、私もそちらに行きます。
+
+> それと、せっかくの阿部さんの OLPC デモということであれば、
+> 研究熱心な教育関係者のご友人の多い蒲田さんに（急ですし OSC 準備で
+> お忙しいとは思いますが…）なにかアイデアを出していただくことが
+> できれば、よりベター＆有意義だとは思います。
+
+そうですね。蒲田さんと直接の面識がないのと、時間があまりない、かつ、お忙しそうということで、今回は見送りたいと思います。もし、このMLをご覧になっている方で、OSCに来られないけれども見てみたいという方やグループがあれば個別に検討したいと思います。
+
+あと、Squeak-ja OSC専用のMLもありますので、出展に関する細かなことなどには、こちらも使えます。QuickMLなので、CCに私を入れて一度メールを出せば自動的に登録されます。
+osc2007@squeak-ja.quickml.com
+http://quickml.com/
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From sumi ＠ seagreen.ocn.ne.jp  Tue Jun  3 18:40:18 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Tue Jun  3 21:52:55 2008
+Subject: [Squeak-ja: 3917] Re: OSC2008北海道
+In-Reply-To: <2d5d52a80806030228q5f2e8990l5113a768f227a5be@mail.gmail.com>
+References: <86c0320c0806010624h4adf3bb1vc0fc9f59187cb467@mail.gmail.com>
+	<2d5d52a80806030003k12f4769cv196c0b7a738004f0@mail.gmail.com>
+	<86c0320c0806030121w1b490db5k8fb71006ddf66918@mail.gmail.com>
+	<2d5d52a80806030228q5f2e8990l5113a768f227a5be@mail.gmail.com>
+Message-ID: <86c0320c0806030240t2fbe6da3ne7f7c7d72a1ce161@mail.gmail.com>
+
+鷲見です。あーすみません。うっかり×２しておりました。
+
+当日は懇親会がありますね。
+あと、HMUG ミーティングは前の週末（第三土曜日）でした。
+ごめんなさい。
+
+あと、ブースは大丈夫そうです。
+
+取り急ぎ。
+
+2008/06/03 18:28 Kazuhiro ABE <abee@squeakland.jp>:
+> こんにちは、阿部です。
+>
+> 08/06/03 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+>> 実はブース展示はRuby札幌さんの間借りで良いかと考えていたのですが、
+>> Squeak-jaとして展示するという方向で進めてみましょうか。
+>
+> 過去の例だと、瞬間的、局所的に盛り上がることがあるので、間借りだと少しご迷惑になるかもしれないですね。
+>
+> 08/06/03 に Masato Sumi<sumi@seagreen.ocn.ne.jp> さんは書きました:
+>> > その際、よろしければOLPC XOも一緒に展示させてください
+>>
+>> 問題ないと思いますよ。私の XO もありますから連携した遊びも
+>> できますね。
+>
+> なんと、お持ちだったんですね。たしかに2台あると面白いです。そもそも、2台ないと意味のないアクティビティもありますし。その場合、ビルド番号を揃えたほうがよいので、適当なときにでも教えてください。
+>
+>> > (他の書籍とかの展示物の手配はされてますか)。
+>>
+>> とくにはしていません。古めの本は私の積ん読本コレクション(^_^;)が
+>> それなりにそろっていると思うのですが、最近刊行された書籍で
+>> 置いたほうがよいものがあればご指示ください。購入しておきます。
+>> あるいは、荷物になりますが、お持ちいただくのが確実だと思います。
+>
+> 了解です。いつもはアカデミアさんのご厚意で、商売物一式をお借りしていました。会場では販売できないことが多いので、申し込み用のチラシとセットです。
+> http://www.academianetwork.co.jp/service/index.html
+> http://www.academianetwork.co.jp/service/moe/
+> 必要ならば、今回もお願いすれば大丈夫だと思います。これは独自のブースを構えられるかどうかにも関係しますね。
+>
+>> > また、せっかくなので、北海道でMacのユーザグループなどにOLPCの宣伝ができる機会がもしあれば嬉しいです。
+>>
+>> くしくも同じ 28 日の 17:30  ごろから 20:00 まで（たいていは食事に
+>> 流れるので、その後、場所を変えて 21:30 くらいまで）北海道マッキントシュ
+>> ユーザー会（HMUG）の定例会があります。ただ、最近はアクティビティが
+>> 極度に下がっているので、望んでおられるような宣伝効果は期待できないと
+>> 思いますが、参加を希望されるのでしたら事前の宣伝をして、当日ご一緒
+>> することは可能です。ご判断はお任せします。
+>
+> なるほど。たしか、同じ時間にOSCの懇親会もあったと思います。鷲見さんはHMUGの方へ行かれますか。梅澤さんは?
+> もし皆さんが懇親会に行かれるのであれば、私もそちらに行きます。
+>
+>> それと、せっかくの阿部さんの OLPC デモということであれば、
+>> 研究熱心な教育関係者のご友人の多い蒲田さんに（急ですし OSC 準備で
+>> お忙しいとは思いますが…）なにかアイデアを出していただくことが
+>> できれば、よりベター＆有意義だとは思います。
+>
+> そうですね。蒲田さんと直接の面識がないのと、時間があまりない、かつ、お忙しそうということで、今回は見送りたいと思います。もし、このMLをご覧になっている方で、OSCに来られないけれども見てみたいという方やグループがあれば個別に検討したいと思います。
+>
+> あと、Squeak-ja OSC専用のMLもありますので、出展に関する細かなことなどには、こちらも使えます。QuickMLなので、CCに私を入れて一度メールを出せば自動的に登録されます。
+> osc2007@squeak-ja.quickml.com
+> http://quickml.com/
+>
+> よろしくお願いします。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+>
+
+
+
+-- 
+Masato Sumi
+From umejava ＠ mars.dti.ne.jp  Wed Jun  4 18:09:24 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Jun  4 19:28:10 2008
+Subject: [Squeak-ja: 3918] SeasideJOnePlus更新
+Message-ID: <JL200806041809249.17360093@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SeasideJOnePlusを更新しました。Seaside 2.8.1ベースになり、
+Japanese Environment Installerも最新のものを適用しています。
+http://swikis.ddo.jp/umejava/41
+
+基本的にはマイナーな変更です。来るべきOSC2008北海道や、Seasideの
+連載記事に向けて最新にしておいたという感じです。
+
+よろしければお試し下さい。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From kohfow ＠ mbox.kyoto-inet.or.jp  Fri Jun  6 00:44:57 2008
+From: kohfow ＠ mbox.kyoto-inet.or.jp (S.I)
+Date: Mon Jun 16 11:23:07 2008
+Subject: [Squeak-ja: 3919] squeakを、応用した、手書きの「インデックス」
+Message-ID: <F7B73F200C014877A628DFB3295230AF@kohfowPC>
+
+初めまして、京都の「kohfow」ともうします
+　無茶な、「思いつき」ですが、
+１）「ロ−タリ−・インデクス」と言う、名詞帳が、あります
+２）更に、最近「文房具：グッズ」に、２色の、電池駆動の、
+　　「アナログ」（？）落書きボ−ドが、あります
+３）更に、「Ｖｉｓｔａ」では、「ウイジェット？」で、「お気に入り」画像を、
+　　スライドしています（点滅）
+若し、手持ちの、ケイタイの様な物で、
+「手書きメモ」を「パラパラ」捲れないか？と思案中
+（初めは、見るだけで結構です、ですが、屋外で見たい）
+当方、キ−操作が苦手で、遅く、捗らないので、
+「squeak」の手書き画面、上手く、応用出来ませんか？
+----------------------------------------------------
+無料の、Ｔｕｒｂｏ　Ｃ＋＋　２００６、
+　　　　　ＭＳ　Ｖｉｓｕａｌ　Ｓｔｕｄｉｏ　ＶＣ＋＋２００８なら、
+　簡単な「ソフト」作れます
+ＰＳ：
+　尤も、「ＭＦＣ、ＡＴＬ、ＣＯＭ」には、あまり対応して、いませんが・・・
+　「Ｊａｖａ」は、最近忘れました
+よろしく
+
+From sumi ＠ seagreen.ocn.ne.jp  Fri Jun  6 11:29:48 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Mon Jun 16 11:26:40 2008
+Subject: [Squeak-ja: 3920] Re: squeakを、応用した、手書きの「インデックス」
+In-Reply-To: <F7B73F200C014877A628DFB3295230AF@kohfowPC>
+References: <F7B73F200C014877A628DFB3295230AF@kohfowPC>
+Message-ID: <86c0320c0806051929i1ca8bc69mdb87291dd06a76c4@mail.gmail.com>
+
+kohfow さん、ごきげんよう。鷲見です。
+
+Squeak で、ローロデックスっぽくジェスチャーでページめくりが
+できる、手書きのメモ帳のようなソフトを作って、携帯やそれに
+類するデバイスで持ち運んで使いたい…という理解であっていますか？
+
+
+ジェスチャーの認識機構は Genie と呼ばれるサービスが
+Squeak3.6 まで組み込まれていたので、これを使うことで
+ページめくりをさせるジェスチャーを登録すればＯＫだと
+思います。Squeak3.6 は squeak.org のアーカイブから
+入手可能です。
+
+http://ftp.squeak.org/3.6/
+
+Genie の使い方は AGenieIntroduction というクラスのクラス
+コメントに詳しくあるので、そちらをお読みになってください。
+
+
+手書きのメモ自体は、ペイント機能をそのまま使ってもよいですが、
+Pen というクラスに属するオブジェクトを使ったほんの数行の
+コードを組むことでも実現できますので、Smalltalk の練習には
+いいかもしれません。Smalltalk は C++ とはちょっと勝手が
+違うかもしれませんが、おおざっぱには、継承時にデータ型を（さほど）
+意識しないでよいことと、メンバ変数を外部からアクセスする
+際に、かならずメンバー関数の呼び出しを介する必要がある…と
+いったいくつかの違いを知れば、応用は可能だと思います。
+ただ、文法がかなり違うので、相応の慣れは必要かもしれません。
+
+そうして描いた手書きのメモデータを、どういった場所において
+管理するか…という工夫も必要でしょう。いちばん
+手っ取り早いのはプロジェクトと呼ばれる仮想デスクトップを
+メモの１ページに見立ててしまうことです。ただ、これだと
+ページ数が増えたときに、いろいろとやっかいなことがあるかも
+しれません。Squeak3.6 には GeeMail という、名前にはメール
+がついていますが実体は絵も含めることができるメモ帳ソフトが
+あるので、これを使うのも手だと思います。もちろん独自の
+メモ帳ソフトを Smalltalk で組んでしまうのもよいでしょう。
+
+ただ問題は、そうして作ったソフトを運用でき、持ち運びが可能な
+デバイスですね。Squeak を上の Genie や ペイント機能、GeeMail
+といった機能をフルに活用できるかたちで、快適に動かすことが
+できる小型デバイスで、かつ、ペン操作が可能なものとなると、
+かなり限られてしまいます。実をいうと私もずっと探し続けているのですが
+まだ「これは！と」いうものにたどり着けていません。
+
+まあ、そんなデバイスが現われたときのために、ふだんから、
+Squeak システムでどんなことができるのか試しがてらに遊んでおくのも
+一興かとは思います。がんばってください。
+
+-- 
+Masato Sumi
+From umejava ＠ mars.dti.ne.jp  Sat Jun  7 13:01:03 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jun 16 11:32:30 2008
+Subject: [Squeak-ja: 3921] 日韓共同Squeaker夜の集い(七夕編)
+Message-ID: <JS200806071301035.3634093@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、来る7/7(月)、Squeaker達が一斉に集うイベントが行われます。
+題しまして「日韓共同Squeaker夜の集い(七夕編)」です。
+
+「日韓共同Squeaker夜の集い(七夕編)」
+2008/7/7(月) 19:00-22:00 株式会社 豆蔵 トレーニングルーム
+
+今回は韓国からpicxenk(SeungBum Kim)さんが参加されます。
+韓国版Squeakを開発されている方で、ワークショップなども精力的に
+行われています。
+
+詳しい案内ページは下記になります。
+http://swikis.ddo.jp/umejava/51
+
+例によって発表者を募集中です。Wikiに書き込んでください。
+最近発表者がマンネリ気味なので、アウェーの方も大歓迎です。
+RubyやPythonやScalaなどにまつわる話でも、面白ければ良しとします。
+
+また、参加に事前登録などは不要ですが、大体の人数を把握したいので、
+リプライをいただけるとありがたいです。
+
+では。
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Sat Jun  7 15:10:29 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Mon Jun 16 11:32:44 2008
+Subject: [Squeak-ja: 3922] Re: 日韓共同Squeaker夜の集い(七夕編)
+In-Reply-To: <JS200806071301035.3634093@mars.dti.ne.jp>
+References: <JS200806071301035.3634093@mars.dti.ne.jp>
+Message-ID: <2d5d52a80806062310i3ec9f5f3j661749b649fdd39b@mail.gmail.com>
+
+こんにちは、阿部です。
+週の頭でなにかとお忙しいと思いますが、なかなか得がたい機会だと思いますので、多数のご参加をお待ちしております。
+まだ詳細は決まっていませんが、picxenkさんにもなにか話していただく予定です。たぶん、ブロークンな英語、日本語、韓国語が飛び交うことになると思いますが、もし韓国語が話せる方がいらっしゃいましたらお手伝いいただけると嬉しいです(以前、ソウルの似たようなイベントに招かれたとき、日本語の分かる方がいてずいぶん助かりました)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+08/06/07 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> こんにちは
+> 梅澤です。
+>
+> さてさて、来る7/7(月)、Squeaker達が一斉に集うイベントが行われます。
+> 題しまして「日韓共同Squeaker夜の集い(七夕編)」です。
+>
+> 「日韓共同Squeaker夜の集い(七夕編)」
+> 2008/7/7(月) 19:00-22:00 株式会社 豆蔵 トレーニングルーム
+>
+> 今回は韓国からpicxenk(SeungBum Kim)さんが参加されます。
+> 韓国版Squeakを開発されている方で、ワークショップなども精力的に
+> 行われています。
+>
+> 詳しい案内ページは下記になります。
+> http://swikis.ddo.jp/umejava/51
+>
+> 例によって発表者を募集中です。Wikiに書き込んでください。
+> 最近発表者がマンネリ気味なので、アウェーの方も大歓迎です。
+> RubyやPythonやScalaなどにまつわる話でも、面白ければ良しとします。
+>
+> また、参加に事前登録などは不要ですが、大体の人数を把握したいので、
+> リプライをいただけるとありがたいです。
+>
+> では。
+> ---
+> [:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Sat Jun  7 17:41:47 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Mon Jun 16 11:33:19 2008
+Subject: [Squeak-ja: 3923] squeakland.jpに接続できません。
+Message-ID: <2d5d52a80806070141u2d90d35cua95643c0a59923ac@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2008/6/7 17:20現在、squeakland.jpに接続できません。
+サーバは生きていると思われるのですが、複数の場所からtracertしてみると中継しているvectant.ne.jpでパケットがループしているようです。
+また状況が分かりましたら報告します。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Sat Jun  7 18:27:52 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Mon Jun 16 11:33:32 2008
+Subject: [Squeak-ja: 3924] Re: squeakland.jpに接続できません。
+In-Reply-To: <2d5d52a80806070141u2d90d35cua95643c0a59923ac@mail.gmail.com>
+References: <2d5d52a80806070141u2d90d35cua95643c0a59923ac@mail.gmail.com>
+Message-ID: <2d5d52a80806070227l54873626j9bf9ca9c0813608@mail.gmail.com>
+
+こんにちは、阿部です。
+この障害は、2008/6/7 18:20頃仮復旧しました。
+原因はサーバをお借りしているアカデミアシステムズ内のハブの物理的故障でした。現在は暫定的なものを使っていますが、後日また交換の予定です。その際、一時的に使えなくなりますので、日時が分かりましたらお知らせします。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+08/06/07 に Kazuhiro ABE<abee@squeakland.jp> さんは書きました:
+> こんにちは、阿部です。
+>
+> 2008/6/7 17:20現在、squeakland.jpに接続できません。
+> サーバは生きていると思われるのですが、複数の場所からtracertしてみると中継しているvectant.ne.jpでパケットがループしているようです。
+> また状況が分かりましたら報告します。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+From kohfow ＠ mbox.kyoto-inet.or.jp  Mon Jun  9 16:44:45 2008
+From: kohfow ＠ mbox.kyoto-inet.or.jp (S.I)
+Date: Mon Jun 16 11:40:28 2008
+Subject: [Squeak-ja: 3925] Re: インデクス捲り
+Message-ID: <60B0ECF203164D038FE8297A0E28D45F@kohfowPC>
+
+Sumi　さん、どうも
+　京都のkohfowです
+レス：ありがとうございます
+１）１番困るのは、「ケイタイ」的な、可搬、且コンパクトな受信装置
+　　高いですね
+２）手元（屋外）から、送信は諦め、
+　　「手書き」受信も諦め、どこまで安くなるか？
+３）TD4シュミレ−タ、「cpuの創り方」の様な、
+　　懐古的な、「シカケ」が、いるかも？
+　　更に、「プロバイダ」指定なんか、含めると、それでも
+　　６〜８万円／年必要
+４）ヤミの「１００＄パソコン」応用で、
+　　少し「Squeak:Smalltalk」のレベル・アップの効果を、
+　　図るか
+1 日中、電気屋街を歩きました
+例えば「京都方式」のインタ−ネット・アクセス（？）が、
+総合的に、安ければいいのだが・・・
+もう少し考えます
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Wed Jun 11 10:18:07 2008
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Mon Jun 16 11:46:07 2008
+Subject: [Squeak-ja: 3926] xml　sixxのversionについて
+Message-ID: <200806110114.m5B1EBuY013324@proxy1.aams.jp>
+
+梅澤さま、久保です。
+
+いつもお世話になっております。
+
+今回はxmlのsixxのversionについてご教示ください。
+
+http://www.mars.dti.ne.jp/~umejava/smalltalk/sixx/index.htmlに
+
+Currently, the implementation is provided for Squeak 3.7-3.9,という風に
+
+書いてありますが、たとえばsqueak７などでは使えないのでしょうか。
+
+もしそうだとすれば、
+
+データベースとしてXMLを活用する時は
+
+3.7上でプログラムを作らないといけないのでしょうか。
+
+以上です。よろしくお願いいたします。
+
+久保　道
+
+
+No virus found in this outgoing message.
+Checked by AVG. 
+Version: 7.5.524 / Virus Database: 270.2.0/1495 - Release Date: 2008/06/10
+17:11
+ 
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080611/6531e860/attachment-0001.html
+From umejava ＠ mars.dti.ne.jp  Wed Jun 11 10:49:24 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jun 16 11:46:08 2008
+Subject: [Squeak-ja: 3927] Re: xml　sixxのversionについて
+In-Reply-To: <200806110114.m5B1EBuY013324@proxy1.aams.jp>
+References: <200806110114.m5B1EBuY013324@proxy1.aams.jp>
+Message-ID: <JD200806111049246.8230171@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+
+> 今回はxmlのsixxのversionについてご教示ください。
+> 
+> http://www.mars.dti.ne.jp/~umejava/smalltalk/sixx/index.htmlに
+> 
+> Currently, the implementation is provided for Squeak 3.7-3.9,という風に
+> 
+> 書いてありますが、たとえばsqueak７などでは使えないのでしょうか。
+
+おそらくsqueak７とはSqueak Nihongo 7の事だと推察しますが、そうであれば
+Squeak 3.7ベースですので、動くと思います。
+
+もっとも3.8ベースのSqueakland 2005J2にしておくのが無難と思います。
+
+または3.9ベースのSqueak3.9-final-7075Jですね。
+ftp://swikis.ddo.jp/SqueakDevJa/images/Squeak3.9.1-final-7075J.zip
+
+
+> もしそうだとすれば、
+> 
+> データベースとしてXMLを活用する時は
+> 
+> 3.7上でプログラムを作らないといけないのでしょうか。
+> 
+
+仮に何らかのSqueakで動かないとしても、SIXXに少しのパッチを当てるだけで
+動くようになると思います。もともとポータビリティが売りですので。
+
+---
+[:masashi | ^umezawa]
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Jun 12 09:14:02 2008
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Mon Jun 16 11:48:17 2008
+Subject: [Squeak-ja: 3928] Re: xml　sixxのversionについて
+In-Reply-To: <JD200806111049246.8230171@mars.dti.ne.jp>
+Message-ID: <200806120010.m5C0A1T8011409@proxy1.aams.jp>
+
+梅澤さん
+さっそくご教示をいただきまして、
+ありがとうございました。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Masashi Umezawa
+Sent: Wednesday, June 11, 2008 10:49 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3927] Re: xml　sixxのversionについて
+
+こんにちは
+梅澤です。
+
+
+> 今回はxmlのsixxのversionについてご教示ください。
+>
+> http://www.mars.dti.ne.jp/~umejava/smalltalk/sixx/index.htmlに
+>
+> Currently, the implementation is provided for Squeak 3.7-3.9,という風に
+>
+> 書いてありますが、たとえばsqueak７などでは使えないのでしょうか。
+
+おそらくsqueak７とはSqueak Nihongo 7の事だと推察しますが、そうであれば
+Squeak 3.7ベースですので、動くと思います。
+
+もっとも3.8ベースのSqueakland 2005J2にしておくのが無難と思います。
+
+または3.9ベースのSqueak3.9-final-7075Jですね。
+ftp://swikis.ddo.jp/SqueakDevJa/images/Squeak3.9.1-final-7075J.zip
+
+
+> もしそうだとすれば、
+>
+> データベースとしてXMLを活用する時は
+>
+> 3.7上でプログラムを作らないといけないのでしょうか。
+>
+
+仮に何らかのSqueakで動かないとしても、SIXXに少しのパッチを当てるだけで
+動くようになると思います。もともとポータビリティが売りですので。
+
+---
+[:masashi | ^umezawa]
+内部ウイルスデータベースは最新ではありません。
+Checked by AVG.
+Version: 8.0.100 / Virus Database: 269.23.2/1392 - Release Date: 2008/04/22
+15:51
+
+From takuya ＠ computer.org  Tue Jun 17 13:07:09 2008
+From: takuya ＠ computer.org (takuya@computer.org)
+Date: Tue Jun 17 13:33:51 2008
+Subject: [Squeak-ja: 3929] [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+Message-ID: <20080617130016.13FA.TAKUYA@computer.org>
+
+  蒲田といいます。お知らせを1件流させてください。
+
+  このたび、オープンソースカンファレンス北海道(以下、OSC-Do)に、Squeakや
+世界聴診器でおなじみの阿部 和広さんが来道されることになりました。
+  せっかくの機会ですので、OSC-Do開催前々日である6月26日(木)に、阿部さ
+んが、最近、力を注いでいらっしゃるプロジェクトのひとつであるOne Laptop
+per Child(以下、OLPC)についてのお話を伺う時間を設けました。
+  この会では、OLPCの概要やデモンストレーションのほか、OLPCが教育に対して
+与えるインパクトなども、お話しいただいたり、参加者とディスカッションして
+いただく予定です。
+
+  ご多忙中とは思いますが、OLPCや「コンピュータを道具として使う教育」興味
+をお持ちの方の参加をお待ちしております。
+  なお、会場のキャパシティ(20名定員)が小さいため、事前参加登録先着順とさ
+せていただきます。参加ご希望の方は、文末の「参加申し込みメール」の書式で、
+申し込みください。
+
+
+日程 : 6月26日(木曜日)19:00〜21:30 OA研修室(定員20名)
+会場 : 札幌エルプラザ( 北区北8西3 http://www.danjyo.sl-plaza.jp/ )
+参加費用 : 無料
+
+プロフィール：阿部和広
+  元BASIC 少年。大学在学中、アルバイト先で出会ったMac 128K に衝撃を受け
+る。その起源を調べる内にSmalltalkに行き当たり道を踏み外す。 上京して
+Smalltalk 関連企業を転々とした後、2002年に有限会社ビューポイントテクノロ
+ジーを興し現在に至る。 2007年よりサイバー大学客員教授、2008年より東京学
+芸大学非常勤講師を兼務。
+  2002,2003 年度のIPA 未踏ソフトウェア創造事業にAlan Kay 博士により採択
+され、世界聴診器で2003年度のスーパークリエイタ認定を受ける。
+
+  はてなダイアリー : http://d.hatena.ne.jp/abee2/
+  Squeakland       : http://squeakland.jp/
+  laptop.org       : http://laptop.org/index.jp.html
+
+---  メールでの登録用フォーム -----------------
+
+宛先 : olpc at mucleus.jp (atは、アットマークに書きなおしてください。)
+件名 : OLPC night参加登録
+
+=== 本文ここから ===============================
+
+【お名前(必須/ハンドル名可)】
+【ふりがな(必須)】
+【連絡用メールアドレス(必須)】
+【聞いてみたいトピック(もしあれば)】
+【メッセージ(もしあれば)】
+
+=============================== 本文ここまで ===
+
+
+-- Community & Event Info. ---------------------------------------------
+OLPC Night: 6/26(木) @エルプラザ OA研修室 http://olpc.mucleus.jp
+OSC/do : 6/28(土) @札幌市産業振興センター.http://www.ospn.jp/osc2008-do/
+音集め : 7/5(土), 7/19(土), 8/24(日) 千歳市泉郷. http://oto.mucleus.jp
+------------------------------------------------------ Takuya Kamada ---
+
+From abee ＠ squeakland.jp  Tue Jun 17 22:53:38 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun 17 23:34:16 2008
+Subject: [Squeak-ja: 3930] 横山先生の動画を掲載しました。
+Message-ID: <2d5d52a80806170653g2b6ae49ei94911aec79456ced@mail.gmail.com>
+
+こんにちは、阿部です。
+スクイークを用いた学習を取り入れていることで有名な杉並区立和田小学校では、土曜楽校という課外活動をほぼ毎月行っています。活動には卓球や囲碁、フラダンスなどがあり、その中にスクイークもあります。時間は1時間が1セットで2回、対象は小１から小6まで、スキルも様々です。
+6/14(土)に前校長の横山正先生が使われた教材の動画と資料をスクイークランドに置きました。
+http://squeakland.jp/wadasyou/wadasyou.html
+最初にプロジェクタで、この動画の内容を子供達に説明し、その後、資料のプリントを持って各自が作ります。その際、企業や大学のボランティアが助言したり、発展させるためのヒントを出したりします。
+
+どうぞご覧ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From kuwatani ＠ akademia.co.jp  Mon Jun 23 10:44:51 2008
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Wed Jun 25 18:04:33 2008
+Subject: [Squeak-ja: 3931] 緊急メンテナンス工事のお知らせ
+Message-ID: <485F0013.8040107@akademia.co.jp>
+
+Squeak-jaにご参加のみなさま
+
+メーリングリストの管理をしている 桑谷 です．
+
+下記日程で、当社が使用しているプロバイダー内でネットワーク工事が
+行われることになりました。
+
+ご迷惑をお掛けいたしますが、ご理解頂きますようお願い致します。
+
+　　　　　　　　　　　　　　　  記
+
+
+１.日　時： 2008年6月26日(木)　AM6:30 〜 AM8:30
+　　　　　　　
+２.内 容：ネットワーク工事
+
+３.対 象：squeak-jaメーリングリスト
+
+４.影 響：工事時間中、サービスのご利用ができない場合があります。
+
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　        以上
+
+-- 
+kuwatani@akademia.co.jp
+
+From abee ＠ squeakland.jp  Mon Jun 23 15:13:17 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Jun 25 18:05:57 2008
+Subject: [Squeak-ja: 3932] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <20080617130016.13FA.TAKUYA@computer.org>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+Message-ID: <2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+
+こんにちは、阿部です。
+
+蒲田さん、ご案内ありがとうございます。いよいよ今週ですね。
+OLPC XOの実機をご覧になりたい方は、ぜひこの機会にどうぞ。
+私は最近は子供とEtoysばっかりですが、当日は鷲見さんもいらっしゃるとのことですので、Smalltalkの濃い話もできるかもしれません。
+6/28のOSC-Doもよろしくお願いします。
+http://www.ospn.jp/osc2008-do/
+梅澤さんのSeasideセミナはWebアプリに興味のある方なら参加して損はありません。他の環境と比べて、いかにSmalltalkがダイナミックであるかもよく分かります。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+08/06/17 に takuya@computer.org<takuya@computer.org> さんは書きました:
+>  蒲田といいます。お知らせを1件流させてください。
+>
+>  このたび、オープンソースカンファレンス北海道(以下、OSC-Do)に、Squeakや
+> 世界聴診器でおなじみの阿部 和広さんが来道されることになりました。
+>  せっかくの機会ですので、OSC-Do開催前々日である6月26日(木)に、阿部さ
+> んが、最近、力を注いでいらっしゃるプロジェクトのひとつであるOne Laptop
+> per Child(以下、OLPC)についてのお話を伺う時間を設けました。
+>  この会では、OLPCの概要やデモンストレーションのほか、OLPCが教育に対して
+> 与えるインパクトなども、お話しいただいたり、参加者とディスカッションして
+> いただく予定です。
+>
+>  ご多忙中とは思いますが、OLPCや「コンピュータを道具として使う教育」興味
+> をお持ちの方の参加をお待ちしております。
+>  なお、会場のキャパシティ(20名定員)が小さいため、事前参加登録先着順とさ
+> せていただきます。参加ご希望の方は、文末の「参加申し込みメール」の書式で、
+> 申し込みください。
+>
+>
+> 日程 : 6月26日(木曜日)19:00〜21:30 OA研修室(定員20名)
+> 会場 : 札幌エルプラザ( 北区北8西3 http://www.danjyo.sl-plaza.jp/ )
+> 参加費用 : 無料
+>
+> プロフィール：阿部和広
+>  元BASIC 少年。大学在学中、アルバイト先で出会ったMac 128K に衝撃を受け
+> る。その起源を調べる内にSmalltalkに行き当たり道を踏み外す。 上京して
+> Smalltalk 関連企業を転々とした後、2002年に有限会社ビューポイントテクノロ
+> ジーを興し現在に至る。 2007年よりサイバー大学客員教授、2008年より東京学
+> 芸大学非常勤講師を兼務。
+>  2002,2003 年度のIPA 未踏ソフトウェア創造事業にAlan Kay 博士により採択
+> され、世界聴診器で2003年度のスーパークリエイタ認定を受ける。
+>
+>  はてなダイアリー : http://d.hatena.ne.jp/abee2/
+>  Squeakland       : http://squeakland.jp/
+>  laptop.org       : http://laptop.org/index.jp.html
+>
+> ---  メールでの登録用フォーム -----------------
+>
+> 宛先 : olpc at mucleus.jp (atは、アットマークに書きなおしてください。)
+> 件名 : OLPC night参加登録
+>
+> === 本文ここから ===============================
+>
+> 【お名前(必須/ハンドル名可)】
+> 【ふりがな(必須)】
+> 【連絡用メールアドレス(必須)】
+> 【聞いてみたいトピック(もしあれば)】
+> 【メッセージ(もしあれば)】
+>
+> =============================== 本文ここまで ===
+>
+>
+> -- Community & Event Info. ---------------------------------------------
+> OLPC Night: 6/26(木) @エルプラザ OA研修室 http://olpc.mucleus.jp
+> OSC/do : 6/28(土) @札幌市産業振興センター.http://www.ospn.jp/osc2008-do/
+> 音集め : 7/5(土), 7/19(土), 8/24(日) 千歳市泉郷. http://oto.mucleus.jp
+> ------------------------------------------------------ Takuya Kamada ---
+From abee ＠ squeakland.jp  Tue Jun 24 10:56:40 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Jun 25 18:08:14 2008
+Subject: [Squeak-ja: 3933] Re: 日韓共同Squeaker夜の集い(七夕編)
+In-Reply-To: <2d5d52a80806062310i3ec9f5f3j661749b649fdd39b@mail.gmail.com>
+References: <JS200806071301035.3634093@mars.dti.ne.jp>
+	<2d5d52a80806062310i3ec9f5f3j661749b649fdd39b@mail.gmail.com>
+Message-ID: <2d5d52a80806231856v2dd32e56u51c1156eeaf3d02f@mail.gmail.com>
+
+こんにちは、阿部です。
+
+08/06/07 に Kazuhiro ABE<abee@squeakland.jp> さんは書きました:
+> まだ詳細は決まっていませんが、picxenkさんにもなにか話していただく予定です。
+
+確定しました。
+
+- コンピュータ教育のための努力と実験 : 手始め(picxenk(SeungBum Kim))
+-- 韓国でコンピュータ教育のために努力する人々のネットワークと努力過程、実験的試みなどの経験と教訓
+
+picxenkさんと彼のグループは世界的に見てもユニークな取り組みを行っています。コンピュータ教育とありますが、単にプログラミングにとどまらず、アジャイルの手法やアンプラグド、創造性トレーニングなどを組み合わせて用いています。Squeak
+Etoysもその手段のひとつです。対象はオルタナティブスクールの子供たちなどです。
+
+他にも、Squeak以外の言語、教育関係の方にお話いただけないか交渉中です。
+また、当日、韓国と日本をネットでつないでビデオ会議ができないか検討しています。
+
+イベントの詳細や申し込み方法などはこちらをご覧ください。
+http://swikis.ddo.jp/umejava/51
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From sumi ＠ seagreen.ocn.ne.jp  Thu Jun 26 17:14:35 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Jun 26 17:14:46 2008
+Subject: [Squeak-ja: 3934] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+Message-ID: <86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+
+皆さん、ごきげんよう。鷲見です。
+
+あと二時間弱でスタートですね。
+状況がゆるせば Ustream.tv でストリーム中継するつもりで
+準備をしています。
+
+http://www.ustream.tv/channel/squeak-ja
+
+チャットも可能です。
+
+個人的には初挑戦なのでしくじってアクセスできなかったら
+ごめんなさい。
+
+-- 
+Masato Sumi
+From abee ＠ squeakland.jp  Thu Jun 26 17:34:25 2008
+From: abee ＠ squeakland.jp (abee@squeakland.jp)
+Date: Thu Jun 26 17:34:40 2008
+Subject: [Squeak-ja: 3935] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+	<86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+Message-ID: <2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+
+こんにちは、阿部です。
+さきほど無事千歳空港に到着しました。現在移動中です。
+
+# 噂には聞いていましたが、快速エアポートのUシートは素晴らしいですね。コンセントがあるし。
+
+鷲見さん、ストリーミング配信の準備までしていただいてありがとうございます。それに内容が伴わないような気もしますが、がんばります。
+
+
+
+
+08/06/26 に Masato Sumi<sumi@seagreen.ocn.ne.jp> さんは書きました:
+> 皆さん、ごきげんよう。鷲見です。
+>
+> あと二時間弱でスタートですね。
+> 状況がゆるせば Ustream.tv でストリーム中継するつもりで
+> 準備をしています。
+>
+> http://www.ustream.tv/channel/squeak-ja
+>
+> チャットも可能です。
+>
+> 個人的には初挑戦なのでしくじってアクセスできなかったら
+> ごめんなさい。
+>
+> --
+> Masato Sumi
+>
+
+
+-- 
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From miyasaka ＠ iris.dti.ne.jp  Thu Jun 26 18:14:18 2008
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Jun 26 18:14:41 2008
+Subject: [Squeak-ja: 3936] カリキュラム検討会　参加者募集のお知らせ
+Message-ID: <4b24f0d0806260214p3bf0f9dbq7d33ecd2491e758a@mail.gmail.com>
+
+Squeak-jaの皆様へ
+
+いつもお世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+阿部さんと一緒に、不定期にスクイークの「カリキュラム検討会」というものを行っています。
+昨年11月に行った際には、約10名の方々が参加しました。
+http://mts-j.hiho.jp/2007/11/20071117.html
+
+趣旨としては、スクイークを活用した教育カリキュラムをまじめに考える会、ということろでしょうか。
+次回の開催予定は下記のとおりですので、もしご興味ある方がいらしたら、ご参加ください。
+（急なお知らせで恐縮です。。。）
+
+■日時
+日時： ７月５日（土）　13:00〜17:00
+場所：デジタルハリウッド大学大学院　秋葉原メインキャンバス
+http://gs.dhw.ac.jp/faq/map/index.html
+
+■内容
+前回はワークショップ形式での検討会でしたが、今回は、各自の情報交換を中心にしようということになっています。
+ですので、こじんまりとざっくばらんな会になるかと思います。
+（いまのところ、４〜５名の方が参加予定）
+
+■対象者
+ご参加いただくのに特に制限はありません。
+スクイークを使った教育活動に興味がある方で、一緒にカリキュラムを考えたいという方は、ぜひご参加ください。
+
+参加を希望される方は、事前に私宛にメールでご連絡いただけますでしょうか。
+http://mts-j.hiho.jp/cat5/
+
+以上、よろしくお願いいたします！
+
+P.S.
+阿部さん、何か補足があれば、お願いします。
+
+
+宮坂俊夫
+http://mts-j.hiho.jp/
+From sumi ＠ seagreen.ocn.ne.jp  Sat Jun 28 01:36:14 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Sat Jun 28 01:36:25 2008
+Subject: [Squeak-ja: 3937] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+	<86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+	<2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+Message-ID: <86c0320c0806270936h7b179346o78ded3631bc5145c@mail.gmail.com>
+
+阿部さん、蒲田さん、参加の皆さん、ありがとうございました。
+鷲見です。
+
+録画は、こちらに置いてあります。
+
+http://www.ustream.tv/recorded/513760
+
+
+本日土曜日、１３時４５分スタートの梅澤さんの Seaside セミナー
+
+http://www.ospn.jp/osc2008-do/modules/eguide/event.php?eid=24
+
+も、配信予定です。URL は、わかり次第お知らせします。
+
+
+2008/06/26 17:34  <abee@squeakland.jp>:
+> こんにちは、阿部です。
+> さきほど無事千歳空港に到着しました。現在移動中です。
+>
+> # 噂には聞いていましたが、快速エアポートのUシートは素晴らしいですね。コンセントがあるし。
+>
+> 鷲見さん、ストリーミング配信の準備までしていただいてありがとうございます。それに内容が伴わないような気もしますが、がんばります。
+
+-- 
+Masato Sumi
+From sumi ＠ seagreen.ocn.ne.jp  Sat Jun 28 11:23:15 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Sat Jun 28 11:23:26 2008
+Subject: [Squeak-ja: 3938] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <86c0320c0806270936h7b179346o78ded3631bc5145c@mail.gmail.com>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+	<86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+	<2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+	<86c0320c0806270936h7b179346o78ded3631bc5145c@mail.gmail.com>
+Message-ID: <86c0320c0806271923y5e15c4bfn87825988ebe4fbf5@mail.gmail.com>
+
+鷲見です。
+
+Ust 配信実績で定評のある「Ruby札幌」のページ専用ページ
+
+http://ruby-sapporo.org/live
+
+で、現在、OSC2008-Do の様子をライブ中継をご覧いただけます。
+梅澤さんのセミナーもこのページで観ることができるはずです。
+
+2008/06/28 1:36 Masato Sumi <sumi@seagreen.ocn.ne.jp>:
+> 本日土曜日、１３時４５分スタートの梅澤さんの Seaside セミナー
+>
+> http://www.ospn.jp/osc2008-do/modules/eguide/event.php?eid=24
+>
+> も、配信予定です。URL は、わかり次第お知らせします。
+
+-- 
+Masato Sumi
+From sumi ＠ seagreen.ocn.ne.jp  Sat Jun 28 21:18:29 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Sat Jun 28 21:18:38 2008
+Subject: [Squeak-ja: 3939] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <86c0320c0806271923y5e15c4bfn87825988ebe4fbf5@mail.gmail.com>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+	<86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+	<2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+	<86c0320c0806270936h7b179346o78ded3631bc5145c@mail.gmail.com>
+	<86c0320c0806271923y5e15c4bfn87825988ebe4fbf5@mail.gmail.com>
+Message-ID: <86c0320c0806280518r3a9fdd7ap447f6af7c2067857@mail.gmail.com>
+
+録画はこちらです。
+
+http://www.ustream.tv/recorded/519170
+http://www.ustream.tv/recorded/519257
+
+阿部さんのＬＴも観れるようです。10分40秒付近から。
+
+http://www.ustream.tv/recorded/519483
+
+2008/06/28 11:23 Masato Sumi <sumi@seagreen.ocn.ne.jp>:
+> 現在、OSC2008-Do の様子をライブ中継をご覧いただけます。
+> 梅澤さんのセミナーもこのページで観ることができるはずです。
+
+-- 
+Masato Sumi
+From yoshiki ＠ vpri.org  Sun Jun 29 05:45:37 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Sun Jun 29 05:45:54 2008
+Subject: [Squeak-ja: 3940] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <86c0320c0806280518r3a9fdd7ap447f6af7c2067857@mail.gmail.com>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+	<86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+	<2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+	<86c0320c0806270936h7b179346o78ded3631bc5145c@mail.gmail.com>
+	<86c0320c0806271923y5e15c4bfn87825988ebe4fbf5@mail.gmail.com>
+	<86c0320c0806280518r3a9fdd7ap447f6af7c2067857@mail.gmail.com>
+Message-ID: <u8wwpuw3y.wl%yoshiki@vpri.org>
+
+  鷲見さん、皆さんありがとうございます。
+
+> 阿部さんのＬＴも観れるようです。10分40秒付近から。
+> 
+> http://www.ustream.tv/recorded/519483
+
+  阿部さんの体を張った熱演が受けていますね。さすが。
+
+-- Yoshiki
+From abee ＠ squeakland.jp  Sun Jun 29 22:01:35 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sun Jun 29 22:01:45 2008
+Subject: [Squeak-ja: 3941] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <u8wwpuw3y.wl%yoshiki@vpri.org>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+	<86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+	<2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+	<86c0320c0806270936h7b179346o78ded3631bc5145c@mail.gmail.com>
+	<86c0320c0806271923y5e15c4bfn87825988ebe4fbf5@mail.gmail.com>
+	<86c0320c0806280518r3a9fdd7ap447f6af7c2067857@mail.gmail.com>
+	<u8wwpuw3y.wl%yoshiki@vpri.org>
+Message-ID: <2d5d52a80806290601n6963765eu1f515be8ad96d614@mail.gmail.com>
+
+こんにちは、阿部です。
+さきほど無事帰ってきました。
+今回の旅では、蒲田さん、鷲見さんはじめ、北海道の皆様に大変お世話になりました。食べ物がおいしかったのが印象的でした。
+OLPC Nightは平日夕方から夜中までと結構な長丁場で参加者の皆さんもお疲れだったと思います。ディスカッションと言いながら、話し続ける癖を何とかせねばならないと、もはや何度目か分からない反省をしております。
+OSC2008-Doでは、ブースで熱心に話を聞かれる人が多く、ほとんど休む暇がありませんでした。私は残念ながら梅澤さんのセミナは店番で聞けなかったのですが、SeasideはRuby
+on Railsな人たちにも好評だったようです。後で動画を見てみたいと思います。
+これからもこのようなイベントに積極的に参加して行きたいですね。次は7/5のカリキュラム検討会、7/7の日韓の集いです。
+http://www.smalltalk.jp/pipermail/squeak-ja/2008-June/003936.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2008-June/003921.html
+今回、ustreamの威力を知ったので、可能ならばこれらも配信できればと思っています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Sun Jun 29 22:19:48 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sun Jun 29 22:19:58 2008
+Subject: [Squeak-ja: 3942] Squeakland.jpが止まっていました。
+Message-ID: <2d5d52a80806290619t6a60b3c3ub0361c132691a283@mail.gmail.com>
+
+こんにちは、阿部です。
+本日(6/29)の06:47頃からSqueakland.jpが止まっていたと思われますが、現在は復旧しています。
+原因は不明ですがmessagesによると、この時間にOSの再起動がかかり、その後、apacheが起動しなかったようです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From sumi ＠ seagreen.ocn.ne.jp  Mon Jun 30 10:09:15 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Mon Jun 30 10:09:36 2008
+Subject: [Squeak-ja: 3943] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <2d5d52a80806290601n6963765eu1f515be8ad96d614@mail.gmail.com>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+	<86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+	<2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+	<86c0320c0806270936h7b179346o78ded3631bc5145c@mail.gmail.com>
+	<86c0320c0806271923y5e15c4bfn87825988ebe4fbf5@mail.gmail.com>
+	<86c0320c0806280518r3a9fdd7ap447f6af7c2067857@mail.gmail.com>
+	<u8wwpuw3y.wl%yoshiki@vpri.org>
+	<2d5d52a80806290601n6963765eu1f515be8ad96d614@mail.gmail.com>
+Message-ID: <86c0320c0806291809p18e1e89dq876a9382bfdfdabe@mail.gmail.com>
+
+OSC2008-Do の話ですが、
+流れ的に、こちらにつなげさせていただきます。鷲見です。
+
+阿部さん、梅澤さん、蒲田さん、今回はもろもろ急なお願いにもかかわらず
+ありがとうございました。
+
+梅澤さんの Seaside セミナーは Ruby on Rails ユーザーの参加が
+多かったせいか、個人的にはとても反応がよかったように思います。
+内容や時間配分も絶妙で、とても参考になりました。
+
+また、ブースでは二台の OLPC が目を引くこともあって、
+阿部さんにすっかり解説やデモをおまかせしてしまいました。
+蒲田さんのご尽力で急遽開催可能となった OLPC Night や
+当日の渾身の LT は、見物でした。個人的にも滅多にみることができない
+XO の連携技を拝見できてよかったです。
+
+あと、在道組といたしましては、遠路はるばるせっかくのご来札のお二方には、
+市内観光や小旅行などにお連れできませんでしたことが心残りです。
+何かのおりに、またぜひ北海道にもゆっくり遊びにいらしてください。
+
+次は七夕のイベントもですね。がんばってください。直接の参加はできそうも
+ありませんが、Ust配信や録画を楽しみにしております。
+
+-- 
+Masato Sumi
+From umejava ＠ mars.dti.ne.jp  Mon Jun 30 10:55:04 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jun 30 10:55:17 2008
+Subject: [Squeak-ja: 3944] Re: [北海道]「OLPC Night 〜 OLPCが開く教育の未来」開催のお知らせ
+In-Reply-To: <86c0320c0806291809p18e1e89dq876a9382bfdfdabe@mail.gmail.com>
+References: <20080617130016.13FA.TAKUYA@computer.org>
+	<2d5d52a80806222313r393a0160pe9d8199e66b576be@mail.gmail.com>
+	<86c0320c0806260114x1b98d676j9d309dfc29387ce4@mail.gmail.com>
+	<2d5d52a80806260134y4e0a6e0bn3e289ec94ddc1bc3@mail.gmail.com>
+	<86c0320c0806270936h7b179346o78ded3631bc5145c@mail.gmail.com>
+	<86c0320c0806271923y5e15c4bfn87825988ebe4fbf5@mail.gmail.com>
+	<86c0320c0806280518r3a9fdd7ap447f6af7c2067857@mail.gmail.com>
+	<u8wwpuw3y.wl%yoshiki@vpri.org>
+	<2d5d52a80806290601n6963765eu1f515be8ad96d614@mail.gmail.com>
+	<86c0320c0806291809p18e1e89dq876a9382bfdfdabe@mail.gmail.com>
+Message-ID: <JR200806301055044.9034343@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+"Masato Sumi" <sumi@seagreen.ocn.ne.jp> wrote:
+> OSC2008-Do の話ですが、
+> 流れ的に、こちらにつなげさせていただきます。鷲見です。
+> 
+> 阿部さん、梅澤さん、蒲田さん、今回はもろもろ急なお願いにもかかわらず
+> ありがとうございました。
+
+こちらこそ、いろいろとお世話になりました。
+
+> 梅澤さんの Seaside セミナーは Ruby on Rails ユーザーの参加が
+> 多かったせいか、個人的にはとても反応がよかったように思います。
+> 内容や時間配分も絶妙で、とても参考になりました。
+
+ありがとうございます。今回は45分という時間に最適化して臨んだので、
+うまくいったようです。反応が良かったのは鷲見さんの普段からのSmalltalk
+普及活動で、下地が出来ていたということもあったのではと思っています。
+
+当日の資料は以下になります。
+ftp://swikis.ddo.jp/SqueakDevJa/events/OSC2008Hokkaido/SeasideTutorial20080625.pdf
+
+> また、ブースでは二台の OLPC が目を引くこともあって、
+> 阿部さんにすっかり解説やデモをおまかせしてしまいました。
+> 蒲田さんのご尽力で急遽開催可能となった OLPC Night や
+> 当日の渾身の LT は、見物でした。個人的にも滅多にみることができない
+> XO の連携技を拝見できてよかったです。
+
+阿部さんのデモ職人ぶりはあいかわらずすさまじかったですね。
+ネグロポンテがネグぽんになったのは画期的でした。
+
+> あと、在道組といたしましては、遠路はるばるせっかくのご来札のお二方には、
+> 市内観光や小旅行などにお連れできませんでしたことが心残りです。
+> 何かのおりに、またぜひ北海道にもゆっくり遊びにいらしてください。
+
+また何かの機会でいければ良いなと思います。Seaside合宿とか、やりたいですね。
+
+> 
+> 次は七夕のイベントもですね。がんばってください。直接の参加はできそうも
+> ありませんが、Ust配信や録画を楽しみにしております。
+
+日韓共同Squeaker夜の集い(七夕編)も近づいてきました。ぜひこちらでも
+盛り上がりましょう。
+http://swikis.ddo.jp/umejava/51
+
+---
+[:masashi | ^umezawa]

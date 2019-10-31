@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7459] SeasideJOnePlusDB正式版
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207459%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2Vhc2lkZUpPbmVQbHVzREIbJEJANTwwGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCSEcbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007464.html">
+   <LINK REL="Next"  HREF="007460.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7459] SeasideJOnePlusDB正式版</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207459%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2Vhc2lkZUpPbmVQbHVzREIbJEJANTwwGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCSEcbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7459] SeasideJOnePlusDB正式版">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2009年 1月 13日 (火) 22:09:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007464.html">[SML 7464] Re: 第5回Smalltalk勉強会のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="007460.html">[SML 7460] 第5回Smalltalk勉強会参加希望
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7459">[ 日付 ]</a>
+              <a href="thread.html#7459">[ スレッド ]</a>
+              <a href="subject.html#7459">[ 件名 ]</a>
+              <a href="author.html#7459">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+SeasideJOnePlusDBをこのたび更新しました。
+
+概要:
+<A HREF="http://swikis.ddo.jp/umejava/SeasideJOnePlus">http://swikis.ddo.jp/umejava/SeasideJOnePlus</A>
+
+直リンク:
+<A HREF="ftp://swikis.ddo.jp/SeasideJ/one/SeasideJOne-090112-plusDB.zip">ftp://swikis.ddo.jp/SeasideJ/one/SeasideJOne-090112-plusDB.zip</A>
+
+SeasideJOneは展開するだけですぐにSeasideを試すことができるall-in-one
+パッケージです。Windows, Mac, Linuxのすべてで動作します。
+
+PlusDBバージョンにはSStoreという超簡易DB、OmniBaseというODBMSが搭載されて
+います。これらはいわゆる組み込みDBであり、Squeakイメージ内にインストール
+済みです。
+
+またObject-Relational MappingレイヤとしてGlorpが入っています。
+GlorpはいろいろなRDBMSにつながりますが、PostgreSQL用のコネクタがデフォルト
+で入っています。
+
+さて、今回の目玉はDB接続のためのサンプルの同梱です。
+<A HREF="http://swikis.ddo.jp/umejava/uploads/41/ReadMe-ToDoList.txt">http://swikis.ddo.jp/umejava/uploads/41/ReadMe-ToDoList.txt</A>
+
+このToDoListのWebアプリは、SStoreとOmniBaseとGlorpの全てにつながるように
+なっています。各DB用のセッションアダプタクラスを切り替えるだけで、接続が
+切り替わります。
+
+SmalltalkでどうDBに接続するのかの手頃な例になっていると思いますので、ぜひ、
+お試し下さい。
+
+なお、PostgreSQLのインストールが面倒という方は、ブータブル版もあります。
+こちらはSqLinuxOSというSqueak入りのLinuxで実現されています。
+
+概要:
+<A HREF="http://swikis.ddo.jp/umejava/52">http://swikis.ddo.jp/umejava/52</A>
+
+直リンク:
+<A HREF="ftp://swikis.ddo.jp/SqueakDevJa/sqlos/SqLinuxOS2009-Seaside.iso.zip">ftp://swikis.ddo.jp/SqueakDevJa/sqlos/SqLinuxOS2009-Seaside.iso.zip</A>
+
+isoファイルをVMwareなどで起動すれば、既存の環境を一切汚さずに、
+SeasideJOnePlusDBを試すことができます。(PostgresのサービスがSqLinuxOS
+で自動起動するようになっています)
+
+さらにSeasideとDBとの連携については、SeasideへGO!!でより詳しく扱っていく
+予定です。こちらもよろしくお願いします。
+<A HREF="http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/">http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/</A>
+
+ではでは。
+---
+[:masashi | ^umezawa]
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007464.html">[SML 7464] Re: 第5回Smalltalk勉強会のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="007460.html">[SML 7460] 第5回Smalltalk勉強会参加希望
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7459">[ 日付 ]</a>
+              <a href="thread.html#7459">[ スレッド ]</a>
+              <a href="subject.html#7459">[ 件名 ]</a>
+              <a href="author.html#7459">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

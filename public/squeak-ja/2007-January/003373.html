@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3373] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203373%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IDMuOS04Vk0bJEJNUSROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrSW1tWDExUGx1Z2luGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=45B75C63.5030303%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003372.html">
+   <LINK REL="Next"  HREF="003378.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3373] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203373%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IDMuOS04Vk0bJEJNUSROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrSW1tWDExUGx1Z2luGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=45B75C63.5030303%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3373] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ">kawa90 ＠ yahoo.co.jp
+       </A><BR>
+    <I>2007年 1月 24日 (水) 22:30:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003372.html">[Squeak-ja: 3372] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+        <LI>次の記事 <A HREF="003378.html">[Squeak-ja: 3378] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3373">[ 日付 ]</a>
+              <a href="thread.html#3373">[ スレッド ]</a>
+              <a href="subject.html#3373">[ 件名 ]</a>
+              <a href="author.html#3373">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。
+euc-jpで実行してみました。落ちることはなかったが、日本語入力ができなかった。
+コンソールに、XOpenIM() failed　となっていました。ちなみにeuc-jpでは以前
+の日本語パッチがあたったVMも、同じ現象でした。ちなみに使用したイメージは
+SqueakPlugin-dev-527.image です。
+
+わたしの環境が悪いのかも...
+
+# Squeakでは日本語入力をあきらめていたりする...
+
+それでは
+
+Hideo Kawamura wrote:
+&gt;<i> 川村です。
+</I>&gt;<i>
+</I>&gt;<i> 遅れましたが、Linux(Ubuntu 6.10)でビルド実行しました。残念ながら、わたし
+</I>&gt;<i> の環境ではキー入力した段階でSegmentation faultとなってしまいました。
+</I>&gt;<i> 環境は次の通りです。
+</I>&gt;<i> Linux(Ubuntu 6.10),Kernel 2.6.17,gcc version 4.1.2,XIM(SCIM+Anthy),UTF-8
+</I>&gt;<i> です。EUC-jpなら動くかもしれません。後ほど試してみます。
+</I>&gt;<i>
+</I>&gt;<i> それでは。
+</I>&gt;<i>
+</I>&gt;<i> gdbでおちたところで'where'：
+</I>&gt;<i> #0 x2sqKeyInput (xevt=0xbfcd363c)
+</I>&gt;<i> at
+</I>&gt;<i> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:1450
+</I>&gt;<i> #1 0xb7c9f5c6 in handleEvent (evt=0xbfcd363c)
+</I>&gt;<i> at
+</I>&gt;<i> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:1884
+</I>&gt;<i> #2 0xb7c9fbeb in handleEvents ()
+</I>&gt;<i> at
+</I>&gt;<i> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2060
+</I>&gt;<i> #3 0xb7c9fd54 in xHandler (fd=6, data=0x0, flags=2)
+</I>&gt;<i> at
+</I>&gt;<i> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2068
+</I>&gt;<i> #4 0x0807255c in aioPoll (microSeconds=0)
+</I>&gt;<i> at /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/aio.c:262
+</I>&gt;<i> #5 0x08072642 in aioSleep (microSeconds=0)
+</I>&gt;<i> at /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/aio.c:286
+</I>&gt;<i> #6 0xb7c9fd2e in display_ioRelinquishProcessorForMicroseconds (
+</I>&gt;<i> microSeconds=1000)
+</I>&gt;<i> at
+</I>&gt;<i> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2883
+</I>&gt;<i> #7 0x0805aa83 in ioRelinquishProcessorForMicroseconds (us=1000)
+</I>&gt;<i> at
+</I>&gt;<i> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/sqUnixMain.c:471
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Takeshi MUTOH wrote:
+</I>&gt;<i>   
+</I>&gt;&gt;<i> むとう@おうちです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 3.9-7VMから3.9-8VMの間でALSAサポートとか大いに変わっていて、焦っている
+</I>&gt;&gt;<i> 今日この頃です。
+</I>&gt;&gt;<i> # なんか、OSS回りのconfigure回りの変更がおかしいような…
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 3.9-7VMまでは、SqueakImmX11Plugin3a.tar.gzが使えたのですが、3.9-8VMで
+</I>&gt;&gt;<i> は若干変更しないと使えないようです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> で、手元でちょっと試してみたものを
+</I>&gt;&gt;<i> 	<A HREF="http://squeak.610t.org/patches/test/SqueakImmX11Plugin3.9-8.tar.gz">http://squeak.610t.org/patches/test/SqueakImmX11Plugin3.9-8.tar.gz</A>
+</I>&gt;&gt;<i> として置いてあります。
+</I>&gt;&gt;<i> パッチ部分(ImmX11.patch)しか手を入れてませんが、手元の私家版FreeBSD
+</I>&gt;&gt;<i> portsでは動いているようです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 他の環境でもお試しいただいて、ご意見いただければうれしいです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> では。
+</I>&gt;&gt;<i>   
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> --------------------------------------
+</I>&gt;<i> Start Yahoo! Auction now! Check out the cool campaign
+</I>&gt;<i> <A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+<A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003372.html">[Squeak-ja: 3372] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+	<LI>次の記事 <A HREF="003378.html">[Squeak-ja: 3378] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3373">[ 日付 ]</a>
+              <a href="thread.html#3373">[ スレッド ]</a>
+              <a href="subject.html#3373">[ 件名 ]</a>
+              <a href="author.html#3373">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

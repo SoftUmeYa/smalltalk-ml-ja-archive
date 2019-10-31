@@ -1,0 +1,27 @@
+From ume ＠ softumeya.com  Thu Oct 17 00:44:00 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Thu, 17 Oct 2013 00:44:00 +0900
+Subject: [SML 8075]
+	第58回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdT5ww-s41CjTNKj=bjHq1oL6TLJKzoB2GX_OY2_svTBAg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2013/10/31(木) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai58kaismalltalkbenkyoukai
+
+今回のテーマはNativeBoostです。
+数あるSqueak/PharoのFFIの仕組みの中でも最新のもので、Smalltalk側へのコールバックもサポートし、さらにインラインアセンブラで動的にネイティブコードを生成して呼び出せるという優れものです。
+勉強会では基本的な使い方をメインに解説し、余裕があれば何らかの外部ライブラリをラッピングしていくという流れにしようと思っています。「これをラッピングしたい」などリクエストやアイデアがあればぜひお寄せください。
+
+事前申し込み等は不要です。お気軽にどうぞ。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

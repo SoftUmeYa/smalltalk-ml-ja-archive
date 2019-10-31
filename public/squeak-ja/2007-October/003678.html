@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3678] Re: お待たせしました Mac 版 2005J2 です
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203678%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiQqQlQkPyQ7JDcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kNyQ/GyhCIE1hYyAbJEJIRxsoQiAyMDA1SjIgGyRCJEcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJDkbKEI%3D%3F%3D&In-Reply-To=20071015005319.B6AEA9B1F4%401server.aquilax.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003671.html">
+   <LINK REL="Next"  HREF="003672.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3678] Re: お待たせしました Mac 版 2005J2 です</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203678%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiQqQlQkPyQ7JDcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kNyQ/GyhCIE1hYyAbJEJIRxsoQiAyMDA1SjIgGyRCJEcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJDkbKEI%3D%3F%3D&In-Reply-To=20071015005319.B6AEA9B1F4%401server.aquilax.co.jp"
+       TITLE="[Squeak-ja: 3678] Re: お待たせしました Mac 版 2005J2 です">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2007年 10月 16日 (火) 08:29:10 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003671.html">[Squeak-ja: 3671] Re: お待たせしました Mac 版 2005J2 です
+</A></li>
+        <LI>次の記事 <A HREF="003672.html">[Squeak-ja: 3672] Seasideについて。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3678">[ 日付 ]</a>
+              <a href="thread.html#3678">[ スレッド ]</a>
+              <a href="subject.html#3678">[ 件名 ]</a>
+              <a href="author.html#3678">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>高橋さん。
+貴重なケースの報告ありがとうございます。
+林です。
+
+ちょっと今すぐ対応がとれない状況にあるのですが、2点ほど思い当たることがあります。
+1点は、Squeak を起動した状態でインストールは失敗してしまう可能性があります。
+もう1点は、こちらでのパッケージングのミスです。仮想ボリューム名を SqueakLand にすべきところを Squeakland にしてしまった？
+
+後者についてはこちらで対応しなければならないので、もうしばらくお待ちください。
+
+また、近々、パッケージのビルドセットもアップロードしておきます。
+--
+
+On 2007/10/15, at 9:48, Kouji takahashi wrote:
+
+&gt;<i> 　高橋＠池袋です。御無沙汰です。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> できましたら皆様にテストをお助けいただければとお願いします。
+</I>&gt;<i>
+</I>&gt;<i> MacOSX 10.3.9 eMac PowerPC G4 1.25G-768Mで
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://squeakland.jp/plugin/installers/SqueakPlugin2005J2-nonAdmin.dmg">http://squeakland.jp/plugin/installers/SqueakPlugin2005J2-nonAdmin.dmg</A>
+</I>&gt;<i> を試しました。へそ曲がりですが管理者権限ユーザで実行。
+</I>&gt;<i>
+</I>&gt;<i> terminalに不審な挙動がありました。
+</I>&gt;<i>
+</I>&gt;<i> 当方では terminalが常時起動しています(2つのWindow)。
+</I>&gt;<i> 1.topコマンド
+</I>&gt;<i> 2.Boinc client(Seti)の command line versionをバックグランド実行、bashに戻っている。
+</I>&gt;<i>
+</I>&gt;<i> また、「Squeak 3.7.3Beta4jpc」も起動していました。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 不審な挙動は２つ
+</I>&gt;<i> A.「インストールする.command」double clickでterminalにfocusは移動したが
+</I>&gt;<i> 　scriptは実行されなかった。focusは topが走っているwidowに移動。
+</I>&gt;<i>
+</I>&gt;<i> → 第3のterminalを開き、「インストールする.command」を Drag and Drop、
+</I>&gt;<i> 　　[return]で実行しました。
+</I>&gt;<i>
+</I>&gt;<i> B. 「ditto: /Volumes/SqueakLand/Prefs: No such file or directory」で停止？。
+</I>&gt;<i> 　focusは再び topの Windowに移動。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 　Squeakが自動起動、MySqueakフォルダ、Squeak 3.0アイコンはデスクトップに
+</I>&gt;<i> 作成され、MySqueakフォルダ内のSqueak起動もＯＫでした。
+</I>&gt;<i>
+</I>&gt;<i> 　さて、いかがいたしましょうか？
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> ようやく、Mac版2005J2 リリースの準備ができました。
+</I>&gt;&gt;<i> （すでに、2005J3の噂も耳にしますが）
+</I>&gt;&gt;<i> 遅れましてたいへん申し訳ありません。
+</I>&gt;<i>
+</I>&gt;<i> 　有り難いことです。
+</I>&gt;<i>
+</I>&gt;<i> ではでは
+</I>&gt;<i>
+</I>&gt;<i> At 0:16 AM 07.10.13, Tetsuya HAYASHI wrote:
+</I>&gt;&gt;<i> みなさん、こんばんは。
+</I>&gt;&gt;<i> 林 徹也です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ようやく、Mac版2005J2 リリースの準備ができました。
+</I>&gt;&gt;<i> （すでに、2005J3の噂も耳にしますが）
+</I>&gt;&gt;<i> 遅れましてたいへん申し訳ありません。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 今回の Mac版2005J2 の主な特徴としては、
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ・Intel Mac にも正式対応（ユニバーサル版）
+</I>&gt;&gt;<i> ・ブラウザプラグイン機能の一新
+</I>&gt;&gt;<i> ・インストーラ付き
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> であります。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 特に、最後のインストーラにつきましては、まだ充分なテストが出来ておりません。
+</I>&gt;&gt;<i> できましたら皆様にテストをお助けいただければとお願いします。
+</I>&gt;&gt;<i> それまでの間はWebページからのリンクは変更しないでおくことにいたします。
+</I>&gt;&gt;<i> ダウンロードのURLは以下の通りとなっております。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="http://squeakland.jp/plugin/installers/SqueakPlugin2005J2.dmg">http://squeakland.jp/plugin/installers/SqueakPlugin2005J2.dmg</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ※※　注意点！！（とても重要）　※※
+</I>&gt;&gt;<i> これまでのインストールコマンドもそうでしたが、インストールを実行すると、My Squeak フォルダの中身が削除されてしまいます。インストール前に必ずMy Squeakフォルダの中身を別なフォルダにコピーしてバックアップしておいてください。そうでないとせっかく作った作品が無くなってしまいます。
+</I>&gt;&gt;<i> この際、フォルダのエイリアスごとコピーしても実体が削除されてしまうので、面倒ですがフォルダの「中身」のファイルをコピーするようご注意ください。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> なお、管理者権限の無いユーザでもインストール出来るように別パッケージが用意されてます。
+</I>&gt;&gt;<i> （共有マシンで管理者パスワードが分からなかったりする場合のためのものです）
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="http://squeakland.jp/plugin/installers/SqueakPlugin2005J.dmg">http://squeakland.jp/plugin/installers/SqueakPlugin2005J.dmg</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 注意点はこちらも同じです。どなたかお試しいただければとお願いします。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> その他トラブルやご質問なども、こちら（squeak-ja）までご連絡ください。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 以上、よろしくお願いします。
+</I>&gt;&gt;<i> --
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003671.html">[Squeak-ja: 3671] Re: お待たせしました Mac 版 2005J2 です
+</A></li>
+	<LI>次の記事 <A HREF="003672.html">[Squeak-ja: 3672] Seasideについて。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3678">[ 日付 ]</a>
+              <a href="thread.html#3678">[ スレッド ]</a>
+              <a href="subject.html#3678">[ 件名 ]</a>
+              <a href="author.html#3678">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

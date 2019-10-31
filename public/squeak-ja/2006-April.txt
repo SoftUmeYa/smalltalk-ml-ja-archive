@@ -1,0 +1,2055 @@
+From yoshiki ＠ squeakland.org  Sat Apr  1 08:04:53 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2896] Mac VM
+Message-ID: <uirpui5be.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  Squeak vmdev メーリングリストで、再び文字コードの話が盛り上がってい
+るのですが、現時点でのMac VMでは、日本語の入力(やクリップボードとの入
+出力)はどのようになっているのでしょうか。Squeakland2005J に入れたVM以
+降の変更で、いろいろなところが壊れたという噂は聞いたことがあるような気
+がするのですが...
+
+-- Yoshiki
+
+
+From shortsleeved ＠ mac.com  Sat Apr  1 21:34:50 2006
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2897] Re: Mac VM
+In-Reply-To: <uirpui5be.wl%yoshiki@squeakland.org>
+References: <uirpui5be.wl%yoshiki@squeakland.org>
+Message-ID: <E195441E-5833-45A3-88BD-03295C287142@mac.com>
+
+shortsleevedです。
+
+On 2006/04/01, at 8:04, Yoshiki Ohshima wrote:
+
+>   おおしまです。
+>
+>   Squeak vmdev メーリングリストで、再び文字コードの話が盛り上 
+> がってい
+> るのですが、現時点でのMac VMでは、日本語の入力(や 
+> クリップボードとの入
+> 出力)はどのようになっているのでしょうか。 
+> Squeakland2005J に入れたVM以
+> 降の変更で、いろいろなところが壊れたという噂は聞いたことがある 
+> ような気
+> がするのですが...
+>
+> -- Yoshiki
+>
+
+「現時点でのMac VM」の具体的なバージョンはなんでしょうか。
+以下のサイトにある Squeak 3.8.11beta5U とNihongo7イ 
+メージの組み合わせでは、日本語入力、クリップボード経由の文字列の 
+やり取りは出来るようです（ほんのちょっと試しただけですが）。
+
+http://homepage.mac.com/WebObjects/FileSharing.woa/wa/default? 
+user=johnmci&templatefn=FileSharing.html&xmlfn=TKDocument. 
+1.xml&sitefn=RootSite.xml&aff=consumer&cty=US&lang=en
+
+SVN update して、カレントのソースでVMをビルドしてみようと 
+したんですが、プロジェクトファイルが以前とは変わってたりして、 
+ちょっと私には無理でした。
+
+
+From shirai ＠ bre.soc.i.kyoto-u.ac.jp  Sat Apr  1 21:52:13 2006
+From: shirai ＠ bre.soc.i.kyoto-u.ac.jp (Yasuo Shirai)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2898] Re: Mac VM
+In-Reply-To: <E195441E-5833-45A3-88BD-03295C287142@mac.com>
+References: <uirpui5be.wl%yoshiki@squeakland.org>
+	<E195441E-5833-45A3-88BD-03295C287142@mac.com>
+Message-ID: <AC48C181-1F21-40E6-B66A-5A11960A31F1@bre.soc.i.kyoto-u.ac.jp>
+
+京都大学大学院の白井と申します。実は初投稿です。はじめまして。
+
+On 2006/04/01, at 21:34, shortsleeved wrote:
+> SVN update して、カレントのソースでVMをビルドしてみよう 
+> としたんですが、プロジェクトファイルが以前とは変わってたりし 
+> て、ちょっと私には無理でした。
+
+最近Mac版VMのビルドを試しましたが、
+http://squeak.sakura.ne.jp/modules/newbb/viewtopic.php? 
+topic_id=43&forum=8
+を参考にして、ビルドできました。
+
+ただし、VMMakerはSqueakMapから取ってきた最新版 
+(?)を使って、
+チェンジセットは
+platforms/Mac OS/vm/specialChangeSets
+ディレクトリの４つすべてを読み込まなければいけませんでしたが。
+
+また、手順10)のところで移動するファイルがいくつか増えてい 
+るようです。
+とりあえず、拡張子が.plistのファイルを全部作業ディレクトリ 
+に移動したら
+うまくいきました。
+
+参考まで。
+
+
+--
+白井 康雄　<shirai@bre.soc.i.kyoto-u.ac.jp>
+京都大学大学院 情報学研究科 社会情報学専攻
+情報教育環境分野 Alan Kay研究室 修士２回生
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sun Apr  2 10:40:45 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2899] PluggableListについて
+Message-ID: <BIEDLAGDKLHEABOHHEOHOEDKCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+私の質問にご教示くださった皆さん、
+ありがとうございました。
+お陰様で、Ｐｌｕｇｇａｂｌｅのこと、分かりかけてくました。
+前へ進めそうです。
+とくに、Thoru Yamamotoさんが示して下さった
+ｄｅｍｏのプログラムのＨＰは分かり易かったです。
+ただ、その中でたとえば
+ListDemoPｒｏｊｅｃｔ1のintance　methodの
+ｃｏｌｌｅｃｔｉｏｎ：で
+collection: aCollection	
+	collection _ aCollection.	
+	^ self changed: #list.
+とあるのですが、最後の行の意味が
+わかりません。
+こういう書き方、あちこちにでてきます。
+梅澤さんの本で見かけたようにも思うのですが、
+教えていただければ幸いです。
+久保　道
+
+
+
+From masuda ＠ im.dendai.ac.jp  Sun Apr  2 11:27:11 2006
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2900] Re: PluggableListについて
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHOEDKCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <BIEDLAGDKLHEABOHHEOHOEDKCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <20060402.112711.113080782.masuda@im.dendai.ac.jp>
+
+増田＠電大です。
+
+dependency とか、依存性とか、observer とか調べるといいかもしれません。
+
+昔のMVCや依存性については、サクサクSmalltalk の8章にあります (^.^;;)
+
+> From: "kubo-o" <kubo-o@mbox.kyoto-inet.or.jp>
+> 
+> ただ、その中でたとえば
+> ListDemoPｒｏｊｅｃｔ1のintance　methodの
+> ｃｏｌｌｅｃｔｉｏｎ：で
+> collection: aCollection	
+> 	collection _ aCollection.	
+> 	^ self changed: #list.
+> とあるのですが、最後の行の意味が
+> わかりません。
+> こういう書き方、あちこちにでてきます。
+> 梅澤さんの本で見かけたようにも思うのですが、
+> 教えていただければ幸いです。
+
+------
+〒101-8457 東京電機大学 工学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp            TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/ FAX 03-5280-3592
+It's more fun to compute!
+
+From abee ＠ squeakland.jp  Sun Apr  2 14:11:21 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2901] Re: PluggableList について
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHOEDKCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <BIEDLAGDKLHEABOHHEOHOEDKCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <442F5CF91A1.3C77ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 2 Apr 2006 10:40:45 +0900
+"kubo-o" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>梅澤さんの本で見かけたようにも思うのですが、
+>教えていただければ幸いです。
+
+まずそれを確認されるのが先のような気もしますが、changedとupdateによる依存
+性を用いたMVCについては、以下を読まれることをお勧めします。
+
+使わないと損をするModel-View-Controller
+http://www.sra.co.jp/people/aoki/MVC/page1.htm
+http://www.jac-net.com/~tarzan/smalltalkers/mvc/mvc.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Sun Apr  2 15:02:48 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2902] Re: PluggableListについて
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHOEDKCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <BIEDLAGDKLHEABOHHEOHOEDKCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <JV200604021502486.1454984@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> こういう書き方、あちこちにでてきます。
+> 梅澤さんの本で見かけたようにも思うのですが、
+> 教えていただければ幸いです。
+
+私の「自由自在Squeakプログラミング」にはchanged:の記述は載っていませんが、
+「サクサクSmalltalk」の方に、詳しく載っています。
+
+かいつまんで言うと、self changed: <なになに> で、<なになに>部分が変化しました
+と宣言しているのです。
+
+変更に関心がある別のオブジェクト(通常はビューです)が、この通知をupdate:で
+受け取り、何かをします。ビューであれば再描画などを行います。
+
+ご参考まで。
+---
+[:masashi | ^umezawa]
+
+From shortsleeved ＠ mac.com  Sun Apr  2 16:34:58 2006
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2903] Re: Mac VM
+In-Reply-To: <AC48C181-1F21-40E6-B66A-5A11960A31F1@bre.soc.i.kyoto-u.ac.jp>
+References: <uirpui5be.wl%yoshiki@squeakland.org>
+	<E195441E-5833-45A3-88BD-03295C287142@mac.com>
+	<AC48C181-1F21-40E6-B66A-5A11960A31F1@bre.soc.i.kyoto-u.ac.jp>
+Message-ID: <B5EE9594-982C-49F5-896A-086054FBE67B@mac.com>
+
+ども、shortsleevedです。
+
+On 2006/04/01, at 21:52, Yasuo Shirai wrote:
+
+> また、手順10)のところで移動するファイルがいくつか増えて 
+> いるようです。
+> とりあえず、拡張子が.plistのファイルを全部作業ディレクト 
+> リに移動したら
+> うまくいきました。
+>
+
+手順10)のSqueakVMForCarbon.pbprojファイルがないの 
+で、代わりに、
+・SqueakVMUNIXPATHS.xcodeproj.zipを展開してできたファイル 
+を、作業ディレクトリに移動
+・project.pbxprojをダブルクリック
+としたのですが、Xcodeは立ち上がるものの、ウィンドウ等が全 
+く表示されず、ビルドまでこぎつけませんでした。
+たぶん、私の使っているXcodeのバージョン(2.0)がユニ 
+バーサルバイナリに対応していないからだと思います。
+
+ところで、白井さんのビルドされたVMでは、日本語入力やクリッ 
+プボードとのやりとりはうまくいっておられますか？
+
+
+
+From "土本 (Florian) 強  Mon Apr  3 13:52:33 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2904] hidet-k@amgakuin.co.jp
+Message-ID: <20060403135041.D3E2.FLORIAN@seagreen.ocn.ne.jp>
+
+　いつもお世話になっております。土本です。
+
+　このアドレスはまもなく使用不可となりますので、今後何か連絡がある際には
+以下のアドレスにお願いします。
+
+	florian@seagreen.ocn.ne.jp
+
+メール「企画コース講師会　小宮」(2006/04/03 07:57) に於いて
+「小宮 英武」 語りて曰く、
+
+小宮> ゲーム企画コースの講師会　下記の日時で考えています
+小宮> 
+小宮> 第一候補　4月7日（金）　11時
+小宮> 第ニ候補　4月7日（金）　17時
+小宮> 第三候補　4月10日（月）　17時
+小宮> 
+小宮> 出来れば、4月7日（金）　11時〜　に行えれば
+小宮> と思っております
+小宮> ご都合を、お聞かせください。
+
+　どの日時でも問題ありません。
+　私もできれば4/7午前中だとうれしいです。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://florianswiki.dyndns.org/Web/
+=================================================================
+
+
+From "土本 (Florian) 強  Mon Apr  3 14:03:19 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2905] Re: hidet-k@amgakuin.co.jp
+In-Reply-To: <20060403135041.D3E2.FLORIAN@seagreen.ocn.ne.jp>
+References: <20060403135041.D3E2.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <20060403140214.D3E5.FLORIAN@seagreen.ocn.ne.jp>
+
+　いつもお世話になっております。土本です。
+
+　すみません、明らかにミスのメールをMLに流してしまいました。
+　申し訳ありませんでした。
+
+　では、失礼します。
+
+
+メール「[Squeak-ja: 2904] hidet-k@amgakuin.co.jp」(2006/04/03 13:52) に
+於いて
+「土本 (Florian) 強」 語りて曰く、
+
+土本> 　このアドレスはまもなく使用不可となりますので、今後何か連絡がある際には
+土本> 以下のアドレスにお願いします。
+土本> 
+土本> 	florian@seagreen.ocn.ne.jp
+
+土本> メール「企画コース講師会　小宮」(2006/04/03 07:57) に於いて
+土本> 「小宮 英武」 語りて曰く、
+土本> 
+土本> 小宮> ゲーム企画コースの講師会　下記の日時で考えています
+土本> 小宮> 
+土本> 小宮> 第一候補　4月7日（金）　11時
+土本> 小宮> 第ニ候補　4月7日（金）　17時
+土本> 小宮> 第三候補　4月10日（月）　17時
+土本> 小宮> 
+土本> 小宮> 出来れば、4月7日（金）　11時〜　に行えれば
+土本> 小宮> と思っております
+土本> 小宮> ご都合を、お聞かせください。
+土本> 
+土本> 　どの日時でも問題ありません。
+土本> 　私もできれば4/7午前中だとうれしいです。
+土本> 
+土本> 　では、失礼します。
+土本> 
+土本> -----------------------------------------------------------------
+土本> 土本( Florian )強/florian@seagreen.ocn.ne.jp
+土本> Florian's Neo Pages http://florianswiki.dyndns.org/Web/
+土本> =================================================================
+土本> 
+
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://florianswiki.dyndns.org/Web/
+=================================================================
+
+
+From abee ＠ squeakland.jp  Mon Apr  3 16:29:20 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2906] 日本語版のアクティブエッセイを公開しました。
+Message-ID: <4430CED0374.F26DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+ながらく工事中だったスクイークランドのアクティブエッセイを日本語にして公
+開しました。
+
+http://squeakland.jp/author/essays.html
+
+これは武田俊之さんと山田純子さんが翻訳されたテッド・ケーラーさんの「進化
+のエッセイ」をご厚意で転載させてもらったものです(地の文は私が訳しました)。
+
+アクティブエッセイは、文章と画像とシミュレーションとプログラムが渾然一体
+となった新しい表現形態です。単にコンテンツを読むだけではなく、対話的に操
+作できるのが従来のマルチメディアだったとすれば、アクティブエッセイは、そ
+れを動かしている仕組み自体を参照したり、場合によっては書き換えたりするこ
+とで、より深い理解を得ることを狙っています。これはよりメタでダイナミック
+なものと言えるでしょう。
+
+コンピューティングリテラシを習得すると(Drive a Carなどのチュートリアルを
+修了すると)、なにがができるようになるのかとよく聞かれますが、アクティブエッ
+セイはその答えのひとつです。
+このようなものとそのための環境は Smalltalkの黎明期からHyperCardなどでも、
+ずっと求められているのですが、Squeakの場合はどうなのか、さらには、来るべ
+きDynabookではなにができないといけないのかを考える手がかりになると思いま
+す。
+
+ //abee
+
+P.S. スクイークランドの工事中ページを訳してみた、あるいはこういうコンテン
+ツを載せてみたいという方がいらっしゃいましたらお知らせください。大歓迎です。
+
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Mon Apr  3 23:35:17 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2907] Re: Mac VM
+In-Reply-To: <E195441E-5833-45A3-88BD-03295C287142@mac.com>
+References: <uirpui5be.wl%yoshiki@squeakland.org>
+	<E195441E-5833-45A3-88BD-03295C287142@mac.com>
+Message-ID: <u3bguiv6i.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> 「現時点でのMac VM」の具体的なバージョンはなんでしょうか。
+
+  実はこれは僕の質問でもありました^^;
+
+> 以下のサイトにある Squeak 3.8.11beta5U とNihongo7イ 
+> メージの組み合わせでは、日本語入力、クリップボード経由の文字列の 
+> やり取りは出来るようです（ほんのちょっと試しただけですが）。
+> 
+> http://homepage.mac.com/WebObjects/FileSharing.woa/wa/default? 
+> user=johnmci&templatefn=FileSharing.html&xmlfn=TKDocument. 
+> 1.xml&sitefn=RootSite.xml&aff=consumer&cty=US&lang=en
+> 
+> SVN update して、カレントのソースでVMをビルドしてみようと 
+> したんですが、プロジェクトファイルが以前とは変わってたりして、 
+> ちょっと私には無理でした。
+
+  あ、そうですか。現在John Mcが確認しているのは最先端のところですが、
+「まだ」日本語入力に影響を及ぼす変更はなされていないのだと思います。上
+手に協調しないとまた壊れてしまうので、なんとかしたいと思います。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Tue Apr  4 07:17:08 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2908] Re: Mac VM
+In-Reply-To: <AC48C181-1F21-40E6-B66A-5A11960A31F1@bre.soc.i.kyoto-u.ac.jp>
+References: <uirpui5be.wl%yoshiki@squeakland.org>
+	<E195441E-5833-45A3-88BD-03295C287142@mac.com>
+	<AC48C181-1F21-40E6-B66A-5A11960A31F1@bre.soc.i.kyoto-u.ac.jp>
+Message-ID: <ufykuuwwr.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> 京都大学大学院の白井と申します。実は初投稿です。はじめまして。
+
+  こんにちは。
+
+> 最近Mac版VMのビルドを試しましたが、
+> http://squeak.sakura.ne.jp/modules/newbb/viewtopic.php? 
+> topic_id=43&forum=8
+> を参考にして、ビルドできました。
+
+  念のためお聞きしたいですが、Squeakland2005Jで日本語の入力やクリップ
+ボードとのやりとりはできましたか?
+
+-- Yoshiki
+
+From e-itoh ＠ ygu.ac.jp  Tue Apr  4 10:10:42 2006
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2909] Re: Mac VM
+References: <uirpui5be.wl%yoshiki@squeakland.org>
+	<E195441E-5833-45A3-88BD-03295C287142@mac.com>
+	<AC48C181-1F21-40E6-B66A-5A11960A31F1@bre.soc.i.kyoto-u.ac.jp>
+	<ufykuuwwr.wl%yoshiki@squeakland.org>
+Message-ID: <20060404101042.7E903261@ygu.ac.jp>
+
+伊藤です。こんにちは。
+
+--- "Yoshiki Ohshima" <yoshiki@squeakland.org> ---
+>  おおしまです。
+>  念のためお聞きしたいですが、Squeakland2005Jで日本語の入力やクリップ
+>ボードとのやりとりはできましたか?
+　つかいはじめてちょっとしか経過しておりませんが、単なるユーザーのレベルでは
+日本語もクリップボードも問題なく使えております。
+
+
+
+
+
+
+From shirai ＠ bre.soc.i.kyoto-u.ac.jp  Wed Apr  5 07:45:56 2006
+From: shirai ＠ bre.soc.i.kyoto-u.ac.jp (Yasuo Shirai)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2910] Re: Mac VM
+In-Reply-To: <ufykuuwwr.wl%yoshiki@squeakland.org>
+References: <uirpui5be.wl%yoshiki@squeakland.org>
+	<E195441E-5833-45A3-88BD-03295C287142@mac.com>
+	<AC48C181-1F21-40E6-B66A-5A11960A31F1@bre.soc.i.kyoto-u.ac.jp>
+	<ufykuuwwr.wl%yoshiki@squeakland.org>
+Message-ID: <966F63A6-0185-41CE-A3BE-727E65CA972B@bre.soc.i.kyoto-u.ac.jp>
+
+白井です。
+
+On 2006/04/04, at 7:17, Yoshiki Ohshima wrote:
+>   念のためお聞きしたいですが、Squeakland2005Jで日本語の 
+> 入力やクリップ
+> ボードとのやりとりはできましたか?
+>
+> -- Yoshiki
+>
+
+一見してわかるような不具合は今のところないようです。
+
+
+--
+白井 康雄　<shirai@bre.soc.i.kyoto-u.ac.jp>
+京都大学大学院 情報学研究科 社会情報学専攻
+情報教育環境分野 Alan Kay研究室 修士２回生
+
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Fri Apr  7 11:00:36 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2911] PluggableTextMorphについて
+Message-ID: <BIEDLAGDKLHEABOHHEOHGEEACBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+教えて下さった皆様、
+ありがとうございました。
+ヒントをもとに勉強させていただきます。
+「サクサクSmallTalk」、もう品切れだそうですね。
+幸い１冊あったので買って読んでいます。
+依存性については、いかにもオブジェクト指向らしい
+仕組みだと、うれしくなります。
+そこでまた一つ、教えて下さい。
+PluggableTextMorphをキャンセルするため、
+左上に×印のマークがありますが、
+あれをつくる方法です。
+よろしくお願い致します。
+久保　道
+
+
+
+
+From tango ＠ eggegg.co.jp  Fri Apr  7 17:08:15 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2912] Re: PluggableTextMorphについて
+References: <BIEDLAGDKLHEABOHHEOHGEEACBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <006f01c65a1a$6f9ce2c0$6dc4d2ca@gomes>
+
+やまもとです。
+
+> PluggableTextMorphをキャンセルするため、
+> 左上に×印のマークがありますが、
+
+どうやらPluggableListとウィンドウ（SystemWindow）を
+混同されているのでわ？
+
+で、久保さんの投稿をきっかけに
+おいらもPluggableListがよくわからんちんで
+いままでなかなか使えなかったのですが
+これをきっかけに再お勉強、再トライしてみますた。
+左がサブクラスを表示するPluggableListMorphで
+右ペインが左ペインで選択したクラスのメソッドを表示する
+PluggableTextMorphでする。
+それらをSystemWindowにaddMorphしています。
+
+TestWindow new initialize openAViewOnMe
+
+でWindowがひらくです。
+
+とりあえず思ったとおりにはどうさしているのですが
+問題がありましたらごめん。＜ご指摘大歓迎。
+ここにソースコード書くの勇気いりまする・・・・（汗）
+
+
+
+以下ソースコード。
+'From Squeakland.396-Nihongo7.29 of 18 March 2005 [latest update: #100] on 7
+April 2006 at 4:55:52 pm'!
+Object subclass: #TestWindow
+	instanceVariableNames: 'list selectedIndex contents'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ThoruTest'!
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 20:04'!
+contents
+	^ contents! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 19:50'!
+initialize
+	list _ (Collection withAllSubclasses collect: [ :each | each name])
+					asSortedCollection: [ :a :b | a = b].
+	selectedIndex _ 1.! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 19:50'!
+list
+	^list! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 19:50'!
+listIndex
+	^selectedIndex! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/6/2006 00:23'!
+listIndex: anInteger
+	selectedIndex _ anInteger.
+	contents _ (Smalltalk at: (list at: selectedIndex)) organization
+allMethodSelectors asString.
+
+	self changed: #listIndex.
+	self changed: #contents! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 20:12'!
+listMenu: aMenu
+	| targetClass differentMenu className |
+	className _ list
+		at: selectedIndex
+		ifAbsent: [
+			^aMenu add: 'nothing selected' target: self selector: #beep
+		].
+	targetClass _ Smalltalk
+		at: className
+		ifAbsent: [
+			^aMenu add: 'that class is history!!!!' target: self selector: #beep
+		].
+	differentMenu _ DumberMenuMorph new.
+	differentMenu
+		add: 'browse' target: targetClass selector: #browse;
+		add: 'inspect' target: targetClass selector: #inspect;
+		add: 'explore' target: targetClass selector: #explore.
+	^ differentMenu! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 20:16'!
+openAViewOnMe
+	| window aListMorph aTextMorph |
+
+	aListMorph _ PluggableListMorph
+		on: self
+		list: #list
+		selected: #listIndex
+		changeSelected: #listIndex:
+		menu: #listMenu:.
+	aListMorph color: Color white.
+	aTextMorph _ PluggableTextMorph
+		on: self
+		text: #contents
+		accept: #acceptContents
+		readSelection: nil
+		menu: nil.
+	window _ SystemWindow labelled: 'ThoruTest'.
+	window
+		color: Color white;
+		setWindowColor: (Color r: 0.645 g: 0.645 b: 1.0);
+		addMorph: aListMorph
+		frame: (0@0 corner: 0.3@1);
+		addMorph: aTextMorph
+		frame: (0.3@0 corner: 1@1).
+	window extent: 400@200.
+	^ window openInHand
+!
+]style[(13 399 104 100)f2b,f2,f4,f2! !
+
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+
+From tango ＠ eggegg.co.jp  Fri Apr  7 17:19:05 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2913] Re: PluggableTextMorphについて
+References: <BIEDLAGDKLHEABOHHEOHGEEACBAA.kubo-o@mbox.kyoto-inet.or.jp>
+	<006f01c65a1a$6f9ce2c0$6dc4d2ca@gomes>
+Message-ID: <009101c65a1b$f169d6e0$6dc4d2ca@gomes>
+
+やまもとです
+
+
+>> PluggableTextMorphをキャンセルするため、
+>> 左上に×印のマークがありますが、
+
+>どうやらPluggableListとウィンドウ（SystemWindow）を
+>混同されているのでわ？
+
+
+
+「PluggableTextMorphとSystemWindow」をですね・・・。
+
+
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+From turkey ＠ crew.sfc.keio.ac.jp  Fri Apr  7 17:44:18 2006
+From: turkey ＠ crew.sfc.keio.ac.jp (okada ken)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2914] eToyに「以下を割る」タイルが無いのは何で？
+Message-ID: <44362662.4060701@crew.sfc.keio.ac.jp>
+
+慶応大学の岡田です。
+
+子供などの初心者がちゃんとした日本語とeToyでプログラミングが出来る環境
+「言霊 on Squeak」を今日も作っております。その過程で１つ疑問が出たので、
+ここで質問させてください。
+
+eToy の代入文タイルは、マウスクリックで「以下を足す」「以下を引く」「以
+下を掛ける」と機能を切り替えることが出来ますよね。ここで「割る」という選
+択肢がないのは何故なんでしょう？教育上の観点から何か意図があるのでしょう
+か？それともただ０除算を避けるためでしょうか？
+
+誰かご存じの方がいらっしゃいましたら、教えていただけると嬉しいです。現在
+「言霊 on Squeak」で、いわゆる「以下を割る」タイルを使えるようにしようか
+どうか迷っている状態なのです（言霊では「ｘ座標を１０で割る」などの表記に
+なりますが）。
+
+
+よろしくお願いします。
+
+From abee ＠ squeakland.jp  Fri Apr  7 19:33:39 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2915] Re: eToy に「以下を割る」タイルが無いのは何で？
+In-Reply-To: <44362662.4060701@crew.sfc.keio.ac.jp>
+References: <44362662.4060701@crew.sfc.keio.ac.jp>
+Message-ID: <4436400324C.54BBABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 07 Apr 2006 17:44:18 +0900
+okada ken <turkey@crew.sfc.keio.ac.jp> wrote:
+>eToy の代入文タイルは、マウスクリックで「以下を足す」「以下を引く」「以
+>下を掛ける」と機能を切り替えることが出来ますよね。ここで「割る」という選
+>択肢がないのは何故なんでしょう？教育上の観点から何か意図があるのでしょう
+>か？それともただ０除算を避けるためでしょうか？
+
+私も不思議でした。0割りの問題であれば、beNotZero:を入れればよいだけのよう
+な気がします。
+もしかして乗算と除算は同じなので要らないのかとも思いましたが、そうすると
+減算がある理由が分かりません(使用頻度?)。
+関連するメソッドは、AssignmentTileMorph>>operatorForAssignmentSuffix:,
+optionsなどですが、このコードやコメントからも気持ちは汲み取れませんでした。
+
+なんとなく、のような気もします。
+
+# それでも数式を右から左へ評価する謎に比べれば、まだかわいいかも。
+
+>誰かご存じの方がいらっしゃいましたら、教えていただけると嬉しいです。現在
+>「言霊 on Squeak」で、いわゆる「以下を割る」タイルを使えるようにしようか
+>どうか迷っている状態なのです（言霊では「ｘ座標を１０で割る」などの表記に
+>なりますが）。
+
+これだけではなんなので、SqL05Jに「以下を割る」を加えるcsを付けます。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: eToyDivideBy.cs.gz
+型:         application/octet-stream
+サイズ:     1038 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060407/4324065d/eToyDivideBy.cs.obj
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Fri Apr  7 23:57:11 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2916] Re: eToyに「以下を割る」タイルが無いのは何で？
+In-Reply-To: <44362662.4060701@crew.sfc.keio.ac.jp>
+References: <44362662.4060701@crew.sfc.keio.ac.jp>
+Message-ID: <20060407235711150990.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+okada kenさんがFri, 07 Apr 2006 17:44:18 +0900に
+「[Squeak-ja: 2914] eToyに「以下を割る」タイルが無いのは何で？」の件で：
+> eToy の代入文タイルは、マウスクリックで「以下を足す」「以下を引く」「以
+> 下を掛ける」と機能を切り替えることが出来ますよね。ここで「割る」という選
+> 択肢がないのは何故なんでしょう？教育上の観点から何か意図があるのでしょう
+> か？それともただ０除算を避けるためでしょうか？
+
+私は全然理由は知りませんが、割り算に関しては小学校でも２種類、つまり整数
+演算か実数演算かの違いがありますので、実数演算としての「以下で割る」と整
+数演算としての「以下で割った商」「以下で割った余り」もあるといいのではな
+いでしょうか。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From turkey ＠ crew.sfc.keio.ac.jp  Sat Apr  8 20:23:59 2006
+From: turkey ＠ crew.sfc.keio.ac.jp (okada ken)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2917] Re: eToyに「以下を割る」タイルが無いのは何で？
+In-Reply-To: <44362662.4060701@crew.sfc.keio.ac.jp>
+References: <44362662.4060701@crew.sfc.keio.ac.jp>
+Message-ID: <44379D4F.3080506@crew.sfc.keio.ac.jp>
+
+慶応大学の岡田です。
+
+阿部さん、井上さん、リプライをありがとうございました。
+
+Kazuhiro ABE wrote:
+> 私も不思議でした。0割りの問題であれば、beNotZero:を入れればよいだけのよう
+> な気がします。
+> もしかして乗算と除算は同じなので要らないのかとも思いましたが、そうすると
+> 減算がある理由が分かりません(使用頻度?)。
+> 関連するメソッドは、AssignmentTileMorph>>operatorForAssignmentSuffix:,
+> optionsなどですが、このコードやコメントからも気持ちは汲み取れませんでした。
+> 
+> なんとなく、のような気もします。
+>
+> # それでも数式を右から左へ評価する謎に比べれば、まだかわいいかも。
+
+ちょっと笑ってしまいました。う〜ん、eToy の内部コードにはたくさんの謎が
+あるのですが、表面的な部分にもたくさん謎がありそうですね（笑）。
+
+> これだけではなんなので、SqL05Jに「以下を割る」を加えるcsを付けます。
+
+ありがとうございます！おかげで「言霊 on Squeak」に割る機能を付けるのが非
+常に楽でした。
+
+
+iNOUE Koich! wrote:
+> 私は全然理由は知りませんが、割り算に関しては小学校でも２種類、つまり整数
+> 演算か実数演算かの違いがありますので、実数演算としての「以下で割る」と整
+> 数演算としての「以下で割った商」「以下で割った余り」もあるといいのではな
+> いでしょうか。
+
+ご意見ありがとうございます。もののついでなので「余り」を計算するタイルも
+作ってみました。ただ「以下で割った余り」という訳はあまりにも日本語として
+不自然なので、「？を？で割った余り」という計算用タイルを作って、それをド
+ロップできるようにしました。
+
+
+
+興味がある方は、試しに以下の言霊onSqueakを触って見てください。
+http://www.crew.sfc.keio.ac.jp/~turkey/KotodamaSqueak-1.0.2c.zip
+
+それでは失礼します。
+
+
+
+From abee ＠ squeakland.jp  Sun Apr  9 14:07:13 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2918] SqueakFest '06
+Message-ID: <443896812FA.6D0EABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+毎年恒例のSqueakFestですが、今年も7/19(水)-21(金)にシカゴで開催されます。
+http://interactive.colum.edu/partners/squeakfest/
+
+今回の基調講演はシーモア・パパート博士です。
+来日がキャンセルになったC4 2005で聞きそびれた方は是非。
+
+SqueakFestは、Squeakに関する教育関係者、研究者、開発者が一堂に会するまた
+とない機会ですので、奮ってご参加ください。発表は英語ですが、日本人参加者
+も多いので安心です。
+
+また、発表者は希望すれば$500の旅費補助を受けられるかもしれません。
+http://interactive.colum.edu/partners/squeakfest/default_Present.aspx
+
+2004, 2005年の様子は以下などをご覧ください。
+
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-August/001757.html
+
+http://d.hatena.ne.jp/squeaker/20050810
+http://d.hatena.ne.jp/squeaker/20050811
+http://d.hatena.ne.jp/squeaker/20050812
+http://d.hatena.ne.jp/squeaker/20050813
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Mon Apr 10 10:39:54 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2919] PluggableListとウィンドウについて
+Message-ID: <BIEDLAGDKLHEABOHHEOHEEEFCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+ThoruYmamotoさん
+私は、PluggableListとウィンドウ（SystemWindow）を
+混同していた、というよりも、そのような区別の
+認識がありませんでしたので、助かりました。
+TestWindow うまく動きました。
+これを使って前へ進めます。ありがとうございました。
+おいらは（Thoru氏のまねがでてしまった）、こういう仕掛けを使って、いま思考過
+程の仕組みがどうなっているかを
+追いかけております。
+codeの勉強で時間をくうと、そちらが進まないので、
+お教え頂けて助かっておりまする（あ、またでた）。
+
+ただ、掲示されているcodeで、たとえば
+contents
+^ contents! !
+のように、！がついていますが、なんでしょうね。
+それから最後の行の
+]style[(13 399 104 100)f2b,f2,f4,f2! !
+は何でしょうか。
+
+久保　道
+
+
+From koubo2006 ＠ yengawa.jpn.org  Mon Apr 10 19:12:26 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2920] [Q]SqueakLandとSqueak.orgイメージ
+Message-ID: <20060410182900.EA25.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+Squeakのパッケージ化されたアプリを作ろうとしていて、ベースにするイメージ
+にはどれがいいか調べてます。
+
+SquakLandのSqueakLand2005JとSqueak.orgのSqueak3.8+Japanese Environmentの
+二つが候補です。
+ほとんど同じだと思っていましたが、基本的なところが微妙に違ってるように見
+えます(Squeak.keyを生成するところとか気になる)。
+でも具体的にどこがどう違うのかわからないので、なにか情報はありませんか?
+
+SqueakLand2005J開発者版
+http://squeakland.jp/developer/download/image/SqueakPlugin-dev-527.zip
+
+Squeak3.8-6665-basic + Japanese Environment(SqueakMap)
+http://ftp.squeak.org/current_stable/Squeak3.8-6665-basic.zip
+
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From tango ＠ eggegg.co.jp  Mon Apr 10 19:34:28 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2921] Re: PluggableListとウィンドウについて
+References: <BIEDLAGDKLHEABOHHEOHEEEFCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <002501c65c8a$5bbc09d0$6dc4d2ca@gomes>
+
+やまもとです。
+
+> 私は、PluggableListとウィンドウ（SystemWindow）を
+> 混同していた、というよりも、そのような区別の
+> 認識がありませんでしたので、助かりました。
+
+おいらもどっこいどっこいでございます。
+
+> TestWindow うまく動きました。
+> これを使って前へ進めます。ありがとうございました。
+
+それはよかったです。
+おいらもPluggable系には悩まされて
+自分だったらこうゆう時こうゆうのが欲しかったと思ったので
+ソースを貼り付けちゃいました。
+おいらの場合、動くかどうかが目安なの
+あまりそれを参考にしすぎないようにおねがいしまする。
+
+> ただ、掲示されているcodeで、たとえば
+> contents
+> ^ contents! !
+> のように、！がついていますが、なんでしょうね。
+
+あ、それはファイル・アウトしたソースについてるやつですね。
+取っちゃっても良いし、そのソースごとファイル・インしてもいいす。
+
+> それから最後の行の
+> ]style[(13 399 104 100)f2b,f2,f4,f2! !
+> は何でしょうか。
+
+これもいらないです。っていうかソースのテキストスタイルを
+設定してあるだけだと思います。
+
+久保さんの今回のメールで
+少し勉強できたので感謝してます。
+これなかったらほったらかしっぱなしだったと思う。
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+From abee ＠ squeakland.jp  Mon Apr 10 19:51:46 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2922] 情報処理学会第１１９回ヒューマンインタフェース研究会　発表募集
+Message-ID: <443A38C2B5.FB75ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Squeakers' Night in 未来パーティでお世話になった、はこだて未来大の迎山先
+生から表題の研究会の案内をいただいたので転送します。
+
+子供の教育用として語られることの多いSqueakですが、表現手段として用いてい
+る方も多数いらっしゃると思います。KymaやSirenもSmalltalkですし。
+ぜひ函館でMaxと勝負してきてください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+---
+情報処理学会第１１９回ヒューマンインタフェース研究会　発表募集
+
+開催情報
+　日程：２００６年７月６日（木）〜７日（金）
+　特集：「表現のためのインタフェース、および一般」
+　会場：湯の川プリンスホテル渚亭（函館湯の川温泉）
+　　　　〒042-0932 北海道函館市湯川町1丁目2番25号
+　　　　http://www.nagisatei.info/
+　　　　　※本研究会に関する会場へのお問い合わせはご遠慮ください
+　発表申込締切：２００６年５月８日
+　原稿締切：　　２００６年６月７日（予定）
+　※第11回ヒューマンインタフェースプロフェッショナルワークショップ
+（HIP11）併催
+
+　招待講演者：Miller Puckette教授　（UCSD音楽学部）
+　　　　　　　http://www-crca.ucsd.edu/~msp/
+
+申し込み方法
+　http://sighi.jp/ の７月研究会の項目をご覧下さい。
+
+照会／申込先
+　シャープ株式会社　技術本部　梅本あずさ
+　E-mail: sighi118＠sighi.jp　＠は半角に置き換えてください。
+
+本研究会のホームページもご覧下さい。http://www.sighi.jp/
+
+特集テーマ解説：
+機能向上と低価格化によって、我々にとってコンピュータは身近な存在となり、
+自己表現の道具としてコンピュータが使われるようになってきています。
+しかしながらコンピュータは、多くの人々にとって、
+自己表現を実現させる前に、コンピュータを使いこなせることを要求します。
+コンピュータを使うことが、創造自体を阻害している可能性もあります。
+表現のためのインタフェースは、どうあるべきなのでしょうか。
+
+今回、上記課題に対する一つのアプローチと言えるMax/MSPの開発者である
+Miller Puckette教授をお招きし、ご講演いただきます。
+そして、特集として「表現のためのインタフェース」というタイトルで、
+芸術向けインタフェースのみならず、表現手法（視覚化・聴覚化・触覚化・・）
+など、「表現」に関わる論文を幅広く募集いたします。
+
+上記特集テーマ以外にも、一般のヒューマンインタフェースに関連するテーマも
+募集しています。奮ってご応募ください。
+
+From korakurider ＠ yahoo.co.jp  Mon Apr 10 21:59:54 2006
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2923] Re: [Q]SqueakLand と Squeak.org イメージ
+In-Reply-To: <20060410182900.EA25.KOUBO2006@yengawa.jpn.org>
+Message-ID: <20060410125954.8569.qmail@web3605.mail.tnz.yahoo.co.jp>
+
+Korakuriderです。
+
+--- Koji Yokokawa <koubo2006@yengawa.jpn.org> からのメッ
+セージ：
+> ほとんど同じだと思っていましたが、基本的なところが微妙
+に違ってるように見
+> えます(Squeak.keyを生成するところとか気になる)。
+もちろん、パッケージングの相違（例えばConnectors組み込み
+済）とか、リリースビルドしている（ReleaseBuilderSqueakland
+参照）とか、3.8に多くの改良コードをかぶせているとかの違
+いはありますが、基本的なところは同じと思っていました。
+
+目に見える相違点の多くは、プリファレンスの初期設定内容の
+違いみたいです。いつ頃か忘れましたが、どこかのMLでそうい
+う趣旨の書き込みも見たことがあります。
+たとえばご質問のセキュリティ関係の動きの違いは、プリファ
+レンスの securityのところの設定値の違いだと思います。
+
+細かく調べたわけではないので、他にお気づきになったことが
+あれば、教えていただければ幸いです。
+
+ではでは。
+
+
+--------------------------------------
+Celebrate Yahoo! JAPAN 10th Anniversary
+http://pr.mail.yahoo.co.jp/10thann/
+
+From umejava ＠ mars.dti.ne.jp  Mon Apr 10 22:57:00 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2924] Re: [Q]SqueakLandとSqueak.orgイメージ
+In-Reply-To: <20060410182900.EA25.KOUBO2006@yengawa.jpn.org>
+References: <20060410182900.EA25.KOUBO2006@yengawa.jpn.org>
+Message-ID: <JN200604102257004.1828109@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+基本的にはSqueakLand2005Jのほうがリリースも後ですので、そちらが良いのでは
+ないでしょうか。
+
+ただSqueakの常として完璧ということはなく、必要に応じてパッチをあてていくこと
+が必要になります。
+
+特にWeb系のアプリであれば、
+http://www.kukakuka.jp/squeak/bugs/view.php?id=66
+
+のパッチは必須と思います。
+
+ではでは。
+
+Koji Yokokawa <koubo2006@yengawa.jpn.org> wrote:
+> 横川です。
+> Squeakのパッケージ化されたアプリを作ろうとしていて、ベースにするイメージ
+> にはどれがいいか調べてます。
+> 
+> SquakLandのSqueakLand2005JとSqueak.orgのSqueak3.8+Japanese Environmentの
+> 二つが候補です。
+> ほとんど同じだと思っていましたが、基本的なところが微妙に違ってるように見
+> えます(Squeak.keyを生成するところとか気になる)。
+> でも具体的にどこがどう違うのかわからないので、なにか情報はありませんか?
+> 
+> SqueakLand2005J開発者版
+> http://squeakland.jp/developer/download/image/SqueakPlugin-dev-527.zip
+> 
+> Squeak3.8-6665-basic + Japanese Environment(SqueakMap)
+> http://ftp.squeak.org/current_stable/Squeak3.8-6665-basic.zip
+> 
+> 
+> -- !
+> Koji Yokokawa <koubo2006@yengawa.jpn.org>
+>     http://yengawa.com/
+>     ^self new!
+
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Mon Apr 10 23:06:55 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2925] swikis.ddo.jpのサーバマシンを強化します
+Message-ID: <JZ2006041023065511.2423218@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+「プロジェクト置き場」「自由自在Squeakプログラミングサポートサイト」
+「SqueakSourceJ」などを運用しているswikis.ddo.jpですが、このたびサーバマシン
+を新たなものに取り替えることにしました。
+
+つきましては4/15(土)、16(日)にかけて、一時的にサイトにアクセスできなく
+なることがあるかと思います。ご了承ください。
+
+バックアップは毎日取っていますが、心配な方はファイルをローカルディスクに
+取っておくなどの対処をお願いいたします。
+
+お手数おかけしますが、よろしくお願い申し上げます。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Wed Apr 12 01:12:14 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2926] その後の HP スーパーサイエンスキッズ
+Message-ID: <443BD55EE5.45FBABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+以前にこのMLでも紹介させていただいたHPスーパーサイエンスキッズですが、
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-October/002677.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002784.html
+
+お蔭様でワークショップ参加者も160名を超え、
+
+http://www.supersciencekids.com/workshop_report.html
+
+先日最初のサイエンスキッズ(一次予選通過者)を3名選びました。
+
+http://www.supersciencekids.com/contest_result/1st.html
+
+ワークショップ参加者の作品、サイエンスキッズの作品はすべてコメントつきで
+Webに公開していますので、どうぞご覧ください。
+
+これからも各地でワークショップを開催すると共に作品の審査を行い、年末には
+いよいよ5名のスーパーサイエンスキッズを選ぶ予定です。
+
+ワークショップは、従来の東京、大阪、名古屋に加えて、4/23, 5/28には京都で
+も開催することになりました。
+
+http://www.supersciencekids.com/
+
+小3から中3までのお子様はぜひご参加ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From koubo2006 ＠ yengawa.jpn.org  Wed Apr 12 13:47:40 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2927] Re: [Q]SqueakLandとSqueak.orgイメージ
+In-Reply-To: <20060410182900.EA25.KOUBO2006@yengawa.jpn.org>
+References: <20060410182900.EA25.KOUBO2006@yengawa.jpn.org>
+Message-ID: <20060412122406.EA36.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+Korakuriderさん梅澤さん情報ありがとうございます。
+インストール済みパッケージが違うだけで、ほかには大きな違いは無さそうです
+ね。
+
+事の発端はConnectors2を使いたいということで、Squeak3.8だとConnectors2を
+クリーンインストールできるからよさそうだと思ったのです。
+SqueakLand2005JにはConnectors1のコードがすでに入ってしまってますが、
+SqueakMapからConnectors2を上書きインストールしても今のところ問題なさそう
+なので、今回の仕事はSqueakLand2005J+Connectors2で進めます。
+
+
+On Mon, 10 Apr 2006 19:12:26 +0900
+Koji Yokokawa <koubo2006@yengawa.jpn.org> wrote:
+
+> 横川です。
+> Squeakのパッケージ化されたアプリを作ろうとしていて、ベースにするイメージ
+> にはどれがいいか調べてます。
+> 
+> SquakLandのSqueakLand2005JとSqueak.orgのSqueak3.8+Japanese Environmentの
+> 二つが候補です。
+> ほとんど同じだと思っていましたが、基本的なところが微妙に違ってるように見
+> えます(Squeak.keyを生成するところとか気になる)。
+> でも具体的にどこがどう違うのかわからないので、なにか情報はありませんか?
+> 
+> SqueakLand2005J開発者版
+> http://squeakland.jp/developer/download/image/SqueakPlugin-dev-527.zip
+> 
+> Squeak3.8-6665-basic + Japanese Environment(SqueakMap)
+> http://ftp.squeak.org/current_stable/Squeak3.8-6665-basic.zip
+> 
+> 
+> -- !
+> Koji Yokokawa <koubo2006@yengawa.jpn.org>
+>     http://yengawa.com/
+>     ^self new!
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From koubo2006 ＠ yengawa.jpn.org  Wed Apr 12 13:47:40 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2928] Re: [Q]SqueakLandとSqueak.orgイメージ
+In-Reply-To: <JN200604102257004.1828109@mars.dti.ne.jp>
+References: <20060410182900.EA25.KOUBO2006@yengawa.jpn.org>
+	<JN200604102257004.1828109@mars.dti.ne.jp>
+Message-ID: <20060412123812.EA39.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+
+String>>unescapePercentsWithTextEncoding: のこのチェンジは'+'→Space変換も
+入ってる完全版ですね。Web系では致命的な不具合ですが、Squeak3.9でもまだ反
+映されてませんでした。
+
+
+On Mon, 10 Apr 2006 22:57:00 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+
+> こんにちは
+> 梅澤です。
+> 
+> 基本的にはSqueakLand2005Jのほうがリリースも後ですので、そちらが良いのでは
+> ないでしょうか。
+> 
+> ただSqueakの常として完璧ということはなく、必要に応じてパッチをあてていくこと
+> が必要になります。
+> 
+> 特にWeb系のアプリであれば、
+> http://www.kukakuka.jp/squeak/bugs/view.php?id=66
+> 
+> のパッチは必須と思います。
+> 
+> ではでは。
+> 
+> Koji Yokokawa <koubo2006@yengawa.jpn.org> wrote:
+> > 横川です。
+> > Squeakのパッケージ化されたアプリを作ろうとしていて、ベースにするイメージ
+> > にはどれがいいか調べてます。
+> > 
+> > SquakLandのSqueakLand2005JとSqueak.orgのSqueak3.8+Japanese Environmentの
+> > 二つが候補です。
+> > ほとんど同じだと思っていましたが、基本的なところが微妙に違ってるように見
+> > えます(Squeak.keyを生成するところとか気になる)。
+> > でも具体的にどこがどう違うのかわからないので、なにか情報はありませんか?
+> > 
+> > SqueakLand2005J開発者版
+> > http://squeakland.jp/developer/download/image/SqueakPlugin-dev-527.zip
+> > 
+> > Squeak3.8-6665-basic + Japanese Environment(SqueakMap)
+> > http://ftp.squeak.org/current_stable/Squeak3.8-6665-basic.zip
+> > 
+> > 
+> > -- !
+> > Koji Yokokawa <koubo2006@yengawa.jpn.org>
+> >     http://yengawa.com/
+> >     ^self new!
+> 
+> ---
+> [:masashi | ^umezawa]
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Wed Apr 12 22:02:12 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2929]  「進化のエッセイ」の HPについて
+In-Reply-To: <443C76BC18E.0E79ABEE@smtp.nifty.com>
+Message-ID: <BIEDLAGDKLHEABOHHEOHIEEJCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+abeeさんに報告します。
+私は、
+「Microsoft Outlook 2000(9.0.0.2814)
+インターネットのみ」
+を使っています。
+最新のSqueakland2005Jというのは、
+SqueakNihongo７のことでしょうか。
+それを使っています。
+それで、画面の左上に
+「画像はあるが表示できないというマーク」
+がでています。
+久保　道
+
+From abee ＠ squeakland.jp  Wed Apr 12 22:11:27 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2930] Re: 「進化のエッセイ」の HP について
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHIEEJCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <443C76BC18E.0E79ABEE@smtp.nifty.com>
+	<BIEDLAGDKLHEABOHHEOHIEEJCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <443CFC7F18F.D58DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+MLを読んでいる他の皆様には経緯が分からないと思いますので、まず久保さんの
+ご質問と私の返信を転送します。
+
+Forwarded by Kazuhiro ABE <abee@squeakland.jp>
+---------------- Original message follows ----------------
+ From: Kazuhiro ABE <abee@squeakland.jp>
+ To: kubo-o <kubo-o@mbox.kyoto-inet.or.jp>
+ Cc: abee@squeakland.jp
+ Date: Wed, 12 Apr 2006 12:40:44 +0900
+ Subject: Re: 「進化のエッセイ」のHPについて
+--
+
+阿部@新百合です。
+
+詳しい現象やお使いの環境をお聞かせください。
+最新のSqueakland 2005Jをインストールされているでしょうか。ブラウザのバー
+ジョンはなんでしょう。
+また、情報を共有するため、ご質問はMLにいただけると助かります。
+よろしくお願いします。
+
+P.S. 以下ご参考まで。
+http://www.hyuki.com/writing/techask.html
+
+On Wed, 12 Apr 2006 11:51:46 +0900
+"kubo-o" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>はじめてメールいたします。
+>先日PluggableＴｅｘｔMorphのことで
+>教えて頂いた久保です。
+>その節はありがとうございました。
+>さて、表記のHPを見たいと思うのですが、
+>うまく開きません。
+>こちらのやり方かも知れませんが、
+>ちがうPCから試してもダメでした。
+>久保　道
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+
+From abee ＠ squeakland.jp  Wed Apr 12 22:28:53 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2931] Re: 「進化のエッセイ」の HP について
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHIEEJCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <443C76BC18E.0E79ABEE@smtp.nifty.com>
+	<BIEDLAGDKLHEABOHHEOHIEEJCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <443D009521F.D58EABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 12 Apr 2006 22:02:12 +0900
+"kubo-o" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>私は、
+>「Microsoft Outlook 2000(9.0.0.2814)
+>インターネットのみ」
+>を使っています。
+
+OutlookはWindowsでメールを読み書きしたり、スケジュールを管理したりするア
+プリケーションだと思います。Webブラウザは、たとえば、Internet Explolerや
+Firefox、 Operaなどで、それぞれにバージョンがあります。
+日本のスクイークランドにはちゃんと載せてなくて申し訳ないのですが、対応表
+は以下にあります。
+
+http://www.squeakland.org/supported.html
+
+>最新のSqueakland2005Jというのは、
+>SqueakNihongo７のことでしょうか。
+
+いいえ、去年の12/24にリリースしたSqueakland 2005Jというバージョンが最新に
+なります。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002781.html
+
+以下のニュースリリースをお読みください。
+
+http://squeakland.jp/images/news/html/SqL05JRelease.htm
+
+ダウンロードは以下から可能です。Smalltalkで開発する場合は開発者版も合わせ
+てダウンロードしてください。
+
+http://squeakland.jp/plugin/download.html
+
+>それを使っています。
+>それで、画面の左上に
+>「画像はあるが表示できないというマーク」
+>がでています。
+
+SqueakNihongo7の場合はそうなると思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Apr 13 00:41:00 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2932] Re: 「進化のエッセイ」の HP について
+In-Reply-To: <443D009521F.D58EABEE@smtp.nifty.com>
+References: <BIEDLAGDKLHEABOHHEOHIEEJCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+	<443D009521F.D58EABEE@smtp.nifty.com>
+Message-ID: <443D1F8C21D.D590ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 12 Apr 2006 22:28:53 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>日本のスクイークランドにはちゃんと載せてなくて申し訳ないのですが、対応表
+>は以下にあります。
+
+スクイークランドに説明を追加しました。
+
+http://squeakland.jp/author/essays.html
+http://squeakland.jp/plugin/download.html
+http://squeakland.jp/plugin/supported.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Sun Apr 16 10:49:20 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2933] Re: swikis.ddo.jpのサーバマシンを強化します
+In-Reply-To: <JZ2006041023065511.2423218@mars.dti.ne.jp>
+References: <JZ2006041023065511.2423218@mars.dti.ne.jp>
+Message-ID: <JJ200604161049203.267875@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+下記の件ですが、無事に移行が済みました。
+http://swikis.ddo.jp/
+
+万一不具合などありましたら、お気軽にお知らせください。
+
+パワーアップしたので。あらたなサービスも展開していく予定です。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 「プロジェクト置き場」「自由自在Squeakプログラミングサポートサイト」
+> 「SqueakSourceJ」などを運用しているswikis.ddo.jpですが、このたびサーバマシン
+> を新たなものに取り替えることにしました。
+> 
+> つきましては4/15(土)、16(日)にかけて、一時的にサイトにアクセスできなく
+> なることがあるかと思います。ご了承ください。
+> 
+> バックアップは毎日取っていますが、心配な方はファイルをローカルディスクに
+> 取っておくなどの対処をお願いいたします。
+> 
+> お手数おかけしますが、よろしくお願い申し上げます。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Mon Apr 17 17:12:06 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:27 2007
+Subject: [Squeak-ja: 2934] Re: swikis.ddo.jp のサーバマシンを強化します
+In-Reply-To: <JJ200604161049203.267875@mars.dti.ne.jp>
+References: <JZ2006041023065511.2423218@mars.dti.ne.jp>
+	<JJ200604161049203.267875@mars.dti.ne.jp>
+Message-ID: <44434DD62D9.23F3ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 16 Apr 2006 10:49:20 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>下記の件ですが、無事に移行が済みました。
+>http://swikis.ddo.jp/
+
+ありがとうございます。
+
+>万一不具合などありましたら、お気軽にお知らせください。
+
+不具合ではないのですが、
+
+http://swikis.ddo.jp/...
+
+のリンクをたどると、
+
+http://swikis.blueplane.jp/...
+
+になるようです。今後、リンクや紹介するときはどちらを使ったほうがよいでし
+ょうか。
+
+>パワーアップしたので。あらたなサービスも展開していく予定です。
+
+期待しています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Mon Apr 17 17:41:31 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2935] 使わないと損をするMVCについて（質問）
+Message-ID: <BIEDLAGDKLHEABOHHEOHCEENCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+先日、青木　淳さんから教えて頂いた
+表記の教材を読んでいます。
+プログラム１を動かそうと思うのですが、
+'Mickey.form'がないためか動きません。
+これをどうしてつくり、どこに置けば
+よいでしょうか。
+久保　道
+
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Apr 17 18:03:56 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2936] Re: swikis.ddo.jp のサーバマシンを強化します
+In-Reply-To: <44434DD62D9.23F3ABEE@smtp.nifty.com>
+References: <JZ2006041023065511.2423218@mars.dti.ne.jp>
+	<JJ200604161049203.267875@mars.dti.ne.jp>
+	<44434DD62D9.23F3ABEE@smtp.nifty.com>
+Message-ID: <JU200604171803566.16255140@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> >万一不具合などありましたら、お気軽にお知らせください。
+> 
+> 不具合ではないのですが、
+> 
+> http://swikis.ddo.jp/...
+> 
+> のリンクをたどると、
+> 
+> http://swikis.blueplane.jp/...
+> 
+> になるようです。今後、リンクや紹介するときはどちらを使ったほうがよいでし
+> ょうか。
+> 
+
+swikis.ddo.jpの名前は長年使われてきたということもありますので、キープ
+したいと思います。
+
+リンク先が http://swikis.blueplane.jp/ になる件ですが、さきほど直して
+みました。ご確認ください。
+
+一方、なぞのドメインであるblueplane.jpですが、今後は、こちらに新規サービスを
+集約して行く予定です。
+
+> >パワーアップしたので。あらたなサービスも展開していく予定です。
+> 
+> 期待しています。
+
+ご期待ください。いろいろ準備しています。
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Mon Apr 17 21:36:34 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2937] Re: swikis.ddo.jp のサーバマシンを強化します
+In-Reply-To: <JU200604171803566.16255140@mars.dti.ne.jp>
+References: <44434DD62D9.23F3ABEE@smtp.nifty.com>
+	<JU200604171803566.16255140@mars.dti.ne.jp>
+Message-ID: <44438BD2E2.5F25ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 17 Apr 2006 18:03:56 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>swikis.ddo.jpの名前は長年使われてきたということもありますので、キープ
+>したいと思います。
+
+了解しました。
+
+>リンク先が http://swikis.blueplane.jp/ になる件ですが、さきほど直して
+>みました。ご確認ください。
+
+確認しました。
+
+>一方、なぞのドメインであるblueplane.jpですが、今後は、こちらに新規サービスを
+>集約して行く予定です。
+
+名前が名前だけにますます期待が高まりますね。
+
+http://www.viewpointsresearch.org/
+http://jeffsutherland.com/oopsla97/squeak.html
+http://minnow.cc.gatech.edu/squeak/158
+http://www.memestreams.net/users/akira/blogid4041444/
+
+# pinkplaneというドメインを取りたくなってきました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Mon Apr 17 22:05:15 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2938] C ロボ・スクイークキット発売
+Message-ID: <4443928B2BD.5F26ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+以前、Cロボというスクイークから制御可能なロボットを紹介しました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-January/002792.html
+
+本日(4/17)、スクイーク用のファームウェアをあらかじめ組み込んだ「Cロボ・ス
+クイークキット」が、有限会社アカデミアより発売されました。シリアル接続の
+(S)が 7,680円、 USB接続の(U)が9,480円です。
+
+http://www.academianetwork.co.jp/service/index.html
+
+Cロボ・スクイークキットを使うと、おなじみの「ロボットを進める」、「ロボッ
+トを回す」、「ロボットの向き」を使って、Cロボをリアルタイムに動かせます。
+また、底面の光センサの値は「ロボットの明るさ」で取得できるため、Drive a
+Carの自動運転をCロボで行うことが可能です。うまくペンを取り付ければタート
+ルグラフィックスも描けるかも知れません(パラメタで調整できますが、サーボで
+はないので精度は高くありません。また、回転角や進む距離は電池電圧や摩擦な
+どで変化します)
+
+分解して、モータの代わりに電球やリレーをつけたり、光センサの代わりに別の
+センサを取り付けることも可能です。
+レゴ・マインドストーム(RIS 2.0)の1/3以下の価格なので、教室やご自宅で比較
+的簡単にロボット教材を試せると思います。
+
+お楽しみください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From nishis ＠ zephyr.dti.ne.jp  Tue Apr 18 04:59:00 2006
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2939] Re: 使わないと損をするMVCについて（質問）
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHCEENCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <BIEDLAGDKLHEABOHHEOHCEENCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <4443F384.5040100@zephyr.dti.ne.jp>
+
+setForm でインスタンス変数 form に突っ込んでるとこだけを観れ
+ば，たとえば Form makeStar とかで代用してやれば佳いでしょう
+が，ビューの色設定で Form white とかでやってるんで，そのままで
+は動かないと思います．少なくとも Squeak3.9a-7022 と 1.3Final
+には，このメソッドは切ってありません．
+
+同じ青木さんのこちらのコードはどうですか．
+http://www.sra.co.jp/people/aoki/SmalltalkGoodies/Squeak/Display.st
+1.3Final ではそのままファイルインできて動きます．
+これで「動くコード」が手に入るので，そこから改造して行く方が早
+いかも．
+
+ってか，なんで morph から mvc に移っちゃったですか？
+
+on 06.4.17 5:41 PM, kubo-o wrote:
+> 先日、青木　淳さんから教えて頂いた
+> 表記の教材を読んでいます。
+> プログラム１を動かそうと思うのですが、
+> 'Mickey.form'がないためか動きません。
+> これをどうしてつくり、どこに置けば
+> よいでしょうか。
+> 久保　道
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From abee ＠ squeakland.jp  Wed Apr 19 15:53:05 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2940] スクイークランドが落ちていました。
+Message-ID: <4445DE5155.8C46ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+4/18夜から4/19 15:00まで、
+
+http://squeakland.jp
+http://www.squeakland.jp
+
+が落ちていました。これはUPSに何らかのトラブルが発生したもので、現在は電源
+を直結して仮復旧しています。
+
+原因調査や本復旧の際に、再度停止することがあると思われますが、その際は事
+前にここでお知らせします。
+
+ご迷惑をおかけしますが、よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Thu Apr 20 20:07:59 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2941] SqueakSourceJ正式版
+In-Reply-To: <JE200602161115107.5074265@mars.dti.ne.jp>
+References: <JE200602161115107.5074265@mars.dti.ne.jp>
+Message-ID: <JU200604202007595.22931718@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+2ヶ月ほど運用してきましたSqueakSourceJですが、十分に安定して動作する状態に
+なりましたので、「正式版」と宣言したいと思います。
+
+新たなアドレスは
+http://squeaksource.blueplane.jp/
+
+になります。以前にくらべてよりSqueakSourceらしい名前となりました。
+
+もっとも旧http://swikis.ddo.jp:9091/もそのまま使えます(同じサーバを指して
+います)ので、ユーザの方は特に何かをする必要はありません。
+
+今後ともよろしくお願いします。これを機に、新規にプロジェクトを登録してみる
+のも良いかもしれません。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> Squeak版のSourceForgeとも言えるSqueakSourceを日本語化して立ち上げました。
+> 
+> SqueakSourceJ
+> http://swikis.ddo.jp:9091/
+> 
+> 使い方はヘルプタブ、および「最初に読んでください」プロジェクトをご覧ください。
+> 
+> 川村さんの紹介もあります。
+> http://squeak.qp.land.to/index.php?Squeak%2FSqueakSource
+> 
+> 自分用のやつをインストールしたいというかたは、以下です。
+> http://swikis.ddo.jp/umejava/32
+> 
+> 便利なコードリポジトリとして自由に使えます。
+> 
+> まだベータ版としての位置づけで少し不安定なところがあるかもしれませんが、
+> 使ってみないとなんとも言えない部分もあります。
+> バックアップはちゃんと取っていますので、どしどしプロジェクトを登録して
+> お試しください。
+> 
+
+---
+[:masashi | ^umezawa]
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Fri Apr 21 11:16:44 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2942] Re: 「進化のエッセイ」の HP について
+In-Reply-To: <443D1F8C21D.D590ABEE@smtp.nifty.com>
+Message-ID: <BIEDLAGDKLHEABOHHEOHEEFACBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+「進化のエッセイ」、お陰様で読めました。
+ありがとうございました。
+これからの啓発的な表現方法として
+有効な試みだと思います。
+Chris Crawfordの「インタラクティブデザイン論」
+（オーム社）の中に、この方向の大切さを
+書いていました。
+ただ、勘違いをしているかも
+しれませんが、
+あのエッセイの中で、
+進化というか、変異のシミュレーションで
+Ｇｏａｌが設定されているのが、
+気になりました。
+変異に目的などない、と
+思っていましたので。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Kazuhiro ABE
+Sent: Thursday, April 13, 2006 12:41 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2932] Re: 「進化のエッセイ」の HP について
+
+
+阿部@新百合です。
+
+On Wed, 12 Apr 2006 22:28:53 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>日本のスクイークランドにはちゃんと載せてなくて申し訳ないのですが、対応表
+>は以下にあります。
+
+スクイークランドに説明を追加しました。
+
+http://squeakland.jp/author/essays.html
+http://squeakland.jp/plugin/download.html
+http://squeakland.jp/plugin/supported.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+
+From abee ＠ squeakland.jp  Sat Apr 22 20:58:14 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2943] NICT 科学技術ふれあい day 「絵を音でつくろう」
+Message-ID: <444A1A56BD.CFDBABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+さきほど、小金井の情報通信研究機構(NICT)で「絵を音でつくろう」というワー
+クショップを行ってきました。
+これはNICTの科学技術ふれあいdayのイベントとして実施されたもので、実際に動
+作する FAX(のようなもの)をスクイークで組み立てることにより、画像伝送の仕
+組みのひとつ、すなわち符号化、変調、復調、復号という仕組みを小学生に分か
+ってもらおうという試みでした。
+
+# 大元は山宮さんのドット絵を作るメタトイで、FAXは世界聴診器のネタとして去
+# 年のはこだて未来大ワークショップのために暖めていたものです。
+
+午前と午後の2回、それぞれ未経験の40人の子供たちというタフなプログラムで、
+後半へろへろになってしまいましたが、おぼろげに理解してもらったのではない
+かと思います。
+今回はNICTということで、自由製作を中心にしたいつものワークショップではな
+く、情報通信に特化したものというリクエストがありました。結果、ブラックボッ
+クスの種明かしをすると同時に、プログラム次第でどんなものにでも化けられる
+コンピュータの特性を活かしたものになったと思います。
+
+しかし、私の準備不足と説明のまずさで、最後まで完成しなかった子には本当に
+申し訳なかったです。次回は少人数でもう少し時間を取って、いつかどこかでリ
+ベンジしたいものです。
+
+今回使ったソフトウェアと作成の手順書(宮本さん@CANVASの力作)は以下にありま
+すので、どうぞお試しください。
+
+http://swikis.ddo.jp/WorldStethoscope/33
+
+最後に、NICTとCANVASの皆さん、ファシリテイタの皆さんにこの場を借りて感謝
+いたします。
+
+# 明日は京都でHPSSKワークショップです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Wed Apr 26 12:23:12 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2944] SqueakFestでの発表
+Message-ID: <u7j5dc95r.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  今年の夏も、シカゴでSqueakFestが開かれます。SqueakFestはSqueakのユー
+ザや開発者が一堂に会して、事例報告や将来の方針などを話し合う会合です。
+今年はあのSeymour Papertがキーノートスピーチをすることになっています。
+
+  SqueakFestでは現在発表者を募集しています。Squeakを使って目で見て判る
+プレゼンテーションをすれば英語の問題もクリアできると思いますし、日本人
+も例年多く参加しているので楽しく発表できると思います。なにか面白いねた
+がある人は是非発表を検討してみてはいかがでしょうか。今月末が締め切りと
+なっていますので、お早めにどうぞ。
+
+-- Yoshiki
+
+
+
+From yoshiki ＠ squeakland.org  Wed Apr 26 14:12:57 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2945] Re: NICT 科学技術ふれあい day 「絵を音でつくろう」
+In-Reply-To: <444A1A56BD.CFDBABEE@smtp.nifty.com>
+References: <444A1A56BD.CFDBABEE@smtp.nifty.com>
+Message-ID: <u64kwdina.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  がんばりましたね。あまり自由製作にこだわらず、身近で楽しいねたに絞っ
+た、というところが良かったかもしれませんね。
+
+-- Yoshiki
+
+At Sat, 22 Apr 2006 20:58:14 +0900,
+Kazuhiro ABE wrote:
+> 
+> 阿部@新百合です。
+> 
+> さきほど、小金井の情報通信研究機構(NICT)で「絵を音でつくろう」というワー
+> クショップを行ってきました。
+> これはNICTの科学技術ふれあいdayのイベントとして実施されたもので、実際に動
+> 作する FAX(のようなもの)をスクイークで組み立てることにより、画像伝送の仕
+> 組みのひとつ、すなわち符号化、変調、復調、復号という仕組みを小学生に分か
+> ってもらおうという試みでした。
+> 
+> # 大元は山宮さんのドット絵を作るメタトイで、FAXは世界聴診器のネタとして去
+> # 年のはこだて未来大ワークショップのために暖めていたものです。
+> 
+> 午前と午後の2回、それぞれ未経験の40人の子供たちというタフなプログラムで、
+> 後半へろへろになってしまいましたが、おぼろげに理解してもらったのではない
+> かと思います。
+> 今回はNICTということで、自由製作を中心にしたいつものワークショップではな
+> く、情報通信に特化したものというリクエストがありました。結果、ブラックボッ
+> クスの種明かしをすると同時に、プログラム次第でどんなものにでも化けられる
+> コンピュータの特性を活かしたものになったと思います。
+> 
+> しかし、私の準備不足と説明のまずさで、最後まで完成しなかった子には本当に
+> 申し訳なかったです。次回は少人数でもう少し時間を取って、いつかどこかでリ
+> ベンジしたいものです。
+> 
+> 今回使ったソフトウェアと作成の手順書(宮本さん@CANVASの力作)は以下にありま
+> すので、どうぞお試しください。
+> 
+> http://swikis.ddo.jp/WorldStethoscope/33
+> 
+> 最後に、NICTとCANVASの皆さん、ファシリテイタの皆さんにこの場を借りて感謝
+> いたします。
+> 
+> # 明日は京都でHPSSKワークショップです。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Apr 27 01:01:36 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2946] Re: スクイークランドが落ちていました。
+In-Reply-To: <4445DE5155.8C46ABEE@smtp.nifty.com>
+References: <4445DE5155.8C46ABEE@smtp.nifty.com>
+Message-ID: <444F996013D.64B1ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 19 Apr 2006 15:53:05 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>原因調査や本復旧の際に、再度停止することがあると思われますが、その際は事
+>前にここでお知らせします。
+
+一昨日(4/25) 14:00時頃、UPSを直してスクイークランドが復旧しました。その際、
+10分程度ダウンしていたと思われます。
+この件について、私の連絡ミスで事前にお知らせできませんでした。申し訳あり
+ません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mutoh ＠ openedu.org  Sat Apr 29 09:01:08 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2947] 私家版FreeBSD portsのFFIの不具合とCroquet
+Message-ID: <ddslnxjlmj.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+今日から連休ですね。みなさん、いかがお過ごしでしょうか?
+
+
+最初にあんまりよくない話から。
+
+以前、紹介させていただいた武藤私家版FreeBSD portなんですが、FFIで
+apicallが使えない状態になっていました。
+申し訳ありませんが、御利用の方で不都合が起こったときは、再度最新版をダ
+ウンロードして使っていただければと思います。
+
+
+次は、少し嬉しいかも知れない話です。
+
+Croquetの新版が公開されていますが、皆さんおためしになられましたでしょ
+うか?
+更に、UNIX版のVMでは、3.9a-4あたりから、Croquetへの対応もマージされ、
+このVMを使うことで、Croquetのイメージを実行できるようになったというこ
+とです。
+
+そこで、一念発起してFreeBSDで3.9a-7VMのportを作り、Croquetのイメージが
+なんとなく動くのを確認しました。
+# その途中で、apicallが動いてないのに気がつきました(;-;)
+
+手元にOpenGLの性能が高いマシンが無いので、もっさりしてますがなんとか動
+いています。
+
+あまりチェックをしていないので、まだ不具合はあると思いますが、連休中に
+ちょっと試してみようと思われる方は、試して御意見をいただけると嬉しいで
+す。
+
+
+両方とも、
+	http://qml.610t.org/squeak/VM.html
+からたどれます。
+
+
+では、皆さん連休をお楽しみください;-)
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From umejava ＠ mars.dti.ne.jp  Sat Apr 29 14:39:09 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2948] AniAniWebJ
+Message-ID: <JU200604291439095.6303562@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+以前少しご紹介したAniAniWebですが、
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002773.html
+
+このたび日本語対応(およびパッチ当て)したイメージを下記に置きました。
+http://swikis.ddo.jp/umejava/35
+
+よろしければお試しください。
+
+AniAniWebはたとえばFlorianさんが上げています。
+http://florianswiki.dyndns.org/Web
+
+私も上げていたりします。
+http://ani.blueplane.jp/ume
+
+連休中にちょっと試してみるのも良いかもしれません。
+---
+[:masashi | ^umezawa]
+

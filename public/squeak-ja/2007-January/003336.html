@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3336] Re: 教育用ＰＣ リナックスで再生
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203336%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=6544a1da0701120010oee60eaflfbc38aeda4199198%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003335.html">
+   <LINK REL="Next"  HREF="003341.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3336] Re: 教育用ＰＣ リナックスで再生</H1>
+    <B>Tatsuyoshi HAMADA</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203336%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=6544a1da0701120010oee60eaflfbc38aeda4199198%40mail.gmail.com"
+       TITLE="[Squeak-ja: 3336] Re: 教育用ＰＣ リナックスで再生">hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp
+       </A><BR>
+    <I>2007年 1月 12日 (金) 18:30:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003335.html">[Squeak-ja: 3335] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+        <LI>次の記事 <A HREF="003341.html">[Squeak-ja: 3341] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3336">[ 日付 ]</a>
+              <a href="thread.html#3336">[ スレッド ]</a>
+              <a href="subject.html#3336">[ 件名 ]</a>
+              <a href="author.html#3336">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱田＠福大です。
+
+武田様、こんばんわ。
+
+takeda.toshiyuki&gt; ためしたことがありますが、*まったく* 動かなくなります。
+
+そうですね。古いマシンの場合には、
+メモリが少ないためにスワップするのではないかと思います。
+KNOPPIX起動時に knoppix desktop=twm 等を入力して、
+KDE を使わないことで、起動ぐらいはできますが、
+ファイルマネージャ等の環境を考えると難しいところです。
+
+takeda.toshiyuki&gt; &gt; 2. メモリが少ない古いマシンで Squeak が十分な速度で動くか？
+takeda.toshiyuki&gt; 
+takeda.toshiyuki&gt; メモリはどれぐらい積んでるんでしょうか?
+takeda.toshiyuki&gt; 
+takeda.toshiyuki&gt; 128MBを期待していいものかどうか。64MBでもSqueakだけならなんとかなりますが、
+
+私が1999年に大学の端末室に30台導入したマシンが
+Celeron 333MHz, 96MB SDRAM であったことを考えると、
+場合によっては、128MBを期待するのは難しいのではないかと思います。
+# 当時は Windows98 をいれずに NT で使っていました。
+
+メモリの追加ができれば良いのですが、現実には難しいでしょう。
+例えば、先日 USB-KNOPPIX の小菅貴彦氏が公表したデータによると、
+SONY PCG-SR1/BP(Celeron 450MHz)上で 64MB メモリの場合、
+約200秒で Compact Flash KNOPPIX による KIOSK 端末が起動したそうです。
+ 
+takeda.toshiyuki&gt; いまどきの他のソフトはどうでしょうか。
+どの程度のことをさせるかによりますね。
+OpenOffice.org などは重いアプリケーションの筆頭でしょう。
+一方で、KSEG などの数学ソフトウェアは、ものによっては
+軽いものもあり、使えるのではないかと思います。
+
+takeda.toshiyuki&gt; OLPCの成果の移植を期待したいところです。
+takeda.toshiyuki&gt; 
+takeda.toshiyuki&gt; &gt; 2. Squeak を教えることができる人材を現場で確保できるか？
+takeda.toshiyuki&gt; 
+takeda.toshiyuki&gt; これはなかなか大変でしょうが、Linuxベースの他のソフトも同じような状況ではないかと。。。
+
+はい、その通りです。
+ただ、例えば WebBrowser 単体の KIOSK 端末はどうでしょうか？
+操作方法については、特に問題なく使えますよね。
+漢字入力で多少とまどうかもしれませんが、大人が考えるよりも
+子供は普通に使いこなせるのではないかと思います。
+
+もっともネットワークが引かれているかどうかというのも、問題ですか…
+
+あと、さっき気づいたのですが、
+アルファシステムズの千葉さんがフォーラムの方に的確なコメントを書いていますね。
+メーリングリストには流れていないので、気づきませんでした。
+<A HREF="http://www.nabble.com/-Squeak-ja%3A-3317----tf2901155.html">http://www.nabble.com/-Squeak-ja%3A-3317----tf2901155.html</A>
+
+千葉さんが紹介している 「Open School Platform」プロジェクトについては、
+CEC の平成18年度Eスクエア・エボリューション成果発表会でも紹介されますので、
+よろしければ、是非、御覧ください。
+<A HREF="http://www.cec.or.jp/e2e/">http://www.cec.or.jp/e2e/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003335.html">[Squeak-ja: 3335] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+	<LI>次の記事 <A HREF="003341.html">[Squeak-ja: 3341] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3336">[ 日付 ]</a>
+              <a href="thread.html#3336">[ スレッド ]</a>
+              <a href="subject.html#3336">[ 件名 ]</a>
+              <a href="author.html#3336">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

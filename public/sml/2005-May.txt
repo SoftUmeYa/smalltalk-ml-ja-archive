@@ -1,0 +1,349 @@
+From kuwatani ＠ akademia.co.jp  Mon May  9 17:41:32 2005
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7083] メーリングリストの一時停止のお知らせ
+Message-ID: <20050509174132lmh6cY@akademia.co.jp>
+
+SML参加者の皆様
+
+SMLの管理をしています 桑谷 です．
+
+突然ですが，先日メーリングリストを運用しているサーバが攻撃を受け
+サーバが落とされるという事件がありました．
+
+現在システムはある程度復元しましたがサーバメンテナンスのため
+下記の日程でメーリングリストを一時停止したいと思います．
+大変急な話ですが，何卒よろしくお願い致します．
+
+                              記
+
+         日時：2005年5月10日(火)  終日
+
+													以上
+_______________________________
+桑谷剛史＠SML管理人
+アカデミアシステムズ株式会社
+
+
+
+From aoki ＠ sra.co.jp  Wed May 18 19:16:43 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7084] Jun634 for Smalltalk
+Message-ID: <6F6C41C4-CDFA-4081-811F-8A31237CAAD8@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun634」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆フォーマットを指定して数を文字列に変換するメソッド一式を加
+　えました。フォーマット記述は FORTRAN 風です。:-)
+
+◆カラムリストの例題（５番）を増やし、ポップアップ型のテキス
+　ト入力フィールドを出せるような界面を用意しました。
+
+◆手書きノートのペン先指定ウィンドウのラベルを日本語対応にし
+　ました。
+
+◆ポップアップ型のダイアログを開くことを要請した元のウィンド
+　ウが先に閉じられた際に不具合を生じていました。修正しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Fri May 20 10:56:56 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7085] Jun635 for Smalltalk
+Message-ID: <D8E2E826-3908-473E-A0DD-A0200D2728B5@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun635」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆アプリケーションモデルに、メニュー項目「新規」に対応するメ
+　ソッドを追加し、サブクラス群に重複していたものを削りました。
+
+◆i行j列のカラムリストにおいて（i×j）の 
+オーダーのアルゴリズ
+　ムを可能な限り（i＋j）のオーダーになるように最適化 
+し、セル
+　編集の機能アップも行いました。
+　http://www.sra.co.jp/people/aoki/misc/jpgs/Jun635.jpg
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From umejava ＠ mars.dti.ne.jp  Fri May 20 14:07:08 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7086] VMX Smalltalk & VAST & Dolphin
+Message-ID: <JT2005052014070814.9207328@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ひさしぶりに情報を流してみます。
+
+まずは、新たなSmalltalkの実装。
+
+VMX Smalltalk
+http://vmx-net.com/home.php
+
+VMXとは、Virtual Machine Extensionのことだそうです。Javaと.netの二つのVMを
+拡張して、仮想VM(変な言い方ですが)を作ります。この上にSmalltalkの環境を構築
+しているようです。
+
+お次は、復活ののろしを上げるSmalltalk。
+
+VA Smalltalk 7
+http://www.instantiations.com/VAST/default.htm
+
+VAとは、VisualAgeのことです。IBMのVisualAge SmalltalkがInstantiationsに移管
+されるのです。Version 6でしばらく止まっていたので、どうなるかと思っていたの
+ですが、ここへ来て動きが活発化しそうですね。製品名はVisualAgeでなく、
+VA Smalltalkとなるようです。
+
+Dolphin Smalltalk 6.0
+http://www.object-arts.com/WhatsNew.htm
+
+これまた、しばらく更新のなかったDolphinですが、6.0への準備は着々と進んでいる
+ようです。IdeaSpaceという、新たな開発環境のUIを提案しています。
+幾分ノロノロして突っ込みどころも多いですが、デモのFlashを見ることが出来ます。
+http://www.object-arts.com/downloads/6.0/intros/ideaspaceintro.htm
+
+FYI。
+---
+[:masashi | ^umezawa]
+
+From nishis ＠ zephyr.dti.ne.jp  Fri May 20 20:50:13 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7087] Re: VMX Smalltalk & VAST & Dolphin
+In-Reply-To: <JT2005052014070814.9207328@mars.dti.ne.jp>
+References: <JT2005052014070814.9207328@mars.dti.ne.jp>
+Message-ID: <428DCEF5.8010609@zephyr.dti.ne.jp>
+
+on 05.5.20 2:07 PM, Masashi Umezawa wrote:
+> VMX Smalltalk
+> http://vmx-net.com/home.php
+> VMXとは、Virtual Machine Extensionのことだそうです。Javaと.netの二つのVMを
+> 拡張して、仮想VM(変な言い方ですが)を作ります。この上にSmalltalkの環境を構築
+> しているようです。
+
+こいつは Mac だと Panther (10.3.9) でも動きません．VM の要求バージョンが
+もっと上なので (泣)． Tiger の人は試してみて〜．シクヨロ ((C) チャダ)．
+
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From ss ＠ shinsahara.com  Sat May 21 00:03:33 2005
+From: ss ＠ shinsahara.com (Shin Sahara from Home)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7088] Re: VMX Smalltalk & VAST & Dolphin
+In-Reply-To: <428DCEF5.8010609@zephyr.dti.ne.jp>
+References: <JT2005052014070814.9207328@mars.dti.ne.jp>
+	<428DCEF5.8010609@zephyr.dti.ne.jp>
+Message-ID: <38E84BC8-2F69-4C65-9FB9-DBC31BCF1372@shinsahara.com>
+
+佐原です。
+
+On 2005/05/20, at 20:50, NISHIHARA Satoshi wrote:
+
+> on 05.5.20 2:07 PM, Masashi Umezawa wrote:
+>
+>> VMX Smalltalk
+>> http://vmx-net.com/home.php
+>> VMXとは、Virtual Machine Extensionのことだそうです。 
+>> Javaと.netの二つのVMを
+>> 拡張して、仮想VM(変な言い方ですが)を作ります。こ 
+>> の上にSmalltalkの環境を構築
+>> しているようです。
+>>
+>
+> こいつは Mac だと Panther (10.3.9) でも動きません． 
+> VM の要求バージョンが
+> もっと上なので (泣)． Tiger の人は試してみ 
+> て〜．シクヨロ ((C) チャダ)．
+
+Tigerでも動きません。
+今のところ、稼働対象OSに入っていないようですが...
+
+Ambrai Smalltalkじゃ駄目？
+
+     99.5kg
+
+
+
+------------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: 080-5402-9755
+------------------------------------------------------------------------
+
+
+From aoki ＠ sra.co.jp  Tue May 24 10:39:43 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7089] ソフトウェア・シンポジウム２００５
+Message-ID: <429285DF.7070304@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+今日は、６月８日（水）〜１０日（金）の日程で富山にて開催され
+るソフトウェア・シンポジウムの案内をさせてくださいまし。
+
+http://ss2005.jaist.ac.jp/SS2005-Call.html
+
+招待講演者である国立情報学研究所の佐藤寛子さんのセッションの
+司会を勤めさせていただきます。また、パネル討論会にも参加いた
+します。さらに、今、開発を進めている化学関連ライブラリをツー
+ル＆ポスター展示に出す予定です。
+
+万障繰り合わせて、ご参加くださいませ。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+以下【ソフトウェア・シンポジウム２００５の参加案内】から抜粋
+
+6月9日（木）
+
+13:00-14:30
+
+    【招待講演】　司会：青木 淳（ＳＲＡ先端技術研究所）
+
+    「化学と情報とコンピュータをつなぐ境界領域ウォーキング」
+    　佐藤 寛子（国立情報学研究所）
+
+    　講師紹介：
+      お茶の水女子大学理学部化学科博士課程出身．専門は化学情
+      報学，計算機化学．今回の講演では，化学と情報学あるいは
+      コンピュータ関連技術との境界領域において発生するさまざ
+      まな問題点について，特にソフトウェア工学とのかかわりを
+      中心に考察する．講師 Web Page は：
+      http://research.nii.ac.jp/staff-list/members/SATOH,_Hiroko-j.html
+
+17:10-18:50
+
+    【セッション5B】　司会：臼井 義比古（環境システム研究所）
+
+    　パネル討論「思考力を持ったソフトウエア技術者の育成を考える」
+
+    　青木 淳　（ＳＲＡ先端技術研究所）
+    　佐藤 寛子（国際情報学研究所）
+    　菅原 耕一（富士フイルムソフトウエア）
+    　冨永 和人（東京工科大学）
+
+------------------------------------------------------------
+
+
+From aoki ＠ sra.co.jp  Thu May 26 23:46:29 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7090] Jun636 for Smalltalk
+Message-ID: <37CC1634-1065-4012-BA5D-BC23F5CC8517@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun636」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆カラムリストにおいて、マウスのクリックを司るコントローラに
+　ダブったコードがあり、ヘッダをクリックした際のアクションが
+　適切に起動されないという不具合がありました。是正しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Fri May 27 07:46:06 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7091] VisualWorks7.3.1
+Message-ID: <429651AE.10708@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+VisualWorks 7.3 の改定バージョン 7.3.1 がアナウンスされていま
+す。じゅん (Jun635) が 7.3.1 のリリース CD に含まれています。
+
+	Cincom Smalltalk (TM) Summer 2005 Edition
+	Now Available
+	http://smalltalk.cincom.com/
+
+昨日にお知らせした「じゅん (Jun636)」は VisualWorks 7.3.1 上
+で動作可能です。どうぞ新しいほうでお試しくださいまし。
+
+	http://www.sra.co.jp/smalltalk/jun/
+
+この 7.3.1 も、次の 7.4 も、共に一週間に一度ぐらいのペースで、
+まいどまいど構成し直されたものが出てきます。スモールでショー
+トなリリースを繰り返しながら、継続して開発が進められています。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+

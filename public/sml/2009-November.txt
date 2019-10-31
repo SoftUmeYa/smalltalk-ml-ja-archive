@@ -1,0 +1,1063 @@
+From umejava ＠ mars.dti.ne.jp  Sun Nov  1 20:58:50 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Nov  1 20:58:54 2009
+Subject: [SML 7707] Smalltalk合同勉強会@名古屋のプログラム確定です
+Message-ID: <JxkUkzhwUb6iMxjRg6_miesA7@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+12/19日のSmalltalk合同勉強会@名古屋ですが、おかげさまで参加者が20名を
+超えました。まだ若干名受けつけていますので、ぜひお申し込みを。
+http://atnd.org/events/1593
+
+チュートリアルも含め、プログラム内容はほぼ確定しました。
+
+- Smalltalkハッカソン
+- Groovy使いのためのSmalltalk入門 (南谷千城)
+- 100ms・10ms・1msの四方山話 (青木淳)
+- STEPSプロジェクトの紹介 (山宮隆)
+- Seaside 3.0 (梅澤真史)
+- Pharoの紹介 (Serge Stinckwich)
+- ESUGの活動報告 (Serge Stinckwich)
+- ライトニングトーク大会 (コメント欄にて参加受付中)
+
+せっかくいろいろな人が集まりますので、ライトニングトーク大会も
+行うことにしました。Smalltalkに限らず自由なテーマで5分話すことが
+できます。発表を希望される方は上記ページのコメント欄に書きこんで
+いただければと思います。
+
+よろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Tue Nov  3 21:26:09 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Nov  3 21:26:16 2009
+Subject: [SML 7708] Re: HttpClientによるログイン認証について
+In-Reply-To: <B71A7F0C-23C7-4BD6-8803-34E21FD4BED1@sie.dendai.ac.jp>
+References: <79F94BA2-EA9C-4509-961C-53A3DC24A204@sie.dendai.ac.jp>
+	<4AE66AE0.5060007@cc.kyoto-su.ac.jp>
+	<6465BAEB-6982-42B7-AC36-BE30F432E9FF@sie.dendai.ac.jp>
+	<4AE69776.2040707@cc.kyoto-su.ac.jp>
+	<B71A7F0C-23C7-4BD6-8803-34E21FD4BED1@sie.dendai.ac.jp>
+Message-ID: <JxTeAqJvz829cXhr3024G2fA2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+私のところでは1,2のどちらで試しても
+Unhandled exception: CA Not in Trust Registry!
+と出ます。
+
+どうやらSecurity.X509.X509Registry>>readTrustedCertificatesFromFile:
+で.pemファイルを読み込まないといけないような感じなのですが、
+その辺りはクリアされているのでしょうか。
+
+
+久保田 吉彦 <kubota@sie.dendai.ac.jp> wrote:
+> 電大の久保田です。
+> 
+> 青木先生の助言で無事mixiにログインしてページ情報を得ること 
+> ができました。
+> ありがとうございました。
+> 
+> これでひと安心と思っていたのですがまた問題がでてきました。 
+> HTTPSでの通信です。
+> ニコニコ動画にログインするプログラムを書いてみました。
+> 
+> 1)nicoLoginその1を使った場合Unhandled exception:  
+> NetHttpMovedError(302 Found)がでる。
+> 2)nicoLoginその2を使った場合Unhandled exception:  
+> WSAECONNABORTEDがでる。
+> 
+> といった状況です。リダイレクトの設定はNet.Settings  
+> httpRedirectRequest: true.にしています。ネットワークプログラムは 
+> ほとんど書いたことがないので良く分らないのですが、1)の場合 
+> リダイレクト可の設定にしてあるのになぜExceptionが出るのか 
+> わかりませんまた、2)の場合HTTPでのmixiへのログ 
+> インが出きたのにHTTPSでの通信の場合なぜ 
+> WSAECONNABORTEDが出るのか分りません。どなたかご存知のかたいらっ 
+> しゃいませんか?
+> それともニコニコ動画のページはプログラムではログインできない作り 
+> になっているのでしょうか?
+> 
+> ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー 
+> ーー
+> "nicoLogin := 'https://secure.nicovideo.jp/secure/login? 
+> site=niconico'." "その1"
+> nicoLogin := 'https://secure.nicovideo.jp/secure/login_form'.  
+> "その2"
+> nicoTopPage := 'http://www.nicovideo.jp'.
+> inputUserName := 'email'.
+> inputPassword := 'password'.
+> inputNextURL := 'next_url'.
+> 
+> client := Net.HttpClient new.
+> client enableCookies: true.   
+> httpRequest := HttpRequest post:nicoLogin.
+> httpRequest
+>       userAgent: 'VW76NC';
+>       addFormKey: 'email' value: 'いーめーるあどれす';
+>       addFormKey: 'password' value: 'ぱすわーど';
+>       addFormKey: 'next_url' value:''.
+> httpResponse := client executeRequest: httpRequest. "<=ここで 
+> Net.HttpMovedError(302 Found)が発生"
+> httpRequest inspect.
+> agent :=client cookieAgent.
+> agent cacheCookies: true.
+> 
+> getMethod := HttpRequest get: nicoTopPage.
+> getMethod userAgent:'VW76NC'.
+> response := client executeRequest: getMethod. "<=ここで 
+> WSAECONNABORTEDが発生"
+> ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー 
+> ーー
+> 
+> 久保田吉彦
+> 東京電機大学 情報環境学部 情報環境学科
+> 
+> On 2009/10/27, at 15:47, AOKI Atsushi wrote:
+> 
+> > 久保田吉彦さんは書きました:
+> >> 青木先生のおっしゃった通り、デバッガを見たらエンコーダが入っ 
+> >> ている
+> >> IdentityDictionaryに'euc-jp'が入っていませんでした。そ 
+> >> のためKey not
+> >> foundのExceptionが出ているようです。
+> >
+> > だいぶ昔ですが、私も似たような状況に陥ったことがよみがえり、
+> > とっさに（脊髄反射で）、もしや！思ったのですが、当たりでした 
+> > か…。
+> >
+> >> 原因は判ったのですが、どう対処していいやら分りません。どなた 
+> >> か対処方法ご
+> >> 存知のかたいらっしゃいませんでしょうか。
+> >> #うーん、なさけない
+> >
+> > お使いの環境が Windows 版の VisualWorks ならば、
+> > エンコーディングシンボルの #euc-jp を
+> > #JapaneseEUC に写像すればいいと思います。
+> >
+> > VisualWorks の日本語版でなければ、Jpl を援用できます。
+> > http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/
+> >
+> > これまた久保田さんのコードを確かめもせずに、
+> > 応答しておりますので、とんちんかんなフォローやもしれませぬ。
+> > その際には、あしからず、ご容赦くださいませ。
+> >
+> > --- 青木淳＠取り急ぎ
+
+
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Nov  4 06:24:59 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Nov  4 06:25:09 2009
+Subject: [SML 7709] Re: 第13回Smalltalk勉強会＠京都
+In-Reply-To: <4AE8D9F1.4050109@cc.kyoto-su.ac.jp>
+References: <4AE8D9F1.4050109@cc.kyoto-su.ac.jp>
+Message-ID: <4AF09FAB.909@cc.kyoto-su.ac.jp>
+
+おはようございます。京都での勉強会、今日（reminder）です！
+
+--- 青木淳＠今日で一周年（昨年は怪我をしていた…）
+
+私は書きました:
+> 青木＠京都上賀茂です。
+> 
+> 第13回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+> JR京都駅前にご参集ください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto13
+> 
+> 第13回 Smalltalk勉強会＠京都
+> 日時：2009年11月04日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> この勉強会が発足して一年が経ちました。早いものですね。今月は
+> 先月に引き続き、課題の続きを行います。デザインレビューおよび
+> コードレビューを行う過程を皆さんと共有してゆきましょう。会場
+> でUML図を描いてデザインを行うのも良し、システムブラウザを用い
+> てプログラミングを行うのも良し、三三五五の行動に時間の半分を
+> 使い、あとの半分をそれらの議論や検討に使いましょう。
+> 
+> できますれば、ノート型のパーソナルコンピュータ（Windows Vista
+> /XP または Mac OS X (on Intel Mac)）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Nov  5 02:01:29 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Nov  5 02:01:39 2009
+Subject: [SML 7710] Re: 第13回Smalltalk勉強会＠京都
+In-Reply-To: <4AF09FAB.909@cc.kyoto-su.ac.jp>
+References: <4AE8D9F1.4050109@cc.kyoto-su.ac.jp>
+	<4AF09FAB.909@cc.kyoto-su.ac.jp>
+Message-ID: <4AF1B369.5010200@cc.kyoto-su.ac.jp>
+
+On 2009/11/04, at 6:24, AOKI Atsushi wrote:
+> おはようございます。京都での勉強会、今日（reminder）です！
+> --- 青木淳＠今日で一周年（昨年は怪我をしていた…）
+
+以下のページから、勉強会で行ったことを、たどれるようにしてお
+きました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto13
+http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/CSV2HTML/index-j.html#Refactoring
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From hirowadenden ＠ hera.eonet.ne.jp  Sun Nov 15 16:49:32 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Sun Nov 15 16:52:19 2009
+Subject: [SML 7711] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <4ADC404E.9050703@hera.eonet.ne.jp>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>
+	<4ADC404E.9050703@hera.eonet.ne.jp>
+Message-ID: <4AFFB28C.2090500@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+# SMLの保存書庫を見ると、[SML 7708]〜[SML 7710]が私の所には配信されて来
+ないので、テストも兼ねて投稿させていただきます。
+
+前回投稿したプログラムは、元のプログラム20091007.stから懸け離れてしまっ
+ていたので、今回添付のプログラムは、元のプログラム20091104.stに沿ってプ
+ログラミングしたつもりです。(^^;;
+
+元のプログラムからの主な変更点
+・プログラムが共存できるように、パッケージ名をTranslatorsByHw、ネームス
+ペースをPrimeMinistersByHwに変更しました。
+・Attributesを入力用のInputAttributesと出力用のOutputAttributesに分けま
+した。
+・Translator, Table, InputAttributes, Tupleがそれぞれトランスレートに応
+えるようにしました。
+・Tableのimagesとthumbnailsにイメージ本体を読み込まないようになっていま
+す。(機能低下)
+
+PrimeMinistersByHw.Translator classDiagramをDoItするとクラスダイアグラム
+が表示されます。
+
+なお添付ファイルはCompression-ZLibパッケージを用いて圧縮したgzipファイル
+になっています。解凍プログラムをお持ちでない場合は、添付ファイルをVWのイ
+メージのあるディレクトリにコピーして、以下をDoItすれば解凍できるはずです。
+| input output gzip |
+(input := 'TranslatorsByHw.st.gz' asFilename readStream) binary.
+(output := 'TranslatorsByHw.st' asFilename writeStream) binary.
+gzip := GZipReadStream on: input.
+[gzip atEnd] whileFalse: [output nextPut: gzip next].
+gzip close.
+output close.
+input close
+(Compression-ZLibパッケージは、私の環境ではデフォルト?でロードされていま
+したが、もしロードされていない場合は、Percel ManagerのSuggestionsタブの
+Application Developmentの中にありますので、適宜ロードしてください)
+
+当方の作成環境は以下のとおりです:
+  Ubuntu 9.04(i386版)
+  VisualWorks7.6NC
+  Jun784
+  Jpl023
+
+次回勉強会の折にでもコメントなどいただけましたら幸いです。
+
+-- hirowadenden
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: TranslatorsByHw.st.gz
+型:         application/x-gzip
+サイズ:     6271 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/sml/attachments/20091115/0f4a9bde/TranslatorsByHw.st.bin
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Nov 15 19:53:44 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Nov 15 19:53:49 2009
+Subject: [SML 7712] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <4AFFB28C.2090500@hera.eonet.ne.jp>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>	<4ADC404E.9050703@hera.eonet.ne.jp>
+	<4AFFB28C.2090500@hera.eonet.ne.jp>
+Message-ID: <4AFFDDB8.1000901@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+hirowadenden さんは書きました:
+> > 今回添付のプログラムは、元のプログラム20091104.stに沿ってプ
+> > ログラミングしたつもりです。(^^;;
+...snipped...
+> > 次回勉強会の折にでもコメントなどいただけましたら幸いです。
+
+プログラムを読ませていただきました。雑駁な部分がすべて払拭さ
+れて、以前のプログラムが素晴らしいプログラムになっていると思
+いました。次回(12月02日)の勉強会にて、critiquingの対象プログ
+ラムといたしましょう。hirowadendenさん、プログラムの寄贈を痛
+み入ります。謹んでお礼を申し上げます。
+
+クラス図もプログラムの中に内蔵されておりますので、秀逸ですね。
+PrimeMinistersByHw.Translator classDiagram
+
+勉強会にそのまま使用できる形式（どこへ出しても恥ずかしくない
+形式）に適った内容を保持しており、思い描いた理想の形を具現化
+しています。ご苦労さまでした、そして、有り難うございました。
+
+＃三か月ほど課題をやってきましたが、次回からウィンドウプログ
+＃ラミングに入ってゆこうと思っております。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From osamu.hamasaki ＠ gmail.com  Sun Nov 15 20:03:17 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎 治)
+Date: Sun Nov 15 20:03:53 2009
+Subject: [SML 7713] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <4AFFB28C.2090500@hera.eonet.ne.jp>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>
+	<4ADC404E.9050703@hera.eonet.ne.jp>
+	<4AFFB28C.2090500@hera.eonet.ne.jp>
+Message-ID: <628FD043-F9F9-439F-AE90-B83ED65D6129@gmail.com>
+
+濱崎です。
+
+On 2009/11/15, at 16:49, hirowadenden wrote:
+
+> ハンドル名で失礼します、hirowadendenと申します。
+> # SMLの保存書庫を見ると、[SML 7708]〓[SML 7710]が私の所 
+> には配信されて来
+> ないので、テストも兼ねて投稿させていただきま 
+> す。
+
+私のところにも7708から7710まで配信されていません。
+この間、MLが正しく動作してなかったんでしょう 
+か。。。
+From osamu.hamasaki ＠ gmail.com  Sun Nov 15 21:03:14 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sun Nov 15 21:03:18 2009
+Subject: [SML 7714] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <4AFFB28C.2090500@hera.eonet.ne.jp>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>
+	<4ADC404E.9050703@hera.eonet.ne.jp>
+	<4AFFB28C.2090500@hera.eonet.ne.jp>
+Message-ID: <1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+
+濱崎です。
+
+私もようやく皆さんに見て頂けるレベルのコードになったので、
+プログラムをポストします。SUnitのテストケース付きです。
+（といってもHTML周りはテストを書いていません。complete.htmlと
+プログラムが出力するindex.htmlをdiffで比較して、テストしていま
+したので。）
+
+あと、できるだけJunに依存しないように書き直したのですが、
+browserの所はMacOSX以外の環境はうちでは確認できないので、
+あきらめました。
+（別にJunを使うのが嫌な訳ではありません (^^;; Junがやって
+いることを自力で書くのも勉強になると思ってやってみました。）
+
+このCSVからHTMLへの変換の課題のポイントは、
+・CSVとHTMLに関する知識をアプリケーションのロジックから
+　如何に分離するか？
+　うまく分離出来るとCSVやHTMLに関するコードが汎用的な
+　ものになって再利用することが出来る。
+・CSVの表の形式と、HTMLの表の形式の違いをアプリケーションの
+　ロジックで如何に変換するか？
+　巧くやらないとロジックが複雑になり、将来表の形式を変えたく
+　なった時にプログラムの変更が大変になる。
+
+だと思っています。これらのポイントを考えてクラスの分割をして
+みました。クラス名の最初にCSV,HTML,PrimeMinisterをつけて
+分離を明確にしてあります。
+
+とはいいつつ現状では、CSVの解釈は単に','で区切っているだけですし、
+HTMLの部分もHTMLのタグの意味を詳しく知らないので、あまり良い
+分割ではないかもしれません。また、HTMLのインデントもハード
+コーディングで巧いやり方にはなっていません。今後の課題です。
+
+１１月の勉強会で提示されたTranslaterの役割はPrimeMinisterTableに
+持たせています。PrimeMinisterTableはCSVTableからの変換や
+HTMLTableへの変換を担っています。この先の発展としては、
+PrimeMinisterTableからCSVTableへの変換もあり得ると思います。
+その先はCSVファイルへの出力も視野に入ってきます。
+
+CSVの読み込みや、HTTPでのダウンロードの起動の方法については、
+９月の勉強会で提示されたプログラムのままです。
+
+では、次回勉強会の時にでもご意見を頂けるとありがたいです。
+
+以上です。
+
+2009年11月15日16:49 hirowadenden <hirowadenden@hera.eonet.ne.jp>:
+>
+> ハンドル名で失礼します、hirowadendenと申します。
+> # SMLの保存書庫を見ると、[SML 7708]〜[SML 7710]が私の所には配信されて来
+> ないので、テストも兼ねて投稿させていただきます。
+>
+> 前回投稿したプログラムは、元のプログラム20091007.stから懸け離れてしまっ
+> ていたので、今回添付のプログラムは、元のプログラム20091104.stに沿ってプ
+> ログラミングしたつもりです。(^^;;
+
+--
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Translators-hamasaki.st.zip
+型:         application/zip
+サイズ:     8792 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/sml/attachments/20091115/0738ed2e/Translators-hamasaki.st-0001.zip
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Nov 15 22:45:42 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Nov 15 22:45:47 2009
+Subject: [SML 7715] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>	<4ADC404E.9050703@hera.eonet.ne.jp>	<4AFFB28C.2090500@hera.eonet.ne.jp>
+	<1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+Message-ID: <4B000606.5090006@cc.kyoto-su.ac.jp>
+
+濱崎治 さんは書きました:
+> 私もようやく皆さんに見て頂けるレベルのコードになったので、
+> プログラムをポストします。SUnitのテストケース付きです。
+
+xUnit（SUnitやJUnitなど）での単体テスト法。濱崎さんらしい。
+
+> （といってもHTML周りはテストを書いていません。complete.htmlと
+> プログラムが出力するindex.htmlをdiffで比較して、テストしていま
+> したので。）
+
+なるほど、出力結果を維持しむ回帰テスト法。こちらも濱崎さんら
+しい。
+
+>  (^^;; Junがやって
+> いることを自力で書くのも勉強になると思ってやってみました。）
+
+とてもいいことです。不遜な物言いかもしれませんが、このMLを読
+んでいる皆さんにも濱崎さんのようにやっていただきたいと願って
+おります。
+
+emacsをご利用の方々が多いと思います。そのemacsのソースコード
+を垣間見て、自分で書き直して勉強しようとした人がいます。Java
+を作成したGoslingさんにはGosling Emacsがあり、彼も書き直しな
+がら勉強したひとりです。Greenbergさんも同様ですね。
+
+使うだけ（利用ばかり）ではいけません。技術を志す人には、同じ
+ものを自分で書き直してみるプロセスを踏むことが大薬になります。
+
+世の中、フレームワークの嵐ですが、こちらも使うだけ（利用ばか
+り）ではどうしようもありません。それこそマスタープランになっ
+てしまい、金太郎飴。フレームワークやパターンが本来にめざした
+ことではなくなってしまいます。
+
+> このCSVからHTMLへの変換の課題のポイントは、
+> ・CSVとHTMLに関する知識をアプリケーションのロジックから
+> 　如何に分離するか？
+> 　うまく分離出来るとCSVやHTMLに関するコードが汎用的な
+> 　ものになって再利用することが出来る。
+> ・CSVの表の形式と、HTMLの表の形式の違いをアプリケーションの
+> 　ロジックで如何に変換するか？
+> 　巧くやらないとロジックが複雑になり、将来表の形式を変えたく
+> 　なった時にプログラムの変更が大変になる。
+> だと思っています。これらのポイントを考えてクラスの分割をして
+> みました。クラス名の最初にCSV,HTML,PrimeMinisterをつけて
+> 分離を明確にしてあります。
+
+仰せの通りです。プログラムコードを拝見して分離されていること
+を確認しました。
+
+> では、次回勉強会の時にでもご意見を頂けるとありがたいです。
+
+次回(12月02日)の勉強会にて、critiquingの対象プログラムといた
+しませう。有り難うございます。
+
+３回にわたる簡単な課題の解決ですが、これで今年の勉強会は有終
+の美（師走）を迎えますね。hirowadendenさんと濱崎さん、お二人
+に感謝いたします。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From hirowadenden ＠ hera.eonet.ne.jp  Mon Nov 16 21:46:33 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Mon Nov 16 21:47:30 2009
+Subject: [SML 7716] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>	<4ADC404E.9050703@hera.eonet.ne.jp>	<4AFFB28C.2090500@hera.eonet.ne.jp>
+	<1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+Message-ID: <4B0149A9.6060407@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+まとめての返信ご容赦ください。
+
+AOKI Atsushi さんは書きました:
+> クラス図もプログラムの中に内蔵されておりますので、秀逸ですね。
+> PrimeMinistersByHw.Translator classDiagram
+
+お褒めいただき恐れ入ります。動機は不純でした (^^;;
+MLの投稿に40KBの容量制限があったので、クラス図はプログラムの中に入れてし
+まえば添付ファイルの容量が小さくなるかと思ったのでした。結局、プログラム
+だけで40KB近くになり添付ファイルは圧縮してしまいました。
+
+濱崎治 さんは書きました:
+> では、次回勉強会の時にでもご意見を頂けるとありがたいです。
+
+プロクラムの投稿ありがとうございます。次回の勉強会で質問等ができるよう、
+コードを読ませていただいて勉強します。自分のプログラムではチェック代わり
+にexampleを入れた部分もありますのでテストの入れ方も勉強します。
+
+
+継承関係だけのクラス図でも役に立つかと思い自作プログラムに入っていたもの
+を修正してみました。以下のコードの変数aNameSpaceにネームスペースを指定し
+てDoItすればクラスダイアグラムが表示されます(クラス名がTestで終わるクラス
+は除きます)。継承関係以外の関係については今の私には無理です。(^^;;
+表示されるウインドウの大きさやクラスの間隔等については適宜修正してくださ
+い。
+クラス図がウインドウよりも大きい場合は、マウスのホイールで上下スク
+ロール、Alt+マウスのホイールで左右スクロールできます。また、図の地の部分
+をマウス左ボタンでドラッグしてもスクロールできます。(これらはJunのダイア
+グラムの機能です。私がプログラミングしたわけではありません(^^)。)
+レイアウトもいい加減で稚拙なコードですが、まだまだ勉強中であるということ、
+とりあえずクラス図が表示されるということでご容赦ください。^^;;
+
+それでは次回の勉強会も楽しみにしています。
+
+
+| aNameSpace entitiesDictionary classesDictionary aDiagram
+nameSpacesAndClasses x y xStart yMax solitaryClasses topClasses
+layoutOrder addSubclasses |
+aNameSpace := PrimeMinisters.
+solitaryClasses := OrderedCollection new.
+topClasses := OrderedCollection new.
+layoutOrder := OrderedCollection new.
+nameSpacesAndClasses := aNameSpace withAllNameSpacesAndAllClasses.
+entitiesDictionary := Dictionary new: nameSpacesAndClasses size.
+classesDictionary := Dictionary new: nameSpacesAndClasses size - 1.
+aDiagram := JunRoughClassDiagram new.
+nameSpacesAndClasses
+  do:
+    [:item |
+    (JunStringUtility
+      stringMatch: item name asString
+      and: '*Test')
+      ifFalse:
+        [| anEntity |
+        item isBehavior
+          ifTrue:
+            [anEntity := JunRoughClassEntity fromClass: item.
+            anEntity detail: true.
+            classesDictionary
+              at: anEntity label
+              put: item]
+          ifFalse:
+            [anEntity := JunRoughClassEntity label: item printString.
+            anEntity origin: 0 @ 0].
+        anEntity fitExtent.
+        aDiagram addEntity: anEntity.
+        entitiesDictionary
+          at: anEntity label
+          put: anEntity]].
+classesDictionary
+  keysAndValuesDo:
+    [:className :class |
+    (class superclass = nil
+      or:
+        [(entitiesDictionary includesKey: class superclass name
+asString) not])
+      ifTrue:
+        [(class subclasses
+          select: [:each | entitiesDictionary includesKey: each name
+asString])
+          size = 0
+          ifTrue: [solitaryClasses add: class]
+          ifFalse: [topClasses add: class]]].
+layoutOrder add: topClasses.
+addSubclasses := [:classCollection |
+| subclassCollection |
+subclassCollection := OrderedCollection new.
+classCollection
+  do:
+    [:class |
+    subclassCollection
+      addAll:
+        (class subclasses
+          select:
+            [:subclass | entitiesDictionary includesKey: subclass name
+asString])].
+subclassCollection size ~= 0
+  ifTrue:
+    [layoutOrder add: subclassCollection.
+    addSubclasses value: subclassCollection]].
+addSubclasses value: topClasses.
+layoutOrder add: solitaryClasses.
+xStart := 20.
+x := xStart.
+y := 50.
+yMax := 0.
+layoutOrder
+  do:
+    [:lineLayout |
+    lineLayout
+      do:
+        [:class |
+        | anEntity anExtent |
+        anEntity := entitiesDictionary
+          at: (classesDictionary keyAtValue: class).
+        anExtent := anEntity extent.
+        anEntity origin: x @ y.
+        x := x + anExtent x.
+        yMax := yMax max: anExtent y.
+        x := x + 70].
+    x := xStart.
+    y := y + yMax + 50.
+    yMax := 0].
+classesDictionary
+  keysAndValuesDo:
+    [:className :class |
+    | superclassName |
+    class superclass
+      ifNotNil:
+        [superclassName := class superclass name asString.
+        (entitiesDictionary includesKey: superclassName)
+          ifTrue:
+            [(aDiagram
+              connect: (entitiesDictionary at: className)
+              to: (entitiesDictionary at: superclassName)) kind:
+#is_a_kind_of]]].
+aDiagram openIn: (0 @ 0 extent: 1260 @ 740)
+
+
+-- hirowadenden
+
+
+
+From kuwatani ＠ akademia.co.jp  Tue Nov 17 13:33:26 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Tue Nov 17 13:33:33 2009
+Subject: [SML 7717] メーリングリストの不具合のご報告
+Message-ID: <4B022796.9080203@akademia.co.jp>
+
+SMLメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+11月1日〜11月7日の間，メールシステムの設定ミスにより
+投稿されたメールが配信されない状況になっておりました．
+
+この間，投稿されたメールはMLには届いておりますので
+お手数ですがアーカイブをご確認頂ければと思います．
+
+ http://www.smalltalk.jp/pipermail/sml/2009-November/date.html
+
+申し訳ありませんでした．
+-- 
+kuwatani@akademia.co.jp
+
+From kubota ＠ sie.dendai.ac.jp  Tue Nov 17 15:14:04 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Tue Nov 17 15:14:56 2009
+Subject: [SML 7718] Re: HttpClientによるログイン認証について
+Message-ID: <69557DEF-8CB3-43CC-8C74-74378D7A2948@sie.dendai.ac.jp>
+
+電大の久保田です。
+
+Unhandled exception: CA Not in Trust Registry!の件は投稿時には解 
+決していませんでした
+(このエラーを無視していました、すいません)。
+その後X509Registryへの登録が必要だと分りまさにご指摘のよう 
+にSecurity.X509.X509Registry>>readTrustedCertificatesFromFile:
+でpemファイルを読み込ませることでCA Not in Trust  
+Registryは出なくなりました。
+
+pemファイルはWebブラウザ(Firefox)でhttps:// 
+secure.nicovideo.jp/secure/login_formへアクセスし、証明書パスを 
+含むX509証明書をエクスポートしたものです。
+
+はやりUnhandled exception: Net.HttpMovedError(302 Found),  
+WSAECONNABORTEDがでてしまいます。
+
+#なかなか上手くいかないのでRubyのMechanizeへ逃げてい 
+ました。。。。
+
+Security.X509.X509Registry readTrustedCertificatesFromFile: '証 
+明書ファイル名' asFilename.
+"nicoLogin := 'https://secure.nicovideo.jp/secure/login? 
+site=niconico'." "その1"
+nicoLogin := 'https://secure.nicovideo.jp/secure/login_form'."そ 
+の2"
+nicoTopPage := 'http://www.nicovideo.jp'.
+  inputUserName := 'email'.
+inputPassword := 'password'.
+inputNextURL := 'next_url'.
+client := Net.HttpClient new.
+client enableCookies: true.
+httpRequest := HttpRequest post:nicoLogin.
+httpRequest
+	userAgent: 'VW76NC';
+	addFormKey:inputUserName value: 'いーめーるあどれす';
+	addFormKey:inputPassword value: 'ぱすわーど';
+	addFormKey:inputNextURL value:''.
+httpResponse := client executeRequest: httpRequest.  "<= ここで 
+302 Moved Error が発生 その1"
+agent :=client cookieAgent.
+agent cacheCookies: true.
+getMethod := HttpRequest get: nicoTopPage.
+response := client executeRequest: getMethod. "<=ここで >  
+WSAECONNABORTEDが発生 その2"
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+
+
+From umejava ＠ mars.dti.ne.jp  Thu Nov 19 08:56:47 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Nov 19 13:38:33 2009
+Subject: [SML 7719] 第15回Smalltalk勉強会のお知らせ
+Message-ID: <Jxe6kE_AyOxw6cudNEC.tGKA3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2009/11/27(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai15kaismalltalkbenkyoukai
+
+今回は「Scratchで学ぶSqueakハッキングテクニック」です。
+
+子供向けプログラミング環境のScratchですが、カバーを開けるとものすごい
+ものが潜んでいることは、おそらく皆さんご存じでしょう。今回はScratchを
+カスタマイズしていくことで、Squeakのプログラミングを学ぶという興味深い
+ものになっています。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Thu Nov 19 08:56:52 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Nov 19 13:38:36 2009
+Subject: [SML 7720] 第15回Smalltalk勉強会のお知らせ
+Message-ID: <Jxua4Oem12WN.8I9kF2.AyRQ4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2009/11/27(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai15kaismalltalkbenkyoukai
+
+今回は「Scratchで学ぶSqueakハッキングテクニック」です。
+
+子供向けプログラミング環境のScratchですが、カバーを開けるとものすごい
+ものが潜んでいることは、おそらく皆さんご存じでしょう。今回はScratchを
+カスタマイズしていくことで、Squeakのプログラミングを学ぶという興味深い
+ものになっています。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From hirowadenden ＠ hera.eonet.ne.jp  Thu Nov 19 20:37:47 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Thu Nov 19 20:37:44 2009
+Subject: [SML 7721] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <4B0149A9.6060407@hera.eonet.ne.jp>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>	<4ADC404E.9050703@hera.eonet.ne.jp>	<4AFFB28C.2090500@hera.eonet.ne.jp>	<1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+	<4B0149A9.6060407@hera.eonet.ne.jp>
+Message-ID: <4B052E0B.7030109@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+前回投稿したクラス図を表示するコードですが、気が付いた点を少し修正したので
+再投稿させていただきます。よろしけばお使いください。修正箇所は以下のとおり
+です(機能には変更ありません):
+・クラスに対応するJunRoughClassEntityを捜すときのキーを、名前の文字列か
+らクラスそのものに変更しました。
+・描画するクラス全体を保持するのに、クラスの名前をキーにしたDictionaryを
+用いていましたがDictionaryである必要は無く、OrderedCollectionに変更し
+ました。
+
+以下はコードです。
+
+| aNameSpace aDiagram entitiesDictionary classes nameSpacesAndClasses x
+y xStart yMax solitaryClasses topClasses layoutOrder addSubclasses |
+aNameSpace := PrimeMinisters.
+classes := OrderedCollection new.
+solitaryClasses := OrderedCollection new.
+topClasses := OrderedCollection new.
+layoutOrder := OrderedCollection new.
+nameSpacesAndClasses := aNameSpace withAllNameSpacesAndAllClasses.
+entitiesDictionary := Dictionary new: nameSpacesAndClasses size.
+aDiagram := JunRoughClassDiagram new.
+nameSpacesAndClasses
+  do:
+    [:item |
+    (JunStringUtility
+      stringMatch: item name asString
+      and: '*Test')
+      ifFalse:
+        [| anEntity |
+        item isBehavior
+          ifTrue:
+            [anEntity := JunRoughClassEntity fromClass: item.
+            anEntity detail: true.
+            classes add: item]
+          ifFalse:
+            [anEntity := JunRoughClassEntity label: item printString.
+            anEntity origin: 0 @ 0].
+        anEntity fitExtent.
+        aDiagram addEntity: anEntity.
+        entitiesDictionary at: item put: anEntity]].
+classes
+  do:
+    [:class |
+    (class superclass = nil
+      or: [(entitiesDictionary includesKey: class superclass) not])
+      ifTrue:
+        [(class subclasses select: [:each | entitiesDictionary
+includesKey: each])
+          size = 0
+          ifTrue: [solitaryClasses add: class]
+          ifFalse: [topClasses add: class]]].
+layoutOrder add: topClasses.
+addSubclasses := [:classCollection |
+| subclassCollection |
+subclassCollection := OrderedCollection new.
+classCollection
+  do:
+    [:class |
+    subclassCollection
+      addAll:
+        (class subclasses
+          select: [:subclass | entitiesDictionary includesKey: subclass])].
+subclassCollection size ~= 0
+  ifTrue:
+    [layoutOrder add: subclassCollection.
+    addSubclasses value: subclassCollection]].
+addSubclasses value: topClasses.
+layoutOrder add: solitaryClasses.
+xStart := 20.
+x := xStart.
+y := 50.
+yMax := 0.
+layoutOrder
+  do:
+    [:lineLayout |
+    lineLayout
+      do:
+        [:class |
+        | anEntity anExtent |
+        anEntity := entitiesDictionary at: class.
+        anExtent := anEntity extent.
+        anEntity origin: x @ y.
+        x := x + anExtent x.
+        yMax := yMax max: anExtent y.
+        x := x + 30].
+    x := xStart.
+    y := y + yMax + 30.
+    yMax := 0].
+classes
+  do:
+    [:class |
+    class superclass
+      ifNotNil:
+        [(entitiesDictionary includesKey: class superclass)
+          ifTrue:
+            [(aDiagram
+              connect: (entitiesDictionary at: class)
+              to: (entitiesDictionary at: class superclass)) kind:
+#is_a_kind_of]]].
+aDiagram openIn: (0 @ 0 extent: 1260 @ 740)
+
+
+-- hirowadenden
+
+
+
+
+
+From osamu.hamasaki ＠ gmail.com  Sat Nov 21 11:44:12 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sat Nov 21 11:44:20 2009
+Subject: [SML 7722] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>
+	<4ADC404E.9050703@hera.eonet.ne.jp>
+	<4AFFB28C.2090500@hera.eonet.ne.jp>
+	<1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+Message-ID: <1bc06fd30911201844q41bfe39dr309f9ac8c7807b3c@mail.gmail.com>
+
+濱崎です。
+
+前回ポストしたプログラムから、さらに変更を加えました。
+
+前回ポストしたプログラムを仮想イメージにFileInした状態で、
+添付ファイル"Translators-hamasaki-ver2.st"をFile Browser上で
+選択して、File Browserのメニュー File -> Compare with Systm を
+実行すると、差分を調べることが出来ます。（残念ながら削除した
+クラスやメソッドは分かりませんが。）
+
+File In の際は、前回ポストしたプログラムのパッケージをSysmte
+Browserのメニュー Packege -> Remove を実行してから File In
+してください。
+
+主な変更は以下のとおりです。
+・PrimeMinisterのaccessing-for-HTMLTableカテゴリのメソッドを整理
+　　結局、在位日数と画像へのハイパーリンクは、いわゆる導出
+　　属性である、またHTMLTableへ変換する時にどの属性を使う
+　　かは、メッセージセレクタの配列を与えるようにしたので、
+　　わざわざこのカテゴリのメッセージを用意する必要がない。
+
+・クラスHTMLHyperLinkToImageの追加
+　　クラスPrimeMinisterの中に画像イメージへのハイパーリンクを
+　　生成するコードが残っていたので、HTMLObjectのサブクラスと
+　　して本クラスを追加し、ハイパーリンクを生成するコードを
+　　こちらに移動。これに影響を受けてHTMLTableItemも若干変更。
+　　(HTMLPlaneTextなんていうクラスを作った方がいいのかも、と
+　　思っています。）
+
+・クラスHTMLCssStyleの追加
+　　CSS Styleの定義を保持する役割を持つクラスとして、本クラスを
+　　追加。
+　　このクラスを使ってHTMLDocumentの#writeHeaderOn:メソッドを
+　　整理すべく、HTMLObjectと各サブクラスも変更。
+　　現状プロパティ値を文字列で保持する実装で稚拙なものですが、
+　　スタートラインとしてはまずまず、と思っています。
+
+　　ただ、これまでcomplete.htmlとの差分は鳩山首相の在位日数とタイム
+　　スタンプだけだったのですが、スタイル定義中のプロパティ設定の
+　　並びに規則正しくない部分があったので、３箇所ほどHTMLコードが
+　　変わってしまいました。残念。。。
+
+・いくつか名前が適切でなさそうそうだったのを変更したり、Formatterを
+　かけたり
+　　例えば、HTMLの表の行をlineとしていましたが、HTMLの世界では
+　　rowと呼ぶようなので変更した、など。
+
+・HTMLTableのインスタンス変数primeMinisterTableを削除
+　　リファクタリング作業の名残です。
+　　不要になったのを消し忘れていました。
+
+次の勉強会までに、もう少し変更を加えられるかなあ、と思っています。
+
+以上です。
+
+2009年11月15日21:03 濱崎治 <osamu.hamasaki@gmail.com>:
+> 濱崎です。
+>
+> 私もようやく皆さんに見て頂けるレベルのコードになったので、
+> プログラムをポストします。SUnitのテストケース付きです。
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Translators-hamasaki-ver2.st.zip
+型:         application/zip
+サイズ:     10203 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/sml/attachments/20091121/fccf3e0d/Translators-hamasaki-ver2.st.zip
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Nov 25 16:50:24 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Nov 25 16:50:29 2009
+Subject: [SML 7723] 第14回Smalltalk勉強会＠京都（忘年会風）
+Message-ID: <4B0CE1C0.8060300@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+第14回Smalltalk勉強会@京都を開催いたします。万障繰り合わせて
+JR京都駅前にご参集ください。今回は参加人数を大まかに把握させ
+てください。ご参加いただける方々、私宛にメールをお願いします。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto14
+
+第14回 Smalltalk勉強会＠京都
+日時：2009年12月02日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+師走（2009年の最後）の勉強会になります。課題も一段落しますし、
+発足して一年が経ちましたので、ちょっと早いですが、忘年会チッ
+クな勉強会にしようと思います。軽食（ピザの注文）や飲料（ビー
+ルやソフトドリングなど）を用意します。飲食をしながら課題のレ
+ビューを行って2009年を〆ませう。ご賛同（各方に500円〜1,000円
+を捻出して）いただけるかしらん。それと応援求む：準備（向かい
+のビックカメラへ飲料の調達など）を手伝っていただけると助かり
+ます。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From osamu.hamasaki ＠ gmail.com  Sun Nov 29 20:09:22 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sun Nov 29 20:09:31 2009
+Subject: [SML 7724] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <1bc06fd30911201844q41bfe39dr309f9ac8c7807b3c@mail.gmail.com>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>
+	<4ADC404E.9050703@hera.eonet.ne.jp>
+	<4AFFB28C.2090500@hera.eonet.ne.jp>
+	<1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>
+	<1bc06fd30911201844q41bfe39dr309f9ac8c7807b3c@mail.gmail.com>
+Message-ID: <1bc06fd30911290309l745852a4m51a5c31e4abb6323@mail.gmail.com>
+
+濱崎です。
+
+前回ポストしたものに、さらに変更を加えてみました。
+
+今回の変更は、HTMLコードのインデントのレベルをプログラムで
+管理するようにしてみました。(Ver.3)
+
+ここまで、Complete.htmlと同じ出力を得ることにこだわってきましたが、
+どうもプログラムの方が不自然な感じで、しっくりこないものになって
+きましたので、思い切って、HTML出力は維持せずプログラムの方が自然に
+なるように変えてみたものも添付します。(Ver.4)
+
+次回Smalltalk勉強会@京都で議論のネタにして頂ければと思います。
+
+以上です。
+
+2009年11月21日11:44 濱崎治 <osamu.hamasaki@gmail.com>:
+> 次の勉強会までに、もう少し変更を加えられるかなあ、と思っています。
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Translators-hamasaki-ver3.st.zip
+型:         application/zip
+サイズ:     10993 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/sml/attachments/20091129/a66d8298/Translators-hamasaki-ver3.st-0001.zip
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Translators-hamasaki-ver4.st.zip
+型:         application/zip
+サイズ:     11001 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/sml/attachments/20091129/a66d8298/Translators-hamasaki-ver4.st-0001.zip
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Nov 29 20:14:54 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Nov 29 20:15:02 2009
+Subject: [SML 7725] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <1bc06fd30911290309l745852a4m51a5c31e4abb6323@mail.gmail.com>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>	<4ADC404E.9050703@hera.eonet.ne.jp>	<4AFFB28C.2090500@hera.eonet.ne.jp>	<1bc06fd30911150403x43eb71av881eb2143053b98a@mail.gmail.com>	<1bc06fd30911201844q41bfe39dr309f9ac8c7807b3c@mail.gmail.com>
+	<1bc06fd30911290309l745852a4m51a5c31e4abb6323@mail.gmail.com>
+Message-ID: <4B1257AE.1090208@cc.kyoto-su.ac.jp>
+
+濱崎治さんは書きました:
+> 前回ポストしたものに、さらに変更を加えてみました。
+
+励んでいらっしゃいますね。勉強会までに読ませていただきます。
+
+--- 青木淳＠今Javaプログラミング中

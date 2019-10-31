@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7569] Re: OpNoDupとOpPop
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207569%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9wTm9EdXAbJEIkSBsoQk9wUG9w%3F%3D&In-Reply-To=20090604.143335.91281815.tscompor%40gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007565.html">
+   <LINK REL="Next"  HREF="007571.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7569] Re: OpNoDupとOpPop</H1>
+    <B>Yasuda Yutaka</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207569%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9wTm9EdXAbJEIkSBsoQk9wUG9w%3F%3D&In-Reply-To=20090604.143335.91281815.tscompor%40gmail.com"
+       TITLE="[SML 7569] Re: OpNoDupとOpPop">yasuda ＠ mfc.bakkers.gr.jp
+       </A><BR>
+    <I>2009年 6月  5日 (金) 00:01:45 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007565.html">[SML 7565] OpNoDupとOpPop
+</A></li>
+        <LI>次の記事 <A HREF="007571.html">[SML 7571] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7569">[ 日付 ]</a>
+              <a href="thread.html#7569">[ スレッド ]</a>
+              <a href="subject.html#7569">[ 件名 ]</a>
+              <a href="author.html#7569">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>安田です。
+
+&gt;<i> 今日は。
+</I>
+はい。こんばんわ。。。(^_^)
+
+&gt;<i> 102番にOpPopがあり、動作もそれほど違いが無さそうでし 
+</I>&gt;<i> たので、
+</I>&gt;<i> MethodContextをインスペクトしている間に
+</I>&gt;<i>
+</I>&gt;<i> self method byteAt: 11 put: 102
+</I>
+うぉぅ！（おもわず声が出てしまいました。）
+
+＃勉強になります。。。
+
+&gt;<i> OpPopとOpNoDupで本当に違いが無いのか気になります。
+</I>
+VM のソースを見るのが早そうではありますが、、どうも
+<A HREF="http://www.cincomsmalltalk.com/userblogs/cincom/blogView?content=vwDeveloper">http://www.cincomsmalltalk.com/userblogs/cincom/blogView?content=vwDeveloper</A>
+このあたりをクリアせんといかんようで。。(=_=)
+
+＃とりあえず「今は（違いは）無い」に一票！
+
+&gt;<i> 昔のSmalltalk-80には dup first や dup last  
+</I>&gt;<i> にあたる物が
+</I>&gt;<i> 無いように見えます。
+</I>...
+&gt;<i> 37 &lt;87&gt; pop
+</I>&gt;<i> 38 &lt;88&gt; dup
+</I>
+いやーもう、、、これだったら分かりやすかったんですけど
+ねえ。。(^_^!)
+
+dup first = 普通に言うところの dup
+dup = 普通に言うところの pop ; dup
+dup last = 普通に言うところの pop
+
+では何の事やら、、、
+
+でわでわ									Yasu.
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007565.html">[SML 7565] OpNoDupとOpPop
+</A></li>
+	<LI>次の記事 <A HREF="007571.html">[SML 7571] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7569">[ 日付 ]</a>
+              <a href="thread.html#7569">[ スレッド ]</a>
+              <a href="subject.html#7569">[ 件名 ]</a>
+              <a href="author.html#7569">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

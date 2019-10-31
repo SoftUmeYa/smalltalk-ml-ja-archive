@@ -1,0 +1,73 @@
+From ume ＠ softumeya.com  Wed Jun 19 11:26:21 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 19 Jun 2013 11:26:21 +0900
+Subject: [Squeak-ja: 4684]
+	第54回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTuXvGYM_QhU9iqGAcz=q8keepaec_pJH309oiS_B+9bQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2013/6/26(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai54kaismalltalkbenkyoukai
+
+今回は最初の1時間で好きなテーマで実装し、残りの1時間で発表という、ライトニングハッカソン大会とします。
+Smalltalkでやりたいことはあっても、まとまった時間が取れない、きっかけがないなどで踏み切れていなかった方、ぜひご参加ください。
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From m1goh9000 ＠ gmail.com  Sun Jun 23 22:15:18 2013
+From: m1goh9000 ＠ gmail.com (Akiyoshi_Matsuyama)
+Date: Sun, 23 Jun 2013 22:15:18 +0900
+Subject: [Squeak-ja: 4685] はじめまして
+Message-ID: <51c6f4eb.2266420a.25c9.ffff90ce@mx.google.com>
+
+こんにちは、長野県上田市にすんでいる、
+Ｍ１号と申します。
+プログラミングは趣味です。cとjava初心者です。
+SqueakとPharoを少しいじってみましたがよくわかりませんでした、
+でも、面白そうです。長くつきあっていきたいと思います。
+よろしくお願いします。
+
+-----
+m1goh9000 ＠ gmail.com
+松山　昭芳
+
+
+From tomohiro ＠ sra.co.jp  Fri Jun 28 08:51:34 2013
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri, 28 Jun 2013 08:51:34 +0900
+Subject: [Squeak-ja: 4686]
+ Squeak/Pharo上で動作する軽量日本語入力メソッド Tekka
+Message-ID: <5EF2A228-7507-4E70-A2FD-313115641A87@sra.co.jp>
+
+おだです。
+
+SqueakやPharoを使っていて、OSが提供する日本語入力と上手く連携できてないなあと思い、
+Squeak Smalltalkで簡単な日本語入力メソッドを書いてみました。「Tekka」といいます。
+
+日本語サイト: http://squeaksource.blueplane.jp/Tekka.html
+英語サイト: http://smalltalkhub.com/#!/~tomooda/Tekka
+
+Tekkaの特徴は、入力モードや入力バッファがないことです。
+コンセプト的には、キーボードとエディタの間に入るのではなく、
+漢字変換機能付きのコピー＆ペーストバッファのようなものです。
+
+Tekkaでは、キー入力をするとそのままテキストとしてエディタに入力されます。
+Tekkaではcmd-j(またはctrl-j)をすると、日本語変換できそうな部分を選択して変換します。
+または、明示的に変換対象を選択してから、cmd-j(またはctrl-j)で変換することもできます。
+
+ただし、cmd-j(またはctrl-j)だけで操作するため、連文節変換のような複雑な変換はしません。
+SKKやSekkaと同様、単文節ごとの変換になります。
+ぜひ試してみてください。
+---
+おだ
+

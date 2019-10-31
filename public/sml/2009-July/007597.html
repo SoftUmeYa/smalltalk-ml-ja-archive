@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7597] クロージャ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207597%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lbSE8JTglYxsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007591.html">
+   <LINK REL="Next"  HREF="007598.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7597] クロージャ</H1>
+    <B>Hiroshi Umeoka</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207597%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lbSE8JTglYxsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7597] クロージャ">umrlazybind ＠ gmail.com
+       </A><BR>
+    <I>2009年 7月  5日 (日) 06:39:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007591.html">[SML 7591] Re: Duration
+</A></li>
+        <LI>次の記事 <A HREF="007598.html">[SML 7597] クロージャ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7597">[ 日付 ]</a>
+              <a href="thread.html#7597">[ スレッド ]</a>
+              <a href="subject.html#7597">[ 件名 ]</a>
+              <a href="author.html#7597">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おはようございます、梅岡です。
+先日の京都の勉強会、Smalltalkのブロッククロージャを興味深く拝聴しました。
+個人的な話しで恐縮なのですが、FortranとCしか知らない駆け出しの頃、何気なく新宿紀伊国屋で手にしたマグロウヒルの「プログラムの構造と実行」という本でクロージャを目にし、読んでみて驚愕したのがついこの間のことのようです。
+プログラムが実行されるスタックやらコンテキストを意識するようになったのはそれからでした。
+その例題は、確かこんな感じでした。
+(本はLisp系言語であるSchemeで書かれていましたが、ここではSmalltalkで挑戦です:-)
+&#65279;
+
+&#65279;&#65279;&#65279;&#65279;&#65279;&#65279;| accountTemplate accountX accountY |
+
+&quot;口座を定義。ブロックを返すブロック&quot;
+accountTemplate :=
+    [:initial |
+    | amount |
+        amount := initial.
+        [:withdraw |
+            amount := amount - withdraw] ].
+
+&quot;初回の預け入れで口座を複数開設&quot;
+accountX := accountTemplate value: 1000.
+accountY := accountTemplate value: 6666.
+
+&quot;各口座からの引き出しと残高表示&quot;
+Transcript
+	cr;
+	show: (accountX value: 30) printString;
+	cr;
+	show: (accountY value: 222) printString.
+	cr;
+	show: (accountY value: 111) printString.
+
+
+----
+970
+6444
+6333
+----
+
+amount がインスタンス変数のように機能しますね。まるでブロックがオブジェクトのように振る舞っています。クロージャって面白いっ、と単純に思いました。
+ちなみに、このとき以来Schemeにハマったのですが、このクロージャの次に衝撃を受けたのが、竹岡さんのユニマガの連載「マジカルミステリーツアーいたしましょ」のSchemeの「継続(Continuation)」で並行処理を書く記事でした。
+(最近ああいう記事を載せる雑誌が見当たらなくて寂しいです)
+</PRE>
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007591.html">[SML 7591] Re: Duration
+</A></li>
+	<LI>次の記事 <A HREF="007598.html">[SML 7597] クロージャ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7597">[ 日付 ]</a>
+              <a href="thread.html#7597">[ スレッド ]</a>
+              <a href="subject.html#7597">[ 件名 ]</a>
+              <a href="author.html#7597">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

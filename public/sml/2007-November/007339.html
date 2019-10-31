@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7339] [ANNOUNCE] Jun for Java (Jun695)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207339%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun695%29&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007340.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7339] [ANNOUNCE] Jun for Java (Jun695)</H1>
+    <B>Yoshiyuki NISHINAKA</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207339%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun695%29&In-Reply-To="
+       TITLE="[SML 7339] [ANNOUNCE] Jun for Java (Jun695)">nisinaka ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 11月 15日 (木) 18:20:06 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007340.html">[SML 7340] 【Jun756】と【Jpl023】
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7339">[ 日付 ]</a>
+              <a href="thread.html#7339">[ スレッド ]</a>
+              <a href="subject.html#7339">[ 件名 ]</a>
+              <a href="author.html#7339">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>「じゅん for Java」のバージョン695を公開します。
+
+  バージョン683からの主な変更点は、以下の通りです。
+
+    * (new feature) JunSraGifImageStreamは、GIF画像を書き出すため
+      のストリームクラスです。
+
+    * (new feature) JunGifAnimationStreamは、GIFアニメーションを
+      読み書きするためのストリームクラスです。
+
+    * (new feature) JunImagesToGifAnimationは、複数の画像群をGIF
+      アニメーションに変換するユーティリティクラスです。
+
+    * (modification) JunCartoonMovieをJun697相当に更新しました。
+        - GIFアニメーションを開いたり、保存したりできます。
+        - 再生に、Timerを使うように修正しました。
+        - ビュー側で画像をキャッシュし、表示速度を改善しました。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Mobius2-1.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Mobius2-1.png</A>
+
+    * (modification) JunOpenGL3dModelとJunOpenGLDisplayModelを
+      Jun696相当に更新しました。
+        - 表示領域のみのビューを作ることができるようになりました。
+        - モデルに対して、回転のベクトルを指定できるようにしまし
+          た。
+        - 射影情報のコピー・貼り付けができるようになりました。
+
+    * (modification) JunOpenGLDisplayControllerをJun696相当に更新
+      しました。
+        - JunOpenGLDisplayModelの 'noControl' の設定が有効になり
+          ます。
+        - 回転に、Timerを使うように修正しました。
+
+    * (modification) Jun2dTrianlgeとJun3dTriangle、JunNurbsCurve
+      をJun692相当に更新しました。線分の配列に変換するメソッドが
+      実装されています。
+
+    * (bug fix) JunProgressにおいて、ダイアログを閉じる際に
+      dispose()を呼ぶと、デッドロックの起こる場合がありました。
+
+    * (bug fix) JunControlUtility#WaitUntilTimeMillis_(long)が、
+      指定した時刻より前に実行を終了する場合がありました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    <A HREF="ftp://ftp.sra.co.jp/pub/lang/java/jun4java/">ftp://ftp.sra.co.jp/pub/lang/java/jun4java/</A>
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html">http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html</A>
+
+
+                                 西中 芳幸 (<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">nisinaka ＠ sra.co.jp</A>)
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007340.html">[SML 7340] 【Jun756】と【Jpl023】
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7339">[ 日付 ]</a>
+              <a href="thread.html#7339">[ スレッド ]</a>
+              <a href="subject.html#7339">[ 件名 ]</a>
+              <a href="author.html#7339">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

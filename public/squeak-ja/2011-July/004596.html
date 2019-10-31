@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4596] StOMP、PPC マックでの動作ＯＫ！
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204596%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3RPTVAbJEIhIhsoQlBQQyAbJEIlXiVDJS8kRyRORjAbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOm4jTyNLISobKEI%3D%3F%3D&In-Reply-To=%3C20110705080519.CA6CE9A967%401server.aquilax.co.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="004597.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4596] StOMP、PPC マックでの動作ＯＫ！</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204596%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3RPTVAbJEIhIhsoQlBQQyAbJEIlXiVDJS8kRyRORjAbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOm4jTyNLISobKEI%3D%3F%3D&In-Reply-To=%3C20110705080519.CA6CE9A967%401server.aquilax.co.jp%3E"
+       TITLE="[Squeak-ja: 4596] StOMP、PPC マックでの動作ＯＫ！">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2011年 7月  5日 (火) 17:05:20 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="004597.html">[Squeak-ja: 4597]	第34回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4596">[ 日付 ]</a>
+              <a href="thread.html#4596">[ スレッド ]</a>
+              <a href="subject.html#4596">[ 件名 ]</a>
+              <a href="author.html#4596">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE> 高橋＠池袋です。
+
+　第33回Smalltalk勉強会で紹介された梅澤さん謹製の
+シリアライザStOPMのiMac G5でのインストールと
+SUnitテストを行いました。
+
+　iMac G5。Mac OS X 10.4.11(8S165)
+PowerPC G5(3.1) 2.1GHz 512KB-cache, 1.5G, バス 700MHz
+
+　Squeak4.2-ja-all-in-one内のimageと非Cog VMを使用。
+
+　Installer でインストール。
+image保存せずそのまま Test RunnerからStompTest-Coreを実行。
+
+90 run, 90 passes , 0...。
+
+一応Test Runner の「プロファイル実行」結果を添付します。
+
+追伸
+ Spy Results Window のハロから「モデルを検査」で
+StringHolder のインスペクタを開いて self toStomp を
+実行したらしばらくしてピンクの「Key not found: Assosiation」
+が出現。PPCでも Intelでも同じでした。
+
+　ではでは
+
+
+
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: StompTest-Core-SpyResults.txt
+URL:  &lt;<A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110705/0c8f674d/attachment.txt">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110705/0c8f674d/attachment.txt</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="004597.html">[Squeak-ja: 4597]	第34回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4596">[ 日付 ]</a>
+              <a href="thread.html#4596">[ スレッド ]</a>
+              <a href="subject.html#4596">[ 件名 ]</a>
+              <a href="author.html#4596">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

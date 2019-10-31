@@ -1,0 +1,3483 @@
+From epi9tetus ＠ gmail.com  Wed Jan  3 01:55:03 2007
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:41 2007
+Subject: [Squeak-ja: 3322] Re: モーフパッケージ化システム
+In-Reply-To: <007101c7154c$88dab1c0$3e1aee0a@tam>
+References: <86bqofemu7.wl%mutoh@openedu.org>
+	<001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC>
+	<001401c6f26c$b4fbd2f0$6c0aa8c0@KSPC>
+	<6544a1da0610180535v471ed561xa415a625aed4e10b@mail.gmail.com>
+	<7aa126770611070840t36cee739ya7e42eed521f87da@mail.gmail.com>
+	<001401c703f0$74f36110$3e1aee0a@tam>
+	<7aa126770612010358m588377a9n73da9cd5ce0fbc17@mail.gmail.com>
+	<007101c7154c$88dab1c0$3e1aee0a@tam>
+Message-ID: <7aa126770701020855v71648d83ka6bb2e227d672fcd@mail.gmail.com>
+
+竹村さま
+明けましておめでとうございます。
+
+>> 特に不慣れなメンバーや小学生のWSにおいては、自由度が高すぎて理解できない
+>とのことですが、私たちも先日ワークショップを実施した際
+>かなり自由度の高い内容を実施してみたのですが、案の定時間オーバーしてしまいました。
+>自由度の中から子供たちが創意工夫でいろんなものを学び取るというのも重要だとは思いますが、
+>限られた時間の中で、特に回数の限られるワークショップでは自由度をある程度制限してでも
+>本来の学習目標に到達することが重要だと考えています。
+
+全くその通りだと思います。
+ちょっと検証してみようと思い立ち、子ども達の冬休みを利用して、プチWSを実施して
+みました。
+（おたまじゃくしのアニメーションを作るような簡単なもの）
+
+対象は、小学校4年生と5年生、スクイーク未体験の中学2年生の合計6名。
+（1時間30分を2回でワンセットとし、展開を変えて2回行いました）
+
+女の子の傾向は、アニメーションの元になる画像に時間をかけすぎること。
+（むしろ、それだけが楽しいような・・・）
+男の子の傾向は、説明を聞いていない。（集中力の問題かと）
+
+所感。
+１）集中して聞ける時間が短いので、WSの目的を（さも面白そうに）作業中に何度も
+伝え続けないと、何のために作業しているのか忘れてしまう場合が多い。
+２）先ずは、教わったとおりにやってみよ〜！。と一通り作業させた後で、自由に出来る
+時間を設ける方が、お互いにストレス無く楽しめる。
+３）後何分。と時間を伝えながら作業させると、それなりに納得して次の段階に進んで
+くれる。
+
+結論。
+>ある程度の筋道を前提としたツールを作り上げることで　〜以下略〜
+
+大賛成です。
+そこが終わりでは無く、更に多くの可能性があることをしっかり伝えた上で、作業する
+ことが前提だと思いますが、全く自由な環境では、通常のWSの時間は少なすぎると
+感じますし、子供と指導者の人数の比率からも、必要なツールだと感じます。
+（説明だけで、実施するには指導者一人に対して子供は5名以内が限界？と・・・）
+
+WS後に、周りの保護者や教師が意図を理解できていることも重要だと思いました。
+（後で子供が継続したい時に、ツールで制限された作業＝すくいーくとの認識を
+現場の先生が持つことの可能性は大いにありうる）
+
+仮に、ツールを利用してWSを数回実施したと仮定して、最後の日に自由に使わせると
+いう構成も良いかも知れないと思います。
+個人的な希望としては、タイヤや落下物のWSのように、画面と行動の両方での活動を
+併せ持つ構成を初期に体験出来るほうが、画面の前で全く自由に操作するよりも
+意味があるように思っています。（ちょっと脱線してしまいました。すみません＾＾；）
+
+又、小学校などで実施して頂いたWSは、次回のWSまでに該当校で数回同じものを
+実施できると、地域の大人や一度目でタイムアップした子ども達も楽しむところまで
+持って行けるような気がします。そういう場合にも、ツールが利用できる方が、実現
+しやすいのでは無いかと感じます。（保護者が同伴できるWSでも多くの親は一体
+何だったのかと言うような感想がありましたので・・・）
+キットを公開したサイトに、それに纏わるBBSなどが設置されているなども良いかも。
+
+以上、長々と失礼致しました。
+
+From htakada ＠ acm.org  Thu Jan  4 15:30:01 2007
+From: htakada ＠ acm.org (Hideyuki Takada)
+Date: Thu Dec  6 11:03:41 2007
+Subject: [Squeak-ja: 3323] Re: C5 2007参加登録開始！
+In-Reply-To: <45862D61.7050806@acm.org>
+References: <45505301.7070004@acm.org> <45862D61.7050806@acm.org>
+Message-ID: <459C9EE9.7090706@acm.org>
+
+皆様
+
+立命館大学の高田です。
+あけましておめでとうございます。
+今年もよろしくお願い致します。
+
+さて，以前よりご案内させて頂いております C5 2007 の早期登録締切りが 1月
+10日に迫ってきております。割安の参加費で登録して頂けますので，ぜひお忘れ
+なきようご登録下さい。参加登録の情報は下記のサイトをご参照下さい。
+
+http://www.cm.is.ritsumei.ac.jp/c5-07/participation.html
+
+また，会議の内容も下記のページに掲載しております。最終日には興味深いワー
+クショップも企画されておりますので，ぜひご参加の程お願い致します。
+
+http://www.cm.is.ritsumei.ac.jp/c5-07/program.html
+
+よろしくお願い致します。
+
+
+On 12/18/2006 2:55 PM, Hideyuki Takada wrote:
+> 皆様
+> 
+> 立命館大学の高田です。
+> 
+> 以前ご案内させていただきました国際会議 C5 2007のホテル予約の締切が 12/20
+> となっています。まだ部屋には空きがありますので，ぜひご利用下さい。
+> 
+> また，割引参加費が適用される早期登録の締切りは，1月10日です。先に登録し
+> て，会場で割引参加費で現金支払いも可能ですので，この機会にホテルと一緒に
+> ご登録下さい。
+> 
+> たくさんのご参加をお待ち申し上げております。
+> 
+> Hideyuki Takada wrote:
+>> 皆様
+>>
+>> 立命館大学の高田です。
+>>
+>> 来年 1月24日から26日に京都大学にて開催されます国際会議 C5 2007 の参加登
+>> 録受付が始まりましたのでご案内致します。
+>>
+>> 今回は，割安で泊まれるホテルもご用意しておりますので，ぜひご利用下さい。
+>> （部屋数に限りがありますので，お早めにお申し込み下さい）。
+>>
+>> プログラムにつきましては，順次 Web 上でご案内していく予定です。
+>>
+>> たくさんのご参加をお待ち申し上げております。
+>>
+>> -----
+>> CALL FOR PARTICIPATION
+>>
+>> The Fifth International Conference on
+>> Creating, Connecting and Collaborating through Computing (C5 2007)
+>>
+>> January 24-26, 2007, Kyoto University, Kyoto, Japan
+>> http://www.cm.is.ritsumei.ac.jp/c5-07/
+>>
+>> Organized by
+>>  Hewlett-Packard Company
+>>  Kyoto University 21st Century COE Program for Knowledge Society
+>> Infrastructure
+>>  Viewpoints Research Institute
+>>
+>> SCOPE
+>>  Computers, networks, and other forms of technology are now pervasive
+>>  in our information-based society. However, most users still function
+>>  as passive consumers of technology. To evolve into a true knowledge
+>>  society, it is critical that we transform computer-based human
+>>  activities to engage users in the active process of creating,
+>>  connecting, and collaborating together.
+>>
+>>  The C5 conference is for researchers, technology developers,
+>>  educators, and technology users who are concerned about developing
+>>  and enabling human-oriented creation, connection, and collaboration
+>>  processes. C5 is an international forum for presenting ongoing work
+>>  as well as new work currently under development and for discussing
+>>  future needs and directions in creative computing and multimedia
+>>  authoring environments. We welcome equally the submission of
+>>  technical papers and practitioner/experience reports for paper
+>>  presentations. In addition, we are adding a workshop track for the
+>>  third day of the conference and are soliciting proposals for half-day
+>>  and full-day interactive workshops.
+>>
+>> REGISTRATION FEE
+>>  Early Registration Rate (on or before Jan. 10): 10,000 JPY
+>>  Standard Registration Rate (after Jan. 11 and on-site): 12,000 JPY
+>>  Student Rate (Banquet excluded): 3,000 JPY
+>>  Extra Banquet (per one person): 5,000 JPY
+>>  Extra Preliminary Proceedings: 2,000 JPY
+>>
+>>  Early and standard registration rates include a copy of preliminary
+>>  proceedings (on CD) and banquet. Student rate includes a copy of
+>>  preliminary proceedings (on CD). Student registrants who want to
+>>  attend the banquet need to pay for the extra banquet fee. Authors also
+>>  have to register based on their status (regular or student). Authors
+>>  whose papers are included in the proceedings will receive a copy of
+>>  the formal proceedings published by the IEEE Computer Society after
+>>  the conference. Reprints of papers and additional copies of the formal
+>>  proceedings can be purchased from the IEEE Computer Society.
+>>
+>> REGISTRATION FORM
+>>  Registration should be made by E-mail or FAX. Registration Form is
+>>  available below. (E-mail address and FAX number is included in the
+>>  form.)
+>>
+>>  http://www.cm.is.ritsumei.ac.jp/c5-07/c5reg.doc (MS-WORD)
+>>  http://www.cm.is.ritsumei.ac.jp/c5-07/c5reg.pdf (PDF)
+>>  http://www.cm.is.ritsumei.ac.jp/c5-07/c5reg.txt (Plain Text)
+>>
+>>  Please note that credit card payment is only accepted through fax
+>>  registration to protect your personal information. If you prefer to
+>>  register by E-mail, please pay on-site by Japanese cash.
+>>
+>> HOTEL RESERVATION FORM
+>>  A group block of rooms at the following 2 hotels has been reserved
+>>  for this conference with special rates. For reservation, please send
+>>  the following form by E-mail or Fax by December 20, 2006. Rooms are
+>>  assigned by the first-come-first-served basis.
+>>  (E-mail address and FAX number is included in the form.)
+>>
+>>  http://www.cm.is.ritsumei.ac.jp/c5-07/c5hotel.doc (MS-WORD)
+>>  http://www.cm.is.ritsumei.ac.jp/c5-07/c5hotel.pdf (PDF)
+>>  http://www.cm.is.ritsumei.ac.jp/c5-07/c5hotel.txt (Plain Text)
+>>
+>>  *Holiday Inn Kyoto (http://www.hi-kyoto.co.jp/)
+>>    Single Room -  8,000 JPY (+500 JPY for breakfast)
+>>    Double Room - 11,000 JPY (+1,000 JPY for breakfast)
+>>
+>>    Shuttle Bus available between Kyoto Station and Hotel. Wireless LAN
+>>    available at Lobby. Major credit cards acceptable. About 10 minutes
+>>    to Kyoto University by Kyoto City Bus (#206).
+>>
+>>  *Co-op Inn Kyoto (http://www.coopinn.jp/)
+>>    Single Room -  5,000 JPY (+800 JPY for breakfast)
+>>    Double Room -  9,200 JPY (+1,600 JPY for breakfast)
+>>
+>>    In-room Internet available for free. Major credit cards acceptable.
+>>    About 15 minutes to Kyoto University by Kyoto City Bus (#201).
+>>
+>> ORGANIZING COMMITTEE
+>>
+>> Honorary Co-Chairs
+>>  Alan Kay, Viewpoints Research Institute, USA
+>>  Makoto Nagao, National Institute of Information and Communications
+>> Technology (NICT), Japan
+>>
+>> Conference Co-Chairs
+>>  Kim Rose, Viewpoints Research Institute, USA
+>>  Katsumi Tanaka , Kyoto University, Japan
+>>
+>> Program Co-Chairs
+>>  Benay Dara-Abrams, DALaboratories, USA
+>>  Rieko Kadobayashi, National Institute of Information and Communications
+>> Technology (NICT), Japan
+>>  Rick McGeer, Hewlett-Packard Company, USA
+>>  Kazuyuki Moriya, Kyoto University, Japan
+>>
+>> Workshop Track Chair
+>>  Benay Dara-Abrams, DALaboratories, USA
+>>
+>> Local Arrangement Chair
+>>  Hajime Kita, Kyoto University, Japan
+>>
+>> Publicity and Publication Chair
+>>  Hideyuki Takada, Ritsumeikan University, Japan
+>>
+>> Program Committee
+>>  Michael Bischoff, University of Applied Sciences Luebeck, Germany
+>>  Masahiro Fujita, University of Tokyo, Japan
+>>  Mark Guzdial, Georgia Institute of Technology, USA
+>>  Masaki Hayashi, Sega Sammy Media, Inc., Japan
+>>  Tsuneo Jozen, Osaka Electro-Communication University, Japan
+>>  Shinichi Konomi, University of Tokyo, Japan
+>>  Julian Lombardi, Duke University, USA
+>>  Maic Masuch, Otto-von-Guericke-University of Magdeburg, Germany
+>>  Mark McCahill, University of Minnesota, USA
+>>  Maggie McPherson, University of Leeds, UK
+>>  John David Miller, Intel Corporation, USA
+>>  Shinya Nakagawa, HP Labs, Japan
+>>  Haruhiko Okumura, Mie University, Japan
+>>  Zhiyong Peng, Wuhan University, China
+>>  Ian Piumarta, Viewpoints Research Institute, USA
+>>  Andreas Raab, Qwaq, Inc., USA
+>>  David Reed, MIT Media Lab/HP Labs, USA
+>>  Nathanael Scharli, Google, Switzerland
+>>  David Smith, Qwaq, Inc., USA
+>>  Kazutoshi Sumiya, University of Hyogo, Japan
+>>  Toshiyuki Takeda, Kwansei Gakuin University, Japan
+>>  Shin'ichi Ueshima, Kansai University, Japan
+>>
+>>
+> 
+
+-- 
+Hideyuki Takada, Ph.D
+Department of Computer Science
+College of Information Science and Engineering, Ritsumeikan University
+
+From abee ＠ squeakland.jp  Thu Jan  4 21:42:41 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3324] Re: 杉並区立和田小学校 研究発表会のご案内
+In-Reply-To: <458529DE18C.EF94ABEE@smtp.nifty.com>
+References: <458529DE18C.EF94ABEE@smtp.nifty.com>
+Message-ID: <459CF64128C.E2A6ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+本件、公開授業の内容などが和田小のWebページに追加されています。どうぞご覧
+ください。
+
+http://wadael.sakura.ne.jp/
+
+On Sun, 17 Dec 2006 20:28:30 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>私がお手伝いしている杉並区立和田小学校でスクイークを中心とした研究発表会
+>を開催することになりました。当日は講演だけでなく各学年で研究授業が行われ
+>ます。これには教育関係者だけでなく、一般の方でも参加できるとの事です。
+>
+>以下、代理投稿です。
+>
+>-- cut here --
+>平成１８年度　杉並区教育委員会教育課題研究指定校
+>平成１８年度　サイエンス・パートナーシップ・プロジェクト対象校
+>
+>研究発表会のご案内（一次案内）
+>
+>研　究　主　題 
+>
+>コンピュータが学びをかえる！ 
+>〜スクイークによるプログラミングと情報機器の活用〜
+>
+>
+>　　日 　時　　平成１９年２月９日（金）１３時４０分〜
+>　　　　講　演　　「学校教育とコンピュータ」
+>          　　　　東京工業大学教授　工学博士　　赤堀　侃司先生 
+>
+>杉並区立杉並区和田小学校  
+>〒166-0012 杉並区和田2−30−21　電　話 03-3383-2425　ＦＡＸ 03-5340-2953
+>
+>ホームページアドレス  http://wadael.sakura.ne.jp/ 
+>発表会申込用メールアドレス wada-e003@wadael.sakura.ne.jp 
+>
+>発表会の申し込みはＥメールで受け付けて居ります。資料は無料ですが数に限り
+>がありますので、事前に申し込むことをお勧めします。 
+>
+>スクイークは、「パーソナルコンピュータの父」アラン・ケイ氏が中心となって
+>開発しているコンピューティング環境です。スクイークの中にオブジェクトを作
+>り、それをプログラムで動かすことができます。　　
+>-- cut here --
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoneya ＠ cslab.co.jp  Fri Jan  5 11:57:08 2007
+From: yoneya ＠ cslab.co.jp (Masahiro Yoneya)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3325] 「冬休み小学生IT教室」のお知らせ
+Message-ID: <20070105113952.EB1C.YONEYA@cslab.co.jp>
+
+squeak-ja の皆様
+
+お世話になっております。
+株式会社シーズ・ラボの米谷です。
+
+弊社では2002年より毎年、夏休みと冬休みに
+「小学生IT教室」を無料で開催しています。
+2004年度冬休み以降はスクイークで
+簡単なプログラミングを体験してもらっていますが
+おかげさまで子供たちには大変好評です。
+
+
+今月、「冬休み小学生IT教室」を
+開催いたしますのでお知らせします。
+
+・冬休み小学生IT教室
+「アクションゲームを作ってみよう」
+日時：2007年1月12日（金）
+      13:00〜17:00
+場所：札幌
+
+詳細は以下のURLをご覧下さい。
+http://www.cslab.co.jp/CAP/index.html
+
+おかげさまで満員になりましたので
+募集は締め切っております。
+子供たちに楽しんでもらえる企画にしたいと思います。
+
++----------------------------------------+
+米谷 正広  yoneya@cslab.co.jp　[C's Lab Co.,Ltd]
+
+
+
+From mutoh ＠ openedu.org  Sun Jan  7 16:46:53 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3326] Re: C5 2007参加登録開始！
+In-Reply-To: <459C9EE9.7090706@acm.org>
+References: <45505301.7070004@acm.org> <45862D61.7050806@acm.org>
+	<459C9EE9.7090706@acm.org>
+Message-ID: <867ivzi8ia.wl%mutoh@openedu.org>
+
+むとう@奈良のおうちです。
+
+明けましておめでとうございます。
+
+At Thu, 04 Jan 2007 15:30:01 +0900,
+Hideyuki Takada <htakada@acm.org> wrote:
+> さて，以前よりご案内させて頂いております C5 2007 の早期登録締切りが 1月
+> 10日に迫ってきております。割安の参加費で登録して頂けますので，ぜひお忘れ
+> なきようご登録下さい。参加登録の情報は下記のサイトをご参照下さい。
+
+昨日、プログラムのタイムテーブルが出たみたいですね。
+バンケットは、初日(1/)の18:00-20:00なんですね。
+
+このメーリングリストの方で来られる人ってどれぐらいおられるんでしょうか?
+# 私は今、参加申込しました(^-^;)
+
+お昼とかご一緒して、いろいろお話できればいいなぁと思うのですが…
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From umejava ＠ mars.dti.ne.jp  Tue Jan  9 17:06:03 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3327] SeasideJとSeasideJOneを更新しました
+Message-ID: <JZ200701091706036.12631390@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、1/27日のSeasideチュートリアルに向け、Seaside日本語パッチあてバージョン
+を更新しました。
+
+今回からSeaside 2.6ベースになっています。現状ではもっとも広く使われている
+バージョンですので、チュートリアルでは、これをもとに解説を行っていきます。
+
+SeasideJ:
+http://swikis.ddo.jp/umejava/22
+
+SeasideJOne:
+http://swikis.ddo.jp/umejava/39
+
+ぜひお試しください。
+---
+[:masashi | ^umezawa]
+
+From tak ＠ metatoys.org  Wed Jan 10 19:55:40 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3328] squeakland2006J???
+Message-ID: <45A4C62C.50906@metatoys.org>
+
+山宮です。
+
+スクイーク最新版のイメージを作成しました。
+
+イメージは
+http://metatoys.org/pub/sqland2006j/SqueakPlugin.image
+インストーラは
+http://metatoys.org/pub/sqland2006j/SqueakPluginInstaller.exe
+開発版は
+http://squeakland.jp/developer/download/image/SqueakPlugin-dev-554.zip 
+におきました。
+
+昨年一年は特にスクイークに目立った更新はありませんが、細かいバグフィッ
+クスは行われています。本家 squeakland.org では夏ごろ最新のイメージに更
+新されているのですが、日本語サイトでは古いままなのでそろそろ如何でしょうか?
+
+大々的なバージョンアップとなると、またこの機能も入れたいあの機能も入れ
+たいとなりますので、とりあえず今ある物を纏めたインストーラを 
+squeakland.jp で公開するというのを提案します。
+
+
+From tetha ＠ st.rim.or.jp  Wed Jan 10 23:56:52 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3329] Re: squeakland2006J???
+In-Reply-To: <45A4C62C.50906@metatoys.org>
+References: <45A4C62C.50906@metatoys.org>
+Message-ID: <632FF54F-0FB9-442A-BDF7-0C1846744D45@st.rim.or.jp>
+
+山宮さん、こんばんは。
+林です。
+
+　まとまった話でなくて恐縮ですが、mac版について私が把握している状況（2件）
+を報告します（この他にもトピックあるかもしれませんが）。
+
+- 本家でもインテル未対応
+http://www.squeakland.org/plugin/installers/mac-x-std.html
+　ベータ版VMはいくつか出てるのですが、まだバグがあるようです。
+ですので、まだ現時点ではインテルのネイティブ対応はユーザ責任で個別に行っ
+ていただくことになりそうです（一応、正式版のままでも Rosetta で動くらしい
+ので）。
+
+- Webブラウザプラグインの全面書き換え
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2006-November/111181.html
+　インテル対応に合わせて、ブラウザプラグインを全面的に書き換えているとこ
+ろです。Unix 版と同じような方式になるらしいです。
+
+　以上の件はおそらく今年の夏には正式リリースされると思われますので、もし
+かしたらMac版だけは夏にもう一度パッケージを作成し直す必要があるかもしれま
+せん。
+
+　一方、失念していたのですが、日本特有の問題（国別ロケール以外に機種によ
+って文字コードの区別がある）に由来する以下のバグについてなのですが、どう
+したものでしょうか？
+http://squeak.pinkzo.net/bugs/view.php?id=79
+できればこのタイミングで対応できればと思うのですが…。
+
+--
+林 徹也 Tetsuya HAYASHI 
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From tak ＠ metatoys.org  Thu Jan 11 15:04:48 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3330] Re: squeakland2006J???
+In-Reply-To: <632FF54F-0FB9-442A-BDF7-0C1846744D45@st.rim.or.jp>
+References: <45A4C62C.50906@metatoys.org>
+	<632FF54F-0FB9-442A-BDF7-0C1846744D45@st.rim.or.jp>
+Message-ID: <45A5D380.8020701@metatoys.org>
+
+林さん
+山宮です。ご意見有難うございます。
+やはり色々残ってましたね。
+
+例えばこのようなバグフィックスをみんなでやるにも、基準になるイメージが
+現行のものでは古すぎる(のとアップデートがうまく行かないらしい)ので、
+とりあえず昨年時点での最新版を適当なリリース名をつけて squeakland.jp 
+にアップするというのは如何でしょうか? 少なくとも、イメージ単体と開発版に
+ついては問題無いと思います。
+Windows 版だけでも更新したいです(自分がよく再インストールに使うので)。
+
+Tetsuya HAYASHI wrote:
+> 山宮さん、こんばんは。
+> 林です。
+> 
+> 　まとまった話でなくて恐縮ですが、mac版について私が把握している状況（2件）
+> を報告します（この他にもトピックあるかもしれませんが）。
+> 
+> - 本家でもインテル未対応
+> http://www.squeakland.org/plugin/installers/mac-x-std.html
+> 　ベータ版VMはいくつか出てるのですが、まだバグがあるようです。
+> ですので、まだ現時点ではインテルのネイティブ対応はユーザ責任で個別に行っ
+> ていただくことになりそうです（一応、正式版のままでも Rosetta で動くらしい
+> ので）。
+> 
+> - Webブラウザプラグインの全面書き換え
+> http://lists.squeakfoundation.org/pipermail/squeak-dev/2006-November/111181.html
+> 　インテル対応に合わせて、ブラウザプラグインを全面的に書き換えているとこ
+> ろです。Unix 版と同じような方式になるらしいです。
+> 
+> 　以上の件はおそらく今年の夏には正式リリースされると思われますので、もし
+> かしたらMac版だけは夏にもう一度パッケージを作成し直す必要があるかもしれま
+> せん。
+> 
+> 　一方、失念していたのですが、日本特有の問題（国別ロケール以外に機種によ
+> って文字コードの区別がある）に由来する以下のバグについてなのですが、どう
+> したものでしょうか？
+> http://squeak.pinkzo.net/bugs/view.php?id=79
+> できればこのタイミングで対応できればと思うのですが…。
+> 
+> --
+> 林 徹也 Tetsuya HAYASHI 
+> tetha@st.rim.or.jp, tetha@mac.com
+
+
+From tetha ＠ st.rim.or.jp  Thu Jan 11 16:41:30 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3331] Re: squeakland2006J???
+In-Reply-To: <45A5D380.8020701@metatoys.org>
+References: <45A4C62C.50906@metatoys.org>
+	<632FF54F-0FB9-442A-BDF7-0C1846744D45@st.rim.or.jp>
+	<45A5D380.8020701@metatoys.org>
+Message-ID: <67534BBD-FD9C-44BE-99DC-940C7143EB1A@st.rim.or.jp>
+
+林です。どうも。
+
+　確かにアップデートを常にかけ続けなければならないというのは、面倒ですし、
+色々と事故もおきかねないので、squeakland.jp にあるパッケージを最新のもの
+にする件について了解です。
+squeakland.jp が最新になってればなにかと安心ですし、参照するのも楽だと思
+います。
+
+パッケージ名は一応流れとして、Squeakland2006J でよろしいのではないでしょ
+うか（ちょっと遅れてしまいましたが…）。
+
+# もし、Macで再パッケージの必要があればMac版だけ付け直せばいいかと。
+
+On 2007/01/11, at 15:04, Takashi Yamamiya wrote:
+
+> 林さん
+> 山宮です。ご意見有難うございます。
+> やはり色々残ってましたね。
+>
+> 例えばこのようなバグフィックスをみんなでやるにも、基準になるイメージが
+> 現行のものでは古すぎる(のとアップデートがうまく行かないらしい)ので、
+> とりあえず昨年時点での最新版を適当なリリース名をつけて squeakland.jp 
+> にアップするというのは如何でしょうか? 少なくとも、イメージ単体と開発版に
+> ついては問題無いと思います。
+> Windows 版だけでも更新したいです(自分がよく再インストールに使うので)。
+>
+> Tetsuya HAYASHI wrote:
+>> 山宮さん、こんばんは。
+>> 林です。
+>>
+>> 　まとまった話でなくて恐縮ですが、mac版について私が把握している状況（2件）
+>> を報告します（この他にもトピックあるかもしれませんが）。
+>>
+>> - 本家でもインテル未対応
+>> http://www.squeakland.org/plugin/installers/mac-x-std.html
+>> 　ベータ版VMはいくつか出てるのですが、まだバグがあるようです。
+>> ですので、まだ現時点ではインテルのネイティブ対応はユーザ責任で個別に行っ
+>> ていただくことになりそうです（一応、正式版のままでも Rosetta で動くらしい
+>> ので）。
+>>
+>> - Webブラウザプラグインの全面書き換え
+>> http://lists.squeakfoundation.org/pipermail/squeak-dev/2006-November/111181.html
+>> 　インテル対応に合わせて、ブラウザプラグインを全面的に書き換えているとこ
+>> ろです。Unix 版と同じような方式になるらしいです。
+>>
+>> 　以上の件はおそらく今年の夏には正式リリースされると思われますので、もし
+>> かしたらMac版だけは夏にもう一度パッケージを作成し直す必要があるかもしれま
+>> せん。
+>>
+>> 　一方、失念していたのですが、日本特有の問題（国別ロケール以外に機種によ
+>> って文字コードの区別がある）に由来する以下のバグについてなのですが、どう
+>> したものでしょうか？
+>> http://squeak.pinkzo.net/bugs/view.php?id=79
+>> できればこのタイミングで対応できればと思うのですが…。
+>>
+>> --
+>> 林 徹也 Tetsuya HAYASHI 
+>> tetha@st.rim.or.jp, tetha@mac.com
+>
+>
+>
+
+
+From abee ＠ squeakland.jp  Fri Jan 12 00:15:04 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3332] Re: C5 2007 参加登録開始！
+In-Reply-To: <867ivzi8ia.wl%mutoh@openedu.org>
+References: <459C9EE9.7090706@acm.org> <867ivzi8ia.wl%mutoh@openedu.org>
+Message-ID: <45A65478164.A202ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 07 Jan 2007 16:46:53 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>昨日、プログラムのタイムテーブルが出たみたいですね。
+
+このタイムテーブルなんですが、肝心のプログラム内容に飛べないみたいです(リ
+ンク先のラベルが無い)。高田先生、いかがですか。
+
+http://www.cm.is.ritsumei.ac.jp/c5-07/program.html
+
+>バンケットは、初日(1/)の18:00-20:00なんですね。
+>
+>このメーリングリストの方で来られる人ってどれぐらいおられるんでしょうか?
+># 私は今、参加申込しました(^-^;)
+>
+>お昼とかご一緒して、いろいろお話できればいいなぁと思うのですが…
+
+私は参ります。あと、大島さん、山宮さん、林さん、横川さんは行くみたいです。
+どうぞよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From htakada ＠ acm.org  Fri Jan 12 11:25:57 2007
+From: htakada ＠ acm.org (Hideyuki Takada)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3333] Re: C5 2007 参加登録開始！
+In-Reply-To: <45A65478164.A202ABEE@smtp.nifty.com>
+References: <459C9EE9.7090706@acm.org> <867ivzi8ia.wl%mutoh@openedu.org>
+	<45A65478164.A202ABEE@smtp.nifty.com>
+Message-ID: <45A6F1B5.2040601@acm.org>
+
+高田です。
+
+Kazuhiro ABE wrote:
+> On Sun, 07 Jan 2007 16:46:53 +0900
+> Takeshi MUTOH <mutoh@openedu.org> wrote:
+>> 昨日、プログラムのタイムテーブルが出たみたいですね。
+> 
+> このタイムテーブルなんですが、肝心のプログラム内容に飛べないみたいです(リ
+> ンク先のラベルが無い)。高田先生、いかがですか。
+
+すみません，まだプレゼンテーションの詳細スケジュールが決まっていなかった
+ので，リンクだけはってアンカが無い状態にしていました。
+
+先ほどようやくまとまり，公開しましたので，ご覧下さい。
+
+http://www.cm.is.ritsumei.ac.jp/c5-07/program.html
+
+あと，すでに登録された方には順次直接ご案内しておりますが，３日目の午後に
+立命館小学校と堀川高校のご協力により，両校を見学するバスツアーを企画して
+います。当日飛び入りでも大丈夫なようにする予定ですが，バス予約の関係上，
+参加ご希望の方は事前にお知らせ頂けますと助かります。（これから登録される
+方は，登録フォームに参加希望を示す欄があります）
+
+よろしくお願い致します。
+
+-- 
+Hideyuki Takada, Ph.D
+Department of Computer Science
+College of Information Science and Engineering, Ritsumeikan University
+
+From hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp  Fri Jan 12 13:13:10 2007
+From: hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3334] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20061231205530006660.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <45978950.3010204@ca2.so-net.ne.jp>
+	<45979A17369.4A0FABEE@smtp.nifty.com>
+	<20061231205530006660.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+
+福岡大学の濱田と申します。
+
+少し反応が遅くて申し訳ありませんが、
+「教育用PC リナックスで再生」についてです。
+# 残念ながら、該当の放送を見損なっているのですが、、、
+
+KNOPPIX で用いている KDE そのままでは、
+古いPCを再生することは難しいことは皆さんお気付きのことだと思います。
+# KDE とは、K Desktop Environment の略で、
+# グラフィカルなユーザ環境の一種です。KNOPPIX で標準的に使われており、
+# Konqueror などのファイルマネージャも含んで考えて良いと思います。
+
+個人的に聞いている限りで、現在、候補に上がっているのは
+1. Window Manager を XFCE4 などの軽いものにする。
+2. X 端末として再生する
+3. WebBrowser のみの KIOSK 端末として再利用する。
+
+などの案です。
+残念ながら、Squeak については、まだ考慮されていないと思います。
+
+ただ、3. の WebBrowser のみの端末と同じように、
+特定のアプリケーションに特化した環境として、
+Squeak を売り込んでいく価値は十分にあると思います。
+
+問題点としては、
+1. ライセンス問題は解決するか？
+2. メモリが少ない古いマシンで Squeak が十分な速度で動くか？
+2. Squeak を教えることができる人材を現場で確保できるか？
+
+ではないでしょうか？
+
+あと、Office スイーツへの要望も大きいようで、
+これはちょっと難しいのではないかと思っています。
+# OpenOffice.org 1.1 系か？
+
+それと、これは宣伝ですが、
+KNOPPIX 教育利用研究会という組織のMLがあります。
+http://www.knoppix-edu.org/
+から手動で入会できます。
+今回の件についても話し合われていますので、興味のある方、
+Squeak を教育現場に普及させていきたいという方は、
+是非御参加いただけると助かります。
+よろしくお願いいたします。
+
+inoue> 井上％勉強中＠武蔵工大です。
+inoue> 
+inoue> Kazuhiro ABEさんがSun, 31 Dec 2006 20:08:07 +0900に
+inoue> 「[Squeak-ja: 3319] Re: 教育用ＰＣ リナックスで再生」の件で：
+inoue> > Edu5に含まれるアプリケーション一覧を見る限り、初等教育にはちょっとつらい
+inoue> > 気がします。Squeakは別としても目的に応じたなんらかのカスタマイズは行われ
+inoue> > るでしょう。
+inoue> 
+inoue> 転機というものがあるなら、これはSqueakにとって最大の売り込み場面かもしれ
+inoue> ません。どうにかならないものですかね。
+inoue> -- 
+inoue> https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+inoue> .
+
+From takeda.toshiyuki ＠ gmail.com  Fri Jan 12 17:10:45 2007
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3335] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <45978950.3010204@ca2.so-net.ne.jp>
+	<45979A17369.4A0FABEE@smtp.nifty.com>
+	<20061231205530006660.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+
+武田です。
+
+On 1/12/07, Tatsuyoshi HAMADA <hamada-squeak@holst.sm.fukuoka-u.ac.jp> wrote:
+> KNOPPIX で用いている KDE そのままでは、
+> 古いPCを再生することは難しいことは皆さんお気付きのことだと思います。
+
+ためしたことがありますが、*まったく* 動かなくなります。
+
+> 個人的に聞いている限りで、現在、候補に上がっているのは
+> 1. Window Manager を XFCE4 などの軽いものにする。
+> 2. X 端末として再生する
+> 3. WebBrowser のみの KIOSK 端末として再利用する。
+
+試したのはかなり前ですが、Squeakは1、2で充分動きます。
+
+> 1. ライセンス問題は解決するか？
+
+この件は常に楽観的に見ているのでパスするとして、
+
+> 2. メモリが少ない古いマシンで Squeak が十分な速度で動くか？
+
+メモリはどれぐらい積んでるんでしょうか?
+
+128MBを期待していいものかどうか。64MBでもSqueakだけならなんとかなりますが、
+いまどきの他のソフトはどうでしょうか。
+
+OLPCの成果の移植を期待したいところです。
+
+> 2. Squeak を教えることができる人材を現場で確保できるか？
+
+これはなかなか大変でしょうが、Linuxベースの他のソフトも同じような状況ではないかと。。。
+
+From hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp  Fri Jan 12 18:30:27 2007
+From: hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3336] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+References: <20061231205530006660.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+	<6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+Message-ID: <20070112.183027.21915106.hamada@holst.sm.fukuoka-u.ac.jp>
+
+濱田＠福大です。
+
+武田様、こんばんわ。
+
+takeda.toshiyuki> ためしたことがありますが、*まったく* 動かなくなります。
+
+そうですね。古いマシンの場合には、
+メモリが少ないためにスワップするのではないかと思います。
+KNOPPIX起動時に knoppix desktop=twm 等を入力して、
+KDE を使わないことで、起動ぐらいはできますが、
+ファイルマネージャ等の環境を考えると難しいところです。
+
+takeda.toshiyuki> > 2. メモリが少ない古いマシンで Squeak が十分な速度で動くか？
+takeda.toshiyuki> 
+takeda.toshiyuki> メモリはどれぐらい積んでるんでしょうか?
+takeda.toshiyuki> 
+takeda.toshiyuki> 128MBを期待していいものかどうか。64MBでもSqueakだけならなんとかなりますが、
+
+私が1999年に大学の端末室に30台導入したマシンが
+Celeron 333MHz, 96MB SDRAM であったことを考えると、
+場合によっては、128MBを期待するのは難しいのではないかと思います。
+# 当時は Windows98 をいれずに NT で使っていました。
+
+メモリの追加ができれば良いのですが、現実には難しいでしょう。
+例えば、先日 USB-KNOPPIX の小菅貴彦氏が公表したデータによると、
+SONY PCG-SR1/BP(Celeron 450MHz)上で 64MB メモリの場合、
+約200秒で Compact Flash KNOPPIX による KIOSK 端末が起動したそうです。
+ 
+takeda.toshiyuki> いまどきの他のソフトはどうでしょうか。
+どの程度のことをさせるかによりますね。
+OpenOffice.org などは重いアプリケーションの筆頭でしょう。
+一方で、KSEG などの数学ソフトウェアは、ものによっては
+軽いものもあり、使えるのではないかと思います。
+
+takeda.toshiyuki> OLPCの成果の移植を期待したいところです。
+takeda.toshiyuki> 
+takeda.toshiyuki> > 2. Squeak を教えることができる人材を現場で確保できるか？
+takeda.toshiyuki> 
+takeda.toshiyuki> これはなかなか大変でしょうが、Linuxベースの他のソフトも同じような状況ではないかと。。。
+
+はい、その通りです。
+ただ、例えば WebBrowser 単体の KIOSK 端末はどうでしょうか？
+操作方法については、特に問題なく使えますよね。
+漢字入力で多少とまどうかもしれませんが、大人が考えるよりも
+子供は普通に使いこなせるのではないかと思います。
+
+もっともネットワークが引かれているかどうかというのも、問題ですか…
+
+あと、さっき気づいたのですが、
+アルファシステムズの千葉さんがフォーラムの方に的確なコメントを書いていますね。
+メーリングリストには流れていないので、気づきませんでした。
+http://www.nabble.com/-Squeak-ja%3A-3317----tf2901155.html
+
+千葉さんが紹介している 「Open School Platform」プロジェクトについては、
+CEC の平成18年度Eスクエア・エボリューション成果発表会でも紹介されますので、
+よろしければ、是非、御覧ください。
+http://www.cec.or.jp/e2e/
+
+From abee ＠ squeakland.jp  Fri Jan 12 20:00:06 2007
+From: abee ＠ squeakland.jp (abee)
+Date: Thu Dec  6 11:03:42 2007
+Subject: Re: [Squeak-ja: 3319] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <8194173.post@talk.nabble.com>
+References: <45978224178.4A0EABEE@smtp.nifty.com>
+	<45978950.3010204@ca2.so-net.ne.jp>
+	<45979A17369.4A0FABEE@smtp.nifty.com>
+	<8194173.post@talk.nabble.com>
+Message-ID: <8296493.post@talk.nabble.com>
+
+
+ー、ノソキノエケ遉ヌ、ケ。」
+、マ、ク、皃゛、キ、ニ。「、ノ、ヲ、セ、隍惕キ、ッ、ェエ熙、、キ、゛、ケ。」
+
+ヒワツ熙ヒニ訌阿睦queak-jaメーリングリストについてご説明します。
+返信していただいたNabbleというシステムはSqueak-jaのサービスではなく、いつ
+の間にか勝手にフィードされるようになったものです。ここの書き込まれても他
+の参加者はそれを読むことができません。
+大変お手数ですが、以下からお手続きいただけますでしょうか。
+
+http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+
+よろしくお願いいたします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+-- 
+View this message in context: http://www.nabble.com/-Squeak-ja%3A-3317----tf2901155.html#a8296493
+Sent from the Squeak - Japan mailing list archive at Nabble.com.
+From abee ＠ squeakland.jp  Fri Jan 12 20:34:01 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3338] Re: C5 2007 参加登録開始！
+In-Reply-To: <45A6F1B5.2040601@acm.org>
+References: <45A65478164.A202ABEE@smtp.nifty.com> <45A6F1B5.2040601@acm.org>
+Message-ID: <45A77229B3.CBE8ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 12 Jan 2007 11:25:57 +0900
+Hideyuki Takada <htakada@acm.org> wrote:
+>先ほどようやくまとまり，公開しましたので，ご覧下さい。
+>
+>http://www.cm.is.ritsumei.ac.jp/c5-07/program.html
+
+ありがとうございます。
+
+# 今でも十分わかりますが、Keynote Talkのリンクはまだ切れているようです。
+
+>あと，すでに登録された方には順次直接ご案内しておりますが，３日目の午後に
+>立命館小学校と堀川高校のご協力により，両校を見学するバスツアーを企画して
+>います。当日飛び入りでも大丈夫なようにする予定ですが，バス予約の関係上，
+>参加ご希望の方は事前にお知らせ頂けますと助かります。（これから登録される
+>方は，登録フォームに参加希望を示す欄があります）
+
+これは具体的にはどのような内容なのでしょう。授業見学などあるのでしょうか。
+また、バスに乗らず自力でそれぞれの学校に行くことは可能でしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Fri Jan 12 20:44:15 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3339] Re: squeakland2006J???
+In-Reply-To: <67534BBD-FD9C-44BE-99DC-940C7143EB1A@st.rim.or.jp>
+References: <45A5D380.8020701@metatoys.org>
+	<67534BBD-FD9C-44BE-99DC-940C7143EB1A@st.rim.or.jp>
+Message-ID: <45A7748F37F.CBE9ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+山宮さん、林さん、いつもありがとうございます。
+
+2005Jリリース以降のアップデートをまとめたものを作ったほうが良いというのは、
+たぶん皆さん異論の無いところだと思います。
+また、全プラットホーム一斉という形でなくても、できたものから載せるという
+のも良いと思います。
+
+あとは名前ですが、
+
+On Thu, 11 Jan 2007 16:41:30 +0900
+Tetsuya HAYASHI <tetha@st.rim.or.jp> wrote:
+>パッケージ名は一応流れとして、Squeakland2006J でよろしいのではないでしょ
+>うか（ちょっと遅れてしまいましたが…）。
+
+私は今回のアップデートはメジャーなものでなく、プロジェクトファイルの互換
+性もあることから、2005Jは変更することなく、SP1とかで良いように思うのです
+が、いかがでしょうか。
+
+# 2007はなにかきっとべつのものがあるような気がします。かといって、2006も
+# ちょっと機を逸してしまったような。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Jan 13 00:10:12 2007
+From: yhousako ＠ mx2.ttcn.ne.jp (Yoshito Housako)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3340] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <C1CDD3E4.1944D%yhousako@mx2.ttcn.ne.jp>
+
+宝迫です．
+
+濱田先生、こちらでもお世話になります．m(_ _)m
+
+On 2007.1.12 1:13 PM, "Tatsuyoshi HAMADA"
+<hamada-squeak@holst.sm.fukuoka-u.ac.jp> wrote:
+> 個人的に聞いている限りで、現在、候補に上がっているのは
+> 1. Window Manager を XFCE4 などの軽いものにする。
+> 2. X 端末として再生する
+> 3. WebBrowser のみの KIOSK 端末として再利用する。
+
+Squeakについては、教育利用研究のMLで私がちょこっとだけ書きましたが、あまり詳
+しく説明をしておりませんでした．
+
+だいぶ前のKNOPPIX（Eduかな？）に、Squeakが入っていたと思います（うろ覚え）が、
+その後、何らかの理由ではずされたと記憶しています．個人的には復活を強く希望し
+ております．(^_^)
+
+一方で、こちらのMLで以前に話題になっていたSqueakNOSを使ってみるというのも考
+えられることかなと思っています．現状では、実用的ではありませんが、近い将来ま
+ともに使えるものになると信じて（祈って？）おります．
+（過去ログは下記からスレッドをたどってみてください．）
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003098.html
+
+SqueakNOSについては、下記をご覧ください．
+http://qml.610t.org/squeak/SqueakNOS.html
+
+> 特定のアプリケーションに特化した環境として、
+> Squeak を売り込んでいく価値は十分にあると思います。
+
+私も同様に考えております．
+
+> 問題点としては、
+> 1. ライセンス問題は解決するか？
+> 2. メモリが少ない古いマシンで Squeak が十分な速度で動くか？
+> 3. Squeak を教えることができる人材を現場で確保できるか？
+
+メモリについては、濱田先生も書かれている通り難しい問題ではないかと思います．
+やはり、HDにスワップが必要になるでしょう．本気で再生したいなら、HDよりも早い
+メディアにスワップを確保して使うなどの工夫が必要だと思います．
+＃技術的に可能でも、予算的に現実的ではないということではダメだと思いますが．
+
+Squeakを教えられる人材ということについては、かなり厳しいことと思われます．た
+だ、ネット上に様々な資料はあるし、「Squeakであそぼう」という子ども向けの本も
+あるので、むしろ子どもたちの方が、自分で学んでしまうのではないかと思います．
+＃それだけの魅力があるソフトだと思います．
+
+------------------------------------------------------------
+寳迫　芳人（ほうさこ　よしと）
+yhousako@mx2.ttcn.ne.jp
+
+
+
+From abee ＠ squeakland.jp  Sat Jan 13 00:42:04 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3341] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+References: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+	<6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+Message-ID: <45A7AC4C25E.CBEAABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 12 Jan 2007 17:10:45 +0900
+"Toshiyuki Takeda" <takeda.toshiyuki@gmail.com> wrote:
+>> 1. ライセンス問題は解決するか？
+>
+>この件は常に楽観的に見ているのでパスするとして、
+
+具体的にいつかと聞かれると分からないのですが、このMLでも報告されていたよ
+うに個々の開発者に確認が届いているということで、進展しているのは間違いな
+いと思います。
+
+>> 2. メモリが少ない古いマシンで Squeak が十分な速度で動くか？
+>
+>メモリはどれぐらい積んでるんでしょうか?
+>
+>128MBを期待していいものかどうか。64MBでもSqueakだけならなんとかなりますが、
+>いまどきの他のソフトはどうでしょうか。
+
+私のLibretto M3(Pentium 133MHz, 32MB RAM)でも動いてはいました。
+
+>OLPCの成果の移植を期待したいところです。
+
+大島さんや山宮さんからフォローがあると思いますが、OLPC(BTest-1)のスペッ
+クは以下の通りです。
+
+http://wiki.laptop.org/go/Hardware_specification
+
+CPUはAMD Geode GX-500@1.0Wの366 Mhz、メモリは 128MBで、この上でEToysをス
+トレス無く使えるようにブラッシュアップするのが私たちの目標です。私が実機
+を試したのは昨年の11月でしたが、その時点でもサクサクとまでは言えないまで
+も許容できるパフォーマンスでした。
+
+>> 2. Squeak を教えることができる人材を現場で確保できるか？
+>
+>これはなかなか大変でしょうが、Linuxベースの他のソフトも同じような状況ではないかと。。。
+
+OLPCが想定している環境では、これはもっと深刻です。これにはチュートリアル
+やサンプルプロジェクトを充実させることで対応しようと考えています。幸い、
+日本でも良いチュートリアルが出てきつつありますので、これを載せることはで
+きると思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sat Jan 13 00:52:31 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3342] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <45A7AC4C25E.CBEAABEE@smtp.nifty.com>
+References: <6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+	<45A7AC4C25E.CBEAABEE@smtp.nifty.com>
+Message-ID: <45A7AEBF171.CBECABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 13 Jan 2007 00:42:04 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>CPUはAMD Geode GX-500@1.0Wの366 Mhz、メモリは 128MBで、この上でEToysをス
+>トレス無く使えるようにブラッシュアップするのが私たちの目標です。私が実機
+>を試したのは昨年の11月でしたが、その時点でもサクサクとまでは言えないまで
+>も許容できるパフォーマンスでした。
+
+これは9月でした。すみません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Sat Jan 13 01:02:51 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3343] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <45A7AC4C25E.CBEAABEE@smtp.nifty.com>
+References: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+	<6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+	<45A7AC4C25E.CBEAABEE@smtp.nifty.com>
+Message-ID: <uy7o8qllg.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> >> 1. ライセンス問題は解決するか？
+> >
+> >この件は常に楽観的に見ているのでパスするとして、
+> 
+> 具体的にいつかと聞かれると分からないのですが、このMLでも報告されていたよ
+> うに個々の開発者に確認が届いているということで、進展しているのは間違いな
+> いと思います。
+
+  ライセンスでうるさいことを言っていたOLPCにも載っています。別に今まで
+のライセンスに本質的な問題があるわけでもないですし、新しいライセンスに
+変わるのも比較的近いことでしょう。
+
+> >OLPCの成果の移植を期待したいところです。
+> 
+> 大島さんや山宮さんからフォローがあると思いますが、OLPC(BTest-1)のスペッ
+> クは以下の通りです。
+> 
+> http://wiki.laptop.org/go/Hardware_specification
+> 
+> CPUはAMD Geode GX-500@1.0Wの366 Mhz、メモリは 128MBで、この上でEToysをス
+> トレス無く使えるようにブラッシュアップするのが私たちの目標です。私が実機
+> を試したのは昨年の11月でしたが、その時点でもサクサクとまでは言えないまで
+> も許容できるパフォーマンスでした。
+
+  B1は、実は256MBのメモリが載っています。新しいイメージとVMは遅いとこ
+ろをいくつかつぶしましたし、まあ良いのではないかと思います。LAにあるOpen
+SchoolのiMacで使い始めたころはもっと遅かったという話は聞きました。
+
+  というわけで、おそらくはOLPC用にカスタマイズしているEtoys用Squeakイ
+メージを載せてもらうように運動するのが良いのではないかと思います。
+
+-- Yoshiki
+
+From abee ＠ squeakland.jp  Sat Jan 13 01:03:54 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3344] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <20061231205530006660.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <45A7B16A2FA.CBEDABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 12 Jan 2007 13:13:10 +0900 (JST)
+Tatsuyoshi HAMADA <hamada-squeak@holst.sm.fukuoka-u.ac.jp> wrote:
+>それと、これは宣伝ですが、
+>KNOPPIX 教育利用研究会という組織のMLがあります。
+>http://www.knoppix-edu.org/
+>から手動で入会できます。
+>今回の件についても話し合われていますので、興味のある方、
+>Squeak を教育現場に普及させていきたいという方は、
+>是非御参加いただけると助かります。
+
+ありがとうございます。以前にも拝見したことがあったのですが、「新規登録」
+すると、新規ユーザの受付を行っていないとのことだったので躊躇していました。
+「お問い合わせ」でよろしいですか。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sat Jan 13 01:05:46 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3345] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <45A7B16A2FA.CBEDABEE@smtp.nifty.com>
+References: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+	<45A7B16A2FA.CBEDABEE@smtp.nifty.com>
+Message-ID: <45A7B1DA5C.CBEEABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 13 Jan 2007 01:03:54 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>ありがとうございます。以前にも拝見したことがあったのですが、「新規登録」
+>すると、新規ユーザの受付を行っていないとのことだったので躊躇していました。
+>「お問い合わせ」でよろしいですか。
+
+とちゃんと書いてありますね。ぼけまくりですみません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From matswra ＠ adgj.net  Sat Jan 13 10:44:43 2007
+From: matswra ＠ adgj.net (Matsuura まつうら（ひ）)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3346] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070112154416.1DEBC8466B@adgj.net>
+References: <20070112154416.1DEBC8466B@adgj.net>
+Message-ID: <45A8398B.1070300@adgj.net>
+
+まつうら＠アインシュタインプロジェクト　と申します
+投稿ははじめてです。
+
+> Date: Fri, 12 Jan 2007 13:13:10 +0900 (JST)
+> From: Tatsuyoshi HAMADA <hamada-squeak@holst.sm.fukuoka-u.ac.jp>
+> Subject: [Squeak-ja: 3334] Re: 教育用ＰＣ リナックスで再生
+
+> 福岡大学の濱田と申します。
+
+> 少し反応が遅くて申し訳ありませんが、
+> 「教育用PC リナックスで再生」についてです。
+:
+> それと、これは宣伝ですが、
+> KNOPPIX 教育利用研究会という組織のMLがあります。
+> http://www.knoppix-edu.org/
+> から手動で入会できます。
+> 今回の件についても話し合われていますので、興味のある方、
+> Squeak を教育現場に普及させていきたいという方は、
+> 是非御参加いただけると助かります。
+> よろしくお願いいたします。
+
+愛知県のとある地域の子供たちへの講習で中古PCを使って
+Squeakwareを題材にプログラミングに触れる講習などを
+行っております。
+
+「KNOPPIX 教育利用研究会」参加したいと思ってます。
+http://www.eng.tohoku-gakuin.ac.jp/knoppix/
+からの参加でいいでしょうか？
+
+
+--
+『未来のアインシュタインを育てます』
+　特定非営利活動法人　アインシュタインプロジェクト(ESP)　理事
+　　まつうら　ひろさと(松浦弘智)
+　　　　　　　　　　　http://www.einstein-project.gr.jp/
+　　個人メールはこちら　→matsu@moz.jp / SkypeID: matsuatbct
+
+    /|/|
+  =(_ _)=
+     |J)_/   cat cat.txt
+-------------------------------------------------------------------
+ .  .....
+:..:''..'　　　　　　　＊　　＊　　＊　　　　　　　　 hottokenai.jp
+-------------------------------------------------------------------
+pgp finger print = F1 1D 12 BF 0A C2 78 B0  3D 68 12 6F 42 42 26 FA
+-- Ad. --
+ - "ｅ"ろいろ　ｅラーニング　http://kyoto.zive.net/matsu/el/
+ - 人々＠地球なニュース--ContAct by OurPlanet-TV
+　　http://www.ourplanet-tv.org/main/contents/contact.html	
+
+
+
+
+From tak ＠ metatoys.org  Sat Jan 13 14:30:47 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3347] Re: squeakland2006J???
+In-Reply-To: <45A7748F37F.CBE9ABEE@smtp.nifty.com>
+References: <45A5D380.8020701@metatoys.org>	<67534BBD-FD9C-44BE-99DC-940C7143EB1A@st.rim.or.jp>
+	<45A7748F37F.CBE9ABEE@smtp.nifty.com>
+Message-ID: <45A86E87.1060300@metatoys.org>
+
+山宮です。
+
+Squeakland2005JSP1 もなかなかかっこいいですね。
+ところで SP1 はどういう意味ですか?
+
+一応 Squeakland2006J の名前の意図を書いておくと、開発されたのが2006年だからです。
+去年の物を今年出すのは単に私の怠慢です。すみません。
+
+あとスクイーク日本語8 を squeakland2005J に変更する時に、日本語7 と
+squeakland2005J では機能的にあまり変わってないし、無意味な数字を付けるよりは
+英語版との統合を契機に年数で呼べばよいのではないかと話した記憶があります。
+(メーリングリストでの議論でなく、スカイプなので私の誤解かもしれません)。
+
+他にご意見はありませんか?
+
+> On Thu, 11 Jan 2007 16:41:30 +0900
+> Tetsuya HAYASHI <tetha@st.rim.or.jp> wrote:
+>> パッケージ名は一応流れとして、Squeakland2006J でよろしいのではないでしょ
+>> うか（ちょっと遅れてしまいましたが…）。
+> 
+> 私は今回のアップデートはメジャーなものでなく、プロジェクトファイルの互換
+> 性もあることから、2005Jは変更することなく、SP1とかで良いように思うのです
+> が、いかがでしょうか。
+> 
+> # 2007はなにかきっとべつのものがあるような気がします。かといって、2006も
+> # ちょっと機を逸してしまったような。
+
+
+From takeda.toshiyuki ＠ gmail.com  Sat Jan 13 15:57:36 2007
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3348] Re: squeakland2006J???
+In-Reply-To: <45A7748F37F.CBE9ABEE@smtp.nifty.com>
+References: <45A5D380.8020701@metatoys.org>
+	<67534BBD-FD9C-44BE-99DC-940C7143EB1A@st.rim.or.jp>
+	<45A7748F37F.CBE9ABEE@smtp.nifty.com>
+Message-ID: <6544a1da0701122257x238abdd5lff08a73f9d490071@mail.gmail.com>
+
+みなさまご苦労さまです。
+
+On 1/12/07, Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 私は今回のアップデートはメジャーなものでなく、プロジェクトファイルの互換
+> 性もあることから、2005Jは変更することなく、SP1とかで良いように思うのです
+> が、いかがでしょうか。
+
+SP1にしてしまうと、パッチだけ入ってるように思うのは私だけでしょうか。
+Microsoftにならうなら、"2005J with SP1"がフルパッケージです。
+
+"2005J Release2"とかはどうでしょう。略して2005J R2。
+
+タケダトシユキ
+
+From htakada ＠ acm.org  Sat Jan 13 16:19:14 2007
+From: htakada ＠ acm.org (Hideyuki Takada)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3349] Re: C5 2007 参加登録開始！
+In-Reply-To: <45A77229B3.CBE8ABEE@smtp.nifty.com>
+References: <45A65478164.A202ABEE@smtp.nifty.com> <45A6F1B5.2040601@acm.org>
+	<45A77229B3.CBE8ABEE@smtp.nifty.com>
+Message-ID: <45A887F2.80200@acm.org>
+
+高田です。
+
+On 1/12/2007 8:34 PM, Kazuhiro ABE wrote:
+>> あと，すでに登録された方には順次直接ご案内しておりますが，３日目の午後に
+>> 立命館小学校と堀川高校のご協力により，両校を見学するバスツアーを企画して
+>> います。当日飛び入りでも大丈夫なようにする予定ですが，バス予約の関係上，
+>> 参加ご希望の方は事前にお知らせ頂けますと助かります。（これから登録される
+>> 方は，登録フォームに参加希望を示す欄があります）
+> 
+> これは具体的にはどのような内容なのでしょう。授業見学などあるのでしょうか。
+> また、バスに乗らず自力でそれぞれの学校に行くことは可能でしょうか。
+
+両校で，実際にコンピュータを使った授業・学習の様子を見学させて頂く事に
+なっています。入門管理などの関係で，原則としてこちらで提供するバスで参加
+して頂きたいと思っています。ちなみに，見学後は京都駅等へ17時頃にそのまま
+お送りすることができると思います。
+
+-- 
+Hideyuki Takada, Ph.D
+Department of Computer Science
+College of Information Science and Engineering, Ritsumeikan University
+
+From tetha ＠ st.rim.or.jp  Mon Jan 15 15:30:53 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3350] Mac版で作品名に全角スペースを用いた場合の問題
+Message-ID: <D79B7ED2-A921-49D5-82AE-82E494829B95@st.rim.or.jp>
+
+みなさん、こんにちは。
+林です。
+
+　新たに判明した、Mac 版特有のバグについて報告します。
+
+　作品名をつける際に、以下の条件だと作品の保存に失敗します。
+また全角スペース文字は実際にファイルを確認すると半角スペース文字になって
+しまいます。
+
+　原因はまだ不明ですが、全角スペースを使用すると発生しますので、回避策と
+しては全角スペースの代わりに半角スペースやハイフンなどを利用する方法など
+があげられるかと思います（ちょっと苦しいですが）。
+
+[条件]
+全角文字を半角2文字として換算し作品名が
+
+	"どこかに全角スペース + その他に半角22文字分以上ある場合"
+
+例えば、全角スペースを□、半角スペースを△で表すとして、○は保存可能、
+×は保存に失敗するパターンです。
+
+○：あいうえお□かきくけこ		(全角スペース + 半角20文字分)
+×：あいうえお□かきくけこさ		(全角スペース + 半角22文字分)
+○：あいうえお△かきくけこさ		(半角スペース + 半角22文字分)
+
+また全角スペースの出現場所はどこであっても同じ。文字数に依存。
+
+×：□あいうえおかきくけこさ		(全角スペース + 半角22文字分)
+×：あいうえおかきくけこさ□		(全角スペース + 半角22文字分)
+○：□あいうえおかきくけこ		(全角スペース + 半角20文字分)
+○：あいうえおかきくけこ□		(全角スペース + 半角20文字分)
+
+なお、全角スペースが含まれてなければ、全角半角関係無く24文字までの作品名
+が可能です。
+
+○：あいうえおかきくけこさしすせそたちつてとなにぬね	(全角24文字)
+×：あいうえおかきくけこさしすせそたちつてとなにぬねの	(全角25文字)
+○：あいうえお△かきくけこさしすせそたちつてとなにぬ	(半角スペース + 全角23文字)
+×：あいうえお□かきくけこさしすせそたちつてとなにぬ	(全角スペース + 全角23文字)
+
+ご注意ください。
+
+--
+林 徹也 Tetsuya HAYASHI 
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp  Mon Jan 15 18:18:21 2007
+From: hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3351] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <45A8398B.1070300@adgj.net>
+References: <20070112154416.1DEBC8466B@adgj.net>
+	<45A8398B.1070300@adgj.net>
+Message-ID: <20070115.181821.104032274.hamada@holst.sm.fukuoka-u.ac.jp>
+
+まつうら様、
+御返事が遅くなって申し訳ありません。
+
+matswra> 「KNOPPIX 教育利用研究会」参加したいと思ってます。
+matswra> http://www.eng.tohoku-gakuin.ac.jp/knoppix/
+matswra> からの参加でいいでしょうか？
+
+基本的には KNOPPIX教育利用研究会 事務局長が一人一人
+手作業で受け付けていますので、上記でも大丈夫だと思いますが、
+http://www.knoppix-edu.org/modules/contact/
+の方が新しいので、確実かもしれません。
+
+どうか、よろしくお願いいたします。
+
+matswra> 愛知県のとある地域の子供たちへの講習で中古PCを使って
+matswra> Squeakwareを題材にプログラミングに触れる講習などを
+matswra> 行っております。
+
+うらやましいです。
+どういうわけか、福岡県では Squeak に関する情報を聞かないのですが、
+私が気づいていないだけなのでしょうか、、、
+
+From abee ＠ squeakland.jp  Mon Jan 15 22:18:46 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3352] 福岡のスクイーク (was: Re: 教育用ＰＣ リナックスで再生  )
+In-Reply-To: <20070115.181821.104032274.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <45A8398B.1070300@adgj.net>
+	<20070115.181821.104032274.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <45AB7F36326.5271ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 15 Jan 2007 18:18:21 +0900 (JST)
+Tatsuyoshi HAMADA <hamada-squeak@holst.sm.fukuoka-u.ac.jp> wrote:
+>どういうわけか、福岡県では Squeak に関する情報を聞かないのですが、
+>私が気づいていないだけなのでしょうか、、、
+
+昨年6月に博多リバレインのロボスクエアでHPSSKのワークショップを行いました。
+記事中に「仮想ロボ」とありますが、これは「車の運転」の車をロボットに見立
+てたものです。
+今のところ単発イベントで終わってしまっているのですが、現地で続けていただ
+ける方がいらっしゃればありがたいです。
+
+仮想ロボ製作に挑戦　博多区で小中学生１８人
+http://blog.nishinippon.co.jp/news/2006/06/post_2cba.html
+
+HPスーパーサイエンスキッズでスクイーク体験！
+http://www.robosquare.org/news/index.php?mode=view&id=583&PHPSESSID=a954f5ce044e3c20523ca5f292f27c67
+
+2006年6月24日 13:00-17:00 福岡・ロボスクエア
+http://www.supersciencekids.com/workshop_report/20060624-2.html
+
+あと、九州まで範囲を広げると子ども向けではないですが2件ほど見つかりました。
+
+九州プログラミング研究会: 2004年 2月定例研究会
+http://www.kick4.net/tkk/tkk0402.html
+
+火の国情報シンポジウム2005
+A-6-3 013 VM生成システムの拡張による、Squeak VMへのメソッド配分プロファイラの実装
+http://www.mickey.ai.kyutech.ac.jp/~ipsj/event/sympo2005/program.html
+
+# Smalltalkにはゆかりのある土地なのですが。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Tue Jan 16 00:53:59 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3353] Re: squeakland2006J???
+In-Reply-To: <6544a1da0701122257x238abdd5lff08a73f9d490071@mail.gmail.com>
+References: <45A7748F37F.CBE9ABEE@smtp.nifty.com>
+	<6544a1da0701122257x238abdd5lff08a73f9d490071@mail.gmail.com>
+Message-ID: <45ABA397236.5273ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 13 Jan 2007 15:57:36 +0900
+"Toshiyuki Takeda" <takeda.toshiyuki@gmail.com> wrote:
+>SP1にしてしまうと、パッチだけ入ってるように思うのは私だけでしょうか。
+>Microsoftにならうなら、"2005J with SP1"がフルパッケージです。
+>
+>"2005J Release2"とかはどうでしょう。略して2005J R2。
+
+そうですね。私も賛成です。
+
+1月中はちょっとばたばたするので、2月にSqueakland.jpにアップという事でよろ
+しいですか。山宮さん、皆さん。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From miyasaka ＠ iris.dti.ne.jp  Tue Jan 16 01:23:30 2007
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3354] 発表者募集開始！　研究発表会（C4） 2月10日
+Message-ID: <4b24f0d0701150823m3cb4085ejb965d514afffaa69@mail.gmail.com>
+
+squeak-jaの皆様へ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+先般お知らせさせていただいた「スクイークを活用した教育の研究発表会（C4）」の参加者募集を開始しました。
+
+日時：2007年2月10日（土） 10:30〜13:30　（3時間）
+場所：東京（秋葉原）
+
+参加申し込みはこちらからどうぞ。
+http://www.squeakland.jp/sqmedia/20070210C4.html
+
+たくさんの方のご来場をお待ちしております。
+瓜谷さん、阿部さん、補足があればお願します！
+
+---------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+http://mts-j.hiho.jp/
+---------------------------------------------
+
+From hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp  Tue Jan 16 17:18:19 2007
+From: hamada-squeak ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3355] Re: 福岡のスクイーク
+In-Reply-To: <45AB7F36326.5271ABEE@smtp.nifty.com>
+References: <45A8398B.1070300@adgj.net>
+	<20070115.181821.104032274.hamada@holst.sm.fukuoka-u.ac.jp>
+	<45AB7F36326.5271ABEE@smtp.nifty.com>
+Message-ID: <20070116.171819.48823917.hamada@holst.sm.fukuoka-u.ac.jp>
+
+濱田＠福大です。
+
+阿部様、情報ありがとうございます。
+
+hamada>どういうわけか、福岡県では Squeak に関する情報を聞かないのですが、
+hamada>私が気づいていないだけなのでしょうか、、、
+
+abee> 昨年6月に博多リバレインのロボスクエアでHPSSKのワークショップを行いました。
+abee> 記事中に「仮想ロボ」とありますが、これは「車の運転」の車をロボットに見立
+abee> てたものです。
+abee> 今のところ単発イベントで終わってしまっているのですが、現地で続けていただ
+abee> ける方がいらっしゃればありがたいです。
+
+先日も、ロボスクエアには遊びに行って、
+ヒューマノイドカップを観戦してきたのですが、
+過去にSqueak のワークショップが開かれていたとは、、、
+もし、次回、行われることがあれば、是非子供といっしょに参加したいと思います。
+今後、このようなイベントが、各地域で継続して行われると良いですね。
+
+From k.suzaki ＠ aist.go.jp  Wed Jan 17 11:52:47 2007
+From: k.suzaki ＠ aist.go.jp (Kuniyasu Suzaki)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3356] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+References: <20061231205530006660.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+	<6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+Message-ID: <20070117.115247.74723222.k.suzaki@aist.go.jp>
+
+
+須崎です。亀レスですみません。
+
+ >>From: Kazuhiro ABE <abee@squeakland.jp>
+ >>Subject: [Squeak-ja: 3317] 教育用ＰＣ リナックスで再生
+ >>
+ >>阿部@新百合です。
+ >>
+ >>この画面を見る限り、ディストリビューションはKNOPPIXのように見えます。
+ >>KNOPPIXといえば、武田さん、須崎さんがSqueak入りのバージョンを作られたこと
+ >>もありました。
+
+その節はお世話になりました。
+
+ >>From: "Toshiyuki Takeda" <takeda.toshiyuki@gmail.com>
+ >>Subject: [Squeak-ja: 3335] Re: 教育用ＰＣ リナックスで再生
+ >>
+ >>武田です。
+ >>
+ >>
+ >>OLPCの成果の移植を期待したいところです。
+
+いま、Linux Conf Australia に参加しているのですが、OLPCが持ち込まれて
+フレースペースで使っている人がいます。ちょっと触らせてもらったのですが、
+小さく軽く、使いやすそうですね。ただキーボードが小さいのとCPUパワーの
+少なそうなのは気になりました。
+
+Making Sausage:How the OLPC Machine was designed 
+   Jim Gettys
+
+Tutorial: OLPC suger UI Tutoral
+  Christopher Blizzard
+
+http://lca2007.linux.org.au/Programme
+
+があるので聞くつもりです。面白ければ報告します。
+
+ >>> 2. Squeak を教えることができる人材を現場で確保できるか？
+ >>
+ >>これはなかなか大変でしょうが、Linuxベースの他のソフトも同じような状況ではないかと。。。
+
+はい。KNOPPIXでも人材不足です。これが一番の問題。
+
+----
+suzaki
+
+From yoshiki ＠ squeakland.org  Wed Jan 17 12:04:32 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3357] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070117.115247.74723222.k.suzaki@aist.go.jp>
+References: <20061231205530006660.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+	<6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+	<20070117.115247.74723222.k.suzaki@aist.go.jp>
+Message-ID: <u1wluqrpb.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> いま、Linux Conf Australia に参加しているのですが、OLPCが持ち込まれて
+> フレースペースで使っている人がいます。ちょっと触らせてもらったのですが、
+> 小さく軽く、使いやすそうですね。ただキーボードが小さいのとCPUパワーの
+> 少なそうなのは気になりました。
+
+  キーボードは意外となれるものですよ。15分くらい意識して使っていると、
+その後大分使えるようになります。B1のキーボードはスペースやエンターキー
+など大きいものが反応しないことがあるのでまだ現実に引き戻されることもあ
+りますが。
+
+  OLPC版のEtoysは大分改良してありますので使い出があると思います。
+
+> Making Sausage:How the OLPC Machine was designed 
+>    Jim Gettys
+> 
+> Tutorial: OLPC suger UI Tutoral
+>   Christopher Blizzard
+> 
+> http://lca2007.linux.org.au/Programme
+>
+> があるので聞くつもりです。面白ければ報告します。
+	
+  あー、彼らはこれに行っていたのですか。締め切り前なのに。機会があった
+ら、JimとChrisによろしくお伝えください。
+
+-- Yoshiki
+
+From abee ＠ squeakland.jp  Wed Jan 17 13:07:27 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:42 2007
+Subject: [Squeak-ja: 3358] 1/30 に津でアラン・ケイ博士の講演
+Message-ID: <45ADA0FF3CC.6DE8ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+1/30に三重県津市でアラン・ケイ博士の講演があるようです。
+参加費は1,000円、応募はFAXで締め切りは1/24とのことです。
+
+https://portal.mie-u.ac.jp/moodle/
+http://www.info.city.tsu.mie.jp/modules/news1/index.php
+http://www.greaternagoya.org/img/070112_FS_Press_new.pdf
+
+>グレーター・ナゴヤ・イニシアティブ・シンポジウムin 津
+>「世界連携型ユビキタス産業クラスター」のご案内
+>〜食・農・環境、そして教育の課題解決に向けたセンサーネットワークの応用〜
+>
+>グレーター・ナゴヤ・イニシアティブ協議会（GNIC）は、日本貿易振興機構（ジェトロ）ととも
+>に、グレーター・ナゴヤ・イニシアティブ・シンポジウムin 津 「世界連携型ユビキタス産業クラ
+>スター」を開催します。シンポジウムでは、誰もが使えるコンピュータの未来像を追求する世界的に
+>著名なアラン・ケイ博士を招き、ユビキタス社会の可能性について講演いただくほか、センサーネッ
+>トワーク関連の外国企業のプレゼンテーションがございます。また、翌日には外国企業との商談会も
+>ございます。是非ご参加ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From k.suzaki ＠ aist.go.jp  Wed Jan 17 17:12:45 2007
+From: k.suzaki ＠ aist.go.jp (Kuniyasu Suzaki)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3359] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <u1wluqrpb.wl%yoshiki@squeakland.org>
+References: <6544a1da0701120010oee60eaflfbc38aeda4199198@mail.gmail.com>
+	<20070117.115247.74723222.k.suzaki@aist.go.jp>
+	<u1wluqrpb.wl%yoshiki@squeakland.org>
+Message-ID: <20070117.171245.74723648.k.suzaki@aist.go.jp>
+
+
+須崎です。
+
+Making Sausage:How the OLPC Machine was designed 
+  Jim Gettys
+の講演を聴いてきました。面白かったです。
+
+技術的にはディスプレイと電源管理が肝のようですね。ディスプレイは教科書
+の置き換えといくことで高解像度(1200x900 200DPI)なのでかなりがんばって
+います。デュアルモードでモノクロ(Reflective)とカラー(Transmissive)が切
+り替えられるのですね。戸外でも判りやすいとThinkPADとの比較の写真がでました。
+電源もバックライトをつけて1W, つけなくて 0.2Wとかなりのもんです。
+
+BIOSもLinuxBIOSと言うことで ACPIがないということでした。これ無しで電源
+管理をするとなると通常のPCとは異なる電源管理をしそうですね。まあ、CPU
+がARM9コアなので通常のPCとはまったく違いますが。
+
+UI はGTK+/Pango/ATK/Cairo stack で構成されていてこれらをPythonで管理す
+るということと。あと面白かったのは、でかいアプリケーションは走らせるな
+と言う発表は受けていました。
+
+明日の発表も聞いて余力があれば:-) 報告します。
+
+------
+suzaki
+
+ >>From: Yoshiki Ohshima <yoshiki@squeakland.org>
+ >>Subject: [Squeak-ja: 3357] Re: 教育用ＰＣ リナックスで再生
+ >>
+ >>  大島です。
+ >>
+ >>> いま、Linux Conf Australia に参加しているのですが、OLPCが持ち込まれて
+ >>> フレースペースで使っている人がいます。ちょっと触らせてもらったのですが、
+ >>> 小さく軽く、使いやすそうですね。ただキーボードが小さいのとCPUパワーの
+ >>> 少なそうなのは気になりました。
+ >>
+ >>  キーボードは意外となれるものですよ。15分くらい意識して使っていると、
+ >>その後大分使えるようになります。B1のキーボードはスペースやエンターキー
+ >>など大きいものが反応しないことがあるのでまだ現実に引き戻されることもあ
+ >>りますが。
+ >>
+ >>  OLPC版のEtoysは大分改良してありますので使い出があると思います。
+ >>
+ >>> Making Sausage:How the OLPC Machine was designed 
+ >>>    Jim Gettys
+ >>> 
+ >>> Tutorial: OLPC suger UI Tutoral
+ >>>   Christopher Blizzard
+ >>> 
+ >>> http://lca2007.linux.org.au/Programme
+ >>>
+ >>> があるので聞くつもりです。面白ければ報告します。
+ >>	
+ >>  あー、彼らはこれに行っていたのですか。締め切り前なのに。機会があった
+ >>ら、JimとChrisによろしくお伝えください。
+ >>
+ >>-- Yoshiki
+ >>
+
+From chibad ＠ alpha.co.jp  Wed Jan 17 23:37:31 2007
+From: chibad ＠ alpha.co.jp (Daisaku CHIBA)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3360] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <C1CDD3E4.1944D%yhousako@mx2.ttcn.ne.jp>
+References: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+	<C1CDD3E4.1944D%yhousako@mx2.ttcn.ne.jp>
+Message-ID: <20070117233537.9614.CHIBAD@alpha.co.jp>
+
+はじめまして、千葉と申します。 
+
+KNOPPIX Eduシリーズの開発者の1名です。 
+正月休みに、NHKニュースのWeb上の反応を探していたら、
+このMLのアーカイブを見つけて、Web上だけで投稿して、
+MLに流れなかったようです。大変失礼しました。
+
+では本題ということで、再送します。
+
+------
+まず、件のニュースについて。 
+これはリークもので、PC再生をどのディストリビューションで行うかから始まって、 
+何の決定事項もありません。現在、明らかなのは、以下の2点だけだと思います。 
+・経済産業省はOSSの教育利用を普及させたいと思っている。 
+・OSSの教育利用では、KNOPPIXは結構メジャーな存在になってきている。 
+
+次に、初等中等教育向けについての話ですが、 
+ご指定の通り、KNOPPIX Eduは大学向けにカスタマイズしてます。 
+（一部、工業高校や高専でも利用できるかとは思いますが） 
+
+現在、Open School Platformプロジェクトという 
+事業が進められていて、そこで初等中等教育用のパッケージも作成していますので、 
+3月以降、また違った流れを作ることになる予定です。 
+
+最後に、KNOPPIXにSqueakを入れることについてです。 
+KNOPPIX側からすれば、 
+「各アプリケーションは、是非KNOPPIXをデリバリーツールとしてうまく活用して下さい。」 
+という立場ですので、ウェルカムです。 
+＃須崎さんの作成したSqueak KNOPPIXの作成にも参加していました。 
+
+KNOPPIX Edu 6は3月リリースに向けて、作成を開始するところです。 
+Squeakを入れる事も可能ですし、魅力的だと感じていますが、これまで断念してきました。 
+理由は明確に、以下2点ですので、特に1点目が解消するようであれば、非常に嬉しいニュースです。 
+・アップルライセンス問題 
+・容量問題（他のアプリとの兼ね合いでCDのサイズに収めきるための取捨選択） 
+
+
+
+以上
+
+-- 
+ 千葉大作  mailto:chibad@alpha.co.jp  tel:+81-44-738-4125
+ （株）アルファシステムズ 
+ 経営企画本部技術推進部第二システム研究課
+
+From yoshiki ＠ squeakland.org  Thu Jan 18 11:48:44 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3361] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070117233537.9614.CHIBAD@alpha.co.jp>
+References: <20070112.131310.78722588.hamada@holst.sm.fukuoka-u.ac.jp>
+	<C1CDD3E4.1944D%yhousako@mx2.ttcn.ne.jp>
+	<20070117233537.9614.CHIBAD@alpha.co.jp>
+Message-ID: <uhcupoxrn.wl%yoshiki@squeakland.org>
+
+  千葉さんこんにちは
+
+> 最後に、KNOPPIXにSqueakを入れることについてです。 
+> KNOPPIX側からすれば、 
+> 「各アプリケーションは、是非KNOPPIXをデリバリーツールとしてうまく活用して下さい。」 
+> という立場ですので、ウェルカムです。 
+> ＃須崎さんの作成したSqueak KNOPPIXの作成にも参加していました。 
+> 
+> KNOPPIX Edu 6は3月リリースに向けて、作成を開始するところです。 
+> Squeakを入れる事も可能ですし、魅力的だと感じていますが、これまで断念してきました。 
+> 理由は明確に、以下2点ですので、特に1点目が解消するようであれば、非常に嬉しいニュースです。 
+> ・アップルライセンス問題 
+> ・容量問題（他のアプリとの兼ね合いでCDのサイズに収めきるための取捨選択） 
+
+  1点目は事実上すでに解消していますし、特に3月までには本当に解決してい
+ることと思います(再び書きますと、もともと問題ではなかったわけですが)。
+
+  2点目はどの程度のサイズを目指すかにもよりますが、OLPCはCDサイズより
+も小さいところでばっちりEtoys(Squeak)が入っていますので(余裕もたっぷり
+ありますが)、まあ問題にはならないでしょう。現在は比較的ゆったりと20MB
+程度のファイルスペースを使っていると思いますが、必要であれば不必要なも
+のを削るとともに、ディスク上に置かれたイメージをgzipかpkzipで圧縮して
+おくことにより、10MB以下には小さくすることはできると思います。
+
+  というわけで、また何か動きがありましたらぜひとも教えてください。よろ
+しくお願いします。
+
+-- Yoshiki
+
+From k.suzaki ＠ aist.go.jp  Thu Jan 18 17:26:56 2007
+From: k.suzaki ＠ aist.go.jp (Kuniyasu Suzaki)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3362] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070117.171245.74723648.k.suzaki@aist.go.jp>
+References: <20070117.115247.74723222.k.suzaki@aist.go.jp>
+	<u1wluqrpb.wl%yoshiki@squeakland.org>
+	<20070117.171245.74723648.k.suzaki@aist.go.jp>
+Message-ID: <20070118.172656.74725375.k.suzaki@aist.go.jp>
+
+
+須崎です。LCAの続報です。
+
+メイルで仕事が入って "OLPC suger UI Tutoral" by Christopher Blizzard
+は参加できませんでした。;_;
+が、OpenDayの展示でOLPCを触らせてもらいました。電源ボタンで簡単にシャッ
+トダウンできました。ブートの時間を測定したところGUIが使えるまで 1m50s 
+でした。子供は待てないのでは？まだまだ工夫のしがいがありそう。
+
+また、現在のkernel は 2.6.19だったので最新のものを使っています。Fedora
+の文字もブートのときに見えました。:-)
+
+------
+suzaki
+
+ >>From: Kuniyasu Suzaki <k.suzaki@aist.go.jp>
+ >>Subject: [Squeak-ja: 3359] Re: 教育用ＰＣ リナックスで再生
+ >>
+ >>
+ >>須崎です。
+ >>
+ >>Making Sausage:How the OLPC Machine was designed 
+ >>  Jim Gettys
+ >>の講演を聴いてきました。面白かったです。
+ >>
+ >>技術的にはディスプレイと電源管理が肝のようですね。ディスプレイは教科書
+ >>の置き換えといくことで高解像度(1200x900 200DPI)なのでかなりがんばって
+ >>います。デュアルモードでモノクロ(Reflective)とカラー(Transmissive)が切
+ >>り替えられるのですね。戸外でも判りやすいとThinkPADとの比較の写真がでました。
+ >>電源もバックライトをつけて1W, つけなくて 0.2Wとかなりのもんです。
+ >>
+ >>BIOSもLinuxBIOSと言うことで ACPIがないということでした。これ無しで電源
+ >>管理をするとなると通常のPCとは異なる電源管理をしそうですね。まあ、CPU
+ >>がARM9コアなので通常のPCとはまったく違いますが。
+ >>
+ >>UI はGTK+/Pango/ATK/Cairo stack で構成されていてこれらをPythonで管理す
+ >>るということと。あと面白かったのは、でかいアプリケーションは走らせるな
+ >>と言う発表は受けていました。
+ >>
+ >>明日の発表も聞いて余力があれば:-) 報告します。
+ >>
+ >>------
+ >>suzaki
+ >>
+ >> >>From: Yoshiki Ohshima <yoshiki@squeakland.org>
+ >> >>Subject: [Squeak-ja: 3357] Re: 教育用ＰＣ リナックスで再生
+ >> >>
+ >> >>  大島です。
+ >> >>
+ >> >>> いま、Linux Conf Australia に参加しているのですが、OLPCが持ち込まれて
+ >> >>> フレースペースで使っている人がいます。ちょっと触らせてもらったのですが、
+ >> >>> 小さく軽く、使いやすそうですね。ただキーボードが小さいのとCPUパワーの
+ >> >>> 少なそうなのは気になりました。
+ >> >>
+ >> >>  キーボードは意外となれるものですよ。15分くらい意識して使っていると、
+ >> >>その後大分使えるようになります。B1のキーボードはスペースやエンターキー
+ >> >>など大きいものが反応しないことがあるのでまだ現実に引き戻されることもあ
+ >> >>りますが。
+ >> >>
+ >> >>  OLPC版のEtoysは大分改良してありますので使い出があると思います。
+ >> >>
+ >> >>> Making Sausage:How the OLPC Machine was designed 
+ >> >>>    Jim Gettys
+ >> >>> 
+ >> >>> Tutorial: OLPC suger UI Tutoral
+ >> >>>   Christopher Blizzard
+ >> >>> 
+ >> >>> http://lca2007.linux.org.au/Programme
+ >> >>>
+ >> >>> があるので聞くつもりです。面白ければ報告します。
+ >> >>	
+ >> >>  あー、彼らはこれに行っていたのですか。締め切り前なのに。機会があった
+ >> >>ら、JimとChrisによろしくお伝えください。
+ >> >>
+ >> >>-- Yoshiki
+ >> >>
+ >>
+
+From yoshiki ＠ squeakland.org  Thu Jan 18 17:29:15 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3363] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070118.172656.74725375.k.suzaki@aist.go.jp>
+References: <20070117.115247.74723222.k.suzaki@aist.go.jp>
+	<u1wluqrpb.wl%yoshiki@squeakland.org>
+	<20070117.171245.74723648.k.suzaki@aist.go.jp>
+	<20070118.172656.74725375.k.suzaki@aist.go.jp>
+Message-ID: <u7ivkpwkk.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> メイルで仕事が入って "OLPC suger UI Tutoral" by Christopher Blizzard
+> は参加できませんでした。;_;
+> が、OpenDayの展示でOLPCを触らせてもらいました。電源ボタンで簡単にシャッ
+> トダウンできました。ブートの時間を測定したところGUIが使えるまで 1m50s 
+> でした。子供は待てないのでは？まだまだ工夫のしがいがありそう。
+
+  いちおう、ブートの時間はまだ短縮する努力がそれほど払われていないとと
+もに(KNOPPIXでのノウハウは相当に役に立ちそうですね^^)、通常はサスペン
+ドとリジュームを繰り返すという使い方になるようにするので、「ブー
+トの時間は短くなるし、たぶん実際にブートする機会は比較的少ない」という
+ことだと思います。
+
+> また、現在のkernel は 2.6.19だったので最新のものを使っています。Fedora
+> の文字もブートのときに見えました。:-)
+
+  そうですね、OLPC発祥の最近の変更も比較的早く取り込まれているようです。
+まだまだカーネルレベルのところも変わっているので先は長い感じでもあり
+ますが。
+
+  報告ありがとうございます。
+
+-- Yoshiki
+
+
+From abee ＠ squeakland.jp  Fri Jan 19 01:35:20 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3364] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070117.171245.74723648.k.suzaki@aist.go.jp>
+References: <u1wluqrpb.wl%yoshiki@squeakland.org>
+	<20070117.171245.74723648.k.suzaki@aist.go.jp>
+Message-ID: <45AFA1C81E5.3DE9ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+その節はお世話になりました。
+
+On Wed, 17 Jan 2007 17:12:45 +0900 (JST)
+Kuniyasu Suzaki <k.suzaki@aist.go.jp> wrote:
+>BIOSもLinuxBIOSと言うことで ACPIがないということでした。これ無しで電源
+>管理をするとなると通常のPCとは異なる電源管理をしそうですね。まあ、CPU
+>がARM9コアなので通常のPCとはまったく違いますが。
+
+B1のCPUはx86系のAMD Geode GX-500@1.0Wだと思います。
+組込用の低消費電力型のやつですね。
+
+http://wiki.laptop.org/go/Hardware_specification
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Fri Jan 19 01:47:37 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3365] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <45AFA1C81E5.3DE9ABEE@smtp.nifty.com>
+References: <u1wluqrpb.wl%yoshiki@squeakland.org>
+	<20070117.171245.74723648.k.suzaki@aist.go.jp>
+	<45AFA1C81E5.3DE9ABEE@smtp.nifty.com>
+Message-ID: <u1wlsp9hy.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> On Wed, 17 Jan 2007 17:12:45 +0900 (JST)
+> Kuniyasu Suzaki <k.suzaki@aist.go.jp> wrote:
+> >BIOSもLinuxBIOSと言うことで ACPIがないということでした。これ無しで電源
+> >管理をするとなると通常のPCとは異なる電源管理をしそうですね。まあ、CPU
+> >がARM9コアなので通常のPCとはまったく違いますが。
+> 
+> B1のCPUはx86系のAMD Geode GX-500@1.0Wだと思います。
+> 組込用の低消費電力型のやつですね。
+> 
+> http://wiki.laptop.org/go/Hardware_specification
+
+  ちなみに、ARMコアなのは、ワイヤレス用のチップセットです。本体のCPUが
+眠っていてもワイヤレスネットワークだけは使えるように、別系統になってい
+ます。
+
+  将来的には、Geode GXから変わっていく可能性も高いですが、x86系にして
+おく意義も残念ながらありますね。普通のFedora Core用RPMがそのまま動きま
+すし。
+
+-- Yoshiki
+
+
+From tetha ＠ st.rim.or.jp  Sun Jan 21 15:24:37 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3366] 音量ボリュームをいじるタイル
+Message-ID: <0886310D-727C-47E8-A866-A6A724333D8E@st.rim.or.jp>
+
+みなさん、こんにちは。
+林です。
+
+　音量ボリュームをいじるタイルを追加してみました。
+一つ一つのモーフごとに音量を設定できます。
+「音を鳴らす（ゲコゲコ）」や「指定した音を鳴らす（周波数）」の音量が対象
+になります。
+また、左右のスピーカーごとの音量を設定することも可能です。
+
+[サンプルプロジェクト]
+http://squeakland.jp/seaside/SBSuperSwiki/90a17d80-5893-4a2f-824b-b985e98f3e1b
+
+（元々は世界聴診器用に作ってたのですが、気付いたら普通のイメージでも読み
+込めるようになってましたので、そのままロードできるはずです。
+チェンジセットもすでに含まれてます）
+
+チェンジセットだけならこちら
+http://magicbasket.jp/Etoys/3
+
+では。
+
+--
+林 徹也 Tetsuya HAYASHI 
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From mutoh ＠ openedu.org  Sun Jan 21 17:27:02 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3367] 3.9-8VM用のSqueakImmX11Pluginパッチ
+Message-ID: <867ivghjjd.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+3.9-7VMから3.9-8VMの間でALSAサポートとか大いに変わっていて、焦っている
+今日この頃です。
+# なんか、OSS回りのconfigure回りの変更がおかしいような…
+
+3.9-7VMまでは、SqueakImmX11Plugin3a.tar.gzが使えたのですが、3.9-8VMで
+は若干変更しないと使えないようです。
+
+で、手元でちょっと試してみたものを
+	http://squeak.610t.org/patches/test/SqueakImmX11Plugin3.9-8.tar.gz
+として置いてあります。
+パッチ部分(ImmX11.patch)しか手を入れてませんが、手元の私家版FreeBSD
+portsでは動いているようです。
+
+他の環境でもお試しいただいて、ご意見いただければうれしいです。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From umejava ＠ mars.dti.ne.jp  Sun Jan 21 19:08:09 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3368] Seasideチュートリアルの資料を置きました
+Message-ID: <JW2007012119080912.31397203@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて「Squeakers' Night in 未来パーティ 2.0」が、いよいよ今週の土曜日と
+なりました。
+http://swikis.ddo.jp/umejava/38
+
+Seasideチュートリアルも、ほぼできあがりました。
+
+資料およびサンプルコードを公開します。(必要な方は各自印刷をお願いします)
+ftp://swikis.ddo.jp/SeasideJ/lesson/SeasideTutorial20070121.zip
+
+さらに上記を含んだSeasideJOne特別版もリリースします。(SeasideJOnePlus!)
+ftp://swikis.ddo.jp/SeasideJ/one/SeasideJOne-070105-plus.zip
+http://swikis.ddo.jp/umejava/41
+
+チュートリアルに参加される方は、SeasideJOnePlusをノートPCに入れておくと、
+すべてがそろっているので非常に便利です。
+(また、参加できない方も自習用に最適です)
+
+ではでは。当日お会いしましょう。
+
+---
+[:masashi | ^umezawa]
+
+From kuwatani ＠ akademia.co.jp  Tue Jan 23 09:45:03 2007
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3369] サーバーメンテナンスのお知らせ
+Message-ID: <45B55A8F.8080203@akademia.co.jp>
+
+Squeak-jaにご参加のみなさま
+
+メーリングリストの管理をしている 桑谷 です．
+
+下記の日程にて，メーリングリストを運用しておりますサーバーの
+メンテナンスを行います．作業の間メーリングリストがご利用いただけない
+場合があります．よろしくお願い申し上げます．
+
+                               記
+
+  日時：1月28日(日) 9:00〜15:00
+  対象：squeak-jaメーリングリスト
+  内容：運用サーバーのメンテナンス
+
+                                                        以上
+----
+桑谷 剛史
+kuwatani@akademia.co.jp
+
+
+
+From shortsleeved ＠ mac.com  Tue Jan 23 22:04:25 2007
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3370] Re: Squeakers' Night in 未来パーティ 2.0
+In-Reply-To: <JC200611302340036.10096515@mars.dti.ne.jp>
+References: <JC200611302340036.10096515@mars.dti.ne.jp>
+Message-ID: <006BC71B-274A-4DD5-880F-DED3F087A729@mac.com>
+
+こんにちは、shortsleevedです。
+間際になってすみませんが、参加させてください。
+よろしくお願いします。
+
+
+On 2006/11/30, at 23:40, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> さて、関西オープンソース2006での盛り上がりもつかの間、来 
+> 年にはまたまた
+> Squeaker達の集まりが開催できる運びとなりました。
+>
+> その名も「Squeakers' Night in 未来パーティ 2.0」で 
+> す。
+> http://swikis.ddo.jp/umejava/38
+>
+> 今回はアキバテクノクラブさんが主催です。
+> http://www.akiba-sangaku.jp/
+>
+> 場所及び日程:
+> 2007/01/27(土) 秋葉原ダイビル5Fアキバテクノクラブ
+>
+> スケジュール:
+> 16:00 BOF
+> 17:00 集合・準備
+> 17:30-18:20 Seasideチュートリアル(梅澤)
+> 18:20-18:40 万かつサンド・名刺交換など
+> 18:40-20:30 発表・ディスカッション
+> 20:30-21:00 かたづけ
+>
+> 長めです。今年の目玉はSeasideチュートリアルです。まだマ 
+> テリアルができて
+> いませんが、正月にがんばって作ります。
+>
+> もちろん万かつサンドもでます! (差し入れも歓迎します)
+>
+> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希 
+> 望の方はこの
+> MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思 
+> います。
+>
+> 発表者も募集しています。下記のサイトに直接書き込みをお願いしま 
+> す。
+> http://swikis.ddo.jp/umejava/38
+>
+> なお、当日は、アキバテクノクラブさんで準備中のSNSへのメ 
+> ンバー登録がある
+> そうです。名前とメールアドレス程度の簡単なものだそうですので、 
+> お気軽にお考え
+> ください。
+>
+> それではよろしくお願い申し上げます。
+>
+> ---
+> [:masashi | ^umezawa]
+
+
+From turkey ＠ crew.sfc.keio.ac.jp  Wed Jan 24 18:57:48 2007
+From: turkey ＠ crew.sfc.keio.ac.jp (okada ken)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3371] SuperSwiki2の使い方
+Message-ID: <20070124184351.1294.TURKEY@crew.sfc.keio.ac.jp>
+
+慶應大学の岡田です。
+
+SuperSwiki2 を使ってウェブページを作りたいと思っているのですが、基本的な
+操作方法が分からなくて困っています。どなたか設定方法を教えてくださると助
+かります。
+
+やりたいのは SuperSwiki2 を使って、ウェブを wiki のように編集が出来て、
+簡単な掲示板が作れて、さらに Squeak プロジェクトのアップロード機能を使い
+たいと思っています。
+
+そのためにいくつかのウェブサイトを見てみたのですが、SuperSwiki2 を使って
+wiki編集をしているページが見つかりませんでした（探し方が足りないだけかも
+知れませんが…）。その代わり ComSwiki を使ってwikiページを作り、
+SuperSwiki2 でプロジェクト置き場を作ってリンクしている例がいくつか見られ
+ました（例えば阿部さんのページhttp://swikis.ddo.jp/abee）。
+
+
+
+私はとりあえず SuperSwiki2 で wiki 機能を使ってみたいのですが、簡単な方
+法はあるのでしょうか？あったら教えていただけると助かります。また、
+SuperSwiki2 について「このページを見れば分かるよ」というウェブや書籍があ
+りましたら教えてください。
+
+
+以上、よろしくお願いします。
+
+ＰＳ：
+Squeak を使わなくても wiki ページは作れるから、そこからプロジェクト置き
+場（SuperSwiki2）へのリンクを貼ればいいのですが…。せっかくだから Swiki 
+を使ってみたいやん、という気分なのです（笑）。
+
+-- 
+okada ken <turkey@crew.sfc.keio.ac.jp>
+
+
+From kawa90 ＠ yahoo.co.jp  Wed Jan 24 22:17:23 2007
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3372] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <867ivghjjd.wl%mutoh@openedu.org>
+References: <867ivghjjd.wl%mutoh@openedu.org>
+Message-ID: <45B75C63.5030303@yahoo.co.jp>
+
+川村です。
+
+遅れましたが、Linux(Ubuntu 6.10)でビルド実行しました。残念ながら、わたし
+の環境ではキー入力した段階でSegmentation faultとなってしまいました。
+環境は次の通りです。
+Linux(Ubuntu 6.10),Kernel 2.6.17,gcc version 4.1.2,XIM(SCIM+Anthy),UTF-8
+です。EUC-jpなら動くかもしれません。後ほど試してみます。
+
+それでは。
+
+gdbでおちたところで'where'：
+#0 x2sqKeyInput (xevt=0xbfcd363c)
+at
+/home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:1450
+#1 0xb7c9f5c6 in handleEvent (evt=0xbfcd363c)
+at
+/home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:1884
+#2 0xb7c9fbeb in handleEvents ()
+at
+/home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2060
+#3 0xb7c9fd54 in xHandler (fd=6, data=0x0, flags=2)
+at
+/home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2068
+#4 0x0807255c in aioPoll (microSeconds=0)
+at /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/aio.c:262
+#5 0x08072642 in aioSleep (microSeconds=0)
+at /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/aio.c:286
+#6 0xb7c9fd2e in display_ioRelinquishProcessorForMicroseconds (
+microSeconds=1000)
+at
+/home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2883
+#7 0x0805aa83 in ioRelinquishProcessorForMicroseconds (us=1000)
+at
+/home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/sqUnixMain.c:471
+
+
+Takeshi MUTOH wrote:
+> むとう@おうちです。
+>
+> 3.9-7VMから3.9-8VMの間でALSAサポートとか大いに変わっていて、焦っている
+> 今日この頃です。
+> # なんか、OSS回りのconfigure回りの変更がおかしいような…
+>
+> 3.9-7VMまでは、SqueakImmX11Plugin3a.tar.gzが使えたのですが、3.9-8VMで
+> は若干変更しないと使えないようです。
+>
+> で、手元でちょっと試してみたものを
+> 	http://squeak.610t.org/patches/test/SqueakImmX11Plugin3.9-8.tar.gz
+> として置いてあります。
+> パッチ部分(ImmX11.patch)しか手を入れてませんが、手元の私家版FreeBSD
+> portsでは動いているようです。
+>
+> 他の環境でもお試しいただいて、ご意見いただければうれしいです。
+>
+> では。
+>   
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From kawa90 ＠ yahoo.co.jp  Wed Jan 24 22:30:58 2007
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3373] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <45B75C63.5030303@yahoo.co.jp>
+References: <867ivghjjd.wl%mutoh@openedu.org> <45B75C63.5030303@yahoo.co.jp>
+Message-ID: <45B75F92.6040806@yahoo.co.jp>
+
+川村です。
+euc-jpで実行してみました。落ちることはなかったが、日本語入力ができなかった。
+コンソールに、XOpenIM() failed　となっていました。ちなみにeuc-jpでは以前
+の日本語パッチがあたったVMも、同じ現象でした。ちなみに使用したイメージは
+SqueakPlugin-dev-527.image です。
+
+わたしの環境が悪いのかも...
+
+# Squeakでは日本語入力をあきらめていたりする...
+
+それでは
+
+Hideo Kawamura wrote:
+> 川村です。
+>
+> 遅れましたが、Linux(Ubuntu 6.10)でビルド実行しました。残念ながら、わたし
+> の環境ではキー入力した段階でSegmentation faultとなってしまいました。
+> 環境は次の通りです。
+> Linux(Ubuntu 6.10),Kernel 2.6.17,gcc version 4.1.2,XIM(SCIM+Anthy),UTF-8
+> です。EUC-jpなら動くかもしれません。後ほど試してみます。
+>
+> それでは。
+>
+> gdbでおちたところで'where'：
+> #0 x2sqKeyInput (xevt=0xbfcd363c)
+> at
+> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:1450
+> #1 0xb7c9f5c6 in handleEvent (evt=0xbfcd363c)
+> at
+> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:1884
+> #2 0xb7c9fbeb in handleEvents ()
+> at
+> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2060
+> #3 0xb7c9fd54 in xHandler (fd=6, data=0x0, flags=2)
+> at
+> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2068
+> #4 0x0807255c in aioPoll (microSeconds=0)
+> at /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/aio.c:262
+> #5 0x08072642 in aioSleep (microSeconds=0)
+> at /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/aio.c:286
+> #6 0xb7c9fd2e in display_ioRelinquishProcessorForMicroseconds (
+> microSeconds=1000)
+> at
+> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:2883
+> #7 0x0805aa83 in ioRelinquishProcessorForMicroseconds (us=1000)
+> at
+> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm/sqUnixMain.c:471
+>
+>
+> Takeshi MUTOH wrote:
+>   
+>> むとう@おうちです。
+>>
+>> 3.9-7VMから3.9-8VMの間でALSAサポートとか大いに変わっていて、焦っている
+>> 今日この頃です。
+>> # なんか、OSS回りのconfigure回りの変更がおかしいような…
+>>
+>> 3.9-7VMまでは、SqueakImmX11Plugin3a.tar.gzが使えたのですが、3.9-8VMで
+>> は若干変更しないと使えないようです。
+>>
+>> で、手元でちょっと試してみたものを
+>> 	http://squeak.610t.org/patches/test/SqueakImmX11Plugin3.9-8.tar.gz
+>> として置いてあります。
+>> パッチ部分(ImmX11.patch)しか手を入れてませんが、手元の私家版FreeBSD
+>> portsでは動いているようです。
+>>
+>> 他の環境でもお試しいただいて、ご意見いただければうれしいです。
+>>
+>> では。
+>>   
+>>     
+>
+> --------------------------------------
+> Start Yahoo! Auction now! Check out the cool campaign
+> http://pr.mail.yahoo.co.jp/auction/
+>
+>
+>   
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Jan 24 22:57:55 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3374] Re: SuperSwiki2の使い方
+In-Reply-To: <20070124184351.1294.TURKEY@crew.sfc.keio.ac.jp>
+References: <20070124184351.1294.TURKEY@crew.sfc.keio.ac.jp>
+Message-ID: <JF200701242257554.944437@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 
+> 私はとりあえず SuperSwiki2 で wiki 機能を使ってみたいのですが、簡単な方
+> 法はあるのでしょうか？あったら教えていただけると助かります。また、
+> SuperSwiki2 について「このページを見れば分かるよ」というウェブや書籍があ
+> りましたら教えてください。
+> 
+
+SuperSwiki2のWiki機能は、非常に限定されているといいますか、ちゃんと実装
+されていません。
+
+現状は掲示板の中で、Wikiシンタックスが使えるというだけのものになっています。
+(新しいページが作れません。)
+
+荒らし対策も含めた上でのちゃんとしたWikiの実装は、今後の課題です。
+
+当面の予定ではとりあえず絞り込み機能を強化したマイナーバージョンアップ版を
+2月に出す予定です。
+
+もう少し遠い予定では
+- SuperSwiki2Clientなしでのプロジェクトアップロードに対応
+- Wikiのちゃんとした実装
+
+などが控えています。
+
+来年の夏あたりのメジャーバージョンアップを目指して細々と開発を続けています。
+気長にお待ちください。
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Wed Jan 24 23:40:54 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3375] Re: SuperSwiki2の使い方
+In-Reply-To: <20070124184351.1294.TURKEY@crew.sfc.keio.ac.jp>
+References: <20070124184351.1294.TURKEY@crew.sfc.keio.ac.jp>
+Message-ID: <2d5d52a80701240640l6b14aa50g63d83de1e1929c44@mail.gmail.com>
+
+阿部@京都です。
+
+07/01/24 に okada ken<turkey@crew.sfc.keio.ac.jp> さんは書きました:
+> Squeak を使わなくても wiki ページは作れるから、そこからプロジェクト置き
+> 場（SuperSwiki2）へのリンクを貼ればいいのですが…。せっかくだから Swiki
+> を使ってみたいやん、という気分なのです（笑）。
+
+この目的であれば、2でないSuperSwikiを使うのも手です。それ
+にはSqueakland.jpで使っている山宮さんがまとめられた
+TamaSuperSwiki.zipが展開するだけで使えるので便利です。
+
+http://squeakland.jp/super/11
+
+これはSwikiベースなので当然Wikiも使えます。いかんせん、そ
+のベースとなっているSwikiのバージョンが古いため、バギー
+だったり、機能が少なかったりするのが難点です。もちろん、Superな部分だけを抽出して最新のSwikiに組み込めれば良い
+のですが、邪悪なコードと格闘することになるでしょう。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From chibad ＠ alpha.co.jp  Wed Jan 24 22:43:16 2007
+From: chibad ＠ alpha.co.jp (Daisaku CHIBA)
+Date: Thu Dec  6 11:03:43 2007
+Subject: [Squeak-ja: 3376] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <uhcupoxrn.wl%yoshiki@squeakland.org>
+References: <20070117233537.9614.CHIBAD@alpha.co.jp>
+	<uhcupoxrn.wl%yoshiki@squeakland.org>
+Message-ID: <20070124223348.5D6F.CHIBAD@alpha.co.jp>
+
+Yoshikiさん、こんばんは。
+
+千葉です。
+
+> > KNOPPIX Edu 6は3月リリースに向けて、作成を開始するところです。 
+> > Squeakを入れる事も可能ですし、魅力的だと感じていますが、これまで断念してきました。 
+> > 理由は明確に、以下2点ですので、特に1点目が解消するようであれば、非常に嬉しいニュースです。 
+> > ・アップルライセンス問題 
+> > ・容量問題（他のアプリとの兼ね合いでCDのサイズに収めきるための取捨選択） 
+> 
+>   1点目は事実上すでに解消していますし、特に3月までには本当に解決してい
+> ることと思います(再び書きますと、もともと問題ではなかったわけですが)。
+>
+そうでしたか。誤解しておりました。
+情報ありがとうございました。
+
+
+>   2点目はどの程度のサイズを目指すかにもよりますが、OLPCはCDサイズより
+> も小さいところでばっちりEtoys(Squeak)が入っていますので(余裕もたっぷり
+> ありますが)、まあ問題にはならないでしょう。現在は比較的ゆったりと20MB
+> 程度のファイルスペースを使っていると思いますが、必要であれば不必要なも
+> のを削るとともに、ディスク上に置かれたイメージをgzipかpkzipで圧縮して
+> おくことにより、10MB以下には小さくすることはできると思います。
+>
+KNOPPIXの場合、圧縮ループバックファイルシステムである
+cloopを利用している関係上、圧縮しておく事によるサイズ調整は
+余り参考にならず、圧縮前でどの程度HDD容量を消費するかが目安になります。
+
+次に、「10MBでも厳しい」というのが、
+現状のKNOPPIX Eduシリーズの現実です。
+他のアプリも大きいものが結構ありますし、何よりも教材の充実無しに、
+利用は無いだろうとの基本姿勢のもと、PDF化した教材レジュメ等も
+沢山バンドルしている関係もあります。
+
+数MBのアプリを入れる為に、さて何削ろう・・・？！の世界ですので、
+正直、苦しい選択を強いられるケースも多いです。
+
+昨日よりEdu6の開発に着手してみたところ、
+何も考えず、入れたいアプリリストにだけ沿って作ってみたら、
+(圧縮前のHDD容量で)500MByte Overの状態です。
+＃毎年、ここから削る作業を地道に行います。
+
+
+---
+ちなみに、サイズを小さくしたパッケージはどちらかで
+作成・公開されていませんでしょうか？
+そのような情報は大変有難く存じます。
+
+
+
+以上
+
+-- 
+ 千葉大作  mailto:chibad@alpha.co.jp  tel:+81-44-738-4125
+ （株）アルファシステムズ 
+ 経営企画本部技術推進部第二システム研究課
+
+
+From umejava ＠ mars.dti.ne.jp  Thu Jan 25 00:19:24 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3377] Re: SuperSwiki2の使い方
+In-Reply-To: <JF200701242257554.944437@mars.dti.ne.jp>
+References: <20070124184351.1294.TURKEY@crew.sfc.keio.ac.jp>
+	<JF200701242257554.944437@mars.dti.ne.jp>
+Message-ID: <JQ200701250019242.5835250@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+もうひとつ、補足しておきますとPierあたりを使ってしまうのも手かと思います。
+http://www.lukas-renggli.ch/smalltalk/pier
+
+Pierは、Wikiであり、任意のSeasideコンポーネントを内部に取り込めるCMSでも
+ありますから、SuperSwiki2(Seasideのコンポーネントです)を、Pierの中の要素
+として表示することは比較的簡単にできるはずです。
+
+レガシーな旧SuperSwikiの悪たれコードと格闘するよりはきっと建設的でしょう。
+
+また、
+> 来年の夏あたりのメジャーバージョンアップを目指して細々と開発を続けています。
+と書きましたが、これは今年の誤りでしたね。。。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> > 
+> > 私はとりあえず SuperSwiki2 で wiki 機能を使ってみたいのですが、簡単な方
+> > 法はあるのでしょうか？あったら教えていただけると助かります。また、
+> > SuperSwiki2 について「このページを見れば分かるよ」というウェブや書籍があ
+> > りましたら教えてください。
+> > 
+> 
+> SuperSwiki2のWiki機能は、非常に限定されているといいますか、ちゃんと実装
+> されていません。
+> 
+> 現状は掲示板の中で、Wikiシンタックスが使えるというだけのものになっています。
+> (新しいページが作れません。)
+> 
+> 荒らし対策も含めた上でのちゃんとしたWikiの実装は、今後の課題です。
+> 
+> 当面の予定ではとりあえず絞り込み機能を強化したマイナーバージョンアップ版を
+> 2月に出す予定です。
+> 
+> もう少し遠い予定では
+> - SuperSwiki2Clientなしでのプロジェクトアップロードに対応
+> - Wikiのちゃんとした実装
+> 
+> などが控えています。
+> 
+> 来年の夏あたりのメジャーバージョンアップを目指して細々と開発を続けています。
+> 気長にお待ちください。
+> 
+
+---
+[:masashi | ^umezawa]
+
+From mutoh ＠ openedu.org  Thu Jan 25 18:47:04 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3378] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <45B75F92.6040806@yahoo.co.jp>
+References: <867ivghjjd.wl%mutoh@openedu.org> <45B75C63.5030303@yahoo.co.jp>
+	<45B75F92.6040806@yahoo.co.jp>
+Message-ID: <86r6tjfnfr.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+Squeak BoFもそろそろ終わりころと思われるC5に参加しているので、反応が遅
+くて申し訳ありません。
+
+At Wed, 24 Jan 2007 22:30:58 +0900,
+Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+> euc-jpで実行してみました。落ちることはなかったが、日本語入力ができなかった。
+> コンソールに、XOpenIM() failed　となっていました。ちなみにeuc-jpでは以前
+> の日本語パッチがあたったVMも、同じ現象でした。ちなみに使用したイメージは
+
+すいません、手元のSLAXで一度コンパイルから試してみます。
+少しお待ちを。
+# もし、buildログがありましたら、いただけると何か分かるかもしれません。
+
+あと、日本語入力には何をお使いになられてますでしょうか?
+
+> SqueakPlugin-dev-527.image です。
+> 
+> わたしの環境が悪いのかも...
+
+このイメージを良く知らないのですが、XIM関連のコードが入ったものなんで
+すかね?
+
+> # Squeakでは日本語入力をあきらめていたりする...
+
+そんな悲しいこといわないでくださいよぉ(;-;)
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From kawa90 ＠ yahoo.co.jp  Thu Jan 25 20:52:04 2007
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3379] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <86r6tjfnfr.wl%mutoh@openedu.org>
+References: <867ivghjjd.wl%mutoh@openedu.org>
+	<45B75C63.5030303@yahoo.co.jp>	<45B75F92.6040806@yahoo.co.jp>
+	<86r6tjfnfr.wl%mutoh@openedu.org>
+Message-ID: <45B899E4.9020407@yahoo.co.jp>
+
+川村です。
+
+むとうさま、パッチお待ちしております。
+> # もし、buildログがありましたら、いただけると何か分かるかもしれません。
+>   
+消してしまったり。。。あとでもう一度ビルドしてみます。
+> あと、日本語入力には何をお使いになられてますでしょうか?
+>   
+Ubuntu 6.10標準のSCIM+Anthyです。あんまりXIMと相性がよくないという話も
+あったりします。
+
+>> # Squeakでは日本語入力をあきらめていたりする...
+>>     
+>
+> そんな悲しいこといわないでくださいよぉ(;-;)
+今はemacsで書いてファイル経由か、自作のanthy-agentを使ったものでしのいで
+ます。
+あと今のSqueakディスプレイドライバをXlibベースからgtk+ベースにしようかなぁ。
+
+それでは。
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From turkey ＠ crew.sfc.keio.ac.jp  Fri Jan 26 00:10:17 2007
+From: turkey ＠ crew.sfc.keio.ac.jp (okada ken)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3380] Re: SuperSwiki2の使い方
+In-Reply-To: <JQ200701250019242.5835250@mars.dti.ne.jp>
+References: <JF200701242257554.944437@mars.dti.ne.jp>
+	<JQ200701250019242.5835250@mars.dti.ne.jp>
+Message-ID: <20070126000912.C9E9.TURKEY@crew.sfc.keio.ac.jp>
+
+岡田です。
+
+梅澤さん、阿部さん、お返事ありがとうございました。
+
+> Pierは、Wikiであり、任意のSeasideコンポーネントを内部に取り込めるCMSでも
+> ありますから、SuperSwiki2(Seasideのコンポーネントです)を、Pierの中の要素
+> として表示することは比較的簡単にできるはずです。
+
+おぉ、なるほど。Pier のページの「Sushi Storeを作る動画」（Embedding
+Seaside Application というリンク）を見ていると Component を選択するシー
+ンが出てきますが、その中で SuperSwiki2 を選択できるというわけですね。面
+白そうです！
+
+ちょっといじってみます。
+
+
+ではでは。
+
+ＰＳ：
+> また、
+> > 来年の夏あたりのメジャーバージョンアップを目指して細々と開発を続けています。
+> と書きましたが、これは今年の誤りでしたね。。。
+
+バージョンアップを楽しみにしています。
+
+-- 
+okada ken <turkey@crew.sfc.keio.ac.jp>
+
+
+From ohzahata ＠ mac.com  Fri Jan 26 10:40:43 2007
+From: ohzahata ＠ mac.com ("大座畑 重光")
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3381] Re: Squeakers' Night in 未来パーティ 2.0
+In-Reply-To: <JC200611302340036.10096515@mars.dti.ne.jp>
+References: <JC200611302340036.10096515@mars.dti.ne.jp>
+Message-ID: <7CC2B75B-0110-1000-8D6A-EDEF2E5D7347-Webmail-10012@mac.com>
+
+梅澤さん、大座畑です。 
+
+いよいよ明日ですね。参加できそうですがまだ大丈夫でしょうか？
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/ 
+_/　大座畑　重光（Shigemitsu Ohzahata） 
+_/　マッキンテリジェンス（株）代表取締役(President/Macintelligence,Inc.) 
+_/　　　　　　　携帯電話:090-8890-4502 
+_/　　　　　　　e-mail:　ohzahata@mac.com 
+_/　　　　　　　URL:　　http://homepage.mac.com/ohzahata/ 
+ 
+2006年11月30日 23:41 の "Masashi Umezawa" <umejava@mars.dti.ne.jp>のメール:
+>こんにちは
+>梅澤です。
+>
+>さて、関西オープンソース2006での盛り上がりもつかの間、来年にはまたまた
+>Squeaker達の集まりが開催できる運びとなりました。
+>
+>その名も「Squeakers' Night in 未来パーティ 2.0」です。
+>http://swikis.ddo.jp/umejava/38
+>
+>今回はアキバテクノクラブさんが主催です。
+>http://www.akiba-sangaku.jp/
+>
+>場所及び日程:
+>2007/01/27(土) 秋葉原ダイビル5Fアキバテクノクラブ
+>
+>スケジュール:
+>16:00 BOF
+>17:00 集合・準備
+>17:30-18:20 Seasideチュートリアル(梅澤)
+>18:20-18:40 万かつサンド・名刺交換など
+>18:40-20:30 発表・ディスカッション
+>20:30-21:00 かたづけ
+>
+>長めです。今年の目玉はSeasideチュートリアルです。まだマテリアルができて
+>いませんが、正月にがんばって作ります。
+>
+>もちろん万かつサンドもでます! (差し入れも歓迎します)
+>
+>事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+>MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+>
+>発表者も募集しています。下記のサイトに直接書き込みをお願いします。
+>http://swikis.ddo.jp/umejava/38
+>
+>なお、当日は、アキバテクノクラブさんで準備中のSNSへのメンバー登録がある
+>そうです。名前とメールアドレス程度の簡単なものだそうですので、お気軽にお考え
+>ください。
+>
+>それではよろしくお願い申し上げます。
+>
+>---
+>[:masashi | ^umezawa]
+>
+>
+
+
+From umejava ＠ mars.dti.ne.jp  Fri Jan 26 11:01:49 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3382] Re: Squeakers' Night in 未来パーティ 2.0
+In-Reply-To: <7CC2B75B-0110-1000-8D6A-EDEF2E5D7347-Webmail-10012@mac.com>
+References: <JC200611302340036.10096515@mars.dti.ne.jp>
+	<7CC2B75B-0110-1000-8D6A-EDEF2E5D7347-Webmail-10012@mac.com>
+Message-ID: <JQ200701261101496.9226109@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+まだ大丈夫です。
+
+今回はかなり混み混みになりそうな予感がしていますが、盛況ということなの
+でしょう。
+
+お待ちしております。
+
+"大座畑 重光" <ohzahata@mac.com> wrote:
+> 梅澤さん、大座畑です。 
+> 
+> いよいよ明日ですね。参加できそうですがまだ大丈夫でしょうか？
+> 
+> _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/ 
+> _/　大座畑　重光（Shigemitsu Ohzahata） 
+> _/　マッキンテリジェンス（株）代表取締役(President/Macintelligence,Inc.) 
+> _/　　　　　　　携帯電話:090-8890-4502 
+> _/　　　　　　　e-mail:　ohzahata@mac.com 
+> _/　　　　　　　URL:　　http://homepage.mac.com/ohzahata/ 
+>  
+---
+[:masashi | ^umezawa]
+
+From kawa90 ＠ yahoo.co.jp  Sat Jan 27 09:37:05 2007
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3383] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <86r6tjfnfr.wl%mutoh@openedu.org>
+References: <867ivghjjd.wl%mutoh@openedu.org>
+	<45B75C63.5030303@yahoo.co.jp>	<45B75F92.6040806@yahoo.co.jp>
+	<86r6tjfnfr.wl%mutoh@openedu.org>
+Message-ID: <45BA9EB1.8050501@yahoo.co.jp>
+
+川村です。
+むとうさま、
+http://homepage3.nifty.com/rio_i/lab/xlib/012xim.htm
+にあるサンプルプログラム　 012xim_root.c　をコンパイル・実行してみました。
+■UTF-8
+問題なく動きました。
+関係しそうな環境変数を以下に示します。
+XMODIFIERS=@im=SCIM
+LANG=ja_JP.UTF-8
+GDM_LANG=ja_JP.UTF-8
+LANGUAGE=ja_JP.UTF-8
+GTK_IM_MODULE=scim
+
+■EUC-jp
+プログラムは"Couldn't open input method."と言うメッセージで異常終了しま
+した。
+関係しそうな環境変数を以下に示します。
+XMODIFIERS=@im=SCIM
+LANG=ja_JP.eucJP
+GDM_LANG=ja_JP.eucJP
+LANGUAGE=ja_JP.eucJP
+GTK_IM_MODULE=scim
+
+それでは。
+
+Takeshi MUTOH wrote:
+> むとう@おうちです。
+>
+> Squeak BoFもそろそろ終わりころと思われるC5に参加しているので、反応が遅
+> くて申し訳ありません。
+>
+> At Wed, 24 Jan 2007 22:30:58 +0900,
+> Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+>   
+>> euc-jpで実行してみました。落ちることはなかったが、日本語入力ができなかった。
+>> コンソールに、XOpenIM() failed　となっていました。ちなみにeuc-jpでは以前
+>> の日本語パッチがあたったVMも、同じ現象でした。ちなみに使用したイメージは
+>>     
+>
+> すいません、手元のSLAXで一度コンパイルから試してみます。
+> 少しお待ちを。
+> # もし、buildログがありましたら、いただけると何か分かるかもしれません。
+>
+> あと、日本語入力には何をお使いになられてますでしょうか?
+>
+>   
+>> SqueakPlugin-dev-527.image です。
+>>
+>> わたしの環境が悪いのかも...
+>>     
+>
+> このイメージを良く知らないのですが、XIM関連のコードが入ったものなんで
+> すかね?
+>
+>   
+>> # Squeakでは日本語入力をあきらめていたりする...
+>>     
+>
+> そんな悲しいこといわないでくださいよぉ(;-;)
+>   
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From mutoh ＠ openedu.org  Sat Jan 27 13:29:37 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3384] SeasideJ FreeBSD port(was Re: SeasideJとSeasideJOneを更新しました)
+In-Reply-To: <JZ200701091706036.12631390@mars.dti.ne.jp>
+References: <JZ200701091706036.12631390@mars.dti.ne.jp>
+Message-ID: <86hcudf5xq.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+未来パーティ2.0参加されるみなさん、楽しんでくださいね。
+
+At Tue, 09 Jan 2007 17:06:03 +0900,
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> 今回からSeaside 2.6ベースになっています。現状ではもっとも広く使われている
+> バージョンですので、チュートリアルでは、これをもとに解説を行っていきます。
+> 
+> SeasideJ:
+> http://swikis.ddo.jp/umejava/22
+
+SeasideJのFreeBSD用portを作成しましたので、ご利用下さい。
+	http://qml.610t.org/squeak/SeasideJ.html
+
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From umejava ＠ mars.dti.ne.jp  Sun Jan 28 19:57:40 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3385] Re: Squeakers' Night in 未来パーティ  2.0
+Message-ID: <JN2007012819574010.7005921@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+未来パーティ 2.0、なかなかの盛り上がりでした。
+参加された皆さん、ありがとうございました。
+
+今後もこのような場を積極的に開催できたらと思います。
+
+例によって、原始的なやり方で恐縮ですが
+http://swikis.ddo.jp/umejava/38
+
+で、手動によるトラックバックリンクを受け付けておりますので、当日の
+レポートなどを書かれたという方は、編集していただけますと助かります。
+
+ではでは。
+
+> さて、関西オープンソース2006での盛り上がりもつかの間、来年にはまたまた
+> Squeaker達の集まりが開催できる運びとなりました。
+> 
+> その名も「Squeakers' Night in 未来パーティ 2.0」です。
+> http://swikis.ddo.jp/umejava/38
+> 
+> 今回はアキバテクノクラブさんが主催です。
+> http://www.akiba-sangaku.jp/
+> 
+> 場所及び日程:
+> 2007/01/27(土) 秋葉原ダイビル5Fアキバテクノクラブ
+> 
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Mon Jan 29 08:37:50 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3386] Squeakland.jp につながらなくなっています
+Message-ID: <45BD33CE91.EE5DABEE@mail.kg8.so-net.ne.jp>
+
+阿部@新百合です。
+
+昨日(1/28)19時頃からSqueakland.jpにつながらなくなっています。
+これはDNSの問題であり、IPアドレスを直接指定すれば大丈夫です。
+
+http://218.45.198.19/
+
+また、これとは別に昨日4時から18時まで停電のためサーバが停止していました。
+事後で申し訳ありません。
+
+ご迷惑をおかけしますが、よろしくお願いします。
+回復し次第ご案内します。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kuwatani ＠ akademia.co.jp  Mon Jan 29 09:55:15 2007
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3387] DNS不具合のご報告
+Message-ID: <45BD45F3.4090400@akademia.co.jp>
+
+Squeak-jaにご参加のみなさま
+
+メーリングリストの管理をしている 桑谷 です
+
+先日お知らせしておりましたサーバーのメンテナンスの際
+DNSサーバーの設定ミスにより夕方過ぎから今朝方にかけて
+ドメイン名が正しく引けない状態になっておりました．
+そのためホームページの閲覧やメールの送受信ができなくなっておりました．
+現在設定を修正し，9時30分時点で復旧を確認いたしました．
+
+今後このようなことが起きないように細心の注意をはらって
+運用して行きたいと思います．
+ご迷惑をおかけいたしまして申し訳ありませんでした．
+何卒，今後ともよろしくお願いいたします．
+
+----
+桑谷 剛史
+kuwatani@akademia.co.jp
+
+
+
+
+From abee ＠ squeakland.jp  Mon Jan 29 10:04:15 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3388] Re: Squeakland.jp につながらなくなっています
+In-Reply-To: <45BD33CE91.EE5DABEE@mail.kg8.so-net.ne.jp>
+References: <45BD33CE91.EE5DABEE@mail.kg8.so-net.ne.jp>
+Message-ID: <45BD480F7F.EE61ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+3387で桑谷さんからSqueak-jaのトラブルについての報告がありましたが、この復
+旧と同時にSqueakland.jpも接続可能になっています。
+
+http://squeakland.jp/
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Tue Jan 30 09:40:24 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3389] 1/31( 水 ) Squeakland.jp サーバメンテナンスについて
+Message-ID: <45BE93F8A1.B116ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+1/31(水)にSqueakland.jpサーバメンテナンスを行います。この間もサーバは停止
+せず、サービスへの影響はない予定ですが、DNSの設定を変更するため、一時的に
+つながりにくくなることがあるかもしれません。
+
+また、現在非公式にサービスを行っているSuperSwikiおよびSuperSwiki2が同日よ
+り当面の間停止します。
+
+http://squeakland.jp/super
+http://squeakland.jp/super2
+
+上記のURLでアクセスできなくなる他、ナビゲータの「公開する」「探す」から
+「Squeakland.JP」へもアクセスできなくなります。
+
+これらを前提とした授業やワークショップをお考えの際はご注意ください。その
+代わりとして、若干不便ですが従来の「プロジェクト置き場」をお使いください。
+
+http://swikis.ddo.jp/abee/3
+
+これらの運用再開時期については分かり次第ご連絡します。
+ご迷惑をお掛けしますが、よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Tue Jan 30 18:55:45 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3390] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070124223348.5D6F.CHIBAD@alpha.co.jp>
+References: <20070117233537.9614.CHIBAD@alpha.co.jp>
+	<uhcupoxrn.wl%yoshiki@squeakland.org>
+	<20070124223348.5D6F.CHIBAD@alpha.co.jp>
+Message-ID: <u3b5sj0ta.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> >   2点目はどの程度のサイズを目指すかにもよりますが、OLPCはCDサイズより
+> > も小さいところでばっちりEtoys(Squeak)が入っていますので(余裕もたっぷり
+> > ありますが)、まあ問題にはならないでしょう。現在は比較的ゆったりと20MB
+> > 程度のファイルスペースを使っていると思いますが、必要であれば不必要なも
+> > のを削るとともに、ディスク上に置かれたイメージをgzipかpkzipで圧縮して
+> > おくことにより、10MB以下には小さくすることはできると思います。
+> >
+> KNOPPIXの場合、圧縮ループバックファイルシステムである
+> cloopを利用している関係上、圧縮しておく事によるサイズ調整は
+> 余り参考にならず、圧縮前でどの程度HDD容量を消費するかが目安になります。
+
+  ファイルシステムが圧縮されていたのですね。
+
+> 次に、「10MBでも厳しい」というのが、
+> 現状のKNOPPIX Eduシリーズの現実です。
+> 他のアプリも大きいものが結構ありますし、何よりも教材の充実無しに、
+> 利用は無いだろうとの基本姿勢のもと、PDF化した教材レジュメ等も
+> 沢山バンドルしている関係もあります。
+
+  なるほど。
+
+> ちなみに、サイズを小さくしたパッケージはどちらかで
+> 作成・公開されていませんでしょうか？
+> そのような情報は大変有難く存じます。
+
+  今は必ずしも存在しないと思いますが、Squeakland版を元にしたものなどあっ
+ても良いですね。旅から旅への日々も(今回は)そろそろ終わりを告げそうです
+ので、近いうちに試してみたいと思います。
+
+-- Yoshiki
+
+
+
+From okumura ＠ edu.mie-u.ac.jp  Tue Jan 30 20:07:34 2007
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3391] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <u3b5sj0ta.wl%yoshiki@squeakland.org>
+References: <uhcupoxrn.wl%yoshiki@squeakland.org>
+	<20070124223348.5D6F.CHIBAD@alpha.co.jp>
+	<u3b5sj0ta.wl%yoshiki@squeakland.org>
+Message-ID: <20070130.200734.205152061.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+
+> > KNOPPIXの場合、圧縮ループバックファイルシステムである
+> > cloopを利用している関係上、圧縮しておく事によるサイズ調整は
+> > 余り参考にならず、圧縮前でどの程度HDD容量を消費するかが目安になります。
+> 
+>   ファイルシステムが圧縮されていたのですね。
+
+cloopはzlib圧縮だと思いますが，もう少しましなものを使えばあと数十MBは軽
+く空くと思います。ただ，もともと遅いCPUのマシンなので，起動が遅くなりそ
+うですが。
+
+これとは無関係ですが，Wikipediaをどこまで圧縮できるかというコンテストが
+行われています（http://prize.hutter1.net/）。いま展開ルーチンも含めて
+100M→17Mにできるところまでいっています。OLPCにWikipediaを詰め込むため
+に使えるかもしれません。
+
+>   今は必ずしも存在しないと思いますが、Squeakland版を元にしたものなどあっ
+> ても良いですね。旅から旅への日々も(今回は)そろそろ終わりを告げそうです
+> ので、近いうちに試してみたいと思います。
+
+ほんとに申し訳ありません。m(_ _)m  Alan，Kimによろしく。
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+三重大学(教育学部|総合情報処理センター|高等教育創造開発センター)教授
+
+From hidetan ＠ gmail.com  Tue Jan 30 20:55:25 2007
+From: hidetan ＠ gmail.com (ひでたん)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3392] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070130.200734.205152061.okumura@edu.mie-u.ac.jp>
+References: <uhcupoxrn.wl%yoshiki@squeakland.org>
+	<20070124223348.5D6F.CHIBAD@alpha.co.jp>
+	<u3b5sj0ta.wl%yoshiki@squeakland.org>
+	<20070130.200734.205152061.okumura@edu.mie-u.ac.jp>
+Message-ID: <313656500701300355g6f4e9b9ay97c60bb6fd07ef10@mail.gmail.com>
+
+squeak-ja
+
+こんにちは，丹と申します．
+
+> >   ファイルシステムが圧縮されていたのですね。
+>
+> cloopはzlib圧縮だと思いますが，もう少しましなものを使えばあと数十MBは軽
+> く空くと思います。ただ，もともと遅いCPUのマシンなので，起動が遅くなりそ
+> うですが。
+
+圧縮アルゴリズムを変更(zlib -> libbzip2)した，cloop を試してみたのです
+が，伸長時間が長くなりアプリケーションの起動に時間を要してしまうように
+なってしまいました．その時は，とりあえず実装しやすさと圧縮率優先で，
+libbzip2 を使いました．
+
+今の cloop は LZMA を使っているので，圧縮にかなり時間を要しますが，圧
+縮率と伸長時間のパフォーマンスは良くなっているようです．
+
+> これとは無関係ですが，Wikipediaをどこまで圧縮できるかというコンテストが
+> 行われています（http://prize.hutter1.net/）。いま展開ルーチンも含めて
+> 100M→17Mにできるところまでいっています。OLPCにWikipediaを詰め込むため
+> に使えるかもしれません。
+
+すごいですね．テキストに特化しているのでしょうか．
+# すると，Squeak もソースで格納しておいて実行前にコンパイルとか．(笑
+
+cloop の方も，ブロックにあるデータの種類をある程度判別して，ブロックご
+とにアルゴリズムを選択するように作れば，もっと詰めることができると思い
+ます．
+
+個人的には，家庭用ゲーム機のようにアプリケーションごとにメディアを交換
+して，Squeak 専用マシンにしてもらうのがよろしいかと思っていたりします．
+
+以上です．
+-- 
+丹 英之(TAN Hideyuki) mailto:hidetan@gmail.com
+
+From okumura ＠ edu.mie-u.ac.jp  Tue Jan 30 21:08:47 2007
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3393] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <313656500701300355g6f4e9b9ay97c60bb6fd07ef10@mail.gmail.com>
+References: <u3b5sj0ta.wl%yoshiki@squeakland.org>
+	<20070130.200734.205152061.okumura@edu.mie-u.ac.jp>
+	<313656500701300355g6f4e9b9ay97c60bb6fd07ef10@mail.gmail.com>
+Message-ID: <20070130.210847.00806777.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+"ひでたん" <hidetan@gmail.com> wrote:
+
+> 圧縮アルゴリズムを変更(zlib -> libbzip2)した，cloop を試してみたのです
+> が，伸長時間が長くなりアプリケーションの起動に時間を要してしまうように
+> なってしまいました．その時は，とりあえず実装しやすさと圧縮率優先で，
+> libbzip2 を使いました．
+> 
+> 今の cloop は LZMA を使っているので，圧縮にかなり時間を要しますが，圧
+> 縮率と伸長時間のパフォーマンスは良くなっているようです．
+
+今はLZMAを使っているのですか。存じませんでした。それならたぶんパフォー
+マンスも考えてベストな選択だと思います。
+
+> > これとは無関係ですが，Wikipediaをどこまで圧縮できるかというコンテストが
+> > 行われています（http://prize.hutter1.net/）。いま展開ルーチンも含めて
+> > 100M→17Mにできるところまでいっています。OLPCにWikipediaを詰め込むため
+> > に使えるかもしれません。
+> 
+> すごいですね．テキストに特化しているのでしょうか．
+> # すると，Squeak もソースで格納しておいて実行前にコンパイルとか．(笑
+
+英語の文章に特化しているので，他のものには適当でないでしょうね。
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+三重大学(教育学部|総合情報処理センター|高等教育創造開発センター)教授
+
+From namiki ＠ cc.tuat.ac.jp  Wed Jan 31 13:32:45 2007
+From: namiki ＠ cc.tuat.ac.jp (Mitaro Namiki)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3394] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <u3b5sj0ta.wl%yoshiki@squeakland.org>
+References: <20070117233537.9614.CHIBAD@alpha.co.jp>	<uhcupoxrn.wl%yoshiki@squeakland.org>	<20070124223348.5D6F.CHIBAD@alpha.co.jp>
+	<u3b5sj0ta.wl%yoshiki@squeakland.org>
+Message-ID: <45C01BED.3030507@cc.tuat.ac.jp>
+
+東京農工大の並木です。ご無沙汰しております...
+(しかも、こちらに奥村先生がご登場するとは:-)。
+
+>>>   2点目はどの程度のサイズを目指すかにもよりますが、OLPCはCDサイズより
+>>> も小さいところでばっちりEtoys(Squeak)が入っていますので(余裕もたっぷり
+>>> ありますが)、まあ問題にはならないでしょう。現在は比較的ゆったりと20MB
+>>> 程度のファイルスペースを使っていると思いますが、必要であれば不必要なも
+>>> のを削るとともに、ディスク上に置かれたイメージをgzipかpkzipで圧縮して
+>>> おくことにより、10MB以下には小さくすることはできると思います。
+>> KNOPPIXの場合、圧縮ループバックファイルシステムである
+>> cloopを利用している関係上、圧縮しておく事によるサイズ調整は
+>> 余り参考にならず、圧縮前でどの程度HDD容量を消費するかが目安になります。
+>...
+実は、私の研究室で HTTP-FUSE-KNOPPIX-BOX なんていうものを
+作って、シンクライアントシステムの起動高速化を行っていたりします。
+１台１万円くらいで売ってる小型機器をサーバにして、
+サーバ４台で50台のクライアントが1分30秒程度で起動できたりします。
+さらには、アルマジロや玄箱などを使って、非力な組込みアプライアンスサーバでも
+圧縮/非圧縮などを制御して高速化を行っていたりします。
+　２月は卒論・修論でドタバタしているのですが、
+時間できたら、Squeakでやってみてもいいかもしれないなぁ、
+と思っていたりします。
+
+OLPCも触っていろいろ試してみたいと思ってるのですが...
+2/10のダイビルは同じ時間に論文誌の編集委員会があって、行けなくて残念です。
+//
+
+
+From k.suzaki ＠ aist.go.jp  Wed Jan 31 14:32:43 2007
+From: k.suzaki ＠ aist.go.jp (Kuniyasu Suzaki)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3395] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <20070130.210847.00806777.okumura@edu.mie-u.ac.jp>
+References: <20070130.200734.205152061.okumura@edu.mie-u.ac.jp>
+	<313656500701300355g6f4e9b9ay97c60bb6fd07ef10@mail.gmail.com>
+	<20070130.210847.00806777.okumura@edu.mie-u.ac.jp>
+Message-ID: <20070131.143243.52191308.k.suzaki@aist.go.jp>
+
+
+須崎です。
+
+ >>From: Haruhiko Okumura <okumura@edu.mie-u.ac.jp>
+ >>Subject: [Squeak-ja: 3393] Re: 教育用ＰＣ リナックスで再生
+ >>
+ >>奥村です。
+ >>
+ >>"ひでたん" <hidetan@gmail.com> wrote:
+ >>
+ >>> 圧縮アルゴリズムを変更(zlib -> libbzip2)した，cloop を試してみたのです
+ >>> が，伸長時間が長くなりアプリケーションの起動に時間を要してしまうように
+ >>> なってしまいました．その時は，とりあえず実装しやすさと圧縮率優先で，
+ >>> libbzip2 を使いました．
+ >>> 
+ >>> 今の cloop は LZMA を使っているので，圧縮にかなり時間を要しますが，圧
+ >>> 縮率と伸長時間のパフォーマンスは良くなっているようです．
+ >>
+ >>今はLZMAを使っているのですか。存じませんでした。それならたぶんパフォー
+ >>マンスも考えてベストな選択だと思います。
+
+ちょっと毛色が違うのですが、組み込み用 HTTP-FUSE CLOOP を先々週の 
+Linux Conference Australia で（代理）発表してきました。
+   "HTTP-FUSE CLOOP with Software RAID and DNS-Balance for Embedded Linux"
+    Jun Kanai, Kuniyasu Suzaki, Toshiki Yagi, Mitaro Namiki
+    http://lca2007.linux.org.au/talk/171
+    スライド資料 http://unit.aist.go.jp/itri/knoppix/20070118-LCA-HTTP-FUSE.pdf
+
+HTTP-FUSE CLOOP とは CLOOP のように１ファイルに固めるのではなく、256KB 
+毎に切ったブロック毎にファイルの圧縮保存し、ドライバが必要に応じて該当
+ファイルをHTTPでダウンロード／展開するものです。
+
+これをストレージが小さい組み込み機器に適用する話ですが、組み込みでは 
+CPU(SH4, ARM が遅いので圧縮を LZO あるいは無圧縮にした方が効率的であ
+る話をしてきました。
+
+これの日本語の発表はCELF(Consumer Electronics Linux Forum )にあります。
+    http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree12
+    スライド資料
+    http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree12?action=AttachFile&amp;do=get&amp;target=Kanai_CELF.pdf
+
+ちなみに丹さん（お久しぶり:-）の件は下記の論文に詳しい記述があります。
+   ブロックソート法を用いた圧縮ループバックブロックデバイスの実装と評価
+   http://www.alpha.co.jp/biz/products/knoppix/download/paper/IPSJ_2005_03_paper.pdf
+
+P.S.
+このMLではオフトプですね。_o_
+------
+suzaki
+
+From k.suzaki ＠ aist.go.jp  Wed Jan 31 15:04:03 2007
+From: k.suzaki ＠ aist.go.jp (Kuniyasu Suzaki)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3396] Re: 教育用ＰＣ リナックスで再生
+In-Reply-To: <45C01BED.3030507@cc.tuat.ac.jp>
+References: <20070124223348.5D6F.CHIBAD@alpha.co.jp>
+	<u3b5sj0ta.wl%yoshiki@squeakland.org>
+	<45C01BED.3030507@cc.tuat.ac.jp>
+Message-ID: <20070131.150403.58429645.k.suzaki@aist.go.jp>
+
+
+須崎です。
+
+ >>From: Mitaro Namiki <namiki@cc.tuat.ac.jp>
+ >>Subject: [Squeak-ja: 3394] Re: 教育用ＰＣ リナックスで再生
+ >>
+ >>東京農工大の並木です。ご無沙汰しております...
+ >>(しかも、こちらに奥村先生がご登場するとは:-)。
+ >>
+ >>OLPCも触っていろいろ試してみたいと思ってるのですが...
+ >>2/10のダイビルは同じ時間に論文誌の編集委員会があって、行けなくて残念です。
+
+そうそう、OLPC に関して面白い話があります。
+先の Linux Conference Australia で Hack Feat があったのですが、
+そこでOLPC関連の開発をした２名の優秀者にOLPCがあえられたそうです。
+これが正式に入手する一つの方法でしょうか。かなりハードルが高いですが。
+
+------
+suzaki
+
+From abee ＠ squeakland.jp  Wed Jan 31 23:13:26 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3397] Re: 発表者募集開始！　研究発表会（ C4 ） 2 月 10 日
+In-Reply-To: <4b24f0d0701150823m3cb4085ejb965d514afffaa69@mail.gmail.com>
+References: <4b24f0d0701150823m3cb4085ejb965d514afffaa69@mail.gmail.com>
+Message-ID: <45C0A4061FD.9D31ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2/10のC4ですが、数少ないOLPCの実機デモが見られるということで、すでに多く
+の申込をいただいているようです。他にも各地のスクイーク実践事例紹介や不肖
+私のeToysハンズオンもあります(ちょっとしたテクをその場で実際に試していた
+だきます)。
+
+まだ会場に若干の余裕があるようなので、ぜひご参加ください。
+
+On Tue, 16 Jan 2007 01:23:30 +0900
+"Toshio Miyasaka" <miyasaka@iris.dti.ne.jp> wrote:
+>お世話になっております。
+>デジタルハリウッド大学院の宮坂です。
+>
+>先般お知らせさせていただいた「スクイークを活用した教育の研究発表会（C4）」の参加者募集を開始しました。
+>
+>日時：2007年2月10日（土） 10:30〜13:30　（3時間）
+>場所：東京（秋葉原）
+>
+>参加申し込みはこちらからどうぞ。
+>http://www.squeakland.jp/sqmedia/20070210C4.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Wed Jan 31 23:26:00 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3398] Re: 杉並区立和田小学校 研究発表会のご案内
+In-Reply-To: <459CF64128C.E2A6ABEE@smtp.nifty.com>
+References: <458529DE18C.EF94ABEE@smtp.nifty.com>
+	<459CF64128C.E2A6ABEE@smtp.nifty.com>
+Message-ID: <45C0A6F835.9D32ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2/9の和田小研究発表会も近づいてまいりました。先生方は連日遅くまで準備に余
+念がありません。全学年全クラスで200台を超えるPCを使って同時に授業を行うと
+いう事例はあまり聞いたことがありません。
+
+事前申込が無くても参加いただけますが、あらかじめメールで申し込んでいただ
+けると確実に資料をご用意できます。
+この資料は、毎月開催している土曜楽校のために、横山校長先生自ら毎回作成さ
+れたプリント一枚の小さな課題を綴ったものです。
+ひとつひとつはとてもシンプルなのですが、かならず何らかの気付きが含まれて
+おり、しかも楽しいものになっています。私は多少はeToysが書けると自負してい
+たのですが、いつも目から鱗が落ちる思いでした。
+
+翌日のC4と合わせてこちらもぜひご参加ください。
+
+On Thu, 04 Jan 2007 21:42:41 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>本件、公開授業の内容などが和田小のWebページに追加されています。どうぞご覧
+>ください。
+>
+>http://wadael.sakura.ne.jp/
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+

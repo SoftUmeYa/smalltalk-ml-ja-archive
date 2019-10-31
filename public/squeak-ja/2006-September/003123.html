@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3123] Re: OmniBaseJ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203123%5D%20Re%3A%20OmniBaseJ&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003121.html">
+   <LINK REL="Next"  HREF="003125.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3123] Re: OmniBaseJ</H1>
+    <B>Saito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203123%5D%20Re%3A%20OmniBaseJ&In-Reply-To="
+       TITLE="[Squeak-ja: 3123] Re: OmniBaseJ">zaki_k_saito ＠ s8.dion.ne.jp
+       </A><BR>
+    <I>2006年 9月 13日 (水) 22:13:51 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003121.html">[Squeak-ja: 3121] Re: OmniBaseJ
+</A></li>
+        <LI>次の記事 <A HREF="003125.html">[Squeak-ja: 3125] Re: OmniBaseJ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3123">[ 日付 ]</a>
+              <a href="thread.html#3123">[ スレッド ]</a>
+              <a href="subject.html#3123">[ 件名 ]</a>
+              <a href="author.html#3123">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは
+齊藤です
+
+早速試させてもらいました
+
+日本語を含んだ変数名についての動作は
+正常でしたが、
+クラス名を日本語にした場合の動作が
+うまくいきませんでした。
+
+
+
+&quot;-------------------------------------------------------------------------------------------&quot;
+
+'From Squeakland 3.8-05 of 7 September 2005 [latest update: #552] on 13 
+September 2006 at 10:03:14 pm'!
+Object subclass: #テスト
+ instanceVariableNames: 'a b c v場所'
+ classVariableNames: ''
+ poolDictionaries: ''
+ category: '食製1-物品'!]lang[(18 3 33 2 60 2 2 2 1)0,5,0,5,0,5,0,5,0!
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+a
+ &quot;Answer the value of a&quot;
+
+ ^ a! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+a: anObject
+ &quot;Set the value of a&quot;
+
+ a _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+b
+ &quot;Answer the value of b&quot;
+
+ ^ b! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+b: anObject
+ &quot;Set the value of b&quot;
+
+ b _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+c
+ &quot;Answer the value of c&quot;
+
+ ^ c! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+c: anObject
+ &quot;Set the value of c&quot;
+
+ c _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!]lang[(3 
+55)5,0!
+m場所
+
+ ^ v場所!]lang[(1 2 6 2)0,5,0,5! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!]lang[(3 
+55)5,0!
+m場所: anObject
+
+ v場所 _ anObject!]lang[(1 2 14 2 11)0,5,0,5,0! !
+
+----- Original Message ----- 
+From: &quot;Masashi Umezawa&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">umejava ＠ mars.dti.ne.jp</A>&gt;
+To: &quot;Squeak discussion in Japanese&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja ＠ smalltalk.jp</A>&gt;
+Sent: Wednesday, September 13, 2006 5:08 PM
+Subject: [Squeak-ja: 3121] Re: OmniBaseJ
+
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;<i> ありがとうございます。再現できました。パッチを書いてみたので
+</I>&gt;<i> お試しください。
+</I>&gt;<i>
+</I>&gt;<i> MCZは
+</I>&gt;<i> <A HREF="http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.10.mcz">http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.10.mcz</A>
+</I>&gt;<i>
+</I>&gt;<i> になります。
+</I>&gt;<i>
+</I>&gt;<i> &quot;Saito&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">zaki_k_saito ＠ s8.dion.ne.jp</A>&gt; wrote:
+</I>&gt;&gt;<i> こんにちは
+</I>&gt;&gt;<i> 齊藤ともうします
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 早速のご対応ありがとうございます
+</I>&gt;&gt;<i> 日本語を含んだ変数名についてのテストケースです
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa] 
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003121.html">[Squeak-ja: 3121] Re: OmniBaseJ
+</A></li>
+	<LI>次の記事 <A HREF="003125.html">[Squeak-ja: 3125] Re: OmniBaseJ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3123">[ 日付 ]</a>
+              <a href="thread.html#3123">[ スレッド ]</a>
+              <a href="subject.html#3123">[ 件名 ]</a>
+              <a href="author.html#3123">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

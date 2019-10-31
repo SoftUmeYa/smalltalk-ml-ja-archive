@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3485] Re: UNIX版 VMでの多言語入力
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203485%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVOSVgbJEJIRxsoQiBWTQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckTkI/OEA4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=462C4990.3010500%40nucba.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003480.html">
+   <LINK REL="Next"  HREF="003486.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3485] Re: UNIX版 VMでの多言語入力</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203485%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVOSVgbJEJIRxsoQiBWTQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckTkI/OEA4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=462C4990.3010500%40nucba.ac.jp"
+       TITLE="[Squeak-ja: 3485] Re: UNIX版 VMでの多言語入力">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2007年 4月 28日 (土) 05:58:24 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003480.html">[Squeak-ja: 3480] Re: UNIX版 VMでの多言語入力
+</A></li>
+        <LI>次の記事 <A HREF="003486.html">[Squeak-ja: 3486] Re: UNIX版 VMでの多言語入力
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3485">[ 日付 ]</a>
+              <a href="thread.html#3485">[ スレッド ]</a>
+              <a href="subject.html#3485">[ 件名 ]</a>
+              <a href="author.html#3485">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  大島です。
+
+&gt;<i> &gt;   基本的には、translateCode()やrecode()などを呼ぶことなく、Xから来たキャ
+</I>&gt;<i> &gt; ラクターをそのままキーコードとして返すVM の起動時オプションをつくるの
+</I>&gt;<i> &gt; が良いかなと思っているのですが、その際に日本語もばっちり動くようにした
+</I>&gt;<i> &gt; いと思っています。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;   というわけで今から皆さんの努力に追いつきたいと思うのですが、
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; <A HREF="http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz">http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz</A>
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; から追いかけていけばよいのでしょうか? 
+</I>&gt;<i> 
+</I>&gt;<i> パッチを当てた VM のマルチバイト入力では，
+</I>&gt;<i> 通常のキャラクタコードに関しては，
+</I>&gt;<i> recode を通すこと無く Image に送っています．
+</I>&gt;<i> 
+</I>&gt;<i> translateCode には オリジナルどおり，
+</I>&gt;<i> カーソルキーなどの KeySym を Squeak のコードに変換させています．
+</I>
+  ありがとうございます。
+
+&gt;<i> ギリシャ語(ISO Latin-7)の入力には XIM を使うのでしょうか？　
+</I>&gt;<i> もしかして Latin-1 のような Compose を使うのでしょうか？
+</I>
+  ギリシャ語を入力するには、Control-Shiftを押すとキーボードの
+モードが切り替わるという話のようでした。切り替
+えると、xevで見たときワンストロークで(&quot;A&quot;のキーを押すと)、
+
+KeyPress event, serial 29, synthetic NO, window 0x1e00001,
+    root 0x64, subw 0x0, time 3200328687, (155,64), root:(194,585),
+    state 0x2010, keycode 38 (keysym 0x7e1, Greek_alpha), same_screen YES,
+    XLookupString gives 0 bytes: 
+    XmbLookupString gives 0 bytes: 
+    XFilterEvent returns: False
+
+というコードがSqueak VMに届くようです。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003480.html">[Squeak-ja: 3480] Re: UNIX版 VMでの多言語入力
+</A></li>
+	<LI>次の記事 <A HREF="003486.html">[Squeak-ja: 3486] Re: UNIX版 VMでの多言語入力
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3485">[ 日付 ]</a>
+              <a href="thread.html#3485">[ スレッド ]</a>
+              <a href="subject.html#3485">[ 件名 ]</a>
+              <a href="author.html#3485">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

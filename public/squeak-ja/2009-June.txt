@@ -1,0 +1,737 @@
+From admin ＠ yengawa.com  Thu Jun  4 19:15:07 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Jun  4 19:15:20 2009
+Subject: [Squeak-ja: 4253] Etoysに日本語TTフォントを入れる方法
+Message-ID: <4A279EAB.5010509@yengawa.com>
+
+橫川です。
+
+EtoysにIPAフォントの明朝・ゴシックを入れて使いたいと思っています。
+http://ossipedia.ipa.go.jp/ipafont/fontspec.html
+このまえ阿部さんがEtoysへモナーフォントを入れていましたが、どういう手順
+で入れたのでしょうか?
+単にフォントファイルをEtoysへドロップして読ませただけではフォント選択項
+目が文字化けしているし、適用すると日本語が"？？？？"という表示になってし
+まいます。
+
+
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From abee.abe ＠ nifty.ne.jp  Thu Jun  4 19:54:00 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Jun  4 19:54:26 2009
+Subject: [Squeak-ja: 4254] Re: Etoysに日本語TTフォントを入れる方法
+In-Reply-To: <4A279EAB.5010509@yengawa.com>
+References: <4A279EAB.5010509@yengawa.com>
+Message-ID: <2d5d52a80906040354h21d52a12ndde7e042fb0df572@mail.gmail.com>
+
+こんにちは、阿部です。
+まず、IPAフォントについてですが、最新版はOTFで提供されていると思います。
+これをEtoysで読み込むためにはTTCに変換する必要があります。WindowsであればTTSDKに含まれるMAKETTC.EXEを使うのが便利です。
+TTCに変換できたらEtoysを起動し、言語選択のアイコン(旗)をクリックして日本語に切り替えます。このとき、インターネットに接続されていれば必要なファイルがダウンロードされ、日本語モードに切り替わります。
+それから以下の式を評価してTTCフォントを読み込みます(これはTTCFontSet
+class>>newTextStyleFromTTFile:のコメントにも書かれています)。
+
+TTCFontReader encodingTag: JapaneseEnvironment leadingChar.
+TTCFontSet newTextStyleFromTTFile: 'TTCファイルのパス名'
+
+これで指定したTTCフォントが使えるようになっているはずです。あとはワールドメニューの「外観・・・」から「システム・フォント...」を選んで、適当に変更してください。もちろん、スナップショットはお忘れなく。
+
+次にモナーフォントですが、この読み込みの際にエラーが発生します。そのため、大島さんにお願いしてパッチを作ってもらいました。これはMTS版Etoysのチェンジセットにも含まれていますが、csファイルを添付します(ReadMona-yo.1.cs)。そのcsをイメージにファイルインしておくことを除けば、他の手順は同じです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/06/04 19:15 Koji Yokokawa <admin@yengawa.com>:
+> 橫川です。
+>
+> EtoysにIPAフォントの明朝・ゴシックを入れて使いたいと思っています。
+> http://ossipedia.ipa.go.jp/ipafont/fontspec.html
+> このまえ阿部さんがEtoysへモナーフォントを入れていましたが、どういう手順
+> で入れたのでしょうか?
+> 単にフォントファイルをEtoysへドロップして読ませただけではフォント選択項
+> 目が文字化けしているし、適用すると日本語が"？？？？"という表示になってし
+> まいます。
+>
+>
+> -- !
+> Koji Yokokawa ykoubo2008@yengawa.com>
+>    http://www.yengawa.com/
+>    ^self new!
+>
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: ReadMona-yo.1.cs
+型:         application/octet-stream
+サイズ:     791 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20090604/862b4666/ReadMona-yo.1.obj
+From admin ＠ yengawa.com  Fri Jun  5 02:18:18 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Fri Jun  5 02:18:25 2009
+Subject: [Squeak-ja: 4255] Re: Etoysに日本語TTフォントを入れる方法
+In-Reply-To: <2d5d52a80906040354h21d52a12ndde7e042fb0df572@mail.gmail.com>
+References: <4A279EAB.5010509@yengawa.com>
+	<2d5d52a80906040354h21d52a12ndde7e042fb0df572@mail.gmail.com>
+Message-ID: <4A2801DA.8030000@yengawa.com>
+
+阿部さん、
+橫川です。
+
+Etoys(Squeakland-OLPC 2177)にIPAフォントが無事に入りました。
+Windows上で指示通りに作業して問題なく入りました。
+
+以下、関連するリンクです。
+IPAフォントを入れたEtoysも置いておきます。
+
+IPAフォント
+http://ossipedia.ipa.go.jp/ipafont/index.html
+
+TTSDK
+http://osakattf.hp.infoseek.co.jp/tool/TTSDK.ZIP
+
+IPAフォントのTTC版
+http://www.yengawa.com/Squeak/Etoys_IPAFont/IPAFont_TTC.zip
+
+Etoys(Squeakland-OLPC 2177)にIPAフォント(Pゴシック、P明朝)を入れたもの
+http://www.yengawa.com/Squeak/Etoys_IPAFont/etoys_ipafont.1.zip
+
+
+ありがとうございました。
+
+Kazuhiro ABE wrote 09.6.4 7:54 PM:
+> こんにちは、阿部です。
+> まず、IPAフォントについてですが、最新版はOTFで提供されていると思います。
+> これをEtoysで読み込むためにはTTCに変換する必要があります。WindowsであればTTSDKに含まれるMAKETTC.EXEを使うのが便利です。
+> TTCに変換できたらEtoysを起動し、言語選択のアイコン(旗)をクリックして日本語に切り替えます。このとき、インターネットに接続されていれば必要なファイルがダウンロードされ、日本語モードに切り替わります。
+> それから以下の式を評価してTTCフォントを読み込みます(これはTTCFontSet
+> class>>newTextStyleFromTTFile:のコメントにも書かれています)。
+> 
+> TTCFontReader encodingTag: JapaneseEnvironment leadingChar.
+> TTCFontSet newTextStyleFromTTFile: 'TTCファイルのパス名'
+> 
+> これで指定したTTCフォントが使えるようになっているはずです。あとはワールドメニューの「外観・・・」から「システム・フォント...」を選んで、適当に変更してください。もちろん、スナップショットはお忘れなく。
+> 
+> 次にモナーフォントですが、この読み込みの際にエラーが発生します。そのため、大島さんにお願いしてパッチを作ってもらいました。これはMTS版Etoysのチェンジセットにも含まれていますが、csファイルを添付します(ReadMona-yo.1.cs)。そのcsをイメージにファイルインしておくことを除けば、他の手順は同じです。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+> 2009/06/04 19:15 Koji Yokokawa <admin@yengawa.com>:
+>> 橫川です。
+>>
+>> EtoysにIPAフォントの明朝・ゴシックを入れて使いたいと思っています。
+>> http://ossipedia.ipa.go.jp/ipafont/fontspec.html
+>> このまえ阿部さんがEtoysへモナーフォントを入れていましたが、どういう手順
+>> で入れたのでしょうか?
+>> 単にフォントファイルをEtoysへドロップして読ませただけではフォント選択項
+>> 目が文字化けしているし、適用すると日本語が"？？？？"という表示になってし
+>> まいます。
+>>
+>>
+>> -- !
+>> Koji Yokokawa ykoubo2008@yengawa.com>
+>>    http://www.yengawa.com/
+>>    ^self new!
+>>
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From admin ＠ yengawa.com  Fri Jun  5 16:35:57 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Fri Jun  5 16:36:15 2009
+Subject: [Squeak-ja: 4256] Re: Etoysに日本語TTフォントを入れる方法
+In-Reply-To: <4A2801DA.8030000@yengawa.com>
+References: <4A279EAB.5010509@yengawa.com>	<2d5d52a80906040354h21d52a12ndde7e042fb0df572@mail.gmail.com>
+	<4A2801DA.8030000@yengawa.com>
+Message-ID: <4A28CADD.7020901@yengawa.com>
+
+橫川です。
+
+昨夜は同じことをしたい人に便利なようにと、あまり調べずに公開してました
+が、IPAフォントのライセンスに問題があるかもしれないという指摘がありました。
+
+個人的にライセンスの精査の時間がとれないので、とりあえず、TCC版IPAフォン
+トと、それを入れたEtoysを引っ込めます。
+
+日本語TTフォントを入れたEtoysの配布について、このMLでご意見をいただけれ
+ばうれしいです。
+
+
+Koji Yokokawa wrote 09.6.5 2:18 AM:
+> 阿部さん、
+> 橫川です。
+> 
+> Etoys(Squeakland-OLPC 2177)にIPAフォントが無事に入りました。
+> Windows上で指示通りに作業して問題なく入りました。
+> 
+> 以下、関連するリンクです。
+> IPAフォントを入れたEtoysも置いておきます。
+> 
+> IPAフォント
+> http://ossipedia.ipa.go.jp/ipafont/index.html
+> 
+> TTSDK
+> http://osakattf.hp.infoseek.co.jp/tool/TTSDK.ZIP
+> 
+> IPAフォントのTTC版
+> http://www.yengawa.com/Squeak/Etoys_IPAFont/IPAFont_TTC.zip
+> 
+> Etoys(Squeakland-OLPC 2177)にIPAフォント(Pゴシック、P明朝)を入れたもの
+> http://www.yengawa.com/Squeak/Etoys_IPAFont/etoys_ipafont.1.zip
+> 
+> 
+> ありがとうございました。
+> 
+> Kazuhiro ABE wrote 09.6.4 7:54 PM:
+>> こんにちは、阿部です。
+>> まず、IPAフォントについてですが、最新版はOTFで提供されていると思います。
+>> これをEtoysで読み込むためにはTTCに変換する必要があります。WindowsであればTTSDKに含まれるMAKETTC.EXEを使うのが便利です。
+>> TTCに変換できたらEtoysを起動し、言語選択のアイコン(旗)をクリックして日本語に切り替えます。このとき、インターネットに接続されていれば必要なファイルがダウンロードされ、日本語モードに切り替わります。
+>> それから以下の式を評価してTTCフォントを読み込みます(これはTTCFontSet
+>> class>>newTextStyleFromTTFile:のコメントにも書かれています)。
+>>
+>> TTCFontReader encodingTag: JapaneseEnvironment leadingChar.
+>> TTCFontSet newTextStyleFromTTFile: 'TTCファイルのパス名'
+>>
+>> これで指定したTTCフォントが使えるようになっているはずです。あとはワールドメニューの「外観・・・」から「システム・フォント...」を選んで、適当に変更してください。もちろん、スナップショットはお忘れなく。
+>>
+>> 次にモナーフォントですが、この読み込みの際にエラーが発生します。そのため、大島さんにお願いしてパッチを作ってもらいました。これはMTS版Etoysのチェンジセットにも含まれていますが、csファイルを添付します(ReadMona-yo.1.cs)。そのcsをイメージにファイルインしておくことを除けば、他の手順は同じです。
+>>
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+>>
+>> 2009/06/04 19:15 Koji Yokokawa <admin@yengawa.com>:
+>>> 橫川です。
+>>>
+>>> EtoysにIPAフォントの明朝・ゴシックを入れて使いたいと思っています。
+>>> http://ossipedia.ipa.go.jp/ipafont/fontspec.html
+>>> このまえ阿部さんがEtoysへモナーフォントを入れていましたが、どういう手順
+>>> で入れたのでしょうか?
+>>> 単にフォントファイルをEtoysへドロップして読ませただけではフォント選択項
+>>> 目が文字化けしているし、適用すると日本語が"？？？？"という表示になってし
+>>> まいます。
+>>>
+>>>
+>>> -- !
+>>> Koji Yokokawa ykoubo2008@yengawa.com>
+>>>    http://www.yengawa.com/
+>>>    ^self new!
+>>>
+> 
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From abee.abe ＠ nifty.ne.jp  Fri Jun  5 16:49:08 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Jun  5 16:49:32 2009
+Subject: [Squeak-ja: 4257] Re: Etoysに日本語TTフォントを入れる方法
+In-Reply-To: <4A28CADD.7020901@yengawa.com>
+References: <4A279EAB.5010509@yengawa.com>
+	<2d5d52a80906040354h21d52a12ndde7e042fb0df572@mail.gmail.com> 
+	<4A2801DA.8030000@yengawa.com> <4A28CADD.7020901@yengawa.com>
+Message-ID: <2d5d52a80906050049v546a8cb8m7e5313e99dc1ea76@mail.gmail.com>
+
+こんにちは、阿部です。
+MTS版Etoysがモナーフォントを使っているのも同じような理由です。
+今後の方向性としては、Scratchのように(古くはVisulWorksのように)イメージ自体にはフォントを組み込まず、OSのフォントを使うようにするのがよいのかもしれません。
+その意味で、川村さんのSqueak Win32Fontは興味深い試みです。
+https://squeak.sitej.net/drupal/node/154
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/06/05 16:35 Koji Yokokawa <admin@yengawa.com>:
+> 橫川です。
+>
+> 昨夜は同じことをしたい人に便利なようにと、あまり調べずに公開してました
+> が、IPAフォントのライセンスに問題があるかもしれないという指摘がありました。
+>
+> 個人的にライセンスの精査の時間がとれないので、とりあえず、TCC版IPAフォン
+> トと、それを入れたEtoysを引っ込めます。
+>
+> 日本語TTフォントを入れたEtoysの配布について、このMLでご意見をいただけれ
+> ばうれしいです。
+From yoshiki ＠ vpri.org  Sat Jun  6 05:46:02 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Sat Jun  6 05:46:33 2009
+Subject: [Squeak-ja: 4258] Re: Etoysに日本語TTフォントを入れる方法
+In-Reply-To: <4A28CADD.7020901@yengawa.com>
+References: <4A279EAB.5010509@yengawa.com>
+	<2d5d52a80906040354h21d52a12ndde7e042fb0df572@mail.gmail.com>
+	<4A2801DA.8030000@yengawa.com> <4A28CADD.7020901@yengawa.com>
+Message-ID: <u8wk6be9h.wl%yoshiki@vpri.org>
+
+At Fri, 05 Jun 2009 16:35:57 +0900,
+Koji Yokokawa wrote:
+> 
+> 橫川です。
+> 
+> 昨夜は同じことをしたい人に便利なようにと、あまり調べずに公開してました
+> が、IPAフォントのライセンスに問題があるかもしれないという指摘がありました。
+> 
+> 個人的にライセンスの精査の時間がとれないので、とりあえず、TCC版IPAフォン
+> トと、それを入れたEtoysを引っ込めます。
+> 
+> 日本語TTフォントを入れたEtoysの配布について、このMLでご意見をいただけれ
+> ばうれしいです。
+
+  http://ossipedia.ipa.go.jp/ipafont/faq.html#q003-1の3.3, 特に3.3.2は
+関係ありますね。配布するのなら、フォントファイルはそのまま含めておき、
+"About..."みたいなフラップを作って情報を出すようにするといったことが必
+要でしょうね。
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Sat Jun  6 22:51:17 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Jun  6 22:51:23 2009
+Subject: [Squeak-ja: 4259] Seaside へ GO!!(最終回)が掲載されました
+Message-ID: <JxGenj.xUaA_agCB.XQ9YHtA4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、「Seaside へ GO!!」最終回が「オブジェクトの広場」に掲載されました。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/seaside6/index.html
+
+今回はCSSやAjaxとの融合が主なテーマになっています。
+
+この際まとめて読んでみたいという人は、以下をどうぞ。
+
+「Seaside へ GO!!インデックスページ」
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/index.html
+
+SmalltalkでWebアプリケーションを作ることに興味のある方、週末にでも
+じっくりとお読み下さい。
+
+---
+[:masashi | ^umezawa]
+From admin ＠ yengawa.com  Sat Jun  6 23:11:55 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Sat Jun  6 23:12:03 2009
+Subject: [Squeak-ja: 4260] Squeak-jaアーカイブ文字化け
+Message-ID: <4A2A792B.2020702@yengawa.com>
+
+橫川です。
+参照リンクを張ろうとしたら、Squeak-jaのアーカイブが文字化けしてるのに気
+がつきました。
+このスレッドのみというのはなぜでしょう?
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2009-June/004254.html
+
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From admin ＠ yengawa.com  Sun Jun  7 07:33:31 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Sun Jun  7 07:33:45 2009
+Subject: [Squeak-ja: 4261] Re: Etoysに日本語TTフォントを入れる方法
+In-Reply-To: <u8wk6be9h.wl%yoshiki@vpri.org>
+References: <4A279EAB.5010509@yengawa.com>	<2d5d52a80906040354h21d52a12ndde7e042fb0df572@mail.gmail.com>	<4A2801DA.8030000@yengawa.com>
+	<4A28CADD.7020901@yengawa.com> <u8wk6be9h.wl%yoshiki@vpri.org>
+Message-ID: <4A2AEEBB.9040106@yengawa.com>
+
+橫川です。
+
+確かに、Etoysにフォントライセンスを表示させるのは必須ですね。
+
+「オリジナル状態に戻す手段」については、元のEtoysとフォントそれぞれのダ
+ウンロード方法を示すことでフォントファイルの同梱はしなくても良いのではな
+いでしょうか。
+
+
+Yoshiki Ohshima wrote 09.6.6 5:46 AM:
+> At Fri, 05 Jun 2009 16:35:57 +0900,
+> Koji Yokokawa wrote:
+>> 橫川です。
+>>
+>> 昨夜は同じことをしたい人に便利なようにと、あまり調べずに公開してました
+>> が、IPAフォントのライセンスに問題があるかもしれないという指摘がありました。
+>>
+>> 個人的にライセンスの精査の時間がとれないので、とりあえず、TCC版IPAフォン
+>> トと、それを入れたEtoysを引っ込めます。
+>>
+>> 日本語TTフォントを入れたEtoysの配布について、このMLでご意見をいただけれ
+>> ばうれしいです。
+> 
+>   http://ossipedia.ipa.go.jp/ipafont/faq.html#q003-1の3.3, 特に3.3.2は
+> 関係ありますね。配布するのなら、フォントファイルはそのまま含めておき、
+> "About..."みたいなフラップを作って情報を出すようにするといったことが必
+> 要でしょうね。
+> 
+> -- Yoshiki
+> 
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From abee ＠ squeakland.jp  Sun Jun  7 14:19:28 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sun Jun  7 14:19:51 2009
+Subject: [Squeak-ja: 4262] Scratch 1.4RCがリリースされました。
+Message-ID: <2d5d52a80906062219m6b1bc0a1oc245ca005839bec1@mail.gmail.com>
+
+こんにちは、阿部です。
+さきほど、Scratch 1.4RCがベータテスタだけでなく、すべてのユーザに公開されました(Win, Mac)。
+http://scratch.mit.edu/forums/viewtopic.php?pid=131503
+これは6月末に予定される1.4正式版の候補となるものです。
+1.4は1.3.1からかなり変更されているので、なるべく多くの方に試していただき、問題の洗い出しをお願いできればと思います。可能ならワークショップなどで使っていただくのもよいと思います(子供は最強のテスタです)。レポートは直接Scratch
+Teamに送っていただいても結構ですし、面倒でしたらこのML宛でもかまいません。
+その際、同梱されている日本語の翻訳ファイルが最新のものになっていないので、以下をお使いください(展開したものをlocaleフォルダに上書き)。
+http://squeakland.jp/abee/scratch/japo090607abee.zip
+LEGOのWeDoやWebカメラなど、追加された新機能に合わせて語彙も増えています。
+もし変えたいところがあれば、PootleというWebサービスを使ってご自分で変更することも出来ます(要アカウント登録。以前はOLPCのものを使っていたのですが独立したサーバになりました)。
+http://translate.scratch.mit.edu/
+その際、MLにお知らせいただければ、私の方でコミットします。もちろん、MLだけにコメントいただいても結構です。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee.abe ＠ nifty.ne.jp  Sun Jun  7 15:22:20 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Jun  7 15:22:44 2009
+Subject: [Squeak-ja: 4263] Re: Squeak-jaアーカイブ文字化け
+In-Reply-To: <4A2A792B.2020702@yengawa.com>
+References: <4A2A792B.2020702@yengawa.com>
+Message-ID: <2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com>
+
+こんにちは、阿部です。
+「橫」の字がJIS X 0208にないのが原因ではないでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From okumura ＠ edu.mie-u.ac.jp  Sun Jun  7 16:31:47 2009
+From: okumura ＠ edu.mie-u.ac.jp (奥村晴彦＠三重大)
+Date: Sun Jun  7 16:31:50 2009
+Subject: [Squeak-ja: 4264] Re: Squeak-jaアーカイブ文字化け
+In-Reply-To: <2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com>
+References: <4A2A792B.2020702@yengawa.com>
+	<2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com>
+Message-ID: <9318225C-259F-43A0-80B3-A8E8871CD587@edu.mie-u.ac.jp>
+
+Windowsのメールソフトではどのように表示されるのでしょう 
+か。MacのMailでは□に×の入った文字（ゲタの一種） 
+で表示されています。Carbon Emacs（Mew）ではウプシ 
+ロンの小文字のような文字になります。
+
+On 2009/06/07, at 15:22, Kazuhiro ABE wrote:
+
+> こんにちは、阿部です。
+> 「」の字がJIS X 0208にないのが原因ではないでしょうか。
+
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+
+From inoue ＠ ma.ns.tcu.ac.jp  Sun Jun  7 16:34:07 2009
+From: inoue ＠ ma.ns.tcu.ac.jp (iNOUE Koich!)
+Date: Sun Jun  7 16:34:11 2009
+Subject: [Squeak-ja: 4265] Re: Squeak-jaアーカイブ文字化け
+In-Reply-To: <2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com>
+References: <4A2A792B.2020702@yengawa.com>
+	<2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com>
+Message-ID: <20090607163407409684.GyazMail.inoue@ma.ns.tcu.ac.jp>
+
+井上＠東京都市大です。
+
+メーリングリストサーバにMailmanが使われているようですが、機種依存文字を
+アーカイブで修正することができます。機種依存文字を使わないようにすべきで
+しょうが、折角の情報が読めなくなるのはもったいないこともありますので、私
+のところで運用しているメールサーバではそのようなことをしています。もし対
+処が必要ならそういう方向性もご検討下さい。
+
+Kazuhiro ABEさんがSun, 7 Jun 2009 15:22:20 +0900に
+「[Squeak-ja: 4263] Re: Squeak-jaアーカイブ文字化け」の件で：
+> こんにちは、阿部です。
+> 「?」の字がJIS X 0208にないのが原因ではないでしょうか。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+-- 
+https://www.ns.tcu.ac.jp/%7einoue/Signature/                        井上
+.
+From abee.abe ＠ nifty.ne.jp  Sun Jun  7 16:47:20 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Jun  7 16:47:44 2009
+Subject: [Squeak-ja: 4266] Re: Squeak-jaアーカイブ文字化け
+In-Reply-To: <9318225C-259F-43A0-80B3-A8E8871CD587@edu.mie-u.ac.jp>
+References: <4A2A792B.2020702@yengawa.com>
+	<2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com> 
+	<9318225C-259F-43A0-80B3-A8E8871CD587@edu.mie-u.ac.jp>
+Message-ID: <2d5d52a80906070047x73ef735cv9a9ab59559027d97@mail.gmail.com>
+
+こんにちは、阿部です。
+問題の文字はこれです。
+http://ja.wiktionary.org/wiki/%E6%A9%AB
+私はメール環境をGmailに移行してしまったので、Windowsのメールソフトでの見え方は分からないのですが、横川さんから届いたメールはGmailで読めています(MLのアーカイブはだめ。ダウンロード版はJISでデコードすれば大丈夫)。
+iPhoneで見たときは黒の菱形に白抜きで?です。これはNabbleのログをFirefoxで見たときと同様です。
+http://www.nabble.com/-Squeak-ja%3A-4253--Etoys%E3%81%AB%E6%97%A5%E6%9C%AC%E8%AA%9ETT%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%82%92%E5%85%A5%E3%82%8C%E3%82%8B%E6%96%B9%E6%B3%95-tt23867222.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/06/07 16:31 に 奥村晴彦＠三重大<okumura@edu.mie-u.ac.jp> さんは書きました:
+> Windowsのメールソフトではどのように表示されるのでしょうか。MacのMailでは□に×の入った文字（ゲタの一種）で表示されています。Carbon
+> Emacs（Mew）ではウプシロンの小文字のような文字になります。
+>
+> On 2009/06/07, at 15:22, Kazuhiro ABE wrote:
+>
+>> こんにちは、阿部です。
+>> 「」の字がJIS X 0208にないのが原因ではないでしょうか。
+>
+> 奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+From abee.abe ＠ nifty.ne.jp  Sun Jun  7 16:52:00 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Jun  7 16:52:23 2009
+Subject: [Squeak-ja: 4267] Re: Squeak-jaアーカイブ文字化け
+In-Reply-To: <20090607163407409684.GyazMail.inoue@ma.ns.tcu.ac.jp>
+References: <4A2A792B.2020702@yengawa.com>
+	<2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com> 
+	<20090607163407409684.GyazMail.inoue@ma.ns.tcu.ac.jp>
+Message-ID: <2d5d52a80906070052m63b2286dn4d5343deac46104d@mail.gmail.com>
+
+こんにちは、阿部です。
+ありがとうございます。
+最終的にはサーバを管理してもらっているアカデミアの桑谷さんにお願いしないといけないのですが、よろしければsqueak-ja-owner@smalltalk.jpに情報をいただけますでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/06/07 16:34 に iNOUE Koich!<inoue@ma.ns.tcu.ac.jp> さんは書きました:
+> 井上＠東京都市大です。
+>
+> メーリングリストサーバにMailmanが使われているようですが、機種依存文字を
+> アーカイブで修正することができます。機種依存文字を使わないようにすべきで
+> しょうが、折角の情報が読めなくなるのはもったいないこともありますので、私
+> のところで運用しているメールサーバではそのようなことをしています。もし対
+> 処が必要ならそういう方向性もご検討下さい。
+>
+> Kazuhiro ABEさんがSun, 7 Jun 2009 15:22:20 +0900に
+> 「[Squeak-ja: 4263] Re: Squeak-jaアーカイブ文字化け」の件で：
+>> こんにちは、阿部です。
+>> 「?」の字がJIS X 0208にないのが原因ではないでしょうか。
+>>
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+>>
+> --
+> https://www.ns.tcu.ac.jp/%7einoue/Signature/                        井上
+> .
+>
+From abee.abe ＠ nifty.ne.jp  Sun Jun  7 16:56:50 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Jun  7 16:57:13 2009
+Subject: [Squeak-ja: 4268] Re: Etoysに日本語TTフォントを入れる方法
+In-Reply-To: <4A2AEEBB.9040106@yengawa.com>
+References: <4A279EAB.5010509@yengawa.com>
+	<2d5d52a80906040354h21d52a12ndde7e042fb0df572@mail.gmail.com> 
+	<4A2801DA.8030000@yengawa.com> <4A28CADD.7020901@yengawa.com> 
+	<u8wk6be9h.wl%yoshiki@vpri.org> <4A2AEEBB.9040106@yengawa.com>
+Message-ID: <2d5d52a80906070056qca8548l94f76118a8822dac@mail.gmail.com>
+
+こんにちは、阿部です。
+このあたりの議論はなかなか難しく、誰かが大丈夫(あるいは大丈夫じゃない)と言ったとしてもあまり意味がないので、具体例をあげてIPAに問い合わせる必要があると思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/06/07 7:33 に Koji Yokokawa<admin@yengawa.com> さんは書きました:
+> 橫川です。
+>
+> 確かに、Etoysにフォントライセンスを表示させるのは必須ですね。
+>
+> 「オリジナル状態に戻す手段」については、元のEtoysとフォントそれぞれのダ
+> ウンロード方法を示すことでフォントファイルの同梱はしなくても良いのではな
+> いでしょうか。
+>
+>
+> Yoshiki Ohshima wrote 09.6.6 5:46 AM:
+>> At Fri, 05 Jun 2009 16:35:57 +0900,
+>> Koji Yokokawa wrote:
+>>> 橫川です。
+>>>
+>>> 昨夜は同じことをしたい人に便利なようにと、あまり調べずに公開してました
+>>> が、IPAフォントのライセンスに問題があるかもしれないという指摘がありました。
+>>>
+>>> 個人的にライセンスの精査の時間がとれないので、とりあえず、TCC版IPAフォン
+>>> トと、それを入れたEtoysを引っ込めます。
+>>>
+>>> 日本語TTフォントを入れたEtoysの配布について、このMLでご意見をいただけれ
+>>> ばうれしいです。
+>>
+>>   http://ossipedia.ipa.go.jp/ipafont/faq.html#q003-1の3.3, 特に3.3.2は
+>> 関係ありますね。配布するのなら、フォントファイルはそのまま含めておき、
+>> "About..."みたいなフラップを作って情報を出すようにするといったことが必
+>> 要でしょうね。
+>>
+>> -- Yoshiki
+>>
+>
+> --
+> -- !
+> Koji Yokokawa ykoubo2008@yengawa.com>
+>    http://www.yengawa.com/
+>    ^self new!
+>
+From admin ＠ yengawa.com  Sun Jun  7 17:34:23 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Sun Jun  7 17:34:30 2009
+Subject: [Squeak-ja: 4269] Re: Squeak-jaアーカイブ文字化け
+In-Reply-To: <2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com>
+References: <4A2A792B.2020702@yengawa.com>
+	<2d5d52a80906062322n6cb005ben5c449cfa32627195@mail.gmail.com>
+Message-ID: <4A2B7B8F.6010509@yengawa.com>
+
+ヨコ川です。
+自分の名前の漢字を間違っていたとは思いませんでした。
+すみません。
+# MacBook 13inch上のアンチエイリアシングでよく見えなかったのです。
+
+変換を変えたので、これはだいじょうぶかな？
+「横」川
+
+Kazuhiro ABE wrote 09.6.7 3:22 PM:
+> こんにちは、阿部です。
+> 「」の字がJIS X 0208にないのが原因ではないでしょうか。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From umejava ＠ mars.dti.ne.jp  Thu Jun 18 23:35:23 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Jun 18 23:35:30 2009
+Subject: [Squeak-ja: 4270] 第10回Smalltalk勉強会のお知らせ
+Message-ID: <JxfCuLJyJ5JDdskidOc9vkmg4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。今回は水曜日です。
+
+日時: 2009/6/24(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai10kaismalltalkbenkyoukai
+
+今回のテーマは「Smalltalkで正規表現」です。多分「鬼車 for VisualWorks」
+の中の人が、何かしゃべってくれます。
+Smalltalkで正規表現というのも一見ミスマッチですが、昨今はやりの集合知系
+の実装にはきっと役立つわけです。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+気になる方はこのMLにメールを送っていただいても良いです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From jg1gwl ＠ mx3.ttcn.ne.jp  Thu Jun 25 22:53:14 2009
+From: jg1gwl ＠ mx3.ttcn.ne.jp (SUGIMOTO Kenji)
+Date: Thu Jun 25 22:53:20 2009
+Subject: [Squeak-ja: 4271] スクラッチ in 世田谷
+References: <2d5d52a80906062219m6b1bc0a1oc245ca005839bec1@mail.gmail.com>
+Message-ID: <2BECCAF420ED41A981B5F92FA13F1565@LENOVO0DFC6E3B>
+
+場違いのお尋ねで申し訳ありません。世田谷の一隅でほそぼそと
+スクイークを小学生に伝えている者です。
+
+今日の世田谷区報に「スクラッチ in 世田谷」がこどもプログラミング
+スクールを開くと紹介されていました。残念ながら対象の孫がいない
+ので、私は応募できません。期日は7月25日だけだそうです。
+
+どなたがこのグループを主宰されているかご存知の方はお教え
+いただけないでしょうか。お願い申し上げます。
+
+杉本 賢冶
+
+From csdpp363 ＠ ybb.ne.jp  Sun Jun 28 02:26:07 2009
+From: csdpp363 ＠ ybb.ne.jp (csdpp363@ybb.ne.jp)
+Date: Sun Jun 28 02:26:16 2009
+Subject: [Squeak-ja: 4272] owner または自分の名前の変更の方法を教えて！
+Message-ID: <20090627172607.32331.qmail@web10515.mail.ogk.yahoo.co.jp>
+
+藤岡　董（フジオカ　タダス）と申します。
+   
+  初歩的な質問で申し訳ありませんが、教えて下さい。
+   
+  自分で作ったスクイークの作品を読み込む時のことですが、順序として、“ナビゲータ”→“探す”→“squeakland.jp”とその下に“owner”または、私の場合は自分の名前“藤岡董”が表示されていますねぇ！その“owner”または“藤岡董”の名前を変更
+  する方法を教えてください。
+   
+ 
+
+
+***************************
+  藤岡　董(Fujioka Tadasu)
+E-Mail：csdpp363@ybb.ne.jp
+Tel/Fax：072-622-6826
+携帯電話：090-8658-7113
+*************************** 
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20090628/c632dea1/attachment.html
+From abee.abe ＠ nifty.ne.jp  Tue Jun 30 20:57:10 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Tue Jun 30 20:57:36 2009
+Subject: [Squeak-ja: 4273] Re: owner または自分の名前の変更の方法を教えて！
+In-Reply-To: <20090627172607.32331.qmail@web10515.mail.ogk.yahoo.co.jp>
+References: <20090627172607.32331.qmail@web10515.mail.ogk.yahoo.co.jp>
+Message-ID: <2d5d52a80906300457v7191eadap7eb3c15a757636f4@mail.gmail.com>
+
+こんにちは、阿部です。
+「ナビゲータ」の「探す」で表示される一覧の下にあるものは、以下のディレクトリを参照しています(Windows XPの場合)。
+
+C:\My Squeak\ユーザーアカウント名
+
+このユーザーアカウント名はSqueakではなく、藤岡さんご自身が設定したか、デフォルトの値がそのまま使われています。ホストOS側に設定されているので、この名前を変更するのであれば、そちらで行います。
+仮にWindows XPであれば、「スタート」メニューから「コントロールパネル」を選び「ユーザー
+アカウント」の「変更するアカウントを選びます」から「名前を変更する」で設定します。他のOSにも同様の機能があります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/06/28 2:26 に <csdpp363@ybb.ne.jp> さんは書きました:
+> 藤岡　董（フジオカ　タダス）と申します。
+>
+> 初歩的な質問で申し訳ありませんが、教えて下さい。
+>
+> 自分で作ったスクイークの作品を読み込む時のことですが、順序として、“ナビゲータ”→“探す”→“squeakland.jp”とその下に“owner”または、私の場合は自分の名前“藤岡董”が表示されていますねぇ！その“owner”または“藤岡董”の名前を変更
+> する方法を教えてください。
+>
+>
+>
+> ***************************
+> 藤岡　董(Fujioka Tadasu)
+> E-Mail：csdpp363@ybb.ne.jp
+> Tel/Fax：072-622-6826
+> 携帯電話：090-8658-7113
+> ***************************

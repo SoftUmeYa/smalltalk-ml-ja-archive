@@ -1,0 +1,285 @@
+From sadie ＠ kind.ocn.ne.jp  Sun Jan 15 19:39:04 2017
+From: sadie ＠ kind.ocn.ne.jp (Sunao Furukawa)
+Date: Sun, 15 Jan 2017 19:39:04 +0900
+Subject: [SML 8158]
+	NesTalkをpharo5.0に移植途中なのですが・・・
+Message-ID: <000001d26f1b$9829c4c0$c87d4e40$@kind.ocn.ne.jp>
+
+古川と申します。
+NesTalkでマリオを動かす
+http://oohito.com/nqthm/archives/2060
+を参考に
+NesTalkをpharo 5.0に移植しようと思って作業しているのですが、
+FileStreamのメソッドをdeprecated:にすればいいと思っていました。
+しかし、validate:aByteArrayの引数で具体的な値が入りません。
+pharo2.0でやれば、シンボルのブロックが代入されているところで、
+pharo5.0ではFileStreamの変数が指定されています。
+どう直したらいいでしょう。
+
+変更したメソッドを書いておきます。なお、BabyMockはsmalltalkhubから
+loadしました。
+--------------------------------------------------------------
+romFile: path
+	^ FileSystem disk / path binaryReadStreamDo:
+		[:stream | self readCartridge: stream]
+
+---------------------------------------------------------------
+readCartridge: stream
+	| roms vroms header |
+	stream deprecated: 'binary'.
+	header := NtCartridgeHeader fromByteArray: (stream deprecated:
+'next: 16').
+	roms := self readRoms: stream header: header.
+	vroms := self readVroms: stream header: header.
+	^ self new
+		setHeader: header
+		roms: roms
+		vroms: vroms
+		tiles: (self tilesPerVrom: vroms)
+----------------------------------------------------------------
+虫のいい話で申し訳ありません。ポイントは'next: 16'がdeprecated:にした時に
+値を読み込まないことだと思います。
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Tue Jan 17 12:21:12 2017
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Tue, 17 Jan 2017 12:21:12 +0900
+Subject: [SML 8159] Re:
+	NesTalkをpharo5.0に移植途中なのですが・・・
+In-Reply-To: <000001d26f1b$9829c4c0$c87d4e40$@kind.ocn.ne.jp>
+References: <000001d26f1b$9829c4c0$c87d4e40$@kind.ocn.ne.jp>
+Message-ID: <CAO=zwV0nzoLPJ5fyMApt8XrtErmYcJ__4P9iXsgasAxBCewQ9w@mail.gmail.com>
+
+古川さん
+
+#deprecated: は非推奨メソッドに組み込んでおき、コールされた場合に警告を出すためのメソッドで、
+試しておられるような使い方は見たことがないのですが、当方の勘違いでしょうか？
+
+あと、古川さんは OS は何を使われていますか？
+
+
+手元の環境（Win 8.1）で試しましたが、#romFile: で ROM ファイルを読み込めないだけで
+これをとりあえず
+
+romFile: path
+    ^ path asFileReference readStreamDo:
+        [:stream | self readCartridge: stream]
+
+のように修正すれば他には特に修正なしに動きました。よく調べていませんが、
+Pharo の Path>>#segments あたりが Win でうまく機能していないせいのように見受けられます。
+
+macOS はちょっと古いバージョン（10.9）でしか試していないのですが、
+Win で動かすときような修正の必要はなく、インストールしただけで特にいじらずとも起動まではしました。
+しかし、Pharo が macOS で動くときに #keyDonw、#keyUp イベントでちゃんとキーコードを保持できていないらしく
+操作不能な状態に陥っているように見受けられます。
+とりあえず、#keyStroke イベントはちゃんとキーコードを保持できているようなので、
+#handlesKeyDown: と同じ内容の #handlesKeyStroke: メソッドを NesTalkWindow に追加してみたところ、
+それらしき反応はしてくれるようです（ただ、これだけですとボタンが押しっぱなしになるので相変わらずプレイは不能ですが…）
+
+--
+sumim
+
+
+2017年1月15日 20:00 Sunao Furukawa <sadie ＠ kind.ocn.ne.jp>:
+> 古川と申します。
+> NesTalkでマリオを動かす
+> http://oohito.com/nqthm/archives/2060
+> を参考に
+> NesTalkをpharo 5.0に移植しようと思って作業しているのですが、
+> FileStreamのメソッドをdeprecated:にすればいいと思っていました。
+> しかし、validate:aByteArrayの引数で具体的な値が入りません。
+> pharo2.0でやれば、シンボルのブロックが代入されているところで、
+> pharo5.0ではFileStreamの変数が指定されています。
+> どう直したらいいでしょう。
+>
+> 変更したメソッドを書いておきます。なお、BabyMockはsmalltalkhubから
+> loadしました。
+> --------------------------------------------------------------
+> romFile: path
+>         ^ FileSystem disk / path binaryReadStreamDo:
+>                 [:stream | self readCartridge: stream]
+>
+> ---------------------------------------------------------------
+> readCartridge: stream
+>         | roms vroms header |
+>         stream deprecated: 'binary'.
+>         header := NtCartridgeHeader fromByteArray: (stream deprecated:
+> 'next: 16').
+>         roms := self readRoms: stream header: header.
+>         vroms := self readVroms: stream header: header.
+>         ^ self new
+>                 setHeader: header
+>                 roms: roms
+>                 vroms: vroms
+>                 tiles: (self tilesPerVrom: vroms)
+> ----------------------------------------------------------------
+> 虫のいい話で申し訳ありません。ポイントは'next: 16'がdeprecated:にした時に
+> 値を読み込まないことだと思います。
+>
+
+From ume ＠ softumeya.com  Tue Jan 17 23:51:04 2017
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 17 Jan 2017 23:51:04 +0900
+Subject: [SML 8160]
+	第96回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSNJJMwDgozdy+x3Tmn2m-SAuBV6RHe6kQd1O03qrRvVA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai96kaismalltalkbenkyoukai
+
+日時: 2017/1/30(月) 19:00-21:00
+場所:  SORABITO株式会社
+
+今回は私が最近開発したTarantalkというライブラリの話をします。
+https://github.com/mumez/Tarantalk
+
+ロシアで作られたTarantoolというDB付きのLua実行環境があるのですが、それとの通信を可能にするというものです。
+https://tarantool.org/
+
+Tarantalkにより、PharoからLuaの関数をリモート呼び出ししたり、タプルDBに各種データを保存したりできます。各種マイクロサービスとの連携、統合が、Luaのエコシステムを活用しつつできるようになります。SmalltalkとLua、なかなか良い組み合わせですよ。
+
+お申し込みはこちらから
+https://smalltalk.connpass.com/event/48815/
+
+お気軽にどうぞ。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From sadie ＠ kind.ocn.ne.jp  Wed Jan 18 11:07:33 2017
+From: sadie ＠ kind.ocn.ne.jp (Sunao Furukawa)
+Date: Wed, 18 Jan 2017 11:07:33 +0900
+Subject: [SML 8161] Re:
+	NesTalkをpharo5.0に移植途中なのですが・・・
+In-Reply-To: <CAO=zwV0nzoLPJ5fyMApt8XrtErmYcJ__4P9iXsgasAxBCewQ9w@mail.gmail.com>
+References: <000001d26f1b$9829c4c0$c87d4e40$@kind.ocn.ne.jp>
+ <CAO=zwV0nzoLPJ5fyMApt8XrtErmYcJ__4P9iXsgasAxBCewQ9w@mail.gmail.com>
+Message-ID: <001601d2712f$a1ac4930$e504db90$@kind.ocn.ne.jp>
+
+Sumiさん。
+古川です。お忙しい中調べさせてしまい申し訳ありませんでした。
+#binaryなどといったメッセージをほおっておいてdo itしてみたら、
+---------------------------------------------------------------
+FileHandle(Object)>>doesNotUnderstand: #binary
+NtCartridge class>>readCartridge:
+[ :stream | self readCartridge: stream ] in NtCartridge class>>romFile: in Block: [ :stream | self readCartridge: stream ]
+[ aBlock value: stream ] in FileReference(AbstractFileReference)>>readStreamDo: in Block: [ aBlock value: stream ]
+BlockClosure>>ensure:
+FileReference(AbstractFileReference)>>readStreamDo:
+NtCartridge class>>romFile:
+UndefinedObject>>DoIt
+OpalCompiler>>evaluate
+RubSmalltalkEditor>>evaluate:andDo:
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>popupPrint
+MorphicAlarm(MessageSend)>>value
+MorphicAlarm>>value:
+WorldState>>triggerAlarmsBefore:
+WorldState>>runLocalStepMethodsIn:
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+[ [ World doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess in Block: [ [ World doOneCycle....
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess in Block: [ self value....
+-----------------------------------------------------------------------------------
+doesNotUnderstand: #binaryなどと言われてしまったためパニックに陥った私は英語のドキュメントをいろいろ調べて、deprecated:にすればいいと思い込んでいました。
+私の英語力不足のため、doesNotUnderstand:が消えればいいと思っていました。
+http://stackoverflow.com/questions/31934877/pharo-filesystem-how-do-i-write-a-binary-file
+などを下手に参考にしたため、deprecated:を連発する結果となりました。
+なお、OSは自分でアップデートしたwindows 10.0.14393を使っています。
+ちなみにNesTalkはPharo5.0で無事動きました。
+ただfpsが速すぎるような気がしますが、Spur VMのおかげかも（憶測）と思いました。
+
+御返事ありがとうございました。
+>-----Original Message-----
+>From: sml-bounces ＠ smalltalk.jp [mailto:sml-bounces ＠ smalltalk.jp] On
+>Behalf Of Masato Sumi
+>Sent: Tuesday, January 17, 2017 12:21 PM
+>To: Smalltalkers' Salon Mailing List <sml ＠ smalltalk.jp>
+>Subject: [SML 8159] Re: NesTalkをpharo5.0に移植途中なのですが・・・
+>
+>古川さん
+>
+>#deprecated: は非推奨メソッドに組み込んでおき、コールされた場合に警告を
+>出すためのメソッドで、
+>試しておられるような使い方は見たことがないのですが、当方の勘違いでしょう
+>か？
+>
+>あと、古川さんは OS は何を使われていますか？
+>
+>
+>手元の環境（Win 8.1）で試しましたが、#romFile: で ROM ファイルを読み込め
+>ないだけで
+>これをとりあえず
+>
+>romFile: path
+>    ^ path asFileReference readStreamDo:
+>        [:stream | self readCartridge: stream]
+>
+>のように修正すれば他には特に修正なしに動きました。よく調べていませんが、
+>Pharo の Path>>#segments あたりが Win でうまく機能していないせいのよう
+>に見受けられます。
+>
+>macOS はちょっと古いバージョン（10.9）でしか試していないのですが、
+>Win で動かすときような修正の必要はなく、インストールしただけで特にいじら
+>ずとも起動まではしました。
+>しかし、Pharo が macOS で動くときに #keyDonw、#keyUp イベントでちゃんと
+>キーコードを保持できていないらしく
+>操作不能な状態に陥っているように見受けられます。
+>とりあえず、#keyStroke イベントはちゃんとキーコードを保持できているよう
+>なので、
+>#handlesKeyDown: と同じ内容の #handlesKeyStroke: メソッドを
+>NesTalkWindow に追加してみたところ、
+>それらしき反応はしてくれるようです（ただ、これだけですとボタンが押しっぱ
+>なしになるので相変わらずプレイは不能ですが…）
+>
+>--
+>sumim
+>
+>
+>2017年1月15日 20:00 Sunao Furukawa <sadie ＠ kind.ocn.ne.jp>:
+>> 古川と申します。
+>> NesTalkでマリオを動かす
+>> http://oohito.com/nqthm/archives/2060
+>> を参考に
+>> NesTalkをpharo 5.0に移植しようと思って作業しているのですが、
+>> FileStreamのメソッドをdeprecated:にすればいいと思っていました。
+>> しかし、validate:aByteArrayの引数で具体的な値が入りません。
+>> pharo2.0でやれば、シンボルのブロックが代入されているところで、
+>> pharo5.0ではFileStreamの変数が指定されています。
+>> どう直したらいいでしょう。
+>>
+>> 変更したメソッドを書いておきます。なお、BabyMockはsmalltalkhubから
+>> loadしました。
+>> --------------------------------------------------------------
+>> romFile: path
+>>         ^ FileSystem disk / path binaryReadStreamDo:
+>>                 [:stream | self readCartridge: stream]
+>>
+>> ---------------------------------------------------------------
+>> readCartridge: stream
+>>         | roms vroms header |
+>>         stream deprecated: 'binary'.
+>>         header := NtCartridgeHeader fromByteArray: (stream deprecated:
+>> 'next: 16').
+>>         roms := self readRoms: stream header: header.
+>>         vroms := self readVroms: stream header: header.
+>>         ^ self new
+>>                 setHeader: header
+>>                 roms: roms
+>>                 vroms: vroms
+>>                 tiles: (self tilesPerVrom: vroms)
+>> ----------------------------------------------------------------
+>> 虫のいい話で申し訳ありません。ポイントは'next: 16'がdeprecated:にした
+>時に
+>> 値を読み込まないことだと思います。
+>>
+

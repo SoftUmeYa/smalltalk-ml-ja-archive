@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3713] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203713%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lVyVtJTglJyUvJUgkchsoQiBTdXBlclN3aWtpMiA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEs8aCRqOX4kXyReJDckPxsoQg%3D%3D%3F%3D&In-Reply-To=20071022222224.59A0.YKOUBO2007%40yengawa.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003709.html">
+   <LINK REL="Next"  HREF="003717.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3713] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203713%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lVyVtJTglJyUvJUgkchsoQiBTdXBlclN3aWtpMiA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEs8aCRqOX4kXyReJDckPxsoQg%3D%3D%3F%3D&In-Reply-To=20071022222224.59A0.YKOUBO2007%40yengawa.com"
+       TITLE="[Squeak-ja: 3713] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2007年 10月 23日 (火) 22:26:55 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003709.html">[Squeak-ja: 3709] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+</A></li>
+        <LI>次の記事 <A HREF="003717.html">[Squeak-ja: 3717] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3713">[ 日付 ]</a>
+              <a href="thread.html#3713">[ スレッド ]</a>
+              <a href="subject.html#3713">[ 件名 ]</a>
+              <a href="author.html#3713">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Mon, 22 Oct 2007 22:26:31 +0900
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">ykoubo2007 ＠ yengawa.com</A>&gt; wrote:
+&gt;<i>Squeakland2005J2で「移行の案内」プロジェクトを読んで移行ボタンを押したら
+</I>&gt;<i>エラーになりました。
+</I>&gt;<i>とりあえずエラーログを送ります。
+</I>
+レポートありがとうございます。
+修正版をアップしましたのでご確認ください。
+
+以下は反省の弁です。
+
+今回のエラーは、プリファレンス用ディレクトリ(prefs)の存在を保証してくれる
+メソッド、ExternalSettings&gt;&gt;assuredPreferenceDirectoryが、サンドボックス
+(FileDirectory default)以外へのアクセスが制限されているときに(ネットワー
+ク経由でプロジェクトを開いた後)、正常に動作しなくなることが原因でした。
+
+prefsはサンドボックス内に作られるので大丈夫だろうと思っていたのですが、上
+記のメソッドから呼ばれているFileDirectory&gt;&gt;assureExistenceOfPath:が再帰的
+にパス中のディレクトリの存在を確認する際、FileDirectory defalut以上のディ
+レクトリに対してdirectoryExists:を送っても常にfalseを返すことから、結果と
+してログにあるエラーを起こしていました。
+
+このエラーを見つけられなかったのは、テストの途中でSqueakletsにプロジェク
+トのキャッシュが作られ、こちらを読み込んでいたために制限モードに移行して
+いなかったからでした(もし横川さんがSqueakを立ち上げなおして、同じプロジェ
+クトを開き、再度ボタンを押していればエラーにならなかったはずです。これは
+セキュリティホールの可能性があります)。
+
+現在はassuredPreferenceDirectoryの使用を取りやめ、FileDirectory defaultの
+存在を前提として、prefs以下を作成するように変更しています。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003709.html">[Squeak-ja: 3709] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+</A></li>
+	<LI>次の記事 <A HREF="003717.html">[Squeak-ja: 3717] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3713">[ 日付 ]</a>
+              <a href="thread.html#3713">[ スレッド ]</a>
+              <a href="subject.html#3713">[ 件名 ]</a>
+              <a href="author.html#3713">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

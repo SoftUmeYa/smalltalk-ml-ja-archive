@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4110] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204110%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=495AE72D.9080509%40mx2.ttcn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004109.html">
+   <LINK REL="Next"  HREF="004111.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4110] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204110%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=495AE72D.9080509%40mx2.ttcn.ne.jp"
+       TITLE="[Squeak-ja: 4110] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2008年 12月 31日 (水) 16:08:39 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004109.html">[Squeak-ja: 4109] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+        <LI>次の記事 <A HREF="004111.html">[Squeak-ja: 4111] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4110">[ 日付 ]</a>
+              <a href="thread.html#4110">[ スレッド ]</a>
+              <a href="subject.html#4110">[ 件名 ]</a>
+              <a href="author.html#4110">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+確認ありがとうございます。
+OSP基本パッケージv2の問題ですが、確定前の文字列を11文字以上入力していないでしょうか。この場合、私のUbuntu
+8.10でも同じエラーが出ることを確認しています。
+これは3.7-7JPatchedの既知のバグです。
+
+<A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html">http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html</A>
+(イメージが違うのでエラーは違いますが原因は同じ)
+
+とりあえずの対処法としては文節を短く区切って確定してもらうことになると思います。
+このバグを修正したバージョンを廣島さんが作ってくれているので、大島さんが作ってくれたパッチと合わせてScratchにも適用できないか調べてみます。
+大島さん、4108で書かれていた「新しいVM」というのは具体的にはどれを指すのでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2008/12/31 12:29 yhousako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt;:
+&gt;<i> 宝迫です．お世話になります．
+</I>&gt;<i>
+</I>&gt;<i> 日本語入力の動作確認しました．Ubuntu8.10とKNOPPIX5.3.1にインストールした
+</I>&gt;<i> Scratchでは、問題なく日本語入力ができるようになりました．しかし、CECの
+</I>&gt;<i> OSP基本パッケージv2（KNOPPIX5.1.1ベース）では、「UndefinedObjects are
+</I>&gt;<i> not indexable」というエラーメッセージが出ました．
+</I>&gt;<i>
+</I>&gt;<i> 以下その内容です．
+</I>&gt;<i> ----------------------------------------
+</I>&gt;<i> UndefinedObject(Object)&gt;&gt;error:
+</I>&gt;<i> UndefinedObject(Object)&gt;&gt;errorNotIndexable
+</I>&gt;<i> UndefinedObject(Object)&gt;&gt;size
+</I>&gt;<i> HandMorph&gt;&gt;handleEvent:
+</I>&gt;<i> HandMorph&gt;&gt;processEvents
+</I>&gt;<i> [] in PasteUpMorph&gt;&gt;doOneCycleNow
+</I>&gt;<i> Array(SequenceableCollection)&gt;&gt;do:
+</I>&gt;<i> PasteUpMorph&gt;&gt;handsDo:
+</I>&gt;<i> PasteUpMorph&gt;&gt;doOneCycleNow
+</I>&gt;<i> PasteUpMorph&gt;&gt;doOneCycle
+</I>&gt;<i> ----------------------------------------
+</I>&gt;<i> 私には何を言っているのかよくわからないのですが、日本語文字列を上手く受け
+</I>&gt;<i> 渡しできていないということだけはわかりました．
+</I>&gt;<i>
+</I>&gt;<i> Kazuhiro ABE さんは書きました:
+</I>&gt;&gt;<i> こんにちは、阿部です。
+</I>&gt;&gt;<i> とりあえず、ScratchSourceCode1.3.1と3.7-7JPatchedを組み合わせてLinuxで日本語入力できるようにしてみました。別スレの組み込みシンセと同じイメージに入れています。
+</I>&gt;&gt;<i> <A HREF="http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip">http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 3.7-7JPatchedから上がってくるUTF-8は、1バイトごとにMorphicEventのkeyValueになっていますが、ScratchはMorphicEventのunicodeCharとしてUTF-32を期待しています。このパッチでは先頭バイトが16rE0以上なら3バイト取り出してUTF-32をつくり、unicodeCharに格納しています。超適当ですが動作確認はできるとできると思います。
+</I>&gt;&gt;<i> ちゃんとしたVMができるまでの間に合わせということで。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>  //abee
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------------
+</I>&gt;<i> 寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+</I>&gt;<i> みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+</I>&gt;<i> 指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+</I>&gt;<i> 全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+</I>&gt;<i> つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004109.html">[Squeak-ja: 4109] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+	<LI>次の記事 <A HREF="004111.html">[Squeak-ja: 4111] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4110">[ 日付 ]</a>
+              <a href="thread.html#4110">[ スレッド ]</a>
+              <a href="subject.html#4110">[ 件名 ]</a>
+              <a href="author.html#4110">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

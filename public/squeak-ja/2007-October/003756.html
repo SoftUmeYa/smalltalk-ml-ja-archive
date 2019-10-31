@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3756] SqueakImmX11Plugin4e
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203756%5D%20SqueakImmX11Plugin4e&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003761.html">
+   <LINK REL="Next"  HREF="003760.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3756] SqueakImmX11Plugin4e</H1>
+    <B>Hiroshima Tsutomu Kougi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203756%5D%20SqueakImmX11Plugin4e&In-Reply-To="
+       TITLE="[Squeak-ja: 3756] SqueakImmX11Plugin4e">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2007年 10月 30日 (火) 09:11:28 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003761.html">[Squeak-ja: 3761] Re: Squeak日本語とPostgresqlとの接続
+</A></li>
+        <LI>次の記事 <A HREF="003760.html">[Squeak-ja: 3760] Re: 近刊のご紹介「 Squeak プログラミング−−簡単に作れるビジュアル教材」
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3756">[ 日付 ]</a>
+              <a href="thread.html#3756">[ スレッド ]</a>
+              <a href="subject.html#3756">[ 件名 ]</a>
+              <a href="author.html#3756">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>廣島です．
+UNIX VM で件のインプットイベント循環バッファの問題を回避したパッチを作成しま
+した．
+興味のある方はテストをお願いします．
+
+大まかな解決策は次の通りです．
+
+Xutf8LookupStrings 等で製作した文字列バッファをグローバルで保持し，
+インプットイベントバッファの空きの分だけ転送する．
+以降，イベントハンドラでは文字列バッファが空になるまで転送を繰り返す．
+その間は新規イベントを受け付けず，
+イメージがイベントハンドラの合間でインプットイベントバッファを処理するのを待
+つ．
+
+元々の VM の考え方では，
+キー入力は 1 バイトずつで完結しているものとしていて，
+文字列バッファの最初の 1 バイトだけをインプットイベントバッファに転送して残
+りは捨てる．
+インプットイベントバッファが溢れたら古いイベントから捨てる
+という手順でした
+
+小さくない変更なので他の所に影響が出るかもしれません．
+特にある期間新規イベントを受け付けないことがある当たりが心配です．
+
+<A HREF="http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4e.tar.gz">http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4e.tar.gz</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003761.html">[Squeak-ja: 3761] Re: Squeak日本語とPostgresqlとの接続
+</A></li>
+	<LI>次の記事 <A HREF="003760.html">[Squeak-ja: 3760] Re: 近刊のご紹介「 Squeak プログラミング−−簡単に作れるビジュアル教材」
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3756">[ 日付 ]</a>
+              <a href="thread.html#3756">[ スレッド ]</a>
+              <a href="subject.html#3756">[ 件名 ]</a>
+              <a href="author.html#3756">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

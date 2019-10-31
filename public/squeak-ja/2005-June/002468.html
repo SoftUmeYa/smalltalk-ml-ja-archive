@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2468] SqueakNihongo CD-ROM用
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202468%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrTmlob25nbyBDRC1ST00%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTVEbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002467.html">
+   <LINK REL="Next"  HREF="002469.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2468] SqueakNihongo CD-ROM用</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202468%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrTmlob25nbyBDRC1ST00%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTVEbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2468] SqueakNihongo CD-ROM用">tak ＠ metatoys.org
+       </A><BR>
+    <I>2005年 6月  8日 (水) 10:36:57 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002467.html">[Squeak-ja: 2467] Re: Squeak のコンサート、展示などのご案内
+</A></li>
+        <LI>次の記事 <A HREF="002469.html">[Squeak-ja: 2469] [N7]HttpUrlの不具合
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2468">[ 日付 ]</a>
+              <a href="thread.html#2468">[ スレッド ]</a>
+              <a href="subject.html#2468">[ 件名 ]</a>
+              <a href="author.html#2468">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮＠精華町です。
+
+お問い合わせを受けたのをきっかけに、
+Squeak をインストールしなくても実行出来るようにしたファイルの一式を作
+成してみました(windows 用)。CD-ROM 等から直接実行できますので、ワーク
+ショップ等でアクセス制限の厳しい PC で利用するのに便利です。
+
+ダウンロード先
+
+<A HREF="http://metatoys.org/pub/nihongo7/squeakKit.zip">http://metatoys.org/pub/nihongo7/squeakKit.zip</A>
+
+! 使い方
+
+zip ファイルを展開した物を CD-ROM に焼いてください。プロジェクトの保存
+場所を共有ディレクトリ等に設定する場合は、焼く前に「プロジェクトの保存
+方法」の設定をしておいて下さい。
+
+! 起動方法
+
+焼いたCD-ROM を
+SqueakPlugin.image を Squeak.exe にドロップして下さい。
+
+! プロジェクトの保存方法
+
+「公開する」ボタンによるプロジェクトの保存場所として、標準で 「このディ
+レクトリ\ユーザ名」設定されていますが、書き込み権限の問題でこの場所に
+書けない場合、ネットワークドライブや USB メモリ等の別の場所を設定する
+事が出来ます。Squeak を起動する前にディレクトリを作成し、書き込み可能
+である事を確認しておいて下さい。
+
+「prefs\knownServers\projects.txt」ファイルをメモ帳などで開く
+
+name:	projects
+directory:	C:\Projects
+type:	file
+
+の directory: 以下のディレクトリを書き換えて保存(\\ から始まるパスは使えません)。
+
+すると、「公開する」や「探す」ボタンでディレクトリの名前が現れます。
+(ファイル名や name: の内容は何でも良い)
+
+! 開発者メモ
+
+このファイルは、基本的に SqueakNihongo7 インストーラーとして配布してい
+る物と同一です。違いは以下の通りです。
+
+- 上記 projects.txt ファイルを添付してある。
+- Web プラグイン用セキュリティの設定を行っていない(プリファレンス設定 &quot;Preferences disable: #automaticKeyGeneration&quot;)
+
+Web プラグイン用セキュリティ設定とは、Web ブラウザ経由でプロジェクトを
+読み込む時の特有の設定で、特定ディレクトリ意外は書き込めないように自動
+的に制限する方法です。しかしながら、この設定では起動時に暗証キーを作業
+ディレクトリに書き込む必要があるため、CD-ROM 直接実行では使えません(こ
+の場合 Web プラグインとしては使えないのでどのみち必要無いです)。
+
+-- 
+Takashi Yamamiya := <A HREF="http://metatoys.org/">http://metatoys.org/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002467.html">[Squeak-ja: 2467] Re: Squeak のコンサート、展示などのご案内
+</A></li>
+	<LI>次の記事 <A HREF="002469.html">[Squeak-ja: 2469] [N7]HttpUrlの不具合
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2468">[ 日付 ]</a>
+              <a href="thread.html#2468">[ スレッド ]</a>
+              <a href="subject.html#2468">[ 件名 ]</a>
+              <a href="author.html#2468">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

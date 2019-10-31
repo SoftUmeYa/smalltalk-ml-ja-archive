@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7535] Re: オーバロードはポリモフィズムか?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207535%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUqITwlUCVtITwlSSRPJV0bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolYiVVJSMlOiVgJCsbKEI/%3F%3D&In-Reply-To=49FC3973.6030809%40im.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007534.html">
+   <LINK REL="Next"  HREF="007550.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7535] Re: オーバロードはポリモフィズムか?</H1>
+    <B>Takafumi Saikawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207535%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUqITwlUCVtITwlSSRPJV0bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolYiVVJSMlOiVgJCsbKEI/%3F%3D&In-Reply-To=49FC3973.6030809%40im.dendai.ac.jp"
+       TITLE="[SML 7535] Re: オーバロードはポリモフィズムか?">tscompor ＠ gmail.com
+       </A><BR>
+    <I>2009年 5月  3日 (日) 07:23:33 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007534.html">[SML 7534] Re: オーバロードはポリモフィズムか?
+</A></li>
+        <LI>次の記事 <A HREF="007550.html">[SML 7550] Re: オーバロードはポリモフィズムか?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7535">[ 日付 ]</a>
+              <a href="thread.html#7535">[ スレッド ]</a>
+              <a href="subject.html#7535">[ 件名 ]</a>
+              <a href="author.html#7535">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>才川と申します。久しぶりに投稿します。初めまして。
+
+Smalltalkのpolymorphism(以下直訳して多形)は、メッセージ式
+3 printOn: aStream.
+'abc' printOn: aSteram.
+が共に計算されるように、異なるクラスのインスタンスが同じメッセージに
+反応できることであったかと思います。Smalltalkのメッセージ式で
+送られるメッセージを決めるものはメッセージセレクタですから、
+自然に考えればSmalltalkで多形という語を考えるときには、
+polymorphousである物が何かというとセレクタであるということになります。
+
+
+その上で
+<A HREF="http://lucacardelli.name/Papers/OnUnderstanding.A4.pdf">http://lucacardelli.name/Papers/OnUnderstanding.A4.pdf</A>
+これの1.3節を眺め、そこでの定義に従ってuniversal polymorphismと
+ad-hoc polymorphismの違いを見ますと、Smalltalkの多形には
+overloadingとinclusionが混在していると考えられますが如何でしょうか。
+
+上の式をセレクタ中心に、則ち関数呼び出しとして見、例えば
+#printOn:(3, aStream)
+#printOn:('abc', aStream)
+のような表記に書きかえてみるとはっきりしますが上の多形はまさにoverloadingです。
+それぞれの場合に実行されるコードは別の場所に書かれた別のコードであり、
+どちらが実行されるかの決定が第一引数の型
+(上の文書の用語での型に対応するものはSmalltalkのクラスであり、ここでは
+ SmallIntegerかByteStringか)によって行なわれているからです。
+
+一方で
+3 printOn: aStream.
+-1234567890 printOn: aStream.
+の二つの間に見られる多形はinclusionです。
+この場合に実行されるコードはNumberに書かれており、
+第一引数の3と-1234567890それぞれの型に、SmallIntegerかLargeNegativeIntegerかに
+依存しないからです。
+
+以上の例を全て並べ、
+3 printOn: aStream.
+-1234567890 printOn: aStream.
+'abc' printOn: aSteram.
+と見た場合にはどの語が使用されるべきか
+ちょっと良く解らなかったのですが、この三者間の多形というならばやはり
+overloadingだろうと思います。
+(ただしこのように考えると、一つのセレクタについてSmalltalk全体での
+ 多形の種類は殆ど(あるいは全て?)がoverloadingになってしまうので
+ レシーバの範囲を適当に小さく決めて多形の種類を判断することになるでしょう)
+
+
+ここまで上の文書の読み方に誤りがなかったとして、ですが、
+
+inclusionである多形は、概念のくくり出し、スーパークラス化、
+コードの節約といった整理の結果生じる自然な多形です。
+一方のoverloadingである多形はメッセージ名を似せるという、
+即ちpolymorphousに書くぞという意識の下でなければ書かれ存在し得ない、
+故意の多形と言えます。(たまたま同じ名になった、というのでは多形ではないでしょう)
+
+この二つを比べると、感覚的な言い方ですが、Smalltalkの各所に見られて
+Smalltalkらしいなと思わせる場面を作り出している多形はoverloadingの方で
+あるように思えます。
+
+
+
+才川隆文
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007534.html">[SML 7534] Re: オーバロードはポリモフィズムか?
+</A></li>
+	<LI>次の記事 <A HREF="007550.html">[SML 7550] Re: オーバロードはポリモフィズムか?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7535">[ 日付 ]</a>
+              <a href="thread.html#7535">[ スレッド ]</a>
+              <a href="subject.html#7535">[ 件名 ]</a>
+              <a href="author.html#7535">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

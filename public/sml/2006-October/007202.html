@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7202] メソッド名について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207202%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWElPSVDJUlMPiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007204.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7202] メソッド名について</H1>
+    <B>NOBUTAKA Terauchi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207202%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWElPSVDJUlMPiRLJEQkJCRGGyhC%3F%3D&In-Reply-To="
+       TITLE="[SML 7202] メソッド名について">europa ＠ ps.inforyoma.or.jp
+       </A><BR>
+    <I>2006年 10月  3日 (火) 19:43:32 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007204.html">[SML 7204] Re: メソッド名について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7202">[ 日付 ]</a>
+              <a href="thread.html#7202">[ スレッド ]</a>
+              <a href="subject.html#7202">[ 件名 ]</a>
+              <a href="author.html#7202">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>寺内です。お久しぶりです。
+
+ThinkPad s30の調子が悪く、Mac miniに非常に惹かれています。
+
+
+ここから質問です。
+-----
+Smalltalkイディオム-&gt;4.制御-&gt;分岐、繰返しにある「複数のメッセージセレク
+タを一気にブラウズするためのプログラム」と「あるメッセージカテゴリに定義
+されているメソッドを検索するプログラム」をクラスメソッドとして定義しよう
+としています。(いつでも使用できるようするため)
+
+クラスは、
+Object
+     MethodSearchBlock
+として定義しました。
+インスタンス変数などは定義していません。
+
+1. 「複数のメッセージセレクタを一気にブラウズするためのプログラム」を
+   クラスメソッド includes: messageSelectors として定義しました。
+
+2.  次に、「あるメッセージカテゴリに定義されているメソッドを検索するプロ
+    グラム」を定義しようとしました。ただ、最後にメソッドを列挙するという
+    機能は同じなので includes: messageCategories にするとメソッド名が重
+    複してしまいます。
+    そこで、includesCategory: messageCategories として定義しました。
+
+この場合、1.のメソッド名も includesXXX としたほうが分かりやすいように思
+えてきました。
+ただ、XXXの部分が思いつきません。システム全体を検索しているのでAllClass
+とするほうが良いのでしょうか？
+それとも、クラスを分けた方が良いのでしょうか？
+
+includes: というメソッド名は、ベストプラクティス・パターン(ケント・ベッ
+ク著)の「メソッドには、それが何を達成するかにちなんだ名前をつけましょ
+う。」を参考にしました。(パクリました)
+
+
+これが正解というものは無いかもしれませんが、よろしくお願いします。
+
+
+あと、前回皆さんから指摘して頂いたことにより、Smalltalkイディオムの内容
+を前回読んだ時よりも理解できるようになりました。(当社比)
+
+改めてお礼申し上げます。
+
+
+---
+NOBUTAKA Terauchi&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">europa ＠ ps.inforyoma.or.jp</A>&gt;
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007204.html">[SML 7204] Re: メソッド名について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7202">[ 日付 ]</a>
+              <a href="thread.html#7202">[ スレッド ]</a>
+              <a href="subject.html#7202">[ 件名 ]</a>
+              <a href="author.html#7202">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

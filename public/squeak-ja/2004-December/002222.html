@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2222] Squeakland.jp SuperSwiki 設定記録
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202222%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrbGFuZC5qcCBTdXBlclN3%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaWtpIBskQkBfRGo1LU8/GyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002210.html">
+   <LINK REL="Next"  HREF="002227.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2222] Squeakland.jp SuperSwiki 設定記録</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202222%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrbGFuZC5qcCBTdXBlclN3%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaWtpIBskQkBfRGo1LU8/GyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2222] Squeakland.jp SuperSwiki 設定記録">tak ＠ metatoys.org
+       </A><BR>
+    <I>2004年 12月 29日 (水) 09:56:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002210.html">[Squeak-ja: 2210] 技術教室 2005 年 1 月号  (was: Re: [Squeak-ja] Squeak が紹介されている本や雑誌など  )
+</A></li>
+        <LI>次の記事 <A HREF="002227.html">[Squeak-ja: 2227] プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2222">[ 日付 ]</a>
+              <a href="thread.html#2222">[ スレッド ]</a>
+              <a href="subject.html#2222">[ 件名 ]</a>
+              <a href="author.html#2222">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+Squeakland.jp で SuperSwiki を起動させた時の記録を参考までに投稿します。
+セキュリティ上微妙に内容を変えてあります。
+
+* 環境:
+
+OS: Fedora Core release 2 (Linux 2.6.5-1.358)
+CPU: Pentium III 1G
+メモリ: 900M
+(以上は dmesg で調べた想像です。実は知らない。。。)
+
+* 下準備:
+
+SuperSwiki 実行用に、ログイン出来ないユーザ bss を作成
+bss グループに管理者ユーザを追加
+
+* インストール:
+
+Squeak VM は
+<A HREF="http://www-sor.inria.fr/~piumarta/squeak/unix/release/Squeak-3.2-5.src.tar.gz">http://www-sor.inria.fr/~piumarta/squeak/unix/release/Squeak-3.2-5.src.tar.gz</A>
+より Linux バイナリをダウンロードして展開。インストールせずに
+/home/bss/src/Squeak-3.2-5/i686-pc-linux-gnu/usr/local/bin/squeak
+に置いたまま使っています。
+
+SuperSwiki イメージは、<A HREF="http://squeakland.org:8080/super/">http://squeakland.org:8080/super/</A> より Windows 
+用インストーラをダウンロードしてローカルで実験後、出来たフォルダをを丸々
+squeakland.jp に転送。本家サイトは滅多に動いてないので、参考までにイン
+ストーラを <A HREF="http://metatoys.org/pub/SuperSwikiInstaller.exe">http://metatoys.org/pub/SuperSwikiInstaller.exe</A> に置いてお
+きます。
+
+起動コマンドは、
+$ /home/bss/src/Squeak-3.2-5/i686-pc-linux-gnu/usr/local/bin/squeak -headless /home/bss/SuperSwiki/swiki.image &amp;
+です。まだ自動起動の設定はしていません。
+
+* 公開:
+
+apache との連携の為に、以下を httpd.conf に追加しています。
+Alias は不要ですが、ちょっとでもパフォーマンスを稼ぐ為です;)
+---
+ProxyPass /super <A HREF="http://127.0.0.1:8888/super">http://127.0.0.1:8888/super</A>
+Alias /files/  /home/bss/SuperSwiki/swiki/default/files/
+---
+
+* カスタマイズ:
+
+変更したファイルをまとめて <A HREF="http://metatoys.org/pub/SuperSwiki/">http://metatoys.org/pub/SuperSwiki/</A> に置い
+ておきます。swiki/default/files/blue/ 以下のファイルは 
+<A HREF="http://www.ether.ucsf.edu:8888/swaki/2">http://www.ether.ucsf.edu:8888/swaki/2</A> の物を利用しております。
+
+スタイルシートやヘッダの設定は swiki/refs/actions/endhead.book を変更
+しています。実際のスタイルシートは swiki/default/files/style/ に格納し
+ました。
+
+* スクイーク側のの設定例
+  (<A HREF="http://metatoys.org/pub/SuperSwikiNihongo.cs.gz">http://metatoys.org/pub/SuperSwikiNihongo.cs.gz</A> のパッチで自動的に
+  適用されます)
+
+server _ SuperSwikiServer new type: #http;
+		 server: 'squeakland.jp';
+		 directory: '/super/SuperSwikiProj';
+		 acceptsUploads: true.
+ServerDirectory servers at: 'Squeakland.JP' put: server.
+
+* 落とし穴:
+
+日本語を扱う場合。VM は 3.5 以前の物を使わないといけないようです。一見
+ちゃんと動くのでハマリました。
+
+-- 
+山宮 隆 ::= <A HREF="http://yuri.sakura.ne.jp/~propella/">http://yuri.sakura.ne.jp/~propella/</A>
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002210.html">[Squeak-ja: 2210] 技術教室 2005 年 1 月号  (was: Re: [Squeak-ja] Squeak が紹介されている本や雑誌など  )
+</A></li>
+	<LI>次の記事 <A HREF="002227.html">[Squeak-ja: 2227] プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2222">[ 日付 ]</a>
+              <a href="thread.html#2222">[ スレッド ]</a>
+              <a href="subject.html#2222">[ 件名 ]</a>
+              <a href="author.html#2222">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

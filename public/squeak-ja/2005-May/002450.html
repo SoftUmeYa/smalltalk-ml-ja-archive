@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2450] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202450%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hY09TWCAbJEIkRxsoQiAg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FRmlsZURpcmVjdHJ5IGZpbGVOYW1lcyAbJEIkTkE0M1E/dDt6JCwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSD4zUSRLJEokaxsoQg%3D%3D%3F%3D&In-Reply-To=20050520015138.C25F743732%401server.aquilax.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002449.html">
+   <LINK REL="Next"  HREF="002451.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2450] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202450%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hY09TWCAbJEIkRxsoQiAg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FRmlsZURpcmVjdHJ5IGZpbGVOYW1lcyAbJEIkTkE0M1E/dDt6JCwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSD4zUSRLJEokaxsoQg%3D%3D%3F%3D&In-Reply-To=20050520015138.C25F743732%401server.aquilax.co.jp"
+       TITLE="[Squeak-ja: 2450] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 5月 20日 (金) 15:14:05 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002449.html">[Squeak-ja: 2449] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+</A></li>
+        <LI>次の記事 <A HREF="002451.html">[Squeak-ja: 2451] nihongo7 updates (5/21)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2450">[ 日付 ]</a>
+              <a href="thread.html#2450">[ スレッド ]</a>
+              <a href="subject.html#2450">[ 件名 ]</a>
+              <a href="author.html#2450">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>高橋さん、林です。どうも。
+さっそくのチャレンジがんばってください。
+
+ところで、試しに先日出た 3.8 final のイメージでVM 
+ソースを生成して
+みるとどうでしょう？
+
+<A HREF="http://box1.squeakfoundation.org/files/3.8/Squeak3.8-6665.zip">http://box1.squeakfoundation.org/files/3.8/Squeak3.8-6665.zip</A>
+
+# そういえば、VM ソースは source forge から  
+subversion に移動して
+# たのでしたっけ。
+# 失念してました（お恥ずかしい）。
+
+On 2005/05/20, at 10:51, Kouji takahashi wrote:
+
+&gt;<i>
+</I>&gt;<i> subversionのインストール、platformsのdownload
+</I>&gt;<i>  svn co <A HREF="http://squeak.hp1.hp.com/sbn/squeak/trunk">http://squeak.hp1.hp.com/sbn/squeak/trunk</A>
+</I>&gt;<i>
+</I>&gt;<i> Squeak3.7+5989-fullをdownload。
+</I>&gt;<i> SqueakMap で VMMaker3.8b3 とBaloon3Dをインストール
+</I>&gt;<i> （Tim Rowledgeさんのサイトが　500 Internal Errorで 
+</I>&gt;<i> accessできないので
+</I>&gt;<i> VMMakerは 3.8b3 以外はインストール不可でした。）
+</I>&gt;<i>
+</I>&gt;<i> platforms:Mac OS　の　specialChangeSetsをInstall
+</I>&gt;<i>
+</I>&gt;<i> VMMakerでsrc作成、Gnuify
+</I>&gt;<i>
+</I>&gt;<i> config.h
+</I>&gt;<i> aio.h
+</I>&gt;<i> interp.h
+</I>&gt;<i> が必要そうなので32bit VM用に適当に(RISC OSなどから) 
+</I>&gt;<i> pratforms:Mac OS:VM にcopy（おいおい）
+</I>&gt;<i>
+</I>&gt;<i> ビルド→error
+</I>&gt;<i>
+</I>&gt;<i> 　ではでは
+</I>&gt;<i>
+</I>&gt;<i> At 19:45 05.5.18, Tetsuya HAYASHI wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> 高橋さん、こんにちは
+</I>&gt;&gt;<i> みなさん、どうも
+</I>&gt;&gt;<i> 林徹也です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 2005/05/18, at 16:21, Kouji takahashi wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>  高橋@池袋です。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で
+</I>&gt;&gt;&gt;<i> fileNameを取得すると全角数字が
+</I>&gt;&gt;&gt;<i> 半角数字に入れ替わってしまうようです。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 私のところの Tiger (10.4.1) と Squeak
+</I>&gt;&gt;<i> 3.8.6Beta6.app でも同じ問題が
+</I>&gt;&gt;<i> 確認できました。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 例）本来のファイル名　取得されるファイル名
+</I>&gt;&gt;&gt;<i> ×　test１.txt　→ test1.txt
+</I>&gt;&gt;&gt;<i> ×　テスト１.txt → テスト1.txt
+</I>&gt;&gt;&gt;<i> ○　test1.txt
+</I>&gt;&gt;&gt;<i> ○　テスト1.txt
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> ファイル・リストで上記のような名前のファイルを含むフォルダを見
+</I>&gt;&gt;&gt;<i> るとファイル名は半角数字で
+</I>&gt;&gt;&gt;<i> 表示され、×印のファイル名では下側paneに内容表示をさせよ
+</I>&gt;&gt;&gt;<i> うとするとデバッガが起動します。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> image側の問題では無く
+</I>&gt;&gt;&gt;<i> FileDirectry&gt;&gt;primLookupEntryIn:index: のレベルで誤ったファイ
+</I>&gt;&gt;&gt;<i> ル名が返っているようです。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ご指摘の通り、これは、VM の問題かと推察されます。
+</I>&gt;&gt;<i> Carbon Squeak VM は、ディレクトリのエントリを取得する際に、古い
+</I>&gt;&gt;<i> APIを
+</I>&gt;&gt;<i> 使ってるので内部的に UTF-8 &lt;-&gt; ShiftJIS と相互に変換し 
+</I>&gt;&gt;<i> て動
+</I>&gt;&gt;<i> いており、
+</I>&gt;&gt;<i> さらに、UTF-8について Apple では  
+</I>&gt;&gt;<i> decomposed な
+</I>&gt;&gt;<i> ものを用いてる関係から
+</I>&gt;&gt;<i> 起きてる問題ではないかと思われます。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 今手元で確認できないのですが…
+</I>&gt;&gt;<i> もし、よければどなたか、VM ソースの中の
+</I>&gt;&gt;<i> CFStringNormalize 関数で引数
+</I>&gt;&gt;<i> の定数を以下のように
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> kCFStringNormalizationFormKC
+</I>&gt;&gt;<i>      → kCFStringNormalizationFormC
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> kCFStringNormalizationFormKD
+</I>&gt;&gt;<i>      → kCFStringNormalizationFormD
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 変更してビルドしたものだとどうなるでしょうか？
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+</I>&gt;&gt;<i> PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -------------------------------
+</I>&gt;<i> ^. .^    Kouji Takahashi  &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tako ＠ aquilax.co.jp</A>&gt;
+</I>&gt;<i>  ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+</I>
+
+
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002449.html">[Squeak-ja: 2449] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+</A></li>
+	<LI>次の記事 <A HREF="002451.html">[Squeak-ja: 2451] nihongo7 updates (5/21)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2450">[ 日付 ]</a>
+              <a href="thread.html#2450">[ スレッド ]</a>
+              <a href="subject.html#2450">[ 件名 ]</a>
+              <a href="author.html#2450">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

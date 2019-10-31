@@ -1,0 +1,189 @@
+From abee ＠ squeakland.jp  Tue Mar  4 14:21:18 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Mar  4 14:21:44 2008
+Subject: [Squeak-ja: 3850] Squeak Foundation Board の選挙
+Message-ID: <47CCDC4E250.36BEABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+今年もSqueak Foundation Boardの選挙が行われています。
+http://wiki.squeak.org/squeak/6025
+
+候補者には、VPRIの社員で、Squeak-jaの創立メンバでもある大島芳樹さんが含ま
+れています。また、最初のSmalltalkの開発者の一人であるDan Ingallsさんも立
+候補しています。
+
+すでに投票権を持つ人にはメールで案内があったと思いますが、投票の締め切り
+は8th March, 18.00 UTCですので、もしまだの人はお気をつけください。
+
+昨年のSqueak-jaへのアナウンスは以下のスレッドにあります。
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-February/003412.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Tue Mar  4 17:41:29 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Mar  4 17:41:57 2008
+Subject: [Squeak-ja: 3851] 2008 年の SqueakFest について
+Message-ID: <47CD0B39338.36C2ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+毎年夏にシカゴで開催されていたSqueakFestですが、今年は一休みすることにな
+りました。これについて、すでにSqueakland MLでVPRIのKim Roseさんが説明され
+ています。
+http://squeakland.org/pipermail/squeakland/2008-February/004159.html
+いくつかの理由があるのですが、大きなのは、Scratchのカンファレンス
+(Scratch@MIT)が7/24-26にボストンで予定されていることです。
+http://scratch.mit.edu/conference/
+Squeak Etoysに関心がある人の多くはScratchにも関心があり(今までの
+SqueakFestにもScratchのセッションがありました)、たぶんこのカンファレンス
+を通じて情報交換や交流ができると思われます(私も参加する予定です)。
+そう考えると、短期間に2つのカンファレンスを開くのは参加者の負担が大きいと
+の考えです。
+
+なお、2009年のSqueakFestはブラジルでの開催が予定されています。これはまだ
+先の話ですが、アイデアやスポンサなどを募集していますので、ぜひお寄せくだ
+さい。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From umejava ＠ mars.dti.ne.jp  Fri Mar  7 10:29:04 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Mar  7 10:29:14 2008
+Subject: [Squeak-ja: 3852] SuperSwiki2崩壊
+Message-ID: <JB200803071029047.7345484@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SuperSwiki2ですが何らかの原因でDBが壊れてしまったようです。
+http://squeakland.jp/super2/
+
+現在は2/26日のデータを使い復旧しています。その間にアップした内容は
+失われてしまったので、お手数ですが再アップなどをお願いいたします。
+
+詳しい原因は調査中です。3/6あたりに何かものすごく破壊的なコンテンツを
+アップしてみたなど、心当たりのある方はお知らせ下さい。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From yoshiki ＠ vpri.org  Thu Mar 20 12:47:53 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Mar 20 12:48:24 2008
+Subject: [Squeak-ja: 3853] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <472EA052.1090204@nucba.ac.jp>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+	<37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+	<37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp>
+	<472EA052.1090204@nucba.ac.jp>
+Message-ID: <uabkucaza.wl%yoshiki@vpri.org>
+
+  廣島さん、みなさん
+
+  11月に送っていただいたパッチですが、これを基にし、さらにスペイン語な
+どで"dead key"やMulti keyを使った入力にも対応したものをOLPC用VMのブラ
+ンチに入れてもらいました。メインのunix VMにも数日中にはいると思われま
+す。ありがとうございました。
+
+  興味のある方は、http://squeakvm.org/svn/squeak/branches/olpc/をコン
+パイルして試してみてください。
+
+  実を言うと、OLPCでないFedoraではスペイン語配列にしたときにnにチルダ
+がついた文字を入力したときに、余計なバイトも付いてきてしまいます。この
+場合、Terminalだとdead keyを押してからベースの文字を入れるという入力が
+できなかったりするので、コードのほうの問題なのか設定の問題なのかがいま
+いちわかりませんでした。詳しい方(廣島さんやほかの方)がいたらぜひ検討し
+てみてください。よろしくお願いします。
+
+-- Yoshiki
+
+At Mon, 05 Nov 2007 13:47:14 +0900,
+Tsutomu Hiroshima wrote:
+> 
+> 度々，失礼します．
+> 3773 で，梅澤さんがご指摘のエラーは OLPC のパッチでも問題となりますので，
+> 同様に変更して test2 にしました．
+> 
+> http://opinion.nucba.ac.jp/~tsutomu/squeak/OLPCSqueakImmX11-test2.tar.gz
+> 
+> -- 
+> 廣島　勉
+From tsutomu ＠ nucba.ac.jp  Thu Mar 27 19:29:34 2008
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Mar 27 19:29:48 2008
+Subject: [Squeak-ja: 3854] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <uabkucaza.wl%yoshiki@vpri.org>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp><37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp><37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp><472EA052.1090204@nucba.ac.jp>
+	<uabkucaza.wl%yoshiki@vpri.org>
+Message-ID: <1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp>
+
+大島さん，ご苦労様です．
+
+>   実を言うと、OLPCでないFedoraではスペイン語配列にしたときにnにチルダ
+> がついた文字を入力したときに、余計なバイトも付いてきてしまいます。この
+> 場合、Terminalだとdead keyを押してからベースの文字を入れるという入力が
+> できなかったりするので、コードのほうの問題なのか設定の問題なのかがいま
+> いちわかりませんでした。詳しい方(廣島さんやほかの方)がいたらぜひ検討し
+> てみてください。よろしくお願いします。
+
+手元には jp106 キーボードしかありませんが，
+以下の手順で ñ「tilde付きn」が入力出来ました．
+もしかしたら，外しているかもしれません．
+
+Fedora では，m17n-db-latin パッケージをインストールして，
+latn-post か latn-pre の入力メソッドでヨーロッパ言語の文字を入力できます．
+
+設定ファイル
+/usr/share/m17n/latn-post.mim
+/usr/share/m17n/latn-pre.mim
+によれば，件の ñ「tilde付きn」は~ と n のコンビネーションを使うようですが，
+この ~ は US配列で 1 の左隣にあるキーの ~ でないとダメなようです．
+
+システム->管理->キーボード->英語(アメリカ合衆国)
+を選択後，再ログイン．
+GNOME の設定と合わないとダイアログが出るので，Xの設定を選択する．
+
+希望の ~ は shift + 半角/全角に対応するので，
+SCIM の入力モードを latn-pre にして，
+shift + 半角/全角の後，n を押す．
+
+Transcript で試したところ，続けて入力した文字も化けないので，
+問題なさそうに思います．
+
+OLPC-VM の revision は 1830，
+SqueakPlugin-dev-527.image を使いました．
+＝＝＝＝
+廣島　勉
+From abee ＠ squeakland.jp  Sun Mar 30 11:18:50 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sun Mar 30 11:19:13 2008
+Subject: [Squeak-ja: 3855] Re: Squeak 開発者版 (3.9 ベース  )
+In-Reply-To: <JP200802112120079.2211515@mars.dti.ne.jp>
+References: <JP200802112120079.2211515@mars.dti.ne.jp>
+Message-ID: <47EEF88AC4.3EC6ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 11 Feb 2008 21:20:07 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>デブサミ記念というわけでもないのですが、Squeak 3.9ベースで普段の開発に使う
+>ためのイメージを作ってみました。
+>
+>Squeak開発者版:
+>http://swikis.ddo.jp/umejava/48
+
+遅まきながら、squeakland.jpの開発者版ダウンロードページからリンクを張りま
+した。
+
+http://squeakland.jp/developer/
+
+一応、「Squeakland版ではない最新のSqueakの日本語版」と呼ばせていただいて
+いますが、もはやわけわかですね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7745] Re: 第15回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207745%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCMTUbJEIycxsoQlNtYWxs%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGFsaxskQkpZNi8ycSF3NX5FVBsoQg%3D%3D%3F%3D&In-Reply-To=1bc06fd31001110001p5f8911a9gb5724fe338801c6b%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007744.html">
+   <LINK REL="Next"  HREF="007746.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7745] Re: 第15回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207745%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCMTUbJEIycxsoQlNtYWxs%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGFsaxskQkpZNi8ycSF3NX5FVBsoQg%3D%3D%3F%3D&In-Reply-To=1bc06fd31001110001p5f8911a9gb5724fe338801c6b%40mail.gmail.com"
+       TITLE="[SML 7745] Re: 第15回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2010年 1月 11日 (月) 18:38:51 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007744.html">[SML 7744] Re: 第15回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007746.html">[SML 7746] Re: 第15回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7745">[ 日付 ]</a>
+              <a href="thread.html#7745">[ スレッド ]</a>
+              <a href="subject.html#7745">[ 件名 ]</a>
+              <a href="author.html#7745">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>(10/01/11 17:01), 濱崎治さん wrote:
+&gt;<i> 次回はユーザーインターフェース周りを重点的に取り組むということで、
+</I>&gt;<i> UMLによるモデルと、Controllerに書くことになるであろう、マウスの
+</I>&gt;<i> クリックとドラッグに関わるプログラムの断片を書きました。
+</I>
+ありがとうございます。
+
+&gt;<i> UMLのモデルはastah* community版を使用して書きました。
+</I>&gt;<i> 以下のところから入手することが可能です。
+</I>&gt;<i> <A HREF="http://astah.change-vision.com/ja/product/astah-community.html">http://astah.change-vision.com/ja/product/astah-community.html</A>
+</I>
+昨年の11月ぐらいに名称がJUDEから変更になったのですよね。
+
+&gt;<i> 如何なものでしょう？
+</I>&gt;<i> ご意見を頂ければありがたいです。
+</I>
+拝見します。
+
+参考のため、マウスの青・黄・赤ボタンの押下を検出して、クリッ
+ク動作をするか、ドラック動作をするか、いずれかを決めるコード
+を末尾に添えます。mouseButtonChecking がキーメソッドです。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+
+ProjectM.Controller
+
+Smalltalk Studies in Kyoto on 2009/12/27 at 23:30 by AOKI Atsushi
+
+category:
+
+Forest-ProjectZ
+
+inheritance:
+
+Core.Object
+    UI.Controller
+        ProjectM.Controller
+
+instance variables:
+
+class instance variables:
+
+shared variables:
+
+instance methods:
+
+blueButtonPressedEvent: event [events]
+    self mouseButtonActivity.
+    ^nil
+
+redButtonPressedEvent: event [events]
+    self mouseButtonActivity.
+    ^nil
+
+yellowButtonPressedEvent: event [events]
+    self mouseButtonActivity.
+    ^nil
+
+mouseButtonActivity [activities]
+    Cursor crossHair
+        showWhile:
+            [| symbol |
+            symbol := self mouseButtonChecking.
+            symbol = #click ifTrue: [self clickActivity].
+            symbol = #grab ifTrue: [self grabActivity]].
+    self sensor waitNoButton
+
+mouseButtonChecking [activities]
+    | mouse limit |
+    mouse := self sensor.
+    limit := Time millisecondClockValue + 333.
+    [Time millisecondClockValue &lt; limit]
+        whileTrue:
+            [mouse anyButtonPressed ifFalse: [^#click].
+            Processor yield].
+    ^#grab
+
+clickActivity [activities]
+    (view whichOfNodes: self sensor cursorPoint)
+        ifNotNil:
+            [:aNode |
+            Transcript
+                cr;
+                show: aNode getName]
+
+grabActivity [activities]
+    | mouse previous current |
+    mouse := self sensor.
+    previous := current := mouse cursorPoint.
+    [mouse anyButtonPressed]
+        whileTrue:
+            [current := mouse cursorPoint.
+            previous = current
+                ifFalse:
+                    [(self view)
+                        scrollBy: current - previous;
+                        displayOn: view graphicsContext.
+                    previous := current]]
+
+class methods:
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007744.html">[SML 7744] Re: 第15回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007746.html">[SML 7746] Re: 第15回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7745">[ 日付 ]</a>
+              <a href="thread.html#7745">[ スレッド ]</a>
+              <a href="subject.html#7745">[ 件名 ]</a>
+              <a href="author.html#7745">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

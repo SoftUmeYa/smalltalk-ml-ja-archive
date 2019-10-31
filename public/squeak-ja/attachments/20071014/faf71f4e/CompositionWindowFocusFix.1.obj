@@ -1,0 +1,23 @@
+'From Squeakland 3.8-05 of 7 September 2005 [latest update: #556] on 14 October 2007 at 5:39:01 pm'!"Change Set:		CompositionWindowFocusFixDate:			14 October 2007Author:			Masashi UmezawaFix to set composition window focus properly in X11 IMM.  (Originally written by Tsutomu Hiroshima)"!!HandMorph methodsFor: 'focus handling' stamp: 'mu 10/14/2007 17:21'!newKeyboardFocus: aMorphOrNil 	"Make the given morph the new keyboard focus, canceling the previous	keyboard focus if any. If the argument is nil, the current keyboard	focus is cancelled."	| oldFocus |	oldFocus := self keyboardFocus.	self keyboardFocus: aMorphOrNil.	oldFocus		ifNotNil: [oldFocus == aMorphOrNil				ifFalse: [oldFocus keyboardFocusChange: false.					self compositionWindowManager setCompositionFocus: false]].	aMorphOrNil		ifNotNil: [aMorphOrNil keyboardFocusChange: true.			self compositionWindowManager keyboardFocusForAMorph: aMorphOrNil]! !!ImmAbstractPlatform methodsFor: 'all' stamp: 'Tsutomu Hiroshima 1/21/2004 07:32'!setCompositionFocus: aBoolean
+
+	"do nothing"
+! !!ImmX11 methodsFor: 'as yet unclassified' stamp: 'mu 10/14/2007 17:29'!keyboardFocusForAMorph: aMorph
+
+	| left bottom pos |
+	aMorph ifNil: [^ self].
+	[
+		pos := aMorph prefereredKeyboardPosition.
+		left := (pos x min: Display width max: 0) asInteger.
+		bottom := (pos y min: Display height max: 0) asInteger
+			 + (aMorph paragraph
+				characterBlockForIndex: aMorph editor selectionInterval first) height.
+		self setCompositionWindowPositionX: left y: bottom.
+		self setCompositionFocus: true.
+	] on: Error
+	do: [:ex |].
+! !!ImmX11 methodsFor: 'as yet unclassified' stamp: 'Tsutomu Hiroshima 1/21/2004 07:31'!setCompositionFocus: aBoolean
+
+	<primitive: 'primSetCompositionFocus' module: 'ImmX11Plugin'>
+
+	^ nil
+! !!SystemWindow methodsFor: 'event handling' stamp: 'mu 10/14/2007 17:24'!mouseDown: evt 	self setProperty: #clickPoint toValue: evt cursorPoint.	TopWindow == self		ifTrue: [evt hand compositionWindowManager setCompositionFocus: false]		ifFalse: [evt hand releaseKeyboardFocus.			self activate].	model windowActiveOnFirstClick ifTrue:		["Normally window keeps control of first click.		Need explicit transmission for first-click activity."		submorphs do: [:m | (m containsPoint: evt cursorPoint) ifTrue: [m mouseDown: evt]]]! !

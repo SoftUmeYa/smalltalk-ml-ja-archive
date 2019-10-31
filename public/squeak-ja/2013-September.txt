@@ -1,0 +1,125 @@
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Sep  5 11:48:47 2013
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu, 5 Sep 2013 11:48:47 +0900
+Subject: [Squeak-ja: 4700]
+	squeakのdownloadについて
+Message-ID: <FC460E33-ED51-4F35-B9E1-1279A3DF828B@mbox.kyoto-inet.or.jp>
+
+macbook airにdownloadするため、
+すべてのアプリのdownloadを許可して、
+トライしても、
+うまくいきません。
+どうすればよいのでしょうか。
+ご教示をお願いします。
+久保　道　kubo osamu
+
+
+From inoue ＠ ma.ns.tcu.ac.jp  Thu Sep  5 12:12:23 2013
+From: inoue ＠ ma.ns.tcu.ac.jp (iNOUE Koich!)
+Date: Thu, 5 Sep 2013 12:12:23 +0900
+Subject: [Squeak-ja: 4701] Re:
+ squeakのdownloadについて
+In-Reply-To: <FC460E33-ED51-4F35-B9E1-1279A3DF828B@mbox.kyoto-inet.or.jp>
+References: <FC460E33-ED51-4F35-B9E1-1279A3DF828B@mbox.kyoto-inet.or.jp>
+Message-ID: <99B5D50E-D441-46F8-B3E6-1FD041855EB3@ma.ns.tcu.ac.jp>
+
+井上＠東京都市大です。
+
+On 2013/09/05, at 11:48, 久保　道 <kubo-o ＠ mbox.kyoto-inet.or.jp> wrote:
+
+> macbook airにdownloadするため、
+> すべてのアプリのdownloadを許可して、
+> トライしても、
+> うまくいきません。
+> どうすればよいのでしょうか。
+> ご教示をお願いします。
+> 久保　道　kubo osamu
+> 
+
+
+「システム環境設定」の「セキュリティとプライバシー」の「ダウンロードしたアプリケーションの実行許可」を「すべてのアプリケーションを許可」にしたということですね？
+
+http://etoys.jp/squeak/download.html
+から必要なものをダウンロードして手順通りに実行してインストールし、アプリケーションフォルダの中の「Etoys 5.0.app」を実行するという方法でこちらでは使えています。
+--
+https://www.ns.tcu.ac.jp/%7einoue/Signature/         井上
+
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Sep  5 21:15:26 2013
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu, 5 Sep 2013 21:15:26 +0900
+Subject: [Squeak-ja: 4702] Re:
+ squeakのdownloadについて
+In-Reply-To: <99B5D50E-D441-46F8-B3E6-1FD041855EB3@ma.ns.tcu.ac.jp>
+References: <FC460E33-ED51-4F35-B9E1-1279A3DF828B@mbox.kyoto-inet.or.jp>
+ <99B5D50E-D441-46F8-B3E6-1FD041855EB3@ma.ns.tcu.ac.jp>
+Message-ID: <82F9C00A-B503-4BF5-94A7-295B46FFA993@mbox.kyoto-inet.or.jp>
+
+井上さん
+さっそく、教えていただき、
+ありがとうございました。
+MACの使い方に不慣れで
+まごついていました。
+
+久保　道　kubo osamu
+
+On 2013/09/05, at 12:12, iNOUE Koich! <inoue ＠ ma.ns.tcu.ac.jp> wrote:
+
+> 井上＠東京都市大です。
+> 
+> On 2013/09/05, at 11:48, 久保　道 <kubo-o ＠ mbox.kyoto-inet.or.jp> wrote:
+> 
+>> macbook airにdownloadするため、
+>> すべてのアプリのdownloadを許可して、
+>> トライしても、
+>> うまくいきません。
+>> どうすればよいのでしょうか。
+>> ご教示をお願いします。
+>> 久保　道　kubo osamu
+>> 
+> 
+> 
+> 「システム環境設定」の「セキュリティとプライバシー」の「ダウンロードしたアプリケーションの実行許可」を「すべてのアプリケーションを許可」にしたということですね？
+> 
+> http://etoys.jp/squeak/download.html
+> から必要なものをダウンロードして手順通りに実行してインストールし、アプリケーションフォルダの中の「Etoys 5.0.app」を実行するという方法でこちらでは使えています。
+> --
+> https://www.ns.tcu.ac.jp/%7einoue/Signature/         井上
+> 
+> 
+> 
+
+
+From ume ＠ softumeya.com  Wed Sep 18 14:31:27 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 18 Sep 2013 14:31:27 +0900
+Subject: [Squeak-ja: 4703]
+	第57回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSuvppbBDm9RrCZmQpFgK3s65kB6thjW3ki5uVvV3KTRA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2013/9/25(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai57kaismalltalkbenkyoukai
+
+今回のテーマはGLASS(GemStome, Linux, Apache, Seaside, and Smalltalk)です。
+http://seaside.gemtalksystems.com/
+Webブラウザのビューから、DBへの永続化まで、本当に透過的にドメインモデル指向で書ける今どき有り難い環境です。
+小規模サービスであれば実質Freeというところも大きな魅力。ビューポイントテクノロジーの林さんが解説されます。
+
+なお、いつも会場をご提供いただいておりますシンコム・システムズ・ジャパンですが、7月に引っ越しされています。
+微妙に場所が違っておりますのでご注意ください。(最寄駅は同じです)
+
+事前申し込み等は不要です。お気軽にどうぞ。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3891] Re: プログラミングの質問です
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203891%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003890.html">
+   <LINK REL="Next"  HREF="003892.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3891] Re: プログラミングの質問です</H1>
+    <B>Tomohiro Oda</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203891%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=2d5d52a80805260302t9a3b9d9gae66af5a3dbd9b8%40mail.gmail.com"
+       TITLE="[Squeak-ja: 3891] Re: プログラミングの質問です">tomohiro ＠ sra.co.jp
+       </A><BR>
+    <I>2008年 5月 27日 (火) 09:54:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003890.html">[Squeak-ja: 3890] Re: プログラミングの質問です
+</A></li>
+        <LI>次の記事 <A HREF="003892.html">[Squeak-ja: 3892] Re: プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3891">[ 日付 ]</a>
+              <a href="thread.html#3891">[ スレッド ]</a>
+              <a href="subject.html#3891">[ 件名 ]</a>
+              <a href="author.html#3891">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おだです。
+
+&gt;<i> ActiveWorld submorphs do: [:each |
+</I>&gt;<i>     [each isKindOf: クラス] ifTrue: [each 特定の処理]].
+</I>
+たぶん、
+ActiveWorld submorphs do: [:each |
+    (each isKindOf: クラス) ifTrue: [each 特定の処理]].
+ですね。
+
+&gt;<i> isKindOf:は指定したクラスのサブクラスも含むので、そのクラスのインスタン 
+</I>&gt;<i> スのみにしたいときは、代わりにisMemberOf:を使います。
+</I>
+クラス名などを決め打ちしたくない場合には、
+音を出すメッセージセレクタ名をmakeNoiseとすると、
+
+ActiveWorld submorphsDo: [:each |
+     (each respondsTo: #makeNoise) ifTrue: [each makeNoise]].
+
+とすると、makeNoiseできるオブジェクトのみがmakeNoiseします。
+(変な日本語ですね :-)
+---
+おだ
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003890.html">[Squeak-ja: 3890] Re: プログラミングの質問です
+</A></li>
+	<LI>次の記事 <A HREF="003892.html">[Squeak-ja: 3892] Re: プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3891">[ 日付 ]</a>
+              <a href="thread.html#3891">[ スレッド ]</a>
+              <a href="subject.html#3891">[ 件名 ]</a>
+              <a href="author.html#3891">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

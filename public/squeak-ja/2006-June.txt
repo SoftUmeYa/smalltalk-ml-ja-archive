@@ -1,0 +1,1760 @@
+From umejava ＠ mars.dti.ne.jp  Thu Jun  1 21:45:09 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2987] SuperSwiki2をマイナーバージョンアップしました
+Message-ID: <JQ200606012145095.1659218@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SuperSwiki2をマイナーバージョンアップしました。特にトップページの自動
+フィルタリングなどはなかなか便利と思います。
+
+お試しください。
+
+URL:
+- http://swikis.ddo.jp/SuperSwiki2/2 (配布サイト)
+- http://squeakland.jp/super2 (Squeakland.jpでの稼働例)
+
+変更点:
+- BBSへの静的URLリンクがサポートされた
+- ギャラリーのトップにデフォルトで表示されるカテゴリ(サブカテゴリ)を指定
+  できるようになった
+- プロジェクトをアップロードしたときに、デフォルトで分類されるカテゴリ
+  (サブカテゴリ)を指定できるようになった
+- 左側のメニューバーがサイドバー風に横に縮むようになった
+- スペイン語サポート
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Thu Jun  1 23:26:22 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2988] スクリプト言語まるごとブック
+Message-ID: <447EF90E14D.D3F4ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2006年5月11日に日経BP社から出版された「スクリプト言語まるごとブック」
+(ISBN 4-8222-2836-3)に、
+
+第4部　こんな言語も知っておきたい
+Part1　マウス操作だけでプログラムを作れるスクリプティング環境「Squeak eToys」
+http://software.nikkeibp.co.jp/software/backno/06scriptmook1.html
+
+という記事が載っているようです。お読みなった方はいらっしゃいますか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From konchan ＠ fxis.co.jp  Fri Jun  2 10:19:51 2006
+From: konchan ＠ fxis.co.jp (Hiroyuki Kondo)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2989] Smalltalk balloonの版権について
+Message-ID: <447F9237.3060100@fxis.co.jp>
+
+近藤です。
+
+SMLとsqueak-jaへのマルチポストですが、お許し下さい。
+
+今、ある企業の方から、社内のWebサイトでSmalltalkの紹介をしたい。
+そのページにSmalltalk balloonの画像を貼りたい。
+と相談を受けております。
+これは私が、自身のデスクトップにSmalltalk balloonの原画(Robertさんの署名
+入り)を貼り付けているのを見たためです。
+
+確か数年前に「(商用以外なら?)画像の使用は自由」のような内容がMLに流れた
+ように記憶をしております。
+ここらへんに詳しい方、お手数ですが情報を頂けないでしょうか。
+
+--
+konchan@fxis.co.jp
+
+From sumi ＠ seagreen.ocn.ne.jp  Sun Jun  4 01:38:47 2006
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2990] Re: スクリプト言語まるごとブック
+In-Reply-To: <447EF90E14D.D3F4ABEE@smtp.nifty.com>
+References: <447EF90E14D.D3F4ABEE@smtp.nifty.com>
+Message-ID: <86c0320c0606030938l6c1fe41bpe882b1ebd3a521f3@mail.gmail.com>
+
+阿部さん、ごきげんよう。鷲見です。
+
+これは日経ソフトウエア２００５年１月号の同名記事を、内容を変えずにそのまま（ただし二色刷で）再掲載したものです。冒頭に注意書きとして、内容が古いことと、squeakland.jp
+と世界統一版の情報が少しだけ追加されています。
+
+06/06/01 に Kazuhiro ABE<abee@squeakland.jp> さんは書きました:
+> 第4部　こんな言語も知っておきたい
+> Part1　マウス操作だけでプログラムを作れるスクリプティング環境「Squeak eToys」
+[snip]
+> という記事が載っているようです。お読みなった方はいらっしゃいますか。
+
+-- 
+Masato Sumi
+
+From tagawa ＠ akademia.co.jp  Mon Jun  5 11:48:14 2006
+From: tagawa ＠ akademia.co.jp (Hisashi Tagawa)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2991] 障害と復旧のお知らせ
+Message-ID: <44839B6E.1000503@akademia.co.jp>
+
+squeak-jaメーリングリスト参加者の皆様。
+アカデミアシステムズの田川です。
+
+6月4日午前6時頃から6月5日午前11頃まで、
+ハードウェア障害により本メーリングリストが停止していました。
+現在は復旧しておりますので、通常通りご利用いただけます。
+ご迷惑をおかけしたことをお詫び申し上げます。
+
+-- 
+田川尚士 アカデミアシステムズ株式会社
+MAIL： tagawa@akademia.co.jp
+
+From takeda.toshiyuki ＠ gmail.com  Mon Jun  5 13:40:17 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2992] Re: おとなのワークショップ(was Re: 関西 *BSD ユーザ会勉強会のお知らせ(2006/05/27))
+In-Reply-To: <ddhd39rvo6.wl%mutoh@openedu.org>
+References: <ddr72ji1qs.wl%mutoh@openedu.org> <ddwtc6sudf.wl%mutoh@openedu.org>
+	<6544a1da0605290002j746c3e5dq266e2887725c397a@mail.gmail.com>
+	<ddhd39rvo6.wl%mutoh@openedu.org>
+Message-ID: <6544a1da0606042140h6e671fb6ofdf9836d19585be5@mail.gmail.com>
+
+武田です。ちょっと間があいてしまいましたが、
+
+On 5/29/06, Takeshi MUTOH <mutoh@openedu.org> wrote:
+
+> 一緒にやりましょうよぉ。経験者がいてはると心強いです。
+
+西宮の辺鄙なところですが、場所とPCはお貸しできると思います。
+
+> で、「おとなのワークショップ」にはどんな課題がいいんでしょうかねぇ。
+>
+> おとながグッと来るネタってどんなもんがあるでしょうか?
+
+どうなんでしょう？
+
+生きたオブジェクトの中身をのぞくことと、普通に書いたら並行に動くEToysを
+体験していただきたかったというのが、以前やったときの意図でした。
+
+それを子どもとおなじネタを拡張してやるところが、「おとなの」だったわけです。
+
+SeasideやらKedamaやらもかっこいいですし、「おとなのセカチョー」もありでしょう。
+
+From abee ＠ squeakland.jp  Mon Jun  5 14:29:30 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2993] Re: スクリプト 言語まるごとブック
+In-Reply-To: <86c0320c0606030938l6c1fe41bpe882b1ebd3a521f3@mail.gmail.com>
+References: <447EF90E14D.D3F4ABEE@smtp.nifty.com>
+	<86c0320c0606030938l6c1fe41bpe882b1ebd3a521f3@mail.gmail.com>
+Message-ID: <4483C13A2D3.DEB5ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 4 Jun 2006 01:38:47 +0900
+"Masato Sumi" <sumi@seagreen.ocn.ne.jp> wrote:
+>これは日経ソフトウエア２００５年１月号の同名記事を、内容を変えずにそのまま（ただし二色刷で）再掲載したものです。冒頭に注意書きとして、内容が古いことと、squeakland.jp
+>と世界統一版の情報が少しだけ追加されています。
+
+ありがとうございます。あのときの記事でしたか。
+当時、日経ITProでも紹介されていましたね。
+
+http://itpro.nikkeibp.co.jp/free/ITPro/OPINION/20041201/153347/
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From epi9tetus ＠ gmail.com  Tue Jun  6 01:47:50 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2994] Re: セキュリティについての質問です
+In-Reply-To: <447A80123D0.08DDABEE@smtp.nifty.com>
+References: <u4pzrczmf.wl%yoshiki@squeakland.org>
+	<7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+	<447A80123D0.08DDABEE@smtp.nifty.com>
+Message-ID: <7aa126770606050947x7526a48dw61950606dc46c7e3@mail.gmail.com>
+
+おおしま様
+お手数をおかけ致しましたこと、改めてお礼申し上げます。
+有り難うございました。
+
+セキュリティの件、よく理解できました。有り難うございます。
+
+>ただ、「子供がScamperを使う」というその状況があまり想像できなかった
+>ので、おもわず逆の状況を想定してしまいました。すみません。
+
+はじめて小学校で「すくいーく」の授業を受けたときに、授業の後で
+子供が先生に質問した際「すくいーくは、難しいから分からない。次回の
+クラスですくいーくの先生に聞きなさい」と言われたそうです。
+
+そこで、すくいーく関連の本とサイトを探して、子供の言葉に替えながら
+色々と一緒に読むうちに、「すくいーくのブラウザ♪」と子供が関心を示しました。
+
+子供が期待しているのは、e-TOYの中でプロジェクト作成中にも画面上で参照出来る
+ブラウザです。
+（多分、ピンク色の背景にブラウザ用の面白い部品が色々と揃っていると、勝手に
+思い込んでいます）
+すくいーくのクラスで誰も知らないものを自分が見つけたいという、ワクワク感から
+Scamperに興味を示しているのだと思います。
+
+「そんなに面白いものでは無いよ？しかも難しいし。」と言ってしまえば、恐らく
+そこで終わるのですが、それでは面白くないので、安全面だけ私が常に先回り出来る
+ように勉強しながら、Sqeakは好きに使わせていると言う状況です。
+
+>使ってみて「これは役に立たないな」と思われなかったのか
+
+すみません。役に立つかどうか判断できるほどの知識は持ち合わせてはおらず、
+「こんなことも出来るのか」という印象でした。
+（Aliceについて読んで更に驚きました）
+
+すくいーくから起動させるブラウザと言う点では、大いに期待します。
+と言うのも、小学校では「すくいーく＝子供の教育に有益＝使用者は健全」
+という印象があるらしく、逆に「モナーの落書きをする子供や、googleを子供に
+使わせる母親は怪しい」との印象もあるようですから（笑）
+
+折角お尋ねいただきましたのに、がっかりさせるようなお返事ですみません。
+
+でも、一般市民（？）にも楽しく触れるスクイークであるように、そういう意味では、
+難しいとの印象から折角小学校でクラスが開催されても、親が躊躇して子供を
+行かせない環境から、出来ないながらも近しいユーザ間で情報交換できるような
+環境を目指して、少なからず貢献できればと思う次第です。
+
+
+阿部@新百合　様
+Gmailのテキスト修正機能は存じており、試しましたが残念ながら、
+修復不能でした。
+もしかすると、IE7beta試用中ということも関係しているかも知れないと
+別のPCからIE6環境で受信してみましたが、やはり関係ないような印象を
+受けました。
+
+保存書庫の記述は確認できました。存在に気付いていなかった事を
+恥ずかしく思います。有り難うございました。
+
+
+それから、毎回のお返事が大変遅くてすみません。
+いつも皆様の活発な情報交換を拝見して、感心してばかりなのですが、勇気をふるって
+投稿してみたものの、同じタイミングで返せない事を申し訳なく思っています。
+
+技術や知識は、全く及ばないながらも、小学生への「すくいーく教室」の指導を拝見して、
+子供の興味の矛先や操作させたい誘導については、思うところが色々あり、いつか
+何かのお役に立てれば良いなぁ。と思っています。
+
+From yoshiki ＠ squeakland.org  Tue Jun  6 19:51:09 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 2995] Re: セキュリティについての質問です
+In-Reply-To: <7aa126770606050947x7526a48dw61950606dc46c7e3@mail.gmail.com>
+References: <u4pzrczmf.wl%yoshiki@squeakland.org>
+	<7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+	<447A80123D0.08DDABEE@smtp.nifty.com>
+	<7aa126770606050947x7526a48dw61950606dc46c7e3@mail.gmail.com>
+Message-ID: <uirnesgki.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> そこで、すくいーく関連の本とサイトを探して、子供の言葉に替えながら
+> 色々と一緒に読むうちに、「すくいーくのブラウザ♪」と子供が関心を示しました。
+> 
+> 子供が期待しているのは、e-TOYの中でプロジェクト作成中にも画面上で参照出来る
+> ブラウザです。
+> （多分、ピンク色の背景にブラウザ用の面白い部品が色々と揃っていると、勝手に
+> 思い込んでいます）
+> すくいーくのクラスで誰も知らないものを自分が見つけたいという、ワクワク感から
+> Scamperに興味を示しているのだと思います。
+> 
+> 「そんなに面白いものでは無いよ？しかも難しいし。」と言ってしまえば、恐らく
+> そこで終わるのですが、それでは面白くないので、安全面だけ私が常に先回り出来る
+> ように勉強しながら、Sqeakは好きに使わせていると言う状況です。
+
+  とりあえず適当なページを眺めてみる、という位であれば、他のWeb
+Browserでいうようなセキュリティ・ホールは気にしなくて良いとは思います。
+
+> >使ってみて「これは役に立たないな」と思われなかったのか
+> 
+> すみません。役に立つかどうか判断できるほどの知識は持ち合わせてはおらず、
+> 「こんなことも出来るのか」という印象でした。
+> （Aliceについて読んで更に驚きました）
+
+  例えばhttp://www.asahi.comとかのような普通そうなページを見ただけでも、
+あっさりと表示が崩れてしまう、という意味でした。「レイアウトなどは気に
+せずにデータを取ってきて表示する」、という最低限のところはできているの
+で(Squeakland 2005Jに入っているものでは日本語は表示されないと思います
+が)、遊ぶことはできますね。
+
+  ところで、お使いのSqueakのバージョンはどれでしょうか?
+
+> すくいーくから起動させるブラウザと言う点では、大いに期待します。
+> と言うのも、小学校では「すくいーく＝子供の教育に有益＝使用者は健全」
+> という印象があるらしく、逆に「モナーの落書きをする子供や、googleを子供に
+> 使わせる母親は怪しい」との印象もあるようですから（笑）
+
+  阿部さんから聞くところでは「モナーを書く子供」は多いようですね。
+
+> 折角お尋ねいただきましたのに、がっかりさせるようなお返事ですみません。
+
+　いえいえ。
+
+> でも、一般市民（？）にも楽しく触れるスクイークであるように、そういう意味では、
+> 難しいとの印象から折角小学校でクラスが開催されても、親が躊躇して子供を
+> 行かせない環境から、出来ないながらも近しいユーザ間で情報交換できるような
+> 環境を目指して、少なからず貢献できればと思う次第です。
+
+  よろしくお願いします。こちらもできることを頑張ります。
+
+-- Yoshiki
+
+From nishis ＠ zephyr.dti.ne.jp  Tue Jun  6 22:09:02 2006
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 2996] Re: スクリプト 言語まるごとブック
+In-Reply-To: <4483C13A2D3.DEB5ABEE@smtp.nifty.com>
+References: <447EF90E14D.D3F4ABEE@smtp.nifty.com>	<86c0320c0606030938l6c1fe41bpe882b1ebd3a521f3@mail.gmail.com>
+	<4483C13A2D3.DEB5ABEE@smtp.nifty.com>
+Message-ID: <44857E6E.9070705@zephyr.dti.ne.jp>
+
+on 06.6.5 2:29 PM, Kazuhiro ABE wrote:
+> On Sun, 4 Jun 2006 01:38:47 +0900
+> "Masato Sumi" <sumi@seagreen.ocn.ne.jp> wrote:
+>> これは日経ソフトウエア２００５年１月号の同名記事を、内容を変えずにそのまま（ただし二色刷で）再掲載したものです。冒頭に注意書きとして、内容が古いことと、squeakland.jp
+>> と世界統一版の情報が少しだけ追加されています。
+> ありがとうございます。あのときの記事でしたか。
+> 当時、日経ITProでも紹介されていましたね。
+> http://itpro.nikkeibp.co.jp/free/ITPro/OPINION/20041201/153347/
+
+今，青木さんの連載が載ってる日経ソフトウエアを買いに行ったとき
+に立ち読みしました．
+
+また今度行ったときにでもゲットしようか知らん．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From epi9tetus ＠ gmail.com  Wed Jun  7 01:50:44 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 2997] Re: セキュリティについての質問です
+In-Reply-To: <uirnesgki.wl%yoshiki@squeakland.org>
+References: <u4pzrczmf.wl%yoshiki@squeakland.org>
+	<7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+	<447A80123D0.08DDABEE@smtp.nifty.com>
+	<7aa126770606050947x7526a48dw61950606dc46c7e3@mail.gmail.com>
+	<uirnesgki.wl%yoshiki@squeakland.org>
+Message-ID: <7aa126770606060950j5aa173a4xfa72f7ffc0151bd5@mail.gmail.com>
+
+ありがとうございます。
+
+>  ところで、お使いのSqueakのバージョンはどれでしょうか?
+
+Nihongo7　です。
+
+>  阿部さんから聞くところでは「モナーを書く子供」は多いようですね。
+
+　２ちゃんねるやAAを知らなくても、キャラクターとして楽しいようですね＾＾；
+「キター」って言うセリフも子供には、言いやすくて良い感じのようです（笑）
+テキスト入力のつまらない画面の中に、キャラクターを出現させること自体、何か
+特別に楽しい気持ちになるように見ています。
+
+
+セキュリティから外れる話題かも知れないのですが、仮に子供がチェンジソーターなどから
+適当な入力をしてしまっても、保存せずに修了すれば問題は起こらないのでしょうか？
+
+部品から色々なツールを見ていると、時々OSに関連するディレクトリを参照しているので、
+「データが消えても直す方法を知らないから、触らないでね＾＾」と伝えてありますが
+そのうち子供の好奇心から適当な英数文字を入力しだすのではないかと、ちょっぴり
+心配しています。
+
+From hachi ＠ asu.ac.jp  Wed Jun  7 19:53:40 2006
+From: hachi ＠ asu.ac.jp (H.Hachisuka)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 2998] スクイーク2005J版でひらがな
+In-Reply-To: <4483C13A2D3.DEB5ABEE@smtp.nifty.com>
+References: <447EF90E14D.D3F4ABEE@smtp.nifty.com>	<86c0320c0606030938l6c1fe41bpe882b1ebd3a521f3@mail.gmail.com>
+	<4483C13A2D3.DEB5ABEE@smtp.nifty.com>
+Message-ID: <4486B034.9060904@asu.ac.jp>
+
+蜂須賀＠愛産大です。
+
+久しぶりの書き込みとなります。
+
+あまり使う人はいないかもしれませんが、SqueakPlugin2005Jのメッセージをひ
+らがなにするためのトランスレーションファイルを作りました。もし、興味のあ
+る方は、http://www.asu.ac.jp/hachi/uploads/ja-hiragana.translation から
+ダウンロード出来ますので、試してみて下さい。
+
+ただ、トランスレーションファイルを読み込むだけでは、ペイントのボタンイ
+メージが正常に表示されませんので、登録する必要があります。http:
+//www.asu.ac.jp/hachi/29.html の「ペイントのボタンイメージの登録」のとこ
+ろで、私が実際に行ったボタンイメージの登録方法を載せていますので、よろし
+ければ参考にして下さい。
+
+今思えば、単純に訳すんじゃなくて、もう少し考えながらひらがなにすればよ
+かったなぁと思っている今日この頃です。。。。。。
+
+-- 
+/*
+　愛知産業大学 総務部ITサポート室
+　蜂須賀 仁志 / e-mail: hachi@asu.ac.jp
+                jpnic handle: HH420JP
+　444-0005 愛知県岡崎市岡町原山12-5
+　TEL:  0564-48-4511 FAX: 0564-48-7756
+　直通: 0564-48-4536(ITサポート室)
+*/
+
+
+
+
+
+From yoshiki ＠ squeakland.org  Thu Jun  8 16:57:36 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 2999] Re: セキュリティについての質問です
+In-Reply-To: <7aa126770606060950j5aa173a4xfa72f7ffc0151bd5@mail.gmail.com>
+References: <u4pzrczmf.wl%yoshiki@squeakland.org>
+	<7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+	<447A80123D0.08DDABEE@smtp.nifty.com>
+	<7aa126770606050947x7526a48dw61950606dc46c7e3@mail.gmail.com>
+	<uirnesgki.wl%yoshiki@squeakland.org>
+	<7aa126770606060950j5aa173a4xfa72f7ffc0151bd5@mail.gmail.com>
+Message-ID: <u64jcrsen.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> >  ところで、お使いのSqueakのバージョンはどれでしょうか?
+> 
+> Nihongo7　です。
+
+  ははあ、なるほど。
+
+  Nihongo7は我ながらいろいろと問題があるバージョンでもあったのですが、
+Web Browserが手当てされていた、という利点はあるわけですね。いちおう、
+Squeakland 2005Jというものが最新版なので、機会があるときにアップデート
+しておくと僕としてはより安心できます^^;
+
+> >  阿部さんから聞くところでは「モナーを書く子供」は多いようですね。
+> 
+> 　２ちゃんねるやAAを知らなくても、キャラクターとして楽しいようですね＾＾；
+> 「キター」って言うセリフも子供には、言いやすくて良い感じのようです（笑）
+> テキスト入力のつまらない画面の中に、キャラクターを出現させること自体、何か
+> 特別に楽しい気持ちになるように見ています。
+
+  僕の知り合いの大人にもそういう人はたくさんいますよ。ミーティング中に
+「日本語でおk」と言ってみたり。
+
+> セキュリティから外れる話題かも知れないのですが、仮に子供がチェンジソーターなどから
+> 適当な入力をしてしまっても、保存せずに修了すれば問題は起こらないので
+> しょうか？
+
+  Change Sorterであれば大丈夫です。
+
+> 部品から色々なツールを見ていると、時々OSに関連するディレクトリを参照しているので、
+> 「データが消えても直す方法を知らないから、触らないでね＾＾」と伝えてありますが
+> そのうち子供の好奇心から適当な英数文字を入力しだすのではないかと、ちょっぴり
+> 心配しています。
+
+  File Listはそういう意味ではファイルの操作ができてしまうので少し危険
+ですね。
+
+  eToysはいろいろといい加減なところがあって、本来ツールのようなものは
+Object Catalogに入っているべきではないんです。子供の気持ちも良く判るの
+ですが、その辺はとりあえず「いじらないで」というのが正しいとは思います。
+
+-- Yoshiki
+
+From abee ＠ squeakland.jp  Thu Jun  8 21:39:08 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3000] Re: スクイーク 2005J 版でひらがな
+In-Reply-To: <4486B034.9060904@asu.ac.jp>
+References: <4483C13A2D3.DEB5ABEE@smtp.nifty.com> <4486B034.9060904@asu.ac.jp>
+Message-ID: <44881A6C37F.B3ECABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 07 Jun 2006 19:53:40 +0900
+"H.Hachisuka" <hachi@asu.ac.jp> wrote:
+>久しぶりの書き込みとなります。
+
+ご無沙汰しています。
+
+>あまり使う人はいないかもしれませんが、SqueakPlugin2005Jのメッセージをひ
+>らがなにするためのトランスレーションファイルを作りました。もし、興味のあ
+>る方は、http://www.asu.ac.jp/hachi/uploads/ja-hiragana.translation から
+>ダウンロード出来ますので、試してみて下さい。
+
+すばらしいです!
+小学校に行くと、ひらがな版について聞かれることがよくあります。
+そのためにアップグレードせずに以前のSqueakNihongo6.1Hiraganaをまだ使って
+いるところもあります。私も低学年の子供と遊ぶこともあるのでとても助かりま
+す。
+
+>ただ、トランスレーションファイルを読み込むだけでは、ペイントのボタンイ
+>メージが正常に表示されませんので、登録する必要があります。http:
+>//www.asu.ac.jp/hachi/29.html の「ペイントのボタンイメージの登録」のとこ
+>ろで、私が実際に行ったボタンイメージの登録方法を載せていますので、よろし
+>ければ参考にして下さい。
+
+毎度ながらこういう情報が整理されていなくて申し訳ないです。確かに、ボタン
+のイメージとかuseLocaleとかはまりますよね。
+
+久々に蜂須賀さんのSwikiを見させてもらったのですが(すみません)、他のページ
+の情報もすばらしいですね。SuperSwikiクローンなどためになります。
+
+>今思えば、単純に訳すんじゃなくて、もう少し考えながらひらがなにすればよ
+>かったなぁと思っている今日この頃です。。。。。。
+
+この手のものは常に完成すると言うことはないので、都度更新で行くしかないよ
+うな気がします。
+
+都度更新と言えば、アップデートストリームという仕組みがあるので、ひらがな
+版もこれに乗せてしまえばよいような気もするのですが、どうでしょう。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Jun  8 22:06:20 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3001] Re: セキュリティについての質問です
+In-Reply-To: <u64jcrsen.wl%yoshiki@squeakland.org>
+References: <7aa126770606060950j5aa173a4xfa72f7ffc0151bd5@mail.gmail.com>
+	<u64jcrsen.wl%yoshiki@squeakland.org>
+Message-ID: <448820CC3BD.B3EDABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 08 Jun 2006 00:57:36 -0700
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>> >  阿部さんから聞くところでは「モナーを書く子供」は多いようですね。
+>> 
+>> 　２ちゃんねるやAAを知らなくても、キャラクターとして楽しいようですね＾＾；
+>> 「キター」って言うセリフも子供には、言いやすくて良い感じのようです（笑）
+>> テキスト入力のつまらない画面の中に、キャラクターを出現させること自体、何か
+>> 特別に楽しい気持ちになるように見ています。
+>
+>  僕の知り合いの大人にもそういう人はたくさんいますよ。ミーティング中に
+>「日本語でおk」と言ってみたり。
+
+なんのことやらさっぱり。
+
+さておき、私も最初の頃はいちいち反応していたのですが、最近はびっくりしな
+くなってきました。壁に貼られている「廊下で走らない」とかにも登場していた
+りして。先生方が意味が分かっていないような気もします。
+
+# あと、今でもスプラッタ系はどきっとしますね。血とか呪いとか。これは小学
+# 校高学年から中学生に多いようです。みんな森チャックのグルーミーを描くク
+# ラスもあったなあ。
+
+確かに、子供が2chを直に読んでいる事はあまりなくて、カフェスタなどのホーム
+ページサービスに付随するBBSなどを通じて、文字ベースの文化が流行しているよ
+うに思います。
+
+私などは、なんとなく成り行きで学校に出入りするようになりましたが、基本的
+にアマチュアなので、どう対応すべきか分からないこともままあります。
+
+>  eToysはいろいろといい加減なところがあって、本来ツールのようなものは
+>Object Catalogに入っているべきではないんです。子供の気持ちも良く判るの
+>ですが、その辺はとりあえず「いじらないで」というのが正しいとは思います。
+
+それを言うとスクイークに限らずファイルエクスプローラなどもやばいわけで、
+多くの学校では再起動するとファイルを回復する仕組みがあったりします。
+このように壊しても良い環境を前提にするなら、いじって発見するのはよいと思
+います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Jun  8 23:12:54 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3002] Scamper はすごい (was: Re: セキュリティについての質問です )
+In-Reply-To: <u4pzrczmf.wl%yoshiki@squeakland.org>
+References: <7aa126770605140852j4a92be8el4f2b8ebcf44c0f81@mail.gmail.com>
+	<u4pzrczmf.wl%yoshiki@squeakland.org>
+Message-ID: <4488306639F.B3EFABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 15 May 2006 04:10:32 -0700
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>  Scamperは実験的なもので、そもそもBasic認証程度以上のことをしているサ
+>イトではほとんど何もできないと思います。そもそも、なぜScamperを使おう
+>と思われたのか、使ってみて「これは役に立たないな」と思われなかったのか
+>^^;そこが気になります。
+
+これだと、Scamperダメダメじゃんという印象を持たれる方もいらっしゃると思う
+ので、すこし擁護します。
+
+確かに、ScamperをIEやFirefoxなどのWebブラウザと比較すると激しく見劣りしま
+す。というか、比較すること自体が無意味です。
+ただ、Scamperにも良いところがあります。それは、表示された文字が単なる文字
+ではなく、Smalltalkの式としてその場で評価できる(実行できる)ということです。
+これは非常に強力な機能で、ある意味、ダイナミックメディアとしてのSmalltalk
+の真骨頂と言えるかもしれません。
+
+これを活かして作られたのが市川さんの「スクイークSmalltalk初めの一歩」や、
+山本さんの「Techo+Scamperで遊ぶ」です。
+
+http://ich.homelinux.net:8080/squeak/15
+http://www.languagegame.org:8080/zoo/153
+
+そして、これを支えているScamperの拡張が、市川さんのScamperMであり、山宮さ
+んのScamperWorkspaceです。
+
+http://ich.homelinux.net:8080/squeak/58
+http://languagegame.org:8080/propella/91
+
+# これでよろしいですか。補足をお願いします。
+
+これらを使うと、eToysとは異なる不思議な感覚や視点を得ることができるので、
+ぜひお試しください。IEではなかなかこうは行きません(不可能ではないですが)。
+
+# アクティブエッセイもそうですが、このようなダイナミックさはダイナブック
+# 以来一貫しており、これからも志向していく特徴だと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Fri Jun  9 11:44:07 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3003] Re: Scamper はすごい
+In-Reply-To: <4488306639F.B3EFABEE@smtp.nifty.com>
+References: <7aa126770605140852j4a92be8el4f2b8ebcf44c0f81@mail.gmail.com>	<u4pzrczmf.wl%yoshiki@squeakland.org>
+	<4488306639F.B3EFABEE@smtp.nifty.com>
+Message-ID: <4488E077.5080906@metatoys.org>
+
+山宮です。
+
+ScamperWorkspace は地味であまりプレゼンした事が無いですが、僕もとても
+気に入っているツールです。単にウェブ上のコードを実行出来るというだけで、
+ウェブがとてもダイナミックな物に感じられます。いま流行の AJAX と違う所
+は、ScamperWorkspace には何も隠されている所が無いという所です。今見え
+ているコードが全てで、何も秘密が無いのでユーザは全部理解して実行する事
+が出来ます。
+
+もう一つの強みは、Smalltalk コードという歴史のある仕組みに依存している
+だけので、コンテンツはなかなか古くならないだろうという所です。スクイー
+ク自体は今後大きく変化して行くと思いますが、ScamperWorkspace はあまり
+影響を受けなくて済むでしょう。
+
+もしかして、これって武田さんの「大人のワークショップ」にも最適な気がし
+てきました。という事で、これもワークショップの内容候補という事で提案し
+ます。
+
+> ただ、Scamperにも良いところがあります。それは、表示された文字が単なる文字
+> ではなく、Smalltalkの式としてその場で評価できる(実行できる)ということです。
+> これは非常に強力な機能で、ある意味、ダイナミックメディアとしてのSmalltalk
+> の真骨頂と言えるかもしれません。
+> 
+> これを活かして作られたのが市川さんの「スクイークSmalltalk初めの一歩」や、
+> 山本さんの「Techo+Scamperで遊ぶ」です。
+> 
+> http://ich.homelinux.net:8080/squeak/15
+> http://www.languagegame.org:8080/zoo/153
+> 
+> そして、これを支えているScamperの拡張が、市川さんのScamperMであり、山宮さ
+> んのScamperWorkspaceです。
+> 
+> http://ich.homelinux.net:8080/squeak/58
+> http://languagegame.org:8080/propella/91
+
+
+From hachi ＠ asu.ac.jp  Sat Jun 10 21:24:22 2006
+From: hachi ＠ asu.ac.jp (H.Hachisuka)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3004] Re: スクイーク 2005J 版でひらがな
+In-Reply-To: <44881A6C37F.B3ECABEE@smtp.nifty.com>
+References: <4483C13A2D3.DEB5ABEE@smtp.nifty.com> <4486B034.9060904@asu.ac.jp>
+	<44881A6C37F.B3ECABEE@smtp.nifty.com>
+Message-ID: <448AB9F6.7060804@asu.ac.jp>
+
+蜂須賀＠愛産大です。
+
+> すばらしいです!
+> 小学校に行くと、ひらがな版について聞かれることがよくあります。
+> そのためにアップグレードせずに以前のSqueakNihongo6.1Hiraganaをまだ使って
+> いるところもあります。私も低学年の子供と遊ぶこともあるのでとても助かりま
+> す。
+
+スクイークがバージョンアップしていた事は知っていたのですが、自分とこのマ
+シンスペックの関係もあってバージョンアップしていなかったため、全く手がけ
+ていませんでした。
+
+ですが、昨年マシンをリプレースした事によって2005Jもサクサク動くように
+なったので、この機会に2005J版のひらがなを作ろう！という事になり、色んな
+方の協力を得ながら何とか公開という事になりました。
+
+>> ただ、トランスレーションファイルを読み込むだけでは、ペイントのボタンイ
+>> メージが正常に表示されませんので、登録する必要があります。http:
+>> //www.asu.ac.jp/hachi/29.html の「ペイントのボタンイメージの登録」のとこ
+>> ろで、私が実際に行ったボタンイメージの登録方法を載せていますので、よろし
+>> ければ参考にして下さい。
+> 
+> 毎度ながらこういう情報が整理されていなくて申し訳ないです。確かに、ボタン
+> のイメージとかuseLocaleとかはまりますよね。
+
+ずばり私もハマリました。というか簡単に考えすぎていました、多言語という事
+を考えると当然といえば当然かな。と思いました。
+
+> 久々に蜂須賀さんのSwikiを見させてもらったのですが(すみません)、他のページ
+> の情報もすばらしいですね。SuperSwikiクローンなどためになります。
+> 
+
+「SuperSwikiクローン」はスクイーク以外の環境で稼働させる事を目的としてま
+すので、何となく後ろめたいものがあるのと、まだ一度も使っていないので自信
+がないので、細々と公開しています。
+
+SuperSwikiは長い間使わさせてもらっていて、とても重宝しているのですが、外
+部からの利用となると結構ハードルが高かったため、一般的なウェブサーバで稼
+働するSuperSwikiを作ろうという事になり作りました。
+
+でも、まだまだ一般的でないrubyで開発しているので、やっぱりハードルは残っ
+てしまいました。（当初は何を思ったかWebObjectsで開発を進めていたので、そ
+れよりは低くなったと思いますが。。。。）
+
+>> 今思えば、単純に訳すんじゃなくて、もう少し考えながらひらがなにすればよ
+>> かったなぁと思っている今日この頃です。。。。。。
+> 
+> この手のものは常に完成すると言うことはないので、都度更新で行くしかないよ
+> うな気がします。
+> 
+> 都度更新と言えば、アップデートストリームという仕組みがあるので、ひらがな
+> 版もこれに乗せてしまえばよいような気もするのですが、どうでしょう。
+
+まだ、いまいちピンとこないのですが、この前、ソース見てたら自分とこでも
+アップデートストリームを公開する事もできそうな感じでしたので、機会があっ
+たら試してみようと思っています。
+
+ちなみになんですが普通の状態で「broadcast as update」とかってやると私で
+もsqueakland.jpに公開できてしまうものなのでしょうか？
+
+-- 
+/*
+　愛知産業大学 総務部ITサポート室
+　蜂須賀 仁志 / e-mail: hachi@asu.ac.jp
+                jpnic handle: HH420JP
+　444-0005 愛知県岡崎市岡町原山12-5
+　TEL:  0564-48-4511 FAX: 0564-48-7756
+　直通: 0564-48-4536(ITサポート室)
+*/
+
+From kawa90 ＠ yahoo.co.jp  Mon Jun 12 22:20:17 2006
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3005] SqueakSourceJの使用方法について
+Message-ID: <20060612222017.243817e7.kawa90@yahoo.co.jp>
+
+川村です。いつもお世話になっております。
+
+SqueakSourceJ（http://squeaksource.blueplane.jp/）の使用方法について質問があります。具体的には次の２点で調べたんですが、わかりませんでした。ご教示お願いします。
+
+・プロジェクトの登録画面で'id:'と'名前:'のフィールドには具体的には何を入れたらよいでしょうか？またBlessing可能とは何でしょうか？
+・プロジェクトオーバービューで左がわのサイドメニューで表示されるインポートとは何でしょうか？一見ファイルをアップロードするような気がしますが、mczファイルをアップロードするものでしょうか？
+
+以上、よろしくお願いします。
+--------------
+Hideo Kawamura(川村秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://d.hatena.ne.jp/hkawa/
+Mail: kawa90 @ yahoo co jp
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.394 / Virus Database: 268.8.3/361 - Release Date: 2006/06/11
+
+--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+http://pr.mail.yahoo.co.jp/auction/
+
+From epi9tetus ＠ gmail.com  Tue Jun 13 00:15:26 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3006] Re: セキュリティについての質問です
+In-Reply-To: <448820CC3BD.B3EDABEE@smtp.nifty.com>
+References: <7aa126770606060950j5aa173a4xfa72f7ffc0151bd5@mail.gmail.com>
+	<u64jcrsen.wl%yoshiki@squeakland.org>
+	<448820CC3BD.B3EDABEE@smtp.nifty.com>
+Message-ID: <7aa126770606120815s5c55c5b9pd79b7c31e574a27f@mail.gmail.com>
+
+>Squeakland 2005Jというものが最新版なので、機会があるときにアップデート
+>しておくと僕としてはより安心できます^^;
+
+　2005Jは開発者版との記述から、一般人はnihongo7を使うべきだと思っていました＾＾；
+
+>「日本語でおk」と言ってみたり。
+
+　それって、一昔前の流行語では？・・・
+
+>Change Sorterであれば大丈夫です。〜〜略〜〜
+>File Listはそういう意味ではファイルの操作ができてしまう〜〜略〜〜
+>その辺はとりあえず「いじらないで」というのが正しいとは思います
+
+有り難うございます。本来ならば独習すべき部分を教えて頂いてすみません；；
+
+
+>壁に貼られている「廊下で走らない」とかにも登場していた
+>りして。先生方が意味が分かっていないような気もします。
+
+おっしゃる通りです。
+"2ちゃんねる"という言葉自体に悪印象であるので、たまたま気付いた方が
+「2ちゃんねるのキャラクターだ」と発言した時点で、問題視されるという
+感じです。
+
+>スプラッタ系
+
+幼児がウンチという単語一言で大笑いするような感じで、見た目が怖くなければ
+「攻撃」や「死」も子供達には笑いに繋がる要素のように思います。
+（知識が発達すると、それらの要素はブラックユーモアに発展するのかも）
+現実と結びつける知識を与えるのは、親の役目だと思っていますし又、一般的に
+大人にとっては面白く無いという点を説明することを通じて、世の中には色々な
+人がいることを知らせる良い機会だとも感じます。
+
+でも、クラスみんなで森チャックは怖いですね＾＾；
+担任が子供たちの興味ごとに関心が無かったのかも・・・と思ってしまいました。
+
+>それを言うとスクイークに限らずファイルエクスプローラなどもやばいわけで、
+>多くの学校では再起動するとファイルを回復する仕組みがあったりします。
+
+なるほど。学校と家庭の環境差も考慮すべきですね。有難うございます。
+
+From miyasaka ＠ iris.dti.ne.jp  Tue Jun 13 03:32:10 2006
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3007] ワークショップのお知らせ「デジタル絵本を作ろう」
+Message-ID: <000001c68e4e$8649e1e0$0c01a8c0@TOSHIOVAIO>
+
+Squeak-jaの皆様へ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です！
+
+■ワークショップのお知らせ
+６月より毎月１回、子供向けスクイークワークショップ「デジタル絵本を作ろう」を
+行います。
+http://mts-j.hiho.jp/
+昨年度は様々な機関の場所をお借りしてワークショップを開催してきましたが、今年
+度からはやっとデジタルハリウッド大学秋葉原校で開催できることになりました。
+参加者が本当に集まるのか（！？）などいろいろ不安な点はあるものの、今までの
+ワークショップで経験したこと（反省点のほうが多いのですが）を生かして、なんと
+かいい形に継続していければと思っております。
+
+■Webサイトについて
+ところで、上記のWebサイトをデジタルハリウッドのクリエータさん達が新たに制作
+してくれました。
+デザイン重視で内容はまだまだこれからですが、メンバー一同、スクイークが大好き
+でたのしく活動しておりますので、どうか長い目で暖かく見守っていただければと思
+います。
+我々は基本的にはクリエータ集団ということもあり、子ども達に「デジタルコンテン
+ツを作ることの楽しさ」を伝えたいと思い活動をしているものの、「子ども向けの教
+育」や「スクイークのカスタマイズ」といった視点では勉強しなければならないこと
+ばかりですので、どうかご指導ご鞭撻のほどよろしくお願いいたします。
+
+■教えてください
+いつもスクイークをたのしく利用させていただいておりますので、なんらかの形で
+「Squeak-ja」にも貢献したいと考えております。
+スクイークランドへのリンクは貼らせていただいておりますが、その他、何か必要な
+文言の追加や、リンクの記載など、スクイークコミュニティの活性化に繋がるような
+ことで、我々にできることがあればなんなりとコメントいただけますでしょうか。
+ワークショップの模様なども、随時メーリングリストにてご報告させていただきたい
+と思います。
+
+よろしくお願いいたします！
+
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+http://mts-j.hiho.jp/
+http://www.dhw.co.jp/gs/
+---------------------------------------------
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Jun 13 09:55:07 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3008] Re: SqueakSourceJの使用方法について
+In-Reply-To: <20060612222017.243817e7.kawa90@yahoo.co.jp>
+References: <20060612222017.243817e7.kawa90@yahoo.co.jp>
+Message-ID: <JF200606130955076.8785296@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> SqueakSourceJ（http://squeaksource.blueplane.jp/）の使用方法について質問があります。具体的には次の２点で調べたんですが、わかりませんでした。ご教示お願いします。
+> 
+> ・プロジェクトの登録画面で'id:'と'名前:'のフィールドには具体的には何を入れたらよいでしょうか？またBlessing可能とは何でしょうか？
+
+idは、プロジェクトの識別子です。具体的には、Monticelloがパッケージを管理するために使われたり、プロジェクトのリポジトリを指すURLになったりします。名前は、人間にとってわかりやすい名です。
+
+例えばタブ区切りのテキストを使って、翻訳ファイルをSqueakに取り込む、"TSV support for translation"というプロジェクトがありますが、これのURLは
+http://squeaksource.blueplane.jp/TransTSV/
+
+であり、IDのTransTSVを反映しています。一方で名前は、このページに出ているように"TSV support for translation"となります。
+
+Blessing可能とは、リリースされたコードをさらに殿堂入りさせることができるかということです。例えば、個々の開発者がリリースしたものを、リーダーが承認するといった形で使われます。
+
+> ・プロジェクトオーバービューで左がわのサイドメニューで表示されるインポートとは何でしょうか？一見ファイルをアップロードするような気がしますが、mczファイルをアップロードするものでしょうか？
+
+既存のMonticelloパッケージ(.mcz)を、ブラウザ経由で手動により、リポジトリにアップするときに使います。通常はMonticelloのツールからアップするので、使用頻度はほとんどありません。
+
+それでは。皆さんもSqueakSourceJ、どしどしご活用ください。
+---
+[:masashi | ^umezawa]
+
+From kawa90 ＠ yahoo.co.jp  Tue Jun 13 21:22:59 2006
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3009] Re: SqueakSourceJの使用方法について
+In-Reply-To: <JF200606130955076.8785296@mars.dti.ne.jp>
+References: <20060612222017.243817e7.kawa90@yahoo.co.jp>
+	<JF200606130955076.8785296@mars.dti.ne.jp>
+Message-ID: <20060613212259.242d8feb.kawa90@yahoo.co.jp>
+
+かわむらです。お世話になっています。
+梅澤さん、丁寧な説明ありがとうございました。理解できました。
+
+下記URIでSqueakSourceJ使用記として、プロジェクトの登録まで実際に行った内容を書いています。非常に簡単にプロジェクトの登録と公開が簡単に出来るのがわかると思います（なんたって、'ど素人'の私でもできたくらいですから...）。
+http://squeak.qp.land.to/index.php?Squeak%2FSqueakSourceJ%BB%C8%CD%D1%B5%AD
+
+今後もよろしくお願いします。
+
+以上
+
+On Tue, 13 Jun 2006 09:55:07 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+
+> こんにちは
+> 梅澤です。
+> 
+> > SqueakSourceJ（http://squeaksource.blueplane.jp/）の使用方法について質問があります。具体的には次の２点で調べたんですが、わかりませんでした。ご教示お願いします。
+> > 
+> > ・プロジェクトの登録画面で'id:'と'名前:'のフィールドには具体的には何を入れたらよいでしょうか？またBlessing可能とは何でしょうか？
+> 
+> idは、プロジェクトの識別子です。具体的には、Monticelloがパッケージを管理するために使われたり、プロジェクトのリポジトリを指すURLになったりします。名前は、人間にとってわかりやすい名です。
+> 
+> 例えばタブ区切りのテキストを使って、翻訳ファイルをSqueakに取り込む、"TSV support for translation"というプロジェクトがありますが、これのURLは
+> http://squeaksource.blueplane.jp/TransTSV/
+> 
+> であり、IDのTransTSVを反映しています。一方で名前は、このページに出ているように"TSV support for translation"となります。
+> 
+> Blessing可能とは、リリースされたコードをさらに殿堂入りさせることができるかということです。例えば、個々の開発者がリリースしたものを、リーダーが承認するといった形で使われます。
+> 
+> > ・プロジェクトオーバービューで左がわのサイドメニューで表示されるインポートとは何でしょうか？一見ファイルをアップロードするような気がしますが、mczファイルをアップロードするものでしょうか？
+> 
+> 既存のMonticelloパッケージ(.mcz)を、ブラウザ経由で手動により、リポジトリにアップするときに使います。通常はMonticelloのツールからアップするので、使用頻度はほとんどありません。
+> 
+> それでは。皆さんもSqueakSourceJ、どしどしご活用ください。
+> ---
+> [:masashi | ^umezawa]
+> 
+> 
+> -- 
+> No virus found in this incoming message.
+> Checked by AVG Free Edition.
+> Version: 7.1.394 / Virus Database: 268.8.3/362 - Release Date: 2006/06/12
+> 
+
+
+-- 
+--------------
+Hideo Kawamura(川村秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://d.hatena.ne.jp/hkawa/
+Mail: kawa90 @ yahoo co jp
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.394 / Virus Database: 268.8.3/362 - Release Date: 2006/06/12
+
+--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+http://pr.mail.yahoo.co.jp/auction/
+
+From ka.minami ＠ nifty.com  Wed Jun 14 15:11:16 2006
+From: ka.minami ＠ nifty.com (Kazuki Minamitani)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3010] [ANN] SqSquare BETA release
+Message-ID: <34C68F7958A74Fka.minami@nifty.com>
+
+こんにちは、南谷です。
+
+2005年度下期未踏ソフトウェア創造事業として昨年末より進めてきた
+SqSquareプロジェクトの成果を公開します。
+
+  SqSquare Swiki
+  http://www.sqsq.jp/SqSquare
+
+  SqSquare Demo
+  http://www.sqsq.jp:9092/seaside/SqSquare
+
+
+SqSquareは、大きなデスクトップを大勢のユーザで共有しながら、文字や画像、  
+eToysプログラムなどを利用したマルチメディアコンテンツの作成を支援するソ
+フトウェア環境です。
+
+-大きな作業スペースを複数ユーザ間で共有可能
+  - 一般的なTweak Playerが利用できる
+    - ペイントツールで絵を描く
+    - シート上にドキュメントを記述する
+    - 四角、楕円等ももちろん使用可能
+    - eToysを利用する（機能は限定的です）
+- 音声チャット機能
+- Webブラウザプラグイン機能
+  - IEやFirefoxをから利用可能
+   （Windowsのみ対応）
+
+
+
+よろしければお試しください。
+
+また、今後もまだまだ開発は続きます。
+皆様からのご意見をいただけると幸いです。
+
+よろしくお願いいたします。
+
+
+SqSquareチーム
+南谷千城, 梅澤真史
+
+From tango ＠ eggegg.co.jp  Wed Jun 14 18:59:46 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3011] Re: [ANN] SqSquare BETA release
+References: <34C68F7958A74Fka.minami@nifty.com>
+Message-ID: <005601c68f99$44996670$6dc4d2ca@gomes>
+
+やまもとです
+
+SQSQちょっと試してみました。
+とてもおもろいです。
+お気軽に遊べるのがべり・ぐう！！
+（ペイントツールの塗りつぶしが出来ないのが
+ちょっとざんねん・・・でござる）
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+----- Original Message ----- 
+From: "Kazuki Minamitani" <ka.minami@nifty.com>
+To: <squeak-ja@smalltalk.jp>
+Sent: Wednesday, June 14, 2006 3:11 PM
+Subject: [Squeak-ja: 3010] [ANN] SqSquare BETA release
+
+
+> こんにちは、南谷です。
+>
+> 2005年度下期未踏ソフトウェア創造事業として昨年末より進めてきた
+> SqSquareプロジェクトの成果を公開します。
+>
+>   SqSquare Swiki
+>   http://www.sqsq.jp/SqSquare
+>
+>   SqSquare Demo
+>   http://www.sqsq.jp:9092/seaside/SqSquare
+>
+>
+> SqSquareは、大きなデスクトップを大勢のユーザで共有しながら、文字や画像、
+> eToysプログラムなどを利用したマルチメディアコンテンツの作成を支援するソ
+> フトウェア環境です。
+>
+> -大きな作業スペースを複数ユーザ間で共有可能
+>   - 一般的なTweak Playerが利用できる
+>     - ペイントツールで絵を描く
+>     - シート上にドキュメントを記述する
+>     - 四角、楕円等ももちろん使用可能
+>     - eToysを利用する（機能は限定的です）
+> - 音声チャット機能
+> - Webブラウザプラグイン機能
+>   - IEやFirefoxをから利用可能
+>    （Windowsのみ対応）
+>
+>
+>
+> よろしければお試しください。
+>
+> また、今後もまだまだ開発は続きます。
+> 皆様からのご意見をいただけると幸いです。
+>
+> よろしくお願いいたします。
+>
+>
+> SqSquareチーム
+> 南谷千城, 梅澤真史
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Jun 14 22:10:17 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3012] Re: [ANN] SqSquare BETA release
+In-Reply-To: <005601c68f99$44996670$6dc4d2ca@gomes>
+References: <34C68F7958A74Fka.minami@nifty.com>
+	<005601c68f99$44996670$6dc4d2ca@gomes>
+Message-ID: <JC200606142210177.1415046@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+"Thoru Yamamoto" <tango@eggegg.co.jp> wrote:
+> やまもとです
+> 
+> SQSQちょっと試してみました。
+> とてもおもろいです。
+
+ありがとうございます。
+
+> お気軽に遊べるのがべり・ぐう！！
+> （ペイントツールの塗りつぶしが出来ないのが
+> ちょっとざんねん・・・でござる）
+> 
+
+ペイントについては、塗りつぶしができる場合とできない場合があるようです。
+カーソルが表示されなくなってしまうと、いろいろあやしい動きになります。
+バグですね。
+
+いろいろとお試しください。
+
+---
+[:masashi | ^umezawa]
+
+From yoshiki ＠ squeakland.org  Mon Jun 19 03:37:53 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3013] Re: ワークショップのお知らせ「デジタル絵本を作ろう」
+In-Reply-To: <000001c68e4e$8649e1e0$0c01a8c0@TOSHIOVAIO>
+References: <000001c68e4e$8649e1e0$0c01a8c0@TOSHIOVAIO>
+Message-ID: <u4pyiqpha.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> ■教えてください
+> いつもスクイークをたのしく利用させていただいておりますので、なんらかの形で
+> 「Squeak-ja」にも貢献したいと考えております。
+> スクイークランドへのリンクは貼らせていただいておりますが、その他、何か必要な
+> 文言の追加や、リンクの記載など、スクイークコミュニティの活性化に繋がるような
+> ことで、我々にできることがあればなんなりとコメントいただけますでしょうか。
+> ワークショップの模様なども、随時メーリングリストにてご報告させていただきたい
+> と思います。
+
+  squeakland.jpへのリンクありがとうございます。squeakland.jpのほうに、
+日本各地での活動に関するニュースがあるべきかもしれませんね。
+
+-- Yoshiki
+
+From abee ＠ squeakland.jp  Mon Jun 19 16:28:34 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3014] Re: スクイーク 2005J 版でひらがな
+In-Reply-To: <448AB9F6.7060804@asu.ac.jp>
+References: <44881A6C37F.B3ECABEE@smtp.nifty.com> <448AB9F6.7060804@asu.ac.jp>
+Message-ID: <44965222367.8C27ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+お返事が遅くなって申し訳ありません。
+
+On Sat, 10 Jun 2006 21:24:22 +0900
+"H.Hachisuka" <hachi@asu.ac.jp> wrote:
+>> 都度更新と言えば、アップデートストリームという仕組みがあるので、ひらがな
+>> 版もこれに乗せてしまえばよいような気もするのですが、どうでしょう。
+>
+>まだ、いまいちピンとこないのですが、この前、ソース見てたら自分とこでも
+>アップデートストリームを公開する事もできそうな感じでしたので、機会があっ
+>たら試してみようと思っています。
+>
+>ちなみになんですが普通の状態で「broadcast as update」とかってやると私で
+>もsqueakland.jpに公開できてしまうものなのでしょうか？
+
+今は自動ではできず、手動で誰かがコミットする必要があると思います。
+2005Jを作る過程では、Mantis-Jを使っていました。
+
+http://squeak.pinkzo.net/bugs/main_page.php
+
+今は世界統一版なので、アップデートストリームに採用されるには世界の意思(誰
+なんだ)の統一が必要かもしれません。
+このあたり、詳しそうな山宮さんや大島さんにフォローしてもらえると嬉しいで
+す。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From takuya ＠ computer.org  Tue Jun 20 01:03:12 2006
+From: takuya ＠ computer.org (Takuya Kamada)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3015] 7/23 OSC-Do開催
+Message-ID: <20060620005957.990A.TAKUYA@computer.org>
+
+  蒲田と言います。昨年に引き続き、Open Source Conference 北海道が、7/23
+に北海道大学構内で開催されることになりました。
+
+  去年は、鷲見さんにお話をお願いした結果、主催者アンケートの「興味をもっ
+たものは?」に(手違いで選択肢にSqueakが無かったにもかかわらず)Squeakと書
+いてくださった方が何人もいらっしゃった...といううれしい結果でした。
+  今年は、セッションのテーマがSqueakの世界と離れてしまったこともあって、
+ブースでのCD配布だけをやろうと思っています。
+
+  以下、公式の「開催告知文」です。
+
+----- ↓↓↓ ここから開催告知文 ↓↓↓ -------------------------------
+  『オープンソースカンファレンス2006 北海道』 開催のお知らせ
+
+                              オープンソースカンファレンス実行委員会
+
+
+来る7月15日（土）、『オープンソースカンファレンス2006 北海道』を
+開催いたします。
+
+昨年の開催では200名以上の参加者を集めた本イベントが、今年はさらに
+パワーアップして開催されます。
+
+プログラムは現在最終調整を行っております。決まり次第、順次以下の
+Webサイトにて公開していきますので、ご期待下さい。
+
+
+  ▽▼OSC2006 北海道 Webサイト▼▽
+  http://www.ospn.jp/osc2006-do/
+
+
+■開催概要（2006年6月13日現在）
+日時：2006年7月15日(土) 10:00〜17:00
+会場：北海道大学情報科学研究科棟2階
+      http://www.ist.hokudai.ac.jp/contact/
+内容：オープンソースに関する最新情報の提供
+     ・展示 オープンソースコミュニティ、企業・団体による展示
+     ・セミナー オープンソース、セキュリティ技術の最新情報を提供
+参加費：無料
+主催：オープンソースカンファレンス実行委員会
+協賛：日本電気株式会社
+      日本ヒューレット・パッカード株式会社
+      ターボリナックス株式会社
+      株式会社ワイズノット
+      アイピー・テレコム株式会社
+      株式会社サイクル・オブ・フィフス
+      株式会社サムシングプレシャス
+      有限会社サンビットシステム
+      さっぽろ産業振興財団 高度情報通信人材育成事業
+                           セキュリティワークショップ
+企画運営：株式会社びぎねっと
+
+
+■協賛・出展募集中
+『オープンソースカンファレンス2006 北海道』に協賛していただける
+企業および出展を希望するオープンソース関連グループを募集して
+います。
+
+企業協賛：協賛金 1口5万円から
+有志団体：無料
+
+詳しくは事務局までお問い合わせください。
+
+
+●お問い合わせ先
+株式会社びぎねっと オープンソースカンファレンス事務局
+担当：篠崎 (shin@Begi.net)・宮原 (tmiyahar@Begi.net)
+TEL:03-5774-9461  FAX:03-5774-9462
+----- ↑↑↑ ここから開催告知文 ↑↑↑ -------------------------------
+
+
+-- Community & Event Info. ----------------------------------------------
+OSC 2006 : 7/15北大情報科学研究科棟2F.詳細http://www.ospn.jp/osc2006-do/
+CLR/H    : 次回7/22(土)@札幌コンベンションセンタ.詳細 http://clr-h.jp
+7/23ハンバートハンバート・ライブ@花茶,千歳.詳細http://july23.mucleus.jp
+Tech-Ezo : Tech-Ezo Spring Camp 終了 : FYI http://tech-ezo.jp
+-- Takuya Kamada ------------------------------ takuya＠computer.org ---
+
+
+From takuya ＠ computer.org  Tue Jun 20 01:10:48 2006
+From: takuya ＠ computer.org (Takuya Kamada)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3016] [日付訂正]OSC-Do開催は、7/15でした。
+Message-ID: <20060620010535.9912.TAKUYA@computer.org>
+
+  先ほど、OSC北海道開催のお知らせを流させていただいた蒲田です。
+
+  日程をまちがえて流してしまいました。ごめんなさい。
+
+  7月23日ではなくて、「7月15日」が正しい開催日です。訂正します。
+
+-- Community & Event Info. ----------------------------------------------
+OSC 2006 : 7/15北大情報科学研究科棟2F.詳細http://www.ospn.jp/osc2006-do/
+CLR/H    : 次回7/22(土)@札幌コンベンションセンタ.詳細 http://clr-h.jp
+7/23ハンバートハンバート・ライブ@花茶,千歳.詳細http://july23.mucleus.jp
+Tech-Ezo : Tech-Ezo Spring Camp 終了 : FYI http://tech-ezo.jp
+-- Takuya Kamada ------------------------------ takuya＠computer.org ---
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Jun 20 13:52:08 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3017] Lightweight Language Ringが行われます
+Message-ID: <JQ200606201352088.1237937@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、今年も軽量言語の祭典の季節がやってまいりました。
+
+Lightweight Language Ring
+http://ll.jus.or.jp/2006/event
+
+2006年8月26日(土)新木場1stRING で行われます。
+
+SqueakからはLanguage Updateで、私が最新動向について話す予定です。
+(10分程度ですが)
+
+そのほか、言語対決としては「じゃんけん 2.0」、
+またショートプレゼン用に、LL Gongといったものも企画されています。
+http://ll.jus.or.jp/2006/event/llgong
+
+じゃんけんの腕に覚えのある方(プログラム上で)は、じゃんけん 2.0に
+ぜひエントリーしてみると良いでしょう。
+
+# 前哨戦の「キミならどう書く 2.0」では去年も活躍された鷲見さんがぶっちぎっています。
+# http://d.hatena.ne.jp/sumim/20060617/p1
+
+また、LL Gongは締め切りを過ぎていますが、まだ若干受け付けているようです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Tue Jun 20 14:16:46 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3018] Re: Lightweight Language Ringが行われます
+In-Reply-To: <JQ200606201352088.1237937@mars.dti.ne.jp>
+References: <JQ200606201352088.1237937@mars.dti.ne.jp>
+Message-ID: <JI2006062014164614.2716656@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> Lightweight Language Ring
+> http://ll.jus.or.jp/2006/event
+> 
+> 2006年8月26日(土)新木場1stRING で行われます。
+> 
+> SqueakからはLanguage Updateで、私が最新動向について話す予定です。
+> (10分程度ですが)
+> 
+
+ちょうど隣にいた南谷君に声をかけてみたところ、彼も手伝ってくれるようです。
+CroquetやSqSquareなど、コラボ系をみせようと思います。
+
+また、各発表者の登場時に、テーマソングをかけられるようなのですが、このときの
+楽曲を募集します。元気なやつから、「Smalltalkは死んだ言語」と言われていることを
+逆手にとって、ダークでダウナーな感じのやつまで、良いものがありましたら
+お知らせください。
+
+---
+[:masashi | ^umezawa]
+
+From koubo2006 ＠ yengawa.jpn.org  Tue Jun 20 18:14:48 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3019] Re: Lightweight Language Ringが行われます
+In-Reply-To: <JI2006062014164614.2716656@mars.dti.ne.jp>
+References: <JQ200606201352088.1237937@mars.dti.ne.jp>
+	<JI2006062014164614.2716656@mars.dti.ne.jp>
+Message-ID: <20060620172515.A91E.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+
+いっそのことゾンビの音楽(効果音?)とコスプレでやると面白いかも。
+
+
+On Tue, 20 Jun 2006 14:16:46 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+
+> また、各発表者の登場時に、テーマソングをかけられるようなのですが、このときの
+> 楽曲を募集します。元気なやつから、「Smalltalkは死んだ言語」と言われていることを
+> 逆手にとって、ダークでダウナーな感じのやつまで、良いものがありましたら
+> お知らせください。
+
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From tak ＠ metatoys.org  Tue Jun 20 23:03:08 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3020] スクイークのバージョンアップ状況について
+Message-ID: <4498001C.2040605@metatoys.org>
+
+山宮です。
+
+スクイークのバージョンアップ状況について質問があったので、現在どうなっ
+ているかについて書きます。
+
+現在の最新バージョンは昨年の末に出た Squeakland 2005J です。
+
+その後に出たバグ修正などは、アップデートストリームという仕組を使ってユー
+ザがスクイークをアップデート出来るようになっていますので、皆さんでやっ
+てみてください。
+
+アップデートの仕方は、
+- ワールドメニュー(エスケープキー) - ヘルプ - サーバーからアップデートを取得
+- ワールドメニュー - 保存して終了
+の二つを実行してください。
+
+スクイークの開発体制については、Squeakland 2005J リリースまでは日本の
+有志が個人的にメールを受け取って処理していました。Squeakland 2005J 以
+降は完全に本家とマージしましたので、本家に追従する事になります。
+
+本家でアップデートされる物については、毎週水曜日に行われるビューポイン
+ツリサーチのミーティングで同意が取れれば大体 Michael Ruger さんがコミッ
+トする手筈になっています。このミーティングには大島さんや私も参加してい
+ます。残念ながら私はこちらのコミット権自体は持っていないので前みたいに
+独断でじゃんじゃんパッチを当てられないのですが、squeakland メーリング
+リスト(英語)に投稿されたメールについては必ず話題にのぼります。
+
+ということで、補足があればお願いします。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From tar_zcvf ＠ yahoo.co.jp  Wed Jun 21 00:14:57 2006
+From: tar_zcvf ＠ yahoo.co.jp (鈴木 藍)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3021] Re: Lightweight Language Ringが行われます
+In-Reply-To: <JI2006062014164614.2716656@mars.dti.ne.jp>
+References: <JQ200606201352088.1237937@mars.dti.ne.jp>
+	<JI2006062014164614.2716656@mars.dti.ne.jp>
+Message-ID: <20060621001457.0651566d.tar_zcvf@yahoo.co.jp>
+
+
+  こんばんは。鈴木 藍です。
+
+
+> また、各発表者の登場時に、テーマソングをかけられるようなのですが、このときの
+> 楽曲を募集します。元気なやつから、「Smalltalkは死んだ言語」と言われていることを
+> 逆手にとって、ダークでダウナーな感じのやつまで、良いものがありましたら
+> お知らせください。
+
+  「生きてんだか死んでんだかわかんない」
+  「会場にちょっと配慮したポップ感」
+  「Rock(反抗)してやる」
+
+  みたいなところで White Zombie を推薦します。
+  ヴォーカルは Rob Zombie といいます。
+
+;; "I Zombie" なんか、結構いいと思います。
+
+
+//鈴木 藍
+
+-- tar_zcvf@yahoo.co.jp
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Wed Jun 21 20:22:45 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3022] ＫＪ法について
+Message-ID: <BIEDLAGDKLHEABOHHEOHCEJACBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+ご存じのようにアイデア発想法の一つに
+川喜多二郎氏のＫＪ法というのが
+あります。これは集団でする
+インタラクティブな作業だと思います。
+これをＳｑｕｅａｋで支援したような
+作品はないでしょうか。
+久保　道
+
+From abee ＠ squeakland.jp  Wed Jun 21 21:24:22 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:30 2007
+Subject: [Squeak-ja: 3023] Re: ＫＪ法について
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHCEJACBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <BIEDLAGDKLHEABOHHEOHCEJACBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <44993A76290.20CCABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 21 Jun 2006 20:22:45 +0900
+"kubo-o" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>ご存じのようにアイデア発想法の一つに
+>川喜多二郎氏のＫＪ法というのが
+>あります。これは集団でする
+>インタラクティブな作業だと思います。
+>これをＳｑｕｅａｋで支援したような
+>作品はないでしょうか。
+
+私の知る限りは無いように思います。
+しかし、標準で用意されている部品(テキスト、遊び場、入れ物、スケッチ、コネ
+クタ)などでも、似たようなことはできます。特定のアプリではなく、メディアと
+して使えばよいということですね。
+
+また、ネブラスカを使えば遠隔地と協調作業することもできます(以前の開発で実
+際に用いました)。ただし、パフォーマンスや占有帯域幅、同時参加人数に難があ
+ります。
+
+http://sumim.no-ip.com:8080/collab/20
+
+先日このMLでもアナウンスされた南谷さんと梅澤さんのSqSquareは模造紙のメタ
+ファを用いているので、KJ法と親和性が高いように思います。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-June/003010.html
+
+また、ことだま on Squeakを開発している慶應SFCの大岩研究室は、KJ法でも有名
+です(GoogleでKJ法で検索すると1位)。研究室の皆さん、いかがですか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Wed Jun 21 22:18:05 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:31 2007
+Subject: [Squeak-ja: 3024] Re: スクイークのバージョンアップ状況について
+In-Reply-To: <4498001C.2040605@metatoys.org>
+References: <4498001C.2040605@metatoys.org>
+Message-ID: <4499470D209.20CFABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 20 Jun 2006 23:03:08 +0900
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>スクイークのバージョンアップ状況について質問があったので、現在どうなっ
+>ているかについて書きます。
+
+ありがとうございます。
+
+>アップデートの仕方は、
+>- ワールドメニュー(エスケープキー) - ヘルプ - サーバーからアップデートを取得
+>- ワールドメニュー - 保存して終了
+>の二つを実行してください。
+
+他にも、Webブラウザの中でスクイークの作品を開くときに、
+
+「ここでスクイークに新しい更新をインストールしてもいいですか？」
+
+と聞かれることがあります。これに「はい」と答えると、更新から保存までが自
+動的に行われます。このとき、スクイークのウィンドウ初期サイズが変更される
+ことがあるのでご注意ください(その結果として、モーフの座標を定数で決め打ち
+している作品は動かなくなることがあります)。
+また、更新後に作品は自動的に開かないので再度開けなおしてください。
+
+>スクイークの開発体制については、Squeakland 2005J リリースまでは日本の
+>有志が個人的にメールを受け取って処理していました。Squeakland 2005J 以
+>降は完全に本家とマージしましたので、本家に追従する事になります。
+
+なるほど。過去のアップデート一覧はどこを見るのが良いでしょうか。
+
+>本家でアップデートされる物については、毎週水曜日に行われるビューポイン
+>ツリサーチのミーティングで同意が取れれば大体 Michael Ruger さんがコミッ
+>トする手筈になっています。このミーティングには大島さんや私も参加してい
+>ます。残念ながら私はこちらのコミット権自体は持っていないので前みたいに
+>独断でじゃんじゃんパッチを当てられないのですが、squeakland メーリング
+>リスト(英語)に投稿されたメールについては必ず話題にのぼります。
+
+つまり、Squeakland Discussion Forumに投稿するのが早道ということですね。
+http://squeakland.org/mailman/listinfo/squeakland
+
+Mantis-Jにバグ報告してパッチを書いても、それだけでは載らないのですね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Wed Jun 21 22:56:31 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:31 2007
+Subject: [Squeak-ja: 3025] Re: スクイークのバージョンアップ状況について
+In-Reply-To: <4499470D209.20CFABEE@smtp.nifty.com>
+References: <4498001C.2040605@metatoys.org>
+	<4499470D209.20CFABEE@smtp.nifty.com>
+Message-ID: <4499500F.8060501@metatoys.org>
+
+山宮です。
+
+>> スクイークの開発体制については、Squeakland 2005J リリースまでは日本の
+>> 有志が個人的にメールを受け取って処理していました。Squeakland 2005J 以
+>> 降は完全に本家とマージしましたので、本家に追従する事になります。
+> 
+> なるほど。過去のアップデート一覧はどこを見るのが良いでしょうか。
+
+ワールドメニュー(エスケープキー)から、
+開く - シンプル・チェンジ・ソーター
+を見てください。
+
+>> 本家でアップデートされる物については、毎週水曜日に行われるビューポイン
+>> ツリサーチのミーティングで同意が取れれば大体 Michael Ruger さんがコミッ
+>> トする手筈になっています。このミーティングには大島さんや私も参加してい
+>> ます。残念ながら私はこちらのコミット権自体は持っていないので前みたいに
+>> 独断でじゃんじゃんパッチを当てられないのですが、squeakland メーリング
+>> リスト(英語)に投稿されたメールについては必ず話題にのぼります。
+> 
+> つまり、Squeakland Discussion Forumに投稿するのが早道ということですね。
+> http://squeakland.org/mailman/listinfo/squeakland
+> 
+> Mantis-Jにバグ報告してパッチを書いても、それだけでは載らないのですね。
+
+Mantis-J は個人的にはメールより優れた方法だと思います。
+Squeakland 2005J リリース時には大活躍しました。
+しかし最近はあまり使われていないようですね。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From abee ＠ squeakland.jp  Fri Jun 23 01:34:36 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:31 2007
+Subject: [Squeak-ja: 3026] Re: SuperSwiki2 をマイナーバージョンアップしました
+In-Reply-To: <JQ200606012145095.1659218@mars.dti.ne.jp>
+References: <JQ200606012145095.1659218@mars.dti.ne.jp>
+Message-ID: <449AC69C1BF.E222ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+現在(6/23 01:32)、Squeakland.jpのSuperSwiki2が落ちてないでしょうか。
+
+On Thu, 01 Jun 2006 21:45:09 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>SuperSwiki2をマイナーバージョンアップしました。特にトップページの自動
+>フィルタリングなどはなかなか便利と思います。
+>
+>お試しください。
+>
+>URL:
+>- http://swikis.ddo.jp/SuperSwiki2/2 (配布サイト)
+>- http://squeakland.jp/super2 (Squeakland.jpでの稼働例)
+>
+>変更点:
+>- BBSへの静的URLリンクがサポートされた
+>- ギャラリーのトップにデフォルトで表示されるカテゴリ(サブカテゴリ)を指定
+>  できるようになった
+>- プロジェクトをアップロードしたときに、デフォルトで分類されるカテゴリ
+>  (サブカテゴリ)を指定できるようになった
+>- 左側のメニューバーがサイドバー風に横に縮むようになった
+>- スペイン語サポート
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Fri Jun 23 08:24:46 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:31 2007
+Subject: [Squeak-ja: 3027] Re: SuperSwiki2 をマイナーバージョンアップしました
+In-Reply-To: <449AC69C1BF.E222ABEE@smtp.nifty.com>
+References: <JQ200606012145095.1659218@mars.dti.ne.jp>
+	<449AC69C1BF.E222ABEE@smtp.nifty.com>
+Message-ID: <JM200606230824463.989515@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+情報ありがとうございます。立ち上げなおしました。現在は復旧しています。
+http://squeakland.jp/super2
+
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+> 阿部@新百合です。
+> 
+> 現在(6/23 01:32)、Squeakland.jpのSuperSwiki2が落ちてないでしょうか。
+> 
+> On Thu, 01 Jun 2006 21:45:09 +0900
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> >SuperSwiki2をマイナーバージョンアップしました。特にトップページの自動
+> >フィルタリングなどはなかなか便利と思います。
+> >
+> >お試しください。
+> >
+> >URL:
+> >- http://swikis.ddo.jp/SuperSwiki2/2 (配布サイト)
+> >- http://squeakland.jp/super2 (Squeakland.jpでの稼働例)
+> >
+> >変更点:
+> >- BBSへの静的URLリンクがサポートされた
+> >- ギャラリーのトップにデフォルトで表示されるカテゴリ(サブカテゴリ)を指定
+> >  できるようになった
+> >- プロジェクトをアップロードしたときに、デフォルトで分類されるカテゴリ
+> >  (サブカテゴリ)を指定できるようになった
+> >- 左側のメニューバーがサイドバー風に横に縮むようになった
+> >- スペイン語サポート
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+---
+[:masashi | ^umezawa]
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sat Jun 24 11:08:16 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:31 2007
+Subject: [Squeak-ja: 3028] Re: ＫＪ法について
+In-Reply-To: <44993A76290.20CCABEE@smtp.nifty.com>
+Message-ID: <BIEDLAGDKLHEABOHHEOHOEJCCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+阿部さん、ありがとうございました。
+KJ法が盛んに活用されていますね。
+関連HPを読んで勉強します。
+これをもとに中山正和氏の創案された
+ＮＭ法をＳｑｕｅａｋで組み立てたいと思っております。
+ＮＭ法関連のＨＰは未確認です。
+またご紹介いただいたNebraｓｋａもすごいことは
+何となくわかりますが、手を広げるのが怖いです。
+久保　道
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Kazuhiro ABE
+Sent: Wednesday, June 21, 2006 9:24 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3023] Re: ＫＪ法について
+
+
+阿部@新百合です。
+
+On Wed, 21 Jun 2006 20:22:45 +0900
+"kubo-o" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>ご存じのようにアイデア発想法の一つに
+>川喜多二郎氏のＫＪ法というのが
+>あります。これは集団でする
+>インタラクティブな作業だと思います。
+>これをＳｑｕｅａｋで支援したような
+>作品はないでしょうか。
+
+私の知る限りは無いように思います。
+しかし、標準で用意されている部品(テキスト、遊び場、入れ物、スケッチ、コネ
+クタ)などでも、似たようなことはできます。特定のアプリではなく、メディアと
+して使えばよいということですね。
+
+また、ネブラスカを使えば遠隔地と協調作業することもできます(以前の開発で実
+際に用いました)。ただし、パフォーマンスや占有帯域幅、同時参加人数に難があ
+ります。
+
+http://sumim.no-ip.com:8080/collab/20
+
+先日このMLでもアナウンスされた南谷さんと梅澤さんのSqSquareは模造紙のメタ
+ファを用いているので、KJ法と親和性が高いように思います。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-June/003010.html
+
+また、ことだま on Squeakを開発している慶應SFCの大岩研究室は、KJ法でも有名
+です(GoogleでKJ法で検索すると1位)。研究室の皆さん、いかがですか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+

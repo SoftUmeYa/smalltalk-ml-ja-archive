@@ -1,0 +1,88 @@
+From makoto ＠ kobe-u.ac.jp  Sat Apr  5 10:19:50 2014
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Sat, 5 Apr 2014 10:19:50 +0900
+Subject: [Squeak-ja: 4718]
+ RAPIROをBYOB,Scratch,Etoysから動かす
+Message-ID: <20140405101950240365.b3c0a1ee@kobe-u.ac.jp>
+
+こんにちは
+
+神戸大学の高橋です。
+
+RAPIROが発売されて，RAPIROを操作するのにいろいろな方法が公開されていますが
+ScratchやEtoysからも操作できないかと考えてみました。
+準備としてRasPiあるいはPC上でPythonのプログラムを実行する必要がありますが，
+それほどハードルは高くないように思います。かんたんな説明を以下のページに
+掲載しています。
+
+http://herb.h.kobe-u.ac.jp/rapiro.html
+
+Etoysからは横川さんのScratchConnectを利用して，BYOBやScratchを踏み台に
+して使います。
+
+まだ，説明不足のところがありますが，ご意見をいただければ幸いです。
+
+From abee.abe ＠ nifty.ne.jp  Sat Apr  5 15:14:47 2014
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sat, 5 Apr 2014 15:14:47 +0900
+Subject: [Squeak-ja: 4719] Re:
+	RAPIROをBYOB,Scratch,Etoysから動かす
+In-Reply-To: <20140405101950240365.b3c0a1ee@kobe-u.ac.jp>
+References: <20140405101950240365.b3c0a1ee@kobe-u.ac.jp>
+Message-ID: <CADv7uFHpJ42sicO1prTNytk+M2SNNqmr2h5UWubOZUnH5U=fpA@mail.gmail.com>
+
+高橋先生
+
+阿部です。
+RAPIROは買ったまま組み立てもせず放置していました。
+参考になります。ありがとうございます。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2014年4月5日 10:19 TAKAHASHI Makoto <makoto ＠ kobe-u.ac.jp>:
+> こんにちは
+>
+> 神戸大学の高橋です。
+>
+> RAPIROが発売されて，RAPIROを操作するのにいろいろな方法が公開されていますが
+> ScratchやEtoysからも操作できないかと考えてみました。
+> 準備としてRasPiあるいはPC上でPythonのプログラムを実行する必要がありますが，
+> それほどハードルは高くないように思います。かんたんな説明を以下のページに
+> 掲載しています。
+>
+> http://herb.h.kobe-u.ac.jp/rapiro.html
+>
+> Etoysからは横川さんのScratchConnectを利用して，BYOBやScratchを踏み台に
+> して使います。
+>
+> まだ，説明不足のところがありますが，ご意見をいただければ幸いです。
+
+From ume ＠ softumeya.com  Fri Apr 18 12:48:24 2014
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 18 Apr 2014 12:48:24 +0900
+Subject: [Squeak-ja: 4720]
+	第64回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSR02YegWiY1KeMeU916q1MHimoczT+ywijM+t1WtxwCg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2014/4/28(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai64kaismalltalkbenkyoukai
+
+今回はiPadでScratchを動かす方法について探っていきます。
+過去にJohn M McIntoshさんが作成されたScratch
+Viewerのソースがあるのですが、これをアレンジして、ScratchのイメージをiPadで動せるようにする方法を解説します。
+Squeak派生のSmalltalk処理系であれば、イメージをのせかえて動作させることが可能です。これを機に自分なりのダイナブックを作ってみるのも良いかもしれません。
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2228] Re: プログラミングの質問です
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202228%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=287073018F1FCC48B871980C94CB156501FEF86D%40tkoexc02.asiapacific.cpqcorp.net">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002227.html">
+   <LINK REL="Next"  HREF="002230.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2228] Re: プログラミングの質問です</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202228%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=287073018F1FCC48B871980C94CB156501FEF86D%40tkoexc02.asiapacific.cpqcorp.net"
+       TITLE="[Squeak-ja: 2228] Re: プログラミングの質問です">tak ＠ metatoys.org
+       </A><BR>
+    <I>2004年 12月 31日 (金) 22:55:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002227.html">[Squeak-ja: 2227] プログラミングの質問です
+</A></li>
+        <LI>次の記事 <A HREF="002230.html">[Squeak-ja: 2230] Re: プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2228">[ 日付 ]</a>
+              <a href="thread.html#2228">[ スレッド ]</a>
+              <a href="subject.html#2228">[ 件名 ]</a>
+              <a href="author.html#2228">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+
+Kondo, Fumito wrote:
+
+&gt;<i> ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチエージェントのアプリケーションをプログラミングで作りたいと思っていますが、こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々のエージェント画像は、インスタンスとして作るとすると、その際に、drawOn:メソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　“do it”するという方法で出来るのでしょうか？
+</I>
+Morph のサブクラスとして Agent を作って色々実験されてみると良いと思い
+ます。Sqeuak では存在しているオブジェクトのメソッドを直接編集出来ます
+ので、drawOn: を変更する事によってすぐに画面が変わります。ちなみにちょっ
+と間違えると例外処理でオブジェクトが赤いバッテンに成ってしまいますが、
+メニューから再描画出来ます。
+
+&gt;<i> 　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメソッドを送れば、操作できるようになっていますが、複数の画像エージェントを扱いたい場合、どのようにようにすればよろしいでしょうか？
+</I>
+例えば生物のシミュレーションのような物を想像しているのですが、
+Morph&gt;&gt;world でワールドが取得出来ますので、その submorph を調べれば他
+の Agent(生物) の状態が分かりますので、それを参考に Agent 同士の相互作
+用を記述すれば良いのではないかと思います。
+
+-- 
+山宮 隆 ::= <A HREF="http://yuri.sakura.ne.jp/~propella/">http://yuri.sakura.ne.jp/~propella/</A>
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002227.html">[Squeak-ja: 2227] プログラミングの質問です
+</A></li>
+	<LI>次の記事 <A HREF="002230.html">[Squeak-ja: 2230] Re: プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2228">[ 日付 ]</a>
+              <a href="thread.html#2228">[ スレッド ]</a>
+              <a href="subject.html#2228">[ 件名 ]</a>
+              <a href="author.html#2228">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

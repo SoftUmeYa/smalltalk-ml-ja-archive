@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7884] Re: 連想計算というリフレクティブな手法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207884%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3C4306F7126D35DA4B8A115EA505FA06860AC0ADAC%40JPESWA304.apo.epson.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007882.html">
+   <LINK REL="Next"  HREF="007875.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7884] Re: 連想計算というリフレクティブな手法</H1>
+    <B>Narita Takaoki</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207884%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3C4306F7126D35DA4B8A115EA505FA06860AC0ADAC%40JPESWA304.apo.epson.net%3E"
+       TITLE="[SML 7884] Re: 連想計算というリフレクティブな手法">Narita.Takaoki ＠ exc.epson.co.jp
+       </A><BR>
+    <I>2010年 12月 17日 (金) 18:09:45 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007882.html">[SML 7882] Re: 連想計算というリフレクティブな手法
+</A></li>
+        <LI>次の記事 <A HREF="007875.html">[SML 7875] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7884">[ 日付 ]</a>
+              <a href="thread.html#7884">[ スレッド ]</a>
+              <a href="subject.html#7884">[ 件名 ]</a>
+              <a href="author.html#7884">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>成田です。
+
+&gt;<i> 佐原です。
+</I>
+Smalltalk じゃない言語でズンズン行くのもなんですけれど、
+
+&gt;<i> VDM++だと、高階関数使ってもリフレクション的なことはできそうもな
+</I>&gt;<i> いので、数値アルゴリズムで作りました :-)
+</I>
+こんなん書いてみました：
+
+class Sequential_Square
+
+functions
+  static public  sequential_square :
+	((nat * nat) -&gt; (nat * nat)) * nat1
+		+&gt; ((nat * nat) -&gt; (nat * nat))
+  sequential_square (T, n) ==
+    if (n = 1) then
+      T
+    else
+      if (n rem 2 = 1) then
+        (sequential_square(T, n - 1)) comp T
+      else
+        (sequential_square(T, floor(n / 2))) ** 2;
+
+end Sequential_Square
+
+class Fibonacci is subclass of Sequential_Square
+
+functions
+  static public  fibo : (nat * nat) +&gt; (nat * nat)
+  fibo (pre_f) ==
+    mk_(pre_f.#1 + pre_f.#2, pre_f.#1);
+
+  static public  fibonacci : nat1 +&gt; nat
+  fibonacci (n) ==
+    if (n = 1) then
+      1
+    else
+      ((sequential_square (fibo, n - 1))(mk_(1,0))).#1;
+
+end Fibonacci
+
+Sequential_Square が中途半端で気持ち悪いのですが、多相型関数の定義が
+よくわからなくて型チェックではじかれたので、こんな感じになってしまいました。
+
+高階関数を駆使して関数合成で問題を解く設計を書こうとすると、関数の型宣言
+で死にそうになる気がする・・・ことに汎用性を持たせようとすると・・・
+
+Haskell とかも死にそうになるけど、まだしも・・・
+
+関数に対する comp と ** 演算子は便利。ぶっちゃけ、整数値が戻ってくる範
+囲では sequential_square (T, n) == T ** n; で十分速い。
+
+&gt;<i> リフレクション使うより速いので、シンボリック実行しているVDM++インタープリ
+</I>&gt;<i> タでも、fastFib(-1)からfastFib(100)まで
+</I>&gt;<i> 全部計算しても、一瞬で終わりますが、多倍長計算できないのでfastFib(92)=
+</I>&gt;<i> 7540113804746369024までしか計算できません。
+</I>
+環境の違いでしょうか？fibonacci(78) までしか計算できませんでした。それより
+上もいけたですが、値が浮動小数点数。さらに fibonacci(10000) だと &quot;1.#INF&quot;
+などと戻ってきているようです。とりあえず戻ってくることは、戻ってくる。
+
+# 当方、VDM++VICE。
+
+--
+セイコーエプソン株式会社 機器ソフトウェア統括センター
+ 成田 隆興  Tel. 0263-58-8464 (職場代表電話)
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007882.html">[SML 7882] Re: 連想計算というリフレクティブな手法
+</A></li>
+	<LI>次の記事 <A HREF="007875.html">[SML 7875] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7884">[ 日付 ]</a>
+              <a href="thread.html#7884">[ スレッド ]</a>
+              <a href="subject.html#7884">[ 件名 ]</a>
+              <a href="author.html#7884">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

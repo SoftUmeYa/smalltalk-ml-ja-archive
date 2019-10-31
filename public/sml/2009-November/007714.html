@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7714] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207714%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRv%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FIEhUTUwbJEIhVyRHJC0kXiQ3JD8bKEI%3D%3F%3D&In-Reply-To=4AFFB28C.2090500%40hera.eonet.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007713.html">
+   <LINK REL="Next"  HREF="007715.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7714] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207714%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRv%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FIEhUTUwbJEIhVyRHJC0kXiQ3JD8bKEI%3D%3F%3D&In-Reply-To=4AFFB28C.2090500%40hera.eonet.ne.jp"
+       TITLE="[SML 7714] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 11月 15日 (日) 21:03:14 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007713.html">[SML 7713] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+        <LI>次の記事 <A HREF="007715.html">[SML 7715] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7714">[ 日付 ]</a>
+              <a href="thread.html#7714">[ スレッド ]</a>
+              <a href="subject.html#7714">[ 件名 ]</a>
+              <a href="author.html#7714">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+
+私もようやく皆さんに見て頂けるレベルのコードになったので、
+プログラムをポストします。SUnitのテストケース付きです。
+（といってもHTML周りはテストを書いていません。complete.htmlと
+プログラムが出力するindex.htmlをdiffで比較して、テストしていま
+したので。）
+
+あと、できるだけJunに依存しないように書き直したのですが、
+browserの所はMacOSX以外の環境はうちでは確認できないので、
+あきらめました。
+（別にJunを使うのが嫌な訳ではありません (^^;; Junがやって
+いることを自力で書くのも勉強になると思ってやってみました。）
+
+このCSVからHTMLへの変換の課題のポイントは、
+・CSVとHTMLに関する知識をアプリケーションのロジックから
+　如何に分離するか？
+　うまく分離出来るとCSVやHTMLに関するコードが汎用的な
+　ものになって再利用することが出来る。
+・CSVの表の形式と、HTMLの表の形式の違いをアプリケーションの
+　ロジックで如何に変換するか？
+　巧くやらないとロジックが複雑になり、将来表の形式を変えたく
+　なった時にプログラムの変更が大変になる。
+
+だと思っています。これらのポイントを考えてクラスの分割をして
+みました。クラス名の最初にCSV,HTML,PrimeMinisterをつけて
+分離を明確にしてあります。
+
+とはいいつつ現状では、CSVの解釈は単に','で区切っているだけですし、
+HTMLの部分もHTMLのタグの意味を詳しく知らないので、あまり良い
+分割ではないかもしれません。また、HTMLのインデントもハード
+コーディングで巧いやり方にはなっていません。今後の課題です。
+
+１１月の勉強会で提示されたTranslaterの役割はPrimeMinisterTableに
+持たせています。PrimeMinisterTableはCSVTableからの変換や
+HTMLTableへの変換を担っています。この先の発展としては、
+PrimeMinisterTableからCSVTableへの変換もあり得ると思います。
+その先はCSVファイルへの出力も視野に入ってきます。
+
+CSVの読み込みや、HTTPでのダウンロードの起動の方法については、
+９月の勉強会で提示されたプログラムのままです。
+
+では、次回勉強会の時にでもご意見を頂けるとありがたいです。
+
+以上です。
+
+2009年11月15日16:49 hirowadenden &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">hirowadenden ＠ hera.eonet.ne.jp</A>&gt;:
+&gt;<i>
+</I>&gt;<i> ハンドル名で失礼します、hirowadendenと申します。
+</I>&gt;<i> # SMLの保存書庫を見ると、[SML 7708]〜[SML 7710]が私の所には配信されて来
+</I>&gt;<i> ないので、テストも兼ねて投稿させていただきます。
+</I>&gt;<i>
+</I>&gt;<i> 前回投稿したプログラムは、元のプログラム20091007.stから懸け離れてしまっ
+</I>&gt;<i> ていたので、今回添付のプログラムは、元のプログラム20091104.stに沿ってプ
+</I>&gt;<i> ログラミングしたつもりです。(^^;;
+</I>
+--
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Translators-hamasaki.st.zip
+型:         application/zip
+サイズ:     8792 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20091115/0738ed2e/Translators-hamasaki.st-0001.zip">http://www.smalltalk.jp/pipermail/sml/attachments/20091115/0738ed2e/Translators-hamasaki.st-0001.zip</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007713.html">[SML 7713] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+	<LI>次の記事 <A HREF="007715.html">[SML 7715] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7714">[ 日付 ]</a>
+              <a href="thread.html#7714">[ スレッド ]</a>
+              <a href="subject.html#7714">[ 件名 ]</a>
+              <a href="author.html#7714">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

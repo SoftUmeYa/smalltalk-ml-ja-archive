@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4222] スクイークの新バージョンについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204222%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklLyUkITwlLyROPzcbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVAhPCU4JWclcyRLJEQkJCRGGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004238.html">
+   <LINK REL="Next"  HREF="004223.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4222] スクイークの新バージョンについて</H1>
+    <B>Toshio Miyasaka</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204222%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklLyUkITwlLyROPzcbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVAhPCU4JWclcyRLJEQkJCRGGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 4222] スクイークの新バージョンについて">miyasaka ＠ iris.dti.ne.jp
+       </A><BR>
+    <I>2009年 5月 14日 (木) 02:44:32 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004238.html">[Squeak-ja: 4238] Re: Squeak38JのConnectorsについての質問
+</A></li>
+        <LI>次の記事 <A HREF="004223.html">[Squeak-ja: 4223] Re: スクイークの新バージョンについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4222">[ 日付 ]</a>
+              <a href="thread.html#4222">[ スレッド ]</a>
+              <a href="subject.html#4222">[ 件名 ]</a>
+              <a href="author.html#4222">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Squeak-jaの皆様へ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+このたび、当方で行っている「みんなでたのしくスクイーク」用のEtoysを公開しました。
+こちらをご参考ください。
+
+<A HREF="http://d-mts.com/">http://d-mts.com/</A>
+
+いまのところ、Windows版だけですが、Mac版もなんとかしたいので、Macをお持ちの方は動作確認などご協力いただければ幸いです。
+すでに数回ワークショップで利用していますが、旧バージョンと比べ、細かい部分で操作性の向上が図られており、また、動作も安定しているため、たいへん便利に利用しております。
+感覚的には、アシスタント一人分くらいの負荷軽減の働きをしている感じです。
+もしよろしければ、みなさまもぜひご利用の上、修正向上のためのフィードバックなどいただければ幸いです。
+
+■インストーラの概要
+ブラウザプラグインの登録が私の知識ではできなかったので、Sqeuakland.orgからダウンロードしたWindows版を上書きすることで対応しています。
+インストーラの詳しい動作については、インストール時に表示されるReadmeをご覧いただけますでしょうか。
+
+日本語の訳については、阿部さんのご意見もいただきながら、私のほうで気になった点を見直しています。
+特にテストタイル関連については、以前よりワークショップで説明しにくいところだったので、大きく変更しています。
+「テスト〜はい〜いいえ」を「もし〜ならば〜でなければ」にしただけでも、ワークショップでの理解度が向上したような気がしています。
+また保存用のフォルダにはサンプルも登録できるようにしました。（サンプルについては今後拡充予定です）
+
+■imageファイル
+また、阿部さんには、主に下記のようなimageファイルの改造をしていただきました。
+
+１）日本語フォントの導入
+「モナーフォント」を入れていただきました。
+
+２）テストタイル関連
+・「Test/Yes/No」のそれぞれに末尾に半角スペースを入れたエントリをpoファイルに作成し、テストタイルに表示できるように修正。
+テストタイルの「テスト〜はい〜いいえ」をpoファイルで「もし〜ならば〜でなければ」形式にした場合に、Etoys終了時のメッセージも「ならば/でなければ」になってしまうためです。
+表示だけなら「Yes/No」だけでいいのですが、ある程度の互換性を維持するために「Test」についても対応しています。
+
+３）部品関連
+画像編集でよく使う長方形ツールと輪投げツールを部品フラップ直下に登録。
+
+４）日本語特有のバグ
+・日本語ファイル名の「*.pr」ファイルをダブルクリックして開こうとするとエラーになる現象を修正。
+
+５）その他
+ナビゲータやハロのサイズ、ビューワのデザインなど、若干の調整をしています。
+
+以上、よろしくお願いいたします。
+
+
+
+宮坂俊夫 (Toshio Miyasaka )
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+デジタルハリウッド大学大学院
+メディアサイエンス研究所　研究員
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004238.html">[Squeak-ja: 4238] Re: Squeak38JのConnectorsについての質問
+</A></li>
+	<LI>次の記事 <A HREF="004223.html">[Squeak-ja: 4223] Re: スクイークの新バージョンについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4222">[ 日付 ]</a>
+              <a href="thread.html#4222">[ スレッド ]</a>
+              <a href="subject.html#4222">[ 件名 ]</a>
+              <a href="author.html#4222">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

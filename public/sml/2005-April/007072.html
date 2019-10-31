@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7072] Jun628 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207072%5D%20Jun628%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007071.html">
+   <LINK REL="Next"  HREF="007073.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7072] Jun628 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207072%5D%20Jun628%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7072] Jun628 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2005年 4月 12日 (火) 10:41:11 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007071.html">[SML 7071] Jun627 for Smalltalk
+</A></li>
+        <LI>次の記事 <A HREF="007073.html">[SML 7073] Jun629 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7072">[ 日付 ]</a>
+              <a href="thread.html#7072">[ スレッド ]</a>
+              <a href="subject.html#7072">[ 件名 ]</a>
+              <a href="author.html#7072">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun628」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+<A HREF="http://www.sra.co.jp/smalltalk/jun/">http://www.sra.co.jp/smalltalk/jun/</A>
+<A HREF="http://www.sra.co.jp/smalltalk/jun/htmls/News.html">http://www.sra.co.jp/smalltalk/jun/htmls/News.html</A>
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+<A HREF="ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/">ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/</A>
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆３次元幾何ポリゴンの抽象化できるメソッドをスーパークラスへ
+　と持ち上げました。
+
+◆ランチャーの再オープンメッセージのスペルミスを正しました。
+
+◆点群を有する３次元幾何オブジェクトと３次元描画オブジェクト
+  に、点群を配列として答えるメッセージ（asArrayOfPoints）を追
+  加しました。
+
+◆マルチディスプレイの大きさを配列にして答えるメッセージの集
+　約を行いました。
+
+◆プログラム制御構造に「do: aBlock framesPerSecond: aNumber」
+  を追加しました。
+
+◆フラックスに時間を守る機構（framesPerSecond）を加えました。
+  これにより、マシンの速度に依存せずに、フラックスの再生を行
+  えます。また、ムービーの生成時にも、１秒あたりのフレーム枚
+  数をきちんと指定して書き出すように改めました。したがって、
+  錯覚を表現しているクラスにも、同様な機能が加わりました。
+
+◆フラックスをウィンドウとして開く際に、現在に描画しているオ
+  ブジェクトの境界箱の中心に注視点をもってきていましたが、フ
+  ラックス全体の境界箱の中心に注視点の設定を改めました。今ま
+  でのように、現在に描画しているオブジェクトの境界箱の中心に
+  合わせたい場合は、ウィンドウを開く際にシフトキー修飾をして
+  ください。
+
+◆座標・直線・角度からでも、同次座標変換行列（トランスフォー
+  メーション）のインスタンスを生成するメッセージを増やしまし
+  た。
+  　　　(aJunPoint transformationToTranslate)
+  　　　(aJunPoint transformationToScale)
+  　　　(aJunPoint transformationToRotate: anAngle)
+  　　　(aJunAngle transformationToRotate)
+  　　　(aJunAngle transformationToRotate: aLine)
+  　　　(aJunAngle transformationToRotateX)
+  　　　(aJunAngle transformationToRotateY)
+  　　　(aJunAngle transformationToRotateZ)
+  　　　(aJunLine transformationToRotate: anAngle)
+
+◆３次元座標に半径と法線を指定して円を生成するメッセージを新
+  設しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007071.html">[SML 7071] Jun627 for Smalltalk
+</A></li>
+	<LI>次の記事 <A HREF="007073.html">[SML 7073] Jun629 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7072">[ 日付 ]</a>
+              <a href="thread.html#7072">[ スレッド ]</a>
+              <a href="subject.html#7072">[ 件名 ]</a>
+              <a href="author.html#7072">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

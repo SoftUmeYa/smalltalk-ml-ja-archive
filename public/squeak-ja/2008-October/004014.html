@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4014] Re: Scratch 1.3がリリースされました。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204014%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2ggMS4z%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCwlaiVqITwlOSQ1JGwkXiQ3JD8hIxsoQg%3D%3D%3F%3D&In-Reply-To=48F09F06.1040806%40mx2.ttcn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004012.html">
+   <LINK REL="Next"  HREF="004015.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4014] Re: Scratch 1.3がリリースされました。</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204014%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2ggMS4z%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCwlaiVqITwlOSQ1JGwkXiQ3JD8hIxsoQg%3D%3D%3F%3D&In-Reply-To=48F09F06.1040806%40mx2.ttcn.ne.jp"
+       TITLE="[Squeak-ja: 4014] Re: Scratch 1.3がリリースされました。">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 10月 11日 (土) 22:45:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004012.html">[Squeak-ja: 4012] Re: Scratch 1.3がリリースされました。
+</A></li>
+        <LI>次の記事 <A HREF="004015.html">[Squeak-ja: 4015] Re: Scratch 1.3がリリースされました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4014">[ 日付 ]</a>
+              <a href="thread.html#4014">[ スレッド ]</a>
+              <a href="subject.html#4014">[ 件名 ]</a>
+              <a href="author.html#4014">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+
+2008/10/11 21:41 yhousako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt;:
+&gt;<i> 私が所属する、OSSの教育利用を推進する研究チームで、Scratchとスクラッチ
+</I>&gt;<i> ボードを使ってみようという方向で話が進んでおります．
+</I>
+すばらしいですね。ぜひ結果をお聞かせください。
+また、お手伝いできることがあればお気軽にお寄せください。
+
+&gt;<i> 私は、Mac版の
+</I>&gt;<i> Scratch1.3やLinux版のScratch1.21を使っております．
+</I>&gt;<i> ＃Mac版の方は、日本語＆音ともにO.Kですが、Linux版の方は両方うまくいって
+</I>&gt;<i> いません．(^_^;;;
+</I>
+まだLinux版の1.3は公式に公開されていないですが、OLPC XO(Fedora +
+Sugar)用のものでは日本語表示可能なので、これをいじると何とかなるかもしれません。
+
+<A HREF="http://wiki.laptop.org/go/Scratch">http://wiki.laptop.org/go/Scratch</A>
+
+&gt;<i> この研究チームに所属していて、Win版の1.3をWin2000のマシーンにインストー
+</I>&gt;<i> ルした方から、「日本語が豆腐になる」という報告を頂きました．
+</I>&gt;<i>
+</I>&gt;<i> 1.3は、日本語表示もO.Kだったはずですから、お互いに「どうしてだろうねぇ」
+</I>&gt;<i> と首をかしげることしかできませんでした．（原因をつきとめられる程の技術が
+</I>&gt;<i> ありませんので…）
+</I>
+たまたまこの話題が2chのSqueakスレにありました。
+
+<A HREF="http://pc11.2ch.net/test/read.cgi/tech/1131349633/486-492">http://pc11.2ch.net/test/read.cgi/tech/1131349633/486-492</A>
+
+要は、locale\ja.poを適当なエディタで開き、以下のようにフォントを明示的に指定するとよいようです。
+
+msgid &quot;Win-Font&quot;
+msgstr &quot;MS Gothic&quot;
+
+誰が書いたか分かりませんが:-)、先の大島さんの話だとPangoのくだりは間違いですね。
+
+&gt;<i> 以前のScratchを日本語化するための情報を見つけて読んでみましたが、Squeak
+</I>&gt;<i> もSmallTalkもよくわかっていない私には読みこなすことさえできませんでした．
+</I>&gt;<i> <A HREF="http://www.asu.ac.jp/hachi/scratchJP.html">http://www.asu.ac.jp/hachi/scratchJP.html</A>
+</I>
+この実装方法は1.3とは異なるので、ちょっと違ったかもしれません(蜂須賀さんの方法はフォントをSqueak環境の中に持ち、1.3ではOSが持ちます)。
+しかし、だからこそ環境に依存しないので、このイメージをLinuxで動かせば日本語は表示できると思うのですが、いかがでしょう。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004012.html">[Squeak-ja: 4012] Re: Scratch 1.3がリリースされました。
+</A></li>
+	<LI>次の記事 <A HREF="004015.html">[Squeak-ja: 4015] Re: Scratch 1.3がリリースされました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4014">[ 日付 ]</a>
+              <a href="thread.html#4014">[ スレッド ]</a>
+              <a href="subject.html#4014">[ 件名 ]</a>
+              <a href="author.html#4014">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

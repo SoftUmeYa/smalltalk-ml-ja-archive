@@ -1,0 +1,105 @@
+From tetha ＠ st.rim.or.jp  Tue Aug  2 10:11:38 2011
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Tue, 2 Aug 2011 10:11:38 +0900
+Subject: [Squeak-ja: 4607] Re:
+ 第34回Smalltalk勉強会のお知らせ
+In-Reply-To: <CAH3eEdSp-0L0uFdidsH5XUw_e=70b1zQo1zcrZ2-Dk02OSg=Xg@mail.gmail.com>
+References: <CAH3eEdSp-0L0uFdidsH5XUw_e=70b1zQo1zcrZ2-Dk02OSg=Xg@mail.gmail.com>
+Message-ID: <1EF30C3C-0FC8-4B11-BF20-5F0F0B00FDE9@st.rim.or.jp>
+
+こんにちは
+ビューポイントテクノロジーの林徹也です。
+
+先日の勉強会で使用したプログラムとスライド資料を以下のページにアップロードしました。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai34kaismalltalkbenkyoukai/shiryou
+
+Jtalk では Web ブラウザ上でプログラミングできるのですが、変更を保存するための WebDAV サーバーを設定する必要があったりと、ちょっと面倒です。
+その手間を省いてお気軽にハンズオン出来るよう Pharo Smalltalk で作られたサーバープログラムを同梱しました。
+当日ご来場できなかった方もお楽しみください。
+--
+	
+On 2011/07/17, at 22:30, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。
+> 
+> 日時: 2011/7/29(金) 19:00-21:00 (2時間)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト:
+> 「自由自在Squeakプログラミング」
+> 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai34kaismalltalkbenkyoukai
+> 
+> 今回のテーマは先進的に「Jtalk」です。
+> Jtalkとは、JavaScriptランタイム上で動作するSmalltalkの処理系です。IDEも含んでいるためWebブラウザ上でWebアプリケーションのクライアントサイドを快適に開発することができます。まだまだデスクトップ上の通常のSmalltalk環境に比べると貧弱ですが、JavaScriptの関数を透過的に呼び出せたり、Node.jsとも連携できたりする期待の星なのです。
+> 
+> ビューポイントテクノロジーの林さんが発表されます。
+> 
+> 参加表明は特に必要ありません。ふらりとお越しください。
+> -- 
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+
+
+
+
+From ume ＠ softumeya.com  Sat Aug  6 10:12:23 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sat, 6 Aug 2011 10:12:23 +0900
+Subject: [Squeak-ja: 4608]
+	Smalltalkセミナ、大阪でもやります
+Message-ID: <CAH3eEdQ_30W3f52M+XxSnFuEYUEpVCwoZJhA8N5uzS2HfDMoMw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+さて、前回5/27にAppleストア銀座で行ったObjective-Cな人向けのSmalltalkの紹介セミナなのですが、好評につき(?)、大阪でも行う運びとなりました。
+
+http://www.cincom.co.jp/products/seminar/healthcare_seminar2.html
+(医療系のセミナに組み込まれた形になっていますが、そこはあまり気になさらずに)
+
+前回のアナウンス:
+http://www.smalltalk.jp/pipermail/sml/2011-May/007931.html
+
+Objective-Cは見た目が奇妙とよく言われますが、なぜそうなっているのか、Smalltalkの側面から眺めると理由がわかったりします。今の時代でのSmalltalkの立ち位置的なことも話す予定です。
+
+8月17日(水) 13：30からです。無料です。私は真ん中なので14:30くらいからと思います。
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Sat Aug 20 00:33:49 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sat, 20 Aug 2011 00:33:49 +0900
+Subject: [Squeak-ja: 4609]
+	第35回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTRhb83gUxHNELZbiXO91WcGwRY1Mw_nqvZwYqaWbq9ig@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/8/31(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai35kaismalltalkbenkyoukai
+
+今回のテーマは「音系」です。音楽系のアプリもSmalltalkで簡単に作れるというのはよく知られたところですが、実際に作った方は意外に少ないのではないでしょうか。
+そこでSqueakを使って音系のアプリを作り続けている西原聡士さんに、いろいろと解説をしていただくこととなりました。お楽しみに。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

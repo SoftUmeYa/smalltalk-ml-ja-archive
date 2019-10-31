@@ -1,0 +1,811 @@
+From ume ＠ softumeya.com  Sun Apr  3 10:56:31 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 3 Apr 2011 10:56:31 +0900
+Subject: [SML 7908] Re:
+	第30回Smalltalk勉強会＠京都
+In-Reply-To: <4D91FA68.5070909@cc.kyoto-su.ac.jp>
+References: <4D91FA68.5070909@cc.kyoto-su.ac.jp>
+Message-ID: <BANLkTikkNm2rk=TsD6OEaERb_ZoG-cpd9Q@mail.gmail.com>
+
+梅澤です。
+
+私語の切れ目ができましたので、東京から参加させていただきます。
+もしかしたら私の他にも、何人か行くことになるかもしれません。
+
+よろしくお願い申し上げます。
+
+2011年3月30日0:27 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 第30回Smalltalk勉強会＠京都を開催します。
+> 万障繰り合わせてJR京都駅前にお集まりください。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto30
+>
+> 場所はキャンプラ6階の第3講習室になります。
+>
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第30回 Smalltalk勉強会＠京都
+> 日時：2011年04月06日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 新年度を迎えましたので、題材を一新して執り行ってゆきたいと思
+> います。使い勝手のいい部品の製作から始めましょう。やはり基本
+> として用いるのはMVC(オブザーバのデザインパターン)になります。
+>
+> 東京の勉強会と呼応するのように「使わないと損をするModel-View-
+> Controller」を援用しながら進めます。
+>
+> http://aokilab.kyoto-su.ac.jp/documents/MVC/
+>
+> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+> をご持参ください。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Apr  6 05:56:53 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 06 Apr 2011 05:56:53 +0900
+Subject: [SML 7909] Re:
+ 第30回Smalltalk勉強会＠京都
+In-Reply-To: <BANLkTikkNm2rk=TsD6OEaERb_ZoG-cpd9Q@mail.gmail.com>
+References: <4D91FA68.5070909@cc.kyoto-su.ac.jp>
+ <BANLkTikkNm2rk=TsD6OEaERb_ZoG-cpd9Q@mail.gmail.com>
+Message-ID: <4D9B8215.1050304@cc.kyoto-su.ac.jp>
+
+本日です！ MVCの基本に立ち帰って、ゆっくりと一行一行プログラ
+ムを一緒に書きながら進めます。新年度ですから題材を一新します。
+新たに参加して継続してゆくための良い機会だと思います。
+
+(11/04/03 10:56), Masashi Umezawa wrote:
+> 梅澤です。
+> 
+> 私語の切れ目ができましたので、東京から参加させていただきます。
+> もしかしたら私の他にも、何人か行くことになるかもしれません。
+> 
+> よろしくお願い申し上げます。
+
+はい、どうぞ、どうぞ、お待ち申し上げております。あまりの緩慢
+な進行に驚かれるやもしれませぬ。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+> 2011年3月30日0:27 AOKI Atsushi<atsushi ＠ cc.kyoto-su.ac.jp>:
+>>
+>> 第30回Smalltalk勉強会＠京都を開催します。
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>>
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto30
+>>
+>> 場所はキャンプラ6階の第3講習室になります。
+>>
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第30回 Smalltalk勉強会＠京都
+>> 日時：2011年04月06日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 新年度を迎えましたので、題材を一新して執り行ってゆきたいと思
+>> います。使い勝手のいい部品の製作から始めましょう。やはり基本
+>> として用いるのはMVC(オブザーバのデザインパターン)になります。
+>>
+>> 東京の勉強会と呼応するのように「使わないと損をするModel-View-
+>> Controller」を援用しながら進めます。
+>>
+>> http://aokilab.kyoto-su.ac.jp/documents/MVC/
+>>
+>> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+>> をご持参ください。
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+From serge.stinckwich ＠ gmail.com  Thu Apr  7 01:24:14 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 6 Apr 2011 23:24:14 +0700
+Subject: [SML 7910] Pharo 1.2.1 is out
+Message-ID: <BANLkTi=Tr9zhEO=YQ7F4V0tHOrhtU3Ky7Q@mail.gmail.com>
+
+Hi guys,
+
+The Pharo Project is proud to announce the release of Pharo 1.2.1, the
+third major release of this clean, innovative, open-source Smalltalk
+environment.
+More information here: http://bit.ly/gwUB13
+
+Regards,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Apr  7 13:09:54 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 07 Apr 2011 13:09:54 +0900
+Subject: [SML 7911] Re:
+ 第30回Smalltalk勉強会＠京都
+In-Reply-To: <4D9B8215.1050304@cc.kyoto-su.ac.jp>
+References: <4D91FA68.5070909@cc.kyoto-su.ac.jp>
+ <BANLkTikkNm2rk=TsD6OEaERb_ZoG-cpd9Q@mail.gmail.com>
+ <4D9B8215.1050304@cc.kyoto-su.ac.jp>
+Message-ID: <4D9D3912.10507@cc.kyoto-su.ac.jp>
+
+昨夜はJR京都駅前にお集まりいただきまして、ありがとうございま
+した。梅澤さん、東京からのご出席、痛み入りました。
+
+昨夜の勉強会の内容を、以下のページに載せました。安田さんから
+も勉強ログが届いておりますので、きちんと収録しておきました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto30
+
+援用しました「使わないと損をするModel-View-Controller」は1986
+〜1987年にかけて書き下ろしたものですが、
+
+http://aokilab.kyoto-su.ac.jp/documents/MVC/
+
+昨夜の勉強会には、平成生まれの方々が何人も混ざっておりました
+から、なんと！当時、まだ誕生されていらっしゃらない。う〜む…。
+
+昨夜の勉強会で一行一行プログラムを時間をかけて作成してゆきま
+したが、ぜひとも昨夜と同じことを何回も何回も繰り返してくださ
+いませ。その繰り返しの量が、ある日突然に質に転化します。
+
+何も見ないで、一から、息をするように作れるようになるには、百
+回以上の繰り返しが必要です。さらに人前でもちゃっちゃとライブ
+でプログラミングができるようになるには、千回以上の繰り返しが
+必要になります。
+
+繰り返し練習は大切です、バカにしてはなりません。わかっていて
+も、繰り返すことが重要なんです。そうしないと、プログラミング
+が身にしみてきません。お経を何回も読むように、論語を何回も詠
+むように、ピアノやヴァイオリンを奏でる練習と同じです。繰り返
+し練習をお願いします、時間を味方につけて。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+(11/04/06 5:56), AOKI Atsushi wrote:
+> 本日です！ MVCの基本に立ち帰って、ゆっくりと一行一行プログラ
+> ムを一緒に書きながら進めます。新年度ですから題材を一新します。
+> 新たに参加して継続してゆくための良い機会だと思います。
+> 
+> (11/04/03 10:56), Masashi Umezawa wrote:
+>> 梅澤です。
+>>
+>> 私語の切れ目ができましたので、東京から参加させていただきます。
+>> もしかしたら私の他にも、何人か行くことになるかもしれません。
+>>
+>> よろしくお願い申し上げます。
+> 
+> はい、どうぞ、どうぞ、お待ち申し上げております。あまりの緩慢
+> な進行に驚かれるやもしれませぬ。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+> 
+>> 2011年3月30日0:27 AOKI Atsushi<atsushi ＠ cc.kyoto-su.ac.jp>:
+>>>
+>>> 第30回Smalltalk勉強会＠京都を開催します。
+>>> 万障繰り合わせてJR京都駅前にお集まりください。
+>>>
+>>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto30
+>>>
+>>> 場所はキャンプラ6階の第3講習室になります。
+>>>
+>>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>>
+>>> 第30回 Smalltalk勉強会＠京都
+>>> 日時：2011年04月06日（水）19:00〜21:00
+>>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>>
+>>> 新年度を迎えましたので、題材を一新して執り行ってゆきたいと思
+>>> います。使い勝手のいい部品の製作から始めましょう。やはり基本
+>>> として用いるのはMVC(オブザーバのデザインパターン)になります。
+>>>
+>>> 東京の勉強会と呼応するのように「使わないと損をするModel-View-
+>>> Controller」を援用しながら進めます。
+>>>
+>>> http://aokilab.kyoto-su.ac.jp/documents/MVC/
+>>>
+>>> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+>>> をご持参ください。
+>>>
+>>> ------------------------------------------------------------
+>>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From ume ＠ softumeya.com  Fri Apr  8 10:14:39 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 8 Apr 2011 10:14:39 +0900
+Subject: [SML 7912] Re:
+	第30回Smalltalk勉強会＠京都
+In-Reply-To: <4D9D3912.10507@cc.kyoto-su.ac.jp>
+References: <4D91FA68.5070909@cc.kyoto-su.ac.jp>
+ <BANLkTikkNm2rk=TsD6OEaERb_ZoG-cpd9Q@mail.gmail.com>
+ <4D9B8215.1050304@cc.kyoto-su.ac.jp> <4D9D3912.10507@cc.kyoto-su.ac.jp>
+Message-ID: <BANLkTi=iOr8KA3GY_j2w8bco-arcQETwzQ@mail.gmail.com>
+
+梅澤です。
+
+京都の勉強会に初めて参加させていただきました。
+終始アットホームな雰囲気でSmalltalkを楽しむことができました。
+
+しばらくは画像ビューアを作っていくことになるのですね。東京の勉強会はそのとき関心のある単発の話題を取り扱うという形式な
+ので、続き物はなかなか新鮮でした。カリキュラムに沿ってきちんと進んでいくのが京都方式といったところでしょうか。
+
+性質の異なる勉強会が並立しているというのは非常に喜ばしいことだと思います。
+
+これからも機会があれば参加いたします。普段は京都という方もぜひ東京の勉強会にいらしてみてください。
+
+また、前回名古屋で行った合同勉強会も再びできると良いなと思っています。
+会場提供できるなどのお話がありましたらよろしくお願いします。> 全国のSmalltalkerの皆様
+
+2011年4月7日13:09 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 昨夜はJR京都駅前にお集まりいただきまして、ありがとうございま
+> した。梅澤さん、東京からのご出席、痛み入りました。
+>
+> 昨夜の勉強会の内容を、以下のページに載せました。安田さんから
+> も勉強ログが届いておりますので、きちんと収録しておきました。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto30
+>
+> 援用しました「使わないと損をするModel-View-Controller」は1986
+> 〜1987年にかけて書き下ろしたものですが、
+>
+> http://aokilab.kyoto-su.ac.jp/documents/MVC/
+>
+> 昨夜の勉強会には、平成生まれの方々が何人も混ざっておりました
+> から、なんと！当時、まだ誕生されていらっしゃらない。う〜む…。
+>
+> 昨夜の勉強会で一行一行プログラムを時間をかけて作成してゆきま
+> したが、ぜひとも昨夜と同じことを何回も何回も繰り返してくださ
+> いませ。その繰り返しの量が、ある日突然に質に転化します。
+>
+> 何も見ないで、一から、息をするように作れるようになるには、百
+> 回以上の繰り返しが必要です。さらに人前でもちゃっちゃとライブ
+> でプログラミングができるようになるには、千回以上の繰り返しが
+> 必要になります。
+>
+> 繰り返し練習は大切です、バカにしてはなりません。わかっていて
+> も、繰り返すことが重要なんです。そうしないと、プログラミング
+> が身にしみてきません。お経を何回も読むように、論語を何回も詠
+> むように、ピアノやヴァイオリンを奏でる練習と同じです。繰り返
+> し練習をお願いします、時間を味方につけて。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+> (11/04/06 5:56), AOKI Atsushi wrote:
+>> 本日です！ MVCの基本に立ち帰って、ゆっくりと一行一行プログラ
+>> ムを一緒に書きながら進めます。新年度ですから題材を一新します。
+>> 新たに参加して継続してゆくための良い機会だと思います。
+>>
+>> (11/04/03 10:56), Masashi Umezawa wrote:
+>>> 梅澤です。
+>>>
+>>> 私語の切れ目ができましたので、東京から参加させていただきます。
+>>> もしかしたら私の他にも、何人か行くことになるかもしれません。
+>>>
+>>> よろしくお願い申し上げます。
+>>
+>> はい、どうぞ、どうぞ、お待ち申し上げております。あまりの緩慢
+>> な進行に驚かれるやもしれませぬ。
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>>
+>>> 2011年3月30日0:27 AOKI Atsushi<atsushi ＠ cc.kyoto-su.ac.jp>:
+>>>>
+>>>> 第30回Smalltalk勉強会＠京都を開催します。
+>>>> 万障繰り合わせてJR京都駅前にお集まりください。
+>>>>
+>>>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto30
+>>>>
+>>>> 場所はキャンプラ6階の第3講習室になります。
+>>>>
+>>>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>>>
+>>>> 第30回 Smalltalk勉強会＠京都
+>>>> 日時：2011年04月06日（水）19:00〜21:00
+>>>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>>>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>>>
+>>>> 新年度を迎えましたので、題材を一新して執り行ってゆきたいと思
+>>>> います。使い勝手のいい部品の製作から始めましょう。やはり基本
+>>>> として用いるのはMVC(オブザーバのデザインパターン)になります。
+>>>>
+>>>> 東京の勉強会と呼応するのように「使わないと損をするModel-View-
+>>>> Controller」を援用しながら進めます。
+>>>>
+>>>> http://aokilab.kyoto-su.ac.jp/documents/MVC/
+>>>>
+>>>> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+>>>> をご持参ください。
+>>>>
+>>>> ------------------------------------------------------------
+>>>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From x19290 ＠ gmail.com  Thu Apr 14 15:25:43 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Thu, 14 Apr 2011 15:25:43 +0900
+Subject: [SML 7913]
+ Squeak/Pharoの低レベルGUIのしくみ?
+Message-ID: <4DA69367.2020407@gmail.com>
+
+こんにちは。
+
+Squeak/Pharoの、低レベルGUIのしくみに興味があります。それで手持ちの環境(
+Pharo 1.2.1 + Debian GNU/Linux)でxtrace(1)を使って外から調べました。
+
+リクエストに関しては、最初の方でCreateWindowが2回だけ行われたあとは、
+PutImageが盛んに行われていることがわかりました。このPutImageがどういった
+経緯で呼ばれているのかがわかれば、低レベルGUIの出力方面については、かな
+り調べられると思うのですが、その経緯の見当がまったくつきません。
+
+一方、イベントについては、これらがどのように処理されているのか、まったく
+わかりません。
+
+これらの不明点について、ヒントをいただけませんか? よろしくお願いします。
+--
+堀内寛己(ほりうちひろき)
+
+
+From yoshiki ＠ vpri.org  Fri Apr 15 04:26:29 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu, 14 Apr 2011 12:26:29 -0700
+Subject: [SML 7914] Re:
+ Squeak/Pharoの低レベルGUIのしくみ?
+In-Reply-To: <4DA69367.2020407@gmail.com>
+References: <4DA69367.2020407@gmail.com>
+Message-ID: <ur5947hy2.wl%yoshiki@vpri.org>
+
+At Thu, 14 Apr 2011 15:25:43 +0900,
+Hiroki Horiuchi wrote:
+> 
+> こんにちは。
+> 
+> Squeak/Pharoの、低レベルGUIのしくみに興味があります。それで手持ちの環境(
+> Pharo 1.2.1 + Debian GNU/Linux)でxtrace(1)を使って外から調べました。
+> 
+> リクエストに関しては、最初の方でCreateWindowが2回だけ行われたあとは、
+> PutImageが盛んに行われていることがわかりました。このPutImageがどういった
+> 経緯で呼ばれているのかがわかれば、低レベルGUIの出力方面については、かな
+> り調べられると思うのですが、その経緯の見当がまったくつきません。
+> 
+> 一方、イベントについては、これらがどのように処理されているのか、まったく
+> わかりません。
+> 
+> これらの不明点について、ヒントをいただけませんか? よろしくお願いします。
+> --
+> 堀内寛己(ほりうちひろき)
+
+  面白いですね。ただ、xtraceでみるというのは、脳の高次機能を電極を指し
+て局所的に見るようなもので、全体像はわかりにくいとは思います(私もその
+手のことはよくしていたこともあります)。
+
+  走っているSmalltalk側から調べるのであれば、Pharoの場合"Settings" の
+"Debugging"の中から、"Flash damaged morphic region"のフラグをオンにして
+使ってみると、画面上で書き直しを必要とするリージョンがちかちかと反転し
+て見えるようになります。基本的にはそこがそのままPutImageならPutImage の
+呼び出しにつながります。
+
+  System Browserを開いてDisplayScreenの
+#primShowRectLeft:right:top:bottom:メソッドを見ると、中に<primitive:
+127>と書いてあって、このメソッドが呼ばれたときにはプリミティブ関数127
+番が呼ばれることになっています。これが(生成されたコードの)
+
+http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/src/vm/interp.c?rev=2353&view=auto
+にある void *primitiveTable[577]から検索されて、
+primitiveShowDisplayRectが見つかり、その後いくつかの関数呼び出しを経て
+
+http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/vm-display-X11/sqUnixX11.c?rev=2375&view=auto
+
+のdisplay_ioShowDisplay()にたどり着き、そこでPutImage()が呼ばれている
+と思います。
+
+ですが、鍵はioShowDisplay()はSmalltalk側の
+#primShowRectLeft:right:top:bottom:(および
+#primRetryShowRectLeft:right:top:bottom:)を渡ってきた引数ごと1対1 にサ
+ポートするだけであって、#primShowRectLeft:right:top:bottom:の呼ばれるパ
+ターンがわかればすべてがわかるということだと思います。たとえば、
+xtraceが走っている状態で、
+
+1 to: 10 do: [:i |
+	Display forceToScreen: (0 ＠ 0 corner: i ＠ i * 10)]
+
+のような式をワークスペースで実行すると、(たぶん)10回のPutImage呼び出し
+が観測されると思います。
+
+  そして、GUIフレームワークというのは
+
+  while (1) {
+    ユーザーのイベントを処理する();
+    タイミングに関係するイベントを処理する();
+    画面を書き換える();
+  }
+
+というだけのことなのですが、WorldState>>doOneCycleNowFor:にまさにそれだけの
+ことが書いてあります(#displayWorldSafely:からforceToScreen:にたどり着く
+までにもまた少しいろいろと呼び出しはありますが)。
+	
+-- Yoshiki
+
+From x19290 ＠ gmail.com  Fri Apr 15 09:25:53 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Fri, 15 Apr 2011 09:25:53 +0900
+Subject: [SML 7915] Re:
+ Squeak/Pharoの低レベルGUIのしくみ?
+In-Reply-To: <ur5947hy2.wl%yoshiki@vpri.org>
+References: <4DA69367.2020407@gmail.com> <ur5947hy2.wl%yoshiki@vpri.org>
+Message-ID: <4DA79091.9070806@gmail.com>
+
+おはようございます。
+> 鍵はioShowDisplay()はSmalltalk側の
+> #primShowRectLeft:right:top:bottom:(および
+> #primRetryShowRectLeft:right:top:bottom:)
+>   
+出力については、これが知りたかったことのすべてです。
+
+>   そして、GUIフレームワークというのは
+>
+>   while (1) {
+>     ユーザーのイベントを処理する();
+>     タイミングに関係するイベントを処理する();
+>     画面を書き換える();
+>   }
+>
+> というだけのことなのですが、WorldState>>doOneCycleNowFor:にまさにそれだけの
+> ことが書いてあります
+>   
+この無限ループが、Project>>spawnNewProcess内の
+[ World doOneCycle. Processor yield. false ] whileFalse: [ ]
+なのですね。
+
+よくわかりました。ありがとうございます。
+--
+堀内寛己(ほりうちひろき)
+
+
+From x19290 ＠ gmail.com  Fri Apr 15 09:44:54 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Fri, 15 Apr 2011 09:44:54 +0900
+Subject: [SML 7916] Re:
+ Squeak/Pharoの低レベルGUIのしくみ?
+In-Reply-To: <4DA79091.9070806@gmail.com>
+References: <4DA69367.2020407@gmail.com> <ur5947hy2.wl%yoshiki@vpri.org>
+ <4DA79091.9070806@gmail.com>
+Message-ID: <4DA79506.6030500@gmail.com>
+
+訂正です。
+> Project>>spawnNewProcess
+>   
+Project class>>spawnNewProcess
+--
+堀内寛己(ほりうちひろき)
+
+From ume ＠ softumeya.com  Fri Apr 15 11:48:12 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 15 Apr 2011 11:48:12 +0900
+Subject: [SML 7917] Squeak 4.2の日本語版
+Message-ID: <BANLkTineFA5w9_KwQW9o38oxeOuOX1A4rw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+Squeak 4.2の日本語版を作成しました。経緯については以下のブログをどうぞ。
+http://wp.me/p14Dvk-3l
+
+下記からダウンロードできます。
+http://sourceforge.jp/projects/squeak-ja/
+
+すぐに試したい方はAll-in-oneが楽でしょう。
+http://sourceforge.jp/projects/squeak-ja/downloads/51644/Squeak4.2-ja-all-in-one.zip/
+
+今回からCog VMも使えますので、いろいろと速くておすすめです。
+
+例によって永遠のベータ版的なところがありますので、不具合ご意見などお気軽にお寄せください。
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From yoshiki ＠ vpri.org  Fri Apr 15 15:45:45 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu, 14 Apr 2011 23:45:45 -0700
+Subject: [SML 7918] Re:
+ Squeak/Pharoの低レベルGUIのしくみ?
+In-Reply-To: <4DA79091.9070806@gmail.com>
+References: <4DA69367.2020407@gmail.com> <ur5947hy2.wl%yoshiki@vpri.org>
+ <4DA79091.9070806@gmail.com>
+Message-ID: <umxjs6mhy.wl%yoshiki@vpri.org>
+
+At Fri, 15 Apr 2011 09:25:53 +0900,
+Hiroki Horiuchi wrote:
+> 
+> おはようございます。
+> > 鍵はioShowDisplay()はSmalltalk側の
+> > #primShowRectLeft:right:top:bottom:(および
+> > #primRetryShowRectLeft:right:top:bottom:)
+> >   
+> 出力については、これが知りたかったことのすべてです。
+
+  あ、それはなによりです。
+
+> この無限ループが、Project>>spawnNewProcess内の
+> [ World doOneCycle. Processor yield. false ] whileFalse: [ ]
+> なのですね。
+> 
+> よくわかりました。ありがとうございます。
+
+  あ、はい。ループをまわすところはdoOneCycleの外側です(名前のとおり)。
+
+-- Yoshiki
+
+
+From ume ＠ softumeya.com  Mon Apr 18 10:05:22 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Mon, 18 Apr 2011 10:05:22 +0900
+Subject: [SML 7919]
+	第31回Smalltalk勉強会のお知らせ
+Message-ID: <BANLkTikZbf3aQo6JPNVjOmtDAODNnHQwrA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/4/27(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai31kaismalltalkbenkyoukai
+
+今回のテーマは「Morphicチュートリアル」です。
+
+MVCに取って代わってSqueakの標準UIフレームワークとなったMorphicですが、
+実のところどうなのか、その光と闇についてのお話が聞けることでしょう。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From hirowadenden ＠ hera.eonet.ne.jp  Mon Apr 18 22:20:15 2011
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Mon, 18 Apr 2011 22:20:15 +0900
+Subject: [SML 7920] Re:
+	Squeak 4.2の日本語版
+In-Reply-To: <BANLkTineFA5w9_KwQW9o38oxeOuOX1A4rw@mail.gmail.com>
+References: <BANLkTineFA5w9_KwQW9o38oxeOuOX1A4rw@mail.gmail.com>
+Message-ID: <4DAC3A8F.7010104@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+Squeak 4.2の日本語版と直接は関係ないかもしれませんが、
+2点質問させてください。
+
+> すぐに試したい方はAll-in-oneが楽でしょう。
+> http://sourceforge.jp/projects/squeak-ja/downloads/51644/Squeak4.2-ja-all-in-one.zip/
+
+別途ダウンロードしたバイナリのlinux版のVM、
+Squeak-4.4.7.2357-linux_i386.tar.gzと
+Cog VM(coglinux.tgz r2378)で、Squeak 4.2の日本語版のイメージを試した
+ところ、日本語入力が文字化けしました。調べたところso.ImmX11Plugin(Cog VM
+の場合はImmX11Plugin)が無いことが原因と分かりました。このプラグインは
+どこから入手すべきものでしょうか?
+(Squeak 4.2の日本語版All-in-oneに含まれているlinux版のVMのファイル群が、
+このプラグインのファイルを除いて、Squeak-4.4.7.2357-linux_i386、Cog VM
+r2378のものと(md5が)同じであることと、以前から使っている一つ前(?)のVM
+Squeak-4.0.3.2202-linux_i386.tar.gzには含まれていたso.ImmX11Pluginが
+Squeak 4.2の日本語版All-in-oneに含まれているものと(md5が)同じことが分かっ
+たので、とりあえずはコピーして使っています。また、sourceforgeの変更履歴に
+記述があったso.UUIDPluginはSegmentation faultを起こすことがあるので
+削除しています。)
+
+> 今回からCog VMも使えますので、いろいろと速くておすすめです。
+
+ReadMe-ja.txtには「Cog VMでイメージの保存を行うと従来のVMでは開けなイ
+メージに変換されます。Cog用として別名で保存されることをお勧めします。」
+とありましたが、上記VM Squeak-4.4.7.2357-linux_i386とCog VM r2378(Squeak
+4.2 日本語版All-in-oneに同梱のVM)で、同じイメージに保存をして少し試しま
+したが、問題無いようです。問題なく開けているようでも、同じイメージを通常
+のVMとCog VMで使っていると問題が発生するのでしょうか?
+(ちなみに、Cog VM r2378で保存したイメージを、Squeak-4.0.3.2202-
+linux_i386のVMで開こうとすると、
+
+This interpreter (vers. 6502) cannot read image file (vers. 6505).
+Press CR to quit...
+
+のメッセージが出て、開けませんが、このCog VM r2378で保存したイメージを一旦
+Squeak-4.4.7.2357-linux_i386のVMで開いて保存し直すと、
+Squeak-4.0.3.2202-linux_i386のVMで開けるようになります。)
+
+以上よろしくお願い致します。
+
+-- hirowadenden
+
+From ume ＠ softumeya.com  Tue Apr 19 10:30:16 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 19 Apr 2011 10:30:16 +0900
+Subject: [SML 7921] Re:
+	Squeak 4.2の日本語版
+In-Reply-To: <4DAC3A8F.7010104@hera.eonet.ne.jp>
+References: <BANLkTineFA5w9_KwQW9o38oxeOuOX1A4rw@mail.gmail.com>
+ <4DAC3A8F.7010104@hera.eonet.ne.jp>
+Message-ID: <BANLkTimZmgBjhQkW9fqT4up8DG9yF9rEPQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+> 別途ダウンロードしたバイナリのlinux版のVM、
+> Squeak-4.4.7.2357-linux_i386.tar.gzと
+> Cog VM(coglinux.tgz r2378)で、Squeak 4.2の日本語版のイメージを試した
+> ところ、日本語入力が文字化けしました。調べたところso.ImmX11Plugin(Cog VM
+> の場合はImmX11Plugin)が無いことが原因と分かりました。このプラグインは
+> どこから入手すべきものでしょうか?
+
+ImmX11Pluginですが、4.4.7では(おそらくライセンス確認などの理由で)一時的にソースツリーから消えたのです。
+SVNの過去のリビジョンをみると参照できます。
+http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/src/plugins/ImmX11Plugin/ImmX11Plugin.c?rev=2183&sortby=log&view=markup
+
+> (Squeak 4.2の日本語版All-in-oneに含まれているlinux版のVMのファイル群が、
+> このプラグインのファイルを除いて、Squeak-4.4.7.2357-linux_i386、Cog VM
+> r2378のものと(md5が)同じであることと、以前から使っている一つ前(?)のVM
+> Squeak-4.0.3.2202-linux_i386.tar.gzには含まれていたso.ImmX11Pluginが
+> Squeak 4.2の日本語版All-in-oneに含まれているものと(md5が)同じことが分かっ
+> たので、とりあえずはコピーして使っています。また、sourceforgeの変更履歴に
+> 記述があったso.UUIDPluginはSegmentation faultを起こすことがあるので
+> 削除しています。)
+
+その方式で問題ないと思います。厳密にはSVNにおかれているプラグイン系のソースは少し古く、VMMakerというツールを使ってSqueak側から自動生成(トランスレート)してビルドする必要があったわけですが、All-in-oneでは皆が使っている実績あるバイナリをなるべくそのままの形で採用したかったということがあります。
+
+最新のVMをソースからビルドしてみたいということであれば、Unix Squeakのページに置いてあるイメージを元に
+http://www.squeakvm.org/unix/release/unix-4.4.7.image
+http://www.squeakvm.org/unix/release/unix-4.4.7.changes
+
+VMMakerを最新のものに更新すれば、最新のプラグインのソース生成、ビルドを行うことができます。(できあがるVMはこのメールを書いている時点では4.4.12)になります。
+http://www.squeaksource.com/VMMaker.html
+
+>> 今回からCog VMも使えますので、いろいろと速くておすすめです。
+>
+> ReadMe-ja.txtには「Cog VMでイメージの保存を行うと従来のVMでは開けなイ
+> メージに変換されます。Cog用として別名で保存されることをお勧めします。」
+> とありましたが、上記VM Squeak-4.4.7.2357-linux_i386とCog VM r2378(Squeak
+> 4.2 日本語版All-in-oneに同梱のVM)で、同じイメージに保存をして少し試しま
+> したが、問題無いようです。問題なく開けているようでも、同じイメージを通常
+> のVMとCog VMで使っていると問題が発生するのでしょうか?
+> (ちなみに、Cog VM r2378で保存したイメージを、Squeak-4.0.3.2202-
+> linux_i386のVMで開こうとすると、
+>
+> This interpreter (vers. 6502) cannot read image file (vers. 6505).
+> Press CR to quit...
+>
+> のメッセージが出て、開けませんが、このCog VM r2378で保存したイメージを一旦
+> Squeak-4.4.7.2357-linux_i386のVMで開いて保存し直すと、
+> Squeak-4.0.3.2202-linux_i386のVMで開けるようになります。)
+>
+
+これはUnix 4.4.7のVMがCogの新フォーマットを旧フォーマットに変換して立ち上げるという機能を実装しているためです。すべてのプラットフォームでこの機能が利用できるわけではありません。
+
+原則は http://ftp.squeak.org/Cog/README にあるように、
+"once an image has been saved on Cog it cannot be run by an existing Squeak VM"
+と考えておいた方が良いでしょう。
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From hirowadenden ＠ hera.eonet.ne.jp  Tue Apr 19 12:28:40 2011
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Tue, 19 Apr 2011 12:28:40 +0900
+Subject: [SML 7922] Re:
+	Squeak 4.2の日本語版
+In-Reply-To: <BANLkTimZmgBjhQkW9fqT4up8DG9yF9rEPQ@mail.gmail.com>
+References: <BANLkTineFA5w9_KwQW9o38oxeOuOX1A4rw@mail.gmail.com>
+ <4DAC3A8F.7010104@hera.eonet.ne.jp>
+ <BANLkTimZmgBjhQkW9fqT4up8DG9yF9rEPQ@mail.gmail.com>
+Message-ID: <4DAD0168.4050105@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+梅澤さん、お忙しいところ回答ありがとうございます。
+
+>> (Squeak 4.2の日本語版All-in-oneに含まれているlinux版のVMのファイル群が、
+>> このプラグインのファイルを除いて、Squeak-4.4.7.2357-linux_i386、Cog VM
+>> r2378のものと(md5が)同じであることと、以前から使っている一つ前(?)のVM
+>> Squeak-4.0.3.2202-linux_i386.tar.gzには含まれていたso.ImmX11Pluginが
+>> Squeak 4.2の日本語版All-in-oneに含まれているものと(md5が)同じことが分かっ
+>> たので、とりあえずはコピーして使っています。また、sourceforgeの変更履歴に
+>> 記述があったso.UUIDPluginはSegmentation faultを起こすことがあるので
+>> 削除しています。)
+> 
+> その方式で問題ないと思います。厳密にはSVNにおかれているプラグイン系のソースは少し古く、VMMakerというツールを使ってSqueak側から自動生成(トランスレート)してビルドする必要があったわけですが、All-in-oneでは皆が使っている実績あるバイナリをなるべくそのままの形で採用したかったということがあります。
+> 
+> 最新のVMをソースからビルドしてみたいということであれば、Unix Squeakのページに置いてあるイメージを元に
+> http://www.squeakvm.org/unix/release/unix-4.4.7.image
+> http://www.squeakvm.org/unix/release/unix-4.4.7.changes
+> 
+> VMMakerを最新のものに更新すれば、最新のプラグインのソース生成、ビルドを行うことができます。(できあがるVMはこのメールを書いている時点では4.4.12)になります。
+> http://www.squeaksource.com/VMMaker.html
+
+VMMakerを使ってやる方法は、ちょっと見たところややこしそうなので
+どうしても必要になったら調べたいと思います。^^;;
+ダウンロードした最新のバイナリのVMを使いたかっただけなので
+しばらくは、現状のまま使います。
+
+>>> 今回からCog VMも使えますので、いろいろと速くておすすめです。
+>>
+>> ReadMe-ja.txtには「Cog VMでイメージの保存を行うと従来のVMでは開けなイ
+>> メージに変換されます。Cog用として別名で保存されることをお勧めします。」
+>> とありましたが、上記VM Squeak-4.4.7.2357-linux_i386とCog VM r2378(Squeak
+>> 4.2 日本語版All-in-oneに同梱のVM)で、同じイメージに保存をして少し試しま
+>> したが、問題無いようです。問題なく開けているようでも、同じイメージを通常
+>> のVMとCog VMで使っていると問題が発生するのでしょうか?
+>> (ちなみに、Cog VM r2378で保存したイメージを、Squeak-4.0.3.2202-
+>> linux_i386のVMで開こうとすると、
+>>
+>> This interpreter (vers. 6502) cannot read image file (vers. 6505).
+>> Press CR to quit...
+>>
+>> のメッセージが出て、開けませんが、このCog VM r2378で保存したイメージを一旦
+>> Squeak-4.4.7.2357-linux_i386のVMで開いて保存し直すと、
+>> Squeak-4.0.3.2202-linux_i386のVMで開けるようになります。)
+>>
+> 
+> これはUnix 4.4.7のVMがCogの新フォーマットを旧フォーマットに変換して立ち上げるという機能を実装しているためです。すべてのプラットフォームでこの機能が利用できるわけではありません。
+> 
+> 原則は http://ftp.squeak.org/Cog/README にあるように、
+> "once an image has been saved on Cog it cannot be run by an existing Squeak VM"
+> と考えておいた方が良いでしょう。
+
+Unix 4.4.7のVMが変換機能を実装しているということで納得できました。
+このことを頭に入れて、イメージを使い分けます。
+
+-- hirowadenden
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Apr 27 19:15:36 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 27 Apr 2011 19:15:36 +0900
+Subject: [SML 7923]
+ 第31回Smalltalk勉強会＠京都
+Message-ID: <4DB7ECC8.8040807@cc.kyoto-su.ac.jp>
+
+2週間後になりますが、第31回Smalltalk勉強会＠京都を開催します。
+万障繰り合わせてJR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto31
+
+場所はキャンプラ6階の第3講習室になります。
+
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第31回 Smalltalk勉強会＠京都
+日時：2011年05月11日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+窓MVCの続きを行ってゆきたいと思います。コンポジットパートや
+各種ラッパー、そして、レイアウトフレームなどにフォーカスしま
+す。その上で、インタフェースビルダであるキャンバスでウィンド
+ウ仕様を用いてみましょう。ノート型のパーソナルコンピュータ
+（Windows 7 または Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+

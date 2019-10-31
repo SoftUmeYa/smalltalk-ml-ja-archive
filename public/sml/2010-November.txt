@@ -1,0 +1,308 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Nov  4 06:07:28 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 04 Nov 2010 06:07:28 +0900
+Subject: [SML 7861]
+ 第25回Smalltalk勉強会＠京都
+Message-ID: <4CD1CF10.7010003@cc.kyoto-su.ac.jp>
+
+第25回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+JR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto25
+
+場所はキャンプラ2階の第2会議室になります、お間違い無きよう。
+
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1609&frmCd=14-1-0-0-0
+
+第25回 Smalltalk勉強会＠京都
+日時：2010年11月10日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+古風なブラウザのさらなるリファクタリングを行い、京都で二年間
+続けてきた勉強会を振り返りたいと思います。ノート型のパーソナ
+ルコンピュータ（Windows 7/Vista/XP または Mac OS X）をご持参
+ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Nov 17 00:01:55 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed, 17 Nov 2010 00:01:55 +0900
+Subject: [SML 7862]
+	第26回Smalltalk勉強会のお知らせ
+Message-ID: <JxmeoX9_NyV65vnQI8.XR_YA4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/11/29(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+ 
+今回のテーマ は初心に戻ってチュートリアルでいきます。タイトルは「今日から使おうSmalltalk」です。
+roppongi.stで惜しくも時間オーバーになってしまった吉田さんのリベンジです。
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai26kaismalltalkbenkyoukai
+
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Nov 22 10:51:17 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon, 22 Nov 2010 10:51:17 +0900
+Subject: [SML 7863]
+ インクリメンタル・サーチ・ダイアログ
+Message-ID: <4CE9CC95.4020201@cc.kyoto-su.ac.jp>
+
+こんにちは、皆さん、青木淳＠京都上賀茂です。
+
+京都のSmalltalk勉強会において用いたインクリメンタル・サーチ・
+ダイアログのプログラミング・イディオムをポストしておきます。
+
+| asArray aBlock aDialog |
+asArray := (Smalltalk allClasses
+            collect: [:aClass | aClass toolListDisplayString]) asSortedCollection
+            asArray.
+aBlock :=
+        [:aPattern |
+        aPattern isEmpty
+            ifTrue: [asArray yourself]
+            ifFalse: [asArray select: [:anElement | aPattern , '*' match: anElement]]].
+aDialog := IncrementalSearchDialog forSelectionWithSearch: aBlock.
+^(aDialog select)
+    ifNotNil:
+            [:anElement |
+            Transcript
+                cr;
+                nextPutAll: anElement printString;
+                flush];
+    yourself
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Nov 22 11:00:43 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon, 22 Nov 2010 11:00:43 +0900
+Subject: [SML 7864] Re:
+ インクリメンタル・サーチ・ダイアログ
+In-Reply-To: <4CE9CC95.4020201@cc.kyoto-su.ac.jp>
+References: <4CE9CC95.4020201@cc.kyoto-su.ac.jp>
+Message-ID: <4CE9CECB.1030908@cc.kyoto-su.ac.jp>
+
+変数名が適切ではなかったので、再ポストします、あしからず。
+
+こんにちは、皆さん、青木淳＠京都上賀茂です。
+
+京都のSmalltalk勉強会において用いたインクリメンタル・サーチ・
+ダイアログのプログラミング・イディオムをポストしておきます。
+
+| anArray aBlock aDialog |
+anArray := (Smalltalk allClasses
+            collect: [:aClass | aClass toolListDisplayString]) asSortedCollection
+            anArray.
+aBlock :=
+        [:aPattern |
+        aPattern isEmpty
+            ifTrue: [anArray yourself]
+            ifFalse: [anArray select: [:anElement | aPattern , '*' match: anElement]]].
+aDialog := IncrementalSearchDialog forSelectionWithSearch: aBlock.
+^(aDialog select)
+    ifNotNil:
+            [:anElement |
+            Transcript
+                cr;
+                nextPutAll: anElement printString;
+                flush];
+    yourself
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+(10/11/22 10:51), AOKI Atsushi wrote:
+> こんにちは、皆さん、青木淳＠京都上賀茂です。
+> 
+> 京都のSmalltalk勉強会において用いたインクリメンタル・サーチ・
+> ダイアログのプログラミング・イディオムをポストしておきます。
+> 
+> | asArray aBlock aDialog |
+> asArray := (Smalltalk allClasses
+>              collect: [:aClass | aClass toolListDisplayString]) asSortedCollection
+>              asArray.
+> aBlock :=
+>          [:aPattern |
+>          aPattern isEmpty
+>              ifTrue: [asArray yourself]
+>              ifFalse: [asArray select: [:anElement | aPattern , '*' match: anElement]]].
+> aDialog := IncrementalSearchDialog forSelectionWithSearch: aBlock.
+> ^(aDialog select)
+>      ifNotNil:
+>              [:anElement |
+>              Transcript
+>                  cr;
+>                  nextPutAll: anElement printString;
+>                  flush];
+>      yourself
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Nov 23 07:00:40 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue, 23 Nov 2010 07:00:40 +0900
+Subject: [SML 7865]
+	プログラム整形（フォーマット）
+Message-ID: <4CEAE808.9060203@cc.kyoto-su.ac.jp>
+
+こんにちは、皆さん、青木淳＠京都宇治です。
+
+プログラム整形（フォーマット）のためのプログラミング・イディ
+オムをまとめておきます。基本的には構文木を生成し、それを基に
+して整形することになります。
+
+【旧来からの構文木を利用】メッセージパターン無し
+
+| aCode aTree |
+aCode := '
+^
+3
++
+4
+'.
+aTree := Compiler new
+            parse: aCode
+            in: nil class
+            noPattern: true
+            notifying: nil.
+^aTree formattedCode
+
+【旧来からの構文木を利用】メッセージパターン有り
+
+| aCode aTree |
+aCode := '
+zzz
+^
+3
++
+4
+'.
+aTree := Compiler new
+            parse: aCode
+            in: nil class
+            noPattern: false
+            notifying: nil.
+^aTree formattedCode
+
+【リファクタリング・ブラウザの構文木を利用】メッセージパターン無し
+
+| aCode aTree |
+aCode := '
+^
+3
++
+4
+'.
+aTree := Refactory.Browser.RBParser parseExpression: aCode.
+^aTree formattedCode
+
+【リファクタリング・ブラウザの構文木を利用】メッセージパターン有り
+
+| aCode aTree |
+aCode := '
+zzz
+^
+3
++
+4
+'.
+aTree := Refactory.Browser.RBParser parseMethod: aCode.
+^aTree formattedCode
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Nov 23 21:15:02 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue, 23 Nov 2010 21:15:02 +0900
+Subject: [SML 7866]
+ 第26回Smalltalk勉強会＠京都
+Message-ID: <4CEBB046.8010209@cc.kyoto-su.ac.jp>
+
+第26回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+JR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto26
+
+場所はキャンプラ2階の第2会議室になります。ピザパーティを行い
+ましょう。
+
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1609&frmCd=14-1-0-0-0
+
+第26回 Smalltalk勉強会＠京都
+日時：2010年12月01日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+師走となります。忘年会と言うには早すぎるかもしれませんが、軽
+食（ピザなど）や飲料（ビールやソフトドリングなど）を用意して
+パーティを行います。いつものノート型のパーソナルコンピュータ
+を持たずに、どうぞ気軽にお立ち寄りください。飲食をしながら、
+Smalltalk談義で2010年を〆ましょう。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Nov 24 09:08:55 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 24 Nov 2010 09:08:55 +0900
+Subject: [SML 7867] Re:
+ 第26回Smalltalk勉強会＠京都
+In-Reply-To: <4CEBB046.8010209@cc.kyoto-su.ac.jp>
+References: <4CEBB046.8010209@cc.kyoto-su.ac.jp>
+Message-ID: <4CEC5797.8070702@cc.kyoto-su.ac.jp>
+
+たいせつなことを書き忘れました。師走の勉強会（パーティ）には
+参加費としてお一人様1,000円を申し受けたいと存じます。
+
+(10/11/23 21:15), AOKI Atsushi wrote:
+> 第26回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+> JR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto26
+> 
+> 場所はキャンプラ2階の第2会議室になります。ピザパーティを行い
+> ましょう。
+> 
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1609&frmCd=14-1-0-0-0
+> 
+> 第26回 Smalltalk勉強会＠京都
+> 日時：2010年12月01日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 師走となります。忘年会と言うには早すぎるかもしれませんが、軽
+> 食（ピザなど）や飲料（ビールやソフトドリングなど）を用意して
+> パーティを行います。いつものノート型のパーソナルコンピュータ
+> を持たずに、どうぞ気軽にお立ち寄りください。飲食をしながら、
+> Smalltalk談義で2010年を〆ましょう。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+

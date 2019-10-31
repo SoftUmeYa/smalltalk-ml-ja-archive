@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3907] Re: ゾンビインスタンス
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203907%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU%2BJXMlUyUkJXMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklPyVzJTkbKEI%3D%3F%3D&In-Reply-To=2d5d52a80806012351n7970c1f0y7f6801d13b12a340%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003906.html">
+   <LINK REL="Next"  HREF="003911.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3907] Re: ゾンビインスタンス</H1>
+    <B>Hidetaka MASUDA</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203907%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU%2BJXMlUyUkJXMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklPyVzJTkbKEI%3D%3F%3D&In-Reply-To=2d5d52a80806012351n7970c1f0y7f6801d13b12a340%40mail.gmail.com"
+       TITLE="[Squeak-ja: 3907] Re: ゾンビインスタンス">masuda ＠ im.dendai.ac.jp
+       </A><BR>
+    <I>2008年 6月  2日 (月) 16:45:23 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003906.html">[Squeak-ja: 3906] Re: ゾンビインスタンス
+</A></li>
+        <LI>次の記事 <A HREF="003911.html">[Squeak-ja: 3911] Re: ゾンビインスタンス
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3907">[ 日付 ]</a>
+              <a href="thread.html#3907">[ スレッド ]</a>
+              <a href="subject.html#3907">[ 件名 ]</a>
+              <a href="author.html#3907">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>増田＠電大です。
+
+話は直接関係ありませんが、昔、Smalltalk-80 を使っていたころ、自分で作っ
+たクラスのインスタンスが大量に残っているのにそのクラスを消したことがあ
+り、イメージ中に Obsolete というオブジェクトがたくさんできたことがあ
+ります。(^.^;;)
+
+今、VisualWorks で Hoge というクラスを作って、H := Hoge new. して
+H をインスペクトした後に、クラス Hoge を消してみたら、インスペクタの表
+示が AnObsoleteHoge になりました。self class allInstances したら、
+インスタンスの一覧は捕まえられました。Smalltalk inspect してみても
+AnObsoleteHoge がみつからないのですが、どこにあるんでしょうね。
+
+それから、VisualWorks の時には、コントローラに close メッセージを送ら
+ないといけないのに、ビューに close を送ってしまうコードを書いていた人
+がいて、ScheduledControllers にコントローラだけ残りまくってたことがあ
+りましたね。ビューがないコントローラに release メッセージを投げまくり
+ました。
+
+&gt;<i> From: &quot;Kazuhiro ABE&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> 時間が経って、どのような状況か分からなくなった後に何百個、何千個とあ
+</I>&gt;<i> るものを一個一個確認して消していくのは困難を極めます(遠い昔に恐ろし
+</I>&gt;<i> いものを見たことがあります)。
+</I>
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">masuda ＠ im.dendai.ac.jp</A>                TEL 03-5280-3551
+<A HREF="http://www.cdl.im.dendai.ac.jp/%7Emasuda/">http://www.cdl.im.dendai.ac.jp/%7Emasuda/</A>     FAX 03-5280-3592
+It's more fun to compute!
+</PRE>
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003906.html">[Squeak-ja: 3906] Re: ゾンビインスタンス
+</A></li>
+	<LI>次の記事 <A HREF="003911.html">[Squeak-ja: 3911] Re: ゾンビインスタンス
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3907">[ 日付 ]</a>
+              <a href="thread.html#3907">[ スレッド ]</a>
+              <a href="subject.html#3907">[ 件名 ]</a>
+              <a href="author.html#3907">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

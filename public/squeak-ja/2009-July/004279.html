@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4279] swiki1.5でa Primitive Has failed
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204279%5D%20%3D%3Fiso-2022-jp%3Fb%3Fc3dpa2kxLjUbJEIkRxsoQmEgUHJp%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FbWl0aXZlIEhhcyBmYWlsZWQ%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004278.html">
+   <LINK REL="Next"  HREF="004280.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4279] swiki1.5でa Primitive Has failed</H1>
+    <B>&quot;土本 (Florian) 強</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204279%5D%20%3D%3Fiso-2022-jp%3Fb%3Fc3dpa2kxLjUbJEIkRxsoQmEgUHJp%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FbWl0aXZlIEhhcyBmYWlsZWQ%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 4279] swiki1.5でa Primitive Has failed">&quot;土本 (Florian) 強
+       </A><BR>
+    <I>2009年 7月  9日 (木) 08:47:21 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004278.html">[Squeak-ja: 4278] Web Velocity評価版がでています
+</A></li>
+        <LI>次の記事 <A HREF="004280.html">[Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4279">[ 日付 ]</a>
+              <a href="thread.html#4279">[ スレッド ]</a>
+              <a href="subject.html#4279">[ 件名 ]</a>
+              <a href="author.html#4279">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　土本です。
+
+　長いこと使っているswiki1.5のサーバーを再起動させたら、a Primitive has
+failedのエラーが出るようになってしまいました。
+　自分で作ったWikiを削除し、refs,ani,defaultだけにしたところ起動するよう
+ですが、せっかくのデータが亡くなってしまうのは残念です。
+　何か似たような状況になった方はおられますでしょうか？
+
+　errorの直前では、
+
+String class(Behavior)&gt;&gt;basicNew:
+String class(Behavior)&gt;&gt;new;
+String(SequenceableCollection)&gt;&gt;copyFrom:to:
+XmlSwikiStorage&gt;&gt;loadPage:from:startingAt:
+
+　辺りからのエラーのようです。basicNew(&lt;primitive: 71&gt;)が正常に動かない
+状況というとオブジェクトメモリが不足しているのでしょうか？
+
+　では、失礼します。
+
+!
+土本(Florian)強 mailto: '&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">florian ＠ seagreen.ocn.ne.jp</A>&gt;'
+                blog:  '<A HREF="http://d.hatena.ne.jp/Florian/'">http://d.hatena.ne.jp/Florian/'</A>
+                webto:   '<A HREF="http://florianswiki.dyndns.org/Web/'">http://florianswiki.dyndns.org/Web/'</A>
+openInWorld. &quot;do it.&quot;
+!
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004278.html">[Squeak-ja: 4278] Web Velocity評価版がでています
+</A></li>
+	<LI>次の記事 <A HREF="004280.html">[Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4279">[ 日付 ]</a>
+              <a href="thread.html#4279">[ スレッド ]</a>
+              <a href="subject.html#4279">[ 件名 ]</a>
+              <a href="author.html#4279">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

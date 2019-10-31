@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3752] Squeak日本語とPostgresqlとの接続
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203752%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrGyRCRnxLXDhsJEgbKEJQ%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3Fb3N0Z3Jlc3FsGyRCJEgkTkBcQjMbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003759.html">
+   <LINK REL="Next"  HREF="003761.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3752] Squeak日本語とPostgresqlとの接続</H1>
+    <B>Hirokazu Sato</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203752%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrGyRCRnxLXDhsJEgbKEJQ%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3Fb3N0Z3Jlc3FsGyRCJEgkTkBcQjMbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3752] Squeak日本語とPostgresqlとの接続">sato_hirokazu ＠ tba.t-com.ne.jp
+       </A><BR>
+    <I>2007年 10月 29日 (月) 23:40:13 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003759.html">[Squeak-ja: 3759] Re: まだ未解決です（文字化けを起こしました）。
+</A></li>
+        <LI>次の記事 <A HREF="003761.html">[Squeak-ja: 3761] Re: Squeak日本語とPostgresqlとの接続
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3752">[ 日付 ]</a>
+              <a href="thread.html#3752">[ スレッド ]</a>
+              <a href="subject.html#3752">[ 件名 ]</a>
+              <a href="author.html#3752">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは。
+
+岡山でエンジニアをしています、さとうと申します。
+seasideを使って、Web経由でDBに書き込みができる自 
+部門の業務画面を
+作ってあげようと思い、おおむねできたのでテストで日本語を入力 
+してみたら、
+以下のエラーがでてうまくDBに書き込みができません。
+切り分けのため以下のコードを実行してみましたが同様の結果にな 
+ります。
+(&quot;日本語&quot;の部分を半角英数にするとインサートできます）
+
+|<i> dbconn |
+</I>dbconn _ PGConnection new.
+dbconn startup.
+dbconn execute: 'insert into t-table values  
+(''2007/10/29'',''10:22'',''日本語'',''test'')'.
+dbconn terminate.
+
+
+エラー内容：
+&quot;ConnectionClosed: Connection closed while waiting for data.&quot;
+
+
+試している環境：　OS: OSX 10.3.9
+                                     VM: Squeak 3.8.18beta1U
+	 			    Image: Seaside-JPatched070105　
+                                     PostgresqlClient:
+					PostgreSQL Client for Squeak(PosgresV2)
+					 Published version: 1.0
+					 Created: 1 February 2006 5:13:15 pm
+
+　特に環境にこだわりはありません。
+　会社で利用するときはWindowsやLinuxプラット 
+フォームになると思います。
+
+皆様の中でうまく行っている実績があれば特に環境にはこだわりま 
+せんので、
+ご教授頂きたいです。
+よろしくお願いします。
+
+--
+さとうひろかず
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071029/936b480f/attachment.html">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071029/936b480f/attachment.html</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003759.html">[Squeak-ja: 3759] Re: まだ未解決です（文字化けを起こしました）。
+</A></li>
+	<LI>次の記事 <A HREF="003761.html">[Squeak-ja: 3761] Re: Squeak日本語とPostgresqlとの接続
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3752">[ 日付 ]</a>
+              <a href="thread.html#3752">[ スレッド ]</a>
+              <a href="subject.html#3752">[ 件名 ]</a>
+              <a href="author.html#3752">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

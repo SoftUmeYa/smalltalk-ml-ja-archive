@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3908] Re: ゾンビインスタンス
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203908%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU%2BJXMlUyUkJXMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklPyVzJTkbKEI%3D%3F%3D&In-Reply-To=2d5d52a80806012351n7970c1f0y7f6801d13b12a340%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003912.html">
+   <LINK REL="Next"  HREF="003904.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3908] Re: ゾンビインスタンス</H1>
+    <B>Kondo, Fumito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203908%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU%2BJXMlUyUkJXMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklPyVzJTkbKEI%3D%3F%3D&In-Reply-To=2d5d52a80806012351n7970c1f0y7f6801d13b12a340%40mail.gmail.com"
+       TITLE="[Squeak-ja: 3908] Re: ゾンビインスタンス">Fumito.Kondo ＠ hp.com
+       </A><BR>
+    <I>2008年 6月  2日 (月) 17:20:17 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003912.html">[Squeak-ja: 3912] Re: ゾンビインスタンス
+</A></li>
+        <LI>次の記事 <A HREF="003904.html">[Squeak-ja: 3904] VMについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3908">[ 日付 ]</a>
+              <a href="thread.html#3908">[ スレッド ]</a>
+              <a href="subject.html#3908">[ 件名 ]</a>
+              <a href="author.html#3908">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部さん、
+
+丁寧な解説をどうもありがとうございます。
+理解がぐっと深まりました。
+
+今後ともよろしくお願いいたします。
+
+近藤
+
+
+
+-----Original Message-----
+From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A> [mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>] On Behalf Of Kazuhiro ABE
+Sent: Monday, June 02, 2008 3:51 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3906] Re: ゾンビインスタンス
+
+こんにちは、阿部です。
+
+08/06/02 に Kondo, Fumito&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Fumito.Kondo ＠ hp.com</A>&gt; さんは書きました:
+&gt;<i>  クラス名 allInstances
+</I>&gt;<i>
+</I>&gt;<i> 上記をインスペクトしたらArrayというのが出て、all inst varsの中に43個ほど
+</I>&gt;<i> 番号つきでクラス名（番号）というものが出てきたのですが、これ全部インスタンスで
+</I>&gt;<i> システムの中にいるってコトですか？
+</I>
+はい、そうです。
+
+&gt;<i> デバッグすればするほどインスタンスの残骸がシステムに残るのでしょうか？
+</I>&gt;<i> 掃除しなくても大丈夫なのでしょうか？
+</I>
+Smalltalkには自動メモリ管理機能があるので、明示的にオブジェクトのメモリを確保したり、開放したりしなくてもよいという話は良く聞きます。これは事実そのとおりで、とても便利です。ただ、気をつけないといけないのは、Smalltalkがどのようにオブジェクトを管理しているかということです。
+たぶんここで問題にしているのはモーフのことだと思うので、例となるモーフのクラスを作ります。
+このメールの内容をワークスペースにコピー&amp;ペーストして、以下の式をdo it(式を評価)してください。
+
+Morph subclass: #TestMorph
+        instanceVariableNames: ''
+        classVariableNames: ''
+        poolDictionaries: ''
+        category: 'Morphic-Test'
+
+まず、このクラスのインスタンスがないことを確認します。以下をprint it(式を表示)で評価します。
+
+TestMorph allInstances size
+
+結果はもちろん0です。
+続いて、インスタンスを作ります。このとき、必要なメモリが自動的に確保されます。
+
+TestMorph new.
+
+これでインスタンスができました。では、再度インスタンスの数を調べましょう。
+
+TestMorph allInstances size.
+
+1を期待したのに0が返りませんでしたか。それは、すでにインスタンスが消滅しているからです。Smalltalkは、このように他から参照されていないオブジェクトのメモリを自動的に開放してくれます。では、次はどうでしょうか。
+
+TestMorph new openInWorld.
+
+TestMorph allInstances size.
+
+今度は1が返ったと思います。TestMorphのインスタンスを画面に開いたとき、ActiveWorldやその他のオブジェクトから参照されたからです。では、これを画面から消して見ましょう。
+
+TestMorph allInstances first delete.
+
+TestMorph allInstances size.
+
+再び0に戻りました。これは何個でも同じことです。
+
+10 timesRepeat: [TestMorph new openInWorld].
+
+TestMorph allInstances size.
+
+TestMorph allInstances do: [:each | each delete].
+
+TestMorph allInstances size.
+
+ここでいう参照とは、どこかのオブジェクトの変数にインスタンスが束縛されていることです。次の式をprint itしてください。
+
+foo := TestMorph new.
+
+TestMorph allInstances size.
+
+この例では、fooはワークスペース変数なので、ワークスペースを閉じるか、明示的に変数を他で初期化するまで参照は切れません(インスタンスは消えません)。他の変数の場合もその寿命によります。
+
+foo := nil.
+
+TestMorph allInstances size.
+
+さきほど使ったdeleteは、その中でこのような変数の初期化を行っています。
+
+また、インスペクタやデバッガなどのツールも、対象のオブジェクトを参照するので、それらを閉じるまで参照は切れません。
+
+TestMorph new inspect.
+
+TestMorph allInstances size.
+
+1が返ると思います。では、インスペクタを閉じてから再び上の式をprint
+itすると0が返るかと思いきや、タイミングによっては1が返る場合があります。しばらく待てば、ガーベジコレクタが動いてゴミ収集されるのですが、これを明示的に行う場合は以下の式を評価します。
+
+Smalltalk garbageCollect.
+
+これで0に戻るはずです。
+
+以上のように、適切に扱えばSmalltalkに不要なオブジェクトが残ることはありません。よくあるのは、要らなくなったツールを開きっぱなしだったり、グローバル変数やクラス変数などの寿命の長い変数に束縛したのを忘れたり、自分で作成した部分について、不要になったときに参照を切る処理をしていなかったりなどです。このような状況のままイメージを保存すると、それらも含めて永続化されます。
+時間が経って、どのような状況か分からなくなった後に何百個、何千個とあるものを一個一個確認して消していくのは困難を極めます(遠い昔に恐ろしいものを見たことがあります)。
+早めの対処をお勧めします。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003912.html">[Squeak-ja: 3912] Re: ゾンビインスタンス
+</A></li>
+	<LI>次の記事 <A HREF="003904.html">[Squeak-ja: 3904] VMについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3908">[ 日付 ]</a>
+              <a href="thread.html#3908">[ スレッド ]</a>
+              <a href="subject.html#3908">[ 件名 ]</a>
+              <a href="author.html#3908">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

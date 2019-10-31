@@ -1,0 +1,1873 @@
+From tako ＠ aquilax.co.jp  Tue Feb  1 11:35:29 2005
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2288] B5000 の情報
+Message-ID: <20050201023532.C2B2E43522@1server.aquilax.co.jp>
+
+　高橋＠池袋です。C５ではお世話になりました。
+
+アランケイ博士がKeynoteで触れられていたバローズ5000の情報を英語版wikipedia上に
+発見しました。
+　http:/en.wikipedia.org/wiki/Buroughs_5000
+
+ページに最後には「Stack Compters: the new wave」へのリンクもあり本まるごとWebから
+読めるみたいです。
+
+　ではでは
+
+自己紹介
+　歯科医院向けの事務処理用コンピュータシステムの開発・販売を生業としており、
+Swikiベースでユーザーサポート用のシステムを運用しています。
+　ユーザーのコンピュータと社内のコンピュータの双方でSqueakを起動して各種チェック
+を行えるようなもののプロトタイプを開発中です。夏ぐらいまでには数100台に
+インストールしたいと思っています。
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+From abee.abe ＠ nifty.ne.jp  Tue Feb  1 15:39:03 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2289] 子どもの思考力を高める「スクイーク」 理数力をみるみるあげる魔法の授業
+Message-ID: <41FF24072B7.525FABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+B.J.Allen-ConnさんとKim Roseさんの「Powerful Ideas in the Classroom」を翻
+訳した「子どもの思考力を高める「スクイーク」 理数力をみるみるあげる魔法の授業」
+がWAVE出版から発売されています。
+
+http://www.amazon.co.jp/exec/obidos/ASIN/4872902114/
+http://www.bk1.co.jp/cgi-bin/srch/srch_detail.cgi/412c0545a8c4601065d5?aid=&bibid=02517898&volno=0000
+http://www.trc.co.jp/trc/book/book.idc?JLA=05002637
+
+監修はあの大島芳樹さん、監訳は「インターネットの思想史」の喜多千草さん、
+翻訳は片岡裕子さん、解説はALAN-Kプロジェクトなどでご活躍の高田秀志さんで
+す。
+
+原書のPowerful Ideas in the Classroomについては何度か書きましたが、スクイー
+ク(eToys)はいったい何に使えるのか、どこが良いのか、という問いに対するひと
+つの答えを実例で示したものです。特に学校の授業などで、車を走らせてアニメー
+ションを動かした後に何をすればよいのか分からない先生方にお勧めします。
+また、巻末のアラン・ケイ博士のエッセイも示唆に富みます。
+
+ぜひご一読ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Tue Feb  1 16:16:53 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2290] ETV 特集「これからの科学、これからの社会」〜京都賞歴代受賞者からのメッセージ〜
+Message-ID: <41FF2CE5323.5261ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+1/29の22:00-23:30にNHK教育テレビで、ETV特集「これからの科学、これからの社
+会」〜京都賞歴代受賞者からのメッセージ〜 が放送され、その中でアラン・ケイ
+博士のインタビューも放送されたようです。
+
+http://www.nhk.or.jp/etv21c/update/2005/0129.html
+
+この時間は奇しくも京都でSqueak BOFをやっていて見逃してしまいました。残念
+です。C5, C4のために来日されていたアラン・ケイ博士や他の皆さんも知らなかっ
+たらしいです。
+
+今のところ再放送の予定は未定のようですが、過去の例から見てETV特集は再放送
+されると思われるので、気長に待ちます。
+
+http://www.nhk.or.jp/etv21c/saiho/index.html
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From tako ＠ aquilax.co.jp  Tue Feb  1 18:32:13 2005
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2291] Nihongo7 　 EncodedCharSet Class >> charFromUnicode: での indexOf:
+Message-ID: <20050201093217.95D9343522@1server.aquilax.co.jp>
+
+高橋＠池袋です。
+山宮さんにＣ４会場で「変換tableをリニアサーチしているらしい」と口答でお伝えした
+のは EncodedCharSet のclass method charFromUnicode: のself ucsTable indexOf: ...
+の箇所です。
+
+　Nihongo7の該当methodを見たところ 6.1と変わりないようです。
+
+　実は去年の７月頃 数MByteのShiftJISの文書に整形を施して再びshiftJISで
+書き出すという処理をMacOSX上のNihongo6.1で行い正しく動作するものの思ったより遅い
+ので調べ始め、そのままうっちゃりになっていました。
+
+
+dic _ Dictionary new.
+a _ UCSTable jisx0208Table.
+a to: a size do:[ :n | ((a at:n) ~=-1) ifTrue:[ dic at:(a at:n) put:n]]
+
+などといういい加減な辞書を用意して indexOf: と速度比較なんぞをしたりしていま
+したが実際のmethodを変更しての動作検証や速度比較はまだです。
+
+当方特に困っているわけでもなく、正常に動作している部分ですので現状のままで
+ＯＫのような気がしてきています。
+
+（何かの）ご参考になれば幸いです。
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+From yoshiki ＠ squeakland.org  Tue Feb  1 21:31:37 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2292] Re: Nihongo7 　 EncodedCharSet Class >> charFromUnicode: での  indexOf:
+In-Reply-To: <20050201093217.95D9343522@1server.aquilax.co.jp>
+References: <20050201093217.95D9343522@1server.aquilax.co.jp>
+Message-ID: <upszkihqu.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 当方特に困っているわけでもなく、正常に動作している部分ですので現状のままで
+> ＯＫのような気がしてきています。
+
+　最初は、indexOf:はprimitiveを呼ぶと思っていたのです。今でも、
+primitive化すると他の部分も速くなりそうなのでそのほうがよいかもしれま
+せんね。
+
+-- Yoshiki
+
+From abee.abe ＠ nifty.ne.jp  Wed Feb  2 00:25:35 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2293] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず ( 長文  )
+In-Reply-To: <20050130224628.54B82665@ygu.ac.jp>
+References: <20050130224628.54B82665@ygu.ac.jp>
+Message-ID: <41FF9F6F2EB.5269ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 30 Jan 2005 22:46:28 +0900 (JST)
+e-itoh@ygu.ac.jp wrote:
+>C5-2005 BOFでは拙い報告に耳をかたむけて頂き、ありがとうございました。
+>今回のイベント全体を通じてとても有意義な時間を過ごすことができました。
+>高田さま、阿部さまを始め、関係者のみなさま本当にお疲れさまでした。
+
+こちらこそ、大変面白いお話をありがとうございました。いつもながら、AIBOは
+面白いですね。横川さんのSwimmyもそうですが、Squeakにおけるステートマシン
+の応用もいろいろ考えられるように思います。
+無線LANでリアルタイム制御ができるのであれば、STDを変更する都度AIBOにアッ
+プロードするのではなく、Swimmyのように動かしながらSTDをダイナミックに変更
+することも可能でしょうか。
+
+>帰ってからすぐにNihongo7を動かしてみようと思い、うちの環境で試して
+>みたのですが、どうもうまく動きません。とりあえず状況だけ報告いたし
+>ます。
+(snip)
+>ということでUnix版のimmパッチに問題があるようなのですが、ちょっと
+>中身を覗いてみてもよくわかりませんでした。
+>何の役にも立てずに恐縮ですが、とりあえず報告までさせて頂きました。
+
+ご報告ありがとうございます。廣島さん、なにかお分かりになりますでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From takeda ＠ kwansei.ac.jp  Thu Feb  3 13:28:11 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2294] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+In-Reply-To: <20050130224628.54B82665@ygu.ac.jp>
+References: <20050130224628.54B82665@ygu.ac.jp>
+Message-ID: <018718d0465be8cefc869889317315d0@kwansei.ac.jp>
+
+武田です。
+
+On 2005/01/30, at 22:46, e-itoh@ygu.ac.jp wrote:
+
+> ということでUnix版のimmパッチに問題があるようなのですが、ちょっと
+> 中身を覗いてみてもよくわかりませんでした。
+
+immパッチの問題ではなく、converterを返すところで文字列を返していました。
+添付のチェンジセットを当てると、とりあえず立ち上がるようにはなります。
+
+日本語入力はうまくいかなかったので、他の問題もあると思います。
+取り急ぎ。
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: JapaneseEnvironment class.T2.1.cs
+型:         application/octet-stream
+サイズ:     1017 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050203/9b96194c/JapaneseEnvironmentclass.T2.1.obj
+-------------- next part --------------
+
+
+From itoh-private ＠ itolab.com  Thu Feb  3 17:33:41 2005
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2295] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+In-Reply-To: <018718d0465be8cefc869889317315d0@kwansei.ac.jp>
+References: <20050130224628.54B82665@ygu.ac.jp>
+	<018718d0465be8cefc869889317315d0@kwansei.ac.jp>
+Message-ID: <873bweqbyy.wl@localhost.localdomain.itolab.com>
+
+伊藤です。
+
+At Thu, 3 Feb 2005 13:28:11 +0900,
+Takeda Toshiyuki wrote:
+> 武田です。
+> On 2005/01/30, at 22:46, e-itoh@ygu.ac.jp wrote:
+> > ということでUnix版のimmパッチに問題があるようなのですが、ちょっと
+> > 中身を覗いてみてもよくわかりませんでした。
+> immパッチの問題ではなく、converterを返すところで文字列を返していました。
+> 添付のチェンジセットを当てると、とりあえず立ち上がるようにはなります。
+　添付のチェンジセットでの動作を確認いたしました。ありがとうございます。
+＃パッチあてたVMでおかしくなったのでパッチのせいと考えてしまいました。
+
+> 日本語入力はうまくいかなかったので、他の問題もあると思います。
+　私のところでも日本語入力するとエラーがでました。
+具体的には、
+1. Shift-Spaceを押す→左下に入力ウィンドウが出る(たぶんanthy-UIMのため)
+2. 適当に入力する。例えば「あいうえお」は問題なく表示される。
+3. Enterを押して確定する
+3の操作の後で、デスクトップ上に直接表示されるエラーとともにデバッグ
+ウィンドウが表れます。
+　デスクトップ上の表示は崩れてしまって見えませんが、デバッグウィンドウ
+では、MessageNotUnderstood: EUCJPTextConverterのエラーとなっています。
+EUCJPTextConverter(Object)>>doesNotUnderstand: #unicodeClass
+EUCJPTextConverter(EUCTextConverter)>>nextFromStream:
+...
+
+> 取り急ぎ。
+  お忙しいところありがとうございました。
+
+From e-itoh ＠ ygu.ac.jp  Thu Feb  3 20:18:14 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2296] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+References: <20050130224628.54B82665@ygu.ac.jp>
+	<018718d0465be8cefc869889317315d0@kwansei.ac.jp>
+	<873bweqbyy.wl@localhost.localdomain.itolab.com>
+Message-ID: <20050203201814.27384379@ygu.ac.jp>
+
+伊藤です。
+
+なんとか解決したような気がします。
+武田先生のパッチを当てたあとで、添付のパッチをあてれば日本語
+入力できます。
+原因は、自分のlanguageEnvironmentにleadingCharを送るべきところを、
+unicodeClassに送るように（昔のままに）なっていたことです。
+
+みなさまありがとうございました。
+また、immパッチに問題があるという旨の発言については撤回いたします。
+申し訳ございませんでした。＞廣島さま
+
+
+ 
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: EUCTextConverter nextFromStream bugfix.1.cs
+型:         application/octet-stream
+サイズ:     905 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050203/8e5e337b/EUCTextConverternextFromStreambugfix.1.obj
+From takeda ＠ kwansei.ac.jp  Fri Feb  4 11:17:15 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2297] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作
+In-Reply-To: <20050203201814.27384379@ygu.ac.jp>
+References: <20050130224628.54B82665@ygu.ac.jp>
+	<018718d0465be8cefc869889317315d0@kwansei.ac.jp>
+	<873bweqbyy.wl@localhost.localdomain.itolab.com>
+	<20050203201814.27384379@ygu.ac.jp>
+Message-ID: <92104debce6ba4483c3e8cb1b339fa5e@kwansei.ac.jp>
+
+武田です。
+
+On 2005/02/03, at 20:18, e-itoh@ygu.ac.jp wrote:
+
+> 伊藤です。
+>
+> なんとか解決したような気がします。
+
+EUC環境で日本語入力ができることを確認しました。
+ありがとうございました。
+
+＃でも、まだまだ何かありそうな気がします。
+
+
+From abee.abe ＠ nifty.ne.jp  Sat Feb  5 03:26:44 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2298] アラン・ケイ氏に聞く「コンピュータで子供に何を教えるか？」
+In-Reply-To: <41FF24072B7.525FABEE.ABE@smtp.nifty.com>
+References: <41FF24072B7.525FABEE.ABE@smtp.nifty.com>
+Message-ID: <4203BE6412E.CC14ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+日経IT Proに「アラン・ケイ氏に聞く「コンピュータで子供に何を教えるか？」」
+という記事が掲載されています。
+
+http://itpro.nikkeibp.co.jp/free/ITPro/OPINION/20050203/155666/
+
+また、先日ご紹介したNHK教育の番組「これからの科学、これからの社会」の影響
+か、amazon.co,jpのベストセラーに山本さんの「スクイークであそぼう」がプロ
+グラミングジャンルの2位でランクインしています。
+
+http://www.amazon.co.jp/exec/obidos/tg/new-for-you/top-sellers/-/books/492352/3/ref=pd_ts_b_nav/249-9965618-1519545
+
+「子どもの思考力を高める「スクイーク」 理数力をみるみるあげる魔法の授業」
+もよろしくお願いします。前回書きそびれましたが、高田先生のALAN-Kプロジェ
+クト報告、喜多先生による歴史の話も必読です。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-February/002289.html
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From miyasaka ＠ iris.dti.ne.jp  Thu Feb 10 00:57:02 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2299] ワークショップのご報告
+Message-ID: <200502091557.j19Fv1MW011193@smtp5.dti.ne.jp>
+
+squeak-jaの皆様へ
+
+こんばんは。
+デジタルハリウッド大学院の宮坂です。
+
+大学院のゼミの企画の一環として、子供向けのスクイークワークショップを開催しま
+した。
+ホームページにそのときの模様を掲載したのでご参考ください。
+http://mts-j.hiho.jp/
+
+参加していただいた子供さんや保護者の方々にもそれなりに喜んでいただけたようで
+すので、まずはホッとしています。
+実際こうして自分達でワークショップでやってみると、いろいろなことを気づかされ
+ました。
+子供達の自由な発想力は本当にすごいですね。
+スクイークeToysの魅力を改めて再認識させていただきました。
+
+今後もこうした活動をなんらかの形で継続していきたいと思うこの頃です。
+次回は都内の小学校でもワークショップをやらせていただける予定なので、またその
+模様もご報告できればと思います。
+
+取り急ぎ。
+よろしくお願いいたします！！
+
+---------------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院デジタルコンテンツ研究科
+miysaka@iris.dti.ne.jp
+大学院のホームページ >> http://www.dhw.co.jp/gs/
+---------------------------------------------------
+
+
+From yoshiki ＠ squeakland.org  Fri Feb 11 05:46:18 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2300] Re: ワークショップのご報告
+In-Reply-To: <200502091557.j19Fv1MW011193@smtp5.dti.ne.jp>
+References: <200502091557.j19Fv1MW011193@smtp5.dti.ne.jp>
+Message-ID: <ud5v8ta79.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 大学院のゼミの企画の一環として、子供向けのスクイークワークショップを開催しま
+> した。
+> ホームページにそのときの模様を掲載したのでご参考ください。
+> http://mts-j.hiho.jp/
+
+　すばらしいですね。
+
+> 参加していただいた子供さんや保護者の方々にもそれなりに喜んでいただけたようで
+> すので、まずはホッとしています。
+> 実際こうして自分達でワークショップでやってみると、いろいろなことを気づかされ
+> ました。
+> 子供達の自由な発想力は本当にすごいですね。
+> スクイークeToysの魅力を改めて再認識させていただきました。
+
+　コーチ役、先生役の人数と子どもの人数などはどのようなバランスでしたで
+しょうか。
+
+> 今後もこうした活動をなんらかの形で継続していきたいと思うこの頃です。
+> 次回は都内の小学校でもワークショップをやらせていただける予定なので、またその
+> 模様もご報告できればと思います。
+
+　よろしくお願いします。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Fri Feb 11 08:05:33 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2301] 毛玉 2.3版
+Message-ID: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+　おおしまです。
+
+　毛玉の新しい版をアップロードしました。今回の修正は、ちょっとした訳の
+変更が主です。日本語モードでもばりばり使ってみてください。
+
+  現時点で一番良い試し方は以下の通りです。
+
+1. 山宮さんのところから
+
+      http://metatoys.org/pub/NSqueak-2005-02-10.zip
+
+   をダウンロードする。
+
+2. 中にある
+
+      NSqueak-2005-02-10.image
+   と
+      NSqueak-2005-02-10.changes
+
+   を取り出してSqueakNihongo6.1.imageなどのあるフォルダーに置く。
+
+3. NSqueak-2005-02-10.imageをダブルクリックするなどして起動する。
+
+4. http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/kedama23.sar
+
+　をダウンロードする。
+
+5. MS WindowsやMacであれば、kedama23.sarを3.のステップで起動しているはずの
+   Squeakのウィンドウへドロップする。出てきたメニューから、「SARのインス
+   トール」を選択する。
+
+6. ネットワークにつながった環境であれば、適切なプラグインがダウンロー
+   ドされて同じフォルダーに入ります。もしそうでなければ、
+
+     http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/KedamaPlugin-win.zip
+     http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/KedamaPlugin-linux-x86.zip
+     http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/KedamaPlugin.bundle.zip 
+
+などのうち、適切なものをインストールしてください。
+
+7. EscキーまたはAlt-Shift-wを押して出てきたメニューから「別名で保存...」
+   を選び、適切な名前をつけて保存する。
+
+
+　使い方の説明は僕の書いたものは英語しかありませんが、
+
+http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/
+
+にあるステップを追うと何かはできると思います(すみません)。このページの
+下のほうにある例題を試していただけると面白いと思います。
+
+　いろいろ感想やご意見などよろしくお願いします。
+
+-- Yoshiki
+
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Fri Feb 11 10:10:02 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2302] Re: 毛玉 2.3版
+In-Reply-To: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <20050211101002912452.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+Yoshiki OhshimaさんがThu, 10 Feb 2005 15:05:33 -0800に
+「[Squeak-ja: 2301] 毛玉 2.3版」の件で：
+> 　毛玉の新しい版をアップロードしました。今回の修正は、ちょっとした訳の
+> 変更が主です。日本語モードでもばりばり使ってみてください。
+
+初めて毛玉に触りましたが面白いですね。うちのクッキーは「はねる原子」が好
+きでして毛玉にも目を輝かせてました。
+
+> 5. MS WindowsやMacであれば、kedama23.sarを3.のステップで起動しているはずの
+>    Squeakのウィンドウへドロップする。出てきたメニューから、「SARのインス
+>    トール」を選択する。
+
+こちらの環境（MacOSX 10.3.8／Squeak 3.7.3Beta4jpc.app）ではドラッグアン
+ドドロップでインストールの指示が出ず、デスクトップメニューの開くのファイ
+ルリストで選択してインストールボタンを押しました。それでも１度は失敗した
+ようで「abandanせよ」と言われたのですが、２度目は読み込めました。
+
+> 6. ネットワークにつながった環境であれば、適切なプラグインがダウンロー
+>    ドされて同じフォルダーに入ります。もしそうでなければ、
+
+使えているからこれでいいのだと思うのですが、ダウンロードされたものをさら
+にSqueakのイメージなどへインストールする必要はなく、同じフォルダーに置か
+れているだけでいいわけですよね？
+
+> 7. EscキーまたはAlt-Shift-wを押して出てきたメニューから「別名で保存...」
+>    を選び、適切な名前をつけて保存する。
+
+なんどESCを押しても出ないなと思ったのですが、一旦デスクトップをクリック
+するとESCでデスクトップメニューが出ました。今までESCでデスクトップメ
+ニューを出すようなことをしてませんでしたが、この動作はこれまでもこうだっ
+たんでしょうか？
+
+> にあるステップを追うと何かはできると思います(すみません)。このページの
+> 下のほうにある例題を試していただけると面白いと思います。
+
+クッキーはant2とforestfire2が気に入ったようです。diffusion2は読み込めま
+せんでした。ant2がどうなっているんだとスクリプトを見たりしてましたが、何
+が何だかよく分からないようでした。私も分かりませんが。(^^;
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From yoshiki ＠ squeakland.org  Fri Feb 11 10:27:34 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2303] Re: 毛玉 2.3版
+In-Reply-To: <20050211101002912452.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<20050211101002912452.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <u3bw3ubqx.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> Yoshiki OhshimaさんがThu, 10 Feb 2005 15:05:33 -0800に
+> 「[Squeak-ja: 2301] 毛玉 2.3版」の件で：
+> > 　毛玉の新しい版をアップロードしました。今回の修正は、ちょっとした訳の
+> > 変更が主です。日本語モードでもばりばり使ってみてください。
+> 
+> 初めて毛玉に触りましたが面白いですね。うちのクッキーは「はねる原子」が好
+> きでして毛玉にも目を輝かせてました。
+
+　さっそくありがとうございます。epidemic2も数を変えて遊ぶだけでいろい
+ろ楽しめますよ。
+
+> > 5. MS WindowsやMacであれば、kedama23.sarを3.のステップで起動しているはずの
+> >    Squeakのウィンドウへドロップする。出てきたメニューから、「SARのインス
+> >    トール」を選択する。
+> 
+> こちらの環境（MacOSX 10.3.8／Squeak 3.7.3Beta4jpc.app）ではドラッグアン
+> ドドロップでインストールの指示が出ず、デスクトップメニューの開くのファイ
+> ルリストで選択してインストールボタンを押しました。それでも１度は失敗した
+> ようで「abandanせよ」と言われたのですが、２度目は読み込めました。
+
+　そうでしたか。Macでは.sarが認識されないのですかね?
+
+> > 6. ネットワークにつながった環境であれば、適切なプラグインがダウンロー
+> >    ドされて同じフォルダーに入ります。もしそうでなければ、
+> 
+> 使えているからこれでいいのだと思うのですが、ダウンロードされたものをさら
+> にSqueakのイメージなどへインストールする必要はなく、同じフォルダーに置か
+> れているだけでいいわけですよね？
+
+  そうです。例えばforestfire2がどのくらいのフレームレートで動いていま
+すか?ある程度の速度で動いていれば、プラグインが機能していることになる
+と思います。
+
+  ワークスペースから
+
+	Smalltalk listLoadedModules
+
+という式をprint itして、KedamaPluginが入っていることを確認していただい
+ても良いかと思います。
+
+> > 7. EscキーまたはAlt-Shift-wを押して出てきたメニューから「別名で保存...」
+> >    を選び、適切な名前をつけて保存する。
+> 
+> なんどESCを押しても出ないなと思ったのですが、一旦デスクトップをクリック
+> するとESCでデスクトップメニューが出ました。今までESCでデスクトップメ
+> ニューを出すようなことをしてませんでしたが、この動作はこれまでもこうだっ
+> たんでしょうか？
+
+　あ、そうでした。
+
+> > にあるステップを追うと何かはできると思います(すみません)。このページの
+> > 下のほうにある例題を試していただけると面白いと思います。
+> 
+> クッキーはant2とforestfire2が気に入ったようです。diffusion2は読み込めま
+> せんでした。ant2がどうなっているんだとスクリプトを見たりしてましたが、何
+> が何だかよく分からないようでした。私も分かりませんが。(^^;
+
+　例題は英語モードで作ったので、日本語モードでは読みにくいかもしれませ
+ん。(もちろんそうでなくてもant2などはかなり複雑ですが)。
+
+　是非いろいろ試して見てください。ありがとうございます。
+
+-- Yoshiki
+
+From PFH02326 ＠ nifty.ne.jp  Fri Feb 11 10:56:37 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2304] Re: 毛玉 2.3 版
+In-Reply-To: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <p06001002be31c007eb0e@nifty.ne.jp>
+
+おおしまさま
+
+すみません
+ごく最近メーリングリストに登録した者ですが
+
+>
+>4. http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/kedama23.sar
+>
+>　をダウンロードする。
+>
+
+でひっかかっています。普通に開くとダウンロードできないので、FTPしようと思ってUNIXでwww.is.titech.ac.jpにanonymousではいってみたのですが、~ohshimaに入ろうとしたのですが、入れませんでした。
+どうやってダウンロードするのでしょうか？
+
+よろしくご教示ください。
+
+From yoshiki ＠ squeakland.org  Fri Feb 11 11:12:20 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2305] Re: 毛玉 2.3 版
+In-Reply-To: <p06001002be31c007eb0e@nifty.ne.jp>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001002be31c007eb0e@nifty.ne.jp>
+Message-ID: <u1xbnu9ob.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> >4. http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/kedama23.sar
+> >
+> >　をダウンロードする。
+> >
+> 
+> でひっかかっています。普通に開くとダウンロードできないので、FTPしようと思ってUNIXでwww.is.titech.ac.jpにanonymousではいってみたのですが、~ohshimaに入ろうとしたのですが、入れませんでした。
+> どうやってダウンロードするのでしょうか？
+
+　むむ、ダウンロードできない、というのはもしかしてkedama23.zipという名
+前になってしまう、ということでしょうか。サーバー上の設定を変更して
+kedama23.sarという名前のまま保存できることが多くなるようにして見ました。
+もう一度お試しください。
+
+　ちなみに、kedama23.sarという名前になってしまっても、それを
+kedama23.sarという名前に付け替えていただいても良いです。
+
+　お手数を取らせてしまってすみません。
+
+-- Yoshiki
+
+
+From PFH02326 ＠ nifty.ne.jp  Fri Feb 11 15:14:23 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2306] Re: 毛玉 2.3 版
+In-Reply-To: <u1xbnu9ob.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be31c007eb0e@nifty.ne.
+	jp> <u1xbnu9ob.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <p06001000be31fce43b18@nifty.ne.jp>
+
+おおしまさま
+
+Mac OS X 10.3.7でSafari を使っているのですが、やはり、単にそのURLを入れると全面的に文字化けしたような画面が現れるだけなのです。
+
+お答えの内容から推察するに、他のブラウザなら、そのURLにいけば、簡単にダウンロード出来るはずと言うことなのでしょうか？
+
+何度も申し訳ありません。
+
+wfs
+
+At 6:12 PM -0800 05.2.10, Yoshiki Ohshima wrote:
+>  おおしまです。
+>
+> > >4. http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/kedama23.sar
+>> >
+>> >　をダウンロードする。
+>> >
+>>
+>> でひっかかっています。普通に開くとダウンロードできないので、FTPしようと思ってUNIXでwww.is.titech.ac.jpにanonymousではいってみたのですが、~ohshimaに入ろうとしたのですが、入れませんでした。
+>> どうやってダウンロードするのでしょうか？
+>
+>　むむ、ダウンロードできない、というのはもしかしてkedama23.zipという名
+>前になってしまう、ということでしょうか。サーバー上の設定を変更して
+>kedama23.sarという名前のまま保存できることが多くなるようにして見ました。
+>もう一度お試しください。
+>
+>　ちなみに、kedama23.sarという名前になってしまっても、それを
+>kedama23.sarという名前に付け替えていただいても良いです。
+>
+>　お手数を取らせてしまってすみません。
+>
+>-- Yoshiki
+
+
+From tak ＠ metatoys.org  Fri Feb 11 16:20:02 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2307] Re: 毛玉 2.3 版
+In-Reply-To: <p06001000be31fce43b18@nifty.ne.jp>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be31c007eb0e@nifty.ne.	jp>
+	<u1xbnu9ob.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001000be31fce43b18@nifty.ne.jp>
+Message-ID: <420C5CA2.1070906@metatoys.org>
+
+山宮です。
+
+Nihongo7 の今日のバージョン 
+http://metatoys.org/pub/NSqueak-2005-02-11.zip
+にインストールスクリプトをつけたので試してみてください。
+
+README の「毛玉をインストールするには以下を do it してみてください。」
+の下の部分をクリックするとインストールされると思います。
+うちのマックでは動きました。
+
+> おおしまさま
+> 
+> Mac OS X 10.3.7でSafari を使っているのですが、やはり、単にそのURLを入れると全面的に文字化けしたような画面が現れるだけなのです。
+> 
+> お答えの内容から推察するに、他のブラウザなら、そのURLにいけば、簡単にダウンロード出来るはずと言うことなのでしょうか？
+> 
+> 何度も申し訳ありません。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From nishis ＠ zephyr.dti.ne.jp  Fri Feb 11 16:35:51 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2308] Re: 毛玉 2.3 版
+In-Reply-To: <p06001000be31fce43b18@nifty.ne.jp>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be31c007eb0e@nifty.ne.	jp>
+	<u1xbnu9ob.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001000be31fce43b18@nifty.ne.jp>
+Message-ID: <420C6057.10605@zephyr.dti.ne.jp>
+
+ハズしてたらすみません，右クリック (ctrl + クリック) で "save as ..." で
+イケませんか？
+
+on 05.2.11 3:14 PM, wildflowers wrote:
+> Mac OS X 10.3.7でSafari を使っているのですが、やはり、単にそのURLを入れると全面的に文字化けしたような画面が現れるだけなのです。
+> お答えの内容から推察するに、他のブラウザなら、そのURLにいけば、簡単にダウンロード出来るはずと言うことなのでしょうか？
+> 何度も申し訳ありません。
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From PFH02326 ＠ nifty.ne.jp  Fri Feb 11 23:05:54 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2309] Re: 毛玉 2.3 版
+In-Reply-To: <420C5CA2.1070906@metatoys.org>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be31c007eb0e@nifty.ne.
+	jp><u1xbnu9ob.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001000be31fce43b18@nifty.
+	ne.jp> <420C5CA2.1070906@metatoys.org>
+Message-ID: <p06001001be326c1b49b0@nifty.ne.jp>
+
+みなさま
+ありがとうございました。
+以下の山宮さんの方法で無事インストールできました。
+
+wfs
+
+At 4:20 PM +0900 05.2.11, Takashi Yamamiya wrote:
+>山宮です。
+>
+>Nihongo7 の今日のバージョン
+>http://metatoys.org/pub/NSqueak-2005-02-11.zip
+>にインストールスクリプトをつけたので試してみてください。
+>
+>README の「毛玉をインストールするには以下を do it してみてください。」
+>の下の部分をクリックするとインストールされると思います。
+>うちのマックでは動きました。
+>
+>> おおしまさま
+>>
+>> Mac OS X 10.3.7でSafari を使っているのですが、やはり、単にそのURLを入れると全面的に文字化けしたような画面が現れるだけなのです。
+>>
+>> お答えの内容から推察するに、他のブラウザなら、そのURLにいけば、簡単にダウンロード出来るはずと言うことなのでしょうか？
+>>
+>> 何度も申し訳ありません。
+>
+>--
+>山宮 隆 ::= http://metatoys.org/
+>cell:090-9052-6014 office:06-6324-3047
+>skype:yamamiyatakashi
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Feb 12 01:51:44 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2310] swikis.ddo.jpが一時アクセスできなくなります
+Message-ID: <JP200502120151443.1765687@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+プロジェクト置き場や、自由自在のサイトがあるhttp://swikis.ddo.jp/
+ですが、13-14日にかけてアクセスできなくなります。
+
+理由は私が引っ越すためです。
+
+ADSLの切り替えはおそらく順調にいくかと思いますが、なんらかのトラブル
+があったばあいには15日も接続不能かもしれません。
+
+ご迷惑をおかけしますが、ご了承ください。
+---
+[:masashi | ^umezawa]
+
+From yukari.shirota ＠ gakushuin.ac.jp  Wed Feb 16 17:07:45 2005
+From: yukari.shirota ＠ gakushuin.ac.jp (SHIROTA Yukari)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2311] 透明なHolder
+References: <200502050300.MAA62864@mx03.gakushuin.ac.jp>
+Message-ID: <4212FF51.6080306@gakushuin.ac.jp>
+
+はじめてメーリングリストを使います．
+京都のC5に出席しました白田＠学習院大です．
+
+eToyプログラムで質問させてください．
+
+Holderに動物のeToyを入れるようにしました．
+このHolderを透過にしたいのですが，代わり
+に何を使えばよいのでしょうか？
+
+まだeToyプログラミングを始めたばかりで
+右も左もよく分かりません．何卒よろしく
+お願い申し上げます．
+
+
+From abee.abe ＠ nifty.ne.jp  Wed Feb 16 22:46:08 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2312] Re: 透明な  Holder
+In-Reply-To: <4212FF51.6080306@gakushuin.ac.jp>
+References: <200502050300.MAA62864@mx03.gakushuin.ac.jp>
+	<4212FF51.6080306@gakushuin.ac.jp>
+Message-ID: <42134EA0158.E240ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+# MLに投稿するには入会手続きが必要ですのでよろしくお願いします。
+# また、MLに登録したアドレスと異なるアドレスでは投稿できません。
+# http://www.smalltalk.jp/mailman/listinfo/squeak-ja/
+
+On Wed, 16 Feb 2005 17:07:45 +0900
+SHIROTA Yukari <yukari.shirota@gakushuin.ac.jp> wrote:
+>Holderに動物のeToyを入れるようにしました．
+>このHolderを透過にしたいのですが，代わり
+>に何を使えばよいのでしょうか？
+
+Holderのハロを出して、右の下から二番目にある紫色のスポイトのアイコンをク
+リックします。
+開いたダイアログの左上にあるカラーパレットの「- translucent -」と書かれた
+領域をドラッグすると透明度を変えることができます。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From lingmu ＠ agate.plala.or.jp  Thu Feb 17 00:46:18 2005
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2313] SqueakのWindows95での不具合
+Message-ID: <002e01c5143e$a9045b10$0300a8c0@shinji1>
+
+最近、Ｓｑｕｅａｋを始めたばかりの鈴木と申します。
+
+Windows95(ＯＳＲ2）でＳｑｕｅａｋを実行しようとするとうまくいきません。もし、原因が分かる方がいらっしゃったら教えて下さい。
+
+http://metatoys.org/pub/SqueakNihongo6.1.exe をダウンロードしてWindows95にインストールは出来たのですが、実行できません。
+Windows95に対応した物は無いのでしょうか。
+英語版のサイトではWindows95にも対応しているように書いた有りましたが、日本語版が対応していないということでしょうか。
+分かりましたら教えて下さい。
+
+
+症状は以下のようです。
+
+インストール後にＷｅｂに紹介された以下の操作をしたのですが、添付したcopy1.zip画面ようなエラーが発生します。
+「日本語版Squeakイメージファイル(SqueakNihongo6.1.image)をドラッグし、Squeakバーチャルマシン(WindowsではSqueak.exe。クラシックMacOSではSqueak 3.7.2b1 Classic。MacOS XではSqueak 3.7.3Beta4jpc.app) 
+にドロップすると日本語版Squeakが起動します。」
+これは、インストールそのものが失敗したと言うよりも他の原因のような気がします。 
+
+
+英語版Ｖｅｒ3.7も試してみましたが、結果は同様でした。
+
+SqueakNihongo6.1.imageファイルをダブルクリックすると、copy2.zip画面ようなエラーが発生します。こらからすると、Program.exeに関連付けられているようですが、調べてみるとちゃんとSqueak.exeに関連付けられており問題ないはずなのですが。どうもよく分かりません。
+
+ちなみに、http://metatoys.org/pub/SqueakNihongo6-1.1.msi　からダウンロードしてＸＰで動作させた場合は問題ありませんでした。
+
+最近購入した「スクイークであそぼう」の本に添付されていた、SqueakNihongo4aはWindows95でも正常に動作しました。こらから考えると、最新のSqueakはWindows95での動作に問題があるのかも知れません。
+
+以上、宜しくお願い致します。
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: copy1.zip
+型:         application/x-zip-compressed
+サイズ:     23811 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050217/8cd25828/copy1.bin
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: copy2.zip
+型:         application/x-zip-compressed
+サイズ:     3398 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050217/8cd25828/copy2.bin
+From kawa90 ＠ m2.pbc.ne.jp  Thu Feb 17 01:16:25 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Kawamura Hideo)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2314] Re: SqueakのWindows95での不具合
+In-Reply-To: <002e01c5143e$a9045b10$0300a8c0@shinji1>
+References: <002e01c5143e$a9045b10$0300a8c0@shinji1>
+Message-ID: <opsmastnp7vq234l@m2.pbc.ne.jp>
+
+川村です。
+
+根拠はないですが、むかーしそのようなアプリに遭遇した気がします。
+C:\Program Filesにインストールされるとその間のスペースが悪さして、そんな
+パスないよと怒られた記憶があります。
+
+試しに
+c:\temp\Squeak
+などに移動させて実行してみては？
+Squeak.exeをダブルクリックで実行して、
+ファイル選択ダイアログがでるはず。ここで、SqueakNihongo6.1.imageを選択。
+これでどうなるでしょうか？
+
+とんだ見当違いかもしれませんが、参考までに。
+
+それでは。
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.300 / Virus Database: 265.8.8 - Release Date: 2005/02/14
+
+
+From yoshiki ＠ squeakland.org  Thu Feb 17 05:50:48 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2315] 毛玉 2.4版
+In-Reply-To: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <u8y5wt3r6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <u1xbgp6tz.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+　おおしまです。
+
+  貴重なバグレポートを高田さんからいただいたので、それを修正して新しい
+版をWebに載せました。今の最新版は2.4ということになります。
+
+  現時点で一番良い試し方は以下の通りです。
+
+1. 山宮さんのところから
+
+      http://metatoys.org/pub/NSqueak-2005-02-15.zip
+
+   をダウンロードする。
+
+2. 中にある
+
+      NSqueak-2005-02-15.image
+   と
+      NSqueak-2005-02-15.changes
+
+   を取り出してSqueakNihongo6.1.imageなどのあるフォルダーに置く。
+
+3. NSqueak-2005-02-15.imageをダブルクリックするなどして起動する。
+
+4. http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/kedama24.sar
+
+　をダウンロードする。
+
+5. MS WindowsやMacであれば、kedama24.sarを3.のステップで起動しているはずの
+   Squeakのウィンドウへドロップする。出てきたメニューから、「SARのインス
+   トール」を選択する。
+
+6. ネットワークにつながった環境であれば、適切なプラグインがダウンロー
+   ドされて同じフォルダーに入ります。もしそうでなければ、
+
+     http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/KedamaPlugin-win.zip
+     http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/KedamaPlugin-linux-x86.zip
+     http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/KedamaPlugin.bundle.zip 
+
+などのうち、適切なものをインストールしてください。
+
+7. EscキーまたはAlt-Shift-wを押して出てきたメニューから「別名で保存...」
+   を選び、適切な名前をつけて保存する。
+
+
+　使い方の説明は僕の書いたものは英語しかありませんが、
+
+http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/
+
+にあるステップを追うと何かはできると思います(すみません)。このページの
+下のほうにある例題を試していただけると面白いと思います。
+
+-- Yoshiki
+
+From vef03715 ＠ nifty.com  Thu Feb 17 22:42:28 2005
+From: vef03715 ＠ nifty.com (kazuya)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2316] Re: Squeak の Windows95 での不具合
+In-Reply-To: <opsmastnp7vq234l@m2.pbc.ne.jp>
+References: <opsmastnp7vq234l@m2.pbc.ne.jp>
+	<002e01c5143e$a9045b10$0300a8c0@shinji1>
+Message-ID: <6728519.1108647748686.vef03715@nifty.com>
+
+どうも、kazuya です。
+
+＃もう解決されているかもしれませんが・・・
+
+多分、川村さんので解決できるはずです。
+
+Windows95 からロングファイル名が使えるようになったはずですが、
+起動方法によってはロングファイル名のスペースが邪魔をするケースがあります。
+
+こちらに解説がありますので、参考まで。
+http://e-words.jp/w/E383ADE383B3E382B0E38395E382A1E382A4E383ABE3838DE383BCE383
+A0.html
+
+川村さんの指摘のようにスペースの無いフォルダで実行するのも良いですし、
+Program Files の8.3形式のフォルダ名を指定する方法でも良いはずです。
+
+DOS プロンプトで「C:\> DIR」を実行して8.3形式のフィルダ名が確認できます。
+
+
+----- Original Message -----
+>Date: Thu, 17 Feb 2005 01:16:25 +0900
+>To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+>From: "Kawamura Hideo" <kawa90@m2.pbc.ne.jp>
+>Subject: [Squeak-ja: 2314] Re: SqueakのWindows95での不具合
+>
+>
+>川村です。
+>
+>根拠はないですが、むかーしそのようなアプリに遭遇した気がします。
+>C:\Program Filesにインストールされるとその間のスペースが悪さして、そんな
+>パスないよと怒られた記憶があります。
+>
+>試しに
+>c:\temp\Squeak
+>などに移動させて実行してみては？
+>Squeak.exeをダブルクリックで実行して、
+>ファイル選択ダイアログがでるはず。ここで、SqueakNihongo6.1.imageを選択。
+>これでどうなるでしょうか？
+>
+>とんだ見当違いかもしれませんが、参考までに。
+>
+>それでは。
+>
+>
+>-- 
+>No virus found in this outgoing message.
+>Checked by AVG Anti-Virus.
+>Version: 7.0.300 / Virus Database: 265.8.8 - Release Date: 2005/02/14
+>
+
+
+From yoshiki ＠ squeakland.org  Fri Feb 18 05:19:06 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2317] 新しい日本語版Squeak: 現在鋭意作成中！
+Message-ID: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+　おおしまです。
+
+  さて、ここしばらく新しいSqueak eToys用のイメージを、山宮さん、阿部さ
+んをはじめコミュニティの皆さんと一緒にまとめています。
+
+　かなり多くの翻訳を追加したので、普通にeToys環境を使っている限り英語
+を目にすることが大分減りました。また、細かなところで機能強化が図られて
+います。日本語のTrueTypeフォントを読み込んだときの動作も安定しています。
+
+　3月前半のリリースに向けて、皆さんからの意見をいろいろ聞いて正式版に
+取り入れたいと思っています。
+
+　そこでお願いがあるのですが、山宮さんのサイトから
+
+http://metatoys.org/pub/NSqueak-2005-02-17.zip	
+
+というファイルをダウンロードして、中にあるSqueakPlugin.imageというファ
+イルを取り出してください。SqueakPlugin.imageをダブルクリックして起動す
+るか、あるいはVMの実行形式の上にドロップ、またはコマンドラインから指定
+して起動すると、現状のイメージが試せます。ここで、普段使うような感じで
+いろいろ試したり、あるいはプロジェクト置き場にあるようなものを作り直し
+てみたりして、気が付いたところや問題になりそうなところを遠慮なく報告し
+ていただけないでしょうか。
+
+  なかなか少人数では目の行き届かないところもあるので、多くの人の知恵を
+お借りしたいと思います。よろしくお願いします。
+
+-- Yoshiki
+
+From e-itoh ＠ ygu.ac.jp  Fri Feb 18 09:25:15 2005
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2318] Re: 新しい日本語版 Squeak: 現在鋭意作成中！
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <20050218092515.78300848@ygu.ac.jp>
+
+伊藤です。
+
+日本語版の作業おつかれさまです。全然お手伝いできてなくてすみません。
+前回試したときよりずっと進んでいるのでびっくりです。
+
+気がついたところだけ指摘しておきます。おもにダイアログのタイトルです。
+
+1.検索…で表れるダイアログタイトルの「Find what?」は「何を探す？」に
+  するのはどうか？
+
+2.ナビゲータフラップの、共有で表れるタイトルの「Please type your name:」
+　は「あなたの名前は？」でどう？
+
+3.ポップアップメニューの「内容をファイルに保存」で表れるダイアログタイ
+　トルの「File name?」は「ファイル名は？」
+
+4.ワールドメニューの特別…、ペンの軌跡に…を付けるで、表れるダイアログ
+　タイトルの「Head size for arrowheads:」は、「矢尻の大きさは？」
+
+なくてもいいかなというところではありますが。
+微力ながら鋭意協力していきたいと思っております。
+
+
+ 
+
+
+
+From yoshiki ＠ squeakland.org  Fri Feb 18 09:52:27 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2319] Re: 新しい日本語版 Squeak: 現在鋭意作成中！
+In-Reply-To: <20050218092515.78300848@ygu.ac.jp>
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<20050218092515.78300848@ygu.ac.jp>
+Message-ID: <u3bvun0z8.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  伊藤さん
+
+> 日本語版の作業おつかれさまです。全然お手伝いできてなくてすみません。
+> 前回試したときよりずっと進んでいるのでびっくりです。
+> 
+> 気がついたところだけ指摘しておきます。おもにダイアログのタイトルです。
+> 
+> 1.検索…で表れるダイアログタイトルの「Find what?」は「何を探す？」に
+>   するのはどうか？
+
+　直しました。
+
+> 2.ナビゲータフラップの、共有で表れるタイトルの「Please type your name:」
+> 　は「あなたの名前は？」でどう？
+
+　「共有」は、その先も大分訳されていないところがあってどうしようかなと
+思っているのですが、どうすべきなんでしょうね。なんとなくあまり使ってほ
+しくない機能のような気はしてしまっているのですが...
+
+> 3.ポップアップメニューの「内容をファイルに保存」で表れるダイアログタイ
+> 　トルの「File name?」は「ファイル名は？」
+
+  ちょっと変えて導入しました。
+
+> 4.ワールドメニューの特別…、ペンの軌跡に…を付けるで、表れるダイアログ
+> 　タイトルの「Head size for arrowheads:」は、「矢尻の大きさは？」
+
+  どうやら、一日分の変更がどこかに行ってしまっていたようです。それを発
+掘したので、直ります。
+
+> なくてもいいかなというところではありますが。
+
+　いえいえ、せっかくですのでなるべく訳しましょう。
+
+> 微力ながら鋭意協力していきたいと思っております。
+
+　本当にありがとうございます。
+
+-- Yoshiki
+
+From e-itoh ＠ ygu.ac.jp  Fri Feb 18 10:40:18 2005
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2320] Re: 新しい日本語版 Squeak: 現在鋭意作成中！
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<20050218092515.78300848@ygu.ac.jp>
+	<u3bvun0z8.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <20050218104018.797E8525@ygu.ac.jp>
+
+大島さんこんにちは。
+
+ご対応ありがとうございます。
+
+>> 2.ナビゲータフラップの、共有で表れるタイトルの「Please type your name:」
+>> 　は「あなたの名前は？」でどう？
+>　「共有」は、その先も大分訳されていないところがあってどうしようかなと
+>思っているのですが、どうすべきなんでしょうね。なんとなくあまり使ってほ
+>しくない機能のような気はしてしまっているのですが...
+　私も使ったことありませんので何ともいえないのです。
+
+>  どうやら、一日分の変更がどこかに行ってしまっていたようです。それを発
+>掘したので、直ります。
+>> なくてもいいかなというところではありますが。
+>　いえいえ、せっかくですのでなるべく訳しましょう。
+　おことばに甘えて...
+
+＃訳語についてはサンプルということでこっちを気にせず直してくださって
+＃結構です。
+
+1.「スタックとカード…」の「既存のスタックのカードにする」で表れる
+　「Please click on a Stack」を「スタックをクリックしてください」
+
+2.「コピー＆印刷…」の「ポストスクリプトをファイルに出力」のタイトル
+　「File name?(".ps" will be added to end)」を
+　「ファイル名は？（自動的に.psが付加されます）」
+　ちなみに、多角形など日本語の部品でやると、ダイアログ内が文字化け
+　します。
+　日本語テキストを含むとエラーになるので意味ないともいえますが。
+
+3.「書き出し…」の「Please enter the name」を「ファイル名は？」
+
+4.ウィンドウメニューの「表題を変更」のタイトル
+　「New title for this window」を「このウィンドウの新しい表題は？」
+
+5.「割付の設定…」の「leftFlush」「centered」「rightFlush」
+　をそれぞれ「左寄せ」「中央揃え」「右寄せ」に。
+　「justified」は使ってないので何の機能だかちょっとわかりませんでし
+　た。「行間揃え」ですかね？
+
+>> 微力ながら鋭意協力していきたいと思っております。
+>　本当にありがとうございます。
+　いえいえ助かるのは来期授業する私の方なので。こちらこそ本当にあり
+がとうございます。
+
+
+ 
+
+
+
+From yoshiki ＠ squeakland.org  Fri Feb 18 11:06:41 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2321] Re: 新しい日本語版 Squeak: 現在鋭意作成中！
+In-Reply-To: <20050218104018.797E8525@ygu.ac.jp>
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<20050218092515.78300848@ygu.ac.jp>
+	<u3bvun0z8.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<20050218104018.797E8525@ygu.ac.jp>
+Message-ID: <uwtt6liz2.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> >　「共有」は、その先も大分訳されていないところがあってどうしようかなと
+> >思っているのですが、どうすべきなんでしょうね。なんとなくあまり使ってほ
+> >しくない機能のような気はしてしまっているのですが...
+> 　私も使ったことありませんので何ともいえないのです。
+
+　判って使えば使えるのですが、それがわかる人が英語だと困る、という状況
+がいまいち謎なんですよね。訳したほうが良いのは確かですが...
+
+> 1.「スタックとカード…」の「既存のスタックのカードにする」で表れる
+> 　「Please click on a Stack」を「スタックをクリックしてください」
+
+  直しました。
+
+> 2.「コピー＆印刷…」の「ポストスクリプトをファイルに出力」のタイトル
+> 　「File name?(".ps" will be added to end)」を
+> 　「ファイル名は？（自動的に.psが付加されます）」
+> 　ちなみに、多角形など日本語の部品でやると、ダイアログ内が文字化け
+> 　します。
+
+　これらは、直しました。
+
+> 　日本語テキストを含むとエラーになるので意味ないともいえますが。
+
+　これも、直したいですね。
+
+> 3.「書き出し…」の「Please enter the name」を「ファイル名は？」
+
+　直しました。
+
+> 4.ウィンドウメニューの「表題を変更」のタイトル
+> 　「New title for this window」を「このウィンドウの新しい表題は？」
+
+　直しました。
+
+> 5.「割付の設定…」の「leftFlush」「centered」「rightFlush」
+> 　をそれぞれ「左寄せ」「中央揃え」「右寄せ」に。
+> 　「justified」は使ってないので何の機能だかちょっとわかりませんでし
+> 　た。「行間揃え」ですかね？
+
+　何行かあるテキストを選択してから、メニューのアイテムを選んでくだ
+さい。
+
+　確かに、「均等」ではないんですよね。スペースを均等に割り付けているわ
+けではありますが。
+
+> 　いえいえ助かるのは来期授業する私の方なので。こちらこそ本当にあり
+> がとうございます。
+
+　本当にありがとうございます。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Fri Feb 18 17:33:42 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2322] Re: 新しい日本語版Squeak: 現在鋭意作成中！
+In-Reply-To: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <umzu2l121.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+　おおしまです。
+
+  昨日
+
+>   さて、ここしばらく新しいSqueak eToys用のイメージを、山宮さん、阿部さ
+> んをはじめコミュニティの皆さんと一緒にまとめています。
+
+というメールを出しましたが、伊藤さんからのコメントをいくつかいただいた
+のでそれらに対応し、山宮さんにもう一度新しい版をまとめてもらいました。
+
+　興味のあるひとは、山宮さんのサイトから
+ 
+http://metatoys.org/pub/NSqueak-2005-02-18.zip	
+
+というファイルをダウンロードして、中にあるSqueakPlugin.imageというファ
+イルを取り出してください。SqueakPlugin.imageをダブルクリックして起動す
+るか、あるいはVMの実行形式の上にドロップ、またはコマンドラインから指定
+して起動すると、現状のイメージが試せます。ここで、普段使うような感じで
+いろいろ試したり、あるいはプロジェクト置き場にあるようなものを作り直し
+てみたりして、気が付いたところや問題になりそうなところを遠慮なく報告し
+ていただけないでしょうか。
+
+　現在、阿部さんが'no color'と'translucent'という色選択ツールの中の文
+字列が変換できるようにコードをいじっているところです。このようなところ
+も含めて、コメントいただけると助かります。
+
+  よろしくお願いします。
+
+  もし自分で訳を試したい、という方は、上記にあるファイルをダウンロード
+して、SqueakPlugin.imageを起動した後、ワールドメニューの「開く...」 ->
+「言語エディター...」 -> 「ja」と選んで言語エディターを起動し、中央左
+寄りにある'add'というボタンを押して、元の文字列、翻訳後の文字列、とい
+うように入力すると訳が追加できます。よろしければこちらもお試しください。
+
+-- Yoshiki
+
+From takeda.toshiyuki ＠ gmail.com  Fri Feb 18 17:43:46 2005
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:07 2007
+Subject: Re: [Squeak-ja: 2322] Re: 新しい日本 語版Squeak: 現在鋭意作成中！
+In-Reply-To: <umzu2l121.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<umzu2l121.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <6544a1da050218004326cad89b@mail.gmail.com>
+
+武田です。
+
+On Fri, 18 Feb 2005 00:33:42 -0800, Yoshiki Ohshima
+<yoshiki@squeakland.org> wrote:
+
+>   もし自分で訳を試したい、という方は、上記にあるファイルをダウンロード
+> して、SqueakPlugin.imageを起動した後、ワールドメニューの「開く...」 ->
+> 「言語エディター...」 -> 「ja」と選んで言語エディターを起動し、中央左
+> 寄りにある'add'というボタンを押して、元の文字列、翻訳後の文字列、とい
+> うように入力すると訳が追加できます。よろしければこちらもお試しください。
+
+ここで訳した内容を反映してもらうには、どのような手順が一番望ましいですか？
+From yoshiki ＠ squeakland.org  Fri Feb 18 18:02:25 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2324] Re: 新しい日本 語版Squeak: 現在鋭意作成中！
+In-Reply-To: <6544a1da050218004326cad89b@mail.gmail.com>
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<umzu2l121.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<6544a1da050218004326cad89b@mail.gmail.com>
+Message-ID: <uk6p6kzq6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> >   もし自分で訳を試したい、という方は、上記にあるファイルをダウンロード
+> > して、SqueakPlugin.imageを起動した後、ワールドメニューの「開く...」 ->
+> > 「言語エディター...」 -> 「ja」と選んで言語エディターを起動し、中央左
+> > 寄りにある'add'というボタンを押して、元の文字列、翻訳後の文字列、とい
+> > うように入力すると訳が追加できます。よろしければこちらもお試しください。
+> 
+> ここで訳した内容を反映してもらうには、どのような手順が一番望ましいですか？
+
+　言語エディターから「保存」を選んで、それを僕に送っていただいても良い
+です。一つ二つであるような場合は、伊藤さん式にメールに書いていただいて
+も良いですが。
+
+  言語エディターは選択したものだけをまとめる機能もあります(複数選択して、
+右クリックして'code selection'を選択)。ただ、あまり使い勝手が良くない
+ですね。
+
+-- Yoshiki
+
+From lingmu ＠ agate.plala.or.jp  Sun Feb 20 23:49:41 2005
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2325] Re: SqueakのWindows95での不具合
+References: <002e01c5143e$a9045b10$0300a8c0@shinji1>
+	<opsmastnp7vq234l@m2.pbc.ne.jp>
+Message-ID: <000601c5175b$6ac056e0$0300a8c0@shinji1>
+
+鈴木です。
+
+回答ありがとうございました。
+アドバイスに沿って色々と試してみましたが、改善されません。
+c:\Squeakにファイルを移動して実行してもだめでした。
+
+全く同じ場所（c:\Squeak）に前も説明した、「スクイークであそぼう」の本に添付されていた、SqueakNihongo4aをコピーして実行させると正常に動作します。
+
+と言うことは、日本語版SqueakNihongo6.1と英語版Squeak ver3.7自体がWindows95に対応していないといくうことではないでしょうか？
+
+
+----- Original Message ----- 
+From: "Kawamura Hideo" <kawa90@m2.pbc.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Thursday, February 17, 2005 1:16 AM
+Subject: [Squeak-ja: 2314] Re: SqueakのWindows95での不具合
+
+
+> 川村です。
+>
+> 根拠はないですが、むかーしそのようなアプリに遭遇した気がします。
+> C:\Program Filesにインストールされるとその間のスペースが悪さして、そんな
+> パスないよと怒られた記憶があります。
+>
+> 試しに
+> c:\temp\Squeak
+> などに移動させて実行してみては？
+> Squeak.exeをダブルクリックで実行して、
+> ファイル選択ダイアログがでるはず。ここで、SqueakNihongo6.1.imageを選択。
+> これでどうなるでしょうか？
+>
+> とんだ見当違いかもしれませんが、参考までに。
+>
+> それでは。
+>
+>
+> -- 
+> No virus found in this outgoing message.
+> Checked by AVG Anti-Virus.
+> Version: 7.0.300 / Virus Database: 265.8.8 - Release Date: 2005/02/14
+>
+>
+
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Mon Feb 21 00:56:13 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Kawamura Hideo)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2326] Re: SqueakのWindows95での不具合
+In-Reply-To: <000601c5175b$6ac056e0$0300a8c0@shinji1>
+References: <002e01c5143e$a9045b10$0300a8c0@shinji1>
+	<opsmastnp7vq234l@m2.pbc.ne.jp>
+	<000601c5175b$6ac056e0$0300a8c0@shinji1>
+Message-ID: <opsmh6jza0vq234l@m2.pbc.ne.jp>
+
+川村です。
+
+SqueakではDirect X使ってます。Win95でDirectXってありましたっけ？
+
+ここにそれっぽい質問があるんだけど、回答がない。
+http://minnow.cc.gatech.edu/squeak/1786#Win without DirectX
+
+なんら回答になっていませんが。。。
+それでは。
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.300 / Virus Database: 266.1.0 - Release Date: 2005/02/18
+
+
+From yoshiki ＠ squeakland.org  Mon Feb 21 11:57:00 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2327] Re: SqueakのWindows95での不具合
+In-Reply-To: <000601c5175b$6ac056e0$0300a8c0@shinji1>
+References: <002e01c5143e$a9045b10$0300a8c0@shinji1>
+	<opsmastnp7vq234l@m2.pbc.ne.jp>
+	<000601c5175b$6ac056e0$0300a8c0@shinji1>
+Message-ID: <u1xbad3ib.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 回答ありがとうございました。
+> アドバイスに沿って色々と試してみましたが、改善されません。
+> c:\Squeakにファイルを移動して実行してもだめでした。
+
+　そうでしたか。
+
+> 全く同じ場所（c:\Squeak）に前も説明した、「スクイークであそぼう」の本に添付されていた、SqueakNihongo4aをコピーして実行させると正常に動作します。
+> 
+> と言うことは、日本語版SqueakNihongo6.1と英語版Squeak ver3.7自体が
+> Windows95に対応していないといくうことではないでしょうか？
+
+　イメージそのものはOSのバージョンとはあまり関係ありませんので、この説
+にはやや納得しがたいところはあります。
+
+  C:\SqueakにSqueakNihongo4aがあるとして、そこにSqueakNihongo6.1.image
+のファイルをコピーし、SqueakNihongo6.1.imageをC:\Squeak\Squeak.exeの上
+にドラッグアンドドロップすると何が起こるか試してみてはいただけないでしょ
+うか。
+
+-- Yoshiki
+
+From lingmu ＠ agate.plala.or.jp  Mon Feb 21 23:59:45 2005
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2328] Re: SqueakのWindows95での不具合
+References: <002e01c5143e$a9045b10$0300a8c0@shinji1><opsmastnp7vq234l@m2.pbc.ne.jp><000601c5175b$6ac056e0$0300a8c0@shinji1>
+	<u1xbad3ib.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <001a01c51825$fc6fa940$0300a8c0@shinji1>
+
+鈴木です。
+
+>  C:\SqueakにSqueakNihongo4aがあるとして、そこにSqueakNihongo6.1.image
+> のファイルをコピーし、SqueakNihongo6.1.imageをC:\Squeak\Squeak.exeの上
+> にドラッグアンドドロップすると何が起こるか試してみてはいただけないでしょ
+> うか。
+
+この場合は、正常に起動しました。
+C:\Squeak\Squeak.exeを、SqueakNihongo6.1からダウンロードしたSqueak.exeに
+交換すると又あのエラーが発生します。この同じファイルはWindowsXPでは正常
+に動作したものです。
+
+よく分かりませんが、とりあえずSqueakNihongo4aでＳｑｕｅａｋを使い始めることに 
+
+しました。
+
+アドバイスありがとうございました。
+
+----- Original Message ----- 
+From: "Yoshiki Ohshima" <yoshiki@squeakland.org>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Monday, February 21, 2005 11:57 AM
+Subject: [Squeak-ja: 2327] Re: SqueakのWindows95での不具合
+
+
+>  おおしまです。
+>
+>> 回答ありがとうございました。
+>> アドバイスに沿って色々と試してみましたが、改善されません。
+>> c:\Squeakにファイルを移動して実行してもだめでした。
+>
+> 　そうでしたか。
+>
+>> 全く同じ場所（c:\Squeak）に前も説明した、「スクイークであそぼう」の本に添付されていた、SqueakNihongo4aをコピーして実行させると正常に動作します。
+>>
+>> と言うことは、日本語版SqueakNihongo6.1と英語版Squeak ver3.7自体が
+>> Windows95に対応していないといくうことではないでしょうか？
+>
+> 　イメージそのものはOSのバージョンとはあまり関係ありませんので、この説
+> にはやや納得しがたいところはあります。
+>
+>  C:\SqueakにSqueakNihongo4aがあるとして、そこにSqueakNihongo6.1.image
+> のファイルをコピーし、SqueakNihongo6.1.imageをC:\Squeak\Squeak.exeの上
+> にドラッグアンドドロップすると何が起こるか試してみてはいただけないでしょ
+> うか。
+>
+> -- Yoshiki 
+
+
+
+From lingmu ＠ agate.plala.or.jp  Tue Feb 22 00:05:32 2005
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2329] Re: SqueakのWindows95での不具合
+References: <002e01c5143e$a9045b10$0300a8c0@shinji1><opsmastnp7vq234l@m2.pbc.ne.jp><000601c5175b$6ac056e0$0300a8c0@shinji1>
+	<opsmh6jza0vq234l@m2.pbc.ne.jp>
+Message-ID: <002001c51826$cba577d0$0300a8c0@shinji1>
+
+鈴木です。
+
+アドバイスありがとうございます。
+
+> SqueakではDirect X使ってます。Win95でDirectXってありましたっけ？
+
+DirectXがあるかどうかどうやって確認すればいいのでしょうか？
+
+
+----- Original Message ----- 
+From: "Kawamura Hideo" <kawa90@m2.pbc.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Monday, February 21, 2005 12:56 AM
+Subject: [Squeak-ja: 2326] Re: SqueakのWindows95での不具合
+
+
+> 川村です。
+>
+> SqueakではDirect X使ってます。Win95でDirectXってありましたっけ？
+>
+> ここにそれっぽい質問があるんだけど、回答がない。
+> http://minnow.cc.gatech.edu/squeak/1786#Win without DirectX
+>
+> なんら回答になっていませんが。。。
+> それでは。
+>
+>
+> -- 
+> No virus found in this outgoing message.
+> Checked by AVG Anti-Virus.
+> Version: 7.0.300 / Virus Database: 266.1.0 - Release Date: 2005/02/18
+>
+> 
+
+
+
+From yoshiki ＠ squeakland.org  Tue Feb 22 09:54:13 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2330] Re: SqueakのWindows95での不具合
+In-Reply-To: <001a01c51825$fc6fa940$0300a8c0@shinji1>
+References: <002e01c5143e$a9045b10$0300a8c0@shinji1>
+	<opsmastnp7vq234l@m2.pbc.ne.jp>
+	<000601c5175b$6ac056e0$0300a8c0@shinji1>
+	<u1xbad3ib.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<001a01c51825$fc6fa940$0300a8c0@shinji1>
+Message-ID: <ull9hbeiy.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> >  C:\SqueakにSqueakNihongo4aがあるとして、そこにSqueakNihongo6.1.image
+> > のファイルをコピーし、SqueakNihongo6.1.imageをC:\Squeak\Squeak.exeの上
+> > にドラッグアンドドロップすると何が起こるか試してみてはいただけないでしょ
+> > うか。
+> 
+> この場合は、正常に起動しました。
+
+　そうですか。いろいろテストありがとうございます。
+
+> よく分かりませんが、とりあえずSqueakNihongo4aでＳｑｕｅａｋを使い始
+> めることにしました。
+
+　いえいえ、もし、SqueakNihongo4aについてきた(Squeak3.2の)VMで
+Nihongo6.1が動作するのでしたら、その組み合わせで使っていただくのがバグ
+も少ないですしより安定しているので良いかと思います。
+
+　ご検討ください。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Fri Feb 25 04:32:40 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2331] Re: 新しい日本語版Squeak: 現在鋭意作成中！
+In-Reply-To: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <ubra992jr.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+　少し間が開いてしまいましたが、伊藤さんや能勢さんをはじめ、コミュニティ
+の皆さんからのフィードバックを取り込んだ版をWebに起きました。
+
+  まだまだ数週間は改良する予定ですので、山宮さんのサイトから
+
+http://metatoys.org/pub/NSqueak-2005-02-25.zip
+
+をダウンロードして、中にあるSqueakPlugin.imageというファイルを取り出し
+てください。SqueakPlugin.imageをダブルクリックして起動するか、あるいは
+VMの実行形式の上にドロップ、またはコマンドラインから指定して起動すると、
+現状のイメージが試せます。ここで、普段使うような感じでいろいろ試したり、
+あるいはプロジェクト置き場にあるようなものを作り直してみたりして、気が
+付いたところや問題になりそうなところを遠慮なく報告していただけないでしょ
+うか。
+
+  よろしくお願いします。
+
+-- Yoshiki
+
+From abee.abe ＠ nifty.ne.jp  Fri Feb 25 12:03:09 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2332] スペシャルオリンピックス長野での Squeak の展示
+Message-ID: <421E956D91.B273ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+明日から長野で開催される2005年スペシャルオリンピックス冬季大会で、日本
+HPがSqueakの展示を行います。
+
+http://h50146.www5.hp.com/info/feature/coverstory/05j_special_olympics.html
+
+具体的には、長野市内のSOタウン長野アミューズメントプラザにおいて、午後
+15:00-18:00くらいの間(詳細未定)、私やHP-Squeakersのボランティアがデモしま
+す。
+
+http://www.2005sowwg.com/jp/nsp_town.html
+
+また、3/1にはSOタウン白馬でもデモを行う予定です。
+スペシャルオリンピックスに参加される方はぜひお立ち寄りください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From yukari.shirota ＠ gakushuin.ac.jp  Sat Feb 26 16:32:30 2005
+From: yukari.shirota ＠ gakushuin.ac.jp (SHIROTA Yukari)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2333] 画像のOID
+Message-ID: <4220260E.9070505@gakushuin.ac.jp>
+
+白田＠学習院です．
+
+プログラムをしていて，悩んだ結果分かった
+ことです
+（きっと，皆さんは当然なのでしょうが）
+jpegなどの画像をそのままスケッチと
+して多数使う場合，同じスケッチをコピー
+して使います．
+そのとき，スケッチが違えばOIDが違うのは
+分かります．オブジェクト指向ですから．
+しかし，画像ファイルにまで，違うOIDが
+振られるのですね．（これ正しいでしょうか？）
+
+画像でオブジェクトを識別するテストを書いて
+いたのですが，どうしてもうまくいかなかった
+のですが，
+
+ｘｘｘの見た目を似せるｘｘｘ
+
+を予め実行すると，できました．
+
+個人的意見としては，画像ファイルにまでOIDを
+ふると，分かりにくくなるように思うのですが，
+皆様のご意見はいかがでしょうか？
+
+
+From yoshiki ＠ squeakland.org  Sun Feb 27 10:07:03 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2334] Re: 画像のOID
+In-Reply-To: <4220260E.9070505@gakushuin.ac.jp>
+References: <4220260E.9070505@gakushuin.ac.jp>
+Message-ID: <ur7j2u7yg.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> プログラムをしていて，悩んだ結果分かった
+> ことです
+> （きっと，皆さんは当然なのでしょうが）
+
+　いえいえ、僕にとっても日々発見です。
+
+> jpegなどの画像をそのままスケッチと
+> して多数使う場合，同じスケッチをコピー
+> して使います．
+> そのとき，スケッチが違えばOIDが違うのは
+> 分かります．オブジェクト指向ですから．
+> しかし，画像ファイルにまで，違うOIDが
+> 振られるのですね．（これ正しいでしょうか？）
+
+  おそらくは、外部のファイルとして存在していた画像を元に作ったスケッチ、
+ということですよね。もとのリソースを覚えておくべき、という意見はありま
+すが、現状はSqueak内部に取り込んだ後は、区別のないスケッチになります。
+
+  内部に2回以上取り込んだときにも、「同じビット列を含んだ違うオブジェ
+クト」になります。違うオブジェクトである以上、定義から言って違うOIDと
+なりますね。
+
+  Squeak内部外部で編集されることを思うと比較的正しい動作だと思います。
+
+> 画像でオブジェクトを識別するテストを書いて
+> いたのですが，どうしてもうまくいかなかった
+> のですが，
+
+　確かに、画像の#=は#==を使って定義されているので、「同じかどうか」は
+内容まではみてくれません。
+
+> ｘｘｘの見た目を似せるｘｘｘ
+> 
+> を予め実行すると，できました．
+> 
+> 個人的意見としては，画像ファイルにまでOIDを
+> ふると，分かりにくくなるように思うのですが，
+> 皆様のご意見はいかがでしょうか？
+
+　Squeak内部に入った後はもはや「ファイル」ではないですし、Squeak内部、
+外部で編集されることを思うと一意性をどう定義するか、というのは簡単な問
+題ではないと思います。理想的には画像同士の同値性比較を、ビットの内容を
+見た値同値でやる、ということも考えられますが、現状はちょっと怖い感じは
+します。
+
+  ところで、「兄弟」という機能をご存知ですか?ひとつの画像から兄弟を作っ
+ておき、「兄弟に触れているか?」という機能を使う可能性も考えられます。
+(触れているか・重なっているかという概念が使える課題なのかはちょっと良
+くわかりませんが。
+
+-- Yoshiki
+
+From kawa90 ＠ m2.pbc.ne.jp  Mon Feb 28 20:30:45 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2335] Nihongo7について(NSqueak-2005-02-25.image)
+Message-ID: <422300E5.2010509@m2.pbc.ne.jp>
+
+川村です。
+Nihongo7(NSqueak-2005-02-25)完成度がどんどん高くなっていますね。開発関係
+者の方々ありがとうございます。開発用イメージ (NSqueak-2005-02-25.image)
+開発途中版で気がついた点を書きます。
+
+■FormSetFont exampleがエラーとなります
+Workspaceのキャレット位置に画像をpasteできるはずなんだけど…
+3.8g-6857もだめです。pasteしようとすると'FormSetFOnt>>
+createCharacterToGlyphMap でsubscript is out of bounds:67'となります。も
+うサポートされないんですかね？
+
+■SqueakMapパッケージローダがエラーとなります
+3.8g-6857では起動とパッケージのインストールまで一通りできたが、Nihongo7
+では「全サーバの応答がありません」(Error:All SqueakMap master servers
+are down)って怒られてしまう。
+
+で試した環境は
+NetNameResolver addressForName: 'map1.squeakfoundation.org' timeout: 5
+がタイムアウトしてしまう環境でした。'map1.squeakfoundation.org'がDNSから
+ひっぱてこれない?
+
+調べてみるとSMSqueakMap class>>pingServer:の結果が異なりました。
+N7 :SMSqueakMap pingServer: 'map1.squeakfoundation.org'→false
+3.8:SMSqueakMap pingServer: 'map1.squeakfoundation.org'→true
+
+SMSqueakMap class>>pingServer:をみると
+
+[(SystemVersion current highestUpdate < 5252)
+
+という記述があり
+N7 :SystemVersion current highestUpdate→7
+3.8:SystemVersion current highestUpdate→6587
+となるのでNetNameResolverでタイムアウトを起こしてエラーとなったようで
+す。5252を0に書き換えると正しく起動でき、 SqueakMapからパッケージをイン
+ストールできました。
+ちなみにSystemVersion current updatesの結果は次のようになりました。
+
+N7 :SystemVersion current updates a Set(1 2 3 4 5 6 7)
+3.8:SystemVersion current updates a Set(5977 〜6587)
+
+参考までにバージョン(#highestUpdate)で処理を変えている部分として
+SMSimpleInstaller>>fileIntoChangeSetNamed:fromStream:
+がありました。
+
+#そんな環境で使うなと言われるかもしませんが…
+
+それでは
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.300 / Virus Database: 266.5.1 - Release Date: 2005/02/27
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+http://pr.mail.yahoo.co.jp/so2005/
+
+

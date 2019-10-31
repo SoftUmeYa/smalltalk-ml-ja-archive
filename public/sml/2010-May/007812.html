@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7812] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207812%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVidW50dSAxMC4wNExUUxskQiRHGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FSnVuGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkLEk9PCgkNSRsGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kNyQ/GyhC%3F%3D&In-Reply-To=4C00EE1B.2000108%40hera.eonet.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007811.html">
+   <LINK REL="Next"  HREF="007813.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7812] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207812%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVidW50dSAxMC4wNExUUxskQiRHGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FSnVuGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkLEk9PCgkNSRsGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kNyQ/GyhC%3F%3D&In-Reply-To=4C00EE1B.2000108%40hera.eonet.ne.jp"
+       TITLE="[SML 7812] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2010年 5月 31日 (月) 21:33:18 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007811.html">[SML 7811] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+        <LI>次の記事 <A HREF="007813.html">[SML 7813] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7812">[ 日付 ]</a>
+              <a href="thread.html#7812">[ スレッド ]</a>
+              <a href="subject.html#7812">[ 件名 ]</a>
+              <a href="author.html#7812">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+
+(2010年05月29日 19:36), hirowadenden wrote:
+&gt;<i> Failed to check if 3D objects were rendered on the screen.
+</I>&gt;<i> Maybe it's because the window was hidden by another.
+</I>&gt;<i> Restarting [show complex 3D object] test.
+</I>&gt;<i> 
+</I>&gt;<i> と、ウインドウにメッセージが出てしまいます。&lt;Accept&gt;を押すと
+</I>&gt;<i> Exceptionウインドウが出て、
+</I>&gt;<i> 
+</I>&gt;<i> Unhandled exception: a primitive has failed
+</I>&gt;<i> 
+</I>&gt;<i> と表示されています。最初のメッセージウインドウは表示されず
+</I>&gt;<i> いきなりExceptionウインドウが出る場合もあります。
+</I>&gt;<i> Stackの最初の数行は以下のとおりです:
+</I>&gt;<i> 
+</I>&gt;<i> ApplicationWindow(Object)&gt;&gt;error:
+</I>&gt;<i> ApplicationWindow(Object)&gt;&gt;primitiveFailed
+</I>&gt;<i> ApplicationWindow(Window)&gt;&gt;deviceContentsOfAreaOriginX:y:width:height:into:startingAt:
+</I>&gt;<i> ApplicationWindow(DisplaySurface)&gt;&gt;contentsOfArea:into:startingAt:
+</I>&gt;<i> ApplicationWindow(DisplaySurface)&gt;&gt;contentsOfArea:
+</I>&gt;<i> ApplicationWindow(DisplaySurface)&gt;&gt;completeContentsOfArea:
+</I>&gt;<i> JunBenchmark&gt;&gt;waitForFinishRendering:
+</I>&gt;<i> optimized [] in [] in JunBenchmark&gt;&gt;show3dObject
+</I>&gt;<i> 
+</I>&gt;<i> ちょっと見たところでは原因がよく分からないので、後で調べてみます。
+</I>
+少し調べてみました。
+ベンチマークで表示されたViewfinder(an ApplicationWindow)に対して
+メッセージcompleteContentsOfArea: aRectangleを(aRectangleを変えながら)
+送ってみました。
+ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されていない
+場合は、指定した領域の画像(a Depth32Image)が返ってきました。
+ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+領域と重なる場合は、incompleteAreaCopySignalが発生しました。
+何度か試してみましたが、primitiveFailedになることは無く、正常に動作している
+ようです。
+
+ちょっと手に負えそうにないので、しばらく(?)置かせていただきます。^^;;
+
+-- hirowadenden
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007811.html">[SML 7811] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+	<LI>次の記事 <A HREF="007813.html">[SML 7813] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7812">[ 日付 ]</a>
+              <a href="thread.html#7812">[ スレッド ]</a>
+              <a href="subject.html#7812">[ 件名 ]</a>
+              <a href="author.html#7812">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

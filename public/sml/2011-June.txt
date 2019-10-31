@@ -1,0 +1,864 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun  1 05:45:28 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 01 Jun 2011 05:45:28 +0900
+Subject: [SML 7936] Re:
+ 第32回Smalltalk勉強会＠京都
+In-Reply-To: <4DDC618E.6090506@cc.kyoto-su.ac.jp>
+References: <4DDC618E.6090506@cc.kyoto-su.ac.jp>
+Message-ID: <4DE55368.1070509@cc.kyoto-su.ac.jp>
+
+本日です！
+
+--- 青木淳
+
+(11/05/25 10:55), AOKI Atsushi wrote:
+> 第32回Smalltalk勉強会＠京都を開催します。
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto32
+> 
+> 場所はキャンプラ2階の第3会議室になります。（場所が一時的に変わりますので、ご注意を）
+> 
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+> 
+> 第32回 Smalltalk勉強会＠京都
+> 日時：2011年06月01日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第3会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 窓MVCのアプリケーションモデルであるPaneExample、そして、
+> 窓MVCのモデルであるPaneModelを中心に一緒にプログラミングしてゆきます。
+> 画像の読み書き、高速な拡大縮小、整列法などを会得しましょう。
+> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jun  2 08:52:30 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 02 Jun 2011 08:52:30 +0900
+Subject: [SML 7937] Re:
+ 第32回Smalltalk勉強会＠京都
+In-Reply-To: <4DDC618E.6090506@cc.kyoto-su.ac.jp>
+References: <4DDC618E.6090506@cc.kyoto-su.ac.jp>
+Message-ID: <4DE6D0BE.5090105@cc.kyoto-su.ac.jp>
+
+昨夜はJR京都駅前のキャンパスプラザ京都にお集まりいただきまし
+て、ありがとうございました。
+
+昨夜の勉強会で作成したプログラムを、以下のページに載せました。
+安田豊さんが出張でお休みでしたので、お弟子さんの妹尾郁弥さん
+が勉強ログを作ってくれました。師弟間の継承がステキですね！
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto32
+
+窓MVCのアプリケーションモデルであるPaneExampleと窓MVCのモデル
+であるPaneModelを中心に、皆さんと一緒にプログラミングを行い、
+画像を表示するところまでたどり着きました。高速な拡大縮小法や
+整列法などは、来月の勉強会へと譲ることになりました。（京都の
+勉強会は、ゆっくり、そして、着実に、それがモットー。）
+
+以上、簡単ですが、昨夜のSmalltalk勉強会@京都の報告でした。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+(11/05/25 10:55), AOKI Atsushi wrote:
+> 第32回Smalltalk勉強会＠京都を開催します。
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto32
+> 
+> 場所はキャンプラ2階の第3会議室になります。（場所が一時的に変わりますので、ご注意を）
+> 
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+> 
+> 第32回 Smalltalk勉強会＠京都
+> 日時：2011年06月01日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第3会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 窓MVCのアプリケーションモデルであるPaneExample、そして、
+> 窓MVCのモデルであるPaneModelを中心に一緒にプログラミングしてゆきます。
+> 画像の読み書き、高速な拡大縮小、整列法などを会得しましょう。
+> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From yasuda ＠ mfc.bakkers.gr.jp  Thu Jun  2 20:23:45 2011
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu, 2 Jun 2011 20:23:45 +0900
+Subject: [SML 7938] Re:
+ 第32回Smalltalk勉強会＠京都
+In-Reply-To: <4DE6D0BE.5090105@cc.kyoto-su.ac.jp>
+References: <4DDC618E.6090506@cc.kyoto-su.ac.jp>
+ <4DE6D0BE.5090105@cc.kyoto-su.ac.jp>
+Message-ID: <CA41E549-8F4B-4EE6-BAFA-681B4229371F@mfc.bakkers.gr.jp>
+
+安田です。
+
+妹尾君えらいしっかりやってますねえ。。。
+ひどく、、はひどいな、、とても、驚きました。
+
+読みながら自習しようと思います。
+妹尾君ありがとう！
+
+でわでわ										Yasu.
+
+
+On 2011/06/02, at 8:52, AOKI Atsushi wrote:
+
+> 昨夜はJR京都駅前のキャンパスプラザ京都にお集まりいただきまし
+> て、ありがとうございました。
+> 
+> 昨夜の勉強会で作成したプログラムを、以下のページに載せました。
+> 安田豊さんが出張でお休みでしたので、お弟子さんの妹尾郁弥さん
+> が勉強ログを作ってくれました。師弟間の継承がステキですね！
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto32
+> 
+> 窓MVCのアプリケーションモデルであるPaneExampleと窓MVCのモデル
+> であるPaneModelを中心に、皆さんと一緒にプログラミングを行い、
+> 画像を表示するところまでたどり着きました。高速な拡大縮小法や
+> 整列法などは、来月の勉強会へと譲ることになりました。（京都の
+> 勉強会は、ゆっくり、そして、着実に、それがモットー。）
+> 
+> 以上、簡単ですが、昨夜のSmalltalk勉強会@京都の報告でした。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+> 
+> (11/05/25 10:55), AOKI Atsushi wrote:
+>> 第32回Smalltalk勉強会＠京都を開催します。
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> 
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto32
+>> 
+>> 場所はキャンプラ2階の第3会議室になります。（場所が一時的に変わりますので、ご注意を）
+>> 
+>> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+>> 
+>> 第32回 Smalltalk勉強会＠京都
+>> 日時：2011年06月01日（水）19:00〜21:00
+>> キャンパスプラザ京都 2階 第3会議室
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>> 
+>> 窓MVCのアプリケーションモデルであるPaneExample、そして、
+>> 窓MVCのモデルであるPaneModelを中心に一緒にプログラミングしてゆきます。
+>> 画像の読み書き、高速な拡大縮小、整列法などを会得しましょう。
+>> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>> 
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+> 
+
+
+From x19290 ＠ gmail.com  Mon Jun  6 22:27:54 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 06 Jun 2011 22:27:54 +0900
+Subject: [SML 7939]
+ Pharo by Exampleの和訳を手分けしてしませんか?
+Message-ID: <4DECD5DA.8090605@gmail.com>
+
+こんばんは。
+
+http://www.hatena.ne.jp/pharo/ で、Pharo by Exampleの和訳に、ひとりで取
+り組んでいる人がいます。最近はへこたれているようですがその人がある日、
+
+「ふと思いましたが３００ページ越えの英語のドキュメントでも１人１ページ訳
+せば３００人で１日で終わりますね」
+http://d.hatena.ne.jp/pharo/20101006
+
+と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+的には良い考えだと思います。私たちで協力しませんか?
+
+協業には、みんなの翻訳: http://trans-aid.jp/ が使えると思います。
+<http://www.hatena.ne.jp/pharo/>
+
+ご意見お待ちしています。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+<http://www.hatena.ne.jp/pharo/>
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20110606/7bd85b8a/attachment.htm>
+
+From x19290 ＠ gmail.com  Mon Jun  6 22:30:39 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 06 Jun 2011 22:30:39 +0900
+Subject: [SML 7940]
+ Pharo by Exampleの和訳を手分けしてしませんか?
+Message-ID: <4DECD67F.5080606@gmail.com>
+
+(あれ? HTMLになっちゃった)
+
+こんばんは。
+
+http://www.hatena.ne.jp/pharo/ で、Pharo by Exampleの和訳に、ひとりで取
+り組んでいる人がいます。最近はへこたれているようですがその人がある日、
+
+「ふと思いましたが３００ページ越えの英語のドキュメントでも１人１ページ訳
+せば３００人で１日で終わりますね」
+http://d.hatena.ne.jp/pharo/20101006
+
+と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+的には良い考えだと思います。私たちで協力しませんか?
+
+協業には、みんなの翻訳: http://trans-aid.jp/ が使えると思います。
+<http://www.hatena.ne.jp/pharo/>
+
+ご意見お待ちしています。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+
+
+From x19290 ＠ gmail.com  Mon Jun  6 22:32:51 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 06 Jun 2011 22:32:51 +0900
+Subject: [SML 7941] Re:
+ Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DECD67F.5080606@gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+Message-ID: <4DECD703.8000506@gmail.com>
+
+On 2011年06月06日 22:30, Hiroki Horiuchi wrote:
+> http://www.hatena.ne.jp/pharo/ で、
+
+http://d.hatena.ne.jp/pharo/ で。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+From tomohiro ＠ sra.co.jp  Tue Jun  7 06:59:27 2011
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue, 7 Jun 2011 06:59:27 +0900
+Subject: [SML 7942] Re:
+ Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DECD67F.5080606@gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+Message-ID: <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+
+おだです。
+
+> と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+> 的には良い考えだと思います。私たちで協力しませんか?
+
+numberOfCollaborators := numberOfCollaborators + 1
+
+というわけで、よろしくお願いします。
+---
+おだ
+
+On Mon, 06 Jun 2011 22:30:39 +0900
+Hiroki Horiuchi <x19290 ＠ gmail.com> wrote:
+
+> (あれ? HTMLになっちゃった)
+> 
+> こんばんは。
+> 
+> http://www.hatena.ne.jp/pharo/ で、Pharo by Exampleの和訳に、ひとりで取
+> り組んでいる人がいます。最近はへこたれているようですがその人がある日、
+> 
+> 「ふと思いましたが３００ページ越えの英語のドキュメントでも１人１ページ訳
+> せば３００人で１日で終わりますね」
+> http://d.hatena.ne.jp/pharo/20101006
+> 
+> と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+> 的には良い考えだと思います。私たちで協力しませんか?
+> 
+> 協業には、みんなの翻訳: http://trans-aid.jp/ が使えると思います。
+> <http://www.hatena.ne.jp/pharo/>
+> 
+> ご意見お待ちしています。
+> --
+> 堀内寛己(ほりうちひろき)
+> http://twitter.com/x19290
+> 
+
+
+-- 
+おだ
+
+From x19290 ＠ gmail.com  Tue Jun  7 08:41:31 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Tue, 07 Jun 2011 08:41:31 +0900
+Subject: [SML 7943] Re:
+ Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+Message-ID: <4DED65AB.9030806@gmail.com>
+
+早速のご協力感謝します。
+
+協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+
+まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+さい。
+
+梅沢さんには、私をフォローしてもらっています。
+
+http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+From x19290 ＠ gmail.com  Tue Jun  7 08:49:21 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Tue, 07 Jun 2011 08:49:21 +0900
+Subject: [SML 7944] Re:
+ Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DED65AB.9030806@gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp> <4DED65AB.9030806@gmail.com>
+Message-ID: <4DED6781.7010201@gmail.com>
+
+s/梅沢/梅澤/
+--
+堀内
+
+From serge.stinckwich ＠ gmail.com  Tue Jun  7 10:14:54 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue, 7 Jun 2011 08:14:54 +0700
+Subject: [SML 7945] Re:
+	Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DECD5DA.8090605@gmail.com>
+References: <4DECD5DA.8090605@gmail.com>
+Message-ID: <BANLkTimu_pFM7ZZ1ERPZX-=_TDbbzy8EFw@mail.gmail.com>
+
+Great to translate the "Pharo by Example" book in japanese !
+I see that you try to create a repository on github here:
+https://github.com/organizations/SquareBracketAssociates
+If you want i could create a japanese team for translation and add you.
+
+Best regards,
+
+2011/6/6 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+> こんばんは。
+>
+> http://www.hatena.ne.jp/pharo/ で、Pharo by Exampleの和訳に、ひとりで取
+> り組んでいる人がいます。最近はへこたれているようですがその人がある日、
+>
+> 「ふと思いましたが３００ページ越えの英語のドキュメントでも１人１ページ訳
+> せば３００人で１日で終わりますね」
+> http://d.hatena.ne.jp/pharo/20101006
+>
+> と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+> 的には良い考えだと思います。私たちで協力しませんか?
+>
+> 協業には、みんなの翻訳: http://trans-aid.jp/ が使えると思います。
+>
+> ご意見お待ちしています。
+> --
+> 堀内寛己(ほりうちひろき)
+> http://twitter.com/x19290
+>
+>
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From ume ＠ softumeya.com  Tue Jun  7 10:41:01 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 7 Jun 2011 10:41:01 +0900
+Subject: [SML 7946] Re:
+	Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DED65AB.9030806@gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+ <4DED65AB.9030806@gmail.com>
+Message-ID: <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+
+梅澤です。
+
+https://github.com/SquareBracketAssociates/PharoByExample-english
+のContributingのところに手順が書いてありますね。
+
+まずは
+https://www.iam.unibe.ch/mailman/listinfo/sbe-discussion
+で翻訳の開始をアナウンスするのが良いのではないでしょうか。
+
+Sergeさんも取りはからってくれると思います。
+
+なお、私も翻訳に参加させていただきます。
+
+2011年6月7日8:41 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+> 早速のご協力感謝します。
+>
+> 協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+> のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+>
+> まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+> ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+> さい。
+>
+> 梅沢さんには、私をフォローしてもらっています。
+>
+> http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+> --
+> 堀内寛己(ほりうちひろき)
+> http://twitter.com/x19290
+>
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Tue Jun  7 11:27:14 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 7 Jun 2011 11:27:14 +0900
+Subject: [SML 7947] Re:
+	Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+ <4DED65AB.9030806@gmail.com>
+ <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+Message-ID: <BANLkTik-mC2sbWuAfdD2jH-_NzZgPt85Mw@mail.gmail.com>
+
+梅澤です。
+
+翻訳参加者用のGoogleグループを作成したので、翻訳希望の方はご参加ください。
+https://groups.google.com/group/pharo-by-example-ja?hl=ja
+
+Twitterでも話が進んでいますが、ごちゃごちゃしてくるので、とりあえずこのURLを皆さんにお知らせください。
+
+ではでは。
+
+2011年6月7日10:41 Masashi Umezawa <ume ＠ softumeya.com>:
+> 梅澤です。
+>
+> https://github.com/SquareBracketAssociates/PharoByExample-english
+> のContributingのところに手順が書いてありますね。
+>
+> まずは
+> https://www.iam.unibe.ch/mailman/listinfo/sbe-discussion
+> で翻訳の開始をアナウンスするのが良いのではないでしょうか。
+>
+> Sergeさんも取りはからってくれると思います。
+>
+> なお、私も翻訳に参加させていただきます。
+>
+> 2011年6月7日8:41 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+>> 早速のご協力感謝します。
+>>
+>> 協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+>> のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+>>
+>> まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+>> ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+>> さい。
+>>
+>> 梅沢さんには、私をフォローしてもらっています。
+>>
+>> http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+>> --
+>> 堀内寛己(ほりうちひろき)
+>> http://twitter.com/x19290
+>>
+>
+> --
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+>
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From serge.stinckwich ＠ gmail.com  Tue Jun  7 11:59:39 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue, 7 Jun 2011 09:59:39 +0700
+Subject: [SML 7948] Re:
+	Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <BANLkTik-mC2sbWuAfdD2jH-_NzZgPt85Mw@mail.gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+ <4DED65AB.9030806@gmail.com>
+ <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+ <BANLkTik-mC2sbWuAfdD2jH-_NzZgPt85Mw@mail.gmail.com>
+Message-ID: <BANLkTinVw4wGJjRDpiWU7GRo4hR-yJKrtQ@mail.gmail.com>
+
+Hi all,
+
+i create a japanese team for PBE translation here:
+https://github.com/organizations/SquareBracketAssociates
+and a repository:
+https://github.com/SquareBracketAssociates/PharoByExample-japanese
+
+If some of you want to join the team, please ask me, i will add you (i
+need your github account).
+
+Regards,
+
+2011/6/7 Masashi Umezawa <ume ＠ softumeya.com>:
+> 梅澤です。
+>
+> 翻訳参加者用のGoogleグループを作成したので、翻訳希望の方はご参加ください。
+> https://groups.google.com/group/pharo-by-example-ja?hl=ja
+>
+> Twitterでも話が進んでいますが、ごちゃごちゃしてくるので、とりあえずこのURLを皆さんにお知らせください。
+>
+> ではでは。
+>
+> 2011年6月7日10:41 Masashi Umezawa <ume ＠ softumeya.com>:
+>> 梅澤です。
+>>
+>> https://github.com/SquareBracketAssociates/PharoByExample-english
+>> のContributingのところに手順が書いてありますね。
+>>
+>> まずは
+>> https://www.iam.unibe.ch/mailman/listinfo/sbe-discussion
+>> で翻訳の開始をアナウンスするのが良いのではないでしょうか。
+>>
+>> Sergeさんも取りはからってくれると思います。
+>>
+>> なお、私も翻訳に参加させていただきます。
+>>
+>> 2011年6月7日8:41 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+>>> 早速のご協力感謝します。
+>>>
+>>> 協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+>>> のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+>>>
+>>> まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+>>> ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+>>> さい。
+>>>
+>>> 梅沢さんには、私をフォローしてもらっています。
+>>>
+>>> http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+>>> --
+>>> 堀内寛己(ほりうちひろき)
+>>> http://twitter.com/x19290
+>>>
+>>
+>> --
+>> "SoftUmeYa, LLC"
+>> [:masashi | ^umezawa]
+>>
+>
+> --
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+>
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From ume ＠ softumeya.com  Tue Jun  7 12:05:27 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 7 Jun 2011 12:05:27 +0900
+Subject: [SML 7949] Re:
+	Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <BANLkTinVw4wGJjRDpiWU7GRo4hR-yJKrtQ@mail.gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+ <4DED65AB.9030806@gmail.com>
+ <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+ <BANLkTik-mC2sbWuAfdD2jH-_NzZgPt85Mw@mail.gmail.com>
+ <BANLkTinVw4wGJjRDpiWU7GRo4hR-yJKrtQ@mail.gmail.com>
+Message-ID: <BANLkTimVcr=qj-NyJnottfNv9jGZBbyJmg@mail.gmail.com>
+
+Hi Serge,
+
+Could you kindly add me? My account is mumez (https://github.com/mumez).
+
+2011年6月7日11:59 Serge Stinckwich <serge.stinckwich ＠ gmail.com>:
+> Hi all,
+>
+> i create a japanese team for PBE translation here:
+> https://github.com/organizations/SquareBracketAssociates
+> and a repository:
+> https://github.com/SquareBracketAssociates/PharoByExample-japanese
+>
+> If some of you want to join the team, please ask me, i will add you (i
+> need your github account).
+>
+> Regards,
+>
+> 2011/6/7 Masashi Umezawa <ume ＠ softumeya.com>:
+>> 梅澤です。
+>>
+>> 翻訳参加者用のGoogleグループを作成したので、翻訳希望の方はご参加ください。
+>> https://groups.google.com/group/pharo-by-example-ja?hl=ja
+>>
+>> Twitterでも話が進んでいますが、ごちゃごちゃしてくるので、とりあえずこのURLを皆さんにお知らせください。
+>>
+>> ではでは。
+>>
+>> 2011年6月7日10:41 Masashi Umezawa <ume ＠ softumeya.com>:
+>>> 梅澤です。
+>>>
+>>> https://github.com/SquareBracketAssociates/PharoByExample-english
+>>> のContributingのところに手順が書いてありますね。
+>>>
+>>> まずは
+>>> https://www.iam.unibe.ch/mailman/listinfo/sbe-discussion
+>>> で翻訳の開始をアナウンスするのが良いのではないでしょうか。
+>>>
+>>> Sergeさんも取りはからってくれると思います。
+>>>
+>>> なお、私も翻訳に参加させていただきます。
+>>>
+>>> 2011年6月7日8:41 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+>>>> 早速のご協力感謝します。
+>>>>
+>>>> 協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+>>>> のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+>>>>
+>>>> まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+>>>> ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+>>>> さい。
+>>>>
+>>>> 梅沢さんには、私をフォローしてもらっています。
+>>>>
+>>>> http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+>>>> --
+>>>> 堀内寛己(ほりうちひろき)
+>>>> http://twitter.com/x19290
+>>>>
+>>>
+>>> --
+>>> "SoftUmeYa, LLC"
+>>> [:masashi | ^umezawa]
+>>>
+>>
+>> --
+>> "SoftUmeYa, LLC"
+>> [:masashi | ^umezawa]
+>>
+>
+>
+>
+> --
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Every DSL ends up being Smalltalk
+> http://doesnotunderstand.org/
+>
+
+
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From serge.stinckwich ＠ gmail.com  Tue Jun  7 12:14:56 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue, 7 Jun 2011 10:14:56 +0700
+Subject: [SML 7950] Re:
+	Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <BANLkTimVcr=qj-NyJnottfNv9jGZBbyJmg@mail.gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+ <4DED65AB.9030806@gmail.com>
+ <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+ <BANLkTik-mC2sbWuAfdD2jH-_NzZgPt85Mw@mail.gmail.com>
+ <BANLkTinVw4wGJjRDpiWU7GRo4hR-yJKrtQ@mail.gmail.com>
+ <BANLkTimVcr=qj-NyJnottfNv9jGZBbyJmg@mail.gmail.com>
+Message-ID: <BANLkTinjspdK1C+uT3fNKtYrgxXB6oF3hQ@mail.gmail.com>
+
+ok done.
+Enjoy :-)
+
+2011/6/7 Masashi Umezawa <ume ＠ softumeya.com>:
+> Hi Serge,
+>
+> Could you kindly add me? My account is mumez (https://github.com/mumez).
+>
+> 2011年6月7日11:59 Serge Stinckwich <serge.stinckwich ＠ gmail.com>:
+>> Hi all,
+>>
+>> i create a japanese team for PBE translation here:
+>> https://github.com/organizations/SquareBracketAssociates
+>> and a repository:
+>> https://github.com/SquareBracketAssociates/PharoByExample-japanese
+>>
+>> If some of you want to join the team, please ask me, i will add you (i
+>> need your github account).
+>>
+>> Regards,
+>>
+>> 2011/6/7 Masashi Umezawa <ume ＠ softumeya.com>:
+>>> 梅澤です。
+>>>
+>>> 翻訳参加者用のGoogleグループを作成したので、翻訳希望の方はご参加ください。
+>>> https://groups.google.com/group/pharo-by-example-ja?hl=ja
+>>>
+>>> Twitterでも話が進んでいますが、ごちゃごちゃしてくるので、とりあえずこのURLを皆さんにお知らせください。
+>>>
+>>> ではでは。
+>>>
+>>> 2011年6月7日10:41 Masashi Umezawa <ume ＠ softumeya.com>:
+>>>> 梅澤です。
+>>>>
+>>>> https://github.com/SquareBracketAssociates/PharoByExample-english
+>>>> のContributingのところに手順が書いてありますね。
+>>>>
+>>>> まずは
+>>>> https://www.iam.unibe.ch/mailman/listinfo/sbe-discussion
+>>>> で翻訳の開始をアナウンスするのが良いのではないでしょうか。
+>>>>
+>>>> Sergeさんも取りはからってくれると思います。
+>>>>
+>>>> なお、私も翻訳に参加させていただきます。
+>>>>
+>>>> 2011年6月7日8:41 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+>>>>> 早速のご協力感謝します。
+>>>>>
+>>>>> 協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+>>>>> のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+>>>>>
+>>>>> まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+>>>>> ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+>>>>> さい。
+>>>>>
+>>>>> 梅沢さんには、私をフォローしてもらっています。
+>>>>>
+>>>>> http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+>>>>> --
+>>>>> 堀内寛己(ほりうちひろき)
+>>>>> http://twitter.com/x19290
+>>>>>
+>>>>
+>>>> --
+>>>> "SoftUmeYa, LLC"
+>>>> [:masashi | ^umezawa]
+>>>>
+>>>
+>>> --
+>>> "SoftUmeYa, LLC"
+>>> [:masashi | ^umezawa]
+>>>
+>>
+>>
+>>
+>> --
+>> Serge Stinckwich
+>> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+>> Every DSL ends up being Smalltalk
+>> http://doesnotunderstand.org/
+>>
+>
+>
+>
+> --
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+>
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From ume ＠ softumeya.com  Mon Jun 20 21:26:14 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Mon, 20 Jun 2011 21:26:14 +0900
+Subject: [SML 7951]
+	第33回Smalltalk勉強会のお知らせ
+Message-ID: <BANLkTiks+WLeGBq4Q=9Bbo+SfTKj2Mp0bA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/6/29(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai33kaismalltalkbenkyoukai
+
+今回のテーマはちょっとマニアックな感じがしますが、「シリアライザ」です。
+古くはBOSS、新しくはFuel、StOMPと、Smalltalkには様々なシリアライザが存在します。
+StOMPの開発者(私ですが)が、いろいろなシリアライザの特徴について解説を行います。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Mon Jun 27 22:29:25 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Mon, 27 Jun 2011 22:29:25 +0900
+Subject: [SML 7952]
+	Appleストア銀座でSmalltalkハンズオン
+Message-ID: <BANLkTimBzdeOhaVkza1gRzyQvS7TvdyC=A@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+このたびAppleストア銀座でSmalltalkハンズオンセミナをすることになりました。
+http://www.cincom.co.jp/products/seminar/smalltalk_seminar2.html
+
+前回はObjective-Cな人向けだったわけですが、今回は「自由形式」とも言えるものです。
+
+あらかじめ「Smalltalkでこんなことをしたい」というテーマを持参いただいて、それに対して講師がペアプロのような形で手助けするというスタイルです。
+初心者の方から、実際にアプリを作ってみたいという方まで、幅広く対応できるものになっています。(あまり無茶なテーマでこられても困るわけですが)
+
+7/23(土)、30(土)の2日間です。どちらか一方の参加でもかまいません。
+
+もちろん無料です。最新のAppleの機器を使い、普段は有料でないと入れないところでみっちりSmalltalkできます。
+銀ブラのついでにどうぞ。
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun 29 10:53:14 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 29 Jun 2011 10:53:14 +0900
+Subject: [SML 7953]
+ 第33回Smalltalk勉強会＠京都
+Message-ID: <4E0A858A.300@cc.kyoto-su.ac.jp>
+
+第33回Smalltalk勉強会＠京都を開催します。
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto33
+
+場所はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第33回 Smalltalk勉強会＠京都
+日時：2011年07月06日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+窓MVCを完成へと導きたいと思いますが、急がず着実に進むことを
+優先しますし、脱線もあると思います。ノート型のパーソナルコン
+ピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+なお、シンコム・システムズ・ジャパンさんから団扇（うちわ）を
+頂戴しております。講習室にて配付したいと存じます。
+Smalltalk気球が描かれていますよ。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+

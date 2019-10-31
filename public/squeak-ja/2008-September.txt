@@ -1,0 +1,713 @@
+From tako ＠ aquilax.co.jp  Mon Sep  1 15:19:14 2008
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Mon Sep  1 15:19:31 2008
+Subject: [Squeak-ja: 3976] 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+Message-ID: <20080901061913.ACD199A78E@1server.aquilax.co.jp>
+
+　高橋＠池袋です。
+
+　梅澤さんの最新日本語版Squeak3.9.1-final-7075Jで
+日本語を含む特定の stファイルが「インストール」できませんでした。
+　問題は解決済みですが既知の現象でしょうか？
+
+-----症状
+
+　stファイルはSqueakNihongo6.1 のブラウザでカテゴリをfileOut
+したもの。
+　class名、method名、変数名などは全て ASCII。代入は _
+
+　Squeak3.9.1-final-7075Jの fileListで 「インストール」すると
+途中でSyntax Error
+<<<This string contains character (ascii value 154) that 
+is not normally used in code>>>
+
+　問題の部分は Dictionaryの初期化を行っている部分。
+    dic at: $年 put: -4;
+　stファイル中、最初の日本語。年の部分が文字化け。
+
+
+-----対処法
+
+　ファイルリストで stファイルを選択
+　文字コードの変更　utf-8指定
+　ファイルの内容表示を全選択
+　contextメニューの「ファイルイン」
+　→ エラーなく完了
+
+
+-----謎
+
+　対処法でfileInしたものをSqueak3.9.1-final-7075Jから
+fileOutし直した stファイルは問題なく「インストール」可能。
+
+　×と○のstファイルを比較してもほとんど違いが無いよう。
+    class定義の 変数名リスト末尾のspaceの有無ぐらい。
+
+　また、classをfileOutすると　'from Squeak3.9.1 of ...'が先頭に
+　付きますが カテゴリのfileOutには付かないようです。
+
+
+
+追伸
+　梅澤さん、ありがとうございます。FileManも使わせていただきます。
+
+
+ではでは
+
+
+From yoshiki ＠ vpri.org  Wed Sep  3 08:09:44 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed Sep  3 08:11:12 2008
+Subject: [Squeak-ja: 3977] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+In-Reply-To: <20080901061913.ACD199A78E@1server.aquilax.co.jp>
+References: <20080901061913.ACD199A78E@1server.aquilax.co.jp>
+Message-ID: <uod36gn5z.wl%yoshiki@vpri.org>
+
+> 　対処法でfileInしたものをSqueak3.9.1-final-7075Jから
+> fileOutし直した stファイルは問題なく「インストール」可能。
+> 
+> 　×と○のstファイルを比較してもほとんど違いが無いよう。
+>     class定義の 変数名リスト末尾のspaceの有無ぐらい。
+
+  ファイルの頭の3バイトが、Byte Ordr Markと呼ばれるUTF-8を表すためのバ
+イト列になって出てきていると思います。たとえば、
+
+  (FileStream readOnlyFileNamed: 'foo.cs') binary next: 3.
+
+という式をそれらのファイルで実行すると、返ってくる結果が違うはずです。
+
+-- Yoshiki
+From tako ＠ aquilax.co.jp  Wed Sep  3 10:27:25 2008
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Wed Sep  3 10:27:39 2008
+Subject: [Squeak-ja: 3978] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+Message-ID: <20080903012725.670B29A78E@1server.aquilax.co.jp>
+
+　大島さん、お返事ありがとうございます。
+
+　DumpしたところBOMは付いていません。（新旧imageいずれのfileOutも）
+
+　クラスをfileOutしたstファイルには
+ef bb bf (HEX)が 'From Squeak...' の前に付いていますが
+クラスカテゴリからのstファイルには 'From Squeak...'ごと
+欠落しています。
+
+　また別のカテゴリからのstファイルでうまくインストールできた物も
+ありました(日本語使用のもの)。
+
+　utf-8はチンプンカンプンです。はずしていたらごめんなさい。
+
+
+At 8:09 AM 08.9.3, Yoshiki Ohshima wrote:
+> > 　対処法でfileInしたものをSqueak3.9.1-final-7075Jから
+> > fileOutし直した stファイルは問題なく「インストール」可能。
+> > 
+> > 　×と○のstファイルを比較してもほとんど違いが無いよう。
+> >     class定義の 変数名リスト末尾のspaceの有無ぐらい。
+> 
+>   ファイルの頭の3バイトが、Byte Ordr Markと呼ばれるUTF-8を表すためのバ
+> イト列になって出てきていると思います。たとえば、
+> 
+>   (FileStream readOnlyFileNamed: 'foo.cs') binary next: 3.
+> 
+> という式をそれらのファイルで実行すると、返ってくる結果が違うはずです。
+> 
+> -- Yoshiki
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Sep  3 19:57:03 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Sep  3 19:57:11 2008
+Subject: [Squeak-ja: 3979] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+In-Reply-To: <20080903012725.670B29A78E@1server.aquilax.co.jp>
+References: <20080903012725.670B29A78E@1server.aquilax.co.jp>
+Message-ID: <JA200809031957034.1769125@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Nihongo6系とSqueak3.9Jで日本語コメントを含むクラス群をカテゴリ選択で
+ファイルアウトしてみましたが、前者はBOMなし、後者はBOM付きとなりましたよ。
+
+これについては、過去に以下のような日記を書いていました。
+http://umejava.vox.com/library/post/%E8%87%AA%E7%94%B1%E8%87%AA%E5%9C%A8squeakfileman-%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6bom%E4%BB%98%E3%81%8D%E3%81%AB.html
+
+FileManは便利ですので、どしどしお使い下さい。
+
+tako@aquilax.co.jp (Kouji takahashi) wrote:
+> 　大島さん、お返事ありがとうございます。
+> 
+> 　DumpしたところBOMは付いていません。（新旧imageいずれのfileOutも）
+> 
+> 　クラスをfileOutしたstファイルには
+> ef bb bf (HEX)が 'From Squeak...' の前に付いていますが
+> クラスカテゴリからのstファイルには 'From Squeak...'ごと
+> 欠落しています。
+> 
+> 　また別のカテゴリからのstファイルでうまくインストールできた物も
+> ありました(日本語使用のもの)。
+> 
+> 　utf-8はチンプンカンプンです。はずしていたらごめんなさい。
+> 
+> 
+> At 8:09 AM 08.9.3, Yoshiki Ohshima wrote:
+> > > 　対処法でfileInしたものをSqueak3.9.1-final-7075Jから
+> > > fileOutし直した stファイルは問題なく「インストール」可能。
+> > > 
+> > > 　×と○のstファイルを比較してもほとんど違いが無いよう。
+> > >     class定義の 変数名リスト末尾のspaceの有無ぐらい。
+> > 
+> >   ファイルの頭の3バイトが、Byte Ordr Markと呼ばれるUTF-8を表すためのバ
+> > イト列になって出てきていると思います。たとえば、
+> > 
+> >   (FileStream readOnlyFileNamed: 'foo.cs') binary next: 3.
+> > 
+> > という式をそれらのファイルで実行すると、返ってくる結果が違うはずです。
+> > 
+> > -- Yoshiki
+> 
+
+
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Wed Sep  3 21:58:08 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Sep  3 21:58:22 2008
+Subject: [Squeak-ja: 3980] Scratch 1.3がリリースされました。
+Message-ID: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+
+こんにちは、阿部です。
+
+さきほど、Scratchの公式サイトで、Scratch
+1.3がリリースされました。1.3には多くの新機能がありますが、今回初めてマルチバイト文字に対応したことで、日本語(漢字とひらがな)で使えるようになりました(私はこの部分を少しお手伝いしました。もともとのひらがなのアイデアは蜂須賀さんです)。
+
+http://scratch.wik.is/Scratch_1.3_Release_Notes
+
+Scratchは、MIT Media LabのLifelong Kindergarten
+groupによって開発されている子供向けの教育用言語です。開発にはSqueak Smalltalkが使われており、Squeak
+Etoysの影響を受けていますが、これらとは別のものです。
+Scratchは、シーモア・パパートさんの弟子で、LEGO
+MindstormsやCricket、StarLogoの開発者であるミチェル・レズニックさんの考える「Imagine-Create-Debug-Share-Refrect」のサイクルを支援するように作られています(主なプログラマはMorphicの開発者の一人であるジョン・マロニーさん)。
+Etoysと比較して、Scratchはよりシンプルで洗練されたユーザインタフェースを備え、音や視覚効果の扱いに優れています。プログラムの制御構造も普通で、Etoysのようにプログラミングに習熟している人ほど混乱するようなことがありません。
+また、YouTubeライクなWebサイトが用意されており、ローカルのディスクに保存するのと同じ要領で作品をアップロードできます(SuperSwikiでやろうとしていたことの完成形)。作品はWebブラウザ上でも実行でき、それにコメントを残したり、お気に入りに登録したり、ギャラリーを作ったりできます。サイトには既に約20万件の作品がアップロードされており、今も2分に1つのペースで増え続けています。
+
+http://scratch.mit.edu/
+
+ただし、Etoysが備えていたアラン・ケイ的なメタメディア(Dynabook)の側面、すなわち、環境と言語、アプリケーションの区別がなく、それらの間を自由に行き来できたり、同じオブジェクトである以上はすべて同じように扱えたり(開発ツール自体にスクリプトを書いて回転したり)といったことはできなくなっています(ScratchからSmalltalkへは降りられません)。また、Etoysの目的であるシミュレーションに特化した機能、たとえば、時計で同期する並列処理などもありません。
+つまり、ScratchはEtoysを完全に置き換えるものではなく、一部を補完して共存するものと考えた方がよいかもしれません。Etoysも、近日中にOLPC用に加えられた多くの改良を含む新しいバージョンがリリースされる予定です。
+
+リリース直後ということで、かなりサイトが重いですが、ぜひ試してみてください。
+また、ドキュメントの翻訳も有志の手で進められていますので、近日公開されると思います。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+From yoshiki ＠ vpri.org  Thu Sep  4 06:29:50 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Sep  4 06:30:21 2008
+Subject: [Squeak-ja: 3981] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+In-Reply-To: <20080903012725.670B29A78E@1server.aquilax.co.jp>
+References: <20080903012725.670B29A78E@1server.aquilax.co.jp>
+Message-ID: <ubpz4lxyp.wl%yoshiki@vpri.org>
+
+At Wed, 3 Sep 2008 10:27:25 +0900,
+Kouji takahashi wrote:
+> 
+> 　大島さん、お返事ありがとうございます。
+> 
+> 　DumpしたところBOMは付いていません。（新旧imageいずれのfileOutも）
+> 
+> 　クラスをfileOutしたstファイルには
+> ef bb bf (HEX)が 'From Squeak...' の前に付いていますが
+> クラスカテゴリからのstファイルには 'From Squeak...'ごと
+> 欠落しています。
+
+  ちょっと用語が混乱してしまっているかもしれませんが、'From Squeak...'
+はコメントのようなもので、あまり気にしないでよいと思います。ef bb bfが
+ついていれば大丈夫です。
+
+> 　また別のカテゴリからのstファイルでうまくインストールできた物も
+> ありました(日本語使用のもの)。
+
+  これはほかの要素が絡んでいるようにおもいますね。
+
+-- Yoshiki
+From tako ＠ aquilax.co.jp  Fri Sep  5 14:31:36 2008
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Fri Sep  5 14:31:54 2008
+Subject: [Squeak-ja: 3982] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+Message-ID: <20080905053135.6F2139A79A@1server.aquilax.co.jp>
+
+　高橋＠池袋です。
+
+１日頭を冷やして先程見直してみました。
+
+Squeak3.9.1-Final-7075J.image   BMOあり
+SqueakNihongo6.2.image          BOMなし
+
+　新imageからのfileOutには問題有りません。
+旧imageからのfileOutには、classとcategory いずれからも
+BOMは付いていませんでした。
+
+　新imageでは fileOut関連methodがあちこち変更されており
+数行の変更ではダメなようです。
+
+　新image中の以下のmethodが肝のようですね。
+WrieStream Class > file reader service > 
+writeSourceCodeFrom: aStrem baseName: baseName isSt: stOrCsFlg useHtml: useHtml
+
+　このmethodでascii以外の文字の有無を調べてconverterを切替え。
+MacRomanTextConverter　／　UTF8TextConverter
+　UTF8TextConverterが BOM を追加とい流れのようです。
+
+
+　謎が解けました。どうもありがとうございました。
+
+
+At 6:29 AM 08.9.4, Yoshiki Ohshima wrote:
+> At Wed, 3 Sep 2008 10:27:25 +0900,
+> Kouji takahashi wrote:
+> > 
+> > 　大島さん、お返事ありがとうございます。
+> > 
+> > 　DumpしたところBOMは付いていません。（新旧imageいずれのfileOutも）
+> > 
+> > 　クラスをfileOutしたstファイルには
+> > ef bb bf (HEX)が 'From Squeak...' の前に付いていますが
+> > クラスカテゴリからのstファイルには 'From Squeak...'ごと
+> > 欠落しています。
+> 
+>   ちょっと用語が混乱してしまっているかもしれませんが、'From Squeak...'
+> はコメントのようなもので、あまり気にしないでよいと思います。ef bb bfが
+> ついていれば大丈夫です。
+> 
+> > 　また別のカテゴリからのstファイルでうまくインストールできた物も
+> > ありました(日本語使用のもの)。
+> 
+>   これはほかの要素が絡んでいるようにおもいますね。
+> 
+> -- Yoshiki
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Sep  7 09:51:13 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Sep  7 09:51:23 2008
+Subject: [Squeak-ja: 3983] 「Seaside へ GO!!」の第二回
+Message-ID: <JE200809070951134.3244281@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+「Seaside へ GO!!」の第二回が掲載されました。今回はレンダリングとコールバック
+についてです。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/seaside2/index.html
+
+「もっとこんなところを扱って欲しい」などリクエストがありましたらぜひお願い
+します。これから三回目の執筆に入りますので。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From hayasaka ＠ pluto.dti.ne.jp  Tue Sep  9 19:34:18 2008
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Tue Sep  9 19:34:37 2008
+Subject: [Squeak-ja: 3984] ナビゲーションの操作方法について
+Message-ID: <19BF3645AB4B4DED95FF14E9CF434D65@computer>
+
+こんにちは。　早坂です。
+
+　プレゼンテーションを作成しようとしているのですが、
+オブジェクトカタログ（Objectｓtools）のナビゲーション
+（ThreadNavigation）を使って、プロジェクトソータに
+プロジェクトを呼び出すと茶色のプロジェクト名がついた
+サムネイルが表示されるだけで、所望のプロジェクトの
+サムネイルが表示されません。
+どこの操作が悪いのかわかりません。
+教えて頂けると幸いです。
+
+早坂　吉昭
+
+From abee ＠ squeakland.jp  Tue Sep  9 20:40:19 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Sep  9 20:40:42 2008
+Subject: [Squeak-ja: 3985] Re: ナビゲーションの操作方法について
+In-Reply-To: <19BF3645AB4B4DED95FF14E9CF434D65@computer>
+References: <19BF3645AB4B4DED95FF14E9CF434D65@computer>
+Message-ID: <2d5d52a80809090440q3ac6221bsa0397218d604ff9b@mail.gmail.com>
+
+こんにちは、阿部です。
+スレッド・ナビゲータは必要なプロジェクトをすべて開いた「後で」使います。
+必要なプロジェクトファイルをSqueakのウィンドウにドラッグしたり、ナビゲータの「探す」から、選んで開いた後に、スレッド・ナビゲータを開いてみてください。
+プロジェクトの順番は真ん中のオレンジ色のボタンをクリックして、「このスレッドを編集する」を選び、サムネイルをドラッグすることで変えられます。
+操作については、川村さんのサイトやことだま(この部分はSqueakland版と同じ)の解説が参考になると思います。
+http://squeak.qp.land.to/wiki/index.php?Tools%2FThreadNavigation
+http://www.crew.sfc.keio.ac.jp/squeak/text/htmlver_text/index_p4_c10.html#doc12_9338
+
+あと、とても重要な点なのですが、このようにして作ったスレッドはSqueakを一旦終了すると消えてしまいます。それを避けるには、イメージ(Squeak環境全体)の保存を行う必要があります。しかも、通常のSqueakland版では、誤操作や悪意のあるプロジェクトを避けるために、この操作ができなくなっています。これを回避するには、プレゼンの際に開発者版を使うか(Squeakland版で作ったプロジェクトは問題なく読み込めます)、
+http://squeakland.jp/developer/
+
+Squeakland版で以下の操作を行う必要があります。
+
+1. Escキーを押してワールドメニューを開き、「ヘルプ」から「プリファレンス」を選びます。
+2. 開いたPreferenceのウィンドウで、「securityChecksEnabled」を「Search」ボタンで検索します。
+3. 見つかったsecurityChecksEnabledのチェックをクリックして外します。
+4. Preferenceウィンドウを閉じ、もう一度、Escキーを押してワールドメニューを開き、「別名で保存」や「新しい版で保存」を選んでイメージを保存します。デフォルトの保存場所はC:\My
+Squeakです(Windowsの場合)。
+
+以上の作業は、「プロジェクトを開く前」に行わなければなりません。すでにプロジェクトを開いていたら、一旦Squeakを終了して最初からお願いします。
+これついて、詳しくは以下の山宮さんのサイトをご覧ください。
+http://d.hatena.ne.jp/propella/20050805/p1
+
+この作業を行った後に、Squeakを一旦終了してから、保存したイメージをダブルクリックで起動し、上に書いたプロジェクトの読み込みやスレッド・ナビゲータの設定を行って、イメージを保存してください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/09/09 19:34 早坂　吉昭 <hayasaka@pluto.dti.ne.jp>:
+> こんにちは。　早坂です。
+>
+> 　プレゼンテーションを作成しようとしているのですが、
+> オブジェクトカタログ（Objectｓtools）のナビゲーション
+> （ThreadNavigation）を使って、プロジェクトソータに
+> プロジェクトを呼び出すと茶色のプロジェクト名がついた
+> サムネイルが表示されるだけで、所望のプロジェクトの
+> サムネイルが表示されません。
+> どこの操作が悪いのかわかりません。
+> 教えて頂けると幸いです。
+>
+> 早坂　吉昭
+From hayasaka ＠ pluto.dti.ne.jp  Wed Sep 10 17:45:50 2008
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Wed Sep 10 17:46:13 2008
+Subject: [Squeak-ja: 3986] Re: ナビゲーションの操作方法について (早坂　吉昭)
+References: <200809100300.m8A30dwD019625@pop.pluto.dti.ne.jp>
+Message-ID: <BA6A67C09F074714B522640125B08D7A@computer>
+
+阿部さん
+
+　ごていねいな説明をありがとうございました。
+まだ、作成に四苦八苦しておりますが
+（作成した後にスライドが欠け落ちる）、
+なんとか、目処が立ちそうです。
+　完成したら、ネパールでプレゼンに使います。
+
+早坂　吉昭
+
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Tue, 9 Sep 2008 19:34:18 +0900
+> From: 早坂　吉昭 <hayasaka@pluto.dti.ne.jp>
+> Subject: [Squeak-ja: 3984] ナビゲーションの操作方法について
+> To: <squeak-ja@smalltalk.jp>
+> Message-ID: <19BF3645AB4B4DED95FF14E9CF434D65@computer>
+> Content-Type: text/plain; format=flowed; charset="iso-2022-jp";
+> reply-type=original
+>
+> こんにちは。　早坂です。
+>
+> 　プレゼンテーションを作成しようとしているのですが、
+> オブジェクトカタログ（Objectｓtools）のナビゲーション
+> （ThreadNavigation）を使って、プロジェクトソータに
+> プロジェクトを呼び出すと茶色のプロジェクト名がついた
+> サムネイルが表示されるだけで、所望のプロジェクトの
+> サムネイルが表示されません。
+> どこの操作が悪いのかわかりません。
+> 教えて頂けると幸いです。
+>
+> 早坂　吉昭
+>
+>
+>
+> ------------------------------
+>
+> Message: 2
+> Date: Tue, 9 Sep 2008 20:40:19 +0900
+> From: "Kazuhiro ABE" <abee@squeakland.jp>
+> Subject: [Squeak-ja: 3985] Re: ナビゲーションの操作方法について
+> To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+> Message-ID:
+> <2d5d52a80809090440q3ac6221bsa0397218d604ff9b@mail.gmail.com>
+> Content-Type: text/plain; charset=ISO-2022-JP
+>
+> こんにちは、阿部です。
+> スレッド・ナビゲータは必要なプロジェクトをすべて開いた「後で」使います。
+> 必要なプロジェクトファイルをSqueakのウィンドウにドラッグしたり、ナビゲータの「探す」から、選んで開いた後に、スレッド・ナビゲータを開いてみてください。
+> プロジェクトの順番は真ん中のオレンジ色のボタンをクリックして、「このスレッドを編集する」を選び、サムネイルをドラッグすることで変えられます。
+> 操作については、川村さんのサイトやことだま(この部分はSqueakland版と同じ)の解説が参考になると思います。
+> http://squeak.qp.land.to/wiki/index.php?Tools%2FThreadNavigation
+> http://www.crew.sfc.keio.ac.jp/squeak/text/htmlver_text/index_p4_c10.html#doc12_9338
+>
+> あと、とても重要な点なのですが、このようにして作ったスレッドはSqueakを一旦終了すると消えてしまいます。それを避けるには、イメージ(Squeak環境全体)の保存を行う必要があります。しかも、通常のSqueakland版では、誤操作や悪意のあるプロジェクトを避けるために、この操作ができなくなっています。これを回避するには、プレゼンの際に開発者版を使うか(Squeakland版で作ったプロジェクトは問題なく読み込めます)、
+> http://squeakland.jp/developer/
+>
+> Squeakland版で以下の操作を行う必要があります。
+>
+> 1. Escキーを押してワールドメニューを開き、「ヘルプ」から「プリファレンス」を選びます。
+> 2. 開いたPreferenceのウィンドウで、「securityChecksEnabled」を「Search」ボタンで検索します。
+> 3. 見つかったsecurityChecksEnabledのチェックをクリックして外します。
+> 4. Preferenceウィンドウを閉じ、もう一度、Escキーを押してワールドメニューを開き、「別名で保存」や「新しい版で保存」を選んでイメージを保存します。デフォルトの保存場所はC:\My
+> Squeakです(Windowsの場合)。
+>
+> 以上の作業は、「プロジェクトを開く前」に行わなければなりません。すでにプロジェクトを開いていたら、一旦Squeakを終了して最初からお願いします。
+> これついて、詳しくは以下の山宮さんのサイトをご覧ください。
+> http://d.hatena.ne.jp/propella/20050805/p1
+>
+> この作業を行った後に、Squeakを一旦終了してから、保存したイメージをダブルクリックで起動し、上に書いたプロジェクトの読み込みやスレッド・ナビゲータの設定を行って、イメージを保存してください。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 2008/09/09 19:34 早坂　吉昭 <hayasaka@pluto.dti.ne.jp>:
+>> こんにちは。　早坂です。
+>>
+>> 　プレゼンテーションを作成しようとしているのですが、
+>> オブジェクトカタログ（Objectｓtools）のナビゲーション
+>> （ThreadNavigation）を使って、プロジェクトソータに
+>> プロジェクトを呼び出すと茶色のプロジェクト名がついた
+>> サムネイルが表示されるだけで、所望のプロジェクトの
+>> サムネイルが表示されません。
+>> どこの操作が悪いのかわかりません。
+>> 教えて頂けると幸いです。
+>>
+>> 早坂　吉昭
+>
+>
+> ------------------------------
+>
+> _______________________________________________
+> Squeak-ja mailing list
+> Squeak-ja@smalltalk.jp
+> http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+>
+>
+> 以上: Squeak-ja まとめ読み, 47 巻, 6 号
+> *************************************** 
+
+From umejava ＠ mars.dti.ne.jp  Thu Sep 11 22:13:41 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Sep 11 22:13:59 2008
+Subject: [Squeak-ja: 3987] 第1回Smalltalk勉強会のお知らせ
+Message-ID: <JI200809112213413.1019171@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、Smalltalk-users.jpができ、青木さんの通称「ブラックブック」も
+発売されました。ここらで初心に返ってSmalltalk勉強会をしてみると良いのでは
+と思い、企画してみました。
+
+日時: 2008/9/19(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi
+
+Smalltalkを使ったことのない初心者の方、お待ちしています。
+もちろんベテランも大歓迎です。
+
+お気軽に、どしどしお越しください。
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Fri Sep 12 15:39:04 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Sep 12 15:39:21 2008
+Subject: [Squeak-ja: 3988] Re: オープンソースカンファレンス 2008 Tokyo/Fall
+In-Reply-To: <2d5d52a80808292228j47ec3da9g6f70d663111a8bd8@mail.gmail.com>
+References: <2d5d52a80808292228j47ec3da9g6f70d663111a8bd8@mail.gmail.com>
+Message-ID: <2d5d52a80809112339u657d9851v30a809fa10f01f35@mail.gmail.com>
+
+こんにちは、阿部です。
+先にご案内したOSC 2008 Tokyo/Fallのセミナーですが、日時が決まり、募集も始まりましたので、お知らせします。
+
+2008-10-04 (土)   新しい教育用ビジュアル言語のスタンダード「Scratch」
+講師：阿部 和広（サイバー大学 客員教授）
+担当：Smalltalk-users.jp / Squeak-ja
+対象者：新しい言語に興味がある人。初中等教育に携わっている人。メディアアートに関心のある人。
+Scatchは、SqueakをベースにMIT Media
+Labが開発中の教育用ビジュアル言語である。YouTubeライクなWebサイトには世界中から既に約20万の作品がアップされている。この人気の秘密やEtoysとの違い、9月にリリースされる多言語版も紹介する。
+開始時間 14時00分
+http://www.ospn.jp/osc2008-fall/modules/eguide/event.php?eid=25
+
+事前登録はこちらです。
+http://www.ospn.jp/osc2008-fall/modules/eventrsv/register2.php
+
+Smalltalk-users.jpとの共同ブース展示は「10/4(土)のみ」行っています。合わせてどうぞ。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+From mutoh ＠ openedu.org  Fri Sep 12 16:53:31 2008
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Fri Sep 12 17:17:25 2008
+Subject: [Squeak-ja: 3989] GainerとSerialとわたし
+Message-ID: <86bpytls04.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+ごぶさたしてます。
+
+久しぶりに夏休みというものを味わって、はじけてました(^-^;)
+# http://qml.610t.org/FreeBSD/SummerVacation2008.html
+
+OSC2008 Nagoyaで、Gainerの中の人のお話を聴く機会がありまして、横川さん
+のSqueak+Gainerも紹介されていました。
+
+私、ハードウエアが付録につくと、ついつい雑誌を買ってしまう人なのですが、
+その中にDesign Wave Magazine 2008/05のCortex-M3(ARM)基板というのも入っ
+ていました。これには、Gainerのサブセットも実装されており、3軸の加速度
+センサーもあるので、Squeak+Gainerと一緒に使うと、リアルハンドルとか作
+れて、結構面白いです。
+# が、残念ながらFreeBSDでは、使えない…
+
+
+で、本題ですが、FreeBSDとかでも使いたいので、SparkFunのGainer基板を購
+入して、Squeak+GainerをMacやFreeBSDで試していました。
+で、2つほど疑問点が出てきましたので、識者の方教えてください。
+
+1. Squeak+Gainer側の話
+Squeak+Gainer(14)のGNSerialClient class >> findClientでは、シリアルを3
+番目からなめているように見えます。
+これは、Windowsでは、0-2はレガシーのシリアルがいることが多いからですか
+ね?
+
+この感じだと、Unix系だと/dev/ttyS3とかからなめられてしまいませんかね?
+
+2. SqueakのSerialPluginの実装の話
+手元の3.9-7のVMのソースでは、
+- Squeak-3.9-7/platforms/unix/plugins/SerialPlugin/sqUnixSerial.c
+の最初の方で、
+{{{
+    21  /*** Module variables ***/
+    22  
+    23  /* portNum      0=/dev/ttyS0, etc. */
+    24  /* include 1 byte for NUL at end */
+    25  #define PORT_NAME_SIZE 11
+    26  static const char serialPortBaseName[] = "/dev/ttyS0";
+    27  
+}}}
+と、シリアルデバイスは/dev/ttyS[0-9]とかを仮定しているように見えます。
+これが、USBの場合、/dev/ttyU[0-9]などになる実装も多いようですし、Macな
+どでは/dev/cu.usbserial-xxxxxxとかだったります。
+
+これって、どないしたもんでしょうか?
+MacのVMって、この辺どうなってるんでしょうか?
+
+Gainerだけだと、シリアルプロキシーとか使えばいいのかもしれませんが…
+
+では、情報いただければ幸いです。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+From abee ＠ squeakland.jp  Fri Sep 12 17:46:24 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Sep 12 17:46:43 2008
+Subject: [Squeak-ja: 3990] 新しいSqueakland.orgのウェブサイトとEtoys
+Message-ID: <2d5d52a80809120146u60504279vb1b8c1cf3fcfc4bd@mail.gmail.com>
+
+こんにちは、阿部です。
+
+さきほど、Viewpoints Research InstituteのKim
+Roseさんから、大きく変更された新しいSqueakland,orgのウェブサイトとEtoysのリリースについてのアナウンスがありました。
+
+[Squeakland] Please visit the new Etoys website!
+http://vpri.org/pipermail/squeakland/2008-September/004340.html
+
+[Squeakland] Release Notes for Etoys download - Sept 2008
+http://vpri.org/pipermail/squeakland/2008-September/004341.html
+
+現時点でSqueakland.jpに変更はありません。また、ダウンロードできるものは今まで通り、Squekaland
+2005J2です。これらが変わるときは、またお知らせします。
+
+アナウンスの内容は読んでもらうとして、以前は単にSqueakと呼ばれていたものが、Squeak
+EtoysあるいはEtoysに変わっていることに気付かれたと思います。
+もともと、Squeakという言葉は、教育用タイルスクリプト言語環境(Etoys)だけでなく、その実行環境(VM)やツール(Brower,
+Workspaceなど)、ライブラリ(Number, Collection,
+Morphなど)、プログラミング言語(Smalltalk)などをすべてを含んだものでした。しかし、Etoysに多くの注目が集まったことで、SqueakがEtoysの意味で広く使われるようになりました。今回の変更はこれで生じた混乱を減らす意味で行われるものです。ただし、Squeaklandはあまりにポピュラーなので当面使うことになると思います。いずれにしても、このことで日本のSqueak-jaやSqueakland.jpの名前が変わることはありません。
+
+新しいEtoysには、OLPC版を開発する上で行われた多くの改良と、サンプルプロジェクト、ヘルプシステムなどが含まれます。デザインも大きく変わりました。
+Etoysをインストールする際は、Squeakland 2005Jをアンインストールしなくても同時に使うことができます(prファイルの関連付けは変わります)。
+日本語で使うには、起動時に表示される「This language needs additional fonts. Do you want
+to install the fonts?」のメニューに「Yes」と答え、インストールの終了後にAlt+Shift+wキーを押して表示されるメニューから「保存」を選んでください。これで次回からは日本語で表示されます。
+なお、この作業は必ずインターネットに接続された状態で行う必要があります。また、「No」と答えた場合は、文字が化けるため、言語切替ボタン(旗のアイコン)をクリックして、「English」等に変える必要があります。
+Etoysは従来のプロジェクトファイル(pr)を開くことができますが、Etoysで一旦保存したものは以前のバージョンで開くことができません。
+また、Windowsの場合、デフォルトのディレクトリが、「C:\My Squeak」から、「C:\Documents and
+Settings\ユーザ名\My Documents\etoys」に変わっています。
+いろいろ試してみて、見つけた新機能やアイデアについて、教えてもらえるとうれしいです。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+From ykoubo2008 ＠ yengawa.com  Sat Sep 13 22:11:30 2008
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Sat Sep 13 22:11:41 2008
+Subject: [Squeak-ja: 3991] Re: GainerとSerialとわたし
+In-Reply-To: <86bpytls04.wl%mutoh@openedu.org>
+References: <86bpytls04.wl%mutoh@openedu.org>
+Message-ID: <20080913220954.EE7E.56563FCC@yengawa.com>
+
+横川です。
+Squeak＋Gainerに興味を持っていただきありがとうございます。
+二つとも同時に反応する人が少ないようで、なかなか「遊んでみたよ」報告が聞
+けないので寂しく思っていました。
+
+On Fri, 12 Sep 2008 16:53:31 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+
+
+> で、本題ですが、FreeBSDとかでも使いたいので、SparkFunのGainer基板を購
+> 入して、Squeak+GainerをMacやFreeBSDで試していました。
+> で、2つほど疑問点が出てきましたので、識者の方教えてください。
+> 
+> 1. Squeak+Gainer側の話
+> Squeak+Gainer(14)のGNSerialClient class >> findClientでは、シリアルを3
+> 番目からなめているように見えます。
+> これは、Windowsでは、0-2はレガシーのシリアルがいることが多いからですか
+> ね?
+> 
+> この感じだと、Unix系だと/dev/ttyS3とかからなめられてしまいませんかね?
+
+
+手元のWindowsPCで「あ、動いた」レベルで放置状態です。
+このへん詳しくないので情報(や実装)ほしいです。
+シリアルポートの自動認識の常套手段ってあるのでしょうか? >詳しい人
+Scratch Boardはどうしてるのかな?
+ 
+
+-- !
+Koji Yokokawa <ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From abee ＠ squeakland.jp  Sat Sep 13 22:54:50 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sat Sep 13 22:54:59 2008
+Subject: [Squeak-ja: 3992] Re: GainerとSerialとわたし
+In-Reply-To: <20080913220954.EE7E.56563FCC@yengawa.com>
+References: <86bpytls04.wl%mutoh@openedu.org>
+	<20080913220954.EE7E.56563FCC@yengawa.com>
+Message-ID: <2d5d52a80809130654qf51f2eetc003ec82f77e8d0a@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2008/09/13 22:11 Koji Yokokawa <ykoubo2008@yengawa.com>:
+> シリアルポートの自動認識の常套手段ってあるのでしょうか? >詳しい人
+> Scratch Boardはどうしてるのかな?
+
+Scratchの最新版は1.3ですが、ソースが公開されているものは1.2.1です。
+http://scratch.mit.edu/pages/source
+これを見ると、Windowsのことしか考えていないように見えるのですが、COM1-32までをスキャンするようになっています(SensorBoardMorph>>portNames)。
+おもしろいのは、stepしながら、scanStateを変更していき(off, start, checkData,
+on)、それに応じて、実行されるメソッドも変えていっているところでしょうか(SensorBoardMorph >>scanForPort)。
+そのため、デバッガでは追いかけられず、苦労したような記憶があります。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp

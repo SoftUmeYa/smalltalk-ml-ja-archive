@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3515] Re: プロジェクトが開かない。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203515%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJUgkLDMrJCskSiQkISMbKEI%3D%3F%3D&In-Reply-To=u3azlaaou.wl%25yoshiki%40squeakland.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003514.html">
+   <LINK REL="Next"  HREF="003516.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3515] Re: プロジェクトが開かない。</H1>
+    <B>kubo-o</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203515%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJUgkLDMrJCskSiQkISMbKEI%3D%3F%3D&In-Reply-To=u3azlaaou.wl%25yoshiki%40squeakland.org"
+       TITLE="[Squeak-ja: 3515] Re: プロジェクトが開かない。">kubo-o ＠ mbox.kyoto-inet.or.jp
+       </A><BR>
+    <I>2007年 7月 19日 (木) 17:14:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003514.html">[Squeak-ja: 3514] Re: プロジェクトが開かない。
+</A></li>
+        <LI>次の記事 <A HREF="003516.html">[Squeak-ja: 3516] 「夏休み小学生IT教室」のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3515">[ 日付 ]</a>
+              <a href="thread.html#3515">[ スレッド ]</a>
+              <a href="subject.html#3515">[ 件名 ]</a>
+              <a href="author.html#3515">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>大島さん
+いつもありがとうございます。
+今回もお世話に…、と思いつつ
+グルグルプログラムを未練たらしく
+もう一度起動させたら、ちゃんと
+立ち上がってくれました。
+new
+^ super new init.
+
+init
+x _ 0.
+y _ 0.
+T1_2.
+T2_16.
+とやっただけだと思っているのですが。
+グルグル状態は、squeakの画面の左下に
+memoryのカウントのようなものが
+グルグルとカウントアップして、
+２３万あたり、つまりsqueakのプログラムの
+大きさ？で消えてしまったのです。
+大発明の現象を再現できず、
+また、おさがわせしまして
+申し訳ありませんでした。
+久保　道
+-----Original Message-----
+From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A> [mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>]
+On Behalf Of Yoshiki Ohshima
+Sent: Thursday, July 19, 2007 2:23 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3514] Re: プロジェクトが開かない。
+
+  大島です。
+
+  ぐるぐる回ってSqueakが消えましたか。それはもしかしたらすごい発明かも！
+僕も常々ぐるぐる回ってSqueakが消えるようにしたいと思っていのですよ。せっ
+かくですので、どうやったのかもうちょっと詳しく教えてもらえませんか？
+
+  というのはさておき、methodというのがEtoysではなくSqueakのSmalltalkで
+書かれたコードであるならば、ちゃんと動くSqueakイメージを一つ立ち上げ、
+ファイルリストを開いておかしくなったイメージに対応する.changesファイル
+を選択し、&quot;recent changes&quot;を選ぶとその中に入っているメソッド定義が見ら
+れるので、適宜選択してfile inすればある程度復活させることができると思
+います。
+
+  .prファイルとして保存できたものがロードできないというのは少々謎です
+が(カメラのような外部ハードウェアやネットワークに依存したものならあり
+えますが)、その場合はプロジェクトを読み込むコードをデバッガでステップ
+実行したりしながらデータを見てみるといったテクニックが必要ですね。セー
+ブができたものであれば、おそらくは何らかの方法で復元できるとは思います
+が。
+
+-- Yoshiki
+
+At Wed, 18 Jul 2007 23:01:22 +0900,
+kubo-o wrote:
+&gt;<i>
+</I>&gt;<i> いつもお世話になっております。
+</I>&gt;<i> 以下のことで困っております。
+</I>&gt;<i> よろしくお願い致します。
+</I>&gt;<i> あるプログラム作成中に、その中で
+</I>&gt;<i> 一つのmethodを作成して試したところ、
+</I>&gt;<i> グルグル回ってSqueakが消えました。
+</I>&gt;<i> それ以後、このプロジェクトを呼ぶと、
+</I>&gt;<i> 同じようにグルグル回ってSqueakが消えて
+</I>&gt;<i> しまいます。
+</I>&gt;<i> このプログラムだけでも救えないでしょうか。
+</I>&gt;<i> 久保　道
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003514.html">[Squeak-ja: 3514] Re: プロジェクトが開かない。
+</A></li>
+	<LI>次の記事 <A HREF="003516.html">[Squeak-ja: 3516] 「夏休み小学生IT教室」のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3515">[ 日付 ]</a>
+              <a href="thread.html#3515">[ スレッド ]</a>
+              <a href="subject.html#3515">[ 件名 ]</a>
+              <a href="author.html#3515">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7347] OOA&amp;D 事務系アプリケーションの例題演習について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207347%5D%20%3D%3Fiso-2022-jp%3Fb%3FT09BJkQgGyRCO3ZMMzdPJSIlVyVqJTEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlNyVnJXMkTk5jQmoxaT0sJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4774544A.6060507%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007346.html">
+   <LINK REL="Next"  HREF="007348.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7347] OOA&amp;D 事務系アプリケーションの例題演習について</H1>
+    <B>SEKIDO Ryoichi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207347%5D%20%3D%3Fiso-2022-jp%3Fb%3FT09BJkQgGyRCO3ZMMzdPJSIlVyVqJTEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlNyVnJXMkTk5jQmoxaT0sJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4774544A.6060507%40sra.co.jp"
+       TITLE="[SML 7347] OOA&amp;D 事務系アプリケーションの例題演習について">rsekido ＠ iadi.co.jp
+       </A><BR>
+    <I>2008年 1月 30日 (水) 18:15:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007346.html">[SML 7346] [SPAM] SALE 75% OFF on Pfizer
+</A></li>
+        <LI>次の記事 <A HREF="007348.html">[SML 7348] Re: OOA&amp;D 事務系アプリケーションの例題演習について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7347">[ 日付 ]</a>
+              <a href="thread.html#7347">[ スレッド ]</a>
+              <a href="subject.html#7347">[ 件名 ]</a>
+              <a href="author.html#7347">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>関戸@IADI と申します．
+
+古い話しですが以前、青木さんが作成された講義資料「オブジェクト指向分析 
+設計」の中に「事務系アプリケーションの例題演習」として，簡単な図書館の 
+モデルが取り上げられています．
+（<A HREF="http://www.sra.co.jp/people/aoki/OOAOOD/05.pdf&#65289;">http://www.sra.co.jp/people/aoki/OOAOOD/05.pdf）</A>
+
+この中では、図書館の利用者やスタッフとして LibraryUser や 
+LibraryStaff が定義されていますが、それらを管理する仕組み（利用者の登 
+録，変更、削除など）がありません．
+この場合、どのようにするのがよいでしょうか．
+私の場合おそらく，
+
+   Manager
+    |
+    +- UserManager
+    |
+    +- StaffManager
+
+のようなクラスを作って、addUser, modifyUser, searchUser などのメソッド 
+を定義すると思います．
+
+間違っている点、もっとよい方法などあれば教えていただきたくお願いします．
+
+# 最近，PHP プログラマにオブジェクト指向を説明するのにこれらの資料を流用させて
+# いただいてます．
+
+
+--- Inter-Active Design Inc. --------------------------------------&gt;
+関戸　良一                                        <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">rsekido ＠ iadi.co.jp</A>
+SEKIDO Ryoichi                      Phone/Fax 03-5459-0353/5459-0354
+PGP Fingerprint   7E55 E053 1D36 705C 0184  EDA7 850E 469D 8FA0 AD19
+&lt;-------------------------------------- Inter-Active Design Inc. ---
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007346.html">[SML 7346] [SPAM] SALE 75% OFF on Pfizer
+</A></li>
+	<LI>次の記事 <A HREF="007348.html">[SML 7348] Re: OOA&amp;D 事務系アプリケーションの例題演習について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7347">[ 日付 ]</a>
+              <a href="thread.html#7347">[ スレッド ]</a>
+              <a href="subject.html#7347">[ 件名 ]</a>
+              <a href="author.html#7347">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

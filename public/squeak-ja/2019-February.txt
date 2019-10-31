@@ -1,0 +1,328 @@
+From eiichiro.ito ＠ gmail.com  Thu Feb 14 22:08:33 2019
+From: eiichiro.ito ＠ gmail.com (Eiichiro Ito)
+Date: Thu, 14 Feb 2019 22:08:33 +0900
+Subject: [Squeak-ja: 4789] 古いイメージ求む
+Message-ID: <007f99ae-0fc1-5b3c-6352-63b9cdd5b835@gmail.com>
+
+ウァ、オ、「、ウ、ヒ、チ、マ。」
+
+ーヒニ」、ヌ、ケ。」、エフオコサツチ、キ、ニ、ェ、熙゛、ケ。」
+4ヌッ、ヨ、熙ッ、鬢、、ヒナニ、キ、゛、ケ。」
+
+クトソヘナェ、ハシ」、ォ、鮑ナ、、Squeak 
+VM、ネウハニョ、キ、ニ、ェ、遙「GUI、ャニー、ッコヌセョ、ホ・、・癸シ・ク、オ、キ、ニ、、、゛、ケ。」
+
+シォハャ、ホフワ、ホニマ、ッネマーマ、ヌテオ、キ、ソ、ネ、ウ、悅「MicroSqueakDev.image、ャコヌ、篝ョ、オ、ッ。「2,576,348 
+、ネ2.5Mトル、ヌ、ケ。」
+
+、ス、ウ、ヌ2、トシチフ荀ャ、「、熙゛、ケ。」
+
+1. MicroSqueakDev.image 、隍ョ、オ、、・、・癸シ・ク、マ、「、襪里㎜2. 既存のイメージから、より小さいイメージを作る方法はあるのか？
+
+Smalltalk/80を学びはじめて20年以上たちますが、未だに根本的なことがわかっていなくて恥ずかしい限りです。ご存知の方がいらっしゃいましたら、上について教えていただけませんでしょうか。
+
+なお、1について、動作するのは今のところイメージのバージョンが6502に限られているので、そういったものがあれば、ということになります。
+
+よろしくお願いいたします。
+
+From abee.abe ＠ nifty.ne.jp  Thu Feb 14 22:28:07 2019
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu, 14 Feb 2019 22:28:07 +0900
+Subject: [Squeak-ja: 4790] Re: 古いイメージ求む
+In-Reply-To: <007f99ae-0fc1-5b3c-6352-63b9cdd5b835@gmail.com>
+References: <007f99ae-0fc1-5b3c-6352-63b9cdd5b835@gmail.com>
+Message-ID: <CADv7uFEiU3Z9M3-_v7Hmu7O2+d7SPoBFe+eQCAxwNH6+BKHU8w@mail.gmail.com>
+
+ー、ノヌ、ケ。」
+セョ、オ、、・、・癸シ・ク、マ。「PDA、ヌSqueak、鬢サ、襪里⇄圓辰浸∪垢鵑妨Φ罎気譴討い泙靴拭http://wiki.squeak.org/squeak/5796
+私の知る限り、一番小さいのはmini.image(584.6KB)です。
+http://files.squeak.org/SmallSqueaksForPDAs/MiniSqueak2.2/
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2019年2月14日(木) 22:09 Eiichiro Ito <eiichiro.ito ＠ gmail.com>:
+
+>
+> 皆さん、こんにちは。
+>
+> 伊藤です。ご無沙汰しております。
+> 4年ぶりくらいに投稿します。
+>
+> 個人的な趣味から古いSqueak
+> VMと格闘しており、GUIが動く最小のイメージを探しています。
+>
+> 自分の目の届く範囲で探したところ、MicroSqueakDev.imageが最も小さく、2,576,348
+> と2.5M程度です。
+>
+> そこで2つ質問があります。
+>
+> 1. MicroSqueakDev.image より小さいイメージはあるのか？
+> 2. 既存のイメージから、より小さいイメージを作る方法はあるのか？
+>
+> Smalltalk/80を学びはじめて20年以上たちますが、未だに根本的なことがわかっていなくて恥ずかしい限りです。ご存知の方がいらっしゃいましたら、上について教えていただけませんでしょうか。
+>
+> なお、1について、動作するのは今のところイメージのバージョンが6502に限られているので、そういったものがあれば、ということになります。
+>
+> よろしくお願いいたします。
+
+From eiichiro.ito ＠ gmail.com  Thu Feb 14 22:38:23 2019
+From: eiichiro.ito ＠ gmail.com (Eiichiro Ito)
+Date: Thu, 14 Feb 2019 22:38:23 +0900
+Subject: [Squeak-ja: 4791] Re: 古いイメージ求む
+In-Reply-To: <CADv7uFEiU3Z9M3-_v7Hmu7O2+d7SPoBFe+eQCAxwNH6+BKHU8w@mail.gmail.com>
+References: <007f99ae-0fc1-5b3c-6352-63b9cdd5b835@gmail.com>
+ <CADv7uFEiU3Z9M3-_v7Hmu7O2+d7SPoBFe+eQCAxwNH6+BKHU8w@mail.gmail.com>
+Message-ID: <3373b421-6574-2342-5e15-0fee10958b50@gmail.com>
+
+ー、ノ霏ク
+
+ーヒニ」、ヌ、ケ。」
+、オ、テ、ス、ッ、エハヨソョ、、、ソ、タ、ュ、「、熙ャ、ネ、ヲ、エ、カ、、、゛、ケ。」
+、ソ、キ、ォ、ヒ mini.image 、ハ、襪發里♢△蠅泙靴燭諭すっかり忘れておりました。
+
+600KB弱は素晴らしいです。今の VM だとdepth = 
+8以下が表示できないのですが、何とか表示を頑張ってみたいと思います。
+
+本当にありがとうございました。
+
+On 2019/02/14 22:28, Kazuhiro ABE wrote:
+> 阿部です。
+> 小さいイメージは、PDAでSqueakを走らせるのが流行った時、盛んに研究されていました。
+> http://wiki.squeak.org/squeak/5796
+> 私の知る限り、一番小さいのはmini.image(584.6KB)です。
+> http://files.squeak.org/SmallSqueaksForPDAs/MiniSqueak2.2/
+> 
+>   //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+> 
+> 2019年2月14日(木) 22:09 Eiichiro Ito <eiichiro.ito ＠ gmail.com>:
+> 
+>>
+>> 皆さん、こんにちは。
+>>
+>> 伊藤です。ご無沙汰しております。
+>> 4年ぶりくらいに投稿します。
+>>
+>> 個人的な趣味から古いSqueak
+>> VMと格闘しており、GUIが動く最小のイメージを探しています。
+>>
+>> 自分の目の届く範囲で探したところ、MicroSqueakDev.imageが最も小さく、2,576,348
+>> と2.5M程度です。
+>>
+>> そこで2つ質問があります。
+>>
+>> 1. MicroSqueakDev.image より小さいイメージはあるのか？
+>> 2. 既存のイメージから、より小さいイメージを作る方法はあるのか？
+>>
+>> Smalltalk/80を学びはじめて20年以上たちますが、未だに根本的なことがわかっていなくて恥ずかしい限りです。ご存知の方がいらっしゃいましたら、上について教えていただけませんでしょうか。
+>>
+>> なお、1について、動作するのは今のところイメージのバージョンが6502に限られているので、そういったものがあれば、ということになります。
+>>
+>> よろしくお願いいたします。
+
+
+From Yoshiki.Ohshima ＠ acm.org  Fri Feb 15 03:01:29 2019
+From: Yoshiki.Ohshima ＠ acm.org (Yoshiki Ohshima)
+Date: Thu, 14 Feb 2019 10:01:29 -0800
+Subject: [Squeak-ja: 4792] Re: 古いイメージ求む
+In-Reply-To: <3373b421-6574-2342-5e15-0fee10958b50@gmail.com>
+References: <007f99ae-0fc1-5b3c-6352-63b9cdd5b835@gmail.com>
+ <CADv7uFEiU3Z9M3-_v7Hmu7O2+d7SPoBFe+eQCAxwNH6+BKHU8w@mail.gmail.com>
+ <3373b421-6574-2342-5e15-0fee10958b50@gmail.com>
+Message-ID: <CAHC3jCP1VzV-xa8JD1h5-h-uMM6ChPapU4sqombwH50AAiM9wg@mail.gmail.com>
+
+DisplayScreen 、2ビットにするのはmini imageでもできたと思います。もしなんらかの環境でmini
+imageの起動と保存ができるのであれば、
+
+Display depth: 32.
+ScheduledControllers updateGray.
+DisplayScreen startUp
+
+みたいな感じで(適当ですが)深度を32に変えて保存することができると思います。
+
+古いイメージは
+
+https://squeak.js.org/run/
+
+からいくつかリンクされていますし、
+
+https://squeak.org/downloads/
+
+にもあります。
+
+On Thu, Feb 14, 2019 at 5:39 AM Eiichiro Ito <eiichiro.ito ＠ gmail.com> wrote:
+>
+> 阿部先生
+>
+> 伊藤です。
+> さっそくご返信いただきありがとうございます。
+> たしかに mini.image なるものがありましたね。
+> すっかり忘れておりました。
+>
+> 600KB弱は素晴らしいです。今の VM だとdepth =
+> 8以下が表示できないのですが、何とか表示を頑張ってみたいと思います。
+>
+> 本当にありがとうございました。
+>
+> On 2019/02/14 22:28, Kazuhiro ABE wrote:
+> > 阿部です。
+> > 小さいイメージは、PDAでSqueakを走らせるのが流行った時、盛んに研究されていました。
+> > http://wiki.squeak.org/squeak/5796
+> > 私の知る限り、一番小さいのはmini.image(584.6KB)です。
+> > http://files.squeak.org/SmallSqueaksForPDAs/MiniSqueak2.2/
+> >
+> >   //abee
+> > --
+> > 阿部 和広  EMAIL abee ＠ squeakland.jp
+> >
+> > 2019年2月14日(木) 22:09 Eiichiro Ito <eiichiro.ito ＠ gmail.com>:
+> >
+> >>
+> >> 皆さん、こんにちは。
+> >>
+> >> 伊藤です。ご無沙汰しております。
+> >> 4年ぶりくらいに投稿します。
+> >>
+> >> 個人的な趣味から古いSqueak
+> >> VMと格闘しており、GUIが動く最小のイメージを探しています。
+> >>
+> >> 自分の目の届く範囲で探したところ、MicroSqueakDev.imageが最も小さく、2,576,348
+> >> と2.5M程度です。
+> >>
+> >> そこで2つ質問があります。
+> >>
+> >> 1. MicroSqueakDev.image より小さいイメージはあるのか？
+> >> 2. 既存のイメージから、より小さいイメージを作る方法はあるのか？
+> >>
+> >> Smalltalk/80を学びはじめて20年以上たちますが、未だに根本的なことがわかっていなくて恥ずかしい限りです。ご存知の方がいらっしゃいましたら、上について教えていただけませんでしょうか。
+> >>
+> >> なお、1について、動作するのは今のところイメージのバージョンが6502に限られているので、そういったものがあれば、ということになります。
+> >>
+> >> よろしくお願いいたします。
+>
+
+
+-- 
+-- Yoshiki
+
+From eiichiro.ito ＠ gmail.com  Fri Feb 15 10:17:06 2019
+From: eiichiro.ito ＠ gmail.com (Eiichiro Ito)
+Date: Fri, 15 Feb 2019 10:17:06 +0900
+Subject: [Squeak-ja: 4793] Re: 古いイメージ求む
+In-Reply-To: <CAHC3jCP1VzV-xa8JD1h5-h-uMM6ChPapU4sqombwH50AAiM9wg@mail.gmail.com>
+References: <007f99ae-0fc1-5b3c-6352-63b9cdd5b835@gmail.com>
+ <CADv7uFEiU3Z9M3-_v7Hmu7O2+d7SPoBFe+eQCAxwNH6+BKHU8w@mail.gmail.com>
+ <3373b421-6574-2342-5e15-0fee10958b50@gmail.com>
+ <CAHC3jCP1VzV-xa8JD1h5-h-uMM6ChPapU4sqombwH50AAiM9wg@mail.gmail.com>
+Message-ID: <41315f5c-02b6-ddc2-76a0-664599cc262e@gmail.com>
+
+ツ酣遉オ、
+こんにちは。ご無沙汰しております。
+いろんなイメージのありかを教えて頂き、ありがとうございました。
+
+wineを使って古いwindows 
+vmを動かしたらmini.imageも開くことができました。また、教えて頂いた通りにdepth変更もできました。
+
+本当にありがとうございました。
+
+On 2019/02/15 3:01, Yoshiki Ohshima wrote:
+> DisplayScreen を32ビットにするのはmini imageでもできたと思います。もしなんらかの環境でmini
+> imageの起動と保存ができるのであれば、
+> 
+> Display depth: 32.
+> ScheduledControllers updateGray.
+> DisplayScreen startUp
+> 
+> みたいな感じで(適当ですが)深度を32に変えて保存することができると思います。
+> 
+> 古いイメージは
+> 
+> https://squeak.js.org/run/
+> 
+> からいくつかリンクされていますし、
+> 
+> https://squeak.org/downloads/
+> 
+> にもあります。
+> 
+> On Thu, Feb 14, 2019 at 5:39 AM Eiichiro Ito <eiichiro.ito ＠ gmail.com> wrote:
+>>
+>> 阿部先生
+>>
+>> 伊藤です。
+>> さっそくご返信いただきありがとうございます。
+>> たしかに mini.image なるものがありましたね。
+>> すっかり忘れておりました。
+>>
+>> 600KB弱は素晴らしいです。今の VM だとdepth =
+>> 8以下が表示できないのですが、何とか表示を頑張ってみたいと思います。
+>>
+>> 本当にありがとうございました。
+>>
+>> On 2019/02/14 22:28, Kazuhiro ABE wrote:
+>>> 阿部です。
+>>> 小さいイメージは、PDAでSqueakを走らせるのが流行った時、盛んに研究されていました。
+>>> http://wiki.squeak.org/squeak/5796
+>>> 私の知る限り、一番小さいのはmini.image(584.6KB)です。
+>>> http://files.squeak.org/SmallSqueaksForPDAs/MiniSqueak2.2/
+>>>
+>>>    //abee
+>>> --
+>>> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>>>
+>>> 2019年2月14日(木) 22:09 Eiichiro Ito <eiichiro.ito ＠ gmail.com>:
+>>>
+>>>>
+>>>> 皆さん、こんにちは。
+>>>>
+>>>> 伊藤です。ご無沙汰しております。
+>>>> 4年ぶりくらいに投稿します。
+>>>>
+>>>> 個人的な趣味から古いSqueak
+>>>> VMと格闘しており、GUIが動く最小のイメージを探しています。
+>>>>
+>>>> 自分の目の届く範囲で探したところ、MicroSqueakDev.imageが最も小さく、2,576,348
+>>>> と2.5M程度です。
+>>>>
+>>>> そこで2つ質問があります。
+>>>>
+>>>> 1. MicroSqueakDev.image より小さいイメージはあるのか？
+>>>> 2. 既存のイメージから、より小さいイメージを作る方法はあるのか？
+>>>>
+>>>> Smalltalk/80を学びはじめて20年以上たちますが、未だに根本的なことがわかっていなくて恥ずかしい限りです。ご存知の方がいらっしゃいましたら、上について教えていただけませんでしょうか。
+>>>>
+>>>> なお、1について、動作するのは今のところイメージのバージョンが6502に限られているので、そういったものがあれば、ということになります。
+>>>>
+>>>> よろしくお願いいたします。
+>>
+> 
+> 
+
+
+From ume ＠ softumeya.com  Wed Feb 20 23:55:21 2019
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 20 Feb 2019 23:55:21 +0900
+Subject: [Squeak-ja: 4794]
+	第121回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdQgf0fEjf3GK-pXHHP96xqdcUe9Hg72rAw3XwXVT5g84w@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai121kaismalltalkbenkyoukai
+
+日時: 2019/2/27(水) 19:00-21:00
+場所: SORABITO株式会社
+
+今回は先日リリースされたPharo 7.0を取り上げます。
+数々の新機能の紹介が行われていくことでしょう。皆でいろいろ触ってみる時間もあると思います。
+
+参加申し込み等は不要ですので、ふらりとどうぞ。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

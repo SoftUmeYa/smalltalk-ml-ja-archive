@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7555] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207555%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0E6CE9.80403%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007554.html">
+   <LINK REL="Next"  HREF="007551.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7555] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207555%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0E6CE9.80403%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7555] Re: 第7回Smalltalk勉強会＠京都">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2009年 5月 17日 (日) 12:18:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007554.html">[SML 7554] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007551.html">[SML 7551] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7555">[ 日付 ]</a>
+              <a href="thread.html#7555">[ スレッド ]</a>
+              <a href="subject.html#7555">[ 件名 ]</a>
+              <a href="author.html#7555">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+下記のSmalltalkの名前空間に自分のライブラリの名前空間をインポート
+させてしまう方法ですが、私もSIXXというXMLシリアライザのライブラリ
+で使っています。
+
+<A HREF="http://www.mars.dti.ne.jp/~umejava/smalltalk/sixx/index.html">http://www.mars.dti.ne.jp/~umejava/smalltalk/sixx/index.html</A>
+
+SIXXはObjectなどの既存のクラスにシリアライズ用メソッドを追加して
+いるのですが、VW版のみSixx.SixxSettingsなどと名前空間の記述が
+ソース中にでてしまうと、他の名前空間をサポートしていないSmalltalk
+へのポータビリティがなくなってしまいます。
+
+そんなわけで、割と実用的な方法ではないかと私は思っています。
+
+Smalltalkの名前空間内で衝突が無いように、クラスには全てSixxという
+接頭辞をつけるところが冗長ではあります。また他のSmalltalkでも
+名前空間をサポートすべきであり、かつその表記が統一化されるべき
+という話もありますね。(VWでは.Smalltalk/Xでは::が名前空間の
+区切りになっています)
+
+(snip) 
+&gt;<i> そして、次に示すように、Smalltalkという名前空間へ一気に移入
+</I>&gt;<i> を行います。
+</I>&gt;<i> 
+</I>&gt;<i> Smalltalk addImport: (GeneralNameSpaceImport path: #('Jun' '*'))
+</I>&gt;<i> 
+</I>&gt;<i> これにより「じゅん for Smalltalk」はレガシィプログラムコード
+</I>&gt;<i> の仲間入りを果たします。次のメッセージ式の応答の末尾をご覧く
+</I>&gt;<i> ださい。
+</I>&gt;<i> 
+</I>&gt;<i> Smalltalk importString
+</I>&gt;<i> ==&gt; '
+</I>&gt;<i>             Core.*
+</I>&gt;<i>             Kernel.*
+</I>&gt;<i>             OS.*
+</I>&gt;<i>             External.*
+</I>&gt;<i>             Graphics.*
+</I>&gt;<i>             UI.*
+</I>&gt;<i>             Tools.*
+</I>&gt;<i>             CraftedSmalltalk.*
+</I>&gt;<i>             XProgramming.SUnit.*
+</I>&gt;<i>             Database.*
+</I>&gt;<i>             Lens.*
+</I>&gt;<i>             Jun.*
+</I>&gt;<i>             '
+</I>&gt;<i> 
+</I>&gt;<i> 上述したGeneralNameSpaceImportはBindingReferenceのサブクラス
+</I>&gt;<i> でして、クラス名でクラスを動的束縛する仕掛けの一種でもあるの
+</I>&gt;<i> です。
+</I>&gt;<i> 
+</I>&gt;<i> Object
+</I>&gt;<i> | GeneralBindingReference
+</I>&gt;<i> | | BindingReference　　　　　　　　←こいつの
+</I>&gt;<i> | | | ChangeSupportClassProxy
+</I>&gt;<i> | | | NameSpaceImport
+</I>&gt;<i> | | | | GeneralNameSpaceImport　　　←ここ
+</I>&gt;<i> | | | | SpecificNameSpaceImport
+</I>&gt;<i> | | | QualifiedName
+</I>&gt;<i> | | LiteralBindingReference
+</I>&gt;<i> | | StrictBindingReference
+</I>&gt;<i> 
+</I>&gt;<i> 以上になります。明解となりましたでしょうか？市田さん。ある意
+</I>&gt;<i> 味で最内スコープ束縛方式をやぶる禁じ手ですので、通常はやって
+</I>&gt;<i> はいけませんよ。:-)
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i> AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</I>
+
+
+---
+[:masashi | ^umezawa]
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007554.html">[SML 7554] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007551.html">[SML 7551] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7555">[ 日付 ]</a>
+              <a href="thread.html#7555">[ スレッド ]</a>
+              <a href="subject.html#7555">[ 件名 ]</a>
+              <a href="author.html#7555">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

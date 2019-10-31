@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7549] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207549%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0E12AB.2010301%40gaia.eonet.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007548.html">
+   <LINK REL="Next"  HREF="007552.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7549] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207549%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0E12AB.2010301%40gaia.eonet.ne.jp"
+       TITLE="[SML 7549] Re: 第7回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 5月 16日 (土) 16:36:09 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007548.html">[SML 7548] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007552.html">[SML 7552] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7549">[ 日付 ]</a>
+              <a href="thread.html#7549">[ スレッド ]</a>
+              <a href="subject.html#7549">[ 件名 ]</a>
+              <a href="author.html#7549">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠上賀茂です。
+
+Smalltalk勉強会＠京都はレベルが高いですね！喜ばしいことです。
+市田さんからの質問への応答には、レガシィソフトウェア問題を話
+さなければなりません。
+
+Smalltalkに名前空間が導入された際、古いSmalltalkerたちによっ
+て記されたプログラムコードを無駄にしないように配慮した経緯が
+あるのです。（この私も古くからのSmalltalkerの1人ですから。）
+
+たとえば、OrderedCollectionという名に束縛されたクラスを得よう
+としたとき、昔は次の一言で済みました。(1)
+
+OrderedCollection
+
+今はSmalltalkという名前空間の下階層をきちんと列挙して書くこと
+が推奨されています。(2)
+
+Core.OrderedCollection
+
+もしくは、もっと正式に書くのも良いでしょう。(3)
+
+Root.Smalltalk.Core.OrderedCollection
+
+上記を誤解を恐れずにまとめますと、次のようになります。
+
+(1) オラが村のOrderedCollectionさん
+(2) Core市のOrderedCollectionさん（←推奨形式；Smalltalk府以上を省略）
+(3) Root国Smalltalk府Core市のOrderedCollectionさん
+
+ここで、古いSmalltalkerたちによって記されたプログラムコードに
+は、オラが村の…さん、オラさ村の…さん、ばかりが出現している
+わけです。
+
+で、このオラが村の…さんを許容するために、名前空間移入の必要
+に迫られたわけです。いわゆるレガシィソフトウェア問題。
+
+それまで、リリースされていたクラスたちは、以下の名前空間へと
+再配置されました。Core、Kernel、OS、External、Graphics、UI、
+Toolsなどは、昔のカテゴリ名をご存知の方々には、どんなクラスた
+ちが囲い込まれてのかが想像できると思います。
+
+Root.Smalltalk.Core.*
+Root.Smalltalk.Kernel.*
+Root.Smalltalk.OS.*
+Root.Smalltalk.External.*
+Root.Smalltalk.Graphics.*
+Root.Smalltalk.UI.*
+Root.Smalltalk.Tools.*
+Root.Smalltalk.CraftedSmalltalk.*
+Root.Smalltalk.Database.*
+Root.Smalltalk.Lens.*
+Root.Smalltalk.XProgramming.SUnit.*
+
+上記の名前空間に限って、オラが村の…さんを許そうじゃないか、
+ということですね。そうすれば、レガシィプログラムコードの中の
+OrderedCollectionをすべてCore.OrderedCollectionに書き改める
+必要がなくなりますので。
+
+実はこれに「じゅん for Smalltalk」も乗っかっちゃったわけです。
+（Jun.JunOpenGL3dObjectの推奨形式に書き換えるのが面倒で…。）
+（Jun.Jun…となるのも格好悪いし…。）
+
+どうやって乗っかるのか、これから禁じ手のプログラムを開示しま
+す。このメーリングリストに開示することではないのかもしれませ
+んが、禁じ手を勉強することはためになります。やってはいけない
+ことをやるからこそ、やってはいけないことがわかりますもん。:-)
+
+GeneralNameSpaceImportというクラスのインスタンスを作って、
+Smalltalkという名前空間にインポートしているのです。
+
+たとえば、GeneralNameSpaceImportのインスタンスは、次のように
+して作成します。
+
+GeneralNameSpaceImport path: #('Jun' '*')
+
+これは、Junという名前空間の下の階層のすべてを運び入れること
+を表現したオブジェクトとなります。
+
+そして、次に示すように、Smalltalkという名前空間へ一気に移入
+を行います。
+
+Smalltalk addImport: (GeneralNameSpaceImport path: #('Jun' '*'))
+
+これにより「じゅん for Smalltalk」はレガシィプログラムコード
+の仲間入りを果たします。次のメッセージ式の応答の末尾をご覧く
+ださい。
+
+Smalltalk importString
+==&gt; '
+            Core.*
+            Kernel.*
+            OS.*
+            External.*
+            Graphics.*
+            UI.*
+            Tools.*
+            CraftedSmalltalk.*
+            XProgramming.SUnit.*
+            Database.*
+            Lens.*
+            Jun.*
+            '
+
+上述したGeneralNameSpaceImportはBindingReferenceのサブクラス
+でして、クラス名でクラスを動的束縛する仕掛けの一種でもあるの
+です。
+
+Object
+|<i> GeneralBindingReference
+</I>|<i> | BindingReference　　　　　　　　←こいつの
+</I>|<i> | | ChangeSupportClassProxy
+</I>|<i> | | NameSpaceImport
+</I>|<i> | | | GeneralNameSpaceImport　　　←ここ
+</I>|<i> | | | SpecificNameSpaceImport
+</I>|<i> | | QualifiedName
+</I>|<i> | LiteralBindingReference
+</I>|<i> | StrictBindingReference
+</I>
+以上になります。明解となりましたでしょうか？市田さん。ある意
+味で最内スコープ束縛方式をやぶる禁じ手ですので、通常はやって
+はいけませんよ。:-)
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007548.html">[SML 7548] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007552.html">[SML 7552] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7549">[ 日付 ]</a>
+              <a href="thread.html#7549">[ スレッド ]</a>
+              <a href="subject.html#7549">[ 件名 ]</a>
+              <a href="author.html#7549">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

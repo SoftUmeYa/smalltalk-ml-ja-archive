@@ -1,0 +1,577 @@
+From aoki ＠ sra.co.jp  Fri Jul  1 11:25:50 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7100] Jun641 for Smalltalk
+Message-ID: <AF1406E8-1138-4436-8C20-CF13F158F0D8@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun641」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ポリゴナルテキストを用いて、３次元チャートのラベルをスケー
+　ラブルにしました。米国のユタ州のソルト・レイク・シティから
+　リクエストがあり、実装に踏み切りました。詳しくは下記のペー
+　ジを参照してください。
+　http://www.sra.co.jp/people/aoki/Jun/Topics/ScalableLabels/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Sat Jul  2 09:32:08 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7101] Jun642 for Smalltalk
+Message-ID: <D0F61BAD-AFDA-4324-9F0B-73F59C3701A5@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun642」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆テキストをポリゴン化するためのメッセージを使いやすくしまし
+　た。行枠（上分・下分・基線を考慮して）の透明板と一緒にした
+　構成３次元オブジェクトを応答するように改めています。３次元
+　チャートにおけるスケーラブルなラベルの生成も、このメッセー
+　ジを用いるように変更しました。詳細は下記のページ参照してく
+　ださい。
+　http://www.sra.co.jp/people/aoki/Jun/Topics/PolygonalText/
+
+◆ビューファインダにおいて、マウスのホイールの動きを扱うよう
+　にしました。ホイールを廻した際のマウス位置により、ズーム・
+　ＸＹＺそれぞれの方向の回転・ＸＹを合成した回転ができるよう
+　になっています。次のページをご覧ください。
+　http://www.sra.co.jp/people/aoki/Jun/Topics/MouseWheel/
+
+◆３次元チャートの照明を切っていましたが、ビューファインダの
+　照明を継承するように改めました。これを行ったことにより、パ
+　イチャートの裏表が逆転していたバグが見つかりましたので、修
+　正を施しました。
+
+◆産み出す（spwan）際のウィンドウを、元のウィンドウの大きさ
+　と同じにし、開く位置も元のウィンドウの真横にくるように改め
+　ました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Jul  6 23:53:30 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7102] Jun643 for Smalltalk
+Message-ID: <EB88F9FC-723D-4CA4-BFA4-EE51D8BAA76D@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun643」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ビューファインダのウジェットとして用いているホイールにおい
+　ても、マウスのホイールの動きと連動するように改良しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Fri Jul  8 20:04:09 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7103] ２０種類のアミノ酸
+Message-ID: <42CE5DA9.8030607@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+「じゅん」の上に構築している「化学関連ライブラリ」を用いて、
+２０種類のアミノ酸の一覧を作成してみました。ご笑覧ください。
+
+http://www.sra.co.jp/people/aoki/Chemistry/AminoAcid/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Sun Jul 10 22:44:14 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7104] Jun644 for Smalltalk
+Message-ID: <9C0DF6A6-EDB8-4E2C-AFDC-2643F5A97CD2@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun644」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆マルチ・メディア・ナビゲータの構造を、抽象−具象の構造から
+　全体−部分の構造に変えました。
+
+◆じゅんのファイルリストに列挙される項目の高さを、テキストの
+　スタイルを考慮するように改めました。
+
+◆ムービープレーヤのスピーカボタンの縦横がふぞろいでしたので
+　是正しました。
+
+◆インストールの際に推奨テキストスタイルを設定するようにしま
+　した。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From nisinaka ＠ sra.co.jp  Mon Jul 11 15:34:45 2005
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7105] [ANNOUNCE] Jun for Java (Jun516)
+In-Reply-To: <20050610215112.5FD3.NISINAKA@sra.co.jp>
+References: <20050325141720.C11A.NISINAKA@sra.co.jp>
+	<20050610215112.5FD3.NISINAKA@sra.co.jp>
+Message-ID: <20050711153422.0B79.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン516を公開します。
+
+  バージョン509からの主な変更点は、以下の通りです。
+
+    * JunFileLauncher は、ファイルダイアログからファイルを選択し
+      て、実行するためのユーティリティクラスです。ファイルの実行
+      に用いられるアプリケーションは、使用する環境に依存します。
+
+    * JunFileDialog を Jun513 相当に更新しました。ディレクトリを
+      指定する際にファイルや存在しないディレクトリを選択すると警
+      告メッセージが表示されますが、その際テキストフィールドに表
+      示されているファイル名やディレクトリ名が消去されるようにな
+      りました。
+
+    * JunOpenGL3dObject および JunOpenGLDisplayModel を Jun511 相
+      当に更新しました。射影情報を指定してウィンドウを開くための
+      メソッドが追加されています。
+
+    * JunDisplayModel を Jun511 相当に更新しました。位置や領域を
+      指定してウィンドウを開くためのメソッドが追加されています。
+
+    * JunChartPie において、形状の表裏が反転していたバグを修正し
+      ました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From aoki ＠ sra.co.jp  Tue Jul 12 22:40:08 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7106] Jun645 for Smalltalk
+Message-ID: <42D3C838.4000805@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun645」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆マルチメディアナビゲータを改良し、立体ファイルに対応しまし
+　た。「*.lst」や「*.wrl」を下部のファイルナビゲータで選択す
+　ることで、ビューファインダが上部に出現します。
+　http://www.sra.co.jp/smalltalk/jun/Topics/MultiMediaNavigator/
+　これを継承することにより、分子（化合物）をブラウジングする
+　ための化学メディアナビゲータへと容易に特殊化できます。
+　http://www.sra.co.jp/smalltalk/jun/Topics/MultiMediaNavigator/images/Chemo.jpg
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Thu Jul 14 05:44:20 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7107] Jun646 for Smalltalk
+Message-ID: <4CAE4BBA-7725-4760-A197-A01E8066C9F1@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun646」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆マルチメディアナビゲータにおいて、ウィンドウを上下に仕切っ
+　ているリサイザを動かすと、未定義メッセージ送信になってしま
+　うことがあるバグを修正しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From nishis ＠ zephyr.dti.ne.jp  Wed Jul 20 09:50:04 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7108] クラスライブラリに耳を傾ける
+Message-ID: <42DD9FBC.1040308@zephyr.dti.ne.jp>
+
+なんて偉そうなサブジェクトですが，とりあえずクラスからなんぞ３つの要素を
+取り出すことができれば音を鳴らせるんでやってみました．
+
+ピッチはルート・クラスからの隔たりで半音間隔です，
+長さはそのクラスのサイズです．
+音量は，最初クラスの人気度 (リファレンス数) にしようと思ってたんですが，
+半端じゃない時間 (CD 2 枚分以上？) が掛かるんで，適当にセレクタ数で妥協
+しました．
+
+ほとんどのクラスはサイズも小さくて，セレクタ数もそんなに突飛な数には鳴っ
+てない，ごく一部のクラスがデカくてセレクタもいっぱいというのが聴いて判り
+ます (笑)．
+
+最初に鳴り出すドローンはいわゆるスクリャービンの神秘和音で，これはクラス
+関連とは全く無関係，単なる伴奏です．全体の演奏 (？) 約 7'50" ほど掛かり
+ます．
+
+ついでに四重奏版も添付します．何かフリーっぽく聴こえて，けっこう笑えます．
+
+
+  | spaceUsedMax allSuperclassesMax selectorsMax collection basePitch instruments chromaticScale soundCollection totalDuration offsetSecond droneVolume droneMakeBlock droneL1 droneR1 droneL2 droneR2 droneL3 droneR3 score aMixedSound |
+  spaceUsedMax := 0.
+  allSuperclassesMax := 0.
+  selectorsMax := 0.
+  collection := OrderedCollection new: Metaclass allInstances size.
+  Cursor execute
+    showWhile: [SystemNavigation default
+        allBehaviorsDo: [:aClass | aClass isMeta
+            ifFalse: [| spaceUsed allSuperclasses selectors |
+              spaceUsed := aClass spaceUsed + aClass class spaceUsed.
+              allSuperclasses := aClass allSuperclasses size.
+              selectors := aClass selectors size + aClass class selectors size.
+              spaceUsedMax < spaceUsed
+                ifTrue: [spaceUsedMax := spaceUsed].
+              allSuperclassesMax < allSuperclasses
+                ifTrue: [allSuperclassesMax := allSuperclasses].
+              selectorsMax < selectors
+                ifTrue: [selectorsMax := selectors].
+              collection
+                add: (Array
+                    with: aClass name
+                    with: spaceUsed
+                    with: allSuperclasses
+                    with: selectors)]]].
+  basePitch := 'c4'.
+  instruments := (FMSound class organization listAtCategoryNamed: #instruments)
+        select: [:each | (each beginsWith: #random) not].
+  chromaticScale := ((AbstractSound chromaticPitchesFrom: basePitch)
+        copyFrom: 1
+        to: 13) reverse.
+  soundCollection := OrderedCollection new: collection size.
+  totalDuration := 0.
+  Cursor execute
+    showWhile: [collection
+        do: [:each |
+          | pitch duration loudness aSound |
+          pitch := chromaticScale at: (each at: 3)
+                  + 1.
+          duration := (each at: 2)
+                / spaceUsedMax * 15 max: 0.15.
+          totalDuration := totalDuration + duration.
+          loudness := (each at: 4)
+                / selectorsMax max: 0.346.
+          aSound := FMSound perform: instruments atRandom.
+          soundCollection
+            add: (aSound
+                soundForPitch: pitch
+                dur: duration
+                loudness: loudness)]].
+  offsetSecond := 12.
+  droneVolume := 268.
+  droneMakeBlock := [:restDuration :dronePitch :droneDuration :droneLoudness | Array
+        with: (Array with: #rest with: restDuration)
+        with: (Array
+            with: dronePitch
+            with: droneDuration
+            with: droneLoudness)].
+  droneL1 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: 0
+            value: #c3
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneR1 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6
+            value: #'f#3'
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneL2 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6 * 2
+            value: #bf3
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneR2 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6 * 3
+            value: #e4
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneL3 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6 * 4
+            value: #a4
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneR3 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6 * 5
+            value: #d5
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  soundCollection
+    addFirst: (RestSound dur: offsetSecond).
+  score := SequentialSound new.
+  soundCollection
+    do: [:each | score add: each].
+  aMixedSound := MixedSound new add: droneL1 pan: 0.1;
+         add: droneL2 pan: 0.25;
+         add: droneL3 pan: 0.4;
+         add: droneR3 pan: 0.6;
+         add: droneR2 pan: 0.75;
+         add: droneR1 pan: 0.9;
+         add: score pan: 0.5.
+  aMixedSound play.
+  ^ {score. soundCollection. collection. spaceUsedMax. allSuperclassesMax. selectorsMax}
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: playClassLibraryQuartet.st
+URL:  http://www.akademia.co.jp/pipermail/sml/attachments/20050720/feec3f04/playClassLibraryQuartet.ksh
+From nishis ＠ zephyr.dti.ne.jp  Wed Jul 20 10:05:36 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7109] Re: クラスライブラリに耳を傾ける
+In-Reply-To: <42DD9FBC.1040308@zephyr.dti.ne.jp>
+References: <42DD9FBC.1040308@zephyr.dti.ne.jp>
+Message-ID: <42DDA360.3060906@zephyr.dti.ne.jp>
+
+on 05.7.20 9:50 AM, NISHIHARA Satoshi wrote:
+> ついでに四重奏版も添付します．何かフリーっぽく聴こえて，けっこう笑えます．
+
+う〜．添付ファイル鳴りませんでした (笑)．最後のプレイ文がコメント・アウ
+トされてますんで，生き返らせてください m(_ _)m．
+
+・Squeak3.8-6665-full でしか試していません．
+・内蔵スピーカはヘボいので，安価いのでエエから外部スピーカを接続して鳴ら
+した方がエエです．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From katsu ＠ watanabe.name  Sun Jul 24 20:26:16 2005
+From: katsu ＠ watanabe.name (WATANABE Katsuhiro)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7110] Alan Kay leaves HP
+Message-ID: <20050724.202616.68477211.katsu@katsu.watanabe.name>
+
+Alan Kay さんの HP の研究グループ Advanced Software Research
+team　の活動は cancel になり、Alan Kay さんも HP から離れるとの
+ことです。
+
+http://blogs.siliconvalley.com/gmsv/2005/07/hewlettpackards.html
+
+HP では少し前に名物 CEO のフィオリーナさんが辞めましたが、新しい
+人の元での新体制づくりの一環なのでしょう。
+
+私は実のところ Alan さんお所属なんて最近は全然気にしていなくて、
+このニュースを見て初めて HP 内で研究グループを率いていたことを
+知りました。きっといつも通りで、Alan さんの他での研究と特に違う
+方向でやっていたわけではないですよね？
+-- 
+渡辺克宏
+
+
+
+From aoki ＠ sra.co.jp  Wed Jul 27 10:55:47 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7111] Smalltalkerのための初等数学
+Message-ID: <42E6E9A3.5020202@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+今「Smalltalker のための初等数学」を書き下ろしています。数の
+種類・集合・写像などを題目にかかげて、数学的操作のいかほどま
+で、Smalltalk にて可能なのかを明らかにしています。
+
+直弟子がなかなか集合操作をまとめてくれない（三年間もほったら
+かしな）ので、たまりかねて書き下ろしたという事情もあります。
+VisualWorks 7.3.1 をベースにしていますが、5i.4 でも 3.x でも
+動作可能なプログラムを含みます。（ということは Squeak でも）
+
+今年度の京都産業大学理学部コンピュータ科学科の夏期集中講義で
+用いたいと思うのですが、ちょっと時間が足りない感じなんです。
+（もし来年度も非常勤講師を勤められるならば講義で使います。）
+
+自然数・整数・有理数・有限小数・循環小数・無理数・無限小数・
+虚数・複素数を、Smalltalk に具備されている数システムと対比し、
+集合と写像のクラスを新設します。
+
+    Primary-Mathematics（パッケージ）
+    Primary（名前空間）
+    Primary.Set（集合のクラス）
+    Primary.Mapping（写像のクラス）
+    Primary-Mathematics（パーセル）
+
+正しいパッケージの作り方、名前空間の定義方法、新しいクラスを
+出現させる真っ当なやり方などと合わせて指南します。そして、以
+下にリストする項目を扱います。
+
+    集合と要素そして濃度
+    部分集合と真部分集合
+    空集合と全体集合
+    共通部分（積集合）と互いに素
+    合弁集合（和集合）と補集合そして差集合
+    順序対と直積そして関係（特に２項関係）
+    集合の集合（べき集合）
+
+    写像と定義域そして値域
+    全射と単射そして全単射
+    合成写像と恒等写像そして逆写像
+
+この後に、命題論理や述語論理、オーダー計算として領域計算量と
+時間計算量などに書き及び、Smalltalk の中にそれらに適したクラ
+スライブラリを出現させたいと思っています。
+
+ゆくゆくは、じゅん化学関連ライブラリ「ケモじゅん（ChemoJun）」
+
+http://www.sra.co.jp/people/aoki/ChemoJun/
+
+と同様に、じゅん数学関連ライブラリ「マスじゅん（MathsJun）」
+にまで育てあげられれば幸いなのですが、さて、どうなりますか…
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+

@@ -1,0 +1,1757 @@
+From sadie ＠ kind.ocn.ne.jp  Fri May  1 18:03:56 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Fri May  1 18:04:16 2009
+Subject: [SML 7524] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <49F95C83.5090202@im.dendai.ac.jp>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+Message-ID: <1EEF39354752439FAE86C05BA7D62462@sunaoPC>
+
+古川と申します。
+>
+> そもそもポリモフィズムの定義って何ですかね。
+>
+> 「同じメッセージを異なるオブジェクトに送った場合、メッセージを受け取った
+> オブジェクトの種類によって異なる動作をしてもよい。」と思っていたんです。
+> 「同じメッセージ」とは「メソッドのシグネチャが同じ」という意味です。
+> 「メッセージ名が同じ」という意味ではありません。
+>
+　「サクサクSmalltalk」には多相性について、
+「あるメッセージがオブジェクトに送られたとき、実際に実行されるメソッドは、そのオブジェクトのクラスにより異なる」
+と書いてあります。
+　Microsoftの「C++（version 4)入門」の関数のオーバーロードを読んでみると、
+「同一の関数名に複数の意味を与える操作をオーバーロードと呼ぶ。」
+「同名の関数を区別するときは、パラメーターリストだけで判断される。」
+と書いてあります。パラメーターリストが違うということは、メソッドのシグネチャが異なるということですよね。
+　このように考えてみると、「複数の意味を与える」というのが「オブジェクトのクラスにより異なる」というのが一致しない（C++では同じクラスで複数の意味を与えることができる）、
+と思いました。同じシグネチャで複数の意味を与えることがC++ではできないのでオーバーロードと多相性には関連性はないのではないかと思いました。
+　私は計算機科学については素人なので的外れなことを書いたかもしれません。少し混乱しています。しかし、昔から興味のある分野だったのであえて投稿します。間違いの指摘などは歓迎します。皆さんの考えを聞いてみたいです。 
+
+
+From sadie ＠ kind.ocn.ne.jp  Fri May  1 19:40:47 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Fri May  1 19:41:07 2009
+Subject: [SML 7525] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <1EEF39354752439FAE86C05BA7D62462@sunaoPC>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+	<1EEF39354752439FAE86C05BA7D62462@sunaoPC>
+Message-ID: <DCFB45B0646D4A958E8588332082C44B@sunaoPC>
+
+古川です。自己フォローです。
+> 　このように考えてみると、「複数の意味を与える」というのが「オブジェクトのクラスにより異なる」というのが一致しない（C++では同じクラスで複数の意味を与えることができる）、
+> と思いました。同じシグネチャで複数の意味を与えることがC++ではできないのでオーバーロードと多相性には関連性はないのではないかと思いました。
+
+　Smalltalkでも同じクラスで複数の意味を与えることはできます。失礼しました。訂正します。
+
+
+From osamu.hamasaki ＠ gmail.com  Fri May  1 23:16:16 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Fri May  1 23:16:20 2009
+Subject: [SML 7526] Re: Cincom Smalltalk Daily: 11/1/06に関して
+In-Reply-To: <611D290A04764AA7A3FF87139E5FAFA7@SUGITPR60E>
+References: <611D290A04764AA7A3FF87139E5FAFA7@SUGITPR60E>
+Message-ID: <1bc06fd30905010716hf54571hf5faf821c59dddfc@mail.gmail.com>
+
+濱崎です。
+杉谷さんのメールを読むまで、こんなのがあるのを知りませんでした。
+ありがとうございます。
+
+で、問題のスクリーンキャストを見てみました。
+
+実際に操作しながら「撮影」されたもので、そのようなことが起りうるのか不思議です。
+
+
+編集されたビデオのようですから、映し出されたコードと、実際に動作している時点での
+コードは違っていたのかもしれませんね。
+
+あと、動作し始めてから
+> initialize
+>
+> self queryExecutor: QueryExecutor new
+> を
+> self queryExecutor: QueryExecutor
+> に替えてみましたが、どちらも動作しました。これは本来どう書くべきなのでしょうか？
+
+
+以下の理由により、どちらでも動作するようです。
+ １．QueryExecutor class>>executeQueryが
+
+^self new executeQuery: aQuery
+
+と書かれており、QueryExecutorのインスタンスもクラスも、どちらも同じメッセージに
+同じように応答できる。
+
+２．QueryExecutorの４つのインスタンス変数のうち、query,result,connectionは、#executeQuery:の
+中（およびそこから呼び出されるメソッドの中）で、参照される前に何らかの値がセットされる。
+また、インスタンス変数connectionClassは#initializeで初期化された後、書き換えられる事がない。
+したがって、QueryExecutor>>executeQuery:（インスタンスの方のメソッド）が再使用可能に
+なっている。（ビデオには映っていませんが、QueryExecutor class>>newが自動生成されていて、
+
+^super new initialize
+
+と書かれていると思います。）
+
+「本来どう書くべきか」はよく分かりません。
+でも、今後の展開（コネクションを維持したまま複数のクエリを実行するように拡張する、など）を
+考えると、
+
+self queryExecutor: QueryExecutor new
+
+としておく方が良いように私は思います。
+
+ただ、QueryExecutor class>>executeQuery:をわざわざ書いたところをみると、James Robertsonさんは、
+EmployeeUI>>initializeを
+
+self queryExecutor: QueryExecutor
+
+と書いた可能性もあります。（でも、QueryExecutor class>>executeQuery:を実際に実行しているのは
+一本前のビデオですからねえ。。。）
+
+以上です。
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090501/b07f591e/attachment.htm
+From sadie ＠ kind.ocn.ne.jp  Sat May  2 10:55:25 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Sat May  2 10:55:47 2009
+Subject: [SML 7527] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <49F95C83.5090202@im.dendai.ac.jp>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+Message-ID: <68D6709ECA1C498BB95D1AACD73A7C55@sunaoPC>
+
+しつこいですが、古川です。
+
+> そもそもポリモフィズムの定義って何ですかね。
+
+IBMのObject REXXのマニュアルにポリモフィズムについて書いてありました。
+
+抜粋：
+REXX では、複数のオブジェクト(異なる) に同じメッセージを送ることができます。
+（中略）
+ポリモアフィズムのもう1 つの機能として、同じメソッド名を再利用して1 つのメッセージで複数の機能を開始できるようにする能力があります。REVERSE_STRING、REVERSE_PEN、REVERSE_BALL などの複数のメッセージを使用する必 
+要はありません。したがって、メソッド命名方式が単純になり、複雑なプログラムのトレースや修正が簡単になります。インターフェースは同じままで、メソッドの各種実装を隠してしまう能力は、ミクロに見たポリモアフィズムを表しています。よりマクロに見れば、ポリモアフィズムにより広範囲にわたってコードを再利用することができます。
+
+このようなものを読んでみるとマクロに見ればオーバーロードもポリモフィズムを実現する方法になるとみなされる言語もあるのではと思いましたがどうでしょうか。
+（ちなみに私はNetREXXなら使ったことはあるのですがObject REXXについてはマニュアルを読んだだけの初級者なのですが・・・）
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat May  2 11:08:20 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat May  2 11:08:26 2009
+Subject: [SML 7528] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <68D6709ECA1C498BB95D1AACD73A7C55@sunaoPC>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+	<68D6709ECA1C498BB95D1AACD73A7C55@sunaoPC>
+Message-ID: <49FBAB14.50606@cc.kyoto-su.ac.jp>
+
+sunao furukawa さんは書きました:
+> しつこいですが、古川です。
+
+ぜんぜんしつこくなんかないですよ。
+
+> このようなものを読んでみるとマクロに見ればオーバーロードもポリモフィズム 
+> を実現する方法になるとみなされる言語もあるのではと思いましたがどうでしょ 
+> うか。
+
+上手な言及だと思います。
+区別化（distinction）と包摂化（subsumption）の双方が大切ですから。
+双方を上手に操ることこそ、オブジェクト指向プログラミングの真骨頂。
+
+--- 青木淳＠京都宇治
+From asugitan ＠ kh.rim.or.jp  Sat May  2 14:58:29 2009
+From: asugitan ＠ kh.rim.or.jp (Akinori Sugitani)
+Date: Sat May  2 14:58:30 2009
+Subject: [SML 7529] Re: Cincom Smalltalk Daily: 11/1/06に関して
+References: <611D290A04764AA7A3FF87139E5FAFA7@SUGITPR60E>
+	<1bc06fd30905010716hf54571hf5faf821c59dddfc@mail.gmail.com>
+Message-ID: <70F8B36F40AB471CB8EC1EF1EF78E57F@SUGITPR60E>
+
+濱崎さん、コメントありがとうございます。
+濱崎治さんは書きました:
+>杉谷さんのメールを読むまで、こんなのがあるのを知りませんでした。
+毎日みているわけではありませんが、Cincom Smalltalk Dailyは自分にはとても参考になります。
+
+>以下の理由により、どちらでも動作するようです。
+> １．QueryExecutor class>>executeQueryが
+>
+>
+>　　　^self new executeQuery: aQuery
+>
+>
+>　　と書かれており、QueryExecutorのインスタンスもクラスも、どちらも同じメッセージに
+>　　同じように応答できる。
+>
+>
+>２．QueryExecutorの４つのインスタンス変数のうち、query,result,connectionは、#executeQuery:の
+>　　中（およびそこから呼び出されるメソッドの中）で、参照される前に何らかの値がセットされる。
+>　　また、インスタンス変数connectionClassは#initializeで初期化された後、書き換えられる事がない。
+>　　したがって、QueryExecutor>>executeQuery:（インスタンスの方のメソッド）が再使用可能に
+>　　なっている。（ビデオには映っていませんが、QueryExecutor class>>newが自動生成されていて、
+>
+>
+>　　　　^super new initialize
+>
+>
+>　　と書かれていると思います。）
+実際にそうなっています。
+
+>「本来どう書くべきか」はよく分かりません。
+>でも、今後の展開（コネクションを維持したまま複数のクエリを実行するように拡張する、など）を
+>考えると、
+>
+>
+>　　self queryExecutor: QueryExecutor new
+>
+>
+>としておく方が良いように私は思います。
+詳細な解説ありがとうございます。残念ながら濱崎さんの書かれたことが完全には理解できていないのですが、
+なんとなく解った気がします。「Smalltalk勉強会＠京都」等を通じてもっとSmalltalkのコードが読めるように、
+なっていきたいと思っています。 
+
+From sakoh ＠ ba2.so-net.ne.jp  Sat May  2 18:14:22 2009
+From: sakoh ＠ ba2.so-net.ne.jp (Sako Hiroshi)
+Date: Sat May  2 18:14:26 2009
+Subject: [SML 7530] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <49F95C83.5090202@im.dendai.ac.jp>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+Message-ID: <63ae6a8d0905020214o461c5496o5cfad145e1eb40d@mail.gmail.com>
+
+酒匂です。
+
+> そもそもポリモフィズムの定義って何ですかね。
+
+Polymorphism （多相性）の本来の意味は、ある「名前」で参照されるものの
+実体として、 多く(poly) の形(morph)をとることができるという
+だけですね。
+
+anObject
+
+という名札（変数）をプログラムテキスト中にみたとしたら、
+それは、その文脈で anObject という名前で「呼ばれている」
+ある実体を示しているわけです（もちろん未初期化 ... 特定の
+実体と関連付けられていない場合もあります）。
+
+よく Smalltalk や Ruby は型のない言語だと言われますが、
+実体（オブジェクト）そのものに型はあって、ただ
+プログラムテキスト中に現れる名札（変数）に
+事前に受け入れ可能な型が定義されていないというだけに
+過ぎません。
+
+さて Smalltalk などでは、anObject という変数に
+任意の実体を代入できますから、anObject は多相的です。
+また強い型付けのある言語では
+
+anObject : aType
+
+などとして（言語は特定していません）anObject が受け入れ可能な
+実体の型を宣言することができますが、通常は aType だけではなく
+aType から派生した型の実体も受け入れ可能であることを意味して
+います。この場合 aType の実体、aTypeのサブタイプの実体などが
+anObject と結びつきますから、やはり多相性があるということに
+なります。
+
+さて、こうしてポリモフィズム（多相性）そのものは、「ある名札（変数）
+に、「複数」の「形」の実体を代入できるということ」であることがわかりました。
+
+で、次のステップです。
+
+多相性があるということは、プログラムテキスト中に
+
+anObject.my_method(arg)
+
+とか
+
+anObject myMetho: arg
+
+という表記を見ても、実行時にはどこで定義されている my_method なり
+myMethod が呼び出されるか、実行前には決定する事が
+できないことを意味します。
+
+anObject.my_method(arg)
+
+の地点に実行がさしかかると、anObject が多相的な名札（変数）の場合
+実体のクラスは aType とは限りませんから、実際に結びついている
+実体の型を調べて、その型に定義されている my_method(arg) を呼び出す
+必要があります。このように実行時に結びつくべきメソッドを決める
+ことを動的束縛 (dynamic bindings) と呼びますよね。
+
+ということで、
+
+多相性＋動的束縛
+
+により、オブジェクト指向システムは柔軟性を手に入れています。
+さて、そうすると、次の疑問は動的に束縛すべき相手を
+どのように決定するかということになるわけですね。。。
+
+オーバーロードのない言語なら、単純に my_method の定義が見つかるまで
+検索して呼び出す・・・すなわちメソッド名を検索キーにして
+上位クラスに向かって探しに行くだけですが、オーバーロードがある言語の場合
+メソッド名とシグニチャをキーにして検索しにいくということですね。
+
+ということで、やっと最初の疑問に戻るのですが、
+
+「ポリモフィズムを実現する方法。。。」
+
+という表現は
+
+「ポリモフィズムに対する動的束縛を支援する方法として
+オーバーライド（再定義）やオーバーロード（多重定義）がある」
+
+といった表現が省略されたものと考えることができるのではないでしょうか。
+
+ここまで書いてきて、このメーリングリストのメンバーには
+釈迦に説法の内容だなと思いましたが、一応お送りすることと致します。
+
+以上です。
+
+2009/4/30 Hidetaka MASUDA <masuda@im.dendai.ac.jp>:
+> 増田＠電大です。
+>
+> 最近、悩んでいることがあります。「ポリモフィズムを実現する方法の一つに
+> オーバロードがある」って書いてあるWebページをよく見るんです。何か気持悪
+> いんです。メソッドのシグネチャ (メソッド名、引数、戻り値の型) が違うのに
+> ポリモフィズムと言うんだろうかと。
+>
+> ・抽象クラスの抽象メソッドを具象クラスでオーバライドする
+> ・(Javaなどの)インタフェースを宣言して、実装クラスでメソッドを実装する
+>
+> の2つはポリモフィズムを実現する方法だと思うんですが。なぜなら、メッセー
+> ジの送り手は一切変更なしで動きますよね。オーバロードは引数の数なんかが変
+> わったら送り手はそれに合わせて変更しないとだめですよね。
+>
+> そもそもポリモフィズムの定義って何ですかね。
+>
+> 「同じメッセージを異なるオブジェクトに送った場合、メッセージを受け取った
+> オブジェクトの種類によって異なる動作をしてもよい。」と思っていたんです。
+> 「同じメッセージ」とは「メソッドのシグネチャが同じ」という意味です。
+> 「メッセージ名が同じ」という意味ではありません。
+>
+> いかがでしょうか?
+>
+> --
+> ------
+> 〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+> E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+> http://www.cdl.im.dendai.ac.jp/%7emasuda/     FAX 03-5280-3592
+> It's more fun to compute!
+>
+
+
+
+-- 
+Sako Hiroshi
+http://d.hatena.ne.jp/ardbeg1958/
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat May  2 20:41:19 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat May  2 20:41:25 2009
+Subject: [SML 7531] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <63ae6a8d0905020214o461c5496o5cfad145e1eb40d@mail.gmail.com>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+	<63ae6a8d0905020214o461c5496o5cfad145e1eb40d@mail.gmail.com>
+Message-ID: <49FC315F.6000304@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+Sako Hiroshi さんは書きました:
+> 実体として、 多く(poly) の形(morph)をとることができるという
+> だけですね。
+
+仰せの通りですね。多相性の「相」は、姿や見た目のことですから、
+アスペクトにもつながるかしらん。
+
+浅岡さんと私が多相性を解題する際に用いている絵図を開示します。
+どうぞ自由に使ってくださいませ。動的束縛のあたりも図示できて
+いると思います。これらの絵図を音読（声に出して読むことが）で
+きれば、御の字でしょう。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/misc/jpgs/OopDynamics1.jpg
+http://www.cc.kyoto-su.ac.jp/~atsushi/misc/jpgs/OopDynamics2.jpg
+
+先ほどの酒匂さんの言及に関して少々気になったことがありました。
+
+仮想マシン（やガーベジコレクタ）を作成したことがある人ならば
+通じると思いますが、Smalltalk プログラミングには、本来、代入
+がありません。間接参照の束縛だけでやっているんです。
+
+間接参照の束縛が anObject の言及（多相性）を根本で支える湧源
+です。この源に立つと、メソッドサーチにおけるオーバーライドも
+オーバーロードも湧いて出たものと看破でき、まだ他にも（メソッ
+ドサーチ以外でも多相性を生み出す余地が）あるであろうと控える
+器量を育んでくれます。
+
+バベルの塔のごとく、オブジェクト指向プログラミングにおいても
+プログラマたちに異なる言葉（ことのは）を話させようとする動力
+が働いています。ユニファイしようなどと思わぬほうが、身のため
+かもしれないのですが、そこをあえて。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From sakoh ＠ ba2.so-net.ne.jp  Sat May  2 21:11:25 2009
+From: sakoh ＠ ba2.so-net.ne.jp (Sako Hiroshi)
+Date: Sat May  2 21:11:28 2009
+Subject: [SML 7532] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <49FC315F.6000304@cc.kyoto-su.ac.jp>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+	<63ae6a8d0905020214o461c5496o5cfad145e1eb40d@mail.gmail.com>
+	<49FC315F.6000304@cc.kyoto-su.ac.jp>
+Message-ID: <63ae6a8d0905020511v2ec12feeg1b815ba901bd8038@mail.gmail.com>
+
+酒匂です。
+
+2009/5/2 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+> 先ほどの酒匂さんの言及に関して少々気になったことがありました。
+>
+> 仮想マシン（やガーベジコレクタ）を作成したことがある人ならば
+> 通じると思いますが、Smalltalk プログラミングには、本来、代入
+> がありません。間接参照の束縛だけでやっているんです。
+
+確かに「代入」という言葉は誤解生むかもしれませんね。
+ご指摘ありがとうございます。
+
+もちろん私も「代入」という言葉で表したかったのは
+「現在の文脈中で新しい名前（間接参照の束縛）を与える」という意味です。
+
+anObject ←  anotherObject
+
+という「代入式」は、単に anotherObject という「名札」が指している
+実体に対して、新しく anObject という「名札」を更に貼付けているに
+過ぎませんね。
+
+-- 
+Sako Hiroshi
+http://d.hatena.ne.jp/ardbeg1958/
+From masuda ＠ im.dendai.ac.jp  Sat May  2 21:15:47 2009
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Sat May  2 21:16:22 2009
+Subject: [SML 7533] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <49F95C83.5090202@im.dendai.ac.jp>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+Message-ID: <49FC3973.6030809@im.dendai.ac.jp>
+
+増田です。
+
+Polymorphism を分類してくれている文献がありました。1985年のものです。
+
+Luca Cardelli and Peter Wegner:
+On Understanding Types, Data Abstraction, and Polymorphism,
+Computing Surveys, Vol 17 n. 4, pp 471-522, December 1985
+http://lucacardelli.name/Papers/OnUnderstanding.A4.pdf
+
+さっそく4ページ目に 1.3 Kinds of Polymorphism という節があります。
+
+私が考えていたポリモフィズムは universal polymorphism (inclusion)で、
+オーバロードは ad hoc polymorphism となるんですね。
+
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/     FAX 03-5280-3592
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat May  2 21:32:57 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat May  2 21:33:03 2009
+Subject: [SML 7534] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <49FC3973.6030809@im.dendai.ac.jp>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+	<49FC3973.6030809@im.dendai.ac.jp>
+Message-ID: <49FC3D79.1030805@cc.kyoto-su.ac.jp>
+
+Hidetaka MASUDA さんは書きました:
+> さっそく4ページ目に 1.3 Kinds of Polymorphism という節があります。
+
+その節だけをザックリと読んでみました。古に読んだ記憶が甦りました。
+
+> 私が考えていたポリモフィズムは universal polymorphism (inclusion)で、
+> オーバロードは ad hoc polymorphism となるんですね。
+
+昔からなんですが、Peter Wegner さん一派のは、私はピンと来ぬなぁ〜。:-)
+
+--- 青木淳＠京都宇治
+
+From tscompor ＠ gmail.com  Sun May  3 07:23:33 2009
+From: tscompor ＠ gmail.com (Takafumi Saikawa)
+Date: Sun May  3 07:23:40 2009
+Subject: [SML 7535] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <49FC3973.6030809@im.dendai.ac.jp>
+References: <49F95C83.5090202@im.dendai.ac.jp>
+	<49FC3973.6030809@im.dendai.ac.jp>
+Message-ID: <20090503.072325.207585970.tscompor@gmail.com>
+
+才川と申します。久しぶりに投稿します。初めまして。
+
+Smalltalkのpolymorphism(以下直訳して多形)は、メッセージ式
+3 printOn: aStream.
+'abc' printOn: aSteram.
+が共に計算されるように、異なるクラスのインスタンスが同じメッセージに
+反応できることであったかと思います。Smalltalkのメッセージ式で
+送られるメッセージを決めるものはメッセージセレクタですから、
+自然に考えればSmalltalkで多形という語を考えるときには、
+polymorphousである物が何かというとセレクタであるということになります。
+
+
+その上で
+http://lucacardelli.name/Papers/OnUnderstanding.A4.pdf
+これの1.3節を眺め、そこでの定義に従ってuniversal polymorphismと
+ad-hoc polymorphismの違いを見ますと、Smalltalkの多形には
+overloadingとinclusionが混在していると考えられますが如何でしょうか。
+
+上の式をセレクタ中心に、則ち関数呼び出しとして見、例えば
+#printOn:(3, aStream)
+#printOn:('abc', aStream)
+のような表記に書きかえてみるとはっきりしますが上の多形はまさにoverloadingです。
+それぞれの場合に実行されるコードは別の場所に書かれた別のコードであり、
+どちらが実行されるかの決定が第一引数の型
+(上の文書の用語での型に対応するものはSmalltalkのクラスであり、ここでは
+ SmallIntegerかByteStringか)によって行なわれているからです。
+
+一方で
+3 printOn: aStream.
+-1234567890 printOn: aStream.
+の二つの間に見られる多形はinclusionです。
+この場合に実行されるコードはNumberに書かれており、
+第一引数の3と-1234567890それぞれの型に、SmallIntegerかLargeNegativeIntegerかに
+依存しないからです。
+
+以上の例を全て並べ、
+3 printOn: aStream.
+-1234567890 printOn: aStream.
+'abc' printOn: aSteram.
+と見た場合にはどの語が使用されるべきか
+ちょっと良く解らなかったのですが、この三者間の多形というならばやはり
+overloadingだろうと思います。
+(ただしこのように考えると、一つのセレクタについてSmalltalk全体での
+ 多形の種類は殆ど(あるいは全て?)がoverloadingになってしまうので
+ レシーバの範囲を適当に小さく決めて多形の種類を判断することになるでしょう)
+
+
+ここまで上の文書の読み方に誤りがなかったとして、ですが、
+
+inclusionである多形は、概念のくくり出し、スーパークラス化、
+コードの節約といった整理の結果生じる自然な多形です。
+一方のoverloadingである多形はメッセージ名を似せるという、
+即ちpolymorphousに書くぞという意識の下でなければ書かれ存在し得ない、
+故意の多形と言えます。(たまたま同じ名になった、というのでは多形ではないでしょう)
+
+この二つを比べると、感覚的な言い方ですが、Smalltalkの各所に見られて
+Smalltalkらしいなと思わせる場面を作り出している多形はoverloadingの方で
+あるように思えます。
+
+
+
+才川隆文
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue May 12 07:53:03 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue May 12 07:53:08 2009
+Subject: [SML 7536] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+Message-ID: <4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+備忘のためのポストをさせていただきます。
+明日は「第7回Smalltalk勉強会＠京都」になります。
+http://www.smalltalk.jp/pipermail/sml/2009-April/007522.html
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu May 14 00:21:10 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu May 14 00:21:17 2009
+Subject: [SML 7537] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+Message-ID: <4A0AE566.1000302@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+Smalltalk 勉強会＠京都を終えて、自宅に帰り着いて、ゆっくりし
+てたのですが、報告を書かなければ…と思い立ち、マックに向かい
+ました。
+
+今日は、私的変数・共有変数・特殊変数と進んで、メッセージに入
+ることができました。ところがですね、喧喧諤諤の状態、諸子百家
+の光景を呈し、かなり疲れましたぁ〜。
+
+ご参加いただいた方々の変数のイメージが、かなり相異するのだと
+思いました。また、メッセージを送る、ということに関しても同様
+ですね。
+
+ブラックブックやイディオムでも、変数への代入という言葉を使っ
+ていますが、正しくは束縛を使わなければならないのでしょう。オ
+ブジェクト指向プログラミングに現れる変数を合点したいのならば、
+もう代入を使っていては立ちゆかない、ということが今日の勉強会
+でハッキリしました。
+
+束縛を参照する名前の記述法が現れ、空間を仕切って名前を収める
+作法が登場し、環境の中に新たな名前の空間を導入できる、という
+事態の把握が望まれます。
+
+最内スコープ束縛方式を暗黙とした Smalltalk プログラミングに
+おいて、次の術語を明解にしておく必要があるのだろうと思います。
+
+名前（name）
+　：
+拘束（intern）
+束縛（bind）
+解放（unbind）
+　：
+参照（refer）
+代入（assign）
+引用（quote）
+　：
+範囲（scope）
+寿命（lifetime）
+　：
+
+また、変数を書き留める（note）には、外延を示す（denote）、内
+包を示す（connote）、などが関係してきます。 仮にも名前体系の
+構築ですからね、変数名やメッセージ名を用いたプログラミングは。
+
+メッセージ送信に関しても、センダの具現が話題にのぼりましたが、
+こちらもブラックブックやイディオムでは、レシーバはセンダに応
+答する、と書いておきました。
+
+応答できない場合もあることを念頭に入れておきませう。コンテク
+ストが切れていたり、センダが世を去っていたり、シュード変数の
+thisContext をいじれるようになると、多彩な状況を作り出して試
+すことができます。もちろん、並行や分散のプログラミングでも。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From tomohiro ＠ sra.co.jp  Thu May 14 07:52:50 2009
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu May 14 07:52:53 2009
+Subject: [SML 7538] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0AE566.1000302@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+Message-ID: <200905140752.50955.tomohiro@sra.co.jp>
+
+おだです。
+
+> 最内スコープ束縛方式を暗黙とした Smalltalk プログラミングに
+> おいて、次の術語を明解にしておく必要があるのだろうと思います。
+>
+> 名前（name）
+> 　：
+
+これらに加えて、指し示される側について、
+識別子(id)
+参照(reference)
+番地(address)
+領域(memory block)
+ビット列(bit sequence)
+：
+型(type)
+クラス(class)
+といったあたりを整理する必要がありそうですね。
+
+> また、変数を書き留める（note）には、外延を示す（denote）、内
+> 包を示す（connote）、などが関係してきます。 仮にも名前体系の
+> 構築ですからね、変数名やメッセージ名を用いたプログラミングは。
+
+認知言語学では名前に関しては典型例を示す(prototype)ということにも注目します。
+あと、同じく認知言語学では、Meaning is a process rather than a discrete 'thing'
+that can be 'packaged' by language.などと言われていて、プログラミング言語から
+見ると、「なるほどねえ」と納得できることが多々あります。
+また、意味がプロセスである以上、CPUと脳という2種類のプロセッサそれぞれ向けに
+定義される「意味」があるはずだと思いますが、プログラミング言語の人間向けの意味論
+の研究は残念ながら今のところあまり見かけません。
+---
+おだ
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu May 14 08:40:19 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu May 14 08:40:29 2009
+Subject: [SML 7539] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <200905140752.50955.tomohiro@sra.co.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+	<200905140752.50955.tomohiro@sra.co.jp>
+Message-ID: <4A0B5A63.7040905@cc.kyoto-su.ac.jp>
+
+青木＠上賀茂です。
+
+Tomohiro Oda さんは書きました:
+> これらに加えて、指し示される側について、
+> 識別子(id)
+> 参照(reference)
+> 番地(address)
+> 領域(memory block)
+> ビット列(bit sequence)
+> ：
+> 型(type)
+> クラス(class)
+> といったあたりを整理する必要がありそうですね。
+
+はい、そう思います。
+
+昨夜も板書したのですが、プログラミング言語Cで「x += 1;」とい
+う記述（note）をしますでしょ。この記述に現れているxは少なくと
+も2つことを表現しています。
+
+xに1を足してxに入れる「x = x + 1;」と書き改めれば、もっとハッ
+キリします。右辺のxはxと名づけた内容ですが、左辺のxはxと名づ
+けた番地になります。
+
+記述が同じなのに書き記す所（この例の場合、右辺であるか、左辺
+であるか）によって異なっていることを、腑に落とさずに歩みを進
+めると、参照操作が出現したときに失速します。*xも&xも区別がつ
+かず、**xや***xで「きゃぁ〜」と声を出し、「ポインタは難しい」
+とぬかすことになります。:-)
+
+単写（複写をしても同値）が保たれる拘束、等値を云々しながらの
+束縛、等々へと通じている道を見失いますね。
+
+> 認知言語学では名前に関しては典型例を示す(prototype)ということにも注目します。
+> あと、同じく認知言語学では、Meaning is a process rather than a discrete 'thing'
+> that can be 'packaged' by language.などと言われていて、プログラミング言語から
+> 見ると、「なるほどねえ」と納得できることが多々あります。
+> また、意味がプロセスである以上、CPUと脳という2種類のプロセッサそれぞれ向けに
+> 定義される「意味」があるはずだと思いますが、プログラミング言語の人間向けの意味論
+> の研究は残念ながら今のところあまり見かけません。
+
+まったくもって仰せの通りです。
+
+メッセージ名（メッセージセレクタ）とメソッドの束縛が動的に行
+われるようになって久しいですが、いまやクラス名（キャピタルシ
+ンボル）とクラスの束縛さえも動的に行われる状況となっています
+ので、egaerからlazyへと時代が移っているのだと思います。
+
+あなたの値は何ですか？と問われるまで（valueというメッセージが
+送信されるまで）評価や束縛をサボって（遅らせて）いるのが普通
+になりましたから、意味がプロセスという観点からすれば、まとめ
+るのも容易ではないでしょう。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From tomohiro ＠ sra.co.jp  Thu May 14 09:22:18 2009
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu May 14 09:22:21 2009
+Subject: [SML 7540] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0B5A63.7040905@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+	<200905140752.50955.tomohiro@sra.co.jp>
+	<4A0B5A63.7040905@cc.kyoto-su.ac.jp>
+Message-ID: <200905140922.18850.tomohiro@sra.co.jp>
+
+おだです。
+
+> メッセージ名（メッセージセレクタ）とメソッドの束縛が動的に行
+> われるようになって久しいですが、いまやクラス名（キャピタルシ
+> ンボル）とクラスの束縛さえも動的に行われる状況となっています
+> ので、egaerからlazyへと時代が移っているのだと思います。
+
+はい。その流れはヒシヒシと感じます。
+逆にfull-lazyな関数型言語の世界では、Haskellにbang patternという
+eager evaluationをおこなうための言語要素が取り入れられていることも
+興味深いです。
+eagerかlazyか、適切な箇所に適切なsemanticsを適用しましょう、
+というトートロジー的なテーマには決着というものはないのでしょう。
+---
+おだ
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu May 14 09:46:18 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu May 14 09:46:22 2009
+Subject: [SML 7541] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <200905140922.18850.tomohiro@sra.co.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<200905140752.50955.tomohiro@sra.co.jp>	<4A0B5A63.7040905@cc.kyoto-su.ac.jp>
+	<200905140922.18850.tomohiro@sra.co.jp>
+Message-ID: <4A0B69DA.9080309@cc.kyoto-su.ac.jp>
+
+青木＠上賀茂です。
+
+> > メッセージ名（メッセージセレクタ）とメソッドの束縛が動的に行
+> > われるようになって久しいですが、いまやクラス名（キャピタルシ
+> > ンボル）とクラスの束縛さえも動的に行われる状況となっています
+> > ので、egaerからlazyへと時代が移っているのだと思います。
+　　　　　 ↑
+　　　　　スペルをまちがっちゃった、ごめんなさい。
+
+> はい。その流れはヒシヒシと感じます。
+
+JunSystem
+JunSystem value
+[JunSystem] value
+#{Root.Smalltalk.JunSystem} value
+
+> 逆にfull-lazyな関数型言語の世界では、Haskellにbang patternという
+> eager evaluationをおこなうための言語要素が取り入れられていることも
+> 興味深いです。
+
+Smalltalk(VisualWorks)にもComputedValueがあり、BlockClosureの
+評価系ですから、eagerEvaluationを指定できます。eagerとlazyの
+双方が必要な局面があるということかな。う〜む…ですけどね。:-)
+
+> eagerかlazyか、適切な箇所に適切なsemanticsを適用しましょう、
+> というトートロジー的なテーマには決着というものはないのでしょう。
+
+なるほど。そうだわね。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From osamu.hamasaki ＠ gmail.com  Fri May 15 00:47:10 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Fri May 15 00:47:23 2009
+Subject: [SML 7542] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0AE566.1000302@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd30905140847u51d146e2k6fc45cc93b32893e@mail.gmail.com>
+
+濱崎です。
+2009/05/14 0:21 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+
+> 青木＠京都宇治です。
+
+＜中略＞
+
+> 今日は、私的変数・共有変数・特殊変数と進んで、メッセージに入
+> ることができました。ところがですね、喧喧諤諤の状態、諸子百家
+> の光景を呈し、かなり疲れましたぁ〜。
+
+
+お疲れさまでした。私としては楽しく議論が出来てよかったです。
+
+＜中略＞
+
+> メッセージ送信に関しても、センダの具現が話題にのぼりましたが、
+> こちらもブラックブックやイディオムでは、レシーバはセンダに応
+> 答する、と書いておきました。
+
+
+センダの話題のところで出てきた
+
+               Compiler evaluate: 'self printString' for: 3 logged: false
+
+のお話は、その場ではちょっと消化不良だったので、帰宅してから
+Compilerのやっていることを読んでおりました。
+
+それで、読んだコードに触発されて以下のコードを書きました。
+
+------------- ここから -------
+
+| methodSearchBlock mainBlock |
+methodSearchBlock := [:class :messageSelector |
+class isNil
+ifTrue: [nil]
+ifFalse:
+[(class selectors includes: messageSelector)
+ifTrue: [class getMethodDictionary at: messageSelector]
+ifFalse:
+[methodSearchBlock
+value: class superclass
+value: messageSelector]]].
+
+mainBlock := [:anObject :messageSelector :args |
+| method |
+method := methodSearchBlock
+value: anObject class
+value: messageSelector.
+method valueWithReceiver: anObject arguments: args].
+
+^mainBlock value: 3 value: #+ value: #(4)
+
+--------------- ここまで ---------
+
+仮想マシンが裏方でひっきりなしにやっていることではあるのですけれど、
+こんな風にあからさまに書いてしまうと、センダ、レシーバどころかメッセージ
+送信そのものが消えてしまっていて、煎じ詰めればメソッド呼び出しのチェーンで
+しかないのね、と改めて思ってしまいます。当たり前と言えばそうなんですが。
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090515/21d42982/attachment.html
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri May 15 02:17:56 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri May 15 02:18:03 2009
+Subject: [SML 7543] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <1bc06fd30905140847u51d146e2k6fc45cc93b32893e@mail.gmail.com>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+	<1bc06fd30905140847u51d146e2k6fc45cc93b32893e@mail.gmail.com>
+Message-ID: <4A0C5244.8060807@cc.kyoto-su.ac.jp>
+
+こんばんは、青木＠京都宇治です。
+
+> センダの話題のところで出てきた
+> Compiler evaluate: 'self printString' for: 3 logged: false
+> のお話は、その場ではちょっと消化不良だったので、帰宅してから
+> Compilerのやっていることを読んでおりました。
+
+Compilerを読むと勉強になりますもんね。一昨日にも開示したプロ
+グラムでもありますが、濱崎さんが提示のプログラムと同じ応答を
+得るプログラムをここに開示させてください。
+
+Compiler evaluate: 'thisContext sender receiver printString' for: 3 logged: false
+
+これは誰のために評価するのかという立場を明示したプログラムで
+して、thisContext(aMethodContext)にsenderとreceiverの単項メッ
+セージを送信しています。
+
+'3'が応答されるまでの経緯を追うことができれば、センダとレシー
+バの柵（しがらみ）が分かると思います。
+
+> それで、読んだコードに触発されて以下のコードを書きました。
+> ------------- ここから -------
+> | methodSearchBlock mainBlock |
+> methodSearchBlock := [:class :messageSelector |
+> class isNil
+>     ifTrue: [nil]
+>     ifFalse:
+>         [(class selectors includes: messageSelector)
+>             ifTrue: [class getMethodDictionary at: messageSelector]
+>             ifFalse:
+>                 [methodSearchBlock
+>                     value: class superclass
+>                     value: messageSelector]]].
+> mainBlock := [:anObject :messageSelector :args |
+> | method |
+> method := methodSearchBlock
+>     value: anObject class
+>     value: messageSelector.
+> method valueWithReceiver: anObject arguments: args].
+> ^mainBlock value: 3 value: #+ value: #(4)
+> --------------- ここまで ---------
+> 仮想マシンが裏方でひっきりなしにやっていることではあるのですけれど、
+> こんな風にあからさまに書いてしまうと、センダ、レシーバどころかメッセージ
+> 送信そのものが消えてしまっていて、煎じ詰めればメソッド呼び出しのチェーンで
+> しかないのね、と改めて思ってしまいます。当たり前と言えばそうなんですが。
+
+そうりゃそうなりますよね、ノイマン型ですから、チューリングマ
+シンの枠から出ることはかないません。量子コンピュータならば…。
+
+とは言え、濱崎さんの触発プログラムコードは、メッセージ名とメ
+ソッド（文字へのポインタと関数へのポインタ）の動的な束縛を遂
+行するプログラムコードになっており、ユニバーサル系の実装です。
+
+インヘリタンスをブロッククロージャの再帰で駆け上りながら、メ
+ソッド辞書（文字へのポインタと関数へのポインタのテーブル）を
+ひいています。
+
+ここで、関数へのポインタが出てきていますが、xも*xも&xも区別が
+つかず、**xや***xで「きゃぁ〜」と声を出し、「ポインタは難しい」
+と宣う弱いプログラマは、(*x)(…)の出現によって気絶します。:-)
+
+あるプログラミング言語を勉強したら、そのプログラミング言語で
+記述したプログラム自体を実行するプログラム（処理系）を、その
+プログラミング言語自身で書き下ろす経験をすれば、免許皆伝（勉
+強しているプログラミング言語をマスターしたこと）になります。
+
+プログラミング言語を教える立場の方々にとっては必須なことだと
+思いますが、多くを語れず…。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From asaoka ＠ cc.kyoto-su.ac.jp  Fri May 15 10:01:58 2009
+From: asaoka ＠ cc.kyoto-su.ac.jp (ASAOKA Hiroko)
+Date: Fri May 15 10:02:02 2009
+Subject: [SML 7544] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0AE566.1000302@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+Message-ID: <4A0CBF06.4040407@cc.kyoto-su.ac.jp>
+
+浅岡です。
+
+AOKI Atsushi さんは書きました:
+> 青木＠京都宇治です。
+> 
+> 今日は、私的変数・共有変数・特殊変数と進んで、メッセージに入
+> ることができました。ところがですね、喧喧諤諤の状態、諸子百家
+> の光景を呈し、かなり疲れましたぁ〜。
+
+お疲れ様でした。
+
+わたしもうまく説明できなかったので、
+ほとんど青木さんやみなさまにオマカセ状態で・・・。
+でもいろいろな人の考え方を聞くことができて、
+とても勉強になりました。
+みなさま、来月もよろしくお願いいたします。
+
+来月は、２階の第２会議室になりますので、お間違えなく。
+2009年06月03日（水）19:00〜21:00
+
+
+あと、おやつ報告担当の任務を。
+
+今回のおやつは、坂本さんからいただきました☆
+
+神戸のおみやげで、
+ハンプトンファームさんのクッキー２種類です。
+
+http://www.hamptonfarm.jp/
+
+さくさくでおいしかったです。
+ありがとうございました♪
+
+-- 
+
+    浅岡 浩子(ASAOKA Hiroko)
+From tscompor ＠ gmail.com  Fri May 15 12:17:13 2009
+From: tscompor ＠ gmail.com (Takafumi Saikawa)
+Date: Fri May 15 12:17:19 2009
+Subject: [SML 7545] Cのポインタ
+In-Reply-To: <4A0C5244.8060807@cc.kyoto-su.ac.jp>
+References: <4A0AE566.1000302@cc.kyoto-su.ac.jp>
+	<1bc06fd30905140847u51d146e2k6fc45cc93b32893e@mail.gmail.com>
+	<4A0C5244.8060807@cc.kyoto-su.ac.jp>
+Message-ID: <20090515.121636.91296304.tscompor@gmail.com>
+
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+Subject: [SML 7543] Re: 第7回Smalltalk勉強会＠京都
+
+atsushi> ここで、関数へのポインタが出てきていますが、xも*xも&xも区別が
+atsushi> つかず、**xや***xで「きゃぁ〜」と声を出し、「ポインタは難しい」
+atsushi> と宣う弱いプログラマは、(*x)(…)の出現によって気絶します。:-)
+
+きっと概念より文法が難しい所為ですから文法を付け替えましょう。
+http://en.wikipedia.org/wiki/Significantly_Prettier_and_Easier_C%2B%2B_Syntax
+
+…探しても実装が見付かりませんでした
+
+
+才川隆文
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri May 15 16:00:21 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri May 15 16:00:24 2009
+Subject: [SML 7546] Re: Cのポインタ
+In-Reply-To: <20090515.121636.91296304.tscompor@gmail.com>
+References: <4A0AE566.1000302@cc.kyoto-su.ac.jp>	<1bc06fd30905140847u51d146e2k6fc45cc93b32893e@mail.gmail.com>	<4A0C5244.8060807@cc.kyoto-su.ac.jp>
+	<20090515.121636.91296304.tscompor@gmail.com>
+Message-ID: <4A0D1305.70305@cc.kyoto-su.ac.jp>
+
+青木です。
+
+> > ここで、関数へのポインタが出てきていますが、xも*xも&xも区別が
+> > つかず、**xや***xで「きゃぁ〜」と声を出し、「ポインタは難しい」
+> > と宣う弱いプログラマは、(*x)(…)の出現によって気絶します。:-)
+> 
+> きっと概念より文法が難しい所為ですから文法を付け替えましょう。
+> http://en.wikipedia.org/wiki/Significantly_Prettier_and_Easier_C%2B%2B_Syntax
+
+文法が簡略しすぎて難しいせいかもしれませんが、過去を思い返す
+と、そうとばかりではないのです。気絶したのはこの私ですから…。
+遠い昔のことですけどね。関数へのポインタを使いこなせるように
+なるまでに２年ほどかかりました。
+
+良い師匠にも恵まれませんでした。周りは番地を扱えないFORTRANや
+COBOLのプログラマばかりでした。本も少なかった。先々月にお亡く
+なりになりましたが、石田晴久さんの訳本が出る頃（1982年）のこ
+とで、私はピヨピヨの社会人になったばかり。Smalltalkに出会う2
+年前になります。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+From osamu.hamasaki ＠ gmail.com  Sat May 16 01:04:49 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sat May 16 01:04:55 2009
+Subject: [SML 7547] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0C5244.8060807@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+	<1bc06fd30905140847u51d146e2k6fc45cc93b32893e@mail.gmail.com>
+	<4A0C5244.8060807@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd30905150904v7398e5b9g31181eb6d78b9ddf@mail.gmail.com>
+
+こんばんは。
+ゆうべは遅くまで起きていたので、今朝（もう昨日の朝ですね。。。）は
+眠たかったです。
+
+> センダの話題のところで出てきた
+> > Compiler evaluate: 'self printString' for: 3 logged: false
+> > のお話は、その場ではちょっと消化不良だったので、帰宅してから
+> > Compilerのやっていることを読んでおりました。
+>
+
+何が消化不良だったのかというと、
+
+「メッセージ送信はどこにいったの？？？」
+
+だったんです。（ブラックブックやSmalltalkイディオムの中では、
+「センダ」、「レシーバ」は、メッセージ送信の概念の中で語られて
+いますから。）
+
+それでCompiler class>>evaluate:for:logged:から読み始めると、
+引数の文字列で表現されているプログラムからCompiledMethodを
+作って 、そのメソッドをどのクラスのメソッド辞書にも登録せずに
+直接実行しているところに辿り着いたという訳です。
+(Compiler evaluate: 'self halt' for: 3 logged: false. を実行して、デバッガの
+助けも借りました。）
+
+Compiler evaluate: 'thisContext sender receiver printString' for: 3 logged:
+> false
+>
+> これは誰のために評価するのかという立場を明示したプログラムで
+> して、thisContext(aMethodContext)にsenderとreceiverの単項メッ
+> セージを送信しています。
+
+
+> '3'が応答されるまでの経緯を追うことができれば、センダとレシー
+> バの柵（しがらみ）が分かると思います。
+
+
+とは言え、MethodContextのインスタンスが作られるのは仮想マシン
+内部での出来事なので、完全に追うのは難しいかと思います。
+ブルーブックを読みましょう(^^)
+（デバッガ＆インスペクタの助けを借りれば、ブルーブックを読まず
+とも、なんとかなるかなあ。。。）
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090516/19230a95/attachment.htm
+From dogatana ＠ gaia.eonet.ne.jp  Sat May 16 10:11:07 2009
+From: dogatana ＠ gaia.eonet.ne.jp (toshihiko ichida)
+Date: Sat May 16 09:59:36 2009
+Subject: [SML 7548] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0AE566.1000302@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+Message-ID: <4A0E12AB.2010301@gaia.eonet.ne.jp>
+
+いちだです。
+
+AOKI Atsushi さんは書きました:
+
+> 今日は、私的変数・共有変数・特殊変数と進んで、メッセージに入
+> ることができました。ところがですね、喧喧諤諤の状態、諸子百家
+> の光景を呈し、かなり疲れましたぁ〜。
+
+いつも楽しく参加させてもらっています。
+
+> 最内スコープ束縛方式を暗黙とした Smalltalk プログラミングに
+> おいて、次の術語を明解にしておく必要があるのだろうと思います。
+
+勉強会で XML.Text と Core.Text の２つのTexクラスという「名前」
+の解決について質問させていただきました。
+
+そのときにも最内スコープであるとの回答をいただいたと思うので
+す、クラス名については、どうもスコープの階層が無いように感じ
+ておりまだモヤモヤ感が残ってます。
+
+例えば Jun3Dimage というクラスの定義の冒頭には
+
+Smalltalk.Jun defineClass: #Jun3dImage
+	superclass: #{Jun.JunAbstractObject}
+
+とあり、名前空間としては Smalltalk.Jun に所属していますが、
+インスタンスを作成するときには
+  aImage := Smalltalk.Jun.3dImage new
+としなくても
+  aImage := 3dImage new
+とするだけでも 3dImage という名前のクラスのインスタンスを生
+成できます。SmalltalkはデフォルトとしてもJunが省略できてし
+まうのは何故だろうという疑問です。
+
+これから、同一クラス名となったときの曖昧さを解消するために、
+名前空間で擬似的に階層を扱えるが、作成したクラスは全て同じス
+コープにあるという理解をしたのですが、正しいでしょうか？
+
+あるいはスコープ階層は、クラス内でクラスを定義したときに出
+てくるものなのだろうかと想像したりします。
+（Smalltalkでできるのかどうか知らないのですが）
+
+--
+いちだ
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat May 16 16:36:09 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat May 16 16:36:15 2009
+Subject: [SML 7549] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0E12AB.2010301@gaia.eonet.ne.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+	<4A0E12AB.2010301@gaia.eonet.ne.jp>
+Message-ID: <4A0E6CE9.80403@cc.kyoto-su.ac.jp>
+
+青木＠上賀茂です。
+
+Smalltalk勉強会＠京都はレベルが高いですね！喜ばしいことです。
+市田さんからの質問への応答には、レガシィソフトウェア問題を話
+さなければなりません。
+
+Smalltalkに名前空間が導入された際、古いSmalltalkerたちによっ
+て記されたプログラムコードを無駄にしないように配慮した経緯が
+あるのです。（この私も古くからのSmalltalkerの1人ですから。）
+
+たとえば、OrderedCollectionという名に束縛されたクラスを得よう
+としたとき、昔は次の一言で済みました。(1)
+
+OrderedCollection
+
+今はSmalltalkという名前空間の下階層をきちんと列挙して書くこと
+が推奨されています。(2)
+
+Core.OrderedCollection
+
+もしくは、もっと正式に書くのも良いでしょう。(3)
+
+Root.Smalltalk.Core.OrderedCollection
+
+上記を誤解を恐れずにまとめますと、次のようになります。
+
+(1) オラが村のOrderedCollectionさん
+(2) Core市のOrderedCollectionさん（←推奨形式；Smalltalk府以上を省略）
+(3) Root国Smalltalk府Core市のOrderedCollectionさん
+
+ここで、古いSmalltalkerたちによって記されたプログラムコードに
+は、オラが村の…さん、オラさ村の…さん、ばかりが出現している
+わけです。
+
+で、このオラが村の…さんを許容するために、名前空間移入の必要
+に迫られたわけです。いわゆるレガシィソフトウェア問題。
+
+それまで、リリースされていたクラスたちは、以下の名前空間へと
+再配置されました。Core、Kernel、OS、External、Graphics、UI、
+Toolsなどは、昔のカテゴリ名をご存知の方々には、どんなクラスた
+ちが囲い込まれてのかが想像できると思います。
+
+Root.Smalltalk.Core.*
+Root.Smalltalk.Kernel.*
+Root.Smalltalk.OS.*
+Root.Smalltalk.External.*
+Root.Smalltalk.Graphics.*
+Root.Smalltalk.UI.*
+Root.Smalltalk.Tools.*
+Root.Smalltalk.CraftedSmalltalk.*
+Root.Smalltalk.Database.*
+Root.Smalltalk.Lens.*
+Root.Smalltalk.XProgramming.SUnit.*
+
+上記の名前空間に限って、オラが村の…さんを許そうじゃないか、
+ということですね。そうすれば、レガシィプログラムコードの中の
+OrderedCollectionをすべてCore.OrderedCollectionに書き改める
+必要がなくなりますので。
+
+実はこれに「じゅん for Smalltalk」も乗っかっちゃったわけです。
+（Jun.JunOpenGL3dObjectの推奨形式に書き換えるのが面倒で…。）
+（Jun.Jun…となるのも格好悪いし…。）
+
+どうやって乗っかるのか、これから禁じ手のプログラムを開示しま
+す。このメーリングリストに開示することではないのかもしれませ
+んが、禁じ手を勉強することはためになります。やってはいけない
+ことをやるからこそ、やってはいけないことがわかりますもん。:-)
+
+GeneralNameSpaceImportというクラスのインスタンスを作って、
+Smalltalkという名前空間にインポートしているのです。
+
+たとえば、GeneralNameSpaceImportのインスタンスは、次のように
+して作成します。
+
+GeneralNameSpaceImport path: #('Jun' '*')
+
+これは、Junという名前空間の下の階層のすべてを運び入れること
+を表現したオブジェクトとなります。
+
+そして、次に示すように、Smalltalkという名前空間へ一気に移入
+を行います。
+
+Smalltalk addImport: (GeneralNameSpaceImport path: #('Jun' '*'))
+
+これにより「じゅん for Smalltalk」はレガシィプログラムコード
+の仲間入りを果たします。次のメッセージ式の応答の末尾をご覧く
+ださい。
+
+Smalltalk importString
+==> '
+            Core.*
+            Kernel.*
+            OS.*
+            External.*
+            Graphics.*
+            UI.*
+            Tools.*
+            CraftedSmalltalk.*
+            XProgramming.SUnit.*
+            Database.*
+            Lens.*
+            Jun.*
+            '
+
+上述したGeneralNameSpaceImportはBindingReferenceのサブクラス
+でして、クラス名でクラスを動的束縛する仕掛けの一種でもあるの
+です。
+
+Object
+| GeneralBindingReference
+| | BindingReference　　　　　　　　←こいつの
+| | | ChangeSupportClassProxy
+| | | NameSpaceImport
+| | | | GeneralNameSpaceImport　　　←ここ
+| | | | SpecificNameSpaceImport
+| | | QualifiedName
+| | LiteralBindingReference
+| | StrictBindingReference
+
+以上になります。明解となりましたでしょうか？市田さん。ある意
+味で最内スコープ束縛方式をやぶる禁じ手ですので、通常はやって
+はいけませんよ。:-)
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat May 16 19:29:59 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat May 16 19:30:10 2009
+Subject: [SML 7550] Re: オーバロードはポリモフィズムか?
+In-Reply-To: <20090503.072325.207585970.tscompor@gmail.com>
+References: <49F95C83.5090202@im.dendai.ac.jp>	<49FC3973.6030809@im.dendai.ac.jp>
+	<20090503.072325.207585970.tscompor@gmail.com>
+Message-ID: <4A0E95A7.20809@cc.kyoto-su.ac.jp>
+
+子どもの日に書き下ろしていたのですが、ポストをためらっており
+ました。すいぶんと経ってしまいましたが、ポストします。今ちょ
+うど才川さんと私信でやり取りをしているところですしね。多数死
+は隠蔽されがちだから。
+
+-------- Original Message --------
+Subject: Re: [SML 7535] Re: オーバロードはポリモフィズムか?
+Date: Tue, 05 May 2009 16:25:23 +0900
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+To: Smalltalkers' Salon Mailing List <sml@smalltalk.jp>
+
+Takafumi Saikawa さんは書きました:
+> Smalltalkの多形には
+> overloadingとinclusionが混在していると考えられますが如何でしょうか。
+
+はい、そのように取ることもできますね。Cardelli さんと Wegner
+さんの書いたものをすえても、分けるのは難しいものがありますよ。
+
+Smalltalkの場合、メッセージセレクタ（文字へのポインタ）とコン
+パイルドメソッド（関数へのポインタ）の束縛を抱えた辞書のひき
+方（メソッドサーチ法）が一つ（単数）なのに、それを無理矢理に
+局面で分け、三つ四つ（複数）にしているような感じも受けます。
+それこそ、まさにポリモァ（多形）です。:-)
+
+調査論文なので、文献学的というか、大した歴史もないのに歴史学
+的でしょ。彼らの論文に基づく限りにおいては、書かれたものの範
+疇から逸脱できないようにも思えます。プログラムも書かれたもの
+ですし…。
+
+# 多分に権威的に語られた事実っぽい（ディクタなのにファクタに
+# してしまっている）ところもありますので、気をつけて。:-)
+
+観察しているプログラム（1985年当時に見ることができたMesa/Ada
+/Modula/ML/CLU/Smalltalkなどで書かれたもの）たちの調査分類よ
+りも、自分の目の前でボツになって（村八分にして殺して）ゆくプ
+ログラムの中に散見できた多形（多相）もどき（成り損ないや危う
+い思考）のほうが、より多くを教えてくれるように思います。多数
+死は隠蔽されがちなので。
+
+# 調査論文はダメだと言っているのはありませんよ。確かに論文を
+# 読んでもプログラミングは上手くなりませんけどね。:-)
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+From osamu.hamasaki ＠ gmail.com  Sat May 16 21:48:08 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sat May 16 21:48:13 2009
+Subject: [SML 7551] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0E12AB.2010301@gaia.eonet.ne.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>
+	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+	<4A0E12AB.2010301@gaia.eonet.ne.jp>
+Message-ID: <1bc06fd30905160548m532dc7f0se0299cf9ac6f3eb9@mail.gmail.com>
+
+こんばんは、濱崎です。
+2009/05/16 10:11 toshihiko ichida <dogatana@gaia.eonet.ne.jp>:
+
+> いちだです。
+
+＜中略＞
+
+>
+> 例えば Jun3Dimage というクラスの定義の冒頭には
+>
+> Smalltalk.Jun defineClass: #Jun3dImage
+>        superclass: #{Jun.JunAbstractObject}
+>
+> とあり、名前空間としては Smalltalk.Jun に所属していますが、
+> インスタンスを作成するときには
+>  aImage := Smalltalk.Jun.3dImage new
+> としなくても
+>  aImage := 3dImage new
+> とするだけでも 3dImage という名前のクラスのインスタンスを生
+> 成できます。SmalltalkはデフォルトとしてもJunが省略できてし
+> まうのは何故だろうという疑問です。
+
+
+Junが特別なことをしているのは、青木さんからお答えがありましたが、
+それ以外に、Workspaceで実行していらっしゃるのなら、Workspaceにも
+仕掛けがあって、Namespaceの名前を前置しなくても全てのNamespaceに
+ある共有変数を参照可能です。
+
+WorkspaceのSmalltalkメニューに「Namespaces...」という項目のが有ります。
+これを選択するとお判り頂けますが、デフォルトで全てのNamespaceがイン
+ポートされていると思います。
+
+ですので、Workspaceでメッセージ式を評価した場合は、名前空間の階層が
+無いかのように振る舞います。
+
+-----------
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090516/ebd26599/attachment.html
+From dogatana ＠ gaia.eonet.ne.jp  Sat May 16 23:20:49 2009
+From: dogatana ＠ gaia.eonet.ne.jp (toshihiko ichida)
+Date: Sat May 16 23:09:13 2009
+Subject: [SML 7552] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0E6CE9.80403@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>	<4A0AE566.1000302@cc.kyoto-su.ac.jp>	<4A0E12AB.2010301@gaia.eonet.ne.jp>
+	<4A0E6CE9.80403@cc.kyoto-su.ac.jp>
+Message-ID: <4A0ECBC1.6010900@gaia.eonet.ne.jp>
+
+いちだです。
+
+青木さん、濱崎さん、説明ありがとうございます。
+少し理解が進んだ気がします。
+
+AOKI Atsushi さんは書きました:
+> 市田さんからの質問への応答には、レガシィソフトウェア問題を話
+> さなければなりません。
+
+> 実はこれに「じゅん for Smalltalk」も乗っかっちゃったわけです。
+> GeneralNameSpaceImport path: #('Jun' '*')
+> これは、Junという名前空間の下の階層のすべてを運び入れること
+> を表現したオブジェクトとなります。
+
+> 以上になります。明解となりましたでしょうか？市田さん。ある意
+> 味で最内スコープ束縛方式をやぶる禁じ手ですので、通常はやって
+> はいけませんよ。:-)
+
+なるほど。下の階層＊すべて＊ですか。。。
+勉強会での説明はこのことだたったのですね。
+
+濱崎治 さんは書きました:
+> Junが特別なことをしているのは、青木さんからお答えがありましたが、
+> それ以外に、Workspaceで実行していらっしゃるのなら、Workspaceにも
+> 仕掛けがあって、Namespaceの名前を前置しなくても全てのNamespaceに
+> ある共有変数を参照可能です。
+
+さっき、WorkspaceでMyNamaespace.MySubNameSpaceの階層を作り、
+それぞれのクラスをNamespaceの階層指定なしに new したところ、何ら
+問題なく生成できたのは、この仕掛けですね。
+
+1) Smalltalk.MyNameSpace defineClass: #MyNameSpaceClass
+2) MyNameSpace.MySubNameSpace defineClass: #MySubNameSpaceClass
+
+調子にのって異なる階層に同じ名前のクラス
+
+3) MyNameSpace.MySubNameSpace defineClass: #MyNameSpaceClass
+
+を定義してやってnew すると、さすがに
+"Replace MyNameSpaceClass with...?" と聞かれました。
+
+--
+いちだ
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat May 16 23:11:41 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat May 16 23:11:46 2009
+Subject: [SML 7553] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <1bc06fd30905160548m532dc7f0se0299cf9ac6f3eb9@mail.gmail.com>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>	<4A0AE566.1000302@cc.kyoto-su.ac.jp>	<4A0E12AB.2010301@gaia.eonet.ne.jp>
+	<1bc06fd30905160548m532dc7f0se0299cf9ac6f3eb9@mail.gmail.com>
+Message-ID: <4A0EC99D.3060606@cc.kyoto-su.ac.jp>
+
+こんばんは、青木＠宇治です。
+
+私は、毎朝、毎朝、プログラムのコードリーディングを日課にして
+いるのですが、京都での勉強会が開催されてから、Smalltalkのコー
+ドリーディングをする方々が増えてきて、実に実に喜ばしいです！
+
+> Junが特別なことをしているのは、青木さんからお答えがありましたが、
+
+Root国Smalltalk府Jun市に住んでいるクラス名は、Smalltalk府に
+おいて名前が衝突することがない、というのが前提になっており、
+だからこそ、Smalltalk府に移入して、Jun市を省略してもいいよう
+に仕組んだのです。
+
+＃オラさ村のJunOpenGL3dObjectさんは、
+＃とても有名で、Jun市の市民なのにさ、
+＃Smalltalk府の顔になっちまっただぁ。
+
+それから、クラスの名前とクラスの実体の束縛を表すのが#{…}に
+なります。LiteralBindingReferenceのインスタンスです。
+
+(1)
+OrderedCollection
+#{OrderedCollection} value
+
+(2)
+Core.OrderedCollection
+#{Core.OrderedCollection} value
+
+(3)
+Root.Smalltalk.Core.OrderedCollection
+#{Root.Smalltalk.Core.OrderedCollection} value
+
+これはクラスの名前と実体だけに限らず、すべてのオブジェクトの
+名前と実体の束縛に適用できるように整備が進行中です。
+
+> それ以外に、Workspaceで実行していらっしゃるのなら、Workspaceにも
+> 仕掛けがあって、Namespaceの名前を前置しなくても全てのNamespaceに
+> ある共有変数を参照可能です。
+
+名前空間、パッケージ、パーセル、カテゴリなど、これらはプログ
+ラミング環境と呼ばれるものに内包されて、プログラミングを行う
+ときの外延となる、というグランドデザインに基づいた実装も現在
+進行中なんです。
+
+濱崎さんに指摘いただいワークスペースにおける名前空間の複数指
+定も、このグランドデザインの一つになります。
+
+余談になりますが、もう一つの禁じ手を示しましょう。先にも申し
+ましたが、やっていいこととやってはいけないことを理解し行解す
+るのに役立つでしょうからね。
+
+GeneralBindingReferenceのインスタンスに隠蔽されたキャッシュを
+無理矢理にアクセスしてみます。やってはならないのですよ、くれ
+ぐれも言っておきますが。
+
+(#{Root.Smalltalk.Core.OrderedCollection} yourself)
+    instVarAt:
+        (#{Root.Smalltalk.Core.GeneralBindingReference} value allInstVarNames
+            indexOf: 'cache')
+==> nil
+
+ね、最初はnilでしょ。ところが、あなたの値は何ですか？と訊ねる
+（valueというメッセージを送る）と、
+
+(#{Root.Smalltalk.Core.OrderedCollection} value; yourself)
+    instVarAt:
+        (#{Root.Smalltalk.Core.GeneralBindingReference} value allInstVarNames
+            indexOf: 'cache')
+==> (VariableBinding key: #OrderedCollection)
+
+ね、今度はVariableBindingのインスタンスがキャッシュされている
+のがわかります。
+
+VariableBindingは、LookupKeyのサブクラスで、Associationの親戚
+です。Dictionaryの要素になることでお馴染みですよね。
+
+Object
+| Magnitude
+| | LookupKey
+| | | Association
+| | | | AssociationTree
+| | | | | AssociationTreeWithParent
+| | | | | | AssociationTreeWithParentWithIndents
+| | | | ProbeCharacterStyle
+| | | | WeakKeyAssociation
+| | | | | Ephemeron
+| | | LabelAndValue
+| | | VariableBinding
+| | | | InitializedVariableBinding
+
+はかないものEphemeronは面白いです。親しい者に先立たれたこと
+（theBereaved）をいたむmournのメッセージがいかにも喪に服する
+感じなんですよ。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat May 16 23:43:28 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat May 16 23:43:33 2009
+Subject: [SML 7554] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0ECBC1.6010900@gaia.eonet.ne.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>	<4A0AE566.1000302@cc.kyoto-su.ac.jp>	<4A0E12AB.2010301@gaia.eonet.ne.jp>	<4A0E6CE9.80403@cc.kyoto-su.ac.jp>
+	<4A0ECBC1.6010900@gaia.eonet.ne.jp>
+Message-ID: <4A0ED110.7010202@cc.kyoto-su.ac.jp>
+
+toshihiko ichida さんは書きました:
+> さっき、WorkspaceでMyNamaespace.MySubNameSpaceの階層を作り、
+> それぞれのクラスをNamespaceの階層指定なしに new したところ、何ら
+> 問題なく生成できたのは、この仕掛けですね。
+> 1) Smalltalk.MyNameSpace defineClass: #MyNameSpaceClass
+> 2) MyNameSpace.MySubNameSpace defineClass: #MySubNameSpaceClass
+> 調子にのって異なる階層に同じ名前のクラス
+> 3) MyNameSpace.MySubNameSpace defineClass: #MyNameSpaceClass
+> を定義してやってnew すると、さすがに
+> "Replace MyNameSpaceClass with...?" と聞かれました。
+
+いちださんもやるなぁ〜！おもしろすぎる。:-)
+
+気軽に工事中のオブジェクトを出現させて、それらと会話してみる
+のがSmalltalkの醍醐味です。VisualWorksはよく話に追随してきて
+くれますから、プログラマの知識増幅器として手放せなくなります。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Sun May 17 12:18:52 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun May 17 12:18:58 2009
+Subject: [SML 7555] Re: 第7回Smalltalk勉強会＠京都
+In-Reply-To: <4A0E6CE9.80403@cc.kyoto-su.ac.jp>
+References: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+	<4A08AC4F.4060300@cc.kyoto-su.ac.jp>	<4A0AE566.1000302@cc.kyoto-su.ac.jp>
+	<4A0E12AB.2010301@gaia.eonet.ne.jp> <4A0E6CE9.80403@cc.kyoto-su.ac.jp>
+Message-ID: <JxYl1OwGmA4AcujLpimhIoEQ8@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+下記のSmalltalkの名前空間に自分のライブラリの名前空間をインポート
+させてしまう方法ですが、私もSIXXというXMLシリアライザのライブラリ
+で使っています。
+
+http://www.mars.dti.ne.jp/~umejava/smalltalk/sixx/index.html
+
+SIXXはObjectなどの既存のクラスにシリアライズ用メソッドを追加して
+いるのですが、VW版のみSixx.SixxSettingsなどと名前空間の記述が
+ソース中にでてしまうと、他の名前空間をサポートしていないSmalltalk
+へのポータビリティがなくなってしまいます。
+
+そんなわけで、割と実用的な方法ではないかと私は思っています。
+
+Smalltalkの名前空間内で衝突が無いように、クラスには全てSixxという
+接頭辞をつけるところが冗長ではあります。また他のSmalltalkでも
+名前空間をサポートすべきであり、かつその表記が統一化されるべき
+という話もありますね。(VWでは.Smalltalk/Xでは::が名前空間の
+区切りになっています)
+
+(snip) 
+> そして、次に示すように、Smalltalkという名前空間へ一気に移入
+> を行います。
+> 
+> Smalltalk addImport: (GeneralNameSpaceImport path: #('Jun' '*'))
+> 
+> これにより「じゅん for Smalltalk」はレガシィプログラムコード
+> の仲間入りを果たします。次のメッセージ式の応答の末尾をご覧く
+> ださい。
+> 
+> Smalltalk importString
+> ==> '
+>             Core.*
+>             Kernel.*
+>             OS.*
+>             External.*
+>             Graphics.*
+>             UI.*
+>             Tools.*
+>             CraftedSmalltalk.*
+>             XProgramming.SUnit.*
+>             Database.*
+>             Lens.*
+>             Jun.*
+>             '
+> 
+> 上述したGeneralNameSpaceImportはBindingReferenceのサブクラス
+> でして、クラス名でクラスを動的束縛する仕掛けの一種でもあるの
+> です。
+> 
+> Object
+> | GeneralBindingReference
+> | | BindingReference　　　　　　　　←こいつの
+> | | | ChangeSupportClassProxy
+> | | | NameSpaceImport
+> | | | | GeneralNameSpaceImport　　　←ここ
+> | | | | SpecificNameSpaceImport
+> | | | QualifiedName
+> | | LiteralBindingReference
+> | | StrictBindingReference
+> 
+> 以上になります。明解となりましたでしょうか？市田さん。ある意
+> 味で最内スコープ束縛方式をやぶる禁じ手ですので、通常はやって
+> はいけませんよ。:-)
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Sun May 17 19:09:56 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun May 17 19:11:06 2009
+Subject: [SML 7556] 第9回Smalltalk勉強会のお知らせ
+Message-ID: <JxgU7eoDMCAU9.k8QjGHydHA4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。今回は金曜日です。
+
+日時: 2009/5/27(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai9kaismalltalkbenkyoukai
+
+今回のテーマは「SmalltalkでWeb」です。SmalltalkでWebアプリなんかできるの?
+というのが世間的な認識かも知れませんが、実は皆がPerlでアクセスカウンタを
+作っている時代に、VisualWaveやClassicBlendなどの極めて先進的なWebアプリ
+フレームワークを出していたのですよね。
+オールドファンには申し訳ないですが、今回はそれらは扱いません。
+主にSeaside、余裕があればAIDA/Webという具合に、今のSmalltalkによるWebアプリ
+フレームワークの二大巨頭を取り上げます。(もちろん当時のClassicBlendを持って
+きて参加していただいてもかまいませんが)
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+気になる方はこのMLにメールを送っていただいても良いです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Sun May 17 21:20:06 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun May 17 21:20:14 2009
+Subject: [SML 7557] Re: 第9回Smalltalk勉強会のお知らせ
+In-Reply-To: <JxgU7eoDMCAU9.k8QjGHydHA4@mars.dti.ne.jp>
+References: <JxgU7eoDMCAU9.k8QjGHydHA4@mars.dti.ne.jp>
+Message-ID: <JxhvZZdIkB42cm96LGb7wIoA2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+失礼しました。27日は水曜日ですね。ともあれお待ちしています!
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。今回は金曜日です。
+> 
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed May 27 08:06:55 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed May 27 08:07:10 2009
+Subject: [SML 7558] 第8回Smalltalk勉強会＠京都
+Message-ID: <4A1C760F.1010907@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。（本日まで大学が休校でして…）
+
+第8回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+JR京都駅前にご参集ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto8
+
+第8回 Smalltalk勉強会＠京都
+日時：2009年06月03日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+今回はオブジェクト指向プログラミングで一番重要な「メッセージ
+を送受信をすること」について解題します。テキスト（ブラック
+ブック）の３章５節「メッセージ」から行いますが、７章２節「本
+格的な文法」も併せてゆきたいと思います。なぜifやforやdoなどが
+予約語になっていないのかをメッセージ送受信から得心していただ
+けるように努めます。また「じゅん for Smalltalk（Jun780）」も
+配布できると思います。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

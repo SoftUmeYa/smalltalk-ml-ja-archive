@@ -1,0 +1,231 @@
+From hirowadenden ＠ hera.eonet.ne.jp  Tue Jun  1 20:00:52 2010
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Tue Jun  1 20:02:42 2010
+Subject: [SML 7814] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+In-Reply-To: <4C03AFC9.9000806@cc.kyoto-su.ac.jp>
+References: <4C008EB0.5000800@hera.eonet.ne.jp>	<4C00979B.2020107@cc.kyoto-su.ac.jp>	<4C00EE1B.2000108@hera.eonet.ne.jp>	<4C03AC8E.2050104@hera.eonet.ne.jp>
+	<4C03AFC9.9000806@cc.kyoto-su.ac.jp>
+Message-ID: <4C04E864.4000000@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+(2010年05月31日 21:47), AOKI Atsushi wrote:
+> (10/05/31 21:33), hirowadenden wrote:
+>> ベンチマークで表示されたViewfinder(an ApplicationWindow)に対して
+>> メッセージcompleteContentsOfArea: aRectangleを(aRectangleを変えながら)
+>> 送ってみました。
+>> ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されていない
+>> 場合は、指定した領域の画像(a Depth32Image)が返ってきました。
+>> ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+>> 領域と重なる場合は、incompleteAreaCopySignalが発生しました。
+> 
+> この現象は、かつて私も遭遇したことがあります。
+> 遠い昔、マックの仮想マシンでも同様でした。
+
+上記の動作は予想される結果であるように思ったのですが、違うのでしょうか?
+　ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されていない
+場合、指定した領域の画像が得られるのは正常時の正しい動作である(これは
+合っていますよね?)。
+　ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+領域と重なる場合、隠されている部分の画像データがdamagedになっており
+完全な画像内容を取得出来ないので、incompleteAreaCopySignalが発生するのだと
+思いました(これが間違っているのですね?)。
+
+報告した結果に、ちょっと自信がなくなったので、もう少し調べたところ、使用する
+window managerにより結果が変わることが分かりました。今使用しているGNOME
+desktopには、軽量の'metacity'と、OpenGLを使ってdesktopに効果をつける
+'compiz'という二つのwindow managerがあるようです。
+'metacity'を使った場合は前回報告した上記のような結果になります。
+'compiz'を使った場合、メッセージcompleteContentsOfArea: aRectangleは
+ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+どうかにかかわらず指定した領域の画像(a Depth32Image)を返します。
+'compiz'の場合の動作が正しいと考えてよいのでしょうか?
+
+また、window managerに'metacity','compiz'のいずれを使った場合でも
+JunBenchmark new show3dObjectは<primitive: 1102>がfailedの
+Exceptionになります。
+
+-- hirowadenden
+
+From hirowadenden ＠ hera.eonet.ne.jp  Wed Jun  2 00:32:37 2010
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Wed Jun  2 00:36:21 2010
+Subject: [SML 7815] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+In-Reply-To: <4C04E864.4000000@hera.eonet.ne.jp>
+References: <4C008EB0.5000800@hera.eonet.ne.jp>	<4C00979B.2020107@cc.kyoto-su.ac.jp>	<4C00EE1B.2000108@hera.eonet.ne.jp>	<4C03AC8E.2050104@hera.eonet.ne.jp>	<4C03AFC9.9000806@cc.kyoto-su.ac.jp>
+	<4C04E864.4000000@hera.eonet.ne.jp>
+Message-ID: <4C052815.3050508@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+(2010年06月01日 20:00), hirowadenden wrote:
+> また、window managerに'metacity','compiz'のいずれを使った場合でも
+> JunBenchmark new show3dObjectは<primitive: 1102>がfailedの
+> Exceptionになります。
+
+<primitive: 1102>がfailedのExceptionになるのはメッセージ
+completeContentsOfArea: aRectangleにおけるaRectangleのインスタンス変数
+originまたはcornerの、xまたはyがa Fractionになっているのが原因のようです。
+デバッガのスタックを素直に追ってみるべきでした。
+
+-- hirowadenden
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun  2 04:54:01 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jun  2 04:54:08 2010
+Subject: [SML 7816] Re: 第20回Smalltalk勉強会＠京都
+In-Reply-To: <4BFC837C.30305@cc.kyoto-su.ac.jp>
+References: <4BFC837C.30305@cc.kyoto-su.ac.jp>
+Message-ID: <4C056559.9000203@cc.kyoto-su.ac.jp>
+
+京都のSmalltalk勉強会、本日です！（とうとう20回目：継続は力）
+
+直伝方式（インタラクティブにプログラミング）を行ってゆきます。
+前方のスクリーンが見えやすいところに着席していただき、
+マシン（VisualWorks 7.7 NC）のご用意を。
+
+--- 青木淳＠京都宇治
+
+(10/05/26 11:12), AOKI Atsushi wrote:
+> 青木＠京都上賀茂です。
+> 
+> 京都での勉強会における今後ですが、先月の勉強会の際に伺ったと
+> ころ、以下のような要望が出てきました。
+> 
+> 　　Tips集（定石集）
+> 　　キャンバス（インターフェースビルダー）
+> 　　ランタイム化
+> 　　GUIプログラミングの紹介と解説
+> 　　VisualWorksから他のSmalltalkへの移植方法
+> 
+> で、次回の勉強会から、GUIプログラミングの紹介と解説をしてゆこ
+> うと思います。もちろん、キャンバス（インターフェースビルダー）
+> を含める形で行います。
+> 
+> ということで、第20回Smalltalk勉強会＠京都を開催します。万障繰
+> り合わせてJR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto19
+> 
+> 場所は先月と同様のキャンプラ5階の第4演習室になります。
+> 
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1605&frmCd=14-1-0-0-0
+> 
+> 第20回 Smalltalk勉強会＠京都
+> 日時：2010年06月02日（水）19:00〜21:00
+> キャンパスプラザ京都 5階 第4演習室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 早いもので20回目となりました。今回からGUIプログラミングの紹介
+> と解説をしてゆこうと思います。もちろん、キャンバス（インター
+> フェースビルダー）を含める形で行います。ブラックブックとノー
+> ト型のパーソナルコンピュータ（Windows 7/Vista/XP または Mac
+> OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From umejava ＠ mars.dti.ne.jp  Fri Jun 18 00:39:33 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Jun 18 00:39:40 2010
+Subject: [SML 7817] 第21回Smalltalk勉強会のお知らせ
+Message-ID: <JxkNDT4Exv2VelU1s_PeTe7w4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/6/28(月)19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai21kaismalltalkbenkyoukai
+
+今回のテーマはTraitsです。
+
+Squeak 3.9から採用され、いまやPharoやGNU Smalltalkにも取り入れられるに至った
+新たなクラス拡張の仕組みです。
+なぜかVisualWorks版が存在しないので、作ってみるのも良いでしょう。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun 30 21:59:32 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jun 30 21:59:40 2010
+Subject: [SML 7818] 第21回Smalltalk勉強会＠京都
+Message-ID: <4C2B3FB4.10808@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+第21回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+JR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto21
+
+場所は先月と同様のキャンプラ5階の第4演習室になります。
+
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1605&frmCd=14-1-0-0-0
+
+第21回 Smalltalk勉強会＠京都
+日時：2010年07月07日（水）19:00〜21:00
+キャンパスプラザ京都 5階 第4演習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+GUIプログラミングの紹介と解説の2回目になります。今回もキャン
+バス（インターフェースビルダー）を含める形で行い、作成途中の
+古風なブラウザ（old-fashioned browser）を完成へと導こうと思
+います。ノート型のパーソナルコンピュータ（Windows 7/Vista/XP
+または Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From umejava ＠ mars.dti.ne.jp  Wed Jun 30 22:49:55 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Jun 30 22:50:02 2010
+Subject: [SML 7819] Re: 第21回Smalltalk勉強会＠京都
+In-Reply-To: <4C2B3FB4.10808@cc.kyoto-su.ac.jp>
+References: <4C2B3FB4.10808@cc.kyoto-su.ac.jp>
+Message-ID: <JxmtVX6ijJaNHUbN2WJqoUzg7@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+細かいのですが、リンク先案内文中のブラックブックへのリンクが切れているようです。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/index-j.html
+
+今はおそらく
+http://aokilab.kyoto-su.ac.jp/documents/BlackBook/index-j.html
+でしょうか。
+
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> 青木＠京都上賀茂です。
+> 
+> 第21回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+> JR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto21
+> 
+> 場所は先月と同様のキャンプラ5階の第4演習室になります。
+> 
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1605&frmCd=14-1-0-0-0
+> 
+> 第21回 Smalltalk勉強会＠京都
+> 日時：2010年07月07日（水）19:00〜21:00
+> キャンパスプラザ京都 5階 第4演習室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> GUIプログラミングの紹介と解説の2回目になります。今回もキャン
+> バス（インターフェースビルダー）を含める形で行い、作成途中の
+> 古風なブラウザ（old-fashioned browser）を完成へと導こうと思
+> います。ノート型のパーソナルコンピュータ（Windows 7/Vista/XP
+> または Mac OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+---
+[:masashi | ^umezawa]

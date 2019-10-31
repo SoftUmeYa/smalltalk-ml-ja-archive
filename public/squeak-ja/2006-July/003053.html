@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3053] Re: Wiki としての  SuperSwiki
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203053%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgIFN1cGVyU3dpa2k%3D%3F%3D&In-Reply-To=44B6D76D.9030207%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003051.html">
+   <LINK REL="Next"  HREF="003057.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3053] Re: Wiki としての  SuperSwiki</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203053%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgIFN1cGVyU3dpa2k%3D%3F%3D&In-Reply-To=44B6D76D.9030207%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3053] Re: Wiki としての  SuperSwiki">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2006年 7月 14日 (金) 10:41:21 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003051.html">[Squeak-ja: 3051] Re: Wiki としての SuperSwiki
+</A></li>
+        <LI>次の記事 <A HREF="003057.html">[Squeak-ja: 3057] Re: Wiki としての SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3053">[ 日付 ]</a>
+              <a href="thread.html#3053">[ スレッド ]</a>
+              <a href="subject.html#3053">[ 件名 ]</a>
+              <a href="author.html#3053">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+&gt;<i> Smalltalk (Squeak) を使ってみて少し気になったのですが、Smalltalk は
+</I>&gt;<i> イメージファイルという環境で区切られた閉鎖的な環境ではないかと。
+</I>&gt;<i> Smalltalk の環境がネットワーク上で共有できるなら、それこそ、
+</I>&gt;<i> OpenDoc は簡単に実現できそうなものですが、今ひとつ残念です。
+</I>&gt;<i> Smalltalk の部品オブジェクトをネットワーク上でやり取りできれば、
+</I>&gt;<i> ポートレットなど朝飯前に作れますよね。
+</I>
+わりとこうしたコンセプトに近いものとして、Croquetというものがあります。
+<A HREF="http://www.opencroquet.org/">http://www.opencroquet.org/</A>
+
+3D画面が非常に派手なため、よくLooking GlassのSqueak版と勘違いされてしまう
+のですが、単なる3DのUIではなく、その実態は分散コラボレーション環境です。
+
+Croquetの下で動いているプロトコルはTeaTimeと呼ばれているものです。
+これはオブジェクトレプリケーションプロトコルであり、オブジェクトのプール
+(アイランドと呼ばれています)を、複数イメージ間で自動的に同期させることで
+分散環境を実現しています。
+
+<A HREF="http://www.opencroquet.org/Site%20PDFs/2005%20Hedgehog%20Architecture.pdf">http://www.opencroquet.org/Site%20PDFs/2005%20Hedgehog%20Architecture.pdf</A>
+
+分散オブジェクトというと、パフォーマンス上の問題、スケーラビリティのなさ
+などで、現在は下火になってしまった技術ですが、レプリケーションが自動的に
+行われるという前提ができると、状況は一気に変わってくると思っています。
+
+従来の分散オブジェクトでは、メッセージ送信をローカルとリモートで本当に
+透過的に行うことができませんでした。リモートのオブジェクトに対する送信は、
+ローカルに比べ、何百倍も遅いものとなってしまっていたからです。オブジェクト
+レプリケーションが行われる環境では、リモートに対するメッセージ送信は、
+実はローカルのレプリカに対するものなので、ネットワークの制限を気にせずに
+本当に透過的にメッセージ送信ができます。
+
+イメージファイルを皆で共有するというのも、そろそろ夢ではなくなりつつ
+あるのかもしれません。
+
+&gt;<i> もっとも、こういう方面での成長をとげてこなった(だろう,想像で言ってます)
+</I>&gt;<i> 現在の Smalltalk の環境の場合、先に述べたようにセキュリティの面で
+</I>&gt;<i> 問題がありますよね。外部からくるオブジェクトがそのままウィルスにも
+</I>&gt;<i> なってしまい得る。その意味では、能力の大きいPostScriptに制限をかけて、
+</I>&gt;<i> PDFが作成されたように、ネットワーク環境向けに、能力に制限をかけられる
+</I>&gt;<i> 環境 (サンドバッグモデル) の開発が望まれるところですね。
+</I>
+アイランドというプール内にオブジェクトを入れてしまうことで、アイランド間の
+メッセージ送信を制限するという試みがなされているところです。個人的には
+この部分の仕組みはまだまだ弱いと感じていますが、開発は進んでいるところです。
+
+&gt;<i> 
+</I>&gt;<i> Smalltalk がんばれ!
+</I>&gt;<i> 
+</I>
+伝統的に、GO Smalltalk! というフレーズがよく使われます。;-)
+
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003051.html">[Squeak-ja: 3051] Re: Wiki としての SuperSwiki
+</A></li>
+	<LI>次の記事 <A HREF="003057.html">[Squeak-ja: 3057] Re: Wiki としての SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3053">[ 日付 ]</a>
+              <a href="thread.html#3053">[ スレッド ]</a>
+              <a href="subject.html#3053">[ 件名 ]</a>
+              <a href="author.html#3053">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

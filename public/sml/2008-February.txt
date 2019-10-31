@@ -1,0 +1,126 @@
+From masuda ＠ im.dendai.ac.jp  Thu Feb 14 23:53:43 2008
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Thu Feb 14 23:53:51 2008
+Subject: [SML 7350] 東京電機大学未来科学部イブニングセミナー 石井裕氏 独創・協創・競創の風土とタンジブル・ビット
+Message-ID: <20080214.235343.74744650.masuda@im.dendai.ac.jp>
+
+増田＠電大です。
+
+Squeak-ML にも流しましたが、Smalltalk 関係者にはヒューマン・インタラク
+ション、ユーザ・インタフェース関係に興味のある方が多いと思いますので、
+以下の無料セミナーについてお知らせさせていただきます。
+
+なお、http://mirai.dendai.ac.jp/openlab/2007/seminar/ の紹介文の1行目は
+以下のようになっています。
+
+MITメディアラボは、「未来は予測するものではなく、発明するもの」というア
+ラン・ケイの言葉を体現する研究所であり、世界中の先進的な企業とのコラボ
+レーションを、創造のエンジンとしている。
+
+
+
+東京電機大学
+未来科学部イブニングセミナー
+　　　　　　　　　　　　
+
+　　　　　　　　記
+
+１．日時:	2008年 ３月１１日(火) 　16:30-18:00
+
+２．会場:	東京都千代田区神田錦町２−２
+ 		東京電機大学神田キャンパス　丹羽ホール
+
+３．講師：	石井　裕氏
+　　　			マサチューセッツ工科大学（MIT）
+メディア・ラボ教授
+
+４．演題：
+独創・協創・競創の風土とタンジブル・ビット
+http://mirai.dendai.ac.jp/openlab/2007/seminar/
+
+５．参加費：	無料
+
+６．その他
+講演後、石井講師ご出席で懇親会を行います。
+１１号館１７Ｆ　18:15−19:30　
+
+７．申し込み先
+下記申し込みＵＲＬからお申し込みください。
+http://www.mlab.im.dendai.ac.jp/event/20080311/
+
+８．問い合わせ先
+　　			東京電機大学未来科学部情報メディア学科
+	yajima@im.dendai.ac.jp
+
+以上
+
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科 増田 英孝
+E-mail: masuda@im.dendai.ac.jp TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/ FAX 03-5280-3592
+From nisinaka ＠ sra.co.jp  Wed Feb 20 17:50:26 2008
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Wed Feb 20 17:50:36 2008
+Subject: [SML 7351] [ANNOUNCE] Jun for Java (Jun699)
+Message-ID: <20080220174428.3708.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン699を公開します。
+
+  Java2 SDK 1.4 に対応する最後のバージョンとなる予定です。
+
+  バージョン695からの主な変更点は、以下の通りです。
+
+    * (bug fix) JunFileListにおいて、パーミッションの無いディレク
+      トを選択した際に、例外を送出する不具合を修正しました。
+
+    * (bug fix) JunFileRequesterにおいて、仮想的なルートディレク
+      トリに関連する不具合を修正しました。
+
+    * (modification) Jun2dCircle/Jun3dCircle/Jun2dPolygonに、座標
+      変換のためのメソッドを追加しました。
+
+    * (incompatibility) JunURLを、パッケージ
+      'jp.co.sra.jun.goodies.tips'に移動しました。
+
+    * (new feature) JunAbstractObjectは、じゅんクラスライブラリフ
+      レームワークの一部として、Jun697において導入されました。
+
+    * (new feature) JunAbstractModelは、じゅんMVCフレームワークの
+      一部として、Jun699において導入されました。
+
+    * (modification) JunLineとそのサブクラスをJun697相当に更新し
+      ました。JunLine抽象クラスにおいて、'angleWithLine_(JunLine)'
+      が抽象メソッドとして定義されました。
+
+    * (bug fix) JunDoubleMatirxにおいて、ガウスの消去法による逆行
+      列の計算に不具合がありました。このバグ修正は、Smalltalk版の
+      Jun758において施されたものです。
+
+    * (modification) JunDXFParserがDICTIONARY部を扱う際に、例外を
+      送出する代わりに、単に無視するように変更しました。
+
+    * (modification) JunGifAnimationStreamが、最適化された画像群
+      を扱うことができるようになりました。
+
+    * (modification) Macにおけるデフォルトフォントの指定(Osaka)を
+      廃止しました。プロパティapple.awt.graphics.UseQuartzをtrue
+      にした時、Leopardでは'Osaka'が適切に表示されず、逆にTigerで
+      は'Dialog'が適切に表示されるようになったことに伴う変更です。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8060] Squeak/Pharo上で動作する軽量日本語入力メソッド Tekka
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208060%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCPmUkR0YwOm4kOSRrN1pOTEZ8GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEZ%2BTk8lYSU9JUMlSRsoQiBUZWtrYQ%3D%3D%3F%3D&In-Reply-To=%3C8CA95FD8-C7A9-45F1-ACA8-DE4F34C319D2%40sra.co.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008059.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8060] Squeak/Pharo上で動作する軽量日本語入力メソッド Tekka</H1>
+    <B>Tomohiro Oda</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208060%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCPmUkR0YwOm4kOSRrN1pOTEZ8GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEZ%2BTk8lYSU9JUMlSRsoQiBUZWtrYQ%3D%3D%3F%3D&In-Reply-To=%3C8CA95FD8-C7A9-45F1-ACA8-DE4F34C319D2%40sra.co.jp%3E"
+       TITLE="[SML 8060] Squeak/Pharo上で動作する軽量日本語入力メソッド Tekka">tomohiro ＠ sra.co.jp
+       </A><BR>
+    <I>2013年 6月 28日 (金) 08:50:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008059.html">[SML 8059] Re: はじめまして
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8060">[ 日付 ]</a>
+              <a href="thread.html#8060">[ スレッド ]</a>
+              <a href="subject.html#8060">[ 件名 ]</a>
+              <a href="author.html#8060">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おだです。
+
+SqueakやPharoを使っていて、OSが提供する日本語入力と上手く連携できてないなあと思い、
+Squeak Smalltalkで簡単な日本語入力メソッドを書いてみました。「Tekka」といいます。
+
+日本語サイト: <A HREF="http://squeaksource.blueplane.jp/Tekka.html">http://squeaksource.blueplane.jp/Tekka.html</A>
+英語サイト: <A HREF="http://smalltalkhub.com/#!/~tomooda/Tekka">http://smalltalkhub.com/#!/~tomooda/Tekka</A>
+
+Tekkaの特徴は、入力モードや入力バッファがないことです。
+コンセプト的には、キーボードとエディタの間に入るのではなく、
+漢字変換機能付きのコピー＆ペーストバッファのようなものです。
+
+Tekkaでは、キー入力をするとそのままテキストとしてエディタに入力されます。
+Tekkaではcmd-j(またはctrl-j)をすると、日本語変換できそうな部分を選択して変換します。
+または、明示的に変換対象を選択してから、cmd-j(またはctrl-j)で変換することもできます。
+
+ただし、cmd-j(またはctrl-j)だけで操作するため、連文節変換のような複雑な変換はしません。
+SKKやSekkaと同様、単文節ごとの変換になります。
+ぜひ試してみてください。
+---
+おだ
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008059.html">[SML 8059] Re: はじめまして
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8060">[ 日付 ]</a>
+              <a href="thread.html#8060">[ スレッド ]</a>
+              <a href="subject.html#8060">[ 件名 ]</a>
+              <a href="author.html#8060">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

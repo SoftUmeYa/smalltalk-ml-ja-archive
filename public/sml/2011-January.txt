@@ -1,0 +1,399 @@
+From osamu.hamasaki ＠ gmail.com  Sun Jan  2 20:07:07 2011
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sun, 2 Jan 2011 20:07:07 +0900
+Subject: [SML 7887] Re:
+	第27回Smalltalk勉強会＠京都
+In-Reply-To: <4D1AA8D7.5090404@cc.kyoto-su.ac.jp>
+References: <4D1AA8D7.5090404@cc.kyoto-su.ac.jp>
+Message-ID: <AANLkTimQaa+v+ENXLucC5TuZod4yyRDi-m6dJARryf=J@mail.gmail.com>
+
+濱崎です。
+
+次回Smalltalk勉強会@京都の案内がありましたが、勉強会の日が来る前に。。。
+
+11/10の第25回Smalltalk勉強会@京都でOldFashionedBrowserのリファクタリングの続きをしました。
+
+その過程が再現できるようステップごとセーブし、説明を加えました。添付ファイルを展開して下さい。
+それぞれのステップはSSK9_hamasaki_*.st（*は9から12とfinal）とSSK10_hamasaki_*.st(*は1とfinal)に、
+また説明はexplanation_SSK9part2_and_SSK10_hamasaki.stというファイルに収めてあります。eexplanation_SSK9part2_and_SSK10_hamasaki.stはワークスペースを使って書きましたので、
+ワークスペースに読み込んで下さい。
+
+投稿するのが随分遅くなってしまいました。お待たせしてしまった皆さん、ご容赦ください。
+
+以上です。
+
+2010年12月29日12:19 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 第27回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+> JR京都駅前にお集まりください。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto27
+>
+> 場所はキャンプラ6階の第3講習室になります。
+>
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第27回 Smalltalk勉強会＠京都
+> 日時：2011年01月05日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 年明け早々のSmalltalk勉強会＠京都になります。古風なブラウザ
+> をもう少しだけリファクタリングしようと思います。キーボートの
+> フッキングやメニューのインディケーションなどを扱い、さらにメ
+> ソッドやクラスの登録および変更ができるようにして、リフレクティ
+> ブなプログラミングや開発環境の本質を勉強しましょう。ノート型
+> のパーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X
+> ）をご持参ください。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+
+-- 
+
+Osamu Hamasaki
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SSK9Part2_hamasaki.zip
+型:         application/zip
+サイズ:     19866 バイト
+説明:       無し
+URL:        <http://www.smalltalk.jp/pipermail/sml/attachments/20110102/1b630e47/attachment-0001.zip>
+
+From osamu.hamasaki ＠ gmail.com  Sun Jan  2 20:24:54 2011
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sun, 2 Jan 2011 20:24:54 +0900
+Subject: [SML 7888] Re:
+	第27回Smalltalk勉強会＠京都
+In-Reply-To: <AANLkTimQaa+v+ENXLucC5TuZod4yyRDi-m6dJARryf=J@mail.gmail.com>
+References: <4D1AA8D7.5090404@cc.kyoto-su.ac.jp>
+ <AANLkTimQaa+v+ENXLucC5TuZod4yyRDi-m6dJARryf=J@mail.gmail.com>
+Message-ID: <AANLkTinyHHLHn8s2RAtZC8phV9-O-hRXxTv9EdgcHudG@mail.gmail.com>
+
+濱崎です。度々申し訳ありません。
+
+アーカイブにSSK9_hamasaki_13.stが含まれていませんでした。
+再度アーカイブを送り直しますので、先にお送りしたアーカイブは捨てて下さい。
+
+よろしくお願い致します。
+
+2011年1月2日20:07 濱崎治 <osamu.hamasaki ＠ gmail.com>:
+> 濱崎です。
+>
+> 次回Smalltalk勉強会@京都の案内がありましたが、勉強会の日が来る前に。。。
+>
+> 11/10の第25回Smalltalk勉強会@京都でOldFashionedBrowserのリファクタリングの続きをしました。
+>
+> その過程が再現できるようステップごとセーブし、説明を加えました。添付ファイルを展開して下さい。
+> それぞれのステップはSSK9_hamasaki_*.st（*は9から12とfinal）とSSK10_hamasaki_*.st(*は1とfinal)に、
+> また説明はexplanation_SSK9part2_and_SSK10_hamasaki.stというファイルに収めてあります。
+> explanation_SSK9part2_and_SSK10_hamasaki.stはワークスペースを使って書きましたので、
+> ワークスペースに読み込んで下さい。
+>
+> 投稿するのが随分遅くなってしまいました。お待たせしてしまった皆さん、ご容赦ください。
+>
+> 以上です。
+>
+> 2010年12月29日12:19 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+>> 第27回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+>> JR京都駅前にお集まりください。
+>>
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto27
+>>
+>> 場所はキャンプラ6階の第3講習室になります。
+>>
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第27回 Smalltalk勉強会＠京都
+>> 日時：2011年01月05日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 年明け早々のSmalltalk勉強会＠京都になります。古風なブラウザ
+>> をもう少しだけリファクタリングしようと思います。キーボートの
+>> フッキングやメニューのインディケーションなどを扱い、さらにメ
+>> ソッドやクラスの登録および変更ができるようにして、リフレクティ
+>> ブなプログラミングや開発環境の本質を勉強しましょう。ノート型
+>> のパーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X
+>> ）をご持参ください。
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>>
+>
+> --
+>
+> Osamu Hamasaki
+>
+
+
+
+-- 
+
+Osamu Hamasaki
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SSK9Part2_hamasaki.zip
+型:         application/zip
+サイズ:     22277 バイト
+説明:       無し
+URL:        <http://www.smalltalk.jp/pipermail/sml/attachments/20110102/a199be37/attachment-0001.zip>
+
+From hirowadenden ＠ hera.eonet.ne.jp  Mon Jan  3 16:07:35 2011
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Mon, 03 Jan 2011 16:07:35 +0900
+Subject: [SML 7889] Re:
+ 第27回Smalltalk勉強会＠京都
+In-Reply-To: <AANLkTinyHHLHn8s2RAtZC8phV9-O-hRXxTv9EdgcHudG@mail.gmail.com>
+References: <4D1AA8D7.5090404@cc.kyoto-su.ac.jp>
+ <AANLkTimQaa+v+ENXLucC5TuZod4yyRDi-m6dJARryf=J@mail.gmail.com>
+ <AANLkTinyHHLHn8s2RAtZC8phV9-O-hRXxTv9EdgcHudG@mail.gmail.com>
+Message-ID: <4D2175B7.5010608@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+(2011年01月02日 20:24), 濱崎治 さんは書きました:
+>> 投稿するのが随分遅くなってしまいました。お待たせしてしまった皆さん、
+>> ご容赦ください。
+
+お忙しいところ、解説とコードの投稿ありがとうございます。
+前回のピザパーティの時に少しお話ししましたが、濱崎さんの
+SSK9_hamasaki_final -> SSK10_hamasaki_final の修正とは異なる方法で、
+同じ名前のメソッドがある場合そのメソッドの選択を保持する機能を書いて
+みたので投稿します。
+
+SSK9_hamasaki_final.stを元にした修正になります。
+方法は、選択されたクラスが変わるたびに、methodListが更新される前に選択
+されていたメソッドを覚えておき、methodListが更新されたあとcodeTextが
+更新される前に、同じ名前のメソッドが存在するか調べ、存在する場合
+methodListのselectionを前に選択されていたものに戻すようにしました。
+
+まず、前に選択されていたメソッドを覚えるために、インスタンス変数に
+formerSelectorを追加し、accessorsをプロトコルprivateに追加します。
+
+OldFashionedBrowser >> formerSelector
+
+	^formerSelector
+
+
+OldFashionedBrowser >> formerSelector: aSelector
+
+	formerSelector := aSelector
+
+以下は、OldFashionedBrowser >> initialize の修正になります。
+selectedClass := BlockValue〜の行とmethodList := SelectionInList new〜
+の行の間に次を追加します。
+
+	selectedClass compute: [:aClass | aClass ifNotNil: [self
+formerSelector: self methodList selection]].
+
+methodList := SelectionInList new〜の行とcodeText := BlockValue〜
+の行の間に次を追加します。
+
+	selectedClass compute:
+			[:aClass |
+			aClass
+				ifNotNil:
+					[(self methodList list includes: self formerSelector) ifTrue: [self
+methodList selection: self formerSelector].
+					self formerSelector: self methodList selection]].
+
+以上です。
+
+-- hirowadenden
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Jan  4 10:05:16 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue, 04 Jan 2011 10:05:16 +0900
+Subject: [SML 7890] Re:
+ 第27回Smalltalk勉強会＠京都
+In-Reply-To: <4D1AA8D7.5090404@cc.kyoto-su.ac.jp>
+References: <4D1AA8D7.5090404@cc.kyoto-su.ac.jp>
+Message-ID: <4D22724C.4090709@cc.kyoto-su.ac.jp>
+
+青木です。
+
+新年早々に体調を崩しておりまして、
+明日の勉強会までに本復するのが難しい状況です。
+
+やむなく休会とさせてくださいませ。御免なさい。
+
+明日にベースとするつもりだったコードを添付しておきます。
+
+--- 青木淳
+
+(10/12/29 12:19), AOKI Atsushi wrote:
+> 第27回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+> JR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto27
+> 
+> 場所はキャンプラ6階の第3講習室になります。
+> 
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+> 
+> 第27回 Smalltalk勉強会＠京都
+> 日時：2011年01月05日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 年明け早々のSmalltalk勉強会＠京都になります。古風なブラウザ
+> をもう少しだけリファクタリングしようと思います。キーボートの
+> フッキングやメニューのインディケーションなどを扱い、さらにメ
+> ソッドやクラスの登録および変更ができるようにして、リフレクティ
+> ブなプログラミングや開発環境の本質を勉強しましょう。ノート型
+> のパーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X
+> ）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: SSK10.txt
+URL:  <http://www.smalltalk.jp/pipermail/sml/attachments/20110104/af1c2823/attachment.txt>
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SSK10.st
+型:         text/xml
+サイズ:     7915 バイト
+説明:       無し
+URL:        <http://www.smalltalk.jp/pipermail/sml/attachments/20110104/af1c2823/attachment.bin>
+
+From sakoh ＠ ba2.so-net.ne.jp  Tue Jan  4 14:18:40 2011
+From: sakoh ＠ ba2.so-net.ne.jp (Sako Hiroshi)
+Date: Tue, 4 Jan 2011 14:18:40 +0900
+Subject: [SML 7891] Re:
+	第27回Smalltalk勉強会＠京都
+In-Reply-To: <4D22724C.4090709@cc.kyoto-su.ac.jp>
+References: <4D1AA8D7.5090404@cc.kyoto-su.ac.jp>
+ <4D22724C.4090709@cc.kyoto-su.ac.jp>
+Message-ID: <AANLkTinDa4E2U3mtkC=suxi4_xZT7WgHfBPDz=OXOS9L@mail.gmail.com>
+
+酒匂です。
+
+新年早々大変ですね。
+お大事に。
+
+今年は大阪に何度か足を運ぶようになりそうですので
+途上京都へもお伺いしたいものです。
+
+では失礼致します。
+
+2011/1/4 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 青木です。
+>
+> 新年早々に体調を崩しておりまして、
+> 明日の勉強会までに本復するのが難しい状況です。
+>
+> やむなく休会とさせてくださいませ。御免なさい。
+>
+> 明日にベースとするつもりだったコードを添付しておきます。
+>
+> --- 青木淳
+>
+> (10/12/29 12:19), AOKI Atsushi wrote:
+>> 第27回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+>> JR京都駅前にお集まりください。
+>>
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto27
+>>
+>> 場所はキャンプラ6階の第3講習室になります。
+>>
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第27回 Smalltalk勉強会＠京都
+>> 日時：2011年01月05日（水）19:00?21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 年明け早々のSmalltalk勉強会＠京都になります。古風なブラウザ
+>> をもう少しだけリファクタリングしようと思います。キーボートの
+>> フッキングやメニューのインディケーションなどを扱い、さらにメ
+>> ソッドやクラスの登録および変更ができるようにして、リフレクティ
+>> ブなプログラミングや開発環境の本質を勉強しましょう。ノート型
+>> のパーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X
+>> ）をご持参ください。
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi ? ? ? ? ?http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+>
+
+
+
+-- 
+Sako Hiroshi
+http://twitter.com/ardbeg1958, http://d.hatena.ne.jp/ardbeg1958/
+
+From umejava ＠ mars.dti.ne.jp  Tue Jan 18 23:40:07 2011
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue, 18 Jan 2011 23:40:07 +0900
+Subject: [SML 7892]
+	第28回Smalltalk勉強会のお知らせ
+Message-ID: <JxwJcGb8bHawKFH70oBPM.HQ5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/1/28(金) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai28kaismalltalkbenkyoukai
+
+テーマはF-Scriptです。Cocoaのオブジェクトを動的にいじくるためのスクリプ
+ティング環境で、プログラミング言語的にはSmalltalkにAPLが合わさったような
+ユニークな書き方をサポートしています。
+普段Macをお使いでしたら、いろいろと楽しめるので特にお勧めです。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan 26 10:12:41 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 26 Jan 2011 10:12:41 +0900
+Subject: [SML 7893]
+ 第28回Smalltalk勉強会＠京都
+Message-ID: <4D3F7509.2090002@cc.kyoto-su.ac.jp>
+
+せっかくの年明け早々の勉強会を休会してしまい、申し訳ありませ
+んでした。
+
+第28回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+JR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto28
+
+場所はキャンプラ6階の第3講習室になります。
+
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第28回 Smalltalk勉強会＠京都
+日時：2011年02月02日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+古風なブラウザをもう少しだけリファクタリングしようと思います。
+キーボートのフッキングやメニューのインディケーションなどを扱
+い、さらにメソッドやクラスの登録および変更ができるようにして、
+リフレクティブなプログラミングや開発環境の本質を勉強しましょ
+う。ノート型のパーソナルコンピュータ（Windows 7/Vista/XP また
+は Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+

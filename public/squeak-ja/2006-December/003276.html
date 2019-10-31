@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3276] Re: squeak 初心者の質問：モーフの指定
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203276%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHNxdWVhayAbJEI9aT80GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPFQkTjxBTGQhJyViITwlVSROO1hEahsoQg%3D%3D%3F%3D&In-Reply-To=p0432044bc19d9aeb57a7%40amateras.ma.ns.musashi-tech.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003271.html">
+   <LINK REL="Next"  HREF="003259.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3276] Re: squeak 初心者の質問：モーフの指定</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203276%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHNxdWVhayAbJEI9aT80GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPFQkTjxBTGQhJyViITwlVSROO1hEahsoQg%3D%3D%3F%3D&In-Reply-To=p0432044bc19d9aeb57a7%40amateras.ma.ns.musashi-tech.ac.jp"
+       TITLE="[Squeak-ja: 3276] Re: squeak 初心者の質問：モーフの指定">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2006年 12月  7日 (木) 23:59:03 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003271.html">[Squeak-ja: 3271] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+        <LI>次の記事 <A HREF="003259.html">[Squeak-ja: 3259] wolrdの出し方、教えて。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3276">[ 日付 ]</a>
+              <a href="thread.html#3276">[ スレッド ]</a>
+              <a href="subject.html#3276">[ 件名 ]</a>
+              <a href="author.html#3276">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林です。ども。
+
+On 2006/12/07, at 19:35, iNOUE Koich! wrote:
+
+&gt;<i> サーバを選択で一番上のSqueakLandを選択して（他はalphaと書かれていまし
+</I>&gt;<i> たから。）、２５個何やらアップデートされた後はゴミ箱直行になりませんで
+</I>&gt;<i> した。定期的にアップデートをしてやるべきなんですね。
+</I>
+一安心しました。
+ちょっと煩雑に感じるときも多いのですが、プリファレンスでupdateで検索して
+出てくる updateFromServerAtStartup をONにしておくと起動時に毎回チェックす
+るかどうか確認してくるようです。
+
+&gt;<i> なるほど、直接書いて指定する方法は用意されておらず、登録されているとこ
+</I>&gt;<i> ろで検索してやるわけですか。複数の同じようなものから選択するには工夫が
+</I>&gt;<i> 必要なのでしょうね。
+</I>
+ActiveWorld にいるオブジェクトはコレクションで取ることができるので、必要
+としている条件によるコレクションの操作で見つけることが出来るはずです。
+
+&gt;<i> イメージが湧きます。リテラルを除き、オブジェクトは直接指定できず何かに
+</I>&gt;<i> 入ったその入れ物を（スコープも考慮に入れて）扱うことで、対象となるオブ
+</I>&gt;<i> ジェクトを指定する（いじる）ということですか。
+</I>
+あまり本質的な話ではないのですが、どこからも参照されてない（バインドされ
+てない）オブジェクトはガベージコレクトされてサヨナラしてしまいます。です
+ので、生成されたオブジェクトはどこかで参照されてないといけないという話も
+あるかと思います。
+リテラルについては、コンパイル時にどっかから引っ張ってきたり、配列リテラル
+などは構文糖でその時にインスタンス生成が実行されてると言えるかもしれません。
+式をワークスペースで実行する時もまずコンパイルをその場でやってます。
+
+&gt;&gt;<i> 例えば、クラス名もグローバル変数だったりします。
+</I>&gt;<i>
+</I>&gt;<i> smalltalk 80の黄色い本でもそのようなことを読んだような気がします。（嘘かも）
+</I>
+その当時は本当にグローバル変数で、クラス名に代入することができたという話
+があります。
+今は出来ませんけど。
+
+&gt;&gt;<i> Smalltalk はそれ自身で言語が実装されてますので、変数の内、グローバル変数
+</I>&gt;&gt;<i> なども同じように連想配列オブジェクト(辞書)を使って実現してたりします。
+</I>&gt;&gt;<i> この辺りの実現方式の話が言語仕様と絡むとわやくちゃになってしまうのですが。
+</I>&gt;&gt;<i> （ブートストラップといいましょうか、メビウスの輪といいましょうか）
+</I>&gt;<i>
+</I>&gt;<i> メタメタになるというわけですね。(^^;
+</I>
+でも、それがイイ。という話もあったりしますね。
+
+--
+林 徹也 Tetsuya HAYASHI 
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003271.html">[Squeak-ja: 3271] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+	<LI>次の記事 <A HREF="003259.html">[Squeak-ja: 3259] wolrdの出し方、教えて。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3276">[ 日付 ]</a>
+              <a href="thread.html#3276">[ スレッド ]</a>
+              <a href="subject.html#3276">[ 件名 ]</a>
+              <a href="author.html#3276">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

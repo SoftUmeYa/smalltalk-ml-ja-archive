@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3856] Re: OLPC-VM ImmX11 パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203856%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=1045.125.198.205.84.1206613774.risu%40mail.nucba.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="003857.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3856] Re: OLPC-VM ImmX11 パッチ</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203856%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=1045.125.198.205.84.1206613774.risu%40mail.nucba.ac.jp"
+       TITLE="[Squeak-ja: 3856] Re: OLPC-VM ImmX11 パッチ">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 4月  1日 (火) 01:13:20 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="003857.html">[Squeak-ja: 3857] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3856">[ 日付 ]</a>
+              <a href="thread.html#3856">[ スレッド ]</a>
+              <a href="subject.html#3856">[ 件名 ]</a>
+              <a href="author.html#3856">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  廢髟阡仕腓気鵑りがとう瘢雹ございます。
+
+&gt;<i> 蠍気砲 褓碓キ・踉札棔ドしかう髟阡擦蠅泙擦鵑♤
+鹿評守以王踉擦陸踉至順で ñ「tilde付きn」が入力出来ました．
+</I>&gt;<i> もしかしたら，外しているかもしれません．
+</I>&gt;<i> 
+</I>&gt;<i> Fedora では，m17n-db-latin パッケ・踉札犬鬟ぅ鵐好函ルして，
+</I>&gt;<i> latn-post か latn-pre の入力メソッドでヨ・踉札蹈奪質 頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂儻 ＠ 語鹿曽の文字を入力できます．
+</I>&gt;<i> 
+</I>&gt;<i> $<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">B ＠ _Dj</A>%U%!%$%k
+</I>&gt;<i> /usr/share/m17n/latn-post.mim
+</I>&gt;<i> /usr/share/m17n/latn-pre.mim
+</I>&gt;<i> によれば，件の ñ「tilde付きn」は~ と n のコンビネ・踉札轡腑鵑鮖箸逅擦茲逅擦任垢♤
+鹿評守この ~ は US配列で 1 の左隣にう髟阡擦襯①の ~ でないとダメなよう瘢雹です．
+</I>&gt;<i> 
+</I>&gt;<i> システム-&gt;管理-&gt;キ・踉札棔ド-&gt;英語(ウ髟阡札瓮螢㏋臀姐鹿評守を選択後，再ログイン．
+</I>&gt;<i> GNOME ぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 瀋蠎召塙腓錣覆い肇瀬ぅログが出るので，Xぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 瀋蠎召鯀鬚垢襦
+鹿評守
+鹿評守希胞苳擦 は shift + 筈苳山ぢ全角に対応するので，
+</I>&gt;<i> SCIM の入力モ・踉札匹 赱≒鱚 にして，
+</I>&gt;<i> shift + 筈苳山ぢ全角の後，n を押す．
+</I>&gt;<i> 
+</I>&gt;<i> Transcript で試したところ，続けて入力した文字も化けないので，
+</I>&gt;<i> 問題なさそう瘢雹に思います．
+</I>
+  これは・髟阡嵳にはすでに0xF1の文字が一文字だけ来ているのでしょう瘢雹か(後で
+試して見ます)。trunkにも基本的に同じパッチが入ったのですが・髟阡札クセント
+つき文字の入力は動いていたのに動かなくなったという瘢雹報告もう髟阡擦辰豆踉斬は大分
+混乱しているところです。
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="003857.html">[Squeak-ja: 3857] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3856">[ 日付 ]</a>
+              <a href="thread.html#3856">[ スレッド ]</a>
+              <a href="subject.html#3856">[ 件名 ]</a>
+              <a href="author.html#3856">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

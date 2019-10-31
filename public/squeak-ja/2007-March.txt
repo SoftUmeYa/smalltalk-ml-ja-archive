@@ -1,0 +1,2467 @@
+From tak ＠ metatoys.org  Thu Mar  1 00:02:30 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3422] Re: Squeakland.jp にアクセス不可、 Squeak 日本語 版 (Mac) のダウンロード
+In-Reply-To: <20070228142720.25846.qmail@web3013.mail.tnz.yahoo.co.jp>
+References: <20070228142720.25846.qmail@web3013.mail.tnz.yahoo.co.jp>
+Message-ID: <45E59986.40107@metatoys.org>
+
+山宮です。
+
+参考になるか分かりませんが、以前私も似たようなケースに遭遇した事があります。
+その際は、フレッツADSL やいくつかのプロバイダからあるウェブサーバにアクセス
+出来ないという問題が発生して、同じようにMTU が小さい事が分かりました。
+
+結果的にルータ(ロードバランサー)のバグに原因があるという事が分かり、ファームウェア
+を新しくして対応しました。MTU の相性の問題というと何となくメカ同士の噛みあわせが
+悪い感じを想像しますが、単にどちらかが規格を守っていなくて、たまたま今まで露見
+しなかっただけというケースがあると思いますので、一度サーバ側の機材を点検してみては
+如何かと思います。squeakland.jp だけでなく、同じルータに繋がるほかのサーバも
+同じ問題が発生しているかも知れません。
+
+maigoofy wrote:
+> 原田＠名古屋です。
+> 
+> 阿部さん、林さん、おださん、ご親切なアドバイス有り難うございました。本当
+> に感謝いたします。Squeak、オープンソース、教育への志に感謝しています。
+> 
+> 早速、SqueakPlugin2005J.dmg をダウンロードして勉強してみます。
+> 
+> Path MTU Discovery Black Hole ですか。Googleで検索しましたが私にはそれが
+> 問題のような気がします。NTTの報告を待つつもりです。驚いたのは今回の問題は
+> ひかりプレミアム側の問題（不具合）で相性の悪さが出てくる。MTU相性が良くな
+> いサイトのリストあって、NTTが直接そういったサイトに何らかの設定のお願いを
+> するらしいということです。
+
+
+From maigoofy ＠ yahoo.co.jp  Thu Mar  1 10:48:47 2007
+From: maigoofy ＠ yahoo.co.jp (maigoofy)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3423] Re: Squeakland.jp にアクセス不可、 Squeak 日本語 版 (Mac) のダウンロード
+In-Reply-To: <45E59986.40107@metatoys.org>
+Message-ID: <20070301014847.68522.qmail@web3004.mail.tnz.yahoo.co.jp>
+
+原田＠名古屋です。
+
+今朝、NTTから電話があり、squeakland.jp にアクセスできたと報告を受けました
+。私も自宅のひかりでアクセスしましたら、ここ二三日のアクセス不可がうその
+ように簡単にアクセスできました。サイトにアクセスするだけで感動したのは数
+年ぶりです。
+
+アドバイスを頂いた皆さん、ありがとうございました。
+
+原田邦彦
+
+--- Takashi Yamamiya <tak@metatoys.org> wrote:
+
+> 山宮です。
+> 
+> 参考になるか分かりませんが、以前私も似たようなケースに遭遇した事があり
+ます。
+> その際は、フレッツADSL
+> やいくつかのプロバイダからあるウェブサーバにアクセス
+> 出来ないという問題が発生して、同じようにMTU
+> が小さい事が分かりました。
+> 
+> 結果的にルータ(ロードバランサー)のバグに原因があるという事が分かり、フ
+ァームウェア
+> を新しくして対応しました。MTU
+> の相性の問題というと何となくメカ同士の噛みあわせが
+> 悪い感じを想像しますが、単にどちらかが規格を守っていなくて、たまたま今
+まで露見
+> しなかっただけというケースがあると思いますので、一度サーバ側の機材を点
+検してみては
+> 如何かと思います。squeakland.jp
+> だけでなく、同じルータに繋がるほかのサーバも
+> 同じ問題が発生しているかも知れません。
+> 
+> maigoofy wrote:
+> > 原田＠名古屋です。
+> > 
+> >
+> 阿部さん、林さん、おださん、ご親切なアドバイス有り難うございました。本
+当
+> >
+> に感謝いたします。Squeak、オープンソース、教育への志に感謝しています。
+> > 
+> > 早速、SqueakPlugin2005J.dmg をダウンロードして勉強してみます。
+> > 
+> > Path MTU Discovery Black Hole
+> ですか。Googleで検索しましたが私にはそれが
+> >
+> 問題のような気がします。NTTの報告を待つつもりです。驚いたのは今回の問題
+は
+> >
+> ひかりプレミアム側の問題（不具合）で相性の悪さが出てくる。MTU相性が良く
+な
+> >
+> いサイトのリストあって、NTTが直接そういったサイトに何らかの設定のお願い
+を
+> > するらしいということです。
+> 
+> 
+
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From kuwatani ＠ akademia.co.jp  Thu Mar  1 11:56:04 2007
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3424] Re: Squeakland.jp にアクセス不可、 Squeak 日本語 版 (Mac) のダウンロード
+In-Reply-To: <20070301014847.68522.qmail@web3004.mail.tnz.yahoo.co.jp>
+References: <20070301014847.68522.qmail@web3004.mail.tnz.yahoo.co.jp>
+Message-ID: <45E640C4.9080401@akademia.co.jp>
+
+squeakland.jpのWebサーバーの管理をしている桑谷です．
+
+昨日から話にあがっていた squeakland.jp のホームページが
+見えないという件ですが，Path MTU Discovery Black Hole が
+原因ではないかということでしたのでサーバーを運用している
+ネットワークのルーターの設定を調べてみました．
+
+すると Path MTU Discovery に使用する ICMP unreachable がルーターで
+無効になっていましたので，設定を有効に変更しました．
+ちょうど変更後くらいに squeakland.jp が見えるようになったと
+MLにお返事がありましたので，やはりルーターの設定のせいで
+見えなかったのだと思います．
+
+ご迷惑をおかけいたしまして申し訳ありませんでした．
+
+maigoofy wrote:
+> 原田＠名古屋です。
+> 
+> 今朝、NTTから電話があり、squeakland.jp にアクセスできたと報告を受けました
+> 。私も自宅のひかりでアクセスしましたら、ここ二三日のアクセス不可がうその
+> ように簡単にアクセスできました。サイトにアクセスするだけで感動したのは数
+> 年ぶりです。
+> 
+> アドバイスを頂いた皆さん、ありがとうございました。
+> 
+> 原田邦彦
+> 
+> --- Takashi Yamamiya <tak@metatoys.org> wrote:
+> 
+>> 山宮です。
+>>
+>> 参考になるか分かりませんが、以前私も似たようなケースに遭遇した事があり
+> ます。
+>> その際は、フレッツADSL
+>> やいくつかのプロバイダからあるウェブサーバにアクセス
+>> 出来ないという問題が発生して、同じようにMTU
+>> が小さい事が分かりました。
+>>
+>> 結果的にルータ(ロードバランサー)のバグに原因があるという事が分かり、フ
+> ァームウェア
+>> を新しくして対応しました。MTU
+>> の相性の問題というと何となくメカ同士の噛みあわせが
+>> 悪い感じを想像しますが、単にどちらかが規格を守っていなくて、たまたま今
+> まで露見
+>> しなかっただけというケースがあると思いますので、一度サーバ側の機材を点
+> 検してみては
+>> 如何かと思います。squeakland.jp
+>> だけでなく、同じルータに繋がるほかのサーバも
+>> 同じ問題が発生しているかも知れません。
+>>
+>> maigoofy wrote:
+>>> 原田＠名古屋です。
+>>>
+>>>
+>> 阿部さん、林さん、おださん、ご親切なアドバイス有り難うございました。本
+> 当
+>> に感謝いたします。Squeak、オープンソース、教育への志に感謝しています。
+>>> 早速、SqueakPlugin2005J.dmg をダウンロードして勉強してみます。
+>>>
+>>> Path MTU Discovery Black Hole
+>> ですか。Googleで検索しましたが私にはそれが
+>> 問題のような気がします。NTTの報告を待つつもりです。驚いたのは今回の問題
+> は
+>> ひかりプレミアム側の問題（不具合）で相性の悪さが出てくる。MTU相性が良く
+> な
+>> いサイトのリストあって、NTTが直接そういったサイトに何らかの設定のお願い
+> を
+>>> するらしいということです。
+>>
+> 
+> 
+> --------------------------------------
+> Start Yahoo! Auction now! Check out the cool campaign
+> http://pr.mail.yahoo.co.jp/auction/
+> 
+
+
+-- 
+***************************************
+桑谷 剛史(Tsuyoshi KUWATANI)
+アカデミアシステムズ株式会社
+TEL: 0857-21-2360
+FAX: 0857-21-2362
+URL: http://www.akademia.co.jp/
+E-mail: kuwatani@akademia.co.jp
+〒680-0053 鳥取市寺町50番地 NTT寺町ビル
+***************************************
+
+
+From yoshiki ＠ squeakland.org  Fri Mar  2 14:30:25 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3425] Re: Squeak Foundation Board の選挙
+In-Reply-To: <45E15D4F17A.3987ABEE@smtp.nifty.com>
+References: <umz32zslj.wl%yoshiki@squeakland.org>
+	<45E15D4F17A.3987ABEE@smtp.nifty.com>
+Message-ID: <uy7mgxle6.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> >  ちなみに、僕は、去年行われた選挙で当選したので現在もboard memberとし
+> >て活動しているわけなのですが、実は今回新たに行われる選挙にも立候補して
+> >います。よろしくお願いします。
+> 
+> もしよろしければ、活動の内容について簡単に説明していただけると、
+> Squeak-jaに参加している皆さんにとって、この選挙がどのような意味を持つのか
+> を理解しやすくなると思います。結果、Squeak Peopleへの登録も進むのではない
+> でしょうか。
+
+  活動の内容は選ばれた人の顔ぶれによっても左右されますが、最近は以下の
+ような感じでしょうか。
+
+  * 非営利団体設立の準備
+  * ライセンス変更のための同意書集め
+  * 多数ある「チーム」との連絡と世話
+  * wikiページやサーバの管理の手伝い
+  * 資金集め(?)のためのバッジ販売の準備
+
+次回の任期でも、特に最初の二つは重要になってくると思います。
+
+  Squeak Peopleへの登録期限は明日までだと思うので、興味のある方はよろ
+しくお願いします。
+
+-- Yoshiki
+
+
+
+From koubo2006 ＠ yengawa.jpn.org  Sat Mar  3 23:51:26 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3426] Seaside2.7 UTF8
+Message-ID: <20070303231127.FDB0.KOUBO2006@yengawa.jpn.org>
+
+Seasiderのみなさん、こんにちは!
+横川です。
+
+Seaside2.7でUTF8を使うときの問題を修正するパッチを作りました。
+
+http://yengawa-wiki.webhop.org/YengawaWiki/48
+
+Seaside2.7のWAKomEncoded/WAKomEncoded39はUTF8を一応使えます。
+でも、日本語のようなWideStringになるべき文字をポストするとSqueak内で妙な
+エンコードになったりする問題があるので、それらを直しました。
+Seasideで日本語を処理するアプリを作るときなどに利用してください。
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Mar  4 17:54:09 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3427] Re: Squeak Foundation Board の選挙
+In-Reply-To: <JS200702271740157.10840109@mars.dti.ne.jp>
+References: <umz32zslj.wl%yoshiki@squeakland.org>
+	<45E15D4F17A.3987ABEE@smtp.nifty.com>
+	<JS200702271740157.10840109@mars.dti.ne.jp>
+Message-ID: <JE200703041754093.6629921@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+選挙ですが、技術的なトラブルにより、投票開始日が遅れることになりました。
+投票権を持つ人には開始のアナウンスが行くようなので、気長にお待ちください。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> リンクを補足しておきます。
+> 
+> Squeak Foundation Board 2007 Election
+> http://wiki.squeak.org/squeak/5920
+> 
+> 候補者リストや、抱負、スケジュールなどが載っていますので定期的に見ておくと
+> 良いでしょう。
+> 
+> 投票は3/3日から3日間です。
+> 
+> SqueakPeopleへの登録+認定についてですが、登録していただければ私が定期的に見て
+> 片っ端から認定していくようにしますので、よろしくお願いします。
+> (登録済みの人は、仲間をどんどん認定してあげましょう)
+> 
+---
+[:masashi | ^umezawa]
+
+
+From abee ＠ squeakland.jp  Mon Mar  5 01:51:45 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3428] Re: Squeak Foundation Board の選挙
+In-Reply-To: <JE200703041754093.6629921@mars.dti.ne.jp>
+References: <JS200702271740157.10840109@mars.dti.ne.jp>
+	<JE200703041754093.6629921@mars.dti.ne.jp>
+Message-ID: <45EAF9219F.6DFAABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 04 Mar 2007 17:54:09 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>選挙ですが、技術的なトラブルにより、投票開始日が遅れることになりました。
+>投票権を持つ人には開始のアナウンスが行くようなので、気長にお待ちください。
+
+さきほど、"CIVS Election now available for voting: Squeak Foundation
+Board Elections 2007"という件名で届きました。締切りは3/7 22:00 ESTですね。
+htmlメールなためか、私のところではPOPFileによりspam判定されたのでご注意く
+ださい。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From makoto ＠ kobe-u.ac.jp  Mon Mar  5 23:44:44 2007
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3429] Re: 多角形モーフの頂点をいじるタイル
+In-Reply-To: <4577D3E175.9F11ABEE@smtp.nifty.com>
+References: <C7FC43DC-174D-45AB-BA0E-490B30DCF94E@st.rim.or.jp>
+	<4576E04B374.9910ABEE@smtp.nifty.com>
+	<4577D3E175.9F11ABEE@smtp.nifty.com>
+Message-ID: <20070305234444849839.21358884@kobe-u.ac.jp>
+
+高橋真＠神戸大学です。
+
+数学セミナー３月号の「エレガントな解答を求む」の出題２を
+多角形モーフの頂点をいじるタイルを利用して試してみました。
+
+http://herb.h.kobe-u.ac.jp/squeak/projects/susemi.pr
+
+問題は以下のものです。（図は省略）
+
+-----------
+「こんなコンピュータソフトが欲しい」という実用的話題です。
+
+任意の三角形があって，３つの頂点のうち２つが黒点，１つが白点
+でマークされているとし，次のプログラムを実行する。
+操作１　白点と黒点の中点を白点でマークする。
+操作２　新しくできた２つの白点の中点を黒点でマークする。
+操作３　古い白点を消す。
+操作４　新しい黒点，古い黒点，新しい白点の３点で新しい三角形
+　　　　を作り，それぞれについて以上の操作を繰り返す。
+このとき，すべての黒点はある放物線の上に並ぶことを示してください。
+-----------
+
+作成した作品は，山宮さんのetoysマニアの再帰のプログラムの方法を
+そのまま利用しています。
+http://metatoys.org/etoysMania/
+
+From yoshiki ＠ squeakland.org  Tue Mar  6 03:06:56 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3430] Re: Squeak Foundation Board の選挙
+In-Reply-To: <JE200703041754093.6629921@mars.dti.ne.jp>
+References: <umz32zslj.wl%yoshiki@squeakland.org>
+	<45E15D4F17A.3987ABEE@smtp.nifty.com>
+	<JS200702271740157.10840109@mars.dti.ne.jp>
+	<JE200703041754093.6629921@mars.dti.ne.jp>
+Message-ID: <u7itvy37j.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> 選挙ですが、技術的なトラブルにより、投票開始日が遅れることになりました。
+> 投票権を持つ人には開始のアナウンスが行くようなので、気長にお待ちください。
+
+  ということでしたが、先ほど始まったようです。投票権を持っている人には
+
+CIVS Election now available for voting: Squeak Foundation Board Elections 2007
+
+という題名のメールが届いていると思います。投票期間は3日間しかないのだ
+と思いますので、お早めによろしくお願いします。
+
+-- Yoshiki
+
+From hamada ＠ holst.sm.fukuoka-u.ac.jp  Tue Mar  6 17:25:01 2007
+From: hamada ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3431] ワークショップのお誘い
+Message-ID: <20070306.172501.116348954.hamada@holst.sm.fukuoka-u.ac.jp>
+
+福岡大学の濱田です。
+
+Squeak と直接の関係はありませんが、
+理数教育における計算機利用に興味を持っていらっしゃる方が
+大勢いらっしゃると思いますので、告知をさせてください。
+
+今後、機会がありましたら、
+Squeak についても是非とりあげていきたいと考えております。
+
+「数学ソフトウェアとフリードキュメント IV」のご案内
+
+2007年3月26日（月） 13:00 -- 18:00
+埼玉大学理学部1号館1337番(基礎数理演習室)
+〒338-8570　さいたま市桜区下大久保２５５
+入場無料、事前申込不要
+照会先：野呂正行（神戸大学理学部）noro at math.kobe-u.ac.jp
+        濱田龍義（福岡大学理学部）hamada at holst.sm.fukuoka-u.ac.jp
+後援：日本数学会情報システム運用委員会
+詳細：http://www.knoppix-math.org/
+
+13:00 -- 13:30
+人の集まりを支援するツールQWikS（クウィックス）
+後藤祐一（埼玉大学）
+13:30 -- 14:00
+代数方程式系の数値解を求めるためのソフトウェア (PHoM)の紹介
+武田朗子（東京工業大学） 
+14:00 -- 14:30
+(仮称)十進BASICが目指すもの
+白石和夫（文教大学）
+14:30 -- 15:00
+休憩
+15:00 -- 15:30
+Computational Homology Project
+Pilarczyk, Pawel（京都大学）
+15:30 -- 16:00
+CMCLabの使い方
+小林真平（東京電機大学）
+16:00 -- 16:30
+作図ツール Geometric Constructor の開発と教育利用について
+飯島康之（愛知教育大学）
+16:30 -- 17:00
+休憩
+17:00 -- 17:30
+JavaViewとMathematicaによる曲面の研究
+藤森祥一（九州大学）
+17:30 -- 18:00
+3次元幾何ソフトCabri3Dの紹介
+小森恒雄（Naoco Inc.）
+
+3次元幾何ソフト Cabri3D や、作図ツール GC 等の紹介は、
+皆様、楽しんでいただけるのではないかと思います。
+平日、開催となりますが、皆様、御都合がよろしければ、是非御参加ください。
+
+また、会場では KNOPPIX/Math/2007 の展示、配布を行なう予定です。
+KNOPPIX/Math/2007 には、KSEG や KidsCindy 等の
+対話式幾何学ソフトウェア、動的幾何学ソフトウェア
+Interactive Geometry Software, Dynamic Geometry Software
+を多数収録しています。
+
+特に KidsCindy は、昨年、中央大学で行なわれたワークショップで
+紹介されたソフトウェアですが、今回、初めて KNOPPIX/Math に
+収録されます。Windows 版も公開されておりますので、
+皆様、是非お試しください。
+
+http://www11.atwiki.jp/kidscindy/
+
+p.s.
+先ほど、送信アドレスを間違えて再送信を行なってしまいました。
+お手数ですが、先ほど送りましたメールは削除していただくよう、
+お願いいたします。
+# たぶん自動削除に設定されているのではないかと思いますが、、、
+
+
+
+
+From hamada ＠ holst.sm.fukuoka-u.ac.jp  Wed Mar  7 11:39:13 2007
+From: hamada ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3432] Re: 多角形モーフの頂点をいじるタイル
+In-Reply-To: <20070305234444849839.21358884@kobe-u.ac.jp>
+References: <4576E04B374.9910ABEE@smtp.nifty.com>
+	<4577D3E175.9F11ABEE@smtp.nifty.com>
+	<20070305234444849839.21358884@kobe-u.ac.jp>
+Message-ID: <20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+
+濱田＠福岡大学です。
+
+多角形モーフ、とても面白いですね。
+
+Squeak ではないのですが、# そればっかりですみません。
+KSEG という対話式幾何学ソフトウェアで同様の曲線を描いてみました。
+
+http://geom.math.metro-u.ac.jp/wiki/index.php?KSEG%2Fbezier-parabola1
+
+必要な環境は
+KSEG (Linux 版と Windows 版があります。)
+http://www.mit.edu/~ibaran/kseg.html
+それと bezier-parabola1.seg と bezier-parabola1.sec という
+二つのファイルです。
+
+KSEG では、コンストラクション(*.sec)という疑似スクリプト環境？で再帰を
+定義できますので、それを利用しています。
+
+右クリックで3点を与えて全て選択し、
+Play(再生) から bezier-parabola1.sec を選んで再帰の深さを指定すれば
+描くことができます。
+
+このような
+対話式幾何学ソフトウェア (Interactive Geometry Software)
+、もしくは
+動的幾何学ソフトウェア (Dynamic Geometry Software)
+と呼ばれるソフトウェアは世界中に多数存在していて、
+Cinderella, Geometer's sketchpad, Cabri などが有名です。また、
+日本では愛知教育大の飯島先生による「作図ツール」GC が教育実績を重ねており、 
+明治大学の阿原先生による KidsCindy が新たに出現しました。
+
+私は残念ながら知らないのですが、このような幾何ソフトの
+Squeak による実装というのは、すでに存在しているのでしょうか？
+もし、どなたか御存じでしたら、是非教えていただきたいと思っております。
+
+makoto> 数学セミナー３月号の「エレガントな解答を求む」の出題２を
+makoto> 多角形モーフの頂点をいじるタイルを利用して試してみました。
+makoto> 
+makoto> http://herb.h.kobe-u.ac.jp/squeak/projects/susemi.pr
+makoto> 
+makoto> 問題は以下のものです。（図は省略）
+makoto> 
+makoto> -----------
+makoto> 「こんなコンピュータソフトが欲しい」という実用的話題です。
+makoto> 
+makoto> 任意の三角形があって，３つの頂点のうち２つが黒点，１つが白点
+makoto> でマークされているとし，次のプログラムを実行する。
+makoto> 操作１　白点と黒点の中点を白点でマークする。
+makoto> 操作２　新しくできた２つの白点の中点を黒点でマークする。
+makoto> 操作３　古い白点を消す。
+makoto> 操作４　新しい黒点，古い黒点，新しい白点の３点で新しい三角形
+makoto> 　　　　を作り，それぞれについて以上の操作を繰り返す。
+makoto> このとき，すべての黒点はある放物線の上に並ぶことを示してください。
+
+上記問題についてですが、
+出題者の意図は、黒点が放物線上に並ぶことを示せとあるので、
+黒点が放物線のように見えるだけでは足らないのではないかと思います。
+
+その意味では、私の KSEG ファイルも題意を満たしていません。
+
+Cinderella や GeoProof 等は自動証明機構も実装していますので、
+もしかしたら、できるのかもしれません。
+ただ、私も上記二つについては慣れていないので、なんとも言えないのですが。。。
+
+
+From abee ＠ squeakland.jp  Wed Mar  7 14:54:45 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3433] Squeak の幾何ソフト  ( was: Re: 多角形モーフの頂点をいじるタイル  )
+In-Reply-To: <20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <20070305234444849839.21358884@kobe-u.ac.jp>
+	<20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <45EE53A52E7.B447ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 07 Mar 2007 11:39:13 +0900 (JST)
+Tatsuyoshi HAMADA <hamada@holst.sm.fukuoka-u.ac.jp> wrote:
+>私は残念ながら知らないのですが、このような幾何ソフトの
+>Squeak による実装というのは、すでに存在しているのでしょうか？
+>もし、どなたか御存じでしたら、是非教えていただきたいと思っております。
+
+濱田先生のKNOPPIX/Math紹介記事で言及されていて、
+http://www.jssac.org/Editor/Suushiki/V11/No1/V11N1_103.pdf
+
+APEC-KNOPPIXに収録されている、
+http://www.aichi-c.ed.jp/apecknoppix/index.htm
+
+Dr.GEOを、Hilaire FernandesさんがSqueakに移植、拡張したDrGeoIIがあります。
+http://mailman.laptop.org/pipermail/etoys/2007-January/000368.html
+
+上記ではOLPCでの話になっていますが、Squeakland 2005Jでも問題なく動作しま
+す。DrGeoIIはEtoysと統合されており、タイルでスクリプトを書くことができま
+す。
+メッセージなどはフランス語なのですが、APEC-KNOPPIXのマニュアルを読む限り
+基本的な使い方は同じようです。
+http://www.ie-tokai.aichi-c.ed.jp/apecknoppix/pdf/drgeo.pdf
+
+ //abee
+
+P.S. APEC-KNOPPIXにはSqueakがバンドルされているのですね。知りませんでした。
+
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Wed Mar  7 15:02:31 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3434] Re: Squeak の幾何ソフト  ( was: Re:  Re: 多角形モーフの頂点をいじるタイル  )
+In-Reply-To: <45EE53A52E7.B447ABEE@smtp.nifty.com>
+References: <20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+	<45EE53A52E7.B447ABEE@smtp.nifty.com>
+Message-ID: <45EE557798.B448ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 07 Mar 2007 14:54:28 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>P.S. APEC-KNOPPIXにはSqueakがバンドルされているのですね。知りませんでした。
+
+すみません。すでに須崎さんが紹介されていました。
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-April/002420.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From makoto ＠ kobe-u.ac.jp  Wed Mar  7 18:36:52 2007
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3435] Re: 多角形モーフの頂点をいじるタイル
+In-Reply-To: <20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <4576E04B374.9910ABEE@smtp.nifty.com>
+	<4577D3E175.9F11ABEE@smtp.nifty.com>
+	<20070305234444849839.21358884@kobe-u.ac.jp>
+	<20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <20070307183652584695.eee9a7d6@kobe-u.ac.jp>
+
+高橋真＠神戸大学です。
+
+++ Tatsuyoshi HAMADAさんの『[Squeak-ja: 3432] Re: 多角形モーフの頂点をいじるタイル』
+| (2007年3月7日 11:39:13:GMT+09:00)の件について
+--
+makoto> 問題は以下のものです。（図は省略）
+makoto> 
+makoto> -----------
+> makoto> 「こんなコンピュータソフトが欲しい」という実用的話題です。
+> makoto> 
+> makoto> 任意の三角形があって，３つの頂点のうち２つが黒点，１つが白点
+> makoto> でマークされているとし，次のプログラムを実行する。
+> makoto> 操作１　白点と黒点の中点を白点でマークする。
+> makoto> 操作２　新しくできた２つの白点の中点を黒点でマークする。
+> makoto> 操作３　古い白点を消す。
+> makoto> 操作４　新しい黒点，古い黒点，新しい白点の３点で新しい三角形
+> makoto> 　　　　を作り，それぞれについて以上の操作を繰り返す。
+> makoto> このとき，すべての黒点はある放物線の上に並ぶことを示してください。
+> 
+> 上記問題についてですが、
+> 出題者の意図は、黒点が放物線上に並ぶことを示せとあるので、
+> 黒点が放物線のように見えるだけでは足らないのではないかと思います。
+
+そうだと思います。“欲しい”と書かれているコンピュータソフトに，どこまで
+要求するのかこの問題からはわかりませんが，放物線の式まで出すような
+ものを求めているのかもしれません。
+
+From hamada ＠ holst.sm.fukuoka-u.ac.jp  Thu Mar  8 16:02:55 2007
+From: hamada ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3436] Re: Squeak の幾何ソフト
+In-Reply-To: <45EE53A52E7.B447ABEE@smtp.nifty.com>
+	<20070307183652584695.eee9a7d6@kobe-u.ac.jp>
+References: <20070305234444849839.21358884@kobe-u.ac.jp>
+	<20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+	<45EE53A52E7.B447ABEE@smtp.nifty.com>
+Message-ID: <20070308.160255.123968520.hamada@holst.sm.fukuoka-u.ac.jp>
+
+濱田です。
+
+阿部様、有益な情報をありがとうございます。
+
+abee> Dr.GEOを、Hilaire FernandesさんがSqueakに移植、拡張したDrGeoIIがあります。
+abee> http://mailman.laptop.org/pipermail/etoys/2007-January/000368.html
+abee> 
+abee> 上記ではOLPCでの話になっていますが、Squeakland 2005Jでも問題なく動作しま
+abee> す。DrGeoIIはEtoysと統合されており、タイルでスクリプトを書くことができま
+abee> す。
+
+実は、上記サイトから
+http://www.squeaksource.com/DrGeoII/
+を経て最新版の
+http://www.squeaksource.com/DrGeoII/DrGeoII-HilaireFernandes.73.mcz
+を試してみたい
+
+mcz というファイルが何らかのアーカイブだとは思うのですが、
+これを Squeakland2005J で動作させるためには、
+どのような手順を踏めば良いのでしょうか？
+
+初歩的な質問で申し訳ないのですが、解説しているURL等を
+教えていただけると助かります。
+
+
+From hamada ＠ holst.sm.fukuoka-u.ac.jp  Thu Mar  8 16:24:09 2007
+From: hamada ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3437] Re: 多角形モーフの頂点をいじるタイル
+In-Reply-To: <20070307183652584695.eee9a7d6@kobe-u.ac.jp>
+References: <20070305234444849839.21358884@kobe-u.ac.jp>
+	<20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+	<20070307183652584695.eee9a7d6@kobe-u.ac.jp>
+Message-ID: <20070308.162409.94552250.hamada@holst.sm.fukuoka-u.ac.jp>
+
+濱田です。
+
+高橋先生、こんにちは。
+
+その後、GeoProof 等についても調べてみたのですが、
+点が直線上に存在するか？とか、2直線が直行するか？などの
+機能はあるのですが、点が2次曲線上に存在するかということを調べる
+機能はないようです。
+
+GeoProof
+http://home.gna.org/geoproof/
+
+KidsCindy 作者の明治大学阿原先生とも相談してみましたが、
+将来的には、このような機能も実装していきたいという話でした。
+
+私が日頃紹介している KSEG は GUI ベースの
+簡易スクリプト機能しか備えていませんが、
+例えば阿部様が紹介された DrGeo は Scheme の Guile を、
+Kig というプロジェクトは Python をマクロ言語として使うことができます。
+
+DrGeo
+http://www.ofset.org/drgeo/
+Kig
+http://edu.kde.org/kig/
+
+このような幾何ソフトというのは、平面幾何的な取り扱いだけでも
+面白いので、そこまでの機能しかないように思われがちですが、
+再帰や点の軌跡等の概念も含めて捉えると、非常に豊かな数学表現力を
+備えたソフトウェアではないかと感じています。
+
+同様に、私は Squeak に対しても、
+数学的な概念を表現するソフトウェアとして、大きな潜在力を感じています。
+# 潜在というのは、ちょっと変かな。明らかなことでしょうか？
+
+ただ、まだわたし自身、SqueakToys で少し遊ぶくらいで、
+その力を使いこなすだけの能力がないのが残念です。
+
+hamada> 上記問題についてですが、
+hamada> 出題者の意図は、黒点が放物線上に並ぶことを示せとあるので、
+hamada> 黒点が放物線のように見えるだけでは足らないのではないかと思います。
+
+makoto> 高橋真＠神戸大学です。
+makoto> 
+makoto> そうだと思います。“欲しい”と書かれているコンピュータソフトに，どこまで
+makoto> 要求するのかこの問題からはわかりませんが，放物線の式まで出すような
+makoto> ものを求めているのかもしれません。
+
+makoto> そうだと思います。“欲しい”と書かれているコンピュータソフトに，どこまで
+makoto> 要求するのかこの問題からはわかりませんが，放物線の式まで出すような
+makoto> ものを求めているのかもしれません。
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Thu Mar  8 17:37:38 2007
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3438] Re: Squeak の幾何ソフト
+In-Reply-To: <20070308.160255.123968520.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <20070305234444849839.21358884@kobe-u.ac.jp>
+	<20070307.113913.98857086.hamada@holst.sm.fukuoka-u.ac.jp>
+	<45EE53A52E7.B447ABEE@smtp.nifty.com>
+	<20070307183652584695.eee9a7d6@kobe-u.ac.jp>
+	<20070308.160255.123968520.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <86c0320c0703080037g293e6d80k8d23ceec96100931@mail.gmail.com>
+
+濱田さん、ごきげんよう。鷲見です。
+
+mcz ファイルを Squeakland2005J で読み込むこと自体は、簡単です。
+
+お使いのホスト OS が何かにもよりますが、mcz ファイル（のアイコン）を
+Squeak のデスクトップにドロップインし、ポップアップするメニューから
+「ロード」を選ぶだけで可能なはずです。余談ですが、画像や .pr（プロジェクト）
+のファイルでも同様のことができます。
+
+ただ、ざっと試してみたところ、この最新版は Squeakland2005J イメージでは
+起動に失敗するようです。おそらく、最新の Squeak 3.9 か、それに準ずる内容の
+イメージが必要なのでしょう。
+
+http://squeak.org/Documentation/Installation
+
+これを入手して起動し、くだんの mcz ファイルを前述の方法でロードできたら、
+どこか文字をタイプして入力できる場所で、「DrGApp new」と入力し、
+選択状態にしてから do it (alt/cmd + D) すると起動できます。
+
+試してみて、また分からないことがあれば訊いてみてください。
+
+07/03/08 に Tatsuyoshi HAMADA<hamada@holst.sm.fukuoka-u.ac.jp> さんは書きました:
+> mcz というファイルが何らかのアーカイブだとは思うのですが、
+> これを Squeakland2005J で動作させるためには、
+> どのような手順を踏めば良いのでしょうか？
+
+-- 
+Masato Sumi
+
+From abee ＠ squeakland.jp  Thu Mar  8 17:38:56 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3439] Re: Squeak の幾何ソフト
+In-Reply-To: <20070308.160255.123968520.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <45EE53A52E7.B447ABEE@smtp.nifty.com>
+	<20070307183652584695.eee9a7d6@kobe-u.ac.jp>
+	<20070308.160255.123968520.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <45EFCBA0B8.C98DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 08 Mar 2007 16:02:55 +0900 (JST)
+Tatsuyoshi HAMADA <hamada@holst.sm.fukuoka-u.ac.jp> wrote:
+>実は、上記サイトから
+>http://www.squeaksource.com/DrGeoII/
+>を経て最新版の
+>http://www.squeaksource.com/DrGeoII/DrGeoII-HilaireFernandes.73.mcz
+>を試してみたい
+>
+>mcz というファイルが何らかのアーカイブだとは思うのですが、
+>これを Squeakland2005J で動作させるためには、
+>どのような手順を踏めば良いのでしょうか？
+
+mczはSqueakのバージョン管理システムであるMonticelloのパッケージファイルで
+す。Windowsの場合は、このファイルをSqueakのウィンドウにドロップするだけで
+ロードできるのですが、Linux(のウィンドウマネージャ)用にこの機能が実装されて
+いるかどうか分かりません。
+
+どのプラットホームでも使える手段としては、Squeakの標準ファイラであるファ
+イルリスト(File List)を使う方法があります。
+
+ファイルリストはワールドメニューの「開く」から「ファイル・リスト」を選ぶ
+と開きます。ワールドメニューは、開発版の場合、バックグラウンドで左クリッ
+ク、eToysユーザ版の場合はEscキーで開きます。
+
+ファイルリストの左上のペインからディレクトリを選択し、右上のペインでmczファ
+イルを選ぶと、右上の「ロード」ボタンが有効になりますので、それをクリック
+するとロードされます。
+
+このとき、eToysユーザ版の場合は、読み書き可能なディレクトリが「My Squeak」
+以下に制限されます。これはWindowsでは通常「C:\My Squeak」です。UNIX系では
+環境変数のSQUEAK_USERDIRに依存すると思われますが、具体的にどこを指してい
+るのかよく分かりません。
+
+さらに、DrGeoIIの場合はロード後にGUIでなくSmalltalk式を使って起動するよう
+になっているので、文字入力可能な場所、たとえばワークスペースなどをワール
+ドメニューから開き、「DrGApp new」と入力後、選択して右ボタンメニュー(中ボ
+タンかも)で「式を評価」します。
+
+先日私が試したのは、DrGeoII-HilaireFernandes.72.mczだったのですが、73は必
+要なメソッドが不足しているためにうまく動かないようです。72を試されるか、
+パッチを作りましたので、73をロードした後に添付のstファイル(gzipしています)
+をファイルリストでファイルインしてから「DrGApp new」を評価してください。
+
+Monticelloについては、川村さんのサイトが詳しいです。
+http://squeak.qp.land.to/wiki/index.php?Tools%2FMonticello
+
+また、梅澤さんの「自由自在Squeakプログラミング」(ISBN 978-4-88373-203-6)
+にも解説があります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: DrGGeometryView-toolBar.st.gz
+型:         application/octet-stream
+サイズ:     821 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070308/6f4b5d49/DrGGeometryView-toolBar.st.obj
+From hamada ＠ holst.sm.fukuoka-u.ac.jp  Thu Mar  8 22:49:15 2007
+From: hamada ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3440] Re: Squeak の幾何ソフト
+In-Reply-To: <45EFCBA0B8.C98DABEE@smtp.nifty.com>
+References: <20070307183652584695.eee9a7d6@kobe-u.ac.jp>
+	<20070308.160255.123968520.hamada@holst.sm.fukuoka-u.ac.jp>
+	<45EFCBA0B8.C98DABEE@smtp.nifty.com>
+Message-ID: <20070308.224915.41658378.hamada@holst.sm.fukuoka-u.ac.jp>
+
+濱田＠福大です。
+
+鷲見様、阿部様、
+mcz の利用方法に関する解説、ありがとうございました。
+お蔭様で、Linux, Windows 両方の環境で DrGeo II を起動することができました。
+
+mcz が Monticello のパッケージファイルというところまでは、
+辿り着いていたのですが、どう読み込むのか？
+また、どのように起動するのかで悩んでいました。
+
+梅澤様の本も手元にありますので、
+時間をつくって読み進めてみようと思います。
+
+ところで、Dr. Geo II についてですが、
+初等幾何的な構成については、実装されているのですが、
+軌跡やスクリプト等の部分は、これからのようです。
+しかし、Squeak 上で動かした印象としては、速度的にも
+申し分なく、今後が楽しみだと思いました。
+
+マクロスクリプトなどを SqueakToys のタイルプログラミングや
+Smalltalk で行なえると、より面白いアプリケーションに
+なるのではないかと思います。
+
+From nishis ＠ zephyr.dti.ne.jp  Fri Mar  9 01:56:16 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3441] Re: Seaside2.7 UTF8
+In-Reply-To: <20070303231127.FDB0.KOUBO2006@yengawa.jpn.org>
+References: <20070303231127.FDB0.KOUBO2006@yengawa.jpn.org>
+Message-ID: <45F04030.7050200@zephyr.dti.ne.jp>
+
+http://yengawa.homedns.org:8888/YengawaWiki 配下にアクセスしよ
+うとすると 500 Internal Server Error が返ります．
+っつか，http://yengawa.homedns.org:8888/* でそうなりますね．
+
+on 07.3.3 11:51 PM, Koji Yokokawa wrote:
+> Seasiderのみなさん、こんにちは!
+> 横川です。
+> 
+> Seaside2.7でUTF8を使うときの問題を修正するパッチを作りました。
+> 
+> http://yengawa-wiki.webhop.org/YengawaWiki/48
+> 
+> Seaside2.7のWAKomEncoded/WAKomEncoded39はUTF8を一応使えます。
+> でも、日本語のようなWideStringになるべき文字をポストするとSqueak内で妙な
+> エンコードになったりする問題があるので、それらを直しました。
+> Seasideで日本語を処理するアプリを作るときなどに利用してください。
+> 
+> -- !
+> Koji Yokokawa <koubo2006@yengawa.jpn.org>
+>     http://www.yengawa.com/
+>     ^self new!
+> 
+> 
+
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From abee ＠ squeakland.jp  Fri Mar  9 03:15:57 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3442] Re: Squeak の幾何ソフト
+In-Reply-To: <20070308.224915.41658378.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <45EFCBA0B8.C98DABEE@smtp.nifty.com>
+	<20070308.224915.41658378.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <45F052DD1AA.C996ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 08 Mar 2007 22:49:15 +0900 (JST)
+Tatsuyoshi HAMADA <hamada@holst.sm.fukuoka-u.ac.jp> wrote:
+>ところで、Dr. Geo II についてですが、
+>初等幾何的な構成については、実装されているのですが、
+>軌跡やスクリプト等の部分は、これからのようです。
+
+私も素人なのでよく分からないのですが、以下のムービーなどを見ると、ある程
+度はスクリプティング可能になっているようです。
+
+http://www.univ-savoie.fr/Portail/Groupes/fernandes/demos/2-thales/index.html
+
+どうも普通にハロを出したのではだめで、まずウィンドウ上部にある目玉アイコ
+ンをクリックしてから、ポイントなどをクリックするとビューワが開くようです。
+このビューワでカテゴリを「drgeo」に変更すると、専用のフレーズタイルが現れ
+るので、これを使ってスクリプトを書くと動かすことができました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From koubo2006 ＠ yengawa.jpn.org  Fri Mar  9 10:41:13 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3443] Re: Seaside2.7 UTF8
+In-Reply-To: <45F04030.7050200@zephyr.dti.ne.jp>
+References: <20070303231127.FDB0.KOUBO2006@yengawa.jpn.org>
+	<45F04030.7050200@zephyr.dti.ne.jp>
+Message-ID: <20070309102222.FDBE.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+ご報告ありがとうございます。
+直したので再度ためしてみてください。
+
+先日行ったSwikiのサイト(Swiki1.4/Squeak3.6)のWindowsからMacOSXへの移動で
+出たトラブルのようです。
+アップロードされていた画像ファイルのファイル名に日本を語使っていて、
+MacOSXのSwikiで起動時にそのファイルを見つけられないエラーが出てました。
+とりあえずファイル名をすべて英文字にして応急対応しました。
+Squeak3.6イメージを使ってたのが悪かったような気がしてますが、今ちょっと
+忙しいので原因究明は後ほど。。。
+
+
+On Fri, 09 Mar 2007 01:56:16 +0900
+NISHIHARA Satoshi <nishis@zephyr.dti.ne.jp> wrote:
+
+> http://yengawa.homedns.org:8888/YengawaWiki 配下にアクセスしよ
+> うとすると 500 Internal Server Error が返ります．
+> っつか，http://yengawa.homedns.org:8888/* でそうなりますね．
+> 
+> on 07.3.3 11:51 PM, Koji Yokokawa wrote:
+> > Seasiderのみなさん、こんにちは!
+> > 横川です。
+> > 
+> > Seaside2.7でUTF8を使うときの問題を修正するパッチを作りました。
+> > 
+> > http://yengawa-wiki.webhop.org/YengawaWiki/48
+> > 
+> > Seaside2.7のWAKomEncoded/WAKomEncoded39はUTF8を一応使えます。
+> > でも、日本語のようなWideStringになるべき文字をポストするとSqueak内で妙な
+> > エンコードになったりする問題があるので、それらを直しました。
+> > Seasideで日本語を処理するアプリを作るときなどに利用してください。
+> > 
+> > -- !
+> > Koji Yokokawa <koubo2006@yengawa.jpn.org>
+> >     http://www.yengawa.com/
+> >     ^self new!
+> > 
+> > 
+> 
+> 
+> -- 
+> --------------------------------------------
+> 西原聡士 (NISHIHARA Satoshi)
+> URL:    http://www.zephyr.dti.ne.jp/~nishis/
+> --------------------------------------------
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From nishis ＠ zephyr.dti.ne.jp  Fri Mar  9 11:44:54 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3444] Re: Seaside2.7 UTF8
+In-Reply-To: <20070309102222.FDBE.KOUBO2006@yengawa.jpn.org>
+References: <20070303231127.FDB0.KOUBO2006@yengawa.jpn.org>	<45F04030.7050200@zephyr.dti.ne.jp>
+	<20070309102222.FDBE.KOUBO2006@yengawa.jpn.org>
+Message-ID: <45F0CA26.9090004@zephyr.dti.ne.jp>
+
+on 07.3.9 10:41 AM, Koji Yokokawa wrote:
+> 横川です。
+> ご報告ありがとうございます。
+> 直したので再度ためしてみてください。
+
+今度は「ばっちぐぅ (死語)」です．
+
+> 
+> 先日行ったSwikiのサイト(Swiki1.4/Squeak3.6)のWindowsからMacOSXへの移動で
+> 出たトラブルのようです。
+> アップロードされていた画像ファイルのファイル名に日本を語使っていて、
+> MacOSXのSwikiで起動時にそのファイルを見つけられないエラーが出てました。
+
+ゆ，勇者ですね……．
+
+> とりあえずファイル名をすべて英文字にして応急対応しました。
+> Squeak3.6イメージを使ってたのが悪かったような気がしてますが、今ちょっと
+> 忙しいので原因究明は後ほど。。。
+
+あと，
+http://yengawa.homedns.org:8080/seaside/ypier
+も，何も操作できない状態になっているようです．
+Camino でも Safari でもダメでした．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+
+From umejava ＠ mars.dti.ne.jp  Fri Mar  9 13:45:27 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3445] Re: Squeak Foundation Board の選挙
+In-Reply-To: <JE200703041754093.6629921@mars.dti.ne.jp>
+References: <umz32zslj.wl%yoshiki@squeakland.org>
+	<45E15D4F17A.3987ABEE@smtp.nifty.com>
+	<JS200702271740157.10840109@mars.dti.ne.jp>
+	<JE200703041754093.6629921@mars.dti.ne.jp>
+Message-ID: <JR200703091345274.2196781@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+選挙の結果が出ました。下記で見ることができます。
+
+http://weeklysqueak.wordpress.com/2007/03/08/squeak-foundation-board-2007-election-results/
+
+大島さん、おめでとうございます。
+
+Boardのメンバーは、あくまでコミュニティのまとめ役です。実際にコミュニティが
+盛り上がるかは、皆さん一人一人の意識に依るところだと思います。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 選挙ですが、技術的なトラブルにより、投票開始日が遅れることになりました。
+> 投票権を持つ人には開始のアナウンスが行くようなので、気長にお待ちください。
+> 
+> ではでは。
+> 
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> > こんにちは
+> > 梅澤です。
+> > 
+> > リンクを補足しておきます。
+> > 
+> > Squeak Foundation Board 2007 Election
+> > http://wiki.squeak.org/squeak/5920
+> > 
+> > 候補者リストや、抱負、スケジュールなどが載っていますので定期的に見ておくと
+> > 良いでしょう。
+> > 
+> > 投票は3/3日から3日間です。
+> > 
+> > SqueakPeopleへの登録+認定についてですが、登録していただければ私が定期的に見て
+> > 片っ端から認定していくようにしますので、よろしくお願いします。
+> > (登録済みの人は、仲間をどんどん認定してあげましょう)
+> > 
+> ---
+> [:masashi | ^umezawa]
+---
+[:masashi | ^umezawa]
+
+
+From newapplesho ＠ gmail.com  Fri Mar  9 16:27:56 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3446] MorphとMVCについて
+Message-ID: <D051B155-CD88-4A1B-96E3-2E95DDECE5CE@gmail.com>
+
+はじめまして、吉田と言います。
+
+大学のゼミでSqueakを知り,勉強しているものです.
+Smalltalkを最近勉強して疑問に思ったのですが,Squeakの 
+MorphでのアプリケーションはSmalltalkのMVCのような開 
+発をしているのでしょうか.
+
+またSystem Browserのインスペクターにinspect modelと 
+いう項目はMVCと関係あるものなのでしょうか.
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From tetha ＠ st.rim.or.jp  Fri Mar  9 17:09:15 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3447] Re: Seaside2.7 UTF8
+In-Reply-To: <45F0CA26.9090004@zephyr.dti.ne.jp>
+References: <20070303231127.FDB0.KOUBO2006@yengawa.jpn.org>	<45F04030.7050200@zephyr.dti.ne.jp>
+	<20070309102222.FDBE.KOUBO2006@yengawa.jpn.org>
+	<45F0CA26.9090004@zephyr.dti.ne.jp>
+Message-ID: <B61B8A84-B1E9-4A40-90EC-5243ED2B9760@st.rim.or.jp>
+
+こんにちは。
+林です。
+
+On 2007/03/09, at 11:44, NISHIHARA Satoshi wrote:
+
+>> 先日行ったSwikiのサイト(Swiki1.4/Squeak3.6)のWindowsからMacOSXへの移動で
+>> 出たトラブルのようです。
+>> アップロードされていた画像ファイルのファイル名に日本を語使っていて、
+>> MacOSXのSwikiで起動時にそのファイルを見つけられないエラーが出てました。
+>
+> ゆ，勇者ですね……．
+
+もし、Ian Piumarta さんの Quartz-vm を使われてるのでしたら、日本語ファイ
+ル名は使用できないです（エンコーディングしてないので）。
+
+John M. McIntosh さんの開発者向けベータ版 CarbonVM を使われてるのでしたら、
+濁点／半濁点の扱いでバグがあります（なお、SqueakLand2005J 同梱のものは大
+丈夫です。バグがあるのはJMMさんの方で現在リリースしてるベータ版です。
+具体的には、squeak.org で配布しているものがそうです）。
+これについては至急対応したいと思います。
+
+では。
+
+--
+林 徹也 Tetsuya HAYASHI 
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From umejava ＠ mars.dti.ne.jp  Fri Mar  9 17:29:50 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3448] Re: MorphとMVCについて
+In-Reply-To: <D051B155-CD88-4A1B-96E3-2E95DDECE5CE@gmail.com>
+References: <D051B155-CD88-4A1B-96E3-2E95DDECE5CE@gmail.com>
+Message-ID: <JK200703091729504.15660109@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> はじめまして、吉田と言います。
+> 
+> 大学のゼミでSqueakを知り,勉強しているものです.
+> Smalltalkを最近勉強して疑問に思ったのですが,Squeakの 
+> MorphでのアプリケーションはSmalltalkのMVCのような開 
+> 発をしているのでしょうか.
+
+これは時と場合によりけりだと思います。Morphicは、MとVとCが一体化したところ
+に強みがあるのですが、そうとはいえ、一つのモデルを複数のビューで見たいと
+いう場合もあるでしょう。
+
+そのようなときには、MorphをMVCでいうところのVC一体型のコンポーネントと
+みなし、モデルを別のオブジェクトとして分離させるということをします。
+
+ちょっと古くて恐縮ですが、以下のようなことを以前書きました。
+こちらも参考になるかもしれません。
+
+http://www.ogis-ri.co.jp/otc/otc2/oosquare-ml/Archive/200111.month/2424.html
+
+> またSystem Browserのインスペクターにinspect modelと 
+> いう項目はMVCと関係あるものなのでしょうか.
+> 
+
+これは関係がありますね。モデルとしてはBrowser(クラスカテゴリやクラス群、
+現在の選択などを表示に関係なく保持しているもの)、ビューとしてはMorph
+の集合体でできているというのが、普段私たちがMorphic環境で見ているブラウザ
+です。
+
+同じBrowserというモデルは、MVCの環境でも使われます。この場合、古典的な
+ViewとCcontroller群がMorph達の代わりにくっついているのです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+
+From tetha ＠ st.rim.or.jp  Fri Mar  9 18:26:03 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3449] Mac用ベータ版VMでファイル名に濁音／半濁音が使えないバグの修正
+Message-ID: <FF40F4EC-EE2F-4D46-A906-28897F2D614D@st.rim.or.jp>
+
+みなさん、こんにちは。
+林です。
+
+　どちらかというと Mac で開発者環境をご利用されてる方向けの情報です。
+
+　別メールにも書きましたが、 squeak.orgなどで配布されてる最新VMにはファイ
+ル名に「濁音／半濁音」を扱えないバグがあります。
+このバグを修正した VM を以下のページにアップロードしました。
+
+http://magicbasket.jp/SqueakDev/3
+http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip
+
+　もしよろしければ動作確認していただけると助かります。
+（例えば濁音／半濁音のファイルを作成、リストしてみるなど）
+一応、開発者の John M. McIntosh さんにはパッチを送りますが、反映されるま
+ではしばらくかかると思われます（丁度、今日最新版が出たみたいですので）。
+お急ぎの方は当面このVMをお使いください。
+なお、ユニバーサルバイナリでビルドしたのですけど、Intel mac を持ってない
+ので動作確認しておりません。問題があるようでしたらご連絡ください。
+
+　また、以前、[Squeak-ja: 2446] で高橋さんからご報告いただいた半角／全角
+数字の問題への修正も入ってます（この時は対応が宙ぶらりんになってしまって
+ました。すみません）。
+
+では。
+
+--
+林 徹也 Tetsuya HAYASHI 
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From e-itoh ＠ ygu.ac.jp  Fri Mar  9 20:30:17 2007
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3450] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+References: <FF40F4EC-EE2F-4D46-A906-28897F2D614D@st.rim.or.jp>
+Message-ID: <20070309203017.194D2941@ygu.ac.jp>
+
+伊藤です。
+
+さっそくMac(Tiger/iBook G4)で試させていただきました。
+今までは、「プログラム」という名前のフォルダが「フ?ロク?ラム」となっていまし
+たが、きちんと「プログラム」と表示されるようになりました。
+ありがとうございました。
+ぜひ使わせていただいて何かあるようでしたら報告いたします。
+
+取り急ぎご報告まで。
+
+--- "Tetsuya HAYASHI" <tetha@st.rim.or.jp> ---
+
+>みなさん、こんにちは。
+>林です。
+>
+>　どちらかというと Mac で開発者環境をご利用されてる方向けの情報です。
+>
+>　別メールにも書きましたが、 squeak.orgなどで配布されてる最新VMにはファイ
+>ル名に「濁音／半濁音」を扱えないバグがあります。
+>このバグを修正した VM を以下のページにアップロードしました。
+>
+>http://magicbasket.jp/SqueakDev/3
+>http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip
+>
+>　もしよろしければ動作確認していただけると助かります。
+>（例えば濁音／半濁音のファイルを作成、リストしてみるなど）
+>一応、開発者の John M. McIntosh さんにはパッチを送りますが、反映されるま
+>ではしばらくかかると思われます（丁度、今日最新版が出たみたいですので）。
+>お急ぎの方は当面このVMをお使いください。
+>なお、ユニバーサルバイナリでビルドしたのですけど、Intel mac を持ってない
+>ので動作確認しておりません。問題があるようでしたらご連絡ください。
+>
+>　また、以前、[Squeak-ja: 2446] で高橋さんからご報告いただいた半角／全角
+>数字の問題への修正も入ってます（この時は対応が宙ぶらりんになってしまって
+>ました。すみません）。
+>
+>では。
+>
+>--
+>林 徹也 Tetsuya HAYASHI 
+>tetha@st.rim.or.jp, tetha@mac.com
+>
+
+
+
+
+
+
+From tetha ＠ st.rim.or.jp  Fri Mar  9 21:44:34 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3451] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+In-Reply-To: <20070309203017.194D2941@ygu.ac.jp>
+References: <FF40F4EC-EE2F-4D46-A906-28897F2D614D@st.rim.or.jp>
+	<20070309203017.194D2941@ygu.ac.jp>
+Message-ID: <F122C13F-7084-4F03-BE95-900F8D91B120@st.rim.or.jp>
+
+伊藤さん、こんばんは。
+林です。
+
+動作確認ありがとうございます。
+パッチは結局 vm-dev ML の方に投げておきました。
+もしかして運が良ければ早く取り込まれるかもしれません(と期待してるのですが)。
+
+また何かありましたら今後ともよろしくお願いします。
+
+On 2007/03/09, at 20:30, Eiichiro Ito wrote:
+
+> 伊藤です。
+>
+> さっそくMac(Tiger/iBook G4)で試させていただきました。
+> 今までは、「プログラム」という名前のフォルダが「フ?ロク?ラム」となっていまし
+> たが、きちんと「プログラム」と表示されるようになりました。
+> ありがとうございました。
+> ぜひ使わせていただいて何かあるようでしたら報告いたします。
+>
+> 取り急ぎご報告まで。
+>
+> --- "Tetsuya HAYASHI" <tetha@st.rim.or.jp> ---
+>
+>> みなさん、こんにちは。
+>> 林です。
+>>
+>> 　どちらかというと Mac で開発者環境をご利用されてる方向けの情報です。
+>>
+>> 　別メールにも書きましたが、 squeak.orgなどで配布されてる最新VMにはファイ
+>> ル名に「濁音／半濁音」を扱えないバグがあります。
+>> このバグを修正した VM を以下のページにアップロードしました。
+>>
+>> http://magicbasket.jp/SqueakDev/3
+>> http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip
+>>
+>> 　もしよろしければ動作確認していただけると助かります。
+>> （例えば濁音／半濁音のファイルを作成、リストしてみるなど）
+>> 一応、開発者の John M. McIntosh さんにはパッチを送りますが、反映されるま
+>> ではしばらくかかると思われます（丁度、今日最新版が出たみたいですので）。
+>> お急ぎの方は当面このVMをお使いください。
+>> なお、ユニバーサルバイナリでビルドしたのですけど、Intel mac を持ってない
+>> ので動作確認しておりません。問題があるようでしたらご連絡ください。
+>>
+>> 　また、以前、[Squeak-ja: 2446] で高橋さんからご報告いただいた半角／全角
+>> 数字の問題への修正も入ってます（この時は対応が宙ぶらりんになってしまって
+>> ました。すみません）。
+>>
+>> では。
+>>
+>> --
+>> 林 徹也 Tetsuya HAYASHI 
+>> tetha@st.rim.or.jp, tetha@mac.com
+>>
+>
+>
+>
+>
+>
+>
+>
+
+
+From nishis ＠ zephyr.dti.ne.jp  Fri Mar  9 21:50:41 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3452] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+In-Reply-To: <20070309203017.194D2941@ygu.ac.jp>
+References: <FF40F4EC-EE2F-4D46-A906-28897F2D614D@st.rim.or.jp>
+	<20070309203017.194D2941@ygu.ac.jp>
+Message-ID: <45F15821.3060702@zephyr.dti.ne.jp>
+
+MacIntel (mini, core duo 1.83GHz, OSX 10.4.8 (8L2127)) で試し
+てみました．
+
+「にほんご」という名称のファイルのファイル・リスト表示，作成と
+も問題なしです． UTF-8 の中身の表示はファイル・リスト上では化
+けてますが，ワークスペースに読み込んでみると，ちゃんと表示され
+ました．
+
+-headless オプション付けても "just leaking" などと言って来ませ
+ん (こちらは JMM 版 3.8.15beta4U では出なくなりました)．
+
+こっち (VM070309J) に乗り換えようと思います．
+
+on 07.3.9 8:30 PM, Eiichiro Ito wrote:
+> 伊藤です。
+> 
+> さっそくMac(Tiger/iBook G4)で試させていただきました。
+> 今までは、「プログラム」という名前のフォルダが「フ?ロク?ラム」となっていまし
+> たが、きちんと「プログラム」と表示されるようになりました。
+> ありがとうございました。
+> ぜひ使わせていただいて何かあるようでしたら報告いたします。
+> 
+> 取り急ぎご報告まで。
+> 
+> --- "Tetsuya HAYASHI" <tetha@st.rim.or.jp> ---
+> 
+>> みなさん、こんにちは。
+>> 林です。
+>>
+>> 　どちらかというと Mac で開発者環境をご利用されてる方向けの情報です。
+>>
+>> 　別メールにも書きましたが、 squeak.orgなどで配布されてる最新VMにはファイ
+>> ル名に「濁音／半濁音」を扱えないバグがあります。
+>> このバグを修正した VM を以下のページにアップロードしました。
+>>
+>> http://magicbasket.jp/SqueakDev/3
+>> http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip
+>>
+>> 　もしよろしければ動作確認していただけると助かります。
+>> （例えば濁音／半濁音のファイルを作成、リストしてみるなど）
+>> 一応、開発者の John M. McIntosh さんにはパッチを送りますが、反映されるま
+>> ではしばらくかかると思われます（丁度、今日最新版が出たみたいですので）。
+>> お急ぎの方は当面このVMをお使いください。
+>> なお、ユニバーサルバイナリでビルドしたのですけど、Intel mac を持ってない
+>> ので動作確認しておりません。問題があるようでしたらご連絡ください。
+>>
+>> 　また、以前、[Squeak-ja: 2446] で高橋さんからご報告いただいた半角／全角
+>> 数字の問題への修正も入ってます（この時は対応が宙ぶらりんになってしまって
+>> ました。すみません）。
+>>
+>> では。
+>>
+>> --
+>> 林 徹也 Tetsuya HAYASHI 
+>> tetha@st.rim.or.jp, tetha@mac.com
+>>
+> 
+> 
+> 
+> 
+> 
+> 
+
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From tetha ＠ st.rim.or.jp  Fri Mar  9 22:30:28 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3453] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+In-Reply-To: <45F15821.3060702@zephyr.dti.ne.jp>
+References: <FF40F4EC-EE2F-4D46-A906-28897F2D614D@st.rim.or.jp>
+	<20070309203017.194D2941@ygu.ac.jp>
+	<45F15821.3060702@zephyr.dti.ne.jp>
+Message-ID: <FAC26803-798B-4BB4-A8AF-E69108EC6C3D@st.rim.or.jp>
+
+西原さん、こんばんは。
+林です。
+
+On 2007/03/09, at 21:50, NISHIHARA Satoshi wrote:
+
+> MacIntel (mini, core duo 1.83GHz, OSX 10.4.8 (8L2127)) で試し
+> てみました．
+
+Intel mac での確認ありがとうございます。
+
+> 「にほんご」という名称のファイルのファイル・リスト表示，作成と
+> も問題なしです． UTF-8 の中身の表示はファイル・リスト上では化
+> けてますが，ワークスペースに読み込んでみると，ちゃんと表示され
+> ました．
+
+一瞬、ドキっとしました(^^)が安心しました。
+
+> -headless オプション付けても "just leaking" などと言って来ませ
+> ん (こちらは JMM 版 3.8.15beta4U では出なくなりました)．
+
+subversion が更新されてるかどうか気になってたのですが、どうやら大丈夫だっ
+たようですね（今日の最新版の目玉はこれだったみたいですが）。
+情報ありがとうございます。
+
+> こっち (VM070309J) に乗り換えようと思います．
+
+正式ベータ（ちょっと変ですが）までよろしくお願いします。
+
+> on 07.3.9 8:30 PM, Eiichiro Ito wrote:
+>> 伊藤です。
+>>
+>> さっそくMac(Tiger/iBook G4)で試させていただきました。
+>> 今までは、「プログラム」という名前のフォルダが「フ?ロク?ラム」となっていまし
+>> たが、きちんと「プログラム」と表示されるようになりました。
+>> ありがとうございました。
+>> ぜひ使わせていただいて何かあるようでしたら報告いたします。
+>>
+>> 取り急ぎご報告まで。
+>>
+>> --- "Tetsuya HAYASHI" <tetha@st.rim.or.jp> ---
+>>
+>>> みなさん、こんにちは。
+>>> 林です。
+>>>
+>>> 　どちらかというと Mac で開発者環境をご利用されてる方向けの情報です。
+>>>
+>>> 　別メールにも書きましたが、 squeak.orgなどで配布されてる最新VMにはファイ
+>>> ル名に「濁音／半濁音」を扱えないバグがあります。
+>>> このバグを修正した VM を以下のページにアップロードしました。
+>>>
+>>> http://magicbasket.jp/SqueakDev/3
+>>> http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip
+>>>
+>>> 　もしよろしければ動作確認していただけると助かります。
+>>> （例えば濁音／半濁音のファイルを作成、リストしてみるなど）
+>>> 一応、開発者の John M. McIntosh さんにはパッチを送りますが、反映されるま
+>>> ではしばらくかかると思われます（丁度、今日最新版が出たみたいですので）。
+>>> お急ぎの方は当面このVMをお使いください。
+>>> なお、ユニバーサルバイナリでビルドしたのですけど、Intel mac を持ってない
+>>> ので動作確認しておりません。問題があるようでしたらご連絡ください。
+>>>
+>>> 　また、以前、[Squeak-ja: 2446] で高橋さんからご報告いただいた半角／全角
+>>> 数字の問題への修正も入ってます（この時は対応が宙ぶらりんになってしまって
+>>> ました。すみません）。
+>>>
+>>> では。
+>>>
+>>> --
+>>> 林 徹也 Tetsuya HAYASHI 
+>>> tetha@st.rim.or.jp, tetha@mac.com
+>>>
+>>
+>>
+>>
+>>
+>>
+>>
+>
+>
+> -- 
+> --------------------------------------------
+> 西原聡士 (NISHIHARA Satoshi)
+> URL:    http://www.zephyr.dti.ne.jp/~nishis/
+> --------------------------------------------
+>
+>
+
+
+From yoshiki ＠ squeakland.org  Sat Mar 10 11:37:58 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3454] Re: Squeak Foundation Board の選挙
+In-Reply-To: <JR200703091345274.2196781@mars.dti.ne.jp>
+References: <umz32zslj.wl%yoshiki@squeakland.org>
+	<45E15D4F17A.3987ABEE@smtp.nifty.com>
+	<JS200702271740157.10840109@mars.dti.ne.jp>
+	<JE200703041754093.6629921@mars.dti.ne.jp>
+	<JR200703091345274.2196781@mars.dti.ne.jp>
+Message-ID: <uwt1pvn5l.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> 選挙の結果が出ました。下記で見ることができます。
+> 
+> http://weeklysqueak.wordpress.com/2007/03/08/squeak-foundation-board-2007-election-results/
+> 
+> 大島さん、おめでとうございます。
+
+  ありがとうございます。
+
+> Boardのメンバーは、あくまでコミュニティのまとめ役です。実際にコミュニティが
+> 盛り上がるかは、皆さん一人一人の意識に依るところだと思います。
+
+  そうですね。
+
+今年は、新しいことと保守との兼ね合いが鍵になるかと思います。
+
+-- Yoshiki
+
+From newapplesho ＠ gmail.com  Sat Mar 10 21:48:41 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3455] Re: MorphとMVCについて
+In-Reply-To: <JK200703091729504.15660109@mars.dti.ne.jp>
+References: <D051B155-CD88-4A1B-96E3-2E95DDECE5CE@gmail.com>
+	<JK200703091729504.15660109@mars.dti.ne.jp>
+Message-ID: <8379A1A0-E304-4142-BAEB-11F4447BBCC2@gmail.com>
+
+こんばんは、吉田です。
+梅沢さんありがとうございました。
+疑問はわかりました。
+Morphicは本当に奥が深いですね。
+
+ただ、MVCもしっかり理解できていないためか実際にそのような 
+作り方ができません。
+何かSqueakにいいサンプルはないでしょうか。
+
+
+On 2007/03/09, at 17:29, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> Sho Yoshida <newapplesho@gmail.com> wrote:
+>> はじめまして、吉田と言います。
+>>
+>> 大学のゼミでSqueakを知り,勉強しているものです.
+>> Smalltalkを最近勉強して疑問に思ったのですが,Squeakの
+>> MorphでのアプリケーションはSmalltalkのMVCのような開
+>> 発をしているのでしょうか.
+>
+> これは時と場合によりけりだと思います。Morphicは、M 
+> とVとCが一体化したところ
+> に強みがあるのですが、そうとはいえ、一つのモデルを複数のビュー 
+> で見たいと
+> いう場合もあるでしょう。
+>
+> そのようなときには、MorphをMVCでいうところの 
+> VC一体型のコンポーネントと
+> みなし、モデルを別のオブジェクトとして分離させるということをし 
+> ます。
+>
+> ちょっと古くて恐縮ですが、以下のようなことを以前書きました。
+> こちらも参考になるかもしれません。
+>
+> http://www.ogis-ri.co.jp/otc/otc2/oosquare-ml/Archive/200111.month/ 
+> 2424.html
+>
+>> またSystem Browserのインスペクターにinspect modelと
+>> いう項目はMVCと関係あるものなのでしょうか.
+>>
+>
+> これは関係がありますね。モデルとしてはBrowser(クラスカテ 
+> ゴリやクラス群、
+> 現在の選択などを表示に関係なく保持しているもの)、ビュー 
+> としてはMorph
+> の集合体でできているというのが、普段私たちがMorphic環境 
+> で見ているブラウザ
+> です。
+>
+> 同じBrowserというモデルは、MVCの環境でも使われま 
+> す。この場合、古典的な
+> ViewとCcontroller群がMorph達の代わりにくっついてい 
+> るのです。
+>
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+>
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Mar 10 23:25:22 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3456] Re: MorphとMVCについて
+In-Reply-To: <8379A1A0-E304-4142-BAEB-11F4447BBCC2@gmail.com>
+References: <D051B155-CD88-4A1B-96E3-2E95DDECE5CE@gmail.com>
+	<JK200703091729504.15660109@mars.dti.ne.jp>
+	<8379A1A0-E304-4142-BAEB-11F4447BBCC2@gmail.com>
+Message-ID: <JC200703102325224.2288484@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> こんばんは、吉田です。
+> 梅沢さんありがとうございました。
+> 疑問はわかりました。
+> Morphicは本当に奥が深いですね。
+> 
+> ただ、MVCもしっかり理解できていないためか実際にそのような 
+> 作り方ができません。
+> 何かSqueakにいいサンプルはないでしょうか。
+
+Morphicは混沌としているといいますが、勢い重視といいますか、きちんとした
+オブジェクト指向設計の観点から見ると、「なんだかなあ」的な部分もかなり
+あります。
+
+まずはMVCをしっかりと理解することが先決ではないでしょうか。MVCあってこそ
+のMorphicの「崩し」ですからね。
+
+これまた古いですが、MVCについてはHappy Squeaking!!の記事などが参考に
+なるかもしれません。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/Squeak5/index.html
+
+Morphicそのものの設計思想については、「Squeak入門—過去から来た未来の
+プログラミング環境」の3章「Morphic入門」でJohn Maloneyさん自身が、
+解説されています。(MVCとの比較などについても記述があります)
+http://www.amazon.co.jp/exec/obidos/ASIN/4434029479
+
+ソースコードの中に例を求めるとすると、MorphicをVCコンポーネント、
+モデルは別として作っている手軽なものとして、PluggableTextMorphなどの
+Pluggableシリーズがあるでしょう。これはMorphicで実現されたいわゆる
+プラガブルMVCです。
+
+プラガブルMVCについてはたとえば青木さんの解説があります。(他にも
+「プラガブルMVC」でググると、いろいろとヒットします)。
+http://www.sra.co.jp/people/aoki/SuperAsciiJ/SAscii06.html
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+
+From hamada ＠ holst.sm.fukuoka-u.ac.jp  Mon Mar 12 11:06:53 2007
+From: hamada ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3457] Re: Squeak の幾何ソフト
+In-Reply-To: <45F052DD1AA.C996ABEE@smtp.nifty.com>
+References: <45EFCBA0B8.C98DABEE@smtp.nifty.com>
+	<20070308.224915.41658378.hamada@holst.sm.fukuoka-u.ac.jp>
+	<45F052DD1AA.C996ABEE@smtp.nifty.com>
+Message-ID: <20070312.110653.00449612.hamada@holst.sm.fukuoka-u.ac.jp>
+
+濱田＠福大です。
+
+阿部様、御指摘ありがとうございます。これは、私の早とちりだったようです。
+確かに eToys などとの連携を狙っていて、
+すでに、かなりの部分が実装されているようですね。
+
+原型の Dr.Geo の開発は ofset
+http://www.ofset.org/
+というフリーソフトウェアによる教育を目指す組織の
+メインプロジェクトにもなっているようで、
+Dr. Geo II により Squeak と連携が取れるようになったことは、
+今後が、かなり楽しみです。
+
+もう少し、Dr. Geo II を触ってみようと思います。
+
+追伸
+ところで、皆様、御存じかもしれませんが、このムービーを作成している
+vnc2swf, pyvnc2swf は、新山祐介さんという方が開発している
+画面録画ユーティリティーです。
+http://www.unixuser.org/~euske/vnc2swf/index-j.html
+
+フリーソフトウェアだけで、アプリケーションの利用方法などを動画で録画
+再生できるので、たいへん重宝しております。
+
+おそらく Squeak の利用方法の解説場面に置いても有益だと思います。
+
+abee> >ところで、Dr. Geo II についてですが、
+abee> >初等幾何的な構成については、実装されているのですが、
+abee> >軌跡やスクリプト等の部分は、これからのようです。
+abee> 
+abee> 私も素人なのでよく分からないのですが、以下のムービーなどを見ると、ある程
+abee> 度はスクリプティング可能になっているようです。
+abee> 
+abee> http://www.univ-savoie.fr/Portail/Groupes/fernandes/demos/2-thales/index.html
+abee> 
+abee> どうも普通にハロを出したのではだめで、まずウィンドウ上部にある目玉アイコ
+abee> ンをクリックしてから、ポイントなどをクリックするとビューワが開くようです。
+abee> このビューワでカテゴリを「drgeo」に変更すると、専用のフレーズタイルが現れ
+abee> るので、これを使ってスクリプトを書くと動かすことができました。
+
+From mutoh ＠ openedu.org  Tue Mar 13 18:14:30 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3458] 第11回イベント@奈良高専のご案内
+Message-ID: <86r6rtfqtl.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+私が以前お世話になっていた奈良高専で、ぽちぽちとイベント＠奈良高専とい
+う名前でイベントをやっております。
+# http://qml.610t.org/NNCT/event.html
+
+で、第11回が、以下のように行われますので、Squeak関連で発表などありまし
+たら、お気軽にご参加下さい。
+	http://www.openedu.org/ja/event/nnct11/
+
+今回は、大和郡山のお城まつりの会期中ですし、桜も早そうなので、素敵な春
+の一日を過ごせればいいなと思っています。
+        http://www.city.yamatokoriyama.nara.jp/wave/bosyu/syoukou/siromaturi46/\
+index.htm
+
+ではでは、会場でお会いできるのを楽しみにしております。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+----------------------------------------------------------------------
+* 第11回 イベント@奈良高専
+
+- 日時:2007年3月31日(土曜) 10:00-17:00
+- 場所: 奈良工業高等専門学校 情報工学科 1F演習室(発表など),2F実験室(展
+- 示など)
+-- 住所:〒639-1080 大和郡山市矢田町22
+-- 電車: 近鉄郡山もしくはJR大和郡山より奈良交通バス奈良高専前下車
+-- 自動車:
+--- 西名阪郡山もしくは法隆寺より25号線 富雄方面へ富雄川ぞいに
+--- 第2阪奈郡山から郡山方面へ富雄川ぞいに外川町の交差点を矢田寺方面へ
+
+* 参加資格と参加方法
+
+どなたでも参加できます。 イベント自体は参加に関して、連絡の必要はあり
+ませんが、
+ 昼食および懇親会は調達などの都合がありますので、 イベント担当
+(nnct11@event.openedu.org)まで 以下の書式でご連絡下さい。
+,氏名,          イベント参加時間,昼食   ,懇親会,コメント
+,(例)高専太郎,  10:00-17:00     ,O/X    ,O/X,   何か一言
+
+イベントの緊急の連絡などは、 nnct11@event.openedu.orgで 行う予定です。
+参加される方は nnct11-subscribe@event.openedu.orgへメールを送り、 購読しておくことをお勧めします。
+
+* プログラム
+
+以下の予定は暫定的なものです。
+
+この他にも発表をしてくれる方を募集中です。 当日の飛び込み発表でも歓迎
+しますので、是非とも、よろしくお 願いします
+** 午前
+
+のんびりと雑談(または奈良高専や近隣を散策)。
+
+** 午後
+
+数件の発表を予定。
+
+- 本間啓道 「今年度の卒研から」
+- 未定 「飛び込みでの発表も歓迎します！」
+
+* 懇親会
+
+- 場所: 検討中です
+- 時間:17:00-(2時間程度)
+- 予算:3000円-5000円程度
+
+* ネットワーク環境
+
+- 無線LAN:IEEE 802.11b
+- Gigabit Etherスイッチあり
+- DHCPサーバあり
+
+* 参加予定人数
+
+- イベント:?名
+- 昼食:?名
+- 懇親会:?名
+
+OpenEdu Project Event Team
+
+From tak ＠ metatoys.org  Wed Mar 14 01:11:50 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3459] Re: 第11回イベント@奈良高専のご案内
+In-Reply-To: <86r6rtfqtl.wl%mutoh@openedu.org>
+References: <86r6rtfqtl.wl%mutoh@openedu.org>
+Message-ID: <c57315d40703130911x1abdfc73nad7718c3865ef8d6@mail.gmail.com>
+
+武藤さん
+
+こんにちは、山宮です。
+イベントのテーマやどんな方が来るのか詳しく書いて頂ければ
+考えやすいと思いますが、如何でしょうか？
+
+07/03/13 に Takeshi MUTOH<mutoh@openedu.org> さんは書きました:
+> むとう＠おうちです。
+>
+> 私が以前お世話になっていた奈良高専で、ぽちぽちとイベント＠奈良高専とい
+> う名前でイベントをやっております。
+> # http://qml.610t.org/NNCT/event.html
+>
+> で、第11回が、以下のように行われますので、Squeak関連で発表などありまし
+> たら、お気軽にご参加下さい。
+>         http://www.openedu.org/ja/event/nnct11/
+>
+> 今回は、大和郡山のお城まつりの会期中ですし、桜も早そうなので、素敵な春
+> の一日を過ごせればいいなと思っています。
+>         http://www.city.yamatokoriyama.nara.jp/wave/bosyu/syoukou/siromaturi46/\
+> index.htm
+>
+> ではでは、会場でお会いできるのを楽しみにしております。
+
+From mutoh ＠ openedu.org  Thu Mar 15 11:38:46 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3460] Re: 第11回イベント@奈良高専のご案内
+In-Reply-To: <c57315d40703130911x1abdfc73nad7718c3865ef8d6@mail.gmail.com>
+References: <86r6rtfqtl.wl%mutoh@openedu.org>
+	<c57315d40703130911x1abdfc73nad7718c3865ef8d6@mail.gmail.com>
+Message-ID: <86lkhzfcy1.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+返事が遅くなってすみません。
+
+At Tue, 13 Mar 2007 09:11:50 -0700,
+"Takashi Yamamiya" <tak@metatoys.org> wrote:
+> こんにちは、山宮です。
+> イベントのテーマやどんな方が来るのか詳しく書いて頂ければ
+> 考えやすいと思いますが、如何でしょうか？
+
+そうですね。
+
+大体、好き者で勝手に集まってやっているイベントで、特にテーマなどは無かっ
+たりするのですが(^-^;)、これまでの
+	http://qml.610t.org/NNCT/event.html
+を見ていただくと、なんとなく興味の方向性は見ていただけるかなぁと思いま
+す。
+
+私個人として、なんとなく思っている方向性は、以下のような感じです。
+- オープンソース関連
+-- BSDが中心(かな?)
+- (コンピュータ)教育
+-- 特に計算機室運用なども含む
+- その他
+-- 新しい(コンピュータ)技術やソフトウエアの紹介なども大歓迎
+
+今回、現状で参加するよと言っているのは3名で、僕以外は高専の現役教官で
+す。
+
+今回、特にSqueak-jaの方にも流させていただいたのは、奈良高専情報工学科
+の方で来年度の公開講座にSqueakをやろうという話があるそうでして、そうい
+う意味でもSqueakerの人たちに情報をもらえると嬉しいかなというのがありま
+して。
+# が、Squeakの公開講座担当の先生の参加はまだ伺っていないのですが。
+
+あと、情報工学科の演習室で45台程度のパソコンが利用可能になってますので、
+春からの授業を前に試してみるということも可能です。
+というわけで、授業前に情報交換とかできるといいのかなぁという思いもあり
+ました。
+
+
+まあ、堅く考えずに、Squeakの情報交換をする場として利用していただければ
+いいのでは無いかなと思ってます。
+
+
+ちなみに、私はFreeSBIEというFreeBSDベースのbootable CD環境で、関西オー
+プンソース2006で作ったようなdual bootableなCDを作ってます。
+# あんまり、意味は無いんですが(^-^;)
+で、KOF2006の時と今回のCD作成関係ではまりどころなどでも発表しようかな
+と考えています。
+
+
+というわけで、説明になってるでしょうか?
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From koubo2006 ＠ yengawa.jpn.org  Sun Mar 18 00:35:10 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3461] Pierの拡張
+Message-ID: <20070317234844.B108.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+最近PierというSeaside上に作られたWikiサーバをイジっています。
+Pier用に拡張コンポーネントをいくつか作ったので、興味ある方は使ってみてく
+ださい。
+
+YengawaPier Extensions
+http://yengawa-wiki.webhop.org/YengawaWiki/53
+- RSS 生成
+- View Counter (ヒットカウンター)
+- Breadcrumbs (パンくずリスト) 
+- イメージ永続化
+
+設定が面倒なので、実行イメージも作ってみました。
+開発版を基にしている暫定的なものですが、簡単に試したい方はどうぞ。
+
+YengawaPier
+http://yengawa-wiki.webhop.org/YengawaWiki/51
+
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From interact ＠ s-paru.com  Mon Mar 19 08:25:30 2007
+From: interact ＠ s-paru.com (田中　昭二)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3462] スクイーク関係ファイルのサイトを開設しました
+Message-ID: <000301c769b4$b7f7ab40$0201a8c0@shojiparu>
+
+
+初めまして。東京・三鷹市の田中です。
+
+　「スクイーク関係ファイル」のサイトを開設しました。
+
+　自己学習のために作成したファイル集です。下記のUser NameとPasswordで
+ログインできます。
+
+　当面の目標は、「小学校校庭での遊びとスクイーク」というテーマで、サイ
+トを運営したいと考えています。
+
+　分からないことがあれば、初歩的なことを教えていただくことがあるかもし
+れませんが、よろしくお願いいたします。
+
+　『eラーニング「タイルプログラムの読み方・考え方——正多角形と円を考
+える」　第1版 PDF』は、動画をPDFファイルで再生する試みです。
+
+　小学校のPCルームでも再生できましたが、環境によっては動作しないこと
+があるかもしれません。
+
+□ スクイーク関係ファイル　統合サイト　s-paru.com
+ ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ⇒ http://www.s-paru.com/sq/sq
+
+　　　　　User Name:  　squ
+
+　　　　　Password:     12345
+
+
+　田　中　昭　二　拝
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+　181-0004
+　三鷹市新川6-28-15-102
+　ＰＣメール▼
+  mailto:interact@s-paru.com
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+
+
+
+
+From interact ＠ s-paru.com  Wed Mar 21 07:56:36 2007
+From: interact ＠ s-paru.com (田中　昭二)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3463] 正７角形の処理についてお教えください
+Message-ID: <001001c76b43$05bc5d00$0201a8c0@shojiparu>
+
+
+　東京三鷹市の田中です。
+
+　『eラーニング「タイルプログラムの読み方・考え方——正多角形と円を考
+える」PDF』第２弾を作成していて、説明をするうえで分からなくなりました。
+
+■　スクイークは円に内接する（360を割り切れない数の）正多角形は書けるか？
+
+　３月１７日に開催された三鷹市での『第２回スクイーク指導者講習会』で、
+わたしの作成した「スクイーク関係ファイル」のサイトを見て、参加者に説明
+させていただいたときにも、そのことはお母さんたちから即座に質問を受けま
+した。
+
+■　原点から『回すと進める』タイルスクリプトで正７角形を……
+
+「スクイークに『回すと進める』のタイルスクリプトを使って『正多角形』を
+書かせるときに、３６０度を割り切れない数＝辺の正多角形処理は、どう処理
+しているのでしょうか？」と言った2人のお母さんからの質問内容でした。
+
+　その時は、講師の阿部和広先生からお聞きしていたので、
+
+「スクイークは、小数点以下の端数を出さず『分数式のまま』計算するので、
+原点（最初の座標）に戻ってきます」と説明させていただきました。
+
+□ 下記サイトの「スクイーク疑問集」に、PDFファイルと動画で表示
+ ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ⇒ http://www.s-paru.com/sq/sq
+
+　　　　　User Name:  　squ
+
+　　　　　Password:     12345
+
+■　スクイークで実行すると
+
+　その内容を「スクイークの性質」としてPDFファイルにまとめました。
+
+　つぎに、「座標軸」と「向き」「シータ値」を見ながら実行する様子をAVI
+ファイルにまとめました。
+
+　「くるまのx座標、y座標、向き」が原点に戻ってくると、「シータ値」以外
+は少しずつ違ってきました。
+
+■　中心から円に内接する正７角形では……
+
+　「中心から円に内接する正７角形の概念」をPDFファイルにまとめました。
+
+　また中心から円に内接する正７角形をスクイークに書かせると、外延の出発
+点に正確に戻ってきました。
+
+■　お教えください！
+
+　子どもたちにもお母さんたちにも「文字を少なく、オブジェクト指向で説明
+する」というコンセプトですので、端的に表記したいのですが、スクイークに
+『回すと進める』のタイルスクリプトを実行する場合の説明方法をお教えくだ
+さい。
+
+　田　中　昭　二
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+　181-0004
+　三鷹市新川6-28-15-102
+　ＰＣメール▼
+  mailto:interact@s-paru.com
+　http://www.s-paru.com/sq/sq
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+
+
+
+
+From tsutomu ＠ nucba.ac.jp  Wed Mar 21 15:35:14 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3464] UNIX版 VM の SqueakImmX11Plugin4d
+Message-ID: <4600D222.9070305@nucba.ac.jp>
+
+廣島です．みなさん，こんにちは．
+
+[Squeak-ja: 3408] の後もメンテナンス目的で
+X11 関連の VM ソースコードをいじっていました．
+
+その際，
+こちらの環境(Fedora Core 6)では，VMを起動した後の最初のキー操作が，
+変換開始だった場合，無視されてしまうことに気づきました．
+オリジナルの VM では，国際化入力の初期化を，
+最初のキーイベントに引っかけているからです．
+
+そこで，引っかけるイベントをウィンドウが開いたときに変更しました．
+
+http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz
+
+そういう事情で，今回キー入力の処理(関数 x2sqKeyInput)を，
+大きく変更しましたので，何か不具合があればお知らせ下さい．
+
+問題となっていた国際入力モジュールのフォントについては，
+当方では再現せず，調査が出来ませんので，とりあえず，
+configure に --enable-*** オプションを与えることで
+コマンドラインやリソースでのフォント指定機能を追加できるようにしました．
+デフォルトでは指定は無効です．ImmX11ReadMe.txt を参照してください．
+=======
+廣島　勉
+
+From abee ＠ squeakland.jp  Wed Mar 21 17:18:58 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3465] Re: 正７角形の処理についてお教えください
+In-Reply-To: <001001c76b43$05bc5d00$0201a8c0@shojiparu>
+References: <001001c76b43$05bc5d00$0201a8c0@shojiparu>
+Message-ID: <4600EA722A1.AA95ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 21 Mar 2007 07:56:36 +0900
+田中　昭二 <interact@s-paru.com> wrote:
+>「スクイークに『回すと進める』のタイルスクリプトを使って『正多角形』を
+>書かせるときに、３６０度を割り切れない数＝辺の正多角形処理は、どう処理
+>しているのでしょうか？」と言った2人のお母さんからの質問内容でした。
+>
+>　その時は、講師の阿部和広先生からお聞きしていたので、
+>
+>「スクイークは、小数点以下の端数を出さず『分数式のまま』計算するので、
+>原点（最初の座標）に戻ってきます」と説明させていただきました。
+
+これは誤りでした。EToysの「回す」は、SmalltalkのPlayerというクラスの
+turn:というインスタンスメソッドで処理されるのですが、その中で引数は浮動小
+数点数 (Float)に変換されていました。したがって、回転させた後の「向き
+(heading)」の値も分数でなく浮動小数点数で保持しています。
+同様に「進める」はforward:で処理されますが、これもFloatに変換されていまし
+た。したがって、x座標、y座標などの値もFloatです。お詫びして訂正します。
+
+「進める」「回す」を実現するためには割り算だけでなく、進める距離と回す角
+度を、画面上の直交座標における差分に変換するために三角関数なども用いられ
+ています。
+したがって、「回す」の引数が割り切れることだけではなく、これらに関わる計
+算全体の精度も影響します。これらが十分なため、結果として始点にもどってく
+るという理解でいかがでしょうか。
+このとき、ビューワのそれぞれのフレーズタイルの左にあるメニューから「小数
+の桁数…」を選び、桁数を増やしてみると実は誤差が出ている(こともある)こと
+が分かります。
+
+>　つぎに、「座標軸」と「向き」「シータ値」を見ながら実行する様子をAVI
+>ファイルにまとめました。
+>
+>　「くるまのx座標、y座標、向き」が原点に戻ってくると、「シータ値」以外
+>は少しずつ違ってきました。
+
+違っている数は10^-13〜14というオーダですからほとんど0ですね。これが誤差で
+すが、前述の「小数の桁数」が0なのに小数点以下が表示されてしまうのはバグだ
+と思います。
+
+>　また中心から円に内接する正７角形をスクイークに書かせると、外延の出発
+>点に正確に戻ってきました。
+
+この方法だと、都度原点からの距離と角度を与えて極座標から直交座標に変換し
+ているので、回って「戻ってきている」わけではないと思います。
+
+>　子どもたちにもお母さんたちにも「文字を少なく、オブジェクト指向で説明
+>する」というコンセプトですので、端的に表記したいのですが、スクイークに
+>『回すと進める』のタイルスクリプトを実行する場合の説明方法をお教えくだ
+>さい。
+
+このケースでは、オブジェクト指向とはあまり関係ないように思います。
+計算機における数の表現方法と誤差、それを表示する際の問題ではないでしょう
+か。
+本来、EToysはこれらを隠して、数学のモデルをそのまま扱えるようになっている
+べきですが、残念ながらまだ不完全だと言うことだと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Wed Mar 21 18:07:14 2007
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3466] Re: 正７角形の処理についてお教えください
+In-Reply-To: <001001c76b43$05bc5d00$0201a8c0@shojiparu>
+References: <001001c76b43$05bc5d00$0201a8c0@shojiparu>
+Message-ID: <20070321180714210449.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+田中　昭二さんがWed, 21 Mar 2007 07:56:36 +0900に
+「[Squeak-ja: 3463] 正７角形の処理についてお教えください」の件で：
+> 「スクイークに『回すと進める』のタイルスクリプトを使って『正多角形』を
+> 書かせるときに、３６０度を割り切れない数＝辺の正多角形処理は、どう処理
+> しているのでしょうか？」と言った2人のお母さんからの質問内容でした。
+
+一回転を３６０にしたのはバビロニア人だそうですが、３６０を割り切るものと
+そうでないもので角度の質にそれほど違いがあるわけではないと思います。xy座
+標系に上手く乗るのは割る数が１か２か４かだけでこれ以外は同じ距離進めるた
+めには無理数が絡んできます。８の場合はxy座標の比が±１なので向きは正しく
+はなるでしょうか。
+逆に、進んだ位置が有理数の座標で表せるような、三辺の比が整数値になるよう
+な直角三角形の内角は一回転を割り切りません。ですから、正n角形の場合で、
+特別に正確に書けるのはたてよこが画面に平行な正方形の場合だけではないで
+しょうかね。
+＃Mathematicaだとsin,cosの値を実数値で表さなければ、正確になるはずです。
+＃Cynderellaというのもそうだったかもしれません。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From abee ＠ squeakland.jp  Fri Mar 23 00:40:42 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3467] SqueakFest '07 のご案内
+Message-ID: <4602A37A157.5CAAABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+今年の夏もSqueakFest '07がシカゴのコロンビアカレッジで開催されます。
+公式アナウンスは近日中にあると思われますが、8/1(水)-3(金)でほぼ決定です。
+基調講演とワークショップが8/1、発表とパネルディスカッションが8/2,3に予定
+されています。
+当初は7月中旬の予定だったのですが、日本の夏休み事情に配慮してもらってこの
+日程になりました。
+
+SqueakFestは、アメリカ、ドイツ、スペイン、ネパール、韓国、日本など世界中
+のSqueak関係者が集う年に一度のイベントです。
+他のイベントと比べると内容がより実践的で、実際に学校で取り組んでいる先生
+方や大学の事例が例年多数紹介されます。ワークショップは開発者やベテランの
+先生を講師に初心者用や中上級者用などに分かれて行われます。キーノートスピー
+カも豪華で、昨年はシーモア・パパート博士でした。
+
+日本人の参加者が多いことも特徴で、毎年10人くらいが参加しています。日本人
+の発表も多く、一昨年は堀川高校や和田小の発表も行われました。また、去年は
+大島さんが毛玉、私が世界聴診器のワークショップを行いました。皆さん親切な
+ので、言葉の問題にも対処しやすいと思います(適当に誰かをつかまえればきっと
+通訳してくれるでしょう。いつも私はそうしています)。
+
+私は今年のプログラム委員を拝命しているのですが、もし参加されるのであれば、
+聞くだけでなく、ぜひとも発表をお願いします。学会ではないので論文の査読は
+ありません(時間との兼ね合いで調整はあるかもしれません)。また、去年は希望
+する発表者に $500の補助が出ました(今年は未定です)。
+実際にやってみると、日本よりも聴衆のリアクションが大きいのでやりがいがあ
+ります。また、デモやポスターなど、こんなことをやってみたいという提案も歓
+迎します。発表を希望される方は私にメールでご連絡ください。
+
+シカゴは比較的治安もよく、電車網も発達しているので、海外が初めての方でも
+安心して参加できるでしょう。飛行機の直行便もあります。
+モダンな高層建築と歴史的な建物が混在するきれいな街で、周辺にはティラノサ
+ウルスのスーで有名な自然史博物館、Uボートやアポロ指令船の実物がある産業科
+学博物館、アメリカ3大美術館のひとつであるシカゴ美術館など興味深い施設も多
+数あります。
+
+皆さんとシカゴでお会いできることを楽しみにしています。
+
+過去のSqueakFestについては以下をご覧ください。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-April/002918.html
+
+http://d.hatena.ne.jp/squeaker/20060719
+http://d.hatena.ne.jp/squeaker/20060720
+http://d.hatena.ne.jp/squeaker/20060721
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From interact ＠ s-paru.com  Fri Mar 23 20:00:49 2007
+From: interact ＠ s-paru.com (田中　昭二)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3468] Re: 正７角形の処理についてお教えください
+Message-ID: <000901c76d3a$8fa870a0$0201a8c0@shojiparu>
+
+
+　井上 様
+
+　お礼のご返事が遅くなりました。今日は、三鷹市内では小学校の卒業式で、
+参加してきました。
+
+　学習不足のわたしに分かりやすくごていねいな説明をいただき、ありがとう
+ございました。お母さん方にもそのままご説明をさせていただきます。
+
+■　スクイーク（＝eToy）が求めるものとは？
+
+　子どもたちが「コンパスと定規で正７角形を書く」ことが基本でしょうが、
+スクイークは、タイルの数値を変えることで「簡単に多くの正多角形が書ける」
+ことにわたしは魅力を感じていました。
+
+　そして円に近似したさまざまな正n角形が短時間で描け、結果をすぐさま見る
+ことができるのに驚きました。
+
+　また、多くのアプリケーションソフトが、その使い方（技術）の学習に終始
+してしまう中で、スクイークは、遊びの中で考える要素が多く、魅力ある「考
+える道具」の一つと思っています。
+
+　しかし、タイルを並べて正多角形を書かせると、少しずつ変化が見られまし
+た。あまり深く考えず、子どもたちにそのまま伝え、子どもたちに考えてもら
+えばよいようですね。
+
+　素人のわたしには、Smalltalk （ソース）を読むこともできず、小学生に
+どのように説明し、お父さんたちやお母さんたちがどう説明をしたらよいのか
+と迷い、メーリングリストに依頼し、ご相談しました。
+
+　井上さんから「正n角形の場合で、特別に正確に書けるのはたてよこが画面
+に平行な正方形の場合だけではないでしょうか」とのアドバイスで、スクイー
+クに、わたしが求めるものは何だったのかと改めて考えています。
+
+■　円周率「おおよそ３」
+
+　三鷹市での『第２回スクイーク指導者講習会』で最後に「半径２００ドット
+の円周率をスクイークで測る」という課題を学びました。結果は、「円周率＝
+3.325」であったり、「3.275」であったりで、みんなで歓声を上げながら楽し
+みました。
+
+　これがスクイーク（eToy）の魅力なのだと。
+
+　円周率は、2002年度「学習指導要領改訂」で「３.１４」ではなく「およそ
+３」と単純化された記憶があったからです。
+
+　ある世田谷の友人から「学習指導要領では３でもよい、としているだけで
+３．１４と教えてはいけないとは書いてない」と教えていただきました。
+
+　また「３．１４に慣れているから３では粗すぎると感じるだけで、３でも
+とりあえず差し支えないではないか、３．１４にこだわる必要はない、とい
+うのが私の考えです」とも書かれていました。
+
+　スクイークを知って３か月ですが、これからも珍問愚問するかもしれませ
+ん。その時はご指摘ください。今後ともよろしくご指導ください。
+
+
+□　参考までに　
+
+　山宮隆さんの「スクイークを活用した教育の研究発表会（C4）」報告
+
+　「2006年の夏に、『Viewpoints Research Institute』では重要なある一つ
+の決定をしました。
+　　……
+　簡単に言うと、『イートイ』でコンピュータに必要なソフトの全部を書い
+てしまおうというものです」
+　　……
+　アランさんが考えたのは、『T型フォード』みたいに分解できるコンピュー
+タが欲しいということです。もしも『イートイ』でアニメを作るだけじゃな
+くて、コンピュータの深い仕組み、例えばネットワークの動き、フォントが表
+示される仕組み、スピーカのコーンが音を出す仕組みを操作出来たらどうで
+しょうか?　コンピュータの中身は何か難しい、手の届かないものに思いがち
+です。
+
+　しかし、それはただの道具なのです。『イートイ』でそのすべてにアクセス
+することによって、私たちはコンピュータに使われるのではなく、本当の意味
+で活用出来るようになります。それが Viewpoints の目標です。5年以内にや
+ります。」
+
+　田　中　昭　二
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+　181-0004
+　三鷹市新川6-28-15-102
+　ＰＣメール▼
+  mailto:interact@s-paru.com
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+
+
+
+From mutoh ＠ openedu.org  Wed Mar 28 06:06:59 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3469] Croquet SDK1.0 and Plopp for Linux Released!!
+Message-ID: <86ps6ubdl8.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+なんか、Croquet SDK1.0とPloppのDebian版がリリースされてますね。
+# http://www.opencroquet.org/index.php/Main_Page
+# http://www.planet-plopp.com/biggerkids/download_linux.html
+## なんで、イベント前にこういうイベントも起こるかな(^-^;)
+
+これから試してみます。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「世の中に絶えて桜のなかりせば 春の心はのどけからまし」在原業平
+
+From koubo2006 ＠ yengawa.jpn.org  Sat Mar 31 17:35:45 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3470] チャットコンポーネント CHOP
+Message-ID: <20070331160653.E04D.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+CHat On Page(CHOP)というのを作りました。
+CHOPはウェブページを同時に見ている人どうしをチャットでつなぐPierコンポー
+ネントです。
+
+YPier-CHOP
+http://yengawa-wiki.webhop.org/YengawaWiki/58
+デモ
+http://yengawapier.webhop.org/
+
+これだけでは単純なのですが、検索と組み合わせたりすれば面白くなるかもしれ
+ないと思ってます。
+感想下さい。
+
+
+実装について。。。
+Pierのコンポーネントとして作ってますが、仕掛けは単純なので他のSeasideア
+プリ用にも簡単に適用できると思います。
+
+今回はAjaxを使って動作を軽く柔軟にしてます。(たとえば、ページ編集途中で
+もチャットで見てる人と相談できます。)
+SeasideはAjaxをシームレスに組み込めるので面白いですね。
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://www.yengawa.com/
+    ^self new!
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7142] Jun670 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207142%5D%20Jun670%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007141.html">
+   <LINK REL="Next"  HREF="007143.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7142] Jun670 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207142%5D%20Jun670%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7142] Jun670 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 3月  2日 (木) 21:23:16 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007141.html">[SML 7141] DynCシンポジウム2006「ダイナミックコミュニティによる知識共創」
+</A></li>
+        <LI>次の記事 <A HREF="007143.html">[SML 7143] Jun671 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7142">[ 日付 ]</a>
+              <a href="thread.html#7142">[ スレッド ]</a>
+              <a href="subject.html#7142">[ 件名 ]</a>
+              <a href="author.html#7142">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+中京大学の田中真一さんが、オフスクリーンのフレームバッファで
+ある「ピクセルバッファ」を「じゅん for Smalltalk」でも使える
+ようにする拡張プログラムを作ってくださいました。多謝！
+
+　ピクセルバッファ拡張の定義：
+　<A HREF="http://oss.sgi.com/projects/ogl-sample/registry/ARB/wgl_pbuffer.txt">http://oss.sgi.com/projects/ogl-sample/registry/ARB/wgl_pbuffer.txt</A>
+
+先ほど、それを組み込んだ【Jun670】をアップロードしました。
+　　　　　　　　　　　　　クラス数：    881
+　　　　　　　　　　　　メソッド数： 29,750
+　　　　　　　　　　　　ステップ数：355,615
+　　　１メソッドあたりのステップ数：     12
+　<A HREF="http://www.sra.co.jp/public/sra/technical/jun/">http://www.sra.co.jp/public/sra/technical/jun/</A>
+　<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+
+描画すべきポリゴン数が多く、表示がもたつくような場合などに、
+効力を発揮すると思います。
+
+------------------------------------------------------------
+
+【前提条件】
+
+Windows XP / 2000 &amp; VisualWorks 7.4 以上の組み合わせのみの拡
+張となります。ただし、必ず新しいバージョンの opengl32.dll な
+らびに glu32.dll をお使いください。
+
+　○最適：　opengl32.dll　5.1　OpenGL Client DLL
+　○最適：　glu32.dll 　　5.1　OpenGL Utility Library DLL
+
+　×不可：　opengl32.dll　4.0　OpenGL Client DLL
+　×不可：　glu32.dll 　　4.0　OpenGL Utility Library DLL
+
+また、AGP 接続のビデオメモリをたくさん積んだグラフィックカー
+ドを装着しているのが望ましいです。FireGL や Radeon などです。
+
+　拡張が使用可能なビデオカード一覧：
+　<A HREF="http://www.delphi3d.net/hardware/extsupport.php?extension=WGL_ARB_pbuffer">http://www.delphi3d.net/hardware/extsupport.php?extension=WGL_ARB_pbuffer</A>
+
+【利用方法】
+
+使い方は簡単です。ビューファインダなどのレンダリングモデルに
+対して「ピクセルバッファを使うよ（usePixelBuffer: true）」と
+宣ふだけです。
+
+    | aBody aModel |
+    aBody := JunOpenGL3dObject capsaicin.
+    aModel := JunOpenGLDisplayModel displayObject: aBody.
+    aModel usePixelBuffer: true.
+    aModel open
+
+このプログラムはカプサイシン（唐辛子の辛み成分）を 25,970 個
+のポリゴン群でピクセルバッファを用いて描画します。βエンドル
+フィンなどのモルファイル（MDL 形式）などを探して、ケモじゅん
+　<A HREF="http://research.nii.ac.jp/~cheminfo/ChemoJun/">http://research.nii.ac.jp/~cheminfo/ChemoJun/</A>
+を用いて描画すると、さらにその効果を実感できると思いますよ。
+
+【了承事項】
+
+搭載したばかりですので、すべての機能が動くのかを確認中です。
+まだまだ手入れをしなければならないところが多々ありますが、あ
+しからずです。追々にやってゆきたいと思いますし、皆さんも是非
+ご協力くださいませ。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007141.html">[SML 7141] DynCシンポジウム2006「ダイナミックコミュニティによる知識共創」
+</A></li>
+	<LI>次の記事 <A HREF="007143.html">[SML 7143] Jun671 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7142">[ 日付 ]</a>
+              <a href="thread.html#7142">[ スレッド ]</a>
+              <a href="subject.html#7142">[ 件名 ]</a>
+              <a href="author.html#7142">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

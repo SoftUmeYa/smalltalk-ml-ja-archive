@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7623] Re: Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207623%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVidW50dSA5LjA0GyRCJEcbKEJKdW4%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkckk9PCgkNSQ7JGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSn1LISRyNjUkKCRGJC8kQCQ1JCQbKEI%3D%3F%3D&In-Reply-To=4A7F6926.4040001%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007622.html">
+   <LINK REL="Next"  HREF="007624.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7623] Re: Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207623%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVidW50dSA5LjA0GyRCJEcbKEJKdW4%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkckk9PCgkNSQ7JGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSn1LISRyNjUkKCRGJC8kQCQ1JCQbKEI%3D%3F%3D&In-Reply-To=4A7F6926.4040001%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7623] Re: Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2009年 8月 10日 (月) 13:38:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007622.html">[SML 7622] Re: Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください
+</A></li>
+        <LI>次の記事 <A HREF="007624.html">[SML 7624] 第12回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7623">[ 日付 ]</a>
+              <a href="thread.html#7623">[ スレッド ]</a>
+              <a href="subject.html#7623">[ 件名 ]</a>
+              <a href="author.html#7623">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenです。
+青木さん返信ありがとうございます。
+
+AOKI Atsushi さんは書きました:
+&gt;<i> 暇を見つけて Ubuntu マシンを作り、調査してみたいと思います。
+</I>&gt;<i>
+</I>&gt;<i> このメーリングリストに参加されている皆さんの中で、Linux ベー
+</I>&gt;<i> スのオペレーティングシステムを動かしていらっしゃる方々、ぜひ
+</I>&gt;<i> とも協力をお願いします。
+</I>
+出来ることはやりますので、よろしくお願いいたします。
+
+以下、あまり役に立たないかもしれませんが、VirtualBox上で試してみたので報
+告しておきます。
+
+同じマシンで、(OSE版ではない)VirtualBox3.0.4上のUbuntu8.04(Ubuntu
+Japanese Teamからダウンロードした日本語Remix VirtualBox用仮想マシン)に
+VisualWorks7.6ncとJun781をインストールして少し試してみたところ、Jun
+LauncherのexpamplesのCube, Benzenは正しく表示されました(Soroban, Spiro
+Design, Cartoon MovieもOKです)。ただし、私の前回のメールの(4)〜(7)の現象
+は変わらないようです。(2),(3)については現象が変わり以下のようになりました:
+
+(2)&quot;JunOpenGLInterface example1&quot;を&quot;Do it&quot;(前回は正常だったが、今回表示さ
+れなくなった)
+・&quot;Do it&quot;したウインドウ内にカラフルな六角形は表示されない(ポップアップメ
+ニューがあったところだけウインドウ内の表示が消えている)。マウスカーソル
+は&quot;時計&quot;になっており、マウスボタンをクリックすると、ウインドウ内の表示が
+再描画される。なお、&quot;Do it&quot;したときにVisualWorksを起動したシェル画面に以
+下のようなメッセージがでる。
+    X11 Error:
+    Display:	0x081139b0
+    Serial:	0x00031500
+    Major:	143
+    Minor:	5
+    XID:	0x03800030
+    BadMatch (invalid parameter attributes)
+
+(3)&quot;JunOpenGLInterface example2&quot;を&quot;Do it&quot;(前回は表示されなかったが、今回
+は正常に動作)
+・&quot;Depth32Image&quot;というタイトルのウインドウが開き、ウインドウの中身にカラ
+フルな六角形が表示される。
+
+インストールは以下のようにしました:
+・VisualWorks7.6ncはUbuntu9.04実マシンからUbuntu8.04仮想マシンへファイル
+をコピーしてインストール。
+・Jun781はUbuntu8.04仮想マシン上でパーセルからインストール。(Jun781をイ
+ンストールしたイメージをコピーして、Ubuntu8.04仮想マシン上のVisualWorks
+で起動しようとしたが、フォントの問題でVisualWorksを起動できなかったため)
+※ libGL.so, libGLU.so, libX11.so, libXext.soについては同様に、
+/usr/local/libの下にシンボリックリンクを作成。
+
+Ubuntu8.04仮想マシンの情報は以下のとおりです:
+OS: Ubuntu 8.04 (Linux 2.6.24-18-generic i686)
+CPU: AMD Athlon(tm) Dual Core Processor 4850e
+メインメモリ: 512MByte
+ビデオメモリ: 12MByte
+3Dアクセラレーション: 無効
+ビデオドライバ: VirtualBox Guest Additions for Linux Module (?)
+&lt;glxinfoから抜粋の情報&gt;
+direct rendering: No (If you want to find out why, try setting
+LIBGL_DEBUG=verbose)
+server glx vendor string: SGI
+server glx version string: 1.2
+client glx vendor string: SGI
+client glx version string: 1.4
+GLX version: 1.2
+OpenGL vendor string: Mesa project: www.mesa3d.org
+OpenGL renderer string: Mesa GLX Indirect
+OpenGL version string: 1.4 (2.1 Mesa 7.0.3-rc2)
+
+-- hirowadenden
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007622.html">[SML 7622] Re: Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください
+</A></li>
+	<LI>次の記事 <A HREF="007624.html">[SML 7624] 第12回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7623">[ 日付 ]</a>
+              <a href="thread.html#7623">[ スレッド ]</a>
+              <a href="subject.html#7623">[ 件名 ]</a>
+              <a href="author.html#7623">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

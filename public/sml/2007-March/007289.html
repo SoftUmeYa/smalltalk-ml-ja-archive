@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7289] 分子間力を体感できる【HaptiChem】
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207289%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSiw7UjRWTk8kckJONDYkRyQtJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVobKEJIYXB0aUNoZW0bJEIhWxsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007288.html">
+   <LINK REL="Next"  HREF="007290.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7289] 分子間力を体感できる【HaptiChem】</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207289%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSiw7UjRWTk8kckJONDYkRyQtJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVobKEJIYXB0aUNoZW0bJEIhWxsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7289] 分子間力を体感できる【HaptiChem】">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 3月 16日 (金) 23:01:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007288.html">[SML 7288] Jpl022 and Jun731 for Smalltalk
+</A></li>
+        <LI>次の記事 <A HREF="007290.html">[SML 7290] Re: 分子間力を体感できる【HaptiChem】
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7289">[ 日付 ]</a>
+              <a href="thread.html#7289">[ スレッド ]</a>
+              <a href="subject.html#7289">[ 件名 ]</a>
+              <a href="author.html#7289">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+昨日（３月１５日）に「分子間力を体感できる【HaptiChem】」の
+報道発表が行われました。「ハプティ・ケム」と発音します。ハプ
+ティック（力覚）とケミストリー（化学）の合成語（造語）です。
+以下にリストしたウェブ上の記事をご覧ください。
+
+ITmedia　ぐぐっと引き合う分子間力を体感できる「HaptiChem」
+<A HREF="http://www.itmedia.co.jp/news/articles/0703/15/news104.html">http://www.itmedia.co.jp/news/articles/0703/15/news104.html</A>
+
+ITpro　分子を触って力を感じる——国立情報学研究所が新しい化学教材を公開
+<A HREF="http://itpro.nikkeibp.co.jp/article/NEWS/20070315/265391/?ST=ittrend">http://itpro.nikkeibp.co.jp/article/NEWS/20070315/265391/?ST=ittrend</A>
+
+日経バイオ　国立情報学研究所が分子間力の体験型教材を開発、
+東京工業大学附属科学技術高校にて模擬授業を開催
+<A HREF="http://biotech.nikkeibp.co.jp/bionewsn/detail.jsp?id=20042698&amp;newsid=SPC2007031545092&amp;pg_nm=1&amp;sai1=0&amp;new1=1&amp;news1=1&amp;icate=0&amp;yunw=1">http://biotech.nikkeibp.co.jp/bionewsn/detail.jsp?id=20042698&amp;newsid=SPC2007031545092&amp;pg_nm=1&amp;sai1=0&amp;new1=1&amp;news1=1&amp;icate=0&amp;yunw=1</A>
+
+８本の糸で吊られた球（グリップ）を分子に見立て、分子の間に働
+く力を体感できるようにしたシステムです。８本の糸の先についた
+トルクコントロール（回転力制御）可能なステッピングモータを司
+ります。
+
+これをすべて【Smalltalk Concurrent Programming】で実現をして
+います。糸の長さを測定して３次元座標を求めるプロセスは 3000Hz
+程度、３次元座標からフォース（力）を算出するプロセスは 1000Hz
+程度。そして、それらを描画するプロセスは 30Hz（DVD 描画速度）
+ぐらいです。
+
+１秒間に 3000回〜 30回ぐらいの周期で行わなければならない処理
+を複数立ち上げても、現代の Smalltalk はそこそこの性能を発揮
+できること、それを物語っていると思います。ゴミ集めプロセスに
+よる劣化もありません。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007288.html">[SML 7288] Jpl022 and Jun731 for Smalltalk
+</A></li>
+	<LI>次の記事 <A HREF="007290.html">[SML 7290] Re: 分子間力を体感できる【HaptiChem】
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7289">[ 日付 ]</a>
+              <a href="thread.html#7289">[ スレッド ]</a>
+              <a href="subject.html#7289">[ 件名 ]</a>
+              <a href="author.html#7289">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

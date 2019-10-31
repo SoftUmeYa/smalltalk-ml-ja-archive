@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2399] Re: SqueakNihongo7 ： Mac OS X
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202399%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha05paG9uZ283IA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIScbKEIgTWFjIE9TIFg%3D%3F%3D&In-Reply-To=p06001001be655a88d753%40nifty.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002398.html">
+   <LINK REL="Next"  HREF="002400.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2399] Re: SqueakNihongo7 ： Mac OS X</H1>
+    <B>HAYASHI, Tetsuya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202399%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha05paG9uZ283IA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIScbKEIgTWFjIE9TIFg%3D%3F%3D&In-Reply-To=p06001001be655a88d753%40nifty.ne.jp"
+       TITLE="[Squeak-ja: 2399] Re: SqueakNihongo7 ： Mac OS X">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 3月 22日 (火) 15:23:11 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002398.html">[Squeak-ja: 2398] Re: SqueakNihongo7 ： Mac OS X
+</A></li>
+        <LI>次の記事 <A HREF="002400.html">[Squeak-ja: 2400] Re: SqueakNihongo7 ： Mac OS X
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2399">[ 日付 ]</a>
+              <a href="thread.html#2399">[ スレッド ]</a>
+              <a href="subject.html#2399">[ 件名 ]</a>
+              <a href="author.html#2399">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林です。ども。
+今回、MacOSX 版 VM の StuffIt アーカイブを作成した張本人です (^^;
+
+On 2005/03/22, at 14:21, wildflowers wrote:
+
+&gt;<i> お騒がせしています。ごめんなさい。
+</I>
+　いえ、とんでもありません。
+テストしていただいた形になりこちらこそ恐縮です。
+StuffIt については、トラブルを招いてるようなのでオプションを再度調整して
+みます。
+
+&lt;snip&gt;
+
+&gt;<i> プラグイン版は、「エラーが起きました。「Abandon」ボタンをクリックしてください。ごめんね」が出ながらも開きはするのですが、はやりおかし 
+</I>&gt;<i> な動作をします。
+</I>&gt;<i>
+</I>&gt;<i> そこで、おおしまさんの言うように、ログ記録を押してみたのですが、どこにファイルが出来たのかわかりません。
+</I>&gt;<i> デスクトップ検索をかけてもでてきません。
+</I>&gt;<i> OS Xの方で、どこにファイルが出来るのかご存じの方があったら教えてください。
+</I>
+　エラーのログファイル SqueakDebug.log ですが、基本的にイメージファイルと
+同じディレクトリに作成される仕様のはずです。ただし、SqueakPlugin.image は
+本来ウェブブラウザ内で利用するものであるためかセキュリティ上、ファイルと
+してログを残さないように見えます（識者の方フォロー願います）。
+
+　というわけでエラーの内容を知るのが難しいのですが、おそらく、イメージの
+起動まで行ってるということは、SqueakPlugin.image が利用するプリファレンス
+関係のファイルを見に行こうとしてエラーになってるのではないかと思えます。
+wildflowers さんのホームの配下に
+	~/Library/Preferences/Squeak/
+というディレクトリはありますでしょうか？
+
+なおこのディレクトリは、今回の開発者向けリリースではなく、SqueakLand版と
+呼ばれるバージョンでのインストールスクリプトにより作成されます。
+ですので、妙な表現になりますが、もし、SqueakLand版のインストールされてな
+いのでしたら
+
+	現時点ではエラーになるのが本来の正しい動作
+
+といえるかと思えます。
+
+&gt;<i> At 7:40 PM -0800 05.3.21, Yoshiki Ohshima wrote:
+</I>&gt;&gt;<i>  おおしまです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> 　そうですか。起動しません、というのはもうちょっと具体的に言うとどのよ
+</I>&gt;&gt;&gt;&gt;<i> うな状態ですか?
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 文字通り何も起こらないということです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 　ちょっと不思議ですね。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> 　「以前のバージョン」のVMに、新しいイメージをドロップするとどうなるで
+</I>&gt;&gt;&gt;&gt;<i> しょうか。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 開発者用は緑の画面になって（多分無事に）起動されました。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 　ねずみが出てきて、めがきょろきょろしたりしていますか?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> プラグイン版は、「エラーが起きました。「Abandon」ボタンをクリックしてください。ごめんね」となります。画面は真っ黒です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 　それは、エラーですね(言うまでもないことですが)。「ログ記録」というボ
+</I>&gt;&gt;<i> タンがあると思いますが、それを押すとMy Squeak フォルダ(OS Xだとどこに
+</I>&gt;&gt;<i> 作られるか知らないのですが)以下に、SqueakDebug.logというファイルが作ら
+</I>&gt;&gt;<i> れます。もし見つかったらそのファイルを送ってみていただけないでしょうか。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -- Yoshiki
+</I>&gt;<i>
+</I>&gt;<i>
+</I>--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002398.html">[Squeak-ja: 2398] Re: SqueakNihongo7 ： Mac OS X
+</A></li>
+	<LI>次の記事 <A HREF="002400.html">[Squeak-ja: 2400] Re: SqueakNihongo7 ： Mac OS X
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2399">[ 日付 ]</a>
+              <a href="thread.html#2399">[ スレッド ]</a>
+              <a href="subject.html#2399">[ 件名 ]</a>
+              <a href="author.html#2399">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

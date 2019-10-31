@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4072] Re: ScratchでNECのロボットPaPeRoをコントロール
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204072%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2gbJEIkRxsoQk5F%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FQxskQiROJW0lXCVDJUgbKEJQYVBlUm8bJEIkciUzJXMlSCVtITwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWsbKEI%3D%3F%3D&In-Reply-To=17E17791-C3A6-4AFA-AE9D-EFCABD91875E%40nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004073.html">
+   <LINK REL="Next"  HREF="004074.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4072] Re: ScratchでNECのロボットPaPeRoをコントロール</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204072%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2gbJEIkRxsoQk5F%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FQxskQiROJW0lXCVDJUgbKEJQYVBlUm8bJEIkciUzJXMlSCVtITwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWsbKEI%3D%3F%3D&In-Reply-To=17E17791-C3A6-4AFA-AE9D-EFCABD91875E%40nifty.com"
+       TITLE="[Squeak-ja: 4072] Re: ScratchでNECのロボットPaPeRoをコントロール">ykoubo2008 ＠ yengawa.com
+       </A><BR>
+    <I>2008年 11月 18日 (火) 02:15:31 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004073.html">[Squeak-ja: 4073] Re: ScratchでNECのロボットPaPeRoをコントロール
+</A></li>
+        <LI>次の記事 <A HREF="004074.html">[Squeak-ja: 4074] Re: ScratchでNECのロボットPaPeRoをコントロール
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4072">[ 日付 ]</a>
+              <a href="thread.html#4072">[ スレッド ]</a>
+              <a href="subject.html#4072">[ 件名 ]</a>
+              <a href="author.html#4072">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+そういえば先日PaPeRoの開発環境を作るのを手伝ったとき「PaPeRoをSqueakで操っ
+てみたいですね」なんて話してましたね。
+
+&gt;<i> ということは、原理的には、SqueakでPaPeRoをコント 
+</I>&gt;<i> ロールもできるのでしょうか。
+</I>
+できると思います。
+PaPeRoはTCP/IPを介して通信してましたから、その上のAPIがわかればSqueakか
+らコントロールできます。
+
+写真を見ると前面中央センサーの値も取れるようですね。とすると、話をさせる
+ような単にCGIでコマンドを投げるだけのものではないかもしれません。
+
+NECの中の人から仕組みを教えてもらうことはできないでしょうか?
+
+
+On Tue, 18 Nov 2008 00:03:11 +0900
+koike &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mha03030 ＠ nifty.com</A>&gt; wrote:
+
+&gt;<i> 蔵工業大学の小池です。
+</I>&gt;<i> 
+</I>&gt;<i> ScratchでNECのロボットPaPeRoが
+</I>&gt;<i> コントロールできるようになったそうです。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ［iEXPO2008］“3歳児とペア・プログラミン 
+</I>&gt;<i> グ”，NECがロボットによるビジュアル開発をデモ
+</I>&gt;<i> <A HREF="http://itpro.nikkeibp.co.jp/article/NEWS/20081112/319115/">http://itpro.nikkeibp.co.jp/article/NEWS/20081112/319115/</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 小池研究室は、Scratchではありませんが、SqueakとPaPeRo 
+</I>&gt;<i> を
+</I>&gt;<i> それぞれ使用して研究活動をしているので
+</I>&gt;<i> 興味深いです。
+</I>&gt;<i> 
+</I>&gt;<i> ということは、原理的には、SqueakでPaPeRoをコント 
+</I>&gt;<i> ロールもできるのでしょうか。
+</I>&gt;<i> _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+</I>&gt;<i>    小池星多（こいけせいた）Ph.D
+</I>&gt;<i>    武蔵工業大学　環境情報学部　教職課程
+</I>&gt;<i>    情報デザイン研究室
+</I>&gt;<i>    E-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mha03030 ＠ nifty.com</A>
+</I>&gt;<i>    Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+</I>&gt;<i> Tel  045-910-2912(直通）
+</I>&gt;<i>    <A HREF="http://www.yc.musashi-tech.ac.jp/~koike/">http://www.yc.musashi-tech.ac.jp/~koike/</A>
+</I>&gt;<i> （研究室ブログ発信中！）
+</I>&gt;<i> 2009年4月から東京都市大学に名称変更します！
+</I>&gt;<i>    _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">ykoubo2008 ＠ yengawa.com</A>&gt;
+    <A HREF="http://www.yengawa.com/">http://www.yengawa.com/</A>
+    ^self new!
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004073.html">[Squeak-ja: 4073] Re: ScratchでNECのロボットPaPeRoをコントロール
+</A></li>
+	<LI>次の記事 <A HREF="004074.html">[Squeak-ja: 4074] Re: ScratchでNECのロボットPaPeRoをコントロール
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4072">[ 日付 ]</a>
+              <a href="thread.html#4072">[ スレッド ]</a>
+              <a href="subject.html#4072">[ 件名 ]</a>
+              <a href="author.html#4072">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

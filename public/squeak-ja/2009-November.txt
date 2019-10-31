@@ -1,0 +1,720 @@
+From ykoubo2008 ＠ yengawa.com  Sun Nov  1 16:56:39 2009
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Sun Nov  1 16:56:48 2009
+Subject: [Squeak-ja: 4405] Re: Squeakland.orgについて
+In-Reply-To: <4b24f0d0910300645w3b6bce65qda9874a71ca87488@mail.gmail.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com>
+	<uy6mx91ot.wl%yoshiki@vpri.org>	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com>
+	<4AE66A4A.4030501@yengawa.com>	<2d5d52a80910262054x2d692365v108e59417c738d46@mail.gmail.com>
+	<4b24f0d0910270815m5463a52fpe92b52db1915c735@mail.gmail.com>
+	<4AEA5DDD.6030405@yengawa.com> <u4oph2qna.wl%yoshiki@vpri.org>
+	<2d5d52a80910300343o273a25b6k62910e356421df44@mail.gmail.com>
+	<4b24f0d0910300645w3b6bce65qda9874a71ca87488@mail.gmail.com>
+Message-ID: <4AED3F37.6040503@yengawa.com>
+
+横川です。
+では 「Etoys is...」は「スクイーク・イートイズとは...」でいきます。
+
+そろそろ(11/2ごろ?)第一稿を出します。
+サイトに反映されれば思い違いやもっと良い訳もわかってくるでしょう。そのと
+きは随時直していけばよいと思います。
+
+すべての対訳をぼくのサイトに一時的に載せたので、気になったものは返信やコ
+メントでお知らせください。
+http://www.yengawa.com/node/27
+
+
+Toshio Miyasaka wrote 09.10.30 10:45 PM:
+> 横川さん
+> 
+> ご検討ありがとうございました！
+> 「スクイーク」の呼称を残していただけるのは本当にうれしいです。
+> 英字でもカタカタでも、あとはお任せしますので、よろしくお願いいたします。
+> （本当にうれしいですことです。ありがとうございました！！）
+> 
+> ご参考までに、私も「d-mts.com」を作ったときに、下記のいずれかの表記にするかで迷いました。
+> 「スクイーク・イートイズ」（読みやすい表記。強いて難点があるとするとちょっと文字数が多いこと？）
+> 「スクイークEtoys」（多少短くはなるが確かに読みやすさには難ありかも。Etoys.exe/Etoys.imageとの関連はわかりやすいかも）
+> 「Squeak Etoys」（海外のOSやアプリはオフィシャルサイトではだいたい英字表記。確かに読み方は最初に書いておく必要あるかも）
+> 
+> そのときは、なんとなく「スクイークEtoys」がいいかなと思ったのですが、それほど深い意図があったわけではありません
+> あとは決めの問題だと思いますので、どうかよろしくお願いいたします！！
+> 
+> 宮坂
+> 
+> 
+> 
+> 
+> 2009年10月30日19:43 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+>> こんにちは、阿部です。
+>> Etoysについて、Etoys 4のインストーラやインストール後のシステムにおいて、日本語に訳されず「Etoys」となっています。
+>> 読み方をはっきりさせる意味で、どこかで「Etoys(イートイズ)」のように書いておくのも良いかもしれません。
+>> もちろん、本体の方を「イートイズ」に統一するという案もありだと思います。
+>>
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+>>
+>> 2009年10月30日18:10 Yoshiki Ohshima <yoshiki@vpri.org>:
+>>> At Fri, 30 Oct 2009 12:30:37 +0900,
+>>> Koji Yokokawa wrote:
+>>>> また別の案ですが、Etoysは英文字のママがいいですか?
+>>>> 「スクイークEtoysとは...」
+>>>> 馴染みやすさではカタカナが上ですが、迷うところですよね。
+>>>  おそらくはカタカナが無難でしょうね。
+>>>
+>>>  横川さんの忙しいところ本当にありがとうございます。
+>>>
+>>> -- Yoshiki
+>>>
+> 
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From umejava ＠ mars.dti.ne.jp  Sun Nov  1 20:59:24 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Nov  1 20:59:27 2009
+Subject: [Squeak-ja: 4406] Smalltalk合同勉強会@名古屋のプログラム確定です
+Message-ID: <Jx2XI7SI5d09D9CyYsaBIkoA9@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+12/19日のSmalltalk合同勉強会@名古屋ですが、おかげさまで参加者が20名を
+超えました。まだ若干名受けつけていますので、ぜひお申し込みを。
+http://atnd.org/events/1593
+
+チュートリアルも含め、プログラム内容はほぼ確定しました。
+
+- Smalltalkハッカソン
+- Groovy使いのためのSmalltalk入門 (南谷千城)
+- 100ms・10ms・1msの四方山話 (青木淳)
+- STEPSプロジェクトの紹介 (山宮隆)
+- Seaside 3.0 (梅澤真史)
+- Pharoの紹介 (Serge Stinckwich)
+- ESUGの活動報告 (Serge Stinckwich)
+- ライトニングトーク大会 (コメント欄にて参加受付中)
+
+せっかくいろいろな人が集まりますので、ライトニングトーク大会も
+行うことにしました。Smalltalkに限らず自由なテーマで5分話すことが
+できます。発表を希望される方は上記ページのコメント欄に書きこんで
+いただければと思います。
+
+よろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+From y.daisuke.homeaddres ＠ gmail.com  Sun Nov  1 23:27:17 2009
+From: y.daisuke.homeaddres ＠ gmail.com (daisuke yamashita)
+Date: Sun Nov  1 23:27:31 2009
+Subject: [Squeak-ja: 4407] Re: SqueakDBXの導入について
+Message-ID: <a49cf92a0911010627i58a6dfd3j4965ef43bea4126d@mail.gmail.com>
+
+こんばんわ。
+ヤマシタです。
+
+いろいろファイルアップ先について調べていたのですが、
+(bitbucket, github,dropbox,etc...)なにかいまいちだったので、
+先ほど阿部さん宛にファイルを送付致しました。
+
+お手数ですが、ご対応頂ければ幸いです。
+
+また、梅澤さんにDebug.logの内容から推測頂いたことから、
+ライブラリが呼び出せていないという内容から再度調査を進めていきます。
+
+進展がありましたら、ご報告させて頂きます。
+他、必要な情報等がありましたらご指摘ください。
+
+以上、宜しくお願い致します。
+From y.daisuke.homeaddres ＠ gmail.com  Mon Nov  2 00:36:03 2009
+From: y.daisuke.homeaddres ＠ gmail.com (daisuke yamashita)
+Date: Mon Nov  2 00:36:25 2009
+Subject: [Squeak-ja: 4408] Re: SqueakDBXの導入について
+Message-ID: <a49cf92a0911010736w3656081dub5da00ccd85c632d@mail.gmail.com>
+
+度々の投稿申し訳ありません。
+ヤマシタです。
+
+阿部さんにご対応頂き、以下にファイルがアップされていますので、ご確認ください。
+http://squeakland.jp/squeakja/DebugReport-20091031182059.zip
+
+時間の都合をつけ、Linuxでも調査をしてみたいと思います。
+
+また、色々対応してみたり、ネットで調べたりしたのですが、
+以下で何をしているのかわからないので、ご教授頂けないでしょうか？
+
+http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX　より
+
+現在発生しているエラーからFFI関連とOSX用の設定があやしいと思っています。
+
+◆不明な点
+・OpenDBX and FFIで記載の内容はすべて、/usr/local/libに存在している。
+   PATH関係のチェックでなにをどうすれば良いのかわからない。
+　他、多分記載の意味が理解できていない。。。と思います。
+
+・Problems with Mac OSで記載のVM内のsymlinkは作成済み。
+・plistのSqueakDebugの0から1には変更済み。
+・We also hunt in the .apps resources folder
+　standard Plugins directory
+　the current directory ./
+　the vm directory
+　and lastly frameworks in
+　以下記載の、ディレクトリがなく、なにをどうしていいのかわからない。
+
+◆OpenDBX and FFI
+
+You can have a common problem which is that SqueakDBX, trough FFI,
+cannot find openDBX library.
+It can be this: If you compile openDBX by yourself,
+the operation system will put all those files in the directory
+associated for things compiled by the user.
+For example, in most Linux distributions, it is /usr/local/lib.
+However if you install it from binaries (.deb, .rpm or whatever) it
+will put the installed application in /usr/lib.
+We have situations when FFI was looking in one of those directories or
+in different order.
+Here you can do two things: copy all the files of openDBX to the other
+directory, or create
+symbolic links. The openDBX compilation resulted files and directories are:
+directory /usr/local/lib/opendbx with 5 files inside per backend you
+compile some libopendbx(10) in /usr/local/lib
+file /usr/local/lib/pkgconfig/opendbx.pc
+
+If you try to run any test and you get a ’unable to find function
+address’ this means FFI doesn’t find the openDBX shared library.
+In this case, there are some things you can do:
+Evaluate ’OpenDBX current’. You should have a subclass of OpenDBX that
+represents your OS.
+For example, if you are in Mac OS, you must have an OpenDBXMacOSX instance.
+check PATH variable: This depends on the OS. For example, in Linux you
+should have: /usr/lib and /usr/local/lib.
+check DYLD_LIBRARY_PATH or LD_LIBRARY_PATH variable. For example, in
+Linux you should have: /usr/lib and /usr/local/lib.
+Be sure the file of the shared library has the correct name.
+Perhaps if you install openDBX from binaries (suppose .deb) it will
+create the file libopendbx.so.1.
+But FFI will search for libopendbx.so.
+So, in this case, the simpler solution is to copy and rename (or just
+rename) libopendbx.so.1 to libopendbx.so and should work like a charm.
+
+◆Problems with Mac OS:
+
+Check the property SqueakPluginsBuiltInOrLocalOnly in Info.plist de la
+VM. This should be in false.
+Put a symlink to the opendbx library inside the Squeak directory.
+In other words create the link in the Resources directory of the
+SqueakVM package:
+cd Squeak 3.8.18beta3U.app/Contents/Resources/
+ln -s /usr/local/lib/libopendbx.dylib opendbx
+http://smalltalkconsulting.com/html/squeakinfoplist.html
+
+Set SqueakDebug to 1 and it will print lots of information about where
+it’s trying to find the indicated library.
+You will need to start the VM from a terminal session command line to
+see the log messages.
+When SqueakPluginsBuiltInOrLocalOnly is false we look in more places.
+
+Environment variables it uses are:
+
+SQUEAK_PLUGIN_PATH
+VM_LIBDIR
+VM_X11DIR
+
+We also hunt in the .apps resources folder
+standard Plugins directory
+the current directory ./
+the vm directory
+and lastly frameworks in
+
+"/CoreServices.framework/Frameworks",
+
+"/ApplicationServices.framework/Frameworks",
+"/Carbon.framework/Frameworks",
+
+
+When SqueakPluginsBuiltInOrLocalOnly is true we only look in
+
+the.apps resources folder
+standard Plugins directory
+and lastly frameworks in
+
+
+"/CoreServices.framework/Frameworks",
+"/ApplicationServices.framework/Frameworks",
+"/Carbon.framework/Frameworks",
+
+その他、これまでに調べた内容を記載しておきます。
+
+・参考文献／リンク等
+
+http://lists.gforge.inria.fr/pipermail/pharo-project/2009-August/012820.html
+http://dreamsofascorpion.blogspot.com/2008/05/using-opendbx-with-squeak.html
+http://smalltalkimpressions.blogspot.com/2009/01/squeakdbx.html
+
+かなり、的外れな内容かも知れませんが、ご教授頂けると幸いです。
+以上、何卒宜しくお願い致します。
+
+====
+dai_yamashita
+From y.daisuke.homeaddres ＠ gmail.com  Wed Nov  4 23:01:30 2009
+From: y.daisuke.homeaddres ＠ gmail.com (daisuke yamashita)
+Date: Wed Nov  4 23:01:34 2009
+Subject: [Squeak-ja: 4409] Re: SqueakDBXの導入について
+Message-ID: <a49cf92a0911040601i12fa4ca7p783f1589377a1859@mail.gmail.com>
+
+こんばんわ。
+ヤマシタです。
+
+CentOSに環境を構築してSqueakDBXにチャレンジしてみました。
+
+■環境
+・Squeak：　SeasideJOne-090425-plusDB
+・OS:CentOS5.4（VirtualBox上ですが。。。）
+・DB:PostgreSQL 8.4.1(rpm)
+・OpenDBX（rpm)
+http://download.opensuse.org/repositories/home:/nsendetzky:/OpenDBX/CentOS_5/i386/
+のものを使用し、環境を構築しました。
+
+OpenDBXのコマンドラインユーティリティも使えることを確認し、
+SqueakのパッケージローダーからFFIとSqueakDBXを導入しましたが、同じエラーが発生しました。
+
+まだ、Squeakを始めたばかりなので、よく理解できていないので、ご教授いただきたいのですが、
+パッケージローダーで、
+
+例えば、SqueakDBXを確認すると、Categoryで、
+「〜　Squeak versions/Squeak3.10 - Released 11 May 2008」
+
+のような記載があるのですが、これは対象Squeakが3.10でないといけないということでしょうか？
+
+FFIに関しても、
+
+Categories:
+	Package group/Official addon package - An official addon Squeak package.
+	Squeak distribution/Squeak - The official distribution of Squeak.
+	Squeak versions/Squeak3.6 -
+	Squeak versions/Squeak3.7 - Released 15 Sept 2004.
+	Squeak versions/Squeak3.8 - Released 25 May 2005.
+	Squeak versions/Squeak3.9 - Released 8 Dec 2006.
+	Squeak versions/Squeak3.9-alpha - This is the now obsolete
+development version of 3.9.
+
+Published version: 3.10
+
+の記述があり、3.10が公開バージョンと読み取れるのですが。。。
+パッケージローダーでインストールできた為、問題ないんだろうなーっと勝手に思っていましたが、
+そのあたりが考え違いだったりしますでしょうか？
+(バージョンがあっていないから呼び出せていない？）
+
+ご教授頂けますと幸いです。
+
+以上、何卒宜しくお願いいたします。
+
+======
+dai_yamashita
+From pasta0915 ＠ gmail.com  Sun Nov  8 19:59:34 2009
+From: pasta0915 ＠ gmail.com (Pasta-K)
+Date: Sun Nov  8 19:59:41 2009
+Subject: [Squeak-ja: 4410] 京都などで小中学生向けのスクイークワークショップを開催したいと考えています
+Message-ID: <6eae8fed0911080259t3c70e4f6u3c5319b107be4c6d@mail.gmail.com>
+
+始めまして、Pasta-Kこと森井と申します。
+京都市内で高校生をしております。よろしくお願いします。
+
+現在、京都で小中高校生を対象にしたスクイークのワークショップを開催しようとしています。（スピンオフ的に東京でも開催の予定です）
+先日、自身のブログでそのことを書いたところ、このMLを紹介していただいたので、ご相談させていただきたくメールさせて頂きました。
+
+ワークショップの概要などはブログの記事の方にまとめて記述しているので、そちらを読んで頂ければと思います。
+http://d.hatena.ne.jp/Pasta-K/20091006/1254789609
+簡単に言えば、中高生にプログラミングを知ってもらって、視野を広げてもらおうというのが１番の目的です。
+
+ちなみに現在スタッフは７人前後（高校生中心）に集まっており、１１月２９日にミーティングをする予定です。
+
+スタッフなどとしてご協力を頂ける方、ミーティングの会場が未定なのでその会場を提供または紹介して頂ける方がいらしゃりましたらお願いしたいです。
+
+拙文失礼しました。
+
+よろしくお願いします。
+From hayasaka ＠ pluto.dti.ne.jp  Tue Nov 10 18:11:36 2009
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Tue Nov 10 18:11:51 2009
+Subject: [Squeak-ja: 4411] Re: 京都などで小中学生向けのスクイークワークショップを開催
+References: <200911100350.nAA3oGWK019048@pop.pluto.dti.ne.jp>
+Message-ID: <C1EDED735E104EBA804A4D93E63BFDA3@computer>
+
+　大阪の早坂です。
+ネパールの子ども達にスクイーク普及活動をしています。
+
+　素晴らしい計画ですね。
+スタッフが集まって、これから計画を作られて行くと思いますが、
+いろいろと課題が出てくると思います。
+
+Squeak Workshop の場所（無償で借りられるか、パソコンがあるか）、
+Workshopのリーダー、サポーター（ボランティアメンバーで出来るか）、
+Workshopの進め方、費用はかかるか　など。
+
+　11月２９日のミーティングで、計画を作成して問題点を洗いだして下さい。
+その上で、各関係先に相談を持ち掛けましょう。
+このメールで、相談されても良いですね。
+今年度開催予定では、あまり時間がありませんので頑張って下さい。
+
+早坂　吉昭
+
+>
+>   1. [Squeak-ja: 4410]
+>      京都などで小中学生向けのスクイークワークショップを開催したいと考えています
+>      (Pasta-K)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Sun, 8 Nov 2009 19:59:34 +0900
+> From: Pasta-K <pasta0915@gmail.com>
+> Subject: [Squeak-ja: 4410]
+> 京都などで小中学生向けのスクイークワークショップを開催したいと考えています
+>
+> To: Squeak discussion in Japanese <squeak-ja@smalltalk.jp>
+> Message-ID:
+> <6eae8fed0911080259t3c70e4f6u3c5319b107be4c6d@mail.gmail.com>
+> Content-Type: text/plain; charset=ISO-2022-JP
+>
+> 始めまして、Pasta-Kこと森井と申します。
+> 京都市内で高校生をしております。よろしくお願いします。
+>
+> 現在、京都で小中高校生を対象にしたスクイークのワークショップを開催しようとしています。（スピンオフ的に東京でも開催の予定です）
+> 先日、自身のブログでそのことを書いたところ、このMLを紹介していただいたので、ご相談させていただきたくメールさせて頂きました。
+>
+> ワークショップの概要などはブログの記事の方にまとめて記述しているので、そちらを読んで頂ければと思います。
+> http://d.hatena.ne.jp/Pasta-K/20091006/1254789609
+> 簡単に言えば、中高生にプログラミングを知ってもらって、視野を広げてもらおうというのが１番の目的です。
+>
+> ちなみに現在スタッフは７人前後（高校生中心）に集まっており、１１月２９日にミーティングをする予定です。
+>
+> スタッフなどとしてご協力を頂ける方、ミーティングの会場が未定なのでその会場を提供または紹介して頂ける方がいらしゃりましたらお願いしたいです。
+>
+> 拙文失礼しました。
+>
+> よろしくお願いします。
+>
+
+From yhousako ＠ mx2.ttcn.ne.jp  Wed Nov 11 05:45:46 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Wed Nov 11 05:46:02 2009
+Subject: [Squeak-ja: 4412] Re: 京都などで小中学生向けのスクイークワークショップを開催
+In-Reply-To: <C1EDED735E104EBA804A4D93E63BFDA3@computer>
+References: <200911100350.nAA3oGWK019048@pop.pluto.dti.ne.jp>
+	<C1EDED735E104EBA804A4D93E63BFDA3@computer>
+Message-ID: <4AF9D0FA.90602@mx2.ttcn.ne.jp>
+
+寳迫（ほうさこ）所沢在住の小学校教員です。
+
+埼玉でも東京に近いのでお手伝いできることがあったら協力します。
+
+早坂　吉昭 さんは書きました:
+> 　素晴らしい計画ですね。
+> スタッフが集まって、これから計画を作られて行くと思いますが、
+> いろいろと課題が出てくると思います。
+(snip)
+
+私も同様に感じました。でも、その課題を乗り越えていく過程が「生きた学び」
+なのだと思います。良い学習をされていると思います。
+
+一方で、イベントに参加する方々にとっては、「主催者を育てる」という視点は
+あまり持たれていないと思いますので、シビアな批判を浴びることも覚悟しなけ
+ればならないと思います。（まぁ世の中というのはそういうものです）
+
+子どもたちを集める際に、最も気をつけなければならないことは、安全と健康に
+ついてです。このことは、いくら気をつけて用意周到にしておいても予期せぬこ
+とが起きるのが常です。
+
+それから、ブログに書かれていたことを「きちんとした文章」にまとめてみるこ
+とをお薦めします。（できたものを正式にWebサイトなどに載せると良いと思い
+ます。）
+
+今のままだと、失礼ながら「単なる思いつき」な感じが否めないので、小学生の
+親に信用してもらうのは難しいでしょう。親に信用してもらえないと、参加させ
+てもらえない子が増えるでしょう。以前にうやむやになってしまったようなこと
+が書かれていましたが、本気でイベントをやるなら、対外的に信用してもらえる
+ような文章を書かなければならないと思います。
+＃友だち同士で集まって、サークル的に学び合うのとは訳が違います。
+
+これまでに、そういう経験がないのかもしれませんから、ここは一つ、「大人の
+文章」を学んでみるというのも良いと思います。（これも「生きた学び」です
+ね）←学校の中で信頼できる先生がいたら、相談してみるのも良いと思います。
+
+私が4回目に卒業させた子どもたちが、ちょうど高校2年生になりました。がん
+ばっている子を応援したい気持ちになって、ちょっと余計なことを書いたかもし
+れません。ご容赦ください。
+
+--------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From pasta0915 ＠ gmail.com  Wed Nov 11 22:49:54 2009
+From: pasta0915 ＠ gmail.com (Pasta-K)
+Date: Wed Nov 11 22:49:58 2009
+Subject: [Squeak-ja: 4413] Re: 京都などで小中学生向けのスクイークワークショップを開催
+In-Reply-To: <4AF9D0FA.90602@mx2.ttcn.ne.jp>
+References: <200911100350.nAA3oGWK019048@pop.pluto.dti.ne.jp>
+	<C1EDED735E104EBA804A4D93E63BFDA3@computer>
+	<4AF9D0FA.90602@mx2.ttcn.ne.jp>
+Message-ID: <6eae8fed0911110549r78d087f1rd6d6b07168ee13c7@mail.gmail.com>
+
+森井です。
+反論をするつもりは無いのですが、そのように見えたらゴメンなさい。
+
+> 一方で、イベントに参加する方々にとっては、「主催者を育てる」という視点は
+> あまり持たれていないと思いますので、シビアな批判を浴びることも覚悟しなけ
+> ればならないと思います。（まぁ世の中というのはそういうものです）
+■流石にスタッフが高校生中心というのもさすがに問題だと思ったので（社会的信頼的な意味でも）、東京・京都共に社会人の方（主にIT系のコミュニティーイベントの主催者さんなど）にも参加を頂いて居たりします。京都の方は関西を中心にIT勉強会を主催されている方、京都街づくり２１世紀委員の方などにご協力をお願いするなどしています。
+また、僕自身の考えとしてはシビアな指摘を頂けるうちはそれを改善することが出来るので、逆にそういうご指摘は随時して頂ければと思います。
+
+> それから、ブログに書かれていたことを「きちんとした文章」にまとめてみるこ
+> とをお薦めします。（できたものを正式にWebサイトなどに載せると良いと思い
+> ます。）
+>
+> 今のままだと、失礼ながら「単なる思いつき」な感じが否めないので、小学生の
+> 親に信用してもらうのは難しいでしょう。親に信用してもらえないと、参加させ
+> てもらえない子が増えるでしょう。以前にうやむやになってしまったようなこと
+> が書かれていましたが、本気でイベントをやるなら、対外的に信用してもらえる
+> ような文章を書かなければならないと思います。
+> ＃友だち同士で集まって、サークル的に学び合うのとは訳が違います。
+■これも現状ではおっしゃる通り「単なる思いつき」にしか見えないと思います。（というか、思いつきで書いた分が多いです）
+なので現在はそれを具体化すべくミーティングを行う予定をしています。（関西は１１月２９日）
+ここでブログの文章や今までスタッフで行ってきたディスカッションを基にして、企画書を作成して、各関係団体などに依頼に周る予定をしています。
+
+> 私が4回目に卒業させた子どもたちが、ちょうど高校2年生になりました。がん
+> ばっている子を応援したい気持ちになって、ちょっと余計なことを書いたかもし
+> れません。ご容赦ください。
+■貴重なご意見ありがとうございました。
+これからもちょくちょくこちらのMLにメールさせて頂くかもしれないので、そのときはどうぞよろしくお願いします。
+--
+Shuto Morii
+From umejava ＠ mars.dti.ne.jp  Thu Nov 12 00:57:52 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Nov 12 00:58:01 2009
+Subject: [Squeak-ja: 4414] Re: SqueakDBXの導入について
+In-Reply-To: <Jxq7ZD9GBCEgU927v0AM8fvA3@mars.dti.ne.jp>
+References: <a49cf92a0910310228j2d940ffes86a51614fb12e5b4@mail.gmail.com>
+	<Jxq7ZD9GBCEgU927v0AM8fvA3@mars.dti.ne.jp>
+Message-ID: <JxzFFhJRB2FNTxw2sebLdcaw2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ようやく時間が出来てきましたので、じっくり試してみたいと思いますが、
+取り急ぎ。
+
+>CentOSに環境を構築してSqueakDBXにチャレンジしてみました。
+>
+>■環境
+>・Squeak：　SeasideJOne-090425-plusDB
+>・OS:CentOS5.4（VirtualBox上ですが。。。）
+>・DB:PostgreSQL 8.4.1(rpm)
+>・OpenDBX（rpm)
+>http://download.opensuse.org/repositories/home:/nsendetzky:/OpenDBX/CentOS_5/i386/
+>のものを使用し、環境を構築しました。
+>
+>OpenDBXのコマンドラインユーティリティも使えることを確認し、
+>SqueakのパッケージローダーからFFIとSqueakDBXを導入しましたが、同じエラーが発生しました。
+>
+>まだ、Squeakを始めたばかりなので、よく理解できていないので、ご教授いただきたいのですが、
+>パッケージローダーで、
+>
+>例えば、SqueakDBXを確認すると、Categoryで、
+>「〜　Squeak versions/Squeak3.10 - Released 11 May 2008」
+>
+>のような記載があるのですが、これは対象Squeakが3.10でないといけないということでしょうか？
+
+はい。3.10で動作するということで、それ以前のバージョンではテストされて
+いないということを意味しています。
+
+SqueakMapのパッケージローダーはバージョンを厳密にみていませんので、
+なんとなくインストールできてしまいます。Squeakのバージョンと、ライブラリ
+のバージョンの対応関係をきちんと確かめてインストールした方が良いと思います。
+
+ちなみに3.10J系の日本語化したイメージは下記にあります。
+http://swikis.ddo.jp/umejava/48
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+From yhousako ＠ mx2.ttcn.ne.jp  Thu Nov 12 04:02:55 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Thu Nov 12 04:03:08 2009
+Subject: [Squeak-ja: 4415] Re: 京都などで小中学生向けのスクイークワークショップを開催
+In-Reply-To: <6eae8fed0911110549r78d087f1rd6d6b07168ee13c7@mail.gmail.com>
+References: <200911100350.nAA3oGWK019048@pop.pluto.dti.ne.jp>	<C1EDED735E104EBA804A4D93E63BFDA3@computer>	<4AF9D0FA.90602@mx2.ttcn.ne.jp>
+	<6eae8fed0911110549r78d087f1rd6d6b07168ee13c7@mail.gmail.com>
+Message-ID: <4AFB0A5F.4040908@mx2.ttcn.ne.jp>
+
+森井さん
+
+寳迫です。
+
+Pasta-K さんは書きました:
+> 森井です。
+> 反論をするつもりは無いのですが、そのように見えたらゴメンなさい。
+
+大丈夫です。(^_^)　先にこちらの素性を明かしておかなければならなかったか
+もしれませんね。
+
+私自身は、現場の単なる一教員に過ぎませんが、いわゆる「情報教育」という分
+野では、東京にも京都にも、こういうイベントを企画・開催する際に頼りになる
+ような知り合い（教育関係者だけではなくさまざまな企業の方々を含む）がたく
+さんいます。
+＃お時間がありましたら、google辺りで私の名前「寳迫芳人」を検索して頂けま
+すと、何をしている人間かだいたいつかんで頂けるかもしれません。
+
+実際に、私自身もイベントを行ってきましたので、前のメールでは、その経験も
+含めて書かせて頂きました。（詳しく書くと長くなるのでやめます。）
+もし、企画が固まってきましたら、その告知など協力させて頂きますのでご連絡
+ください。
+
+> ■これも現状ではおっしゃる通り「単なる思いつき」にしか見えないと思います。（というか、思いつきで書いた分が多いです）
+> なので現在はそれを具体化すべくミーティングを行う予定をしています。（関西は１１月２９日）
+> ここでブログの文章や今までスタッフで行ってきたディスカッションを基にして、企画書を作成して、各関係団体などに依頼に周る予定をしています。
+
+どんな企画でも、はじめは「単なる思いつき」ですから悪いことだとは思ってい
+ません。この「具体化」の過程が重要ですね。森井さんにとっても得るものが多
+いと思います。
+
+> ■貴重なご意見ありがとうございました。
+> これからもちょくちょくこちらのMLにメールさせて頂くかもしれないので、そのときはどうぞよろしくお願いします。
+
+了解しました。楽しみにしています。
+私自身も学校内外の諸々の仕事を抱えていますので、素早いレスポンスができな
+いかもしれません。ご了承ください。
+
+--------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee ＠ squeakland.jp  Fri Nov 13 01:33:08 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Nov 13 01:33:33 2009
+Subject: [Squeak-ja: 4416] MTM04でScratchのワークショップなどを行います。
+Message-ID: <2d5d52a80911120833t14abd6edq643077370bc0e395@mail.gmail.com>
+
+こんにちは、阿部です。
+私もお手伝いしている「こどもプログラミングサークル‘スクラッチ’」が11/22, 23に東京工業大学大岡山キャンパスで開催されるMake:
+Tokyo Meeting 04において、Scratchの展示、プレゼンテーション、ワークショップを行います。
+ワークショップは無料で、子供に限らずどなたでもご参加いただけます。人数に限りがありますので、末尾の要領で事前にお申し込みください。
+展示は会場で随時行っています。その場で遊んでもらえるような説明カードを用意するほか、WeDoやPicoBoardなどのデモも予定しています。
+プレゼンテーションは11月23日（月）16:00-16:30の予定です。
+
+なお、私も個人的に「大人のSqueak&Scratch」として展示を行います。
+「とかく子供のものと思われがちなSqueakとScratchですが、その中にはかつて数百万円の専用マシンで動いていたPARC直系のSmalltalkが仕込まれています。今回はネズミやネコの皮をはぎ、様々なセンサやロボットをつないだり、TwitterなどのWeb
+APIを叩いたりして、その秘められたポテンシャルをお見せします。また、前回好評だった世界聴診器の展示即売も行います」
+こちらもどうぞよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+-- cut here --
+Make: Tokyo Meeting 04 ワークショップのご案内
+http://scratch-ja.org/2009/11/185
+http://scratch-ja.org/atmtm04
+
+スクラッチのワークショップをMake: Tokyo Meeting
+04で開催いたします。スクラッチを使って簡単なアニメーションを作成しながら、プログラミングをたのしく学びます。
+
+■SCRATCH（スクラッチ）とは・・・？
+アメリカのマサチューセッツ工科大学が提供している無料の子ども向けプログラミングソフトです。対象年齢は８歳以上、アニメーション、音楽、インタラクティブな動き、ゲームなどを、画面上のブロックを組み合わせることで簡単につくることができます。
+
+時間：
+   1. 22日（日）12:00-13:00
+   2. 22日（日）16:00-17:00
+   3. 23日（月）11:30-12:30
+
+参加費：無料
+
+対象：
+スクラッチ初心者の方（年齢は問いません）
+当日スクラッチをインストールしたパソコンをご持参ください。
+ダウンロードはこちら。
+http://scratch.mit.edu/download
+
+※インストーラーは当日もご用意しますが、スムーズな進行にご協力ください。
+※予備のＰＣも数台ご用意いたします。
+
+参加方法：
+お申込みフォームから参加申込みをお送りください。こちらからの返信を持って受付完了とします。
+http://scratch-ja.org/form_mtm04
+
+※事前申し込み１５名、当日受付５名程度と致します
+
+>Make: Tokyo Meeting 04 開催概要
+http://jp.makezine.com/blog/2009/11/mtm04.html
+
+        * 開催日：2009年11月22日（日）、23日（祝）
+        * 時間：22日 11:00 - 18:00、23日 10:00 - 17:00
+        * 会場：東京工業大学 大岡山キャンパス（東京都目黒区大岡山2-12-1）
+        * 入場：無料
+        * 交通：東急大井町線・目黒線「大岡山駅」徒歩1分
+        * 主催：株式会社オライリー・ジャパン
+        * 共催：東京工業大学、多摩美術大学 情報デザイン学科
+        * 共催：東京工芸大学 メディアアート表現学科
+-- cut here --
+From kuwatani ＠ akademia.co.jp  Tue Nov 17 13:33:32 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Tue Nov 17 13:33:36 2009
+Subject: [Squeak-ja: 4417] メーリングリストの不具合のご報告
+In-Reply-To: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+References: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+Message-ID: <4B02279C.7050800@akademia.co.jp>
+
+Squeak-jaメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+11月1日〜11月7日の間，メールシステムの設定ミスにより
+投稿されたメールが配信されない状況になっておりました．
+
+この間，投稿されたメールはMLには届いておりますので
+お手数ですがアーカイブをご確認頂ければと思います．
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2009-November/date.html
+
+申し訳ありませんでした．
+-- 
+kuwatani@akademia.co.jp
+From umejava ＠ mars.dti.ne.jp  Thu Nov 19 08:56:43 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Nov 19 13:38:29 2009
+Subject: [Squeak-ja: 4418] 第15回Smalltalk勉強会のお知らせ
+Message-ID: <JxSoPe0seMNrPIZFmuxAiXtA2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2009/11/27(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai15kaismalltalkbenkyoukai
+
+今回は「Scratchで学ぶSqueakハッキングテクニック」です。
+
+子供向けプログラミング環境のScratchですが、カバーを開けるとものすごい
+ものが潜んでいることは、おそらく皆さんご存じでしょう。今回はScratchを
+カスタマイズしていくことで、Squeakのプログラミングを学ぶという興味深い
+ものになっています。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]

@@ -1,0 +1,205 @@
+ - 236 tallies, 254 msec.
+
+**Tree**
+--------------------------------
+Process: other processes
+--------------------------------
+9.7% {25ms} WeakArray class>>finalizationProcess
+--------------------------------
+Process: (40) 27708: nil
+--------------------------------
+55.1% {140ms} TestRunner>>runSuite:
+  |51.7% {131ms} TestRunner>>runTest:
+  |  |51.7% {131ms} StompReaderTestCase(TestCase)>>run:
+  |  |  51.7% {131ms} TestResult>>runCase:
+  |  |    51.3% {130ms} StompReaderTestCase(TestCase)>>runCase
+  |  |      33.9% {86ms} StompReaderTestCase(TestCase)>>timeout:after:
+  |  |        |33.5% {85ms} Process>>resume
+  |  |      16.9% {43ms} StompReaderTestCase(TestCase)>>performTest
+  |  |        4.7% {12ms} StompShapeChangerTestCase>>testRenamedReadFailed
+  |  |          |4.2% {11ms} Object class(Behavior)>>fromStomp:
+  |  |          |  4.2% {11ms} StompReader class(MpDecoder class)>>decode:
+  |  |          |    4.2% {11ms} StompReader(MpDecoder)>>decode:
+  |  |          |      4.2% {11ms} StompReader>>decodeFrom:
+  |  |          |        4.2% {11ms} StompReader(MpDecoder)>>decode
+  |  |          |          4.2% {11ms} StompReader(MpDecoder)>>read
+  |  |          |            4.2% {11ms} StompReader(MpDecoder)>>readObject
+  |  |          |              4.2% {11ms} StompReader(MpDecoder)>>readObjectOf:
+  |  |          |                4.2% {11ms} StompReader>>readObjectOf:ifNotApplied:
+  |  |          |                  4.2% {11ms} StompReader>>readFixArray:
+  |  |          |                    4.2% {11ms} StompReader>>readSmallArraySized:
+  |  |          |                      4.2% {11ms} StompReader>>readTupleBy:
+  |  |          |                        4.2% {11ms} StompReader>>readValue
+  |  |          |                          4.2% {11ms} StompReader>>readInstanceContentClassNamed:in:
+  |  |          |                            4.2% {11ms} StompReader>>readInstanceContentOf:
+  |  |          |                              4.2% {11ms} StompMockFixedClass(Object)>>stompReadContentFrom:
+  |  |          |                                4.2% {11ms} StompMockFixedClass(Object)>>stompBasicReadContentFrom:
+  |  |          |                                  4.2% {11ms} StompReader>>readInstVarsInto:
+  |  |          |                                    4.2% {11ms} StompReader(MpDecoder)>>readObject
+  |  |          |                                      4.2% {11ms} StompReader(MpDecoder)>>readObjectOf:
+  |  |          |                                        4.2% {11ms} StompReader>>readObjectOf:ifNotApplied:
+  |  |          |                                          4.2% {11ms} StompReader>>readFixArray:
+  |  |          |                                            4.2% {11ms} StompReader>>readSmallArraySized:
+  |  |          |                                              4.2% {11ms} StompReader>>readTupleBy:
+  |  |          |                                                4.2% {11ms} StompReader>>readValue
+  |  |          |                                                  4.2% {11ms} StompReader>>readInstanceContentClassNamed:in:
+  |  |          |                                                    3.8% {10ms} StompReader>>readInstanceContentOf:
+  |  |          |                                                      3.4% {9ms} StompMockFixedClass2(Object)>>stompReadContentFrom:
+  |  |          |                                                        3.4% {9ms} StompMockFixedClass2(Object)>>stompBasicReadContentFrom:
+  |  |          |                                                          3.4% {9ms} StompReader>>readInstVarsInto:
+  |  |          |                                                            3.4% {9ms} StompReader>>basicReadObject
+  |  |          |                                                              3.4% {9ms} MpDecoder>>readObject
+  |  |          |                                                                3.4% {9ms} MpDecoder>>readObjectOf:
+  |  |          |                                                                  3.4% {9ms} MpDecoder>>readObjectOf:ifNotApplied:
+  |  |          |                                                                    3.4% {9ms} MpDecoder>>readFixArray:
+  |  |          |                                                                      3.4% {9ms} MpDecoder>>readArraySized:
+  |  |          |                                                                        3.4% {9ms} MpDecoder>>readObject
+  |  |          |                                                                          3.4% {9ms} MpDecoder>>readObjectOf:
+  |  |          |                                                                            3.4% {9ms} MpDecoder>>readObjectOf:ifNotApplied:
+  |  |          |                                                                              3.4% {9ms} MpDecoder>>readFixRaw:
+  |  |          |                                                                                3.4% {9ms} ReadStream>>next:
+  |  |        3.8% {10ms} StompCustomSerializationTestCase>>testStompTransientInstVarNames
+  |  |          |2.1% {5ms} StompReader class(MpDecoder class)>>decode:
+  |  |          |  |2.1% {5ms} StompReader(MpDecoder)>>decode:
+  |  |          |  |  2.1% {5ms} StompReader>>decodeFrom:
+  |  |          |  |    2.1% {5ms} ByteArray(SequenceableCollection)>>=
+  |  |          |1.7% {4ms} StompWriter class(MpEncoder class)>>encode:
+  |  |          |  1.7% {4ms} StompWriter(MpEncoder)>>encode:
+  |  |          |    1.7% {4ms} StompWriter(MpEncoder)>>encode:on:
+  |  |          |      1.7% {4ms} StompWriter(MpEncoder)>>write:on:
+  |  |          |        1.7% {4ms} StompWriter>>writeObject:
+  |  |          |          1.7% {4ms} StompWriter>>writeValue:
+  |  |          |            1.7% {4ms} StompWriter>>writeStandardValue:
+  |  |          |              1.7% {4ms} StompWriter>>writeContent:
+  |  |          |                1.7% {4ms} StompMockObjectWithCache(Object)>>stompWriteContentTo:
+  |  |          |                  1.7% {4ms} StompWriter>>writeInstVarsOf:
+  |  |          |                    1.7% {4ms} StompWriter>>basicWriteInstVarsOf:
+  |  |          |                      1.7% {4ms} StompWriter>>writtenInstVarNamesWithIndicesOf:
+  |  |          |                        1.7% {4ms} StompSqPortableUtil(StompPortableUtil)>>instVarIndicesOf:from:
+  |  |          |                          1.7% {4ms} StompSqPortableUtil>>instVarIndexOf:for:
+  |  |          |                            1.7% {4ms} StompMockObjectWithCache class(ClassDescription)>>instVarIndexFor:ifAbsent:
+  |  |          |                              1.7% {4ms} StompMockFixedClass class(ClassDescription)>>instVarIndexFor:ifAbsent:
+  |  |          |                                1.7% {4ms} Array(SequenceableCollection)>>indexOf:ifAbsent:
+  |  |          |                                  1.7% {4ms} Array(SequenceableCollection)>>indexOf:startingAt:ifAbsent:
+  |  |          |                                    1.7% {4ms} ByteString(String)>>=
+  |  |        1.7% {4ms} StompNewFailedTestCase>>testWriteReadNewVariableFailedClass
+  |  |          |1.7% {4ms} Object class(Behavior)>>fromStomp:
+  |  |          |  1.7% {4ms} StompReader class(MpDecoder class)>>decode:
+  |  |          |    1.7% {4ms} StompReader(MpDecoder)>>decode:
+  |  |          |      1.7% {4ms} StompReader>>decodeFrom:
+  |  |          |        1.7% {4ms} StompReader(MpDecoder)>>decode
+  |  |          |          1.7% {4ms} StompReader(MpDecoder)>>read
+  |  |          |            1.7% {4ms} StompReader(MpDecoder)>>readObject
+  |  |          |              1.7% {4ms} StompReader(MpDecoder)>>readObjectOf:
+  |  |          |                1.7% {4ms} StompReader>>readObjectOf:ifNotApplied:
+  |  |          |                  1.7% {4ms} StompReader>>readFixArray:
+  |  |          |                    1.7% {4ms} StompReader>>readSmallArraySized:
+  |  |          |                      1.7% {4ms} StompReader>>readTupleBy:
+  |  |          |                        1.7% {4ms} StompReader>>readValue
+  |  |          |                          1.7% {4ms} StompReader>>readInstanceContentClassNamed:in:
+  |  |          |                            1.3% {3ms} StompReader>>readInstanceContentOf:
+  |  |          |                              1.3% {3ms} StompMockVariableNewFailedClass(Collection)>>stompReadContentFrom:
+  |  |          |                                1.3% {3ms} StompReader>>readInstVarsInto:
+  |  |          |                                  1.3% {3ms} StompReader(MpDecoder)>>readObject
+  |  |          |                                    1.3% {3ms} StompReader(MpDecoder)>>readObjectOf:
+  |  |          |                                      1.3% {3ms} StompReader>>readObjectOf:ifNotApplied:
+  |  |          |                                        1.3% {3ms} StompReader>>readFixArray:
+  |  |          |                                          1.3% {3ms} StompReader>>readSmallArraySized:
+  |  |          |                                            1.3% {3ms} StompReader>>readTupleBy:
+  |  |          |                                              1.3% {3ms} StompReader>>readValue
+  |  |          |                                                1.3% {3ms} StompReader>>readInstanceContentClassNamed:in:
+  |  |          |                                                  1.3% {3ms} StompReader>>readInstanceContentOf:
+  |  |          |                                                    1.3% {3ms} StompReader>>initializeInstance:
+  |  |          |                                                      1.3% {3ms} StompReader>>context
+  |  |        1.3% {3ms} StompNewFailedTestCase>>testWriteReadNewVariableFailedClassReciverAlternative
+  |2.5% {6ms} TestRunner>>updateResults
+  |  2.1% {5ms} TestRunner>>updateStatus:
+  |    2.1% {5ms} TestRunner(Object)>>changed:
+  |      1.3% {3ms} PluggableTextMorphPlus>>update:
+  |        1.3% {3ms} PluggableTextMorphPlus(PluggableTextMorph)>>update:
+7.2% {18ms} TestRunner>>saveResultInHistory
+  |7.2% {18ms} TestResult>>dispatchResultsIntoHistory
+  |  6.8% {17ms} TestResult>>selectResultsForTestCase:
+  |    5.9% {15ms} TestResult>>failures
+  |      5.9% {15ms} TestResult>>unexpectedPasses
+  |        5.9% {15ms} StompReaderTestCase(TestCase)>>shouldPass
+  |          5.9% {15ms} Array(SequenceableCollection)>>includes:
+  |            5.5% {14ms} primitives
+5.9% {15ms} TestRunner>>suiteAll
+  5.9% {15ms} StompReaderTestCase class(TestCase class)>>addToSuiteFromSelectors:
+    4.2% {11ms} StompTestCase class(TestCase class)>>allTestSelectors
+      |2.1% {5ms} StompTestCase class(Behavior)>>allSelectors
+      |  1.7% {4ms} Array(Collection)>>asIdentitySet
+      |    1.7% {4ms} IdentitySet(Collection)>>addAll:
+      |      1.7% {4ms} IdentitySet(Set)>>add:
+      |        1.3% {3ms} IdentitySet>>scanFor:
+    1.3% {3ms} StompReaderTestCase class(TestCase class)>>testSelectors
+19.1% {49ms} PasteUpMorph>>displayWorld
+  |9.7% {25ms} PasteUpMorph>>privateOuterDisplayWorld
+  |  |9.7% {25ms} WorldState>>displayWorld:submorphs:
+  |  |  9.3% {24ms} WorldState>>drawWorld:submorphs:invalidAreasOn:
+  |  |    8.5% {22ms} FormCanvas(Canvas)>>fullDrawMorph:
+  |  |      8.5% {22ms} FormCanvas(Canvas)>>fullDraw:
+  |  |        8.5% {22ms} PluggableSystemWindow(Morph)>>fullDrawOn:
+  |  |          5.9% {15ms} PluggableSystemWindow(Morph)>>drawSubmorphsOn:
+  |  |            |5.1% {13ms} FormCanvas(Canvas)>>fullDrawMorph:
+  |  |            |  5.1% {13ms} FormCanvas(Canvas)>>fullDraw:
+  |  |            |    4.7% {12ms} PluggableListMorphOfMany(Morph)>>fullDrawOn:
+  |  |            |      2.5% {6ms} PluggableListMorphOfMany(Morph)>>drawSubmorphsOn:
+  |  |            |        |2.5% {6ms} FormCanvas(Canvas)>>fullDrawMorph:
+  |  |            |        |  2.5% {6ms} FormCanvas(Canvas)>>fullDraw:
+  |  |            |        |    2.5% {6ms} ScrollBar(Morph)>>fullDrawOn:
+  |  |            |        |      1.3% {3ms} ScrollBar(Morph)>>drawSubmorphsOn:
+  |  |            |        |        |1.3% {3ms} FormCanvas(Canvas)>>fullDrawMorph:
+  |  |            |        |        |  1.3% {3ms} FormCanvas(Canvas)>>fullDraw:
+  |  |            |        |        |    1.3% {3ms} RectangleMorph(Morph)>>fullDrawOn:
+  |  |            |        |      1.3% {3ms} TransformMorph>>drawSubmorphsOn:
+  |  |            |        |        1.3% {3ms} FormCanvas(Canvas)>>fullDrawMorph:
+  |  |            |        |          1.3% {3ms} FormCanvas(Canvas)>>fullDraw:
+  |  |            |        |            1.3% {3ms} LazyListMorph(Morph)>>fullDrawOn:
+  |  |            |        |              1.3% {3ms} FormCanvas(Canvas)>>drawMorph:
+  |  |            |        |                1.3% {3ms} FormCanvas(Canvas)>>draw:
+  |  |            |        |                  1.3% {3ms} LazyListMorph>>drawOn:
+  |  |            |        |                    1.3% {3ms} LazyListMorph>>display:atRow:on:
+  |  |            |        |                      1.3% {3ms} FormCanvas(Canvas)>>drawString:in:font:color:
+  |  |            |        |                        1.3% {3ms} FormCanvas>>drawString:from:to:in:font:color:
+  |  |            |      1.3% {3ms} FormCanvas>>isVisible:
+  |  |          1.3% {3ms} PluggableSystemWindow(Morph)>>drawDropShadowOn:
+  |9.3% {24ms} PasteUpMorph(Morph)>>outermostWorldMorph
+1.7% {4ms} SystemProgressMorph>>setLabel:at:
+  1.7% {4ms} SystemProgressMorph>>recenter
+    1.7% {4ms} SystemProgressMorph(Morph)>>fullBounds
+      1.7% {4ms} SystemProgressMorph(Morph)>>doLayoutIn:
+        1.7% {4ms} SystemProgressMorph(Morph)>>privateFullBounds
+          1.7% {4ms} SystemProgressMorph(Morph)>>outerBounds
+            1.7% {4ms} SystemProgressMorph(Morph)>>hasDropShadow
+
+**Leaves**
+33.5% {85ms} Process>>resume
+9.7% {25ms} WeakArray class>>finalizationProcess
+9.3% {24ms} PasteUpMorph(Morph)>>outermostWorldMorph
+5.5% {14ms} Array(SequenceableCollection)>>includes:
+3.4% {9ms} ReadStream>>next:
+2.1% {5ms} ByteArray(SequenceableCollection)>>=
+1.7% {4ms} ByteString(String)>>=
+1.7% {4ms} SystemProgressMorph(Morph)>>hasDropShadow
+1.3% {3ms} OrderedCollection>>select:
+1.3% {3ms} StompReader>>context
+1.3% {3ms} IdentitySet>>scanFor:
+1.3% {3ms} ByteSymbol class(Behavior)>>isBytes
+1.3% {3ms} PluggableSystemWindow(Morph)>>valueOfProperty:ifAbsent:
+1.3% {3ms} Character>>charCode
+
+**Memory**
+	old			+69,316 bytes
+	young		+70,364 bytes
+	used		+139,680 bytes
+	free		-139,680 bytes
+
+**GCs**
+	full			0 totalling 0ms (0.0% uptime)
+	incr		23 totalling 16,842ms (6631.0% uptime), avg 732.0ms
+	tenures		1 (avg 23 GCs/tenure)
+	root table	0 overflows
+
+

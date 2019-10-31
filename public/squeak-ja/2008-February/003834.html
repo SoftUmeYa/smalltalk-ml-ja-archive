@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3834] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203834%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjVwQmcbKEIgaW1hZ2Ug%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTVEbKEIgVk0gKE1hY09TWCBQb3dlclBDKSAbJEI1YSRgGyhC%3F%3D&In-Reply-To=20080213015607.021CC9F884%401server.aquilax.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003822.html">
+   <LINK REL="Next"  HREF="003837.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3834] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203834%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjVwQmcbKEIgaW1hZ2Ug%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTVEbKEIgVk0gKE1hY09TWCBQb3dlclBDKSAbJEI1YSRgGyhC%3F%3D&In-Reply-To=20080213015607.021CC9F884%401server.aquilax.co.jp"
+       TITLE="[Squeak-ja: 3834] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2008年 2月 16日 (土) 10:03:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003822.html">[Squeak-ja: 3822] 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+        <LI>次の記事 <A HREF="003837.html">[Squeak-ja: 3837] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3834">[ 日付 ]</a>
+              <a href="thread.html#3834">[ スレッド ]</a>
+              <a href="subject.html#3834">[ 件名 ]</a>
+              <a href="author.html#3834">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+普段Macを使っていないのでなんとも言えませんが、
+
+ファイル名の文字化け程度であれば
+LanguageEnvironment defaultFileNameConverterを適切なものにする
+などで対処できるのではないでしょうか。
+あとはFilePathあたりを見てみると良いと思います。
+
+イメージが大きくなる問題ですが、全てのデータをオンメモリにせずに
+使わないものは部分的にDBに格納しておくと良いのではないでしょうか。
+
+仕事でOmniBaseJを使っていますが、アプリの性質により部分的にチューニング
+する必要はあるものの、割と大きなデータに耐えてくれます。
+(スペック的には4Gまでをサポート)
+
+ご参考になれば幸いです。
+
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tako ＠ aquilax.co.jp</A> (Kouji takahashi) wrote:
+&gt;<i> 高橋＠池袋です。
+</I>&gt;<i> 
+</I>&gt;<i> MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+</I>&gt;<i> VMはありますか？
+</I>&gt;<i> 
+</I>&gt;<i> 各種データを読み込んでファイルサイズが 483.6Mになって
+</I>&gt;<i> しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+</I>&gt;<i> 予定です。
+</I>&gt;<i> 
+</I>&gt;<i> --------
+</I>&gt;<i> 　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+</I>&gt;<i> ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+</I>&gt;<i> 変更して使っています。問題は一応解決しているのですが
+</I>&gt;<i> このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+</I>&gt;<i> John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+</I>&gt;<i> 32bitクリーンと記載されています。
+</I>&gt;<i> 
+</I>&gt;<i> 　正常起動しなくなった時の症状は
+</I>&gt;<i> image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+</I>&gt;<i> 10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+</I>&gt;<i> 　SqueakMaxHeapSize 640 * 1024 * 1024
+</I>&gt;<i> 
+</I>&gt;<i> --------
+</I>&gt;<i> 　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+</I>&gt;<i> defaultの状態で正常に動作するようですが、
+</I>&gt;<i> 　1.ファイルパス MacOS→ Unix への変更が必要
+</I>&gt;<i> 　2.ファイル名に日本語が使えない？
+</I>&gt;<i> などの問題があります。
+</I>&gt;<i> 
+</I>&gt;<i> --------
+</I>&gt;<i> ここで質問ですが
+</I>&gt;<i> 
+</I>&gt;<i> 巨大日本語imageを扱うノウハウを教えて下さい。
+</I>&gt;<i> 
+</I>&gt;<i> Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+</I>&gt;<i> 
+</I>&gt;<i> MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+</I>&gt;<i> 　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+</I>&gt;<i> 　必要ならIntelMac、 OSX 10.5への変更も可能です。
+</I>&gt;<i> 
+</I>&gt;<i> Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+</I>&gt;<i> するのは info.plistの細工程度では難しいですか？
+</I>&gt;<i> 　ファイル名の記載。日本語対応
+</I>&gt;<i> 
+</I>&gt;<i> その他アイデア・ヒントがあれば教えて下さい。
+</I>&gt;<i> 
+</I>&gt;<i> よろしくお願いします。
+</I>&gt;<i> 
+</I>&gt;<i> --------
+</I>&gt;<i> 追伸
+</I>&gt;<i> 　デブサミ参加の皆さんお手伝いできなくてすみません。
+</I>&gt;<i> 
+</I>&gt;<i> 　２年に１度の健康保険の改正作業をしています。もちろんSqueakで。
+</I>&gt;<i> 上記 imageには、保険請求可能な全薬剤などの情報が満載されています。
+</I>&gt;<i> 
+</I>---
+[:masashi | ^umezawa]
+</PRE>
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003822.html">[Squeak-ja: 3822] 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+	<LI>次の記事 <A HREF="003837.html">[Squeak-ja: 3837] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3834">[ 日付 ]</a>
+              <a href="thread.html#3834">[ スレッド ]</a>
+              <a href="subject.html#3834">[ 件名 ]</a>
+              <a href="author.html#3834">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

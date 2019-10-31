@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7313] Re: ブロック生成のメタプログラミング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207313%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46DF53E9.2090805%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007312.html">
+   <LINK REL="Next"  HREF="007315.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7313] Re: ブロック生成のメタプログラミング</H1>
+    <B>NISHIHARA Satoshi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207313%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46DF53E9.2090805%40sra.co.jp"
+       TITLE="[SML 7313] Re: ブロック生成のメタプログラミング">nishis ＠ zephyr.dti.ne.jp
+       </A><BR>
+    <I>2007年 9月  6日 (木) 22:07:44 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007312.html">[SML 7312] ブロック生成のメタプログラミング
+</A></li>
+        <LI>次の記事 <A HREF="007315.html">[SML 7315] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7313">[ 日付 ]</a>
+              <a href="thread.html#7313">[ スレッド ]</a>
+              <a href="subject.html#7313">[ 件名 ]</a>
+              <a href="author.html#7313">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Squeak-ja にも Cc: します．全文引用ですみません．
+
+え〜，Symbol&gt;&gt;asBlock と Symbol&gt;&gt;asBlockFor: をフォーマットしただけで
+す． SequenceableCollection&gt;&gt;with:collect: は Squeak オリジナルのを使い
+ます．他は Collection&gt;&gt;fold: を定義しました．人の褌で何とやらです (笑)．
+
+on 07.9.6 10:12 AM, AOKI Atsushi wrote:
+&gt;<i> ＳＲＡ先端技術研究所の青木です。
+</I>&gt;<i> 
+</I>&gt;<i> じゅんメーリングリストの話題をＳＭＬにも流すことにしました。
+</I>&gt;<i> 
+</I>&gt;<i> ブロック生成の例として、シンボルが asBlock / asBlockFor: の
+</I>&gt;<i> メッセージを理解できるようにするプログラムを添付します。。
+</I>&gt;<i> 
+</I>&gt;<i> 似たようなプログラムがちらほらと存在するのですが、どれもベタ
+</I>&gt;<i> なプログラムでエレガントさに欠けますので、ユニバーサル・メッ
+</I>&gt;<i> セージ（万能関数）を用いたメタプログラミング（高階関数）手法
+</I>&gt;<i> で実装しておきました。
+</I>&gt;<i> 
+</I>&gt;<i> ＃VisualWorks のプログラムですが、Squeak でも動作することを
+</I>&gt;<i> ＃西原さんが確かめてくれています。
+</I>&gt;<i> 
+</I>&gt;<i> 伝言選択子（メッセージ・セレクタ）シンボルに対して用いるのが
+</I>&gt;<i> 適切です。使い方は以下のようになります。
+</I>&gt;<i> 
+</I>&gt;<i> #size asBlock
+</I>&gt;<i> 
+</I>&gt;<i> #@ asBlock
+</I>&gt;<i> 
+</I>&gt;<i> #x:y: asBlock
+</I>&gt;<i> 
+</I>&gt;<i> #x:y: asBlockFor: Point
+</I>&gt;<i> 
+</I>&gt;<i> どんなブロックが生成されているのかは、逆コンパイルをしてみれ
+</I>&gt;<i> ば判明します。
+</I>&gt;<i> 
+</I>&gt;<i> #size asBlock method decompiledSource
+</I>&gt;<i> ==&gt; '
+</I>&gt;<i> [:t1 |
+</I>&gt;<i> | t2 |
+</I>&gt;<i> t2 := Array new: 0.
+</I>&gt;<i> t1 perform: #size withArguments: t2]'
+</I>&gt;<i> 
+</I>&gt;<i> #@ asBlock method decompiledSource
+</I>&gt;<i> ==&gt; '
+</I>&gt;<i> [:t1 :t2 |
+</I>&gt;<i> | t3 |
+</I>&gt;<i> (t3 := Array new: 1) at: 1 put: t2.
+</I>&gt;<i> t1 perform: #@ withArguments: t3]'
+</I>&gt;<i> 
+</I>&gt;<i> #x:y: asBlock method decompiledSource
+</I>&gt;<i> ==&gt; '
+</I>&gt;<i> [:t1 :t2 :t3 |
+</I>&gt;<i> | t4 |
+</I>&gt;<i> (t4 := Array new: 2) at: 1 put: t2.
+</I>&gt;<i> t4 at: 2 put: t3.
+</I>&gt;<i> t1 perform: #x:y: withArguments: t4]'
+</I>&gt;<i> 
+</I>&gt;<i> (#x:y: asBlockFor: Point) method decompiledSource
+</I>&gt;<i> ==&gt; '
+</I>&gt;<i> [:t1 :t2 |
+</I>&gt;<i> | t3 |
+</I>&gt;<i> (t3 := Array new: 2) at: 1 put: t1.
+</I>&gt;<i> t3 at: 2 put: t2.
+</I>&gt;<i> self perform: #x:y: withArguments: t3]'
+</I>&gt;<i> 
+</I>&gt;<i> 伝言選択子としてのシンボルがブロックになる効用は、次のような
+</I>&gt;<i> 典型的な場合が考えられます。
+</I>&gt;<i> 
+</I>&gt;<i> (0 to: 9) select: #even asBlock
+</I>&gt;<i> ==&gt; #(0 2 4 6 8)
+</I>&gt;<i> 
+</I>&gt;<i> (0 to: 9) reject: #even asBlock
+</I>&gt;<i> ==&gt; #(1 3 5 7 9)
+</I>&gt;<i> 
+</I>&gt;<i> (0 to: 9) collect: #even asBlock
+</I>&gt;<i> ==&gt; #(true false true false true false true false true false)
+</I>&gt;<i> 
+</I>&gt;<i> #('asaoka' 'aoki') collect: #size asBlock
+</I>&gt;<i> ==&gt; #(6 4)
+</I>&gt;<i> 
+</I>&gt;<i> #(0 2 4 6 8) with: #(1 3 5 7 9) collect: #@ asBlock
+</I>&gt;<i> ==&gt; #(<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">0 ＠ 1</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">2 ＠ 3</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">4 ＠ 5</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">6 ＠ 7</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">8 ＠ 9</A>)
+</I>&gt;<i> 
+</I>&gt;<i> #(0 2 4 6 8) with: #(1 3 5 7 9) collect: (#x:y: asBlockFor: Point)
+</I>&gt;<i> ==&gt; #(<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">0 ＠ 1</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">2 ＠ 3</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">4 ＠ 5</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">6 ＠ 7</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">8 ＠ 9</A>)
+</I>&gt;<i> 
+</I>&gt;<i> #(0 2 4 6 8) fold: #+ asBlock
+</I>&gt;<i> ==&gt; 20
+</I>&gt;<i> 
+</I>&gt;<i> #(1 3 5 7 9) fold: #* asBlock
+</I>&gt;<i> ==&gt; 945
+</I>&gt;<i> 
+</I>&gt;<i> #(12 21 -19) inject: 9999 into: #min: asBlock
+</I>&gt;<i> ==&gt; -19
+</I>&gt;<i> 
+</I>&gt;<i> #(12 21 -19) inject: -9999 into: #max: asBlock
+</I>&gt;<i> ==&gt; 21
+</I>&gt;<i> 
+</I>&gt;<i> 今、ある人たちと協力して、この機構を VisualWorks の新バージョ
+</I>&gt;<i> ンに導入しよう、というロビー活動をしてます。ぜひ Squeak でも。
+</I>&gt;<i> 
+</I>&gt;<i> asBlock / asBlockFor: のメッセージに応えられる他のオブジェク
+</I>&gt;<i> トの候補としては Message / MessageSend / BlockClosure などの
+</I>&gt;<i> オブジェクトたちがあげられると思います。
+</I>&gt;<i> 
+</I>&gt;<i> Smalltalk はメタプログラミングが気軽に（あまりにあっけなく）
+</I>&gt;<i> できるので、プログラマに備わっているファンタジー創世の能力が
+</I>&gt;<i> 刺激され、増幅されることがしばしばでしょう。
+</I>&gt;<i> 
+</I>&gt;<i> また、メタプログラミングはスーパープログラマへの道です。自己
+</I>&gt;<i> 相似の中に入ってフラクタルな次元に遊ぶ、という感じになります。
+</I>&gt;<i> 
+</I>&gt;<i> このように言及しても、成長段階にあるプログラマには通じないで
+</I>&gt;<i> しょうから、C プログラミングの状況で、誤解を恐れずに翻訳する
+</I>&gt;<i> と、おおよそ以下のようになると思います。
+</I>&gt;<i> 
+</I>&gt;<i> 今、ここに「test.c」というプログラムがあったとします。この実
+</I>&gt;<i> 行可能プログラム「test」が走行している真っ只中でやっているこ
+</I>&gt;<i> とは、走行状況に応じて「subs.c」というソースコードを創り出し、
+</I>&gt;<i> それをコンパイル＆リンクするための「Makefile」も創り出してお
+</I>&gt;<i> いて「make」を起動（fork:dup&amp;exec&amp;wait）させ、「subs」という
+</I>&gt;<i> 実行可能プログラムを獲得します。そして最後に「subs」を起動し、
+</I>&gt;<i> その実行結果をもらって、「test」が走行し続けるというものです。
+</I>&gt;<i> もちろん「subs.c」や「Makefile」そして「subs」などは跡形も無
+</I>&gt;<i> く（unlink）しておくのは当然のこと。
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i> R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+</I>&gt;<i> 
+</I>
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    <A HREF="http://www.zephyr.dti.ne.jp/~nishis/">http://www.zephyr.dti.ne.jp/~nishis/</A>
+--------------------------------------------
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: BlockGeneration-Tests.1.cs
+URL:  <A HREF="http://www.akademia.co.jp/pipermail/sml/attachments/20070906/f122ee32/BlockGeneration-Tests.1.asc">http://www.akademia.co.jp/pipermail/sml/attachments/20070906/f122ee32/BlockGeneration-Tests.1.asc</A>
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: BlockGeneration.1.cs
+URL:  <A HREF="http://www.akademia.co.jp/pipermail/sml/attachments/20070906/f122ee32/BlockGeneration.1.pot">http://www.akademia.co.jp/pipermail/sml/attachments/20070906/f122ee32/BlockGeneration.1.pot</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007312.html">[SML 7312] ブロック生成のメタプログラミング
+</A></li>
+	<LI>次の記事 <A HREF="007315.html">[SML 7315] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7313">[ 日付 ]</a>
+              <a href="thread.html#7313">[ スレッド ]</a>
+              <a href="subject.html#7313">[ 件名 ]</a>
+              <a href="author.html#7313">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

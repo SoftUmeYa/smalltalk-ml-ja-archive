@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4081] Re: Linux版Scratch1.3の楽器音について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204081%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCJE4zWjRvMjskSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=4927957C.40002%40mx2.ttcn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004079.html">
+   <LINK REL="Next"  HREF="004082.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4081] Re: Linux版Scratch1.3の楽器音について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204081%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCJE4zWjRvMjskSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=4927957C.40002%40mx2.ttcn.ne.jp"
+       TITLE="[Squeak-ja: 4081] Re: Linux版Scratch1.3の楽器音について">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 11月 25日 (火) 02:26:18 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004079.html">[Squeak-ja: 4079] Linux版Scratch1.3の楽器音について
+</A></li>
+        <LI>次の記事 <A HREF="004082.html">[Squeak-ja: 4082] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4081">[ 日付 ]</a>
+              <a href="thread.html#4081">[ スレッド ]</a>
+              <a href="subject.html#4081">[ 件名 ]</a>
+              <a href="author.html#4081">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+今の段階では、OLPC XOも含めてLinux版では楽器の音は鳴らないようです。
+大島さんがJohnさんに聞いてくれているようなので、もしかしたらなにか分かるかもしれません。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2008/11/22 14:15 yhousako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt;:
+&gt;<i> 宝迫＠所沢市立小学校教員です．
+</I>&gt;<i>
+</I>&gt;<i> 毎度お世話になっております．m(_ _)m
+</I>&gt;<i>
+</I>&gt;<i> 下記のサイトでLinux版のScratch1.3のインストーラを見つけて使ってみました．
+</I>&gt;<i> <A HREF="http://www.notesmine.com/scratch_installer">http://www.notesmine.com/scratch_installer</A>
+</I>&gt;<i>
+</I>&gt;<i> Win版のScratchを使わなくて良くなった分、少し手間がかからなくなりました
+</I>&gt;<i> が、それでもXOのPluginが必要でした．（顛末は↓）
+</I>&gt;<i> <A HREF="http://4oc.blogspot.com/2008/11/linuxscratch13.html">http://4oc.blogspot.com/2008/11/linuxscratch13.html</A>
+</I>&gt;<i>
+</I>&gt;<i> さて本題ですが、このところ、KNOPPIXでScratchを動かす実験をしているのです
+</I>&gt;<i> が、「楽器音が鳴らない」という現象に遭遇してしまい、頭を悩ませております．
+</I>&gt;<i>
+</I>&gt;<i> 「ニャー」を鳴らすことはできますし、スプライトの「音」タグから
+</I>&gt;<i> media/sounds内の音のファイルを読み込んで鳴らすこともできます．しかし、
+</I>&gt;<i> 「○の音符を○拍鳴らす」や「○のドラムを○拍鳴らす」だと音が出ません．
+</I>&gt;<i>
+</I>&gt;<i> 同じことをMacでやってみると、問題なく音が鳴ります．聞こえてくる音に聞き
+</I>&gt;<i> 覚えがあるので、もしかすると、Scratchからシステム標準のMIDI音源をコント
+</I>&gt;<i> ロールして鳴らしているのではないかと思った次第です．
+</I>&gt;<i>
+</I>&gt;<i> この理解に間違いがないのだとすると、Linuxで楽器音を鳴らすためには、MIDI
+</I>&gt;<i> 音源の導入からやらないとダメなのだろうと考えています．
+</I>&gt;<i> ＃実は、別の需要でMIDI音源の導入に取り組みましたが、挫折をしたままになっ
+</I>&gt;<i> ております．orz
+</I>&gt;<i>
+</I>&gt;<i> これまでの私の理解の中に、「それは違う」ということがありましたらご指摘頂
+</I>&gt;<i> ければ幸いです．また、Linux版のScratchで楽器音を鳴らすための良いアイデア
+</I>&gt;<i> などがございましたら、アドバイス頂けるとありがたいです．お世話になってば
+</I>&gt;<i> かりで恐縮ですが、よろしくお願い致します．
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------------
+</I>&gt;<i> 寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+</I>&gt;<i> みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+</I>&gt;<i> 指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+</I>&gt;<i> 全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+</I>&gt;<i> つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004079.html">[Squeak-ja: 4079] Linux版Scratch1.3の楽器音について
+</A></li>
+	<LI>次の記事 <A HREF="004082.html">[Squeak-ja: 4082] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4081">[ 日付 ]</a>
+              <a href="thread.html#4081">[ スレッド ]</a>
+              <a href="subject.html#4081">[ 件名 ]</a>
+              <a href="author.html#4081">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

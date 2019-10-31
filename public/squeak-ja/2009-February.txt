@@ -1,0 +1,498 @@
+From umejava ＠ mars.dti.ne.jp  Sat Feb  7 13:04:05 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Feb 12 11:09:28 2009
+Subject: [Squeak-ja: 4149] 「SeasideへGO!!」の第四回掲載されました
+Message-ID: <JT200902071304057.6999406@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、「Seaside へ GO!!」の第四回が「オブジェクトの広場」に掲載されました。
+
+今回はOmniBaseを使ったデータベース接続編です。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/seaside4/index.html
+
+#GlorpによるPostgreSQLへの接続は次回です。いま執筆中です。
+
+SeasideJOnePlusDBを使ってすぐに試すことができます。
+http://swikis.ddo.jp/umejava/SeasideJOnePlus#3
+
+お楽しみ下さい。
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Wed Feb 11 14:52:46 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Feb 12 11:32:55 2009
+Subject: [Squeak-ja: 4150] デブサミ2009は明日、明後日(2/12, 13)
+Message-ID: <2d5d52a80902102152q966719dpbbefc5d85b146610@mail.gmail.com>
+
+こんにちは、阿部です。
+
+先日お知らせしたデブサミ2009が明日、明後日(2/12, 13)にせまりました。
+http://www.smalltalk.jp/pipermail/squeak-ja/2009-January/004131.html
+
+出張! Smalltalk勉強会は2/12の13:10-14:00です。
+http://www.smalltalk.jp/pipermail/squeak-ja/2009-January/004148.html
+
+ブース展示は終日行っています(勉強会の時間以外)。
+多数のご来場をお待ちしております。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From sonoda ＠ laptop-jp.org  Wed Feb 11 19:55:12 2009
+From: sonoda ＠ laptop-jp.org (Y.Sonoda)
+Date: Thu Feb 12 11:34:04 2009
+Subject: [Squeak-ja: 4151] Re: デブサミ2009は明日、明後日(2/12, 13)
+In-Reply-To: <2d5d52a80902102152q966719dpbbefc5d85b146610@mail.gmail.com>
+References: <2d5d52a80902102152q966719dpbbefc5d85b146610@mail.gmail.com>
+Message-ID: <7f3aeb4c0902110255g626d9793s11d4168aacb7e425@mail.gmail.com>
+
+ご無沙汰をしております、苑田です。
+
+金曜日に別件で上京いたしますので、
+時間を見つけてブースに顔を出します。
+残念ながらセミナーの方は申し込みできませんでした（涙）
+
+2009/02/11 14:52 Kazuhiro ABE <abee@squeakland.jp>:
+> こんにちは、阿部です。
+>
+> 先日お知らせしたデブサミ2009が明日、明後日(2/12, 13)にせまりました。
+> http://www.smalltalk.jp/pipermail/squeak-ja/2009-January/004131.html
+>
+> 出張! Smalltalk勉強会は2/12の13:10-14:00です。
+> http://www.smalltalk.jp/pipermail/squeak-ja/2009-January/004148.html
+>
+> ブース展示は終日行っています(勉強会の時間以外)。
+> 多数のご来場をお待ちしております。
+>
+>  //abee
+>
+From umejava ＠ mars.dti.ne.jp  Sun Feb 15 21:53:52 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Feb 15 21:54:06 2009
+Subject: [Squeak-ja: 4152] 第6回Smalltalk勉強会のお知らせ
+Message-ID: <JV200902152153529.1028046@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+デブサミ2009で行われた出張編ですが、人数は少ないながらも
+みっちりとマンツーマンでSmalltalkができました。わきあいあいと良い
+雰囲気のセッションであったと思います。
+
+さて、定例の勉強会のお知らせです。今回は変則的に水曜日です。
+
+日時: 2009/2/25(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai6kaismalltalkbenkyoukai
+
+テーマは「GUIアプリを作ってみよう」です。
+
+Web等を見るとクラシカルなMVCの記述ばかりが目につき、VisualWorksで
+導入されているモダンなMVCの言及が少ないように思えます。たいそう
+クールなのにこれはもったいないです。
+
+そこでVWのアプリケーションモデルを中心として、現在のSmalltalkでの
+GUIの作り方に焦点を当てることにしました。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Wed Feb 18 13:35:46 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Feb 18 13:36:09 2009
+Subject: [Squeak-ja: 4153] 教育用ビジュアル言語「Scratch」が変える"学び"
+Message-ID: <2d5d52a80902172035i47f3efbeid7f9c9f559a4524f@mail.gmail.com>
+
+こんにちは、阿部です。
+技術評論社のSoftware Design 2009年3月号に表題の記事を書きました。サブタイトルは「子どもたちが"学ぶことを学ぶ"ための機能と設計理念」です。
+
+ 「ブロックを組み合わせることで処理を作っていく教育用ビジュアル言語「Scratch」は，子どもが「学ぶことを学ぶ」ために設計されています．本稿で，仕様や機能を紹介しながら解説します．」
+
+掲載誌がエンジニア向けなのでそういう話も多少ありますが、Scratchの概要や内外の状況をまとめたものになっていると思います。
+本日発売(2/18)ですので、よろしければお読みください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Wed Feb 18 15:58:23 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Feb 18 15:58:32 2009
+Subject: [Squeak-ja: 4154] Squeakland.jp 一時停止のお知らせ
+Message-ID: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+
+こんにちは、阿部です。
+Squeakland.jpのホスティングをしてもらっているアカデミアシステムズさんから、サービス一時停止の連絡がありましたので、お知らせします。
+
+１.日 時：2009年3月8日(日)　7:30 〜 13:30
+２.内 容：電源設備の定期点検によるサービスの停止
+３.対 象：Squeaklandサイト( http://squeakland.jp/ )
+
+ご迷惑をおかけしますが、よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Thu Feb 19 17:16:06 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Feb 19 17:16:18 2009
+Subject: [Squeak-ja: 4155] Re: オープンソースカンファレンス2009 Tokyo/Spring
+In-Reply-To: <2d5d52a80901150522x5b6f1deek277e302a2884bab7@mail.gmail.com>
+References: <2d5d52a80901150522x5b6f1deek277e302a2884bab7@mail.gmail.com>
+Message-ID: <2d5d52a80902190016q26c9b3f9w3c5e459161204bd4@mail.gmail.com>
+
+こんにちは、阿部です。
+先日お知らせしたOSC2009 Tokyo/Springは明日(2/20)開催です。
+http://www.smalltalk.jp/pipermail/squeak-ja/2009-January/004130.html
+ただし、私たちの出展は明後日(2/21)のみですので、ご注意ください。
+ブースは5F-Bの左奥です。
+今回は物品販売可なので、アカデミアさんのSqueak関連商品を展示即売します。
+http://www.academianetwork.co.jp/service/index.html
+http://www.academianetwork.co.jp/service/moe/
+ただし、数に限りがありますので、売り切れの場合はご容赦ください。
+それでは、多数のご来場をお待ちしております。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From "土本 (Florian) 強  Thu Feb 19 17:22:35 2009
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Feb 19 17:22:52 2009
+Subject: [Squeak-ja: 4156] Re: 第6回Smalltalk勉強会のお知らせ
+In-Reply-To: <JV200902152153529.1028046@mars.dti.ne.jp>
+References: <JV200902152153529.1028046@mars.dti.ne.jp>
+Message-ID: <20090219171902.57ED.41E77AC0@seagreen.ocn.ne.jp>
+
+　土本です。
+
+メール「[Squeak-ja: 4152] 第6回Smalltalk勉強会のお知らせ」(2009/02/15 21:53) に於いて
+「Masashi Umezawa」 語りて曰く、
+
+Masashi> さて、定例の勉強会のお知らせです。今回は変則的に水曜日です。
+Masashi> 
+Masashi> 日時: 2009/2/25(水) 19:00- (2,3時間程度)
+Masashi> 場所: シンコム・システムズ・ジャパン株式会社
+Masashi> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+Masashi> または「自由自在Squeakプログラミング」
+
+　また参加させていただきます。
+　場所が同じということは、今度こそ電源延長ケーブルを持って行かないとどう
+にもならなさそうですね。
+　VisualWorks7.6NCをインストールした上でPCを持参します。
+
+Masashi> Web等を見るとクラシカルなMVCの記述ばかりが目につき、VisualWorksで
+Masashi> 導入されているモダンなMVCの言及が少ないように思えます。たいそう
+Masashi> クールなのにこれはもったいないです。
+Masashi> 
+Masashi> そこでVWのアプリケーションモデルを中心として、現在のSmalltalkでの
+Masashi> GUIの作り方に焦点を当てることにしました。
+
+　この内容で考えると、Squeakという選択肢はあり得ないと思うのですが、サイ
+ト上の説明では「VisualWorksもしくはSqueak」となっています。一応確認お願
+いします。
+　あと、VisualWorksのバージョンに関しても何か縛りがあるようでしたらお願
+いします。
+
+　では。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+From umejava ＠ mars.dti.ne.jp  Thu Feb 19 22:09:12 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Feb 19 22:09:26 2009
+Subject: [Squeak-ja: 4157] Re: 第6回Smalltalk勉強会のお知らせ
+In-Reply-To: <20090219171902.57ED.41E77AC0@seagreen.ocn.ne.jp>
+References: <JV200902152153529.1028046@mars.dti.ne.jp>
+	<20090219171902.57ED.41E77AC0@seagreen.ocn.ne.jp>
+Message-ID: <JL200902192209124.1837593@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+参加表明ありがとうございます。東京のSmalltalk勉強会は緩い感じを目指して
+いるので、正直テーマにはそれほどこだわっていません。
+
+VWのGUIフレームワークの話は初心者の方には難しいと思います。Smalltalk
+がまったく初めてという方も退屈しないように、個別の対応ができたりする
+のが少人数の強みと思っています。
+
+ということでSqueakでMorphicをしていてもかまわないのです。逆に興味がある
+トピックを挙げていただけると、運営側としては非常に助かります。
+
+ではでは。
+
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+> 　土本です。
+> 
+> メール「[Squeak-ja: 4152] 第6回Smalltalk勉強会のお知らせ」(2009/02/15 21:53) に於いて
+> 「Masashi Umezawa」 語りて曰く、
+> 
+> Masashi> さて、定例の勉強会のお知らせです。今回は変則的に水曜日です。
+> Masashi> 
+> Masashi> 日時: 2009/2/25(水) 19:00- (2,3時間程度)
+> Masashi> 場所: シンコム・システムズ・ジャパン株式会社
+> Masashi> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> Masashi> または「自由自在Squeakプログラミング」
+> 
+> 　また参加させていただきます。
+> 　場所が同じということは、今度こそ電源延長ケーブルを持って行かないとどう
+> にもならなさそうですね。
+> 　VisualWorks7.6NCをインストールした上でPCを持参します。
+> 
+> Masashi> Web等を見るとクラシカルなMVCの記述ばかりが目につき、VisualWorksで
+> Masashi> 導入されているモダンなMVCの言及が少ないように思えます。たいそう
+> Masashi> クールなのにこれはもったいないです。
+> Masashi> 
+> Masashi> そこでVWのアプリケーションモデルを中心として、現在のSmalltalkでの
+> Masashi> GUIの作り方に焦点を当てることにしました。
+> 
+> 　この内容で考えると、Squeakという選択肢はあり得ないと思うのですが、サイ
+> ト上の説明では「VisualWorksもしくはSqueak」となっています。一応確認お願
+> いします。
+> 　あと、VisualWorksのバージョンに関しても何か縛りがあるようでしたらお願
+> いします。
+> 
+> 　では。
+> 
+> !
+> 土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+>                 blog:  'http://d.hatena.ne.jp/Florian/'
+>                 webto:   'http://florianswiki.dyndns.org/Web/'
+> openInWorld. "do it."
+> !
+
+
+
+---
+[:masashi | ^umezawa]
+From kohfow ＠ mbox.kyoto-inet.or.jp  Thu Feb 19 23:41:18 2009
+From: kohfow ＠ mbox.kyoto-inet.or.jp (S.Ihara)
+Date: Thu Feb 19 23:41:24 2009
+Subject: [Squeak-ja: 4158] Scratch,Pico Board　について
+Message-ID: <499D6F8E.5000609@mbox.kyoto-inet.or.jp>
+
+毎度「配信」ありがとうございます
+京都のkohfow（鯤鵬）と申します
+ど素人ですが、
+Vista,vostro 200ですが、主題「ボ−ド」を応用して、、
+Ｒｕｂｙ（Ｃ　の拡張）で、「簡単なメカ」を動かすことが、
+できるでしょうか？
+１）例えば、名詞ホルダ２〜３連：「ロ−タリ・インデックス」試作
+２）カメラを横におく
+３）「スライド・ベアリング」方式で、「軸方向」に動かす
+４）「廻す」
+５）「ボード」は、「改造？」、「ドライバ−」新規に開発
+６）「特許」に触れない範囲で、「ハ−ド」、「ドライバ」
+　　を開発
+７）「デスク・トップ」の「お気に入り」ホルダに、名詞、画像を取り込む
+---------------------------------------------------------
+５）の「ドライバ−」は、「バイナリ」を私が読めないので、
+　　「アセンブル」等は「試行錯誤？」かも
+　　Ｒｕｂｙは今年中に、「国際化」、
+　　来年、国内７〜８拠点（ソフトハウス）の展開が、
+　　進むと思われる
+さて、果たして、「デモ」が、少しは「前進」するでしょうか？
+気楽に、「ご意見」、「ご指導」でもお寄せください
+kohfow@mbox.kyoto-inet.or.jp
+bzq04460@nifty.com
+「Ｆａｎｕｃ　社」の指導の下に、全自動「ＮＣ単能機」を、
+作って、客先に納めたことはあります
+更に、某機械メ−カで、「オ−ル：Ｚ−８０」で、作られた、
+「ライン」（ハンド・リング）を、「改造等」をした事あり
+よろしくおねがいいたします
+　　
+From "土本 (Florian) 強  Fri Feb 20 11:00:04 2009
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Fri Feb 20 11:00:22 2009
+Subject: [Squeak-ja: 4159] Re: 第6回Smalltalk勉強会のお知らせ
+In-Reply-To: <JV200902152153529.1028046@mars.dti.ne.jp>
+References: <JV200902152153529.1028046@mars.dti.ne.jp>
+Message-ID: <20090220104427.C546.41E77AC0@seagreen.ocn.ne.jp>
+
+　土本です。
+
+メール「[Squeak-ja: 4152] 第6回Smalltalk勉強会のお知らせ」(2009/02/15 21:53) に於いて
+「Masashi Umezawa」 語りて曰く、
+
+Masashi> さて、定例の勉強会のお知らせです。今回は変則的に水曜日です。
+Masashi> 
+Masashi> 日時: 2009/2/25(水) 19:00- (2,3時間程度)
+Masashi> 場所: シンコム・システムズ・ジャパン株式会社
+Masashi> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+Masashi> または「自由自在Squeakプログラミング」
+
+　せっかくですので、「Googleカレンダー」の「IT勉強会カレンダー」に掲載し
+ていただくというのはどうでしょう。
+
+	http://d.hatena.ne.jp/hanazukin/20080603/1212461856
+
+　購読者数は多いようですし、Smalltalk文化圏以外の方にも興味を持ってもら
+えるかもしれません。
+
+　大変に余談ですが、この間、いつも講師をしているゲーム学校の授業でちょろっ
+とOLPC-eToysをつかってSmalltalkを触らせました。blogを見ている方には判る
+かもしれませんが、素数を求めるアルゴリズムをいろんな言語でやろうというネ
+タでしたが、学生達は課題が終わったあとも「オブジェクトのカタログ」からゲー
+ムを引っ張り出したり、「ヴューワ」ハロを触ってしまって混乱したり、お約束
+の「回転」ハロで受けたりしていました。
+　ゲーム学校に来ているレベルの人でこうなんだから、小学生達が触り倒すと収
+拾が付かなくなるんだろうな、と何となく思いました。いえ、さわり倒すこと自
+体はいいことなのですが。
+
+　では。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+From mutoh ＠ openedu.org  Fri Feb 20 19:33:22 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Fri Feb 20 19:33:38 2009
+Subject: [Squeak-ja: 4160] Re: Scratch,Pico Board　について
+In-Reply-To: <499D6F8E.5000609@mbox.kyoto-inet.or.jp>
+References: <499D6F8E.5000609@mbox.kyoto-inet.or.jp>
+Message-ID: <86y6w1l7nx.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+At Thu, 19 Feb 2009 23:41:18 +0900,
+"S.Ihara" <kohfow@mbox.kyoto-inet.or.jp> wrote:
+> 京都のkohfow（鯤鵬）と申します
+
+ご近所ですね;-)
+
+> ど素人ですが、
+> Vista,vostro 200ですが、主題「ボ−ド」を応用して、、
+> Ｒｕｂｙ（Ｃ　の拡張）で、「簡単なメカ」を動かすことが、
+> できるでしょうか？
+
+すいません、ちょっと内容が私には分かりにくいのですが、
+PicoBoardは入力デバイスばかりだと思います。
+
+で、PicoBoard自体の技術情報は、
+	http://scratch.mit.edu/files/scratchboard/ScratchBoard_Tech_InfoR1.pdf
+をご参照ください。
+
+> １）例えば、名詞ホルダ２〜３連：「ロ−タリ・インデックス」試作
+> ２）カメラを横におく
+  (snip)
+
+この様な、出力デバイスを使うのでしたら、最近では以下のようなものが流行
+りかなと思います。
+- Gainer	http://gainer.cc/
+- Arduino	http://arduino.cc/
+
+Gainerでしたら、サーボが動かせるモード(やマトリックスLEDを表示でいるモー
+ドも)を持つGainer mini(http://gainer-mini.jp/)を使うのも手かなと。
+
+で、Gainerでしたら、
+Squeak+Gainer(http://yengawa.homedns.org:8080/seaside/ypier/Projects/SqueakGainer)
+を使って、Squeakでプログラムするのもいいかなと;-)
+
+参考になっているかどうか、分かりませんが…
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・にんじんだもの、赤くもなればあまくもなる
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+From umejava ＠ mars.dti.ne.jp  Fri Feb 20 23:12:06 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Feb 20 23:12:29 2009
+Subject: [Squeak-ja: 4161] Re: 第6回Smalltalk勉強会のお知らせ
+In-Reply-To: <20090220104427.C546.41E77AC0@seagreen.ocn.ne.jp>
+References: <JV200902152153529.1028046@mars.dti.ne.jp>
+	<20090220104427.C546.41E77AC0@seagreen.ocn.ne.jp>
+Message-ID: <JJ200902202312064.8162296@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 　せっかくですので、「Googleカレンダー」の「IT勉強会カレンダー」に掲載し
+> ていただくというのはどうでしょう。
+> 
+>   http://d.hatena.ne.jp/hanazukin/20080603/1212461856
+> 
+> 　購読者数は多いようですし、Smalltalk文化圏以外の方にも興味を持ってもら
+> えるかもしれません。
+
+実は毎回載せていただいています。項目が多いので埋もれてしまうのかも
+しれませんがよく見るとあります。^^)
+
+また、Smalltalk-users.jpのカレンダーのページからも知ることが出来ます。
+
+http://www.smalltalk-users.jp/Home/%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC
+
+> 　大変に余談ですが、この間、いつも講師をしているゲーム学校の授業でちょろっ
+> とOLPC-eToysをつかってSmalltalkを触らせました。blogを見ている方には判る
+> かもしれませんが、素数を求めるアルゴリズムをいろんな言語でやろうというネ
+> タでしたが、学生達は課題が終わったあとも「オブジェクトのカタログ」からゲー
+> ムを引っ張り出したり、「ヴューワ」ハロを触ってしまって混乱したり、お約束
+> の「回転」ハロで受けたりしていました。
+> 　ゲーム学校に来ているレベルの人でこうなんだから、小学生達が触り倒すと収
+> 拾が付かなくなるんだろうな、と何となく思いました。いえ、さわり倒すこと自
+> 体はいいことなのですが。
+
+このあたりをうまくコントロールしているのが、Scratchですね。
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+From kuwatani ＠ akademia.co.jp  Tue Feb 24 20:28:18 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Tue Feb 24 20:28:22 2009
+Subject: [Squeak-ja: 4162] メーリングリスト一時停止のお知らせ
+In-Reply-To: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+References: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+Message-ID: <49A3D9D2.1080009@akademia.co.jp>
+
+Squeak-jaメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+既に阿部さんからお知らせが出ているSqueakland.jpのサービス停止に合わせて
+同時刻，本メーリングリストもサービスを一時停止いたします．
+
+メーリングリストが復旧次第お知らせいたします．
+ご迷惑をおかけしますが，よろしくお願いします．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> Squeakland.jpのホスティングをしてもらっているアカデミアシステムズさんから、サービス一時停止の連絡がありましたので、お知らせします。
+> 
+> １.日 時：2009年3月8日(日)　7:30 〜 13:30
+> ２.内 容：電源設備の定期点検によるサービスの停止
+> ３.対 象：Squeaklandサイト( http://squeakland.jp/ )
+> 
+> ご迷惑をおかけしますが、よろしくお願いします。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+
+-- 
+***************************************
+桑谷 剛史(Tsuyoshi KUWATANI)
+アカデミアシステムズ株式会社
+TEL: 0857-21-2360
+FAX: 0857-21-2362
+URL: http://www.akademia.co.jp/
+E-mail: kuwatani@akademia.co.jp
+〒680-0053 鳥取市寺町50番地 NTT寺町ビル
+***************************************

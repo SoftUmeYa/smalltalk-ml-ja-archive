@@ -1,0 +1,595 @@
+From m-asada ＠ sra.co.jp  Tue Jul  1 16:50:51 2008
+From: m-asada ＠ sra.co.jp (Mitsuhiro Asada)
+Date: Tue Jul  1 16:51:12 2008
+Subject: [SML 7368] [ANNOUNCE] ImageSearcher for Java 033
+Message-ID: <20080701165007.8620.5BF4173D@sra.co.jp>
+
+浅田＠SRAです。
+
+「イメージサーチャ for Java（イメージサーチャ for Web）」のバージョン
+033を公開します。
+
+    http://www.sra.co.jp/people/m-asada/Isr4Java/
+    ftp://ftp.sra.co.jp/pub/lang/java/isr4java/
+
+イメージサーチャは、ファイル名やカテゴリ名などの名前やキーワードに頼ら
+ずに、目的の画像を捜し出すプログラムです。特徴的な色(typical color)、平
+均明度(average luminance)、9つの色(nine colors)、広がり(image extent)、
+スペクトル中心(center spectra)、手書き画像(freehand image)などを指定す
+ることにより、画像自身が持っている属性を手掛かりとして、目的の画像を絞
+り込み検索します。
+
+バージョン032からの主な変更点は、以下の通りです。
+
+  ・(modification) 総称(Generics)を導入し、不要なキャストを削除しました。
+
+  ・(modification) AWT版のビューの buildComponent メソッドで、setSize で
+    はなく setPreferredSize を使うようにしました。
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Jul  5 05:45:00 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Jul  5 05:45:14 2008
+Subject: [SML 7369] Re: ブラックブック
+In-Reply-To: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+Message-ID: <486E8BCC.2060300@cc.kyoto-su.ac.jp>
+
+ＳＭＬの皆さんへ
+
+以下の本【ブラックブック】の発刊が近々に迫りました。発売日は
+７月２４日（木）に早まり、おそらく７月２５日（金）には書店に
+並ぶと思われます。
+
+タイトル：Smalltalkで学ぶオブジェクト指向プログラミングの本質
+著者　　：青木淳・浅岡浩子・澤本依里
+出版社　：日経BP社
+
+アマゾンでは予約販売を開始した模様です。下記のウェブページを
+ご覧ください。
+
+http://www.amazon.co.jp/dp/4822283623/
+
+本の表紙（装丁デザイン）の画像も公開されています。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+> ＳＭＬの皆さんへ
+> 
+> 青木＠京都宇治です。お待たせをしています本、580ページで、CD-
+> ROM付属、4,200円+税。装丁デザイン（本の表紙）も決まりました。
+> 黒地に金色の帯になります。
+> 
+> 出版社（日経BP社）としては、コンピュータ書でない雰囲気を醸し
+> 出したい、内容的にもそんなフツーの本ではない、徹底的に荘厳に、
+> というライトモチーフだそうです。
+> 
+> Smalltalk の本はブルーブックやオレンジブックというように、色
+> で呼ばれてきた経緯がありますので、どうぞ「ブラックブック」と
+> 呼んでくださいませ。いよいよ発刊が迫ってきました！請うご期待。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From shinsahara ＠ shinsahara.com  Sat Jul  5 08:34:41 2008
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Sat Jul  5 08:34:53 2008
+Subject: [SML 7370] Re: ブラックブック
+In-Reply-To: <486E8BCC.2060300@cc.kyoto-su.ac.jp>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+	<486E8BCC.2060300@cc.kyoto-su.ac.jp>
+Message-ID: <2457DA94-D5E2-477D-8114-A925C24C9E24@shinsahara.com>
+
+佐原です。
+
+サイン会はいつでしょうか？ :-)
+
+On 2008/07/05, at 5:45, AOKI Atsushi wrote:
+
+> ＳＭＬの皆さんへ
+>
+> 以下の本【ブラックブック】の発刊が近々に迫りました。発売日は
+> ７月２４日（木）に早まり、おそらく７月２５日（金）には書店に
+> 並ぶと思われます。
+>
+> タイトル：Smalltalkで学ぶオブジェクト指向プログラミン 
+> グの本質
+> 著者　　：青木淳・浅岡浩子・澤本依里
+> 出版社　：日経BP社
+>
+> アマゾンでは予約販売を開始した模様です。下記のウェブページを
+> ご覧ください。
+>
+> http://www.amazon.co.jp/dp/4822283623/
+>
+> 本の表紙（装丁デザイン）の画像も公開されています。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+>> ＳＭＬの皆さんへ
+>>
+>> 青木＠京都宇治です。お待たせをしています本、580ページ 
+>> で、CD-
+>> ROM付属、4,200円+税。装丁デザイン（本の表紙） 
+>> も決まりました。
+>> 黒地に金色の帯になります。
+>>
+>> 出版社（日経BP社）としては、コンピュータ書でない雰囲 
+>> 気を醸し
+>> 出したい、内容的にもそんなフツーの本ではない、徹底的に荘厳に、
+>> というライトモチーフだそうです。
+>>
+>> Smalltalk の本はブルーブックやオレンジブックというように、色
+>> で呼ばれてきた経緯がありますので、どうぞ「ブラックブック」と
+>> 呼んでくださいませ。いよいよ発刊が迫ってきました！請うご期待。
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Jul  5 10:40:55 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Jul  5 10:41:12 2008
+Subject: [SML 7371] Re: ブラックブック
+In-Reply-To: <2457DA94-D5E2-477D-8114-A925C24C9E24@shinsahara.com>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>	<486E8BCC.2060300@cc.kyoto-su.ac.jp>
+	<2457DA94-D5E2-477D-8114-A925C24C9E24@shinsahara.com>
+Message-ID: <486ED127.9060004@cc.kyoto-su.ac.jp>
+
+Shin Sahara from Home さんは書きました:
+> > サイン会はいつでしょうか？ :-)
+
+京都上賀茂までお運びくださいまし。
+著者３人のサインが一挙に手に入りますよ。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/
+
+ＳＭＬの皆さんも京都にお越しの際は
+京都産業大学までお運びを。
+
+--- 青木淳
+
+From shinsahara ＠ shinsahara.com  Sat Jul  5 18:30:27 2008
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Sat Jul  5 18:30:39 2008
+Subject: [SML 7372] Re: ブラックブック
+In-Reply-To: <486ED127.9060004@cc.kyoto-su.ac.jp>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>	<486E8BCC.2060300@cc.kyoto-su.ac.jp>
+	<2457DA94-D5E2-477D-8114-A925C24C9E24@shinsahara.com>
+	<486ED127.9060004@cc.kyoto-su.ac.jp>
+Message-ID: <F418C4A7-86B2-422C-A2E6-18FADB2E3CCE@shinsahara.com>
+
+佐原です。
+
+On 2008/07/05, at 10:40, AOKI Atsushi wrote:
+
+> Shin Sahara from Home さんは書きました:
+>>> サイン会はいつでしょうか？ :-)
+>
+> 京都上賀茂までお運びくださいまし。
+> 著者３人のサインが一挙に手に入りますよ。
+
+いつなら良いですか？
+先斗町に飲みに行かないと行けないので、いつ京都へ行こうかと 
+思っていたところです。
+今のところ、11日、18日、25日の金曜日だと行 
+けそうです。
+
+	mk_(<100kg>, <97.5k>g) = mk_(<体重計1>, <体重計2>)
+
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/
+>
+> ＳＭＬの皆さんも京都にお越しの際は
+> 京都産業大学までお運びを。
+>
+> --- 青木淳
+>
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Jul  5 19:02:33 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Jul  5 19:02:51 2008
+Subject: [SML 7373] Re: ブラックブック
+In-Reply-To: <F418C4A7-86B2-422C-A2E6-18FADB2E3CCE@shinsahara.com>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>	<486E8BCC.2060300@cc.kyoto-su.ac.jp>	<2457DA94-D5E2-477D-8114-A925C24C9E24@shinsahara.com>	<486ED127.9060004@cc.kyoto-su.ac.jp>
+	<F418C4A7-86B2-422C-A2E6-18FADB2E3CCE@shinsahara.com>
+Message-ID: <486F46B9.5090705@cc.kyoto-su.ac.jp>
+
+Shin Sahara from Home さんは書きました:
+> いつなら良いですか？
+
+これをＳＭＬを含めてポストしまうところが、伸さんだねぇ〜。
+
+> 今のところ、11日、18日、25日の金曜日だと行けそうです。
+
+７月１１日はダメなので、１８日か、２５日でしょうか…。
+
+--- 青木淳＠
+From shinsahara ＠ shinsahara.com  Sat Jul  5 22:20:27 2008
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Sat Jul  5 22:20:36 2008
+Subject: [SML 7374] Re: ブラックブック
+In-Reply-To: <486F46B9.5090705@cc.kyoto-su.ac.jp>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>	<486E8BCC.2060300@cc.kyoto-su.ac.jp>	<2457DA94-D5E2-477D-8114-A925C24C9E24@shinsahara.com>	<486ED127.9060004@cc.kyoto-su.ac.jp>
+	<F418C4A7-86B2-422C-A2E6-18FADB2E3CCE@shinsahara.com>
+	<486F46B9.5090705@cc.kyoto-su.ac.jp>
+Message-ID: <F614B2A5-AF08-41FB-869C-98FB0BDEC9BC@shinsahara.com>
+
+佐原です。
+
+On 2008/07/05, at 19:02, AOKI Atsushi wrote:
+
+> Shin Sahara from Home さんは書きました:
+>> いつなら良いですか？
+>
+> これをＳＭＬを含めてポストしまうところが、伸さんだねぇ〜。
+
+関数型言語では、Lazyは高級なのです... :-)
+
+>> 今のところ、11日、18日、25日の金曜日だと 
+>> 行けそうです。
+>
+> ７月１１日はダメなので、１８日か、２５日でしょうか…。
+
+では、18日ということで...
+で、どこへ行けば良いのでしょうか？
+
+> --- 青木淳＠
+
+
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Jul  6 02:30:00 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Jul  6 02:30:25 2008
+Subject: [SML 7375] Re: ブラックブック
+In-Reply-To: <F614B2A5-AF08-41FB-869C-98FB0BDEC9BC@shinsahara.com>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>	<486E8BCC.2060300@cc.kyoto-su.ac.jp>	<2457DA94-D5E2-477D-8114-A925C24C9E24@shinsahara.com>	<486ED127.9060004@cc.kyoto-su.ac.jp>
+	<F418C4A7-86B2-422C-A2E6-18FADB2E3CCE@shinsahara.com>
+	<486F46B9.5090705@cc.kyoto-su.ac.jp>
+	<F614B2A5-AF08-41FB-869C-98FB0BDEC9BC@shinsahara.com>
+Message-ID: <486FAF98.1010300@cc.kyoto-su.ac.jp>
+
+Shin Sahara from Home さんは書きました:
+> では、18日ということで...
+> で、どこへ行けば良いのでしょうか？
+
+次のページの
+http://www.cc.kyoto-su.ac.jp/~atsushi/Profile/
+アクセスマップやキャンパスマップをご覧ください。
+
+--- 青木淳＠京都宇治
+
+From umejava ＠ mars.dti.ne.jp  Sat Jul 12 14:17:53 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Jul 12 14:18:02 2008
+Subject: [SML 7376] Smalltalk-users.jp : 日本のSmalltalkユーザのためのハブサイト
+Message-ID: <JE200807121417532.11112734@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+皆さんはプログラミング言語系のハブサイトをご存じでしょうか。
+Googleで検索するとこんな感じです。
+http://www.google.co.jp/search?q=site%3A*-users.jp+%E3%83%8F%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88
+
+これはSmalltalkも同じではないのか?と考え、Smalltalkユーザが簡単に
+情報にアクセスできるようにするためのサイトを作ってみました。
+http://smalltalk-users.jp/
+
+おそらく現在のところはVisualWorksとSqueakのユーザがメインになる
+かと思いますが、それ以外のSmalltalkユーザももちろん歓迎です。
+皆でコラボレーションして、盛り上げていければと思っています。
+ブックマークやカレンダーの編集など、ぜひご協力ください。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Jul 13 04:18:45 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Jul 13 04:19:01 2008
+Subject: [SML 7377] Re: Smalltalk-users.jp : 日本のSmalltalkユーザのためのハブサイト
+In-Reply-To: <JE200807121417532.11112734@mars.dti.ne.jp>
+References: <JE200807121417532.11112734@mars.dti.ne.jp>
+Message-ID: <48790395.70209@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+Masashi Umezawa さんは書きました:
+> これはSmalltalkも同じではないのか?と考え、Smalltalkユーザが簡単に
+> 情報にアクセスできるようにするためのサイトを作ってみました。
+> http://smalltalk-users.jp/
+
+ハブとしてのサイトで、私はフレデリック・スミス（Frederick W.
+Smith）さんを連想しました。ご存じの方々も多いと思いますが…。
+
+彼はイェール大学の経済学部に在学していたときに「荷物をアメリ
+カ全土に一晩で届けるには…」という論文を書きました。輸送機を
+使うとして、何台の飛行機があればいいか…、ということをまじめ
+に考えたのでした。
+
+アメリカの各州から輸送機を飛ばして、荷物を一旦テネシー州のメ
+ンフィスに集め、集まった沢山の荷物の中から、今、飛んできた州
+への荷札が付いている荷物を積んで戻る、というオーバーナイトデ
+リバリー（翌朝配達）構想です。
+
+＃彼の担当教授は、その論文に、Ａランクではなく、Ｃランクを付
+＃けたのだとか…。
+
+いわゆるハブ（網の要：ネットワークのかなめ）こそが広大なアメ
+リカの国土全域をまかなうのに必須だと述べただけでなく、実際に
+やって見せました、フェデックス（フェデラル・エクスプレス）社
+を設立して。
+
+このフェデックス社、確か、Smalltalk (VisualWorks) で荷物の追
+跡を行うトラッキングシステムをいち早く作り上げたはずですよ。
+いまやどこの宅配業者でも当たり前ですけどね。
+
+組織においてハブになる人は能力の如何に関わらずリーダーになり
+ます。だからこそハブに登用する人材を慎重に選出しなければなり
+ません。
+
+それはハブサイトにも言えることですね。梅澤さんが立ち上げてく
+れたハブサイトを佳くしてゆくのは、私たちの手入れですから。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From umejava ＠ mars.dti.ne.jp  Sun Jul 13 20:24:25 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Jul 13 20:24:35 2008
+Subject: [SML 7378] Re: Smalltalk-users.jp : 日本のSmalltalkユーザのためのハブサイト
+In-Reply-To: <48790395.70209@cc.kyoto-su.ac.jp>
+References: <JE200807121417532.11112734@mars.dti.ne.jp>
+	<48790395.70209@cc.kyoto-su.ac.jp>
+Message-ID: <JV200807132024252.429625@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ありがとうございます。まだまだ貧弱なコンテンツではありますが、
+これから充実させていければと思っています。
+
+皆さんもぜひ気軽にサイトの編集者としてご参加ください。
+@smalltalk-users.jpのメールアドレスも使えるようになりますよ。
+
+Go Smalltalk!
+
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+(snip)
+> 
+> それはハブサイトにも言えることですね。梅澤さんが立ち上げてく
+> れたハブサイトを佳くしてゆくのは、私たちの手入れですから。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+---
+[:masashi | ^umezawa]
+From h-asaoka ＠ sra.co.jp  Fri Jul 25 15:07:30 2008
+From: h-asaoka ＠ sra.co.jp (ASAOKA Hiroko)
+Date: Fri Jul 25 15:08:03 2008
+Subject: [SML 7379] ブラックブック申込
+Message-ID: <48896DA2.5050307@sra.co.jp>
+
+こんにちは、浅岡です。
+
+ブラックブックがこの度、発売されることになりました。
+
+タイトル：Smalltalkで学ぶオブジェクト指向プログラミングの本質
+著者　　：青木淳・浅岡浩子・澤本依里
+出版社　：日経BP社
+
+折しも今日はブラックブックが書店に並ぶ日です。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/
+
+アマゾンでも予約販売から通常販売に切り替わりました。
+http://www.amazon.co.jp/dp/4822283623/
+
+
+そこで、
+SMLのメンバーに限り、１人１冊まで
+著者３名のサイン入り
+送料込み \4,000
+で、ご提供しようと思います。
+
+ご希望の方は、メール末尾にある、申込書を記入して
+asaoka@cc.kyoto-su.ac.jp
+宛に送って下さい。
+＃SML自体に返信しないように注意して下さい。
+
+申込書を受け付けた後、本をご用意できる方には
+申込書に記入されたメールアドレスに、振込先の情報を送ります。
+入金確認後、本を発送いたします。
+
+＃申し込みが多い場合は
+＃在庫がそれほどありませんので
+＃ご用意できなくなる可能性はありますが、
+＃ご容赦下さいませ。
+
+--------- 申込書 （宛先：asaoka@cc.kyoto-su.ac.jp）---------
+氏名（フリガナ）：
+住所　　　　　　：〒
+電話番号　　　　：
+メールアドレス　：
+------------------------------------------------------------
+
+-- 
+    浅岡 浩子(ASAOKA Hiroko)
+        http://www.sra.co.jp/people/h-asaoka/
+        mailto:asaoka@cc.kyoto-su.ac.jp
+
+    京都産業大学 青木研究室
+    〒603-8555 京都市北区上賀茂本山
+    1402研究室（１号館４階）
+    TEL:075-705-1506
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Jul 27 07:08:17 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Jul 27 07:08:27 2008
+Subject: [SML 7380] 影絵人形劇
+Message-ID: <488BA051.2050805@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+影絵人形劇の宣伝をさせてください。８月４日（月）１５時半から
+北千住のシアター1010で私の知人が講演を行います。無料ですので、
+ご都合のつく方はぜひどうぞ！
+
+http://www.tera1010.net/
+
+＃プログラミングの影を考える縁（よすが）になるやもしれません。
+
+＃昨日、大阪梅田の書店に平積みされたブラックブックを見ました。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From osamu_hamasaki ＠ nifty.com  Sun Jul 27 10:01:25 2008
+From: osamu_hamasaki ＠ nifty.com (Osamu Hamasaki)
+Date: Sun Jul 27 10:01:40 2008
+Subject: [SML 7381] Re: ブラックブック申込
+In-Reply-To: <48896DA2.5050307@sra.co.jp>
+References: <48896DA2.5050307@sra.co.jp>
+Message-ID: <79EE7CD3-92A6-4898-818A-058ED89FD1AE@nifty.com>
+
+濱崎です。
+
+アマゾンで予約しておきましたら、昨日届きました。
+
+産大まで行って直接皆さんのサインを頂く、という楽しみが
+減らなかったということで (^^)
+
+On 2008/07/25, at 15:07, ASAOKA Hiroko wrote:
+
+> こんにちは、浅岡です。
+>
+> ブラックブックがこの度、発売されることになりました。
+>
+> タイトル：Smalltalkで学ぶオブジェクト指向プログラミン 
+> グの本質
+> 著者　　：青木淳・浅岡浩子・澤本依里
+> 出版社　：日経BP社
+>
+> 折しも今日はブラックブックが書店に並ぶ日です。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/
+>
+> アマゾンでも予約販売から通常販売に切り替わりました。
+> http://www.amazon.co.jp/dp/4822283623/
+>
+>
+> そこで、
+> SMLのメンバーに限り、１人１冊まで
+> 著者３名のサイン入り
+> 送料込み \4,000
+> で、ご提供しようと思います。
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Jul 27 10:12:30 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Jul 27 10:12:47 2008
+Subject: [SML 7382] Re: ブラックブック申込
+In-Reply-To: <79EE7CD3-92A6-4898-818A-058ED89FD1AE@nifty.com>
+References: <48896DA2.5050307@sra.co.jp>
+	<79EE7CD3-92A6-4898-818A-058ED89FD1AE@nifty.com>
+Message-ID: <488BCB7E.1070801@cc.kyoto-su.ac.jp>
+
+Osamu Hamasaki さんは書きました:
+> 濱崎です。
+
+こんにちは、濱崎さん、お久しぶりです、青木＠京都産業大学です。
+日曜日だというのに研究室でプログラミングに励んでおります。
+
+> アマゾンで予約しておきましたら、昨日届きました。
+
+それはそれは祝着至極です。青木節を期待していた方々はちょっと
+物足りない感じがするようですけどね。よく読むと健在であること
+が分かっていただけると思いますよ。:-)
+
+> 産大まで行って直接皆さんのサインを頂く、という楽しみが
+> 減らなかったということで (^^)
+
+ぜひとも、上賀茂（洛北）までお越しくださいませ。３人の著者が
+そろっていますから。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From h-asaoka ＠ sra.co.jp  Wed Jul 30 18:24:39 2008
+From: h-asaoka ＠ sra.co.jp (ASAOKA Hiroko)
+Date: Wed Jul 30 18:24:55 2008
+Subject: [SML 7383] Re: ブラックブック申込
+In-Reply-To: <48896DA2.5050307@sra.co.jp>
+References: <48896DA2.5050307@sra.co.jp>
+Message-ID: <48903357.1050309@sra.co.jp>
+
+こんにちは、浅岡です。
+
+多数の申込み、ありがとうございました。
+ここで、ブラックブック申込みは締め切らせていただきます。
+
+申込みして下さった方々、順次手続きをしております。
+申込みをしたのに、折り返しの連絡がない、
+入金したのに１〜２週間以上経っても本が届かない
+ということなどがありましたら
+再度、ご連絡くださいませ。
+
+-- 
+    浅岡 浩子(ASAOKA Hiroko)
+        http://www.sra.co.jp/people/h-asaoka/
+        mailto:asaoka@cc.kyoto-su.ac.jp
+
+    京都産業大学 青木研究室
+    〒603-8555 京都市北区上賀茂本山
+    1402研究室（１号館４階）
+    TEL:075-705-1506
+
+ASAOKA Hiroko さんは書きました:
+> こんにちは、浅岡です。
+> 
+> ブラックブックがこの度、発売されることになりました。
+> 
+> タイトル：Smalltalkで学ぶオブジェクト指向プログラミングの本質
+> 著者　　：青木淳・浅岡浩子・澤本依里
+> 出版社　：日経BP社
+> 
+> 折しも今日はブラックブックが書店に並ぶ日です。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/
+> 
+> アマゾンでも予約販売から通常販売に切り替わりました。
+> http://www.amazon.co.jp/dp/4822283623/
+> 
+> 
+> そこで、
+> SMLのメンバーに限り、１人１冊まで
+> 著者３名のサイン入り
+> 送料込み \4,000
+> で、ご提供しようと思います。
+> 
+> ご希望の方は、メール末尾にある、申込書を記入して
+> asaoka@cc.kyoto-su.ac.jp
+> 宛に送って下さい。
+> ＃SML自体に返信しないように注意して下さい。
+> 
+> 申込書を受け付けた後、本をご用意できる方には
+> 申込書に記入されたメールアドレスに、振込先の情報を送ります。
+> 入金確認後、本を発送いたします。
+> 
+> ＃申し込みが多い場合は
+> ＃在庫がそれほどありませんので
+> ＃ご用意できなくなる可能性はありますが、
+> ＃ご容赦下さいませ。
+> 
+> --------- 申込書 （宛先：asaoka@cc.kyoto-su.ac.jp）---------
+> 氏名（フリガナ）：
+> 住所　　　　　　：〒
+> 電話番号　　　　：
+> メールアドレス　：
+> ------------------------------------------------------------
+> 

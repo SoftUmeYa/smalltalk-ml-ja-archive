@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2748] Re: Squeakland 2005j 前リリース版公開
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202748%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha2xhbmQgMjAwNWog%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQTAlaiVqITwlOUhHOHgzKxsoQg%3D%3D%3F%3D&In-Reply-To=4390D4F9.6010101%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002747.html">
+   <LINK REL="Next"  HREF="002742.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2748] Re: Squeakland 2005j 前リリース版公開</H1>
+    <B>korakurider</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202748%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha2xhbmQgMjAwNWog%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQTAlaiVqITwlOUhHOHgzKxsoQg%3D%3D%3F%3D&In-Reply-To=4390D4F9.6010101%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 2748] Re: Squeakland 2005j 前リリース版公開">korakurider ＠ yahoo.co.jp
+       </A><BR>
+    <I>2005年 12月  3日 (土) 12:00:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002747.html">[Squeak-ja: 2747] Re: Squeakland 2005j 前リリース版公開
+</A></li>
+        <LI>次の記事 <A HREF="002742.html">[Squeak-ja: 2742] Re: Squeakland 2005j 前リリース版公開
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2748">[ 日付 ]</a>
+              <a href="thread.html#2748">[ スレッド ]</a>
+              <a href="subject.html#2748">[ 件名 ]</a>
+              <a href="author.html#2748">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Korakuriderです、こんにちは。
+
+最初にみなさんへ提案です。
+Mantisだけだと、本家のMantisインスタンス、Mantisシステム
+そのものと区別がつきにくいので、文脈でわかりにくい場合は
+以下のように呼ぶことにしませんか？
+
++ 日本のMantisインスタンスを指す場合には「Mantis-J」
++ 本家のMantisインスタンス（<A HREF="http://bugs.impara.de&#65289;&#12434;&#25351;">http://bugs.impara.de）を指</A>
+す場合には「本家Mantis」:-)とか、「Impars Mantis」とか
++ Mantisシステムを一般的に指す場合は、単に「Mantis」
+
+--- Hideo Kawamura &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kawa90 ＠ yahoo.co.jp</A>&gt; からのメッセージ
+：
+&gt;<i> 川村です。
+</I>&gt;<i> 了解しました。勘違いの類はリポータが問題でないと言うコ
+</I>メント追記で解決済
+&gt;<i> みになるということですね。
+</I>　　そうです。そして誰か（開発者or管理者）が案件の状態を
+判断して、判断結果をresolvedとかclosedステータスをMantis
+に入力して、真の意味の解決済み状態になります。
+
+&gt;<i> ・bug報告と改善提案とを区別して登録したい場合どうすれ
+</I>ばよろしいでしょうか？
+&gt;<i> 　タイトルに「改善提案」と書くとか？−というか使い方が
+</I>わかっていないだけ
+&gt;<i> かも？
+</I>
+　同じ現象をバグと見るか仕様の問題と見るかは、個々の方の
+期待値で変わってくるので、難しいところはありますね。ただ
+ご質問のような、いわゆる「仕様改善/追加」という意味であ
+れば、カテゴリ＝「機能」と入れていただければ、形式的な区
+別はつくと思いますが、どうでしょうか？
+　Tracの記事にも書いたとおり、これから運用方法をまとめて
+皆さんの共通認識にしていく必要があるので、疑問点やご提案
+はどんどんお願いしますね。
+
+
+&gt;<i> 
+</I>&gt;<i> ・Mantisにおいてコード修正があった解決済みとアップデー
+</I>トストリームにパッ
+&gt;<i> チが登録されるタイミングは同期しているのでしょうか？
+</I>　限定された方とお話をした際の共通認識としては、だいたい
+以下のような考えでした。
++ 提案されたパッチで問題が解決できると確認された段階で「
+解決済み」に設定
++ メンテナさん（Scottさん、Mikeさん/Bertさん）にパッチが
+送れられたら、実績をコメントとして追記
++ メンテナさんがパッチを受け入れて、ストリームに流された
+ら、そのパッチの名前をコメントとして追記した上で「完了」
+に設定
+（これも決定事項ではありません）
+
+&gt;<i> 　過去においては、ある程度パッチが出てきたタイミングで
+</I>山宮さんがSqueak-
+&gt;<i> jaに告知をしていたと思いますが、変わるんですか？
+</I>　Nihongo7の時代は、Squeakland本家とは別のアップデートス
+トリーム <A HREF="http://squeakalpha.org/nihongo7/external/updates/">http://squeakalpha.org/nihongo7/external/updates/</A>
+を使っていました。これは日本側で独自に管理していたので、
+そこに山宮さんがパッチを流された際に併せて告知していただ
+いていたと思います。
+　2005jからは、本家のストリーム１つ（正確には squeakalpha,
+squeakland
+の２つ）に統合され、日本独自のストリームがなくなります。
+パッチを受け入れ判断してストリームに流すのは
+Scottさん、Mike
+さん/Bertさんなので、日本側で更新を告知するには、流れた
+ことを誰かがモニタしていて、見つけたら連絡という形になり
+ます。しかも、Mantis-J由来以外のパッチも流れるので、それ
+も含めて告知するためには、流れたパッチを誰かが読み解かな
+いといけません。このあたりを特定のどなたかに負担をかけず
+に回す仕組みは今後の課題ですね。
+
+ただ、今の時点でも
+<A HREF="http://www.squeakland.org/updates/updates.list">http://www.squeakland.org/updates/updates.list</A> 
+や、<A HREF="http://www.squeakalpha.org/updates/updates.list">http://www.squeakalpha.org/updates/updates.list</A>
+をアンテナで見張っていただければ、アップデートストリーム
+に何か流れたかをタイムリーに知ることができますよ。私自身
+はこれで更新を追いかけています。
+
+ではでは
+
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+<A HREF="http://pr.mail.yahoo.co.jp/redribbon/">http://pr.mail.yahoo.co.jp/redribbon/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002747.html">[Squeak-ja: 2747] Re: Squeakland 2005j 前リリース版公開
+</A></li>
+	<LI>次の記事 <A HREF="002742.html">[Squeak-ja: 2742] Re: Squeakland 2005j 前リリース版公開
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2748">[ 日付 ]</a>
+              <a href="thread.html#2748">[ スレッド ]</a>
+              <a href="subject.html#2748">[ 件名 ]</a>
+              <a href="author.html#2748">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

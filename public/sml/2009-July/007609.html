@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7609] Re: クロージャ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207609%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUvJW0hPCU4JWMbKEI%3D%3F%3D&In-Reply-To=e957e4bc0907050340s3df8b038t598e969122b2fbe6%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007608.html">
+   <LINK REL="Next"  HREF="007611.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7609] Re: クロージャ</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207609%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUvJW0hPCU4JWMbKEI%3D%3F%3D&In-Reply-To=e957e4bc0907050340s3df8b038t598e969122b2fbe6%40mail.gmail.com"
+       TITLE="[SML 7609] Re: クロージャ">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 7月  5日 (日) 21:41:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007608.html">[SML 7608] Re: クロージャ
+</A></li>
+        <LI>次の記事 <A HREF="007611.html">[SML 7611] Web Velocity評価版がでています
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7609">[ 日付 ]</a>
+              <a href="thread.html#7609">[ スレッド ]</a>
+              <a href="subject.html#7609">[ 件名 ]</a>
+              <a href="author.html#7609">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+
+2009/07/05 19:40 Hiroshi Umeoka &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">umrlazybind ＠ gmail.com</A>&gt;:
+
+&gt;<i> 濱崎さん
+</I>&gt;<i>
+</I>&gt;<i> 梅岡です。
+</I>&gt;<i> フォローしていただいてありがとうございます。
+</I>&gt;<i> こういうオリジナル言語の作成は楽しいですね。
+</I>&gt;<i> このコードの後半をみて、Smalltalkのメタプログラミングにとても興味が出てきました。
+</I>
+
+はい、とても楽しいです。このところ週末はSmalltalkプログラミング三昧です。
+梅岡さんも楽しいプログラミングをSmalltalkで是非。
+
+ちなみに、インスタンス変数（？）を追加することも出来ました。
+
+---------- ここから ----------
+
+|<i> accountCreater anAccount newBlockCreater newBlock newCopiedValues
+</I>oldCopiedValues |
+accountCreater :=
+[:initialBalance |
+|<i> balance |
+</I>balance := initialBalance.
+(Dictionary new)
+at: #withdraw
+put:
+[:amount |
+balance := balance - amount.
+balance yourself];
+at: #deposit
+put:
+[ :amount |
+balance := balance + amount.
+balance yourself];
+at: #balance
+put:
+[balance yourself];
+yourself].
+
+anAccount := accountCreater value: 1000.
+Transcript clear.
+Transcript cr; show: (anAccount at: #balance) value printString.
+Transcript cr; show: ((anAccount at: #withdraw) value: 400) printString.
+Transcript cr; show: ((anAccount at: #deposit) value: 300) printString.
+
+newBlockCreater :=
+[:initialId |
+|<i> balance id |
+</I>id := initialId.
+[balance := 0.
+id := 0] yourself.  &quot;This is Dummy which trick compiler to make valid
+copiedValues&quot;
+[id yourself]
+yourself].
+
+newBlock := newBlockCreater value: #SML.
+newCopiedValues := newBlock copiedValues.
+oldCopiedValues := (anAccount at: #balance) copiedValues.
+oldCopiedValues
+keysAndValuesDo: [:index :value | newCopiedValues at: index put: value].
+newBlock
+setMethod: newBlock method
+outerContext: (anAccount at: #balance) outerContext
+copiedValues: newCopiedValues.
+anAccount
+do:
+[:block |
+block
+setMethod: block method
+outerContext: block outerContext
+copiedValues: newCopiedValues].
+anAccount at: #id put: newBlock.
+
+Transcript cr; show: (anAccount at: #id) value printString.
+Transcript cr; show: ((anAccount at: #withdraw) value: 200) printString.
+^anAccount
+
+---------- ここまで ----------
+
+コンパイラを騙すコードが少々必要になりましたが、
+他は概ね想定していたとおりでした。
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20090705/1d6ae25b/attachment.html">http://www.smalltalk.jp/pipermail/sml/attachments/20090705/1d6ae25b/attachment.html</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007608.html">[SML 7608] Re: クロージャ
+</A></li>
+	<LI>次の記事 <A HREF="007611.html">[SML 7611] Web Velocity評価版がでています
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7609">[ 日付 ]</a>
+              <a href="thread.html#7609">[ スレッド ]</a>
+              <a href="subject.html#7609">[ 件名 ]</a>
+              <a href="author.html#7609">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

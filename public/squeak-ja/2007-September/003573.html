@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3573] Re: windowXP における起動時，公開時のエラーについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203573%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHdpbmRvd1hQIBskQiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCokMSRrNS9GMDt%2BISQ4eDMrO34kTiUoJWkhPCRLJEQkJCRGGyhC%3F%3D&In-Reply-To=200709040956.AA00348%40kida-xp.hiroshima-u.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003571.html">
+   <LINK REL="Next"  HREF="003572.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3573] Re: windowXP における起動時，公開時のエラーについて</H1>
+    <B>korakurider</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203573%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHdpbmRvd1hQIBskQiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCokMSRrNS9GMDt%2BISQ4eDMrO34kTiUoJWkhPCRLJEQkJCRGGyhC%3F%3D&In-Reply-To=200709040956.AA00348%40kida-xp.hiroshima-u.ac.jp"
+       TITLE="[Squeak-ja: 3573] Re: windowXP における起動時，公開時のエラーについて">korakurider ＠ yahoo.co.jp
+       </A><BR>
+    <I>2007年 9月  5日 (水) 11:22:32 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003571.html">[Squeak-ja: 3571] windowXPにおける起動時，公開時のエラーについて
+</A></li>
+        <LI>次の記事 <A HREF="003572.html">[Squeak-ja: 3572] Re: windowXP における起動時，公開時のエラーについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3573">[ 日付 ]</a>
+              <a href="thread.html#3573">[ スレッド ]</a>
+              <a href="subject.html#3573">[ 件名 ]</a>
+              <a href="author.html#3573">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Korakuriderです、こんにちは。
+御質問の件は、ちゃんとシステムのセキュリティを管理してい
+るところでSqueakをお使いになる際に常に問題になることです
+。どのような運用が最適かは個々のサイトごとに異なるると思
+います。
+先生のところでうまく運用できるようになった時の設定や運用
+経験などを後日このMLで共有していただければ、他の学校の方
+にも参考になると思いますので、もしよろしければお願いいた
+します。
+
+--- Hideaki KIDA &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hkida ＠ hiroshima-u.ac.jp</A>&gt; wrote:
+&gt;<i> この度，非常勤講師として本校に来ている大学院生がSqueak
+</I>を使って
+&gt;<i> プログラミングの学習をしたいということで，学校のPC40台
+</I>に
+&gt;<i> インストール致しました。
+</I>　　インストールされたのは、squeakland.jpにあるものです
+ね？（確認）
+
+&gt;<i> 起動時，また公開（保存？）時にエラーが起こり，公開でき
+</I>ません。
+　　権限が制限されたユーザでSqueakを使おうとして発生する
+可能性がある代表的なエラーは次の３つがあります。
+
+(1) 「c:\program files\squeak\plugin\squeak.ini」が作成
+できない
+　このファイルはsqueakの実行環境をいろいろ設定するもので
+す。（<A HREF="http://squeakvm.org/win32/settings.html">http://squeakvm.org/win32/settings.html</A> に説明があ
+ります。英語で読みにくいですが）
+　squeakが起動される時、このファイルが存在しなければ作成
+しようとしますが、制限ユーザだとこのフォルダに書き込む権
+限がないのでエラーになるはずです。
+　squeakを管理者ユーザでインストールした後、そのまま一回
+管理者ユーザでsqueakを起動してファイルを作成しておけば、
+その後制限つきユーザで起動してもエラーにはなりません。ま
+た、インストール直後にsqueak.iniの内容をカスタマイズして
+おくか、カスタマイズ済みのファイルを置いておけばよいでし
+ょう（後述）。
+
+（２）「c:\program fies\squeak\ユーザ名\squeak.keys」が
+作成できない
+　やはりsqueakが起動される際ファイルがなければ作成しよう
+としてエラーになります。
+squeak.iniの中のSecurityセクションで
+
+　　SecureDirectory=フォルダ
+
+という指定を書けば、squeak.keys用に他の場所を指定できま
+す。ここで制限つきユーザがアクセスできる場所を指定すると
+か、あらかじめsqueak.keysが置いてある場所を指定すればよ
+いでしょう。
+（こちらの指定では環境変数は使えません）
+
+
+（３）「c:\My Squeak\ユーザ名」 フォルダが作成できない
+　Squeakでプロジェクトを保存する場合、いったんこのフォル
+ダにプロジェクトのファイルをまず書き出し、その後に目的の
+公開場所にコピーします。したがってこのフォルダが作成でき
+ないと、（公開先がどこであれ）保存できません。
+squeak.iniの中のSecurityセクションで
+
+　　UserDirectory=フォルダ
+
+という指定を書けば、別の場所を指定できますので、制限つき
+ユーザがアクセスできる場所を指定すればよいでしょう。
+（こちらの指定では環境変数も使用できます）
+
+---------------------------------------
+※カスタマイズ例
+想定：
+　　　ファイル公開の際のローカル保存場所は
+               C:\Documents and Settings\ユーザ
+　
+　　　squeak.keysの場所はカスタマイズせず、管理者ユーザ
+で一度squeakを起動して作成しておく。
+
+---ここから（squeak.iniの末尾にこの内容を貼り付けてくだ
+さい）
+[Security] 
+UserDirectory=%HOMEPATH%
+---ここまで
+
+
+&gt;<i> 生徒には共有サーバに個人の保存場所があり，そちらに保存
+</I>したいと考えています。
+　　もしサーバー上の保存場所をPCにドライブ接続しているの
+でしたら、
+UserDirectoryにその保存場所を直接指定すれば、
+（公開ボタン長押しの「他のサーバーへ公開」ではなく）
+単に「公開」でサーバー上に直接保存できます。
+
+
+ではでは
+/Korakurider
+
+--------------------------------------
+Easy + Joy + Powerful = Yahoo! Bookmarks x Toolbar
+<A HREF="http://pr.mail.yahoo.co.jp/toolbar/">http://pr.mail.yahoo.co.jp/toolbar/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003571.html">[Squeak-ja: 3571] windowXPにおける起動時，公開時のエラーについて
+</A></li>
+	<LI>次の記事 <A HREF="003572.html">[Squeak-ja: 3572] Re: windowXP における起動時，公開時のエラーについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3573">[ 日付 ]</a>
+              <a href="thread.html#3573">[ スレッド ]</a>
+              <a href="subject.html#3573">[ 件名 ]</a>
+              <a href="author.html#3573">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

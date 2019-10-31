@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2893] Re: PluggableListMorphについて教えてください。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202893%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZUxpc3RNb3Jw%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaBskQiRLJEQkJCRGNjUkKCRGJC8kQCQ1JCQhIxsoQg%3D%3D%3F%3D&In-Reply-To=BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o%40mbox.kyoto-inet.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002892.html">
+   <LINK REL="Next"  HREF="002890.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2893] Re: PluggableListMorphについて教えてください。</H1>
+    <B>NISHIHARA Satoshi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202893%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZUxpc3RNb3Jw%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaBskQiRLJEQkJCRGNjUkKCRGJC8kQCQ1JCQhIxsoQg%3D%3D%3F%3D&In-Reply-To=BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o%40mbox.kyoto-inet.or.jp"
+       TITLE="[Squeak-ja: 2893] Re: PluggableListMorphについて教えてください。">nishis ＠ zephyr.dti.ne.jp
+       </A><BR>
+    <I>2006年 3月 28日 (火) 17:01:42 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002892.html">[Squeak-ja: 2892] Re: PluggableListMorphについて教えてください。
+</A></li>
+        <LI>次の記事 <A HREF="002890.html">[Squeak-ja: 2890] Squeakware-edu 0.3ベータ版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2893">[ 日付 ]</a>
+              <a href="thread.html#2893">[ スレッド ]</a>
+              <a href="subject.html#2893">[ 件名 ]</a>
+              <a href="author.html#2893">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>on 06.3.24 10:10 AM, kubo-o wrote:
+&gt;<i> こんにちは。Squeakで簡単な思考過程のモデルを作りたいと思っている者です。
+</I>&gt;<i> その一部として、Browserにあるように、項目をスクロールして検索し、その内容を
+</I>&gt;<i> 窓に表示する仕組みを作りたいのです。それでbrowserの一部をコピーしてハロをだ
+</I>
+去年，PluggableListMorph を使って同じようなヤツを作りました．
+フローとログのブラウザで，どちらも Thunderbird のように左がリ
+スト・ペインになってるやつです．対象によって表示する内容は画像
+だったりテキストだったりします．
+
+作り方は武田さんが書かれているとおりです．PluggableListMorph
+クラスをリファしているのを見て回ってあちこちパクってくればでき
+ます．わたしは ProcessBrowser を参考にしました (笑)．
+
+&gt;<i> してみているのですが、この仕組みはPluggableListMorphで扱うのか ScrollPaneで
+</I>&gt;<i> 扱うのか、そして項目リストの乗せ方はどうするのかなど、全体像がつかめず理解が
+</I>&gt;<i> すすみません。
+</I>&gt;<i> ヒントをお与え下さい。また参考にできる本やHPなどがあれば教えていただけません
+</I>&gt;<i> か。久保　道
+</I>
+単なるベタなリストじゃなくて三角アイコンがついたツリー・タイプ
+のリストもわりと簡単に使えます． PluggableListMorph に喰わせる
+リストを，カスタマイズした ListItemWrapper のサブクラスでラッ
+プするだけだったと思います．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    <A HREF="http://www.zephyr.dti.ne.jp/~nishis/">http://www.zephyr.dti.ne.jp/~nishis/</A>
+--------------------------------------------
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002892.html">[Squeak-ja: 2892] Re: PluggableListMorphについて教えてください。
+</A></li>
+	<LI>次の記事 <A HREF="002890.html">[Squeak-ja: 2890] Squeakware-edu 0.3ベータ版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2893">[ 日付 ]</a>
+              <a href="thread.html#2893">[ スレッド ]</a>
+              <a href="subject.html#2893">[ 件名 ]</a>
+              <a href="author.html#2893">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

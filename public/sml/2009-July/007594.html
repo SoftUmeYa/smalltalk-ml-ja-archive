@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7594] Re: 第9回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207594%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCORskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=1bc06fd30907030739i4629c35do375c8a6c4e54d471%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007593.html">
+   <LINK REL="Next"  HREF="007595.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7594] Re: 第9回Smalltalk勉強会＠京都</H1>
+    <B>Shozo TAKEOKA</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207594%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCORskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=1bc06fd30907030739i4629c35do375c8a6c4e54d471%40mail.gmail.com"
+       TITLE="[SML 7594] Re: 第9回Smalltalk勉強会＠京都">take ＠ takeoka.net
+       </A><BR>
+    <I>2009年 7月  4日 (土) 13:14:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007593.html">[SML 7593] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007595.html">[SML 7595] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7594">[ 日付 ]</a>
+              <a href="thread.html#7594">[ スレッド ]</a>
+              <a href="subject.html#7594">[ 件名 ]</a>
+              <a href="author.html#7594">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i> もうひとつ「一時変数と言って良いのか？」と考えることになる例を書いて
+</I>
+一般的に、クロージャ中にバインドされている変数は、
+一時変数と言えないと思います。
+
+「一時変数」という言葉の定義によりますが、
+通常は、
+  一時変数は、その寿命(エクステント)は、関数(手続き)から抜けた時に、消滅するもの
+と思われていると思います。
+
+クロージャ中に保持されている変数は、スコープは局所的ですが、
+エクステントは、クロージャの存在と同じなので、
+一般的に言われている「一時変数」ではない、と思いますし、
+通常「一時変数」と呼ばないと思います。
+
+たけおか
+
+
+
+2009/7/3 濱崎治 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">osamu.hamasaki ＠ gmail.com</A>&gt;:
+&gt;<i> 濱崎です。
+</I>&gt;<i>
+</I>&gt;<i> 2009/07/02 15:39 AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 青木＠京都上賀茂です。
+</I>&gt;<i>
+</I>&gt;<i> ＜中略＞
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 実行算法（アルゴリズム）と実行環境（コンテクスト）の双方を閉
+</I>&gt;&gt;<i> 包するブロッククロージャは、様々な常識的な定義の再考察を迫っ
+</I>&gt;&gt;<i> てきます。たとえば、一時変数の説明の言い回しも考え直さねばな
+</I>&gt;&gt;<i> らんなぁ〜、とね。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> もうひとつ「一時変数と言って良いのか？」と考えることになる例を書いて
+</I>&gt;<i> みました。
+</I>&gt;<i> まずは下準備で、ワークスペースで以下のプログラムを実行して下さい。
+</I>&gt;<i> ３つのワークスペース変数を用意します。
+</I>&gt;<i> | aWorkbook |
+</I>&gt;<i> aWorkbook := ScheduledControllers activeController model.
+</I>&gt;<i> aWorkbook addLocal: #ResetBlock.
+</I>&gt;<i> aWorkbook addLocal: #IncrementBlock.
+</I>&gt;<i> aWorkbook addLocal: #DecrementBlock
+</I>&gt;<i>
+</I>&gt;<i> 次に、同じワークスペースで以下のプログラムを実行して下さい。
+</I>&gt;<i> ３つのブロッククロージャを作って先ほど用意したワークスペース変数に
+</I>&gt;<i> 束縛します。
+</I>&gt;<i> | x |
+</I>&gt;<i> ResetBlock :=
+</I>&gt;<i> [x := 0.
+</I>&gt;<i> Transcript show: x printString].
+</I>&gt;<i> IncrementBlock :=
+</I>&gt;<i> [x := x + 1.
+</I>&gt;<i> Transcript space; show: x printString].
+</I>&gt;<i> DecrementBlock :=
+</I>&gt;<i> [x := x - 1.
+</I>&gt;<i> Transcript space; show: x printString]
+</I>&gt;<i>
+</I>&gt;<i> 次に、また同じワークスペースで以下のプログラムを実行して下さい。
+</I>&gt;<i> 三歩進んで二歩下がる数の列をトランスクリプトに表示するプログラムですが、
+</I>&gt;<i> 一時変数 x に関し、このプログラムで用意した物と、ブロッククロージャの中で
+</I>&gt;<i> 使われている物は、全く縁が切れているのがお分かり頂けると思います。
+</I>&gt;<i> | x |
+</I>&gt;<i> Transcript clear.
+</I>&gt;<i> ResetBlock value.
+</I>&gt;<i> x := 100.
+</I>&gt;<i> 2 timesRepeat: [
+</I>&gt;<i> 3 timesRepeat: [IncrementBlock value].
+</I>&gt;<i> 2 timesRepeat: [DecrementBlock value]].
+</I>&gt;<i> Transcript cr; show: x printString.
+</I>&gt;<i> 2 timesRepeat: [
+</I>&gt;<i> 3 timesRepeat: [IncrementBlock value].
+</I>&gt;<i> 2 timesRepeat: [DecrementBlock value]]
+</I>&gt;<i>
+</I>&gt;<i> 最後に、同じワークスペースで以下のプログラムを実行して下さい。
+</I>&gt;<i> 後始末をします。
+</I>&gt;<i> | aWorkbook anEnvironment |
+</I>&gt;<i> aWorkbook := ScheduledControllers activeController model.
+</I>&gt;<i> anEnvironment := aWorkbook doItEnvironment.
+</I>&gt;<i> #(#ResetBlock #IncrementBlock #DecrementBlock)
+</I>&gt;<i> do: [:each | anEnvironment removeKey: each].
+</I>&gt;<i> Transcript clear
+</I>&gt;<i> 以上です。
+</I>&gt;<i> ------------
+</I>&gt;<i>
+</I>&gt;<i> Osamu Hamasaki
+</I>&gt;<i>
+</I>&gt;<i>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007593.html">[SML 7593] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007595.html">[SML 7595] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7594">[ 日付 ]</a>
+              <a href="thread.html#7594">[ スレッド ]</a>
+              <a href="subject.html#7594">[ 件名 ]</a>
+              <a href="author.html#7594">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7169] &quot;0 @ 0&quot; について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207169%5D%20%3D%3Fiso-2022-jp%3Fb%3FIjAgQCAwIiAbJEIkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007168.html">
+   <LINK REL="Next"  HREF="007170.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7169] &quot;0 @ 0&quot; について</H1>
+    <B>NOBUTAKA Terauchi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207169%5D%20%3D%3Fiso-2022-jp%3Fb%3FIjAgQCAwIiAbJEIkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7169] &quot;0 @ 0&quot; について">europa ＠ ps.inforyoma.or.jp
+       </A><BR>
+    <I>2006年 9月 23日 (土) 01:13:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007168.html">[SML 7168] Vista Smalltalk
+</A></li>
+        <LI>次の記事 <A HREF="007170.html">[SML 7170] Re: &quot;0 @ 0&quot; について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7169">[ 日付 ]</a>
+              <a href="thread.html#7169">[ スレッド ]</a>
+              <a href="subject.html#7169">[ 件名 ]</a>
+              <a href="author.html#7169">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>初めまして。寺内と申します。
+
+数年前に投稿したきりでROMのみでしたが、一度は挫折した
+Smalltalkを青木さん「Smalltalkイディオム」で再挑戦しています。
+
+しかし、いきなり躓いてしまいました。
+「2.基本-&gt;do it」の最初のプログラムの&quot;0 @ 0&quot;でメッセージの
+遣り取りを調べていくと、&quot;self basicNew&quot;が出てきたところで追い
+かけられなくなりました。
+
+私の調べ方が間違っている可能性がありますので、追いかけた順番、
+考え方を下記に記します。
+使用しているSmalltalkは、&quot;VisualWorks NonCommercial, 7.4.1&quot;です。
+
+--------------------------------------------------------------------
+0 @ 0
+--------------------------------------------------------------------
+0 is a SmallInteger
+0はSmallInteterのインスタンスと考えています。
+次に示す二項メッセージ式&quot;@ 0&quot;がインスタンスメソッドだからです。
+--------------------------------------------------------------------
+@ y
+ &quot;Answer a new Point whose x value is the receiver and whose y value
+ is the argument.&quot;
+
+ &lt;primitive: 18&gt;
+ ^Point x: self y: y
+
+このメッセージは、Numberに定義されているインスタンスメソッドでした。
+Number -&gt; Integer -&gt; SmallIntegerの流れで継承しているとわかりました。
+ただ、superclassの定義で &quot;Core.&quot;が付加されている意味がわかりません。
+--------------------------------------------------------------------
+x: xInteger y: yInteger
+ &quot;Answer a new instance of a Point with coordinates xInteger and yInteger.&quot;
+
+ ^self basicNew setX: xInteger setY: yInteger
+
+basicNewというメッセージはPointのsuperclassで定義されていると
+考えて調べると、
+
+AbsentClassImporter class basicNew
+Behavior basicNew
+BehaviorShell basicNew
+Character class basicNew
+LimitedPrecisionReal class basicNew
+SmallInterger class basicNew
+
+で定義されていました。
+最初は、SmallIntegerに定義されているbasicNewと思いましたが、
+System Browser -&gt; Class -&gt; Spawn HierarchyでPointを表示すると
+
+Object
+  Magnitude
+    ArithmeticValue
+      Point
+
+と表示され、上記のクラスがスーパークラスに存在しませんでした。
+ここで完全に行き詰まってしまいました。
+--------------------------------------------------------------------
+
+Pointの&quot;x: xInteger y: yInteger&quot;で使われているメッセージ&quot;self basicNew&quot;
+はどこから継承してきたのでしょうか。
+
+かなり長くなってしまいましたが、よろしくお願いします。
+
+また、考え方、調べ方が「回りくどい、間違っている、質問が長い、もっと
+いい方法がある」等ありましたら指摘してください。
+
+
+---
+NOBUTAKA Terauchi&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">europa ＠ ps.inforyoma.or.jp</A>&gt;
+
+
+
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007168.html">[SML 7168] Vista Smalltalk
+</A></li>
+	<LI>次の記事 <A HREF="007170.html">[SML 7170] Re: &quot;0 @ 0&quot; について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7169">[ 日付 ]</a>
+              <a href="thread.html#7169">[ スレッド ]</a>
+              <a href="subject.html#7169">[ 件名 ]</a>
+              <a href="author.html#7169">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

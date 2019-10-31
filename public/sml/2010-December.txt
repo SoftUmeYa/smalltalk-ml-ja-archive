@@ -1,0 +1,1215 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Dec  1 02:13:22 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 01 Dec 2010 02:13:22 +0900
+Subject: [SML 7868] Re:
+ 第26回Smalltalk勉強会＠京都
+In-Reply-To: <4CEC5797.8070702@cc.kyoto-su.ac.jp>
+References: <4CEBB046.8010209@cc.kyoto-su.ac.jp>
+	<4CEC5797.8070702@cc.kyoto-su.ac.jp>
+Message-ID: <4CF530B2.1030104@cc.kyoto-su.ac.jp>
+
+京都のSmalltalk勉強会、本日です！
+今夜は忘年会ならぬピザパーティ。
+
+--- 青木淳
+
+(10/11/24 9:08), AOKI Atsushi wrote:
+> たいせつなことを書き忘れました。師走の勉強会（パーティ）には
+> 参加費としてお一人様1,000円を申し受けたいと存じます。
+> 
+> (10/11/23 21:15), AOKI Atsushi wrote:
+>> 第26回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+>> JR京都駅前にお集まりください。
+>>
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto26
+>>
+>> 場所はキャンプラ2階の第2会議室になります。ピザパーティを行い
+>> ましょう。
+>>
+>> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1609&frmCd=14-1-0-0-0
+>>
+>> 第26回 Smalltalk勉強会＠京都
+>> 日時：2010年12月01日（水）19:00〜21:00
+>> キャンパスプラザ京都 2階 第2会議室
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 師走となります。忘年会と言うには早すぎるかもしれませんが、軽
+>> 食（ピザなど）や飲料（ビールやソフトドリングなど）を用意して
+>> パーティを行います。いつものノート型のパーソナルコンピュータ
+>> を持たずに、どうぞ気軽にお立ち寄りください。飲食をしながら、
+>> Smalltalk談義で2010年を〆ましょう。
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Dec  8 17:38:45 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 08 Dec 2010 17:38:45 +0900
+Subject: [SML 7869]
+ 来年度の「Smalltalk勉強会@京都」の予定
+Message-ID: <4CFF4415.1070301@cc.kyoto-su.ac.jp>
+
+来年度(2011年4月〜2012年3月)の「Smalltalk勉強会@京都」の予定
+(日時と場所)を決めました。下記のページをご覧ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto30
+
+キャンパスプラザ京都(JR京都駅前)の立地の良さは捨て難しです。
+基本的に第一水曜日(定時退社が推奨されている中日)としました。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Dec 13 17:40:38 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon, 13 Dec 2010 17:40:38 +0900
+Subject: [SML 7870]
+ 連想計算というリフレクティブな手法
+Message-ID: <4D05DC06.4000501@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+フィボナッチ数を求めるプログラムは、通常、以下のようになりま
+すが、40ぐらいのフィボナッチ数を求めるあたりから、ものすごい
+手間がかかりだします。2のn乗のオーダーで計算量が増加です。
+
+------------------------------------------------------------
+
+Core.Integer methods for 'mathematical functions'
+
+fibonacci
+    "12 fibonacci."
+    "40 fibonacci."
+
+    self negative ifTrue: [^nil].
+    self = 0 ifTrue: [^0].
+    self = 1 ifTrue: [^1].
+    ^(self - 1) fibonacci + (self - 2) fibonacci
+
+------------------------------------------------------------
+
+それを軽減するためには、連想計算というリフレクティブな手法を
+用いるのが効果的であることが知られています。本日、学生とペア
+プログラミングしながら作りましたので、それを紹介しておきます。
+
+------------------------------------------------------------
+
+Core.Integer methods for 'mathematical functions'
+
+fibonacci
+    "12 fibonacci."
+    "100 fibonacci."
+
+    | aValue aCode aString anIndex |
+    self negative ifTrue: [^nil].
+    self = 0 ifTrue: [^0].
+    self = 1 ifTrue: [^1].
+    aValue := (self - 1) fibonacci + (self - 2) fibonacci.
+    [aCode := Integer sourceCodeAt: #fibonacci.
+    aString := 'aValue :='.
+    (anIndex := aCode findString: aString startingAt: 1) > 0
+        ifTrue:
+            [| aStream |
+            aStream := (String new: aCode size + 1024) writeStream.
+            [(1 to: anIndex - 1) do: [:index | aStream nextPut: (aCode at: index)].
+            aStream
+                nextPutAll: 'self = ';
+                nextPutAll: self printString;
+                nextPutAll: ' ifTrue: [^';
+                nextPutAll: aValue printString;
+                nextPutAll: '].';
+                crtab.
+            (anIndex to: aCode size) do: [:index | aStream nextPut: (aCode at: index)].
+            aCode := aStream contents] ensure: [aStream close].
+            Integer compile: aCode classified: #'mathematical functions']]
+        on: Object errorSignal
+        do: [:anException | anException return].
+    ^aValue
+
+------------------------------------------------------------
+
+プログラムの実行中に、その実行中のプログラム自身を書き換えて
+（コンパイルし直して）います。まさに動的な（フルな）リフレク
+ションになりますでしょ。100ぐらいのフィボナッチ数も平気です。
+
+もっといいやり方がありますので、皆さんで模索してくださいませ。
+参考のため、じゅんのLisp版とProlog版も添えておきます。
+
+------------------------------------------------------------
+
+(defun fibonacci (n)
+  (cond ((not (integerp n)) nil)
+        ((< n 0) nil)
+        ((= n 0) 0)
+        ((= n 1) 1)
+        (t (+ (fibonacci (- n 1))
+              (fibonacci (- n 2))))))
+
+------------------------------------------------------------
+
+(defun fibonacci (n)
+  (cond ((not (integerp n)) nil)
+        ((< n 0) nil)
+        ((= n 0) 0)
+        ((= n 1) 1)
+        (t (do (value assertion condition target clauses)
+             (setq value (+ (fibonacci (- n 1))
+                            (fibonacci (- n 2)))
+                   assertion (list (list '= 'n n) value)
+                   condition (nth 4 (getprop 'fibonacci 'expr))
+                   target (last condition)
+                   clauses (list (car target)))
+             (rplaca target assertion)
+             (rplacd target clauses)
+             value))))
+
+------------------------------------------------------------
+
+fibonacci(0,0).
+fibonacci(1,1).
+fibonacci(N,F) :-
+        integer(N),
+        >(N,1),
+        -(N,1,N1),
+        -(N,2,N2),
+        fibonacci(N1,A1),
+        fibonacci(N2,A2),
+        +(A1,A2,F).
+
+------------------------------------------------------------
+
+fibonacci(0,0).
+fibonacci(1,1).
+fibonacci(N,F) :-
+        integer(N),
+        >(N,1),
+        -(N,1,N1),
+        -(N,2,N2),
+        fibonacci(N1,A1),
+        fibonacci(N2,A2),
+        +(A1,A2,F),
+        asserta([fibonacci(N,F) :- !]).
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From sumi ＠ seagreen.ocn.ne.jp  Tue Dec 14 15:30:12 2010
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Tue, 14 Dec 2010 15:30:12 +0900
+Subject: [SML 7871] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <345221931.6479281292229688300.JavaMail.root@mz-cb051p>
+References: <345221931.6479281292229688300.JavaMail.root@mz-cb051p>
+Message-ID: <AANLkTinacJuXery2QmZdsYniFR6MR-vmBYQEZJ6nO7O9@mail.gmail.com>
+
+sumim こと鷲見です。
+
+連想計算でもリフレクティブでもないので恐縮ですが、
+にぎやかしにと、２つほど考えてみました。
+
+
+Integer >> ffibonacci
+   ^((1 to: self) inject: 0 @ 1 into: [:pair :idx | 0 @ pair x + pair y]) x
+
+
+Integer >> fibonacci
+   | temp1 temp2 sender |
+   self negative ifTrue: [^nil].
+   self = 0 ifTrue: [^0].
+   self = 1 ifTrue: [^1].
+   temp1 := (self - 1) fibonacci.
+   temp2 isNil ifTrue: [temp2 := (self - 2) fibonacci].
+   sender := thisContext sender.
+   sender method selector = #fibonacci
+       ifTrue: [sender tempAt: 2 put: temp1].
+   ^temp1 + temp2
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Dec 14 16:21:03 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue, 14 Dec 2010 16:21:03 +0900
+Subject: [SML 7872] Re:
+ 連想計算というリフレクティブな手法
+In-Reply-To: <AANLkTinacJuXery2QmZdsYniFR6MR-vmBYQEZJ6nO7O9@mail.gmail.com>
+References: <345221931.6479281292229688300.JavaMail.root@mz-cb051p>
+	<AANLkTinacJuXery2QmZdsYniFR6MR-vmBYQEZJ6nO7O9@mail.gmail.com>
+Message-ID: <4D071ADF.9010708@cc.kyoto-su.ac.jp>
+
+ありがとうございます。
+にぎやかになりました！
+
+--- 青木淳
+
+(10/12/14 15:30), Masato Sumi wrote:
+> sumim こと鷲見です。
+> 
+> 連想計算でもリフレクティブでもないので恐縮ですが、
+> にぎやかしにと、２つほど考えてみました。
+> 
+> 
+> Integer>>  ffibonacci
+>     ^((1 to: self) inject: 0 @ 1 into: [:pair :idx | 0 @ pair x + pair y]) x
+> 
+> 
+> Integer>>  fibonacci
+>     | temp1 temp2 sender |
+>     self negative ifTrue: [^nil].
+>     self = 0 ifTrue: [^0].
+>     self = 1 ifTrue: [^1].
+>     temp1 := (self - 1) fibonacci.
+>     temp2 isNil ifTrue: [temp2 := (self - 2) fibonacci].
+>     sender := thisContext sender.
+>     sender method selector = #fibonacci
+>         ifTrue: [sender tempAt: 2 put: temp1].
+>     ^temp1 + temp2
+
+From Narita.Takaoki ＠ exc.epson.co.jp  Tue Dec 14 17:11:09 2010
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Tue, 14 Dec 2010 17:11:09 +0900
+Subject: [SML 7873] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <AANLkTinacJuXery2QmZdsYniFR6MR-vmBYQEZJ6nO7O9@mail.gmail.com>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860AC0ADA3@JPESWA304.apo.epson.net>
+
+成田です。
+
+> sumim こと鷲見です。
+> 
+> 連想計算でもリフレクティブでもないので恐縮ですが、
+> にぎやかしにと、２つほど考えてみました。
+
+同様にぎやかしですが、それどころか Smalltalk にもなってません。
+
+これを Smalltalk 的に書くとしたら？で詰まってしまった・・・
+Common Lisp で書いてしまいましたが：
+
+(defun sequential-square (comp-op operator n)
+  (assert (integerp n) (n)) ;; 本質には関係しないので無視してください。
+  (cond ((< n 1) nil)
+        ((= n 1) operator)
+        ((> n 1)
+         (cond ((oddp n)
+                (funcall comp-op
+                 (sequential-square comp-op operator (1- n)) operator))
+               ('t
+                (let
+                 ((sq-op (sequential-square comp-op operator (/ n 2))))
+                 (funcall comp-op sq-op sq-op)))))))
+
+(defun composition-op (func1 func2)
+  (lambda (x) (funcall func1 (funcall func2 x))))
+
+(defun fibo (x) (list (+ (car x) (cadr x)) (car x)))
+
+(defun fibonacci (x)
+  (cond ((< x 1) nil)
+        ((= x 1) 1) ;; かなりインチキ
+        ('t
+         (car
+          (funcall
+           (sequential-square #'composition-op #'fibo (1- x)) '(1 0))))))
+
+計算量は、O(log(n))なので、数値格納のメモリーさえ確保できれば20
+万項目くらいまでなら我慢できる時間で計算可能ですが、計算できたか
+らって何に使うんでしょうね・・・
+
+ここまで一般化していないフィボナッチ数列特化のものでは、Smalltalk
+でもブロックなど使って以前書いたことはありますが、今回の場合は、
+高階関数構造をエレガントに Smalltalk らしくというところで思考が停止。
+
+--
+セイコーエプソン株式会社 機器ソフトウェア統括センター
+機器ソフトウェア品質・生産技術部　　 成田 隆興
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Dec 14 17:56:40 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue, 14 Dec 2010 17:56:40 +0900
+Subject: [SML 7874] Re:
+ 連想計算というリフレクティブな手法
+In-Reply-To: <4306F7126D35DA4B8A115EA505FA06860AC0ADA3@JPESWA304.apo.epson.net>
+References: <4306F7126D35DA4B8A115EA505FA06860AC0ADA3@JPESWA304.apo.epson.net>
+Message-ID: <4D073148.6050805@cc.kyoto-su.ac.jp>
+
+(10/12/14 17:11), Narita Takaoki wrote:
+> 同様にぎやかしですが、それどころか Smalltalk にもなってません。
+
+おぉ！いとにぎやかし。
+
+> 計算量は、O(log(n))なので、数値格納のメモリーさえ確保できれば20
+> 万項目くらいまでなら我慢できる時間で計算可能ですが、計算できたか
+> らって何に使うんでしょうね・・・
+
+何に使う、何に役立つ、・・・
+そんなんばかりを追っていたら、科学することが伝わらないかしらん。
+
+--- 青木淳＠本日も学生たちとペアプログラミング
+
+From sumi ＠ seagreen.ocn.ne.jp  Tue Dec 14 20:04:40 2010
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Tue, 14 Dec 2010 20:04:40 +0900
+Subject: [SML 7875] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <1951959489.8053921292315023037.JavaMail.root@mz-cb051p>
+References: <AANLkTinacJuXery2QmZdsYniFR6MR-vmBYQEZJ6nO7O9@mail.gmail.com>
+	<1951959489.8053921292315023037.JavaMail.root@mz-cb051p>
+Message-ID: <AANLkTin8F3dZorU+7Qh2hRS3jgYfNcxKyox4ONWhjt8q@mail.gmail.com>
+
+sumim です。
+
+まだ流れを追いきれていないので、Smalltalk的に書き直せていませんが、
+とりあえず成田さんのCLのコードをSmalltalkで動くよう直訳してみました。
+Squeak4.1とVisualWorks7.7で動作します。
+
+
+| sequentialSquare compositionOp fibo fibonacci |
+
+sequentialSquare := nil.
+sequentialSquare := [:compOp :operator :n |
+   n < 1 ifTrue: [nil] ifFalse: [
+   n = 1 ifTrue: [operator] ifFalse: [
+   n > 1
+      ifTrue: [
+         n odd ifTrue: [
+            compOp
+               value: (sequentialSquare
+                  value: compOp value: operator value: n - 1)
+               value: operator]
+      ifFalse: [
+         | sqOp |
+         sqOp := sequentialSquare
+            value: compOp value: operator value: n / 2.
+         compOp value: sqOp value: sqOp]]]]].
+
+compositionOp := [:func1 :func2 |
+   [:x | func1 value: (func2 value: x)]].
+
+fibo := [:x | Array with: x first + (x at: 2) with: x first].
+
+fibonacci := [:x |
+   x < 1 ifTrue: [nil] ifFalse: [
+   x = 1
+      ifTrue: [1]
+      ifFalse: [
+         ((sequentialSquare
+               value: compositionOp value: fibo value: x - 1)
+            value: #(1 0)) first]]].
+
+fibonacci value: 1000
+
+
+2010年12月14日17:11 Narita Takaoki <Narita.Takaoki ＠ exc.epson.co.jp>:
+> 成田です。
+>
+>> sumim こと鷲見です。
+>>
+>> 連想計算でもリフレクティブでもないので恐縮ですが、
+>> にぎやかしにと、２つほど考えてみました。
+>
+> 同様にぎやかしですが、それどころか Smalltalk にもなってません。
+>
+> これを Smalltalk 的に書くとしたら？で詰まってしまった・・・
+> Common Lisp で書いてしまいましたが：
+>
+> (defun sequential-square (comp-op operator n)
+>  (assert (integerp n) (n)) ;; 本質には関係しないので無視してください。
+>  (cond ((< n 1) nil)
+>        ((= n 1) operator)
+>        ((> n 1)
+>         (cond ((oddp n)
+>                (funcall comp-op
+>                 (sequential-square comp-op operator (1- n)) operator))
+>               ('t
+>                (let
+>                 ((sq-op (sequential-square comp-op operator (/ n 2))))
+>                 (funcall comp-op sq-op sq-op)))))))
+>
+> (defun composition-op (func1 func2)
+>  (lambda (x) (funcall func1 (funcall func2 x))))
+>
+> (defun fibo (x) (list (+ (car x) (cadr x)) (car x)))
+>
+> (defun fibonacci (x)
+>  (cond ((< x 1) nil)
+>        ((= x 1) 1) ;; かなりインチキ
+>        ('t
+>         (car
+>          (funcall
+>           (sequential-square #'composition-op #'fibo (1- x)) '(1 0))))))
+
+From ume ＠ softumeya.com  Tue Dec 14 22:34:29 2010
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 14 Dec 2010 22:34:29 +0900
+Subject: [SML 7876] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <AANLkTin8F3dZorU+7Qh2hRS3jgYfNcxKyox4ONWhjt8q@mail.gmail.com>
+References: <AANLkTinacJuXery2QmZdsYniFR6MR-vmBYQEZJ6nO7O9@mail.gmail.com>
+	<1951959489.8053921292315023037.JavaMail.root@mz-cb051p>
+	<AANLkTin8F3dZorU+7Qh2hRS3jgYfNcxKyox4ONWhjt8q@mail.gmail.com>
+Message-ID: <AANLkTi=0Gre+V914wVNJ0seeghwytg_TKZN9ED2MKZg8@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+いやあ、盛り上がっていますねー。奇しくも今年最後のSmalltalk勉強会は
+Smalltalk Superpowersで締めくくろうと思っています。(いつもの案内メール
+別途書きます)
+http://atnd.org/events/11043
+
+皆さんのちょっとやり過ぎ間のある高等テクニック、ぜひ紹介させていただきたく
+思います。
+
+ではでは。
+
+2010年12月14日20:04 Masato Sumi <sumi ＠ seagreen.ocn.ne.jp>:
+> sumim です。
+>
+> まだ流れを追いきれていないので、Smalltalk的に書き直せていませんが、
+> とりあえず成田さんのCLのコードをSmalltalkで動くよう直訳してみました。
+> Squeak4.1とVisualWorks7.7で動作します。
+>
+>
+> | sequentialSquare compositionOp fibo fibonacci |
+>
+> sequentialSquare := nil.
+> sequentialSquare := [:compOp :operator :n |
+>   n < 1 ifTrue: [nil] ifFalse: [
+>   n = 1 ifTrue: [operator] ifFalse: [
+>   n > 1
+>      ifTrue: [
+>         n odd ifTrue: [
+>            compOp
+>               value: (sequentialSquare
+>                  value: compOp value: operator value: n - 1)
+>               value: operator]
+>      ifFalse: [
+>         | sqOp |
+>         sqOp := sequentialSquare
+>            value: compOp value: operator value: n / 2.
+>         compOp value: sqOp value: sqOp]]]]].
+>
+> compositionOp := [:func1 :func2 |
+>   [:x | func1 value: (func2 value: x)]].
+>
+> fibo := [:x | Array with: x first + (x at: 2) with: x first].
+>
+> fibonacci := [:x |
+>   x < 1 ifTrue: [nil] ifFalse: [
+>   x = 1
+>      ifTrue: [1]
+>      ifFalse: [
+>         ((sequentialSquare
+>               value: compositionOp value: fibo value: x - 1)
+>            value: #(1 0)) first]]].
+>
+> fibonacci value: 1000
+>
+>
+> 2010年12月14日17:11 Narita Takaoki <Narita.Takaoki ＠ exc.epson.co.jp>:
+>> 成田です。
+>>
+>>> sumim こと鷲見です。
+>>>
+>>> 連想計算でもリフレクティブでもないので恐縮ですが、
+>>> にぎやかしにと、２つほど考えてみました。
+>>
+>> 同様にぎやかしですが、それどころか Smalltalk にもなってません。
+>>
+>> これを Smalltalk 的に書くとしたら？で詰まってしまった・・・
+>> Common Lisp で書いてしまいましたが：
+>>
+>> (defun sequential-square (comp-op operator n)
+>>  (assert (integerp n) (n)) ;; 本質には関係しないので無視してください。
+>>  (cond ((< n 1) nil)
+>>        ((= n 1) operator)
+>>        ((> n 1)
+>>         (cond ((oddp n)
+>>                (funcall comp-op
+>>                 (sequential-square comp-op operator (1- n)) operator))
+>>               ('t
+>>                (let
+>>                 ((sq-op (sequential-square comp-op operator (/ n 2))))
+>>                 (funcall comp-op sq-op sq-op)))))))
+>>
+>> (defun composition-op (func1 func2)
+>>  (lambda (x) (funcall func1 (funcall func2 x))))
+>>
+>> (defun fibo (x) (list (+ (car x) (cadr x)) (car x)))
+>>
+>> (defun fibonacci (x)
+>>  (cond ((< x 1) nil)
+>>        ((= x 1) 1) ;; かなりインチキ
+>>        ('t
+>>         (car
+>>          (funcall
+>>           (sequential-square #'composition-op #'fibo (1- x)) '(1 0))))))
+>
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Tue Dec 14 22:40:44 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue, 14 Dec 2010 22:40:44 +0900
+Subject: [SML 7877]
+	第27回Smalltalk勉強会のお知らせ
+Message-ID: <JxTbS_meIv.xmQrcFQoIafMg4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/12/27(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+ 
+今回は今年最後ということもあり、忘年会を兼ねてビアバッシュ形式で
+行います。テーマは「Smalltalkの超能力」です。
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai27kaismalltalkbenkyoukai
+
+ビアバッシュなので、定員に限りがあります。下記のサイトで受け付けております。
+ご希望の方はお早めに。
+http://atnd.org/events/11043
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From Narita.Takaoki ＠ exc.epson.co.jp  Wed Dec 15 17:04:04 2010
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Wed, 15 Dec 2010 17:04:04 +0900
+Subject: [SML 7878] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <AANLkTin8F3dZorU+7Qh2hRS3jgYfNcxKyox4ONWhjt8q@mail.gmail.com>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860AC0ADA7@JPESWA304.apo.epson.net>
+
+成田です。
+
+> sumim です。
+> 
+> まだ流れを追いきれていないので、Smalltalk的に書き直せていませんが、
+> とりあえず成田さんのCLのコードをSmalltalkで動くよう直訳してみました。
+
+おお、すばらしい・・・
+ストレートに移すと、やっぱりブロックだらけになりますよね。
+
+> ...流れ
+
+じっくり見れば分かるでしょうから、解説もいらないとは思いますが、考え方の
+解説をおこがましくも一応してみます。
+
+大枠は、特定の条件を満たした繰り返し作用に対する「逐次平方」の適用で
+す。フィボナッチ数列への適用は、フィボナッチと逐次平方でググると出てくる
+かな？
+
+;; SICP もキーワードにすると良いかも？
+
+逐次平方を簡単にみるなら、フィボナッチ数列の場合では、二行行列でフィボ
+ナッチ数列の第１項(= 1)、第０項(= 0)を要素とするものを f_1 として、二行二
+列の行列 T を考え、その要素を
+
+    t_1_1 := 1      t_1_2 := 1
+    t_2_1 := 1      t_2_2 := 0
+
+とします。そうするとフィボナッチ数列の定義は、
+
+　f_n := T * f_n-1, n > 1
+
+で与えられるので、
+
+　f_n := (T^n) * f_1
+
+に持ち込め、T^n の計算ができればよろしくなります。
+
+冪の形になっているので、
+
+　T^n = if  n is even then (T^{n/2})^2 else (T^{n-1}) * T.
+
+を用いて、n が 1 になるまで分解して計算すると、T^n が求まり、計算量は
+O(log(n)) になります。これをストレートに Common Lisp で書くと、
+
+(defun sequential-square (f n x)
+  (cond ((= n 1) x)
+        ((evenp n) (let ((fn (sequential-square f (/ n 2) x))) (funcall f fn fn)))
+        (t (funcall f x (sequential-square f (1- n) x)))))
+
+(defun fibonacci (n)
+  (car (sequential-square  ;; car は、f_1 と掛けて、f_n を取り出すのと一緒。
+         (lambda (x y)  ;; このラムダ式は行列の掛け算もどきです。
+           (let ((a (car x)) (b (cadr x)) (c (caddr x)) (d (cadddr x))
+                 (m (car y)) (n (cadr y)) (l (caddr y)) (o (cadddr y)))
+             (list (+ (* a m) (* b l)) (+ (* a n) (* b o)) (+ (* c m) (* d l))
+                   (+ (* c n) (* d o)))))
+         (1- n)
+         '(1 1 1 0)))) ;; (t_1_1  t_1_2  t_2_1  t_2_2) で代用して２行２列行列を表現。
+
+こんなところでしょうか。ここまでが、逐次平方の骨子です。
+
+ちなみに、T * (T * T) も (T * T) * T も同じであるのですが、これが逐次平方を適用
+するための「特定の条件」かな？
+
+先に示した大げさな一般化を施した版は、行列の代わりにもうすこし一般性のある
+線形関数による合成関数を想起して、合成関数演算を composition-op としてみ
+たものです。composition-op は丁度 T に対する * の一般化でしょうか。fibo は、
+T そのものにあたることになります。
+
+となるとですね・・・sequentialSquare や compositionOp をメソッド化するとすると
+Block クラスでしょうか・・・はてさて？
+
+まあ、鷲見さんの書かれてたものに比べ、数学的発想（？）で対処しているので
+Smalltalk の仕掛けで面白く・・という方向じゃないですねぇ・・・
+
+;;; プログラミング発想だとメモ化とかストリーム化とかになるのでしょう・・・
+
+> Squeak4.1とVisualWorks7.7で動作します。
+> 
+> 
+> | sequentialSquare compositionOp fibo fibonacci |
+> 
+> sequentialSquare := nil.
+> sequentialSquare := [:compOp :operator :n |
+>    n < 1 ifTrue: [nil] ifFalse: [
+>    n = 1 ifTrue: [operator] ifFalse: [
+>    n > 1
+>       ifTrue: [
+>          n odd ifTrue: [
+>             compOp
+>                value: (sequentialSquare
+>                   value: compOp value: operator value: n - 1)
+>                value: operator]
+>       ifFalse: [
+>          | sqOp |
+>          sqOp := sequentialSquare
+>             value: compOp value: operator value: n / 2.
+>          compOp value: sqOp value: sqOp]]]]].
+> 
+> compositionOp := [:func1 :func2 |
+>    [:x | func1 value: (func2 value: x)]].
+> 
+> fibo := [:x | Array with: x first + (x at: 2) with: x first].
+> 
+> fibonacci := [:x |
+>    x < 1 ifTrue: [nil] ifFalse: [
+>    x = 1
+>       ifTrue: [1]
+>       ifFalse: [
+>          ((sequentialSquare
+>                value: compositionOp value: fibo value: x - 1)
+>             value: #(1 0)) first]]].
+> 
+> fibonacci value: 1000
+> 
+> 
+> 2010年12月14日17:11 Narita Takaoki <Narita.Takaoki ＠ exc.epson.co.jp>:
+> > 成田です。
+> >
+> >> sumim こと鷲見です。
+> >>
+> >> 連想計算でもリフレクティブでもないので恐縮ですが、
+> >> にぎやかしにと、２つほど考えてみました。
+> >
+> > 同様にぎやかしですが、それどころか Smalltalk にもなってません。
+> >
+> > これを Smalltalk 的に書くとしたら？で詰まってしまった・・・
+> > Common Lisp で書いてしまいましたが：
+> >
+> > (defun sequential-square (comp-op operator n)
+> >  (assert (integerp n) (n)) ;; 本質には関係しないので無視してください。
+> >  (cond ((< n 1) nil)
+> >        ((= n 1) operator)
+> >        ((> n 1)
+> >         (cond ((oddp n)
+> >                (funcall comp-op
+> >                 (sequential-square comp-op operator (1- n)) 
+> operator))
+> >               ('t
+> >                (let
+> >                 ((sq-op (sequential-square comp-op operator 
+> (/ n 2))))
+> >                 (funcall comp-op sq-op sq-op)))))))
+> >
+> > (defun composition-op (func1 func2)
+> >  (lambda (x) (funcall func1 (funcall func2 x))))
+> >
+> > (defun fibo (x) (list (+ (car x) (cadr x)) (car x)))
+> >
+> > (defun fibonacci (x)
+> >  (cond ((< x 1) nil)
+> >        ((= x 1) 1) ;; かなりインチキ
+> >        ('t
+> >         (car
+> >          (funcall
+> >           (sequential-square #'composition-op #'fibo (1- x)) '(1 
+> > 0))))))
+> 
+
+From sumi ＠ seagreen.ocn.ne.jp  Thu Dec 16 00:46:48 2010
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu, 16 Dec 2010 00:46:48 +0900
+Subject: [SML 7879] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <335667589.9617371292400246660.JavaMail.root@mz-cb051p>
+References: <AANLkTin8F3dZorU+7Qh2hRS3jgYfNcxKyox4ONWhjt8q@mail.gmail.com>
+	<335667589.9617371292400246660.JavaMail.root@mz-cb051p>
+Message-ID: <AANLkTinij0j-RRdvVPqyux9D3Taho4D373DEvzjEXh9h@mail.gmail.com>
+
+成田さん。解説ありがとうございます。sumim です。
+
+とりあえず大枠の部分だけですが、だいたい分かりました。
+たとえば、Squeak で組み込みのなんちゃって Matrix において
+
+
+Matrix >> raisedTo: n
+  | m |
+  n = 1 ifTrue: [^self].
+  n even ifTrue: [^(m := self raisedTo: n/2) +* m].
+  ^(self raisedTo: n - 1) +* self
+
+
+を定義しておけば、
+
+
+| fibonacci |
+fibonacci := [:n |
+  | T |
+  T := Matrix rows: 2 columns: 2 contents: #(1 1 1 0).
+  ((3 to: n) inject: T into: [:Tn :idx | Tn +* T]) +* #(1 0) at: 1].
+
+[fibonacci value: 10000] timeToRun   "=> 758 ms "
+
+
+というところを
+
+
+| fibonacci |
+fibonacci := [:n |
+  | T |
+  T := Matrix rows: 2 columns: 2 contents: #(1 1 1 0).
+  (T raisedTo: n - 1) +* #(1 0) at: 1].
+
+[fibonacci value: 10000] timeToRun   "=> 7 ms "
+
+
+のように高速化できるということですね。
+
+
+2010年12月15日17:04 Narita Takaoki <Narita.Takaoki ＠ exc.epson.co.jp>:
+> 大枠は、特定の条件を満たした繰り返し作用に対する「逐次平方」の適用で
+> す。フィボナッチ数列への適用は、フィボナッチと逐次平方でググると出てくる
+> かな？
+
+From Narita.Takaoki ＠ exc.epson.co.jp  Thu Dec 16 13:59:22 2010
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Thu, 16 Dec 2010 13:59:22 +0900
+Subject: [SML 7880] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <AANLkTinij0j-RRdvVPqyux9D3Taho4D373DEvzjEXh9h@mail.gmail.com>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860AC0ADAA@JPESWA304.apo.epson.net>
+
+成田です。
+
+> たとえば、Squeak で組み込みのなんちゃって Matrix において
+> 
+> Matrix >> raisedTo: n
+>   | m |
+>   n = 1 ifTrue: [^self].
+>   n even ifTrue: [^(m := self raisedTo: n/2) +* m].
+>   ^(self raisedTo: n - 1) +* self
+> 
+> を定義しておけば・・・
+
+で、この際に Matrix だけじゃなくて、Integer とかでも同じ構造ですよね？
+他にも同様にあるだろうし。
+
+となると、一様にひとくくりに逐次平方を定義できないかなぁ・・・というので、
+Smalltalk 的にエレガントにやるにはどこで・・・という風になって、私は思
+考停止しました。(^^;
+
+Number など Magnifier の系統だけじゃなくて、Matrix みたいなものも含
+まれるので、代数構造をクラス構造に持ち込まないと一括扱いは難しい
+くなる？けれど、そもそも代数構造を持ち込むのも大仕事で破綻無くという
+のは至難っぽいし・・・それでどれだけありがたいのか良く分からないし。
+
+;; Smalltalk の何かと直行してそうな気もするし・・・
+;; そもそもそんな風にすべきではないという説も出てくるかもしれない。
+
+;; 遺伝的プログラミングとかはしやすくなりそう。
+;; 関数合成によるアルゴリズム発明もしやすくなる？
+
+;;;; みんな妄想の域だけれど。すなわちスーダラな予想。;-)
+
+--
+Narita Takaoki @ SETG, SEIKO EPSON Corp.
+Voice: 722-5718 (interphone)
+
+From shinsahara ＠ shinsahara.com  Fri Dec 17 10:24:29 2010
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Fri, 17 Dec 2010 10:24:29 +0900
+Subject: [SML 7881] Re:
+ 連想計算というリフレクティブな手法
+In-Reply-To: <4D073148.6050805@cc.kyoto-su.ac.jp>
+References: <4306F7126D35DA4B8A115EA505FA06860AC0ADA3@JPESWA304.apo.epson.net>
+	<4D073148.6050805@cc.kyoto-su.ac.jp>
+Message-ID: <874FA6E5-83B7-4CC0-9039-E22BDEC9A3C2@shinsahara.com>
+
+佐原です。
+
+VDM++だと、高階関数使ってもリフレクション的なことはできそうもないので、数値アルゴリズムで作りました :-)
+リフレクション使うより速いので、シンボリック実行しているVDM++インタープリタでも、fastFib(-1)からfastFib(100)まで全部計算しても、一瞬で終わりますが、多倍長計算できないのでfastFib(92)=7540113804746369024までしか計算できません。
+fastFib(93)からfastFib(100)までは、fastFib(100)の場合、Error 4065: Value 3.542248481792631E20 is not a nat　などと怒られます :-)
+
+class Fibonacci
+values
+static sqrt5 = new MATH().sqrt(5);
+static phi = (1+sqrt5) / 2;
+
+functions
+static public fastFib : nat +> nat
+fastFib(n) ==
+	floor (phi ** n / sqrt5 + 0.5);
+
+end Fibonacci
+
+On 2010/12/14, at 17:56, AOKI Atsushi wrote:
+
+> (10/12/14 17:11), Narita Takaoki wrote:
+>> 同様にぎやかしですが、それどころか Smalltalk にもなってません。
+> 
+> おぉ！いとにぎやかし。
+> 
+>> 計算量は、O(log(n))なので、数値格納のメモリーさえ確保できれば20
+>> 万項目くらいまでなら我慢できる時間で計算可能ですが、計算できたか
+>> らって何に使うんでしょうね・・・
+> 
+> 何に使う、何に役立つ、・・・
+> そんなんばかりを追っていたら、科学することが伝わらないかしらん。
+> 
+> --- 青木淳＠本日も学生たちとペアプログラミング
+> 
+
+
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss @ shinsahara.com    http://shinsahara.com
+Mobile:  +81-80-1114-3378(in the world), +81-80-3089-7518(in the world)
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+From ume ＠ softumeya.com  Fri Dec 17 11:16:51 2010
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 17 Dec 2010 11:16:51 +0900
+Subject: [SML 7882] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <874FA6E5-83B7-4CC0-9039-E22BDEC9A3C2@shinsahara.com>
+References: <4306F7126D35DA4B8A115EA505FA06860AC0ADA3@JPESWA304.apo.epson.net>
+	<4D073148.6050805@cc.kyoto-su.ac.jp>
+	<874FA6E5-83B7-4CC0-9039-E22BDEC9A3C2@shinsahara.com>
+Message-ID: <AANLkTinwvnodPJ9G-PK+4jURo1fqAy6-=K8Y5LAFr9aN@mail.gmail.com>
+
+梅澤です。
+
+ところで昔エイプリルフール用に作ったSmallTalk R4.1でもフィボナッチ数用のメソッドは提供されていて、たいそう速いです。(特に2回目以降が)
+http://smalltalk.smalltalk-users.jp/oshirase/fibonatchibenchinokekka
+
+どのような実装になっているかはお楽しみということで。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Dec 17 11:47:14 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri, 17 Dec 2010 11:47:14 +0900
+Subject: [SML 7883]
+ 継続(continuation)というスタイル
+Message-ID: <4D0ACF32.8030408@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+学生たちとのペアプログラミングで、プログラム制御構造スタイル
+の総当たり（お復習い）しているところです。階乗計算を例にして
+少しだけ皆さんにご披露いたします。
+
+------------------------------------------------------------
+【反復】IS (Iteration Style)
+
+| factorial |
+factorial :=
+        [:n |
+        | a |
+        (n isInteger not or: [n negative]) ifTrue: [^self error: 'boo!'].
+        a := 1.
+        (1 to: n) do: [:i | a := a * i].
+        a yourself].
+factorial value: 10
+
+------------------------------------------------------------
+【再帰】RS (Recursion Style)
+
+| factorial |
+factorial :=
+        [:n |
+        | a |
+        (n isInteger not or: [n negative]) ifTrue: [^self error: 'boo!'].
+        n = 0 ifTrue: [a := 1] ifFalse: [a := (factorial value: n - 1) * n].
+        a yourself].
+factorial value: 10
+
+------------------------------------------------------------
+【継続】CPS (Continuation Passing Style)
+
+| factorial |
+factorial :=
+        [:n :continuation |
+        (n isInteger not or: [n negative]) ifTrue: [^self error: 'boo!'].
+        n = 0
+            ifTrue: [continuation value: 1]
+            ifFalse: [factorial value: n - 1 value: [:a | continuation value: a * n]].
+        n halt].
+factorial value: 10 value: [:a | ^a]
+
+階乗ブロック（クロージャ）の最後の「n halt」は実行されること
+はない。一切のリターン（応答）が無用（不要）になっている。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From Narita.Takaoki ＠ exc.epson.co.jp  Fri Dec 17 18:09:45 2010
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Fri, 17 Dec 2010 18:09:45 +0900
+Subject: [SML 7884] Re:
+	連想計算というリフレクティブな手法
+In-Reply-To: <874FA6E5-83B7-4CC0-9039-E22BDEC9A3C2@shinsahara.com>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860AC0ADAC@JPESWA304.apo.epson.net>
+
+成田です。
+
+> 佐原です。
+
+Smalltalk じゃない言語でズンズン行くのもなんですけれど、
+
+> VDM++だと、高階関数使ってもリフレクション的なことはできそうもな
+> いので、数値アルゴリズムで作りました :-)
+
+こんなん書いてみました：
+
+class Sequential_Square
+
+functions
+  static public  sequential_square :
+	((nat * nat) -> (nat * nat)) * nat1
+		+> ((nat * nat) -> (nat * nat))
+  sequential_square (T, n) ==
+    if (n = 1) then
+      T
+    else
+      if (n rem 2 = 1) then
+        (sequential_square(T, n - 1)) comp T
+      else
+        (sequential_square(T, floor(n / 2))) ** 2;
+
+end Sequential_Square
+
+class Fibonacci is subclass of Sequential_Square
+
+functions
+  static public  fibo : (nat * nat) +> (nat * nat)
+  fibo (pre_f) ==
+    mk_(pre_f.#1 + pre_f.#2, pre_f.#1);
+
+  static public  fibonacci : nat1 +> nat
+  fibonacci (n) ==
+    if (n = 1) then
+      1
+    else
+      ((sequential_square (fibo, n - 1))(mk_(1,0))).#1;
+
+end Fibonacci
+
+Sequential_Square が中途半端で気持ち悪いのですが、多相型関数の定義が
+よくわからなくて型チェックではじかれたので、こんな感じになってしまいました。
+
+高階関数を駆使して関数合成で問題を解く設計を書こうとすると、関数の型宣言
+で死にそうになる気がする・・・ことに汎用性を持たせようとすると・・・
+
+Haskell とかも死にそうになるけど、まだしも・・・
+
+関数に対する comp と ** 演算子は便利。ぶっちゃけ、整数値が戻ってくる範
+囲では sequential_square (T, n) == T ** n; で十分速い。
+
+> リフレクション使うより速いので、シンボリック実行しているVDM++インタープリ
+> タでも、fastFib(-1)からfastFib(100)まで
+> 全部計算しても、一瞬で終わりますが、多倍長計算できないのでfastFib(92)=
+> 7540113804746369024までしか計算できません。
+
+環境の違いでしょうか？fibonacci(78) までしか計算できませんでした。それより
+上もいけたですが、値が浮動小数点数。さらに fibonacci(10000) だと "1.#INF"
+などと戻ってきているようです。とりあえず戻ってくることは、戻ってくる。
+
+# 当方、VDM++VICE。
+
+--
+セイコーエプソン株式会社 機器ソフトウェア統括センター
+ 成田 隆興  Tel. 0263-58-8464 (職場代表電話)
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Dec 19 17:16:28 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun, 19 Dec 2010 17:16:28 +0900
+Subject: [SML 7885] Re:
+ 継続(continuation)というスタイル
+In-Reply-To: <4D0ACF32.8030408@cc.kyoto-su.ac.jp>
+References: <4D0ACF32.8030408@cc.kyoto-su.ac.jp>
+Message-ID: <4D0DBF5C.7050603@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+先のメールにて、継続（コンティニュエーション・パッシング・ス
+タイル）を用いて階乗計算を行うプログラムを紹介しましたが、
+
+| factorial |
+factorial :=
+        [:n :continuation |
+        (n isInteger not or: [n negative]) ifTrue: [^self error: 'boo!'].
+        n = 0
+            ifTrue: [continuation value: 1]
+            ifFalse: [factorial value: n - 1 value: [:a | continuation value: a * n]].
+        n halt].
+factorial value: 10 value: [:a | ^a]
+
+その実行過程をプログラム（ソースコード）として生成し、整形し、
+実行し、その結果を獲得するプログラムを書き下ろしてみました。
+
+| anInteger anInterval aStream aCode aTree aResult |
+anInteger := 10.
+anInterval := 0 to: anInteger.
+aStream := String new writeStream.
+aCode :=
+        [anInterval do:
+                [:n |
+                | s |
+                s := n printString.
+                aStream nextPutAll: '| con' , s , ' | con' , s , ' := '.
+                n < anInterval last
+                    ifTrue: [aStream nextPutAll: '[:a' , s , ' | ']
+                    ifFalse: [aStream nextPutAll: '[:a | ^a]. ']].
+        anInterval reverse do:
+                [:n |
+                | s |
+                s := n printString.
+                aStream nextPutAll: 'con' , s , ' value: '.
+                n > anInterval first
+                    ifTrue:
+                        [| r |
+                        r := (n - 1) printString.
+                        aStream nextPutAll: 'a' , r , ' * ' , s , ']. ']
+                    ifFalse: [aStream nextPutAll: '1']].
+        aStream contents]
+                ensure: [aStream close].
+aTree := Refactory.Browser.RBParser parseExpression: aCode.
+aCode := aTree formattedCode.
+aResult := Compiler evaluate: aCode.
+Transcript
+    clear;
+    nextPutAll: aCode;
+    cr;
+    nextPutAll: '==> ';
+    nextPutAll: aResult printString.
+^aResult
+
+トランスクリプトには次のように出力されます。conNがfactorialN
+のコンティニュエーションを意味しています。
+
+| con0 |
+con0 :=
+        [:a0 |
+        | con1 |
+        con1 :=
+                [:a1 |
+                | con2 |
+                con2 :=
+                        [:a2 |
+                        | con3 |
+                        con3 :=
+                                [:a3 |
+                                | con4 |
+                                con4 :=
+                                        [:a4 |
+                                        | con5 |
+                                        con5 :=
+                                                [:a5 |
+                                                | con6 |
+                                                con6 :=
+                                                        [:a6 |
+                                                        | con7 |
+                                                        con7 :=
+                                                                [:a7 |
+                                                                | con8 |
+                                                                con8 :=
+                                                                        [:a8 |
+                                                                        | con9 |
+                                                                        con9 :=
+                                                                                [:a9 |
+                                                                                | con10 |
+                                                                                con10 := [:a | ^a].
+                                                                                con10 value: a9 * 10].
+                                                                        con9 value: a8 * 9].
+                                                                con8 value: a7 * 8].
+                                                        con7 value: a6 * 7].
+                                                con6 value: a5 * 6].
+                                        con5 value: a4 * 5].
+                                con4 value: a3 * 4].
+                        con3 value: a2 * 3].
+                con2 value: a1 * 2].
+        con1 value: a0 * 1].
+con0 value: 1
+==> 3628800
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Dec 29 12:19:51 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 29 Dec 2010 12:19:51 +0900
+Subject: [SML 7886]
+ 第27回Smalltalk勉強会＠京都
+Message-ID: <4D1AA8D7.5090404@cc.kyoto-su.ac.jp>
+
+第27回Smalltalk勉強会＠京都を開催します。万障繰り合わせて、
+JR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto27
+
+場所はキャンプラ6階の第3講習室になります。
+
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第27回 Smalltalk勉強会＠京都
+日時：2011年01月05日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+年明け早々のSmalltalk勉強会＠京都になります。古風なブラウザ
+をもう少しだけリファクタリングしようと思います。キーボートの
+フッキングやメニューのインディケーションなどを扱い、さらにメ
+ソッドやクラスの登録および変更ができるようにして、リフレクティ
+ブなプログラミングや開発環境の本質を勉強しましょう。ノート型
+のパーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X
+）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+

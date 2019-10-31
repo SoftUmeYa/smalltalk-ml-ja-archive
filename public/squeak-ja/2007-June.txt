@@ -1,0 +1,641 @@
+From habuka ＠ xp.wind.jp  Sun Jun  3 18:33:04 2007
+From: habuka ＠ xp.wind.jp (Habuka Toshihito)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3498] はじめまして。外部アプリケーション上のカーソル位置にsqueakのテキスト変数を渡すにはどうすれば
+Message-ID: <001101c7a5c2$34043d40$040ba8c0@mickey>
+
+はじめまして、
+羽深と申します。
+よろしくおねがいします。
+
+プログラム経験は、
+BASIC、Cなどをほんの少し、
+せいぜい２０行程度と思って下さい。
+プログラム言語とは違いますが、
+verilog-RTLという、ハードウェア記述言語を使い
+簡単な制御ロジックや、デジタルフィルタの設計経験があります。
+このverilog-RTLが、なんとなくオブジェクト指向の雰囲気をもっていると
+今は思っています。
+
+最近偶然、squeak etoyというものに巡り会い、
+とても感激しています。
+
+今、子供のために、ひらがな練習ようのパレットを作っています。
+主な仕様は以下の通りです。
+・絵とお手本のひらがなで問題を出し、
+お手本と同じようにひらがなを入力できたら、正解とする。
+・問題は、ぱぱ、まま、ふくろう、へび、などを、etoyで描いたイラストと
+お手本のひらがなを表示します。
+・ひらがなパレットから文字を入力すると、テキストボックスに表示し
+入力しおわったら、enterボタンを押すと、答え合わせをします。
+・正解の場合は、問題に使ったイラストをちょっといじっって、
+たとえば、元のイラストを笑うイラストに変えて表示し、笑い声を発する。
+・正解で使用したひらがなパレットの文字ボタンの色を変え、
+征服できたひらがながわかるようにします。
+・文字ボタンは、押すとその声を発する。
+
+上記のようなものも、etoyだけで簡単にできて、ほんとうにすごいと
+思っています。
+
+人間、ある程度できるようになると欲が出てきます。
+
+文字パレットで入力した文字列を、外部アプリケーションの
+たとえば、インターネットブラウザの検索窓に置いたカーソル位置に
+入力するにはどうしたらよいかと今悩んでいます。
+色々なサイトを見て歩いて、
+FileStream Classが近いような気がするのですが
+今ひとつはっきりとしません。
+
+具体的な方法をご存知の方がおられましたら
+教えていただければ幸いです。
+
+長くなってすみません
+今後ともよろしくお願いいたします。
+
+羽深敏人
+（はぶかとしひと）
+habuka@xp.wind.jp
+
+
+From abee ＠ squeakland.jp  Sun Jun  3 22:22:37 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3499] Re: はじめまして。外部アプリケーション上のカーソル位置に squeak のテキスト変数を渡すにはどうすれば
+In-Reply-To: <001101c7a5c2$34043d40$040ba8c0@mickey>
+References: <001101c7a5c2$34043d40$040ba8c0@mickey>
+Message-ID: <4662C09DBC.10DEABEE@smtp.nifty.com>
+
+阿部@新百合です。
+はじめまして。
+
+On Sun, 3 Jun 2007 18:33:04 +0900
+"Habuka Toshihito" <habuka@xp.wind.jp> wrote:
+>今、子供のために、ひらがな練習ようのパレットを作っています。
+
+面白そうですね。よろしければぜひSuperSwiki2などに公開してみてください。
+
+http://squeakland.jp/super2/
+
+>文字パレットで入力した文字列を、外部アプリケーションの
+>たとえば、インターネットブラウザの検索窓に置いたカーソル位置に
+>入力するにはどうしたらよいかと今悩んでいます。
+
+いくつか方法があると思います。いずれの場合もEtoysだけでは書けず、
+Smalltalkを使う必要があります。また、FileStreamはファイルの読み書きをする
+ものなので、今回はあまり関係ないかもしれません。
+
+1. Win32Shellを使う(Windowsの場合。開発者版が必要)
+2. HTTPClientを使う(Webブラウザの中でのみ実行可能)
+3. Scamperを使う(機能が貧弱。日本語化が必要)
+
+1の場合、通常のスクイークではWin32ShellをはじめとするFFI(OSの機能を呼び出
+す仕組み)が削除されているため、開発者版が必要になります。
+
+http://squeakland.jp/developer/
+
+開発者版をご自分で使う分には問題ありませんが、一般に作品の配布する際に問
+題になるかもしれません。式はこんな感じです。
+
+Win32Shell new shellOpen: ('http://www.google.co.jp/search?hl=ja&q=スクイー
+ク') convertToSystemString
+
+Etoysと組み合わせるとこんな感じになります。ダウンロードしてから開発者版で
+開いてください。
+
+http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679
+
+2は最近山宮さんが発見した方法で、通常のスクイークでも使えますが、スクイー
+クをアプリケーションとして実行している場合は使うことができず、Webブラウザ
+の中でプラグインとして実行しているときにのみ使うことができます。式はこん
+な感じです。
+
+HTTPClient requestURL: ('http://www.google.co.jp/search?hl=ja&q=スクイー
+ク') convertToSystemString target: '_blank'
+
+Etoysと組み合わせるとこんな感じになります。「起動」をクリックしてブラウザ
+の中で開いてください。
+
+http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509
+
+3はスクイークに組み込まれているWebブラウザのScamperを使う方法です。
+Scamperはそれ自体がSmalltalkで書かれているので、使い方によってはなかなか
+面白いのですが、現在のWebブラウザと比べると極めて貧弱です。
+よって、詳細は省略しますが、日本語化については以下をご覧ください。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-April/003477.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From matswra ＠ adgj.net  Mon Jun  4 16:52:12 2007
+From: matswra ＠ adgj.net (Matsuura まつうら（ひ）)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3500] Fwd: オープンソースカンファレンス2007 Kansai@Kyoto
+Message-ID: <4663C4AC.4070200@adgj.net>
+
+まつうら＠ESP　％京都在住　です
+
+『オープンソースカンファレンス2007 Kansai@Kyoto』開催の案内が
+運営関係MLで流れましたので転載です。
+
+当日、olpc XO Suger 周辺のセッションを「聴きたい」の
+ですが、どなたかお話していただける方いらっしゃい
+ませんでしょうか？ or 紹介いただけませんでしょうか？
+
+できれば(私もその辺りの活動をしていたので)olpcの趣旨、
+発展途上国の子どもに教育を、貧困の問題なども合わせた
+企画がしたく思ってます。
+
+7/20, 21 (Fri, Sat) の2日間、京都、です。
+
+以下、原文から必要そうな要素を抜き出して載せます。
+当日まで関係しそうなところへ転載を歓迎します。
+転載済：osc2007-all/osc2007-kansai/squeak-ja
+
+--
+『オープンソースカンファレンス2007 Kansai@Kyoto』
+日時：2007年7月20日(金)・21日(土) 10:00〜17:00
+会場：京都コンピュータ学院 京都駅前校
+       http://www.kcg.ac.jp/campus/campus/map/image/eki_map.gif
+内容：オープンソースに関する最新情報の提供
+      ・展示 オープンソースコミュニティ、企業・団体による展示
+      ・セミナー オープンソースの最新情報を提供
+参加費：無料
+主催：オープンソースカンファレンス実行委員会
+共催：京都コンピュータ学院
+       京都情報大学院大学
+
+協賛：NEC
+       日本ヒューレット・パッカード株式会社
+       株式会社ワイズノット
+       株式会社野村総合研究所
+       ターボリナックス株式会社
+       株式会社インフォネット
+       サイオステクノロジー株式会社
+       日本仮想化技術株式会社
+       リナックスアカデミー
+       株式会社IDGジャパン
+       株式会社アスキー
+       株式会社インプレスジャパン
+       株式会社オライリー・ジャパン
+       株式会社技術評論社(Software Design)
+       株式会社翔泳社
+       株式会社シンクイット(ThinkIT)
+       ソフトバンク クリエイティブ株式会社
+       株式会社日経BP - 日経Linux
+       株式会社毎日コミュニケーションズ
+       ※協賛募集中
+
+後援：特定非営利活動法人エルピーアイジャパン
+       日本Linux協会
+       日本UNIXユーザ会
+       ※後援募集中
+
+企画運営：株式会社びぎねっと
+
+□参加予定グループ（50音順・敬称略）
+・LILO
+・Momonga Project
+・OmegaT Project
+・NPO法人 オープンソースソフトウェア協会
+・OpenOffice.org日本ユーザー会
+・日本語プログラミング言語「なでしこ」
+・日本Sambaユーザ会
+・もじら組
+※参加グループ募集中
+
+
+その他、情報は随時Webサイトで
+事前登録者募集中
+セミナー受付開始などのご案内を希望の方は事前登録を
+       http://www.ospn.jp/osc2007-Kansai
+
+■各種募集要綱
+アイデア是非ご提案ください。
+企画の内容は、詳細未定でも構いません。
+
+■協賛について
+開催にあたってご協賛いただける法人・団体を募集いたします。開催に
+ご協力いただくと共に、協賛費用をお願いいたします。
+
+協賛の種類や費用についてはお申し込みフォームにてお問い合わせくだ
+さい。折り返し、詳細についてご案内いたします。
+
+○協賛特典(例)
+・Webおよび配布資料へのロゴ・社名等の表示
+・ブース展示スペースとセミナー枠のご提供
+・来場者へのカタログ等の資料配付
+   ... その他、ご相談ください
+
+ご不明な点などは以下までお気軽にお問い合わせください。
+
+
+●申し込み・問い合わせ先
+オープンソースカンファレンス運営事務局 ((株)びぎねっと内)
+担当：篠崎・宮原
+e-mail:shin AT Begi.net,tmiyahar AT Begi.net
+TEL:03-5774-9461
+FAX:03-5774-9462
+
+
+■これまでの開催実績
+http://www.ospn.jp/ などをご覧ください
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Jun  5 09:53:08 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3501] LL魂のチケット販売、および「きみならどう書く」参加募集
+Message-ID: <JQ200706050953084.7173546@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、夏が近づくとLL言語のシーズンとなるわけですが、ことしも「LL魂」
+というイベントが行われます。(8/4日)
+http://ll.jus.or.jp/
+
+http://ll.jus.or.jp/2007/
+
+もうチケットが売っているようですね...
+
+Squeakですが、「きみならどう書く」に参加の招待を受けております。
+今年のテーマは「プレゼンソフト」であり、以下のような要件があります。
+
+    * 他の人がプレゼンに使えるようなプレゼンソフトを作る（仕様は基本的に自由）
+    * 作ったソフトを使ってプレゼンすること
+    * コードの説明をする
+
+Squeakの腕を見せたい、我こそは、という方はぜひご参加ください。私に個人的に
+メールしていただければと思います。
+
+#ちなみに私自身は8/4日はSqueakFestのためシカゴ界隈をぶらついていると思います。
+##が、出来る限りのアシストはさせていただきます。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From tak ＠ metatoys.org  Wed Jun  6 17:26:35 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3502] Re: Fwd: オープンソースカンファレンス2007 Kansai@Kyoto
+In-Reply-To: <4663C4AC.4070200@adgj.net>
+References: <4663C4AC.4070200@adgj.net>
+Message-ID: <46666FBB.9080304@metatoys.org>
+
+まつうらさん
+
+こんにちは、山宮です。イベントの案内ありがとうございました。
+わたくしずっと関西に在住しておるスクイークファンの一人で、しかも OLPC にも
+関わっている者として、まるで私のためにあるようなイベントなので是非お話したいの
+ですが、残念ながら参加できないです。
+
+この ML には OLPC や教育に関心のある方が沢山いらっしゃると思いますので、
+この時期京都に来る事の出来るスクイーカーの方がいれば、どなたか参加してみては
+如何でしょうか？私も当日は行けませんが、準備で出来る事があればお手伝いいたします。
+
+やまみや
+
+Matsuura まつうら（ひ） wrote:
+> まつうら＠ESP　％京都在住　です
+> 
+> 『オープンソースカンファレンス2007 Kansai@Kyoto』開催の案内が
+> 運営関係MLで流れましたので転載です。
+> 
+> 当日、olpc XO Suger 周辺のセッションを「聴きたい」の
+> ですが、どなたかお話していただける方いらっしゃい
+> ませんでしょうか？ or 紹介いただけませんでしょうか？
+> 
+> できれば(私もその辺りの活動をしていたので)olpcの趣旨、
+> 発展途上国の子どもに教育を、貧困の問題なども合わせた
+> 企画がしたく思ってます。
+> 
+> 7/20, 21 (Fri, Sat) の2日間、京都、です。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From habuka ＠ xp.wind.jp  Thu Jun  7 00:35:00 2007
+From: habuka ＠ xp.wind.jp (Habuka Toshihito)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3503] Re: はじめまして。外部アプリケーション上のカーソル位置に squeak のテキスト変数を渡すにはどうすれば
+References: <001101c7a5c2$34043d40$040ba8c0@mickey>
+	<4662C09DBC.10DEABEE@smtp.nifty.com>
+Message-ID: <000a01c7a850$47f77c00$040ba8c0@mickey>
+
+阿部さん、
+
+丁寧なご説明をしていただき大変ありがとうございました。
+１の方法は、今までわからなかったFFIへの入り口を知る事ができ
+大変参考になりました。まずはこのFFIを勉強させて頂こうと思います。
+
+ひらがなパレットですが
+ひらがな文字に対応した音声を発するところで
+その音声データを、他のホームページから拝借しておりまして、
+自分の子供に使わせている分にはあまり問題となりませんが
+一般に公開するには、著作権上の問題が発生します。
+できればその当たりを整理してから公開させていただきたいと思います。
+
+どうもありがとうございました。
+
+羽深敏人
+（はぶかとしひと）
+habuka@xp.wind.jp
+
+----- Original Message ----- 
+From: "Kazuhiro ABE" <abee@squeakland.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Sunday, June 03, 2007 10:22 PM
+Subject: [Squeak-ja: 3499] Re: はじめまして。外部アプリケーション上のカーソ
+ル位置に squeak のテキスト変数を渡すにはどうすれば
+
+
+> 阿部@新百合です。
+> はじめまして。
+>
+> On Sun, 3 Jun 2007 18:33:04 +0900
+> "Habuka Toshihito" <habuka@xp.wind.jp> wrote:
+> >今、子供のために、ひらがな練習ようのパレットを作っています。
+>
+> 面白そうですね。よろしければぜひSuperSwiki2などに公開してみてください。
+>
+> http://squeakland.jp/super2/
+>
+> >文字パレットで入力した文字列を、外部アプリケーションの
+> >たとえば、インターネットブラウザの検索窓に置いたカーソル位置に
+> >入力するにはどうしたらよいかと今悩んでいます。
+>
+> いくつか方法があると思います。いずれの場合もEtoysだけでは書けず、
+> Smalltalkを使う必要があります。また、FileStreamはファイルの読み書きをする
+> ものなので、今回はあまり関係ないかもしれません。
+>
+> 1. Win32Shellを使う(Windowsの場合。開発者版が必要)
+> 2. HTTPClientを使う(Webブラウザの中でのみ実行可能)
+> 3. Scamperを使う(機能が貧弱。日本語化が必要)
+>
+> 1の場合、通常のスクイークではWin32ShellをはじめとするFFI(OSの機能を呼び出
+> す仕組み)が削除されているため、開発者版が必要になります。
+>
+> http://squeakland.jp/developer/
+>
+> 開発者版をご自分で使う分には問題ありませんが、一般に作品の配布する際に問
+> 題になるかもしれません。式はこんな感じです。
+>
+> Win32Shell new shellOpen: ('http://www.google.co.jp/search?hl=ja&q=スク
+イー
+> ク') convertToSystemString
+>
+> Etoysと組み合わせるとこんな感じになります。ダウンロードしてから開発者版で
+> 開いてください。
+>
+>
+http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679
+>
+> 2は最近山宮さんが発見した方法で、通常のスクイークでも使えますが、スクイー
+> クをアプリケーションとして実行している場合は使うことができず、Webブラウザ
+> の中でプラグインとして実行しているときにのみ使うことができます。式はこん
+> な感じです。
+>
+> HTTPClient requestURL: ('http://www.google.co.jp/search?hl=ja&q=スクイー
+> ク') convertToSystemString target: '_blank'
+>
+> Etoysと組み合わせるとこんな感じになります。「起動」をクリックしてブラウザ
+> の中で開いてください。
+>
+>
+http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509
+>
+> 3はスクイークに組み込まれているWebブラウザのScamperを使う方法です。
+> Scamperはそれ自体がSmalltalkで書かれているので、使い方によってはなかなか
+> 面白いのですが、現在のWebブラウザと比べると極めて貧弱です。
+> よって、詳細は省略しますが、日本語化については以下をご覧ください。
+>
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-April/003477.html
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+
+
+From ofg ＠ kwansei.ac.jp  Mon Jun 11 14:46:51 2007
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3504] コミックマーケット72に出展します
+In-Reply-To: <5t2n1p$1rblf0@mailgw1.kwansei.ac.jp>
+References: <5t2n1p$1rblf0@mailgw1.kwansei.ac.jp>
+Message-ID: <20070611144312.37BC.OFG@kwansei.ac.jp>
+
+大藤です。
+以前にご案内させて頂いた「萌えるSqueak『もえすく』」ですが、
+無事にコミックマーケット72の出展枠に当選しました。
+下記の通り出展する予定ですので、よろしければお越し下さいませ。
+
+日時：コミックマーケット72　1日目
+　　　2007年8月17日（金）10:00〜16:00
+場所：東京国際展示場（東京ビッグサイト）
+　　　東3ホール カ-35a
+http://moesuku.ofg.jp/
+
+
+Squeakについて簡単に紹介できるようなビラやパンフレットがあれば
+一緒に置いておきたいのですが、何か良いものはないでしょうか？
+学術的な展示会ではないため、どの程度の反応が得られるか不安では
+ありますが…。
+
+大藤 泰生　ofg@kwansei.ac.jp
+
+From abee ＠ squeakland.jp  Mon Jun 11 18:33:12 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3505] Re: Fwd: オープンソースカンファレンス  2007 Kansai@Kyoto
+In-Reply-To: <4663C4AC.4070200@adgj.net>
+References: <4663C4AC.4070200@adgj.net>
+Message-ID: <466D16D82D5.0A2DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+山宮さんがいらっしゃないということで、はなはだ不安ではあるのですが、もし
+私でよろしければ、OLPCについて少しお話させていただければと思います。
+
+内容については山宮さんが2月にC4で発表されたものをベースにしたいと思います。
+
+http://squeakland.jp/sqmedia/20070210C4.html
+
+ただし、私は他のOSC(LinuxやPythonなど)についてほとんど分かりませんので、
+Squeak Etoysに関するものが中心になります。実機については、私も先日ボスト
+ンで1台もらったので(B2マシン)、これをお見せできると思います。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Mon Jun 11 19:22:33 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3506] Re: LL魂のチケット販売、および「きみならどう書く」参加募集
+In-Reply-To: <JQ200706050953084.7173546@mars.dti.ne.jp>
+References: <JQ200706050953084.7173546@mars.dti.ne.jp>
+Message-ID: <JU200706111922336.3008328@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+なんと、参加表明を頂いた方は無しという悲しい状況になっています。
+
+まだ、間に合うかと思いますので、一念発起してぜひどうぞ。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> さてさて、夏が近づくとLL言語のシーズンとなるわけですが、ことしも「LL魂」
+> というイベントが行われます。(8/4日)
+> http://ll.jus.or.jp/
+> 
+> http://ll.jus.or.jp/2007/
+> 
+> もうチケットが売っているようですね...
+> 
+> Squeakですが、「きみならどう書く」に参加の招待を受けております。
+> 今年のテーマは「プレゼンソフト」であり、以下のような要件があります。
+> 
+>     * 他の人がプレゼンに使えるようなプレゼンソフトを作る（仕様は基本的に自由）
+>     * 作ったソフトを使ってプレゼンすること
+>     * コードの説明をする
+> 
+> Squeakの腕を見せたい、我こそは、という方はぜひご参加ください。私に個人的に
+> メールしていただければと思います。
+> 
+> #ちなみに私自身は8/4日はSqueakFestのためシカゴ界隈をぶらついていると思います。
+> ##が、出来る限りのアシストはさせていただきます。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Tue Jun 12 15:17:41 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3507] Re: 1/31( 水 ) Squeakland.jp サーバメンテナンスについて
+In-Reply-To: <465EAC0C194.898FABEE@smtp.nifty.com>
+References: <6544a1da0705062146m76c94d0qdbfb3a9496e9479f@mail.gmail.com>
+	<465EAC0C194.898FABEE@smtp.nifty.com>
+Message-ID: <466E3A8511.B1BEABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 31 May 2007 20:05:48 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>なお、SuperSwikiの復旧についてはいまのところ未定です。
+
+さきほど、山宮さんのご協力により、SuperSwikiが復旧しました。
+
+http://squeakland.jp/super/
+
+今までは専用サーバ上で稼動していたのに対して、今回は山宮さんが借りている
+レンタルサーバ上で動いています。
+
+インターネットに接続されていれば、ナビゲータの「公開する!」の長押しで現れ
+る「異なるサーバーに公開」と「探す」を使って、「Squeakland.JP」としてアク
+セスできます。作品の公開にお使いください。
+ただし、一度公開した作品は誰でも見ることができ、自分では削除できませんの
+で、個人情報などにご注意ください。
+また、非公式の実験サービスという位置付けは従来と同じですので、その点ご了
+承ください。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshimi_175r ＠ yahoo.co.jp  Tue Jun 26 15:06:49 2007
+From: yoshimi_175r ＠ yahoo.co.jp (角田 淑美)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3508] (無題)
+Message-ID: <20070626060649.50676.qmail@web2509.mail.bbt.yahoo.co.jp>
+
+はじめまして。
+  私は今卒業研究でSqueakを用いて教材開発をしようと考えています。
+  ですが、Ｓｑｕｅａｋをネット上で使えるかがわからなくて困っています。
+  簡単な質問かもしれませんが、教えていただけないでしょうか？
+ 
+
+ 
+---------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070626/3f7fd836/attachment.htm
+From abee ＠ squeakland.jp  Tue Jun 26 22:15:08 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3509] Re: ( 無題  )
+In-Reply-To: <20070626060649.50676.qmail@web2509.mail.bbt.yahoo.co.jp>
+References: <20070626060649.50676.qmail@web2509.mail.bbt.yahoo.co.jp>
+Message-ID: <4681115C32F.6185ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+こんにちは。
+
+「Ｓｑｕｅａｋをネット上で使える」という意味がよく分からないので、もう少
+し詳しく教えてもらえますか。また、少なくともメールに表題はつけたほうが良
+いかもしれません。
+
+よろしくお願いします。
+
+ //abee
+
+P.S. メーリングリストで質問される場合は、以下のサイトが参考になるかもしれ
+ません。
+
+http://www.hyuki.com/writing/techask.html
+
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From namiki ＠ info.nara-k.ac.jp  Fri Jun 29 15:00:08 2007
+From: namiki ＠ info.nara-k.ac.jp (Toshie Matsumura)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3510] 公開講座ご案内
+Message-ID: <003b01c7ba12$bfd7b130$7ff618ca@EPSON114745841>
+
+はじめまして
+松村と申します。
+＃旧姓（並木）といいます。以前鳥取にいましたので、こちらでお名前を拝見する何人かの方とお会いしたこともあるかと思います。
+よろしくお願いします。
+
+公開講座のご案内についてです。
+締め切りも近いのですが、7月22日に奈良高専にて
+「小中学生のためのプログラミング講座　〜スクイークによるゲーム製作〜」というタイトルで
+公開講座（電子情報通信学会関西支部共催）を行います。
+
+http://www.nara-k.ac.jp/jimu/kokaikouza19/
+
+対象が小学高学年生〜中学生（付き添いの方は見学可能）ですので、このメーリングリストを
+読まれている方の大部分の方の参加は難しいかと思いますが、近隣の方で小中学生の方、あるいは小中学生のお子さんがおられる方ご参加お願いします。
+内容は、一般的なゲームの話とSqueakを使用したゲーム作成の予定です。
+(ただし、時間の都合上いくつか雛形を用意しておき、
+各自で変更を行いゲーム完成するという手順になるかと思います。）
+講師は、奈良高専の教員がつとめます。（私は裏方でお手伝いします。）
+昨年度までは別のテーマで公開講座を行っておりましたが、今年度初めての取り組みです。
+どの程度集まっていただけるのか心配はしておりますが、無事成功するようがんばっております。
+
+ご興味のある方のご参加を是非お待ちしております。
+＃また、ご質問ご意見ご助言がありましたらお願いいたします。
+
+/////////////////////////////////////////
+Toshie Matsumura  namiki@info.nara-k.ac.jp
+/////////////////////////////////////////
+ 
+
+

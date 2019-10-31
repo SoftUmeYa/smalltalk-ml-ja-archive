@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3439] Re: Squeak の幾何ソフト
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203439%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhayAbJEIkTjR2GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMj8lPSVVJUgbKEI%3D%3F%3D&In-Reply-To=20070308.160255.123968520.hamada%40holst.sm.fukuoka-u.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003438.html">
+   <LINK REL="Next"  HREF="003440.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3439] Re: Squeak の幾何ソフト</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203439%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhayAbJEIkTjR2GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMj8lPSVVJUgbKEI%3D%3F%3D&In-Reply-To=20070308.160255.123968520.hamada%40holst.sm.fukuoka-u.ac.jp"
+       TITLE="[Squeak-ja: 3439] Re: Squeak の幾何ソフト">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2007年 3月  8日 (木) 17:38:56 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003438.html">[Squeak-ja: 3438] Re: Squeak の幾何ソフト
+</A></li>
+        <LI>次の記事 <A HREF="003440.html">[Squeak-ja: 3440] Re: Squeak の幾何ソフト
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3439">[ 日付 ]</a>
+              <a href="thread.html#3439">[ スレッド ]</a>
+              <a href="subject.html#3439">[ 件名 ]</a>
+              <a href="author.html#3439">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Thu, 08 Mar 2007 16:02:55 +0900 (JST)
+Tatsuyoshi HAMADA &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hamada ＠ holst.sm.fukuoka-u.ac.jp</A>&gt; wrote:
+&gt;<i>実は、上記サイトから
+</I>&gt;<i><A HREF="http://www.squeaksource.com/DrGeoII/">http://www.squeaksource.com/DrGeoII/</A>
+</I>&gt;<i>を経て最新版の
+</I>&gt;<i><A HREF="http://www.squeaksource.com/DrGeoII/DrGeoII-HilaireFernandes.73.mcz">http://www.squeaksource.com/DrGeoII/DrGeoII-HilaireFernandes.73.mcz</A>
+</I>&gt;<i>を試してみたい
+</I>&gt;<i>
+</I>&gt;<i>mcz というファイルが何らかのアーカイブだとは思うのですが、
+</I>&gt;<i>これを Squeakland2005J で動作させるためには、
+</I>&gt;<i>どのような手順を踏めば良いのでしょうか？
+</I>
+mczはSqueakのバージョン管理システムであるMonticelloのパッケージファイルで
+す。Windowsの場合は、このファイルをSqueakのウィンドウにドロップするだけで
+ロードできるのですが、Linux(のウィンドウマネージャ)用にこの機能が実装されて
+いるかどうか分かりません。
+
+どのプラットホームでも使える手段としては、Squeakの標準ファイラであるファ
+イルリスト(File List)を使う方法があります。
+
+ファイルリストはワールドメニューの「開く」から「ファイル・リスト」を選ぶ
+と開きます。ワールドメニューは、開発版の場合、バックグラウンドで左クリッ
+ク、eToysユーザ版の場合はEscキーで開きます。
+
+ファイルリストの左上のペインからディレクトリを選択し、右上のペインでmczファ
+イルを選ぶと、右上の「ロード」ボタンが有効になりますので、それをクリック
+するとロードされます。
+
+このとき、eToysユーザ版の場合は、読み書き可能なディレクトリが「My Squeak」
+以下に制限されます。これはWindowsでは通常「C:\My Squeak」です。UNIX系では
+環境変数のSQUEAK_USERDIRに依存すると思われますが、具体的にどこを指してい
+るのかよく分かりません。
+
+さらに、DrGeoIIの場合はロード後にGUIでなくSmalltalk式を使って起動するよう
+になっているので、文字入力可能な場所、たとえばワークスペースなどをワール
+ドメニューから開き、「DrGApp new」と入力後、選択して右ボタンメニュー(中ボ
+タンかも)で「式を評価」します。
+
+先日私が試したのは、DrGeoII-HilaireFernandes.72.mczだったのですが、73は必
+要なメソッドが不足しているためにうまく動かないようです。72を試されるか、
+パッチを作りましたので、73をロードした後に添付のstファイル(gzipしています)
+をファイルリストでファイルインしてから「DrGApp new」を評価してください。
+
+Monticelloについては、川村さんのサイトが詳しいです。
+<A HREF="http://squeak.qp.land.to/wiki/index.php?Tools%2FMonticello">http://squeak.qp.land.to/wiki/index.php?Tools%2FMonticello</A>
+
+また、梅澤さんの「自由自在Squeakプログラミング」(ISBN 978-4-88373-203-6)
+にも解説があります。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: DrGGeometryView-toolBar.st.gz
+型:         application/octet-stream
+サイズ:     821 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070308/6f4b5d49/DrGGeometryView-toolBar.st.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070308/6f4b5d49/DrGGeometryView-toolBar.st.obj</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003438.html">[Squeak-ja: 3438] Re: Squeak の幾何ソフト
+</A></li>
+	<LI>次の記事 <A HREF="003440.html">[Squeak-ja: 3440] Re: Squeak の幾何ソフト
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3439">[ 日付 ]</a>
+              <a href="thread.html#3439">[ スレッド ]</a>
+              <a href="subject.html#3439">[ 件名 ]</a>
+              <a href="author.html#3439">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

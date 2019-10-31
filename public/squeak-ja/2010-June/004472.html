@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4472] Re: 次期Etoysの日本語フォント
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204472%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjwhNHwbKEJFdG95cw%3D%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGwlVSUpJXMlSBsoQg%3D%3D%3F%3D&In-Reply-To=AANLkTilnRCPPDKCPdcGyCqkD61w0N_jMSBrBw-RWVkZI%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004471.html">
+   <LINK REL="Next"  HREF="004473.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4472] Re: 次期Etoysの日本語フォント</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204472%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjwhNHwbKEJFdG95cw%3D%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGwlVSUpJXMlSBsoQg%3D%3D%3F%3D&In-Reply-To=AANLkTilnRCPPDKCPdcGyCqkD61w0N_jMSBrBw-RWVkZI%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4472] Re: 次期Etoysの日本語フォント">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2010年 6月 11日 (金) 22:36:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004471.html">[Squeak-ja: 4471] Re: 次期Etoysの日本語フォント
+</A></li>
+        <LI>次の記事 <A HREF="004473.html">[Squeak-ja: 4473] 第21回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4472">[ 日付 ]</a>
+              <a href="thread.html#4472">[ スレッド ]</a>
+              <a href="subject.html#4472">[ 件名 ]</a>
+              <a href="author.html#4472">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>梅澤です。
+
+ライセンスも緩くなったようですし、IPAフォントも良いのではないでしょうか。
+<A HREF="http://ossipedia.ipa.go.jp/ipafont/index.html">http://ossipedia.ipa.go.jp/ipafont/index.html</A>
+
+私が試した感じですと、IPAフォントでは英文フォントのディセンダの部分が
+綺麗に表示されませんでした。(pやgの下が欠ける)
+
+正直小夏よりも綺麗と思うのですが、この問題があったため、デフォルトでは
+採用しませんでした。これはおそらくSqueak側のバグなので、直れば良いなーと
+思っています。(自分で調査すれば良いのですが、横着しています)。
+
+ちなみにVLフォントは字数が少ない点がネックでした。4.1jaでは、いろいろと
+フォントを評価してみて、そこそこ良かった小夏を使うことにしたのでした。
+
+ではでは。
+
+Korakurider &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">korakurider ＠ gmail.com</A>&gt; wrote:
+&gt;<i> Korakuriderです、こんにちは。
+</I>&gt;<i> 現在、Etoysの次期バージョン 4.1の開発が細々と進められています。
+</I>&gt;<i> 
+</I>&gt;<i> その中で Andreas Raabが作った、 TrueTypeフォントをイメージにインストールせずに
+</I>&gt;<i> 直接読む機能が統合される見込みです。
+</I>&gt;<i> 
+</I>&gt;<i> 今までのEtoysでは以下のいずれかの選択でした。
+</I>&gt;<i> 　　+ 標準のビットマップフォント。イメージが巨大にはならないが、拡大すると汚い
+</I>&gt;<i> 　　　（Squeakland2005J）
+</I>&gt;<i> 　　+ 手持ちのTrueTypeフォントをイメージに追加インストール。表示がきれいだが、イメージが巨大になる
+</I>&gt;<i> 　　　（宮坂さんのチームが出しているMTS版）
+</I>&gt;<i> これからはイメージを肥大させずにきれいな文字表示ができるようになります。
+</I>&gt;<i> すでにSqueak4.1ではできているのですが、Etoysでもできるようになります。
+</I>&gt;<i> 
+</I>&gt;<i> 今回は、ライセンスに問題がない日本語のTrueTypeフォントを
+</I>&gt;<i> 本家Squeaklandから配布するEtoysのキットに標準添付することを考えています。
+</I>&gt;<i> 
+</I>&gt;<i> それで、どの日本語フォントを入れるのがよいか、皆さんのご意見をいただきたいのです。
+</I>&gt;<i> 普通に考えると MTS版で使っている Monaを踏襲するのがよさそうですが、
+</I>&gt;<i> なにかあればお願いします。
+</I>&gt;<i> 
+</I>&gt;<i> /Korakurider
+</I>
+
+
+---
+[:masashi | ^umezawa]
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004471.html">[Squeak-ja: 4471] Re: 次期Etoysの日本語フォント
+</A></li>
+	<LI>次の記事 <A HREF="004473.html">[Squeak-ja: 4473] 第21回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4472">[ 日付 ]</a>
+              <a href="thread.html#4472">[ スレッド ]</a>
+              <a href="subject.html#4472">[ 件名 ]</a>
+              <a href="author.html#4472">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

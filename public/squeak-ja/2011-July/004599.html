@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4599] Re:	Scratch + Arduinoいろいろ試してます
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204599%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCArIEFyZHVpbm8bJEIkJCRtJCQkbTtuGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckRiReJDkbKEI%3D%3F%3D&In-Reply-To=%3CCADv7uFGzxasOATAAzfuyUKC7em%3DrqfNgRcN7FzVPyJcNuzmD3Q%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004598.html">
+   <LINK REL="Next"  HREF="004600.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4599] Re:	Scratch + Arduinoいろいろ試してます</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204599%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCArIEFyZHVpbm8bJEIkJCRtJCQkbTtuGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckRiReJDkbKEI%3D%3F%3D&In-Reply-To=%3CCADv7uFGzxasOATAAzfuyUKC7em%3DrqfNgRcN7FzVPyJcNuzmD3Q%40mail.gmail.com%3E"
+       TITLE="[Squeak-ja: 4599] Re:	Scratch + Arduinoいろいろ試してます">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2011年 7月 22日 (金) 23:26:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004598.html">[Squeak-ja: 4598]	Scratch + Arduinoいろいろ試してます
+</A></li>
+        <LI>次の記事 <A HREF="004600.html">[Squeak-ja: 4600] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4599">[ 日付 ]</a>
+              <a href="thread.html#4599">[ スレッド ]</a>
+              <a href="subject.html#4599">[ 件名 ]</a>
+              <a href="author.html#4599">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部です。
+鎌田さん、お久しぶりです。
+
+2011年7月21日17:32 Toshiyuki Kamada &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tkamada ＠ gmail.com</A>&gt;:
+&gt;<i> Squeakのリストに対して、Scratchの話題で恐縮です。阿部さんに直接お話できる場所がここぐらいかと思い、参加させていただきました。
+</I>
+ご指名いただくのはさておき、ScratchもSqueakなので構わないと思います。
+
+&gt;<i> モーター制御で、サーボモーターを追加しようと思い、ArduinoのServo標準オブジェクトを使えばArduino側はなんとかなる見込みが立ったのですが、Scratch側をどうしようということで、Smalltalkのブラウザを開いてコードを追いかけています。
+</I>&gt;<i>
+</I>&gt;<i> そこで、コードを見ていると、#(84 254 xx
+</I>&gt;<i> xx)というバイト列をScratchは送信しているように思うのですが、Arduino側では最後の1バイトだけを見ているように見えます。
+</I>&gt;<i>
+</I>&gt;<i> また、モータ番号として1〜6が設定されるようなのですが、このあたりをうまく受け取ってサーボモーター番号決め打ちみたいなhackができるのかどうか、といったあたりも含めてお伺いしたくメールさせていただいている次第です。
+</I>
+たぶんこれはGoGo Boardのコードですね。
+<A HREF="http://www.gogoboard.org/">http://www.gogoboard.org/</A>
+
+Scratchが標準でサポートするデバイスには、SensorBoard(aka PicoBoard)、WeDo、そしてGoGo Boardがあります。
+この内、SensorBoardとGoGo
+Boardは排他で、ScratchBoard監視盤(SensorBoardMorph)のShift+右ボタンメニューで切り替えます(SensorBoardMorph&gt;&gt;rightButtonMenu)。
+モーター関連のメソッドはGoGo BoardとWeDoのものが混ざっており、センダーなどを確認してどちらに属するものか調べる必要があります。
+
+&gt;<i> ただ、モータ番号を指定するブロック（Morph）はありませんので、現在の実装がどうなっているのか、変更するならどのあたりか、といったことを若干ご示唆いただければと思っております。
+</I>
+SensorBoardWithMotorで私が変更したのはSensorBoardの方です。このプロトコルは、ボードへのデータ送信要求として1サイクルごとにPCから1バイト(16r01)を送っていたので、これをモーター1個分の回転方向用に2ビット、モーターのパワー用に6ビット使って送信するように変えました(SensorBoardMorph&gt;&gt;processIncomingData)。
+UIのブロックとそのためのメソッドはWeDo用のものを流用しています(ScriptableScratchMorph&gt;&gt;motorOn:など)。
+その他の変更箇所は、SensorBoardWithMotor.1.csをご覧ください。
+この設計は、ArduinoにSensorBoardとWeDoの両方の機能を持たせ、ハード、ソフト共に最低限の変更(モータードライバーとWeDo用コネクターの追加など)で低コストに両方の機能を活かしつつ、プロジェクトファイルの互換性を維持することを意図しています(公式サイトで共有可能)。それらを超える能力は狙っていません。
+
+GoGo BoardにしてもWeDoにしても、DCモーターの制御しかできませんので、ブロックもそれ用のものしか用意されていません。もし、サーボモーターを使われるのであれば、自分でスケッチを書き、プロトコルを決め、ブロックも用意する必要があります。
+
+それを実際に行なっているのがS4Aです。
+<A HREF="http://seaside.citilab.eu/scratch?_s=yQf-lmh7eaq_Ev0_&amp;_k=_Ac121eeMFBO3xsR">http://seaside.citilab.eu/scratch?_s=yQf-lmh7eaq_Ev0_&amp;_k=_Ac121eeMFBO3xsR</A>
+Smalltalkの拡張でサーボモーターをお使いになるのであれば、これを参考にすることをお勧めします。
+
+あるいは、リモートセンサープロトコルを使って、サーボモーターを制御するサーバーとScratchがソケットで通信するように書くのも手です。その場合、サーバーの記述言語はSmalltalkで無くても構いません。また、Scratch側の変更が不要となります。
+<A HREF="http://wiki.scratch.mit.edu/wiki/Remote_Sensors_Protocol">http://wiki.scratch.mit.edu/wiki/Remote_Sensors_Protocol</A>
+これを行っているのがCatenaryです。
+<A HREF="https://sites.google.com/site/chalkmarrowfiles/">https://sites.google.com/site/chalkmarrowfiles/</A>
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004598.html">[Squeak-ja: 4598]	Scratch + Arduinoいろいろ試してます
+</A></li>
+	<LI>次の記事 <A HREF="004600.html">[Squeak-ja: 4600] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4599">[ 日付 ]</a>
+              <a href="thread.html#4599">[ スレッド ]</a>
+              <a href="subject.html#4599">[ 件名 ]</a>
+              <a href="author.html#4599">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

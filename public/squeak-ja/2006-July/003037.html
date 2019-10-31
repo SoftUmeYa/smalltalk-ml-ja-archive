@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3037] Re: Wiki としての SuperSwiki
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203037%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=20060709101803.EE89.KOUBO2006%40yengawa.jpn.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003035.html">
+   <LINK REL="Next"  HREF="003042.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3037] Re: Wiki としての SuperSwiki</H1>
+    <B>NAKATA, Shunsuke</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203037%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=20060709101803.EE89.KOUBO2006%40yengawa.jpn.org"
+       TITLE="[Squeak-ja: 3037] Re: Wiki としての SuperSwiki">scriptonwikipage ＠ yahoo.co.jp
+       </A><BR>
+    <I>2006年 7月  9日 (日) 21:03:23 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003035.html">[Squeak-ja: 3035] Re: Wiki としての SuperSwiki
+</A></li>
+        <LI>次の記事 <A HREF="003042.html">[Squeak-ja: 3042] PluggableTextMorphをつまむ方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3037">[ 日付 ]</a>
+              <a href="thread.html#3037">[ スレッド ]</a>
+              <a href="subject.html#3037">[ 件名 ]</a>
+              <a href="author.html#3037">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>中田です。
+
+横川さん、返信ありがとうございます。
+
+&gt;&gt;&gt;&gt;<i> 「もっと大規模なフレームワーク構築」というのは
+</I>&gt;&gt;&gt;&gt;<i> たとえばどんなものなのでしょうか?
+</I>
+すみません、私も具体的にこんな応用例がある、、、というのを
+示せればよかったのですが、、、私自身も((perl))プラグインの
+&quot;可能性&quot;に技術的な好奇心を抱いただけの状態で、
+「恐らく Smalltalkコミュニティではもっと先進しているだろう」
+との期待からこちを訪問した次第です。
+
+前述しませんでしたので、補足しますと、
+Perlでは他のライブラリーを動的に読み込む仕組み &quot;require&quot;
+がありますが、((perl))プラグインの中でもそれを利用できます。
+
+例えば、(SmalltalkコミュニティーでPerlの実例で申し訳ございませんが)
+Wifkyページ「税金関数」の中に、関数 tax の定義があるとします。
+
+	sub tax
+	  {return $_[0] * 0.05 ;}
+
+これを、別のページ「総額表示」から呼び出して使うことができます。
+
+	require &amp;title2fname (&amp;denc ('税金関数')) ;
+
+	print ('&lt;P&gt;Bill: ' . ($buy + &amp;tax ($buy)) . '&lt;/P&gt;') ;
+
+
+こんな風に、こんな風にWifkyページとして蓄積された関数を
+呼び出して使うことができるのです。
+
+
+
+Wifkyの場合、Wifkyないの他のページをテキストファイルとして
+開くことができるのですが、それを利用すれば、例えば、
+WifkyないにCSV形式でデータを保存しておいて、それを、
+やはりWifky内ページのスクリプトで処理して、表示する
+ということも可能です。
+
+私は職場でWifkyを使っており、職場内の連絡事項・会議案内など
+を掲載しています。そういうページでは、
+	本件の問合せ先:
+		山田 太郎 氏
+		内線 1979
+		メール: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Taou.Yamada ＠ jp.somewhre.com</A>
+などを含めていますが、
+これをその都度、内線番号を調べるのではなく、
+連絡先についてのデータを「連絡先」などのページで
+一括管理しておいて、参照したいところでは、
+((perl 連絡先 山田太郎)) などと書ければ、
+内線番号が変更になった場合などを考えると、
+サイトないのページ管理が非常に楽なわけです。。。
+
+
+CSVデータに限らずとも、もっと面白い応用があるのではないか、、、、
+と考えたわけでした。。。。
+
+
+また、Wikiには、コンテンツ管理システムとしての側面がありますが、
+ページ内スクリプトを使えれば、
+複数の人がかかわる場合でも一貫性をもって、
+もっと効果的に行えるのではないか、
+とも思います。
+
+いかがでしょうか。。。。
+
+
+技術的にはそれほど難易度の高いものではありませんので、
+技術的好奇心はさておいて、商用サイト・職場内などで実際の有用性が
+みいだせるなら、この方面は発展の余地があると思っています。
+
+そういう意味では、応用例が重要ですね。。。。
+--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+<A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003035.html">[Squeak-ja: 3035] Re: Wiki としての SuperSwiki
+</A></li>
+	<LI>次の記事 <A HREF="003042.html">[Squeak-ja: 3042] PluggableTextMorphをつまむ方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3037">[ 日付 ]</a>
+              <a href="thread.html#3037">[ スレッド ]</a>
+              <a href="subject.html#3037">[ 件名 ]</a>
+              <a href="author.html#3037">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

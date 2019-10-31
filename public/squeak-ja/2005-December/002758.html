@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2758] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202758%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0xhbmQyMDA1SiBw%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FcmUtcmVsZWFzZSAbJEJIRyROIVY/NyQ3JC86biRrIVckTjVzRjAbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4396C686.5060102%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002756.html">
+   <LINK REL="Next"  HREF="002764.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2758] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202758%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0xhbmQyMDA1SiBw%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FcmUtcmVsZWFzZSAbJEJIRyROIVY/NyQ3JC86biRrIVckTjVzRjAbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4396C686.5060102%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 2758] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2005年 12月  8日 (木) 12:06:50 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002756.html">[Squeak-ja: 2756] SqueakLand2005J pre-release版の「新しく作る」の挙動について
+</A></li>
+        <LI>次の記事 <A HREF="002764.html">[Squeak-ja: 2764] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2758">[ 日付 ]</a>
+              <a href="thread.html#2758">[ スレッド ]</a>
+              <a href="subject.html#2758">[ 件名 ]</a>
+              <a href="author.html#2758">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Wed, 07 Dec 2005 20:24:54 +0900
+Hideo Kawamura &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kawa90 ＠ yahoo.co.jp</A>&gt; wrote:
+&gt;<i>SqueakLand2005J pre-release版でナビゲータフラップの「新しく作る」をク
+</I>&gt;<i>リックすると必ずデスクトップ左上にプロジェクトビューが配置されるのです
+</I>&gt;<i>が、仕様変更でしょうか？
+</I>
+機能としては以前からありましたが、デフォルトでそうなったのはNihongo7のプ
+ラグインイメージからだと思います。
+
+これはプリファレンスのProjectViewsInWindowsをチェックすると直ります。
+あるいはワールドメニューの「外観...」から「テーマ...」を選び、「
+outOfTheBox」に変更すると、他のプリファレンスも含めて開発版に近くなります。
+
+要はただのモーフなのでデフォルトの左上に出ているということですね。ウィン
+ドウになるとRealEstateAgentが置き場所を管理するので、なるべく重ならないよ
+うに並びます。
+
+&gt;<i>個人的には順番に位置がずれて出てきてくれるのがいいのですが。。。連続して
+</I>&gt;<i>作成すると重なってしまって移動が面倒なんです。
+</I>
+私もそう思います。
+その一方で、プロジェクトの出る位置が決まっていると、ワークショップなどで
+説明が楽ということもあります。
+単にeToysモードからウィンドウを無くしたかっただけかもしれません。
+
+&gt;<i>ところで[Tips]Squeak pluginでHPやblogに動きのあるバナーをつける
+</I>&gt;<i><A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002746.html">http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002746.html</A>
+</I>&gt;<i>ですが、最後にカーソル位置にある絵を表示するモーフをロックするとハロがで
+</I>&gt;<i>なくてよろしいようで)。
+</I>
+プリファレンスのmouseOverHalosのチェックを外すという手もあります。このプ
+リファレンスの状態はプロジェクトファイルに保存されます。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002756.html">[Squeak-ja: 2756] SqueakLand2005J pre-release版の「新しく作る」の挙動について
+</A></li>
+	<LI>次の記事 <A HREF="002764.html">[Squeak-ja: 2764] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2758">[ 日付 ]</a>
+              <a href="thread.html#2758">[ スレッド ]</a>
+              <a href="subject.html#2758">[ 件名 ]</a>
+              <a href="author.html#2758">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

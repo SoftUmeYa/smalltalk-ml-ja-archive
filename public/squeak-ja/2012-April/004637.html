@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4637] Re:	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204637%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FSypCVUcgMjAxMi8wNC8yMRskQiROJGAkSCQmSC8bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCST0hVhsoQkZyZWVCU0QgcG9ydCBsYW5nL3NxdWVhazQu%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FNC43LTIzNzUbJEIkWCRORjshVyRLJEQkJCRGGyhC%3F%3D&In-Reply-To=%3CCAH3eEdTkdWm6gA_6Sm38E%2Bgv9yt1q1qk47vjbbas%3Dbtf8yv7Kg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004636.html">
+   <LINK REL="Next"  HREF="004638.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4637] Re:	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204637%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FSypCVUcgMjAxMi8wNC8yMRskQiROJGAkSCQmSC8bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCST0hVhsoQkZyZWVCU0QgcG9ydCBsYW5nL3NxdWVhazQu%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FNC43LTIzNzUbJEIkWCRORjshVyRLJEQkJCRGGyhC%3F%3D&In-Reply-To=%3CCAH3eEdTkdWm6gA_6Sm38E%2Bgv9yt1q1qk47vjbbas%3Dbtf8yv7Kg%40mail.gmail.com%3E"
+       TITLE="[Squeak-ja: 4637] Re:	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について">ume ＠ softumeya.com
+       </A><BR>
+    <I>2012年 4月 24日 (火) 10:40:00 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004636.html">[Squeak-ja: 4636] Re: K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+</A></li>
+        <LI>次の記事 <A HREF="004638.html">[Squeak-ja: 4638] Re:	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4637">[ 日付 ]</a>
+              <a href="thread.html#4637">[ スレッド ]</a>
+              <a href="subject.html#4637">[ 件名 ]</a>
+              <a href="author.html#4637">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+&gt;<i> 一昨日の2012/04/21に、K*BUG 勉強会で
+</I>&gt;<i>        FreeBSD port lang/squeak4.4.7-2375への道
+</I>&gt;<i> という題名で発表してきました。
+</I>&gt;<i> # K*BUG2012年4月勉強会 <A HREF="http://www.zusaar.com/event/264001">http://www.zusaar.com/event/264001</A>
+</I>&gt;<i>
+</I>&gt;<i> 相変わらず、誰に役に立つのかわからない領域の発表ですが、情報共有までに。
+</I>
+拝見しました。いいですねー。BSD版も触ってみようという気になりました。
+
+&gt;<i> で、最近の Sqeuak 回りの話に関して、間違った情報を拡散しないために、少し質問させて下さい。
+</I>&gt;<i> # 恐らく、Smalltalk勉強会の資料なんかにも書いてあると思うのですが、それは今から調べます(_O_)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> CogVMは、パフォーマンスの良いVMって理解しているのですが、マルチコアだったりするとより幸せなんでしょうか?
+</I>&gt;<i> それとも、JITが素晴らしかったりするんでしょうか?
+</I>
+CogはJITとPICが効く高速VMといって良いと思います。
+<A HREF="http://code.google.com/p/cog/">http://code.google.com/p/cog/</A>
+
+マルチコア対応を特にしているわけではありません。(Many Core対応を目指すRoar VMというやつが別にあります)
+ただしマルチスレッド版のCogを使うと、FFIの呼び出しがネイティブスレッドで非同期的に行えるという機能があるようです。
+
+&gt;<i> イメージ回りだと、Pharo と (まだ書いてませんが)Cuis があると思うのですが、比較した場合の売りってどう書けばピッタリきますかね?
+</I>
+PharoはSqueakとの後方互換性を捨て、よりアグレッシブに、かつビジネスアプリの開発もできるようにという感じで、Cuisは余計なものを捨てて、なるべくシンプルにした上で新たな機能を付け加えるという感じですね。
+
+Squeak本体はなんだか最近はSlackware的なポジションになっています。
+
+&gt;<i> あ、そういえば最近のSqueakイメージはそっけない立ち上がりですが、やっぱりEtoysの方に教育向けがシフトしたからですかね?
+</I>
+これはそうですね。Squeak本体はいろいろな派生系のベースみたいな感じになっています。
+
+-- 
+&quot;SoftUmeYa, LLC&quot;
+[:masashi | ^umezawa]
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004636.html">[Squeak-ja: 4636] Re: K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+</A></li>
+	<LI>次の記事 <A HREF="004638.html">[Squeak-ja: 4638] Re:	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4637">[ 日付 ]</a>
+              <a href="thread.html#4637">[ スレッド ]</a>
+              <a href="subject.html#4637">[ 件名 ]</a>
+              <a href="author.html#4637">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

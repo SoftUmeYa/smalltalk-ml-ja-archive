@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4044] Webブラウザ上でのプロジェクト閲覧について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204044%5D%20%3D%3Fiso-2022-jp%3Fb%3FV2ViGyRCJVYlaSUmJTY%2BZSRHGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lVyVtJTglJyUvJUgxXE13JEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004053.html">
+   <LINK REL="Next"  HREF="004048.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4044] Webブラウザ上でのプロジェクト閲覧について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204044%5D%20%3D%3Fiso-2022-jp%3Fb%3FV2ViGyRCJVYlaSUmJTY%2BZSRHGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lVyVtJTglJyUvJUgxXE13JEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 4044] Webブラウザ上でのプロジェクト閲覧について">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 10月 27日 (月) 00:47:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004053.html">[Squeak-ja: 4053] Re: Mac 版2005J3パッケージについて
+</A></li>
+        <LI>次の記事 <A HREF="004048.html">[Squeak-ja: 4048] Squeakで動画再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4044">[ 日付 ]</a>
+              <a href="thread.html#4044">[ スレッド ]</a>
+              <a href="subject.html#4044">[ 件名 ]</a>
+              <a href="author.html#4044">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+
+いくつかのWebサイトでは、WebページにSqueak
+Etoysのプロジェクトを埋め込み、プラグインを使ってWebブラウザ上で見られるようにしていますが、その中の一部が開けなくなっています。これは具体的には、Squeakland.jp、スーパーサイエンスキッズ、みんなでたのしくスクイークなどに掲載されている作品の一部です。
+たとえば、次のページにある「ボールと階段」という作品をクリックしてみてください。
+
+<A HREF="http://squeakland.jp/kids/kidshome.html">http://squeakland.jp/kids/kidshome.html</A>
+
+すると、プラグインで作品が開く代わりに以下のテキストが表示されます。
+
+You do not seem to have the Squeakland plugin installed.
+Please download the plugin here and then run the installer.
+
+You could also download ballandstairs.001.pr and open it in Etoys.
+
+これは、先にお知らせしたSqueakland.orgのリニューアルにともない、launcherが最新のEtoysのインストールを要求するようになったためです(launcherを使っていないサイト、たとえば、SuperSwiki2などは影響を受けません)。
+<A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2008-September/003990.html">http://www.smalltalk.jp/pipermail/squeak-ja/2008-September/003990.html</A>
+
+当面の対処法として、作品のリンク(この例ではballandstairs.001.pr)をクリックすれば、作品をダウンロードしてSqueakland
+2005Jのアプリケーションから開けます。あるいは、plugin
+hereをクリックして、最新のEtoysをインストールすることもできます。ただし、その場合は先のお知らせのように日本語フォントのインストールを行う必要があります。また、最新版は以前のバージョンの作品を開けますが、最新版で作った作品は2005Jを含む以前のバージョンでは開けませんのでご注意ください。
+
+これ以降は、各Webサイトの管理者の方向けの説明です。
+最新のEtoysをインストールしていない場合、それぞれのページのhtml中で以下のように記述していると動作しません。
+
+&lt;a href=&quot;<A HREF="http://www.squeakland.org/launcher/?http://&#12503;&#12525;&#12472;&#12455;&#12463;&#12488;&#12364;&#32622;&#12363;&#12428;&#12390;&#12356;&#12427;&#12469;&#12452;&#12488;/&#12503;&#12525;&#12472;&#12455;&#12463;&#12488;&#21517;.pr&quot;">http://www.squeakland.org/launcher/?http://プロジェクトが置かれているサイト/プロジェクト名.pr&quot;</A>&gt;
+
+これを次のように変更します。
+
+&lt;a href=&quot;<A HREF="http://&#12503;&#12525;&#12472;&#12455;&#12463;&#12488;&#12364;&#32622;&#12363;&#12428;&#12390;&#12356;&#12427;&#12469;&#12452;&#12488;/&#12503;&#12525;&#12472;&#12455;&#12463;&#12488;&#21517;.htm&quot;">http://プロジェクトが置かれているサイト/プロジェクト名.htm&quot;</A>&gt;
+
+そして、プロジェクト名.htmは以下のように記述します。
+
+&lt;object classid=&quot;clsid:2BE9C39E-8386-4435-B337-FCDAD8EAB006&quot;
+codebase=&quot;<A HREF="http://www.squeakland.org/installers/SqueakPluginInstaller.exe&quot;">http://www.squeakland.org/installers/SqueakPluginInstaller.exe&quot;</A>
+width=&quot;1024&quot; height=&quot;768&quot; id=&quot;SqueakOCX Control&quot;&gt;
+&lt;param name=&quot;src&quot; value=&quot;<A HREF="http://&#12503;&#12525;&#12472;&#12455;&#12463;&#12488;&#12364;&#32622;&#12363;&#12428;&#12390;&#12356;&#12427;&#12469;&#12452;&#12488;/&#12503;&#12525;&#12472;&#12455;&#12463;&#12488;&#21517;.pr&quot;">http://プロジェクトが置かれているサイト/プロジェクト名.pr&quot;</A> /&gt;
+&lt;param name=&quot;pluginspage&quot; value=&quot;<A HREF="http://www.squeakland.org/detect.html&quot;">http://www.squeakland.org/detect.html&quot;</A> /&gt;
+&lt;param name=&quot;apiSupported&quot; value=&quot;true&quot; /&gt;
+
+&lt;embed type=&quot;application/x-squeak-source&quot; width=&quot;1024&quot; height=&quot;768&quot;
+src=&quot;<A HREF="http://&#12503;&#12525;&#12472;&#12455;&#12463;&#12488;&#12364;&#32622;&#12363;&#12428;&#12390;&#12356;&#12427;&#12469;&#12452;&#12488;/&#12503;&#12525;&#12472;&#12455;&#12463;&#12488;&#21517;.pr&quot;">http://プロジェクトが置かれているサイト/プロジェクト名.pr&quot;</A> apiSupported=&quot;true&quot;
+pluginspage=&quot;<A HREF="http://www.squeakland.org/detect.html&quot;">http://www.squeakland.org/detect.html&quot;</A>&gt;&lt;/embed&gt;
+
+widthとheightは埋め込む作品の大きさに合わせて変更してください。
+
+数が多いと大変だと思いますが、よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004053.html">[Squeak-ja: 4053] Re: Mac 版2005J3パッケージについて
+</A></li>
+	<LI>次の記事 <A HREF="004048.html">[Squeak-ja: 4048] Squeakで動画再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4044">[ 日付 ]</a>
+              <a href="thread.html#4044">[ スレッド ]</a>
+              <a href="subject.html#4044">[ 件名 ]</a>
+              <a href="author.html#4044">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

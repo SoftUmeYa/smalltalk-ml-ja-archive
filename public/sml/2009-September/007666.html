@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7666] Re: HTMLの取得がうまくできません
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207666%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEhUTUwbJEIkTjxoRkAkLCQmJF4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJC8kRyQtJF4kOyRzGyhC%3F%3D&In-Reply-To=C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04%40sie.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007665.html">
+   <LINK REL="Next"  HREF="007667.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7666] Re: HTMLの取得がうまくできません</H1>
+    <B>Hidetaka MASUDA</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207666%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEhUTUwbJEIkTjxoRkAkLCQmJF4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJC8kRyQtJF4kOyRzGyhC%3F%3D&In-Reply-To=C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04%40sie.dendai.ac.jp"
+       TITLE="[SML 7666] Re: HTMLの取得がうまくできません">masuda ＠ mail.dendai.ac.jp
+       </A><BR>
+    <I>2009年 9月 28日 (月) 14:38:17 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007665.html">[SML 7665] Re: HTMLの取得がうまくできません
+</A></li>
+        <LI>次の記事 <A HREF="007667.html">[SML 7667]  Re: HTMLの取得がうまくできません
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7666">[ 日付 ]</a>
+              <a href="thread.html#7666">[ スレッド ]</a>
+              <a href="subject.html#7666">[ 件名 ]</a>
+              <a href="author.html#7666">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>増田です。
+
+Java と Jun 760 で自分のサーバにアクセスして環境変数の違いを見てみまし
+た。異なっているのは、UserAgent ぐらいでした。
+
+Java: HTTP_USER_AGENT	Java/1.6.0_05
+Jun:  HTTP_USER_AGENT
+
+Jun の方は UserAgent が設定されていません。
+
+試しに Java の方で UserAgent をなしにしてみると、ニコニコ生放送もエラー
+になります。
+
+以下のプログラムの UserAgentなし の行を注釈なしにしてみてください。
+
+--------------------------- cut here ------------------------------
+import java.io.*;
+import java.net.*;
+
+class NicoGet {
+    public static void main(String[] args) {
+        try {
+            String urlString =
+&quot;<A HREF="http://live.nicovideo.jp/recent?p=1&amp;tab=common&quot;;">http://live.nicovideo.jp/recent?p=1&amp;tab=common&quot;;</A>
+
+            URL url = new URL(urlString);
+
+            URLConnection uc = url.openConnection();
+            // uc.setRequestProperty(&quot;User-Agent&quot;, &quot;&quot;);// UserAgentなし
+            InputStream input = uc.getInputStream();
+
+            int c;
+            while ((c = input.read()) != -1) System.out.write(c);
+            input.close();
+        } catch (MalformedURLException ex) {
+            System.out.println(&quot;MalformedURLException: &quot; + ex);
+        } catch (IOException ex) {
+            System.out.println(&quot;IOException: &quot; + ex);
+        }
+    }
+}
+--------------------------- cut here ------------------------------
+
+JunURL でも UserAgent が設定できると大丈夫なような気がするのですが、いか
+がでしょうか。
+
+# ちょっとブラウズしてみましたがすぐにはわかりませんでしたので、どなたか
+わかる方のフォローをお願いします。
+
+久保田 吉彦 さんは書きました:
+&gt;<i> 自家製ニコ生アラートのようなものをVisualWorksで作成しようと思い、下記の 
+</I>&gt;<i> プログラムでニコニコ生放送のページの情報を取得しようとしました。
+</I>&gt;<i> 
+</I>&gt;<i> | anURL readStream writeStream |
+</I>&gt;<i> anURL := JunURL named: '<A HREF="http://live.nicovideo.jp/recent?p=1&amp;tab=common'">http://live.nicovideo.jp/recent?p=1&amp;tab=common'</A> .
+</I>&gt;<i> JunControlUtility
+</I>&gt;<i>     assert:[readStream := anURL readStream.
+</I>&gt;<i>             writeStream := 'nico.html' asFilename writeStream]
+</I>&gt;<i>     do:[[readStream atEnd not] whileTrue:
+</I>&gt;<i>             [writeStream nextPutAll:(JunStringUtility getLine: 
+</I>&gt;<i> readStream)]]
+</I>&gt;<i>     ensure:[writeStream close.
+</I>&gt;<i>             readStream close].
+</I>&gt;<i> 
+</I>&gt;<i> 困っているのはWebブラウザでURLを開いたときに取得できるHTMLと異なった情報 
+</I>&gt;<i> を持ってきてしまうことです。
+</I>&gt;<i> nico.htmlを開くと'エラーが発生しました'と書かれたページが表示されます。
+</I>&gt;<i> 
+</I>&gt;<i> いまのところ同じURLのHTMLを取得するプログラムをJavaとPythonで書いてみま 
+</I>&gt;<i> したが、こちらでは期待した情報が得られました。
+</I>&gt;<i> 
+</I>&gt;<i> プログラムのどこがいけないのでしょうか?
+</I>&gt;<i> ご存知の方教えていただけませんでしょうか。
+</I>
+
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">masuda ＠ im.dendai.ac.jp</A>                TEL 03-5280-3551
+<A HREF="http://www.cdl.im.dendai.ac.jp/%7emasuda/">http://www.cdl.im.dendai.ac.jp/%7emasuda/</A>     FAX 03-5280-3592
+It's more fun to compute!
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007665.html">[SML 7665] Re: HTMLの取得がうまくできません
+</A></li>
+	<LI>次の記事 <A HREF="007667.html">[SML 7667]  Re: HTMLの取得がうまくできません
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7666">[ 日付 ]</a>
+              <a href="thread.html#7666">[ スレッド ]</a>
+              <a href="subject.html#7666">[ 件名 ]</a>
+              <a href="author.html#7666">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

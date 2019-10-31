@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4564] BitBltの録画・再生が完全には成功しない
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204564%5D%0A%20%3D%3Futf-8%3Fb%3FQml0Qmx044Gu6Yyy55S744O75YaN55Sf44GM5a6M5YWo44Gr44Gv%3F%3D%0A%20%3D%3Futf-8%3Fb%3F5oiQ5Yqf44GX44Gq44GE%3F%3D&In-Reply-To=%3C4DCA5AED.9080301%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004559.html">
+   <LINK REL="Next"  HREF="004565.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4564] BitBltの録画・再生が完全には成功しない</H1>
+    <B>Hiroki Horiuchi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204564%5D%0A%20%3D%3Futf-8%3Fb%3FQml0Qmx044Gu6Yyy55S744O75YaN55Sf44GM5a6M5YWo44Gr44Gv%3F%3D%0A%20%3D%3Futf-8%3Fb%3F5oiQ5Yqf44GX44Gq44GE%3F%3D&In-Reply-To=%3C4DCA5AED.9080301%40gmail.com%3E"
+       TITLE="[Squeak-ja: 4564] BitBltの録画・再生が完全には成功しない">x19290 ＠ gmail.com
+       </A><BR>
+    <I>2011年 5月 11日 (水) 18:46:21 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004559.html">[Squeak-ja: 4559] Re: 組み込み用のSqueak VMについて
+</A></li>
+        <LI>次の記事 <A HREF="004565.html">[Squeak-ja: 4565] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4564">[ 日付 ]</a>
+              <a href="thread.html#4564">[ スレッド ]</a>
+              <a href="subject.html#4564">[ 件名 ]</a>
+              <a href="author.html#4564">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは。
+
+以前ブログに書いたように、PharoでBitBltを録画・再生する実験を行っていま
+すが、完全には成功していません。どのようにしたらうまく行きますか?
+
+よろしくお願いします。
+--
+堀内寛己(ほりうちひろき)
+<A HREF="http://twitter.com/x19290">http://twitter.com/x19290</A>
+<A HREF="http://19290.net/wpmu/blog/2011/05/h2-bit-blt-study2.html">http://19290.net/wpmu/blog/2011/05/h2-bit-blt-study2.html</A> (このメールの続き)
+
+(再現方法)
+
+添付のH2-BitBlt-Study2.stファイルをFileinし、該ファイルの先頭のコメント
+にしたがいます。該ファイルをFileinすることにより、以下が追加されます。
+
+* H2BltCollectorクラス
+* H2BltVramクラス
+* BitBlt&gt;&gt;primDisplayString2:from:to:map:xTable:kern:
+* BitBlt&gt;&gt;primDisplayString3:from:to:map:xTable:kern:
+* BitBlt&gt;&gt;copyBits2
+* BitBlt&gt;&gt;copyBits3
+* BitBlt&gt;&gt;copyBits4
+
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: H2-BitBlt-Study2.st
+URL:  &lt;<A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110511/cde246dd/attachment.txt">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110511/cde246dd/attachment.txt</A>&gt;
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004559.html">[Squeak-ja: 4559] Re: 組み込み用のSqueak VMについて
+</A></li>
+	<LI>次の記事 <A HREF="004565.html">[Squeak-ja: 4565] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4564">[ 日付 ]</a>
+              <a href="thread.html#4564">[ スレッド ]</a>
+              <a href="subject.html#4564">[ 件名 ]</a>
+              <a href="author.html#4564">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

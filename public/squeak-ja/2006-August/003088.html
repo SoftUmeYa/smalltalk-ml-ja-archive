@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3088] Re: 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203088%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bCVtJTEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlazBKMzAkRyROGyhCSW1tWDExUGx1Z2luKHdhcyBS%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FZTogc291cmNlIG9mIEltbVgxMVBsdWdpbik%3D%3F%3D&In-Reply-To=868xldc86w.wl%25mutoh%40openedu.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003085.html">
+   <LINK REL="Next"  HREF="003078.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3088] Re: 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)</H1>
+    <B>Michitoshi Sato</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203088%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bCVtJTEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlazBKMzAkRyROGyhCSW1tWDExUGx1Z2luKHdhcyBS%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FZTogc291cmNlIG9mIEltbVgxMVBsdWdpbik%3D%3F%3D&In-Reply-To=868xldc86w.wl%25mutoh%40openedu.org"
+       TITLE="[Squeak-ja: 3088] Re: 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)">lum ＠ uni.sony.co.jp
+       </A><BR>
+    <I>2006年 8月 28日 (月) 08:10:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003085.html">[Squeak-ja: 3085] 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+</A></li>
+        <LI>次の記事 <A HREF="003078.html">[Squeak-ja: 3078] スクイークワークショップのご報告
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3088">[ 日付 ]</a>
+              <a href="thread.html#3088">[ スレッド ]</a>
+              <a href="subject.html#3088">[ 件名 ]</a>
+              <a href="author.html#3088">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>佐藤通敏です。
+
+返事が遅くなりましたが・髟阡擦Ⅳ㎠欧気泙如Squeakで日本語の入力が
+できるよう瘢雹になりました。
+
+&gt;<i> むとう瘢雹@おう瘢雹ちです。
+</I>&gt;<i> 
+</I>&gt;<i> なんか・髟阡参撞戮澆盻Ⅳ錣蠅☎疉佞い討④討い豆苳晒し任辰討燭鮫鹿評守
+鹿評守藻 囎遯 屋 装屋斡 憶些虻碓 ㎗弘穐
+鹿評守皮粤磨逡鱇 質 頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂諱弘 ＠ 增蓖鎬竢㍻霄商苳阡綺
+鹿評守 おそらくFreeBSDでは問題ないと思われますが。。。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; まずUbuntu(Linux)でsqueak.の髭苳歯はwww.squeakland.jp/から
+</I>&gt;<i> &gt; ダウ瘢雹ンロ・踉札鼻逅仕験㎠靴織Ⅴ屮献Д箸乃阿垢襪肇①ボ・踉札
+鹿評守 入力した時点でSegmentation faultになってしまう瘢雹という瘢雹もの
+</I>&gt;<i> &gt; でした。そこでgdbで調査するとsqUnixX11.cのXCreateFontSet
+</I>&gt;<i> &gt; 関数がNULLを返すのが原因だと分かったので・髟阡傘渊菽屬箸靴
+鹿評守 
+鹿評守 ｄ繙蜴届淋料妖      ⑩㌃蝌繖㌫繖蝠蹲勠麗鴉瘡⑬唄⑩㍗嗜幻宜⑰
+鹿評守 と変更しました。思う瘢雹にUbuntuのデフォルトロケ・踉札襪孕童
+鹿評守 なので・髟阡擦い韻覆㎠辰燭里任呂隼廚辰討燭蝓燭澄EUC-JPに変
+</I>&gt;<i> &gt; 更するのもいろいろ大変そう瘢雹だったので・髟阡札宗スを変更しまし
+</I>&gt;<i> &gt; た。XLibやXIMに椶靴覆い里如う髟阡擦泙任眤仆萠屠，任后
+鹿評守
+鹿評守孕騰ぢロケ・踉札襪婆簑蠅〠④襪里任れば・髟阡汝繞帯ぢでもUTF-8で環境を作って
+</I>&gt;<i> いる人は同じ問題にはまる可能性はう髟阡擦蠅泙垢諭
+鹿評守ちょっと調べてみます(_O_)
+</I>
+SolarisでJDS(Gnome-2)にUTF-8ですが・髟阡嗣簑蠅りませんでした。
+
+&gt;<i> 本当は調べるべきだとは思う瘢雹のですが・髟阡燦翅犬犬諒♢い譴亢気┐討世気ぁ
+鹿評守附轂臼俾蜴で日本語以外のロケ・踉札襪浜を使っている豺隋利用できるイメ・踉
+鹿評守ジなどは存在しているのでしょう瘢雹か?
+</I>&gt;<i> 例えば・髟阡惨攅餮譴箸羚餮譴箸㎠罵儔椎修弗苳歯態なんでしょう瘢雹かね?
+</I>&gt;<i> # これが可能だと・髟阡汝繞帯竟鶯ぢにも突っ込みやすいかなと。
+</I>&gt;<i> 
+</I>&gt;<i> 霾鵑鬚ⅶ舛諒教えていただけると幸いです。
+</I>&gt;<i> 
+</I>&gt;<i> では。
+</I>&gt;<i> --
+</I>&gt;<i> 武藤 武士＠「う髟阡擦Ⅳ砲茲掘廢踉捌宅より 
+</I>&gt;<i>  E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://610T.org/">http://610T.org/</A>
+</I>&gt;<i>  ・瘢雹水面の胞髟阡擦里茲逅擦法フラフラ揺れたり・髟阡残世鵑世衂發㎠鵑世
+鹿評守 ・瘢雹ー頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 嫻鹿曽い鮖討覆い逅擦舛質 頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 嫻鹿曽い里る地位にならないのぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 嫻鹿曽い里る態度」
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003085.html">[Squeak-ja: 3085] 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+</A></li>
+	<LI>次の記事 <A HREF="003078.html">[Squeak-ja: 3078] スクイークワークショップのご報告
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3088">[ 日付 ]</a>
+              <a href="thread.html#3088">[ スレッド ]</a>
+              <a href="subject.html#3088">[ 件名 ]</a>
+              <a href="author.html#3088">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

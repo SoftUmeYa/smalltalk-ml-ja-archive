@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3479] Re: UNIX版 VMでの多言語入力
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203479%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVOSVgbJEJIRxsoQiBWTQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckTkI/OEA4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=uodliptif.wl%25yoshiki%40squeakland.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003478.html">
+   <LINK REL="Next"  HREF="003480.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3479] Re: UNIX版 VMでの多言語入力</H1>
+    <B>Takeshi MUTOH</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203479%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVOSVgbJEJIRxsoQiBWTQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckTkI/OEA4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=uodliptif.wl%25yoshiki%40squeakland.org"
+       TITLE="[Squeak-ja: 3479] Re: UNIX版 VMでの多言語入力">mutoh ＠ openedu.org
+       </A><BR>
+    <I>2007年 4月 21日 (土) 09:50:20 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003478.html">[Squeak-ja: 3478] UNIX版 VMでの多言語入力
+</A></li>
+        <LI>次の記事 <A HREF="003480.html">[Squeak-ja: 3480] Re: UNIX版 VMでの多言語入力
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3479">[ 日付 ]</a>
+              <a href="thread.html#3479">[ スレッド ]</a>
+              <a href="subject.html#3479">[ 件名 ]</a>
+              <a href="author.html#3479">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>むとう＠おうちです。
+
+すいません、元気無いモードに入ってしまって、停滞気味です。
+
+At Fri, 20 Apr 2007 15:31:52 -0700,
+Yoshiki Ohshima &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yoshiki ＠ squeakland.org</A>&gt; wrote:
+&gt;<i>   長い間出遅れていましたが、ギリシャ人から(OLPCやLinux上で)Squeakにギ
+</I>&gt;<i> リシャ語が入力できないと言われたりしていた結果、自分で見てみようという
+</I>&gt;<i> 気になってきました。
+</I>&gt;<i> 
+</I>&gt;<i>   基本的には、translateCode()やrecode()などを呼ぶことなく、Xから来たキャ
+</I>&gt;<i> ラクターをそのままキーコードとして返すVM の起動時オプションをつくるの
+</I>&gt;<i> が良いかなと思っているのですが、その際に日本語もばっちり動くようにした
+</I>&gt;<i> いと思っています。
+</I>
+(UNIXの)日本語のInput Methodの対応には、
+- XIM経由のもの(廣島さんのSqueakImmX11Plugin)
+- anthy対応(川村さんのanthy-agent利用のもの)
+- SKKの実装(古いPDA用イメージに入っているもの)
+があるようです。
+# MacとWindowsはよくわからないので、ごめんなさい(_O_)
+
+SCIM(<A HREF="http://www.scim-im.org">http://www.scim-im.org</A>)とか使えると、多言語対応は楽なのかなぁと思っ
+たりもします。
+# でも、CJKが主なのかなぁ…
+
+&gt;<i>   というわけで今から皆さんの努力に追いつきたいと思うのですが、
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz">http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz</A>
+</I>&gt;<i> 
+</I>&gt;<i> から追いかけていけばよいのでしょうか? 
+</I>
+で、こちらはXIM経由でのIMなので、XIMを使う場合のスタートはこちらかと思
+います。
+
+&gt;<i>  武藤さんの
+</I>&gt;<i> <A HREF="http://qml.610t.org/squeak/2.files/squeak-3.9-7-2006042801.tar.gz">http://qml.610t.org/squeak/2.files/squeak-3.9-7-2006042801.tar.gz</A>
+</I>&gt;<i> もみましたが、これはImmPluginとFreeBSD対応が主であるということですよね。
+</I>
+これは、FreeBSDのportでして、基本的にFreeBSD用のpatchをあてて、廣島さ
+んのSqueakImmX11Pluginを追加して作成するだけなので、特にあんまり意味は
+無いかと思います。
+
+&gt;<i>   あいまいな質問で申し訳ありませんが、指示のほどよろしくお願いします。
+</I>
+こんな情報で参考になればいいんですが…
+
+
+SqueakNOSの日本語化も作業したいなぁと思ってるんですが、やっぱり日本語
+IMがどうしようかなと悩んでるので、私も情報いただけるとうれしいです。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://qml.610T.org/">http://qml.610T.org/</A>
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「世の中に絶えて桜のなかりせば 春の心はのどけからまし」在原業平
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003478.html">[Squeak-ja: 3478] UNIX版 VMでの多言語入力
+</A></li>
+	<LI>次の記事 <A HREF="003480.html">[Squeak-ja: 3480] Re: UNIX版 VMでの多言語入力
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3479">[ 日付 ]</a>
+              <a href="thread.html#3479">[ スレッド ]</a>
+              <a href="subject.html#3479">[ 件名 ]</a>
+              <a href="author.html#3479">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

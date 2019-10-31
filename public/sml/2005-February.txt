@@ -1,0 +1,196 @@
+From aoki ＠ sra.co.jp  Sat Feb  5 21:10:53 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7037] Jun614 for Smalltalk
+Message-ID: <4204B7CD.9030005@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun614」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆グラファにおいてノードが存在するときだけ全体（バードビュー）
+　表示が有効になるようにしました。
+
+◆ある座標の近傍点群を求める機能を向上させました。
+
+◆抽象ビューに表示座標と整列セレクタを指定して画像を表示する
+　ためのメソッド群を追加しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Feb  9 23:28:07 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7038] Jun615 for Smalltalk
+Message-ID: <420A1DF7.2040501@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun615」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆プラットフォームのルック＆フィールに合わせるために、立ち上
+　がる際にランチャーを開き直すように改造しました。
+
+◆アメリカから、テキストを３次元で描画するための典型的なプロ
+　グラムを作成してほしいとの要望があり、３次元オブジェクトの
+　中に典型的なオブジェクトとして加えました。
+
+◆また、ヨーロッパより、３次元レンダリングにスーパーインポー
+　スする機能を拡張してほしいとの要請があり、画像・文字列・構
+　成テキストなどを字幕のように、描画面に上乗せができるような
+　メソッドを追加しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Sat Feb 26 15:42:40 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7039] Re: じゅんテキストブック
+In-Reply-To: <41D2183D.2070209@sra.co.jp>
+References: <41D2183D.2070209@sra.co.jp>
+Message-ID: <42201A60.9050308@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+昨年の末に次のようなアナウンスをさせていただきました。
+
+AOKI Atsushi wrote (29 Dec 2004 11:36:45):
+> じゅんのテキストブックに載っているプログラムをチェックして、
+> VisualWorks 7.x / 5i.x / 3.x のすべてに対応させました。
+> http://www.sra.co.jp/people/aoki/TextbookAboutJun/
+> 読み進める際には、Jun611 もしくは Jun499v15 を用いてくださる
+> ようお願い申し上げます。年末年始の Smalltalking に、どうぞ！
+> なお、絵図が挿入された HTML 版のじゅんテキストブック（浅岡さ
+> んのウェブページ）は、新年早々に対応してくれると思います。
+
+やっと絵図が挿入された HTML 版のじゅんテキストブックも修正が
+完了したようです。お待たせいたしました。どうぞご利用ください。
+
+http://www.sra.co.jp/people/h-asaoka/study/TextbookAboutJun/
+
+そういえば、VisualWorks に名前空間がサポートされるようになっ
+てから、新たに追加されたプログラム制御構造があります。fold:
+というメッセージセレクタです。ご存知だったでしょうか？
+
+集まりをレシーバにして、ブロック・クロージャを引数に取ります。
+たとえば、次のように用います。
+
+	| aCollection aString |
+	aCollection := Array
+				with: 'aaa'
+				with: 'bbb'
+				with: 'ccc'
+				with: 'ddd'.
+	aString := aCollection fold: [:first :second | first , '.' , second].
+	Transcript
+		cr;
+		show: aString printString.
+	^aString
+
+実行すると、トランスクリプトには「'aaa.bbb.ccc.ddd'」と出力さ
+れます。4 つの文字列の間に 3 つのピリオドが挿入されています。
+
+動きをさとるために、fold: のブロック・クロージャの中で第一引
+数と第二引数を一段下げて出力するようにしてみましょう。
+
+	| aCollection aString |
+	aCollection := Array
+				with: 'aaa'
+				with: 'bbb'
+				with: 'ccc'
+				with: 'ddd'.
+	aString := aCollection fold:
+					[:first :second |
+					Transcript
+						cr;
+						tab;
+						show: first printString;
+						space;
+						show: second printString.
+					first , '.' , second].
+	Transcript
+		cr;
+		show: aString printString.
+	^aString
+
+そうすると、トランスクリプトの出力は、以下の通りになります。
+
+	'aaa' 'bbb'
+	'aaa.bbb' 'ccc'
+	'aaa.bbb.ccc' 'ddd'
+'aaa.bbb.ccc.ddd'
+
+ブロック・クロージャで求めたものが、次にブロック・クロージャ
+が評価される際の第一引数になってくるわけです。
+
+名前空間の継承を「Root.Smalltalk.Graphics.CompositeFont」のよ
+うに文字列として書き出す場合に多用されているんです。
+
+また、数の集まりの合計を求める際にも重宝するのではないかしら。
+
+	| aCollection aNumber |
+	aCollection := 1 to: 10.
+	aNumber := aCollection fold: [:first :second | first + second].
+	Transcript
+		cr;
+		show: aNumber printString.
+	^aNumber
+
+初期合計が 0 と決まっているならば、次のような inject:into: の
+プログラム制御構造を用いるよりも好ましいと思います。
+
+	| aCollection aNumber |
+	aCollection := 1 to: 10.
+	aNumber := aCollection inject: 0 into: [:first :second | first + second].
+	Transcript
+		cr;
+		show: aNumber printString.
+	^aNumber
+
+Smalltalk の良さの一つに、プログラム制御構造を自らがデザイン
+して、Smalltalk （プログラミング言語）の中に組み込めてしまう
+ことがあげられます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+

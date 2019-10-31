@@ -1,0 +1,119 @@
+From abee ＠ squeakland.jp  Wed Dec  2 14:10:55 2015
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed, 2 Dec 2015 14:10:55 +0900
+Subject: [Squeak-ja: 4742]
+	第83回Smalltalk勉強会のお知らせ
+Message-ID: <CADv7uFEQt4UOv1wx3jffcHfcv-MXhP7VeaqS4gLfT8DsxEgLyg@mail.gmail.com>
+
+みなさん、こんにちは。阿部です。
+
+VPRI, CDG SAP Labsの大島芳樹さんが来日されるのに際して、急遽、Smalltalk勉強会を開催します。
+
+日時: 2015/12/4(金) 19:30-21:00 (1時間30分)
+場所: 青山学院大学 青山キャンパス 総研ビル(14号館) 6階14602教室
+詳しくは下記をどうぞ。
+http://www.aoyama.ac.jp/outline/campus/access.html#anchor_01
+http://www.aoyama.ac.jp/outline/campus/aoyama.html
+
+大島さんには、現在研究されているプログラミング言語「GP」について、お話しいただこうと思っています。
+GPは、Scratchのようなブロック言語とテキスト言語をシームレスに結合し、独立性の高いモジュールを導入することで、より汎用的なアプリケーション開発を可能にする野心的な言語です。Scratchを開発したJohn
+Maloneyさん、Snap!(BYOB)のJens
+Mönigさん、そして、大島さんが、アラン・ケイさんの研究所で開発していることで、世界的にも注目を集めています。
+
+A Module System for a General-Purpose Blocks Language
+Yoshiki Ohshima, Jens Mönig, John Maloney
+
+Our team is developing GP, a new blocks language that aims to be
+beginner-friendly, like Scratch, yet capable of scaling up to support
+larger applications. We hope to allow a worldwide community of users
+to share projects, sprites, and code libraries and to create new ones
+using a mash-up development style. To support such easy sharing and
+reuse, GP incorporates a strong notion of modularity. Modularity
+allows components created by different users at different times to
+interoperate without worrying about conflicts. However, we do not want
+modularity to add to the burden of the beginning programmer; we’d like
+GP’s module features to stay out of the way until they are needed. In
+this paper, we present the key ideas around the GP module system. A
+module in GP is a unit of encapsulated code and data. It exports a
+selected set of classes, functions, and variables, provides a
+namespace for the code inside, and may include private helper classes,
+functions, and variables. A module can also extend system classes with
+additional methods. Such extensions can be used freely within the
+module but are not visible outside it. Modules can be saved and
+re-loaded, allowing modules to store user-created projects, sprites,
+and code libraries.
+http://www.vpri.org/pdf/tr2015003_modsys.pdf
+
+事前申し込みは不要ですが、部屋の定員が24人のため、もしそれ以上になる場合は、立ち見の可能性があります。
+直前のご案内で申し訳ありませんが、よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+From abee ＠ squeakland.jp  Wed Dec  2 19:21:36 2015
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed, 2 Dec 2015 19:21:36 +0900
+Subject: [Squeak-ja: 4743] Re:
+	第83回Smalltalk勉強会のお知らせ
+In-Reply-To: <CADv7uFEQt4UOv1wx3jffcHfcv-MXhP7VeaqS4gLfT8DsxEgLyg@mail.gmail.com>
+References: <CADv7uFEQt4UOv1wx3jffcHfcv-MXhP7VeaqS4gLfT8DsxEgLyg@mail.gmail.com>
+Message-ID: <CADv7uFEO4UArcWWqLnN_tPAf-d1YQOEjoUfeWqUj3LdFouqxWA@mail.gmail.com>
+
+ー、ノヌ、ケ。」
+
+ナ「・マ・コ・ェ・ヤ、ィ、襪海箸砲覆蠅泙靴拭参加される皆さんはノートPC( Win or Mac)をお持ちください。
+ただし、電源の確保ができるかどうかわからないので、バッテリーの充電をお忘れなく。
+ネットも自力でつなぐ感じになると思います。インストール用にUSBメモリーも若干用意します。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2015-12-02 14:10 GMT+09:00 Kazuhiro ABE <abee ＠ squeakland.jp>:
+> みなさん、こんにちは。阿部です。
+>
+> VPRI, CDG SAP Labsの大島芳樹さんが来日されるのに際して、急遽、Smalltalk勉強会を開催します。
+>
+> 日時: 2015/12/4(金) 19:30-21:00 (1時間30分)
+> 場所: 青山学院大学 青山キャンパス 総研ビル(14号館) 6階14602教室
+> 詳しくは下記をどうぞ。
+> http://www.aoyama.ac.jp/outline/campus/access.html#anchor_01
+> http://www.aoyama.ac.jp/outline/campus/aoyama.html
+>
+> 大島さんには、現在研究されているプログラミング言語「GP」について、お話しいただこうと思っています。
+> GPは、Scratchのようなブロック言語とテキスト言語をシームレスに結合し、独立性の高いモジュールを導入することで、より汎用的なアプリケーション開発を可能にする野心的な言語です。Scratchを開発したJohn
+> Maloneyさん、Snap!(BYOB)のJens
+> Mönigさん、そして、大島さんが、アラン・ケイさんの研究所で開発していることで、世界的にも注目を集めています。
+>
+> A Module System for a General-Purpose Blocks Language
+> Yoshiki Ohshima, Jens Mönig, John Maloney
+>
+> Our team is developing GP, a new blocks language that aims to be
+> beginner-friendly, like Scratch, yet capable of scaling up to support
+> larger applications. We hope to allow a worldwide community of users
+> to share projects, sprites, and code libraries and to create new ones
+> using a mash-up development style. To support such easy sharing and
+> reuse, GP incorporates a strong notion of modularity. Modularity
+> allows components created by different users at different times to
+> interoperate without worrying about conflicts. However, we do not want
+> modularity to add to the burden of the beginning programmer; we’d like
+> GP’s module features to stay out of the way until they are needed. In
+> this paper, we present the key ideas around the GP module system. A
+> module in GP is a unit of encapsulated code and data. It exports a
+> selected set of classes, functions, and variables, provides a
+> namespace for the code inside, and may include private helper classes,
+> functions, and variables. A module can also extend system classes with
+> additional methods. Such extensions can be used freely within the
+> module but are not visible outside it. Modules can be saved and
+> re-loaded, allowing modules to store user-created projects, sprites,
+> and code libraries.
+> http://www.vpri.org/pdf/tr2015003_modsys.pdf
+>
+> 事前申し込みは不要ですが、部屋の定員が24人のため、もしそれ以上になる場合は、立ち見の可能性があります。
+> 直前のご案内で申し訳ありませんが、よろしくお願いします。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+

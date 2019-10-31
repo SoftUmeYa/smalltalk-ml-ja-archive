@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7896] Re: 第28回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207896%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIyOBskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3CBCB68EF3-EDAB-49EA-90FD-31B4DB18436D%40mfc.bakkers.gr.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007895.html">
+   <LINK REL="Next"  HREF="007897.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7896] Re: 第28回Smalltalk勉強会＠京都</H1>
+    <B>Yasuda Yutaka</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207896%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIyOBskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3CBCB68EF3-EDAB-49EA-90FD-31B4DB18436D%40mfc.bakkers.gr.jp%3E"
+       TITLE="[SML 7896] Re: 第28回Smalltalk勉強会＠京都">yasuda ＠ mfc.bakkers.gr.jp
+       </A><BR>
+    <I>2011年 2月  3日 (木) 10:48:30 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007895.html">[SML 7895] Re: 第28回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007897.html">[SML 7897] Re: 第28回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7896">[ 日付 ]</a>
+              <a href="thread.html#7896">[ スレッド ]</a>
+              <a href="subject.html#7896">[ 件名 ]</a>
+              <a href="author.html#7896">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>安田です。
+
+今回はフックルーチンにフックルーチンを登録するというのが
+面白かったです。
+
+1. 目標となるテキストフィールドのキーイベントハンドラを、
+　そのテキストフィールドのコントローラに登録するのだが、
+2. その処理自体をテキストフィールドがビルダーによって組み
+　立てられている際に呼ばれるフックルーチンに登録する
+　（ビルダーはその時そいつのコントローラを知っているから）
+
+という入れ子になっている。。。
+
+登録方法も前者はクロージャによるもので、後者はメソッドの
+登録だった。
+
+なお僕のログはあくまで私の脳内ログですので誤りなどあるかと
+思いますがご容赦下さいませ。
+
+（2 hours のライブをノートして、帰宅して（判ってない奴が！）
+　また2 hours でざっとまとめてるので、、はい、、いま見直したら
+　違うメソッドの図を引っ張ってるのが一つあったり、メソッドの
+　コロンがあったりなかったりですね、、ま、大筋は間違ってない
+　と思いますが、、(^_^!) ）
+
+でわでわ									Yasu.
+
+
+On 2011/02/03, at 8:50, AOKI Atsushi wrote:
+
+&gt;<i> おはようございます、青木＠京都上賀茂です。
+</I>&gt;<i> 
+</I>&gt;<i> 昨日に行ったSmalltalk勉強会@京都の報告です。そのメインテーマ
+</I>&gt;<i> は「Hook」になります。フックやホックと呼び慣わされています。
+</I>&gt;<i> 
+</I>&gt;<i> このメールに昨夜に作成したプログラムを添付しておきます。
+</I>&gt;<i> 2011年1月4日(火)にポストさせていただいた添付コード(SSK10.st)
+</I>&gt;<i> <A HREF="http://www.smalltalk.jp/pipermail/sml/2011-January/007890.html">http://www.smalltalk.jp/pipermail/sml/2011-January/007890.html</A>
+</I>&gt;<i> を改良しているところです。（差分をとってくださいませ。）
+</I>&gt;<i> 
+</I>&gt;<i> また、安田さんからの詳細なログがあります。（すごい↓）
+</I>&gt;<i> <A HREF="http://aokilab.kyoto-su.ac.jp/aoki/misc/pdfs/SSK10_fromYasuda.pdf">http://aokilab.kyoto-su.ac.jp/aoki/misc/pdfs/SSK10_fromYasuda.pdf</A>
+</I>&gt;<i> Ustreamなどで勉強会の模様を生中継しなくともイケるほどです。
+</I>&gt;<i> 
+</I>&gt;<i> 京都の勉強会のモットーは「Smalltalkをゆっくりと深く！」
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i> AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</I>&gt;<i> &lt;SSK10_20110202.st&gt;
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007895.html">[SML 7895] Re: 第28回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007897.html">[SML 7897] Re: 第28回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7896">[ 日付 ]</a>
+              <a href="thread.html#7896">[ スレッド ]</a>
+              <a href="subject.html#7896">[ 件名 ]</a>
+              <a href="author.html#7896">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

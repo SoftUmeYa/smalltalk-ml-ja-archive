@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2839] Re: デスクトップを飛び出したい
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202839%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVHJTklLyVIJUMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVckckh0JFM9UCQ3JD8kJBsoQg%3D%3D%3F%3D&In-Reply-To=p043204c9bffd01ef893a%40amateras.ma.ns.musashi-tech.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002838.html">
+   <LINK REL="Next"  HREF="002840.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2839] Re: デスクトップを飛び出したい</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202839%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVHJTklLyVIJUMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVckckh0JFM9UCQ3JD8kJBsoQg%3D%3D%3F%3D&In-Reply-To=p043204c9bffd01ef893a%40amateras.ma.ns.musashi-tech.ac.jp"
+       TITLE="[Squeak-ja: 2839] Re: デスクトップを飛び出したい">kawa90 ＠ yahoo.co.jp
+       </A><BR>
+    <I>2006年 1月 25日 (水) 21:24:55 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002838.html">[Squeak-ja: 2838] Re: デスクトップを飛び出したい
+</A></li>
+        <LI>次の記事 <A HREF="002840.html">[Squeak-ja: 2840] Re: デスクトップを飛び出したい
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2839">[ 日付 ]</a>
+              <a href="thread.html#2839">[ スレッド ]</a>
+              <a href="subject.html#2839">[ 件名 ]</a>
+              <a href="author.html#2839">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>はじめまして、かわむらです。
+
+「ド素人のためのど素人によるSqueak入門」で質問があったので、
+ＭＬの方に投げておきます。
+
+Rootless SqueakはWindowsで動くもので、まず拾ってきた
+Win32-Rootless.zip &lt;<A HREF="http://www.d.umn.edu/%7Eareichow/squeak/Win32-Rootless.zip">http://www.d.umn.edu/%7Eareichow/squeak/Win32-Rootless.zip</A>&gt;を展開して、その中の*.stを１個ずつSqueakの
+デスクトップにドロップしてやります。ダイアログでは
+filein entire file（別のでもいいんですが...）を選びます。
+展開した２個のファイルを上記の操作をするとインストールが終了します。
+
+次にワークスペースに次の内容を打ち込んで、
+
+Win32SqueakNavMorph new openInWorld.
+
+Do-itして下さい。この時Squeakのデスクトップの色深度は8か16にするよう
+にします。このRootless Squeakはプロジェクト単位で行う必要があります。
+プロジェクトを移動すると解除されます（うる覚えです）。ただうまく動かない
+場合も
+あったりするので（画面が崩れたりする）、プロジェクトの移動はやらない
+ほうが無難です。
+
+あとはいろいろいじってみてください。ちなみに私はWindows XP Home上で
+動かしました。
+
+それでは。
+
+iNOUE Koich! wrote:
+&gt;<i> Thoru Yamamoto さんが 2006.1.25ごろに
+</I>&gt;<i> 「[Squeak-ja: 2837] Re: デスクトップを飛び出したい」の件で：
+</I>&gt;<i>   
+</I>&gt;&gt;<i> かわむらさんの「ド素人のためのど素人によるSqueak入門」でこうゆうのがありまし
+</I>&gt;&gt;<i> よん。
+</I>&gt;&gt;<i> どうなんでしょ？試したこと無いので何ともいえないですが・・・・。
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> Thoruさん、ご紹介ありがとうございます。こういうものがあったんですね。
+</I>&gt;<i> これは望みのもののような気がします。MacOSX版が欲しい・・・・
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>&gt;&gt;<i> たしかにSqueakのデスクトップが透明になればいろいろ面白いことできるかもです
+</I>&gt;&gt;<i> ね。
+</I>&gt;&gt;<i> ＜さすがくっきーくん！！目の付け所がいつもおもしろいっす。
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> テスターのようなモーフを作ってその先にプローブらしきものがありまして、
+</I>&gt;<i> 「ああダメだ」とか何回も言ってましたので、何をしているのか見てみたらモ
+</I>&gt;<i> ーフを保存してダブルクリックしてみたりウィンドウを縮退させてみたり
+</I>&gt;<i> （MacOSXでWindowShadeという機能拡張を使ってできます。昔のMacOS9ではシ
+</I>&gt;<i> ステムの機能でできていました。）していました。そこで、何をしたいのか聞
+</I>&gt;<i> いてみると、「お父さんこれをコンピュータの中に入れてよ」と言われたので
+</I>&gt;<i> 最初は何のことかさっぱり分かりませんでしたが、いろいろ聞いてみるとやり
+</I>&gt;<i> たいことはどうもコンピュータの中のものを触って何か反応するようにしてみ
+</I>&gt;<i> たいということのようなので、こちらでお尋ねした次第です。
+</I>&gt;<i> 阿部さんの「世界聴診器」にも興味を持っているようです。
+</I>&gt;<i> --
+</I>&gt;<i> <A HREF="https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/">https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/</A>             井上
+</I>&gt;<i> .
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: <A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+Blog: <A HREF="http://squeak.qp.land.to/mt">http://squeak.qp.land.to/mt</A>
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.375 / Virus Database: 267.14.22/239 - Release Date: 2006/01/24
+
+--------------------------------------
+GANBARE! NIPPON!
+Yahoo! JAPAN JOC OFFICIAL INTERNET PORTAL SITE PARTNER
+<A HREF="http://pr.mail.yahoo.co.jp/ganbare-nippon/">http://pr.mail.yahoo.co.jp/ganbare-nippon/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002838.html">[Squeak-ja: 2838] Re: デスクトップを飛び出したい
+</A></li>
+	<LI>次の記事 <A HREF="002840.html">[Squeak-ja: 2840] Re: デスクトップを飛び出したい
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2839">[ 日付 ]</a>
+              <a href="thread.html#2839">[ スレッド ]</a>
+              <a href="subject.html#2839">[ 件名 ]</a>
+              <a href="author.html#2839">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

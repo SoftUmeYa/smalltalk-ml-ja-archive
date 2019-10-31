@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2706] Re: 日本語入力パッチつくりました(Re: MacOSX版VMビルド手順について)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202706%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bEZ%2BTk8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBJEQkLyRqJF4kNyQ/GyhCKFJlOiBNYWNPU1g%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSEcbKEJWTRskQiVTJWslSTxqPWckSyREJCQkRhsoQik%3D%3F%3D&In-Reply-To=790AF5B4-8B10-4A1C-AC7F-1FACBDF46A88%40mac.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002705.html">
+   <LINK REL="Next"  HREF="002692.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2706] Re: 日本語入力パッチつくりました(Re: MacOSX版VMビルド手順について)</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202706%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bEZ%2BTk8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBJEQkLyRqJF4kNyQ/GyhCKFJlOiBNYWNPU1g%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSEcbKEJWTRskQiVTJWslSTxqPWckSyREJCQkRhsoQik%3D%3F%3D&In-Reply-To=790AF5B4-8B10-4A1C-AC7F-1FACBDF46A88%40mac.com"
+       TITLE="[Squeak-ja: 2706] Re: 日本語入力パッチつくりました(Re: MacOSX版VMビルド手順について)">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 10月 29日 (土) 16:10:46 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002705.html">[Squeak-ja: 2705] Re: 日本語入力パッチつくりました(Re: MacOSX版VMビルド手順について)
+</A></li>
+        <LI>次の記事 <A HREF="002692.html">[Squeak-ja: 2692] Squeakers' Night in 未来パーティ参加希望
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2706">[ 日付 ]</a>
+              <a href="thread.html#2706">[ スレッド ]</a>
+              <a href="subject.html#2706">[ 件名 ]</a>
+              <a href="author.html#2706">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>shortsleedved さん、昨日はどうも。
+みなさんこんにちは、林です。
+
+さっそくの対応ありがとうございます。
+こちらでも動作確認出来ました。
+
+これでMac版も新日本語版Squeakの準備がとりあえず出来ました。
+このパッチを正式に取り込んでもらえればとメンテナの方々にお願いいたしま 
+す。
+
+贅沢を言えば、あとは…
+     ・VM の Info.plist の値を書き換えるのを手動ではなくする（インス 
+トーラでやるか、Locale.pluginを利用してVMでやるか…）
+     ・インライン入力出来るようにする
+といったところが出来ると、気持ち的に100%達成といった感じでしょうか。
+
+On 2005/10/29, at 11:26, shortsleeved wrote:
+
+&gt;<i> こんにちは、shortsleevedです。
+</I>&gt;<i>
+</I>&gt;<i> On 2005/10/26, at 9:55, Tetsuya HAYASHI wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> なお、最新VMの日本語入力に問題が起きてる訳ですが、出来れば日本語版 
+</I>&gt;&gt;<i> Squeakがバージョンアップする（本家ではすでにバージョンアップしてる 
+</I>&gt;&gt;<i> ので近々あるのでは…）前にどうにかする必要を感じてます。
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Scrapbookのスレや、昨日のパーティで林さんとお話しした結果をふまえ、 
+</I>&gt;<i> パッチを作成しました。
+</I>&gt;<i> 添付のcsファイルをファイルインすることで、3.8.7Beta2以降のMac VMでも 
+</I>&gt;<i> 日本語入力が可能になります。
+</I>&gt;<i> 後方互換性も持たせてありますので、3.8.6でも動作しますが、ベータバー 
+</I>&gt;<i> ジョン番号まではチェックしていないので、3.8.7Beta1では日本語入力がで 
+</I>&gt;<i> きません。
+</I>&gt;<i> 動作確認していただいて、不具合等がありましたら、報告していただけると 
+</I>&gt;<i> ありがたいです。＞ Macな皆様。
+</I>&gt;<i>
+</I>&gt;<i> ＞林さん、
+</I>&gt;<i> 昨日、thirdとsixthの両方を見なければいけないと言ったのは、完全に私の 
+</I>&gt;<i> 思い違いでした。ボケをかましてすみませんでした。
+</I>&gt;<i>
+</I>&gt;<i> 以上、よろしくお願いします。
+</I>
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002705.html">[Squeak-ja: 2705] Re: 日本語入力パッチつくりました(Re: MacOSX版VMビルド手順について)
+</A></li>
+	<LI>次の記事 <A HREF="002692.html">[Squeak-ja: 2692] Squeakers' Night in 未来パーティ参加希望
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2706">[ 日付 ]</a>
+              <a href="thread.html#2706">[ スレッド ]</a>
+              <a href="subject.html#2706">[ 件名 ]</a>
+              <a href="author.html#2706">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4543] Re: アルファチャネルの削除?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204543%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSIlayVVJSElQSVjJU0layROOm89fBsoQj8%3D%3F%3D&In-Reply-To=%3Cubozplhf6.wl%25yoshiki%40vpri.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004542.html">
+   <LINK REL="Next"  HREF="004544.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4543] Re: アルファチャネルの削除?</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204543%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSIlayVVJSElQSVjJU0layROOm89fBsoQj8%3D%3F%3D&In-Reply-To=%3Cubozplhf6.wl%25yoshiki%40vpri.org%3E"
+       TITLE="[Squeak-ja: 4543] Re: アルファチャネルの削除?">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2011年 4月 29日 (金) 15:07:09 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004542.html">[Squeak-ja: 4542] Re:	アルファチャネルの削除?
+</A></li>
+        <LI>次の記事 <A HREF="004544.html">[Squeak-ja: 4544] Re: アルファチャネルの削除?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4543">[ 日付 ]</a>
+              <a href="thread.html#4543">[ スレッド ]</a>
+              <a href="subject.html#4543">[ 件名 ]</a>
+              <a href="author.html#4543">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Thu, 28 Apr 2011 22:43:33 +0900,
+Hiroki Horiuchi wrote:
+&gt;<i> 
+</I>&gt;<i> こんばんは。
+</I>&gt;<i> 
+</I>&gt;<i> アルファチャネル付きの深さ32ビットのFormをそのままdisplayAt:すると、背景
+</I>&gt;<i> が黒く表示されるのですが、これを白い背景で表示するにはどうすればいいので
+</I>&gt;<i> しょうか?
+</I>&gt;<i> 
+</I>&gt;<i> すみません、補足です。
+</I>&gt;<i> 
+</I>&gt;<i> DisplayにalphaBlendでcopyBitsというのは無しです。
+</I>&gt;<i> --
+</I>
+  「無し」というのがなぜなのかはよくわかりませんが、combination rule
+34が使えると思います。それでも、先に背景は白で塗らなくてはいけないと思
+うので、もしそのFormがaFormという名前で、<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">50 ＠ 50</A>の大きさだとするなら、
+
+Display fill: (<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">100 ＠ 100</A> extent: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">50 ＠ 50</A>) fillColor: Color white.
+aForm displayOn: Display at: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">100 ＠ 100</A> rule: 34.
+
+のようにするとよいのではないでしょうか。
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004542.html">[Squeak-ja: 4542] Re:	アルファチャネルの削除?
+</A></li>
+	<LI>次の記事 <A HREF="004544.html">[Squeak-ja: 4544] Re: アルファチャネルの削除?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4543">[ 日付 ]</a>
+              <a href="thread.html#4543">[ スレッド ]</a>
+              <a href="subject.html#4543">[ 件名 ]</a>
+              <a href="author.html#4543">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

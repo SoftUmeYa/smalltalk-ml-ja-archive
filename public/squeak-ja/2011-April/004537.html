@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4537] How to BlockerMorph
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204537%5D%20How%20to%20BlockerMorph&In-Reply-To=%3C4DB8A4B3.5050401%40sra.co.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004536.html">
+   <LINK REL="Next"  HREF="004540.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4537] How to BlockerMorph</H1>
+    <B>Tomohiro Oda</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204537%5D%20How%20to%20BlockerMorph&In-Reply-To=%3C4DB8A4B3.5050401%40sra.co.jp%3E"
+       TITLE="[Squeak-ja: 4537] How to BlockerMorph">tomohiro ＠ sra.co.jp
+       </A><BR>
+    <I>2011年 4月 28日 (木) 08:20:19 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004536.html">[Squeak-ja: 4536]	Squeak EtoysにTTCフォントを読み込む方法 (Was: Re:  Re: Squeak-ja まとめ読み, 78 巻, 11 号)
+</A></li>
+        <LI>次の記事 <A HREF="004540.html">[Squeak-ja: 4540] Re: How to BlockerMorph
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4537">[ 日付 ]</a>
+              <a href="thread.html#4537">[ スレッド ]</a>
+              <a href="subject.html#4537">[ 件名 ]</a>
+              <a href="author.html#4537">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おだです。
+
+昨晩のSmalltalk勉強会でHandMorphの位置の変更について聞きましたが、
+この件について、ひき続きご相談させていただきたいと思います。
+
+私がしたいことは、bounds内にマウスカーソルが入ってくることを阻止
+する、BlockerMorph(仮称)を作ることです。
+
+例えば、通常のUIでボタンを使えなくするためにはdisableします。
+しかし、それでは使う人にとっては、「ボタンを押したのに動かない」
+ということになります。disableはマウスを使ったGUIに慣れた人の常識
+であって、現実世界のボタンで押しても動かなければ、「壊れてる？」
+と思われてしまうでしょう。
+
+現実世界のボタンを使えなくするには、物理的にプラスチックカバーで
+囲って、「そこにボタンがあるのはわかるが押すことができない。押すには
+カバーを開けたり破ったりする必要がある。」ことが直感的にわかるように
+なっています。
+
+そんな、プラスチックカバーに相当するMorphとして、BlockerMorphを
+作りたいのです。そのためには、aHandMorph position: aPointでは
+不足しているようです。直感的には、HandMorphを通して、OS側にマウス
+位置を知らせる手段が必要だと思います。
+
+以上、ご助言いただければ幸いです。
+---
+おだ
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004536.html">[Squeak-ja: 4536]	Squeak EtoysにTTCフォントを読み込む方法 (Was: Re:  Re: Squeak-ja まとめ読み, 78 巻, 11 号)
+</A></li>
+	<LI>次の記事 <A HREF="004540.html">[Squeak-ja: 4540] Re: How to BlockerMorph
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4537">[ 日付 ]</a>
+              <a href="thread.html#4537">[ スレッド ]</a>
+              <a href="subject.html#4537">[ 件名 ]</a>
+              <a href="author.html#4537">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

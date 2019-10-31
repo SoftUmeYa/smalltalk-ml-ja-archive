@@ -1,0 +1,73 @@
+From serge.stinckwich ＠ gmail.com  Thu May  1 03:17:58 2014
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 30 Apr 2014 20:17:58 +0200
+Subject: [SML 8087] Pharo 3.0 is out
+Message-ID: <CAOysuxUc8_35ofo9P+-rJk1mgiQyrN9qeOPxH1uuy2JO1rR7pg@mail.gmail.com>
+
+http://pharo.org/
+
+http://pharo.org/news/pharo-3.0-released
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+
+From goonsh ＠ gmail.com  Fri May  2 00:50:38 2014
+From: goonsh ＠ gmail.com (NISHIHARA Satoshi)
+Date: Fri, 2 May 2014 00:50:38 +0900
+Subject: [SML 8088] Re: Pharo 3.0 is out
+In-Reply-To: <CAOysuxUc8_35ofo9P+-rJk1mgiQyrN9qeOPxH1uuy2JO1rR7pg@mail.gmail.com>
+References: <CAOysuxUc8_35ofo9P+-rJk1mgiQyrN9qeOPxH1uuy2JO1rR7pg@mail.gmail.com>
+Message-ID: <CAHQL79A6V=LTZDL2d3G7o1NDgtXgGentFa5UK22b-KxW718yvQ@mail.gmail.com>
+
+あたふたしてる間に，とうとう正式版が出てもた…… orz．
+
+2014-05-01 3:17 GMT+09:00 Serge Stinckwich <serge.stinckwich ＠ gmail.com>:
+> http://pharo.org/
+>
+> http://pharo.org/news/pharo-3.0-released
+>
+> --
+> Serge Stinckwich
+> UCBN & UMI UMMISCO 209 (IRD/UPMC)
+> Every DSL ends up being Smalltalk
+> http://www.doesnotunderstand.org/
+
+
+
+-- 
+--
+"NISHIHARA Satoshi"
+[:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+
+From ume ＠ softumeya.com  Sun May 18 22:19:47 2014
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 18 May 2014 22:19:47 +0900
+Subject: [SML 8089]
+	第65回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTXdTsgS7w0VjR+GYw=tB32CC_fAuN0mi71qKDEnwKnhQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2014/5/30(金) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai65kaismalltalkbenkyoukai
+
+今回のテーマはObjective-Smalltalkです。ビューポイントテクノロジーの林さんが発表されます。
+
+Objective-Smalltalkとは、Objective-Cランタイム上で動く新たなSmalltalk処理系です。
+もともとメッセージングの記法など、Smalltalk要素が少し入っているObjective-Cですが、このC with Smalltalk
+extensionsという状況を逆転させ、Smalltalk with C
+extensionsとすることをねらっているようです。なんだか恐ろしいです。
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

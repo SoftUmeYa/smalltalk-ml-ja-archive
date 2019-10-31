@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7308] [ANNOUNCE] Jun for Java (Jun668)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207308%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun668%29&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007309.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7308] [ANNOUNCE] Jun for Java (Jun668)</H1>
+    <B>Yoshiyuki NISHINAKA</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207308%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun668%29&In-Reply-To="
+       TITLE="[SML 7308] [ANNOUNCE] Jun for Java (Jun668)">nisinaka ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 7月  6日 (金) 15:01:10 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007309.html">[SML 7309] [ANNOUNCE] ImageSearcher for Java 031
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7308">[ 日付 ]</a>
+              <a href="thread.html#7308">[ スレッド ]</a>
+              <a href="subject.html#7308">[ 件名 ]</a>
+              <a href="author.html#7308">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>「じゅん for Java」のバージョン668を公開します。
+
+  バージョン662からの主な変更点は、以下の通りです。
+
+    * (new feature) Jun2dPolyline/Jun3dPolyline を Jun682 相当に
+      更新しました。メソッド 'subdivideAsSpline()' は、ポリライン
+      をスプラインに変換します。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/Polyline.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/Polyline.png</A>
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/Spline.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/Spline.png</A>
+
+    * (new feature) パッケージ 'jp.co.sra.jun.geometry.solid' に
+      は、典型的な形状を表現するためのクラス群が含まれています。
+
+    * (new feature) パッケージ 'jp.co.sra.jun.geometry.boxtree' 
+      には、オブジェクトの境界箱を取得するためのクラス群が含まれ
+      ています。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/2DBoundingBoxTree.gif">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/2DBoundingBoxTree.gif</A>
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/3DBoundingBoxTree.gif">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/3DBoundingBoxTree.gif</A>
+
+    * (new feature) JunDiscreteFourierTransformation は、離散フー
+      リエ変換(Discrete Fourier Transform)を計算するクラスです。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/DiscreteFourierTransformation.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/DiscreteFourierTransformation.png</A>
+
+    * (new feature) JunFormTriangulation1 とJunFormTriangulation3 
+      を実装しました。これらは共に三角形分割を行うためのクラスで
+      すが、それぞれ異なるアルゴリズムを用いて実装しています。
+
+    * (bug fix) Jun2dDelaunaryProcessor の例題が動かなくなってい
+      たバグを修正しました。
+
+    * (new feature) Jun2dTriangles/Jun3dTriangles は、三角形の集
+      合を扱うためのクラスです。
+
+    * (new feature) Jun2dBoundingBalls/Jun3dBoundingBalls は、オ
+      ブジェクトの境界を円または球として取得するためのクラスです。
+
+    * (incompatibility) JunBoundingObjects、JunBoundingBoxes、お
+      よびそのサブクラス群を、パッケージ
+      'jp.co.sra.jun.geometry.pluralities' に移動しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    <A HREF="ftp://ftp.sra.co.jp/pub/lang/java/jun4java/">ftp://ftp.sra.co.jp/pub/lang/java/jun4java/</A>
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html">http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html</A>
+
+
+                                 西中 芳幸 (<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">nisinaka ＠ sra.co.jp</A>)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007309.html">[SML 7309] [ANNOUNCE] ImageSearcher for Java 031
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7308">[ 日付 ]</a>
+              <a href="thread.html#7308">[ スレッド ]</a>
+              <a href="subject.html#7308">[ 件名 ]</a>
+              <a href="author.html#7308">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

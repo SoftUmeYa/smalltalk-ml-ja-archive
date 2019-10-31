@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3685] Re: SuperSwiki2 のバージョンアップ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203685%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kyIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lUCE8JTglZyVzJSIlQyVXGyhC%3F%3D&In-Reply-To=47142F582.0E2CABEE%40smtp.nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003680.html">
+   <LINK REL="Next"  HREF="003686.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3685] Re: SuperSwiki2 のバージョンアップ</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203685%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kyIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lUCE8JTglZyVzJSIlQyVXGyhC%3F%3D&In-Reply-To=47142F582.0E2CABEE%40smtp.nifty.com"
+       TITLE="[Squeak-ja: 3685] Re: SuperSwiki2 のバージョンアップ">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2007年 10月 16日 (火) 18:35:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003680.html">[Squeak-ja: 3680] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+        <LI>次の記事 <A HREF="003686.html">[Squeak-ja: 3686] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3685">[ 日付 ]</a>
+              <a href="thread.html#3685">[ スレッド ]</a>
+              <a href="subject.html#3685">[ 件名 ]</a>
+              <a href="author.html#3685">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+Kazuhiro ABE &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt; wrote:
+&gt;<i> 阿部@新百合です。
+</I>&gt;<i> 
+</I>&gt;<i> J3(たぶんどれも同じ)の「探す」で、squeakland/super2を見たときに、ファイル
+</I>&gt;<i> サイズが表示されるべきところにバージョン番号が見えているようです。
+</I>&gt;<i> サーバ側の問題だと思うのですが、いかがでしょうか。
+</I>&gt;<i> 
+</I>
+これはSuperSwiki2の仕様といいますか、そもそもプロジェクトの保存にファイルを
+使っていませんので、ファイルサイズの代わりにバージョンを出しているのです。
+
+ファイルサイズを出すにはデータベースからプロジェクトのバイナリデータを
+取り出さなればなりません。プロジェクトリストの表示でそれを行うと、結局
+全てのプロジェクトをDBから取り出すことになってしまいますので、なかなか
+パフォーマンス的に大変なことになります。
+
+アップロード時に得たファイルサイズの情報を別途DBに入れておけば良いのですが、
+手間の割には、あまり必要ない情報なのではないか、ということで現状のような
+作りになっています。(必要だ、ということであればなんとかします)
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003680.html">[Squeak-ja: 3680] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+	<LI>次の記事 <A HREF="003686.html">[Squeak-ja: 3686] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3685">[ 日付 ]</a>
+              <a href="thread.html#3685">[ スレッド ]</a>
+              <a href="subject.html#3685">[ 件名 ]</a>
+              <a href="author.html#3685">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

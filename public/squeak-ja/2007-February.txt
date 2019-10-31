@@ -1,0 +1,961 @@
+From k.suzaki ＠ aist.go.jp  Thu Feb  1 17:34:23 2007
+From: k.suzaki ＠ aist.go.jp (Kuniyasu Suzaki)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3399] 小学校低学年向けKNOPPIXの展示 2/3,4
+Message-ID: <20070201.173423.82125777.k.suzaki@aist.go.jp>
+
+
+須崎です。
+
+＃ たぶん現在のバージョンはsqueakをバンドルされていないので申し訳あり
+   ませんが、宣伝させて下さい。
+
+専修大学で開発されている KNOPPIX for ESLG (小学校低学年向けKNOPPIX)が 
+2/3,4に日本未来科学館で展示されます。
+   展示の紹介
+   http://www.ne.senshu-u.ac.jp/~kousa2007/works2.html
+   プロジェクトのHP
+   http://www.ne.senshu-u.ac.jp/~proj18-15/
+
+コウサ展は専修大学ネットワーク情報学部の学生による展示会です。
+他にも面白そうな展示があります。ご興味があれば見に行ってください。
+＃ KNOPPIX for ESLG のメンバーには2/10の C4 を案内しておきました。
+
+----------------------------------------------
+コウサ展 Crossing Exhibition 2007
+http://www.ne.senshu-u.ac.jp/~kousa2007/index.html
+
+日付：2007/2/3(土)・2/4(日) 
+時間：午前10:30〜午後16:30 
+場所：日本科学未来館７F イノベーションホール
+料金：無料
+※コウサ展への入場は無料ですが、その他、日本科学未来館内の展示を見るに
+  は料金が必要です。
+最寄り駅：
+◎新交通ゆりかもめ(新橋駅〜有明駅)
+・「船の科学館駅」下車 徒歩約4分
+・「テレコムセンター駅」下車 徒歩約 5分
+・「青海駅」下車 徒歩約10分
+◎東京臨海高速鉄道りんかい線(新木場駅〜大崎駅)
+・「東京テレポート駅」下車 徒歩約15分
+
+------
+suzaki
+
+From tako ＠ aquilax.co.jp  Mon Feb  5 10:49:09 2007
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3400] Squeakland.jp 異常？ & C4 参加希望
+Message-ID: <20070205014908.89E1743996@1server.aquilax.co.jp>
+
+　高橋＠池袋です。
+
+http://squeakland.jp/
+サーバーから応答がありません。
+
+
+２月１０日のＣ３参加希望します。
+
+
+
+On Tue, 16 Jan 2007 01:23:30 +0900
+"Toshio Miyasaka" <miyasaka@iris.dti.ne.jp> wrote:
+>お世話になっております。
+>デジタルハリウッド大学院の宮坂です。
+>
+>先般お知らせさせていただいた「スクイークを活用した教育の研究発表会（C4）」の参加者募集を開始しました。
+>
+>日時：2007年2月10日（土） 10:30〜13:30　（3時間）
+>場所：東京（秋葉原）
+>
+>参加申し込みはこちらからどうぞ。
+>http://www.squeakland.jp/sqmedia/20070210C4.html
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Aquilax Inc. (www.aquilax.co.jp)
+
+
+
+From abee ＠ squeakland.jp  Mon Feb  5 10:56:57 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3401] Re: Squeakland.jp 異常？ & C4 参加希望
+In-Reply-To: <20070205014908.89E1743996@1server.aquilax.co.jp>
+References: <20070205014908.89E1743996@1server.aquilax.co.jp>
+Message-ID: <45C68EE9291.C3D8ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 5 Feb 2007 10:49:09 +0900
+tako@aquilax.co.jp (Kouji takahashi) wrote:
+>http://squeakland.jp/
+>サーバーから応答がありません。
+
+DNSの更新に時間がかかっているのかもしれません。私のところや和田小などでは
+大丈夫です。
+IP直(202.171.145.123)や他のDNSをお試しいただけますか。
+
+>２月１０日のＣ３参加希望します。
+
+お手数ですが、以下の要領で申込をお願いします。
+
+>下記メールアドレス宛に必要事項をメールしてください。（先着順）
+>
+>c4.squeak.2007@gmail.com
+>
+>・ 氏名、年齢、所属先、メールアドレスを明記願います。
+>・ このイベントに期待されることやスクイークに関するご要望などがあれば併せて記載ください。
+>・ 参加申し込みの場合は、件名を「C4参加申込み」としてください。
+>・ お問い合わせの場合は、件名を「お問い合わせ」としてください。
+>・ ３日以内には受付可否のメールを返信させていただきます。万が一返信がない場合にはなんらかの事情によりメールが正しく届いていない可能性がありますので、その際はいま一度メールにてお問い合わせください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tako ＠ aquilax.co.jp  Mon Feb  5 12:30:48 2007
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3402] Re: Squeakland.jp 異常？ & C4 参加希望　空騒ぎ
+Message-ID: <20070205033049.03B9444183@1server.aquilax.co.jp>
+
+　高橋＠池袋です。
+
+予備回線の YahooBB ADSL直付けではＯＫでした。
+お騒がせしました。
+会社のhttp proxyのあたりを疑っています。
+
+> DNSの更新に時間がかかっているのかもしれません。私のところや和田小などでは
+> 大丈夫です。
+> IP直(202.171.145.123)や他のDNSをお試しいただけますか。
+
+DNSはＯＫです。hostコマンドで 202.171.145.123　が引けます。
+　
+
+> >下記メールアドレス宛に必要事項をメールしてください。（先着順）
+
+了解しました。
+
+会議が入ってお返事が遅くなりました。
+
+ではでは
+
+At 10:56 07.2.5, Kazuhiro ABE wrote:
+> 阿部@新百合です。
+> 
+> On Mon, 5 Feb 2007 10:49:09 +0900
+> tako@aquilax.co.jp (Kouji takahashi) wrote:
+> >http://squeakland.jp/
+> >サーバーから応答がありません。
+> 
+> DNSの更新に時間がかかっているのかもしれません。私のところや和田小などでは
+> 大丈夫です。
+> IP直(202.171.145.123)や他のDNSをお試しいただけますか。
+> 
+> >２月１０日のＣ３参加希望します。
+> 
+> お手数ですが、以下の要領で申込をお願いします。
+> 
+> >下記メールアドレス宛に必要事項をメールしてください。（先着順）
+> >
+> >c4.squeak.2007@gmail.com
+> >
+> >・ 氏名、年齢、所属先、メールアドレスを明記願います。
+> >・ このイベントに期待されることやスクイークに関するご要望などがあれば併せて記載ください。
+> >・ 参加申し込みの場合は、件名を「C4参加申込み」としてください。
+> >・ お問い合わせの場合は、件名を「お問い合わせ」としてください。
+> >・ ３日以内には受付可否のメールを返信させていただきます。万が一返信がない場合にはなんらかの事情によりメールが正しく届いていない可能性がありますので、その際はいま一度メールにてお問い合わせください。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Aquilax Inc. (www.aquilax.co.jp)
+
+
+
+From tsutomu ＠ nucba.ac.jp  Wed Feb 14 13:21:25 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3403] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <45B75C63.5030303@yahoo.co.jp>
+References: <867ivghjjd.wl%mutoh@openedu.org> <45B75C63.5030303@yahoo.co.jp>
+Message-ID: <45D28E45.3020303@nucba.ac.jp>
+
+廣島です．
+
+> 川村です。
+> 
+> 遅れましたが、Linux(Ubuntu 6.10)でビルド実行しました。残念ながら、わたし
+> の環境ではキー入力した段階でSegmentation faultとなってしまいました。
+> 環境は次の通りです。
+> Linux(Ubuntu 6.10),Kernel 2.6.17,gcc version 4.1.2,XIM(SCIM+Anthy),UTF-8
+> です。EUC-jpなら動くかもしれません。後ほど試してみます。
+> 
+> それでは。
+> 
+> gdbでおちたところで'where'：
+> #0 x2sqKeyInput (xevt=0xbfcd363c)
+> at
+> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:1450
+
+落ちたところのソースから推測すると，
+XCreateFontSet か XExtentsOfFontSet の返値が NULL なのかもしれません．
+XIM用のフォントは
+
+#define FONTNAME      "-*-*-medium-r-normal--14-*"
+
+とハードコードしてありますが，これがいけないのかも．
+次の調査用プログラムをコンパイル(gcc -lX11)して，
+引数に　"-*-*-medium-r-normal--14-*"　を与えて起動してみてください．
+もし Fail したなら，引数を "-*-*-medium-r-normal--*" 等，
+いろいろ変えてみて Fail しないパターンをお教え下さい．
+策を考えます．
+ただ，すぐに返事は書けないと思いますので，気長に待って下さい．
+＝＝＝＝
+廣島　勉
+
+/* 調査用プログラムソースここから */
+#include <stdio.h>
+#include <string.h>
+#include <X11/Xlib.h>
+#include <X11/Xlocale.h>
+int
+main(int argc, char *argv[])
+{
+  char **fname, *def;
+  int num, i;
+  Display *d;
+  XFontSet fs;
+  XFontStruct **fstr;
+
+  if (argv[1])
+  {
+    printf("pattern: %s\n", argv[1]);
+    setlocale(LC_ALL, "");
+    d = XOpenDisplay(NULL);
+
+    fs = XCreateFontSet(d, argv[1], &fname, &num, &def);
+
+    printf("default: %s\n", def);
+    for (i = 0; i < num; ++ i)
+    {
+      printf("missing: %s\n", fname[i]);
+    }
+
+    if (fs != NULL)
+    {
+      printf("found: ");
+      num = XFontsOfFontSet(fs, &fstr, &fname);
+      if (num > 0)
+      {
+	printf("%s", fname[0]);
+	for (i = 1; i < num; ++ i)
+	{
+	  printf(",%s", fname[i]);
+	}
+	printf("\n");
+      }
+      if (XExtentsOfFontSet(fs) == NULL)
+      {
+	printf("Failed XExtentsOfFontSet\n");
+      }
+
+      XFreeFontSet(d, fs);
+    }
+    else
+    {
+      printf("Failed XCreateFontSet\n");
+    }
+
+    XCloseDisplay(d);
+  }
+  return 0;
+}
+/* ソースここまで */
+
+
+
+
+
+
+From abee ＠ squeakland.jp  Thu Feb 15 21:45:04 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3404] Re: 発表者募集開始！　研究発表会（ C4 ） 2 月 10 日
+In-Reply-To: <45C0A4061FD.9D31ABEE@smtp.nifty.com>
+References: <4b24f0d0701150823m3cb4085ejb965d514afffaa69@mail.gmail.com>
+	<45C0A4061FD.9D31ABEE@smtp.nifty.com>
+Message-ID: <45D455D02FF.3DB7ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+遅くなりましたが、2/9の和田小、2/10のC4に多数の方がご参加くださいました。
+ありがとうございました。お陰さまでいずれも盛況のうちに終えることができま
+した。また、発表者の皆様、スタッフの皆様も大変お疲れ様でした。
+
+C4については、近々Webページにレポートが載る予定と聞いています。
+http://squeakland.jp/sqmedia/20070210C4.html
+
+和田小についても、後日Webページに資料が掲載されるとのことです。
+http://wadael.sakura.ne.jp/
+
+# 「スクイーク」「Squeak」などでブログ検索すると、参加した皆さんの感想が
+# 見つかります。
+
+On Wed, 31 Jan 2007 23:13:26 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>2/10のC4ですが、数少ないOLPCの実機デモが見られるということで、すでに多く
+>の申込をいただいているようです。他にも各地のスクイーク実践事例紹介や不肖
+>私のeToysハンズオンもあります(ちょっとしたテクをその場で実際に試していた
+>だきます)。
+
+当日、私が作成したもの(サイコロを何回もふる)と、終了後、個別にいただいた
+質問に対する回答(乱数の初期化)を以下に置きましたのでよろしければご覧くだ
+さい。
+
+http://swikis.ddo.jp/abee/3#bottom
+
+高橋さんの「万能チューリングマシン」も素晴らしいです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kawa90 ＠ yahoo.co.jp  Thu Feb 15 22:01:45 2007
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3405] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <45D28E45.3020303@nucba.ac.jp>
+References: <867ivghjjd.wl%mutoh@openedu.org> <45B75C63.5030303@yahoo.co.jp>
+	<45D28E45.3020303@nucba.ac.jp>
+Message-ID: <45D459B9.7030905@yahoo.co.jp>
+
+廣島さん、はじめまして川村です。
+
+結果を送ります。
+"-*-*-medium-r-normal--14-*"
+と
+"-*-Fixed-Medium-R-Normal--14-*-ISO8859-1"
+の結果を送ります。
+
+以上
+
+desktop:~$ ./a.out "-*-*-medium-r-normal--14-*"
+pattern: -*-*-medium-r-normal--14-*
+default: \
+missing: ISO8859-1
+missing: ISO8859-1
+missing: JISX0208.1983-0
+missing: KSC5601.1987-0
+missing: GB2312.1980-0
+missing: JISX0201.1976-0
+missing: ISO10646-1
+Failed XCreateFontSet
+desktop:~$ ./a.out "-*-Fixed-Medium-R-Normal--14-*-ISO8859-1"
+pattern: -*-Fixed-Medium-R-Normal--14-*-ISO8859-1
+default: 
+missing: JISX0208.1983-0
+missing: KSC5601.1987-0
+missing: GB2312.1980-0
+missing: JISX0201.1976-0
+missing: ISO10646-1
+found: -misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1,-misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1
+
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From abee ＠ squeakland.jp  Sun Feb 18 16:43:34 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:44 2007
+Subject: [Squeak-ja: 3406] Re: 杉並区立和田小学校 研究発表会のご案内
+In-Reply-To: <45C0A6F835.9D32ABEE@smtp.nifty.com>
+References: <459CF64128C.E2A6ABEE@smtp.nifty.com>
+	<45C0A6F835.9D32ABEE@smtp.nifty.com>
+Message-ID: <45D803A6247.BD89ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+この研究発表会の記事が2/13の毎日新聞に掲載されました。
+
+コンピューターで「論理的思考力」を身につける　東京・杉並区立和田小
+http://www.mainichi-msn.co.jp/shakai/edu/elearningschool/class/news/20070213org00m040048000c.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From okumura ＠ edu.mie-u.ac.jp  Mon Feb 19 18:13:44 2007
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3407] 教育用プログラミング言語ワークショップ2007
+Message-ID: <20070219.181344.92724863.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+「教育用プログラミング言語ワークショップ2007」が3月10日に一橋大学で開かれます。
+
+http://sigps.tt.tuat.ac.jp/index.php?%B6%B5%B0%E9%CD%D1%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC%A5%EF%A1%BC%A5%AF%A5%B7%A5%E7%A5%C3%A5%D72007%20%A1%DD%A5%EF%A1%BC%A5%D7%A5%ED07%A1%DD
+
+Squeakが他の言語に負けないようにぜひぜひ多数ご参加ください。
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+三重大学(教育学部|総合情報処理センター|高等教育創造開発センター)教授
+
+From tsutomu ＠ nucba.ac.jp  Fri Feb 23 10:27:27 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3408] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <45D459B9.7030905@yahoo.co.jp>
+References: <867ivghjjd.wl%mutoh@openedu.org>
+	<45B75C63.5030303@yahoo.co.jp>	<45D28E45.3020303@nucba.ac.jp>
+	<45D459B9.7030905@yahoo.co.jp>
+Message-ID: <45DE42FF.6070708@nucba.ac.jp>
+
+廣島です．
+
+> 結果を送ります。
+> "-*-*-medium-r-normal--14-*"
+> と
+> "-*-Fixed-Medium-R-Normal--14-*-ISO8859-1"
+> の結果を送ります。
+
+> found: -misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1,-misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1
+
+２番めで見つかったフォントは最初のパターンにもマッチするはずなのに，
+Fail するのは変ですね．何故でしょう？
+文字集合（iso8859-1)を指定しないと Fail するのでしょうか？
+この指定だと日本語文字を含まないフォントセットが出来てしまいます．
+ただ，IM がフォント指定を無視するかもしれないので，
+問題は起こらないのかもしれません．
+
+http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4b.tar.gz
+
+を置きました．
+
+1. ハードコードのフォント指定を緩め
+"-*-*-medium-r-normal--*" にしたのですが，
+上のような状況では，これだけではダメかも．
+2. XCreateFontSet に失敗したときは，
+国際化入力を無効にするようにしました．
+"-*-*-medium-r-normal--14-*" にマッチするフォントが
+必ずあるものと思っていたので，返値をチェックしていませんでした．
+3. リソース　squeak*fontSet　を設定することで
+問題のフォントを指定できるようにしました．
+~/.Xresources か ~/.Xdefaults に，
+
+squeak*fontSet: -*-*-misc-fixed-*
+
+等，記述していろいろ試してください．なお，記述した直後には
+xrdb -merge ~/.Xresources
+することをお忘れなく．一時的に試したいときは
+xrdb -merge
+で標準入力にリソースを打ち込む手もあります．
+
+=======
+廣島　勉
+
+From tsutomu ＠ nucba.ac.jp  Fri Feb 23 12:37:33 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3409] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+In-Reply-To: <45DE42FF.6070708@nucba.ac.jp>
+References: <867ivghjjd.wl%mutoh@openedu.org>	<45B75C63.5030303@yahoo.co.jp>	<45D28E45.3020303@nucba.ac.jp>	<45D459B9.7030905@yahoo.co.jp>
+	<45DE42FF.6070708@nucba.ac.jp>
+Message-ID: <45DE617D.8080706@nucba.ac.jp>
+
+廣島です．もう少し情報を下さい．
+
+>> "-*-*-medium-r-normal--14-*"
+>> と
+>> "-*-Fixed-Medium-R-Normal--14-*-ISO8859-1"
+>> の結果を送ります。
+> 
+>> found: -misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1,-misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1
+> 
+> ２番めで見つかったフォントは最初のパターンにもマッチするはずなのに，
+> Fail するのは変ですね．何故でしょう？
+> 文字集合（iso8859-1)を指定しないと Fail するのでしょうか？
+
+調査用プログラムで
+"*"(全てのフォントにマッチする)
+を指定したらどうなりますか？
+
+X のフォントユーティリティ xlsfonts, xfd 等で，
+パターン "-*-*-medium-r-normal--*"
+を指定したらどうなりますか？
+=======
+廣島　勉
+
+From tomohiro ＠ sra.co.jp  Fri Feb 23 13:09:38 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3410] JunMessageSpy on Squeak
+Message-ID: <200702231309.38941.tomohiro@sra.co.jp>
+
+こんにちは、おだといいます。
+同じSmalltalkでもVisual Worksのほうで、
+「じゅん」というライブラリの開発に関わってきた者です。
+
+最近、私個人がSqueakのほうが多く使うようになったこともあり、
+JunMessageSpyをSqueakに移植してみました。
+squeak mapに置いておきましたので、興味のある方はぜひお試し
+ください。
+
+JunMessageSpyはブロック式やソース文字列を実行し、その実行
+の中でどのメソッドやブロックがどれだけの時間を消費して
+いるかを計測して、ツリー構造の形で表示します。
+
+また、BrowserやWorkspaceのメニューに'spy it'を追加したので、
+通常の'do it'や'debug it'のように'spy it'することができます。
+
+元となっている「じゅん」については、
+http://www.sra.co.jp/people/aoki/Jun/Main.htm
+をご覧ください。
+
+Squeak界隈の習慣などに全く無知ながら、これからボチボチと
+「じゅん」のツール類を移植していこうかなと思っておりますので、
+コードの作法からpublishの仕方まで、ご批判ご指導をよろしく
+お願いします。
+---
+おだ
+
+From tomohiro ＠ sra.co.jp  Fri Feb 23 13:17:55 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3411] Re: JunMessageSpy on Squeak
+In-Reply-To: <200702231309.38941.tomohiro@sra.co.jp>
+References: <200702231309.38941.tomohiro@sra.co.jp>
+Message-ID: <200702231317.55430.tomohiro@sra.co.jp>
+
+たびたびすみません、おだです。
+せっかく宣伝しておきながら、URLを貼るのを忘れていました。
+
+JunMessageSpy
+http://map.squeak.org/package/41e50364-98b1-441a-824f-56bace3c5a7e
+
+ぜひお試しください。
+---
+おだ＠こういうオッチョコチョイが書いたプロファイラって一体・・・
+
+From yoshiki ＠ squeakland.org  Sun Feb 25 14:58:16 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3412] Squeak Foundation Boardの選挙
+Message-ID: <umz32zslj.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+  世界中のSqueak関係者のためのコミュニティであるsqueak-devでは、開発者
+向けSqueak の方向性を定めるSqueak Foundationという組織の役員(board
+member)を選ぶ選挙が行われようとしています。
+
+  投票は来週から行われるのですが、投票権は、Squeak Peopleというコミュ
+ニティ・サイトに登録して、何人かから「認定」を受けた人に与えられます。
+
+http://people.squeakfoundation.org/
+
+  前回の投票の際にはSqueak Peopleに登録していなくても、大きなコミュニ
+ティからはメールアドレスを通達することによって選挙権が与えられましたが、
+今回はその制度は無くなりました。
+
+  というわけで、興味のある方は是非Squeak Peopleに登録していただいて、
+投票することを検討してください。
+
+-- Yoshiki
+
+  ちなみに、僕は、去年行われた選挙で当選したので現在もboard memberとし
+て活動しているわけなのですが、実は今回新たに行われる選挙にも立候補して
+います。よろしくお願いします。
+
+-- Yoshiki
+
+From abee ＠ squeakland.jp  Sun Feb 25 18:56:31 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3413] Re: Squeak Foundation Board の選挙
+In-Reply-To: <umz32zslj.wl%yoshiki@squeakland.org>
+References: <umz32zslj.wl%yoshiki@squeakland.org>
+Message-ID: <45E15D4F17A.3987ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 25 Feb 2007 14:58:16 +0900
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>  世界中のSqueak関係者のためのコミュニティであるsqueak-devでは、開発者
+>向けSqueak の方向性を定めるSqueak Foundationという組織の役員(board
+>member)を選ぶ選挙が行われようとしています。
+
+Squeak-devでの選挙に関するアナウンスはこちら、
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2007-February/113921.html
+
+Squeak FoundationのWebサイトはこちらですね。
+http://smallwiki.unibe.ch/SqueakFoundation
+
+On Sun, 25 Feb 2007 14:58:16 +0900
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>  ちなみに、僕は、去年行われた選挙で当選したので現在もboard memberとし
+>て活動しているわけなのですが、実は今回新たに行われる選挙にも立候補して
+>います。よろしくお願いします。
+
+もしよろしければ、活動の内容について簡単に説明していただけると、
+Squeak-jaに参加している皆さんにとって、この選挙がどのような意味を持つのか
+を理解しやすくなると思います。結果、Squeak Peopleへの登録も進むのではない
+でしょうか。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Tue Feb 27 17:40:15 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3414] Re: Squeak Foundation Board の選挙
+In-Reply-To: <45E15D4F17A.3987ABEE@smtp.nifty.com>
+References: <umz32zslj.wl%yoshiki@squeakland.org>
+	<45E15D4F17A.3987ABEE@smtp.nifty.com>
+Message-ID: <JS200702271740157.10840109@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+リンクを補足しておきます。
+
+Squeak Foundation Board 2007 Election
+http://wiki.squeak.org/squeak/5920
+
+候補者リストや、抱負、スケジュールなどが載っていますので定期的に見ておくと
+良いでしょう。
+
+投票は3/3日から3日間です。
+
+SqueakPeopleへの登録+認定についてですが、登録していただければ私が定期的に見て
+片っ端から認定していくようにしますので、よろしくお願いします。
+(登録済みの人は、仲間をどんどん認定してあげましょう)
+
+ではでは。
+
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+> 阿部@新百合です。
+> 
+> On Sun, 25 Feb 2007 14:58:16 +0900
+> Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+> >  世界中のSqueak関係者のためのコミュニティであるsqueak-devでは、開発者
+> >向けSqueak の方向性を定めるSqueak Foundationという組織の役員(board
+> >member)を選ぶ選挙が行われようとしています。
+> 
+> Squeak-devでの選挙に関するアナウンスはこちら、
+> http://lists.squeakfoundation.org/pipermail/squeak-dev/2007-February/113921.html
+> 
+> Squeak FoundationのWebサイトはこちらですね。
+> http://smallwiki.unibe.ch/SqueakFoundation
+> 
+> On Sun, 25 Feb 2007 14:58:16 +0900
+> Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+> >  ちなみに、僕は、去年行われた選挙で当選したので現在もboard memberとし
+> >て活動しているわけなのですが、実は今回新たに行われる選挙にも立候補して
+> >います。よろしくお願いします。
+> 
+> もしよろしければ、活動の内容について簡単に説明していただけると、
+> Squeak-jaに参加している皆さんにとって、この選挙がどのような意味を持つのか
+> を理解しやすくなると思います。結果、Squeak Peopleへの登録も進むのではない
+> でしょうか。
+> 
+> よろしくお願いします。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+---
+[:masashi | ^umezawa]
+
+
+From maigoofy ＠ yahoo.co.jp  Wed Feb 28 14:41:50 2007
+From: maigoofy ＠ yahoo.co.jp (maigoofy)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3415] Squeakland.jp にアクセス不可、 Squeak 日本語版 (Mac) のダウンロード
+Message-ID: <20070228054150.7025.qmail@web3009.mail.tnz.yahoo.co.jp>
+
+原田＠名古屋です。
+
+Squeak日本語版(Mac OS X)をダウンロードしたいのですが、Squeakland.jp にア
+クセスできずに困っています。サイトが稼働してないようです。Squeak日本語版(Mac)
+のダウンロード、参考サイトを教えて頂けませんでしょうか。よろしくお願い致
+します。
+
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From tetha ＠ st.rim.or.jp  Wed Feb 28 15:16:54 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3416] Re: Squeakland.jp にアクセス不可、 Squeak 日本語版 (Mac) のダウンロード
+In-Reply-To: <20070228054150.7025.qmail@web3009.mail.tnz.yahoo.co.jp>
+References: <20070228054150.7025.qmail@web3009.mail.tnz.yahoo.co.jp>
+Message-ID: <6D35A57C-F8D6-47EF-89A0-9C30BFD62CE1@st.rim.or.jp>
+
+原田さん、はじめまして。
+林といいます。
+
+15:15現在、一応、私のところからは、http://squeakland.jp を見ることができ
+ます。
+原田さんがご利用されてるネット環境の状況が分からないのですが、もう一度、
+確認されてみてはいかがでしょうか？
+
+On 2007/02/28, at 14:41, maigoofy wrote:
+
+> Squeak日本語版(Mac OS X)をダウンロードしたいのですが、Squeakland.jp にア
+> クセスできずに困っています。サイトが稼働してないようです。Squeak日本語版(Mac)
+> のダウンロード、参考サイトを教えて頂けませんでしょうか。よろしくお願い致
+> します。
+
+--
+林 徹也 Tetsuya HAYASHI 
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From maigoofy ＠ yahoo.co.jp  Wed Feb 28 15:49:41 2007
+From: maigoofy ＠ yahoo.co.jp (maigoofy)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3417] Re: Squeakland.jp にアクセス不可、 Squeak 日本語 版 (Mac) のダウンロード
+In-Reply-To: <6D35A57C-F8D6-47EF-89A0-9C30BFD62CE1@st.rim.or.jp>
+Message-ID: <20070228064941.38619.qmail@web3004.mail.tnz.yahoo.co.jp>
+
+林さん、はじめまして。書込みありがとうございます。メーリングリストに書込
+みするのは久しぶりなので、スレッドの位置がずれたらすみません。
+
+そうですね。アクセスできないサイトはないのですが、http://squeakland.jp だ
+けアクセスできないのです。不思議です。うーん。他にトラブルがある方はいら
+っしゃいませんか？
+
+--- Tetsuya HAYASHI <tetha@st.rim.or.jp> wrote:
+
+> 原田さん、はじめまして。
+> 林といいます。
+> 
+> 15:15現在、一応、私のところからは、http://squeakland.jp
+> を見ることができ
+> ます。
+> 原田さんがご利用されてるネット環境の状況が分からないのですが、もう一度
+、
+> 確認されてみてはいかがでしょうか？
+> 
+> On 2007/02/28, at 14:41, maigoofy wrote:
+> 
+> > Squeak日本語版(Mac OS X)をダウンロードしたいのですが、Squeakland.jp
+> にア
+> >
+> クセスできずに困っています。サイトが稼働してないようです。Squeak日本語
+版(Mac)
+> >
+> のダウンロード、参考サイトを教えて頂けませんでしょうか。よろしくお願い
+致
+> > します。
+> 
+> --
+> 林 徹也 Tetsuya HAYASHI 
+> tetha@st.rim.or.jp, tetha@mac.com
+> 
+> 
+> 
+
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From tomohiro ＠ sra.co.jp  Wed Feb 28 16:13:26 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3418] Re: Squeakland.jp にアクセス不可、 Squeak 日本語 版 (Mac) のダウンロード
+In-Reply-To: <20070228064941.38619.qmail@web3004.mail.tnz.yahoo.co.jp>
+References: <20070228064941.38619.qmail@web3004.mail.tnz.yahoo.co.jp>
+Message-ID: <200702281613.27432.tomohiro@sra.co.jp>
+
+おだです。
+
+maigoofy wrote:
+> 林さん、はじめまして。書込みありがとうございます。メーリングリストに書込
+> みするのは久しぶりなので、スレッドの位置がずれたらすみません。
+>
+> そうですね。アクセスできないサイトはないのですが、http://squeakland.jp だ
+> けアクセスできないのです。不思議です。うーん。他にトラブルがある方はいら
+> っしゃいませんか？
+
+2箇所から試してみましたが、http://squeakland.jp/は見えています。
+
+ひょっとしたらネームサーバか何かの加減でアクセスできないのかもしれません。
+とりあえず、squeakland.jpの代わりにhttp://202.171.145.123/でつながるか
+試してみたらいかがでしょうか？
+---
+おだ
+
+From maigoofy ＠ yahoo.co.jp  Wed Feb 28 17:43:05 2007
+From: maigoofy ＠ yahoo.co.jp (maigoofy)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3419] Re: Squeakland.jp にアクセス不可、 Squeak 日本語 版 (Mac) のダウンロード
+In-Reply-To: <200702281613.27432.tomohiro@sra.co.jp>
+Message-ID: <20070228084305.52210.qmail@web3003.mail.tnz.yahoo.co.jp>
+
+おださん、こんばんは。アドバイスありがとうございました。
+
+squeakland.jp の代わりに http://202.171.145.123/ を試してみましたがだめで
+した。うちはひかりプレミアムを使っているのですが、NTTに調べてもらったとこ
+ろ、NTT側のひかりプレミアムの回線でもアクセスできなかったそうです。ひかり
+プレミアムではたまにこのようなサイトがあって、ひょっとすると MTU値と関係
+あるかもしれないということでした。現在調査してもらっているところですので
+、NTTから回答がありましたらメーリングリストでご報告します。
+
+さて、その間、違う所から squeakland.jp にアクセスしなければなりません。皆
+さん、ありがとうございました。
+
+原田＠名古屋
+
+--- Tomohiro Oda <tomohiro@sra.co.jp> wrote:
+
+> おだです。
+> 
+> maigoofy wrote:
+> >
+> 林さん、はじめまして。書込みありがとうございます。メーリングリストに書
+込
+> > みするのは久しぶりなので、スレッドの位置がずれたらすみません。
+> >
+> >
+> そうですね。アクセスできないサイトはないのですが、http://squeakland.jp
+> だ
+> >
+> けアクセスできないのです。不思議です。うーん。他にトラブルがある方はい
+ら
+> > っしゃいませんか？
+> 
+> 2箇所から試してみましたが、http://squeakland.jp/は見えています。
+> 
+> ひょっとしたらネームサーバか何かの加減でアクセスできないのかもしれませ
+ん。
+> とりあえず、squeakland.jpの代わりにhttp://202.171.145.123/でつながるか
+> 試してみたらいかがでしょうか？
+> ---
+> おだ
+> 
+
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+
+From abee ＠ squeakland.jp  Wed Feb 28 21:57:04 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3420] Re: Squeakland.jp にアクセス不可、 Squeak 日本語 版 (Mac) のダウンロード
+In-Reply-To: <20070228084305.52210.qmail@web3003.mail.tnz.yahoo.co.jp>
+References: <200702281613.27432.tomohiro@sra.co.jp>
+	<20070228084305.52210.qmail@web3003.mail.tnz.yahoo.co.jp>
+Message-ID: <45E57C20347.F99DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 28 Feb 2007 17:43:05 +0900 (JST)
+maigoofy <maigoofy@yahoo.co.jp> wrote:
+>squeakland.jp の代わりに http://202.171.145.123/ を試してみましたがだめで
+>した。うちはひかりプレミアムを使っているのですが、NTTに調べてもらったとこ
+>ろ、NTT側のひかりプレミアムの回線でもアクセスできなかったそうです。ひかり
+>プレミアムではたまにこのようなサイトがあって、ひょっとすると MTU値と関係
+>あるかもしれないということでした。現在調査してもらっているところですので
+>、NTTから回答がありましたらメーリングリストでご報告します。
+
+これは Path MTU Discovery Black Hole というものかもしれないですね。これを
+キーワードに検索するといくつか解法が見つかります。
+
+>さて、その間、違う所から squeakland.jp にアクセスしなければなりません。皆
+>さん、ありがとうございました。
+
+暫定的に以下に置きました。よろしければお使いください。
+
+http://www.geocities.jp/abee2/SqueakPlugin2005J.dmg
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From maigoofy ＠ yahoo.co.jp  Wed Feb 28 23:27:20 2007
+From: maigoofy ＠ yahoo.co.jp (maigoofy)
+Date: Thu Dec  6 11:03:45 2007
+Subject: [Squeak-ja: 3421] Re: Squeakland.jp にアクセス不可、 Squeak 日本語 版 (Mac) のダウンロード
+In-Reply-To: <45E57C20347.F99DABEE@smtp.nifty.com>
+Message-ID: <20070228142720.25846.qmail@web3013.mail.tnz.yahoo.co.jp>
+
+原田＠名古屋です。
+
+阿部さん、林さん、おださん、ご親切なアドバイス有り難うございました。本当
+に感謝いたします。Squeak、オープンソース、教育への志に感謝しています。
+
+早速、SqueakPlugin2005J.dmg をダウンロードして勉強してみます。
+
+Path MTU Discovery Black Hole ですか。Googleで検索しましたが私にはそれが
+問題のような気がします。NTTの報告を待つつもりです。驚いたのは今回の問題は
+ひかりプレミアム側の問題（不具合）で相性の悪さが出てくる。MTU相性が良くな
+いサイトのリストあって、NTTが直接そういったサイトに何らかの設定のお願いを
+するらしいということです。
+
+今後ともよろしくお願い致します。
+
+--- Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 阿部@新百合です。
+> 
+> On Wed, 28 Feb 2007 17:43:05 +0900 (JST)
+> maigoofy <maigoofy@yahoo.co.jp> wrote:
+> >squeakland.jp の代わりに http://202.171.145.123/
+> を試してみましたがだめで
+> >した。うちはひかりプレミアムを使っているのですが、NTTに調べてもらった
+とこ
+> >ろ、NTT側のひかりプレミアムの回線でもアクセスできなかったそうです。ひ
+かり
+> >プレミアムではたまにこのようなサイトがあって、ひょっとすると
+> MTU値と関係
+> >あるかもしれないということでした。現在調査してもらっているところですの
+で
+> >、NTTから回答がありましたらメーリングリストでご報告します。
+> 
+> これは Path MTU Discovery Black Hole
+> というものかもしれないですね。これを
+> キーワードに検索するといくつか解法が見つかります。
+> 
+> >さて、その間、違う所から squeakland.jp
+> にアクセスしなければなりません。皆
+> >さん、ありがとうございました。
+> 
+> 暫定的に以下に置きました。よろしければお使いください。
+> 
+> http://www.geocities.jp/abee2/SqueakPlugin2005J.dmg
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+
+
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+http://pr.mail.yahoo.co.jp/auction/
+
+

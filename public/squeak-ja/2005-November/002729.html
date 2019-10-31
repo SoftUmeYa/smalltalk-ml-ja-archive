@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2729] Re: Squeak の文字コードの扱いについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202729%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhayAbJEIkTko4GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCO3olMyE8JUkkTjA3JCQkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=4371C5CE.7080306%40metatoys.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002728.html">
+   <LINK REL="Next"  HREF="002717.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2729] Re: Squeak の文字コードの扱いについて</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202729%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhayAbJEIkTko4GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCO3olMyE8JUkkTjA3JCQkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=4371C5CE.7080306%40metatoys.org"
+       TITLE="[Squeak-ja: 2729] Re: Squeak の文字コードの扱いについて">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 11月  9日 (水) 21:15:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002728.html">[Squeak-ja: 2728] Re: Squeak の文字コードの扱いについて
+</A></li>
+        <LI>次の記事 <A HREF="002717.html">[Squeak-ja: 2717] SqueakNihongo7についての感想・要望など
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2729">[ 日付 ]</a>
+              <a href="thread.html#2729">[ スレッド ]</a>
+              <a href="subject.html#2729">[ 件名 ]</a>
+              <a href="author.html#2729">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林です。どうも。
+この件に関して別なお話があります。
+
+その前に…
+
+On 2005/11/09, at 18:47, Takashi Yamamiya wrote:
+
+&gt;<i> 2) に関して、大島さんより情報を頂きましたので書いておきます。
+</I>&gt;<i>
+</I>&gt;<i> この件に関しては、sjis &lt;-&gt; unicode 変換に対して複数の可 
+</I>&gt;<i> 能性がある文字がある
+</I>&gt;<i> 事が理由だそうです。私も文字コードに詳しくないのでうまく書けま 
+</I>&gt;<i> せんが、
+</I>&gt;<i> 例えば ÷ に対する unicode の番号が二つあっ 
+</I>&gt;<i> て、それが 128-255 の文字を
+</I>&gt;<i> 変換していない原因との事でした。
+</I>
+う〜んと、Unicode としては一つかと思われます。
+こういう言い方はあまり正しくないですが、他の文字コードに、半角の 
+×÷と全角の×÷が存在しているということではないでしょうか。前者 
+は ISO-8859-1 文字コード、後者は Shift_JIS などの日 
+本の文字コードで、Shift_JIS では、前者の半角の×÷は半角カ 
+タカナのコードと一部ぶつかってるので日頃、目にする事が無いという 
+ことかと思います（間違っていましたらご指摘ください）。
+Unicodeは、結構（というか、かなり）いい加減なので、全角半角を区 
+別せずに各々、×(0xD7)、÷(0xF7) で扱ってしまいます。
+今の Squeak は賢く、Shift_JISから持って来たことを判 
+断して、区別して扱っている（leadingで識別。フォントをちゃ 
+んと2種類用意している）という理解でいます。
+なお、Shift_JIS から持って来れるのですから、 
+Shift_JIS へ変換するところ（Unicode変換の箇所ではなく）で 
+この2文字をピンポイント的に扱うことは出来ないのでしょう 
+か？（ちょっと嫌らしいですが）
+
+ところで、ここから本題なのですが…
+今の MacOSX 版では、キー入力の段階で Unicode を用い 
+ています。
+ですので、半角の×÷と全角の×÷の区別がそもそもありません（この 
+メール自体、今、見た目は半角の×÷です）。
+その為に、今回の問題の件（クリップボード経由での文字化け）以前 
+に、全角の×÷を入力することすら出来ない状態で、他のプラットホー 
+ムでの動作と互換性が、崩れてしまっています。
+
+この件については、キー入力時に Squeak の言語モードを識別 
+し、無理矢理全角の×÷にしてしまうといった案が考えられますが、こ 
+の他にもっといいアイデアやご意見ありましたら是非お願いいたします。
+
+ちなみに…
+
+&gt;&gt;<i> 林さんによると、MacRomanコードは今やお荷物なので近い内 
+</I>&gt;&gt;<i> にどうにかするの
+</I>&gt;&gt;<i> でしょうが、いっぺんにVM込みでやる必要があるでしょう。 
+</I>&gt;&gt;<i> VM のソースで言
+</I>
+これは、Windows 版にとって、お荷物（VM の中で  
+MacRoman 変換し、さらにイメージ側でも MacRoman 変換し直し 
+たりしてる）というお話で、決して、MacRoman の存在自体を指 
+してるわけではございませんので、ご了解のほど (^^;
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002728.html">[Squeak-ja: 2728] Re: Squeak の文字コードの扱いについて
+</A></li>
+	<LI>次の記事 <A HREF="002717.html">[Squeak-ja: 2717] SqueakNihongo7についての感想・要望など
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2729">[ 日付 ]</a>
+              <a href="thread.html#2729">[ スレッド ]</a>
+              <a href="subject.html#2729">[ 件名 ]</a>
+              <a href="author.html#2729">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

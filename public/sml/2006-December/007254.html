@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7254] [ANNOUNCE] Jun for Java (Jun637)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207254%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun637%29&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007257.html">
+   <LINK REL="Next"  HREF="007255.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7254] [ANNOUNCE] Jun for Java (Jun637)</H1>
+    <B>Yoshiyuki NISHINAKA</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207254%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun637%29&In-Reply-To="
+       TITLE="[SML 7254] [ANNOUNCE] Jun for Java (Jun637)">nisinaka ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 12月 13日 (水) 16:25:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007257.html">[SML 7257] Re: 日本語を扱えるようにするプログラムについて
+</A></li>
+        <LI>次の記事 <A HREF="007255.html">[SML 7255] 【じゅん (Jun708)】と【ケモじゅん (ChemoJun053)】
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7254">[ 日付 ]</a>
+              <a href="thread.html#7254">[ スレッド ]</a>
+              <a href="subject.html#7254">[ 件名 ]</a>
+              <a href="author.html#7254">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>「じゅん for Java」のバージョン637を公開します。
+
+  バージョン633からの主な変更点は、以下の通りです。
+
+    * (modification) JunTextEditor において、編集の可否を指定でき
+      るようにしました。
+
+    * (new feature) JunFileNavigator は、３つのカラムを使ってファ
+      イルシステムを表示するクラスです。中央のカラムには、現在選
+      択しているファイル(またはディレクトリ)とその兄弟(同じディレ
+      クトリに含まれるファイル群)が表示されます。左のカラムには、
+      現在選択しているファイルを含む親ディレクトリとその兄弟が表
+      示されます。右のカラムには、現在選択しているのがディレクト
+      リならばその子供の一覧が、ファイルならばその詳細情報が表示
+      されます。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/FileNavigator.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/FileNavigator.png</A>
+
+    * (new feature) JunMultiMediaNavigator は JunMultiMediaViewer 
+      を修正し、JunFileModel の代わりに JunFileNavigator を使うよ
+      うにしたものです。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_image.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_image.png</A>
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_movie.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_movie.png</A>
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_text.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_text.png</A>
+
+    * (new feature) JunFileRequesterDialog は JunFileDialog を修
+      正し、JunFileModel の代わりに JunFileNavigator を使うように
+      したものです。「じゅん for Java」ライブラリの中で 
+      JunFileDialog を使っている箇所は、JunFileRequesterDialog を
+      使うように変更しました。
+
+		<A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/FileRequesterDialog.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/FileRequesterDialog.png</A>
+
+    * (bug fix) JunImageToAscii が正しく動作しなくなっていたので、
+      再実装して、Jun668 相当に更新しました。
+
+    * (bug fix) Jun2dPoint/Jun3dPoint の比較のためのメソッドで、
+      引数が null の場合に例外が発生していたバグを修正しました。
+
+    * (bug fix) Intel Mac における QuickTime インタフェースの、バ
+      イトオーダーによる問題に対応しました。
+
+    * (bug fix) JunOpenGLProjector のバグを修正しました。注視点の
+      指定が反映されない場合がありました。
+
+    * (bug fix) Jun2dPoint において、指定した点との中点を求めるメ
+      ソッドの計算が誤っていました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    <A HREF="ftp://ftp.sra.co.jp/pub/lang/java/jun4java/">ftp://ftp.sra.co.jp/pub/lang/java/jun4java/</A>
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html">http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html</A>
+
+
+                                 西中 芳幸 (<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">nisinaka ＠ sra.co.jp</A>)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007257.html">[SML 7257] Re: 日本語を扱えるようにするプログラムについて
+</A></li>
+	<LI>次の記事 <A HREF="007255.html">[SML 7255] 【じゅん (Jun708)】と【ケモじゅん (ChemoJun053)】
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7254">[ 日付 ]</a>
+              <a href="thread.html#7254">[ スレッド ]</a>
+              <a href="subject.html#7254">[ 件名 ]</a>
+              <a href="author.html#7254">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

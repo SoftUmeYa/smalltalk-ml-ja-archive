@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7674] ニコ生APIのコメントサーバとのやりとりができません
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207674%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUslM0A4GyhCQVBJGyRCJE4lMyVhGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlSCU1ITwlUCRIJE4kZCRqJEgkaiQsJEckLSReJDskcxsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007683.html">
+   <LINK REL="Next"  HREF="007677.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7674] ニコ生APIのコメントサーバとのやりとりができません</H1>
+    <B>久保田 吉彦</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207674%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUslM0A4GyhCQVBJGyRCJE4lMyVhGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlSCU1ITwlUCRIJE4kZCRqJEgkaiQsJEckLSReJDskcxsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7674] ニコ生APIのコメントサーバとのやりとりができません">kubota ＠ sie.dendai.ac.jp
+       </A><BR>
+    <I>2009年 10月  8日 (木) 12:39:26 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007683.html">[SML 7683] Re: Some ideas
+</A></li>
+        <LI>次の記事 <A HREF="007677.html">[SML 7677] Re: ニコ生APIのコメントサーバとのやりとりができません
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7674">[ 日付 ]</a>
+              <a href="thread.html#7674">[ スレッド ]</a>
+              <a href="subject.html#7674">[ 件名 ]</a>
+              <a href="author.html#7674">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは電大の久保田です。
+
+ニコ生アラートのようなものを以下のURLで公開されている 
+APIを使ってちょこちょこ書いています。
+
+<A HREF="http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%83%">http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%83%</A> 
+A9%E3%83%BC%E3%83%88(%E6%9C%AC%E5%AE%B6)%E3%81%AE%E4%BB%95%E6%A7%98
+
+以下のプログラム(きたないですが)でAPIの使いか 
+たをちょっと勉強をしているのですが、上記URLのログイン 
+API、認証APIその2は使えたのですがコメントサーバーの 
+項目がうまくいきません。
+自分ではコメントサーバにXMLを送信してその返事を待つことを 
+10回くりかえしているつもりですが、コメントにあるように reply :=  
+stream through: Character cr.  を実行するとプログラムが停止して 
+しまいます(step3がTranscriptに表示されず、ループもそ 
+こでおわる)。
+デバッガ開いて追ってみましたがなぜだかわかりませでした?
+Socketプログラムはくわしくないのでおかしなことをしているのでしょ 
+うか?
+
+また、実行するとException&quot;Unhandled exception:CA Not inTrust  
+Registry!&quot;と出てきます。いまはProceedボタンを押してプログ 
+ラムを実行していますが、このExceptionを出さない方法はない 
+のでしょうか?
+
+作成している環境はVisualWorks7.6NC+Jun784それに 
+WobSupportパーセルを使っています。
+
+
+    | host port socket connection elements stream reply threadId key  
+elementCollection pdoc parser httpRequest httpResponse client message |
+
+&quot;ログインAPIその1&quot;
+     client := Net.HttpClient new.
+     httpRequest := Net.HttpRequest post:
+             '<A HREF="https://secure.nicovideo.jp/secure/login?">https://secure.nicovideo.jp/secure/login?</A> 
+site=nicolive_antenna'.
+     httpRequest
+         userAgent: 'テスト1';
+         addFormKey: 'mail' value: 'メールアドレス';
+         addFormKey: 'password' value: 'パスワード'.
+     httpResponse := client executeRequest: httpRequest.
+     parser := XML.XMLParser new.
+     parser validate: false.
+     pdoc := parser parse: httpResponse decodedContents readStream.
+     elementCollection := pdoc root elementNamed: 'ticket'.
+     key := elementCollection elements first text.
+     Transcript
+         cr;
+         show: 'key:' , key.
+
+&quot;認証APIその2&quot;
+     client := Net.HttpClient new.
+     httpRequest := Net.HttpRequest post:
+             '<A HREF="http://live.nicovideo.jp/api/getalertstatus'.">http://live.nicovideo.jp/api/getalertstatus'.</A>
+     httpRequest
+         userAgent: 'テスト2';
+         addFormKey: 'ticket' value: key.
+     httpResponse := client executeRequest: httpRequest.
+     parser := XML.XMLParser new.
+     parser validate: false.
+     pdoc := parser parse: httpResponse decodedContents readStream.
+     elements := pdoc root children last.
+     host := (elements elementsNamed: 'addr') first elements first text.
+     port := (elements elementsNamed: 'port') first elements first text.
+     threadId := (elements elementsNamed: 'thread') first elements  
+first text.
+     Transcript
+         cr;
+         show: host , ':' , port , ':' , threadId.
+
+&quot;コメントサーバー&quot;
+     socket := SocketAccessor
+         newTCPclientToHost: host
+         port: port asNumber.
+     connection := ExternalConnection new.
+     connection
+         input: socket;
+         output: socket.
+     stream := connection readAppendStream.
+     stream lineEndTransparent.
+     message := '&lt;thread thread=' , threadId ,
+             ' version=&quot;20061206&quot; res_from=&quot;-1&quot;/&gt;'.
+     Transcript
+         cr;
+         show: message.
+     10
+         timesRepeat:
+             [Transcript
+                 cr;
+                 show: 'step1'.
+             stream
+                 nextPutAll: message; &quot;&lt;= XMLの送信&quot;
+                 cr;
+                 commit.
+             Transcript
+                 cr;
+                 show: 'step2'.
+             reply := stream through: Character cr.    &quot;&lt;=ここで 
+プログラムが止まる&quot;
+             Transcript
+                 cr;
+                 show: 'step3'].
+     stream close.
+     ^reply
+</PRE>
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007683.html">[SML 7683] Re: Some ideas
+</A></li>
+	<LI>次の記事 <A HREF="007677.html">[SML 7677] Re: ニコ生APIのコメントサーバとのやりとりができません
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7674">[ 日付 ]</a>
+              <a href="thread.html#7674">[ スレッド ]</a>
+              <a href="subject.html#7674">[ 件名 ]</a>
+              <a href="author.html#7674">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

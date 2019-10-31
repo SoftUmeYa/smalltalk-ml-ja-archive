@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3976] 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203976%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsGyhCIHN0IA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskTkZmGyhCIChTcXVlYWszLjkuMS1maW5h%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FbC03MDc1Sik%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="003977.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3976] 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203976%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsGyhCIHN0IA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskTkZmGyhCIChTcXVlYWszLjkuMS1maW5h%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FbC03MDc1Sik%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3976] 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2008年 9月  1日 (月) 15:19:14 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="003977.html">[Squeak-ja: 3977] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3976">[ 日付 ]</a>
+              <a href="thread.html#3976">[ スレッド ]</a>
+              <a href="subject.html#3976">[ 件名 ]</a>
+              <a href="author.html#3976">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　高橋＠池袋です。
+
+　梅澤さんの最新日本語版Squeak3.9.1-final-7075Jで
+日本語を含む特定の stファイルが「インストール」できませんでした。
+　問題は解決済みですが既知の現象でしょうか？
+
+-----症状
+
+　stファイルはSqueakNihongo6.1 のブラウザでカテゴリをfileOut
+したもの。
+　class名、method名、変数名などは全て ASCII。代入は _
+
+　Squeak3.9.1-final-7075Jの fileListで 「インストール」すると
+途中でSyntax Error
+&lt;&lt;&lt;This string contains character (ascii value 154) that 
+is not normally used in code&gt;&gt;&gt;
+
+　問題の部分は Dictionaryの初期化を行っている部分。
+    dic at: $年 put: -4;
+　stファイル中、最初の日本語。年の部分が文字化け。
+
+
+-----対処法
+
+　ファイルリストで stファイルを選択
+　文字コードの変更　utf-8指定
+　ファイルの内容表示を全選択
+　contextメニューの「ファイルイン」
+　→ エラーなく完了
+
+
+-----謎
+
+　対処法でfileInしたものをSqueak3.9.1-final-7075Jから
+fileOutし直した stファイルは問題なく「インストール」可能。
+
+　×と○のstファイルを比較してもほとんど違いが無いよう。
+    class定義の 変数名リスト末尾のspaceの有無ぐらい。
+
+　また、classをfileOutすると　'from Squeak3.9.1 of ...'が先頭に
+　付きますが カテゴリのfileOutには付かないようです。
+
+
+
+追伸
+　梅澤さん、ありがとうございます。FileManも使わせていただきます。
+
+
+ではでは
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="003977.html">[Squeak-ja: 3977] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3976">[ 日付 ]</a>
+              <a href="thread.html#3976">[ スレッド ]</a>
+              <a href="subject.html#3976">[ 件名 ]</a>
+              <a href="author.html#3976">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

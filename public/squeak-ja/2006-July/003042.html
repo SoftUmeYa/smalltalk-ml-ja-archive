@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3042] PluggableTextMorphをつまむ方法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203042%5D%20%3D%3Fiso-2022-jp%3Fb%3FUGx1Z2dhYmxlVGV4dE1vcnBo%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJHIkRCReJGBKfUshGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003037.html">
+   <LINK REL="Next"  HREF="003044.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3042] PluggableTextMorphをつまむ方法</H1>
+    <B>kubo-o</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203042%5D%20%3D%3Fiso-2022-jp%3Fb%3FUGx1Z2dhYmxlVGV4dE1vcnBo%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJHIkRCReJGBKfUshGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3042] PluggableTextMorphをつまむ方法">kubo-o ＠ mbox.kyoto-inet.or.jp
+       </A><BR>
+    <I>2006年 7月 12日 (水) 11:52:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003037.html">[Squeak-ja: 3037] Re: Wiki としての SuperSwiki
+</A></li>
+        <LI>次の記事 <A HREF="003044.html">[Squeak-ja: 3044] Re: PluggableTextMorphをつまむ方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3042">[ 日付 ]</a>
+              <a href="thread.html#3042">[ スレッド ]</a>
+              <a href="subject.html#3042">[ 件名 ]</a>
+              <a href="author.html#3042">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>以前からPluggableTextMorphの扱い方を
+この場で皆さんに教えて頂き、
+KJ法みたいなものを実現したいと頑張っている者です。
+お陰様でだいぶん理解が進み、
+カードを作り、内容を書き込み・書き換え、
+それをある場所に格納するところまではきました。
+そこで次に、カードをmouseでつまんで移動する仕方が
+判らないのです。
+つまり、
+PluggableTextMorph 
+  on: self
+  text: #text
+  accept: #text:
+  readSelection: nil
+  menu: nil
+は動くのですが、ここに
+handlesMouseDown:やmouseDown:を
+作用させるにはどうすればよいのでしょうか。
+上のon:selfの「selfを自分のクラスのinstanceで
+置き換えるのかとも思うのですが、
+よく判っていません。
+そもそもon:はどういう機能を持つのでしょうか。
+どうか宜しくお願い致します。
+久保　道
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003037.html">[Squeak-ja: 3037] Re: Wiki としての SuperSwiki
+</A></li>
+	<LI>次の記事 <A HREF="003044.html">[Squeak-ja: 3044] Re: PluggableTextMorphをつまむ方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3042">[ 日付 ]</a>
+              <a href="thread.html#3042">[ スレッド ]</a>
+              <a href="subject.html#3042">[ 件名 ]</a>
+              <a href="author.html#3042">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

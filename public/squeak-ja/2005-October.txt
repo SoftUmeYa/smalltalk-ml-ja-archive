@@ -1,0 +1,1723 @@
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sun Oct  2 14:05:07 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2666] MacOSX Squeak 3.0
+Message-ID: <20051002140507149944.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+井上です。
+
+遅ればせながらSqueakNihongo7Mac10.x.x.dmgを試しています。まず自分のアカ
+ウントでインストールして、それから子供のアカウントでも使えるようにしよう
+として少し悩みました。
+
+１）~/Library/Internet Plugin/に
+ditto -rsrcFork  "$squeakpath/NPSqueakStubCFM" ~/Library/Internet\ 
+Plug-Ins/
+ln -sf "$squeakpath/NPSqueak.bundle" ~/Library/Internet\ 
+Plug-Ins/NPSqueak.bundle
+と作られますが、これは/Library/Internet Plugin/にしてはおけないもので
+しょうか。複数のユーザが使う場合にそれぞれ別々に用意しなくてすむのではな
+いかと思ったのですが、それぞれに必要なのでしょうか？
+
+２）~/Library/Preferences/Squeakがないと起動時に「○○でゴメンね」が出ま
+すが、ない場合にはこれを自動的に作るようにはできないでしょうか。
+
+メニューがカラフルになってクッキーは喜んでます。阿部さんに前にいただいた
+プロジェクトの入れ子を禁止する修正を読み込みましたら文字化けでしたので、
+メッセージ部分を書き直して使いました。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sun Oct  2 14:43:53 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2667] Re: MacOSX Squeak 3.0
+In-Reply-To: <20051002140507149944.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <20051002140507149944.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <20051002144353955963.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+もう少し追加いたします。
+
+３）阿部さんの修正を実行して入れ子ができないようになったのを確認してイ
+メージ保存いたしましたが、起動すると
+/Applications/SquakLand/Squeak/Internet/SqueakV3.sourcesが見つからないと
+いわれ画面はブラックになります。けれど実際には使えているようです。
+
+４）SqueakV3.sourcesはインストールされなかったのでその場所に別途コピーす
+ると、今度はchangeファイルが見つからないといわれブラックになります。やは
+り実際には使えているようです。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sun Oct  2 15:21:44 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2668] ゲームを使用不可にしたい
+In-Reply-To: <20051002144353955963.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <20051002140507149944.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20051002144353955963.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <20051002152144206348.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+幾つもすみません。
+
+早速クッキーに使わせたら、部品のオブジェクトのカタログからゲームというの
+を見つけて遊び始めてしまいました。まずい！(^^;と思ってオブジェクトにカタ
+ログのゲームのボタンを削除したものをあらためてフラップの中に入れ、元のも
+のを消したのですが、今度はメニューから取りだしてきて遊びだしてしまいまし
+た。私より数段上手です。
+
+ゲームのプログラムを削除かdisableするにはどうしたらいいでしょう？
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From abee ＠ squeakland.jp  Sun Oct  2 16:13:50 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2669] Re: ゲームを使用不可にしたい
+In-Reply-To: <20051002152144206348.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <20051002144353955963.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20051002152144206348.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <433F88AE191.D651ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 2 Oct 2005 15:21:44 +0900
+iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp> wrote:
+>早速クッキーに使わせたら、部品のオブジェクトのカタログからゲームというの
+>を見つけて遊び始めてしまいました。まずい！(^^;と思ってオブジェクトにカタ
+>ログのゲームのボタンを削除したものをあらためてフラップの中に入れ、元のも
+>のを消したのですが、今度はメニューから取りだしてきて遊びだしてしまいまし
+>た。私より数段上手です。
+
+この創意工夫はすばらしいですね。
+
+>ゲームのプログラムを削除かdisableするにはどうしたらいいでしょう？
+
+いくつか方法がありますが、SqueakMapを使った方法をご紹介します。
+ワールドメニューの「開く・・・」から「SqueakMapパッケージ・ローダー」を選
+び、左上のリストから「GamesRemoval」を選択して、右ボタンメニューで「
+Install」を選びます。何度か確認がでますがすべて「はい」で構いません。
+最後にイメージを保存します。
+
+もし、クッキーくんがその上にある「Games」のインストール方法を発見したら、
+あきらめてください :-)
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sun Oct  2 19:36:42 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2670] Re: ゲームを使用不可にしたい
+In-Reply-To: <433F88AE191.D651ABEE@smtp.nifty.com>
+References: <20051002144353955963.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20051002152144206348.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<433F88AE191.D651ABEE@smtp.nifty.com>
+Message-ID: <20051002193642289899.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+Kazuhiro ABEさんがSun, 02 Oct 2005 16:13:50 +0900に
+「[Squeak-ja: 2669] Re: ゲームを使用不可にしたい」の件で：
+> いくつか方法がありますが、SqueakMapを使った方法をご紹介します。
+
+上手く消えてくれました。外にフォルダができていましたがそこに保存されたの
+でしょうか。
+
+> もし、クッキーくんがその上にある「Games」のインストール方法を発見したら、
+> あきらめてください :-)
+
+かなり複雑ですのでさすがにこの手順は発見できないと思います。
+＃隠れてやりました。(^^;
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From tetha ＠ st.rim.or.jp  Sun Oct  2 20:12:03 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2671] Re: MacOSX Squeak 3.0
+In-Reply-To: <20051002140507149944.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <20051002140507149944.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <BEC35C2D-5D2A-4C85-8F89-BF3283B5CF47@st.rim.or.jp>
+
+井上さん、こんにちは
+林徹也です。
+
+# 新しい環境へ移行中でちょっと出遅れました。
+# (なんかヘンな変換とか化け文字が出るかもしれません、ご容赦のほど。す 
+でに、ことえりがヘン)
+
+On 2005/10/02, at 14:05, iNOUE Koich! wrote:
+
+> 井上です。
+>
+> 遅ればせながらSqueakNihongo7Mac10.x.x.dmgを試しています。まず自分の 
+> アカ
+> ウントでインストールして、それから子供のアカウントでも使えるようにし 
+> よう
+> として少し悩みました。
+>
+> １）~/Library/Internet Plugin/に
+> ditto -rsrcFork  "$squeakpath/NPSqueakStubCFM" ~/Library/Internet\
+> Plug-Ins/
+> ln -sf "$squeakpath/NPSqueak.bundle" ~/Library/Internet\
+> Plug-Ins/NPSqueak.bundle
+> と作られますが、これは/Library/Internet Plugin/にしてはおけないもので
+> しょうか。複数のユーザが使う場合にそれぞれ別々に用意しなくてすむので 
+> はな
+> いかと思ったのですが、それぞれに必要なのでしょうか？
+
+　おそらく同梱されてるインストールコマンドを拝見してらっしゃるだろうと 
+推測してるのですが…
+どうやら痛し痒しのようです。
+
+　早い話、このコマンドは、あまり井上さんが期待されてる（実は、多くの学 
+校などでも期待している）運用を考えて作られてないように見受けられます。
+
+　このコマンドの挙動としては、アドミ権限を持ったユーザならグローバルに 
+入れて、そうでないならホームの下に入れておこう程度の切り分けになってる 
+ようです。
+
+確かに、ご指摘の通り、NPSqueak.bundle自体はグローバルに一個あれば動く 
+はずです。
+その一方で、各人ごとに、2)のところで説明する作業用の 'My Squeak'フォル 
+ダを作る必要があります。
+
+当面の案としては…
+
+案１）アドミの人が一回インストールして、各ユーザごとに My Squeak ディ 
+レクトリとエイリアスを作って回る
+
+案２）ファイルが重複してインストールされて気持ち悪いですが、各ユーザご 
+とにインストールコマンドを実行する
+
+のどちらかのようです。
+
+# なお、井上さんが抱えてる問題を取り違えていましたらご容赦のうえご指摘 
+ください。
+
+> ２）~/Library/Preferences/Squeakがないと起動時に「○○でゴメンね」が 
+> 出ま
+> すが、ない場合にはこれを自動的に作るようにはできないでしょうか。
+
+　セキュリティモデル（かなり怪しげではありますが）上、SqueakLand版で 
+は、デスクトップに作られるエイリアス 'My Squeak' の中にしかイメージの 
+保存やファイルの操作が出来ないようになっています。
+この 'My Squeak' の実体が、上記のディレクトリの下に設定されてます。
+　実験してないので、はっきり言えなくて恐縮ですが、デスクトップ上に My  
+Squeak のフォルダを作成しても多分、アクセスには実体のフルパスを使って 
+るのでやはり、上記のディレクトリの下にインストール（案２に相当）をする 
+必要があるように思えます。
+
+以上、何かのお役たてれば幸いです。
+
+# 逆にこのあたりをスマートに解決できるインストールのための Shellスクリ 
+プトか Appleスクリプトを作ると JMM さんや多くの人たちが喜ぶと思われま 
+す。
+
+では。
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Tue Oct  4 12:43:09 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2672] Re: MacOSX Squeak 3.0
+In-Reply-To: <BEC35C2D-5D2A-4C85-8F89-BF3283B5CF47@st.rim.or.jp>
+References: <20051002140507149944.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<BEC35C2D-5D2A-4C85-8F89-BF3283B5CF47@st.rim.or.jp>
+Message-ID: <p04320412bf67a5035683@amateras.ma.ns.musashi-tech.ac.jp>
+
+Tetsuya HAYASHI さんが 2005.10.2ごろに
+「[Squeak-ja: 2671] Re: MacOSX Squeak 3.0」の件で：
+> # なお、井上さんが抱えてる問題を取り違えていましたらご容赦のうえご指摘
+> ください。
+
+いえ、その通りです。解決策として（私にとって？）最も望ましいのは、
+１）インストール時には/Applications以下と/Library/Internet Plug-Insに
+ファイルがインストールされ、
+２）起動したときに~/Library/Preferences/Squeak/My Squeakが作られる。
+（~/Library/Squeakの方がよいような気もします。）
+というものです。ただしこれだと現在のインストーラが作るようなエイリアス
+が作られません。
+２’）個別のユーザ用のインストールスクリプトを用意しておき、エイリアス
+はそれに作らせる。
+２”）すでにアプリケーションなどがインストールされている場合に新たにイ
+ンストールしないようにする。
+という方法が考えられますかね。
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From tetha ＠ st.rim.or.jp  Tue Oct  4 20:37:11 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2673] Re: MacOSX Squeak 3.0
+In-Reply-To: <p04320412bf67a5035683@amateras.ma.ns.musashi-tech.ac.jp>
+References: <20051002140507149944.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<BEC35C2D-5D2A-4C85-8F89-BF3283B5CF47@st.rim.or.jp>
+	<p04320412bf67a5035683@amateras.ma.ns.musashi-tech.ac.jp>
+Message-ID: <3F767747-F92A-4007-9E42-7428BF51C27A@st.rim.or.jp>
+
+林です。こんばんは。
+
+On 2005/10/04, at 12:43, iNOUE Koich! wrote:
+
+> Tetsuya HAYASHI さんが 2005.10.2ごろに
+> 「[Squeak-ja: 2671] Re: MacOSX Squeak 3.0」の件で：
+>
+>> # なお、井上さんが抱えてる問題を取り違えていましたらご容赦のうえご 
+>> 指摘
+>> ください。
+>>
+>
+> いえ、その通りです。解決策として（私にとって？）最も望ましいのは、
+
+安心いたしました。
+
+> １）インストール時には/Applications以下と/Library/Internet Plug-Insに
+> ファイルがインストールされ、
+> ２）起動したときに~/Library/Preferences/Squeak/My Squeakが作られる。
+> （~/Library/Squeakの方がよいような気もします。）
+> というものです。ただしこれだと現在のインストーラが作るようなエイリアス
+> が作られません。
+> ２’）個別のユーザ用のインストールスクリプトを用意しておき、エイリアス
+> はそれに作らせる。
+
+このスクリプトを「共有」フォルダに入れるという方法はあるかもしれません。
+各ユーザのホームなりドロップボックスなりに自動的に入れるのはちょっと力 
+技が必要になりそうですね。
+
+> ２”）すでにアプリケーションなどがインストールされている場合に新たにイ
+> ンストールしないようにする。
+
+新たにアプリケーション類だけをインストールしないということですね。
+こちらの方は、あのインストールコマンドの分岐を少し改造すると出来なくは 
+なさそうな印象を個人的には感じます。
+頑張ってみますか？
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Oct  8 00:21:29 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2674] Squeakware新バージョンのアイデア募集中
+Message-ID: <JF2005100800212911.17372281@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+CDや、USBメモリからブート可能なSqueakである、Squeakwareの新バージョン(0.2)
+を作っています。
+
+http://swikis.ddo.jp/umejava/26
+
+新バージョンでは、スタンダード版、教育向け版、NetMorph版を出そうともくろんで
+います。
+
+スタンダード版は、
+-「自由自在Squeakプログラミング」学習用イメージ (Nihongo6)
+-Squeak 3.8 + 日本語キット
+
+教育向け版は
+-Nihongo 7 + いくつかの教育用システム群(世界聴診器、毛玉、ODEco)
+-全画面表示でSqueakが自動起動
+
+NetMorph版は、
+-Squeak 3.8 + NetMorph
+-全画面表示でSqueakが自動起動
+
+そしてまだ目処が立っていませんが、サーバ版も出します。
+-Seaside + 日本語化キット
+-(未完の)SuperSwiki 2 
+
+という構想です。
+
+それぞれについて、これは入れた方が良い、これはこうすると良いというアイデア
+がありましたら、ぜひ、お聞かせください。
+
+本来、教育向け版にNetMorphを入れたいところではありますが、日本語化にまだ
+時間がかかる見通しなので、このようになっています。
+
+なお、それぞれはSLAXのモジュールとして提供されるので、上記リンクにあるように
+MySlax Creatorなどのツールを使えば、好きな組み合わせを選んで、自分専用の
+Squeakwareを作ることもできるようになります。
+
+では。
+
+---
+[:masashi | ^umezawa]
+
+From makoto ＠ kobe-u.ac.jp  Sat Oct  8 12:44:45 2005
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2675] Re: Squeakware新バージョンのアイデア募集中
+In-Reply-To: <JF2005100800212911.17372281@mars.dti.ne.jp>
+References: <JF2005100800212911.17372281@mars.dti.ne.jp>
+Message-ID: <20051008124445.735971.2c4570a4@kobe-u.ac.jp>
+
+神戸大学の高橋真です。
+
+梅澤さん新バージョン期待しています。
+
+++ Masashi Umezawaさんの『[Squeak-ja: 2674] Squeakware新バージョンのアイデア募集中』
+| (Sat, 08 Oct 2005 00:21:29 +0900)の件について
+--
+> それぞれについて、これは入れた方が良い、これはこうすると良いというアイデア
+> がありましたら、ぜひ、お聞かせください。
+
+神戸大学の「あーち」で使うことを考えて、梅澤さんが以前に作成された
+sqware-0.1-jp.isoをもとにローカル版のSqueakwareを作成しました。
+梅澤さんの新バージョンが出そうなときで、obsoleteかもしれませんが公
+開します。ハードディスクなしの環境で使うことを考えて作成しました。
+
+isoイメージ(255M)は
+http://www2.kobe-u.ac.jp/~makoto/squeak/sqware_floppy-0.1-jp.iso
+slax-4.1.2-jpとの差分モジュール(63.4M)は
+http://www2.kobe-u.ac.jp/~makoto/squeak/squeak2.img
+にあります。
+
+sqware-0.1-jp.isoからの主な変更点は以下の通りです。
+
+１　作成した作品はフロッピーディスクに入れることにするのでautofs
+　　でオートマウントさせる
+２　flutboxでキーボードをjp106にする
+３　愛知産業大学の蜂須賀さんが作成されたひらがな版とsqueakland
+　　プラグイン版を入れる
+
+なお、ひらがな版のknownServersはローカルのフロッピーディスクの
+みにして、flutboxで使うときは全画面表示にするようにしています。
+
+実はslax-5.0.6-jpのほうでもほぼできているのですが、１のautofsがう
+まく動いてくれません。（たぶん使っているautofsのバージョンが古い）
+Boot parameterで起動時にフロッピーを指定することで対応できますが、
+入れ忘れると手動でマウントさせないといけないので現在どうするか考慮
+中です。
+２でflutboxでjp106に変更するとき、xorgの使い方をよく知らないため
+自動的に作成されたXF86Configを書き換えるという少し無茶な方法を
+とっています。xorgでキーボードをきちんと指定する方法をご存知の方
+お知恵をください。
+
+From umejava ＠ mars.dti.ne.jp  Thu Oct 13 22:51:09 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2676] OmniBaseJ
+Message-ID: <JT200510132251094.1403671@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Squeak上で、大きなデータを扱いたいとき、データベースがあると良いなという
+要求がわき起こってくるものです。
+
+しかし、いわゆるリレーショナルDBでは、Squeakが持っているオブジェクト指向の
+簡明さが、オブジェクト <-> 表 の変換作業によって失われてしまいます。
+
+ということで、どうせ使うのであればオブジェクト指向DBということになります。
+
+このたび、OmniBaseというフリーで使えるSqueak上のオブジェクト指向DBを日本語化
+しましたので、ぜひお使いください。
+
+下記に情報があります。
+http://swikis.ddo.jp/umejava/24
+
+SmalltalkのDictionaryを使うのとほぼ同じ感覚でDBが使えます。便利ですよ。
+
+では。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Fri Oct 14 23:02:42 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2677] 「 HP スーパー サイエンス キッズ」カンファレンスのご案内
+Message-ID: <434FBA82AA.D732ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+私がお手伝いしているHP-SqueakersやアランさんのNPOであるViewpoints
+Researchなどの共催により「HP スーパー サイエンス キッズ」カンファレンスが、
+来る11/3(木, 文化の日)に開催されます。
+
+このイベントにSqueak-jaから抽選で5名の方をご招待します。
+参加を希望される方は私宛(abee@squeakland.jp)にメールでご応募ください。そ
+の際サブジェクトに[HPSSK]と付けてもらえると助かります。
+締め切りは10/21(金)です。当選された方にはメールでご案内を差し上げます。
+
+「HP スーパー サイエンス キッズ」の正体については、11/3までお待ちください。
+
+-- ここから --
+「HP スーパー サイエンス キッズ」カンファレンス
+
+日時: 2005年11月3日(木・祝日) 13時〜18時
+場所: 日本科学未来館(江東区青海2-41) 7階
+http: //www.miraikan.jst.go.jp/j/guide/map_index.html
+アクセス: 新交通ゆりかもめ「テレコムセンター」駅下車、徒歩４分
+電話: 03-3570-9151(日本科学未来館代表)
+内容: 
+◆HP スーパー サイエンス キッズプロジェクトについてご説明
+◆アラン・ケイ講演
+◆パネルディスカッション 「テーマ:  明日のダヴィンチを探せ！」
+(参加者・敬称略) 
+司会: 石戸 奈々子(NPO法人CANVAS理事兼事務局長)
+杉山知之(デジタルハリウッド大学・大学院学長)
+水口哲也(キューエンタテインメント代表取締役)
+本城愼之介(横浜市立東山田中学校 校長/元楽天株式会社副社長)
+キム・ローズ(Viewpoints Research Executive Director)
+◆教育機関によるSqueakの取り組み成果発表会
+司会: Viewpoints Research Institute研究員 大島芳樹
+慶應義塾大学 大岩研究室 松澤芳昭 
+京都市立堀川高等学校 教諭 藤岡健史 
+多摩美術大学 美術学部 情報デザイン学科 教授 須永剛司 
+デジタルハリウッド大学院 研究員 宮坂俊夫 
+三重大学 教育学部 教育実践総合センター 教授 下村 勉 
+◆こども向けワークショップ
+東京都杉並区立和田小学校の子どもたち 他
+
+主催: HP スーパー サイエンス キッズ 実行委員会
+共催: Viewpoints Research Institute、特定非営利活動法人CANVAS、
+　　　HP-Squeakers
+協賛: 日本ヒューレット・パッカード株式会社
+協力: デジタルハリウッド大学大学院、電子情報通信学会、日本科学未来館 他
+-- ここまで --
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From e-itoh ＠ ygu.ac.jp  Sat Oct 15 14:50:58 2005
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2678] 告知：大学祭での AIBO サッカー大会実施について
+Message-ID: <20051015145058.1CD11268@ygu.ac.jp>
+
+山梨学院大学の伊藤です。いつも御世話になっております。
+
+告知をさせてください。
+
+10/29,30と山梨学院大学の学園祭にて、私の研究室の研究発表を行います。
+発表といってもOPEN/R SDKを使ったプログラムによるAIBOサッカー大会を行
+うものです。
+＃ロボカップより一回り小さいフィールドで3x3の試合を行います。
+試合は学生同士で行いますが、飛び入り参加で楽しめるイベントも行います。
+
+使っているシステムの全てをSqueakで作成したわけではないのですが、
+AIBO上の状態機械のデータや動きのデータなどは、Squeak上に構築した開発
+環境（C5-2005のBOFで発表させていただいたもの）を使って作成しています。
+
+先日質問させていただいたUDPのこともこの環境用のものです。
+＃まだ顛末を報告していなくてすみません。
+
+下記のURLに簡単な説明があります。
+http://wiki.itolab.com/wiki.cgi/jutoku2005
+
+お近くにお住まいの方がいらっしゃいましたら是非お越しくださいませ。
+
+失礼いたしました。
+
+
+ 
+
+
+
+From takeda.toshiyuki ＠ gmail.com  Mon Oct 17 16:20:38 2005
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2679] プロジェクトの読み込み
+Message-ID: <6544a1da0510170020m130a5c3fu9420c96358d0879f@mail.gmail.com>
+
+武田です。
+
+プロジェクトを.prから読み込んでProjectを組み立てるいい方法はないでしょうか？
+
+ProjectLoading>>openName:stream:fromDirectory:withProjectView:
+はenterしてしまうのですが、単にファイルからプロジェクトを読んで処理したい
+だけなので、もう少し簡便な方法を探しています。
+
+FAQにでもありそうですが見つかりませんでした。
+
+＃もちろん、enterするところをけずって動くぐらいは試しています。
+
+よろしくお願いします。
+
+From umejava ＠ mars.dti.ne.jp  Tue Oct 18 09:08:24 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2680] Re: Squeakers' Night in 未来パーティ のお知らせ
+Message-ID: <JG2005101809082414.7569593@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、「Squeakers' Night in 未来パーティ」まで、あと10日となりました。
+
+まだ人数に余裕がありますので、ぜひお越しください。
+
+#万かつサンドにビール1ケースなども調達できる運びとなりました。
+
+Sat, 17 Sep 2005 14:44:19 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+----------from here----------
+こんにちは
+梅澤です。
+
+さて、「夜の集い」の興奮もさめやらない今日この頃ですが、このたび、10月28日に
+同種のイベントが行える運びとなりました。
+
+タイトルは「Squeakers' Night in 未来パーティ」です。
+今回は公立はこだて未来大学様のご協力を受けまして、秋葉原ダイビルの5F
+アキバテクノクラブで行います。
+
+http://www.akiba-cross.jp/
+
+スケジュールは以下のようになります。
+
+10/28(Fri)
+  18:00 集合・準備
+  18:30-20:30 発表・ディスカッション
+  20:30-21:00 かたづけ
+
+会場もぐっと広くなり、さらに充実したデモが行える環境となりました!
+
+事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+
+例によって差し入れなども歓迎します。
+
+デモプログラムはWikiに載せていく予定です。
+下記のサイトにプログラムが載っていきます。
+http://swikis.ddo.jp/umejava/23
+
+ちなみに私は新バージョンのSqueakwareをお披露目します。
+http://swikis.ddo.jp/umejava/11
+
+よろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+
+From "土本 (Florian) 強  Tue Oct 18 09:30:48 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2681] Re: Squeakers' Night in 未来パーティ のお知らせ
+In-Reply-To: <JW200509171444193.3111390@mars.dti.ne.jp>
+References: <JW200509171444193.3111390@mars.dti.ne.jp>
+Message-ID: <20051018092921.1EC8.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。土本( Florian )です。
+
+　メールのログを見たところ返答していなかったようですのであわてて。
+
+メール「[Squeak-ja: 2641] Squeakers' Night in 未来パーティ のお知らせ」(2005/09/17 14:44) に於いて
+「Masashi Umezawa」 語りて曰く、
+
+Masashi> 
+Masashi> タイトルは「Squeakers' Night in 未来パーティ」です。
+Masashi> 今回は公立はこだて未来大学様のご協力を受けまして、秋葉原ダイビルの5F
+Masashi> アキバテクノクラブで行います。
+...
+Masashi> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+Masashi> MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+
+　参加します。
+　今回も楽しみにしています。
+
+
+　では。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From tak ＠ metatoys.org  Thu Oct 20 15:44:00 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2682] Re: Squeakers' Night in 未来パーティ のお知らせ
+In-Reply-To: <JW200509171444193.3111390@mars.dti.ne.jp>
+References: <JW200509171444193.3111390@mars.dti.ne.jp>
+Message-ID: <43573CB0.7010502@metatoys.org>
+
+山宮です。
+
+東京に立ち寄る事になりましたので、
+私も見学させてください。よろしくお願いいたします。
+
+> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+> MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From kawa90 ＠ yahoo.co.jp  Fri Oct 21 19:25:43 2005
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2683] Re: プロジェクトの読み込み
+In-Reply-To: <6544a1da0510170020m130a5c3fu9420c96358d0879f@mail.gmail.com>
+References: <6544a1da0510170020m130a5c3fu9420c96358d0879f@mail.gmail.com>
+Message-ID: <4358C227.1060906@yahoo.co.jp>
+
+武田さん、はじめまして。川村と申します。
+
+たぶん、はずしていると思いますが、
+stream := FileStream fileNamed: 'abc.001.pr'.
+zip := ZipArchive new readFrom: stream.
+projectStream := zip memberNamed: 'abc.001.pr'.
+[[ProjectLoading
+openName: 'abc'
+stream: projectStream contentStream
+fromDirectory: nil
+withProjectView: nil]
+on: ProjectViewOpenNotification
+do: [:ex | ex resume: false]]
+on: ProjectEntryNotification
+do: [:ex |
+project _ ex projectToEnter.
+ex resume].
+project explore.
+
+これなら#enterしないでいけますが(SarInstallerのパクリ)。。。たぶん違うん
+だろうなぁ。
+
+#たぶん違うんだろうなぁ。とおもいつつ、メールアドレスを変更したのでテス
+トを兼ねて...
+
+それでは
+
+Toshiyuki Takeda wrote:
+
+>武田です。
+>
+>プロジェクトを.prから読み込んでProjectを組み立てるいい方法はないでしょうか？
+>
+>ProjectLoading>>openName:stream:fromDirectory:withProjectView:
+>はenterしてしまうのですが、単にファイルからプロジェクトを読んで処理したい
+>だけなので、もう少し簡便な方法を探しています。
+>
+>FAQにでもありそうですが見つかりませんでした。
+>
+>＃もちろん、enterするところをけずって動くぐらいは試しています。
+>
+>よろしくお願いします。
+>
+>
+>  
+>
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.344 / Virus Database: 267.12.4/146 - Release Date: 2005/10/21
+
+--------------------------------------
+Know more about Breast Cancer
+http://pr.mail.yahoo.co.jp/pinkribbon/
+
+
+From kawa90 ＠ yahoo.co.jp  Fri Oct 21 20:38:55 2005
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2684] Re: 本のページ複製方法とマウスボタンのスワップ
+In-Reply-To: <6544a1da050929015418c7a552@mail.gmail.com>
+References: <20050925120632.2E23.KOUBO2005@yengawa.jpn.org>	<200509260237.j8Q2bVbL021582@smtp00.dti.ne.jp>	<433A61593E2.D637ABEE@smtp.nifty.com>
+	<6544a1da050929015418c7a552@mail.gmail.com>
+Message-ID: <4358D34F.4050208@yahoo.co.jp>
+
+川村です。いつもお世話になってます。
+
+Squeak TracのSqueak Trac BTSについて質問です。
+
+Toshiyuki Takeda wrote:
+
+>武田です。ご紹介いただきありがとうございます。
+>
+>作りっぱなしのほったらかしで申し訳ないのですが、どうぞご自由にお使いください。
+>登録したいSqueak関係のプロジェクトがあればご相談ください。
+>  
+>
+日本語７のバグ報告してもよろしいでしょうか？日本語７固有のバグ報告のみに限定
+されるのでしょうか？
+
+よろしくお願いします。
+
+>Mantisと連携できるWikiも試験運用中です。
+>
+>http://www.kukakuka.jp/squeak/trac.cgi
+>
+>On 9/28/05, Kazuhiro ABE <abee@squeakland.jp> wrote:
+>
+>  
+>
+>>このようなバグ報告の場所としてはMantisがあります。
+>>
+>>http://bugs.impara.de/main_page.php
+>>
+>>日本でも武田さんが試験的に運用されています。
+>>
+>>http://www.kukakuka.jp/squeak/bugs/main_page.php
+>>    
+>>
+>
+>
+>  
+>
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.344 / Virus Database: 267.12.4/146 - Release Date: 2005/10/21
+
+--------------------------------------
+Know more about Breast Cancer
+http://pr.mail.yahoo.co.jp/pinkribbon/
+
+
+From yoshiki ＠ squeakland.org  Sat Oct 22 09:05:34 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2685] Re: Squeakers' Night in 未来パーティ のお知らせ
+In-Reply-To: <JG2005101809082414.7569593@mars.dti.ne.jp>
+References: <JG2005101809082414.7569593@mars.dti.ne.jp>
+Message-ID: <uk6g6a01d.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  僕も楽しみにしています。なにしろ、今回帰国する理由のひとつはこれなの
+ですから。
+
+-- Yoshiki
+
+At Tue, 18 Oct 2005 09:08:24 +0900,
+Masashi Umezawa wrote:
+> 
+> こんにちは
+> 梅澤です。
+> 
+> さて、「Squeakers' Night in 未来パーティ」まで、あと10日となりました。
+> 
+> まだ人数に余裕がありますので、ぜひお越しください。
+> 
+> #万かつサンドにビール1ケースなども調達できる運びとなりました。
+> 
+> Sat, 17 Sep 2005 14:44:19 +0900
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> ----------from here----------
+> こんにちは
+> 梅澤です。
+> 
+> さて、「夜の集い」の興奮もさめやらない今日この頃ですが、このたび、10月28日に
+> 同種のイベントが行える運びとなりました。
+> 
+> タイトルは「Squeakers' Night in 未来パーティ」です。
+> 今回は公立はこだて未来大学様のご協力を受けまして、秋葉原ダイビルの5F
+> アキバテクノクラブで行います。
+> 
+> http://www.akiba-cross.jp/
+> 
+> スケジュールは以下のようになります。
+> 
+> 10/28(Fri)
+>   18:00 集合・準備
+>   18:30-20:30 発表・ディスカッション
+>   20:30-21:00 かたづけ
+> 
+> 会場もぐっと広くなり、さらに充実したデモが行える環境となりました!
+> 
+> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+> MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+> 
+> 例によって差し入れなども歓迎します。
+> 
+> デモプログラムはWikiに載せていく予定です。
+> 下記のサイトにプログラムが載っていきます。
+> http://swikis.ddo.jp/umejava/23
+> 
+> ちなみに私は新バージョンのSqueakwareをお披露目します。
+> http://swikis.ddo.jp/umejava/11
+> 
+> よろしくお願い申し上げます。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+From tetha ＠ st.rim.or.jp  Sun Oct 23 13:24:19 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2686] Mac版最新VMビルドの方法
+Message-ID: <3CA0F727-9F0A-4229-91C1-F4BC31345876@st.rim.or.jp>
+
+林です。ども。
+# 古い方のアドレスに出してしまってました (^^;;
+
+今最新のMac版VMでは日本語入力に問題があるのですが、肝心のVMのビルド自 
+体が通常の方法では出来ませんでした。
+squeak-dev ML をご覧になっている方には既知の話題かと思いますが、南谷さ 
+んのSqueaker's Scrapbook に以下のURLでビルドに必要な情報をメモっておき 
+ましたので、ご興味のある方は参考にしてください。
+
+http://squeak.sakura.ne.jp/modules/newbb/viewtopic.php? 
+topic_id=40&forum=8&post_id=230#forumpost230
+
+まずは取り急ぎ（？）ご連絡まで。
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+
+From tetha ＠ st.rim.or.jp  Sun Oct 23 14:52:12 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2687] Mac版Squeakをスゴクする会
+Message-ID: <F7312B3C-4571-4752-9C45-CF6A329EF51F@st.rim.or.jp>
+
+林です。ども。
+
+先般、某「夜の集い」でも話したのですが、「みんなで協力してMac版Squeak 
+をスゴクする会（仮称）」のようなものを立ち上げてみてはどうかと思ってお 
+ります。
+会といっても自由に適当に議論したり作業を進めたりする感じで、
+     - バグや問題の報告とその対処
+     - 機能改善とか新規機能（ビデオカメラとの接続とか）の追加
+     - 改善要望や新規機能のネタの提案
+     - Mac版の愚痴を言い合う（Mac自体の愚痴になるかも…）
+などなど実際にプログラミングするだけでなく、提案なども大募集です。です 
+のでMac使ってれば、もうメンバーと思っていただいていいかと思います。
+
+基本的には Squeak-ja を根っことしますが、Mac固有のディープな議論などに 
+ついては適宜、Squeker's Scrapbook の Squeak VM フォーラムを利用しては 
+どうでしょうか？（長い議論は結果だけSqueak-jaに報告とか）
+ということで、まずは最新バージョンの日本語入力について問題がありそうな 
+ので、Scrapbookにスレをたててみました。レスお待ちしております。
+
+http://squeak.sakura.ne.jp/modules/newbb/viewtopic.php? 
+viewmode=flat&topic_id=41&forum=8
+
+世間的にはマイナーではありますが、Mac版をみんなでスゴクしていきません 
+か。
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+From takeda.toshiyuki ＠ gmail.com  Mon Oct 24 11:28:53 2005
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2688] Re: プロジェクトの読み込み
+In-Reply-To: <4358C227.1060906@yahoo.co.jp>
+References: <6544a1da0510170020m130a5c3fu9420c96358d0879f@mail.gmail.com>
+	<4358C227.1060906@yahoo.co.jp>
+Message-ID: <6544a1da0510231928m5882bca1yfae6044d0235d11d@mail.gmail.com>
+
+武田です。
+
+お返事ありがとうございます。
+
+On 10/21/05, Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+
+> これなら#enterしないでいけますが(SarInstallerのパクリ)。。。たぶん違うん
+> だろうなぁ。
+
+いえ、SarInstallerを見落としていました。
+ProjectEntryNotificationだけ拾えばよかったのですね。
+
+ありがとうございました。
+
+武田俊之
+
+From tak ＠ metatoys.org  Tue Oct 25 11:55:03 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2689] Re: 本のページ複製方法とマウスボタンのスワップ
+In-Reply-To: <4358D34F.4050208@yahoo.co.jp>
+References: <20050925120632.2E23.KOUBO2005@yengawa.jpn.org>	<200509260237.j8Q2bVbL021582@smtp00.dti.ne.jp>	<433A61593E2.D637ABEE@smtp.nifty.com>	<6544a1da050929015418c7a552@mail.gmail.com>
+	<4358D34F.4050208@yahoo.co.jp>
+Message-ID: <435D9E87.8060601@metatoys.org>
+
+山宮です。
+
+> 日本語７のバグ報告してもよろしいでしょうか？日本語７固有のバグ報告のみに限定
+> されるのでしょうか？
+> 
+> よろしくお願いします。
+
+最初はどうカテゴリー分けしたら良いのかも曖昧だと思いますので、
+あまりこだわらずじゃんじゃん報告する事にすればよいのでは無いでしょうか？
+バグ報告が集約されてひとつのサイトにあるだけで大変有用だと思います。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Oct 26 08:49:27 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2690] ネットモーフ日本語版
+Message-ID: <JR200510260849275.6020250@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、突然ですがネットモーフの新日本語版(0.3)をリリースします。
+http://swikis.ddo.jp/NetMorph/10
+
+ネットモーフを使うと、複数のSqueakイメージが自動的につながります。
+モーフを互いにやりとりしたり、プロジェクトを仲間通しで見せあったりできます。
+
+日本語で安定して動くネットモーフは初めてですので、ぜひお試しください。
+
+28日の未来パーティでもデモさせていただきます。
+---
+[:masashi | ^umezawa]
+
+From tetha ＠ st.rim.or.jp  Wed Oct 26 09:55:01 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2691] MacOSX版VMビルド手順について
+Message-ID: <73039699-6274-45BF-9D7C-190CC4C25EAD@st.rim.or.jp>
+
+みなさん、こんにちは。
+林です。ども。
+
+MacOSX版のVMビルドの手順概略をSqueaker's Scrapbook にメモってみました。
+
+http://squeak.sakura.ne.jp/modules/newbb/viewtopic.php? 
+topic_id=43&post_id=238&order=0&viewmode=flat&pid=0&forum=8#forumpost238
+
+ご興味のある方、ご参考にしてください。
+また内容について突っ込み、質問なども大歓迎です。
+
+なお、最新VMの日本語入力に問題が起きてる訳ですが、出来れば日本語版 
+Squeakがバージョンアップする（本家ではすでにバージョンアップしてるので 
+近々あるのでは…）前にどうにかする必要を感じてます。
+この件について（Scrapbookにスレたてています）もご協力お願いいたします。
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+From ohzahata ＠ mac.com  Thu Oct 27 11:49:14 2005
+From: ohzahata ＠ mac.com ("大座畑 重光")
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2692] Squeakers' Night in 未来パーティ参加希望
+In-Reply-To: <4755423.1130380635378.JavaMail.melissarenee@mac.com>
+References: <4755423.1130380635378.JavaMail.melissarenee@mac.com>
+Message-ID: <13860913.1130381354500.JavaMail.ohzahata@mac.com>
+
+こんにちは、大座畑です。
+（本MLへ、初めてだと思います。宜しくお願い致します。）
+
+前回の「夜の集い」ではたいへんお世話になり、ありがとうございました。
+すごく楽しく、時間があっという間に経ってしまった感があります。
+最終電車でつくばの自宅まで帰るため、山宮さんのスピーチが終わったところで
+会場を出るしかありませんでした。鷲見さん以降のスピーチも楽しみにしていたのですが・・・残念！
+明日もぜひ参加希望いたしますので、よろしくお願い致します。
+梅澤さん、参加人数の点で大丈夫でしょうか。
+今回は大島さんも帰国されるとのことで、楽しみにしています。
+
+それから、最新号の「コンピュータソフトウェア(VOL.22,NO.4/OCTOBER,2005)」
+（日本ソフトウェア科学会編集、岩波書店発売）にアラン・ケイ博士の
+「形あるものへ---子供、パワフルなアイデア、そして技術
+ーーー第20回京都賞記念ワークショップ受賞者講演ーーー」(pp.65-83)
+が掲載されています。
+ほぼ1年前（2004年11月12日）に国立京都国際会館で開催されたもので
+最後の部分には3件のQ&Aも収録されています。（3件目のQ&Aは私からのものでした。）
+
+それでは明日、楽しみにしています。
+
+>こんにちは
+> 梅澤です。
+>
+> さて、「夜の集い」の興奮もさめやらない今日この頃ですが、このたび、10月28日に
+> 同種のイベントが行える運びとなりました。
+> 
+> タイトルは「Squeakers' Night in 未来パーティ」です。
+> 今回は公立はこだて未来大学様のご協力を受けまして、秋葉原ダイビルの5F
+> アキバテクノクラブで行います。
+> 
+> http://www.akiba-cross.jp/
+> 
+> スケジュールは以下のようになります。
+> 
+> 10/28(Fri)
+>   18:00 集合・準備
+>   18:30-20:30 発表・ディスカッション
+>   20:30-21:00 かたづけ
+> 
+> 会場もぐっと広くなり、さらに充実したデモが行える環境となりました!
+> 
+> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+> MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+> 
+> 例によって差し入れなども歓迎します。
+> 
+> デモプログラムはWikiに載せていく予定です。
+> 下記のサイトにプログラムが載っていきます。
+> http://swikis.ddo.jp/umejava/23
+> 
+> ちなみに私は新バージョンのSqueakwareをお披露目します。
+> http://swikis.ddo.jp/umejava/11
+> 
+> よろしくお願い申し上げます。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/ 
+_/　大座畑　重光（Shigemitsu Ohzahata） 
+_/　マッキンテリジェンス（株）代表取締役(President/Macintelligence,Inc.) 
+_/　　　　　　　携帯電話:090-8890-4502 
+_/　　　　　　　e-mail:　ohzahata@mac.com 
+_/　　　　　　　URL:　　http://homepage.mac.com/ohzahata/
+
+
+From umejava ＠ mars.dti.ne.jp  Thu Oct 27 13:01:21 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2693] Re: Squeakers'_Night_in_未来パーティ参加希望
+In-Reply-To: <13860913.1130381354500.JavaMail.ohzahata@mac.com>
+References: <4755423.1130380635378.JavaMail.melissarenee@mac.com>
+	<13860913.1130381354500.JavaMail.ohzahata@mac.com>
+Message-ID: <JL2005102713012115.20764171@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 前回の「夜の集い」ではたいへんお世話になり、ありがとうございました。
+> すごく楽しく、時間があっという間に経ってしまった感があります。
+> 最終電車でつくばの自宅まで帰るため、山宮さんのスピーチが終わったところで
+> 会場を出るしかありませんでした。鷲見さん以降のスピーチも楽しみにしていたのですが・・・残念！
+> 明日もぜひ参加希望いたしますので、よろしくお願い致します。
+> 梅澤さん、参加人数の点で大丈夫でしょうか。
+> 今回は大島さんも帰国されるとのことで、楽しみにしています。
+
+参加人数、まだ大丈夫です。お待ちしております。
+
+今回は豪華メンバーが勢揃いということになりそうです。
+
+皆さんも、明日お会いしましょう!
+
+---
+[:masashi | ^umezawa]
+
+From shortsleeved ＠ mac.com  Thu Oct 27 21:15:55 2005
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2694] Squeakers' Night in 未来パーティ参加希望します
+Message-ID: <8D499054-FA89-41BF-95C9-DCDEACE763D2@mac.com>
+
+こんにちは。shortsleevedです。
+間際になってすみませんが、Squeakers' Night in 未来パーティ 
+参加希望します。
+よろしくお願いします。
+
+
+From tak ＠ metatoys.org  Fri Oct 28 06:32:10 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2695] 日本語スクイーク 2006
+Message-ID: <4361475A.1060003@metatoys.org>
+
+山宮です。
+
+スクイーク開発の最近の進捗について、未来パーティもある事ですし話のネタ
+にまとめておきます。
+
+ダウンロード出来るスクイークの最新バージョンは
+
+- 日本語スクイーク7 : #101
+- Squeakland 版 : Squeakland 3.8-05 #494
+- 開発者用安定版 : Squeak3.8 #6665
+- 開発者アルファ : Squeak3.9 #6693
+
+となっています。前回のスクイーク日本語7 は Squeakland 版から作られまし
+たので、次も同じく Squeakland から作られます。実は、現在 
+squeakland.org からダウンロード出来るものはすでに日本語が使え、あと少
+しの修正を加えるだけでスクイーク日本語7と遜色なく使えます。新しいスク
+イークの特徴として、大島さんによる毛玉機能があります。
+
+日本語7の成果は本家 squeakland に完全に統合されたので、基本的には本家
+と同一の物が次期スクイーク日本語版として使えるのですが、この版では日本
+語フォントがネットワークインストールとなっていますので、フォントを標準
+添付した物を squeakland.jp に置いてもらおうと思っています。
+
+開発者版については、残念ながら幾つか日本語に必要なパッチが入っていませ
+ん。squeakland 3.8-05 に加えたパッチを幾つかバックポートする必要がある
+他、3.9 に投稿する必要があります。
+
+と言うわけで残り作業(他にあったら教えてください)
+
+- 次期スクイーク日本語版の呼び方を決める。
+- 日本語版リリースの日を決める(Mac と Windows と Linux を同じ日に出しましょう)
+- 日本語に特化した部分のテスト
+- インストーラを作る
+- リリースノートを書く
+- 3.8 へのパッチを梅澤さんの Japanese Environment Installer に入れてもらう
+- 3.9 へのパッチを投稿
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Fri Oct 28 14:05:26 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2696] Re: 日本語スクイーク 2006
+In-Reply-To: <4361475A.1060003@metatoys.org>
+Message-ID: <BF87E09E.3A81C%sumi@seagreen.ocn.ne.jp>
+
+山宮さん、皆さん、ありがとうございます。鷲見です。
+
+on 10/28/05 06:32, tak@metatoys.org wrote:
+
+> 他にあったら
+
+次元の違う話かも（あるいは「日本語に特化した部分のテスト」にすでに含んでいた
+だけているのかも）しれませんが、16rA0 〜 16rFF の文字の入出力に絡めたバグの
+修正も（今回でなくてもいいので、近い将来）盛り込んでいただけると幸いです。
+
+これはたとえば、'×÷' をテキストモーフなどに入力後、カット＆ペーストで再び
+貼り付けると文字化けしてしまうといった症状として顕在化します。eToys には関係
+ありませんが、Smalltalk では、該当する文字が euc-jp でファイルに対して入出力
+できないといった不都合も派生的に生じています。
+
+--
+Masato Sumi
+
+
+From tak ＠ metatoys.org  Fri Oct 28 14:58:00 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2697] Re: 日本語スクイーク 2006
+In-Reply-To: <BF87E09E.3A81C%sumi@seagreen.ocn.ne.jp>
+References: <BF87E09E.3A81C%sumi@seagreen.ocn.ne.jp>
+Message-ID: <4361BDE8.8010405@metatoys.org>
+
+山宮です。
+
+鷲見さん、早速ご指摘ありがとうございました。
+折角なので http://www.kukakuka.jp/squeak/bugs/view.php?id=18 に
+転載しました。
+
+> 次元の違う話かも（あるいは「日本語に特化した部分のテスト」にすでに含んでいた
+> だけているのかも）しれませんが、16rA0 〜 16rFF の文字の入出力に絡めたバグの
+> 修正も（今回でなくてもいいので、近い将来）盛り込んでいただけると幸いです。
+> 
+> これはたとえば、'×÷' をテキストモーフなどに入力後、カット＆ペーストで再び
+> 貼り付けると文字化けしてしまうといった症状として顕在化します。eToys には関係
+> ありませんが、Smalltalk では、該当する文字が euc-jp でファイルに対して入出力
+> できないといった不都合も派生的に生じています。
+
+
+From e-itoh ＠ ygu.ac.jp  Fri Oct 28 18:13:00 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2698] Re: 日本語スクイーク 2006
+In-Reply-To: <4361475A.1060003@metatoys.org>
+References: <4361475A.1060003@metatoys.org>
+Message-ID: <8664rif1ib.wl@tvr.itolab.ygu.ac.jp>
+
+伊藤です。こんにちは。
+
+> 山宮です。
+> と言うわけで残り作業(他にあったら教えてください)
+　日本語関係でおかしな動作がありました。
+
+・　'i' beginsWith: '歩' がtrueになる。
+
+squeakland開発者版のイメージでこのようになります。
+Unix版、Windows版のVMでも同じです。
+＃原因は究明できていません。すみません。
+
+とりあえずご報告まで。
+
+From sumi ＠ seagreen.ocn.ne.jp  Fri Oct 28 18:34:42 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2699] Re: 日本語スクイーク 2006
+In-Reply-To: <4361BDE8.8010405@metatoys.org>
+Message-ID: <BF881FC1.3A86B%sumi@seagreen.ocn.ne.jp>
+
+山宮さん、お手数をおかけします。鷲見です。
+
+on 10/28/05 14:58, tak@metatoys.org wrote:
+
+> 折角なので http://www.kukakuka.jp/squeak/bugs/view.php?id=18 に
+> 転載しました。
+
+了解です。
+
+次からは、この武田さんの bugs のほうに登録させていただきます。
+
+--
+Masato Sumi
+
+
+From tak ＠ metatoys.org  Fri Oct 28 19:10:43 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2700] Re: 日本語スクイーク 2006
+In-Reply-To: <8664rif1ib.wl@tvr.itolab.ygu.ac.jp>
+References: <4361475A.1060003@metatoys.org>
+	<8664rif1ib.wl@tvr.itolab.ygu.ac.jp>
+Message-ID: <4361F923.8030500@metatoys.org>
+
+山宮です。
+
+本当だ、面白いですねえ。
+他にも変な現象があるかもしれませんね。
+ありがとうございました。
+
+> 　日本語関係でおかしな動作がありました。
+> 
+> ・　'i' beginsWith: '歩' がtrueになる。
+> 
+> squeakland開発者版のイメージでこのようになります。
+> Unix版、Windows版のVMでも同じです。
+> ＃原因は究明できていません。すみません。
+> 
+> とりあえずご報告まで。
+
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Sat Oct 29 01:46:32 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2701] 国際会議 C5 締切延長の御案内
+Message-ID: <20051028094632.252ad45b.htakada@db.soc.i.kyoto-u.ac.jp>
+
+京都大学の高田です。
+
+以前お知らせ致しました国際会議 C5 の論文投稿締切が延長されました。
+
+新しい論文投稿締め切りは，Extended Abstract (4ページ以内) で 11月7日と
+なっています。
+
+参加募集等もまもなくWeb上で御案内できると思います。
+
+http://www.db.soc.i.kyoto-u.ac.jp/c5-06/
+
+皆様のご投稿，ご参加をお待ちしております。
+
+-----
+CALL FOR PAPERS
+
+The Fourth International Conference on
+Creating, Connecting and Collaborating through Computing (C5 2006)
+January 26-27, 2006, University of California, Berkeley, USA
+http://www.db.soc.i.kyoto-u.ac.jp/c5-06/
+
+SPONSORED BY
+ Center for Information Technology Research in the Interest of Society, 
+  University of California, Berkeley
+ Hewlett-Packard Company
+ 21st Century Center of Excellence (COE) Program:
+  Development of Knowledge Society Infrastructure, Kyoto University
+ National Institute of Information and Communications Technology, Japan
+ Viewpoints Research Institute
+
+SCOPE
+ Computers and networks now touch the lives of us all, from the
+ youngest to the eldest members of the information society. The way
+ we use them today, as passive consumers of human-based computer
+ activities, must undergo radical improvement if we are to evolve into
+ a true knowledge society. Effectively supporting active creation,
+ connection and collaboration among all members of the knowledge
+ society will be essential for future computer-based human activities.
+ The C5 conference is for researchers, developers and computer users
+ who are concerned about these issues. It is an international forum for
+ presenting ongoing work and discussing future needs and directions
+ in the areas of creative and collaborative computing and multimedia
+ authoring environments - for work, play and learning. We welcome
+ equally the submission of technical papers and practitioner/
+ experience reports.
+
+TOPICS OF INTEREST
+ Topics of interest include but not limited to
+ - Development and applications of wide area collaboration enviroment
+ - User collaboration utilizing 3D, multimedia, and animation objects
+ - Technologies for creating educational environments
+ - Computer-Supported Collaborative Learning (CSCL)
+ - Computer-Supported Cooperative Work (CSCW), virtual teaming,
+   distributed work, and e-collaboration
+ - Hybrid technology activities, such as scientific experiments,
+   instrumentation, robots, and game playing
+
+SUBMISSION GUIDELINES
+ Original papers concerned with both theory and practice are
+ solicited. Extended abstract with 4 page limit should be submitted by
+ the paper submission deadline. The abstracts are reviewed by the
+ program comittee and authors will be notified about acceptance.
+ Accepted authors have to submit a full paper with 8 page limit by the
+ camera-ready copy deadline.
+ Both extended abstracts and full papers should follow the formatting
+ instructions provided by "IEEE Computer Society Press -
+ Proceedings Author Guidelines" (available at
+ http://www.computer.org/portal/pages/ieeecs/publications/author/instruct.html). 
+ Extended abstracts and camera-ready papers should be
+ sent electronically to c5-06@db.soc.i.kyoto-u.ac.jp. The PDF,
+ Postscript and MS-WORD formats are acceptable.
+
+IMPORTANT DATES
+ Extended abstract submission: November 7, 2005 (Extended)
+ Notification of acceptance: December 1, 2005
+ Full paper camera-ready copies: January 10, 2006
+ 
+PUBLICATION
+ Preliminary version of the proceedings will be distributed during the
+ conference. The formal version of the proceedings will be published
+ by IEEE Computer Society Press and sent to authors after the
+ conference.
+
+ORGANIZING COMMITTEE
+
+Honorary Co-Chairs:
+ Alan Kay, Viewpoints Research Institute, Hewlett-Packard Company, USA
+ Makoto Nagao, National Institute of Information and Communications Technology, Japan
+Conference Co-Chairs:
+ Hajime Kita, Kyoto University, Japan
+ Kim Rose, Viewpoints Research Institute, Hewlett-Packard Company, USA
+Program Co-Chairs:
+ Benay Dara-Abrams, University of San Francisco and BrainJolt, USA
+ Rieko Kadobayashi, National Institute of Information and Communications Technology, Japan
+ Rick McGeer, Hewlett-Packard Company, USA
+Financial Chair:
+ Travis Richardson, UC Berkeley, USA
+Publicity and Publication Chair:
+ Hideyuki Takada, Kyoto University, Japan
+Program Committee Members:
+ Ruzena Bajcsy, UC Berkeley, USA
+ Michael Bischoff, University of Applied Sciences Luebeck/Oncampus, Germany
+ John Canny, UC Berkeley, USA
+ Mark Guzdial, Georgia Institute of Technology, USA
+ Masaki Hayashi, NHK, Japan
+ Shigeyuki Hirai, Kyoto Sangyo University, Japan
+ Tsuneo Jozen, Osaka Electro-Communication University, Japan
+ Yutaka Kidawara, National Institute of Information and Communications Technology, Japan
+ Shin'ichi Konomi, University of Colorado, USA
+ Julian Lombardi, University of Wisconsin, USA
+ Toshiyuki Masui, National Institute of Advanced Industrial Science and Technology, Japan
+ Maic Masuch, University of Magdeburg, Germany
+ Mark McCahill, University of Minnesota, USA
+ Maggie McPherson, University of Sheffield, UK
+ John David Miller, Intel Corporation, USA
+ Barney Pell, Mayfield, USA
+ Zhiyong Peng, Wuhan University, China
+ Ian Piumarta, Hewlett-Packard Company, USA
+ Andreas Raab, Hewlett-Packard Company, USA
+ Nathanael Schaerli, Google, Switzerland
+ Hiroshi Shigeno, Keio University, Japan
+ Yukari Shirota, Gakushu-in University, Japan
+ David A. Smith, Viewpoints Research Institute, Inc., USA
+ Kazutoshi Sumiya, University of Hyogo, Japan
+ Shin'ichi Ueshima, Kansai University, Japan
+ Eleanor Wynn, Intel Corporation, USA
+ Tsuyoshi Yamamoto, Hokkaido University, Japan
+ Ikuko Yairi, National Institute of Information and Communications Technology, Japan
+ Yoneo Yano, Tokushima University, Japan
+
+-- 
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+(COEシリコンバレー拠点滞在中, HP Labsパロアルト 客員研究員)
+
+From abee ＠ squeakland.jp  Sat Oct 29 02:06:20 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2702] Re: 国際会議 C5 締切延長の御案内
+In-Reply-To: <20051028094632.252ad45b.htakada@db.soc.i.kyoto-u.ac.jp>
+References: <20051028094632.252ad45b.htakada@db.soc.i.kyoto-u.ac.jp>
+Message-ID: <43625A8C1F2.0DB9ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+お疲れ様です。
+
+On Fri, 28 Oct 2005 09:46:32 -0700
+Hideyuki Takada <htakada@db.soc.i.kyoto-u.ac.jp> wrote:
+>以前お知らせ致しました国際会議 C5 の論文投稿締切が延長されました。
+>
+>新しい論文投稿締め切りは，Extended Abstract (4ページ以内) で 11月7日と
+>なっています。
+
+これで助かる人も多いのではないでしょうか。
+
+>参加募集等もまもなくWeb上で御案内できると思います。
+>
+>http://www.db.soc.i.kyoto-u.ac.jp/c5-06/
+
+ところで、今回はポスターやデモのように論文を必要としないセッションは予定
+されているのでしょうか。もしあるのならぜひ出してみたいと思います。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Sat Oct 29 03:08:51 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2703] Re: 国際会議 C5 締切延長の御案内
+In-Reply-To: <43625A8C1F2.0DB9ABEE@smtp.nifty.com>
+References: <20051028094632.252ad45b.htakada@db.soc.i.kyoto-u.ac.jp>
+	<43625A8C1F2.0DB9ABEE@smtp.nifty.com>
+Message-ID: <20051028110851.6c86db88.htakada@db.soc.i.kyoto-u.ac.jp>
+
+京大の高田です。
+
+Date: Sat, 29 Oct 2005 02:06:20 +0900
+From: Kazuhiro ABE <abee@squeakland.jp>
+
+> ところで、今回はポスターやデモのように論文を必要としないセッションは予定
+> されているのでしょうか。もしあるのならぜひ出してみたいと思います。
+
+今のところ固まった話としては存在していないのですが，ぜひ実現する方向で検
+討したいとは思っています。
+
+あと，サンフランシスコの Exploratorium にはぜひ行ってみたいですよね? 今
+のところは，チラシを配る，というくらいの話にしかなっていないのですが，
+Exploratorium がグループ向けの企画も提供しているようですので，有志で企画
+する，という方法もあるなという気もしています。
+
+あまり情報がなくて申し訳ありませんが，今後具体化していくと思いますので，
+よろしくお願い致します。
+
+-- 
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+(COEシリコンバレー拠点滞在中, HP Labsパロアルト 客員研究員)
+
+From shortsleeved ＠ mac.com  Sat Oct 29 11:26:50 2005
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2704] 日本語入力パッチつくりました(Re: MacOSX版VMビルド手順について)
+In-Reply-To: <73039699-6274-45BF-9D7C-190CC4C25EAD@st.rim.or.jp>
+References: <73039699-6274-45BF-9D7C-190CC4C25EAD@st.rim.or.jp>
+Message-ID: <790AF5B4-8B10-4A1C-AC7F-1FACBDF46A88@mac.com>
+
+こんにちは、shortsleevedです。
+
+On 2005/10/26, at 9:55, Tetsuya HAYASHI wrote:
+
+> なお、最新VMの日本語入力に問題が起きてる訳ですが、出来れ 
+> ば日本語版Squeakがバージョンアップする（本家ではすでに 
+> バージョンアップしてるので近々あるのでは…）前にどうにかする必 
+> 要を感じてます。
+
+Scrapbookのスレや、昨日のパーティで林さんとお話しした結果をふま 
+え、パッチを作成しました。
+添付のcsファイルをファイルインすることで、3.8.7Beta2 
+以降のMac VMでも日本語入力が可能になります。
+後方互換性も持たせてありますので、3.8.6でも動作しますが、 
+ベータバージョン番号まではチェックしていないので、 
+3.8.7Beta1では日本語入力ができません。
+動作確認していただいて、不具合等がありましたら、報告していただけ 
+るとありがたいです。＞ Macな皆様。
+
+＞林さん、
+昨日、thirdとsixthの両方を見なければいけないと言った 
+のは、完全に私の思い違いでした。ボケをかましてすみませんでした。
+
+以上、よろしくお願いします。
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: MacUnicodeInputInterpreter.1.cs.zip
+型:         application/zip
+サイズ:     1328 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20051029/3b5cc78f/MacUnicodeInputInterpreter.1.cs.zip
+-------------- next part --------------
+
+From shortsleeved ＠ mac.com  Sat Oct 29 12:16:46 2005
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2705] Re: 日本語入力パッチつくりました(Re: MacOSX版VMビルド手順について)
+In-Reply-To: <790AF5B4-8B10-4A1C-AC7F-1FACBDF46A88@mac.com>
+References: <73039699-6274-45BF-9D7C-190CC4C25EAD@st.rim.or.jp>
+	<790AF5B4-8B10-4A1C-AC7F-1FACBDF46A88@mac.com>
+Message-ID: <F21AA585-36F2-4D53-9E79-A9CEC5297EFC@mac.com>
+
+すみません。補足です。
+
+On 2005/10/29, at 11:26, shortsleeved wrote:
+
+> 添付のcsファイルをファイルインすることで、 
+> 3.8.7Beta2以降のMac VMでも日本語入力が可能になります。
+>
+
+ファイルインした直後に、一旦、メニューから「保存して終了」してく 
+ださい。
+
+
+From tetha ＠ st.rim.or.jp  Sat Oct 29 16:10:46 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2706] Re: 日本語入力パッチつくりました(Re: MacOSX版VMビルド手順について)
+In-Reply-To: <790AF5B4-8B10-4A1C-AC7F-1FACBDF46A88@mac.com>
+References: <73039699-6274-45BF-9D7C-190CC4C25EAD@st.rim.or.jp>
+	<790AF5B4-8B10-4A1C-AC7F-1FACBDF46A88@mac.com>
+Message-ID: <3C9A0DBE-1A6F-41C6-955E-AD7B6E6FD7FA@st.rim.or.jp>
+
+shortsleedved さん、昨日はどうも。
+みなさんこんにちは、林です。
+
+さっそくの対応ありがとうございます。
+こちらでも動作確認出来ました。
+
+これでMac版も新日本語版Squeakの準備がとりあえず出来ました。
+このパッチを正式に取り込んでもらえればとメンテナの方々にお願いいたしま 
+す。
+
+贅沢を言えば、あとは…
+     ・VM の Info.plist の値を書き換えるのを手動ではなくする（インス 
+トーラでやるか、Locale.pluginを利用してVMでやるか…）
+     ・インライン入力出来るようにする
+といったところが出来ると、気持ち的に100%達成といった感じでしょうか。
+
+On 2005/10/29, at 11:26, shortsleeved wrote:
+
+> こんにちは、shortsleevedです。
+>
+> On 2005/10/26, at 9:55, Tetsuya HAYASHI wrote:
+>
+>
+>> なお、最新VMの日本語入力に問題が起きてる訳ですが、出来れば日本語版 
+>> Squeakがバージョンアップする（本家ではすでにバージョンアップしてる 
+>> ので近々あるのでは…）前にどうにかする必要を感じてます。
+>>
+>
+> Scrapbookのスレや、昨日のパーティで林さんとお話しした結果をふまえ、 
+> パッチを作成しました。
+> 添付のcsファイルをファイルインすることで、3.8.7Beta2以降のMac VMでも 
+> 日本語入力が可能になります。
+> 後方互換性も持たせてありますので、3.8.6でも動作しますが、ベータバー 
+> ジョン番号まではチェックしていないので、3.8.7Beta1では日本語入力がで 
+> きません。
+> 動作確認していただいて、不具合等がありましたら、報告していただけると 
+> ありがたいです。＞ Macな皆様。
+>
+> ＞林さん、
+> 昨日、thirdとsixthの両方を見なければいけないと言ったのは、完全に私の 
+> 思い違いでした。ボケをかましてすみませんでした。
+>
+> 以上、よろしくお願いします。
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+From "土本 (Florian) 強  Sat Oct 29 17:16:15 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2707] Squeakers' Night in 未来パーティ
+Message-ID: <20051029171259.2BB2.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。土本( Florian )です。
+
+　昨日行われた「Squeakers' Night in 未来パーティ」の写真をWebに掲載し
+ました。
+　トリミングとちょっとしたコメントをつけましたが、掲載内容等に何か問題
+がある方はご連絡ください。
+
+	http://www.cise.co.jp/~florian/Album/051028Squeak/
+
+　おおしまさんのデモを全く撮っていないことに気づいてちょっとショックを
+受けたりもしましたが(^^;)、参加者の雰囲気だけでも察していただければ。
+
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Oct 29 19:21:52 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:20 2007
+Subject: [Squeak-ja: 2708] Re: Squeakers' Night in 未来パーティ
+In-Reply-To: <20051029171259.2BB2.FLORIAN@seagreen.ocn.ne.jp>
+References: <20051029171259.2BB2.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <JO200510291921524.8529250@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+お写真ありがとうございます。昨夜は非常に盛り上がりました。
+
+例によって、当日のレポートへのリンクを受け付けております。
+http://swikis.ddo.jp/umejava/23
+
+何か感想など書いてみたという方は、手動でお手数ですが、リンクを作っていただけ
+ますと助かります。
+(Florianさんのページはすでにリンクさせていただきました)。
+
+よろしくお願い申し上げます。
+
+Sat, 29 Oct 2005 17:16:15 +0900
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+> 　こんにちは。土本( Florian )です。
+> 
+> 　昨日行われた「Squeakers' Night in 未来パーティ」の写真をWebに掲載し
+> ました。
+> 　トリミングとちょっとしたコメントをつけましたが、掲載内容等に何か問題
+> がある方はご連絡ください。
+> 
+>   http://www.cise.co.jp/~florian/Album/051028Squeak/
+> 
+> 　おおしまさんのデモを全く撮っていないことに気づいてちょっとショックを
+> 受けたりもしましたが(^^;)、参加者の雰囲気だけでも察していただければ。
+> 
+> 
+> 　では、失礼します。
+> 
+
+---
+[:masashi | ^umezawa]
+

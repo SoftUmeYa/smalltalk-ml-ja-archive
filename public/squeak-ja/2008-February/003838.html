@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3838] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203838%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjVwQmcbKEIgaW1hZ2Ug%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTVEbKEIgVk0gKE1hY09TWCBQb3dlclBDKSAbJEI1YSRgGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003835.html">
+   <LINK REL="Next"  HREF="003839.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3838] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203838%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjVwQmcbKEIgaW1hZ2Ug%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTVEbKEIgVk0gKE1hY09TWCBQb3dlclBDKSAbJEI1YSRgGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3838] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2008年 2月 17日 (日) 21:32:32 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003835.html">[Squeak-ja: 3835] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+        <LI>次の記事 <A HREF="003839.html">[Squeak-ja: 3839] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3838">[ 日付 ]</a>
+              <a href="thread.html#3838">[ スレッド ]</a>
+              <a href="subject.html#3838">[ 件名 ]</a>
+              <a href="author.html#3838">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林さん　ご無沙汰しています。
+
+うまくいったようです。ありがとうございました。
+
+昼間　出かけていたので遅くなりました。
+
+
+●最新VM Squeak-3.9-8.app(3.9a-7024 の info.plist は
+　大幅に変更されてました。
+　SqueakEncodingType も　SqueakMaxHeapSize も無し。
+　適当なところにSqueakEncodingType を追加しても変化なし。
+
+●squeak.orgの archiveには 3.8系VMがありませんでした。
+　3.8系は何らかの理由で削除されたのでしょうかね。
+
+●Googleで 3.8 VMを検索。
+　岐阜工業高等専門学校のサイトから 3.8.15b1 を発見。
+　SqueakEncodingType macintosh → UTF-8
+　SqueakMaxHeapSize 512*1024*1024 →800*1024*1024
+　で問題のimageが開くことを確認。
+　日本語ファイル名、日本語キーボード入力もＯＫ。
+
+　これが32bitクリーンかどうかは明日以降　超巨大imageを作って
+検証するつもりです。
+
+　4Gの半分の2G のメモリが扱えるだけで何年も持つはず。
+その間に64bit VMが安定してくれればしめしめです。
+
+　imageと changesの２ファイルで作業の進行記録とする私の
+怠かわな習慣を続けられそうです。
+
+　ではでは
+
+
+At 0:48 AM 08.2.17, Tetsuya HAYASHI wrote:
+&gt;<i> 高橋さん、こんばんは。
+</I>&gt;<i> 林です。
+</I>&gt;<i> 
+</I>&gt;<i> メモリの件は分からないのですが、ファイル名については 
+</I>&gt;<i> Squeak 3.8.18beta1U.app (というか最新の VM) の Info.plist の 
+</I>&gt;<i> SqueakEncodingType を macintosh から UTF-8 に変更すれば、日本語ファイル名
+</I>&gt;<i> を扱えるはずです。
+</I>&gt;<i> パス名が Unix 風なのは仕様ですね。
+</I>&gt;<i> 
+</I>&gt;<i> ご質問と外してたらすみません。
+</I>&gt;<i> 
+</I>&gt;<i> 取り急ぎ。
+</I>&gt;<i> --
+</I>&gt;<i> 
+</I>&gt;<i> On 2008/02/13, at 10:49, Kouji takahashi wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; 高橋＠池袋です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+</I>&gt;<i> &gt; VMはありますか？
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 各種データを読み込んでファイルサイズが 483.6Mになって
+</I>&gt;<i> &gt; しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+</I>&gt;<i> &gt; 予定です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --------
+</I>&gt;<i> &gt; 　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+</I>&gt;<i> &gt; ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+</I>&gt;<i> &gt; 変更して使っています。問題は一応解決しているのですが
+</I>&gt;<i> &gt; このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+</I>&gt;<i> &gt; John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+</I>&gt;<i> &gt; 32bitクリーンと記載されています。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 　正常起動しなくなった時の症状は
+</I>&gt;<i> &gt; image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+</I>&gt;<i> &gt; 10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+</I>&gt;<i> &gt; 　SqueakMaxHeapSize 640 * 1024 * 1024
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --------
+</I>&gt;<i> &gt; 　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+</I>&gt;<i> &gt; defaultの状態で正常に動作するようですが、
+</I>&gt;<i> &gt; 　1.ファイルパス MacOS→ Unix への変更が必要
+</I>&gt;<i> &gt; 　2.ファイル名に日本語が使えない？
+</I>&gt;<i> &gt; などの問題があります。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --------
+</I>&gt;<i> &gt; ここで質問ですが
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 巨大日本語imageを扱うノウハウを教えて下さい。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+</I>&gt;<i> &gt; 　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+</I>&gt;<i> &gt; 　必要ならIntelMac、 OSX 10.5への変更も可能です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+</I>&gt;<i> &gt; するのは info.plistの細工程度では難しいですか？
+</I>&gt;<i> &gt; 　ファイル名の記載。日本語対応
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; その他アイデア・ヒントがあれば教えて下さい。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; よろしくお願いします。
+</I>&gt;<i> &gt;
+</I>
+
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003835.html">[Squeak-ja: 3835] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+	<LI>次の記事 <A HREF="003839.html">[Squeak-ja: 3839] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3838">[ 日付 ]</a>
+              <a href="thread.html#3838">[ スレッド ]</a>
+              <a href="subject.html#3838">[ 件名 ]</a>
+              <a href="author.html#3838">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

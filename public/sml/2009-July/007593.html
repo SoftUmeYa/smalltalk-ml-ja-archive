@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7593] Re: 第9回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207593%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCORskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A4C5634.8080000%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007590.html">
+   <LINK REL="Next"  HREF="007594.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7593] Re: 第9回Smalltalk勉強会＠京都</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207593%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCORskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A4C5634.8080000%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7593] Re: 第9回Smalltalk勉強会＠京都">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 7月  3日 (金) 23:39:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007590.html">[SML 7590] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007594.html">[SML 7594] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7593">[ 日付 ]</a>
+              <a href="thread.html#7593">[ スレッド ]</a>
+              <a href="subject.html#7593">[ 件名 ]</a>
+              <a href="author.html#7593">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+
+2009/07/02 15:39 AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;:
+
+&gt;<i> 青木＠京都上賀茂です。
+</I>
+＜中略＞
+
+&gt;<i>
+</I>&gt;<i> 実行算法（アルゴリズム）と実行環境（コンテクスト）の双方を閉
+</I>&gt;<i> 包するブロッククロージャは、様々な常識的な定義の再考察を迫っ
+</I>&gt;<i> てきます。たとえば、一時変数の説明の言い回しも考え直さねばな
+</I>&gt;<i> らんなぁ〜、とね。
+</I>&gt;<i>
+</I>
+もうひとつ「一時変数と言って良いのか？」と考えることになる例を書いて
+みました。
+
+まずは下準備で、ワークスペースで以下のプログラムを実行して下さい。
+３つのワークスペース変数を用意します。
+
+|<i> aWorkbook |
+</I>aWorkbook := ScheduledControllers activeController model.
+aWorkbook addLocal: #ResetBlock.
+aWorkbook addLocal: #IncrementBlock.
+aWorkbook addLocal: #DecrementBlock
+
+
+次に、同じワークスペースで以下のプログラムを実行して下さい。
+３つのブロッククロージャを作って先ほど用意したワークスペース変数に
+束縛します。
+
+|<i> x |
+</I>ResetBlock :=
+[x := 0.
+Transcript show: x printString].
+
+IncrementBlock :=
+[x := x + 1.
+Transcript space; show: x printString].
+
+DecrementBlock :=
+[x := x - 1.
+Transcript space; show: x printString]
+
+
+次に、また同じワークスペースで以下のプログラムを実行して下さい。
+三歩進んで二歩下がる数の列をトランスクリプトに表示するプログラムですが、
+一時変数 x に関し、このプログラムで用意した物と、ブロッククロージャの中で
+使われている物は、全く縁が切れているのがお分かり頂けると思います。
+
+|<i> x |
+</I>Transcript clear.
+ResetBlock value.
+x := 100.
+2 timesRepeat: [
+3 timesRepeat: [IncrementBlock value].
+2 timesRepeat: [DecrementBlock value]].
+Transcript cr; show: x printString.
+2 timesRepeat: [
+3 timesRepeat: [IncrementBlock value].
+2 timesRepeat: [DecrementBlock value]]
+
+
+最後に、同じワークスペースで以下のプログラムを実行して下さい。
+後始末をします。
+
+|<i> aWorkbook anEnvironment |
+</I>aWorkbook := ScheduledControllers activeController model.
+anEnvironment := aWorkbook doItEnvironment.
+#(#ResetBlock #IncrementBlock #DecrementBlock)
+do: [:each | anEnvironment removeKey: each].
+Transcript clear
+
+以上です。
+
+------------
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20090703/8547f33b/attachment.html">http://www.smalltalk.jp/pipermail/sml/attachments/20090703/8547f33b/attachment.html</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007590.html">[SML 7590] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007594.html">[SML 7594] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7593">[ 日付 ]</a>
+              <a href="thread.html#7593">[ スレッド ]</a>
+              <a href="subject.html#7593">[ 件名 ]</a>
+              <a href="author.html#7593">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

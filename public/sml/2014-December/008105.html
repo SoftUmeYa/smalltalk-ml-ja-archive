@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8105]	Smalltalk による電子カルテ作成
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208105%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FU21hbGx0YWxrIBskQiRLJGgka0VFO1IlKyVrJUY6bkAuGyhC%3F%3D&In-Reply-To=%3Cop.xqeggbvtecpj0a%40amy.flets-east.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008104.html">
+   <LINK REL="Next"  HREF="008106.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8105]	Smalltalk による電子カルテ作成</H1>
+    <B>Narita Takaoki</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208105%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FU21hbGx0YWxrIBskQiRLJGgka0VFO1IlKyVrJUY6bkAuGyhC%3F%3D&In-Reply-To=%3Cop.xqeggbvtecpj0a%40amy.flets-east.jp%3E"
+       TITLE="[SML 8105]	Smalltalk による電子カルテ作成">narita_takaoki ＠ hb.tp1.jp
+       </A><BR>
+    <I>2014年 12月  5日 (金) 23:42:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008104.html">[SML 8104] Re: はじめまして
+</A></li>
+        <LI>次の記事 <A HREF="008106.html">[SML 8106] Re: Smalltalk による電子カルテ作成
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8105">[ 日付 ]</a>
+              <a href="thread.html#8105">[ スレッド ]</a>
+              <a href="subject.html#8105">[ 件名 ]</a>
+              <a href="author.html#8105">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>成田です。件名変えました。
+
+以下ちょっと長め・・・一種のこれも問診か・・・
+
+On Fri, 05 Dec 2014 08:44:33 +0900, Squeak &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">squeak ＠ cheshireneko.com</A>&gt; wrote:
+
+&gt;<i> カルテは、ORCAとの接続を考えております。
+</I>&gt;<i> 現在は、BML（検査会社でもあります）のMedicalStationを使用しています。
+</I>&gt;<i> 多くのカルテがレセコンから、開発されていますので、仕方がないのですが、
+</I>&gt;<i> 検査や処方の欄が、レセプトを直接操作しているイメージです。
+</I>
+ORCA は、
+
+・医療情報（医薬情報、併用情報など）を利用した事故予防
+・医療連携の IT 系インフラ構築
+・診療報酬管理の（業務労力含め）低コスト化
+
+を目しているように思えますが、この理解でよろしいでしょうか。
+
+要するに IT 利用により本来診療業務へ注力できるようにするこ
+とを主眼とし、かつ自働化可能な範囲での医療事故予防機能や医
+療連携を容易にするシステムの提供が目的なのかと思えたのです
+が。
+
+クライアントが日本医師会なんて組織ですから、最大公約数的に
+なるか最小公倍数的になるかの極端になるのかも。いずれにせよ
+最低限のこと（レセプト管理）が絶対できないといけなくて、そ
+の実現方法のより良いやり方（何ができて、どういうインターフ
+ェースによっているか）は人によって異なるので最大公約数的に
+対応したらレセプト直接操作になっちゃったという感じなのかも。
+（笑）
+
+まあぶっちゃけ、しぼんだ要求の結果な気がする・・・
+
+クライアントが「そうだよ！これが欲しかったんだ」と膝を叩く
+ような、センス・オブ・ワンダーな仕様には到達してはいないっ
+て事でしょうね。
+
+&gt;<i> OpenDolphinもダウンロードして、試用したことがあります。
+</I>&gt;<i> 純医療カルテですが、紙カルテを引きずっていると感じました。
+</I>&gt;<i>
+</I>&gt;<i> 多くの電子カルテが、紙カルテの2号用紙（左に診断、右に治療と2つに縦に分割されています）を
+</I>&gt;<i> 引きずっております。
+</I>
+ご指摘にありますが、OpenDolphin も2号カルテの電子化が当初目
+標だったようですから、そうならざる得ないかと。
+
+&gt;<i> 医療面接（いわゆる問診）の構造化がされておりません。
+</I>&gt;<i> パネルでの入力方式をとっているカルテもありますが、本質ではないと感じております。
+</I>&gt;<i>
+</I>&gt;<i> 多彩な患者さんの主訴、病歴等を、医療用語を使った言語に置き換えていく場が、2号用紙の左側の診断なのです。
+</I>&gt;<i>
+</I>&gt;<i> 電子カルテを使ってから、ますます医師が顔を合わせてくれないと患者さんが嘆いておりますが、
+</I>&gt;<i> 医師は2号用紙というワープロと戦っているのです（笑）。
+</I>
+うちの両親も後期高齢者のご多分にもれず定期的に通院していま
+すが、父の主治医がそんな感じだそうです。
+
+ディスプレイからほとんど目を離さないとか。言ってはなんです
+が、話しを聞いた感じでは医師というよりはシステムに操られて
+いる人型端末というか・・・
+
+素人の見解でも触診など必要そうな病気なのですがほとんどしな
+いそうで、それも込みで父はすごい嫌がっていますね。まあ血液
+検査の方が重要ではあるのでしょうけれど。
+
+この部分の目標は、構造化面接の記録とその際の記録作業が面接
+（問診）自体を妨げないこととかになるんでしょうかね？
+
+;; なんか構造じゃなくて仕様の部分に踏み込んでる気が・・
+
+まあユーザインタフェースというかフロントエンドというか、そ
+ういう部分をさっと仕上げるのは Smalltalk は大得意とすると
+ころですし、今ならいろんなデータ形態も容易に扱えるようにな
+ってますから、Smalltalk に着眼したのが良い一歩となればと思
+いますが。
+
+で整理しますと、最終的なバックエンドとして ORCA との連携が
+可能な、適当な仕様の電子医療カルテのフロントエンドを
+Smalltalk で作れればということでしょうか。
+
+実際のところフロントエンドというよりは主体はこちらで、ORCA
+は下請けのサブシステム扱いになるでしょうけれど。
+
+;;; 歯医者さんの電子カルテシステムを見てから電子カルテに
+;;; 興味がわいて、ちょっとサーベイした程度なので間違いだら
+;;; けかもしれませんが。
+
+メタな構造としては、Smalltalk が実現に関与したシステムでも
+よく見る型でしょうか。
+
+-- 
+Narita Takaoki @ Owmya.com
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008104.html">[SML 8104] Re: はじめまして
+</A></li>
+	<LI>次の記事 <A HREF="008106.html">[SML 8106] Re: Smalltalk による電子カルテ作成
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8105">[ 日付 ]</a>
+              <a href="thread.html#8105">[ スレッド ]</a>
+              <a href="subject.html#8105">[ 件名 ]</a>
+              <a href="author.html#8105">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3255] Re: 多角形モーフの頂点をいじるタイル
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203255%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkI/M1E3QSViITwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUkTkQ6RUAkciQkJDgkayU/JSQlaxsoQg%3D%3D%3F%3D&In-Reply-To=1F9E1739-A86A-4F1E-99E5-F9D6C47CC1E6%40st.rim.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003254.html">
+   <LINK REL="Next"  HREF="003261.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3255] Re: 多角形モーフの頂点をいじるタイル</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203255%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkI/M1E3QSViITwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUkTkQ6RUAkciQkJDgkayU/JSQlaxsoQg%3D%3D%3F%3D&In-Reply-To=1F9E1739-A86A-4F1E-99E5-F9D6C47CC1E6%40st.rim.or.jp"
+       TITLE="[Squeak-ja: 3255] Re: 多角形モーフの頂点をいじるタイル">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2006年 12月  4日 (月) 23:19:02 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003254.html">[Squeak-ja: 3254] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+        <LI>次の記事 <A HREF="003261.html">[Squeak-ja: 3261] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3255">[ 日付 ]</a>
+              <a href="thread.html#3255">[ スレッド ]</a>
+              <a href="subject.html#3255">[ 件名 ]</a>
+              <a href="author.html#3255">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+和歌山に行っていて反応が遅れました。
+
+On Sat, 2 Dec 2006 00:32:11 +0900
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt; wrote:
+&gt;<i>多角形モーフに、各頂点の座標をいじるためのタイルを追加してみました。
+</I>&gt;<i>考え方としては、「入れ物」のカーソルと同じような「頂点カーソル」というも
+</I>&gt;<i>のを追加して、各頂点ごとの X, Y 座標を操作できるようにしたものです。
+</I>&gt;<i>ちょっと触ってみての感想などありましたら、よろしくお願いします。
+</I>
+これは素晴らしいですね。
+これを使った例を三つほど作ってみましたのでご覧ください。どれも基本は同じ
+で、ちょっと違うだけです。いずれにも林さんのチェンジセットが含まれていま
+す。
+
+正多角形を作る
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/2aa1d0e7-fc14-4b5f-b6ad-65c89cf92edc">http://squeakland.jp/seaside/SBSuperSwiki/2aa1d0e7-fc14-4b5f-b6ad-65c89cf92edc</A>
+
+車で正多角形を作る
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/70e882f0-6f81-4834-b127-b2f622adf61b">http://squeakland.jp/seaside/SBSuperSwiki/70e882f0-6f81-4834-b127-b2f622adf61b</A>
+
+車で正多角形を作る(極座標版)
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/4db3f836-8f04-4287-bfc4-e51965c4b376">http://squeakland.jp/seaside/SBSuperSwiki/4db3f836-8f04-4287-bfc4-e51965c4b376</A>
+
+その過程で気付いたことですが、存在しない頂点にカーソルを合わせて、削除し
+ようとするとエラーになりますね。これはハンドリングして吸収したほうが良い
+かもしれません。また、「頂点を一つだけにする」というコマンドがあると便利
+かもしれません。他の集合には「すべてを削除」というのがありますが、それに
+相当するものです。
+
+On Sun, 3 Dec 2006 23:15:27 +0900
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt; wrote:
+&gt;<i>標準でこれまで無かったことについては、何か深い理由があるのではないか？
+</I>&gt;<i>などという疑問が脳裏をよぎってたりします。
+</I>
+たぶんそれはないのではないでしょうか。eToysには大変よく考えて作られている
+部分もありますが、そうでないところも多いような気がします。
+
+&gt;<i>EToysにとってあまり本質的でない／冗長ということなのかな、とか。
+</I>&gt;<i>（ちょっと複雑といえば複雑ですし。
+</I>&gt;<i>基本モーフの組み合わせで多くのことができてしまいますし）
+</I>
+個人的には、集合はすべて同じ振る舞いをして欲しいです。その意味でむしろ林
+さんの拡張を他にも適用すべきと思います。世界聴診器のRGB設定とかも同じです
+ね。
+
+&gt;<i>そういえば、TWeak では、こんな感じになるという話があったような無かったよ
+</I>&gt;<i>うな、記憶が曖昧です。少なくとも頂点カーソルのアイデアは、以前、TWeak に
+</I>&gt;<i>ついての話があった時に阿部さんからいただいたものです。
+</I>
+私は言うだけなので。2003年に「船と錨」を作ったときに初めておかしいと思っ
+たのですが、そのときはSmalltalkで書いてしまってよしとしていました。
+
+<A HREF="http://swikis.ddo.jp/abee/14">http://swikis.ddo.jp/abee/14</A>
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003254.html">[Squeak-ja: 3254] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+	<LI>次の記事 <A HREF="003261.html">[Squeak-ja: 3261] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3255">[ 日付 ]</a>
+              <a href="thread.html#3255">[ スレッド ]</a>
+              <a href="subject.html#3255">[ 件名 ]</a>
+              <a href="author.html#3255">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

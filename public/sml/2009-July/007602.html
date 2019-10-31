@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7602] Re: クロージャ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207602%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUvJW0hPCU4JWMbKEI%3D%3F%3D&In-Reply-To=e957e4bc0907041439n4d010c00oaa7291a14214cf83%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007605.html">
+   <LINK REL="Next"  HREF="007603.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7602] Re: クロージャ</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207602%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUvJW0hPCU4JWMbKEI%3D%3F%3D&In-Reply-To=e957e4bc0907041439n4d010c00oaa7291a14214cf83%40mail.gmail.com"
+       TITLE="[SML 7602] Re: クロージャ">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 7月  5日 (日) 16:24:24 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007605.html">[SML 7605] Re: クロージャ
+</A></li>
+        <LI>次の記事 <A HREF="007603.html">[SML 7603] Re: クロージャ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7602">[ 日付 ]</a>
+              <a href="thread.html#7602">[ スレッド ]</a>
+              <a href="subject.html#7602">[ 件名 ]</a>
+              <a href="author.html#7602">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+2009/07/05 6:39 Hiroshi Umeoka &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">umrlazybind ＠ gmail.com</A>&gt;:
+
+&gt;<i> おはようございます、梅岡です。
+</I>
+＜中略＞
+
+&gt;<i>
+</I>&gt;<i> amount
+</I>&gt;<i> がインスタンス変数のように機能しますね。まるでブロックがオブジェクトのように振る舞っています。クロージャって面白いっ、と単純に思いました。
+</I>
+
+梅岡さんの提示された例題を見て、ふと「こんなこと出来るかなあ」と思いついて
+やってみたら上手く動いたので、ご紹介します。
+
+-------------- ここから -----------------
+
+|<i> accountCreater anAccount newBlockCreater newBlock method |
+</I>accountCreater :=
+[:initialBalance |
+|<i> balance |
+</I>balance := initialBalance.
+(Dictionary new)
+at: #withdraw
+put:
+[:amount |
+balance := balance - amount.
+balance yourself];
+at: #deposit
+put:
+[ :amount |
+balance := balance + amount.
+balance yourself];
+at: #balance
+put:
+[balance yourself];
+yourself].
+
+anAccount := accountCreater value: 1000.
+Transcript clear.
+Transcript cr; show: (anAccount at: #balance) value printString.
+Transcript cr; show: ((anAccount at: #withdraw) value: 500) printString.
+Transcript cr; show: ((anAccount at: #deposit) value: 300) printString.
+
+newBlockCreater :=
+[| balance |
+[balance := 0.
+balance yourself]
+yourself].
+
+newBlock := newBlockCreater value.
+method := newBlock method.
+newBlock
+setMethod: method
+outerContext: (anAccount at: #balance) outerContext
+copiedValues: (anAccount at: #balance) copiedValues.
+anAccount at: #reset put: newBlock.
+
+Transcript cr; show: (anAccount at: #reset) value printString.
+^anAccount
+
+-------------- ここまで -----------------
+
+以前のSmalltalk勉強会＠京都で、「クラスがメソッドを保持しているのは、
+メモリの節約のためで」なんていうお話がありましたが、このプログラムでは
+オブジェクト自身がメソッドを持っていて、さらにオブジェクトを生成した後に
+メソッドを追加しています。がんばって書けば、インスタンス変数（？）を追加
+することも恐らく可能だと思います。
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20090705/0ef71b45/attachment.htm">http://www.smalltalk.jp/pipermail/sml/attachments/20090705/0ef71b45/attachment.htm</A>
+</PRE>
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007605.html">[SML 7605] Re: クロージャ
+</A></li>
+	<LI>次の記事 <A HREF="007603.html">[SML 7603] Re: クロージャ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7602">[ 日付 ]</a>
+              <a href="thread.html#7602">[ スレッド ]</a>
+              <a href="subject.html#7602">[ 件名 ]</a>
+              <a href="author.html#7602">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

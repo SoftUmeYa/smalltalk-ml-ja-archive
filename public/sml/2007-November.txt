@@ -1,0 +1,81 @@
+From nisinaka ＠ sra.co.jp  Thu Nov 15 18:20:06 2007
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Thu Nov 29 11:41:08 2007
+Subject: [SML 7339] [ANNOUNCE] Jun for Java (Jun695)
+Message-ID: <20071115181747.72A1.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン695を公開します。
+
+  バージョン683からの主な変更点は、以下の通りです。
+
+    * (new feature) JunSraGifImageStreamは、GIF画像を書き出すため
+      のストリームクラスです。
+
+    * (new feature) JunGifAnimationStreamは、GIFアニメーションを
+      読み書きするためのストリームクラスです。
+
+    * (new feature) JunImagesToGifAnimationは、複数の画像群をGIF
+      アニメーションに変換するユーティリティクラスです。
+
+    * (modification) JunCartoonMovieをJun697相当に更新しました。
+        - GIFアニメーションを開いたり、保存したりできます。
+        - 再生に、Timerを使うように修正しました。
+        - ビュー側で画像をキャッシュし、表示速度を改善しました。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Mobius2-1.png
+
+    * (modification) JunOpenGL3dModelとJunOpenGLDisplayModelを
+      Jun696相当に更新しました。
+        - 表示領域のみのビューを作ることができるようになりました。
+        - モデルに対して、回転のベクトルを指定できるようにしまし
+          た。
+        - 射影情報のコピー・貼り付けができるようになりました。
+
+    * (modification) JunOpenGLDisplayControllerをJun696相当に更新
+      しました。
+        - JunOpenGLDisplayModelの 'noControl' の設定が有効になり
+          ます。
+        - 回転に、Timerを使うように修正しました。
+
+    * (modification) Jun2dTrianlgeとJun3dTriangle、JunNurbsCurve
+      をJun692相当に更新しました。線分の配列に変換するメソッドが
+      実装されています。
+
+    * (bug fix) JunProgressにおいて、ダイアログを閉じる際に
+      dispose()を呼ぶと、デッドロックの起こる場合がありました。
+
+    * (bug fix) JunControlUtility#WaitUntilTimeMillis_(long)が、
+      指定した時刻より前に実行を終了する場合がありました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+From aoki ＠ sra.co.jp  Thu Nov 29 14:25:20 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Thu Nov 29 15:10:49 2007
+Subject: [SML 7340] 【Jun756】と【Jpl023】
+Message-ID: <474E4D40.2090700@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+新しい【Jun756】と VisualWorks7.5 に最適化させた【Jpl023】を
+アップロードしました。
+
+http://www.sra.co.jp/people/aoki/Jun/
+http://www.sra.co.jp/people/aoki/Jpl/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/

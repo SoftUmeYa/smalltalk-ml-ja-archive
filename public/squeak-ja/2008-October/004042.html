@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4042] Mac 版2005J3パッケージについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204042%5D%20%3D%3Fiso-2022-jp%3Fb%3FTWFjIBskQkhHGyhCMjAwNUoz%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyUxITwlOCRLJEQkJCRGGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004039.html">
+   <LINK REL="Next"  HREF="004043.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4042] Mac 版2005J3パッケージについて</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204042%5D%20%3D%3Fiso-2022-jp%3Fb%3FTWFjIBskQkhHGyhCMjAwNUoz%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyUxITwlOCRLJEQkJCRGGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 4042] Mac 版2005J3パッケージについて">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2008年 10月 26日 (日) 03:36:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004039.html">[Squeak-ja: 4039] 第１回Squeakデザインワークショップの報告
+</A></li>
+        <LI>次の記事 <A HREF="004043.html">[Squeak-ja: 4043] Fwd: Mac 版2005J3パッケージについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4042">[ 日付 ]</a>
+              <a href="thread.html#4042">[ スレッド ]</a>
+              <a href="subject.html#4042">[ 件名 ]</a>
+              <a href="author.html#4042">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>みなさん、こんにちは
+林徹也です。ご無沙汰しております。
+
+Mac 版のインストーラについて、一年あまり放置状態になってしま 
+いすみません。
+理由は、xcode （というかパッケージを作成する  
+PackageMaker）の不具合と私の
+マシンの OS のバージョンアップで手間取ってしまったためです。
+（気づいたら一年 ^^;;）
+
+ようやくなんとか標準インストーラ形式でパッケージが出来ました。
+そこで、今回はちょっと実験台になってもいい。という方向けのお 
+願いです。
+
+あらためて最新の PackageMaker でパッケージをし直したも 
+のを以下のURLに置き
+ました。
+
+<A HREF="http://squeakland.jp/plugin/installers/SqueakPlugin2005J3-081026.dmg">http://squeakland.jp/plugin/installers/SqueakPlugin2005J3-081026.dmg</A>
+
+　よろしければ、どなたかインストールが正常に行なわれるか確認 
+テストをお願
+いできますでしょうか？
+ただし、対象 OS は、
+	Mac OS X 10.3 以降をお使いの方
+となります。それより前のバージョン(10.2)はこのパッケー 
+ジの対象外となります。
+
+これで旨くいけば正式版としてリンクしなおします。
+
+なお、実行する前に念のため My Squeak の内容をコピーして 
+おいてください。
+フォルダを開いて中身を全部選択して別なフォルダにコピーする。
+もしくは、以下のフォルダ全体をどこかにコピーしておいてください。
+（おそらく消してしまうことはないと思いますが、念のための措置 
+です。）
+
+$(HOME)/Library/Preferences/Squeak/Internet/My\ Squeak
+
+一方で、アプリケーションフォルダの中の Squeakland フォ 
+ルダについては必ず
+削除しますので、こちらもバックアップしておいた方がいいかもし 
+れません。
+
+※具体的には、このインストーラでは、以下の2つのシェルス 
+クリプトを実行します。
+これで詳細な動きが分かるはずです。
+
+<A HREF="http://squeakland.jp/plugin/installers/preflight-app.txt">http://squeakland.jp/plugin/installers/preflight-app.txt</A>
+<A HREF="http://squeakland.jp/plugin/installers/preflight-plugin.txt">http://squeakland.jp/plugin/installers/preflight-plugin.txt</A>
+
+以上、よろしくお願い申し上げます。
+
+--
+林 徹也 Tetsuya HAYASHI
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004039.html">[Squeak-ja: 4039] 第１回Squeakデザインワークショップの報告
+</A></li>
+	<LI>次の記事 <A HREF="004043.html">[Squeak-ja: 4043] Fwd: Mac 版2005J3パッケージについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4042">[ 日付 ]</a>
+              <a href="thread.html#4042">[ スレッド ]</a>
+              <a href="subject.html#4042">[ 件名 ]</a>
+              <a href="author.html#4042">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,326 @@
+From serge.stinckwich ＠ gmail.com  Wed Mar  1 21:55:12 2017
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 1 Mar 2017 13:55:12 +0100
+Subject: [SML 8163] Google Summer of Code 2017: Call for mentors for Pharo
+ Consortium Pharo project
+Message-ID: <CAOysuxVGR6dfafuYOMatdjNwtrjrDpmQppaczxMdA_7+2+jSog@mail.gmail.com>
+
+Heartiest Congratulations !
+
+Pharo Consortium has been selected as a mentor organisation for Google
+Summer of Code 2017.
+
+Google Summer of Code is a global program focused on introducing
+students to open source software development.
+
+Students work on a 3 month programming project with an open source
+organisation during their break from university. Read more at
+https://summerofcode.withgoogle.com/
+
+How the program works ?
+
+Organizations:
+Open source projects apply to be mentor organizations. Once accepted,
+organizations discuss possible ideas with students and then decide on
+the proposals they wish to mentor for the summer. They provide mentors
+to help guide each student through the program.
+
+Mentors:
+Existing contributors with the organizations can choose to mentor a
+student project. Mentors and students work together to determine
+appropriate milestones and requirements for the summer. Mentor
+interaction is a vital part of the program. A mentor may propose or
+endorse a project  and each project has to be about Pharo or its
+ecosystem (e.g., a library). Projects will be mentored by one or more
+mentors and executed by one student.
+
+Students:
+Students contact the mentor organizations they want to work with and
+write up a project proposal for the summer. If accepted, students
+spend a month integrating with their organizations prior to the start
+of coding. Students then have three months to code, meeting the
+deadlines agreed upon with their mentors. Student coding period: May
+30 - Aug 29 (Entire timeline can be viewed at:
+https://summerofcode.withgoogle.com/how-it-works/#timeline). Student
+stipend: https://developers.google.com/open-source/gsoc/help/student-stipends
+
+We are currently at the phase of identifying mentors and projects. The
+next phases will be about students selecting projects, and the
+community selecting the projects with their associated mentors and
+students which will be sponsored by the GSOC program.
+
+How to register ?
+Simply by replying to this email and joining the Slack channel... to
+have more discussion about what project the mentor will take up, what
+she/he wants at the end of the coding period and then we can invite
+them to the GSoC org dashboard).
+
+Hence, we invite regular & enthusiastic Pharo contributors to be a
+mentor with Pharo Consortium for GSoC 2017:
+
+1. Kindly respond on this thread if you'd like to be a mentor, or wish
+to propose a project.
+
+An existing list of projects is already available here:
+http://gsoc.pharo.org/ and we already have a handful of projects and
+mentors chosen. Feel free to collaborate with existing mentors as
+well.
+
+2. Join dedicated channels, #gsoc-students for general interactions
+with students & #gsoc-planning channel only for GSOC admins and
+mentors on Pharo slack. In order to get an invitation for
+pharoproject.slack.com visit the URL here:
+http://slackinvites.pharo.org/
+
+3. Please open relevant issues and make a roadmap of the projects
+being mentored by you so that students can start contributing to them
+already. If you want to mentor a project and there is no open-source
+repository at the moment, please built one ASAP.
+
+4. If you know any students that might be interested to work on Pharo
+during the summer and be a part of GSoC as well, please ask him/her to
+start contributing to the Pharo projects, discuss their proposal,
+follow instructions that shall be posted soon in this mailing thread
+and submit their application by April 3, 2017.
+We don't know the number of slots attributed by Google to Pharo org,
+but the more students proposal we will receive, the more slots will be
+attributed to us.
+
+We remind you about the mentor responsibilities:
+
+... to your Org Admins
+
+- Communicate availability and interaction expectations
+- Inform when mentoring capacity will be reduced, as early as possible
+(e.g., family, health, vacation)
+- Inform when there is an issue with a student
+   - Lacking communication, activity, visibility (MIA), or progress
+   - Participant Agreement violations (e.g., plagiarism, harassment, fraud)
+   - Bad fit or stepping down
+- Formally evaluate student participation.
+   - Communicate with admin and student before failing
+
+... to your Students
+
+- Help and/or teach the student
+   - how to be a part of your community
+   - communicate more effectively and in the open
+   - work with your org’s preferred communication channel (IRC, Slack, etc)
+   - use your org’s version control system
+   - ask good questions and get answers to their questions
+   - provide convincing technical argument and constructive discussion
+   - be independently motivated and productive
+   - solve difficult technical problems
+- Keep track of their progress, keep student informed as to their status
+- Communicate on a regular basis, once a week or better (for GSoC)
+   - Give constructive feedback, be patient, and be respectful
+   - Respond to questions within 24 hours (occasionally under 36 hours is ok)
+- Establish realistic work objectives and timeline expectations
+- Re-evaluate scope with student when significantly ahead of or behind
+expectations
+- Work with devs and community to facilitate acceptance of student work
+
+Read more about responsibilities here:
+https://developers.google.com/open-source/gsoc/help/responsibilities
+
+Looking forward to a great guided summer by the talented mentors of
+our organisation.
+
+Warm Regards
+Pharo Organisation Admins
+(Alexandre Bergel, Jigyasa Grover, Serge Stinckwich & Yuriy Tymchuk)
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+
+From ume ＠ softumeya.com  Sun Mar 19 01:11:11 2017
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 19 Mar 2017 01:11:11 +0900
+Subject: [SML 8164]
+	第98回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTeh7Ltd=VW9pKZM=mxtboVL9jLnkhFfHmzabYXM=TEaQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai98kaismalltalkbenkyoukai
+
+日時: 2017/3/31(金) 19:00-21:00
+場所:  SORABITO株式会社
+
+今回は久しぶりにSORABITO CTOの吉田さんの登壇です。
+
+「今時なウェブ開発をSmalltalkでやってみる」
+---
+「Smalltalkってまだ生きているの？」とそんな悲しいことを質問されたりするので、Pharo
+Smalltalkで今時なウェブ開発をする方法について話します。ESUG 2015で入賞したPharoJSやEnterprise
+Pharo本に掲載されているライブラリなどPharo
+Smalltalkでウェブ開発をする方法を話したいと思います。時間があればSeaside等の伝統的な開発方法も紹介します。
+---
+
+事前申し込みは不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From serge.stinckwich ＠ gmail.com  Sun Mar 19 18:27:23 2017
+From: serge.stinckwich ＠ gmail.com (serge.stinckwich ＠ gmail.com)
+Date: Sun, 19 Mar 2017 10:27:23 +0100
+Subject: [SML 8165] Fwd: [Esug-list] 25rd International Smalltalk Joint
+	Conference - Call for Contributions
+References: <B83CB118-219F-4AAD-A7B7-CC68C5F90198@inria.fr>
+Message-ID: <7AB53D61-3B7C-48C9-AE40-347684DC309E@gmail.com>
+
+
+
+Envoyé de mon iPhone
+
+Début du message transféré :
+
+> Expéditeur: Stéphane Ducasse <stephane.ducasse ＠ inria.fr>
+> Date: 19 mars 2017 à 08:43:49 UTC+1
+> Destinataire: ESUG Mailing list <esug-list ＠ lists.esug.org>, Pharo Development List <pharo-dev ＠ lists.pharo.org>
+> Objet: [Esug-list] 25rd International Smalltalk Joint Conference - Call for Contributions
+> 
+> 25rd International Smalltalk Joint Conference - Call for Contributions
+> 
+>          Maribor, Slovenia
+>              from 4-8 September 2017
+>              http://www.esug.org/Conferences/2017/
+> 
+>  This call includes:
+>          Developer Forum
+>          Smalltalk Technology Award
+>          International Workshop
+> 		 	http://www.esug.org/wiki/pier/Conferences/2017/International-Workshop-IWST_17
+> 		 Student Volunteer
+> 		 	http://www.esug.org/wiki/pier/Conferences/2017/Student-volunteers
+> 
+>  ----------------------------------------------------------------------
+>  You can support the ESUG conference in many different ways:
+> 
+>  * Sponsor the conference. New sponsoring packages are described at
+>         http://www.esug.org/wiki/pier/About/BecomeSponsor
+>  * Submit a talk, a software or a paper to one of the events. See below.
+>  * Attend the conference. We'd like to beat the previous record of
+>         attendance (170 people at Amsterdam 2008)!
+>  * Students can get free registration and hosting if they enrol
+>        into the the Student Volunteers program. See below.
+> 
+> 
+>  Developers Forum: International Smalltalk Developers Conference
+>  ------------------------------------------------------------------------
+> 
+>  We are looking for YOUR experience on using Smalltalk. You will have
+>  30 min for presentations and 45-60 min for hand-ons tutorial.
+> 
+>  The list of topics for the normal talks and tutorials includes, but
+>  is not limited to the following:
+>        * Micro Services, Container, Cloud, Big Data,
+>        * XP practices,  Development tools,  Experience reports
+>        * Model driven development, Web development, Team management
+>        * Meta-Modeling,  Security, New libraries & frameworks
+>        * Educational material, Embedded systems and robotics
+>        * SOA and Web services, Interaction with other programming languages
+> 
+> Teaching Pearls and Show us Your Business
+> -----------------------------------------
+> - Show your business 10 min session (Get prepared!!)
+> - Teaching pearls : we want some session on how to teach some design
+> aspects. We want your tip and tricks to teach Smalltalk or OOP.
+> 
+> We expect to have several 10 to 15 min sessions aggregated.
+> 
+> !! How to submit?
+>  --------------
+> 
+> Submissions deadline is 15 of June 2017
+> Notification of acceptance will be on done on the fly.
+> More information at http://www.esug.org/conferences/2017
+> 
+> Pay attention: the places are limited so do not wait till the last minute to apply.
+> Prospective presenters should submit a request to 
+> 	
+> 	Stephane.Ducasse at inria.fr AND damien at cassou.me 
+> 	AND USE THE following header ESUG 2017 Developers].
+> 
+> Please follow the template below the email will be automatically processed!
+> 
+>  Subject: [ESUG 2017 Developers] + your name
+>  First Name:
+>  Last Name:
+>  Email where you can always be reached:
+>  Title:
+>  Type: Tutorial/Talk/Teaching Pearl
+>  Abstract:
+>  Bio:
+> 
+> Any presentation not respecting this form will be discarded automatically
+> 
+> 
+> International Workshop on Smalltalk Technologies
+> ------------------------------------------------------------------------
+> Read the page: http://www.esug.org/wiki/pier/Conferences/2017/International-Workshop-IWST_17
+> 
+> 
+> Technology Award Competition
+> ------------------------------------------------------------------------
+>  The top 3 teams with the most innovative software will receive,
+>  respectively, 500 Euros, 300 Euros and 200 Euros during an awards
+>  ceremony at the conference. Developers of any Smalltalk-based
+>  software are welcome to compete.
+>  More information at http://www.esug.org/wiki/pier/Conferences/2017/Innovation-Technology-Awards
+> 
+> 
+>  Student Volunteer Program
+>  ------------------------------------------------------------------------
+>  If you are a student wanting to attend ESUG, have you considered
+>  being a student volunteer? Student volunteers help keep the
+>  conference running smoothly; in return, they have free
+>  accommodations, while still having most of the time to enjoy the
+>  conference.
+> 
+> Send an email to 
+> stephane.ducasse at inria.fr and serge.stinckwich at gmail.com with:
+> 
+> - title: [ESUG 2017 Student]
+> - name, gender, university/school, country, email address
+> - short description of you and why you are interested in participating
+> 
+>  More information at
+>           http://www.esug.org/wiki/pier/Conferences/2017/
+>           http://www.esug.org/wiki/pier/Conferences/2017/Student-volunteers
+> 
+>  We hope to see you there and have fun together.
+> 
+> 
+> 
+> 
+> 
+> 
+> --------------------------------------------
+> Stéphane Ducasse
+> http://stephane.ducasse.free.fr
+> http://www.synectique.eu / http://www.pharo.org 
+> 03 59 35 87 52
+> Assistant: Julie Jonas 
+> FAX 03 59 57 78 50
+> TEL 03 59 35 86 16
+> S. Ducasse - Inria
+> 40, avenue Halley, 
+> Parc Scientifique de la Haute Borne, Bât.A, Park Plaza
+> Villeneuve d'Ascq 59650
+> France
+> _______________________________________________
+> Esug-list mailing list
+> Esug-list ＠ lists.esug.org
+> http://lists.esug.org/mailman/listinfo/esug-list_lists.esug.org
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20170319/e4d90820/attachment.html>
+

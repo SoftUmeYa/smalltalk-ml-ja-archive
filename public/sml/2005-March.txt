@@ -1,0 +1,1196 @@
+From mitsuhashi-masaaki ＠ tepsys.co.jp  Fri Mar  4 12:23:39 2005
+From: mitsuhashi-masaaki ＠ tepsys.co.jp (三橋雅昭)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7040] 過去記事のアーカイブについて
+Message-ID: <4227D4BB.4090806@tepsys.co.jp>
+
+みつはしです。
+
+過去記事を読んでみようとしたところ、
+アーカイブにウィルスが入っているらしく、
+ネットワーク管理者から警告が来ました。^^;;;;
+
+過去記事が読めないっぽいので、
+なんとかならないでしょうか。
+よろしくお願いします。
+-- 
+三橋雅昭 mitsuhashi-masaaki@tepsys.co.jp
+
+From aoki ＠ sra.co.jp  Fri Mar  4 15:24:28 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7041] Jun617 for Smalltalk
+Message-ID: <4227FF1C.2090907@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun617」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆フランス（パリ大学）より寄贈されたプログラムコードを反映さ
+　せました。 X11 for Mac OS X でも正常に動作するようになって
+　います。http://www.apple.com/jp/macosx/features/x11/
+
+◆時間を決めて処理を行うプログラム制御メッセージ群を、じゅん
+　のアプリケーションＭＶＣに加えました。
+　以下では、self が JunApplicationModel / JunAbstractView /
+　JunAbstractController / JunAbstractControllerWithMenu など
+　のオブジェクトになります。
+
+　self punctuallyDo: aBlock forMicroseconds: microsecondTime
+　self punctuallyDo: aBlock forMilliseconds: millisecondTime
+　self punctuallyDo: aBlock during: millisecondTime
+　指定された時間内で指定された処理を実行しようとします。たと
+　え時間内に処理が終わったとしても、指定された時間分だけかか
+　るようにできています。時間内に処理が終わらない場合には、途
+　中で打ち切られます。つまり、確実に時間を守ることになります。
+
+　self do: aBlock forMicroseconds: microsecondTime
+　self do: aBlock forMilliseconds: millisecondTime
+　self do: aBlock during: millisecondTime
+　指定された時間内で指定された処理を実行しようとします。たと
+　え時間内に処理が終わったとしても、指定された時間分だけかか
+　るようにできています。ただし、時間内に処理が終わらない場合
+　には、処理の完了を待ちます。つまり、早く終えた場合にかぎり、
+　時間を守ることになります。
+　
+　self fork: aBlock forMicroseconds: microsecondTime
+　self fork: aBlock forMilliseconds: millisecondTime
+　self fork: aBlock during: millisecondTime
+　指定された時間内で指定された処理を実行しようとします。並行
+　プロセスとして実行されますので、このメッセージの発信元にす
+　ぐにプログラム制御が戻ります。指定された時間内に処理が終わ
+　らない場合には、途中で打ち切られます。つまり、裏でこの時間
+　内に可能な限り処理を進めておけ、ということになります。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Fri Mar  4 17:53:59 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7042] Re: Jun617 for Smalltalk
+In-Reply-To: <4227FF1C.2090907@sra.co.jp>
+References: <4227FF1C.2090907@sra.co.jp>
+Message-ID: <42282227.6000805@sra.co.jp>
+
+AOKI Atsushi wrote:
+> ◆フランス（パリ大学）より寄贈されたプログラムコードを反映さ
+> 　せました。 X11 for Mac OS X でも正常に動作するようになって
+> 　います。http://www.apple.com/jp/macosx/features/x11/
+
+動作状況のスナップショットです。
+http://www.sra.co.jp/people/aoki/misc/jpgs/Jun617.jpg
+
+残念ながら、まだマルチメディア系が動きません。あしからずです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Fri Mar  4 18:53:42 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7043] Re: Jun617 for Smalltalk
+In-Reply-To: <4227FF1C.2090907@sra.co.jp>
+References: <4227FF1C.2090907@sra.co.jp>
+Message-ID: <a2b446f5b6140c249fe83e38d2b88460@sra.co.jp>
+
+On 2005/03/04, at 15:24, AOKI Atsushi wrote:
+> ◆フランス（パリ大学）より寄贈されたプログラムコードを反映さ
+> 　せました。 X11 for Mac OS X でも正常に動作するようになって
+> 　います。http://www.apple.com/jp/macosx/features/x11/
+
+パダワンが解説ページを作成してくれました。ご利用ください。
+
+【X11 インストール 】
+　★ Mac OS X での解説です ★
+　http://www.sra.co.jp/people/h-asaoka/study/Mac/X11Install/
+
+【Jun for Smalltalk インストール】
+　★ VisualWorks 7.x for X11 with Mac OS X 版での解説です ★
+　http://www.sra.co.jp/people/h-asaoka/study/JunInstall/Jun7xX11/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From kuwatani ＠ akademia.co.jp  Mon Mar  7 20:44:23 2005
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7044] Re: 過去記事のアーカイブについて
+In-Reply-To: <4227D4BB.4090806@tepsys.co.jp>
+References: <4227D4BB.4090806@tepsys.co.jp>
+Message-ID: <20050307204423YrrtiQ@akademia.co.jp>
+
+SMLの管理をしています 桑谷 です．
+
+お返事が遅くなりましてすいません．
+
+三橋雅昭 <mitsuhashi-masaaki@tepsys.co.jp> wrote:
+> 過去記事を読んでみようとしたところ、
+> アーカイブにウィルスが入っているらしく、
+> ネットワーク管理者から警告が来ました。^^;;;;
+> 
+> 過去記事が読めないっぽいので、
+> なんとかならないでしょうか。
+> よろしくお願いします。
+
+現在アーカイブを調査中ですが，すぐに対応できないかと思います．
+申し訳ありません．できるかぎり早く対処したいと思います．
+
+ちなみに，どの(いつの)アーカイブにウィルスが入っていたのでしょうか？
+
+________________________________________
+桑谷剛史＠SML管理人
+
+
+
+From mitsuhashi-masaaki ＠ tepsys.co.jp  Tue Mar  8 08:46:28 2005
+From: mitsuhashi-masaaki ＠ tepsys.co.jp (三橋雅昭)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7045] Re: 過去記事のアーカイブについて
+In-Reply-To: <20050307204423YrrtiQ@akademia.co.jp>
+References: <4227D4BB.4090806@tepsys.co.jp>
+	<20050307204423YrrtiQ@akademia.co.jp>
+Message-ID: <422CE7D4.7060001@tepsys.co.jp>
+
+みつはしです。
+お手数おかけします。
+
+Smalltalk/SML/archives/sml.mbox/majordomo.tar.gz です。
+(ドメイン名の部分は削除してます。)
+
+検出したウィルスは
+VBS_KALAMAR.A, VBS_KALAMAR.A, WORM_SIRCAM.A, PE_NIMDA.A-O
+とのことです。
+よろしくお願いいたします。
+
+Tsuyoshi KUWATANI wrote:
+
+ > 現在アーカイブを調査中ですが，すぐに対応できないかと思います．
+> 申し訳ありません．できるかぎり早く対処したいと思います．
+> 
+> ちなみに，どの(いつの)アーカイブにウィルスが入っていたのでしょうか？
+
+-- 
+三橋雅昭 mitsuhashi-masaaki@tepsys.co.jp
+
+From kuwatani ＠ akademia.co.jp  Tue Mar  8 09:45:50 2005
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7046] Re: 過去記事のアーカイブについて
+In-Reply-To: <422CE7D4.7060001@tepsys.co.jp>
+References: <422CE7D4.7060001@tepsys.co.jp>
+Message-ID: <20050308094550Ftw9C0@akademia.co.jp>
+
+桑谷です．
+
+お返事ありがとうございます．
+アーカイブを調べてみます．
+
+三橋雅昭 <mitsuhashi-masaaki@tepsys.co.jp> wrote:
+
+> みつはしです。
+> お手数おかけします。
+> 
+> Smalltalk/SML/archives/sml.mbox/majordomo.tar.gz です。
+> (ドメイン名の部分は削除してます。)
+> 
+> 検出したウィルスは
+> VBS_KALAMAR.A, VBS_KALAMAR.A, WORM_SIRCAM.A, PE_NIMDA.A-O
+> とのことです。
+> よろしくお願いいたします。
+> 
+> Tsuyoshi KUWATANI wrote:
+> 
+>  > 現在アーカイブを調査中ですが，すぐに対応できないかと思います．
+> > 申し訳ありません．できるかぎり早く対処したいと思います．
+> > 
+> > ちなみに，どの(いつの)アーカイブにウィルスが入っていたのでしょうか？
+> 
+> -- 
+> 三橋雅昭 mitsuhashi-masaaki@tepsys.co.jp
+> 
+
+
+
+From aoki ＠ sra.co.jp  Wed Mar  9 07:10:20 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7047] Re: 日経バイト連載に関して
+In-Reply-To: <41CA31CE.9080006@sra.co.jp>
+References: <413CE520.9040508@sra.co.jp> <413F8DEF.4000806@sra.co.jp>
+	<41CA31CE.9080006@sra.co.jp>
+Message-ID: <422E22CC.4060108@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+日経バイト連載の件ですが、誌面刷新の２００５年４月号の発刊が
+３月２２日と迫ってきました。１２回（丸１年間）連載の初稿が掲
+載されています。「プログラマ道場○」の始まり。
+
+現在、私は１０月号を書き下ろしているところで、半年ほど前倒し
+の執筆状況です。
+
+参照：（過去の関連メール）
+http://www.akademia.co.jp/Smalltalk/SML/archives/archive/2004-December/007028.html
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Mar  9 07:45:42 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7048] Re: Jun617 for Smalltalk
+In-Reply-To: <4227FF1C.2090907@sra.co.jp>
+References: <4227FF1C.2090907@sra.co.jp>
+Message-ID: <422E2B16.1060804@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+> AOKI Atsushi wrote:
+> > ◆フランス（パリ大学）より寄贈されたプログラムコードを反映さ
+> > 　せました。 X11 for Mac OS X でも正常に動作するようになって
+> > 　います。http://www.apple.com/jp/macosx/features/x11/
+
+フランスからプログラムの寄贈が相次いでいまして、在り難いこと。
+
+パリ大学の方々が VisualWorks + じゅん を用いて CORMAS という
+マルチエージェント型のシミュレーションプログラムを開発してい
+ます。じゅんのサブセットも作って公開したいのだそうです。
+
+http://cormas.cirad.fr/index.html
+http://cormas.cirad.fr/indexeng.htm
+
+ちなみに、パリ大学は第１大学から第１３大学まであります。プロ
+グラムを寄贈してくれている方々が所属するのは、ピエール・アン
+ド・マリーキュリー大学で、第６大学になります。有名な物理学者
+のピエールキュリーさんとマリーキュリーさん（キュリー夫妻）の
+名前をいただいている理工系大学になります。
+
+http://www.lip6.fr/fr/index.html
+http://www.lip6.fr/en/index.html
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Mar  9 19:01:40 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7049] Jun619 for Smalltalk
+Message-ID: <422EC984.5070900@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun619」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ウィンドウ（またはビュー）の上で、テキスト編集ができる簡易
+　な道具を作りました。ポップアップ型のテキスト編集フィールド
+　を出現（上乗せ）させて、リターンやエスケープやマウスクリッ
+　クで、アクセプトやキャンセルが行えるものです。
+　
+	JunTextInoutField
+　		popUpIn: (200 @ 250 extent: 150 @ 20)
+　		initialAnswer: 'jun'
+
+◆フラックスにおいて、再帰無限ループに入ってしまうコードがあ
+　りましたので、修正を施しました。
+
+◆３次元視界を構成するプロジェクタに不具合がありました。プロ
+　ジェクタの注視点の初期値は原点。その状態で視点を原点に設定
+　しようとすると、注視点から視点へのベクトルを作ることができ
+　ず、視点が設定できないというものです。
+
+　視点と注視点を同時に設定できるメッセージや、そっと視点・注
+　視点・上方向ベクトル・ズーム高などを設定できるメッセージを
+　追加して、上述の問題に対処するように書き改めました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Thu Mar 10 17:19:40 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7050] Jun620 for Smalltalk
+Message-ID: <4230031C.4080403@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun620」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ポップアップ型のテキスト編集フィールドに続き、水平／垂直の
+　スライダーゲージ、スピンボタンフィールドを加え、抽象機能を
+　持ち上げました。
+
+◆マウスボタンを明示するマウスカーサーを作りました。左ボタン
+　や右ボタンを押してほしい時に利用できます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Fri Mar 11 07:48:08 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7051] Jun621 for Smalltalk
+Message-ID: <4230CEA8.60703@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun621」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆２つの描画を左右に配置して立体視ができるビューファインダを
+　実装しました。ちょっと寄り目にする感じで眺めると、左右の描
+　画の中央に、立体感のあるオブジェクトを見ることができます。
+　並行法と交差法を用意しています。
+
+　実例集（Examples）のメニューから立体視（Stereoscope）を選
+　択すると：
+　http://www.sra.co.jp/people/aoki/misc/jpgs/Jun621_1.jpg
+
+　実例集（Examples）のメニューから立体視（Stereoscope）を選
+　択する際に、オプションキーまたはシフトキーを押しておくと：
+　http://www.sra.co.jp/people/aoki/misc/jpgs/Jun621_2.jpg
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Sun Mar 13 09:53:27 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7052] Jun622 for Smalltalk
+Message-ID: <42338F07.7060308@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun622」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ポップアップ型のフィールドを、日付・時刻・ミリ秒の設定 GUI
+　に用いることにより、ウィンドウの活性連鎖に問題があることが
+　わかりました。是正しました。
+
+◆時間を決めて処理するプログラム制御メッセージ punctuallyDo:
+　during: にバグがありました。修正を施すと共に、例題を書き改
+　めました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From koubo2005 ＠ yengawa.jpn.org  Mon Mar 14 10:53:09 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7053] OSVM
+Message-ID: <20050314093512.7A5B.KOUBO2005@yengawa.jpn.org>
+
+横川@豆蔵です。
+突然ですが今日(3/14)の夕方にOSVM(http://www.oovm.com/index.html)の説明を聞くこと
+になりました。組込み向けのSmalltalk VMだそうです。
+知識がなかったので今急いで関連ページ(http://www.smalltalk.org/versions/OOVM.html)
+を見つけて読んでます。OSVMの開発者はSelfやStrongtalkを作ったLars Bakさんだったの
+ですね。
+その他関連情報や面白い話題があったら教えて下さい。
+
+では。
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From abee.abe ＠ nifty.ne.jp  Mon Mar 14 13:33:53 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7054] Re: OSVM
+In-Reply-To: <20050314093512.7A5B.KOUBO2005@yengawa.jpn.org>
+References: <20050314093512.7A5B.KOUBO2005@yengawa.jpn.org>
+Message-ID: <42351431369.8AABABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+人から教えてもらったのですが、Samlltalkベースの組み込みシステムだそうです。
+
+OSVM
+http://www.esmertec.com/company/downloads/OSVM.pdf
+
+VisuakWorksをVxWORKSに載せたControlWORKSなど、昔からこの手のものがなかっ
+たわけではないですが、なんか時代と合って来たのかも知れないですね。
+
+On Mon, 14 Mar 2005 10:53:09 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+>突然ですが今日(3/14)の夕方にOSVM(http://www.oovm.com/index.html)の説明を聞くこと
+>になりました。組込み向けのSmalltalk VMだそうです。
+>知識がなかったので今急いで関連ページ(http://www.smalltalk.org/versions/OOVM.html)
+>を見つけて読んでます。OSVMの開発者はSelfやStrongtalkを作ったLars Bakさんだったの
+>ですね。
+>その他関連情報や面白い話題があったら教えて下さい。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From koubo2005 ＠ yengawa.jpn.org  Mon Mar 14 15:50:34 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7055] Re: OSVM
+In-Reply-To: <42351431369.8AABABEE.ABE@smtp.nifty.com>
+References: <20050314093512.7A5B.KOUBO2005@yengawa.jpn.org>
+	<42351431369.8AABABEE.ABE@smtp.nifty.com>
+Message-ID: <20050314154235.7A5E.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+そうですこれです。
+サイトの説明ではMachine to Machineに位置してますね。
+あ、IDEにEclipse使ってる!?
+
+
+On Mon, 14 Mar 2005 13:33:53 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+
+> 阿部@新百合です。
+> 
+> 人から教えてもらったのですが、Samlltalkベースの組み込みシステムだそうです。
+> 
+> OSVM
+> http://www.esmertec.com/company/downloads/OSVM.pdf
+> 
+> VisuakWorksをVxWORKSに載せたControlWORKSなど、昔からこの手のものがなかっ
+> たわけではないですが、なんか時代と合って来たのかも知れないですね。
+> 
+> On Mon, 14 Mar 2005 10:53:09 +0900
+> Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> >突然ですが今日(3/14)の夕方にOSVM(http://www.oovm.com/index.html)の説明を聞くこと
+> >になりました。組込み向けのSmalltalk VMだそうです。
+> >知識がなかったので今急いで関連ページ(http://www.smalltalk.org/versions/OOVM.html)
+> >を見つけて読んでます。OSVMの開発者はSelfやStrongtalkを作ったLars Bakさんだったの
+> >ですね。
+> >その他関連情報や面白い話題があったら教えて下さい。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From aoki ＠ sra.co.jp  Mon Mar 14 19:13:13 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7056] Jun623 for Smalltalk
+Message-ID: <423563B9.3070804@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun623」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆プロジェクションテーブルに平行投影と遠近投影の設定を加える
+　ことにしました。
+
+◆立体視ビューファインダにおいて、並行法と交差法のいずれかの
+　設定をプロジェクションテーブルに加えるようにしました。
+
+◆日付の月設定にケアレスなバグがありましたので、修正しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Mon Mar 14 19:36:50 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7057] Installing Jun for VisualWorks 7.x
+Message-ID: <42356942.5030100@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+模範となる じゅん のインストール方法を、VisualWorks 7.x 用に
+書き改めました。（もっとも安易な方法かしらん…。）
+
+http://www.sra.co.jp/smalltalk/jun/Manuals/Installation/Macintosh/
+http://www.sra.co.jp/smalltalk/jun/Manuals/Installation/Windows/
+
+日本語版であれば、もっと丁寧で詳しいものが、下記にありますが。
+
+http://www.sra.co.jp/people/h-asaoka/study/JunInstall/Jun7xMac/
+http://www.sra.co.jp/people/h-asaoka/study/JunInstall/Jun7xX11/
+http://www.sra.co.jp/people/h-asaoka/study/JunInstall/Jun7xWin/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From koubo2005 ＠ yengawa.jpn.org  Mon Mar 14 20:33:45 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7058] Re: OSVM
+In-Reply-To: <20050314154235.7A5E.KOUBO2005@yengawa.jpn.org>
+References: <42351431369.8AABABEE.ABE@smtp.nifty.com>
+	<20050314154235.7A5E.KOUBO2005@yengawa.jpn.org>
+Message-ID: <20050314194446.7A67.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+
+Lars Bakさん自らデモしてもらいました。
+実際におもちゃのタンクを使って、Ethernet接続したPC上のEclipseからタンクを動かした
+ままon-the-flyでデバイスドライバと制御クラスを追加してdoitしてました。inspectもで
+きてprofileも取れるといっていたけど、時間がなくて見れなかった。残念!
+
+組込み開発も無駄にROM焼いたりICEと格闘したりではなくて、Smalltalkでさくさくプログ
+ラムする時代になるのかも。
+
+
+On Mon, 14 Mar 2005 15:50:34 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+
+> 横川です。
+> そうですこれです。
+> サイトの説明ではMachine to Machineに位置してますね。
+> あ、IDEにEclipse使ってる!?
+> 
+> 
+> On Mon, 14 Mar 2005 13:33:53 +0900
+> Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+> 
+> > 阿部@新百合です。
+> > 
+> > 人から教えてもらったのですが、Samlltalkベースの組み込みシステムだそうです。
+> > 
+> > OSVM
+> > http://www.esmertec.com/company/downloads/OSVM.pdf
+> > 
+> > VisuakWorksをVxWORKSに載せたControlWORKSなど、昔からこの手のものがなかっ
+> > たわけではないですが、なんか時代と合って来たのかも知れないですね。
+> > 
+> > On Mon, 14 Mar 2005 10:53:09 +0900
+> > Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> > >突然ですが今日(3/14)の夕方にOSVM(http://www.oovm.com/index.html)の説明を聞くこと
+> > >になりました。組込み向けのSmalltalk VMだそうです。
+> > >知識がなかったので今急いで関連ページ(http://www.smalltalk.org/versions/OOVM.html)
+> > >を見つけて読んでます。OSVMの開発者はSelfやStrongtalkを作ったLars Bakさんだったの
+> > >ですね。
+> > >その他関連情報や面白い話題があったら教えて下さい。
+> > 
+> >  //abee
+> > --
+> > 阿部 和広  EMAIL abee.abe@nifty.ne.jp
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Mar 14 22:09:34 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7059] Re: OSVM
+In-Reply-To: <20050314194446.7A67.KOUBO2005@yengawa.jpn.org>
+References: <42351431369.8AABABEE.ABE@smtp.nifty.com>
+	<20050314154235.7A5E.KOUBO2005@yengawa.jpn.org>
+	<20050314194446.7A67.KOUBO2005@yengawa.jpn.org>
+Message-ID: <JC200503142209344.2242968@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+いいですねー。直接デモしてもらうなんて。
+
+OOVMが昔の名称ですよね。
+http://www.akademia.co.jp/Smalltalk/SML/archives/SRA.archives/2003-August/006306.html
+
+今の私のクライアント(J2MEで苦労してます)に教えてあげたいところではあります。
+
+Mon, 14 Mar 2005 20:33:45 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> 横川です。
+> 
+> Lars Bakさん自らデモしてもらいました。
+> 実際におもちゃのタンクを使って、Ethernet接続したPC上のEclipseからタンクを動かした
+> ままon-the-flyでデバイスドライバと制御クラスを追加してdoitしてました。inspectもで
+> きてprofileも取れるといっていたけど、時間がなくて見れなかった。残念!
+> 
+> 組込み開発も無駄にROM焼いたりICEと格闘したりではなくて、Smalltalkでさくさくプログ
+> ラムする時代になるのかも。
+> 
+> 
+> On Mon, 14 Mar 2005 15:50:34 +0900
+> Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> 
+> > 横川です。
+> > そうですこれです。
+> > サイトの説明ではMachine to Machineに位置してますね。
+> > あ、IDEにEclipse使ってる!?
+> > 
+> > 
+> > On Mon, 14 Mar 2005 13:33:53 +0900
+> > Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+> > 
+> > > 阿部@新百合です。
+> > > 
+> > > 人から教えてもらったのですが、Samlltalkベースの組み込みシステムだそうです。
+> > > 
+> > > OSVM
+> > > http://www.esmertec.com/company/downloads/OSVM.pdf
+> > > 
+> > > VisuakWorksをVxWORKSに載せたControlWORKSなど、昔からこの手のものがなかっ
+> > > たわけではないですが、なんか時代と合って来たのかも知れないですね。
+> > > 
+> > > On Mon, 14 Mar 2005 10:53:09 +0900
+> > > Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> > > >突然ですが今日(3/14)の夕方にOSVM(http://www.oovm.com/index.html)の説明を聞くこと
+> > > >になりました。組込み向けのSmalltalk VMだそうです。
+> > > >知識がなかったので今急いで関連ページ(http://www.smalltalk.org/versions/OOVM.html)
+> > > >を見つけて読んでます。OSVMの開発者はSelfやStrongtalkを作ったLars Bakさんだったの
+> > > >ですね。
+> > > >その他関連情報や面白い話題があったら教えて下さい。
+> > > 
+
+---
+[:masashi | ^umezawa]
+
+From yoshiki ＠ squeakland.org  Thu Mar 17 09:43:23 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7060] Re: OSVM
+In-Reply-To: <20050314154235.7A5E.KOUBO2005@yengawa.jpn.org>
+References: <20050314093512.7A5B.KOUBO2005@yengawa.jpn.org>
+	<42351431369.8AABABEE.ABE@smtp.nifty.com>
+	<20050314154235.7A5E.KOUBO2005@yengawa.jpn.org>
+Message-ID: <uis3r3xw4.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  なんだか時期遅れになってしまいましたが、古いアドレスで投稿していたの
+ではじかれていました。
+
+---------------------------------
+
+  おおしまです。
+
+> > On Mon, 14 Mar 2005 10:53:09 +0900
+> > Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> > >突然ですが今日(3/14)の夕方にOSVM(http://www.oovm.com/index.html)の説明を聞くこと
+> > >になりました。組込み向けのSmalltalk VMだそうです。
+> > >知識がなかったので今急いで関連ページ(http://www.smalltalk.org/versions/OOVM.html)
+> > >を見つけて読んでます。OSVMの開発者はSelfやStrongtalkを作ったLars Bakさんだったの
+> > >ですね。
+> > >その他関連情報や面白い話題があったら教えて下さい。
+
+　LarsはSun LabsではJohn Maloneyと仲良くしていたようで一度紹介してもらっ
+たことがあります。Johnによると、彼は話していて興奮してくると指を他の指
+に打ち付けて音を出しはじめる、と言っていました。
+
+# あんまり役に立たない情報ですみません。
+
+　Sunを脱出する前に作っていた小さなJava VM "Monty"はなかなかかっこよかっ
+たです。OSVMはSmalltalkのセマンティクスがすべて実装されているわけでは
+ないはずですが、それでもすごいものだと思います。
+
+-- Yoshiki
+
+From aoki ＠ sra.co.jp  Thu Mar 17 17:18:29 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7061] Jun624 for Smalltalk
+Message-ID: <42393D55.70805@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun624」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ビューファインダにおいて、三次元オブジェクトをマウスでつか
+　んで、グルグルと廻し続ける処理（プロセス）に時間を守るコー
+　ドを組み込みました。通常、1 秒間に 8 回の描画が、動きとし
+　て認識されるギリギリの下線ですから、1 秒間に 12 回の描画、
+　すなわち、83 ミリ秒でレンダリングを行うようにしました。
+
+◆カラー設定の色相・彩度・明度の値変更ダイアログの代わりに、
+　ポップアップ型のテキスト入力フィールドを用いるようにしまし
+　た。シフト修飾をすると、いままで通りのダイアログが出ます。
+
+◆新しいイリュージョン（デスマスクの立体版）を追加しました。
+　http://www.sra.co.jp/people/aoki/Jun/Topics/FaceIllusion/
+　おもしろい！と思います。
+
+◆最小距離による裁縫アルゴリズムに加えて、最大角度による裁縫
+　アルゴリズムを組み込みました。
+
+◆幾何三角形に構成点を配列にして応答するメソッドを加えました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From katsu ＠ watanabe.name  Thu Mar 17 20:23:43 2005
+From: katsu ＠ watanabe.name (WATANABE Katsuhiro)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7062] デスマスク立体版
+In-Reply-To: <42393D55.70805@sra.co.jp>
+References: <42393D55.70805@sra.co.jp>
+Message-ID: <20050317.202343.07218139.katsu@katsu.watanabe.name>
+
+AOKI Atsushi <aoki@sra.co.jp> さんいはく in [SML 7061]
+> ◆新しいイリュージョン（デスマスクの立体版）を追加しました。
+> 　http://www.sra.co.jp/people/aoki/Jun/Topics/FaceIllusion/
+
+早速、ビューファインダーで顔を動かしてみました。面白いっス。
+
+座標軸を示す矢がついてる(JunOpenGLIllusion>>example4)のに、
+矢の方が負けてますよね。矢印も、現代人にとっては相当強いアイコン
+だと思うんですが。
+-- 
+渡邊克宏
+
+
+From aoki ＠ sra.co.jp  Thu Mar 17 21:09:00 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7063] Re: デスマスク立体版
+In-Reply-To: <20050317.202343.07218139.katsu@katsu.watanabe.name>
+References: <42393D55.70805@sra.co.jp>
+	<20050317.202343.07218139.katsu@katsu.watanabe.name>
+Message-ID: <47a1785f5dd4d1937329fe136e26c6e6@sra.co.jp>
+
+On 2005/03/17, at 20:23, WATANABE Katsuhiro wrote:
+> 座標軸を示す矢がついてる(JunOpenGLIllusion>>example4)のに、
+> 矢の方が負けてますよね。矢印も、現代人にとっては相当強いアイコン
+> だと思うんですが。
+
+そうなんだよ！
+かっちゃんが紹介してくれたウェブページの凹凸の激しい顔
+
+> http://www.michaelbach.de/ot/fcs_hollow-face/index.html
+
+と比較して、かなり能面のように凹凸を落としてあるのに、
+顔のほうが強くて、強くて、矢印の完敗！
+
+// R2D2 (AOKI Atsushi)
+
+
+From kondo ＠ sra.co.jp  Thu Mar 17 22:39:46 2005
+From: kondo ＠ sra.co.jp (Kondo Hirotsugu)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7064] 新刊プレゼントのお知らせ
+Message-ID: <20050317220936.2B48.KONDO@sra.co.jp>
+
+近藤です。
+
+この度、秀和から以前に出した本
+「よくわかる最新オブジェクト指向の基本としくみ」
+の改訂版が出る運びになりました。
+
+ちなみに現在もまだ旧版も書店に在庫があると思います。
+http://www.amazon.co.jp/exec/obidos/ASIN/4798004413/
+
+---
+
+店頭に出るのは来週頃と聞いておりますが、本日秀和から
+著者用が５冊届きました。こんなにあっても仕方がないので、
+前回同様、２冊ほどこのMLに希望者がいれば流そうと思います。
+
+希望者はメールください。DMで良いです。小金の受け渡しなど
+面倒なだけなので、送料もこちらで持ちます。
+締め切りはとりあえず3/26にしたいと思います。
+
+希望者が３名以上の場合は、バイアスをかけた抽選とします。
+基本的にこれからOOでのシステム開発を学ぶ新卒を想定読者に
+していますので、学生さん、新卒、または企業の新人研修に
+関わっている方がいればそちらを優先します。
+
+---
+
+ちなみに本としての構成や主題は旧版とほとんど同じなのですが、
+どのへんが改定版なのかと言うと、以下のような感じです。
+
+１）図版の類をOMTでなくUMLに直した
+２）旧版のミスや誤植の類を極力なくした
+３）章立てを見直して、節を丸々追加したり一部の内容を削ったり。
+４）旧版は私自身のJavaの経験不足もあって「Javaで書いたSmalltalk本」な
+　　感が正直あったのですが、よりJavaにフォーカスした内容に改めた。
+
+50ページほど増えて300ページ超になりました。このためお値段が
+200円ほど上がってしまいましたが、まあ値段分の価値はあると
+思いますよ（自画自賛）。
+
+もっとも改定点（４）は、世間にアピールをして売るにはbetterな選択
+だと思いますがこのML的にはマイナスかもしれませんが（笑）。
+
+奮ってご応募ください。
+
+-- 
+Kondo Hirotsugu <kondo@sra.co.jp>
+
+
+
+From aoki ＠ sra.co.jp  Fri Mar 18 10:23:17 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7065] Re: 新刊プレゼントのお知らせ
+In-Reply-To: <20050317220936.2B48.KONDO@sra.co.jp>
+References: <20050317220936.2B48.KONDO@sra.co.jp>
+Message-ID: <423A2D85.9070209@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+> 「よくわかる最新オブジェクト指向の基本としくみ」
+> の改訂版が出る運びになりました。
+
+祝、改訂版発刊。
+
+> １）図版の類をOMTでなくUMLに直した
+
+私もＯＭＴの図法とＵＭＬの図法を混ぜて使うのですが、どちらか
+の図法に統一すべきだとの意見を度々うけたまわります。いまどき
+ＯＭＴの図法で描いたものは、時代にそぐわないとでも言いたげな
+感じです。これらのご意見は捨て置く以外にはありますまい。
+
+> ２）旧版のミスや誤植の類を極力なくした
+
+書き物に間違いは付き物でしょう。ちょうど今、執筆中の日経バイ
+ト連載の１０月号に、儒教の経書「孟子」の中の「尽心」に書かれ
+ている「尽信書則不如無書（ことごとく書を信ずれば、すなわち書
+無きにしかず）」を取り上げたところでした。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From nisinaka ＠ sra.co.jp  Fri Mar 25 14:28:29 2005
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7066] [ANNOUNCE] Jun for Java (Jun500)
+In-Reply-To: <20050119004454.F2D6.NISINAKA@sra.co.jp>
+References: <20041108184226.E62D.NISINAKA@sra.co.jp>
+	<20050119004454.F2D6.NISINAKA@sra.co.jp>
+Message-ID: <20050325141720.C11A.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン500を公開します。
+
+  今回はいわゆるメジャーバージョンアップのようなもので、いくつか
+  下位互換性の無い修正を含んでいます。
+
+  バージョン499からの主な変更点は、以下の通りです。
+
+    * (非互換) 'Java 2 Platform, Standard Edition, 1.3' のサポー
+      トを終了しました。
+
+    * (非互換) パッケージ名を 'sra.*' から 'jp.co.sra.*' に変更し
+      ました。
+
+    * (非互換) JNI ライブラリの名称を変更しました。OpenGL インタ
+      フェースの "jun4java" は "JunGL" に、QuickTime インタフェー
+      スの "JunQT4Java" は "JunQT" になりました。
+
+    * (非互換) JunOpenGL3dModel の射影の初期値およびデフォルト値
+      の設定を変えました。
+
+    * マルチメディア操作のために独自の QuickTime インタフェースを
+      提供していましたが、'QuickTime for Java' を使うことも出来る
+      ようにしました。Mac OS X でのデフォルトは 'QuickTime for
+      Java' になっています。
+
+    * Linux環境において、明示的にステンシルバッファを無効にするこ
+      とによって、ダブルバッファモードでのレンダリングが出来るよ
+      うになりました。そもそも Java の生成するウィンドウに指定さ
+      れた visual のステンシルビットが 0 で、これを変更する手段が
+      ありませんでした。
+
+    * StPL7.0 で導入された新しいメニューフレームワークを使用する
+      ようにしました。
+
+    * StPL7.0 で導入された新しい多国語化対応フレームワークを使用
+      するようにしました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From petit.nana ＠ mc.neweb.ne.jp  Sun Mar 27 22:01:12 2005
+From: petit.nana ＠ mc.neweb.ne.jp (Reiko Arai)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7067] モデリングに挑戦し、挫折したことのある人向けの本を書きました
+Message-ID: <20050327212938.2A6C.PETIT.NANA@mc.neweb.ne.jp>
+
+こんにちは。
+荒井玲子です。
+いつもはROMばかりで、すみません。
+
+このたび、本を一冊書きました。
+『UMLによるオブジェクト指向モデリング　セルフレビューノート』
+http://www.seshop.com/detail.asp?pid=5839
+
+オブジェクト指向は習うより慣れろ、とはよくいいます。
+そうはいっても、慣れようというものがあると思います。
+やみくもに書けばよい、というものではありません。
+
+というわけで、自分で書いたモデルがあっているのかどうかを、自分で判断でき
+るよう、手引きをまとめました。
+よろしければ、本屋さんで手にとってみてください。
+発売は、４月２０日の予定です。
+
+近藤さんの本といっしょに読んでもらえると、うれしいです。
+ご無沙汰しています。元気ですか？FXIS時代はお世話になりました＞近藤マック
+ん
+
+まずは、ご報告まで。
+-- 
+Reiko Arai <petit.nana@mc.neweb.ne.jp>
+
+
+
+From kondo ＠ sra.co.jp  Mon Mar 28 00:53:25 2005
+From: kondo ＠ sra.co.jp (Kondo Hirotsugu)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7068] Re: モデリングに挑戦し、挫折したことのある人向けの本を書きました
+In-Reply-To: <20050327212938.2A6C.PETIT.NANA@mc.neweb.ne.jp>
+References: <20050327212938.2A6C.PETIT.NANA@mc.neweb.ne.jp>
+Message-ID: <20050328004328.026A.KONDO@sra.co.jp>
+
+近藤博次です。
+
+>近藤さんの本といっしょに読んでもらえると、うれしいです。
+>ご無沙汰しています。元気ですか？FXIS時代はお世話になり
+>ました＞近藤マックん
+
+宣伝ありがとうございます。
+お久しぶりでございます。FXIS時代…ってもう10年前になるん
+だよね。うひゃー。
+荒井さんの本も、多分出たらアマゾンで買わせていただきます。
+
+--
+
+さて先週募った拙著プレゼントですが、現在の所１名様から
+ご応募がありましたので、この方は当選とし、のちほどご連絡を
+させていただきます。
+
+＃一応、あと１名様には差し上げられますよー。
+
+それはそれとしてアマゾンで私の本が買えるようにもなりました
+ので、ひとつよろしくお願いします。
+
+http://www.amazon.co.jp/exec/obidos/ASIN/4798010375/qid=1111938367/sr=8-2/ref=sr_8_xs_ap_i2_xgl14/250-3996497-9729856
+
+それでは。
+
+-- 
+Kondo Hirotsugu <kondo@sra.co.jp>
+
+
+From aoki ＠ sra.co.jp  Mon Mar 28 12:48:43 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7069] Jun625 for Smalltalk
+Message-ID: <42477E9B.2090505@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun625」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆電光掲示板の水平スクロールを、時間を守る方式で囲いました。
+
+◆フォントモデルにおいて、フォントサイズが定められていないこ
+　との判定を、より正確に行うようにしました。ポイント数が12だ
+　けのサイズになることを抑止しています。
+
+◆ビューファインダのドリーボタン生成の頑強性を向上させました。
+
+◆組み込みビューファインダの表示オブジェクトの設定アルゴリズ
+　ムに変更を施しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From m-asada ＠ sra.co.jp  Tue Mar 29 16:59:49 2005
+From: m-asada ＠ sra.co.jp (Mitsuhiro Asada)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7070] [ANNOUNCE] ImageSearcher for Java 027
+Message-ID: <20050329165731.D8D2.M-ASADA@sra.co.jp>
+
+浅田＠SRA先端技術研究所です。
+
+「イメージサーチャ for Java（イメージサーチャ for Web）」のバージョン
+027を公開します。
+
+    http://www.sra.co.jp/people/m-asada/Isr4Java/
+    ftp://ftp.sra.co.jp/pub/lang/java/isr4java/
+
+イメージサーチャは、ファイル名やカテゴリ名などの名前やキーワードに頼ら
+ずに、目的の画像を捜し出すプログラムです。特徴的な色(typical color)、平
+均明度(average luminance)、9つの色(nine colors)、広がり(image extent)、
+スペクトル中心(center spectra)、手書き画像(freehand image)などを指定す
+ることにより、画像自身が持っている属性を手掛かりとして、目的の画像を絞
+り込み検索します。
+
+バージョン026からの主な変更点は、以下の通りです。
+
+  ・(非互換) 'Java 2 Platform, Standard Edition, 1.3' のサポートを終了し
+    ました。
+
+  ・(非互換) パッケージ名を 'sra.*' から 'jp.co.sra.*' に変更しました。
+
+  ・StPL7.0 で導入された新しいメニューフレームワークを使用するようにしま
+    した。
+
+______________________________________________________________________
+Mitsuhiro Asada <m-asada@sra.co.jp>
+

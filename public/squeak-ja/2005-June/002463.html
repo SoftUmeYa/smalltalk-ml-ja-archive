@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2463] Re: OSX での日本語入力
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202463%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9TWCAbJEIkRyRORnwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=429DD6B6.6070407%40zephyr.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002462.html">
+   <LINK REL="Next"  HREF="002464.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2463] Re: OSX での日本語入力</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202463%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9TWCAbJEIkRyRORnwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=429DD6B6.6070407%40zephyr.dti.ne.jp"
+       TITLE="[Squeak-ja: 2463] Re: OSX での日本語入力">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 6月  2日 (木) 07:41:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002462.html">[Squeak-ja: 2462] Re: OSX での日本語入力
+</A></li>
+        <LI>次の記事 <A HREF="002464.html">[Squeak-ja: 2464] Re: OSX での日本語入力
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2463">[ 日付 ]</a>
+              <a href="thread.html#2463">[ スレッド ]</a>
+              <a href="subject.html#2463">[ 件名 ]</a>
+              <a href="author.html#2463">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林です。どうも。
+
+　VM 関係ですが、混乱させてしまってすみません。
+# その場その場のデフォルトを前提にしてしまってたものですので。
+
+結論からいきますと以下の組み合わせを試してみてはどうでしょうか。
+
+     VM : Squeak VM ml-030424　（←ダメと言ってたのにすみません）
+     VI へのパッチ： ML-patch-MacOSX.1.cs　（以下の  
+URL）
+<A HREF="http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/ML-patch-">http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/ML-patch-</A> 
+MacOSX.1.cs
+
+
+　なお、VM についてはまだファイル名の UTF-8 対応する 
+前のものです
+（こっちの方がいいかも）。
+Panther で落ちる件ですが、VM 3.7 シリーズで報告されてた話 
+です。
+(VM3.6 では大丈夫なのかも？)
+SystemWindow をつまんで動かす時にクラッシュすることが報告されて
+ました。
+　もし、同様のことが起きるようでしたら、以下の VM を試して 
+みて
+ください。
+<A HREF="http://utopos.dyndns.info:8080/SqueakLearner/uploads/89/">http://utopos.dyndns.info:8080/SqueakLearner/uploads/89/</A> 
+Squeak_360Beta3-J-20031105.app.zip
+
+On 2005/06/02, at 0:39, NISHIHARA Satoshi wrote:
+
+&gt;<i> Squeak 3.7.4Beta1j と <A HREF="http://squeak.hp.infoseek.co.jp/">http://squeak.hp.infoseek.co.jp/</A> 
+</I>&gt;<i> nihongo.htm にある
+</I>&gt;<i>  Squeak 3.8.6Beta6.app で試しました．
+</I>&gt;<i> いずれもダメでした．
+</I>&gt;<i> LanguageEnvironment クラスには startUp メソッドは切って 
+</I>&gt;<i> ありません．だも
+</I>&gt;<i> んで Behavior クラスの startUp が実行されとります．
+</I>&gt;<i>
+</I>&gt;<i> SqueakNihongo7 ではいずれも問題なくきちんと動作します．
+</I>&gt;<i>
+</I>&gt;<i> 動かない方は，<A HREF="http://swikis.ddo.jp/NetMorph">http://swikis.ddo.jp/NetMorph</A> に置いてある
+</I>&gt;<i> <A HREF="ftp://swikis.ddo.jp/NetMorph/demoImages/NetMorphJLocalDemo20030620.zip">ftp://swikis.ddo.jp/NetMorph/demoImages/NetMorphJLocalDemo20030620.zip</A>
+</I>&gt;<i> というイメージです．
+</I>&gt;<i> aboutThisSystem すると，
+</I>&gt;<i>
+</I>&gt;<i> Squeak3.5
+</I>&gt;<i> latest update: #5180
+</I>&gt;<i> Current Change Set: Unnamed1
+</I>&gt;<i> M17n 3.0
+</I>&gt;<i> Nihongo5
+</I>&gt;<i>
+</I>&gt;<i> が返ります．
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> なお、VM については
+</I>&gt;&gt;<i>      <A HREF="http://squeak.hp.infoseek.co.jp/nihongo.htm">http://squeak.hp.infoseek.co.jp/nihongo.htm</A>
+</I>&gt;&gt;<i> にあるものをお使いください。
+</I>&gt;&gt;<i> （Squeak VM ml-030424 ですと Panther ではクラッシュ
+</I>&gt;&gt;<i> してしまいます）
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> え，そうなんですか．まだクラッシュはしてないんですが，念のため 
+</I>&gt;<i> 使用を中止
+</I>&gt;<i> しました．
+</I>&gt;<i>
+</I>&gt;<i> -- 
+</I>&gt;<i> --------------------------------------------
+</I>&gt;<i> 西原聡士 (NISHIHARA Satoshi)
+</I>&gt;<i> e-mail: mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">nishis ＠ zephyr.dti.ne.jp</A>
+</I>&gt;<i> URL:    <A HREF="http://www.zephyr.dti.ne.jp/~nishis/">http://www.zephyr.dti.ne.jp/~nishis/</A>
+</I>&gt;<i> --------------------------------------------
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002462.html">[Squeak-ja: 2462] Re: OSX での日本語入力
+</A></li>
+	<LI>次の記事 <A HREF="002464.html">[Squeak-ja: 2464] Re: OSX での日本語入力
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2463">[ 日付 ]</a>
+              <a href="thread.html#2463">[ スレッド ]</a>
+              <a href="subject.html#2463">[ 件名 ]</a>
+              <a href="author.html#2463">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

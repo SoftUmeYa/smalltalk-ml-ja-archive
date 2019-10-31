@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7113] Re: Smalltalkerのための初等数学
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207113%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsa2VyGyRCJE4kPyRhGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE49aUV5P3QzWBsoQg%3D%3D%3F%3D&In-Reply-To=42F60581.2060003%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007112.html">
+   <LINK REL="Next"  HREF="007114.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7113] Re: Smalltalkerのための初等数学</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207113%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsa2VyGyRCJE4kPyRhGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE49aUV5P3QzWBsoQg%3D%3D%3F%3D&In-Reply-To=42F60581.2060003%40sra.co.jp"
+       TITLE="[SML 7113] Re: Smalltalkerのための初等数学">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2005年 8月  9日 (火) 17:00:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007112.html">[SML 7112] Re: Smalltalkerのための初等数学
+</A></li>
+        <LI>次の記事 <A HREF="007114.html">[SML 7114] あらんけい
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7113">[ 日付 ]</a>
+              <a href="thread.html#7113">[ スレッド ]</a>
+              <a href="subject.html#7113">[ 件名 ]</a>
+              <a href="author.html#7113">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所（京都産業大学非常勤講師）の青木です。
+
+オブジェクトの挙動を把握するのに状態遷移（有限状態マシン）を
+用いることが多いと思います。そのため、大学の講義において、私
+は下記のような「小舟」の問題を学生に課します。
+
+------------------------------------------------------------
+
+小舟に乗って川を渡ろうとしている人がいる。この人は狼と羊と菜
+を持っている。しかし、川を渡るための小舟には、一回に持って渡
+れるものがたった一つという制限がある。狼を持って渡ろうとする
+と、渡っている間に羊が菜を食べてしまう。菜を持って渡ろうとす
+ると、渡っている間に狼が羊を食べてしまう。すべてのものを安全
+に対岸に渡すためのダイナミックモデル (状態遷移図) を作成せよ。
+
+------------------------------------------------------------
+
+しかしながら、なかなか、この問題を解ける学生がいません。他の
+授業で高等数学を課しているわりには、初等数学のプログラミング
+が下手なのです。見方というか考え方を実践に移せないのでしょう。
+
+私ならば、{'人', '狼', '羊', '菜'} という全体集合を作り、さら
+に無効となる集合を要素とする集合 {{'狼', '羊'}, {'羊', '菜'},
+{'狼', '羊', '菜'}} を用意します。
+
+そして、全体集合の「べき集合」すなわち、全体集合のすべて部分
+集合を要素とする集合を作り、それぞれの部分集合および補集合が
+無効となる集合に含まれていないか否かを調べます。
+
+先日にアナウンスさせてもらった「Smalltalker のための初等数学」
+<A HREF="http://www.sra.co.jp/people/aoki/Mathematics/PrimaryMath/">http://www.sra.co.jp/people/aoki/Mathematics/PrimaryMath/</A>
+<A HREF="http://www.sra.co.jp/people/aoki/Mathematics/PrimaryMath/Set/">http://www.sra.co.jp/people/aoki/Mathematics/PrimaryMath/Set/</A>
+を用いれば、次のようにプログラミングすることができます。
+
+|<i> universalSet invalidSet powerSet |
+</I>universalSet := PrimaryMath.Set withAll: #('人' '狼' '羊' '菜').
+invalidSet := PrimaryMath.Set
+            with: (PrimaryMath.Set withAll: #('狼' '羊'))
+            with: (PrimaryMath.Set withAll: #('羊' '菜'))
+            with: (PrimaryMath.Set withAll: #('狼' '羊' '菜')).
+powerSet := universalSet powerSet.
+Transcript clear.
+powerSet do:
+        [:aSet |
+        | complementarySet aBoolean |
+        complementarySet := universalSet complement: aSet.
+        aBoolean := (invalidSet
+                        detect: [:each | each = aSet]
+                        ifNone: [nil]) isNil
+                    and:
+                        [(invalidSet
+                            detect: [:each | each = complementarySet]
+                            ifNone: [nil]) isNil].
+        Transcript
+            nextPutAll: aSet printString , ' - ';
+            nextPutAll: complementarySet printString;
+            nextPutAll: ' ==&gt; ' , aBoolean printString;
+            cr;
+            flush].
+^powerSet
+
+このプログラムを実行してみると、以下のようにトランスクリプト
+へ出力されます。
+
+{} - {'人', '狼', '羊', '菜'} ==&gt; true
+{'人'} - {'狼', '羊', '菜'} ==&gt; false
+{'狼'} - {'人', '羊', '菜'} ==&gt; true
+{'羊'} - {'人', '狼', '菜'} ==&gt; true
+{'菜'} - {'人', '狼', '羊'} ==&gt; true
+{'人', '狼'} - {'羊', '菜'} ==&gt; false
+{'人', '羊'} - {'狼', '菜'} ==&gt; true
+{'人', '菜'} - {'狼', '羊'} ==&gt; false
+{'狼', '羊'} - {'人', '菜'} ==&gt; false
+{'狼', '菜'} - {'人', '羊'} ==&gt; true
+{'羊', '菜'} - {'人', '狼'} ==&gt; false
+{'人', '狼', '羊'} - {'菜'} ==&gt; true
+{'人', '狼', '菜'} - {'羊'} ==&gt; true
+{'人', '羊', '菜'} - {'狼'} ==&gt; true
+{'狼', '羊', '菜'} - {'人'} ==&gt; false
+{'人', '狼', '羊', '菜'} - {} ==&gt; true
+
+あとは、真（true）になっているところを状態にして、それらを線
+で結んで遷移にしてゆけば、状態遷移図のできあがり、となります。
+<A HREF="http://www.sra.co.jp/people/aoki/misc/jpgs/kobune.jpg">http://www.sra.co.jp/people/aoki/misc/jpgs/kobune.jpg</A>
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007112.html">[SML 7112] Re: Smalltalkerのための初等数学
+</A></li>
+	<LI>次の記事 <A HREF="007114.html">[SML 7114] あらんけい
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7113">[ 日付 ]</a>
+              <a href="thread.html#7113">[ スレッド ]</a>
+              <a href="subject.html#7113">[ 件名 ]</a>
+              <a href="author.html#7113">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

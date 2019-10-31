@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3989] GainerとSerialとわたし
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203989%5D%20%3D%3Fiso-2022-jp%3Fb%3FR2FpbmVyGyRCJEgbKEJTZXJpYWw%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEgkbyQ/JDcbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003988.html">
+   <LINK REL="Next"  HREF="003991.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3989] GainerとSerialとわたし</H1>
+    <B>Takeshi MUTOH</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203989%5D%20%3D%3Fiso-2022-jp%3Fb%3FR2FpbmVyGyRCJEgbKEJTZXJpYWw%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEgkbyQ/JDcbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3989] GainerとSerialとわたし">mutoh ＠ openedu.org
+       </A><BR>
+    <I>2008年 9月 12日 (金) 16:53:31 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003988.html">[Squeak-ja: 3988] Re: オープンソースカンファレンス 2008 Tokyo/Fall
+</A></li>
+        <LI>次の記事 <A HREF="003991.html">[Squeak-ja: 3991] Re: GainerとSerialとわたし
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3989">[ 日付 ]</a>
+              <a href="thread.html#3989">[ スレッド ]</a>
+              <a href="subject.html#3989">[ 件名 ]</a>
+              <a href="author.html#3989">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>むとう＠おうちです。
+
+ごぶさたしてます。
+
+久しぶりに夏休みというものを味わって、はじけてました(^-^;)
+# <A HREF="http://qml.610t.org/FreeBSD/SummerVacation2008.html">http://qml.610t.org/FreeBSD/SummerVacation2008.html</A>
+
+OSC2008 Nagoyaで、Gainerの中の人のお話を聴く機会がありまして、横川さん
+のSqueak+Gainerも紹介されていました。
+
+私、ハードウエアが付録につくと、ついつい雑誌を買ってしまう人なのですが、
+その中にDesign Wave Magazine 2008/05のCortex-M3(ARM)基板というのも入っ
+ていました。これには、Gainerのサブセットも実装されており、3軸の加速度
+センサーもあるので、Squeak+Gainerと一緒に使うと、リアルハンドルとか作
+れて、結構面白いです。
+# が、残念ながらFreeBSDでは、使えない…
+
+
+で、本題ですが、FreeBSDとかでも使いたいので、SparkFunのGainer基板を購
+入して、Squeak+GainerをMacやFreeBSDで試していました。
+で、2つほど疑問点が出てきましたので、識者の方教えてください。
+
+1. Squeak+Gainer側の話
+Squeak+Gainer(14)のGNSerialClient class &gt;&gt; findClientでは、シリアルを3
+番目からなめているように見えます。
+これは、Windowsでは、0-2はレガシーのシリアルがいることが多いからですか
+ね?
+
+この感じだと、Unix系だと/dev/ttyS3とかからなめられてしまいませんかね?
+
+2. SqueakのSerialPluginの実装の話
+手元の3.9-7のVMのソースでは、
+- Squeak-3.9-7/platforms/unix/plugins/SerialPlugin/sqUnixSerial.c
+の最初の方で、
+{{{
+    21  /*** Module variables ***/
+    22  
+    23  /* portNum      0=/dev/ttyS0, etc. */
+    24  /* include 1 byte for NUL at end */
+    25  #define PORT_NAME_SIZE 11
+    26  static const char serialPortBaseName[] = &quot;/dev/ttyS0&quot;;
+    27  
+}}}
+と、シリアルデバイスは/dev/ttyS[0-9]とかを仮定しているように見えます。
+これが、USBの場合、/dev/ttyU[0-9]などになる実装も多いようですし、Macな
+どでは/dev/cu.usbserial-xxxxxxとかだったります。
+
+これって、どないしたもんでしょうか?
+MacのVMって、この辺どうなってるんでしょうか?
+
+Gainerだけだと、シリアルプロキシーとか使えばいいのかもしれませんが…
+
+では、情報いただければ幸いです。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://qml.610T.org/">http://qml.610T.org/</A>
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・自転車操業中 	    <A HREF="http://qml.610T.org/cycling/">http://qml.610T.org/cycling/</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003988.html">[Squeak-ja: 3988] Re: オープンソースカンファレンス 2008 Tokyo/Fall
+</A></li>
+	<LI>次の記事 <A HREF="003991.html">[Squeak-ja: 3991] Re: GainerとSerialとわたし
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3989">[ 日付 ]</a>
+              <a href="thread.html#3989">[ スレッド ]</a>
+              <a href="subject.html#3989">[ 件名 ]</a>
+              <a href="author.html#3989">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

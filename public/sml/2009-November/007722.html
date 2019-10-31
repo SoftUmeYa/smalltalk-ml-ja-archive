@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7722] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207722%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRv%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FIEhUTUwbJEIhVyRHJC0kXiQ3JD8bKEI%3D%3F%3D&In-Reply-To=1bc06fd30911150403x43eb71av881eb2143053b98a%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007721.html">
+   <LINK REL="Next"  HREF="007724.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7722] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207722%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRv%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FIEhUTUwbJEIhVyRHJC0kXiQ3JD8bKEI%3D%3F%3D&In-Reply-To=1bc06fd30911150403x43eb71av881eb2143053b98a%40mail.gmail.com"
+       TITLE="[SML 7722] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 11月 21日 (土) 11:44:12 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007721.html">[SML 7721] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+        <LI>次の記事 <A HREF="007724.html">[SML 7724] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7722">[ 日付 ]</a>
+              <a href="thread.html#7722">[ スレッド ]</a>
+              <a href="subject.html#7722">[ 件名 ]</a>
+              <a href="author.html#7722">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+
+前回ポストしたプログラムから、さらに変更を加えました。
+
+前回ポストしたプログラムを仮想イメージにFileInした状態で、
+添付ファイル&quot;Translators-hamasaki-ver2.st&quot;をFile Browser上で
+選択して、File Browserのメニュー File -&gt; Compare with Systm を
+実行すると、差分を調べることが出来ます。（残念ながら削除した
+クラスやメソッドは分かりませんが。）
+
+File In の際は、前回ポストしたプログラムのパッケージをSysmte
+Browserのメニュー Packege -&gt; Remove を実行してから File In
+してください。
+
+主な変更は以下のとおりです。
+・PrimeMinisterのaccessing-for-HTMLTableカテゴリのメソッドを整理
+　　結局、在位日数と画像へのハイパーリンクは、いわゆる導出
+　　属性である、またHTMLTableへ変換する時にどの属性を使う
+　　かは、メッセージセレクタの配列を与えるようにしたので、
+　　わざわざこのカテゴリのメッセージを用意する必要がない。
+
+・クラスHTMLHyperLinkToImageの追加
+　　クラスPrimeMinisterの中に画像イメージへのハイパーリンクを
+　　生成するコードが残っていたので、HTMLObjectのサブクラスと
+　　して本クラスを追加し、ハイパーリンクを生成するコードを
+　　こちらに移動。これに影響を受けてHTMLTableItemも若干変更。
+　　(HTMLPlaneTextなんていうクラスを作った方がいいのかも、と
+　　思っています。）
+
+・クラスHTMLCssStyleの追加
+　　CSS Styleの定義を保持する役割を持つクラスとして、本クラスを
+　　追加。
+　　このクラスを使ってHTMLDocumentの#writeHeaderOn:メソッドを
+　　整理すべく、HTMLObjectと各サブクラスも変更。
+　　現状プロパティ値を文字列で保持する実装で稚拙なものですが、
+　　スタートラインとしてはまずまず、と思っています。
+
+　　ただ、これまでcomplete.htmlとの差分は鳩山首相の在位日数とタイム
+　　スタンプだけだったのですが、スタイル定義中のプロパティ設定の
+　　並びに規則正しくない部分があったので、３箇所ほどHTMLコードが
+　　変わってしまいました。残念。。。
+
+・いくつか名前が適切でなさそうそうだったのを変更したり、Formatterを
+　かけたり
+　　例えば、HTMLの表の行をlineとしていましたが、HTMLの世界では
+　　rowと呼ぶようなので変更した、など。
+
+・HTMLTableのインスタンス変数primeMinisterTableを削除
+　　リファクタリング作業の名残です。
+　　不要になったのを消し忘れていました。
+
+次の勉強会までに、もう少し変更を加えられるかなあ、と思っています。
+
+以上です。
+
+2009年11月15日21:03 濱崎治 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">osamu.hamasaki ＠ gmail.com</A>&gt;:
+&gt;<i> 濱崎です。
+</I>&gt;<i>
+</I>&gt;<i> 私もようやく皆さんに見て頂けるレベルのコードになったので、
+</I>&gt;<i> プログラムをポストします。SUnitのテストケース付きです。
+</I>
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Translators-hamasaki-ver2.st.zip
+型:         application/zip
+サイズ:     10203 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20091121/fccf3e0d/Translators-hamasaki-ver2.st.zip">http://www.smalltalk.jp/pipermail/sml/attachments/20091121/fccf3e0d/Translators-hamasaki-ver2.st.zip</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007721.html">[SML 7721] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+	<LI>次の記事 <A HREF="007724.html">[SML 7724] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7722">[ 日付 ]</a>
+              <a href="thread.html#7722">[ スレッド ]</a>
+              <a href="subject.html#7722">[ 件名 ]</a>
+              <a href="author.html#7722">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

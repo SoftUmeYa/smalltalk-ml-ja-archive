@@ -1,0 +1,1732 @@
+From epi9tetus ＠ gmail.com  Wed May 10 03:11:05 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2949] セキュリティについての質問です
+Message-ID: <7aa126770605091111k70b6573dg694c35247fb78140@mail.gmail.com>
+
+理解できる範囲で、いつもROMにて勉強させてもらっています。
+
+ブラウザを起動する場合のセキュリティについて、
+分からないなりに調べたのですが、結局質問させてください。
+
+スクイークから、ブラウザを立ち上げると、VLANのような環境になるのかな?と
+思いつつ、理解が及ばないのですが、一般家庭の環境で、
+IEやゲッコーエンジンのブラウザを起動させる場合と、セキュリティ環境には
+変わりないのでしょうか?
+
+例えば、windowsのIEならアップデートやクッキー、ActiveXについての設定が指導され
+セキュリティソフト、ルータの使用による対策が一般的に認識されている方法だと
+思うのですが、スクイークのブラウザでも同様でしょうか?
+
+小学生が、自宅のパソコンでスクイークのブラウザを立ち上げてネットに接続する際、
+考えられる、又は大人が指導しておくべき危険性について、知りたいのです。
+（小学校で、e-TOYのクラスを受けることが出来るために、学校で使うツール＝安全。
+という認識が存在しているのですが、誰もその根拠を理解していません。）
+
+スクイークで作成したプロジェクトを公開するにしても、著作権などの理解が無いままに
+自由に公開させるべきでは無いという趣旨の会話の中で発生した疑問です。
+結局、結論にいたるには参加者の知識が及ばず、こちらに相談させて頂きました。
+
+From yoshiki ＠ squeakland.org  Wed May 10 09:49:45 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2950] Re: セキュリティについての質問です
+In-Reply-To: <7aa126770605091111k70b6573dg694c35247fb78140@mail.gmail.com>
+References: <7aa126770605091111k70b6573dg694c35247fb78140@mail.gmail.com>
+Message-ID: <umzdq7lg6.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> スクイークから、ブラウザを立ち上げると、VLANのような環境になるのかな?と
+> 思いつつ、理解が及ばないのですが、一般家庭の環境で、
+> IEやゲッコーエンジンのブラウザを起動させる場合と、セキュリティ環境には
+> 変わりないのでしょうか?
+
+  スクイークから立ち上がるWWWのブラウザもあるにはありますが、
+Squeakland2005Jに入っているものはよっぽどのことがない限り心配しなくて
+良いと思います。
+
+  あるいは、スクイークをブラウザから立ち上げる、という意味でよいでしょ
+うか?  その場合、スクイークをブラウザの中で動かして、ネットワークから
+プロジェクトをダウンロードして実行したときは、ローカルディスクの特定の
+フォルダ以下のみにアクセスを許すように「セキュリティ」が強化されます。
+
+> 例えば、windowsのIEならアップデートやクッキー、ActiveXについての設定が指導され
+> セキュリティソフト、ルータの使用による対策が一般的に認識されている方法だと
+> 思うのですが、スクイークのブラウザでも同様でしょうか?
+
+  この辺は、スクイークとは余り関係はないので、大きな心配はいらないと思
+います。
+
+> 小学生が、自宅のパソコンでスクイークのブラウザを立ち上げてネットに接続する際、
+> 考えられる、又は大人が指導しておくべき危険性について、知りたいのです。
+> （小学校で、e-TOYのクラスを受けることが出来るために、学校で使うツール＝安全。
+> という認識が存在しているのですが、誰もその根拠を理解していません。）
+
+  プロジェクトをアップロードできる共用のフォルダがあるので、そこにアク
+セスしたときにもしかしたら「不適切」なコンテンツがあってそれを目にして
+しまうかもしれません。
+
+  が、WWWを閲覧するときに気にすべきウイルス的なものは(とりあえず)心配
+しなくて良いでしょう。
+
+> スクイークで作成したプロジェクトを公開するにしても、著作権などの理解が無いままに
+> 自由に公開させるべきでは無いという趣旨の会話の中で発生した疑問です。
+> 結局、結論にいたるには参加者の知識が及ばず、こちらに相談させて頂きま
+> した。
+
+  著作権の問題はあると思います。どんなものであれ、何かを公開するのは危
+険です。スクイークに限らず、「世界に向けて公開」するのは、大人がチェッ
+クしてしてからであるべきだと思います。
+
+  ちょっとあいまいな答えになってしまっているかもしれませんが、また質問
+してください。
+
+-- Yoshiki
+
+
+  
+
+From abee ＠ squeakland.jp  Wed May 10 16:43:18 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2951] インターネット経由の作品の参照と公開について
+Message-ID: <44619996115.BB46ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+セキュリティ関連の話題もありましたので、現在のSqueakland 2005Jにおいて、
+インターネット経由の作品の参照と公開がどのようになっているかをご説明しま
+す。ここで説明する方法は試験運用の位置付けで、動作を保障するものではあり
+ません。
+
+まず、参照についてですが、ナビゲータの「探す」ボタンをクリックし、表示さ
+れるダイアログの左のリストから「Squeakland.JP」をクリックすることで、スク
+イークランドのSuperSwikiに置かれている作品の一覧が右のリストに表示されま
+す。作品を選び、「了解」ボタンをクリックすることで、それを開くことができ
+ます。
+作者などの情報を見る場合は、ナビゲータの「公開する!」ボタンを長押しし、表
+示されるメニューから「プロジェクトの情報を編集」を選んでください。
+
+次に、公開についてですが、ナビゲータの「公開する!」ボタンを長押しし、表
+示されるメニューから「異なるサーバーに公開」を選びます。表示されるダイア
+ログに作品名などの情報を入力した後、「了解」ボタンをクリックすると、別の
+ダイアログが開きます。下部のリストから「Squeakland.JP」を選択して、「保存」
+ボタンをクリックすると、スクイークランドのSuperSwikiにその作品が公開され
+ます。
+このとき、一度公開した作品をユーザが削除することはできません。慎重にお願
+いします。特に名前などの個人情報については注意してください。公開に先立っ
+て大人が確認することをお勧めします。
+同一の作品名で再度公開した場合は、最新のものがリストに表示されます(その場
+合でも過去の履歴は残ります)。万一の際は、以下の問い合わせ先に連絡をお願い
+します。
+
+http://squeakland.jp/about/contact.html
+
+公開される作品の内容については事前にチェックしていませんが、適宜内容を確
+認し、メンテナンスしています(予告なく削除する場合もあります)。作品は複数
+のバージョンやテスト中のものなどが混在しているため、常に正しく開けるとは
+限りません。
+作品の安全性については、大島さんが書かれていたような技術的な対策が取られ
+ていますが、最終的な判断は各人でお願いします。
+
+スクイーク(イートイ)では、その用語として、作品の「セーブ」や「ロード」で
+はなく、「公開」と「探す」を使ってきました。また、プラグイン版のスプラッ
+シュ画面には "Build and share"というスローガンが書かれています。
+インターネット経由の作品公開は、みんなのアイデアを共有するという意味で、
+とても役に立ちます。 BBSやblogと同様に適切な注意を払った上でご活用くださ
+い。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Sun May 14 13:19:32 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2952] SuperSwiki2を発表します
+Message-ID: <JE200605141319324.4517093@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SuperSwikiの後継となるべくして開発したSuperSwiki2を公開しました。
+下記からダウンロードできます。
+http://swikis.ddo.jp/SuperSwiki2/2
+
+今までSuperSwikiを使ってきた方は、ぜひお試しください。
+
+現在Squeakland.jpのSuperSwikiでは200あまりのプロジェクトが登録
+されているわけですが、数が多くなると、閲覧が非常にしにくくなって
+しまいます。
+http://squeakland.jp/super
+
+SuperSwiki2では、プロジェクトの数が増えても操作性が失われない
+ように、カテゴリによる絞り込みや、作者やキーワードなどによる
+検索をサポートしています。
+http://squeakland.jp/super2 (まだ登録は少ないです)
+
+また、クライアント側では特別な設定が不要になっており、単にイメージを
+立ち上げるだけで、勝手にLAN内のSuperSwiki2を検出するようになって
+います。これは教室内でSuperSwiki2を立ち上げる時に重宝します。
+
+その他、掲示板システムや、複数のSuperSwiki2を一つのSuperSwiki2に
+マージする機能、最近の変更をRSSで配信する機能なども備わっています
+
+かなりテストしたつもりですが、まだ最初のリリースなので不具合などが
+見つかるかもしれません。その際はお気軽にご連絡ください。
+---
+[:masashi | ^umezawa]
+
+From epi9tetus ＠ gmail.com  Mon May 15 00:52:42 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2953] Re: セキュリティについての質問です
+In-Reply-To: <umzdq7lg6.wl%yoshiki@squeakland.org>
+References: <7aa126770605091111k70b6573dg694c35247fb78140@mail.gmail.com>
+	<umzdq7lg6.wl%yoshiki@squeakland.org>
+Message-ID: <7aa126770605140852j4a92be8el4f2b8ebcf44c0f81@mail.gmail.com>
+
+ご返信有り難うございました。
+
+scamperを立ち上げて操作する場合のセキュリティリスクについての質問と
+記述すべきでした。要領が悪くお手数をおかけしてしまいました。ごめんなさい。
+投稿時には、もしかしたらscamper以外にもsqueakのブラウザは複数存在する
+のかも知れないと思っており、曖昧な記述となりましたことをお詫びいたします。
+
+その後、少し書籍なども読みつつ、まだよく理解できていないのですが、
+ブロードバンドルータや、セキュリティソフトの設定があれば十分安全そうだと
+解釈しました。
+
+例えば、特定のポータルサイトにはセキュリティを緩和しないとログインできない例の
+ように、scamperにもそういうことがあるのでは？などとも思いつつ、まだ簡単なテストしか
+出来ていません。
+（しかも、scamperを立ち上げてみたら、接続できませんでした。前回は接続できたので
+何が違うのか、時間のあるときに原因を調べなければと勉強中です）
+
+ウイルス的なものをとりあえず心配せずとも良い。というのは、技術的に悪意のある
+プログラムを進入させることが極めて困難であり、他のブラウザよりも安全だと言うこと
+なのか、又はユーザの傾向やシェアの規模から前例が無く、可能性が低いのか、
+誠に申し訳ないのですが、もう少しご教授願えませんでしょうか？
+
+前者ならば、子供達と家庭にその旨伝えて、scamperの使用を推奨したいと思います。
+
+From yoshiki ＠ squeakland.org  Mon May 15 20:10:32 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2954] Re: セキュリティについての質問です
+In-Reply-To: <7aa126770605140852j4a92be8el4f2b8ebcf44c0f81@mail.gmail.com>
+References: <7aa126770605091111k70b6573dg694c35247fb78140@mail.gmail.com>
+	<umzdq7lg6.wl%yoshiki@squeakland.org>
+	<7aa126770605140852j4a92be8el4f2b8ebcf44c0f81@mail.gmail.com>
+Message-ID: <u4pzrczmf.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> scamperを立ち上げて操作する場合のセキュリティリスクについての質問と
+> 記述すべきでした。要領が悪くお手数をおかけしてしまいました。ごめんなさい。
+> 投稿時には、もしかしたらscamper以外にもsqueakのブラウザは複数存在する
+> のかも知れないと思っており、曖昧な記述となりましたことをお詫びいたします。
+
+  いえいえ。かまわないですよ。
+
+  ただ、「子供がScamperを使う」というその状況があまり想像できなかった
+ので、おもわず逆の状況を想定してしまいました。すみません。
+
+  Scamperは実験的なもので、そもそもBasic認証程度以上のことをしているサ
+イトではほとんど何もできないと思います。そもそも、なぜScamperを使おう
+と思われたのか、使ってみて「これは役に立たないな」と思われなかったのか
+^^;そこが気になります。
+
+> その後、少し書籍なども読みつつ、まだよく理解できていないのですが、
+> ブロードバンドルータや、セキュリティソフトの設定があれば十分安全そうだと
+> 解釈しました。
+
+  そうですね。ただ、それを実行しているSqueakイメージの状態を変えるよう
+な事は、セキュリティソフトなどの感知しない範囲でやろうと思えばできると
+思います。
+
+> 例えば、特定のポータルサイトにはセキュリティを緩和しないとログインできない例の
+> ように、scamperにもそういうことがあるのでは？などとも思いつつ、まだ簡単なテストしか
+> 出来ていません。
+> （しかも、scamperを立ち上げてみたら、接続できませんでした。前回は接続できたので
+> 何が違うのか、時間のあるときに原因を調べなければと勉強中です）
+
+  Scamperにはセキュリティレベルの緩和というような機能はないです。basic 
+認証でアクセスできる、という程度ですので。
+
+> ウイルス的なものをとりあえず心配せずとも良い。というのは、技術的に悪意のある
+> プログラムを進入させることが極めて困難であり、他のブラウザよりも安全だと言うこと
+> なのか、又はユーザの傾向やシェアの規模から前例が無く、可能性が低いのか、
+> 誠に申し訳ないのですが、もう少しご教授願えませんでしょうか？
+
+  これは、両方です。例えばIEのように、Windowsのことをよく知っているが
+ために、悪意のあるプログラムにIEの弱点経由でWindowsの弱いところをつか
+せてしまう、というようなことはありません。ScamperはWindowsのことは何も
+知りませんので。
+
+  しかし、ユーザの不注意により、例えばScamper中に表示されているページ
+をSqueakの式として評価してしまって、その式がSqueakイメージの何かを書き
+換えてしまうようなものだったというようなことがあれば、そのSqueak イメー
+ジには問題が及ぶ可能性はありますし、もしIEのようなブラウザの中で動かし
+ていなければ、ファイルを書き換えることによってOS に影響を与えることも
+可能とは思います。それでも普通のブラウザより危険、ということはないです。
+
+  もちろん、Scamperを狙った「悪いページ」というのはまずほとんどないと
+思いますので、そういう面ではとりあえず安心はできます。
+
+> 前者ならば、子供達と家庭にその旨伝えて、scamperの使用を推奨したいと思います。
+
+  なぜScamperなのか、というところにまだ疑問を感じてしまうので、よろし
+ければScamperを使いたい理由をお聞かせください。
+
+-- Yoshiki
+From abee ＠ squeakland.jp  Thu May 18 19:36:44 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2955] Re: NICT 科学技術ふれあい day 「絵を音でつくろう」
+In-Reply-To: <444A1A56BD.CFDBABEE@smtp.nifty.com>
+References: <444A1A56BD.CFDBABEE@smtp.nifty.com>
+Message-ID: <446C4E3C10D.F889ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+先日、NICTで行ったワークショップをご紹介しましたが、この様子がテレビで放
+送されました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-April/002943.html
+
+この番組は、BS朝日 5/13(土) 22:00-22:55の「SHAKE THE MUSIC」で、ワークシ
+ョップの概要や子供たちへのインタビュー、私のコメントなどが5分ほど流れまし
+た(最後に司会のムッシュかまやつの感想あり)。
+
+通常は翌土曜日の17:00に再放送するらしいですが、番組Webページによると5/20
+は休止とありますね。
+
+http://www.bs-asahi.co.jp/shake/
+
+この番組はGyaOでも配信されていますが、ライブのところだけのようです。
+
+http://www.gyao.jp/music/shake/
+
+もしご覧になった方がいらっしゃればご感想などお聞かせください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Fri May 19 22:08:51 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2956] Re: SuperSwiki2を発表します
+In-Reply-To: <JE200605141319324.4517093@mars.dti.ne.jp>
+References: <JE200605141319324.4517093@mars.dti.ne.jp>
+Message-ID: <JF200605192208514.1901046@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SuperSwiki2ですが、若干修正しました。
+
+今回はWindows用のインストーラも作ってみましたのでぜひお試しください。
+http://swikis.ddo.jp/SuperSwiki2/16
+
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> SuperSwikiの後継となるべくして開発したSuperSwiki2を公開しました。
+> 下記からダウンロードできます。
+> http://swikis.ddo.jp/SuperSwiki2/2
+> 
+> 今までSuperSwikiを使ってきた方は、ぜひお試しください。
+> 
+> 現在Squeakland.jpのSuperSwikiでは200あまりのプロジェクトが登録
+> されているわけですが、数が多くなると、閲覧が非常にしにくくなって
+> しまいます。
+> http://squeakland.jp/super
+> 
+> SuperSwiki2では、プロジェクトの数が増えても操作性が失われない
+> ように、カテゴリによる絞り込みや、作者やキーワードなどによる
+> 検索をサポートしています。
+> http://squeakland.jp/super2 (まだ登録は少ないです)
+> 
+> また、クライアント側では特別な設定が不要になっており、単にイメージを
+> 立ち上げるだけで、勝手にLAN内のSuperSwiki2を検出するようになって
+> います。これは教室内でSuperSwiki2を立ち上げる時に重宝します。
+> 
+> その他、掲示板システムや、複数のSuperSwiki2を一つのSuperSwiki2に
+> マージする機能、最近の変更をRSSで配信する機能なども備わっています
+> 
+> かなりテストしたつもりですが、まだ最初のリリースなので不具合などが
+> 見つかるかもしれません。その際はお気軽にご連絡ください。
+
+---
+[:masashi | ^umezawa]
+
+From nori_yg ＠ ybb.ne.jp  Sat May 20 11:49:33 2006
+From: nori_yg ＠ ybb.ne.jp (八木則茂)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2957] スクリプトの中で三角関数を利用する方法
+In-Reply-To: <2d5d52a80605190313s5cb079d8y99790f4790eeca68@mail.gmail.com>
+Message-ID: <000001c67bb8$0670ea20$0800a8c0@YAGI6>
+
+スクイーカの皆様
+
+八木ともうします。はじめまして。
+デジタルハリウッド大で実施されている小学生向けのワークショップの
+サポータに月１程度ですが参加しています。
+
+最近、squeak-ja@smalltalk.jp　のメーリングリストに参加させていただきました。
+
+スクリプトの中で、三角関数を使用したいと考えているのですが
+方法がわかりません。ご教授いただけないでしょうか。
+
+具体的には
+
+	角度 = arccos((a^2+b^2-c^2)/(2*a*b))
+
+		* arccos は　cos の逆三角関数のつもりで書いています。
+		*余弦定理を使用して、３辺がわかっている三角形から角度を求め
+ています。
+
+を計算させていたいということです。
+
+よろしくお願いいたします。
+
+					八木
+
+
+From daidou ＠ ca2.so-net.ne.jp  Sat May 20 21:27:08 2006
+From: daidou ＠ ca2.so-net.ne.jp (大道 裕)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2958] Re: スクリプトの中で三角関数を利用する方法
+In-Reply-To: <000001c67bb8$0670ea20$0800a8c0@YAGI6>
+References: <000001c67bb8$0670ea20$0800a8c0@YAGI6>
+Message-ID: <446F0B1C.6080208@ca2.so-net.ne.jp>
+
+大道です。
+
+スクイークは全くの初心者で、スクリプトの書き方も
+良くわからないのですが、「Text」オブジェクトに
+表示させてみました。
+
+インスタンス変数　a,b,cに値を設定し
+
+self setCharacters: ((((a*a)+(b*b)-(c*c))/(2*a*b))arcCos)asString
+
+で角度（ラジアン）が表示されます。
+
+八木則茂 wrote:
+
+> スクリプトの中で、三角関数を使用したいと考えているのですが
+> 方法がわかりません。ご教授いただけないでしょうか。
+> 
+> 具体的には
+> 
+> 	角度 = arccos((a^2+b^2-c^2)/(2*a*b))
+> 
+> 		* arccos は　cos の逆三角関数のつもりで書いています。
+> 		*余弦定理を使用して、３辺がわかっている三角形から角度を求め
+> ています。
+
+-- 
+****************************************
+   大道 裕
+
+   かわうそ会ホームページ
+http://suiren.mitaka.tokyo.jp/kawauso/
+
+   三鷹市水泳連盟ホームページ
+http://suiren.mitaka.tokyo.jp/
+****************************************
+
+From nori_yg ＠ ybb.ne.jp  Sun May 21 18:04:34 2006
+From: nori_yg ＠ ybb.ne.jp (八木則茂)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2959] Re: Squeak-ja まとめ読み, 19 巻, 7 号
+Message-ID: <000101c67cb5$94d68790$0202fea9@YAGI6>
+
+大道さん
+
+早速のご回答ありがとうございます。
+
+私は、いただいたご回答で自分のかなりの知識のなさがわかりました。
+
+１）私のスクイークの知識はスクイーク２００５Jで、
+	オブジェクトを表示し水色ハロをクリックしビューワを表示させ
+	ビューワからタイルを引っ張り出しスクリプトを作るという
+	方法で使ってきたため、 インスタンス変数の考え方が難しいです。
+
+２）数式の文法も理解できてないです。
+
+	self setCharacters: ((((a*a)+(b*b)-(c*c))/(2*a*b))arcCos)asString
+
+　これはSmallTalkの文法かと推測しますがあってますでしょうか?
+
+１）、２）を考え合わせると、SmallTalkのような一歩踏み込んだ方法を
+用いないと三角関数をスクイークでは使えないでしょうか。
+
+お答えいただき非常に感謝しておりますが、質問ばかりですみません。
+
+				八木
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of squeak-ja-request@smalltalk.jp
+Sent: なし
+To: squeak-ja@smalltalk.jp
+Subject: Squeak-ja まとめ読み, 19 巻, 7 号
+
+Squeak-ja メーリングリストへの投稿は以下のアドレスに送ってください．
+	squeak-ja@smalltalk.jp
+
+Webブラウザを使って入退会するには以下のURLにどうぞ．
+	http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+メールを使う場合，件名(Subject:)または本文に help と書いて以下の
+アドレスに送信してください．
+	squeak-ja-request@smalltalk.jp
+
+メーリングリストの管理者への連絡は，以下のアドレスにお願いします.
+	squeak-ja-owner@smalltalk.jp
+
+返信する場合，件名を書き直して内容がわかるようにしてください．
+そのままだと，以下のようになってしまいます． "Re: Squeak-ja
+まとめ読み, XX 巻 XX 号"
+
+
+本日の話題:
+
+   1. [Squeak-ja: 2958] Re: スクリプトの中で三角関数を利用する方法
+      (大道 裕)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Sat, 20 May 2006 21:27:08 +0900
+From: 大道 裕 <daidou@ca2.so-net.ne.jp>
+Subject: [Squeak-ja: 2958] Re: スクリプトの中で三角関数を利用する方法
+To: Squeak discussion in Japanese <squeak-ja@smalltalk.jp>
+Message-ID: <446F0B1C.6080208@ca2.so-net.ne.jp>
+Content-Type: text/plain; charset=ISO-2022-JP
+
+大道です。
+
+スクイークは全くの初心者で、スクリプトの書き方も
+良くわからないのですが、「Text」オブジェクトに
+表示させてみました。
+
+インスタンス変数　a,b,cに値を設定し
+
+self setCharacters: ((((a*a)+(b*b)-(c*c))/(2*a*b))arcCos)asString
+
+で角度（ラジアン）が表示されます。
+
+八木則茂 wrote:
+
+> スクリプトの中で、三角関数を使用したいと考えているのですが
+> 方法がわかりません。ご教授いただけないでしょうか。
+>
+> 具体的には
+>
+> 	角度 = arccos((a^2+b^2-c^2)/(2*a*b))
+>
+> 		* arccos は　cos の逆三角関数のつもりで書いています。
+> 		*余弦定理を使用して、３辺がわかっている三角形から角度を求め
+> ています。
+
+--
+****************************************
+   大道 裕
+
+   かわうそ会ホームページ
+http://suiren.mitaka.tokyo.jp/kawauso/
+
+   三鷹市水泳連盟ホームページ
+http://suiren.mitaka.tokyo.jp/
+****************************************
+
+
+------------------------------
+
+_______________________________________________
+Squeak-ja mailing list
+Squeak-ja@smalltalk.jp
+http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+
+
+以上: Squeak-ja まとめ読み, 19 巻, 7 号
+***************************************
+
+
+From abee ＠ squeakland.jp  Sun May 21 19:05:14 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2960] Re: スクリプトの中で三角関数を利用する方法
+In-Reply-To: <000001c67bb8$0670ea20$0800a8c0@YAGI6>
+References: <2d5d52a80605190313s5cb079d8y99790f4790eeca68@mail.gmail.com>
+	<000001c67bb8$0670ea20$0800a8c0@YAGI6>
+Message-ID: <44703B5A13B.8686ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+それでは、私はeToys(タイルスクリプト)を使った方法をご紹介します。
+どんなモーフ(オブジェクト)を使ってもよいのですが、ここでは楕円を使います。
+部品フラップから楕円を引っ張り出して、ビューワを開き、幾何カテゴリに切り
+替えます。
+eToysの世界(ワールド)では左下が原点です。楕円を動かすと「x座標」と「y座標」
+の値が変化するのが分かります。
+これらの値は、原点、楕円の中心、楕円の中心からx軸に下ろした垂線とx軸の交
+点をそれぞれ頂点とした直角三角形の底辺と垂辺の長さと考えることができます。
+このとき、斜辺は「距離」、底辺と斜辺のなす角度は「θ値」として表されます
+(つまり極座標ですね)。
+したがって、三辺中二辺の長さを決定すれば、残りの一辺とθ値が求まることに
+なります。
+
+スクリプトとしては、単に「x座標」「y座標」「距離」の内、2つに適当な値を代
+入し、チクタクすると残りの値とθ値が決まります。
+このとき、一度ビックリで実行しただけでは収束せず、何回か繰り返す必要があ
+るのが面白いところです。これは制約解消の例といえるでしょう。
+
+今話題のSuperSwiki2にサンプルのプロジェクトを置きました。できれば、ご自分
+でお試しになったあとにご覧ください。
+
+http://squeakland.jp/seaside/SBSuperSwiki?_s=MgHWLpvmpECNEKln&_k=ffYROmeB
+
+また、大道さんが書かれているようなSmalltalkを使う方法も面白いので、そちら
+のお話もぜひお続けください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From daidou ＠ ca2.so-net.ne.jp  Sun May 21 19:42:17 2006
+From: daidou ＠ ca2.so-net.ne.jp (大道 裕)
+Date: Thu Dec  6 11:03:28 2007
+Subject: [Squeak-ja: 2961] Re: Squeak-ja まとめ読み, 19 巻, 7 号
+In-Reply-To: <000101c67cb5$94d68790$0202fea9@YAGI6>
+References: <000101c67cb5$94d68790$0202fea9@YAGI6>
+Message-ID: <44704409.5020505@ca2.so-net.ne.jp>
+
+大道です。
+
+私は「自由自在Squeakプログラミング」で勉強しただけなのですが、
+http://www.sumita-planning.jp/~shunta/squeak/squeak-small.html
+をみると「Smalltalkモード」と書いてありますので、そうなのでしょ
+う。
+
+どういうことがやりたいのかわかりませんので、手順だけ説明します。
+Squeak2005jでしたら、
+１）「部品」から「テキスト」を引っ張り出して、ビュアーを開く。
+２）一番上の「テキスト」の文字の左にマウスをのせると「・・・
+変数を追加できます」と出ますのでクリックします。
+３）変数１となっているのを「a」と変更して「了解」。同じように
+変数b,cを追加します。デフォルトで数値が設定されていると思いま
+すが、それぞれに値を設定します。
+４）「空のスクリプト」を引っ張り出して、「テキスト」の左の四角
+にチェックを入れるとスクリプトが記入できるようになりますので、
+↑の後ろに
+self setCharacters: ((((a*a)+(b*b)-(c*c))/(2*a*b))arcCos)asString
+を貼り付けます。
+５）スクリプトを右クリックして「了解」
+６）スクリプト左上の「！」をクリックするとラジアンが表示されます。
+長くて表示しきれないので、「テキスト」を右に引き延ばします。
+
+なお、Smalltalkはオブジェクト指向言語ですので
+arcCos(数値）ではなく
+数値 arcCos
+と書きます。
+
+八木則茂 wrote:
+> 大道さん
+> 
+> 早速のご回答ありがとうございます。
+> 
+> 私は、いただいたご回答で自分のかなりの知識のなさがわかりました。
+> 
+> １）私のスクイークの知識はスクイーク２００５Jで、
+> 	オブジェクトを表示し水色ハロをクリックしビューワを表示させ
+> 	ビューワからタイルを引っ張り出しスクリプトを作るという
+> 	方法で使ってきたため、 インスタンス変数の考え方が難しいです。
+> 
+> ２）数式の文法も理解できてないです。
+> 
+> 	self setCharacters: ((((a*a)+(b*b)-(c*c))/(2*a*b))arcCos)asString
+> 
+> 　これはSmallTalkの文法かと推測しますがあってますでしょうか?
+> 
+> １）、２）を考え合わせると、SmallTalkのような一歩踏み込んだ方法を
+> 用いないと三角関数をスクイークでは使えないでしょうか。
+
+-- 
+****************************************
+   大道 裕
+
+   かわうそ会ホームページ
+http://suiren.mitaka.tokyo.jp/kawauso/
+
+   三鷹市水泳連盟ホームページ
+http://suiren.mitaka.tokyo.jp/
+****************************************
+
+From nori_yg ＠ ybb.ne.jp  Sun May 21 21:09:18 2006
+From: nori_yg ＠ ybb.ne.jp (八木則茂)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2962] Re: スクリプトの中で三角関数を利用する方法
+In-Reply-To: <44703B5A13B.8686ABEE@smtp.nifty.com>
+Message-ID: <000001c67ccf$643112d0$0202fea9@YAGI6>
+
+大道さん、阿部さん
+
+ここまで教えていただけたら
+後は私が理解するだけだと思います。
+
+メールの内容を理解して
+がんばります。
+
+ありがとうございました。
+
+			八木
+
+
+From tango ＠ eggegg.co.jp  Sun May 21 21:44:55 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2963] Re: Squeak-ja まとめ読み, 19 巻, 7 号
+References: <000101c67cb5$94d68790$0202fea9@YAGI6>
+Message-ID: <001301c67cd4$5ec0ea50$6dc4d2ca@gomes>
+
+やまもとです
+
+
+プロジェクト置き場の阿部さんの作品
+「車で三角関数」が参考になると思いまする。
+SqueakNihongo4a用ですが
+最新版のSqueakでも一応ちゃんと動いてました。
+
+http://swikis.ddo.jp/abee/14
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+----- Original Message ----- 
+From: "八木則茂" <nori_yg@ybb.ne.jp>
+To: <squeak-ja@smalltalk.jp>
+Sent: Sunday, May 21, 2006 6:04 PM
+Subject: [Squeak-ja: 2959] Re: Squeak-ja まとめ読み, 19 巻, 7 号
+
+
+> 大道さん
+>
+> 早速のご回答ありがとうございます。
+>
+> 私は、いただいたご回答で自分のかなりの知識のなさがわかりました。
+>
+> １）私のスクイークの知識はスクイーク２００５Jで、
+> オブジェクトを表示し水色ハロをクリックしビューワを表示させ
+> ビューワからタイルを引っ張り出しスクリプトを作るという
+> 方法で使ってきたため、 インスタンス変数の考え方が難しいです。
+>
+> ２）数式の文法も理解できてないです。
+>
+> self setCharacters: ((((a*a)+(b*b)-(c*c))/(2*a*b))arcCos)asString
+>
+> 　これはSmallTalkの文法かと推測しますがあってますでしょうか?
+>
+> １）、２）を考え合わせると、SmallTalkのような一歩踏み込んだ方法を
+> 用いないと三角関数をスクイークでは使えないでしょうか。
+>
+> お答えいただき非常に感謝しておりますが、質問ばかりですみません。
+>
+> 八木
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]
+> On Behalf Of squeak-ja-request@smalltalk.jp
+> Sent: なし
+> To: squeak-ja@smalltalk.jp
+> Subject: Squeak-ja まとめ読み, 19 巻, 7 号
+>
+> Squeak-ja メーリングリストへの投稿は以下のアドレスに送ってください．
+> squeak-ja@smalltalk.jp
+>
+> Webブラウザを使って入退会するには以下のURLにどうぞ．
+> http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+> メールを使う場合，件名(Subject:)または本文に help と書いて以下の
+> アドレスに送信してください．
+> squeak-ja-request@smalltalk.jp
+>
+> メーリングリストの管理者への連絡は，以下のアドレスにお願いします.
+> squeak-ja-owner@smalltalk.jp
+>
+> 返信する場合，件名を書き直して内容がわかるようにしてください．
+> そのままだと，以下のようになってしまいます． "Re: Squeak-ja
+> まとめ読み, XX 巻 XX 号"
+>
+>
+> 本日の話題:
+>
+>    1. [Squeak-ja: 2958] Re: スクリプトの中で三角関数を利用する方法
+>       (大道 裕)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Sat, 20 May 2006 21:27:08 +0900
+> From: 大道 裕 <daidou@ca2.so-net.ne.jp>
+> Subject: [Squeak-ja: 2958] Re: スクリプトの中で三角関数を利用する方法
+> To: Squeak discussion in Japanese <squeak-ja@smalltalk.jp>
+> Message-ID: <446F0B1C.6080208@ca2.so-net.ne.jp>
+> Content-Type: text/plain; charset=ISO-2022-JP
+>
+> 大道です。
+>
+> スクイークは全くの初心者で、スクリプトの書き方も
+> 良くわからないのですが、「Text」オブジェクトに
+> 表示させてみました。
+>
+> インスタンス変数　a,b,cに値を設定し
+>
+> self setCharacters: ((((a*a)+(b*b)-(c*c))/(2*a*b))arcCos)asString
+>
+> で角度（ラジアン）が表示されます。
+>
+> 八木則茂 wrote:
+>
+> > スクリプトの中で、三角関数を使用したいと考えているのですが
+> > 方法がわかりません。ご教授いただけないでしょうか。
+> >
+> > 具体的には
+> >
+> > 角度 = arccos((a^2+b^2-c^2)/(2*a*b))
+> >
+> > * arccos は　cos の逆三角関数のつもりで書いています。
+> > *余弦定理を使用して、３辺がわかっている三角形から角度を求め
+> > ています。
+>
+> --
+> ****************************************
+>    大道 裕
+>
+>    かわうそ会ホームページ
+> http://suiren.mitaka.tokyo.jp/kawauso/
+>
+>    三鷹市水泳連盟ホームページ
+> http://suiren.mitaka.tokyo.jp/
+> ****************************************
+>
+>
+> ------------------------------
+>
+> _______________________________________________
+> Squeak-ja mailing list
+> Squeak-ja@smalltalk.jp
+> http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+>
+>
+> 以上: Squeak-ja まとめ読み, 19 巻, 7 号
+> ***************************************
+>
+
+
+
+From tango ＠ eggegg.co.jp  Sun May 21 21:46:58 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2964] Re: スクリプトの中で三角関数を利用する方法
+References: <2d5d52a80605190313s5cb079d8y99790f4790eeca68@mail.gmail.com><000001c67bb8$0670ea20$0800a8c0@YAGI6>
+	<44703B5A13B.8686ABEE@smtp.nifty.com>
+Message-ID: <002401c67cd4$a7dcbc50$6dc4d2ca@gomes>
+
+やまもとです。
+
+阿部さんのレスを読まずに
+書き込んでしまいました。(汗)
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+----- Original Message ----- 
+From: "Kazuhiro ABE" <abee@squeakland.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Sunday, May 21, 2006 7:05 PM
+Subject: [Squeak-ja: 2960] Re: スクリプトの中で三角関数を利用する方法
+
+
+> 阿部@新百合です。
+>
+> それでは、私はeToys(タイルスクリプト)を使った方法をご紹介します。
+> どんなモーフ(オブジェクト)を使ってもよいのですが、ここでは楕円を使います。
+> 部品フラップから楕円を引っ張り出して、ビューワを開き、幾何カテゴリに切り
+> 替えます。
+> eToysの世界(ワールド)では左下が原点です。楕円を動かすと「x座標」と「y座
+標」
+> の値が変化するのが分かります。
+> これらの値は、原点、楕円の中心、楕円の中心からx軸に下ろした垂線とx軸の交
+> 点をそれぞれ頂点とした直角三角形の底辺と垂辺の長さと考えることができます。
+> このとき、斜辺は「距離」、底辺と斜辺のなす角度は「θ値」として表されます
+> (つまり極座標ですね)。
+> したがって、三辺中二辺の長さを決定すれば、残りの一辺とθ値が求まることに
+> なります。
+>
+> スクリプトとしては、単に「x座標」「y座標」「距離」の内、2つに適当な値を代
+> 入し、チクタクすると残りの値とθ値が決まります。
+> このとき、一度ビックリで実行しただけでは収束せず、何回か繰り返す必要があ
+> るのが面白いところです。これは制約解消の例といえるでしょう。
+>
+> 今話題のSuperSwiki2にサンプルのプロジェクトを置きました。できれば、ご自分
+> でお試しになったあとにご覧ください。
+>
+> http://squeakland.jp/seaside/SBSuperSwiki?_s=MgHWLpvmpECNEKln&_k=ffYROmeB
+>
+> また、大道さんが書かれているようなSmalltalkを使う方法も面白いので、そちら
+> のお話もぜひお続けください。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+
+
+
+From abee ＠ squeakland.jp  Sun May 21 22:03:22 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2965] Re: Squeak-ja まとめ読み , 19 巻 , 7 号
+In-Reply-To: <001301c67cd4$5ec0ea50$6dc4d2ca@gomes>
+References: <000101c67cb5$94d68790$0202fea9@YAGI6>
+	<001301c67cd4$5ec0ea50$6dc4d2ca@gomes>
+Message-ID: <4470651A3B.77D4ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 21 May 2006 21:44:55 +0900
+"Thoru Yamamoto" <tango@eggegg.co.jp> wrote:
+>プロジェクト置き場の阿部さんの作品
+>「車で三角関数」が参考になると思いまする。
+>SqueakNihongo4a用ですが
+>最新版のSqueakでも一応ちゃんと動いてました。
+>
+>http://swikis.ddo.jp/abee/14
+
+ご紹介ありがとうございます。
+
+あわせて、その下のほうにあるThoruさんの「三角関数ノート」「三角関数ノート
+2」およびその前後の作品群、さらにはKenkichiItou(kenk)さんの一連の作品群も
+ご覧ください。
+
+私のについては、余計な装飾に惑わされずにご覧ください。ここで使っている
+「遊び場」は「ワールド」と同じもので、その中にそれ自身の座標系(ローカル座
+標系)を持っています。さらに、赤ハロメニューの「遊び場の拡張機能」を使って
+原点を左下から中心に変えています。、
+
+とある小学生さんといい(今は中学生ですよね)、この頃のプロジェクト置き場は
+なんだかすごく良い雰囲気で回っていたような気がします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Sun May 21 22:05:17 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2966] Re: スクリプトの中で三角関数を利用する方法
+In-Reply-To: <44703B5A13B.8686ABEE@smtp.nifty.com>
+References: <2d5d52a80605190313s5cb079d8y99790f4790eeca68@mail.gmail.com>
+	<000001c67bb8$0670ea20$0800a8c0@YAGI6>
+	<44703B5A13B.8686ABEE@smtp.nifty.com>
+Message-ID: <JD200605212205174.441843@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 
+> 今話題のSuperSwiki2にサンプルのプロジェクトを置きました。できれば、ご自分
+> でお試しになったあとにご覧ください。
+> 
+> http://squeakland.jp/seaside/SBSuperSwiki?_s=MgHWLpvmpECNEKln&_k=ffYROmeB
+> 
+
+SuperSwiki2のURLは個人ごとに動的に作られるものになりますので、他の人からは
+そのままではアクセスできません。ページ上部に出ている参照用のURLをお使いください。
+
+「二辺の長さから角度を求める」
+http://squeakland.jp/seaside/SBSuperSwiki/86c4a74e-70e9-4320-8de4-af398c3a480b
+
+と思います。
+
+#SuperSwiki2ですが、速くもスペイン語版の翻訳ファイルを投稿してくれた方がいます。
+#アグレッシブに開発していきますので、皆さんご意見をお聞かせください。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Sun May 21 22:19:41 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2967] Re: スクリプトの中で三角関数を利用する方法
+In-Reply-To: <JD200605212205174.441843@mars.dti.ne.jp>
+References: <44703B5A13B.8686ABEE@smtp.nifty.com>
+	<JD200605212205174.441843@mars.dti.ne.jp>
+Message-ID: <447068ED1FC.77D5ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 21 May 2006 22:05:17 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>SuperSwiki2のURLは個人ごとに動的に作られるものになりますので、他の人からは
+>そのままではアクセスできません。ページ上部に出ている参照用のURLをお使いください。
+>
+>「二辺の長さから角度を求める」
+>http://squeakland.jp/seaside/SBSuperSwiki/86c4a74e-70e9-4320-8de4-af398c3a480b
+>
+>と思います。
+
+がーん。それはそうか、Seasideですもんね。
+すみません、お手間を取らせました。
+
+関係ないですが、高橋さんの「二項分布」は面白いですね。
+http://squeakland.jp/seaside/SBSuperSwiki/58a6a553-a35d-4a57-8a1f-7c46bcdfa35d
+
+>#SuperSwiki2ですが、速くもスペイン語版の翻訳ファイルを投稿してくれた方がいます。
+>#アグレッシブに開発していきますので、皆さんご意見をお聞かせください。
+
+すごい。イベリコ豚が待ってますよ。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From daidou ＠ ca2.so-net.ne.jp  Mon May 22 10:28:15 2006
+From: daidou ＠ ca2.so-net.ne.jp (大道 裕)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2968] Re: スクリプトの中で三角関数を利用する方法
+In-Reply-To: <000001c67ccf$643112d0$0202fea9@YAGI6>
+References: <000001c67ccf$643112d0$0202fea9@YAGI6>
+Message-ID: <447113AF.9050606@ca2.so-net.ne.jp>
+
+大道です。
+
+このMLにはつい最近参加したのですが、コミュニティ色が非常に
+強くて、スクリプティングの質問など出来ないのかな？と思って
+いたので、八木さんの質問は、うれしく思いました。
+
+まさに「錚々たる」方々がこのスレッドに参加してくださり、びっ
+くりしています。
+
+ところで、Smalltalkでは式は左から右へ評価されるので、
+
+self setCharacters: (a*a+(b*b)-(c*c)/(2*a*b)) arcCos asString
+
+と書けるのですね。（acceptしたら、こう書き直されました。）
+
+なお蛇足ですが、貼り付ける場合は　Alt + V です、
+
+八木則茂 wrote:
+
+> ここまで教えていただけたら
+> 後は私が理解するだけだと思います。
+
+-- 
+****************************************
+   大道 裕
+
+   かわうそ会ホームページ
+http://suiren.mitaka.tokyo.jp/kawauso/
+
+   三鷹市水泳連盟ホームページ
+http://suiren.mitaka.tokyo.jp/
+****************************************
+
+From abee ＠ squeakland.jp  Mon May 22 12:41:58 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2969] あらためて、 Squeak-ja のご案内
+Message-ID: <447133064A.9273ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2003/2/12にSqueak-jaが開設されてから、すでに3年以上経ちました。その間には
+運営先の移転などいろいろなことがありましたが、約600人の参加者の皆さんに支
+えられて、Squeakに関する活発な議論の場となりました。ありがとうございます。
+
+その一方で、最近参加された方は敷居の高さを感じているかもしれません。そこ
+で、大島さんがSqueak-jaの設立に当たり作成された案内文を、あらためてご紹介
+します。
+
+----------------
+  Squeak-jaメーリングリストは、プログラミング環境でもありオーサリング
+ツールでもあるSqueakに関して話し合うためのメーリングリストです。後ろに
+ついている"-ja"は、「メーリングリストでのやりとりは主に日本語で行う」
+という意味です。
+
+  Squeakプログラミングに関する内容から、学校で使った時の実地体験談など
+まで、幅広い内容を網羅することを期待しています。システムに関する修正要
+求なども大いに歓迎しますし、いわゆる初心者の皆さんにも遠慮なく投稿して
+もらえるような雰囲気にしたいと思っています。
+----------------
+http://www.akademia.co.jp/Smalltalk/SML/archives/SRA.archives/2003-February/006122.html
+
+要は、Squeakに関することなら、誰が何を書いてもかまわないということです。
+これからもどうぞよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Wed May 24 05:05:39 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2970] Re: NICT 科学技術ふれあい day 「絵を音でつくろう」
+In-Reply-To: <446C4E3C10D.F889ABEE@smtp.nifty.com>
+References: <444A1A56BD.CFDBABEE@smtp.nifty.com>
+	<446C4E3C10D.F889ABEE@smtp.nifty.com>
+Message-ID: <upsi4h5gs.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> 先日、NICTで行ったワークショップをご紹介しましたが、この様子がテレビで放
+> 送されました。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2006-April/002943.html
+> 
+> もしご覧になった方がいらっしゃればご感想などお聞かせください。
+
+  近年のインターネット技術の進歩によって、僕も関係する部分だけを視聴す
+ることができました。Squeakの可能性を紹介するという意味で、テレビに取り
+上げてもらうのは良いことですね。
+
+-- Yoshiki
+
+
+From makoto ＠ kobe-u.ac.jp  Wed May 24 14:21:51 2006
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2971] 二項分布（ Re: スクリプトの中で三角関数を利用する方法）
+In-Reply-To: <447068ED1FC.77D5ABEE@smtp.nifty.com>
+References: <44703B5A13B.8686ABEE@smtp.nifty.com>
+	<JD200605212205174.441843@mars.dti.ne.jp>
+	<447068ED1FC.77D5ABEE@smtp.nifty.com>
+Message-ID: <20060524142151.134068.60d39b71@kobe-u.ac.jp>
+
+高橋真です。
+
+阿部さん、作品をご紹介いただきありがとうございます。
+
+++ Kazuhiro ABEさんの
+|『[Squeak-ja: 2967] Re: スクリプトの中で三角関数を利用する方法』
+| (Sun, 21 May 2006 22:19:41 +0900)の件について
+--
+> 関係ないですが、高橋さんの「二項分布」は面白いですね。
+> http://squeakland.jp/seaside/SBSuperSwiki/58a6a553-a35d-4a57-8a1f-7c46bcdfa35d
+
+パチンコ玉等でする実験はよく知られていますが、スクイークで
+作ってみようと思い立ち作成しました。
+単純なのですが、思わず見入ってしまいます。こういうものが
+簡単に作って試せるというのがスクイークの良さであると再認識
+しました。
+
+From mutoh ＠ openedu.org  Thu May 25 05:52:59 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2972] 関西 *BSD ユーザ会勉強会のお知らせ(2006/05/27)
+Message-ID: <ddr72ji1qs.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+おはようございます。
+
+今週の土曜日の話ですが、関西 *BSD ユーザ会勉強会というものが京都で行な
+われます。
+# http://www.kbug.gr.jp/sem-200605/
+
+ここで、私がFreeBSDでCroquetが動きはじめてますよというお話をさせてもら
+うことになりました。
+あまり、Squeak/Croquetに関して詳しい話はできないと思いますが、興味のあ
+るかたがおられましたら是非御参加ください。
+
+発表内容は大体末尾のようなものを考えています。
+
+他にも、Tracの話、BSDに関する小ネタ集なども用意されていますので、そち
+らに興味のある方も是非御参加ください。
+
+勉強会の後で、懇親会も予定しています。
+# [[串くら|http://www.fukunaga-tf.com/kushikura/]](3500円のコース:飲み代別)
+こちらは、参加人数の確認で今日の夕方に参加申し込みの〆切となりますので、
+参加を考えておられる方は私まで連絡いただければ、幹事の方に取次を行ない
+ます。
+
+では、当日お会いできるのを楽しみにしております。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+----------------------------------------------------------------------
+[発表内容目次(予定)]
+* FreeBSDでSqueak/Croquet
+* Squeakって?
+* Squeakと教育
+* PDAで動く?
+* Smalltalkって?
+* FreeBSD portsに含まれるSmalltalk
+* Squeakの仕組
+* ファイル構成
+* 仮想マシン(VM:VirtualMachine)
+* イメージいろいろ
+* 3.7-5989-full
+* もういちど、Squeakの仕組
+* FreeBSDでSqueakを使う方法
+* Linux版
+* Linuxlatorで動かす
+* Linux用SqueakLand版を試す
+* Windows版をWineで動かす
+* Squeak事始め@FreeBSD
+* Squeakの実行
+* 武藤私家版ports
+* Webブラウザプラグイン
+* Croquet
+* Croquet (on native FreeBSD)
+* Croquet on Linuxlator
+* Croquet on wine
+* Croquet on native FreeBSD
+* OpenALと戦うわたくし for Croquet
+* OpenALと戦うわたくし for Croquet (cont'd)
+* 私家版で確認している問題
+* 今後の野望(for FreeBSD?)
+* 今後の野望(その他)
+* ちなみに、テストベッド;-)
+* Squeakに関する最近(未来に向かって?)の話題
+* 日本発/日本語化されたプロジェクト(新旧取り混ぜて)
+* ネットの情報源
+* ネットの情報源(日本の情報源)
+* 書籍(写真)
+* 書籍情報
+* おまけ: i810系でDRIが効かないとおなげきのあなたに
+* DRIが…
+* 御静聴ありがとうございました
+
+From abee ＠ squeakland.jp  Thu May 25 14:44:25 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2973] Re: NICT 科学技術ふれあい day 「絵を音でつくろう」
+In-Reply-To: <upsi4h5gs.wl%yoshiki@squeakland.org>
+References: <446C4E3C10D.F889ABEE@smtp.nifty.com>
+	<upsi4h5gs.wl%yoshiki@squeakland.org>
+Message-ID: <44754439332.B888ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 23 May 2006 13:05:39 -0700
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>> 先日、NICTで行ったワークショップをご紹介しましたが、この様子がテレビで放
+>> 送されました。
+>> 
+>> http://www.smalltalk.jp/pipermail/squeak-ja/2006-April/002943.html
+>> 
+>> もしご覧になった方がいらっしゃればご感想などお聞かせください。
+>
+>  近年のインターネット技術の進歩によって、僕も関係する部分だけを視聴す
+>ることができました。Squeakの可能性を紹介するという意味で、テレビに取り
+>上げてもらうのは良いことですね。
+
+ご感想ありがとうございます。
+なんとか広く皆さんに見てもらえないかと思って画策していたのですが、諸般の
+事情で難しいようです。残念。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mutoh ＠ openedu.org  Sun May 28 12:25:48 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2974] Re: 関西 *BSD ユーザ会勉強会のお知らせ(2006/05/27)
+In-Reply-To: <ddr72ji1qs.wl%mutoh@openedu.org>
+References: <ddr72ji1qs.wl%mutoh@openedu.org>
+Message-ID: <ddwtc6sudf.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+At Thu, 25 May 2006 05:52:59 +0900,
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+> 今週の土曜日の話ですが、関西 *BSD ユーザ会勉強会というものが京都で行な
+> われます。
+> # http://www.kbug.gr.jp/sem-200605/
+>
+> ここで、私がFreeBSDでCroquetが動きはじめてますよというお話をさせてもら
+> うことになりました。
+
+これですが、発表資料を公開します。
+	http://qml.610t.org/squeak/kbug.html
+
+資料作成で御協力いただいた方々ありがとうございました。
+
+Squeak-jaから来られる方はいないだろうなと思っていたのですが、おられた
+のでびっくりしました。
+
+懇親会では、BSDな人と思っていたら昔はSmalltalk VMに係わっておられた方
+や、J-Starなどの話でも盛り上がっていました。
+
+なんか、おとなのためのワークショップとかもやったら面白いかもという話題
+などもありましたので、また情報や場を提供させてもらう機会もあるかもしれ
+ません。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From tango ＠ eggegg.co.jp  Sun May 28 20:06:11 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2975] Re: 関西 *BSD ユーザ会勉強会のお知らせ(2006/05/27)
+References: <ddr72ji1qs.wl%mutoh@openedu.org> <ddwtc6sudf.wl%mutoh@openedu.org>
+Message-ID: <002d01c68246$bc5e3510$6dc4d2ca@gomes>
+
+やまもとです。
+
+
+> これですが、発表資料を公開します。
+> http://qml.610t.org/squeak/kbug.html
+
+
+おお！わかりやすいですね〜！！
+（BSDのあたりはおいらがわかんないだけっすけど）
+Squeakをずらり〜んと上から眺めてる感じです。
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+From nobuhiko.funato ＠ gmail.com  Mon May 29 07:48:15 2006
+From: nobuhiko.funato ＠ gmail.com (Nobuhiko Funato)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2976] Re: 関西 *BSD ユーザ会勉強会のお知らせ(2006/05/27)
+In-Reply-To: <ddwtc6sudf.wl%mutoh@openedu.org>
+References: <ddr72ji1qs.wl%mutoh@openedu.org> <ddwtc6sudf.wl%mutoh@openedu.org>
+Message-ID: <e642a1c30605281548x291546efk2649f9ad748585ef@mail.gmail.com>
+
+舟渡と申します (初投稿?)
+
+> Squeak-jaから来られる方はいないだろうなと思っていたのですが、おられた
+> のでびっくりしました。
+
+・25日早朝の武藤さんのアナウンスが目に入ったこと、
+・その日は関西に居てたこと、
+・ホストが旧知の方であったこと、
+
+などの偶然にも助けられたのですが、何よりご無沙汰していた最近の
+Squeak事情に触れたくなって、武藤さんの発表を聞くことができました。
+
+武藤さんはじめ、Squeak-jaをサポートしていただいている皆さんに
+お礼を申し上げます。ありがとうございました。
+
+私のノート(Debianだったんですが :-) は、ちょっとハードが古くて、
+Croquetの実力を体感できてないことがわかったのが収穫。
+ボーナスでのupgradeを画策したいと思います (^^;)
+
+＃懇親会までお邪魔してちょっと喋りすぎたような… 反省
+
+From epi9tetus ＠ gmail.com  Mon May 29 09:24:10 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2977] Re: セキュリティについての質問です
+In-Reply-To: <u4pzrczmf.wl%yoshiki@squeakland.org>
+References: <7aa126770605091111k70b6573dg694c35247fb78140@mail.gmail.com>
+	<umzdq7lg6.wl%yoshiki@squeakland.org>
+	<7aa126770605140852j4a92be8el4f2b8ebcf44c0f81@mail.gmail.com>
+	<u4pzrczmf.wl%yoshiki@squeakland.org>
+Message-ID: <7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+
+おおしまさま
+お返事を有り難うございました。
+実は、頂戴したメールが文字化けしていて、エンコードを変更しても読めずにおります。
+どうしたら読めるようになるのか試行錯誤していましたが、まだ解決できていません。
+（他の方の環境でも化けていれば、何かレスがあるかとも思い、様子を拝見しつつ
+他のMLは読めているので、結局再送をお願いすることにしました）
+
+きっと当方の環境に問題があるのだろうと思い、又、いきなり読めないと返すのが
+失礼かと思って、お返事が遅くなってしまったのですが、誠に失礼ながら、もう一度
+送信をお願いできないでしょうか？
+
+本当に申し訳なく思います。
+
+From yoshiki ＠ squeakland.org  Mon May 29 09:40:57 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2978] セキュリティについての質問です
+In-Reply-To: <7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+References: <7aa126770605091111k70b6573dg694c35247fb78140@mail.gmail.com>
+	<umzdq7lg6.wl%yoshiki@squeakland.org>
+	<7aa126770605140852j4a92be8el4f2b8ebcf44c0f81@mail.gmail.com>
+	<u4pzrczmf.wl%yoshiki@squeakland.org>
+	<7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+Message-ID: <ulkslu0h2.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> お返事を有り難うございました。
+> 実は、頂戴したメールが文字化けしていて、エンコードを変更しても読めずにおります。
+> どうしたら読めるようになるのか試行錯誤していましたが、まだ解決できていません。
+> （他の方の環境でも化けていれば、何かレスがあるかとも思い、様子を拝見しつつ
+> 他のMLは読めているので、結局再送をお願いすることにしました）
+
+  いえ、実は僕の問題だったのです。一箇所だけ「半角角かっこ」が入ってし
+まい、Shift-JIS(+base64)で出て行ってしまいました。本当に失礼しました。
+
+> きっと当方の環境に問題があるのだろうと思い、又、いきなり読めないと返すのが
+> 失礼かと思って、お返事が遅くなってしまったのですが、誠に失礼ながら、もう一度
+> 送信をお願いできないでしょうか？
+> 
+> 本当に申し訳なく思います。
+
+  いえいえ、こちらこそ失礼しました。以下に書いたものをもう一度再送しま
+す。
+
+----------------------------------------------
+To: Squeak discussion in Japanese <squeak-ja@smalltalk.jp>
+From: Yoshiki Ohshima <yoshiki@squeakland.org>
+Date: Mon, 15 May 2006 04:10:32 -0700
+
+  おおしまです。
+
+> scamperを立ち上げて操作する場合のセキュリティリスクについての質問と
+> 記述すべきでした。要領が悪くお手数をおかけしてしまいました。ごめんなさい。
+> 投稿時には、もしかしたらscamper以外にもsqueakのブラウザは複数存在する
+> のかも知れないと思っており、曖昧な記述となりましたことをお詫びいたします。
+
+  いえいえ。かまわないですよ。
+
+  ただ、「子供がScamperを使う」というその状況があまり想像できなかった
+ので、おもわず逆の状況を想定してしまいました。すみません。
+
+  Scamperは実験的なもので、そもそもBasic認証程度以上のことをしているサ
+イトではほとんど何もできないと思います。そもそも、なぜScamperを使おう
+と思われたのか、使ってみて「これは役に立たないな」と思われなかったのか
+^^;そこが気になります。
+
+> その後、少し書籍なども読みつつ、まだよく理解できていないのですが、
+> ブロードバンドルータや、セキュリティソフトの設定があれば十分安全そうだと
+> 解釈しました。
+
+  そうですね。ただ、それを実行しているSqueakイメージの状態を変えるよう
+な事は、セキュリティソフトなどの感知しない範囲でやろうと思えばできると
+思います。
+
+> 例えば、特定のポータルサイトにはセキュリティを緩和しないとログインできない例の
+> ように、scamperにもそういうことがあるのでは？などとも思いつつ、まだ簡単なテストしか
+> 出来ていません。
+> （しかも、scamperを立ち上げてみたら、接続できませんでした。前回は接続できたので
+> 何が違うのか、時間のあるときに原因を調べなければと勉強中です）
+
+  Scamperにはセキュリティレベルの緩和というような機能はないです。basic 
+認証でアクセスできる、という程度ですので。
+
+> ウイルス的なものをとりあえず心配せずとも良い。というのは、技術的に悪意のある
+> プログラムを進入させることが極めて困難であり、他のブラウザよりも安全だと言うこと
+> なのか、又はユーザの傾向やシェアの規模から前例が無く、可能性が低いのか、
+> 誠に申し訳ないのですが、もう少しご教授願えませんでしょうか？
+
+  これは、両方です。例えばIEのように、Windowsのことをよく知っているが
+ために、悪意のあるプログラムにIEの弱点経由でWindowsの弱いところをつか
+せてしまう、というようなことはありません。ScamperはWindowsのことは何も
+知りませんので。
+
+  しかし、ユーザの不注意により、例えばScamper中に表示されているページ
+をSqueakの式として評価してしまって、その式がSqueakイメージの何かを書き
+換えてしまうようなものだったというようなことがあれば、そのSqueak イメー
+ジには問題が及ぶ可能性はありますし、もしIEのようなブラウザの中で動かし
+ていなければ、ファイルを書き換えることによってOS に影響を与えることも
+可能とは思います。それでも普通のブラウザより危険、ということはないです。
+
+  もちろん、Scamperを狙った「悪いページ」というのはまずほとんどないと
+思いますので、そういう面ではとりあえず安心はできます。
+
+> 前者ならば、子供達と家庭にその旨伝えて、scamperの使用を推奨したいと思います。
+
+  なぜScamperなのか、というところにまだ疑問を感じてしまうので、よろし
+ければScamperを使いたい理由をお聞かせください。
+
+-- Yoshiki
+
+From mutoh ＠ openedu.org  Mon May 29 12:47:11 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2979] Re: 関西 *BSD ユーザ会勉強会のお知らせ(2006/05/27)
+In-Reply-To: <002d01c68246$bc5e3510$6dc4d2ca@gomes>
+	<e642a1c30605281548x291546efk2649f9ad748585ef@mail.gmail.com>
+References: <ddr72ji1qs.wl%mutoh@openedu.org> <ddwtc6sudf.wl%mutoh@openedu.org>
+	<002d01c68246$bc5e3510$6dc4d2ca@gomes>
+Message-ID: <ddr72dsda8.wl%mutoh@openedu.org>
+
+むとう＠おしごとばです。
+
+At Sun, 28 May 2006 20:06:11 +0900,
+"Thoru Yamamoto" <tango@eggegg.co.jp> wrote:
+> > これですが、発表資料を公開します。
+> > http://qml.610t.org/squeak/kbug.html
+> おお！わかりやすいですね〜！！
+> （BSDのあたりはおいらがわかんないだけっすけど）
+> Squeakをずらり〜んと上から眺めてる感じです。
+
+すいません、ありがとうございます。
+
+なんか、日本発のプロジェクト類の選択が独断と偏見だったり、参考文献が意
+味もなく古いのも並んでいたり、ちょっとどうかなぁと思っているんですが、
+そう言っていただくと救われます。
+
+当日のデモは3.7-5989-fullでデモをひととおり説明した後で、
+SqueakPlugin2005JでDrive a Carをハンドルでの操作ぐらいまで説明しました。
+Croquetの方は、ワールドを歩いたり、TPainterで立体を作ったりと言う程度
+です。
+
+PDAとしてはPocketPostPetとWindowsCEを持っていっていたんですが、うまく
+動かなかったです(;-;)
+# 日頃の行いが悪い。
+
+At Mon, 29 May 2006 07:48:15 +0900,
+"Nobuhiko Funato" <nobuhiko.funato@gmail.com> wrote:
+> > Squeak-jaから来られる方はいないだろうなと思っていたのですが、おられた
+> > のでびっくりしました。
+	(snip)
+> 武藤さんはじめ、Squeak-jaをサポートしていただいている皆さんに
+> お礼を申し上げます。ありがとうございました。
+
+私も共通の知人(?)がいたりしてびっくりしました;-)
+
+> 私のノート(Debianだったんですが :-) は、ちょっとハードが古くて、
+> Croquetの実力を体感できてないことがわかったのが収穫。
+> ボーナスでのupgradeを画策したいと思います (^^;)
+
+MacBookとかどうですか？
+# BSDですし;-)
+
+> ＃懇親会までお邪魔してちょっと喋りすぎたような… 反省
+
+楽しかったです。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From abee ＠ squeakland.jp  Mon May 29 14:01:06 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2980] Re: セキュリティについての質問です
+In-Reply-To: <7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+References: <u4pzrczmf.wl%yoshiki@squeakland.org>
+	<7aa126770605281724i65172d52sb3d1c34ad71d72b6@mail.gmail.com>
+Message-ID: <447A80123D0.08DDABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 29 May 2006 09:24:10 +0900
+"EPI♪" <epi9tetus@gmail.com> wrote:
+>実は、頂戴したメールが文字化けしていて、エンコードを変更しても読めずにおります。
+>どうしたら読めるようになるのか試行錯誤していましたが、まだ解決できていません。
+>（他の方の環境でも化けていれば、何かレスがあるかとも思い、様子を拝見しつつ
+>他のMLは読めているので、結局再送をお願いすることにしました）
+
+GMailをお使いの場合、「詳細オプション」の「文字化けしたテキストを修正」を
+使う方法があります。
+別ウィンドウが開きますので、説明にあるView(表示)メニューのEncoding(エンコー
+ド)*ではなく*、右ボタンメニュー(コンテキストメニュー)のエンコードで切り替
+えるとうまく行くことが多いようです(WindowsでIE6の場合)。
+
+また、Squeak-jaの保存書庫もあります。これも常に正しく表示されるとは限らな
+いのですが、該当メッセージは大丈夫のようです。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-May/002954.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From takeda.toshiyuki ＠ gmail.com  Mon May 29 16:02:03 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2981] Re: 関西 *BSD ユーザ会勉強会のお知らせ(2006/05/27)
+In-Reply-To: <ddwtc6sudf.wl%mutoh@openedu.org>
+References: <ddr72ji1qs.wl%mutoh@openedu.org> <ddwtc6sudf.wl%mutoh@openedu.org>
+Message-ID: <6544a1da0605290002j746c3e5dq266e2887725c397a@mail.gmail.com>
+
+武田です。
+
+楽しそうな会ですね。
+
+On 5/28/06, Takeshi MUTOH <mutoh@openedu.org> wrote:
+
+> なんか、おとなのためのワークショップとかもやったら面白いかもという話題
+> などもありましたので、また情報や場を提供させてもらう機会もあるかもしれ
+> ません。
+
+２年ほど前に大阪で、「大人のスクイーク」ってワークショップやりました。
+内容は、「車の運転」やってから、車をexploreしてオブジェクトの中身を
+見てもらう、PC持ち込みの約２時間のイベントでした。
+10人ぐらいに参加していただいたかな。
+
+関係者の努力のおかげでEToysやイメージが成熟しているし、本やリソースや
+サービスも充実しているから、いろいろおもしろいことができるんじゃないで
+しょうか。
+
+期待しています。:-)
+
+From mutoh ＠ openedu.org  Mon May 29 19:07:37 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2982] おとなのワークショップ(was Re: 関西 *BSD ユーザ会勉強会のお知らせ(2006/05/27))
+In-Reply-To: <6544a1da0605290002j746c3e5dq266e2887725c397a@mail.gmail.com>
+References: <ddr72ji1qs.wl%mutoh@openedu.org> <ddwtc6sudf.wl%mutoh@openedu.org>
+	<6544a1da0605290002j746c3e5dq266e2887725c397a@mail.gmail.com>
+Message-ID: <ddhd39rvo6.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+At Mon, 29 May 2006 16:02:03 +0900,
+"Toshiyuki Takeda" <takeda.toshiyuki@gmail.com> wrote:
+> > なんか、おとなのためのワークショップとかもやったら面白いかもという話題
+> > などもありましたので、また情報や場を提供させてもらう機会もあるかもしれ
+> > ません。
+> ２年ほど前に大阪で、「大人のスクイーク」ってワークショップやりました。
+> 内容は、「車の運転」やってから、車をexploreしてオブジェクトの中身を
+> 見てもらう、PC持ち込みの約２時間のイベントでした。
+> 10人ぐらいに参加していただいたかな。
+
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-October/001868.html
+ですね。僕も参加しようかと思ってたのですが、都合が付かなかったんですよ
+ね。
+
+> 関係者の努力のおかげでEToysやイメージが成熟しているし、本やリソースや
+> サービスも充実しているから、いろいろおもしろいことができるんじゃないで
+> しょうか。
+
+そうですね。
+
+> 期待しています。:-)
+
+一緒にやりましょうよぉ。経験者がいてはると心強いです。
+
+
+で、「おとなのワークショップ」にはどんな課題がいいんでしょうかねぇ。
+
+おとながグッと来るネタってどんなもんがあるでしょうか?
+- SeaSideJでWebアプリケーション
+- KedamaやODECoでシミュレーション(なんの?)
+
+あんまり業務っぽくなっても「ワークショップ」ぽく無い気がしますし、なか
+なか難しいでしょうかね…
+おとなでも感動できる内容ができると素敵ですよね。
+
+皆さんにもやりたい内容やこんなのはどうというアイデアを提案していただけ
+ると幸いです。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From takeda.toshiyuki ＠ gmail.com  Tue May 30 23:17:38 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2983] Mantis-J moved
+Message-ID: <6544a1da0605300717r2b1440f2oafb7b99b6ad4a2a0@mail.gmail.com>
+
+武田です。
+
+突然で申し訳ないのですが、諸般の事情でMantis-Jを引っ越しました。
+
+http://squeak.pinkzo.net/bugs/
+
+が新しいURLです。移行に問題があればお知らせいただければ幸いです。
+
+Tracも移動していますが、こちらは荒らし対策を検討の上で別のアプリを起動するかもしれません。
+
+なかなか手が回らないのでご迷惑おかけしますが、ご容赦ください。
+
+
+武田俊之
+
+From takeda.toshiyuki ＠ gmail.com  Tue May 30 23:17:38 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2984] Mantis-J moved
+Message-ID: <6544a1da0605300717r2b1440f2oafb7b99b6ad4a2a0@mail.gmail.com>
+
+武田です。
+
+突然で申し訳ないのですが、諸般の事情でMantis-Jを引っ越しました。
+
+http://squeak.pinkzo.net/bugs/
+
+が新しいURLです。移行に問題があればお知らせいただければ幸いです。
+
+Tracも移動していますが、こちらは荒らし対策を検討の上で別のアプリを起動するかもしれません。
+
+なかなか手が回らないのでご迷惑おかけしますが、ご容赦ください。
+
+
+武田俊之
+
+From takeda.toshiyuki ＠ gmail.com  Tue May 30 23:17:38 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2985] Mantis-J moved
+Message-ID: <6544a1da0605300717r2b1440f2oafb7b99b6ad4a2a0@mail.gmail.com>
+
+武田です。
+
+突然で申し訳ないのですが、諸般の事情でMantis-Jを引っ越しました。
+
+http://squeak.pinkzo.net/bugs/
+
+が新しいURLです。移行に問題があればお知らせいただければ幸いです。
+
+Tracも移動していますが、こちらは荒らし対策を検討の上で別のアプリを起動するかもしれません。
+
+なかなか手が回らないのでご迷惑おかけしますが、ご容赦ください。
+
+
+武田俊之
+
+From takeda.toshiyuki ＠ gmail.com  Tue May 30 23:17:38 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:29 2007
+Subject: [Squeak-ja: 2986] Mantis-J moved
+Message-ID: <6544a1da0605300717r2b1440f2oafb7b99b6ad4a2a0@mail.gmail.com>
+
+武田です。
+
+突然で申し訳ないのですが、諸般の事情でMantis-Jを引っ越しました。
+
+http://squeak.pinkzo.net/bugs/
+
+が新しいURLです。移行に問題があればお知らせいただければ幸いです。
+
+Tracも移動していますが、こちらは荒らし対策を検討の上で別のアプリを起動するかもしれません。
+
+なかなか手が回らないのでご迷惑おかけしますが、ご容赦ください。
+
+
+武田俊之
+

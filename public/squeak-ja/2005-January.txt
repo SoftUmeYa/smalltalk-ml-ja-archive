@@ -1,0 +1,4971 @@
+From fumito.kondo ＠ hp.com  Sat Jan  1 10:01:01 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2231] Re: プログラミングの質問です
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF86E@tkoexc02.asiapacific.cpqcorp.net>
+
+阿部さん、
+
+どうもありがとうございました。
+
+本年もよろしくお願いいたします。
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kazuhiro ABE
+Sent: Friday, December 31, 2004 11:19 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2230] Re: プログラミングの質問です
+
+
+阿部@新百合です。
+
+On Fri, 31 Dec 2004 12:15:31 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+>ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチ
+>エージェントのアプリケーションをプログラミングで作りたいと思っていますが、
+>こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々の
+>エージェント画像は、インスタンスとして作るとすると、その際に、 drawOn:メ
+>ソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　
+>“do it”するという方法で出来るのでしょうか？
+
+基本的にはこれで動くと思います。
+すでに画像を表示するためのImageMorphというクラスがありますから、 Agentを
+このサブクラスにすることもできます。
+その場合は、drawOn:を再定義をするのではなく、インスタンス毎にインスタンス
+変数imageの中身を変えるメソッドを書くことになります。
+
+>　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱
+>えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメ
+>ソッドを送れば、操作できるようになっていますが、複数の画像エージェントを
+>扱いたい場合、どのようにようにすればよろしいでしょうか？
+
+複数の画像エージェントを管理するためのクラスを作ることが多いと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From fumito.kondo ＠ hp.com  Sat Jan  1 10:02:04 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2232] Re: プログラミングの質問です
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF86F@tkoexc02.asiapacific.cpqcorp.net>
+
+山宮さん、
+
+どうもありがとうございました。
+
+本年もよろしくお願いいたします。
+
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Takashi Yamamiya
+Sent: Friday, December 31, 2004 10:55 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2228] Re: プログラミングの質問です
+
+
+山宮です。
+
+Kondo, Fumito wrote:
+
+> ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチエージェントのアプリケーションをプログラミングで作りたいと思っていますが、こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々のエージェント画像は、インスタンスとして作るとすると、その際に、drawOn:メソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　“do it”するという方法で出来るのでしょうか？
+
+Morph のサブクラスとして Agent を作って色々実験されてみると良いと思い
+ます。Sqeuak では存在しているオブジェクトのメソッドを直接編集出来ます
+ので、drawOn: を変更する事によってすぐに画面が変わります。ちなみにちょっ
+と間違えると例外処理でオブジェクトが赤いバッテンに成ってしまいますが、
+メニューから再描画出来ます。
+
+> 　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメソッドを送れば、操作できるようになっていますが、複数の画像エージェントを扱いたい場合、どのようにようにすればよろしいでしょうか？
+
+例えば生物のシミュレーションのような物を想像しているのですが、
+Morph>>world でワールドが取得出来ますので、その submorph を調べれば他
+の Agent(生物) の状態が分かりますので、それを参考に Agent 同士の相互作
+用を記述すれば良いのではないかと思います。
+
+-- 
+山宮 隆 ::= http://yuri.sakura.ne.jp/~propella/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+From koubo2005 ＠ yengawa.jpn.org  Sat Jan  1 13:24:48 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2233] Re: プログラミングの質問です
+In-Reply-To: <287073018F1FCC48B871980C94CB156501FEF86D@tkoexc02.asiapacific.cpqcorp.net>
+References: <287073018F1FCC48B871980C94CB156501FEF86D@tkoexc02.asiapacific.cpqcorp.net>
+Message-ID: <20050101113318.8264.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+あけましておめでとうございます。
+
+ぼくもマルチエージェントに興味があって、eToys(SqueakToys)の拡張としてキャラクタエー
+ジェントを簡単に動かす仕組みSwimmy(http://yengawa.homedns.org:8888/Swimmy)を作っ
+ています。
+
+Morphicで自律処理をするには2つのデザインが考えられます。
+
+ひとつは各エージェントが自律的処理をするためにMorphicのstepの仕組みを利用するデザ
+インです。
+stepは定期的にActiveWorldから呼び出されます。エージェント1匹にMorphを1つ対応させ
+ればMorph毎のstepの中に各エージェントの自律的処理を書くことができます。
+このデザインはMorphicとの親和性が高いし手軽なのでお薦めです。
+
+でも、エージェント毎にMorphのインスタンスは大きすぎるならば、一つのMorphがその
+Morph内部に表示をするだけの小さなエージェントをたくさん保持するデザインになります。
+標準で入っているStarSqueakが良い例なので参照して下さい。
+# できればKedamaを参照したほうがいいかも?
+
+
+
+On Fri, 31 Dec 2004 12:15:31 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+
+> 梅沢さんの自由自在Squeakプログラミングの本で、Squeakプログラムの勉強中の近藤といいます。すみません。質問させてください。
+> 
+> ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチエージェントのアプリケーションをプログラミングで作りたいと思っていますが、こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々のエージェント画像は、インスタンスとして作るとすると、その際に、drawOn:メソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　“do it”するという方法で出来るのでしょうか？
+> 　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメソッドを送れば、操作できるようになっていますが、複数の画像エージェントを扱いたい場合、どのようにようにすればよろしいでしょうか？
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From abee.abe ＠ nifty.ne.jp  Sun Jan  2 02:39:55 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2234] Vector の 2004 年ベストオンラインソフト
+Message-ID: <41D6E06B388.A587ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Vectorの2004年ベストオンラインソフトにSqueakが選ばれているようです。
+http://rd.vector.co.jp/magazine/softnews/041229/n0412293.html
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From fumito.kondo ＠ hp.com  Sun Jan  2 15:06:28 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2235] Re: プログラミングの質問です
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF872@tkoexc02.asiapacific.cpqcorp.net>
+
+横川さん、
+
+あけましておめでとうございます。
+
+いろいろとありがとうございます。
+
+参考にさせていただきます。
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+Sent: Saturday, January 01, 2005 1:25 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2233] Re: プログラミングの質問です
+
+
+横川です。
+あけましておめでとうございます。
+
+ぼくもマルチエージェントに興味があって、eToys(SqueakToys)の拡張としてキャラクタエー
+ジェントを簡単に動かす仕組みSwimmy(http://yengawa.homedns.org:8888/Swimmy)を作っ
+ています。
+
+Morphicで自律処理をするには2つのデザインが考えられます。
+
+ひとつは各エージェントが自律的処理をするためにMorphicのstepの仕組みを利用するデザ
+インです。
+stepは定期的にActiveWorldから呼び出されます。エージェント1匹にMorphを1つ対応させ
+ればMorph毎のstepの中に各エージェントの自律的処理を書くことができます。
+このデザインはMorphicとの親和性が高いし手軽なのでお薦めです。
+
+でも、エージェント毎にMorphのインスタンスは大きすぎるならば、一つのMorphがその
+Morph内部に表示をするだけの小さなエージェントをたくさん保持するデザインになります。
+標準で入っているStarSqueakが良い例なので参照して下さい。
+# できればKedamaを参照したほうがいいかも?
+
+
+
+On Fri, 31 Dec 2004 12:15:31 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+
+> 梅沢さんの自由自在Squeakプログラミングの本で、Squeakプログラムの勉強中の近藤といいます。すみません。質問させてください。
+> 
+> ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチエージェントのアプリケーションをプログラミングで作りたいと思っていますが、こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々のエージェント画像は、インスタンスとして作るとすると、その際に、drawOn:メソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　“do it”するという方法で出来るのでしょうか？
+> 　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメソッドを送れば、操作できるようになっていますが、複数の画像エージェントを扱いたい場合、どのようにようにすればよろしいでしょうか？
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From abee.abe ＠ nifty.ne.jp  Sun Jan  2 22:12:05 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2236] Re: SuperSwiki 活用計画
+In-Reply-To: <41D16A91.2090607@metatoys.org>
+References: <41D1670D34E.7051ABEE.ABE@smtp.nifty.com>
+	<41D16A91.2090607@metatoys.org>
+Message-ID: <41D7F32525B.C1F9ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Super Swikiのクライアント側日本語パッチを、Nihongo7(仮)に対応したものを作
+ってみました。
+
+http://languagegame.org:8080/propella/100
+
+山宮さんの日本語版プラグインイメージにも対応しています。
+
+http://d.hatena.ne.jp/propella/20041231
+
+これを使って作成されたプロジェクトはNihongo6x以前では読めません。
+
+# なんかいろいろあって混乱してきました。
+
+On Tue, 28 Dec 2004 23:15:45 +0900
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>> 試してみたのですが、公開のときナビゲータフラップの中身が消えるようなので、
+>> 添付のパッチを試していただけますか。
+>
+>消えるのは見えないエラーが起こっている時なのでなんだか怪しいですが、
+>とりあえずパッチを混ぜた奴を
+>http://metatoys.org/pub/SuperSwikiNihongo.cs.gz
+>にアップしておきます。
+
+うまくいくようなので、これは外しています。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SuperSwikiNihongo7.1.cs.gz
+型:         application/octet-stream
+サイズ:     1814 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050102/d9d5bb99/SuperSwikiNihongo7.1.cs.obj
+From tak ＠ metatoys.org  Mon Jan  3 01:37:04 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2237] Re: SuperSwiki 活用計画
+In-Reply-To: <41D7F32525B.C1F9ABEE.ABE@smtp.nifty.com>
+References: <41D1670D34E.7051ABEE.ABE@smtp.nifty.com>	<41D16A91.2090607@metatoys.org>
+	<41D7F32525B.C1F9ABEE.ABE@smtp.nifty.com>
+Message-ID: <41D82330.2060909@metatoys.org>
+
+山宮です。
+
+> 阿部@新百合です。
+> 
+> Super Swikiのクライアント側日本語パッチを、Nihongo7(仮)に対応したものを作
+> ってみました。
+> 
+> http://languagegame.org:8080/propella/100
+
+このパッチを含めたものをアップしました。
+http://metatoys.org/pub/NSqueak-2005-01-02.zip
+http://metatoys.org/pub/NSqueakPlugin-2005-01-02.zip
+
+
+From fumito.kondo ＠ hp.com  Mon Jan  3 13:00:29 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2238] Re: プログラミングの質問です
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF874@tkoexc02.asiapacific.cpqcorp.net>
+
+横川さん、
+
+Swimmyプロジェクトのソース、参考にさせていただいております。
+ありがとうございます。
+
+初心者的な質問で大変恐縮ですが、SwimmiyMorphのインスタンスとして魚の絵をActiveWorldに表示させる際に、SwimmiyMorphのクラスメソッドであるnewFishをSwimmyMorphクラスに送り、newFishでは、SwimmyMorphにクラスメソッドのfishFormを送って絵を描いているように思いますが、fishFormのデータを作るにはどのような方法があるのでしょうか？
+
+手で作っていたのでは、とても大変なことのように思います。
+何か便利な方法があるのでしょうか？
+
+すみませんが、よろしくお願いいたします。
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kondo, Fumito
+Sent: Sunday, January 02, 2005 3:06 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2235] Re: プログラミングの質問です
+
+
+横川さん、
+
+あけましておめでとうございます。
+
+いろいろとありがとうございます。
+
+参考にさせていただきます。
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+Sent: Saturday, January 01, 2005 1:25 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2233] Re: プログラミングの質問です
+
+
+横川です。
+あけましておめでとうございます。
+
+ぼくもマルチエージェントに興味があって、eToys(SqueakToys)の拡張としてキャラクタエー
+ジェントを簡単に動かす仕組みSwimmy(http://yengawa.homedns.org:8888/Swimmy)を作っ
+ています。
+
+Morphicで自律処理をするには2つのデザインが考えられます。
+
+ひとつは各エージェントが自律的処理をするためにMorphicのstepの仕組みを利用するデザ
+インです。
+stepは定期的にActiveWorldから呼び出されます。エージェント1匹にMorphを1つ対応させ
+ればMorph毎のstepの中に各エージェントの自律的処理を書くことができます。
+このデザインはMorphicとの親和性が高いし手軽なのでお薦めです。
+
+でも、エージェント毎にMorphのインスタンスは大きすぎるならば、一つのMorphがその
+Morph内部に表示をするだけの小さなエージェントをたくさん保持するデザインになります。
+標準で入っているStarSqueakが良い例なので参照して下さい。
+# できればKedamaを参照したほうがいいかも?
+
+
+
+On Fri, 31 Dec 2004 12:15:31 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+
+> 梅沢さんの自由自在Squeakプログラミングの本で、Squeakプログラムの勉強中の近藤といいます。すみません。質問させてください。
+> 
+> ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチエージェントのアプリケーションをプログラミングで作りたいと思っていますが、こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々のエージェント画像は、インスタンスとして作るとすると、その際に、drawOn:メソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　“do it”するという方法で出来るのでしょうか？
+> 　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメソッドを送れば、操作できるようになっていますが、複数の画像エージェントを扱いたい場合、どのようにようにすればよろしいでしょうか？
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From koubo2005 ＠ yengawa.jpn.org  Mon Jan  3 14:20:53 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2239] Re: プログラミングの質問です
+In-Reply-To: <287073018F1FCC48B871980C94CB156501FEF874@tkoexc02.asiapacific.cpqcorp.net>
+References: <287073018F1FCC48B871980C94CB156501FEF874@tkoexc02.asiapacific.cpqcorp.net>
+Message-ID: <20050103140741.826F.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+
+>fishFormのデータを作るにはどのような方法があるのでしょうか？
+
+SwimmyMorph class>>importFormNamed: を参照して下さい。
+ここではFormクラスを使ってファイルから画像を読み出し、そのリテラル表現をSwimmyMorph
+classメソッドとして追加しています。
+
+
+(FirstReviewバージョンは開発中のもので、動かないexampleや実験のための危険なコード
+も入っていることをご了承下さい。)
+
+
+On Mon, 3 Jan 2005 13:00:29 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+
+> 横川さん、
+> 
+> Swimmyプロジェクトのソース、参考にさせていただいております。
+> ありがとうございます。
+> 
+> 初心者的な質問で大変恐縮ですが、SwimmiyMorphのインスタンスとして魚の絵をActiveWorldに表示させる際に、SwimmiyMorphのクラスメソッドであるnewFishをSwimmyMorphクラスに送り、newFishでは、SwimmyMorphにクラスメソッドのfishFormを送って絵を描いているように思いますが、fishFormのデータを作るにはどのような方法があるのでしょうか？
+> 
+> 手で作っていたのでは、とても大変なことのように思います。
+> 何か便利な方法があるのでしょうか？
+> 
+> すみませんが、よろしくお願いいたします。
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kondo, Fumito
+> Sent: Sunday, January 02, 2005 3:06 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2235] Re: プログラミングの質問です
+> 
+> 
+> 横川さん、
+> 
+> あけましておめでとうございます。
+> 
+> いろいろとありがとうございます。
+> 
+> 参考にさせていただきます。
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+> Sent: Saturday, January 01, 2005 1:25 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2233] Re: プログラミングの質問です
+> 
+> 
+> 横川です。
+> あけましておめでとうございます。
+> 
+> ぼくもマルチエージェントに興味があって、eToys(SqueakToys)の拡張としてキャラクタエー
+> ジェントを簡単に動かす仕組みSwimmy(http://yengawa.homedns.org:8888/Swimmy)を作っ
+> ています。
+> 
+> Morphicで自律処理をするには2つのデザインが考えられます。
+> 
+> ひとつは各エージェントが自律的処理をするためにMorphicのstepの仕組みを利用するデザ
+> インです。
+> stepは定期的にActiveWorldから呼び出されます。エージェント1匹にMorphを1つ対応させ
+> ればMorph毎のstepの中に各エージェントの自律的処理を書くことができます。
+> このデザインはMorphicとの親和性が高いし手軽なのでお薦めです。
+> 
+> でも、エージェント毎にMorphのインスタンスは大きすぎるならば、一つのMorphがその
+> Morph内部に表示をするだけの小さなエージェントをたくさん保持するデザインになります。
+> 標準で入っているStarSqueakが良い例なので参照して下さい。
+> # できればKedamaを参照したほうがいいかも?
+> 
+> 
+> 
+> On Fri, 31 Dec 2004 12:15:31 +0900
+> "Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+> 
+> > 梅沢さんの自由自在Squeakプログラミングの本で、Squeakプログラムの勉強中の近藤といいます。すみません。質問させてください。
+> > 
+> > ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチエージェントのアプリケーションをプログラミングで作りたいと思っていますが、こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々のエージェント画像は、インスタンスとして作るとすると、その際に、drawOn:メソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　“do it”するという方法で出来るのでしょうか？
+> > 　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメソッドを送れば、操作できるようになっていますが、複数の画像エージェントを扱いたい場合、どのようにようにすればよろしいでしょうか？
+> > 
+> > 
+> > 近藤史人
+> > シニアコンサルタント
+> > 日本ヒューレット・パッカード㈱
+> > Fumito Kondo
+> > Senior Consultant
+> > Hewlett-Pakard Japan, Ltd.
+> > Phone: +81-52-566-5900
+> > Fax:     +81-52-5990
+> > e-mail: Fumito.Kondo@hp.com
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From fumito.kondo ＠ hp.com  Mon Jan  3 16:55:50 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2240] Re: プログラミングの質問です
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF878@tkoexc02.asiapacific.cpqcorp.net>
+
+横川さん、
+
+早速のご回答、まことにありがとうございました。
+
+大変助かります。
+
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+Sent: Monday, January 03, 2005 2:21 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2239] Re: プログラミングの質問です
+
+
+横川です。
+
+>fishFormのデータを作るにはどのような方法があるのでしょうか？
+
+SwimmyMorph class>>importFormNamed: を参照して下さい。
+ここではFormクラスを使ってファイルから画像を読み出し、そのリテラル表現をSwimmyMorph
+classメソッドとして追加しています。
+
+
+(FirstReviewバージョンは開発中のもので、動かないexampleや実験のための危険なコード
+も入っていることをご了承下さい。)
+
+
+On Mon, 3 Jan 2005 13:00:29 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+
+> 横川さん、
+> 
+> Swimmyプロジェクトのソース、参考にさせていただいております。
+> ありがとうございます。
+> 
+> 初心者的な質問で大変恐縮ですが、SwimmiyMorphのインスタンスとして魚の絵をActiveWorldに表示させる際に、SwimmiyMorphのクラスメソッドであるnewFishをSwimmyMorphクラスに送り、newFishでは、SwimmyMorphにクラスメソッドのfishFormを送って絵を描いているように思いますが、fishFormのデータを作るにはどのような方法があるのでしょうか？
+> 
+> 手で作っていたのでは、とても大変なことのように思います。
+> 何か便利な方法があるのでしょうか？
+> 
+> すみませんが、よろしくお願いいたします。
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kondo, Fumito
+> Sent: Sunday, January 02, 2005 3:06 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2235] Re: プログラミングの質問です
+> 
+> 
+> 横川さん、
+> 
+> あけましておめでとうございます。
+> 
+> いろいろとありがとうございます。
+> 
+> 参考にさせていただきます。
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+> Sent: Saturday, January 01, 2005 1:25 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2233] Re: プログラミングの質問です
+> 
+> 
+> 横川です。
+> あけましておめでとうございます。
+> 
+> ぼくもマルチエージェントに興味があって、eToys(SqueakToys)の拡張としてキャラクタエー
+> ジェントを簡単に動かす仕組みSwimmy(http://yengawa.homedns.org:8888/Swimmy)を作っ
+> ています。
+> 
+> Morphicで自律処理をするには2つのデザインが考えられます。
+> 
+> ひとつは各エージェントが自律的処理をするためにMorphicのstepの仕組みを利用するデザ
+> インです。
+> stepは定期的にActiveWorldから呼び出されます。エージェント1匹にMorphを1つ対応させ
+> ればMorph毎のstepの中に各エージェントの自律的処理を書くことができます。
+> このデザインはMorphicとの親和性が高いし手軽なのでお薦めです。
+> 
+> でも、エージェント毎にMorphのインスタンスは大きすぎるならば、一つのMorphがその
+> Morph内部に表示をするだけの小さなエージェントをたくさん保持するデザインになります。
+> 標準で入っているStarSqueakが良い例なので参照して下さい。
+> # できればKedamaを参照したほうがいいかも?
+> 
+> 
+> 
+> On Fri, 31 Dec 2004 12:15:31 +0900
+> "Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+> 
+> > 梅沢さんの自由自在Squeakプログラミングの本で、Squeakプログラムの勉強中の近藤といいます。すみません。質問させてください。
+> > 
+> > ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチエージェントのアプリケーションをプログラミングで作りたいと思っていますが、こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々のエージェント画像は、インスタンスとして作るとすると、その際に、drawOn:メソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　“do it”するという方法で出来るのでしょうか？
+> > 　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメソッドを送れば、操作できるようになっていますが、複数の画像エージェントを扱いたい場合、どのようにようにすればよろしいでしょうか？
+> > 
+> > 
+> > 近藤史人
+> > シニアコンサルタント
+> > 日本ヒューレット・パッカード㈱
+> > Fumito Kondo
+> > Senior Consultant
+> > Hewlett-Pakard Japan, Ltd.
+> > Phone: +81-52-566-5900
+> > Fax:     +81-52-5990
+> > e-mail: Fumito.Kondo@hp.com
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From yoshiki ＠ squeakland.org  Thu Jan  6 22:38:38 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:03 2007
+Subject: [Squeak-ja: 2241] squeaklandメーリングリストにSqueakland.jpのことが流れました
+Message-ID: <upt0iznhd.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+  英語版squeaklandメーリングリストに、Kimがsqueakland.jpに関するアナウ
+ンスを出してくれました。
+
+http://squeakland.org/pipermail/squeakland/2005-January/002342.html
+
+今日当たりsqueakland.orgの管理者がやってくるので、たぶんsqueakland.org
+からのリンクなどが張られていったりすることになるかと思います。楽しみで
+すね。
+
+-- Yoshiki
+
+
+From "土本 (Florian) 強  Fri Jan  7 02:30:24 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2242] プロジェクトファイル(.pr)で保存されるもの
+Message-ID: <20050107003854.EA8A.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+　先日の火入れ式では皆様に大変お世話になりました。
+
+
+　先日squeakland.jpのプロジェクト置き場に拙作(RainDrop)を山宮さんが置
+いてくださったのではじめて、projectファイル自体はSqueakToysで作った物
+である必要がないということを知りました。RainDropはMorphを継承してClass
+を直接System Browserで書いていった物であり、SqueakToysのタイルスクリプ
+ティングは全く使用していません。
+　このプロジェクトは直接Squeak-Plug inで再生できました。
+
+　これを受けて、もう少し本格的なグラフィックリソースとサウンドリソース
+を含めた作品を作ってみようと思っています。
+
+
+(1)サウンド、グラフィック、スクリプトデータなどの保存に付いての質問
+　サウンドに関しては、阿部さん曰く、
+
+	6x以降はプロジェクトファイルに音も一緒に保存されるので自分の作品に新しい音を追加できます。
+
+　とのことですので含めることは可能と思われますが、クラス変数内に含まれ
+る(あらかじめロードした)ColorFormなどをProjectファイル内に含めることは
+可能でしょうか。
+　また、マップデータやシナリオなどの情報をCollectionとしてクラス変数内
+に(あらかじめロードして)持ったものについても同様に可能でしょうか。
+
+
+(2)Projectファイルで保存されるもの
+　これらに付随して質問なのですが、projectファイルの正体はどのような物
+なのでしょうか？
+　予想としては、
+
+	プロジェクト内で作られたインスタンスを直列化したもの
+	プロジェクト内で作られたClassを直列化した物
+	プロジェクト内で作られたClassのソース(「ChangeSetの中のものを
+含めるか？」との質問があるため)
+
+　なのですが、残念ながら手元でpkzipとgzipを駆使してAscii文字列の入った
+バイナリにまでは直せたのですが、中身のデータの意味までは判りませんでし
+た。
+
+
+(3)公開についての質問
+　今回はProjectファイルとして公開することを前提として質問していますが、
+本来、作ったソフトウェアは、Squeak-Plug inで実行することを期待して
+Projectファイルとして公開するべきなのでしょうか？
+　それとも、sarファイルとしてパッケージの形にまとめるべきでしょうか？
+　それとも、mczファイルとしてアーカイブしリソースに関しては別途用意す
+べきでしょうか？
+
+　また、そもそもSqueakMapはどの程度「気軽に」登録しても良い物なのでしょ
+うか？
+
+
+　とくに(3)に関しては、ソフトウェアの使用目的によって異なってくるとは
+思いますが、識者の方々の意見が伺えればと思っています。
+
+　よろしくお願いします。
+
+
+
+
+(以下、余談です)
+　元々は、Squeaker's Scrapbook(http://squeak.sakura.ne.jp/)のフォーラ
+ムで質問しようと思っていた内容なのですが、私の手元の環境からではなかな
+かつながらないのでこちらから質問させていただきます。幸い、返答している
+方々は概ね被っているように見受けられますし、質問内容もWebから参照でき
+ますので一般に対する情報提供的にも劣る物ではないかな、と。
+
+　山宮さんの「再びメタトイ」
+(http://d.hatena.ne.jp/propella/20050105/p2)の文章に対するコメントにあっ
+た「モンテッソーリ教育」を調べていて、学研の日本モンテッソーリ教育総合
+研究所の解説の中に一言「用具はすべて、子どもの手に合うほんものを使いま
+す」という言葉があったのが大変興味を引きました。
+　SqueakToysを使い始めた学生が、世界の構造や発見のプロセスを経てシミュ
+レータとしてのコンピュータ内での再現がつまり「記号化(コーディング)」と
+いう手段であり、これはたとえばFlashやJava-Applet などのマルチメディア
+タイトルやゲームとほぼ同等の物であるという事に気づいてもらえれば、さぞ
+かし興味が深まるだろうと類推されます。
+　この時、FlashやJava-Appletはブラウザ上で直接動かすことが出来ますが、
+Squeakの場合、多くはSqueak自体を立ち上げた上でsarなどをfile-inすること
+によって初めて動くようになるものが多いと思われます。これでは、実際に実
+行するまでの手数が多く、「作ったものをいろんな人に送りつける」という事
+に対する興味がそこで失われるのではないかな、との危惧があります。
+　これに対し、projectのファイル(*.prファイル)を直接HTMLのObject要素で
+リンクする事によって実行するSqueak Plug-inはSqueakを使用しているコミュ
+ニティの外への格好の表現手段として使えるように思えます。また、動いてい
+るものがFlashやJava-Appletと同様な形でWebページ内で動いていることを見
+るのは「自分がほんものを使っている」という感触をより強くするのではない
+かとも思われます。
+
+　このためにも、SqueakToysだけではなく、Smalltalkを直接使ったプログラ
+ミングと、その実行環境を使えないかな、と思ってこんな質問をしました。
+　もちろん、Flashのスクリプティングにも、Java-Appletにもそれなりの利点
+はあり、ブラウザ上でのSqueakToysおよびSmalltalkにこだわる物ではないの
+ですが、単に教育のモチベーション維持用ツールの一環として使ったり、コン
+ピュータシステムというものに対するハックの興味を「人に見せる」ところか
+らはじめるのも選択肢としては大変有用だと思っています。
+　何よりも、Squeakはシステムの中身を直接触れる今時希有な環境ですので
+(Javaもクラスライブラリのソース自体は付属してますけど、あれを読み解く
+のはさすがにちょっと……)。
+
+　以上、余談でした。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From tak ＠ metatoys.org  Fri Jan  7 11:29:39 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの
+In-Reply-To: <20050107003854.EA8A.FLORIAN@seagreen.ocn.ne.jp>
+References: <20050107003854.EA8A.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <41DDF413.4020202@metatoys.org>
+
+山宮です。
+
+> 　土本( Florian )です。
+> 　先日の火入れ式では皆様に大変お世話になりました。
+こないだはご意見をたくさん頂き有難うございました。
+さくっと書ける所だけ書いてみました。
+
+> 　これを受けて、もう少し本格的なグラフィックリソースとサウンドリソース
+> を含めた作品を作ってみようと思っています。
+すばらしい！
+
+> (1)サウンド、グラフィック、スクリプトデータなどの保存に付いての質問
+> 　サウンドに関しては、阿部さん曰く、
+> 
+> 	6x以降はプロジェクトファイルに音も一緒に保存されるので自分の作品に新しい音を追加できます。
+> 
+> 　とのことですので含めることは可能と思われますが、クラス変数内に含まれ
+> る(あらかじめロードした)ColorFormなどをProjectファイル内に含めることは
+> 可能でしょうか。
+> 　また、マップデータやシナリオなどの情報をCollectionとしてクラス変数内
+> に(あらかじめロードして)持ったものについても同様に可能でしょうか。
+
+一番簡単なのは World のプロパティ(モーフはみんなプロパティ辞書を持っています。)
+に入れる事だと思います。オブジェックトなら何でも入ります。プログラムを書いていて
+使いやすいのは storeString かなんかでシリアライズした文字列を ChangeSet に
+クラスメソッドとして持たせる事です。
+
+> (2)Projectファイルで保存されるもの
+> 　これらに付随して質問なのですが、projectファイルの正体はどのような物
+> なのでしょうか？
+> 　予想としては、
+> 
+> 	プロジェクト内で作られたインスタンスを直列化したもの
+> 	プロジェクト内で作られたClassを直列化した物
+> 	プロジェクト内で作られたClassのソース(「ChangeSetの中のものを
+> 含めるか？」との質問があるため)
+> 
+> 　なのですが、残念ながら手元でpkzipとgzipを駆使してAscii文字列の入った
+> バイナリにまでは直せたのですが、中身のデータの意味までは判りませんでし
+> た。
+僕も良く知らないのですが、クラスは名前だけ入っています。ChangeSet を
+含める事が出来るので、新しいクラスを入れるときは ChangeSet に入れると
+良いです。
+
+> (3)公開についての質問
+> 　今回はProjectファイルとして公開することを前提として質問していますが、
+> 本来、作ったソフトウェアは、Squeak-Plug inで実行することを期待して
+> Projectファイルとして公開するべきなのでしょうか？
+> 　それとも、sarファイルとしてパッケージの形にまとめるべきでしょうか？
+> 　それとも、mczファイルとしてアーカイブしリソースに関しては別途用意す
+> べきでしょうか？
+> 
+> 　また、そもそもSqueakMapはどの程度「気軽に」登録しても良い物なのでしょ
+> うか？
+見てのとおりかなり気軽な物も多いので、相当気軽だと思っています。説明を
+ちゃんと書けば特に迷惑では無いと思います。
+
+pr -- 初心者重視
+sar -- ユーザ重視
+mcz -- 自分重視
+
+自分ではこんな感じに使い分けています。mcz は 3.7 以降インストーラが付属
+しているのですが、Monticello 自体が付属していないのとバイナリを含める事が
+出来ないので、配布物としては特に利点が無いと思います。
+
+> 　山宮さんの「再びメタトイ」
+> (http://d.hatena.ne.jp/propella/20050105/p2)の文章に対するコメントにあっ
+> た「モンテッソーリ教育」を調べていて、学研の日本モンテッソーリ教育総合
+> 研究所の解説の中に一言「用具はすべて、子どもの手に合うほんものを使いま
+> す」という言葉があったのが大変興味を引きました。
+
+僕も最近「子どもの発見」を読んでいます。普段技術書と漫画しか読まないので
+色んな教材が載っていてなかなか新鮮です。
+
+> 　この時、FlashやJava-Appletはブラウザ上で直接動かすことが出来ますが、
+> Squeakの場合、多くはSqueak自体を立ち上げた上でsarなどをfile-inすること
+> によって初めて動くようになるものが多いと思われます。これでは、実際に実
+> 行するまでの手数が多く、「作ったものをいろんな人に送りつける」という事
+> に対する興味がそこで失われるのではないかな、との危惧があります。
+
+本気で調べたらタグでイメージを変えたり、一つのウェブ画面で複数のイメージを
+立ち上げてお互い通信させたり、javascript でスクイークを操作と言った事も
+すぐ出来ると思うのですが、やりたい人いませんかね。
+
+> コン
+> ピュータシステムというものに対するハックの興味を「人に見せる」ところか
+> らはじめるのも選択肢としては大変有用だと思っています。
+これには激しく同意します。
+
+-- 
+山宮 隆 ::= http://yuri.sakura.ne.jp/~propella/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From kubota ＠ sie.dendai.ac.jp  Mon Jan 10 15:24:53 2005
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2244] プラグイン中のFormのインスタンス変数の値について
+Message-ID: <56FB9938-62D0-11D9-9C90-000A95AD0BEA@sie.dendai.ac.jp>
+
+久保田と申します。
+はじめて投稿します、よろしくおねがいします。
+
+Linux上でUSBカメラの画像をSqueakに取り込めるようにプラグインを作成しています。
+(Fedora Core2でJasmineをつかってます)
+
+プラグインに渡したFormのインスタンス変数(width,height,depth)の値が
+２倍くらいになってしまうのですが、いったいなぜなのでしょうか？
+とりあえず高さと幅と深さを２で割って対応しています。
+
+Form extent: 320@240 depth:32として作成したFormオブジェクトをプラグインに渡すと、
+プラグイン中では幅が641、高さ421、深さが65となります。
+
+以下のプラグインを作成して確認しました。
+
+TestPlugin>>formTest:
+formTest: aForm
+|width height depth|
+self export: true.
+self primitive: 'formTest' parameters: #(Oop).
+width _ interpreterProxy fetchPointer: 1 ofObject: aForm.
+height _ interpreterProxy fetchPointer: 2 ofObject: aForm.
+depth _ interpreterProxy fetchPointer: 3 ofObject: aForm.
+self cCode: 'printf("%d,%d,%d\n",width,height,depth)'
+
+
+From yoshiki ＠ squeakland.org  Mon Jan 10 15:29:06 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2245] Re: プラグイン中のFormのインスタンス変数の値について
+In-Reply-To: <56FB9938-62D0-11D9-9C90-000A95AD0BEA@sie.dendai.ac.jp>
+References: <56FB9938-62D0-11D9-9C90-000A95AD0BEA@sie.dendai.ac.jp>
+Message-ID: <upt0dssp9.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+  1ビットのSmallInteger tagがあるからですね。
+
+> TestPlugin>>formTest:
+> formTest: aForm
+> |width height depth|
+> self export: true.
+> self primitive: 'formTest' parameters: #(Oop).
+> width _ interpreterProxy fetchPointer: 1 ofObject: aForm.
+> height _ interpreterProxy fetchPointer: 2 ofObject: aForm.
+> depth _ interpreterProxy fetchPointer: 3 ofObject: aForm.
+> self cCode: 'printf("%d,%d,%d\n",width,height,depth)'
+
+  Formのwidth, height, depthはSmallIntegerのはずなので、
+
+width _ interpreterProxy fetchInteger: 1 ofObject: aForm.
+height _ interpreterProxy fetchInteger: 2 ofObject: aForm.
+depth _ interpreterProxy fetchInteger: 3 ofObject: aForm.
+self cCode: 'printf("%d,%d,%d\n",width,height,depth)'
+
+のようにfetchInteger:ofObject:を使うのが正しいです。
+
+-- Yoshiki
+
+
+From kubota ＠ sie.dendai.ac.jp  Mon Jan 10 16:20:16 2005
+From: kubota ＠ sie.dendai.ac.jp (Yoshihiko Kubota)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2246] Re: プラグイン中のFormのインスタンス変数の値について
+In-Reply-To: <upt0dssp9.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <56FB9938-62D0-11D9-9C90-000A95AD0BEA@sie.dendai.ac.jp>
+	<upt0dssp9.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <134E3C55-62D8-11D9-97EE-000A95AD0BEA@sie.dendai.ac.jp>
+
+久保田です。
+
+Video and Image Processingに入っている
+DShowVideoDecoderPlugin>>primDecoderCopyLastCapturedFrameInto:
+を参考にしていたはずですが、気づきませんでした。
+(fetchInteger:ofObject:を使ってますね)
+
+ありがとうございます。
+
+
+From fumito.kondo ＠ hp.com  Mon Jan 10 17:15:35 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2247] お助けください
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF8A8@tkoexc02.asiapacific.cpqcorp.net>
+
+すみません。
+
+以前、マルチエージェントの作り方で質問した近藤です。
+
+とりあえず、簡単なプログラムを作ってみました。
+TestMorphというクラスでエージェントを作り、EnvironmentMorphというクラスで複数のエージェントを管理しています。
+
+エージェントの中身は、まだ何もなくて壁に反射して直進運動するだけのものですが、TestMorph単独で動いているとき（TestMorph　new openInWorldで起動させる）は、うまくすべての壁に反射するのですが、EnvironmentMorph　newで起動をかけると、上の壁（Y＞＝０）の判断をしないで出て行ってしまいます。
+
+ソースを見てみましたが思い当たるところがありません。
+
+どなたか、お暇なときで結構ですから、何かヒントいただけませんでしょうか？
+
+すみません。なにせ、初心者なのでご迷惑おかけします。
+
+ご参考までに、ソースコードをこの後ろにつけておきます。
+
+
+Morph subclass: #EnvironmentMorph
+	instanceVariableNames: 'soprano alto tenor bass run stop kill '
+	classVariableNames: 'Nothing '
+	poolDictionaries: ''
+	category: 'TestMorph'!
+!EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+altoRunning
+
+alto _ TestMorph new openInWorld.
+alto position: (1012 atRandom)@(700 atRandom).
+! !
+
+!EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+bassRunning
+
+bass _ TestMorph new openInWorld.
+bass position: (1012 atRandom)@(700 atRandom).
+! !
+
+!EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:22'!
+kill  
+ Transcript cr; show: 'All Killed'.
+ soprano delete.
+ alto delete.
+ tenor delete.
+ bass delete.
+! !
+
+!EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:00'!
+run 
+ Transcript cr; show: 'Running'.
+ self sopranoRunning. 
+ self altoRunning.
+ self tenorRunning.
+ self bassRunning.! !
+
+!EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+sopranoRunning
+
+soprano _ TestMorph new openInWorld.
+soprano position: (1012 atRandom)@(700 atRandom).
+
+! !
+
+!EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/9/2005 17:52'!
+stop
+ ^true
+! !
+
+!EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:54'!
+tenorRunning
+
+tenor _ TestMorph new openInWorld.
+tenor position: (1012 atRandom)@(700 atRandom).
+! !
+
+
+!EnvironmentMorph methodsFor: 'geometry' stamp: 'F K 1/2/2005 12:01'!
+world
+	^owner isNil ifTrue: [nil] ifFalse: [owner world]
+! !
+
+
+!EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/10/2005 15:58'!
+initLayout
+| left center right |
+
+self openInWorld.
+self extent: 222@39.  
+self changeProportionalLayout.
+self color: Color yellow.
+self position: (20@580).
+
+left _ LayoutFrame fractions: (0.02@0.1 corner: 0.33@0.9).
+run _ self buildRunButton.
+self addMorph: run fullFrame: left.
+
+center _ LayoutFrame fractions: (0.34@0.1 corner: 0.66@0.9).
+stop _ self buildStopButton.
+self addMorph: stop fullFrame: center.
+
+right _ LayoutFrame fractions: (0.67@0.1 corner: 0.98@0.9).
+kill _ self buildKillButton.
+self addMorph: kill fullFrame: right.! !
+
+!EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/9/2005 17:30'!
+initialize
+ super initialize.
+ self initLayout.
+! !
+
+
+!EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+buildKillButton
+ Transcript cr; show: 'KillButton was created'.
+ ^SimpleButtonMorph new
+ target: self;
+ label: 'KILL';
+ actionSelector: #kill.
+! !
+
+!EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+buildRunButton
+ Transcript cr; show: 'RunButton was created'.
+ ^SimpleButtonMorph new
+ target: self;
+ label: 'RUN';
+ actionSelector: #run.
+! !
+
+!EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+buildStopButton
+ Transcript cr; show: 'StopButton was Created'.
+ ^SimpleButtonMorph new
+ target: self;
+ label: 'STOP';
+ actionSelector: #stop.
+! !
+
+
+Morph subclass: #TestMorph
+	instanceVariableNames: 'worldHeight worldWidth xOrdinate yOrdinate deltaX deltaY '
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TestMorph'!
+
+!TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 15:02'!
+handlesMouseDown: anEvent
+ ^true
+! !
+
+!TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 16:20'!
+mouseDown: anEvent
+ Transcript cr; show: anEvent class.
+ Transcript space; show: anEvent. 
+ anEvent redButtonPressed
+  ifTrue: [self startStepping].
+ anEvent yellowButtonPressed
+  ifTrue: [self stopStepping].
+! !
+
+
+!TestMorph methodsFor: 'initialization' stamp: 'F K 1/2/2005 11:01'!
+initialize
+ super initialize.
+ worldHeight _ ActiveWorld height.
+ worldWidth _ ActiveWorld width.
+ xOrdinate _  self x.
+ yOrdinate _  (((self y) - 700) abs).
+ deltaX _ 5.
+ deltaY _ 5.
+
+
+
+ ! !
+
+
+!TestMorph methodsFor: 'drawing' stamp: 'F K 1/2/2005 11:12'!
+drawOn: aCanvas
+ | colors |
+ colors _ color wheel: 6.
+ colors withIndexDo:[:c :i | 
+ aCanvas  fillOval: (self bounds insetBy:4 * i) color: c].
+
+
+! !
+
+
+!TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:00'!
+step
+ xOrdinate _  self x.
+ yOrdinate _  (((self y) - 700) abs).
+ (self xLimitCheck) 
+    ifTrue: [(deltaX = 5) ifTrue:[deltaX _ -5]ifFalse:[deltaX _ 5]].
+ (self yLimitCheck) 
+    ifTrue: [(deltaY = 5) ifTrue:[deltaY _ -5]ifFalse:[deltaY _ 5]].
+ self position: self position + (deltaX@deltaY).
+! !
+
+!TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:04'!
+stepTime
+ ^80! !
+
+
+!TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+xLimitCheck
+  ^ (deltaX = 5) 
+    ifTrue:[xOrdinate >= worldWidth]
+    ifFalse:[xOrdinate <= 0].
+
+! !
+
+!TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+yLimitCheck
+  ^ (deltaY = 5) 
+    ifTrue:[yOrdinate >= worldHeight]
+    ifFalse:[yOrdinate <= 0].
+! !
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+
+From koubo2005 ＠ yengawa.jpn.org  Mon Jan 10 19:40:55 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2248] Re: お助けください
+In-Reply-To: <287073018F1FCC48B871980C94CB156501FEF8A8@tkoexc02.asiapacific.cpqcorp.net>
+References: <287073018F1FCC48B871980C94CB156501FEF8A8@tkoexc02.asiapacific.cpqcorp.net>
+Message-ID: <20050110185457.C241.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+
+Morphicの座標表現が2種類あることが原因です。(これはつまずきの石ですね)
+
+ひとつは右上を原点とするもので、positionなどで扱います。
+もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+
+TestMorph>stepをpositionを使うように書き直すと、こんな風になります。
+(本当は最初の2行だけの変更でよいのですが、delta?の判定を簡素化し、ActiviWorldの大
+きさ変更へ対応させました。あと、読みやすいようにpretty print(Shift + 右ボタンメニュー
+内)でフォーマットしてます。)
+
+step
+	| speedUnit |
+	xOrdinate _ self position x.
+	yOrdinate _ self position y.
+	speedUnit _ 5.
+	xOrdinate < 0
+		ifTrue: [deltaX _ speedUnit].
+	xOrdinate >= ActiveWorld width
+		ifTrue: [deltaX _ speedUnit negated].
+	yOrdinate < 0
+		ifTrue: [deltaY _ speedUnit].
+	yOrdinate >= ActiveWorld height
+		ifTrue: [deltaY _ speedUnit negated].
+	self position: self position + (deltaX @ deltaY)
+
+
+
+On Mon, 10 Jan 2005 17:15:35 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+
+> すみません。
+> 
+> 以前、マルチエージェントの作り方で質問した近藤です。
+> 
+> とりあえず、簡単なプログラムを作ってみました。
+> TestMorphというクラスでエージェントを作り、EnvironmentMorphというクラスで複数のエージェントを管理しています。
+> 
+> エージェントの中身は、まだ何もなくて壁に反射して直進運動するだけのものですが、TestMorph単独で動いているとき（TestMorph　new openInWorldで起動させる）は、うまくすべての壁に反射するのですが、EnvironmentMorph　newで起動をかけると、上の壁（Y＞＝０）の判断をしないで出て行ってしまいます。
+> 
+> ソースを見てみましたが思い当たるところがありません。
+> 
+> どなたか、お暇なときで結構ですから、何かヒントいただけませんでしょうか？
+> 
+> すみません。なにせ、初心者なのでご迷惑おかけします。
+> 
+> ご参考までに、ソースコードをこの後ろにつけておきます。
+> 
+> 
+> Morph subclass: #EnvironmentMorph
+> 	instanceVariableNames: 'soprano alto tenor bass run stop kill '
+> 	classVariableNames: 'Nothing '
+> 	poolDictionaries: ''
+> 	category: 'TestMorph'!
+> !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> altoRunning
+> 
+> alto _ TestMorph new openInWorld.
+> alto position: (1012 atRandom)@(700 atRandom).
+> ! !
+> 
+> !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> bassRunning
+> 
+> bass _ TestMorph new openInWorld.
+> bass position: (1012 atRandom)@(700 atRandom).
+> ! !
+> 
+> !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:22'!
+> kill  
+>  Transcript cr; show: 'All Killed'.
+>  soprano delete.
+>  alto delete.
+>  tenor delete.
+>  bass delete.
+> ! !
+> 
+> !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:00'!
+> run 
+>  Transcript cr; show: 'Running'.
+>  self sopranoRunning. 
+>  self altoRunning.
+>  self tenorRunning.
+>  self bassRunning.! !
+> 
+> !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> sopranoRunning
+> 
+> soprano _ TestMorph new openInWorld.
+> soprano position: (1012 atRandom)@(700 atRandom).
+> 
+> ! !
+> 
+> !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/9/2005 17:52'!
+> stop
+>  ^true
+> ! !
+> 
+> !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:54'!
+> tenorRunning
+> 
+> tenor _ TestMorph new openInWorld.
+> tenor position: (1012 atRandom)@(700 atRandom).
+> ! !
+> 
+> 
+> !EnvironmentMorph methodsFor: 'geometry' stamp: 'F K 1/2/2005 12:01'!
+> world
+> 	^owner isNil ifTrue: [nil] ifFalse: [owner world]
+> ! !
+> 
+> 
+> !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/10/2005 15:58'!
+> initLayout
+> | left center right |
+> 
+> self openInWorld.
+> self extent: 222@39.  
+> self changeProportionalLayout.
+> self color: Color yellow.
+> self position: (20@580).
+> 
+> left _ LayoutFrame fractions: (0.02@0.1 corner: 0.33@0.9).
+> run _ self buildRunButton.
+> self addMorph: run fullFrame: left.
+> 
+> center _ LayoutFrame fractions: (0.34@0.1 corner: 0.66@0.9).
+> stop _ self buildStopButton.
+> self addMorph: stop fullFrame: center.
+> 
+> right _ LayoutFrame fractions: (0.67@0.1 corner: 0.98@0.9).
+> kill _ self buildKillButton.
+> self addMorph: kill fullFrame: right.! !
+> 
+> !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/9/2005 17:30'!
+> initialize
+>  super initialize.
+>  self initLayout.
+> ! !
+> 
+> 
+> !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> buildKillButton
+>  Transcript cr; show: 'KillButton was created'.
+>  ^SimpleButtonMorph new
+>  target: self;
+>  label: 'KILL';
+>  actionSelector: #kill.
+> ! !
+> 
+> !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> buildRunButton
+>  Transcript cr; show: 'RunButton was created'.
+>  ^SimpleButtonMorph new
+>  target: self;
+>  label: 'RUN';
+>  actionSelector: #run.
+> ! !
+> 
+> !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> buildStopButton
+>  Transcript cr; show: 'StopButton was Created'.
+>  ^SimpleButtonMorph new
+>  target: self;
+>  label: 'STOP';
+>  actionSelector: #stop.
+> ! !
+> 
+> 
+> Morph subclass: #TestMorph
+> 	instanceVariableNames: 'worldHeight worldWidth xOrdinate yOrdinate deltaX deltaY '
+> 	classVariableNames: ''
+> 	poolDictionaries: ''
+> 	category: 'TestMorph'!
+> 
+> !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 15:02'!
+> handlesMouseDown: anEvent
+>  ^true
+> ! !
+> 
+> !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 16:20'!
+> mouseDown: anEvent
+>  Transcript cr; show: anEvent class.
+>  Transcript space; show: anEvent. 
+>  anEvent redButtonPressed
+>   ifTrue: [self startStepping].
+>  anEvent yellowButtonPressed
+>   ifTrue: [self stopStepping].
+> ! !
+> 
+> 
+> !TestMorph methodsFor: 'initialization' stamp: 'F K 1/2/2005 11:01'!
+> initialize
+>  super initialize.
+>  worldHeight _ ActiveWorld height.
+>  worldWidth _ ActiveWorld width.
+>  xOrdinate _  self x.
+>  yOrdinate _  (((self y) - 700) abs).
+>  deltaX _ 5.
+>  deltaY _ 5.
+> 
+> 
+> 
+>  ! !
+> 
+> 
+> !TestMorph methodsFor: 'drawing' stamp: 'F K 1/2/2005 11:12'!
+> drawOn: aCanvas
+>  | colors |
+>  colors _ color wheel: 6.
+>  colors withIndexDo:[:c :i | 
+>  aCanvas  fillOval: (self bounds insetBy:4 * i) color: c].
+> 
+> 
+> ! !
+> 
+> 
+> !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:00'!
+> step
+>  xOrdinate _  self x.
+>  yOrdinate _  (((self y) - 700) abs).
+>  (self xLimitCheck) 
+>     ifTrue: [(deltaX = 5) ifTrue:[deltaX _ -5]ifFalse:[deltaX _ 5]].
+>  (self yLimitCheck) 
+>     ifTrue: [(deltaY = 5) ifTrue:[deltaY _ -5]ifFalse:[deltaY _ 5]].
+>  self position: self position + (deltaX@deltaY).
+> ! !
+> 
+> !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:04'!
+> stepTime
+>  ^80! !
+> 
+> 
+> !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> xLimitCheck
+>   ^ (deltaX = 5) 
+>     ifTrue:[xOrdinate >= worldWidth]
+>     ifFalse:[xOrdinate <= 0].
+> 
+> ! !
+> 
+> !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> yLimitCheck
+>   ^ (deltaY = 5) 
+>     ifTrue:[yOrdinate >= worldHeight]
+>     ifFalse:[yOrdinate <= 0].
+> ! !
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From koubo2005 ＠ yengawa.jpn.org  Mon Jan 10 20:01:10 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2249] Re: お助けください
+In-Reply-To: <20050110185457.C241.KOUBO2005@yengawa.jpn.org>
+References: <287073018F1FCC48B871980C94CB156501FEF8A8@tkoexc02.asiapacific.cpqcorp.net>
+	<20050110185457.C241.KOUBO2005@yengawa.jpn.org>
+Message-ID: <20050110195700.C244.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+右も左もわからなかった。。。
+
+> ひとつは右上を原点とするもので、positionなどで扱います。
+> もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+
+正しくはこちら。
+
+ひとつは左上を原点とするもので、positionなどで扱います。
+もうひとつは左「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+
+
+On Mon, 10 Jan 2005 19:40:55 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+
+> 横川です。
+> 
+> Morphicの座標表現が2種類あることが原因です。(これはつまずきの石ですね)
+> 
+> ひとつは右上を原点とするもので、positionなどで扱います。
+> もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> 
+> TestMorph>stepをpositionを使うように書き直すと、こんな風になります。
+> (本当は最初の2行だけの変更でよいのですが、delta?の判定を簡素化し、ActiviWorldの大
+> きさ変更へ対応させました。あと、読みやすいようにpretty print(Shift + 右ボタンメニュー
+> 内)でフォーマットしてます。)
+> 
+> step
+> 	| speedUnit |
+> 	xOrdinate _ self position x.
+> 	yOrdinate _ self position y.
+> 	speedUnit _ 5.
+> 	xOrdinate < 0
+> 		ifTrue: [deltaX _ speedUnit].
+> 	xOrdinate >= ActiveWorld width
+> 		ifTrue: [deltaX _ speedUnit negated].
+> 	yOrdinate < 0
+> 		ifTrue: [deltaY _ speedUnit].
+> 	yOrdinate >= ActiveWorld height
+> 		ifTrue: [deltaY _ speedUnit negated].
+> 	self position: self position + (deltaX @ deltaY)
+> 
+> 
+> 
+> On Mon, 10 Jan 2005 17:15:35 +0900
+> "Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+> 
+> > すみません。
+> > 
+> > 以前、マルチエージェントの作り方で質問した近藤です。
+> > 
+> > とりあえず、簡単なプログラムを作ってみました。
+> > TestMorphというクラスでエージェントを作り、EnvironmentMorphというクラスで複数のエージェントを管理しています。
+> > 
+> > エージェントの中身は、まだ何もなくて壁に反射して直進運動するだけのものですが、TestMorph単独で動いているとき（TestMorph　new openInWorldで起動させる）は、うまくすべての壁に反射するのですが、EnvironmentMorph　newで起動をかけると、上の壁（Y＞＝０）の判断をしないで出て行ってしまいます。
+> > 
+> > ソースを見てみましたが思い当たるところがありません。
+> > 
+> > どなたか、お暇なときで結構ですから、何かヒントいただけませんでしょうか？
+> > 
+> > すみません。なにせ、初心者なのでご迷惑おかけします。
+> > 
+> > ご参考までに、ソースコードをこの後ろにつけておきます。
+> > 
+> > 
+> > Morph subclass: #EnvironmentMorph
+> > 	instanceVariableNames: 'soprano alto tenor bass run stop kill '
+> > 	classVariableNames: 'Nothing '
+> > 	poolDictionaries: ''
+> > 	category: 'TestMorph'!
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > altoRunning
+> > 
+> > alto _ TestMorph new openInWorld.
+> > alto position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > bassRunning
+> > 
+> > bass _ TestMorph new openInWorld.
+> > bass position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:22'!
+> > kill  
+> >  Transcript cr; show: 'All Killed'.
+> >  soprano delete.
+> >  alto delete.
+> >  tenor delete.
+> >  bass delete.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:00'!
+> > run 
+> >  Transcript cr; show: 'Running'.
+> >  self sopranoRunning. 
+> >  self altoRunning.
+> >  self tenorRunning.
+> >  self bassRunning.! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > sopranoRunning
+> > 
+> > soprano _ TestMorph new openInWorld.
+> > soprano position: (1012 atRandom)@(700 atRandom).
+> > 
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/9/2005 17:52'!
+> > stop
+> >  ^true
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:54'!
+> > tenorRunning
+> > 
+> > tenor _ TestMorph new openInWorld.
+> > tenor position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'geometry' stamp: 'F K 1/2/2005 12:01'!
+> > world
+> > 	^owner isNil ifTrue: [nil] ifFalse: [owner world]
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/10/2005 15:58'!
+> > initLayout
+> > | left center right |
+> > 
+> > self openInWorld.
+> > self extent: 222@39.  
+> > self changeProportionalLayout.
+> > self color: Color yellow.
+> > self position: (20@580).
+> > 
+> > left _ LayoutFrame fractions: (0.02@0.1 corner: 0.33@0.9).
+> > run _ self buildRunButton.
+> > self addMorph: run fullFrame: left.
+> > 
+> > center _ LayoutFrame fractions: (0.34@0.1 corner: 0.66@0.9).
+> > stop _ self buildStopButton.
+> > self addMorph: stop fullFrame: center.
+> > 
+> > right _ LayoutFrame fractions: (0.67@0.1 corner: 0.98@0.9).
+> > kill _ self buildKillButton.
+> > self addMorph: kill fullFrame: right.! !
+> > 
+> > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/9/2005 17:30'!
+> > initialize
+> >  super initialize.
+> >  self initLayout.
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildKillButton
+> >  Transcript cr; show: 'KillButton was created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'KILL';
+> >  actionSelector: #kill.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildRunButton
+> >  Transcript cr; show: 'RunButton was created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'RUN';
+> >  actionSelector: #run.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildStopButton
+> >  Transcript cr; show: 'StopButton was Created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'STOP';
+> >  actionSelector: #stop.
+> > ! !
+> > 
+> > 
+> > Morph subclass: #TestMorph
+> > 	instanceVariableNames: 'worldHeight worldWidth xOrdinate yOrdinate deltaX deltaY '
+> > 	classVariableNames: ''
+> > 	poolDictionaries: ''
+> > 	category: 'TestMorph'!
+> > 
+> > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 15:02'!
+> > handlesMouseDown: anEvent
+> >  ^true
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 16:20'!
+> > mouseDown: anEvent
+> >  Transcript cr; show: anEvent class.
+> >  Transcript space; show: anEvent. 
+> >  anEvent redButtonPressed
+> >   ifTrue: [self startStepping].
+> >  anEvent yellowButtonPressed
+> >   ifTrue: [self stopStepping].
+> > ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'initialization' stamp: 'F K 1/2/2005 11:01'!
+> > initialize
+> >  super initialize.
+> >  worldHeight _ ActiveWorld height.
+> >  worldWidth _ ActiveWorld width.
+> >  xOrdinate _  self x.
+> >  yOrdinate _  (((self y) - 700) abs).
+> >  deltaX _ 5.
+> >  deltaY _ 5.
+> > 
+> > 
+> > 
+> >  ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'drawing' stamp: 'F K 1/2/2005 11:12'!
+> > drawOn: aCanvas
+> >  | colors |
+> >  colors _ color wheel: 6.
+> >  colors withIndexDo:[:c :i | 
+> >  aCanvas  fillOval: (self bounds insetBy:4 * i) color: c].
+> > 
+> > 
+> > ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:00'!
+> > step
+> >  xOrdinate _  self x.
+> >  yOrdinate _  (((self y) - 700) abs).
+> >  (self xLimitCheck) 
+> >     ifTrue: [(deltaX = 5) ifTrue:[deltaX _ -5]ifFalse:[deltaX _ 5]].
+> >  (self yLimitCheck) 
+> >     ifTrue: [(deltaY = 5) ifTrue:[deltaY _ -5]ifFalse:[deltaY _ 5]].
+> >  self position: self position + (deltaX@deltaY).
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:04'!
+> > stepTime
+> >  ^80! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > xLimitCheck
+> >   ^ (deltaX = 5) 
+> >     ifTrue:[xOrdinate >= worldWidth]
+> >     ifFalse:[xOrdinate <= 0].
+> > 
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > yLimitCheck
+> >   ^ (deltaY = 5) 
+> >     ifTrue:[yOrdinate >= worldHeight]
+> >     ifFalse:[yOrdinate <= 0].
+> > ! !
+> > 
+> > 
+> > 近藤史人
+> > シニアコンサルタント
+> > 日本ヒューレット・パッカード㈱
+> > Fumito Kondo
+> > Senior Consultant
+> > Hewlett-Pakard Japan, Ltd.
+> > Phone: +81-52-566-5900
+> > Fax:     +81-52-5990
+> > e-mail: Fumito.Kondo@hp.com
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From fumito.kondo ＠ hp.com  Tue Jan 11 07:26:55 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2250] Re: お助けください
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF8A9@tkoexc02.asiapacific.cpqcorp.net>
+
+横川さん、
+
+早速の救済、ありがとうございます。
+
+私も座標系の違いには戸惑って、Y座標に関しては、 yOrdinate _  (((self y) - 700) abs).と変換するロジックを入れていたのですが、単体ではうまく動くのに、EnvironmentoMorphから起動をかけると天井を突き抜けてしまうというのが良く分からなくて。
+
+とにかく、positionを使ってみるということですね。
+
+ありがとうございます。
+
+本日帰宅したら早速試してみます。
+
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+Sent: Monday, January 10, 2005 8:01 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2249] Re: お助けください
+
+
+横川です。
+右も左もわからなかった。。。
+
+> ひとつは右上を原点とするもので、positionなどで扱います。
+> もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+
+正しくはこちら。
+
+ひとつは左上を原点とするもので、positionなどで扱います。
+もうひとつは左「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+
+
+On Mon, 10 Jan 2005 19:40:55 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+
+> 横川です。
+> 
+> Morphicの座標表現が2種類あることが原因です。(これはつまずきの石ですね)
+> 
+> ひとつは右上を原点とするもので、positionなどで扱います。
+> もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> 
+> TestMorph>stepをpositionを使うように書き直すと、こんな風になります。
+> (本当は最初の2行だけの変更でよいのですが、delta?の判定を簡素化し、ActiviWorldの大
+> きさ変更へ対応させました。あと、読みやすいようにpretty print(Shift + 右ボタンメニュー
+> 内)でフォーマットしてます。)
+> 
+> step
+> 	| speedUnit |
+> 	xOrdinate _ self position x.
+> 	yOrdinate _ self position y.
+> 	speedUnit _ 5.
+> 	xOrdinate < 0
+> 		ifTrue: [deltaX _ speedUnit].
+> 	xOrdinate >= ActiveWorld width
+> 		ifTrue: [deltaX _ speedUnit negated].
+> 	yOrdinate < 0
+> 		ifTrue: [deltaY _ speedUnit].
+> 	yOrdinate >= ActiveWorld height
+> 		ifTrue: [deltaY _ speedUnit negated].
+> 	self position: self position + (deltaX @ deltaY)
+> 
+> 
+> 
+> On Mon, 10 Jan 2005 17:15:35 +0900
+> "Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+> 
+> > すみません。
+> > 
+> > 以前、マルチエージェントの作り方で質問した近藤です。
+> > 
+> > とりあえず、簡単なプログラムを作ってみました。
+> > TestMorphというクラスでエージェントを作り、EnvironmentMorphというクラスで複数のエージェントを管理しています。
+> > 
+> > エージェントの中身は、まだ何もなくて壁に反射して直進運動するだけのものですが、TestMorph単独で動いているとき（TestMorph　new openInWorldで起動させる）は、うまくすべての壁に反射するのですが、EnvironmentMorph　newで起動をかけると、上の壁（Y＞＝０）の判断をしないで出て行ってしまいます。
+> > 
+> > ソースを見てみましたが思い当たるところがありません。
+> > 
+> > どなたか、お暇なときで結構ですから、何かヒントいただけませんでしょうか？
+> > 
+> > すみません。なにせ、初心者なのでご迷惑おかけします。
+> > 
+> > ご参考までに、ソースコードをこの後ろにつけておきます。
+> > 
+> > 
+> > Morph subclass: #EnvironmentMorph
+> > 	instanceVariableNames: 'soprano alto tenor bass run stop kill '
+> > 	classVariableNames: 'Nothing '
+> > 	poolDictionaries: ''
+> > 	category: 'TestMorph'!
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > altoRunning
+> > 
+> > alto _ TestMorph new openInWorld.
+> > alto position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > bassRunning
+> > 
+> > bass _ TestMorph new openInWorld.
+> > bass position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:22'!
+> > kill  
+> >  Transcript cr; show: 'All Killed'.
+> >  soprano delete.
+> >  alto delete.
+> >  tenor delete.
+> >  bass delete.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:00'!
+> > run 
+> >  Transcript cr; show: 'Running'.
+> >  self sopranoRunning. 
+> >  self altoRunning.
+> >  self tenorRunning.
+> >  self bassRunning.! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > sopranoRunning
+> > 
+> > soprano _ TestMorph new openInWorld.
+> > soprano position: (1012 atRandom)@(700 atRandom).
+> > 
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/9/2005 17:52'!
+> > stop
+> >  ^true
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:54'!
+> > tenorRunning
+> > 
+> > tenor _ TestMorph new openInWorld.
+> > tenor position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'geometry' stamp: 'F K 1/2/2005 12:01'!
+> > world
+> > 	^owner isNil ifTrue: [nil] ifFalse: [owner world]
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/10/2005 15:58'!
+> > initLayout
+> > | left center right |
+> > 
+> > self openInWorld.
+> > self extent: 222@39.  
+> > self changeProportionalLayout.
+> > self color: Color yellow.
+> > self position: (20@580).
+> > 
+> > left _ LayoutFrame fractions: (0.02@0.1 corner: 0.33@0.9).
+> > run _ self buildRunButton.
+> > self addMorph: run fullFrame: left.
+> > 
+> > center _ LayoutFrame fractions: (0.34@0.1 corner: 0.66@0.9).
+> > stop _ self buildStopButton.
+> > self addMorph: stop fullFrame: center.
+> > 
+> > right _ LayoutFrame fractions: (0.67@0.1 corner: 0.98@0.9).
+> > kill _ self buildKillButton.
+> > self addMorph: kill fullFrame: right.! !
+> > 
+> > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/9/2005 17:30'!
+> > initialize
+> >  super initialize.
+> >  self initLayout.
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildKillButton
+> >  Transcript cr; show: 'KillButton was created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'KILL';
+> >  actionSelector: #kill.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildRunButton
+> >  Transcript cr; show: 'RunButton was created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'RUN';
+> >  actionSelector: #run.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildStopButton
+> >  Transcript cr; show: 'StopButton was Created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'STOP';
+> >  actionSelector: #stop.
+> > ! !
+> > 
+> > 
+> > Morph subclass: #TestMorph
+> > 	instanceVariableNames: 'worldHeight worldWidth xOrdinate yOrdinate deltaX deltaY '
+> > 	classVariableNames: ''
+> > 	poolDictionaries: ''
+> > 	category: 'TestMorph'!
+> > 
+> > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 15:02'!
+> > handlesMouseDown: anEvent
+> >  ^true
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 16:20'!
+> > mouseDown: anEvent
+> >  Transcript cr; show: anEvent class.
+> >  Transcript space; show: anEvent. 
+> >  anEvent redButtonPressed
+> >   ifTrue: [self startStepping].
+> >  anEvent yellowButtonPressed
+> >   ifTrue: [self stopStepping].
+> > ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'initialization' stamp: 'F K 1/2/2005 11:01'!
+> > initialize
+> >  super initialize.
+> >  worldHeight _ ActiveWorld height.
+> >  worldWidth _ ActiveWorld width.
+> >  xOrdinate _  self x.
+> >  yOrdinate _  (((self y) - 700) abs).
+> >  deltaX _ 5.
+> >  deltaY _ 5.
+> > 
+> > 
+> > 
+> >  ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'drawing' stamp: 'F K 1/2/2005 11:12'!
+> > drawOn: aCanvas
+> >  | colors |
+> >  colors _ color wheel: 6.
+> >  colors withIndexDo:[:c :i | 
+> >  aCanvas  fillOval: (self bounds insetBy:4 * i) color: c].
+> > 
+> > 
+> > ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:00'!
+> > step
+> >  xOrdinate _  self x.
+> >  yOrdinate _  (((self y) - 700) abs).
+> >  (self xLimitCheck) 
+> >     ifTrue: [(deltaX = 5) ifTrue:[deltaX _ -5]ifFalse:[deltaX _ 5]].
+> >  (self yLimitCheck) 
+> >     ifTrue: [(deltaY = 5) ifTrue:[deltaY _ -5]ifFalse:[deltaY _ 5]].
+> >  self position: self position + (deltaX@deltaY).
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:04'!
+> > stepTime
+> >  ^80! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > xLimitCheck
+> >   ^ (deltaX = 5) 
+> >     ifTrue:[xOrdinate >= worldWidth]
+> >     ifFalse:[xOrdinate <= 0].
+> > 
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > yLimitCheck
+> >   ^ (deltaY = 5) 
+> >     ifTrue:[yOrdinate >= worldHeight]
+> >     ifFalse:[yOrdinate <= 0].
+> > ! !
+> > 
+> > 
+> > 近藤史人
+> > シニアコンサルタント
+> > 日本ヒューレット・パッカード㈱
+> > Fumito Kondo
+> > Senior Consultant
+> > Hewlett-Pakard Japan, Ltd.
+> > Phone: +81-52-566-5900
+> > Fax:     +81-52-5990
+> > e-mail: Fumito.Kondo@hp.com
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From yoshiki ＠ squeakland.org  Tue Jan 11 07:37:44 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2251] Re: プラグイン中のFormのインスタンス変数の値について
+In-Reply-To: <134E3C55-62D8-11D9-97EE-000A95AD0BEA@sie.dendai.ac.jp>
+References: <56FB9938-62D0-11D9-9C90-000A95AD0BEA@sie.dendai.ac.jp>
+	<upt0dssp9.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<134E3C55-62D8-11D9-97EE-000A95AD0BEA@sie.dendai.ac.jp>
+Message-ID: <u6524syfb.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> Video and Image Processingに入っている
+> DShowVideoDecoderPlugin>>primDecoderCopyLastCapturedFrameInto:
+> を参考にしていたはずですが、気づきませんでした。
+> (fetchInteger:ofObject:を使ってますね)
+> 
+> ありがとうございます。
+
+  いえいえ、どういたしまして。
+
+  もし何でしたらsqueak-devに書いた
+
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2005-January/087112.html
+
+に関連して、MPEG4IPとくっつけていくことに関しても検討してもらえると助
+かります。CroquetなりSqueakなりで、かっこよいビデオ会議などができるよ
+うになりますよ。
+
+-- Yoshiki
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Tue Jan 11 13:58:21 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2252] 画面サイズ変更 (Re: お助けください )
+In-Reply-To: <287073018F1FCC48B871980C94CB156501FEF8A9@tkoexc02.asiapacific.cpqco
+	rp.net>
+References: <287073018F1FCC48B871980C94CB156501FEF8A9@tkoexc02.asiapacific.cpqco
+	rp.net>
+Message-ID: <p04320401be090bc37c93@amateras.ma.ns.musashi-tech.ac.jp>
+
+明けましておめでとうございます。
+
+うちの子どもたちは大きな画面で作品を作っていたので、デフォルトの画面サ
+イズにしたときに位置がずれるモーフがあり（といいますかスクリプト内にハ
+ードコーディングした座標とは変わってしまう。）、作り直したものも結構あ
+ります。
+画面サイズ変更に関して強靱な作品にするための（子供向けの）記述法があっ
+たら教えてください。
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Tue Jan 11 15:13:42 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2253] Re: C5 2005 参加案内
+In-Reply-To: <20041202232614.440f1401.htakada@db.soc.i.kyoto-u.ac.jp>
+References: <20041202232614.440f1401.htakada@db.soc.i.kyoto-u.ac.jp>
+Message-ID: <20050111151342.2140e720.htakada@db.soc.i.kyoto-u.ac.jp>
+
+squeak-ja の皆様
+
+京都大学の高田です．
+
+前にお知らせさせて頂きました国際会議 C5 2005 のプログラムができあがりま
+したので，御案内させて頂きます．
+
+現在，参加登録を受付中です．1月15日までに登録して頂きますと，割引料金で
+御参加頂けますので，ぜひ早めの御登録をお願いいたします．
+
+多数の御参加をお待ちしております．よろしくお願いいたします．
+
+-----
+参加募集
+
+第３回コンピュータを用いた創造・連携・協調に関する国際会議
+The Third International Conference on
+Creating, Connecting and Collaborating through Computing (C5 2005)
+2005年1月28日，29日 京都大学芝蘭会館
+http://www.edu.soc.i.kyoto-u.ac.jp/c5-05/
+
+主催
+独立行政法人日本学術振興会国際研究集会
+京都大学21世紀COE「知識社会基盤構築のための情報学拠点形成」
+独立行政法人情報通信研究機構（申請中）
+
+共催
+Viewpoints Research Institute
+ALAN-K (Advanced LeArning Network in Kyoto) プロジェクト
+
+趣旨
+今日，コンピュータは子ども・若者からお年寄りまで，様々な用途で用いられ
+るようになっています。来るべき知識社会では，このような利用者の間での創
+造，連携，協調のためにコンピュータを利用することが，コンピュータ上での
+人間の活動を支援する際の重要な要因となります。本国際会議は，創造的・協
+調的な環境（特にSmalltalk，Squeak，Croquet上で実現されたものを対象
+としますが，これに限定するものではありません）について，技術的観点だけ
+でなく，実践的・経験的な観点から議論・発表する場を，研究者，開発者，利
+用者に提供することを目的としています。
+
+参加登録費
+早期登録(1月15日まで): 10,000円
+通常登録(1月16日以降，当日): 12,000円
+学生: 3,000円 (早期，当日とも)
+追加バンケット: 5,000円
+追加予稿集: 2,000円
+
+事前支払いには，クレジットカード(VISA,MasterCardのみ)がご利用頂けます。
+当日会場での支払いは，日本円での現金のみ扱います。
+
+参加申し込み
+下記様式にて，FAXまたはE-Mailでお送りください。クレジットカード利用の場
+合は，必ずFAXでお送りください。
+http://www.edu.soc.i.kyoto-u.ac.jp/c5-05/RegistrationFormJ.doc (MS-WORD)
+http://www.edu.soc.i.kyoto-u.ac.jp/c5-05/RegistrationFormJ.pdf (PDF)
+http://www.edu.soc.i.kyoto-u.ac.jp/c5-05/RegistrationFormJ.txt (テキスト)
+
+プログラム
+
+1月28日(金曜日)
+
+10:00 - 10:15 オープニング
+10:15 - 11:15 基調講演
+  Alan Kay (Viewpoints Research Institute, The Hewlett-Packard Company, USA)
+11:15 - 11:30 休憩
+11:30 - 12:45 技術セッション
+  セッション 1A: User Interface and HCI (1)
+    User Interfaces for Self and Others in Croquet Learning Spaces
+      Julian Lombardi, Mark P. McCahill
+    User Interfaces for Places and Things in Croquet Learning Spaces
+      Mark P. McCahill, Julian Lombardi
+  セッション 1B: Creation Support
+    Meta-toys workshop and environment with Squeak
+      Takashi Yamamiya
+    Swimmy: A Framework of Multi-Agent Instruction System for Children
+      Koji Yokokawa
+    Bootstrapping an Animated Sketchbook
+      Joshua Gargus
+12:45 - 14:00 昼食休憩
+14:00 - 15:15 技術セッション
+  セッション 2A: User Interface and HCI (2)
+    3D Data Transmitting and Displaying System with an Omni-directional Display for Group Learning
+      Yukio YASUHARA, Nobuyuki KUKIMOTO, Naohisa SAKAMOTO, Yasuo EBARA, Koji KOYAMADA
+    Filters and Tasks in Croquet
+      David A. Smith, Yoshiki Ohshima, Andreas Raab, David P. Reed, Alan Kay
+    P2P e-Learning System and Its Squeak-based User Interface
+      Takao KAWAMURA, Ryosuke NAKATANI and Kazunori SUGAHARA
+  セッション 2B: Collaborative Environment
+    Challenges in Collaborative Game Design Developing Learning Environments for Creating Games
+      Maic Masuch, Michael Rueger
+    Incremental Construction of Delaunay Overlaid Network for Virtual Collaborative Space
+      Masaaki Ohnishi, Ryo Nishide, Shinichi Ueshima
+    A Collaborative Environment for Users of Advanced Scientific Instruments
+      Hein Bles, Marco Boom, Laurien Broer van Dijk, Eric van Duin, Hanneke Jacobs, Susan Joosen, Ernest van Breemen, Auke van Balen
+15:15 - 15:45 コーヒーブレイク
+15:45 - 17:00 技術
+  セッション 3A: Programming & Middleware Technology
+    The Early Examples of Kedama, A Massively Parallel System in Squeak
+      Yoshiki Ohshima
+    The Media Messenger
+      Rick McGeer, Andreas Raab, Michael Rueger
+    Integration of Multiple Heterogeneous Databases in Smalltalk
+      Zhiyong Peng
+  セッション 3B: Virtual Learning Environment
+    Reaching Adult Learners through the Entry Point Framework and Problem-based Learning in a Croquet-based Virtual Environment
+      Benay Dara-Abrams
+    Building a DreamWorld with the Jones: Suggestions for new features to support collaborative learning in virtual worlds
+      Erik CHAMPION, Sachiyo SEKIGUCHI
+    Croquet Learning Environments: Extending the Value of Campus Life into the Online Experience
+      Marilyn May Lombardi, Julian Lombardi
+17:30 - 20:00 バンケット
+
+1月29日(土曜日)
+
+ 9:30 - 10:30 基調講演
+   長尾真 (情報通信研究機構)
+10:30 - 10:45 休憩
+10:45 - 12:00 技術セッション
+  セッション 4A: Advanced Learning Environment
+    A Semantic Explanation and Symbolic Computation Approach for Designing Mathematical Courseware
+      Yukari Shirota
+    Developing a Web-based Environment in Supporting Students Team-working and Learning in a Problem-based Learning Approach
+      Hsiu-Ping Yueh, Wei-Jane Lin
+    The effective learning support strategy for Self Learning with Problem-Based Learning
+      Syuzi OKAMURA, Isao MATUSHIMA, Yoneo YANO
+  セッション 4B: Hybrid Systems and Learning
+    Co-Creation System and Human-Computer Interaction
+      Yoshihiro Miyake
+    Design of a Hybrid-Learning Environment Based on SOARS
+      Ko Ishiyama, Hideki Tanuma, Yuhsuke Koyama, Hiroshi Deguchi
+    A Report of Large-Scale Gaming Simulation using a U-Mart System in Economic Education
+      Hiroyuki MATSUI, Yusuke KOYAMA, Ko ISHIYAMA
+12:00 - 13:30 昼食休憩
+13:30 - 14:20 招待講演
+  Programming by Building -- Using Robotics in Education
+    Henrik Hautop Lund (University of Southern Denmark)
+14:20 - 14:40 コーヒーブレイク
+14:40 - 16:00 パネル
+  Future of Squeak and Croquet
+    David A. Smith, Michael Ruger, Andreas Raab, Julian Lombardi,
+    Mark P. McCahill, Yoshiki Ohshima
+16:00 - 16:10 休憩
+16:10 - 17:00 招待講演
+  Interactive "smart" computers (sketching interfaces for 2D/3D Graphical applications)
+    五十嵐健夫 (東京大学)
+17:00 - 17:15 クロージング
+18:00 - 21:00 Squeak BOF
+
+関連行事
+コンピュータの教育応用に関する話題を中心としたフォーラムを下記要領にて
+開催致します。
+
+名称：子ども達のためのコンピュータ上での創造とカリキュラム
+　　　Creation and Curricula on Computers for Children (C4)
+主催：京都大学21世紀COE「知識社会基盤構築のための情報学拠点形成」
+　　　文部科学省科学研究費基盤研究(A)(2)
+　　　「高水準ウェブデータウェアハウスとそれを基準とする教育システムの研究開発」
+　　　 日本ヒューレット・パッカード株式会社
+日程・場所：2005年1月30日(日) 京都大学芝蘭会館 稲森ホール
+参加費：無料 (会場の都合上，定員240名となります)
+内容：学校での活動実践，数学・科学学習のためのカリキュラム，
+　　　コンピュータの教育利用のための新技術，など
+Webサイト：http://www.edu.soc.i.kyoto-u.ac.jp/c4-05/
+
+組織委員会
+名誉共同委員長:
+    アラン・ケイ
+　　　(ビューポインツ・リサーチ・インスティチュート，ヒューレットパッカード)
+    長尾　真
+　　　(情報通信研究機構）
+会議共同委員長:
+    酒井　徹朗 (京都大学)
+    田中　克己 (京都大学)
+プログラム共同委員長:
+    キム・ローズ
+　　　(ビューポインツ・リサーチ・インスティチュート，ヒューレットパッカード)
+    喜多　一 (京都大学)
+    上善　恒雄 (大阪電気通信大学／京都大学)
+財務委員長:
+    上善　恒雄 (大阪電気通信大学／京都大学)
+広報・出版委員長:
+    高田　秀志 (京都大学)
+ローカルアレンジメント;
+    高田　ひとみ (京都大学)
+
+
+
+-- 
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+
+From abee.abe ＠ nifty.ne.jp  Tue Jan 11 20:51:49 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2254] Re: 子ども達のためのコンピュータ上での創造とカリキュラム  (C4)
+Message-ID: <41E3BDD5116.779AABEE.ABE@smtp.nifty.com>
+
+阿部@広島です。
+
+先月、「子ども達のためのコンピュータ上での創造とカリキュラム (C4)」の開催
+についてご案内しました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2004-December/002194.html
+
+その際、シーモア・パパート教授の講演があるとお知らせしましたが、残念なこ
+とに中止になってしまいました。
+
+http://www.edu.soc.i.kyoto-u.ac.jp/c4-05/
+
+しかしながら、その分、国内でSqueakを実践されている方々の講演が増え、懇親
+会や、新しいカリキュラムのベースとなる技術のデモも追加されました。
+もしかしたら、ビッグネームの基調講演も入るかもしれません。
+
+C5、SqueakBOFの後にはぜひC4にご参加ください。特に教育関係者、保護者の方、
+Squeakを使った学習に興味のある方のご参加をお待ちしております。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+
+From "土本 (Florian) 強  Tue Jan 11 21:25:27 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:04 2007
+Subject: [Squeak-ja: 2255] Re: プロジェクトファイル(.pr)で保存されるもの
+In-Reply-To: <41DDF413.4020202@metatoys.org>
+References: <20050107003854.EA8A.FLORIAN@seagreen.ocn.ne.jp>
+	<41DDF413.4020202@metatoys.org>
+Message-ID: <20050111210531.DBFF.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+　返答ありがとうございました。
+
+メール「[Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの」(2005/01/07 11:29) に於いて
+「Takashi Yamamiya」 語りて曰く、
+
+Takashi> > 　これを受けて、もう少し本格的なグラフィックリソースとサウンドリソース
+Takashi> > を含めた作品を作ってみようと思っています。
+Takashi> すばらしい！
+
+　リソースはともかく、行き帰りの電車ではどこまで作業出来る事やら(^^;)。
+
+＃土本は普段SqueakでのプログラミングをZaurus上で通勤電車で行っています。
+＃腰を落ち着けてPCで作業するほどは時間的余裕がないので……。
+
+Takashi> > (1)サウンド、グラフィック、スクリプトデータなどの保存に付いての質問
+Takashi> > 　サウンドに関しては、阿部さん曰く、
+Takashi> > 
+Takashi> > 	6x以降はプロジェクトファイルに音も一緒に保存されるので自分の作品に新しい音を追加できます。
+Takashi> > 
+Takashi> > 　とのことですので含めることは可能と思われますが、クラス変数内に含まれ
+Takashi> > る(あらかじめロードした)ColorFormなどをProjectファイル内に含めることは
+Takashi> > 可能でしょうか。
+Takashi> > 　また、マップデータやシナリオなどの情報をCollectionとしてクラス変数内
+Takashi> > に(あらかじめロードして)持ったものについても同様に可能でしょうか。
+Takashi> 
+Takashi> 一番簡単なのは World のプロパティ(モーフはみんなプロパティ辞書を持っています。)
+Takashi> に入れる事だと思います。オブジェックトなら何でも入ります。プログラムを書いていて
+Takashi> 使いやすいのは storeString かなんかでシリアライズした文字列を ChangeSet に
+Takashi> クラスメソッドとして持たせる事です。
+
+　なるほど。
+　Worldに限らず、どこかのMorphのプロパティ辞書に一括してリソースを持た
+せる方針で問題なさそうですね。
+
+Takashi> > (2)Projectファイルで保存されるもの
+Takashi> > 　これらに付随して質問なのですが、projectファイルの正体はどのような物
+Takashi> > なのでしょうか？
+Takashi> > 　予想としては、
+Takashi> > 
+Takashi> > 	プロジェクト内で作られたインスタンスを直列化したもの
+Takashi> > 	プロジェクト内で作られたClassを直列化した物
+Takashi> > 	プロジェクト内で作られたClassのソース(「ChangeSetの中のものを
+Takashi> > 含めるか？」との質問があるため)
+Takashi> > 
+Takashi> > 　なのですが、残念ながら手元でpkzipとgzipを駆使してAscii文字列の入った
+Takashi> > バイナリにまでは直せたのですが、中身のデータの意味までは判りませんでし
+Takashi> > た。
+Takashi> 僕も良く知らないのですが、クラスは名前だけ入っています。ChangeSet を
+Takashi> 含める事が出来るので、新しいクラスを入れるときは ChangeSet に入れると
+Takashi> 良いです。
+
+　諒解しました。
+　ただ、ちょっと落とし穴があることに気付きました。
+
+　プロジェクトファイルで結構いろんなものが自動的にセーブされると知って
+以下の形でプロジェクトをやりとりして楽しんでいました。
+
+・3.6ベースのイメージでSystemBrowserを開いたままプロジェクト(prファイ
+ル)としてセーブ
+・3.8ベースのイメージでプロジェクトをロード
+
+　すると、実際のアプリ(いつものRainDrop)とSystemBrowserが開いたままプ
+ロジェクトが生成されます。Look & Feelが変化してなかなか楽しい……ので
+すが、よく見ると、なんかSystemBrowserが3.6の見かけをしているような……。
+
+　試しに別のWorldに移って新たにSystemBrowserを開いても3.6の
+SystemBrowserが。ってことは、これは、
+
+・3.6のSystemBrowserのクラスがChangeSetの形でprファイルに含まれていた
+
+　……ということなのでしょうか。
+　Projectの形でセーブすると、確かに一見さんには判りやすい形になるので
+すが、下手なもの開いたままプロジェクト公開しちゃうと他の人の環境を破壊
+する羽目になるような気がします。たとえば、workspaceを開いた状態で今プ
+ロジェクトを公開していますが、まさか、workspaceのクラスの中身がプロジェ
+クトのロード時に書き換わってしまうとかいうことすらも考えられます。
+　この辺り、どのようなルール付けで保管されているのかが少し気になります。
+
+Takashi> > (3)公開についての質問
+Takashi> > 　今回はProjectファイルとして公開することを前提として質問していますが、
+Takashi> > 本来、作ったソフトウェアは、Squeak-Plug inで実行することを期待して
+Takashi> > Projectファイルとして公開するべきなのでしょうか？
+Takashi> > 　それとも、sarファイルとしてパッケージの形にまとめるべきでしょうか？
+Takashi> > 　それとも、mczファイルとしてアーカイブしリソースに関しては別途用意す
+Takashi> > べきでしょうか？
+Takashi> > 
+Takashi> > 　また、そもそもSqueakMapはどの程度「気軽に」登録しても良い物なのでしょ
+Takashi> > うか？
+Takashi> 見てのとおりかなり気軽な物も多いので、相当気軽だと思っています。説明を
+Takashi> ちゃんと書けば特に迷惑では無いと思います。
+
+　諒解しました。
+　説明……。やっぱり、abstructに関しては英語ですよね……。善処します
+(^^;)。
+
+Takashi> pr -- 初心者重視
+Takashi> sar -- ユーザ重視
+Takashi> mcz -- 自分重視
+Takashi> 
+Takashi> 自分ではこんな感じに使い分けています。mcz は 3.7 以降インストーラが付属
+Takashi> しているのですが、Monticello 自体が付属していないのとバイナリを含める事が
+Takashi> 出来ないので、配布物としては特に利点が無いと思います。
+
+　諒解しました。
+　基本的にはsarで、デモとしてプラグインで見せる時にはprで公開するポリ
+シーにします。
+
+Takashi> > コン
+Takashi> > ピュータシステムというものに対するハックの興味を「人に見せる」ところか
+Takashi> > らはじめるのも選択肢としては大変有用だと思っています。
+Takashi> これには激しく同意します。
+
+　これは、たまたま自分のコンピュータシステムに対する初動の動機が上記の
+通りだったための経験則です。
+　公開する範囲によっては諸刃の剣ではありますが、モチベーションの維持に
+はやはり他人の目は不可欠かと。
+
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From yoshiki ＠ squeakland.org  Wed Jan 12 15:18:23 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの
+In-Reply-To: <20050111210531.DBFF.FLORIAN@seagreen.ocn.ne.jp>
+References: <20050107003854.EA8A.FLORIAN@seagreen.ocn.ne.jp>
+	<41DDF413.4020202@metatoys.org>
+	<20050111210531.DBFF.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <uy8ezp3v4.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> Takashi> > (1)サウンド、グラフィック、スクリプトデータなどの保存に付いての質問
+> Takashi> > 　サウンドに関しては、阿部さん曰く、
+> Takashi> > 
+> Takashi> > 	6x以降はプロジェクトファイルに音も一緒に保存されるので自分の作品に新しい音を追加できます。
+> Takashi> > 
+> Takashi> > 　とのことですので含めることは可能と思われますが、クラス変数内に含まれ
+> Takashi> > る(あらかじめロードした)ColorFormなどをProjectファイル内に含めることは
+> Takashi> > 可能でしょうか。
+> Takashi> > 　また、マップデータやシナリオなどの情報をCollectionとしてクラス変数内
+> Takashi> > に(あらかじめロードして)持ったものについても同様に可能でしょうか。
+> Takashi> 
+> Takashi> 一番簡単なのは World のプロパティ(モーフはみんなプロパティ辞書を持っています。)
+> Takashi> に入れる事だと思います。オブジェックトなら何でも入ります。プログラムを書いていて
+> Takashi> 使いやすいのは storeString かなんかでシリアライズした文字列を ChangeSet に
+> Takashi> クラスメソッドとして持たせる事です。
+> 
+> 　なるほど。
+> 　Worldに限らず、どこかのMorphのプロパティ辞書に一括してリソースを持た
+> せる方針で問題なさそうですね。
+
+  どこかのMorphの(sub)instanceの辞書に、ということですよね。
+
+> ・3.6ベースのイメージでSystemBrowserを開いたままプロジェクト(prファイ
+> ル)としてセーブ
+> ・3.8ベースのイメージでプロジェクトをロード
+> 
+> 　すると、実際のアプリ(いつものRainDrop)とSystemBrowserが開いたままプ
+> ロジェクトが生成されます。Look & Feelが変化してなかなか楽しい……ので
+> すが、よく見ると、なんかSystemBrowserが3.6の見かけをしているような……。
+> 
+> 　試しに別のWorldに移って新たにSystemBrowserを開いても3.6の
+> SystemBrowserが。ってことは、これは、
+> 
+> ・3.6のSystemBrowserのクラスがChangeSetの形でprファイルに含まれていた
+> 
+> 　……ということなのでしょうか。
+
+  Browserというクラスのインスタンスがserializeされて入っていて、それを
+  ロードするときに「がっちゃん」と読み込んだ側のイメージに入っている同
+  じ名前のクラスのインスタンスとして読み込んだ、ということです。コード
+  は運ばれていません。
+
+> 　Projectの形でセーブすると、確かに一見さんには判りやすい形になるので
+> すが、下手なもの開いたままプロジェクト公開しちゃうと他の人の環境を破壊
+> する羽目になるような気がします。たとえば、workspaceを開いた状態で今プ
+> ロジェクトを公開していますが、まさか、workspaceのクラスの中身がプロジェ
+> クトのロード時に書き換わってしまうとかいうことすらも考えられます。
+> 　この辺り、どのようなルール付けで保管されているのかが少し気になりま
+> す。
+
+  コードは、そのprojectに関連付けられているchange setに入っているもの
+のみが入ります。ですので、必ずしも破壊されることを心配する必要はありま
+せん。
+
+> Takashi> 見てのとおりかなり気軽な物も多いので、相当気軽だと思っています。説明を
+> Takashi> ちゃんと書けば特に迷惑では無いと思います。
+> 
+> 　諒解しました。
+> 　説明……。やっぱり、abstructに関しては英語ですよね……。善処します
+> (^^;)。
+
+> 　諒解しました。
+> 　基本的にはsarで、デモとしてプラグインで見せる時にはprで公開するポリ
+> シーにします。
+
+  そうですね。
+
+  期待しています。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Wed Jan 12 15:29:09 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2257] 毛玉 Ver. 2
+Message-ID: <uwtujp3d6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+  しばらく前からいじっている並列パーティクルプログラミングシステム「毛
+玉」の新しいバージョンをリリースしました。
+
+  Squeak3.8 gamma系か、Squeakland 3.8系で動作します。
+
+  毛玉の特長は、緩やかに関連付けられた非常に多くのオブジェクトたちが、
+非集中型でそれぞれ自立的に動作をしながらも、全体として意味のある挙動を
+示す、というようなシステムがGUIを用いたタイルスクリプティングで記述で
+きる、ということです。
+
+  諸般の事情で英語の説明しかないのですが、興味のある方は
+
+http://www.is.titech.ac.jp/~ohshima/squeak/kedama2/
+
+を参照してください。
+
+  前のバージョンとは少々スクリプトの意味論が変わってしまっていますが、
+山本さんが書いてくださった
+
+http://www.languagegame.org:8080/zoo/172
+
+も、多くの部分は今のバージョンにも適用可能だと思われます。ぜひとも参考
+にしてください。
+
+  さまざまなフィードバックをお待ちしています。
+
+  Mac版(やLinux版)のPluginを作ってくださる方がいれば、それをWebに置き
+たいと思います。もしどなたか作って下されば、僕にそっと送ってください。
+こちらもよろしくお願いします。
+
+-- Yoshiki
+
+From "土本 (Florian) 強  Wed Jan 12 15:34:54 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2258] Re: プロジェクトファイル(.pr)で保存されるもの
+In-Reply-To: <uy8ezp3v4.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <20050111210531.DBFF.FLORIAN@seagreen.ocn.ne.jp>
+	<uy8ezp3v4.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <20050112152244.6C95.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+
+メール「[Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの」(2005/01/12 15:18) に於いて
+「Yoshiki Ohshima」 語りて曰く、
+
+Yoshiki> > 　なるほど。
+Yoshiki> > 　Worldに限らず、どこかのMorphのプロパティ辞書に一括してリソースを持た
+Yoshiki> > せる方針で問題なさそうですね。
+Yoshiki> 
+Yoshiki>   どこかのMorphの(sub)instanceの辞書に、ということですよね。
+
+　任意Morphのinstance(a Morphというのかな？)にです。Morphとだけいうと
+たとえば画面上に存在する実体(instance)を想定してしまいますが、Morphと
+いうClassとも取れますね。
+
+Yoshiki> > ・3.6ベースのイメージでSystemBrowserを開いたままプロジェクト(prファイ
+Yoshiki> > ル)としてセーブ
+Yoshiki> > ・3.8ベースのイメージでプロジェクトをロード
+Yoshiki> > 
+Yoshiki> > 　すると、実際のアプリ(いつものRainDrop)とSystemBrowserが開いたままプ
+Yoshiki> > ロジェクトが生成されます。Look & Feelが変化してなかなか楽しい……ので
+Yoshiki> > すが、よく見ると、なんかSystemBrowserが3.6の見かけをしているような……。
+Yoshiki> > 
+Yoshiki> > 　試しに別のWorldに移って新たにSystemBrowserを開いても3.6の
+Yoshiki> > SystemBrowserが。ってことは、これは、
+Yoshiki> > 
+Yoshiki> > ・3.6のSystemBrowserのクラスがChangeSetの形でprファイルに含まれていた
+Yoshiki> > 
+Yoshiki> > 　……ということなのでしょうか。
+Yoshiki> 
+Yoshiki>   Browserというクラスのインスタンスがserializeされて入っていて、それを
+Yoshiki>   ロードするときに「がっちゃん」と読み込んだ側のイメージに入っている同
+Yoshiki>   じ名前のクラスのインスタンスとして読み込んだ、ということです。コード
+Yoshiki>   は運ばれていません。
+
+　はじめは私も直列化されたSystemBrowserのインスタンスだけが読み込まれ
+ているのだと思いました。
+　だとすると、読み込んだプロジェクトの中にあったSystemBrowserが3.6の姿
+をしていることは説明がつくのですが、別のworldに移ってデスクトップメニュー
+からSystemBrowserを開いた時にも3.6のSystemBrowserの形をしていたのは説
+明がつかないような気がします。
+
+　もう一度確認してみます。私の見間違いならばいいのですが。
+
+Yoshiki> > 　Projectの形でセーブすると、確かに一見さんには判りやすい形になるので
+Yoshiki> > すが、下手なもの開いたままプロジェクト公開しちゃうと他の人の環境を破壊
+Yoshiki> > する羽目になるような気がします。たとえば、workspaceを開いた状態で今プ
+Yoshiki> > ロジェクトを公開していますが、まさか、workspaceのクラスの中身がプロジェ
+Yoshiki> > クトのロード時に書き換わってしまうとかいうことすらも考えられます。
+Yoshiki> > 　この辺り、どのようなルール付けで保管されているのかが少し気になりま
+Yoshiki> > す。
+Yoshiki> 
+Yoshiki>   コードは、そのprojectに関連付けられているchange setに入っているもの
+Yoshiki> のみが入ります。ですので、必ずしも破壊されることを心配する必要はありま
+Yoshiki> せん。
+
+　諒解しました。
+
+Yoshiki> > Takashi> 見てのとおりかなり気軽な物も多いので、相当気軽だと思っています。説明を
+Yoshiki> > Takashi> ちゃんと書けば特に迷惑では無いと思います。
+Yoshiki> > 
+Yoshiki> > 　諒解しました。
+Yoshiki> > 　説明……。やっぱり、abstructに関しては英語ですよね……。善処します
+Yoshiki> > (^^;)。
+Yoshiki> 
+Yoshiki> > 　諒解しました。
+Yoshiki> > 　基本的にはsarで、デモとしてプラグインで見せる時にはprで公開するポリ
+Yoshiki> > シーにします。
+Yoshiki> 
+Yoshiki>   そうですね。
+Yoshiki> 
+Yoshiki>   期待しています。
+
+　ありがとうございます。
+　やんわりと生暖かい目で見守ってやってください。余り作業時間が取れなさ
+そうなので。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From fumito.kondo ＠ hp.com  Thu Jan 13 17:35:34 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2259] Re: お助けください
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF8E0@tkoexc02.asiapacific.cpqcorp.net>
+
+横川さん、
+
+ありがとうございました。
+
+教えていただいたコーディングで行くとリミットチェックのメソッドも無くなるし、変数もなくなるし、ずいぶんすっきりしましたね。
+どうもありがとうございました。
+
+その先に進もうとしているのですが、また頭を痛めております。
+
+エージェント同士がお互いに情報のやり取りをしようと思うのですが、そうするとインスタンスが別のインスタンスを識別しなくてはなりません。
+梅澤さんの本の例では銀行のアプリケーションで、クラスメソッドにNewを定義して、インスタンスを生成し、クラス変数でインスタンスのIDを定義するという例を紹介しています。
+
+これで試そうと思ったのですが、私のアプリでは、Step毎に再描画するためにインスタンスメソッドとしてdrawOn：を使っています。
+クラスインスタンスでdrawOn:を使うというのは、まだ試してはいませんがうまくいきそうにないような気がします。
+
+インスタンスからクラス変数に直接書き込みをすればいいような気もしますが、なにか、ちょっといい方法ではないような気もします。
+こういう場合、どんな手が有効なのでしょうか？
+
+いつもお聞きするばかりですみませんが、よろしくお願いいたします。
+
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kondo, Fumito
+Sent: Tuesday, January 11, 2005 7:27 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2250] Re: お助けください
+
+
+横川さん、
+
+早速の救済、ありがとうございます。
+
+私も座標系の違いには戸惑って、Y座標に関しては、 yOrdinate _  (((self y) - 700) abs).と変換するロジックを入れていたのですが、単体ではうまく動くのに、EnvironmentoMorphから起動をかけると天井を突き抜けてしまうというのが良く分からなくて。
+
+とにかく、positionを使ってみるということですね。
+
+ありがとうございます。
+
+本日帰宅したら早速試してみます。
+
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+Sent: Monday, January 10, 2005 8:01 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2249] Re: お助けください
+
+
+横川です。
+右も左もわからなかった。。。
+
+> ひとつは右上を原点とするもので、positionなどで扱います。
+> もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+
+正しくはこちら。
+
+ひとつは左上を原点とするもので、positionなどで扱います。
+もうひとつは左「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+
+
+On Mon, 10 Jan 2005 19:40:55 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+
+> 横川です。
+> 
+> Morphicの座標表現が2種類あることが原因です。(これはつまずきの石ですね)
+> 
+> ひとつは右上を原点とするもので、positionなどで扱います。
+> もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> 
+> TestMorph>stepをpositionを使うように書き直すと、こんな風になります。
+> (本当は最初の2行だけの変更でよいのですが、delta?の判定を簡素化し、ActiviWorldの大
+> きさ変更へ対応させました。あと、読みやすいようにpretty print(Shift + 右ボタンメニュー
+> 内)でフォーマットしてます。)
+> 
+> step
+> 	| speedUnit |
+> 	xOrdinate _ self position x.
+> 	yOrdinate _ self position y.
+> 	speedUnit _ 5.
+> 	xOrdinate < 0
+> 		ifTrue: [deltaX _ speedUnit].
+> 	xOrdinate >= ActiveWorld width
+> 		ifTrue: [deltaX _ speedUnit negated].
+> 	yOrdinate < 0
+> 		ifTrue: [deltaY _ speedUnit].
+> 	yOrdinate >= ActiveWorld height
+> 		ifTrue: [deltaY _ speedUnit negated].
+> 	self position: self position + (deltaX @ deltaY)
+> 
+> 
+> 
+> On Mon, 10 Jan 2005 17:15:35 +0900
+> "Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+> 
+> > すみません。
+> > 
+> > 以前、マルチエージェントの作り方で質問した近藤です。
+> > 
+> > とりあえず、簡単なプログラムを作ってみました。
+> > TestMorphというクラスでエージェントを作り、EnvironmentMorphというクラスで複数のエージェントを管理しています。
+> > 
+> > エージェントの中身は、まだ何もなくて壁に反射して直進運動するだけのものですが、TestMorph単独で動いているとき（TestMorph　new openInWorldで起動させる）は、うまくすべての壁に反射するのですが、EnvironmentMorph　newで起動をかけると、上の壁（Y＞＝０）の判断をしないで出て行ってしまいます。
+> > 
+> > ソースを見てみましたが思い当たるところがありません。
+> > 
+> > どなたか、お暇なときで結構ですから、何かヒントいただけませんでしょうか？
+> > 
+> > すみません。なにせ、初心者なのでご迷惑おかけします。
+> > 
+> > ご参考までに、ソースコードをこの後ろにつけておきます。
+> > 
+> > 
+> > Morph subclass: #EnvironmentMorph
+> > 	instanceVariableNames: 'soprano alto tenor bass run stop kill '
+> > 	classVariableNames: 'Nothing '
+> > 	poolDictionaries: ''
+> > 	category: 'TestMorph'!
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > altoRunning
+> > 
+> > alto _ TestMorph new openInWorld.
+> > alto position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > bassRunning
+> > 
+> > bass _ TestMorph new openInWorld.
+> > bass position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:22'!
+> > kill  
+> >  Transcript cr; show: 'All Killed'.
+> >  soprano delete.
+> >  alto delete.
+> >  tenor delete.
+> >  bass delete.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:00'!
+> > run 
+> >  Transcript cr; show: 'Running'.
+> >  self sopranoRunning. 
+> >  self altoRunning.
+> >  self tenorRunning.
+> >  self bassRunning.! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > sopranoRunning
+> > 
+> > soprano _ TestMorph new openInWorld.
+> > soprano position: (1012 atRandom)@(700 atRandom).
+> > 
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/9/2005 17:52'!
+> > stop
+> >  ^true
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:54'!
+> > tenorRunning
+> > 
+> > tenor _ TestMorph new openInWorld.
+> > tenor position: (1012 atRandom)@(700 atRandom).
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'geometry' stamp: 'F K 1/2/2005 12:01'!
+> > world
+> > 	^owner isNil ifTrue: [nil] ifFalse: [owner world]
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/10/2005 15:58'!
+> > initLayout
+> > | left center right |
+> > 
+> > self openInWorld.
+> > self extent: 222@39.  
+> > self changeProportionalLayout.
+> > self color: Color yellow.
+> > self position: (20@580).
+> > 
+> > left _ LayoutFrame fractions: (0.02@0.1 corner: 0.33@0.9).
+> > run _ self buildRunButton.
+> > self addMorph: run fullFrame: left.
+> > 
+> > center _ LayoutFrame fractions: (0.34@0.1 corner: 0.66@0.9).
+> > stop _ self buildStopButton.
+> > self addMorph: stop fullFrame: center.
+> > 
+> > right _ LayoutFrame fractions: (0.67@0.1 corner: 0.98@0.9).
+> > kill _ self buildKillButton.
+> > self addMorph: kill fullFrame: right.! !
+> > 
+> > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/9/2005 17:30'!
+> > initialize
+> >  super initialize.
+> >  self initLayout.
+> > ! !
+> > 
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildKillButton
+> >  Transcript cr; show: 'KillButton was created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'KILL';
+> >  actionSelector: #kill.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildRunButton
+> >  Transcript cr; show: 'RunButton was created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'RUN';
+> >  actionSelector: #run.
+> > ! !
+> > 
+> > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > buildStopButton
+> >  Transcript cr; show: 'StopButton was Created'.
+> >  ^SimpleButtonMorph new
+> >  target: self;
+> >  label: 'STOP';
+> >  actionSelector: #stop.
+> > ! !
+> > 
+> > 
+> > Morph subclass: #TestMorph
+> > 	instanceVariableNames: 'worldHeight worldWidth xOrdinate yOrdinate deltaX deltaY '
+> > 	classVariableNames: ''
+> > 	poolDictionaries: ''
+> > 	category: 'TestMorph'!
+> > 
+> > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 15:02'!
+> > handlesMouseDown: anEvent
+> >  ^true
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 16:20'!
+> > mouseDown: anEvent
+> >  Transcript cr; show: anEvent class.
+> >  Transcript space; show: anEvent. 
+> >  anEvent redButtonPressed
+> >   ifTrue: [self startStepping].
+> >  anEvent yellowButtonPressed
+> >   ifTrue: [self stopStepping].
+> > ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'initialization' stamp: 'F K 1/2/2005 11:01'!
+> > initialize
+> >  super initialize.
+> >  worldHeight _ ActiveWorld height.
+> >  worldWidth _ ActiveWorld width.
+> >  xOrdinate _  self x.
+> >  yOrdinate _  (((self y) - 700) abs).
+> >  deltaX _ 5.
+> >  deltaY _ 5.
+> > 
+> > 
+> > 
+> >  ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'drawing' stamp: 'F K 1/2/2005 11:12'!
+> > drawOn: aCanvas
+> >  | colors |
+> >  colors _ color wheel: 6.
+> >  colors withIndexDo:[:c :i | 
+> >  aCanvas  fillOval: (self bounds insetBy:4 * i) color: c].
+> > 
+> > 
+> > ! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:00'!
+> > step
+> >  xOrdinate _  self x.
+> >  yOrdinate _  (((self y) - 700) abs).
+> >  (self xLimitCheck) 
+> >     ifTrue: [(deltaX = 5) ifTrue:[deltaX _ -5]ifFalse:[deltaX _ 5]].
+> >  (self yLimitCheck) 
+> >     ifTrue: [(deltaY = 5) ifTrue:[deltaY _ -5]ifFalse:[deltaY _ 5]].
+> >  self position: self position + (deltaX@deltaY).
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:04'!
+> > stepTime
+> >  ^80! !
+> > 
+> > 
+> > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > xLimitCheck
+> >   ^ (deltaX = 5) 
+> >     ifTrue:[xOrdinate >= worldWidth]
+> >     ifFalse:[xOrdinate <= 0].
+> > 
+> > ! !
+> > 
+> > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > yLimitCheck
+> >   ^ (deltaY = 5) 
+> >     ifTrue:[yOrdinate >= worldHeight]
+> >     ifFalse:[yOrdinate <= 0].
+> > ! !
+> > 
+> > 
+> > 近藤史人
+> > シニアコンサルタント
+> > 日本ヒューレット・パッカード㈱
+> > Fumito Kondo
+> > Senior Consultant
+> > Hewlett-Pakard Japan, Ltd.
+> > Phone: +81-52-566-5900
+> > Fax:     +81-52-5990
+> > e-mail: Fumito.Kondo@hp.com
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From koubo2005 ＠ yengawa.jpn.org  Thu Jan 13 21:25:41 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2260] Re: お助けください
+In-Reply-To: <287073018F1FCC48B871980C94CB156501FEF8E0@tkoexc02.asiapacific.cpqcorp.net>
+References: <287073018F1FCC48B871980C94CB156501FEF8E0@tkoexc02.asiapacific.cpqcorp.net>
+Message-ID: <20050113204248.C254.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+エージェントをあらわすクラスをAgentMorphとすると、 AgentMorph class>new を定義す
+ることと AgentMorph>drawOn: を定義することの間には、何の関係もないと思います。
+
+もしかすると、クラスとインスタンスの関係で混乱しているのかもしれません。もしそう
+なら簡単なオブジェクト図を書いて、どのオブジェクトが何をするのかを確認することを
+お薦めします。オブジェクト図にはクラスもひとつのオブジェクトとして書き入れるとわ
+かりやすいです。
+
+
+では。
+
+On Thu, 13 Jan 2005 17:35:34 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+
+> 横川さん、
+> 
+> ありがとうございました。
+> 
+> 教えていただいたコーディングで行くとリミットチェックのメソッドも無くなるし、変数もなくなるし、ずいぶんすっきりしましたね。
+> どうもありがとうございました。
+> 
+> その先に進もうとしているのですが、また頭を痛めております。
+> 
+> エージェント同士がお互いに情報のやり取りをしようと思うのですが、そうするとインスタンスが別のインスタンスを識別しなくてはなりません。
+> 梅澤さんの本の例では銀行のアプリケーションで、クラスメソッドにNewを定義して、インスタンスを生成し、クラス変数でインスタンスのIDを定義するという例を紹介しています。
+> 
+> これで試そうと思ったのですが、私のアプリでは、Step毎に再描画するためにインスタンスメソッドとしてdrawOn：を使っています。
+> クラスインスタンスでdrawOn:を使うというのは、まだ試してはいませんがうまくいきそうにないような気がします。
+> 
+> インスタンスからクラス変数に直接書き込みをすればいいような気もしますが、なにか、ちょっといい方法ではないような気もします。
+> こういう場合、どんな手が有効なのでしょうか？
+> 
+> いつもお聞きするばかりですみませんが、よろしくお願いいたします。
+> 
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kondo, Fumito
+> Sent: Tuesday, January 11, 2005 7:27 AM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2250] Re: お助けください
+> 
+> 
+> 横川さん、
+> 
+> 早速の救済、ありがとうございます。
+> 
+> 私も座標系の違いには戸惑って、Y座標に関しては、 yOrdinate _  (((self y) - 700) abs).と変換するロジックを入れていたのですが、単体ではうまく動くのに、EnvironmentoMorphから起動をかけると天井を突き抜けてしまうというのが良く分からなくて。
+> 
+> とにかく、positionを使ってみるということですね。
+> 
+> ありがとうございます。
+> 
+> 本日帰宅したら早速試してみます。
+> 
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+> Sent: Monday, January 10, 2005 8:01 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2249] Re: お助けください
+> 
+> 
+> 横川です。
+> 右も左もわからなかった。。。
+> 
+> > ひとつは右上を原点とするもので、positionなどで扱います。
+> > もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> 
+> 正しくはこちら。
+> 
+> ひとつは左上を原点とするもので、positionなどで扱います。
+> もうひとつは左「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> 
+> 
+> On Mon, 10 Jan 2005 19:40:55 +0900
+> Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> 
+> > 横川です。
+> > 
+> > Morphicの座標表現が2種類あることが原因です。(これはつまずきの石ですね)
+> > 
+> > ひとつは右上を原点とするもので、positionなどで扱います。
+> > もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> > 
+> > TestMorph>stepをpositionを使うように書き直すと、こんな風になります。
+> > (本当は最初の2行だけの変更でよいのですが、delta?の判定を簡素化し、ActiviWorldの大
+> > きさ変更へ対応させました。あと、読みやすいようにpretty print(Shift + 右ボタンメニュー
+> > 内)でフォーマットしてます。)
+> > 
+> > step
+> > 	| speedUnit |
+> > 	xOrdinate _ self position x.
+> > 	yOrdinate _ self position y.
+> > 	speedUnit _ 5.
+> > 	xOrdinate < 0
+> > 		ifTrue: [deltaX _ speedUnit].
+> > 	xOrdinate >= ActiveWorld width
+> > 		ifTrue: [deltaX _ speedUnit negated].
+> > 	yOrdinate < 0
+> > 		ifTrue: [deltaY _ speedUnit].
+> > 	yOrdinate >= ActiveWorld height
+> > 		ifTrue: [deltaY _ speedUnit negated].
+> > 	self position: self position + (deltaX @ deltaY)
+> > 
+> > 
+> > 
+> > On Mon, 10 Jan 2005 17:15:35 +0900
+> > "Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+> > 
+> > > すみません。
+> > > 
+> > > 以前、マルチエージェントの作り方で質問した近藤です。
+> > > 
+> > > とりあえず、簡単なプログラムを作ってみました。
+> > > TestMorphというクラスでエージェントを作り、EnvironmentMorphというクラスで複数のエージェントを管理しています。
+> > > 
+> > > エージェントの中身は、まだ何もなくて壁に反射して直進運動するだけのものですが、TestMorph単独で動いているとき（TestMorph　new openInWorldで起動させる）は、うまくすべての壁に反射するのですが、EnvironmentMorph　newで起動をかけると、上の壁（Y＞＝０）の判断をしないで出て行ってしまいます。
+> > > 
+> > > ソースを見てみましたが思い当たるところがありません。
+> > > 
+> > > どなたか、お暇なときで結構ですから、何かヒントいただけませんでしょうか？
+> > > 
+> > > すみません。なにせ、初心者なのでご迷惑おかけします。
+> > > 
+> > > ご参考までに、ソースコードをこの後ろにつけておきます。
+> > > 
+> > > 
+> > > Morph subclass: #EnvironmentMorph
+> > > 	instanceVariableNames: 'soprano alto tenor bass run stop kill '
+> > > 	classVariableNames: 'Nothing '
+> > > 	poolDictionaries: ''
+> > > 	category: 'TestMorph'!
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > > altoRunning
+> > > 
+> > > alto _ TestMorph new openInWorld.
+> > > alto position: (1012 atRandom)@(700 atRandom).
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > > bassRunning
+> > > 
+> > > bass _ TestMorph new openInWorld.
+> > > bass position: (1012 atRandom)@(700 atRandom).
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:22'!
+> > > kill  
+> > >  Transcript cr; show: 'All Killed'.
+> > >  soprano delete.
+> > >  alto delete.
+> > >  tenor delete.
+> > >  bass delete.
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:00'!
+> > > run 
+> > >  Transcript cr; show: 'Running'.
+> > >  self sopranoRunning. 
+> > >  self altoRunning.
+> > >  self tenorRunning.
+> > >  self bassRunning.! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > > sopranoRunning
+> > > 
+> > > soprano _ TestMorph new openInWorld.
+> > > soprano position: (1012 atRandom)@(700 atRandom).
+> > > 
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/9/2005 17:52'!
+> > > stop
+> > >  ^true
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:54'!
+> > > tenorRunning
+> > > 
+> > > tenor _ TestMorph new openInWorld.
+> > > tenor position: (1012 atRandom)@(700 atRandom).
+> > > ! !
+> > > 
+> > > 
+> > > !EnvironmentMorph methodsFor: 'geometry' stamp: 'F K 1/2/2005 12:01'!
+> > > world
+> > > 	^owner isNil ifTrue: [nil] ifFalse: [owner world]
+> > > ! !
+> > > 
+> > > 
+> > > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/10/2005 15:58'!
+> > > initLayout
+> > > | left center right |
+> > > 
+> > > self openInWorld.
+> > > self extent: 222@39.  
+> > > self changeProportionalLayout.
+> > > self color: Color yellow.
+> > > self position: (20@580).
+> > > 
+> > > left _ LayoutFrame fractions: (0.02@0.1 corner: 0.33@0.9).
+> > > run _ self buildRunButton.
+> > > self addMorph: run fullFrame: left.
+> > > 
+> > > center _ LayoutFrame fractions: (0.34@0.1 corner: 0.66@0.9).
+> > > stop _ self buildStopButton.
+> > > self addMorph: stop fullFrame: center.
+> > > 
+> > > right _ LayoutFrame fractions: (0.67@0.1 corner: 0.98@0.9).
+> > > kill _ self buildKillButton.
+> > > self addMorph: kill fullFrame: right.! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/9/2005 17:30'!
+> > > initialize
+> > >  super initialize.
+> > >  self initLayout.
+> > > ! !
+> > > 
+> > > 
+> > > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > > buildKillButton
+> > >  Transcript cr; show: 'KillButton was created'.
+> > >  ^SimpleButtonMorph new
+> > >  target: self;
+> > >  label: 'KILL';
+> > >  actionSelector: #kill.
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > > buildRunButton
+> > >  Transcript cr; show: 'RunButton was created'.
+> > >  ^SimpleButtonMorph new
+> > >  target: self;
+> > >  label: 'RUN';
+> > >  actionSelector: #run.
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > > buildStopButton
+> > >  Transcript cr; show: 'StopButton was Created'.
+> > >  ^SimpleButtonMorph new
+> > >  target: self;
+> > >  label: 'STOP';
+> > >  actionSelector: #stop.
+> > > ! !
+> > > 
+> > > 
+> > > Morph subclass: #TestMorph
+> > > 	instanceVariableNames: 'worldHeight worldWidth xOrdinate yOrdinate deltaX deltaY '
+> > > 	classVariableNames: ''
+> > > 	poolDictionaries: ''
+> > > 	category: 'TestMorph'!
+> > > 
+> > > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 15:02'!
+> > > handlesMouseDown: anEvent
+> > >  ^true
+> > > ! !
+> > > 
+> > > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 16:20'!
+> > > mouseDown: anEvent
+> > >  Transcript cr; show: anEvent class.
+> > >  Transcript space; show: anEvent. 
+> > >  anEvent redButtonPressed
+> > >   ifTrue: [self startStepping].
+> > >  anEvent yellowButtonPressed
+> > >   ifTrue: [self stopStepping].
+> > > ! !
+> > > 
+> > > 
+> > > !TestMorph methodsFor: 'initialization' stamp: 'F K 1/2/2005 11:01'!
+> > > initialize
+> > >  super initialize.
+> > >  worldHeight _ ActiveWorld height.
+> > >  worldWidth _ ActiveWorld width.
+> > >  xOrdinate _  self x.
+> > >  yOrdinate _  (((self y) - 700) abs).
+> > >  deltaX _ 5.
+> > >  deltaY _ 5.
+> > > 
+> > > 
+> > > 
+> > >  ! !
+> > > 
+> > > 
+> > > !TestMorph methodsFor: 'drawing' stamp: 'F K 1/2/2005 11:12'!
+> > > drawOn: aCanvas
+> > >  | colors |
+> > >  colors _ color wheel: 6.
+> > >  colors withIndexDo:[:c :i | 
+> > >  aCanvas  fillOval: (self bounds insetBy:4 * i) color: c].
+> > > 
+> > > 
+> > > ! !
+> > > 
+> > > 
+> > > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:00'!
+> > > step
+> > >  xOrdinate _  self x.
+> > >  yOrdinate _  (((self y) - 700) abs).
+> > >  (self xLimitCheck) 
+> > >     ifTrue: [(deltaX = 5) ifTrue:[deltaX _ -5]ifFalse:[deltaX _ 5]].
+> > >  (self yLimitCheck) 
+> > >     ifTrue: [(deltaY = 5) ifTrue:[deltaY _ -5]ifFalse:[deltaY _ 5]].
+> > >  self position: self position + (deltaX@deltaY).
+> > > ! !
+> > > 
+> > > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:04'!
+> > > stepTime
+> > >  ^80! !
+> > > 
+> > > 
+> > > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > > xLimitCheck
+> > >   ^ (deltaX = 5) 
+> > >     ifTrue:[xOrdinate >= worldWidth]
+> > >     ifFalse:[xOrdinate <= 0].
+> > > 
+> > > ! !
+> > > 
+> > > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > > yLimitCheck
+> > >   ^ (deltaY = 5) 
+> > >     ifTrue:[yOrdinate >= worldHeight]
+> > >     ifFalse:[yOrdinate <= 0].
+> > > ! !
+> > > 
+> > > 
+> > > 近藤史人
+> > > シニアコンサルタント
+> > > 日本ヒューレット・パッカード㈱
+> > > Fumito Kondo
+> > > Senior Consultant
+> > > Hewlett-Pakard Japan, Ltd.
+> > > Phone: +81-52-566-5900
+> > > Fax:     +81-52-5990
+> > > e-mail: Fumito.Kondo@hp.com
+> > 
+> > -- !
+> > Koji Yokokawa <koubo2005@yengawa.jpn.org>
+> >     self new!
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Fri Jan 14 01:09:16 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2261] Re: 子ども達のためのコンピュータ上での創造とカリキュラム (C4)
+In-Reply-To: <41E3BDD5116.779AABEE.ABE@smtp.nifty.com>
+References: <41E3BDD5116.779AABEE.ABE@smtp.nifty.com>
+Message-ID: <20050114010916.39d09d84.htakada@db.soc.i.kyoto-u.ac.jp>
+
+京都大学の高田です．
+
+阿部さんから御案内頂きました下記 C4 の件で，当初申し込み不要という案内を
+させて頂いておりましたが，懇親会の準備の都合上，大まかな人数を把握させて
+頂きたいと思いますので，参加される方は，c4-05@db.soc.i.kyoto-u.ac.jp ま
+でメイルで御一報頂けますと幸いです．
+
+どうぞよろしくお願いいたします．
+
+Date: Tue, 11 Jan 2005 20:51:49 +0900
+From: Kazuhiro ABE <abee.abe@nifty.ne.jp>
+
+> 阿部@広島です。
+> 
+> 先月、「子ども達のためのコンピュータ上での創造とカリキュラム (C4)」の開催
+> についてご案内しました。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2004-December/002194.html
+> 
+> その際、シーモア・パパート教授の講演があるとお知らせしましたが、残念なこ
+> とに中止になってしまいました。
+> 
+> http://www.edu.soc.i.kyoto-u.ac.jp/c4-05/
+> 
+> しかしながら、その分、国内でSqueakを実践されている方々の講演が増え、懇親
+> 会や、新しいカリキュラムのベースとなる技術のデモも追加されました。
+> もしかしたら、ビッグネームの基調講演も入るかもしれません。
+> 
+> C5、SqueakBOFの後にはぜひC4にご参加ください。特に教育関係者、保護者の方、
+> Squeakを使った学習に興味のある方のご参加をお待ちしております。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee.abe@nifty.ne.jp
+> 
+> 
+
+
+-- 
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+
+From fumito.kondo ＠ hp.com  Fri Jan 14 14:31:22 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2262] Re: お助けください
+Message-ID: <287073018F1FCC48B871980C94CB156501FEF8EE@tkoexc02.asiapacific.cpqcorp.net>
+
+横川さん、
+
+どうもありがとうございました。
+
+
+近藤史人
+シニアコンサルタント
+日本ヒューレット・パッカード㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: Fumito.Kondo@hp.com
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+Sent: Thursday, January 13, 2005 9:26 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2260] Re: お助けください
+
+
+横川です。
+エージェントをあらわすクラスをAgentMorphとすると、 AgentMorph class>new を定義す
+ることと AgentMorph>drawOn: を定義することの間には、何の関係もないと思います。
+
+もしかすると、クラスとインスタンスの関係で混乱しているのかもしれません。もしそう
+なら簡単なオブジェクト図を書いて、どのオブジェクトが何をするのかを確認することを
+お薦めします。オブジェクト図にはクラスもひとつのオブジェクトとして書き入れるとわ
+かりやすいです。
+
+
+では。
+
+On Thu, 13 Jan 2005 17:35:34 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+
+> 横川さん、
+> 
+> ありがとうございました。
+> 
+> 教えていただいたコーディングで行くとリミットチェックのメソッドも無くなるし、変数もなくなるし、ずいぶんすっきりしましたね。
+> どうもありがとうございました。
+> 
+> その先に進もうとしているのですが、また頭を痛めております。
+> 
+> エージェント同士がお互いに情報のやり取りをしようと思うのですが、そうするとインスタンスが別のインスタンスを識別しなくてはなりません。
+> 梅澤さんの本の例では銀行のアプリケーションで、クラスメソッドにNewを定義して、インスタンスを生成し、クラス変数でインスタンスのIDを定義するという例を紹介しています。
+> 
+> これで試そうと思ったのですが、私のアプリでは、Step毎に再描画するためにインスタンスメソッドとしてdrawOn：を使っています。
+> クラスインスタンスでdrawOn:を使うというのは、まだ試してはいませんがうまくいきそうにないような気がします。
+> 
+> インスタンスからクラス変数に直接書き込みをすればいいような気もしますが、なにか、ちょっといい方法ではないような気もします。
+> こういう場合、どんな手が有効なのでしょうか？
+> 
+> いつもお聞きするばかりですみませんが、よろしくお願いいたします。
+> 
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kondo, Fumito
+> Sent: Tuesday, January 11, 2005 7:27 AM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2250] Re: お助けください
+> 
+> 
+> 横川さん、
+> 
+> 早速の救済、ありがとうございます。
+> 
+> 私も座標系の違いには戸惑って、Y座標に関しては、 yOrdinate _  (((self y) - 700) abs).と変換するロジックを入れていたのですが、単体ではうまく動くのに、EnvironmentoMorphから起動をかけると天井を突き抜けてしまうというのが良く分からなくて。
+> 
+> とにかく、positionを使ってみるということですね。
+> 
+> ありがとうございます。
+> 
+> 本日帰宅したら早速試してみます。
+> 
+> 
+> 
+> 近藤史人
+> シニアコンサルタント
+> 日本ヒューレット・パッカード㈱
+> Fumito Kondo
+> Senior Consultant
+> Hewlett-Pakard Japan, Ltd.
+> Phone: +81-52-566-5900
+> Fax:     +81-52-5990
+> e-mail: Fumito.Kondo@hp.com
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+> Sent: Monday, January 10, 2005 8:01 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2249] Re: お助けください
+> 
+> 
+> 横川です。
+> 右も左もわからなかった。。。
+> 
+> > ひとつは右上を原点とするもので、positionなどで扱います。
+> > もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> 
+> 正しくはこちら。
+> 
+> ひとつは左上を原点とするもので、positionなどで扱います。
+> もうひとつは左「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> 
+> 
+> On Mon, 10 Jan 2005 19:40:55 +0900
+> Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> 
+> > 横川です。
+> > 
+> > Morphicの座標表現が2種類あることが原因です。(これはつまずきの石ですね)
+> > 
+> > ひとつは右上を原点とするもので、positionなどで扱います。
+> > もうひとつは右「下」を原点とするもので、x,yで扱います。これはeToys用の表現です。
+> > 
+> > TestMorph>stepをpositionを使うように書き直すと、こんな風になります。
+> > (本当は最初の2行だけの変更でよいのですが、delta?の判定を簡素化し、ActiviWorldの大
+> > きさ変更へ対応させました。あと、読みやすいようにpretty print(Shift + 右ボタンメニュー
+> > 内)でフォーマットしてます。)
+> > 
+> > step
+> > 	| speedUnit |
+> > 	xOrdinate _ self position x.
+> > 	yOrdinate _ self position y.
+> > 	speedUnit _ 5.
+> > 	xOrdinate < 0
+> > 		ifTrue: [deltaX _ speedUnit].
+> > 	xOrdinate >= ActiveWorld width
+> > 		ifTrue: [deltaX _ speedUnit negated].
+> > 	yOrdinate < 0
+> > 		ifTrue: [deltaY _ speedUnit].
+> > 	yOrdinate >= ActiveWorld height
+> > 		ifTrue: [deltaY _ speedUnit negated].
+> > 	self position: self position + (deltaX @ deltaY)
+> > 
+> > 
+> > 
+> > On Mon, 10 Jan 2005 17:15:35 +0900
+> > "Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+> > 
+> > > すみません。
+> > > 
+> > > 以前、マルチエージェントの作り方で質問した近藤です。
+> > > 
+> > > とりあえず、簡単なプログラムを作ってみました。
+> > > TestMorphというクラスでエージェントを作り、EnvironmentMorphというクラスで複数のエージェントを管理しています。
+> > > 
+> > > エージェントの中身は、まだ何もなくて壁に反射して直進運動するだけのものですが、TestMorph単独で動いているとき（TestMorph　new openInWorldで起動させる）は、うまくすべての壁に反射するのですが、EnvironmentMorph　newで起動をかけると、上の壁（Y＞＝０）の判断をしないで出て行ってしまいます。
+> > > 
+> > > ソースを見てみましたが思い当たるところがありません。
+> > > 
+> > > どなたか、お暇なときで結構ですから、何かヒントいただけませんでしょうか？
+> > > 
+> > > すみません。なにせ、初心者なのでご迷惑おかけします。
+> > > 
+> > > ご参考までに、ソースコードをこの後ろにつけておきます。
+> > > 
+> > > 
+> > > Morph subclass: #EnvironmentMorph
+> > > 	instanceVariableNames: 'soprano alto tenor bass run stop kill '
+> > > 	classVariableNames: 'Nothing '
+> > > 	poolDictionaries: ''
+> > > 	category: 'TestMorph'!
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > > altoRunning
+> > > 
+> > > alto _ TestMorph new openInWorld.
+> > > alto position: (1012 atRandom)@(700 atRandom).
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > > bassRunning
+> > > 
+> > > bass _ TestMorph new openInWorld.
+> > > bass position: (1012 atRandom)@(700 atRandom).
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:22'!
+> > > kill  
+> > >  Transcript cr; show: 'All Killed'.
+> > >  soprano delete.
+> > >  alto delete.
+> > >  tenor delete.
+> > >  bass delete.
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 16:00'!
+> > > run 
+> > >  Transcript cr; show: 'Running'.
+> > >  self sopranoRunning. 
+> > >  self altoRunning.
+> > >  self tenorRunning.
+> > >  self bassRunning.! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:53'!
+> > > sopranoRunning
+> > > 
+> > > soprano _ TestMorph new openInWorld.
+> > > soprano position: (1012 atRandom)@(700 atRandom).
+> > > 
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/9/2005 17:52'!
+> > > stop
+> > >  ^true
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'operation' stamp: 'FK 1/10/2005 13:54'!
+> > > tenorRunning
+> > > 
+> > > tenor _ TestMorph new openInWorld.
+> > > tenor position: (1012 atRandom)@(700 atRandom).
+> > > ! !
+> > > 
+> > > 
+> > > !EnvironmentMorph methodsFor: 'geometry' stamp: 'F K 1/2/2005 12:01'!
+> > > world
+> > > 	^owner isNil ifTrue: [nil] ifFalse: [owner world]
+> > > ! !
+> > > 
+> > > 
+> > > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/10/2005 15:58'!
+> > > initLayout
+> > > | left center right |
+> > > 
+> > > self openInWorld.
+> > > self extent: 222@39.  
+> > > self changeProportionalLayout.
+> > > self color: Color yellow.
+> > > self position: (20@580).
+> > > 
+> > > left _ LayoutFrame fractions: (0.02@0.1 corner: 0.33@0.9).
+> > > run _ self buildRunButton.
+> > > self addMorph: run fullFrame: left.
+> > > 
+> > > center _ LayoutFrame fractions: (0.34@0.1 corner: 0.66@0.9).
+> > > stop _ self buildStopButton.
+> > > self addMorph: stop fullFrame: center.
+> > > 
+> > > right _ LayoutFrame fractions: (0.67@0.1 corner: 0.98@0.9).
+> > > kill _ self buildKillButton.
+> > > self addMorph: kill fullFrame: right.! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'initialization' stamp: 'FK 1/9/2005 17:30'!
+> > > initialize
+> > >  super initialize.
+> > >  self initLayout.
+> > > ! !
+> > > 
+> > > 
+> > > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > > buildKillButton
+> > >  Transcript cr; show: 'KillButton was created'.
+> > >  ^SimpleButtonMorph new
+> > >  target: self;
+> > >  label: 'KILL';
+> > >  actionSelector: #kill.
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > > buildRunButton
+> > >  Transcript cr; show: 'RunButton was created'.
+> > >  ^SimpleButtonMorph new
+> > >  target: self;
+> > >  label: 'RUN';
+> > >  actionSelector: #run.
+> > > ! !
+> > > 
+> > > !EnvironmentMorph methodsFor: 'button' stamp: 'FK 1/10/2005 16:20'!
+> > > buildStopButton
+> > >  Transcript cr; show: 'StopButton was Created'.
+> > >  ^SimpleButtonMorph new
+> > >  target: self;
+> > >  label: 'STOP';
+> > >  actionSelector: #stop.
+> > > ! !
+> > > 
+> > > 
+> > > Morph subclass: #TestMorph
+> > > 	instanceVariableNames: 'worldHeight worldWidth xOrdinate yOrdinate deltaX deltaY '
+> > > 	classVariableNames: ''
+> > > 	poolDictionaries: ''
+> > > 	category: 'TestMorph'!
+> > > 
+> > > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 15:02'!
+> > > handlesMouseDown: anEvent
+> > >  ^true
+> > > ! !
+> > > 
+> > > !TestMorph methodsFor: 'event handling' stamp: 'F K 12/30/2004 16:20'!
+> > > mouseDown: anEvent
+> > >  Transcript cr; show: anEvent class.
+> > >  Transcript space; show: anEvent. 
+> > >  anEvent redButtonPressed
+> > >   ifTrue: [self startStepping].
+> > >  anEvent yellowButtonPressed
+> > >   ifTrue: [self stopStepping].
+> > > ! !
+> > > 
+> > > 
+> > > !TestMorph methodsFor: 'initialization' stamp: 'F K 1/2/2005 11:01'!
+> > > initialize
+> > >  super initialize.
+> > >  worldHeight _ ActiveWorld height.
+> > >  worldWidth _ ActiveWorld width.
+> > >  xOrdinate _  self x.
+> > >  yOrdinate _  (((self y) - 700) abs).
+> > >  deltaX _ 5.
+> > >  deltaY _ 5.
+> > > 
+> > > 
+> > > 
+> > >  ! !
+> > > 
+> > > 
+> > > !TestMorph methodsFor: 'drawing' stamp: 'F K 1/2/2005 11:12'!
+> > > drawOn: aCanvas
+> > >  | colors |
+> > >  colors _ color wheel: 6.
+> > >  colors withIndexDo:[:c :i | 
+> > >  aCanvas  fillOval: (self bounds insetBy:4 * i) color: c].
+> > > 
+> > > 
+> > > ! !
+> > > 
+> > > 
+> > > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:00'!
+> > > step
+> > >  xOrdinate _  self x.
+> > >  yOrdinate _  (((self y) - 700) abs).
+> > >  (self xLimitCheck) 
+> > >     ifTrue: [(deltaX = 5) ifTrue:[deltaX _ -5]ifFalse:[deltaX _ 5]].
+> > >  (self yLimitCheck) 
+> > >     ifTrue: [(deltaY = 5) ifTrue:[deltaY _ -5]ifFalse:[deltaY _ 5]].
+> > >  self position: self position + (deltaX@deltaY).
+> > > ! !
+> > > 
+> > > !TestMorph methodsFor: 'stepping and presenter' stamp: 'F K 1/2/2005 11:04'!
+> > > stepTime
+> > >  ^80! !
+> > > 
+> > > 
+> > > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > > xLimitCheck
+> > >   ^ (deltaX = 5) 
+> > >     ifTrue:[xOrdinate >= worldWidth]
+> > >     ifFalse:[xOrdinate <= 0].
+> > > 
+> > > ! !
+> > > 
+> > > !TestMorph methodsFor: 'geometry testing' stamp: 'F K 1/2/2005 11:13'!
+> > > yLimitCheck
+> > >   ^ (deltaY = 5) 
+> > >     ifTrue:[yOrdinate >= worldHeight]
+> > >     ifFalse:[yOrdinate <= 0].
+> > > ! !
+> > > 
+> > > 
+> > > 近藤史人
+> > > シニアコンサルタント
+> > > 日本ヒューレット・パッカード㈱
+> > > Fumito Kondo
+> > > Senior Consultant
+> > > Hewlett-Pakard Japan, Ltd.
+> > > Phone: +81-52-566-5900
+> > > Fax:     +81-52-5990
+> > > e-mail: Fumito.Kondo@hp.com
+> > 
+> > -- !
+> > Koji Yokokawa <koubo2005@yengawa.jpn.org>
+> >     self new!
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From masuda ＠ im.dendai.ac.jp  Sun Jan 16 00:10:40 2005
+From: masuda ＠ im.dendai.ac.jp (Hidetaka Masuda)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2263] 2004年度後半グループ作品
+Message-ID: <20050116.001040.74732735.masuda@im.dendai.ac.jp>
+
+増田＠電大です。
+
+今年度の後半グループの作品ができあがりました。
+
+http://www.cue.im.dendai.ac.jp/~masuda/squeak/projects/2004/
+
+です。発表会には阿部さん、横川さんに見に来ていただきました。
+
+残念ながら、3年目の今回でこの授業形態も終了することになりました。
+
+------
+〒101-8457 東京電機大学 工学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp            TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/ FAX 03-5280-3592
+It's more fun to compute!
+
+From koubo2005 ＠ yengawa.jpn.org  Sun Jan 16 01:40:27 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2264] Re: 2004年度後半グループ作品
+In-Reply-To: <20050116.001040.74732735.masuda@im.dendai.ac.jp>
+References: <20050116.001040.74732735.masuda@im.dendai.ac.jp>
+Message-ID: <20050116013032.C272.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+eToys初学者のサポートに興味があり、見学させてもらいました。
+感想を書いたのですが、長くなってしまったので日記にのせます。
+
+http://yengawa.homedns.org:8888/YengawaBlog2/143
+
+では。
+
+On Sun, 16 Jan 2005 00:10:40 +0900 (JST)
+Hidetaka Masuda <masuda@im.dendai.ac.jp> wrote:
+
+> 増田＠電大です。
+> 
+> 今年度の後半グループの作品ができあがりました。
+> 
+> http://www.cue.im.dendai.ac.jp/~masuda/squeak/projects/2004/
+> 
+> です。発表会には阿部さん、横川さんに見に来ていただきました。
+> 
+> 残念ながら、3年目の今回でこの授業形態も終了することになりました。
+> 
+> ------
+> 〒101-8457 東京電機大学 工学部 情報メディア学科  増田 英孝
+> E-mail: masuda@im.dendai.ac.jp            TEL 03-5280-3551
+> http://www.cdl.im.dendai.ac.jp/%7Emasuda/ FAX 03-5280-3592
+> It's more fun to compute!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From miyasaka ＠ iris.dti.ne.jp  Sun Jan 16 22:40:28 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2265] スクイークのワークショップ
+In-Reply-To: <20050116013032.C272.KOUBO2005@yengawa.jpn.org>
+Message-ID: <200501161340.j0GDeCvp002018@smtp5.dti.ne.jp>
+
+squeak-jaの皆様へ
+
+こんばんは。
+デジタルハリウッド大学院の宮坂です。
+
+以前もお知らせしましたが、大学院のゼミの企画の一環として、子供向けのスクイー
+クワークショップを開催する予定です。
+http://mts-j.hiho.jp/
+
+■お願い■
+ですが、まだ参加者が少ないので、もし皆様の友人知人の方で、ご興味ありそうな方
+がいらしたら上記ＵＲＬをご紹介いただけないでしょうか。
+１月２２日、２月６日の各回ともに、まだ余裕がありますので。
+（小学校４・５・６年生が主な対象者です）
+
+先日遅ればせながら、新宿区の児童館２０数箇所にチラシを置いていただいたので、
+これから追加で申し込みがあるかもしれませんが。
+教材の企画・制作でばたばたしていて参加者募集活動を怠っていたことを反省してい
+るこの頃です。。。
+
+取り急ぎ。
+よろしくお願いいたします！！
+
+---------------------------------------------------
+子供向けワークショップ開催中>> http://mts-j.hiho.jp/
+---------------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院デジタルコンテンツ研究科
+miysaka@iris.dti.ne.jp
+大学院のホームページ >> http://www.dhw.co.jp/gs/
+---------------------------------------------------
+
+
+From abee.abe ＠ nifty.ne.jp  Sun Jan 16 23:28:10 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2266] Re: Squeak BOF 参加者募集
+In-Reply-To: <41AFF99E7D.CA96ABEE.ABE@smtp.nifty.com>
+References: <41AFF99E7D.CA96ABEE.ABE@smtp.nifty.com>
+Message-ID: <41EA79FA223.789BABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+先日、1/29に京都で開催されるSqueak BOFのご案内と参加者募集を行いました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2004-December/002010.html
+
+その結果、9名の方から発表の申し込みをいただきました。どれも興味深いものば
+かりです。概要を末尾に添付しますのでどうぞご覧ください。
+
+プロシーディングの掲載には間に合いませんが、これ以降のお申し込みや当日の
+飛び込みも受け付けます。
+
+今回は18:00-20:00を発表に充て、20:00からはエンドレスでフリーディスカッショ
+ンを行う予定です。したがって、今のところ1件あたりの発表時間は約13分になり
+ます。
+
+この進め方や内容、時間配分などについて、皆さんのご意見をどうぞお寄せくだ
+さい(たとえば、発表者、受講者という感じに分けず車座で行うとか)。
+
+楽しいイベントにしたいと思いますので、どうぞよろしくお願いします。
+また、C5, C4の申し込みのがまだの方は急ぎお申し込みください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-- cut here --
+・発表者名　武田 俊之 Toshiyuki Takeda
+・所属　関西学院大学 Kwansei Gakuin University
+・メールアドレス　takeda@kwansei.ac.jp
+・表題　Rendezvous with Squeak
+・概要
+AppleのRendezvousプロトコルをSqueak上に移植したので、プロトコル、実装、応
+用の可能性について紹介する。Rendezvousは主にローカルセグメントを対象とし
+たサービスのアドバタイズと発見のプロトコルであり、たとえばSuperSwikiや
+Nebraskaなどのサービスの設定と利用を簡便にする。これは特にアドホックなワー
+クショップ開催において有用である。
+
+・発表者名　梅澤 真史　Masashi Umezawa
+・所属　株式会社 豆蔵　Mamezou Co.,Ltd.
+・メールアドレス　umejava@mars.dti.ne.jp
+・表題　しゃべるeToyと新NetMorphなど
+Speaking eToys, NetMotph, or something
+・概要
+Accessibilityの実験的試みとしてのしゃべるeToyの紹介。および相手ノードを自
+動発見し、日本語環境で動くようになったNetMorphのデモ。
+
+・発表者名　親松 和浩　Kazuhiro Oyamatsu
+・所属　愛知淑徳大学　Department of Media Theories and Production, Aichi
+Shukutoku University
+・メールアドレス　oyak@asu.aasa.ac.jp
+・表題　スクイークで遊んだ２つの事例報告：小１の男の子と文系学生
+Squeaking with a 7-year-old boy and with students at Aichi Shukutoku
+University
+・概要
+幼稚園年長の冬から小１冬まで息子と１年間スクイークで遊んでみた事例と、大
+学のゼミでスクイークを文系学生にワークショップ的に行った事例を報告す 
+る。この２年間で学生の反応が少し変わってきたようである。理解が早くなった
+一方で、「描いた絵をすぐに動かせるなんてすごい！」といった新鮮な反応 
+は以前より少し減っている。教える側の慣れもあるだろうが、高校生向けの模擬
+授業でも同様な得ているので、こうした変化が実際に進行していると感じて 
+いる。
+
+・発表者名　伊藤 栄一郎　Eiichiro Ito
+・所属　山梨学院大学　Yamanashi Gakuin University
+・メールアドレス　e-itoh@ygu.ac.jp
+・表題　ロボットプログラミング環境とその教育的実践
+Robot Programming Environment And Its Educational Practice
+・概要
+自律型ロボットAIBOの判断部分をプログラムすることのできる開発環境Defartに
+ついて報告する。
+Squeakを使って記述されたこのシステムは、Squeakの持つビジュアル機能や、ネッ
+トワーク機能を使って、初心者でも使いやすく実行状況も把握しやすいものとな
+っている。
+昨年のBOFで発表したものに若干手を加えて、2004年春に行われたロボカップジャ
+パンオープンに参加した。そのときの経験などについても報告する。
+
+・発表者名　林 徹也　Tetsuya HAYASHI
+・所属　フリーランス　	freelance
+・メールアドレス　tetha@st.rim.or.jp
+・標題　SqueakBasket −オブジェクトを共有するための実験的な電子メール環境−
+SqueakBasket - An experimental email environment for sharing objects -
+・概要
+2004年度第2回未踏プロジェクトに採択された同名プロジェクトについて、そのコ
+ンセプト説明と、意見交換を行いたいと思います。
+Describe about the project that is one of the IPA Exploratory project 2nd
+2004, and take place a discussion.
+
+・発表者名　山宮 隆　Takashi Yamamiya
+・メールアドレス　tak@metatoys.org
+・標題　スーパーパーツ瓶　Super Parts Bin
+・概要
+スクリプトを含んだオブジェクトを簡単に共有する仕組み、スーパーパーツ瓶を
+使った様々な秘儀を公開します。
+SuperPartsBin is an easy mechanism for sharing scriptable objects. I am
+going to introduce secret weapons of it.
+
+・発表者名　横川 耕二　Koji Yokokawa
+・所属　株式会社 豆蔵　Mamezou Co.,Ltd.
+・メールアドレス　koji.yokokawa@riverside.skr.jp
+・表題　Swimmy - みんなのマルチエージェントフレームワーク -
+Swimmy - A Multi-Agent Framework for All -
+・概要
+マルチエージェント・フレームワーク Swimmyを紹介します。Swimmyを使うと簡単
+なGUI操作でキャラクタ・エージェントをつくり、利用できます。
+I introduce Swimmy, a multi-agent framework. Using Swimmy, Users can
+create and use charactor-agents easily through GUI.
+
+・発表者名　大島 芳樹　Yoshiki Ohshima
+・所属　Twin Sun, Inc.
+・メールアドレス　yoshiki@squeakland.org
+・表題　毛玉: 並列粒子シミュレーションシステム
+・概要
+数万個にも及ぶオブジェクトに対して、簡単に振る舞いを記述して動作させるこ
+とができるシステム「毛玉」を開発中である。eToysと同様のGUIインターフェイ
+スを用いて記述することが可能であり、eToysに親しんだユーザーが無理なく使用
+法を学習することができる。実行速度は、並列に実行可能な部分がそれぞれくく
+りだされた形になってC言語の速度で実行されるため、十分な速度を持つ。
+このデモでは、簡単な例題用いて使用法を示したい。
+
+
+・発表者名　阿部 和広　Kazuhiro Abe
+・所属　多摩美術大学 情報デザイン学科　Tama Art University, Department
+of Information Design
+・メールアドレス　abee.abe@nifty.ne.jp
+・表題　新世界聴診器　WorldStethoscope - The Next Generation
+・概要
+様々な現象を音に変える世界聴診器が世に出て約1年。その後の各地での実践や応
+用例、ODECoなど他のプロジェクトとの連携などについて紹介する。また、小型化
+と低価格化を実現した次世代世界聴診器のデモや今後の展開予定についても触れ
+る。
+-- cut here --
+
+From takeda ＠ kwansei.ac.jp  Mon Jan 17 12:21:36 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2267] Re: Squeak BOF 参加者募集
+In-Reply-To: <41EA79FA223.789BABEE.ABE@smtp.nifty.com>
+References: <41AFF99E7D.CA96ABEE.ABE@smtp.nifty.com>
+	<41EA79FA223.789BABEE.ABE@smtp.nifty.com>
+Message-ID: <E559D06A-6836-11D9-95DA-000393B4B3DE@kwansei.ac.jp>
+
+関西学院大学の武田です。
+
+On 2005/01/16, at 23:28, Kazuhiro ABE wrote:
+
+> この進め方や内容、時間配分などについて、皆さんのご意見をどうぞお寄せくだ
+
+開催場所がどんなところか（広さ、机、電源、ネットワークのことなど）、
+プロジェクタは何台あるのかとか、教えていただけますか。
+
+＃車座ってまさかすわりこんでやるわけじゃないですよね。
+
+＃20:00からエンドレスって。。。
+
+--
+武田俊之
+
+
+From e-itoh ＠ ygu.ac.jp  Mon Jan 17 12:33:02 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2268] Re: Squeak BOF 参加者募集
+References: <41AFF99E7D.CA96ABEE.ABE@smtp.nifty.com>
+	<41EA79FA223.789BABEE.ABE@smtp.nifty.com>
+Message-ID: <20050117123302.20741664@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+BOF楽しみにしております。私自身のものは目新しいネタではないのですが、
+昨年の報告の結果などについて若干報告させていただこうと思っております。
+
+>この進め方や内容、時間配分などについて、皆さんのご意見をどうぞお寄せくだ
+>さい(たとえば、発表者、受講者という感じに分けず車座で行うとか)。
+　昨年のは普通の学会形式で、発表者と受講者がかなり離れていた
+印象を受けました。（位置的にも雰囲気的にも）
+　前に出て話すのだと形式ばってしまような気がするので、たとえば発表者
+が同じテーブルを囲んで順繰りに発表していくようなものはいかがでしょう
+か。
+　あとは、実演も多かったので、実際に端末でどんな操作が行われているの
+か、後ろから見てみたいとも思いました。中央のテーブルを囲んだ発表者の
+外側を、受講者（他の発表者も）が自由に見て回れるようなものだといいで
+すね。
+
+僭越ながら勝手な意見を述べさせていただきました。失礼いたしました。
+
+
+ 
+
+
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Mon Jan 17 13:20:05 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:05 2007
+Subject: [Squeak-ja: 2269] Re: Squeak BOF 参加者募集
+In-Reply-To: <E559D06A-6836-11D9-95DA-000393B4B3DE@kwansei.ac.jp>
+References: <41AFF99E7D.CA96ABEE.ABE@smtp.nifty.com>
+	<41EA79FA223.789BABEE.ABE@smtp.nifty.com>
+	<E559D06A-6836-11D9-95DA-000393B4B3DE@kwansei.ac.jp>
+Message-ID: <20050117132005.075d0231.htakada@db.soc.i.kyoto-u.ac.jp>
+
+京都大学の高田です．
+
+C5 の Squeak BOF は面白くなりそうですね．
+関係者の方々に感謝致します．
+
+Date: Mon, 17 Jan 2005 12:21:36 +0900
+From: Takeda Toshiyuki <takeda@kwansei.ac.jp>
+
+> 開催場所がどんなところか（広さ、机、電源、ネットワークのことなど）、
+> プロジェクタは何台あるのかとか、教えていただけますか。
+
+場所としては，京大構内の先端科学研究棟の一階セミナー室を使う予定です．
+(2002年11月の ALAN-Kプロジェクトのイベントをやった部屋と同じです)
+
+広さは，50人くらいは机付き余裕で座れるくらいです(10m×20mくらい?)．
+机は3人がけの折り畳み式長机です．移動式ですので，囲み型にすることも，
+机を片付けて床に座ることも可能です．:-)
+
+電源はテーブルタップなどを用意することに致します．プロジェクタは１台備え
+付けのものがあり，もう一台持ち込むことができます．
+
+ネットワークは，いわゆるブロードバンドルータを設置し，京大のネットワーク
+を経由して NAT でインターネット接続できる予定です(これは C5 本体でも提供
+されます)．WEP付き無線LANも用意致します．
+
+C5 本体の方は，早期登録は締め切らせて頂きましたが，まだまだ参加受付中で
+すので，皆様多数御参加下さいますようお願いいたします．
+
+-- 
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+
+From tagawa ＠ akademia.co.jp  Mon Jan 17 18:11:12 2005
+From: tagawa ＠ akademia.co.jp (Hisashi Tagawa)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2270] ifTrue 等のカスケードについて
+Message-ID: <20050117181112x+j#g7@akademia.co.jp>
+
+はじめまして。
+田川といいます。
+squeak-jaはもう1年以上ROMらせていただいておりますが、
+ROMっているだけじゃ駄目だと思い立って、
+今回初めて投稿させていただくことにしました。
+
+aBoolean ifTrue: []; yourself.
+のようなカスケードを行おうとすると、
+Cascading not expected
+だと叱られてしまことに最近気付きました。
+しかしこれが許されない理由が分かりません。
+何故なのでしょうか？
+そこには深い理由が隠されていたりするのでしょうか？
+
+ちなみに環境はSqueak3.7-5989-fullです。
+
+/*************************************
+  田川 尚士 io_oj@ybb.ne.jp
+*************************************/
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Mon Jan 17 18:50:49 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2271] Re: ifTrue 等のカスケードについて
+In-Reply-To: <20050117181112x+j#g7@akademia.co.jp>
+Message-ID: <BE11B989.2E8EC%sumi@seagreen.ocn.ne.jp>
+
+田川さん、ごきげんよう。鷲見です。
+
+true perform: #ifTrue: with: []; yourself
+
+とすればいけます。
+
+on 01/17/05 18:11, tagawa@akademia.co.jp wrote:
+
+> そこには深い理由が隠されていたりするのでしょうか？
+
+まずカスケード「;」は、レシーバを dup してそれを pop することで
+内部的には実現されています。
+
+[3 + 4; * 5] method symbolic
+
+=> ...
+   30 <22> pushConstant: 3
+   31 <88> dup
+   32 <23> pushConstant: 4
+   33 <B0> send: +
+   34 <87> pop
+   35 <24> pushConstant: 5
+   36 <B8> send: *
+   ...
+
+他方で、#ifTrue: はソース上ではメッセージ送信を装っていますが、
+バイトコードレベルでは、効率を優先していわゆる goto 文で表現されます。
+
+[true ifTrue: [#hi]] method symbolic
+
+=> ...
+   22 <71> pushConstant: true
+   23 <99> jumpFalse: 26
+   24 <22> pushConstant: #hi
+   25 <90> jumpTo: 27
+   26 <73> pushConstant: nil
+   ...
+
+ここからは想像ですが、ここに pop/dup を整合性よく入れるロジックを組むのが
+面倒だったのでコンパイル時に拒絶する仕様にしたのではないでしょうか。
+
+--
+Masato Sumi
+
+
+From io_oj ＠ ybb.ne.jp  Mon Jan 17 19:15:01 2005
+From: io_oj ＠ ybb.ne.jp (Hisashi Tagawa)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2272] Re: ifTrue 等のカスケードについて
+In-Reply-To: <BE11B989.2E8EC%sumi@seagreen.ocn.ne.jp>
+Message-ID: <20050117101501.81523.qmail@web10309.mail.mci.yahoo.co.jp>
+
+早速のお返事ありがとうございます。
+
+なるほど、よく分かりました。
+きっと最適化の関係だろうとは思っていたわけですが、
+バイトコードを見てみるという発想がありませんでした。
+
+バイトコードを生成するような部分は未だ全く見れていないの
+ですが、
+機会があれば見てみたいところだとは思っています。
+
+/**************************************
+  田川 尚士 io_oj@ybb.ne.jp
+**************************************/
+
+
+From kubota ＠ sie.dendai.ac.jp  Tue Jan 18 11:53:19 2005
+From: kubota ＠ sie.dendai.ac.jp (Yoshihiko Kubota)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2273] Squeakからカメラの画像を取得(Linux)
+In-Reply-To: <20050117101501.81523.qmail@web10309.mail.mci.yahoo.co.jp>
+References: <20050117101501.81523.qmail@web10309.mail.mci.yahoo.co.jp>
+Message-ID: <1BBFE46C-68FC-11D9-87DD-000A95AD0BEA@sie.dendai.ac.jp>
+
+久保田です。
+
+Linuxで動いてるSqueakからUSBカメラの画像を取得するプラグインを公開しました。
+http://www.se.sie.dendai.ac.jp/~kubota/
+とりあえず動けばいいや的考えで作ったので、いろいろ問題あるかも知れません。
+#MPEG4IPは全然手をつけていないです。
+
+
+From yoshiki ＠ squeakland.org  Tue Jan 18 15:28:04 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2274] Re: Squeakからカメラの画像を取得(Linux)
+In-Reply-To: <1BBFE46C-68FC-11D9-87DD-000A95AD0BEA@sie.dendai.ac.jp>
+References: <20050117101501.81523.qmail@web10309.mail.mci.yahoo.co.jp>
+	<1BBFE46C-68FC-11D9-87DD-000A95AD0BEA@sie.dendai.ac.jp>
+Message-ID: <uoefnqmiz.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+> Linuxで動いてるSqueakからUSBカメラの画像を取得するプラグインを公開しました。
+> http://www.se.sie.dendai.ac.jp/~kubota/
+> とりあえず動けばいいや的考えで作ったので、いろいろ問題あるかも知れま
+せん。
+
+　やりましたね。
+
+  実際に試したわけではありませんが、ちょっとだけコメントを。
+
+  * WebCamMorph>>initialize:のあたりはビジーループになっているような気
+    がしますが、フレームがきたときにSemaphoreをシグナルするような仕組
+    みのほうがよいかも知れません。
+
+  * WebCamMorphのように、中身を他のProcessから書き換えるときは
+    WorldState class>>addDeferredUIMessage:というメソッドを使って、
+     Morphicのループと協調して動くようにしないと、思わぬタイミングでエ
+     ラーが出たりします。
+
+ これからもがんばってください。
+
+-- Yoshiki
+
+
+From takeda ＠ kwansei.ac.jp  Wed Jan 19 18:16:06 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2275] Nihongo 7
+Message-ID: <BFD1B9AA-69FA-11D9-BE8D-000393B4B3DE@kwansei.ac.jp>
+
+武田です。
+
+Squeak Nihongo 7の開発関係者の方々、おつかれさまです。
+True Typeサポートは実際使ってみると感動的ですね。
+
+さて、リリースも見えてきたのではないかと思いますが、
+今後のスケジュールの見通しなど教えていただけないでしょうか。
+
+もし、３月上旬にまでにリリースする見込みがあるなら、新年度の教室に
+入れるイメージはNIhongo 7にしたいと考えています。
+
+でも、バグフィックスだけしてるわけではなさそうなので、
+もっと時間がかかりますかね。。。
+
+武田俊之
+
+
+From tak ＠ metatoys.org  Wed Jan 19 18:37:15 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2276] Re: Nihongo 7
+In-Reply-To: <BFD1B9AA-69FA-11D9-BE8D-000393B4B3DE@kwansei.ac.jp>
+References: <BFD1B9AA-69FA-11D9-BE8D-000393B4B3DE@kwansei.ac.jp>
+Message-ID: <41EE2A4B.60208@metatoys.org>
+
+山宮です。
+
+私は毎日 Squeak Nihongo 7(予定) 
+http://languagegame.org:8080/propella/100
+を使っていますが、etoys を扱うレベルであればそろそろ安定しているかな
+という印象を持っています。バグフィックスに関してはよっぽど今から
+凄いバグを入れない限りは大丈夫だと思いますが、翻訳に関して
+フィードバックがあれば助かります。
+
+現在、主に大島さんが頑張って翻訳作業を進めておられますが、なにぶん数が
+多い為以下のポイントでご協力願えればと思います。
+
+* 一貫性のチェック: 複数の箇所で訳語に統一がとれているか
+* 訳語の追加: ThreadNavigator、 WaveEditor、ScorePlayer等
+
+あと、メタな作業としては、翻訳作業の為の LanguageEditor というツールの
+チュートリアルを書いたり、集まったフィードバックをどうやって反映してい
+くかのプロセス(バージョン管理等)を考えたりする人がいれば嬉しいなあと思
+います。
+
+> さて、リリースも見えてきたのではないかと思いますが、
+> 今後のスケジュールの見通しなど教えていただけないでしょうか。
+> 
+> もし、３月上旬にまでにリリースする見込みがあるなら、新年度の教室に
+> 入れるイメージはNIhongo 7にしたいと考えています。
+
+計画としては新学期(4月1日)リリース予定です(と、誰かが言ってたような)。
+開発版は毎日のようにリリースしてますが、例えば3月に作ったプロジェクト
+がリリース版で使えないといった問題が発生する可能性は無きにしもあらずに
+なると思います。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+From yoshiki ＠ squeakland.org  Thu Jan 20 00:10:05 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2277] Re: Nihongo 7
+In-Reply-To: <41EE2A4B.60208@metatoys.org>
+References: <BFD1B9AA-69FA-11D9-BE8D-000393B4B3DE@kwansei.ac.jp>
+	<41EE2A4B.60208@metatoys.org>
+Message-ID: <upt01pi9e.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+　山宮さんが書いてくれたように、現在は山宮さんがとりまとめをしてくれて
+いるところに皆がパッチを送っているという状況です。僕の感じでは、スーパー
+パーツ瓶を除くと、われわれがやっているのはバグフィックスと安定化だけで
+はないかとも思っています。
+
+  残っているのは、主に翻訳です。細かな意見、例えば、「色を見る」タイル
+などに「モーフ」という言葉が使われているのはいかがなものか、というよ
+うなコメントなどでも非常に助かります。また、例によって「訳しすぎ」てい
+る面もあるかもしれないので、カタカナでも良いかもしれない、という部分も
+あるかもしれません(長くなるのであまり好きではないのですが)。そのような
+意見もお願いします。
+
+　言語エディターは、ある時点以降の変更のみを書き出す、というような機能
+があると良いでしょうね。
+
+　6.1で作ったプロジェクトは確実に読めるようにしたいと思っています。リ
+リース前のNihongo7で作ったものも、保証はできませんが多分大丈夫というこ
+とになるでしょう。正式リリースは春休み前にしたいですね。(でも、毛玉も
+入れたくなるな...)
+
+  というわけで、皆さんの協力があってのことですのでよろしくお願いします。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Thu Jan 20 23:29:43 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2278] Re: 毛玉 Ver. 2
+In-Reply-To: <uwtujp3d6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <uwtujp3d6.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <uu0pc2my0.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+  しばらく前に並列パーティクルプログラミングシステム「毛
+玉」について書きました。そのメールの中で、
+
+>   Mac版(やLinux版)のPluginを作ってくださる方がいれば、それをWebに置き
+> たいと思います。もしどなたか作って下されば、僕にそっと送ってください。
+> こちらもよろしくお願いします。
+
+と書いたのですが、その後鈴木藍さんと加藤大さんからLinux版のプラグイン
+を送っていただきました。数日後にはWebに載せたいと思います。どうもあり
+がとうございました。
+
+-- Yoshiki
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Sat Jan 22 12:20:45 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2279] C5 & C4 の御案内
+Message-ID: <20050122122045.4d8a3810.htakada@db.soc.i.kyoto-u.ac.jp>
+
+皆様
+
+来週に迫りました国際会議 C5 とその関連イベント C4 につきまして，アランケ
+イさんの御講演タイトルが決まりましたので，お知らせ致します．
+
+---
+C5: 1月28日, 29日 京都大学芝蘭会館
+http://www.edu.soc.i.kyoto-u.ac.jp/c5-05/
+
+基調講演: 1月28日 10:15 - 11:15
+The ARPA Dream Revisited
+Alan Kay (Viewpoints Research Institute, The Hewlett-Packard Company, USA)
+※通訳なし
+
+---
+C4: 1月30日 京都大学芝蘭会館
+http://www.edu.soc.i.kyoto-u.ac.jp/c4-05/
+
+基調講演: 1月30日 9:00 - 10:00
+What is really important for education aided by computing?
+Alan Kay (Viewpoints Research Institute, The Hewlett-Packard Company, USA)
+※逐次通訳つき
+
+まだまだ参加登録を受付中ですので，多数の御参加をお願いいたします．
+
+-- 
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+
+From abee.abe ＠ nifty.ne.jp  Sun Jan 23 15:05:35 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2280] 子供たちの“創造性”を高めるアラン・ケイの教育プロジェクト
+Message-ID: <41F33EAF304.DFCDABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2005/01/22発売の月刊 Forbes日本版 2005年3月号に、
+
+わが社の挑戦
+　子供たちの“創造性”を高めるアラン・ケイの教育プロジェクト
+　───日本ヒューレット・パッカード
+
+という記事が載っています。
+
+http://www.fujisan.co.jp/Product/2283/b/53498/
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Sun Jan 23 15:14:43 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2281] 佐々木かをりの wn-win 第 44 回 アラン・ケイさん
+Message-ID: <41F340D32BC.DFCEABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+イー・ウーマンのWebサイトに2005/1/21付で「佐々木かをりのwn-win 第44回 ア
+ラン・ケイさん」の前半が掲載されています。後半は1/28公開予定です。
+
+http://www.ewoman.co.jp/winwin/44ak/
+
+このインタビューは昨年11月にアランさんが来日された折に、日本HPのイベント
+の合間を縫って行われたものです。
+
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-October/001903.html
+
+過去の記事ではあまり触れられなかった話題もあり、なかなか読み応えがありま
+す。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Sun Jan 23 15:32:27 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2282] Re: Squeak BOF 参加者募集
+In-Reply-To: <E559D06A-6836-11D9-95DA-000393B4B3DE@kwansei.ac.jp>
+References: <41EA79FA223.789BABEE.ABE@smtp.nifty.com>
+	<E559D06A-6836-11D9-95DA-000393B4B3DE@kwansei.ac.jp>
+Message-ID: <41F344FB28A.DFCFABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 17 Jan 2005 12:21:36 +0900
+Takeda Toshiyuki <takeda@kwansei.ac.jp> wrote:
+>＃車座ってまさかすわりこんでやるわけじゃないですよね。
+
+伊藤先生が書かれているように、椅子の配置などを自由にするのはどうかなと思っ
+ています。その場のノリで決めても良いかもしれません。
+プログラムもかっちり決めず、適当に話す感じでもよいのかなと思ったり。
+
+>＃20:00からエンドレスって。。。
+
+20時でいったん締めて、あとは適当なタイミングで流れ解散になると思われます
+(翌朝はC4ですし)。
+
+海外のOOPSLAやCamp Smalltalk、Squeak BOFなどでは、みんな信じられないくら
+いタフで、テーブルと電源さえあれば、どこでもデモ、どこでもハック、どこで
+もディスカッションしています。
+日本で似たようなことをやろうとすると、会場の関係で追い出されることが多い
+ので、今回は高田先生にお願いして、あらかじめそのようなことができる場所を
+用意していただきました。飲食も可能です。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Tue Jan 25 14:41:04 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2283] Re: Squeak BOF 参加者募集
+In-Reply-To: <20050117132005.075d0231.htakada@db.soc.i.kyoto-u.ac.jp>
+References: <E559D06A-6836-11D9-95DA-000393B4B3DE@kwansei.ac.jp>
+	<20050117132005.075d0231.htakada@db.soc.i.kyoto-u.ac.jp>
+Message-ID: <41F5DBF014E.00BBABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Squeak BOF会場の先端科学研究棟のアクセスマップは以下に載っています。
+
+http://www.kyoto-u.ac.jp/access/kmap/map6r_i.htm
+
+C5会場の芝蘭会館からは徒歩数分の場所になります。
+よろしくお願いします。
+
+On Mon, 17 Jan 2005 13:20:05 +0900
+Hideyuki Takada <htakada@db.soc.i.kyoto-u.ac.jp> wrote:
+>京都大学の高田です．
+>
+>C5 の Squeak BOF は面白くなりそうですね．
+>関係者の方々に感謝致します．
+>
+>Date: Mon, 17 Jan 2005 12:21:36 +0900
+>From: Takeda Toshiyuki <takeda@kwansei.ac.jp>
+>
+>> 開催場所がどんなところか（広さ、机、電源、ネットワークのことなど）、
+>> プロジェクタは何台あるのかとか、教えていただけますか。
+>
+>場所としては，京大構内の先端科学研究棟の一階セミナー室を使う予定です．
+>(2002年11月の ALAN-Kプロジェクトのイベントをやった部屋と同じです)
+>
+>広さは，50人くらいは机付き余裕で座れるくらいです(10m×20mくらい?)．
+>机は3人がけの折り畳み式長机です．移動式ですので，囲み型にすることも，
+>机を片付けて床に座ることも可能です．:-)
+>
+>電源はテーブルタップなどを用意することに致します．プロジェクタは１台備え
+>付けのものがあり，もう一台持ち込むことができます．
+>
+>ネットワークは，いわゆるブロードバンドルータを設置し，京大のネットワーク
+>を経由して NAT でインターネット接続できる予定です(これは C5 本体でも提供
+>されます)．WEP付き無線LANも用意致します．
+>
+>C5 本体の方は，早期登録は締め切らせて頂きましたが，まだまだ参加受付中で
+>すので，皆様多数御参加下さいますようお願いいたします．
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From umejava ＠ mars.dti.ne.jp  Thu Jan 27 20:47:51 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2284] swikis.ddo.jp が落ちています
+Message-ID: <JE20050127204751.5015111@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、日頃ご愛用いただいています
+http://swikis.ddo.jp
+ですが、ただいま、サーバがダウンしております。
+
+本来でしたら再起動といきたいところなのですが、現在C5のため京都におりまして
+どうにもなりません。
+
+30日の夜には帰宅しますので、それまで復旧はお預けになります。
+
+ご迷惑をおかけしますが、ご了承ください。
+
+#今日は未踏の発表を見てきましたが、なかなかに盛況でした。明日の
+#C5も面白くなりそうです。なんなら京都に来てみるのもよいかもしれません。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From koubo2005 ＠ yengawa.jpn.org  Fri Jan 28 01:07:46 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2285] Swimmyのレビュー用生イメージ
+Message-ID: <20050127232436.EDD9.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+
+On Thu, 27 Jan 2005 20:47:51 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+
+> #今日は未踏の発表を見てきましたが、なかなかに盛況でした。明日の
+> #C5も面白くなりそうです。なんなら京都に来てみるのもよいかもしれません。
+
+IPA未踏ソフトウェア開発プロジェクトでSwimmyというマルチエージェントフレームワーク
+をSqueak上で開発しています。今日はアランPMへその報告をしました。
+ちゃんと公開するにはまだ作業が必要なので、取り急ぎ今日のレビューで使ったイメージ
+を「こっそりと生のまま」置きました(スペル間違いもそのママ)。このイメージ上で実際
+にエージェントを作りながら主に口頭で説明したものなので、わからない部分が多いと思
+いますが、興味のある方は覗いてみてください。
+# C5/BOF/C4でもこれを使って実演説明します。
+
+http://yengawa.homedns.org:8888/Swimmy/38
+にある Final Review のイメージがそれです。
+
+ほんのちょっと説明
+"Flower"や"Signal"がこのフレームワークで作ったアプリケーション例です。
+SwimmyMorph(FlowerLifeやbeeやBlueCarSignal)の右ボタンメニューでエージェントのプロ
+グラムエディタが開きます。
+Swimmyフラップにエージェントを作る道具が入ってます。
+
+
+では。
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From e-itoh ＠ ygu.ac.jp  Sun Jan 30 22:46:28 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2286] Nihongo7: SqueakVM3.6.3-JPatched で動作せず ( 長文 )
+Message-ID: <20050130224628.54B82665@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+C5-2005 BOFでは拙い報告に耳をかたむけて頂き、ありがとうございました。
+今回のイベント全体を通じてとても有意義な時間を過ごすことができました。
+高田さま、阿部さまを始め、関係者のみなさま本当にお疲れさまでした。
+
+帰ってからすぐにNihongo7を動かしてみようと思い、うちの環境で試して
+みたのですが、どうもうまく動きません。とりあえず状況だけ報告いたし
+ます。
+
+環境：
+CPU: Celeron 2.0GHz
+MEM: 512MB
+OS: Debian Sarge
+Window System:X11+KDE
+IM: UIM+Anthy
+
+Squeak：
+VM: SqueakVM3.6.3-JPatched.tgz
+Image: NSqueak-2005-01-24.zip
+
+状況：
+もともとVMではNihongo6.1が問題なく動作していた。
+このVMでNSqueakを起動すると、画面全体が真っ黒くなり、左上から白地に
+黒の文字でエラーメッセージが表示される。SqueakDebug.logが作成されな
+ので以下はその写しです。(誤字等あるかもしれません)
+
+===ここから===
+***System error handling failed***
+Original error: MessageNotUnderstood: String>>new.
+  Debugger error: MessageNotUnderstood: String>>new:
+[] in Debugger class>>openOn:context:label:contents:fullView: {[:t9 | self primitiveError: 'Original error: ', t3 asString, '. Debugger e...]}
+BlockContext>>valueWithPossibleArgs:
+[] in MethodContext(ContextPart)>>handleSignal: {[(self tempAt: 2) valueWithPossibleArgs: {t1}]}
+BlockContext>>ensure:
+MethodContext(ContextPart)>>handleSignal:
+MessageNotUnderstood(Exception)>>signal
+String(Object)>>doesNotUnderstand: #new
+LanguageEnvironment class>>defaultFileNameConverter
+FilePath>>pathName:isEncoded:
+FilePath class>>pathName:isEncoded:
+FilePath class>>pathName:
+String(AbstractString)>>asSystemPathName
+[] in DosFileDirectory(FileDirectory)>>deleteFileNamed:ifAbsent:{[self primDeleteFileNamed: (self fullNameFor: t1) asSystemPathName]}
+StandardFileStream class>>retryWithGC:until:forFileNamed:
+DosFileDirectory(FileDirectory)>>deleteFileNamed:ifAbsent:
+SystemDictionary>>logError:inContext:to:
+[] in Debugger class>>openOn:context:label:contents:fullView: {[t8 := self new  process: t1 controller: t6 context: t2. t5 if...]}
+BlockContext>>on:do:
+[] in Debugger class>>openOn:context:label:contents:fullView: {[t8 := self new  process: t1 controller: t6 context: t2. t5 i...]}
+[] in BlockContext>>newProcess {[self value. Processor terminateActive]}
+-----------------------------
+Type CR to enter an emergency evaluator.
+Type any other character to restart.
+===ここまで===
+
+やったこと：
+1. squeakland.orgに公開されている3.4-2のVMではNSqueakが問題なく動作し、
+   日本語が表示されていました。（もちろん日本語入力はできません）
+2. http://www-sor.inria.fr/~piumarta/squeak/から入手したソースを
+　 ビルドしたVMでも1と同様の結果でした。
+3. 2に阿部さんのホームページで入手したSqueakImmX11Plugin2a.tar.gzの
+　 パッチをあてたVMを使うと、最初と同じエラーメッセージが出てしまい
+　 ます。
+
+ということでUnix版のimmパッチに問題があるようなのですが、ちょっと
+中身を覗いてみてもよくわかりませんでした。
+何の役にも立てずに恐縮ですが、とりあえず報告までさせて頂きました。
+
+
+ 
+
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Jan 31 00:33:48 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:06 2007
+Subject: [Squeak-ja: 2287] Re: swikis.ddo.jp が落ちています
+In-Reply-To: <JE20050127204751.5015111@mars.dti.ne.jp>
+References: <JE20050127204751.5015111@mars.dti.ne.jp>
+Message-ID: <JY200501310033483.4656406@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+C5、いろいろな意味で刺激的でした。
+
+サーバが復活いたしましたのでご利用ください。
+
+Thu, 27 Jan 2005 20:47:51 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> さて、日頃ご愛用いただいています
+> http://swikis.ddo.jp
+> ですが、ただいま、サーバがダウンしております。
+> 
+> 本来でしたら再起動といきたいところなのですが、現在C5のため京都におりまして
+> どうにもなりません。
+> 
+> 30日の夜には帰宅しますので、それまで復旧はお預けになります。
+> 
+> ご迷惑をおかけしますが、ご了承ください。
+> 
+> #今日は未踏の発表を見てきましたが、なかなかに盛況でした。明日の
+> #C5も面白くなりそうです。なんなら京都に来てみるのもよいかもしれません。
+> 
+> ではでは。
+
+---
+[:masashi | ^umezawa]
+

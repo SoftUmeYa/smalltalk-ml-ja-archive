@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3305] Re: 回転中心を変更するタイルの追加
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203305%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjJzRT5DZj80JHIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlE5OSQ5JGslPyUkJWskTkRJMkMbKEI%3D%3F%3D&In-Reply-To=5EA57B0E-4A72-4C4A-96FE-7938BF1CAB43%40st.rim.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003315.html">
+   <LINK REL="Next"  HREF="003294.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3305] Re: 回転中心を変更するタイルの追加</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203305%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjJzRT5DZj80JHIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlE5OSQ5JGslPyUkJWskTkRJMkMbKEI%3D%3F%3D&In-Reply-To=5EA57B0E-4A72-4C4A-96FE-7938BF1CAB43%40st.rim.or.jp"
+       TITLE="[Squeak-ja: 3305] Re: 回転中心を変更するタイルの追加">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2006年 12月 19日 (火) 00:48:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003315.html">[Squeak-ja: 3315] Re: 回転中心を変更するタイルの追加
+</A></li>
+        <LI>次の記事 <A HREF="003294.html">[Squeak-ja: 3294] 他のアプリケーションファイル起動
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3305">[ 日付 ]</a>
+              <a href="thread.html#3305">[ スレッド ]</a>
+              <a href="subject.html#3305">[ 件名 ]</a>
+              <a href="author.html#3305">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Sat, 16 Dec 2006 16:05:55 +0900
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt; wrote:
+&gt;<i>今回は、多角形で、ある一つの頂点を回転中心にしてみるという使い方で試して
+</I>&gt;<i>みたので、ワールド座標にしたのですけど、ちょっと簡単すぎ（？）たかもしれ
+</I>&gt;<i>ません。
+</I>
+個人的にはワールド座標の方が扱いやすいです。
+私がやりたかったのは、
+
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/2cd8c5d0-fea2-46d5-9eff-82628aeed233">http://squeakland.jp/seaside/SBSuperSwiki/2cd8c5d0-fea2-46d5-9eff-82628aeed233</A>
+
+のようなことなのですが、現状でうまくできています。
+これでやっとペンを捨てられます。
+
+余談ですが、この過程でバグというか仕様というかが見つかりました。
+多角形に限らず、一般に座標値は座標変換の際にFloatの値を取り得るのですが、
+上端、下端、右端、左端などのboundsから導いていると思われるものは常にInteger
+です。これらはビューワやウォッチャのデフォルトでは小数点以下を表示しない
+ようになっているため、比較演算子を使うときに思わぬミスをする可能性があり
+ます。たとえば、今は//を使って回避しています。
+
+&gt;<i>今、ちょっと翻訳のところを整理しているところです。
+</I>&gt;<i>ただ、タイルの wording については揉む必要があるかとも思えますので、早急に
+</I>&gt;<i>アップいたします。
+</I>
+OLPCの場合、問題になりそうなのがパフォーマンスでしょうか。現状でPentium 4
+1.6GHzの PCをつかってもカーソルを移動しつつ座標を変えたりすると、かなり遅
+いです。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003315.html">[Squeak-ja: 3315] Re: 回転中心を変更するタイルの追加
+</A></li>
+	<LI>次の記事 <A HREF="003294.html">[Squeak-ja: 3294] 他のアプリケーションファイル起動
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3305">[ 日付 ]</a>
+              <a href="thread.html#3305">[ スレッド ]</a>
+              <a href="subject.html#3305">[ 件名 ]</a>
+              <a href="author.html#3305">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

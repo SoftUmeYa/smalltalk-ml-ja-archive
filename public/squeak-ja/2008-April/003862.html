@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3862] Re: OLPC-VM ImmX11 パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203862%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=46036.125.198.205.84.1208252014.risu%40mail.nucba.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003861.html">
+   <LINK REL="Next"  HREF="003863.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3862] Re: OLPC-VM ImmX11 パッチ</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203862%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=46036.125.198.205.84.1208252014.risu%40mail.nucba.ac.jp"
+       TITLE="[Squeak-ja: 3862] Re: OLPC-VM ImmX11 パッチ">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 4月 16日 (水) 05:15:17 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003861.html">[Squeak-ja: 3861] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+        <LI>次の記事 <A HREF="003863.html">[Squeak-ja: 3863] 4/30-5/1にswikis.ddo.jpと、blueplane.jpのメンテナンス
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3862">[ 日付 ]</a>
+              <a href="thread.html#3862">[ スレッド ]</a>
+              <a href="subject.html#3862">[ 件名 ]</a>
+              <a href="author.html#3862">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  廣島さん
+
+&gt;<i> trunk のコード(rev 1853)を見ました．
+</I>&gt;<i> 互換性のため仕方がないことでしょうが，
+</I>&gt;<i> x2sqKeyInput が以前のバージョンとなり，
+</I>&gt;<i> デフォルトでこれが使われるというのは残念です．
+</I>&gt;<i> 堅牢な入力処理が開発されるまでの過渡的な処置であることを願います．
+</I>
+  今回はちょっとした時間制約もあってこのようになってしまいました。
+
+&gt;<i> 以降，本来 UNIX-VM 開発の ML に英語で投げるべき内容です．ご容赦下さい．
+</I>&gt;<i> 
+</I>&gt;<i> Tcl/Tk の日本語化をされた SRA の ひらの さんは，かつてある掲示板で，
+</I>&gt;<i> 「SingleByte 環境の開発者では何十年たっても国際化入力はできない」
+</I>&gt;<i> のような意の発言をなさってました．
+</I>&gt;<i> かく言う私もかつて Perl/Tk(UNIX) の日本語化パッチをネットに流したことがあり
+</I>&gt;<i> ます．
+</I>&gt;<i> 現在では UTF-8 化されて，日本語表示には問題はなくなりましたが，
+</I>&gt;<i> 今もパッチを当てないと日本語入力は出来ません．
+</I>
+  これは私も同意します。Squeakの多言語化も自分でやるしかなかったです。
+
+&gt;<i> 要するに，x2sqKeyInput は，
+</I>&gt;<i> SingleByte 環境では x2sqKeyPlain と動作が変わらず，
+</I>&gt;<i> MultiByte 環境では害になるので，
+</I>&gt;<i> これを使う意味は無いはずなのです．
+</I>
+  dead-keyがあるとXmbLookupStringがcomposeした結果を返すのですが、そこ
+でかなりてこずっています。setxkbmap -layout esとして言語を切り替えて動
+かすと少なくともちゃんと動作しないという問題があったので、いまのところ
+こういう状況になりました。
+
+  ありがとうございます。
+
+  ところで、今のsqUnixX11.cの2484行目は
+
+     if (evt-&gt;xfocus.mode == NotifyNormal)
+
+となっていますが、Gnome上でAlt-Tabを使ってSqueakからフォーカスを切り替
+えた後もう一度Alt-Tabして戻ってきたときに文字入力が有効になりません。
+
+     if (evt-&gt;xfocus.mode == NotifyNormal || evt-&gt;xfocus.mode == NotifyUngrab)
+
+のように変えるのがよいのかなとも思うのですが、window manager依存のとこ
+ろもありそうで「正しい」かどうかはっきりしないでいます。どうでしょう?
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003861.html">[Squeak-ja: 3861] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+	<LI>次の記事 <A HREF="003863.html">[Squeak-ja: 3863] 4/30-5/1にswikis.ddo.jpと、blueplane.jpのメンテナンス
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3862">[ 日付 ]</a>
+              <a href="thread.html#3862">[ スレッド ]</a>
+              <a href="subject.html#3862">[ 件名 ]</a>
+              <a href="author.html#3862">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

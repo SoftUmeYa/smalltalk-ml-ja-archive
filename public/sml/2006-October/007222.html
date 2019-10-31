@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7222] Re: メソッド名について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207222%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVhJT0lQyVJTD4kSyREJCQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=20061006153608.805C.KOUBO2006%40yengawa.jpn.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007224.html">
+   <LINK REL="Next"  HREF="007218.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7222] Re: メソッド名について</H1>
+    <B>NOBUTAKA Terauchi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207222%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVhJT0lQyVJTD4kSyREJCQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=20061006153608.805C.KOUBO2006%40yengawa.jpn.org"
+       TITLE="[SML 7222] Re: メソッド名について">europa ＠ ps.inforyoma.or.jp
+       </A><BR>
+    <I>2006年 10月  7日 (土) 03:35:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007224.html">[SML 7224] Re: メソッド名について
+</A></li>
+        <LI>次の記事 <A HREF="007218.html">[SML 7218] Re: メソッド名について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7222">[ 日付 ]</a>
+              <a href="thread.html#7222">[ スレッド ]</a>
+              <a href="subject.html#7222">[ 件名 ]</a>
+              <a href="author.html#7222">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは、寺内です。
+
+横川さん、具体的な助言ありがとうございます。
+
+&gt;<i> しかし、Smalltalkのような動的に型を決定する言語だと、意味が似ているから
+</I>&gt;<i> といってまったく同じ名前をつけることには危険があります。
+</I>&gt;<i> 
+</I>&gt;<i> 「既存のライブラリ内で使われているメソッド名は(特別なとき意外は)使わない」
+</I>&gt;<i> 
+</I>&gt;<i> たとえばあるOrderedCollectionインスタンスに値を入れるだけだからといって
+</I>&gt;<i> 「at:」をうっかりそのまま使ってしまうと、あとで「そのクラスのat:」を呼び
+</I>&gt;<i> 出しているところをsendersで探そうとしても膨大な数の「他のクラスのat:」の
+</I>&gt;<i> マッチに埋もれて見つけられなくなります。
+</I>&gt;<i> (ぼくはこの現象を「多態性洋(た・たいせいよう)に沈む」と呼んでいます;-)
+</I>
+なるほど、これは全く知りませんでした。
+逆に、なるだけクラスライブラリで使用されているメソッド名にしたほうが良い
+と思っていました。
+
+&gt;<i> まったく同じメソッド名をつけても良い「特別なとき」とは多態性が成立すると
+</I>&gt;<i> きです。(詳しくは「リスコフの置換原則」を参照)
+</I>&gt;<i> この意味でも「includes:」を使うのは避けたほうが良いです。
+</I>&gt;<i> 
+</I>&gt;<i> そして、意味の似ているメソッドが見つからないときは、次のように新しく命名
+</I>&gt;<i> します。
+</I>&gt;<i> 
+</I>&gt;<i> 「クラス名を主語、メソッド名を述語みたいに発音して英語っぽくする」
+</I>&gt;<i> 
+</I>&gt;<i> ご存知の通り、Smalltalkはオブジェクトへのメッセージ送信によって処理を進
+</I>&gt;<i> めるという計算モデルを基本にしています。それにあわせるために、なるべく主
+</I>&gt;<i> 語・述語のような形にします。そして、そのように読んだときにメソッドの意味
+</I>&gt;<i> が伝わるかどうかチェックします。
+</I>
+また知らない単語がでてきた・・・・・。
+Googleで検索、検索、
+「リスコフの置換原則」-&gt; 派生型はその基本型と置換可能でなければならない
+ということですね。
+
+&gt;<i> それでも、よさそうな名前がどうしても思いつかないよ!というときはたくさん
+</I>&gt;<i> あります。そんなときは腹をくくって最終手段です。
+</I>&gt;<i> 
+</I>&gt;<i> 「良い名前が思いつかないときは思い切って変な名前をつけてしまう」
+</I>
+了解です。すぐ、実行に移します。
+
+&gt;<i> 「より良い名前を思いついたときには躊躇せずにリファクタリングする」
+</I>
+
+それにしても、投稿すればするほど、Smalltalkerへの道程があと何年からあと
+何光年(死んでも無理)へ変わっていくと感じるのは気のせいでしょうか？
+
+また、何か疑問点があれば投稿するのでよろしくお願いします。
+
+
+-----
+NOBUTAKA Terauchi&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">europa ＠ ps.inforyoma.or.jp</A>&gt;
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007224.html">[SML 7224] Re: メソッド名について
+</A></li>
+	<LI>次の記事 <A HREF="007218.html">[SML 7218] Re: メソッド名について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7222">[ 日付 ]</a>
+              <a href="thread.html#7222">[ スレッド ]</a>
+              <a href="subject.html#7222">[ 件名 ]</a>
+              <a href="author.html#7222">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3068] Re: KJ法のつづき
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203068%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEtKGyRCSyEkTiREJEUbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJC0bKEI%3D%3F%3D&In-Reply-To=86c0320c0607200032x6648e9dck868e0076d2f8d831%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003067.html">
+   <LINK REL="Next"  HREF="003070.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3068] Re: KJ法のつづき</H1>
+    <B>kubo-o</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203068%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEtKGyRCSyEkTiREJEUbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJC0bKEI%3D%3F%3D&In-Reply-To=86c0320c0607200032x6648e9dck868e0076d2f8d831%40mail.gmail.com"
+       TITLE="[Squeak-ja: 3068] Re: KJ法のつづき">kubo-o ＠ mbox.kyoto-inet.or.jp
+       </A><BR>
+    <I>2006年 7月 20日 (木) 20:02:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003067.html">[Squeak-ja: 3067] Re: KJ法のつづき
+</A></li>
+        <LI>次の記事 <A HREF="003070.html">[Squeak-ja: 3070] じゃんけん2.0参加者募集中
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3068">[ 日付 ]</a>
+              <a href="thread.html#3068">[ スレッド ]</a>
+              <a href="subject.html#3068">[ 件名 ]</a>
+              <a href="author.html#3068">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>鷲見さん、いつもありがとうございます。
+早速やってみました。
+が、下記ではいまくいきません。
+listMenu: aMenu
+     | differentMenu  |
+	differentMenu _ MenuMorph new.
+	differentMenu
+	　add: 'deleteCard' target: t2 action: #delete;
+          　　add: 'cardColor' target: t2 action:#color white;
+	^ differentMenu.
+追記：前回のメールで
+&gt;<i>そこで、不要なcardは消したいのですが、その方法がわかりません。
+</I>とありますのは、「そこで、cardの色を変えたいのですが、その方法がわかりませ
+ん。」の間違いでした。
+
+-----Original Message-----
+From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>
+[mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>]On Behalf Of Masato Sumi
+Sent: Thursday, July 20, 2006 4:33 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3067] Re: KJ法のつづき
+
+
+久保さん、ごきげんよう。鷲見です。
+
+&gt;<i> PluggableTextMorphのビューワーを出して
+</I>&gt;<i> そこで色を変えるという動作のコードを見て知った
+</I>&gt;<i> ものですが、うまく動きません。
+</I>
+#setColor: の代わりに #color: を使ってみてはいかがでしょうか。
+
+ちなみにビューワは、モーフではなく、それをコスチュームとしている
+プレイヤというオブジェクトに対してメッセージングやプログラミングを
+行なうためのツールなので、そこで使われている setColor: aColor という
+メッセージをモーフに送っても、モーフのほうではそれをうまく処理できず、
+エラーになったものと思われます。参考まで。
+
+--
+Masato Sumi
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003067.html">[Squeak-ja: 3067] Re: KJ法のつづき
+</A></li>
+	<LI>次の記事 <A HREF="003070.html">[Squeak-ja: 3070] じゃんけん2.0参加者募集中
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3068">[ 日付 ]</a>
+              <a href="thread.html#3068">[ スレッド ]</a>
+              <a href="subject.html#3068">[ 件名 ]</a>
+              <a href="author.html#3068">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

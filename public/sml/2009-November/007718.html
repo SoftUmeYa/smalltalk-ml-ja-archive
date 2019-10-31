@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7718] Re: HttpClientによるログイン認証について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207718%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007717.html">
+   <LINK REL="Next"  HREF="007719.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7718] Re: HttpClientによるログイン認証について</H1>
+    <B>久保田 吉彦</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207718%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7718] Re: HttpClientによるログイン認証について">kubota ＠ sie.dendai.ac.jp
+       </A><BR>
+    <I>2009年 11月 17日 (火) 15:14:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007717.html">[SML 7717] メーリングリストの不具合のご報告
+</A></li>
+        <LI>次の記事 <A HREF="007719.html">[SML 7719] 第15回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7718">[ 日付 ]</a>
+              <a href="thread.html#7718">[ スレッド ]</a>
+              <a href="subject.html#7718">[ 件名 ]</a>
+              <a href="author.html#7718">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>電大の久保田です。
+
+Unhandled exception: CA Not in Trust Registry!の件は投稿時には解 
+決していませんでした
+(このエラーを無視していました、すいません)。
+その後X509Registryへの登録が必要だと分りまさにご指摘のよう 
+にSecurity.X509.X509Registry&gt;&gt;readTrustedCertificatesFromFile:
+でpemファイルを読み込ませることでCA Not in Trust  
+Registryは出なくなりました。
+
+pemファイルはWebブラウザ(Firefox)でhttps:// 
+secure.nicovideo.jp/secure/login_formへアクセスし、証明書パスを 
+含むX509証明書をエクスポートしたものです。
+
+はやりUnhandled exception: Net.HttpMovedError(302 Found),  
+WSAECONNABORTEDがでてしまいます。
+
+#なかなか上手くいかないのでRubyのMechanizeへ逃げてい 
+ました。。。。
+
+Security.X509.X509Registry readTrustedCertificatesFromFile: '証 
+明書ファイル名' asFilename.
+&quot;nicoLogin := '<A HREF="https://secure.nicovideo.jp/secure/login?">https://secure.nicovideo.jp/secure/login?</A> 
+site=niconico'.&quot; &quot;その1&quot;
+nicoLogin := '<A HREF="https://secure.nicovideo.jp/secure/login_form'.&quot;&#12381;">https://secure.nicovideo.jp/secure/login_form'.&quot;そ</A> 
+の2&quot;
+nicoTopPage := '<A HREF="http://www.nicovideo.jp'.">http://www.nicovideo.jp'.</A>
+  inputUserName := 'email'.
+inputPassword := 'password'.
+inputNextURL := 'next_url'.
+client := Net.HttpClient new.
+client enableCookies: true.
+httpRequest := HttpRequest post:nicoLogin.
+httpRequest
+	userAgent: 'VW76NC';
+	addFormKey:inputUserName value: 'いーめーるあどれす';
+	addFormKey:inputPassword value: 'ぱすわーど';
+	addFormKey:inputNextURL value:''.
+httpResponse := client executeRequest: httpRequest.  &quot;&lt;= ここで 
+302 Moved Error が発生 その1&quot;
+agent :=client cookieAgent.
+agent cacheCookies: true.
+getMethod := HttpRequest get: nicoTopPage.
+response := client executeRequest: getMethod. &quot;&lt;=ここで &gt;  
+WSAECONNABORTEDが発生 その2&quot;
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+
+
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007717.html">[SML 7717] メーリングリストの不具合のご報告
+</A></li>
+	<LI>次の記事 <A HREF="007719.html">[SML 7719] 第15回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7718">[ 日付 ]</a>
+              <a href="thread.html#7718">[ スレッド ]</a>
+              <a href="subject.html#7718">[ 件名 ]</a>
+              <a href="author.html#7718">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,303 @@
+"
+record, play BitBlt.
+
+Usage:
+
+open the fresh image of Pharo-1.2.1.
+
+keep the original size of the root window of the image.
+
+Filein this.
+
+minimize windows except a browser.
+
+open BitBlt>>primDisplayString3:....
+1s/3:/:/
+Accept.
+
+open BitBlt>>copyBits3.
+1s/3$//
+Accept.
+
+move the browser window.
+
+open BitBlt>>copyBits2.
+1s/2$//
+Accept.
+
+maximize the root window of the image.
+
+H2BltCollector singleton inspect.
+
+place the inspector at the right bottom corner.
+
+minimize windows except the inspector.
+
+in the inspector:
+	self do: [ :b | b copyBits ].
+
+--
+
+restore the original size of the root window of the image.
+
+minimize windows except a browser.
+
+open BitBlt>>copyBits4.
+1s/4$//
+Accept.
+
+move the browser window.
+
+open BitBlt>>copyBits2.
+1s/2$//
+Accept.
+
+maximize the root window of the image.
+
+H2BltVram singleton vram inspect.
+
+place the inspector at the right bottom corner.
+
+minimize windows except the inspector.
+
+in the inspector:
+	self displayAt: 0 @ 0.
+
+discard changes
+"
+
+SystemOrganization addCategory: #'H2-BitBlt-Study2'!
+
+OrderedCollection subclass: #H2BltCollector
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'H2-BitBlt-Study2'!
+
+H2BltCollector class
+	instanceVariableNames: 'singleton'!
+
+H2BltCollector class
+	instanceVariableNames: 'singleton'!
+
+!H2BltCollector class methodsFor: 'class initialization' stamp: 'h2 5/10/2011 15:33'!
+initialize
+	singleton := self new initialize! !
+
+!H2BltCollector class methodsFor: 'accessing' stamp: 'h2 5/10/2011 15:25'!
+singleton
+	"H2BltCollector singleton"
+
+	^ singleton! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 5/11/2011 12:42'!
+collector3
+	destForm == Display
+		ifTrue: [ 
+			| col |
+			col := H2BltCollector singleton.
+			^ col size < (1024 * 32)
+				ifTrue: [ col ]
+				ifFalse: [ nil ] ]
+		ifFalse: [ ^ nil ]! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 5/11/2011 14:43'!
+collector4
+	^ destForm == Display and: [ H2BltVram singleton countingDown ]! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 5/11/2011 14:45'!
+copyBits
+	"Primitive. Perform the movement of bits from the source form to the 
+	destination form. Fail if any variables are not of the right type (Integer, 
+	Float, or Form) or if the combination rule is not implemented. 
+	In addition to the original 16 combination rules, this BitBlt supports
+	16	fail (to simulate paint)
+	17	fail (to simulate mask)
+	18	sourceWord + destinationWord
+	19	sourceWord - destinationWord
+	20	rgbAdd: sourceWord with: destinationWord
+	21	rgbSub: sourceWord with: destinationWord
+	22	rgbDiff: sourceWord with: destinationWord
+	23	tallyIntoMap: destinationWord
+	24	alphaBlend: sourceWord with: destinationWord
+	25	pixPaint: sourceWord with: destinationWord
+	26	pixMask: sourceWord with: destinationWord
+	27	rgbMax: sourceWord with: destinationWord
+	28	rgbMin: sourceWord with: destinationWord
+	29	rgbMin: sourceWord bitInvert32 with: destinationWord
+"
+	"Check for compressed source, destination or halftone forms"
+	<primitive: 'primitiveCopyBits' module: 'BitBltPlugin'>
+	(combinationRule >= 30 and: [ combinationRule <= 31 ]) ifTrue: 
+		[ "No alpha specified -- re-run with alpha = 1.0"
+		^ self copyBitsTranslucent: 255 ].
+	(sourceForm isForm and: [ sourceForm unhibernate ]) ifTrue: [ ^ self copyBits ].
+	(destForm isForm and: [ destForm unhibernate ]) ifTrue: [ ^ self copyBits ].
+	(halftoneForm isForm and: [ halftoneForm unhibernate ]) ifTrue: [ ^ self copyBits ].
+
+	"Check for unimplmented rules"
+	combinationRule = Form oldPaint ifTrue: [ ^ self paintBits ].
+	combinationRule = Form oldErase1bitShape ifTrue: [ ^ self eraseBits ].
+
+	"Check if BitBlt doesn't support full color maps"
+	(colorMap notNil and: [ colorMap isColormap ]) ifTrue: 
+		[ colorMap := colorMap colors.
+		^ self copyBits ].
+	"Check if clipping gots us way out of range"
+	self clipRange ifTrue: 
+		[ self roundVariables.
+		^ self copyBitsAgain ].
+	self error: 'Bad BitBlt arg (Fraction?); proceed to convert.'.
+	"Convert all numeric parameters to integers and try again."
+	self roundVariables.
+	^ self copyBitsAgain! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 4/27/2011 12:24'!
+copyBits2
+	"Primitive. Perform the movement of bits from the source form to the 
+	destination form. Fail if any variables are not of the right type (Integer, 
+	Float, or Form) or if the combination rule is not implemented. 
+	In addition to the original 16 combination rules, this BitBlt supports
+	16	fail (to simulate paint)
+	17	fail (to simulate mask)
+	18	sourceWord + destinationWord
+	19	sourceWord - destinationWord
+	20	rgbAdd: sourceWord with: destinationWord
+	21	rgbSub: sourceWord with: destinationWord
+	22	rgbDiff: sourceWord with: destinationWord
+	23	tallyIntoMap: destinationWord
+	24	alphaBlend: sourceWord with: destinationWord
+	25	pixPaint: sourceWord with: destinationWord
+	26	pixMask: sourceWord with: destinationWord
+	27	rgbMax: sourceWord with: destinationWord
+	28	rgbMin: sourceWord with: destinationWord
+	29	rgbMin: sourceWord bitInvert32 with: destinationWord
+"
+	"Check for compressed source, destination or halftone forms"
+	<primitive: 'primitiveCopyBits' module: 'BitBltPlugin'>
+	(combinationRule >= 30 and: [ combinationRule <= 31 ]) ifTrue: 
+		[ "No alpha specified -- re-run with alpha = 1.0"
+		^ self copyBitsTranslucent: 255 ].
+	(sourceForm isForm and: [ sourceForm unhibernate ]) ifTrue: [ ^ self copyBits ].
+	(destForm isForm and: [ destForm unhibernate ]) ifTrue: [ ^ self copyBits ].
+	(halftoneForm isForm and: [ halftoneForm unhibernate ]) ifTrue: [ ^ self copyBits ].
+
+	"Check for unimplmented rules"
+	combinationRule = Form oldPaint ifTrue: [ ^ self paintBits ].
+	combinationRule = Form oldErase1bitShape ifTrue: [ ^ self eraseBits ].
+
+	"Check if BitBlt doesn't support full color maps"
+	(colorMap notNil and: [ colorMap isColormap ]) ifTrue: 
+		[ colorMap := colorMap colors.
+		^ self copyBits ].
+	"Check if clipping gots us way out of range"
+	self clipRange ifTrue: 
+		[ self roundVariables.
+		^ self copyBitsAgain ].
+	self error: 'Bad BitBlt arg (Fraction?); proceed to convert.'.
+	"Convert all numeric parameters to integers and try again."
+	self roundVariables.
+	^ self copyBitsAgain! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 5/11/2011 14:11'!
+copyBits3
+	"
+	H2BltCollector singleton removeAll
+	"
+
+	| col |
+	self copyBits2.
+	col := self collector3.
+	col isNil
+		ifFalse: [ col add: self copy ]! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 5/11/2011 14:35'!
+copyBits4
+	"
+	H2BltVram singleton initialize
+	"
+
+	self copyBits2.
+	self collector4
+		ifTrue: [ self paint ]! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 5/11/2011 14:37'!
+paint
+	(BitBlt
+		destForm: H2BltVram singleton vram
+		sourceForm: sourceForm
+		fillColor: halftoneForm
+		combinationRule: combinationRule
+		destOrigin: destX @ destY
+		sourceOrigin: sourceX @ sourceY
+		extent: width @ height
+		clipRect: (clipX @ clipY extent: clipWidth @ clipHeight)) copyBits! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 4/30/2011 16:56'!
+primDisplayString2: aString from: startIndex to: stopIndex map: glyphMap xTable: xTable kern: kernDelta 
+	| ascii |
+	<primitive:'primitiveDisplayString' module:'BitBltPlugin'>
+	startIndex 
+		to: stopIndex
+		do: 
+			[ :charIndex | 
+			ascii := (aString at: charIndex) asciiValue.
+			glyphMap ifNotNil: [:map | ascii := map at: ascii +1].
+			sourceX := xTable at: ascii + 1.
+			width := (xTable at: ascii + 2) - sourceX.
+			self copyBits.
+			destX := destX + width + kernDelta ]! !
+
+!BitBlt methodsFor: '*h2-bitBlt-study2' stamp: 'h2 4/30/2011 17:03'!
+primDisplayString3: aString from: startIndex to: stopIndex map: glyphMap xTable: xTable kern: kernDelta 
+	| ascii |
+	startIndex 
+		to: stopIndex
+		do: 
+			[ :charIndex | 
+			ascii := (aString at: charIndex) asciiValue.
+			glyphMap ifNotNil: [:map | ascii := map at: ascii +1].
+			sourceX := xTable at: ascii + 1.
+			width := (xTable at: ascii + 2) - sourceX.
+			self copyBits.
+			destX := destX + width + kernDelta ]! !
+
+Object subclass: #H2BltVram
+	instanceVariableNames: 'counter vram'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'H2-BitBlt-Study2'!
+
+H2BltVram class
+	instanceVariableNames: 'singleton'!
+
+H2BltVram class
+	instanceVariableNames: 'singleton'!
+
+!H2BltVram class methodsFor: 'class initialization' stamp: 'h2 5/11/2011 14:08'!
+initialize
+	singleton := self new! !
+
+!H2BltVram class methodsFor: 'accessing' stamp: 'h2 5/11/2011 14:10'!
+singleton
+	^ singleton! !
+
+!H2BltVram methodsFor: 'accessing' stamp: 'h2 5/11/2011 14:25'!
+countingDown
+	counter == 0
+		ifTrue: [ ^ false ].
+	counter := counter - 1.
+	^ true! !
+
+!H2BltVram methodsFor: 'initialize-release' stamp: 'h2 5/11/2011 14:26'!
+initialize
+	counter := 1024 * 32.
+	vram isNil
+		ifTrue: [ vram := Form extent: Display width @ Display height depth: 32 ].
+	vram fillColor: Color white! !
+
+!H2BltVram methodsFor: 'accessing' stamp: 'h2 5/11/2011 14:33'!
+vram
+	^ vram! !
+H2BltCollector initialize!
+H2BltVram initialize!

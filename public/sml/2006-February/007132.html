@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7132] 並び替えの致命傷
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207132%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSkIkU0JYJCgkTkNXTD89fRsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007131.html">
+   <LINK REL="Next"  HREF="007133.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7132] 並び替えの致命傷</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207132%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSkIkU0JYJCgkTkNXTD89fRsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7132] 並び替えの致命傷">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 2月 10日 (金) 14:19:14 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007131.html">[SML 7131] メーリングリストの一時停止のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="007133.html">[SML 7133] Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7132">[ 日付 ]</a>
+              <a href="thread.html#7132">[ スレッド ]</a>
+              <a href="subject.html#7132">[ 件名 ]</a>
+              <a href="author.html#7132">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所青木です。
+
+先ほど、じゅんのメーリングリストにポストした内容を、ＳＭＬへ
+も出すことにしました。参考にしていただければ幸いです。アホな
+Smalltalker が育ちませんように。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+青木です。
+
+集まりの並び替えの際に、注意しなければならないことを書きます。
+たとえば、次のような簡単なプログラムを例にして説明しましょう。
+ある配列を、順序のある集まりへ、と移し替えるものです。
+
+|<i> anArray aCollection |
+</I>anArray := #(0 9 1 8 2 7 3 6 4 5).
+aCollection := OrderedCollection new.
+anArray do: [:each | aCollection add: each].
+^aCollection
+==&gt; OrderedCollection (0 9 1 8 2 7 3 6 4 5)
+
+移し替える際に、降順（大から小に進む順）にソートしよう（並び
+替えよう）として、次のように書くプログラマが多いと思います。
+順序のある集まりに換えて、ソートされた集まりを生成し、降順の
+ための比較ブロックを指定しておいて、要素を加えてゆくというも
+のです。
+
+|<i> anArray aCollection |
+</I>anArray := #(0 9 1 8 2 7 3 6 4 5).
+aCollection := SortedCollection new.
+aCollection sortBlock: [:n1 :n2 | n1 &gt;= n2].
+anArray do: [:each | aCollection add: each].
+^aCollection
+==&gt; SortedCollection (9 8 7 6 5 4 3 2 1 0)
+
+このプログラムコードは、まったく褒められません。VisualWorks
+のハイブリッドなクイックソートのアルゴリズムを有効に利用して
+いないからです。OrderedCollection を SortedCollection に換え
+ればいいじゃん！では済まされないのです。次のように書くべき。
+
+|<i> anArray aCollection |
+</I>anArray := #(0 9 1 8 2 7 3 6 4 5).
+aCollection := OrderedCollection new.
+anArray do: [:each | aCollection add: each].
+aCollection := aCollection asSortedCollection: [:n1 :n2 | n1 &gt;= n2].
+^aCollection
+==&gt; SortedCollection (9 8 7 6 5 4 3 2 1 0)
+
+では、どれぐらいの性能（動作スピード）の差が出るのかを示しま
+しょう。乱数ストリームを用いて、１０万個の要素を取り出して、
+それらの並び替えに要する時間を、ミリ秒単位で測定してみます。
+
+Time millisecondsToRun: [
+	| aStream aCollection |
+	aStream := Random new.
+	aCollection := SortedCollection new: 100000.
+	aCollection sortBlock: [:n1 :n2 | n1 &gt;= n2].
+	100000 timesRepeat: [aCollection add: aStream next].
+	aCollection]
+==&gt; 90665 &quot;←約 90 秒、すなわち、1 分 30 秒だよ！&quot;
+
+Time millisecondsToRun: [
+	| aStream aCollection |
+	aStream := Random new.
+	aCollection := OrderedCollection new: 100000.
+	100000 timesRepeat: [aCollection add: aStream next].
+	aCollection := aCollection asSortedCollection: [:n1 :n2 | n1 &gt;= n2].
+	aCollection]
+==&gt; 344 &quot;←たった 0.35 秒&quot;
+
+ご覧のように、とんでもない差となります。計算量は要素数の肩に
+かかってくるので、指数関数的に増加するのです。プログラムコー
+ドの一行の間違いが、動作性能の致命傷であることを、肝に銘じて
+プログラミングをするように！
+
+要素の個数が不定であり、それらを随時、並び替えておかなければ
+ならいない、という止むを得ない場合を除いて、アホなコードを書
+かないように気をつけましょう。ハイブリッドなクイックソートの
+アルゴリズムが有効に働くプログラムコードを作ってくださいまし。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007131.html">[SML 7131] メーリングリストの一時停止のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="007133.html">[SML 7133] Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7132">[ 日付 ]</a>
+              <a href="thread.html#7132">[ スレッド ]</a>
+              <a href="subject.html#7132">[ 件名 ]</a>
+              <a href="author.html#7132">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

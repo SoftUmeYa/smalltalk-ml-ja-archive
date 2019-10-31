@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7870] 連想計算というリフレクティブな手法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207870%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMlViRKGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPGpLIRsoQg%3D%3D%3F%3D&In-Reply-To=%3C4D05DC06.4000501%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007869.html">
+   <LINK REL="Next"  HREF="007871.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7870] 連想計算というリフレクティブな手法</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207870%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMlViRKGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPGpLIRsoQg%3D%3D%3F%3D&In-Reply-To=%3C4D05DC06.4000501%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 7870] 連想計算というリフレクティブな手法">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2010年 12月 13日 (月) 17:40:38 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007869.html">[SML 7869] 来年度の「Smalltalk勉強会@京都」の予定
+</A></li>
+        <LI>次の記事 <A HREF="007871.html">[SML 7871] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7870">[ 日付 ]</a>
+              <a href="thread.html#7870">[ スレッド ]</a>
+              <a href="subject.html#7870">[ 件名 ]</a>
+              <a href="author.html#7870">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠京都上賀茂です。
+
+フィボナッチ数を求めるプログラムは、通常、以下のようになりま
+すが、40ぐらいのフィボナッチ数を求めるあたりから、ものすごい
+手間がかかりだします。2のn乗のオーダーで計算量が増加です。
+
+------------------------------------------------------------
+
+Core.Integer methods for 'mathematical functions'
+
+fibonacci
+    &quot;12 fibonacci.&quot;
+    &quot;40 fibonacci.&quot;
+
+    self negative ifTrue: [^nil].
+    self = 0 ifTrue: [^0].
+    self = 1 ifTrue: [^1].
+    ^(self - 1) fibonacci + (self - 2) fibonacci
+
+------------------------------------------------------------
+
+それを軽減するためには、連想計算というリフレクティブな手法を
+用いるのが効果的であることが知られています。本日、学生とペア
+プログラミングしながら作りましたので、それを紹介しておきます。
+
+------------------------------------------------------------
+
+Core.Integer methods for 'mathematical functions'
+
+fibonacci
+    &quot;12 fibonacci.&quot;
+    &quot;100 fibonacci.&quot;
+
+    | aValue aCode aString anIndex |
+    self negative ifTrue: [^nil].
+    self = 0 ifTrue: [^0].
+    self = 1 ifTrue: [^1].
+    aValue := (self - 1) fibonacci + (self - 2) fibonacci.
+    [aCode := Integer sourceCodeAt: #fibonacci.
+    aString := 'aValue :='.
+    (anIndex := aCode findString: aString startingAt: 1) &gt; 0
+        ifTrue:
+            [| aStream |
+            aStream := (String new: aCode size + 1024) writeStream.
+            [(1 to: anIndex - 1) do: [:index | aStream nextPut: (aCode at: index)].
+            aStream
+                nextPutAll: 'self = ';
+                nextPutAll: self printString;
+                nextPutAll: ' ifTrue: [^';
+                nextPutAll: aValue printString;
+                nextPutAll: '].';
+                crtab.
+            (anIndex to: aCode size) do: [:index | aStream nextPut: (aCode at: index)].
+            aCode := aStream contents] ensure: [aStream close].
+            Integer compile: aCode classified: #'mathematical functions']]
+        on: Object errorSignal
+        do: [:anException | anException return].
+    ^aValue
+
+------------------------------------------------------------
+
+プログラムの実行中に、その実行中のプログラム自身を書き換えて
+（コンパイルし直して）います。まさに動的な（フルな）リフレク
+ションになりますでしょ。100ぐらいのフィボナッチ数も平気です。
+
+もっといいやり方がありますので、皆さんで模索してくださいませ。
+参考のため、じゅんのLisp版とProlog版も添えておきます。
+
+------------------------------------------------------------
+
+(defun fibonacci (n)
+  (cond ((not (integerp n)) nil)
+        ((&lt; n 0) nil)
+        ((= n 0) 0)
+        ((= n 1) 1)
+        (t (+ (fibonacci (- n 1))
+              (fibonacci (- n 2))))))
+
+------------------------------------------------------------
+
+(defun fibonacci (n)
+  (cond ((not (integerp n)) nil)
+        ((&lt; n 0) nil)
+        ((= n 0) 0)
+        ((= n 1) 1)
+        (t (do (value assertion condition target clauses)
+             (setq value (+ (fibonacci (- n 1))
+                            (fibonacci (- n 2)))
+                   assertion (list (list '= 'n n) value)
+                   condition (nth 4 (getprop 'fibonacci 'expr))
+                   target (last condition)
+                   clauses (list (car target)))
+             (rplaca target assertion)
+             (rplacd target clauses)
+             value))))
+
+------------------------------------------------------------
+
+fibonacci(0,0).
+fibonacci(1,1).
+fibonacci(N,F) :-
+        integer(N),
+        &gt;(N,1),
+        -(N,1,N1),
+        -(N,2,N2),
+        fibonacci(N1,A1),
+        fibonacci(N2,A2),
+        +(A1,A2,F).
+
+------------------------------------------------------------
+
+fibonacci(0,0).
+fibonacci(1,1).
+fibonacci(N,F) :-
+        integer(N),
+        &gt;(N,1),
+        -(N,1,N1),
+        -(N,2,N2),
+        fibonacci(N1,A1),
+        fibonacci(N2,A2),
+        +(A1,A2,F),
+        asserta([fibonacci(N,F) :- !]).
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007869.html">[SML 7869] 来年度の「Smalltalk勉強会@京都」の予定
+</A></li>
+	<LI>次の記事 <A HREF="007871.html">[SML 7871] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7870">[ 日付 ]</a>
+              <a href="thread.html#7870">[ スレッド ]</a>
+              <a href="subject.html#7870">[ 件名 ]</a>
+              <a href="author.html#7870">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

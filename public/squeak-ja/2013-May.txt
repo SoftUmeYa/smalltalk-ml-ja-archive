@@ -1,0 +1,92 @@
+From ume ＠ softumeya.com  Sun May 19 22:57:06 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 19 May 2013 22:57:06 +0900
+Subject: [Squeak-ja: 4682]
+	第53回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSN9UdzGc-Kk-gGdPZbH8J2G2G7Ox=oQ7XLM+zRMmqYjg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2013/5/29(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai53kaismalltalkbenkyoukai
+
+前回に引き続きモバイル系の話です。特にAmber Smalltalkを使った場合の開発の流れについて、掘り下げて解説していく予定です。
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Tue May 21 11:34:26 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 21 May 2013 11:34:26 +0900
+Subject: [Squeak-ja: 4683]
+	東工大大岡山キャンパスにてIan Piumartaさんの講演
+Message-ID: <CAH3eEdRr2ssNE+Ozg9hyrzNiJ-NJ-_cFn5XS+btagWz4vsDSZg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+5/29(水) 15:30から東工大の大岡山キャンパスにてIan Piumartaさんの講演が行われます。
+
+Ianさんは古くからのUnix版Squeak
+VMの開発者であり、今はVPRIにていわゆる「Ianのやつ」という次世代のプログラミング言語の研究・開発に従事されています。
+
+新たなプログラミングの方向性を知るまたとない機会ですので、ぜひご参加ください。free and openです。
+
+#29日にはSmalltalk勉強会もあるので、そちらもよろしければどうぞ。
+
+---- 8< ---- 8< ---- 8< ---- 8< ---- 8< ---- 8< ---- 8< ---- 8< ----
+
+Alan Kayが率いるViewpoints ResearchのPiumarta博士に彼らのプロジェクトと、
+そこで設計しているプログラミング言語についてご講演いただく機会を得ました。
+学部生から研究者まで広い対象に向けたお話をして下さるとのことですので、ふ
+るってご参加下さい。
+
+
+Date & time: Wednesday May 29, 2013, 3:30 pm-
+
+Location: Room W1008, West Building 8W, Ookayama campus,
+         Tokyo Institute of Technology
+         http://www.titech.ac.jp/english/about/campus/index.html
+         http://www.titech.ac.jp/english/about/campus/o_map.html?id=03
+
+Speaker: Dr. Ian Piumarta (Viewpoints Research Institute)
+
+Title: To trap a better mouse
+
+Abstract: Edsger Dijkstra once said: "The tools we use have a profound
+and devious influence on our thinking habits, and therefore on our
+thinking abilities." When we write programs, the single most important
+tool we're using is the programming language. When we become fluent in a
+programming language, we tend to think of our solutions directly in
+terms of its data structures and algorithms. Unfortunately there is no
+such thing as a programming language that is good for everything. In our
+lives as programmers we will inevitably encounter problems for which a
+natural and elegant language has not yet been invented in which to
+express a solution. We then have a choice: either think poor thoughts in
+a 'general purpose' programming language, or invent new languages in
+which to think much better thoughts. Which option we choose can mean the
+difference between a successful project and a failed project. In this
+talk I will review some of the reasons why language is important, show
+which parts of both natural and artificial languages tend to be
+malleable, and suggest some ways of thinking about languages that might
+lead to better ways of modelling and implementing the languages in which
+we program -- and, therefore, think.
+
+Bio: Ian Piumarta is a senior computer scientist at Viewpoints Research
+Institute and currently a visiting researcher at Ritsumeikan University
+near Kyoto, Japan. He spends his professional time trying to make
+computing systems more open, expressive and accessible to programmers
+and users alike.
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

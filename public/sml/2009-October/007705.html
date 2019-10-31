@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7705] Re: HttpClientによるログイン認証について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207705%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4AE69776.2040707%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007704.html">
+   <LINK REL="Next"  HREF="007706.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7705] Re: HttpClientによるログイン認証について</H1>
+    <B>久保田 吉彦</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207705%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4AE69776.2040707%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7705] Re: HttpClientによるログイン認証について">kubota ＠ sie.dendai.ac.jp
+       </A><BR>
+    <I>2009年 10月 27日 (火) 20:31:20 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007704.html">[SML 7704] Re: HttpClientによるログイン認証について
+</A></li>
+        <LI>次の記事 <A HREF="007706.html">[SML 7706] 第13回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7705">[ 日付 ]</a>
+              <a href="thread.html#7705">[ スレッド ]</a>
+              <a href="subject.html#7705">[ 件名 ]</a>
+              <a href="author.html#7705">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>電大の久保田です。
+
+青木先生の助言で無事mixiにログインしてページ情報を得ること 
+ができました。
+ありがとうございました。
+
+これでひと安心と思っていたのですがまた問題がでてきました。 
+HTTPSでの通信です。
+ニコニコ動画にログインするプログラムを書いてみました。
+
+1)nicoLoginその1を使った場合Unhandled exception:  
+NetHttpMovedError(302 Found)がでる。
+2)nicoLoginその2を使った場合Unhandled exception:  
+WSAECONNABORTEDがでる。
+
+といった状況です。リダイレクトの設定はNet.Settings  
+httpRedirectRequest: true.にしています。ネットワークプログラムは 
+ほとんど書いたことがないので良く分らないのですが、1)の場合 
+リダイレクト可の設定にしてあるのになぜExceptionが出るのか 
+わかりませんまた、2)の場合HTTPでのmixiへのログ 
+インが出きたのにHTTPSでの通信の場合なぜ 
+WSAECONNABORTEDが出るのか分りません。どなたかご存知のかたいらっ 
+しゃいませんか?
+それともニコニコ動画のページはプログラムではログインできない作り 
+になっているのでしょうか?
+
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー 
+ーー
+&quot;nicoLogin := '<A HREF="https://secure.nicovideo.jp/secure/login?">https://secure.nicovideo.jp/secure/login?</A> 
+site=niconico'.&quot; &quot;その1&quot;
+nicoLogin := '<A HREF="https://secure.nicovideo.jp/secure/login_form'.">https://secure.nicovideo.jp/secure/login_form'.</A>  
+&quot;その2&quot;
+nicoTopPage := '<A HREF="http://www.nicovideo.jp'.">http://www.nicovideo.jp'.</A>
+inputUserName := 'email'.
+inputPassword := 'password'.
+inputNextURL := 'next_url'.
+
+client := Net.HttpClient new.
+client enableCookies: true.	
+httpRequest := HttpRequest post:nicoLogin.
+httpRequest
+		userAgent: 'VW76NC';
+		addFormKey: 'email' value: 'いーめーるあどれす';
+		addFormKey: 'password' value: 'ぱすわーど';
+		addFormKey: 'next_url' value:''.
+httpResponse := client executeRequest: httpRequest. &quot;&lt;=ここで 
+Net.HttpMovedError(302 Found)が発生&quot;
+httpRequest inspect.
+agent :=client cookieAgent.
+agent cacheCookies: true.
+
+getMethod := HttpRequest get: nicoTopPage.
+getMethod userAgent:'VW76NC'.
+response := client executeRequest: getMethod. &quot;&lt;=ここで 
+WSAECONNABORTEDが発生&quot;
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー 
+ーー
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+On 2009/10/27, at 15:47, AOKI Atsushi wrote:
+
+&gt;<i> 久保田吉彦さんは書きました:
+</I>&gt;&gt;<i> 青木先生のおっしゃった通り、デバッガを見たらエンコーダが入っ 
+</I>&gt;&gt;<i> ている
+</I>&gt;&gt;<i> IdentityDictionaryに'euc-jp'が入っていませんでした。そ 
+</I>&gt;&gt;<i> のためKey not
+</I>&gt;&gt;<i> foundのExceptionが出ているようです。
+</I>&gt;<i>
+</I>&gt;<i> だいぶ昔ですが、私も似たような状況に陥ったことがよみがえり、
+</I>&gt;<i> とっさに（脊髄反射で）、もしや！思ったのですが、当たりでした 
+</I>&gt;<i> か…。
+</I>&gt;<i>
+</I>&gt;&gt;<i> 原因は判ったのですが、どう対処していいやら分りません。どなた 
+</I>&gt;&gt;<i> か対処方法ご
+</I>&gt;&gt;<i> 存知のかたいらっしゃいませんでしょうか。
+</I>&gt;&gt;<i> #うーん、なさけない
+</I>&gt;<i>
+</I>&gt;<i> お使いの環境が Windows 版の VisualWorks ならば、
+</I>&gt;<i> エンコーディングシンボルの #euc-jp を
+</I>&gt;<i> #JapaneseEUC に写像すればいいと思います。
+</I>&gt;<i>
+</I>&gt;<i> VisualWorks の日本語版でなければ、Jpl を援用できます。
+</I>&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/">http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/</A>
+</I>&gt;<i>
+</I>&gt;<i> これまた久保田さんのコードを確かめもせずに、
+</I>&gt;<i> 応答しておりますので、とんちんかんなフォローやもしれませぬ。
+</I>&gt;<i> その際には、あしからず、ご容赦くださいませ。
+</I>&gt;<i>
+</I>&gt;<i> --- 青木淳＠取り急ぎ
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007704.html">[SML 7704] Re: HttpClientによるログイン認証について
+</A></li>
+	<LI>次の記事 <A HREF="007706.html">[SML 7706] 第13回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7705">[ 日付 ]</a>
+              <a href="thread.html#7705">[ スレッド ]</a>
+              <a href="subject.html#7705">[ 件名 ]</a>
+              <a href="author.html#7705">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

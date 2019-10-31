@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2660] 本のページ複製方法とマウスボタンのスワップ (was: Re: 教えてください  )
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202660%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1wkTiVaITwlOEojQD0bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSn1LISRIJV4lJiU5JVwlPyVzJE4lOSVvJUMlVxsoQiAod2FzOiBS%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FZTogGyRCNjUkKCRGJC8kQCQ1JCQbKEIgICk%3D%3F%3D&In-Reply-To=200509260237.j8Q2bVbL021582%40smtp00.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002657.html">
+   <LINK REL="Next"  HREF="002663.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2660] 本のページ複製方法とマウスボタンのスワップ (was: Re: 教えてください  )</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202660%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1wkTiVaITwlOEojQD0bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSn1LISRIJV4lJiU5JVwlPyVzJE4lOSVvJUMlVxsoQiAod2FzOiBS%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FZTogGyRCNjUkKCRGJC8kQCQ1JCQbKEIgICk%3D%3F%3D&In-Reply-To=200509260237.j8Q2bVbL021582%40smtp00.dti.ne.jp"
+       TITLE="[Squeak-ja: 2660] 本のページ複製方法とマウスボタンのスワップ (was: Re: 教えてください  )">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2005年 9月 28日 (水) 18:24:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002657.html">[Squeak-ja: 2657] 教えてください
+</A></li>
+        <LI>次の記事 <A HREF="002663.html">[Squeak-ja: 2663] Re: 本のページ複製方法とマウスボタンのスワップ (was: Re: 教えてください )
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2660">[ 日付 ]</a>
+              <a href="thread.html#2660">[ スレッド ]</a>
+              <a href="subject.html#2660">[ 件名 ]</a>
+              <a href="author.html#2660">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Mon, 26 Sep 2005 11:37:29 +0900
+&quot;Toshio Miyasaka&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">miyasaka ＠ iris.dti.ne.jp</A>&gt; wrote:
+&gt;<i>「ページの並び替え」には、「コピー元として動作する」というチェックボックスが
+</I>&gt;<i>あり、この機能を使うとできそうなのですが、サムネイルのコピーをしてみると、ど
+</I>&gt;<i>うも上手い具合に動いてくれません。
+</I>&gt;<i>（バグなのでしょうか？あるいは、使い方の問題？？）
+</I>&gt;<i>この「ページの並び替え」にある「コピー元として動作する」というチェックボック
+</I>&gt;<i>スの正しい使い方を教えていただけますでしょうか。
+</I>
+バグだと思います。
+期待する動作はサムネイルをドラッグすることでページの複製ができ、ドロップ
+した場所に挿入されることだと思われますが、 Nihongo6.1, 7では順番がおかし
+くなったり、進むボタンが正しく機能しなくなったりします。これは英語版の
+3.8でも同じです。
+たぶん昔は動いていたのだと思いますが、本(Book)は最近メンテナンスされてい
+ないので、度重なるバージョンアップの間に動かなくなったのだと思われます。
+
+このようなバグ報告の場所としてはMantisがあります。
+
+<A HREF="http://bugs.impara.de/main_page.php">http://bugs.impara.de/main_page.php</A>
+
+日本でも武田さんが試験的に運用されています。
+
+<A HREF="http://www.kukakuka.jp/squeak/bugs/main_page.php">http://www.kukakuka.jp/squeak/bugs/main_page.php</A>
+
+&gt;<i>タスクバーの「VM Preference」で「Mouse Mapping」を「3 button mouse」を選択す
+</I>&gt;<i>ると、右クリックでハロが開くようになりますが、これは正しい使い方なのでしょう
+</I>&gt;<i>か？
+</I>
+一般的にはプリファレンスの方を変更すると思います。
+具体的には、Escキーなどでワールドメニューを出し、「ヘルプ・・・」から「プ
+リファレンス・・・」を選んで、プリファレンスを開きます。上部のリストにあ
+る「general」をクリックし、「swapMouseButton」をチェックします。
+これで、Windowsの一般的なホイール付マウスの場合、ホイールのクリックと右ボ
+タンの働きが逆になります(つまり、通常はAlt+クリックはホイールクリックに割
+り当てられています)。
+プリファレンスの変更はテンポラリなので保存するには、ワールドメニューから
+「保存」や「別名で保存・・・」を選びます。
+
+ //abee
+
+P.S. ご参考まで。
+<A HREF="http://www.hyuki.com/writing/techask.html">http://www.hyuki.com/writing/techask.html</A>
+
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A> (アドレスが変わりました)
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002657.html">[Squeak-ja: 2657] 教えてください
+</A></li>
+	<LI>次の記事 <A HREF="002663.html">[Squeak-ja: 2663] Re: 本のページ複製方法とマウスボタンのスワップ (was: Re: 教えてください )
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2660">[ 日付 ]</a>
+              <a href="thread.html#2660">[ スレッド ]</a>
+              <a href="subject.html#2660">[ 件名 ]</a>
+              <a href="author.html#2660">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

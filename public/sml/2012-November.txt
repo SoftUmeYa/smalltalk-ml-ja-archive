@@ -1,0 +1,97 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Nov  7 06:05:14 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 07 Nov 2012 06:05:14 +0900
+Subject: [SML 8031] Re:
+	第49回Smalltalk勉強会＠京都
+In-Reply-To: <50870B0A.5040208@cc.kyoto-su.ac.jp>
+References: <50870B0A.5040208@cc.kyoto-su.ac.jp>
+Message-ID: <50997B8A.5030906@cc.kyoto-su.ac.jp>
+
+本日です。
+
+--- 青木淳
+
+(2012/10/24 6:24), AOKI Atsushi wrote:
+> 第49回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto49
+>
+> 場所(部屋)はキャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第49回 Smalltalk勉強会＠京都
+> 日時：2012年11月07日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 「GUIシリーズ」の第五弾として「加法混色」「減法混色」「色相・
+> 彩度・明度」の抽象化を行って、リファクタリングの妙を確かめよ
+> うと企図していたのですが、急きょリクエストがありまして、今回
+> と次回の二回連続で濱崎さんによる「DLL/CC (Dynamic Link
+> Library and C Connect)」の解題を行いたいと思います。DLL/CCは
+> SmalltalkからC関数を呼び出す（また、その逆も可能な）メカニズ
+> ムになります。Macintosh（OS X）で執り行いますので、
+> 開発環境であるXcode（Command Line Toolsを含む）を整えた
+> MacBook AirやMacBook Proなどをご持参ください。なお、上述の抽
+> 象化とリファクタリングは年が明けてから行う予定です。
+>
+> --- 青木淳
+
+
+From ume ＠ softumeya.com  Sun Nov 18 16:22:27 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 18 Nov 2012 16:22:27 +0900
+Subject: [SML 8032]
+	第48回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdR31pDQJBR3X_ivhiZ816pykss72r0kmUd3UFW_T41Afg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2012/11/27(火) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai48kaismalltalkbenkyoukai
+
+久しぶりにビギナー向けの内容です。「Smalltalkをはじめよう」というタイトルで、最近Smalltalkでシステム開発を始めた@kuritarさんに、お話いただきます。
+「Smalltalkの簡単なチュートリアルとともに、発表者がSmalltalkを学びはじめた最初に壁や違和感として感じた部分やその対処などをお話ししたいと思います。そして、実際にSmalltalkをインストールして動かし、経験豊富なSmalltalkerに質問できる時間も設けるつもりです。もしかすると、ベテランの超絶技巧プログラミングをかいま見ることができるかもしれません」
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Nov 28 08:37:13 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 28 Nov 2012 08:37:13 +0900
+Subject: [SML 8033]
+	第50回Smalltalk勉強会＠京都
+Message-ID: <50B54EA9.50606@cc.kyoto-su.ac.jp>
+
+第50回Smalltalk勉強会＠京都を開催します。
+シンコムさんより、手帳をいただいておりますので、当日、会場にてお配りします。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto50
+
+場所(部屋)はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第50回 Smalltalk勉強会＠京都
+日時：2012年12月05日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+先月に続き濱崎さんによる「DLL/CC (Dynamic LinkLibrary and C
+Connect)」の解題を行います。DLL/CCはSmalltalkからC関数を呼び
+出す（また、その逆も可能な）メカニズムになります。
+Macintosh（OS X）で執り行いますので、開発環境である
+Xcode（Command Line Toolsを含む）を整えたMacBook AirやMacBook
+Proなどをご持参ください。
+
+--- 青木淳
+

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2886] Re: VM全体のテストについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202886%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFZNGyRCQTRCTiROJUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklSCRLJEQkJCRGGyhC%3F%3D&In-Reply-To=ddd5gmn36x.wl%25mutoh%40openedu.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002885.html">
+   <LINK REL="Next"  HREF="002887.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2886] Re: VM全体のテストについて</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202886%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFZNGyRCQTRCTiROJUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklSCRLJEQkJCRGGyhC%3F%3D&In-Reply-To=ddd5gmn36x.wl%25mutoh%40openedu.org"
+       TITLE="[Squeak-ja: 2886] Re: VM全体のテストについて">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2006年 3月 17日 (金) 03:13:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002885.html">[Squeak-ja: 2885] VM全体のテストについて
+</A></li>
+        <LI>次の記事 <A HREF="002887.html">[Squeak-ja: 2887] Re: VM全体のテストについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2886">[ 日付 ]</a>
+              <a href="thread.html#2886">[ スレッド ]</a>
+              <a href="subject.html#2886">[ 件名 ]</a>
+              <a href="author.html#2886">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+&gt;<i> 今回の本題ですが、FreeBSD用のVMを作ったりしていると、本当にこのVMは正
+</I>&gt;<i> しく動いているのかが気になります。
+</I>
+  そういうことはありますね。
+
+&gt;<i> 例えば、FFIプラグインだと、
+</I>&gt;<i> 	FFITester class &gt;&gt; testAll
+</I>&gt;<i> でチェックすればいいのかと思うのですが、VM全体に渡ってテストをしてくれ
+</I>&gt;<i> るようなものってありませんでしょうか?
+</I>
+  VM全体にわたってのテスト、というものは今のところないと思います。
+
+  Squeak VMの成り立ちは、VMのほとんどの部分をSqueakで書いて、それを
+ANSI Cに変換して、それをコンパイルしています。マシンおよびOSに期待され
+ている部分は32ビットの演算ができることと32ビットアドレス空間が取れるこ
+とだけで、endianの違いなどはCのヘッダファイルに書かれたマクロで吸収し
+ています。つまり、VM記述のCへの変換そのものは完全に機種非依存です。
+
+  というわけで、Cに変換したコードをコンパイルしてVMを作り、そのVMでイ
+メージが立ち上がるところまで行ったとすれば、それはVMのほとんどの箇所は
+期待したとおりに動いている、ということになります。
+
+  問題は、機種・OS依存の部分、特に入出力に関わる部分ですが、これはやっ
+ぱり自動化されたテストはやや難しいでしょうね。「期待されたとおりにコン
+ピュータのスクリーンにビットマップが表示されたかどうか」ということは、
+人間が目で見るのが最善でしょうし。
+
+  コードでテストできるのは、Pluginに入っているプリミティブがちゃんと呼
+べたかどうか、もし返り値などに意味があるなら正しい値が帰ってきたかどう
+か、というところまでかもしれません。これは、primitiveのバックアップコー
+ド(primitive呼び出しが失敗したときに自動的に実行されるコード)を適切に
+書き換えてやることになるでしょうか。
+
+&gt;<i> VMにかかわっている方も多いと思いますので、教えていただければ幸いです。
+</I>
+  というわけで、あまり役に立てなくてすみません。上記のように、
+primitiveが失敗したかどうかを調べることには大いに意義があると思います。
+Squeak 2.4のころも、Dan Ingallsがいつのまにかtext scanningのprimitive 
+に渡す定義を変えたために、通常のtext scanningがみなfailしていた、とい
+うことがありました。バックアップコードが適切に書かれていたのでなかなか
+誰も気にしていなかったのですが(遅い遅い機械でベンチマークを走らせてい
+た僕のような人が文句を言うまで)、やっぱり人間見落としはありますからね。
+
+  参考になれば幸いです。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002885.html">[Squeak-ja: 2885] VM全体のテストについて
+</A></li>
+	<LI>次の記事 <A HREF="002887.html">[Squeak-ja: 2887] Re: VM全体のテストについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2886">[ 日付 ]</a>
+              <a href="thread.html#2886">[ スレッド ]</a>
+              <a href="subject.html#2886">[ 件名 ]</a>
+              <a href="author.html#2886">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

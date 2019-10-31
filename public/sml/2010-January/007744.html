@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7744] Re: 第15回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207744%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCMTUbJEIycxsoQlNtYWxs%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGFsaxskQkpZNi8ycSF3NX5FVBsoQg%3D%3D%3F%3D&In-Reply-To=4B47E77E.5040601%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007743.html">
+   <LINK REL="Next"  HREF="007745.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7744] Re: 第15回Smalltalk勉強会＠京都</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207744%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCMTUbJEIycxsoQlNtYWxs%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGFsaxskQkpZNi8ycSF3NX5FVBsoQg%3D%3D%3F%3D&In-Reply-To=4B47E77E.5040601%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7744] Re: 第15回Smalltalk勉強会＠京都">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2010年 1月 11日 (月) 17:01:00 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007743.html">[SML 7743] Re: 第15回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007745.html">[SML 7745] Re: 第15回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7744">[ 日付 ]</a>
+              <a href="thread.html#7744">[ スレッド ]</a>
+              <a href="subject.html#7744">[ 件名 ]</a>
+              <a href="author.html#7744">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+
+次回はユーザーインターフェース周りを重点的に取り組むということで、
+UMLによるモデルと、Controllerに書くことになるであろう、マウスの
+クリックとドラッグに関わるプログラムの断片を書きました。
+
+UMLのモデルはastah* community版を使用して書きました。
+以下のところから入手することが可能です。
+
+      <A HREF="http://astah.change-vision.com/ja/product/astah-community.html">http://astah.change-vision.com/ja/product/astah-community.html</A>
+
+プログラムの方は、トランスクリプトに表示する都合で、チェック時間を
+１秒と長めに取ってありますが、実際のプログラムではもっと短くてよい
+はずです。
+
+如何なものでしょう？
+ご意見を頂ければありがたいです。
+
+------ 以下、プログラムの断片 ----------
+
+|<i> window sensor previousPoint clickBlock draggingBlock |
+</I>Transcript cr; show: 'Start!'.
+window := ScheduledControllers activeController view.
+sensor := window controller sensor.
+[sensor redButtonPressed] whileFalse.
+previousPoint := sensor cursorPoint.
+clickBlock :=
+	[Transcript cr; show: 'Click Point: '; show: previousPoint printString].
+draggingBlock :=
+	[Cursor crossHair
+		showWhile:
+			[[sensor redButtonPressed]
+				whileTrue:
+					[| presentPoint |
+					presentPoint := sensor cursorPoint.
+					Transcript cr; show: 'Drag! moving amount: ';
+						show: (presentPoint - previousPoint) printString.
+					previousPoint := presentPoint.
+					(Delay forSeconds: 1) wait]]].
+(Delay forSeconds: 1) wait.
+sensor redButtonPressed
+	ifTrue: [draggingBlock value]
+	ifFalse: [clickBlock value].
+Transcript cr; show: 'Finished!!'; cr.
+
+-----------------------
+
+
+2010年1月9日11:18 AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;:
+&gt;<i> 寒い日が続きますね、青木淳＠京都上賀茂です。
+</I>&gt;<i>
+</I>&gt;<i> (10/01/06 6:20), AOKI Atsushi wrote:
+</I>&gt;&gt;<i> おはようございます。新年早々の勉強会、今日（reminder）です！
+</I>&gt;&gt;<i> --- 青木淳＠要求仕様と基本設計の過程を重点的にしてゆく予定…
+</I>&gt;<i>
+</I>&gt;<i> 以下のページから、京都の勉強会で行っていること（取り組んでい
+</I>&gt;<i> る課題）を参照できるようにしておきました。
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto15">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto15</A>
+</I>&gt;<i>
+</I>&gt;<i> 本日から三連休です。補足資料：取り組んでいる課題のリンクから
+</I>&gt;<i> たどれる要求仕様書にそって、皆さんもプログラミング（開発）に
+</I>&gt;<i> チャレンジしてみてくださいませ。
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/ProjectZero/Requirement/index.html">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/ProjectZero/Requirement/index.html</A>
+</I>&gt;<i>
+</I>&gt;<i> 私は複数（4つ）のプログラミング言語で実装しました。Smalltalk
+</I>&gt;<i> が一番エレガントでした、手前味噌分を差し引いても。:-)
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i> AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</I>&gt;<i>
+</I>
+
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: TreeSortModel_byOH.asta
+型:         application/octet-stream
+サイズ:     27242 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20100111/25fd749c/TreeSortModel_byOH-0001.obj">http://www.smalltalk.jp/pipermail/sml/attachments/20100111/25fd749c/TreeSortModel_byOH-0001.obj</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007743.html">[SML 7743] Re: 第15回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007745.html">[SML 7745] Re: 第15回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7744">[ 日付 ]</a>
+              <a href="thread.html#7744">[ スレッド ]</a>
+              <a href="subject.html#7744">[ 件名 ]</a>
+              <a href="author.html#7744">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

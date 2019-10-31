@@ -1,0 +1,33 @@
+From ume ＠ softumeya.com  Wed Nov 16 23:11:56 2016
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 16 Nov 2016 23:11:56 +0900
+Subject: [Squeak-ja: 4755]
+	第94回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTYzGigWxnZkq8Nx+r6xD_GGz45+tPMJhHo8YFOFsYOiQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2016/11/25(金) 19:00-21:00 (2時間)
+場所:  SORABITO株式会社
+
+東工大で研究されているMatthias SpringerさんにSqueakの新たなモジュールシステムMatrionaについて解説してもらいます
+
+'I will talk about "Matriona", a module system for Squeak/Smalltalk,
+which is similar to Newspeak. The two main ideas of Matriona are
+"class parameterization" and "class nesting".
+ They allow programmers to write mixins, to organize their classes
+hierarchically, and to use class hierarchy inheritance. I will show
+examples for both of them and explain how Matriona can be used to
+write more modular Smalltalk code.'
+
+より詳しくはこちら
+http://www.smalltalk-users.jp/Home/gao-zhi/dai94kaismalltalkbenkyoukai
+
+お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

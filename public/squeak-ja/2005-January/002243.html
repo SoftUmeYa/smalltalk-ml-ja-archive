@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202243%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUglVSUhJSQlaxsoQigucHIpGyRCJEdKXUI4JDUkbCRrJGIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEI%3D%3F%3D&In-Reply-To=20050107003854.EA8A.FLORIAN%40seagreen.ocn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002242.html">
+   <LINK REL="Next"  HREF="002255.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202243%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUglVSUhJSQlaxsoQigucHIpGyRCJEdKXUI4JDUkbCRrJGIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEI%3D%3F%3D&In-Reply-To=20050107003854.EA8A.FLORIAN%40seagreen.ocn.ne.jp"
+       TITLE="[Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの">tak ＠ metatoys.org
+       </A><BR>
+    <I>2005年 1月  7日 (金) 11:29:39 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002242.html">[Squeak-ja: 2242] プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+        <LI>次の記事 <A HREF="002255.html">[Squeak-ja: 2255] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2243">[ 日付 ]</a>
+              <a href="thread.html#2243">[ スレッド ]</a>
+              <a href="subject.html#2243">[ 件名 ]</a>
+              <a href="author.html#2243">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+
+&gt;<i> 　土本( Florian )です。
+</I>&gt;<i> 　先日の火入れ式では皆様に大変お世話になりました。
+</I>こないだはご意見をたくさん頂き有難うございました。
+さくっと書ける所だけ書いてみました。
+
+&gt;<i> 　これを受けて、もう少し本格的なグラフィックリソースとサウンドリソース
+</I>&gt;<i> を含めた作品を作ってみようと思っています。
+</I>すばらしい！
+
+&gt;<i> (1)サウンド、グラフィック、スクリプトデータなどの保存に付いての質問
+</I>&gt;<i> 　サウンドに関しては、阿部さん曰く、
+</I>&gt;<i> 
+</I>&gt;<i> 	6x以降はプロジェクトファイルに音も一緒に保存されるので自分の作品に新しい音を追加できます。
+</I>&gt;<i> 
+</I>&gt;<i> 　とのことですので含めることは可能と思われますが、クラス変数内に含まれ
+</I>&gt;<i> る(あらかじめロードした)ColorFormなどをProjectファイル内に含めることは
+</I>&gt;<i> 可能でしょうか。
+</I>&gt;<i> 　また、マップデータやシナリオなどの情報をCollectionとしてクラス変数内
+</I>&gt;<i> に(あらかじめロードして)持ったものについても同様に可能でしょうか。
+</I>
+一番簡単なのは World のプロパティ(モーフはみんなプロパティ辞書を持っています。)
+に入れる事だと思います。オブジェックトなら何でも入ります。プログラムを書いていて
+使いやすいのは storeString かなんかでシリアライズした文字列を ChangeSet に
+クラスメソッドとして持たせる事です。
+
+&gt;<i> (2)Projectファイルで保存されるもの
+</I>&gt;<i> 　これらに付随して質問なのですが、projectファイルの正体はどのような物
+</I>&gt;<i> なのでしょうか？
+</I>&gt;<i> 　予想としては、
+</I>&gt;<i> 
+</I>&gt;<i> 	プロジェクト内で作られたインスタンスを直列化したもの
+</I>&gt;<i> 	プロジェクト内で作られたClassを直列化した物
+</I>&gt;<i> 	プロジェクト内で作られたClassのソース(「ChangeSetの中のものを
+</I>&gt;<i> 含めるか？」との質問があるため)
+</I>&gt;<i> 
+</I>&gt;<i> 　なのですが、残念ながら手元でpkzipとgzipを駆使してAscii文字列の入った
+</I>&gt;<i> バイナリにまでは直せたのですが、中身のデータの意味までは判りませんでし
+</I>&gt;<i> た。
+</I>僕も良く知らないのですが、クラスは名前だけ入っています。ChangeSet を
+含める事が出来るので、新しいクラスを入れるときは ChangeSet に入れると
+良いです。
+
+&gt;<i> (3)公開についての質問
+</I>&gt;<i> 　今回はProjectファイルとして公開することを前提として質問していますが、
+</I>&gt;<i> 本来、作ったソフトウェアは、Squeak-Plug inで実行することを期待して
+</I>&gt;<i> Projectファイルとして公開するべきなのでしょうか？
+</I>&gt;<i> 　それとも、sarファイルとしてパッケージの形にまとめるべきでしょうか？
+</I>&gt;<i> 　それとも、mczファイルとしてアーカイブしリソースに関しては別途用意す
+</I>&gt;<i> べきでしょうか？
+</I>&gt;<i> 
+</I>&gt;<i> 　また、そもそもSqueakMapはどの程度「気軽に」登録しても良い物なのでしょ
+</I>&gt;<i> うか？
+</I>見てのとおりかなり気軽な物も多いので、相当気軽だと思っています。説明を
+ちゃんと書けば特に迷惑では無いと思います。
+
+pr -- 初心者重視
+sar -- ユーザ重視
+mcz -- 自分重視
+
+自分ではこんな感じに使い分けています。mcz は 3.7 以降インストーラが付属
+しているのですが、Monticello 自体が付属していないのとバイナリを含める事が
+出来ないので、配布物としては特に利点が無いと思います。
+
+&gt;<i> 　山宮さんの「再びメタトイ」
+</I>&gt;<i> (<A HREF="http://d.hatena.ne.jp/propella/20050105/p2">http://d.hatena.ne.jp/propella/20050105/p2</A>)の文章に対するコメントにあっ
+</I>&gt;<i> た「モンテッソーリ教育」を調べていて、学研の日本モンテッソーリ教育総合
+</I>&gt;<i> 研究所の解説の中に一言「用具はすべて、子どもの手に合うほんものを使いま
+</I>&gt;<i> す」という言葉があったのが大変興味を引きました。
+</I>
+僕も最近「子どもの発見」を読んでいます。普段技術書と漫画しか読まないので
+色んな教材が載っていてなかなか新鮮です。
+
+&gt;<i> 　この時、FlashやJava-Appletはブラウザ上で直接動かすことが出来ますが、
+</I>&gt;<i> Squeakの場合、多くはSqueak自体を立ち上げた上でsarなどをfile-inすること
+</I>&gt;<i> によって初めて動くようになるものが多いと思われます。これでは、実際に実
+</I>&gt;<i> 行するまでの手数が多く、「作ったものをいろんな人に送りつける」という事
+</I>&gt;<i> に対する興味がそこで失われるのではないかな、との危惧があります。
+</I>
+本気で調べたらタグでイメージを変えたり、一つのウェブ画面で複数のイメージを
+立ち上げてお互い通信させたり、javascript でスクイークを操作と言った事も
+すぐ出来ると思うのですが、やりたい人いませんかね。
+
+&gt;<i> コン
+</I>&gt;<i> ピュータシステムというものに対するハックの興味を「人に見せる」ところか
+</I>&gt;<i> らはじめるのも選択肢としては大変有用だと思っています。
+</I>これには激しく同意します。
+
+-- 
+山宮 隆 ::= <A HREF="http://yuri.sakura.ne.jp/~propella/">http://yuri.sakura.ne.jp/~propella/</A>
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002242.html">[Squeak-ja: 2242] プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+	<LI>次の記事 <A HREF="002255.html">[Squeak-ja: 2255] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2243">[ 日付 ]</a>
+              <a href="thread.html#2243">[ スレッド ]</a>
+              <a href="subject.html#2243">[ 件名 ]</a>
+              <a href="author.html#2243">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

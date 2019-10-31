@@ -1,0 +1,305 @@
+From ume ＠ softumeya.com  Wed Sep 16 16:05:45 2015
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 16 Sep 2015 16:05:45 +0900
+Subject: [SML 8129]
+	第80回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdT_VLy+wDMrRyGwW-hkW6S2=ArmTKDGGD1pTbc+rXfU5A@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2015/9/28(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai80kaismalltalkbenkyoukai
+
+今回はドキュメント生成ツールのPillarを取り上げます。
+https://github.com/pillar-markup
+
+SphinxのSmalltalk版と言って良いでしょう。Wiki形式のようなフォーマットを元に、HtmlやLaTeX、PDF文書などを生成することができます。PillarHubというPillarで書かれたドキュメントをホスティングするサイトもあり、盛り上がってきているようです。
+http://pillarhub.pharocloud.com
+
+事前申し込みは不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Sep 19 23:37:15 2015
+From: atsushi ＠ cc.kyoto-su.ac.jp (青木 淳)
+Date: Sat, 19 Sep 2015 23:37:15 +0900
+Subject: [SML 8130]
+ じゅん for Smalltalk（Jun798とJun799）
+Message-ID: <55FD731B.50303@cc.kyoto-su.ac.jp>
+
+このポストにて久闊を叙することにしたいと…
+
+VisualWorksの最新バージョンが「8.0.1」になっています。
+http://www.cincomsmalltalk.com/main/developer-community/trying-cincom-smalltalk/try-cincom-smalltalk/
+
+でも、長らく「じゅん」の対応ができていない状況が続いていました。
+
+米国のロスアラモス研究所をはじめとして、北米、欧州、南米、
+オセアニアなど、多くの方々から問い合わせをいただき、
+VisualWorksの最新バージョンに「じゅん」を対応してほしい旨を
+うかがっていました。
+
+シルバーウィーク直前に手元に来た「MacBook Retina 12"」を用いて、
+VisualWorksの最新バージョンへの対応を模索してみました。
+ちょっとバギーなんですが、とりあえず動くものをリリースしました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/index-j.html
+
+--- 青木淳＠京産大：RetinaディスプレイはSmalltalkにはいい感じ
+
+From goonsh ＠ gmail.com  Sun Sep 20 00:23:15 2015
+From: goonsh ＠ gmail.com (NISHIHARA Satoshi)
+Date: Sun, 20 Sep 2015 00:23:15 +0900
+Subject: [SML 8131] Re:
+	じゅん for Smalltalk（Jun798とJun799）
+In-Reply-To: <55FD731B.50303@cc.kyoto-su.ac.jp>
+References: <55FD731B.50303@cc.kyoto-su.ac.jp>
+Message-ID: <CAHQL79Ak=S6D_E+Xo6-kt_1QM=mqp6VnwVC6fNhng-jin_qVyw@mail.gmail.com>
+
+しばらく音沙汰がなかったので，ちと心配していました (笑)．
+
+
+2015年9月19日 23:37 青木 淳 <atsushi ＠ cc.kyoto-su.ac.jp>:
+> このポストにて久闊を叙することにしたいと…
+>
+> VisualWorksの最新バージョンが「8.0.1」になっています。
+> http://www.cincomsmalltalk.com/main/developer-community/trying-cincom-smalltalk/try-cincom-smalltalk/
+>
+> でも、長らく「じゅん」の対応ができていない状況が続いていました。
+>
+> 米国のロスアラモス研究所をはじめとして、北米、欧州、南米、
+> オセアニアなど、多くの方々から問い合わせをいただき、
+> VisualWorksの最新バージョンに「じゅん」を対応してほしい旨を
+> うかがっていました。
+>
+> シルバーウィーク直前に手元に来た「MacBook Retina 12"」を用いて、
+> VisualWorksの最新バージョンへの対応を模索してみました。
+> ちょっとバギーなんですが、とりあえず動くものをリリースしました。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/index-j.html
+>
+> --- 青木淳＠京産大：RetinaディスプレイはSmalltalkにはいい感じ
+
+
+
+-- 
+--
+"NISHIHARA Satoshi"
+[:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Sep 20 00:42:34 2015
+From: atsushi ＠ cc.kyoto-su.ac.jp (青木 淳)
+Date: Sun, 20 Sep 2015 00:42:34 +0900
+Subject: [SML 8132] Re:
+ じゅん for Smalltalk（Jun798とJun799）
+In-Reply-To: <CAHQL79Ak=S6D_E+Xo6-kt_1QM=mqp6VnwVC6fNhng-jin_qVyw@mail.gmail.com>
+References: <55FD731B.50303@cc.kyoto-su.ac.jp>
+ <CAHQL79Ak=S6D_E+Xo6-kt_1QM=mqp6VnwVC6fNhng-jin_qVyw@mail.gmail.com>
+Message-ID: <55FD826A.8010404@cc.kyoto-su.ac.jp>
+
+On 2015/09/20 0:23, NISHIHARA Satoshi wrote:
+> しばらく音沙汰がなかったので，ちと心配していました (笑)．
+
+心配を痛み入ります。
+
+そうそう西原さんに連絡（問い合わせ）しなきゃ…と。
+Squeak用のPrologインタプリタを持っていらっしゃるかしらん？
+できれば、Morph対応したものが好都合だんだけど。
+
+--- 青木淳
+
+From goonsh ＠ gmail.com  Sun Sep 20 03:46:15 2015
+From: goonsh ＠ gmail.com (NISHIHARA Satoshi)
+Date: Sun, 20 Sep 2015 03:46:15 +0900
+Subject: [SML 8133] Re:
+	じゅん for Smalltalk（Jun798とJun799）
+In-Reply-To: <55FD826A.8010404@cc.kyoto-su.ac.jp>
+References: <55FD731B.50303@cc.kyoto-su.ac.jp>
+ <CAHQL79Ak=S6D_E+Xo6-kt_1QM=mqp6VnwVC6fNhng-jin_qVyw@mail.gmail.com>
+ <55FD826A.8010404@cc.kyoto-su.ac.jp>
+Message-ID: <CAHQL79Buvgt3ihLAkiyRWOuygxjp-tzJ7esVE_rFWjNw1x+N=Q@mail.gmail.com>
+
+Squeakですか……．
+Pharo用じゃダメですか？
+
+2015年9月20日 0:42 青木 淳 <atsushi ＠ cc.kyoto-su.ac.jp>:
+> On 2015/09/20 0:23, NISHIHARA Satoshi wrote:
+>>
+>> しばらく音沙汰がなかったので，ちと心配していました (笑)．
+>
+>
+> 心配を痛み入ります。
+>
+> そうそう西原さんに連絡（問い合わせ）しなきゃ…と。
+> Squeak用のPrologインタプリタを持っていらっしゃるかしらん？
+> できれば、Morph対応したものが好都合だんだけど。
+>
+> --- 青木淳
+
+
+
+-- 
+--
+"NISHIHARA Satoshi"
+[:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+
+From goonsh ＠ gmail.com  Sun Sep 20 04:07:39 2015
+From: goonsh ＠ gmail.com (NISHIHARA Satoshi)
+Date: Sun, 20 Sep 2015 04:07:39 +0900
+Subject: [SML 8134] Re:
+	じゅん for Smalltalk（Jun798とJun799）
+In-Reply-To: <CAHQL79Buvgt3ihLAkiyRWOuygxjp-tzJ7esVE_rFWjNw1x+N=Q@mail.gmail.com>
+References: <55FD731B.50303@cc.kyoto-su.ac.jp>
+ <CAHQL79Ak=S6D_E+Xo6-kt_1QM=mqp6VnwVC6fNhng-jin_qVyw@mail.gmail.com>
+ <55FD826A.8010404@cc.kyoto-su.ac.jp>
+ <CAHQL79Buvgt3ihLAkiyRWOuygxjp-tzJ7esVE_rFWjNw1x+N=Q@mail.gmail.com>
+Message-ID: <CAHQL79CcO1-ivrXSZVwZ-865AFyaaBEG1pfOGjTHFes_ec2UoQ@mail.gmail.com>
+
+先のメールにスクリーンショットを添付したら，デカ過ぎると怒られましたので，本文だけ送信します．
+
+Smalltalkhubじゃなくて，SqueakSourceにありました．
+
+Goodies-Prolog-nsh.5
+http://www.squeaksource.com/@jYZBzwxgwzh3dx2h/-lLzKoNX
+
+
+現時点での最新版であるSqueak5.0-15113にロードしてみましたが，undeclaredも空だし，とくにエラーも出ないようです．
+
+
+
+2015年9月20日 3:46 NISHIHARA Satoshi <goonsh ＠ gmail.com>:
+> Squeakですか……．
+> Pharo用じゃダメですか？
+>
+> 2015年9月20日 0:42 青木 淳 <atsushi ＠ cc.kyoto-su.ac.jp>:
+>> On 2015/09/20 0:23, NISHIHARA Satoshi wrote:
+>>>
+>>> しばらく音沙汰がなかったので，ちと心配していました (笑)．
+>>
+>>
+>> 心配を痛み入ります。
+>>
+>> そうそう西原さんに連絡（問い合わせ）しなきゃ…と。
+>> Squeak用のPrologインタプリタを持っていらっしゃるかしらん？
+>> できれば、Morph対応したものが好都合だんだけど。
+>>
+>> --- 青木淳
+>
+>
+>
+> --
+> --
+> "NISHIHARA Satoshi"
+> [:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+
+
+
+-- 
+--
+"NISHIHARA Satoshi"
+[:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Sep 20 08:39:31 2015
+From: atsushi ＠ cc.kyoto-su.ac.jp (青木 淳)
+Date: Sun, 20 Sep 2015 08:39:31 +0900
+Subject: [SML 8135] Re:
+ じゅん for Smalltalk（Jun798とJun799）
+In-Reply-To: <CAHQL79CcO1-ivrXSZVwZ-865AFyaaBEG1pfOGjTHFes_ec2UoQ@mail.gmail.com>
+References: <55FD731B.50303@cc.kyoto-su.ac.jp>
+ <CAHQL79Ak=S6D_E+Xo6-kt_1QM=mqp6VnwVC6fNhng-jin_qVyw@mail.gmail.com>
+ <55FD826A.8010404@cc.kyoto-su.ac.jp>
+ <CAHQL79Buvgt3ihLAkiyRWOuygxjp-tzJ7esVE_rFWjNw1x+N=Q@mail.gmail.com>
+ <CAHQL79CcO1-ivrXSZVwZ-865AFyaaBEG1pfOGjTHFes_ec2UoQ@mail.gmail.com>
+Message-ID: <55FDF233.1090504@cc.kyoto-su.ac.jp>
+
+おーきに！ありがとう！！
+Squeak 5.0 と 4.4 の両方で正常動作を確認しました。
+
+--- 青木淳
+
+On 2015/09/20 4:07, NISHIHARA Satoshi wrote:
+> 先のメールにスクリーンショットを添付したら，デカ過ぎると怒られましたので，本文だけ送信します．
+>
+> Smalltalkhubじゃなくて，SqueakSourceにありました．
+>
+> Goodies-Prolog-nsh.5
+> http://www.squeaksource.com/@jYZBzwxgwzh3dx2h/-lLzKoNX
+>
+>
+> 現時点での最新版であるSqueak5.0-15113にロードしてみましたが，undeclaredも空だし，とくにエラーも出ないようです．
+>
+>> --
+>> --
+>> "NISHIHARA Satoshi"
+>> [:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+
+From serge.stinckwich ＠ gmail.com  Wed Sep 23 00:46:27 2015
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue, 22 Sep 2015 17:46:27 +0200
+Subject: [SML 8136] Anyone interested by a Pharo course in Japan ?
+Message-ID: <CAOysuxU6xuSTHp+UYg9Evi8rajA5gMELnoa3LVN637AfCk8THQ@mail.gmail.com>
+
+Dear all,
+
+I plan to come to Japan in November and I was wondering if some of you
+might be interested to join a one-day course on Pharo in Kyoto or
+Tokyo ?
+
+I made a small pool here:
+http://doodle.com/poll/u9eweuwyq2eq2dty
+If you are interested, can you put your name and if you are interested or not.
+
+I might ask ESUG (European Smalltalk User Group) for some financial
+support for this course.
+Best regards,
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+
+From serge.stinckwich ＠ gmail.com  Thu Sep 24 15:42:01 2015
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Thu, 24 Sep 2015 08:42:01 +0200
+Subject: [SML 8137] Re: Anyone interested by a Pharo course in Japan ?
+In-Reply-To: <CAOysuxU6xuSTHp+UYg9Evi8rajA5gMELnoa3LVN637AfCk8THQ@mail.gmail.com>
+References: <CAOysuxU6xuSTHp+UYg9Evi8rajA5gMELnoa3LVN637AfCk8THQ@mail.gmail.com>
+Message-ID: <CAOysuxXzh7J-f1XHih-zyUf24Z0h0Ukfg8xFSAJ8SrjTEvCeUA@mail.gmail.com>
+
+Some students from universities might be interested also.
+
+Regards,
+
+On Tue, Sep 22, 2015 at 5:46 PM, Serge Stinckwich
+<serge.stinckwich ＠ gmail.com> wrote:
+> Dear all,
+>
+> I plan to come to Japan in November and I was wondering if some of you
+> might be interested to join a one-day course on Pharo in Kyoto or
+> Tokyo ?
+>
+> I made a small pool here:
+> http://doodle.com/poll/u9eweuwyq2eq2dty
+> If you are interested, can you put your name and if you are interested or not.
+>
+> I might ask ESUG (European Smalltalk User Group) for some financial
+> support for this course.
+> Best regards,
+> --
+> Serge Stinckwich
+> UCBN & UMI UMMISCO 209 (IRD/UPMC)
+> Every DSL ends up being Smalltalk
+> http://www.doesnotunderstand.org/
+
+
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7325] Re: ブロック生成のメタプログラミング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207325%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46E7CFF3.2020408%40zephyr.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007314.html">
+   <LINK REL="Next"  HREF="007327.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7325] Re: ブロック生成のメタプログラミング</H1>
+    <B>Masato Sumi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207325%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46E7CFF3.2020408%40zephyr.dti.ne.jp"
+       TITLE="[SML 7325] Re: ブロック生成のメタプログラミング">sumi ＠ seagreen.ocn.ne.jp
+       </A><BR>
+    <I>2007年 9月 12日 (水) 22:10:57 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007314.html">[SML 7314] 無料セミナーのご案内
+</A></li>
+        <LI>次の記事 <A HREF="007327.html">[SML 7327] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7325">[ 日付 ]</a>
+              <a href="thread.html#7325">[ スレッド ]</a>
+              <a href="subject.html#7325">[ 件名 ]</a>
+              <a href="author.html#7325">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木さん、西原さん、ありがとうございます。鷲見です。
+
+&gt;<i> 鷲見さんからも厳しいツッコミをいただきました．m(_ _)m
+</I>
+あ…、スミマセン。慣れない Web メールアプリを使っていたら、ML への
+返信のつもりが直メールになっていたようです。お気を悪くされたら、ごめんなさい。
+他意はありません。
+
+
+07/09/12 に NISHIHARA Satoshi&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">nishis ＠ zephyr.dti.ne.jp</A>&gt; さんは書きました:
+&gt;<i> enumerating カテゴリのパラメータ＝ブロックと
+</I>
+そうした「思いこみ」を裏切らないために、ただシンボルを渡すのではなく
+シンボルに asBlock メッセージを送って返る値がブロックであることを
+陽にすることはコードの読みくだしのしやすさを確保するのにもきわめて大事な
+ことなのだとあらためて実感できます。ｗ
+
+じつはこのシンボルをブロックの代わりに受け渡すスタイルは、OS X 向けの
+Smalltalk ライクな F-Script という言語（の初期）や Ruby で重宝がられているのを見て
+そのアイデアを知ったのですが、記述をシンプルにできて便利なのは分かっても、
+何かこう「気持ちの悪さ」のようなものを払拭できずにいたところなのでした。
+（わざわざ持ち出してきておいてこういうのも無責任なはなしですが…｝
+
+青木さんや西原さんのお話をいろいろとうかがっているうちに、
+その違和感の正体が何なのかがだんだん分かってきたような気がします。
+今回のウリであるメタプログラミングとは関係ない個人的な興味のことで
+申し訳ありませんでした。
+
+
+Symbol&gt;&gt;#value: についてのコメントがあったというブログのエントリーも
+読みました（このエントリーでは #asBlock をメタプログラミングを使わずに
+実装してしまっているようですが、まあそれはおいておくとして）。この最後で、
+
+&gt;<i> In contrast, asBlock is a uniform mechanism to cross over from
+</I>&gt;<i> the domain of selectors to the domain of blocks equivalent to
+</I>&gt;<i> those selectors sent to the block's first argument.
+</I>
+とあるのがナルホドなーと思いました。Symbol のほうでも実際は #value: と
+#value:value: の二つを用意しておきさえすれば、ほぼ用は足りるわけですが、
+それでも理屈では引数の数だけメソッドを用意しないといけないという状況は
+青木さんのおっしゃる醜悪な状況と似て、いかにも美しくありません。
+
+-- 
+Masato Sumi
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007314.html">[SML 7314] 無料セミナーのご案内
+</A></li>
+	<LI>次の記事 <A HREF="007327.html">[SML 7327] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7325">[ 日付 ]</a>
+              <a href="thread.html#7325">[ スレッド ]</a>
+              <a href="subject.html#7325">[ 件名 ]</a>
+              <a href="author.html#7325">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

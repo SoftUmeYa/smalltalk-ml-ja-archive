@@ -1,0 +1,121 @@
+From aoki ＠ sra.co.jp  Thu Oct  6 00:48:16 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7120] Jun650 for VisuakWorks 7.4
+Message-ID: <6829C3F8-08CF-457B-B26C-C2A5A47DB1F8@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+次期バージョン【VisualWorks 7.4】に対応した【じゅん 
+650】を公
+開しました。
+
+http://www.sra.co.jp/public/sra/technical/jun/
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+現行の【VisualWorks 7.3.1】をお使いの方々は【じゅん 
+649】で暫
+時我慢してくださいませ。7.3.1 では Jun650 のパーセル 
+を正常に
+読み込むことができません。どうしても…と言ならば、ソースコー
+ドからジェネレーションできます。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/VisualWorks7/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Mon Oct 17 00:37:58 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7121] Jun652 for Smalltalk
+Message-ID: <67E6EA29-E7DD-459C-9A54-35D312F45629@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+じゅんの新バージョン【Jun652 for Smalltalk】を公開しました。
+
+http://www.sra.co.jp/public/sra/technical/jun/
+
+ストップウォッチやステレオピークメータなどが加わっています。
+
+http://www.sra.co.jp/smalltalk/jun/Topics/Stopwatch/
+http://www.sra.co.jp/smalltalk/jun/Topics/LevelGaugeMeter/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Mon Oct 17 00:54:00 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7122] Re: Jun652 for Smalltalk
+In-Reply-To: <67E6EA29-E7DD-459C-9A54-35D312F45629@sra.co.jp>
+References: <67E6EA29-E7DD-459C-9A54-35D312F45629@sra.co.jp>
+Message-ID: <E6BFE386-C27C-469F-B2F9-2C7045200A78@sra.co.jp>
+
+On 2005/10/17, at 0:37, AOKI Atsushi wrote:
+> じゅんの新バージョン【Jun652 for Smalltalk】を公開しまし 
+> た。
+> http://www.sra.co.jp/public/sra/technical/jun/
+
+アップロードしてあるパーセル（Jun652pcl.zip）は
+VisualWorks 7.4 用です。
+
+7.3.1 をお使いの方々は ソースからファイルインを。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From nisinaka ＠ sra.co.jp  Fri Oct 28 17:54:20 2005
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7123] [ANNOUNCE] Jun for Java (Jun536)
+In-Reply-To: <20050907184553.F2F4.NISINAKA@sra.co.jp>
+References: <20050711153422.0B79.NISINAKA@sra.co.jp>
+	<20050907184553.F2F4.NISINAKA@sra.co.jp>
+Message-ID: <20051028175404.129D.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン536を公開します。
+
+  バージョン527からの主な変更点は、以下の通りです。
+
+    * (new feature) JunOpenGLRoughSketch は、ユーザが描いた単純閉
+      曲線を三次元空間上の平面に変換して表示するクラスです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/536/RoughSketch.png
+
+    * (new feature) JunFormTriangulation2 は、単純閉曲線をに対し
+      て制約付きドロネー三角形分割 (Constrained Delaunay
+      Triangulation) を行うクラスです。
+
+        http://www.sra.co.jp/smalltalk/jun/Topics/Teddy/triangulation/index.html
+
+    * (modification) JunCursorsにカーソルを追加しました。現在、全
+      部で59個のカーソルが定義されています。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/536/Cursors.png
+
+    * (incompatibility) jp.co.sra.jun.solid.abstracts.JunSolid を 
+      JunSolidModel に改名しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+

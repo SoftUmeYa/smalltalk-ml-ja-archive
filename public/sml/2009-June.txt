@@ -1,0 +1,1347 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun  3 12:19:35 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jun  3 12:20:07 2009
+Subject: [SML 7559] Re: 第8回Smalltalk勉強会＠京都
+In-Reply-To: <4A1C760F.1010907@cc.kyoto-su.ac.jp>
+References: <4A1C760F.1010907@cc.kyoto-su.ac.jp>
+Message-ID: <4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+
+備忘のためにポストします。本日、第8回Smalltalk勉強会＠京都！
+
+前回とは異なる場所（2階第2会議室：もとに戻る）になりますので
+よろしくお願いします。私は18時ぐらいに会場に入り、電源コード
+の引き回しやプロジェクタの設置を行います。
+
+短焦点型のプロジェクタと SSD 搭載の MacBook Air で実演します。
+
+http://www.sanyo-lcdp.com/product/xl45/xl45.html
+http://www.cc.kyoto-su.ac.jp/~atsushi/Computers/index-j.html#Office-MacBook-Air
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+-------- Original Message --------
+Subject: [SML 7558] 第8回Smalltalk勉強会＠京都
+Date: Wed, 27 May 2009 08:06:55 +0900
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+To: Smalltalkers' Salon Mailing List <sml@smalltalk.jp>
+> 
+> 青木＠京都宇治です。（本日まで大学が休校でして…）
+> 
+> 第8回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+> JR京都駅前にご参集ください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto8
+> 
+> 第8回 Smalltalk勉強会＠京都
+> 日時：2009年06月03日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 今回はオブジェクト指向プログラミングで一番重要な「メッセージ
+> を送受信をすること」について解題します。テキスト（ブラック
+> ブック）の３章５節「メッセージ」から行いますが、７章２節「本
+> 格的な文法」も併せてゆきたいと思います。なぜifやforやdoなどが
+> 予約語になっていないのかをメッセージ送受信から得心していただ
+> けるように努めます。また「じゅん for Smalltalk（Jun780）」も
+> 配布できると思います。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun  3 16:05:19 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jun  3 16:05:22 2009
+Subject: [SML 7560] ブラックブック中のURLの書き換え
+Message-ID: <4A2620AF.6080104@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+ブラックブックの中で、SRAのURLを参照しているところがいくつか
+あります。私のホームページを京都産業大学へ移行したことにより、
+アクセスができなくなっているとのご指摘を受けました。以下のよ
+うな新旧になりますので、書き換えをよろしくお願い申し上げます。
+
+旧）
+http://www.sra.co.jp/people/aoki/SmalltalkBook/
+
+新）
+http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jun  4 09:40:12 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jun  4 09:40:15 2009
+Subject: [SML 7561] Re: 第8回Smalltalk勉強会＠京都
+In-Reply-To: <4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+References: <4A1C760F.1010907@cc.kyoto-su.ac.jp>
+	<4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+Message-ID: <4A2717EC.8090809@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+昨夜に行った京都駅前でのSmalltalk勉強会の簡単な報告をします。
+
+3.5 メッセージ（p.88）から始めて、3.6 文（p.95）のカスケード
+までゆきました。8ページしか進んでいない！のですが、7.2 本格的
+な文法を併せて行いましたので、こちらが15ページ分あります。合
+計して23ページ分になります。ちょうど良いペースでしょう。:-)
+
+デバッカによる逐次実行で、メッセージの種類や優先順位（どの順
+番でメッセージが発信されるか）などを、より深く理解していただ
+けたのではないかと思います。
+
+＃初学者ほどデバッカを使うのが望ましい。
+
+以下に単項メッセージセレクタ・二項メッセージセレクタ・キーワ
+ードメッセージセレクタを求めるプログラムを記載しておきます。
+ウィンドウのラベルに個数をつけておきました。
+
+------------------------------------------------------------
+
+"メッセージセレクタを種類別に求めてウィンドウにリストする"
+| aSet aPoint |
+aSet := Set new: 50000.
+Smalltalk allBehaviorsDo: [:each | aSet addAll: each selectors].
+aPoint := nil.
+(Array
+    with: 'Unary Message Selectors'
+            -> [:each | each numArgs = 0 and: [each isKeyword not]]
+    with: 'Binary Message Selectors'
+            -> [:each | each numArgs = 1 and: [each isKeyword not]]
+    with: 'Keyword Message Selectors'
+            -> [:each | each numArgs >= 1 and: [each isKeyword]])
+        do: [:anAssociation |
+            | aString aBlock aStream aCollection aModel |
+            aString := anAssociation key.
+            aBlock := anAssociation value.
+            aStream := WriteStream on: String new.
+            aCollection := (aSet select: aBlock) asSortedCollection.
+            aCollection do: [:each |
+                    aStream
+                        nextPutAll: each asString;
+                        cr].
+            aModel := ValueHolder with: aStream contents.
+            TextEditorView
+                open: aModel
+                label: aString , ' : ' , aCollection size printString
+                extent: 400 @ 300.
+            (aModel dependents detect: [:each | each isKindOf: ScheduledWindow]
+                ifNone: [nil])
+                    ifNotNil: [:aWindow |
+                        | aBox |
+                        aPoint
+                            ifNil: [aPoint := aWindow displayBox origin]
+                            ifNotNil: [aPoint := aPoint translatedBy: 40 @ 30.
+                                aBox := aPoint extent: aWindow displayBox extent.
+                                aWindow displayBox: aBox]]].
+^aSet
+
+------------------------------------------------------------
+
+また、構文木（JunParseTreeもしくはFooProgramScanner）を援用し
+ました。構文木を深さ優先でたどれば、それが実行順序になること
+も得心していただけたと思います。
+
+プログラムコードを文字列として構文木に渡し、出せ！というだけ。
+
+(JunParseTree code: '3 + 4 * 5') show
+
+(JunParseTree code: '3 + (4 * 5)') show
+
+次のような単項メッセージ・二項メッセージ・キーワードメッセー
+ジが混ざったものでも、コンパイラの気持ちを知ることができます。
+
+(JunParseTree code: 'Rectangle origin: 1 asPoint + 2 asPoint extent: 3 asPoint + 4 asPoint') show
+
+また、クラスとメッセージセレクタを指定して構文木を出したり、
+コンパイルドメソッドを指定して構文木を出したりできます。
+
+(JunParseTree class: Integer selector: #factorial) show
+
+(JunParseTree method: (Integer compiledMethodAt: #factorial)) show
+
+------------------------------------------------------------
+
+さらに、なぜカスケードが有用であるのかを、バイトコードから証
+を立てることも行いましたので、そのプログラムを記しておきます。
+
+------------------------------------------------------------
+
+"カスケードを使わない場合"
+[Transcript clear.
+Transcript nextPutAll: 'ASAOKA Hiroko'.
+Transcript cr.
+Transcript nextPutAll: 'SAWAMOTO Eri'.
+Transcript cr.
+Transcript nextPutAll: 'AOKI Atsushi'.
+Transcript cr.
+Transcript flush]
+    method symbolic
+
+"以下のようなバイトコード列（30バイト）になります”
+normal CompiledBlock numArgs=0 numTemps=0 frameSize=12
+
+literals: ({Transcript} #clear 'ASAOKA Hiroko' 'SAWAMOTO Eri' 'AOKI Atsushi' #flush )
+
+1 <34> push Transcript
+2 <71> send clear
+3 <66> pop
+4 <34> push Transcript
+5 <1E> push 'ASAOKA Hiroko'
+6 <B5> send nextPutAll:
+7 <66> pop
+8 <34> push Transcript
+9 <F0 21> send cr
+11 <66> pop
+12 <34> push Transcript
+13 <1F> push 'SAWAMOTO Eri'
+14 <B5> send nextPutAll:
+15 <66> pop
+16 <34> push Transcript
+17 <F0 21> send cr
+19 <66> pop
+20 <34> push Transcript
+21 <20> push 'AOKI Atsushi'
+22 <B5> send nextPutAll:
+23 <66> pop
+24 <34> push Transcript
+25 <F0 21> send cr
+27 <66> pop
+28 <34> push Transcript
+29 <75> send flush
+30 <65> return
+
+------------------------------------------------------------
+
+"カスケードを使った場合"
+[Transcript
+    clear;
+    nextPutAll: 'ASAOKA Hiroko';
+    cr;
+    nextPutAll: 'SAWAMOTO Eri';
+    cr;
+    nextPutAll: 'AOKI Atsushi';
+    cr;
+    flush]
+    method symbolic
+
+"以下のようなバイトコード列（24バイト）になります”
+normal CompiledBlock numArgs=0 numTemps=0 frameSize=12
+
+literals: ({Transcript} #clear 'ASAOKA Hiroko' 'SAWAMOTO Eri' 'AOKI Atsushi' #flush )
+
+1 <34> push Transcript
+2 <68> dup first
+3 <71> send clear
+4 <69> dup
+5 <1E> push 'ASAOKA Hiroko'
+6 <B5> send nextPutAll:
+7 <69> dup
+8 <F0 21> send cr
+10 <69> dup
+11 <1F> push 'SAWAMOTO Eri'
+12 <B5> send nextPutAll:
+13 <69> dup
+14 <F0 21> send cr
+16 <69> dup
+17 <20> push 'AOKI Atsushi'
+18 <B5> send nextPutAll:
+19 <69> dup
+20 <F0 21> send cr
+22 <6A> dup last
+23 <75> send flush
+24 <65> return
+
+------------------------------------------------------------
+
+以上、簡単ですが、昨日の勉強の報告でした。不足や他に思うとこ
+ろなどがありましたら、ご参加いただいた皆さん、フォローをお願
+いします。
+
+＃きっと浅岡さんが差し入れの報告をしてくれるにちがいない。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jun  4 10:47:03 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jun  4 10:47:06 2009
+Subject: [SML 7562] Re: 第8回Smalltalk勉強会＠京都
+In-Reply-To: <4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+References: <4A1C760F.1010907@cc.kyoto-su.ac.jp>
+	<4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+Message-ID: <4A272797.2060509@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+> また「じゅん for Smalltalk（Jun780）」も配布できると思います。
+
+昨夜に配布させていただきました「じゅん for Smalltalk」Jun780
+では、Lispインタプリタにスパイ機能とトレース機能が組み込まれ
+ています。また、VisualWorksの次期バージョン7.7では、Mac OS 9
+以前に関連するクラス群が標準仮想イメージから姿を消しますので、
+それに対応させています。（Mac OS Xだけになるということです）
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+【関数スパイ】----------------------------------------------
+
+(defun sigma (x)
+  (cond ((= x 1) 1)
+        (t (+ x (sigma (- x 1))))))
+
+(spy 'sigma)
+(sigma 10)
+
+------------------------------------------------------------
+
+> > (defun sigma (x)
+  (cond ((= x 1) 1)
+        (t (+ x (sigma (- x 1))))))
+sigma
+> > (spy 'sigma)
+sigma
+> > (sigma 10)
+| (sigma 10)
+| | (sigma (- x 1))
+| | (sigma 9)
+| | | (sigma (- x 1))
+| | | (sigma 8)
+| | | | (sigma (- x 1))
+| | | | (sigma 7)
+| | | | | (sigma (- x 1))
+| | | | | (sigma 6)
+| | | | | | (sigma (- x 1))
+| | | | | | (sigma 5)
+| | | | | | | (sigma (- x 1))
+| | | | | | | (sigma 4)
+| | | | | | | | (sigma (- x 1))
+| | | | | | | | (sigma 3)
+| | | | | | | | | (sigma (- x 1))
+| | | | | | | | | (sigma 2)
+| | | | | | | | | | (sigma (- x 1))
+| | | | | | | | | | (sigma 1)
+| | | | | | | | | | 1 <== (sigma 1)
+| | | | | | | | | 3 <== (sigma 2)
+| | | | | | | | 6 <== (sigma 3)
+| | | | | | | 10 <== (sigma 4)
+| | | | | | 15 <== (sigma 5)
+| | | | | 21 <== (sigma 6)
+| | | | 28 <== (sigma 7)
+| | | 36 <== (sigma 8)
+| | 45 <== (sigma 9)
+| 55 <== (sigma 10)
+55
+
+【全トレース】----------------------------------------------
+
+(defun sigma (x)
+  (cond ((= x 1) 1)
+        (t (+ x (sigma (- x 1))))))
+
+(trace)
+(sigma 10)
+
+------------------------------------------------------------
+
+> > (defun sigma (x)
+  (cond ((= x 1) 1)
+        (t (+ x (sigma (- x 1))))))
+sigma
+> > (trace)
+t <== (trace)
+t
+> > (sigma 10)
+| (sigma 10)
+| | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | (= x 1)
+| | | | x
+| | | | 10 <== x
+| | | (= 10 1)
+| | | nil <== (= 10 1)
+| | | t
+| | | t <== t
+| | | (+ x (sigma (- x 1)))
+| | | | x
+| | | | 10 <== x
+| | | | (sigma (- x 1))
+| | | | | (- x 1)
+| | | | | | x
+| | | | | | 10 <== x
+| | | | | 9 <== (- x 1)
+| | | | (sigma 9)
+| | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | (= x 1)
+| | | | | | | x
+| | | | | | | 9 <== x
+| | | | | | (= 9 1)
+| | | | | | nil <== (= 9 1)
+| | | | | | t
+| | | | | | t <== t
+| | | | | | (+ x (sigma (- x 1)))
+| | | | | | | x
+| | | | | | | 9 <== x
+| | | | | | | (sigma (- x 1))
+| | | | | | | | (- x 1)
+| | | | | | | | | x
+| | | | | | | | | 9 <== x
+| | | | | | | | 8 <== (- x 1)
+| | | | | | | (sigma 8)
+| | | | | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | (= x 1)
+| | | | | | | | | | x
+| | | | | | | | | | 8 <== x
+| | | | | | | | | (= 8 1)
+| | | | | | | | | nil <== (= 8 1)
+| | | | | | | | | t
+| | | | | | | | | t <== t
+| | | | | | | | | (+ x (sigma (- x 1)))
+| | | | | | | | | | x
+| | | | | | | | | | 8 <== x
+| | | | | | | | | | (sigma (- x 1))
+| | | | | | | | | | | (- x 1)
+| | | | | | | | | | | | x
+| | | | | | | | | | | | 8 <== x
+| | | | | | | | | | | 7 <== (- x 1)
+| | | | | | | | | | (sigma 7)
+| | | | | | | | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | (= x 1)
+| | | | | | | | | | | | | x
+| | | | | | | | | | | | | 7 <== x
+| | | | | | | | | | | | (= 7 1)
+| | | | | | | | | | | | nil <== (= 7 1)
+| | | | | | | | | | | | t
+| | | | | | | | | | | | t <== t
+| | | | | | | | | | | | (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | x
+| | | | | | | | | | | | | 7 <== x
+| | | | | | | | | | | | | (sigma (- x 1))
+| | | | | | | | | | | | | | (- x 1)
+| | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | 7 <== x
+| | | | | | | | | | | | | | 6 <== (- x 1)
+| | | | | | | | | | | | | (sigma 6)
+| | | | | | | | | | | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | (= x 1)
+| | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | 6 <== x
+| | | | | | | | | | | | | | | (= 6 1)
+| | | | | | | | | | | | | | | nil <== (= 6 1)
+| | | | | | | | | | | | | | | t
+| | | | | | | | | | | | | | | t <== t
+| | | | | | | | | | | | | | | (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | 6 <== x
+| | | | | | | | | | | | | | | | (sigma (- x 1))
+| | | | | | | | | | | | | | | | | (- x 1)
+| | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | 6 <== x
+| | | | | | | | | | | | | | | | | 5 <== (- x 1)
+| | | | | | | | | | | | | | | | (sigma 5)
+| | | | | | | | | | | | | | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | (= x 1)
+| | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | 5 <== x
+| | | | | | | | | | | | | | | | | | (= 5 1)
+| | | | | | | | | | | | | | | | | | nil <== (= 5 1)
+| | | | | | | | | | | | | | | | | | t
+| | | | | | | | | | | | | | | | | | t <== t
+| | | | | | | | | | | | | | | | | | (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | 5 <== x
+| | | | | | | | | | | | | | | | | | | (sigma (- x 1))
+| | | | | | | | | | | | | | | | | | | | (- x 1)
+| | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | 5 <== x
+| | | | | | | | | | | | | | | | | | | | 4 <== (- x 1)
+| | | | | | | | | | | | | | | | | | | (sigma 4)
+| | | | | | | | | | | | | | | | | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | | | | (= x 1)
+| | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | 4 <== x
+| | | | | | | | | | | | | | | | | | | | | (= 4 1)
+| | | | | | | | | | | | | | | | | | | | | nil <== (= 4 1)
+| | | | | | | | | | | | | | | | | | | | | t
+| | | | | | | | | | | | | | | | | | | | | t <== t
+| | | | | | | | | | | | | | | | | | | | | (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | 4 <== x
+| | | | | | | | | | | | | | | | | | | | | | (sigma (- x 1))
+| | | | | | | | | | | | | | | | | | | | | | | (- x 1)
+| | | | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | | | 4 <== x
+| | | | | | | | | | | | | | | | | | | | | | | 3 <== (- x 1)
+| | | | | | | | | | | | | | | | | | | | | | (sigma 3)
+| | | | | | | | | | | | | | | | | | | | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | | | | | | | (= x 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | | | | 3 <== x
+| | | | | | | | | | | | | | | | | | | | | | | | (= 3 1)
+| | | | | | | | | | | | | | | | | | | | | | | | nil <== (= 3 1)
+| | | | | | | | | | | | | | | | | | | | | | | | t
+| | | | | | | | | | | | | | | | | | | | | | | | t <== t
+| | | | | | | | | | | | | | | | | | | | | | | | (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | | | | 3 <== x
+| | | | | | | | | | | | | | | | | | | | | | | | | (sigma (- x 1))
+| | | | | | | | | | | | | | | | | | | | | | | | | | (- x 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 3 <== x
+| | | | | | | | | | | | | | | | | | | | | | | | | | 2 <== (- x 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | (sigma 2)
+| | | | | | | | | | | | | | | | | | | | | | | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | | | | | | | | | | (= x 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 2 <== x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | (= 2 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | nil <== (= 2 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | t
+| | | | | | | | | | | | | | | | | | | | | | | | | | | t <== t
+| | | | | | | | | | | | | | | | | | | | | | | | | | | (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 2 <== x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | (sigma (- x 1))
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | (- x 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 2 <== x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 1 <== (- x 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | (sigma 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | (= x 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 1 <== x
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | (= 1 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | t <== (= 1 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | 1 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | 1 <== (sigma 1)
+| | | | | | | | | | | | | | | | | | | | | | | | | | | 3 <== (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | | | | | | | | | | | 3 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | | | | | | | | 3 <== (sigma 2)
+| | | | | | | | | | | | | | | | | | | | | | | | 6 <== (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | | | | | | | | 6 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | | | | | 6 <== (sigma 3)
+| | | | | | | | | | | | | | | | | | | | | 10 <== (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | | | | | 10 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | | | | 10 <== (sigma 4)
+| | | | | | | | | | | | | | | | | | 15 <== (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | | | | 15 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | | | | 15 <== (sigma 5)
+| | | | | | | | | | | | | | | 21 <== (+ x (sigma (- x 1)))
+| | | | | | | | | | | | | | 21 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | | | | 21 <== (sigma 6)
+| | | | | | | | | | | | 28 <== (+ x (sigma (- x 1)))
+| | | | | | | | | | | 28 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | | | | 28 <== (sigma 7)
+| | | | | | | | | 36 <== (+ x (sigma (- x 1)))
+| | | | | | | | 36 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | | | | 36 <== (sigma 8)
+| | | | | | 45 <== (+ x (sigma (- x 1)))
+| | | | | 45 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| | | | 45 <== (sigma 9)
+| | | 55 <== (+ x (sigma (- x 1)))
+| | 55 <== (cond ((= x 1) 1) (t (+ x (sigma (- x 1)))))
+| 55 <== (sigma 10)
+55
+
+------------------------------------------------------------
+From yasuda ＠ mfc.bakkers.gr.jp  Thu Jun  4 12:47:24 2009
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu Jun  4 12:47:28 2009
+Subject: [SML 7563] Re: 第8回Smalltalk勉強会＠京都
+In-Reply-To: <4A2717EC.8090809@cc.kyoto-su.ac.jp>
+References: <4A1C760F.1010907@cc.kyoto-su.ac.jp>
+	<4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+	<4A2717EC.8090809@cc.kyoto-su.ac.jp>
+Message-ID: <5C90003C-C5B3-47A5-A851-927DA2AC617C@mfc.bakkers.gr.jp>
+
+京産大の安田です。
+
+> 昨夜に行った京都駅前でのSmalltalk勉強会の簡単な報告を 
+> します。
+
+ありがとうございました。
+
+リターン（^）の挙動などを帰りの電車とか今とかちょろちょろと
+調べていたのですが、、
+デバッガの出してくれるバイトコードを見ているわけです、、、
+
+OrderedCollection new add: 100; add: 110; add: 120
+
+などと書いて、カスケードがどのように振る舞うか、実際の
+スタックの動きをトレスしていると、はて、分からんように
+なりました。
+
+で、調べてみるとカスケードのバイトコードの意味が
+分かったのでこちらへ報告。。。(@_@!)
+
+＃カッコ悪いことをしているような気がしますが、
+＃まあいいか、、、
+
+====== 報告始まり
+
+上のコードのバイトコードは、
+
+1 <34> push OrderedCollection
+2 <BC> send new
+3 <68> dup first
+4 <D8 64> push 100
+6 <B8> send add:
+7 <69> dup
+8 <D8 6E> push 110
+10 <B8> send add:
+11 <6A> dup last
+12 <D8 78> push 120
+14 <B8> send add:
+15 <65> return
+
+なわけですが、単純にやると僕の頭のスタックには
+OrderedCollection のインスタンスが積み残されたり、
+変なことが起きます。
+要するに dup first, dup, dup last の挙動が
+分からないのです。。
+
+ので、バイトコード一覧を捜すと、以下に仕様がありました。
+http://www.cincomsmalltalk.com/pdf/TechNotes/vwBytecodes.pdf
+
+dup first, dup, dup last については、
+
+OpDupFirst 16r68
+Duplicate the top value on the stack, in preparation to send the first  
+message of a cascade.
+The duplicated value is the receiver of the cascaded messaages.
+スタックトップを複製するカスケードの最初の準備でやる、と。
+（へえ。もっぱらソレ用みたいな感じだな！）
+複製されるのはカスケードされるメッセージのレシーバだと。
+
+OpDupNext 16r69
+Pop the top value off the stack, then duplicate the new top value of  
+the stack.
+This is used in preparing to send a message that is part of a cascade,  
+when the message is neither the first nor the last message in the  
+cascade.
+In such a case, the value which is to be popped is the return value of  
+the preceding message of the cascade, and the value being duplicated  
+is the receiver of the cascade.
+スタックトップをポップして（捨てて！）、新たにスタックトップ 
+となった値を複製、ですと！
+カスケードの、それも先頭でも途中でもない時に使われるとある。 
+（やっぱ専用か）
+このような場合、ポップされたvalueは先のカスケードされた 
+メッセージの結果であるはずで、かつ複製されたvalueは、カ 
+スケードのレシーバであるはず、と。
+（もうまったく決めうちというか専用ね。）
+
+OpNoDup 16r6A
+Pop the top value off the stack.
+The popped value is the return value of the previous message send,  
+removed in preparation to send the last message of a cascade.
+（この命令 6A はデバッガなどの bytecode 表示では dup  
+last と表示される。そっちのほうが分かりやすくないか？いやまあ 
+意味的には確かに何も dup しないんだけれども。）
+スタックの値をポップする。（だけかい！）
+ポップされた value は直前に送られたメッセージの戻り値で 
+あるはずだが、カスケード中の最後のメッセージ送信の準備のため 
+に取り除くのだ、と。
+（あれ？単なる pop 命令てのは無いのか？？そういえば見た 
+ことがない。）
+
+というわけで非常に汎用的な字面にダマされましたが、
+なんのことはない、カスケード専用命令、それもワンセット
+でそのように動作するように揃えられてるのですね。
+
+========== 以上調べものおわり。。
+
+これで疑問（頭の中のスタック積み残し）は消えました。。
+カスケードってのは表記だけかいなと思ったのですが、いや
+はや、バイトコードごとカスケードに特化された構造をして
+ました。。(@_@)
+
+で、確かにデバッガやら何やらが役に立ちました。はい。
+
+でわでわ								Yasu.
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jun  4 13:22:48 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jun  4 13:22:50 2009
+Subject: [SML 7564] Re: 第8回Smalltalk勉強会＠京都
+In-Reply-To: <5C90003C-C5B3-47A5-A851-927DA2AC617C@mfc.bakkers.gr.jp>
+References: <4A1C760F.1010907@cc.kyoto-su.ac.jp>	<4A25EBC7.8060200@cc.kyoto-su.ac.jp>	<4A2717EC.8090809@cc.kyoto-su.ac.jp>
+	<5C90003C-C5B3-47A5-A851-927DA2AC617C@mfc.bakkers.gr.jp>
+Message-ID: <4A274C18.3020008@cc.kyoto-su.ac.jp>
+
+Yasuda Yutaka さんは書きました:
+> これで疑問（頭の中のスタック積み残し）は消えました。。
+
+祝着至極です。
+
+> カスケードってのは表記だけかいなと思ったのですが、いや
+> はや、バイトコードごとカスケードに特化された構造をして
+> ました。。(@_@)
+
+でしょ、カスケードは使えるだけ使いなさい、という感じですよね。
+仮想マシンの実行の様相は、まさにカスケード（流れ落ちる滝）です。
+
+> で、確かにデバッガやら何やらが役に立ちました。はい。
+
+今、京都の勉強会でやっていることは、
+後々になってボディブローのように効いてくることばかり。
+
+数々のボディブローを打って繰り出しておかないと、
+アプリケーションを撃破（ノックアウト）できない。
+逆に、アプリケーションにＫＯされちゃいますから。
+
+--- 青木淳
+From tscompor ＠ gmail.com  Thu Jun  4 14:34:14 2009
+From: tscompor ＠ gmail.com (Takafumi Saikawa)
+Date: Thu Jun  4 14:34:18 2009
+Subject: [SML 7565] OpNoDupとOpPop
+In-Reply-To: <5C90003C-C5B3-47A5-A851-927DA2AC617C@mfc.bakkers.gr.jp>
+References: <4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+	<4A2717EC.8090809@cc.kyoto-su.ac.jp>
+	<5C90003C-C5B3-47A5-A851-927DA2AC617C@mfc.bakkers.gr.jp>
+Message-ID: <20090604.143335.91281815.tscompor@gmail.com>
+
+今日は。
+
+From: Yasuda Yutaka <yasuda@mfc.bakkers.gr.jp>
+Subject: [SML 7563] Re: 第8回Smalltalk勉強会＠京都
+Date: Thu, 4 Jun 2009 12:47:24 +0900
+Message-ID: <5C90003C-C5B3-47A5-A851-927DA2AC617C@mfc.bakkers.gr.jp>
+
+yasuda> （あれ？単なる pop 命令てのは無いのか？？そういえば見た 
+yasuda> ことがない。）
+
+102番にOpPopがあり、動作もそれほど違いが無さそうでしたので、
+MethodContextをインスペクトしている間に
+
+self method byteAt: 11 put: 102
+
+として書き換えてみましたが、簡単な例では問題なく動きました。
+(デコンパイルは失敗するようになってましたが)
+
+OpPopとOpNoDupで本当に違いが無いのか気になります。
+
+
+昔のSmalltalk-80には dup first や dup last にあたる物が
+無いように見えます。Bluebookの596ページには
+(http://stephane.ducasse.free.fr/FreeBooks/BlueBook/Bluebook.pdf の 618ページ)
+"136 Duplicate Stack Top" 以外見あたりませんし、Squeak1.2では
+
+self halt.
+OrderedCollection new add: 100; add: 110; add: 120
+
+が
+
+29 <70> self
+30 <D0> send: halt
+31 <87> pop
+32 <41> pushLit: OrderedCollection
+33 <CC> send: new
+34 <88> dup
+35 <23> pushConstant: 100
+36 <E2> send: add:
+37 <87> pop
+38 <88> dup
+39 <24> pushConstant: 110
+40 <E2> send: add:
+41 <87> pop
+42 <25> pushConstant: 120
+43 <E2> send: add:
+44 <7C> returnTop
+
+となりました。(16r88 = 10r136)
+
+
+才川隆文
+From abee ＠ squeakland.jp  Thu Jun  4 21:06:42 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Jun  4 21:07:06 2009
+Subject: [SML 7566] Re: メーリングリストの一時停止及び運用ドメインの変更のお知らせ
+In-Reply-To: <49B349A8.9000201@akademia.co.jp>
+References: <49A3DA3C.1020300@akademia.co.jp> <49B349A8.9000201@akademia.co.jp>
+Message-ID: <2d5d52a80906040506q2a0d6e0dl2002e98ef54f3cfc@mail.gmail.com>
+
+こんにちは、阿部です。
+
+「sml@sra.co.jp のアーカイブ」
+http://www.smalltalk.jp/SML/archives/SRA.archives/index.html
+の「並べ順:」が、
+
+Forbidden
+You don't have permission to access
+/SML/archives/SRA.archives/2004-September/thread.html on this server.
+
+で読めなくなっているようです(「ダウンロード版」はOK)。
+たぶんこのメンテナンスの影響だと思うのですが、いかがでしょうか(> 桑谷さん)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/03/08 13:29 Tsuyoshi KUWATANI <kuwatani@akademia.co.jp>:
+> SMLメンバーのみなさま
+>
+> メーリングリストの運用を行っている桑谷です。
+>
+> 予定しておりましたサーバメンテナンスおよび運用ドメインの変更が
+> 完了しました．メールアドレスおよびホームページのアドレスが変更に
+> なった以外は今まで通りご利用いただけます．
+>
+>  メールアドレス: sml@smalltalk.jp
+>  ホームページ: http://www.smalltalk.jp/SML/index.html
+>
+> 今後ともよろしくお願いします．
+>
+> (2009/02/24 20:30), Tsuyoshi KUWATANI さんは書きました:
+>> SMLメンバーのみなさま
+>>
+>> メーリングリストの運用を行っている桑谷です。
+>>
+>> メーリングリストを運用しているサーバのメンテナンスに伴い
+>> 下記の期間，メーリングリストのサービスを一時停止いたします．
+>>
+>>   日 時：2009年3月8日(日)　7:30 〜 13:30
+>>   内 容：電源設備の定期点検によるサービスの停止
+>>
+>> また，以前(といっても半年近く前[SML 7419]ですが)アナウンスしていました
+>> メーリングリストの運用ドメインの変更作業を
+>> メーリングリストの一時停止に合わせて行いたいと思います．
+>>
+>>   旧: sml@akademia.co.jp
+>>   新: sml@smalltalk.jp
+>>
+>> SMLの登録者の情報はそのまま引き継ぎますので
+>> 再登録などは必要ありませんが、メールの振り分け設定の変更など
+>> 行って頂くことになります。
+>>
+>> メーリングリストの復旧，ドメインの移行が終了次第お知らせいたします．
+>> ご迷惑をおかけしますが，よろしくお願いします．
+>>
+>
+>
+> --
+> 桑谷 剛史
+> kuwatani@akademia.co.jp
+>
+From kuwatani ＠ akademia.co.jp  Thu Jun  4 21:30:43 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Jun  4 21:30:49 2009
+Subject: [SML 7567] Re: メーリングリストの一時停止及び運用ドメインの変更のお知らせ
+In-Reply-To: <2d5d52a80906040506q2a0d6e0dl2002e98ef54f3cfc@mail.gmail.com>
+References: <49A3DA3C.1020300@akademia.co.jp> <49B349A8.9000201@akademia.co.jp>
+	<2d5d52a80906040506q2a0d6e0dl2002e98ef54f3cfc@mail.gmail.com>
+Message-ID: <4A27BE73.4050505@akademia.co.jp>
+
+こんばんは 桑谷 です．
+
+(2009/06/04 21:06), Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> 
+> 「sml@sra.co.jp のアーカイブ」
+> http://www.smalltalk.jp/SML/archives/SRA.archives/index.html
+> の「並べ順:」が、
+> 
+> Forbidden
+> You don't have permission to access
+> /SML/archives/SRA.archives/2004-September/thread.html on this server.
+> 
+> で読めなくなっているようです(「ダウンロード版」はOK)。
+> たぶんこのメンテナンスの影響だと思うのですが、いかがでしょうか(>  桑谷さん)。
+
+ファイルのパーミションが間違っていたようでした．
+正しいファイルパーミションに修正しましたので見えるようになっているはずです．
+ご迷惑をおかけしてすみません m(__)m
+
+＞阿部さん
+お知らせありがとうございました．
+
+-- 
+kuwatani
+From dogatana ＠ gaia.eonet.ne.jp  Thu Jun  4 23:42:18 2009
+From: dogatana ＠ gaia.eonet.ne.jp (toshihiko ichida)
+Date: Thu Jun  4 23:29:49 2009
+Subject: [SML 7568] Re: ブラックブック中のURLの書き換え
+In-Reply-To: <4A2620AF.6080104@cc.kyoto-su.ac.jp>
+References: <4A2620AF.6080104@cc.kyoto-su.ac.jp>
+Message-ID: <4A27DD4A.5080608@gaia.eonet.ne.jp>
+
+いちだ＠京都です。
+
+AOKI Atsushi さんは書きました:
+> 青木＠京都上賀茂です。
+> 
+> ブラックブックの中で、SRAのURLを参照しているところがいくつか
+> あります。私のホームページを京都産業大学へ移行したことにより、
+> アクセスができなくなっているとのご指摘を受けました。以下のよ
+> うな新旧になりますので、書き換えをよろしくお願い申し上げます。
+> 
+> 旧）
+> http://www.sra.co.jp/people/aoki/SmalltalkBook/
+> 
+> 新）
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/
+
+Smalltalkイディオムも移ってるみたいですね。
+404が出てびっくりしました。
+
+--
+いちだ
+
+From yasuda ＠ mfc.bakkers.gr.jp  Fri Jun  5 00:01:45 2009
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Fri Jun  5 00:01:48 2009
+Subject: [SML 7569] Re: OpNoDupとOpPop
+In-Reply-To: <20090604.143335.91281815.tscompor@gmail.com>
+References: <4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+	<4A2717EC.8090809@cc.kyoto-su.ac.jp>
+	<5C90003C-C5B3-47A5-A851-927DA2AC617C@mfc.bakkers.gr.jp>
+	<20090604.143335.91281815.tscompor@gmail.com>
+Message-ID: <D8FA658E-6DAE-4047-881A-588CD483186D@mfc.bakkers.gr.jp>
+
+安田です。
+
+> 今日は。
+
+はい。こんばんわ。。。(^_^)
+
+> 102番にOpPopがあり、動作もそれほど違いが無さそうでし 
+> たので、
+> MethodContextをインスペクトしている間に
+>
+> self method byteAt: 11 put: 102
+
+うぉぅ！（おもわず声が出てしまいました。）
+
+＃勉強になります。。。
+
+> OpPopとOpNoDupで本当に違いが無いのか気になります。
+
+VM のソースを見るのが早そうではありますが、、どうも
+http://www.cincomsmalltalk.com/userblogs/cincom/blogView?content=vwDeveloper
+このあたりをクリアせんといかんようで。。(=_=)
+
+＃とりあえず「今は（違いは）無い」に一票！
+
+> 昔のSmalltalk-80には dup first や dup last  
+> にあたる物が
+> 無いように見えます。
+...
+> 37 <87> pop
+> 38 <88> dup
+
+いやーもう、、、これだったら分かりやすかったんですけど
+ねえ。。(^_^!)
+
+dup first = 普通に言うところの dup
+dup = 普通に言うところの pop ; dup
+dup last = 普通に言うところの pop
+
+では何の事やら、、、
+
+でわでわ									Yasu.
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Jun  5 06:16:30 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Jun  5 06:16:37 2009
+Subject: [SML 7570] Re: ブラックブック中のURLの書き換え
+In-Reply-To: <4A27DD4A.5080608@gaia.eonet.ne.jp>
+References: <4A2620AF.6080104@cc.kyoto-su.ac.jp>
+	<4A27DD4A.5080608@gaia.eonet.ne.jp>
+Message-ID: <4A2839AE.7080109@cc.kyoto-su.ac.jp>
+
+toshihiko ichida さんは書きました:
+> Smalltalkイディオムも移ってるみたいですね。
+
+はい、Smalltalkイディオムの移行は完了しています。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/SmalltalkIdioms/
+
+1990年代に書き下ろしたものは、HTML2.xやHMTL3.xですので、移行
+にあたって、モダンなHTMLに書き換えながら行っています。
+
+以前に公開されていたものよりも、もっといいものにして公開して
+ゆくつもりです。（私の命が続けばですが…）
+
+しばらくの間、皆さんには不都合をおかけしますが、どうかご辛抱
+のほどよろしくお願いします。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+From asaoka ＠ cc.kyoto-su.ac.jp  Fri Jun  5 12:38:40 2009
+From: asaoka ＠ cc.kyoto-su.ac.jp (ASAOKA Hiroko)
+Date: Fri Jun  5 12:39:01 2009
+Subject: [SML 7571] Re: 第8回Smalltalk勉強会＠京都
+In-Reply-To: <4A2717EC.8090809@cc.kyoto-su.ac.jp>
+References: <4A1C760F.1010907@cc.kyoto-su.ac.jp>	<4A25EBC7.8060200@cc.kyoto-su.ac.jp>
+	<4A2717EC.8090809@cc.kyoto-su.ac.jp>
+Message-ID: <4A289340.7000008@cc.kyoto-su.ac.jp>
+
+こんにちは。浅岡です。
+
+AOKI Atsushi さんは書きました:
+> ＃きっと浅岡さんが差し入れの報告をしてくれるにちがいない。
+
+報告が遅くなってしまいましたが、ご了承くださいませ〜。
+
+
+今回も美味しい差し入れありがとうございます。
+
+安田さん
+　　京都北山　マールブランシュ
+　　http://www.malebranche.co.jp/
+　　プチパイ「SAZARE」さざれ　白ごま
+
+坂本さん
+　　南京町　老祥記
+　　http://www.roushouki.com/
+　　豚まん
+　　☆早い者勝ちでいただきました〜☆
+
+次回は
+07月01日（水）19:00〜21:00
+です。
+
+今度はメールの内容をちゃんとチェックしておきます・・・(^^;
+
+来月もよろしくお願いいたします。
+
+-- 
+
+    浅岡 浩子(ASAOKA Hiroko)
+From sadie ＠ kind.ocn.ne.jp  Sat Jun  6 15:54:07 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Sat Jun  6 15:54:22 2009
+Subject: [SML 7572] パーセルTwoflowerについて
+Message-ID: <EDFE86AD1FAA4913BC95023F1754C5CE@sunaoPC>
+
+　古川と申します。
+　本を見ながらVisualWorksに触っているだけの私が娯楽に走るのも良いだろうと思って、Parcel ManagerのSuggestionsのToysでテトリスとかを見つけて遊んでいたところ、 
+そのすぐ下にTwoflowerBundleというWeb Browserを発見したので早速ロードしたところ、 
+
+
+Unhandled exception: Message not understood: #createDocument
+
+と冷たくノーティファイア画面が出てきました。デバッガを開いてみたところ、
+
+Twoflower.TfDocumentModel>>htmlString:
+
+というところの次からさまよい始めているということがわかりました。メソッドhtmlString:の中身は、
+
+htmlString: aString
+
+ self htmlAspect value: aString.
+ self createDocument.
+
+となっていました。システムブラウザでクラスTfDocumentModelを見てもcreateDocumentというメソッドはありませんでした。ひょっとしてVistaのユーザーアカウントコントロールでひっかかったかなと思い確認もしてみたのですがユーザーアカウントコントロールはオフでした（テトリスのハイスコアのファイルも書き込めています）。
+　TwoflowerはcreateDocument未実装のため使えないと解釈してしまっていいのでしょうか（まさかとは思いますが何回かブルースクリーンになったことがあるのでそれで消えたとか思うこともありました）。ちなみに使っているVisualWorksはVisualWorks7.6ncです。ほかのバージョンの事はわかりません。ほかの方の体験記か聞ければ幸いです。 
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Jun  6 22:50:40 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Jun  6 22:50:45 2009
+Subject: [SML 7573] Seaside へ GO!!(最終回)が掲載されました
+Message-ID: <JxLVy03H9laKjgnxGwqs7EHg2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、「Seaside へ GO!!」最終回が「オブジェクトの広場」に掲載されました。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/seaside6/index.html
+
+今回はCSSやAjaxとの融合が主なテーマになっています。
+
+この際まとめて読んでみたいという人は、以下をどうぞ。
+
+「Seaside へ GO!!インデックスページ」
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/index.html
+
+SmalltalkでWebアプリケーションを作ることに興味のある方、週末にでも
+じっくりとお読み下さい。
+
+---
+[:masashi | ^umezawa]
+From ka.minami ＠ nifty.com  Sat Jun  6 23:54:47 2009
+From: ka.minami ＠ nifty.com (Kazuki Minamitani)
+Date: Sat Jun  6 23:54:51 2009
+Subject: [SML 7574] Re: パーセルTwoflowerについて
+In-Reply-To: <EDFE86AD1FAA4913BC95023F1754C5CE@sunaoPC>
+References: <EDFE86AD1FAA4913BC95023F1754C5CE@sunaoPC>
+Message-ID: <26b869960906060754ld7bcddbo5aad3d2991a6b86d@mail.gmail.com>
+
+南谷といいます。
+こんにちは。
+
+依存しているパッケージが読み込まれていないようですね。
+Cincom Public Repositoryからインストールすれば、依存関係が解決されて、そのエラーは出なくなると思います。
+
+1. VisualLauncherの右下(Not Connected)をクリックし、Connect to Cincom Public Repositoryを選択
+2. VisualLauncher - [Store] - [Published Items]で登録ソフトの一覧画面を開く
+3. リストから、Twoflower Bundleの[ 0.5.45]を選択、Load
+4. 途中依存しているパッケージについてきかれるが、最新のものを選び先に進める
+5. TwoflowerBrowser open
+
+一応動作はするようですが、明らかに作りかけで放置されています。
+ご自分で改造や日本語対応を楽しむのでなければ、あまり深入りされないほうが良いと感じました。
+
+
+
+2009/06/06 15:54 に sunao furukawa<sadie@kind.ocn.ne.jp> さんは書きました:
+> 　古川と申します。
+> 　本を見ながらVisualWorksに触っているだけの私が娯楽に走るのも良いだろうと思って、Parcel
+> ManagerのSuggestionsのToysでテトリスとかを見つけて遊んでいたところ、 そのすぐ下にTwoflowerBundleというWeb
+> Browserを発見したので早速ロードしたところ、
+>
+> Unhandled exception: Message not understood: #createDocument
+>
+> と冷たくノーティファイア画面が出てきました。デバッガを開いてみたところ、
+>
+> Twoflower.TfDocumentModel>>htmlString:
+>
+> というところの次からさまよい始めているということがわかりました。メソッドhtmlString:の中身は、
+>
+> htmlString: aString
+>
+> self htmlAspect value: aString.
+> self createDocument.
+>
+> となっていました。システムブラウザでクラスTfDocumentModelを見てもcreateDocumentというメソッドはありませんでした。ひょっとしてVistaのユーザーアカウントコントロールでひっかかったかなと思い確認もしてみたのですがユーザーアカウントコントロールはオフでした（テトリスのハイスコアのファイルも書き込めています）。
+> 　TwoflowerはcreateDocument未実装のため使えないと解釈してしまっていいのでしょうか（まさかとは思いますが何回かブルースクリーンになったことがあるのでそれで消えたとか思うこともありました）。ちなみに使っているVisualWorksはVisualWorks7.6ncです。ほかのバージョンの事はわかりません。ほかの方の体験記か聞ければ幸いです。
+>
+>
+From umejava ＠ mars.dti.ne.jp  Thu Jun 18 23:34:38 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Jun 18 23:34:51 2009
+Subject: [SML 7575] 第10回Smalltalk勉強会のお知らせ
+Message-ID: <JxeXASEl9W37iQKadN0tDnpg1@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。今回は金曜日です。
+
+日時: 2009/6/24(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai10kaismalltalkbenkyoukai
+
+今回のテーマは「Smalltalkで正規表現」です。多分「鬼車 for VisualWorks」
+の中の人が、何かしゃべってくれます。
+Smalltalkで正規表現というのも一見ミスマッチですが、昨今はやりの集合知系
+の実装にはきっと役立つわけです。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+気になる方はこのMLにメールを送っていただいても良いです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Thu Jun 18 23:43:48 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Jun 18 23:43:54 2009
+Subject: [SML 7576] Re: 第10回Smalltalk勉強会のお知らせ
+In-Reply-To: <JxeXASEl9W37iQKadN0tDnpg1@mars.dti.ne.jp>
+References: <JxeXASEl9W37iQKadN0tDnpg1@mars.dti.ne.jp>
+Message-ID: <JxpSsD7WLi_YQgzl8BYcBSMA6@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+すみません。また間違っていました。水曜日です。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。今回は金曜日です。
+> 
+> 日時: 2009/6/24(水) 19:00- (2,3時間程度)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> または「自由自在Squeakプログラミング」
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai10kaismalltalkbenkyoukai
+> 
+(snip)
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Jun 23 10:45:05 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Jun 23 10:45:16 2009
+Subject: [SML 7577] 第9回Smalltalk勉強会＠京都
+Message-ID: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+第9回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+JR京都駅前にご参集ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto9
+
+第9回 Smalltalk勉強会＠京都
+日時：2009年07月01日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+前回は3.6のカスケードまでゆきましたので、今回は代入やリターン
+をサクっと終わらせて、3.7のブロックを解題してゆきます。ブロッ
+クは略称でして、正式な名称はブロッククロージャになります。コ
+ンテクスト（ブロックコンテクストやメソッドコンテクスト）との
+縁がとても深いオブジェクトであり、 Smalltalk実行評価系の中核
+をなします。ブロッククロージャをモノにできれば、Smalltalkをモ
+ノにしたと言っても過言ではありません。勉強会を始めて第9回目に
+なりますが、ここが大きな山場でしょう。なお一層、ゆっくりと進
+みたいと思います。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From nisinaka ＠ sra.co.jp  Thu Jun 25 16:04:46 2009
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Thu Jun 25 16:05:01 2009
+Subject: [SML 7578] [ANNOUNCE] Jun for Java (Jun729)
+Message-ID: <20090625155924.DBF3.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン729を公開します。
+
+  バージョン721からの主な変更点は、以下の通りです。
+
+    * (new feature) JunDummyWriterは、書き出した文字の数を数える
+      ためだけのクラスです。
+
+    * (new feature) JunOpenGLCatalogModelは、いくつもの三次元オブ
+      ジェクトをひとつのウィンドウ上で閲覧し、操作するためのアプ
+      リケーションです。三次元オブジェクトをLSTファイルとして書き
+      出したり、読み込んだりして、カタログの内容を表示するHTMLファ
+      イルを生成することができます。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/729/Catalog.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/729/CatalogHTML/index.html
+
+    * (modification) JunOpenGLRendererを変更し、直接
+      JunOpenGLRenderingContextを受け取ってレンダリングを行うので
+      はなく、JunOpenGLDrawableを受け取るようにしました。これによっ
+      て、レンダラを指定する際に、具体的なレンダリングコンテキス
+      トを設定できるようになりました。
+
+    * (new feature) JunLispConverterは、一種のファクトリクラスで、
+      Lispリストを解釈して、オブジェクトを生成します。生成するオ
+      ブジェクトのクラスは、JunLispListを引数とするコンストラクタ
+      を定義し、あらかじめJunLispConverterに登録して使います。
+
+    * (modification) 幾何関連のクラスやOpenGL 3Dオブジェクト関連
+      のクラスを、JunLispConverterに登録し、Lispリストの形式から
+      オブジェクトが生成できるようにしました。
+
+    * (new feature) JunLispObjectインタフェースを導入し、クラス群
+      とJunLispConsの直接的な依存関係を排除しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Jun 29 13:42:59 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Jun 29 13:43:09 2009
+Subject: [SML 7579] Duration
+Message-ID: <4A484653.6080405@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+次期バージョンである VisualWorks 7.7 から、Duration というオ
+ブジェクトが具備されます。Magnitude のサブクラスで、比較演算
+や算術演算などができます。
+
+Object
+| Magnitude
+| | Duration
+
+Duration には totalNanoseconds というインスタンス変数が1つあ
+ります。ナノ秒ですから、かなり先を見越した造りになっています。
+
+どんなふうに用いるのでしょう。典型的な例を幾つかあげてみます。
+
+123.45 seconds
+==> 2 minutes 3.449996939 seconds
+
+123.45d seconds
+==> 2 minutes 3.45 seconds
+
+123.45s seconds
+==> 2 minutes 3.45 seconds
+
+123450 milliseconds
+==> 2 minutes 3.45 seconds
+
+123450000 microseconds
+==> 2 minutes 3.45 seconds
+
+2 days + 3 minutes + 123 seconds + 456789 microseconds - 2 hours
+==> 1 days 22 hours 5 minutes 3.456789 seconds
+
+ご覧のように、数が Duration のインスタンスを生成する単項メッ
+セージに応答できるのです。
+
+もう少し例をあげましょう。皆さんは、あるプログラムの走行時間
+を計測するのに、以下のようにしていたと思います。
+
+Time microsecondsToRun: [1000 factorial]
+==> 4018
+
+次期バージョンからは、下記のように書くことができます。
+
+(Time microsecondsToRun: [1000 factorial]) microseconds
+==> 4.054 milliseconds
+
+もっと簡潔に、次のように書き下ろしてもいいでしょう。
+
+[1000 factorial] timeToRun
+==> 3.998 milliseconds
+
+また、Delay との相性も良く、今まで次のように書いていたのを、
+
+(Delay forSeconds: 3.45) wait
+
+これからは以下のように書いてゆくことになると思います。
+
+3.45 seconds asDelay wait
+
+評価系のメッセージも、これからいろいろ作れそうで、面白そう。
+
+3 milliseconds
+    toFinish: [1000 factorial]
+    orElse:
+        [^Transcript
+            cr;
+            show: 'give up'].
+^Transcript
+    cr;
+    show: 'okay'
+
+さて、さて、皆さん、Duration の適切な日本語訳は何でしょうか？
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

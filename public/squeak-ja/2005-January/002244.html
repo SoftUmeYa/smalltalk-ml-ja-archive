@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2244] プラグイン中のFormのインスタンス変数の値について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202244%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclaSUwJSQlc0NmJE4bKEJG%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3Fb3JtGyRCJE4lJCVzJTklPyVzJTlKUT90JE5DTSRLJEQkJCRGGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002258.html">
+   <LINK REL="Next"  HREF="002245.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2244] プラグイン中のFormのインスタンス変数の値について</H1>
+    <B>久保田 吉彦</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202244%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclaSUwJSQlc0NmJE4bKEJG%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3Fb3JtGyRCJE4lJCVzJTklPyVzJTlKUT90JE5DTSRLJEQkJCRGGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2244] プラグイン中のFormのインスタンス変数の値について">kubota ＠ sie.dendai.ac.jp
+       </A><BR>
+    <I>2005年 1月 10日 (月) 15:24:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002258.html">[Squeak-ja: 2258] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+        <LI>次の記事 <A HREF="002245.html">[Squeak-ja: 2245] Re: プラグイン中のFormのインスタンス変数の値について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2244">[ 日付 ]</a>
+              <a href="thread.html#2244">[ スレッド ]</a>
+              <a href="subject.html#2244">[ 件名 ]</a>
+              <a href="author.html#2244">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>久保田と申します。
+はじめて投稿します、よろしくおねがいします。
+
+Linux上でUSBカメラの画像をSqueakに取り込めるようにプラグインを作成しています。
+(Fedora Core2でJasmineをつかってます)
+
+プラグインに渡したFormのインスタンス変数(width,height,depth)の値が
+２倍くらいになってしまうのですが、いったいなぜなのでしょうか？
+とりあえず高さと幅と深さを２で割って対応しています。
+
+Form extent: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">320 ＠ 240</A> depth:32として作成したFormオブジェクトをプラグインに渡すと、
+プラグイン中では幅が641、高さ421、深さが65となります。
+
+以下のプラグインを作成して確認しました。
+
+TestPlugin&gt;&gt;formTest:
+formTest: aForm
+|<i>width height depth|
+</I>self export: true.
+self primitive: 'formTest' parameters: #(Oop).
+width _ interpreterProxy fetchPointer: 1 ofObject: aForm.
+height _ interpreterProxy fetchPointer: 2 ofObject: aForm.
+depth _ interpreterProxy fetchPointer: 3 ofObject: aForm.
+self cCode: 'printf(&quot;%d,%d,%d\n&quot;,width,height,depth)'
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002258.html">[Squeak-ja: 2258] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+	<LI>次の記事 <A HREF="002245.html">[Squeak-ja: 2245] Re: プラグイン中のFormのインスタンス変数の値について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2244">[ 日付 ]</a>
+              <a href="thread.html#2244">[ スレッド ]</a>
+              <a href="subject.html#2244">[ 件名 ]</a>
+              <a href="author.html#2244">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

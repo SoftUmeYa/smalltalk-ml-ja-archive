@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2728] Re: Squeak の文字コードの扱いについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202728%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhayAbJEIkTko4GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCO3olMyE8JUkkTjA3JCQkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=437135A3.5000407%40metatoys.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002726.html">
+   <LINK REL="Next"  HREF="002729.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2728] Re: Squeak の文字コードの扱いについて</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202728%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhayAbJEIkTko4GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCO3olMyE8JUkkTjA3JCQkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=437135A3.5000407%40metatoys.org"
+       TITLE="[Squeak-ja: 2728] Re: Squeak の文字コードの扱いについて">tak ＠ metatoys.org
+       </A><BR>
+    <I>2005年 11月  9日 (水) 18:47:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002726.html">[Squeak-ja: 2726] Re: Squeak の文字コードの扱いについて
+</A></li>
+        <LI>次の記事 <A HREF="002729.html">[Squeak-ja: 2729] Re: Squeak の文字コードの扱いについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2728">[ 日付 ]</a>
+              <a href="thread.html#2728">[ スレッド ]</a>
+              <a href="subject.html#2728">[ 件名 ]</a>
+              <a href="author.html#2728">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+
+2) に関して、大島さんより情報を頂きましたので書いておきます。
+
+この件に関しては、sjis &lt;-&gt; unicode 変換に対して複数の可能性がある文字がある
+事が理由だそうです。私も文字コードに詳しくないのでうまく書けませんが、
+例えば ÷ に対する unicode の番号が二つあって、それが 128-255 の文字を
+変換していない原因との事でした。
+
+Takashi Yamamiya wrote:
+&gt;<i> 山宮です。
+</I>&gt;<i> 
+</I>&gt;<i> 1) に関して幾つか私信で情報を頂いたので書いておきます。
+</I>&gt;<i> 
+</I>&gt;<i> この問題の背景としては、阿部さんに 
+</I>&gt;<i> <A HREF="http://www.akademia.co.jp/Smalltalk/SML/archives/SRA.archives/2000-November/004719.html">http://www.akademia.co.jp/Smalltalk/SML/archives/SRA.archives/2000-November/004719.html</A> 
+</I>&gt;<i> を教えていただきました。
+</I>&gt;<i> 
+</I>&gt;<i> 林さんによると、MacRomanコードは今やお荷物なので近い内にどうにかするの
+</I>&gt;<i> でしょうが、いっぺんにVM込みでやる必要があるでしょう。VM のソースで言
+</I>&gt;<i> うと、sqWin32Window.c の clipboardWriteFromAt() 関数です、との事です。
+</I>&gt;<i> 参考になるサイトとして 「Windows 95 と Windows 98 で Unicode サポート」
+</I>&gt;<i> <A HREF="http://support.microsoft.com/default.aspx?scid=kb;ja;210341">http://support.microsoft.com/default.aspx?scid=kb;ja;210341</A> を教えてい
+</I>&gt;<i> ただきました。
+</I>&gt;<i> 
+</I>&gt;<i> また、川村さんによる関連記事が 
+</I>&gt;<i> <A HREF="http://squeak.qp.land.to/mt/archives/2005/11/unicode.html">http://squeak.qp.land.to/mt/archives/2005/11/unicode.html</A> にあります。
+</I>&gt;<i> 
+</I>&gt;<i> 皆様情報ありがとうございました。
+</I>&gt;<i> 
+</I>&gt;<i> Takashi Yamamiya wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i>主に大島さんや林さん。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>山宮です。もしかして FAQ なのかも知れませんが、
+</I>&gt;&gt;<i><A HREF="http://www.kukakuka.jp/squeak/bugs/view.php?id=18">http://www.kukakuka.jp/squeak/bugs/view.php?id=18</A> のバグ(クリップボー
+</I>&gt;&gt;<i>ドで'×'の文字が使えない)に関して難しい部分があるので教えて頂けません
+</I>&gt;&gt;<i>でしょうか。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>1) WinShiftJISClipboardInterpreter&gt;&gt;toSystemClipboard: の中では 
+</I>&gt;&gt;<i>   squeakToMac が使われ、 逆に
+</I>&gt;&gt;<i>   MacShiftJISClipboardInterpreter&gt;&gt;toSystemClipboard: では使われてい
+</I>&gt;&gt;<i>   ないのですが、MacRoman を使う時の方針はどうなっているのでしょうか。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>2) 例えば '×' convertToWithConverter: ShiftJISTextConverter new がき
+</I>&gt;&gt;<i>   ちんとマルチバイトに変換されない原因として、
+</I>&gt;&gt;<i>   EncodedCharSet class&gt;&gt;charFromUnicode: の中で意図的に 128-255 の文
+</I>&gt;&gt;<i>   字を変換していないように見えるのですが、意図を教えてください。
+</I>
+-- 
+Takashi Yamamiya := <A HREF="http://metatoys.org/">http://metatoys.org/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002726.html">[Squeak-ja: 2726] Re: Squeak の文字コードの扱いについて
+</A></li>
+	<LI>次の記事 <A HREF="002729.html">[Squeak-ja: 2729] Re: Squeak の文字コードの扱いについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2728">[ 日付 ]</a>
+              <a href="thread.html#2728">[ スレッド ]</a>
+              <a href="subject.html#2728">[ 件名 ]</a>
+              <a href="author.html#2728">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

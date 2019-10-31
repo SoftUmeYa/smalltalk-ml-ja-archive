@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2501] Re: Windows 版 Squeak での UDP パケット受信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202501%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=42C927BA.6060708%40m2.pbc.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002500.html">
+   <LINK REL="Next"  HREF="002502.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2501] Re: Windows 版 Squeak での UDP パケット受信について</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202501%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=42C927BA.6060708%40m2.pbc.ne.jp"
+       TITLE="[Squeak-ja: 2501] Re: Windows 版 Squeak での UDP パケット受信について">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 7月  4日 (月) 21:38:11 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002500.html">[Squeak-ja: 2500] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+        <LI>次の記事 <A HREF="002502.html">[Squeak-ja: 2502] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2501">[ 日付 ]</a>
+              <a href="thread.html#2501">[ スレッド ]</a>
+              <a href="subject.html#2501">[ 件名 ]</a>
+              <a href="author.html#2501">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。
+
+&gt;<i>とすると、receiveUDPDataInto:は何者なんでしょうか？
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>私がUDPで参考にしたものはすべてreceiveUDPDataInto:だったんですが…
+
+<A HREF="http://www.visoracle.com/squeakfaq/udp-socket.html">http://www.visoracle.com/squeakfaq/udp-socket.html</A>
+<A HREF="http://lists.squeakfoundation.org/pipermail/squeak-dev/2004-October/083286.html">http://lists.squeakfoundation.org/pipermail/squeak-dev/2004-October/083286.html</A>
+
+それでは。
+
+&gt;<i>それでは。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Masashi Umezawa wrote:
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>こんにちは
+</I>&gt;&gt;<i>梅澤です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>receiveUDPDataInto:ではなく、receiveDataInto:を使ってもう 
+</I>&gt;&gt;&gt;<i>まく
+</I>&gt;&gt;&gt;<i>いきませんか？
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>   
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>      
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>そうそう、確かこれでいまくいきます。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>SqueakMapに&quot;Remote Broadcasting Toolkit&quot;という、UDPを使った送受信プログラムが
+</I>&gt;&gt;<i>超簡単に作れるライブラリを置いています。よろしければお使いください。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i><A HREF="http://map1.squeakfoundation.org/sm/package/b2a8901d-2d9e-429a-ba9f-0d94998d9a9b">http://map1.squeakfoundation.org/sm/package/b2a8901d-2d9e-429a-ba9f-0d94998d9a9b</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>ではでは。
+</I>&gt;&gt;<i>---
+</I>&gt;&gt;<i>[:masashi | ^umezawa]
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.8/37 - Release Date: 2005/07/01
+
+__________________________________
+Save the earth
+<A HREF="http://pr.mail.yahoo.co.jp/ondanka/">http://pr.mail.yahoo.co.jp/ondanka/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002500.html">[Squeak-ja: 2500] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+	<LI>次の記事 <A HREF="002502.html">[Squeak-ja: 2502] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2501">[ 日付 ]</a>
+              <a href="thread.html#2501">[ スレッド ]</a>
+              <a href="subject.html#2501">[ 件名 ]</a>
+              <a href="author.html#2501">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

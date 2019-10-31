@@ -1,0 +1,785 @@
+From tomohiro ＠ sra.co.jp  Sat Apr  7 10:09:59 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:46 2007
+Subject: [Squeak-ja: 3471] Natural Smalltalk,
+	a natural language processing library on/against Squeak
+Message-ID: <200704071009.59645.tomohiro@sra.co.jp>
+
+おだです。
+
+Smalltalkや英語のテキストを自然言語処理の技術で分析する
+Squeak上のツールライブラリ Natural Smalltalkを開発しま
+したので公開します。
+
+http://map.squeak.org/package/624ed871-4e89-4343-8652-af38a873d0b4/autoversion/1
+
+Smalltalk（に限らずプログラミング言語）の自然言語的な側面
+に興味があり、Smalltalkプログラムに自然言語処理技術を適用
+して何ができるか試行錯誤をしているのですが、その試行錯誤で
+生まれたコードをまとめてライブラリとして公開することにしま
+した。
+
+NaturalSmalltalkではSmalltalkのプログラムを英単語に
+分解してクラスタリングやキーワード抽出、自動分類に用います。
+こうしてプログラムを単語に分解することで、
+* クラスタリング(K-means法)
+* 自動分類(tfidf, Naive Bayes)
+* キーワード抽出(tfidf, posterier probability)
+* 可視化(FastMap)
+をおこないます。
+
+また、実行された各メソッドの時間計測とキーワード抽出をおこなう
+MessageSpyや、Squeak環境内で実行中のプロセス群の実行コンテキスト
+のソースコードからキーワードを抽出するWhatyaDoingが応用例題として
+付属しています。
+
+実行の様子のスナップショットをいくつか添付します。
+ぜひ使ってみて感想をお聞かせください。
+---
+おだ
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Collection.png
+型:         image/png
+サイズ:     5710 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070407/364b541c/Collection.png
+From owa ＠ bg.wakwak.com  Sat Apr  7 22:07:58 2007
+From: owa ＠ bg.wakwak.com (Shu KONNO)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3472] Re: UNIX版 VM の SqueakImmX11Plugin4d
+In-Reply-To: <4600D222.9070305@nucba.ac.jp>
+References: <4600D222.9070305@nucba.ac.jp>
+Message-ID: <200704071307.l37D7wIZ081767@bg.wakwak.com>
+
+今野です、こんばんは
+
+Vine4.1 環境での rpm を作ってみました。
+ftp://owa.as.wakwak.ne.jp/pub/vine/4.0/RPMS/
+http://owa.as.wakwak.ne.jp/zope/labs/bbs/104/20
+http://owa.as.wakwak.ne.jp/zope/labs/bbs/104/21
+
+
+ビルドは問題ありませんし、単純な日本語入力操作もできました。
+まだ使い始めたばかりですが、とりあえずご報告まで。
+
+
+On Wed, 21 Mar 2007 15:35:14 +0900
+Tsutomu Hiroshima <tsutomu@nucba.ac.jp> wrote:
+> http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz
+> 
+> そういう事情で，今回キー入力の処理(関数 x2sqKeyInput)を，
+> 大きく変更しましたので，何か不具合があればお知らせ下さい．
+-- 
+Shu KONNO <owa@bg.wakwak.com>
+GnuPG Fingerprint = 4EE2 EC4E 2376 527B 6A8B  6CB6 C81F EB6A 4B3A 8221
+象歩 http://owa.as.wakwak.ne.jp/zope
+
+From turkey ＠ crew.sfc.keio.ac.jp  Tue Apr 10 20:42:03 2007
+From: turkey ＠ crew.sfc.keio.ac.jp (okada ken)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3473] Mac版Squeakの操作方法に関して
+Message-ID: <20070410204139.B5F7.TURKEY@crew.sfc.keio.ac.jp>
+
+慶應義塾大学の岡田です。「ことだま on Squeak」を作っています。
+
+
+
+ちょっと恥ずかしい質問かも知れないのですがよろしいでしょうか？
+
+慶應大学では「ことだま on Squeak」を使って授業をやっているのですが、今年
+度からコンピュータ室のＰＣが iMac になりました。それに伴い Mac 版 VM を
+使って動かしているのですが、Mac 上での Squeak 操作で疑問点が出てきました。
+
+疑問点その１．
+ハロの出し方として公式なものが「アップル（コマンド）キー＋左クリック」と
+いうのは理解しているのですが、何故か状況によっては「右クリック」でもハロ
+が出ます。ただ出るときと出ないときがあって（前者は確実にハロが出る）、こ
+れはどういう挙動なのだと理解すればいいのか、良く分かりません。
+
+「右クリックでハロって出せるの？」というのが疑問です。
+
+
+疑問点その２．
+ワールドメニューの出す時に「左クリック長押し」だと確実に出るのですが、
+Mac版ってそういう仕様なんですか？単なる「左クリック」でも出るのですが、
+こちらは出るときと出ないときがあります。
+
+「ワールドメニューを出すときの操作は、単なる左クリック？それとも左クリッ
+ク長押し？」というのが疑問です。
+
+
+どなたか教えていただけると助かります。またはMac 版の操作方法に関するマニュ
+アルとかの場所などがあれば、あるいは Squeak の中で「これこれこうすると設
+定を変更できる」みたいな方法があれば教えていただけると助かります。
+
+よろしくお願いします。
+
+
+それでは。
+
+ＰＳ：
+ちなみに ことだま on Squeak ではそこら辺の操作体系はいじっていません。
+
+-- 
+okada ken <turkey@crew.sfc.keio.ac.jp>
+
+
+From tetha ＠ st.rim.or.jp  Wed Apr 11 08:48:49 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3474] Re: Mac版Squeakの操作方法に関して
+In-Reply-To: <20070410204139.B5F7.TURKEY@crew.sfc.keio.ac.jp>
+References: <20070410204139.B5F7.TURKEY@crew.sfc.keio.ac.jp>
+Message-ID: <46D7B275-8F15-4822-891C-78310374AD1D@st.rim.or.jp>
+
+岡田さん、こんにちは。
+林です。
+
+これは私もちょっと問題かなと思ってたことであります。
+
+On 2007/04/10, at 20:42, okada ken wrote:
+
+> 疑問点その１．
+> ハロの出し方として公式なものが「アップル（コマンド）キー＋左クリック」と
+> いうのは理解しているのですが、何故か状況によっては「右クリック」でもハロ
+> が出ます。ただ出るときと出ないときがあって（前者は確実にハロが出る）、こ
+> れはどういう挙動なのだと理解すればいいのか、良く分かりません。
+>
+> 「右クリックでハロって出せるの？」というのが疑問です。
+
+　マウスのシステム環境設定次第なのですが右クリックで出すことができます。
+
+Windows のホイールマウスのホイールボタンを「中」ボタンとして、Smalltalk
+プログラム上の論理的な名称「レッド」、「イエロー」、「ブルー」との対応は
+
+	Win:   左      中（ホイール）  右
+	論理名: レッド  ブルー         イエロー
+
+となってますが。
+　一方 Mac ですけど、お使いになってるマウス（のドライバ）次第ですが、私の
+手元の Mighty Mouse では、ホイールに「ボタン3」、右クリックに「副ボタン」
+（これらはMacのシステム環境設定上での名称）を割り当てることができます。
+http://plusd.itmedia.co.jp/pcupdate/articles/0508/11/news018_2.html
+
+この場合、論理名および従来のMac特殊キー組合せとの対応は
+
+	Mac:     左      中（ボタン3）  右（副ボタン）
+	論理名:   レッド  イエロー       ブルー
+	特殊キー: なし    Opt キー       Cmd キー
+
+という対応になります。
+ですので、右クリックでハロが出て、ホイールをクリックすると Winでのポップ
+アップメニューを出すアクションになります（一応念のため、これは現在の私の
+個人的な設定状況に従った場合です。すくなくとも問題になっているマシンは、
+右クリックに「副ボタン」が割り当てられているように思われます）。
+　余談ですが、ホイールに「副ボタン」、右クリックに「ボタン3」を割り当てれば、
+Winと同じ操作環境になりそうですが、Mighty Mouse ではそれが出来ないようで
+す。もしかしたら別な機種のマウスでしたら、割当を交換することができるのか
+もしれません。
+ただ、システム管理者のご都合もあるのではと推測いたします。
+（X11 のソフトを使おうとするとこの設定の方が便利だったりします）
+
+　なお、ワールドメニューの
+「ヘルプ…」→「プリファレンス」のswapMouseButtons 
+でホイールと右クリックの動作を入れ替えることも出来るようです。
+
+　ところで、ハロが出たり出なかったりという件ですが、以下の件とも関係して
+そうです。
+
+> 疑問点その２．
+> ワールドメニューの出す時に「左クリック長押し」だと確実に出るのですが、
+> Mac版ってそういう仕様なんですか？単なる「左クリック」でも出るのですが、
+> こちらは出るときと出ないときがあります。
+>
+> 「ワールドメニューを出すときの操作は、単なる左クリック？それとも左クリッ
+> ク長押し？」というのが疑問です。
+
+　基本的には「単なる左クリック」でいいはずです。
+出たり出なかったりという辺りはハロもそうですけど VM のバグのように思われます。
+（イベントの取りこぼしがありそうです）
+また、お使いの Mac が Intel Mac であった場合、配布されている VM が PPC 専
+用なので、俗にいうロゼッタというエミュレータ上で動作しているため、これが
+影響しているのかもしれません。
+
+　もし、ハロが出ないモーフや状況が特定できるようでしたら教えていただけま
+すと助かります。
+
+「環境設定」がらみの話で、うろんな返信になってしまいましたが、お役に立ち
+ましたら幸いです。
+
+--
+林 徹也 Tetsuya HAYASHI
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From turkey ＠ crew.sfc.keio.ac.jp  Wed Apr 11 22:20:39 2007
+From: turkey ＠ crew.sfc.keio.ac.jp (okada ken)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3475] Re: Mac版Squeakの操作方法に関して
+In-Reply-To: <46D7B275-8F15-4822-891C-78310374AD1D@st.rim.or.jp>
+References: <20070410204139.B5F7.TURKEY@crew.sfc.keio.ac.jp>
+	<46D7B275-8F15-4822-891C-78310374AD1D@st.rim.or.jp>
+Message-ID: <20070411220534.95C3.TURKEY@crew.sfc.keio.ac.jp>
+
+岡田です。
+
+林さん、お返事ありがとうございまーす！
+
+> 　マウスのシステム環境設定次第なのですが右クリックで出すことができます。
+> 
+> Windows のホイールマウスのホイールボタンを「中」ボタンとして、Smalltalk
+> プログラム上の論理的な名称「レッド」、「イエロー」、「ブルー」との対応は
+> 
+> 	Win:   左      中（ホイール）  右
+> 	論理名: レッド  ブルー         イエロー
+> 
+> となってますが。
+
+う。そういえばどこかの本で、WindowsとMacのそれぞれの対応関係に関する記述
+を見たような気が。失礼しました。
+
+> 　なお、ワールドメニューの
+> 「ヘルプ…」→「プリファレンス」のswapMouseButtons 
+> でホイールと右クリックの動作を入れ替えることも出来るようです。
+
+これが一番知りたかった情報です。ここにあるんですね。
+
+
+> 　ところで、ハロが出たり出なかったりという件ですが、以下の件とも関係して
+> そうです。
+・
+・
+・
+> 　基本的には「単なる左クリック」でいいはずです。
+> 出たり出なかったりという辺りはハロもそうですけど VM のバグのように思われます。
+> （イベントの取りこぼしがありそうです）
+> また、お使いの Mac が Intel Mac であった場合、配布されている VM が PPC 専
+> 用なので、俗にいうロゼッタというエミュレータ上で動作しているため、これが
+> 影響しているのかもしれません。
+
+大学で使用しているのは iMac（MA589J/A）なので、「2.16Hz Intel Core 2 Duo」
+とスペック表にあります。めちゃめちゃ Intel ですね。それ絡みのバグの可能
+性が高いと言うことが分かったことだけで嬉しいです。
+
+> 　もし、ハロが出ないモーフや状況が特定できるようでしたら教えていただけま
+> すと助かります。
+
+注意して観察するようにします。分かったらここで報告させていただきます。
+
+> 「環境設定」がらみの話で、うろんな返信になってしまいましたが、お役に立ち
+> ましたら幸いです。
+
+とんでもありません。Mac 上での Squeak の状況が理解できれば授業運用の方法
+を考えられますから。とてつもなく有益でした。ありがとうございました。
+
+それでは。
+-- 
+okada ken <turkey@crew.sfc.keio.ac.jp>
+
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Fri Apr 13 06:30:46 2007
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3476]  squeak内から阿部さんのページを見たい
+Message-ID: <20070413063046304623.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+井上＠武蔵工大です。
+
+大変基本的なことですが、squeak内から阿部さんの
+http://swikis.ddo.jp/abee/3
+を見るにはどうすればいいのでしょう。scamperというのを起動してみました
+が、文字化けになってしまいました。「探す」ではsqueakland-bbs, 
+squeakland-projects, squeakland.jp, my squeakしかでないので、阿部さんの
+ページのプロジェクト置き場を参照してそこから直接作品を読み込みたいと思っ
+ております。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From abee ＠ squeakland.jp  Fri Apr 13 18:45:01 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3477] Re: squeak 内から阿部さんのページを見たい
+In-Reply-To: <20070413063046304623.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <20070413063046304623.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <461F511D385.8456ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 13 Apr 2007 06:30:46 +0900
+iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp> wrote:
+>大変基本的なことですが、squeak内から阿部さんの
+>http://swikis.ddo.jp/abee/3
+>を見るにはどうすればいいのでしょう。scamperというのを起動してみました
+>が、文字化けになってしまいました。
+
+市川さんのScamperMを使うことで可能になります。
+
+http://ich.homelinux.net:8080/squeak/58
+
+本来はEscキーで表示される「ワールド」メニューの「開く・・・」にある「
+SqueakMapパッケージ・ローダー」を使ってインストールできるのですが、サーバ
+の仕様が変わったのか、 Squeakland 2005Jでは現在使えなくなっています。
+そこで、以下のURLから直接mczファイルをダウンロードし、Squeakの画面にドロッ
+プしてロードします。
+
+http://map.squeak.org/accountbyid/399b98aa-84a2-41ca-8f79-d8269e9998a0/files/ScamperM-ich.12.mcz
+
+すると、ワールドメニューの「開く・・・」に「Multilingual Web Browser」が追加
+されるので、これを選択して開きます。
+
+もともとのScamperがテーブルをサポートしていないため、レイアウトが崩れます
+が、プロジェクトファイルへのリンクをクリックすることで作品を開くことがで
+きます。
+
+>「探す」ではsqueakland-bbs, 
+>squeakland-projects, squeakland.jp, my squeakしかでないので、阿部さんの
+>ページのプロジェクト置き場を参照してそこから直接作品を読み込みたいと思っ
+>ております。
+
+サーバの移転作業が長引き、Squekland.jpのSuperSwikiが使えない状態が続いて
+います。申し訳ありません。将来的には梅澤さんのSuperSwiki2も「探す」から開
+けるようになるかもしれませんので、ご期待ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Sat Apr 21 07:31:52 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3478] UNIX版 VMでの多言語入力
+Message-ID: <uodliptif.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+  長い間出遅れていましたが、ギリシャ人から(OLPCやLinux上で)Squeakにギ
+リシャ語が入力できないと言われたりしていた結果、自分で見てみようという
+気になってきました。
+
+  基本的には、translateCode()やrecode()などを呼ぶことなく、Xから来たキャ
+ラクターをそのままキーコードとして返すVM の起動時オプションをつくるの
+が良いかなと思っているのですが、その際に日本語もばっちり動くようにした
+いと思っています。
+
+  というわけで今から皆さんの努力に追いつきたいと思うのですが、
+
+http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz
+
+から追いかけていけばよいのでしょうか? 武藤さんの
+
+http://qml.610t.org/squeak/2.files/squeak-3.9-7-2006042801.tar.gz
+
+もみましたが、これはImmPluginとFreeBSD対応が主であるということですよね。
+
+  あいまいな質問で申し訳ありませんが、指示のほどよろしくお願いします。
+
+-- Yoshiki
+
+From mutoh ＠ openedu.org  Sat Apr 21 09:50:20 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3479] Re: UNIX版 VMでの多言語入力
+In-Reply-To: <uodliptif.wl%yoshiki@squeakland.org>
+References: <uodliptif.wl%yoshiki@squeakland.org>
+Message-ID: <86y7kmczzn.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+すいません、元気無いモードに入ってしまって、停滞気味です。
+
+At Fri, 20 Apr 2007 15:31:52 -0700,
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>   長い間出遅れていましたが、ギリシャ人から(OLPCやLinux上で)Squeakにギ
+> リシャ語が入力できないと言われたりしていた結果、自分で見てみようという
+> 気になってきました。
+> 
+>   基本的には、translateCode()やrecode()などを呼ぶことなく、Xから来たキャ
+> ラクターをそのままキーコードとして返すVM の起動時オプションをつくるの
+> が良いかなと思っているのですが、その際に日本語もばっちり動くようにした
+> いと思っています。
+
+(UNIXの)日本語のInput Methodの対応には、
+- XIM経由のもの(廣島さんのSqueakImmX11Plugin)
+- anthy対応(川村さんのanthy-agent利用のもの)
+- SKKの実装(古いPDA用イメージに入っているもの)
+があるようです。
+# MacとWindowsはよくわからないので、ごめんなさい(_O_)
+
+SCIM(http://www.scim-im.org)とか使えると、多言語対応は楽なのかなぁと思っ
+たりもします。
+# でも、CJKが主なのかなぁ…
+
+>   というわけで今から皆さんの努力に追いつきたいと思うのですが、
+> 
+> http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz
+> 
+> から追いかけていけばよいのでしょうか? 
+
+で、こちらはXIM経由でのIMなので、XIMを使う場合のスタートはこちらかと思
+います。
+
+>  武藤さんの
+> http://qml.610t.org/squeak/2.files/squeak-3.9-7-2006042801.tar.gz
+> もみましたが、これはImmPluginとFreeBSD対応が主であるということですよね。
+
+これは、FreeBSDのportでして、基本的にFreeBSD用のpatchをあてて、廣島さ
+んのSqueakImmX11Pluginを追加して作成するだけなので、特にあんまり意味は
+無いかと思います。
+
+>   あいまいな質問で申し訳ありませんが、指示のほどよろしくお願いします。
+
+こんな情報で参考になればいいんですが…
+
+
+SqueakNOSの日本語化も作業したいなぁと思ってるんですが、やっぱり日本語
+IMがどうしようかなと悩んでるので、私も情報いただけるとうれしいです。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「世の中に絶えて桜のなかりせば 春の心はのどけからまし」在原業平
+
+
+From tsutomu ＠ nucba.ac.jp  Mon Apr 23 14:52:16 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3480] Re: UNIX版 VMでの多言語入力
+In-Reply-To: <uodliptif.wl%yoshiki@squeakland.org>
+References: <uodliptif.wl%yoshiki@squeakland.org>
+Message-ID: <462C4990.3010500@nucba.ac.jp>
+
+廣島です．
+
+>   基本的には、translateCode()やrecode()などを呼ぶことなく、Xから来たキャ
+> ラクターをそのままキーコードとして返すVM の起動時オプションをつくるの
+> が良いかなと思っているのですが、その際に日本語もばっちり動くようにした
+> いと思っています。
+> 
+>   というわけで今から皆さんの努力に追いつきたいと思うのですが、
+> 
+> http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz
+> 
+> から追いかけていけばよいのでしょうか? 
+
+パッチを当てた VM のマルチバイト入力では，
+通常のキャラクタコードに関しては，
+recode を通すこと無く Image に送っています．
+
+translateCode には オリジナルどおり，
+カーソルキーなどの KeySym を Squeak のコードに変換させています．
+
+ギリシャ語(ISO Latin-7)の入力には XIM を使うのでしょうか？　
+もしかして Latin-1 のような Compose を使うのでしょうか？
+=================
+廣島　勉
+Tsutomu Hiroshima
+
+From tomohiro ＠ sra.co.jp  Mon Apr 23 15:33:39 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3481] NaturalSmalltalk and ClassCreaser
+Message-ID: <200704231533.39370.tomohiro@sra.co.jp>
+
+おだです。
+
+Squeak上の自然言語処理ライブラリNaturalSmalltalkの
+リリースを更新しました。
+今回のリリースでは、ClassCreaserというツールを追加しました。
+
+ClassCreaserは一種のリファクタリング補助ツールで、
+GUIの形で提供されます。
+ClassCreaerはその名の通り、クラスを分割する「折り目」
+を見つけ出すためのもので、具体的にはクラスに定義された
+メソッド群を分類する試行錯誤をおこなうためのツールです。
+
+通常のリファクタリングツールがクラスやメソッド等のプログ
+ラムの構造に着目し、構造に従って分割したり構造を変化させ
+るのに対し、ClassCreaserは「プログラムが扱う概念」に
+着目します。まずはユーザーであるプログラマがいくつかの
+メソッドを2-3グループに分類し、「分類のタネ」にします。
+ClassCreaserはその分類を、各グループのメソッド中に
+使われている英単語を統計的にモデリングすることで、
+残りのメソッドを自動的に分類していきます。
+その後、プログラマは自動分類の結果を見ながら、グループを
+細分化したり統合したり、あるいはメソッドをグループに追加
+したり除いたりすることで、「どういった概念を基準にクラス
+を分割すればいいか」を試行錯誤します。
+メソッドが分類されたらClassCreaserの仕事は終わりで、
+あとはBrowserを使ってグループを親子や兄弟クラスに分割
+したり、あるいはコンポジット関係に分割する、という筋書き
+になります。
+
+ぜひお試しください。
+
+NaturalSmalltalkはインストール後の言語モデル構築に
+時間がかかりますが、このClassCreaserは言語モデルは
+不要なので、言語モデル構築をバックグラウンド処理するか
+中断するかしても大丈夫です。
+---
+おだ
+
+From tomohiro ＠ sra.co.jp  Mon Apr 23 15:38:28 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3482] Re: NaturalSmalltalk and ClassCreaser
+In-Reply-To: <200704231533.39370.tomohiro@sra.co.jp>
+References: <200704231533.39370.tomohiro@sra.co.jp>
+Message-ID: <200704231538.28370.tomohiro@sra.co.jp>
+
+おだです。
+
+ごめんなさい、URLを示すのを忘れていました。
+http://map.squeak.org/package/624ed871-4e89-4343-8652-af38a873d0b4
+
+ぜひお試しください。
+---
+おだ
+
+Tomohiro Oda wrote:
+> おだです。
+>
+> Squeak上の自然言語処理ライブラリNaturalSmalltalkの
+> リリースを更新しました。
+> 今回のリリースでは、ClassCreaserというツールを追加しました。
+>
+> ClassCreaserは一種のリファクタリング補助ツールで、
+> GUIの形で提供されます。
+> ClassCreaerはその名の通り、クラスを分割する「折り目」
+> を見つけ出すためのもので、具体的にはクラスに定義された
+> メソッド群を分類する試行錯誤をおこなうためのツールです。
+>
+> 通常のリファクタリングツールがクラスやメソッド等のプログ
+> ラムの構造に着目し、構造に従って分割したり構造を変化させ
+> るのに対し、ClassCreaserは「プログラムが扱う概念」に
+> 着目します。まずはユーザーであるプログラマがいくつかの
+> メソッドを2-3グループに分類し、「分類のタネ」にします。
+> ClassCreaserはその分類を、各グループのメソッド中に
+> 使われている英単語を統計的にモデリングすることで、
+> 残りのメソッドを自動的に分類していきます。
+> その後、プログラマは自動分類の結果を見ながら、グループを
+> 細分化したり統合したり、あるいはメソッドをグループに追加
+> したり除いたりすることで、「どういった概念を基準にクラス
+> を分割すればいいか」を試行錯誤します。
+> メソッドが分類されたらClassCreaserの仕事は終わりで、
+> あとはBrowserを使ってグループを親子や兄弟クラスに分割
+> したり、あるいはコンポジット関係に分割する、という筋書き
+> になります。
+>
+> ぜひお試しください。
+>
+> NaturalSmalltalkはインストール後の言語モデル構築に
+> 時間がかかりますが、このClassCreaserは言語モデルは
+> 不要なので、言語モデル構築をバックグラウンド処理するか
+> 中断するかしても大丈夫です。
+> ---
+> おだ
+
+From abee ＠ squeakland.jp  Thu Apr 26 16:13:49 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3483] Re: SqueakFest '07 のご案内
+In-Reply-To: <4602A37A157.5CAAABEE@smtp.nifty.com>
+References: <4602A37A157.5CAAABEE@smtp.nifty.com>
+Message-ID: <4630512D11D.2870ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+先日ご案内したSqueakFest '07ですが、
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-March/003467.html
+
+公式ページがオープンし、発表者の募集が始まっています。
+
+http://imamp.colum.edu/eceim/squeakfest07/index.php
+
+すでに私に直接ご連絡いただいた方も含めて、応募フォームへの記入をよろしく
+お願いします。発表者には$500の補助もありますので、旅費で迷われている方も
+ぜひご検討ください。
+
+また、例年SqueakFestでホテルを紹介していますが(今年は準備中)、個人的に調
+べたところ、すでに会場近くのホテルが満室になりつつあるようです。繁忙期で
+すので航空券も含めて早めに手配されることをお勧めします。
+
+それでは、多くの方とシカゴでお会いできることを楽しみにしております。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Apr 26 19:41:07 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3484] KNOPPIX Edu6 に Squeak がバンドルされています
+Message-ID: <463081C398.968DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+KNOPPIX教育利用研究会のMLで濱田先生に教えてもらったのですが、KNOPPIX
+Edu6に Squeak(Squeakland 2005J)がバンドルされています(改良点やアプリケー
+ション一覧には載っていません)。
+
+http://www.alpha.co.jp/biz/products/knoppix/edu/
+
+これにより、学校等におけるSqueak活用の機会が広がったわけで、大変ありがた
+いことです。
+
+ところで、このSqueakなのですが、同じく濱田先生のご報告によると、Kメニュー
+の「プログラム演習」「Squeak」で起動すると日本語入力ができません
+(Ctrl+Spaceで日本語入力モードに切り替わらない)。シェルから直接VMを起動す
+れば大丈夫です。
+Kメニューからは、/usr/local/bin/start-squeakというスクリプトを呼んでおり、
+その中でホームにMy Squeakとsecureディレクトリを作成した後に
+kdesusqueak.shをkdesu経由で起動しています。
+
+kdesu "/usr/local/bin/kdesusqueak.sh ${USER}" || exit 1
+
+kdesusqueak.shではSqueakのインストール先(/opt/Squeak)にMy Squeakと
+sequreのシンボリックリンクを張った後、以下のようにVMを起動しています。
+
+/opt/Squeak/squeak -plugins /opt/Squeak /opt/Squeak/SqueakPlugin.image
+
+シェルでsuしてから同じように起動しても。やはり日本語入力できませんでした。
+どうするのがよいでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Sat Apr 28 05:58:24 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3485] Re: UNIX版 VMでの多言語入力
+In-Reply-To: <462C4990.3010500@nucba.ac.jp>
+References: <uodliptif.wl%yoshiki@squeakland.org>
+	<462C4990.3010500@nucba.ac.jp>
+Message-ID: <ups5pmt5b.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> >   基本的には、translateCode()やrecode()などを呼ぶことなく、Xから来たキャ
+> > ラクターをそのままキーコードとして返すVM の起動時オプションをつくるの
+> > が良いかなと思っているのですが、その際に日本語もばっちり動くようにした
+> > いと思っています。
+> > 
+> >   というわけで今から皆さんの努力に追いつきたいと思うのですが、
+> > 
+> > http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4d.tar.gz
+> > 
+> > から追いかけていけばよいのでしょうか? 
+> 
+> パッチを当てた VM のマルチバイト入力では，
+> 通常のキャラクタコードに関しては，
+> recode を通すこと無く Image に送っています．
+> 
+> translateCode には オリジナルどおり，
+> カーソルキーなどの KeySym を Squeak のコードに変換させています．
+
+  ありがとうございます。
+
+> ギリシャ語(ISO Latin-7)の入力には XIM を使うのでしょうか？　
+> もしかして Latin-1 のような Compose を使うのでしょうか？
+
+  ギリシャ語を入力するには、Control-Shiftを押すとキーボードの
+モードが切り替わるという話のようでした。切り替
+えると、xevで見たときワンストロークで("A"のキーを押すと)、
+
+KeyPress event, serial 29, synthetic NO, window 0x1e00001,
+    root 0x64, subw 0x0, time 3200328687, (155,64), root:(194,585),
+    state 0x2010, keycode 38 (keysym 0x7e1, Greek_alpha), same_screen YES,
+    XLookupString gives 0 bytes: 
+    XmbLookupString gives 0 bytes: 
+    XFilterEvent returns: False
+
+というコードがSqueak VMに届くようです。
+
+-- Yoshiki
+
+From tsutomu ＠ nucba.ac.jp  Mon Apr 30 08:24:29 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:47 2007
+Subject: [Squeak-ja: 3486] Re: UNIX版 VMでの多言語入力
+In-Reply-To: <ups5pmt5b.wl%yoshiki@squeakland.org>
+References: <uodliptif.wl%yoshiki@squeakland.org>	<462C4990.3010500@nucba.ac.jp>
+	<ups5pmt5b.wl%yoshiki@squeakland.org>
+Message-ID: <4635292D.9050305@nucba.ac.jp>
+
+廣島です．
+別のメアドから大島さんにはお送りしましたが，
+あらためて投稿させていただきます．
+
+>> ギリシャ語(ISO Latin-7)の入力には XIM を使うのでしょうか？　
+>> もしかして Latin-1 のような Compose を使うのでしょうか？
+> 
+>   ギリシャ語を入力するには、Control-Shiftを押すとキーボードの
+> モードが切り替わるという話のようでした。切り替
+> えると、xevで見たときワンストロークで("A"のキーを押すと)、
+> 
+> KeyPress event, serial 29, synthetic NO, window 0x1e00001,
+>     root 0x64, subw 0x0, time 3200328687, (155,64), root:(194,585),
+>     state 0x2010, keycode 38 (keysym 0x7e1, Greek_alpha), same_screen YES,
+>     XLookupString gives 0 bytes: 
+>     XmbLookupString gives 0 bytes: 
+>     XFilterEvent returns: False
+> 
+> というコードがSqueak VMに届くようです。
+> 
+
+xev の結果から推察すると
+Greek_alpha は通常のキャラクタでなく，
+KeySym 扱いのようですね．
+そうだとすると translateCode を通されます．
+
+man XmbLookupString 抜粋：status_return の値
+
+　　　　　XLookupKeySym    A KeySym has been returned instead of a
+                         string and is returned in keysym_return.
+                         The content of the buffer_return argument
+                         is not modified, and the function returns
+                         zero.
+
+sqUnixX11.c:static int x2sqKeyInput(XKeyEvent *xevt)の該当箇所
+
+     case XLookupKeySym:
+#	 if defined(DEBUG_CONV)
+	fprintf(stderr, "x2sqKey XLookupKeySym\n");
+#	 endif
+	{
+	  int charCode= translateCode(symbolic);
+#	   if defined(DEBUG_CONV)
+	  printf("SYM %d -> %d\n", symbolic, charCode);
+#	   endif
+	  if (charCode < 0)
+	    return -1;	/* unknown key */
+	  if ((charCode == 127) && mapDelBs)
+	    charCode= 8;
+	  return lastKey= charCode;
+	}
+
+
+sqUnixX11.c:static int x2sqKeyPlain(XKeyEvent *xevt)の該当箇所
+
+  if (nConv == 0 && (charCode= translateCode(symbolic)) < 0)
+    return -1;	/* unknown key */
+
+translateCode では少数のコントロールキー以外は，
+未知のキーとして -1 を返すことになってます．
+
+KeySym の定義を /usr/include/X11/keysymdef.h で調べると，
+0xf???  はコントロールキー，
+0x100?? はアクセントキー，
+0x0???  は文字のキーのようです．
+
+これをふまえて，
+translateCode をしかるべく変更する必要があります．
+ただこのファイルをみる限り，
+KeySym と UNICODE との対応は単純ではなさそうです．
+(perl や　awk で　対応表を抽出する？)
+=================
+廣島　勉
+Tsutomu Hiroshima
+

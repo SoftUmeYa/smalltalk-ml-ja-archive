@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3854] Re: OLPC-VM ImmX11 パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203854%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=uabkucaza.wl%25yoshiki%40vpri.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003853.html">
+   <LINK REL="Next"  HREF="003855.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3854] Re: OLPC-VM ImmX11 パッチ</H1>
+    <B>Tsutomu Hiroshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203854%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=uabkucaza.wl%25yoshiki%40vpri.org"
+       TITLE="[Squeak-ja: 3854] Re: OLPC-VM ImmX11 パッチ">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2008年 3月 27日 (木) 19:29:34 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003853.html">[Squeak-ja: 3853] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+        <LI>次の記事 <A HREF="003855.html">[Squeak-ja: 3855] Re: Squeak 開発者版 (3.9 ベース  )
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3854">[ 日付 ]</a>
+              <a href="thread.html#3854">[ スレッド ]</a>
+              <a href="subject.html#3854">[ 件名 ]</a>
+              <a href="author.html#3854">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>大島さん，ご苦労様です．
+
+&gt;<i>   造鮓世逅擦函OLPCでないFedoraではスペイン語配列にしたときにnにチルダ
+</I>&gt;<i> がついた文字を入力したときに・髟阡四計なバイトも付いてきてしまいます。この
+</I>&gt;<i> 豺隋Terminalだとdead keyを押してからベ・踉札垢諒源悊鯑譴襪箸い逅仔呂
+鹿評守できなかったりするので・髟阡札魁ドのほう瘢雹の問題なのぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 瀋蠎召量簑蠅覆里㎠♢い
+鹿評守いちわかりませんでした。椶靴なぢ廢髟阡仕腓気鵑笋曚㎠諒ぢがいたらう踉擦匕‘い
+鹿評守てみてください。よろしくお願いします。
+</I>
+蠍気砲 褓碓キ・踉札棔ドしかう髟阡擦蠅泙擦鵑♤
+以王踉擦陸踉至順で ñ「tilde付きn」が入力出来ました．
+もしかしたら，外しているかもしれません．
+
+Fedora では，m17n-db-latin パッケ・踉札犬鬟ぅ鵐好函ルして，
+latn-post か latn-pre の入力メソッドでヨ・踉札蹈奪質 頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂儻 ＠ 語鹿曽の文字を入力できます．
+
+$<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">B ＠ _Dj</A>%U%!%$%k
+/usr/share/m17n/latn-post.mim
+/usr/share/m17n/latn-pre.mim
+によれば，件の ñ「tilde付きn」は~ と n のコンビネ・踉札轡腑鵑鮖箸逅擦茲逅擦任垢♤
+この ~ は US配列で 1 の左隣にう髟阡擦襯①の ~ でないとダメなよう瘢雹です．
+
+システム-&gt;管理-&gt;キ・踉札棔ド-&gt;英語(ウ髟阡札瓮螢㏋臀姐を選択後，再ログイン．
+GNOME ぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 瀋蠎召塙腓錣覆い肇瀬ぅログが出るので，Xぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 瀋蠎召鯀鬚垢襦
+
+希胞苳擦 は shift + 筈苳山ぢ全角に対応するので，
+SCIM の入力モ・踉札匹 赱≒鱚 にして，
+shift + 筈苳山ぢ全角の後，n を押す．
+
+Transcript で試したところ，続けて入力した文字も化けないので，
+問題なさそう瘢雹に思います．
+
+OLPC-VM の revision は 1830，
+SqueakPlugin-dev-527.image を使いました．
+＝＝＝＝
+廢髟阡仕隋（
+鹿侑転
+
+
+次⑬緕籬鶯蜒跂⑬    屡匸
+    斜昭嫐        次⑬鱚痲鶚Ⅹ
+	写評前の記事 質 頒兎就旭蓋騎㍽譬詔囁瘠㈱畉 蓋騎吶鰐价㎡附轂臼 パッチ
+鹿曽鹿跚	写評次の記事 質 頒兎就旭蓋亀㍽譬詔囁瘠㈱畉 蓋亀吶囁瘠 開発者版 ┳ ベース  鹿曽鹿跚         写評 実承Ⅶ諒造喀鹿他 
+              釈 蓿繙就籬㍽譯蓋鬼⊂日付 歇              釈 蓿繙就鱚痲㍽譯蓋鬼⊂スレッド 歇              釈 蓿繙就齦礪繝蔗迪３元刈詔 件名 歇              釈 蓿繙就癜闥㍽譯蓋鬼⊂著者 歇         鹿棉       鹿嫐
+取鮠
+釈 蓿繙就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂囁瘠㈱メーリングリストの案内
+鹿畩錫鮠
+鹿硼糯昭貍

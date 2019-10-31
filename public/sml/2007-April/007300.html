@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7298] はじめまして &amp; Jun  に関して質問
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207298%5D%0A%09%3D%3FUTF-8%3FB%3F44Gv44GY44KB44G%2B44GX44GmICYgSnVuICDjgavplqI%3D%3F%3D%0A%09%3D%3FUTF-8%3FB%3F44GX44Gm6LOq5ZWP%3F%3D&In-Reply-To=46267A1A.7020206%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007299.html">
+   <LINK REL="Next"  HREF="007301.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7298] はじめまして &amp; Jun  に関して質問</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207298%5D%0A%09%3D%3FUTF-8%3FB%3F44Gv44GY44KB44G%2B44GX44GmICYgSnVuICDjgavplqI%3D%3F%3D%0A%09%3D%3FUTF-8%3FB%3F44GX44Gm6LOq5ZWP%3F%3D&In-Reply-To=46267A1A.7020206%40sra.co.jp"
+       TITLE="[SML 7298] はじめまして &amp; Jun  に関して質問">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 4月 19日 (木) 06:05:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007299.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+        <LI>次の記事 <A HREF="007301.html">[SML 7301] Re: はじめまして &amp; Jun  に関して質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7300">[ 日付 ]</a>
+              <a href="thread.html#7300">[ スレッド ]</a>
+              <a href="subject.html#7300">[ 件名 ]</a>
+              <a href="author.html#7300">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>AOKI Atsushi wrote:
+ &gt; 以下に、佐藤さんからの不具合報告を鑑みて、私が考えたコードを
+ &gt; 示します。回転系を用いていますので、有効桁数が１６桁程度に落
+ &gt; ちてしまいますが、あながち使えないこともないでしょう。
+
+面に対する表裏判定の際に、判定面を直線の始点まで平行移動する
+ことを忘れていました。そして、冗長なところを削減してみました。
+
+|<i> thePoint theLine p1 p2 line angle p plane p3 |
+</I>thePoint := 0 , 1 , 1.
+theLine := 0 , 0 , 0 to: -1 , 0 , 0.
+p1 := thePoint.
+p2 := theLine nearestPointFromPoint: p1.
+line := p1 to: p2.
+angle := 90 asDegrees.
+(theLine first distance: p2) &gt; (theLine last distance: p2)
+     ifTrue: [p := theLine first]
+     ifFalse: [p := theLine last].
+plane := JunPlane
+             on: p1
+             on: p2
+             on: p.
+plane := plane transform: (angle transformationToRotate: line).
+((plane translatedBy: theLine first - p2) whichSide: theLine last) &gt; 0
+     ifFalse:
+         [plane := JunPlane
+                     on: p2
+                     on: p1
+                     on: p.
+         plane := plane transform: (angle transformationToRotate: line)].
+p3 := plane p3.
+plane asJunOpenGL3dObjectWithPoints showWithUnitAxes.
+^p3
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007299.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+	<LI>次の記事 <A HREF="007301.html">[SML 7301] Re: はじめまして &amp; Jun  に関して質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7300">[ 日付 ]</a>
+              <a href="thread.html#7300">[ スレッド ]</a>
+              <a href="subject.html#7300">[ 件名 ]</a>
+              <a href="author.html#7300">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

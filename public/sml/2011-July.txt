@@ -1,0 +1,208 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jul  6 07:04:57 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 06 Jul 2011 07:04:57 +0900
+Subject: [SML 7954] Re:
+ 第33回Smalltalk勉強会＠京都
+In-Reply-To: <4E0A858A.300@cc.kyoto-su.ac.jp>
+References: <4E0A858A.300@cc.kyoto-su.ac.jp>
+Message-ID: <4E138A89.9030504@cc.kyoto-su.ac.jp>
+
+本日です！（うちわを忘れないようにしなければ…）
+
+--- 青木淳
+
+(11/06/29 10:53), AOKI Atsushi wrote:
+> 第33回Smalltalk勉強会＠京都を開催します。
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto33
+> 
+> 場所はキャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+> 
+> 第33回 Smalltalk勉強会＠京都
+> 日時：2011年07月06日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 窓MVCを完成へと導きたいと思いますが、急がず着実に進むことを
+> 優先しますし、脱線もあると思います。ノート型のパーソナルコン
+> ピュータ（Windows 7 または Mac OS X）をご持参ください。
+> 
+> なお、シンコム・システムズ・ジャパンさんから団扇（うちわ）を
+> 頂戴しております。講習室にて配付したいと存じます。
+> Smalltalk気球が描かれていますよ。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jul  7 14:02:15 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 07 Jul 2011 14:02:15 +0900
+Subject: [SML 7955] Re:
+ 第33回Smalltalk勉強会＠京都
+In-Reply-To: <4E138A89.9030504@cc.kyoto-su.ac.jp>
+References: <4E0A858A.300@cc.kyoto-su.ac.jp>
+ <4E138A89.9030504@cc.kyoto-su.ac.jp>
+Message-ID: <4E153DD7.40601@cc.kyoto-su.ac.jp>
+
+昨夜の勉強会、ご苦労さまでした。
+プログラムやログをアップロードしておきました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto33
+
+--- 青木淳＠京都上賀茂
+
+(11/07/06 7:04), AOKI Atsushi wrote:
+> 本日です！（うちわを忘れないようにしなければ…）
+> 
+> --- 青木淳
+> 
+> (11/06/29 10:53), AOKI Atsushi wrote:
+>> 第33回Smalltalk勉強会＠京都を開催します。
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto33
+>>
+>> 場所はキャンプラ6階の第3講習室になります。
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第33回 Smalltalk勉強会＠京都
+>> 日時：2011年07月06日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 窓MVCを完成へと導きたいと思いますが、急がず着実に進むことを
+>> 優先しますし、脱線もあると思います。ノート型のパーソナルコン
+>> ピュータ（Windows 7 または Mac OS X）をご持参ください。
+>>
+>> なお、シンコム・システムズ・ジャパンさんから団扇（うちわ）を
+>> 頂戴しております。講習室にて配付したいと存じます。
+>> Smalltalk気球が描かれていますよ。
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From yasuda ＠ mfc.bakkers.gr.jp  Wed Jul 13 16:57:04 2011
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Wed, 13 Jul 2011 16:57:04 +0900
+Subject: [SML 7956] Re:
+ 第33回Smalltalk勉強会＠京都
+In-Reply-To: <4E153DD7.40601@cc.kyoto-su.ac.jp>
+References: <4E0A858A.300@cc.kyoto-su.ac.jp>
+ <4E138A89.9030504@cc.kyoto-su.ac.jp> <4E153DD7.40601@cc.kyoto-su.ac.jp>
+Message-ID: <5164DA3F-CCDF-4C24-9DD3-01FF6BD90964@mfc.bakkers.gr.jp>
+
+安田です。
+
+ようやっとログを見て復習しました。
+妹尾君ありがとう。フォローすることが出来ました。。。
+
+が、やっぱり見て、写して（写経？）、動かして、だと
+アタマが回らなくてだめですね。自分が主体になっておらず
+他人事のようです。（遠い南の島で起きていることを望遠鏡
+で眺めているような気分になってしまい、気合いが入らない。）
+
+次回は行けると良いのだけれど。。。(@_@)
+
+でわでわ									Yasu.
+
+
+
+
+
+On 2011/07/07, at 14:02, AOKI Atsushi wrote:
+
+> 昨夜の勉強会、ご苦労さまでした。
+> プログラムやログをアップロードしておきました。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto33
+> 
+> --- 青木淳＠京都上賀茂
+> 
+> (11/07/06 7:04), AOKI Atsushi wrote:
+>> 本日です！（うちわを忘れないようにしなければ…）
+>> 
+>> --- 青木淳
+>> 
+>> (11/06/29 10:53), AOKI Atsushi wrote:
+>>> 第33回Smalltalk勉強会＠京都を開催します。
+>>> 万障繰り合わせてJR京都駅前にお集まりください。
+>>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto33
+>>> 
+>>> 場所はキャンプラ6階の第3講習室になります。
+>>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>> 
+>>> 第33回 Smalltalk勉強会＠京都
+>>> 日時：2011年07月06日（水）19:00〜21:00
+>>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>> 
+>>> 窓MVCを完成へと導きたいと思いますが、急がず着実に進むことを
+>>> 優先しますし、脱線もあると思います。ノート型のパーソナルコン
+>>> ピュータ（Windows 7 または Mac OS X）をご持参ください。
+>>> 
+>>> なお、シンコム・システムズ・ジャパンさんから団扇（うちわ）を
+>>> 頂戴しております。講習室にて配付したいと存じます。
+>>> Smalltalk気球が描かれていますよ。
+>>> 
+>>> ------------------------------------------------------------
+>>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+> 
+
+
+From ume ＠ softumeya.com  Sun Jul 17 22:29:04 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 17 Jul 2011 22:29:04 +0900
+Subject: [SML 7957]
+	第34回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdT9nqB3nmT+YXNoV1Lr6ja_qnswuKKmzZ46_L1_YPk8PA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/7/29(金) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai34kaismalltalkbenkyoukai
+
+今回のテーマは先進的に「Jtalk」です。
+Jtalkとは、JavaScriptランタイム上で動作するSmalltalkの処理系です。IDEも含んでいるためWebブラウザ上でWebアプリケーションのクライアントサイドを快適に開発することができます。まだまだデスクトップ上の通常のSmalltalk環境に比べると貧弱ですが、JavaScriptの関数を透過的に呼び出せたり、Node.jsとも連携できたりする期待の星なのです。
+
+ビューポイントテクノロジーの林さんが発表されます。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jul 27 18:42:10 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 27 Jul 2011 18:42:10 +0900
+Subject: [SML 7958]
+	第34回Smalltalk勉強会＠京都
+Message-ID: <4E2FDD72.1030702@cc.kyoto-su.ac.jp>
+
+第34回Smalltalk勉強会＠京都を開催します。
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34
+
+場所は先月と同様でキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第34回 Smalltalk勉強会＠京都
+日時：2011年08月03日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+完成間近の窓MVCですが、コントローラ周りを整備し、モデルおよび
+ビューとの調整を図ります。蒸し暑い京都の中、さわやかにSmalltalk
+プログラミングをいたしましょう。いつも通り、急がず着実に進む
+ことを優先し、ライブプログラミングで脱線もしようと思います。
+ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+をご持参ください。
+
+--- 青木淳 [ http://aokilab.kyoto-su.ac.jp/ ]
+

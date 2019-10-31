@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2683] Re: プロジェクトの読み込み
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202683%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUgkTkZJJF85fiRfGyhC%3F%3D&In-Reply-To=6544a1da0510170020m130a5c3fu9420c96358d0879f%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002679.html">
+   <LINK REL="Next"  HREF="002688.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2683] Re: プロジェクトの読み込み</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202683%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUgkTkZJJF85fiRfGyhC%3F%3D&In-Reply-To=6544a1da0510170020m130a5c3fu9420c96358d0879f%40mail.gmail.com"
+       TITLE="[Squeak-ja: 2683] Re: プロジェクトの読み込み">kawa90 ＠ yahoo.co.jp
+       </A><BR>
+    <I>2005年 10月 21日 (金) 19:25:43 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002679.html">[Squeak-ja: 2679] プロジェクトの読み込み
+</A></li>
+        <LI>次の記事 <A HREF="002688.html">[Squeak-ja: 2688] Re: プロジェクトの読み込み
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2683">[ 日付 ]</a>
+              <a href="thread.html#2683">[ スレッド ]</a>
+              <a href="subject.html#2683">[ 件名 ]</a>
+              <a href="author.html#2683">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>武田さん、はじめまして。川村と申します。
+
+たぶん、はずしていると思いますが、
+stream := FileStream fileNamed: 'abc.001.pr'.
+zip := ZipArchive new readFrom: stream.
+projectStream := zip memberNamed: 'abc.001.pr'.
+[[ProjectLoading
+openName: 'abc'
+stream: projectStream contentStream
+fromDirectory: nil
+withProjectView: nil]
+on: ProjectViewOpenNotification
+do: [:ex | ex resume: false]]
+on: ProjectEntryNotification
+do: [:ex |
+project _ ex projectToEnter.
+ex resume].
+project explore.
+
+これなら#enterしないでいけますが(SarInstallerのパクリ)。。。たぶん違うん
+だろうなぁ。
+
+#たぶん違うんだろうなぁ。とおもいつつ、メールアドレスを変更したのでテス
+トを兼ねて...
+
+それでは
+
+Toshiyuki Takeda wrote:
+
+&gt;<i>武田です。
+</I>&gt;<i>
+</I>&gt;<i>プロジェクトを.prから読み込んでProjectを組み立てるいい方法はないでしょうか？
+</I>&gt;<i>
+</I>&gt;<i>ProjectLoading&gt;&gt;openName:stream:fromDirectory:withProjectView:
+</I>&gt;<i>はenterしてしまうのですが、単にファイルからプロジェクトを読んで処理したい
+</I>&gt;<i>だけなので、もう少し簡便な方法を探しています。
+</I>&gt;<i>
+</I>&gt;<i>FAQにでもありそうですが見つかりませんでした。
+</I>&gt;<i>
+</I>&gt;<i>＃もちろん、enterするところをけずって動くぐらいは試しています。
+</I>&gt;<i>
+</I>&gt;<i>よろしくお願いします。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: <A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+Blog: <A HREF="http://squeak.qp.land.to/mt">http://squeak.qp.land.to/mt</A>
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.344 / Virus Database: 267.12.4/146 - Release Date: 2005/10/21
+
+--------------------------------------
+Know more about Breast Cancer
+<A HREF="http://pr.mail.yahoo.co.jp/pinkribbon/">http://pr.mail.yahoo.co.jp/pinkribbon/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002679.html">[Squeak-ja: 2679] プロジェクトの読み込み
+</A></li>
+	<LI>次の記事 <A HREF="002688.html">[Squeak-ja: 2688] Re: プロジェクトの読み込み
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2683">[ 日付 ]</a>
+              <a href="thread.html#2683">[ スレッド ]</a>
+              <a href="subject.html#2683">[ 件名 ]</a>
+              <a href="author.html#2683">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

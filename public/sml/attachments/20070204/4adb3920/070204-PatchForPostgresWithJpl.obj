@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<st-source>
+<!-- Changes in change set 070204-PatchForPostgresWithJpl -->
+<time-stamp>From VisualWorks® NonCommercial, 7.4.1 of May 30, 2006 on February 4, 2007 at 2:57:02 am</time-stamp>
+
+
+<methods>
+<class-id>NativeSocketSession</class-id> <category>accessing</category>
+
+<body package="PostgreSQLVWCompatibility" selector="readStream">readStream
+	"^a ReadStream 
+	I return the stream through which bytes may be read from my 
+	underlying socket."
+
+	^(self externalConnection withEncoding: #binary) readStream</body>
+
+<body package="PostgreSQLVWCompatibility" selector="writeStream">writeStream
+	"^a WriteStream
+	I return the stream through which bytes may be read from my 
+	underlying socket."
+
+	^(self externalConnection withEncoding: #binary) writeStream</body>
+</methods>
+
+
+<component-property>
+<name>PostgreSQLVWCompatibility</name> <type>package</type>
+<property>version</property> <value>'1.3 014'</value>
+</component-property>
+
+<component-property>
+<name>PostgreSQLVWCompatibility</name> <type>package</type>
+<property>packageName</property> <value>'PostgreSQLVWCompatibility'</value>
+</component-property>
+
+<component-property>
+<name>PostgreSQLVWCompatibility</name> <type>package</type>
+<property>comment</property> <value>'©Bruce Badger 2000 - 2004. Licensed under the LGPL.
+
+This package contains the classes that make up the PostgreSQL mapping layer.  The objective is to absorb the dialect specific issues here, and have the main part of the library use (for example) PostgreSQLException context, rather than the VisualWorks or GemStone equivalents.
+
+You *must* have this package loaded to use the PostgrSQL driver.
+
+VisualWorks is currently the development environment, and the library has been ported to GemStone and Squeak.
+
+----
+Please send your comments to bbadger@openskills.com.  Thanks.'</value>
+</component-property>
+
+<component-property>
+<name>PostgreSQLVWCompatibility</name> <type>package</type>
+<property>parcelName</property> <value>'PostgreSQLVWCompatibility'</value>
+</component-property>
+
+<component-property>
+<name>PostgreSQLVWCompatibility</name> <type>package</type>
+<property>developmentPrerequisites</property> <value>#(#(#any 'MD5' ''))</value>
+</component-property>
+
+<component-property>
+<name>PostgreSQLVWCompatibility</name> <type>package</type>
+<property>prerequisiteParcels</property> <value>#(#('MD5' ''))</value>
+</component-property>
+
+
+</st-source>

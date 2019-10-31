@@ -1,0 +1,1129 @@
+From aoki ＠ sra.co.jp  Thu Sep  6 10:12:09 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7312] ブロック生成のメタプログラミング
+Message-ID: <46DF53E9.2090805@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+じゅんメーリングリストの話題をＳＭＬにも流すことにしました。
+
+ブロック生成の例として、シンボルが asBlock / asBlockFor: の
+メッセージを理解できるようにするプログラムを添付します。。
+
+似たようなプログラムがちらほらと存在するのですが、どれもベタ
+なプログラムでエレガントさに欠けますので、ユニバーサル・メッ
+セージ（万能関数）を用いたメタプログラミング（高階関数）手法
+で実装しておきました。
+
+＃VisualWorks のプログラムですが、Squeak でも動作することを
+＃西原さんが確かめてくれています。
+
+伝言選択子（メッセージ・セレクタ）シンボルに対して用いるのが
+適切です。使い方は以下のようになります。
+
+#size asBlock
+
+#@ asBlock
+
+#x:y: asBlock
+
+#x:y: asBlockFor: Point
+
+どんなブロックが生成されているのかは、逆コンパイルをしてみれ
+ば判明します。
+
+#size asBlock method decompiledSource
+==> '
+[:t1 |
+| t2 |
+t2 := Array new: 0.
+t1 perform: #size withArguments: t2]'
+
+#@ asBlock method decompiledSource
+==> '
+[:t1 :t2 |
+| t3 |
+(t3 := Array new: 1) at: 1 put: t2.
+t1 perform: #@ withArguments: t3]'
+
+#x:y: asBlock method decompiledSource
+==> '
+[:t1 :t2 :t3 |
+| t4 |
+(t4 := Array new: 2) at: 1 put: t2.
+t4 at: 2 put: t3.
+t1 perform: #x:y: withArguments: t4]'
+
+(#x:y: asBlockFor: Point) method decompiledSource
+==> '
+[:t1 :t2 |
+| t3 |
+(t3 := Array new: 2) at: 1 put: t1.
+t3 at: 2 put: t2.
+self perform: #x:y: withArguments: t3]'
+
+伝言選択子としてのシンボルがブロックになる効用は、次のような
+典型的な場合が考えられます。
+
+(0 to: 9) select: #even asBlock
+==> #(0 2 4 6 8)
+
+(0 to: 9) reject: #even asBlock
+==> #(1 3 5 7 9)
+
+(0 to: 9) collect: #even asBlock
+==> #(true false true false true false true false true false)
+
+#('asaoka' 'aoki') collect: #size asBlock
+==> #(6 4)
+
+#(0 2 4 6 8) with: #(1 3 5 7 9) collect: #@ asBlock
+==> #(0@1 2@3 4@5 6@7 8@9)
+
+#(0 2 4 6 8) with: #(1 3 5 7 9) collect: (#x:y: asBlockFor: Point)
+==> #(0@1 2@3 4@5 6@7 8@9)
+
+#(0 2 4 6 8) fold: #+ asBlock
+==> 20
+
+#(1 3 5 7 9) fold: #* asBlock
+==> 945
+
+#(12 21 -19) inject: 9999 into: #min: asBlock
+==> -19
+
+#(12 21 -19) inject: -9999 into: #max: asBlock
+==> 21
+
+今、ある人たちと協力して、この機構を VisualWorks の新バージョ
+ンに導入しよう、というロビー活動をしてます。ぜひ Squeak でも。
+
+asBlock / asBlockFor: のメッセージに応えられる他のオブジェク
+トの候補としては Message / MessageSend / BlockClosure などの
+オブジェクトたちがあげられると思います。
+
+Smalltalk はメタプログラミングが気軽に（あまりにあっけなく）
+できるので、プログラマに備わっているファンタジー創世の能力が
+刺激され、増幅されることがしばしばでしょう。
+
+また、メタプログラミングはスーパープログラマへの道です。自己
+相似の中に入ってフラクタルな次元に遊ぶ、という感じになります。
+
+このように言及しても、成長段階にあるプログラマには通じないで
+しょうから、C プログラミングの状況で、誤解を恐れずに翻訳する
+と、おおよそ以下のようになると思います。
+
+今、ここに「test.c」というプログラムがあったとします。この実
+行可能プログラム「test」が走行している真っ只中でやっているこ
+とは、走行状況に応じて「subs.c」というソースコードを創り出し、
+それをコンパイル＆リンクするための「Makefile」も創り出してお
+いて「make」を起動（fork:dup&exec&wait）させ、「subs」という
+実行可能プログラムを獲得します。そして最後に「subs」を起動し、
+その実行結果をもらって、「test」が走行し続けるというものです。
+もちろん「subs.c」や「Makefile」そして「subs」などは跡形も無
+く（unlink）しておくのは当然のこと。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: asBlock.st
+型:         text/xml
+サイズ:     2898 バイト
+説明:       無し
+URL:        http://www.akademia.co.jp/pipermail/sml/attachments/20070906/1334c6eb/asBlock.bin
+From nishis ＠ zephyr.dti.ne.jp  Thu Sep  6 22:07:44 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7313] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46DF53E9.2090805@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+Message-ID: <46DFFBA0.8010603@zephyr.dti.ne.jp>
+
+Squeak-ja にも Cc: します．全文引用ですみません．
+
+え〜，Symbol>>asBlock と Symbol>>asBlockFor: をフォーマットしただけで
+す． SequenceableCollection>>with:collect: は Squeak オリジナルのを使い
+ます．他は Collection>>fold: を定義しました．人の褌で何とやらです (笑)．
+
+on 07.9.6 10:12 AM, AOKI Atsushi wrote:
+> ＳＲＡ先端技術研究所の青木です。
+> 
+> じゅんメーリングリストの話題をＳＭＬにも流すことにしました。
+> 
+> ブロック生成の例として、シンボルが asBlock / asBlockFor: の
+> メッセージを理解できるようにするプログラムを添付します。。
+> 
+> 似たようなプログラムがちらほらと存在するのですが、どれもベタ
+> なプログラムでエレガントさに欠けますので、ユニバーサル・メッ
+> セージ（万能関数）を用いたメタプログラミング（高階関数）手法
+> で実装しておきました。
+> 
+> ＃VisualWorks のプログラムですが、Squeak でも動作することを
+> ＃西原さんが確かめてくれています。
+> 
+> 伝言選択子（メッセージ・セレクタ）シンボルに対して用いるのが
+> 適切です。使い方は以下のようになります。
+> 
+> #size asBlock
+> 
+> #@ asBlock
+> 
+> #x:y: asBlock
+> 
+> #x:y: asBlockFor: Point
+> 
+> どんなブロックが生成されているのかは、逆コンパイルをしてみれ
+> ば判明します。
+> 
+> #size asBlock method decompiledSource
+> ==> '
+> [:t1 |
+> | t2 |
+> t2 := Array new: 0.
+> t1 perform: #size withArguments: t2]'
+> 
+> #@ asBlock method decompiledSource
+> ==> '
+> [:t1 :t2 |
+> | t3 |
+> (t3 := Array new: 1) at: 1 put: t2.
+> t1 perform: #@ withArguments: t3]'
+> 
+> #x:y: asBlock method decompiledSource
+> ==> '
+> [:t1 :t2 :t3 |
+> | t4 |
+> (t4 := Array new: 2) at: 1 put: t2.
+> t4 at: 2 put: t3.
+> t1 perform: #x:y: withArguments: t4]'
+> 
+> (#x:y: asBlockFor: Point) method decompiledSource
+> ==> '
+> [:t1 :t2 |
+> | t3 |
+> (t3 := Array new: 2) at: 1 put: t1.
+> t3 at: 2 put: t2.
+> self perform: #x:y: withArguments: t3]'
+> 
+> 伝言選択子としてのシンボルがブロックになる効用は、次のような
+> 典型的な場合が考えられます。
+> 
+> (0 to: 9) select: #even asBlock
+> ==> #(0 2 4 6 8)
+> 
+> (0 to: 9) reject: #even asBlock
+> ==> #(1 3 5 7 9)
+> 
+> (0 to: 9) collect: #even asBlock
+> ==> #(true false true false true false true false true false)
+> 
+> #('asaoka' 'aoki') collect: #size asBlock
+> ==> #(6 4)
+> 
+> #(0 2 4 6 8) with: #(1 3 5 7 9) collect: #@ asBlock
+> ==> #(0@1 2@3 4@5 6@7 8@9)
+> 
+> #(0 2 4 6 8) with: #(1 3 5 7 9) collect: (#x:y: asBlockFor: Point)
+> ==> #(0@1 2@3 4@5 6@7 8@9)
+> 
+> #(0 2 4 6 8) fold: #+ asBlock
+> ==> 20
+> 
+> #(1 3 5 7 9) fold: #* asBlock
+> ==> 945
+> 
+> #(12 21 -19) inject: 9999 into: #min: asBlock
+> ==> -19
+> 
+> #(12 21 -19) inject: -9999 into: #max: asBlock
+> ==> 21
+> 
+> 今、ある人たちと協力して、この機構を VisualWorks の新バージョ
+> ンに導入しよう、というロビー活動をしてます。ぜひ Squeak でも。
+> 
+> asBlock / asBlockFor: のメッセージに応えられる他のオブジェク
+> トの候補としては Message / MessageSend / BlockClosure などの
+> オブジェクトたちがあげられると思います。
+> 
+> Smalltalk はメタプログラミングが気軽に（あまりにあっけなく）
+> できるので、プログラマに備わっているファンタジー創世の能力が
+> 刺激され、増幅されることがしばしばでしょう。
+> 
+> また、メタプログラミングはスーパープログラマへの道です。自己
+> 相似の中に入ってフラクタルな次元に遊ぶ、という感じになります。
+> 
+> このように言及しても、成長段階にあるプログラマには通じないで
+> しょうから、C プログラミングの状況で、誤解を恐れずに翻訳する
+> と、おおよそ以下のようになると思います。
+> 
+> 今、ここに「test.c」というプログラムがあったとします。この実
+> 行可能プログラム「test」が走行している真っ只中でやっているこ
+> とは、走行状況に応じて「subs.c」というソースコードを創り出し、
+> それをコンパイル＆リンクするための「Makefile」も創り出してお
+> いて「make」を起動（fork:dup&exec&wait）させ、「subs」という
+> 実行可能プログラムを獲得します。そして最後に「subs」を起動し、
+> その実行結果をもらって、「test」が走行し続けるというものです。
+> もちろん「subs.c」や「Makefile」そして「subs」などは跡形も無
+> く（unlink）しておくのは当然のこと。
+> 
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+> 
+
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: BlockGeneration-Tests.1.cs
+URL:  http://www.akademia.co.jp/pipermail/sml/attachments/20070906/f122ee32/BlockGeneration-Tests.1.asc
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: BlockGeneration.1.cs
+URL:  http://www.akademia.co.jp/pipermail/sml/attachments/20070906/f122ee32/BlockGeneration.1.pot
+From aoki ＠ sra.co.jp  Fri Sep  7 23:40:59 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7314] 無料セミナーのご案内
+Message-ID: <46E162FB.3010009@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+無料セミナーのご案内です。ＳＲＡの社内向けセミナーなのですが、
+一般の方々も参加できます。気軽にお運びください。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+---------------- 第４回 SRA-KTL Techinology Seminar -----------------
+
+         　　　　　　オープンソースとビジネス
+
+　　　　　　　　　　　PostgreSQL の最新動向
+
+                  スピーカ：　石井 達夫 (SRA-OSS)
+
+　夏休みをはさんで４回目を迎える SRA-KTL セミナーです．今回は SRA
+　グループの重要な技術活動である Free/Open Source Software を題材
+　として「オープンソースとビジネス」をテーマとする講演およびパネル
+　を企画しました．
+
+　最初の講演は，SRA-OSS の石井達夫さんです．PostgreSQLは，個人用か
+　ら基幹業務のビジネス用途まで，幅広く使われているオープンソースデ
+　ータベースであり，商用DBに引けを取らない機能と性能を持つという定
+　評があります．今回の講演では，現在開発中の Version 8.3の機能や性
+  能改善について詳しく解説します．この Version では，久々にデータベ
+　ースエンジンに大きな改良が加えられ，従来苦手とされていた更新性能
+　などが大幅に改善される予定です．
+
+　ひきつづいてのパネルでは，これまでオープンソース・ソフトウェアの
+　開発や普及に携わってこられた方々を交えて，現状と未来についての討
+　論を展開したいと考えています．
+
+　ふるってご参加ください．
+
+【日時】２００７年９月２６日（水）13:30 〜 16:45
+
+    受付開始　　13:15 〜 13:30
+    講演　　　　13:30 〜 14:30　　PostgreSQL の最新動向
+　　　　　　　　　　　　　　　　　　　石井 達夫 (SRA-OSS)
+    質疑　　　　14:30 〜 15:00
+    休憩　　　　15:00 〜 15:15
+    パネル討論　15:15 〜 16:45　　オープンソースとビジネス
+　　　　　　　　　　　　　　　　　　　司会　　　林 香 (SRA)
+　　　　　　　　　　　　　　　　　　　パネラー　青木 淳 (SRA-KTL)
+　　　　　　　　　　　　　　　　　　　　　　　　石曽根 信 (SRA)
+　　　　　　　　　　　　　　　　　　　　　　　　石井 達夫 (SRA-OSS)
+【会場】
+
+　新宿歴史博物館・２階講堂　
+　（地下鉄 丸の内線・四谷３丁目駅から徒歩７分)
+
+　http://www.regasu-shinjuku.or.jp/shinjuku-rekihaku.html
+　http://www.regasu-shinjuku.or.jp/shinjuku-rekihaku/public_html/img/access/map.jpg
+
+【申し込み方法】
+
+　下の申込み用紙に必要事項をご記入の上 9/24(月曜日) 17:30 までに、
+　akiko@sra.co.jp）宛てに e-mail でご連絡ください。
+
+　定員は 申込み順で３０名までとさせていただきます
+
+　------ SRA-KTL Technology Seminar September 申し込み--------------
+
+　氏　名：　　　　　　   （ふりがな：）
+　会社名：
+　部門名：
+　TEL   ：
+
+　お申し込みに記入頂いた個人情報は、本セミナーへの参加申込受付
+　および連絡等に使用させていただきます。
+
+　なお、今後も定期的にKTLセミナーを開催いたします。
+　当社からのセミナー案内についてご希望をお知らせ下さい。
+
+　　今後のセミナーの案内
+　　　１．希望する。
+　　　２．希望しない。
+
+　------- mail to: akiko@sra.co.jp ---------------------------
+
+From sumi ＠ seagreen.ocn.ne.jp  Wed Sep 12 01:30:22 2007
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7315] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46DF53E9.2090805@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+Message-ID: <86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>
+
+ご無沙汰しております。鷲見です。
+
+07/09/06 に AOKI Atsushi<aoki@sra.co.jp> さんは書きました:
+> 伝言選択子（メッセージ・セレクタ）シンボルに対して用いるのが
+> 適切です。使い方は以下のようになります。
+
+面白い試みですね。ただちょっと疑問に思ったのでお伺いしたいのですが、
+ブロックをその都度生成する意義というのはどういうところにあるのでしょうか。
+
+たとえば Symbol に次のような振る舞いの #value: 、#value:value: を
+定義しても、同じようなことは可能だと思うのです。
+
+Symbol >> value: anObject
+    ^anObject perform: self
+
+Symbol >> value: anObject value: argument
+    ^anObject perform: self with: argument
+
+(1 to: 10) select: #even    "=> #(2 4 6 8 10) "
+#(a b c) with: #(1 2 3) collect: #->   "=>  {#a->1 . #b->2 . #c->3} "
+(1 to: 10) inject: 0 into: #+   "=> 55 "
+
+
+自分なりに考えてみたところでは、実際にブロックを生成することで、通常、
+ブロックを引数に取るメソッド呼び出しのシグネチャのようなものを変えないため…、
+あるいは、シンボルがセレクタとしてまだ機能しないときの遅延処理のため…、
+といったものを思いつきましたが、他にもあれば教えていただければ幸いです。
+
+
+なお、#asBlockFor: のほうは、ある種のカリー化なので、ブロックをアドホックに
+生成する意義は大いにあると分かります。
+
+-- 
+Masato Sumi
+
+From nishis ＠ zephyr.dti.ne.jp  Wed Sep 12 02:12:52 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7316] Re: ブロック生成のメタプログラミング
+In-Reply-To: <86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>
+References: <46DF53E9.2090805@sra.co.jp>
+	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>
+Message-ID: <46E6CC94.2070100@zephyr.dti.ne.jp>
+
+on 07.9.12 1:30 AM, Masato Sumi wrote:
+> たとえば Symbol に次のような振る舞いの #value: 、#value:value: を
+> 定義しても、同じようなことは可能だと思うのです。
+> 
+> Symbol >> value: anObject
+>     ^anObject perform: self
+> 
+> Symbol >> value: anObject value: argument
+>     ^anObject perform: self with: argument
+> 
+> (1 to: 10) select: #even    "=> #(2 4 6 8 10) "
+> #(a b c) with: #(1 2 3) collect: #->   "=>  {#a->1 . #b->2 . #c->3} "
+> (1 to: 10) inject: 0 into: #+   "=> 55 "
+
+これは
+http://blog.3plus4.org/2007/03/27/selectors-as-blocks/
+で Alan Knight さんが付けてたコメントと同じですね．
+
+> 自分なりに考えてみたところでは、実際にブロックを生成することで、通常、
+> ブロックを引数に取るメソッド呼び出しのシグネチャのようなものを変えないため…、
+> あるいは、シンボルがセレクタとしてまだ機能しないときの遅延処理のため…、
+> といったものを思いつきましたが、他にもあれば教えていただければ幸いです。
+> 
+> なお、#asBlockFor: のほうは、ある種のカリー化なので、ブロックをアドホックに
+> 生成する意義は大いにあると分かります。
+
+すぐに思い付くのが，
+((0 to: 9) select: [:each | #odd value: each]) fold: [:x :y | x perform:
+#* with: y].
+または
+((0 to: 9) select: [:each | #odd value: each]) fold: [:x :y | #* value:
+x value: y].
+と書くところが
+((0 to: 9) select: #odd asBlock) fold: #* asBlock.
+で済むこと．ブロックを明示的に指定する必要がないこと．かな〜．
+
+たぶんポイントは
+
+on 07.9.6 10:12 AM, AOKI Atsushi wrote:
+> asBlock / asBlockFor: のメッセージに応えられる他のオブジェク
+> トの候補としては Message / MessageSend / BlockClosure などの
+> オブジェクトたちがあげられると思います。
+
+にあると思うんですが．シンボルだけが使えてもあんまご利益がないと言うか，
+説得力に欠けるというか．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From nishis ＠ zephyr.dti.ne.jp  Wed Sep 12 02:22:49 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7317] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46E6CC94.2070100@zephyr.dti.ne.jp>
+References: <46DF53E9.2090805@sra.co.jp>	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>
+	<46E6CC94.2070100@zephyr.dti.ne.jp>
+Message-ID: <46E6CEE9.8030201@zephyr.dti.ne.jp>
+
+on 07.9.12 2:12 AM, NISHIHARA Satoshi wrote:
+> ((0 to: 9) select: #odd asBlock) fold: #* asBlock.
+> で済むこと．ブロックを明示的に指定する必要がないこと．かな〜．
+
+fold: がコレクションである自分の要素を順繰りに操作するにも関わらず，それ
+を外側から指定してやる必要がないこと．感覚的には
+foldl (+) 0 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+に近い……かな？
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From aoki ＠ sra.co.jp  Wed Sep 12 03:53:51 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7318] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46E6CEE9.8030201@zephyr.dti.ne.jp>
+References: <46DF53E9.2090805@sra.co.jp>	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>	<46E6CC94.2070100@zephyr.dti.ne.jp>
+	<46E6CEE9.8030201@zephyr.dti.ne.jp>
+Message-ID: <46E6E43F.20304@sra.co.jp>
+
+こんばんは、青木です。
+
+西原さんがほとんどのことを言及されていますので、ブロックの動
+的な生成（その都度で生成すること）に関してのみ、鷲見さんが思
+いつかれた以外で、私の思うところを捕捉しておきます。
+
+あるメソッド内でブロックを静的に応答してしまうと、当該のブロ
+ックはコンパイルされたメソッドのリテラルフレームに格納されて
+しまいます。ブロックを静的に応答するところが複数（数カ所）に
+及ぶ場合も同様になります。
+
+これではインスペクタやデバッカなどのプログラミングツールの効
+力を殺いでしまうことになりかねません。ソースコードを得ようと
+すると、ブロックを保持しているメソッドのソースコードを引っぱ
+ってくることになるからです。
+
+先の私のメールにおいて、なにゆえ逆コンパイルされたソースコー
+ドを指示したのか、その意図を汲み取れる方々には、私の企ても伝
+わるだろうと慮ってのことです。
+
+また、仮想マシンはバイト幅でアドレッシングできるところまで手
+が延びますので、応答されるブロックの静的生成および動的生成の
+如何に関わらず、ブロック変数（引数）の総数はバイト幅アドレッ
+シングによって抑制されています。
+
+これをベタに書き下してしまうと、ブロックの取り得る引数の総数
+分だけのディスパッチッイングを行うプログラムとなります。あま
+りに醜悪でしょう。
+
+そこをユニバーサル・メッセージ（万能関数）を用いたメタプログ
+ラミング（高階関数）手法で実装したブロックの動的生成で切り抜
+けた、というところでしょうか。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+From aoki ＠ sra.co.jp  Wed Sep 12 10:46:07 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7319] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46E6E43F.20304@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp>	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>	<46E6CC94.2070100@zephyr.dti.ne.jp>	<46E6CEE9.8030201@zephyr.dti.ne.jp>
+	<46E6E43F.20304@sra.co.jp>
+Message-ID: <46E744DF.9040402@sra.co.jp>
+
+Masato Sumi さんは書きました:
+> なお、#asBlockFor: のほうは、ある種のカリー化なので、ブロックをアドホックに
+> 生成する意義は大いにあると分かります。
+
+＃カリーといえば、リベラ（イギリス南ロンドンのボーイ・ソプラ
+＃ノのユニット）のトム・カリーくんを連想してしまいます。彼の
+＃透明な高音には魅了されます。余談はさておき、
+
+カリー化（＆非カリー化）のあたりに気づいていらっしゃるところ
+が、鷲見さんのすごさかしらん。
+
+NISHIHARA Satoshi さんは書きました:
+> たぶんポイントは
+> on 07.9.6 10:12 AM, AOKI Atsushi wrote:
+> > asBlock / asBlockFor: のメッセージに応えられる他のオブジェク
+> > トの候補としては Message / MessageSend / BlockClosure などの
+> > オブジェクトたちがあげられると思います。
+> にあると思うんですが．
+
+様々なオブジェクトたちをブロック化する効用は、レキシカル環境
+を閉じ込めた包みにできることにあります。コンティニュエーショ
+ンと併用することにより、メッセージパッシング（計算）の将来像
+をハンドリングする道も開けるというものでしょう。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+From tomohiro ＠ sra.co.jp  Wed Sep 12 12:24:50 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7320] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46E6CC94.2070100@zephyr.dti.ne.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>
+	<46E6CC94.2070100@zephyr.dti.ne.jp>
+Message-ID: <200709121224.51182.tomohiro@sra.co.jp>
+
+おだです。
+
+NISHIHARA Satoshi wrote:
+> ((0 to: 9) select: [:each | #odd value: each]) fold: [:x :y | x perform:
+> #* with: y].
+
+えっと、Symbol>>value:およびSymbol>>value:value:が実装されている場合、
+((0 to: 9) select: #odd) fold: #*
+になりますね。
+
+ブロック生成のメリットはVMによる実行効率の向上にもあると思います。
+試しにSqueak上でMessageSpyで
+(1 to: 5000) fold: #*
+(1 to: 5000) fold: #* asBlock
+を比較したところ、後者のほうが1割ほど実行効率が良いです。
+もちろん、5000を100ぐらいに減らせば実行効率は逆転します。
+
+一番の違いは、シンボルという識別子を計算実体とするのと
+クロージャという実行環境を計算実体にするのとでは、
+やはりクロージャが計算するほうが型的に正しく見えます。
+識別子が計算実体なのは、なんだか手続き型言語的で・・・
+---
+おだ
+
+From tomohiro ＠ sra.co.jp  Wed Sep 12 12:32:52 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7321] Re: ブロック生成のメタプログラミング
+In-Reply-To: <200709121224.51182.tomohiro@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp> <46E6CC94.2070100@zephyr.dti.ne.jp>
+	<200709121224.51182.tomohiro@sra.co.jp>
+Message-ID: <200709121232.52913.tomohiro@sra.co.jp>
+
+おだです。
+
+> 識別子が計算実体なのは、なんだか手続き型言語的で・・・
+
+よく考えたら、上記の発言はクロージャを扱える手続き型言語に対して
+非常に失礼なので、取り消させていただきます。
+---
+おだ
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Wed Sep 12 13:14:41 2007
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7322] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46E6CEE9.8030201@zephyr.dti.ne.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>
+	<46E6CC94.2070100@zephyr.dti.ne.jp>
+	<46E6CEE9.8030201@zephyr.dti.ne.jp>
+Message-ID: <86c0320c0709112114r7a23e40cy24591a63cd8f79b7@mail.gmail.com>
+
+鷲見です。
+
+07/09/12 に NISHIHARA Satoshi<nishis@zephyr.dti.ne.jp> さんは書きました:
+> 感覚的には
+> foldl (+) 0 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+> に近い……かな？
+
+Haskell だと、関数名それ自体がインテリジェントな関数本体のような
+イメージもなくもない（カリー化をデフォで持っていたり…）ので、
+もっとシンプルなモデルで動く Scheme に言い換えると、
+
+(fold + 0 '(1 2 3 4 5))
+
+に対応するのはむしろ Symbol>>#value:、#value:value: を前提とした
+
+#(1 2 3 4 5) inject: 0 into: #+
+
+のほうで、今回のメタプログラミングの #asBlock を使ったこちら
+
+#(1 2 3 4 5) inject: 0 into: #+ asBlock
+
+は、例えるなら cut マクロを用いた
+
+(fold (cut + <> <>) 0 '(1 2 3 4 5))
+
+のほうに対応するような気が感覚的にはします(^_^;)。
+
+-- 
+Masato Sumi
+
+From tomohiro ＠ sra.co.jp  Wed Sep 12 15:20:46 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7323] Re: ブロック生成のメタプログラミング
+In-Reply-To: <86c0320c0709112114r7a23e40cy24591a63cd8f79b7@mail.gmail.com>
+References: <46DF53E9.2090805@sra.co.jp> <46E6CEE9.8030201@zephyr.dti.ne.jp>
+	<86c0320c0709112114r7a23e40cy24591a63cd8f79b7@mail.gmail.com>
+Message-ID: <200709121520.46515.tomohiro@sra.co.jp>
+
+おだです。
+
+> (fold + 0 '(1 2 3 4 5))
+>
+> に対応するのはむしろ Symbol>>#value:、#value:value: を前提とした
+>
+> #(1 2 3 4 5) inject: 0 into: #+
+>
+> のほうで、
+
+それはたぶん、Scheme（あるいはLisp)だからSymbolと関数の
+結び付きを強く感じるのでは。Haskell等の現代的な(?)関数型
+言語では、関数の実体とシンボルはやっぱり距離があるような
+感覚があります。
+
+でも、カリー化のメタ的な感覚（部分評価して関数を返す関数）と
+今回のようなシンボルからクロージャを生成するメタ的な感覚の
+違いは、それぞれ型変数を使った多態と動的型付けによる多態に
+近いものを感じます。なんとなくですが。
+---
+おだ
+
+
+From nishis ＠ zephyr.dti.ne.jp  Wed Sep 12 21:01:01 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7324] Re: ブロック生成のメタプログラミング
+In-Reply-To: <200709121224.51182.tomohiro@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp>	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>	<46E6CC94.2070100@zephyr.dti.ne.jp>
+	<200709121224.51182.tomohiro@sra.co.jp>
+Message-ID: <46E7D4FD.5010805@zephyr.dti.ne.jp>
+
+on 07.9.12 0:24 PM, Tomohiro Oda wrote:
+> NISHIHARA Satoshi wrote:
+>> ((0 to: 9) select: [:each | #odd value: each]) fold: [:x :y | x perform:
+>> #* with: y].
+> えっと、Symbol>>value:およびSymbol>>value:value:が実装されている場合、
+> ((0 to: 9) select: #odd) fold: #*
+> になりますね。
+
+です．
+鷲見さんからも厳しいツッコミをいただきました．m(_ _)m
+
+＃思ひ込みは怖ひ．
+
+なので，ここは「Et tu, Symbol(um)」ということで．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From sumi ＠ seagreen.ocn.ne.jp  Wed Sep 12 22:10:57 2007
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7325] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46E7CFF3.2020408@zephyr.dti.ne.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>
+	<46E6CC94.2070100@zephyr.dti.ne.jp>
+	<86c0320c0709111218y234075c2v1113f61f4e634a60@mail.gmail.com>
+	<46E7CFF3.2020408@zephyr.dti.ne.jp>
+Message-ID: <86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>
+
+青木さん、西原さん、ありがとうございます。鷲見です。
+
+> 鷲見さんからも厳しいツッコミをいただきました．m(_ _)m
+
+あ…、スミマセン。慣れない Web メールアプリを使っていたら、ML への
+返信のつもりが直メールになっていたようです。お気を悪くされたら、ごめんなさい。
+他意はありません。
+
+
+07/09/12 に NISHIHARA Satoshi<nishis@zephyr.dti.ne.jp> さんは書きました:
+> enumerating カテゴリのパラメータ＝ブロックと
+
+そうした「思いこみ」を裏切らないために、ただシンボルを渡すのではなく
+シンボルに asBlock メッセージを送って返る値がブロックであることを
+陽にすることはコードの読みくだしのしやすさを確保するのにもきわめて大事な
+ことなのだとあらためて実感できます。ｗ
+
+じつはこのシンボルをブロックの代わりに受け渡すスタイルは、OS X 向けの
+Smalltalk ライクな F-Script という言語（の初期）や Ruby で重宝がられているのを見て
+そのアイデアを知ったのですが、記述をシンプルにできて便利なのは分かっても、
+何かこう「気持ちの悪さ」のようなものを払拭できずにいたところなのでした。
+（わざわざ持ち出してきておいてこういうのも無責任なはなしですが…｝
+
+青木さんや西原さんのお話をいろいろとうかがっているうちに、
+その違和感の正体が何なのかがだんだん分かってきたような気がします。
+今回のウリであるメタプログラミングとは関係ない個人的な興味のことで
+申し訳ありませんでした。
+
+
+Symbol>>#value: についてのコメントがあったというブログのエントリーも
+読みました（このエントリーでは #asBlock をメタプログラミングを使わずに
+実装してしまっているようですが、まあそれはおいておくとして）。この最後で、
+
+> In contrast, asBlock is a uniform mechanism to cross over from
+> the domain of selectors to the domain of blocks equivalent to
+> those selectors sent to the block's first argument.
+
+とあるのがナルホドなーと思いました。Symbol のほうでも実際は #value: と
+#value:value: の二つを用意しておきさえすれば、ほぼ用は足りるわけですが、
+それでも理屈では引数の数だけメソッドを用意しないといけないという状況は
+青木さんのおっしゃる醜悪な状況と似て、いかにも美しくありません。
+
+-- 
+Masato Sumi
+
+From sumi ＠ seagreen.ocn.ne.jp  Wed Sep 12 22:33:46 2007
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7326] Re: ブロック生成のメタプログラミング
+In-Reply-To: <200709121520.46515.tomohiro@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp> <46E6CEE9.8030201@zephyr.dti.ne.jp>
+	<86c0320c0709112114r7a23e40cy24591a63cd8f79b7@mail.gmail.com>
+	<200709121520.46515.tomohiro@sra.co.jp>
+Message-ID: <86c0320c0709120633p61a60af6oaa1fa40ef36f7fb@mail.gmail.com>
+
+おださん、ありがとうございます。鷲見です。
+
+07/09/12 に Tomohiro Oda<tomohiro@sra.co.jp> さんは書きました:
+> それはたぶん、Scheme（あるいはLisp)だからSymbolと関数の
+> 結び付きを強く感じるのでは。Haskell等の現代的な(?)関数型
+> 言語では、関数の実体とシンボルはやっぱり距離があるような
+> 感覚があります。
+
+(fold + 0 '(1 2 3 4 5)) は + というシンボルを評価時に引数として渡して
+(fold (lambda (x y) (+ x y)) 0 '(1 2 3 4 5)) のように無名関数を渡したときと
+同様になるように fold がよきに計らうようなイメージでいて、そのつもりで
+書いたのですが、これは私の完全な勘違いで、意味論的には + というシンボルに
+関連付けされた関数の実体が渡されるのでの場合と同じなのですね（きっと…）。
+
+したがって、Haskell からわざわざ置き換えた意味がないうえに、肝心の例え
+としても成立していなかったもようです。取り下げさせてください(^_^;)。スミマセン。
+
+-- 
+Masato Sumi
+
+From tomohiro ＠ sra.co.jp  Wed Sep 12 23:12:34 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7327] Re: ブロック生成のメタプログラミング
+In-Reply-To: <86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>
+References: <46DF53E9.2090805@sra.co.jp> <46E7CFF3.2020408@zephyr.dti.ne.jp>
+	<86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>
+Message-ID: <200709122312.37192.tomohiro@sra.co.jp>
+
+おだです。
+
+> そうした「思いこみ」を裏切らないために、ただシンボルを渡すのではなく
+> シンボルに asBlock メッセージを送って返る値がブロックであることを
+> 陽にすることはコードの読みくだしのしやすさを確保するのにもきわめて大事な
+> ことなのだとあらためて実感できます。ｗ
+
+私などはよくクロージャを変数に代入しておいて、do:やcollect:等のenumerating
+をおこなうのですが（Junの中にも沢山例が見つかると思います)、その場合にもasBlockを
+入れておくのが作法になるでしょうね。
+
+triangleBlock := [:node | triangulator addNode: node].
+nodes1 do: triangleBlock asBlock.
+nodes2 do: triangleBlock asBlock.
+
+個人的にはasBlockよりはasClosureな気分ですが、命名権は創作者にあるので
+素直に従うことにします。
+---
+おだ
+
+From aoki ＠ sra.co.jp  Thu Sep 13 06:16:50 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7328] ????????????????????????????????
+In-Reply-To: <200709122312.37192.tomohiro@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+	<46E7CFF3.2020408@zephyr.dti.ne.jp>	<86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>
+	<200709122312.37192.tomohiro@sra.co.jp>
+Message-ID: <46E85742.8020503@sra.co.jp>
+
+楳直です。
+
+Tomohiro Oda さんは抱、ュ、゛、キ、ソ:
+> ネヒオト、ヒ、マasBlock、隍熙マasClosure、ハ壥キヨ、ヌ、ケ、ャ。「テ葈リ、マラ゜、ヒ、「、ホ、ヌ
+> ヒリヨア、ヒ樟、ヲ、ウ、ネ、ヒ、キ、゛、ケ。」
+
+ヒス、筅ス、ヲヒシ、、、゛、ケ。」、ケ、ヌ、ヒ。クasClosure 、ホ、ロ、ヲ、ャ asBlock 、隍mヌミ
+、ヌ、キ、遉ヲ。ケ、ネ、ホメ簪朎キ、ニ、、、゛、キ、ソ、ャ。「饐ーャ饐ーソ、襪海箸りも、ひとかたまりのИタ惕ネ⊇ムヤ、ケ、襪曚Δ♤⊇圓気鵑力爍┐気♡に栽うみたいです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+From aoki ＠ sra.co.jp  Thu Sep 13 06:32:51 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7329] Re: ブロック生成のメタプログラミング
+In-Reply-To: <200709122312.37192.tomohiro@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+	<46E7CFF3.2020408@zephyr.dti.ne.jp>	<86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>
+	<200709122312.37192.tomohiro@sra.co.jp>
+Message-ID: <46E85B03.2000203@sra.co.jp>
+
+先ほど GB2312 でポストしてしまったので、ISO2022JP で再送です。
+// R2D2 (AOKI Atsushi)
+
+青木です。
+
+Tomohiro Oda さんは書きました:
+> 個人的にはasBlockよりはasClosureな気分ですが、命名権は創作者にあるので
+> 素直に従うことにします。
+
+私もそう思います。すでに「asClosure のほうが asBlock より適切
+でしょう」との意向を表明していましたが、閉包が閉包たることよ
+りも、ひとかたまりの処理と伝言するほうが、皆さんの相（さが）
+に合うみたいです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From shin-sahara ＠ kuzo.csk.com  Thu Sep 13 12:09:33 2007
+From: shin-sahara ＠ kuzo.csk.com (佐原 伸)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7330] Re: ブロック生成のメタプログラミング
+In-Reply-To: <46E85B03.2000203@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+	<46E7CFF3.2020408@zephyr.dti.ne.jp>	<86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>
+	<200709122312.37192.tomohiro@sra.co.jp>
+	<46E85B03.2000203@sra.co.jp>
+Message-ID: <F660C732-F5F9-47C0-87C2-19F3CE7E6C23@kuzo.csk.com>
+
+佐原です。
+
+On 2007/09/13, at 6:32, AOKI Atsushi wrote:
+
+> 先ほど GB2312 でポストしてしまったので、ISO2022JP  
+> で再送です。
+> // R2D2 (AOKI Atsushi)
+>
+> 青木です。
+>
+> Tomohiro Oda さんは書きました:
+>> 個人的にはasBlockよりはasClosureな気分ですが、命 
+>> 名権は創作者にあるので
+>> 素直に従うことにします。
+>
+> 私もそう思います。すでに「asClosure のほうが  
+> asBlock より適切
+> でしょう」との意向を表明していましたが、閉包が閉包たることよ
+> りも、ひとかたまりの処理と伝言するほうが、皆さんの相（さが）
+> に合うみたいです。
+
+Smalltalkは、もともと「子供でも分かる」ことを目指していたのでは 
+なかったでしょうか？
+だから、ClosureではなくBlockという命名になったのだと 
+思います。
+
+まあ、しかしSqueakで遊んで言う子供たちがClosureとか 
+使っていて、ソフトウェア技術者が分からないというのもおもしろいか 
+も :-)
+
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+
+
+From takaoki ＠ aisoft.co.jp  Thu Sep 13 14:44:08 2007
+From: takaoki ＠ aisoft.co.jp (takaoki@aisoft.co.jp)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7331] Re: ブロック生成のメタプログラミング
+In-Reply-To: Your message of "Thu, 13 Sep 2007 12:09:33 JST."
+	<F660C732-F5F9-47C0-87C2-19F3CE7E6C23@kuzo.csk.com> 
+Message-ID: <200709130544.OAA18201@basashi.aisoft.co.jp>
+
+成田です。
+
+In message <F660C732-F5F9-47C0-87C2-19F3CE7E6C23@kuzo.csk.com>you write:
+>佐原です。
+	:
+>まあ、しかしSqueakで遊んで言う子供たちがClosureとか 
+>使っていて、ソフトウェア技術者が分からないというのもおもしろいか 
+>も :-)
+
+「モノの道理を深く識って使うのと、飯を食えるのとは別です」とか。
+
+ってのはましな方で「closure? それは何です？それって私と何の関係が
+あるんです？」とか言うソフトウェア技術者も確かにいるだろうなぁ。
+しかも、C 言語とか使っていて優秀な技術者と認められていたり。
+
+面白いけれど、ちょっとブラックな面白さ。
+
+--
+    Narita Takaoki @
+      Imaging Products Software Engineering Development Department,
+        IPSEDC, SEIKO EPSON CORPORATION
+    mailto:Narita.Takaoki@exc.epson.co.jp
+
+C 言語だけの技術者か見分けるためのクイズその１：
+   	問: カリー化とは食材をカレー料理化することである。
+   	解答: ◯×の二択
+
+From nishis ＠ zephyr.dti.ne.jp  Thu Sep 13 23:14:01 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7332] Re: ブロック生成のメタプログラミング
+In-Reply-To: <86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>
+References: <46DF53E9.2090805@sra.co.jp>	<86c0320c0709110930y220bba20u20726ab378f93920@mail.gmail.com>	<46E6CC94.2070100@zephyr.dti.ne.jp>	<86c0320c0709111218y234075c2v1113f61f4e634a60@mail.gmail.com>	<46E7CFF3.2020408@zephyr.dti.ne.jp>
+	<86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>
+Message-ID: <46E945A9.4000005@zephyr.dti.ne.jp>
+
+on 07.9.12 10:10 PM, Masato Sumi wrote:
+> あ…、スミマセン。慣れない Web メールアプリを使っていたら、ML への
+> 返信のつもりが直メールになっていたようです。お気を悪くされたら、ごめんなさい。
+> 他意はありません。
+
+いえいえ，そんなことはありません．ワタシの場合はあ〜ゆ〜スタイルだという
+ことで．気を遣わせてしまって，こちらこそ申し訳ないです．
+
+> そうした「思いこみ」を裏切らないために、ただシンボルを渡すのではなく
+> シンボルに asBlock メッセージを送って返る値がブロックであることを
+> 陽にすることはコードの読みくだしのしやすさを確保するのにもきわめて大事な
+> ことなのだとあらためて実感できます。ｗ
+
+う〜ん，どうでしょ．
+変態 (Symbol>>value:) を裏切ることになりかねないと思います．
+ってか，「返る値がブロックであること」は，ほかの converting に属するもの
+同様，メッセージ名からして明らかだと思います．
+
+> とあるのがナルホドなーと思いました。Symbol のほうでも実際は #value: と
+> #value:value: の二つを用意しておきさえすれば、ほぼ用は足りるわけですが、
+> それでも理屈では引数の数だけメソッドを用意しないといけないという状況は
+> 青木さんのおっしゃる醜悪な状況と似て、いかにも美しくありません。
+
+でしょでしょ．なので，「Et tu, Symbol(um)」なのです (お粗末さま)．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+
+From nishis ＠ zephyr.dti.ne.jp  Thu Sep 13 23:16:58 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7333] Re: ブロック生成のメタプログラミング
+In-Reply-To: <F660C732-F5F9-47C0-87C2-19F3CE7E6C23@kuzo.csk.com>
+References: <46DF53E9.2090805@sra.co.jp>	<46E7CFF3.2020408@zephyr.dti.ne.jp>	<86c0320c0709120610p396079a6k36dd1ee0147b6cfb@mail.gmail.com>	<200709122312.37192.tomohiro@sra.co.jp>	<46E85B03.2000203@sra.co.jp>
+	<F660C732-F5F9-47C0-87C2-19F3CE7E6C23@kuzo.csk.com>
+Message-ID: <46E9465A.8000801@zephyr.dti.ne.jp>
+
+on 07.9.13 0:09 PM, 佐原 伸 wrote:
+> まあ、しかしSqueakで遊んで言う子供たちがClosureとか 
+> 使っていて、ソフトウェア技術者が分からないというのもおもしろいか 
+> も :-)
+
+でも， Squeak では未だに New Compiler (aka. ClosureCompiler) を入れない
+限り BlockContext です……．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From nisinaka ＠ sra.co.jp  Tue Sep 18 14:58:10 2007
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:05 2007
+Subject: [SML 7334] [ANNOUNCE] Jun for Java (Jun683)
+Message-ID: <20070918145034.7164.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン683を公開します。
+
+  バージョン668からの主な変更点は、以下の通りです。
+
+    * (modification) デフォルトのシェーディングを 'flat' から 
+      'smooth' に変更しました。
+
+    * (new feature) スムージング角度(smoothing angle)を指定して、
+      JunOpenGL3dObjectの頂点法線ベクトルの計算ができるようになり
+      ました。スムージング角度はビューファインダーからも指定する
+      ことが出来ます。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/SmoothingAngle.png
+
+    * (new feature) OpenGLバインディングとして、これまでのJunGLに
+      加えて、JOGL(https://jogl.dev.java.net/)を使うことができる
+      ようにしました。JunOpenGLInterfaceが、JunGLとJOGLの両方に共
+      通するOpenGLインタフェースの抽象クラスになります。
+      JunOpenGLDrawableは、三次元の描画を行うコンポーネントを表す
+      インタフェースです。JunOpenGLDrawableを実装したクラスには
+      JOGLCanvas/JOGLJPanel/JunGLCanvas/JunGLJPanelなどがあります。
+      これらのいずれかを、デフォルトの描画コンポーネントとして、
+      ラウンチャのメニューから選ぶことができます。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/JOGL.png
+
+    * (incompatibility) JOGL対応の拡張にともない、
+      JunOpenGL3dViewAwt/JunOpenGL3dViewSwingが、それぞれ
+      JunAbstractViewPanel/JunAbstractViewJPanelのサブクラスに変
+      わりました。
+
+    * (incompatibility) JOGL対応の拡張にともない、レンダリングモー
+      ドの設定を廃止しました。
+
+    * (modification) JunOpenGL3dObjectとそのサブクラスをJun683相
+      当に更新しました。典型的なオブジェクトとして「メビウスの輪」
+      を定義してあります。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius1-1.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius1-2.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius2-1.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/683/Movius2-2.png
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+

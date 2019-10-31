@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3836] Re: Monticelloについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203836%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1vbnRpY2VsbG8%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=JM200802112102404.1164531%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003819.html">
+   <LINK REL="Next"  HREF="003820.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3836] Re: Monticelloについて</H1>
+    <B>Sho Yoshida</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203836%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1vbnRpY2VsbG8%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=JM200802112102404.1164531%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3836] Re: Monticelloについて">newapplesho ＠ gmail.com
+       </A><BR>
+    <I>2008年 2月 16日 (土) 23:51:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003819.html">[Squeak-ja: 3819] Re: Monticelloについて
+</A></li>
+        <LI>次の記事 <A HREF="003820.html">[Squeak-ja: 3820] Squeak開発者版(3.9ベース)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3836">[ 日付 ]</a>
+              <a href="thread.html#3836">[ スレッド ]</a>
+              <a href="subject.html#3836">[ 件名 ]</a>
+              <a href="author.html#3836">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは．
+吉田です．
+
+梅澤さん，Monticelloの日本語対応パッチありがとうございます．
+卒論のパッケージ化をするために使わせていただきます．
+
+
+
+On 2008/02/11, at 21:02, Masashi Umezawa wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;<i> ものすごく古い話題なのですが、Monticelloの日本語対応 
+</I>&gt;<i> パッチを更新しました。
+</I>&gt;<i> 今回から日本語を公開時コメントに含めても、ファイルを壊さず 
+</I>&gt;<i> に使うことが
+</I>&gt;<i> 出来ます。(BOMつきUTF8で書きます)
+</I>&gt;<i>
+</I>&gt;<i> ただし、このパッチが当たっていない外部のシステム 
+</I>&gt;<i> (SqueakSourceなど)を
+</I>&gt;<i> 使う場合、MCZとしてちゃんと認識してくれないという問題 
+</I>&gt;<i> が起こります。
+</I>&gt;<i>
+</I>&gt;<i> 対策としては
+</I>&gt;<i>
+</I>&gt;<i> -別システムにも出来る限りパッチを当てる(無理な場合が 
+</I>&gt;<i> あります)
+</I>&gt;<i> -日本語の公開時コメントは内部でコントロールできるシステムに 
+</I>&gt;<i> のみ利用する
+</I>&gt;<i>
+</I>&gt;<i> といった形になります。日本語の公開コメントを使わない場合、 
+</I>&gt;<i> 互換性は
+</I>&gt;<i> 保たれますので、いずれにせよ入れておいて損はないパッチと言 
+</I>&gt;<i> えます。
+</I>&gt;<i>
+</I>&gt;<i> ではでは。
+</I>&gt;<i>
+</I>&gt;<i> Masashi Umezawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">umejava ＠ mars.dti.ne.jp</A>&gt; wrote:
+</I>&gt;&gt;<i> こんにちは
+</I>&gt;&gt;<i> 梅澤です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> デバッグログを見るに、
+</I>&gt;&gt;<i> MczInstaller&gt;&gt;extractVersionInfoでこけていますね。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> なお、Monticelloの公開時コメントやパッケージ名に日 
+</I>&gt;&gt;&gt;<i> 本語を使ったり
+</I>&gt;&gt;&gt;<i> すると、きっと動かないと思います。ソースコード(とク 
+</I>&gt;&gt;&gt;<i> ラスコメント)内に
+</I>&gt;&gt;&gt;<i> 日本語を使うことができるようになったという程度のものです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> と書きましたが、公開時コメントで日本語を過去に使ったことがあ 
+</I>&gt;&gt;<i> る.mcz
+</I>&gt;&gt;<i> を使われているのだと思います。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> .mczファイルを展開してできるversionというファイルを 
+</I>&gt;&gt;<i> 見ると、日本語
+</I>&gt;&gt;<i> が含まれたりしていませんでしょうか。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> つまりもう少し修正が必要なのですが、範囲が大きくなりそうな 
+</I>&gt;&gt;<i> ので保留中です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Sho Yoshida &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>&gt; wrote:
+</I>&gt;&gt;&gt;<i> 吉田です．
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 梅澤さん，何度もすみません．
+</I>&gt;&gt;&gt;<i> 違うイメージにMonticello-m17n-patch.7.csをfile  
+</I>&gt;&gt;&gt;<i> inして
+</I>&gt;&gt;&gt;<i> mczファイルを作成し，読み込んだところエラーが起こってしまいま
+</I>&gt;&gt;&gt;<i> した．
+</I>&gt;&gt;&gt;<i> ただ，Monticello-m17n-patch.7.csをfile inした 
+</I>&gt;&gt;&gt;<i> あとに
+</I>&gt;&gt;&gt;<i> Monticello-m17n-patch.4.cをfile inしてmczファイル
+</I>&gt;&gt;&gt;<i> を作成するとうまくいきました．
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 僕のSqueakの環境が悪いのでしょうか．
+</I>&gt;&gt;&gt;<i> よろしくお願いいたします．
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa]&lt;Monticello-m17n-patch.20.cs&gt;
+</I>
+- - - -
+Sho Yoshida
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>
+
+
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003819.html">[Squeak-ja: 3819] Re: Monticelloについて
+</A></li>
+	<LI>次の記事 <A HREF="003820.html">[Squeak-ja: 3820] Squeak開発者版(3.9ベース)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3836">[ 日付 ]</a>
+              <a href="thread.html#3836">[ スレッド ]</a>
+              <a href="subject.html#3836">[ 件名 ]</a>
+              <a href="author.html#3836">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

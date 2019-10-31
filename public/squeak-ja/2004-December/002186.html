@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2186] Re: SuperSwiki 活用計画
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202186%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM2hNUTdXMmgbKEI%3D%3F%3D&In-Reply-To=41CE2AF6.3000707%40asu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002185.html">
+   <LINK REL="Next"  HREF="002187.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2186] Re: SuperSwiki 活用計画</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202186%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM2hNUTdXMmgbKEI%3D%3F%3D&In-Reply-To=41CE2AF6.3000707%40asu.ac.jp"
+       TITLE="[Squeak-ja: 2186] Re: SuperSwiki 活用計画">tak ＠ metatoys.org
+       </A><BR>
+    <I>2004年 12月 26日 (日) 12:40:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002185.html">[Squeak-ja: 2185] Re: SuperSwiki 活用計画
+</A></li>
+        <LI>次の記事 <A HREF="002187.html">[Squeak-ja: 2187] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2186">[ 日付 ]</a>
+              <a href="thread.html#2186">[ スレッド ]</a>
+              <a href="subject.html#2186">[ 件名 ]</a>
+              <a href="author.html#2186">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+
+&gt;<i> 　初心者みたいな質問で恐縮なのですが、&quot;アップデートストリーム&quot;とは何なん
+</I>&gt;<i> でしょうか？どっかから最新の物や開発中のコードがゲットできる仕組みなので
+</I>&gt;<i> しょうか？
+</I>
+ワールドメニュー (esc キー) &gt; ヘルプ &gt; update code from server
+
+というのを選択すると、スクイークが最新の状態に更新されるように
+なっています。とは言っても実は日本語版ではあまり使ってないのですが、
+英語版だとじゃんじゃん更新されます。
+
+&gt;<i> 　「プロジェクト置き場」のような感じになるのでしょうか？SuperSwiki +
+</I>&gt;<i> Squeak という組み合わせは、とても相性がよく使い勝手もいいので、体感でき
+</I>&gt;<i> るサイトがあってもいいと思います。
+</I>&gt;<i> 　SuperSwikiの環境は構築も簡単なので、使いやすさ体感してもらって「じゃあ
+</I>&gt;<i> 自分の所でも...」となるといいですね。
+</I>
+そうですね、「プロジェクト置き場」はアップの方法が多少マニアックなので、
+SuperSwiki の方が敷居が低いと思います。SuperSwiki 設置のチュートリアル
+も作って、蜂須賀さんのノウハウを有効活用したいと思っています。
+
+&gt;<i> 　余談なのですが、以前、Nihongo4を使用してパソコンサークルを行った際には
+</I>&gt;<i> 展開せずにアップロードするようにした物を使っていた記憶があります。
+</I>&gt;<i> Nihongo4の時は、展開するとたくさんのファイルとフォルダが出来ていたりする
+</I>&gt;<i> 上に、画像が壊れたりする時があったからだったと記憶しています。
+</I>&gt;<i> 
+</I>&gt;<i> 　Nihongo6になってから、展開されたファイルを見てみると.pr, .rc.gz, .html
+</I>&gt;<i> の３つしかなく、.rc.gzは実際には0バイトですし、.htmlファイルもSuperSwiki
+</I>&gt;<i> では使用されていないようです。zipファイルである必要があるのか？サーバと
+</I>&gt;<i> ローカルで変える必要があるのか？という疑問が私の中にはあるのですが....本
+</I>&gt;<i> 当に余談でスミマセン。
+</I>
+これは事情は大島さんが詳しいと思うのですが、少しでも見かけのダウンロー
+ドを速くしようとする昔の Squeak のやり方は結局アイデアくずれだったとい
+う歴史的事情じゃないかと思います。。。
+
+&gt;<i> 　「apache経由」というと、mod_proxyみたいなもので実現されているのでしょ
+</I>&gt;<i> うか？セキュリティにも関係しそうなので、あまり深い事は聞かない方がいいか
+</I>&gt;<i> しら.....
+</I>
+mod_proxy の機能を少しだけ使って、80番ポートで SuperSwiki を立ち上げよ
+うと思っています。80番以外の外部アクセスを禁じているネットワークがある
+事や、サーバ側のポートもあまり空けると多摩美の管理者が嫌がるだろうと言
+う配慮のつもりです。また、:8080 が付かないほうがかっこいいです。詳しく
+は <A HREF="http://d.hatena.ne.jp/propella/20041224#p1">http://d.hatena.ne.jp/propella/20041224#p1</A> に書いておきました。
+
+-- 
+山宮 隆 ::= <A HREF="http://yuri.sakura.ne.jp/~propella/">http://yuri.sakura.ne.jp/~propella/</A>
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002185.html">[Squeak-ja: 2185] Re: SuperSwiki 活用計画
+</A></li>
+	<LI>次の記事 <A HREF="002187.html">[Squeak-ja: 2187] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2186">[ 日付 ]</a>
+              <a href="thread.html#2186">[ スレッド ]</a>
+              <a href="subject.html#2186">[ 件名 ]</a>
+              <a href="author.html#2186">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

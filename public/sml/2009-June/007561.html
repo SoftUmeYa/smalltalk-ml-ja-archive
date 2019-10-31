@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7561] Re: 第8回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207561%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCOBskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A25EBC7.8060200%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007559.html">
+   <LINK REL="Next"  HREF="007563.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7561] Re: 第8回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207561%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCOBskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A25EBC7.8060200%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7561] Re: 第8回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 6月  4日 (木) 09:40:12 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007559.html">[SML 7559] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007563.html">[SML 7563] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7561">[ 日付 ]</a>
+              <a href="thread.html#7561">[ スレッド ]</a>
+              <a href="subject.html#7561">[ 件名 ]</a>
+              <a href="author.html#7561">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠京都上賀茂です。
+
+昨夜に行った京都駅前でのSmalltalk勉強会の簡単な報告をします。
+
+3.5 メッセージ（p.88）から始めて、3.6 文（p.95）のカスケード
+までゆきました。8ページしか進んでいない！のですが、7.2 本格的
+な文法を併せて行いましたので、こちらが15ページ分あります。合
+計して23ページ分になります。ちょうど良いペースでしょう。:-)
+
+デバッカによる逐次実行で、メッセージの種類や優先順位（どの順
+番でメッセージが発信されるか）などを、より深く理解していただ
+けたのではないかと思います。
+
+＃初学者ほどデバッカを使うのが望ましい。
+
+以下に単項メッセージセレクタ・二項メッセージセレクタ・キーワ
+ードメッセージセレクタを求めるプログラムを記載しておきます。
+ウィンドウのラベルに個数をつけておきました。
+
+------------------------------------------------------------
+
+&quot;メッセージセレクタを種類別に求めてウィンドウにリストする&quot;
+|<i> aSet aPoint |
+</I>aSet := Set new: 50000.
+Smalltalk allBehaviorsDo: [:each | aSet addAll: each selectors].
+aPoint := nil.
+(Array
+    with: 'Unary Message Selectors'
+            -&gt; [:each | each numArgs = 0 and: [each isKeyword not]]
+    with: 'Binary Message Selectors'
+            -&gt; [:each | each numArgs = 1 and: [each isKeyword not]]
+    with: 'Keyword Message Selectors'
+            -&gt; [:each | each numArgs &gt;= 1 and: [each isKeyword]])
+        do: [:anAssociation |
+            | aString aBlock aStream aCollection aModel |
+            aString := anAssociation key.
+            aBlock := anAssociation value.
+            aStream := WriteStream on: String new.
+            aCollection := (aSet select: aBlock) asSortedCollection.
+            aCollection do: [:each |
+                    aStream
+                        nextPutAll: each asString;
+                        cr].
+            aModel := ValueHolder with: aStream contents.
+            TextEditorView
+                open: aModel
+                label: aString , ' : ' , aCollection size printString
+                extent: 400 @ 300.
+            (aModel dependents detect: [:each | each isKindOf: ScheduledWindow]
+                ifNone: [nil])
+                    ifNotNil: [:aWindow |
+                        | aBox |
+                        aPoint
+                            ifNil: [aPoint := aWindow displayBox origin]
+                            ifNotNil: [aPoint := aPoint translatedBy: 40 @ 30.
+                                aBox := aPoint extent: aWindow displayBox extent.
+                                aWindow displayBox: aBox]]].
+^aSet
+
+------------------------------------------------------------
+
+また、構文木（JunParseTreeもしくはFooProgramScanner）を援用し
+ました。構文木を深さ優先でたどれば、それが実行順序になること
+も得心していただけたと思います。
+
+プログラムコードを文字列として構文木に渡し、出せ！というだけ。
+
+(JunParseTree code: '3 + 4 * 5') show
+
+(JunParseTree code: '3 + (4 * 5)') show
+
+次のような単項メッセージ・二項メッセージ・キーワードメッセー
+ジが混ざったものでも、コンパイラの気持ちを知ることができます。
+
+(JunParseTree code: 'Rectangle origin: 1 asPoint + 2 asPoint extent: 3 asPoint + 4 asPoint') show
+
+また、クラスとメッセージセレクタを指定して構文木を出したり、
+コンパイルドメソッドを指定して構文木を出したりできます。
+
+(JunParseTree class: Integer selector: #factorial) show
+
+(JunParseTree method: (Integer compiledMethodAt: #factorial)) show
+
+------------------------------------------------------------
+
+さらに、なぜカスケードが有用であるのかを、バイトコードから証
+を立てることも行いましたので、そのプログラムを記しておきます。
+
+------------------------------------------------------------
+
+&quot;カスケードを使わない場合&quot;
+[Transcript clear.
+Transcript nextPutAll: 'ASAOKA Hiroko'.
+Transcript cr.
+Transcript nextPutAll: 'SAWAMOTO Eri'.
+Transcript cr.
+Transcript nextPutAll: 'AOKI Atsushi'.
+Transcript cr.
+Transcript flush]
+    method symbolic
+
+&quot;以下のようなバイトコード列（30バイト）になります”
+normal CompiledBlock numArgs=0 numTemps=0 frameSize=12
+
+literals: ({Transcript} #clear 'ASAOKA Hiroko' 'SAWAMOTO Eri' 'AOKI Atsushi' #flush )
+
+1 &lt;34&gt; push Transcript
+2 &lt;71&gt; send clear
+3 &lt;66&gt; pop
+4 &lt;34&gt; push Transcript
+5 &lt;1E&gt; push 'ASAOKA Hiroko'
+6 &lt;B5&gt; send nextPutAll:
+7 &lt;66&gt; pop
+8 &lt;34&gt; push Transcript
+9 &lt;F0 21&gt; send cr
+11 &lt;66&gt; pop
+12 &lt;34&gt; push Transcript
+13 &lt;1F&gt; push 'SAWAMOTO Eri'
+14 &lt;B5&gt; send nextPutAll:
+15 &lt;66&gt; pop
+16 &lt;34&gt; push Transcript
+17 &lt;F0 21&gt; send cr
+19 &lt;66&gt; pop
+20 &lt;34&gt; push Transcript
+21 &lt;20&gt; push 'AOKI Atsushi'
+22 &lt;B5&gt; send nextPutAll:
+23 &lt;66&gt; pop
+24 &lt;34&gt; push Transcript
+25 &lt;F0 21&gt; send cr
+27 &lt;66&gt; pop
+28 &lt;34&gt; push Transcript
+29 &lt;75&gt; send flush
+30 &lt;65&gt; return
+
+------------------------------------------------------------
+
+&quot;カスケードを使った場合&quot;
+[Transcript
+    clear;
+    nextPutAll: 'ASAOKA Hiroko';
+    cr;
+    nextPutAll: 'SAWAMOTO Eri';
+    cr;
+    nextPutAll: 'AOKI Atsushi';
+    cr;
+    flush]
+    method symbolic
+
+&quot;以下のようなバイトコード列（24バイト）になります”
+normal CompiledBlock numArgs=0 numTemps=0 frameSize=12
+
+literals: ({Transcript} #clear 'ASAOKA Hiroko' 'SAWAMOTO Eri' 'AOKI Atsushi' #flush )
+
+1 &lt;34&gt; push Transcript
+2 &lt;68&gt; dup first
+3 &lt;71&gt; send clear
+4 &lt;69&gt; dup
+5 &lt;1E&gt; push 'ASAOKA Hiroko'
+6 &lt;B5&gt; send nextPutAll:
+7 &lt;69&gt; dup
+8 &lt;F0 21&gt; send cr
+10 &lt;69&gt; dup
+11 &lt;1F&gt; push 'SAWAMOTO Eri'
+12 &lt;B5&gt; send nextPutAll:
+13 &lt;69&gt; dup
+14 &lt;F0 21&gt; send cr
+16 &lt;69&gt; dup
+17 &lt;20&gt; push 'AOKI Atsushi'
+18 &lt;B5&gt; send nextPutAll:
+19 &lt;69&gt; dup
+20 &lt;F0 21&gt; send cr
+22 &lt;6A&gt; dup last
+23 &lt;75&gt; send flush
+24 &lt;65&gt; return
+
+------------------------------------------------------------
+
+以上、簡単ですが、昨日の勉強の報告でした。不足や他に思うとこ
+ろなどがありましたら、ご参加いただいた皆さん、フォローをお願
+いします。
+
+＃きっと浅岡さんが差し入れの報告をしてくれるにちがいない。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007559.html">[SML 7559] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007563.html">[SML 7563] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7561">[ 日付 ]</a>
+              <a href="thread.html#7561">[ スレッド ]</a>
+              <a href="subject.html#7561">[ 件名 ]</a>
+              <a href="author.html#7561">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

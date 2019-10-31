@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2127] Re: 大島さん、阿部さん　ご回答ありがとうございました。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202127%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJnRWckNSRzISIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMCRJdCQ1JHMhISQ0MnNFeiQiJGokLCRIJCYkNCQ2JCQkXiQ3GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJD8hIxsoQg%3D%3D%3F%3D&In-Reply-To=001101c4e4ac%244ed49900%240200a8c0%40systema1">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002126.html">
+   <LINK REL="Next"  HREF="002128.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2127] Re: 大島さん、阿部さん　ご回答ありがとうございました。</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202127%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJnRWckNSRzISIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMCRJdCQ1JHMhISQ0MnNFeiQiJGokLCRIJCYkNCQ2JCQkXiQ3GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJD8hIxsoQg%3D%3D%3F%3D&In-Reply-To=001101c4e4ac%244ed49900%240200a8c0%40systema1"
+       TITLE="[Squeak-ja: 2127] Re: 大島さん、阿部さん　ご回答ありがとうございました。">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2004年 12月 18日 (土) 13:13:39 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002126.html">[Squeak-ja: 2126] Re: すみません阿部さんでした。
+</A></li>
+        <LI>次の記事 <A HREF="002128.html">[Squeak-ja: 2128] Re: 大島さん、阿部さん　ご回答ありがとうございました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2127">[ 日付 ]</a>
+              <a href="thread.html#2127">[ スレッド ]</a>
+              <a href="subject.html#2127">[ 件名 ]</a>
+              <a href="author.html#2127">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+&gt;<i> 　　入会手続きしないで、いきなり質問メールを
+</I>&gt;<i> 　　してしまい、大変失礼しました。
+</I>
+  いえいえ、入会手続きしないで出してしまうことは良くあることです^^;
+
+&gt;<i> 　　固定小数点数値(FixedPoint)があるといいなあ
+</I>&gt;<i>     と思っていまして、
+</I>&gt;<i> 　　Squeak3.7-5989-full.imageをのぞいてみたところ
+</I>&gt;<i> 　　ScaledDecimalとして実装されていて、安心しました。
+</I>&gt;<i>  
+</I>&gt;<i> 　　これは以降のSqueakNihongoにも反映されるので
+</I>&gt;<i> 　　しょうか？
+</I>
+  はい。4月までには出るはずの新しいバージョンには入ります。
+
+&gt;<i>     Squeak3.7-5989-full.imageのScaledDecimalでは
+</I>&gt;<i>  
+</I>&gt;<i>     12.34s  printIt --&gt;  12.33s2
+</I>&gt;<i>     と表示されてしまいます。
+</I>&gt;<i>  
+</I>&gt;<i>     12.34s  inspect --&gt;  fraction:(3473401212609495/281474976710656)
+</I>&gt;<i>                          scale:2　
+</I>&gt;<i> 　　ですが、
+</I>&gt;<i>  
+</I>&gt;<i> 　　ただしくは、
+</I>&gt;<i> 　　　　　　fraction:(617/50)
+</I>&gt;<i>     　　　　scale:2
+</I>&gt;<i>     でよいのではと思いますが。
+</I>&gt;<i>  
+</I>&gt;<i> 　　今後の勉強のため
+</I>&gt;<i> 　　コードを追いかけてみようと
+</I>&gt;<i> 　　考え始めています。(^^!
+</I>&gt;<i>  
+</I>&gt;<i>     でも、解明された方はぜひお教えください。
+</I>
+  ちょっとsqueak-devのほうを追いきれてはいませんでしたが、このバグレポー
+トは出ていたように思います。せっかくの要望ですので僕も確認したいと思い
+ますが、もしよろしかったら斉藤さんも
+
+bugs.impara.de
+
+で確認などしてみていただけないでしょうか。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002126.html">[Squeak-ja: 2126] Re: すみません阿部さんでした。
+</A></li>
+	<LI>次の記事 <A HREF="002128.html">[Squeak-ja: 2128] Re: 大島さん、阿部さん　ご回答ありがとうございました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2127">[ 日付 ]</a>
+              <a href="thread.html#2127">[ スレッド ]</a>
+              <a href="subject.html#2127">[ 件名 ]</a>
+              <a href="author.html#2127">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

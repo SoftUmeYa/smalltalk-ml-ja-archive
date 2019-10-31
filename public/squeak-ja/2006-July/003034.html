@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3034] Re: Wiki としての SuperSwiki
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203034%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=44AF890C.5050707%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003033.html">
+   <LINK REL="Next"  HREF="003036.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3034] Re: Wiki としての SuperSwiki</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203034%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=44AF890C.5050707%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3034] Re: Wiki としての SuperSwiki">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2006年 7月  8日 (土) 22:37:34 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003033.html">[Squeak-ja: 3033]  Re: Wiki としての  SuperSwiki
+</A></li>
+        <LI>次の記事 <A HREF="003036.html">[Squeak-ja: 3036] Re: Wiki としての SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3034">[ 日付 ]</a>
+              <a href="thread.html#3034">[ スレッド ]</a>
+              <a href="subject.html#3034">[ 件名 ]</a>
+              <a href="author.html#3034">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+&gt;<i> すごいなと思いましたが、いまひとつ、よくわからなかった
+</I>&gt;<i> のが、Sushi Bar のビデオでは、何をしているのでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> 他の人が寿司を発注できるコーナーを、自分のページ内に設置したのか、
+</I>&gt;<i> あるいは、単にあの時、寿司を注文しただけなのか、、、、
+</I>
+あれは、寿司を発注できるコンポーネントをWikiの中にはめこんだのです。
+コンポーネントはSeasideというWebアプリケーションフレームワーク上で作られて
+います。(PierそのものもSeaside上に作られたコンポーネントです)
+
+つまりSeaside上につくったコンポーネントであれば、自由にWikiの中に貼り付けて
+いくことができます。
+
+Seasideはそれ自体が非常に強力なフレームワークです。
+
+例えば以下のチュートリアルがわかりやすいでしょう。
+<A HREF="http://www-128.ibm.com/developerworks/opensource/library/os-lightweight8/">http://www-128.ibm.com/developerworks/opensource/library/os-lightweight8/</A>
+
+Seaside上に作られたアプリとしては以下のようなものがあります。
+
+DabbleDB
+<A HREF="http://www.dabbledb.com/">http://www.dabbledb.com/</A>
+
+HandsOn
+<A HREF="http://blogs.inextenso.com/seaside/blog/learning/051da810-efb6-11da-a8c7-000d935fad1c">http://blogs.inextenso.com/seaside/blog/learning/051da810-efb6-11da-a8c7-000d935fad1c</A>
+
+これらもデモを見るとわかりますが、何というか、驚愕すべきものです。
+
+&gt;<i> それから、Pierでは、画像やゲームなどの、
+</I>&gt;<i> （既存の）オブジェクトを貼り付けられるようですが、
+</I>&gt;<i> 存在しないオブジェクトをユーザーがPier上で作成（開発）
+</I>&gt;<i> できるのでしょうか。
+</I>&gt;<i> 
+</I>
+これについては、Seaside自体に、Webブラウザ上からSeasideのコンポーネントを
+開発できる機能が備わっています。(上記のチュートリアルではWebブラウザ上で
+Seasideアプリを書き換えています)。ただし、本当に何でもできて、あまりに危険でも
+あるので、通常はデプロイ時にoffにしてしまいます。
+
+&gt;<i> Wifkyの((perl))プラグインでは、ユーザーはWifkyのページとして
+</I>&gt;<i> プラグインを作成出来ます。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 例えば、Wifkyのページ「挨拶」の内容が、
+</I>&gt;<i> 
+</I>&gt;<i>   print ('&lt;P&gt;' . &amp;enc (&quot;こんにちは、$_[1]さん。&quot;) . '&lt;/P&gt;') ;
+</I>&gt;<i> 
+</I>&gt;<i> だとします。これを、普通のWifkyページの中で、
+</I>&gt;<i> 
+</I>&gt;<i>   ((perl 挨拶 山田))
+</I>&gt;<i> 
+</I>&gt;<i> という形で、呼び出して使うことができます。
+</I>&gt;<i> もちろん、「((perl 挨拶 山田))」のところには、
+</I>&gt;<i> 「&lt;P&gt;こんにちは、山田さん。&lt;/P&gt;」がはいります。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 「挨拶」のページもWifkyページのひとつに過ぎませんので、
+</I>&gt;<i> たとえば、誰か他の人が「挨拶」のページの
+</I>&gt;<i> バグ取りすることも可能です。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> つまり、WikipPediaでは、事典の作成を複数の人でコラボラティブ
+</I>&gt;<i> （協調して）やっていますが、それと同じようなことを
+</I>&gt;<i> プログラミングで実践できるわけです。
+</I>&gt;<i> 
+</I>&gt;<i> 上の例では価値が分かりませんが、もっと大規模な
+</I>&gt;<i> フレームワーク構築など、に活用できるのではないか
+</I>&gt;<i> と、考えています。
+</I>&gt;<i> 
+</I>&gt;<i> Wikiの持ってるバージョン管理の機能が、
+</I>&gt;<i> これにも使えることになりますし、、、、、
+</I>
+非常に面白いアイデアですね。現状のSeasideやPierでは、こうしたことを安全
+に行わせる仕組みはまだありません。あくまで開発時のみをターゲットにした
+機能になっています。
+
+では。
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003033.html">[Squeak-ja: 3033]  Re: Wiki としての  SuperSwiki
+</A></li>
+	<LI>次の記事 <A HREF="003036.html">[Squeak-ja: 3036] Re: Wiki としての SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3034">[ 日付 ]</a>
+              <a href="thread.html#3034">[ スレッド ]</a>
+              <a href="subject.html#3034">[ 件名 ]</a>
+              <a href="author.html#3034">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

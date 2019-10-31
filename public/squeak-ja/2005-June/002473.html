@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2473] Re: [N7]HttpUrlの不具合
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202473%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFtON11IdHRwVXJs%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5JVDZxOWcbKEI%3D%3F%3D&In-Reply-To=42A9B226.9040202%40m2.pbc.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002469.html">
+   <LINK REL="Next"  HREF="002486.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2473] Re: [N7]HttpUrlの不具合</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202473%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFtON11IdHRwVXJs%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5JVDZxOWcbKEI%3D%3F%3D&In-Reply-To=42A9B226.9040202%40m2.pbc.ne.jp"
+       TITLE="[Squeak-ja: 2473] Re: [N7]HttpUrlの不具合">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 6月 13日 (月) 21:03:09 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002469.html">[Squeak-ja: 2469] [N7]HttpUrlの不具合
+</A></li>
+        <LI>次の記事 <A HREF="002486.html">[Squeak-ja: 2486] Re: [N7]HttpUrlの不具合
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2473">[ 日付 ]</a>
+              <a href="thread.html#2473">[ スレッド ]</a>
+              <a href="subject.html#2473">[ 件名 ]</a>
+              <a href="author.html#2473">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>HttpUrlクラス利用時の注意点
+
+川村です。お世話になっています。
+HttpUrlクラスで、Swikiサイト全体にBasic認証がかかっている場合にPOSTメ
+ソッドでアクセスする時の注意点についてご報告します。
+
+HttpUrlでPOSTメソッドでアクセスする場合は、おおよそ次のようになります。
+1)Basic認証がないとみなして1度POSTメソッドをWebサーバに投げる
+2)Webサーバのレスポンスコードが401の場合,Basic認証がかかっているとして
+ユーザにUser名、パスワードを問い合わせる。この内容を Authorization: ヘッ
+ダに次の形式で埋め込んで再度POSTメソッドをWebサーバに投げる。
+Authorization: Basic ********
+注)'********'部分はuser:passwordをBase64エンコードしたもの
+3)HTTPSocket class&gt;&gt;httpPost*は後述する理由により、常にレスポンスコード
+401を返す。
+4) 1)へ
+というわけで、無限ループに落ち込んでしまいます。するとユーザはユーザ名か
+パスワードが間違えていると勘違いする。
+
+HTTPSocket class&gt;&gt;httpPost*が常にレスポンスコード401を返す理由:
+SwikiはPOSTに成功すると別URLへリダイレクトさせます。しかし、HTTPSocket&gt;&gt;
+httpPost*の実装はリダイレクト先のページ取得時に上記のAuthorization: ヘッ
+ダをつけないまま、アクセスします。するとそのリダイレクト先も認証がかかっ
+ているので401を返す。もともとはAuthorization: ヘッダをつけていたようです
+が、その部分はコメントアウトされていました（なにか理由があったのでしょう
+ね）。
+
+★GETメソッドではリダイレクト先のページ取得時にもAuthorization: ヘッダを
+付加するので問題ない。
+
+それでは
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.6.9 - Release Date: 2005/06/11
+
+__________________________________
+Save the earth
+<A HREF="http://pr.mail.yahoo.co.jp/ondanka/">http://pr.mail.yahoo.co.jp/ondanka/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002469.html">[Squeak-ja: 2469] [N7]HttpUrlの不具合
+</A></li>
+	<LI>次の記事 <A HREF="002486.html">[Squeak-ja: 2486] Re: [N7]HttpUrlの不具合
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2473">[ 日付 ]</a>
+              <a href="thread.html#2473">[ スレッド ]</a>
+              <a href="subject.html#2473">[ 件名 ]</a>
+              <a href="author.html#2473">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

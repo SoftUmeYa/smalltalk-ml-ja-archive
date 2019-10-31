@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7829] Re: 第22回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207829%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCMjIbJEIycxsoQlNtYWxs%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGFsaxskQkpZNi8ycSF3NX5FVBsoQg%3D%3D%3F%3D&In-Reply-To=4C51CF79.8010109%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007828.html">
+   <LINK REL="Next"  HREF="007830.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7829] Re: 第22回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207829%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCMjIbJEIycxsoQlNtYWxs%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGFsaxskQkpZNi8ycSF3NX5FVBsoQg%3D%3D%3F%3D&In-Reply-To=4C51CF79.8010109%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7829] Re: 第22回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2010年 8月  5日 (木) 16:31:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007828.html">[SML 7828] Re: 第22回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007830.html">[SML 7830] メーリングリスト一時停止のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7829">[ 日付 ]</a>
+              <a href="thread.html#7829">[ スレッド ]</a>
+              <a href="subject.html#7829">[ 件名 ]</a>
+              <a href="author.html#7829">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木淳＠京都上賀茂です。
+
+昨夜の勉強会の成果をアップロードしておきました。安田さんから
+のレクチャーノート（PDFで6つ）も一緒にアーカイブしてあります。
+
+<A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/zips/20100804.zip">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/zips/20100804.zip</A>
+
+$ unzip 20100804.zip
+Archive:  20100804.zip
+   creating: 20100804/
+   creating: 20100804/fromYasudaSan/
+  inflating: 20100804/fromYasudaSan/SmalltalkStudy1st.pdf
+  inflating: 20100804/fromYasudaSan/SmalltalkStudy2nd.pdf
+  inflating: 20100804/fromYasudaSan/SmalltalkStudy3rd.pdf
+  inflating: 20100804/fromYasudaSan/SmalltalkStudy4th.pdf
+  inflating: 20100804/fromYasudaSan/SmalltalkStudy5th.pdf
+  inflating: 20100804/fromYasudaSan/SmalltalkStudy6th.pdf
+  inflating: 20100804/SSK.st
+   creating: 20100804/SSKs/
+  inflating: 20100804/SSKs/SSK0.st
+  inflating: 20100804/SSKs/SSK1.st
+  inflating: 20100804/SSKs/SSK2.st
+  inflating: 20100804/SSKs/SSK3.st
+  inflating: 20100804/SSKs/SSK4.st
+  inflating: 20100804/SSKs/SSK5.st
+  inflating: 20100804/SSKs/SSK6.st
+  inflating: 20100804/SSKs/SSK7.st
+  inflating: 20100804/SSKs/SSK8.st
+$
+
+6月2日「SSK0」から、7月7日「SSK5」になり、8月4日「SSK8」に至
+る経緯がわかると思います。
+
+古風なブラウザの昨夜相等バージョンは、SSK.st（=SSK8.st）にな
+ります。VisualWorks 7.7.1 (NC)で作成してありますが、7.6でも、
+7.7でも、7.8でも動作します。
+
+昨夜の勉強会では少々時間が足りなくて、名前空間の対応までゆか
+なかったのですが、SSK8.stではインスタンスを作るときに、
+option(alt)キーを押しながらだと、fullyQualifiedReferenceを、
+option(alt)キーを押していない場合には、simpleReferenceを、
+displayStringWithTrailingNameSpaceで処理してあります。
+（SSK7までだと、たとえばCore.TextとXML.Textを混同してまう。）
+
+来月の勉強会では、SSK8.stをSSK9.stへと持ち上げて、最終のバー
+ジョンにしようと思います。SSK8とSSK9の相異は、BlockValueにな
+ります。メッセージ伝送をエレガントにリファクタリングしませう。
+（濱崎さん、SSK8をBlockValue化してくださいまし。）
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+
+P.S.
+明日から「夏の青木塾」です。夏休み返上のプログラミング三昧！
+<A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Students/index-j.html#2010AJ">http://www.cc.kyoto-su.ac.jp/~atsushi/Students/index-j.html#2010AJ</A>
+
+この塾では、プログラミング言語Cのポインタの復習から導入して、
+CとJavaをシームレスに（継ぎ目なく）結びつけてゆきます。
+
+・基本データへのポインタ
+・構造体へのポインタ
+・関数へのポインタ
+・関数へのポインタを多量に含む構造体へのポインタ
+・それがオブジェクトへ変貌
+・…ということは、クラスとは…
+・そのクラスに含まれる関数へのポインタ群がメソッド群へ変貌
+・…ということは、インヘリタンスとは…
+・なぁ〜んだ、Javaって簡単、Objective-Cも簡単、C++/C#も簡単
+・結局、C言語でもオブジェクト指向プログラミングができるのね
+・全部がポインタ、それがオブジェクト指向プログラミングの極意
+・そっか、RubyはSmalltalkとJavaのいいとこ取りをしたんだ…
+・なるほどね、PHP、JavaScript、…、Webアプリ系の言語って…
+
+そして、Javaの本格的なプログラミングへと水先案内してゆきます。
+タイピストアートを題材として、動くプログラムではなくて、正し
+いプログラムの作り方を指南します。
+
+もちろん、Smalltalkもやります。シェルスクリプトも、アップル
+スクリプトも、やります。プログラミング言語のオンパレードだ！
+
+------------------------------------------------------------
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007828.html">[SML 7828] Re: 第22回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007830.html">[SML 7830] メーリングリスト一時停止のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7829">[ 日付 ]</a>
+              <a href="thread.html#7829">[ スレッド ]</a>
+              <a href="subject.html#7829">[ 件名 ]</a>
+              <a href="author.html#7829">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

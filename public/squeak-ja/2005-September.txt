@@ -1,0 +1,2563 @@
+From yoshiki ＠ squeakland.org  Tue Sep  6 06:28:20 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2614] 毛玉2.7
+Message-ID: <uzmqrfbm3.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  大分前から、Squeakの並列パーティクルシステム「毛玉」というものを作っ
+ています。前回そっとアップデートしたときにはいくつかのプリミティブを追
+加したのですが、手元で簡単に作れるWindows版以外のプラグインについて、
+更新したものを作っていただくようにお願いするのを忘れていました。
+
+  もし、Linux版とMac OS X版のプラグインを、今までと同様の手順で作って
+くださる方がいれば、それを僕に送っていただけないでしょうか。よろしくお
+願いします。
+
+  「本家」Squeakland版には、毛玉が最初から入るようになりますので、これ
+からは少しだけ使いやすくなると思います。これからもよろしくお願いします。
+
+-- Yoshiki
+
+
+From abee ＠ squeakland.jp  Tue Sep  6 20:41:56 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2615] Re: Rubyist Magazine 創刊一周年記念コメント募集
+In-Reply-To: <430B34FE2F5.E558ABEE.ABE@smtp.nifty.com>
+References: <430B34FE2F5.E558ABEE.ABE@smtp.nifty.com>
+Message-ID: <431D80841A8.CF57ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Squeak-jaの梅澤さんのコメントが掲載されたRubyist Magazine 0009が発行され
+ました。
+
+http://jp.rubyist.net/magazine/?0009
+
+コメントはこちら。
+
+http://jp.rubyist.net/magazine/?0009-Comments#l24
+
+On Tue, 23 Aug 2005 23:38:51 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>Squeak-jaのメンバでもあるRubyist Magazine編集のささださんから、Rubyist
+>Magazineの一周年を記念したコメントをもらえないかとの依頼をSqueakland.jpの
+>管理者宛に受けました。このコメントは9月初旬発行予定のRubyist Magazine
+>0009号（2005-9）に掲載されるとのことです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From miyasaka ＠ iris.dti.ne.jp  Thu Sep  8 11:48:13 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2616] 発達障害生徒児童のためのスクイーク
+In-Reply-To: <431D80841A8.CF57ABEE@smtp.nifty.com>
+Message-ID: <200509080248.j882mDfK002078@smtp00.dti.ne.jp>
+
+Squeak-jaの皆様へ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+先日は「夜の集い」に顔を出させていただきました。
+スクイーク関係者の皆さんの発表はとても興味深いものばかりでとても参考になりま
+した。
+我々の活動がスクーク普及の一助となればと切に願っております。
+今後ともよろしくお願いいたします。
+
+さて、このたび、あるボランティア団体からの依頼で、AD/HD、LDといった発達障害
+生徒児童に対してのスクイークワークショップをやることになりました。
+http://mts-j.hiho.jp/
+まずは、参加者３〜５名程度でトライアル的に実施し、できれば月１回の割合で定期
+的に開催していきたいとのこと。
+こうした学習障害を持っている子供は、とにかく傷ついていて、自信をなくしている
+ので、スクイークを使った「デジタルコンテンツ制作」を通して、達成感やワクワク
+感、そして、自分でもできるんだ、という自信をもってほしいと言っておりました。
+個人的には、こういう話にはとっても弱いので、できる限りの協力をしたいと思って
+います。
+
+とはいえ、ワークショップ開催については、それなりに準備をしなければならないの
+で、ボランティア団体の方とも協力して試行錯誤しながら準備を進めているところで
+す。
+
+■教えてください
+いままで、こうしたAD/HD、LDなどの発達障害生徒児童に対して、スクイークを教え
+たことがある事例はありますでしょうか？
+もし、過去にこうした取り組みをされたことがある方がいらしたら、アドバイスなど
+いただけると幸いです。
+（首都圏近郊であれば、お伺いしてお話をお聞かせ願えればと思いますので）
+
+１０月１５日に試行的に実施予定ですので、その後改めてSqueak-jaにご報告させて
+いただきます。
+よろしくお願いいたします。
+
+-------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+URL : http://mts-j.hiho.jp/
+-------------------------------------------
+
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Thu Sep  8 13:29:19 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2617] Re: 発達障害生徒児童のためのスクイーク
+In-Reply-To: <200509080248.j882mDfK002078@smtp00.dti.ne.jp>
+References: <200509080248.j882mDfK002078@smtp00.dti.ne.jp>
+Message-ID: <p043204babf456e3057e4@amateras.ma.ns.musashi-tech.ac.jp>
+
+Toshio Miyasaka さんが 2005.9.8ごろに
+「[Squeak-ja: 2616] 発達障害生徒児童のためのスクイーク」の件で：
+> いままで、こうしたAD/HD、LDなどの発達障害生徒児童に対して、スクイークを教え
+> たことがある事例はありますでしょうか？
+
+うちの息子のクッキーは軽度の自閉症ですが、まあ楽しくやっています。
+＃最近はサボり気味です。(^^;
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From namiki ＠ cc.tuat.ac.jp  Thu Sep  8 16:23:15 2005
+From: namiki ＠ cc.tuat.ac.jp (Mitaro Namiki)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2618] はじめまして
+Message-ID: <431FE6E3.2090303@cc.tuat.ac.jp>
+
+MLの皆様
+
+はじめまして、東京農工大学の並木と申します。
+
+文部科学省主催のITスクールで、この2年にわたり、
+Squeakを利用させていただきました。Squeakの開発メンバの
+皆様のおかげと心の中で感謝しております。
+
+ITスクールは、2年とも一クラス30名、公募と指定校の半々で、
+- 1日程度でタイルスクリプト
+- 1日程度でSmalltalk入門
+- 半日でSmalltalkの生ソケット使ってネットワークプログラミング基礎
+- 残り3日程度で二人一組のチーム作って自由課題
+みたいな、無茶(?)な内容でオブジェクト指向を学ぶ、的なことやってみました。
+プログラミングをこれから学ぶのではなく、指定校と公募の高校生なので
+何とかこなしています。去年の様子については、
+  並木美太郎, 副田俊介, 繁富利恵, 笹田耕一：
+    高度なIT人材を育成するITスクールの実施例(2004年度東京会場),
+    情報処理学会「コンピュータと教育」第78回研究会,
+    Vol.2005-CE-78, pp.73-80 (2005.2)
+で詳細を発表しております。今年の生徒さんたちはさらにグレードアップ
+してまして、Squeak上で15チーム中10チームがソケット使った
+自由課題のプログラムを書いています。
+今年度は、ネットワークによる文字と手書きチャット、汎用ランキング
+システム、各種ネットワーク型のゲームなどが完成度も高く、よく動かしていました。
+皆様のご参考になるように、また、情報処理学会「コンピュータと教育」などで
+発表しようと思っています(SSS2005は時期的に間に合わず、また、別用があって
+行けませんでした)。一度、生徒さんたちが書いたプログラムを
+じっくりこと細かに分析したいとも思っていますが、時間がなくてなかなか
+ままなりません。
+
+また、今年のLLDNに、午前だけ参加しまして、山宮さんの発表も聞かせて
+いただきました。Tweak がどうなるか、いろいろ参考にさせていただければと
+思っています。
+
+８月末にMLに登録させていただいたのですが、ドタバタしていて９月も2週に
+なってしまいました。まずは、簡単なご挨拶ですが、今後ともいろいろご教授
+いただければと思っております。よろしくお願いします。
+//
+
+
+
+
+
+From makoto ＠ kobe-u.ac.jp  Thu Sep  8 22:44:13 2005
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2619]  「あーち」でスクイークを紹介しました
+Message-ID: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+
+神戸大学発達科学部の高橋真です。
+
+[Squeak-ja: 2568]で紹介いたしました神戸大学のヒューマン・コミュニティ
+創成研究センターのサテライト施設「あーち」のオープニング・セレモニーが
+９月３日に行われました。
+http://www.kobe-np.co.jp/chiiki/ko/00034760ko200609041000.shtml
+
+このなかで「スクイークであそぼう」というコーナを作り子どもたちと遊びました。
+このコーナーは当初は小学生以上の子どもを念頭に準備をすすめていましたが、
+小学校就学前の子どもがたくさん参加してくれました。ノートPC３台で内１台は
+SqueakersDVD用に考えていたのですが、順番待ちをする子が増えてきたので
+急遽３台すべてをスクイークの作品作りにあてました。一人で対応していたため
+十分目が行き届かず、また小さい子どもが多かったため、ほとんどお絵描きだけ
+で終わるか、タイルも「進む」「回す」を試す程度で終わりました。
+「あーち」では今後も小学生向けのスクイークのワークショップなどを考えていま
+すが、未就学の子どもたちへの対応も今後の課題です。
+今回子どもたちが作った作品の一部を以下で公開しています。
+http://herb.h.kobe-u.ac.jp/squeak/index.html
+
+最後にスクイークの作品などを紹介しながらデモをする予定でしたが、最後まで
+子どもたちのペースでお絵描きをしていました。阿部さんに[Squeak-ja: 2580]
+で教えていただいたアイディアは別の機会に活用したいと思います。
+
+
+From okumura ＠ edu.mie-u.ac.jp  Fri Sep  9 09:51:59 2005
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2620] 三重大附小のSqueak教育がローカル紙に
+In-Reply-To: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+References: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+Message-ID: <20050909.095159.119760191.okumura@edu.mie-u.ac.jp>
+
+奥村＠三重大です。
+
+8月26日に，三重大学附属小学校でのSqueakを使った情報教育の成果発表会を開
+催しました。その様子を昨日のローカル紙「ローカルみえ」で大きく取り上げ
+ていただきました。
+
+Web版: http://www.localmie.com/tougouban/2005/09.08/2.html
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From yoshiki ＠ squeakland.org  Fri Sep  9 10:09:48 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2621] Re: はじめまして
+In-Reply-To: <431FE6E3.2090303@cc.tuat.ac.jp>
+References: <431FE6E3.2090303@cc.tuat.ac.jp>
+Message-ID: <ubr33dp2b.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> はじめまして、東京農工大学の並木と申します。
+
+  こんにちは。PTTに参加していたころにはお世話になっていました。
+
+> 文部科学省主催のITスクールで、この2年にわたり、
+> Squeakを利用させていただきました。Squeakの開発メンバの
+> 皆様のおかげと心の中で感謝しております。
+
+  もしかしたら僕も「皆様」の中に入れていただいているのかも知れませんの
+で^^;
+
+  というわけでどんどん使っていただけるとこちらとしてもうれしいです。い
+ろいろフィードバックをいただけると幸いです。
+
+> ITスクールは、2年とも一クラス30名、公募と指定校の半々で、
+> - 1日程度でタイルスクリプト
+> - 1日程度でSmalltalk入門
+> - 半日でSmalltalkの生ソケット使ってネットワークプログラミング基礎
+> - 残り3日程度で二人一組のチーム作って自由課題
+> みたいな、無茶(?)な内容でオブジェクト指向を学ぶ、的なことやってみました。
+> プログラミングをこれから学ぶのではなく、指定校と公募の高校生なので
+> 何とかこなしています。去年の様子については、
+>   並木美太郎, 副田俊介, 繁富利恵, 笹田耕一：
+>     高度なIT人材を育成するITスクールの実施例(2004年度東京会場),
+>     情報処理学会「コンピュータと教育」第78回研究会,
+>     Vol.2005-CE-78, pp.73-80 (2005.2)
+> で詳細を発表しております。今年の生徒さんたちはさらにグレードアップ
+> してまして、Squeak上で15チーム中10チームがソケット使った
+> 自由課題のプログラムを書いています。
+
+  高校生も大したものだ、と感心していました。
+
+> 今年度は、ネットワークによる文字と手書きチャット、汎用ランキング
+> システム、各種ネットワーク型のゲームなどが完成度も高く、よく動かしていました。
+> 皆様のご参考になるように、また、情報処理学会「コンピュータと教育」などで
+> 発表しようと思っています(SSS2005は時期的に間に合わず、また、別用があって
+> 行けませんでした)。一度、生徒さんたちが書いたプログラムを
+> じっくりこと細かに分析したいとも思っていますが、時間がなくてなかなか
+> ままなりません。
+> 
+> また、今年のLLDNに、午前だけ参加しまして、山宮さんの発表も聞かせて
+> いただきました。Tweak がどうなるか、いろいろ参考にさせていただければと
+> 思っています。
+> 
+> ８月末にMLに登録させていただいたのですが、ドタバタしていて９月も2週に
+> なってしまいました。まずは、簡単なご挨拶ですが、今後ともいろいろご教授
+> いただければと思っております。よろしくお願いします。
+
+  こちらこそよろしくお願いします。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Fri Sep  9 10:27:29 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2622] Re: 三重大附小のSqueak教育がローカル紙に
+In-Reply-To: <20050909.095159.119760191.okumura@edu.mie-u.ac.jp>
+References: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+	<20050909.095159.119760191.okumura@edu.mie-u.ac.jp>
+Message-ID: <uacindo8u.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> 8月26日に，三重大学附属小学校でのSqueakを使った情報教育の成果発表会を開
+> 催しました。その様子を昨日のローカル紙「ローカルみえ」で大きく取り上げ
+> ていただきました。
+>
+> Web版: http://www.localmie.com/tougouban/2005/09.08/2.html
+
+  奥村先生、情報をどうもありがとうございます(以前からいろいろな本や
+ソフトウェアでお世話になっています)。
+
+  実は、三重大付属小への寄贈式にも僕はそっとまぎれこんだりしていたです
+が、「地に足をつけた」活動が行われていくととても良いですね。
+
+  記事中の「下村勉」さんは、もしかしてケビン・ミトニックの下村さんなの
+ですね。すごい。
+
+  これからもよろしくお願いします。
+
+-- Yoshiki
+
+From okumura ＠ edu.mie-u.ac.jp  Fri Sep  9 10:38:11 2005
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2623] Re: 三重大附小のSqueak教育がローカル紙に
+In-Reply-To: <uacindo8u.wl%yoshiki@squeakland.org>
+References: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+	<20050909.095159.119760191.okumura@edu.mie-u.ac.jp>
+	<uacindo8u.wl%yoshiki@squeakland.org>
+Message-ID: <20050909.103811.60722716.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+
+>   実は、三重大付属小への寄贈式にも僕はそっとまぎれこんだりしていたです
+> が、「地に足をつけた」活動が行われていくととても良いですね。
+
+そうでしたか。どうもありがとうございます。
+
+>   記事中の「下村勉」さんは、もしかしてケビン・ミトニックの下村さんなの
+> ですね。すごい。
+
+あ，あの下村努とは別人28号です。
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From yoshiki ＠ squeakland.org  Fri Sep  9 10:53:06 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2624] Re: 「あーち」でスクイークを紹介しました
+In-Reply-To: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+References: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+Message-ID: <u8xy7dn25.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> このなかで「スクイークであそぼう」というコーナを作り子どもたちと遊びました。
+> このコーナーは当初は小学生以上の子どもを念頭に準備をすすめていましたが、
+> 小学校就学前の子どもがたくさん参加してくれました。ノートPC３台で内１台は
+> SqueakersDVD用に考えていたのですが、順番待ちをする子が増えてきたので
+> 急遽３台すべてをスクイークの作品作りにあてました。一人で対応していたため
+> 十分目が行き届かず、また小さい子どもが多かったため、ほとんどお絵描きだけ
+> で終わるか、タイルも「進む」「回す」を試す程度で終わりました。
+> 「あーち」では今後も小学生向けのスクイークのワークショップなどを考えていま
+> すが、未就学の子どもたちへの対応も今後の課題です。
+
+  本当に小さな子供たち向けのインターフェイスも必要ではあります。おそら
+くは"lapware"、つまり子供が親のひざの上に座って絵を描いて、親がこども
+と話しながらスクリプトを書く、というスタイルを目指したものか、積極的に
+コンピュータがメンタリングしてくれるようなシステムが良いのかもしれませ
+ん。
+
+> 今回子どもたちが作った作品の一部を以下で公開しています。
+> http://herb.h.kobe-u.ac.jp/squeak/index.html
+> 
+> 最後にスクイークの作品などを紹介しながらデモをする予定でしたが、最後まで
+> 子どもたちのペースでお絵描きをしていました。阿部さんに[Squeak-ja: 2580]
+> で教えていただいたアイディアは別の機会に活用したいと思います。
+
+  これからもよろしくお願いします。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Fri Sep  9 10:56:30 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2625] Re: 三重大附小のSqueak教育がローカル紙に
+In-Reply-To: <20050909.103811.60722716.okumura@edu.mie-u.ac.jp>
+References: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+	<20050909.095159.119760191.okumura@edu.mie-u.ac.jp>
+	<uacindo8u.wl%yoshiki@squeakland.org>
+	<20050909.103811.60722716.okumura@edu.mie-u.ac.jp>
+Message-ID: <u7jdrdmwh.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> >   記事中の「下村勉」さんは、もしかしてケビン・ミトニックの下村さんなの
+> > ですね。すごい。
+> 
+> あ，あの下村努とは別人28号です。
+
+　なんと、それは残念^^;
+
+-- Yoshiki
+
+
+From namiki ＠ cc.tuat.ac.jp  Fri Sep  9 12:18:16 2005
+From: namiki ＠ cc.tuat.ac.jp (Mitaro Namiki)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2626] Re: はじめまして
+In-Reply-To: <ubr33dp2b.wl%yoshiki@squeakland.org>
+References: <431FE6E3.2090303@cc.tuat.ac.jp>
+	<ubr33dp2b.wl%yoshiki@squeakland.org>
+Message-ID: <4320FEF8.9070002@cc.tuat.ac.jp>
+
+農工大の並木です。
+
+>   おおしまです。
+>>はじめまして、東京農工大学の並木と申します。
+>   こんにちは。PTTに参加していたころにはお世話になっていました。
+その節はどうもです。PTTメモをgrepしてみたのですが、かなり懐かしい、
+という頃ですね。
+
+>>文部科学省主催のITスクールで、この2年にわたり、
+>>Squeakを利用させていただきました。Squeakの開発メンバの
+>>皆様のおかげと心の中で感謝しております。
+>   もしかしたら僕も「皆様」の中に入れていただいているのかも知れませんの
+> で^^;
+はぃ〜、当然です:-)
+
+>   高校生も大したものだ、と感心していました。
+並みの大学生よりも全然書けるかと思っています。ITスクールの場合は、
+指定校＋公募、という選りすぐりなので、あそこまでできるのだと
+思っています。ただし、これがフツーのC/C++/Javaでは、あの短期間で
+ここまで作るのはおそらく無理で、Squeakの良さがあります。
+　去年は、C/C++/Javaの経験者がほとんどなく、今年は10名程度
+C/C++/Javaの経験者がいましたが、残り数名以外はプログラミングの経験
+が何らかの形でありました。で、Squeakだと、
+- 分散が大きい参加者のバックグラウンドの違いを適度に吸収できる
+　おそらく、C++やJavaではここまでは絶対に無理
+- 何より、昨今の生徒さんは(大学生もそうですが)、鳴り物・光り物・動き物が
+　好きですし、最初に興味を持ってもらい、楽しくやりながら何かを学ぶ、
+　でないととても立ち行かないので、SqueakのeToyはうってつけなわけです
+- だから、最初にeToyで、「へえ、こんな風に作れるんだね」とやってから、
+　次はガリガリとディープな虎の穴に引きずり込むわけです。
+　さすがに、この短期間で虎の穴に引きずり込めるのは、上澄みに限られていますが。
+- 講義をやりながら実習をするのですが、
+　与えられた問題だけをやって後はぼーっとしている子がたまにいますが、
+　この種の人は後もあんまり駄目で、与えられた問題を自分で少しずつ
+　変えていく子は伸びるし、すごいものを作っています。Squeakだと、
+　自分で新しい問題を作りながら自主性と知恵を発揮するために
+　比較的とっつき易いのはいいかな、と思います。もっとも指示待ち族、
+　参考書べったりには何でやっても駄目なのかもしれません。
+- 後半は自由課題なのですが、ここに一番生徒さんのキャラが出ます。
+　「これを作れ」とはやらずに、自分達で作りたいテーマを提案してもらって、
+　そのテーマについてシステム設計を講師・TAで詳細化していきます。
+  ほとんどはゲームなのは仕方ないのですが、よく考えています。
+　生徒さんたちに聞いてみると、このように自分でテーマを作って、
+　という経験がほとんどないので、最初はとまどいますが、やらせれば
+　できます。大学でもそうなのですが、知識ばかりを詰め込んでいると
+　どうも、頭は悪くなるようで、どこにも書いてないことをやらせる、
+　ということは必須だったりします。
+- もっとも出てきたテーマについて、すぐに実装イメージが浮かび、
+　適度に対処できる、というのは教える側もそれなりに大変で、
+　TAの人選は(計算機の能力だけではなく、教育者としての適正も
+　含めて)頭が痛い内容です。
+- で、自由課題で実装に入るのですが、
+　- 最初は、モーフベースで行う
+　- しかし、モーフ中のタイルスクリプトをタイルではなく、
+　　どうしても駄目なところは、Smalltalkで書いてもらう
+　くらいは例年1,2チーム以外のほとんどのチームがここまで行きます。
+    実は、最初からトップダウン設計にしたい衝動にかられますが、
+　システム設計初学者にいきなりトップダウンは結構危険で、
+　try and error しながら、は当然かと思っていたりします。
+- で、ほとんどのチームが志として、ネットワーク対戦、などを考えます。
+　ネットモーフも考えたのですが、「中身を知る」という観点から
+　使っていません。生ソケットで書かせています。講義でSmalltalkで、
+  HTTPクライアントとHTTPサーバの例を示しています。
+- で、ここで、モーフとの連携、にはた、と気付くわけです。
+　MVCを口にしなくても、MVC的な考え方をどこかに入れないと駄目だよね、
+　ということがわかるわけです。ここの書き方は千差万別です。
+　まぁ、普通に、C&UNIX、C++&Win32API、Javaで書いても釈然としない部分が
+　残るわけですが、いろいろ議論しながら適当なところで解を見つけて
+　もらうわけです。今年は最終的に10チーム程度がネットワークを
+  プログラミングしました。
+- 実は、去年は、ネットワーク系は「すべてSqueakでクライアント・サーバ」
+　でした。これはさすがに厳しいので、今年は、別途、Lindaもどきの
+　簡単な仮想共有空間モドキの機能を提供するサーバを立てて
+  (TAの長さんがJavaで書いて、Linuxで動かしたものでした。
+　 余力があれば、Smalltalkで書いてLinux版Squeakで作ればいいのですが、
+　 さすがにそこまでは時間不足でした)、
+　生徒さんたちはクライアント機能に専念させました。
+　いくつかのチームがこのサーバを使って作っていました。
+  ちなみに、兼宗さんに伺うとドリトルもこの種のサーバを立てて初等中等で
+　ネットワークプログラムを作らせたそうです。
+- すごいことに、上記のようなこちらで用意したサーバを使わず、
+　自分でサーバまで書いたチームが数チームありました。
+- いずれにせよ、ネットワークまで含めて、綺麗にすっきり書かせるには
+　まだまだ検討しなくてはならないと思っています。
+- ちなみに、ネットワークを使わなくても、考えさせられることも
+　ずいぶんとあります。例えば、ネットワーク上で
+　マインスィーパーを作ったチームがあったのですが、最初、
+　マスの一個一個をモーフで作ろうとするのですが、考えればわかりますが、
+　こんなのはダサいやり方なので、マスの一個をクラスとして定義して
+　インスタンス作れば、と言ってもすぐには理解してくれません。
+　また、個々のマスの計算も近傍でメッセージを投げ合って計算させたく
+　なるのですが、全体を統括するオブジェクトでやらせた方が簡単よ、
+　と言っても、生徒さんによっては見えてるものがすべてで、
+　そこからもう一段ブレークしてくれるかはそれなりの工夫が要ります。
+　おそらく、理工系情報学部の大学生でも微妙なところかもしれません。
+- TAの長さんはtonyuやnigariと言ったシステムを作っているのですが、
+  (彼はCE研究会でproGrepという学習システムでこの前、賞をもらいました)
+　眼に見えるものと、プログラミング言語で書くべきところの適切な
+　切り分けが必要だな、と再確認させられるわけです。過去にもあまたの
+　ビジュアルプログラミング言語ってあったわけですが、Sqeuakは
+　eToyの世界とSmalltalkとの世界を橋渡しできるところがいいと
+　思っているのですが、やはり、どのような解がベストなのかは、
+　僕もまだなかったりします。このようなニーズは、Squeakが
+　目指しているものと違うのかもしれません。なお、ドリトル、
+　tonyu、nigariは処理を書くところはプログラミング言語ベースの立場、
+　設計・開発者もその方針でやっています。ただ、使ってみると、
+　eToyのようなものは魅力なのも事実です。
+- 5泊6日ですが、おおっぴらには書けませんが、毎晩遅くまで午前
+  1時過ぎまで、僕やTAや開催側の人間がつきあっていました。
+　生徒さん全員ではありませんが、毎晩30人中20人近くいました。
+　この集中力はすさまじいものがあります。若人の特権かと
+　思いますが、集中力を持たせ、持続させる機会を若い頃から持たせる
+　ことは大事だと考えさせられます。
+- 指定校＋公募で上澄みだからこの短期間、と書きましたが、
+　ごくごく普通の高校生、教科「情報」でも半期にすれば
+　十分Squeakで、このようなことはできると思います。
+　SSS2005では、京大の皆さんと堀川高校さんの事例が報告されて
+　いましたが(受賞おめでとうございます。シンポジウムには行けなかったのですが、
+　シンポジウムの論文を査読したので、proceedingsは送られてきました。
+　実はSSS2005のHPに名前は出てたりします:-)、教科「情報」Bには
+　うってつけだと思います。eToyはいい選択だと思います。
+　僕自身の野望としては、eToyだけではなく、本当はプログラミング言語で
+　書いてほしいのですが、全員に、というクラスでは、1学期でeToy的なもので、
+　さらにその発展形として、理工系情報学部など進学する一部の子には
+  プログラミング言語で、とも思っていますが…
+  まだまだこれからなんだと思っています。
+などなど…。
+　
+とりとめのないことを書きましたが、
+>   というわけでどんどん使っていただけるとこちらとしてもうれしいです。い
+> ろいろフィードバックをいただけると幸いです。
+また、よろしくお願いします。
+
+
+PS
+  実は、今度は経産省のITクラフトマンシッププロジェクトで、
+高校生に携帯Javaプログラミングを教えることになっています…
+どうなることやら…。
+//
+
+
+
+
+
+From ofg ＠ kwansei.ac.jp  Fri Sep  9 13:15:25 2005
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2627] はじめまして、関西学院高等部の大藤と申します。
+Message-ID: <20050909131228.6EC6.OFG@kwansei.ac.jp>
+
+はじめまして、関西学院高等部の大藤と申します。
+
+ITスクール2005では生徒引率の名目で並木先生のクラスに混ぜていただいたおかげで、
+阿部さんのプロジェクト置き場にゲーム作品を投稿したり、なんとかSqueakの授業が
+できたりする程度には身に付きました。
+なぜかプログラミング素人の生徒ばかりが入部してきた我が校コンピュータ部の部活
+にはSqueakが最適と感じましたので、11月3日の文化祭の展示に向けて現在指導中です。
+まともな展示に仕上がりそうならまたお知らせいたしますので、お近くの方は是非
+お越し下さい。
+
+また、中学部の選択授業ではホームページ作りを指導していますが、２時間ほど時間
+が余りそうなので、Squeakネタで遊ばせようかと考えております。
+
+大藤 泰生（ofg@kwansei.ac.jp）
+
+
+
+From yoshiki ＠ squeakland.org  Fri Sep  9 16:23:44 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2628] Re: はじめまして
+In-Reply-To: <4320FEF8.9070002@cc.tuat.ac.jp>
+References: <431FE6E3.2090303@cc.tuat.ac.jp>
+	<ubr33dp2b.wl%yoshiki@squeakland.org>
+	<4320FEF8.9070002@cc.tuat.ac.jp>
+Message-ID: <u1x3yembj.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  すばらしい背景と現場の状況説明をありがとうございます。
+
+  僕が大学生の時は、Pascalが最初に習う言語で、「3辺の長さを入力してヘ
+ロンの公式を使って結果を求めよう」とやって、最後も行指向の計算機くらい
+を作っていました。SICPも並行してやっていて、こちらはいろいろとリッチな
+教材をちりばめていて良く工夫されていましたが(と今では判る)、やっぱり文
+字だけの世界ではありました(それでも面白いと思ったから今があるわけでは
+ありますが)。
+
+  eToysのタイルで書けることは、一見Javaでごりごり書くのと比べてよっぽ
+ど限られたことしかできないようには思われますが、じゃあJavaで例えば
+
+「物体を落とすシミュレーションを、重力や水平方向の初速度を簡単に変えら
+れるようにしておいてボタンでアニメーションできるようにし、さらに落ちた
+距離をグラフでプロットできるようにしなさい。」
+
+というような課題を与えたとしたら、高校生ではなかなかできないでしょう。
+(絵を描いてオブジェクトを作ってスクリプトが付けられて、そのスクリプト
+の動作中にスクリプトを変えられるような環境をJavaで作りなさい、といわれ
+たら大人でもつらいでしょうね。)
+
+  多分、モチベーションを持たせるという意味では、最初の状況作りは大事な
+のでしょうね。最初の10分で「あんなの作れるようになりたい」と思わせるこ
+とができるものを見せられるのか、あるいは「今はヘロンの公式だけだけど、
+半年がんばれば電卓くらいは作れるようになるかもよ」という印象を与えては
+じめるのとでは大きな違いがあるように思われます。
+
+  CMUのAliceチームの人は、Aliceをアニメーション作成ツールとして中学生
+に使わせる、という研究をしていますが、最初に中学生に話し始めるときに、
+「皆さんもShrekみたいな3次元コンピュータアニメーションを作りましょう。
+PC1台で数時間しかないのでShrekまではできませんが、それでも面白いですよ」
+という言い方ではじめると、「プログラムを簡単に作るツールを使ってみましょ
+う」というのとは食いつき(とその後の持続力)がまったく違う、と言っていま
+した。
+
+  Mark GuzdialというGeorgia Techの先生は、non-CSの学生向けプログラムの
+コースで、Pythonを使って、最初の課題が「与えられたビットマップをグレイ
+スケールにするプログラム」というところから初めて(難しさの度合いで言え
+ばヘロンの公式+ループと大差はないとも言えます)、サンプリングサウンドの
+操作などまでやる、というやりかたでやっています。僕の想像では、最近の人
+はプログラミング初心者であっても「コンピュータは画像や音楽や映像を操作
+する道具である」という認識があるので、「そういうことが自分でもできるん
+だよ」という像を与えてやるのが動機付けには効果的、ということかもしれま
+せん。
+
+http://www.amazon.com/exec/obidos/tg/detail/-/0131176552/qid=1101179106/sr=8-4/ref=sr_8_xs_ap_i4_xgl14/104-5211837-8605553?v=glance&s=books&n=507846
+
+  今日たまたま同僚と話していたのは、「補助輪つきの自転車だから安心して
+ください」と言われて自転車に乗るのは、自転車に乗れると思っている子供に
+とっては面白くないことである、ということでした。これも状況作りだと思い
+ますが、例えばJavaをスケールダウンしてpublic static void main()とか書
+かなくてもプログラムが書き始められるというシステムを作った場合には、上
+手に導入しないと、「あなたたちには本物のJavaプログラムを書くのはまだ早
+いんですよ」というメッセージを送ることになる、という問題が出るとは思い
+ます。
+
+  eToysも「これは子供向けだから」ということを言って使わせるのではなく、
+「コンピュータそのものに手を突っ込んで操作してしまうという、(大人でさ
+え)なかなかできないことをできるようにしたら、こういう環境になったんだ
+よ。さあ、使ってみよう」というニュアンスではじめると食いつきが良いな、
+という感じを得たこともあります。
+
+  なんだか書いているうちに関係ない話になってしまいましたが、なんらかの
+参考になれば幸いです。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Fri Sep  9 16:28:45 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2629] Re: はじめまして、関西学院高等部の大藤と申します。
+In-Reply-To: <20050909131228.6EC6.OFG@kwansei.ac.jp>
+References: <20050909131228.6EC6.OFG@kwansei.ac.jp>
+Message-ID: <uzmqmd7iq.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> ITスクール2005では生徒引率の名目で並木先生のクラスに混ぜていただいたおかげで、
+> 阿部さんのプロジェクト置き場にゲーム作品を投稿したり、なんとかSqueakの授業が
+> できたりする程度には身に付きました。
+> なぜかプログラミング素人の生徒ばかりが入部してきた我が校コンピュータ部の部活
+> にはSqueakが最適と感じましたので、11月3日の文化祭の展示に向けて現在指導中です。
+> まともな展示に仕上がりそうならまたお知らせいたしますので、お近くの方は是非
+> お越し下さい。
+> 
+> また、中学部の選択授業ではホームページ作りを指導していますが、２時間ほど時間
+> が余りそうなので、Squeakネタで遊ばせようかと考えております。
+
+  プロジェクト置き場の作品は拝見しました。ビジュアルに凝っていますよね
+^^;
+
+  これからもよろしくお願いします。
+
+-- Yoshiki
+
+
+From abee ＠ squeakland.jp  Fri Sep  9 17:36:42 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2630] Re: はじめまして
+In-Reply-To: <u1x3yembj.wl%yoshiki@squeakland.org>
+References: <4320FEF8.9070002@cc.tuat.ac.jp>
+	<u1x3yembj.wl%yoshiki@squeakland.org>
+Message-ID: <4321499A360.8259ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+なんか怒涛の書き込みですね。皆様、どうぞよろしくお願いします。
+
+On Fri, 09 Sep 2005 00:23:44 -0700
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>  eToysのタイルで書けることは、一見Javaでごりごり書くのと比べてよっぽ
+>ど限られたことしかできないようには思われますが、じゃあJavaで例えば
+>
+>「物体を落とすシミュレーションを、重力や水平方向の初速度を簡単に変えら
+>れるようにしておいてボタンでアニメーションできるようにし、さらに落ちた
+>距離をグラフでプロットできるようにしなさい。」
+>
+>というような課題を与えたとしたら、高校生ではなかなかできないでしょう。
+>(絵を描いてオブジェクトを作ってスクリプトが付けられて、そのスクリプト
+>の動作中にスクリプトを変えられるような環境をJavaで作りなさい、といわれ
+>たら大人でもつらいでしょうね。)
+
+あと、メタなところを強調しておきたいと思います。
+Drive a Carで、車とハンドルを描いて、ハンドルで車を運転するところまでは普
+通としても、ハンドルにスクリプトを書いた瞬間(操作するものが操作されるもの
+に変わったとき)、一段上の視点に切り替わるような、くらっとした感覚が得られ
+ます。
+
+# [ハンドル][を回す][5]にして、車のペンを降ろすと面白いですよ。
+# 
+# こんなのも作ってみました。
+# http://squeakland.jp/super/launcher?AnimationBoard%82%E0%82%C7%82%AB.001.pr
+# http://squeakland.jp/super/launcher?%83h%83%89%83C%83u%83%8A%83v%83%8C%83C.002.pr
+
+>  eToysも「これは子供向けだから」ということを言って使わせるのではなく、
+>「コンピュータそのものに手を突っ込んで操作してしまうという、(大人でさ
+>え)なかなかできないことをできるようにしたら、こういう環境になったんだ
+>よ。さあ、使ってみよう」というニュアンスではじめると食いつきが良いな、
+>という感じを得たこともあります。
+
+これは重要です。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From abee ＠ squeakland.jp  Fri Sep  9 18:32:03 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2631] Re: 「あーち」でスクイークを紹介しました
+In-Reply-To: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+References: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+Message-ID: <4321569330B.825DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 8 Sep 2005 22:44:13 +0900
+TAKAHASHI Makoto <makoto@kobe-u.ac.jp> wrote:
+>[Squeak-ja: 2568]で紹介いたしました神戸大学のヒューマン・コミュニティ
+>創成研究センターのサテライト施設「あーち」のオープニング・セレモニーが
+>９月３日に行われました。
+>http://www.kobe-np.co.jp/chiiki/ko/00034760ko200609041000.shtml
+
+オープンおめでとうございます。
+
+>このなかで「スクイークであそぼう」というコーナを作り子どもたちと遊びました。
+>このコーナーは当初は小学生以上の子どもを念頭に準備をすすめていましたが、
+>小学校就学前の子どもがたくさん参加してくれました。ノートPC３台で内１台は
+>SqueakersDVD用に考えていたのですが、順番待ちをする子が増えてきたので
+>急遽３台すべてをスクイークの作品作りにあてました。
+
+スペシャルオリンピックスのときもそんな感じでした。
+
+>一人で対応していたため
+>十分目が行き届かず、また小さい子どもが多かったため、ほとんどお絵描きだけ
+>で終わるか、タイルも「進む」「回す」を試す程度で終わりました。
+>「あーち」では今後も小学生向けのスクイークのワークショップなどを考えていま
+>すが、未就学の子どもたちへの対応も今後の課題です。
+
+先日のSqueakFest 2005で発表されたコロンビアカレッジとシカゴ大学が共同で取
+り組んでいるマチスの切り絵をつかったものなどが参考になるかもしれません。
+これは、あらかじめ切リ抜いた紙の素材をスキャンしてSqueakにインポートし、
+拡大率や角度などをスライダで簡単に設定できるスクリプトを用意したものです。
+子供たちはこれを動かして、きれいな形や配置を見つけます。
+
+Squeak Projects : University of Chicago Lab School 2005 
+http://imamp.colum.edu/eceim/uofc/squeak2005/
+
+>今回子どもたちが作った作品の一部を以下で公開しています。
+>http://herb.h.kobe-u.ac.jp/squeak/index.html
+
+いい感じですね。進めて、回すだけでも十分楽しいですよね。
+
+>最後にスクイークの作品などを紹介しながらデモをする予定でしたが、最後まで
+>子どもたちのペースでお絵描きをしていました。阿部さんに[Squeak-ja: 2580]
+>で教えていただいたアイディアは別の機会に活用したいと思います。
+
+それでよかったのではないかと思います。その場のノリは大切だと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From abee ＠ squeakland.jp  Fri Sep  9 19:02:29 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2632] Re: LLDN および夜の集い、ご参加ありがとうございました
+In-Reply-To: <EEC5ACC6E59715pxd05610@ybb.ne.jp>
+References: <JD200508281818227.1562921@mars.dti.ne.jp>
+	<EEC5ACC6E59715pxd05610@ybb.ne.jp>
+Message-ID: <43215DB52C0.825FABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+遅レスですみません。
+
+On Tue, 30 Aug 2005 03:24:30 +0900
+Iwao Kanesashi <pxd05610@ybb.ne.jp> wrote:
+>セカチュー
+>　実はセカチューのすごさを理解していないことに気が付きました。
+>　Bluetooth化したくなり、今日思わず、秋葉をうろうろしてしまいました。
+>＃見つかりませんでしたが(;_;)
+
+実はセカチ「ョ」ーだったりします(世界聴診器なので)。
+
+ワイヤレス化するコストが安いのもセカチョーの売りです。なにせ音なので、ス
+ピーカとマイクでいけます。もっと遠かったらワイヤレスマイクでもよいですし、
+ケータイでもコードレスホンでもかまいません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From abee ＠ squeakland.jp  Sat Sep 10 02:16:59 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2633] Re: 発達障害生徒児童のためのスクイーク
+In-Reply-To: <200509080248.j882mDfK002078@smtp00.dti.ne.jp>
+References: <431D80841A8.CF57ABEE@smtp.nifty.com>
+	<200509080248.j882mDfK002078@smtp00.dti.ne.jp>
+Message-ID: <4321C38B6E.8262ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 8 Sep 2005 11:48:13 +0900
+"Toshio Miyasaka" <miyasaka@iris.dti.ne.jp> wrote:
+>いままで、こうしたAD/HD、LDなどの発達障害生徒児童に対して、スクイークを教え
+>たことがある事例はありますでしょうか？
+>もし、過去にこうした取り組みをされたことがある方がいらしたら、アドバイスなど
+>いただけると幸いです。
+
+私が行ったことのあるところで、授業の後にそういう子もいたと聞いたことがあ
+ります。それなので特別なことはしていません。
+
+2月にHP-Squeakersとしてスペシャルオリンピックスで展示したときは、DSの人が
+多かったかも知れません。このときは絵を描いてもらって、それに私が簡単なス
+クリプトをつけて動かすような感じで楽しんでもらえたようです。
+
+このときは、まったくの素人だったので(いまもそうですが)、事前にメンバと福
+祉作業所の見学に行ったり話を聞いたりしました。
+関学の武田先生から、普通に接するべきとのアドバイスをもらったのが大変よか
+ったと思っています。
+
+すこし違いますが、不登校の子に対するケアとしてスクイークを使う試みも一部
+地域で始まっているようです。
+
+eToysを使っていないという意味で、これはさらに違うのですが、東京シューレで
+行っているライブシューレという遠隔授業のシステムはSqueak(Smalltalk)で作ら
+れています。このMLの運用やSqueakland.jpでお世話になっているアカデミアシス
+テムズで開発されたものです。
+
+http://www.shure.or.jp/live/
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Sun Sep 11 00:18:47 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2634] 国際会議 C5 論文募集案内
+Message-ID: <20050910.081847.224896041.htakada@acm.org>
+
+京都大学の高田です。
+
+毎年1月に開催されております国際会議 C5 (Conference on Creating,
+Connecting and Collaborating through Computing) の論文募集を投稿させて
+頂きます。
+
+前回までの3回は京都で行われてきましたが，今回はアメリカ西海岸に舞台を移
+し，カリフォルニア大学バークレイ校で行われることになりました。
+
+毎年，Squeak, Croquet 等を用いたシステムや適用事例に関する発表も多数行
+われています。論文集は IEEE Computer Society から，会議終了後に発行さ
+れる予定になっております。
+
+論文投稿締め切りは，Extended Abstract (4ページ以内) で 10月31日となっ
+ています。
+
+皆様のご投稿，ご参加をお待ちしております。
+
+-----
+CALL FOR PAPERS
+
+The Fourth International Conference on
+Creating, Connecting and Collaborating through Computing (C5 2006)
+January 26-27, 2006, University of California, Berkeley, USA
+http://www.db.soc.i.kyoto-u.ac.jp/c5-06/
+
+SPONSORED BY
+ Center for Information Technology Research in the Interest of Society, 
+  University of California, Berkeley
+ Hewlett-Packard Company
+ 21st Century Center of Excellence (COE) Program:
+  Development of Knowledge Society Infrastructure, Kyoto University
+ National Institute of Information and Communications Technology, Japan
+ Viewpoints Research Institute
+
+SCOPE
+ Computers and networks now touch the lives of us all, from the
+ youngest to the eldest members of the information society. The way
+ we use them today, as passive consumers of human-based computer
+ activities, must undergo radical improvement if we are to evolve into
+ a true knowledge society. Effectively supporting active creation,
+ connection and collaboration among all members of the knowledge
+ society will be essential for future computer-based human activities.
+ The C5 conference is for researchers, developers and computer users
+ who are concerned about these issues. It is an international forum for
+ presenting ongoing work and discussing future needs and directions
+ in the areas of creative and collaborative computing and multimedia
+ authoring environments - for work, play and learning. We welcome
+ equally the submission of technical papers and practitioner/
+ experience reports.
+
+TOPICS OF INTEREST
+ Topics of interest include but not limited to
+ - Development and applications of wide area collaboration enviroment
+ - User collaboration utilizing 3D, multimedia, and animation objects
+ - Technologies for creating educational environments
+ - Computer-Supported Collaborative Learning (CSCL)
+ - Computer-Supported Cooperative Work (CSCW), virtual teaming,
+   distributed work, and e-collaboration
+ - Hybrid technology activities, such as scientific experiments,
+   instrumentation, robots, and game playing
+
+SUBMISSION GUIDELINES
+ Original papers concerned with both theory and practice are
+ solicited. Extended abstract with 4 page limit should be submitted by
+ the paper submission deadline. The abstracts are reviewed by the
+ program comittee and authors will be notified about acceptance.
+ Accepted authors have to submit a full paper with 8 page limit by the
+ camera-ready copy deadline.
+ Both extended abstracts and full papers should follow the formatting
+ instructions provided by "IEEE Computer Society Press -
+ Proceedings Author Guidelines" (available at
+ http://www.computer.org/portal/pages/ieeecs/publications/author/instruct.html). 
+ Extended abstracts and camera-ready papers should be
+ sent electronically to c5-06@db.soc.i.kyoto-u.ac.jp. The PDF,
+ Postscript and MS-WORD formats are acceptable.
+
+IMPORTANT DATES
+ Extended abstract submission: October 31, 2005
+ Notification of acceptance: December 1, 2005
+ Full paper camera-ready copies: January 10, 2006
+ 
+PUBLICATION
+ Preliminary version of the proceedings will be distributed during the
+ conference. The formal version of the proceedings will be published
+ by IEEE Computer Society Press and sent to authors after the
+ conference.
+
+ORGANIZING COMMITTEE
+
+Honorary Co-Chairs:
+ Alan Kay, Viewpoints Research Institute, Hewlett-Packard Company, USA
+ Makoto Nagao, National Institute of Information and Communications Technology, Japan
+Conference Co-Chairs:
+ Hajime Kita, Kyoto University, Japan
+ Kim Rose, Viewpoints Research Institute, Hewlett-Packard Company, USA
+Program Co-Chairs:
+ Benay Dara-Abrams, University of San Francisco and BrainJolt, USA
+ Rieko Kadobayashi, National Institute of Information and Communications Technology, Japan
+ Rick McGeer, Hewlett-Packard Company, USA
+Publicity and Publication Chair:
+ Hideyuki Takada, Kyoto University, Japan
+Program Committee Members:
+ Ruzena Bajcsy, UC Berkeley, USA
+ Michael Bischoff, University of Applied Sciences Luebeck/Oncampus, Germany
+ John Canny, UC Berkeley, USA
+ Mark Guzdial, Georgia Institute of Technology, USA
+ Masaki Hayashi, NHK, Japan
+ Shigeyuki Hirai, Kyoto Sangyo University, Japan
+ Tsuneo Jozen, Osaka Electro-Communication University, Japan
+ Yutaka Kidawara, National Institute of Information and Communications Technology, Japan
+ Shin'ichi Konomi, University of Colorado, USA
+ Julian Lombardi, University of Wisconsin, USA
+ Toshiyuki Masui, National Institute of Advanced Industrial Science and Technology, Japan
+ Maic Masuch, University of Magdeburg, Germany
+ Mark McCahill, University of Minnesota, USA
+ Maggie McPherson, University of Sheffield, UK
+ John David Miller, Intel Corporation, USA
+ Barney Pell, Mayfield, USA
+ Zhiyong Peng, Wuhan University, China
+ Ian Piumarta, Hewlett-Packard Company, USA
+ Andreas Raab, Hewlett-Packard Company, USA
+ Nathanael Schaerli, Google, Switzerland
+ Hiroshi Shigeno, Keio University, Japan
+ Yukari Shirota, Gakushu-in University, Japan
+ David A. Smith, Viewpoints Research Institute, Inc., USA
+ Kazutoshi Sumiya, University of Hyogo, Japan
+ Shin'ichi Ueshima, Kansai University, Japan
+ Eleanor Wynn, Intel Corporation, USA
+ Tsuyoshi Yamamoto, Hokkaido University, Japan
+ Ikuko Yairi, National Institute of Information and Communications Technology, Japan
+ Yoneo Yano, Tokushima University, Japan
+
+-----
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+(COEシリコンバレー拠点滞在中, HP Labsパロアルト 客員研究員)
+
+From pxd05610 ＠ ybb.ne.jp  Sun Sep 11 10:56:15 2005
+From: pxd05610 ＠ ybb.ne.jp (Iwao Kanesashi)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2635] Re: LLDN および夜の集い、ご参加ありがとうございました
+In-Reply-To: <43215DB52C0.825FABEE@smtp.nifty.com>
+References: <JD200508281818227.1562921@mars.dti.ne.jp> 
+	<EEC5ACC6E59715pxd05610@ybb.ne.jp>
+	<43215DB52C0.825FABEE@smtp.nifty.com>
+Message-ID: <20C5B673FE37F9pxd05610@ybb.ne.jp>
+
+阿部さん
+
+金刺です
+
+>>　実はセカチューのすごさを理解していないことに気が付きました。
+>>　Bluetooth化したくなり、今日思わず、秋葉をうろうろしてしまいました。
+>>＃見つかりませんでしたが(;_;)
+>
+>実はセカチ「ョ」ーだったりします(世界聴診器なので)。
+
+あ。。。。（。。）φメモメモ
+
+>ワイヤレス化するコストが安いのもセカチョーの売りです。なにせ音なので、ス
+>ピーカとマイクでいけます。もっと遠かったらワイヤレスマイクでもよいですし、
+>ケータイでもコードレスホンでもかまいません。
+
+おお。なるほど。
+
+こんなものも見つけました。
+http://www.tomy.co.jp/aero_rc/products00.htm
+
+早速購入し、組み立ててみました。
+\1.000のラジコンとしては上出来ですね。
+
+コントローラは完成品として同梱されていたのですが、ばらしてみました(^^;
+上下左右のボタンは信号ラインをGNDに単純にショートすればよいようです。
+テスト端子もありましたので、簡単なはんだ付けとリード線を出す穴をあける加
+工をすれば、外部から制御することは難なく出来そうです。
+
+ところで、阿部さんはセカチョーからどうやって車をコントロールしているので
+しょうか？
+
+
+From abee ＠ squeakland.jp  Mon Sep 12 17:27:28 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2636] Re: LLDN および夜の集い、ご参加ありがとうございました
+In-Reply-To: <20C5B673FE37F9pxd05610@ybb.ne.jp>
+References: <43215DB52C0.825FABEE@smtp.nifty.com>
+	<20C5B673FE37F9pxd05610@ybb.ne.jp>
+Message-ID: <43253BF027A.610EABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 11 Sep 2005 10:56:15 +0900
+Iwao Kanesashi <pxd05610@ybb.ne.jp> wrote:
+>こんなものも見つけました。
+>http://www.tomy.co.jp/aero_rc/products00.htm
+>
+>早速購入し、組み立ててみました。
+>\1.000のラジコンとしては上出来ですね。
+>
+>コントローラは完成品として同梱されていたのですが、ばらしてみました(^^;
+>上下左右のボタンは信号ラインをGNDに単純にショートすればよいようです。
+>テスト端子もありましたので、簡単なはんだ付けとリード線を出す穴をあける加
+>工をすれば、外部から制御することは難なく出来そうです。
+
+エアロアールシーには注目していました。これはいけそうですね。
+私はムシキング・リモコンバトルを買って試しています(1,980円。ラジコンバト
+ルというのもあるのですがちょっと高い)。
+
+http://www.segatoys.co.jp/mushiking/remocon.html
+
+先日のデモでお見せしたCロボ(の基板)を使えば、いずれもSqueakから制御できる
+と思います。
+
+http://www.rakuten.co.jp/tsukumo/442102/659228/
+
+>ところで、阿部さんはセカチョーからどうやって車をコントロールしているので
+>しょうか？
+
+Cロボの場合はシリアルですが、
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-August/002562.html
+
+よりセカチョー的ということだと、DTMF(ピポパ音)だと思います。
+世界聴診器モーフイメージにある電話ダイヤルモーフの「で電話をかける」フレー
+ズタイルを使えばスクリプトで音を出せます。これでタカラのチョロモードやチ
+ョロモードペットをコントロールできます。
+
+http://www.takaratoys.co.jp/choro-mode/
+http://www.takaratoys.co.jp/cmode-pet/
+
+また、世界聴診器モーフの「電話番号」というフレーズタイルを使えば、音から
+番号を取り出せるので、2台のPC間で情報をやり取りすることもできます。この応
+用として、モデムやFAXをつくることもできます。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From pxd05610 ＠ ybb.ne.jp  Tue Sep 13 11:17:27 2005
+From: pxd05610 ＠ ybb.ne.jp (Iwao Kanesashi)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2637] Re: LLDN および夜の集い、ご参加ありがとうございました
+In-Reply-To: <43253BF027A.610EABEE@smtp.nifty.com>
+References: <43215DB52C0.825FABEE@smtp.nifty.com> 
+	<20C5B673FE37F9pxd05610@ybb.ne.jp>
+	<43253BF027A.610EABEE@smtp.nifty.com>
+Message-ID: <21C5B809494F8Apxd05610@ybb.ne.jp>
+
+金刺です
+
+>先日のデモでお見せしたCロボ(の基板)を使えば、いずれもSqueakから制御できる
+>と思います。
+>
+>http://www.rakuten.co.jp/tsukumo/442102/659228/
+>
+>>ところで、阿部さんはセカチョーからどうやって車をコントロールしているので
+>>しょうか？
+>
+>Cロボの場合はシリアルですが、
+>
+>http://www.smalltalk.jp/pipermail/squeak-ja/2005-August/002562.html
+
+なるほど。USB-シリアルケーブルもCロボももっていないので、見送ります:-)
+
+別の方法として、以下の方法で直接I/Oを制御できそうです
+http://www.asahi-net.or.jp/~qx5k-iskw/robot/ezusb.html
+＃PHSのケーブル捨てないでよかった
+
+とりあえず、半田ごてがどこかに行ってしまったので買わないと(^^;
+
+>よりセカチョー的ということだと、DTMF(ピポパ音)だと思います。
+>世界聴診器モーフイメージにある電話ダイヤルモーフの「で電話をかける」フレー
+>ズタイルを使えばスクリプトで音を出せます。これでタカラのチョロモードやチ
+>ョロモードペットをコントロールできます。
+>
+>http://www.takaratoys.co.jp/choro-mode/
+>http://www.takaratoys.co.jp/cmode-pet/
+
+これいいですねぇ。ハードを作らなくていい（元回路設計として問題発言）
+週末に買いに行きます
+
+From koubo2005 ＠ yengawa.jpn.org  Wed Sep 14 16:08:02 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2638] [ANNOUNCE] 音楽イベント「The Musical Box」
+Message-ID: <20050914153551.F3DA.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+Squeakを使った音楽イベントをお知らせします。
+# SML, Squeak-jaのマルチポストです。
+
+----------------------------------------
+『The Musical Box - Squeak Musik Nacht』
+
+Squeakを使って音楽を奏でるセッションをします。コンピュータ音楽に興味があ
+る人やSqueakを使ってクールなサウンドを作りたい人は気軽に参加してください
+な。音楽を聴くだけじゃなくて背景や技術なども語りますよ。
+出し物少ないので飛び入り大歓迎ヽ(´ー｀)ノ
+(詳細 http://yengawa.homedns.org:8888/YengawaWiki/14)
+
+! 日時: 
+2005年9月19日(月)敬老の日 
+18:30(開場18:00) 〜 20:00
+予約なし
+
+! 場所: 
+Mota Jump
+下北沢駅南口より徒歩約2分
+http://www.mota-jump.com/
+東京都世田谷区北沢2-12-2 RAIN FOREST BLDG 2F
+TEL/FAX : 03-3487-0890 
+地図 http://www.mota-jump.com/map.html
+
+! 参加費
+1,000円(1ドリンク付き)
+
+!! 出し物
+! 西原
+Mock シリーズ打ち止めにつき，豪華 2.5 本立て大放出！
+なんと傍迷惑な．もしかしたら「その他」があるかも．
+
+! 横川
+マルチエージェント分散音楽環境Symphonyシステムの紹介とプチデモ。
+Musique de Swimmyもあるかも。
+
+----------------------------------------
+
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From makoto ＠ kobe-u.ac.jp  Thu Sep 15 00:02:42 2005
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2639] Re: 「あーち」でスクイークを紹介しました
+In-Reply-To: <4321569330B.825DABEE@smtp.nifty.com>
+References: <20050908224413.218847.090d75cb@kobe-u.ac.jp>
+	<4321569330B.825DABEE@smtp.nifty.com>
+Message-ID: <20050915000242.178573.30311d43@kobe-u.ac.jp>
+
+神戸大学の高橋真です。
+
+大島さん、阿部さん、コメントありがとうございます。
+
+++ Kazuhiro ABEさんの『[Squeak-ja: 2631] Re: 「あーち」でスクイークを紹介しました』
+| (Fri, 09 Sep 2005 18:32:03 +0900)の件について
+--
+> 先日のSqueakFest 2005で発表されたコロンビアカレッジとシカゴ大学が共同で取
+> り組んでいるマチスの切り絵をつかったものなどが参考になるかもしれません。
+> これは、あらかじめ切リ抜いた紙の素材をスキャンしてSqueakにインポートし、
+> 拡大率や角度などをスライダで簡単に設定できるスクリプトを用意したものです。
+> 子供たちはこれを動かして、きれいな形や配置を見つけます。
+> 
+> Squeak Projects : University of Chicago Lab School 2005 
+> http://imamp.colum.edu/eceim/uofc/squeak2005/
+
+これは面白そうです。当学部の子ども発達論や表現学科の先生方も興味をもつのでは
+ないかと思います。
+
+>> 今回子どもたちが作った作品の一部を以下で公開しています。
+>> http://herb.h.kobe-u.ac.jp/squeak/index.html
+> 
+> いい感じですね。進めて、回すだけでも十分楽しいですよね。
+
+はい、最初は絵だけ描いていた子が、となりの子が絵を回しているのをみて
+「わたしもおねがい」と頼んできて、同じように回してあげると本当に楽し
+そうでした。
+
+「次はいつするのか」という問合せも、「あーち」には来ているそうですので
+なんとか年内にもう一度したいと思っています。
+
+From yasuda ＠ mfc.bakkers.gr.jp  Thu Sep 15 12:19:16 2005
+From: yasuda ＠ mfc.bakkers.gr.jp (Yutaka Yasuda)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2640] Re: [ANNOUNCE] 音楽イベント「 The Musical Box 」
+Message-ID: <050915121916.M0106168@mfc.bakkers.gr.jp>
+
+安田と申します。
+
+関西オープンソース＋関西コミュニティ大決戦、というイベントの実行委員を
+しています。http://k-of.jp/
+
+> Squeakを使った音楽イベントをお知らせします。
+....
+> 『The Musical Box - Squeak Musik Nacht』
+> 
+> Squeakを使って音楽を奏でるセッションをします。コンピュータ音楽に興味があ
+> る人やSqueakを使ってクールなサウンドを作りたい人は気軽に参加してください
+> な。音楽を聴くだけじゃなくて背景や技術なども語りますよ。
+
+(@_@) ううーそれ良いですね。。。
+
+上記イベントではブース（といってもコミュニティは長机ひとつの簡素なもの）
+やステージでのデモを募集中です。（音、出していいです。どどんと。）
+
+場所が大阪なのでそれはちょっと無茶よ、、、なのかもしれませんが、
+もしよろしければ是非出演してくださいー。
+10/28 金曜〜 10/29 土曜です。非営利ブースは今だと 29 土曜のみかな。。
+
+昨年も Squeak-ja のブースを出して頂いてました。また、Mac で音楽クラブ
+というブースも出てました。（see; http://k-of.jp/2004/boothlist ）
+
+ご興味あれば一報くださいませー。
+
+Squeak-jp でのブース出展もよろしければどうぞー。
+
+＃なお私も Cobalt Users Group で出展する予定です。(@_@)
+
+でわでわ							Yasu.
+
+From umejava ＠ mars.dti.ne.jp  Sat Sep 17 14:44:19 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2641] Squeakers' Night in 未来パーティ のお知らせ
+Message-ID: <JW200509171444193.3111390@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、「夜の集い」の興奮もさめやらない今日この頃ですが、このたび、10月28日に
+同種のイベントが行える運びとなりました。
+
+タイトルは「Squeakers' Night in 未来パーティ」です。
+今回は公立はこだて未来大学様のご協力を受けまして、秋葉原ダイビルの5F
+アキバテクノクラブで行います。
+
+http://www.akiba-cross.jp/
+
+スケジュールは以下のようになります。
+
+10/28(Fri)
+  18:00 集合・準備
+  18:30-20:30 発表・ディスカッション
+  20:30-21:00 かたづけ
+
+会場もぐっと広くなり、さらに充実したデモが行える環境となりました!
+
+事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+
+例によって差し入れなども歓迎します。
+
+デモプログラムはWikiに載せていく予定です。
+下記のサイトにプログラムが載っていきます。
+http://swikis.ddo.jp/umejava/23
+
+ちなみに私は新バージョンのSqueakwareをお披露目します。
+http://swikis.ddo.jp/umejava/11
+
+よろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+
+From yoshiki ＠ squeakland.org  Sun Sep 18 09:46:04 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2642] Re: Squeakers' Night in 未来パーティ のお知らせ
+In-Reply-To: <JW200509171444193.3111390@mars.dti.ne.jp>
+References: <JW200509171444193.3111390@mars.dti.ne.jp>
+Message-ID: <ull1vb3ub.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  楽しそうですね。28日には帰国しているはずですので、ぜひとも参加したい
+と思います。よろしくお願いします。
+
+-- Yoshiki
+
+At Sat, 17 Sep 2005 14:44:19 +0900,
+Masashi Umezawa wrote:
+> 
+> こんにちは
+> 梅澤です。
+> 
+> さて、「夜の集い」の興奮もさめやらない今日この頃ですが、このたび、10月28日に
+> 同種のイベントが行える運びとなりました。
+> 
+> タイトルは「Squeakers' Night in 未来パーティ」です。
+> 今回は公立はこだて未来大学様のご協力を受けまして、秋葉原ダイビルの5F
+> アキバテクノクラブで行います。
+> 
+> http://www.akiba-cross.jp/
+> 
+> スケジュールは以下のようになります。
+> 
+> 10/28(Fri)
+>   18:00 集合・準備
+>   18:30-20:30 発表・ディスカッション
+>   20:30-21:00 かたづけ
+> 
+> 会場もぐっと広くなり、さらに充実したデモが行える環境となりました!
+> 
+> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+> MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+> 
+> 例によって差し入れなども歓迎します。
+> 
+> デモプログラムはWikiに載せていく予定です。
+> 下記のサイトにプログラムが載っていきます。
+> http://swikis.ddo.jp/umejava/23
+> 
+> ちなみに私は新バージョンのSqueakwareをお披露目します。
+> http://swikis.ddo.jp/umejava/11
+> 
+> よろしくお願い申し上げます。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Sun Sep 18 11:14:34 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2643] Re: Squeakers' Night in 未来パーティ のお知らせ
+In-Reply-To: <ull1vb3ub.wl%yoshiki@squeakland.org>
+References: <JW200509171444193.3111390@mars.dti.ne.jp>
+	<ull1vb3ub.wl%yoshiki@squeakland.org>
+Message-ID: <JR200509181114347.948875@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Sat, 17 Sep 2005 17:46:04 -0700
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>   おおしまです。
+> 
+>   楽しそうですね。28日には帰国しているはずですので、ぜひとも参加したい
+> と思います。よろしくお願いします。
+> 
+
+早速のお返事ありがとうございます。
+
+大島さんはきっとデモをされると思いますので、下記Wikiに内容を書き込んで
+いただけますでしょうか。
+
+> > デモプログラムはWikiに載せていく予定です。
+> > 下記のサイトにプログラムが載っていきます。
+> > http://swikis.ddo.jp/umejava/23
+
+
+よろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+
+From koubo2005 ＠ yengawa.jpn.org  Sun Sep 18 20:35:28 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2644] Re: [ANNOUNCE] 音楽イベント「 The Musical Box 」
+In-Reply-To: <050915121916.M0106168@mfc.bakkers.gr.jp>
+References: <050915121916.M0106168@mfc.bakkers.gr.jp>
+Message-ID: <20050918202046.F40A.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+#レスが遅くてすみません。
+
+> 昨年も Squeak-ja のブースを出して頂いてました。
+
+これですね。
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-October/001889.html
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-October/001893.html
+
+去年はSqueakの知名度アップにだいぶ貢献したようですね。すごい。
+ぼくは大阪はちょっと遠いし忙しい時期なので難しいですが、Squeakerは全国に
+居るので今年もきっと誰かが。。。
+
+
+On Thu, 15 Sep 2005 12:19:16 +0900
+Yutaka Yasuda <yasuda@mfc.bakkers.gr.jp> wrote:
+
+> 安田と申します。
+> 
+> 関西オープンソース＋関西コミュニティ大決戦、というイベントの実行委員を
+> しています。http://k-of.jp/
+> 
+> > Squeakを使った音楽イベントをお知らせします。
+> .....
+> > 『The Musical Box - Squeak Musik Nacht』
+> > 
+> > Squeakを使って音楽を奏でるセッションをします。コンピュータ音楽に興味があ
+> > る人やSqueakを使ってクールなサウンドを作りたい人は気軽に参加してください
+> > な。音楽を聴くだけじゃなくて背景や技術なども語りますよ。
+> 
+> (@_@) ううーそれ良いですね。。。
+> 
+> 上記イベントではブース（といってもコミュニティは長机ひとつの簡素なもの）
+> やステージでのデモを募集中です。（音、出していいです。どどんと。）
+> 
+> 場所が大阪なのでそれはちょっと無茶よ、、、なのかもしれませんが、
+> もしよろしければ是非出演してくださいー。
+> 10/28 金曜〜 10/29 土曜です。非営利ブースは今だと 29 土曜のみかな。。
+> 
+> 昨年も Squeak-ja のブースを出して頂いてました。また、Mac で音楽クラブ
+> というブースも出てました。（see; http://k-of.jp/2004/boothlist ）
+> 
+> ご興味あれば一報くださいませー。
+> 
+> Squeak-jp でのブース出展もよろしければどうぞー。
+> 
+> ＃なお私も Cobalt Users Group で出展する予定です。(@_@)
+> 
+> でわでわ							Yasu.
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From koubo2005 ＠ yengawa.jpn.org  Mon Sep 19 00:02:18 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2645] Re: [ANNOUNCE] 音楽イベント「The Musical Box」
+In-Reply-To: <20050914153551.F3DA.KOUBO2005@yengawa.jpn.org>
+References: <20050914153551.F3DA.KOUBO2005@yengawa.jpn.org>
+Message-ID: <20050918235749.F410.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+
+『The Musical Box - Squeak Musik Nacht』
+はいよいよ本日夕刻です。
+
+Smalltalk言語圏では異色のイベントですが、いつものようにワキアイアイの技
+術者モードなので身構えずに(?)気楽にお越しください :-)
+
+
+On Wed, 14 Sep 2005 16:08:02 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+
+> 横川です。
+> Squeakを使った音楽イベントをお知らせします。
+> # SML, Squeak-jaのマルチポストです。
+> 
+> ----------------------------------------
+> 『The Musical Box - Squeak Musik Nacht』
+> 
+> Squeakを使って音楽を奏でるセッションをします。コンピュータ音楽に興味があ
+> る人やSqueakを使ってクールなサウンドを作りたい人は気軽に参加してください
+> な。音楽を聴くだけじゃなくて背景や技術なども語りますよ。
+> 出し物少ないので飛び入り大歓迎ヽ(´ー｀)ノ
+> (詳細 http://yengawa.homedns.org:8888/YengawaWiki/14)
+> 
+> ! 日時: 
+> 2005年9月19日(月)敬老の日 
+> 18:30(開場18:00) 〜 20:00
+> 予約なし
+> 
+> ! 場所: 
+> Mota Jump
+> 下北沢駅南口より徒歩約2分
+> http://www.mota-jump.com/
+> 東京都世田谷区北沢2-12-2 RAIN FOREST BLDG 2F
+> TEL/FAX : 03-3487-0890 
+> 地図 http://www.mota-jump.com/map.html
+> 
+> ! 参加費
+> 1,000円(1ドリンク付き)
+> 
+> !! 出し物
+> ! 西原
+> Mock シリーズ打ち止めにつき，豪華 2.5 本立て大放出！
+> なんと傍迷惑な．もしかしたら「その他」があるかも．
+> 
+> ! 横川
+> マルチエージェント分散音楽環境Symphonyシステムの紹介とプチデモ。
+> Musique de Swimmyもあるかも。
+> 
+> ----------------------------------------
+> 
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From "土本 (Florian) 強  Mon Sep 19 14:58:12 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2646] Re: [ANNOUNCE] 音楽イベント「The Musical Box」
+In-Reply-To: <20050918235749.F410.KOUBO2005@yengawa.jpn.org>
+References: <20050914153551.F3DA.KOUBO2005@yengawa.jpn.org>
+	<20050918235749.F410.KOUBO2005@yengawa.jpn.org>
+Message-ID: <20050919145523.0982.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。土本( Florian )です。
+
+メール「[Squeak-ja: 2645] Re: [ANNOUNCE] 音楽イベント「The Musical Box」」(2005/09/19 00:02) に於いて
+「Koji Yokokawa」 語りて曰く、
+
+Koji> 『The Musical Box - Squeak Musik Nacht』
+Koji> はいよいよ本日夕刻です。
+Koji> 
+Koji> Smalltalk言語圏では異色のイベントですが、いつものようにワキアイアイの技
+Koji> 術者モードなので身構えずに(?)気楽にお越しください :-)
+
+　行きたいのですが、直前まで仕事+終わったあとも仕事なので抜け出せるかど
+うか……。
+　ええと、楽しみにしています。
+
+　では。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From yasuda ＠ mfc.bakkers.gr.jp  Mon Sep 19 23:20:39 2005
+From: yasuda ＠ mfc.bakkers.gr.jp (Yutaka Yasuda)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2647] > Subject:  Re: [ANNOUNCE] 音楽イベント「 The Musical Box 」
+In-Reply-To: Your message of "Mon, 19 Sep 2005 13:54:34 +0900 (JST)".
+	<20050919045434.35AFB3FC002@s8260.ylb.jp>
+Message-ID: <050919232039.M0216246@mfc.bakkers.gr.jp>
+
+安田です。
+
+> これですね。
+
+そうですそうです。(^-^)//
+
+> 去年はSqueakの知名度アップにだいぶ貢献したようですね。すごい。
+
+(@_@) むむそれは嬉しい。。。
+
+> ぼくは大阪はちょっと遠いし忙しい時期なので難しいですが、Squeakerは全国に
+> 居るので今年もきっと誰かが。。。
+
+わくわくわくわく。。。。ぜひどなたか安田までご一報くださいませ。
+
+（事前に言っておいてくだされば Cobalt のブースの隣に配置するなりして
+　一時的な店番を Cobalt ユーザ会から出せるようにしますので、お一人でも
+　出展可能ですはい。ぜひ KOF の他のセッションにも参加しつつ、お客さま
+　とおしゃべりをお楽しみくださいませ。(^_^)// （そういうイベントなので））
+
+でわでわ							Yasu.
+
+
+From koubo2005 ＠ yengawa.jpn.org  Tue Sep 20 00:39:36 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2648] Re: [ANNOUNCE] 音楽イベント「The Musical Box」
+In-Reply-To: <20050914153551.F3DA.KOUBO2005@yengawa.jpn.org>
+References: <20050914153551.F3DA.KOUBO2005@yengawa.jpn.org>
+Message-ID: <20050920001415.F41B.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+『The Musical Box - Squeak Musik Nacht』
+は先ほど無事に終演しました。
+趣味の集まりといった感じでマッタリと楽しくできました。
+参加者の皆さんありがとうございました。
+
+まずは僕が近藤史人さん作のMemeMusicをデモンストレーション演奏/説明して、
+Swimmyで簡単に音ゲー(らしきもの?)をつくる実演をしました。
+次に西原さんがMMM(http://nishis.hp.infoseek.co.jp/misqueak/m3/index.html)
+でMinimal系を演奏/説明しました。
+2次会で音楽やSmalltalkの話などして解散。
+
+最初に備品のトラブルでてこずりましたが、1時間半はあっという間に過ぎて短
+かかった。こーゆー気軽な肩の凝らない集まりは、たくさんやりたいですね。
+
+ではまた。
+
+On Wed, 14 Sep 2005 16:08:02 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+
+> 横川です。
+> Squeakを使った音楽イベントをお知らせします。
+> # SML, Squeak-jaのマルチポストです。
+> 
+> ----------------------------------------
+> 『The Musical Box - Squeak Musik Nacht』
+> 
+> Squeakを使って音楽を奏でるセッションをします。コンピュータ音楽に興味があ
+> る人やSqueakを使ってクールなサウンドを作りたい人は気軽に参加してください
+> な。音楽を聴くだけじゃなくて背景や技術なども語りますよ。
+> 出し物少ないので飛び入り大歓迎ヽ(´ー｀)ノ
+> (詳細 http://yengawa.homedns.org:8888/YengawaWiki/14)
+> 
+> ! 日時: 
+> 2005年9月19日(月)敬老の日 
+> 18:30(開場18:00) 〜 20:00
+> 予約なし
+> 
+> ! 場所: 
+> Mota Jump
+> 下北沢駅南口より徒歩約2分
+> http://www.mota-jump.com/
+> 東京都世田谷区北沢2-12-2 RAIN FOREST BLDG 2F
+> TEL/FAX : 03-3487-0890 
+> 地図 http://www.mota-jump.com/map.html
+> 
+> ! 参加費
+> 1,000円(1ドリンク付き)
+> 
+> !! 出し物
+> ! 西原
+> Mock シリーズ打ち止めにつき，豪華 2.5 本立て大放出！
+> なんと傍迷惑な．もしかしたら「その他」があるかも．
+> 
+> ! 横川
+> マルチエージェント分散音楽環境Symphonyシステムの紹介とプチデモ。
+> Musique de Swimmyもあるかも。
+> 
+> ----------------------------------------
+> 
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From Fumito.Kondo ＠ hp.com  Tue Sep 20 10:03:07 2005
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2649] Re: [ANNOUNCE] 音楽イベント「The Musical Box」
+Message-ID: <287073018F1FCC48B871980C94CB156503C0D067@tkoexc02.asiapacific.cpqcorp.net>
+
+横川さん、
+
+どうもありがとうございました。
+
+今回は都合で参加できませんでしたが、機会があれば是非、演奏したいと思います。
+
+よろしくお願いいたします。
+
+近藤史人
+シニアコンサルタント
+コンサルティング＆インテグレーション統括本部
+日本ヒューレット・パッカード株式会社
+Fumito Kondo
+Senior Consultant
+Consulting&Integration
+Hewlett-Packard  JAPAN
+Phone: +81-52-566-5900
+FAX  :  +81-52-566-5990
+e-Mail:Fumito.Kondo@hp.com
+
+
+
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp 
+> [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Koji Yokokawa
+> Sent: Tuesday, September 20, 2005 12:40 AM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 2648] Re: [ANNOUNCE] 音楽イベント「The Musical Box」
+> 
+> 
+> 横川です。
+> 『The Musical Box - Squeak Musik Nacht』
+> は先ほど無事に終演しました。
+> 趣味の集まりといった感じでマッタリと楽しくできました。
+> 参加者の皆さんありがとうございました。
+> 
+> まずは僕が近藤史人さん作のMemeMusicをデモンストレーション演奏/説明して、
+> Swimmyで簡単に音ゲー(らしきもの?)をつくる実演をしました。
+> 次に西原さんがMMM(http://nishis.hp.infoseek.co.jp/misqueak/m3/index.html)
+> でMinimal系を演奏/説明しました。
+> 2次会で音楽やSmalltalkの話などして解散。
+> 
+> 最初に備品のトラブルでてこずりましたが、1時間半はあっという間に過ぎて短
+> かかった。こーゆー気軽な肩の凝らない集まりは、たくさんやりたいですね。
+> 
+> ではまた。
+> 
+> On Wed, 14 Sep 2005 16:08:02 +0900
+> Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+> 
+> > 横川です。
+> > Squeakを使った音楽イベントをお知らせします。
+> > # SML, Squeak-jaのマルチポストです。
+> > 
+> > ----------------------------------------
+> > 『The Musical Box - Squeak Musik Nacht』
+> > 
+> > Squeakを使って音楽を奏でるセッションをします。コンピュータ音楽に興味があ
+> > る人やSqueakを使ってクールなサウンドを作りたい人は気軽に参加してください
+> > な。音楽を聴くだけじゃなくて背景や技術なども語りますよ。
+> > 出し物少ないので飛び入り大歓迎ヽ(´ー｀)ノ
+> > (詳細 http://yengawa.homedns.org:8888/YengawaWiki/14)
+> > 
+> > ! 日時:
+> > 2005年9月19日(月)敬老の日 
+> > 18:30(開場18:00) 〜 20:00
+> > 予約なし
+> > 
+> > ! 場所:
+> > Mota Jump
+> > 下北沢駅南口より徒歩約2分
+> > http://www.mota-jump.com/
+> > 東京都世田谷区北沢2-12-2 RAIN FOREST BLDG 2F
+> > TEL/FAX : 03-3487-0890 
+> > 地図 http://www.mota-jump.com/map.html
+> > 
+> > ! 参加費
+> > 1,000円(1ドリンク付き)
+> > 
+> > !! 出し物
+> > ! 西原
+> > Mock シリーズ打ち止めにつき，豪華 2.5 本立て大放出！
+> > なんと傍迷惑な．もしかしたら「その他」があるかも．
+> > 
+> > ! 横川
+> > マルチエージェント分散音楽環境Symphonyシステムの紹介とプチデモ。
+> > Musique de Swimmyもあるかも。
+> > 
+> > ----------------------------------------
+> > 
+> > 
+> > -- !
+> > Koji Yokokawa <koubo2005@yengawa.jpn.org>
+> >     self new!
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+> 
+> 
+
+From abee ＠ squeakland.jp  Wed Sep 21 01:19:14 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2650] Re: 三重大附小の Squeak 教育がローカル紙に
+In-Reply-To: <u7jdrdmwh.wl%yoshiki@squeakland.org>
+References: <20050909.103811.60722716.okumura@edu.mie-u.ac.jp>
+	<u7jdrdmwh.wl%yoshiki@squeakland.org>
+Message-ID: <433036823A.2352ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 08 Sep 2005 18:56:30 -0700
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>> あ，あの下村努とは別人28号です。
+>
+>　なんと、それは残念^^;
+
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From abee ＠ squeakland.jp  Wed Sep 21 01:19:36 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2651] Re: 三重大附小の Squeak 教育がローカル紙に
+In-Reply-To: <u7jdrdmwh.wl%yoshiki@squeakland.org>
+References: <20050909.103811.60722716.okumura@edu.mie-u.ac.jp>
+	<u7jdrdmwh.wl%yoshiki@squeakland.org>
+Message-ID: <43303698212.2353ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 08 Sep 2005 18:56:30 -0700
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>> あ，あの下村努とは別人28号です。
+>
+>　なんと、それは残念^^;
+
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From abee ＠ squeakland.jp  Wed Sep 21 01:26:17 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2652] Re: 三重大附小の Squeak 教育がローカル紙に
+In-Reply-To: <u7jdrdmwh.wl%yoshiki@squeakland.org>
+References: <20050909.103811.60722716.okumura@edu.mie-u.ac.jp>
+	<u7jdrdmwh.wl%yoshiki@squeakland.org>
+Message-ID: <433038291C8.2354ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+操作ミスで意味のないメールを送ってしまいました。申し訳ありません。
+
+それだけではなんなので、これもあまり意味のない情報ですが、下村勉先生には
+6月に京都、もしかしたら名古屋、ひょっとして東京で大島さんも会われているは
+ずです。
+
+On Thu, 08 Sep 2005 18:56:30 -0700
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>> あ，あの下村努とは別人28号です。
+>
+>　なんと、それは残念^^;
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From nishis ＠ zephyr.dti.ne.jp  Wed Sep 21 02:51:04 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2653] Re: [ANNOUNCE] 音楽イベント「The Musical Box」
+In-Reply-To: <20050920001415.F41B.KOUBO2005@yengawa.jpn.org>
+References: <20050914153551.F3DA.KOUBO2005@yengawa.jpn.org>
+	<20050920001415.F41B.KOUBO2005@yengawa.jpn.org>
+Message-ID: <43304C08.4030807@zephyr.dti.ne.jp>
+
+お疲れさまでした〜．
+
+on 05.9.20 0:39 AM, Koji Yokokawa wrote:
+> 最初に備品のトラブルでてこずりましたが、1時間半はあっという間に過ぎて短
+> かかった。こーゆー気軽な肩の凝らない集まりは、たくさんやりたいですね。
+
+御意．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From nishis ＠ zephyr.dti.ne.jp  Wed Sep 21 02:51:11 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2654] Re: Squeakers' Night in 未来パーティ のお知らせ
+In-Reply-To: <JW200509171444193.3111390@mars.dti.ne.jp>
+References: <JW200509171444193.3111390@mars.dti.ne.jp>
+Message-ID: <43304C0F.4050201@zephyr.dti.ne.jp>
+
+on 05.9.17 2:44 PM, Masashi Umezawa wrote:
+> タイトルは「Squeakers' Night in 未来パーティ」です。
+> 今回は公立はこだて未来大学様のご協力を受けまして、秋葉原ダイビルの5F
+> アキバテクノクラブで行います。
+> http://www.akiba-cross.jp/
+
+参加希望〜！
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From koubo2005 ＠ yengawa.jpn.org  Fri Sep 23 09:33:54 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2655] 日本語のUTF-8
+Message-ID: <20050923092008.B855.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+UTF-8で書いた日本語をSqueakで読む方法を個人メールで聞いたのですが、情報
+共有のため流します。
+
+
+> 山宮です。
+> 
+> UTF-8 自体には「日本語である」という情報が無いので日本語に出来ません。
+> なので例えば
+> ((FileStream readOnlyFileNamed: 'UTF8.txt') converter: UTF8TextConverter new) contents collect: [:c | (Character leadingChar: JapaneseEnvironment leadingChar code: c charCode)]
+> のように一つ一つの文字に「日本語である」と明示的におしえてあげ
+> なくてはなりません。(もっと探せばスマートな方法があると思います。)
+> 
+> Koji Yokokawa wrote:
+> > 横川です。
+> > SqueakのMultilingualとLocaleについて教えてください。
+> > (詳しいお二人に出してます。)
+> > 
+> > Squeak3.8でLocaleをenなどにしているとUTF-8で書いた日本語の内部表現
+> > <WideString>がShift-JISなどと異なるのですが、どうしてですか?
+> > あらかじめLocaleをjaにしておくと一致するのですが、UTF-8で読んだ日本語文
+> > 字をLocaleに左右されずに常にShift-JISやEUC-JPと一致させるにはどうすれば
+> > よいのか悩んでます。
+> > 
+> > 具体的には同じ文字をUTF-8とShift-JISで書いたファイルを用意して以下を実行
+> > するとイメージのLocaleによらず常に同じになることを期待してたのです。
+> > 
+> > ((FileStream readOnlyFileNamed: 'UTF8.txt') converter: UTF8TextConverter
+> > new) contents 
+> > = 
+> > ((FileStream readOnlyFileNamed: 'SJIS.txt') converter: ShiftJISTextConverter
+> > new) contents
+
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From koubo2005 ＠ yengawa.jpn.org  Sun Sep 25 12:11:52 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2656] Re: 日本語のUTF-8
+In-Reply-To: <20050923092008.B855.KOUBO2005@yengawa.jpn.org>
+References: <20050923092008.B855.KOUBO2005@yengawa.jpn.org>
+Message-ID: <20050925120632.2E23.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+Unicodeを良く知らないでやってますが、こんな風にするとShift-JISとかで読ん
+だ文字と一致するWideStringを作れました。
+
+asCorrectLeadingChar: aWideString 
+	"Return a new string which has correct leadingChar."
+	^ aWideString
+		collect: [:char | 
+			| fixedChar code | 
+			fixedChar := char.
+			code := char asUnicode.
+			(Unicode isJapanese: code)
+				ifTrue: [fixedChar := Character leadingChar: JapaneseEnvironment leadingChar code: code].
+			fixedChar]
+
+
+On Fri, 23 Sep 2005 09:33:54 +0900
+Koji Yokokawa <koubo2005@yengawa.jpn.org> wrote:
+
+> 横川です。
+> UTF-8で書いた日本語をSqueakで読む方法を個人メールで聞いたのですが、情報
+> 共有のため流します。
+> 
+> 
+> > 山宮です。
+> > 
+> > UTF-8 自体には「日本語である」という情報が無いので日本語に出来ません。
+> > なので例えば
+> > ((FileStream readOnlyFileNamed: 'UTF8.txt') converter: UTF8TextConverter new) contents collect: [:c | (Character leadingChar: JapaneseEnvironment leadingChar code: c charCode)]
+> > のように一つ一つの文字に「日本語である」と明示的におしえてあげ
+> > なくてはなりません。(もっと探せばスマートな方法があると思います。)
+> > 
+> > Koji Yokokawa wrote:
+> > > 横川です。
+> > > SqueakのMultilingualとLocaleについて教えてください。
+> > > (詳しいお二人に出してます。)
+> > > 
+> > > Squeak3.8でLocaleをenなどにしているとUTF-8で書いた日本語の内部表現
+> > > <WideString>がShift-JISなどと異なるのですが、どうしてですか?
+> > > あらかじめLocaleをjaにしておくと一致するのですが、UTF-8で読んだ日本語文
+> > > 字をLocaleに左右されずに常にShift-JISやEUC-JPと一致させるにはどうすれば
+> > > よいのか悩んでます。
+> > > 
+> > > 具体的には同じ文字をUTF-8とShift-JISで書いたファイルを用意して以下を実行
+> > > するとイメージのLocaleによらず常に同じになることを期待してたのです。
+> > > 
+> > > ((FileStream readOnlyFileNamed: 'UTF8.txt') converter: UTF8TextConverter
+> > > new) contents 
+> > > = 
+> > > ((FileStream readOnlyFileNamed: 'SJIS.txt') converter: ShiftJISTextConverter
+> > > new) contents
+> 
+> 
+> -- !
+> Koji Yokokawa <koubo2005@yengawa.jpn.org>
+>     self new!
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From miyasaka ＠ iris.dti.ne.jp  Mon Sep 26 11:37:29 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2657] 教えてください
+In-Reply-To: <20050925120632.2E23.KOUBO2005@yengawa.jpn.org>
+Message-ID: <200509260237.j8Q2bVbL021582@smtp00.dti.ne.jp>
+
+Squeak-jaの皆様へ
+
+いつもお世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+スクイークの使い方について、ちょっとわからないことがあるのですが、どなたかご
+存知でしたら教えていただけませんでしょうか。
+
+■「本」の使い方
+座間市教育研究所の桑原さん（情報教育アドバイザー）という方が、 １０月に座間
+市栗原小学校のクラブの時間でスクイークを使ったワークショップを計画していま
+す。
+もともとアニメーションのカリキュラムをやろうかと考えられていたそうですが、先
+日阿部さんから教えていただいた「本を利用したアニメーション」（添付ファイル参
+照）をご紹介したところ、この方法も使ってみたいとのこと。
+アニメーションについては以前もSquea-jaにて議論がありましたが、とはいえ、クラ
+ブ活動のような限られた時間のなかでスクイークに詳しくない先生が最初に取り組む
+カリキュラムとしては、それほど悪くないようです。
+（お絵描きの一環として最初の導入部に利用するとか）
+
+＜質問＞
+この「本」を使ってアニメーションを作る場合ですが、前のページをそのまま次ペー
+ジにコピーすることができると便利です。
+本のメニューから「新しいページの元として保存する」を使えばできるのですが、同
+じことは「ページの並び替え」でもできるのでしょうか？
+「ページの並び替え」には、「コピー元として動作する」というチェックボックスが
+あり、この機能を使うとできそうなのですが、サムネイルのコピーをしてみると、ど
+うも上手い具合に動いてくれません。
+（バグなのでしょうか？あるいは、使い方の問題？？）
+この「ページの並び替え」にある「コピー元として動作する」というチェックボック
+スの正しい使い方を教えていただけますでしょうか。
+
+
+■マウスの右クリックでハロを出す
+先日ご案内させていただいたとおり、１０月１５日に藤沢で学習障害をもったこども
+達のためのスクイークワークショップを行う予定です。
+（先ずは３〜５名の受講者で行う予定）
+昨日、主催者の先生と実際にスクイークを使いながらお打ち合わせをしてきたのです
+が、その際に、ハロの出し方が問題になりました。
+先生によると、「ＡＬＴ＋クリック」という「協調運動（ふたつの動作の組み合わ
+せ）」は上手くできないこどもがいる場合があるので、「右クリック」に統一してし
+てほしいとのこと。
+
+＜質問＞
+タスクバーの「VM Preference」で「Mouse Mapping」を「3 button mouse」を選択す
+ると、右クリックでハロが開くようになりますが、これは正しい使い方なのでしょう
+か？
+こうした右クリックでハロを出すような使い方をする上での注意点などあったら教え
+ていただければ幸いです。
+
+
+取り急ぎ。
+よろしくお願いいたします。
+
+-------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+URL : http://mts-j.hiho.jp/
+-------------------------------------------
+e-mail : miyasaka@iris.dti.ne.jp
+-------------------------------------------
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: amination_sample.002.pr
+型:         application/x-squeak-project
+サイズ:     27500 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050926/f0f7f09b/amination_sample.002.bin
+From koubo2005 ＠ yengawa.jpn.org  Mon Sep 26 18:26:12 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2658] SmallWiki1 日本語テスト
+Message-ID: <20050926170821.2E2D.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+最近いくつかの重要サイトでも使われはじめているSamllWiki1ですが、日本語が
+使えなくて残念に思っていた人も多いと思います。
+そこでSmallWiki1 for Squeakでも日本語を使えるようにしました。Charsetを設
+定できるようにした本格派(?)です。
+こんな感じ。。。
+http://yengawa.homedns.org:8888/YengawaWiki/uploads/15/SW1-Charset-View.png
+
+
+まだほとんどテストしていないので、興味ある方はぜひインストールして試して
+みてください。
+ご協力お願いします。
+
+
+試し方
+------
+まだCharset版はSqueakMapにあがっていないので、次の手順でおねがいします。
+ベースイメージはSqueak3.8です(3.7以前ではインストールできません)。
+http://ftp.squeak.org/3.8/win/Squeak3.8-current-win-full.zip
+
+1. Squeakを立ち上げ、SqueakMapから現行のSmallWikiをインストール。
+SqueakMap Package Loarderでネットワークから最新版(0.9.53)をインストール
+する。
+途中で出るダイアログには次のもの以外は「Ok」を選択。
+「load old dependency KomService-gk.1 ?」→「No」
+
+2. Charestが使えるバージョンをロードする。
+http://www.squeaksource.com/smallwiki1/SmallWiki-chbu-0.9.53-sam.23.mcz
+をIEなどでダウンロードして、Squeakの画面へドロップし「load version」を選
+択。
+
+3. SmallWikiを起動。
+Squeak画面に出てきた「Welcome to SmallWiki」にしたがって普通に起動する。
+
+以下をDoItすればとりあえず動きます。
+server := SWKom startOn: 8080.
+server basePath: 'http://localhost:8080'.
+
+4. [admin:components]でCharsetを設定。
+先ずは、Loginページからadminとしてログイン(パスワードはデフォルトだと
+「smallwiki」)。
+次に、ページ上部のメニューadmin→componentsページでCharset設定しSaveする。
+(UTF-8, Shift-JIS, EUC-JPなど)
+
+こんな感じ。
+http://yengawa.homedns.org:8888/YengawaWiki/uploads/15/SW1-Charset-Components.png
+
+5. 日本語で書き込み。
+Editで日本語を書いてみる。
+
+タイトル、内容、検索に日本語を使えるはずです。
+
+
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Sep 28 07:48:06 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2659] Squeakers' Night in 未来パーティ のデモを募集しています
+In-Reply-To: <JW200509171444193.3111390@mars.dti.ne.jp>
+References: <JW200509171444193.3111390@mars.dti.ne.jp>
+Message-ID: <JJ200509280748069.1875406@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+「Squeakers' Night in 未来パーティ」でデモを希望される方は
+http://swikis.ddo.jp/umejava/23
+
+に書き込みをお願いいたします。
+運営の都合上、デモに関しては本日までが締め切りとなっております。
+
+よろしくお願い申し上げます。
+
+Sat, 17 Sep 2005 14:44:19 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> さて、「夜の集い」の興奮もさめやらない今日この頃ですが、このたび、10月28日に
+> 同種のイベントが行える運びとなりました。
+> 
+> タイトルは「Squeakers' Night in 未来パーティ」です。
+> 今回は公立はこだて未来大学様のご協力を受けまして、秋葉原ダイビルの5F
+> アキバテクノクラブで行います。
+> 
+> http://www.akiba-cross.jp/
+> 
+> スケジュールは以下のようになります。
+> 
+> 10/28(Fri)
+>   18:00 集合・準備
+>   18:30-20:30 発表・ディスカッション
+>   20:30-21:00 かたづけ
+> 
+> 会場もぐっと広くなり、さらに充実したデモが行える環境となりました!
+> 
+> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+> MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+> 
+> 例によって差し入れなども歓迎します。
+> 
+> デモプログラムはWikiに載せていく予定です。
+> 下記のサイトにプログラムが載っていきます。
+> http://swikis.ddo.jp/umejava/23
+> 
+> ちなみに私は新バージョンのSqueakwareをお披露目します。
+> http://swikis.ddo.jp/umejava/11
+> 
+> よろしくお願い申し上げます。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Wed Sep 28 18:24:41 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2660] 本のページ複製方法とマウスボタンのスワップ (was: Re: 教えてください  )
+In-Reply-To: <200509260237.j8Q2bVbL021582@smtp00.dti.ne.jp>
+References: <20050925120632.2E23.KOUBO2005@yengawa.jpn.org>
+	<200509260237.j8Q2bVbL021582@smtp00.dti.ne.jp>
+Message-ID: <433A61593E2.D637ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 26 Sep 2005 11:37:29 +0900
+"Toshio Miyasaka" <miyasaka@iris.dti.ne.jp> wrote:
+>「ページの並び替え」には、「コピー元として動作する」というチェックボックスが
+>あり、この機能を使うとできそうなのですが、サムネイルのコピーをしてみると、ど
+>うも上手い具合に動いてくれません。
+>（バグなのでしょうか？あるいは、使い方の問題？？）
+>この「ページの並び替え」にある「コピー元として動作する」というチェックボック
+>スの正しい使い方を教えていただけますでしょうか。
+
+バグだと思います。
+期待する動作はサムネイルをドラッグすることでページの複製ができ、ドロップ
+した場所に挿入されることだと思われますが、 Nihongo6.1, 7では順番がおかし
+くなったり、進むボタンが正しく機能しなくなったりします。これは英語版の
+3.8でも同じです。
+たぶん昔は動いていたのだと思いますが、本(Book)は最近メンテナンスされてい
+ないので、度重なるバージョンアップの間に動かなくなったのだと思われます。
+
+このようなバグ報告の場所としてはMantisがあります。
+
+http://bugs.impara.de/main_page.php
+
+日本でも武田さんが試験的に運用されています。
+
+http://www.kukakuka.jp/squeak/bugs/main_page.php
+
+>タスクバーの「VM Preference」で「Mouse Mapping」を「3 button mouse」を選択す
+>ると、右クリックでハロが開くようになりますが、これは正しい使い方なのでしょう
+>か？
+
+一般的にはプリファレンスの方を変更すると思います。
+具体的には、Escキーなどでワールドメニューを出し、「ヘルプ・・・」から「プ
+リファレンス・・・」を選んで、プリファレンスを開きます。上部のリストにあ
+る「general」をクリックし、「swapMouseButton」をチェックします。
+これで、Windowsの一般的なホイール付マウスの場合、ホイールのクリックと右ボ
+タンの働きが逆になります(つまり、通常はAlt+クリックはホイールクリックに割
+り当てられています)。
+プリファレンスの変更はテンポラリなので保存するには、ワールドメニューから
+「保存」や「別名で保存・・・」を選びます。
+
+ //abee
+
+P.S. ご参考まで。
+http://www.hyuki.com/writing/techask.html
+
+--
+阿部 和広  EMAIL abee@squeakland.jp (アドレスが変わりました)
+
+From yoshiki ＠ squeakland.org  Thu Sep 29 03:23:32 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:18 2007
+Subject: [Squeak-ja: 2661] Re: 教えてください
+In-Reply-To: <200509260237.j8Q2bVbL021582@smtp00.dti.ne.jp>
+References: <20050925120632.2E23.KOUBO2005@yengawa.jpn.org>
+	<200509260237.j8Q2bVbL021582@smtp00.dti.ne.jp>
+Message-ID: <uwtl1gifv.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  阿部さんがすでに返事をしてくださっていますが...
+
+> いつもお世話になっております。
+> デジタルハリウッド大学院の宮坂です。
+
+  こんにちは。
+
+> ＜質問＞
+> この「本」を使ってアニメーションを作る場合ですが、前のページをそのまま次ペー
+> ジにコピーすることができると便利です。
+> 本のメニューから「新しいページの元として保存する」を使えばできるのですが、同
+> じことは「ページの並び替え」でもできるのでしょうか？
+> 「ページの並び替え」には、「コピー元として動作する」というチェックボックスが
+> あり、この機能を使うとできそうなのですが、サムネイルのコピーをしてみると、ど
+> うも上手い具合に動いてくれません。
+> （バグなのでしょうか？あるいは、使い方の問題？？）
+> この「ページの並び替え」にある「コピー元として動作する」というチェックボック
+> スの正しい使い方を教えていただけますでしょうか。
+
+  「ページの並べ替え」はだいぶん問題がありますね。本来は、
+ProjectNavigationの同様の機能のようにページ数が増えるはずですが、増え
+ないですから。いけませんね。
+  
+> タスクバーの「VM Preference」で「Mouse Mapping」を「3 button mouse」を選択す
+> ると、右クリックでハロが開くようになりますが、これは正しい使い方なのでしょう
+> か？
+> こうした右クリックでハロを出すような使い方をする上での注意点などあったら教え
+> ていただければ幸いです。
+
+  プリファレンスでも変えられますが、VM preferenceのほうが一貫性を持っ
+て変えられるので良いかと思います。VM Preferenceの内容はSqueak.iniに入
+るのですが、Squeakのプリファレンスのほうはイメージ内なので、どちらを頻
+繁に移動する可能性があるか、という運用上の都合によって考えるということ
+も手だと思います。
+
+  返事が遅くなってすみません。お役に立てれば幸いです。
+
+-- Yoshiki
+
+From miyasaka ＠ iris.dti.ne.jp  Thu Sep 29 12:35:50 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2662] Re: 教えてください
+In-Reply-To: <uwtl1gifv.wl%yoshiki@squeakland.org>
+Message-ID: <000b01c5c4a6$e6682f90$4d43dfca@miyasaka>
+
+阿部様、大島様
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+ご丁寧なお返事をありがとうございました！！
+
+本のバグは残念ですが、多少バグがあっても工夫して使うこともスクイークの魅力の
+ひとつなので、使うときに注意するようにしてみます。
+右クリックについては、プリファレンスやSqueak.iniなどは始めて開きましたので、
+またひとつ勉強させていただきました。
+
+またワークショップの模様など、改めてご報告させていただきます。
+
+取り急ぎ御礼まで。
+今後ともよろしくお願いいたします。
+
+宮坂
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Yoshiki Ohshima
+Sent: Thursday, September 29, 2005 3:24 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2661] Re: 教えてください
+
+  おおしまです。
+
+  阿部さんがすでに返事をしてくださっていますが...
+
+> いつもお世話になっております。
+> デジタルハリウッド大学院の宮坂です。
+
+  こんにちは。
+
+> ＜質問＞
+> この「本」を使ってアニメーションを作る場合ですが、前のページをそのまま次
+ペー
+> ジにコピーすることができると便利です。
+> 本のメニューから「新しいページの元として保存する」を使えばできるのですが、
+同
+> じことは「ページの並び替え」でもできるのでしょうか？
+> 「ページの並び替え」には、「コピー元として動作する」というチェックボックス
+が
+> あり、この機能を使うとできそうなのですが、サムネイルのコピーをしてみると、
+ど
+> うも上手い具合に動いてくれません。
+> （バグなのでしょうか？あるいは、使い方の問題？？）
+> この「ページの並び替え」にある「コピー元として動作する」というチェックボッ
+ク
+> スの正しい使い方を教えていただけますでしょうか。
+
+  「ページの並べ替え」はだいぶん問題がありますね。本来は、
+ProjectNavigationの同様の機能のようにページ数が増えるはずですが、増え
+ないですから。いけませんね。
+
+> タスクバーの「VM Preference」で「Mouse Mapping」を「3 button mouse」を選択
+す
+> ると、右クリックでハロが開くようになりますが、これは正しい使い方なのでしょ
+う
+> か？
+> こうした右クリックでハロを出すような使い方をする上での注意点などあったら教
+え
+> ていただければ幸いです。
+
+  プリファレンスでも変えられますが、VM preferenceのほうが一貫性を持っ
+て変えられるので良いかと思います。VM Preferenceの内容はSqueak.iniに入
+るのですが、Squeakのプリファレンスのほうはイメージ内なので、どちらを頻
+繁に移動する可能性があるか、という運用上の都合によって考えるということ
+も手だと思います。
+
+  返事が遅くなってすみません。お役に立てれば幸いです。
+
+-- Yoshiki
+
+
+From takeda.toshiyuki ＠ gmail.com  Thu Sep 29 17:54:29 2005
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2663] Re: 本のページ複製方法とマウスボタンのスワップ (was: Re: 教えてください )
+In-Reply-To: <433A61593E2.D637ABEE@smtp.nifty.com>
+References: <20050925120632.2E23.KOUBO2005@yengawa.jpn.org>
+	<200509260237.j8Q2bVbL021582@smtp00.dti.ne.jp>
+	<433A61593E2.D637ABEE@smtp.nifty.com>
+Message-ID: <6544a1da050929015418c7a552@mail.gmail.com>
+
+武田です。ご紹介いただきありがとうございます。
+
+作りっぱなしのほったらかしで申し訳ないのですが、どうぞご自由にお使いください。
+登録したいSqueak関係のプロジェクトがあればご相談ください。
+
+Mantisと連携できるWikiも試験運用中です。
+
+http://www.kukakuka.jp/squeak/trac.cgi
+
+On 9/28/05, Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> このようなバグ報告の場所としてはMantisがあります。
+>
+> http://bugs.impara.de/main_page.php
+>
+> 日本でも武田さんが試験的に運用されています。
+>
+> http://www.kukakuka.jp/squeak/bugs/main_page.php
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Fri Sep 30 02:05:03 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2664] 「すくすくスクイーク」公開のお知らせ
+Message-ID: <20050929100503.0f64fbaa.htakada@db.soc.i.kyoto-u.ac.jp>
+
+Squeak コミュニティの皆様
+
+京都大学の高田です。
+いつもお世話になっております。
+
+京都のALAN-Kプロジェクトでは，これまで市内の小学校等でのワークショップの際，
+「すくすくスクイーク」と題したテキストを作成し，利用してきました。
+
+このたび，そのテキストを squeakland.jp で公開させて頂くことになりました。
+
+トップページ http://squeakland.jp/ の左側にあるバナーよりご利用ください。
+
+「すくすくスクイーク」は，昨年度まで大学院生として在籍していた吉正健太郎
+氏が中心になって作成し，HP-Squeakers の能勢さん，神橋さんの多大な御協力
+により，Nihongo7版への対応や公開のためのファイルの整理などが行われました。
+また，公開に対しての指針作りや squeakland.jp 上での管理について，阿部
+さんにも御協力頂きました。テキストの開発と運用に関しては，京都市教育委員
+会，京都ソフトアプリケーション，Viewpoints Research Institute をはじめ，
+数多くの Squeakコミュニティの皆様の御協力を頂きました。
+
+上記のページにありますように一定の利用条件を定めさせて頂いておりますが，
+基本的には，営利目的でなければ二次配布や改変は自由に行って頂けるようになっ
+ております。
+
+今後，日本各地でのスクイークワークショップに，このテキストがお役に立てれ
+ば幸いです。
+
+どうぞよろしくお願い致します。
+
+-----
+「すくすくスクイーク」公開ページ: http://squeakland.jp/sqsqsqueak/
+ALAN-Kプロジェクト: http://www.edu.soc.i.kyoto-u.ac.jp/akp/
+                    http://www.edu.city.kyoto.jp/school/alankay/
+京都大学21世紀COE
+「知識社会基盤構築のための情報学拠点形成」:http://i.coe21.kyoto-u.ac.jp/
+HP-Squeakersプレス発表: http://www.jpn.hp.com/info/newsroom/pr/fy2005/fy05-008.html
+
+-- 
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+(COEシリコンバレー拠点滞在中, HP Labsパロアルト 客員研究員)
+
+From nagai ＠ edu.city.kyoto.jp  Fri Sep 30 12:47:31 2005
+From: nagai ＠ edu.city.kyoto.jp (kenji nagai)
+Date: Thu Dec  6 11:03:19 2007
+Subject: [Squeak-ja: 2665] 「先進IT活用教育シンポジウムin京都」のお知らせ
+Message-ID: <014b01c5c571$af4f6700$9b0a1dac@jcenter.edu.city.kyoto.jp>
+
+永井＠京都市教委_情報化推進総合センター
+と申します。
+いつもお世話になっております。
+
+さて，来る
+10月29日（土）10:00-17:00
+龍谷大学　深草キャンパス３号
+にて，「先進IT活用教育シンポジウムin京都」
+という催しが開催されます。
+http://www.cec.or.jp/e2e/symp/kyotosymponew.html
+主催 ： 財団法人コンピュータ教育開発センター（ＣＥＣ）
+共催 ： 京都府、京都府教育委員会、京都市、京都市教育委員会
+後援 ： （予定）文部科学省、滋賀県教育委員会、大阪府教育委員会、
+　　　　  兵庫県教育委員会、奈良県教育委員会、和歌山県教育委員会、
+　　　　　大阪市教育委員会、神戸市教育委員会、日本教育工学会、
+　　　　　情報システム学会、近畿情報教育連合、教育情報化推進協議会
+
+この中で，京都市のALAN-Kプロジェクト
+http://www.edu.soc.i.kyoto-u.ac.jp/akp/
+http://www.edu.city.kyoto.jp/school/alankay/
+にてお世話になっている
+京都大学大学院情報学研究科アラン・ケイ研究室
+上野山　智 氏
+による発表
+「数学的・科学的概念の習得を目指したSqueak Toys
+ による教育モデルの構築」
+が予定されています。
+http://www.cec.or.jp/e2e/symp/kyotosymponew.html#5
+
+スクイーク・コミュニティの皆様におかれましても
+是非ご参加をお願いします。
+参加申し込みは，
+https://www.cec.or.jp/e2e/symp/kyoto.html
+から行ってください。
+
+以上，よろしくお願いいたします。
+
+京都市教育委員会 情報化推進総合センター
+〒604-8437 京都市中京区西ノ京東中合町1
+TEL 075-841-3505    FAX 075-803-2451
+永井　賢次  <Kenji Nagai>
+E-mail: nagai@edu.city.kyoto.jp
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8119] Re: stringを評価可能オブジェクトに変更する方法について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208119%5D%20Re%3A%0A%20%3D%3Futf-8%3Fb%3Fc3RyaW5n44KS6KmV5L6h5Y%2Bv6IO944Kq44OW44K444Kn44Kv%3F%3D%0A%20%3D%3Futf-8%3Fb%3F44OI44Gr5aSJ5pu044GZ44KL5pa55rOV44Gr44Gk44GE44Gm%3F%3D&In-Reply-To=%3C5503828B.3040109%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008118.html">
+   <LINK REL="Next"  HREF="008120.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8119] Re: stringを評価可能オブジェクトに変更する方法について</H1>
+    <B>青木 淳</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208119%5D%20Re%3A%0A%20%3D%3Futf-8%3Fb%3Fc3RyaW5n44KS6KmV5L6h5Y%2Bv6IO944Kq44OW44K444Kn44Kv%3F%3D%0A%20%3D%3Futf-8%3Fb%3F44OI44Gr5aSJ5pu044GZ44KL5pa55rOV44Gr44Gk44GE44Gm%3F%3D&In-Reply-To=%3C5503828B.3040109%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 8119] Re: stringを評価可能オブジェクトに変更する方法について">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2015年 3月 14日 (土) 09:36:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008118.html">[SML 8118] Re: stringを評価可能オブジェクトに変更する方法について
+</A></li>
+        <LI>次の記事 <A HREF="008120.html">[SML 8120] Re: stringを評価可能オブジェクトに変更する方法について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8119">[ 日付 ]</a>
+              <a href="thread.html#8119">[ スレッド ]</a>
+              <a href="subject.html#8119">[ 件名 ]</a>
+              <a href="author.html#8119">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おはようございます、青木です。
+
+On 2015/03/13 19:07, Squeak wrote:
+ &gt; 青木先生、早急の返信ありがとうございました。
+ &gt; 著書を拝読させて頂いております。
+ &gt; 早速試してみたいと思います。
+
+拙著作を読んでいただき痛み入ります。
+
+On 2015/03/14 8:22, Squeak wrote:
+ &gt; ご指摘ありがとうございます。
+ &gt; 今朝、実際に動かしてみたところ、両方共動くようです。
+
+それは、それは、良かった、幸いでした。
+
+Smalltalk（Squeakでも、VisualWorksでも、…）において、メッセ
+ージの本体（メソッド）を探す出すには、大別するとふた通りある
+と存じます。
+
+一つ目は、メッセージ名を推測して、メッセージとその本体である
+メソッドを探し出す方法です。（<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">squeak ＠ cheshireneko.com</A>さんが
+用いた方法になります。）
+
+二つ目は、レシーバであるオブジェクトを頼りにして、メッセージ
+とその本体であるメソッドを探し出す方法です。
+
+今回、私は二つ目の方法を用いました。文字列を評価して結果を出
+しているオブジェクトの代表格は、あらゆるエディタの代表格であ
+る「ParagraphEditor」、そして、「Debugger」になります。また、
+「Inspector」がありましょう。それらが共通して発信しているメッ
+セージを探すのです。きっと「評価【evaluate】」しているにちが
+いない！と。
+
+すると、以下のものたちが見つかります。あとは、これらの実装者
+をブラウズするだけですよね。
+
+#evaluate:in:to:notifying:ifFail:logged:
+#evaluateSelection
+#evaluateSelectionAndDo:
+#evaluate:in:to:notifying:ifFail:
+#evaluate:in:to:
+
+以上、速攻の指南でした。お役に立つならば幸いです。
+
+--- 青木淳＠以下に二つ目の方法のプログラムを添えておきます。
+
+	| collectionOfClasses aSet aCollection |
+	collectionOfClasses := OrderedCollection new.
+	collectionOfClasses add: ParagraphEditor.
+	collectionOfClasses add: Debugger.
+	collectionOfClasses add: Inspector.
+	aSet := Set new.
+	collectionOfClasses
+		do: [:aClass | aClass
+				methodsDo: [:aMethod | aMethod
+						messagesDo: [:aMessage | aSet add: aMessage]]].
+	aCollection := aSet
+				select: [:aMessage | 'evaluate*' match: aMessage asString].
+	Transcript clear.
+	aCollection
+		do: [:aMessage | Transcript cr; show: aMessage printString].
+	^ aCollection
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008118.html">[SML 8118] Re: stringを評価可能オブジェクトに変更する方法について
+</A></li>
+	<LI>次の記事 <A HREF="008120.html">[SML 8120] Re: stringを評価可能オブジェクトに変更する方法について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8119">[ 日付 ]</a>
+              <a href="thread.html#8119">[ スレッド ]</a>
+              <a href="subject.html#8119">[ 件名 ]</a>
+              <a href="author.html#8119">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

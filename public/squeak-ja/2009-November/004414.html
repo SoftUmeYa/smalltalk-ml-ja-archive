@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4414] Re: SqueakDBXの導入について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204414%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0RCWBskQiROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRjNGfiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=Jxq7ZD9GBCEgU927v0AM8fvA3%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004415.html">
+   <LINK REL="Next"  HREF="004416.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4414] Re: SqueakDBXの導入について</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204414%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0RCWBskQiROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRjNGfiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=Jxq7ZD9GBCEgU927v0AM8fvA3%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 4414] Re: SqueakDBXの導入について">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2009年 11月 12日 (木) 00:57:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004415.html">[Squeak-ja: 4415] Re: 京都などで小中学生向けのスクイークワークショップを開催
+</A></li>
+        <LI>次の記事 <A HREF="004416.html">[Squeak-ja: 4416] MTM04でScratchのワークショップなどを行います。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4414">[ 日付 ]</a>
+              <a href="thread.html#4414">[ スレッド ]</a>
+              <a href="subject.html#4414">[ 件名 ]</a>
+              <a href="author.html#4414">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+ようやく時間が出来てきましたので、じっくり試してみたいと思いますが、
+取り急ぎ。
+
+&gt;<i>CentOSに環境を構築してSqueakDBXにチャレンジしてみました。
+</I>&gt;<i>
+</I>&gt;<i>■環境
+</I>&gt;<i>・Squeak：　SeasideJOne-090425-plusDB
+</I>&gt;<i>・OS:CentOS5.4（VirtualBox上ですが。。。）
+</I>&gt;<i>・DB:PostgreSQL 8.4.1(rpm)
+</I>&gt;<i>・OpenDBX（rpm)
+</I>&gt;<i><A HREF="http://download.opensuse.org/repositories/home:/nsendetzky:/OpenDBX/CentOS_5/i386/">http://download.opensuse.org/repositories/home:/nsendetzky:/OpenDBX/CentOS_5/i386/</A>
+</I>&gt;<i>のものを使用し、環境を構築しました。
+</I>&gt;<i>
+</I>&gt;<i>OpenDBXのコマンドラインユーティリティも使えることを確認し、
+</I>&gt;<i>SqueakのパッケージローダーからFFIとSqueakDBXを導入しましたが、同じエラーが発生しました。
+</I>&gt;<i>
+</I>&gt;<i>まだ、Squeakを始めたばかりなので、よく理解できていないので、ご教授いただきたいのですが、
+</I>&gt;<i>パッケージローダーで、
+</I>&gt;<i>
+</I>&gt;<i>例えば、SqueakDBXを確認すると、Categoryで、
+</I>&gt;<i>「〜　Squeak versions/Squeak3.10 - Released 11 May 2008」
+</I>&gt;<i>
+</I>&gt;<i>のような記載があるのですが、これは対象Squeakが3.10でないといけないということでしょうか？
+</I>
+はい。3.10で動作するということで、それ以前のバージョンではテストされて
+いないということを意味しています。
+
+SqueakMapのパッケージローダーはバージョンを厳密にみていませんので、
+なんとなくインストールできてしまいます。Squeakのバージョンと、ライブラリ
+のバージョンの対応関係をきちんと確かめてインストールした方が良いと思います。
+
+ちなみに3.10J系の日本語化したイメージは下記にあります。
+<A HREF="http://swikis.ddo.jp/umejava/48">http://swikis.ddo.jp/umejava/48</A>
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004415.html">[Squeak-ja: 4415] Re: 京都などで小中学生向けのスクイークワークショップを開催
+</A></li>
+	<LI>次の記事 <A HREF="004416.html">[Squeak-ja: 4416] MTM04でScratchのワークショップなどを行います。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4414">[ 日付 ]</a>
+              <a href="thread.html#4414">[ スレッド ]</a>
+              <a href="subject.html#4414">[ 件名 ]</a>
+              <a href="author.html#4414">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7552] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207552%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0E6CE9.80403%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007549.html">
+   <LINK REL="Next"  HREF="007554.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7552] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>toshihiko ichida</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207552%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0E6CE9.80403%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7552] Re: 第7回Smalltalk勉強会＠京都">dogatana ＠ gaia.eonet.ne.jp
+       </A><BR>
+    <I>2009年 5月 16日 (土) 23:20:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007549.html">[SML 7549] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007554.html">[SML 7554] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7552">[ 日付 ]</a>
+              <a href="thread.html#7552">[ スレッド ]</a>
+              <a href="subject.html#7552">[ 件名 ]</a>
+              <a href="author.html#7552">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>いちだです。
+
+青木さん、濱崎さん、説明ありがとうございます。
+少し理解が進んだ気がします。
+
+AOKI Atsushi さんは書きました:
+&gt;<i> 市田さんからの質問への応答には、レガシィソフトウェア問題を話
+</I>&gt;<i> さなければなりません。
+</I>
+&gt;<i> 実はこれに「じゅん for Smalltalk」も乗っかっちゃったわけです。
+</I>&gt;<i> GeneralNameSpaceImport path: #('Jun' '*')
+</I>&gt;<i> これは、Junという名前空間の下の階層のすべてを運び入れること
+</I>&gt;<i> を表現したオブジェクトとなります。
+</I>
+&gt;<i> 以上になります。明解となりましたでしょうか？市田さん。ある意
+</I>&gt;<i> 味で最内スコープ束縛方式をやぶる禁じ手ですので、通常はやって
+</I>&gt;<i> はいけませんよ。:-)
+</I>
+なるほど。下の階層＊すべて＊ですか。。。
+勉強会での説明はこのことだたったのですね。
+
+濱崎治 さんは書きました:
+&gt;<i> Junが特別なことをしているのは、青木さんからお答えがありましたが、
+</I>&gt;<i> それ以外に、Workspaceで実行していらっしゃるのなら、Workspaceにも
+</I>&gt;<i> 仕掛けがあって、Namespaceの名前を前置しなくても全てのNamespaceに
+</I>&gt;<i> ある共有変数を参照可能です。
+</I>
+さっき、WorkspaceでMyNamaespace.MySubNameSpaceの階層を作り、
+それぞれのクラスをNamespaceの階層指定なしに new したところ、何ら
+問題なく生成できたのは、この仕掛けですね。
+
+1) Smalltalk.MyNameSpace defineClass: #MyNameSpaceClass
+2) MyNameSpace.MySubNameSpace defineClass: #MySubNameSpaceClass
+
+調子にのって異なる階層に同じ名前のクラス
+
+3) MyNameSpace.MySubNameSpace defineClass: #MyNameSpaceClass
+
+を定義してやってnew すると、さすがに
+&quot;Replace MyNameSpaceClass with...?&quot; と聞かれました。
+
+--
+いちだ
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007549.html">[SML 7549] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007554.html">[SML 7554] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7552">[ 日付 ]</a>
+              <a href="thread.html#7552">[ スレッド ]</a>
+              <a href="subject.html#7552">[ 件名 ]</a>
+              <a href="author.html#7552">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

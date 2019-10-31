@@ -1,0 +1,344 @@
+From nez.squeak ＠ gmail.com  Tue Oct  3 22:52:56 2017
+From: nez.squeak ＠ gmail.com (squeak NEZ)
+Date: Tue, 3 Oct 2017 22:52:56 +0900
+Subject: [SML 8176]
+ Modelをつくる際の重要なClassについて
+Message-ID: <64C123B5-C2C9-49B4-8475-8C55AAB6FC13@gmail.com>
+
+ク賣オコサツチ、キ、ニ、ェ、熙゛、ケ。」
+フ、、タ、ヒ。ハナナサメ。ヒ・ォ・襯討虜鄒㌔房茲蠢箸鵑任Ⅳ蠅泙后
+紆余曲折があり、ModelをPharoで、ViewerControllerをFilemakerで作成することにしました。
+Modelでは主にFilemakerではできないデータベース的操作や演算を行おうと考えております。
+FileのI/OもFilemakerで行う予定ですので、Modelは主にCollectionを使うことになると思いますが、Collection以外に使いそうなClassはあるものでしょうか？
+PharoのLibraryがあまりにも膨大で立ちすくんでおります。
+
+五十嵐雅哉　札幌刑務所医務部
+
+
+
+
+
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20171003/3b35754e/attachment.html>
+
+From ume ＠ softumeya.com  Wed Oct  4 22:54:01 2017
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 4 Oct 2017 22:54:01 +0900
+Subject: [SML 8177] Re:
+	Modelをつくる際の重要なClassについて
+In-Reply-To: <64C123B5-C2C9-49B4-8475-8C55AAB6FC13@gmail.com>
+References: <64C123B5-C2C9-49B4-8475-8C55AAB6FC13@gmail.com>
+Message-ID: <CAH3eEdTbOOcEPrwnkcD6LEqrDJjicDmhx5-dRfHeJgfPNmjnhw@mail.gmail.com>
+
+梅゜キ、ヌ、ケ。」
+
+FileMaker、ネHTTP、ヌ、荀熙ネ、熙ケ、襪海箸砲覆襪隼廚い泙垢里如eapotは入れておくと良いと思います。
+http://smalltalkhub.com/#!/~zeroflag/Teapot
+
+私自身は使ったことがないですが、拡張版のTealightというものもあるようです。
+こちらはTeaspoonというGUIのツールもついています。
+https://github.com/astares/Tealight
+
+ご参考まで。
+
+2017年10月3日 22:52 squeak NEZ <nez.squeak ＠ gmail.com>:
+> 御無沙汰しております。
+> 未だに（電子）カルテの作成に取り組んでおります。
+>
+> 紆余曲折があり、ModelをPharoで、ViewerControllerをFilemakerで作成することにしました。
+> Modelでは主にFilemakerではできないデータベース的操作や演算を行おうと考えております。
+> FileのI/OもFilemakerで行う予定ですので、Modelは主にCollectionを使うことになると思いますが、Collection以外に使いそうなClassはあるものでしょうか？
+> PharoのLibraryがあまりにも膨大で立ちすくんでおります。
+>
+> 五十嵐雅哉　札幌刑務所医務部
+>
+>
+>
+>
+>
+>
+>
+
+
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From nez.squeak ＠ gmail.com  Thu Oct  5 07:24:23 2017
+From: nez.squeak ＠ gmail.com (squeak NEZ)
+Date: Thu, 5 Oct 2017 07:24:23 +0900
+Subject: [SML 8178] Re:
+ Modelをつくる際の重要なClassについて
+In-Reply-To: <CAH3eEdTbOOcEPrwnkcD6LEqrDJjicDmhx5-dRfHeJgfPNmjnhw@mail.gmail.com>
+References: <64C123B5-C2C9-49B4-8475-8C55AAB6FC13@gmail.com>
+ <CAH3eEdTbOOcEPrwnkcD6LEqrDJjicDmhx5-dRfHeJgfPNmjnhw@mail.gmail.com>
+Message-ID: <9713C2E9-CA84-4D8A-B404-F45A8F996326@gmail.com>
+
+梅゜キ、オ、「、ェオラ、キ、ヨ、熙ヌ、ケ。」
+、ス、ホタ皃マ、ェタ、マテ、ヒ、ハ、熙゛、キ、ソ。」
+
+ク貔メイ「、熙ャ、ネ、ヲ、エ、カ、、、゛、ケ。」
+チ眥ョ・タ・ヲ・悅シ・ノ、キ、ニ、゜、゛、ケ。」
+
+グススヘ。イ晗ネ
+サ・ヒレキコフウス衫ウノ。
+
+
+
+
+> 2017/10/04 22:54。「Masashi Umezawa <ume 。softumeya.com>のメール:
+> 
+> 梅澤です。
+> 
+> FileMakerとHTTPでやりとりすることになると思いますので、Teapotは入れておくと良いと思います。
+> http://smalltalkhub.com/#!/~zeroflag/Teapot
+> 
+> 私自身は使ったことがないですが、拡張版のTealightというものもあるようです。
+> こちらはTeaspoonというGUIのツールもついています。
+> https://github.com/astares/Tealight
+> 
+> ご参考まで。
+> 
+> 2017年10月3日 22:52 squeak NEZ <nez.squeak ＠ gmail.com>:
+>> 御無沙汰しております。
+>> 未だに（電子）カルテの作成に取り組んでおります。
+>> 
+>> 紆余曲折があり、ModelをPharoで、ViewerControllerをFilemakerで作成することにしました。
+>> Modelでは主にFilemakerではできないデータベース的操作や演算を行おうと考えております。
+>> FileのI/OもFilemakerで行う予定ですので、Modelは主にCollectionを使うことになると思いますが、Collection以外に使いそうなClassはあるものでしょうか？
+>> PharoのLibraryがあまりにも膨大で立ちすくんでおります。
+>> 
+>> 五十嵐雅哉　札幌刑務所医務部
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+> 
+> 
+> 
+> -- 
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20171005/f9a6b90b/attachment.html>
+
+From serge.stinckwich ＠ gmail.com  Wed Oct 11 22:53:41 2017
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 11 Oct 2017 14:53:41 +0100
+Subject: [SML 8179] Pharo MOOC - 2nd session starting soon
+Message-ID: <CAOysuxWaFhFvutuR=OkCVX_C28y6cMbZx7k4GUimT72KZvc-KA@mail.gmail.com>
+
+Dear all,
+
+soon will start the 2nd session of the Pharo MOOC (see details below).
+
+This year, the MOOC will be dubbed in English also.
+And some Japanese subtitles are also available thanks to Tomo-san.
+
+If you know students, programmers that might be interested by
+Object-Oriented Programming and/or live programming, please send them this
+message !!!
+
+Regards,
+
+---------- Forwarded message ----------
+From: Luc Fabresse <luc.fabresse ＠ imt-lille-douai.fr>
+Date: Wed, Oct 11, 2017 at 9:53 AM
+Subject: [gdr.gpl ] [ANN] MOOC Pharo
+To: gdr.gpl ＠ imag.fr
+
+
+-----
+
+The Pharo MOOC will start october 16th, 2017 on France Université Numérique
+(FUN).
+This MOOC is free and fully available in French and in English.
+Registration web page: https://www.fun-mooc.fr/
+courses/course-v1:inria+41010+session02/about
+
+If you are either a beginner or an expert in object-oriented programming,
+this MOOC will change the way you program with objects: come and learn or
+rediscover object-oriented programming with Pharo! Pharo is a pure
+object-oriented programming language in the tradition of Smalltalk. It
+offers a unique developing experience in constant interaction with live
+objects. Pharo is an open-source platform (MIT licence) supported and used
+by a joint consortium of industrials and academics (
+http://consortium.pharo.org/).
+
+>From the research point of view, Pharo provides a very malleable language
+to prototype new ideas thanks to its unique and advanced reflective layer.
+
+More details on the MOOC web page: http://mooc.pharo.org
+
+Luc
+
+---
+Dr. Luc Fabresse
+Associate Professor in Computer Science
+IMT Lille Douai, Mines-Telecom Institute (IMT), France
+http://car.imt-lille-douai.fr/luc/
+http://car.imt-lille-douai.fr/
+
+------
+Plus d'infos sur le GDR GPL : http://gdr-gpl.cnrs.fr
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC/UY1)
+"Programs must be written for people to read, and only incidentally for
+machines to execute."http://www.doesnotunderstand.org/
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20171011/988a4b25/attachment.html>
+
+From ume ＠ softumeya.com  Wed Oct 11 23:21:29 2017
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 11 Oct 2017 23:21:29 +0900
+Subject: [SML 8180]
+	第105回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSEsg93sFaOLNdH_0KfqDg3KZ_7AB52OaEQvr07g7MdzA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai105kaismalltalkbenkyoukai
+
+日時: 2017/10/25(水) 19:00-21:00
+場所:  SORABITO株式会社
+
+今回は先月行われたESUG 2017の参加報告です。
+小田さん(@tomooda)による発表です。お楽しみに。
+
+タイトル:
+「ESUG2017参加報告」
+
+概要:
+ 9/4-8にスロベニアのマリボルで開催されたESUG2017に参加してきました。その時の現地の様子やイベントの内容について紹介します
+
+connpassで募集受付中です。
+https://smalltalk.connpass.com/event/69048/
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From serge.stinckwich ＠ gmail.com  Sat Oct 14 20:53:42 2017
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Sat, 14 Oct 2017 12:53:42 +0100
+Subject: [SML 8181] Fwd: [Pharo-dev] Let's prepare for Google Code-In 2017
+	with Pharo Consortium
+In-Reply-To: <1504701544136-0.post@n4.nabble.com>
+References: <1504701544136-0.post@n4.nabble.com>
+Message-ID: <CAOysuxWfSadLpBKbJKNACnPn4f6pRgE_cW0hRqG-Nig95=JhZg@mail.gmail.com>
+
+Dear all,
+
+you can help Pharo by joining the mentors team (see below) and propose
+exercices for students.
+Thank you.
+
+---------- Forwarded message ----------
+From: Jigyasa Grover <grover.jigyasa1 ＠ gmail.com>
+Date: Wed, Sep 6, 2017 at 1:39 PM
+Subject: [Pharo-dev] Let's prepare for Google Code-In 2017 with Pharo
+Consortium
+To: pharo-dev ＠ lists.pharo.org
+
+
+Hello Pharo-ers !
+
+On behalf of the community, I would like to thank each one of you for their
+significant contribution in the recently concluded *Google Summer of Code
+2017* with *Pharo Consortium*. We aspire to take-off on a long flight after
+this successful stint. In this spirit, I proposed at ESUG 2017 that we take
+part in the upcoming *Google Code-In 2017*.
+
+GCI is a contest to introduce pre-university students (ages 13-17) to open
+source software development. Because Google Code-in is often the first
+experience many students have with open source, the contest is designed to
+make it easy for students to jump right in with /bite-sized tasks/ (3 to 5
+days) having categorised as: Code, Documentation/Training,
+Outreach/Research, Quality Assurance, or User Interface.
+
+Students search for a task from the list created by us that interests them
+and claim it. They have at least three days to complete it. The student
+works on the task, getting guidance from mentors, if needed. Once the
+student is ready, they submit their work for review through the contest
+website. Mentors from the organisation evaluate the work, provide feedback,
+and if it's complete, accept it so that student can claim a new task.
+Otherwise, specific feedback is provided, and the student goes back to
+improving it.
+
+Participants who complete at least 1 task get a digital certificate.
+Participants who complete 3 or more tasks receive a t-shirt too. At the end
+of the contest, each organisation chooses five finalists to receive limited
+edition Google Code-in hoodies. Two finalists from each organisation get to
+be the grand prize winners and go on a trip to Google Headquarters in
+California !
+
+The contest runs for about 6-8 weeks in December & January generally. With
+organisation applications beginning in October/November, we need to be well
+prepared for this season’s application with a hope to get selected.
+
+As an open source evangelist and a Pharo developer, I would like to invite
+all the experienced members to be a part of the "GCI with Pharo Consortium"
+Team and mentor students. To get added to the “private repository”  (we need
+to keep prospective students away from the task list before the program
+begins ? ) where you can put in your tasks/suggestions kindly EMail me or
+any of the previously added mentor.
+
+Looking forward to an appreciable representation from the Pharo community.
+
+Best regards
+Jigyasa Grover
+Pharo Consortium Org Admin, Google Summer of Code 2017
+grover.jigyasa1 ＠ gmail.com
+
+Link to know more about GCI:  https://codein.withgoogle.com/archive/
+<https://codein.withgoogle.com/archive/ >
+Link to sample tasks:
+https://developers.google.com/open-source/gci/resources/example-tasks
+<https://developers.google.com/open-source/gci/resources/example-tasks>
+Link to FAQs:  https://developers.google.com/open-source/gci/faq
+<https://developers.google.com/open-source/gci/faq >
+Link to contest rules:
+https://developers.google.com/open-source/gci/resources/contest-rules
+<https://developers.google.com/open-source/gci/resources/contest-rules>
+Link to GCI presentation for outreach:
+https://developers.google.com/open-source/gci/resources/
+downloads/Google-Code-in-2016-slides.pdf
+<https://developers.google.com/open-source/gci/resources/
+downloads/Google-Code-in-2016-slides.pdf>
+
+
+
+--
+Sent from: http://forum.world.st/Pharo-Smalltalk-Developers-f1294837.html
+
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC/UY1)
+"Programs must be written for people to read, and only incidentally for
+machines to execute."http://www.doesnotunderstand.org/
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20171014/84f3cebf/attachment.html>
+

@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2286] Nihongo7: SqueakVM3.6.3-JPatched で動作せず ( 長文 )
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202286%5D%20%3D%3Fiso-2022-jp%3Fb%3FTmlob25nbzc6IFNxdWVha1ZNMy42%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FLjMtSlBhdGNoZWQgGyRCJEdGMDpuJDskOhsoQiAoIA%3D%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRDlKOBsoQiAp%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002285.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2286] Nihongo7: SqueakVM3.6.3-JPatched で動作せず ( 長文 )</H1>
+    <B>e-itoh ＠ ygu.ac.jp</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202286%5D%20%3D%3Fiso-2022-jp%3Fb%3FTmlob25nbzc6IFNxdWVha1ZNMy42%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FLjMtSlBhdGNoZWQgGyRCJEdGMDpuJDskOhsoQiAoIA%3D%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRDlKOBsoQiAp%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2286] Nihongo7: SqueakVM3.6.3-JPatched で動作せず ( 長文 )">e-itoh ＠ ygu.ac.jp
+       </A><BR>
+    <I>2005年 1月 30日 (日) 22:46:28 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002285.html">[Squeak-ja: 2285] Swimmyのレビュー用生イメージ
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2286">[ 日付 ]</a>
+              <a href="thread.html#2286">[ スレッド ]</a>
+              <a href="subject.html#2286">[ 件名 ]</a>
+              <a href="author.html#2286">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山梨学院大学の伊藤です。
+
+C5-2005 BOFでは拙い報告に耳をかたむけて頂き、ありがとうございました。
+今回のイベント全体を通じてとても有意義な時間を過ごすことができました。
+高田さま、阿部さまを始め、関係者のみなさま本当にお疲れさまでした。
+
+帰ってからすぐにNihongo7を動かしてみようと思い、うちの環境で試して
+みたのですが、どうもうまく動きません。とりあえず状況だけ報告いたし
+ます。
+
+環境：
+CPU: Celeron 2.0GHz
+MEM: 512MB
+OS: Debian Sarge
+Window System:X11+KDE
+IM: UIM+Anthy
+
+Squeak：
+VM: SqueakVM3.6.3-JPatched.tgz
+Image: NSqueak-2005-01-24.zip
+
+状況：
+もともとVMではNihongo6.1が問題なく動作していた。
+このVMでNSqueakを起動すると、画面全体が真っ黒くなり、左上から白地に
+黒の文字でエラーメッセージが表示される。SqueakDebug.logが作成されな
+ので以下はその写しです。(誤字等あるかもしれません)
+
+===ここから===
+***System error handling failed***
+Original error: MessageNotUnderstood: String&gt;&gt;new.
+  Debugger error: MessageNotUnderstood: String&gt;&gt;new:
+[] in Debugger class&gt;&gt;openOn:context:label:contents:fullView: {[:t9 | self primitiveError: 'Original error: ', t3 asString, '. Debugger e...]}
+BlockContext&gt;&gt;valueWithPossibleArgs:
+[] in MethodContext(ContextPart)&gt;&gt;handleSignal: {[(self tempAt: 2) valueWithPossibleArgs: {t1}]}
+BlockContext&gt;&gt;ensure:
+MethodContext(ContextPart)&gt;&gt;handleSignal:
+MessageNotUnderstood(Exception)&gt;&gt;signal
+String(Object)&gt;&gt;doesNotUnderstand: #new
+LanguageEnvironment class&gt;&gt;defaultFileNameConverter
+FilePath&gt;&gt;pathName:isEncoded:
+FilePath class&gt;&gt;pathName:isEncoded:
+FilePath class&gt;&gt;pathName:
+String(AbstractString)&gt;&gt;asSystemPathName
+[] in DosFileDirectory(FileDirectory)&gt;&gt;deleteFileNamed:ifAbsent:{[self primDeleteFileNamed: (self fullNameFor: t1) asSystemPathName]}
+StandardFileStream class&gt;&gt;retryWithGC:until:forFileNamed:
+DosFileDirectory(FileDirectory)&gt;&gt;deleteFileNamed:ifAbsent:
+SystemDictionary&gt;&gt;logError:inContext:to:
+[] in Debugger class&gt;&gt;openOn:context:label:contents:fullView: {[t8 := self new  process: t1 controller: t6 context: t2. t5 if...]}
+BlockContext&gt;&gt;on:do:
+[] in Debugger class&gt;&gt;openOn:context:label:contents:fullView: {[t8 := self new  process: t1 controller: t6 context: t2. t5 i...]}
+[] in BlockContext&gt;&gt;newProcess {[self value. Processor terminateActive]}
+-----------------------------
+Type CR to enter an emergency evaluator.
+Type any other character to restart.
+===ここまで===
+
+やったこと：
+1. squeakland.orgに公開されている3.4-2のVMではNSqueakが問題なく動作し、
+   日本語が表示されていました。（もちろん日本語入力はできません）
+2. <A HREF="http://www-sor.inria.fr/~piumarta/squeak/&#12363;&#12425;&#20837;&#25163;&#12375;&#12383;&#12477;&#12540;&#12473;&#12434;">http://www-sor.inria.fr/~piumarta/squeak/から入手したソースを</A>
+　 ビルドしたVMでも1と同様の結果でした。
+3. 2に阿部さんのホームページで入手したSqueakImmX11Plugin2a.tar.gzの
+　 パッチをあてたVMを使うと、最初と同じエラーメッセージが出てしまい
+　 ます。
+
+ということでUnix版のimmパッチに問題があるようなのですが、ちょっと
+中身を覗いてみてもよくわかりませんでした。
+何の役にも立てずに恐縮ですが、とりあえず報告までさせて頂きました。
+
+
+ 
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002285.html">[Squeak-ja: 2285] Swimmyのレビュー用生イメージ
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2286">[ 日付 ]</a>
+              <a href="thread.html#2286">[ スレッド ]</a>
+              <a href="subject.html#2286">[ 件名 ]</a>
+              <a href="author.html#2286">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

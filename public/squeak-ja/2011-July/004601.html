@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4601] Re:	Scratch + Arduinoいろいろ試してます
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204601%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCArIEFyZHVpbm8bJEIkJCRtJCQkbTtuGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckRiReJDkbKEI%3D%3F%3D&In-Reply-To=%3CCADv7uFE-PTSGMhK4DM_Mzg5mKL%2BHZ7GH5p7x%3DLvGGJ06aOLpXg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004600.html">
+   <LINK REL="Next"  HREF="004606.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4601] Re:	Scratch + Arduinoいろいろ試してます</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204601%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCArIEFyZHVpbm8bJEIkJCRtJCQkbTtuGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckRiReJDkbKEI%3D%3F%3D&In-Reply-To=%3CCADv7uFE-PTSGMhK4DM_Mzg5mKL%2BHZ7GH5p7x%3DLvGGJ06aOLpXg%40mail.gmail.com%3E"
+       TITLE="[Squeak-ja: 4601] Re:	Scratch + Arduinoいろいろ試してます">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2011年 7月 23日 (土) 09:02:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004600.html">[Squeak-ja: 4600] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+        <LI>次の記事 <A HREF="004606.html">[Squeak-ja: 4606] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4601">[ 日付 ]</a>
+              <a href="thread.html#4601">[ スレッド ]</a>
+              <a href="subject.html#4601">[ 件名 ]</a>
+              <a href="author.html#4601">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部です。
+
+2011年7月23日5:52 Toshiyuki Kamada &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tkamada ＠ gmail.com</A>&gt;:
+&gt;<i> WeDoがA, B 2個のモータをもつ、というのは後述のご示唆で確認できました。
+</I>
+WeDoのハブには2個のソケットがあるのでハード的には最大2個のモーターを動かせるのですが、ScratchのUI上では1個しか使えないようになっています。たぶんこれもsimplicity原則との絡みでしょう。
+私はこれを使えるようにしたバージョンを作って以下に置いています。
+<A HREF="http://squeakland.jp/abee/tmp/controlingTwoMotorsWithMesh.zip">http://squeakland.jp/abee/tmp/controlingTwoMotorsWithMesh.zip</A>
+説明はこのあたり。
+<A HREF="http://scratch.mit.edu/forums/viewtopic.php?pid=719696#p719696">http://scratch.mit.edu/forums/viewtopic.php?pid=719696#p719696</A>
+
+&gt;&gt;<i> UIのブロックとそのためのメソッドはWeDo用のものを流用しています(ScriptableScratchMorph&gt;&gt;motorOn:など)。
+</I>&gt;&gt;<i> その他の変更箇所は、SensorBoardWithMotor.1.csをご覧ください。
+</I>&gt;<i>
+</I>&gt;<i> 一点だけ、知識が足りなくて、.csというのがどこを指しているのかわかりませんでした。
+</I>
+「ScriptableScratchMorph&gt;&gt;motorOn:など」以外の変更ということですね。
+MLを読んでいる他の人へのリファレンスの意味もありました。
+
+&gt;<i> 実は僕もScratchのプロジェクト互換は考慮していなくて、MYUロボ的に自律動作できるVMをArduinoに載せて、そのバイトコードをScratchのブロックからコンパイルして送り込むような改変をする、ある意味Scratchコミュニティに対して全く失礼な構想を持っています。
+</I>
+目的によって手段は変わるべきなので、失礼ということは全くないのではないでしょうか。
+私も上記のイメージのようにプロジェクト互換のないものをたくさん作っています。
+これについて、Scratchチームの見解は以下にあるとおりです。
+<A HREF="http://info.scratch.mit.edu/Source_Code">http://info.scratch.mit.edu/Source_Code</A>
+
+&gt;<i> むしろ、ModKitの、ScratchのUI模倣、ブロックはすべてWiredの命令、というのが筋悪に感じています。
+</I>
+私も少しそれは思います。前回のMTMでは会場のネットが全滅してデモもできなくなってしまいました。
+私ももう少しライトな物が作れないか考えています。
+
+&gt;<i> というのも、サーボモーターで質問したのはひとつの例で、他にはGPSロガーをプログラミングして近所を巡ってきた結果を視覚化するとか、そんな応用まで考えています。Scratch（では、もはやないのかもしれませんが、派生物）とは、いつでも切り離せて、再び接続して協調動作させることもできる（同じプロジェクトのなかで、どちらもできる）といいなと思っています。PCとマイコンが主従関係にあるのではなくて、相互補完の関係になるのが理想です。
+</I>
+それはすばらしいです。
+雰囲気は、先日亡くなられた武蔵大学の加藤美治先生のSplishに近いですね。
+<A HREF="http://www.splish.org/about/?lang=ja">http://www.splish.org/about/?lang=ja</A>
+先生はこの名前はSqueakやScratchを意識したものだとおっしゃっていました。
+どなたかこのプロジェクトを引き継がれる方がいらっしゃればよいのですが。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004600.html">[Squeak-ja: 4600] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+	<LI>次の記事 <A HREF="004606.html">[Squeak-ja: 4606] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4601">[ 日付 ]</a>
+              <a href="thread.html#4601">[ スレッド ]</a>
+              <a href="subject.html#4601">[ 件名 ]</a>
+              <a href="author.html#4601">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

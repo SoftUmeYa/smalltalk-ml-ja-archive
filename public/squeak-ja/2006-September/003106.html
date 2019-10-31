@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3106] Re: source of ImmX11Plugin
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203106%5D%20Re%3A%20source%20of%20ImmX11Plugin&In-Reply-To=20060820213010.408674f7.kawa90%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003105.html">
+   <LINK REL="Next"  HREF="003111.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3106] Re: source of ImmX11Plugin</H1>
+    <B>Tsutomu Hiroshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203106%5D%20Re%3A%20source%20of%20ImmX11Plugin&In-Reply-To=20060820213010.408674f7.kawa90%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3106] Re: source of ImmX11Plugin">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2006年 9月 11日 (月) 17:39:28 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003105.html">[Squeak-ja: 3105] Re: [Q]ワールドメニュー制御
+</A></li>
+        <LI>次の記事 <A HREF="003111.html">[Squeak-ja: 3111] Re: source of ImmX11Plugin
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3106">[ 日付 ]</a>
+              <a href="thread.html#3106">[ スレッド ]</a>
+              <a href="subject.html#3106">[ 件名 ]</a>
+              <a href="author.html#3106">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>廣島です。生存証明です。
+
+SqueakImmX11Plugin2a.tar.gz には
+Focus Event の扱いに些細な問題があって，
+SqueakImmX11Plugin2c.tar.gz に更新しおいたのですが，
+性根が面倒くさがりのもので，
+ずいぶん前に ML に流したまま，ほったらかしにしていました。
+
+そうこうしているうちに我が家の Linux は Vine3.2 -&gt; FC5 となり，
+euc-jp -&gt; utf-8 環境となったこともあって，
+うまく動くか VM 3.7-7 で試してみました。
+FC 5 ではとりあえず日本語入力できています。
+utf-8 のコードをパッチに組み込んでおいて本当によかったと，
+胸をなでおろしています。
+
+2c を 3.7-7 向けにパスを修正したのを，
+<A HREF="http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin3a.tar.gz">http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin3a.tar.gz</A>
+に置きました。
+
+ただ，plugins.ext へのパッチがなぜこんな形にしてあるのか，
+失念してしまいました。
+（VM Maker で src を生成するのを念頭に置いているのかも？？）
+＝＝＝＝＝＝＝＝＝
+廣島　勉
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003105.html">[Squeak-ja: 3105] Re: [Q]ワールドメニュー制御
+</A></li>
+	<LI>次の記事 <A HREF="003111.html">[Squeak-ja: 3111] Re: source of ImmX11Plugin
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3106">[ 日付 ]</a>
+              <a href="thread.html#3106">[ スレッド ]</a>
+              <a href="subject.html#3106">[ 件名 ]</a>
+              <a href="author.html#3106">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

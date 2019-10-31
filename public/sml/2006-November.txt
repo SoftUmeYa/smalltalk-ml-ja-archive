@@ -1,0 +1,330 @@
+From nisinaka ＠ sra.co.jp  Fri Nov 10 18:33:50 2006
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7236] [ANNOUNCE] Jun for Java (Jun633)
+Message-ID: <20061110182923.DB9F.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン633を公開します。
+
+  バージョン609からの主な変更点は、以下の通りです。
+
+    * (modification) JunLauncher を Jun629 相当に更新しました。ツー
+      ルメニューに Plotter 2D/3D のメニュー項目が追加されています。
+
+    * (modification) JunForm2dRegion を Jun697 相当に更新しました。
+      細線化の機能を実装しています。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/633/Thinning_01.gif
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/633/Thinning_02.gif
+
+    * (new feature) JunPointsOnPlane は、平面上の点群を扱うための
+      ユーティリティクラスです。
+
+    * (modification) JunApplicationModel に StApplicationModel の
+      コレクションを指定して、アプリケーションウィンドウを閉じる
+      時、一緒に閉じるアプリケーション群を指定できるようにしまし
+      た。
+
+    * (new feature) JunPopUpDialog と JunTextInputField を実装し
+      ました。
+
+    * (new feature) JunOpenGLStereoDisplayModel は、ふたつの 3D 
+      ビューを使って立体視を行うためのクラスです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/633/Stereoscope.png
+
+    * (new feature) JunSensorUtility は、入力イベントを調べるため
+      のユーティリティクラスです。
+
+    * (modification) JunCursors を Jun620 相当に更新しました。マ
+      ウスに関連するカーソル群を追加しています。
+
+    * (bug fix) JunTrackerModel のバグを修正しました。ステップ数
+      が小さいときに、止まらなくなることがありました。
+
+    * (bug fix) JunOpenGL3dModel のバグを修正しました。スレッドの
+      同期でデッドロックが起こることがありました。
+
+    * (modification) JunOpenGLIllusion を Jun655 相当に更新しまし
+      た。顔の錯覚を実装しています。
+
+        http://www.sra.co.jp/people/aoki/Jun/Topics/FaceIllusion/index.html
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/633/FaceIllusion1.gif
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/633/FaceIllusion2.gif
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/633/FaceIllusion3.gif
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/633/FaceIllusion4.gif
+
+    * (modification) JunOpenGLFluxModel を Jun632 相当に更新しま
+      した。1秒あたりのフレーム数を指定できるようになっています。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From m-asada ＠ sra.co.jp  Mon Nov 13 15:28:09 2006
+From: m-asada ＠ sra.co.jp (Mitsuhiro Asada)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7237] [ANNOUNCE] ImageSearcher for Java 030
+Message-ID: <20061113152651.A3C7.M-ASADA@sra.co.jp>
+
+浅田＠SRA/KTLです。
+
+「イメージサーチャ for Java（イメージサーチャ for Web）」のバージョン
+030を公開します。
+
+    http://www.sra.co.jp/people/m-asada/Isr4Java/
+    ftp://ftp.sra.co.jp/pub/lang/java/isr4java/
+
+イメージサーチャは、ファイル名やカテゴリ名などの名前やキーワードに頼ら
+ずに、目的の画像を捜し出すプログラムです。特徴的な色(typical color)、平
+均明度(average luminance)、9つの色(nine colors)、広がり(image extent)、
+スペクトル中心(center spectra)、手書き画像(freehand image)などを指定す
+ることにより、画像自身が持っている属性を手掛かりとして、目的の画像を絞
+り込み検索します。
+
+バージョン029からの主な変更点は、以下の通りです。
+
+  ・(bug fix) IsrImageProcessor#MakeThin_(StImage) にあったバグを修正し
+    ました。
+
+
+
+
+From aoki ＠ sra.co.jp  Fri Nov 17 14:48:57 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7238] 次世代開発フォーラム
+Message-ID: <455D4D49.2050602@sra.co.jp>
+
+青木です。
+
+次世代開発フォーラム — 2006 Winter の案内です。参加無料です。
+
+http://ac.nikkeibp.co.jp/nsw/ktf6/
+
+連載してきたことのダイジェストを行いますので、どうぞご参加を。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Fri Nov 17 15:11:58 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7239] シンポジウム「ソフトウェア技術と哲学」
+Message-ID: <455D52AE.6080105@sra.co.jp>
+
+青木です。
+
+来週の水曜日に「ソフトウェア技術と哲学」というシンポジウムが
+あります。こちらも参加費無料です。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+--------------------------------------------------------------------
+
+　　　「ソフトウェア技術と哲学」シンポジウム
+
+主催： 東京大学大学院総合文化研究科広域科学専攻広域システム科学系
+　　　「組木2プロジェクト」
+
+日時： 2006年11月22日(水)　14:30-17:30　（定員：200名、参加費無料））
+場所： 東京大学駒場キャンパス18号館ホール
+http://www.c.u-tokyo.ac.jp/jpn/kyoyo/map.html
+
+
+このたび、北陸先端科学技術大学院大学（JAIST）の Dines Bjorner 先生、
+落水先生、（株）SRA先端技術研究所（SRA-KTL）の岸田さんをお招きし、
+下記プログラムにてシンポジウムを開催いたします。
+
+皆さまのご参加をお待ち申し上げております。
+
+また、シンポジウム終了後、有料（5,000円）ではありますが、懇親会を
+行います。
+ご都合がよろしければ、こちらへもご参加くださいますよう、お願いいた
+します。
+
+参加申込みの連絡先・申込み書は末尾にありますので、こちらをご参照の
+上、お申込みください。
+
+
+<< プログラム >>
+
+14:00-14:30　受付
+
+
+1. 14:30-15:30　司会：二木厚吉（JAIST）
+
+“The Triptych Process Model Process Assessment and Improvement”
+　Prof.Dines Bjorner (Techn. Univ. of Denmark/JAIST),
+
+The triptych approach to software engineering proceeds on the basis of
+carefully monitored and controlled possibly iterated progression through
+domain engineering and requirements engineering to software design.
+In this talk I will outline these three phases, show the many stages of
+development within each and also indicate the many steps within each
+stage. We will ever so briefly touch upon informal narration and formal
+description (prescription and specification) of domains (requirements
+and software designs), and the verification (theorem proving, model
+checking and testing) and validation of domain descriptions
+(requirements prescriptions and their relations to domain descriptions,
+as well as the software design specifications and their relations to
+requirements prescriptions).
+The importance of process management and its relations to software
+process assessment (SPA) and software process improvement (SPI) will
+then be underscored. Our measuring “stick” is that set up by Watts
+Humphrey's capability maturity model (CMM). We will suggest and discuss
+seven assessment and eight improvement categories.
+In closing we will have some few words to say about software procurement.
+
+
+15:30-16:00 休憩
+
+
+2. 16:00-17:30　司会：玉井哲雄(東大)
+
+「ソフトウェア工学への期待と課題」　落水浩一郎（JAIST）
+
+ソフトウェア工学はその誕生以来，ソフトウェア開発方法論とソフトウェアプロ
+セスモデル，言語と環境，プロジェクト管理技術などをはじめとして，ソフト
+ウェアを記述・検証・評価し，開発・保守を支援し，開発プロジェクトを制御す
+るための種々の理論と技術を世の中に送り出してきた．その進歩は決して一直線
+のものでなく，時代々々の社会的要請，計算機技術の発展を踏まえたものであった．
+本講演では，まず，ソフトウェア工学の発展の歴史を振り返ることにより，達成
+された技術要素とその相互関係に関する現状認識の共有を試みる．ソフトウェア
+工学に関する研究・技術開発は，短納期開発，オフショア開発，新規ドメインか
+らの要請など，新しい時代の要請に常に対応し続ける必要がある．そのために
+も，現状の問題点を正しく認識し，中長期的な研究・技術開発の方針を立てるこ
+とが重要である．本講演では，とくに，ソフトウェアプロセスモデル，ソフト
+ウェア開発方法論，プロジェクト管理技術の関係についての問題点を指摘し，次
+世代のグループによる研究・技術開発への期待を述べる．
+かつて日本の企業はエンタープライズ系のソフトウェア開発において，複雑で大
+規模なソフトウェアを緊密なチームプレイのもとに実現し，高い信頼性を有する
+ことで世界的に優位な状況にあった．しかし，IT技術の進歩は日進月歩であり，
+チーム活動を支える情報技術は時代の要請に応じて常に更新し続ける必要があ
+る．ソフトウェア工学の果たす役割は大きい．
+
+
+「ソフトウェア設計における「三物五類」− 近世江戸哲学の視点による考察 −」
+　岸田孝一（SRA-KTL）
+
+１０数年前に子安宣邦さんの名著「事件としての徂徠学」に刺激を受けて以来，
+１７〜１８世紀の江戸哲学を拾い読みしてソフトウェア工学について考えるヒン
+トを探すことが習慣になった．いわゆ SPI の基本的な枠組みが徂徠学と奇妙に
+一致することは，すでにプロセス関連のいくつかの会合で指摘した通りである．
+今回のシンポジウムでは，若干３１才で夭折した浪速の天才的町人哲学者・富永
+仲基（とみなが・なかもと）が，わずかに残されたその著作で提示した「加上」
+そして「三物五類」の理論を通して，ソフトウェア設計方法論のこれまでの進展
+の歴史を振り返ってみたい．
+
+
+3. 18:00-20:00　懇親会 司会：田中一夫（SEA 代表幹事）
+
+
+------------------------------------------------------------------------
+
+<< 申込み方法 >>
+
+講演会／懇親会参加ご希望の方は，下記メイルアドレスに申込書を送付ください。
+sw-tp2006@kid.rcast.u-tokyo.ac.jp
+
+シンポジウム（定員：200名、参加費無料）、懇親会とも定員に達しましたら、締
+め切らせていただきますので、ご了承のほど、お願いいたします。
+
+なお，懇親会参加ご希望の方は，当日会場にて懇親会費用を申し受けます。
+懇親会ご参加の領収証発行は、開催場所が大学との都合もあり、今回はいたしま
+せんので、こちらにつきましてもご了承のほど、お願いいたします。
+
+
+(1-1)ご氏名：
+(1-2)ご所属：
+(1-3)メイルアドレス：
+
+講演会：
+□　参　加
+□　不参加
+
+懇親会：
+□　参　加
+□　不参加
+
+------------------------------------------------------------------------
+
+
+
+From aoki ＠ sra.co.jp  Thu Nov 23 10:33:11 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7240] Re: タイトルは「Smalltalk道場」
+In-Reply-To: <453DD5B7.9030705@sra.co.jp>
+References: <453DD5B7.9030705@sra.co.jp>
+Message-ID: <4564FA57.6070809@sra.co.jp>
+
+今日は「勤労感謝の日」ですが、明日の『１１月２４日（金）』が
+発刊日になります。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+-------- Original Message --------
+Subject: [SML 7235] タイトルは「Smalltalk道場」
+Date: Tue, 24 Oct 2006 17:58:31 +0900
+From: AOKI Atsushi <aoki@sra.co.jp>
+To: Smalltalkers' Salon Mailing List <sml@akademia.co.jp>
+
+青木です。
+
+来月の今日になりますが、日経ソフトウエアで、Smalltalk プログ
+ラミングの連載が始まります。タイトルは「Smalltalk 道場」にな
+りました。
+
+　プログラマ道場（日経バイト2005年4月号〜2006年1月号）
+　プログラマ魂（日経ソフトウエア2006年6月号〜2006年11月号）
+
+　Smalltalk道場（日経ソフトウエア2007年1月号〜2007年12月号）
+
+と続くことになりますので、次があるとすれば、
+
+　Smalltalk魂
+
+になるのかしらん。『VisualWorksWithJun』を付録 CD-ROM に収め
+ます。シンコム・システムズ・ジャパンから、ご協力をいただいて、
+VisualWorks 7.4.1 Non-Commercial と Jun705 for Smalltalk が、
+アーカイブを展開して、すぐに動かせる形で、読者の手に入ります。
+
+ですから、来月の今日『１１月２４日（金）』をお忘れなく。逃す
+と、その後の連載のプログラミングができませんので、カレンダや
+備忘録に印をつけてくださいませ。
+
+このメーリングリストに参加していらっしゃる多くの方々に、実際
+に手を動かしながら、読み進めていただけることを願っています。
+
+発刊日が近づきましたら、再び案内をさせていただきます。斬新な
+切り込み？で、Smalltalk 初心者を対象に書き綴ってゆきますから、
+どうぞ、お楽しみに！
+
+#「hello, world」から導入するような愚かなことはしません。:-)
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+

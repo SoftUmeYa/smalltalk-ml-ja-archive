@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2389] SqueakNihongo7 リリース
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202389%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrTmlob25nbzcg%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolaiE8JTkbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002388.html">
+   <LINK REL="Next"  HREF="002390.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2389] SqueakNihongo7 リリース</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202389%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrTmlob25nbzcg%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolaiE8JTkbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2389] SqueakNihongo7 リリース">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2005年 3月 22日 (火) 09:59:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002388.html">[Squeak-ja: 2388] [N7] 2005-03-17 イメージ
+</A></li>
+        <LI>次の記事 <A HREF="002390.html">[Squeak-ja: 2390] Re: SqueakNihongo7 ： Mac OS X
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2389">[ 日付 ]</a>
+              <a href="thread.html#2389">[ スレッド ]</a>
+              <a href="subject.html#2389">[ 件名 ]</a>
+              <a href="author.html#2389">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+  山宮さん、阿部さん、korakuriderさんと日夜相談をしながら、また武田さ
+ん、伊藤さんをはじめコミュニティのみなさんの協力も受けながら、日本語化
+されたSqueakの新しいバージョン、SqueakNihongo7をリリースしました。
+eToysまわりは本家最新版のSqueakland 3.8 をベースにしながらも、そちらに
+あった不具合も積極的に修正しながら機能強化、安定化を行いました。現時点
+では最強のeToy環境になったと自負しています。
+
+  ユーザーから見た変更点としては以下のようなものがあります。
+
+  * 細かなインターフェイスの変更が多々行われました。例えば、ジョイス
+    ティックやボタン上にマウスを持って行っただけで自動的にハロが出てい
+    たのを抑制した、というようなものがあげられます。
+
+  * デフォルトの英字フォントが変わりました。タイルの中で使われるフォン
+    トも変わりました。
+
+  * 英字TrueTypeがいくつかロードされています。日本語と混在させて使って
+    も、以前のようにエラーを出さなくなりました。
+
+  * タイルが少し増えました。使い方を工夫すると凝ったことのできる「入れ
+    物」に関するタイルをはじめ、面白いものが増えています。
+
+  * 蜂須賀さんによるパッチを元にし、SuperSwikiとの整合性を高めました。
+
+互換性に関しては、あらかじめロードされているフォントの違いから、気をつ
+けるべきことがあります。基本的には、Nihongo4系列およびNihongo6系列で作
+成した作品・プロジェクトはロードできます。が、新しいバージョンにないフォ
+ントを使っていた場合、ロード時にフォントを置き換える作業が必要となるた
+め、余分に時間がかかります。可能であれば、古いプロジェクトをロードした
+後で保存しなおし、プロジェクトファイルを作り直してください。
+
+　現在、ダブルクリックするだけでインストールできて、ウェブ上のプロジェ
+クトもそこから実行できるようなインストーラを各プラットフォーム用に作る
+ことにしています。ですが、SqueakNihongo6.1のような使い方で当座は良い、
+という方は、
+
+<A HREF="http://www.squeakland.jp/developer/">http://www.squeakland.jp/developer/</A>
+
+から
+
+<A HREF="http://www.squeakland.jp/developer/download/image/SqueakPluginNihongo7.zip">http://www.squeakland.jp/developer/download/image/SqueakPluginNihongo7.zip</A>
+
+をダウンロードし、SqueakNihongo6.1.imageのあるフォルダーに
+SqueakPlugin.imageをコピーしてそれを使ってください。
+
+  開発者の方がSmalltalkのコードを書くために使いたい、という場合も
+
+<A HREF="http://www.squeakland.jp/developer/">http://www.squeakland.jp/developer/</A>
+
+適宜必要なVM、.sourcesファイルとと開発者用イメージ
+
+<A HREF="http://www.squeakland.jp/developer/download/image/SqueakNihongo7.zip">http://www.squeakland.jp/developer/download/image/SqueakNihongo7.zip</A>
+
+をダウンロードし、SqueakNihongo7.imageを起動してください。
+
+　これからもさまざまなフィードバックをよろしくお願いします。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002388.html">[Squeak-ja: 2388] [N7] 2005-03-17 イメージ
+</A></li>
+	<LI>次の記事 <A HREF="002390.html">[Squeak-ja: 2390] Re: SqueakNihongo7 ： Mac OS X
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2389">[ 日付 ]</a>
+              <a href="thread.html#2389">[ スレッド ]</a>
+              <a href="subject.html#2389">[ 件名 ]</a>
+              <a href="author.html#2389">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4478] Re: Etoysでのモーフの複製でトラブル
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204478%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3lzGyRCJEckTiViGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlVSROSiNAPSRHJUglaSVWJWsbKEI%3D%3F%3D&In-Reply-To=20100720143858033922.a5e674eb%40kobe-u.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004477.html">
+   <LINK REL="Next"  HREF="004479.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4478] Re: Etoysでのモーフの複製でトラブル</H1>
+    <B>iNOUE Koich!</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204478%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3lzGyRCJEckTiViGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlVSROSiNAPSRHJUglaSVWJWsbKEI%3D%3F%3D&In-Reply-To=20100720143858033922.a5e674eb%40kobe-u.ac.jp"
+       TITLE="[Squeak-ja: 4478] Re: Etoysでのモーフの複製でトラブル">inoue ＠ ma.ns.tcu.ac.jp
+       </A><BR>
+    <I>2010年 7月 20日 (火) 19:18:05 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004477.html">[Squeak-ja: 4477] Re: Etoysでのモーフの複製でトラブル
+</A></li>
+        <LI>次の記事 <A HREF="004479.html">[Squeak-ja: 4479] Re: Etoysでのモーフの複製でトラブル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4478">[ 日付 ]</a>
+              <a href="thread.html#4478">[ スレッド ]</a>
+              <a href="subject.html#4478">[ 件名 ]</a>
+              <a href="author.html#4478">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>井上です。
+
+高橋さんどうもありがとうございます。そういう事情があったのですね。それな
+らば造り直さなくてはマズイのですが、実はその後、うまい？方法で解決できま
+したので報告します。
+
+その方法とは、うちの息子がよくやることなのですが、モーフを部品のフラップ
+の中に入れてモーフ生成ボタンにしてしまい、なおかつそのボタンの複製を作品
+の中に取り出してしまうというものです。こういうボタンを左上に配置したプロ
+ジェクトを
+<A HREF="http://www.ns.tcu.ac.jp/~inoue/Squeak_Seminar/solarsystem.011.pr">http://www.ns.tcu.ac.jp/~inoue/Squeak_Seminar/solarsystem.011.pr</A>
+に置きましたので、見てみてください。これでなぜ演算子の優先順位の問題が解
+決されているのかは分かりませんが（兄弟を作ることになるのでしょうか？）、
+当初の目的である惑星をたくさん作ることはできましたので、まあいいかと思っ
+ています。(^^;
+
+TAKAHASHI MakotoさんがTue, 20 Jul 2010 14:38:58 +0900に
+「[Squeak-ja: 4477] Re: Etoysでのモーフの複製でトラブル」の件で：
+&gt;<i> 神戸大学の高橋です。
+</I>&gt;<i> 
+</I>&gt;<i> Etoys3 と SqueakLand2005J2 で式の計算の順序の約束が異なる
+</I>&gt;<i> のが原因ではないでしょうか。2005J2では，演算子に関わらず右結合
+</I>&gt;<i> で計算しますが，Etoys3ではそれが通常の計算規約（足し算より
+</I>&gt;<i> かけ算の方が結合の強さが大きいなど）に変更されています。
+</I>&gt;<i> 2005J2で作られた作品のスクリプトは，Etoys3でも2005J2での順序を
+</I>&gt;<i> 尊重して実行されるが，そこで複製したオブジェクトのスクリプトは
+</I>&gt;<i> Etoys3での規則で計算されてしまうようです。
+</I>&gt;<i> 井上さんのsolarsysytemのプロジェクトのスクリプトに質量をgmrの
+</I>&gt;<i> ３乗で割る部分がありますが，ここがそのように計算されていないために
+</I>&gt;<i> 他の変数が巨大な値をとってしまいフリーズしているように思います。
+</I>&gt;<i> 
+</I>&gt;<i> 複製ではなく兄弟を作るともとのスクリプトを共有するためそのまま
+</I>&gt;<i> でも動くようです。
+</I>&gt;<i> 
+</I>&gt;<i> 変数が多い場合やスクリプトが巨大になると全体が一度に表示できないのは
+</I>&gt;<i> 私も困っていますが，私は以下のような対処をしています。
+</I>&gt;<i> 
+</I>&gt;<i> １　変数のカテゴリのモーフを取り出して，そのy座標を動かすことで全体をみる。
+</I>&gt;<i> ２　変数のカテゴリのモーフを取り出して，その拡大率を小さくして（縮小して）
+</I>&gt;<i> 　　全体をみる。
+</I>
+変数のカテゴリーのモーフを取り出して上下させて見る！思いつきませんでし
+た。すごい裏技ですね。Etoys3で前に比べて文字が大きめなのは子供に見やすく
+ということなんでしょうか。
+-- 
+<A HREF="https://www.ns.tcu.ac.jp/%7einoue/Signature/">https://www.ns.tcu.ac.jp/%7einoue/Signature/</A>                        井上
+.
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004477.html">[Squeak-ja: 4477] Re: Etoysでのモーフの複製でトラブル
+</A></li>
+	<LI>次の記事 <A HREF="004479.html">[Squeak-ja: 4479] Re: Etoysでのモーフの複製でトラブル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4478">[ 日付 ]</a>
+              <a href="thread.html#4478">[ スレッド ]</a>
+              <a href="subject.html#4478">[ 件名 ]</a>
+              <a href="author.html#4478">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

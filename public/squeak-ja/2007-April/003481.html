@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3481] NaturalSmalltalk and ClassCreaser
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203481%5D%20NaturalSmalltalk%20and%20ClassCreaser&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003486.html">
+   <LINK REL="Next"  HREF="003482.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3481] NaturalSmalltalk and ClassCreaser</H1>
+    <B>Tomohiro Oda</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203481%5D%20NaturalSmalltalk%20and%20ClassCreaser&In-Reply-To="
+       TITLE="[Squeak-ja: 3481] NaturalSmalltalk and ClassCreaser">tomohiro ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 4月 23日 (月) 15:33:39 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003486.html">[Squeak-ja: 3486] Re: UNIX版 VMでの多言語入力
+</A></li>
+        <LI>次の記事 <A HREF="003482.html">[Squeak-ja: 3482] Re: NaturalSmalltalk and ClassCreaser
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3481">[ 日付 ]</a>
+              <a href="thread.html#3481">[ スレッド ]</a>
+              <a href="subject.html#3481">[ 件名 ]</a>
+              <a href="author.html#3481">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おだです。
+
+Squeak上の自然言語処理ライブラリNaturalSmalltalkの
+リリースを更新しました。
+今回のリリースでは、ClassCreaserというツールを追加しました。
+
+ClassCreaserは一種のリファクタリング補助ツールで、
+GUIの形で提供されます。
+ClassCreaerはその名の通り、クラスを分割する「折り目」
+を見つけ出すためのもので、具体的にはクラスに定義された
+メソッド群を分類する試行錯誤をおこなうためのツールです。
+
+通常のリファクタリングツールがクラスやメソッド等のプログ
+ラムの構造に着目し、構造に従って分割したり構造を変化させ
+るのに対し、ClassCreaserは「プログラムが扱う概念」に
+着目します。まずはユーザーであるプログラマがいくつかの
+メソッドを2-3グループに分類し、「分類のタネ」にします。
+ClassCreaserはその分類を、各グループのメソッド中に
+使われている英単語を統計的にモデリングすることで、
+残りのメソッドを自動的に分類していきます。
+その後、プログラマは自動分類の結果を見ながら、グループを
+細分化したり統合したり、あるいはメソッドをグループに追加
+したり除いたりすることで、「どういった概念を基準にクラス
+を分割すればいいか」を試行錯誤します。
+メソッドが分類されたらClassCreaserの仕事は終わりで、
+あとはBrowserを使ってグループを親子や兄弟クラスに分割
+したり、あるいはコンポジット関係に分割する、という筋書き
+になります。
+
+ぜひお試しください。
+
+NaturalSmalltalkはインストール後の言語モデル構築に
+時間がかかりますが、このClassCreaserは言語モデルは
+不要なので、言語モデル構築をバックグラウンド処理するか
+中断するかしても大丈夫です。
+---
+おだ
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003486.html">[Squeak-ja: 3486] Re: UNIX版 VMでの多言語入力
+</A></li>
+	<LI>次の記事 <A HREF="003482.html">[Squeak-ja: 3482] Re: NaturalSmalltalk and ClassCreaser
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3481">[ 日付 ]</a>
+              <a href="thread.html#3481">[ スレッド ]</a>
+              <a href="subject.html#3481">[ 件名 ]</a>
+              <a href="author.html#3481">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

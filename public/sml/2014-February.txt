@@ -1,0 +1,254 @@
+From ympbyc ＠ gmail.com  Tue Feb  4 00:00:54 2014
+From: ympbyc ＠ gmail.com (Minori Yamashita)
+Date: Mon, 3 Feb 2014 07:00:54 -0800
+Subject: [SML 8080]
+	Real World Objectsの続きをブログに書きました
+Message-ID: <CADoqC+ZJWqxUkzX3j3MoRiMTn0upHxp95E73dHHMf=CkX2r=Aw@mail.gmail.com>
+
+SMLのみなさん初めまして。勉強会でお会いした皆さんご無沙汰してます。
+カリフォルニアでしがない大学生をしている山下です。
+
+年末のビアバッシュの時に発表させて頂いたReal World
+Objectsの続きというか、背景というかをブログに書きました。この宇宙でのオブジェクトについてやその他のことを書きました。一人でも多くの方からツッコミを頂きたいので、誠に勝手ながら、こういう話をして一番面白がってくれそうなSmalltalkerの方々のメーリングリストに流させて頂きます。
+
+宇宙API Part1:
+http://ympbyc.hatenablog.com/entry/2014/02/03/%E5%AE%87%E5%AE%99API_Part1
+
+よろしくお願いします。
+
+-- 
+Minori Yamashita <ympbyc ＠ gmail.com>
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20140203/2a82fb2b/attachment.html>
+
+From tomohiro ＠ sra.co.jp  Tue Feb  4 14:32:29 2014
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue, 4 Feb 2014 14:32:29 +0900
+Subject: [SML 8081] Re:
+ Real World Objectsの続きをブログに書きました
+In-Reply-To: <CADoqC+ZJWqxUkzX3j3MoRiMTn0upHxp95E73dHHMf=CkX2r=Aw@mail.gmail.com>
+References: <CADoqC+ZJWqxUkzX3j3MoRiMTn0upHxp95E73dHHMf=CkX2r=Aw@mail.gmail.com>
+Message-ID: <B886B4ED-A351-40F5-9C74-E8F80645DDD6@sra.co.jp>
+
+おだです。
+
+山下さんの話はSmalltalk勉強会でのビアバッシュでも楽しく拝聴させてもらいました。
+エッセイのほうも、さっそく読ませてもらいました。
+
+> つまり僕らの知性は物が複雑な形に積み上がった構造物から発生したんだ。
+> 特定の粒子の配置に物理法則を適用するとオブジェクトができるみたいな
+> 環境が近いかもしれない。
+
+ツイッターにも書かせてもらいましたが、こちらにはちょっと長いバージョンを書きます。
+
+実は、「特定の粒子の配置に物理法則を適用するとオブジェクトができる」は
+私がHoneyGingerで追いかけているテーマでもあります。
+HoneyGingerでは粒子の動きを流体力学でシミュレーションしますが、
+近隣の粒子同士がお互いに参照し合って直接力を与え合ったりするのではなく、
+基本的に「物理法則」が各粒子に動きを与え、
+その結果として粒子は「進んでいく波」や「流れの中と外」のような
+構造的なものがあるかのように振る舞います。
+
+それは既存のGUIが固定された構造を持っていることへのアンチテーゼです。
+ウィンドウオブジェクトの上にペーンオブジェクトが乗っていて、
+ペーンオブジェクトの上にテキストとボタンが乗っている、
+ボタンを押したら、ウィンドウにcloseメッセージを投げる、
+ウィンドウは閉じる時にペーンオブジェクトやボタンを片付ける、
+みたいな構造。これがイヤでHoneyGingerを作り始めました。
+＃皮肉なことに、上記GUIの構造はSmalltalkが作ってきたものですが。
+
+たぶん、宇宙には構造なんてありません。
+人間の脳みそが、現実を理解するために導入した人工的な概念に過ぎないと思います。
+オブジェクトも本来は他から構造を与えられるのではなく、
+振る舞いの結果として構造があるかのように見える、あるいは
+振る舞いの説明として構造という概念を導入するとわかりやすい、
+というものだと思っています。
+
+ということを、山下さんのエッセイからの引用部分を読んで思い出しました。
+---
+おだ
+
+
+
+2014/02/04 0:00、Minori Yamashita <ympbyc ＠ gmail.com> のメール：
+
+> SMLのみなさん初めまして。勉強会でお会いした皆さんご無沙汰してます。
+> カリフォルニアでしがない大学生をしている山下です。
+> 
+> 年末のビアバッシュの時に発表させて頂いたReal World Objectsの続きというか、背景というかをブログに書きました。この宇宙でのオブジェクトについてやその他のことを書きました。一人でも多くの方からツッコミを頂きたいので、誠に勝手ながら、こういう話をして一番面白がってくれそうなSmalltalkerの方々のメーリングリストに流させて頂きます。
+> 
+> 宇宙API Part1:
+> http://ympbyc.hatenablog.com/entry/2014/02/03/%E5%AE%87%E5%AE%99API_Part1
+> 
+> よろしくお願いします。
+> 
+> -- 
+> Minori Yamashita <ympbyc ＠ gmail.com>
+
+
+From ympbyc ＠ gmail.com  Tue Feb  4 21:46:39 2014
+From: ympbyc ＠ gmail.com (Minori Yamashita)
+Date: Tue, 4 Feb 2014 04:46:39 -0800
+Subject: [SML 8082] Re:
+	Real World Objectsの続きをブログに書きました
+In-Reply-To: <B886B4ED-A351-40F5-9C74-E8F80645DDD6@sra.co.jp>
+References: <CADoqC+ZJWqxUkzX3j3MoRiMTn0upHxp95E73dHHMf=CkX2r=Aw@mail.gmail.com>
+ <B886B4ED-A351-40F5-9C74-E8F80645DDD6@sra.co.jp>
+Message-ID: <CADoqC+YjpwQXpxKTUSaYiwjDtztfScdDw9vY_Dygmn0Lw=8fcA@mail.gmail.com>
+
+おださん
+
+読んで頂いて感想まで頂きありがとうございます。
+
+> HoneyGingerでは粒子の動きを流体力学でシミュレーションしますが、
+> 近隣の粒子同士がお互いに参照し合って直接力を与え合ったりするのではなく、
+> 基本的に「物理法則」が各粒子に動きを与え、
+> その結果として粒子は「進んでいく波」や「流れの中と外」のような
+> 構造的なものがあるかのように振る舞います。
+
+HoneyGingerってそういう仕組みになってたんですね！この宇宙で机が机の形をしていられるのは素粒子の相互作用によるものだと思うので、物理法則によって粒子の集合がまるで構造物のように振る舞うというのは現実に即したモデルだと思いました。
+僕の記事でつらつら書いたアイディアは頭で考えただけで実装をまったく伴っていないので、HoneyGingerのコードを読んだら大変参考になりそうだと思います。
+
+HoneyGingerについてのメンションありがとうございます！
+
+
+
+2014-02-03 Tomohiro Oda <tomohiro ＠ sra.co.jp>:
+
+> おだです。
+>
+> 山下さんの話はSmalltalk勉強会でのビアバッシュでも楽しく拝聴させてもらいました。
+> エッセイのほうも、さっそく読ませてもらいました。
+>
+> > つまり僕らの知性は物が複雑な形に積み上がった構造物から発生したんだ。
+> > 特定の粒子の配置に物理法則を適用するとオブジェクトができるみたいな
+> > 環境が近いかもしれない。
+>
+> ツイッターにも書かせてもらいましたが、こちらにはちょっと長いバージョンを書きます。
+>
+> 実は、「特定の粒子の配置に物理法則を適用するとオブジェクトができる」は
+> 私がHoneyGingerで追いかけているテーマでもあります。
+> HoneyGingerでは粒子の動きを流体力学でシミュレーションしますが、
+> 近隣の粒子同士がお互いに参照し合って直接力を与え合ったりするのではなく、
+> 基本的に「物理法則」が各粒子に動きを与え、
+> その結果として粒子は「進んでいく波」や「流れの中と外」のような
+> 構造的なものがあるかのように振る舞います。
+>
+> それは既存のGUIが固定された構造を持っていることへのアンチテーゼです。
+> ウィンドウオブジェクトの上にペーンオブジェクトが乗っていて、
+> ペーンオブジェクトの上にテキストとボタンが乗っている、
+> ボタンを押したら、ウィンドウにcloseメッセージを投げる、
+> ウィンドウは閉じる時にペーンオブジェクトやボタンを片付ける、
+> みたいな構造。これがイヤでHoneyGingerを作り始めました。
+> ＃皮肉なことに、上記GUIの構造はSmalltalkが作ってきたものですが。
+>
+> たぶん、宇宙には構造なんてありません。
+> 人間の脳みそが、現実を理解するために導入した人工的な概念に過ぎないと思います。
+> オブジェクトも本来は他から構造を与えられるのではなく、
+> 振る舞いの結果として構造があるかのように見える、あるいは
+> 振る舞いの説明として構造という概念を導入するとわかりやすい、
+> というものだと思っています。
+>
+> ということを、山下さんのエッセイからの引用部分を読んで思い出しました。
+> ---
+> おだ
+>
+>
+>
+> 2014/02/04 0:00、Minori Yamashita <ympbyc ＠ gmail.com> のメール：
+>
+> > SMLのみなさん初めまして。勉強会でお会いした皆さんご無沙汰してます。
+> > カリフォルニアでしがない大学生をしている山下です。
+> >
+> > 年末のビアバッシュの時に発表させて頂いたReal World
+> Objectsの続きというか、背景というかをブログに書きました。この宇宙でのオブジェクトについてやその他のことを書きました。一人でも多くの方からツッコミを頂きたいので、誠に勝手ながら、こういう話をして一番面白がってくれそうなSmalltalkerの方々のメーリングリストに流させて頂きます。
+> >
+> > 宇宙API Part1:
+> >
+> http://ympbyc.hatenablog.com/entry/2014/02/03/%E5%AE%87%E5%AE%99API_Part1
+> >
+> > よろしくお願いします。
+> >
+> > --
+> > Minori Yamashita <ympbyc ＠ gmail.com>
+>
+>
+
+
+-- 
+Minori Yamashita <ympbyc ＠ gmail.com>
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20140204/d4ce0058/attachment.html>
+
+From goonsh ＠ gmail.com  Tue Feb  4 23:26:39 2014
+From: goonsh ＠ gmail.com (NISHIHARA Satoshi)
+Date: Tue, 4 Feb 2014 23:26:39 +0900
+Subject: [SML 8083] Re:
+	Real World Objectsの続きをブログに書きました
+In-Reply-To: <CADoqC+ZJWqxUkzX3j3MoRiMTn0upHxp95E73dHHMf=CkX2r=Aw@mail.gmail.com>
+References: <CADoqC+ZJWqxUkzX3j3MoRiMTn0upHxp95E73dHHMf=CkX2r=Aw@mail.gmail.com>
+Message-ID: <CAHQL79CoUNUi-sk7UEmVGKMp2bW=SOjHG8jK4+0NDG1M-CnuJw@mail.gmail.com>
+
+何かの切っ掛けで，無数のカリヨンが延々と鳴り響くさまを思い浮かべました．
+う〜，エエな〜，そういうの．
+
+その鳴り響く音を耳に聴きやすくするために小細工するか，あるがままを受け取れるように耳の方を鍛えるかという問題もありますがw．
+
+あと，何故か「人形遣い」を思い出してしまいました．
+
+
+2014年2月4日 0:00 Minori Yamashita <ympbyc ＠ gmail.com>:
+> SMLのみなさん初めまして。勉強会でお会いした皆さんご無沙汰してます。
+> カリフォルニアでしがない大学生をしている山下です。
+>
+> 年末のビアバッシュの時に発表させて頂いたReal World
+> Objectsの続きというか、背景というかをブログに書きました。この宇宙でのオブジェクトについてやその他のことを書きました。一人でも多くの方からツッコミを頂きたいので、誠に勝手ながら、こういう話をして一番面白がってくれそうなSmalltalkerの方々のメーリングリストに流させて頂きます。
+>
+> 宇宙API Part1:
+> http://ympbyc.hatenablog.com/entry/2014/02/03/%E5%AE%87%E5%AE%99API_Part1
+>
+> よろしくお願いします。
+>
+> --
+> Minori Yamashita <ympbyc ＠ gmail.com>
+
+
+
+-- 
+--
+"NISHIHARA Satoshi"
+[:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+
+From ume ＠ softumeya.com  Sun Feb 16 22:05:02 2014
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 16 Feb 2014 22:05:02 +0900
+Subject: [SML 8084]
+	第62回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSLyZEZycrBKh+v+z1SpVZmv=aHH_yKZ7fw8BmY3m=30Q@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2013/2/26(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai62kaismalltalkbenkyoukai
+
+今回は久しぶりにハッカソンです。3月末に正式リリースされるPharo 3.0(RC)を取り上げ、新機能などを探ります。
+新機能はこの辺りで紹介されているのでご覧ください。
+https://pharo.fogbugz.com/default.asp?W64
+
+3.0はここからダウンロード可能です。
+http://www.pharo-project.org/pharo-download/beta-3-0
+
+事前申し込み等は不要です。お気軽にどうぞ。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

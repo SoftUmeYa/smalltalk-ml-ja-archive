@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4082] Re: Linux版Scratch1.3の楽器音について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204082%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCJE4zWjRvMjskSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004081.html">
+   <LINK REL="Next"  HREF="004083.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4082] Re: Linux版Scratch1.3の楽器音について</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204082%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCJE4zWjRvMjskSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4082] Re: Linux版Scratch1.3の楽器音について">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 11月 25日 (火) 02:53:39 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004081.html">[Squeak-ja: 4081] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+        <LI>次の記事 <A HREF="004083.html">[Squeak-ja: 4083] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4082">[ 日付 ]</a>
+              <a href="thread.html#4082">[ スレッド ]</a>
+              <a href="subject.html#4082">[ 件名 ]</a>
+              <a href="author.html#4082">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Tue, 25 Nov 2008 02:26:18 +0900,
+Kazuhiro ABE wrote:
+&gt;<i> 
+</I>&gt;<i> こんにちは、阿部です。
+</I>&gt;<i> 今の段階では、OLPC XOも含めてLinux版では楽器の音は鳴らないようです。
+</I>&gt;<i> 大島さんがJohnさんに聞いてくれているようなので、もしかしたらなにか分かるかもしれません。
+</I>
+  Johnからの話では、Scratchは確かに外部MIDIを要求しているが、Timidity
+などがないとLinuxはサポートしていないし、Squeak側のprimitiveもそれらを
+使うようになっていないということでした。SqueakはSqueak内でMIDIから波形
+合成することもできるのですが、楽器の種類が少なくて何十とはサポートでき
+ないため問題であるということでした。将来的には楽器の種類を減らしてもよ
+いだろうとは言っていましたが。
+
+  というわけで、ピアノとかいったときにピアノの音がしなくてもよければ内
+部MIDIを使うように変えるか(コードをどこか1行変更しなくてはいけませんが)
+sound pluginに新しいコードを追加する必要があるかと思います。
+
+-- Yoshiki
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004081.html">[Squeak-ja: 4081] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+	<LI>次の記事 <A HREF="004083.html">[Squeak-ja: 4083] Re: Linux版Scratch1.3の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4082">[ 日付 ]</a>
+              <a href="thread.html#4082">[ スレッド ]</a>
+              <a href="subject.html#4082">[ 件名 ]</a>
+              <a href="author.html#4082">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

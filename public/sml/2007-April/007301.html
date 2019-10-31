@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7301] Re: はじめまして &amp; Jun  に関して質問
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207301%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiRPJDgkYSReJDckRhsoQiAmIEp1%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FbiAgGyRCJEs0WCQ3JEY8QUxkGyhC%3F%3D&In-Reply-To=46268830.9000609%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007300.html">
+   <LINK REL="Next"  HREF="007302.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7301] Re: はじめまして &amp; Jun  に関して質問</H1>
+    <B>&quot;佐藤 隆志&quot;</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207301%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiRPJDgkYSReJDckRhsoQiAmIEp1%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FbiAgGyRCJEs0WCQ3JEY8QUxkGyhC%3F%3D&In-Reply-To=46268830.9000609%40sra.co.jp"
+       TITLE="[SML 7301] Re: はじめまして &amp; Jun  に関して質問">shortsleeved ＠ mac.com
+       </A><BR>
+    <I>2007年 4月 19日 (木) 14:38:59 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007300.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+        <LI>次の記事 <A HREF="007302.html">[SML 7302] NaturalSmalltalk and ClassCreaser
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7301">[ 日付 ]</a>
+              <a href="thread.html#7301">[ スレッド ]</a>
+              <a href="subject.html#7301">[ 件名 ]</a>
+              <a href="author.html#7301">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE> 佐藤です。
+
+フォローアップありがとうございます。
+なかなか簡単にはいかない問題だったようですね。
+
+教えていただいたコードを私なりに読み解いてみました。
+
+&gt;|<i> thePoint theLine p1 p2 line angle p plane p3 |
+</I>&gt;<i>thePoint := 0 , 1 , 1.
+</I>&gt;<i>theLine := 0 , 0 , 0 to: -1 , 0 , 0.
+</I>&gt;<i>p1 := thePoint.
+</I>&gt;<i>p2 := theLine nearestPointFromPoint: p1.
+</I>&gt;<i>line := p1 to: p2.
+</I>
+p1を通りtheLineと直行する直線(line)と、その直線とtheLineとの交点(p2)を求める。
+
+&gt;<i>angle := 90 asDegrees.
+</I>&gt;<i>(theLine first distance: p2) &gt; (theLine last distance: p2)
+</I>&gt;<i>     ifTrue: [p := theLine first]
+</I>&gt;<i>     ifFalse: [p := theLine last].
+</I>
+theLine の両端点のうち、p2からの距離が遠いほうを求める(p)。これはp2=pとなるのを避けるため（だと思います）。
+
+&gt;<i>plane := JunPlane
+</I>&gt;<i>             on: p1
+</I>&gt;<i>             on: p2
+</I>&gt;<i>             on: p.
+</I>
+p1,p2,pで平面(plane)を生成。
+この平面はthePoint,theLineで表される平面と直行する。
+
+&gt;<i>plane := plane transform: (angle transformationToRotate: line).
+</I>
+lineを軸にして、planeを90度回転させる。原理的には、これが求める平面（というかp3が決定できた平面）。
+
+&gt;<i>((plane translatedBy: theLine first - p2) whichSide: theLine last) &gt; 0
+</I>&gt;<i>     ifFalse:
+</I>&gt;<i>         [plane := JunPlane
+</I>&gt;<i>                     on: p2
+</I>&gt;<i>                     on: p1
+</I>&gt;<i>                     on: p.
+</I>&gt;<i>         plane := plane transform: (angle transformationToRotate: line)].
+</I>
+表裏がひっくり返っている(法線ベクトルの向きが逆になっている)可能性があるので、その場合はp2,p1の順番を入れ替えて平面を作りなおす。
+
+一点だけ気になることがあります。
+教えていただいたコードの場合、thePoint が theLine 上にある場合についての考慮が必要になるかと思います。
+例えば、以下のような場合です。
+
+thePoint := 0 , 0 , 0.
+theLine := 0 , 0 , 0 to: -1 , 0 , 0.
+
+これをどうするかは、今、ちょっと頭の中がいっぱいになってしまっているので、後で考えたいと思います。
+また、質問するかもしれませんが、よろしくお願いします。
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007300.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+	<LI>次の記事 <A HREF="007302.html">[SML 7302] NaturalSmalltalk and ClassCreaser
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7301">[ 日付 ]</a>
+              <a href="thread.html#7301">[ スレッド ]</a>
+              <a href="subject.html#7301">[ 件名 ]</a>
+              <a href="author.html#7301">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

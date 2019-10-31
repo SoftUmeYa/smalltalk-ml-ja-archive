@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2917] Re: eToyに「以下を割る」タイルが無いのは何で？
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202917%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGVUb3kbJEIkSyFWMEobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMjwkcjNkJGshVyU/JSQlayQsTDUkJCROJE8yPyRHISkbKEI%3D%3F%3D&In-Reply-To=44362662.4060701%40crew.sfc.keio.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002916.html">
+   <LINK REL="Next"  HREF="002918.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2917] Re: eToyに「以下を割る」タイルが無いのは何で？</H1>
+    <B>okada ken</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202917%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGVUb3kbJEIkSyFWMEobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMjwkcjNkJGshVyU/JSQlayQsTDUkJCROJE8yPyRHISkbKEI%3D%3F%3D&In-Reply-To=44362662.4060701%40crew.sfc.keio.ac.jp"
+       TITLE="[Squeak-ja: 2917] Re: eToyに「以下を割る」タイルが無いのは何で？">turkey ＠ crew.sfc.keio.ac.jp
+       </A><BR>
+    <I>2006年 4月  8日 (土) 20:23:59 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002916.html">[Squeak-ja: 2916] Re: eToyに「以下を割る」タイルが無いのは何で？
+</A></li>
+        <LI>次の記事 <A HREF="002918.html">[Squeak-ja: 2918] SqueakFest '06
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2917">[ 日付 ]</a>
+              <a href="thread.html#2917">[ スレッド ]</a>
+              <a href="subject.html#2917">[ 件名 ]</a>
+              <a href="author.html#2917">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>慶応大学の岡田です。
+
+阿部さん、井上さん、リプライをありがとうございました。
+
+Kazuhiro ABE wrote:
+&gt;<i> 私も不思議でした。0割りの問題であれば、beNotZero:を入れればよいだけのよう
+</I>&gt;<i> な気がします。
+</I>&gt;<i> もしかして乗算と除算は同じなので要らないのかとも思いましたが、そうすると
+</I>&gt;<i> 減算がある理由が分かりません(使用頻度?)。
+</I>&gt;<i> 関連するメソッドは、AssignmentTileMorph&gt;&gt;operatorForAssignmentSuffix:,
+</I>&gt;<i> optionsなどですが、このコードやコメントからも気持ちは汲み取れませんでした。
+</I>&gt;<i> 
+</I>&gt;<i> なんとなく、のような気もします。
+</I>&gt;<i>
+</I>&gt;<i> # それでも数式を右から左へ評価する謎に比べれば、まだかわいいかも。
+</I>
+ちょっと笑ってしまいました。う〜ん、eToy の内部コードにはたくさんの謎が
+あるのですが、表面的な部分にもたくさん謎がありそうですね（笑）。
+
+&gt;<i> これだけではなんなので、SqL05Jに「以下を割る」を加えるcsを付けます。
+</I>
+ありがとうございます！おかげで「言霊 on Squeak」に割る機能を付けるのが非
+常に楽でした。
+
+
+iNOUE Koich! wrote:
+&gt;<i> 私は全然理由は知りませんが、割り算に関しては小学校でも２種類、つまり整数
+</I>&gt;<i> 演算か実数演算かの違いがありますので、実数演算としての「以下で割る」と整
+</I>&gt;<i> 数演算としての「以下で割った商」「以下で割った余り」もあるといいのではな
+</I>&gt;<i> いでしょうか。
+</I>
+ご意見ありがとうございます。もののついでなので「余り」を計算するタイルも
+作ってみました。ただ「以下で割った余り」という訳はあまりにも日本語として
+不自然なので、「？を？で割った余り」という計算用タイルを作って、それをド
+ロップできるようにしました。
+
+
+
+興味がある方は、試しに以下の言霊onSqueakを触って見てください。
+<A HREF="http://www.crew.sfc.keio.ac.jp/~turkey/KotodamaSqueak-1.0.2c.zip">http://www.crew.sfc.keio.ac.jp/~turkey/KotodamaSqueak-1.0.2c.zip</A>
+
+それでは失礼します。
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002916.html">[Squeak-ja: 2916] Re: eToyに「以下を割る」タイルが無いのは何で？
+</A></li>
+	<LI>次の記事 <A HREF="002918.html">[Squeak-ja: 2918] SqueakFest '06
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2917">[ 日付 ]</a>
+              <a href="thread.html#2917">[ スレッド ]</a>
+              <a href="subject.html#2917">[ 件名 ]</a>
+              <a href="author.html#2917">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

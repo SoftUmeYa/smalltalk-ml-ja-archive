@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3876]  Re: Object特異的な情報を含むメッセージの発信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203876%5D%20%3D%3Fiso-2022-jp%3Fb%3FIFJlOiBPYmplY3QbJEJGQzBbGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003874.html">
+   <LINK REL="Next"  HREF="003879.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3876]  Re: Object特異的な情報を含むメッセージの発信について</H1>
+    <B>Hiromichi Tsurui</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203876%5D%20%3D%3Fiso-2022-jp%3Fb%3FIFJlOiBPYmplY3QbJEJGQzBbGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3876]  Re: Object特異的な情報を含むメッセージの発信について">tsurui ＠ med.juntendo.ac.jp
+       </A><BR>
+    <I>2008年 5月 11日 (日) 19:00:56 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003874.html">[Squeak-ja: 3874] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+        <LI>次の記事 <A HREF="003879.html">[Squeak-ja: 3879] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3876">[ 日付 ]</a>
+              <a href="thread.html#3876">[ スレッド ]</a>
+              <a href="subject.html#3876">[ 件名 ]</a>
+              <a href="author.html#3876">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Yoshikiさん
+
+懇切なお返事ありがとうございます。
+
+&gt;<i>  オブジェクト間のやりとりというものは、すべて「メッセージ」という概念
+</I>&gt;<i> で抽象化されていますが、メッセージには「引数」を付けて送ることができ、
+</I>&gt;<i> メッセージ送信者自身を現す&quot;self&quot;を含め、送信者が「知っている」(送信者
+</I>&gt;<i> が参照可能である)任意のオブジェクト、またはそれらを含む任意の式を引数
+</I>&gt;<i> とすることができます。というわけで、阿部さんの言うように一般的には
+</I>&gt;<i>
+</I>&gt;<i> b message: self.
+</I>&gt;<i>
+</I>&gt;<i> というメッセージをaが実行すれば良いことになります。
+</I>この場合、送信者ａを指定するにはどうすれば宜しいですか？
+送信者は暗黙にプログラマーだけかと思っていました。GUIでのevent handlingで予め用意されている場合以外は。
+
+&gt;<i>  が、重力のシミュレーションのときはもう少し工夫が必要でしょうね。
+</I>&gt;<i>
+</I>&gt;<i> 月   位置と速度を計算する: 地球.
+</I>&gt;<i> 地球 位置と速度を計算する: 月.
+</I>&gt;<i>
+</I>&gt;<i> という二つの式を順番に実行するとしたとき、最初の式を実行した時点で月の
+</I>&gt;<i> 位置と速度が時刻tにおけるものでなくt+dにおけるものになってしまった場合、
+</I>&gt;<i> 下の式で地球の位置が間違ったものになってしまいます。また、いずれ3体以
+</I>&gt;<i> 上のものをシミュレートしたくなるのが人情ですので、存在する質点のリスト
+</I>&gt;<i> を管理する「仲介者」のようなオブジェクトを用意して、それぞれの質点の一
+</I>&gt;<i> ステップ前の値を覚えておくか、それぞれのオブジェクトが新しい値と古い値
+</I>&gt;<i> の両方を持てるようにすることが考えられます。
+</I>おっしゃるとおりです。
+
+&gt;<i>  さらには重力の伝播速度を考
+</I>&gt;<i> 慮したくなると、メッセージの引数のひとつに時間を指定できるようにしたく
+</I>&gt;<i> なったりするかもしれません。その場合質点オブジェクトに時刻tにおける位
+</I>&gt;<i> 置を返す
+</I>&gt;<i>
+</I>&gt;<i>  positionAtTimeT: t
+</I>&gt;<i>
+</I>&gt;<i> のようなメソッドを定義して、内部で以前の位置を(補完して返す)ということ
+</I>&gt;<i> になるでしょうか。(もちろん3体以上の問題では物理的に正確なシミュレーショ
+</I>&gt;<i> ンは不可能ですが、それでも楽しければよいですし、それなりに良い結果を得
+</I>&gt;<i> ることはできると思います。)
+</I>そこまでは考えが及びませんでした。
+
+
+&gt;<i>  Squeak/Smalltalk側のことに関しては、梅澤さんの書かれた本、「自由自在
+</I>&gt;<i> Squeakプログラミング」などを参考にすると良いのではないかと思います。
+</I>今、読ませていただいています。
+
+
+&gt;<i>  (思うに、これはEtoysでやりたいという話ではなく、Smalltalkで、という
+</I>&gt;<i> ことで良かったのですよね。)
+</I>
+VisualWorksでJunを動かしています。
+鶴井 
+
+
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003874.html">[Squeak-ja: 3874] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+	<LI>次の記事 <A HREF="003879.html">[Squeak-ja: 3879] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3876">[ 日付 ]</a>
+              <a href="thread.html#3876">[ スレッド ]</a>
+              <a href="subject.html#3876">[ 件名 ]</a>
+              <a href="author.html#3876">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

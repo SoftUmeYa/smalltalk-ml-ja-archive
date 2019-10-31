@@ -1,0 +1,605 @@
+From kuwatani ＠ akademia.co.jp  Thu Feb  9 15:22:22 2006
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7131] メーリングリストの一時停止のお知らせ
+Message-ID: <43EADF9E.7090301@akademia.co.jp>
+
+SML参加者の皆様
+
+SMLの管理をしています 桑谷 です．
+
+メーリングリストを運用しているサーバが置いてある建物が
+電気工事のため下記の日程で停電になることになりました．
+よってその間はメーリングリストを一時停止します．
+ご迷惑をおかけします．何卒よろしくお願い致します．
+
+                            記
+
+         日時：2006年2月11日(土) 18:00〜22:00
+         内容：メーリングリストの一時停止
+
+                                                   以上
+______________________________
+桑谷剛史＠SML管理人
+アカデミアシステムズ株式会社
+
+
+From aoki ＠ sra.co.jp  Fri Feb 10 14:19:14 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7132] 並び替えの致命傷
+Message-ID: <43EC2252.90008@sra.co.jp>
+
+ＳＲＡ先端技術研究所青木です。
+
+先ほど、じゅんのメーリングリストにポストした内容を、ＳＭＬへ
+も出すことにしました。参考にしていただければ幸いです。アホな
+Smalltalker が育ちませんように。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+青木です。
+
+集まりの並び替えの際に、注意しなければならないことを書きます。
+たとえば、次のような簡単なプログラムを例にして説明しましょう。
+ある配列を、順序のある集まりへ、と移し替えるものです。
+
+| anArray aCollection |
+anArray := #(0 9 1 8 2 7 3 6 4 5).
+aCollection := OrderedCollection new.
+anArray do: [:each | aCollection add: each].
+^aCollection
+==> OrderedCollection (0 9 1 8 2 7 3 6 4 5)
+
+移し替える際に、降順（大から小に進む順）にソートしよう（並び
+替えよう）として、次のように書くプログラマが多いと思います。
+順序のある集まりに換えて、ソートされた集まりを生成し、降順の
+ための比較ブロックを指定しておいて、要素を加えてゆくというも
+のです。
+
+| anArray aCollection |
+anArray := #(0 9 1 8 2 7 3 6 4 5).
+aCollection := SortedCollection new.
+aCollection sortBlock: [:n1 :n2 | n1 >= n2].
+anArray do: [:each | aCollection add: each].
+^aCollection
+==> SortedCollection (9 8 7 6 5 4 3 2 1 0)
+
+このプログラムコードは、まったく褒められません。VisualWorks
+のハイブリッドなクイックソートのアルゴリズムを有効に利用して
+いないからです。OrderedCollection を SortedCollection に換え
+ればいいじゃん！では済まされないのです。次のように書くべき。
+
+| anArray aCollection |
+anArray := #(0 9 1 8 2 7 3 6 4 5).
+aCollection := OrderedCollection new.
+anArray do: [:each | aCollection add: each].
+aCollection := aCollection asSortedCollection: [:n1 :n2 | n1 >= n2].
+^aCollection
+==> SortedCollection (9 8 7 6 5 4 3 2 1 0)
+
+では、どれぐらいの性能（動作スピード）の差が出るのかを示しま
+しょう。乱数ストリームを用いて、１０万個の要素を取り出して、
+それらの並び替えに要する時間を、ミリ秒単位で測定してみます。
+
+Time millisecondsToRun: [
+	| aStream aCollection |
+	aStream := Random new.
+	aCollection := SortedCollection new: 100000.
+	aCollection sortBlock: [:n1 :n2 | n1 >= n2].
+	100000 timesRepeat: [aCollection add: aStream next].
+	aCollection]
+==> 90665 "←約 90 秒、すなわち、1 分 30 秒だよ！"
+
+Time millisecondsToRun: [
+	| aStream aCollection |
+	aStream := Random new.
+	aCollection := OrderedCollection new: 100000.
+	100000 timesRepeat: [aCollection add: aStream next].
+	aCollection := aCollection asSortedCollection: [:n1 :n2 | n1 >= n2].
+	aCollection]
+==> 344 "←たった 0.35 秒"
+
+ご覧のように、とんでもない差となります。計算量は要素数の肩に
+かかってくるので、指数関数的に増加するのです。プログラムコー
+ドの一行の間違いが、動作性能の致命傷であることを、肝に銘じて
+プログラミングをするように！
+
+要素の個数が不定であり、それらを随時、並び替えておかなければ
+ならいない、という止むを得ない場合を除いて、アホなコードを書
+かないように気をつけましょう。ハイブリッドなクイックソートの
+アルゴリズムが有効に働くプログラムコードを作ってくださいまし。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From saegusa ＠ saesoft.jp  Tue Feb 21 22:19:41 2006
+From: saegusa ＠ saesoft.jp (Katsuyuki Saegusa)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7133] Smalltalk システムでのデータの保存、データベースについての質問
+Message-ID: <20060221221941huQpSR@saesoft.jp>
+
+
+はじめまして。このMLに参加させていただきました。
+さえぐさともうします。
+
+現在Smalltalk、パターンを勉強しています。
+いろいろと書籍やWEBを読んだりしながら
+SqueakやVisualWorksで、簡単なプログラムを書いて
+学習しています。
+
+未熟な質問かとは思いますが、ご容赦下さい。
+
+ネットワーク上のデータ（データベース）を扱うには
+どのようにするのでしょうか。
+あるいは、ベテランの方は、どのようなものをつかったり、
+コーディングなど、されていますか？
+
+よろしくおねがいします。
+
+-------------------------------
+K.Saegusa
+
+
+
+From tar_zcvf ＠ yahoo.co.jp  Thu Feb 23 01:05:44 2006
+From: tar_zcvf ＠ yahoo.co.jp (鈴木 藍)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7134] Re: Smalltalk システムでのデータの保存、データベースについての質問
+In-Reply-To: <20060221221941huQpSR@saesoft.jp>
+References: <20060221221941huQpSR@saesoft.jp>
+Message-ID: <20060223010544.7ba0fcd4.tar_zcvf@yahoo.co.jp>
+
+
+  鈴木 藍と申します。誰も答えないので、おそれながらお答えします。
+  以前、ちょっといじったので。
+
+> はじめまして。このMLに参加させていただきました。
+> さえぐさともうします。
+
+  はじめまして。
+
+> ネットワーク上のデータ（データベース）を扱うには
+> どのようにするのでしょうか。
+
+  ネットワーク上のデータ(データベース)が、一般的によく使われている
+  リレーショナルデータベースとしてお答えします。
+  
+  私は VisualWorks 7.3(秘密)を使用していますが、はじめから
+  PostgreSQLEXDI というパーセル(PostgreSQL のドライバ)がインストールされているので
+  これを使用して PostgreSQL サーバに接続できます。パッケージ PostgreSQLDriver の
+  クラス PostgreSQLTest のクラスメソッドのカテゴリ "testing" に、テストコードが
+  たくさん用意されているので、接続パラメタの設定を自分が使用するデータベース用に変更すると、
+  接続テストを行うことができます。接続パラメタの設定の変更は、クラス PostgreSQLTest の
+  クラスメソッドのカテゴリ "testing - defaults" で行うことができます。
+
+  たとえば選択の問い合わせを一連のコードであらわすと、以下のような感じになります。
+  (オブジェクトデータベースではないので、やはり表示部分が面倒)
+
+---------------------------------
+| parameterSet connection queryMessage aResultList resultData |
+
+" 接続パラメタの設定 "
+parameterSet := ConnectionParameterSet new.
+parameterSet
+	host: 'localhost';
+	port: 5432;
+	databaseName: 'nethack';
+	userName: 'spiral';
+	password: 'Elbereth'.
+
+" 問い合わせ開始 "
+connection := PostgreSQLConnection using: parameterSet.
+queryMessage := connection newQuery.
+queryMessage queryString: 'SELECT name, alignment, effect FROM artifact;'.
+aResultList := queryMessage execute.
+connection close.
+
+" 表示 "
+resultData := WriteStream on: String new.
+aResultList do: 
+		[:aResult | 
+		" カラム名表示 "
+		aResult rowDescription isNil 
+			ifFalse: 
+				[aResult rowDescription fieldDescriptions do: 
+						[:aFieldDescription | 
+						resultData
+							nextPutAll: aFieldDescription name;
+							tab;
+							nextPutAll: '|';
+							tab].
+				resultData
+					cr;
+					nextPutAll: '-------------------------------------------------------------------';
+					cr.
+				" データ表示 "
+				aResult rows do: 
+						[:aRow | 
+						aRow fields do: 
+								[:aField | 
+								aField isNil 
+									ifTrue: 
+										[resultData
+											tab;
+											tab]
+									ifFalse: 
+										[resultData
+											nextPutAll: aField asString;
+											tab;
+											tab]].
+						resultData cr]]].
+Transcript
+	cr;
+	show: resultData contents
+---------------------------------
+
+  実行結果は以下の感じ。
+
+---------------------------------
+name	|	alignment	|	effect	|	
+-------------------------------------------------------------------
+Excalibur		lawful		automatic searching, level-drain resistance		
+Magicbane		neutral		magic resistance		
+Stormbringer		chaotic		level-drain resistance		
+Frost Brand		maverick		cold resistance		
+---------------------------------
+
+  他にも、リレーショナルデータベースでしたら DB2 や Oracle が、オブジェクトデータベースでしたら
+  OmniBase (梅澤さんが日本語化されたらしいです)のドライバがあるみたいです。
+  これらは、パーセルブラウザの Suggestions の "DataBase" にリストされています。
+  Oracle も試してみようと思ったのですが、テストコードが見つからなかったのでまた今度。
+
+  実際にアプリケーションで使用する場合には、コネクションプーリング機構
+  (Oracle でいう暗黙的キャッシュ)が必要になることが多いと思いますが、
+  それっぽいモノは見当たらないので自分で作る必要がありそうですね。
+
+> あるいは、ベテランの方は、どのようなものをつかったり、
+> コーディングなど、されていますか？
+
+  エセユーザなのでごめんなさい。
+
+
+//鈴木 藍
+
+-- tar_zcvf@yahoo.co.jp
+
+From umejava ＠ mars.dti.ne.jp  Thu Feb 23 09:01:42 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7135] Re: Smalltalk システムでのデータの保存、データベースについての質問
+In-Reply-To: <20060223010544.7ba0fcd4.tar_zcvf@yahoo.co.jp>
+References: <20060221221941huQpSR@saesoft.jp>
+	<20060223010544.7ba0fcd4.tar_zcvf@yahoo.co.jp>
+Message-ID: <JX200602230901426.3587015@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+>   他にも、リレーショナルデータベースでしたら DB2 や Oracle が、オブジェクトデータベースでしたら
+>   OmniBase (梅澤さんが日本語化されたらしいです)のドライバがあるみたいです。
+>   これらは、パーセルブラウザの Suggestions の "DataBase" にリストされています。
+>   Oracle も試してみようと思ったのですが、テストコードが見つからなかったのでまた今度。
+
+ご紹介いただきありがとうございます。
+
+OmniBaseJ (Squeak版です)
+http://swikis.ddo.jp/umejava/24
+
+OmniBaseの使い方
+http://swikis.ddo.jp/umejava/25
+
+です。
+
+リレーショナルデータベースよりもたいそう簡単に書けると思います。
+とはいえ、簡易なOODBなので、RDBで得意とする高度な検索には不向きです。
+
+VisualWorksであれば、GemStoneやObjectivity/DBがパーセルとして提供されています。
+これらは本格派のOODBなので、検索式実行も含めそれこそいろいろなことができます。
+
+>   実際にアプリケーションで使用する場合には、コネクションプーリング機構
+>   (Oracle でいう暗黙的キャッシュ)が必要になることが多いと思いますが、
+>   それっぽいモノは見当たらないので自分で作る必要がありそうですね。
+> 
+> > あるいは、ベテランの方は、どのようなものをつかったり、
+> > コーディングなど、されていますか？
+> 
+>   エセユーザなのでごめんなさい。
+
+わたしは、生まれ育った環境もあり、なるべくRDBの使用は避け、OODBを使うように
+しています。
+
+RDB系であればいわゆるO/Rマッパーは必須と思います。
+
+有名どころはなんといってもGLORPでしょう。
+http://glorp.org/
+
+---
+[:masashi | ^umezawa]
+
+From hsuenobu ＠ sybase.com  Thu Feb 23 15:13:18 2006
+From: hsuenobu ＠ sybase.com (SUENOBU Hisao)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7136] Re: Smalltalk システムでのデータの保存、データベースについての質問
+Message-ID: <87A11224-4F01-40B9-9A8F-CF05E6B866E8@sybase.com>
+
+サイベースの末延と申します．
+
+茶々です．
+
+ > >   他にも、リレーショナルデータベースでしたら DB2 や  
+Oracle が、オブ
+ > ジェクトデータベースでしたら
+ > >   OmniBase (梅澤さんが日本語化されたらしいです)のドラ 
+イバがあるみたいです。
+ > >   これらは、パーセルブラウザの Suggestions の  
+"DataBase" にリストされています。
+ > >   Oracle も試してみようと思ったのですが、テストコードが見つ 
+からな
+ > かったのでまた今度。
+
+VisualWorksには，弊社のDBへ接続するためのパーセル 
+（CTLib関連）も含まれています．
+私自身はMacOSXを使用しているため，一部コードを修正する必要 
+がありましたが，
+疎通は確認できました．他のプラットフォームではそのまま動くのでは 
+ないでしょうか．
+
+VisualWorks (MacOSX) <-> Sybase ASE (MacOSX) の環境で開発の必要 
+がある方は
+ご連絡ください（いないでしょうが）．
+
+ > わたしは、生まれ育った環境もあり、なるべくRDBの使用は避 
+け、OODBを使うように
+ > しています。
+
+実は私も，Smalltalkに関しては，そうしたいと思っていますの 
+で，あまり深入りしない
+ようにしています．
+
+では
+
+From nisinaka ＠ sra.co.jp  Fri Feb 24 11:33:52 2006
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7137] [ANNOUNCE] Jun for Java (Jun547)
+In-Reply-To: <20051028175404.129D.NISINAKA@sra.co.jp>
+References: <20050907184553.F2F4.NISINAKA@sra.co.jp>
+	<20051028175404.129D.NISINAKA@sra.co.jp>
+Message-ID: <20060224113002.9440.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン547を公開します。
+
+  バージョン536からの主な変更点は、以下の通りです。
+
+    * (new feature) JunMovieThumbnails は動画ファイルから指定した
+      フレームをキャプチャし、それを閲覧するためのHTMLページを生
+      成するクラスです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/547/20060223184817/index.html
+
+    * (new feature) JunButtonWithMenuModel は JunButtonModel のサ
+      ブクラスで、ボタンの隣にポップアップメニューを表示します。 
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/547/ButtonWithMenu.png
+
+    * (new feature) JunButtonWithMenuModel を使ってスピーカーボタ
+      ンを JunTrackerModel に定義し、JunMoviePlayer で使うように
+      しました。 
+
+    * (modification) JunCursors にカーソルを追加しました。現在、
+      全部で87個のカーソルが定義されています。 
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/547/Cursors.png
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From saegusa ＠ saesoft.jp  Fri Feb 24 13:41:30 2006
+From: saegusa ＠ saesoft.jp (Katsuyuki Saegusa)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7138] Re: Smalltalk システムでのデータの保存、データベースについての質問
+In-Reply-To: <20060221221941huQpSR@saesoft.jp>
+References: <20060221221941huQpSR@saesoft.jp>
+Message-ID: <20060224134130WZpFKl@saesoft.jp>
+
+
+大変参考になるREPLY、ありがとうございました。
+
+リレーショナルデータベースについては従来使っていましたが、
+型とかテーブル構造を、どうやってSmalltalk風にしていけば
+いいか、みたいなところで疑問に思っていました。
+
+RDBでも、パーセルが準備されているものがあって、それでいける、
+ということと、スマートにオブジェクトデータベースというものが
+あるということを教えていただきました。
+頂いたヒントをもとに、自分でも調べてみます。
+ありがとうございました。
+
+K.Saegusa　
+
+
+
+From saegusa ＠ saesoft.jp  Sat Feb 25 08:59:12 2006
+From: saegusa ＠ saesoft.jp (Katsuyuki Saegusa)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7139] Re: 並び替えの致命傷
+Message-ID: <20060225085912G7X5QI@saesoft.jp>
+
+
+[SML 7132] 並び替えの致命傷のメール
+ Smalltalkのクラスの勉強になりました。
+
+私はまだ従来の言語的な思考から抜け出せないのかも
+しれませんので、皆様の意見をお願いします。
+
+整列している・していないコレクションに、１個だけ追加したい
+場合もあるし、いっぺんに沢山入れたい場合もあります。
+
+そのたびに、SortedCollectionとOrderdCollectionを変換しあう、
+というのも、そそっかしい私には、難しい作業のように思います。
+
+もし、標準のクラス？に自分が手を加えられるなら、こういう仕様に
+したいな、と思ってしまいます。
+
+
+１）OrderdCollectionの場合、quickSortメソッドがあると...
+
+aLiteralArray := #(0 9 1 8 2 7 3 6 4 5).
+aOrderdCollection := OrderedCollection new.
+aLiteralArray do: [:each | aOrderdCollection add: each].
+aOrderdCollection quickSort: [:n1 :n2 | n1 >= n2].
+
+
+私家版をつくるならaddArray,quickSortを加えて...
+
+aLiteralArray := #(0 9 1 8 2 7 3 6 4 5).
+aOrderdCollection := OrderdCollection new. 
+aOrderdCollection  
+  addArray: aLiteralArray; 
+  quickSort: [:n1 :n2 | n1 >= n2].
+
+
+
+２）SortedCollectionの場合、ソートのロックができると...
+
+aLiteralArray := #(0 9 1 8 2 7 3 6 4 5).
+aSortedCollection := SortedCollection new.
+aSortedCollection sortBlock: [:n1 :n2 | n1 >= n2].
+aSortedCollection lockSort.
+aLiteralArray do: [:each | aSortedCollection add: each].
+aSortedCollection unlockSort.
+
+私家版をつくるならaddArrayリバーシングを実装して
+先頭と最後にlock,unlockをいれてしまおう...
+
+aLiteralArray := #(0 9 1 8 2 7 3 6 4 5).
+aSortedCollection := SortedCollection new.
+aSortedCollection  
+  sortBlock: [:n1 :n2 | n1 >= n2];
+  addArray:  aLiteralArray.
+  
+みたいに書けるとおっちょこちょいでもOKだ、と思ってしまうのです。
+
+ところで、こういった変更を「標準のライブラリ」に施すことは
+行儀の良い作法とは言えない気がするのですが、どのように
+するのが良いのでしょうか。
+
+現在私は、クラスのソースが全てあって、依存関係のない実行形式
+１個を大変高速に出力できるコンパイラを使っている場合は、
+気に入らないライブラリは全部触ってビルドしなおします。
+あるいは、状況によってはソースをフォークして
+MySortedCollectionみたいなのを作ってみたり。
+
+ただ、そうなってくると開発環境がアップデートするとバグを迂回した
+ところが違う実装になってたりして、全ソースの差分をとるのが
+結構大変です。勉強にはなりますが。。。
+
+K.Saegusa
+
+
+
+From tar_zcvf ＠ yahoo.co.jp  Sat Feb 25 17:22:01 2006
+From: tar_zcvf ＠ yahoo.co.jp (鈴木 藍)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7140] Re: Smalltalk システムでのデータの保存、データベースについての質問
+In-Reply-To: <20060223010544.7ba0fcd4.tar_zcvf@yahoo.co.jp>
+References: <20060221221941huQpSR@saesoft.jp>
+	<20060223010544.7ba0fcd4.tar_zcvf@yahoo.co.jp>
+Message-ID: <20060225172201.1ba66405.tar_zcvf@yahoo.co.jp>
+
+
+  鈴木 藍です。
+
+>   Oracle も試してみようと思ったのですが、テストコードが見つからなかったのでまた今度。
+
+  投げ出さないでやりました。もう解決済みのスレッドですが、一応ということで
+  失礼します。
+  
+  OracleEXDI (と、話題にあがったサイベースのドライバ CTLibEXDI) とその他
+  データベースに関する文書が $VISUALWORKS_HOME/doc/DatabaseAppDevGuide.pdf に
+  あります。
+  あと、データフォームにデータベースのデータをマッピングするツールや
+  クラスにデータをマッピングするツールの話が書いてありました。
+  読むのが面倒で読んでません。
+
+  さて、Oracle データベースとの接続は以下のコードで確認できました。  
+----------------------------------
+| aConnection aSession aResultList resultData |
+aConnection := OracleConnection new.
+aConnection
+	username: 'elbereth';
+	password: 'elf';
+	environment: 'orcl'.
+aConnection connect.
+aConnection begin.
+aSession := aConnection getSession.
+aSession prepare: 'SELECT name, essential FROM artifact'.
+aSession execute.
+aResultList := aSession answer.
+"aConnection commit"
+resultData := WriteStream on: String new.
+aResultList columnDescriptions do: 
+		[:columnDescription | 
+		resultData
+			nextPutAll: columnDescription name;
+			tab;
+			nextPutAll: '|';
+			tab].
+resultData
+	cr;
+	nextPutAll: '----------------------------------------------------------------';
+	cr.
+aResultList upToEnd do: 
+		[:row | 
+		row do: 
+				[:field | 
+				resultData
+					nextPutAll: field;
+					tab].
+		resultData cr].
+Transcript
+	cr;
+	show: resultData contents
+----------------------------------
+  
+  実行結果は以下の感じ。
+----------------------------------
+NAME	|	ESSENTIAL	|	
+----------------------------------------------------------------
+Excalibur	long sword	
+Magicbane	athame	
+----------------------------------
+
+  他にも、引数をとる SQL や PLSQL のコードを書いたり呼び出したりもできるみたいです。
+  これも他の言語のドライバ同様、引数は (?,?) みたいな形でとります。
+  OracleEXDI のパーセルにバンドルされている、Oracle データベースの
+  データ型をあらわすクラス Date, Double が気になりますが、状況にもよりますけれど
+  まあ Java のように型変換で鬱になったりはしないのではないかと(願っています)。
+  
+  ORMPB.
+  (O/R Makes Prgrammers Blue.) 
+  
+
+//鈴木 藍
+
+-- spiral@soulhack.net
+

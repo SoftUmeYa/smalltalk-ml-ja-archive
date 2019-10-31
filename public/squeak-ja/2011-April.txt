@@ -1,0 +1,2138 @@
+From ume ＠ softumeya.com  Fri Apr 15 11:50:19 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 15 Apr 2011 11:50:19 +0900
+Subject: [Squeak-ja: 4505]
+	Squeak 4.2の日本語版
+Message-ID: <BANLkTi=ZT-NUT=-YSs51k+wfv6BmdET+yA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+Squeak 4.2の日本語版を作成しました。経緯については以下のブログをどうぞ。
+http://wp.me/p14Dvk-3l
+
+下記からダウンロードできます。
+http://sourceforge.jp/projects/squeak-ja/
+
+すぐに試したい方はAll-in-oneが楽でしょう。
+http://sourceforge.jp/projects/squeak-ja/downloads/51644/Squeak4.2-ja-all-in-one.zip/
+
+今回からCog VMも使えますので、いろいろと速くておすすめです。
+
+例によって永遠のベータ版的なところがありますので、不具合ご意見などお気軽にお寄せください。
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Fri Apr 15 15:18:33 2011
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo)
+Date: Fri, 15 Apr 2011 15:18:33 +0900
+Subject: [Squeak-ja: 4506]
+	iPadでSqueakは動きますか。
+Message-ID: <000001cbfb34$f51de780$df59b680$@kyoto-inet.or.jp>
+
+こんにちは、久保です。
+Squeakの主旨からいって、iPadのようなマシンで
+たとえばeToyなどを動かせたらいいな、と思います。
+当然すぎるような質問かもしれませんが、
+どうぞよろしくお願いします。
+久保　道
+
+
+
+
+From yoshiki ＠ vpri.org  Fri Apr 15 15:47:55 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu, 14 Apr 2011 23:47:55 -0700
+Subject: [Squeak-ja: 4507] Re:
+ iPadでSqueakは動きますか。
+In-Reply-To: <000001cbfb34$f51de780$df59b680$@kyoto-inet.or.jp>
+References: <000001cbfb34$f51de780$df59b680$@kyoto-inet.or.jp>
+Message-ID: <ulizc6mec.wl%yoshiki@vpri.org>
+
+At Fri, 15 Apr 2011 15:18:33 +0900,
+kubo wrote:
+> 
+> こんにちは、久保です。
+> Squeakの主旨からいって、iPadのようなマシンで
+> たとえばeToyなどを動かせたらいいな、と思います。
+> 当然すぎるような質問かもしれませんが、
+> どうぞよろしくお願いします。
+
+  動きますね。
+
+http://www.youtube.com/watch?v=gYrp31fH-Jk
+
+などをご覧ください。
+
+-- Yoshiki
+
+From x19290 ＠ gmail.com  Fri Apr 15 16:03:31 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Fri, 15 Apr 2011 16:03:31 +0900
+Subject: [Squeak-ja: 4508] Re:
+ iPadでSqueakは動きますか。
+In-Reply-To: <ulizc6mec.wl%yoshiki@vpri.org>
+References: <000001cbfb34$f51de780$df59b680$@kyoto-inet.or.jp>
+ <ulizc6mec.wl%yoshiki@vpri.org>
+Message-ID: <4DA7EDC3.6080402@gmail.com>
+
+> http://www.youtube.com/watch?v=gYrp31fH-Jk
+
+Bertさんのですね。私も、同じような興味を持って、ここに行きついたことがあ
+ります。改めて調べると、
+
+"We really need to redesign the user interface before giving this into
+the hands of kids"
+とのことです。
+
+http://www.google.com/search?hl=&q=%22We+really+need+to+redesign+the+user+interface+before+giving+this+into+the+hands+of+kids%22&sourceid=navclient-ff&rlz=1B5_____enJP333JP333&ie=UTF-8
+--
+堀内寛己(ほりうちひろき)
+
+From pikateu_14 ＠ hotmail.com  Fri Apr 15 23:26:30 2011
+From: pikateu_14 ＠ hotmail.com (itikawa aiko)
+Date: Fri, 15 Apr 2011 23:26:30 +0900
+Subject: [Squeak-ja: 4509] Re:
+ Squeak 4.2の日本語版
+In-Reply-To: <mailman.3.1302836402.6515.squeak-ja@smalltalk.jp>
+References: <mailman.3.1302836402.6515.squeak-ja@smalltalk.jp>
+Message-ID: <BAY166-w291D2020E009F404D707DCE2AC0@phx.gbl>
+
+
+こんばんわ、pikaです。
+ 
+新学期の準備をしていたところにちょうどタイミングよく新ヴァージョンがでて、早速ダウンロードしました！
+ありがとうございます。
+ 
+さて、起動してみたところ、morphicプロジェクトのフラップの中にあるボタンの表記が文字化けし、？？？と表示されました。
+フォントの変更をいじってみましたが、直りません。
+オブジェクトフラップ内の一番上の段の右のテキストらしき部分をクリックすると、
+そのフラップのみ日本語が表示され、ボタンの名札が読めるようになりました。
+ 
+また、昔作ったプロジェクトファイルは読み込めませんでした。
+ 
+ちなみにＸＰで起動させてみました。
+ 
+明日、授業があるので、そこでもいろいろ試してみようかなと考えています。
+ 
+それにしても、さくさく動くし、フォントは綺麗だし、使いやすくなってていいかんじです！！
+
+
+>
+> こんにちは
+> 梅澤です。
+>
+> Squeak 4.2の日本語版を作成しました。経緯については以下のブログをどうぞ。
+> http://wp.me/p14Dvk-3l
+>
+> 下記からダウンロードできます。
+> http://sourceforge.jp/projects/squeak-ja/
+>
+> すぐに試したい方はAll-in-oneが楽でしょう。
+> http://sourceforge.jp/projects/squeak-ja/downloads/51644/Squeak4.2-ja-all-in-one.zip/
+>
+> 今回からCog VMも使えますので、いろいろと速くておすすめです。
+>
+> 例によって永遠のベータ版的なところがありますので、不具合ご意見などお気軽にお寄せください。
+>
+> ではでは。
+> --
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+> 		 	   		  
+
+From yoshiki ＠ vpri.org  Sat Apr 16 01:31:09 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri, 15 Apr 2011 09:31:09 -0700
+Subject: [Squeak-ja: 4510] Re:
+ iPadでSqueakは動きますか。
+In-Reply-To: <4DA7EDC3.6080402@gmail.com>
+References: <000001cbfb34$f51de780$df59b680$@kyoto-inet.or.jp>
+ <ulizc6mec.wl%yoshiki@vpri.org> <4DA7EDC3.6080402@gmail.com>
+Message-ID: <uk4ev79yq.wl%yoshiki@vpri.org>
+
+At Fri, 15 Apr 2011 16:03:31 +0900,
+Hiroki Horiuchi wrote:
+> 
+> > http://www.youtube.com/watch?v=gYrp31fH-Jk
+> 
+> Bertさんのですね。私も、同じような興味を持って、ここに行きついたことがあ
+> ります。改めて調べると、
+> 
+> "We really need to redesign the user interface before giving this into
+> the hands of kids"
+> とのことです。
+> 
+> http://www.google.com/search?hl=&q=%22We+really+need+to+redesign+the+user+interface+before+giving+this+into+the+hands+of+kids%22&sourceid=navclient-ff&rlz=1B5_____enJP333JP333&ie=UTF-8
+
+  そうなんですよね。画面上のボタンが指で操作するには小さすぎたりとか。
+
+-- Yoshiki
+
+BertがiPad晩の開発を最初始めた時は、私のiPadを貸してあげたのでした。
+
+From x19290 ＠ gmail.com  Sat Apr 16 10:19:00 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sat, 16 Apr 2011 10:19:00 +0900
+Subject: [Squeak-ja: 4511] Re:
+ iPadでSqueakは動きますか。
+In-Reply-To: <uk4ev79yq.wl%yoshiki@vpri.org>
+References: <000001cbfb34$f51de780$df59b680$@kyoto-inet.or.jp>
+ <ulizc6mec.wl%yoshiki@vpri.org> <4DA7EDC3.6080402@gmail.com>
+ <uk4ev79yq.wl%yoshiki@vpri.org>
+Message-ID: <4DA8EE84.9000809@gmail.com>
+
+Yoshikiさん、Smalltalk SMLでは、お世話になりました。
+http://www.smalltalk.jp/pipermail/sml/2011-April/007914.html
+
+> BertがiPad晩の開発を最初始めた時は、私のiPadを貸してあげたのでした。
+
+お見逸れしました。
+--
+堀内寛己(ほりうちひろき)
+
+From ume ＠ softumeya.com  Sat Apr 16 23:04:29 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sat, 16 Apr 2011 23:04:29 +0900
+Subject: [Squeak-ja: 4512] Re:
+	Squeak 4.2の日本語版
+In-Reply-To: <BAY166-w291D2020E009F404D707DCE2AC0@phx.gbl>
+References: <mailman.3.1302836402.6515.squeak-ja@smalltalk.jp>
+ <BAY166-w291D2020E009F404D707DCE2AC0@phx.gbl>
+Message-ID: <BANLkTim2n-m+JnjOBPrWjkaiBz4zgzKJQw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+お試しありがとうございます。
+
+フラップについては、普段は表示させていなかったので気づきませんでした。直しておきます。
+とりあえず応急処置としては、フラップを表示させた状態のまま「ヘルプ」「言語を設定...」で一度Englishにして日本語に戻すと正しく表示されるようになると思います。
+
+また、Etoysプロジェクトの互換性ですが、Squeak 4.2系列ではおそらく本家のほうでもテストはされていないと思います。
+
+Etoysに関してはEtoys用をとってくるのが確実でしょう。こちらであれば古いものもきちんと読めると思います。
+http://www.squeakland.org/
+http://etoys.jp/squeak/squeak.html
+
+ではでは。
+
+2011/4/15 itikawa aiko <pikateu_14 ＠ hotmail.com>:
+>
+> こんばんわ、pikaです。
+>
+> 新学期の準備をしていたところにちょうどタイミングよく新ヴァージョンがでて、早速ダウンロードしました！
+> ありがとうございます。
+>
+> さて、起動してみたところ、morphicプロジェクトのフラップの中にあるボタンの表記が文字化けし、？？？と表示されました。
+> フォントの変更をいじってみましたが、直りません。
+> オブジェクトフラップ内の一番上の段の右のテキストらしき部分をクリックすると、
+> そのフラップのみ日本語が表示され、ボタンの名札が読めるようになりました。
+>
+> また、昔作ったプロジェクトファイルは読み込めませんでした。
+>
+> ちなみにＸＰで起動させてみました。
+>
+> 明日、授業があるので、そこでもいろいろ試してみようかなと考えています。
+>
+> それにしても、さくさく動くし、フォントは綺麗だし、使いやすくなってていいかんじです！！
+>
+>
+>>
+>> こんにちは
+>> 梅澤です。
+>>
+>> Squeak 4.2の日本語版を作成しました。経緯については以下のブログをどうぞ。
+>> http://wp.me/p14Dvk-3l
+>>
+>> 下記からダウンロードできます。
+>> http://sourceforge.jp/projects/squeak-ja/
+>>
+>> すぐに試したい方はAll-in-oneが楽でしょう。
+>> http://sourceforge.jp/projects/squeak-ja/downloads/51644/Squeak4.2-ja-all-in-one.zip/
+>>
+>> 今回からCog VMも使えますので、いろいろと速くておすすめです。
+>>
+>> 例によって永遠のベータ版的なところがありますので、不具合ご意見などお気軽にお寄せください。
+>>
+>> ではでは。
+>> --
+>> "SoftUmeYa, LLC"
+>> [:masashi | ^umezawa]
+>>
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Mon Apr 18 10:06:27 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Mon, 18 Apr 2011 10:06:27 +0900
+Subject: [Squeak-ja: 4513]
+	第31回Smalltalk勉強会のお知らせ
+Message-ID: <BANLkTikuHKNMTjccXPyk3nw-iKUqvvx6Ng@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/4/27(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai31kaismalltalkbenkyoukai
+
+今回のテーマは「Morphicチュートリアル」です。
+
+MVCに取って代わってSqueakの標準UIフレームワークとなったMorphicですが、
+実のところどうなのか、その光と闇についてのお話が聞けることでしょう。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From pikateu_14 ＠ hotmail.com  Mon Apr 18 17:42:06 2011
+From: pikateu_14 ＠ hotmail.com (itikawa aiko)
+Date: Mon, 18 Apr 2011 17:42:06 +0900
+Subject: [Squeak-ja: 4514] Re:
+ Squeak 4.2の日本語版
+In-Reply-To: <mailman.1.1303009202.3865.squeak-ja@smalltalk.jp>
+References: <mailman.1.1303009202.3865.squeak-ja@smalltalk.jp>
+Message-ID: <BAY166-w4166109F7B24E95CFCCAB7E2910@phx.gbl>
+
+
+梅澤さん、応急処置ありがとうございます！
+ 
+せっかくなので４．２のまとめサイトを作ってみようとしてます。
+授業で100人位に使わせているので、気付いたこと、２００５Ｊから変わったことをまとめていきます。
+ 
+http://www-cc.gakushuin.ac.jp/~e080254/new/
+
+  ******************************
+ 		 	   		  
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110418/529d318c/attachment.htm>
+
+From abee.abe ＠ nifty.ne.jp  Mon Apr 18 18:21:26 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon, 18 Apr 2011 18:21:26 +0900
+Subject: [Squeak-ja: 4515] Re:
+	Squeak 4.2の日本語版
+In-Reply-To: <BAY166-w4166109F7B24E95CFCCAB7E2910@phx.gbl>
+References: <mailman.1.1303009202.3865.squeak-ja@smalltalk.jp>
+ <BAY166-w4166109F7B24E95CFCCAB7E2910@phx.gbl>
+Message-ID: <BANLkTikNa_6FS-vXbRRFMhc76mPJ_b4iMQ@mail.gmail.com>
+
+こんにちは、阿部です。
+Squeak 4.2のEtoysを使うことはあまりお勧めできません。
+梅澤さんも書かれているように、たぶん誰もテストしていないので、不具合があったときに対応できないと思います。他バージョンのプロジェクトファイルの互換性も不明です。また、ナビゲータフラップをはじめ、Etoysで使うにはいくつか設定を変える必要があります。
+現状で2005J以外だと、みんなでたのしくスクイークで公開されているSqueak Etoys 3.0(MTS版)をお勧めします。
+http://etoys.jp/squeak/squeak.html
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011/4/18 itikawa aiko <pikateu_14 ＠ hotmail.com>:
+> 梅澤さん、応急処置ありがとうございます！
+>
+> せっかくなので４．２のまとめサイトを作ってみようとしてます。
+> 授業で100人位に使わせているので、気付いたこと、２００５Ｊから変わったことをまとめていきます。
+>
+> http://www-cc.gakushuin.ac.jp/~e080254/new/
+>
+>   ******************************
+>
+>
+
+From pikateu_14 ＠ hotmail.com  Wed Apr 20 13:48:21 2011
+From: pikateu_14 ＠ hotmail.com (itikawa aiko)
+Date: Wed, 20 Apr 2011 13:48:21 +0900
+Subject: [Squeak-ja: 4516] Re:
+ Squeak 4.2の日本語版
+In-Reply-To: <mailman.3.1303182002.4495.squeak-ja@smalltalk.jp>
+References: <mailman.3.1303182002.4495.squeak-ja@smalltalk.jp>
+Message-ID: <BAY166-w2304586D97E830FF3D0661E2930@phx.gbl>
+
+
+梅澤さん、阿部さん、アドバイスありがとうございます。
+ 
+不具合に遭遇したときの対処（直すとかではなく、どうすればよいか）なども
+授業の一環と考え、とりあえず使ってみようかと思います。
+成功させるための授業ではなくて、失敗も含めて１年間学んでいってもらいたいかなと思ってます。
+環境を自分好みに変えていくなど、普段ならきっと生徒は体験しないことでしょうし。
+ 
+また、初心者がどのような使い方をしたら、どんな問題が起こるか報告して、
+少しでも４．２に貢献できたらいいなと思います。
+ 
+初回では、画面右クリックでメニューが出てきてしまい、よけいなところをクリックしてしまう子が結構多かったです。
+  		 	   		  
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110420/d66a20d6/attachment.htm>
+
+From tetha ＠ st.rim.or.jp  Wed Apr 20 22:22:22 2011
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Wed, 20 Apr 2011 22:22:22 +0900
+Subject: [Squeak-ja: 4517] Re:
+ Squeak 4.2の日本語版
+In-Reply-To: <BAY166-w2304586D97E830FF3D0661E2930@phx.gbl>
+References: <mailman.3.1303182002.4495.squeak-ja@smalltalk.jp>
+ <BAY166-w2304586D97E830FF3D0661E2930@phx.gbl>
+Message-ID: <9C0FED1E-2499-4744-8178-193689A1F296@st.rim.or.jp>
+
+はじめまして、林徹也と申します。
+阿部さんたちのワークショップの手伝いなどさせていただいてます。
+
+どのようなご利用をされているのか分からないので、モーフやタイルスクリプトで利用されているという想定で書かせていただきます。外していましたらすみません。
+
+老婆心ながら、私も、Squeak 4.2 を「子供たちの学習環境としては使わない」方がいいかなと感じています。
+もうちょっと強い言い方をしてしまうと使ってはいけないのではないかと思います。
+
+　といいますのは、Squeak 4.x シリーズは、Smalltalk言語処理系としての洗練（大人のアプリ開発）を目指していて、子供の学習での利用はもう考慮されてないと思っています（開発スタッフのメンバも違ってるようですし…）。おそらく開発側としてはタイルスクリプトなどには触って欲しく無いところではないかと推察します。たまたま取り去るのが大変なので残してるというだけで。
+　逆に子供の学習環境としての洗練を目指してるのが、Squeak EToys版でOLPCに搭載されて世界中に配られているのもEToys版です。いうなれば Squeak2005Jでのモーフ、タイルスクリプリトなどの系譜の正統はこちらのバージョンだと思います。
+
+　さらに、4.2を利用した結果のフィードバックを返そうと思っても、開発スタッフに受け取ってもらえない可能性もあるのではと危惧します（4.xでのメンバは、タイルスクリプトなどに関心を持ってる人は少ないのでは？）。
+　たとえば、せっかくモーフやタイルスクリプトのバグを報告しても、修正してもらえないだけでなく、極端な場合、そのバグを起こしてる機能そのものが削除される（=例= おかしい動きをするタイルを直すのではなく、タイルそのものを無くすことで問題解決されてしまう）可能性すらあるかもしれません。
+
+この点でもSqueak EToys版ならば受け取り先がありますので、ワールドワイドで貢献できるのではと思います。
+
+Squeak EToys 版と Squeak 4.x 版が存在している理由として、
+これらは、そもそも思想が異なる別なプロダクトで、
+
+	Squeak EToys → 従来のスクイークを継承する
+	Squeak 4.x シリーズ → 名前は引き継いだけど全く別プロダクト
+
+ぐらいに理解された方がよろしいのではないかと思ってます。
+# 間違っていたら修正お願いします＞識者の方
+
+なお、UIデザインが若干異なるので資料などを再整備しなければならないなどの話もあるかもしれませんが、一度 Squeak EToys版を試してみてもいいのではないでしょうか？
+
+ご参考になれば幸いです。
+--
+林 徹也, Tetsuya HAYASHI, E-Mail: tetha ＠ mac.com
+
+
+
+
+
+From pikateu_14 ＠ hotmail.com  Fri Apr 22 16:04:12 2011
+From: pikateu_14 ＠ hotmail.com (itikawa aiko)
+Date: Fri, 22 Apr 2011 16:04:12 +0900
+Subject: [Squeak-ja: 4518] Re:
+ Squeak 4.2の日本語版
+In-Reply-To: <mailman.1.1303354801.6658.squeak-ja@smalltalk.jp>
+References: <mailman.1.1303354801.6658.squeak-ja@smalltalk.jp>
+Message-ID: <BAY166-w575DA90F2663C768427417E2950@phx.gbl>
+
+
+林さん、丁寧な解説ありがとうございます。
+ 
+ということは、３．ｘを元にしていた２００５Ｊバージョンとは別に、全く新しい環境として作ったのが4.xバージョンということですね。
+去年までは、２００５Ｊ２を使っていましたので、そちらの方が教育環境として洗練されているのは理解しているつもりです。
+ 
+今まで１→２→３とバージョンアップしてきていたように思っていて、その先の４なのかなと思っていました。
+確かに、今までと違い昔のプロジェクトが全く読み込めないということだったので、納得しました。
+ 
+そもそも今回４のバージョンを使おうと思ったのはフォントの問題からでした。
+「みんなで・・・」のバージョンにしようかと思ったのですが、２００５Ｊ２などのようにイメージとして保存するのが大変そうに感じました。
+授業としては、プロジェクトよりも、イメージとして保存できた方が都合がよいのです・・・。
+フォントインストールも調べて試してみましたが、エラーがでてうまくいきませんでした。
+ 
+とにかく、今までの２００５J2を使い続けた方が良さそうですね。
+がんばります！！
+ 
+pika（市川愛子）
+ 		 	   		  
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110422/4009b1da/attachment.htm>
+
+From abee.abe ＠ nifty.ne.jp  Fri Apr 22 16:15:10 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri, 22 Apr 2011 16:15:10 +0900
+Subject: [Squeak-ja: 4519] Re:
+	Squeak 4.2の日本語版
+In-Reply-To: <BAY166-w575DA90F2663C768427417E2950@phx.gbl>
+References: <mailman.1.1303354801.6658.squeak-ja@smalltalk.jp>
+ <BAY166-w575DA90F2663C768427417E2950@phx.gbl>
+Message-ID: <BANLkTinXq8V6ivkb8onN=HGp2y=uAdFCdg@mail.gmail.com>
+
+こんにちは、阿部です。
+MTSのSqueak Etoys 3.0も特に問題なくイメージとして保存できます。
+組み込みたいフォントがあれば対応できると思いますので教えてください。
+実際に使ってくださっている方のリクエストには極力対応したいと思っていますので、よろしくお願いします。逆に、なにもないと問題ないのかなと思ってしまいます。
+
+?//abee
+--
+阿部 和広? EMAIL abee ＠ squeakland.jp
+
+2011/4/22 itikawa aiko <pikateu_14 ＠ hotmail.com>:
+> 林さん、丁寧な解説ありがとうございます。
+>
+> ということは、３．ｘを元にしていた２００５Ｊバージョンとは別に、全く新しい環境として作ったのが4.xバージョンということですね。
+> 去年までは、２００５Ｊ２を使っていましたので、そちらの方が教育環境として洗練されているのは理解しているつもりです。
+>
+> 今まで１→２→３とバージョンアップしてきていたように思っていて、その先の４なのかなと思っていました。
+> 確かに、今までと違い昔のプロジェクトが全く読み込めないということだったので、納得しました。
+>
+> そもそも今回４のバージョンを使おうと思ったのはフォントの問題からでした。
+> 「みんなで・・・」のバージョンにしようかと思ったのですが、２００５Ｊ２などのようにイメージとして保存するのが大変そうに感じました。
+> 授業としては、プロジェクトよりも、イメージとして保存できた方が都合がよいのです・・・。
+> フォントインストールも調べて試してみましたが、エラーがでてうまくいきませんでした。
+>
+> とにかく、今 ?までの２００５J2を使い続けた方が良さそうですね。
+> がんばります！！
+>
+> pika（市川愛子）
+>
+>
+
+From abee.abe ＠ nifty.ne.jp  Fri Apr 22 19:23:22 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri, 22 Apr 2011 19:23:22 +0900
+Subject: [Squeak-ja: 4520] Re:
+	iPadでSqueakは動きますか。
+In-Reply-To: <ulizc6mec.wl%yoshiki@vpri.org>
+References: <000001cbfb34$f51de780$df59b680$@kyoto-inet.or.jp>
+ <ulizc6mec.wl%yoshiki@vpri.org>
+Message-ID: <BANLkTim4qaYgvYETUoapGvks_NB_N=VUYg@mail.gmail.com>
+
+阿部です。
+Androidでも一応動くには動きます。
+Andreasさんがとりあえず載せてから少し停滞していたのですが、ここに来て動きが出てきました。
+
+squeakvm-tablet
+This is a fork of the squeak-android-vm project targeting tablet
+devices, that is, taking advantage of larger screen, memory, and
+storage than a mobile phone may provide.
+http://code.google.com/p/squeakvm-tablet/
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011年4月15日15:47 Yoshiki Ohshima <yoshiki ＠ vpri.org>:
+> At Fri, 15 Apr 2011 15:18:33 +0900,
+> kubo wrote:
+>>
+>> こんにちは、久保です。
+>> Squeakの主旨からいって、iPadのようなマシンで
+>> たとえばeToyなどを動かせたらいいな、と思います。
+>> 当然すぎるような質問かもしれませんが、
+>> どうぞよろしくお願いします。
+>
+>  動きますね。
+>
+> http://www.youtube.com/watch?v=gYrp31fH-Jk
+>
+> などをご覧ください。
+>
+> -- Yoshiki
+>
+
+From sato_hirokazu ＠ tba.t-com.ne.jp  Sat Apr 23 10:02:45 2011
+From: sato_hirokazu ＠ tba.t-com.ne.jp (佐藤 弘一)
+Date: Sat, 23 Apr 2011 10:02:45 +0900
+Subject: [Squeak-ja: 4521]
+	Seaside3.xについてご質問
+Message-ID: <9755D5BB-7E54-42D5-866C-DF8568F9C447@tba.t-com.ne.jp>
+
+こんにちは。佐藤です。
+
+seaside についてご質問があり投稿します。
+
+Seaside.stで最新のSeasideのイメージを落としましたが、
+Pharoのイメージ(Seaside3.04)にisolate: メソッドが存在しないようです。
+　※Squeakのイメージ(Seaside3.0)にはあります。
+
+　isolate: メソッドは今後なくなるのでしょうか？
+　seaside.stのマイグレーションの情報をみても見当たらず。。。
+
+そういった情報がありそうなところがあれば教えていただけるだけでも
+ありがたいです。
+
+よろしくお願いします。
+
+--
+Sincerely yours,
+Hirokazu Sato
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110423/6c6c8f2b/attachment.htm>
+
+From tetha ＠ st.rim.or.jp  Sat Apr 23 11:04:54 2011
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Sat, 23 Apr 2011 11:04:54 +0900
+Subject: [Squeak-ja: 4522] Re:
+ Squeak 4.2の日本語版
+In-Reply-To: <BAY166-w575DA90F2663C768427417E2950@phx.gbl>
+References: <mailman.1.1303354801.6658.squeak-ja@smalltalk.jp>
+ <BAY166-w575DA90F2663C768427417E2950@phx.gbl>
+Message-ID: <FF8251BB-B9AB-4822-8BF8-8A410603C925@st.rim.or.jp>
+
+市川さん
+林です。
+
+ご判断の参考になれば幸いです。
+
+ちなみに、MTSの Squeak EToys版でイメージを保存するためのワールドメニューの出し方なんですが、
+
+1. ワールドのハロを出して、上側の白いハロボタンをクリックするとメニューが出ます。
+2. メニューの中の「プリファレンス...」を選択するとプリファレンスの画面が出て来ます。
+3. 青い領域に並んでるカテゴリの中から「menus」を選択
+4. escapeKeyProducesMenu という項目をオンにする
+
+こうすると、エスケープキーを押すと従来と同じようなメニューが出て来ますので、イメージが保存出来ます。
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: preferences.png
+型:         image/png
+サイズ:     20933 バイト
+説明:       無し
+URL:        <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110423/633eb54f/attachment-0001.png>
+
+-------------- next part --------------
+
+--
+
+On 2011/04/22, at 16:04, itikawa aiko wrote:
+
+> 林さん、丁寧な解説ありがとうございます。
+>  
+> ということは、３．ｘを元にしていた２００５Ｊバージョンとは別に、全く新しい環境として作ったのが4.xバージョンということですね。
+> 去年までは、２００５Ｊ２を使っていましたので、そちらの方が教育環境として洗練されているのは理解しているつもりです。
+>  
+> 今まで１→２→３とバージョンアップしてきていたように思っていて、その先の４なのかなと思っていました。
+> 確かに、今までと違い昔のプロジェクトが全く読み込めないということだったので、納得しました。
+>  
+> そもそも今回４のバージョンを使おうと思ったのはフォントの問題からでした。
+> 「みんなで・・・」のバージョンにしようかと思ったのですが、２００５Ｊ２などのようにイメージとして保存するのが大変そうに感じました。
+> 授業としては、プロジェクトよりも、イメージとして保存できた方が都合がよいのです・・・。
+> フォントインストールも調べて試してみましたが、エラーがでてうまくいきませんでした。
+>  
+> とにかく、今 $^$G$N#2#0#0#5J2を使い続けた方が良さそうですね。
+> がんばります！！
+>  
+> pika（市川愛子）
+> 
+
+
+From abee.abe ＠ nifty.ne.jp  Sat Apr 23 11:55:44 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sat, 23 Apr 2011 11:55:44 +0900
+Subject: [Squeak-ja: 4523] Re:
+	Squeak 4.2の日本語版
+In-Reply-To: <FF8251BB-B9AB-4822-8BF8-8A410603C925@st.rim.or.jp>
+References: <mailman.1.1303354801.6658.squeak-ja@smalltalk.jp>
+ <BAY166-w575DA90F2663C768427417E2950@phx.gbl>
+ <FF8251BB-B9AB-4822-8BF8-8A410603C925@st.rim.or.jp>
+Message-ID: <BANLkTimokzsYm6FxzUbuaVmSR0i4jdvJkQ@mail.gmail.com>
+
+阿部です。
+あるいは、設定変更なしでAlt+Shift+wでも可能です。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011/4/23 Tetsuya HAYASHI <tetha ＠ st.rim.or.jp>:
+> 市川さん
+> 林です。
+>
+> ご判断の参考になれば幸いです。
+>
+> ちなみに、MTSの Squeak EToys版でイメージを保存するためのワールドメニューの出し方なんですが、
+>
+> 1. ワールドのハロを出して、上側の白いハロボタンをクリックするとメニューが出ます。
+> 2. メニューの中の「プリファレンス...」を選択するとプリファレンスの画面が出て来ます。
+> 3. 青い領域に並んでるカテゴリの中から「menus」を選択
+> 4. escapeKeyProducesMenu という項目をオンにする
+>
+> こうすると、エスケープキーを押すと従来と同じようなメニューが出て来ますので、イメージが保存出来ます。
+>
+>
+>
+> --
+>
+> On 2011/04/22, at 16:04, itikawa aiko wrote:
+>
+>> 林さん、丁寧な解説ありがとうございます。
+>>
+>> ということは、３．ｘを元にしていた２００５Ｊバージョンとは別に、全く新しい環境として作ったのが4.xバージョンということですね。
+>> 去年までは、２００５Ｊ２を使っていましたので、そちらの方が教育環境として洗練されているのは理解しているつもりです。
+>>
+>> 今まで１→２→３とバージョンアップしてきていたように思っていて、その先の４なのかなと思っていました。
+>> 確かに、今までと違い昔のプロジェクトが全く読み込めないということだったので、納得しました。
+>>
+>> そもそも今回４のバージョンを使おうと思ったのはフォントの問題からでした。
+>> 「みんなで・・・」のバージョンにしようかと思ったのですが、２００５Ｊ２などのようにイメージとして保存するのが大変そうに感じました。
+>> 授業としては、プロジェクトよりも、イメージとして保存できた方が都合がよいのです・・・。
+>> フォントインストールも調べて試してみましたが、エラーがでてうまくいきませんでした。
+>>
+>> とにかく、今 $^$G$N#2#0#0#5J2を使い続けた方が良さそうですね。
+>> がんばります！！
+>>
+>> pika（市川愛子）
+>>
+>
+>
+>
+
+From ume ＠ softumeya.com  Sat Apr 23 22:10:32 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sat, 23 Apr 2011 22:10:32 +0900
+Subject: [Squeak-ja: 4524] Re:
+	Seaside3.xについてご質問
+In-Reply-To: <9755D5BB-7E54-42D5-866C-DF8568F9C447@tba.t-com.ne.jp>
+References: <9755D5BB-7E54-42D5-866C-DF8568F9C447@tba.t-com.ne.jp>
+Message-ID: <BANLkTikV4yZ0d80vb6jOc1QKGicz2CESVQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+isolate:ですが3系ではうまく動かないことが判明しています。これを直すにはせっかくきれいにした部分をHackしなければならず、開発者も悩んでいるといったところです。(で、変な動きをするよりはということで一時的に削除されました)
+http://code.google.com/p/seaside/issues/detail?id=553
+
+雰囲気としてはしばらく復活するまで待たなければならないのではないでしょうか。
+
+ではでは。
+
+2011年4月23日10:02 佐藤 弘一 <sato_hirokazu ＠ tba.t-com.ne.jp>:
+> こんにちは。佐藤です。
+> seaside についてご質問があり投稿します。
+> Seaside.stで最新のSeasideのイメージを落としましたが、
+> Pharoのイメージ(Seaside3.04)にisolate: メソッドが存在しないようです。
+> 　※Squeakのイメージ(Seaside3.0)にはあります。
+> 　isolate: メソッドは今後なくなるのでしょうか？
+> 　seaside.stのマイグレーションの情報をみても見当たらず。。。
+> そういった情報がありそうなところがあれば教えていただけるだけでも
+> ありがたいです。
+> よろしくお願いします。
+>
+> --
+>
+> Sincerely yours,
+>
+> Hirokazu Sato
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From sato_hirokazu ＠ tba.t-com.ne.jp  Sun Apr 24 00:08:37 2011
+From: sato_hirokazu ＠ tba.t-com.ne.jp (Hirokazu Sato)
+Date: Sun, 24 Apr 2011 00:08:37 +0900
+Subject: [Squeak-ja: 4525] Re:
+ Seaside3.xについてご質問
+In-Reply-To: <BANLkTikV4yZ0d80vb6jOc1QKGicz2CESVQ@mail.gmail.com>
+References: <9755D5BB-7E54-42D5-866C-DF8568F9C447@tba.t-com.ne.jp>
+ <BANLkTikV4yZ0d80vb6jOc1QKGicz2CESVQ@mail.gmail.com>
+Message-ID: <F576870F-1203-4B71-827B-06247A214924@tba.t-com.ne.jp>
+
+梅澤さん
+
+こんばんは。
+早速のご回答ありがとうございます。
+根が深そうですね。。。
+また、リンクの情報もありがとうございます。
+...code.google.comの存在を今回初めて知りました。
+
+よろしくお願いします。
+
+
+On 2011/04/23, at 22:10, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+> 
+> isolate:ですが3系ではうまく動かないことが判明しています。これを直すにはせっかくきれいにした部分をHackしなければならず、開発者も悩んでいるといったところです。(で、変な動きをするよりはということで一時的に削除されました)
+> http://code.google.com/p/seaside/issues/detail?id=553
+> 
+> 雰囲気としてはしばらく復活するまで待たなければならないのではないでしょうか。
+> 
+> ではでは。
+> 
+> 2011年4月23日10:02 佐藤 弘一 <sato_hirokazu ＠ tba.t-com.ne.jp>:
+>> こんにちは。佐藤です。
+>> seaside についてご質問があり投稿します。
+>> Seaside.stで最新のSeasideのイメージを落としましたが、
+>> Pharoのイメージ(Seaside3.04)にisolate: メソッドが存在しないようです。
+>> 　※Squeakのイメージ(Seaside3.0)にはあります。
+>> 　isolate: メソッドは今後なくなるのでしょうか？
+>> 　seaside.stのマイグレーションの情報をみても見当たらず。。。
+>> そういった情報がありそうなところがあれば教えていただけるだけでも
+>> ありがたいです。
+>> よろしくお願いします。
+>> 
+>> --
+>> 
+>> Sincerely yours,
+>> 
+>> Hirokazu Sato
+> -- 
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+> 
+> 
+> 
+
+
+
+
+From ats777 ＠ gmail.com  Mon Apr 25 12:44:10 2011
+From: ats777 ＠ gmail.com (ats7)
+Date: Mon, 25 Apr 2011 12:44:10 +0900
+Subject: [Squeak-ja: 4526] Re:
+	iPadでSqueakは動きますか。
+In-Reply-To: <BANLkTim4qaYgvYETUoapGvks_NB_N=VUYg@mail.gmail.com>
+References: <000001cbfb34$f51de780$df59b680$@kyoto-inet.or.jp>
+ <ulizc6mec.wl%yoshiki@vpri.org>
+ <BANLkTim4qaYgvYETUoapGvks_NB_N=VUYg@mail.gmail.com>
+Message-ID: <BANLkTinaKNxJ=Lso2PvCQ9N5xDnpYwwLRQ@mail.gmail.com>
+
+2011年4月22日19:23 Kazuhiro ABE <abee.abe ＠ nifty.ne.jp>:
+> 阿部です。
+> Androidでも一応動くには動きます。
+> Andreasさんがとりあえず載せてから少し停滞していたのですが、ここに来て動きが出てきました。
+
+Galaxy Tabで試してみました。
+AndreasさんがMarketで配布されていたSqueakは操作できないなど十分に試せなかったのですが、
+こちらはかなり完成度が上がった印象を持ちました。これは個人プロジェクトなのでしょうか？
+ともかく今後に期待しています。
+
+ところで、TestDriveのTinyBenchmarkまで試せたのですが、ハロの出し方が分からず
+「Live Morphic Modifications」で止まっています。Galaxy Tabでは以下のようにボタンが
+割り当てられていると思うのですが、検索ボタンを押しても上手くハロが出せませんでした。
+
+レッドボタン＝画面タッチ
+イエローボタン＝戻るボタン
+ブルーボタン＝検索ボタン
+
+それと、スリープから復帰するとイメージ選択画面に戻ってしまいますね。
+
+ついでに、FlashベースのScratch Experimental Viewerとプログラミンも少し見てみました。
+前者はハードキー（矢印キーなど）に依存しない作品であれば十分見られそうですね。
+後者は全体的に動いているように見えるのですが、作品が再生できませんでした。
+
+From pikateu_14 ＠ hotmail.com  Mon Apr 25 17:22:42 2011
+From: pikateu_14 ＠ hotmail.com (itikawa aiko)
+Date: Mon, 25 Apr 2011 17:22:42 +0900
+Subject: [Squeak-ja: 4527] Re:
+ Squeak 4.2の日本語版
+In-Reply-To: <mailman.1.1303527603.7278.squeak-ja@smalltalk.jp>
+References: <mailman.1.1303527603.7278.squeak-ja@smalltalk.jp>
+Message-ID: <BAY166-w21A2E7E794DE232D2D8348E2960@phx.gbl>
+
+
+市川です。
+みなさんご指導ありがとうございます。
+ 
+ＭＴＳ版をもう一度試して実験してみましたが、私の学校の環境ではセキュリティやほかの問題でスムーズな導入が難しそうです。
+なので、２００５Ｊで進めていくことにしようと思います。
+ 
+そこで、２００５Ｊにフォントを追加する方法を教えていただきたいです。
+ＴＴＣ〜のコマンドをDoitすることはやってみましたが、
+2009年くらいに話題にされていたように、やはりエラーが出てしまいます。
+ 
+以前パッチを作っていただいていたようですが、そのページもいまはなくなってしまっているようです。
+ 
+すみませんが、よろしくお願いします。
+ 
+市川愛子 		 	   		  
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110425/41aa94e9/attachment.htm>
+
+From abee ＠ squeakland.jp  Mon Apr 25 20:47:52 2011
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Mon, 25 Apr 2011 20:47:52 +0900
+Subject: [Squeak-ja: 4528]
+	Scratch Day 2011 in Tokyo 開催のお知らせ
+Message-ID: <BANLkTimifsPCWYz0EmPeE85wNF6dETgggg@mail.gmail.com>
+
+こんにちは、阿部です。
+この度、皆様のご協力により、以下の要領で Scratch Day 2011 in Tokyo を開催する運びとなりました。
+ぜひご参加ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+-----
+Scratch Day 2011 in Tokyo
+スクラッチデー 2011 イン 東京
+「出会う・分かち合う・学び合う」
+http://scratch-ja.org/scratch-day-2011-in-tokyo
+
+MIT(マサチューセッツ工科大学)メディアラボ・ライフロングキンダーガーテンが開発した教育用プログラミング言語環境「Scratch(スクラッチ)」。「想像・プログラミング・共有」をスローガンに、すでに世界中で80万人が利用し、180万個の作品が作られています。これらの作品はネットで公開され、ゲームやアニメーション、シミュレーション、物語、音楽など多岐に渡っています(http://scratch.mit.edu/)。多言語化も行われており、日本でも各地の小中高校、大学、NPOなどで広く使われています。
+この度、MITの呼びかけにより、5月21日(土)に世界各地で同時に第3回「Scratch
+Day」を行うことになりました(http://day.scratch.mit.edu/)。これを受けて、東京では「Scratch Day
+2011 in Tokyo (SD2011Tokyo)」を開催します。
+SD2011Tokyoでは、教育関係者、保護者、そして子供たちのために「セミナー」「ポスター展示」「ワークショップ」を行います。ぜひ、多くの人と「出会い」、経験を「分かち合って」、お互いに「学び合って」もらえればと思います。
+入場無料、ワークショップ以外は事前登録不要です。会場で多くの方とお会いできることを楽しみにしています。
+
+■ 会場
+青山学院アスタジオ B1
+〒150-0001 東京都渋谷区神宮前5-47-11
+東京メトロ銀座線・半蔵門線・千代田線表参道駅B2出口より徒歩5分
+表参道駅より渋谷方向へ。無印良品を右折。直進し左手。
+http://www.aoyamagakuin.jp/practice/redevelopment/project/astudio.html
+
+■ 日時
+2011年5月21日(土) 10:00-15:30
+
+■ 主催
+Scratch Day 2011 in Tokyo実行委員会
+scratch.ja ＠ gmail.com
+
+■ プログラム
+セミナー、ポスター展示、ワークショップを並列で行います。ポスター展示(ホワイエ)は常設です。ワークショップには事前の登録が必要です。
+
+□ セミナー (ホール)
+10:00 開会の挨拶
+10:10 Scratchの最新動向
+10:35 モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望
+11:00 World Museum Project —Scratchを用いた大学間コラボレーションの事例報告—
+11:25 昼休憩
+12:55 東京都市大学のSCRATCHへの取り組み
+13:20 Scratchを活用した授業とロボット制御例の紹介
+13:45 アフタースクール教室でのスクラッチ事例
+14:10 Scratchを用いた小学校授業の実践
+14:35 内モンゴルの学校におけるスクラッチの指導について 〜異文化理解を目指した活動のデザインと実践
+15:00 子供ワークショップ発表
+15:20 閉会の挨拶
+15:30 終了
+
+□ ワークショップ (講義室)
+10:10 大人ワークショップ
+11:25 昼休憩
+12:55 子供ワークショップ
+15:00 子供ワークショップ発表
+15:30 終了
+
+■ セミナー (ホール)
+セミナーでは、各地で実際にScratchを活用されている皆さんから、その使い方や授業への導入方法、実践事例、具体的なワークショップの進め方などについて発表していただきます。
+
+□ サイバー大学　阿部和広
+「Scratchの最新動向」
+
+□ 青山学院大学　伊藤一成
+「モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望」
+
+□ 津田塾大学　吉田葵 杉浦学
+「World Museum Project —Scratchを用いた大学間コラボレーションの事例報告—」
+
+□ 東京都市大学環境情報学部　小池星多
+「東京都市大学のSCRATCHへの取り組み」
+
+□ 山梨学院大学　伊藤栄一郎
+「Scratchを活用した授業とロボット制御例の紹介」
+
+□ ラーニングセンター新浦安　君塚広
+「アフタースクール教室でのスクラッチ事例」
+
+□ 大阪大学大学院人間科学研究科　森秀樹
+「Scratchを用いた小学校授業の実践」
+
+□ 埼玉大学教育学部学校教育臨床専修　原田健人
+「内モンゴルの学校におけるスクラッチの指導について〜異文化理解を目指した活動のデザインと実践」
+
+■ ポスター展示 (ホワイエ)
+ポスター展示では、日頃の活動や研究について、ポスターによる説明と実機によるデモ、作品の展示などを行います。経験を共有する場としてお使いください。
+
+□ 大阪市立新北野中学校　大藤泰生
+「Scratchによる１分間ゲームの制作」
+
+□ 埼玉県所沢市立松井小学校　寳迫芳人
+「フィジカル・コンピューティング環境を活用したロボット制御の学習」
+
+□ 他セミナー発表の皆さん(一部)
+
+■ ワークショップ (講義室)
+ワークショップは、Scratchを使ったことのない大人のためのワークショップと、Scratchで遊んでみたい子供のためのワークショップをそれぞれ行います。大人ワークショップでは初歩から基本操作まで、子供ワークショップではテーマを決めての作品作りを行い、最後にセミナー会場で発表します。Scratchの可能性を現在進行形でご覧ください。
+
+□ 大人ワークショップ
+多摩美術大学研究員・青山学院大学非常勤講師 横川耕二
+対象: 初心者の方 10名
+
+□ 子供ワークショップ
+こどもプログラミングサークル スクラッチ 倉本大資
+対象: 小中高大学生 10名
+
+ワークショップは事前の申込が必要です。申し込み方法は後日Webでご案内します(http://scratch-ja.org/scratch-day-2011-in-tokyo)。
+-----
+
+From jg1gwl ＠ mx3.ttcn.ne.jp  Mon Apr 25 22:11:16 2011
+From: jg1gwl ＠ mx3.ttcn.ne.jp (SUGIMOTO Kenji)
+Date: Mon, 25 Apr 2011 22:11:16 +0900
+Subject: [Squeak-ja: 4529] Re:
+	Scratch Day 2011 in Tokyo 開催のお知らせ
+References: <BANLkTimifsPCWYz0EmPeE85wNF6dETgggg@mail.gmail.com>
+Message-ID: <A0E41FEE00B547EABDA720890F96CEB9@LENOVO0DFC6E3B>
+
+阿部さん、世田谷でお世話になっている杉本です。
+
+素晴らしい催しですね。おめでとうございます。そして有難うございます。
+子どもたちと関わっている私たちばかりでなく、子どもたちも参加させたいです。
+小学校での第一回教室が5月14日なので、そのときに宣伝します。
+
+----- Original Message ----- 
+From: "Kazuhiro ABE" <abee ＠ squeakland.jp>
+To: "Squeak discussion in Japanese" <squeak-ja ＠ smalltalk.jp>
+Sent: Monday, April 25, 2011 8:47 PM
+Subject: [Squeak-ja: 4528]Scratch Day 2011 in Tokyo 開催のお知らせ
+
+
+> こんにちは、阿部です。
+> この度、皆様のご協力により、以下の要領で Scratch Day 2011 in Tokyo を開催する運びとなりました。
+> ぜひご参加ください。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>
+> -----
+> Scratch Day 2011 in Tokyo
+> スクラッチデー 2011 イン 東京
+> 「出会う・分かち合う・学び合う」
+> http://scratch-ja.org/scratch-day-2011-in-tokyo
+>
+> MIT(マサチューセッツ工科大学)メディアラボ・ライフロングキンダーガーテンが開発した教育用プログラミング言語環境「Scratch(スクラッチ)」。「想像・プログラミング・共有」をスローガンに、すでに世界中で80万人が利用し、180万個の作品が作られています。これらの作品はネットで公開され、ゲームやアニメーション、シミュレーション、物語、音楽など多岐に渡っています(http://scratch.mit.edu/)。多言語化も行われており、日本でも各地の小中高校、大学、NPOなどで広く使われています。
+> この度、MITの呼びかけにより、5月21日(土)に世界各地で同時に第3回「Scratch
+> Day」を行うことになりました(http://day.scratch.mit.edu/)。これを受けて、東京では「Scratch Day
+> 2011 in Tokyo (SD2011Tokyo)」を開催します。
+> SD2011Tokyoでは、教育関係者、保護者、そして子供たちのために「セミナー」「ポスター展示」「ワークショップ」を行います。ぜひ、多くの人と「出会い」、経験を「分かち合って」、お互いに「学び合って」もらえればと思います。
+> 入場無料、ワークショップ以外は事前登録不要です。会場で多くの方とお会いできることを楽しみにしています。
+>
+> ■ 会場
+> 青山学院アスタジオ B1
+> 〒150-0001 東京都渋谷区神宮前5-47-11
+> 東京メトロ銀座線・半蔵門線・千代田線表参道駅B2出口より徒歩5分
+> 表参道駅より渋谷方向へ。無印良品を右折。直進し左手。
+> http://www.aoyamagakuin.jp/practice/redevelopment/project/astudio.html
+>
+> ■ 日時
+> 2011年5月21日(土) 10:00-15:30
+>
+> ■ 主催
+> Scratch Day 2011 in Tokyo実行委員会
+> scratch.ja ＠ gmail.com
+>
+> ■ プログラム
+> セミナー、ポスター展示、ワークショップを並列で行います。ポスター展示(ホワイエ)は常設です。ワークショップには事前の登録が必要です。
+>
+> □ セミナー (ホール)
+> 10:00 開会の挨拶
+> 10:10 Scratchの最新動向
+> 10:35 モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望
+> 11:00 World Museum Project —Scratchを用いた大学間コラボレーションの事例報告—
+> 11:25 昼休憩
+> 12:55 東京都市大学のSCRATCHへの取り組み
+> 13:20 Scratchを活用した授業とロボット制御例の紹介
+> 13:45 アフタースクール教室でのスクラッチ事例
+> 14:10 Scratchを用いた小学校授業の実践
+> 14:35 内モンゴルの学校におけるスクラッチの指導について 〜異文化理解を目指した活動のデザインと実践
+> 15:00 子供ワークショップ発表
+> 15:20 閉会の挨拶
+> 15:30 終了
+>
+> □ ワークショップ (講義室)
+> 10:10 大人ワークショップ
+> 11:25 昼休憩
+> 12:55 子供ワークショップ
+> 15:00 子供ワークショップ発表
+> 15:30 終了
+>
+> ■ セミナー (ホール)
+> セミナーでは、各地で実際にScratchを活用されている皆さんから、その使い方や授業への導入方法、実践事例、具体的なワークショップの進め方などについて発表していただきます。
+>
+> □ サイバー大学　阿部和広
+> 「Scratchの最新動向」
+>
+> □ 青山学院大学　伊藤一成
+> 「モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望」
+>
+> □ 津田塾大学　吉田葵 杉浦学
+> 「World Museum Project —Scratchを用いた大学間コラボレーションの事例報告—」 
+> 
+>
+> □ 東京都市大学環境情報学部　小池星多
+> 「東京都市大学のSCRATCHへの取り組み」
+>
+> □ 山梨学院大学　伊藤栄一郎
+> 「Scratchを活用した授業とロボット制御例の紹介」
+>
+> □ ラーニングセンター新浦安　君塚広
+> 「アフタースクール教室でのスクラッチ事例」
+>
+> □ 大阪大学大学院人間科学研究科　森秀樹
+> 「Scratchを用いた小学校授業の実践」
+>
+> □ 埼玉大学教育学部学校教育臨床専修　原田健人
+> 「内モンゴルの学校におけるスクラッチの指導について〜異文化理解を目指した活動のデザインと実践」
+>
+> ■ ポスター展示 (ホワイエ)
+> ポスター展示では、日頃の活動や研究について、ポスターによる説明と実機によるデモ、作品の展示などを行います。経験を共有する場としてお使いください。
+>
+> □ 大阪市立新北野中学校　大藤泰生
+> 「Scratchによる１分間ゲームの制作」
+>
+> □ 埼玉県所沢市立松井小学校　寳迫芳人
+> 「フィジカル・コンピューティング環境を活用したロボット制御の学習」
+>
+> □ 他セミナー発表の皆さん(一部)
+>
+> ■ ワークショップ (講義室)
+> ワークショップは、Scratchを使ったことのない大人のためのワークショップと、Scratchで遊んでみたい子供のためのワークショップをそれぞれ行います。大人ワークショップでは初歩から基本操作まで、子供ワークショップではテーマを決めての作品作りを行い、最後にセミナー会場で発表します。Scratchの可能性を現在進行形でご覧ください。
+>
+> □ 大人ワークショップ
+> 多摩美術大学研究員・青山学院大学非常勤講師 横川耕二
+> 対象: 初心者の方 10名
+>
+> □ 子供ワークショップ
+> こどもプログラミングサークル スクラッチ 倉本大資
+> 対象: 小中高大学生 10名
+>
+> ワークショップは事前の申込が必要です。申し込み方法は後日Webでご案内します(http://scratch-ja.org/scratch-day-2011-in-tokyo)。 
+> 
+> -----
+> 
+
+
+From abee.abe ＠ nifty.ne.jp  Mon Apr 25 22:46:56 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon, 25 Apr 2011 22:46:56 +0900
+Subject: [Squeak-ja: 4530] Re:
+	Scratch Day 2011 in Tokyo 開催のお知らせ
+In-Reply-To: <A0E41FEE00B547EABDA720890F96CEB9@LENOVO0DFC6E3B>
+References: <BANLkTimifsPCWYz0EmPeE85wNF6dETgggg@mail.gmail.com>
+ <A0E41FEE00B547EABDA720890F96CEB9@LENOVO0DFC6E3B>
+Message-ID: <BANLkTinkjtO1aGru6VLSGiatYDNNCsTwKA@mail.gmail.com>
+
+お世話になっております。阿部です。
+ありがとうございます。
+ぜひ宣伝していただければと思います。
+
+私が何度かアメリカのScratch ＠ MITカンファレンスに参加して驚いたのは、大人と子供の区別をしないということでした。子供たちは普通にセッションに参加して意見を述べたり、パネルに出たり、ブースを構えてデモをしたりしていました。
+このようなイベントを日本で開く場合、子供はあくまでも「教えられる」対象であって、主体的で自立した存在とみなされることは稀だと思います。今回、どのくらいできるか分かりませんが、このイベントをScratch ＠ MITの精神で行いたいと考えています。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011年4月25日22:11 SUGIMOTO Kenji <jg1gwl ＠ mx3.ttcn.ne.jp>:
+> 阿部さん、世田谷でお世話になっている杉本です。
+>
+> 素晴らしい催しですね。おめでとうございます。そして有難うございます。
+> 子どもたちと関わっている私たちばかりでなく、子どもたちも参加させたいです。
+> 小学校での第一回教室が5月14日なので、そのときに宣伝します。
+>
+> ----- Original Message ----- From: "Kazuhiro ABE" <abee ＠ squeakland.jp>
+> To: "Squeak discussion in Japanese" <squeak-ja ＠ smalltalk.jp>
+> Sent: Monday, April 25, 2011 8:47 PM
+> Subject: [Squeak-ja: 4528]Scratch Day 2011 in Tokyo 開催のお知らせ
+>
+>
+>> こんにちは、阿部です。
+>> この度、皆様のご協力により、以下の要領で Scratch Day 2011 in Tokyo を開催する運びとなりました。
+>> ぜひご参加ください。
+>>
+>> //abee
+>> --
+>> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>>
+>> -----
+>> Scratch Day 2011 in Tokyo
+>> スクラッチデー 2011 イン 東京
+>> 「出会う・分かち合う・学び合う」
+>> http://scratch-ja.org/scratch-day-2011-in-tokyo
+>>
+>>
+>> MIT(マサチューセッツ工科大学)メディアラボ・ライフロングキンダーガーテンが開発した教育用プログラミング言語環境「Scratch(スクラッチ)」。「想像・プログラミング・共有」をスローガンに、すでに世界中で80万人が利用し、180万個の作品が作られています。これらの作品はネットで公開され、ゲームやアニメーション、シミュレーション、物語、音楽など多岐に渡っています(http://scratch.mit.edu/)。多言語化も行われており、日本でも各地の小中高校、大学、NPOなどで広く使われています。
+>> この度、MITの呼びかけにより、5月21日(土)に世界各地で同時に第3回「Scratch
+>> Day」を行うことになりました(http://day.scratch.mit.edu/)。これを受けて、東京では「Scratch Day
+>> 2011 in Tokyo (SD2011Tokyo)」を開催します。
+>>
+>> SD2011Tokyoでは、教育関係者、保護者、そして子供たちのために「セミナー」「ポスター展示」「ワークショップ」を行います。ぜひ、多くの人と「出会い」、経験を「分かち合って」、お互いに「学び合って」もらえればと思います。
+>> 入場無料、ワークショップ以外は事前登録不要です。会場で多くの方とお会いできることを楽しみにしています。
+>>
+>> ■ 会場
+>> 青山学院アスタジオ B1
+>> 〒150-0001 東京都渋谷区神宮前5-47-11
+>> 東京メトロ銀座線・半蔵門線・千代田線表参道駅B2出口より徒歩5分
+>> 表参道駅より渋谷方向へ。無印良品を右折。直進し左手。
+>> http://www.aoyamagakuin.jp/practice/redevelopment/project/astudio.html
+>>
+>> ■ 日時
+>> 2011年5月21日(土) 10:00-15:30
+>>
+>> ■ 主催
+>> Scratch Day 2011 in Tokyo実行委員会
+>> scratch.ja ＠ gmail.com
+>>
+>> ■ プログラム
+>> セミナー、ポスター展示、ワークショップを並列で行います。ポスター展示(ホワイエ)は常設です。ワークショップには事前の登録が必要です。
+>>
+>> □ セミナー (ホール)
+>> 10:00 開会の挨拶
+>> 10:10 Scratchの最新動向
+>> 10:35 モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望
+>> 11:00 World Museum Project —Scratchを用いた大学間コラボレーションの事例報告—
+>> 11:25 昼休憩
+>> 12:55 東京都市大学のSCRATCHへの取り組み
+>> 13:20 Scratchを活用した授業とロボット制御例の紹介
+>> 13:45 アフタースクール教室でのスクラッチ事例
+>> 14:10 Scratchを用いた小学校授業の実践
+>> 14:35 内モンゴルの学校におけるスクラッチの指導について 〜異文化理解を目指した活動のデザインと実践
+>> 15:00 子供ワークショップ発表
+>> 15:20 閉会の挨拶
+>> 15:30 終了
+>>
+>> □ ワークショップ (講義室)
+>> 10:10 大人ワークショップ
+>> 11:25 昼休憩
+>> 12:55 子供ワークショップ
+>> 15:00 子供ワークショップ発表
+>> 15:30 終了
+>>
+>> ■ セミナー (ホール)
+>>
+>> セミナーでは、各地で実際にScratchを活用されている皆さんから、その使い方や授業への導入方法、実践事例、具体的なワークショップの進め方などについて発表していただきます。
+>>
+>> □ サイバー大学　阿部和広
+>> 「Scratchの最新動向」
+>>
+>> □ 青山学院大学　伊藤一成
+>> 「モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望」
+>>
+>> □ 津田塾大学　吉田葵 杉浦学
+>> 「World Museum Project —Scratchを用いた大学間コラボレーションの事例報告—」
+>>
+>> □ 東京都市大学環境情報学部　小池星多
+>> 「東京都市大学のSCRATCHへの取り組み」
+>>
+>> □ 山梨学院大学　伊藤栄一郎
+>> 「Scratchを活用した授業とロボット制御例の紹介」
+>>
+>> □ ラーニングセンター新浦安　君塚広
+>> 「アフタースクール教室でのスクラッチ事例」
+>>
+>> □ 大阪大学大学院人間科学研究科　森秀樹
+>> 「Scratchを用いた小学校授業の実践」
+>>
+>> □ 埼玉大学教育学部学校教育臨床専修　原田健人
+>> 「内モンゴルの学校におけるスクラッチの指導について〜異文化理解を目指した活動のデザインと実践」
+>>
+>> ■ ポスター展示 (ホワイエ)
+>> ポスター展示では、日頃の活動や研究について、ポスターによる説明と実機によるデモ、作品の展示などを行います。経験を共有する場としてお使いください。
+>>
+>> □ 大阪市立新北野中学校　大藤泰生
+>> 「Scratchによる１分間ゲームの制作」
+>>
+>> □ 埼玉県所沢市立松井小学校　寳迫芳人
+>> 「フィジカル・コンピューティング環境を活用したロボット制御の学習」
+>>
+>> □ 他セミナー発表の皆さん(一部)
+>>
+>> ■ ワークショップ (講義室)
+>>
+>> ワークショップは、Scratchを使ったことのない大人のためのワークショップと、Scratchで遊んでみたい子供のためのワークショップをそれぞれ行います。大人ワークショップでは初歩から基本操作まで、子供ワークショップではテーマを決めての作品作りを行い、最後にセミナー会場で発表します。Scratchの可能性を現在進行形でご覧ください。
+>>
+>> □ 大人ワークショップ
+>> 多摩美術大学研究員・青山学院大学非常勤講師 横川耕二
+>> 対象: 初心者の方 10名
+>>
+>> □ 子供ワークショップ
+>> こどもプログラミングサークル スクラッチ 倉本大資
+>> 対象: 小中高大学生 10名
+>>
+>>
+>> ワークショップは事前の申込が必要です。申し込み方法は後日Webでご案内します(http://scratch-ja.org/scratch-day-2011-in-tokyo)。
+>> -----
+>>
+>
+>
+
+From abee.abe ＠ nifty.ne.jp  Mon Apr 25 22:55:59 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon, 25 Apr 2011 22:55:59 +0900
+Subject: [Squeak-ja: 4531] Re:
+	Squeak 4.2の日本語版
+In-Reply-To: <BAY166-w21A2E7E794DE232D2D8348E2960@phx.gbl>
+References: <mailman.1.1303527603.7278.squeak-ja@smalltalk.jp>
+ <BAY166-w21A2E7E794DE232D2D8348E2960@phx.gbl>
+Message-ID: <BANLkTi=B8yU9ZkpeQkjC38_Z7RdZWEbv5A@mail.gmail.com>
+
+こんにちは、阿部です。
+MTS版のセキュリティに関する問題とは、読み書きするファイルの場所が制限されているなどでしょうか。もしそうなら、それは設定可能です。
+
+TTCフォントの読み込みについて、具体的なフォントファイルの名前を教えてもらったほうが対応しやすいので、よろしければお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011/4/25 itikawa aiko <pikateu_14 ＠ hotmail.com>:
+> 市川です。
+> みなさんご指導ありがとうございます。
+>
+> ＭＴＳ版をもう一度試して実験してみましたが、私の学校の環境ではセキュリティやほかの問題でスムーズな導入が難しそうです。
+> なので、２００５Ｊで進めていくことにしようと思います。
+>
+> そこで、２００５Ｊにフォントを追加する方法を教えていただきたいです。
+> ＴＴＣ〜のコマンドをDoitすることはやってみましたが、
+> 2009年くらいに話題にされていたように、やはりエラーが出てしまいます。
+>
+> 以前パッチを作っていただいていたようですが、そのページもいまはなくなってしまっているようです。
+>
+> すみませんが、よろしくお願いします。
+>
+> 市川愛子
+>
+
+From jg1gwl ＠ mx3.ttcn.ne.jp  Mon Apr 25 23:54:13 2011
+From: jg1gwl ＠ mx3.ttcn.ne.jp (SUGIMOTO Kenji)
+Date: Mon, 25 Apr 2011 23:54:13 +0900
+Subject: [Squeak-ja: 4532] Re:
+	Scratch Day 2011 in Tokyo 開催のお知らせ
+References: <BANLkTimifsPCWYz0EmPeE85wNF6dETgggg@mail.gmail.com>
+ <A0E41FEE00B547EABDA720890F96CEB9@LENOVO0DFC6E3B>
+ <BANLkTinkjtO1aGru6VLSGiatYDNNCsTwKA@mail.gmail.com>
+Message-ID: <8409A564B5CB4390B497DBF4BDC1D5AE@LENOVO0DFC6E3B>
+
+阿部さん、杉本です。
+
+私たちはいまだに子どもたちとの付き合い方がわかっていませんが、いつのころからか 
+
+子どもたちに「教える」という精神がなくなっているのに気づいています。
+
+Scratch ＠ MIT精神に心から賛同します。
+
+----- Original Message ----- 
+From: "Kazuhiro ABE" <abee.abe ＠ nifty.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja ＠ smalltalk.jp>
+Sent: Monday, April 25, 2011 10:46 PM
+Subject: [Squeak-ja: 4530] Re:Scratch Day 2011 in Tokyo 開催のお知らせ
+
+
+> お世話になっております。阿部です。
+> ありがとうございます。
+> ぜひ宣伝していただければと思います。
+>
+> 私が何度かアメリカのScratch ＠ MITカンファレンスに参加して驚いたのは、大人と子供の区別をしないということでした。子供たちは普通にセッションに参加して意見を述べたり、パネルに出たり、ブースを構えてデモをしたりしていました。
+> このようなイベントを日本で開く場合、子供はあくまでも「教えられる」対象であって、主体的で自立した存在とみなされることは稀だと思います。今回、どのくらいできるか分かりませんが、このイベントをScratch ＠ MITの精神で行いたいと考えています。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>
+> 2011年4月25日22:11 SUGIMOTO Kenji <jg1gwl ＠ mx3.ttcn.ne.jp>:
+>> 阿部さん、世田谷でお世話になっている杉本です。
+>>
+>> 素晴らしい催しですね。おめでとうございます。そして有難うございます。
+>> 子どもたちと関わっている私たちばかりでなく、子どもたちも参加させたいです。 
+>> 
+>> 小学校での第一回教室が5月14日なので、そのときに宣伝します。
+>>
+>> ----- Original Message ----- From: "Kazuhiro ABE" <abee ＠ squeakland.jp>
+>> To: "Squeak discussion in Japanese" <squeak-ja ＠ smalltalk.jp>
+>> Sent: Monday, April 25, 2011 8:47 PM
+>> Subject: [Squeak-ja: 4528]Scratch Day 2011 in Tokyo 開催のお知らせ
+>>
+>>
+>>> こんにちは、阿部です。
+>>> この度、皆様のご協力により、以下の要領で Scratch Day 2011 in Tokyo を開催する運びとなりました。
+>>> ぜひご参加ください。
+>>>
+>>> //abee
+>>> --
+>>> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>>>
+>>> -----
+>>> Scratch Day 2011 in Tokyo
+>>> スクラッチデー 2011 イン 東京
+>>> 「出会う・分かち合う・学び合う」
+>>> http://scratch-ja.org/scratch-day-2011-in-tokyo
+>>>
+>>>
+>>> MIT(マサチューセッツ工科大学)メディアラボ・ライフロングキンダーガーテンが開発した教育用プログラミング言語環境「Scratch(スクラッチ)」。「想像・プログラミング・共有」をスローガンに、すでに世界中で80万人が利用し、180万個の作品が作られています。これらの作品はネットで公開され、ゲームやアニメーション、シミュレーション、物語、音楽など多岐に渡っています(http://scratch.mit.edu/)。多言語化も行われており、日本でも各地の小中高校、大学、NPOなどで広く使われています。
+>>> この度、MITの呼びかけにより、5月21日(土)に世界各地で同時に第3回「Scratch
+>>> Day」を行うことになりました(http://day.scratch.mit.edu/)。これを受けて、東京では「Scratch Day
+>>> 2011 in Tokyo (SD2011Tokyo)」を開催します。
+>>>
+>>> SD2011Tokyoでは、教育関係者、保護者、そして子供たちのために「セミナー」「ポスター展示」「ワークショップ」を行います。ぜひ、多くの人と「出会い」、経験を「分かち合って」、お互いに「学び合って」もらえればと思います。
+>>> 入場無料、ワークショップ以外は事前登録不要です。会場で多くの方とお会いできることを楽しみにしています。
+>>>
+>>> ■ 会場
+>>> 青山学院アスタジオ B1
+>>> 〒150-0001 東京都渋谷区神宮前5-47-11
+>>> 東京メトロ銀座線・半蔵門線・千代田線表参道駅B2出口より徒歩5分
+>>> 表参道駅より渋谷方向へ。無印良品を右折。直進し左手。
+>>> http://www.aoyamagakuin.jp/practice/redevelopment/project/astudio.html
+>>>
+>>> ■ 日時
+>>> 2011年5月21日(土) 10:00-15:30
+>>>
+>>> ■ 主催
+>>> Scratch Day 2011 in Tokyo実行委員会
+>>> scratch.ja ＠ gmail.com
+>>>
+>>> ■ プログラム
+>>> セミナー、ポスター展示、ワークショップを並列で行います。ポスター展示(ホワイエ)は常設です。ワークショップには事前の登録が必要です。
+>>>
+>>> □ セミナー (ホール)
+>>> 10:00 開会の挨拶
+>>> 10:10 Scratchの最新動向
+>>> 10:35 モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望
+>>> 11:00 World Museum Project —Scratchを用いた大学間コラボレーションの事例報告—
+>>> 11:25 昼休憩
+>>> 12:55 東京都市大学のSCRATCHへの取り組み
+>>> 13:20 Scratchを活用した授業とロボット制御例の紹介
+>>> 13:45 アフタースクール教室でのスクラッチ事例
+>>> 14:10 Scratchを用いた小学校授業の実践
+>>> 14:35 内モンゴルの学校におけるスクラッチの指導について 〜異文化理解を目指した活動のデザインと実践
+>>> 15:00 子供ワークショップ発表
+>>> 15:20 閉会の挨拶
+>>> 15:30 終了
+>>>
+>>> □ ワークショップ (講義室)
+>>> 10:10 大人ワークショップ
+>>> 11:25 昼休憩
+>>> 12:55 子供ワークショップ
+>>> 15:00 子供ワークショップ発表
+>>> 15:30 終了
+>>>
+>>> ■ セミナー (ホール)
+>>>
+>>> セミナーでは、各地で実際にScratchを活用されている皆さんから、その使い方や授業への導入方法、実践事例、具体的なワークショップの進め方などについて発表していただきます。
+>>>
+>>> □ サイバー大学　阿部和広
+>>> 「Scratchの最新動向」
+>>>
+>>> □ 青山学院大学　伊藤一成
+>>> 「モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望」
+>>>
+>>> □ 津田塾大学　吉田葵 杉浦学
+>>> 「World Museum Project —Scratchを用いた大学間コラボレーションの事例報告—」 
+>>> 
+>>>
+>>> □ 東京都市大学環境情報学部　小池星多
+>>> 「東京都市大学のSCRATCHへの取り組み」
+>>>
+>>> □ 山梨学院大学　伊藤栄一郎
+>>> 「Scratchを活用した授業とロボット制御例の紹介」
+>>>
+>>> □ ラーニングセンター新浦安　君塚広
+>>> 「アフタースクール教室でのスクラッチ事例」
+>>>
+>>> □ 大阪大学大学院人間科学研究科　森秀樹
+>>> 「Scratchを用いた小学校授業の実践」
+>>>
+>>> □ 埼玉大学教育学部学校教育臨床専修　原田健人
+>>> 「内モンゴルの学校におけるスクラッチの指導について〜異文化理解を目指した活動のデザインと実践」
+>>>
+>>> ■ ポスター展示 (ホワイエ)
+>>> ポスター展示では、日頃の活動や研究について、ポスターによる説明と実機によるデモ、作品の展示などを行います。経験を共有する場としてお使いください。
+>>>
+>>> □ 大阪市立新北野中学校　大藤泰生
+>>> 「Scratchによる１分間ゲームの制作」
+>>>
+>>> □ 埼玉県所沢市立松井小学校　寳迫芳人
+>>> 「フィジカル・コンピューティング環境を活用したロボット制御の学習」
+>>>
+>>> □ 他セミナー発表の皆さん(一部)
+>>>
+>>> ■ ワークショップ (講義室)
+>>>
+>>> ワークショップは、Scratchを使ったことのない大人のためのワークショップと、Scratchで遊んでみたい子供のためのワークショップをそれぞれ行います。大人ワークショップでは初歩から基本操作まで、子供ワークショップではテーマを決めての作品作りを行い、最後にセミナー会場で発表します。Scratchの可能性を現在進行形でご覧ください。
+>>>
+>>> □ 大人ワークショップ
+>>> 多摩美術大学研究員・青山学院大学非常勤講師 横川耕二
+>>> 対象: 初心者の方 10名
+>>>
+>>> □ 子供ワークショップ
+>>> こどもプログラミングサークル スクラッチ 倉本大資
+>>> 対象: 小中高大学生 10名
+>>>
+>>>
+>>> ワークショップは事前の申込が必要です。申し込み方法は後日Webでご案内します(http://scratch-ja.org/scratch-day-2011-in-tokyo)。
+>>> -----
+>>>
+>>
+>>
+> 
+
+
+From aki0805 ＠ dance.ocn.ne.jp  Tue Apr 26 00:31:23 2011
+From: aki0805 ＠ dance.ocn.ne.jp (秋山昭子)
+Date: Tue, 26 Apr 2011 00:31:23 +0900
+Subject: [Squeak-ja: 4533] Re:
+	Scratch Day 2011 in Tokyo 開催のお知らせ
+In-Reply-To: <8409A564B5CB4390B497DBF4BDC1D5AE@LENOVO0DFC6E3B>
+References: <BANLkTimifsPCWYz0EmPeE85wNF6dETgggg@mail.gmail.com>
+ <A0E41FEE00B547EABDA720890F96CEB9@LENOVO0DFC6E3B>
+ <BANLkTinkjtO1aGru6VLSGiatYDNNCsTwKA@mail.gmail.com>
+ <8409A564B5CB4390B497DBF4BDC1D5AE@LENOVO0DFC6E3B>
+Message-ID: <000001cc035d$d5b96280$812c2780$@ocn.ne.jp>
+
+阿部様
+新人の秋山です。メール拝見させて頂き、勉強させて頂いてます。
+夏休みにはじめて子だもたちと遊べるのを楽しみにテキスト作りします。
+
+子供たちの接し方も不安ですが、初心を忘れず（多分教えられることが多いと思いま
+すがあ）楽しみたいと思います。
+有難うございました。
+秋山です
+
+-----Original Message-----
+From: squeak-ja-bounces ＠ smalltalk.jp [mailto:squeak-ja-bounces ＠ smalltalk.jp]
+On Behalf Of SUGIMOTO Kenji
+Sent: Monday, April 25, 2011 11:54 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4532] Re: Scratch Day 2011 in Tokyo 開催のお知らせ
+
+阿部さん、杉本です。
+
+私たちはいまだに子どもたちとの付き合い方がわかっていませんが、いつのころから
+か
+
+子どもたちに「教える」という精神がなくなっているのに気づいています。
+
+Scratch ＠ MIT精神に心から賛同します。
+
+----- Original Message -----
+From: "Kazuhiro ABE" <abee.abe ＠ nifty.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja ＠ smalltalk.jp>
+Sent: Monday, April 25, 2011 10:46 PM
+Subject: [Squeak-ja: 4530] Re:Scratch Day 2011 in Tokyo 開催のお知らせ
+
+
+> お世話になっております。阿部です。
+> ありがとうございます。
+> ぜひ宣伝していただければと思います。
+>
+> 私が何度かアメリカのScratch ＠ MITカンファレンスに参加して驚いたのは、大人と
+子供の区別をしないということでした。子供たちは普通にセッションに参加して意見
+を述べたり、パネルに出たり、ブースを構えてデモをしたりしていました。
+> このようなイベントを日本で開く場合、子供はあくまでも「教えられる」対象で
+あって、主体的で自立した存在とみなされることは稀だと思います。今回、どのくら
+いできるか分かりませんが、このイベントをScratch ＠ MITの精神で行いたいと考えて
+います。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>
+> 2011年4月25日22:11 SUGIMOTO Kenji <jg1gwl ＠ mx3.ttcn.ne.jp>:
+>> 阿部さん、世田谷でお世話になっている杉本です。
+>>
+>> 素晴らしい催しですね。おめでとうございます。そして有難うございます。
+>> 子どもたちと関わっている私たちばかりでなく、子どもたちも参加させたいで
+す。
+>>
+>> 小学校での第一回教室が5月14日なので、そのときに宣伝します。
+>>
+>> ----- Original Message ----- From: "Kazuhiro ABE" <abee ＠ squeakland.jp>
+>> To: "Squeak discussion in Japanese" <squeak-ja ＠ smalltalk.jp>
+>> Sent: Monday, April 25, 2011 8:47 PM
+>> Subject: [Squeak-ja: 4528]Scratch Day 2011 in Tokyo 開催のお知らせ
+>>
+>>
+>>> こんにちは、阿部です。
+>>> この度、皆様のご協力により、以下の要領で Scratch Day 2011 in Tokyo を開
+催する運びとなりました。
+>>> ぜひご参加ください。
+>>>
+>>> //abee
+>>> --
+>>> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>>>
+>>> -----
+>>> Scratch Day 2011 in Tokyo
+>>> スクラッチデー 2011 イン 東京
+>>> 「出会う・分かち合う・学び合う」
+>>> http://scratch-ja.org/scratch-day-2011-in-tokyo
+>>>
+>>>
+>>> MIT(マサチューセッツ工科大学)メディアラボ・ライフロングキンダーガーテン
+が開発した教育用プログラミング言語環境「Scratch(スクラッチ)」。「想像・プロ
+グラミング・共有」をスローガンに、すでに世界中で80万人が利用し、180万個の作
+品が作られています。これらの作品はネットで公開され、ゲームやアニメーション、
+シミュレーション、物語、音楽など多岐に渡っています
+(http://scratch.mit.edu/)。多言語化も行われており、日本でも各地の小中高校、
+大学、NPOなどで広く使われています。
+>>> この度、MITの呼びかけにより、5月21日(土)に世界各地で同時に第3回「Scratch
+>>> Day」を行うことになりました(http://day.scratch.mit.edu/)。これを受けて、
+東京では「Scratch Day
+>>> 2011 in Tokyo (SD2011Tokyo)」を開催します。
+>>>
+>>> SD2011Tokyoでは、教育関係者、保護者、そして子供たちのために「セミナー」
+「ポスター展示」「ワークショップ」を行います。ぜひ、多くの人と「出会い」、経
+験を「分かち合って」、お互いに「学び合って」もらえればと思います。
+>>> 入場無料、ワークショップ以外は事前登録不要です。会場で多くの方とお会いで
+きることを楽しみにしています。
+>>>
+>>> ■ 会場
+>>> 青山学院アスタジオ B1
+>>> 〒150-0001 東京都渋谷区神宮前5-47-11
+>>> 東京メトロ銀座線・半蔵門線・千代田線表参道駅B2出口より徒歩5分
+>>> 表参道駅より渋谷方向へ。無印良品を右折。直進し左手。
+>>> http://www.aoyamagakuin.jp/practice/redevelopment/project/astudio.html
+>>>
+>>> ■ 日時
+>>> 2011年5月21日(土) 10:00-15:30
+>>>
+>>> ■ 主催
+>>> Scratch Day 2011 in Tokyo実行委員会
+>>> scratch.ja ＠ gmail.com
+>>>
+>>> ■ プログラム
+>>> セミナー、ポスター展示、ワークショップを並列で行います。ポスター展示(ホ
+ワイエ)は常設です。ワークショップには事前の登録が必要です。
+>>>
+>>> □ セミナー (ホール)
+>>> 10:00 開会の挨拶
+>>> 10:10 Scratchの最新動向
+>>> 10:35 モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望
+>>> 11:00 World Museum Project —Scratchを用いた大学間コラボレーションの事例
+報告—
+>>> 11:25 昼休憩
+>>> 12:55 東京都市大学のSCRATCHへの取り組み
+>>> 13:20 Scratchを活用した授業とロボット制御例の紹介
+>>> 13:45 アフタースクール教室でのスクラッチ事例
+>>> 14:10 Scratchを用いた小学校授業の実践
+>>> 14:35 内モンゴルの学校におけるスクラッチの指導について 〜異文化理解を目
+指した活動のデザインと実践
+>>> 15:00 子供ワークショップ発表
+>>> 15:20 閉会の挨拶
+>>> 15:30 終了
+>>>
+>>> □ ワークショップ (講義室)
+>>> 10:10 大人ワークショップ
+>>> 11:25 昼休憩
+>>> 12:55 子供ワークショップ
+>>> 15:00 子供ワークショップ発表
+>>> 15:30 終了
+>>>
+>>> ■ セミナー (ホール)
+>>>
+>>> セミナーでは、各地で実際にScratchを活用されている皆さんから、その使い方
+や授業への導入方法、実践事例、具体的なワークショップの進め方などについて発表
+していただきます。
+>>>
+>>> □ サイバー大学　阿部和広
+>>> 「Scratchの最新動向」
+>>>
+>>> □ 青山学院大学　伊藤一成
+>>> 「モバイルネット社会を見据えたScratch活用授業の紹介と今後の展望」
+>>>
+>>> □ 津田塾大学　吉田葵 杉浦学
+>>> 「World Museum Project —Scratchを用いた大学間コラボレーションの事例報告
+—」
+>>>
+>>>
+>>> □ 東京都市大学環境情報学部　小池星多
+>>> 「東京都市大学のSCRATCHへの取り組み」
+>>>
+>>> □ 山梨学院大学　伊藤栄一郎
+>>> 「Scratchを活用した授業とロボット制御例の紹介」
+>>>
+>>> □ ラーニングセンター新浦安　君塚広
+>>> 「アフタースクール教室でのスクラッチ事例」
+>>>
+>>> □ 大阪大学大学院人間科学研究科　森秀樹
+>>> 「Scratchを用いた小学校授業の実践」
+>>>
+>>> □ 埼玉大学教育学部学校教育臨床専修　原田健人
+>>> 「内モンゴルの学校におけるスクラッチの指導について〜異文化理解を目指した
+活動のデザインと実践」
+>>>
+>>> ■ ポスター展示 (ホワイエ)
+>>> ポスター展示では、日頃の活動や研究について、ポスターによる説明と実機によ
+るデモ、作品の展示などを行います。経験を共有する場としてお使いください。
+>>>
+>>> □ 大阪市立新北野中学校　大藤泰生
+>>> 「Scratchによる１分間ゲームの制作」
+>>>
+>>> □ 埼玉県所沢市立松井小学校　寳迫芳人
+>>> 「フィジカル・コンピューティング環境を活用したロボット制御の学習」
+>>>
+>>> □ 他セミナー発表の皆さん(一部)
+>>>
+>>> ■ ワークショップ (講義室)
+>>>
+>>> ワークショップは、Scratchを使ったことのない大人のためのワークショップ
+と、Scratchで遊んでみたい子供のためのワークショップをそれぞれ行います。大人
+ワークショップでは初歩から基本操作まで、子供ワークショップではテーマを決めて
+の作品作りを行い、最後にセミナー会場で発表します。Scratchの可能性を現在進行
+形でご覧ください。
+>>>
+>>> □ 大人ワークショップ
+>>> 多摩美術大学研究員・青山学院大学非常勤講師 横川耕二
+>>> 対象: 初心者の方 10名
+>>>
+>>> □ 子供ワークショップ
+>>> こどもプログラミングサークル スクラッチ 倉本大資
+>>> 対象: 小中高大学生 10名
+>>>
+>>>
+>>> ワークショップは事前の申込が必要です。申し込み方法は後日Webでご案内しま
+す(http://scratch-ja.org/scratch-day-2011-in-tokyo)。
+>>> -----
+>>>
+>>
+>>
+>
+
+
+
+
+From masahiko ＠ hyogo-dai.ac.jp  Tue Apr 26 09:52:14 2011
+From: masahiko ＠ hyogo-dai.ac.jp (masahiko)
+Date: Tue, 26 Apr 2011 09:52:14 +0900
+Subject: [Squeak-ja: 4534] Re:
+ Squeak 4.2の日本語版
+In-Reply-To: <BAY166-w21A2E7E794DE232D2D8348E2960@phx.gbl>
+References: <mailman.1.1303527603.7278.squeak-ja@smalltalk.jp>
+ <BAY166-w21A2E7E794DE232D2D8348E2960@phx.gbl>
+Message-ID: <4DB6173E.1010000@hyogo-dai.ac.jp>
+
+田中＠兵庫大学といいます
+
+私は squeakland.org 版の version 4.1 を使って授業を行っています。
+Etoys.ini を編集することで保存場所を指定できるので
+セキュリティ上の問題も回避できると思います。
+
+手順は
+http://ei-www.hyogo-dai.ac.jp/~masahiko/moin.cgi/スクイークetoys資料
+内のインストール（管理者向け）のページに
+記載しておきました。
+
+(2011/04/25 17:22), itikawa aiko wrote:
+> 市川です。
+> みなさんご指導ありがとうございます。
+> 
+> ＭＴＳ版をもう一度試して実験してみましたが、私の学校の環境ではセキュリ 
+> ティやほかの問題でスムーズな導入が難しそうです。
+> なので、２００５Ｊで進めていくことにしようと思います。
+> 
+> そこで、２００５Ｊにフォントを追加する方法を教えていただきたいです。
+> ＴＴＣ〜のコマンドをDoitすることはやってみましたが、
+> 2009年くらいに話題にされていたように、やはりエラーが出てしまいます。
+> 
+> 以前パッチを作っていただいていたようですが、そのページもいまはなくなって 
+> しまっているようです。
+> 
+> すみませんが、よろしくお願いします。
+> 
+> 市川愛子
+
+
+From pikateu_14 ＠ hotmail.com  Tue Apr 26 12:27:22 2011
+From: pikateu_14 ＠ hotmail.com (itikawa aiko)
+Date: Tue, 26 Apr 2011 12:27:22 +0900
+Subject: [Squeak-ja: 4535] Re:
+ Squeak-ja まとめ読み, 78 巻, 11 号
+In-Reply-To: <mailman.1.1303786801.9450.squeak-ja@smalltalk.jp>
+References: <mailman.1.1303786801.9450.squeak-ja@smalltalk.jp>
+Message-ID: <BAY166-w2077F62073C86F5D330C5CE2990@phx.gbl>
+
+
+田中さん、阿部さんありがとうございます。
+ 
+セキュリティ上の問題とは、学校の規模が大きいので教員が自由にソフトをインストールできず、中央のほうにお願いをしなければならないなどがあります。
+でも、一度田中さんの方法で実験してみたいと思います。
+ 
+フォントは、パソコンにプレインストールされているものを考えています。
+(msmintyoなど）
+６年くらい前にやった時はすんなり入った記憶があるのですけど・・・
+よろしくお願いします。
+ 
+市川愛子 		 	   		  
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110426/3c2d7325/attachment.htm>
+
+From abee.abe ＠ nifty.ne.jp  Wed Apr 27 22:03:26 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Wed, 27 Apr 2011 22:03:26 +0900
+Subject: [Squeak-ja: 4536]
+	Squeak EtoysにTTCフォントを読み込む方法 (Was: Re:  Re: Squeak-ja まとめ読み, 78 巻, 11 号)
+Message-ID: <BANLkTinHFbfFUjk5R9XBG68QBWqvo=LhCg@mail.gmail.com>
+
+阿部です。
+
+2011年4月26日12:27 itikawa aiko <pikateu_14 ＠ hotmail.com>:
+> フォントは、パソコンにプレインストールされているものを考えています。
+> (msmintyoなど）
+
+以下の方法はEtoysに関するものですが、2005Jでも同様の方法で読み込むことができます。
+http://forum.world.st/Squeak-ja-4253-Etoys-TT-td122339.html
+
+MS明朝を読み込む場合、評価する式は以下のようになります。
+
+TTCFontReader encodingTag: JapaneseEnvironment leadingChar.
+TTCFontSet newTextStyleFromTTFile: 'C:\WINDOWS\Fonts\MSMINCHO.TTC'
+
+今、Windows XP SP3で実際に読み込めることを確認しました。
+MS明朝は最初からTTCですので、TTSDK.ZIPは不要です。
+お試しください。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+From tomohiro ＠ sra.co.jp  Thu Apr 28 08:20:19 2011
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu, 28 Apr 2011 08:20:19 +0900
+Subject: [Squeak-ja: 4537] How to BlockerMorph
+Message-ID: <4DB8A4B3.5050401@sra.co.jp>
+
+おだです。
+
+昨晩のSmalltalk勉強会でHandMorphの位置の変更について聞きましたが、
+この件について、ひき続きご相談させていただきたいと思います。
+
+私がしたいことは、bounds内にマウスカーソルが入ってくることを阻止
+する、BlockerMorph(仮称)を作ることです。
+
+例えば、通常のUIでボタンを使えなくするためにはdisableします。
+しかし、それでは使う人にとっては、「ボタンを押したのに動かない」
+ということになります。disableはマウスを使ったGUIに慣れた人の常識
+であって、現実世界のボタンで押しても動かなければ、「壊れてる？」
+と思われてしまうでしょう。
+
+現実世界のボタンを使えなくするには、物理的にプラスチックカバーで
+囲って、「そこにボタンがあるのはわかるが押すことができない。押すには
+カバーを開けたり破ったりする必要がある。」ことが直感的にわかるように
+なっています。
+
+そんな、プラスチックカバーに相当するMorphとして、BlockerMorphを
+作りたいのです。そのためには、aHandMorph position: aPointでは
+不足しているようです。直感的には、HandMorphを通して、OS側にマウス
+位置を知らせる手段が必要だと思います。
+
+以上、ご助言いただければ幸いです。
+---
+おだ
+
+From tomohiro ＠ sra.co.jp  Thu Apr 28 08:24:02 2011
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu, 28 Apr 2011 08:24:02 +0900
+Subject: [Squeak-ja: 4538] Re:
+ 第31回Smalltalk勉強会のお知らせ
+In-Reply-To: <BANLkTikuHKNMTjccXPyk3nw-iKUqvvx6Ng@mail.gmail.com>
+References: <BANLkTikuHKNMTjccXPyk3nw-iKUqvvx6Ng@mail.gmail.com>
+Message-ID: <4DB8A592.6000802@sra.co.jp>
+
+こんにちは。
+昨晩のSmalltalk勉強会でお世話になりました、おだです。
+
+下記メールを送ったつもりでしたが、配送されていないようなので
+再送します。もし重なっていたら、すみません。
+
+HandMorphの位置を変更する件についてですが、
+
+aHandMorph showTemporaryCursor: aForm.
+として、*Cursorのインスタンスでない* Formを指定してあげると、
+ソフトウェアカーソルを使うようになります。
+＃ Cursorのインスタンスだと、ハードウェアにビットマップを渡して
+＃ 直接描画させます。
+そして、
+aHandMorph position: aPoint
+とすると、HandMorphの位置がaPointに移動します。
+
+しかし、これは単にMorphの位置が変化しただけで、
+マウスを動かすと、aPointではなく元の位置を基準にして動きます。
+マウスを動かさずにクリックしても、元の位置でイベントが発生します。
+
+まとめると、
+HandMorphのpositionを一時的に変更することはできますが、
+OSが管理しているマウスカーソルの位置には反映されず、
+マウスを動かしたりクリックしても、HandMorphに渡した位置は
+マウスの動きに影響を与えることはない、
+という振舞いのようです。
+---
+おだ
+
+(2011年04月18日 10:06), Masashi Umezawa wrote:
+> > こんにちは
+> > 梅澤です。
+> >
+> > 定例のSmalltalk勉強会のお知らせです。
+> >
+> > 日時: 2011/4/27(水) 19:00-21:00 (2時間)
+> > 場所: シンコム・システムズ・ジャパン株式会社
+> > テキスト:
+> >   「自由自在Squeakプログラミング」
+> >
+> > 詳しくは下記をどうぞ。
+> > http://www.smalltalk-users.jp/Home/gao-zhi/dai31kaismalltalkbenkyoukai
+> >
+> > 今回のテーマは「Morphicチュートリアル」です。
+> >
+> > MVCに取って代わってSqueakの標準UIフレームワークとなったMorphicですが、
+> > 実のところどうなのか、その光と闇についてのお話が聞けることでしょう。
+> >
+> > 参加表明は特に必要ありません。ふらりとお越しください。
+
+From tomohiro ＠ sra.co.jp  Thu Apr 28 08:08:27 2011
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu, 28 Apr 2011 08:08:27 +0900
+Subject: [Squeak-ja: 4539] Re:
+ 第31回Smalltalk勉強会のお知らせ
+In-Reply-To: <BANLkTikuHKNMTjccXPyk3nw-iKUqvvx6Ng@mail.gmail.com>
+References: <BANLkTikuHKNMTjccXPyk3nw-iKUqvvx6Ng@mail.gmail.com>
+Message-ID: <4DB8A1EB.9070806@sra.co.jp>
+
+こんにちは。
+昨晩のSmalltalk勉強会でお世話になりました、おだです。
+
+HandMorphの位置を変更する件についてですが、
+
+aHandMorph showTemporaryCursor: aForm.
+として、*Cursorのインスタンスでない* Formを指定してあげると、
+ソフトウェアカーソルを使うようになります。
+＃ Cursorのインスタンスだと、ハードウェアにビットマップを渡して
+＃ 直接描画させます。
+そして、
+aHandMorph position: aPoint
+とすると、HandMorphの位置がaPointに移動します。
+
+しかし、これは単にMorphの位置が変化しただけで、
+マウスを動かすと、aPointではなく元の位置を基準にして動きます。
+マウスを動かさずにクリックしても、元の位置でイベントが発生します。
+
+まとめると、
+HandMorphのpositionを一時的に変更することはできますが、
+OSが管理しているマウスカーソルの位置には反映されず、
+マウスを動かしたりクリックしても、HandMorphに渡した位置は
+マウスの動きに影響を与えることはない、
+という振舞いのようです。
+---
+おだ
+
+(2011年04月18日 10:06), Masashi Umezawa wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。
+> 
+> 日時: 2011/4/27(水) 19:00-21:00 (2時間)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト:
+>   「自由自在Squeakプログラミング」
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai31kaismalltalkbenkyoukai
+> 
+> 今回のテーマは「Morphicチュートリアル」です。
+> 
+> MVCに取って代わってSqueakの標準UIフレームワークとなったMorphicですが、
+> 実のところどうなのか、その光と闇についてのお話が聞けることでしょう。
+> 
+> 参加表明は特に必要ありません。ふらりとお越しください。
+
+
+-- 
+---
+おだ
+
+From ka.minami ＠ nifty.com  Thu Apr 28 16:52:34 2011
+From: ka.minami ＠ nifty.com (Kazuki Minamitani)
+Date: Thu, 28 Apr 2011 16:52:34 +0900
+Subject: [Squeak-ja: 4540] Re: How to BlockerMorph
+In-Reply-To: <4DB8A4B3.5050401@sra.co.jp>
+References: <4DB8A4B3.5050401@sra.co.jp>
+Message-ID: <BANLkTikQ7GmP=J+zzJ0pO5iuBK8-vpyBNA@mail.gmail.com>
+
+南谷です。
+昨日はお疲れ様でした。
+
+表示での誤魔化しではありますが、以下のようにするのはいかがでしょうか？
+
+1. BlockerMorphへのMouseEnter時の処理
+　　マウスカーソルを隠す
+　　BlockerMorphの外周に、ダミーのカーソル型Moｒｐｈを貼り付ける
+
+2. BlockerMorphからのMouseLeave時の処理
+　　マウスカーソルを表示
+　　ダミーのカーソル型Moｒｐｈを取り除く
+
+3. BlockerMorphは、MouseEnter、MouseLeave以外の入力イベントを無視する
+
+
+
+2011年4月28日8:20 Tomohiro Oda <tomohiro ＠ sra.co.jp>:
+> おだです。
+>
+> 昨晩のSmalltalk勉強会でHandMorphの位置の変更について聞きましたが、
+> この件について、ひき続きご相談させていただきたいと思います。
+>
+> 私がしたいことは、bounds内にマウスカーソルが入ってくることを阻止
+> する、BlockerMorph(仮称)を作ることです。
+>
+> 例えば、通常のUIでボタンを使えなくするためにはdisableします。
+> しかし、それでは使う人にとっては、「ボタンを押したのに動かない」
+> ということになります。disableはマウスを使ったGUIに慣れた人の常識
+> であって、現実世界のボタンで押しても動かなければ、「壊れてる？」
+> と思われてしまうでしょう。
+>
+> 現実世界のボタンを使えなくするには、物理的にプラスチックカバーで
+> 囲って、「そこにボタンがあるのはわかるが押すことができない。押すには
+> カバーを開けたり破ったりする必要がある。」ことが直感的にわかるように
+> なっています。
+>
+> そんな、プラスチックカバーに相当するMorphとして、BlockerMorphを
+> 作りたいのです。そのためには、aHandMorph position: aPointでは
+> 不足しているようです。直感的には、HandMorphを通して、OS側にマウス
+> 位置を知らせる手段が必要だと思います。
+>
+> 以上、ご助言いただければ幸いです。
+> ---
+> おだ
+>
+
+-- 
+Kazuki Minamitani
+ka.minami ＠ nifty.com
+
+From x19290 ＠ gmail.com  Thu Apr 28 22:43:33 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Thu, 28 Apr 2011 22:43:33 +0900
+Subject: [Squeak-ja: 4541]
+	アルファチャネルの削除?
+Message-ID: <4DB96F05.1060604@gmail.com>
+
+こんばんは。
+
+アルファチャネル付きの深さ32ビットのFormをそのままdisplayAt:すると、背景
+が黒く表示されるのですが、これを白い背景で表示するにはどうすればいいので
+しょうか?
+
+よろしくお願いします。
+--
+堀内寛己(ほりうちひろき)
+
+From x19290 ＠ gmail.com  Thu Apr 28 22:53:14 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Thu, 28 Apr 2011 22:53:14 +0900
+Subject: [Squeak-ja: 4542] Re:
+	アルファチャネルの削除?
+In-Reply-To: <4DB96F05.1060604@gmail.com>
+References: <4DB96F05.1060604@gmail.com>
+Message-ID: <4DB9714A.8040702@gmail.com>
+
+すみません、補足です。
+
+DisplayにalphaBlendでcopyBitsというのは無しです。
+--
+堀内寛己(ほりうちひろき)
+
+From yoshiki ＠ vpri.org  Fri Apr 29 15:07:09 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu, 28 Apr 2011 23:07:09 -0700
+Subject: [Squeak-ja: 4543] Re:
+ アルファチャネルの削除?
+In-Reply-To: <4DB9714A.8040702@gmail.com>
+	<4DB96F05.1060604@gmail.com>
+References: <4DB96F05.1060604@gmail.com>
+	<4DB9714A.8040702@gmail.com>
+Message-ID: <ubozplhf6.wl%yoshiki@vpri.org>
+
+At Thu, 28 Apr 2011 22:43:33 +0900,
+Hiroki Horiuchi wrote:
+> 
+> こんばんは。
+> 
+> アルファチャネル付きの深さ32ビットのFormをそのままdisplayAt:すると、背景
+> が黒く表示されるのですが、これを白い背景で表示するにはどうすればいいので
+> しょうか?
+> 
+> すみません、補足です。
+> 
+> DisplayにalphaBlendでcopyBitsというのは無しです。
+> --
+
+  「無し」というのがなぜなのかはよくわかりませんが、combination rule
+34が使えると思います。それでも、先に背景は白で塗らなくてはいけないと思
+うので、もしそのFormがaFormという名前で、50 ＠ 50の大きさだとするなら、
+
+Display fill: (100 ＠ 100 extent: 50 ＠ 50) fillColor: Color white.
+aForm displayOn: Display at: 100 ＠ 100 rule: 34.
+
+のようにするとよいのではないでしょうか。
+
+-- Yoshiki
+
+From x19290 ＠ gmail.com  Sat Apr 30 14:30:24 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sat, 30 Apr 2011 14:30:24 +0900
+Subject: [Squeak-ja: 4544] Re:
+ アルファチャネルの削除?
+In-Reply-To: <ubozplhf6.wl%yoshiki@vpri.org>
+References: <4DB96F05.1060604@gmail.com>	<4DB9714A.8040702@gmail.com>
+ <ubozplhf6.wl%yoshiki@vpri.org>
+Message-ID: <4DBB9E70.4040203@gmail.com>
+
+On 2011年04月29日 15:07, Yoshiki Ohshima wrote:
+
+Yoshikiさん、毎度お世話になります。
+
+> 「無し」というのがなぜなのかはよくわかりませんが、
+
+このあいだの(SMLの)、低レベルGUIの話の延長で試していることに関係します。
+
+もしそれが本当に意義のあることなら、いずれ説明します。
+
+> combination rule 34が使えると思います。
+
+これはどこに文書化されていますか? 私は0 ~ 31までしか知りませんでした。
+
+> それでも、先に背景は白で塗らなくてはいけないと思うので、
+
+そうですね。
+
+> Display fill: (100 ＠ 100 extent: 50 ＠ 50) fillColor: Color white.
+
+以前はこのショートカットを知らなかったので、Form>>bitsを直接操作していま
+した。
+
+> aForm displayOn: Display at: 100 ＠ 100 rule: 34.
+
+これも、(BitBlt destForm:...) copyBitsしたりして苦労していました。
+
+助かりました。ありがとうございます。
+--
+堀内寛己(ほりうちひろき)
+
+
+From x19290 ＠ gmail.com  Sat Apr 30 23:22:18 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sat, 30 Apr 2011 23:22:18 +0900
+Subject: [Squeak-ja: 4545]
+ Squeak/Pharoのグラフィクスが分かりかけてきました
+Message-ID: <4DBC1B1A.5000102@gmail.com>
+
+こんばんは。
+
+http://www.smalltalk.jp/pipermail/sml/2011-April/007913.html以来調べてい
+たSqueak/Pharoの低レベルのグラフィクスについて、今日、急にわかったことが
+あったので、拙ブログにまとめておきました。興味のある方はご覧ください。
+
+http://19290.net/wpmu/blog/2011/04/squeak-pharo-bit-blt.html
+--
+堀内寛己(ほりうちひろき)
+
+

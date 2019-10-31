@@ -1,0 +1,514 @@
+From yoshiki ＠ vpri.org  Tue Apr  1 01:13:20 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Apr  1 01:13:39 2008
+Subject: [Squeak-ja: 3856] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+	<37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+	<37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp>
+	<472EA052.1090204@nucba.ac.jp> <uabkucaza.wl%yoshiki@vpri.org>
+	<1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp>
+Message-ID: <ud4pana73.wl%yoshiki@vpri.org>
+
+  廣島さんありがとうございます。
+
+> 手元には jp106 キーボードしかありませんが，
+> 以下の手順で ñ「tilde付きn」が入力出来ました．
+> もしかしたら，外しているかもしれません．
+> 
+> Fedora では，m17n-db-latin パッケージをインストールして，
+> latn-post か latn-pre の入力メソッドでヨーロッパ言語の文字を入力できます．
+> 
+> 設定ファイル
+> /usr/share/m17n/latn-post.mim
+> /usr/share/m17n/latn-pre.mim
+> によれば，件の ñ「tilde付きn」は~ と n のコンビネーションを使うようですが，
+> この ~ は US配列で 1 の左隣にあるキーの ~ でないとダメなようです．
+> 
+> システム->管理->キーボード->英語(アメリカ合衆国)
+> を選択後，再ログイン．
+> GNOME の設定と合わないとダイアログが出るので，Xの設定を選択する．
+> 
+> 希望の ~ は shift + 半角/全角に対応するので，
+> SCIM の入力モードを latn-pre にして，
+> shift + 半角/全角の後，n を押す．
+> 
+> Transcript で試したところ，続けて入力した文字も化けないので，
+> 問題なさそうに思います．
+
+  これは、VMにはすでに0xF1の文字が一文字だけ来ているのでしょうか(後で
+試して見ます)。trunkにも基本的に同じパッチが入ったのですが、アクセント
+つき文字の入力は動いていたのに動かなくなったという報告もあって実は大分
+混乱しているところです。
+
+-- Yoshiki
+From tsutomu ＠ nucba.ac.jp  Thu Apr  3 02:07:22 2008
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Apr  3 02:08:32 2008
+Subject: [Squeak-ja: 3857] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <ud4pana73.wl%yoshiki@vpri.org>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp><37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp><37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp><472EA052.1090204@nucba.ac.jp>
+	<uabkucaza.wl%yoshiki@vpri.org><1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp>
+	<ud4pana73.wl%yoshiki@vpri.org>
+Message-ID: <25601.125.198.205.84.1207156042.risu@mail.nucba.ac.jp>
+
+ >   これは、VMにはすでに0xF1の文字が一文字だけ来ているのでしょうか(後で
+> 試して見ます)。trunkにも基本的に同じパッチが入ったのですが、アクセント
+> つき文字の入力は動いていたのに動かなくなったという報告もあって実は大分
+> 混乱しているところです。
+
+olpc/platforms/unix/vm/sqUnixEvent.c
+
+で，recordKeyboardEvent の debug print を有効にして試しました．
+
+static void recordKeyboardEvent(int keyCode, int pressCode, int modifiers,
+int ucs4)
+{
+  sqKeyboardEvent *evt= allocateKeyboardEvent();
+  evt->charCode= keyCode;
+  evt->pressCode= pressCode;
+  evt->modifiers= modifiers;
+  evt->utf32Code= ucs4;
+  evt->reserved1=
+    evt->windowIndex= 0;
+  signalInputEvent();
+#if 1 //  DEBUG_EVENTS
+  printf("EVENT: key");
+  switch (pressCode)
+    {
+    case EventKeyDown: printf(" down "); break;
+    case EventKeyChar: printf(" char "); break;
+    case EventKeyUp:   printf(" up   "); break;
+    default:           printf(" ***UNKNOWN***"); break;
+    }
+  printModifiers(modifiers);
+  printKey(keyCode);
+  printf(" ucs4 %d\n", ucs4);
+#endif
+}
+
+ñ「tilde付きn」の入力結果は次のようになります．
+
+EVENT: key down  ` ' (195 = 0xc3) ucs4 0
+EVENT: key char  ` ' (195 = 0xc3) ucs4 0
+EVENT: key down  ` ' (177 = 0xb1) ucs4 0
+EVENT: key char  ` ' (177 = 0xb1) ucs4 0
+
+UTF-16(ucs4 も同じ？) の 0xf1 ではなく，
+UTF-8 の 0xc3 0xb1 の2バイトです．
+
+locale の文字コードが utf-8 の場合，
+入力文字列の取得に Xutf8LookupString を使うようにしています．
+
+＝＝＝＝
+廣島　勉
+From tsutomu ＠ nucba.ac.jp  Thu Apr  3 12:11:07 2008
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Apr  3 12:11:29 2008
+Subject: [Squeak-ja: 3858] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <25601.125.198.205.84.1207156042.risu@mail.nucba.ac.jp>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp><37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp><37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp><472EA052.1090204@nucba.ac.jp><uabkucaza.wl%yoshiki@vpri.org><1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp><ud4pana73.wl%yoshiki@vpri.org>
+	<25601.125.198.205.84.1207156042.risu@mail.nucba.ac.jp>
+Message-ID: <53849.125.198.205.84.1207192267.risu@mail.nucba.ac.jp>
+
+latin 文字は Emacs の入力メソッドでしか入力したことが無かったので，
+大島さんが最初に触れられていた方法がよく判らず，
+scim(latin-pre) を介した方法で ñ「tilde付きn」を試しました．
+
+> Terminalだとdead keyを押してからベースの文字を入れるという入力が
+> できなかったりするので、コードのほうの問題なのか設定の問題なのかがいま
+> いちわかりませんでした。詳しい方(廣島さんやほかの方)がいたらぜひ検討し
+> てみてください。
+
+ここで述べられている入力方法が次の手順と同じなのか判然としませんが，
+
+GNOME のメニューから
+システム->設定->ハードウェア->キーボード
+を開いて，
+レイアウトのオプション->Compose Key Position->Right Alt is Compose
+にチェックを入れる．
+
+ターミナルで
+
+右Alt ~ n
+
+を順に押せば ñ が入力出来ます．
+/* 右Alt と ~ は同時でなくてもOK. キートップどおりの ~ を使う */
+
+VM が受け取った結果は以下と変わりませんでした．
+
+> ñ「tilde付きn」の入力結果は次のようになります．
+>
+> EVENT: key down  ` ' (195 = 0xc3) ucs4 0
+> EVENT: key char  ` ' (195 = 0xc3) ucs4 0
+> EVENT: key down  ` ' (177 = 0xb1) ucs4 0
+> EVENT: key char  ` ' (177 = 0xb1) ucs4 0
+
+＝＝＝＝
+廣島　勉
+From yoshiki ＠ vpri.org  Mon Apr  7 07:36:11 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Mon Apr  7 07:36:47 2008
+Subject: [Squeak-ja: 3859] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <53849.125.198.205.84.1207192267.risu@mail.nucba.ac.jp>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+	<37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+	<37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp>
+	<472EA052.1090204@nucba.ac.jp> <uabkucaza.wl%yoshiki@vpri.org>
+	<1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp>
+	<ud4pana73.wl%yoshiki@vpri.org>
+	<25601.125.198.205.84.1207156042.risu@mail.nucba.ac.jp>
+	<53849.125.198.205.84.1207192267.risu@mail.nucba.ac.jp>
+Message-ID: <utzietxus.wl%yoshiki@vpri.org>
+
+  大島です。
+
+  setxkbmap -layout es
+
+をすると、'や`が"dead-key"となって、次に何かを押したときに入力されるよ
+うになります。そのとき、古いVMでLC_CTYPE環境変数がja_JP.UTF8のようになっ
+ていてx2sqKeyがx2sqKeyInputになっているときには、'などを押してもVMには
+文字が報告されず、次に文字を押したときにアクセントつきの文字としてVMに
+報告されるということでした。
+
+  新しいVMのオプションで、LC_CTYPEに従って入力するモードをつける必要が
+あるのではないかと思ってきています。
+
+-- Yoshiki
+From yoshiki ＠ vpri.org  Fri Apr 11 06:52:05 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Apr 11 06:53:04 2008
+Subject: [Squeak-ja: 3860] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <utzietxus.wl%yoshiki@vpri.org>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+	<37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+	<37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp>
+	<472EA052.1090204@nucba.ac.jp> <uabkucaza.wl%yoshiki@vpri.org>
+	<1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp>
+	<ud4pana73.wl%yoshiki@vpri.org>
+	<25601.125.198.205.84.1207156042.risu@mail.nucba.ac.jp>
+	<53849.125.198.205.84.1207192267.risu@mail.nucba.ac.jp>
+	<utzietxus.wl%yoshiki@vpri.org>
+Message-ID: <uej9ds7i2.wl%yoshiki@vpri.org>
+
+  大島です。
+
+>   新しいVMのオプションで、LC_CTYPEに従って入力するモードをつける必要が
+> あるのではないかと思ってきています。
+
+  これをテストするパッチを作りました。内部的に関数が増えてしまってちょっ
+とかっこ悪いのですが、日本語などを入力するときにはコマンドラインオプショ
+ンを指定するようになっています。
+
+  squeakvm.orgのtrunkのほうの1843以降に入ったと思いますので、UNIXユー
+ザーの皆さんよろしければテストしてみてください。
+
+-- Yoshiki
+From tsutomu ＠ nucba.ac.jp  Tue Apr 15 18:33:34 2008
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Tue Apr 15 18:33:47 2008
+Subject: [Squeak-ja: 3861] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <uej9ds7i2.wl%yoshiki@vpri.org>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp><37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp><37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp><472EA052.1090204@nucba.ac.jp>
+	<uabkucaza.wl%yoshiki@vpri.org><1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp><ud4pana73.wl%yoshiki@vpri.org><25601.125.198.205.84.1207156042.risu@mail.nucba.ac.jp><53849.125.198.205.84.1207192267.risu@mail.nucba.ac.jp><utzietxus.wl%yoshiki@vpri.org>
+	<uej9ds7i2.wl%yoshiki@vpri.org>
+Message-ID: <46036.125.198.205.84.1208252014.risu@mail.nucba.ac.jp>
+
+廣島です．大島さん，
+こんにちは．
+
+>   大島です。
+>
+>>   新しいVMのオプションで、LC_CTYPEに従って入力するモードをつける必要が
+>> あるのではないかと思ってきています。
+>
+>   これをテストするパッチを作りました。内部的に関数が増えてしまってちょっ
+> とかっこ悪いのですが、日本語などを入力するときにはコマンドラインオプショ
+> ンを指定するようになっています。
+>
+>   squeakvm.orgのtrunkのほうの1843以降に入ったと思いますので、UNIXユー
+> ザーの皆さんよろしければテストしてみてください。
+
+trunk のコード(rev 1853)を見ました．
+互換性のため仕方がないことでしょうが，
+x2sqKeyInput が以前のバージョンとなり，
+デフォルトでこれが使われるというのは残念です．
+堅牢な入力処理が開発されるまでの過渡的な処置であることを願います．
+
+以降，本来 UNIX-VM 開発の ML に英語で投げるべき内容です．ご容赦下さい．
+
+Tcl/Tk の日本語化をされた SRA の ひらの さんは，かつてある掲示板で，
+「SingleByte 環境の開発者では何十年たっても国際化入力はできない」
+のような意の発言をなさってました．
+かく言う私もかつて Perl/Tk(UNIX) の日本語化パッチをネットに流したことがあり
+ます．
+現在では UTF-8 化されて，日本語表示には問題はなくなりましたが，
+今もパッチを当てないと日本語入力は出来ません．
+
+さて，x2sqKeyInput の主要部を引用します．
+デバッグコードは取り除いてあるので行番号が飛んでいます．
+
+1763     int count= XmbLookupString(ic, (XKeyPressedEvent *)xevt, string,
+sizeof(string), symbolic, &status);
+1764     switch (status)
+1765       {
+1766       case XLookupNone:         /* still composing */
+1770         return -1;
+1771
+1772       case XLookupChars:
+1776       case XLookupBoth:
+1780         lastKey= (count ? recode(string[0]) : -1);
+1784         return lastKey;
+1785
+1786       case XLookupKeySym:
+1790         {
+1791           int charCode= translateCode(*symbolic);
+1795           if (charCode < 0)
+1796             return -1;  /* unknown key */
+1797           if ((charCode == 127) && mapDelBs)
+1798             charCode= 8;
+1799           return lastKey= charCode;
+1800         }
+1801
+1802       default:
+1803         fprintf(stderr, "this cannot happen\n");
+1804         return lastKey= -1;
+1805       }
+1806     return lastKey= -1;
+1807   }
+
+XmbLookupString はバッファ string に入力バイト列を埋めて返りますが，
+1780 行目でその最初のバイトを残して後は捨てています．
+SingleByte の環境が前提の処理であり XmbLookupString を使う意味はありません．
+
+x2sqKeyPlain と比較します．
+これは国際化入力モジュールの初期化が出来ない場合か，
+オプション -nointl を指定したときに使われる関数です．
+
+1957 static int x2sqKeyPlain(XKeyEvent *xevt, KeySym *symbolic)
+1958 {
+1959   unsigned char buf[32];
+1960   int nConv= XLookupString(xevt, (char *)buf, sizeof(buf), symbolic, 0);
+1961   int charCode= buf[0];
+1966   if (nConv == 0 && (charCode= translateCode(*symbolic)) < 0)
+1967     return -1;  /* unknown key */
+1968   if ((charCode == 127) && mapDelBs)
+1969     charCode= 8;
+1970   if (charCode > 256) /* ALT+?? */
+1971     {
+1972       modifierState= charCode >> 8;
+1973       charCode &= 0xff;
+1974     }
+1975   return recode(charCode);
+1976 }
+
+x2sqKeyInput が前段で入力モジュールの初期化を試みる点と，
+入力文字列の問い合わせに使用する X 関数( 1763, 1960 行目 )が違っています．
+この XmbLookupString / XLookupString の動作は SingleByte 環境ではほぼ同じで
+す．
+
+こちらも XLookupString が埋めた入力バイト列 buf のうち，
+最初のバイトだけを 1961 行目で取り出し，他は捨てています．
+
+SingleByte 環境であれば x2sqKeyInput と x2sqKeyPlain の結果は変わりません．
+
+MultiByte 環境では
+x2sqKeyPlain では国際化入力モジュールが開かないし，
+x2sqKeyInput では MultyByte 文字の最初のバイトしか送られないため，
+m17n の image ではパニックになります．
+
+大島さんの発言にあった，
+
+> OLPCでないFedoraではスペイン語配列にしたときにnにチルダ
+> がついた文字を入力したときに、余計なバイトも付いてきてしまいます。
+
+> これは、VMにはすでに0xF1の文字が一文字だけ来ているのでしょうか
+
+は，きっと SingleByte 環境 + SingleByte を期待する image を前提とした話です
+ね．
+
+スペイン語でも文字コードが utf8 な環境 LC_CTYPE=es_ES.utf8 では，
+XmbLookupString は ñ を 2バイト として扱うので，
+x2sqKeyInput の実装では問題となるはずです．
+/* Fedora はどのロケールでもデフォルトは utf8 でしょうか? */
+
+要するに，x2sqKeyInput は，
+SingleByte 環境では x2sqKeyPlain と動作が変わらず，
+MultiByte 環境では害になるので，
+これを使う意味は無いはずなのです．
+
+長文になりましたので，続き(?)は回を改めて投稿します．
+=======
+廣島　勉
+From yoshiki ＠ vpri.org  Wed Apr 16 05:15:17 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed Apr 16 05:15:48 2008
+Subject: [Squeak-ja: 3862] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <46036.125.198.205.84.1208252014.risu@mail.nucba.ac.jp>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+	<37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+	<37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp>
+	<472EA052.1090204@nucba.ac.jp> <uabkucaza.wl%yoshiki@vpri.org>
+	<1045.125.198.205.84.1206613774.risu@mail.nucba.ac.jp>
+	<ud4pana73.wl%yoshiki@vpri.org>
+	<25601.125.198.205.84.1207156042.risu@mail.nucba.ac.jp>
+	<53849.125.198.205.84.1207192267.risu@mail.nucba.ac.jp>
+	<utzietxus.wl%yoshiki@vpri.org> <uej9ds7i2.wl%yoshiki@vpri.org>
+	<46036.125.198.205.84.1208252014.risu@mail.nucba.ac.jp>
+Message-ID: <u4pa23mei.wl%yoshiki@vpri.org>
+
+  廣島さん
+
+> trunk のコード(rev 1853)を見ました．
+> 互換性のため仕方がないことでしょうが，
+> x2sqKeyInput が以前のバージョンとなり，
+> デフォルトでこれが使われるというのは残念です．
+> 堅牢な入力処理が開発されるまでの過渡的な処置であることを願います．
+
+  今回はちょっとした時間制約もあってこのようになってしまいました。
+
+> 以降，本来 UNIX-VM 開発の ML に英語で投げるべき内容です．ご容赦下さい．
+> 
+> Tcl/Tk の日本語化をされた SRA の ひらの さんは，かつてある掲示板で，
+> 「SingleByte 環境の開発者では何十年たっても国際化入力はできない」
+> のような意の発言をなさってました．
+> かく言う私もかつて Perl/Tk(UNIX) の日本語化パッチをネットに流したことがあり
+> ます．
+> 現在では UTF-8 化されて，日本語表示には問題はなくなりましたが，
+> 今もパッチを当てないと日本語入力は出来ません．
+
+  これは私も同意します。Squeakの多言語化も自分でやるしかなかったです。
+
+> 要するに，x2sqKeyInput は，
+> SingleByte 環境では x2sqKeyPlain と動作が変わらず，
+> MultiByte 環境では害になるので，
+> これを使う意味は無いはずなのです．
+
+  dead-keyがあるとXmbLookupStringがcomposeした結果を返すのですが、そこ
+でかなりてこずっています。setxkbmap -layout esとして言語を切り替えて動
+かすと少なくともちゃんと動作しないという問題があったので、いまのところ
+こういう状況になりました。
+
+  ありがとうございます。
+
+  ところで、今のsqUnixX11.cの2484行目は
+
+     if (evt->xfocus.mode == NotifyNormal)
+
+となっていますが、Gnome上でAlt-Tabを使ってSqueakからフォーカスを切り替
+えた後もう一度Alt-Tabして戻ってきたときに文字入力が有効になりません。
+
+     if (evt->xfocus.mode == NotifyNormal || evt->xfocus.mode == NotifyUngrab)
+
+のように変えるのがよいのかなとも思うのですが、window manager依存のとこ
+ろもありそうで「正しい」かどうかはっきりしないでいます。どうでしょう?
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Mon Apr 28 10:41:41 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jun  3 18:43:59 2008
+Subject: [Squeak-ja: 3863] 4/30-5/1にswikis.ddo.jpと、blueplane.jpのメンテナンス
+Message-ID: <JC200804281041344.491796@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+4/30-5/1にかけて、サーバのメンテナンス作業をする予定です。
+
+期間中はswikis.ddo.jpおよび、blueplane.jpでのサービスが一時的に
+使えなくなります。(SuperSwiki2やプロジェクト置き場、SqueakSourceJなど)
+
+基本的にバックアップはこちらで取りますが、万一のことを考えて心配という
+方は、ダウンロードしておくなどの対策をお取り下さい。
+
+それでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Wed Apr 30 21:01:03 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jun  3 18:57:11 2008
+Subject: [Squeak-ja: 3864] 5/3-4にします was: 4/30-5/1にswikis.ddo.jpと、blueplane.jpのメンテナンス
+In-Reply-To: <JC200804281041344.491796@mars.dti.ne.jp>
+References: <JC200804281041344.491796@mars.dti.ne.jp>
+Message-ID: <JY200804302100466.18110046@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+すみません。体制が整わないため、メンテナンス作業を5/3-4に延期します。
+
+ご迷惑をおかけしますが、ご了承ください。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 4/30-5/1にかけて、サーバのメンテナンス作業をする予定です。
+> 
+> 期間中はswikis.ddo.jpおよび、blueplane.jpでのサービスが一時的に
+> 使えなくなります。(SuperSwiki2やプロジェクト置き場、SqueakSourceJなど)
+> 
+> 基本的にバックアップはこちらで取りますが、万一のことを考えて心配という
+> 方は、ダウンロードしておくなどの対策をお取り下さい。
+> 
+> それでは。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Wed Apr 30 21:19:21 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jun  3 18:57:11 2008
+Subject: [Squeak-ja: 3865] Re: 5/3-4にします was: 4/30-5/1にswikis.ddo.jpと、blueplane.jpのメンテナンス
+In-Reply-To: <JY200804302100466.18110046@mars.dti.ne.jp>
+References: <JC200804281041344.491796@mars.dti.ne.jp>
+	<JY200804302100466.18110046@mars.dti.ne.jp>
+Message-ID: <2d5d52a80804300519n6274e70bhac50e8c1d8c8cad3@mail.gmail.com>
+
+こんにちは。阿部です。
+
+正確に何時からか分からないのですが、SuperSwiki2が落ちているようです。
+
+Cannot Connect
+Connection failed by DeleGate on `superswiki2.blueplane.jp:80'
+Tried from the client 202.171.145.123.static.zoot.jp:59578 to the
+server http://192.168.1.8:9090.
+
+Connection to the port on the server host is refused.
+Are you sure that the server port number is correct?
+If so, the server may be down now (temporarily)...
+
+てっきりこのメンテナンスのためかと思っていました。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+08/04/30 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> こんにちは
+> 梅澤です。
+>
+> すみません。体制が整わないため、メンテナンス作業を5/3-4に延期します。
+>
+> ご迷惑をおかけしますが、ご了承ください。
+>
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> > こんにちは
+> > 梅澤です。
+> >
+> > 4/30-5/1にかけて、サーバのメンテナンス作業をする予定です。
+> >
+> > 期間中はswikis.ddo.jpおよび、blueplane.jpでのサービスが一時的に
+> > 使えなくなります。(SuperSwiki2やプロジェクト置き場、SqueakSourceJなど)
+> >
+> > 基本的にバックアップはこちらで取りますが、万一のことを考えて心配という
+> > 方は、ダウンロードしておくなどの対策をお取り下さい。
+> >
+> > それでは。
+> > ---
+> > [:masashi | ^umezawa]
+>
+> ---
+> [:masashi | ^umezawa]

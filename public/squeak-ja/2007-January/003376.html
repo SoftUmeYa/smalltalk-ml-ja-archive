@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3376] Re: 教育用ＰＣ リナックスで再生
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203376%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=uhcupoxrn.wl%25yoshiki%40squeakland.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003361.html">
+   <LINK REL="Next"  HREF="003390.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3376] Re: 教育用ＰＣ リナックスで再生</H1>
+    <B>Daisaku CHIBA</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203376%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=uhcupoxrn.wl%25yoshiki%40squeakland.org"
+       TITLE="[Squeak-ja: 3376] Re: 教育用ＰＣ リナックスで再生">chibad ＠ alpha.co.jp
+       </A><BR>
+    <I>2007年 1月 24日 (水) 22:43:16 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003361.html">[Squeak-ja: 3361] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+        <LI>次の記事 <A HREF="003390.html">[Squeak-ja: 3390] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3376">[ 日付 ]</a>
+              <a href="thread.html#3376">[ スレッド ]</a>
+              <a href="subject.html#3376">[ 件名 ]</a>
+              <a href="author.html#3376">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Yoshikiさん、こんばんは。
+
+千葉です。
+
+&gt;<i> &gt; KNOPPIX Edu 6は3月リリースに向けて、作成を開始するところです。 
+</I>&gt;<i> &gt; Squeakを入れる事も可能ですし、魅力的だと感じていますが、これまで断念してきました。 
+</I>&gt;<i> &gt; 理由は明確に、以下2点ですので、特に1点目が解消するようであれば、非常に嬉しいニュースです。 
+</I>&gt;<i> &gt; ・アップルライセンス問題 
+</I>&gt;<i> &gt; ・容量問題（他のアプリとの兼ね合いでCDのサイズに収めきるための取捨選択） 
+</I>&gt;<i> 
+</I>&gt;<i>   1点目は事実上すでに解消していますし、特に3月までには本当に解決してい
+</I>&gt;<i> ることと思います(再び書きますと、もともと問題ではなかったわけですが)。
+</I>&gt;<i>
+</I>そうでしたか。誤解しておりました。
+情報ありがとうございました。
+
+
+&gt;<i>   2点目はどの程度のサイズを目指すかにもよりますが、OLPCはCDサイズより
+</I>&gt;<i> も小さいところでばっちりEtoys(Squeak)が入っていますので(余裕もたっぷり
+</I>&gt;<i> ありますが)、まあ問題にはならないでしょう。現在は比較的ゆったりと20MB
+</I>&gt;<i> 程度のファイルスペースを使っていると思いますが、必要であれば不必要なも
+</I>&gt;<i> のを削るとともに、ディスク上に置かれたイメージをgzipかpkzipで圧縮して
+</I>&gt;<i> おくことにより、10MB以下には小さくすることはできると思います。
+</I>&gt;<i>
+</I>KNOPPIXの場合、圧縮ループバックファイルシステムである
+cloopを利用している関係上、圧縮しておく事によるサイズ調整は
+余り参考にならず、圧縮前でどの程度HDD容量を消費するかが目安になります。
+
+次に、「10MBでも厳しい」というのが、
+現状のKNOPPIX Eduシリーズの現実です。
+他のアプリも大きいものが結構ありますし、何よりも教材の充実無しに、
+利用は無いだろうとの基本姿勢のもと、PDF化した教材レジュメ等も
+沢山バンドルしている関係もあります。
+
+数MBのアプリを入れる為に、さて何削ろう・・・？！の世界ですので、
+正直、苦しい選択を強いられるケースも多いです。
+
+昨日よりEdu6の開発に着手してみたところ、
+何も考えず、入れたいアプリリストにだけ沿って作ってみたら、
+(圧縮前のHDD容量で)500MByte Overの状態です。
+＃毎年、ここから削る作業を地道に行います。
+
+
+---
+ちなみに、サイズを小さくしたパッケージはどちらかで
+作成・公開されていませんでしょうか？
+そのような情報は大変有難く存じます。
+
+
+
+以上
+
+-- 
+ 千葉大作  mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">chibad ＠ alpha.co.jp</A>  tel:+81-44-738-4125
+ （株）アルファシステムズ 
+ 経営企画本部技術推進部第二システム研究課
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003361.html">[Squeak-ja: 3361] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+	<LI>次の記事 <A HREF="003390.html">[Squeak-ja: 3390] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3376">[ 日付 ]</a>
+              <a href="thread.html#3376">[ スレッド ]</a>
+              <a href="subject.html#3376">[ 件名 ]</a>
+              <a href="author.html#3376">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

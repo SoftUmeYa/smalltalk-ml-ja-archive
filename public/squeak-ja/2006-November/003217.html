@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3217] Re: eToys で二足歩行ロボットを制御
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203217%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGVUb3lzIBskQiRHRnMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQi1KYjlUJW0lXCVDJUgkckApOGYbKEI%3D%3F%3D&In-Reply-To=4551317B.8040802%40ygu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003208.html">
+   <LINK REL="Next"  HREF="003218.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3217] Re: eToys で二足歩行ロボットを制御</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203217%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGVUb3lzIBskQiRHRnMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQi1KYjlUJW0lXCVDJUgkckApOGYbKEI%3D%3F%3D&In-Reply-To=4551317B.8040802%40ygu.ac.jp"
+       TITLE="[Squeak-ja: 3217] Re: eToys で二足歩行ロボットを制御">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2006年 11月 13日 (月) 01:02:26 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003208.html">[Squeak-ja: 3208] Re: eToys で二足歩行ロボットを制御
+</A></li>
+        <LI>次の記事 <A HREF="003218.html">[Squeak-ja: 3218] Re: eToys で二足歩行ロボットを制御
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3217">[ 日付 ]</a>
+              <a href="thread.html#3217">[ スレッド ]</a>
+              <a href="subject.html#3217">[ 件名 ]</a>
+              <a href="author.html#3217">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Wed, 08 Nov 2006 10:23:07 +0900
+Eiichiro Ito &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">e-itoh ＠ ygu.ac.jp</A>&gt; wrote:
+&gt;<i>いつぞや見せていただいたものですね。面白そうです。
+</I>
+はい、ものを作ってから実際にワークショップを開催するまでに、かなりの時間
+がかかってしまいました。
+
+&gt;<i>そのうち、どんなカリキュラムにしたのか教えてください。
+</I>
+二足歩行ロボットというと、大人はすぐに歩かせたり戦わせたりしようとします
+が、あえてそうせず、コンピュータの内部状態を現実世界に反映する手段として
+用いました。子供たちは、他の先生にお願いして、すでにDrive a Carをみっちり
+とやっていたので、スクイークの基本はできていると言う前提です。
+
+ロボットのそれぞれの関節(サーボモータ)は-90度から90度の範囲で動きます。こ
+の角度をスライダの値としました。肩、腕、脚など関節は全部で17個(17自由度)
+あるので、スライダも17個あります。これらを入れ物に入れ、ポーズと名づけま
+した。
+ポーズには「メッセージ送信」というスクリプトがあり、これをビックリしたり、
+チクタクしたりすることで、自分の持つスライダの状態をロボットに送信するこ
+とができます。メッセージを受信したロボットはそれぞれの関節を指定された角
+度に動かします。
+
+# ここで言う「メッセージ」はSmalltalkではなく、Robovie-MSの仕様書で使われ
+# ている用語です。
+
+ポーズを複製して入れ物にいれ、カーソルを「以下を足す」でインクリメントし
+つつ、メッセージ送信すると連続した動きを表現することができます。これをモー
+ションと名づけました。これは状態遷移であり、スクイークでよくやるアニメー
+ションと同じでもあります。
+
+一通りモーションで遊んでから、個々のスライダのビューワを開き、自分の書い
+たスクリプトでも関節を動かせることを示しました。使ったのは、おなじみの絵
+に描いたハンドルで、この向きを腕の角度に反映させました。ここまで話すと、
+ひとつのハンドルで複数の関節を動かしたり、それぞれの関節にハンドルをつけ
+たりなどの応用はすぐに思いつくようです(このとき、ロボットは線対称なので、
+左右でモータの回転方向が逆になります。角度に-1を掛けるとよいことに気付く
+かどうかというのは面白いチャレンジでした)。
+続いて、テストとの組み合わせと言うことで、画面の車がゴールしたらバンザイ
+する方法を説明し、自由製作に入りました。
+
+この自由製作に入る前に、まずコンピュータを閉じ、まずアイデアを紙に整理し
+てから、作り始めるようにしました。こうすることで、自分のスキルに合ってい
+ないものや曖昧なもの、偶然に頼るものをなくすことができたようです。
+
+興味深かったのは、作品にロボットを使わなかった子供がほとんどだったことで
+す。これは必ずしもロボットが嫌いと言うわけではなく、やっているときは皆と
+ても楽しそうだったのに、結果としてはそうなりました。
+思うに、ロボットの形や仕組みの制約が大きくて、自分の思いを実現するには自
+由度が足らなかったのではないでしょうか。なんでも自由に描けるスクイークだ
+けの方がその点有利です。
+
+見た目が派手なこともあって、ロボットを使うと子供が喜ぶからという理由でワー
+クショップを開くケースがありますが、このあたりを考えてみる必要があると思
+います。とはいえ、正確な角度をぴしっと表現できるサーボモータは便利なので、
+カリキュラムの作り方によっては、良いものができる可能性があります。
+
+&gt;<i>＃私も４足以外に手を出そうかと考えております。
+</I>
+おお、風太を想像してしまいました。
+
+ //abee
+--
+阿部 和広  MAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003208.html">[Squeak-ja: 3208] Re: eToys で二足歩行ロボットを制御
+</A></li>
+	<LI>次の記事 <A HREF="003218.html">[Squeak-ja: 3218] Re: eToys で二足歩行ロボットを制御
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3217">[ 日付 ]</a>
+              <a href="thread.html#3217">[ スレッド ]</a>
+              <a href="subject.html#3217">[ 件名 ]</a>
+              <a href="author.html#3217">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

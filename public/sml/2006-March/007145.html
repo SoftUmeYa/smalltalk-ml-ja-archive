@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7145] Jun675 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207145%5D%20Jun675%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007144.html">
+   <LINK REL="Next"  HREF="007146.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7145] Jun675 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207145%5D%20Jun675%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7145] Jun675 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 3月 27日 (月) 15:30:30 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007144.html">[SML 7144] Smalltalk Solutions Conference
+</A></li>
+        <LI>次の記事 <A HREF="007146.html">[SML 7146] 日経ソフトウエア連載
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7145">[ 日付 ]</a>
+              <a href="thread.html#7145">[ スレッド ]</a>
+              <a href="subject.html#7145">[ 件名 ]</a>
+              <a href="author.html#7145">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+先週の土曜日に【Jun675 for Smalltalk】をアップロードしておき
+ました。プログラムスキャナが組み込まれています。
+
+<A HREF="http://www.sra.co.jp/public/sra/technical/jun/">http://www.sra.co.jp/public/sra/technical/jun/</A>
+<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+
+プログラムスキャナは、対象とするプログラムの構文木を作り上げ、
+それをたどって、語彙への分解を行い、様々な言語的調査を可能に
+する走査体です。
+
+<A HREF="http://www.sra.co.jp/people/aoki/SmalltalkIdioms/chapter7/Chapter7.htm">http://www.sra.co.jp/people/aoki/SmalltalkIdioms/chapter7/Chapter7.htm</A>
+<A HREF="http://www.sra.co.jp/people/aoki/Jun/Encyclopedia/htmls/JunProgramScanner.html">http://www.sra.co.jp/people/aoki/Jun/Encyclopedia/htmls/JunProgramScanner.html</A>
+
+たとえば、次のページをご覧ください。【Jun675】のプログラム中
+に出現している語彙たちを、上位５０個だけを収録しておきました。
+
+<A HREF="http://www.sra.co.jp/people/aoki/Jun/Topics/ProgramScanner/">http://www.sra.co.jp/people/aoki/Jun/Topics/ProgramScanner/</A>
+
+　　　　プログラム　　　　　　　　  じゅん
+　　　　バージョン　　　　　　　　     675
+　　　　クラス数　　　　　　　　　     882
+　　　　メソッド数　　　　　　　　  29,897
+　　　　ステップ数　　　　　　　　 357,372
+　　　　メソッドあたりのステップ数      12.0
+　　　　語彙数　　　　　　　　　　  24,630
+　　　　語彙使用数　　　　　　　　 605,153
+　　　　変数語彙数　　　　　　　　   8,071
+　　　　変数使用数　　　　　　　　 263,382
+　　　　メッセージ語彙数　　　　　  13,796
+　　　　メッセージ送信数　　　　　 225,161
+　　　　定数語彙数　　　　　　　　   8,113
+　　　　定数使用数　　　　　　　　  84,067
+
+【メッセージの出現頻度順位】
+    第１位は「,」です。第２位が「+」、第３位が「ifTrue:」にな
+    ります。これら上位５０個のメッセージを暗記できていない人
+    は Smalltalker ではありませんね。
+【変数の出現頻度順位】
+    第１位はシュード変数「self」です。当然ですね。クラスはグ
+    ローバル属性の変数と考えられますので、こちらについても、
+    名前から機能を連想できない人は、プログラマではないわね。
+【定数の出現頻度順位】
+    第１位は「0」です。第２位が「1」、第３位が「nil」になりま
+    す。第６位に「256」が入ってくるところがプログラムらしい。
+【語彙の出現頻度順位】
+    上記の３つの出現頻度順位をマージしたものです。語彙の種類
+    は 24,642、じゅん（Jun675）のプログラムに登場している語彙
+    の総計は 605,376 語に及びます。
+
+拙著「Smalltalk イディオム」の７章に収録されていたものを、か
+なり改良して組み込みました。どうぞ上手く利用してくださいませ。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007144.html">[SML 7144] Smalltalk Solutions Conference
+</A></li>
+	<LI>次の記事 <A HREF="007146.html">[SML 7146] 日経ソフトウエア連載
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7145">[ 日付 ]</a>
+              <a href="thread.html#7145">[ スレッド ]</a>
+              <a href="subject.html#7145">[ 件名 ]</a>
+              <a href="author.html#7145">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,263 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan  2 15:35:48 2013
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 02 Jan 2013 15:35:48 +0900
+Subject: [SML 8036]
+	第51回Smalltalk勉強会＠京都
+Message-ID: <50E3D544.4080904@cc.kyoto-su.ac.jp>
+
+第51回Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto51
+
+場所(部屋)はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第51回 Smalltalk勉強会＠京都
+日時：2013年01月09日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+年が明けてからと約束しておりましたので、「GUIシリーズ」の第五弾として「加法混色」「減法混色」「色相・彩度・明度」の抽象化を行って、リファクタリングの妙を確かめます。青木のハンズオン形式で行いたいと思います。ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+--- 青木淳
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan  2 16:04:51 2013
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 02 Jan 2013 16:04:51 +0900
+Subject: [SML 8037]
+	じゅん for Smalltalk【Jun794】
+Message-ID: <50E3DC13.1040501@cc.kyoto-su.ac.jp>
+
+新年早々にプログラミングなことで痛み入ります。
+
+昨日、2013年の元旦に、じゅん for Smalltalk【Jun794】をリリースしました。
+VisualWorks 7.8.1 および 7.9 の Mac 上で、3次元レンダリングができなかった不具合を解消してあります。
+http://aokilab.kyoto-su.ac.jp/jun/
+
+また、2つの同次座標変換行列の間をパラメトリック化（媒介変数を用いてアクセスできるように）するクラスを加えています。
+新たに作成者リストに名を連ねた西村祐里さんが「3次元空間に可視化したカリキュラムマップ」に用いたものになります。
+http://aokilab.kyoto-su.ac.jp/aoki/misc/cse/CurriculumMap/images/20120831295800.gif
+
+さらに、数々のバグを修正したり、有用だと思われるメソッドなどを追加しておきました。
+VisualWorks 7.8.1／7.9 ＋ Jun794 の動作を Windows 8 および OS X Mountain Lion 10.8.2 で確認してあります。
+
+--- 青木淳＠京都宇治
+
+From ume ＠ softumeya.com  Wed Jan  2 22:45:36 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 2 Jan 2013 22:45:36 +0900
+Subject: [SML 8038]
+	"Pharo by Example"日本語版公開
+Message-ID: <CAH3eEdScKY_48TJZxY4SgRKuxqX0KyFmkmnS0ib4VmE2ZrDP4w@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+[SML 7939]で堀内さんが提案された"Pharo by
+Example"の和訳の提案(http://www.smalltalk.jp/pipermail/sml/2011-June/007939.html)が、ついに結実しました。
+
+- Pharo by Example (日本語版)
+http://www.smalltalk-users.jp/Home/docs
+
+- PDFへの直リンク
+http://t.co/l6yvyNxd
+
+翻訳に参加された皆さん、本当にお疲れ様でした。
+
+ぜひPharoの学習にお役立て下さい。350ページもの充実した内容です。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From tomohiro ＠ sra.co.jp  Fri Jan  4 11:58:57 2013
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri, 4 Jan 2013 11:58:57 +0900
+Subject: [SML 8039] Re:
+ じゅん for Smalltalk【Jun794】
+In-Reply-To: <50E3DC13.1040501@cc.kyoto-su.ac.jp>
+References: <50E3DC13.1040501@cc.kyoto-su.ac.jp>
+Message-ID: <F575C3EB-B45E-4FAD-9C15-61C0D0636C19@sra.co.jp>
+
+おだです。Smalltalkerの皆様、今年もよろしくお願いします。
+
+> 新たに作成者リストに名を連ねた西村祐里さんが「3次元空間に可視化したカリキュラムマップ」に用いたものになります。
+> http://aokilab.kyoto-su.ac.jp/aoki/misc/cse/CurriculumMap/images/20120831295800.gif
+
+これはまたカッコいいですね。
+
+> また、2つの同次座標変換行列の間をパラメトリック化（媒介変数を用いてアクセスできるように）するクラスを加えています。
+
+デザインパターンのようなカタログ化/マニュアル化された発想で満足してしまうのか、
+幾何関係はとりあえずimmutableなオブジェクトを作ればいい的なところで止まってしまったコードが多い中、
+こういうヒネリが利いたオブジェクトがボコボコと出てくるところはさすがSmalltalk的ですね。
+---
+おだ
+
+
+On 2013/01/02, at 16:04, AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp> wrote:
+
+> 新年早々にプログラミングなことで痛み入ります。
+> 
+> 昨日、2013年の元旦に、じゅん for Smalltalk【Jun794】をリリースしました。
+> VisualWorks 7.8.1 および 7.9 の Mac 上で、3次元レンダリングができなかった不具合を解消してあります。
+> http://aokilab.kyoto-su.ac.jp/jun/
+> 
+> また、2つの同次座標変換行列の間をパラメトリック化（媒介変数を用いてアクセスできるように）するクラスを加えています。
+> 新たに作成者リストに名を連ねた西村祐里さんが「3次元空間に可視化したカリキュラムマップ」に用いたものになります。
+> http://aokilab.kyoto-su.ac.jp/aoki/misc/cse/CurriculumMap/images/20120831295800.gif
+> 
+> さらに、数々のバグを修正したり、有用だと思われるメソッドなどを追加しておきました。
+> VisualWorks 7.8.1／7.9 ＋ Jun794 の動作を Windows 8 および OS X Mountain Lion 10.8.2 で確認してあります。
+> 
+> --- 青木淳＠京都宇治
+
+
+From tomohiro ＠ sra.co.jp  Fri Jan  4 13:50:17 2013
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri, 4 Jan 2013 13:50:17 +0900
+Subject: [SML 8040] 水芸2013
+Message-ID: <05B60CF7-B84E-42C7-B63C-8610E526AC41@sra.co.jp>
+
+おだです。
+
+(頭が)お目出度い動画を作ってみました。
+http://www.youtube.com/watch?v=bCdLuvA59LQ
+純Smalltalkで動いております。
+---
+おだ
+
+From x19290 ＠ gmail.com  Mon Jan  7 13:40:56 2013
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 7 Jan 2013 13:40:56 +0900
+Subject: [SML 8041]
+	Smalltalk の教科書を和訳しました
+Message-ID: <20130107044056.GA3820@a.19290.net>
+
+始めまして、堀内寛己(ほりうちひろき)です。
+
+一昨年の 6 月から有志で Pharo by Example というオープンブック (CC-SA) の
+翻訳を進めてきましたが、このたび一応の完成を見ましたので、プロジェクト杉
+田玄白の正式参加作品リストとしてこれを採用していただくことを望みます。
+
+「Pharo by Example 日本語版」
+  https://4310b1a9-a-c5ded419-s-sites.googlegroups.com/a/smalltalk-users.jp/home/Home/docs/PBE1-ja.pdf?attachauth=ANoY7cpMf4afuGMdeQvJz1shtT9cxIC4m0qnjbFuLPapIvwUfQ_BRqUrAeidp49fX6-RCEn0v_k9Wq4YqVaw1mb9i_xkqxXsL0y1T_jRxrxZgtYpmo4RLgKiYE27YVuMJF_K9dTGqz0sEUSvYkPNJ0zWZ4E_MsJApslrYubCOT9iIDXUALU2eiPa0Pqn1Ymddo_zgyPR0vv8NG7gYpjSkZQ0E05qF-s9bktv6RKSjh0YEScTsn60JUM%3D&attredirects=1
+原題:
+  Pharo by Example
+訳者:
+  Pharo by Example 和訳有志 <pharo-by-example-ja ＠ googlegroups.com>
+原著 PDF:
+  http://gforge.inria.fr/frs/download.php/25599/PBE1-2009-10-28.pdf
+原著ソース
+  https://github.com/SquareBracketAssociates/PharoByExample-english
+和訳ソース
+  https://github.com/SquareBracketAssociates/PharoByExample-japanese
+
+リーダーの方針のもと、「自然で正しい日本語に訳す」ことを最重要視した内容
+になっていると自負していますが、重箱の隅的な誤りは残っているでしょう。
+
+Smalltalker 向けアナウンス:
+  http://www.smalltalk.jp/pipermail/sml/2013-January/008038.html
+翻訳有志向け終了宣言、プロジェクト杉田玄白にアナウンスすることに関して:
+  https://groups.google.com/forum/?fromgroups=#!topic/pharo-by-example-ja/LaEOiV_n4G0
+参考:
+  「あらゆる年齢の「子供たち」のためのパーソナルコンピュータ」
+  http://swikis.ddo.jp/abee/74
+--
+堀内寛己(ほりうちひろき)
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan  9 08:45:01 2013
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 09 Jan 2013 08:45:01 +0900
+Subject: [SML 8042] Re:
+	第51回Smalltalk勉強会＠京都
+In-Reply-To: <50E3D544.4080904@cc.kyoto-su.ac.jp>
+References: <50E3D544.4080904@cc.kyoto-su.ac.jp>
+Message-ID: <50ECAF7D.30403@cc.kyoto-su.ac.jp>
+
+本日です！
+
+# アメリカ時間で1月3日の15時に VisualWorks 7.9.1 PUL がアナウンスされていますね。
+
+--- 青木淳
+
+(2013/01/02 15:35), AOKI Atsushi wrote:
+> 第51回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto51
+>
+> 場所(部屋)はキャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第51回 Smalltalk勉強会＠京都
+> 日時：2013年01月09日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 年が明けてからと約束しておりましたので、「GUIシリーズ」の第五弾として「加法混色」「減法混色」「色相・彩度・明度」の抽象化を行って、リファクタリングの妙を確かめます。青木のハンズオン形式で行いたいと思います。ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>
+> --- 青木淳
+
+
+From ume ＠ softumeya.com  Tue Jan 22 00:27:58 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 22 Jan 2013 00:27:58 +0900
+Subject: [SML 8043]
+	第50回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSfXN7FcWyD3Aq-kiNPn8yM5G3FA5VSEqBtCe+-P-fD1A@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2013/1/31(木) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai50kaismalltalkbenkyoukai
+
+今回はAndreas Raabさんの特集です。
+http://forum.world.st/Squeak-ja-4668-Andreas-Raab-td4663512.html
+http://en.wikipedia.org/wiki/Andreas_Raab
+
+類い希なる能力の持ち主で、Squeak界に多大な貢献をされた彼の功績を振り返る意味で、LTやハッカソンを行います。
+Win 32 VM, Tweak, Croquet, WebClient, SqueakSSLなどの話がきっと出てくることでしょう。
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan 30 14:20:29 2013
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 30 Jan 2013 14:20:29 +0900
+Subject: [SML 8044]
+	第52回Smalltalk勉強会＠京都
+Message-ID: <5108AD9D.2010907@cc.kyoto-su.ac.jp>
+
+第52回(最終回)Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto52
+
+場所(部屋)はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第52回 Smalltalk勉強会＠京都
+日時：2013年02月06日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+継続は力なりという格言がございます。足掛け6年にわたって50回ほ
+ど続けてまいりました京都でのSmalltalk勉強会ですが、諸般の事情
+から、この回を持ちまして千秋楽といたします。最終回ですので、
+テーマを決めずに、フリーSmalltalkingにしたいと存じます。一応、
+青木が何某らの題材を用意してまいりますが、遠慮なく、Smalltalk
+から言いたいこと、Smalltalkへ言いたいことなど、闊達におしゃべ
+りプログラミングをいたしましょう。ノート型のパーソナルコン
+ピュータ（Windows または OS X）をご持参ください。
+
+--- 青木淳
+

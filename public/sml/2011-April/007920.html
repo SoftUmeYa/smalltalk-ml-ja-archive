@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7920] Re:	Squeak 4.2の日本語版
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207920%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIDQuMhskQiRORnxLXDhsSEcbKEI%3D%3F%3D&In-Reply-To=%3C4DAC3A8F.7010104%40hera.eonet.ne.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007917.html">
+   <LINK REL="Next"  HREF="007921.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7920] Re:	Squeak 4.2の日本語版</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207920%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIDQuMhskQiRORnxLXDhsSEcbKEI%3D%3F%3D&In-Reply-To=%3C4DAC3A8F.7010104%40hera.eonet.ne.jp%3E"
+       TITLE="[SML 7920] Re:	Squeak 4.2の日本語版">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2011年 4月 18日 (月) 22:20:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007917.html">[SML 7917] Squeak 4.2の日本語版
+</A></li>
+        <LI>次の記事 <A HREF="007921.html">[SML 7921] Re:	Squeak 4.2の日本語版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7920">[ 日付 ]</a>
+              <a href="thread.html#7920">[ スレッド ]</a>
+              <a href="subject.html#7920">[ 件名 ]</a>
+              <a href="author.html#7920">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+Squeak 4.2の日本語版と直接は関係ないかもしれませんが、
+2点質問させてください。
+
+&gt;<i> すぐに試したい方はAll-in-oneが楽でしょう。
+</I>&gt;<i> <A HREF="http://sourceforge.jp/projects/squeak-ja/downloads/51644/Squeak4.2-ja-all-in-one.zip/">http://sourceforge.jp/projects/squeak-ja/downloads/51644/Squeak4.2-ja-all-in-one.zip/</A>
+</I>
+別途ダウンロードしたバイナリのlinux版のVM、
+Squeak-4.4.7.2357-linux_i386.tar.gzと
+Cog VM(coglinux.tgz r2378)で、Squeak 4.2の日本語版のイメージを試した
+ところ、日本語入力が文字化けしました。調べたところso.ImmX11Plugin(Cog VM
+の場合はImmX11Plugin)が無いことが原因と分かりました。このプラグインは
+どこから入手すべきものでしょうか?
+(Squeak 4.2の日本語版All-in-oneに含まれているlinux版のVMのファイル群が、
+このプラグインのファイルを除いて、Squeak-4.4.7.2357-linux_i386、Cog VM
+r2378のものと(md5が)同じであることと、以前から使っている一つ前(?)のVM
+Squeak-4.0.3.2202-linux_i386.tar.gzには含まれていたso.ImmX11Pluginが
+Squeak 4.2の日本語版All-in-oneに含まれているものと(md5が)同じことが分かっ
+たので、とりあえずはコピーして使っています。また、sourceforgeの変更履歴に
+記述があったso.UUIDPluginはSegmentation faultを起こすことがあるので
+削除しています。)
+
+&gt;<i> 今回からCog VMも使えますので、いろいろと速くておすすめです。
+</I>
+ReadMe-ja.txtには「Cog VMでイメージの保存を行うと従来のVMでは開けなイ
+メージに変換されます。Cog用として別名で保存されることをお勧めします。」
+とありましたが、上記VM Squeak-4.4.7.2357-linux_i386とCog VM r2378(Squeak
+4.2 日本語版All-in-oneに同梱のVM)で、同じイメージに保存をして少し試しま
+したが、問題無いようです。問題なく開けているようでも、同じイメージを通常
+のVMとCog VMで使っていると問題が発生するのでしょうか?
+(ちなみに、Cog VM r2378で保存したイメージを、Squeak-4.0.3.2202-
+linux_i386のVMで開こうとすると、
+
+This interpreter (vers. 6502) cannot read image file (vers. 6505).
+Press CR to quit...
+
+のメッセージが出て、開けませんが、このCog VM r2378で保存したイメージを一旦
+Squeak-4.4.7.2357-linux_i386のVMで開いて保存し直すと、
+Squeak-4.0.3.2202-linux_i386のVMで開けるようになります。)
+
+以上よろしくお願い致します。
+
+-- hirowadenden
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007917.html">[SML 7917] Squeak 4.2の日本語版
+</A></li>
+	<LI>次の記事 <A HREF="007921.html">[SML 7921] Re:	Squeak 4.2の日本語版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7920">[ 日付 ]</a>
+              <a href="thread.html#7920">[ スレッド ]</a>
+              <a href="subject.html#7920">[ 件名 ]</a>
+              <a href="author.html#7920">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

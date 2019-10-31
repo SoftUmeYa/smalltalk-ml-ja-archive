@@ -1,0 +1,32 @@
+From ume ＠ softumeya.com  Tue Mar 15 23:40:44 2016
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 15 Mar 2016 23:40:44 +0900
+Subject: [Squeak-ja: 4746]
+	第86回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSyb-tFpe19gsZKq7Hkg+5P57zvpuSZctd=k0tSG_M7=A@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2016/3/31(木) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+http://www.smalltalk-users.jp/Home/gao-zhi/dai86kaismalltalkbenkyoukai
+
+今月のテーマはPharo 4.0に搭載された隠し機能、Slotです。SRAの小田さんによる解説です。
+
+---
+タイトル
+Slot: やっぱインスタンス変数もオブジェクトじゃなきゃね〜
+
+概要
+Pharo 4.0に実装されたSlotをチョコチョコと使い始めてみました。仕組みとしては面白いので、大雑把な感じで紹介したいと思います。
+とりあえず叩き台として、Pharoでインスタンス変数に制約を設定できるようにした Assertalk（あざとく）を使おうと思ってます。
+---
+
+事前申し込みは不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

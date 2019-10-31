@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3740] まだ未解決です。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203740%5D%20%3D%3Futf-8%3Fb%3F44G%2B44Gg5pyq6Kej5rG644Gn44GZ44CC%3F%3D&In-Reply-To=000c01c81862%24ebaa5750%24020ba8c0%40computer">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003738.html">
+   <LINK REL="Next"  HREF="003743.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3740] まだ未解決です。</H1>
+    <B>Hayasaka Yoshiaki</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203740%5D%20%3D%3Futf-8%3Fb%3F44G%2B44Gg5pyq6Kej5rG644Gn44GZ44CC%3F%3D&In-Reply-To=000c01c81862%24ebaa5750%24020ba8c0%40computer"
+       TITLE="[Squeak-ja: 3740] まだ未解決です。">hayasaka ＠ pluto.dti.ne.jp
+       </A><BR>
+    <I>2007年 10月 28日 (日) 17:36:44 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003738.html">[Squeak-ja: 3738] Re: 非 Morph  を ObjectsTool  へ追加する方法について
+</A></li>
+        <LI>次の記事 <A HREF="003743.html">[Squeak-ja: 3743] 保存書庫について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3740">[ 日付 ]</a>
+              <a href="thread.html#3740">[ スレッド ]</a>
+              <a href="subject.html#3740">[ 件名 ]</a>
+              <a href="author.html#3740">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>伊藤　様
+
+ご教授ありがとうございます。
+
+いろいろと格闘していますが、まだ解決していません。
+
+取り急ぎ、お礼を申し上げます。
+
+早坂　吉昭
+
+&gt;<i> &gt; 山梨学院大学の伊藤です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 早坂さん、こんにちは。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt;　クリップボードは、どこにあるのでしょうか。
+</I>&gt;<i> &gt;&gt;/usr/share/icons/Wasp/scalable/stock ディレクトリにある
+</I>&gt;<i> &gt;&gt;clipboard.svgのことでしょうか。
+</I>&gt;<i> &gt;&gt;クリアするとは、削除するのですか。
+</I>&gt;<i> &gt; 　違います。きっとそのファイルを消すと別の問題が発生する
+</I>&gt;<i> &gt; でしょうから消さないでください。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 　私も同様のトラブルを経験したのはずっと以前のことなので
+</I>&gt;<i> &gt; 記憶があいまいです。すみませんが一応ご承知おきください。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 私の遭遇した現象は以下のようなものです。
+</I>&gt;<i> &gt; 1.とあるアプリケーション(defart)を開発中だった。
+</I>&gt;<i> &gt; 2.いろいろ試している際、イメージを保存後にテスト実行と
+</I>&gt;<i> &gt; 　いったことを繰り返していた。
+</I>&gt;<i> &gt; 3.とある実行でシステムがハングし、直前に保存したイメー
+</I>&gt;<i> &gt; 　ジで起動した。
+</I>&gt;<i> &gt; 4.テキストを打てる場所(たぶんPluggableTextMorh)で文字
+</I>&gt;<i> &gt; 　入力したとたん、Squeakがストンと落ちてしまった。
+</I>&gt;<i> &gt; 5.（たしか）この時はSqueakDebug.logが残らなかった。
+</I>&gt;<i> &gt; 6.再度起動しても、システムを再起動しても同様の現象が起
+</I>&gt;<i> &gt; 　こった。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; この辺から記憶があいまいなのですが、確か次のように考え
+</I>&gt;<i> &gt; ていたように思います。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 1.配布イメージからやりなおすのが面倒だったので、何とか
+</I>&gt;<i> &gt; 　落ちないような手立てがないか考えた。
+</I>&gt;<i> &gt; 2.キーボード入力以外なら特に問題が発生しないので、キー
+</I>&gt;<i> &gt; 　ボード入力周辺で何か怪しいことがないか調べた。
+</I>&gt;<i> &gt; 3.キーを入力する際にテキストエリアの選択部分を消すコー
+</I>&gt;<i> &gt; 　ドがあり、その中にクリップボード（ペーストバッファ）
+</I>&gt;<i> &gt; 　関連のコードがあった？（今調べてないので本当かどうか
+</I>&gt;<i> &gt; 　非常に怪しいです）
+</I>&gt;<i> &gt; 4.本来ペーストバッファの内容はＯＳから得るだろうから、
+</I>&gt;<i> &gt; 　再起動でも同様の事態になるのはおかしい。
+</I>&gt;<i> &gt; 5.それでもおかしくなるのは、イメージ側で何らかのデータ
+</I>&gt;<i> &gt; 　を持っているのか？
+</I>&gt;<i> &gt; 6.イメージ側で持っているデータを消せば良いのでは？
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; イメージ側で適当なテキストを選択してコピーしたら、うま
+</I>&gt;<i> &gt; くいったような記憶があります。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; ただ、今になって別のやり方をとった気もしてきました。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 別のやり方とは、debianでおかしくなったイメージをWind
+</I>&gt;<i> &gt; owsで開いてみて、文字入力やらコピーやら実行し、イメー
+</I>&gt;<i> &gt; ジ保存したらdebian側で問題が発生しなくなった、という
+</I>&gt;<i> &gt; ものです。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; どちらにせよ、必要なデータをファイルとして保存してか
+</I>&gt;<i> &gt; ら、新しいイメージで読み込んだ方が早いのではないでし
+</I>&gt;<i> &gt; ょうか？私の場合はいくらか事情があって上記のようにし
+</I>&gt;<i> &gt; ましたが早坂さんも何か訳アリでしょうか？
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 以上、大した手がかりにも原因究明にもならないことをダ
+</I>&gt;<i> &gt; ラダラ書いてすみません。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 少しでも助けになれば幸いです。
+</I>&gt;<i> &gt;
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003738.html">[Squeak-ja: 3738] Re: 非 Morph  を ObjectsTool  へ追加する方法について
+</A></li>
+	<LI>次の記事 <A HREF="003743.html">[Squeak-ja: 3743] 保存書庫について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3740">[ 日付 ]</a>
+              <a href="thread.html#3740">[ スレッド ]</a>
+              <a href="subject.html#3740">[ 件名 ]</a>
+              <a href="author.html#3740">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

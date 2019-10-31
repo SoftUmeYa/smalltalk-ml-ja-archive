@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7579] Duration
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207579%5D%20Duration&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007578.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7579] Duration</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207579%5D%20Duration&In-Reply-To="
+       TITLE="[SML 7579] Duration">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 6月 29日 (月) 13:42:59 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007578.html">[SML 7578] [ANNOUNCE] Jun for Java (Jun729)
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7579">[ 日付 ]</a>
+              <a href="thread.html#7579">[ スレッド ]</a>
+              <a href="subject.html#7579">[ 件名 ]</a>
+              <a href="author.html#7579">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠京都上賀茂です。
+
+次期バージョンである VisualWorks 7.7 から、Duration というオ
+ブジェクトが具備されます。Magnitude のサブクラスで、比較演算
+や算術演算などができます。
+
+Object
+|<i> Magnitude
+</I>|<i> | Duration
+</I>
+Duration には totalNanoseconds というインスタンス変数が1つあ
+ります。ナノ秒ですから、かなり先を見越した造りになっています。
+
+どんなふうに用いるのでしょう。典型的な例を幾つかあげてみます。
+
+123.45 seconds
+==&gt; 2 minutes 3.449996939 seconds
+
+123.45d seconds
+==&gt; 2 minutes 3.45 seconds
+
+123.45s seconds
+==&gt; 2 minutes 3.45 seconds
+
+123450 milliseconds
+==&gt; 2 minutes 3.45 seconds
+
+123450000 microseconds
+==&gt; 2 minutes 3.45 seconds
+
+2 days + 3 minutes + 123 seconds + 456789 microseconds - 2 hours
+==&gt; 1 days 22 hours 5 minutes 3.456789 seconds
+
+ご覧のように、数が Duration のインスタンスを生成する単項メッ
+セージに応答できるのです。
+
+もう少し例をあげましょう。皆さんは、あるプログラムの走行時間
+を計測するのに、以下のようにしていたと思います。
+
+Time microsecondsToRun: [1000 factorial]
+==&gt; 4018
+
+次期バージョンからは、下記のように書くことができます。
+
+(Time microsecondsToRun: [1000 factorial]) microseconds
+==&gt; 4.054 milliseconds
+
+もっと簡潔に、次のように書き下ろしてもいいでしょう。
+
+[1000 factorial] timeToRun
+==&gt; 3.998 milliseconds
+
+また、Delay との相性も良く、今まで次のように書いていたのを、
+
+(Delay forSeconds: 3.45) wait
+
+これからは以下のように書いてゆくことになると思います。
+
+3.45 seconds asDelay wait
+
+評価系のメッセージも、これからいろいろ作れそうで、面白そう。
+
+3 milliseconds
+    toFinish: [1000 factorial]
+    orElse:
+        [^Transcript
+            cr;
+            show: 'give up'].
+^Transcript
+    cr;
+    show: 'okay'
+
+さて、さて、皆さん、Duration の適切な日本語訳は何でしょうか？
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007578.html">[SML 7578] [ANNOUNCE] Jun for Java (Jun729)
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7579">[ 日付 ]</a>
+              <a href="thread.html#7579">[ スレッド ]</a>
+              <a href="subject.html#7579">[ 件名 ]</a>
+              <a href="author.html#7579">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

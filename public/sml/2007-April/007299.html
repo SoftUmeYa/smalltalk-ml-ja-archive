@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7298] はじめまして &amp; Jun  に関して質問
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207298%5D%0A%09%3D%3FUTF-8%3FB%3F44Gv44GY44KB44G%2B44GX44GmICYgSnVuICDjgavplqI%3D%3F%3D%0A%09%3D%3FUTF-8%3FB%3F44GX44Gm6LOq5ZWP%3F%3D&In-Reply-To=80BEB9B5-0008-48F6-8E1C-B8FAA8288E31%40mac.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007298.html">
+   <LINK REL="Next"  HREF="007300.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7298] はじめまして &amp; Jun  に関して質問</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207298%5D%0A%09%3D%3FUTF-8%3FB%3F44Gv44GY44KB44G%2B44GX44GmICYgSnVuICDjgavplqI%3D%3F%3D%0A%09%3D%3FUTF-8%3FB%3F44GX44Gm6LOq5ZWP%3F%3D&In-Reply-To=80BEB9B5-0008-48F6-8E1C-B8FAA8288E31%40mac.com"
+       TITLE="[SML 7298] はじめまして &amp; Jun  に関して質問">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 4月 19日 (木) 05:05:46 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007298.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+        <LI>次の記事 <A HREF="007300.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7299">[ 日付 ]</a>
+              <a href="thread.html#7299">[ スレッド ]</a>
+              <a href="subject.html#7299">[ 件名 ]</a>
+              <a href="author.html#7299">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。（現在、私事で有給休暇中。）
+
+無限ループの不具合を確認しました。佐藤さん、報告を有り難うご
+ざいました。
+
+まず、メソッドの修正案を云々する前に、当該のメッセージ式につ
+いて整理しておきましょう。
+
+aPlane := JunPlane on: aPoint vertical: aLine
+
+このメッセージ式は、ある点（aPoint）を通り、ある線（aLine）に
+垂直な平面（aPlane）を求めます。
+
+応答される平面を表現するオブジェクトの内部構成は、方程式型で
+あり、次のようなものです。
+
+ax + by + cz + d = 0
+
+ですから、インスタンス変数に a b c d を持ちます。数学であれば、
+これだけでいいのですが、じゅんにおける「可視化」したいという
+要求を満たすことができません。そこで、平面上の３点、p1 p2 p3
+をインスタンス変数に保持しています。
+
+さて、問題は、ある点（aPoint）を通り、ある線（aLine）に垂直な
+平面（aPlane）を求めた際に、p1 p2 p3 を求められるか、というこ
+とになります。
+
+p1 は、ある点（aPoint）そのままでいいでしょう。そして、p2 は、
+ある点（aPoint）から、ある線（aLine）への足（nearestPoint）で
+いいでしょう。残るは、p3 です。
+
+その p3 の求め方には、たくさんの方法があります。現在、実装さ
+れている方法は、紆余曲折を経て、今の状態になっているのでしょ
+う。開発ログを調べると、数人の方々の手を煩わせ、何回も修正が
+入っているメソッドでした。
+
+そこで、佐藤さんがお訊ねの件ですが、
+
+ &gt; ここで質問があります。この修正は、今回のケース &quot;JunPlane on:
+ &gt; 0 , 1 , 1 vertical: (0 , 0 , 0 to: -1 , 0 , 0)&quot; でたまたまう
+ &gt; まくいっただけなのでしょうか、それとも、あらゆるケースで通用
+ &gt; するものなのでしょうか。どなたかご回答いただければ幸いです。
+
+たまたまうまくいっただけ、だと思われます。あらゆるケースを確
+かめること自体が難しい上に、同次座標変換の回数を極力減らして、
+計算誤差の入り込みを抑える必要がありますから、なかなか手強い。
+
+以下に、佐藤さんからの不具合報告を鑑みて、私が考えたコードを
+示します。回転系を用いていますので、有効桁数が１６桁程度に落
+ちてしまいますが、あながち使えないこともないでしょう。
+
+|<i> thePoint theLine p1 p2 line angle plane p3 |
+</I>thePoint := 0 , 1 , 1.
+theLine := 0 , 0 , 0 to: -1 , 0 , 0.
+p1 := thePoint.
+p2 := theLine nearestPointFromPoint: p1.
+line := p1 to: p2.
+angle := 90 asDegrees.
+(p2 equal: theLine first)
+     ifTrue:
+         [plane := JunPlane
+                     on: p1
+                     on: p2
+                     on: theLine last.
+         plane := plane transform: (angle transformationToRotate: line).
+         (plane whichSide: theLine last) &gt; 0
+             ifFalse:
+                 [plane := JunPlane
+                             on: p2
+                             on: p1
+                             on: theLine last.
+                 plane := plane transform: (angle transformationToRotate: line)].
+         p3 := plane p3]
+     ifFalse:
+         [plane := JunPlane
+                     on: p1
+                     on: p2
+                     on: theLine first.
+         plane := plane transform: (angle transformationToRotate: line).
+         (plane whichSide: theLine first) &lt; 0
+             ifFalse:
+                 [plane := JunPlane
+                             on: p2
+                             on: p1
+                             on: theLine first.
+                 plane := plane transform: (angle transformationToRotate: line)].
+         p3 := plane p3].
+plane asJunOpenGL3dObjectWithPoints showWithUnitAxes.
+^p3
+
+最後のところで、求めた３点を平面と共に可視化しておきました。
+ご検討いただければ幸いです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007298.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+	<LI>次の記事 <A HREF="007300.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7299">[ 日付 ]</a>
+              <a href="thread.html#7299">[ スレッド ]</a>
+              <a href="subject.html#7299">[ 件名 ]</a>
+              <a href="author.html#7299">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

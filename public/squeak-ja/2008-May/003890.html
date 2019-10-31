@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3890] Re: プログラミングの質問です
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203890%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C%40G6W0270.americas.hpqcorp.net">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003889.html">
+   <LINK REL="Next"  HREF="003891.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3890] Re: プログラミングの質問です</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203890%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=1BBA03CC61D1E541ABC7C2BA63A3F774275535AE9C%40G6W0270.americas.hpqcorp.net"
+       TITLE="[Squeak-ja: 3890] Re: プログラミングの質問です">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 5月 26日 (月) 19:02:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003889.html">[Squeak-ja: 3889] プログラミングの質問です
+</A></li>
+        <LI>次の記事 <A HREF="003891.html">[Squeak-ja: 3891] Re: プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3890">[ 日付 ]</a>
+              <a href="thread.html#3890">[ スレッド ]</a>
+              <a href="subject.html#3890">[ 件名 ]</a>
+              <a href="author.html#3890">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+これはSqueak Etoysではなく、Smalltalkの話ですね。
+
+すべてのMorphは入れ子構造を持つことができ、submorphsというメッセージを送ることで子集合にアクセスできます。
+ActiveWorldはPasteUpMorphのインスタンスですから、これも例外ではありません。以下の式を評価してみてください。
+
+ActiveWorld submorphs.
+
+この戻り値はワールドに表示されているすべてのMorphの集合です。
+もし、この中の特定のクラスのインスタンスにのみ特定の処理をさせたい場合は以下のようにします。
+
+ActiveWorld submorphs do: [:each |
+    [each isKindOf: クラス] ifTrue: [each 特定の処理]].
+
+isKindOf:は指定したクラスのサブクラスも含むので、そのクラスのインスタンスのみにしたいときは、代わりにisMemberOf:を使います。
+
+//abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080526/fe8ee8fe/attachment-0001.html">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080526/fe8ee8fe/attachment-0001.html</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003889.html">[Squeak-ja: 3889] プログラミングの質問です
+</A></li>
+	<LI>次の記事 <A HREF="003891.html">[Squeak-ja: 3891] Re: プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3890">[ 日付 ]</a>
+              <a href="thread.html#3890">[ スレッド ]</a>
+              <a href="subject.html#3890">[ 件名 ]</a>
+              <a href="author.html#3890">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

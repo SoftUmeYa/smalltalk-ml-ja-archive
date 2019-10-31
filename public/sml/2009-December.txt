@@ -1,0 +1,529 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Dec  2 06:00:05 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Dec  2 06:00:15 2009
+Subject: [SML 7726] Re: 第14回Smalltalk勉強会＠京都（忘年会風）
+In-Reply-To: <4B0CE1C0.8060300@cc.kyoto-su.ac.jp>
+References: <4B0CE1C0.8060300@cc.kyoto-su.ac.jp>
+Message-ID: <4B1583D5.5080000@cc.kyoto-su.ac.jp>
+
+おはようございます。京都での師走勉強会、今日（reminder）です！
+
+会場は18:00から使用できますので、参加表明をいただいている方々、
+18:00から19:00の間にお集まり（準備を手伝って）いただけると助か
+ります。
+
+また、飛び入り参加を歓迎いたします。軽食や飲料を多めに準備する
+つもりですから、気軽に立ち寄ってくださいませ。
+
+--- 青木淳＠京都宇治
+
+Wed, 25 Nov 2009 16:50:24 私は書きました:
+> 青木＠京都上賀茂です。
+> 
+> 第14回Smalltalk勉強会@京都を開催いたします。万障繰り合わせて
+> JR京都駅前にご参集ください。今回は参加人数を大まかに把握させ
+> てください。ご参加いただける方々、私宛にメールをお願いします。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto14
+> 
+> 第14回 Smalltalk勉強会＠京都
+> 日時：2009年12月02日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 師走（2009年の最後）の勉強会になります。課題も一段落しますし、
+> 発足して一年が経ちましたので、ちょっと早いですが、忘年会チッ
+> クな勉強会にしようと思います。軽食（ピザの注文）や飲料（ビー
+> ルやソフトドリングなど）を用意します。飲食をしながら課題のレ
+> ビューを行って2009年を〆ませう。ご賛同（各方に500円〜1,000円
+> を捻出して）いただけるかしらん。それと応援求む：準備（向かい
+> のビックカメラへ飲料の調達など）を手伝っていただけると助かり
+> ます。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From osamu.hamasaki ＠ gmail.com  Sun Dec  6 09:44:12 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sun Dec  6 09:44:19 2009
+Subject: [SML 7727] Re: 第14回Smalltalk勉強会＠京都（忘年会風）
+In-Reply-To: <4B0CE1C0.8060300@cc.kyoto-su.ac.jp>
+References: <4B0CE1C0.8060300@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd30912051644p48b6679pfe1deccb36fbb8f4@mail.gmail.com>
+
+濱崎です。
+
+先日のSmalltalk勉強会＠京都では、楽しいひとときを過ごせました。
+ありがとうございました。
+
+さて勉強会でプログラムの説明をした時に、CSVTableとPrimeMinisterTable
+（中間テーブル）間のフィールドのマッピングに関して分かりやすく説明
+出来ませんでした。
+
+説明が分かり難かったのは、結局のところプログラムが分かり難い
+ものだったからだと思いましたので、プログラムを直しました。
+
+　　CSV2HTML4PrimeMinisters>>#fieldMappingForCSVToPrimeMinister
+
+のように書きましたので、マッピングであることが明確になったと
+思います。PrimeMiniserTableとHTMLTableのフィールド間のマッピングも
+同様に直しました。
+
+なお、CSVTableとPrimeMinisterTable間のフィールドのマッピングの
+並び順はCSVファイルの項目の並び順とは無関係です。（このあたりが
+勉強会での説明の時にうまく説明できなかったところです。）
+
+　　PrimeMinisterTableTest>>#testCreateTable1
+　　PrimeMinisterTableTest>>#testCreateTable2
+　　PrimeMinisterTableTest>>#testCreateTable3
+
+を比較すればお分かり頂けると思います。
+
+以上です。
+
+2009年11月25日16:50 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+> 青木＠京都上賀茂です。
+>
+> 第14回Smalltalk勉強会@京都を開催いたします。万障繰り合わせて
+> JR京都駅前にご参集ください。今回は参加人数を大まかに把握させ
+> てください。ご参加いただける方々、私宛にメールをお願いします。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto14
+>
+> 第14回 Smalltalk勉強会＠京都
+> 日時：2009年12月02日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 師走（2009年の最後）の勉強会になります。課題も一段落しますし、
+> 発足して一年が経ちましたので、ちょっと早いですが、忘年会チッ
+> クな勉強会にしようと思います。軽食（ピザの注文）や飲料（ビー
+> ルやソフトドリングなど）を用意します。飲食をしながら課題のレ
+> ビューを行って2009年を〆ませう。ご賛同（各方に500円〜1,000円
+> を捻出して）いただけるかしらん。それと応援求む：準備（向かい
+> のビックカメラへ飲料の調達など）を手伝っていただけると助かり
+> ます。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Translators-hamasaki-ver5.st.zip
+型:         application/zip
+サイズ:     11026 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/sml/attachments/20091206/79b9e097/Translators-hamasaki-ver5.st.zip
+From umejava ＠ mars.dti.ne.jp  Wed Dec  9 23:08:51 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Dec  9 23:08:55 2009
+Subject: [SML 7728] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+Message-ID: <Jx8HvxtYU_CD5pNu8PLSYOFw5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+12/19日のSmalltalk合同勉強会@名古屋ですが、いよいよ10日後ですね。
+
+キャンセルなどが発生したため、あと3名参加可能になっています。
+まだ間に合いますのでぜひどうぞ。> 皆様
+http://atnd.org/events/1593
+
+さて、当日はセミナが中心なので、特に何も持たずとも楽しめるとは思いますが、
+ノートPCに、VWやSqueakなどをインストールしておくと、いろいろとその場で
+試せて良いかもしれません。
+
+ご参考:
+VisualWorksは下記からインストールできます。
+http://www.cincomsmalltalk.com/scripts/CommunityDownloadPage.ssp
+Squeakは下記からです。
+http://swikis.ddo.jp/umejava/48
+SeasideJOnePlusでもいいでしょう。
+http://swikis.ddo.jp/umejava/41
+
+なおハッカソンに出られる場合は、ノートPCと上記のSmalltalk環境の
+インストールはほぼ必須になると思います。自由なテーマでSmalltalkの
+プログラムを周りの人に聞いたりしながら書いていくという感じになりますので。
+
+ライトニングトークの参加も引き続き募集中です。ハッカソン時に即興でプレゼン
+を作成するというのもアリですよ。
+
+それではよろしくお願い申し上げます。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 12月19日(土)に「Smalltalk合同勉強会@名古屋」を開催することとなりました。
+> 東京と京都の勉強会の面々が名古屋に集結、という感じなのですが、もちろん
+> 日本や世界のどこから来ていただいてもかまいません。
+> 
+> 今回は会場の都合もありますので、参加の方は下記で登録をお願いします。
+> http://atnd.org/events/1593
+> 
+> 詳しい内容は今後つめていきます。いくつかのセミナーに加え、もしかしたら
+> ハッカソンという感じです。アイデアありましたらどうぞ。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Fri Dec 18 20:00:11 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Fri Dec 18 20:01:52 2009
+Subject: [SML 7729] Tomorrow
+Message-ID: <b81554460912180300y680b50crb0b5c5e09acac495@mail.gmail.com>
+
+Hi guys,
+i'm looking for more information about the place for the meeting
+tomorrow. Because i have some problem to read japanese.
+Thank you.
+Best regards,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From tak ＠ metatoys.org  Fri Dec 18 21:24:28 2009
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Fri Dec 18 21:24:32 2009
+Subject: [SML 7730] Re: Tomorrow
+In-Reply-To: <b81554460912180300y680b50crb0b5c5e09acac495@mail.gmail.com>
+References: <b81554460912180300y680b50crb0b5c5e09acac495@mail.gmail.com>
+Message-ID: <c57315d40912180424m65629b2bmf741f02e951a1193@mail.gmail.com>
+
+Hi Serge,
+
+Where are you staying tonight?
+If you can come to Chikusa station around 9:30 tomorrow,
+I will walk with you to the venue.
+This is my cell phone: 070-6427-4574
+
+Cheers,
+- Takashi
+
+On Fri, Dec 18, 2009 at 8:00 PM, Serge Stinckwich
+<serge.stinckwich@gmail.com> wrote:
+> Hi guys,
+> i'm looking for more information about the place for the meeting
+> tomorrow. Because i have some problem to read japanese.
+> Thank you.
+> Best regards,
+> --
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Smalltalkers do: [:it | All with: Class, (And love: it)]
+> http://doesnotunderstand.org/
+>
+From serge.stinckwich ＠ gmail.com  Fri Dec 18 21:28:45 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Fri Dec 18 21:29:09 2009
+Subject: [SML 7731] Re: Tomorrow
+In-Reply-To: <c57315d40912180424m65629b2bmf741f02e951a1193@mail.gmail.com>
+References: <b81554460912180300y680b50crb0b5c5e09acac495@mail.gmail.com> 
+	<c57315d40912180424m65629b2bmf741f02e951a1193@mail.gmail.com>
+Message-ID: <b81554460912180428y271758ebncea3bb9096139c78@mail.gmail.com>
+
+2009/12/18 Takashi Yamamiya <tak@metatoys.org>:
+> Hi Serge,
+>
+> Where are you staying tonight?
+
+I'm already in Nagoya in an hotel.
+
+> If you can come to Chikusa station around 9:30 tomorrow,
+
+Yes, great, but at which exit should i wait ?
+
+> I will walk with you to the venue.
+> This is my cell phone: 070-6427-4574
+
+I have no cell phone in Japan.
+See you tomorrow,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From tak ＠ metatoys.org  Fri Dec 18 21:44:27 2009
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Fri Dec 18 21:44:33 2009
+Subject: [SML 7732] Re: Tomorrow
+In-Reply-To: <b81554460912180428y271758ebncea3bb9096139c78@mail.gmail.com>
+References: <b81554460912180300y680b50crb0b5c5e09acac495@mail.gmail.com>
+	<c57315d40912180424m65629b2bmf741f02e951a1193@mail.gmail.com>
+	<b81554460912180428y271758ebncea3bb9096139c78@mail.gmail.com>
+Message-ID: <c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com>
+
+On Fri, Dec 18, 2009 at 9:28 PM, Serge Stinckwich
+<serge.stinckwich@gmail.com> wrote:
+> 2009/12/18 Takashi Yamamiya <tak@metatoys.org>:
+>> If you can come to Chikusa station around 9:30 tomorrow,
+>
+> Yes, great, but at which exit should i wait ?
+>
+I don't know. I hope JR Chikusa station has only one exit.
+If not, I will wait you at south most  exit.
+
+http://www.google.com/maps?q=35.169945,136.930595&num=1&sll=35.169868,136.930477&sspn=0.001377,0.002025&ie=UTF8&ll=35.17,136.930595&spn=0.001377,0.002025&z=19
+
+Cheers,
+- Takashi
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Dec 18 21:53:07 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Dec 18 21:53:12 2009
+Subject: [SML 7733] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <Jx8HvxtYU_CD5pNu8PLSYOFw5@mars.dti.ne.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+	<Jx8HvxtYU_CD5pNu8PLSYOFw5@mars.dti.ne.jp>
+Message-ID: <4B2B7B33.4010506@cc.kyoto-su.ac.jp>
+
+(09/12/09 23:08), Masashi Umezawa wrote:
+> 12/19日のSmalltalk合同勉強会@名古屋ですが、いよいよ
+
+青木淳です。ごめんなさい。
+
+明日の名古屋の合同勉強会へゆけなくなりました。止ん事無い事情
+になりまして…。ドクターストップです。先ほど、梅澤さん宛てに
+もう少し詳しい事情をお知らせいたしました。
+
+プレゼン資料とデモプログラムを入れたマシン２台とスパイダーを
+車に積んで用意万全だったのに、残念です。申し訳ありません。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From tscompor ＠ gmail.com  Fri Dec 18 22:34:32 2009
+From: tscompor ＠ gmail.com (Takafumi Saikawa)
+Date: Fri Dec 18 22:34:38 2009
+Subject: [SML 7734] Re: Tomorrow
+In-Reply-To: <c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com>
+References: <c57315d40912180424m65629b2bmf741f02e951a1193@mail.gmail.com>
+	<b81554460912180428y271758ebncea3bb9096139c78@mail.gmail.com>
+	<c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com>
+Message-ID: <20091218.223343.160720470.tscompor@gmail.com>
+
+From: Takashi Yamamiya <tak@metatoys.org>
+Subject: [SML 7732] Re: Tomorrow
+Date: Fri, 18 Dec 2009 21:44:27 +0900
+Message-ID: <c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com>
+tak> I don't know. I hope JR Chikusa station has only one exit.
+tak> If not, I will wait you at south most  exit.
+
+The overground exit of the JR Chikusa station is unique.
+Underground?  If you get through the underground gate of the JR or
+the Nagoya city subway, you are in a small underground mall.
+Although it is small, it has many exits.  In this case, you should take
+the nearest one and go upstairs to the ground as soon as possible.
+
+
+Takafumi Saikawa
+From serge.stinckwich ＠ gmail.com  Fri Dec 18 22:38:08 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Fri Dec 18 22:38:31 2009
+Subject: [SML 7735] Re: Tomorrow
+In-Reply-To: <20091218.223343.160720470.tscompor@gmail.com>
+References: <c57315d40912180424m65629b2bmf741f02e951a1193@mail.gmail.com> 
+	<b81554460912180428y271758ebncea3bb9096139c78@mail.gmail.com> 
+	<c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com> 
+	<20091218.223343.160720470.tscompor@gmail.com>
+Message-ID: <b81554460912180538u31b1d362rcc24727c9f47acac@mail.gmail.com>
+
+ok see you outside at the exit of JR Chikusa, i will take subway.
+
+2009/12/18 Takafumi Saikawa <tscompor@gmail.com>:
+> From: Takashi Yamamiya <tak@metatoys.org>
+> Subject: [SML 7732] Re: Tomorrow
+> Date: Fri, 18 Dec 2009 21:44:27 +0900
+> Message-ID: <c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com>
+> tak> I don't know. I hope JR Chikusa station has only one exit.
+> tak> If not, I will wait you at south most 〓exit.
+>
+> The overground exit of the JR Chikusa station is unique.
+> Underground? 〓If you get through the underground gate of the JR or
+> the Nagoya city subway, you are in a small underground mall.
+> Although it is small, it has many exits. 〓In this case, you should take
+> the nearest one and go upstairs to the ground as soon as possible.
+>
+>
+> Takafumi Saikawa
+>
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From tscompor ＠ gmail.com  Fri Dec 18 22:44:42 2009
+From: tscompor ＠ gmail.com (Takafumi Saikawa)
+Date: Fri Dec 18 22:44:50 2009
+Subject: [SML 7736] Re: Tomorrow
+In-Reply-To: <c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com>
+References: <c57315d40912180424m65629b2bmf741f02e951a1193@mail.gmail.com>
+	<b81554460912180428y271758ebncea3bb9096139c78@mail.gmail.com>
+	<c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com>
+Message-ID: <20091218.224356.210445399.tscompor@gmail.com>
+
+I forgot to mention an important point: let us meet at the overground JR exit.
+I will be there at 9:30 too, in a white coat, carrying the Blue Book.
+
+Takafumi Saikawa
+From tak ＠ metatoys.org  Fri Dec 18 22:57:05 2009
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Fri Dec 18 22:57:09 2009
+Subject: [SML 7737] Re: Tomorrow
+In-Reply-To: <20091218.224356.210445399.tscompor@gmail.com>
+References: <c57315d40912180424m65629b2bmf741f02e951a1193@mail.gmail.com>
+	<b81554460912180428y271758ebncea3bb9096139c78@mail.gmail.com>
+	<c57315d40912180444u13d03c64m8e56d72a875d746a@mail.gmail.com>
+	<20091218.224356.210445399.tscompor@gmail.com>
+Message-ID: <c57315d40912180557m73951d91r7e2db31feca2ae9e@mail.gmail.com>
+
+Good, the Blue Book is a great clue.
+
+On Fri, Dec 18, 2009 at 10:44 PM, Takafumi Saikawa <tscompor@gmail.com> wrote:
+> I forgot to mention an important point: let us meet at the overground JR exit.
+> I will be there at 9:30 too, in a white coat, carrying the Blue Book.
+>
+> Takafumi Saikawa
+>
+From umejava ＠ mars.dti.ne.jp  Sun Dec 20 23:55:21 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Dec 20 23:55:30 2009
+Subject: [SML 7738] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <4B2B7B33.4010506@cc.kyoto-su.ac.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+	<Jx8HvxtYU_CD5pNu8PLSYOFw5@mars.dti.ne.jp>
+	<4B2B7B33.4010506@cc.kyoto-su.ac.jp>
+Message-ID: <Jx3t4.9DgsXrhnKnyKOMc0Pw1@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+参加された皆さん、ありがとうございました！
+青木さんのハプニングはたいそう残念でしたが、全体としては非常に
+盛り上がった会だったと思います。活発な質問などで時間が足りなく
+なったくらいでした。
+
+このような会がまた開けると良いなと思っています。
+ぜひ次回もよろしくお願いします。
+
+http://atnd.org/events/1593
+
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> (09/12/09 23:08), Masashi Umezawa wrote:
+> > 12/19日のSmalltalk合同勉強会@名古屋ですが、いよいよ
+> 
+> 青木淳です。ごめんなさい。
+> 
+> 明日の名古屋の合同勉強会へゆけなくなりました。止ん事無い事情
+> になりまして…。ドクターストップです。先ほど、梅澤さん宛てに
+> もう少し詳しい事情をお知らせいたしました。
+> 
+> プレゼン資料とデモプログラムを入れたマシン２台とスパイダーを
+> 車に積んで用意万全だったのに、残念です。申し訳ありません。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Dec 25 09:50:45 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Dec 25 09:50:58 2009
+Subject: [SML 7739] 第15回Smalltalk勉強会＠京都
+Message-ID: <4B340C65.7020800@cc.kyoto-su.ac.jp>
+
+青木淳@名古屋での合同Smalltalk勉強会をドタキャンして申し訳あ
+りませんでした。やっと C-reactive protein が正常に戻りそう…。
+
+第15回Smalltalk勉強会@京都を開催いたします。万障繰り合わせて
+JR京都駅前にご参集ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto15
+
+第15回 Smalltalk勉強会＠京都
+日時：2010年01月06日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+新年早々の勉強会は課題を一新してウィンドウ（グラフィックスの）
+プログラミングから走り始めたいと思います。テキスト（ブラック
+ブック）を用いて助走したら、工事中のオブジェクトを登場させ、
+要求仕様書にしたがってデザインし、すぐにプログラミングを行い、
+スパイラルモデル（プロセス）を廻してゆきたいと考えています。
+ノート型のパーソナルコンピュータ（Windows 7/Vista/XP または
+Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From serge.stinckwich ＠ gmail.com  Tue Dec 29 13:32:46 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue Dec 29 13:33:12 2009
+Subject: [SML 7740] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <Jx3t4.9DgsXrhnKnyKOMc0Pw1@mars.dti.ne.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+	<Jx8HvxtYU_CD5pNu8PLSYOFw5@mars.dti.ne.jp> 
+	<4B2B7B33.4010506@cc.kyoto-su.ac.jp>
+	<Jx3t4.9DgsXrhnKnyKOMc0Pw1@mars.dti.ne.jp>
+Message-ID: <b81554460912282032n4823bc27uc5526cee83eb6ee@mail.gmail.com>
+
+I would like to thank you all for the great Smalltalk event in Nagoya.
+I hope to come back in a future Smalltakers meeting in Japan in the future.
+
+See you,
+
+2009/12/20 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> こんにちは
+> 梅澤です。
+>
+> 参加された皆さん、ありがとうございました！
+> 青木さんのハプニングはたいそう残念でしたが、全体としては非常に
+> 盛り上がった会だったと思います。活発な質問などで時間が足りなく
+> なったくらいでした。
+>
+> このような会がまた開けると良いなと思っています。
+> ぜひ次回もよろしくお願いします。
+>
+> http://atnd.org/events/1593
+>
+> AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+>> (09/12/09 23:08), Masashi Umezawa wrote:
+>> > 12/19日のSmalltalk合同勉強会@名古屋ですが、いよいよ
+>>
+>> 青木淳です。ごめんなさい。
+>>
+>> 明日の名古屋の合同勉強会へゆけなくなりました。止ん事無い事情
+>> になりまして…。ドクターストップです。先ほど、梅澤さん宛てに
+>> もう少し詳しい事情をお知らせいたしました。
+>>
+>> プレゼン資料とデモプログラムを入れたマシン２台とスパイダーを
+>> 車に積んで用意万全だったのに、残念です。申し訳ありません。
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+>
+>
+> ---
+> [:masashi | ^umezawa]
+>
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/

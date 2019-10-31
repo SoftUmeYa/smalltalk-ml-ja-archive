@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3872] Re: Object特異的な情報を含むメッセージの発信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203872%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003871.html">
+   <LINK REL="Next"  HREF="003873.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3872] Re: Object特異的な情報を含むメッセージの発信について</H1>
+    <B>Hiromichi Tsurui</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203872%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3872] Re: Object特異的な情報を含むメッセージの発信について">tsurui ＠ med.juntendo.ac.jp
+       </A><BR>
+    <I>2008年 5月 10日 (土) 20:05:57 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003871.html">[Squeak-ja: 3871] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+        <LI>次の記事 <A HREF="003873.html">[Squeak-ja: 3873] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3872">[ 日付 ]</a>
+              <a href="thread.html#3872">[ スレッド ]</a>
+              <a href="subject.html#3872">[ 件名 ]</a>
+              <a href="author.html#3872">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+阿部さん、山宮さん、早速のお返事ありがとうございます。
+
+例として、月と地球の運動をシミュレートすることを考えています。それぞれは、インスタンス変数として、質量、現在位置及び現在の速度を持つとします。月は、現在の地球の位置と質量（これは一回伝達されれば十分ですが）の情報が得られると、自身の質量、位置、速度から微小時間後の位置、速度が求まります。地球に関しても同じことです。この微小時間のメッセージのやり取り繰りを返すことにより有限時間での両者の動きをシミュレートしたいと考えているわけです。端的に言って、地球がその質量及び位置を月へ、月がその質量及び位置を地球へ直接に伝達する方法はないのでしょうか、という質問です。assureUniClass, compile: classified:を用いますと、（まだ十分把握できてい 
+ないのですが）、間に介在するものが、月の位置を月から聞き出して地球に教え、地球の位置を地球から聞き出しつきに教える、という形になるような気がいたします。より一般的には、Object間で直接情報のやり取りをする方法はあるのでしょうか、ということになります。
+
+
+
+鶴井
+
+
+
+&gt;<i> 山宮です。
+</I>&gt;<i>
+</I>&gt;<i> Hiromichi Tsurui wrote:
+</I>&gt;&gt;<i> Object Aからobject BへAに関する情報を含むメッセージを送り、その情報に基
+</I>&gt;&gt;<i> づいてBがある変化をする、というような場合、どのように記述するべきでしょ
+</I>&gt;&gt;<i> うか？Object特異的な情報を含むメッセージをそのObjectから発信する方法につ
+</I>&gt;&gt;<i> いてです。何冊かの本を読んだのですがはっきり触れていませんでした。
+</I>&gt;<i>
+</I>&gt;<i> 「メッセージ」や、「Object特異的」と言った言葉は、一般で使われる意味と
+</I>&gt;<i> Smalltalk 言語の文脈の使われ方が違う時がありますので、
+</I>&gt;<i> Object A, B やメッセージの具体例を挙げて頂くか、背景にある問題を教えて
+</I>&gt;<i> 頂ければお話が分かりやすくなると思います。
+</I>&gt;<i>
+</I>&gt;<i> -- 
+</I>&gt;<i> Takashi Yamamiya := <A HREF="http://metatoys.org/">http://metatoys.org/</A>
+</I>
+
+
+&gt;<i> こんにちは、阿部です。
+</I>&gt;<i> ここでいう「Bがある変化をする」とは、単にBの属性値が変化するだけでなく、Aの情報をもとにBの振る舞いが変わるという解釈でよいでしょうか。
+</I>&gt;<i> また、オブジェクト特異的ということなので、Bのみが変化するのであって、Bが属するクラスおよびそのインスタンスは変化しないということですね。
+</I>&gt;<i> そのような場合、Squeak Smalltalkのインスタンスに、assureUniClassメッセージを送ることでインスタンス特異的クラスを得ることができます。このクラスに特異的メソッドを追加するには、compile:classified:を送ります。このとき、compile:の引数はソースコードの文字列、classified:の引数は任意のメソッドカテゴリ(プロトコル)の文字列です。したがって、このソースコードにAの情報を含めれば目的は達すると思われます。
+</I>&gt;<i> 詳しくは以下の鷲見さんの解説を参照してください。
+</I>&gt;<i> <A HREF="http://d.hatena.ne.jp/sumim/20060420/p1">http://d.hatena.ne.jp/sumim/20060420/p1</A>
+</I>&gt;<i>
+</I>&gt;<i> なお、2004年末の議論は、マルチエージェントの扱いに関するもので、今回の話とは直接関係ないと思います。
+</I>&gt;<i>
+</I>&gt;<i> //abee
+</I>&gt;<i> --
+</I>&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i>
+</I>&gt;<i> 08/05/10 に Hiromichi Tsurui&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tsurui ＠ med.juntendo.ac.jp</A>&gt; さんは書きました:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Object Aからobject
+</I>&gt;&gt;<i> BへAに関する情報を含むメッセージを送り、その情報に基づいてBがある変化をする、というような場合、どのように記述するべきでしょうか？Object特異的な情報を含むメッセージをそのObjectから発信する方法についてです。何冊かの本を読んだのですがはっきり触れていませんでした。２００４年１２月末から２００５年１月に掛けてのKondo
+</I>&gt;&gt;<i> Fumito, Kazuhiro ABE, Takashi
+</I>&gt;&gt;<i> Yamamiyaさんたちの議論はこの問題に関するものだと思うのですが、殆んど文字化けしていて読めませんでした。あるいは、Smalltalkにはこのような機能はないのでしょうか？
+</I>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003871.html">[Squeak-ja: 3871] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+	<LI>次の記事 <A HREF="003873.html">[Squeak-ja: 3873] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3872">[ 日付 ]</a>
+              <a href="thread.html#3872">[ スレッド ]</a>
+              <a href="subject.html#3872">[ 件名 ]</a>
+              <a href="author.html#3872">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,1799 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Sep  2 05:58:25 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Sep  2 05:58:36 2009
+Subject: [SML 7627] Re: 第11回Smalltalk勉強会＠京都
+In-Reply-To: <4A922F0D.6050707@cc.kyoto-su.ac.jp>
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp>
+Message-ID: <4A9D8AF1.7000006@cc.kyoto-su.ac.jp>
+
+本日（reminder）です。
+
+--- 青木淳
+
+私は書きました:
+> 青木＠京都上賀茂です。
+> 
+> 第11回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+> JR京都駅前にご参集ください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto11
+> 
+> 第11回 Smalltalk勉強会＠京都
+> 日時：2009年09月02日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> ブロッククロージャが終わり、文法の解説が一通り終了しましたの
+> で、プログラム製作技法へと歩を進めたいと思います。まずはファ
+> イル周りから始めます。エンコーディングを考慮したストリームを
+> ベースにして言語変換系を作ってみましょう。簡単な問題を用意し
+> ますので、その問題を解く過程（プロセス）の共有を行って、
+> Smalltalkのプログラミング手法を伝えてゆきたいと思います。
+> 
+> ノート型のパーソナルコンピュータ（Windows Vista/XP または
+> Mac OS X (on Intel Mac)）をご持参ください。
+> 
+> また、VisualWorksの次期バージョンである7.7に対応させた「じゅ
+> ん for Smalltalk（Jun783）」も配布いたします。（7.6から7.7へ
+> の変更点が著しくて、今やっと Mac OS X 版を対応させたところ。
+> Windows 版や Ubuntu などの Linux 版には手が届かず仕舞い…。）
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Sep  3 19:53:30 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Sep  3 19:53:38 2009
+Subject: [SML 7628] Re: 第11回Smalltalk勉強会＠京都
+In-Reply-To: <4A9D8AF1.7000006@cc.kyoto-su.ac.jp>
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp>
+	<4A9D8AF1.7000006@cc.kyoto-su.ac.jp>
+Message-ID: <4A9FA02A.80108@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。京都はだいぶ秋らしくなってきました。
+
+さっそくですが、昨日に開催した第11回Smalltalk勉強会@京都の報
+告をさせていただきます。
+
+文法の解説が一通り終了しましたので、プログラム製作技法へと入
+りました。ファイルまわりから導入し、Unicode(UTF-8)のファイル
+を一文字ずつ読む、一行ずつ読む、一気に読む、区切り文字で分割、
+等々をやってゆきました。
+
+そして、単純な CSV（Comma-Separated Values）から、かなり綺麗
+な HTML（HyperText Markup Language）を生成するという課題に取
+り組みました。
+
+この課題は補足資料として、次のページからたどれるようにしてお
+きました。我こそはと思う方々、チャレンジしてみてくださいませ。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto11
+
+在位期間から在位日数を求めなければなりませんし、縮小画像から
+画像をたどれるように構成しなければなりません。やってみるとね、
+理系出身の総理大臣は稀なんだなぁ〜、ということがわかりますよ。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/CSV2HTML/index-j.html
+
+このメーリングリストで、より良いプログラムをめざしていただけ
+ば幸いです。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From asugitan ＠ kh.rim.or.jp  Wed Sep  9 12:58:23 2009
+From: asugitan ＠ kh.rim.or.jp (Akinori Sugitani)
+Date: Wed Sep  9 12:58:30 2009
+Subject: [SML 7629]  第11回Smalltalk勉強会＠京都課題完成
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp><4A9D8AF1.7000006@cc.kyoto-su.ac.jp>
+	<4A9FA02A.80108@cc.kyoto-su.ac.jp>
+Message-ID: <C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>
+
+「第11回Smalltalk勉強会＠京都」の課題ですが、ひとまず完成しました。
+「動くプログラムと正しいプログラムは違うもの」だそうなのですが、
+一応動いています。"private"なメソッドを３つ追加し、computeNumberOfDaysを変更しました。
+
+質問ですが、 href="images/039.jpg"等タグ中の"/"は、プラットホーム依存でしょうか？
+他には、文字列から日付値を得る際の、ロケール等の扱いが良くわからず、
+とりあえず自分のWindowsXP上で動くプログラムになっています。
+
+--------------------------
+杉谷明則
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Sep  9 13:23:39 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Sep  9 13:23:42 2009
+Subject: [SML 7630] Re: 第11回Smalltalk勉強会＠京都課題完成
+In-Reply-To: <C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp><4A9D8AF1.7000006@cc.kyoto-su.ac.jp>	<4A9FA02A.80108@cc.kyoto-su.ac.jp>
+	<C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>
+Message-ID: <4AA72DCB.3040602@cc.kyoto-su.ac.jp>
+
+Akinori Sugitani さんは書きました:
+> 「第11回Smalltalk勉強会＠京都」の課題ですが、ひとまず完成しました。
+> 「動くプログラムと正しいプログラムは違うもの」だそうなのですが、
+> 一応動いています。"private"なメソッドを３つ追加し、computeNumberOfDaysを 
+> 変更しました。
+
+おっ！やりましたね。
+
+> 質問ですが、 href="images/039.jpg"等タグ中の"/"は、プラットホーム依存で 
+> しょうか？
+
+URL(/URI/URN)ですから、プラットホーム依存ではありませぬ。
+
+> 他には、文字列から日付値を得る際の、ロケール等の扱いが良くわからず、
+> とりあえず自分のWindowsXP上で動くプログラムになっています。
+
+来月の勉強会にて、皆さんでレビューし合いませう。
+
+--- 青木淳＠京都上賀茂
+From asugitan ＠ kh.rim.or.jp  Wed Sep  9 14:09:30 2009
+From: asugitan ＠ kh.rim.or.jp (Akinori Sugitani)
+Date: Wed Sep  9 14:09:32 2009
+Subject: [SML 7631] Re: 第11回Smalltalk勉強会＠京都課題完成
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp><4A9D8AF1.7000006@cc.kyoto-su.ac.jp>	<4A9FA02A.80108@cc.kyoto-su.ac.jp><C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>
+	<4AA72DCB.3040602@cc.kyoto-su.ac.jp>
+Message-ID: <23600597C9634EEBA249295774214F00@SUGITPR60E>
+
+青木さんコメントありがとうございます。
+> URL(/URI/URN)ですから、プラットホーム依存ではありませぬ。
+勉強会の時、そのような事を言われていたようにも思ったのですが、
+記憶に自信がありませんでした。
+
+> 来月の勉強会にて、皆さんでレビューし合いませう。
+楽しみにしております。
+他のやり方、よりSmalltalkらしい名前の付け方等
+もうすこし工夫してみます。
+
+-----------------------------
+杉谷明則
+From masuda ＠ im.dendai.ac.jp  Fri Sep 11 22:01:53 2009
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Fri Sep 11 22:02:02 2009
+Subject: [SML 7632] サクサクSmalltalk (Re: メソッド名について)
+In-Reply-To: <45264D2F.6050809@sra.co.jp>
+References: <9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+	<20061006.164459.83622295.masuda@im.dendai.ac.jp>
+	<45264D2F.6050809@sra.co.jp>
+Message-ID: <20090911.220153.74747196.masuda@im.dendai.ac.jp>
+
+増田@電大です。
+
+3年前のメールに関してですが。
+
+> From: AOKI Atsushi <aoki@sra.co.jp>
+> 
+> > サクサク Smalltalk にもありますが、「知りたいことを見つける方法を知っ
+> > ている」ようになれば覚えなくてもいいかと。
+> > あと、名前については 13.2 ネーミングルール → メソッド名 あたりが参考
+> > になるのではないかと思います。
+> 
+> 増田さん、つかぬことをお伺いしますが、「サクサクSmalltalk」
+> もウェブに公開できないのかしらん？
+
+Amazon の サクサクSmalltalk 販売ページを見たところ、新品で買えなくなっ
+ていたので、在庫と重版について電大出版に聞いてみました。
+
+在庫:
+2005年10月時点で22冊の在庫。現在は在庫が「0」となり、絶版扱い。
+
+重版: 
+在庫がなくなった時点で，契約により翻訳権を原著出版社に戻している。
+重版はできない。
+
+とのことでした。
+
+これを機にWeb上で公開できないかと思っています。
+
+英語の原著は
+Stef's Free Online Smalltalk Books
+http://stephane.ducasse.free.fr/FreeBooks.html
+で公開されていたので、Stephane さんに原著者の Simon さんの連絡先を聞き
+ました。
+
+Simon さんはすぐにOKを出してくれたのですが、copyright は
+Hewlett-Packard が持っているので、そちらの許可を取らないといけない。
+でも誰に連絡を取ればいいかもわからないとのことでした。
+
+ということで、どなたかHP関係の方でご協力いただける方はいらっしゃいませ
+んか。
+
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/     FAX 03-5280-3592
+It's more fun to compute!
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Sep 11 22:27:32 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Sep 11 22:27:36 2009
+Subject: [SML 7633] Re: サクサクSmalltalk (Re: メソッド名について)
+In-Reply-To: <20090911.220153.74747196.masuda@im.dendai.ac.jp>
+References: <9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>	<20061006.164459.83622295.masuda@im.dendai.ac.jp>	<45264D2F.6050809@sra.co.jp>
+	<20090911.220153.74747196.masuda@im.dendai.ac.jp>
+Message-ID: <4AAA5044.9090600@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+Hidetaka MASUDA さんは書きました:
+> Amazon の サクサクSmalltalk 販売ページを見たところ、新品で買えなくなっ
+> ていたので、
+
+http://www.amazon.co.jp/dp/4501525703/
+中古市場（マーケットプレイス）が高値ですねぇ〜。
+http://www.amazon.co.jp/gp/offer-listing/4501525703/ref=dp_olp_used?ie=UTF8&condition=used
+
+> これを機にWeb上で公開できないかと思っています。
+
+おぉ！ぜひとも。
+
+> Simon さんはすぐにOKを出してくれたのですが、copyright は
+> Hewlett-Packard が持っているので、そちらの許可を取らないといけない。
+> でも誰に連絡を取ればいいかもわからないとのことでした。
+
+フランス（欧州）でやれていることが、日本でできないことはない
+だろう、と思いたいですね。
+
+> ということで、どなたかHP関係の方でご協力いただける方はいらっしゃいませ
+> んか。
+
+確かこのSMLにどなたかいらっしゃいましたよ、HPの関係の方々が。
+
+私もHPの知人に協力いただけないかと連絡を取ってみます。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Fri Sep 11 23:37:43 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Sep 11 23:37:51 2009
+Subject: [SML 7634] Ruby か Smalltalk か Objective-C ハッカソン
+Message-ID: <Jxb5QH1Ox8EvAB6qzGfQXthQ1@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+1名空きが出たようなので、お暇な方はどうぞ。
+http://atnd.org/events/1333
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Sun Sep 13 21:46:07 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Sep 13 21:46:12 2009
+Subject: [SML 7635] 第13回Smalltalk勉強会のお知らせ
+Message-ID: <Jxu2ZKXQlsLoxTda7RDzjGAA5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+9月のSmalltalk勉強会なのですが、「事例発表スペシャル」と銘打ちまして
+Smalltalkの生きた事例を発表する場とすることになりました。
+
+日時: 2009/9/28(月) 18:30-21:30 (3時間!)
+場所: 株式会社オージス総研
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai13kaismalltalkbenkyoukai
+
+すでに発表者となりそうな方にはいくらか打診を行っているのですが、「我こそは」
+「この事例がないと」などありましたら、お気軽にご連絡いただければと思います。
+
+また、参加について手続きは特に必要ありません。ふらりとどうぞ。
+気になる方は「お問い合わせ」からメールを送っていただいても良いです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Mon Sep 14 16:32:54 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Mon Sep 14 16:33:23 2009
+Subject: [SML 7636] Some ideas
+Message-ID: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+
+Hi all,
+
+i hope you mind, my mail is in english, because my japanase is very limited.
+
+I just found that there is a Smalltalk mailing-list in Japan. I'm
+living in Vietnam since november 2008 and i'm trying to meet
+Smalltalkers all around Asia. I already setup a mailing-list for
+vietnamese people:
+http://lists.squeakfoundation.org/mailman/listinfo/smalltalk-vn 7
+people registered right now.
+
+Some days ago, i was attending ESUG'09 conference in Brest (France).
+We were more than 144 Smalltalkers from Europe and elsewhere (a lot of
+american and also argentinian guys) during one week. Please find a
+report here for example:
+http://news.squeak.org/2009/09/08/esug-2009-wrap-up-best-ever/
+You can find more information about the conference on this web page:
+http://www.esug.org/Conferences/2009 and the slides are here:
+http://vst.ensm-douai.fr/ESUG2009Media
+I definitly think we should initiate some kind of regular event in
+Asia. I'm aware of the japanase and korean Squeak/Smalltalk community
+and i think we need to boost the development of Smalltalk in all asian
+countries.
+
+Could someone give me some facts about the japanese Smalltalk
+community ? Are you aware of any companies that is using Smalltalk in
+Japan ? How many people subscribed to this mailing-list ? Do you have
+some regular meetings ?
+
+I guess we could ask some sponsoring from Cincom and also ESUG
+(European Smalltalk User Group). BTW, i'm part of the ESUG board.
+Some argentinian guys are organizing since 2007 a big Smalltalk event
+called Smalltalks :
+http://blogten.blogspot.com/2009/08/argentinas-third-smalltalk-conference.html
+and they have some funds to invite some people (this year they would
+like to invite Dan Ingalls).
+
+I will travel in Japan in december for a conference. I would like to
+meet some Smalltakers in the Kobe-Kyoto-Nagoya area.
+Best regards,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From umejava ＠ mars.dti.ne.jp  Mon Sep 14 22:13:36 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Sep 14 22:13:38 2009
+Subject: [SML 7637] Re: Some ideas
+In-Reply-To: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+Message-ID: <JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+
+Hello Serge, welcome to SML!
+
+There is a portal site called "Smalltalk-users.jp". Unfortunately, it is written only
+in Japanese, but it would definitely help you. (I hope. I'm a maintainer of  
+Smalltalk-users.jp).
+http://www.smalltalk-users.jp/
+
+Also, there are periodical Smalltalk-lesson meetings (Smalltalk-benkyo-kai)
+in Japan. 
+- Tokyo:
+http://www.smalltalk-users.jp/Home/gao-zhi
+- Kyoto:
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html
+
+For Squeak-related topics, we also have "Squeak-ja" mailing list.
+http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+
+If you travel to Japan in December, I think we are able to hold a special 
+Smalltalkers's event in around Nagoya-Kansai area. (Actually I was
+thinking the possibilities of consolidated (Tokyo+Kyoto) Smalltalkers 
+meeting). 
+
+Best regards,
+
+Serge Stinckwich <serge.stinckwich@gmail.com> wrote:
+> Hi all,
+> 
+> i hope you mind, my mail is in english, because my japanase is very limited.
+> 
+> I just found that there is a Smalltalk mailing-list in Japan. I'm
+> living in Vietnam since november 2008 and i'm trying to meet
+> Smalltalkers all around Asia. I already setup a mailing-list for
+> vietnamese people:
+> http://lists.squeakfoundation.org/mailman/listinfo/smalltalk-vn 7
+> people registered right now.
+> 
+> Some days ago, i was attending ESUG'09 conference in Brest (France).
+> We were more than 144 Smalltalkers from Europe and elsewhere (a lot of
+> american and also argentinian guys) during one week. Please find a
+> report here for example:
+> http://news.squeak.org/2009/09/08/esug-2009-wrap-up-best-ever/
+> You can find more information about the conference on this web page:
+> http://www.esug.org/Conferences/2009 and the slides are here:
+> http://vst.ensm-douai.fr/ESUG2009Media
+> I definitly think we should initiate some kind of regular event in
+> Asia. I'm aware of the japanase and korean Squeak/Smalltalk community
+> and i think we need to boost the development of Smalltalk in all asian
+> countries.
+> 
+> Could someone give me some facts about the japanese Smalltalk
+> community ? Are you aware of any companies that is using Smalltalk in
+> Japan ? How many people subscribed to this mailing-list ? Do you have
+> some regular meetings ?
+> 
+> I guess we could ask some sponsoring from Cincom and also ESUG
+> (European Smalltalk User Group). BTW, i'm part of the ESUG board.
+> Some argentinian guys are organizing since 2007 a big Smalltalk event
+> called Smalltalks :
+> http://blogten.blogspot.com/2009/08/argentinas-third-smalltalk-conference.html
+> and they have some funds to invite some people (this year they would
+> like to invite Dan Ingalls).
+> 
+> I will travel in Japan in december for a conference. I would like to
+> meet some Smalltakers in the Kobe-Kyoto-Nagoya area.
+> Best regards,
+> -- 
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Smalltalkers do: [:it | All with: Class, (And love: it)]
+> http://doesnotunderstand.org/
+
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Tue Sep 15 16:15:21 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue Sep 15 16:15:49 2009
+Subject: [SML 7638] Re: Some ideas
+In-Reply-To: <JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com> 
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+Message-ID: <b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+
+On Mon, Sep 14, 2009 at 8:13 PM, Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> Hello Serge, welcome to SML!
+
+Hi Masashi,
+thank you for the welcome ;-)
+
+> There is a portal site called "Smalltalk-users.jp". Unfortunately, it is written only
+> in Japanese, but it would definitely help you. (I hope. I'm a maintainer of
+> Smalltalk-users.jp).
+> http://www.smalltalk-users.jp/
+>
+> Also, there are periodical Smalltalk-lesson meetings (Smalltalk-benkyo-kai)
+> in Japan.
+> - Tokyo:
+> http://www.smalltalk-users.jp/Home/gao-zhi
+> - Kyoto:
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html
+>
+> For Squeak-related topics, we also have "Squeak-ja" mailing list.
+> http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+
+Yes i know this mailing-list also.
+
+> If you travel to Japan in December, I think we are able to hold a special
+> Smalltalkers's event in around Nagoya-Kansai area. (Actually I was
+> thinking the possibilities of consolidated (Tokyo+Kyoto) Smalltalkers
+> meeting).
+
+I will attend a conference in Nagoya (http://www.prima2009.org/) from
+the 13th to 16th december.
+I would like to stay in Kansai area after the conference. I could made
+a talk about Pharo (http://www.pharo-project.org/) and what are doing
+at ESUG (http://www.esug.org/) if you want.
+
+I see than more than 560 people are registered on the sml
+mailing-list. It's quite impressive ! We have 218 people on the french
+mailing-list.
+What flavors of Smalltalk do you use ?
+
+Best regards,
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From umejava ＠ mars.dti.ne.jp  Wed Sep 16 21:58:17 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Sep 16 21:58:22 2009
+Subject: [SML 7639] Re: Some ideas
+In-Reply-To: <b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+Message-ID: <JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+
+Hello Serge,
+
+> I will attend a conference in Nagoya (http://www.prima2009.org/) from
+> the 13th to 16th december.
+> I would like to stay in Kansai area after the conference. I could made
+> a talk about Pharo (http://www.pharo-project.org/) and what are doing
+> at ESUG (http://www.esug.org/) if you want.
+
+Great! Japanese Smalltalkers would be quite interested in such topic.
+I'm now searching a best date/place for the Smalltalkers meeting. 
+Probably in Nagoya area, December 12nd, or 19th... But please wait
+for a while. I'll listen to other opinions.
+
+> I see than more than 560 people are registered on the sml
+> mailing-list. It's quite impressive ! We have 218 people on the french
+> mailing-list.
+> What flavors of Smalltalk do you use ?
+
+VisualWorks and Squeak. Sometimes I also use Dolphin. I think veteran
+SML members mainly use VW.
+
+Best regards,
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Wed Sep 16 22:19:03 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed Sep 16 22:19:27 2009
+Subject: [SML 7640] Re: Some ideas
+In-Reply-To: <JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com> 
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com> 
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+Message-ID: <b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+
+On Wed, Sep 16, 2009 at 7:58 PM, Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> Hello Serge,
+>
+>> I will attend a conference in Nagoya (http://www.prima2009.org/) from
+>> the 13th to 16th december.
+>> I would like to stay in Kansai area after the conference. I could made
+>> a talk about Pharo (http://www.pharo-project.org/) and what are doing
+>> at ESUG (http://www.esug.org/) if you want.
+>
+> Great! Japanese Smalltalkers would be quite interested in such topic.
+> I'm now searching a best date/place for the Smalltalkers meeting.
+> Probably in Nagoya area, December 12nd, or 19th... But please wait
+> for a while. I'll listen to other opinions.
+
+December 12th i have a talk to PRIMA'09 agent school already.
+
+How many people attend your meeting generally ?
+
+Best regards,
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From umejava ＠ mars.dti.ne.jp  Wed Sep 16 22:31:00 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Sep 16 22:31:04 2009
+Subject: [SML 7641] Re: Some ideas
+In-Reply-To: <b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+Message-ID: <JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+
+Hi Serge
+
+> December 12th i have a talk to PRIMA'09 agent school already.
+
+OK, so December 19th would be best.
+
+> How many people attend your meeting generally ?
+
+In Tokyo area, approx 10-15 people. I'm not sure in Kyoto area,
+but Mr. Aoki will answer the question. ;)
+
+Best regards,
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Sep 17 03:43:55 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Sep 17 03:44:02 2009
+Subject: [SML 7642] Re: Some ideas
+In-Reply-To: <JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+Message-ID: <4AB131EB.8010100@cc.kyoto-su.ac.jp>
+
+Masashi Umezawa write:
+ > Serge Stinckwich write:
+> > How many people attend your meeting generally ?
+> In Tokyo area, approx 10-15 people. I'm not sure in Kyoto area,
+> but Mr. Aoki will answer the question. ;)
+
+About 10 people in Kyoto.
+
+--- AOKI Atsushi
+From serge.stinckwich ＠ gmail.com  Thu Sep 17 11:29:10 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Thu Sep 17 11:29:35 2009
+Subject: [SML 7643] Re: Some ideas
+In-Reply-To: <4AB131EB.8010100@cc.kyoto-su.ac.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com> 
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com> 
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com> 
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<4AB131EB.8010100@cc.kyoto-su.ac.jp>
+Message-ID: <b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com>
+
+On Thu, Sep 17, 2009 at 1:43 AM, AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> Masashi Umezawa write:
+>> Serge Stinckwich write:
+>>
+>> > How many people attend your meeting generally ?
+>> In Tokyo area, approx 10-15 people. I'm not sure in Kyoto area,
+>> but Mr. Aoki will answer the question. ;)
+>
+> About 10 people in Kyoto.
+
+Thank you dear Mr. Aoki for the information. I organize each year a
+SmalltalkParty in Paris and in the last edition i organize in 2007, we
+were more than 40 people :
+http://community.ofset.org/index.php/Smalltalk_Party_Paris_2007
+
+Maybe, i will also go in the Tokyo area, but not decided right now.
+
+Best regards,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From yasuda ＠ mfc.bakkers.gr.jp  Thu Sep 17 21:15:36 2009
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu Sep 17 21:15:39 2009
+Subject: [SML 7644] Re: Some ideas
+In-Reply-To: <b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<4AB131EB.8010100@cc.kyoto-su.ac.jp>
+	<b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com>
+Message-ID: <19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+
+Hi Serge,
+
+I am also living in Kyoto city and I believe I am able to be a local  
+guide of your Kyoto tour.
+I also believe some members of Smalltalk study meeting in Kyoto (which  
+is hosted by Aoki) are also be able to attend it.
+So I hope you will join us and enjoy the Kyoto city. :-)
+
+It is also a good plan to reach to NARITA airport (NRT) then leave  
+from Kansai airport (KIX), or vice versa.
+
+Regards,
+Yutaka Yasuda.
+
+
+On 2009/09/17, at 11:29, Serge Stinckwich wrote:
+
+> On Thu, Sep 17, 2009 at 1:43 AM, AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp 
+> > wrote:
+>> Masashi Umezawa write:
+>>> Serge Stinckwich write:
+>>>
+>>>> How many people attend your meeting generally ?
+>>> In Tokyo area, approx 10-15 people. I'm not sure in Kyoto area,
+>>> but Mr. Aoki will answer the question. ;)
+>>
+>> About 10 people in Kyoto.
+>
+> Thank you dear Mr. Aoki for the information. I organize each year a
+> SmalltalkParty in Paris and in the last edition i organize in 2007, we
+> were more than 40 people :
+> http://community.ofset.org/index.php/Smalltalk_Party_Paris_2007
+>
+> Maybe, i will also go in the Tokyo area, but not decided right now.
+>
+> Best regards,
+> -- 
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Smalltalkers do: [:it | All with: Class, (And love: it)]
+> http://doesnotunderstand.org/
+>
+
+From mutoh ＠ openedu.org  Fri Sep 18 00:18:32 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Fri Sep 18 00:18:40 2009
+Subject: [SML 7645] Re: Some ideas
+In-Reply-To: <19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<4AB131EB.8010100@cc.kyoto-su.ac.jp>
+	<b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com>
+	<19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+Message-ID: <86my4ta9br.wl%mutoh@openedu.org>
+
+Hi Serge,
+
+At Thu, 17 Sep 2009 21:15:36 +0900,
+Yasuda Yutaka <yasuda@mfc.bakkers.gr.jp> wrote:
+> I am also living in Kyoto city and I believe I am able to be a local  
+> guide of your Kyoto tour.
+
+I am living in Nara, Yamatokoriyama city, so if you want to came Nara,
+I can guide for you.
+# But my english is too bad (;-;)
+
+> I also believe some members of Smalltalk study meeting in Kyoto (which  
+> is hosted by Aoki) are also be able to attend it.
+> So I hope you will join us and enjoy the Kyoto city. :-)
+
+I'm a lazy member of Smalltalk study meeting in Kyoto (, I hope so).
+
+I know some Squekaker at Nara, and Osaka.
+So if you want to meet them, I can introduce them.
+
+Thanks.
+-
+	Takeshi MUTOH <mutoh@openedu.org>
+From umejava ＠ mars.dti.ne.jp  Fri Sep 18 23:01:20 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Sep 18 23:01:36 2009
+Subject: [SML 7646] Smalltalk合同勉強会@名古屋
+Message-ID: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+12月19日(土)に「Smalltalk合同勉強会@名古屋」を開催することとなりました。
+東京と京都の勉強会の面々が名古屋に集結、という感じなのですが、もちろん
+日本や世界のどこから来ていただいてもかまいません。
+
+今回は会場の都合もありますので、参加の方は下記で登録をお願いします。
+http://atnd.org/events/1593
+
+詳しい内容は今後つめていきます。いくつかのセミナーに加え、もしかしたら
+ハッカソンという感じです。アイデアありましたらどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Fri Sep 18 23:13:01 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Sep 18 23:13:06 2009
+Subject: [SML 7647] Re: Some ideas
+In-Reply-To: <JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+Message-ID: <JxgX5CRrUKYrvsFpKYgsW6eA7@mars.dti.ne.jp>
+
+Hi Serge,
+
+As you see in [SML 7646],  now Smalltalk-uses.jp has announced "Smalltalkers meeting at Nagoya".
+http://www.smalltalk-users.jp/Home/gao-zhi/smalltalkgoudoubenkyoukainagoya
+
+We have opened up a registration page.
+http://atnd.org/events/1593
+
+Looking forward to see you and all at Nagoya!
+
+Best regards,
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> Hi Serge
+> 
+> > December 12th i have a talk to PRIMA'09 agent school already.
+> 
+> OK, so December 19th would be best.
+> 
+> > How many people attend your meeting generally ?
+> 
+> In Tokyo area, approx 10-15 people. I'm not sure in Kyoto area,
+> but Mr. Aoki will answer the question. ;)
+> 
+> Best regards,
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Sep 19 04:33:13 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Sep 19 04:33:24 2009
+Subject: [SML 7648] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+Message-ID: <4AB3E079.3010701@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+> 今回は会場の都合もありますので、参加の方は下記で登録をお願いします。
+> http://atnd.org/events/1593
+
+皆さん、万障繰り合わせてご参加くださいませ。（京都の勉強会の
+皆さんも、ぜひとも。私も先ほど参加表明を済ませました。）
+
+> 詳しい内容は今後つめていきます。いくつかのセミナーに加え、もしかしたら
+> ハッカソンという感じです。アイデアありましたらどうぞ。
+
+名古屋近郊のビギナー（覚えたての方々・これから覚えようとする
+方々・若い方々）のためのチュートリアルがあったほうがいいよう
+にも思えます。
+
+＃いきなりハッカソンという感じでは、走り出せない（どん引きに
+＃なる）こともありましょうから。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Sun Sep 20 18:34:50 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Sep 20 18:35:18 2009
+Subject: [SML 7649] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <4AB3E079.3010701@cc.kyoto-su.ac.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+	<4AB3E079.3010701@cc.kyoto-su.ac.jp>
+Message-ID: <Jxc7_t.Am3Xpsugl5aRh3ZVA7@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> 青木＠京都宇治です。
+> 
+> > 今回は会場の都合もありますので、参加の方は下記で登録をお願いします。
+> > http://atnd.org/events/1593
+> 
+> 皆さん、万障繰り合わせてご参加くださいませ。（京都の勉強会の
+> 皆さんも、ぜひとも。私も先ほど参加表明を済ませました。）
+
+すでに7名ほど参加者がいらっしゃいますね。すばらしいことです。
+
+> > 詳しい内容は今後つめていきます。いくつかのセミナーに加え、もしかしたら
+> > ハッカソンという感じです。アイデアありましたらどうぞ。
+> 
+> 名古屋近郊のビギナー（覚えたての方々・これから覚えようとする
+> 方々・若い方々）のためのチュートリアルがあったほうがいいよう
+> にも思えます。
+> 
+> ＃いきなりハッカソンという感じでは、走り出せない（どん引きに
+> ＃なる）こともありましょうから。
+
+初心者向けのセッションも確かに必要ですよね。間口を広げないと。
+
+と、ここまで書いて1-2時間ほどのチュートリアルを青木さんにしていただく
+というアイデアが浮かんだのですが、いかがでしょうか。
+
+東京でも青木さんの講義が聴きたいという話を何度も聞いておりますし、
+名古屋のSmalltalkerもきっと喜ぶと思います。
+
+いきなりで恐縮なのですが、ご検討いただければ幸いです。
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Sep 20 21:00:49 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Sep 20 21:00:55 2009
+Subject: [SML 7650] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <Jxc7_t.Am3Xpsugl5aRh3ZVA7@mars.dti.ne.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>	<4AB3E079.3010701@cc.kyoto-su.ac.jp>
+	<Jxc7_t.Am3Xpsugl5aRh3ZVA7@mars.dti.ne.jp>
+Message-ID: <4AB61971.7060505@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+豊葦原（とよあしはら）の千五百秋（ちいおあき）の瑞穂（みずほ）
+の国ですね。まさに収穫の秋。連休にもかかわらず、垂れ穂にコン
+パインが働いています。晩ご飯に新米を炊きました。旨い！
+
+お彼岸（明後日の翌日）には、おはぎ、ぜひ皆さんもどうぞ。私は
+美味しいおはぎを大原の里で見つけたので、宇治から出かけます。
+
+> > > 詳しい内容は今後つめていきます。いくつかのセミナーに加え、もしかしたら
+> > > ハッカソンという感じです。アイデアありましたらどうぞ。
+> > 名古屋近郊のビギナー（覚えたての方々・これから覚えようとする
+> > 方々・若い方々）のためのチュートリアルがあったほうがいいよう
+> > にも思えます。
+> > ＃いきなりハッカソンという感じでは、走り出せない（どん引きに
+> > ＃なる）こともありましょうから。
+> 初心者向けのセッションも確かに必要ですよね。間口を広げないと。
+> と、ここまで書いて1-2時間ほどのチュートリアルを青木さんにしていただく
+> というアイデアが浮かんだのですが、いかがでしょうか。
+> 東京でも青木さんの講義が聴きたいという話を何度も聞いておりますし、
+> 名古屋のSmalltalkerもきっと喜ぶと思います。
+> いきなりで恐縮なのですが、ご検討いただければ幸いです。
+
+すでに私はアラフィフだから、アラサーやアラフォーの人にやって
+いただいたほうが良いように考えます。次から次へと新語が生まれ
+てくる、それが生きているプログラミング言語の証ですから、それ
+らに敏感な方が向いていると思いますよ。
+
+今日は新月（←じゅんの月亮心を動かすとすぐにわかりますの）で
+明かりの無い夜ですが、二週間後が満月（中秋の名月：10月03日の
+土曜日）になります。秋の夜長、Smalltalk プログラムを読むのに
+適していますね。VisualWorks 7.7 のソースコードは…。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Mon Sep 21 20:45:27 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Sep 21 20:45:32 2009
+Subject: [SML 7651] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <4AB61971.7060505@cc.kyoto-su.ac.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+	<4AB3E079.3010701@cc.kyoto-su.ac.jp>
+	<Jxc7_t.Am3Xpsugl5aRh3ZVA7@mars.dti.ne.jp>
+	<4AB61971.7060505@cc.kyoto-su.ac.jp>
+Message-ID: <JxcrfOKYqjzGk3f9cjk6.QKw2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> すでに私はアラフィフだから、アラサーやアラフォーの人にやって
+> いただいたほうが良いように考えます。次から次へと新語が生まれ
+> てくる、それが生きているプログラミング言語の証ですから、それ
+> らに敏感な方が向いていると思いますよ。
+
+アラフォーはともかくアラサーのSmalltalkerは、東京ではほとんど
+見かけなくなってしまいました。20代に至っては皆無といって
+良いのではないでしょうか。
+
+京都方面のメンバで代わりにチュートリアルをしていただけるような
+方がいると助かるのですが...もちろん東京でも探してみます。
+
+また、本件とは別に青木さんの好きなテーマで何か話していただけると
+うれしく思います。東京のメンバが非常に聞きたがっているのですよね。
+
+よろしくお願い申し上げます。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Sep 21 21:47:42 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Sep 21 21:47:49 2009
+Subject: [SML 7652] Re: 第11回Smalltalk勉強会＠京都課題完成
+In-Reply-To: <23600597C9634EEBA249295774214F00@SUGITPR60E>
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp><4A9D8AF1.7000006@cc.kyoto-su.ac.jp>	<4A9FA02A.80108@cc.kyoto-su.ac.jp><C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>	<4AA72DCB.3040602@cc.kyoto-su.ac.jp>
+	<23600597C9634EEBA249295774214F00@SUGITPR60E>
+Message-ID: <4AB775EE.3010502@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+去る09月16日に60人目の総理大臣（第93代）が誕生しましたので、
+当該のデータとページを更新しました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/CSV2HTML/
+
+文系と理系に峻別するのもどうかと思いますが、新しい総理大臣は
+本格的な理工系出身者ですね。世界にも多くなってきた理工系首脳
+としてがんばってほしいものです。
+
+杉谷明則さんは書きました:
+> 青木さんコメントありがとうございます。
+> > 来月の勉強会にて、皆さんでレビューし合いませう。
+> 楽しみにしております。
+> 他のやり方、よりSmalltalkらしい名前の付け方等
+> もうすこし工夫してみます。
+
+総理大臣（タプル）が増えましたが、プログラムの変更はありませ
+んでした。杉谷さんもチェックしてみてくださいまし。
+
+来月の勉強会にて、皆さんが書き下ろしたいろいろなプログラムを
+見せ合って、擦った揉んだいたしましょうね。プログラムのコード
+レビューは、とても大切だと思います。論よりコード（←かっちゃ
+んの十八番）ですもん。:-)
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Sep 21 22:35:10 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Sep 21 22:36:05 2009
+Subject: [SML 7653] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <JxcrfOKYqjzGk3f9cjk6.QKw2@mars.dti.ne.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>	<4AB3E079.3010701@cc.kyoto-su.ac.jp>	<Jxc7_t.Am3Xpsugl5aRh3ZVA7@mars.dti.ne.jp>	<4AB61971.7060505@cc.kyoto-su.ac.jp>
+	<JxcrfOKYqjzGk3f9cjk6.QKw2@mars.dti.ne.jp>
+Message-ID: <4AB7810E.6080408@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+> > すでに私はアラフィフだから、アラサーやアラフォーの人にやって
+> > いただいたほうが良いように考えます。次から次へと新語が生まれ
+> > てくる、それが生きているプログラミング言語の証ですから、それ
+> > らに敏感な方が向いていると思いますよ。
+>
+> アラフォーはともかくアラサーのSmalltalkerは、東京ではほとんど
+> 見かけなくなってしまいました。20代に至っては皆無といって
+> 良いのではないでしょうか。
+
+京都でも状況は同じのように思います。この状況を仕方ないと思っ
+てもいけないので、自分自身（スモールトーカーとして）の鍛錬と
+並べて、若い方々への口伝にも心を砕かねばなりませんよね。
+
+# だからこそ50歳の転身をしました。
+# http://itpro.nikkeibp.co.jp/article/COLUMN/20081219/321802/
+
+昨年より本格的に大学生（20代の方々）に伝え始めておりますので、
+これからに期待してくださいませ。私のやり方は一子相伝の傾向が
+強いですから、数を稼ぐのが不得手になりますが…。
+
+> 京都方面のメンバで代わりにチュートリアルをしていただけるような
+> 方がいると助かるのですが...もちろん東京でも探してみます。
+
+次回の京都での勉強会で、参加メンバに訊ねてみます。もしも東京
+でも京都でも適任が見つからないようならば、アラフィフの私めが
+チュートリアルを担当するのも吝かではありませぬ。
+
+> また、本件とは別に青木さんの好きなテーマで何か話していただけると
+> うれしく思います。東京のメンバが非常に聞きたがっているのですよね。
+
+はい、喜んで。ウェブアプリケーション系は他の方々が行うでしょ
+うから、コントロール系をライトモチーフにいたしましょうかね…。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From serge.stinckwich ＠ gmail.com  Tue Sep 22 13:25:45 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue Sep 22 13:26:12 2009
+Subject: [SML 7654] Re: Some ideas
+In-Reply-To: <86my4ta9br.wl%mutoh@openedu.org>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com> 
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com> 
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com> 
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<4AB131EB.8010100@cc.kyoto-su.ac.jp> 
+	<b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com> 
+	<19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+	<86my4ta9br.wl%mutoh@openedu.org>
+Message-ID: <b81554460909212125m4603ec90qa382ebbfec416ed2@mail.gmail.com>
+
+On Thu, Sep 17, 2009 at 10:18 PM, Takeshi MUTOH <mutoh@openedu.org> wrote:
+> Hi Serge,
+>
+> At Thu, 17 Sep 2009 21:15:36 +0900,
+> Yasuda Yutaka <yasuda@mfc.bakkers.gr.jp> wrote:
+>> I am also living in Kyoto city and I believe I am able to be a local
+>> guide of your Kyoto tour.
+>
+> I am living in Nara, Yamatokoriyama city, so if you want to came Nara,
+> I can guide for you.
+> # But my english is too bad (;-;)
+
+I would like to visit Nara with my wife !
+You english seems ok for me ;-)
+
+Best regards,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From serge.stinckwich ＠ gmail.com  Tue Sep 22 13:28:00 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue Sep 22 13:28:24 2009
+Subject: [SML 7655] Re: Some ideas
+In-Reply-To: <19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com> 
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com> 
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com> 
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<4AB131EB.8010100@cc.kyoto-su.ac.jp> 
+	<b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com> 
+	<19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+Message-ID: <b81554460909212128q2a653651h251b7d331660dd4a@mail.gmail.com>
+
+On Thu, Sep 17, 2009 at 7:15 PM, Yasuda Yutaka <yasuda@mfc.bakkers.gr.jp> wrote:
+> Hi Serge,
+>
+> I am also living in Kyoto city and I believe I am able to be a local guide
+> of your Kyoto tour.
+> I also believe some members of Smalltalk study meeting in Kyoto (which is
+> hosted by Aoki) are also be able to attend it.
+> So I hope you will join us and enjoy the Kyoto city. :-)
+
+Thank for your kindly invitation. I already go twice in Kyoto, so i
+know a bit the city ;-)
+
+> It is also a good plan to reach to NARITA airport (NRT) then leave from
+> Kansai airport (KIX), or vice versa.
+
+Narita airport is nearer to Nagoya ?
+
+Thank you for your help.
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From mutoh ＠ openedu.org  Tue Sep 22 20:13:10 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Tue Sep 22 20:13:19 2009
+Subject: [SML 7656] Re: Some ideas
+In-Reply-To: <b81554460909212125m4603ec90qa382ebbfec416ed2@mail.gmail.com>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<4AB131EB.8010100@cc.kyoto-su.ac.jp>
+	<b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com>
+	<19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+	<86my4ta9br.wl%mutoh@openedu.org>
+	<b81554460909212125m4603ec90qa382ebbfec416ed2@mail.gmail.com>
+Message-ID: <86ws3rmdvd.wl%mutoh@openedu.org>
+
+
+At Tue, 22 Sep 2009 11:25:45 +0700,
+Serge Stinckwich <serge.stinckwich@gmail.com> wrote:
+> > I am living in Nara, Yamatokoriyama city, so if you want to came Nara,
+> > I can guide for you.
+> > # But my english is too bad (;-;)
+> 
+> I would like to visit Nara with my wife !
+
+When will you come to Nara?
+And, How long will you stay?
+
+I can guide these places...
+- http://qwikuro.610t.org/mahoroba/
+# Sorry in Japane, but there are many photos.
+## It's too slow, because it is NAS box. Please patient (_o_)
+
+> You english seems ok for me ;-)
+
+It's copy of Mr. Yasuda's;-)
+
+I can write a technical documents like sending patch,
+but my listening and speaking is too bad.
+
+Someone help me!! > SML members.
+-
+	Takeshi MUTOH <mutoh@openedu.org>
+From yasuda ＠ mfc.bakkers.gr.jp  Tue Sep 22 20:50:58 2009
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Tue Sep 22 20:51:00 2009
+Subject: [SML 7657] Re: Some ideas
+In-Reply-To: <86ws3rmdvd.wl%mutoh@openedu.org>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<4AB131EB.8010100@cc.kyoto-su.ac.jp>
+	<b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com>
+	<19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+	<86my4ta9br.wl%mutoh@openedu.org>
+	<b81554460909212125m4603ec90qa382ebbfec416ed2@mail.gmail.com>
+	<86ws3rmdvd.wl%mutoh@openedu.org>
+Message-ID: <5D023ABA-048F-46AE-A2AB-FE4DE2F77639@mfc.bakkers.gr.jp>
+
+Hi Serge,
+
+> Thank for your kindly invitation. I already go twice in Kyoto, so i
+> know a bit the city ;-)
+
+
+Sounds nice. I am happy to know you have enjoyed my home town twice!
+And sounds great more that you are interested in being Nara too. :-)
+
+Nagoya is the middle place of Tokyo (NRT) and Kansai (KIX).
+It is easy to move from Tokyo or Kansai to Nagoya by bullet train
+(SHINKANSEN). Nagoya also has their own international airport
+(NGO) but I am not sure it has good connection from/to your place.
+
+So I guess these 3 airports are considerable for your trip.
+
+Hi Mutoh-san,
+
+> Someone help me!! > SML members.
+
+Yes I can. And I believe more members will be able to join us. :-)
+
+Regards,
+Yasu.
+
+From asugitan ＠ kh.rim.or.jp  Tue Sep 22 21:54:21 2009
+From: asugitan ＠ kh.rim.or.jp (Akinori Sugitani)
+Date: Tue Sep 22 21:54:17 2009
+Subject: [SML 7658] Re: 第11回Smalltalk勉強会＠京都課題完成
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp><4A9D8AF1.7000006@cc.kyoto-su.ac.jp>	<4A9FA02A.80108@cc.kyoto-su.ac.jp><C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>	<4AA72DCB.3040602@cc.kyoto-su.ac.jp><23600597C9634EEBA249295774214F00@SUGITPR60E>
+	<4AB775EE.3010502@cc.kyoto-su.ac.jp>
+Message-ID: <8321DB06CB08401BA72BB8991F125D49@SUGILENOVO>
+
+青木さん、データ更新ありがとうございました。
+> 総理大臣（タプル）が増えましたが、プログラムの変更はありませ
+> んでした。杉谷さんもチェックしてみてくださいまし。
+上手く動作しました。
+一応自分でデータ（タプル？）を追加していたのですが、出身大学・出身地等を間違えてました。
+
+----------------------------------
+杉谷明則 
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Sep 23 20:38:31 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Sep 23 20:38:44 2009
+Subject: [SML 7659] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <4AB7810E.6080408@cc.kyoto-su.ac.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>	<4AB3E079.3010701@cc.kyoto-su.ac.jp>	<Jxc7_t.Am3Xpsugl5aRh3ZVA7@mars.dti.ne.jp>	<4AB61971.7060505@cc.kyoto-su.ac.jp>	<JxcrfOKYqjzGk3f9cjk6.QKw2@mars.dti.ne.jp>
+	<4AB7810E.6080408@cc.kyoto-su.ac.jp>
+Message-ID: <4ABA08B7.7050507@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+> > アラフォーはともかくアラサーのSmalltalkerは、東京ではほとんど
+> > 見かけなくなってしまいました。20代に至っては皆無といって
+> > 良いのではないでしょうか。
+> 
+> 京都でも状況は同じのように思います。
+
+もとへ。京都の勉強会では二十代が少なくとも三名参加されていた
+履歴がありました。ごめんなさい、あしからずです、二十代の方々。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Wed Sep 23 21:02:39 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Sep 23 21:02:44 2009
+Subject: [SML 7660] Re: 第13回Smalltalk勉強会のお知らせ
+In-Reply-To: <Jxu2ZKXQlsLoxTda7RDzjGAA5@mars.dti.ne.jp>
+References: <Jxu2ZKXQlsLoxTda7RDzjGAA5@mars.dti.ne.jp>
+Message-ID: <JxoTHYFzpgDiUV9s7YIgPKgQ8@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+月曜日に行われる事例発表スペシャルですが、だいぶプログラムが定まって
+きました。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai13kaismalltalkbenkyoukai
+
+ぜひともご参加下さい。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 9月のSmalltalk勉強会なのですが、「事例発表スペシャル」と銘打ちまして
+> Smalltalkの生きた事例を発表する場とすることになりました。
+> 
+> 日時: 2009/9/28(月) 18:30-21:30 (3時間!)
+> 場所: 株式会社オージス総研
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai13kaismalltalkbenkyoukai
+> 
+> すでに発表者となりそうな方にはいくらか打診を行っているのですが、「我こそは」
+> 「この事例がないと」などありましたら、お気軽にご連絡いただければと思います。
+> 
+> また、参加について手続きは特に必要ありません。ふらりとどうぞ。
+> 気になる方は「お問い合わせ」からメールを送っていただいても良いです。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From hirowadenden ＠ hera.eonet.ne.jp  Sat Sep 26 11:32:07 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Sat Sep 26 11:32:26 2009
+Subject: [SML 7661] Re: 第11回Smalltalk勉強会＠京都課題完成
+In-Reply-To: <4AB775EE.3010502@cc.kyoto-su.ac.jp>
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp><4A9D8AF1.7000006@cc.kyoto-su.ac.jp>	<4A9FA02A.80108@cc.kyoto-su.ac.jp><C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>	<4AA72DCB.3040602@cc.kyoto-su.ac.jp>	<23600597C9634EEBA249295774214F00@SUGITPR60E>
+	<4AB775EE.3010502@cc.kyoto-su.ac.jp>
+Message-ID: <4ABD7D27.2070600@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+私もヒントのプログラムを元にして課題をやってみましたが、
+writeTableBodyOn: と computeNumberOfDays: の変更だけでやり
+普通の手続的なプログラムになったような気がします。
+
+AOKI Atsushi さんは書きました:
+> 来月の勉強会にて、皆さんが書き下ろしたいろいろなプログラムを
+> 見せ合って、擦った揉んだいたしましょうね。プログラムのコード
+> レビューは、とても大切だと思います。論よりコード（←かっちゃ
+> んの十八番）ですもん。:-)
+
+ぜひ、勉強会に参加してSmalltalkでどのようにプログラミングして
+いくのかを勉強したいのですが、残念ながらノートパソコンを持って
+いません。ノートパソコン持参でないと勉強会への参加は無理でしょ
+うか?
+#Squeakをインストールした非Linux Zaurusならあるのですが...
+
+-- hirowadenden
+
+
+
+
+
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Sep 27 04:55:24 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Sep 27 04:55:35 2009
+Subject: [SML 7662] Re: 第11回Smalltalk勉強会＠京都課題完成
+In-Reply-To: <4ABD7D27.2070600@hera.eonet.ne.jp>
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp><4A9D8AF1.7000006@cc.kyoto-su.ac.jp>	<4A9FA02A.80108@cc.kyoto-su.ac.jp><C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>	<4AA72DCB.3040602@cc.kyoto-su.ac.jp>	<23600597C9634EEBA249295774214F00@SUGITPR60E>	<4AB775EE.3010502@cc.kyoto-su.ac.jp>
+	<4ABD7D27.2070600@hera.eonet.ne.jp>
+Message-ID: <4ABE71AC.50905@cc.kyoto-su.ac.jp>
+
+hirowadenden さんは書きました:
+> ハンドル名で失礼します、hirowadendenと申します。
+
+青木＠京都宇治です。VisualWorks 7.7 NC は Release Candidate
+の段階に入ってきました。
+
+> 私もヒントのプログラムを元にして課題をやってみましたが、
+> writeTableBodyOn: と computeNumberOfDays: の変更だけでやり
+> 普通の手続的なプログラムになったような気がします。
+
+それはようございました。ヒントのプログラムはたたき台ですので、
+手続き的な（≒Ｃプログラム風に書いたらという）構成なっており
+ます。それはそれで結構な構成なのですが、ぜひともメッセージで
+駆動されるオブジェクト風プログラムの構成も考えてくださいませ。
+
+> ぜひ、勉強会に参加してSmalltalkでどのようにプログラミングして
+> いくのかを勉強したいのですが、残念ながらノートパソコンを持って
+> いません。ノートパソコン持参でないと勉強会への参加は無理でしょ
+> うか?
+
+ノートパソコンなしでも参加していただけると思います。単焦点型
+プロジェクタから映し出される私のノートパソコンの文字が見やす
+い位置に陣取ってくださいまし。京都の勉強会のモットーは「プロ
+グラムコードを読む」です。書法や作法も読法を介すればこそゆえ。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From hirowadenden ＠ hera.eonet.ne.jp  Sun Sep 27 10:27:06 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Sun Sep 27 10:28:23 2009
+Subject: [SML 7663] Re: 第11回Smalltalk勉強会＠京都課題完成
+In-Reply-To: <4ABE71AC.50905@cc.kyoto-su.ac.jp>
+References: <4A922F0D.6050707@cc.kyoto-su.ac.jp><4A9D8AF1.7000006@cc.kyoto-su.ac.jp>	<4A9FA02A.80108@cc.kyoto-su.ac.jp><C8D954B4A1DB40A78F910548EAA9843A@SUGITPR60E>	<4AA72DCB.3040602@cc.kyoto-su.ac.jp>	<23600597C9634EEBA249295774214F00@SUGITPR60E>	<4AB775EE.3010502@cc.kyoto-su.ac.jp>	<4ABD7D27.2070600@hera.eonet.ne.jp>
+	<4ABE71AC.50905@cc.kyoto-su.ac.jp>
+Message-ID: <4ABEBF6A.8030601@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+AOKI Atsushi さんは書きました:
+>> 私もヒントのプログラムを元にして課題をやってみましたが、
+>> writeTableBodyOn: と computeNumberOfDays: の変更だけでやり
+>> 普通の手続的なプログラムになったような気がします。
+>
+> それはようございました。ヒントのプログラムはたたき台ですので、
+> 手続き的な（≒Ｃプログラム風に書いたらという）構成なっており
+> ます。それはそれで結構な構成なのですが、ぜひともメッセージで
+> 駆動されるオブジェクト風プログラムの構成も考えてくださいませ。
+>
+>> ぜひ、勉強会に参加してSmalltalkでどのようにプログラミングして
+>> いくのかを勉強したいのですが、残念ながらノートパソコンを持って
+>> いません。ノートパソコン持参でないと勉強会への参加は無理でしょ
+>> うか?
+>
+> ノートパソコンなしでも参加していただけると思います。単焦点型
+> プロジェクタから映し出される私のノートパソコンの文字が見やす
+> い位置に陣取ってくださいまし。京都の勉強会のモットーは「プロ
+> グラムコードを読む」です。書法や作法も読法を介すればこそゆえ。
+
+返信ありがとうございます。
+自分でもオブジェクト風プログラムの構成でプログラムを考えてみて
+できれば次回の勉強会に参加させていただきたいと思いますので
+よろしくお願いいたします。
+
+-- hirowadenden
+
+
+From kubota ＠ sie.dendai.ac.jp  Mon Sep 28 12:25:01 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Mon Sep 28 12:25:13 2009
+Subject: [SML 7664] HTMLの取得がうまくできません
+Message-ID: <C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04@sie.dendai.ac.jp>
+
+こんにちは、東京電機大学の久保田と申します。
+
+自家製ニコ生アラートのようなものをVisualWorksで作成しよう 
+と思い、下記のプログラムでニコニコ生放送のページの情報を取得しよ 
+うとしました。
+
+| anURL readStream writeStream |
+anURL := JunURL named: 'http://live.nicovideo.jp/recent? 
+p=1&tab=common' .
+JunControlUtility
+	assert:[readStream := anURL readStream.
+			writeStream := 'nico.html' asFilename writeStream]
+	do:[[readStream atEnd not] whileTrue:
+			[writeStream nextPutAll:(JunStringUtility getLine: readStream)]]
+	ensure:[writeStream close.
+			readStream close].
+
+困っているのはWebブラウザでURLを開いたときに取得でき 
+るHTMLと異なった情報を持ってきてしまうことです。
+nico.htmlを開くと'エラーが発生しました'と書かれた 
+ページが表示されます。
+
+いまのところ同じURLのHTMLを取得するプログラムを 
+JavaとPythonで書いてみましたが、こちらでは期待した情報が得 
+られました。
+
+プログラムのどこがいけないのでしょうか?
+ご存知の方教えていただけませんでしょうか。
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Sep 28 12:46:19 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Sep 28 12:46:21 2009
+Subject: [SML 7665] Re: HTMLの取得がうまくできません
+In-Reply-To: <C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04@sie.dendai.ac.jp>
+References: <C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04@sie.dendai.ac.jp>
+Message-ID: <4AC0318B.50305@cc.kyoto-su.ac.jp>
+
+久保田 吉彦 さんは書きました:
+> 自家製ニコ生アラートのようなものをVisualWorksで作成しようと思い、下記の 
+> プログラムでニコニコ生放送のページの情報を取得しようとしました。
+--- snipped ---
+> プログラムのどこがいけないのでしょうか?
+> ご存知の方教えていただけませんでしょうか。
+
+じゅんライブラリも関係しているようなので、調べてみますね。
+
+--- 青木淳＠今日は夜遅くまで身体が空きませんが…。
+From masuda ＠ mail.dendai.ac.jp  Mon Sep 28 14:38:17 2009
+From: masuda ＠ mail.dendai.ac.jp (Hidetaka MASUDA)
+Date: Mon Sep 28 14:38:34 2009
+Subject: [SML 7666] Re: HTMLの取得がうまくできません
+In-Reply-To: <C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04@sie.dendai.ac.jp>
+References: <C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04@sie.dendai.ac.jp>
+Message-ID: <4AC04BC9.4030803@mail.dendai.ac.jp>
+
+増田です。
+
+Java と Jun 760 で自分のサーバにアクセスして環境変数の違いを見てみまし
+た。異なっているのは、UserAgent ぐらいでした。
+
+Java: HTTP_USER_AGENT	Java/1.6.0_05
+Jun:  HTTP_USER_AGENT
+
+Jun の方は UserAgent が設定されていません。
+
+試しに Java の方で UserAgent をなしにしてみると、ニコニコ生放送もエラー
+になります。
+
+以下のプログラムの UserAgentなし の行を注釈なしにしてみてください。
+
+--------------------------- cut here ------------------------------
+import java.io.*;
+import java.net.*;
+
+class NicoGet {
+    public static void main(String[] args) {
+        try {
+            String urlString =
+"http://live.nicovideo.jp/recent?p=1&tab=common";
+
+            URL url = new URL(urlString);
+
+            URLConnection uc = url.openConnection();
+            // uc.setRequestProperty("User-Agent", "");// UserAgentなし
+            InputStream input = uc.getInputStream();
+
+            int c;
+            while ((c = input.read()) != -1) System.out.write(c);
+            input.close();
+        } catch (MalformedURLException ex) {
+            System.out.println("MalformedURLException: " + ex);
+        } catch (IOException ex) {
+            System.out.println("IOException: " + ex);
+        }
+    }
+}
+--------------------------- cut here ------------------------------
+
+JunURL でも UserAgent が設定できると大丈夫なような気がするのですが、いか
+がでしょうか。
+
+# ちょっとブラウズしてみましたがすぐにはわかりませんでしたので、どなたか
+わかる方のフォローをお願いします。
+
+久保田 吉彦 さんは書きました:
+> 自家製ニコ生アラートのようなものをVisualWorksで作成しようと思い、下記の 
+> プログラムでニコニコ生放送のページの情報を取得しようとしました。
+> 
+> | anURL readStream writeStream |
+> anURL := JunURL named: 'http://live.nicovideo.jp/recent?p=1&tab=common' .
+> JunControlUtility
+>     assert:[readStream := anURL readStream.
+>             writeStream := 'nico.html' asFilename writeStream]
+>     do:[[readStream atEnd not] whileTrue:
+>             [writeStream nextPutAll:(JunStringUtility getLine: 
+> readStream)]]
+>     ensure:[writeStream close.
+>             readStream close].
+> 
+> 困っているのはWebブラウザでURLを開いたときに取得できるHTMLと異なった情報 
+> を持ってきてしまうことです。
+> nico.htmlを開くと'エラーが発生しました'と書かれたページが表示されます。
+> 
+> いまのところ同じURLのHTMLを取得するプログラムをJavaとPythonで書いてみま 
+> したが、こちらでは期待した情報が得られました。
+> 
+> プログラムのどこがいけないのでしょうか?
+> ご存知の方教えていただけませんでしょうか。
+
+
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7emasuda/     FAX 03-5280-3592
+It's more fun to compute!
+From kubota ＠ sie.dendai.ac.jp  Mon Sep 28 15:18:41 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Mon Sep 28 15:18:44 2009
+Subject: [SML 7667]  Re: HTMLの取得がうまくできません
+In-Reply-To: <4AC04BC9.4030803@mail.dendai.ac.jp>
+References: <C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04@sie.dendai.ac.jp>
+	<4AC04BC9.4030803@mail.dendai.ac.jp>
+Message-ID: <6F0A603B-70A7-4CB9-B60E-245B1DAFE5AF@sie.dendai.ac.jp>
+
+久保田です
+
+増田先生の指摘されたようにUserAgentが設定されていないのが 
+原因でした。
+UserAgentをテキトーに設定したらエラーになりませんでした。日本語 
+がめちゃくちゃですが。
+#ByteStringをStringに変換するのってどうやるんでしょうか。
+
+|  writeStream httpRequest httpResponse|
+httpRequest := HttpRequest get: 'http://live.nicovideo.jp/recent? 
+p=1&tab=common'.
+httpRequest userAgent:'VisualWorks'.
+httpResponse := httpRequest execute.
+JunControlUtility
+	assert:[writeStream := 'nico.html' asFilename writeStream]
+	do:[writeStream nextPutAll: httpResponse contents]
+	ensure:[writeStream close.].
+
+
+
+On 2009/09/28, at 14:38, Hidetaka MASUDA wrote:
+
+> 増田です。
+>
+> Java と Jun 760 で自分のサーバにアクセスして環境変数の違 
+> いを見てみまし
+> た。異なっているのは、UserAgent ぐらいでした。
+>
+> Java: HTTP_USER_AGENT	Java/1.6.0_05
+> Jun:  HTTP_USER_AGENT
+>
+> Jun の方は UserAgent が設定されていません。
+>
+> 試しに Java の方で UserAgent をなしにしてみると、 
+> ニコニコ生放送もエラー
+> になります。
+>
+> 以下のプログラムの UserAgentなし の行を注釈なしに 
+> してみてください。
+>
+> --------------------------- cut here ------------------------------
+> import java.io.*;
+> import java.net.*;
+>
+> class NicoGet {
+>     public static void main(String[] args) {
+>         try {
+>             String urlString =
+> "http://live.nicovideo.jp/recent?p=1&tab=common";
+>
+>             URL url = new URL(urlString);
+>
+>             URLConnection uc = url.openConnection();
+>             // uc.setRequestProperty("User-Agent", "");//  
+> UserAgentなし
+>             InputStream input = uc.getInputStream();
+>
+>             int c;
+>             while ((c = input.read()) != -1) System.out.write(c);
+>             input.close();
+>         } catch (MalformedURLException ex) {
+>             System.out.println("MalformedURLException: " + ex);
+>         } catch (IOException ex) {
+>             System.out.println("IOException: " + ex);
+>         }
+>     }
+> }
+> --------------------------- cut here ------------------------------
+>
+> JunURL でも UserAgent が設定できると大丈夫なような気がす 
+> るのですが、いか
+> がでしょうか。
+>
+> # ちょっとブラウズしてみましたがすぐにはわかりませんでしたの 
+> で、どなたか
+> わかる方のフォローをお願いします。
+>
+> 久保田 吉彦 さんは書きました:
+>> 自家製ニコ生アラートのようなものをVisualWorksで作成しよ 
+>> うと思い、下記の
+>> プログラムでニコニコ生放送のページの情報を取得しようとしまし 
+>> た。
+>>
+>> | anURL readStream writeStream |
+>> anURL := JunURL named: 'http://live.nicovideo.jp/recent? 
+>> p=1&tab=common' .
+>> JunControlUtility
+>>     assert:[readStream := anURL readStream.
+>>             writeStream := 'nico.html' asFilename writeStream]
+>>     do:[[readStream atEnd not] whileTrue:
+>>             [writeStream nextPutAll:(JunStringUtility getLine:
+>> readStream)]]
+>>     ensure:[writeStream close.
+>>             readStream close].
+>>
+>> 困っているのはWebブラウザでURLを開いたときに取得 
+>> できるHTMLと異なった情報
+>> を持ってきてしまうことです。
+>> nico.htmlを開くと'エラーが発生しました'と書かれた 
+>> ページが表示されます。
+>>
+>> いまのところ同じURLのHTMLを取得するプログラムを 
+>> JavaとPythonで書いてみま
+>> したが、こちらでは期待した情報が得られました。
+>>
+>> プログラムのどこがいけないのでしょうか?
+>> ご存知の方教えていただけませんでしょうか。
+>
+>
+> -- 
+> ------
+> 〒101-8457 東京電機大学 未来科学部 情報メ 
+> ディア学科  増田 英孝
+> E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+> http://www.cdl.im.dendai.ac.jp/%7emasuda/     FAX 03-5280-3592
+> It's more fun to compute!
+
+From oku ＠ dream.club.ne.jp  Mon Sep 28 15:27:22 2009
+From: oku ＠ dream.club.ne.jp (oku)
+Date: Mon Sep 28 15:27:34 2009
+Subject: [SML 7668] Re: HTMLの取得がうまくできません
+In-Reply-To: <4AC04BC9.4030803@mail.dendai.ac.jp>
+References: <C5C7250E-E8EE-4D1A-AF22-D1E0CB4C6F04@sie.dendai.ac.jp>
+	<4AC04BC9.4030803@mail.dendai.ac.jp>
+Message-ID: <JPTKYXWA05UA93Nii5900006560@jptkyxwa05.jp.sony.com>
+
+おくだいらです。
+
+3ヶ月くらい前に recent 取得時の仕様が変わりました。
+公式にアナウンスされたのは見た事ありません。
+
+http://d.hatena.ne.jp/con_mame/20090618
+
+ニコ生アラートを実装するなら API が公開されているのでそちらを
+使うようにしましょう。
+
+http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%83%A9%E3%83%BC%E3%83%88%28%E6%9C%AC%E5%AE%B6%29%E3%81%AE%E4%BB%95%E6%A7%98
+
+こちらは
+
+> ツールおよびサービスでこれらのAPIにアクセスする時、そのツール名
+> /サービス名とバージョン情報が含まれているユーザーエージェントで
+> アクセスすることを推奨します。
+
+と書かれています。
+
+Hidetaka MASUDAさんの<4AC04BC9.4030803@mail.dendai.ac.jp>から
+> 増田です。
+> 
+> Java と Jun 760 で自分のサーバにアクセスして環境変数の違いを見てみまし
+> た。異なっているのは、UserAgent ぐらいでした。
+> 
+> Java: HTTP_USER_AGENT	Java/1.6.0_05
+> Jun:  HTTP_USER_AGENT
+> 
+> Jun の方は UserAgent が設定されていません。
+> 
+> 試しに Java の方で UserAgent をなしにしてみると、ニコニコ生放送もエラー
+> になります。
+> 
+> 以下のプログラムの UserAgentなし の行を注釈なしにしてみてください。
+> 
+> --------------------------- cut here ------------------------------
+> import java.io.*;
+> import java.net.*;
+> 
+> class NicoGet {
+>     public static void main(String[] args) {
+>         try {
+>             String urlString =
+> "http://live.nicovideo.jp/recent?p=1&tab=common";
+> 
+>             URL url = new URL(urlString);
+> 
+>             URLConnection uc = url.openConnection();
+>             // uc.setRequestProperty("User-Agent", "");// UserAgentなし
+>             InputStream input = uc.getInputStream();
+> 
+>             int c;
+>             while ((c = input.read()) != -1) System.out.write(c);
+>             input.close();
+>         } catch (MalformedURLException ex) {
+>             System.out.println("MalformedURLException: " + ex);
+>         } catch (IOException ex) {
+>             System.out.println("IOException: " + ex);
+>         }
+>     }
+> }
+> --------------------------- cut here ------------------------------
+> 
+> JunURL でも UserAgent が設定できると大丈夫なような気がするのですが、いか
+> がでしょうか。
+> 
+> # ちょっとブラウズしてみましたがすぐにはわかりませんでしたので、どなたか
+> わかる方のフォローをお願いします。
+> 
+> 久保田 吉彦 さんは書きました:
+> > 自家製ニコ生アラートのようなものをVisualWorksで作成しようと思い、下記の 
+> > プログラムでニコニコ生放送のページの情報を取得しようとしました。
+> > 
+> > | anURL readStream writeStream |
+> > anURL := JunURL named: 'http://live.nicovideo.jp/recent?p=1&tab=common' .
+> > JunControlUtility
+> >     assert:[readStream := anURL readStream.
+> >             writeStream := 'nico.html' asFilename writeStream]
+> >     do:[[readStream atEnd not] whileTrue:
+> >             [writeStream nextPutAll:(JunStringUtility getLine: 
+> > readStream)]]
+> >     ensure:[writeStream close.
+> >             readStream close].
+> > 
+> > 困っているのはWebブラウザでURLを開いたときに取得できるHTMLと異なった情報 
+> > を持ってきてしまうことです。
+> > nico.htmlを開くと'エラーが発生しました'と書かれたページが表示されます。
+> > 
+> > いまのところ同じURLのHTMLを取得するプログラムをJavaとPythonで書いてみま 
+> > したが、こちらでは期待した情報が得られました。
+> > 
+> > プログラムのどこがいけないのでしょうか?
+> > ご存知の方教えていただけませんでしょうか。
+> 
+> 
+> -- 
+> ------
+> 〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+> E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+> http://www.cdl.im.dendai.ac.jp/%7emasuda/     FAX 03-5280-3592
+> It's more fun to compute!
+From mutoh ＠ openedu.org  Tue Sep 29 20:39:50 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Tue Sep 29 20:40:00 2009
+Subject: [SML 7669] Re: Some ideas
+In-Reply-To: <5D023ABA-048F-46AE-A2AB-FE4DE2F77639@mfc.bakkers.gr.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<4AB131EB.8010100@cc.kyoto-su.ac.jp>
+	<b81554460909161929u58958ab3xd66789d3b0abcc6a@mail.gmail.com>
+	<19537631-61D9-404A-A552-13EF806EFBA9@mfc.bakkers.gr.jp>
+	<86my4ta9br.wl%mutoh@openedu.org>
+	<b81554460909212125m4603ec90qa382ebbfec416ed2@mail.gmail.com>
+	<86ws3rmdvd.wl%mutoh@openedu.org>
+	<5D023ABA-048F-46AE-A2AB-FE4DE2F77639@mfc.bakkers.gr.jp>
+Message-ID: <86fxa6x9mh.wl%mutoh@openedu.org>
+
+Hi Serge,
+
+Are you busy now?
+
+I'm sorry that my server qwikuro.610t.org down recent days.
+
+Today, I get some maps and guides for Nara in English.
+If you want to see it, I'll send it.
+
+At Tue, 22 Sep 2009 20:50:58 +0900,
+Yasuda Yutaka <yasuda@mfc.bakkers.gr.jp> wrote:
+> > Someone help me!! > SML members.
+> Yes I can. And I believe more members will be able to join us. :-)
+
+Thank you very much!!
+
+Ofcourse, I hope that more members come to Nara!!
+--
+	Takeshi MUTOH <mutoh@openedu.org>

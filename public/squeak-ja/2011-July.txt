@@ -1,0 +1,509 @@
+From tako ＠ aquilax.co.jp  Tue Jul  5 17:05:20 2011
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Tue, 5 Jul 2011 17:05:20 +0900
+Subject: [Squeak-ja: 4596]
+ StOMP、PPC マックでの動作ＯＫ！
+Message-ID: <20110705080519.CA6CE9A967@1server.aquilax.co.jp>
+
+ 高橋＠池袋です。
+
+　第33回Smalltalk勉強会で紹介された梅澤さん謹製の
+シリアライザStOPMのiMac G5でのインストールと
+SUnitテストを行いました。
+
+　iMac G5。Mac OS X 10.4.11(8S165)
+PowerPC G5(3.1) 2.1GHz 512KB-cache, 1.5G, バス 700MHz
+
+　Squeak4.2-ja-all-in-one内のimageと非Cog VMを使用。
+
+　Installer でインストール。
+image保存せずそのまま Test RunnerからStompTest-Coreを実行。
+
+90 run, 90 passes , 0...。
+
+一応Test Runner の「プロファイル実行」結果を添付します。
+
+追伸
+ Spy Results Window のハロから「モデルを検査」で
+StringHolder のインスペクタを開いて self toStomp を
+実行したらしばらくしてピンクの「Key not found: Assosiation」
+が出現。PPCでも Intelでも同じでした。
+
+　ではでは
+
+
+
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: StompTest-Core-SpyResults.txt
+URL:  <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110705/0c8f674d/attachment.txt>
+
+From ume ＠ softumeya.com  Sun Jul 17 22:30:12 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 17 Jul 2011 22:30:12 +0900
+Subject: [Squeak-ja: 4597]
+	第34回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSp-0L0uFdidsH5XUw_e=70b1zQo1zcrZ2-Dk02OSg=Xg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/7/29(金) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai34kaismalltalkbenkyoukai
+
+今回のテーマは先進的に「Jtalk」です。
+Jtalkとは、JavaScriptランタイム上で動作するSmalltalkの処理系です。IDEも含んでいるためWebブラウザ上でWebアプリケーションのクライアントサイドを快適に開発することができます。まだまだデスクトップ上の通常のSmalltalk環境に比べると貧弱ですが、JavaScriptの関数を透過的に呼び出せたり、Node.jsとも連携できたりする期待の星なのです。
+
+ビューポイントテクノロジーの林さんが発表されます。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From tkamada ＠ gmail.com  Thu Jul 21 17:32:35 2011
+From: tkamada ＠ gmail.com (Toshiyuki Kamada)
+Date: Thu, 21 Jul 2011 17:32:35 +0900
+Subject: [Squeak-ja: 4598]
+	Scratch + Arduinoいろいろ試してます
+Message-ID: <CADog4RwAjHjTqabZTs=74uSZqC4F3E1f0-W+8AiWDx_ouOvabA@mail.gmail.com>
+
+鎌田と申します。
+
+Squeakのリストに対して、Scratchの話題で恐縮です。阿部さんに直接お話できる場所がここぐらいかと思い、参加させていただきました。
+
+Scratch + Arduinoで、横川さん＋阿部さんのScratchBoard+WeDo互換拡張を触っていて、blog
+
+http://tkamada.blogspot.com/
+
+に、拙いことを書いています。
+
+モーター制御で、サーボモーターを追加しようと思い、ArduinoのServo標準オブジェクトを使えばArduino側はなんとかなる見込みが立ったのですが、Scratch側をどうしようということで、Smalltalkのブラウザを開いてコードを追いかけています。
+
+そこで、コードを見ていると、#(84 254 xx
+xx)というバイト列をScratchは送信しているように思うのですが、Arduino側では最後の1バイトだけを見ているように見えます。
+
+また、モータ番号として1〜6が設定されるようなのですが、このあたりをうまく受け取ってサーボモーター番号決め打ちみたいなhackができるのかどうか、といったあたりも含めてお伺いしたくメールさせていただいている次第です。
+
+ただ、モータ番号を指定するブロック（Morph）はありませんので、現在の実装がどうなっているのか、変更するならどのあたりか、といったことを若干ご示唆いただければと思っております。
+
+Smalltalkは学部のとき少しDolphin Machineでいじった程度ですが、そのうちなんとかなるだろうと思っています。
+
+ぶしつけな質問で申し訳ありませんが、どうかよろしくお願いいたします。
+
+From abee.abe ＠ nifty.ne.jp  Fri Jul 22 23:26:15 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri, 22 Jul 2011 23:26:15 +0900
+Subject: [Squeak-ja: 4599] Re:
+	Scratch + Arduinoいろいろ試してます
+In-Reply-To: <CADog4RwAjHjTqabZTs=74uSZqC4F3E1f0-W+8AiWDx_ouOvabA@mail.gmail.com>
+References: <CADog4RwAjHjTqabZTs=74uSZqC4F3E1f0-W+8AiWDx_ouOvabA@mail.gmail.com>
+Message-ID: <CADv7uFGzxasOATAAzfuyUKC7em=rqfNgRcN7FzVPyJcNuzmD3Q@mail.gmail.com>
+
+阿部です。
+鎌田さん、お久しぶりです。
+
+2011年7月21日17:32 Toshiyuki Kamada <tkamada ＠ gmail.com>:
+> Squeakのリストに対して、Scratchの話題で恐縮です。阿部さんに直接お話できる場所がここぐらいかと思い、参加させていただきました。
+
+ご指名いただくのはさておき、ScratchもSqueakなので構わないと思います。
+
+> モーター制御で、サーボモーターを追加しようと思い、ArduinoのServo標準オブジェクトを使えばArduino側はなんとかなる見込みが立ったのですが、Scratch側をどうしようということで、Smalltalkのブラウザを開いてコードを追いかけています。
+>
+> そこで、コードを見ていると、#(84 254 xx
+> xx)というバイト列をScratchは送信しているように思うのですが、Arduino側では最後の1バイトだけを見ているように見えます。
+>
+> また、モータ番号として1〜6が設定されるようなのですが、このあたりをうまく受け取ってサーボモーター番号決め打ちみたいなhackができるのかどうか、といったあたりも含めてお伺いしたくメールさせていただいている次第です。
+
+たぶんこれはGoGo Boardのコードですね。
+http://www.gogoboard.org/
+
+Scratchが標準でサポートするデバイスには、SensorBoard(aka PicoBoard)、WeDo、そしてGoGo Boardがあります。
+この内、SensorBoardとGoGo
+Boardは排他で、ScratchBoard監視盤(SensorBoardMorph)のShift+右ボタンメニューで切り替えます(SensorBoardMorph>>rightButtonMenu)。
+モーター関連のメソッドはGoGo BoardとWeDoのものが混ざっており、センダーなどを確認してどちらに属するものか調べる必要があります。
+
+> ただ、モータ番号を指定するブロック（Morph）はありませんので、現在の実装がどうなっているのか、変更するならどのあたりか、といったことを若干ご示唆いただければと思っております。
+
+SensorBoardWithMotorで私が変更したのはSensorBoardの方です。このプロトコルは、ボードへのデータ送信要求として1サイクルごとにPCから1バイト(16r01)を送っていたので、これをモーター1個分の回転方向用に2ビット、モーターのパワー用に6ビット使って送信するように変えました(SensorBoardMorph>>processIncomingData)。
+UIのブロックとそのためのメソッドはWeDo用のものを流用しています(ScriptableScratchMorph>>motorOn:など)。
+その他の変更箇所は、SensorBoardWithMotor.1.csをご覧ください。
+この設計は、ArduinoにSensorBoardとWeDoの両方の機能を持たせ、ハード、ソフト共に最低限の変更(モータードライバーとWeDo用コネクターの追加など)で低コストに両方の機能を活かしつつ、プロジェクトファイルの互換性を維持することを意図しています(公式サイトで共有可能)。それらを超える能力は狙っていません。
+
+GoGo BoardにしてもWeDoにしても、DCモーターの制御しかできませんので、ブロックもそれ用のものしか用意されていません。もし、サーボモーターを使われるのであれば、自分でスケッチを書き、プロトコルを決め、ブロックも用意する必要があります。
+
+それを実際に行なっているのがS4Aです。
+http://seaside.citilab.eu/scratch?_s=yQf-lmh7eaq_Ev0_&_k=_Ac121eeMFBO3xsR
+Smalltalkの拡張でサーボモーターをお使いになるのであれば、これを参考にすることをお勧めします。
+
+あるいは、リモートセンサープロトコルを使って、サーボモーターを制御するサーバーとScratchがソケットで通信するように書くのも手です。その場合、サーバーの記述言語はSmalltalkで無くても構いません。また、Scratch側の変更が不要となります。
+http://wiki.scratch.mit.edu/wiki/Remote_Sensors_Protocol
+これを行っているのがCatenaryです。
+https://sites.google.com/site/chalkmarrowfiles/
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+From tkamada ＠ gmail.com  Sat Jul 23 05:52:35 2011
+From: tkamada ＠ gmail.com (Toshiyuki Kamada)
+Date: Sat, 23 Jul 2011 05:52:35 +0900
+Subject: [Squeak-ja: 4600] Re:
+	Scratch + Arduinoいろいろ試してます
+In-Reply-To: <CADv7uFGzxasOATAAzfuyUKC7em=rqfNgRcN7FzVPyJcNuzmD3Q@mail.gmail.com>
+References: <CADog4RwAjHjTqabZTs=74uSZqC4F3E1f0-W+8AiWDx_ouOvabA@mail.gmail.com>
+ <CADv7uFGzxasOATAAzfuyUKC7em=rqfNgRcN7FzVPyJcNuzmD3Q@mail.gmail.com>
+Message-ID: <CADog4RzQKFuOxW8OSX+1bsNnKs=qLU_XT3RaLb+xDPDaZBqSNw@mail.gmail.com>
+
+鎌田です。
+
+阿部さん、早速ありがとうございます。
+
+> たぶんこれはGoGo Boardのコードですね。
+> http://www.gogoboard.org/
+
+むむむ、GoGo BoardとSensorBoardが切り分けられているのは気づいていたので注意していたのですが、結局そちらでしたか（SensorBoardにモータはつながらないから、僕が仕様を知らないWeDoの隠れ仕様なのかなと漠然と考えていました）。WeDoがA,
+B 2個のモータをもつ、というのは後述のご示唆で確認できました。
+
+> Scratchが標準でサポートするデバイスには、SensorBoard(aka PicoBoard)、WeDo、そしてGoGo Boardがあります。
+> この内、SensorBoardとGoGo
+> Boardは排他で、ScratchBoard監視盤(SensorBoardMorph)のShift+右ボタンメニューで切り替えます(SensorBoardMorph>>rightButtonMenu)。
+> モーター関連のメソッドはGoGo BoardとWeDoのものが混ざっており、センダーなどを確認してどちらに属するものか調べる必要があります。
+
+ありがとうございます。コードの該当部分を確認しました。
+
+>> ただ、モータ番号を指定するブロック（Morph）はありませんので、現在の実装がどうなっているのか、変更するならどのあたりか、といったことを若干ご示唆いただければと思っております。
+>
+> SensorBoardWithMotorで私が変更したのはSensorBoardの方です。このプロトコルは、ボードへのデータ送信要求として1サイクルごとにPCから1バイト(16r01)を送っていたので、これをモーター1個分の回転方向用に2ビット、モーターのパワー用に6ビット使って送信するように変えました(SensorBoardMorph>>processIncomingData)。
+
+なるほど、ハンドシェイク用の1バイトを流用した形でしたか。納得です。
+
+> UIのブロックとそのためのメソッドはWeDo用のものを流用しています(ScriptableScratchMorph>>motorOn:など)。
+> その他の変更箇所は、SensorBoardWithMotor.1.csをご覧ください。
+> この設計は、ArduinoにSensorBoardとWeDoの両方の機能を持たせ、ハード、ソフト共に最低限の変更(モータードライバーとWeDo用コネクターの追加など)で低コストに両方の機能を活かしつつ、プロジェクトファイルの互換性を維持することを意図しています(公式サイトで共有可能)。それらを超える能力は狙っていません。
+
+ありがとうございます。ScriptableScratchMorphにセレクタがあるのですね。
+
+一点だけ、知識が足りなくて、.csというのがどこを指しているのかわかりませんでした。
+一応、ChangeFileを通して変更箇所は把握できたつもりです。（おかげさまで、Smalltalkの使い方を徐々に思い出してきました）
+
+> GoGo BoardにしてもWeDoにしても、DCモーターの制御しかできませんので、ブロックもそれ用のものしか用意されていません。もし、サーボモーターを使われるのであれば、自分でスケッチを書き、プロトコルを決め、ブロックも用意する必要があります。
+>
+> それを実際に行なっているのがS4Aです。
+> http://seaside.citilab.eu/scratch?_s=yQf-lmh7eaq_Ev0_&_k=_Ac121eeMFBO3xsR
+> Smalltalkの拡張でサーボモーターをお使いになるのであれば、これを参考にすることをお勧めします。
+
+なんと、これは派手にやっていますね。たいへん参考になります。
+
+実は僕もScratchのプロジェクト互換は考慮していなくて、MYUロボ的に自律動作できるVMをArduinoに載せて、そのバイトコードをScratchのブロックからコンパイルして送り込むような改変をする、ある意味Scratchコミュニティに対して全く失礼な構想を持っています。ただし、Scratchとの協調動作もできるようにしたいと思っているので、Scratchを単なるプログラミングインタフェースに貶めてしまうようなつもりは全くありません。
+
+むしろ、ModKitの、ScratchのUI模倣、ブロックはすべてWiredの命令、というのが筋悪に感じています。
+
+> あるいは、リモートセンサープロトコルを使って、サーボモーターを制御するサーバーとScratchがソケットで通信するように書くのも手です。その場合、サーバーの記述言語はSmalltalkで無くても構いません。また、Scratch側の変更が不要となります。
+> http://wiki.scratch.mit.edu/wiki/Remote_Sensors_Protocol
+> これを行っているのがCatenaryです。
+> https://sites.google.com/site/chalkmarrowfiles/
+
+はい、これは承知しています。遠隔センサープロトコルを知れば、まずやってみることかなと思います。
+ただ、制御がScratch側にしかないので、ひもつき（無線でも電波が届く範囲）なのは少し物足りなく思いました。
+
+というのも、サーボモーターで質問したのはひとつの例で、他にはGPSロガーをプログラミングして近所を巡ってきた結果を視覚化するとか、そんな応用まで考えています。Scratch（では、もはやないのかもしれませんが、派生物）とは、いつでも切り離せて、再び接続して協調動作させることもできる（同じプロジェクトのなかで、どちらもできる）といいなと思っています。PCとマイコンが主従関係にあるのではなくて、相互補完の関係になるのが理想です。
+
+From abee.abe ＠ nifty.ne.jp  Sat Jul 23 09:02:15 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sat, 23 Jul 2011 09:02:15 +0900
+Subject: [Squeak-ja: 4601] Re:
+	Scratch + Arduinoいろいろ試してます
+In-Reply-To: <CADog4RzQKFuOxW8OSX+1bsNnKs=qLU_XT3RaLb+xDPDaZBqSNw@mail.gmail.com>
+References: <CADog4RwAjHjTqabZTs=74uSZqC4F3E1f0-W+8AiWDx_ouOvabA@mail.gmail.com>
+ <CADv7uFGzxasOATAAzfuyUKC7em=rqfNgRcN7FzVPyJcNuzmD3Q@mail.gmail.com>
+ <CADog4RzQKFuOxW8OSX+1bsNnKs=qLU_XT3RaLb+xDPDaZBqSNw@mail.gmail.com>
+Message-ID: <CADv7uFE-PTSGMhK4DM_Mzg5mKL+HZ7GH5p7x=LvGGJ06aOLpXg@mail.gmail.com>
+
+阿部です。
+
+2011年7月23日5:52 Toshiyuki Kamada <tkamada ＠ gmail.com>:
+> WeDoがA, B 2個のモータをもつ、というのは後述のご示唆で確認できました。
+
+WeDoのハブには2個のソケットがあるのでハード的には最大2個のモーターを動かせるのですが、ScratchのUI上では1個しか使えないようになっています。たぶんこれもsimplicity原則との絡みでしょう。
+私はこれを使えるようにしたバージョンを作って以下に置いています。
+http://squeakland.jp/abee/tmp/controlingTwoMotorsWithMesh.zip
+説明はこのあたり。
+http://scratch.mit.edu/forums/viewtopic.php?pid=719696#p719696
+
+>> UIのブロックとそのためのメソッドはWeDo用のものを流用しています(ScriptableScratchMorph>>motorOn:など)。
+>> その他の変更箇所は、SensorBoardWithMotor.1.csをご覧ください。
+>
+> 一点だけ、知識が足りなくて、.csというのがどこを指しているのかわかりませんでした。
+
+「ScriptableScratchMorph>>motorOn:など」以外の変更ということですね。
+MLを読んでいる他の人へのリファレンスの意味もありました。
+
+> 実は僕もScratchのプロジェクト互換は考慮していなくて、MYUロボ的に自律動作できるVMをArduinoに載せて、そのバイトコードをScratchのブロックからコンパイルして送り込むような改変をする、ある意味Scratchコミュニティに対して全く失礼な構想を持っています。
+
+目的によって手段は変わるべきなので、失礼ということは全くないのではないでしょうか。
+私も上記のイメージのようにプロジェクト互換のないものをたくさん作っています。
+これについて、Scratchチームの見解は以下にあるとおりです。
+http://info.scratch.mit.edu/Source_Code
+
+> むしろ、ModKitの、ScratchのUI模倣、ブロックはすべてWiredの命令、というのが筋悪に感じています。
+
+私も少しそれは思います。前回のMTMでは会場のネットが全滅してデモもできなくなってしまいました。
+私ももう少しライトな物が作れないか考えています。
+
+> というのも、サーボモーターで質問したのはひとつの例で、他にはGPSロガーをプログラミングして近所を巡ってきた結果を視覚化するとか、そんな応用まで考えています。Scratch（では、もはやないのかもしれませんが、派生物）とは、いつでも切り離せて、再び接続して協調動作させることもできる（同じプロジェクトのなかで、どちらもできる）といいなと思っています。PCとマイコンが主従関係にあるのではなくて、相互補完の関係になるのが理想です。
+
+それはすばらしいです。
+雰囲気は、先日亡くなられた武蔵大学の加藤美治先生のSplishに近いですね。
+http://www.splish.org/about/?lang=ja
+先生はこの名前はSqueakやScratchを意識したものだとおっしゃっていました。
+どなたかこのプロジェクトを引き継がれる方がいらっしゃればよいのですが。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+From ky ＠ yengawa.com  Sat Jul 23 11:28:56 2011
+From: ky ＠ yengawa.com (Koji Yokokawa)
+Date: Sat, 23 Jul 2011 11:28:56 +0900
+Subject: [Squeak-ja: 4602] Scrattinoの紹介
+Message-ID: <4E2A31E8.1090705@yengawa.com>
+
+横川です。
+Scratch+Arduinoの話題がでたので、ついでに最近開発中のプロジェクト
+「Scrattino」について宣伝します。
+
+http://www.yengawa.com/scrattino
+
+Scratch+Arduinoと同じくScratchとArduinoをつなぐ目的なのですが、PicoBoard
+のセンサー入力だけではなく出力も自由に制御しようという目標をもっています。
+このプロジェクトはShare(共有)を社会的な学びとして重要視しています。スク
+ラッチ側を変更しないので、作品をスクラッチの公式サイトで共有できます。
+
+[Scratch] <==Remote Sensor Connection==> [Scrattino] <==USB Serial==>
+[Arduino]
+
+この仕組みにHelloBoardのハードウェア依存な部分を盛り込んだScrattino
+HelloBoardというアプリを武蔵大学の授業で使いました。
+
+Scrattino HelloBoard
+http://www.yengawa.com/scrattino-helloboard
+
+武蔵大学 表現技法とインタラクション 2011
+http://seminar.edu.yengawa.com/course/view.php?id=3
+
+もう少し整理してからHelloBoardではなく普通のArduinoで使えるScrattinoを公
+開する予定です。
+
+-- 
+Koji Yokokawa <ky ＠ yengawa.com>
+http://www.yengawa.com/
+
+From ky ＠ yengawa.com  Sat Jul 23 22:00:35 2011
+From: ky ＠ yengawa.com (Koji Yokokawa)
+Date: Sat, 23 Jul 2011 22:00:35 +0900
+Subject: [Squeak-ja: 4603] Re:
+ Scratch + Arduinoいろいろ試してます
+In-Reply-To: <CADog4RzQKFuOxW8OSX+1bsNnKs=qLU_XT3RaLb+xDPDaZBqSNw@mail.gmail.com>
+References: <CADog4RwAjHjTqabZTs=74uSZqC4F3E1f0-W+8AiWDx_ouOvabA@mail.gmail.com>
+ <CADv7uFGzxasOATAAzfuyUKC7em=rqfNgRcN7FzVPyJcNuzmD3Q@mail.gmail.com>
+ <CADog4RzQKFuOxW8OSX+1bsNnKs=qLU_XT3RaLb+xDPDaZBqSNw@mail.gmail.com>
+Message-ID: <4E2AC5F3.4050204@yengawa.com>
+
+横川です。
+
+コードをコンパイルしてArduinoへ送り込むあたりをSqueakでやっている人も居
+て、このようなプロジェクトが公開されています。
+(ぼくは使ったことがないので、どれくらい「使える」物なのかはわかりません
+が参考になれば)
+
+Arduino
+http://www.squeaksource.com/Arduino.html
+
+ちなみに、これはPhysical EtoysというArduinoをはじめとしてLego Mindstorms
+Nxt, Nintendo Wiimoteなどの身近なハードウェアをSqueakで利用する大きなプ
+ロジェクトの一部です。
+
+Physical Etoys
+http://tecnodacta.com.ar/gira/projects/physical-etoys/
+
+
+Toshiyuki Kamada wrote 11/07/23 5:52:
+> 鎌田です。
+> 
+> 阿部さん、早速ありがとうございます。
+> 
+>> たぶんこれはGoGo Boardのコードですね。
+>> http://www.gogoboard.org/
+> 
+> むむむ、GoGo BoardとSensorBoardが切り分けられているのは気づいていたので注意していたのですが、結局そちらでしたか（SensorBoardにモータはつながらないから、僕が仕様を知らないWeDoの隠れ仕様なのかなと漠然と考えていました）。WeDoがA,
+> B 2個のモータをもつ、というのは後述のご示唆で確認できました。
+> 
+>> Scratchが標準でサポートするデバイスには、SensorBoard(aka PicoBoard)、WeDo、そしてGoGo Boardがあります。
+>> この内、SensorBoardとGoGo
+>> Boardは排他で、ScratchBoard監視盤(SensorBoardMorph)のShift+右ボタンメニューで切り替えます(SensorBoardMorph>>rightButtonMenu)。
+>> モーター関連のメソッドはGoGo BoardとWeDoのものが混ざっており、センダーなどを確認してどちらに属するものか調べる必要があります。
+> 
+> ありがとうございます。コードの該当部分を確認しました。
+> 
+>>> ただ、モータ番号を指定するブロック（Morph）はありませんので、現在の実装がどうなっているのか、変更するならどのあたりか、といったことを若干ご示唆いただければと思っております。
+>>
+>> SensorBoardWithMotorで私が変更したのはSensorBoardの方です。このプロトコルは、ボードへのデータ送信要求として1サイクルごとにPCから1バイト(16r01)を送っていたので、これをモーター1個分の回転方向用に2ビット、モーターのパワー用に6ビット使って送信するように変えました(SensorBoardMorph>>processIncomingData)。
+> 
+> なるほど、ハンドシェイク用の1バイトを流用した形でしたか。納得です。
+> 
+>> UIのブロックとそのためのメソッドはWeDo用のものを流用しています(ScriptableScratchMorph>>motorOn:など)。
+>> その他の変更箇所は、SensorBoardWithMotor.1.csをご覧ください。
+>> この設計は、ArduinoにSensorBoardとWeDoの両方の機能を持たせ、ハード、ソフト共に最低限の変更(モータードライバーとWeDo用コネクターの追加など)で低コストに両方の機能を活かしつつ、プロジェクトファイルの互換性を維持することを意図しています(公式サイトで共有可能)。それらを超える能力は狙っていません。
+> 
+> ありがとうございます。ScriptableScratchMorphにセレクタがあるのですね。
+> 
+> 一点だけ、知識が足りなくて、.csというのがどこを指しているのかわかりませんでした。
+> 一応、ChangeFileを通して変更箇所は把握できたつもりです。（おかげさまで、Smalltalkの使い方を徐々に思い出してきました）
+> 
+>> GoGo BoardにしてもWeDoにしても、DCモーターの制御しかできませんので、ブロックもそれ用のものしか用意されていません。もし、サーボモーターを使われるのであれば、自分でスケッチを書き、プロトコルを決め、ブロックも用意する必要があります。
+>>
+>> それを実際に行なっているのがS4Aです。
+>> http://seaside.citilab.eu/scratch?_s=yQf-lmh7eaq_Ev0_&_k=_Ac121eeMFBO3xsR
+>> Smalltalkの拡張でサーボモーターをお使いになるのであれば、これを参考にすることをお勧めします。
+> 
+> なんと、これは派手にやっていますね。たいへん参考になります。
+> 
+> 実は僕もScratchのプロジェクト互換は考慮していなくて、MYUロボ的に自律動作できるVMをArduinoに載せて、そのバイトコードをScratchのブロックからコンパイルして送り込むような改変をする、ある意味Scratchコミュニティに対して全く失礼な構想を持っています。ただし、Scratchとの協調動作もできるようにしたいと思っているので、Scratchを単なるプログラミングインタフェースに貶めてしまうようなつもりは全くありません。
+> 
+> むしろ、ModKitの、ScratchのUI模倣、ブロックはすべてWiredの命令、というのが筋悪に感じています。
+> 
+>> あるいは、リモートセンサープロトコルを使って、サーボモーターを制御するサーバーとScratchがソケットで通信するように書くのも手です。その場合、サーバーの記述言語はSmalltalkで無くても構いません。また、Scratch側の変更が不要となります。
+>> http://wiki.scratch.mit.edu/wiki/Remote_Sensors_Protocol
+>> これを行っているのがCatenaryです。
+>> https://sites.google.com/site/chalkmarrowfiles/
+> 
+> はい、これは承知しています。遠隔センサープロトコルを知れば、まずやってみることかなと思います。
+> ただ、制御がScratch側にしかないので、ひもつき（無線でも電波が届く範囲）なのは少し物足りなく思いました。
+> 
+> というのも、サーボモーターで質問したのはひとつの例で、他にはGPSロガーをプログラミングして近所を巡ってきた結果を視覚化するとか、そんな応用まで考えています。Scratch（では、もはやないのかもしれませんが、派生物）とは、いつでも切り離せて、再び接続して協調動作させることもできる（同じプロジェクトのなかで、どちらもできる）といいなと思っています。PCとマイコンが主従関係にあるのではなくて、相互補完の関係になるのが理想です。
+
+-- 
+Koji Yokokawa <ky ＠ yengawa.com>
+http://www.yengawa.com/
+
+From ky ＠ yengawa.com  Sat Jul 23 22:21:04 2011
+From: ky ＠ yengawa.com (Koji Yokokawa)
+Date: Sat, 23 Jul 2011 22:21:04 +0900
+Subject: [Squeak-ja: 4604] Re: Scrattinoの紹介
+In-Reply-To: <4E2A31E8.1090705@yengawa.com>
+References: <4E2A31E8.1090705@yengawa.com>
+Message-ID: <4E2ACAC0.3040500@yengawa.com>
+
+横川です。
+Squeak-jaにおいて肝心なことを書き忘れてしまいました。
+
+このScrattinoはSqueakで作っていて、Firmataプロトコルを使ってArduinoと通
+信しています。Firmataの部分はPhysical EtosyのArduinoライブラリを使ってい
+ます。
+
+Physical Etoys
+Arduino
+http://tecnodacta.com.ar/gira/projects/physical-etoys/arduino/
+
+Squeakでフィジカルコンピューティングも楽しいですよ。
+
+
+Koji Yokokawa wrote 11/07/23 11:28:
+> 横川です。
+> Scratch+Arduinoの話題がでたので、ついでに最近開発中のプロジェクト
+> 「Scrattino」について宣伝します。
+> 
+> http://www.yengawa.com/scrattino
+> 
+> Scratch+Arduinoと同じくScratchとArduinoをつなぐ目的なのですが、PicoBoard
+> のセンサー入力だけではなく出力も自由に制御しようという目標をもっています。
+> このプロジェクトはShare(共有)を社会的な学びとして重要視しています。スク
+> ラッチ側を変更しないので、作品をスクラッチの公式サイトで共有できます。
+> 
+> [Scratch]<==Remote Sensor Connection==>  [Scrattino]<==USB Serial==>
+> [Arduino]
+> 
+> この仕組みにHelloBoardのハードウェア依存な部分を盛り込んだScrattino
+> HelloBoardというアプリを武蔵大学の授業で使いました。
+> 
+> Scrattino HelloBoard
+> http://www.yengawa.com/scrattino-helloboard
+> 
+> 武蔵大学 表現技法とインタラクション 2011
+> http://seminar.edu.yengawa.com/course/view.php?id=3
+> 
+> もう少し整理してからHelloBoardではなく普通のArduinoで使えるScrattinoを公
+> 開する予定です。
+> 
+
+-- 
+Koji Yokokawa <ky ＠ yengawa.com>
+http://www.yengawa.com/
+
+From tkamada ＠ acm.org  Mon Jul 25 17:57:48 2011
+From: tkamada ＠ acm.org (Toshiyuki Kamada)
+Date: Mon, 25 Jul 2011 17:57:48 +0900
+Subject: [Squeak-ja: 4605] Re: Scrattinoの紹介
+In-Reply-To: <4E2ACAC0.3040500@yengawa.com>
+References: <4E2A31E8.1090705@yengawa.com>
+	<4E2ACAC0.3040500@yengawa.com>
+Message-ID: <CADog4Rw6NOaKgW8Awfwicb2YMoB0fn5uXPCu3NWVneGFZ3tQuQ@mail.gmail.com>
+
+鎌田です。
+
+横川さんのプロジェクトはこの方向に進まれたのですね。
+画面デザインもSqueak/Scratchのセンスを引き継いでおり、またコードの品質も高く、感動いたしました。
+
+> このScrattinoはSqueakで作っていて、Firmataプロトコルを使ってArduinoと通
+> 信しています。Firmataの部分はPhysical EtosyのArduinoライブラリを使ってい
+> ます。
+
+Squeak Arduinoに関する情報提供をみて、Firmataプロトコルの仕様を読み、よく考えられているなと思いました。少なくともArduinoに関しては十分使えるものになっているようですね。
+（私の手元には他にもいろいろなマイコンボードがあるので移植せねば、と思っていますが）
+
+> Squeakでフィジカルコンピューティングも楽しいですよ。
+
+武蔵大の授業Moodleも拝見しました。実にチャレンジングな授業を展開されていますね。
+
+皆様のおかげで、様々なプロジェクトが進行中ということがよくわかりました。
+
+Arduinoを自律動作させるために、Arduinoのコンパイラを内蔵するモデルとインタプリタを用いる両方のアプローチがあることがわかりました。
+
+マイコン側の移植性を考えるとVMなのかなぁと思いつつ、さらに考察していきたいと思います。
+
+ありがとうございました。
+
+From tkamada ＠ acm.org  Mon Jul 25 18:07:05 2011
+From: tkamada ＠ acm.org (Toshiyuki Kamada)
+Date: Mon, 25 Jul 2011 18:07:05 +0900
+Subject: [Squeak-ja: 4606] Re:
+	Scratch + Arduinoいろいろ試してます
+In-Reply-To: <CADv7uFE-PTSGMhK4DM_Mzg5mKL+HZ7GH5p7x=LvGGJ06aOLpXg@mail.gmail.com>
+References: <CADog4RwAjHjTqabZTs=74uSZqC4F3E1f0-W+8AiWDx_ouOvabA@mail.gmail.com>
+ <CADv7uFGzxasOATAAzfuyUKC7em=rqfNgRcN7FzVPyJcNuzmD3Q@mail.gmail.com>
+ <CADog4RzQKFuOxW8OSX+1bsNnKs=qLU_XT3RaLb+xDPDaZBqSNw@mail.gmail.com>
+ <CADv7uFE-PTSGMhK4DM_Mzg5mKL+HZ7GH5p7x=LvGGJ06aOLpXg@mail.gmail.com>
+Message-ID: <CADog4RxOA-s2X6T3szH66fZjy22ugnLR2NEHcQWG9WXeCpuHZg@mail.gmail.com>
+
+鎌田です。
+
+> 雰囲気は、先日亡くなられた武蔵大学の加藤美治先生のSplishに近いですね。
+> http://www.splish.org/about/?lang=ja
+> 先生はこの名前はSqueakやScratchを意識したものだとおっしゃっていました。
+> どなたかこのプロジェクトを引き継がれる方がいらっしゃればよいのですが。
+
+ちゃんとArduino側にモニタを持ち、リモートデバッグまで考えられているところにセンスを感じました。
+
+ただ、やはりWiresの関数がベースになっている点や、Scratchの特徴である構造エディタ（をブロックで表現）とは異なるところが、僕の基本的な考えとは違うところです。
+
+しかし、印象深い取り組みのご紹介、ありがとうございます。
+

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2496] Re: Windows 版 Squeak での UDP パケット受信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202496%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=20050704182821.5BC21489%40ygu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002495.html">
+   <LINK REL="Next"  HREF="002497.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2496] Re: Windows 版 Squeak での UDP パケット受信について</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202496%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=20050704182821.5BC21489%40ygu.ac.jp"
+       TITLE="[Squeak-ja: 2496] Re: Windows 版 Squeak での UDP パケット受信について">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 7月  4日 (月) 19:33:05 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002495.html">[Squeak-ja: 2495] Windows 版 Squeak での UDP パケット受信について
+</A></li>
+        <LI>次の記事 <A HREF="002497.html">[Squeak-ja: 2497] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2496">[ 日付 ]</a>
+              <a href="thread.html#2496">[ スレッド ]</a>
+              <a href="subject.html#2496">[ 件名 ]</a>
+              <a href="author.html#2496">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。いつもお世話になっています。
+
+下記症状の件、私も遭遇して結局ＶＭを再構築したらうまくいきました。
+その内容は下記ＵＲＬを参考にしてください。
+<A HREF="http://blog.goo.ne.jp/hkawa90/e/815a494a459786f1833b73bd78456674">http://blog.goo.ne.jp/hkawa90/e/815a494a459786f1833b73bd78456674</A>
+
+でＶＭを変更せずにUDP受信する方法は今のところ見つかってません。
+回答になってませんが。。。。
+
+便乗質問ですが、わかる方がいれば教えてください。
+
+それでは。
+
+Eiichiro Ito wrote:
+
+&gt;<i>山梨学院大学の伊藤です。
+</I>&gt;<i>
+</I>&gt;<i>いつも質問ばかりで恐縮ですが、どうも自分で解決できないようなので質問
+</I>&gt;<i>させてください。
+</I>&gt;<i>
+</I>&gt;<i>現在、とあるアプリケーションでUDP通信を利用したいと思っております。要
+</I>&gt;<i>するにAIBO上のC++プログラムと、Squeak上のプログラムとで定期的にUDPパケッ
+</I>&gt;<i>トを送りあうことを考えています。
+</I>&gt;<i>
+</I>&gt;<i>そこでUDPを利用したプログラムを書いているのですが、どうもUnixとWindows 
+</I>&gt;<i>で挙動が異なるので困っています。Unix上での通信は基本的に想像どおりに動
+</I>&gt;<i>くのですが、Windowsではうまく受信ができないようなのです。
+</I>&gt;<i>
+</I>&gt;<i>下は動作を確認するためのサンプルです、仮にプログラムreceiverとします。
+</I>&gt;<i>（ど素人のためのど素人によるSqueak入門から拝借いたしました）
+</I>&gt;<i>
+</I>&gt;<i>receiver := Socket newUDP setPort: 54321.
+</I>&gt;<i>buff := ByteArray new: 100.
+</I>&gt;<i>delay := Delay forMilliseconds: 100.
+</I>&gt;<i>received := nil.
+</I>&gt;<i>Transcript show: 'Receiver start'; cr.
+</I>&gt;<i>[received := receiver receiveUDPDataInto: buff.
+</I>&gt;<i> received first isZero ] whileTrue: [ delay wait ].
+</I>&gt;<i>Transcript show: 'received(', buff, ')'; cr.
+</I>&gt;<i>Transcript show: 'Receiver end'; cr.
+</I>&gt;<i>
+</I>&gt;<i>これを一方のスクイークのWorkspaceで動かしておき、下のサンプル（sender）
+</I>&gt;<i>を別のスクイークで評価します。
+</I>&gt;<i>
+</I>&gt;<i>src := Socket newUDP.
+</I>&gt;<i>host := NetNameResolver addressFromString: '192.168.254.64'.
+</I>&gt;<i>src sendUDPData: 'Hello' toHost: host port: 54321.
+</I>&gt;<i>
+</I>&gt;<i>＃ipアドレスは仮のもので、receiverを起動しているPCに応じて適宜変えます。
+</I>&gt;<i>
+</I>&gt;<i>こうして、それぞれWindowsやUnix上で動かすと動作結果が変わります。
+</I>&gt;<i>
+</I>&gt;<i>receiver=Unix版     sender=Unix版    → OK
+</I>&gt;<i>receiver=Unix版     sender=Windows版 → OK
+</I>&gt;<i>receiver=Windows版  sender=Unix版    → NG
+</I>&gt;<i>receiver=Windows版  sender=Windows版 → NG
+</I>&gt;<i>
+</I>&gt;<i>結果から考えるにWindowsではUDPパケットの受信がうまくいかないようで、
+</I>&gt;<i>delay waitで止まったきりになります。受信メソッドとして
+</I>&gt;<i>receiveUDPDataInto:fromHost:port:を使った場合でも同様の結果となります。
+</I>&gt;<i>
+</I>&gt;<i>実際、WindowsでUDP通信を利用するにはどうすればよいのでしょうか？
+</I>&gt;<i>どなたかWindows版でUDPの通信に成功している方がいらっしゃれば、ご教示
+</I>&gt;<i>いただければと存じます。
+</I>&gt;<i>
+</I>&gt;<i>なお、環境は以下の通りです。
+</I>&gt;<i>
+</I>&gt;<i>[Image]
+</I>&gt;<i>  Squeak nihongo7
+</I>&gt;<i>
+</I>&gt;<i>[Unix VM: (squeak -version)]
+</I>&gt;<i>3.6.3 #1 2004年  4月 18日 日曜日 21:09:15 JST gcc 2.95.3
+</I>&gt;<i>Squeak3.6 of '6 October 2003' [latest update: #5429]
+</I>&gt;<i>Linux sk203 2.4.22-0vl2.8smp #1 SMP 2003年 12月 3日 水曜日 00:54:08 JST i686
+</I>&gt;<i>default plugin location: /usr/lib/squeak/3.6.3/*.so
+</I>&gt;<i>
+</I>&gt;<i>[Windows VM:(About Squeak)]
+</I>&gt;<i>Squeak 3.7.1 (release) from Sep 23 2004
+</I>&gt;<i>Compiler: gcc 2.95.2 19991024 (release)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.8/37 - Release Date: 2005/07/01
+
+__________________________________
+Save the earth
+<A HREF="http://pr.mail.yahoo.co.jp/ondanka/">http://pr.mail.yahoo.co.jp/ondanka/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002495.html">[Squeak-ja: 2495] Windows 版 Squeak での UDP パケット受信について
+</A></li>
+	<LI>次の記事 <A HREF="002497.html">[Squeak-ja: 2497] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2496">[ 日付 ]</a>
+              <a href="thread.html#2496">[ スレッド ]</a>
+              <a href="subject.html#2496">[ 件名 ]</a>
+              <a href="author.html#2496">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7187] Re: &quot;Rectangle class&gt;&gt;new&quot;について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207187%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6ICJSZWN0YW5nbGUgY2xhc3M%2BPm5ldyI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4516D798.9080407%40ps.inforyoma.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007186.html">
+   <LINK REL="Next"  HREF="007188.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7187] Re: &quot;Rectangle class&gt;&gt;new&quot;について</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207187%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6ICJSZWN0YW5nbGUgY2xhc3M%2BPm5ldyI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4516D798.9080407%40ps.inforyoma.or.jp"
+       TITLE="[SML 7187] Re: &quot;Rectangle class&gt;&gt;new&quot;について">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 9月 25日 (月) 08:06:46 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007186.html">[SML 7186] &quot;Rectangle class&gt;&gt;new&quot;について
+</A></li>
+        <LI>次の記事 <A HREF="007188.html">[SML 7188] Re: &quot;Rectangle class&gt;&gt;new&quot;について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7187">[ 日付 ]</a>
+              <a href="thread.html#7187">[ スレッド ]</a>
+              <a href="subject.html#7187">[ 件名 ]</a>
+              <a href="author.html#7187">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木です。
+
+&gt;<i> 疑問点を下記に記します。
+</I>&gt;<i> -----
+</I>&gt;<i> Rectangle class&gt;&gt;newは、
+</I>&gt;<i> 
+</I>&gt;<i> new
+</I>&gt;<i> 	&quot;Override for backwards compatability&quot;
+</I>&gt;<i> 
+</I>&gt;<i> 	^self basicNew
+</I>&gt;<i> 
+</I>&gt;<i> と定義されています。
+</I>&gt;<i> 
+</I>&gt;<i> このnewは、Rectangle class&gt;&gt;origin:extent:で使われていました。
+</I>&gt;<i> basicNewを使わずに、newをオーバーライドして使用するのは、過去
+</I>&gt;<i> の資産との互換性を保つためと考えてよろしいのでしょうか？
+</I>&gt;<i> -----
+</I>
+はい、それでいいと思います。
+
+昔、Rectangle のスーパクラスは Object でした。そして、new と
+いうメッセージは、Rectangle には定義されていませんでした。し
+たがって、Rectangle に new を送ると、Behavior の new が動いて
+いました。それは basicNew と同義になります。
+
+今、Rectangle のスーパクラスは Geometric です。この Geometric
+には new が定義されています。エラーを起こすように書かれていま
+す。new で幾何的なものを生成してはなりませんぞ、という旨です。
+
+昔のプログラムコードの中には、Rectangle に new を送ることがで
+きると思って、書かれているものがあります。Geometric の存在を
+知らない時代のプログラマが書いたコードです。それらを吸収する
+目的があるのでしょう。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007186.html">[SML 7186] &quot;Rectangle class&gt;&gt;new&quot;について
+</A></li>
+	<LI>次の記事 <A HREF="007188.html">[SML 7188] Re: &quot;Rectangle class&gt;&gt;new&quot;について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7187">[ 日付 ]</a>
+              <a href="thread.html#7187">[ スレッド ]</a>
+              <a href="subject.html#7187">[ 件名 ]</a>
+              <a href="author.html#7187">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

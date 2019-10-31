@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7918] Re: Squeak/Pharoの低レベルGUIのしくみ?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207918%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCJE5EYyVsJVklaxsoQkdVSQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4kNyQvJF8bKEI/%3F%3D&In-Reply-To=%3Cumxjs6mhy.wl%25yoshiki%40vpri.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007916.html">
+   <LINK REL="Next"  HREF="007917.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7918] Re: Squeak/Pharoの低レベルGUIのしくみ?</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207918%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCJE5EYyVsJVklaxsoQkdVSQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4kNyQvJF8bKEI/%3F%3D&In-Reply-To=%3Cumxjs6mhy.wl%25yoshiki%40vpri.org%3E"
+       TITLE="[SML 7918] Re: Squeak/Pharoの低レベルGUIのしくみ?">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2011年 4月 15日 (金) 15:45:45 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007916.html">[SML 7916] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+        <LI>次の記事 <A HREF="007917.html">[SML 7917] Squeak 4.2の日本語版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7918">[ 日付 ]</a>
+              <a href="thread.html#7918">[ スレッド ]</a>
+              <a href="subject.html#7918">[ 件名 ]</a>
+              <a href="author.html#7918">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Fri, 15 Apr 2011 09:25:53 +0900,
+Hiroki Horiuchi wrote:
+&gt;<i> 
+</I>&gt;<i> おはようございます。
+</I>&gt;<i> &gt; 鍵はioShowDisplay()はSmalltalk側の
+</I>&gt;<i> &gt; #primShowRectLeft:right:top:bottom:(および
+</I>&gt;<i> &gt; #primRetryShowRectLeft:right:top:bottom:)
+</I>&gt;<i> &gt;   
+</I>&gt;<i> 出力については、これが知りたかったことのすべてです。
+</I>
+  あ、それはなによりです。
+
+&gt;<i> この無限ループが、Project&gt;&gt;spawnNewProcess内の
+</I>&gt;<i> [ World doOneCycle. Processor yield. false ] whileFalse: [ ]
+</I>&gt;<i> なのですね。
+</I>&gt;<i> 
+</I>&gt;<i> よくわかりました。ありがとうございます。
+</I>
+  あ、はい。ループをまわすところはdoOneCycleの外側です(名前のとおり)。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007916.html">[SML 7916] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+	<LI>次の記事 <A HREF="007917.html">[SML 7917] Squeak 4.2の日本語版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7918">[ 日付 ]</a>
+              <a href="thread.html#7918">[ スレッド ]</a>
+              <a href="subject.html#7918">[ 件名 ]</a>
+              <a href="author.html#7918">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

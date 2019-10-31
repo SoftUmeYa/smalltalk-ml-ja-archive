@@ -1,0 +1,153 @@
+From miyasaka ＠ iris.dti.ne.jp  Sat Jun  2 23:58:32 2012
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Sat, 2 Jun 2012 23:58:32 +0900
+Subject: [Squeak-ja: 4648] Re:
+	Etoys5 日本語版（MTS版）について
+In-Reply-To: <CANPkiycEdxpSkFpUnWurnnBD__C1Hg9vGTAkFnubtLv3oZWARA@mail.gmail.com>
+References: <mailman.1.1338260401.29604.squeak-ja@smalltalk.jp>
+ <BAY165-W15C04BFF6536FB73B3A586E2050@phx.gbl>
+ <CANPkiycEdxpSkFpUnWurnnBD__C1Hg9vGTAkFnubtLv3oZWARA@mail.gmail.com>
+Message-ID: <CANPkiycBZx2yt1Dz6=+ep5fyXssJ95DiSsQqXN551Uct4ke_LA@mail.gmail.com>
+
+みなさま
+
+標記の件、本日より当方のWebサイトにて公開しております。
+http://etoys.jp/
+
+今日も小学校での講座があり、いくつか修正したいところが見つかったのですが、改めて修正向上などしていきたいと思います。
+お気づきの点などあれば、なんなりとご連絡いただければ幸いです。
+
+なお、Dr.Geo関連の日本語訳については、神戸大学の高橋先生からpoファイルをいただきました。
+高橋先生、ありがとうございました。
+
+公開にあたり、ご助言やアドバイスをいただいた皆様に、この場をお借りして御礼申し上げます。
+今後ともよろしくお願いいたします。
+
+宮坂
+
+
+
+
+
+2012年5月30日 2:02 Toshio Miyasaka <miyasaka ＠ iris.dti.ne.jp>:
+> 蜂須賀さん、Korakuriderさん、市川さん
+>
+> 返信ありがとうございました。
+> 今週中に、日本語訳をちょっとだけ直してから正式公開とさせていただきますね。
+>
+> Korakuriderさん、バグトラッカーへの登録をありがとうございました。Etoysの進化は開発者の皆様の苦労と熱意のたまものですね。ぜひ海外の開発者の皆様にもお礼をお伝えください。いつもありがとうございます。
+>
+> 蜂須賀さん、市川さん、フリーズしてしまうような致命的なバグは極力なんとかしたいですね。私のほうでも旧バージョンでは時々フリーズ等のトラブルがありましたが、新バージョンではどうなのかこれから活用していきたいと思います。また気になる点などあれば、情報交換お願いします。
+>
+> では、今後ともどうかよろしくお願いします！
+>
+> 宮坂
+>
+>
+>
+>
+>
+> 2012年5月29日 23:30 itikawa aiko <pikateu_14 ＠ hotmail.com>:
+>> お久しぶりです。市川愛子です。
+>> EToys5.0版ドラフト版の発表、とてもうれしいです。ありがとうございます。
+>>
+>> 現在旧バージョン？を授業で使っていますが、フリーズについていくつか気がつくことがありました。
+>> 【耳】のハロを出して回転させてフリーズのような感じで、
+>> 開いた状態の部品フラップをハロで消去してしまったり、スクリプタの時計ボタンなど一部を消去してしまって、
+>> フリーズしたり、プロジェクトに保存時にエラーが起きてしまうことがあります。
+>> タイルの一部をハロで消去してしまう子もいます。
+>>
+>> スクリプタやメニュー、ビューワもハロが出てしまうので、訳が分からないままいじってしまって、エラーがおきるようです。
+>> （そういう子は、たいていビューワがフラップから分離して画面上に散らばっています）
+>>
+>> 私自身１００％再 ?現できていないので、ちゃんとした原因が分からないのですが、
+>> 部品や自分で描いた絵以外にも同じようにハロが出て来てしまうので、それをいじっているのではないかと思います。
+>>
+>> ちなみにそういったエラーは、EToysを終了しなくても、別のプロジェクトを新規で作れば、そちらでは全部なおっています。
+>> （ちゃんとフラップなども元通りになっていて、問題なくプロジェクトも保存できる）
+>>
+>> 長文失礼しました。
+>>
+>> 市川愛子
+
+From korakurider ＠ gmail.com  Thu Jun  7 15:31:16 2012
+From: korakurider ＠ gmail.com (Korakurider)
+Date: Thu, 7 Jun 2012 15:31:16 +0900
+Subject: [Squeak-ja: 4649] Re:
+	Etoys5 日本語版（MTS版）について
+In-Reply-To: <CANPkiycEdxpSkFpUnWurnnBD__C1Hg9vGTAkFnubtLv3oZWARA@mail.gmail.com>
+References: <mailman.1.1338260401.29604.squeak-ja@smalltalk.jp>
+ <BAY165-W15C04BFF6536FB73B3A586E2050@phx.gbl>
+ <CANPkiycEdxpSkFpUnWurnnBD__C1Hg9vGTAkFnubtLv3oZWARA@mail.gmail.com>
+Message-ID: <CANKF8uD9XQ8a+m1TCj2=J1xiUchNnb4eHQ20S7_Fq3Jdg6ox7Q@mail.gmail.com>
+
+Korakuriderです。
+
+ビューワを回転しようとして固まる件（http://tracker.squeakland.org/browse/SQ-1096）については、
+Scott Wallaceさんがバグトラッカー上でパッチを提案してくださっています。
+本家の方は次のマイナーリリースで反映されると思いますが、
+必要でしたら、一度MTS版でも試してみていただけますでしょうか？
+
+From miyasaka ＠ iris.dti.ne.jp  Fri Jun  8 02:48:55 2012
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Fri, 8 Jun 2012 02:48:55 +0900
+Subject: [Squeak-ja: 4650] Re:
+	Etoys5 日本語版（MTS版）について
+In-Reply-To: <CANKF8uD9XQ8a+m1TCj2=J1xiUchNnb4eHQ20S7_Fq3Jdg6ox7Q@mail.gmail.com>
+References: <mailman.1.1338260401.29604.squeak-ja@smalltalk.jp>
+ <BAY165-W15C04BFF6536FB73B3A586E2050@phx.gbl>
+ <CANPkiycEdxpSkFpUnWurnnBD__C1Hg9vGTAkFnubtLv3oZWARA@mail.gmail.com>
+ <CANKF8uD9XQ8a+m1TCj2=J1xiUchNnb4eHQ20S7_Fq3Jdg6ox7Q@mail.gmail.com>
+Message-ID: <CANPkiyd1MELg7wPj=aEeJh0y_fW8ZhX1RRML9WX9+Vg-np56Cg@mail.gmail.com>
+
+Korakuriderさん
+
+教えていただいたパッチをためしてみたところ、ビューワの耳の回転のハロが表示されなくなりました。
+もう少し動作確認をしてみて、インストーラーに組み込んでみます。
+改めてご報告しますので、少々お待ちいただけますでしょうか。
+いつもありがとうございます！！
+
+宮坂
+
+
+
+
+
+2012年6月7日 15:31 Korakurider <korakurider ＠ gmail.com>:
+> Korakuriderです。
+>
+> ビューワを回転しようとして固まる件（http://tracker.squeakland.org/browse/SQ-1096）については、
+> Scott Wallaceさんがバグトラッカー上でパッチを提案してくださっています。
+> 本家の方は次のマイナーリリースで反映されると思いますが、
+> 必要でしたら、一度MTS版でも試してみていただけますでしょうか？
+
+From ume ＠ softumeya.com  Fri Jun  8 22:58:03 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 8 Jun 2012 22:58:03 +0900
+Subject: [Squeak-ja: 4651]
+	第44回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdQR2A+R2EJZYHzxpxZer3BkNcsdVYSyraPb6-LGeHmVgw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2012/6/17(日) 14:30-17:00 (2時間30分)
+場所: ちよだプラットフォームスクウェア会議室504,505
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai44kaismalltalkbenkyoukai
+
+普段と異なり、日曜日に開催します。
+
+テーマですが、IPA未踏ソフトウェア創造事業でAlan Kay プロジェクトマネージャに採択され関わった人たちの同窓会です。
+プロジェクト終了後も皆さんいろいろな分野で活躍されており、その最近の活動を明らかにするというものです。
+
+有り体に言えばSmalltalkかそれに類するものを使ったメガデモ大会のようなものです。
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

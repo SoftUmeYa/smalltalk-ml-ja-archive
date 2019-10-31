@@ -1,0 +1,290 @@
+From kuwatani ＠ akademia.co.jp  Thu Jun  2 21:01:33 2005
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7092] サーバ停止のお知らせ
+Message-ID: <20050602210133CqS#Jq@akademia.co.jp>
+
+SMLのメンバーの皆様
+
+サーバの管理をしています桑谷です．
+
+このたびメーリングリストを運用している建物の電気工事のため下記の日程で
+サーバを停止します．あしからず御了承ください．
+
+                                    記
+
+            日時：6月3日(金) 21:00 〜 6月4日(土) 12:00
+
+                                                              以上
+
+________________________________________
+桑谷剛史
+kuwatani@akademia.co.jp
+
+
+
+From nisinaka ＠ sra.co.jp  Fri Jun 10 21:52:49 2005
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7093] [ANNOUNCE] Jun for Java (Jun509)
+In-Reply-To: <20050325141720.C11A.NISINAKA@sra.co.jp>
+References: <20050119004454.F2D6.NISINAKA@sra.co.jp>
+	<20050325141720.C11A.NISINAKA@sra.co.jp>
+Message-ID: <20050610215112.5FD3.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン509を公開します。
+
+  今回はメインテナンスリリースで、それほど変更はありません。
+
+  バージョン500からの主な変更点は、以下の通りです。
+
+    * JunTextEditor はテキストを編集するためのクラスで、バリュー
+      モデルとして振る舞います。また、JunTextEditorDialog は 
+      JunTextEditor を使ってユーザにテキスト編集を促すダイアログ
+      を表示します。 
+
+    * StPL7.1 で修正された新しいメニューフレームワークに対応しま
+      した。 
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From kuwatani ＠ akademia.co.jp  Fri Jun 17 13:11:00 2005
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7094] サーバ停止のお知らせ
+Message-ID: <20050617131100%1wciT@akademia.co.jp>
+
+SMLのメンバーの皆様
+
+サーバの管理をしています桑谷です．
+
+このたびメーリングリストを運用している建物の電気工事のため下記の日程で
+サーバを停止します．あしからず御了承ください．
+
+                                    記
+
+            日時：6月17日(金) 21:00 〜 6月18日(土) 12:00
+
+                                                              以上
+
+________________________________________
+桑谷剛史
+kuwatani@akademia.co.jp
+
+
+
+From aoki ＠ sra.co.jp  Sun Jun 19 22:57:57 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7095] たけのこ for Smalltalk
+Message-ID: <42B579E5.4040908@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+新しい「たけのこ for Smalltalk (Takenoko636)」をアップロード
+しました。「じゅん for Smalltalk (Jun636)」に相当します。
+
+http://www.sra.co.jp/people/aoki/Takenoko/
+
+「GNU General Public License」ではなく「Modified BSD License」
+ですから、「たけのこ for Smalltalk」を用いて作成したプログラ
+ムのソースコードまでをも開示する責務を伴いません。
+「たけのこ for Smalltalk」は「じゅん for Smalltalk」から以下
+のような機能を差し引いたサブセットです。
+
+　- テキスト差分およびテキストファイル差分
+　- ソースコードチャンク以下すべて
+　- ソースコードブラウザ以下すべて
+　- エンサイクロペディア
+　- クラス・メソッド・コードのレビュー
+　- メッセージのプロフィール（スパイ）
+　- バージョンデータベースおよび関連ツール
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Mon Jun 20 13:48:42 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7096] Jun637 for Smalltalk
+Message-ID: <1E923008-5729-41A4-ABB7-A048CCB2F233@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun637」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆グラフ（JunGraph）のインスタンスをコピーする際に、無限ルー
+　プに入ることがありました。表明と確証の取り間違いです。
+　（恥ずかしいこと、この上無し。）
+
+◆ファイルナビゲータとマルチメディアナビゲータを標準装備をし
+　ました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Jun 22 07:05:16 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7097] Jun638 for Smalltalk
+Message-ID: <708C256A-E84B-4FC7-B1C0-E68E1A28B4A4@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun638」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ファイルナビゲータがベースのファイルリクエスタの初期ファイ
+　ル名設定にバグが潜んでいました。修正しました。
+
+◆バージョン管理ツール群のファイルダイアログにおいて、ファイ
+　ルナビゲータをベースとするように書き換えを行いました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Mon Jun 27 00:01:01 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7098] Jun639 for Smalltalk
+Message-ID: <E4C9AFEB-0181-4BEE-A136-8E7D4E9FAC20@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun639」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ファイルモデルに、ダイビングのレベルを指定して、階層ファイ
+　ルシステムを再帰的にたどるメソッドを追加しました。イメージ
+　カタログ・ムービーカタログ・ビジュアルカタログにおいても、
+　この新しいメソッドを用いるように書き換えました。
+
+◆文字列ユーティリティに、文字列の前後の区切り文字を取り去る
+　メソッドを新設しました。前だけ、後ろだけ、前も後ろも、とい
+　うように実装してあります。
+
+◆文字列ユーティリティを用いて、一行もしくは一文字を読み出す
+　際に Jun626 以降、行末透過属性を設定していましたが、その方
+　式を改め、ストリームの行末変換属性に一切手を入れずに、当該
+　のことを行う方式を採用しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Jun 29 06:18:16 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7099] Jun640 for Smalltalk
+Message-ID: <4672CF5D-515F-4C08-8FCE-3C71C12070A8@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun640」】をアップロードしまし 
+た。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆グラフィックモデルに未定義クラスを参照しているところがあり
+　ました。正しい参照に改めました。
+
+◆イメージカタログの対象を画像ファイルだけに、また、ムービー
+　カタログの対象を映像ファイルだけに限定しました。
+
+◆ビジュアルカタログにおいて、対象ファイル群の中に拡張子は異
+　なるのだけれど、ベース名が同じものがあると、正しく動作して
+　いませんでした。修正を施しました。
+
+◆階層ファイルシステムの中を再帰的にたどるダイビングプログラ
+　ムにおいて、冗長な部分を集約しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+

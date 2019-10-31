@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4327] Re: ScratchからMYUロボを制御
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204327%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2gbJEIkKyRpGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FTVlVGyRCJW0lXCRyQCk4ZhsoQg%3D%3D%3F%3D&In-Reply-To=20090904.180711.112586704.moriat%40obirin.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004326.html">
+   <LINK REL="Next"  HREF="004330.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4327] Re: ScratchからMYUロボを制御</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204327%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2gbJEIkKyRpGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FTVlVGyRCJW0lXCRyQCk4ZhsoQg%3D%3D%3F%3D&In-Reply-To=20090904.180711.112586704.moriat%40obirin.ac.jp"
+       TITLE="[Squeak-ja: 4327] Re: ScratchからMYUロボを制御">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2009年 9月  4日 (金) 20:01:20 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004326.html">[Squeak-ja: 4326] Re: ScratchからMYUロボを制御
+</A></li>
+        <LI>次の記事 <A HREF="004330.html">[Squeak-ja: 4330] Re: ScratchからMYUロボを制御
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4327">[ 日付 ]</a>
+              <a href="thread.html#4327">[ スレッド ]</a>
+              <a href="subject.html#4327">[ 件名 ]</a>
+              <a href="author.html#4327">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+お返事ありがとうございます。
+
+多点展開する観測デバイスというと、中央農業総合研究センターのフィールドサーバが思い浮かびます。
+<A HREF="http://model.job.affrc.go.jp/FieldServer/">http://model.job.affrc.go.jp/FieldServer/</A>
+以前に私の会社でSqueak Etoys用のインタフェースを業務として開発したのですが、これはオープンになっていません。
+<A HREF="https://www.blogger.com/comment.g?blogID=1928755558855297554&amp;postID=4169154204940888835">https://www.blogger.com/comment.g?blogID=1928755558855297554&amp;postID=4169154204940888835</A>
+<A HREF="http://oku.edu.mie-u.ac.jp/~okumura/blog/node/1525">http://oku.edu.mie-u.ac.jp/~okumura/blog/node/1525</A>
+先に書いた世界聴診器も応用例として考えていますが、今のところ実践例はありません。
+<A HREF="http://swikis.ddo.jp/WorldStethoscope/2">http://swikis.ddo.jp/WorldStethoscope/2</A>
+自律しませんが、Scratch用のPicoBoardでも似たようなことはできます。
+<A HREF="http://www.mdstorm.com/picoboard/Picoboard.html">http://www.mdstorm.com/picoboard/Picoboard.html</A>
+
+ロボット教育にSqueak(not
+Etoys)を使った例としては、山梨学院大学の伊藤先生がAIBOカップ用に作られたDefartがあります。これは状態遷移図ベースです。
+<A HREF="http://www.itolab.com/defart">http://www.itolab.com/defart</A>
+
+初等教育を目的としたものとしては、これまた手前味噌で恐縮ですが、私の作ったCロボとRobovie-MS用のEtoysインタフェースがあります。
+<A HREF="http://swikis.ddo.jp/WorldStethoscope/30">http://swikis.ddo.jp/WorldStethoscope/30</A>
+<A HREF="http://swikis.ddo.jp/WorldStethoscope/37">http://swikis.ddo.jp/WorldStethoscope/37</A>
+
+CロボとEtoysを使って自律動作を可能にしたものとしては、岐阜高専の出口研究室のものがあります。(最初の頃、ちょっとだけお手伝いしました。)
+<A HREF="http://www.gifu-nct.ac.jp/elec/deguchi/sotsuron/wakayama/wakayama.html">http://www.gifu-nct.ac.jp/elec/deguchi/sotsuron/wakayama/wakayama.html</A>
+
+ただ、Cロボを作ったESP企画の江崎さんのそもそものお考えは「小学生にもCを教えるべき」というもので、それはひとつの見識と思います。
+<A HREF="http://www.esp.co.jp/panf/CRBKT.pdf">http://www.esp.co.jp/panf/CRBKT.pdf</A>
+
+さて前置きが長くなりましたが、一般的にロボットのプログラミングにビジュアルプログラミング言語(VPL)を使う例としては、お書きになっているLEGOのMindStormsのRoboLab(LabViewベース)やPico
+CricketのPICO BLOCKSが有名です。
+ただし、高価で中身をいじりにくいのもおっしゃるとおりです。ヴィストンのBeautoシリーズは比較的安価でBeauto
+BuilderというVPLが用意されています。Beauto Chaserのハードやプロトコルは仕様が公開されていますが、Beauto
+Builderはクローズです。
+
+そう考えると、確かにArduino用のVPL、すなわちスケッチをタイルやブロックで表現することには一定のニーズがあるように思います。その際、Squeak
+EtoysやScratchをベースにするメリットとしては、すでに用意されたGUI部品やフレームワークを流用できることでしょう。デメリットとしては、しばしば特殊や難解といわれるSmalltalkの習得が必要なことでしょうか(個人的には超簡単と思うのですが)。
+注意点としては、EtoysやScratchのスクリプト(これらはSmalltalkとも異なります)は機器制御との親和性が必ずしも高くないことです。どちらも複数のオブジェクトによる並列動作が前提でリアルタイム性も保証されていません。たぶん、EtoysやScratchのスクリプトをそのままArduino言語に落とし込もうとすると相当の齟齬が生じます。そのため、表面的には似ているけれども異なる言語を再構築する必要が出てきます。つまり、今まで子供たちがEtoysなりScratchなりで絵本やゲームを作ってきたスクリプトの考え方をそのままロボットに適用するのは少し難しいかもしれません。私がロボットを使うときに自律ではなく限定された遠隔操作を使っている理由もこのあたりにあります。WeDoもそうですね。
+とすれば、すでに存在しているPduinoなどのVPLに比べてEtoysやScratchベースのものにどのようなアドバンテージがあるのか、仮にPduinoが子供にとって使いにくいとすれば、それを改良するアプローチもあるのではないかということも検討すべきかもしれません。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2009年9月4日18:07 Atsushi Mori &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">moriat ＠ obirin.ac.jp</A>&gt;:
+&gt;<i>  阿部さん、皆様
+</I>&gt;<i>
+</I>&gt;<i>  早速、ご丁寧なメールをありがとうございます。桜美林大学の森
+</I>&gt;<i>  です。とても参考になります。
+</I>&gt;<i> # 前任校が学芸大学でしたので、もしかしたら、2-hop ぐらいの人
+</I>&gt;<i> # 脈で届くかもしれませんね。
+</I>&gt;<i>
+</I>&gt;<i>  さて、「何をしたいか」というもっとも重要な点を書き忘れてい
+</I>&gt;<i>  ました。特にMLの新入りですので、共通認識が欠けています。申
+</I>&gt;<i>  し訳ありません。
+</I>&gt;<i>
+</I>&gt;<i>  一つには多点展開する観測デバイスとしてマイコンを利用したい、
+</I>&gt;<i>  というのもあります。(私は気象が専門です。)
+</I>&gt;<i>
+</I>&gt;<i>  しかし、大切なのは、もう一つの点です。それは、同じノウハウ
+</I>&gt;<i>  を活かして、教材としてのロボットを安価に作りたいということ
+</I>&gt;<i>  です。ロボット教材は観察・仮説・実験検証といったプロセスを
+</I>&gt;<i>  たどるには、丁度いい素材です。また、欲張りな私は、ロボット
+</I>&gt;<i>  教材でプログラミングの技術も身につけてほしいと考えています。
+</I>&gt;<i>  どちらも、合理的な思考能力を高めるために、適切な学習項目で
+</I>&gt;<i>  あり、これからの教育の中で重要となるものだと考えています。
+</I>&gt;<i>  (私個人の宗教のようなものです。)
+</I>&gt;<i>
+</I>&gt;<i>  そして、どうせロボットを作るのであれば、ロボカップジュニア
+</I>&gt;<i>  程度で十分に競えるレベルのもの( だから Gainer ではなく、
+</I>&gt;<i>  Arduino )、子供でも大人でも興味を持てるものの方がよいと考え
+</I>&gt;<i>  ています。特に、子供の場合には、成長した後も、身につけたこ
+</I>&gt;<i>  とが実際に活きるような素材であればいいと思っています。LEGO
+</I>&gt;<i>  Mindstorms (特にその教育向けセット) は、これらの点で非常に
+</I>&gt;<i>  優れた教材だと思います。しかし、デバイスの追加や、何よりも
+</I>&gt;<i>  価格が大きな壁です。
+</I>&gt;<i>
+</I>&gt;<i>  Arduino は、安価で構成することができ、華やかな実践例が沢山
+</I>&gt;<i>  あり、大人が気楽に楽しめるのはいいと思います。Arduino に欠
+</I>&gt;<i>  けているのは子供でもできるプログラミングインターフェースで
+</I>&gt;<i>  す。そんなことを考えて 7月にこの ML に入りました。MYU の記
+</I>&gt;<i>  事を拝見して、もしかしたら、同じようなことを考えられていた
+</I>&gt;<i>  のかな、と思うと同時に、既存のロボット教材をつかうのもあり
+</I>&gt;<i>  かな、とも思った次第です。
+</I>&gt;<i>
+</I>&gt;<i>  つらつら書きましたが、自分でも「これがやりたい」というもの
+</I>&gt;<i>  がはっきりしていないことを感じながら書いています。
+</I>&gt;<i>
+</I>&gt;<i>  私はとても厚かましいので、「他の人がどう思うかとかあまり関
+</I>&gt;<i>  係がない」とは思いません。それは、いろいろな意味で私一人の
+</I>&gt;<i>  力ではとても実現しないだろうからです。厚かましい私は、人の
+</I>&gt;<i>  力をお借りしてやっていきたいと考えています。そもそも他の人
+</I>&gt;<i>  の開発して下さった Scratch という素材を利用する訳ですし、い
+</I>&gt;<i>  ろいろな方の書かれたドキュメントも読むことになると思います。
+</I>&gt;<i>  より多くの方が興味を持ってくだされば、より多くのアドバイス
+</I>&gt;<i>  もいただけると(本当に厚かましく)考えています。そこで、「こっ
+</I>&gt;<i>  ちの方がずっといいよ」というものがあって、そちらに人が集ま
+</I>&gt;<i>  るのであれば、そうしたいと考えています。
+</I>&gt;<i>
+</I>&gt;<i>  逆に Scratch から見たロボット教材という立場もあるような気
+</I>&gt;<i>  もしますが、こちらについては私はコメントできるほど Scratch
+</I>&gt;<i>  を使っていませんので、また別の機会があればと思っています。
+</I>&gt;<i>
+</I>&gt;<i>  私の考えはこんなところです。
+</I>&gt;<i>  長文失礼致しました。
+</I>&gt;<i>
+</I>&gt;<i>  今後もどうぞよろしくお願いいたします。
+</I>&gt;<i>
+</I>&gt;<i> # MYU は近日中に購入して試したいと思い、楽しみにしています。
+</I>&gt;<i> # ちなみに、自作 Arduino では、RxD と TxD をひっくり返さずに
+</I>&gt;<i> # つないでいて、数日悩みつづけてしまいました。私の電子工作の
+</I>&gt;<i> # レベルはその程度です。
+</I>&gt;<i>
+</I>&gt;<i> From: Kazuhiro ABE &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee.abe ＠ nifty.ne.jp</A>&gt; さん
+</I>&gt;<i> Subject: [Squeak-ja: 4325] Re: ScratchからMYUロボを制御について
+</I>&gt;<i> Date: Fri, 4 Sep 2009 15:37:47 +0900
+</I>&gt;<i>
+</I>&gt;<i> *&gt; 森さん、こんにちは、阿部です。
+</I>&gt;<i> *&gt; 検索して、Wikiを拝見しました。レポート課題のコメントがとても興味深かったです。
+</I>&gt;<i> *&gt;
+</I>&gt;<i> *&gt; そうですね。基本的な私の考えは自分が楽しいかどうかです。それを満たした上で、もし皆さんの役に立つことがあれば、やってみるかなくらいののりです。
+</I>&gt;<i> *&gt;
+</I>&gt;<i> *&gt; 今回のMYUロボについては、寶迫さんから小学校の授業で使えるロボット教材が欲しいというお話があり、その際にLinux上のScratchから使えることという条件があったので、いくつかある選択肢の中から、コスト、技術情報、実践事例の有無、入手性、組み立ての容易さ、たまたま手元にキットがあったことなどを勘案してMYUロボを選びました。
+</I>&gt;<i> *&gt; もちろんArduinoでも可能だったと思いますが、ロボット教材としてパッケージになっていて、国内で安価に入手できるところを見つけられませんでした。
+</I>&gt;<i> *&gt; これはArduinoが良い悪いという話ではなく、ニーズに合致しているかどうかの問題です。仮にターゲットが大学生で、自由度が高いメディアアート系の作品の素材を求めていて、自律性が必須であればArduinoを選んだかもしれません。場合によってはGainerかもしれないですし、それは状況次第です。もし良いものがなければ一から作るかもしれません(私の場合、世界聴診器がそうでした)。
+</I>&gt;<i> *&gt; つまり、最初からAVRとかPICとかオープンソースとかプロプライエタリとかがあるのではなくて、それは結果でしょうということです。
+</I>&gt;<i> *&gt; 箇条書きされていた質問に関して言えば、すべて「いいえ」です。森さんが「オー プンソースハードウエア上で、やはりオープンでしっかりした
+</I>&gt;<i> *&gt; Scratch のような環境でプログラムしたものを動かせたらいい」と思われているのであれば、それを止めるものはなにもありません。他の人がどう思うかとかあまり関係ないと思うのですが、いかがでしょう。もし疑問があるとすれば、そのようにして作られた環境の上で何をされたいのか、くらいでしょうか。
+</I>&gt;<i> *&gt;
+</I>&gt;<i> *&gt;  //abee
+</I>&gt;<i> *&gt; --
+</I>&gt;<i> *&gt; 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i> *&gt;
+</I>&gt;<i> *&gt; 2009年9月4日14:20 に Atsushi Mori&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">moriat ＠ obirin.ac.jp</A>&gt; さんは書きました:
+</I>&gt;<i> *&gt; &gt;  はじめまして。森(@桜美林大学)といいます。
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  阿部さんの試みや、韓国のDonghee Parkさんの試みを、非常に興
+</I>&gt;<i> *&gt; &gt;  味深く読ませていただいています。
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  私は Smalltalk も電子工作も素人ですので、以下、とんちんか
+</I>&gt;<i> *&gt; &gt;  んなことを書くかもしれませんが、その点御了解いただき、また、
+</I>&gt;<i> *&gt; &gt;  この ML の皆さんのご意見を伺うことができたらと考えておりま
+</I>&gt;<i> *&gt; &gt;  す。どうぞよろしくお願いいたします。
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  私自身は、Arduino (<A HREF="http://www.arduino.cc/&#12394;&#12393;">http://www.arduino.cc/など</A>) のような、オー
+</I>&gt;<i> *&gt; &gt;  プンソースハードウエア上で、やはりオープンでしっかりした
+</I>&gt;<i> *&gt; &gt;  Scratch のような環境でプログラムしたものを動かせたらいいと
+</I>&gt;<i> *&gt; &gt;  考えています。(もっとも CPU はオープンではないのですが。)
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  今回の MYU 関連はとてもいいとは思いますし、ハードウエアが簡
+</I>&gt;<i> *&gt; &gt;  単なために、事実上自分で改作することは容易だとは思います。
+</I>&gt;<i> *&gt; &gt;  また、主として中学校をターゲットとしたロボット工作用の教材
+</I>&gt;<i> *&gt; &gt;  を開発している私企業の方々には、心底、敬意を抱いています。
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  しかし、一つの企業が作っているために他の企業が参画しにくい
+</I>&gt;<i> *&gt; &gt;  環境があるとすると残念ですし、ユーザーが自由に改作すること
+</I>&gt;<i> *&gt; &gt;  ができることで、子供から大人までシームレスに利用できる題材
+</I>&gt;<i> *&gt; &gt;  があってもいいように思います。そのためには、オープンである
+</I>&gt;<i> *&gt; &gt;  と明言されているプラットホームを利用する方がいいように思い
+</I>&gt;<i> *&gt; &gt;  ます。
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  そこで、個人的には、Scratch で組んで Arduino に組み込んで自
+</I>&gt;<i> *&gt; &gt;  律的に動かすことができるような環境ができたらいいと思ってい
+</I>&gt;<i> *&gt; &gt;  ます。個人的には arduino については、ようやく自作ブレッドボー
+</I>&gt;<i> *&gt; &gt;  ド版が動き出したところです。Scratch や Smalltalk については、
+</I>&gt;<i> *&gt; &gt;  この ML や書籍を通じて、本当にこれから勉強するところです。
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  もしも、
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  ・AVR(Arduino) ではなく、やっぱり PIC でしょう
+</I>&gt;<i> *&gt; &gt;  ・Scratch を改変するのは大変なので、とても無理でしょう
+</I>&gt;<i> *&gt; &gt;  ・高くても PaPeRo を使うべきでは
+</I>&gt;<i> *&gt; &gt;  ・そもそもハードウエアとソフトウエアを連携させようと思うのが間違い
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  などなど、あるいはその他のご意見でもありましたら、意見交換・
+</I>&gt;<i> *&gt; &gt;  情報交換をさせていただきたいと思います。
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt;  最初のメールで大変厚かましいのですが、どうぞよろしくお願い
+</I>&gt;<i> *&gt; &gt;  いたします。
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt; From: Kazuhiro ABE &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt; さん
+</I>&gt;<i> *&gt; &gt; Subject: [Squeak-ja: 4320] ScratchからMYUロボを制御について
+</I>&gt;<i> *&gt; &gt; Date: Sun, 30 Aug 2009 15:28:47 +0900
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt; *&gt; こんにちは、阿部です。
+</I>&gt;<i> *&gt; &gt; *&gt; 夏休みも終わりが近づいてきましたが、ScratchSource
+</I>&gt;<i> *&gt; &gt; *&gt; 1.3.1を使って、ミュウスタジオのMYUロボを制御できるようにしてみました。二軸のMYU-503と三軸のMYU-507に対応しています。
+</I>&gt;<i> *&gt; &gt; *&gt; <A HREF="http://www.studiomyu.com/">http://www.studiomyu.com/</A>
+</I>&gt;<i> *&gt; &gt; *&gt;
+</I>&gt;<i> *&gt; &gt; *&gt; 合わせて、ジョイスティックも使えるようになります。必要なファイルは以下に置きました。
+</I>&gt;<i> *&gt; &gt; *&gt; <A HREF="http://squeakland.jp/abee/tmp/ScratchMyuRobo.zip">http://squeakland.jp/abee/tmp/ScratchMyuRobo.zip</A>
+</I>&gt;<i> *&gt; &gt; *&gt;
+</I>&gt;<i> *&gt; &gt; *&gt; これをScratchをインストールしたディレクトリに展開し、Scratch.imageの代わりにScratchMyuRobo.imageを使ってください。追加したブロックはステージの「動き」カテゴリにまとめてあります。言語メニューから「日本語(MYUロボ)」を選択すると日本語表示になります。使い方はProjectsの中のサンプルをご覧ください。ポート番号は、お使いのプラットホームや環境で異なるので、調べて置き換えてください。
+</I>&gt;<i> *&gt; &gt; *&gt; MYUロボの機能のうち、使えるのはリモコンモードだけです。したがって、自律モードでは動かすことができず、常にシリアルケーブルでつないだ状態で、Scratchのスクリプトから制御することになります。
+</I>&gt;<i> *&gt; &gt; *&gt; 動作確認はWindows XP SP3とUbuntu
+</I>&gt;<i> *&gt; &gt; *&gt; 9.04、KNOPPIX6.0.1で取れています(寶迫さん、ありがとうございます)。ただし、Linuxでジョイスティックは使えないかもしれません。
+</I>&gt;<i> *&gt; &gt; *&gt;
+</I>&gt;<i> *&gt; &gt; *&gt; では、お楽しみください。
+</I>&gt;<i> *&gt; &gt; *&gt;
+</I>&gt;<i> *&gt; &gt; *&gt;  //abee
+</I>&gt;<i> *&gt; &gt; *&gt; --
+</I>&gt;<i> *&gt; &gt; *&gt; 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i> *&gt; &gt;
+</I>&gt;<i> *&gt; &gt; --
+</I>&gt;<i> *&gt; &gt;  森
+</I>&gt;<i> --
+</I>&gt;<i>  森
+</I>&gt;<i>
+</I>&gt;<i>
+</I></PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004326.html">[Squeak-ja: 4326] Re: ScratchからMYUロボを制御
+</A></li>
+	<LI>次の記事 <A HREF="004330.html">[Squeak-ja: 4330] Re: ScratchからMYUロボを制御
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4327">[ 日付 ]</a>
+              <a href="thread.html#4327">[ スレッド ]</a>
+              <a href="subject.html#4327">[ 件名 ]</a>
+              <a href="author.html#4327">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

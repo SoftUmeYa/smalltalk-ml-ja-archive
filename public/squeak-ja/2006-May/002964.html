@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2964] Re: スクリプトの中で三角関数を利用する方法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202964%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU5JS8laiVXJUgbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5DZiRHOzAzUTRYP3Qkck14TVEkOSRrSn1LIRsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002968.html">
+   <LINK REL="Next"  HREF="002966.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2964] Re: スクリプトの中で三角関数を利用する方法</H1>
+    <B>Thoru Yamamoto</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202964%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU5JS8laiVXJUgbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5DZiRHOzAzUTRYP3Qkck14TVEkOSRrSn1LIRsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2964] Re: スクリプトの中で三角関数を利用する方法">tango ＠ eggegg.co.jp
+       </A><BR>
+    <I>2006年 5月 21日 (日) 21:46:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002968.html">[Squeak-ja: 2968] Re: スクリプトの中で三角関数を利用する方法
+</A></li>
+        <LI>次の記事 <A HREF="002966.html">[Squeak-ja: 2966] Re: スクリプトの中で三角関数を利用する方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2964">[ 日付 ]</a>
+              <a href="thread.html#2964">[ スレッド ]</a>
+              <a href="subject.html#2964">[ 件名 ]</a>
+              <a href="author.html#2964">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>やまもとです。
+
+阿部さんのレスを読まずに
+書き込んでしまいました。(汗)
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tango ＠ eggegg.co.jp</A>
+www:    <A HREF="http://www.thoruman.com">http://www.thoruman.com</A>
+-------------------------------
+----- Original Message ----- 
+From: &quot;Kazuhiro ABE&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt;
+To: &quot;Squeak discussion in Japanese&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja ＠ smalltalk.jp</A>&gt;
+Sent: Sunday, May 21, 2006 7:05 PM
+Subject: [Squeak-ja: 2960] Re: スクリプトの中で三角関数を利用する方法
+
+
+&gt;<i> 阿部@新百合です。
+</I>&gt;<i>
+</I>&gt;<i> それでは、私はeToys(タイルスクリプト)を使った方法をご紹介します。
+</I>&gt;<i> どんなモーフ(オブジェクト)を使ってもよいのですが、ここでは楕円を使います。
+</I>&gt;<i> 部品フラップから楕円を引っ張り出して、ビューワを開き、幾何カテゴリに切り
+</I>&gt;<i> 替えます。
+</I>&gt;<i> eToysの世界(ワールド)では左下が原点です。楕円を動かすと「x座標」と「y座
+</I>標」
+&gt;<i> の値が変化するのが分かります。
+</I>&gt;<i> これらの値は、原点、楕円の中心、楕円の中心からx軸に下ろした垂線とx軸の交
+</I>&gt;<i> 点をそれぞれ頂点とした直角三角形の底辺と垂辺の長さと考えることができます。
+</I>&gt;<i> このとき、斜辺は「距離」、底辺と斜辺のなす角度は「θ値」として表されます
+</I>&gt;<i> (つまり極座標ですね)。
+</I>&gt;<i> したがって、三辺中二辺の長さを決定すれば、残りの一辺とθ値が求まることに
+</I>&gt;<i> なります。
+</I>&gt;<i>
+</I>&gt;<i> スクリプトとしては、単に「x座標」「y座標」「距離」の内、2つに適当な値を代
+</I>&gt;<i> 入し、チクタクすると残りの値とθ値が決まります。
+</I>&gt;<i> このとき、一度ビックリで実行しただけでは収束せず、何回か繰り返す必要があ
+</I>&gt;<i> るのが面白いところです。これは制約解消の例といえるでしょう。
+</I>&gt;<i>
+</I>&gt;<i> 今話題のSuperSwiki2にサンプルのプロジェクトを置きました。できれば、ご自分
+</I>&gt;<i> でお試しになったあとにご覧ください。
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://squeakland.jp/seaside/SBSuperSwiki?_s=MgHWLpvmpECNEKln&amp;_k=ffYROmeB">http://squeakland.jp/seaside/SBSuperSwiki?_s=MgHWLpvmpECNEKln&amp;_k=ffYROmeB</A>
+</I>&gt;<i>
+</I>&gt;<i> また、大道さんが書かれているようなSmalltalkを使う方法も面白いので、そちら
+</I>&gt;<i> のお話もぜひお続けください。
+</I>&gt;<i>
+</I>&gt;<i>  //abee
+</I>&gt;<i> --
+</I>&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i>
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002968.html">[Squeak-ja: 2968] Re: スクリプトの中で三角関数を利用する方法
+</A></li>
+	<LI>次の記事 <A HREF="002966.html">[Squeak-ja: 2966] Re: スクリプトの中で三角関数を利用する方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2964">[ 日付 ]</a>
+              <a href="thread.html#2964">[ スレッド ]</a>
+              <a href="subject.html#2964">[ 件名 ]</a>
+              <a href="author.html#2964">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

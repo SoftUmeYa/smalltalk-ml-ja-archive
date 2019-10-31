@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4620]	PortMidiPlugin for Squeak 初回限定版 (for Mac OS X) Thrill-seekers Only version is available.
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204620%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FUG9ydE1pZGlQbHVnaW4gZm9yIFNxdWVhayAbJEI9aTJzGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCOEJEakhHGyhCIChmb3IgTWFjIE9TIFgpIFRocmlsbC1z%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FZWVrZXJzIE9ubHkgdmVyc2lvbiBpcyBhdmFpbGFibGUu%3F%3D&In-Reply-To=%3CCAHQL79ABQa4HoZAU3tuHGWo-zEmBm%3D_wemisi73MLHEJEK_JNg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="004621.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4620]	PortMidiPlugin for Squeak 初回限定版 (for Mac OS X) Thrill-seekers Only version is available.</H1>
+    <B>NISHIHARA Satoshi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204620%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FUG9ydE1pZGlQbHVnaW4gZm9yIFNxdWVhayAbJEI9aTJzGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCOEJEakhHGyhCIChmb3IgTWFjIE9TIFgpIFRocmlsbC1z%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FZWVrZXJzIE9ubHkgdmVyc2lvbiBpcyBhdmFpbGFibGUu%3F%3D&In-Reply-To=%3CCAHQL79ABQa4HoZAU3tuHGWo-zEmBm%3D_wemisi73MLHEJEK_JNg%40mail.gmail.com%3E"
+       TITLE="[Squeak-ja: 4620]	PortMidiPlugin for Squeak 初回限定版 (for Mac OS X) Thrill-seekers Only version is available.">goonsh ＠ gmail.com
+       </A><BR>
+    <I>2012年 2月  4日 (土) 16:37:29 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="004621.html">[Squeak-ja: 4621]	第40回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4620">[ 日付 ]</a>
+              <a href="thread.html#4620">[ スレッド ]</a>
+              <a href="subject.html#4620">[ 件名 ]</a>
+              <a href="author.html#4620">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>西原です．
+PortMidiPluginの初回限定版for Mac OS X onlyを出しました．
+
+PortMidiPluginは，Platform Independent Library for MIDI I/OなPortMidiライブラリ
+<A HREF="http://portmedia.sourceforge.net/portmidi/">http://portmedia.sourceforge.net/portmidi/</A>
+を使ってMIDIのやりとりを行うプラグインです．
+プラグインのバイナリと，後述するKhoros-Core* and Khoros-MIDI-*パッケージをインストールすると，使えるようになります．
+
+Squeakには標準でSimpleMIDIPortとMIDIPluginを持っていて，例えばMac OS
+X/Windowsなら他になにも追加することなQuickTime DLS
+Synth等の音源を鳴らすことができますが，MIDI系のいわゆるソフトウェア音源/バーチャル音源(Software
+Synthesizer)に繋ぐことができません．それで，このプラグインを作りました．
+とりあえずの目標としてSimpleMIDIPort同等の機能を持つことを目指しました．※1
+
+PortMidiライブラリはプラグイン中に含まれており，別途インストールする必要はありません．逆に言うと，すでにインストールされていても使いません．
+
+Squeak用のクラス群は以下にあります．
+<A HREF="http://www.squeaksource.com/Khoros.html">http://www.squeaksource.com/Khoros.html</A>
+Khoros-Core* and Khoros-MIDI-*はクライアント側で使います．
+PortMidiPrimitives-* はVMMaker-edなイメージで使うプラグインのソースクラスです．
+
+プラグインのビルドに必要なソース郡，およびMac OS X用のプラグインのバイナリは以下にあります．
+<A HREF="http://code.google.com/p/khoros/">http://code.google.com/p/khoros/</A>
+ソースはMercurialでクローンしてください．バイナリはそのまま落とせます．
+現状，他のプラットフォームのビルド&amp;テスト環境がないので，バイナリはMac OS X のみです．
+VMのContents/Resouces/に放り込んでください．
+今のところ，プラットフォーム依存のコードはありません (はず)．PortMidiのビルドができる環境なら，このプラグインもビルドできると思います．
+
+使い方等はPortMidiInterfaceTester, PortMidiInterface, それにPortMidiPortなどのクラス群にあります．
+PmScorePlayerMorphはSimpleMIDIPortの代わりにPortMidiPortを使う*だけ*のモルフです．
+
+PortMidiPluginのソースはMaestro Stephen Travis PopeさんがSiren for VisualWorks
+7.5用に書いたportmidi_lite.cをベースにしており，これのwrapper++として動きます．
+
+※1 制約：
+SqueakオリジナルのMIDIPluginが持っているMIDIParameterGet/Setは実装されていません．
+※2 追加機能：
+・1バイトおよび4バイトのMIDIメッセージの読み書き
+・システム・エクスクルーシブ・メッセージの読み書き(原始版)
+・メッセージのフィルタリング，チャンネルのマスク機能などなど
+
+読み込み用にオープンされたポートでフィルタリングを行なっているのは，PortMidiのデフォルト設定であるアクティヴ・センシングのみに変更しています．実デバイスをつなぐと，クロック・メッセージがどんどこ流れてくるかも知れません．必要があれば適宜フィルタリングしてください．
+
+-- 
+--
+&quot;NISHIHARA Satoshi&quot;
+[:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="004621.html">[Squeak-ja: 4621]	第40回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4620">[ 日付 ]</a>
+              <a href="thread.html#4620">[ スレッド ]</a>
+              <a href="subject.html#4620">[ 件名 ]</a>
+              <a href="author.html#4620">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

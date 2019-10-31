@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4117] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204117%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLJE5GfEtcGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=2d5d52a80812302350k68f62c19o16d06cff38eeccf4%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004128.html">
+   <LINK REL="Next"  HREF="004118.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4117] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204117%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLJE5GfEtcGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=2d5d52a80812302350k68f62c19o16d06cff38eeccf4%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4117] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2009年 1月  4日 (日) 18:14:21 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004128.html">[Squeak-ja: 4128] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+        <LI>次の記事 <A HREF="004118.html">[Squeak-ja: 4118] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4117">[ 日付 ]</a>
+              <a href="thread.html#4117">[ スレッド ]</a>
+              <a href="subject.html#4117">[ 件名 ]</a>
+              <a href="author.html#4117">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Wed, 31 Dec 2008 16:50:18 +0900,
+Kazuhiro ABE wrote:
+&gt;<i> 
+</I>&gt;<i> こんにちは、阿部です。
+</I>&gt;<i> 
+</I>&gt;<i> 最新と思われるSqueak-3.10-4.i686-pc-linux-gnuを使って、
+</I>&gt;<i> <A HREF="http://squeakvm.org/unix/">http://squeakvm.org/unix/</A>
+</I>&gt;<i> 
+</I>&gt;<i> Ubuntu 8.10で以下のように起動してみました。
+</I>&gt;<i> 
+</I>&gt;<i> /usr/local/bin/squeak -vm-display-X11 -compositioninput
+</I>&gt;<i> ScratchSourceCode1.3.1synth.image
+</I>&gt;<i> 
+</I>&gt;<i> 結果、確定前文字列の制限もなく正しく入力できました。
+</I>&gt;<i> しかし、今度は音が出なくなりますね。
+</I>
+  返事が遅くてすみません。VMはこれでよいと思います。
+
+&gt;<i> soundStart: snd_add_pcm_handler: Function not implemented
+</I>&gt;<i> 
+</I>&gt;<i> あちらを立てればこちらが立たずです。
+</I>
+  起動時に-vm-sound-ALSAをつける、それでだめなら-vm-sound-OSSをつけて
+みるとどうなるでしょうか。
+
+-- Yoshiki
+</PRE>
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004128.html">[Squeak-ja: 4128] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+	<LI>次の記事 <A HREF="004118.html">[Squeak-ja: 4118] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4117">[ 日付 ]</a>
+              <a href="thread.html#4117">[ スレッド ]</a>
+              <a href="subject.html#4117">[ 件名 ]</a>
+              <a href="author.html#4117">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

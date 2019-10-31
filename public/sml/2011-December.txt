@@ -1,0 +1,531 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Dec  7 07:00:02 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 07 Dec 2011 07:00:02 +0900
+Subject: [SML 7980] Re:
+ 第38回Smalltalk勉強会＠京都
+In-Reply-To: <CAOysuxUFHCPkL3ogUXeA_47iXOWdq+YZPcb91M2H7HvTMZ+zNA@mail.gmail.com>
+References: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+ <CAOysuxUFHCPkL3ogUXeA_47iXOWdq+YZPcb91M2H7HvTMZ+zNA@mail.gmail.com>
+Message-ID: <4EDE9062.2020101@cc.kyoto-su.ac.jp>
+
+本日です！
+
+Serge-san, see you again this evening.
+
+--- 青木淳
+
+(11/11/30 9:45), Serge Stinckwich wrote:
+> 2011/11/30 AOKI Atsushi<atsushi ＠ cc.kyoto-su.ac.jp>:
+>> 第38回Smalltalk勉強会＠京都を開催します。
+>>
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+>>
+>> 場所(部屋)が変わりまして、キャンプラ2階の第3会議室になります。
+>> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+>>
+>> 第38回 Smalltalk勉強会＠京都
+>> 日時：2011年12月07日（水）19:00?21:00
+>> キャンパスプラザ京都 2階 第3会議室
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> マウスによるインタラクションのデザインとプログラミングを進
+>> め、窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ
+>> 変換のGUI)を続けたいと思います。また、Serge Stinckwichさんが
+>> 来られる予定ですので、AmberやPharoなどのSmalltalkについてプレ
+>> ゼンテーションをしていただこうと思います。ノート型のパーソナ
+>> ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>
+> I will come :-)
+> I propose to Aoki-san to do a small presentation of Amber Smalltalk:
+> http://amber-lang.net/
+> a new Smalltalk based on JavaScript that runs in a web browser.
+>
+> If you some of you are interested, i could organized also a TDD
+> (Test-Driven Development) Coding Dojo:
+> http://web.cs.wpi.edu/~gpollice/Dojo.html
+> It's a really fun experience.
+>
+> Regards,
+ > --
+ > Serge Stinckwich
+ > UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+ > Matsuno Laboratory, Kyoto University, Japan (until 12/2011)
+ > http://www.mechatronics.me.kyoto-u.ac.jp/
+ > Every DSL ends up being Smalltalk
+ > http://doesnotunderstand.org/
+
+From serge.stinckwich ＠ gmail.com  Wed Dec  7 11:07:31 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 7 Dec 2011 11:07:31 +0900
+Subject: [SML 7981] Re:
+	第38回Smalltalk勉強会＠京都
+In-Reply-To: <4EDE9062.2020101@cc.kyoto-su.ac.jp>
+References: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+ <CAOysuxUFHCPkL3ogUXeA_47iXOWdq+YZPcb91M2H7HvTMZ+zNA@mail.gmail.com>
+ <4EDE9062.2020101@cc.kyoto-su.ac.jp>
+Message-ID: <CAOysuxXcSqG3gh7UuW7YfEE8A_+4Lp1buSS1uGjMpz=JogeuAA@mail.gmail.com>
+
+Yes, see you this evening Aoki-san
+
+2011/12/7 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 本日です！
+>
+> Serge-san, see you again this evening.
+>
+> --- 青木淳
+>
+>
+> (11/11/30 9:45), Serge Stinckwich wrote:
+>>
+>> 2011/11/30 AOKI Atsushi<atsushi ＠ cc.kyoto-su.ac.jp>:
+>>>
+>>> 第38回Smalltalk勉強会＠京都を開催します。
+>>>
+>>> 万障繰り合わせてJR京都駅前にお集まりください。
+>>>
+>>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+>>>
+>>> 場所(部屋)が変わりまして、キャンプラ2階の第3会議室になります。
+>>>
+>>> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+>>>
+>>> 第38回 Smalltalk勉強会＠京都
+>>> 日時：2011年12月07日（水）19:00〜21:00
+>>> キャンパスプラザ京都 2階 第3会議室
+>>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>>
+>>> マウスによるインタラクションのデザインとプログラミングを進
+>>> め、窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ
+>>> 変換のGUI)を続けたいと思います。また、Serge Stinckwichさんが
+>>> 来られる予定ですので、AmberやPharoなどのSmalltalkについてプレ
+>>> ゼンテーションをしていただこうと思います。ノート型のパーソナ
+>>> ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>>
+>>
+>> I will come :-)
+>> I propose to Aoki-san to do a small presentation of Amber Smalltalk:
+>> http://amber-lang.net/
+>> a new Smalltalk based on JavaScript that runs in a web browser.
+>>
+>> If you some of you are interested, i could organized also a TDD
+>> (Test-Driven Development) Coding Dojo:
+>> http://web.cs.wpi.edu/~gpollice/Dojo.html
+>> It's a really fun experience.
+>>
+>> Regards,
+>
+>> --
+>> Serge Stinckwich
+>> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+>> Matsuno Laboratory, Kyoto University, Japan (until 12/2011)
+>> http://www.mechatronics.me.kyoto-u.ac.jp/
+>> Every DSL ends up being Smalltalk
+>> http://doesnotunderstand.org/
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Matsuno Laboratory, Kyoto University, Japan (until 12/2011)
+http://www.mechatronics.me.kyoto-u.ac.jp/
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From ichikawa.yuji ＠ gmail.com  Wed Dec  7 17:08:44 2011
+From: ichikawa.yuji ＠ gmail.com (ICHIKAWA, Yuji)
+Date: Wed, 7 Dec 2011 17:08:44 +0900
+Subject: [SML 7982] Re:
+ 第38回Smalltalk勉強会＠京都
+In-Reply-To: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+References: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+Message-ID: <6C36AB67-436F-435F-BFB4-0A04716E095B@gmail.com>
+
+初めまして。市川と申します。
+
+StinckwichさんのAmberのお話を伺いたくて、今日、勉強会にお邪魔させていただこうと思っています。
+
+最近、JavaScriptやCoffeeScriptを触っています。
+Smalltalkは以前、Squeak Smalltalkを少し触っていましたが最近はご無沙汰している状態です。
+勉強会にはついていけないと思いますが、VWインストール済みノートPCとブラックブック持参で参りますので、なにとぞよろしくお願い致します。
+ー
+市川雄二
+
+On 2011/11/30, at 6:47, AOKI Atsushi wrote:
+
+> 第38回Smalltalk勉強会＠京都を開催します。
+> 
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+> 
+> 場所(部屋)が変わりまして、キャンプラ2階の第3会議室になります。
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+> 
+> 第38回 Smalltalk勉強会＠京都
+> 日時：2011年12月07日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第3会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> マウスによるインタラクションのデザインとプログラミングを進
+> め、窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ
+> 変換のGUI)を続けたいと思います。また、Serge Stinckwichさんが
+> 来られる予定ですので、AmberやPharoなどのSmalltalkについてプレ
+> ゼンテーションをしていただこうと思います。ノート型のパーソナ
+> ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+> 
+> --- 青木淳＠京都上賀茂
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Dec  8 08:46:10 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 08 Dec 2011 08:46:10 +0900
+Subject: [SML 7983] Re:
+ 第38回Smalltalk勉強会＠京都
+In-Reply-To: <6C36AB67-436F-435F-BFB4-0A04716E095B@gmail.com>
+References: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+ <6C36AB67-436F-435F-BFB4-0A04716E095B@gmail.com>
+Message-ID: <4EDFFAC2.7050901@cc.kyoto-su.ac.jp>
+
+京都で行っているSmalltalk勉強会(第38回)の報告です。
+
+Serge-san, thank you for your presentation and demonstration.
+
+昨夜、作成したプログラムや勉強会ログなどをアップロードしておきました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+
+時間がなくて、clearInsideを用いましたが、areasOutsideを用いた良好なものを収録しておきました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/SSK_20111207_235741.png
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/SSK_20111207_235741_areasOutside.png
+
+ちょっと早いですが、皆さん、良いお年を！（年が明けた1月11日にまたお会いしませう）
+
+--- 青木淳＠京都上賀茂
+
+
+(11/12/07 17:08), ICHIKAWA, Yuji wrote:
+> 初めまして。市川と申します。
+>
+> StinckwichさんのAmberのお話を伺いたくて、今日、勉強会にお邪魔させていただこうと思っています。
+>
+> 最近、JavaScriptやCoffeeScriptを触っています。
+> Smalltalkは以前、Squeak Smalltalkを少し触っていましたが最近はご無沙汰している状態です。
+> 勉強会にはついていけないと思いますが、VWインストール済みノートPCとブラックブック持参で参りますので、なにとぞよろしくお願い致します。
+> ー
+> 市川雄二
+>
+> On 2011/11/30, at 6:47, AOKI Atsushi wrote:
+>
+>> 第38回Smalltalk勉強会＠京都を開催します。
+>>
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+>>
+>> 場所(部屋)が変わりまして、キャンプラ2階の第3会議室になります。
+>> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+>>
+>> 第38回 Smalltalk勉強会＠京都
+>> 日時：2011年12月07日（水）19:00?21:00
+>> キャンパスプラザ京都 2階 第3会議室
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> マウスによるインタラクションのデザインとプログラミングを進
+>> め、窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ
+>> 変換のGUI)を続けたいと思います。また、Serge Stinckwichさんが
+>> 来られる予定ですので、AmberやPharoなどのSmalltalkについてプレ
+>> ゼンテーションをしていただこうと思います。ノート型のパーソナ
+>> ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>>
+>> --- 青木淳＠京都上賀茂
+
+From ume ＠ softumeya.com  Thu Dec  8 23:26:46 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Thu, 8 Dec 2011 23:26:46 +0900
+Subject: [SML 7984]
+	第39回Smalltalk勉強会(兼忘年会)のおしらせ
+Message-ID: <CAH3eEdQJz8Sdb4RtuZFPEd_Amsc0CJcwCo+huv_j1iQgd5JtUw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+京都の勉強会も盛り上がったようですね。東京も負けていられません。
+年末スペシャルなSmalltalk勉強会のお知らせです。
+
+第39回Smalltalk勉強会(兼忘年会)
+日時: 2011/12/27(火) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+http://www.smalltalk-users.jp/Home/gao-zhi/dai39kaismalltalkbenkyoukai
+
+今年最後のSmalltalk勉強会はビアバッシュ形式で行います。ビールを飲みながら、23世紀の言語Smalltalkについて語りつくしましょう。
+
+2時間かけて、ライトニングトークを繰り広げます。いろいろなSmalltaler達が入れ替わり立ち替わり、自慢の何かを披露してくれるでしょう。
+
+ATNDで参加募集しています。LTの内容も決まり次第載せていきます。
+http://atnd.org/events/23037
+
+20名までなので、お早めにどうぞ。
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From serge.stinckwich ＠ gmail.com  Fri Dec  9 11:29:24 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Fri, 9 Dec 2011 11:29:24 +0900
+Subject: [SML 7985] Re:
+	第38回Smalltalk勉強会＠京都
+In-Reply-To: <4EDFFAC2.7050901@cc.kyoto-su.ac.jp>
+References: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+ <6C36AB67-436F-435F-BFB4-0A04716E095B@gmail.com>
+ <4EDFFAC2.7050901@cc.kyoto-su.ac.jp>
+Message-ID: <CAOysuxWfANqckQ+8dFM_LW-xpx_CSN0jTZkpL92D41w8Rgtt9A@mail.gmail.com>
+
+Thank you all. This is was really nice to see you all !
+
+2011/12/8 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 京都で行っているSmalltalk勉強会(第38回)の報告です。
+>
+> Serge-san, thank you for your presentation and demonstration.
+>
+> 昨夜、作成したプログラムや勉強会ログなどをアップロードしておきました。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+>
+> 時間がなくて、clearInsideを用いましたが、areasOutsideを用いた良好なものを収録しておきました。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/SSK_20111207_235741.png
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/SSK_20111207_235741_areasOutside.png
+>
+> ちょっと早いですが、皆さん、良いお年を！（年が明けた1月11日にまたお会いしませう）
+>
+> --- 青木淳＠京都上賀茂
+>
+>
+>
+> (11/12/07 17:08), ICHIKAWA, Yuji wrote:
+>>
+>> 初めまして。市川と申します。
+>>
+>> StinckwichさんのAmberのお話を伺いたくて、今日、勉強会にお邪魔させていただこうと思っています。
+>>
+>> 最近、JavaScriptやCoffeeScriptを触っています。
+>> Smalltalkは以前、Squeak Smalltalkを少し触っていましたが最近はご無沙汰している状態です。
+>> 勉強会にはついていけないと思いますが、VWインストール済みノートPCとブラックブック持参で参りますので、なにとぞよろしくお願い致します。
+>> ー
+>> 市川雄二
+>>
+>> On 2011/11/30, at 6:47, AOKI Atsushi wrote:
+>>
+>>> 第38回Smalltalk勉強会＠京都を開催します。
+>>>
+>>> 万障繰り合わせてJR京都駅前にお集まりください。
+>>>
+>>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+>>>
+>>> 場所(部屋)が変わりまして、キャンプラ2階の第3会議室になります。
+>>>
+>>> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+>>>
+>>> 第38回 Smalltalk勉強会＠京都
+>>> 日時：2011年12月07日（水）19:00〜21:00
+>>> キャンパスプラザ京都 2階 第3会議室
+>>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>>
+>>> マウスによるインタラクションのデザインとプログラミングを進
+>>> め、窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ
+>>> 変換のGUI)を続けたいと思います。また、Serge Stinckwichさんが
+>>> 来られる予定ですので、AmberやPharoなどのSmalltalkについてプレ
+>>> ゼンテーションをしていただこうと思います。ノート型のパーソナ
+>>> ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>>>
+>>> --- 青木淳＠京都上賀茂
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Matsuno Laboratory, Kyoto University, Japan (until 12/2011)
+http://www.mechatronics.me.kyoto-u.ac.jp/
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From serge.stinckwich ＠ gmail.com  Fri Dec  9 11:39:32 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Fri, 9 Dec 2011 11:39:32 +0900
+Subject: [SML 7986] Coding Dojo in Kyoto ?
+Message-ID: <CAOysuxWobRv-rv9y3zxOTkNqz4wjWugmp+6ujK_EXMPRYjKOaA@mail.gmail.com>
+
+Dear all,
+
+i will stay in Kyoto until December 24th,
+
+If some of you are interested, i could organize a Coding Dojo before i leave.
+
+What is a coding Dojo ?
+
+#CodingDojo session was first invented in Paris in 2004 by the XP
+(eXtreme Programming) community. The aim of these sessions is to
+enhance the coding skills of attendees by doing some very small
+exercices in a funny atmosphere. This is like when you want to
+practice a sport like Judo, you need to practice some basic exercices
+with some judo masters before doing serious business like
+competitions. There is usually two styles of exercices : 1) Kata
+prepared by someone before the session and executed in front of the
+public or Randori, a more exploraty form of a Kata where the whole
+group participates.
+
+More information are available here: http://www.codingdojo.org/
+
+Program of the first session (we will follow the same format than the
+#CodingDojo from Paris):
+
+* 5 min: Select the frequency and the date of the next #CodingDojo
+* 20-30 min: Presentation of what is a #CodingDojo (Serge) - For the
+next session, this time slot will be used to do a retrospective of the
+previous session (what went well, what was interesting, what was frustrating).
+* 10 min: Decide on a topic for this session
+* 40 min: code (Kata or Randori)
+* 5-10 min: Mid-session break to discuss how things are going
+* 40 min: code (Kata or Randori)
+
+The sessions will be completely language agnostic. The programming
+languages chosen at each session will depend of the attendees.
+
+More exotic programming languages like Haskell, Brainfuck, Scala, Lua,
+... are welcome. This is not really a big deal if not all the people
+don't know the programming language of the session, but you may notice
+that a #CodingDojo is not a good place to learn a new language.  The
+goal is to learn how to better program not to do some proselytism
+(mine language is better than yours). We need people who knows about
+these languages in order to conduct sessions. What is also particulary
+important if you want to organize a Kata or Randori, is to know how to
+write unit tests with these languages.
+
+More information about the philosophy behind a #CodingDojo are available here:
+http://www.slideshare.net/ntoll/organise-a-code-dojo
+and here:
+http://www.slideshare.net/caikesouza/coding-dojo-2879242
+
+
+If there is enough people interested, i need to find a place in Kyoto ;-)
+
+Regards,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Matsuno Laboratory, Kyoto University, Japan (until 12/2011)
+http://www.mechatronics.me.kyoto-u.ac.jp/
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From tscompor ＠ gmail.com  Fri Dec 16 20:20:43 2011
+From: tscompor ＠ gmail.com (Takahumi Saikawa)
+Date: Fri, 16 Dec 2011 20:20:43 +0900
+Subject: [SML 7987] Re: Coding Dojo in Kyoto ?
+In-Reply-To: <CAOysuxWobRv-rv9y3zxOTkNqz4wjWugmp+6ujK_EXMPRYjKOaA@mail.gmail.com>
+References: <CAOysuxWobRv-rv9y3zxOTkNqz4wjWugmp+6ujK_EXMPRYjKOaA@mail.gmail.com>
+Message-ID: <CAKHSwZKJWfb4nymap7+5O7CAhkfSaGzJM9qJhHux4_Jt1dcreQ@mail.gmail.com>
+
+Dear Serge,
+
+I am certainly interested in that.  What is the possible date?
+
+Takafumi Saikawa
+
+
+On Fri, Dec 9, 2011 at 11:39 AM, Serge Stinckwich
+<serge.stinckwich ＠ gmail.com> wrote:
+> Dear all,
+>
+> i will stay in Kyoto until December 24th,
+>
+> If some of you are interested, i could organize a Coding Dojo before i leave.
+>
+> What is a coding Dojo ?
+>
+> #CodingDojo session was first invented in Paris in 2004 by the XP
+> (eXtreme Programming) community. The aim of these sessions is to
+> enhance the coding skills of attendees by doing some very small
+> exercices in a funny atmosphere. This is like when you want to
+> practice a sport like Judo, you need to practice some basic exercices
+> with some judo masters before doing serious business like
+> competitions. There is usually two styles of exercices : 1) Kata
+> prepared by someone before the session and executed in front of the
+> public or Randori, a more exploraty form of a Kata where the whole
+> group participates.
+>
+> More information are available here: http://www.codingdojo.org/
+>
+> Program of the first session (we will follow the same format than the
+> #CodingDojo from Paris):
+>
+> * 5 min: Select the frequency and the date of the next #CodingDojo
+> * 20-30 min: Presentation of what is a #CodingDojo (Serge) - For the
+> next session, this time slot will be used to do a retrospective of the
+> previous session (what went well, what was interesting, what was frustrating).
+> * 10 min: Decide on a topic for this session
+> * 40 min: code (Kata or Randori)
+> * 5-10 min: Mid-session break to discuss how things are going
+> * 40 min: code (Kata or Randori)
+>
+> The sessions will be completely language agnostic. The programming
+> languages chosen at each session will depend of the attendees.
+>
+> More exotic programming languages like Haskell, Brainfuck, Scala, Lua,
+> ... are welcome. This is not really a big deal if not all the people
+> don't know the programming language of the session, but you may notice
+> that a #CodingDojo is not a good place to learn a new language. ?The
+> goal is to learn how to better program not to do some proselytism
+> (mine language is better than yours). We need people who knows about
+> these languages in order to conduct sessions. What is also particulary
+> important if you want to organize a Kata or Randori, is to know how to
+> write unit tests with these languages.
+>
+> More information about the philosophy behind a #CodingDojo are available here:
+> http://www.slideshare.net/ntoll/organise-a-code-dojo
+> and here:
+> http://www.slideshare.net/caikesouza/coding-dojo-2879242
+>
+>
+> If there is enough people interested, i need to find a place in Kyoto ;-)
+>
+> Regards,
+> --
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Matsuno Laboratory, Kyoto University, Japan (until 12/2011)
+> http://www.mechatronics.me.kyoto-u.ac.jp/
+> Every DSL ends up being Smalltalk
+> http://doesnotunderstand.org/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Dec 24 07:10:08 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat, 24 Dec 2011 07:10:08 +0900
+Subject: [SML 7988]
+	第39回Smalltalk勉強会＠京都
+Message-ID: <4EF4FC40.4000201@cc.kyoto-su.ac.jp>
+
+第39回Smalltalk勉強会＠京都
+
+新年早々の第39回Smalltalk勉強会＠京都なのですが、やむを得ず
+睦月(1月)は休会とさせてください。如月(2月)にお会いしませう。
+どうぞ良いお年を。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto39
+
+第39回 Smalltalk勉強会＠京都
+日時：2012年01月11日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第3会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+やんごとなきこと（入試業務）と重なってしまい、のっぴきなりま
+せぬ。電源コードやプロジェクタなどの機材を運び込むことができ
+ませんので、休会とさせていただきます。新年最初の勉強会なのに、
+申し訳ございません。シンコム・システムズ・ジャパンさんからの
+ギフトもありましたのに…
+
+--- 青木淳＠京都宇治
+

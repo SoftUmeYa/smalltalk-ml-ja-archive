@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2805] Tweakについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202805%5D%20%3D%3Fiso-2022-jp%3Fb%3FVHdlYWsbJEIkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002804.html">
+   <LINK REL="Next"  HREF="002806.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2805] Tweakについて</H1>
+    <B>&quot;土本 (Florian) 強</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202805%5D%20%3D%3Fiso-2022-jp%3Fb%3FVHdlYWsbJEIkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2805] Tweakについて">&quot;土本 (Florian) 強
+       </A><BR>
+    <I>2006年 1月 22日 (日) 20:01:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002804.html">[Squeak-ja: 2804] FreeBSD用XIM入力対応 ports (3.6VM)
+</A></li>
+        <LI>次の記事 <A HREF="002806.html">[Squeak-ja: 2806] Re: Tweakについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2805">[ 日付 ]</a>
+              <a href="thread.html#2805">[ スレッド ]</a>
+              <a href="subject.html#2805">[ 件名 ]</a>
+              <a href="author.html#2805">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　こんにちは。 Florian (土本)です。
+
+　今、ゲーム業界を目指さない一般人向けのゲームデザインと実装の教育プロジェ
+クトを立ち上げようと思っています。まだ、構想段階ですので、単なるサイトに
+なるか、書籍の形になるかはまだ決まっていませんが。
+　これに対するツールとして「考えた物をすぐに実装する」ための枠組みとして、
+Squeak+TweakをSmalltalk経由で(eToyを使わずに)使うのが適当だと今は考えて
+います。
+
+＃はじめはMorphを生で触っていたのですが、ちょっとだけTweakを使ってみてす
+＃ぐに乗り換えました。
+
+　ここでいくつか知りたいことがあるのですが何か情報お持ちの方がいらしたら
+教えて頂けると幸いです。
+
+
+・Tweakが或る程度固まりそうな目処
+　今こちらで使っているTweakはiTweak3.8-6665というバージョンですが、この
+バージョン自体はまだちょっと安定しているとは言い難く、クラスライブラリの
+仕様自体もステーブルとは言えないようです。
+　一応公式サイトによると「アメリカの新学期に間に合わせるために2005年8月
+にTweak 1.0を、日本の新学期に間に合わせるために2006年の早期にTweak 1.1を
+リリース」とは書かれてありますが、これらについては実情はどのようになって
+いるのでしょうか？(先の6665がTweak 1.0でしょうか？)
+　また、これは実装としてはどのような物になる予定かご存じの方はいらっしゃ
+いますでしょうか？
+　また、以前阿部さんにお話を伺ったところによると、Squeak上でのエミュレー
+ション(の様な物)を離れてTweak単体で動く形が本来の姿とのことでしたが、こ
+れが、Tweak 1.1の目標である「自分自身でプログラミングアクティビティが完
+結(公式サイトより)」なのでしょうか？
+
+
+・不足している部品
+　現在Squeak3.8がMorphとして持っている部品(ヴィジェット)は、Tweak上にす
+べては実装されていないと思われますが、これらのもののうち、以下の機能は実
+装の予定があるかどうか、ご存じの方はいらっしゃいますでしょうか？
+
+	ジョイスティックモーフ(特に、Squeak3.8ではなく、Squeakland2005J
+のボタン等機能を持った物)
+
+
+・Croquetとの関係
+　Tweak自体はアプリケーションフレームワークとして見ていますが、Croquetと
+の関係はどのようになるのでしょうか？
+　CroquetはTweakのイベントアーキティクチャとは無関係に実装を続ける予定な
+のでしょうか？
+
+
+　質問ばかりになってしまいましたが、判る範囲で教えて頂けると幸いです。
+
+
+
+　あと、今回個人的に立ち上げようとしているこのプロジェクトの企画書等ほし
+い方がいらっしゃいましたらご連絡ください。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">florian ＠ seagreen.ocn.ne.jp</A>
+Florian's Neo Pages <A HREF="http://www.cise.co.jp/%7eflorian/">http://www.cise.co.jp/%7eflorian/</A>
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002804.html">[Squeak-ja: 2804] FreeBSD用XIM入力対応 ports (3.6VM)
+</A></li>
+	<LI>次の記事 <A HREF="002806.html">[Squeak-ja: 2806] Re: Tweakについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2805">[ 日付 ]</a>
+              <a href="thread.html#2805">[ スレッド ]</a>
+              <a href="subject.html#2805">[ 件名 ]</a>
+              <a href="author.html#2805">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

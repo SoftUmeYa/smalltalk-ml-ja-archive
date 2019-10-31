@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7312] ブロック生成のメタプログラミング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207312%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYlbSVDJS9AOEAuJE4lYSU/JVcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCVpJV8lcyUwGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007313.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7312] ブロック生成のメタプログラミング</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207312%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYlbSVDJS9AOEAuJE4lYSU/JVcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCVpJV8lcyUwGyhC%3F%3D&In-Reply-To="
+       TITLE="[SML 7312] ブロック生成のメタプログラミング">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 9月  6日 (木) 10:12:09 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007313.html">[SML 7313] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7312">[ 日付 ]</a>
+              <a href="thread.html#7312">[ スレッド ]</a>
+              <a href="subject.html#7312">[ 件名 ]</a>
+              <a href="author.html#7312">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+じゅんメーリングリストの話題をＳＭＬにも流すことにしました。
+
+ブロック生成の例として、シンボルが asBlock / asBlockFor: の
+メッセージを理解できるようにするプログラムを添付します。。
+
+似たようなプログラムがちらほらと存在するのですが、どれもベタ
+なプログラムでエレガントさに欠けますので、ユニバーサル・メッ
+セージ（万能関数）を用いたメタプログラミング（高階関数）手法
+で実装しておきました。
+
+＃VisualWorks のプログラムですが、Squeak でも動作することを
+＃西原さんが確かめてくれています。
+
+伝言選択子（メッセージ・セレクタ）シンボルに対して用いるのが
+適切です。使い方は以下のようになります。
+
+#size asBlock
+
+#@ asBlock
+
+#x:y: asBlock
+
+#x:y: asBlockFor: Point
+
+どんなブロックが生成されているのかは、逆コンパイルをしてみれ
+ば判明します。
+
+#size asBlock method decompiledSource
+==&gt; '
+[:t1 |
+|<i> t2 |
+</I>t2 := Array new: 0.
+t1 perform: #size withArguments: t2]'
+
+#@ asBlock method decompiledSource
+==&gt; '
+[:t1 :t2 |
+|<i> t3 |
+</I>(t3 := Array new: 1) at: 1 put: t2.
+t1 perform: #@ withArguments: t3]'
+
+#x:y: asBlock method decompiledSource
+==&gt; '
+[:t1 :t2 :t3 |
+|<i> t4 |
+</I>(t4 := Array new: 2) at: 1 put: t2.
+t4 at: 2 put: t3.
+t1 perform: #x:y: withArguments: t4]'
+
+(#x:y: asBlockFor: Point) method decompiledSource
+==&gt; '
+[:t1 :t2 |
+|<i> t3 |
+</I>(t3 := Array new: 2) at: 1 put: t1.
+t3 at: 2 put: t2.
+self perform: #x:y: withArguments: t3]'
+
+伝言選択子としてのシンボルがブロックになる効用は、次のような
+典型的な場合が考えられます。
+
+(0 to: 9) select: #even asBlock
+==&gt; #(0 2 4 6 8)
+
+(0 to: 9) reject: #even asBlock
+==&gt; #(1 3 5 7 9)
+
+(0 to: 9) collect: #even asBlock
+==&gt; #(true false true false true false true false true false)
+
+#('asaoka' 'aoki') collect: #size asBlock
+==&gt; #(6 4)
+
+#(0 2 4 6 8) with: #(1 3 5 7 9) collect: #@ asBlock
+==&gt; #(<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">0 ＠ 1</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">2 ＠ 3</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">4 ＠ 5</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">6 ＠ 7</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">8 ＠ 9</A>)
+
+#(0 2 4 6 8) with: #(1 3 5 7 9) collect: (#x:y: asBlockFor: Point)
+==&gt; #(<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">0 ＠ 1</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">2 ＠ 3</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">4 ＠ 5</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">6 ＠ 7</A> <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">8 ＠ 9</A>)
+
+#(0 2 4 6 8) fold: #+ asBlock
+==&gt; 20
+
+#(1 3 5 7 9) fold: #* asBlock
+==&gt; 945
+
+#(12 21 -19) inject: 9999 into: #min: asBlock
+==&gt; -19
+
+#(12 21 -19) inject: -9999 into: #max: asBlock
+==&gt; 21
+
+今、ある人たちと協力して、この機構を VisualWorks の新バージョ
+ンに導入しよう、というロビー活動をしてます。ぜひ Squeak でも。
+
+asBlock / asBlockFor: のメッセージに応えられる他のオブジェク
+トの候補としては Message / MessageSend / BlockClosure などの
+オブジェクトたちがあげられると思います。
+
+Smalltalk はメタプログラミングが気軽に（あまりにあっけなく）
+できるので、プログラマに備わっているファンタジー創世の能力が
+刺激され、増幅されることがしばしばでしょう。
+
+また、メタプログラミングはスーパープログラマへの道です。自己
+相似の中に入ってフラクタルな次元に遊ぶ、という感じになります。
+
+このように言及しても、成長段階にあるプログラマには通じないで
+しょうから、C プログラミングの状況で、誤解を恐れずに翻訳する
+と、おおよそ以下のようになると思います。
+
+今、ここに「test.c」というプログラムがあったとします。この実
+行可能プログラム「test」が走行している真っ只中でやっているこ
+とは、走行状況に応じて「subs.c」というソースコードを創り出し、
+それをコンパイル＆リンクするための「Makefile」も創り出してお
+いて「make」を起動（fork:dup&amp;exec&amp;wait）させ、「subs」という
+実行可能プログラムを獲得します。そして最後に「subs」を起動し、
+その実行結果をもらって、「test」が走行し続けるというものです。
+もちろん「subs.c」や「Makefile」そして「subs」などは跡形も無
+く（unlink）しておくのは当然のこと。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: asBlock.st
+型:         text/xml
+サイズ:     2898 バイト
+説明:       無し
+URL:        <A HREF="http://www.akademia.co.jp/pipermail/sml/attachments/20070906/1334c6eb/asBlock.bin">http://www.akademia.co.jp/pipermail/sml/attachments/20070906/1334c6eb/asBlock.bin</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007313.html">[SML 7313] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7312">[ 日付 ]</a>
+              <a href="thread.html#7312">[ スレッド ]</a>
+              <a href="subject.html#7312">[ 件名 ]</a>
+              <a href="author.html#7312">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

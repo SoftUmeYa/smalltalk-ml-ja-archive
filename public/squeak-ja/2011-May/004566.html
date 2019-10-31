@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4566] Re: BitBltの録画・再生が完全には成功しない
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204566%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FQml0Qmx0GyRCJE5PPzJoISY6RkA4JCw0MEE0JEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE9ALjh5JDckSiQkGyhC%3F%3D&In-Reply-To=%3Cuvcxhgmw9.wl%25yoshiki%40vpri.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004565.html">
+   <LINK REL="Next"  HREF="004568.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4566] Re: BitBltの録画・再生が完全には成功しない</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204566%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FQml0Qmx0GyRCJE5PPzJoISY6RkA4JCw0MEE0JEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE9ALjh5JDckSiQkGyhC%3F%3D&In-Reply-To=%3Cuvcxhgmw9.wl%25yoshiki%40vpri.org%3E"
+       TITLE="[Squeak-ja: 4566] Re: BitBltの録画・再生が完全には成功しない">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2011年 5月 12日 (木) 02:36:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004565.html">[Squeak-ja: 4565] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+        <LI>次の記事 <A HREF="004568.html">[Squeak-ja: 4568] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4566">[ 日付 ]</a>
+              <a href="thread.html#4566">[ スレッド ]</a>
+              <a href="subject.html#4566">[ 件名 ]</a>
+              <a href="author.html#4566">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Wed, 11 May 2011 18:46:21 +0900,
+Hiroki Horiuchi wrote:
+&gt;<i> 
+</I>&gt;<i> こんにちは。
+</I>&gt;<i> 
+</I>&gt;<i> 以前ブログに書いたように、PharoでBitBltを録画・再生する実験を行っていま
+</I>&gt;<i> すが、完全には成功していません。どのようにしたらうまく行きますか?
+</I>
+  面白い企画ですね。中身は良く見ていませんが、おそらくはBalloonCanvas
+まわりではないかと予想されます。たとえば、Squeak 4.2イメージで、MVC
+Projectを開き、そのなかで同様の処理をした場合はいかがでしょうか。
+
+  もしそれで動くとすれば、asBalloonCanvasのsendersを見て、
+BalloonCanvas経由で描画しているところをFormCanvasの機能でエミュレート
+するようにするとよいかもしれません。
+
+-- Yoshiki
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004565.html">[Squeak-ja: 4565] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+	<LI>次の記事 <A HREF="004568.html">[Squeak-ja: 4568] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4566">[ 日付 ]</a>
+              <a href="thread.html#4566">[ スレッド ]</a>
+              <a href="subject.html#4566">[ 件名 ]</a>
+              <a href="author.html#4566">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4559] Re: 組み込み用のSqueak VMについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204559%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQUgkXzl%2BJF9NUSROGyhCU3F1ZWFrIFZN%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=%3C67E833D4-0214-466B-AAAE-9EE315E32EEF%40itolab.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004557.html">
+   <LINK REL="Next"  HREF="004564.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4559] Re: 組み込み用のSqueak VMについて</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204559%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQUgkXzl%2BJF9NUSROGyhCU3F1ZWFrIFZN%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=%3C67E833D4-0214-466B-AAAE-9EE315E32EEF%40itolab.com%3E"
+       TITLE="[Squeak-ja: 4559] Re: 組み込み用のSqueak VMについて">itoh-private ＠ itolab.com
+       </A><BR>
+    <I>2011年 5月  9日 (月) 20:15:02 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004557.html">[Squeak-ja: 4557] Re:	組み込み用のSqueak VMについて
+</A></li>
+        <LI>次の記事 <A HREF="004564.html">[Squeak-ja: 4564] BitBltの録画・再生が完全には成功しない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4559">[ 日付 ]</a>
+              <a href="thread.html#4559">[ スレッド ]</a>
+              <a href="subject.html#4559">[ 件名 ]</a>
+              <a href="author.html#4559">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部さん
+
+伊藤です。こんにちは。
+早速の情報ありがとうございます。
+以前に聞いた覚えがあるのは、まさにご指摘のものです。
+プログラムによるアセンブラ出力でしたか。残念です。
+
+On 2011/05/09, at 20:08, Kazuhiro ABE wrote:
+
+&gt;<i> 阿部です。
+</I>&gt;<i> PICでSmalltalkということだと、少し古いですがPIC/Smalltalkがあります。
+</I>&gt;<i> <A HREF="http://www.huv.com/uSeeker/smalltalk/pic.html">http://www.huv.com/uSeeker/smalltalk/pic.html</A>
+</I>&gt;<i> IDEとしてSqueak 2.8を用いアセンブラを書き出すようです。
+</I>&gt;<i> PIC上で直接Smalltalkが動くわけではないのでご希望とは異なると思いますがご参考まで。
+</I>&gt;<i> 
+</I>&gt;<i> //abee
+</I>&gt;<i> --
+</I>&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i> 
+</I>&gt;<i> 2011年5月9日19:52 Eiichiro Ito &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">itoh-private ＠ itolab.com</A>&gt;:
+</I>&gt;&gt;<i> 山梨学院大学の伊藤です。
+</I>&gt;&gt;<i> たびたびすみません。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> メールを出しておいて気づいたのですが、MicroSqueakの配布物の中に
+</I>&gt;&gt;<i> VMソースがありますね。あわてて見過ごしておりました。すみません。
+</I>&gt;&gt;<i> ということで、VMに関する情報は別として、この方面の実績について
+</I>&gt;&gt;<i> お尋ねできればと思います。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> よろしくお願いいたします。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> On 2011/05/09, at 19:22, Eiichiro Ito wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 山梨学院大学の伊藤です。Squeakerの皆さんこんにちは。
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 現在、とある機器にSqueakを組み込んで使いたいと思っています。
+</I>&gt;&gt;&gt;<i> imageとしてはMicroSqueakを利用しようと考えているのですが、対応する
+</I>&gt;&gt;&gt;<i> VMの選定について悩んでおります。Readmeには2.8から3.2あたりを使えと
+</I>&gt;&gt;&gt;<i> 書かれておりUnix VMのソースをsqueakvm.orgから取って眺めております。
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 以前にこのMLかどこかで、PIC等のマイコンに組み込んだという話を聞いた
+</I>&gt;&gt;&gt;<i> 気がするのですが、ご存知の方はいらっしゃいますでしょうか。
+</I>&gt;&gt;&gt;<i> また、同様の試みをされている方がいらっしゃったら、ぜひVMのバージョン
+</I>&gt;&gt;&gt;<i> やビルドなどアドバイスいただけるとありがたいです。
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> いつも質問ばかりですみません。
+</I>&gt;&gt;&gt;<i> よろしくお願いいたします。
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>
+</PRE>
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004557.html">[Squeak-ja: 4557] Re:	組み込み用のSqueak VMについて
+</A></li>
+	<LI>次の記事 <A HREF="004564.html">[Squeak-ja: 4564] BitBltの録画・再生が完全には成功しない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4559">[ 日付 ]</a>
+              <a href="thread.html#4559">[ スレッド ]</a>
+              <a href="subject.html#4559">[ 件名 ]</a>
+              <a href="author.html#4559">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2809] Re: Tweakについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202809%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFR3ZWFrGyRCJEskRCQkGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=20060122175643.748B.FLORIAN%40seagreen.ocn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002807.html">
+   <LINK REL="Next"  HREF="002810.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2809] Re: Tweakについて</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202809%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFR3ZWFrGyRCJEskRCQkGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=20060122175643.748B.FLORIAN%40seagreen.ocn.ne.jp"
+       TITLE="[Squeak-ja: 2809] Re: Tweakについて">tak ＠ metatoys.org
+       </A><BR>
+    <I>2006年 1月 22日 (日) 23:25:35 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002807.html">[Squeak-ja: 2807] Re: Tweakについて
+</A></li>
+        <LI>次の記事 <A HREF="002810.html">[Squeak-ja: 2810] Re: Tweak について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2809">[ 日付 ]</a>
+              <a href="thread.html#2809">[ スレッド ]</a>
+              <a href="subject.html#2809">[ 件名 ]</a>
+              <a href="author.html#2809">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+
+大変素晴らしいお話だと思います。私もちょっと間別の物にかまけていて 
+Tweak から離れていましたが、最近また復活しました。今 Twaek 本家イメージ
+とは少し違ったイメージで作業しているのですが、出来るだけ本家にフィードバック
+しますので思った事があれば教えて下されば大変励みになります。
+
+&gt;<i> ・Tweakが或る程度固まりそうな目処
+</I>&gt;<i> 　一応公式サイトによると「アメリカの新学期に間に合わせるために2005年8月
+</I>&gt;<i> にTweak 1.0を、日本の新学期に間に合わせるために2006年の早期にTweak 1.1を
+</I>&gt;<i> リリース」とは書かれてありますが、これらについては実情はどのようになって
+</I>&gt;<i> いるのでしょうか？(先の6665がTweak 1.0でしょうか？)
+</I>
+実はしばらく Tweak のメーリングリストも読んでなかったので、開発スピー
+ドがどんな物なのかまだ判断つかないです。もうちょっと待っていただければ
+お答え出来ると思います。ちなみに、リリース予定とは関係無くいつの間にか
+バージョン番号があがっています。
+1.0 - 最初に公開されたもの。
+1.1 - Croquet にマージされた 3.6 ベースのもの
+1.2 - 3.8 ベースのもの。
+
+&gt;<i> 　また、これは実装としてはどのような物になる予定かご存じの方はいらっしゃ
+</I>&gt;<i> いますでしょうか？
+</I>&gt;<i> 　また、以前阿部さんにお話を伺ったところによると、Squeak上でのエミュレー
+</I>&gt;<i> ション(の様な物)を離れてTweak単体で動く形が本来の姿とのことでしたが、こ
+</I>&gt;<i> れが、Tweak 1.1の目標である「自分自身でプログラミングアクティビティが完
+</I>&gt;<i> 結(公式サイトより)」なのでしょうか？
+</I>
+これも判断つかないですが、今の Morphic と Tweak が混在している状態はそ
+れなりに使えるので、確実な計画を立てるのであれば Morphic のブラウザを
+使う事を考えた方が良いと思います。逆に、ある日から急に Morphic のブラ
+ウザが使えなくなる状況は予想しなくて良いとです(今でもダウンロード出来る
+Squeak 2.8 あたりの、Morphic と MVC が混在している状況を見て想像して下さい)。
+
+&gt;<i> ・不足している部品
+</I>&gt;<i> 　現在Squeak3.8がMorphとして持っている部品(ヴィジェット)は、Tweak上にす
+</I>&gt;<i> べては実装されていないと思われますが、これらのもののうち、以下の機能は実
+</I>&gt;<i> 装の予定があるかどうか、ご存じの方はいらっしゃいますでしょうか？
+</I>&gt;<i> 
+</I>&gt;<i> 	ジョイスティックモーフ(特に、Squeak3.8ではなく、Squeakland2005J
+</I>&gt;<i> のボタン等機能を持った物)
+</I>
+具体的にジョイスティックモーフをいつ作るかは聞いたことが無いです。ジョ
+イスティックくらい自分で作った方が早いと思いますよ。
+
+&gt;<i> ・Croquetとの関係
+</I>&gt;<i> 　Tweak自体はアプリケーションフレームワークとして見ていますが、Croquetと
+</I>&gt;<i> の関係はどのようになるのでしょうか？
+</I>&gt;<i> 　CroquetはTweakのイベントアーキティクチャとは無関係に実装を続ける予定な
+</I>&gt;<i> のでしょうか？
+</I>
+作っているアンドレアスさんは、簡単にくっつくような事を言っています。
+
+&gt;<i> 　あと、今回個人的に立ち上げようとしているこのプロジェクトの企画書等ほし
+</I>&gt;<i> い方がいらっしゃいましたらご連絡ください。
+</I>
+大変興味があります。是非下さい！
+
+-- 
+Takashi Yamamiya := <A HREF="http://metatoys.org/">http://metatoys.org/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002807.html">[Squeak-ja: 2807] Re: Tweakについて
+</A></li>
+	<LI>次の記事 <A HREF="002810.html">[Squeak-ja: 2810] Re: Tweak について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2809">[ 日付 ]</a>
+              <a href="thread.html#2809">[ スレッド ]</a>
+              <a href="subject.html#2809">[ 件名 ]</a>
+              <a href="author.html#2809">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,146 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Nov  3 18:43:33 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 03 Nov 2011 18:43:33 +0900
+Subject: [SML 7976] Re:
+ 第37回Smalltalk勉強会＠京都
+In-Reply-To: <4EA89E62.6000609@cc.kyoto-su.ac.jp>
+References: <4EA89E62.6000609@cc.kyoto-su.ac.jp>
+Message-ID: <4EB26245.7020405@cc.kyoto-su.ac.jp>
+
+京都で行っているSmalltalk勉強会(第37回)の報告です。
+
+現在、窓MVC（PaneMVC）を用いたフーリエ信号処理（1次元と2次元の離散フーリエ変換のGUI）に取り組んでいます。
+昨夜、皆さんで作成したプログラムや勉強会ログなどをアップロードしておきました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto37
+
+様々な信号（波）のフーリエ変換の結果やパワースペクトル、そして、逆変換した結果も可視化できるようになりました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/ChirpSignal.png
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/SampleWave.png
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/SawtoothWave.png
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/SquareWave.png
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/images/TriangleWave.png
+
+来月からは本格的なインタラクション（GUIプログラミング）に着手する予定です。おたのしみに！
+
+--- 青木淳＠京都宇治
+
+
+(11/10/27 8:57), AOKI Atsushi wrote:
+> 第37回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto37
+>
+> 場所(部屋)は京都産業大学サテライト講習室(6階第3講習室)になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第37回 Smalltalk勉強会＠京都
+> 日時：2011年11月02日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ変換のGUI)を続けたいと思います。スペクトル表示とペインレイアウトの算段をしております。いつものごとく、勉強会に参加している皆さん全員で一緒にプログラミングしてゆきます。ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>
+> --- 青木淳
+
+From ume ＠ softumeya.com  Wed Nov 16 22:16:41 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 16 Nov 2011 22:16:41 +0900
+Subject: [SML 7977]
+	第38回Smalltalk勉強会
+Message-ID: <CAH3eEdQQb+PxaK3_gKDd-9yR6gz35XsrUKvk2BN6o+qCRMoHxA@mail.gmail.com>
+
+こんにちは梅澤です。
+定例のSmalltalk勉強会のお知らせです。
+日時: 2011/11/30(水) 19:00-21:00 (2時間)場所: シンコム・システムズ・ジャパン株式会社テキスト:
+「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。http://www.smalltalk-users.jp/Home/gao-zhi/dai38kaismalltalkbenkyoukai
+前回に引き続きScratch系ですが、Smalltalkでつなぐということで、開発者も楽しめる内容となっています。
+ヱンガワ システムズの横川さんが発表されます。
+
+タイトル: 「Scrattino = Scratch + Arduino」
+内容: ScratchとArduinoをSmalltalkでつなぐツールScrattinoを紹介し、その内部で使われているソケット通信やシリアル通信、Arduinoライブラリを解説します。
+
+参加表明は特に必要ありません。ふらりとお越しください。--
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Nov 30 06:47:38 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 30 Nov 2011 06:47:38 +0900
+Subject: [SML 7978]
+	第38回Smalltalk勉強会＠京都
+Message-ID: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+
+第38回Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+
+場所(部屋)が変わりまして、キャンプラ2階の第3会議室になります。
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+
+第38回 Smalltalk勉強会＠京都
+日時：2011年12月07日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第3会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+マウスによるインタラクションのデザインとプログラミングを進
+め、窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ
+変換のGUI)を続けたいと思います。また、Serge Stinckwichさんが
+来られる予定ですので、AmberやPharoなどのSmalltalkについてプレ
+ゼンテーションをしていただこうと思います。ノート型のパーソナ
+ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+--- 青木淳＠京都上賀茂
+
+From serge.stinckwich ＠ gmail.com  Wed Nov 30 09:45:36 2011
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 30 Nov 2011 09:45:36 +0900
+Subject: [SML 7979] Re:
+	第38回Smalltalk勉強会＠京都
+In-Reply-To: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+References: <4ED552FA.5010506@cc.kyoto-su.ac.jp>
+Message-ID: <CAOysuxUFHCPkL3ogUXeA_47iXOWdq+YZPcb91M2H7HvTMZ+zNA@mail.gmail.com>
+
+2011/11/30 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 第38回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto38
+>
+> 場所(部屋)が変わりまして、キャンプラ2階の第3会議室になります。
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1610&frmCd=14-1-0-0-0
+>
+> 第38回 Smalltalk勉強会＠京都
+> 日時：2011年12月07日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第3会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> マウスによるインタラクションのデザインとプログラミングを進
+> め、窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ
+> 変換のGUI)を続けたいと思います。また、Serge Stinckwichさんが
+> 来られる予定ですので、AmberやPharoなどのSmalltalkについてプレ
+> ゼンテーションをしていただこうと思います。ノート型のパーソナ
+> ルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+I will come :-)
+I propose to Aoki-san to do a small presentation of Amber Smalltalk:
+http://amber-lang.net/
+a new Smalltalk based on JavaScript that runs in a web browser.
+
+If you some of you are interested, i could organized also a TDD
+(Test-Driven Development) Coding Dojo:
+http://web.cs.wpi.edu/~gpollice/Dojo.html
+It's a really fun experience.
+
+Regards,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Matsuno Laboratory, Kyoto University, Japan (until 12/2011)
+http://www.mechatronics.me.kyoto-u.ac.jp/
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+

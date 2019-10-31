@@ -1,0 +1,31 @@
+From aoki ＠ sra.co.jp  Sat Nov  5 18:48:25 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7124] Jun655 for Smalltalk
+Message-ID: <436C7FE9.9090700@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+じゅんの新バージョン【Jun655 for Smalltalk】を公開しました。
+
+http://www.sra.co.jp/public/sra/technical/jun/
+
+平面と直線に反射を計算する機能を付加しました。
+
+http://www.sra.co.jp/smalltalk/jun/Topics/Reflection/
+
+なお、VisualWorks 7.4 に合わせて、パーセルバージョンを 17 に
+上げてありますので、7.3.1 および 5i.4 をお使いの方々は、対応
+するパーセルを、間違えないようにリトリーブしてください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+    - Jun655pcl.zip   (parcel for VisualWorks 7.4  )
+    - Jun655pcl73.zip (parcel for VisualWorks 7.3.x)
+    - Jun655pcl5i.zip (parcel for VisualWorks 5i.x )
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4570] Re: BitBltの録画・再生が完全には成功しない
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204570%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FQml0Qmx0GyRCJE5PPzJoISY6RkA4JCw0MEE0JEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE9ALjh5JDckSiQkGyhC%3F%3D&In-Reply-To=%3Cupqnoh5g9.wl%25yoshiki%40vpri.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004569.html">
+   <LINK REL="Next"  HREF="004572.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4570] Re: BitBltの録画・再生が完全には成功しない</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204570%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FQml0Qmx0GyRCJE5PPzJoISY6RkA4JCw0MEE0JEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE9ALjh5JDckSiQkGyhC%3F%3D&In-Reply-To=%3Cupqnoh5g9.wl%25yoshiki%40vpri.org%3E"
+       TITLE="[Squeak-ja: 4570] Re: BitBltの録画・再生が完全には成功しない">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2011年 5月 12日 (木) 14:07:50 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004569.html">[Squeak-ja: 4569] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+        <LI>次の記事 <A HREF="004572.html">[Squeak-ja: 4572] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4570">[ 日付 ]</a>
+              <a href="thread.html#4570">[ スレッド ]</a>
+              <a href="subject.html#4570">[ 件名 ]</a>
+              <a href="author.html#4570">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Thu, 12 May 2011 11:15:34 +0900,
+Hiroki Horiuchi wrote:
+&gt;<i> 
+</I>&gt;<i> On 2011年05月12日 02:36, Yoshiki Ohshima wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; 面白い企画ですね。
+</I>&gt;<i> 
+</I>&gt;<i> ありがとうございます。励みになります。
+</I>&gt;<i> 
+</I>&gt;<i> &gt; たとえば、Squeak 4.2イメージで、MVC
+</I>&gt;<i> &gt; Projectを開き、そのなかで同様の処理をした場合はいかがでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> MVCプロジェクト内でウィンドウタイトルは、正常に表示されました。
+</I>
+  Displayや他のFormを操作するためのエンジンとしては、昔からのBitBltの
+他にBalloonEngineというものがあって、グラデーションやアンチエイリア
+シング付のポリゴン描画などはそちらが使われるようになっています。これが
+補足されていないために完全になっていないのではないかと推測しています。
+
+&gt;<i> &gt; もしそれで動くとすれば、asBalloonCanvasのsendersを見て、
+</I>&gt;<i> &gt; BalloonCanvas経由で描画しているところをFormCanvasの機能でエミュレート
+</I>&gt;<i> &gt; するようにするとよいかもしれません。
+</I>&gt;<i> 
+</I>&gt;<i> これがよくわかりません。あてずっぽうで、BalloonCanvas&gt;&gt;asBalloonCanvasを
+</I>&gt;<i> 削除したところ、結果は同じ(グラデーションが再現されない)でした。
+</I>&gt;<i> FormCanvas&gt;&gt;asBalloonCanvasを^ self や^ self copyにしたところ、システム
+</I>&gt;<i> がフリーズしました。
+</I>
+FormCanvas&gt;&gt;drawPolygon:fillStyle:borderWidth:borderColor:
+
+drawPolygon: vertices fillStyle: aFillStyle borderWidth: bw borderColor: bc
+	&quot;Use a BalloonCanvas&quot;
+	self asBalloonCanvas 
+		drawPolygon: vertices asArray
+		fillStyle: (self shadowColor ifNil:[aFillStyle])
+		borderWidth: bw 
+		borderColor: bc
+
+というようになっているので、asBalloonCanvasが自分自身を返すと無限ルー
+プになってしまいますね。
+
+  BalloonCanvas経由の描画をどのように完全に補足するかというのはちょっ
+と考える必要がありますね。原理的には、copyBitsを補足するのと同様に、
+#flushの前でのEngineの状態をコピーすることでできるのかもしれませんが。
+
+-- Yoshiki
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004569.html">[Squeak-ja: 4569] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+	<LI>次の記事 <A HREF="004572.html">[Squeak-ja: 4572] Re: BitBltの録画・再生が完全には成功しない
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4570">[ 日付 ]</a>
+              <a href="thread.html#4570">[ スレッド ]</a>
+              <a href="subject.html#4570">[ 件名 ]</a>
+              <a href="author.html#4570">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

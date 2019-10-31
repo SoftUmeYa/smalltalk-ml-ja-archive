@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2790] Re: Scamperのリファクタリングしました。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202790%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjYW1wZXIbJEIkTiVqGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUlISUvJT8laiVzJTAkNyReJDckPyEjGyhC%3F%3D&In-Reply-To=029a01c61053%2426403570%240b01a8c0%40DDCR691X">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002789.html">
+   <LINK REL="Next"  HREF="002791.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2790] Re: Scamperのリファクタリングしました。</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202790%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjYW1wZXIbJEIkTiVqGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUlISUvJT8laiVzJTAkNyReJDckPyEjGyhC%3F%3D&In-Reply-To=029a01c61053%2426403570%240b01a8c0%40DDCR691X"
+       TITLE="[Squeak-ja: 2790] Re: Scamperのリファクタリングしました。">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2006年 1月  3日 (火) 19:56:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002789.html">[Squeak-ja: 2789] Scamperのリファクタリングしました。
+</A></li>
+        <LI>次の記事 <A HREF="002791.html">[Squeak-ja: 2791] Re: Scamperのリファクタリングしました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2790">[ 日付 ]</a>
+              <a href="thread.html#2790">[ スレッド ]</a>
+              <a href="subject.html#2790">[ 件名 ]</a>
+              <a href="author.html#2790">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+  明けましておめでとうございます。
+
+&gt;<i> ところで、クラスの名前を変えたりと大きな変更をしたところ、チェンジセットがうまく機能しなくなってしまいました。
+</I>&gt;<i> チェンジセットを別のイメージで読み込むと、途中で、
+</I>&gt;<i> UndefinedObject(Object)&gt;&gt;doesNotUnderstand: #methodsFor:stamp:
+</I>&gt;<i> で止まってしまうのですが、これはどんな時に起こるのでしょうか？
+</I>
+  普通は、イメージ内に存在しないクラスのメソッド定義がchange set内にあ
+るときに起こります。クラス名の変更も本当はちゃんとチェンジセットの頭と
+おしりのところでつじつまが合うようにしてくれるはずですが、何か問題があ
+るかもしれませんね。
+
+  問題の対処法は色々あり得ますが、然るべき名前のクラスを定義してからそ
+のチェンジセットをロードしてみるか、あるいはチェンジセットをエディタで
+編集することが考えられます。
+
+  これからもよろしくお願いします。
+
+-- Yoshiki
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002789.html">[Squeak-ja: 2789] Scamperのリファクタリングしました。
+</A></li>
+	<LI>次の記事 <A HREF="002791.html">[Squeak-ja: 2791] Re: Scamperのリファクタリングしました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2790">[ 日付 ]</a>
+              <a href="thread.html#2790">[ スレッド ]</a>
+              <a href="subject.html#2790">[ 件名 ]</a>
+              <a href="author.html#2790">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

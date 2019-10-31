@@ -1,0 +1,1945 @@
+From abee.abe ＠ nifty.ne.jp  Mon Aug  1 00:08:24 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2562] シリアルポートを制御するモーフ
+In-Reply-To: <42EB4C71.9060903@m2.pbc.ne.jp>
+References: <JG200507301154336.2351765@mars.dti.ne.jp>
+	<42EB4C71.9060903@m2.pbc.ne.jp>
+Message-ID: <42ECE968310.5B4FABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+超簡単なシリアルポートを制御するモーフを作りました。
+どのくらい簡単かというと、エラーハンドリングもしていないくらいです。
+
+添付のSerialPort.zipを展開して得られるSerialPort.morphをSqueakにドロップ
+するとメニューが開くので「モーフを読み込みます」を選びます。Nihongo7でテ
+ストしました。
+このモーフ自体はただの四角形なので、ビューワのスクリプトで操作します。使
+い方はなんとなく分かると思います。モデムをお持ちの方は、そのポート番号を
+使ってテストするとよいでしょう。送信する文字列にバックスラッシュが含まれ
+るとCRとして扱われます。たとえば、「ati3\」みたいな感じです。
+
+新しいクラスも作っておらず、eToysのスクリプトをSmalltalkで書くことで実現
+しています。ポート番号は引数で変えられますが、ボーレートやスタートビット、
+ストップビットなどはハードコードです。
+こんなものですが、ちょっとしたモデムやロボットの制御にはあると便利かもし
+れません。拡張してお使いください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SerialPort.zip
+型:         application/x-zip-compressed
+サイズ:     13045 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050801/b4245960/SerialPort.bin
+From shortsleeved ＠ mac.com  Mon Aug  1 21:03:19 2005
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2563] Re: Goodies&Toys の一部をNihongo7で動くようにしてみました
+In-Reply-To: <2E881330-9B6A-4145-9E18-30BA9CFFE8A3@mac.com>
+References: <2E881330-9B6A-4145-9E18-30BA9CFFE8A3@mac.com>
+Message-ID: <4C5B98C8-5DBB-4ED9-AD2C-988076CC494E@mac.com>
+
+shortsleevedです。
+
+だいぶ間が空いてしまいましたが、
+
+On 2005/07/23, at 10:08, shortsleeved wrote:
+
+> りません。CodeReview は  
+> MethodReview>>doTempVariable:name: に手を入れる必要があるそう 
+> なのですが、添付のものはそこまでやってません。というか、どうい 
+> うふうに手を入れればいいのか分かってないです。
+
+ブログ経由で対応をご教示いただいたので、修正してみました。
+今回は、以下で公開してみました。
+
+   http://homepage.mac.com/shortsleeved/FileSharing3.html
+
+なにか変なこと頃があったら教えてください。
+
+
+From abee.abe ＠ nifty.ne.jp  Tue Aug  2 00:47:56 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2564] Re: はじめまして　東京学芸大学の学生です
+In-Reply-To: <20050730050239.14609.qmail@web902.mail.yahoo.co.jp>
+References: <20050730050239.14609.qmail@web902.mail.yahoo.co.jp>
+Message-ID: <42EE442CF2.0954ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 30 Jul 2005 14:02:39 +0900 (JST)
+菊池 佑太<fine1983_0111_thanks_kikuchi@yahoo.co.jp> wrote:
+>東京学芸大学の菊池と申します。９月に東京学芸大学附属小学
+>校でsqueakの授業を行う予定で、現在superswikiを導入してい
+>るところです。授業対象が小学生ということもあり、まずはsuperswiki
+>のwebページを日本語化しなければならないと考えたのですが
+>、編集の仕方がよくわかりません。特に、添付のページと検索
+>のページを日本語化したいのですが、近くにswiki関係に詳し
+>い人間がいないもので困っております。恐縮な事と思いますが
+>、詳しくご存知の方いらっしゃいましたら教えて頂けないでし
+>ょうか。　よろしくお願いします。
+
+SuperSwikiに詳しいというわけではないのですが、皆さんがSwikiの日本語化の際
+に用いた方法が参考になると思います。伊藤先生やma2takさんがそのためのリソー
+スを提供されていましたが、今は見られないようです。鷲見さんのものは以下に
+あります。他にも「Swiki 日本語化」で検索するといくつかの情報が見つかりま
+す。
+
+http://sumim.no-ip.com:8080/collab/37
+
+ただし、SuperSwikiは古いSwiki 1.1をベースにしているため、そのままでは使え
+ないと思われます。また、galleryなどはSuperSwikiにしかないため、リソースが
+ありません(もしかしたら誰か作っているかも)。また、Smalltalkの知識がないと
+ちょっと難しいかもしれません。
+
+私は、それが面倒なこともあって(他にも日本語作品名の問題などもあります)、
+SuperSwikiを小学生のワークショップで使うときはWebを使わずに Squeakの中か
+らナビゲータの「公開する」と「探す」を使ってアクセスしています。これだと
+サムネイルが見れないなどの制限はありますが、ワークショップの運営上は特に
+問題ありません。
+
+授業は大変だと思いますががんばってください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+
+From "土本 (Florian) 強  Tue Aug  2 02:09:53 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2565] Re: Squeaker夜の集い
+In-Reply-To: <JH200507210930207.3569343@mars.dti.ne.jp>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>
+Message-ID: <20050802020803.E80F.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんばんは。土本( Florian )です。
+
+メール「[Squeak-ja: 2538] Squeaker夜の集い」(2005/07/21 09:30) に於いて
+「Masashi Umezawa」 語りて曰く、
+
+Masashi> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方は
+Masashi> 私か、このML宛にお返事いただければと思います。
+
+　ネタが提供できるほどは最近Squeakに触れていないのですが、参加させてくだ
+さい。
+　あ、そういえばLLDNの昼の部にすら登録してないような……。
+
+　よろしくお願いします。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From hachi ＠ asu.ac.jp  Tue Aug  2 09:24:02 2005
+From: hachi ＠ asu.ac.jp (H.Hachisuka)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2566] Re: はじめまして　東京学芸大学の学生です
+In-Reply-To: <20050730050239.14609.qmail@web902.mail.yahoo.co.jp>
+References: <20050730050239.14609.qmail@web902.mail.yahoo.co.jp>
+Message-ID: <42EEBD22.6050302@asu.ac.jp>
+
+蜂須賀＠愛知産業大学です。
+
+久しぶりに戻ってきました。
+
+　私たちも小学生対象でパソコンサークルというのを行う際にsuperswikiの日
+本語化をえた事がありますので、参考になるかもしれないと思いメールさせ
+て頂きました。古かったらごめんなさい。
+
+　私の知っているsuperswikiには、そもそも"swiki browser"なるものがなかっ
+たので、直接ファイルを変更しなくてはいけなかった記憶があります。
+
+　そのファイルですが、"Squeak.exe" と "swiki.image" のあるフォルダにある
+"swiki フォルダ" を開いて、更に"refs フォルダ"を開き、"templates フォル
+ダ"を開きます。
+　そうすると、妙な拡張子のファイルが沢山あるかと思いますが、その中の、
+"search.book" というのが検索時に使用されるページのテンプレートですので、
+そいつを日本語化すればページの日本語化はできたように記憶しています。
+　ちなみに、添付(upload)のページは、同じフォルダ中の"uploads.book" だっ
+たと思います。実際のパスは以下のような感じだったと思います。
+
+検索ページ: swiki\refs\templates\search.book
+添付ページ: swiki\refs\templates\uploads.book
+ボタンの画像: swiki\default\files\blue\*.gif
+ギャラリ: swiki\super\templates\gallery.book ,
+swiki\super\actions\gallery.book
+
+　変更をした場合は、superswikiを再起動しないと反映されませんので気を付け
+て下さい。
+
+　ギャラリのページも同様の方法で日本語化できると思いますが、阿部さんの言
+われるとおり、見た目の日本語化はできるかもしれませんが、作品名への日本語
+などの"処理に関わる部分"までやろうとすると、気合いを入れて取り組まないと
+難しいと思います（自分の経験では.....）。
+　しかし、相手が小学生という事を考えると、作品名を英語という訳にはいかな
+いと思いますので、そのあたりが悩ましいところと思います。
+
+　以前、私たちも小学生対象のパソコンサークルでsqueakを使いたいという一心
+で「ひらがな版squeakの作成」「squeak+superswiki環境での日本語使用」
+「superswikiの日本語化」を目指していたのですが、最後のsuperswikiの日本語
+化については実現にまで至りませんでした。
+
+　時間の制約も理由の一つですが、前者の２つは必須と思っていましたが、最後
+の「superswikiの日本語化」は必須と思っていなかったのも原因の一つと思って
+います。必須と位置づけていれば実現できたかもしれません....
+
+　そんな事もあって、今のところは、阿部さんと似ているのですが、作品を見せ
+る時はナビゲータの「探す」を使うか、事前に作品を取り込んでおいて見せるよ
+うにしています。
+
+
+-- 
+/*
+　愛知産業大学 事務部ITサポート室
+　蜂須賀 仁志 / e-mail: hachi@asu.ac.jp
+                jpnic handle: HH420JP
+　444-0005 愛知県岡崎市岡町原山12-5
+　TEL: 0564-48-4511 FAX: 0564-48-7756
+*/
+
+
+
+
+From fine1983_0111_thanks_kikuchi ＠ yahoo.co.jp  Thu Aug  4 10:22:02 2005
+From: fine1983_0111_thanks_kikuchi ＠ yahoo.co.jp (菊池 佑太)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2567] はじめまして　東京学芸大学の学生です
+In-Reply-To: <42EEBD22.6050302@asu.ac.jp>
+Message-ID: <20050804012202.16698.qmail@web903.mail.yahoo.co.jp>
+
+東京学芸大学の菊池です。
+阿部さん、蜂須賀さん、大変丁寧なご説明ありがとうございま
+した。簡単に修正箇所が見つかり、授業の準備が進みそうです
+。
+
+私が在籍する研究室の研究テーマに関するキーワードを申し上
+げますと、Squeak,Logo,Dolittleを用いた情報教育の実践、Squeak,Logo
+の実践に関する教員研修案の作成、CSCLによる子供たちの協調
+学習支援（社会的構成主義の育成）、といったところでしょう
+か。
+
+９月から研究室の学生全員で東京学芸大学附属小学校、中学校
+で総合的な学習の時間内もしくはパソコンクラブで数時間Squeak,Logo,Dolittle
+を実践する予定です。現在は授業実践のために授業案を試行錯
+誤中なのですが、授業の目標として、プログラミングを通して
+生きる力（創造力、表現力、問題解決能力）を身につけさせる
+事が良いのか、アニメーションの作成に重点を置くのか、いや
+、プログラミング自体が一番重要であるといったように意見が
+多様にあります。
+
+このように私の研究室ではピアジェの心理学から、swiki導入
+の技術的な面まで様々な活動を行っていますが、私は技術面担
+当なので今回はswikiについてこちらのMLに投稿させていただ
+きました。
+
+以上簡単な現状の説明となります。似たような経験をお持ちの
+方に御意見等書き込んで頂けたら大変嬉しく思います。
+
+
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From makoto ＠ kobe-u.ac.jp  Thu Aug  4 17:54:27 2005
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2568] SqueakToys講習会の報告
+Message-ID: <20050804175427.707853.86dedf25@kobe-u.ac.jp>
+
+神戸大学発達科学部の高橋真です。はじめまして
+
+私はNHK ETV特集「これからの科学、これからの社会〜京都賞歴代受賞者から
+のメッセージ」を見て、SqueakToys に関心をもちました。私自身まだわからない
+ことがたくさんある状態ですが、私の所属する学部の学生や院生にも紹介しようと
+考え、昨日SqueakToysの講習会を実施しました。
+http://www.h.kobe-u.ac.jp/event/2005/lecture_20050803.html
+
+参加者は広報が足りなかったことや集中講義等と重なったこともあり５名と少人
+数でした。時間も短かったのですが、参加者がこちらの予想よりPCの操作に習熟
+していたためDrive a car まで行うことができ、それなりに参加者の皆さんは楽し
+んでくれたようでした。
+Squeak-jaをはじめとして、Web上で得られるSqueakの情報をたよりになんとか
+実施することができました。多くの方の活動に感謝します。
+
+また、神戸大学発達科学部（正確には大学院総合人間科学研究科）では今年より
+ヒューマン・コミュニティ創成研究センターを発足させましたが、そのサテライト
+施設として神戸市と協力して、子育て支援をきっかけにした共生のまちづくりを
+めざす施設「あーち」を開設します。
+http://www2.kobe-u.ac.jp/~zda/arch-prep.html
+
+９月３日にオープニング・セレモニーを行いますが、午後の部でサイエンスカフェ
+の一つとして、Squeakのデモを行う予定です。どれくらいの方に興味をもって
+もらえるかわかりませんが、多くの方にSqueakの面白さを知っていただけたらと
+思います。
+
+それでは今後ともよろしくお願いいたします。
+
+--------------------------------------------------------------
+高橋　真　　E-mail makoto@kobe-u.ac.jp
+神戸大学発達科学部人間環境学科 数理情報環境論
+
+From abee.abe ＠ nifty.ne.jp  Thu Aug  4 18:37:13 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2569] Re: SqueakToys 講習会の報告
+In-Reply-To: <20050804175427.707853.86dedf25@kobe-u.ac.jp>
+References: <20050804175427.707853.86dedf25@kobe-u.ac.jp>
+Message-ID: <42F1E1C92CA.76AFABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+高橋先生、はじめまして。よろしくお願いいたします。
+神戸大学にはずいぶん前、京大/NICTの田中克己先生がいらっしゃった頃にお邪魔
+したことがあります。
+
+On Thu, 4 Aug 2005 17:54:27 +0900
+TAKAHASHI Makoto <makoto@kobe-u.ac.jp> wrote:
+>私はNHK ETV特集「これからの科学、これからの社会〜京都賞歴代受賞者から
+>のメッセージ」を見て、SqueakToys に関心をもちました。私自身まだわからない
+>ことがたくさんある状態ですが、私の所属する学部の学生や院生にも紹介しようと
+>考え、昨日SqueakToysの講習会を実施しました。
+>http://www.h.kobe-u.ac.jp/event/2005/lecture_20050803.html
+
+最近は各地の取り組みが盛んに行われるようになり、大変ありがたいことだと思
+っております。
+
+>参加者は広報が足りなかったことや集中講義等と重なったこともあり５名と少人
+>数でした。時間も短かったのですが、参加者がこちらの予想よりPCの操作に習熟
+>していたためDrive a car まで行うことができ、それなりに参加者の皆さんは楽し
+>んでくれたようでした。
+>Squeak-jaをはじめとして、Web上で得られるSqueakの情報をたよりになんとか
+>実施することができました。多くの方の活動に感謝します。
+
+ここ数年の間で、得られる情報が飛躍的に増えたと思います。
+
+>また、神戸大学発達科学部（正確には大学院総合人間科学研究科）では今年より
+>ヒューマン・コミュニティ創成研究センターを発足させましたが、そのサテライト
+>施設として神戸市と協力して、子育て支援をきっかけにした共生のまちづくりを
+>めざす施設「あーち」を開設します。
+>http://www2.kobe-u.ac.jp/~zda/arch-prep.html
+>
+>９月３日にオープニング・セレモニーを行いますが、午後の部でサイエンスカフェ
+>の一つとして、Squeakのデモを行う予定です。どれくらいの方に興味をもって
+>もらえるかわかりませんが、多くの方にSqueakの面白さを知っていただけたらと
+>思います。
+
+ご存知かも知れませんが、日本ヒューレット・パッカードが行っている社会貢献
+活動に各地の学校への機器の寄贈や社内ボランティア組織「HP-Squeakers」によ
+る授業支援があります。私もこのお手伝いをしています。
+
+http://h50146.www5.hp.com/info/newsroom/pr/fy2005/fy05-008.html
+
+神戸市では須磨区の西落合小学校が対象となっており、熱心な先生やボランティ
+アを中心に取り組みが始まっています。大学と小学校が連携する形は、京都や三
+重でも行われており、神戸大学とあーち、あるいは関西で活動されているほかの
+皆さんと連携できれば面白いのではないかと思います。もしご興味がおありでし
+たらご紹介しますのでよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Thu Aug  4 20:10:08 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2570] Re: はじめまして　東京学芸大学の学生です
+In-Reply-To: <20050804012202.16698.qmail@web903.mail.yahoo.co.jp>
+References: <42EEBD22.6050302@asu.ac.jp>
+	<20050804012202.16698.qmail@web903.mail.yahoo.co.jp>
+Message-ID: <42F1F790386.76B4ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 4 Aug 2005 10:22:02 +0900 (JST)
+菊池 佑太<fine1983_0111_thanks_kikuchi@yahoo.co.jp> wrote:
+>私が在籍する研究室の研究テーマに関するキーワードを申し上
+>げますと、Squeak,Logo,Dolittleを用いた情報教育の実践、Squeak,Logo
+>の実践に関する教員研修案の作成、CSCLによる子供たちの協調
+>学習支援（社会的構成主義の育成）、といったところでしょう
+>か。
+
+興味深いですね。CSCWの教育版ですか。Squeakでも協調は重要なテーマで、
+NebraskaやCroquetなどのプロジェクトが進められています。
+
+>９月から研究室の学生全員で東京学芸大学附属小学校、中学校
+>で総合的な学習の時間内もしくはパソコンクラブで数時間Squeak,Logo,Dolittle
+>を実践する予定です。現在は授業実践のために授業案を試行錯
+>誤中なのですが、授業の目標として、プログラミングを通して
+>生きる力（創造力、表現力、問題解決能力）を身につけさせる
+>事が良いのか、アニメーションの作成に重点を置くのか、いや
+>、プログラミング自体が一番重要であるといったように意見が
+>多様にあります。
+
+これはSqueakを実践されている人はみな感じている問題だと思います。私たちは
+子供がアニメーションにはまって、スクリプトを書かなくなることを、「アニメー
+ション・ブラックホール」と呼んでいます。私の知っている一番すごい事例は、
+テトリスの動きをすべてアニメーションで再現したものでした。入れ物の中身は
+100個近かったと思います。
+確かに、アニメーションは面白いものですが、このように、本来スクリプトで表
+現すべきことまでやってしまう傾向があります(余談ですが、アニメーションで重
+要なのは「以下を加える」の概念らしいです。確かにこれは応用範囲が広い)。
+子供たちにはまずやりたいことがあり、それを実現する手段として、一番やりや
+すい方法を選択しているのようです。スクリプトに対する理解が不十分な場合、
+安直な手段としてアニメーションに流れるということでしょう。それは和田小の
+振り子の例にもありました。
+
+http://pc.watch.impress.co.jp/docs/2005/0621/hp.htm
+(彼を少し弁護すると、最初は確かに純粋なアニメーションでしたが、最終的には
+回転軸をずらして振り子を回し、球の接触を色で判定してスクリプトを制御して
+いました。ただし、まだ力学的なシミュレーションにはなっていません)
+
+どうすれば、ブラックホールに陥らないかを考えたとき、Drive a Carに代表され
+るカリキュラムに従った基本的なスクリプティング技術の習得が大切だと思いま
+す。ワークショップでは、時間的な制約もあり、作品の発表を重視することも多
+いので理解は二の次になりがちですが、ちゃんと意味を分かってもらいたい思い
+ます。
+これをないがしろにして作られた作品を見ると、確かに動きや絵が面白かったり
+しますが、実は適当にタイルを並べて偶然できたものだったりします。気をつけ
+ないといけないのは、そのような作品に大人も(先生も)だまされやすいというこ
+とです(子供たちがのびのびと創造性が発揮している!)。確かにみんなハッピーで
+すが、これだと一過性のお祭りのようなイベントに終わって、将来の発展性があ
+りません。ブラックホールへの道です。
+
+とはいえ、スクリプティングが目的という訳でもありません。スクリプティング
+自体はコンピュータにおける読み書き能力(リテラシ)ですから、手段に過ぎませ
+ん。では、本当の目的はなにかというと、アランさんやキムさんが言うには
+real science, real mathということになるのでしょう。これに限らず、たとえば
+先日行った多摩美のワークショップのようにアートやデザインを目的としてもよ
+いと思います。
+要は、なにか解決すべき問題に当たったとき、単に既存のアプリケーションを使
+うだけでなく、メタメディア、ダイナミックメディアとして、コンピュータを使
+うことができるようになればよいのだろうと考えています。
+
+>このように私の研究室ではピアジェの心理学から、swiki導入
+>の技術的な面まで様々な活動を行っていますが、私は技術面担
+>当なので今回はswikiについてこちらのMLに投稿させていただ
+>きました。
+
+Squeakはピアジェ、パパート、ブルーナー、モンテッソーリなどの思想を背景に
+していると言われていますが、不勉強なものでいつも場当たり的なワークショッ
+プ運営に終始しています。
+
+>以上簡単な現状の説明となります。似たような経験をお持ちの
+>方に御意見等書き込んで頂けたら大変嬉しく思います。
+
+こちらこそ、どうぞ色々教えてください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From nishis ＠ zephyr.dti.ne.jp  Fri Aug  5 00:37:13 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2571] SqueakNihongo7 と PostgreSQL 接続
+Message-ID: <42F23629.9080900@zephyr.dti.ne.jp>
+
+困ったときの何とやらで申し訳ないですが，
+SqueakNihongo7 上で PostgreSQL と接続している方はいらっしゃいますか？
+現状では，日本語環境を載せた Squeak との接続は一筋縄では行かないんでしょ
+うか．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From abee.abe ＠ nifty.ne.jp  Fri Aug  5 00:47:06 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2572] スクイークランド .jp 停止のお知らせ
+Message-ID: <42F2387A2E9.33F1ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+停電のため、2005/8/12(金) 20:00 から 8/16(火) 13:00まで、スクイークランド
+.jpが停止します。ご迷惑をお掛けしますが、よろしくお願いします。 
+
+http://squeakland.jp/
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Fri Aug  5 02:33:04 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2573] IT スクール  2005
+In-Reply-To: <20040901192641.3230c1%ko1@namikilab.tuat.ac.jp>
+References: <4132BBDFD2.79D1ABEE.ABE@smtp.nifty.com>
+	<20040901192641.3230c1%ko1@namikilab.tuat.ac.jp>
+Message-ID: <42F2515029C.33F4ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+文部科学省が、高校生を対象に発想力等を伸ばすきっかけとして、8/1-6に大阪で
+実施しているITスクールにおいて、昨年に続き今年もSqueakが使われているよう
+です(並木クラス。なぜかSqueakとは明記されず「フリーのオブジェクト指向ソフ
+ト」とあります)。
+
+http://itschool.nttls.co.jp/
+
+昨年はチュータとして参加された農工大のささださんからこのMLに投稿がありま
+した。
+
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-September/001797.html
+
+今年は学生の引率として参加されている大藤先生のblogに連日内容がアップされ
+ています。
+
+http://blog.ofg.jp/
+
+# たぶん武田先生のいらっしゃるところとかなり近い場所に勤務されているよう
+# な気がします。
+
+去年もすごかったみたいですが、これを読む限り今年もなかなかのようです(どう
+やってネットワーク対戦を実現しているのか不思議。まさかNetMorphか)。
+
+大藤先生の作られた作品の一部はプロジェクト置き場にアップされています。ど
+れも今までになかった趣向のものです。
+
+http://swikis.ddo.jp/abee/3#bottom
+
+しばらく目が離せません。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From takeda ＠ kwansei.ac.jp  Fri Aug  5 10:37:45 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2574] アニメーション・ブラックホール（Re: はじめまして　東京学芸大学の学生です）
+In-Reply-To: <42F1F790386.76B4ABEE.ABE@smtp.nifty.com>
+References: <42EEBD22.6050302@asu.ac.jp>
+	<20050804012202.16698.qmail@web903.mail.yahoo.co.jp>
+	<42F1F790386.76B4ABEE.ABE@smtp.nifty.com>
+Message-ID: <2D214784-1721-4A53-83B9-D881DDB54252@kwansei.ac.jp>
+
+
+武田＠関西学院大学です。
+
+On 2005/08/04, at 20:10, Kazuhiro ABE wrote:
+
+> これはSqueakを実践されている人はみな感じている問題だと思 
+> います。私たちは
+> 子供がアニメーションにはまって、スクリプトを書かなくなること 
+> を、「アニメー
+> ション・ブラックホール」と呼んでいます。私の知っている一番すご 
+> い事例は、
+>
+
+「アニメーション・ブラックホール」。いやな表現ですね。
+
+これを聞いて、ワークショップに参加した子どもや、参加させた親は
+どう思うでしょう？（「ブラックホール」をつくってしまったワーク 
+ショップの
+講師（ファシリテーター）も）
+
+嫌いになったり、劣等感を持ったりしませんか？
+
+Squeakはパパート由来なんですから、「楽しい」優先でやってほしいし、
+楽しくつづけていれば、正しいディレクションによって戻ってこれるの 
+では
+ないでしょうか。だから、「ブラックホール」ではない。
+
+> どうすれば、ブラックホールに陥らないかを考えたとき、Drive a  
+> Carに代表され
+> るカリキュラムに従った基本的なスクリプティング技術の習得が大切 
+> だと思いま
+> す。
+
+これはその通りだと思います。
+特に、「進んで」「回る」ところをていねいにやっていただきたいと思 
+います。
+
+ここを端折って円だけ描いておわっちゃうと次につながりにくいような
+気がします。このへんは、ロゴそのものですから。
+
+> Squeakはピアジェ、パパート、ブルーナー、モンテッソーリなどの思 
+> 想を背景に
+> していると言われていますが、不勉強なものでいつも場当たり的な 
+> ワークショッ
+> プ運営に終始しています。
+
+パパートの「マインドストーム」は読んで損がないと思います。
+
+
+武田俊之
+
+
+From io_oj ＠ ybb.ne.jp  Fri Aug  5 10:42:30 2005
+From: io_oj ＠ ybb.ne.jp (Hisashi Tagawa)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2575] Re: SqueakNihongo7 と PostgreSQL 接続
+In-Reply-To: <42F23629.9080900@zephyr.dti.ne.jp>
+Message-ID: <20050805014230.66909.qmail@web10908.mail.bbt.yahoo.co.jp>
+
+田川＠鳥取です。
+一応ご報告までに。
+
+Nihongo6.1でPostgreSQLに繋いで、日本語を含むデータをやり
+とりしています。
+少なくともNihongo6.1では特に問題はないように思います。
+
+Nihongo7でもテスト(TestPGConnection)を走らせてみましたが
+、一応全部通ってます。
+環境:
+	SqueakNihongo7 開発者版 (Windows)
+	PostgreSQL 8.0 (Windows)
+ライブラリ
+	PostgreSQL Client for Squeak
+コード修正:
+	PGConnection class>buildDefaultConnectionArgs
+	を自分のDBにあわせた
+
+--
+田川尚士
+io_oj@ybb.ne.jp
+
+From makoto ＠ kobe-u.ac.jp  Fri Aug  5 11:18:31 2005
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2576] Re: SqueakToys 講習会の報告
+In-Reply-To: <42F1E1C92CA.76AFABEE.ABE@smtp.nifty.com>
+References: <20050804175427.707853.86dedf25@kobe-u.ac.jp>
+	<42F1E1C92CA.76AFABEE.ABE@smtp.nifty.com>
+Message-ID: <20050805111831.415073.dddbecf9@kobe-u.ac.jp>
+
+高橋真＠神戸大学発達科学部です。
+
+阿部さんコメントありがとうございます。
+
+++ Kazuhiro ABEさんの『[Squeak-ja: 2569] Re: SqueakToys 講習会の報告』
+| (Thu, 04 Aug 2005 18:37:13 +0900)の件について
+--
+> ご存知かも知れませんが、日本ヒューレット・パッカードが行っている社会貢献
+> 活動に各地の学校への機器の寄贈や社内ボランティア組織「HP-Squeakers」によ
+> る授業支援があります。私もこのお手伝いをしています。
+
+日本ヒューレット・パッカードの活動については、和田小学校の記事等を通じて
+知っていましたが、神戸市の西落合小学校でも行われていることは知りませんで
+した。
+
+> 神戸市では須磨区の西落合小学校が対象となっており、熱心な先生やボランティ
+> アを中心に取り組みが始まっています。大学と小学校が連携する形は、京都や三
+> 重でも行われており、神戸大学とあーち、あるいは関西で活動されているほかの
+> 皆さんと連携できれば面白いのではないかと思います。もしご興味がおありでし
+> たらご紹介しますのでよろしくお願いします。
+
+私も取り組み始めたばかりですので、各地で活動をされている方と連携できれば
+ありがたいです。「あーち」ではデモばかりでなく、定期的にサイエンスカフェ
+を開くことになっていますので、その際にHP-Squeakersの方々のご支援をいた
+だけるのであれば非常にありがたいです。こちらの組織のものとも相談して紹介
+をお願いすることになるかもしれませんが、そのときはよろしくお願いします。
+
+話題は変わりますが、「[Squeak-ja: 2573] IT スクール  2005」で紹介された
+大藤先生のblogを読みました。頼もしいというかすごいですね。
+
+--------------------------------------------------------------
+高橋　真　　E-mail makoto@kobe-u.ac.jp
+神戸大学発達科学部人間環境学科 数理情報環境論
+
+From takeda ＠ kwansei.ac.jp  Fri Aug  5 20:41:04 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2577] Re: SqueakToys 講習会の報告
+In-Reply-To: <20050805111831.415073.dddbecf9@kobe-u.ac.jp>
+References: <20050804175427.707853.86dedf25@kobe-u.ac.jp>
+	<42F1E1C92CA.76AFABEE.ABE@smtp.nifty.com>
+	<20050805111831.415073.dddbecf9@kobe-u.ac.jp>
+Message-ID: <BD6B1A36-828F-4161-B010-A8EF7AB590F3@kwansei.ac.jp>
+
+武田＠関西学院大学です。
+
+On 2005/08/05, at 11:18, TAKAHASHI Makoto wrote:
+
+> 私も取り組み始めたばかりですので、各地で活動をされている方と連 
+> 携できれば
+
+ご近所ですし、連携できるといいですね。
+
+「あーち」期待しています。
+
+--
+武田俊之
+関西学院大学情報メディア教育センター
+
+From makoto ＠ kobe-u.ac.jp  Sat Aug  6 22:00:23 2005
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2578] Re: SqueakToys 講習会の報告
+In-Reply-To: <BD6B1A36-828F-4161-B010-A8EF7AB590F3@kwansei.ac.jp>
+References: <20050804175427.707853.86dedf25@kobe-u.ac.jp>
+	<42F1E1C92CA.76AFABEE.ABE@smtp.nifty.com>
+	<20050805111831.415073.dddbecf9@kobe-u.ac.jp>
+	<BD6B1A36-828F-4161-B010-A8EF7AB590F3@kwansei.ac.jp>
+Message-ID: <20050806220023.758792.679a7df8@kobe-u.ac.jp>
+
+高橋真＠神戸大学発達科学部です。
+
+++ Takeda Toshiyukiさんの『[Squeak-ja: 2577] Re: SqueakToys 講習会の報告』
+| (Fri, 5 Aug 2005 20:41:04 +0900)の件について
+--
+>> 私も取り組み始めたばかりですので、各地で活動をされている方と連携できれば
+> 
+> ご近所ですし、連携できるといいですね。
+
+そのような機会があればよろしくお願いします。
+
+> 「あーち」期待しています。
+
+ありがとうございます。
+
+ワークショップではなく、デモとして見せるものとしてDrive a car以外にどのような
+ものを用意をしたらよいか考慮中です。自分でしてみたいという希望があればもちろん
+作品を作ってもらいますが、見せるものとしては何がよいでしょうか。
+５歳から１０歳までの子供とその親の世代が対象になると思います。
+
+みなさん、なにかよいアイディアがあればぜひお聞かせください。
+
+From abee.abe ＠ nifty.ne.jp  Sun Aug  7 03:59:38 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2579] Re: アニメーション・ブラックホール（ Re: はじめまして　東京学芸大学の学生です）
+In-Reply-To: <2D214784-1721-4A53-83B9-D881DDB54252@kwansei.ac.jp>
+References: <42F1F790386.76B4ABEE.ABE@smtp.nifty.com>
+	<2D214784-1721-4A53-83B9-D881DDB54252@kwansei.ac.jp>
+Message-ID: <42F5089A3BC.47AAABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 5 Aug 2005 10:37:45 +0900
+Takeda Toshiyuki <takeda@kwansei.ac.jp> wrote:
+>「アニメーション・ブラックホール」。いやな表現ですね。
+
+私はそんなに悪い言葉とは思わないです。
+
+>これを聞いて、ワークショップに参加した子どもや、参加させた親は
+>どう思うでしょう？（「ブラックホール」をつくってしまったワーク 
+>ショップの
+>講師（ファシリテーター）も）
+>
+>嫌いになったり、劣等感を持ったりしませんか？
+
+そうでしょうか。私はブラックホールという言葉に対してそんなにネガティブな
+印象を持っていません。議論するのに何か言葉は必要でしょう。
+
+もちろん、アニメーションをやっている子供に「こんなのじゃだめだ!」とか言っ
+てるわけではないですよ。念の為。
+アニメーションに限らず、講師やファシリテータは常に問題意識が必要と思いま
+す。
+
+>Squeakはパパート由来なんですから、「楽しい」優先でやってほしいし、
+>楽しくつづけていれば、正しいディレクションによって戻ってこれるの 
+>では
+>ないでしょうか。だから、「ブラックホール」ではない。
+
+そうです。もどってこれます。最近はブラックホールから出てくる粒子も見つかっ
+ているそうですし。
+
+楽しいにもいろいろな楽しさがあると思うのですね。アランさんのいうところの
+ソフトファン(野球を見るなど)とハードファン(野球をプレイするなど)とか。ハー
+ドファンの方がもっと楽しいような気がするということです。
+
+>> どうすれば、ブラックホールに陥らないかを考えたとき、Drive a  
+>> Carに代表され
+>> るカリキュラムに従った基本的なスクリプティング技術の習得が大切 
+>> だと思いま
+>> す。
+>
+>これはその通りだと思います。
+>特に、「進んで」「回る」ところをていねいにやっていただきたいと思 
+>います。
+>
+>ここを端折って円だけ描いておわっちゃうと次につながりにくいような
+>気がします。このへんは、ロゴそのものですから。
+
+はい。円を描く専用機能と思われがちなので、一般化というか普遍化してもらう
+にはどうしたらよいかいつも考えています。一気にバリエーションをたくさん見
+せすぎてもオーバーフローしてしまうし。
+
+>パパートの「マインドストーム」は読んで損がないと思います。
+
+いちおう読んではいるのですが(なのでこの前の来日がキャンセルになったのは残
+念でした)、読み直しは必要と思っています。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Sun Aug  7 04:18:24 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2580] Re: SqueakToys 講習会の報告
+In-Reply-To: <20050806220023.758792.679a7df8@kobe-u.ac.jp>
+References: <BD6B1A36-828F-4161-B010-A8EF7AB590F3@kwansei.ac.jp>
+	<20050806220023.758792.679a7df8@kobe-u.ac.jp>
+Message-ID: <42F50D0037F.47ABABEE.ABE@smtp.nifty.com>
+
+阿部%新百合@ビューポイントテクノロジーです。
+
+On Sat, 6 Aug 2005 22:00:23 +0900
+TAKAHASHI Makoto <makoto@kobe-u.ac.jp> wrote:
+>ワークショップではなく、デモとして見せるものとしてDrive a car以外にどのような
+>ものを用意をしたらよいか考慮中です。自分でしてみたいという希望があればもちろん
+>作品を作ってもらいますが、見せるものとしては何がよいでしょうか。
+>５歳から１０歳までの子供とその親の世代が対象になると思います。
+>
+>みなさん、なにかよいアイディアがあればぜひお聞かせください。
+
+私がデモするときは、Drive a Carを一通り見せた後に、プロジェクト置き場や和
+田小の作品を分類してお見せしています。
+
+http://swikis.ddo.jp/abee/3
+
+# 和田小の作品については近いうちに公開できるのではないかと思っています。
+
+たとえば、単純な動きをつかったもの、色で判断するもの、アニメーションを使
+ったもの、音を使ったもの、それらを組み合わせたものなどです。
+問題解決には色々な方法があること、Drive a Carの応用で、こんなにいろいろな
+ものができるんだということを知ってもらうと作品作りのモチベーションになり
+ます。
+その後で、大人向けにはSqueakers DVDやPoerful Ideasで紹介されている重力の
+法則の発見の話をして、既存の調べ学習でなく、発見的学習の道具になりうると
+いう感じで締めます。その際、鷲見さんの「雨の中で歩くのと走るのとではどっ
+ちが濡れないか」の話をすることもあります。
+
+http://squab.no-ip.com:8080/zakkan/56#1008
+
+さらに時間があるようなら、応用事例としてのCroquetや大島さんの毛玉、山宮さ
+んの ODECo、私と林さんの世界聴診器なども紹介します。
+
+http://www.opencroquet.org/
+http://www.is.titech.ac.jp/~ohshima/squeak/kedama/
+http://languagegame.org:8080/propella/96
+http://swikis.ddo.jp/WorldStethoscope/2
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From nishis ＠ zephyr.dti.ne.jp  Sun Aug  7 04:38:36 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2581] Re: SqueakNihongo7 と PostgreSQL 接続
+In-Reply-To: <20050805014230.66909.qmail@web10908.mail.bbt.yahoo.co.jp>
+References: <20050805014230.66909.qmail@web10908.mail.bbt.yahoo.co.jp>
+Message-ID: <42F511BC.6030207@zephyr.dti.ne.jp>
+
+on 05.8.5 10:42 AM, Hisashi Tagawa wrote:
+> Nihongo6.1でPostgreSQLに繋いで、日本語を含むデータをやり
+> とりしています。
+> 少なくともNihongo6.1では特に問題はないように思います。
+> 
+> Nihongo7でもテスト(TestPGConnection)を走らせてみましたが
+> 、一応全部通ってます。
+> 環境:
+> 	SqueakNihongo7 開発者版 (Windows)
+> 	PostgreSQL 8.0 (Windows)
+> ライブラリ
+> 	PostgreSQL Client for Squeak
+> コード修正:
+> 	PGConnection class>buildDefaultConnectionArgs
+> 	を自分のDBにあわせた
+
+田川さん，ありがとうございます．
+そちらではクライアントのテストケースは全部通っていますか？
+こちらは Nihongo7 on Mac OSX で動かしていますが，testFunctionCall,
+testFunctionCall2，testFunctionCall3 の三メソッドでプリミティヴ関連でコ
+ケています．
+
+Glorp を使いたいとなると，なんか一筋縄では行かなそうですね……
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From io_oj ＠ ybb.ne.jp  Mon Aug  8 12:37:59 2005
+From: io_oj ＠ ybb.ne.jp (Hisashi Tagawa)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2582] Re: SqueakNihongo7 と PostgreSQL 接続
+In-Reply-To: <42F511BC.6030207@zephyr.dti.ne.jp>
+Message-ID: <20050808033759.91452.qmail@web10904.mail.bbt.yahoo.co.jp>
+
+> そちらではクライアントのテストケースは全部通っています
+か？
+> こちらは Nihongo7 on Mac OSX
+で動かしていますが，testFunctionCall,
+> testFunctionCall2，testFunctionCall3 の三メソッドでプ
+リミティヴ関連でコ
+> ケています．
+こちらでは全て通っています。
+
+> Glorp を使いたいとなると，なんか一筋縄では行かなそうで
+すね……
+こちらでGlorpも試してみましたが、ボコボコにコケてます。
+Glorpの方も修正するとなると、結構大変そうです。
+って何のお役にも立てなくてすみません。。。
+
+--
+田川尚士
+io_oj@ybb.ne.jp
+
+From makoto ＠ kobe-u.ac.jp  Tue Aug  9 15:54:17 2005
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2583] Re: SqueakToys 講習会の報告
+In-Reply-To: <42F50D0037F.47ABABEE.ABE@smtp.nifty.com>
+References: <BD6B1A36-828F-4161-B010-A8EF7AB590F3@kwansei.ac.jp>
+	<20050806220023.758792.679a7df8@kobe-u.ac.jp>
+	<42F50D0037F.47ABABEE.ABE@smtp.nifty.com>
+Message-ID: <20050809155417.386165.88d970be@kobe-u.ac.jp>
+
+高橋真＠神戸大学発達科学部です。
+
+++ Kazuhiro ABEさんの『[Squeak-ja: 2580] Re: SqueakToys 講習会の報告』
+| (Sun, 07 Aug 2005 04:18:24 +0900)の件について
+--
+> 私がデモするときは、Drive a Carを一通り見せた後に、プロジェクト置き場や和
+> 田小の作品を分類してお見せしています。
+> 
+> http://swikis.ddo.jp/abee/3
+> 
+> # 和田小の作品については近いうちに公開できるのではないかと思っています。
+> 
+> たとえば、単純な動きをつかったもの、色で判断するもの、アニメーションを使
+> ったもの、音を使ったもの、それらを組み合わせたものなどです。
+
+子供が多い場合はこのようなものがよいのでしょうね。参考にさせていただきます。
+
+> その後で、大人向けにはSqueakers DVDやPoerful Ideasで紹介されている重力の
+> 法則の発見の話をして、既存の調べ学習でなく、発見的学習の道具になりうると
+> いう感じで締めます。その際、鷲見さんの「雨の中で歩くのと走るのとではどっ
+> ちが濡れないか」の話をすることもあります。
+
+今回は大人向けのものは考えていませんが、「既存の調べ学習でなく、発見的学習
+の道具になりうる」という視点は学部の授業などで扱う場合は重視したいと思います。
+
+> さらに時間があるようなら、応用事例としてのCroquetや大島さんの毛玉、山宮さ
+> んの ODECo、私と林さんの世界聴診器なども紹介します。
+
+このあたりも大変興味がありますが、今のところはまだ手を出せそうにありません。
+
+From mitsuhashi-masaaki ＠ tepsys.co.jp  Wed Aug 10 09:39:29 2005
+From: mitsuhashi-masaaki ＠ tepsys.co.jp (Masaaki Mitsuhashi)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2584] 地球の周囲をひと巻き問題で質問です。
+In-Reply-To: <2D214784-1721-4A53-83B9-D881DDB54252@kwansei.ac.jp>
+References: <42EEBD22.6050302@asu.ac.jp>	<20050804012202.16698.qmail@web903.mail.yahoo.co.jp>	<42F1F790386.76B4ABEE.ABE@smtp.nifty.com>
+	<2D214784-1721-4A53-83B9-D881DDB54252@kwansei.ac.jp>
+Message-ID: <42F94CC1.3020003@tepsys.co.jp>
+
+みつはしです。
+
+パパート氏のマインドストームを読んでいるのですが
+地球の周囲をひと巻き問題で質問です。
+
+円を四角形として余分のひもの長さを直感的に解く
+ということについては、なるほど！と思ったのですが、
+ひとつ疑問があります。
+
+パイの切れのような角の部分についてですが、
+ここは丸くなっていますけれども、どうして丸なのかを
+うまく子供に説明するにはどうすればいいのでしょう。
+
+例えば、高さ h 分をコンパスで取って、丸く線を引いたとして、
+子供は理解できるものなのでしょうか。
+
+私がもし子供だったら、直線的に八角形のように引いてしまうか、
+四角形に引いてしまうか、あるいはまったく引けないか
+になってしまうと思います。
+
+このときに、角の部分が高さ h になってない
+ということをどうすれば子供にわかってもらえるのでしょうか。
+さらに引けない場合はどう教えるべきなのでしょうか。
+
+Takeda Toshiyuki wrote:
+> パパートの「マインドストーム」は読んで損がないと思います。
+-- 
+三橋雅昭 mitsuhashi-masaaki@tepsys.co.jp
+
+From seikis ＠ nike.eonet.ne.jp  Thu Aug 11 23:45:25 2005
+From: seikis ＠ nike.eonet.ne.jp (SeikiSato)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2585] はじめまして
+Message-ID: <42FB6485.4080300@nike.eonet.ne.jp>
+
+はじめまして。佐藤と申します。
+大阪のコンピュータ系専門学校で非常勤講師をやっております。
+
+高校生を対象にSqueakを使って「ゲームを作る」体験学習をやっています。
+1時間半〜2時間の時間枠で基本的な操作からはじめて、最後に簡単なゲームを作
+ります。たとえばこんなの。
+むしむし退治ゲーム
+http://ssato.dyndns.org/~ssato/squeak/mushi.pr
+学生達にモノを創ることの楽しさを少しでも伝えようとがんばっています。
+
+8月27日はLLDNに行きます。昼の部しかチケットが取れなかったので、夜は
+「Squeaker夜の集い」に相方と共に参加しようと思っていますが、私のような新
+参者がヒョイヒョイと顔出していいものやらチト不安になっております(笑)
+
+それでは皆様、今後ともよろしくお願いします。
+-- 
+-- 佐藤成希(SeikiSato) --
+
+From takeda.toshiyuki ＠ gmail.com  Fri Aug 12 21:31:59 2005
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2586] Re: 地球の周囲をひと巻き問題で質問です。
+In-Reply-To: <42F94CC1.3020003@tepsys.co.jp>
+References: <42EEBD22.6050302@asu.ac.jp>
+	<20050804012202.16698.qmail@web903.mail.yahoo.co.jp>
+	<42F1F790386.76B4ABEE.ABE@smtp.nifty.com>
+	<2D214784-1721-4A53-83B9-D881DDB54252@kwansei.ac.jp>
+	<42F94CC1.3020003@tepsys.co.jp>
+Message-ID: <6544a1da05081205313cace75b@mail.gmail.com>
+
+武田です。おもしろい課題ですね。いろいろな対応が考えられると思います。
+
+＃当然、私はどうすればいいか正解を知りませんが、、、
+
+まず、それぞれの発達段階や獲得している知識によって大人の対応が変わること、
+頭の中だけで理解させることはパパートのアプローチではないことは
+
+On 8/10/05, Masaaki Mitsuhashi <mitsuhashi-masaaki@tepsys.co.jp> wrote:
+
+> 例えば、高さ h 分をコンパスで取って、丸く線を引いたとして、
+> 子供は理解できるものなのでしょうか。
+
+理解できていなくてもいいんじゃないでしょうか。
+理解できていないなら、子どもと一緒に探索をはじめられます。
+
+直感的には、立っている棒の間でひもがピンと引っ張られるので直線を引く
+のではないでしょうか。
+
+四角形のときは、ピザ・スライスではなく、直角二等辺三角形になります。
+八角形のときはどうなるか。それをさらに十六角形にすると？
+これを切り取ってつなぎあわせると、どうなるか？
+
+紙を使うのが簡単ですが、EToysでならどうおもしろくできるでしょう？
+
+Drive-A-Carの最初の課題ともつながってきますね。
+
+簡単ですが、とりあえずお返事させていただきました。
+
+武田俊之
+
+From takeda.toshiyuki ＠ gmail.com  Fri Aug 12 21:38:00 2005
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2587] Re: 地球の周囲をひと巻き問題で質問です。
+In-Reply-To: <6544a1da05081205313cace75b@mail.gmail.com>
+References: <42EEBD22.6050302@asu.ac.jp>
+	<20050804012202.16698.qmail@web903.mail.yahoo.co.jp>
+	<42F1F790386.76B4ABEE.ABE@smtp.nifty.com>
+	<2D214784-1721-4A53-83B9-D881DDB54252@kwansei.ac.jp>
+	<42F94CC1.3020003@tepsys.co.jp>
+	<6544a1da05081205313cace75b@mail.gmail.com>
+Message-ID: <6544a1da050812053844e6e14f@mail.gmail.com>
+
+武田です。途中で送信していました。
+
+>  まず、それぞれの発達段階や獲得している知識によって大人の対応が変わること、
+>  頭の中だけで理解させることはパパートのアプローチではないことは
+
+前提であるとしておきます。
+
+を補ってください。すみません。
+
+From abee.abe ＠ nifty.ne.jp  Wed Aug 17 06:27:43 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2588] Re: はじめまして
+Message-ID: <43025A4F3D0.6EADABEE.ABE@smtp.nifty.com>
+
+阿部@セントレアです。
+シカゴのSqueakFestから帰ってきました。
+
+# 皆さんのレポートがあがってます。
+# http://blog.goo.ne.jp/search/search.php?status=select&tg=all&ts=goo&st=time&dp=all&ts=all&da=all&MT=squeakfest&from=web
+
+On Thu, 11 Aug 2005 23:45:25 +0900
+SeikiSato <seikis@nike.eonet.ne.jp> wrote:
+>はじめまして。佐藤と申します。
+>大阪のコンピュータ系専門学校で非常勤講師をやっております。
+
+こちらこそ、はじめまして。
+
+>高校生を対象にSqueakを使って「ゲームを作る」体験学習をやっています。
+>1時間半〜2時間の時間枠で基本的な操作からはじめて、最後に簡単なゲームを作
+>ります。たとえばこんなの。
+>むしむし退治ゲーム
+>http://ssato.dyndns.org/~ssato/squeak/mushi.pr
+>学生達にモノを創ることの楽しさを少しでも伝えようとがんばっています。
+
+なかなかショッキングなゲームですね :-)
+わらわら感がたまりません。
+
+>8月27日はLLDNに行きます。昼の部しかチケットが取れなかったので、夜は
+>「Squeaker夜の集い」に相方と共に参加しようと思っていますが、私のような新
+>参者がヒョイヒョイと顔出していいものやらチト不安になっております(笑)
+
+私は呼びかけ人の梅澤さんではありませんが、もちろんwelcomeと思います。
+SqueakFestに参加された先生も不安がられていましたが、Squeakやっている人に
+怖い人はいないと思います(MLの文面が怖いことはありますが気のせいです)。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From umejava ＠ mars.dti.ne.jp  Wed Aug 17 07:35:09 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2589] Re: はじめまして
+In-Reply-To: <43025A4F3D0.6EADABEE.ABE@smtp.nifty.com>
+References: <43025A4F3D0.6EADABEE.ABE@smtp.nifty.com>
+Message-ID: <JN200508170735093.1985781@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> >8月27日はLLDNに行きます。昼の部しかチケットが取れなかったので、夜は
+> >「Squeaker夜の集い」に相方と共に参加しようと思っていますが、私のような新
+> >参者がヒョイヒョイと顔出していいものやらチト不安になっております(笑)
+
+どうぞお気軽にお越し下さい。カジュアルな会ですので。
+現在のところ、どうやら20名くらいになりそうです。
+
+デモ予定を下記に載せています。
+http://swikis.ddo.jp/umejava/21
+
+> 私は呼びかけ人の梅澤さんではありませんが、もちろんwelcomeと思います。
+> SqueakFestに参加された先生も不安がられていましたが、Squeakやっている人に
+> 怖い人はいないと思います(MLの文面が怖いことはありますが気のせいです)。
+
+そうですとも。根は良い人達ですので、ご安心ください。
+
+---
+[:masashi | ^umezawa]
+
+From abee.abe ＠ nifty.ne.jp  Thu Aug 18 01:24:44 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2590] Re: スクイークランド .jp 停止のお知らせ
+In-Reply-To: <42F2387A2E9.33F1ABEE.ABE@smtp.nifty.com>
+References: <42F2387A2E9.33F1ABEE.ABE@smtp.nifty.com>
+Message-ID: <430364CC10.E32BABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+諸般の事情でまだ再開されていません。今のところ8/18(木)の午後には復旧の予
+定です。ご迷惑をお掛けしますが今しばらくお待ちください。
+
+On Fri, 05 Aug 2005 00:47:06 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>停電のため、2005/8/12(金) 20:00 から 8/16(火) 13:00まで、スクイークランド
+>.jpが停止します。ご迷惑をお掛けしますが、よろしくお願いします。 
+>
+>http://squeakland.jp/
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Fri Aug 19 00:17:19 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2591] Re: スクイークランド .jp 停止のお知らせ
+In-Reply-To: <430364CC10.E32BABEE.ABE@smtp.nifty.com>
+References: <42F2387A2E9.33F1ABEE.ABE@smtp.nifty.com>
+	<430364CC10.E32BABEE.ABE@smtp.nifty.com>
+Message-ID: <4304A67F241.D32CABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+さきほど(8/19 00:00頃)、復旧しました。ご迷惑をお掛けして申し訳ありません
+でした。
+
+On Thu, 18 Aug 2005 01:24:44 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>諸般の事情でまだ再開されていません。今のところ8/18(木)の午後には復旧の予
+>定です。ご迷惑をお掛けしますが今しばらくお待ちください。
+>
+>On Fri, 05 Aug 2005 00:47:06 +0900
+>Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>>停電のため、2005/8/12(金) 20:00 から 8/16(火) 13:00まで、スクイークランド
+>>.jpが停止します。ご迷惑をお掛けしますが、よろしくお願いします。 
+>>
+>>http://squeakland.jp/
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From umejava ＠ mars.dti.ne.jp  Sat Aug 20 01:36:38 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2592] Seaside日本語パッチ版
+Message-ID: <JV2005082001363820.8941046@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+久しぶりにSeasideの日本語パッチ版を更新しました。
+http://swikis.ddo.jp/umejava/22
+
+パッチ適用済みイメージなので、展開して起動するだけで、
+即、楽しめます。
+
+今回の更新で、Seaside 2.3から2.5になっています。
+ベースとなっているSqueakイメージはSqueak 3.6からSqueak 3.8に
+なりました。
+
+SqueakでWebアプリを作りたいなと考えている方はぜひお試しください。
+目から鱗の生産性の良さを発揮してくれます。
+(そのうち作り方ページも充実させていく予定です)
+
+Enjoy!
+---
+[:masashi | ^umezawa]
+
+From seikis ＠ nike.eonet.ne.jp  Sat Aug 20 23:29:34 2005
+From: seikis ＠ nike.eonet.ne.jp (SeikiSato)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2593] Re: はじめまして
+In-Reply-To: <JN200508170735093.1985781@mars.dti.ne.jp>
+References: <43025A4F3D0.6EADABEE.ABE@smtp.nifty.com>
+	<JN200508170735093.1985781@mars.dti.ne.jp>
+Message-ID: <43073E4E.2010000@nike.eonet.ne.jp>
+
+阿部さん、梅澤さん
+こんばんは。佐藤＠非常勤講師です。
+SqueakFestaお疲れ様でした。
+LLDNもいよいよ来週ですね。楽しみにしております。もちろん夜の集いも。
+
+-- 佐藤成希(SeikiSato) --
+
+From abee.abe ＠ nifty.ne.jp  Mon Aug 22 09:06:41 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2594] Re: Squeaker 夜の集い
+In-Reply-To: <JB200507292353535.8986406@mars.dti.ne.jp>
+References: <42EA3D97.8090800@m2.pbc.ne.jp>
+	<JB200507292353535.8986406@mars.dti.ne.jp>
+Message-ID: <43091711284.ABC3ABEE.ABE@mail.kg8.so-net.ne.jp>
+
+阿部@新百合です。
+
+On Fri, 29 Jul 2005 23:53:53 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>デモの予定は下記で見ることが出来ます。
+>http://swikis.ddo.jp/umejava/21
+
+公開パスワードにしてもらえると書き換えられて嬉しいかも。
+
+# 褌が憶測を呼んでいるようなので直したかったり。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From umejava ＠ mars.dti.ne.jp  Mon Aug 22 12:13:08 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2595] Re: Squeaker 夜の集い
+In-Reply-To: <43091711284.ABC3ABEE.ABE@mail.kg8.so-net.ne.jp>
+References: <42EA3D97.8090800@m2.pbc.ne.jp>
+	<JB200507292353535.8986406@mars.dti.ne.jp>
+	<43091711284.ABC3ABEE.ABE@mail.kg8.so-net.ne.jp>
+Message-ID: <JO200508221213086.12853796@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Mon, 22 Aug 2005 09:06:41 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+> 阿部@新百合です。
+> 
+> On Fri, 29 Jul 2005 23:53:53 +0900
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> >デモの予定は下記で見ることが出来ます。
+> >http://swikis.ddo.jp/umejava/21
+> 
+> 公開パスワードにしてもらえると書き換えられて嬉しいかも。
+> 
+> # 褌が憶測を呼んでいるようなので直したかったり。
+
+では、パスワードをsqueakerにしておきます。
+http://swikis.ddo.jp/umejava/21
+
+よろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+
+From abee.abe ＠ nifty.ne.jp  Tue Aug 23 18:34:32 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2596] SSS2005 で京大の皆様がベストプレゼンテーション賞を受賞
+Message-ID: <430AEDA81DD.E556ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2005/8/21-23に北海道で開催された情報処理学会・コンピュータと教育研究会情
+報教育シンポジウム Summer Symposium in Shiribeshi 2005(SSS2005)で、京都大
+学大学院の藤岡 健史 先生、高田 秀志 先生、喜多 一 先生の発表、「Squeak
+eToyを用いた問題解決型情報科学教育カリキュラムの開発と評価」が「SSS2005プ
+レゼンテーション賞」を受賞したようです。おめでとうございます。
+
+http://ce.tt.tuat.ac.jp/index.php?SSS2005
+
+たぶんTIDEや堀川高校での取り組みについてのものだと思うのですが、よろしけ
+れば内容を教えていただけると嬉しいです。
+
+http://www.highedu.kyoto-u.ac.jp/jkp/jugyo024-kita/jugyo024-kita.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2004-December/002032.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-July/002492.html
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Tue Aug 23 23:38:54 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2597] Rubyist Magazine 創刊一周年記念コメント募集
+Message-ID: <430B34FE2F5.E558ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Squeak-jaのメンバでもあるRubyist Magazine編集のささださんから、Rubyist
+Magazineの一周年を記念したコメントをもらえないかとの依頼をSqueakland.jpの
+管理者宛に受けました。このコメントは9月初旬発行予定のRubyist Magazine
+0009号（2005-9）に掲載されるとのことです。
+
+締め切りは8/26(応相談)、長さの指定はありません。内容は叱咤激励のみならず、
+同じく一周年を迎える日本Rubyの会へのコメントや、Squeakコミュニティの宣伝
+でも構わないとのことです。
+
+我こそはと思われる方がいらっしゃいましたら、私までのご連絡ください。依頼
+内容のメールを転送します。なんとなく鷲見さんが相応しいような気がしていま
+す。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From sumi ＠ seagreen.ocn.ne.jp  Wed Aug 24 10:27:08 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2598] Re: Rubyist Magazine 創刊一周年記念コメント募集
+In-Reply-To: <430B34FE2F5.E558ABEE.ABE@smtp.nifty.com>
+Message-ID: <BF31FBFC.368A2%sumi@seagreen.ocn.ne.jp>
+
+阿部さん、ごきげんよう。鷲見です。
+
+on 08/23/05 23:38, abee.abe@nifty.ne.jp wrote:
+
+> 鷲見さんが相応しいような気が
+
+気のせいです(^_^;)。　梅澤さんは駄目ですか？　私はこういうときには
+梅澤さんが相応しいと思いますし、業界でも著名な梅澤さんなら、Rubyist
+Magazine 側もうれしいのではないでしょうか。
+
+--
+Masato Sumi
+
+
+From pxd05610 ＠ ybb.ne.jp  Wed Aug 24 10:44:41 2005
+From: pxd05610 ＠ ybb.ne.jp (Iwao Kanesashi)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2599] Re: Squeaker夜の集い
+In-Reply-To: <JH200507210930207.3569343@mars.dti.ne.jp>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>
+Message-ID: <DBC5A84D65263Fpxd05610@ybb.ne.jp>
+
+金刺です
+
+直前でしかも、見るだけ:-)で申し訳ないのですが、参加させていただきます。
+
+以上よろしくお願いします
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Aug 24 13:59:21 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2600] Re: Rubyist Magazine 創刊一周年記念コメント募集
+In-Reply-To: <BF31FBFC.368A2%sumi@seagreen.ocn.ne.jp>
+References: <BF31FBFC.368A2%sumi@seagreen.ocn.ne.jp>
+Message-ID: <JT200508241359215.25060359@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Wed, 24 Aug 2005 10:27:08 +0900
+Masato Sumi <sumi@seagreen.ocn.ne.jp> wrote:
+> 阿部さん、ごきげんよう。鷲見です。
+> 
+> on 08/23/05 23:38, abee.abe@nifty.ne.jp wrote:
+> 
+> > 鷲見さんが相応しいような気が
+> 
+> 気のせいです(^_^;)。　梅澤さんは駄目ですか？　私はこういうときには
+> 梅澤さんが相応しいと思いますし、業界でも著名な梅澤さんなら、Rubyist
+> Magazine 側もうれしいのではないでしょうか。
+> 
+
+私は、Rubyに関しては普段ほとんど触っていませんので、その辺りが気になります。
+できればRubyとSqueakを同時にwatchしている人で、かつ著名な人というのが
+ベストマッチでしょうね。
+
+たぶんその辺りが念頭にあって、阿部さんが鷲見さんを挙げておられるのだと
+思います。鷲見さんも十分に業界の有名人ですし。
+
+とはいえ候補を出すのが難しいようであれば、私がやります。ちょっとした
+コメント程度ですよね? (意外とすごい分量だったりして)
+
+---
+[:masashi | ^umezawa]
+
+From abee2 ＠ yahoo.co.jp  Wed Aug 24 14:55:25 2005
+From: abee2 ＠ yahoo.co.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2601] Re: Rubyist Magazine 創刊一周年記念コメント募集
+In-Reply-To: <JT200508241359215.25060359@mars.dti.ne.jp>
+Message-ID: <20050824055525.7525.qmail@web3211.mail.bbt.yahoo.co.jp>
+
+阿部@横浜です。
+
+鷲見さん、梅澤さん、ありがとうございます。
+それでは今回は梅澤さんにお願いしたいと思います。ささださ
+んのメールを転送しますので、よろしくお願いします。
+
+//abee
+
+From sumi ＠ seagreen.ocn.ne.jp  Wed Aug 24 16:49:51 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2602] Re: Rubyist Magazine 創刊一周年記念コメント募集
+In-Reply-To: <20050824055525.7525.qmail@web3211.mail.bbt.yahoo.co.jp>
+Message-ID: <BF3255AF.368D2%sumi@seagreen.ocn.ne.jp>
+
+阿部さん、梅澤さん、ご面倒をおかけします。鷲見です。
+
+on 08/24/05 14:55, abee2@yahoo.co.jp wrote:
+
+> 今回は梅澤さんにお願いしたいと思います。
+
+わがままを言うようでスミマセン。よろしくお願いします。
+
+--
+Masato Sumi
+
+
+From fujioka ＠ db.soc.i.kyoto-u.ac.jp  Thu Aug 25 00:18:10 2005
+From: fujioka ＠ db.soc.i.kyoto-u.ac.jp (Takeshi FUJIOKA)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2603] SSS2005
+Message-ID: <20050824225008.E3F1.FUJIOKA@db.soc.i.kyoto-u.ac.jp>
+
+堀川高校の藤岡です．ご無沙汰しております．
+
+阿部様，ご紹介いただきありがとうございます↓
+
+> 阿部@新百合です。
+> 
+> 2005/8/21-23に北海道で開催された情報処理学会・コンピュータと教育研究会情
+> 報教育シンポジウム Summer Symposium in Shiribeshi 2005(SSS2005)で、京都大
+> 学大学院の藤岡 健史 先生、高田 秀志 先生、喜多 一 先生の発表、「Squeak
+> eToyを用いた問題解決型情報科学教育カリキュラムの開発と評価」が「SSS2005プ
+> レゼンテーション賞」を受賞したようです。おめでとうございます。
+> 
+> http://ce.tt.tuat.ac.jp/index.php?SSS2005
+> 
+> たぶんTIDEや堀川高校での取り組みについてのものだと思うのですが、よろしけ
+> れば内容を教えていただけると嬉しいです。
+
+
+はい，これは堀川高校での取り組みについて発表したものです．
+
+堀川高校には「探究基礎」という専門科目があります．
+この授業(週2時間)で，生徒達は少人数ゼミ(〜15人程度)に所属し，
+1年半の取組の集大成として生徒個人で研究論文を書くという取組を
+行っています．
+
+この「探究基礎」で私は情報ゼミを開講し，まずはじめに半年弱かけて
+具体的なプロジェクトを通して，Squeak eToy の基礎を教えています．
+このプロジェクトは，現実の問題解決を前提にしたものをできるだけ
+とりいれるようにし，問題解決を体験的に学習することを通して
+コンピュータを使う意義や特徴などを教えています．１年目の授業
+アンケートでは，Squeak eToy はとても楽しいと答えた生徒が大半を占め，
+高校生であってもはじめてプログラミングを学ぶ生徒達にとって
+Squeak eToy は大変有効であることが示唆されました．
+
+また，Squeak eToy と問題解決の基礎を学んだあとは，「探究基礎」の
+最終Goalである個人研究と論文の作成に取り組みます．今回 SSS2005 で
+報告した学年の生徒達はたいへん意欲的に取り組む生徒が多く，
+本実践が始めてのプログラミング経験だったにも関わらず大変良い成果を
+出した生徒もおり，(ひょっとしたらご存知の方もおられるかもしれませんが)
+某科学賞で受賞した論文も出ました．↓
+http://event.yomiuri.co.jp/2005/science_49th/04_shokai_04.htm
+
+ただ良いことばかりではなく，課題も見つかっています．
+(詳しくは論文にも掲載しておりますが)大きい問題の一つは
+生徒間の差がかなり拡大してしまったことです．問題解決がなかなか
+進まずに苦労した生徒もおり，学習環境・教材・指導法等を総合的に
+改良した２年目(現在実践中)ではグループ学習を取り入れたり，
+ポートフォリオをリフレクション（振り返り学習）に活用したりと
+工夫を凝らしながら，生徒の問題解決能力を高めるカリキュラム
+デザインをめざしております．
+
+
+私の研究は実際の公立高校での実践をフィールドとしていることもあり
+なかなか科学的な評価がしにくかったり結果が出るまでに時間がかかる
+ことも多いのですが，ワークショップ等で実践経験豊富な Squeaker の
+方々からもご意見をいただいたり助けていただきながら少しずつですが
+進めています．(先日も京大のWSでも色々とお世話になりました．
+ありがとうございます．) 今後ともまたお世話になるかと思いますが，
+よろしくお願いいたします．
+
+分かりにくい文章ですみません．簡単ながらご報告でした．
+
+
+==============================================
+　藤岡 健史　Takeshi FUJIOKA
+　京都市立堀川高等学校　情報科・数学科
+　http://www.edu.city.kyoto.jp/hp/horikawa/
+==============================================
+
+
+
+From umejava ＠ mars.dti.ne.jp  Thu Aug 25 14:27:34 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2604] LLDNが明後日に開催されます
+Message-ID: <JW2005082514273410.1883156@mars.dti.ne.jp>
+
+こんにちは
+梅澤@LLDNプログラム委員です。
+
+LLDNがいよいよ明後日に迫って参りました。昼の部に関してはまだチケットが余って
+おります。また当日券も若干ございますので、ぜひお越しください。
+
+プログラムも発表されております。
+http://ll.jus.or.jp/2005/details/program
+
+鷲見さんの「どう書く」の規定演技に関しては既に作品がアップされています。
+http://ll.jus.or.jp/2005/files/KanjiDentakuSqueak.zip/file_view
+
+当日残念ながら参加できないという方も、プログラムをダウンロードして
+みると、Squeakの新たな世界がかいま見られるのではないでしょうか。
+
+山宮さんも、「Language Update」できっと度肝を抜いてくれるはずです。
+
+さらに夜には裏企画として、「Squeaker夜の集い」もあります。
+http://swikis.ddo.jp/umejava/21
+#おかげさまで、こちらもかなりの混雑になりそうです。
+
+では。当日お会いしましょう。
+
+---
+[:masashi | ^umezawa]
+
+From abee.abe ＠ nifty.ne.jp  Fri Aug 26 12:50:27 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2605] Re: SSS2005
+In-Reply-To: <20050824225008.E3F1.FUJIOKA@db.soc.i.kyoto-u.ac.jp>
+References: <20050824225008.E3F1.FUJIOKA@db.soc.i.kyoto-u.ac.jp>
+Message-ID: <430E918362.8577ABEE.ABE@smtp.nifty.com>
+
+阿部%新百合@ビューポイントテクノロジーです。
+早速の返信ありがとうございます。
+
+On Thu, 25 Aug 2005 00:18:10 +0900
+Takeshi FUJIOKA <fujioka@db.soc.i.kyoto-u.ac.jp> wrote:
+>> たぶんTIDEや堀川高校での取り組みについてのものだと思うのですが、よろしけ
+>> れば内容を教えていただけると嬉しいです。
+>
+>はい，これは堀川高校での取り組みについて発表したものです．
+>
+>堀川高校には「探究基礎」という専門科目があります．
+>この授業(週2時間)で，生徒達は少人数ゼミ(〜15人程度)に所属し，
+>1年半の取組の集大成として生徒個人で研究論文を書くという取組を
+>行っています．
+
+論文を書くというゴールが設定されているのが重要な気がします。
+目的も対象も異なるので一概に比較できませんが、初等教育における自由課題製
+作の場合は、作品ができて終わりなので、方向性もばらばらで後に続きにくいよ
+うな気がしています。
+
+>この「探究基礎」で私は情報ゼミを開講し，まずはじめに半年弱かけて
+>具体的なプロジェクトを通して，Squeak eToy の基礎を教えています．
+>このプロジェクトは，現実の問題解決を前提にしたものをできるだけ
+>とりいれるようにし，問題解決を体験的に学習することを通して
+>コンピュータを使う意義や特徴などを教えています．１年目の授業
+>アンケートでは，Squeak eToy はとても楽しいと答えた生徒が大半を占め，
+>高校生であってもはじめてプログラミングを学ぶ生徒達にとって
+>Squeak eToy は大変有効であることが示唆されました．
+
+そういうデータがあるのはよいですね。
+他の言語や環境と比較できると面白いと思うのですが、難しいでしょうか。
+
+>また，Squeak eToy と問題解決の基礎を学んだあとは，「探究基礎」の
+>最終Goalである個人研究と論文の作成に取り組みます．今回 SSS2005 で
+>報告した学年の生徒達はたいへん意欲的に取り組む生徒が多く，
+>本実践が始めてのプログラミング経験だったにも関わらず大変良い成果を
+>出した生徒もおり，(ひょっとしたらご存知の方もおられるかもしれませんが)
+>某科学賞で受賞した論文も出ました．↓
+>http://event.yomiuri.co.jp/2005/science_49th/04_shokai_04.htm
+
+これは知りませんでした。すごいですね。
+
+# なんで「エクセル」だけは固有名詞が出ているのだろう。
+
+HP-Squeakersの活動は、今まで個別の学校の対応やセレモニー的なイベントが多
+かったのですが、横のつながりをつくるようなものを始めようという話がありま
+す。11月の文化の日前後のご予定を空けていただけるとよいかもしれません。場
+所は東京になると思います。
+
+>ただ良いことばかりではなく，課題も見つかっています．
+>(詳しくは論文にも掲載しておりますが)大きい問題の一つは
+>生徒間の差がかなり拡大してしまったことです．問題解決がなかなか
+>進まずに苦労した生徒もおり，学習環境・教材・指導法等を総合的に
+>改良した２年目(現在実践中)ではグループ学習を取り入れたり，
+>ポートフォリオをリフレクション（振り返り学習）に活用したりと
+>工夫を凝らしながら，生徒の問題解決能力を高めるカリキュラム
+>デザインをめざしております．
+
+興味深いですね。論文集だけの入手も出来るようなので手に入れてみようと思い
+ます。
+
+http://ce.tt.tuat.ac.jp/index.php?SSS2005#s866d8c5
+
+2月に山宮さんとはこだて未来大でワークショップを行ったとき、学生にリフレク
+ションの習慣が付いていることに驚きました。区切りごとにリフレクションレポー
+トを書いて先生はそれに基づいて指導を行います。
+
+クローズドイベントで申し訳ないのですが、9/4に多摩美とHP-Squeakersのジョイ
+ントワークショップが予定されており、ここでも積極的にリフレクションを取り
+入れようと思っています。
+
+# 前回のワークショップの子供向けアップグレード版になる予定です。
+# http://www.smalltalk.jp/pipermail/squeak-ja/2005-July/002553.html
+
+また、農工大の並木先生が行われている高校生を対象としたITスクールのように
+資質のある子を徹底して伸ばすという方向性も必要なのかなと思ったりもします。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-August/002573.html
+
+>私の研究は実際の公立高校での実践をフィールドとしていることもあり
+>なかなか科学的な評価がしにくかったり結果が出るまでに時間がかかる
+>ことも多いのですが，ワークショップ等で実践経験豊富な Squeaker の
+>方々からもご意見をいただいたり助けていただきながら少しずつですが
+>進めています．(先日も京大のWSでも色々とお世話になりました．
+>ありがとうございます．) 今後ともまたお世話になるかと思いますが，
+>よろしくお願いいたします．
+
+科学的な評価というのはreal scienceを標榜していながらぜんぜんできていない
+ので耳が痛いです。期待しています。
+こちらこそ、今後ともどうぞよろしくお願いいたします。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From umejava ＠ mars.dti.ne.jp  Sun Aug 28 18:18:22 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:16 2007
+Subject: [Squeak-ja: 2606] LLDNおよび夜の集い、ご参加ありがとうございました
+Message-ID: <JD200508281818227.1562921@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+LLDN及び、「夜の集い」が27日に盛大に行われました。
+ご参加いただきました方、ありがとうございます。
+
+どちらもSqueakのすごさを知る、良い機会だったかと思います。
+LLDNの「どう書く」では、鷲見さんが「ワークスペースを回転させながら漢数字の
+階乗」をやって見せ、大いに聴衆を驚かせていました。
+
+また、"Language Update"では、山宮さんがCrochetで3D環境でのブラウザを
+使ったプログラミングを一瞬だけ見せ、会場をどよめかせていました。
+
+「夜の集い」に関しましては、参加レポートを受け付けております。
+思わずBlobなどに感想を書いてしまったという方、ぜひトラックバックして
+いただけますと幸いです。
+http://swikis.ddo.jp/umejava/21
+
+当日参加できなかった方もなんとなく雰囲気がわかっていただけるのではないかと
+思います。
+
+よろしくお願い申し上げます。
+---
+[:masashi | ^umezawa]
+
+From "土本 (Florian) 強  Sun Aug 28 19:07:44 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2607] Re: LLDNおよび夜の集い、ご参加ありがとうございました
+In-Reply-To: <JD200508281818227.1562921@mars.dti.ne.jp>
+References: <JD200508281818227.1562921@mars.dti.ne.jp>
+Message-ID: <20050828190431.CCFE.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんばんは土本( Florian )です。
+
+メール「[Squeak-ja: 2606] LLDNおよび夜の集い、ご参加ありがとうございました」(2005/08/28 18:18) に於いて
+「Masashi Umezawa」 語りて曰く、
+
+Masashi> LLDN及び、「夜の集い」が27日に盛大に行われました。
+Masashi> ご参加いただきました方、ありがとうございます。
+
+　大変面白かったです(^^)。
+　発表者の方、席を用意してくださったスタッフの方々共々お疲れ様でした。
+
+Masashi> 「夜の集い」に関しましては、参加レポートを受け付けております。
+Masashi> 思わずBlobなどに感想を書いてしまったという方、ぜひトラックバックして
+Masashi> いただけますと幸いです。
+Masashi> http://swikis.ddo.jp/umejava/21
+
+　トラックバックのpingを受け付けるURIが見つけられなかったので、トラック
+バック機構ではなく、「リンク元を記す」という本来の意味と取って直接ページ
+をeditしてしまったのですが、これでよろしかったのでしょうか？
+
+＃ちなみに、lock this page after saveのチェックを外さないとやばいことに
+＃なる気がするので、あわてて外しました。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Aug 28 19:34:37 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2608] Re: LLDNおよび夜の集い、ご参加ありがとうございました
+In-Reply-To: <20050828190431.CCFE.FLORIAN@seagreen.ocn.ne.jp>
+References: <JD200508281818227.1562921@mars.dti.ne.jp>
+	<20050828190431.CCFE.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <JG200508281934373.6137625@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 　大変面白かったです(^^)。
+> 　発表者の方、席を用意してくださったスタッフの方々共々お疲れ様でした。
+
+こちらこそ、ご参加ありがとうございました。
+
+> Masashi> 「夜の集い」に関しましては、参加レポートを受け付けております。
+> Masashi> 思わずBlobなどに感想を書いてしまったという方、ぜひトラックバックして
+> Masashi> いただけますと幸いです。
+> Masashi> http://swikis.ddo.jp/umejava/21
+> 
+> 　トラックバックのpingを受け付けるURIが見つけられなかったので、トラック
+> バック機構ではなく、「リンク元を記す」という本来の意味と取って直接ページ
+> をeditしてしまったのですが、これでよろしかったのでしょうか？
+
+そうです。Swikiは原始的ですので。
+
+> ＃ちなみに、lock this page after saveのチェックを外さないとやばいことに
+> ＃なる気がするので、あわてて外しました。
+> 
+> 　では、失礼します。
+> 
+
+いえ、ロックはかけておいていただいて大丈夫です。最近はむしろロボットが来て
+荒らされてしまうことが多いので、あえてかけるようにしています。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From "土本 (Florian) 強  Mon Aug 29 12:13:36 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2609] Re: LLDNおよび夜の集い、ご参加ありがとうございました
+In-Reply-To: <JG200508281934373.6137625@mars.dti.ne.jp>
+References: <20050828190431.CCFE.FLORIAN@seagreen.ocn.ne.jp>
+	<JG200508281934373.6137625@mars.dti.ne.jp>
+Message-ID: <20050829121042.E10F.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。土本( Florian )です。
+
+メール「[Squeak-ja: 2608] Re: LLDNおよび夜の集い、ご参加ありがとうございました」(2005/08/28 19:34) に於いて
+「Masashi Umezawa」 語りて曰く、
+
+Masashi> > ＃ちなみに、lock this page after saveのチェックを外さないとやばいことに
+Masashi> > ＃なる気がするので、あわてて外しました。
+Masashi> > 
+Masashi> > 　では、失礼します。
+Masashi> > 
+Masashi> 
+Masashi> いえ、ロックはかけておいていただいて大丈夫です。最近はむしろロボットが来て
+Masashi> 荒らされてしまうことが多いので、あえてかけるようにしています。
+
+　了解しました。変更する際にはチェックをつけておきます。
+
+
+　ところで、昼のLLDNと夜の集いの写真が都合36枚ほどありますが、こちら公開
+しても大丈夫そうでしょうか？　特に問題なければはてなfotolifeなどで公開し
+ますが。
+　あ、ぶれまくり、ボケまくりのひどい写真なので、あまり期待しないでくださ
+い。
+
+
+　では。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From abee.abe ＠ nifty.ne.jp  Mon Aug 29 12:27:25 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2610] Re: LLDN および夜の集い、ご参加ありがとうございました
+In-Reply-To: <20050829121042.E10F.FLORIAN@seagreen.ocn.ne.jp>
+References: <JG200508281934373.6137625@mars.dti.ne.jp>
+	<20050829121042.E10F.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <4312809D1EC.6329ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 29 Aug 2005 12:13:36 +0900
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+>　ところで、昼のLLDNと夜の集いの写真が都合36枚ほどありますが、こちら公開
+>しても大丈夫そうでしょうか？　特に問題なければはてなfotolifeなどで公開し
+>ますが。
+
+勝手に写真を貼ったのは私です。小さいし少ないからいいかなと思って。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From umejava ＠ mars.dti.ne.jp  Mon Aug 29 14:03:27 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2611] Re: LLDNおよび夜の集い、ご参加ありがとうございました
+In-Reply-To: <20050829121042.E10F.FLORIAN@seagreen.ocn.ne.jp>
+References: <20050828190431.CCFE.FLORIAN@seagreen.ocn.ne.jp>
+	<JG200508281934373.6137625@mars.dti.ne.jp>
+	<20050829121042.E10F.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <JT200508291403273.1865984@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 　ところで、昼のLLDNと夜の集いの写真が都合36枚ほどありますが、こちら公開
+> しても大丈夫そうでしょうか？　特に問題なければはてなfotolifeなどで公開し
+> ますが。
+> 　あ、ぶれまくり、ボケまくりのひどい写真なので、あまり期待しないでくださ
+> い。
+
+はい、大歓迎です。当日の熱気が良く伝わってくると思いますので、
+よろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Mon Aug 29 14:09:38 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2612] Re: LLDN および夜の集い、ご参加ありがとうございました
+In-Reply-To: <4312809D1EC.6329ABEE.ABE@smtp.nifty.com>
+References: <JG200508281934373.6137625@mars.dti.ne.jp>
+	<20050829121042.E10F.FLORIAN@seagreen.ocn.ne.jp>
+	<4312809D1EC.6329ABEE.ABE@smtp.nifty.com>
+Message-ID: <JT200508291409386.2237015@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Mon, 29 Aug 2005 12:27:25 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+> 阿部@新百合です。
+> 
+> On Mon, 29 Aug 2005 12:13:36 +0900
+> "土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+> >　ところで、昼のLLDNと夜の集いの写真が都合36枚ほどありますが、こちら公開
+> >しても大丈夫そうでしょうか？　特に問題なければはてなfotolifeなどで公開し
+> >ますが。
+> 
+> 勝手に写真を貼ったのは私です。小さいし少ないからいいかなと思って。
+> 
+
+ありがとうございます。Swikiにはこのくらいがちょうど良いです。
+
+---
+[:masashi | ^umezawa]
+
+From pxd05610 ＠ ybb.ne.jp  Tue Aug 30 03:24:30 2005
+From: pxd05610 ＠ ybb.ne.jp (Iwao Kanesashi)
+Date: Thu Dec  6 11:03:17 2007
+Subject: [Squeak-ja: 2613] Re: LLDNおよび夜の集い、ご参加ありがとうございました
+In-Reply-To: <JD200508281818227.1562921@mars.dti.ne.jp>
+References: <JD200508281818227.1562921@mars.dti.ne.jp>
+Message-ID: <EEC5ACC6E59715pxd05610@ybb.ne.jp>
+
+金刺です
+
+とても楽しいひと時を企画していただきまして、どうもありがとうございました。
+
+>こんにちは
+>梅澤です。
+>
+>LLDN及び、「夜の集い」が27日に盛大に行われました。
+>ご参加いただきました方、ありがとうございます。
+
+LLDNでは鷲見さんが最も恐れていた「睡魔」に襲われてしまい、危うく雄姿を見
+損ねそうになりましたが、回りのどよめきのおかげで無事拝見させていただきま
+した。
+
+夜の集いの感想を述べさせていただきます
+
+横川さんのSwimmy
+　生物の成長を状態遷移で表現するという試みは非常に興味深く拝見いたしまし
+た
+　集いの中でも出ていましたが、オリジナルストーリを作成する絵本が実現でき
+ると、子供たちが楽しめそうですね。楽しみにしています。
+
+セカチュー
+　実はセカチューのすごさを理解していないことに気が付きました。
+　Bluetooth化したくなり、今日思わず、秋葉をうろうろしてしまいました。
+＃見つかりませんでしたが(;_;)
+
+Seaside
+　実は頼まれて簡単なWebサイトを作る仕事があるので、Seasideにチャレンジし
+てみようかと思っています。
+　Smalltalkから離れて早8年、すっかり忘れてしまったので、いつになるかわか
+りませんが、ヨチヨチやっていこうと考えています。
+
+では失礼いたします
+
+

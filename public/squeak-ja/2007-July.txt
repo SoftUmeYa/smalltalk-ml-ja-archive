@@ -1,0 +1,912 @@
+From abee ＠ squeakland.jp  Tue Jul  3 23:39:11 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3511] OSC2007 Kansai で OLPC と Squeak について講演します
+Message-ID: <468A5F8F39D.E74BABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+先に、まつうら＠ESPさんからお話がありましたが、7/20, 21に京都で開催される
+OSC2007 Kansaiで、「一人の子供に一台のノートPCとSqueak - 学ぶことを学ぶた
+めのOLPC」というテーマで講演することになりました。
+
+これは7/21 14:00-14:45の「オープンソースと社会」というセッションの一部で、
+京都ノートルダム女子大の吉田先生、一橋大の兼宗先生と一緒に発表します。
+
+http://oss-shakai07.sasaeru.jp/os07/
+
+参加は懇親会を除いて無料ですが、事前登録が必要ですので、上記のサイトから
+リンクしている OSC2007のページで登録をお願いします。定員は50名です。
+
+当日は、OLPC XO(いわゆる100ドルノートパソコン)の実機を使ったデモも行う予
+定です。他にも興味深いセッションが多数ありますので、お近くの方はどうぞご
+参加ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sat Jul 14 03:01:18 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3512] Re: OSC2007 Kansai で OLPC と Squeak について講演します
+In-Reply-To: <468A5F8F39D.E74BABEE@smtp.nifty.com>
+References: <468A5F8F39D.E74BABEE@smtp.nifty.com>
+Message-ID: <4697BDEE1B3.F482ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 03 Jul 2007 23:39:11 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>http://oss-shakai07.sasaeru.jp/os07/
+>
+>参加は懇親会を除いて無料ですが、事前登録が必要ですので、上記のサイトから
+>リンクしている OSC2007のページで登録をお願いします。定員は50名です。
+
+お陰さまで申込が定員を超えたようですが、大きな会場に移る可能性もあるそう
+なので、迷われている方もぜご参加ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Wed Jul 18 23:01:22 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3513] プロジェクトが開かない。
+Message-ID: <200707181401.l6IE1NR9027887@kbb2.aams.jp>
+
+いつもお世話になっております。
+以下のことで困っております。
+よろしくお願い致します。
+あるプログラム作成中に、その中で
+一つのmethodを作成して試したところ、
+グルグル回ってSqueakが消えました。
+それ以後、このプロジェクトを呼ぶと、
+同じようにグルグル回ってSqueakが消えて
+しまいます。
+このプログラムだけでも救えないでしょうか。
+久保　道
+
+
+
+From yoshiki ＠ squeakland.org  Thu Jul 19 02:22:41 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3514] Re: プロジェクトが開かない。
+In-Reply-To: <200707181401.l6IE1NR9027887@kbb2.aams.jp>
+References: <200707181401.l6IE1NR9027887@kbb2.aams.jp>
+Message-ID: <u3azlaaou.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+  ぐるぐる回ってSqueakが消えましたか。それはもしかしたらすごい発明かも！
+僕も常々ぐるぐる回ってSqueakが消えるようにしたいと思っていのですよ。せっ
+かくですので、どうやったのかもうちょっと詳しく教えてもらえませんか？
+
+  というのはさておき、methodというのがEtoysではなくSqueakのSmalltalkで
+書かれたコードであるならば、ちゃんと動くSqueakイメージを一つ立ち上げ、
+ファイルリストを開いておかしくなったイメージに対応する.changesファイル
+を選択し、"recent changes"を選ぶとその中に入っているメソッド定義が見ら
+れるので、適宜選択してfile inすればある程度復活させることができると思
+います。
+
+  .prファイルとして保存できたものがロードできないというのは少々謎です
+が(カメラのような外部ハードウェアやネットワークに依存したものならあり
+えますが)、その場合はプロジェクトを読み込むコードをデバッガでステップ
+実行したりしながらデータを見てみるといったテクニックが必要ですね。セー
+ブができたものであれば、おそらくは何らかの方法で復元できるとは思います
+が。
+
+-- Yoshiki
+
+At Wed, 18 Jul 2007 23:01:22 +0900,
+kubo-o wrote:
+> 
+> いつもお世話になっております。
+> 以下のことで困っております。
+> よろしくお願い致します。
+> あるプログラム作成中に、その中で
+> 一つのmethodを作成して試したところ、
+> グルグル回ってSqueakが消えました。
+> それ以後、このプロジェクトを呼ぶと、
+> 同じようにグルグル回ってSqueakが消えて
+> しまいます。
+> このプログラムだけでも救えないでしょうか。
+> 久保　道
+> 
+> 
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Jul 19 17:14:15 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3515] Re: プロジェクトが開かない。
+In-Reply-To: <u3azlaaou.wl%yoshiki@squeakland.org>
+Message-ID: <200707190815.l6J8EGah027272@kbb1.aams.jp>
+
+大島さん
+いつもありがとうございます。
+今回もお世話に…、と思いつつ
+グルグルプログラムを未練たらしく
+もう一度起動させたら、ちゃんと
+立ち上がってくれました。
+new
+^ super new init.
+
+init
+x _ 0.
+y _ 0.
+T1_2.
+T2_16.
+とやっただけだと思っているのですが。
+グルグル状態は、squeakの画面の左下に
+memoryのカウントのようなものが
+グルグルとカウントアップして、
+２３万あたり、つまりsqueakのプログラムの
+大きさ？で消えてしまったのです。
+大発明の現象を再現できず、
+また、おさがわせしまして
+申し訳ありませんでした。
+久保　道
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Yoshiki Ohshima
+Sent: Thursday, July 19, 2007 2:23 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3514] Re: プロジェクトが開かない。
+
+  大島です。
+
+  ぐるぐる回ってSqueakが消えましたか。それはもしかしたらすごい発明かも！
+僕も常々ぐるぐる回ってSqueakが消えるようにしたいと思っていのですよ。せっ
+かくですので、どうやったのかもうちょっと詳しく教えてもらえませんか？
+
+  というのはさておき、methodというのがEtoysではなくSqueakのSmalltalkで
+書かれたコードであるならば、ちゃんと動くSqueakイメージを一つ立ち上げ、
+ファイルリストを開いておかしくなったイメージに対応する.changesファイル
+を選択し、"recent changes"を選ぶとその中に入っているメソッド定義が見ら
+れるので、適宜選択してfile inすればある程度復活させることができると思
+います。
+
+  .prファイルとして保存できたものがロードできないというのは少々謎です
+が(カメラのような外部ハードウェアやネットワークに依存したものならあり
+えますが)、その場合はプロジェクトを読み込むコードをデバッガでステップ
+実行したりしながらデータを見てみるといったテクニックが必要ですね。セー
+ブができたものであれば、おそらくは何らかの方法で復元できるとは思います
+が。
+
+-- Yoshiki
+
+At Wed, 18 Jul 2007 23:01:22 +0900,
+kubo-o wrote:
+>
+> いつもお世話になっております。
+> 以下のことで困っております。
+> よろしくお願い致します。
+> あるプログラム作成中に、その中で
+> 一つのmethodを作成して試したところ、
+> グルグル回ってSqueakが消えました。
+> それ以後、このプロジェクトを呼ぶと、
+> 同じようにグルグル回ってSqueakが消えて
+> しまいます。
+> このプログラムだけでも救えないでしょうか。
+> 久保　道
+>
+>
+
+
+From yoneya ＠ cslab.co.jp  Fri Jul 20 14:05:39 2007
+From: yoneya ＠ cslab.co.jp (Masahiro Yoneya)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3516] 「夏休み小学生IT教室」のお知らせ
+Message-ID: <20070720134013.6FA6.YONEYA@cslab.co.jp>
+
+こんにちは。
+
+株式会社シーズ・ラボの米谷と申します。
+
+弊社では2002年より毎年、夏休みと冬休みに
+「小学生IT教室」を無料で開催しています。
+2004年度冬休み以降はスクイークで
+簡単なプログラミングを体験してもらっていますが
+おかげさまで子供たちには大変好評です。
+
+今月、「夏休み小学生IT教室」を
+開催いたしますのでお知らせします。
+
+・夏休み小学生IT教室
+「アクションゲームを作ってみよう」
+日時：2007年7月30日（月）
+      13:30〜17:00（要事前申込）
+場所：札幌市生涯学習センター ちえりあ
+対象 小学校4〜6年生 
+
+詳しくは「夏休み小学生IT教室」のご案内サイトをご覧下さい。
+http://www.cslab.co.jp/CAP/index.html
+
+子供たちに楽しんでもらえる企画にしたいと思います。
+
+-- 
+Masahiro Yoneya <yoneya@cslab.co.jp>
+
+
+From ofg ＠ kwansei.ac.jp  Fri Jul 20 15:35:44 2007
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3517] 販売物へのSqueak添付について
+Message-ID: <20070720153126.F6C8.OFG@kwansei.ac.jp>
+
+大藤です。
+
+8月17日（金）のコミックマーケット72にて販売予定のSqueak学習ソフト
+「萌えるSqueak『もえすく』」のＣＤ内に、Windows用日本語版Squeakイ
+ンストーラ（SqueakPlugin2005J.exe）を添付して配布することは可能で
+しょうか？　自作のプロジェクトファイルをサンプルとして添付したい
+ので、できればSqueakそのものも添付したいという次第です。
+
+予定価格は500円、その他詳細は下記のサイトをご覧下さい。
+http://moesuku.ofg.jp/
+
+
+大藤 泰生
+ofg@kwansei.ac.jp
+
+
+From tak ＠ metatoys.org  Fri Jul 20 15:44:07 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3518] Re: 販売物へのSqueak添付について
+In-Reply-To: <20070720153126.F6C8.OFG@kwansei.ac.jp>
+References: <20070720153126.F6C8.OFG@kwansei.ac.jp>
+Message-ID: <46A059B7.6060209@metatoys.org>
+
+大藤さん。
+山宮です。特に問題ありません。ご自由にお使いください。
+大変楽しみにしております。
+
+> 「萌えるSqueak『もえすく』」のＣＤ内に、Windows用日本語版Squeakイ
+> ンストーラ（SqueakPlugin2005J.exe）を添付して配布することは可能で
+> しょうか？　自作のプロジェクトファイルをサンプルとして添付したい
+> ので、できればSqueakそのものも添付したいという次第です。
+
+
+From abee ＠ squeakland.jp  Fri Jul 20 17:18:42 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3519] Re: 販売物へのSqueak添付について
+In-Reply-To: <20070720153126.F6C8.OFG@kwansei.ac.jp>
+References: <20070720153126.F6C8.OFG@kwansei.ac.jp>
+Message-ID: <2d5d52a80707200118jd18bc20wfe1b563c75c2e816@mail.gmail.com>
+
+阿部@広島です。
+
+8/17にお邪魔できるかどうかまだ分からないのですが、なんとか行けるように努力します(実はコミケに行ったことが無いので恐れています)。
+
+完成版のもえすくでは複製と兄弟の違いがどのように表現されているかなど、興味津々です。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Fri Jul 20 17:24:15 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3520] Re: OSC2007 Kansai で OLPC と Squeak について講演します
+In-Reply-To: <4697BDEE1B3.F482ABEE@smtp.nifty.com>
+References: <468A5F8F39D.E74BABEE@smtp.nifty.com>
+	<4697BDEE1B3.F482ABEE@smtp.nifty.com>
+Message-ID: <2d5d52a80707200124x4cea3160md16704d75df092d1@mail.gmail.com>
+
+阿部@広島です。
+
+7/21 15:45からのライトニングトークでも「100ドルノートPC早分かり」として発表することになりました。こちらもよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sat Jul 21 14:39:14 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:48 2007
+Subject: [Squeak-ja: 3521] ２変数の関数messageの定義について
+Message-ID: <200707210539.l6L5dDXY023626@kbb1.aams.jp>
+
+下記のようなfndという変数が２つの関数を
+定義したいのですが、
+fnd  :x and: y
+fndd _ 0.
+fndd _ (self fnq: x) * 5 + (self fnq: y) + 13.
+つぎのような警告がでて定義できません。
+Nothing more expected ->:x
+どうすればよいのでしょう。
+久保　道
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sat Jul 21 14:39:14 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3522] VMがcrashしたときの対策について
+Message-ID: <200707210539.l6L5dDXZ023626@kbb1.aams.jp>
+
+質問ばかりで恐縮です。
+よろしくお願いいたします。
+マシンの調子が良くないのかも
+しれませんが、作成したプロジェクトを
+立ち上げえると
+Sorry but the VM has crashed.
+と警告が出て動きません。
+どうしたらよいのでよう。
+久保　道
+
+
+
+From ofg ＠ kwansei.ac.jp  Sun Jul 22 07:19:13 2007
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3523] Re: 販売物へのSqueak添付について
+Message-ID: <20070722070159.1216.OFG@kwansei.ac.jp>
+
+山宮さん
+> 山宮です。特に問題ありません。ご自由にお使いください。
+> 大変楽しみにしております。
+
+ご回答ありがとうございます。おかげさまでより良い物ができそうです。
+
+
+阿部さん
+> 8/17にお邪魔できるかどうかまだ分からないのですが、なんとか行けるように努力します(実はコミケに行ったことが無いので恐れています)。
+
+昨日、コミックマーケット72のカタログが発売されたため早速確認したところ、
+「たのしい正規表現」「まったりBSD」「もう少しだけPC-88」
+「ネットワークバカ一代」「らぶりぃ☆OS/2」……などの近所に配置されて
+いましたので、ちゃんとコンピュータ・プログラミング関連のジャンルとして
+扱われたようです。やはりSqueakネタで出しているのは私だけでした。
+
+コンピュータ関連は100サークルほど出展していますが、他の10000サークルの
+大半はテレビ等で報道されている通りゲーム・アニメ系の創作物です。
+
+販売用のCDは100枚だけ持ち込む予定ですが、まず売り切れることはないはず
+ですので、ゆっくりお越し下さい。例年、11:00以降なら並ばずに入場できます。
+
+大藤 泰生
+ofg@kwansei.ac.jp
+
+
+From "土本 (Florian) 強  Sun Jul 22 14:46:09 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3524] Re: 販売物へのSqueak添付について
+In-Reply-To: <20070722070159.1216.OFG@kwansei.ac.jp>
+References: <20070722070159.1216.OFG@kwansei.ac.jp>
+Message-ID: <20070722143332.C595.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+
+　10年ほど前にBTRON,BeOS等のゲームを出展していました。残念ながら萌えネタ
+ではありませんでした。絵描きが居なかったもので……。
+　確か、BTRON,BeOSともに自分以外に1サークルぐらいしかなかった記憶があり
+ます。
+
+メール「[Squeak-ja: 3523] Re: 販売物へのSqueak添付について」(2007/07/22
+07:19) に於いて
+「大藤 泰生」 語りて曰く、
+
+大藤> 販売用のCDは100枚だけ持ち込む予定ですが、まず売り切れることはないはず
+大藤> ですので、ゆっくりお越し下さい。例年、11:00以降なら並ばずに入場できます。
+　当時の感触から行くと、100枚では少ないんじゃないかと思います。
+　その10年前に私が持ち込んだ際には、50枚フロッピー(時代だなぁ(^^;))に刷っ
+て持って行ったところ、午前中には完売してしまいました。これから考えるとマ
+イナーOSとはいえ(失礼)Windowsで動いてしまうものであれば結構売れてしまう
+気がします。その上、実はその筋の人たちの間でもSqueakという名前だけはかな
+り知られていますので、興味を抱いた方々が多く出るのではないかと思います。
+　とはいえ、100枚以上のCD-Rを刷るのはかなり大変ですので、時間に合わせて
+枚数を決めた上で、それ以上に沢山のぺら1枚のパンフレットをお持ちすること
+をお勧めします。
+
+　では、失礼します。
+　がんばってきて下さい。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                webto:  'http://d.hatena.ne.jp/Florian/'
+                blog:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From abee ＠ squeakland.jp  Mon Jul 23 01:42:35 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3525] Re: OSC2007 Kansai で OLPC と Squeak について講演します
+In-Reply-To: <468A5F8F39D.E74BABEE@smtp.nifty.com>
+References: <468A5F8F39D.E74BABEE@smtp.nifty.com>
+Message-ID: <46A388FB3B4.B150ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+多数のご参加ありがとうございました。また、狭い教室で質問にもあまり答えら
+れず申し訳ありませんでした。色々な方をお話しすることができて楽しかったで
+す。
+当日の資料を以下に置きましたのでご覧ください。
+
+http://squeakland.jp/olpc/
+
+今後もこのような機会を設けたいと思いますのでよろしくお願いいたします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tomohiro ＠ sra.co.jp  Mon Jul 23 10:50:51 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3526] Re: ２変数の関数messageの定義について
+In-Reply-To: <200707210539.l6L5dDXY023626@kbb1.aams.jp>
+References: <200707210539.l6L5dDXY023626@kbb1.aams.jp>
+Message-ID: <200707231050.52465.tomohiro@sra.co.jp>
+
+おだです。
+
+たぶん、
+> fnd  :x and: y
+を、
+fnd: x and: y
+という具合に空白の位置を替えてあげればいいと思います。
+---
+おだ
+
+From tak ＠ metatoys.org  Mon Jul 23 10:58:59 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3527] Re: squeakland2006J???
+In-Reply-To: <45ABA397236.5273ABEE@smtp.nifty.com>
+References: <45A7748F37F.CBE9ABEE@smtp.nifty.com>
+	<6544a1da0701122257x238abdd5lff08a73f9d490071@mail.gmail.com>
+	<45ABA397236.5273ABEE@smtp.nifty.com>
+Message-ID: <c57315d40707221858j51b82d8egbc7947850f8943d8@mail.gmail.com>
+
+山宮です。
+
+ふと思い出したので書き込みます。
+この件どのような状況でしょうか？
+
+07/01/15 に Kazuhiro ABE<abee@squeakland.jp> さんは書きました:
+> 阿部@新百合です。
+>
+> On Sat, 13 Jan 2007 15:57:36 +0900
+> "Toshiyuki Takeda" <takeda.toshiyuki@gmail.com> wrote:
+> >SP1にしてしまうと、パッチだけ入ってるように思うのは私だけでしょうか。
+> >Microsoftにならうなら、"2005J with SP1"がフルパッケージです。
+> >
+> >"2005J Release2"とかはどうでしょう。略して2005J R2。
+>
+> そうですね。私も賛成です。
+>
+> 1月中はちょっとばたばたするので、2月にSqueakland.jpにアップという事でよろ
+> しいですか。山宮さん、皆さん。
+
+From abee ＠ squeakland.jp  Mon Jul 23 13:35:47 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3528] Re: OSC2007 Kansai で OLPC と Squeak について講演します
+In-Reply-To: <46A388FB3B4.B150ABEE@smtp.nifty.com>
+References: <468A5F8F39D.E74BABEE@smtp.nifty.com>
+	<46A388FB3B4.B150ABEE@smtp.nifty.com>
+Message-ID: <46A430233B1.ACCEABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 23 Jul 2007 01:42:35 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>当日の資料を以下に置きましたのでご覧ください。
+>
+>http://squeakland.jp/olpc/
+
+2007/7/23 13:30まで、環境によっては別の作品が表示されていました。大変失礼
+しました。 現在は差し替わっていますので、よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Wed Jul 25 14:40:49 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3529] Re: ２変数の関数messageの定義について
+In-Reply-To: <200707231050.52465.tomohiro@sra.co.jp>
+Message-ID: <200707250540.l6P5eksJ012018@proxy1.aams.jp>
+
+おださん
+さっそくご教示、ありがとうございました。
+うまくいきました。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Tomohiro Oda
+Sent: Monday, July 23, 2007 10:51 AM
+To: squeak-ja@smalltalk.jp
+Subject: [Squeak-ja: 3526] Re: ２変数の関数messageの定義について
+
+おだです。
+
+たぶん、
+> fnd  :x and: y
+を、
+fnd: x and: y
+という具合に空白の位置を替えてあげればいいと思います。
+---
+おだ
+
+
+-- 
+No virus found in this incoming message.
+Checked by AVG Free Edition. 
+Version: 7.5.476 / Virus Database: 269.10.16/914 - Release Date: 2007/07/23
+19:45
+
+
+From abee ＠ squeakland.jp  Wed Jul 25 15:06:41 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3530] Re: ２変数の関数 message の定義について
+In-Reply-To: <200707210539.l6L5dDXY023626@kbb1.aams.jp>
+References: <200707210539.l6L5dDXY023626@kbb1.aams.jp>
+Message-ID: <46A6E871A5.0CD1ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+久保さんの昨年3月からの一連のご質問を読み返してみたのですが、お手元の「自
+由自在Squeakプログラミング」「サクサクSmalltalk」を再度熟読されて、その内
+容や挙げられている例題などをマスタされてから進まれたほうが結局は早道のよ
+うな気がします。
+
+今回のご質問の内容はSmalltalkの3種類のメッセージ式の一つ、キーワードメッ
+セージ式のキーワードの記法に関するもので、大変僭越ですが、これを知らない
+で他のことができるとは思えません。
+
+On Sat, 21 Jul 2007 14:39:14 +0900
+"kubo-o" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>下記のようなfndという変数が２つの関数を
+>定義したいのですが、
+>fnd  :x and: y
+>fndd _ 0.
+>fndd _ (self fnq: x) * 5 + (self fnq: y) + 13.
+>つぎのような警告がでて定義できません。
+>Nothing more expected ->:x
+>どうすればよいのでしょう。
+>久保　道
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Thu Jul 26 15:23:08 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3531] Re: squeakland2006J???
+In-Reply-To: <c57315d40707221858j51b82d8egbc7947850f8943d8@mail.gmail.com>
+References: <45A7748F37F.CBE9ABEE@smtp.nifty.com>
+	<6544a1da0701122257x238abdd5lff08a73f9d490071@mail.gmail.com>
+	<45ABA397236.5273ABEE@smtp.nifty.com>
+	<c57315d40707221858j51b82d8egbc7947850f8943d8@mail.gmail.com>
+Message-ID: <c57315d40707252323y503d3957gc4c0cea99073c91f@mail.gmail.com>
+
+山宮です。
+
+以下にファイルをアップしました。
+
+Windows インストーラ
+http://languagegame.org/pub/sqland2005j2/SqueakPlugin2005J2.exe
+
+etoys ユーザ用イメージ
+http://languagegame.org/pub/sqland2005j2/SqueakPlugin.image
+
+開発者用イメージ
+http://languagegame.org/pub/sqland2005j2/SqueakPlugin-dev-556.zip
+
+From abee ＠ squeakland.jp  Thu Jul 26 16:44:45 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3532] Squeakland 2005J2 を公開しました。
+Message-ID: <46A850ED2E7.857CABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+さきほど、Squeakland.jpのダウンロードページでSqueakland 2005J2を公開しま
+した。とりあえずの対応プラットフォームはWindows、Linux、開発者版です。
+
+http://squeakland.jp/plugin/download.html
+
+Squeakland 2005J2は2005Jの修正版で、2005Jとプロジェクトファイルなどの互換
+性があります。
+
+# 具体的にはアップデートストリームを使って、#527から#556に上げたものです。
+
+モーフを埋め込まれたモーフを回転してから埋め込んだモーフを取り出すとエラー
+になる問題など、いくつかのバグが直っていますので、以後はこちらをお使いく
+ださい。
+
+作成にあたっては山宮さんにお世話になりました。また、公開が大変遅れたこと
+をお詫びします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Jul 26 21:33:58 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3533] Re: ２変数の関数 message の定義について
+In-Reply-To: <46A6E871A5.0CD1ABEE@smtp.nifty.com>
+Message-ID: <200707261233.l6QCXoGB030177@proxy1.aams.jp>
+
+阿部@新百合さん
+ご忠告、ありがとうございます。
+おっしゃる通りだと痛感しました。
+だいぶん焦っていました。
+VMのcrashの回復についても、勉強
+しました。
+お恥ずかしい限りです。
+それにも関わらず、ご忠告くださったことに
+感謝いたします。
+久保　道
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Kazuhiro ABE
+Sent: Wednesday, July 25, 2007 3:07 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3530] Re: ２変数の関数 message の定義について
+
+阿部@新百合です。
+
+久保さんの昨年3月からの一連のご質問を読み返してみたのですが、お手元の「自
+由自在Squeakプログラミング」「サクサクSmalltalk」を再度熟読されて、その内
+容や挙げられている例題などをマスタされてから進まれたほうが結局は早道のよ
+うな気がします。
+
+今回のご質問の内容はSmalltalkの3種類のメッセージ式の一つ、キーワードメッ
+セージ式のキーワードの記法に関するもので、大変僭越ですが、これを知らない
+で他のことができるとは思えません。
+
+On Sat, 21 Jul 2007 14:39:14 +0900
+"kubo-o" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>下記のようなfndという変数が２つの関数を
+>定義したいのですが、
+>fnd  :x and: y
+>fndd _ 0.
+>fndd _ (self fnq: x) * 5 + (self fnq: y) + 13.
+>つぎのような警告がでて定義できません。
+>Nothing more expected ->:x
+>どうすればよいのでしょう。
+>久保　道
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+
+--
+No virus found in this incoming message.
+Checked by AVG Free Edition.
+Version: 7.5.476 / Virus Database: 269.10.20/919 - Release Date: 2007/07/26
+9:56
+
+
+
+From tak ＠ metatoys.org  Fri Jul 27 02:46:06 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3534] Re: Squeakland 2005J2 を公開しました。
+In-Reply-To: <46A850ED2E7.857CABEE@smtp.nifty.com>
+References: <46A850ED2E7.857CABEE@smtp.nifty.com>
+Message-ID: <46A8DDDE.9070601@metatoys.org>
+
+阿部さん。
+
+山宮です。ダウンロードと実行が出来る事を確認しました。ありがとうございます。
+
+ところで、2005J2 のリリースによって以前の 2005J のインストーラがダウンロード
+出来なくなるわけですが、これを機に過去のインストーラやイメージもダウンロード出来る
+ように整理するというのは如何でしょうか
+
+提案 1:
+
+http://squeakland.jp/plugin/installers/ 等のディレクトリのインデックスを
+有効にする。これは簡単だと思います。
+
+提案 2: 
+
+http://ftp.squeak.org/
+のようにバージョンに分かれたディレクトリを作成し、ファイルを置く。
+
+本家 squeakland.org では新しいイメージが出ると過去の物を完全に置き換えるように
+なっていますが、これは全くいまいちな事だと思っています。過去のバージョンに
+基づいた書籍も出版されている事もあり、日本語スクイークのコミュニティで作成された
+ファイルは出来るだけ過去の物も入手できるようにするというのは如何でしょうか？
+
+Kazuhiro ABE wrote:
+> 阿部@新百合です。
+> 
+> さきほど、Squeakland.jpのダウンロードページでSqueakland 2005J2を公開しま
+> した。とりあえずの対応プラットフォームはWindows、Linux、開発者版です。
+> 
+> http://squeakland.jp/plugin/download.html
+> 
+> Squeakland 2005J2は2005Jの修正版で、2005Jとプロジェクトファイルなどの互換
+> 性があります。
+> 
+> # 具体的にはアップデートストリームを使って、#527から#556に上げたものです。
+> 
+> モーフを埋め込まれたモーフを回転してから埋め込んだモーフを取り出すとエラー
+> になる問題など、いくつかのバグが直っていますので、以後はこちらをお使いく
+> ださい。
+> 
+> 作成にあたっては山宮さんにお世話になりました。また、公開が大変遅れたこと
+> をお詫びします。
+
+
+From abee ＠ squeakland.jp  Fri Jul 27 15:09:30 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3535] 過去バージョンのダウンロードについて  (was: Re: Squeakland 2005J2 を公開しました。  )
+In-Reply-To: <46A8DDDE.9070601@metatoys.org>
+References: <46A850ED2E7.857CABEE@smtp.nifty.com>
+	<46A8DDDE.9070601@metatoys.org>
+Message-ID: <46A98C1A39A.B149ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 26 Jul 2007 10:46:06 -0700
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>ところで、2005J2 のリリースによって以前の 2005J のインストーラがダウンロード
+>出来なくなるわけですが、これを機に過去のインストーラやイメージもダウンロード出来る
+>ように整理するというのは如何でしょうか
+
+そうですね。
+
+>提案 1:
+>
+>http://squeakland.jp/plugin/installers/ 等のディレクトリのインデックスを
+>有効にする。これは簡単だと思います。
+
+費用対効果を勘案して、これに基づき、
+
+http://squeakland.jp/plugin/installers/archive/
+http://squeakland.jp/developer/download/
+
+のディレクトリ表示ができるように変更しました。
+合わせて、
+
+http://squeakland.jp/plugin/download.html
+http://squeakland.jp/developer/
+
+の説明を変更しました。
+
+このようなアイデアは大歓迎ですので、どうぞ皆さんもお寄せください。
+こんなコンテンツを載せたいとか、リンクして欲しいとかでも結構です。
+また、Squeakland.jpの運営に積極的に関わりたい方も募集しています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Fri Jul 27 15:42:09 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3536] Re: 過去バージョンのダウンロードについて
+In-Reply-To: <46A98C1A39A.B149ABEE@smtp.nifty.com>
+References: <46A850ED2E7.857CABEE@smtp.nifty.com>	<46A8DDDE.9070601@metatoys.org>
+	<46A98C1A39A.B149ABEE@smtp.nifty.com>
+Message-ID: <46A993C1.7030603@metatoys.org>
+
+山宮です。
+早急な対応ありがとうございます。
+
+> 費用対効果を勘案して、これに基づき、
+> 
+> http://squeakland.jp/plugin/installers/archive/
+> http://squeakland.jp/developer/download/
+> 
+> のディレクトリ表示ができるように変更しました。
+> 合わせて、
+> 
+> http://squeakland.jp/plugin/download.html
+> http://squeakland.jp/developer/
+> 
+> の説明を変更しました。
+> 
+> このようなアイデアは大歓迎ですので、どうぞ皆さんもお寄せください。
+> こんなコンテンツを載せたいとか、リンクして欲しいとかでも結構です。
+> また、Squeakland.jpの運営に積極的に関わりたい方も募集しています。
+
+では提案します。管理人さんの日記
+http://d.hatena.ne.jp/abee2/
+へのリンクをはると言うのは如何でしょうか？
+
+
+From takeda.toshiyuki ＠ gmail.com  Fri Jul 27 15:56:03 2007
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3537] Re: Squeakland 2005J2 を公開しました。
+In-Reply-To: <46A8DDDE.9070601@metatoys.org>
+References: <46A850ED2E7.857CABEE@smtp.nifty.com>
+	<46A8DDDE.9070601@metatoys.org>
+Message-ID: <6544a1da0707262356n60b59b22ra85affd042cbe3c6@mail.gmail.com>
+
+こんにちは、武田です。阿部さん、山宮さん、ご苦労さまでした。
+
+ところで、Squeakland MLでKim RoseさんからEtoys 2.1のアナウンスがありました。
+
+数週間のうちに2.1の配布開始ということなので、この時期に2005J2が出たのは
+現行最終版の配布と解釈しています。
+
+Etoys 2.1の開発に関わっている方に今後のロードマップや、新版の特徴などを
+示していただけると導入の指針になると思うのですがいかがでしょう。
+
+たけだとしゆき
+
+From abee ＠ squeakland.jp  Fri Jul 27 19:21:41 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3538] 「仲間たち」について  (was: Re: 過去バージョンのダウンロードについて  )
+In-Reply-To: <46A993C1.7030603@metatoys.org>
+References: <46A98C1A39A.B149ABEE@smtp.nifty.com>
+	<46A993C1.7030603@metatoys.org>
+Message-ID: <46A9C7357D.F4ECABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 26 Jul 2007 23:42:09 -0700
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>では提案します。管理人さんの日記
+>http://d.hatena.ne.jp/abee2/
+>へのリンクをはると言うのは如何でしょうか？
+
+「仲間たち」を更新しました。
+
+http://squeakland.jp/community/mentors.html#colleagues
+
+ついでに山宮さんと大島さんのリンクも更新しています。
+ここに載りたい人はご連絡ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Fri Jul 27 19:22:04 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3539] Re: Squeakland 2005J2 を公開しました。
+In-Reply-To: <6544a1da0707262356n60b59b22ra85affd042cbe3c6@mail.gmail.com>
+References: <46A8DDDE.9070601@metatoys.org>
+	<6544a1da0707262356n60b59b22ra85affd042cbe3c6@mail.gmail.com>
+Message-ID: <46A9C74C2F7.F4EDABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 27 Jul 2007 15:56:03 +0900
+"Toshiyuki Takeda" <takeda.toshiyuki@gmail.com> wrote:
+>ところで、Squeakland MLでKim RoseさんからEtoys 2.1のアナウンスがありました。
+
+これですね。
+http://squeakland.org/pipermail/squeakland/2007-July/003692.html
+
+>数週間のうちに2.1の配布開始ということなので、この時期に2005J2が出たのは
+>現行最終版の配布と解釈しています。
+
+いや、今回のタイミングはまったくの偶然です。
+もちろん、OLPC版のEtoysについては知っていますが、Etoys 2.1という名前やリ
+リース時期については初耳でした。Kimさんのアナウンスも武田さんのメールを読
+んでからあわてて探したくらいです。
+
+>Etoys 2.1の開発に関わっている方に今後のロードマップや、新版の特徴などを
+>示していただけると導入の指針になると思うのですがいかがでしょう。
+
+ここはひとつViewpointsの人にお願いできればと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+

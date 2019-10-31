@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3448] Re: MorphとMVCについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203448%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1vcnBoGyRCJEgbKEJNVkM%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=D051B155-CD88-4A1B-96E3-2E95DDECE5CE%40gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003446.html">
+   <LINK REL="Next"  HREF="003455.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3448] Re: MorphとMVCについて</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203448%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1vcnBoGyRCJEgbKEJNVkM%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=D051B155-CD88-4A1B-96E3-2E95DDECE5CE%40gmail.com"
+       TITLE="[Squeak-ja: 3448] Re: MorphとMVCについて">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2007年 3月  9日 (金) 17:29:50 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003446.html">[Squeak-ja: 3446] MorphとMVCについて
+</A></li>
+        <LI>次の記事 <A HREF="003455.html">[Squeak-ja: 3455] Re: MorphとMVCについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3448">[ 日付 ]</a>
+              <a href="thread.html#3448">[ スレッド ]</a>
+              <a href="subject.html#3448">[ 件名 ]</a>
+              <a href="author.html#3448">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+Sho Yoshida &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>&gt; wrote:
+&gt;<i> はじめまして、吉田と言います。
+</I>&gt;<i> 
+</I>&gt;<i> 大学のゼミでSqueakを知り,勉強しているものです.
+</I>&gt;<i> Smalltalkを最近勉強して疑問に思ったのですが,Squeakの 
+</I>&gt;<i> MorphでのアプリケーションはSmalltalkのMVCのような開 
+</I>&gt;<i> 発をしているのでしょうか.
+</I>
+これは時と場合によりけりだと思います。Morphicは、MとVとCが一体化したところ
+に強みがあるのですが、そうとはいえ、一つのモデルを複数のビューで見たいと
+いう場合もあるでしょう。
+
+そのようなときには、MorphをMVCでいうところのVC一体型のコンポーネントと
+みなし、モデルを別のオブジェクトとして分離させるということをします。
+
+ちょっと古くて恐縮ですが、以下のようなことを以前書きました。
+こちらも参考になるかもしれません。
+
+<A HREF="http://www.ogis-ri.co.jp/otc/otc2/oosquare-ml/Archive/200111.month/2424.html">http://www.ogis-ri.co.jp/otc/otc2/oosquare-ml/Archive/200111.month/2424.html</A>
+
+&gt;<i> またSystem Browserのインスペクターにinspect modelと 
+</I>&gt;<i> いう項目はMVCと関係あるものなのでしょうか.
+</I>&gt;<i> 
+</I>
+これは関係がありますね。モデルとしてはBrowser(クラスカテゴリやクラス群、
+現在の選択などを表示に関係なく保持しているもの)、ビューとしてはMorph
+の集合体でできているというのが、普段私たちがMorphic環境で見ているブラウザ
+です。
+
+同じBrowserというモデルは、MVCの環境でも使われます。この場合、古典的な
+ViewとCcontroller群がMorph達の代わりにくっついているのです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003446.html">[Squeak-ja: 3446] MorphとMVCについて
+</A></li>
+	<LI>次の記事 <A HREF="003455.html">[Squeak-ja: 3455] Re: MorphとMVCについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3448">[ 日付 ]</a>
+              <a href="thread.html#3448">[ スレッド ]</a>
+              <a href="subject.html#3448">[ 件名 ]</a>
+              <a href="author.html#3448">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

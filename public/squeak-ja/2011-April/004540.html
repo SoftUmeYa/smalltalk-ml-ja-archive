@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4540] Re: How to BlockerMorph
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204540%5D%20Re%3A%20How%20to%20BlockerMorph&In-Reply-To=%3CBANLkTikQ7GmP%3DJ%2BzzJ0pO5iuBK8-vpyBNA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004537.html">
+   <LINK REL="Next"  HREF="004541.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4540] Re: How to BlockerMorph</H1>
+    <B>Kazuki Minamitani</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204540%5D%20Re%3A%20How%20to%20BlockerMorph&In-Reply-To=%3CBANLkTikQ7GmP%3DJ%2BzzJ0pO5iuBK8-vpyBNA%40mail.gmail.com%3E"
+       TITLE="[Squeak-ja: 4540] Re: How to BlockerMorph">ka.minami ＠ nifty.com
+       </A><BR>
+    <I>2011年 4月 28日 (木) 16:52:34 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004537.html">[Squeak-ja: 4537] How to BlockerMorph
+</A></li>
+        <LI>次の記事 <A HREF="004541.html">[Squeak-ja: 4541]	アルファチャネルの削除?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4540">[ 日付 ]</a>
+              <a href="thread.html#4540">[ スレッド ]</a>
+              <a href="subject.html#4540">[ 件名 ]</a>
+              <a href="author.html#4540">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>南谷です。
+昨日はお疲れ様でした。
+
+表示での誤魔化しではありますが、以下のようにするのはいかがでしょうか？
+
+1. BlockerMorphへのMouseEnter時の処理
+　　マウスカーソルを隠す
+　　BlockerMorphの外周に、ダミーのカーソル型Moｒｐｈを貼り付ける
+
+2. BlockerMorphからのMouseLeave時の処理
+　　マウスカーソルを表示
+　　ダミーのカーソル型Moｒｐｈを取り除く
+
+3. BlockerMorphは、MouseEnter、MouseLeave以外の入力イベントを無視する
+
+
+
+2011年4月28日8:20 Tomohiro Oda &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tomohiro ＠ sra.co.jp</A>&gt;:
+&gt;<i> おだです。
+</I>&gt;<i>
+</I>&gt;<i> 昨晩のSmalltalk勉強会でHandMorphの位置の変更について聞きましたが、
+</I>&gt;<i> この件について、ひき続きご相談させていただきたいと思います。
+</I>&gt;<i>
+</I>&gt;<i> 私がしたいことは、bounds内にマウスカーソルが入ってくることを阻止
+</I>&gt;<i> する、BlockerMorph(仮称)を作ることです。
+</I>&gt;<i>
+</I>&gt;<i> 例えば、通常のUIでボタンを使えなくするためにはdisableします。
+</I>&gt;<i> しかし、それでは使う人にとっては、「ボタンを押したのに動かない」
+</I>&gt;<i> ということになります。disableはマウスを使ったGUIに慣れた人の常識
+</I>&gt;<i> であって、現実世界のボタンで押しても動かなければ、「壊れてる？」
+</I>&gt;<i> と思われてしまうでしょう。
+</I>&gt;<i>
+</I>&gt;<i> 現実世界のボタンを使えなくするには、物理的にプラスチックカバーで
+</I>&gt;<i> 囲って、「そこにボタンがあるのはわかるが押すことができない。押すには
+</I>&gt;<i> カバーを開けたり破ったりする必要がある。」ことが直感的にわかるように
+</I>&gt;<i> なっています。
+</I>&gt;<i>
+</I>&gt;<i> そんな、プラスチックカバーに相当するMorphとして、BlockerMorphを
+</I>&gt;<i> 作りたいのです。そのためには、aHandMorph position: aPointでは
+</I>&gt;<i> 不足しているようです。直感的には、HandMorphを通して、OS側にマウス
+</I>&gt;<i> 位置を知らせる手段が必要だと思います。
+</I>&gt;<i>
+</I>&gt;<i> 以上、ご助言いただければ幸いです。
+</I>&gt;<i> ---
+</I>&gt;<i> おだ
+</I>&gt;<i>
+</I>
+-- 
+Kazuki Minamitani
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">ka.minami ＠ nifty.com</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004537.html">[Squeak-ja: 4537] How to BlockerMorph
+</A></li>
+	<LI>次の記事 <A HREF="004541.html">[Squeak-ja: 4541]	アルファチャネルの削除?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4540">[ 日付 ]</a>
+              <a href="thread.html#4540">[ スレッド ]</a>
+              <a href="subject.html#4540">[ 件名 ]</a>
+              <a href="author.html#4540">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

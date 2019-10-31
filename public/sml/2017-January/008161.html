@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8161] Re:	NesTalkをpharo5.0に移植途中なのですが・・・
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208161%5D%20Re%3A%0A%09%3D%3Futf-8%3Fb%3FTmVzVGFsa%2BOCknBoYXJvNS4w44Gr56e75qSN6YCU5Lit44Gq%3F%3D%0A%09%3D%3Futf-8%3Fb%3F44Gu44Gn44GZ44GM44O744O744O7%3F%3D&In-Reply-To=%3C001601d2712f%24a1ac4930%24e504db90%24%40kind.ocn.ne.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008159.html">
+   <LINK REL="Next"  HREF="008160.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8161] Re:	NesTalkをpharo5.0に移植途中なのですが・・・</H1>
+    <B>Sunao Furukawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208161%5D%20Re%3A%0A%09%3D%3Futf-8%3Fb%3FTmVzVGFsa%2BOCknBoYXJvNS4w44Gr56e75qSN6YCU5Lit44Gq%3F%3D%0A%09%3D%3Futf-8%3Fb%3F44Gu44Gn44GZ44GM44O744O744O7%3F%3D&In-Reply-To=%3C001601d2712f%24a1ac4930%24e504db90%24%40kind.ocn.ne.jp%3E"
+       TITLE="[SML 8161] Re:	NesTalkをpharo5.0に移植途中なのですが・・・">sadie ＠ kind.ocn.ne.jp
+       </A><BR>
+    <I>2017年 1月 18日 (水) 11:07:33 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008159.html">[SML 8159] Re:	NesTalkをpharo5.0に移植途中なのですが・・・
+</A></li>
+        <LI>次の記事 <A HREF="008160.html">[SML 8160]	第96回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8161">[ 日付 ]</a>
+              <a href="thread.html#8161">[ スレッド ]</a>
+              <a href="subject.html#8161">[ 件名 ]</a>
+              <a href="author.html#8161">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Sumiさん。
+古川です。お忙しい中調べさせてしまい申し訳ありませんでした。
+#binaryなどといったメッセージをほおっておいてdo itしてみたら、
+---------------------------------------------------------------
+FileHandle(Object)&gt;&gt;doesNotUnderstand: #binary
+NtCartridge class&gt;&gt;readCartridge:
+[ :stream | self readCartridge: stream ] in NtCartridge class&gt;&gt;romFile: in Block: [ :stream | self readCartridge: stream ]
+[ aBlock value: stream ] in FileReference(AbstractFileReference)&gt;&gt;readStreamDo: in Block: [ aBlock value: stream ]
+BlockClosure&gt;&gt;ensure:
+FileReference(AbstractFileReference)&gt;&gt;readStreamDo:
+NtCartridge class&gt;&gt;romFile:
+UndefinedObject&gt;&gt;DoIt
+OpalCompiler&gt;&gt;evaluate
+RubSmalltalkEditor&gt;&gt;evaluate:andDo:
+RubSmalltalkEditor&gt;&gt;highlightEvaluateAndDo:
+GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)&gt;&gt;popupPrint
+MorphicAlarm(MessageSend)&gt;&gt;value
+MorphicAlarm&gt;&gt;value:
+WorldState&gt;&gt;triggerAlarmsBefore:
+WorldState&gt;&gt;runLocalStepMethodsIn:
+WorldState&gt;&gt;runStepMethodsIn:
+WorldMorph&gt;&gt;runStepMethods
+WorldState&gt;&gt;doOneCycleNowFor:
+WorldState&gt;&gt;doOneCycleFor:
+WorldMorph&gt;&gt;doOneCycle
+[ [ World doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager&gt;&gt;spawnNewProcess in Block: [ [ World doOneCycle....
+[ self value.
+Processor terminateActive ] in BlockClosure&gt;&gt;newProcess in Block: [ self value....
+-----------------------------------------------------------------------------------
+doesNotUnderstand: #binaryなどと言われてしまったためパニックに陥った私は英語のドキュメントをいろいろ調べて、deprecated:にすればいいと思い込んでいました。
+私の英語力不足のため、doesNotUnderstand:が消えればいいと思っていました。
+<A HREF="http://stackoverflow.com/questions/31934877/pharo-filesystem-how-do-i-write-a-binary-file">http://stackoverflow.com/questions/31934877/pharo-filesystem-how-do-i-write-a-binary-file</A>
+などを下手に参考にしたため、deprecated:を連発する結果となりました。
+なお、OSは自分でアップデートしたwindows 10.0.14393を使っています。
+ちなみにNesTalkはPharo5.0で無事動きました。
+ただfpsが速すぎるような気がしますが、Spur VMのおかげかも（憶測）と思いました。
+
+御返事ありがとうございました。
+&gt;<i>-----Original Message-----
+</I>&gt;<i>From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sml-bounces ＠ smalltalk.jp</A> [mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sml-bounces ＠ smalltalk.jp</A>] On
+</I>&gt;<i>Behalf Of Masato Sumi
+</I>&gt;<i>Sent: Tuesday, January 17, 2017 12:21 PM
+</I>&gt;<i>To: Smalltalkers' Salon Mailing List &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sml ＠ smalltalk.jp</A>&gt;
+</I>&gt;<i>Subject: [SML 8159] Re: NesTalkをpharo5.0に移植途中なのですが・・・
+</I>&gt;<i>
+</I>&gt;<i>古川さん
+</I>&gt;<i>
+</I>&gt;<i>#deprecated: は非推奨メソッドに組み込んでおき、コールされた場合に警告を
+</I>&gt;<i>出すためのメソッドで、
+</I>&gt;<i>試しておられるような使い方は見たことがないのですが、当方の勘違いでしょう
+</I>&gt;<i>か？
+</I>&gt;<i>
+</I>&gt;<i>あと、古川さんは OS は何を使われていますか？
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>手元の環境（Win 8.1）で試しましたが、#romFile: で ROM ファイルを読み込め
+</I>&gt;<i>ないだけで
+</I>&gt;<i>これをとりあえず
+</I>&gt;<i>
+</I>&gt;<i>romFile: path
+</I>&gt;<i>    ^ path asFileReference readStreamDo:
+</I>&gt;<i>        [:stream | self readCartridge: stream]
+</I>&gt;<i>
+</I>&gt;<i>のように修正すれば他には特に修正なしに動きました。よく調べていませんが、
+</I>&gt;<i>Pharo の Path&gt;&gt;#segments あたりが Win でうまく機能していないせいのよう
+</I>&gt;<i>に見受けられます。
+</I>&gt;<i>
+</I>&gt;<i>macOS はちょっと古いバージョン（10.9）でしか試していないのですが、
+</I>&gt;<i>Win で動かすときような修正の必要はなく、インストールしただけで特にいじら
+</I>&gt;<i>ずとも起動まではしました。
+</I>&gt;<i>しかし、Pharo が macOS で動くときに #keyDonw、#keyUp イベントでちゃんと
+</I>&gt;<i>キーコードを保持できていないらしく
+</I>&gt;<i>操作不能な状態に陥っているように見受けられます。
+</I>&gt;<i>とりあえず、#keyStroke イベントはちゃんとキーコードを保持できているよう
+</I>&gt;<i>なので、
+</I>&gt;<i>#handlesKeyDown: と同じ内容の #handlesKeyStroke: メソッドを
+</I>&gt;<i>NesTalkWindow に追加してみたところ、
+</I>&gt;<i>それらしき反応はしてくれるようです（ただ、これだけですとボタンが押しっぱ
+</I>&gt;<i>なしになるので相変わらずプレイは不能ですが…）
+</I>&gt;<i>
+</I>&gt;<i>--
+</I>&gt;<i>sumim
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>2017年1月15日 20:00 Sunao Furukawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sadie ＠ kind.ocn.ne.jp</A>&gt;:
+</I>&gt;&gt;<i> 古川と申します。
+</I>&gt;&gt;<i> NesTalkでマリオを動かす
+</I>&gt;&gt;<i> <A HREF="http://oohito.com/nqthm/archives/2060">http://oohito.com/nqthm/archives/2060</A>
+</I>&gt;&gt;<i> を参考に
+</I>&gt;&gt;<i> NesTalkをpharo 5.0に移植しようと思って作業しているのですが、
+</I>&gt;&gt;<i> FileStreamのメソッドをdeprecated:にすればいいと思っていました。
+</I>&gt;&gt;<i> しかし、validate:aByteArrayの引数で具体的な値が入りません。
+</I>&gt;&gt;<i> pharo2.0でやれば、シンボルのブロックが代入されているところで、
+</I>&gt;&gt;<i> pharo5.0ではFileStreamの変数が指定されています。
+</I>&gt;&gt;<i> どう直したらいいでしょう。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 変更したメソッドを書いておきます。なお、BabyMockはsmalltalkhubから
+</I>&gt;&gt;<i> loadしました。
+</I>&gt;&gt;<i> --------------------------------------------------------------
+</I>&gt;&gt;<i> romFile: path
+</I>&gt;&gt;<i>         ^ FileSystem disk / path binaryReadStreamDo:
+</I>&gt;&gt;<i>                 [:stream | self readCartridge: stream]
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ---------------------------------------------------------------
+</I>&gt;&gt;<i> readCartridge: stream
+</I>&gt;&gt;<i>         | roms vroms header |
+</I>&gt;&gt;<i>         stream deprecated: 'binary'.
+</I>&gt;&gt;<i>         header := NtCartridgeHeader fromByteArray: (stream deprecated:
+</I>&gt;&gt;<i> 'next: 16').
+</I>&gt;&gt;<i>         roms := self readRoms: stream header: header.
+</I>&gt;&gt;<i>         vroms := self readVroms: stream header: header.
+</I>&gt;&gt;<i>         ^ self new
+</I>&gt;&gt;<i>                 setHeader: header
+</I>&gt;&gt;<i>                 roms: roms
+</I>&gt;&gt;<i>                 vroms: vroms
+</I>&gt;&gt;<i>                 tiles: (self tilesPerVrom: vroms)
+</I>&gt;&gt;<i> ----------------------------------------------------------------
+</I>&gt;&gt;<i> 虫のいい話で申し訳ありません。ポイントは'next: 16'がdeprecated:にした
+</I>&gt;<i>時に
+</I>&gt;&gt;<i> 値を読み込まないことだと思います。
+</I>&gt;&gt;<i>
+</I></PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008159.html">[SML 8159] Re:	NesTalkをpharo5.0に移植途中なのですが・・・
+</A></li>
+	<LI>次の記事 <A HREF="008160.html">[SML 8160]	第96回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8161">[ 日付 ]</a>
+              <a href="thread.html#8161">[ スレッド ]</a>
+              <a href="subject.html#8161">[ 件名 ]</a>
+              <a href="author.html#8161">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

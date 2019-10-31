@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7701] HttpClientによるログイン認証について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207701%5D%20%3D%3Fiso-2022-jp%3Fb%3FSHR0cENsaWVudBskQiRLJGgkayVtJTAbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlc0cnPlokSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007700.html">
+   <LINK REL="Next"  HREF="007702.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7701] HttpClientによるログイン認証について</H1>
+    <B>久保田 吉彦</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207701%5D%20%3D%3Fiso-2022-jp%3Fb%3FSHR0cENsaWVudBskQiRLJGgkayVtJTAbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlc0cnPlokSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7701] HttpClientによるログイン認証について">kubota ＠ sie.dendai.ac.jp
+       </A><BR>
+    <I>2009年 10月 27日 (火) 12:14:13 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007700.html">[SML 7700] メーリングリストの不具合のご報告
+</A></li>
+        <LI>次の記事 <A HREF="007702.html">[SML 7702] Re: HttpClientによるログイン認証について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7701">[ 日付 ]</a>
+              <a href="thread.html#7701">[ スレッド ]</a>
+              <a href="subject.html#7701">[ 件名 ]</a>
+              <a href="author.html#7701">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、電大の久保田です。
+
+Net.HttpClientの使いかたについて悩んでいます。
+ログインし、その後のページを取得したいのですが、うまくいきません。
+Javaですが、同じ目的のサンプルプログラムがあったので、それを参考 
+に書いてみました。
+mixiにログインし、その後のページを持ってくる例(http:// 
+blog.mikuriya.biz/archives/251)です。
+
+環境はVisualWorks7.6NCにWebSupportのパーセルをインス 
+トールしています。
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+mixiLogin := '<A HREF="http://mixi.jp/login.pl'.">http://mixi.jp/login.pl'.</A>
+mixiTopPage := '<A HREF="http://mixi.jp/home.pl'.">http://mixi.jp/home.pl'.</A>
+inputUserName := 'email'.
+inputPassword := 'password'.
+inputNextURL := 'next_url'.
+userName := 'めーるあどれす'.
+password := 'ぱすわーど'.
+nextUrl := '/home.pl'.
+
+client := Net.HttpClient new.
+client enableCookies: true.	
+postRequest := HttpRequest post:mixiLogin.
+postRequest
+		addFormKey: inputUserName value: userName;
+		addFormKey: inputPassword value: password;
+		addFormKey: inputNextURL  value: nextUrl.
+postResponse := client executeRequest: postRequest.
+&quot;????&quot;
+getMethod := HttpRequest get: mixiTopPage.
+getResponse := client executeRequest: getMethod
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+????までは実行できます。全て選択して実行するとUnhandled  
+exception: Key not foundというExceptionがでます。
+
+javaの例をみると????にあたるところに 
+postMethod.releaseConnection()という式が入っていました。 
+VisualWorksにも同じようなものがあるかとシステムブラウザをのぞい 
+てみましたが目当てのものは見付かりませんでした。
+
+HttpClientのインスタンスを1つ作成し、それに向って必要なだけ 
+executeRequest: aHttpRequestメッセージを送信すれば結果が得られる 
+と考えているのですが、間違ているのでしょうか。
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007700.html">[SML 7700] メーリングリストの不具合のご報告
+</A></li>
+	<LI>次の記事 <A HREF="007702.html">[SML 7702] Re: HttpClientによるログイン認証について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7701">[ 日付 ]</a>
+              <a href="thread.html#7701">[ スレッド ]</a>
+              <a href="subject.html#7701">[ 件名 ]</a>
+              <a href="author.html#7701">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

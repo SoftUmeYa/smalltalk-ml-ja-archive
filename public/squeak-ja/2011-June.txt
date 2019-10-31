@@ -1,0 +1,843 @@
+From x19290 ＠ gmail.com  Mon Jun  6 22:27:54 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 06 Jun 2011 22:27:54 +0900
+Subject: [Squeak-ja: 4575]
+ Pharo by Exampleの和訳を手分けしてしませんか?
+Message-ID: <4DECD5DA.8090605@gmail.com>
+
+こんばんは。
+
+http://www.hatena.ne.jp/pharo/ で、Pharo by Exampleの和訳に、ひとりで取
+り組んでいる人がいます。最近はへこたれているようですがその人がある日、
+
+「ふと思いましたが３００ページ越えの英語のドキュメントでも１人１ページ訳
+せば３００人で１日で終わりますね」
+http://d.hatena.ne.jp/pharo/20101006
+
+と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+的には良い考えだと思います。私たちで協力しませんか?
+
+協業には、みんなの翻訳: http://trans-aid.jp/ が使えると思います。
+<http://www.hatena.ne.jp/pharo/>
+
+ご意見お待ちしています。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+<http://www.hatena.ne.jp/pharo/>
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110606/7bd85b8a/attachment.htm>
+
+From x19290 ＠ gmail.com  Mon Jun  6 22:30:39 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 06 Jun 2011 22:30:39 +0900
+Subject: [Squeak-ja: 4576]
+ Pharo by Exampleの和訳を手分けしてしませんか?
+Message-ID: <4DECD67F.5080606@gmail.com>
+
+(あれ? HTMLになっちゃった)
+
+こんばんは。
+
+http://www.hatena.ne.jp/pharo/ で、Pharo by Exampleの和訳に、ひとりで取
+り組んでいる人がいます。最近はへこたれているようですがその人がある日、
+
+「ふと思いましたが３００ページ越えの英語のドキュメントでも１人１ページ訳
+せば３００人で１日で終わりますね」
+http://d.hatena.ne.jp/pharo/20101006
+
+と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+的には良い考えだと思います。私たちで協力しませんか?
+
+協業には、みんなの翻訳: http://trans-aid.jp/ が使えると思います。
+<http://www.hatena.ne.jp/pharo/>
+
+ご意見お待ちしています。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+
+
+From x19290 ＠ gmail.com  Mon Jun  6 22:32:51 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 06 Jun 2011 22:32:51 +0900
+Subject: [Squeak-ja: 4577] Re:
+ Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DECD67F.5080606@gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+Message-ID: <4DECD703.8000506@gmail.com>
+
+On 2011年06月06日 22:30, Hiroki Horiuchi wrote:
+> http://www.hatena.ne.jp/pharo/ で、
+
+http://d.hatena.ne.jp/pharo/ で。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+From tomohiro ＠ sra.co.jp  Tue Jun  7 06:59:27 2011
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue, 7 Jun 2011 06:59:27 +0900
+Subject: [Squeak-ja: 4578] Re:
+ [SML 7940] Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DECD67F.5080606@gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+Message-ID: <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+
+おだです。
+
+> と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+> 的には良い考えだと思います。私たちで協力しませんか?
+
+numberOfCollaborators := numberOfCollaborators + 1
+
+というわけで、よろしくお願いします。
+---
+おだ
+
+On Mon, 06 Jun 2011 22:30:39 +0900
+Hiroki Horiuchi <x19290 ＠ gmail.com> wrote:
+
+> (あれ? HTMLになっちゃった)
+> 
+> こんばんは。
+> 
+> http://www.hatena.ne.jp/pharo/ で、Pharo by Exampleの和訳に、ひとりで取
+> り組んでいる人がいます。最近はへこたれているようですがその人がある日、
+> 
+> 「ふと思いましたが３００ページ越えの英語のドキュメントでも１人１ページ訳
+> せば３００人で１日で終わりますね」
+> http://d.hatena.ne.jp/pharo/20101006
+> 
+> と言っているのを目にしました。翻訳品質の統一など、問題はありますが、基本
+> 的には良い考えだと思います。私たちで協力しませんか?
+> 
+> 協業には、みんなの翻訳: http://trans-aid.jp/ が使えると思います。
+> <http://www.hatena.ne.jp/pharo/>
+> 
+> ご意見お待ちしています。
+> --
+> 堀内寛己(ほりうちひろき)
+> http://twitter.com/x19290
+> 
+
+
+-- 
+おだ
+
+From x19290 ＠ gmail.com  Tue Jun  7 08:41:31 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Tue, 07 Jun 2011 08:41:31 +0900
+Subject: [Squeak-ja: 4579] Re:
+ [SML 7942] Re: Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+Message-ID: <4DED65AB.9030806@gmail.com>
+
+早速のご協力感謝します。
+
+協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+
+まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+さい。
+
+梅沢さんには、私をフォローしてもらっています。
+
+http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+From x19290 ＠ gmail.com  Tue Jun  7 08:49:21 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Tue, 07 Jun 2011 08:49:21 +0900
+Subject: [Squeak-ja: 4580] Re:
+ [SML 7942] Re: Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DED65AB.9030806@gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp> <4DED65AB.9030806@gmail.com>
+Message-ID: <4DED6781.7010201@gmail.com>
+
+s/梅沢/梅澤/
+--
+堀内
+
+From ume ＠ softumeya.com  Tue Jun  7 10:41:01 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 7 Jun 2011 10:41:01 +0900
+Subject: [Squeak-ja: 4581] Re:
+	[SML 7943] Re: Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <4DED65AB.9030806@gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+ <4DED65AB.9030806@gmail.com>
+Message-ID: <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+
+梅澤です。
+
+https://github.com/SquareBracketAssociates/PharoByExample-english
+のContributingのところに手順が書いてありますね。
+
+まずは
+https://www.iam.unibe.ch/mailman/listinfo/sbe-discussion
+で翻訳の開始をアナウンスするのが良いのではないでしょうか。
+
+Sergeさんも取りはからってくれると思います。
+
+なお、私も翻訳に参加させていただきます。
+
+2011年6月7日8:41 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+> 早速のご協力感謝します。
+>
+> 協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+> のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+>
+> まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+> ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+> さい。
+>
+> 梅沢さんには、私をフォローしてもらっています。
+>
+> http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+> --
+> 堀内寛己(ほりうちひろき)
+> http://twitter.com/x19290
+>
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Tue Jun  7 11:27:14 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 7 Jun 2011 11:27:14 +0900
+Subject: [Squeak-ja: 4582] Re:
+	[SML 7943] Re: Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+ <4DED65AB.9030806@gmail.com>
+ <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+Message-ID: <BANLkTik-mC2sbWuAfdD2jH-_NzZgPt85Mw@mail.gmail.com>
+
+梅澤です。
+
+翻訳参加者用のGoogleグループを作成したので、翻訳希望の方はご参加ください。
+https://groups.google.com/group/pharo-by-example-ja?hl=ja
+
+Twitterでも話が進んでいますが、ごちゃごちゃしてくるので、とりあえずこのURLを皆さんにお知らせください。
+
+ではでは。
+
+2011年6月7日10:41 Masashi Umezawa <ume ＠ softumeya.com>:
+> 梅澤です。
+>
+> https://github.com/SquareBracketAssociates/PharoByExample-english
+> のContributingのところに手順が書いてありますね。
+>
+> まずは
+> https://www.iam.unibe.ch/mailman/listinfo/sbe-discussion
+> で翻訳の開始をアナウンスするのが良いのではないでしょうか。
+>
+> Sergeさんも取りはからってくれると思います。
+>
+> なお、私も翻訳に参加させていただきます。
+>
+> 2011年6月7日8:41 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+>> 早速のご協力感謝します。
+>>
+>> 協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+>> のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+>>
+>> まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+>> ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+>> さい。
+>>
+>> 梅沢さんには、私をフォローしてもらっています。
+>>
+>> http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+>> --
+>> 堀内寛己(ほりうちひろき)
+>> http://twitter.com/x19290
+>>
+>
+> --
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+>
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Tue Jun  7 12:05:27 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 7 Jun 2011 12:05:27 +0900
+Subject: [Squeak-ja: 4583] Re:
+	[SML 7948] Re: Pharo by Exampleの和訳を手分けしてしませんか?
+In-Reply-To: <BANLkTinVw4wGJjRDpiWU7GRo4hR-yJKrtQ@mail.gmail.com>
+References: <4DECD67F.5080606@gmail.com>
+ <20110607065927.6ea2a0b6.tomohiro@sra.co.jp>
+ <4DED65AB.9030806@gmail.com>
+ <BANLkTi=2-vVYJ73+QFp+uAYgqGxgvxesiA@mail.gmail.com>
+ <BANLkTik-mC2sbWuAfdD2jH-_NzZgPt85Mw@mail.gmail.com>
+ <BANLkTinVw4wGJjRDpiWU7GRo4hR-yJKrtQ@mail.gmail.com>
+Message-ID: <BANLkTimVcr=qj-NyJnottfNv9jGZBbyJmg@mail.gmail.com>
+
+Hi Serge,
+
+Could you kindly add me? My account is mumez (https://github.com/mumez).
+
+2011年6月7日11:59 Serge Stinckwich <serge.stinckwich ＠ gmail.com>:
+> Hi all,
+>
+> i create a japanese team for PBE translation here:
+> https://github.com/organizations/SquareBracketAssociates
+> and a repository:
+> https://github.com/SquareBracketAssociates/PharoByExample-japanese
+>
+> If some of you want to join the team, please ask me, i will add you (i
+> need your github account).
+>
+> Regards,
+>
+> 2011/6/7 Masashi Umezawa <ume ＠ softumeya.com>:
+>> 梅澤です。
+>>
+>> 翻訳参加者用のGoogleグループを作成したので、翻訳希望の方はご参加ください。
+>> https://groups.google.com/group/pharo-by-example-ja?hl=ja
+>>
+>> Twitterでも話が進んでいますが、ごちゃごちゃしてくるので、とりあえずこのURLを皆さんにお知らせください。
+>>
+>> ではでは。
+>>
+>> 2011年6月7日10:41 Masashi Umezawa <ume ＠ softumeya.com>:
+>>> 梅澤です。
+>>>
+>>> https://github.com/SquareBracketAssociates/PharoByExample-english
+>>> のContributingのところに手順が書いてありますね。
+>>>
+>>> まずは
+>>> https://www.iam.unibe.ch/mailman/listinfo/sbe-discussion
+>>> で翻訳の開始をアナウンスするのが良いのではないでしょうか。
+>>>
+>>> Sergeさんも取りはからってくれると思います。
+>>>
+>>> なお、私も翻訳に参加させていただきます。
+>>>
+>>> 2011年6月7日8:41 Hiroki Horiuchi <x19290 ＠ gmail.com>:
+>>>> 早速のご協力感謝します。
+>>>>
+>>>> 協業には、梅沢真史さんの指摘で、githubを使うことにしました。今朝、github
+>>>> のアカウントを作ったばかりです(レポジトリの作りかたがわかりませんが)。
+>>>>
+>>>> まずは、twitterで#pbejをウォッチしてください。また、@smalltalk_fanをフォ
+>>>> ローして、自分のツイートに、@smalltalk_fan、#pbejを入れるようにしてくだ
+>>>> さい。
+>>>>
+>>>> 梅沢さんには、私をフォローしてもらっています。
+>>>>
+>>>> http://twitter.com/#!/smalltalk_fan/status/77761554824708096
+>>>> --
+>>>> 堀内寛己(ほりうちひろき)
+>>>> http://twitter.com/x19290
+>>>>
+>>>
+>>> --
+>>> "SoftUmeYa, LLC"
+>>> [:masashi | ^umezawa]
+>>>
+>>
+>> --
+>> "SoftUmeYa, LLC"
+>> [:masashi | ^umezawa]
+>>
+>
+>
+>
+> --
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Every DSL ends up being Smalltalk
+> http://doesnotunderstand.org/
+>
+
+
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From hachi ＠ asu.ac.jp  Fri Jun 17 17:53:49 2011
+From: hachi ＠ asu.ac.jp (H.Hachisuka)
+Date: Fri, 17 Jun 2011 17:53:49 +0900
+Subject: [Squeak-ja: 4584]
+	インストーラー作ってみました
+Message-ID: <4DFB161D.1070203@asu.ac.jp>
+
+お世話になります蜂須賀です。
+
+先日はインストーラーの件でご意見を頂きありがとうございました。頂いたご意
+見を参考にして、「親子で楽しむパソコン教室」で使用しているEtoys4のインス
+トーラーを作ってみました。
+まだ公式なサイトがありませんので、とりあえず私がメモ代わりに使っているサ
+イトにEtoys4PcInstaller.exe という名前で置いてあります。
+URL:
+http://www.asu.ac.jp/hachi/
+
+見た目はオリジナルとあまり変わりませんが、ひらがな対応や作品の保存先に
+FTPサーバを使用する際の日本語プロジェクト名対応などの地味な修正をいくつ
+か行っています。具体的な変更内容はホームページ又はインストール時のダイア
+ログ、「はじめにおよみください.txt」で確認頂けます。
+
+オリジナル(Etoys4.1.1)との互換性については考慮はするものの保証はしないと
+いうスタンスでいますが、過去の作品をいくつか試してみたところエラーは発生
+することなく動きましたので、今のところ互換性はある程度維持されているみた
+いです。
+
+使う方はいないかもしれませんが、気づいたら手を入れるという感じですので、
+仕様は変わるかもしれません。ご注意ください。
+
+From aki0805 ＠ dance.ocn.ne.jp  Mon Jun 20 06:48:57 2011
+From: aki0805 ＠ dance.ocn.ne.jp (秋山昭子)
+Date: Mon, 20 Jun 2011 06:48:57 +0900
+Subject: [Squeak-ja: 4585]
+	メーリングリストについて
+Message-ID: <000401cc2eca$b14a74a0$13df5de0$@ocn.ne.jp>
+
+スクイークの勉強中です。
+
+メーリングリストに入れて頂き、難しいのですが、見させて頂いています。
+
+最近メールが見れなくなったので、再度お送りいたしました。
+
+宜しくお願いいたします。
+
+大阪　秋山です
+
+ 
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110620/8ae0f980/attachment.htm>
+
+From abee.abe ＠ nifty.ne.jp  Mon Jun 20 10:48:18 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon, 20 Jun 2011 10:48:18 +0900
+Subject: [Squeak-ja: 4586] Re:
+	メーリングリストについて
+In-Reply-To: <000401cc2eca$b14a74a0$13df5de0$@ocn.ne.jp>
+References: <000401cc2eca$b14a74a0$13df5de0$@ocn.ne.jp>
+Message-ID: <BANLkTi=5hoqtsAYx0uS08WeYZuDJVyb_TQ@mail.gmail.com>
+
+秋山さん、こんにちは。
+阿部です。
+正しく配信されていますので、ご安心ください。
+最近は流れるメールが少ないだけかもしれません。
+過去の投稿はこちらで確認できます。
+http://www.smalltalk.jp/pipermail/squeak-ja/
+
+このMLは時として難しい話題が続くこともありますが、Squeakに関することであれはどんな話をしていただいてもかまいませんので、どうぞご自由にお使いください。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011年6月20日6:48 秋山昭子 <aki0805 ＠ dance.ocn.ne.jp>:
+> スクイークの勉強中です。
+>
+> メーリングリストに入れて頂き、難しいのですが、見させて頂いています。
+>
+> 最近メールが見れなくなったので、再度お送りいたしました。
+>
+> 宜しくお願いいたします。
+>
+> 大阪　秋山です
+>
+>
+
+From ume ＠ softumeya.com  Mon Jun 20 21:27:16 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Mon, 20 Jun 2011 21:27:16 +0900
+Subject: [Squeak-ja: 4587]
+	第33回Smalltalk勉強会のお知らせ
+Message-ID: <BANLkTimGFnb2MoXQLeP6wFv5hZSKyanvRQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/6/29(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai33kaismalltalkbenkyoukai
+
+今回のテーマはちょっとマニアックな感じがしますが、「シリアライザ」です。
+古くはBOSS、新しくはFuel、StOMPと、Smalltalkには様々なシリアライザが存在します。
+StOMPの開発者(私ですが)が、いろいろなシリアライザの特徴について解説を行います。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From aki0805 ＠ dance.ocn.ne.jp  Wed Jun 22 00:41:14 2011
+From: aki0805 ＠ dance.ocn.ne.jp (秋山昭子)
+Date: Wed, 22 Jun 2011 00:41:14 +0900
+Subject: [Squeak-ja: 4588] Re:
+	メーリングリストについて
+In-Reply-To: <BANLkTi=5hoqtsAYx0uS08WeYZuDJVyb_TQ@mail.gmail.com>
+References: <000401cc2eca$b14a74a0$13df5de0$@ocn.ne.jp>
+ <BANLkTi=5hoqtsAYx0uS08WeYZuDJVyb_TQ@mail.gmail.com>
+Message-ID: <000c01cc3029$a767eca0$f637c5e0$@ocn.ne.jp>
+
+阿部様
+はじめまして
+有難うございました。阿部様が開発なさった「Cロボ・スクイークキット」
+組み立てるのが楽しみにしています。
+初心者ですが、日程が合えば、東京の勉強会にも一度参加させて頂き勉強させて頂き
+たいです。
+関西に勉強会や教えて頂ける所があればお教え下さいませ。
+お忙しい中、有難うございました。
+秋山です
+-----Original Message-----
+From: squeak-ja-bounces ＠ smalltalk.jp [mailto:squeak-ja-bounces ＠ smalltalk.jp]
+On Behalf Of Kazuhiro ABE
+Sent: Monday, June 20, 2011 10:48 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4586] Re: メーリングリストについて
+
+秋山さん、こんにちは。
+阿部です。
+正しく配信されていますので、ご安心ください。
+最近は流れるメールが少ないだけかもしれません。
+過去の投稿はこちらで確認できます。
+http://www.smalltalk.jp/pipermail/squeak-ja/
+
+このMLは時として難しい話題が続くこともありますが、Squeakに関することであれは
+どんな話をしていただいてもかまいませんので、どうぞご自由にお使いください。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011年6月20日6:48 秋山昭子 <aki0805 ＠ dance.ocn.ne.jp>:
+> スクイークの勉強中です。
+>
+> メーリングリストに入れて頂き、難しいのですが、見させて頂いています。
+>
+> 最近メールが見れなくなったので、再度お送りいたしました。
+>
+> 宜しくお願いいたします。
+>
+> 大阪　秋山です
+>
+>
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Fri Jun 24 21:06:25 2011
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保 道)
+Date: Fri, 24 Jun 2011 21:06:25 +0900
+Subject: [Squeak-ja: 4589]
+	e-ToysをiPad2へ
+Message-ID: <7DAC2629-2101-45A7-A902-638DBB5C0225@mbox.kyoto-inet.or.jp>
+
+ダウンロードするにはどうするのでしょうか。
+アクセス先のURLもご推薦いただければ幸いです。
+いつもお尋ねばかりで恐縮です。
+久保 道
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110624/f781d789/attachment.htm>
+
+From abee.abe ＠ nifty.ne.jp  Sat Jun 25 18:55:04 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sat, 25 Jun 2011 18:55:04 +0900
+Subject: [Squeak-ja: 4590] Re:
+	e-ToysをiPad2へ
+In-Reply-To: <7DAC2629-2101-45A7-A902-638DBB5C0225@mbox.kyoto-inet.or.jp>
+References: <7DAC2629-2101-45A7-A902-638DBB5C0225@mbox.kyoto-inet.or.jp>
+Message-ID: <BANLkTikj_ZtHJ7mqZ8QGAiabNN41_n-MAQ@mail.gmail.com>
+
+久保さん、
+現時点でEtoysをiPadやiPhoneに手軽にインストールする方法はありません。
+残念ながら、Apple社の方針が変わらない限り、今後も状況は同じと思われます。
+
+インストールするには、以下のページとそのリンク先を読み、場合によっては開発者に連絡する必要があります。これにはiOSの開発に関するスキルが必要です。
+http://croquetweak.blogspot.com/2010/06/squeak-etoys-on-ipad.html
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011/6/24 久保 道 <kubo-o ＠ mbox.kyoto-inet.or.jp>:
+> ダウンロードするにはどうするのでしょうか。
+> アクセス先のURLもご推薦いただければ幸いです。
+> いつもお尋ねばかりで恐縮です。
+> 久保 道
+>
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sat Jun 25 19:16:44 2011
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保 道)
+Date: Sat, 25 Jun 2011 19:16:44 +0900
+Subject: [Squeak-ja: 4591] (無題)
+Message-ID: <E61AB43D-ED32-4880-9A25-5DADEB861BD1@mbox.kyoto-inet.or.jp>
+
+
+
+ 久保 道
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sat Jun 25 19:28:48 2011
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保 道)
+Date: Sat, 25 Jun 2011 19:28:48 +0900
+Subject: [Squeak-ja: 4592] Re:
+ e-ToysをiPad2へ
+In-Reply-To: <BANLkTikj_ZtHJ7mqZ8QGAiabNN41_n-MAQ@mail.gmail.com>
+References: <7DAC2629-2101-45A7-A902-638DBB5C0225@mbox.kyoto-inet.or.jp>
+ <BANLkTikj_ZtHJ7mqZ8QGAiabNN41_n-MAQ@mail.gmail.com>
+Message-ID: <4B5E3B3F-B476-4089-B87E-83FB81FEDD10@mbox.kyoto-inet.or.jp>
+
+阿部さん
+さっそく、ありがとうございました。
+ちょっと前に、動きますかとお尋ねし
+しましたら、動きますね、ということでしたので、
+簡単にいくのかなと思っていましたが、
+残念です。
+ところで、アラン・ケイさんが25年以上も前に、
+子どもの創造性を支援する発想を主張しておられます。
+その考えにそって、
+iPadのようなツールを使った創造的なトライとは
+どんなことだろうか、
+eToysがどのように使えるのか考えたいと
+思っています。
+
+ 久保 道
+
+On 2011/06/25, at 18:55, Kazuhiro ABE <abee.abe ＠ nifty.ne.jp> wrote:
+
+> 久保さん、
+> 現時点でEtoysをiPadやiPhoneに手軽にインストールする方法はありません。
+> 残念ながら、Apple社の方針が変わらない限り、今後も状況は同じと思われます。
+> 
+> インストールするには、以下のページとそのリンク先を読み、場合によっては開発者に連絡する必要があります。これにはiOSの開発に関するスキルが必要です。
+> http://croquetweak.blogspot.com/2010/06/squeak-etoys-on-ipad.html
+> 
+> //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+> 
+> 2011/6/24 久保 道 <kubo-o ＠ mbox.kyoto-inet.or.jp>:
+>> ダウンロードするにはどうするのでしょうか。
+>> アクセス先のURLもご推薦いただければ幸いです。
+>> いつもお尋ねばかりで恐縮です。
+>> 久保 道
+>> 
+> 
+> 
+> 
+
+
+
+From abee.abe ＠ nifty.ne.jp  Sat Jun 25 19:52:42 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sat, 25 Jun 2011 19:52:42 +0900
+Subject: [Squeak-ja: 4593] Re:
+	e-ToysをiPad2へ
+In-Reply-To: <4B5E3B3F-B476-4089-B87E-83FB81FEDD10@mbox.kyoto-inet.or.jp>
+References: <7DAC2629-2101-45A7-A902-638DBB5C0225@mbox.kyoto-inet.or.jp>
+ <BANLkTikj_ZtHJ7mqZ8QGAiabNN41_n-MAQ@mail.gmail.com>
+ <4B5E3B3F-B476-4089-B87E-83FB81FEDD10@mbox.kyoto-inet.or.jp>
+Message-ID: <BANLkTinAZVrDg274fi0QV+Z60ud8MVTfww@mail.gmail.com>
+
+阿部です。
+その時、大島さんが紹介してくれたビデオの説明にあったとおり、これは将来リリースされるOLPCのタブレット(XO-3)用の実験です。iPad自体をターゲットにしているわけではありません(AppleはiPadやiPhoneで動作するプログラミング環境を許可しません(端末内で完結するBASICなどを除く)。以前、ScratchがAppStoreから削除されたときはニュースになりました。
+
+XO-3についてはこちらをお読みください。
+http://www.olpcnews.com/commentary/refocusing/olpc_foundation_update_xo_3_development_eastern_africa.html
+
+Etoysチームはここ数年、OLPCをターゲットに開発を行っています。他のプラットフォーム用はこれのスピンアウトです。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011年6月25日19:28 久保 道 <kubo-o ＠ mbox.kyoto-inet.or.jp>:
+> 阿部さん
+> さっそく、ありがとうございました。
+> ちょっと前に、動きますかとお尋ねし
+> しましたら、動きますね、ということでしたので、
+> 簡単にいくのかなと思っていましたが、
+> 残念です。
+> ところで、アラン・ケイさんが25年以上も前に、
+> 子どもの創造性を支援する発想を主張しておられます。
+> その考えにそって、
+> iPadのようなツールを使った創造的なトライとは
+> どんなことだろうか、
+> eToysがどのように使えるのか考えたいと
+> 思っています。
+>
+>  久保 道
+>
+> On 2011/06/25, at 18:55, Kazuhiro ABE <abee.abe ＠ nifty.ne.jp> wrote:
+>
+>> 久保さん、
+>> 現時点でEtoysをiPadやiPhoneに手軽にインストールする方法はありません。
+>> 残念ながら、Apple社の方針が変わらない限り、今後も状況は同じと思われます。
+>>
+>> インストールするには、以下のページとそのリンク先を読み、場合によっては開発者に連絡する必要があります。これにはiOSの開発に関するスキルが必要です。
+>> http://croquetweak.blogspot.com/2010/06/squeak-etoys-on-ipad.html
+>>
+>> //abee
+>> --
+>> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>>
+>> 2011/6/24 久保 道 <kubo-o ＠ mbox.kyoto-inet.or.jp>:
+>>> ダウンロードするにはどうするのでしょうか。
+>>> アクセス先のURLもご推薦いただければ幸いです。
+>>> いつもお尋ねばかりで恐縮です。
+>>> 久保 道
+>>>
+>>
+>>
+>>
+>
+>
+>
+
+From y.ich ＠ f3.dion.ne.jp  Sun Jun 26 12:24:58 2011
+From: y.ich ＠ f3.dion.ne.jp (ICHIKAWA, Yuji)
+Date: Sun, 26 Jun 2011 12:24:58 +0900
+Subject: [Squeak-ja: 4594] Re:
+ e-ToysをiPad2へ
+In-Reply-To: <BANLkTinAZVrDg274fi0QV+Z60ud8MVTfww@mail.gmail.com>
+References: <7DAC2629-2101-45A7-A902-638DBB5C0225@mbox.kyoto-inet.or.jp>
+ <BANLkTikj_ZtHJ7mqZ8QGAiabNN41_n-MAQ@mail.gmail.com>
+ <4B5E3B3F-B476-4089-B87E-83FB81FEDD10@mbox.kyoto-inet.or.jp>
+ <BANLkTinAZVrDg274fi0QV+Z60ud8MVTfww@mail.gmail.com>
+Message-ID: <DA8A64AF-8902-41EB-A6CA-FF1ECF85A4E6@f3.dion.ne.jp>
+
+市川です。
+
+2007年にDan IngallsさんがされていたJavaScriptでのSqueakをiPadで試してみたら、見た目動きました。
+http://labs.oracle.com/projects/lively/lively-0.8.1/index.xhtml
+(不安定で何度か起動が必要でした。)
+
+クリックは認識してくれました。
+mouseMoveがデフォルト動作(スクロール)してしまって残念。
+少し変更したらいけるかもとコードいじってみたのですが、うまくいきませんでした。
+
+パフォーマンス的にはiPadでは苦しそうです。iPad2ならどうでしょうか?
+
+HTML5絡みでJavaScriptがえらく盛り上がって来ているので、またSqueak on JavaScriptもアクティブになるといいですね。
+(以上、全然お役に立たない情報でした…)
+-
+市川雄二
+
+
+On 2011/06/25, at 19:52, Kazuhiro ABE wrote:
+
+> 阿部です。
+> その時、大島さんが紹介してくれたビデオの説明にあったとおり、これは将来リリースされるOLPCのタブレット(XO-3)用の実験です。iPad自体をターゲットにしているわけではありません(AppleはiPadやiPhoneで動作するプログラミング環境を許可しません(端末内で完結するBASICなどを除く)。以前、ScratchがAppStoreから削除されたときはニュースになりました。
+> 
+> XO-3についてはこちらをお読みください。
+> http://www.olpcnews.com/commentary/refocusing/olpc_foundation_update_xo_3_development_eastern_africa.html
+> 
+> Etoysチームはここ数年、OLPCをターゲットに開発を行っています。他のプラットフォーム用はこれのスピンアウトです。
+> 
+> //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+> 
+> 2011年6月25日19:28 久保 道 <kubo-o ＠ mbox.kyoto-inet.or.jp>:
+>> 阿部さん
+>> さっそく、ありがとうございました。
+>> ちょっと前に、動きますかとお尋ねし
+>> しましたら、動きますね、ということでしたので、
+>> 簡単にいくのかなと思っていましたが、
+>> 残念です。
+>> ところで、アラン・ケイさんが25年以上も前に、
+>> 子どもの創造性を支援する発想を主張しておられます。
+>> その考えにそって、
+>> iPadのようなツールを使った創造的なトライとは
+>> どんなことだろうか、
+>> eToysがどのように使えるのか考えたいと
+>> 思っています。
+>> 
+>> 久保 道
+>> 
+>> On 2011/06/25, at 18:55, Kazuhiro ABE <abee.abe ＠ nifty.ne.jp> wrote:
+>> 
+>>> 久保さん、
+>>> 現時点でEtoysをiPadやiPhoneに手軽にインストールする方法はありません。
+>>> 残念ながら、Apple社の方針が変わらない限り、今後も状況は同じと思われます。
+>>> 
+>>> インストールするには、以下のページとそのリンク先を読み、場合によっては開発者に連絡する必要があります。これにはiOSの開発に関するスキルが必要です。
+>>> http://croquetweak.blogspot.com/2010/06/squeak-etoys-on-ipad.html
+>>> 
+>>> //abee
+>>> --
+>>> 阿部 和広  EMAIL abee ＠ squeakland.jp
+>>> 
+>>> 2011/6/24 久保 道 <kubo-o ＠ mbox.kyoto-inet.or.jp>:
+>>>> ダウンロードするにはどうするのでしょうか。
+>>>> アクセス先のURLもご推薦いただければ幸いです。
+>>>> いつもお尋ねばかりで恐縮です。
+>>>> 久保 道
+>>>> 
+>>> 
+>>> 
+>>> 
+>> 
+>> 
+>> 
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110626/d09afcc8/attachment.htm>
+
+From ume ＠ softumeya.com  Mon Jun 27 22:30:46 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Mon, 27 Jun 2011 22:30:46 +0900
+Subject: [Squeak-ja: 4595]
+	Appleストア銀座でSmalltalkハンズオン
+Message-ID: <BANLkTi=2_VUAuPn+WdVKSEOk3cMxG=DT4w@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+このたびAppleストア銀座でSmalltalkハンズオンセミナをすることになりました。
+http://www.cincom.co.jp/products/seminar/smalltalk_seminar2.html
+
+前回はObjective-Cな人向けだったわけですが、今回は「自由形式」とも言えるものです。
+
+あらかじめ「Smalltalkでこんなことをしたい」というテーマを持参いただいて、それに対して講師がペアプロのような形で手助けするというスタイルです。
+初心者の方から、実際にアプリを作ってみたいという方まで、幅広く対応できるものになっています。(あまり無茶なテーマでこられても困るわけですが)
+
+7/23(土)、30(土)の2日間です。どちらか一方の参加でもかまいません。
+
+もちろん無料です。最新のAppleの機器を使い、普段は有料でないと入れないところでみっちりSmalltalkできます。
+銀ブラのついでにどうぞ。
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

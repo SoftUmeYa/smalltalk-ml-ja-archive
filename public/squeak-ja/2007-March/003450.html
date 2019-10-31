@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3450] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203450%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYyAbJEJNUSVZITwbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT9IRxsoQiBWTSAbJEIkRyVVJSElJCVrTD4kS0J5GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMjshP0g%2BQnkyOyQsO0gkKCRKJCQlUCUwJE49JEA1GyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003449.html">
+   <LINK REL="Next"  HREF="003451.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3450] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203450%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYyAbJEJNUSVZITwbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT9IRxsoQiBWTSAbJEIkRyVVJSElJCVrTD4kS0J5GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMjshP0g%2BQnkyOyQsO0gkKCRKJCQlUCUwJE49JEA1GyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3450] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正">e-itoh ＠ ygu.ac.jp
+       </A><BR>
+    <I>2007年 3月  9日 (金) 20:30:17 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003449.html">[Squeak-ja: 3449] Mac用ベータ版VMでファイル名に濁音／半濁音が使えないバグの修正
+</A></li>
+        <LI>次の記事 <A HREF="003451.html">[Squeak-ja: 3451] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3450">[ 日付 ]</a>
+              <a href="thread.html#3450">[ スレッド ]</a>
+              <a href="subject.html#3450">[ 件名 ]</a>
+              <a href="author.html#3450">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>伊藤です。
+
+さっそくMac(Tiger/iBook G4)で試させていただきました。
+今までは、「プログラム」という名前のフォルダが「フ?ロク?ラム」となっていまし
+たが、きちんと「プログラム」と表示されるようになりました。
+ありがとうございました。
+ぜひ使わせていただいて何かあるようでしたら報告いたします。
+
+取り急ぎご報告まで。
+
+--- &quot;Tetsuya HAYASHI&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt; ---
+
+&gt;<i>みなさん、こんにちは。
+</I>&gt;<i>林です。
+</I>&gt;<i>
+</I>&gt;<i>　どちらかというと Mac で開発者環境をご利用されてる方向けの情報です。
+</I>&gt;<i>
+</I>&gt;<i>　別メールにも書きましたが、 squeak.orgなどで配布されてる最新VMにはファイ
+</I>&gt;<i>ル名に「濁音／半濁音」を扱えないバグがあります。
+</I>&gt;<i>このバグを修正した VM を以下のページにアップロードしました。
+</I>&gt;<i>
+</I>&gt;<i><A HREF="http://magicbasket.jp/SqueakDev/3">http://magicbasket.jp/SqueakDev/3</A>
+</I>&gt;<i><A HREF="http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip">http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip</A>
+</I>&gt;<i>
+</I>&gt;<i>　もしよろしければ動作確認していただけると助かります。
+</I>&gt;<i>（例えば濁音／半濁音のファイルを作成、リストしてみるなど）
+</I>&gt;<i>一応、開発者の John M. McIntosh さんにはパッチを送りますが、反映されるま
+</I>&gt;<i>ではしばらくかかると思われます（丁度、今日最新版が出たみたいですので）。
+</I>&gt;<i>お急ぎの方は当面このVMをお使いください。
+</I>&gt;<i>なお、ユニバーサルバイナリでビルドしたのですけど、Intel mac を持ってない
+</I>&gt;<i>ので動作確認しておりません。問題があるようでしたらご連絡ください。
+</I>&gt;<i>
+</I>&gt;<i>　また、以前、[Squeak-ja: 2446] で高橋さんからご報告いただいた半角／全角
+</I>&gt;<i>数字の問題への修正も入ってます（この時は対応が宙ぶらりんになってしまって
+</I>&gt;<i>ました。すみません）。
+</I>&gt;<i>
+</I>&gt;<i>では。
+</I>&gt;<i>
+</I>&gt;<i>--
+</I>&gt;<i>林 徹也 Tetsuya HAYASHI 
+</I>&gt;<i><A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+</I>&gt;<i>
+</I>
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003449.html">[Squeak-ja: 3449] Mac用ベータ版VMでファイル名に濁音／半濁音が使えないバグの修正
+</A></li>
+	<LI>次の記事 <A HREF="003451.html">[Squeak-ja: 3451] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3450">[ 日付 ]</a>
+              <a href="thread.html#3450">[ スレッド ]</a>
+              <a href="subject.html#3450">[ 件名 ]</a>
+              <a href="author.html#3450">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

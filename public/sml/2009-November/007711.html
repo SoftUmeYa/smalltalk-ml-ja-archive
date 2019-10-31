@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7711] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207711%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRvIEhUTUw%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVckRyQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=4ADC404E.9050703%40hera.eonet.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007710.html">
+   <LINK REL="Next"  HREF="007712.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7711] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207711%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRvIEhUTUw%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVckRyQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=4ADC404E.9050703%40hera.eonet.ne.jp"
+       TITLE="[SML 7711] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2009年 11月 15日 (日) 16:49:32 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007710.html">[SML 7710] Re: 第13回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007712.html">[SML 7712] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7711">[ 日付 ]</a>
+              <a href="thread.html#7711">[ スレッド ]</a>
+              <a href="subject.html#7711">[ 件名 ]</a>
+              <a href="author.html#7711">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+# SMLの保存書庫を見ると、[SML 7708]〜[SML 7710]が私の所には配信されて来
+ないので、テストも兼ねて投稿させていただきます。
+
+前回投稿したプログラムは、元のプログラム20091007.stから懸け離れてしまっ
+ていたので、今回添付のプログラムは、元のプログラム20091104.stに沿ってプ
+ログラミングしたつもりです。(^^;;
+
+元のプログラムからの主な変更点
+・プログラムが共存できるように、パッケージ名をTranslatorsByHw、ネームス
+ペースをPrimeMinistersByHwに変更しました。
+・Attributesを入力用のInputAttributesと出力用のOutputAttributesに分けま
+した。
+・Translator, Table, InputAttributes, Tupleがそれぞれトランスレートに応
+えるようにしました。
+・Tableのimagesとthumbnailsにイメージ本体を読み込まないようになっていま
+す。(機能低下)
+
+PrimeMinistersByHw.Translator classDiagramをDoItするとクラスダイアグラム
+が表示されます。
+
+なお添付ファイルはCompression-ZLibパッケージを用いて圧縮したgzipファイル
+になっています。解凍プログラムをお持ちでない場合は、添付ファイルをVWのイ
+メージのあるディレクトリにコピーして、以下をDoItすれば解凍できるはずです。
+|<i> input output gzip |
+</I>(input := 'TranslatorsByHw.st.gz' asFilename readStream) binary.
+(output := 'TranslatorsByHw.st' asFilename writeStream) binary.
+gzip := GZipReadStream on: input.
+[gzip atEnd] whileFalse: [output nextPut: gzip next].
+gzip close.
+output close.
+input close
+(Compression-ZLibパッケージは、私の環境ではデフォルト?でロードされていま
+したが、もしロードされていない場合は、Percel ManagerのSuggestionsタブの
+Application Developmentの中にありますので、適宜ロードしてください)
+
+当方の作成環境は以下のとおりです:
+  Ubuntu 9.04(i386版)
+  VisualWorks7.6NC
+  Jun784
+  Jpl023
+
+次回勉強会の折にでもコメントなどいただけましたら幸いです。
+
+-- hirowadenden
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: TranslatorsByHw.st.gz
+型:         application/x-gzip
+サイズ:     6271 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20091115/0f4a9bde/TranslatorsByHw.st.bin">http://www.smalltalk.jp/pipermail/sml/attachments/20091115/0f4a9bde/TranslatorsByHw.st.bin</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007710.html">[SML 7710] Re: 第13回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007712.html">[SML 7712] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7711">[ 日付 ]</a>
+              <a href="thread.html#7711">[ スレッド ]</a>
+              <a href="subject.html#7711">[ 件名 ]</a>
+              <a href="author.html#7711">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

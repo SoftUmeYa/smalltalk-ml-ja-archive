@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3892] Re: プログラミングの質問です
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203892%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=483B5BA9.8050203%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003891.html">
+   <LINK REL="Next"  HREF="003893.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3892] Re: プログラミングの質問です</H1>
+    <B>Kondo, Fumito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203892%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=483B5BA9.8050203%40sra.co.jp"
+       TITLE="[Squeak-ja: 3892] Re: プログラミングの質問です">Fumito.Kondo ＠ hp.com
+       </A><BR>
+    <I>2008年 5月 27日 (火) 10:08:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003891.html">[Squeak-ja: 3891] Re: プログラミングの質問です
+</A></li>
+        <LI>次の記事 <A HREF="003893.html">[Squeak-ja: 3893] Re: プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3892">[ 日付 ]</a>
+              <a href="thread.html#3892">[ スレッド ]</a>
+              <a href="subject.html#3892">[ 件名 ]</a>
+              <a href="author.html#3892">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部さん、おださん、
+
+早速のご教示、誠にありがとうございます。
+
+可能性が見えてきました。
+
+早速家に帰ったら試してみます。
+
+近藤
+
+
+
+-----Original Message-----
+From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A> [mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>] On Behalf Of Tomohiro Oda
+Sent: Tuesday, May 27, 2008 9:54 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3891] Re: プログラミングの質問です
+
+おだです。
+
+&gt;<i> ActiveWorld submorphs do: [:each |
+</I>&gt;<i>     [each isKindOf: クラス] ifTrue: [each 特定の処理]].
+</I>
+たぶん、
+ActiveWorld submorphs do: [:each |
+    (each isKindOf: クラス) ifTrue: [each 特定の処理]].
+ですね。
+
+&gt;<i> isKindOf:は指定したクラスのサブクラスも含むので、そのクラスのインスタン
+</I>&gt;<i> スのみにしたいときは、代わりにisMemberOf:を使います。
+</I>
+クラス名などを決め打ちしたくない場合には、
+音を出すメッセージセレクタ名をmakeNoiseとすると、
+
+ActiveWorld submorphsDo: [:each |
+     (each respondsTo: #makeNoise) ifTrue: [each makeNoise]].
+
+とすると、makeNoiseできるオブジェクトのみがmakeNoiseします。
+(変な日本語ですね :-)
+---
+おだ
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003891.html">[Squeak-ja: 3891] Re: プログラミングの質問です
+</A></li>
+	<LI>次の記事 <A HREF="003893.html">[Squeak-ja: 3893] Re: プログラミングの質問です
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3892">[ 日付 ]</a>
+              <a href="thread.html#3892">[ スレッド ]</a>
+              <a href="subject.html#3892">[ 件名 ]</a>
+              <a href="author.html#3892">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

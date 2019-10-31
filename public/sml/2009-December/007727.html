@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7727] Re: 第14回Smalltalk勉強会＠京都（忘年会風）
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207727%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCMTQbJEIycxsoQlNtYWxs%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGFsaxskQkpZNi8ycSF3NX5FVCFKSzpHLzJxSXchSxsoQg%3D%3D%3F%3D&In-Reply-To=4B0CE1C0.8060300%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007726.html">
+   <LINK REL="Next"  HREF="007728.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7727] Re: 第14回Smalltalk勉強会＠京都（忘年会風）</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207727%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCMTQbJEIycxsoQlNtYWxs%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGFsaxskQkpZNi8ycSF3NX5FVCFKSzpHLzJxSXchSxsoQg%3D%3D%3F%3D&In-Reply-To=4B0CE1C0.8060300%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7727] Re: 第14回Smalltalk勉強会＠京都（忘年会風）">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 12月  6日 (日) 09:44:12 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007726.html">[SML 7726] Re: 第14回Smalltalk勉強会＠京都（忘年会風）
+</A></li>
+        <LI>次の記事 <A HREF="007728.html">[SML 7728] Re: Smalltalk合同勉強会@名古屋
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7727">[ 日付 ]</a>
+              <a href="thread.html#7727">[ スレッド ]</a>
+              <a href="subject.html#7727">[ 件名 ]</a>
+              <a href="author.html#7727">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+
+先日のSmalltalk勉強会＠京都では、楽しいひとときを過ごせました。
+ありがとうございました。
+
+さて勉強会でプログラムの説明をした時に、CSVTableとPrimeMinisterTable
+（中間テーブル）間のフィールドのマッピングに関して分かりやすく説明
+出来ませんでした。
+
+説明が分かり難かったのは、結局のところプログラムが分かり難い
+ものだったからだと思いましたので、プログラムを直しました。
+
+　　CSV2HTML4PrimeMinisters&gt;&gt;#fieldMappingForCSVToPrimeMinister
+
+のように書きましたので、マッピングであることが明確になったと
+思います。PrimeMiniserTableとHTMLTableのフィールド間のマッピングも
+同様に直しました。
+
+なお、CSVTableとPrimeMinisterTable間のフィールドのマッピングの
+並び順はCSVファイルの項目の並び順とは無関係です。（このあたりが
+勉強会での説明の時にうまく説明できなかったところです。）
+
+　　PrimeMinisterTableTest&gt;&gt;#testCreateTable1
+　　PrimeMinisterTableTest&gt;&gt;#testCreateTable2
+　　PrimeMinisterTableTest&gt;&gt;#testCreateTable3
+
+を比較すればお分かり頂けると思います。
+
+以上です。
+
+2009年11月25日16:50 AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;:
+&gt;<i> 青木＠京都上賀茂です。
+</I>&gt;<i>
+</I>&gt;<i> 第14回Smalltalk勉強会@京都を開催いたします。万障繰り合わせて
+</I>&gt;<i> JR京都駅前にご参集ください。今回は参加人数を大まかに把握させ
+</I>&gt;<i> てください。ご参加いただける方々、私宛にメールをお願いします。
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto14">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto14</A>
+</I>&gt;<i>
+</I>&gt;<i> 第14回 Smalltalk勉強会＠京都
+</I>&gt;<i> 日時：2009年12月02日（水）19:00〜21:00
+</I>&gt;<i> キャンパスプラザ京都 2階 第2会議室
+</I>&gt;<i> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+</I>&gt;<i>
+</I>&gt;<i> 師走（2009年の最後）の勉強会になります。課題も一段落しますし、
+</I>&gt;<i> 発足して一年が経ちましたので、ちょっと早いですが、忘年会チッ
+</I>&gt;<i> クな勉強会にしようと思います。軽食（ピザの注文）や飲料（ビー
+</I>&gt;<i> ルやソフトドリングなど）を用意します。飲食をしながら課題のレ
+</I>&gt;<i> ビューを行って2009年を〆ませう。ご賛同（各方に500円〜1,000円
+</I>&gt;<i> を捻出して）いただけるかしらん。それと応援求む：準備（向かい
+</I>&gt;<i> のビックカメラへ飲料の調達など）を手伝っていただけると助かり
+</I>&gt;<i> ます。
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i> AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</I>&gt;<i>
+</I>
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Translators-hamasaki-ver5.st.zip
+型:         application/zip
+サイズ:     11026 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20091206/79b9e097/Translators-hamasaki-ver5.st.zip">http://www.smalltalk.jp/pipermail/sml/attachments/20091206/79b9e097/Translators-hamasaki-ver5.st.zip</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007726.html">[SML 7726] Re: 第14回Smalltalk勉強会＠京都（忘年会風）
+</A></li>
+	<LI>次の記事 <A HREF="007728.html">[SML 7728] Re: Smalltalk合同勉強会@名古屋
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7727">[ 日付 ]</a>
+              <a href="thread.html#7727">[ スレッド ]</a>
+              <a href="subject.html#7727">[ 件名 ]</a>
+              <a href="author.html#7727">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

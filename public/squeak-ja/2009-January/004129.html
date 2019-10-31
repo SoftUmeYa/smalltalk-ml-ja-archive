@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4129] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204129%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjEbJEIhSyROM1obKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNG8yOyRLJEQkJCRGGyhC%3F%3D&In-Reply-To=4958DF51.7070607%40mx2.ttcn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004135.html">
+   <LINK REL="Next"  HREF="004139.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4129] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204129%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjEbJEIhSyROM1obKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNG8yOyRLJEQkJCRGGyhC%3F%3D&In-Reply-To=4958DF51.7070607%40mx2.ttcn.ne.jp"
+       TITLE="[Squeak-ja: 4129] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2009年 1月 15日 (木) 14:36:36 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004135.html">[Squeak-ja: 4135] Re: SeasideJOnePlusDB正式版
+</A></li>
+        <LI>次の記事 <A HREF="004139.html">[Squeak-ja: 4139] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4129">[ 日付 ]</a>
+              <a href="thread.html#4129">[ スレッド ]</a>
+              <a href="subject.html#4129">[ 件名 ]</a>
+              <a href="author.html#4129">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+ラウドネス補正については、Scratchのプログラムでも対応できると思いますので、そちらで試してみてもらえますか。
+「音量」の問題は確認できました。ピコボードがない場合でも音センサの代わりにPCのマイクが使われます。一度でも音を鳴らすと、この機能がアクティベートされてしまい、結果してサウンドレコーダの録音と同じく、エラーやハングが発生するようです。
+この問題に対応したイメージを今までと同じ名前で以下に置きました。
+<A HREF="http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip">http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip</A>
+
+UNIX系のプラットホームの場合(Smalltalk platformName = 'unix')、録音機能を殺しています。
+合わせて、3.7-7JPatched VMを使った際に、長い変換候補でもエラーにならないようにしています(ただし文字は化けます)。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2008/12/29 23:31 yhousako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt;:
+&gt;<i> 宝迫です．恥ずかしながら、大きな勘違いをしておりました．(^_^;;;
+</I>&gt;<i> そのために、動作確認でもさらに勘違いをしました．
+</I>&gt;<i>
+</I>&gt;<i> 【勘違い1】
+</I>&gt;<i> Scratchの内部に完全なGM音源を持っていると思いこんでいました．阿部さんの
+</I>&gt;<i> メールを良く読んでいれば読み取れたはずなのですが、思い込みとは恐ろしいも
+</I>&gt;<i> のです．（反省）
+</I>&gt;<i>
+</I>&gt;<i> 【勘違い2】
+</I>&gt;<i> GM音源では打楽器音は鍵盤に割り振られるので、「音階になっている」というこ
+</I>&gt;<i> とが「鍵盤に割り振られている」と同義であると勘違いをしておりました．これ
+</I>&gt;<i> も前のメールを良く読んでいればわかったはずでした．（赤面）
+</I>&gt;<i>
+</I>&gt;<i> 改めて動作確認をしました．
+</I>&gt;<i>
+</I>&gt;<i> 【動作確認の結果】
+</I>&gt;<i> 「楽器を○にする」で音色の変更はできました．「○の音符を…」と「○のドラム
+</I>&gt;<i> を…」は、同じ動作になっています．「楽器を○にする」で音色を変えると、「○
+</I>&gt;<i> のドラムを…」で鳴る音も変わります．これも、［4101］で解説して頂いた通り
+</I>&gt;<i> です．
+</I>&gt;<i>
+</I>&gt;<i> Kazuhiro ABE さんは書きました:
+</I>&gt;&gt;<i> これらはFM音源ですが、もともとの定義が悪く、ほとんど音色の違いが分かりません。
+</I>&gt;<i>
+</I>&gt;<i> 2オペレータくらいでしょうか？確かに、音色の違いはわかりにくいと思いました．
+</I>&gt;<i>
+</I>&gt;&gt;<i> 音量については、人間の感覚的なラウドネス曲線に対する補正を行っていないので、
+</I>&gt;&gt;<i> 周波数と音量が比例して感じられるのだと思います。
+</I>&gt;&gt;<i> <A HREF="http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A">http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A</A>
+</I>&gt;&gt;<i> この対応をするかどうかですね。
+</I>&gt;<i>
+</I>&gt;<i> この辺りも、普通のGM音源なら問題ないはずのところですよね．現実の問題とし
+</I>&gt;<i> ては、補正しないと実用的ではないと思います．簡単にできればよいのですが、
+</I>&gt;<i> いかがでしょうか．
+</I>&gt;<i>
+</I>&gt;&gt;<i> 「調べる」については、今回いじっていないので、これとは別のScratch Boardまわりの問題ですね。
+</I>&gt;&gt;<i> ご存知と思いますが、以下のページにあるようにフィードバックを返してもらえるとよいと思います。
+</I>&gt;&gt;<i> <A HREF="http://info.scratch.mit.edu/Linux_installer">http://info.scratch.mit.edu/Linux_installer</A>
+</I>&gt;<i>
+</I>&gt;<i> 今まで使っていなかったので、気づかなかったのだと思いますが、「調べる」の
+</I>&gt;<i> 「音量」がどうも上手く動かないようです．（「スライダー…」は関係がなかった）
+</I>&gt;<i>
+</I>&gt;<i> こちらで確認したところ、Picoボードを挿していなくても同じで、スクリプトに
+</I>&gt;<i> 何も組んでいない状態かスクリプトを組んであってもScratchを起動してから一
+</I>&gt;<i> 度も音を出していない状態なら、「音量」にチェックを入れても動作に問題はあ
+</I>&gt;<i> りません．ところが、何らかの音（「ニャー」も含む）を出そうとすると、ダメ
+</I>&gt;<i> なのです．
+</I>&gt;<i>
+</I>&gt;<i> フィードバックに協力したいのは山々ですが、英語がからっきしダメなので、何
+</I>&gt;<i> をどうしたらよいかよく分かりません．(^_^;;;
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------------
+</I>&gt;<i> 寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+</I>&gt;<i> みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+</I>&gt;<i> 指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+</I>&gt;<i> 全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+</I>&gt;<i> つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</I></PRE>
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004135.html">[Squeak-ja: 4135] Re: SeasideJOnePlusDB正式版
+</A></li>
+	<LI>次の記事 <A HREF="004139.html">[Squeak-ja: 4139] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4129">[ 日付 ]</a>
+              <a href="thread.html#4129">[ スレッド ]</a>
+              <a href="subject.html#4129">[ 件名 ]</a>
+              <a href="author.html#4129">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

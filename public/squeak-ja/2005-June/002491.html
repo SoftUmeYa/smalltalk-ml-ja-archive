@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2491] Re: SqueakToys の変数
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202491%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha1RveXMg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5KUT90GyhC%3F%3D&In-Reply-To=a682cd2f28c5804220fea95aca0b26d0%40amcac.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002490.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2491] Re: SqueakToys の変数</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202491%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha1RveXMg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5KUT90GyhC%3F%3D&In-Reply-To=a682cd2f28c5804220fea95aca0b26d0%40amcac.ac.jp"
+       TITLE="[Squeak-ja: 2491] Re: SqueakToys の変数">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2005年 6月 30日 (木) 20:24:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002490.html">[Squeak-ja: 2490] SqueakToysの変数
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2491">[ 日付 ]</a>
+              <a href="thread.html#2491">[ スレッド ]</a>
+              <a href="subject.html#2491">[ 件名 ]</a>
+              <a href="author.html#2491">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Thu, 30 Jun 2005 09:23:44 +0900
+suto &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">suto ＠ amcac.ac.jp</A>&gt; wrote:
+&gt;<i>（１）
+</I>&gt;<i>関数に「引数」を設定したとき、その引数を表すタイルを条件分岐のタイル（テスト）の
+</I>&gt;<i>条件部分に入れようとしても入ってくれないのですが、
+</I>&gt;<i>引数を見て処理を条件分岐させることはできないのでしょうか？
+</I>
+テストに入れられるフレーズ(たとえば[楕円の][x座標]など)をダミーで入れてお
+き、引数付スクリプタの引数部分をクリックして取り出せる引数のタイル([数値]
+など)を古いテストの上にドラッグして置き換えれば大丈夫です。
+
+とても変ですが今はこうなっています。この操作はオレンジハロのタイルでレシー
+バを差し替えるなど、他でも応用が効くので覚えておくと便利です。
+
+&gt;<i>（２）
+</I>&gt;<i>また、関数を再帰的に呼び出すとき、
+</I>&gt;<i>「現在の引数に１を足した数を引数として再帰呼び出し」のようなことをやりたいのですが、
+</I>&gt;<i>「引数に１を足す」方法が分かりません。可能でしょうか？
+</I>
+引数の定数([5]など)の右にある緑の三角をクリックして式を伸ばし、先程と同じ
+ように定数を引数タイルで置き換えてやればいけます。
+
+&gt;<i>（３）
+</I>&gt;<i>上記の解決策として、「変数」を新たに作成して「引数」を代入し、
+</I>&gt;<i>条件分岐などはこの変数を参照することで処理しています。
+</I>&gt;<i>しかし、ここで作成された変数はいわゆるグローバル変数（インスタンス変数？）のようで、
+</I>&gt;<i>再帰呼び出しを行うと期待した結果を得ることができません。
+</I>&gt;<i>（現在は再帰から返ってきたところで引数を再代入することで回避）
+</I>&gt;<i>いわゆるローカル変数を使うにはどうすればいいのでしょうか？
+</I>
+入れ物などをつかって、スタックを自分で作って管理するという荒業があります
+が、それ自体が目的でない限りお勧めしません。その部分だけSmalltalkで書くこ
+とも出来ます。プロジェクト置き場には、ドラゴン曲線など、まだ引数がなかっ
+た時代の力作があります。
+
+<A HREF="http://swikis.ddo.jp/abee/14">http://swikis.ddo.jp/abee/14</A>
+
+&gt;<i>（３）に関しては、（２）が解決すれば Lisp でいうところの破壊的代入をしない、
+</I>&gt;<i>という作戦でなんとかなりそうと予想しています。
+</I>
+再帰を使ってスパイラルを描くプロジェクト(recursiveSpiral.pr)を作ってみま
+したのでご覧ください。
+
+<A HREF="http://swikis.ddo.jp/abee/3#bottom">http://swikis.ddo.jp/abee/3#bottom</A>
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee.abe ＠ nifty.ne.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002490.html">[Squeak-ja: 2490] SqueakToysの変数
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2491">[ 日付 ]</a>
+              <a href="thread.html#2491">[ スレッド ]</a>
+              <a href="subject.html#2491">[ 件名 ]</a>
+              <a href="author.html#2491">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

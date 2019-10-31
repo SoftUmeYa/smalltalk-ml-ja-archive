@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2494] Re: SqueakToys の変数
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202494%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha1RveXMg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5KUT90GyhC%3F%3D&In-Reply-To=42C3D685291.84F7ABEE.ABE%40smtp.nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002493.html">
+   <LINK REL="Next"  HREF="002495.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2494] Re: SqueakToys の変数</H1>
+    <B>suto</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202494%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha1RveXMg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5KUT90GyhC%3F%3D&In-Reply-To=42C3D685291.84F7ABEE.ABE%40smtp.nifty.com"
+       TITLE="[Squeak-ja: 2494] Re: SqueakToys の変数">suto ＠ amcac.ac.jp
+       </A><BR>
+    <I>2005年 7月  1日 (金) 22:00:23 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002493.html">[Squeak-ja: 2493] Re: Squeak Nihongo 7 update (#100)
+</A></li>
+        <LI>次の記事 <A HREF="002495.html">[Squeak-ja: 2495] Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2494">[ 日付 ]</a>
+              <a href="thread.html#2494">[ スレッド ]</a>
+              <a href="subject.html#2494">[ 件名 ]</a>
+              <a href="author.html#2494">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部さん：
+
+秋田公立美術工芸短期大学の須藤です。
+レス、ありがとうございます。
+
+&gt;&gt;<i> （１）
+</I>&gt;&gt;<i> 関数に「引数」を設定したとき、その引数を表すタイルを条件分岐のタイル（テスト）の
+</I>&gt;&gt;<i> 条件部分に入れようとしても入ってくれないのですが、
+</I>&gt;&gt;<i> 引数を見て処理を条件分岐させることはできないのでしょうか？
+</I>&gt;<i>
+</I>&gt;<i> テストに入れられるフレーズ(たとえば[楕円の][x座標]など)をダミーで入れてお
+</I>&gt;<i> き、引数付スクリプタの引数部分をクリックして取り出せる引数のタイル([数値]
+</I>&gt;<i> など)を古いテストの上にドラッグして置き換えれば大丈夫です。
+</I>&gt;<i>
+</I>
+無事、タイルを入れることができました。
+
+&gt;&gt;<i> （２）
+</I>&gt;&gt;<i> また、関数を再帰的に呼び出すとき、
+</I>&gt;&gt;<i> 「現在の引数に１を足した数を引数として再帰呼び出し」のようなことをやりたいのですが、
+</I>&gt;&gt;<i> 「引数に１を足す」方法が分かりません。可能でしょうか？
+</I>&gt;<i>
+</I>&gt;<i> 引数の定数([5]など)の右にある緑の三角をクリックして式を伸ばし、先程と同じ
+</I>&gt;<i> ように定数を引数タイルで置き換えてやればいけます。
+</I>&gt;<i>
+</I>
+こちらもうまくゆきました。
+
+
+
+&gt;&gt;<i> （３）
+</I>&gt;&gt;<i> 上記の解決策として、「変数」を新たに作成して「引数」を代入し、
+</I>&gt;&gt;<i> 条件分岐などはこの変数を参照することで処理しています。
+</I>&gt;&gt;<i> しかし、ここで作成された変数はいわゆるグローバル変数（インスタンス変数？）のようで、
+</I>&gt;&gt;<i> 再帰呼び出しを行うと期待した結果を得ることができません。
+</I>&gt;&gt;<i> （現在は再帰から返ってきたところで引数を再代入することで回避）
+</I>&gt;&gt;<i> いわゆるローカル変数を使うにはどうすればいいのでしょうか？
+</I>&gt;<i>
+</I>&gt;<i> 入れ物などをつかって、スタックを自分で作って管理するという荒業があります
+</I>&gt;<i> が、それ自体が目的でない限りお勧めしません。その部分だけSmalltalkで書くこ
+</I>&gt;<i> とも出来ます。プロジェクト置き場には、ドラゴン曲線など、まだ引数がなかっ
+</I>&gt;<i> た時代の力作があります。
+</I>&gt;<i>
+</I>
+さすがに自作スタックを作るほどのものでもないので、こちらは試してみませんでした。
+再帰をつかってコッホ曲線をつくるプロジェクトを作ってみたので
+私も公開してみたいと思います。
+これで、専攻科生にフラクタルの基礎を教えることができます。
+（どこまで理解してもらえるかは謎ですが・・・）
+どうもありがとうございました。
+
+---
+須藤秀紹（すとうひでつぐ）
+秋田公立美術工芸短期大学 産業デザイン学科
+〒010-1632 秋田市新屋大川町12-3
+TEL 018-888-8108 / FAX 018-888-8109
+<A HREF="http://www.amcac.ac.jp/~suto">http://www.amcac.ac.jp/~suto</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002493.html">[Squeak-ja: 2493] Re: Squeak Nihongo 7 update (#100)
+</A></li>
+	<LI>次の記事 <A HREF="002495.html">[Squeak-ja: 2495] Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2494">[ 日付 ]</a>
+              <a href="thread.html#2494">[ スレッド ]</a>
+              <a href="subject.html#2494">[ 件名 ]</a>
+              <a href="author.html#2494">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

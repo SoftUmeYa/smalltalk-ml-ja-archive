@@ -1,0 +1,266 @@
+From ume ＠ softumeya.com  Fri Apr 20 22:39:08 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 20 Apr 2012 22:39:08 +0900
+Subject: [Squeak-ja: 4633]
+	第42回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdT79EzrT1jxZbzemthxhR3aseG+mch26tHJSdc=xcQLkQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2012/4/26(木) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai42kaismalltalkbenkyoukai
+
+今月のSmalltalk勉強会は、Seasideの開発事例について、吉田さんが発表されます。
+---
+タイトル:
+　もしイチゴ農家の園主がSmalltalkの「Seaside」（で作られたシステム）を使ってみたら
+概要:
+　愛知県のイチゴ農家がSeasideを使って愛知県トップを目指すストーリー・・・ではなく，Seasideで作ったWeb
+APを実際に一般公開してみたお話です．Smalltalk選定理由から開発，公開までの流れを話します．※当日一部変更あり
+---
+なかなか面白そうではありませんか!
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From mutoh ＠ openedu.org  Mon Apr 23 10:15:03 2012
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Mon, 23 Apr 2012 10:15:03 +0900
+Subject: [Squeak-ja: 4634]
+ K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+Message-ID: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+
+むとう＠おうちです。
+ご無沙汰しております。
+
+一昨日の2012/04/21に、K*BUG 勉強会で
+	FreeBSD port lang/squeak4.4.7-2375への道
+という題名で発表してきました。
+# K*BUG2012年4月勉強会 http://www.zusaar.com/event/264001
+
+相変わらず、誰に役に立つのかわからない領域の発表ですが、情報共有までに。
+
+
+で、最近の Sqeuak 回りの話に関して、間違った情報を拡散しないために、少し質問させて下さい。
+# 恐らく、Smalltalk勉強会の資料なんかにも書いてあると思うのですが、それは今から調べます(_O_)
+
+
+CogVMは、パフォーマンスの良いVMって理解しているのですが、マルチコアだったりするとより幸せなんでしょうか?
+それとも、JITが素晴らしかったりするんでしょうか?
+
+イメージ回りだと、Pharo と (まだ書いてませんが)Cuis があると思うのですが、比較した場合の売りってどう書けばピッタリきますかね?
+
+あ、そういえば最近のSqueakイメージはそっけない立ち上がりですが、やっぱりEtoysの方に教育向けがシフトしたからですかね?
+
+教育向けといえば、 Scratch に大分とシフトしてきているような印象があります。
+Scratchの熱いところと言えば、以下のような感じなんでしょうか?
+- 色々なハードウエア (Physical Computing環境)が使える
+-- なのぼ?どなどを、各地のMake 系のイベントで展示
+-- WeDoの代わりを安価に構成できる
+- 各地での教育現場での利用例が増えてきている
+- Scratch Dayが2012/05/19ともうすぐ
+
+以上、誤解があれば修正しますので、よろしくお願いします(_O_)
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh ＠ openedu.org	URL:http://qml.610T.org/
+ ・つぶやいてみても、オレの声はとどかない by 610t
+ ・自転車操業中             http://qml.610T.org/cycling/
+
+
+From tkamada ＠ acm.org  Mon Apr 23 15:13:27 2012
+From: tkamada ＠ acm.org (Toshiyuki Kamada)
+Date: Mon, 23 Apr 2012 15:13:27 +0900
+Subject: [Squeak-ja: 4635] Re:
+	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+In-Reply-To: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+References: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+Message-ID: <CADog4RycQ38Mz7VuMX_fKxrzRiJphtzzYS_LdTehbk9JhOt+ZQ@mail.gmail.com>
+
+鎌田と申します。
+
+ちょっとVMまわりについては詳しくないので差し控えさせていただいて、
+
+個人的見解ですが、教育現場でSqueakからScratchへのシフトが進んでいるのは、EToyが中途半端だったからではないかと思います。Scratchでは、画面をタイルで区切ってそれぞれの役割をはっきりさせるという割り切りをしましたが、これがまず、最初に手をつけるときのわかりやすさにつながったと思います。
+
+また、画像や音などの素材についても、リソースとしてはっきり表示されるので迷いにくい。そして最後に、「メッセージ駆動」という強力なしくみを入れたことで、拡張の柔軟性が増して、デバイスをつないだりネットワーク越しに協調できたりするようになったことも、授業の幅を広げることに大きな役割を果たしたと思っています。
+
+2012年4月23日10:15 Takeshi MUTOH <mutoh ＠ openedu.org>:
+> 教育向けといえば、 Scratch に大分とシフトしてきているような印象があります。
+> Scratchの熱いところと言えば、以下のような感じなんでしょうか?
+> - 色々なハードウエア (Physical Computing環境)が使える
+> -- なのぼ〜どなどを、各地のMake 系のイベントで展示
+> -- WeDoの代わりを安価に構成できる
+> - 各地での教育現場での利用例が増えてきている
+> - Scratch Dayが2012/05/19ともうすぐ
+
+From ky ＠ yengawa.com  Mon Apr 23 22:11:59 2012
+From: ky ＠ yengawa.com (Koji Yokokawa)
+Date: Mon, 23 Apr 2012 22:11:59 +0900
+Subject: [Squeak-ja: 4636] Re:
+ K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+In-Reply-To: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+References: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+Message-ID: <4F95551F.4040801@yengawa.com>
+
+横川です。
+
+SqueakとScratchと言えば、
+Squeak Etoysはそろそろ5.0が出て、拙作のScratchと接続できるツー 
+ル"ScratchConnect"が入ります。
+http://www.squeakland.org/download/
+これでEtoysとScratchの相互通信が簡単にできるようになります。
+
+Squeak版はSqueakSourceからダウンロードできますので、お試しください。
+http://www.yengawa.com/ScratchConnect
+
+あと、
+Scratchの情報としてSqueakに降りてSmalltalkでいじれることを書くと食いつく 
+人がいるかも?
+http://wiki.scratch.mit.edu/wiki/Shift-Click-R
+
+
+Takeshi MUTOH wrote 12/04/23 10:15:
+> むとう＠おうちです。
+> ご無沙汰しております。
+>
+> 一昨日の2012/04/21に、K*BUG 勉強会で
+> 	FreeBSD port lang/squeak4.4.7-2375への道
+> という題名で発表してきました。
+> # K*BUG2012年4月勉強会 http://www.zusaar.com/event/264001
+>
+> 相変わらず、誰に役に立つのかわからない領域の発表ですが、情報共有までに。
+>
+>
+> で、最近の Sqeuak 回りの話に関して、間違った情報を拡散しないために、少し質問させて下さい。
+> # 恐らく、Smalltalk勉強会の資料なんかにも書いてあると思うのですが、それは今から調べます(_O_)
+>
+>
+> CogVMは、パフォーマンスの良いVMって理解しているのですが、マルチコアだったりするとより幸せなんでしょうか?
+> それとも、JITが素晴らしかったりするんでしょうか?
+>
+> イメージ回りだと、Pharo と (まだ書いてませんが)Cuis があると思うのですが、比較した場合の売りってどう書けばピッタリきますかね?
+>
+> あ、そういえば最近のSqueakイメージはそっけない立ち上がりですが、やっぱりEtoysの方に教育向けがシフトしたからですかね?
+>
+> 教育向けといえば、 Scratch に大分とシフトしてきているような印象があります。
+> Scratchの熱いところと言えば、以下のような感じなんでしょうか?
+> - 色々なハードウエア (Physical Computing環境)が使える
+> -- なのぼ?どなどを、各地のMake 系のイベントで展示
+> -- WeDoの代わりを安価に構成できる
+> - 各地での教育現場での利用例が増えてきている
+> - Scratch Dayが2012/05/19ともうすぐ
+>
+> 以上、誤解があれば修正しますので、よろしくお願いします(_O_)
+>
+> では。
+> --
+> 武藤 武士＠「あおによし」自宅より
+>   E-mail:mutoh ＠ openedu.org	URL:http://qml.610T.org/
+>   ・つぶやいてみても、オレの声はとどかない by 610t
+>   ・自転車操業中             http://qml.610T.org/cycling/
+>
+
+-- 
+Koji Yokokawa <ky ＠ yengawa.com>
+http://www.yengawa.com/
+
+From ume ＠ softumeya.com  Tue Apr 24 10:40:00 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 24 Apr 2012 10:40:00 +0900
+Subject: [Squeak-ja: 4637] Re:
+	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+In-Reply-To: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+References: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+Message-ID: <CAH3eEdTkdWm6gA_6Sm38E+gv9yt1q1qk47vjbbas=btf8yv7Kg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+> 一昨日の2012/04/21に、K*BUG 勉強会で
+>        FreeBSD port lang/squeak4.4.7-2375への道
+> という題名で発表してきました。
+> # K*BUG2012年4月勉強会 http://www.zusaar.com/event/264001
+>
+> 相変わらず、誰に役に立つのかわからない領域の発表ですが、情報共有までに。
+
+拝見しました。いいですねー。BSD版も触ってみようという気になりました。
+
+> で、最近の Sqeuak 回りの話に関して、間違った情報を拡散しないために、少し質問させて下さい。
+> # 恐らく、Smalltalk勉強会の資料なんかにも書いてあると思うのですが、それは今から調べます(_O_)
+>
+>
+> CogVMは、パフォーマンスの良いVMって理解しているのですが、マルチコアだったりするとより幸せなんでしょうか?
+> それとも、JITが素晴らしかったりするんでしょうか?
+
+CogはJITとPICが効く高速VMといって良いと思います。
+http://code.google.com/p/cog/
+
+マルチコア対応を特にしているわけではありません。(Many Core対応を目指すRoar VMというやつが別にあります)
+ただしマルチスレッド版のCogを使うと、FFIの呼び出しがネイティブスレッドで非同期的に行えるという機能があるようです。
+
+> イメージ回りだと、Pharo と (まだ書いてませんが)Cuis があると思うのですが、比較した場合の売りってどう書けばピッタリきますかね?
+
+PharoはSqueakとの後方互換性を捨て、よりアグレッシブに、かつビジネスアプリの開発もできるようにという感じで、Cuisは余計なものを捨てて、なるべくシンプルにした上で新たな機能を付け加えるという感じですね。
+
+Squeak本体はなんだか最近はSlackware的なポジションになっています。
+
+> あ、そういえば最近のSqueakイメージはそっけない立ち上がりですが、やっぱりEtoysの方に教育向けがシフトしたからですかね?
+
+これはそうですね。Squeak本体はいろいろな派生系のベースみたいな感じになっています。
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From abee.abe ＠ nifty.ne.jp  Fri Apr 27 17:55:22 2012
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri, 27 Apr 2012 17:55:22 +0900
+Subject: [Squeak-ja: 4638] Re:
+	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+In-Reply-To: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+References: <A7EB866D-94A7-4BB2-8730-45C25DE36DED@openedu.org>
+Message-ID: <CADv7uFGDYwCWg+4A+xEKc-GJiDSGvgF+zQarjzMb61E3fvM0yQ@mail.gmail.com>
+
+阿部です。
+
+2012年4月23日10:15 Takeshi MUTOH <mutoh ＠ openedu.org>:
+> 教育向けといえば、 Scratch に大分とシフトしてきているような印象があります。
+> Scratchの熱いところと言えば、以下のような感じなんでしょうか?
+> - 色々なハードウエア (Physical Computing環境)が使える
+
+熱いところは、子供たちに時間と空間を超えた自己表現の機会と場所を提供したことです。
+実のところ、Scratchコミュニティにおけるフィジカルコンピューティングは極めてマイナーです。
+MITのScratchフォーラムには多数のトピックがあり、今日現在で1,137,151件のポストがありますが、「Connecting to
+the Physical World」フォーラムのポストはわずか1,584件で、わずか0.14%に過ぎません。
+これにはいろいろな理由が考えられますが、遊ぶためにまずハードウェアが必要なことが影響していることは間違いありません。
+
+> -- なのぼ〜どなどを、各地のMake 系のイベントで展示
+> -- WeDoの代わりを安価に構成できる
+
+これらの活動はこの状況を変えるために行なっていると言っても良いかもしれません(入手性、コスト、事例)。
+
+> - 各地での教育現場での利用例が増えてきている
+> - Scratch Dayが2012/05/19ともうすぐ
+
+雰囲気としては、2002年の「未来への教室」放送当時のSqueak Etoysの状況に近くなってきたかもしれません。
+ScratchのEtoysに対するアドバンテージはいろいろありますが、子供たちにとって、特殊で複雑な概念や操作が少ないこと、導入を容易にする仕掛けがシステム自体に組み込まれていることが大きいと思います。これらは、Scratchチームがコンピュータークラブハウスを運営することで得られた知見からフィードバックされたものです。
+http://llk.media.mit.edu/projects/scratch/ScratchSneakPreview.pdf
+今年度から、長年Etoysを使ってきた杉並区和田小学校の土曜楽校の環境を、ついにScratchに切り替えたのですが、その効果は劇的でした(サポートのコストが激減、子供たち自身による発展や教え合いが増加)。
+思想的な面におけるEtoysの特徴として、メタメディア、パーソナルダイナミックメディア、すなわち暫定版ダイナブックであることがありますが、残念ながら、現場ではこれを理解した上での活動はほとんど行われませんでした。そうであるなら、Scratchで十分です。一方で、子供たちによるSmalltalkを使ったScratchの改造(mod)を見ていると、すでに暫定版ダイナブックとして機能しているとも考えられます。
+このあたり、ソーシャルメディアを指向して、Flashに切り替わるScratch 2.0でどうなるか興味深いところです。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+

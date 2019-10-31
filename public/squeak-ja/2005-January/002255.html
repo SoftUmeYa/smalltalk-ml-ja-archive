@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2255] Re: プロジェクトファイル(.pr)で保存されるもの
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202255%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUglVSUhJSQlaxsoQigucHIpGyRCJEdKXUI4JDUkbCRrJGIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEI%3D%3F%3D&In-Reply-To=41DDF413.4020202%40metatoys.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002243.html">
+   <LINK REL="Next"  HREF="002256.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2255] Re: プロジェクトファイル(.pr)で保存されるもの</H1>
+    <B>&quot;土本 (Florian) 強</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202255%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUglVSUhJSQlaxsoQigucHIpGyRCJEdKXUI4JDUkbCRrJGIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEI%3D%3F%3D&In-Reply-To=41DDF413.4020202%40metatoys.org"
+       TITLE="[Squeak-ja: 2255] Re: プロジェクトファイル(.pr)で保存されるもの">&quot;土本 (Florian) 強
+       </A><BR>
+    <I>2005年 1月 11日 (火) 21:25:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002243.html">[Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+        <LI>次の記事 <A HREF="002256.html">[Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2255">[ 日付 ]</a>
+              <a href="thread.html#2255">[ スレッド ]</a>
+              <a href="subject.html#2255">[ 件名 ]</a>
+              <a href="author.html#2255">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　土本( Florian )です。
+　返答ありがとうございました。
+
+メール「[Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの」(2005/01/07 11:29) に於いて
+「Takashi Yamamiya」 語りて曰く、
+
+Takashi&gt; &gt; 　これを受けて、もう少し本格的なグラフィックリソースとサウンドリソース
+Takashi&gt; &gt; を含めた作品を作ってみようと思っています。
+Takashi&gt; すばらしい！
+
+　リソースはともかく、行き帰りの電車ではどこまで作業出来る事やら(^^;)。
+
+＃土本は普段SqueakでのプログラミングをZaurus上で通勤電車で行っています。
+＃腰を落ち着けてPCで作業するほどは時間的余裕がないので……。
+
+Takashi&gt; &gt; (1)サウンド、グラフィック、スクリプトデータなどの保存に付いての質問
+Takashi&gt; &gt; 　サウンドに関しては、阿部さん曰く、
+Takashi&gt; &gt; 
+Takashi&gt; &gt; 	6x以降はプロジェクトファイルに音も一緒に保存されるので自分の作品に新しい音を追加できます。
+Takashi&gt; &gt; 
+Takashi&gt; &gt; 　とのことですので含めることは可能と思われますが、クラス変数内に含まれ
+Takashi&gt; &gt; る(あらかじめロードした)ColorFormなどをProjectファイル内に含めることは
+Takashi&gt; &gt; 可能でしょうか。
+Takashi&gt; &gt; 　また、マップデータやシナリオなどの情報をCollectionとしてクラス変数内
+Takashi&gt; &gt; に(あらかじめロードして)持ったものについても同様に可能でしょうか。
+Takashi&gt; 
+Takashi&gt; 一番簡単なのは World のプロパティ(モーフはみんなプロパティ辞書を持っています。)
+Takashi&gt; に入れる事だと思います。オブジェックトなら何でも入ります。プログラムを書いていて
+Takashi&gt; 使いやすいのは storeString かなんかでシリアライズした文字列を ChangeSet に
+Takashi&gt; クラスメソッドとして持たせる事です。
+
+　なるほど。
+　Worldに限らず、どこかのMorphのプロパティ辞書に一括してリソースを持た
+せる方針で問題なさそうですね。
+
+Takashi&gt; &gt; (2)Projectファイルで保存されるもの
+Takashi&gt; &gt; 　これらに付随して質問なのですが、projectファイルの正体はどのような物
+Takashi&gt; &gt; なのでしょうか？
+Takashi&gt; &gt; 　予想としては、
+Takashi&gt; &gt; 
+Takashi&gt; &gt; 	プロジェクト内で作られたインスタンスを直列化したもの
+Takashi&gt; &gt; 	プロジェクト内で作られたClassを直列化した物
+Takashi&gt; &gt; 	プロジェクト内で作られたClassのソース(「ChangeSetの中のものを
+Takashi&gt; &gt; 含めるか？」との質問があるため)
+Takashi&gt; &gt; 
+Takashi&gt; &gt; 　なのですが、残念ながら手元でpkzipとgzipを駆使してAscii文字列の入った
+Takashi&gt; &gt; バイナリにまでは直せたのですが、中身のデータの意味までは判りませんでし
+Takashi&gt; &gt; た。
+Takashi&gt; 僕も良く知らないのですが、クラスは名前だけ入っています。ChangeSet を
+Takashi&gt; 含める事が出来るので、新しいクラスを入れるときは ChangeSet に入れると
+Takashi&gt; 良いです。
+
+　諒解しました。
+　ただ、ちょっと落とし穴があることに気付きました。
+
+　プロジェクトファイルで結構いろんなものが自動的にセーブされると知って
+以下の形でプロジェクトをやりとりして楽しんでいました。
+
+・3.6ベースのイメージでSystemBrowserを開いたままプロジェクト(prファイ
+ル)としてセーブ
+・3.8ベースのイメージでプロジェクトをロード
+
+　すると、実際のアプリ(いつものRainDrop)とSystemBrowserが開いたままプ
+ロジェクトが生成されます。Look &amp; Feelが変化してなかなか楽しい……ので
+すが、よく見ると、なんかSystemBrowserが3.6の見かけをしているような……。
+
+　試しに別のWorldに移って新たにSystemBrowserを開いても3.6の
+SystemBrowserが。ってことは、これは、
+
+・3.6のSystemBrowserのクラスがChangeSetの形でprファイルに含まれていた
+
+　……ということなのでしょうか。
+　Projectの形でセーブすると、確かに一見さんには判りやすい形になるので
+すが、下手なもの開いたままプロジェクト公開しちゃうと他の人の環境を破壊
+する羽目になるような気がします。たとえば、workspaceを開いた状態で今プ
+ロジェクトを公開していますが、まさか、workspaceのクラスの中身がプロジェ
+クトのロード時に書き換わってしまうとかいうことすらも考えられます。
+　この辺り、どのようなルール付けで保管されているのかが少し気になります。
+
+Takashi&gt; &gt; (3)公開についての質問
+Takashi&gt; &gt; 　今回はProjectファイルとして公開することを前提として質問していますが、
+Takashi&gt; &gt; 本来、作ったソフトウェアは、Squeak-Plug inで実行することを期待して
+Takashi&gt; &gt; Projectファイルとして公開するべきなのでしょうか？
+Takashi&gt; &gt; 　それとも、sarファイルとしてパッケージの形にまとめるべきでしょうか？
+Takashi&gt; &gt; 　それとも、mczファイルとしてアーカイブしリソースに関しては別途用意す
+Takashi&gt; &gt; べきでしょうか？
+Takashi&gt; &gt; 
+Takashi&gt; &gt; 　また、そもそもSqueakMapはどの程度「気軽に」登録しても良い物なのでしょ
+Takashi&gt; &gt; うか？
+Takashi&gt; 見てのとおりかなり気軽な物も多いので、相当気軽だと思っています。説明を
+Takashi&gt; ちゃんと書けば特に迷惑では無いと思います。
+
+　諒解しました。
+　説明……。やっぱり、abstructに関しては英語ですよね……。善処します
+(^^;)。
+
+Takashi&gt; pr -- 初心者重視
+Takashi&gt; sar -- ユーザ重視
+Takashi&gt; mcz -- 自分重視
+Takashi&gt; 
+Takashi&gt; 自分ではこんな感じに使い分けています。mcz は 3.7 以降インストーラが付属
+Takashi&gt; しているのですが、Monticello 自体が付属していないのとバイナリを含める事が
+Takashi&gt; 出来ないので、配布物としては特に利点が無いと思います。
+
+　諒解しました。
+　基本的にはsarで、デモとしてプラグインで見せる時にはprで公開するポリ
+シーにします。
+
+Takashi&gt; &gt; コン
+Takashi&gt; &gt; ピュータシステムというものに対するハックの興味を「人に見せる」ところか
+Takashi&gt; &gt; らはじめるのも選択肢としては大変有用だと思っています。
+Takashi&gt; これには激しく同意します。
+
+　これは、たまたま自分のコンピュータシステムに対する初動の動機が上記の
+通りだったための経験則です。
+　公開する範囲によっては諸刃の剣ではありますが、モチベーションの維持に
+はやはり他人の目は不可欠かと。
+
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">florian ＠ seagreen.ocn.ne.jp</A>
+Florian's Neo Pages <A HREF="http://www.cise.co.jp/%7eflorian/">http://www.cise.co.jp/%7eflorian/</A>
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002243.html">[Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+	<LI>次の記事 <A HREF="002256.html">[Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2255">[ 日付 ]</a>
+              <a href="thread.html#2255">[ スレッド ]</a>
+              <a href="subject.html#2255">[ 件名 ]</a>
+              <a href="author.html#2255">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

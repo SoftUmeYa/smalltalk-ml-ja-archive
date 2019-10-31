@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4324] Re: ScratchからMYUロボを制御
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204324%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2gbJEIkKyRpGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FTVlVGyRCJW0lXCRyQCk4ZhsoQg%3D%3D%3F%3D&In-Reply-To=2d5d52a80908292328j121fcc8ejf45924fffaeccd7%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004328.html">
+   <LINK REL="Next"  HREF="004325.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4324] Re: ScratchからMYUロボを制御</H1>
+    <B>Atsushi Mori</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204324%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2gbJEIkKyRpGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FTVlVGyRCJW0lXCRyQCk4ZhsoQg%3D%3D%3F%3D&In-Reply-To=2d5d52a80908292328j121fcc8ejf45924fffaeccd7%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4324] Re: ScratchからMYUロボを制御">moriat ＠ obirin.ac.jp
+       </A><BR>
+    <I>2009年 9月  4日 (金) 14:20:00 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004328.html">[Squeak-ja: 4328] Re: ScratchからMYUロボを制御
+</A></li>
+        <LI>次の記事 <A HREF="004325.html">[Squeak-ja: 4325] Re: ScratchからMYUロボを制御
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4324">[ 日付 ]</a>
+              <a href="thread.html#4324">[ スレッド ]</a>
+              <a href="subject.html#4324">[ 件名 ]</a>
+              <a href="author.html#4324">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  はじめまして。森(@桜美林大学)といいます。
+
+  阿部さんの試みや、韓国のDonghee Parkさんの試みを、非常に興
+  味深く読ませていただいています。
+
+  私は Smalltalk も電子工作も素人ですので、以下、とんちんか
+  んなことを書くかもしれませんが、その点御了解いただき、また、
+  この ML の皆さんのご意見を伺うことができたらと考えておりま
+  す。どうぞよろしくお願いいたします。
+
+  私自身は、Arduino (<A HREF="http://www.arduino.cc/&#12394;&#12393;">http://www.arduino.cc/など</A>) のような、オー
+  プンソースハードウエア上で、やはりオープンでしっかりした
+  Scratch のような環境でプログラムしたものを動かせたらいいと
+  考えています。(もっとも CPU はオープンではないのですが。)
+
+  今回の MYU 関連はとてもいいとは思いますし、ハードウエアが簡
+  単なために、事実上自分で改作することは容易だとは思います。
+  また、主として中学校をターゲットとしたロボット工作用の教材
+  を開発している私企業の方々には、心底、敬意を抱いています。
+
+  しかし、一つの企業が作っているために他の企業が参画しにくい
+  環境があるとすると残念ですし、ユーザーが自由に改作すること
+  ができることで、子供から大人までシームレスに利用できる題材
+  があってもいいように思います。そのためには、オープンである
+  と明言されているプラットホームを利用する方がいいように思い
+  ます。
+
+  そこで、個人的には、Scratch で組んで Arduino に組み込んで自
+  律的に動かすことができるような環境ができたらいいと思ってい
+  ます。個人的には arduino については、ようやく自作ブレッドボー
+  ド版が動き出したところです。Scratch や Smalltalk については、
+  この ML や書籍を通じて、本当にこれから勉強するところです。
+
+  もしも、
+
+  ・AVR(Arduino) ではなく、やっぱり PIC でしょう
+  ・Scratch を改変するのは大変なので、とても無理でしょう
+  ・高くても PaPeRo を使うべきでは
+  ・そもそもハードウエアとソフトウエアを連携させようと思うのが間違い
+
+  などなど、あるいはその他のご意見でもありましたら、意見交換・
+  情報交換をさせていただきたいと思います。
+
+  最初のメールで大変厚かましいのですが、どうぞよろしくお願い
+  いたします。
+
+From: Kazuhiro ABE &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt; さん
+Subject: [Squeak-ja: 4320] ScratchからMYUロボを制御について
+Date: Sun, 30 Aug 2009 15:28:47 +0900
+
+*&gt; こんにちは、阿部です。
+*&gt; 夏休みも終わりが近づいてきましたが、ScratchSource
+*&gt; 1.3.1を使って、ミュウスタジオのMYUロボを制御できるようにしてみました。二軸のMYU-503と三軸のMYU-507に対応しています。
+*&gt; <A HREF="http://www.studiomyu.com/">http://www.studiomyu.com/</A>
+*&gt; 
+*&gt; 合わせて、ジョイスティックも使えるようになります。必要なファイルは以下に置きました。
+*&gt; <A HREF="http://squeakland.jp/abee/tmp/ScratchMyuRobo.zip">http://squeakland.jp/abee/tmp/ScratchMyuRobo.zip</A>
+*&gt; 
+*&gt; これをScratchをインストールしたディレクトリに展開し、Scratch.imageの代わりにScratchMyuRobo.imageを使ってください。追加したブロックはステージの「動き」カテゴリにまとめてあります。言語メニューから「日本語(MYUロボ)」を選択すると日本語表示になります。使い方はProjectsの中のサンプルをご覧ください。ポート番号は、お使いのプラットホームや環境で異なるので、調べて置き換えてください。
+*&gt; MYUロボの機能のうち、使えるのはリモコンモードだけです。したがって、自律モードでは動かすことができず、常にシリアルケーブルでつないだ状態で、Scratchのスクリプトから制御することになります。
+*&gt; 動作確認はWindows XP SP3とUbuntu
+*&gt; 9.04、KNOPPIX6.0.1で取れています(寶迫さん、ありがとうございます)。ただし、Linuxでジョイスティックは使えないかもしれません。
+*&gt; 
+*&gt; では、お楽しみください。
+*&gt; 
+*&gt;  //abee
+*&gt; --
+*&gt; 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+--
+  森
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004328.html">[Squeak-ja: 4328] Re: ScratchからMYUロボを制御
+</A></li>
+	<LI>次の記事 <A HREF="004325.html">[Squeak-ja: 4325] Re: ScratchからMYUロボを制御
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4324">[ 日付 ]</a>
+              <a href="thread.html#4324">[ スレッド ]</a>
+              <a href="subject.html#4324">[ 件名 ]</a>
+              <a href="author.html#4324">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

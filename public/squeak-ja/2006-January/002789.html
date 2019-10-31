@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2789] Scamperのリファクタリングしました。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202789%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2NhbXBlchskQiROJWolVSUhGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lPyVqJXMlMCQ3JF4kNyQ/ISMbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002788.html">
+   <LINK REL="Next"  HREF="002790.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2789] Scamperのリファクタリングしました。</H1>
+    <B>ICHIKAWA, Yuji</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202789%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2NhbXBlchskQiROJWolVSUhGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lPyVqJXMlMCQ3JF4kNyQ/ISMbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2789] Scamperのリファクタリングしました。">y.ich ＠ f3.dion.ne.jp
+       </A><BR>
+    <I>2006年 1月  3日 (火) 19:47:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002788.html">[Squeak-ja: 2788] Re: スクリーンダンプについて  (was: Re: SqueakNihongo7 についての感想・要望など  )
+</A></li>
+        <LI>次の記事 <A HREF="002790.html">[Squeak-ja: 2790] Re: Scamperのリファクタリングしました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2789">[ 日付 ]</a>
+              <a href="thread.html#2789">[ スレッド ]</a>
+              <a href="subject.html#2789">[ 件名 ]</a>
+              <a href="author.html#2789">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>市川です。
+
+あけましておめでとうございます。
+今年もよろしくお願いいたします。
+
+リファクタリングを習得したいと思って、習得するには説明できるようになるのが一番と、また小文を書き始めました。
+<A HREF="http://ich.homelinux.net:8080/squeak/49">http://ich.homelinux.net:8080/squeak/49</A>
+
+一区切りとして、Scamperのリファクタリングをしました。（Squeak3.8用）
+<A HREF="http://ich.homelinux.net:8080/squeak/98">http://ich.homelinux.net:8080/squeak/98</A>
+リファクタリングの肝である単体テストをサボったので、ちょっと遊んでみたところ良好ですが、エンバグしているかもしれません。
+何も機能追加していないので、あまり面白くないですが、レンダリング部分を独立させたのでフレーム対応とかしやすくなったはずと思っています。
+これから単体テスト、日本語化やScamperWorkspaceの追加、テーブルタグ対応などしていこうかと思っています。
+
+
+ところで、クラスの名前を変えたりと大きな変更をしたところ、チェンジセットがうまく機能しなくなってしまいました。
+チェンジセットを別のイメージで読み込むと、途中で、
+UndefinedObject(Object)&gt;&gt;doesNotUnderstand: #methodsFor:stamp:
+で止まってしまうのですが、これはどんな時に起こるのでしょうか？
+−
+市川雄二
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002788.html">[Squeak-ja: 2788] Re: スクリーンダンプについて  (was: Re: SqueakNihongo7 についての感想・要望など  )
+</A></li>
+	<LI>次の記事 <A HREF="002790.html">[Squeak-ja: 2790] Re: Scamperのリファクタリングしました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2789">[ 日付 ]</a>
+              <a href="thread.html#2789">[ スレッド ]</a>
+              <a href="subject.html#2789">[ 件名 ]</a>
+              <a href="author.html#2789">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

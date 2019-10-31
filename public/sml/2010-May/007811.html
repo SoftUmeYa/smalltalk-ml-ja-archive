@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7811] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207811%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVidW50dSAxMC4wNExUUxskQiRHGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FSnVuGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkLEk9PCgkNSRsGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kNyQ/GyhC%3F%3D&In-Reply-To=4C00979B.2020107%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007810.html">
+   <LINK REL="Next"  HREF="007812.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7811] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207811%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVidW50dSAxMC4wNExUUxskQiRHGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FSnVuGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkLEk9PCgkNSRsGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kNyQ/GyhC%3F%3D&In-Reply-To=4C00979B.2020107%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7811] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2010年 5月 29日 (土) 19:36:11 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007810.html">[SML 7810] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+        <LI>次の記事 <A HREF="007812.html">[SML 7812] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7811">[ 日付 ]</a>
+              <a href="thread.html#7811">[ スレッド ]</a>
+              <a href="subject.html#7811">[ 件名 ]</a>
+              <a href="author.html#7811">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+#常用の環境をUbuntu 8.04LTSから10.04LTSへ移行中です
+
+(2010年05月29日 13:27), AOKI Atsushi wrote:
+&gt;<i> ランチャーからベンチマークを動かして、
+</I>&gt;<i> 結果をご報告願えれば、さらに幸いです。
+</I>
+ベンチマークを動かしてみましたが、
+
+Failed to check if 3D objects were rendered on the screen.
+Maybe it's because the window was hidden by another.
+Restarting [show complex 3D object] test.
+
+と、ウインドウにメッセージが出てしまいます。&lt;Accept&gt;を押すと
+Exceptionウインドウが出て、
+
+Unhandled exception: a primitive has failed
+
+と表示されています。最初のメッセージウインドウは表示されず
+いきなりExceptionウインドウが出る場合もあります。
+Stackの最初の数行は以下のとおりです:
+
+ApplicationWindow(Object)&gt;&gt;error:
+ApplicationWindow(Object)&gt;&gt;primitiveFailed
+ApplicationWindow(Window)&gt;&gt;deviceContentsOfAreaOriginX:y:width:height:into:startingAt:
+ApplicationWindow(DisplaySurface)&gt;&gt;contentsOfArea:into:startingAt:
+ApplicationWindow(DisplaySurface)&gt;&gt;contentsOfArea:
+ApplicationWindow(DisplaySurface)&gt;&gt;completeContentsOfArea:
+JunBenchmark&gt;&gt;waitForFinishRendering:
+optimized [] in [] in JunBenchmark&gt;&gt;show3dObject
+
+ちょっと見たところでは原因がよく分からないので、後で調べてみます。
+
+役に立たないかもしれませんが、とりあえず、show3dObjectを除いた場合の
+結果を以下に貼りつけます:
+
+OS: Ubuntu 10.04LTS(Linux 2.6.32-22-generic i686)
+CPU: AMD Athlon(tm) Dual Core Processor 4850e 2.5GHz
+memory: 2000MB
+displaySystem: ATI Radeon X1250(128MB from main memory)
+comment: except the show3dObject benchmark.
+reportId: CDCAA989
+reportFormat: 5
+time: May 29, 2010 18:35:53.610
+junVersion: Jun 784
+version: VisualWorks NonCommercial, 7.6 of March 3, 2008
+versionId: #[63 40 63 192 76 0 0 0 63 40 63 192]
+patches: OrderedCollection ('CScanner Release 3.2')
+platform: unix sysV I386 linux
+colorDepth: 24
+colorPalette: (Graphics.FixedPalette redShift: 16 redMask: 255
+greenShift: 8 greenMask: 255 blueShift: 0 blueMask: 255)
+memorySize: #(307200 61440 204800 40960 655360 4916648 400000)
+memoryReport: \5390984 bytes available\1225740 objects,  57552816 bytes
+in use
+:<i> End Of Platform Description
+</I>
+
+Jun Benchmarks (Times)
+----------------------
+
+Individual benchmark results (3 iterations):
+
+Benchmark       	Minimum	Maximum	A-Mean
+---------       	-------	-------	------
+
+Create 3D Object	2.48   	2.829  	2.69333
+Benzene Rotation	3.668  	3.805  	3.744
+Texture Rotation	0.42   	0.558  	0.483667
+Transformation  	12.561 	14.845 	13.7143
+Voronoi         	2.103  	3.025  	2.44
+Delaunay        	2.531  	2.644  	2.589
+
+Benchmark suite results (3 iterations):
+
+Rating Type	Minimum	Maximum	A-Mean
+-----------	-------	-------	------
+
+A-Mean     	4.05483	4.59583	4.27739
+
+-- hirowadenden
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007810.html">[SML 7810] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+	<LI>次の記事 <A HREF="007812.html">[SML 7812] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7811">[ 日付 ]</a>
+              <a href="thread.html#7811">[ スレッド ]</a>
+              <a href="subject.html#7811">[ 件名 ]</a>
+              <a href="author.html#7811">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

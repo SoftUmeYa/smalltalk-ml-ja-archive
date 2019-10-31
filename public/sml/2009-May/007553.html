@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7553] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207553%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=1bc06fd30905160548m532dc7f0se0299cf9ac6f3eb9%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007551.html">
+   <LINK REL="Next"  HREF="007556.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7553] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207553%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=1bc06fd30905160548m532dc7f0se0299cf9ac6f3eb9%40mail.gmail.com"
+       TITLE="[SML 7553] Re: 第7回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 5月 16日 (土) 23:11:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007551.html">[SML 7551] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007556.html">[SML 7556] 第9回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7553">[ 日付 ]</a>
+              <a href="thread.html#7553">[ スレッド ]</a>
+              <a href="subject.html#7553">[ 件名 ]</a>
+              <a href="author.html#7553">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは、青木＠宇治です。
+
+私は、毎朝、毎朝、プログラムのコードリーディングを日課にして
+いるのですが、京都での勉強会が開催されてから、Smalltalkのコー
+ドリーディングをする方々が増えてきて、実に実に喜ばしいです！
+
+&gt;<i> Junが特別なことをしているのは、青木さんからお答えがありましたが、
+</I>
+Root国Smalltalk府Jun市に住んでいるクラス名は、Smalltalk府に
+おいて名前が衝突することがない、というのが前提になっており、
+だからこそ、Smalltalk府に移入して、Jun市を省略してもいいよう
+に仕組んだのです。
+
+＃オラさ村のJunOpenGL3dObjectさんは、
+＃とても有名で、Jun市の市民なのにさ、
+＃Smalltalk府の顔になっちまっただぁ。
+
+それから、クラスの名前とクラスの実体の束縛を表すのが#{…}に
+なります。LiteralBindingReferenceのインスタンスです。
+
+(1)
+OrderedCollection
+#{OrderedCollection} value
+
+(2)
+Core.OrderedCollection
+#{Core.OrderedCollection} value
+
+(3)
+Root.Smalltalk.Core.OrderedCollection
+#{Root.Smalltalk.Core.OrderedCollection} value
+
+これはクラスの名前と実体だけに限らず、すべてのオブジェクトの
+名前と実体の束縛に適用できるように整備が進行中です。
+
+&gt;<i> それ以外に、Workspaceで実行していらっしゃるのなら、Workspaceにも
+</I>&gt;<i> 仕掛けがあって、Namespaceの名前を前置しなくても全てのNamespaceに
+</I>&gt;<i> ある共有変数を参照可能です。
+</I>
+名前空間、パッケージ、パーセル、カテゴリなど、これらはプログ
+ラミング環境と呼ばれるものに内包されて、プログラミングを行う
+ときの外延となる、というグランドデザインに基づいた実装も現在
+進行中なんです。
+
+濱崎さんに指摘いただいワークスペースにおける名前空間の複数指
+定も、このグランドデザインの一つになります。
+
+余談になりますが、もう一つの禁じ手を示しましょう。先にも申し
+ましたが、やっていいこととやってはいけないことを理解し行解す
+るのに役立つでしょうからね。
+
+GeneralBindingReferenceのインスタンスに隠蔽されたキャッシュを
+無理矢理にアクセスしてみます。やってはならないのですよ、くれ
+ぐれも言っておきますが。
+
+(#{Root.Smalltalk.Core.OrderedCollection} yourself)
+    instVarAt:
+        (#{Root.Smalltalk.Core.GeneralBindingReference} value allInstVarNames
+            indexOf: 'cache')
+==&gt; nil
+
+ね、最初はnilでしょ。ところが、あなたの値は何ですか？と訊ねる
+（valueというメッセージを送る）と、
+
+(#{Root.Smalltalk.Core.OrderedCollection} value; yourself)
+    instVarAt:
+        (#{Root.Smalltalk.Core.GeneralBindingReference} value allInstVarNames
+            indexOf: 'cache')
+==&gt; (VariableBinding key: #OrderedCollection)
+
+ね、今度はVariableBindingのインスタンスがキャッシュされている
+のがわかります。
+
+VariableBindingは、LookupKeyのサブクラスで、Associationの親戚
+です。Dictionaryの要素になることでお馴染みですよね。
+
+Object
+|<i> Magnitude
+</I>|<i> | LookupKey
+</I>|<i> | | Association
+</I>|<i> | | | AssociationTree
+</I>|<i> | | | | AssociationTreeWithParent
+</I>|<i> | | | | | AssociationTreeWithParentWithIndents
+</I>|<i> | | | ProbeCharacterStyle
+</I>|<i> | | | WeakKeyAssociation
+</I>|<i> | | | | Ephemeron
+</I>|<i> | | LabelAndValue
+</I>|<i> | | VariableBinding
+</I>|<i> | | | InitializedVariableBinding
+</I>
+はかないものEphemeronは面白いです。親しい者に先立たれたこと
+（theBereaved）をいたむmournのメッセージがいかにも喪に服する
+感じなんですよ。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007551.html">[SML 7551] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007556.html">[SML 7556] 第9回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7553">[ 日付 ]</a>
+              <a href="thread.html#7553">[ スレッド ]</a>
+              <a href="subject.html#7553">[ 件名 ]</a>
+              <a href="author.html#7553">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

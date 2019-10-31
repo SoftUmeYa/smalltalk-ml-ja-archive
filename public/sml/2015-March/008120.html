@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8120] Re: stringを評価可能オブジェクトに変更する方法について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208120%5D%20Re%3A%0A%20%3D%3Futf-8%3Fb%3Fc3RyaW5n44KS6KmV5L6h5Y%2Bv6IO944Kq44OW44K444Kn44Kv%3F%3D%0A%20%3D%3Futf-8%3Fb%3F44OI44Gr5aSJ5pu044GZ44KL5pa55rOV44Gr44Gk44GE44Gm%3F%3D&In-Reply-To=%3C55038F47.6040101%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008119.html">
+   <LINK REL="Next"  HREF="008115.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8120] Re: stringを評価可能オブジェクトに変更する方法について</H1>
+    <B>青木 淳</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208120%5D%20Re%3A%0A%20%3D%3Futf-8%3Fb%3Fc3RyaW5n44KS6KmV5L6h5Y%2Bv6IO944Kq44OW44K444Kn44Kv%3F%3D%0A%20%3D%3Futf-8%3Fb%3F44OI44Gr5aSJ5pu044GZ44KL5pa55rOV44Gr44Gk44GE44Gm%3F%3D&In-Reply-To=%3C55038F47.6040101%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 8120] Re: stringを評価可能オブジェクトに変更する方法について">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2015年 3月 14日 (土) 10:30:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008119.html">[SML 8119] Re: stringを評価可能オブジェクトに変更する方法について
+</A></li>
+        <LI>次の記事 <A HREF="008115.html">[SML 8115] Re: stringを評価可能オブジェクトに変更する方法について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8120">[ 日付 ]</a>
+              <a href="thread.html#8120">[ スレッド ]</a>
+              <a href="subject.html#8120">[ 件名 ]</a>
+              <a href="author.html#8120">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>メソッドブラウザを開くように改善してみました。
+
+	| aString aCollection aSet |
+	aString := 'evaluate*'.
+	aCollection := OrderedCollection new.
+	aCollection add: ParagraphEditor.
+	aCollection add: Debugger.
+	aCollection add: Inspector.
+	aSet := Set new.
+	aCollection
+		do: [:aClass | aClass
+				methodsDo: [:aMethod | aMethod
+						messagesDo: [:aMessage | aSet add: aMessage]]].
+	aCollection := aSet select: [:aMessage | aString match: aMessage asString].
+	Transcript clear.
+	aCollection
+		do: [:aMessage |
+			Transcript cr; show: aMessage printString.
+			SystemNavigation default browseAllImplementorsOf: aMessage].
+	^ aCollection
+
+--- 青木淳
+
+On 2015/03/14 9:36, 青木 淳 wrote:
+&gt;<i> おはようございます、青木です。
+</I>&gt;<i>
+</I>&gt;<i> On 2015/03/13 19:07, Squeak wrote:
+</I>&gt;<i>  &gt; 青木先生、早急の返信ありがとうございました。
+</I>&gt;<i>  &gt; 著書を拝読させて頂いております。
+</I>&gt;<i>  &gt; 早速試してみたいと思います。
+</I>&gt;<i>
+</I>&gt;<i> 拙著作を読んでいただき痛み入ります。
+</I>&gt;<i>
+</I>&gt;<i> On 2015/03/14 8:22, Squeak wrote:
+</I>&gt;<i>  &gt; ご指摘ありがとうございます。
+</I>&gt;<i>  &gt; 今朝、実際に動かしてみたところ、両方共動くようです。
+</I>&gt;<i>
+</I>&gt;<i> それは、それは、良かった、幸いでした。
+</I>&gt;<i>
+</I>&gt;<i> Smalltalk（Squeakでも、VisualWorksでも、…）において、メッセ
+</I>&gt;<i> ージの本体（メソッド）を探す出すには、大別するとふた通りある
+</I>&gt;<i> と存じます。
+</I>&gt;<i>
+</I>&gt;<i> 一つ目は、メッセージ名を推測して、メッセージとその本体である
+</I>&gt;<i> メソッドを探し出す方法です。（<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">squeak ＠ cheshireneko.com</A>さんが
+</I>&gt;<i> 用いた方法になります。）
+</I>&gt;<i>
+</I>&gt;<i> 二つ目は、レシーバであるオブジェクトを頼りにして、メッセージ
+</I>&gt;<i> とその本体であるメソッドを探し出す方法です。
+</I>&gt;<i>
+</I>&gt;<i> 今回、私は二つ目の方法を用いました。文字列を評価して結果を出
+</I>&gt;<i> しているオブジェクトの代表格は、あらゆるエディタの代表格であ
+</I>&gt;<i> る「ParagraphEditor」、そして、「Debugger」になります。また、
+</I>&gt;<i> 「Inspector」がありましょう。それらが共通して発信しているメッ
+</I>&gt;<i> セージを探すのです。きっと「評価【evaluate】」しているにちが
+</I>&gt;<i> いない！と。
+</I>&gt;<i>
+</I>&gt;<i> すると、以下のものたちが見つかります。あとは、これらの実装者
+</I>&gt;<i> をブラウズするだけですよね。
+</I>&gt;<i>
+</I>&gt;<i> #evaluate:in:to:notifying:ifFail:logged:
+</I>&gt;<i> #evaluateSelection
+</I>&gt;<i> #evaluateSelectionAndDo:
+</I>&gt;<i> #evaluate:in:to:notifying:ifFail:
+</I>&gt;<i> #evaluate:in:to:
+</I>&gt;<i>
+</I>&gt;<i> 以上、速攻の指南でした。お役に立つならば幸いです。
+</I>&gt;<i>
+</I>&gt;<i> --- 青木淳＠以下に二つ目の方法のプログラムを添えておきます。
+</I>&gt;<i>
+</I>&gt;<i>      | collectionOfClasses aSet aCollection |
+</I>&gt;<i>      collectionOfClasses := OrderedCollection new.
+</I>&gt;<i>      collectionOfClasses add: ParagraphEditor.
+</I>&gt;<i>      collectionOfClasses add: Debugger.
+</I>&gt;<i>      collectionOfClasses add: Inspector.
+</I>&gt;<i>      aSet := Set new.
+</I>&gt;<i>      collectionOfClasses
+</I>&gt;<i>          do: [:aClass | aClass
+</I>&gt;<i>                  methodsDo: [:aMethod | aMethod
+</I>&gt;<i>                          messagesDo: [:aMessage | aSet add: aMessage]]].
+</I>&gt;<i>      aCollection := aSet
+</I>&gt;<i>                  select: [:aMessage | 'evaluate*' match: aMessage asString].
+</I>&gt;<i>      Transcript clear.
+</I>&gt;<i>      aCollection
+</I>&gt;<i>          do: [:aMessage | Transcript cr; show: aMessage printString].
+</I>&gt;<i>      ^ aCollection
+</I>&gt;<i>
+</I>&gt;<i>
+</I></PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008119.html">[SML 8119] Re: stringを評価可能オブジェクトに変更する方法について
+</A></li>
+	<LI>次の記事 <A HREF="008115.html">[SML 8115] Re: stringを評価可能オブジェクトに変更する方法について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8120">[ 日付 ]</a>
+              <a href="thread.html#8120">[ スレッド ]</a>
+              <a href="subject.html#8120">[ 件名 ]</a>
+              <a href="author.html#8120">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,344 @@
+From ume ＠ softumeya.com  Wed Jan  2 22:46:22 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 2 Jan 2013 22:46:22 +0900
+Subject: [Squeak-ja: 4663]
+	"Pharo by Example"日本語版公開
+Message-ID: <CAH3eEdSJyZaRjZaXsq=99+zGzW5ztrLj3T6w1J7o-BLaajD4iQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+[SML 7939]で堀内さんが提案された"Pharo by
+Example"の和訳の提案(http://www.smalltalk.jp/pipermail/sml/2011-June/007939.html)が、ついに結実しました。
+
+- Pharo by Example (日本語版)
+http://www.smalltalk-users.jp/Home/docs
+
+- PDFへの直リンク
+http://t.co/l6yvyNxd
+
+翻訳に参加された皆さん、本当にお疲れ様でした。
+
+ぜひPharoの学習にお役立て下さい。350ページもの充実した内容です。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From x19290 ＠ gmail.com  Mon Jan  7 13:40:56 2013
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 7 Jan 2013 13:40:56 +0900
+Subject: [Squeak-ja: 4664]
+	Smalltalk の教科書を和訳しました
+Message-ID: <20130107044056.GA3820@a.19290.net>
+
+始めまして、堀内寛己(ほりうちひろき)です。
+
+一昨年の 6 月から有志で Pharo by Example というオープンブック (CC-SA) の
+翻訳を進めてきましたが、このたび一応の完成を見ましたので、プロジェクト杉
+田玄白の正式参加作品リストとしてこれを採用していただくことを望みます。
+
+「Pharo by Example 日本語版」
+  https://4310b1a9-a-c5ded419-s-sites.googlegroups.com/a/smalltalk-users.jp/home/Home/docs/PBE1-ja.pdf?attachauth=ANoY7cpMf4afuGMdeQvJz1shtT9cxIC4m0qnjbFuLPapIvwUfQ_BRqUrAeidp49fX6-RCEn0v_k9Wq4YqVaw1mb9i_xkqxXsL0y1T_jRxrxZgtYpmo4RLgKiYE27YVuMJF_K9dTGqz0sEUSvYkPNJ0zWZ4E_MsJApslrYubCOT9iIDXUALU2eiPa0Pqn1Ymddo_zgyPR0vv8NG7gYpjSkZQ0E05qF-s9bktv6RKSjh0YEScTsn60JUM%3D&attredirects=1
+原題:
+  Pharo by Example
+訳者:
+  Pharo by Example 和訳有志 <pharo-by-example-ja ＠ googlegroups.com>
+原著 PDF:
+  http://gforge.inria.fr/frs/download.php/25599/PBE1-2009-10-28.pdf
+原著ソース
+  https://github.com/SquareBracketAssociates/PharoByExample-english
+和訳ソース
+  https://github.com/SquareBracketAssociates/PharoByExample-japanese
+
+リーダーの方針のもと、「自然で正しい日本語に訳す」ことを最重要視した内容
+になっていると自負していますが、重箱の隅的な誤りは残っているでしょう。
+
+Smalltalker 向けアナウンス:
+  http://www.smalltalk.jp/pipermail/sml/2013-January/008038.html
+翻訳有志向け終了宣言、プロジェクト杉田玄白にアナウンスすることに関して:
+  https://groups.google.com/forum/?fromgroups=#!topic/pharo-by-example-ja/LaEOiV_n4G0
+参考:
+  「あらゆる年齢の「子供たち」のためのパーソナルコンピュータ」
+  http://swikis.ddo.jp/abee/74
+--
+堀内寛己(ほりうちひろき)
+
+From abee ＠ squeakland.jp  Thu Jan 10 20:19:26 2013
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu, 10 Jan 2013 20:19:26 +0900
+Subject: [Squeak-ja: 4665]
+	Stephen Howellさんの講演会とワークショップ
+In-Reply-To: <CADv7uFESn+6XY=42ohQYHvcdeDfytVpxJ4RNLP15QfCGks4uAA@mail.gmail.com>
+References: <CADv7uFESn+6XY=42ohQYHvcdeDfytVpxJ4RNLP15QfCGks4uAA@mail.gmail.com>
+Message-ID: <CADv7uFETwhmZCbOwwEpJop784iKNsd_Fjhcvy-9c7ma2dKAB9A@mail.gmail.com>
+
+こんにちは、阿部です。
+津田塾大学では、Kinect2Scratchの作者であるStephen Howellさんをお招きして1月に特別講義を行います。
+これに関連して、Stephenさんの講演会を1/25に津田塾大学小平キャンパスで開催します。
+万障お繰り合わせの上、ぜひご出席ください。
+
+日付：2013/1/25（金）
+時間：15：30〜17:00（予定）
+場所：津田塾大学 小平キャンパス（教室未定）
+http://www.tsuda.ac.jp/about/access/index.html
+申込: kishi ＠ tsuda.ac.jp 宛に、お名前、ご所属、連絡先のメールアドレスをお送りください。
+
+講師：Stephen Howell, Institute of Technology Tallaght
+
+タイトル：
+"Creative Kinetic Programming:
+Connecting Young Programmers of Tomorrow with Technology of Today"
+
+概要：
+Every now and then a technology comes along that although ostensibly
+aimed at one market, has the potential to change another.
+The Kinect controller is one such technology.
+Although aimed squarely at gaming, hackers, makers  &
+educators have embraced the technology and now innovative
+applications are popping up in classrooms all over the world.
+This presentation will present some of these applications,
+and also discuss how the Kinect & similar technologies might
+change classrooms in the future.
+
+また、1/20には以下のワークショップを予定しています。この見学をご希望の方は私までお知らせください。
+http://scratch-ja.org/2013/01/1945
+
+以上、よろしくお願いいたします。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+From jg1gwl ＠ mx3.ttcn.ne.jp  Thu Jan 10 23:21:21 2013
+From: jg1gwl ＠ mx3.ttcn.ne.jp (SUGIMOTO Kenji)
+Date: Thu, 10 Jan 2013 23:21:21 +0900
+Subject: [Squeak-ja: 4666] Re:
+	Stephen Howellさんの講演会とワークショップ
+References: <CADv7uFESn+6XY=42ohQYHvcdeDfytVpxJ4RNLP15QfCGks4uAA@mail.gmail.com>
+ <CADv7uFETwhmZCbOwwEpJop784iKNsd_Fjhcvy-9c7ma2dKAB9A@mail.gmail.com>
+Message-ID: <8D355929FA17454BAB1E205AA4C36BFE@LENOVO0DFC6E3B>
+
+阿部さん、杉本 賢治です。
+
+寒中見舞い申し上げます。
+ご案内を有難うございます。Kinectが何かも知らず、英語ではまして
+わからないだろうと思いながら申し込んでしまいました。
+
+ワークショップは相変わらず参加資格がないので申し込めません。
+ご盛会を祈ります。
+
+今年もお元気にご活躍いただきますよう祈念しています
+
+From abee ＠ squeakland.jp  Tue Jan 15 11:33:33 2013
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue, 15 Jan 2013 11:33:33 +0900
+Subject: [Squeak-ja: 4667] Re:
+	Stephen Howellさんの講演会とワークショップ
+In-Reply-To: <CADv7uFETwhmZCbOwwEpJop784iKNsd_Fjhcvy-9c7ma2dKAB9A@mail.gmail.com>
+References: <CADv7uFESn+6XY=42ohQYHvcdeDfytVpxJ4RNLP15QfCGks4uAA@mail.gmail.com>
+ <CADv7uFETwhmZCbOwwEpJop784iKNsd_Fjhcvy-9c7ma2dKAB9A@mail.gmail.com>
+Message-ID: <CADv7uFFxHJB-QAD1JjPtFBGqmMic4ZHitruSYAouQ9zWAOP5=w@mail.gmail.com>
+
+阿部です。
+講演会について、さきほど正式の案内が出ました。
+http://squeakland.jp/abee/tmp/stephen-flyer.pdf
+教室は「梅子記念交流館２階 セミナー室」となりました。
+お申し込みのアドレスが変わっていますが、すでに申し込まれている方は大丈夫です(杉本さん、ありがとうございます)。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2013/1/10 Kazuhiro ABE <abee ＠ squeakland.jp>:
+> こんにちは、阿部です。
+> 津田塾大学では、Kinect2Scratchの作者であるStephen Howellさんをお招きして1月に特別講義を行います。
+> これに関連して、Stephenさんの講演会を1/25に津田塾大学小平キャンパスで開催します。
+> 万障お繰り合わせの上、ぜひご出席ください。
+>
+> 日付：2013/1/25（金）
+> 時間：15：30〜17:00（予定）
+> 場所：津田塾大学 小平キャンパス（教室未定）
+> http://www.tsuda.ac.jp/about/access/index.html
+> 申込: kishi ＠ tsuda.ac.jp 宛に、お名前、ご所属、連絡先のメールアドレスをお送りください。
+>
+> 講師：Stephen Howell, Institute of Technology Tallaght
+>
+> タイトル：
+> "Creative Kinetic Programming:
+> Connecting Young Programmers of Tomorrow with Technology of Today"
+>
+> 概要：
+> Every now and then a technology comes along that although ostensibly
+> aimed at one market, has the potential to change another.
+> The Kinect controller is one such technology.
+> Although aimed squarely at gaming, hackers, makers  &
+> educators have embraced the technology and now innovative
+> applications are popping up in classrooms all over the world.
+> This presentation will present some of these applications,
+> and also discuss how the Kinect & similar technologies might
+> change classrooms in the future.
+>
+> また、1/20には以下のワークショップを予定しています。この見学をご希望の方は私までお知らせください。
+> http://scratch-ja.org/2013/01/1945
+>
+> 以上、よろしくお願いいたします。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+
+From abee ＠ squeakland.jp  Tue Jan 15 22:25:08 2013
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue, 15 Jan 2013 22:25:08 +0900
+Subject: [Squeak-ja: 4668]
+	Andreas Raabさんが亡くなりました。
+Message-ID: <CADv7uFHZbPVo9j9E3WzxJY4A+f7LpQuPGf=Qw5r_EAG=ugfdaw@mail.gmail.com>
+
+阿部です。
+今朝、大島さんから連絡をもらい、間違いの可能性もあるかと思っていたのですが、本当でした。
+Squeakに多大な貢献をされたAndreas Raabさんが亡くなりました。
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2013-January/167861.html
+
+アンドレアスさんは学生時代にWin32のVMを書きました。その後、ひとつひとつ挙げるのが大変なくらい多くのプロジェクトに関わり、沢山のコードを書き、コミュニティに貢献しました。
+彼の人柄について語るのに私は適任ではないと思います。私が英語を話せないこともあり(もちろん、ドイツ語も)、会った時もほとんど会話らしい会話をした記憶がありません。
+ただ、私の知っている人の中で最もクレバーな一人だったと思います。
+何かやりたいことがあったときに、目的のものが彼の仕事から見つかることが実に多かったです。
+他のみんなと仕事をしているときも、「すでにアンドレアスがやってくれた」、「それはアンドレアスがやってくれるだろう」という会話をよくしていました。
+そして彼のコードには絶大な信頼を寄せていました。(先日のSmalltalk勉強会でちよっと話の出たSqueakSSLも彼が作りました)
+
+私は、本当のところ、人が死ぬとどうなるかよく分かりません。でも、コードは残ります。
+
+| authorInitials collection smalltalk |
+authorInitials := 'ar'.
+collection := OrderedCollection new.
+smalltalk := (Smalltalk includesKey: #SystemNavigation)
+	ifTrue: [(Smalltalk at: #SystemNavigation) default]
+	ifFalse: [Smalltalk].
+smalltalk allBehaviorsDo: [:class |
+	class selectorsDo: [:selector |
+		| method timeStamp |
+		method := class compiledMethodAt: selector.
+		timeStamp := Utilities timeStampForMethod: method.
+		(timeStamp includesSubString: authorInitials) ifTrue: [
+			collection add: timeStamp, ' ', class name, ' ', selector]]].
+^ collection
+
+# もっとシンプルなコードがすでにsqueak-devに上がっているのですが、せっかく書いことだし。バグってたら直してください。
+# あと、これに使っているallBehaviorsDo:のコメントは彼らしいと思いました)
+
+Smalltalkのように新陳代謝するシステムでは、彼のコードもいずれはなくなっていくことでしょう。
+でも、authorInitialsに'ar'を見つけた時に、彼のことを思い出すのも良いかもしれないと思っています。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+From Yoshiki.Ohshima ＠ acm.org  Wed Jan 16 04:04:04 2013
+From: Yoshiki.Ohshima ＠ acm.org (Yoshiki Ohshima)
+Date: Tue, 15 Jan 2013 11:04:04 -0800
+Subject: [Squeak-ja: 4669] Re:
+	Andreas Raabさんが亡くなりました。
+In-Reply-To: <CADv7uFHZbPVo9j9E3WzxJY4A+f7LpQuPGf=Qw5r_EAG=ugfdaw@mail.gmail.com>
+References: <CADv7uFHZbPVo9j9E3WzxJY4A+f7LpQuPGf=Qw5r_EAG=ugfdaw@mail.gmail.com>
+Message-ID: <CAHC3jCNpwpWvwsCT+kFZ9hw+D=TVO6yN=thvUGwq5ecb5n6rcQ@mail.gmail.com>
+
+阿部さんどうもありがとうございます。私自身で書くだけの元気がありませんでした。
+
+脳溢血だったということで、奥さんが出勤した後に、自分自身で異常を感じて近くの医者のところまで行ったものの、それで倒れてしまったそうです。
+
+私にとってもとても近い人だったのです。が、ちょっとがんばって文章を書いてみました。「彼は我々がこれからもがんばることを期待しているだろう」と思っています。
+
+http://d.hatena.ne.jp/squeaker/20130115#p1
+
+
+--
+-- Yoshiki
+
+From ume ＠ softumeya.com  Tue Jan 22 00:27:15 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 22 Jan 2013 00:27:15 +0900
+Subject: [Squeak-ja: 4670]
+	第50回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdQM7v4PEiDGFeu3zf2tmLseKotukAw=2WJP6w6ve4m4Pw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2013/1/31(木) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai50kaismalltalkbenkyoukai
+
+今回はAndreas Raabさんの特集です。
+http://forum.world.st/Squeak-ja-4668-Andreas-Raab-td4663512.html
+http://en.wikipedia.org/wiki/Andreas_Raab
+
+類い希なる能力の持ち主で、Squeak界に多大な貢献をされた彼の功績を振り返る意味で、LTやハッカソンを行います。
+Win 32 VM, Tweak, Croquet, WebClient, SqueakSSLなどの話がきっと出てくることでしょう。
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Wed Jan 23 17:56:57 2013
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed, 23 Jan 2013 17:56:57 +0900
+Subject: [Squeak-ja: 4671] Re:
+	Stephen Howellさんの講演会とワークショップ
+In-Reply-To: <CADv7uFETwhmZCbOwwEpJop784iKNsd_Fjhcvy-9c7ma2dKAB9A@mail.gmail.com>
+References: <CADv7uFESn+6XY=42ohQYHvcdeDfytVpxJ4RNLP15QfCGks4uAA@mail.gmail.com>
+ <CADv7uFETwhmZCbOwwEpJop784iKNsd_Fjhcvy-9c7ma2dKAB9A@mail.gmail.com>
+Message-ID: <CADv7uFFOEhbscyNSp-n=WNHiVfyQ=x=+cAxYmq4J3TPMvBXzyA@mail.gmail.com>
+
+こんにちは、阿部です。
+この講演のUst配信を行うことになりました。URLは以下のとおりです。
+http://www.ustream.tv/channel/creative-kinetic-programming
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2013/1/10 Kazuhiro ABE <abee ＠ squeakland.jp>:
+> こんにちは、阿部です。
+> 津田塾大学では、Kinect2Scratchの作者であるStephen Howellさんをお招きして1月に特別講義を行います。
+> これに関連して、Stephenさんの講演会を1/25に津田塾大学小平キャンパスで開催します。
+> 万障お繰り合わせの上、ぜひご出席ください。
+>
+> 日付：2013/1/25（金）
+> 時間：15：30〜17:00（予定）
+> 場所：津田塾大学 小平キャンパス（教室未定）
+> http://www.tsuda.ac.jp/about/access/index.html
+> 申込: kishi ＠ tsuda.ac.jp 宛に、お名前、ご所属、連絡先のメールアドレスをお送りください。
+>
+> 講師：Stephen Howell, Institute of Technology Tallaght
+>
+> タイトル：
+> "Creative Kinetic Programming:
+> Connecting Young Programmers of Tomorrow with Technology of Today"
+>
+> 概要：
+> Every now and then a technology comes along that although ostensibly
+> aimed at one market, has the potential to change another.
+> The Kinect controller is one such technology.
+> Although aimed squarely at gaming, hackers, makers  &
+> educators have embraced the technology and now innovative
+> applications are popping up in classrooms all over the world.
+> This presentation will present some of these applications,
+> and also discuss how the Kinect & similar technologies might
+> change classrooms in the future.
+>
+> また、1/20には以下のワークショップを予定しています。この見学をご希望の方は私までお知らせください。
+> http://scratch-ja.org/2013/01/1945
+>
+> 以上、よろしくお願いいたします。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+

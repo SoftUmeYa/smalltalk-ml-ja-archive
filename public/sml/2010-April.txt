@@ -1,0 +1,422 @@
+From yoshiki ＠ vpri.org  Fri Apr  2 10:41:02 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Apr  2 10:41:29 2010
+Subject: [SML 7793] Google Summer of Code
+Message-ID: <u39zehbrl.wl%yoshiki@vpri.org>
+
+  みなさんこんにちは。
+
+  今年のGoogle Summer of Code (学生さんが夏休みの間にオープンソースプロジェ
+クトの手伝いを有償で行うという企画)では、私が友人と提案した、「Squeak
+上の粒子シミュレーションシステムKedamaをOpen CLでサポートすることによっ
+て高速化する」というプロジェクトも採用されています。
+
+http://gsoc2010.esug.org/projects/kedama
+
+が、残念なことにまだ肝心の学生さんがだれも名乗り出ていないという状況で
+す。GPGPUの勉強をしつつ、動的言語との連携方法を探り、さらにGoogleなど
+とコネができてお金ももらえるというなかなかない機会ですので、われと思う
+方はぜひぜひ応募をご検討ください。
+
+-- Yoshiki
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Apr  7 08:19:28 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Apr  7 08:19:36 2010
+Subject: [SML 7794] Re: 第18回Smalltalk勉強会＠京都
+In-Reply-To: <4BA9765B.9020003@cc.kyoto-su.ac.jp>
+References: <4BA9765B.9020003@cc.kyoto-su.ac.jp>
+Message-ID: <4BBBC180.8050109@cc.kyoto-su.ac.jp>
+
+京都のSmalltalk勉強会、本日です！
+
+場所はいつものキャンプラですが、京都産業大学サテライト（６階
+の第３講習室）になりますので、お間違いのなきように。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+肌寒い一日となる模様です。冷え対策などを万全にして、お出かけ
+ください。
+
+なお、止ん事無い事情により、成果物一式（要求仕様書・開発計画
+書・基本設計書・詳細設計書・テスト仕様書・テスト結果報告書・
+開発実績報告書・プログラム・マニュアルのすべて）は、この京都
+の勉強会の門外不出とさせていただきます。
+　　　　　‾‾‾‾
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+(10/03/24 11:18), AOKI Atsushi wrote:
+> 青木淳＠京都上賀茂です。
+> 
+> 研究室が引っ越しました。（from 1号館4階1402研究室 to 第2実験室棟3階73研究室）
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Profile/index-j.html#Laboratory
+> 雛祭りの日の勉強会の報告と補足資料を綴れなくて、ごめんなさい。
+> 
+> さて、新年度が近づいてきました！　第18回Smalltalk勉強会@京都
+> を開催します。万障繰り合わせて、JR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto18
+> 
+> 第18回 Smalltalk勉強会＠京都
+> 日時：2010年04月07日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 前回の勉強会において取り組んでいる課題のプログラムができあが
+> りましたので、今回はそのプログラムの詳しい解説を行います。加
+> えて、成果物一式（要求仕様書・開発計画書・基本設計書・詳細設
+> 計書・テスト仕様書・テスト結果報告書・開発実績報告書・プログ
+> ラム・マニュアルのすべて）を電子的に差し上げます。ノート型の
+> パーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X）
+> をご持参ください。
+> 
+> ------------------------------------------------------------
+> 
+> キャンパスプラザ京都（京都市大学のまち交流センター：通称キャ
+> ンプラ）の予約が確定しております。キャンプラ内ではありますが、
+> 開催する部屋がコロコロと変わることになりますから、ご留意くだ
+> さいませ。
+> 
+> 使用目的　　：研究会（勉強会）
+> 使用時間帯　：18:00-21:30
+> 使用予定日　：
+> 　04/07　６階　第３講習室（←京都産業大学サテライト）
+> 　05/12　５階　第※演習室
+> 　06/02　５階　第※演習室
+> 　07/07　５階　第※演習室
+> 　08/04　５階　第※演習室
+> 　09/01　６階　第３講習室（←京都産業大学サテライト）
+> 　10/06　６階　第３講習室（←京都産業大学サテライト）
+> 　11/10　２階　第２会議室
+> 　12/01　２階　第２会議室
+> 　01/05　６階　第３講習室（←京都産業大学サテライト）
+> 　02/02　６階　第３講習室（←京都産業大学サテライト）
+> 　03/02　６階　第３講習室（←京都産業大学サテライト）
+> 　※演習室の部屋番号は現在確認中
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Apr  8 15:27:20 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Apr  8 15:27:27 2010
+Subject: [SML 7795] Re: 第18回Smalltalk勉強会＠京都
+In-Reply-To: <4BBBC180.8050109@cc.kyoto-su.ac.jp>
+References: <4BA9765B.9020003@cc.kyoto-su.ac.jp>
+	<4BBBC180.8050109@cc.kyoto-su.ac.jp>
+Message-ID: <4BBD7748.9090808@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+勉強会で取り組んでいる「樹状整列」の成果物一式を参加していた
+だいた方々へ電子的に差し上げました。（ただし、京都での勉強会
+の門外不出として…。止ん事無い事情を皆さんにご理解いただきま
+した。）
+
+まず、成果物一式をブラウジングしながら、それらの概要説明に１
+時間ほど。その後、ファイルから情報を読み込んで、モデルを仕立
+て上げる（森としてのグラフを生成する）ところまでのコードリー
+ディングに１時間ほど。あっ！と言う間の２時間でした。
+
+濱崎さんに出馬していただき、SUnitを用いた単体テスト支援を話し
+ていただきました。デザインしているときに（プログラミングをす
+る前の段階で）テスト仕様を書く、その際にSUnitが有効であるとい
+うこと、そして、改変や改造に伴って実施しなければならない回帰
+テストにも有益ということが、皆さんに伝わったと思います。
+
+# 昨夜の勉強会はソフトウェアプロセス自体をプログラミングする
+# というところまで波及しそうな勢いがありましたね。:-)
+
+次回は、樹状整列のところのコードリーディングを中心に、アルゴ
+リズムアニメーションの仕掛けのあたりをレビューして、一段落さ
+せませう、ということになりました。
+
+閉会の間際に、これからの勉強会をどう進めてゆきましょうか、取
+り上げてほしいプログラムや話題がありますか、と訊ねたところ…
+
+小さなSmalltalk言語処理系（たとえばLisp1.5みたいなもの）を作
+りたい、という要望が出てビックリしました。Tiny Smalltalkとい
+うところでしょうか、ちょっと同語反復（トートロジー）っぽい。
+SmalltalkによるTinySmalltalkならば作れそうですよね。
+
+こんなところかしらん、昨夜の勉強会は。以上、簡単な報告でした。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+(10/04/07 8:19), AOKI Atsushi wrote:
+> 京都のSmalltalk勉強会、本日です！
+> 
+> 場所はいつものキャンプラですが、京都産業大学サテライト（６階
+> の第３講習室）になりますので、お間違いのなきように。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+> 肌寒い一日となる模様です。冷え対策などを万全にして、お出かけ
+> ください。
+> 
+> なお、止ん事無い事情により、成果物一式（要求仕様書・開発計画
+> 書・基本設計書・詳細設計書・テスト仕様書・テスト結果報告書・
+> 開発実績報告書・プログラム・マニュアルのすべて）は、この京都
+> の勉強会の門外不出とさせていただきます。
+> 　　　　　‾‾‾‾
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+> 
+> 
+> (10/03/24 11:18), AOKI Atsushi wrote:
+>> 青木淳＠京都上賀茂です。
+>>
+>> 研究室が引っ越しました。（from 1号館4階1402研究室 to 第2実験室棟3階73研究室）
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Profile/index-j.html#Laboratory
+>> 雛祭りの日の勉強会の報告と補足資料を綴れなくて、ごめんなさい。
+>>
+>> さて、新年度が近づいてきました！　第18回Smalltalk勉強会@京都
+>> を開催します。万障繰り合わせて、JR京都駅前にお集まりください。
+>>
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto18
+>>
+>> 第18回 Smalltalk勉強会＠京都
+>> 日時：2010年04月07日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>> 前回の勉強会において取り組んでいる課題のプログラムができあが
+>> りましたので、今回はそのプログラムの詳しい解説を行います。加
+>> えて、成果物一式（要求仕様書・開発計画書・基本設計書・詳細設
+>> 計書・テスト仕様書・テスト結果報告書・開発実績報告書・プログ
+>> ラム・マニュアルのすべて）を電子的に差し上げます。ノート型の
+>> パーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X）
+>> をご持参ください。
+>>
+>> ------------------------------------------------------------
+>>
+>> キャンパスプラザ京都（京都市大学のまち交流センター：通称キャ
+>> ンプラ）の予約が確定しております。キャンプラ内ではありますが、
+>> 開催する部屋がコロコロと変わることになりますから、ご留意くだ
+>> さいませ。
+>>
+>> 使用目的　　：研究会（勉強会）
+>> 使用時間帯　：18:00-21:30
+>> 使用予定日　：
+>> 　04/07　６階　第３講習室（←京都産業大学サテライト）
+>> 　05/12　５階　第※演習室
+>> 　06/02　５階　第※演習室
+>> 　07/07　５階　第※演習室
+>> 　08/04　５階　第※演習室
+>> 　09/01　６階　第３講習室（←京都産業大学サテライト）
+>> 　10/06　６階　第３講習室（←京都産業大学サテライト）
+>> 　11/10　２階　第２会議室
+>> 　12/01　２階　第２会議室
+>> 　01/05　６階　第３講習室（←京都産業大学サテライト）
+>> 　02/02　６階　第３講習室（←京都産業大学サテライト）
+>> 　03/02　６階　第３講習室（←京都産業大学サテライト）
+>> 　※演習室の部屋番号は現在確認中
+>>
+>> ------------------------------------------------------------
+>> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Apr 11 18:04:27 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Apr 11 18:04:34 2010
+Subject: [SML 7796] 第2回Smalltalkハッカソンのお知らせ
+Message-ID: <JxG5AvJl_5EAAEKm3oSmKTUA2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+第2回Smalltalkハッカソン「Pharo vs Squeak -- 明日はどっちだ?」を
+4/17(土)に行います。
+
+http://atnd.org/events/4045
+
+どしどしご参加ください。
+
+対決のようなタイトルになっていますが、実際には主にPharo 1.0 RC3とSqueak 4.x
+について、日本語環境でストレスなく使えるようにするためのハックを行う予定
+です。
+
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Fri Apr 16 00:49:31 2010
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Fri Apr 16 00:50:10 2010
+Subject: [SML 7797] Fwd: [Pharo-project] [ANN] Pharo 1.0 released!
+In-Reply-To: <F844A8FA-5CF9-4235-81C3-BFE8D09231F9@netstyle.ch>
+References: <F844A8FA-5CF9-4235-81C3-BFE8D09231F9@netstyle.ch>
+Message-ID: <z2rb81554461004150849y90ceb7a0qa9f060199888a3da@mail.gmail.com>
+
+---------- Forwarded message ----------
+From: Adrian Lienhard <adi@netstyle.ch>
+Date: Thu, Apr 15, 2010 at 8:47 PM
+Subject: [Pharo-project] [ANN] Pharo 1.0 released!
+To: Pharo Development <pharo-project@lists.gforge.inria.fr>,
+pharo-users@lists.gforge.inria.fr
+
+
+Hi all,
+
+I'm excited to announce our first official release!
+
+Please check out the updated website at www.pharo-project.org.
+
+Specific information about what this release provides can be found on
+www.pharo-project.org/pharo-download/release-1-0
+
+Please help us spread the word! I've written a blog post that can be linked:
+http://www.pharo-project.org/news?article=pharo-news-3-pharo-1-0-released
+
+Cheers,
+Adrian
+
+___________________
+http://www.adrian-lienhard.ch/
+_______________________________________________
+Pharo-project mailing list
+Pharo-project@lists.gforge.inria.fr
+http://lists.gforge.inria.fr/cgi-bin/mailman/listinfo/pharo-project
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+From yoshiki ＠ vpri.org  Fri Apr 16 14:29:23 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Apr 16 14:29:40 2010
+Subject: [SML 7798] Re: [Squeak-ja: 4451] 第2回Smalltalkハッカソンのお知らせ
+Message-ID: <uiq7s3qz0.wl%yoshiki@vpri.org>
+
+At Sun, 11 Apr 2010 18:04:47 +0900,
+Masashi Umezawa wrote:
+> 
+> こんにちは
+> 梅澤です。
+> 
+> 第2回Smalltalkハッカソン「Pharo vs Squeak -- 明日はどっちだ?」を
+> 4/17(土)に行います。
+> 
+> http://atnd.org/events/4045
+> 
+> どしどしご参加ください。
+> 
+> 対決のようなタイトルになっていますが、実際には主にPharo 1.0 RC3とSqueak 4.x
+> について、日本語環境でストレスなく使えるようにするためのハックを行う予定
+> です。
+
+  それはすばらしいですね。僕はなんとなくPharoもTrunkもあまりまじめには
+追っていないのですが、もし質問があれば、開催中にでもぜひお寄せください。
+わかる範囲でなるべく協力したいと思います。
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Sun Apr 18 17:37:03 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Apr 18 17:37:09 2010
+Subject: [SML 7799] 第19回Smalltalk勉強会のお知らせ
+Message-ID: <JxdWVMTqzh17RsY4p.Q1rylA3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/4/26(月) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai19kaismalltalkbenkyoukai
+
+今回のテーマはつい先ほど出たばかりの「Squeak 4.1」です。
+http://squeakboard.wordpress.com/2010/04/18/squeak-4-1-released/
+
+どんな機能が加わったのか、先日のハッカソンの結果を踏まえた日本語化の
+やり方などを扱っていく予定です。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Wed Apr 28 16:30:28 2010
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed Apr 28 16:31:05 2010
+Subject: [SML 7800] Xemina "Pharo : an open-source Smalltalk"
+Message-ID: <v2rb81554461004280030w25766ecbm97d48b396d518de6@mail.gmail.com>
+
+Hi all,
+i will made a talk about Pharo tomorrow at Vi〓n tin h〓c pháp ng〓, ngõ
+42 T〓 Quang B〓u, Hà n〓i, Vi〓t Nam.
+
+Regards,
+
+-----------
+
+Bonjour à tous,
+Xin chao quy vi,
+
+Séminaire IFI du jeudi 29 avril 2010 à 14h00
+Xemina tai IFI, thu 4 ngay 29 thang 4 2010, luc 14h00
+
+Présenté par:        Serge Stinckwich
+                          Chercheur, UMMISCO, IRD / IFI
+Nguoi trinh bay:    Serge Stinckwich
+                          Chercheur, UMMISCO, IRD / IFI
+Titre :
+           Pharo: an open-source Smalltalk
+
+Résumé :
+Smalltalk is a dynamic reflective object-oriented programming
+language. Based at the beginning on Lisp and Simula,
+it was one of the first programming language to use a bitmap
+user-interface and an integrated development environment (IDE).
+Smalltalk has been a great influence in the development of many
+programming languages, including Objective-C, Java and Ruby.
+Many innovations in software engineering in the nineties also come
+from the Smalltalk community, such as Design Patterns, test-driven
+approach, agile software development like Extreme Programming (XP) and
+code refactoring.
+
+Pharo is a new open-source Smalltalk (under a MIT licence). Pharo's
+objective is to provide a clean, open-source and innovative
+Smalltalk implementation with suitable for research and business
+applications. Several companies and universities are using Pharo for
+their software development.
+More information are available here: http://pharo-project.org/ and
+http://pharobyexample.org/
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Apr 30 09:59:54 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Apr 30 10:00:02 2010
+Subject: [SML 7801] 第19回Smalltalk勉強会＠京都
+Message-ID: <4BDA2B8A.40000@cc.kyoto-su.ac.jp>
+
+青木淳＠京都上賀茂（新緑の中から）です。
+
+第19回Smalltalk勉強会＠京都を開催します。
+万障繰り合わせてJR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto19
+
+キャンプラ5階の第4演習室になります。お間違えのなきように。
+
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1605&frmCd=14-1-0-0-0
+
+第19回 Smalltalk勉強会＠京都
+日時：2010年05月12日（水）19:00〜21:00
+キャンパスプラザ京都 5階 第4演習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+前回の勉強会において取り組んでいる課題のおおよその解説が終わ
+りましたので、今回の勉強会では樹状整列アルゴリズムとプログラ
+ム構成をコードリーディングをしながら詳説します。前回に差し上
+げた電子的な成果物一式、そして、ノート型のパーソナルコンピュ
+ータ（Windows 7/Vista/XP または Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

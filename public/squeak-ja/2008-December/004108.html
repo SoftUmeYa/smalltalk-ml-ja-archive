@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4108] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204108%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYhShsoQldhczogUmU6%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FIFNjcmF0Y2ggMS4zGyRCJCwlaiVqITwlOSQ1JGwkXiQ3JD8hIyFLGyhC%3F%3D&In-Reply-To=2d5d52a80812292030g7ce61119i80115d0f57d5c6fd%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004107.html">
+   <LINK REL="Next"  HREF="004109.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4108] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204108%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYhShsoQldhczogUmU6%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FIFNjcmF0Y2ggMS4zGyRCJCwlaiVqITwlOSQ1JGwkXiQ3JD8hIyFLGyhC%3F%3D&In-Reply-To=2d5d52a80812292030g7ce61119i80115d0f57d5c6fd%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4108] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 12月 30日 (火) 18:35:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004107.html">[Squeak-ja: 4107] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+</A></li>
+        <LI>次の記事 <A HREF="004109.html">[Squeak-ja: 4109] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4108">[ 日付 ]</a>
+              <a href="thread.html#4108">[ スレッド ]</a>
+              <a href="subject.html#4108">[ 件名 ]</a>
+              <a href="author.html#4108">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Tue, 30 Dec 2008 13:30:15 +0900,
+Kazuhiro ABE wrote:
+&gt;<i> 
+</I>&gt;<i> こんにちは、阿部です。
+</I>&gt;<i> とりあえず、ScratchSourceCode1.3.1と3.7-7JPatchedを組み合わせてLinuxで日本語入力できるようにしてみました。別スレの組み込みシンセと同じイメージに入れています。
+</I>&gt;<i> <A HREF="http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip">http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip</A>
+</I>&gt;<i> 
+</I>&gt;<i> 3.7-7JPatchedから上がってくるUTF-8は、1バイトごとにMorphicEventのkeyValueになっていますが、ScratchはMorphicEventのunicodeCharとしてUTF-32を期待しています。このパッチでは先頭バイトが16rE0以上なら3バイト取り出してUTF-32をつくり、unicodeCharに格納しています。超適当ですが動作確認はできるとできると思います。
+</I>&gt;<i> ちゃんとしたVMができるまでの間に合わせということで。
+</I>
+  こちらのほうではもうしばらくUnix VMがUTF-32をあげてくるようにはなら
+ないと思うのですが、新しいVMとEtoysイメージの組み合わせで日本語入力を
+可能にするパッチをしばらく前にsqueak-devに流しました。
+
+<A HREF="http://lists.squeakfoundation.org/pipermail/squeak-dev/2008-December/133090.html">http://lists.squeakfoundation.org/pipermail/squeak-dev/2008-December/133090.html</A>
+
+こちらでアナウンスするのを忘れていましたが、よろしければいろいろなOSと
+の組み合わせでためしてはいただけないでしょうか。
+
+-- Yoshiki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: jaInputDec8-yo.1.cs
+型:         application/octet-stream
+サイズ:     2122 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20081230/96e1a18d/jaInputDec8-yo.1.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20081230/96e1a18d/jaInputDec8-yo.1.obj</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004107.html">[Squeak-ja: 4107] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+</A></li>
+	<LI>次の記事 <A HREF="004109.html">[Squeak-ja: 4109] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4108">[ 日付 ]</a>
+              <a href="thread.html#4108">[ スレッド ]</a>
+              <a href="subject.html#4108">[ 件名 ]</a>
+              <a href="author.html#4108">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

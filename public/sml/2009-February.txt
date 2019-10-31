@@ -1,0 +1,559 @@
+From osamu.hamasaki ＠ gmail.com  Wed Feb  4 23:35:00 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Thu Feb 12 10:53:01 2009
+Subject: [SML 7468] Smalltalk関係の古い本が読めるWEBサイトのご紹介
+Message-ID: <1bc06fd30902040635y14fef0a4ufebba45a7db34393@mail.gmail.com>
+
+濱崎です。
+
+今日のSmalltalk勉強会＠京都に参加された皆さん、お疲れさまでした。
+
+勉強会が終わって撤収中に、「ブルーブックやオレンジブックをまるごと
+スキャンして置いてあるサイトがある」とご紹介しましたが、以下の
+サイトのことです。
+
+"Stef's Free Online Smalltalk Books"URL:
+http://stephane.ducasse.free.fr/FreeBooks.html
+
+ご参考まで。
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.akademia.co.jp/pipermail/sml/attachments/20090204/016df695/attachment.html
+From eri ＠ sra.co.jp  Thu Feb  5 23:12:19 2009
+From: eri ＠ sra.co.jp (SAWAMOTO Eri)
+Date: Thu Feb 12 10:59:07 2009
+Subject: [SML 7469] 第４回Smalltalk勉強会＠京都　ダイジェスト
+Message-ID: <498AF3C3.2000507@sra.co.jp>
+
+澤本＠京都産業大学です。
+
+
+昨夜の「Smalltalk 勉強会＠京都」のダイジェストです。
+
+来ていただいた皆様、ありがとうございます。
+また、おやつを持ってきてくださった安田さん、ありがとうございます。
+京都産業大学の近く（？）にある、美味しいお店の焼き菓子でした。
+レ・フレール・ムトウ
+http://www.compage.co.jp/shop/muto/muto.htm
+
+
+配布したアーカイブはJun774dのものです。
+また、補足資料として、プログラムコードが書かれたHTML資料もいっしょに配布しました。
+
+講義形式のまま継続して勉強会を進めています。
+初級者の方にも分かるように、
+スピードは気にせずに進めていこうというのが京都での勉強会の特徴です。
+ベテランの方は、再確認とともに、サポートにも回っていただけたらと考えています。
+
+昨夜は、
+ブラックブックの第３章、定数（リテラル）の途中までと、
+字句解析・構文解析・コード生成・最適化の説明を行いました。
+
+メソッドサーチの説明からスタートし、
+早速様々な質問や意見が飛び交っていました。
+特に、selfとsuperについて、
+今までSmalltalkに触れていなかった方には違和感あるところもあったようで、
+なかなか内容の濃いものになったのではないでしょうか？
+subclassResponsibilityやshouldNotImplementについても触れて、
+その一般的用途なども青木さんから説明がありました。
+
+その後、ブラックブックの説明は続き、
+定数（リテラル）に入っていきました。
+
+ブラックブックで定数（リテラル）の説明文の始めに
+どのようなものがそれに該当するか書かれています。
+そこになぜブロックが含まれていないのか、という質問があり、
+これは著者の間でももめた箇所で・・・という裏話が飛び出しました。
+
+数についての説明では、○進数、はどこまで正しく表示されるか？
+の話題が出ました。
+ブラックブックに、２〜３５進数までを表示するプログラムが紹介されていますが、
+なぜそれ３５までなのか、というところです。
+０〜９の９つの数字、そしてA〜Zのアルファベット２６個で数が表現できますが、
+すべてを使い切れば３５個まで、ということになります。
+ではそれ以上は・・・？？？
+さっそく試していた方もいらっしゃったようでした！
+
+また、
+文字列（String）とシンボル（Symbol）の違いで、
+文字列は複写（記述する度にオブジェクト生成する）
+シンボルは単写（どこで記述しても同じオブジェクトを指す）
+の性質があることを説明しました。
+
+最後１５分ほどで、
+字句解析してtoken（トークン）に分ける、
+構文解析をして構文木を出す、
+コード生成するとバイト配列になる、（その内部の説明つき）
+最適化を行う、
+という流れを資料で説明しながら
+配布したHTMLからプログラムコードをコピー＆ペーストして実際に実行し、
+試してみました。
+
+昨夜使用した資料は、
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto4
+からダウンロードできます。
+
+
+次回の勉強会は３月４日になります。
+ぜひ、京都駅前のキャンパスプラザへお集まりください。
+
+
+-- 
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+澤 本  依 里    SAWAMOTO Eri
+<eri@sra.co.jp>
+
+株式会社SRA　関西事業部　開発部
+〒550-0011
+大阪市西区阿波座2-1-1 大阪本町西第一ビルディング5F
+TEL : 06-6536-2331
+FAX : 06-6536-2452
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Feb  5 23:59:25 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Feb 12 10:59:20 2009
+Subject: [SML 7470] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+In-Reply-To: <498AF3C3.2000507@sra.co.jp>
+References: <498AF3C3.2000507@sra.co.jp>
+Message-ID: <498AFECD.9000204@cc.kyoto-su.ac.jp>
+
+SAWAMOTO Eri さんは書きました:
+> 昨夜の「Smalltalk 勉強会＠京都」のダイジェストです。
+
+詳細にありがとうございます、澤本さん。
+
+> スピードは気にせずに進めていこうというのが京都での勉強会の特徴です。
+> ベテランの方は、再確認とともに、サポートにも回っていただけたらと考えています。
+
+損益分岐点の説明のような図ですが、京都での勉強会では、
+http://www.cc.kyoto-su.ac.jp/~atsushi/misc/jpgs/LearningCurve.jpg
+(1)のカーブよりも、(2)のカーブをめざそう、という感じかしらん…。
+
+プログラムを書くのは後回し、まずは読むことを優先。
+"hello, world" を書き出すことからやってしまうと、
+(1)のカーブようにサチっ(飽和し)て伸び悩む…。
+
+> 数についての説明では、○進数、はどこまで正しく表示されるか？
+> の話題が出ました。
+> ブラックブックに、２〜３５進数までを表示するプログラムが紹介されていますが、
+> なぜそれ３５までなのか、というところです。
+> ０〜９の９つの数字、そしてA〜Zのアルファベット２６個で数が表現できますが、
+> すべてを使い切れば３５個まで、ということになります。
+> ではそれ以上は・・・？？？
+> さっそく試していた方もいらっしゃったようでした！
+
+どうなるのか、試していた方々、フォローしていただけると幸いです。
+
+--- 青木淳＠京都宇治
+From yoshiki ＠ vpri.org  Fri Feb  6 04:10:27 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Feb 12 11:00:15 2009
+Subject: [SML 7471] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+In-Reply-To: <498AF3C3.2000507@sra.co.jp>
+References: <498AF3C3.2000507@sra.co.jp>
+Message-ID: <u63joya1o.wl%yoshiki@vpri.org>
+
+At Thu, 05 Feb 2009 23:12:19 +0900,
+SAWAMOTO Eri wrote:
+> 
+> 数についての説明では、○進数、はどこまで正しく表示されるか？
+> の話題が出ました。
+> ブラックブックに、２〜３５進数までを表示するプログラムが紹介されていますが、
+> なぜそれ３５までなのか、というところです。
+> ０〜９の９つの数字、そしてA〜Zのアルファベット２６個で数が表現できますが、
+> すべてを使い切れば３５個まで、ということになります。
+> ではそれ以上は・・・？？？
+> さっそく試していた方もいらっしゃったようでした！
+
+  ブラックブックは結局まだ購入していないのですが(すみません)、36進数で
+すよね(0-9は10個の数字ですし)。
+
+> 最後１５分ほどで、
+> 字句解析してtoken（トークン）に分ける、
+> 構文解析をして構文木を出す、
+> コード生成するとバイト配列になる、（その内部の説明つき）
+> 最適化を行う、
+> という流れを資料で説明しながら
+> 配布したHTMLからプログラムコードをコピー＆ペーストして実際に実行し、
+> 試してみました。
+
+  ここでいう最適化というのは、バイトコードレベルでの話だったのですね。
+まだ下もあるわけではありますが、すでにかなり深い...
+
+-- Yoshiki
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Feb  6 06:01:22 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Feb 12 11:00:44 2009
+Subject: [SML 7472] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+In-Reply-To: <u63joya1o.wl%yoshiki@vpri.org>
+References: <498AF3C3.2000507@sra.co.jp> <u63joya1o.wl%yoshiki@vpri.org>
+Message-ID: <498B53A2.4050909@cc.kyoto-su.ac.jp>
+
+Yoshiki Ohshima さんは書きました:
+> ブラックブックは結局まだ購入していないのですが(すみません)
+
+大島さんが京都の勉強会（第３回）に顔を出してくれた日に限って、
+浅岡さんが著者割引ブラックブックを会場に持参しなかったのです。
+なんかタイミングが…、ごめんなさいね。
+
+# すでに大島さん用のものを準備済ですから、送り先を私宛に教え
+# ていただければ謹呈いたします。もちろん海外でも構いませんよ。
+
+京都の勉強会では、１冊ないしは２冊、著者割引ブラックブックを
+用意しておくことにしました。初参加の際には、気軽に会場で用命
+してくださいませ。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From yoshiki ＠ vpri.org  Fri Feb  6 08:07:12 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Feb 12 11:01:44 2009
+Subject: [SML 7473] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+In-Reply-To: <498B53A2.4050909@cc.kyoto-su.ac.jp>
+References: <498AF3C3.2000507@sra.co.jp> <u63joya1o.wl%yoshiki@vpri.org>
+	<498B53A2.4050909@cc.kyoto-su.ac.jp>
+Message-ID: <u1vucxz33.wl%yoshiki@vpri.org>
+
+At Fri, 06 Feb 2009 06:01:22 +0900,
+AOKI Atsushi wrote:
+> 
+> Yoshiki Ohshima さんは書きました:
+> > ブラックブックは結局まだ購入していないのですが(すみません)
+> 
+> 大島さんが京都の勉強会（第３回）に顔を出してくれた日に限って、
+> 浅岡さんが著者割引ブラックブックを会場に持参しなかったのです。
+> なんかタイミングが…、ごめんなさいね。
+> 
+> # すでに大島さん用のものを準備済ですから、送り先を私宛に教え
+> # ていただければ謹呈いたします。もちろん海外でも構いませんよ。
+
+  ありがとうございます。が、それには及びません。amazon.co.jpでぽっちと
+します。
+
+-- Yoshiki
+
+# amazonによると澤本さんは「専攻は地質学(古生物学)」だったのですね。かっ
+# こよい！
+From eri ＠ sra.co.jp  Fri Feb  6 10:00:51 2009
+From: eri ＠ sra.co.jp (SAWAMOTO Eri)
+Date: Thu Feb 12 11:02:19 2009
+Subject: [SML 7474] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+In-Reply-To: <u1vucxz33.wl%yoshiki@vpri.org>
+References: <498AF3C3.2000507@sra.co.jp>
+	<u63joya1o.wl%yoshiki@vpri.org>	<498B53A2.4050909@cc.kyoto-su.ac.jp>
+	<u1vucxz33.wl%yoshiki@vpri.org>
+Message-ID: <498B8BC3.6060000@sra.co.jp>
+
+澤本＠京産大です。
+
+
+Yoshiki Ohshima さんは書きました:
+> # amazonによると澤本さんは「専攻は地質学(古生物学)」だったのですね。かっ
+> # こよい！
+「かっこよい」ですか・・・！恐縮です。
+古生物学ですけど、
+アンモナイトとかのでかい化石じゃなくて、
+放散虫というプランクトンの化石を扱ってました。
+なかなか綺麗な形をしてます。
+試料を取りに神通川流域まで行って
+数日間ツルハシをふりまわしていたら腱鞘炎になりました・・・。
+
+
+-- 
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+澤 本  依 里    SAWAMOTO Eri
+<eri@sra.co.jp>
+
+株式会社SRA　関西事業部　開発部
+〒550-0011
+大阪市西区阿波座2-1-1 大阪本町西第一ビルディング5F
+TEL : 06-6536-2331
+FAX : 06-6536-2452
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+From umejava ＠ mars.dti.ne.jp  Sat Feb  7 13:03:17 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Feb 12 11:09:27 2009
+Subject: [SML 7475] 「SeasideへGO!!」の第四回掲載されました
+Message-ID: <JN200902071303175.6951421@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、「Seaside へ GO!!」の第四回が「オブジェクトの広場」に掲載されました。
+
+今回はOmniBaseを使ったデータベース接続編です。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/seaside4/index.html
+
+#GlorpによるPostgreSQLへの接続は次回です。いま執筆中です。
+
+SeasideJOnePlusDBを使ってすぐに試すことができます。
+http://swikis.ddo.jp/umejava/SeasideJOnePlus#3
+
+お楽しみ下さい。
+---
+[:masashi | ^umezawa]
+From osamu.hamasaki ＠ gmail.com  Sat Feb  7 15:43:55 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Thu Feb 12 11:10:45 2009
+Subject: [SML 7476] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+In-Reply-To: <498AFECD.9000204@cc.kyoto-su.ac.jp>
+References: <498AF3C3.2000507@sra.co.jp> <498AFECD.9000204@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd30902062243m4fca1006k70d7076acda1a596@mail.gmail.com>
+
+濱崎です。
+
+2009/02/05 23:59 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+
+> ブラックブックに、２〜３５進数までを表示するプログラムが紹介されていますが、
+> > なぜそれ３５までなのか、というところです。
+> > ０〜９の９つの数字、そしてA〜Zのアルファベット２６個で数が表現できますが、
+> > すべてを使い切れば３５個まで、ということになります。
+> > ではそれ以上は・・・？？？
+> > さっそく試していた方もいらっしゃったようでした！
+>
+> どうなるのか、試していた方々、フォローしていただけると幸いです。
+>
+> --- 青木淳＠京都宇治
+>
+
+試していた一人です。
+
+次のようなコードを書いていました。
+
+| aStream |
+aStream := WriteStream with: String new.
+
+0 to: 300 do:
+    [:i |
+aStream nextPutAll: i printString.
+aStream nextPut: $=.
+aStream nextPutAll: (i printStringRadix: 300).
+aStream nextPut: Character space].
+
+aStream contents
+
+
+Print Itすると判りますが、キーボードで普通に打ち込めそうなのは71まで。
+ですが、コンパイル出来るのは、36進数までですね。$[が出てきたところで、
+Syntax Errorになります。
+
+        Compiler evaluate: '300r['
+
+をPrint Itすると判ります。
+
+Scannerが字句を読み取る際、数のリテラルを読み取るのに、最終的には
+
+        Character>>digitValue
+
+が呼ばれるのですが、このメソッドでは数字として、'0'〜'9'、'A'〜'Z'、'a'〜'z'
+しか認めないコードになっています。ですので、数のリテラル表現でコンパイル
+可能なのは36進数までということになります。
+
+一方、出力する側はというと
+
+Number>>printStringRadix:
+
+を使うと、最終的には
+
+      Character class>>digitValue:
+
+が呼ばれて、10以上の数に対しては、その数に55を足した数に対応する
+文字を返すようになっています。数に対応する文字を決めるのはprimitiveに
+なっているので、何が返るかはprimitiveがどんな文字コード表に基づいて
+実装されているかによります。
+
+以上です。
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.akademia.co.jp/pipermail/sml/attachments/20090207/ede44aff/attachment.html
+From sadie ＠ kind.ocn.ne.jp  Sat Feb 14 17:29:07 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Sat Feb 14 17:29:20 2009
+Subject: [SML 7477] ブラックブック買いました
+Message-ID: <1F940411C7064C548D7BBAEF01769333@sunaoPC>
+
+　古川と申します。以前自己紹介で漢字を間違えましたので今回はそのようなことがないようにしたいと思います。
+　遅ればせながら、ブラックブックこと「Smalltalkで学ぶオブジェクト指向プログラミングの本質」を今日購入しました。近所の書店で注文してバレンタインデーの今日購入できて、まるで誰かからブラックチョコレートをプレゼントされたような感じです。
+　実は今年度の前期に某大学の「論理回路１」という公開授業講座を受講して論理回路の基礎を少しだけかじったので、Verilog HDLでForthプロセッサー（b16というやつです)をシミュレート 
+したりソースコードを読んだりしていて、しばらくの間、Smalltalkから離れていました。メーリングリストはずっと読んでいたのに、ブラックブックを買うのがかなり遅れてしまいました。失礼しました。
+　そんな私が今日買ったブラックブックの中で一番興味深かったところはバイトコードのところです。Visualworksのバイトコードは伝統的なSmalltalk-80と同じなのですね。０から２５５までの２５６種類のバイトコードとのことですがプログラムになるときは１６進数で表示されるということですね（第４回Smalltalk勉強会の資料を拝見させていただいたところですが）。まだ私の腕前では作れませんが、バイトコードを実行するSmalltalk CPUとか 
+作った人海外も含めていらっしゃいますかね。もう少しb16を解析したら挑戦してみようかと思うこともあるのですが、夢ばかり大きくたぶん途中で挫折するのではと危惧しております（そもそも出身大学が山形大学の人文学部なので、理系じゃないので深く論理回路に精通しているわけではありませんし・・・）。
+　私は、住所は岩手なので東京や京都での勉強会には出席するのは残念ながらかないませんが、勉強会の資料などがありがたくも公開されているのでこれからも勉強会の内容や様子をそのような形で知ることができれば幸せです。これからも勉強会が盛り上がることを祈っています。 
+
+From umejava ＠ mars.dti.ne.jp  Sun Feb 15 21:53:12 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Feb 15 21:53:24 2009
+Subject: [SML 7478] 第6回Smalltalk勉強会のお知らせ
+Message-ID: <JY200902152153127.987859@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+デブサミ2009で行われた出張編ですが、人数は少ないながらも
+みっちりとマンツーマンでSmalltalkができました。わきあいあいと良い
+雰囲気のセッションであったと思います。
+
+さて、定例の勉強会のお知らせです。今回は変則的に水曜日です。
+
+日時: 2009/2/25(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai6kaismalltalkbenkyoukai
+
+テーマは「GUIアプリを作ってみよう」です。
+
+Web等を見るとクラシカルなMVCの記述ばかりが目につき、VisualWorksで
+導入されているモダンなMVCの言及が少ないように思えます。たいそう
+クールなのにこれはもったいないです。
+
+そこでVWのアプリケーションモデルを中心として、現在のSmalltalkでの
+GUIの作り方に焦点を当てることにしました。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From yoshiki ＠ vpri.org  Mon Feb 16 17:08:23 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Mon Feb 16 17:09:16 2009
+Subject: [SML 7479] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+In-Reply-To: <498B8BC3.6060000@sra.co.jp>
+References: <498AF3C3.2000507@sra.co.jp> <u63joya1o.wl%yoshiki@vpri.org>
+	<498B53A2.4050909@cc.kyoto-su.ac.jp>
+	<u1vucxz33.wl%yoshiki@vpri.org> <498B8BC3.6060000@sra.co.jp>
+Message-ID: <uprhin6rs.wl%yoshiki@vpri.org>
+
+At Fri, 06 Feb 2009 10:00:51 +0900,
+SAWAMOTO Eri wrote:
+> 
+> 澤本＠京産大です。
+> 
+> 
+> Yoshiki Ohshima さんは書きました:
+> > # amazonによると澤本さんは「専攻は地質学(古生物学)」だったのですね。かっ
+> > # こよい！
+> 「かっこよい」ですか・・・！恐縮です。
+> 古生物学ですけど、
+> アンモナイトとかのでかい化石じゃなくて、
+> 放散虫というプランクトンの化石を扱ってました。
+> なかなか綺麗な形をしてます。
+> 試料を取りに神通川流域まで行って
+> 数日間ツルハシをふりまわしていたら腱鞘炎になりました・・・。
+
+  僕もamazonでブラックブックを買いました。同僚たちになぜいまさら
+Smalltalkの本なぞ買っているのかと聞かれ説明に困る面もありましたが^^; 
+正直に知り合いの本で買うと約束したので、と答えておきました。
+
+  コンピュータ科学は(というものがあるなら)はもっともっと学際的になって
+いくと思うので、他の科学分野での訓練をすでにくぐっている人は正直うらや
+ましいです。
+
+-- Yoshiki
+From kuwatani ＠ akademia.co.jp  Tue Feb 24 20:30:04 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Tue Feb 24 20:30:14 2009
+Subject: [SML 7480] メーリングリストの一時停止及び運用ドメインの変更のお知らせ
+Message-ID: <49A3DA3C.1020300@akademia.co.jp>
+
+SMLメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+メーリングリストを運用しているサーバのメンテナンスに伴い
+下記の期間，メーリングリストのサービスを一時停止いたします．
+
+ 日 時：2009年3月8日(日)　7:30 〜 13:30
+ 内 容：電源設備の定期点検によるサービスの停止
+
+また，以前(といっても半年近く前[SML 7419]ですが)アナウンスしていました
+メーリングリストの運用ドメインの変更作業を
+メーリングリストの一時停止に合わせて行いたいと思います．
+
+ 旧: sml@akademia.co.jp
+ 新: sml@smalltalk.jp
+
+SMLの登録者の情報はそのまま引き継ぎますので
+再登録などは必要ありませんが、メールの振り分け設定の変更など
+行って頂くことになります。
+
+メーリングリストの復旧，ドメインの移行が終了次第お知らせいたします．
+ご迷惑をおかけしますが，よろしくお願いします．
+
+-- 
+kuwatani@akademia.co.jp
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Feb 25 18:24:41 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Feb 25 18:24:53 2009
+Subject: [SML 7481] 第5回Smalltalk勉強会＠京都
+Message-ID: <49A50E59.20204@cc.kyoto-su.ac.jp>
+
+青木＠京都産業大学です。
+
+来週の今日（3月4日（水）19:00〜21:00）キャンパスプラザ京都に
+おいて「Smalltalk勉強会@京都」を開催いたします。万障繰り合わ
+せてご参集ください。
+
+------------------------------------------------------------
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto5
+第5回 Smalltalk勉強会＠京都
+日時：2009年03月04日（水）19:00〜21:00
+場所：キャンパスプラザ京都 6階 大学院サテライト 第2講習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+ブラックブックの第2章の「バイト配列」からやります。バイトコー
+ド群が格納される配列ですし、とても重要なところだ（仮想マシン
+にまつわる話もしたい）と思います。ノート型のパーソナルコンピ
+ュータ（Windows Vista/XP または Mac OS X (on Intel Mac)）をご
+持参ください。最新の「じゅん for Smalltalk（Jun775）」も配布
+いたします。
+------------------------------------------------------------
+
+なお、第6回以降のSmalltalk勉強会＠京都は、引き続きキャンパス
+プラザ京都で行いますが、講習室の確定が3月7日ですので、正確な
+アナウンスは3月9日以降に行います。しばらくのご猶予を。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Feb 27 14:57:11 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Feb 27 14:57:48 2009
+Subject: [SML 7482] 開催場所が確定！Smalltalk勉強会＠京都
+In-Reply-To: <49A50E59.20204@cc.kyoto-su.ac.jp>
+References: <49A50E59.20204@cc.kyoto-su.ac.jp>
+Message-ID: <49A780B7.50000@cc.kyoto-su.ac.jp>
+
+青木＠京都産業大学です。
+
+私は書きました:
+> なお、第6回以降のSmalltalk勉強会＠京都は、引き続きキャンパス
+> プラザ京都で行いますが、講習室の確定が3月7日ですので、正確な
+> アナウンスは3月9日以降に行います。しばらくのご猶予を。
+
+３月７日を待たずに、部屋が確定しました。一年間を通しておさえ
+ることができました。講習室ではなく、会議室ですので、春からは
+サロン風にできると思います。
+
+【キャンパスプラザ京都・２階・第２会議室】
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=588&frmCd=14-1-0-0-0
+
+次々回（第６回・４月１日）からの京都での勉強会は、６階・第２
+講習室ではなく、２階の第２会議室になります。すでにウェブペー
+ジも更新しておきました。開催の日時と場所をお確かめください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto6
+
+毎月・第１水曜日・１９：００〜２１：００です。スケジュールに
+１年間分を書き込んでくださいませ。
+
+なお、次回（第５回・３月４日）は、いままで通り、６階の第２講
+習室での開催になりますので、ご注意を。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

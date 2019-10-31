@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<st-source>
+<time-stamp>From VisualWorks® NonCommercial, 7.7 of 2009年12月15日 on 2010年12月31日 at 13:13:14</time-stamp>
+
+
+<component-created>
+<name>SSK</name> <type>package</type>
+</component-created><!-- Package SSK* -->
+
+
+<component-property>
+<name>SSK</name> <type>package</type>
+<property>comment</property> <value>'Smalltalk Studies in Kyoto'</value>
+</component-property>
+
+<class>
+<name>OldFashionedBrowser</name>
+<environment>Smalltalk</environment>
+<super>UI.ApplicationModel</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars>classTable classList methodList isMeta codeText </inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>SSK</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>OldFashionedBrowser</class-id>
+<body>Smalltalk Studies in Kyoto</body>
+</comment>
+
+<methods>
+<class-id>OldFashionedBrowser class</class-id> <category>interface specs</category>
+
+<body package="SSK" selector="windowSpec">windowSpec	"Tools.UIPainter new openOnClass: self andSelector: #windowSpec"	&lt;resource: #canvas&gt;	^#(#{UI.FullSpec} 		#window: 		#(#{UI.WindowSpec} 			#label: 'Old Fashioned Browser' 			#min: #(#{Core.Point} 400 300 ) 			#max: #(#{Core.Point} 0 0 ) 			#bounds: #(#{Graphics.Rectangle} 1280 720 2080 1170 ) ) 		#component: 		#(#{UI.SpecCollection} 			#collection: #(				#(#{UI.SequenceViewSpec} 					#layout: #(#{Graphics.LayoutFrame} 8 0 8 0 -4 0.5 -4 0.5 ) 					#name: #classList 					#model: #classList 					#menu: #classListMenu 					#useModifierKeys: true 					#selectionType: #highlight ) 				#(#{UI.SequenceViewSpec} 					#layout: #(#{Graphics.LayoutFrame} 4 0.5 8 0 -8 1 -40 0.5 ) 					#name: #methodList 					#model: #methodList 					#menu: #methodListMenu 					#useModifierKeys: true 					#selectionType: #highlight ) 				#(#{UI.RadioButtonSpec} 					#layout: #(#{Graphics.LayoutOrigin} 15 0.5 -30 0.5 ) 					#name: #instanceButton 					#model: #isMeta 					#label: 'instance' 					#select: false ) 				#(#{UI.RadioButtonSpec} 					#layout: #(#{Graphics.LayoutOrigin} 15 0.75 -30 0.5 ) 					#name: #classButton 					#model: #isMeta 					#label: 'class' 					#select: true ) 				#(#{UI.TextEditorSpec} 					#layout: #(#{Graphics.LayoutFrame} 8 0 4 0.5 -8 1 -8 1 ) 					#name: #codeText 					#model: #codeText 					#tabRequiresControl: true ) 				#(#{UI.ResizingSplitterSpec} 					#layout: #(#{Graphics.LayoutFrame} 8 0 -2 0.5 -8 1 2 0.5 ) 					#name: #horizontalResizer 					#horizontal: true 					#minAboveSize: 100 					#minBelowSize: 100 					#aboveWidgets: 'classList methodList instanceButton classButton verticalResizer' 					#belowWidgets: 'codeText' ) 				#(#{UI.ResizingSplitterSpec} 					#layout: #(#{Graphics.LayoutFrame} -2 0.5 8 0 2 0.5 -4 0.5 ) 					#name: #verticalResizer 					#horizontal: false 					#minAboveSize: 100 					#minBelowSize: 100 					#aboveWidgets: 'classList ' 					#belowWidgets: 'methodList instanceButton classButton' ) ) ) )</body>
+</methods>
+
+<methods>
+<class-id>OldFashionedBrowser class</class-id> <category>examples</category>
+
+<body package="SSK" selector="example">example	"OldFashionedBrowser example."	^(OldFashionedBrowser new)		open;		yourself</body>
+</methods>
+
+<methods>
+<class-id>OldFashionedBrowser class</class-id> <category>resources</category>
+
+<body package="SSK" selector="classListMenu">classListMenu	"Tools.MenuEditor new openOnClass: self andSelector: #classListMenu"	&lt;resource: #menu&gt;	^#(#{UI.Menu} #(			#(#{UI.MenuItem} 				#rawLabel: 'Find Class...' 				#value: #findClass ) ) #(1 ) nil ) decodeAsLiteralArray</body>
+
+<body package="SSK" selector="methodListMenu">methodListMenu	"Tools.MenuEditor new openOnClass: self andSelector: #methodListMenu"	&lt;resource: #menu&gt;	^#(#{UI.Menu} #(			#(#{UI.MenuItem} 				#rawLabel: 'Find Method...' 				#value: #findMethod ) ) #(1 ) nil ) decodeAsLiteralArray</body>
+</methods>
+
+
+<methods>
+<class-id>OldFashionedBrowser</class-id> <category>aspects</category>
+
+<body package="SSK" selector="codeText">codeText	codeText ifNil: [codeText := ValueHolder with: Text new].	^codeText</body>
+
+<body package="SSK" selector="methodList">methodList	methodList		ifNil: 			[methodList := SelectionInList new.			BlockValue block: self codeTextBlock arguments: (Array with: methodList)].	^methodList</body>
+
+<body package="SSK" selector="classList">classList	classList		ifNil: 			[classList := SelectionInList new.			classList list: classTable keys asSortedCollection.			BlockValue block: self methodListBlock arguments: (Array with: classList)].	^classList</body>
+
+<body package="SSK" selector="isMeta">isMeta	isMeta		ifNil: 			[isMeta := ValueHolder with: false.			BlockValue block: self methodListBlock arguments: (Array with: isMeta)].	^isMeta</body>
+</methods>
+
+<methods>
+<class-id>OldFashionedBrowser</class-id> <category>menu messages</category>
+
+<body package="SSK" selector="findClass">findClass	self classList list isEmpty ifTrue: [^nil].	self		incrementalSearch: self classList		windowLabel: 'Find Class'		firstLabel: 'Filter:'		secondLabel: 'Classes:'</body>
+
+<body package="SSK" selector="findMethod">findMethod	self methodList list isEmpty ifTrue: [^nil].	self		incrementalSearch: self methodList		windowLabel: 'Find Method'		firstLabel: 'Filter:'		secondLabel: 'Methods:'</body>
+</methods>
+
+<methods>
+<class-id>OldFashionedBrowser</class-id> <category>initialize-release</category>
+
+<body package="SSK" selector="initialize">initialize	super initialize.	classTable := Dictionary new: 1000.	SystemUtils allClassesDo: [:aClass | classTable at: aClass toolListDisplayString put: aClass].	classList := nil.	methodList := nil.	isMeta := nil.	codeText := nil.	^self yourself</body>
+</methods>
+
+<methods>
+<class-id>OldFashionedBrowser</class-id> <category>accessing</category>
+
+<body package="SSK" selector="selectedMethod">selectedMethod	^self selectedClass		ifNil: [nil yourself]		ifNotNil: 			[:aClass |			self methodList selection ifNil: [nil yourself] ifNotNil: [:aSelector | aClass compiledMethodAt: aSelector]]</body>
+
+<body package="SSK" selector="selectedClass">selectedClass	^self classList selection		ifNil: [nil yourself]		ifNotNil: 			[:aKey |			[:aClass | self isMeta value ifTrue: [aClass class] ifFalse: [aClass yourself]]				value: (classTable at: aKey)]</body>
+</methods>
+
+<methods>
+<class-id>OldFashionedBrowser</class-id> <category>private</category>
+
+<body package="SSK" selector="methodListBlock">methodListBlock	^	[| aSelector |	aSelector := self methodList selection.	self methodList list: (self selectedClass				ifNil: [SortedCollection new]				ifNotNil: [:aClass | aClass selectors asSortedCollection]).	(aSelector notNil and: [self methodList list includes: aSelector])		ifTrue: [self methodList selection: aSelector]]</body>
+
+<body package="SSK" selector="codeTextBlock">codeTextBlock	^	[self codeText value: (self selectedClass				ifNil: [Text new]				ifNotNil: 					[:aClass |					self selectedMethod						ifNil: [aClass definition asText]						ifNotNil: [:aMethod | (aClass sourceMethodAt: aMethod selector) asText]])]</body>
+
+<body package="SSK" selector="incrementalSearch:windowLabel:firstLabel:secondLabel:">incrementalSearch: aSelectionInList windowLabel: windowLabelString firstLabel: firstLabelString secondLabel: secondLabelString	((IncrementalSearchDialog forSelectionWithSearch: 			[:aPattern |			(aPattern isEmpty				ifTrue: [aSelectionInList list copy]				ifFalse: [aSelectionInList list select: [:each | aPattern , '*' match: each]]) asSortedCollection])		windowLabel: windowLabelString;		firstLabel: firstLabelString;		secondLabel: secondLabelString;		select) ifNotNil: [:anElement | aSelectionInList selection: anElement]</body>
+</methods>
+
+
+
+</st-source>

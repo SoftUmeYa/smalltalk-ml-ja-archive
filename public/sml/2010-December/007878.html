@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7878] Re: 連想計算というリフレクティブな手法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207878%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3C4306F7126D35DA4B8A115EA505FA06860AC0ADA7%40JPESWA304.apo.epson.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007876.html">
+   <LINK REL="Next"  HREF="007877.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7878] Re: 連想計算というリフレクティブな手法</H1>
+    <B>Narita Takaoki</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207878%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3C4306F7126D35DA4B8A115EA505FA06860AC0ADA7%40JPESWA304.apo.epson.net%3E"
+       TITLE="[SML 7878] Re: 連想計算というリフレクティブな手法">Narita.Takaoki ＠ exc.epson.co.jp
+       </A><BR>
+    <I>2010年 12月 15日 (水) 17:04:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007876.html">[SML 7876] Re: 連想計算というリフレクティブな手法
+</A></li>
+        <LI>次の記事 <A HREF="007877.html">[SML 7877] 第27回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7878">[ 日付 ]</a>
+              <a href="thread.html#7878">[ スレッド ]</a>
+              <a href="subject.html#7878">[ 件名 ]</a>
+              <a href="author.html#7878">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>成田です。
+
+&gt;<i> sumim です。
+</I>&gt;<i> 
+</I>&gt;<i> まだ流れを追いきれていないので、Smalltalk的に書き直せていませんが、
+</I>&gt;<i> とりあえず成田さんのCLのコードをSmalltalkで動くよう直訳してみました。
+</I>
+おお、すばらしい・・・
+ストレートに移すと、やっぱりブロックだらけになりますよね。
+
+&gt;<i> ...流れ
+</I>
+じっくり見れば分かるでしょうから、解説もいらないとは思いますが、考え方の
+解説をおこがましくも一応してみます。
+
+大枠は、特定の条件を満たした繰り返し作用に対する「逐次平方」の適用で
+す。フィボナッチ数列への適用は、フィボナッチと逐次平方でググると出てくる
+かな？
+
+;; SICP もキーワードにすると良いかも？
+
+逐次平方を簡単にみるなら、フィボナッチ数列の場合では、二行行列でフィボ
+ナッチ数列の第１項(= 1)、第０項(= 0)を要素とするものを f_1 として、二行二
+列の行列 T を考え、その要素を
+
+    t_1_1 := 1      t_1_2 := 1
+    t_2_1 := 1      t_2_2 := 0
+
+とします。そうするとフィボナッチ数列の定義は、
+
+　f_n := T * f_n-1, n &gt; 1
+
+で与えられるので、
+
+　f_n := (T^n) * f_1
+
+に持ち込め、T^n の計算ができればよろしくなります。
+
+冪の形になっているので、
+
+　T^n = if  n is even then (T^{n/2})^2 else (T^{n-1}) * T.
+
+を用いて、n が 1 になるまで分解して計算すると、T^n が求まり、計算量は
+O(log(n)) になります。これをストレートに Common Lisp で書くと、
+
+(defun sequential-square (f n x)
+  (cond ((= n 1) x)
+        ((evenp n) (let ((fn (sequential-square f (/ n 2) x))) (funcall f fn fn)))
+        (t (funcall f x (sequential-square f (1- n) x)))))
+
+(defun fibonacci (n)
+  (car (sequential-square  ;; car は、f_1 と掛けて、f_n を取り出すのと一緒。
+         (lambda (x y)  ;; このラムダ式は行列の掛け算もどきです。
+           (let ((a (car x)) (b (cadr x)) (c (caddr x)) (d (cadddr x))
+                 (m (car y)) (n (cadr y)) (l (caddr y)) (o (cadddr y)))
+             (list (+ (* a m) (* b l)) (+ (* a n) (* b o)) (+ (* c m) (* d l))
+                   (+ (* c n) (* d o)))))
+         (1- n)
+         '(1 1 1 0)))) ;; (t_1_1  t_1_2  t_2_1  t_2_2) で代用して２行２列行列を表現。
+
+こんなところでしょうか。ここまでが、逐次平方の骨子です。
+
+ちなみに、T * (T * T) も (T * T) * T も同じであるのですが、これが逐次平方を適用
+するための「特定の条件」かな？
+
+先に示した大げさな一般化を施した版は、行列の代わりにもうすこし一般性のある
+線形関数による合成関数を想起して、合成関数演算を composition-op としてみ
+たものです。composition-op は丁度 T に対する * の一般化でしょうか。fibo は、
+T そのものにあたることになります。
+
+となるとですね・・・sequentialSquare や compositionOp をメソッド化するとすると
+Block クラスでしょうか・・・はてさて？
+
+まあ、鷲見さんの書かれてたものに比べ、数学的発想（？）で対処しているので
+Smalltalk の仕掛けで面白く・・という方向じゃないですねぇ・・・
+
+;;; プログラミング発想だとメモ化とかストリーム化とかになるのでしょう・・・
+
+&gt;<i> Squeak4.1とVisualWorks7.7で動作します。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> | sequentialSquare compositionOp fibo fibonacci |
+</I>&gt;<i> 
+</I>&gt;<i> sequentialSquare := nil.
+</I>&gt;<i> sequentialSquare := [:compOp :operator :n |
+</I>&gt;<i>    n &lt; 1 ifTrue: [nil] ifFalse: [
+</I>&gt;<i>    n = 1 ifTrue: [operator] ifFalse: [
+</I>&gt;<i>    n &gt; 1
+</I>&gt;<i>       ifTrue: [
+</I>&gt;<i>          n odd ifTrue: [
+</I>&gt;<i>             compOp
+</I>&gt;<i>                value: (sequentialSquare
+</I>&gt;<i>                   value: compOp value: operator value: n - 1)
+</I>&gt;<i>                value: operator]
+</I>&gt;<i>       ifFalse: [
+</I>&gt;<i>          | sqOp |
+</I>&gt;<i>          sqOp := sequentialSquare
+</I>&gt;<i>             value: compOp value: operator value: n / 2.
+</I>&gt;<i>          compOp value: sqOp value: sqOp]]]]].
+</I>&gt;<i> 
+</I>&gt;<i> compositionOp := [:func1 :func2 |
+</I>&gt;<i>    [:x | func1 value: (func2 value: x)]].
+</I>&gt;<i> 
+</I>&gt;<i> fibo := [:x | Array with: x first + (x at: 2) with: x first].
+</I>&gt;<i> 
+</I>&gt;<i> fibonacci := [:x |
+</I>&gt;<i>    x &lt; 1 ifTrue: [nil] ifFalse: [
+</I>&gt;<i>    x = 1
+</I>&gt;<i>       ifTrue: [1]
+</I>&gt;<i>       ifFalse: [
+</I>&gt;<i>          ((sequentialSquare
+</I>&gt;<i>                value: compositionOp value: fibo value: x - 1)
+</I>&gt;<i>             value: #(1 0)) first]]].
+</I>&gt;<i> 
+</I>&gt;<i> fibonacci value: 1000
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 2010年12月14日17:11 Narita Takaoki &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">Narita.Takaoki ＠ exc.epson.co.jp</A>&gt;:
+</I>&gt;<i> &gt; 成田です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt; sumim こと鷲見です。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 連想計算でもリフレクティブでもないので恐縮ですが、
+</I>&gt;<i> &gt;&gt; にぎやかしにと、２つほど考えてみました。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 同様にぎやかしですが、それどころか Smalltalk にもなってません。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; これを Smalltalk 的に書くとしたら？で詰まってしまった・・・
+</I>&gt;<i> &gt; Common Lisp で書いてしまいましたが：
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; (defun sequential-square (comp-op operator n)
+</I>&gt;<i> &gt;  (assert (integerp n) (n)) ;; 本質には関係しないので無視してください。
+</I>&gt;<i> &gt;  (cond ((&lt; n 1) nil)
+</I>&gt;<i> &gt;        ((= n 1) operator)
+</I>&gt;<i> &gt;        ((&gt; n 1)
+</I>&gt;<i> &gt;         (cond ((oddp n)
+</I>&gt;<i> &gt;                (funcall comp-op
+</I>&gt;<i> &gt;                 (sequential-square comp-op operator (1- n)) 
+</I>&gt;<i> operator))
+</I>&gt;<i> &gt;               ('t
+</I>&gt;<i> &gt;                (let
+</I>&gt;<i> &gt;                 ((sq-op (sequential-square comp-op operator 
+</I>&gt;<i> (/ n 2))))
+</I>&gt;<i> &gt;                 (funcall comp-op sq-op sq-op)))))))
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; (defun composition-op (func1 func2)
+</I>&gt;<i> &gt;  (lambda (x) (funcall func1 (funcall func2 x))))
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; (defun fibo (x) (list (+ (car x) (cadr x)) (car x)))
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; (defun fibonacci (x)
+</I>&gt;<i> &gt;  (cond ((&lt; x 1) nil)
+</I>&gt;<i> &gt;        ((= x 1) 1) ;; かなりインチキ
+</I>&gt;<i> &gt;        ('t
+</I>&gt;<i> &gt;         (car
+</I>&gt;<i> &gt;          (funcall
+</I>&gt;<i> &gt;           (sequential-square #'composition-op #'fibo (1- x)) '(1 
+</I>&gt;<i> &gt; 0))))))
+</I>&gt;<i> 
+</I></PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007876.html">[SML 7876] Re: 連想計算というリフレクティブな手法
+</A></li>
+	<LI>次の記事 <A HREF="007877.html">[SML 7877] 第27回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7878">[ 日付 ]</a>
+              <a href="thread.html#7878">[ スレッド ]</a>
+              <a href="subject.html#7878">[ 件名 ]</a>
+              <a href="author.html#7878">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

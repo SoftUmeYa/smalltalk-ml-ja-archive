@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7879] Re: 連想計算というリフレクティブな手法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207879%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3CAANLkTinij0j-RRdvVPqyux9D3Taho4D373DEvzjEXh9h%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007877.html">
+   <LINK REL="Next"  HREF="007880.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7879] Re: 連想計算というリフレクティブな手法</H1>
+    <B>Masato Sumi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207879%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3CAANLkTinij0j-RRdvVPqyux9D3Taho4D373DEvzjEXh9h%40mail.gmail.com%3E"
+       TITLE="[SML 7879] Re: 連想計算というリフレクティブな手法">sumi ＠ seagreen.ocn.ne.jp
+       </A><BR>
+    <I>2010年 12月 16日 (木) 00:46:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007877.html">[SML 7877] 第27回Smalltalk勉強会のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="007880.html">[SML 7880] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7879">[ 日付 ]</a>
+              <a href="thread.html#7879">[ スレッド ]</a>
+              <a href="subject.html#7879">[ 件名 ]</a>
+              <a href="author.html#7879">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>成田さん。解説ありがとうございます。sumim です。
+
+とりあえず大枠の部分だけですが、だいたい分かりました。
+たとえば、Squeak で組み込みのなんちゃって Matrix において
+
+
+Matrix &gt;&gt; raisedTo: n
+  | m |
+  n = 1 ifTrue: [^self].
+  n even ifTrue: [^(m := self raisedTo: n/2) +* m].
+  ^(self raisedTo: n - 1) +* self
+
+
+を定義しておけば、
+
+
+|<i> fibonacci |
+</I>fibonacci := [:n |
+  | T |
+  T := Matrix rows: 2 columns: 2 contents: #(1 1 1 0).
+  ((3 to: n) inject: T into: [:Tn :idx | Tn +* T]) +* #(1 0) at: 1].
+
+[fibonacci value: 10000] timeToRun   &quot;=&gt; 758 ms &quot;
+
+
+というところを
+
+
+|<i> fibonacci |
+</I>fibonacci := [:n |
+  | T |
+  T := Matrix rows: 2 columns: 2 contents: #(1 1 1 0).
+  (T raisedTo: n - 1) +* #(1 0) at: 1].
+
+[fibonacci value: 10000] timeToRun   &quot;=&gt; 7 ms &quot;
+
+
+のように高速化できるということですね。
+
+
+2010年12月15日17:04 Narita Takaoki &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">Narita.Takaoki ＠ exc.epson.co.jp</A>&gt;:
+&gt;<i> 大枠は、特定の条件を満たした繰り返し作用に対する「逐次平方」の適用で
+</I>&gt;<i> す。フィボナッチ数列への適用は、フィボナッチと逐次平方でググると出てくる
+</I>&gt;<i> かな？
+</I></PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007877.html">[SML 7877] 第27回Smalltalk勉強会のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="007880.html">[SML 7880] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7879">[ 日付 ]</a>
+              <a href="thread.html#7879">[ スレッド ]</a>
+              <a href="subject.html#7879">[ 件名 ]</a>
+              <a href="author.html#7879">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

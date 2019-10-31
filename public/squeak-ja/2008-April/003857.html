@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3857] Re: OLPC-VM ImmX11 パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203857%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=ud4pana73.wl%25yoshiki%40vpri.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003856.html">
+   <LINK REL="Next"  HREF="003858.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3857] Re: OLPC-VM ImmX11 パッチ</H1>
+    <B>Tsutomu Hiroshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203857%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=ud4pana73.wl%25yoshiki%40vpri.org"
+       TITLE="[Squeak-ja: 3857] Re: OLPC-VM ImmX11 パッチ">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2008年 4月  3日 (木) 02:07:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003856.html">[Squeak-ja: 3856] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+        <LI>次の記事 <A HREF="003858.html">[Squeak-ja: 3858] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3857">[ 日付 ]</a>
+              <a href="thread.html#3857">[ スレッド ]</a>
+              <a href="subject.html#3857">[ 件名 ]</a>
+              <a href="author.html#3857">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE> &gt;   これは・髟阡嵳にはすでに0xF1の文字が一文字だけ来ているのでしょう瘢雹か(後で
+&gt;<i> 試して見ます)。trunkにも基本的に同じパッチが入ったのですが・髟阡札クセント
+</I>&gt;<i> つき文字の入力は動いていたのに動かなくなったという瘢雹報告もう髟阡擦辰豆踉斬は大分
+</I>&gt;<i> 混乱しているところです。
+</I>
+olpc/platforms/unix/vm/sqUnixEvent.c
+
+で，recordKeyboardEvent の debug print を有効にして試しました．
+
+static void recordKeyboardEvent(int keyCode, int pressCode, int modifiers,
+int ucs4)
+{
+  sqKeyboardEvent *evt= allocateKeyboardEvent();
+  evt-&gt;charCode= keyCode;
+  evt-&gt;pressCode= pressCode;
+  evt-&gt;modifiers= modifiers;
+  evt-&gt;utf32Code= ucs4;
+  evt-&gt;reserved1=
+    evt-&gt;windowIndex= 0;
+  signalInputEvent();
+#if 1 //  DEBUG_EVENTS
+  printf(&quot;EVENT: key&quot;);
+  switch (pressCode)
+    {
+    case EventKeyDown: printf(&quot; down &quot;); break;
+    case EventKeyChar: printf(&quot; char &quot;); break;
+    case EventKeyUp:   printf(&quot; up   &quot;); break;
+    default:           printf(&quot; ***UNKNOWN***&quot;); break;
+    }
+  printModifiers(modifiers);
+  printKey(keyCode);
+  printf(&quot; ucs4 %d\n&quot;, ucs4);
+#endif
+}
+
+ñ「tilde付きn」の入力結果は，里茲逅擦砲覆蠅泙后
+
+砥杜垪 諷粹  ┗控 因祿鶸 砥杜垪 諷竏癇  ┗控 因祿鶸 砥杜垪 諷粹  ┗祁 因皹鶸 砥杜垪 諷竏癇  ┗祁 因皹鶸 
+孕騰蔚笂も同じ？) の 0xf1 ではなく，
+UTF-8 の 0xc3 0xb1 の2バイトです．
+
+locale の文字コ・踉札匹 罩の豺隋
+入力文字列の萋世 懽弧闖謨靦蜴を使う瘢雹よう瘢雹にしています．
+
+＝＝＝＝
+廢髟阡仕隋（
+鹿侑転
+
+
+次⑬緕籬鶯蜒跂⑬    屡匸
+    斜昭嫐        次⑬鱚痲鶚Ⅹ
+	写評前の記事 質 頒兎就旭蓋偽㍽譬詔囁瘠㈱畉 蓋偽吶鰐价㎡附轂臼 パッチ
+鹿曽鹿跚	写評次の記事 質 頒兎就旭蓋妓㍽譬詔囁瘠㈱畉 蓋妓吶鰐价㎡附轂臼 パッチ
+鹿曽鹿跚         写評 実承Ⅶ諒造喀鹿他 
+              釈 蓿繙就籬㍽譯蓋儀⊂日付 歇              釈 蓿繙就鱚痲㍽譯蓋儀⊂スレッド 歇              釈 蓿繙就齦礪繝蔗迪３元窟詔 件名 歇              釈 蓿繙就癜闥㍽譯蓋儀⊂著者 歇         鹿棉       鹿嫐
+取鮠
+釈 蓿繙就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂囁瘠㈱メーリングリストの案内
+鹿畩錫鮠
+鹿硼糯昭貍

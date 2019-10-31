@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7563] Re: 第8回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207563%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCOBskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A2717EC.8090809%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007561.html">
+   <LINK REL="Next"  HREF="007564.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7563] Re: 第8回Smalltalk勉強会＠京都</H1>
+    <B>Yasuda Yutaka</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207563%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCOBskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A2717EC.8090809%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7563] Re: 第8回Smalltalk勉強会＠京都">yasuda ＠ mfc.bakkers.gr.jp
+       </A><BR>
+    <I>2009年 6月  4日 (木) 12:47:24 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007561.html">[SML 7561] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007564.html">[SML 7564] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7563">[ 日付 ]</a>
+              <a href="thread.html#7563">[ スレッド ]</a>
+              <a href="subject.html#7563">[ 件名 ]</a>
+              <a href="author.html#7563">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>京産大の安田です。
+
+&gt;<i> 昨夜に行った京都駅前でのSmalltalk勉強会の簡単な報告を 
+</I>&gt;<i> します。
+</I>
+ありがとうございました。
+
+リターン（^）の挙動などを帰りの電車とか今とかちょろちょろと
+調べていたのですが、、
+デバッガの出してくれるバイトコードを見ているわけです、、、
+
+OrderedCollection new add: 100; add: 110; add: 120
+
+などと書いて、カスケードがどのように振る舞うか、実際の
+スタックの動きをトレスしていると、はて、分からんように
+なりました。
+
+で、調べてみるとカスケードのバイトコードの意味が
+分かったのでこちらへ報告。。。(@_@!)
+
+＃カッコ悪いことをしているような気がしますが、
+＃まあいいか、、、
+
+====== 報告始まり
+
+上のコードのバイトコードは、
+
+1 &lt;34&gt; push OrderedCollection
+2 &lt;BC&gt; send new
+3 &lt;68&gt; dup first
+4 &lt;D8 64&gt; push 100
+6 &lt;B8&gt; send add:
+7 &lt;69&gt; dup
+8 &lt;D8 6E&gt; push 110
+10 &lt;B8&gt; send add:
+11 &lt;6A&gt; dup last
+12 &lt;D8 78&gt; push 120
+14 &lt;B8&gt; send add:
+15 &lt;65&gt; return
+
+なわけですが、単純にやると僕の頭のスタックには
+OrderedCollection のインスタンスが積み残されたり、
+変なことが起きます。
+要するに dup first, dup, dup last の挙動が
+分からないのです。。
+
+ので、バイトコード一覧を捜すと、以下に仕様がありました。
+<A HREF="http://www.cincomsmalltalk.com/pdf/TechNotes/vwBytecodes.pdf">http://www.cincomsmalltalk.com/pdf/TechNotes/vwBytecodes.pdf</A>
+
+dup first, dup, dup last については、
+
+OpDupFirst 16r68
+Duplicate the top value on the stack, in preparation to send the first  
+message of a cascade.
+The duplicated value is the receiver of the cascaded messaages.
+スタックトップを複製するカスケードの最初の準備でやる、と。
+（へえ。もっぱらソレ用みたいな感じだな！）
+複製されるのはカスケードされるメッセージのレシーバだと。
+
+OpDupNext 16r69
+Pop the top value off the stack, then duplicate the new top value of  
+the stack.
+This is used in preparing to send a message that is part of a cascade,  
+when the message is neither the first nor the last message in the  
+cascade.
+In such a case, the value which is to be popped is the return value of  
+the preceding message of the cascade, and the value being duplicated  
+is the receiver of the cascade.
+スタックトップをポップして（捨てて！）、新たにスタックトップ 
+となった値を複製、ですと！
+カスケードの、それも先頭でも途中でもない時に使われるとある。 
+（やっぱ専用か）
+このような場合、ポップされたvalueは先のカスケードされた 
+メッセージの結果であるはずで、かつ複製されたvalueは、カ 
+スケードのレシーバであるはず、と。
+（もうまったく決めうちというか専用ね。）
+
+OpNoDup 16r6A
+Pop the top value off the stack.
+The popped value is the return value of the previous message send,  
+removed in preparation to send the last message of a cascade.
+（この命令 6A はデバッガなどの bytecode 表示では dup  
+last と表示される。そっちのほうが分かりやすくないか？いやまあ 
+意味的には確かに何も dup しないんだけれども。）
+スタックの値をポップする。（だけかい！）
+ポップされた value は直前に送られたメッセージの戻り値で 
+あるはずだが、カスケード中の最後のメッセージ送信の準備のため 
+に取り除くのだ、と。
+（あれ？単なる pop 命令てのは無いのか？？そういえば見た 
+ことがない。）
+
+というわけで非常に汎用的な字面にダマされましたが、
+なんのことはない、カスケード専用命令、それもワンセット
+でそのように動作するように揃えられてるのですね。
+
+========== 以上調べものおわり。。
+
+これで疑問（頭の中のスタック積み残し）は消えました。。
+カスケードってのは表記だけかいなと思ったのですが、いや
+はや、バイトコードごとカスケードに特化された構造をして
+ました。。(@_@)
+
+で、確かにデバッガやら何やらが役に立ちました。はい。
+
+でわでわ								Yasu.
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007561.html">[SML 7561] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007564.html">[SML 7564] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7563">[ 日付 ]</a>
+              <a href="thread.html#7563">[ スレッド ]</a>
+              <a href="subject.html#7563">[ 件名 ]</a>
+              <a href="author.html#7563">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

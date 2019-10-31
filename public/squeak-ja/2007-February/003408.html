@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3408] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203408%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IDMuOS04Vk0bJEJNUSROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrSW1tWDExUGx1Z2luGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=45D459B9.7030905%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003405.html">
+   <LINK REL="Next"  HREF="003409.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3408] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ</H1>
+    <B>Tsutomu Hiroshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203408%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IDMuOS04Vk0bJEJNUSROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrSW1tWDExUGx1Z2luGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=45D459B9.7030905%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3408] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2007年 2月 23日 (金) 10:27:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003405.html">[Squeak-ja: 3405] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+        <LI>次の記事 <A HREF="003409.html">[Squeak-ja: 3409] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3408">[ 日付 ]</a>
+              <a href="thread.html#3408">[ スレッド ]</a>
+              <a href="subject.html#3408">[ 件名 ]</a>
+              <a href="author.html#3408">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>廣島です．
+
+&gt;<i> 結果を送ります。
+</I>&gt;<i> &quot;-*-*-medium-r-normal--14-*&quot;
+</I>&gt;<i> と
+</I>&gt;<i> &quot;-*-Fixed-Medium-R-Normal--14-*-ISO8859-1&quot;
+</I>&gt;<i> の結果を送ります。
+</I>
+&gt;<i> found: -misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1,-misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1
+</I>
+２番めで見つかったフォントは最初のパターンにもマッチするはずなのに，
+Fail するのは変ですね．何故でしょう？
+文字集合（iso8859-1)を指定しないと Fail するのでしょうか？
+この指定だと日本語文字を含まないフォントセットが出来てしまいます．
+ただ，IM がフォント指定を無視するかもしれないので，
+問題は起こらないのかもしれません．
+
+<A HREF="http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4b.tar.gz">http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4b.tar.gz</A>
+
+を置きました．
+
+1. ハードコードのフォント指定を緩め
+&quot;-*-*-medium-r-normal--*&quot; にしたのですが，
+上のような状況では，これだけではダメかも．
+2. XCreateFontSet に失敗したときは，
+国際化入力を無効にするようにしました．
+&quot;-*-*-medium-r-normal--14-*&quot; にマッチするフォントが
+必ずあるものと思っていたので，返値をチェックしていませんでした．
+3. リソース　squeak*fontSet　を設定することで
+問題のフォントを指定できるようにしました．
+~/.Xresources か ~/.Xdefaults に，
+
+squeak*fontSet: -*-*-misc-fixed-*
+
+等，記述していろいろ試してください．なお，記述した直後には
+xrdb -merge ~/.Xresources
+することをお忘れなく．一時的に試したいときは
+xrdb -merge
+で標準入力にリソースを打ち込む手もあります．
+
+=======
+廣島　勉
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003405.html">[Squeak-ja: 3405] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+	<LI>次の記事 <A HREF="003409.html">[Squeak-ja: 3409] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3408">[ 日付 ]</a>
+              <a href="thread.html#3408">[ スレッド ]</a>
+              <a href="subject.html#3408">[ 件名 ]</a>
+              <a href="author.html#3408">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

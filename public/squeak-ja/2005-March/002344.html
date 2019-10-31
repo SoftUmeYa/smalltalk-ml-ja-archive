@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2344] Re: Nihongo7について(NSqueak-2005-02-25.image)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202344%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283GyRCJEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhCKE5TcXVlYWstMjAwNS0wMi0yNS5pbWFnZSk%3D%3F%3D&In-Reply-To=ur7iz1lgn.wl%40YOSHIKI-T2.mb.infoweb.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002343.html">
+   <LINK REL="Next"  HREF="002345.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2344] Re: Nihongo7について(NSqueak-2005-02-25.image)</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202344%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283GyRCJEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhCKE5TcXVlYWstMjAwNS0wMi0yNS5pbWFnZSk%3D%3F%3D&In-Reply-To=ur7iz1lgn.wl%40YOSHIKI-T2.mb.infoweb.ne.jp"
+       TITLE="[Squeak-ja: 2344] Re: Nihongo7について(NSqueak-2005-02-25.image)">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2005年 3月  1日 (火) 23:45:30 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002343.html">[Squeak-ja: 2343] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+        <LI>次の記事 <A HREF="002345.html">[Squeak-ja: 2345] Re: 画像のOID
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2344">[ 日付 ]</a>
+              <a href="thread.html#2344">[ スレッド ]</a>
+              <a href="subject.html#2344">[ 件名 ]</a>
+              <a href="author.html#2344">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+&gt;<i> 　これそのものが原因かどうかはわかりませんが、アップデートファ
+</I>&gt;<i> イルのひとつである0004filePathMethodRename.csとして、間違えたやつをアッ
+</I>&gt;<i> プロードしてしまいました。ファイルの性質上さらなるアップデートでは修正
+</I>&gt;<i> できないので、今からそっとそのファイルを置き換えます。すみません。
+</I>
+　これをやりました。その後、
+
+&gt;<i> 再現方法がわかりました。
+</I>&gt;<i> １）NSqueak-2005-02-25をダウンロード。
+</I>&gt;<i> ２）解凍
+</I>&gt;<i> ３）起動
+</I>&gt;<i> ４）アップデートボタンを押して、アップデートストリーム(Nihongo7 Updates)
+</I>&gt;<i> よりアップデート
+</I>&gt;<i> ５）SqueakMapパッケージローダを起動
+</I>
+  をしてもエラーは出ません。
+
+また、
+
+&gt;<i> FileDirectory default createDirectory: 'test'.
+</I>&gt;<i> self assert: (FileDirectory default directoryExists: 'test').
+</I>
+も成功します。
+
+ちなみに、パッケージをインストールしようとするとエラーが出ますが、
+SMSimpleInstaller&gt;&gt;fileIntoChangeSetNamed:fromStream:のしかるべき行を
+
+(Smalltalk respondsTo: #changes)
+
+のように変えると直ります。この変更もアップデートサーバーに載せたいと思
+います。
+
+  報告ありがとうございます。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002343.html">[Squeak-ja: 2343] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+	<LI>次の記事 <A HREF="002345.html">[Squeak-ja: 2345] Re: 画像のOID
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2344">[ 日付 ]</a>
+              <a href="thread.html#2344">[ スレッド ]</a>
+              <a href="subject.html#2344">[ 件名 ]</a>
+              <a href="author.html#2344">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

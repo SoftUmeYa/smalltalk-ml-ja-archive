@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7703] Re: HttpClientによるログイン認証について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207703%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4AE66AE0.5060007%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007702.html">
+   <LINK REL="Next"  HREF="007704.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7703] Re: HttpClientによるログイン認証について</H1>
+    <B>久保田 吉彦</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207703%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4AE66AE0.5060007%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7703] Re: HttpClientによるログイン認証について">kubota ＠ sie.dendai.ac.jp
+       </A><BR>
+    <I>2009年 10月 27日 (火) 15:16:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007702.html">[SML 7702] Re: HttpClientによるログイン認証について
+</A></li>
+        <LI>次の記事 <A HREF="007704.html">[SML 7704] Re: HttpClientによるログイン認証について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7703">[ 日付 ]</a>
+              <a href="thread.html#7703">[ スレッド ]</a>
+              <a href="subject.html#7703">[ 件名 ]</a>
+              <a href="author.html#7703">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、電大の久保田です。
+
+青木先生のおっしゃった通り、デバッガを見たらエンコーダが入ってい 
+るIdentityDictionaryに'euc-jp'が入っていませんでし 
+た。そのためKey not foundのExceptionが出ているようで 
+す。
+
+原因は判ったのですが、どう対処していいやら分りません。どなたか対 
+処方法ご存知のかたいらっしゃいませんでしょうか。
+#うーん、なさけない
+
+On 2009/10/27, at 12:37, AOKI Atsushi wrote:
+
+&gt;<i> 確かめもせずに思い込みだけの返信ですが、あしからず。
+</I>&gt;<i> おそらく文字セットの問題ではないかしらん。
+</I>&gt;<i> 当該の文字コードのエンコーダ／デコーダが見つからないのでは。
+</I>&gt;<i>
+</I>&gt;<i> --- 青木淳＠脊髄反射
+</I>&gt;<i>
+</I>&gt;<i> 久保田 吉彦 さんは書きました:
+</I>&gt;&gt;<i> こんにちは、電大の久保田です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Net.HttpClientの使いかたについて悩んでいます。
+</I>&gt;&gt;<i> ログインし、その後のページを取得したいのですが、うまくいきま 
+</I>&gt;&gt;<i> せん。
+</I>&gt;&gt;<i> Javaですが、同じ目的のサンプルプログラムがあったので、それを 
+</I>&gt;&gt;<i> 参考に書いて
+</I>&gt;&gt;<i> みました。
+</I>&gt;&gt;<i> mixiにログインし、その後のページを持ってくる例(http:
+</I>&gt;&gt;<i> //blog.mikuriya.biz/archives/251)です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 環境はVisualWorks7.6NCにWebSupportのパーセルをイ 
+</I>&gt;&gt;<i> ンストールしています。
+</I>&gt;&gt;<i> ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+</I>&gt;&gt;<i> mixiLogin := '<A HREF="http://mixi.jp/login.pl'.">http://mixi.jp/login.pl'.</A>
+</I>&gt;&gt;<i> mixiTopPage := '<A HREF="http://mixi.jp/home.pl'.">http://mixi.jp/home.pl'.</A>
+</I>&gt;&gt;<i> inputUserName := 'email'.
+</I>&gt;&gt;<i> inputPassword := 'password'.
+</I>&gt;&gt;<i> inputNextURL := 'next_url'.
+</I>&gt;&gt;<i> userName := 'めーるあどれす'.
+</I>&gt;&gt;<i> password := 'ぱすわーど'.
+</I>&gt;&gt;<i> nextUrl := '/home.pl'.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> client := Net.HttpClient new.
+</I>&gt;&gt;<i> client enableCookies: true.
+</I>&gt;&gt;<i> postRequest := HttpRequest post:mixiLogin.
+</I>&gt;&gt;<i> postRequest
+</I>&gt;&gt;<i>         addFormKey: inputUserName value: userName;
+</I>&gt;&gt;<i>         addFormKey: inputPassword value: password;
+</I>&gt;&gt;<i>         addFormKey: inputNextURL  value: nextUrl.
+</I>&gt;&gt;<i> postResponse := client executeRequest: postRequest.
+</I>&gt;&gt;<i> &quot;????&quot;
+</I>&gt;&gt;<i> getMethod := HttpRequest get: mixiTopPage.
+</I>&gt;&gt;<i> getResponse := client executeRequest: getMethod
+</I>&gt;&gt;<i> ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ????までは実行できます。全て選択して実行するとUnhandled  
+</I>&gt;&gt;<i> exception: Key
+</I>&gt;&gt;<i> not foundというExceptionがでます。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> javaの例をみると????にあたるところに 
+</I>&gt;&gt;<i> postMethod.releaseConnection()という
+</I>&gt;&gt;<i> 式が入っていました。VisualWorksにも同じようなものがある 
+</I>&gt;&gt;<i> かとシステムブラ
+</I>&gt;&gt;<i> ウザをのぞいてみましたが目当てのものは見付かりませんでした。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> HttpClientのインスタンスを1つ作成し、それに向って必要な 
+</I>&gt;&gt;<i> だけ
+</I>&gt;&gt;<i> executeRequest: aHttpRequestメッセージを送信すれば結果が得ら 
+</I>&gt;&gt;<i> れると考えて
+</I>&gt;&gt;<i> いるのですが、間違ているのでしょうか。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 久保田吉彦
+</I>&gt;&gt;<i> 東京電機大学 情報環境学部 情報環境学科
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007702.html">[SML 7702] Re: HttpClientによるログイン認証について
+</A></li>
+	<LI>次の記事 <A HREF="007704.html">[SML 7704] Re: HttpClientによるログイン認証について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7703">[ 日付 ]</a>
+              <a href="thread.html#7703">[ スレッド ]</a>
+              <a href="subject.html#7703">[ 件名 ]</a>
+              <a href="author.html#7703">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3047] Re: PluggableTextMorphをつまむ方法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203047%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZVRleHRNb3Jw%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaBskQiRyJEQkXiRgSn1LIRsoQg%3D%3D%3F%3D&In-Reply-To=86c0320c0607120119o2cc01bc6vc264e266daa1337c%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003044.html">
+   <LINK REL="Next"  HREF="003048.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3047] Re: PluggableTextMorphをつまむ方法</H1>
+    <B>kubo-o</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203047%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZVRleHRNb3Jw%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaBskQiRyJEQkXiRgSn1LIRsoQg%3D%3D%3F%3D&In-Reply-To=86c0320c0607120119o2cc01bc6vc264e266daa1337c%40mail.gmail.com"
+       TITLE="[Squeak-ja: 3047] Re: PluggableTextMorphをつまむ方法">kubo-o ＠ mbox.kyoto-inet.or.jp
+       </A><BR>
+    <I>2006年 7月 12日 (水) 22:19:55 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003044.html">[Squeak-ja: 3044] Re: PluggableTextMorphをつまむ方法
+</A></li>
+        <LI>次の記事 <A HREF="003048.html">[Squeak-ja: 3048] Re: PluggableTextMorphをつまむ方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3047">[ 日付 ]</a>
+              <a href="thread.html#3047">[ スレッド ]</a>
+              <a href="subject.html#3047">[ 件名 ]</a>
+              <a href="author.html#3047">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>鷲見さん、早速ありがとうございました。
+on:のはたらきについてはよく判りました。
+もう一つの方のことですが、a Rectangle-Morph のようなクリックしてピックアップ
+できるタイプのモーフでないと、PluggableTextMorphは直接にはmouseでつかめない
+のでしょうか。
+はじめにworld上でopenInHnadをやるときだけはつかめていますが。
+on:などの引数付きのPluggableTextMorphに、なにか他の引数を追加すれば、
+eventhandlingが使えるのでしょうか。
+久保　道
+
+-----Original Message-----
+From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>
+[mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>]On Behalf Of Masato Sumi
+Sent: Wednesday, July 12, 2006 5:20 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3044] Re: PluggableTextMorphをつまむ方法
+
+
+久保さん、ごきげんよう。鷲見です。
+
+on: のところに挿入する引数は、このカード（a PluggableTextMorph）に
+入力された内容を別のオブジェクト（モデルと呼ぶ）で管理しているときに
+それを当てはめます。たとえば、
+
+|<i> model field |
+</I>model := ProcessBrowser new.
+model openAsMorph.
+
+field := PluggableTextMorph
+   on: model
+   text: #selectedMethod
+   accept: nil
+   readSelection: nil
+   menu: nil.
+field center: Point fromUser.
+field openInWorld.
+
+というスクリプトを評価して、クリックして指定した場所に a Pluggable-
+TextMorph を設置してから、同時に開くプロセスブラウザの右手のリスト
+から適当な項目を選んだときに起こることを観察してみてください。
+
+この仕組みはカードを動かす目的とは直接関係ないので、たとえば、
+alt/cmd + ドラッグでの移動を使う…というのではダメでしょうか。
+
+あるいは、カードを a PluggableTextMorph だけではなく、a Rectangle-
+Morph のようなクリックしてピックアップできるタイプのモーフのサブ
+モーフとして a PlugableTextMorph を組み合わせた、複合モーフのクラスとして
+新しく定義する…という方法もあるかもしれません。
+
+06/07/12 に kubo-o&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kubo-o ＠ mbox.kyoto-inet.or.jp</A>&gt; さんは書きました:
+&gt;<i> handlesMouseDown:やmouseDown:を
+</I>&gt;<i> 作用させるにはどうすればよいのでしょうか。
+</I>&gt;<i> 上のon:selfの「selfを自分のクラスのinstanceで
+</I>&gt;<i> 置き換えるのかとも思うのですが、
+</I>&gt;<i> よく判っていません。
+</I>&gt;<i> そもそもon:はどういう機能を持つのでしょうか。
+</I>&gt;<i> どうか宜しくお願い致します。
+</I>&gt;<i> 久保　道
+</I>
+--
+Masato Sumi
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003044.html">[Squeak-ja: 3044] Re: PluggableTextMorphをつまむ方法
+</A></li>
+	<LI>次の記事 <A HREF="003048.html">[Squeak-ja: 3048] Re: PluggableTextMorphをつまむ方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3047">[ 日付 ]</a>
+              <a href="thread.html#3047">[ スレッド ]</a>
+              <a href="subject.html#3047">[ 件名 ]</a>
+              <a href="author.html#3047">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

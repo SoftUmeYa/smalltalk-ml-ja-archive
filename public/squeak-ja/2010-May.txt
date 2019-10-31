@@ -1,0 +1,384 @@
+From umejava ＠ mars.dti.ne.jp  Wed May  5 21:41:09 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed May  5 21:41:15 2010
+Subject: [Squeak-ja: 4454] Squeak 4.1日本語化版リリース
+Message-ID: <Jxil1t.y1OkcuIGnU10Z7qmw3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+以下、いわゆるEtoysのほうではなく、Smalltalkの処理系としてのSqueakの話です。
+
+先日リリースされたSqueak 4.1の日本語化版を以下に置きました。
+http://swikis.ddo.jp/umejava/48
+
+4.1からBlockClosureが使えるようになっています。再帰もバッチリです。
+
+ライセンスもMIT+Apacheでより明確になりました。
+http://www.squeak.org/SqueakLicense/
+
+この他、詳しくは先日の第19回Smalltalk勉強会の資料をご覧ください。
+http://docs.google.com/viewer?a=v&pid=sites&srcid=c21hbGx0YWxrLXVzZXJzLmpwfGhvbWV8Z3g6NTA4OGY2MGM5MDI0NzA4NQ
+
+VWもいいですが、自由にいじれる範囲においてはSqueakのほうが上です。
+ぜひお試しください。
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Tue May 11 22:51:49 2010
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue May 11 22:51:58 2010
+Subject: [Squeak-ja: 4455] こどもプログラミングサークル スクラッチ Make: Tokyo Meeting 05 ワークショップ
+Message-ID: <AANLkTin0maVN28tvUu71e3qwvJkg4YU8k0ldi_H8-f5g@mail.gmail.com>
+
+こんにちは、阿部です。
+私もお手伝いしているこどもプログラミングサークル スクラッチが5月22日、23日に東京工業大学大岡山キャンパスで開催されるMake:
+Tokyo Meeting 05でワークショップを行います。当日は私も「大人のSqueak&Scratch」として、いろいろなハックをお見せします。
+http://d.hatena.ne.jp/abee2/20100511/1273583215
+ぜひいらしてください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+- - - - -
+こどもプログラミングサークル スクラッチ Make: Tokyo Meeting 05 ワークショップ
+5月22日(土), 23日(日)に大岡山の東京工業大学でMake: Tokyo Meeting 05が開催されます。
+私たちは３度目の参加になりますが、今回もスクラッチに関する展示とプレゼンテーション、ワークショップを行います。
+
+■展示・プレゼンテーション
+あのマインドストームを作ったMITメディアラボが開発した新しい子供用プログラミング言語スクラッチ。既に世界中で50万人のユーザーが100万個の作品を楽しんでいます。その特徴をセンサーやロボットとの連携も含めてご紹介します。また、私たちが日本で行っているワークショップの内容や参加方法をご案内し、5月22日に世界同時開催されるスクラッチデー(http://day.scratch.mit.edu/)について各地の様子をご紹介します。
+
+■ワークショップ
+MTM04で大好評だったスクラッチワークショップが再びやってきます。今回は世界各地で同時に行われるスクラッチデーの一環として、パソコンと自作のセンサー(Arduino)を使って光や音に反応する生き物を作ります。巨大化したり動き回ったり、何ができるかお楽しみ!
+普段は小中学生を対象に開催しておりますが、今回は子供から大人までどなたでもご参加いただけます。プログラミングやArduinoに興味はあるけれど触ったことがないという方におすすめです。
+
+日時：
+5月22日(土)
+   * 12:00-13:00
+   * 15:00-16:00
+5月23日(日)
+   * 11:00-12:00
+   * 14:00-15:00
+参加費： 500円(当日徴収。材料費含む。領収書は発行できません)
+対象： スクラッチやArduinoの初心者の方。年齢は問いません。
+
+当日パソコンとArduino(互換機可。USBケーブルも)をご持参ください。Arduinoは当日会場のお店でも購入可能と思われます。その他ワークショップに必要な材料はご用意します。
+パソコンにはスクラッチとArduino開発環境をあらかじめインストールしてきてください。
+※ スクラッチのインストール方法はこちら(http://info.scratch.mit.edu/ja/Support/Get_Started)、Arduinoの入手やインストール方法はこちら(http://www.yengawa.com/arduino_startup)をご覧ください。
+※ インストーラーは当日もご用意しますが、スムーズな進行にご協力ください。
+※ 予備のパソコンとArduinoもご用意しますが、数に限りがありますので、なるべくご持参ください。
+
+参加方法：
+お申込みフォーム(http://scratch-ja.org/atmtm05)から参加申込みをお送りください。こちらからの返信を持って受付完了とします。
+※ 各回とも事前申し込み７名、当日受付３名程度と致します。
+
+Make: Tokyo Meeting 05 開催概要
+   * 日時： 2010年5月22日（土）、23日（日）
+   * 会場： 東京工業大学　大岡山キャンパス（東京都目黒区大岡山2-12-1）
+   * 東急大井町線、目黒線「大岡山駅」徒歩1分
+   * 主催： 株式会社オライリー・ジャパン
+   * 共催： 東京工業大学、多摩美術大学 情報デザイン学科
+   * 協力： 東京工芸大学 インタラクティブメディア学科
+   * http://www.oreilly.co.jp/mtm/05/
+
+※ 5月22日(土)には、秋葉原でもみんなでたのしくスクイーク主催のデジタルクリエイター教室「Scratch（スクラッチ）でつくろう！
+〜目指せ世界のデジタルクリエイター！！〜」(http://etoys.jp/topics/20100522.html)と「ワークショップ指導者養成講座」(http://etoys.jp/topics/20100522-S.html)も開催されます。こちらもよろしくお願いします。
+- - - - -
+From manabu ＠ sfc.keio.ac.jp  Thu May 13 19:03:12 2010
+From: manabu ＠ sfc.keio.ac.jp (Manabu Sugiura)
+Date: Thu May 13 19:03:26 2010
+Subject: [Squeak-ja: 4456] 津田塾 Make: Tokyo Meeting 05 ワークショップ
+In-Reply-To: <AANLkTin0maVN28tvUu71e3qwvJkg4YU8k0ldi_H8-f5g@mail.gmail.com>
+References: <AANLkTin0maVN28tvUu71e3qwvJkg4YU8k0ldi_H8-f5g@mail.gmail.com>
+Message-ID: <20100513190312.F5EC.8CDE0663@sfc.keio.ac.jp>
+
+皆様、津田塾＋SFCの杉浦です。
+
+阿部さんからMake:Tokyo Meeting 05「こどもプログラミングサークル スクラッ
+チ」主催のワークショップのご案内がありましたが、津田塾も阿部さんにお世話
+になりつつ出展することになり、ワークショップを行います。
+
+PaPeRoの実機を多めに投入する予定ですので、是非いらしてください。
+
+ワークショップや展示の詳細は以下をご覧ください。
+http://artemis.tsuda.ac.jp/scratchday2010/
+
+失礼いたします。
+
+-- 
+Manabu Sugiura <manabu@sfc.keio.ac.jp>
+
+From "土本 (Florian) 強  Thu May 13 21:45:24 2010
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu May 13 21:45:30 2010
+Subject: [Squeak-ja: 4457] オブジェクト指向を使ったゲームプログラムの教育
+Message-ID: <20100513214522.97B1.41E77AC0@seagreen.ocn.ne.jp>
+
+　 Florian です。
+
+　もうここ12年ほどゲーム系の専門学校で講師をしているのですが、今期から
+「C言語の文法はすっ飛ばしていきなりオブジェクト指向で作る」というトライ
+アルをやっています。
+　どなたかオブジェクト指向とそのメリットに詳しい方に査読してもらいたいの
+ですが、興味のある方はいらっしゃいますでしょうか？
+
+　また、Smalltalk界隈でこの手の話に興味のある方を探すにはどの辺りのコミュ
+ニティを当たればいいのか心当たりありましたら教えていただけるとうれしいで
+す(SMLはなんか仙人が多くて入るのを躊躇してます。なんちゃってSmalltalker
+ですから、本職にはとてもとても……)。
+
+　報酬は特に出せませんが、PCでのゲームプログラムに対する専門的な知識は入
+手できます。コンピュータ未経験者向けの授業なのではじめから懇切丁寧に説明
+します。
+
+　冷やかしでも全然結構ですので興味ありましたらご連絡ください。
+
+　では。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://sites.google.com/site/117florian/'
+openInWorld. "do it."
+!
+
+From jsasaki ＠ coral.ocn.ne.jp  Thu May 13 22:03:51 2010
+From: jsasaki ＠ coral.ocn.ne.jp (Yoshiya Sasaki)
+Date: Thu May 13 22:03:54 2010
+Subject: [Squeak-ja: 4458] Re: オブジェクト指向を使ったゲームプログラムの教育
+In-Reply-To: <20100513214522.97B1.41E77AC0@seagreen.ocn.ne.jp>
+References: <20100513214522.97B1.41E77AC0@seagreen.ocn.ne.jp>
+Message-ID: <4BEBF8B7.9050205@coral.ocn.ne.jp>
+
+土本さん
+
+　　はじめまして。　　　Ｃも、教えている佐々木です。ゲームは全く知りません。
+
+　　たくさん　要望事項が書いてあるので・・・・お望みが
+　　はっきりしませんが、
+　
+> 「C言語の文法はすっ飛ばしていきなりオブジェクト指向で作る」というトライ
+> アルをやっています。
+> 　どなたかオブジェクト指向とそのメリットに詳しい方に査読してもらいたいの
+> ですが、興味のある方はいらっしゃいますでしょうか？
+
+　　　具体的には、何を査読する事を希望されているのでしょうか？
+
+
+佐々木　由也
+
+From "土本 (Florian) 強  Thu May 13 22:14:53 2010
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu May 13 22:15:00 2010
+Subject: [Squeak-ja: 4459] Re: オブジェクト指向を使ったゲームプログラムの教育
+In-Reply-To: <4BEBF8B7.9050205@coral.ocn.ne.jp>
+References: <20100513214522.97B1.41E77AC0@seagreen.ocn.ne.jp>
+	<4BEBF8B7.9050205@coral.ocn.ne.jp>
+Message-ID: <20100513221452.97B5.41E77AC0@seagreen.ocn.ne.jp>
+
+　Florianです。
+
+メール「[Squeak-ja: 4458] Re: オブジェクト指向を使ったゲームプログラムの教育」(2010/05/13 22:03) に於いて
+「Yoshiya Sasaki」 語りて曰く、
+
+jsasaki> 　　はじめまして。　　　Ｃも、教えている佐々木です。ゲームは全く知りません。
+jsasaki> 
+jsasaki> 　　たくさん　要望事項が書いてあるので・・・・お望みが
+jsasaki> 　　はっきりしませんが、
+jsasaki> 　
+jsasaki> > 「C言語の文法はすっ飛ばしていきなりオブジェクト指向で作る」というトライ
+jsasaki> > アルをやっています。
+jsasaki> > 　どなたかオブジェクト指向とそのメリットに詳しい方に査読してもらいたいの
+jsasaki> > ですが、興味のある方はいらっしゃいますでしょうか？
+jsasaki> 
+jsasaki> 　　　具体的には、何を査読する事を希望されているのでしょうか？
+
+　実は望んでいることはシンプルで、「明らかにそれはオブジェクト指向的に間
+違ってるだろう」という部分を突っ込んでもらいたいなぁ、と思っています。
+　条件がたくさんあるのはターゲットがものすごく狭い所為です。ゲームプログ
+ラムなんか(自分で「なんか」というのもあれですが)、他に応用は利きませんし、
+必要としている知識は偏っていますので(ゲームプログラム初心者向けの講座を
+一般のプログラマー相手にしてしまうと、とんでもなく偏ったプログラマーがで
+きあがります)。
+　企画書もありますので興味ありましたらお送りします。教育に携わっているの
+でしたら参考になるかもしれませんし。
+
+　では、失礼します。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://sites.google.com/site/117florian/'
+openInWorld. "do it."
+!
+
+From jsasaki ＠ coral.ocn.ne.jp  Fri May 14 12:05:54 2010
+From: jsasaki ＠ coral.ocn.ne.jp (Yoshiya Sasaki)
+Date: Fri May 14 12:05:57 2010
+Subject: [Squeak-ja: 4460] Re: オブジェクト指向を使ったゲームプログラムの教育
+In-Reply-To: <170375453.23700051273806017085.JavaMail.root@mz-cb001p>
+Message-ID: <1807298572.23728541273806354540.JavaMail.root@mz-cb001p>
+
+土本さん
+
+　　佐々木です。リプライが遅れました。
+
+　　専門学校、大学、社会人の教育に携わっています。
+　　ゲームの事は、全くの素人です。
+　　というか、ゲーム自身のコードは書いた事がないのです。
+
+　　20年以上前？にSmalltalkに触れて、惹かれました。
+　　SML、Squeak両方のメーリングリストに登録させていただいています。
+　　ほとんどROMですが。
+
+　　> 企画書もありますので興味ありましたらお送りします。教育に携わっているの
+　> でしたら参考になるかもしれませんし。　
+
+　　お役に立てるかどうか不明ですが、読ませていただけますか。
+
+佐々木　由也
+　　
+From florian ＠ seagreen.ocn.ne.jp  Fri May 14 13:12:00 2010
+From: florian ＠ seagreen.ocn.ne.jp (Tsuyoshi Tsuchimoto)
+Date: Fri May 14 13:12:04 2010
+Subject: [Squeak-ja: 4461] Re: オブジェクト指向を使ったゲームプログラムの教育
+In-Reply-To: <1807298572.23728541273806354540.JavaMail.root@mz-cb001p>
+References: <170375453.23700051273806017085.JavaMail.root@mz-cb001p>
+	<1807298572.23728541273806354540.JavaMail.root@mz-cb001p>
+Message-ID: <AANLkTilxW9FYJmgH1RxzfC0DtdmZT1bdxjJyTOGZff9K@mail.gmail.com>
+
+　Florianです。
+
+2010年5月14日12:05 Yoshiya Sasaki <jsasaki@coral.ocn.ne.jp>:
+> 専門学校、大学、社会人の教育に携わっています。
+> ゲームの事は、全くの素人です。
+> というか、ゲーム自身のコードは書いた事がないのです。
+>
+> 20年以上前？にSmalltalkに触れて、惹かれました。
+> SML、Squeak両方のメーリングリストに登録させていただいています。
+> ほとんどROMですが。
+>
+>> 企画書もありますので興味ありましたらお送りします。教育に携わっているの
+>> でしたら参考になるかもしれませんし。
+>
+> お役に立てるかどうか不明ですが、読ませていただけますか。
+
+　お送りしますので今しばらくお待ちください。
+　ほかの方も興味ありましたらどうぞ(^^)。
+
+　では、失礼します。
+From umejava ＠ mars.dti.ne.jp  Mon May 17 22:15:41 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon May 17 22:15:46 2010
+Subject: [Squeak-ja: 4462] 第20回Smalltalk勉強会のお知らせ
+Message-ID: <Jx.2XHk8jmcL9Pozpupv248A4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/5/28(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai20kaismalltalkbenkyoukai
+
+今回のテーマは新手の軽量Webアプリフレームワーク「Iliad」です。
+http://www.iliadproject.org/index
+
+SeasideとAIDA/Webのいいとこ取りを目指しています。GNU Smalltalkをメインに
+開発が行われているところも面白いです。(SqueakやPharoでも動作します。VW版
+は近日リリースされる予定)
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+---
+[:masashi | ^umezawa]
+From mha03030 ＠ nifty.com  Fri May 21 20:32:57 2010
+From: mha03030 ＠ nifty.com (koike)
+Date: Fri May 21 20:33:05 2010
+Subject: [Squeak-ja: 4463] Make Tokyo Meeting05に出展
+In-Reply-To: <Jx.2XHk8jmcL9Pozpupv248A4@mars.dti.ne.jp>
+References: <Jx.2XHk8jmcL9Pozpupv248A4@mars.dti.ne.jp>
+Message-ID: <AE00AD15-2D54-41C4-914E-A82762396195@nifty.com>
+
+東京都市大学の小池です。
+
+小池情報デザイン研究室は
+Make Tokyo Meeting05に出展します。
+是非いらしてください。
+
+日時： 2010年5月22日（土）、23日（日）
+会場： 東京工業大学　大岡山キャンパス（東京都目黒区大岡山 
+2-12-1）
+東急大井町線、目黒線「大岡山駅」徒歩1分
+参加費： 無料
+
+出展会場は東京工業大学の体育館です。
+ブースは阿部さんのお近くです。
+
+内容は
+（１）フィジカルコンピューティング作例
+３DプリンターとArduinoを使用した照明ガジェット
+
+（２）SCRATCHで動作するNECのロボットPaPeRoのデモ
+
+（３）昨年度小池研究室が、東京都市大学付属小学校で行った
+SCRATCHとPaPeRoを使用した共創ワークショップのビデオ
+
+（４）昨年度小池研究室が制作した、教育指導者のためのSqueak Etoys 
+のテキスト
+などです。
+
+Make: Tokyo Meeting 05
+http://www.oreilly.co.jp/mtm/05/
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）Ph.D
+   東京都市大学（旧武蔵工業大学）　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.tcu.ac.jp/~koike/
+（研究室ブログ発信中！）
+武蔵工業大学は、2009年4月から東京都市大学に名称変 
+更しました。
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+
+From abee ＠ squeakland.jp  Sun May 30 02:27:42 2010
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sun May 30 02:28:16 2010
+Subject: [Squeak-ja: 4464] Re: ScratchからMYUロボを制御
+In-Reply-To: <2d5d52a80909170149u3b211cd5jaecc50a65226167a@mail.gmail.com>
+References: <2d5d52a80909032337j42d48de9nb046b2ab2348e801@mail.gmail.com> 
+	<20090904.180711.112586704.moriat@obirin.ac.jp>
+	<2d5d52a80909040401i7847cd37t7021f4a5f4fe8080@mail.gmail.com> 
+	<20090905.114312.226766688.moriat@obirin.ac.jp>
+	<41fccbe80909042052y4520f890ie57ed346beb75b36@mail.gmail.com> 
+	<2d5d52a80909042203l718194f3g67add4b1d9fa4b4d@mail.gmail.com> 
+	<059768DF-A5F3-462F-A514-B64713280826@openedu.org>
+	<2d5d52a80909170129v55a6c72bl931297dd29ae81d8@mail.gmail.com> 
+	<2DF8B627-E492-47F5-8B5B-CD51A1075CCA@openedu.org>
+	<2d5d52a80909170149u3b211cd5jaecc50a65226167a@mail.gmail.com>
+Message-ID: <AANLkTimTQBgp8d-bAR6nrRfSt_HoGt0oahhBjPNXFi6F@mail.gmail.com>
+
+こんにちは、阿部です。
+すごく古いスレッドを上げてみます。
+
+お蔭様で、「Squeak／Scratch＋ロボットに関する情報」がとても充実してきました。
+http://swikis.ddo.jp/WorldStethoscope/43
+
+ここまで来たら、SqueakやScratchはフィジカルコンピューティングに強いと言っても良いのではないでしょうか。
+引き続き、皆様の編集をお待ちしています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp

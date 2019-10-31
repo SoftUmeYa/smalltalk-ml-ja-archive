@@ -1,0 +1,383 @@
+From tomohiro ＠ sra.co.jp  Tue Feb 17 09:04:29 2015
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Tue, 17 Feb 2015 09:04:29 +0900
+Subject: [SML 8109] Fwd: GSOC 2015 Call for Ideas
+Message-ID: <8D8D8707-C5AF-4BDE-907B-060E5653A1D9@sra.co.jp>
+
+おだです。
+
+PharoコンソーシアムがGoogle Summer of Codeへの参加に応募するにあたって
+学生プロジェクトのアイデアを募集しているとのことです。
+＃応募フォームがSmalltalkのメッセージ式というところが洒落てますね。ツb
+---
+おだ
+
+---------- Forwarded message ----------
+From: Serge Stinckwich <serge.stinckwich ＠ gmail.com>
+Date: Sun, Feb 15, 2015 at 3:23 PM
+Subject: GSOC 2015 Call for Ideas
+To: Discusses Development of Pharo <pharo-dev ＠ lists.pharo.org>, Any
+question about pharo is welcome <pharo-users ＠ lists.pharo.org>,
+Moose-related development <moose-dev ＠ iam.unibe.ch>
+
+
+Dear pharoers,
+
+this year Pharo consortium (and community) is going to take part in a
+Google Summer of Code event[1] as a standalone organization. This is
+an opportunity to promote Pharo, get some job done and have students
+paid.
+
+Currently we are at the most important stage as we are preparing the
+organization application, and hoping that we will be accepted and
+granted decent amount of project slots. Everyone can help with
+application by submitting ideas for student projects.
+
+Current list can be found at:
+https://github.com/pharo-project/pharo-project-proposals/blob/master/Topics.st
+
+It is in STON format, and result is being generated at: http://gsoc.pharo.org/
+
+Please add your ideas following the format of existing projects and
+open a pull request with them (you will need a github account).
+Preferably submit ideas with possible mentors, but if none are
+available at the moment ideas without mentors are also welcome.
+
+The template to submit projects is :
+
+PharoTopic new
+title: 'The name of your project;
+contact: 'email address';
+supervisors: 'Supervisors names';
+keywords: 'keywords separated by spaces;
+context: 'a description of the context of the project';
+goal: 'description of the goal';
+level: 'Beginner or Intermediate or Advanced';
+yourself.
+
+We will need a lot of projects/idea before February 20th 2015, the
+deadline for applying to GSOC 2015.
+
+Do not hesitate to ask questions. Administrators of this year’s
+application are Serge Stinckwich <serge.stinckwich ＠ gmail.com> and
+Yuriy Tymchuk <yuriy.tymchuk ＠ me.com>
+
+If you don't know how to edit the list, please send your project
+following the template to the administrators.
+
+[1]: https://www.google-melange.com/gsoc/homepage/google/gsoc2015
+
+Cheers,
+--
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+
+From ume ＠ softumeya.com  Tue Feb 17 23:39:12 2015
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 17 Feb 2015 23:39:12 +0900
+Subject: [SML 8110]
+	第73回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdShAQe4yOo4TYj4pbTR5dkZ1ZTe-2cWnvr0J1_1w0sR5A@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2015/2/27(金) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai73kaismalltalkbenkyoukai
+
+今回は簡潔で軽量なRDBへの永続化ライブラリ、Kobatiを扱います。ビアバッシュでも短い紹介がなされたので、気になっている人も多いのではないでしょうか。
+作者の南谷さんが自ら解説してくれます。
+
+事前申し込みは不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From serge.stinckwich ＠ gmail.com  Thu Feb 19 18:20:50 2015
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Thu, 19 Feb 2015 10:20:50 +0100
+Subject: [SML 8111] Fwd: [Phratch] CFP - IWST 2015
+In-Reply-To: <CAB8S-ErtoeDZF9tW1D1y+9z5FfbFs_yPVJ1akwfWMDxrsspXSQ@mail.gmail.com>
+References: <CAB8S-ErtoeDZF9tW1D1y+9z5FfbFs_yPVJ1akwfWMDxrsspXSQ@mail.gmail.com>
+Message-ID: <CAOysuxWWgE9jzZ-XAD0B1JHT8oPfFLSiCisb9krc14yAuPo00A@mail.gmail.com>
+
+---------- Forwarded message ----------
+From: jannik laval <jannik.laval ＠ gmail.com>
+Date: Fri, Feb 6, 2015 at 10:17 PM
+Subject: [Phratch] CFP - IWST 2015
+To: smalltalk-research ＠ googlegroups.com, Squeak Virtual Machine
+Development Discussion <vm-dev ＠ lists.squeakfoundation.org>, Any
+question about pharo is welcome <pharo-users ＠ lists.pharo.org>, The
+general-purpose Squeak developers list
+<squeak-dev ＠ lists.squeakfoundation.org>,
+"Pharo-project ＠ lists.gforge.inria.fr ML"
+<Pharo-project ＠ lists.gforge.inria.fr>, "phratch ＠ googlegroups.com"
+<phratch ＠ googlegroups.com>, Pharo Development List
+<pharo-dev ＠ lists.pharo.org>, ESUG Mailing list
+<esug-list ＠ lists.esug.org>
+
+
+[Please accept our apologies if you receive multiple copies of this call]
+[Please send to interested colleagues / mailing-lists]
+************************************************************************************************************
+CALL FOR PAPERS
+
+IWST15 ? International Workshop on Smalltalk Technologies
+
+Brescia, Italy; July 15, 2015
+http://www.esug.org/wiki/pier/Conferences/2015/International-Workshop-IWST_15
+************************************************************************************************************
+
+-------------------
+Goals and scopes
+-------------------
+
+The goals of the workshop is to create a forum around advances or
+experience in Smalltalk and to trigger discussions and exchanges of
+ideas. The topics of your paper can be on all aspect of Smalltalk,
+theoretical as well as practical. Participants are invited to submit
+research articles or industrial papers. This year we want to open two
+different tracks: one research track and one industrial track with
+less scientific constraints.
+
+We expect papers of three kinds:
+
+Short position papers describing emerging ideas
+Long research papers with deeper description of experiments and of
+research results.
+Industrial papers with presentation of real and innovative Smalltalk
+applications; this kind of paper should enlighten why Smalltalk is
+really appropriate for your application.
+We will not enforce any length restriction.
+
+--------------------
+Important Dates
+--------------------
+
+Submission deadline: April 10th, 2015
+Notification deadline: May 20th, 2015
+Workshop : July 15th, 2015
+All accepted papers will be published in ACM DL (To be confirmed)
+
+-------------------
+Topics
+-------------------
+
+We welcome contributions on all aspects, theoretical as well as
+practical, of Smalltalk related topics such as:
+
+-Aspect-oriented programming,
+-Design patterns,
+-Experience reports,
+-Frameworks,
+-Implementation, new dialects or languages implemented in Smalltalk,
+-Interaction with other languages,
+-Meta-programming and Meta-modeling,
+-Tools
+
+-------------------
+Best Paper Award
+-------------------
+
+To encourage the submission of high-quality papers, the IWST
+organizing committee is very proud to announce a Best Paper Award for
+this edition of IWST.
+
+We thank the Lam Research Corporation for its financial contribution
+which makes it possible for prizes for the three best papers: 1000 USD
+for first place, 600 USD for second place and 400 USD for third place.
+
+The ranking will be decided by the program committee during the review
+process. The awards will be given during the ESUG conference social
+event.
+
+The Best Paper Award will take place only with a minimum of six
+submissions. Notice also that to be illegible, a paper must be
+presented at the workshop by one of the author and that the presenting
+author must be registered at the ESUG conference.
+
+-------------------
+Publication
+-------------------
+
+Both submissions and final papers must be prepared using the ACM
+SIGPLAN 10 point format. Templates for Word and LaTeX are available at
+http://www.acm.org/sigs/sigplan/authorInformation.htm. This site also
+contains links to useful informations on how to write effective
+submissions.
+
+-------------------
+Submission
+-------------------
+
+All submissions must be sent via easychair:
+https://easychair.org/conferences/?conf=iwst2015
+
+-------------------
+Program chairs
+-------------------
+
+Anne Etien (Université de Lille 1, France)
+Jannik Laval (Ecole des Mines de Douai, France)
+
+--
+
+~~Jannik Laval~~
+École des Mines de Douai
+Enseignant-chercheur
+http://www.jannik-laval.eu
+http://www.phratch.com
+http://www.approchealpes.info
+http://car.mines-douai.fr/
+
+--
+You received this message because you are subscribed to the Google
+Groups "phratch" group.
+To unsubscribe from this group and stop receiving emails from it, send
+an email to phratch+unsubscribe ＠ googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+
+From serge.stinckwich ＠ gmail.com  Thu Feb 19 18:21:27 2015
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Thu, 19 Feb 2015 10:21:27 +0100
+Subject: [SML 8112] Fwd: Call for Participation - ESUG 2015 @Brescia
+In-Reply-To: <DF78345F-0D1B-48CA-9D64-435E2E37D7D6@inria.fr>
+References: <DF78345F-0D1B-48CA-9D64-435E2E37D7D6@inria.fr>
+Message-ID: <CAOysuxXdORtrFVyPe=gi63b6fAH4MP3vLz2uQNe84-RuaiDeJw@mail.gmail.com>
+
+---------- Forwarded message ----------
+From: Stéphane Ducasse <stephane.ducasse ＠ inria.fr>
+Date: Wed, Feb 4, 2015 at 11:02 AM
+Subject: Call for Participation - ESUG 2015 @Brescia
+To: ESUG Mailing list <esug-list ＠ lists.esug.org>
+
+
+Please distribute widely
+
+
+        23rd International Smalltalk Joint Conference - Call for Contributions
+
+          Brescia, Italy
+                        from 13 to 17 July 2015
+                        http://www.esug.org/Conferences/2015/
+
+  This call includes:
+          Developer Forum
+          Smalltalk Technology Award
+          International Workshop
+
+http://www.esug.org/wiki/pier/Conferences/2015/International-Workshop-IWST_15
+          Student Volunteer
+
+http://www.esug.org/wiki/pier/Conferences/2015/Student-volunteers
+          Camp Smalltalk 12 July 2015
+
+  ----------------------------------------------------------------------
+  You can support the ESUG conference in many different ways:
+
+  * Sponsor the conference. New sponsoring packages are described at
+         http://www.esug.org/wiki/pier/About/BecomeSponsor
+  * Submit a talk, a software or a paper to one of the events. See below.
+  * Attend the conference. We'd like to beat the previous record of
+         attendance (170 people at Amsterdam 2008)!
+  * Students can get free registration and hosting if they enrol
+        into the the Student Volunteers program. See below.
+
+  Developers Forum: International Smalltalk Developers Conference
+  ------------------------------------------------------------------------
+
+  We are looking for YOUR experience on using Smalltalk. You will have
+  30 min for presentations and 45-60 min for hand-ons tutorial.
+
+  The list of topics for the normal talks and tutorials includes, but
+  is not limited to the following:
+
+        * XP practices,  Development tools,  Experience reports
+        * Model driven development,  Web development, Team management
+        * Meta-Modeling,  Security,  New libraries & frameworks
+        * Educational material,  Embedded systems and robotics
+        * SOA and Web services,  Interaction with other programming languages
+
+Teaching Pearls and Show us Your Business
+-----------------------------------------
+- Show your business 10 min session (Get prepared!!)
+- Teaching pearls : we want some session on how to teach some design
+ aspects. We want your tip and tricks to teach Smalltalk or OOP.
+
+We expect to have several 10 to 15 min sessions aggregated.
+
+!! How to submit?
+  --------------
+
+Submissions deadline is 15 of May 2015
+Notification of acceptance will be on done on the fly.
+More information at http://www.esug.org/conferences/2015
+
+
+  Pay attention: the places are limited so do not wait till the last
+  minute to apply. Prospective presenters should submit a request to
+  Stephane.Ducasse at inria.fr AND USE THE following header [ESUG 2015
+Developers].
+
+  Please follow the template below the email will be automatically processed!
+
+  Subject: [ESUG 2015 Developers] + your name
+  First Name:
+  Last Name:
+  Email where you can always be reached:
+  Title:
+  Type: Tutorial/Talk/Teaching Pearl
+  Abstract:
+  Bio:
+
+        Any presentation not respecting this form will be discarded
+automatically
+
+
+International Workshop on Smalltalk Technologies
+------------------------------------------------------------------------
+  Read the page:
+http://www.esug.org/wiki/pier/Conferences/2015/International-Workshop-IWST_15
+
+Technology Award Competition
+------------------------------------------------------------------------
+  The top 3 teams with the most innovative software will receive,
+  respectively, 500 Euros, 300 Euros and 200 Euros during an awards
+  ceremony at the conference. Developers of any Smalltalk-based
+  software are welcome to compete.
+  More information at http://www.esug.org/conferences/2015/
+
+  Student Volunteer Program
+  ------------------------------------------------------------------------
+  If you are a student wanting to attend ESUG, have you considered
+  being a student volunteer? Student volunteers help keep the
+  conference running smoothly; in return, they have free
+  accommodations, while still having most of the time to enjoy the
+  conference.
+  More information at
+           http://www.esug.org/wiki/pier/Conferences/2015/
+           http://www.esug.org/wiki/pier/Conferences/2015/Student-volunteers
+
+  We hope to see you there and have fun together.
+
+
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7574] Re: パーセルTwoflowerについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207574%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVRITwlOyVrGyhCVHdvZmxvd2Vy%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=EDFE86AD1FAA4913BC95023F1754C5CE%40sunaoPC">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007572.html">
+   <LINK REL="Next"  HREF="007573.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7574] Re: パーセルTwoflowerについて</H1>
+    <B>Kazuki Minamitani</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207574%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVRITwlOyVrGyhCVHdvZmxvd2Vy%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=EDFE86AD1FAA4913BC95023F1754C5CE%40sunaoPC"
+       TITLE="[SML 7574] Re: パーセルTwoflowerについて">ka.minami ＠ nifty.com
+       </A><BR>
+    <I>2009年 6月  6日 (土) 23:54:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007572.html">[SML 7572] パーセルTwoflowerについて
+</A></li>
+        <LI>次の記事 <A HREF="007573.html">[SML 7573] Seaside へ GO!!(最終回)が掲載されました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7574">[ 日付 ]</a>
+              <a href="thread.html#7574">[ スレッド ]</a>
+              <a href="subject.html#7574">[ 件名 ]</a>
+              <a href="author.html#7574">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>南谷といいます。
+こんにちは。
+
+依存しているパッケージが読み込まれていないようですね。
+Cincom Public Repositoryからインストールすれば、依存関係が解決されて、そのエラーは出なくなると思います。
+
+1. VisualLauncherの右下(Not Connected)をクリックし、Connect to Cincom Public Repositoryを選択
+2. VisualLauncher - [Store] - [Published Items]で登録ソフトの一覧画面を開く
+3. リストから、Twoflower Bundleの[ 0.5.45]を選択、Load
+4. 途中依存しているパッケージについてきかれるが、最新のものを選び先に進める
+5. TwoflowerBrowser open
+
+一応動作はするようですが、明らかに作りかけで放置されています。
+ご自分で改造や日本語対応を楽しむのでなければ、あまり深入りされないほうが良いと感じました。
+
+
+
+2009/06/06 15:54 に sunao furukawa&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sadie ＠ kind.ocn.ne.jp</A>&gt; さんは書きました:
+&gt;<i> 　古川と申します。
+</I>&gt;<i> 　本を見ながらVisualWorksに触っているだけの私が娯楽に走るのも良いだろうと思って、Parcel
+</I>&gt;<i> ManagerのSuggestionsのToysでテトリスとかを見つけて遊んでいたところ、 そのすぐ下にTwoflowerBundleというWeb
+</I>&gt;<i> Browserを発見したので早速ロードしたところ、
+</I>&gt;<i>
+</I>&gt;<i> Unhandled exception: Message not understood: #createDocument
+</I>&gt;<i>
+</I>&gt;<i> と冷たくノーティファイア画面が出てきました。デバッガを開いてみたところ、
+</I>&gt;<i>
+</I>&gt;<i> Twoflower.TfDocumentModel&gt;&gt;htmlString:
+</I>&gt;<i>
+</I>&gt;<i> というところの次からさまよい始めているということがわかりました。メソッドhtmlString:の中身は、
+</I>&gt;<i>
+</I>&gt;<i> htmlString: aString
+</I>&gt;<i>
+</I>&gt;<i> self htmlAspect value: aString.
+</I>&gt;<i> self createDocument.
+</I>&gt;<i>
+</I>&gt;<i> となっていました。システムブラウザでクラスTfDocumentModelを見てもcreateDocumentというメソッドはありませんでした。ひょっとしてVistaのユーザーアカウントコントロールでひっかかったかなと思い確認もしてみたのですがユーザーアカウントコントロールはオフでした（テトリスのハイスコアのファイルも書き込めています）。
+</I>&gt;<i> 　TwoflowerはcreateDocument未実装のため使えないと解釈してしまっていいのでしょうか（まさかとは思いますが何回かブルースクリーンになったことがあるのでそれで消えたとか思うこともありました）。ちなみに使っているVisualWorksはVisualWorks7.6ncです。ほかのバージョンの事はわかりません。ほかの方の体験記か聞ければ幸いです。
+</I>&gt;<i>
+</I>&gt;<i>
+</I></PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007572.html">[SML 7572] パーセルTwoflowerについて
+</A></li>
+	<LI>次の記事 <A HREF="007573.html">[SML 7573] Seaside へ GO!!(最終回)が掲載されました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7574">[ 日付 ]</a>
+              <a href="thread.html#7574">[ スレッド ]</a>
+              <a href="subject.html#7574">[ 件名 ]</a>
+              <a href="author.html#7574">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

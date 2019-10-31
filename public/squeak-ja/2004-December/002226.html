@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2226] Re: SuperSwiki 活用計画
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202226%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM2hNUTdXMmgbKEI%3D%3F%3D&In-Reply-To=41D12682328.704CABEE.ABE%40smtp.nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002218.html">
+   <LINK REL="Next"  HREF="002229.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2226] Re: SuperSwiki 活用計画</H1>
+    <B>Takeda Toshiyuki</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202226%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM2hNUTdXMmgbKEI%3D%3F%3D&In-Reply-To=41D12682328.704CABEE.ABE%40smtp.nifty.com"
+       TITLE="[Squeak-ja: 2226] Re: SuperSwiki 活用計画">takeda ＠ kwansei.ac.jp
+       </A><BR>
+    <I>2004年 12月 30日 (木) 17:10:28 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002218.html">[Squeak-ja: 2218] Re: SuperSwiki 活用計画
+</A></li>
+        <LI>次の記事 <A HREF="002229.html">[Squeak-ja: 2229] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2226">[ 日付 ]</a>
+              <a href="thread.html#2226">[ スレッド ]</a>
+              <a href="subject.html#2226">[ 件名 ]</a>
+              <a href="author.html#2226">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>武田です。
+
+&gt;&gt;<i> 　　1.SuperSwikiの試験的導入に伴う具体的リスク
+</I>
+試験的導入にはリスクはほとんどないと思います。
+
+Public SuperSwikiがどれほど使い物になるのか経験の蓄積がないので
+いい機会だと思います。
+
+それと、SuperSwikiを一つだけ提供するならあまり関係ないのですが、
+今の方法だとBook (またはSuperSwiki)を追加する場合、httpd.confを
+編集してapacheをリスタートさせなければなりません。
+Swiki全体へのProxyではなく/superだけへのProxyとなっているからです。
+
+***
+
+ところで、文字リンクからページに飛ぶには、actions/gallery.bookの
+  ifNotNil: ['/super.',pg id printString].を ifNotNil: ['/super/',pg id 
+printString].
+に変えればよいと思います。mod_rewriteを使う方がよいのかもしれません。
+
+あと、もう１箇所、
+
+&lt;a href=&quot;http:/super/launcher?',を、&lt;a href=&quot;/super/launcher?',に修正して
+使っています。
+
+&gt;<i> SuperSwiki自体は、本家Squeakland.orgを見ても分かるようにしょっちゅう落ち
+</I>&gt;<i> ますが、SuperSwikiが他のアプリやOSを巻き込んで落ちたということはないよう
+</I>&gt;<i> に思います。この意味でリスクはそんなに高くないと思います。
+</I>
+私のところではdaemontoolsを使って、落ちたらすぐに起動しなおすように
+しています。もし必要なら設定ファイルをお渡しします。
+
+武田俊之
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002218.html">[Squeak-ja: 2218] Re: SuperSwiki 活用計画
+</A></li>
+	<LI>次の記事 <A HREF="002229.html">[Squeak-ja: 2229] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2226">[ 日付 ]</a>
+              <a href="thread.html#2226">[ スレッド ]</a>
+              <a href="subject.html#2226">[ 件名 ]</a>
+              <a href="author.html#2226">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

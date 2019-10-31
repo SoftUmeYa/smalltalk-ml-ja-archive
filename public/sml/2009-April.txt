@@ -1,0 +1,1042 @@
+From masuda ＠ im.dendai.ac.jp  Wed Apr  1 00:39:11 2009
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Wed Apr  1 00:40:09 2009
+Subject: [SML 7502] Re: SmallTalk R4.1だそうです
+In-Reply-To: <JxFoE4p2RKOfgU0gB8n5FF6Ac@mars.dti.ne.jp>
+References: <JxFoE4p2RKOfgU0gB8n5FF6Ac@mars.dti.ne.jp>
+Message-ID: <49D2391F.40907@im.dendai.ac.jp>
+
+増田です。
+
+Masashi Umezawa さんは書きました:
+> http://smalltalk.smalltalk-users.jp/
+> #どうやらObjectWorks R4.1の傍系のようです。
+
+> Adele Goldbergさんが、昔オープンソース化しようとしていた、あの4.1が
+> ついに満を持して復活したのでしょうか。よくわからないものの、とにかく
+> 強力な機能に満ちあふれています。
+
+これってどなたが作られているのですか?
+
+ところで、SmallTalk と T を大文字にしているのが気持ち悪いのですが、http:
+//smalltalk.smalltalk-users.jp/links にある、
+
+Wikipediaには「SmallTalkはありがちな誤り」とありますが、誤りです。
+
+ってのが気になるのですが、どういう意味なんですかね?
+
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/     FAX 03-5280-3592
+From umejava ＠ mars.dti.ne.jp  Wed Apr  1 09:05:52 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Apr  1 09:06:07 2009
+Subject: [SML 7503] Re: SmallTalk R4.1だそうです
+In-Reply-To: <49D2391F.40907@im.dendai.ac.jp>
+References: <JxFoE4p2RKOfgU0gB8n5FF6Ac@mars.dti.ne.jp>
+	<49D2391F.40907@im.dendai.ac.jp>
+Message-ID: <JxP2c0SVWYRsVGUgKkGBPlpg2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Hidetaka MASUDA <masuda@im.dendai.ac.jp> wrote:
+> 増田です。
+> 
+> Masashi Umezawa さんは書きました:
+> > http://smalltalk.smalltalk-users.jp/
+> > #どうやらObjectWorks R4.1の傍系のようです。
+> 
+> > Adele Goldbergさんが、昔オープンソース化しようとしていた、あの4.1が
+> > ついに満を持して復活したのでしょうか。よくわからないものの、とにかく
+> > 強力な機能に満ちあふれています。
+> 
+> これってどなたが作られているのですか?
+
+いつの間にやらできていたので、よくわからないのですよね。
+しかしURLから判断するにSmallTalk-users.jpの人々ではないかと思っています。
+http://www.smalltalk-users.jp/
+
+> ところで、SmallTalk と T を大文字にしているのが気持ち悪いのですが、http:
+> //smalltalk.smalltalk-users.jp/links にある、
+> 
+> Wikipediaには「SmallTalkはありがちな誤り」とありますが、誤りです。
+> 
+> ってのが気になるのですが、どういう意味なんですかね?
+
+SmallTalkというSmalltalkが出てしまった以上、もはやSmallTalkはSmalltalkで
+ないという主張は無効であるということではないでしょうか。
+
+実際初心者の方は無意識にSmallTalkとしてしまう傾向がありますし、
+驚き最小限の方向に向かったのではないかと推測します。
+
+せっかくなので試してみると良いですよ。
+フィボナッチベンチの結果もやたら速くてびっくりしました。お勧めです。
+Time millisecondsToRun:[1000 fib] "=>0"
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+From tomohiro ＠ sra.co.jp  Wed Apr  1 09:15:21 2009
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Wed Apr  1 09:15:30 2009
+Subject: [SML 7504] Re: SmallTalk R4.1だそうです
+In-Reply-To: <JxFoE4p2RKOfgU0gB8n5FF6Ac@mars.dti.ne.jp>
+References: <JxFoE4p2RKOfgU0gB8n5FF6Ac@mars.dti.ne.jp>
+Message-ID: <200904010915.21934.tomohiro@sra.co.jp>
+
+おだです。
+
+とてもおもしろいですね :-) :-) :-)
+Object>>Label:やObject>>GOTO:を自分ならどう実装しようか、
+ちょっと考えちゃいました。
+---
+おだ
+
+On Tue March 31 2009 23:07:02 Masashi Umezawa wrote:
+> こんにちは
+> 梅澤です。
+>
+> 東京のSmalltalk勉強会では、VisualWorksとSqueakの両方を対象に進めて
+> いるのですが、どうにも微妙な違いが多く、学習の妨げとなっていました。
+>
+> もっと誰もが簡単に使える、パワフルな処理系はないものか、と思って
+> いたところ、SmallTalk R4.1なるものが存在することがわかりました。
+>
+> http://smalltalk.smalltalk-users.jp/
+> #どうやらObjectWorks R4.1の傍系のようです。
+>
+> Adele Goldbergさんが、昔オープンソース化しようとしていた、あの4.1が
+> ついに満を持して復活したのでしょうか。よくわからないものの、とにかく
+> 強力な機能に満ちあふれています。
+>
+> (サイトを引用します)
+> - Rubyばりにpが使える。デバッグに最適
+> - PHPのようにGOTOをサポート
+> - JavaのごとくFinalクラスをサポート
+> - Eiffelのようにaliasが使える!?
+> - C++にあまり似ていないfriendメソッドが使える。enemyメソッドも使える!
+> - 31個までのwith:のサポート...
+>
+> いい感じですね。以後の勉強会ではこのSmallTalk R4.1をデフォルトの
+> Smalltalkとして進めていこうと思います。
+>
+> ではでは。
+>
+> ---
+> [:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Apr  1 09:25:44 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Apr  1 09:25:54 2009
+Subject: [SML 7505] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <F84D5DDC-B5CB-48CD-9876-293A9A0B994A@kuzo.csk.com>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>	<86fxgwwqdi.wl%mutoh@openedu.org>	<49CF673E.2090109@cc.kyoto-su.ac.jp>	<8cdfcfef0903291901o7dcd0116le67e6109fdccd8f8@mail.gmail.com>	<49D13757.3090903@cc.kyoto-su.ac.jp>
+	<F84D5DDC-B5CB-48CD-9876-293A9A0B994A@kuzo.csk.com>
+Message-ID: <49D2B488.2040509@cc.kyoto-su.ac.jp>
+
+佐原 伸 さんは書きました:
+> On 2009/03/31, at 6:19, AOKI Atsushi wrote:
+> >  Mutsuki Nakajima さんは書きました:
+> > > 青木さん、小淵沢は山梨県ですよ。隣の駅は長野県ですが。
+> > これはしたり…。
+> やっぱり、越後人は武田信玄の領地と認めたくないのかな :-)
+
+上越市（直江津・春日山・高田）出身の者としては…。:-)
+
+> とちょっかいを出したので、行くかもしれません。
+> ただし、風邪気味なので、今晩決定します。
+
+もう決定したかしらん…。今夜は MacBook Black で行います。
+
+--- 青木淳＠京都上賀茂（入学式に参列なので礼服です）
+From umrlazybind ＠ gmail.com  Wed Apr  1 13:56:19 2009
+From: umrlazybind ＠ gmail.com (Hiroshi Umeoka)
+Date: Wed Apr  1 13:56:32 2009
+Subject: [SML 7506] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <8663hqvusd.wl%mutoh@openedu.org>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org> <49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8663hqvusd.wl%mutoh@openedu.org>
+Message-ID: <e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+
+むとうさん
+みなさま
+
+はじめまして、うめおかと申します。
+
+> # 見たいという人がいないのが、ちょっと心配(;-;)
+
+とっても見たいです:-)
+今夜は所用があるので勉強会は無理かなと思っているのですが、デモの時間だけ抜け出して行けたらと思っています。
+
+ちなみにむとうさんは自転車にもご興味があるのですね。
+キャンパスプラザ近所、オムロンさんの南側に「銀輪」という自転車店があったのでご紹介しようと思ったら...いま調べたらそこは閉めてあらたに立ち上げたようす（http://www.kaleidocycle.jp/
+お、さっそくいってみよ）。
+＃すみません、MLとは関係ない話題でした。
+From yasuda ＠ mfc.bakkers.gr.jp  Wed Apr  1 23:30:20 2009
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Wed Apr  1 23:30:29 2009
+Subject: [SML 7507] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8663hqvusd.wl%mutoh@openedu.org>
+	<e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+Message-ID: <3924F5D0-8DEA-4F71-AE0D-93C38C8837DB@mfc.bakkers.gr.jp>
+
+安田です。
+
+参加しましたー。今日はきつかったですー。(=_=!)
+ノート取るのに必死でかなり聞き落としたような。。。
+
+倒れそうになりながら頭を整理し、ノートをつけ、なん
+とか無事に家に帰りました。。。ふぅ。。
+
+80年代の終わり頃に Smalltalk-80 をいじっていた同期の
+友達から if then else の実装を聞かされて以来、
+Smalltalk は言語処理系とユーザプログラムの境界がゆるい
+（境界を設けない？）といった印象をもっています。
+この勉強会も言語仕様(?)と処理系の説明を境界なく行っ
+たり来たりして面白いです。
+
+あ、お菓子も頂きました。おおきにですー。
+
+でわでわ								Yasu.
+
+From mutoh ＠ openedu.org  Wed Apr  1 23:30:25 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Wed Apr  1 23:30:43 2009
+Subject: [SML 7508] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8663hqvusd.wl%mutoh@openedu.org>
+	<e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+Message-ID: <86tz58h2f2.wl%mutoh@openedu.org>
+
+むとう＠奈良のおうちで一息ついた所です。
+
+がぁー、サイン入りのブラックブック、会場に忘れたぁ(;-;)
+
+濃ゆい内容だったので、ちょっと疲れました;-)
+
+At Wed, 1 Apr 2009 13:56:19 +0900,
+Hiroshi Umeoka <umrlazybind@gmail.com> wrote:
+> はじめまして、うめおかと申します。
+>
+> > # 見たいという人がいないのが、ちょっと心配(;-;)
+> とっても見たいです:-)
+> 今夜は所用があるので勉強会は無理かなと思っているのですが、デモの時間だけ抜け出して行けたらと思っています。
+
+多分、会場に一番最初に来られて、先に帰られた方ですよね?
+# 皆様のお名前と顔が一致していないので、申し訳ありません(_o_)
+
+> ちなみにむとうさんは自転車にもご興味があるのですね。
+> キャンパスプラザ近所、オムロンさんの南側に「銀輪」という自転車店があったのでご紹介しようと思ったら...いま調べたらそこは閉めてあらたに立ち上げたようす（http://www.kaleidocycle.jp/
+> お、さっそくいってみよ）。
+> ＃すみません、MLとは関係ない話題でした。
+
+すいません、関係無い話につなげます;-)
+
+実は、少なくとも会場には僕以外にもう一人自転車な方がおられました。
+
+京都には、この勉強会以外にもBSDの勉強会で来るので、レンタルサイクルで
+も借りて勉強会までの時間、走りたいなぁと思っているのですが、ナカナカ。
+# 木津の自転車道で奈良から来るというのは、却下;-p
+
+では、またお会いしましょう。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・にんげんは一度に一つの亊しかでけへんいうとるやろ
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Apr  2 00:42:23 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Apr  2 00:42:43 2009
+Subject: [SML 7509] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>	<8663hqvusd.wl%mutoh@openedu.org>
+	<e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+Message-ID: <49D38B5F.9040609@cc.kyoto-su.ac.jp>
+
+Yasuda Yutaka さんは書きました:
+> 参加しましたー。今日はきつかったですー。(=_=!)
+
+きつかったですよね、ごめんなさい、安田さん。
+
+> ノート取るのに必死でかなり聞き落としたような。。。
+> 倒れそうになりながら頭を整理し、ノートをつけ、なん
+> とか無事に家に帰りました。。。ふぅ。。
+
+この内容を解題するか否か、浅岡さんとも右往左往したんですよ。
+
+Takeshi MUTOH さんは書きました:
+> 濃ゆい内容だったので、ちょっと疲れました;-)
+
+お疲れ様でした。デモをしていただき感謝しています、武藤さん。
+
+ Smalltalk「プログラミングにおける数論」もどきで時が尽きてし
+まいましたね。参加していただいた皆さんの追随力や咀嚼力に助け
+られた感があります。ありがとうございました。
+
+京都での勉強会では、本（ブラックブック）に書けなかった（書か
+なかった）ことを、きちんと述べるのをモットーにして進めていま
+す。今後もこの方針を堅持いたします。それから、プログラム読法
+ですね、コードリーディング法にも力点を置いてゆきます。
+
+今回は、メッセージのパッシングだけで、どれだけのことが可能な
+のか、その極みを究めた妙高（粘り腰の仮想マシンとクラスライブ
+ラリ＝重送信：まずプリミティブにぶつけ、失敗したときには…）
+を披露いたしました。皆さんに会得していただけたようで、世話人
+として本望です。
+
+参考となるプログラム断片も公開（リンク）しておきました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto6
+http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/20090329/index-j.html
+
+--- 青木淳＠京都宇治
+From asaoka ＠ cc.kyoto-su.ac.jp  Thu Apr  2 15:46:54 2009
+From: asaoka ＠ cc.kyoto-su.ac.jp (ASAOKA Hiroko)
+Date: Thu Apr  2 15:47:03 2009
+Subject: [SML 7510] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <3924F5D0-8DEA-4F71-AE0D-93C38C8837DB@mfc.bakkers.gr.jp>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>	<86fxgwwqdi.wl%mutoh@openedu.org>	<49CF673E.2090109@cc.kyoto-su.ac.jp>	<8663hqvusd.wl%mutoh@openedu.org>	<e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+	<3924F5D0-8DEA-4F71-AE0D-93C38C8837DB@mfc.bakkers.gr.jp>
+Message-ID: <49D45F5E.909@cc.kyoto-su.ac.jp>
+
+浅岡です。
+
+第６回Smalltalk勉強会＠京都に参加していただいたみなさま、
+お疲れ様でした。
+
+Yasuda Yutaka さんは書きました:
+> あ、お菓子も頂きました。おおきにですー。
+
+武藤さん（茶だんご、十円おせんべ）
+中嶋さん、中山さん（銀座のカヌレ）
+差し入れありがとうございました☆
+
+今年度は、基本的に
+キャンパスプラザ京都 2階 第2会議室で行います。
+机の配置替えなど手伝っていただきありがとうございます。
+今後もご協力よろしくお願いいたします。
+
+
+次回のご案内：
+
+2009年05月13日（水）19:00〜21:00
+5階 第2共同研究室
+＃５月のみ、特別にこの部屋を使います。
+＃間違えないよう、ご注意ください！
+
+今度こそ、ブラックブックを読み進められる予定です（笑）
+＃私的変数（p.75〜）
+
+-- 
+
+    浅岡 浩子(ASAOKA Hiroko)
+
+    京都産業大学 青木研究室
+    〒603-8555 京都市北区上賀茂本山
+    1402研究室（１号館４階）
+From mutsuki.nakajima ＠ gmail.com  Thu Apr  2 16:10:44 2009
+From: mutsuki.nakajima ＠ gmail.com (Mutsuki Nakajima)
+Date: Thu Apr  2 16:10:52 2009
+Subject: [SML 7511] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <49D45F5E.909@cc.kyoto-su.ac.jp>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org> <49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8663hqvusd.wl%mutoh@openedu.org>
+	<e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+	<3924F5D0-8DEA-4F71-AE0D-93C38C8837DB@mfc.bakkers.gr.jp>
+	<49D45F5E.909@cc.kyoto-su.ac.jp>
+Message-ID: <8cdfcfef0904020010p45ab5b69we065ebbf89d1fc4d@mail.gmail.com>
+
+中嶋です。
+
+浅岡さん、青木さん、ありがとうございました。
+遠路はるばる山梨から参加した甲斐がありました。
+
+今回のテーマは「Smalltalkにおける数論」でしたが、
+ひとつの核となるメカニズムに気づくと、「ここはどう
+なっているんだろう？」と次から次に疑問や興味が
+沸いてくるSmalltalk特有の麻薬にかかったような
+気持ちを思い出してしまいました。ミイラ取りがミイラ
+になってしまっても、たくさん得るものがあるという
+不思議な世界なんですよね。Smalltalkって。
+
+この勉強会をきっかけに、十年来の楽しいSmalltalk
+プログラミングを再開できそうな気がしています。
+
+なかじま＠多治見＠青春18きっぷで移動中
+
+2009/04/02 15:46 ASAOKA Hiroko <asaoka@cc.kyoto-su.ac.jp>:
+> 浅岡です。
+>
+> 第６回Smalltalk勉強会＠京都に参加していただいたみなさま、
+> お疲れ様でした。
+>
+> Yasuda Yutaka さんは書きました:
+>> あ、お菓子も頂きました。おおきにですー。
+>
+> 武藤さん（茶だんご、十円おせんべ）
+> 中嶋さん、中山さん（銀座のカヌレ）
+> 差し入れありがとうございました☆
+>
+> 今年度は、基本的に
+> キャンパスプラザ京都 2階 第2会議室で行います。
+> 机の配置替えなど手伝っていただきありがとうございます。
+> 今後もご協力よろしくお願いいたします。
+>
+>
+> 次回のご案内：
+>
+> 2009年05月13日（水）19:00〜21:00
+> 5階 第2共同研究室
+> ＃５月のみ、特別にこの部屋を使います。
+> ＃間違えないよう、ご注意ください！
+>
+> 今度こそ、ブラックブックを読み進められる予定です（笑）
+> ＃私的変数（p.75〜）
+From umejava ＠ mars.dti.ne.jp  Thu Apr  2 21:53:07 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Apr  2 21:53:30 2009
+Subject: [SML 7512] Re: SmallTalk R4.1だそうです
+In-Reply-To: <JxP2c0SVWYRsVGUgKkGBPlpg2@mars.dti.ne.jp>
+References: <JxFoE4p2RKOfgU0gB8n5FF6Ac@mars.dti.ne.jp>
+	<49D2391F.40907@im.dendai.ac.jp>
+	<JxP2c0SVWYRsVGUgKkGBPlpg2@mars.dti.ne.jp>
+Message-ID: <Jx7Osuqhn5t29d1hXN9NgmiA3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+お気づきと思いますが念のため。
+
+SmallTalk R4.1ですが、すべてSmalltalk勉強会@東京の有志の手による
+エイプリルフールのお遊びです。
+http://smalltalk.smalltalk-users.jp/
+
+実際に動くものを作ったというところがポイントですので、ぜひダウンロード
+してお楽しみ下さい。
+
+割と高度な技が使われているので、ソースを読んでみるといろいろと勉強に
+なるかと思います。
+
+次回以降のSmalltalk勉強会で、その設計、および実装について取り上げて
+いきたいと思います。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> Hidetaka MASUDA <masuda@im.dendai.ac.jp> wrote:
+> > 増田です。
+> > 
+> > Masashi Umezawa さんは書きました:
+> > > http://smalltalk.smalltalk-users.jp/
+> > > #どうやらObjectWorks R4.1の傍系のようです。
+> > 
+> > > Adele Goldbergさんが、昔オープンソース化しようとしていた、あの4.1が
+> > > ついに満を持して復活したのでしょうか。よくわからないものの、とにかく
+> > > 強力な機能に満ちあふれています。
+> > 
+> > これってどなたが作られているのですか?
+> 
+> いつの間にやらできていたので、よくわからないのですよね。
+> しかしURLから判断するにSmallTalk-users.jpの人々ではないかと思っています。
+> http://www.smalltalk-users.jp/
+> 
+> > ところで、SmallTalk と T を大文字にしているのが気持ち悪いのですが、http:
+> > //smalltalk.smalltalk-users.jp/links にある、
+> > 
+> > Wikipediaには「SmallTalkはありがちな誤り」とありますが、誤りです。
+> > 
+> > ってのが気になるのですが、どういう意味なんですかね?
+> 
+> SmallTalkというSmalltalkが出てしまった以上、もはやSmallTalkはSmalltalkで
+> ないという主張は無効であるということではないでしょうか。
+> 
+> 実際初心者の方は無意識にSmallTalkとしてしまう傾向がありますし、
+> 驚き最小限の方向に向かったのではないかと推測します。
+> 
+> せっかくなので試してみると良いですよ。
+> フィボナッチベンチの結果もやたら速くてびっくりしました。お勧めです。
+> Time millisecondsToRun:[1000 fib] "=>0"
+> 
+> ではでは。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+
+
+---
+[:masashi | ^umezawa]
+From mutoh ＠ openedu.org  Fri Apr  3 15:36:57 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Fri Apr  3 15:37:15 2009
+Subject: [SML 7513] むとうデモの情報(was Re: 第6回Smalltalk勉強会＠京都)
+In-Reply-To: <49D38B5F.9040609@cc.kyoto-su.ac.jp>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8663hqvusd.wl%mutoh@openedu.org>
+	<e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+	<49D38B5F.9040609@cc.kyoto-su.ac.jp>
+Message-ID: <86prfugs52.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+デモ関連の資料忘れてました(_o_)
+
+当日は、PicoBoard用のUSBシリアルケーブル忘れてて、デモできなくて申し訳
+ありませんでした。
+また、リベンジさせてください(_o_)
+
+At Thu, 02 Apr 2009 00:42:23 +0900,
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> Takeshi MUTOH さんは書きました:
+> > 濃ゆい内容だったので、ちょっと疲れました;-)
+> お疲れ様でした。デモをしていただき感謝しています、武藤さん。
+
+デモ当日にお配りした資料は、こちらです。
+- http://qml.610t.org/FreeBSD/NKM_chirashi.html
+
+これは、元々ニコニコ動画の技術部というおもしろい集まりのミーティング向
+けに作っていたもので、その時の感想は以下になります。
+- http://qml.610t.org/squeak/mutoh_20090321.html
+
+
+で、当日青木先生から、
+	「いつごろからこんなので遊んでるの?」
+という質問があったのですが、うまく答えられませんでした。
+これへの一つの答えが、K*BUGで発表した以下の資料になるかなと思います。
+- http://qml.610t.org/FreeBSD/Serial2008.html
+
+では、ご参考になりましたら。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・にんげんは一度に一つの亊しかでけへんいうとるやろ
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+
+
+From osamu.hamasaki ＠ gmail.com  Sat Apr  4 15:08:14 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sat Apr  4 15:08:27 2009
+Subject: [SML 7514] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <49D38B5F.9040609@cc.kyoto-su.ac.jp>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org> <49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8663hqvusd.wl%mutoh@openedu.org>
+	<e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>
+	<49D38B5F.9040609@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd30904032308w57e8c427led2e16eef7bffead@mail.gmail.com>
+
+濱崎です。
+先日の第６回Smalltalk勉強会＠京都は参加出来ず、残念でした。
+
+2009/04/02 0:42 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+
+>
+> 参考となるプログラム断片も公開（リンク）しておきました。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto6
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/20090329/index-j.html
+>
+> --- 青木淳＠京都宇治
+>
+
+このリンクにあったプログラムを見て、どんなお話をされたのか概ねイメージ出来ました。
+情報の公開、ありがとうございます。ダブルディスパッチなんかも、慣れるまでは何を
+やっているのか判りづらいので、今回は大変だったのでは、と想像します。
+
+ところで、公開して頂いたプログラム断片のうち、数を表すオブジェクト群の#generalityの値を
+調べるプログラムですが、下から２番目のものについて、以下の点で違和感を感じました。
+
+・#generalityを実装しているクラスを探しているが、見つけてきた「クラス」に#generalityを
+送信している。普通は、見つけてきたクラスの「インスタンス」にメッセージを送らないと
+メッセージを理解してくれない。（#generalityはたまたまクラスの方も応答してくれるように
+なっているので、このプログラムでもそれなりに動きますが。。。）
+
+ということで、見つけてきたクラスのインスタンスに#generalityを送信して、値を答えて
+もらうようにしたプログラムを書きました。こうすることにより、ソースコードを解析して
+値を取り出す必要もなくなっています。
+
+インスタンスを生成する為に#basicNewを使っているのですが、SmallIntegerは#basicNewを
+受け付けないので、例外を捕まえて#zeroを送り直しています。
+また、ArithmeticValueは#generalityを定義していますが、抽象クラスなので#generalityの
+メソッドは、以前に勉強会で話題になった、
+
+self subclassResponsibility
+
+と書かれています。なので、ここも例外を捕まえてリストする対象から外しています。
+
+あとついでに、「#generalityを実装しているクラス」ではなく、「#generalityに答えられる
+クラス」をリストするようにしてみました。実装しているクラスをリストしたい場合は、
+
+Smalltalk
+allBehaviorsDo:
+[:aClass | (aClass canUnderstand: messageSelector) ifTrue: [classes add:
+aClass]].
+
+の部分を
+
+Smalltalk
+allBehaviorsDo:
+[:aClass | (aClass includesSelector: messageSelector) ifTrue: [classes add:
+aClass]].
+
+に変更して下さい。
+
+＃「メッセージを定義しているクラスを探ためだけにMethodCollectorを使うのは、大げさな感じが
+＃した」というのもあり、こんな風に変えてみました。
+
+以上です。
+
+------- 以下、プログラム ----------
+
+| classes messageSelector generalityTable aStream aModel |
+messageSelector := #generality.
+classes := OrderedCollection new.
+Smalltalk
+allBehaviorsDo:
+[:aClass | (aClass canUnderstand: messageSelector) ifTrue: [classes add:
+aClass]].
+classes := classes select: [:class | class isMeta not and: [class isObsolete
+not]].
+generalityTable := Dictionary new.
+classes
+do:
+[:aClass |
+| instanceCreationMessage anInstance |
+instanceCreationMessage := #basicNew.
+[anInstance := aClass perform: instanceCreationMessage]
+on: Error
+do:
+[:exception |
+instanceCreationMessage := #zero.
+exception retry].
+[| aCollection |
+aCollection := generalityTable
+at: (anInstance perform: messageSelector)
+ifAbsentPut: [OrderedCollection new].
+aCollection add: aClass]
+on: SubclassResponsibilityError
+do: [:exception | exception return]].
+aStream := String new writeStream.
+[generalityTable associations asSortedCollection
+do:
+[:association |
+aStream
+nextPutAll: association key printString;
+nextPutAll: ' ('.
+association value
+do: [:aClass | aStream nextPutAll: aClass printString]
+separatedBy: [aStream space].
+aStream
+nextPutAll: ')';
+cr;
+flush]] ensure: [aStream close].
+aModel := ValueHolder with: aStream contents.
+TextEditorView
+    open: aModel
+    label: 'Implementors of ' , messageSelector printString
+    icon: (Icon constantNamed: #workspace)
+    extent: 350 @ 220.
+(aModel dependents detect: [:each | each isKindOf: TextEditorView])
+    controller
+    selectFrom: 1
+    to: aModel value size.
+^generalityTable
+-------------------
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090404/2ae7c622/attachment.htm
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Apr  4 18:00:57 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Apr  4 18:01:05 2009
+Subject: [SML 7515] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <1bc06fd30904032308w57e8c427led2e16eef7bffead@mail.gmail.com>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>	<8663hqvusd.wl%mutoh@openedu.org>	<e957e4bc0903312156j2fcd822ar186e8878c6f1c97d@mail.gmail.com>	<49D38B5F.9040609@cc.kyoto-su.ac.jp>
+	<1bc06fd30904032308w57e8c427led2e16eef7bffead@mail.gmail.com>
+Message-ID: <49D721C9.3080802@cc.kyoto-su.ac.jp>
+
+濱崎治さんは書きました:
+> ということで、見つけてきたクラスのインスタンスに#generalityを送信して、 
+> 値を答えてもらうようにしたプログラムを書きました。こうすることにより、 
+> ソースコードを解析して値を取り出す必要もなくなっています。
+
+さすが濱崎さん！すばらしい。
+Smalltalkプログラムで交信し合うのがSMLらしいですよね。
+
+--- 青木淳＠京都上賀茂（今日は新入生オリエンテーション）
+From umejava ＠ mars.dti.ne.jp  Mon Apr  6 22:36:01 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Apr  6 22:36:24 2009
+Subject: [SML 7516] smalltalk_fanでつぶやきましょう
+Message-ID: <JxrBvrevLWsoveV7Y8CzEwxA7@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+皆様、Twitterお使いでしょうか?
+
+このたびコミュニティ用のアカウントsmalltalk_fanを作ったので、お気軽にフォローしてみてください。
+http://twitter.com/smalltalk_fan
+
+普段は聞けない、生のSmalltalkerの声が聞けるかもしれません。;-)
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Thu Apr  9 22:19:51 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Apr  9 22:20:13 2009
+Subject: [SML 7517] 第8回Smalltalk勉強会のお知らせ
+Message-ID: <JxatLRcsUvh6TS.sriOaHM6A3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。今回は金曜日です。
+
+日時: 2009/4/17(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai8kaismalltalkbenkyoukai
+
+今回は「第1回SmallTalk勉強会」でもあります。
+言語で言語を作る喜び、苦労話、自責の念、変態的なテクニックなどに
+ついて、R4.1の開発者が語ります。メタと通常のプログラミングの
+垣根がなくなるSmalltalk的な体験を味わって欲しいということですね。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+気になる方はこのMLにメールを送っていただいても良いです。
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Mon Apr 13 21:32:00 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Apr 13 21:32:20 2009
+Subject: [SML 7518] 「Seaside へ GO!!」の第五回が掲載されました
+Message-ID: <JxxoQ862V8dI2U6TmLDz9ogQ3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、「Seaside へ GO!!」の第五回が「オブジェクトの広場」に掲載されました。
+
+今回はGlorpを用いたRDB(PostgreSQL)接続編です。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/seaside5/index.html
+
+SeasideJOnePlusDBを使ってすぐに試すことができます。
+http://swikis.ddo.jp/umejava/SeasideJOnePlus#3
+
+ちと長いので、2回に分けてお楽しみ下さい。;-)
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Sun Apr 19 12:11:16 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Apr 19 12:11:32 2009
+Subject: [SML 7519] SmallTalk R4.1のつくりかた
+In-Reply-To: <JxatLRcsUvh6TS.sriOaHM6A3@mars.dti.ne.jp>
+References: <JxatLRcsUvh6TS.sriOaHM6A3@mars.dti.ne.jp>
+Message-ID: <JxSUxTYOpV1U6xsjB8.pGBBA6@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+第8回Smalltalk勉強会に参加していただいた方、ありがとうございます。
+
+さて、当日の資料「SmallTalk R4.1のつくりかた」を置きましたので、
+興味のある方はぜひご覧ください。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai8kaismalltalkbenkyoukai/shiryou
+発表時にわかった図の誤りなど、修正してあります。
+
+ロングバージョンは56ページにもなる長編です。こちらは後でじっくりと
+読むために作ったものです。週末の暇つぶしにでもどうぞ。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。今回は金曜日です。
+> 
+> 日時: 2009/4/17(金) 19:00- (2,3時間程度)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> または「自由自在Squeakプログラミング」
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai8kaismalltalkbenkyoukai
+> 
+> 今回は「第1回SmallTalk勉強会」でもあります。
+> 言語で言語を作る喜び、苦労話、自責の念、変態的なテクニックなどに
+> ついて、R4.1の開発者が語ります。メタと通常のプログラミングの
+> 垣根がなくなるSmalltalk的な体験を味わって欲しいということですね。
+> 
+> 参加表明は特に必要ありません。ふらりとどうぞ。
+> 気になる方はこのMLにメールを送っていただいても良いです。
+> 
+> ではでは。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+
+---
+[:masashi | ^umezawa]
+From asugitan ＠ kh.rim.or.jp  Fri Apr 24 11:17:49 2009
+From: asugitan ＠ kh.rim.or.jp (Akinori Sugitani)
+Date: Fri Apr 24 11:17:50 2009
+Subject: [SML 7520] Cincom Smalltalk Daily: 11/1/06に関して
+Message-ID: <611D290A04764AA7A3FF87139E5FAFA7@SUGITPR60E>
+
+はじめまして。京都のSmalltalk勉強会に参加させて戴いている杉谷と申します。
+勉強会の経験でライブ学習のすばらしさを知り日頃はJames RobertsonさんのSmalltalk 
+Dailyのスクリーンキャストで
+自習しております。
+http://www.cincomsmalltalk.com/userblogs/cincom/blogView?content=smalltalk_daily
+
+今回は"Cincom Smalltalk Daily: 11/1/06"に関する投稿です。
+（Connectivity→Working with Databases→Creating a UI for the database 
+ code）
+
+その前の段階"Mapping to a domain object"までは上手く行っていましたが、
+GUIを立ち上げて"Do Query"ボタンを押すと
+"Unhandled exception: Message not understod: #list:"
+というエラーが出ていました。スクリーンキャストを何度もみなおしましたが、
+コードの入力間違いはなさそうでした。
+
+GUIがinstallされているクラスは
+
+Smalltalk defineClass: #EmployeeUI
+ superclass: #{UI.ApplicationModel}
+ indexedType: #none
+ private: false
+ instanceVariableNames: 'employeeList employees queryExecutor '
+ classInstanceVariableNames: ''
+ imports: ''
+ category: 'UIApplications-New'
+
+で、キャンバス上のDataSet Widgetが"employees "
+DataSetの各列(empno, empname, job, hiredate)に対するアスペクトがそれぞれ
+"employeeList empno"等のように設定されています。
+
+"初期化メソッド"
+initialize
+
+ self queryExecutor: QueryEx？？
+
+QueryExの後ろがダイアログで隠れて見えないので、よく解らないまま
+self queryExecutor: QueryExecutor new
+としました。
+
+"Do Query"アクションボタンのについては、
+doQuery
+ "This stub method was generated by UIDefiner"
+
+ | emps |
+ emps := self queryExecutor executeQuery: 'select * from emp'.
+ self employeeList list: emps
+
+エラー："Unhandled exception: Message not understod: #list:"
+はここで生じているようです。
+
+Robertsonさんは"employeeListはSelectionInListオブジェクト"と言っているように聞こえるのですが
+（英語聞き取りには自信がありません）
+
+employeeList
+ "This method was generated by UIDefiner...."
+
+ ^employeeList isNil ifTrue: [employeeList := nil asValue]
+  ifFalse: [employeeList]
+
+employees
+ "This method was generated by UIDefiner...."
+ ^employees isNil ifTrue:
+   [employees := SelectionInList new.
+   employees selectionIndexHolder compute:
+     [:v | self employeeList value: employees selection].
+   employees]
+  ifFalse: [employees]
+
+となっていて、"employeeList"はListらしくありません。
+そこで、
+"self employeeList list: emps"　→　"self employees list: emps"
+に替えてみたところ、エラーにならず、empsの内容がDataSetに表示されました。
+1月頃からずっと悩んでいましたので、感動しましたが、スクリーンキャストのコードが間違っていたということになり、
+実際に操作しながら「撮影」されたもので、そのようなことが起りうるのか不思議です。 
+
+Smalltalkに慣れた人にとっては、悩むようなことではないのかもしれませんが、
+初心者の私にとっては、かなりの「難問」でした。
+
+
+あと、動作し始めてから
+initialize
+
+ self queryExecutor:　QueryExecutor new
+を
+ self queryExecutor:　QueryExecutor
+に替えてみましたが、どちらも動作しました。これは本来どう書くべきなのでしょうか？
+
+当初は"Unhandled exception: Message not understod: #list:"の出る原因がどうしても解決できず、このMLで質問しようかと思い、準備をしていたのですが、とりあえず解決しました。同じ問題で悩んでいる方の参考になれば幸いです。
+
+---------------------
+杉谷明則
+
+From masuda ＠ im.dendai.ac.jp  Thu Apr 30 17:08:35 2009
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Thu Apr 30 17:08:46 2009
+Subject: [SML 7521] オーバロードはポリモフィズムか?
+Message-ID: <49F95C83.5090202@im.dendai.ac.jp>
+
+増田＠電大です。
+
+最近、悩んでいることがあります。「ポリモフィズムを実現する方法の一つに
+オーバロードがある」って書いてあるWebページをよく見るんです。何か気持悪
+いんです。メソッドのシグネチャ (メソッド名、引数、戻り値の型) が違うのに
+ポリモフィズムと言うんだろうかと。
+
+・抽象クラスの抽象メソッドを具象クラスでオーバライドする
+・(Javaなどの)インタフェースを宣言して、実装クラスでメソッドを実装する
+
+の2つはポリモフィズムを実現する方法だと思うんですが。なぜなら、メッセー
+ジの送り手は一切変更なしで動きますよね。オーバロードは引数の数なんかが変
+わったら送り手はそれに合わせて変更しないとだめですよね。
+
+そもそもポリモフィズムの定義って何ですかね。
+
+「同じメッセージを異なるオブジェクトに送った場合、メッセージを受け取った
+オブジェクトの種類によって異なる動作をしてもよい。」と思っていたんです。
+「同じメッセージ」とは「メソッドのシグネチャが同じ」という意味です。
+「メッセージ名が同じ」という意味ではありません。
+
+いかがでしょうか?
+
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7emasuda/     FAX 03-5280-3592
+It's more fun to compute!
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Apr 30 20:37:59 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Apr 30 20:38:04 2009
+Subject: [SML 7522] 第7回Smalltalk勉強会＠京都
+Message-ID: <49F98D97.4090104@cc.kyoto-su.ac.jp>
+
+こんばんは、青木淳＠京都宇治です。
+
+第7回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+ご参集ください。ゴールデンウィークに入ってしまいますので、約
+二週間前にアナウンスさせていただきます。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto7
+
+第7回 Smalltalk勉強会＠京都
+日時：2009年05月13日（水）19:00〜21:00
+キャンパスプラザ京都 5階 第2共同研究室（←この部屋の所在を、
+当日、立て看板にて案内します）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+前回は Smalltalkにおける数論を解題するのに費やしてしまいまし
+た。今度こそ、私的変数そして共有変数へとテキストにそって進め
+てゆきます。おそらく、最新の「じゅん for Smalltalk（Jun778）」
+も配布できると思います。ラフなダイアグラムを用いたUMLのお絵描
+きツールが備わります。大学の講義（ソフトウェア工学）で用いる
+教材を描くために作成に着手しました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Jun/Topics/UML/index-j.html
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Apr 30 20:47:48 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Apr 30 20:47:57 2009
+Subject: [SML 7523] 座標のストリーム出力（aPoint printOn: aStream）
+Message-ID: <49F98FE4.5070103@cc.kyoto-su.ac.jp>
+
+再度、ポストします。小さな画像を添付したのが原因か、午前中に
+下記のメールをポストしたのだけれど、配送されないようなので。
+画像が無くとも大丈夫でしょう。
+
+--- 青木淳＠京都宇治
+
+-------- Original Message --------
+Subject: 座標のストリーム出力（aPoint printOn: aStream）
+Date: Thu, 30 Apr 2009 10:57:08 +0900
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+To: Smalltalkers' Salon Mailing List <sml@smalltalk.jp>
+
+こんにちは、青木淳＠京都上賀茂です。
+
+座標（Point）のストリームへの出力 （printOn: aStream）ですが、
+いままでは以下のようになっていました。
+
+printOn: aStream
+    "Append to the argument aStream in terms of infix notation."
+
+    x printOn: aStream.
+    aStream nextPut: $@.
+    y printOn: aStream
+
+二項メッセージのセレクタとの関係で曖昧（あやふや）なところが
+ありましたよね。
+
+たとえば、y 座標が負数だったとき、@ の直後にマイナスが続くた
+め、100@-200 となってしまいます。
+
+これでは、100 @ -200 なのか、100 @- 200 なのか、判然としない
+でしょ。（いままででは、LL(1) でやることができずに、この場合
+に限って LR(1) もどきに遂行して、無理矢理に 100 @ -200 と解釈
+していたのです。）
+
+で、これからは Point の printOn: aStream は以下のようになり、
+
+printOn: aStream
+    "Append to the argument aStream in terms of infix notation."
+
+    x printOn: aStream.
+    aStream nextPutAll: ' @ '.
+    y printOn: aStream
+
+必ず @ の前後にスペースが入ります。これからは形式を改めて書き
+なさいね！ということです。フォーマッタにかけていれば大丈夫。
+
+新しい Smalltalk（おそらく VisualWorks 7.7 以降）では、y 座標
+がマイナスのときに、@ の後ろにスペースを空けないと、エラーに
+なっちゃいますので、気をつけてくださいませ。
+
+参考のため、100@-200 を評価（Do it）した際に出現する例外ウィ
+ンドウの画像を添えておきます。@- という二項メッセージセレクタ
+がわからないよ！と言われるんです。
+
+同様に、100,-200 と書いて、じゅん for Smalltalk の二次元座標
+を得ようとしても、,- がわからないよ！と言われます。
+
+Smalltalk コンパイラの字句解析や構文解析に無理矢理なところが
+なくなって良くなったと私は思います。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

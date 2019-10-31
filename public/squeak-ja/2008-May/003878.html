@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3878] Re: Object特異的な情報を含むメッセージの発信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203878%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003877.html">
+   <LINK REL="Next"  HREF="003874.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3878] Re: Object特異的な情報を含むメッセージの発信について</H1>
+    <B>Hiromichi Tsurui</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203878%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3878] Re: Object特異的な情報を含むメッセージの発信について">tsurui ＠ med.juntendo.ac.jp
+       </A><BR>
+    <I>2008年 5月 12日 (月) 08:47:12 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003877.html">[Squeak-ja: 3877] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+        <LI>次の記事 <A HREF="003874.html">[Squeak-ja: 3874] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3878">[ 日付 ]</a>
+              <a href="thread.html#3878">[ スレッド ]</a>
+              <a href="subject.html#3878">[ 件名 ]</a>
+              <a href="author.html#3878">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部さん
+　
+何時もながら迅速にして適切なな応答をありがとうございます。
+「Smalltalkイディオム」は読み始めたところです。「オブジェクト指向システム分析設計入門」は以前読もうとしてややハードルが高く感じたのですが、おいおい目を通すようにします。
+
+鶴井
+
+
+&gt;<i> こんにちは、阿部です。
+</I>&gt;<i> Smallralkの場合、メッセージを受け取るレシーバも、送るセンダも、その引数もすべてオブジェクトであり、それが特定のクラスに属す必要があるなどの制約はありません。
+</I>&gt;<i> もし、引数にレシーバと同じクラスのインスタンスが使えないとなると、3 +
+</I>&gt;<i> 4も計算できないことになります(3と4はいずれもSmallIntegerのインスタンス。3がレシーバで+
+</I>&gt;<i> 4がメッセージ。+がメッセージセレクタで、4がその引数。センダはコンテキストに依存。もしワークスペースでdo
+</I>&gt;<i> itしたならnil。レシーバは受け取ったメッセージのセレクタにマッチするメソッドを探索して実行します)。
+</I>&gt;<i> もしかすると、Smalltalk(とそのオブジェクト指向)の考え方に関して、すこしずれがあるのかもしれません。たとえば、青木淳さんの「オブジェクト指向システム分析設計入門」や「Smalltalkイディオム」をお読みになることをお勧めします。これらの本は絶版ですが、幸いなことにWebで全文が公開されています。
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.sra.co.jp/people/aoki/IntroductionToOOAOOD/index.htm">http://www.sra.co.jp/people/aoki/IntroductionToOOAOOD/index.htm</A>
+</I>&gt;<i> <A HREF="http://www.sra.co.jp/people/aoki/SmalltalkIdioms/index.htm">http://www.sra.co.jp/people/aoki/SmalltalkIdioms/index.htm</A>
+</I>&gt;<i>
+</I>&gt;<i> //abee
+</I>&gt;<i> --
+</I>&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i>
+</I>&gt;<i> 08/05/11 に Hiromichi Tsurui&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tsurui ＠ med.juntendo.ac.jp</A>&gt; さんは書きました:
+</I>&gt;&gt;<i> 阿部さん、何時もながら迅速な応答をありがとうございます。
+</I>&gt;&gt;<i> メッセージが引数として受信側と同じクラスのものを送れるとは思いも拠りませんでした。
+</I>&gt;&gt;<i> このような扱いが可能でしたら、object間の極めて複雑な相互作用も扱える、ということですね。
+</I>&gt;&gt;<i> 早速トライしてみます。
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003877.html">[Squeak-ja: 3877] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+	<LI>次の記事 <A HREF="003874.html">[Squeak-ja: 3874] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3878">[ 日付 ]</a>
+              <a href="thread.html#3878">[ スレッド ]</a>
+              <a href="subject.html#3878">[ 件名 ]</a>
+              <a href="author.html#3878">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

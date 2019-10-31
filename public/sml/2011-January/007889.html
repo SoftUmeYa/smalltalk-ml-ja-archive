@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7889] Re: 第27回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207889%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIyNxskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3C4D2175B7.5010608%40hera.eonet.ne.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007888.html">
+   <LINK REL="Next"  HREF="007890.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7889] Re: 第27回Smalltalk勉強会＠京都</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207889%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIyNxskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3C4D2175B7.5010608%40hera.eonet.ne.jp%3E"
+       TITLE="[SML 7889] Re: 第27回Smalltalk勉強会＠京都">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2011年 1月  3日 (月) 16:07:35 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007888.html">[SML 7888] Re:	第27回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007890.html">[SML 7890] Re: 第27回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7889">[ 日付 ]</a>
+              <a href="thread.html#7889">[ スレッド ]</a>
+              <a href="subject.html#7889">[ 件名 ]</a>
+              <a href="author.html#7889">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+
+(2011年01月02日 20:24), 濱崎治 さんは書きました:
+&gt;&gt;<i> 投稿するのが随分遅くなってしまいました。お待たせしてしまった皆さん、
+</I>&gt;&gt;<i> ご容赦ください。
+</I>
+お忙しいところ、解説とコードの投稿ありがとうございます。
+前回のピザパーティの時に少しお話ししましたが、濱崎さんの
+SSK9_hamasaki_final -&gt; SSK10_hamasaki_final の修正とは異なる方法で、
+同じ名前のメソッドがある場合そのメソッドの選択を保持する機能を書いて
+みたので投稿します。
+
+SSK9_hamasaki_final.stを元にした修正になります。
+方法は、選択されたクラスが変わるたびに、methodListが更新される前に選択
+されていたメソッドを覚えておき、methodListが更新されたあとcodeTextが
+更新される前に、同じ名前のメソッドが存在するか調べ、存在する場合
+methodListのselectionを前に選択されていたものに戻すようにしました。
+
+まず、前に選択されていたメソッドを覚えるために、インスタンス変数に
+formerSelectorを追加し、accessorsをプロトコルprivateに追加します。
+
+OldFashionedBrowser &gt;&gt; formerSelector
+
+	^formerSelector
+
+
+OldFashionedBrowser &gt;&gt; formerSelector: aSelector
+
+	formerSelector := aSelector
+
+以下は、OldFashionedBrowser &gt;&gt; initialize の修正になります。
+selectedClass := BlockValue〜の行とmethodList := SelectionInList new〜
+の行の間に次を追加します。
+
+	selectedClass compute: [:aClass | aClass ifNotNil: [self
+formerSelector: self methodList selection]].
+
+methodList := SelectionInList new〜の行とcodeText := BlockValue〜
+の行の間に次を追加します。
+
+	selectedClass compute:
+			[:aClass |
+			aClass
+				ifNotNil:
+					[(self methodList list includes: self formerSelector) ifTrue: [self
+methodList selection: self formerSelector].
+					self formerSelector: self methodList selection]].
+
+以上です。
+
+-- hirowadenden
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007888.html">[SML 7888] Re:	第27回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007890.html">[SML 7890] Re: 第27回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7889">[ 日付 ]</a>
+              <a href="thread.html#7889">[ スレッド ]</a>
+              <a href="subject.html#7889">[ 件名 ]</a>
+              <a href="author.html#7889">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

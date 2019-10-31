@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3035] Re: Wiki としての SuperSwiki
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203035%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=44AF890C.5050707%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003058.html">
+   <LINK REL="Next"  HREF="003037.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3035] Re: Wiki としての SuperSwiki</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203035%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=44AF890C.5050707%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3035] Re: Wiki としての SuperSwiki">koubo2006 ＠ yengawa.jpn.org
+       </A><BR>
+    <I>2006年 7月  9日 (日) 13:33:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003058.html">[Squeak-ja: 3058] Re: Wiki としての SuperSwiki
+</A></li>
+        <LI>次の記事 <A HREF="003037.html">[Squeak-ja: 3037] Re: Wiki としての SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3035">[ 日付 ]</a>
+              <a href="thread.html#3035">[ スレッド ]</a>
+              <a href="subject.html#3035">[ 件名 ]</a>
+              <a href="author.html#3035">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+
+On Sat, 08 Jul 2006 19:29:32 +0900
+&quot;NAKATA, Shunsuke&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">scriptonwikipage ＠ yahoo.co.jp</A>&gt; wrote:
+
+...
+&gt;<i> それから、Pierでは、画像やゲームなどの、
+</I>&gt;<i> （既存の）オブジェクトを貼り付けられるようですが、
+</I>&gt;<i> 存在しないオブジェクトをユーザーがPier上で作成（開発）
+</I>&gt;<i> できるのでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Wifkyの((perl))プラグインでは、ユーザーはWifkyのページとして
+</I>&gt;<i> プラグインを作成出来ます。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 例えば、Wifkyのページ「挨拶」の内容が、
+</I>&gt;<i> 
+</I>&gt;<i> 	print ('&lt;P&gt;' . &amp;enc (&quot;こんにちは、$_[1]さん。&quot;) . '&lt;/P&gt;') ;
+</I>&gt;<i> 
+</I>&gt;<i> だとします。これを、普通のWifkyページの中で、
+</I>&gt;<i> 
+</I>&gt;<i> 	((perl 挨拶 山田))
+</I>&gt;<i> 
+</I>&gt;<i> という形で、呼び出して使うことができます。
+</I>&gt;<i> もちろん、「((perl 挨拶 山田))」のところには、
+</I>&gt;<i> 「&lt;P&gt;こんにちは、山田さん。&lt;/P&gt;」がはいります。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 「挨拶」のページもWifkyページのひとつに過ぎませんので、
+</I>&gt;<i> たとえば、誰か他の人が「挨拶」のページの
+</I>&gt;<i> バグ取りすることも可能です。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> つまり、WikipPediaでは、事典の作成を複数の人でコラボラティブ
+</I>&gt;<i> （協調して）やっていますが、それと同じようなことを
+</I>&gt;<i> プログラミングで実践できるわけです。
+</I>&gt;<i> 
+</I>&gt;<i> 上の例では価値が分かりませんが、もっと大規模な
+</I>&gt;<i> フレームワーク構築など、に活用できるのではないか
+</I>&gt;<i> と、考えています。
+</I>&gt;<i> 
+</I>&gt;<i> Wikiの持ってるバージョン管理の機能が、
+</I>&gt;<i> これにも使えることになりますし、、、、、
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Pierには、この様な機能は、ありますか。。。。
+</I>...
+
+今はありませんが、Pierでも昔のバージョン(SmallWiki2という名前で開発され
+ていた時期)でWikiページに文章と一緒にSmalltalk式を書いてページを開いたと
+きに実行させるという仕組みが入っていました。
+
+なので、PierのWiki文法を変更してSmalltalk式を評価させるのは簡単だと思い
+ますし、使い方によっては面白そうです。
+
+難しいのは危険な式の実行を制限することですね。どう制限するかは目的によっ
+て変わります。「もっと大規模なフレームワーク構築」というのはたとえばどん
+なものなのでしょうか?
+
+
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2006 ＠ yengawa.jpn.org</A>&gt;
+    <A HREF="http://yengawa.com/">http://yengawa.com/</A>
+    ^self new!
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003058.html">[Squeak-ja: 3058] Re: Wiki としての SuperSwiki
+</A></li>
+	<LI>次の記事 <A HREF="003037.html">[Squeak-ja: 3037] Re: Wiki としての SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3035">[ 日付 ]</a>
+              <a href="thread.html#3035">[ スレッド ]</a>
+              <a href="subject.html#3035">[ 件名 ]</a>
+              <a href="author.html#3035">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

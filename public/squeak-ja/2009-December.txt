@@ -1,0 +1,215 @@
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Dec  5 09:35:02 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Sat Dec  5 09:35:18 2009
+Subject: [Squeak-ja: 4419] EtoysやScratchが動くKNOPPIXが完成しました。
+Message-ID: <4B19AAB6.8050606@mx2.ttcn.ne.jp>
+
+寳迫です。
+
+＃メンバーがかぶっているので重複するかもしれませんが、両方に出しておきます。
+
+私が参加している研究の一環として、KNOPPIX 6.0.1上でEtoysやScratchなどを
+動かし、ミュウロボやArduinoを制御することができるようにしたものを作りま
+した。
+http://4oc.blogspot.com/search?q=Robo
+
+オープンソースや教育関連の催しに時々出没しておりますので、お声がけ頂けれ
+ばでき上がったCDをお渡しすることができるかもしれません。
+＃個別にご連絡を頂いてもかまいません。
+
+子どもたちの活動も、残すところ作品の発表会のみとなりました。来週中には発
+表会のめどを立てて今月中に発表会を行いたいと思っています。これまでご協力
+いただいた皆様に、厚く御礼申し上げます。
+
+--------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Wed Dec  9 21:52:20 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo)
+Date: Wed Dec  9 21:52:26 2009
+Subject: [Squeak-ja: 4420] Re: Smalltalk合同勉強会@名古屋のプログラム確定です
+In-Reply-To: <Jx2XI7SI5d09D9CyYsaBIkoA9@mars.dti.ne.jp>
+References: <Jx2XI7SI5d09D9CyYsaBIkoA9@mars.dti.ne.jp>
+Message-ID: <000001ca78ce$731284b0$59378e10$@kyoto-inet.or.jp>
+
+梅澤真史さま
+こんばんは。久保です。
+１９日の合同勉強会、お世話様です。
+もう１０日後になりましたね。
+当日に、どのようなものを持って行けば
+よいのでしょうか。
+たとえば、ある環境を整えたＰＣとか、
+そういうことをご指示下さい。
+なお、ライティング・トークのことですが、
+なにかお話をさせていただければと、
+思っております。
+よろしくお願い致します。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Masashi Umezawa
+Sent: Sunday, November 01, 2009 8:59 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4406] Smalltalk合同勉強会@名古屋のプログラム確定です
+
+こんにちは
+梅澤です。
+
+12/19日のSmalltalk合同勉強会@名古屋ですが、おかげさまで参加者が20名を
+超えました。まだ若干名受けつけていますので、ぜひお申し込みを。
+http://atnd.org/events/1593
+
+チュートリアルも含め、プログラム内容はほぼ確定しました。
+
+- Smalltalkハッカソン
+- Groovy使いのためのSmalltalk入門 (南谷千城)
+- 100ms・10ms・1msの四方山話 (青木淳)
+- STEPSプロジェクトの紹介 (山宮隆)
+- Seaside 3.0 (梅澤真史)
+- Pharoの紹介 (Serge Stinckwich)
+- ESUGの活動報告 (Serge Stinckwich)
+- ライトニングトーク大会 (コメント欄にて参加受付中)
+
+せっかくいろいろな人が集まりますので、ライトニングトーク大会も
+行うことにしました。Smalltalkに限らず自由なテーマで5分話すことが
+できます。発表を希望される方は上記ページのコメント欄に書きこんで
+いただければと思います。
+
+よろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: winmail.dat
+型:         application/ms-tnef
+サイズ:     3638 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20091209/4d01929e/winmail.bin
+From umejava ＠ mars.dti.ne.jp  Wed Dec  9 23:04:06 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Dec  9 23:04:11 2009
+Subject: [Squeak-ja: 4421] Re: Smalltalk合同勉強会@名古屋のプログラム確定です
+In-Reply-To: <000001ca78ce$731284b0$59378e10$@kyoto-inet.or.jp>
+References: <Jx2XI7SI5d09D9CyYsaBIkoA9@mars.dti.ne.jp>
+	<000001ca78ce$731284b0$59378e10$@kyoto-inet.or.jp>
+Message-ID: <Jxq3rAnTHOzDrlxQUlVAb2hw3@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+リマインダありがとうございます。
+
+12/19日のSmalltalk合同勉強会@名古屋ですが、いよいよ10日後ですね。
+
+キャンセルなどが発生したため、あと3名参加可能になっています。
+まだ間に合いますのでぜひどうぞ。> 皆様
+http://atnd.org/events/1593
+
+さて、当日はセミナが中心なので、特に何も持たずとも楽しめるとは思いますが、
+ノートPCに、VWやSqueakなどをインストールしておくと、いろいろとその場で
+試せて良いかもしれません。
+
+ご参考:
+VisualWorksは下記からインストールできます。
+http://www.cincomsmalltalk.com/scripts/CommunityDownloadPage.ssp
+Squeakは下記からです。
+http://swikis.ddo.jp/umejava/48
+SeasideJOnePlusでもいいでしょう。
+http://swikis.ddo.jp/umejava/41
+
+なおハッカソンに出られる場合は、ノートPCと上記のSmalltalk環境の
+インストールはほぼ必須になると思います。自由なテーマでSmalltalkの
+プログラムを周りの人に聞いたりしながら書いていくという感じになりますので。
+
+また、ライトニングトークの参加もありがとうございます。私も何か小ネタを
+話そうかと思っております。
+
+それではよろしくお願い申し上げます。
+
+kubo <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤真史さま
+> こんばんは。久保です。
+> １９日の合同勉強会、お世話様です。
+> もう１０日後になりましたね。
+> 当日に、どのようなものを持って行けば
+> よいのでしょうか。
+> たとえば、ある環境を整えたＰＣとか、
+> そういうことをご指示下さい。
+> なお、ライティング・トークのことですが、
+> なにかお話をさせていただければと、
+> 思っております。
+> よろしくお願い致します。
+> 久保　道
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+> On Behalf Of Masashi Umezawa
+> Sent: Sunday, November 01, 2009 8:59 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 4406] Smalltalk合同勉強会@名古屋のプログラム確定です
+> 
+> こんにちは
+> 梅澤です。
+> 
+> 12/19日のSmalltalk合同勉強会@名古屋ですが、おかげさまで参加者が20名を
+> 超えました。まだ若干名受けつけていますので、ぜひお申し込みを。
+> http://atnd.org/events/1593
+> 
+> チュートリアルも含め、プログラム内容はほぼ確定しました。
+> 
+> - Smalltalkハッカソン
+> - Groovy使いのためのSmalltalk入門 (南谷千城)
+> - 100ms・10ms・1msの四方山話 (青木淳)
+> - STEPSプロジェクトの紹介 (山宮隆)
+> - Seaside 3.0 (梅澤真史)
+> - Pharoの紹介 (Serge Stinckwich)
+> - ESUGの活動報告 (Serge Stinckwich)
+> - ライトニングトーク大会 (コメント欄にて参加受付中)
+> 
+> せっかくいろいろな人が集まりますので、ライトニングトーク大会も
+> 行うことにしました。Smalltalkに限らず自由なテーマで5分話すことが
+> できます。発表を希望される方は上記ページのコメント欄に書きこんで
+> いただければと思います。
+> 
+> よろしくお願い申し上げます。
+> 
+> ---
+> [:masashi | ^umezawa]
+> 
+> 
+
+
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Mon Dec 28 23:38:02 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Mon Dec 28 23:38:09 2009
+Subject: [Squeak-ja: 4422] ScratchのTwitter拡張
+Message-ID: <2d5d52a80912280638j1b05a142oe7af63655edb9157@mail.gmail.com>
+
+こんにちは、阿部です。
+お正月も近いと言うことで、ScratchSource1.4を使って、ScratchからTwitterにつぶやけるようにしてみました。
+必要なファイルは以下にあります。
+http://squeakland.jp/abee/tmp/Meow.zip
+これをScratch 1.4をインストールしたディレクトリに展開し、Scratch.imageの代わりにMeow.imageを使ってください。
+追加したブロックは「見た目」カテゴリの「[ ]とつぶやく」と「調べる」カテゴリの「最新のリプライを取得」です。
+ログインするには「[ ]とつぶやく」の右ボタンメニューから「ユーザ名とパスワードを設定」を選んでください。言語メニューから「日本語(Twitter)」を選択すると日本語表示になります。
+「[ ]とつぶやく」は「[ ]と言う」に似ていますが、違うのは、ここに書いた内容が吹き出しに表示されるだけでなく、Twitterにつぶやかれることです。
+「最新のリプライを取得」は自動的に recent mention
+というグローバルのリストを作成し、ログインしたユーザに対する最新のリプライのIDを要素の1番目、送ったユーザ名を2番目、その内容を3番目に挿入します。
+同じ内容を連続して書き込めなかったり、短時間に繰り返しAPIを何度も呼び出すとブロックされるのは他のクライアントと同じです。「(
+)秒待つ」などを使って調整してください。その他、使い方はProjectsの中のサンプルを参照してください。
+
+それではお楽しみください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp

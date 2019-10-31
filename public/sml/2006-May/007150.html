@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7150] Jun678 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207150%5D%20Jun678%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007149.html">
+   <LINK REL="Next"  HREF="007151.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7150] Jun678 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207150%5D%20Jun678%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7150] Jun678 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 5月  1日 (月) 14:13:10 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007149.html">[SML 7149] [ANNOUNCE] Jun for Java (Jun568)
+</A></li>
+        <LI>次の記事 <A HREF="007151.html">[SML 7151] [ANNOUNCE] ImageSearcher for Java 028
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7150">[ 日付 ]</a>
+              <a href="thread.html#7150">[ スレッド ]</a>
+              <a href="subject.html#7150">[ 件名 ]</a>
+              <a href="author.html#7150">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+オランダの Albert Kerssies さんがフレームバッファ・オブジェク
+トの拡張（EXT_framebuffer_object）を「じゅん for Smalltalk」
+で使えるようにするプログラムを作って送り届けてくださいました。
+有ることが難いことです！
+
+　ＦＢＯ（フレームバッファ・オブジェクトの拡張）の定義：
+　<A HREF="http://oss.sgi.com/projects/ogl-sample/registry/EXT/framebuffer_object.txt">http://oss.sgi.com/projects/ogl-sample/registry/EXT/framebuffer_object.txt</A>
+
+先ほど、それを組み込んだ【Jun678】をアップロードしました。
+　　　　　　　　　　　　　クラス数：    884
+　　　　　　　　　　　　メソッド数： 30,054
+　　　　　　　　　　　　ステップ数：354,318
+　　　１メソッドあたりのステップ数：     11.8
+　<A HREF="http://www.sra.co.jp/public/sra/technical/jun/">http://www.sra.co.jp/public/sra/technical/jun/</A>
+　<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+
+以前（約２ヶ月前）に中京大学の田中真一さんに作成していただい
+たピクセルバッファの拡張（WGL_ARB_pbuffer）の枠組みと合わせて
+あります。
+
+　ピクセルバッファ (2006/03/02)
+　<A HREF="http://www.sra.co.jp/people/aoki/Jun/Topics/PixelBuffer/">http://www.sra.co.jp/people/aoki/Jun/Topics/PixelBuffer/</A>
+
+　フレームバッファ (2006/05/01)
+　<A HREF="http://www.sra.co.jp/people/aoki/Jun/Topics/FrameBuffer/">http://www.sra.co.jp/people/aoki/Jun/Topics/FrameBuffer/</A>
+
+なお、ピクセルバッファとフレームバッファは、排他的に使用する
+ように実装してあります。
+
+------------------------------------------------------------
+
+【前提条件】
+
+以下のページにリストされているディスプレイアダプタ（グラフィ
+ックカード）で、フレームバッファを用いた高速描画の恩恵を受け
+ることができます。
+
+　拡張が使用可能なビデオカードの一覧：
+　<A HREF="http://www.delphi3d.net/hardware/extsupport.php?extension=GL_EXT_framebuffer_object">http://www.delphi3d.net/hardware/extsupport.php?extension=GL_EXT_framebuffer_object</A>
+
+Windows XP / 2000 &amp; VisualWorks 7.4 以上の組み合わせのみの拡
+張となります。ただし、必ず新しいバージョンの opengl32.dll な
+らびに glu32.dll をお使いください。
+
+　○最適：　opengl32.dll　5.1　OpenGL Client DLL
+　○最適：　glu32.dll 　　5.1　OpenGL Utility Library DLL
+
+　×不可：　opengl32.dll　4.0　OpenGL Client DLL
+　×不可：　glu32.dll 　　4.0　OpenGL Utility Library DLL
+
+【利用方法】
+
+使い方は簡単です。ビューファインダなどのレンダリングモデルに
+対して「フレームバッファを使うよ（useFrameBuffer: true）」と
+宣ふだけです。
+
+    | aBody aModel |
+    aBody := JunOpenGL3dObject capsaicin.
+    aModel := JunOpenGLDisplayModel displayObject: aBody.
+    aModel useFrameBuffer: true.
+    aModel open
+
+このプログラムはカプサイシン（唐辛子の辛み成分）の 25,970 個
+のポリゴン群をフレームバッファを用いて描画します。
+
+【了承事項】
+
+搭載したばかりですので、すべての機能が動くのかを確認している
+最中です。各種のグラフィックカードでの動作状況を把握したいと
+思いますので、皆さんのご協力をお願いします。グラフィックカー
+ドの機種名と正常動作の可否を報告していただけると助かります。
+このメールの末尾に OpenGL の拡張を容易に調査する方法を記して
+おきます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+【OpenGL Extensions Viewer】
+
+自分のマシンのグラフィックカード（ディスプレイアダプタとかビ
+デオカードとも言いますが）の OpenGL の拡張を調査できるプログ
+ラムがあります。
+
+<A HREF="http://www.realtech-vr.com/glview/">http://www.realtech-vr.com/glview/</A>
+
+現時点での最新バージョンは 2.2.4 です。Windows 版と Mac OS X
+版の両方があります。
+
+Windows 版：
+<A HREF="ftp://ftp2.realtech-vr.com/realtechv/pub/glview224.exe">ftp://ftp2.realtech-vr.com/realtechv/pub/glview224.exe</A>
+Mac OS X 版：
+<A HREF="ftp://ftp2.realtech-vr.com/realtechv/pub/glview224.dmg">ftp://ftp2.realtech-vr.com/realtechv/pub/glview224.dmg</A>
+
+以下のような情報（抜粋してありますが）を得ることができます。
+
+------------------------------------------------------------
+【IBM ThinkPad T43】
+
+System Info
+Windows XP Professional
+
+Vendor
+ATI Technologies Inc.
+2.0.5285 WinXP Release
+
+Renderer
+MOBILITY RADEON X300 x86/SSE2
+
+Extensions
+GL_ARB_depth_texture
+GL_ARB_fragment_program
+GL_ARB_fragment_program_shadow
+GL_ARB_fragment_shader
+GL_ARB_multisample
+GL_ARB_multitexture
+GL_ARB_occlusion_query
+GL_ARB_point_parameters
+GL_ARB_point_sprite
+GL_ARB_shader_objects
+GL_ARB_shading_language_100
+GL_ARB_shadow
+GL_ARB_shadow_ambient
+GL_ARB_texture_border_clamp
+GL_ARB_texture_compression
+GL_ARB_texture_cube_map
+GL_ARB_texture_env_add
+GL_ARB_texture_env_combine
+GL_ARB_texture_env_crossbar
+GL_ARB_texture_env_dot3
+GL_ARB_texture_mirrored_repeat
+GL_ARB_transpose_matrix
+GL_ARB_vertex_blend
+GL_ARB_vertex_buffer_object
+GL_ARB_vertex_program
+GL_ARB_vertex_shader
+GL_ARB_window_pos
+GL_ATI_draw_buffers
+GL_ATI_element_array
+GL_ATI_envmap_bumpmap
+GL_ATI_fragment_shader
+GL_ATI_map_object_buffer
+GL_ATI_separate_stencil
+GL_ATI_texture_env_combine3
+GL_ATI_texture_float
+GL_ATI_texture_mirror_once
+GL_ATI_vertex_array_object
+GL_ATI_vertex_attrib_array_object
+GL_ATI_vertex_streams
+GL_ATIX_texture_env_combine3
+GL_ATIX_texture_env_route
+GL_ATIX_vertex_shader_output_point_size
+GL_EXT_abgr
+GL_EXT_bgra
+GL_EXT_blend_color
+GL_EXT_blend_func_separate
+GL_EXT_blend_minmax
+GL_EXT_blend_subtract
+GL_EXT_clip_volume_hint
+GL_EXT_compiled_vertex_array
+GL_EXT_draw_range_elements
+GL_EXT_fog_coord
+GL_EXT_framebuffer_object
+GL_EXT_multi_draw_arrays
+GL_EXT_packed_pixels
+GL_EXT_point_parameters
+GL_EXT_rescale_normal
+GL_EXT_secondary_color
+GL_EXT_separate_specular_color
+GL_EXT_shadow_funcs
+GL_EXT_stencil_wrap
+GL_EXT_texgen_reflection
+GL_EXT_texture3D
+GL_EXT_texture_compression_s3tc
+GL_EXT_texture_cube_map
+GL_EXT_texture_edge_clamp
+GL_EXT_texture_env_add
+GL_EXT_texture_env_combine
+GL_EXT_texture_env_dot3
+GL_EXT_texture_filter_anisotropic
+GL_EXT_texture_lod_bias
+GL_EXT_texture_mirror_clamp
+GL_EXT_texture_object
+GL_EXT_texture_rectangle
+GL_EXT_vertex_array
+GL_EXT_vertex_shader
+GL_HP_occlusion_test
+GL_NV_blend_square
+GL_NV_occlusion_query
+GL_NV_texgen_reflection
+GL_S3_s3tc
+GL_SGI_color_matrix
+GL_SGIS_generate_mipmap
+GL_SGIS_multitexture
+GL_SGIS_texture_border_clamp
+GL_SGIS_texture_edge_clamp
+GL_SGIS_texture_lod
+GL_SUN_multi_draw_arrays
+GL_WIN_swap_hint
+WGL_ARB_extensions_string
+WGL_ARB_make_current_read
+WGL_ARB_multisample
+WGL_ARB_pbuffer
+WGL_ARB_pixel_format
+WGL_ARB_render_texture
+WGL_ATI_pixel_format_float
+WGL_ATI_render_texture_rectangle
+WGL_EXT_extensions_string
+WGL_EXT_swap_control
+
+Core features
+v1.1 (100 % - 7/7)
+v1.2 (100 % - 8/8)
+v1.3 (100 % - 9/9)
+v1.4 (100 % - 15/15)
+v1.5 (100 % - 3/3)
+v2.0 (100 % - 9/9)
+
+------------------------------------------------------------
+【IBM ThinkPad T41】
+
+System information
+Windows XP Professional
+
+Vendor
+ATI Technologies Inc.
+1.3.1006 WinXP Release
+
+Renderer
+MOBILITY RADEON 7500 DDR x86/SSE2
+
+Extensions
+GL_ARB_multitexture
+GL_ARB_occlusion_query
+GL_ARB_texture_border_clamp
+GL_ARB_texture_compression
+GL_ARB_texture_cube_map
+GL_ARB_texture_env_add
+GL_ARB_texture_env_combine
+GL_ARB_texture_env_crossbar
+GL_ARB_texture_env_dot3
+GL_ARB_texture_mirrored_repeat
+GL_ARB_transpose_matrix
+GL_ARB_vertex_blend
+GL_ARB_vertex_buffer_object
+GL_ARB_window_pos
+GL_ATI_envmap_bumpmap
+GL_ATI_map_object_buffer
+GL_ATI_texture_env_combine3
+GL_ATI_texture_mirror_once
+GL_ATI_vertex_array_object
+GL_ATI_vertex_streams
+GL_ATIX_texture_env_combine3
+GL_ATIX_texture_env_route
+GL_EXT_abgr
+GL_EXT_bgra
+GL_EXT_clip_volume_hint
+GL_EXT_compiled_vertex_array
+GL_EXT_draw_range_elements
+GL_EXT_fog_coord
+GL_EXT_multi_draw_arrays
+GL_EXT_packed_pixels
+GL_EXT_point_parameters
+GL_EXT_rescale_normal
+GL_EXT_secondary_color
+GL_EXT_separate_specular_color
+GL_EXT_stencil_wrap
+GL_EXT_texgen_reflection
+GL_EXT_texture3D
+GL_EXT_texture_compression_s3tc
+GL_EXT_texture_cube_map
+GL_EXT_texture_edge_clamp
+GL_EXT_texture_env_add
+GL_EXT_texture_env_combine
+GL_EXT_texture_env_dot3
+GL_EXT_texture_filter_anisotropic
+GL_EXT_texture_lod_bias
+GL_EXT_texture_mirror_clamp
+GL_EXT_texture_object
+GL_EXT_texture_rectangle
+GL_EXT_vertex_array
+GL_HP_occlusion_test
+GL_NV_blend_square
+GL_NV_occlusion_query
+GL_NV_texgen_reflection
+GL_S3_s3tc
+GL_SGI_color_matrix
+GL_SGIS_generate_mipmap
+GL_SGIS_multitexture
+GL_SGIS_texture_border_clamp
+GL_SGIS_texture_edge_clamp
+GL_SGIS_texture_lod
+GL_SUN_multi_draw_arrays
+GL_WIN_swap_hint
+WGL_ARB_extensions_string
+WGL_ARB_make_current_read
+WGL_ARB_pbuffer
+WGL_ARB_pixel_format
+WGL_ARB_render_texture
+WGL_EXT_extensions_string
+WGL_EXT_swap_control
+
+Core features set
+v1.1 (100 % - 7/7)
+v1.2 (100 % - 8/8)
+v1.3 (100 % - 9/9)
+v1.4 (66 % - 10/15)
+v1.5 (66 % - 2/3)
+v2.0 (0 % - 0/9)
+
+------------------------------------------------------------
+【IBM ThinkPad X41 Tablet】
+
+System Info
+Windows XP Professional
+
+Vendor
+Intel
+1.4.0 - Build 4.14.10.4466
+
+Renderer
+Intel 915GM
+
+Extensions
+GL_3DFX_texture_compression_FXT1
+GL_ARB_depth_texture
+GL_ARB_fragment_program
+GL_ARB_multitexture
+GL_ARB_point_parameters
+GL_ARB_shadow
+GL_ARB_texture_border_clamp
+GL_ARB_texture_compression
+GL_ARB_texture_cube_map
+GL_ARB_texture_env_add
+GL_ARB_texture_env_combine
+GL_ARB_texture_env_crossbar
+GL_ARB_texture_env_dot3
+GL_ARB_transpose_matrix
+GL_ARB_vertex_buffer_object
+GL_ARB_vertex_program
+GL_ARB_window_pos
+GL_EXT_abgr
+GL_EXT_bgra
+GL_EXT_blend_color
+GL_EXT_blend_func_separate
+GL_EXT_blend_minmax
+GL_EXT_blend_subtract
+GL_EXT_clip_volume_hint
+GL_EXT_compiled_vertex_array
+GL_EXT_cull_vertex
+GL_EXT_draw_range_elements
+GL_EXT_fog_coord
+GL_EXT_multi_draw_arrays
+GL_EXT_packed_pixels
+GL_EXT_rescale_normal
+GL_EXT_secondary_color
+GL_EXT_separate_specular_color
+GL_EXT_shadow_funcs
+GL_EXT_stencil_two_side
+GL_EXT_stencil_wrap
+GL_EXT_texture3D
+GL_EXT_texture_compression_s3tc
+GL_EXT_texture_env_add
+GL_EXT_texture_env_combine
+GL_EXT_texture_filter_anisotropic
+GL_IBM_texture_mirrored_repeat
+GL_NV_blend_square
+GL_NV_texgen_reflection
+GL_SGIS_generate_mipmap
+GL_WIN_swap_hint
+WGL_ARB_buffer_region
+WGL_ARB_extensions_string
+WGL_ARB_make_current_read
+WGL_ARB_pbuffer
+WGL_ARB_pixel_format
+WGL_EXT_swap_control
+
+Core features
+v1.1 (100 % - 7/7)
+v1.2 (100 % - 8/8)
+v1.3 (100 % - 9/9)
+v1.4 (100 % - 15/15)
+v1.5 (66 % - 2/3)
+v2.0 (11 % - 1/9)
+
+------------------------------------------------------------
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007149.html">[SML 7149] [ANNOUNCE] Jun for Java (Jun568)
+</A></li>
+	<LI>次の記事 <A HREF="007151.html">[SML 7151] [ANNOUNCE] ImageSearcher for Java 028
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7150">[ 日付 ]</a>
+              <a href="thread.html#7150">[ スレッド ]</a>
+              <a href="subject.html#7150">[ 件名 ]</a>
+              <a href="author.html#7150">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

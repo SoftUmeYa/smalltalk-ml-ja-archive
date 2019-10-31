@@ -1,0 +1,1145 @@
+From yoshiki ＠ vpri.org  Sun May  1 12:02:09 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Sat, 30 Apr 2011 20:02:09 -0700
+Subject: [Squeak-ja: 4546] Re:
+ アルファチャネルの削除?
+In-Reply-To: <4DBB9E70.4040203@gmail.com>
+References: <4DB96F05.1060604@gmail.com> <4DB9714A.8040702@gmail.com>
+ <ubozplhf6.wl%yoshiki@vpri.org> <4DBB9E70.4040203@gmail.com>
+Message-ID: <usjszjf7y.wl%yoshiki@vpri.org>
+
+At Sat, 30 Apr 2011 14:30:24 +0900,
+Hiroki Horiuchi wrote:
+> 
+> > combination rule 34が使えると思います。
+> 
+> これはどこに文書化されていますか? 私は0 ~ 31までしか知りませんでした。
+
+  ドキュメントということになると見た覚えはないですね。VMMakerパッケー
+ジをロードするとBitBltSimulationというクラスが入りますが、そのクラス
+の#initBBOpTableというメソッドにサポートされているruleの一覧があります。
+それぞれの実装にはコメントがあったのでそれを見て学んだ記憶があります。
+
+  (昔はInterpreterやBitBltSimulationも一緒に配布されていたので探すのは
+結構簡単でした。低レベルのプリミティブで何が起こっているのかを知るには、
+VMMakerをロードしてその中の該当するところを読むというのは結構有力な手
+段だと思います。)
+
+-- Yoshiki
+
+From x19290 ＠ gmail.com  Sun May  1 21:18:46 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sun, 01 May 2011 21:18:46 +0900
+Subject: [Squeak-ja: 4547] Re:
+ アルファチャネルの削除?
+In-Reply-To: <usjszjf7y.wl%yoshiki@vpri.org>
+References: <4DB96F05.1060604@gmail.com> <4DB9714A.8040702@gmail.com>
+ <ubozplhf6.wl%yoshiki@vpri.org> <4DBB9E70.4040203@gmail.com>
+ <usjszjf7y.wl%yoshiki@vpri.org>
+Message-ID: <4DBD4FA6.6070104@gmail.com>
+
+こんばんは。
+
+On 2011年05月01日 12:02, Yoshiki Ohshima wrote:
+
+> 低レベルのプリミティブで何が起こっているのかを知るには、
+> VMMakerをロードしてその中の該当するところを読むというのは結構有力な手
+> 段だと思います。)
+
+ありがとうございます。PharoにVMMakerを入れてみました。少し苦労したので、
+例によって拙ブログに書いておきました。
+http://19290.net/wpmu/blog/2011/05/vmmaker-on-pharo.html
+--
+堀内寛己(ほりうちひろき)
+http://19290.net/
+
+From x19290 ＠ gmail.com  Sun May  1 21:42:57 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sun, 01 May 2011 21:42:57 +0900
+Subject: [Squeak-ja: 4548] Re:
+ アルファチャネルの削除?
+In-Reply-To: <usjszjf7y.wl%yoshiki@vpri.org>
+References: <4DB96F05.1060604@gmail.com> <4DB9714A.8040702@gmail.com>
+ <ubozplhf6.wl%yoshiki@vpri.org> <4DBB9E70.4040203@gmail.com>
+ <usjszjf7y.wl%yoshiki@vpri.org>
+Message-ID: <4DBD5551.4090904@gmail.com>
+
+On 2011年05月01日 12:02, Yoshiki Ohshima wrote:
+
+> ドキュメントということになると見た覚えはないですね。VMMakerパッケー
+> ジをロードするとBitBltSimulationというクラスが入りますが、そのクラス
+> の#initBBOpTableというメソッドにサポートされているruleの一覧があります。
+> それぞれの実装にはコメントがあったのでそれを見て学んだ記憶があります。
+
+今気が付いたのですが、最近のBitBltSimulation>>initBBOpTableには、このコ
+メントがありませんね。
+
+> (昔はInterpreterやBitBltSimulationも一緒に配布されていたので探すのは
+> 結構簡単でした。
+
+SqueakNihongo6Devには最初からInterpreterもBitBltSimulationも入っていて、
+このコメントも確認できます。
+--
+堀内寛己(ほりうちひろき)
+http://19290.net/
+
+From x19290 ＠ gmail.com  Mon May  2 08:16:22 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Mon, 02 May 2011 08:16:22 +0900
+Subject: [Squeak-ja: 4549] Re:
+ アルファチャネルの削除?
+In-Reply-To: <4DBD5551.4090904@gmail.com>
+References: <4DB96F05.1060604@gmail.com> <4DB9714A.8040702@gmail.com>
+ <ubozplhf6.wl%yoshiki@vpri.org> <4DBB9E70.4040203@gmail.com>
+ <usjszjf7y.wl%yoshiki@vpri.org> <4DBD5551.4090904@gmail.com>
+Message-ID: <4DBDE9C6.7080606@gmail.com>
+
+On 2011年05月01日 21:42, Hiroki Horiuchi wrote:
+>
+> 今気が付いたのですが、最近のBitBltSimulation>>initBBOpTableには、このコ
+> メントがありませんね。
+>
+勘違いでした。BitBltSimulator>>initBBOpTableを見てしまいました。
+--
+堀内寛己(ほりうちひろき)
+
+From x19290 ＠ gmail.com  Tue May  3 15:09:22 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Tue, 03 May 2011 15:09:22 +0900
+Subject: [Squeak-ja: 4550] Re:
+ Squeak/Pharoのグラフィクスが分かりかけてきました
+In-Reply-To: <4DBC1B1A.5000102@gmail.com>
+References: <4DBC1B1A.5000102@gmail.com>
+Message-ID: <4DBF9C12.90502@gmail.com>
+
+こんにちは。
+
+On 2011年04月30日 23:22, Hiroki Horiuchi wrote:
+
+> Squeak/Pharoの低レベルのグラフィクスについて、今日、急にわかったことが
+> あったので、拙ブログにまとめておきました。興味のある方はご覧ください。
+>
+> http://19290.net/wpmu/blog/2011/04/squeak-pharo-bit-blt.html
+
+おかげさまで、何人ものかたにこのブログを読んでいただきました。そのうち数
+名の方が、実際にMonticelloパッケージをダウンロードしてくださいました。
+
+しかし、少しパッケージの使いかたが分かりづらかったかもしれません。そこで
+ブログに追記しました。以下は、その追記部です。
+--
+手順の詳細
+
+> これまでの手順をMonticelloパッケージにしてある。興味のある方は試されたい。
+
+パッケージのバージョンコメントに手順が書いてあるが、一部暗号めいた表記が
+ある。
+
+open BitBlt>>primDisplayString3:...
+1s/3:/:/
+Accept.
+
+open BitBlt>>copyBits3
+1s/3$//
+Accept.
+
+1s/PATTERN/REPLACE/とは、「1行目のPATTERNをREPLACEで置換する」と読む。
+‘$’は行末を表わす。
+--
+堀内寛己(ほりうちひろき)
+http://19290.net/
+http://www.facebook.com/hiroki.horiuchi
+http://twitter.com/#!/x19290
+
+From geert.wl.claes ＠ gmail.com  Thu May  5 16:39:30 2011
+From: geert.wl.claes ＠ gmail.com (Geert Claes)
+Date: Thu, 5 May 2011 00:39:30 -0700 (PDT)
+Subject: [Squeak-ja: 4551] Smalltalk in education ...
+Message-ID: <1304581170908-3497740.post@n4.nabble.com>
+
+First of all my apologies for writing in English here as unfortunately
+Japanese is not one of the languages I master.   
+
+I started an initiative (work in progress) to identify in which academic
+institutions (schools, colleges, universities) Smalltalk is being used at:
+http://www.world.st/academia
+
+I was hoping the Japanese community could advise me which (if any?) academic
+institutions use Smalltalk.  I found old records listing the following
+Japanese universities but I am not sure if they still use Smalltalk or if it
+used elsewhere in Japan: 
+- Yamanashi Gakuin Daigaku University 
+- Keio University 
+- Ritsumeikan University 
+
+Thanks!
+
+--
+View this message in context: http://forum.world.st/Smalltalk-in-education-tp3497740p3497740.html
+Sent from the 日本語 (Japanese) mailing list archive at Nabble.com.
+
+From yoshiki ＠ vpri.org  Sat May  7 02:20:48 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri, 06 May 2011 10:20:48 -0700
+Subject: [Squeak-ja: 4552] Re: Smalltalk in education ...
+In-Reply-To: <1304581170908-3497740.post@n4.nabble.com>
+References: <1304581170908-3497740.post@n4.nabble.com>
+Message-ID: <u8vujiw3z.wl%yoshiki@vpri.org>
+
+  Hi, Geert,
+
+  There are somewhat too many institutions to list even for the
+univ. level and people usually don't come out as much as some other
+people want.
+
+  But hopefully we get some responses from people.
+
+  It appears that you're going after college-level institutions and
+above, yes?
+
+-- Yoshiki
+
+At Thu, 5 May 2011 00:39:30 -0700 (PDT),
+Geert Claes wrote:
+> 
+> First of all my apologies for writing in English here as unfortunately
+> Japanese is not one of the languages I master.   
+> 
+> I started an initiative (work in progress) to identify in which academic
+> institutions (schools, colleges, universities) Smalltalk is being used at:
+> http://www.world.st/academia
+> 
+> I was hoping the Japanese community could advise me which (if any?) academic
+> institutions use Smalltalk.  I found old records listing the following
+> Japanese universities but I am not sure if they still use Smalltalk or if it
+> used elsewhere in Japan: 
+> - Yamanashi Gakuin Daigaku University 
+> - Keio University 
+> - Ritsumeikan University 
+> 
+> Thanks!
+> 
+> --
+> View this message in context: http://forum.world.st/Smalltalk-in-education-tp3497740p3497740.html
+> Sent from the 日本語 (Japanese) mailing list archive at Nabble.com.
+
+From x19290 ＠ gmail.com  Sun May  8 10:48:53 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sun, 08 May 2011 10:48:53 +0900
+Subject: [Squeak-ja: 4553]
+ Pharo上での簡単なプラグイン作成手順をまとめました
+Message-ID: <4DC5F685.1040109@gmail.com>
+
+こんにちは。
+
+Pharo + Debian系のGNU/Linuxで、いちばん簡単な外部プラグインを作る手順を
+例によって拙ブログにまとめました。
+http://19290.net/wpmu/blog/2011/05/building-simplest-pharo-plugin-on-debian-gnu-linux.html
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+
+From x19290 ＠ gmail.com  Sun May  8 10:51:29 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Sun, 08 May 2011 10:51:29 +0900
+Subject: [Squeak-ja: 4554]
+ Pharo上での簡単なプラグイン作成手順をまとめました
+Message-ID: <4DC5F721.9000002@gmail.com>
+
+こんにちは。先程は、UTF-8で送ってしまったので、念のため再送します。
+
+Pharo + Debian系のGNU/Linuxで、いちばん簡単な外部プラグインを作る手順を
+例によって拙ブログにまとめました。
+http://19290.net/wpmu/blog/2011/05/building-simplest-pharo-plugin-on-debian-gnu-linux.html
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+From hachi ＠ asu.ac.jp  Mon May  9 18:33:05 2011
+From: hachi ＠ asu.ac.jp (愛知産業大学 蜂須賀)
+Date: Mon, 09 May 2011 18:33:05 +0900
+Subject: [Squeak-ja: 4555]
+ Squeak Etoysのインストーラー作成と配布について
+Message-ID: <4DC7B4D1.3020005@asu.ac.jp>
+
+お久しぶりです蜂須賀です。
+
+本年度「親子で楽しむパソコン教室」という企画を行うことなり、その中で
+Squeak Etoys 4.1.1を使用する予定でいます。そのまま使うのではなく、ひらが
+な対応や設定変更など、若干のカスタマイズを行う予定でいるのですが、希望す
+る方には同じものを配布できればと考えています。
+
+Etoysのインストーラーソースがダウンロードできるみたいですので、インス
+トーラーを作成して配布しようと考えているのですが、MTS版のSqueak Etoysで
+は、オリジナルのEtoys3をインストール後に上書きでインストールする形になっ
+ています。別になっているのはライセンスや何らかの問題があるからなのでしょ
+うか？
+
+またオリジナルのSqueak EtoysやMTS版Squeak Etoysがある中で、安易に公開し
+てしまうと混乱を招いてしまうのではないかとか色々と悩んでいます。
+
+そのあたりでご意見を頂けると助かります。
+
+From itoh-private ＠ itolab.com  Mon May  9 19:52:38 2011
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Mon, 9 May 2011 19:52:38 +0900
+Subject: [Squeak-ja: 4556] Re:
+ 組み込み用のSqueak VMについて
+In-Reply-To: <8A05C2F7-3FB8-49CD-9C4D-EA8E1F32703D@itolab.com>
+References: <8A05C2F7-3FB8-49CD-9C4D-EA8E1F32703D@itolab.com>
+Message-ID: <5ECD9435-9D0A-43EF-BE7B-AE792F75347E@itolab.com>
+
+山梨学院大学の伊藤です。
+たびたびすみません。
+
+メールを出しておいて気づいたのですが、MicroSqueakの配布物の中に
+VMソースがありますね。あわてて見過ごしておりました。すみません。
+ということで、VMに関する情報は別として、この方面の実績について
+お尋ねできればと思います。
+
+よろしくお願いいたします。
+
+On 2011/05/09, at 19:22, Eiichiro Ito wrote:
+
+> 山梨学院大学の伊藤です。Squeakerの皆さんこんにちは。
+> 
+> 現在、とある機器にSqueakを組み込んで使いたいと思っています。
+> imageとしてはMicroSqueakを利用しようと考えているのですが、対応する
+> VMの選定について悩んでおります。Readmeには2.8から3.2あたりを使えと
+> 書かれておりUnix VMのソースをsqueakvm.orgから取って眺めております。
+> 
+> 以前にこのMLかどこかで、PIC等のマイコンに組み込んだという話を聞いた
+> 気がするのですが、ご存知の方はいらっしゃいますでしょうか。
+> また、同様の試みをされている方がいらっしゃったら、ぜひVMのバージョン
+> やビルドなどアドバイスいただけるとありがたいです。
+> 
+> いつも質問ばかりですみません。
+> よろしくお願いいたします。
+> 
+
+
+From abee.abe ＠ nifty.ne.jp  Mon May  9 20:08:34 2011
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon, 9 May 2011 20:08:34 +0900
+Subject: [Squeak-ja: 4557] Re:
+	組み込み用のSqueak VMについて
+In-Reply-To: <5ECD9435-9D0A-43EF-BE7B-AE792F75347E@itolab.com>
+References: <8A05C2F7-3FB8-49CD-9C4D-EA8E1F32703D@itolab.com>
+ <5ECD9435-9D0A-43EF-BE7B-AE792F75347E@itolab.com>
+Message-ID: <BANLkTim-_i1kcFEOBUTs+cgFVFHRhfyBQw@mail.gmail.com>
+
+阿部です。
+PICでSmalltalkということだと、少し古いですがPIC/Smalltalkがあります。
+http://www.huv.com/uSeeker/smalltalk/pic.html
+IDEとしてSqueak 2.8を用いアセンブラを書き出すようです。
+PIC上で直接Smalltalkが動くわけではないのでご希望とは異なると思いますがご参考まで。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2011年5月9日19:52 Eiichiro Ito <itoh-private ＠ itolab.com>:
+> 山梨学院大学の伊藤です。
+> たびたびすみません。
+>
+> メールを出しておいて気づいたのですが、MicroSqueakの配布物の中に
+> VMソースがありますね。あわてて見過ごしておりました。すみません。
+> ということで、VMに関する情報は別として、この方面の実績について
+> お尋ねできればと思います。
+>
+> よろしくお願いいたします。
+>
+> On 2011/05/09, at 19:22, Eiichiro Ito wrote:
+>
+>> 山梨学院大学の伊藤です。Squeakerの皆さんこんにちは。
+>>
+>> 現在、とある機器にSqueakを組み込んで使いたいと思っています。
+>> imageとしてはMicroSqueakを利用しようと考えているのですが、対応する
+>> VMの選定について悩んでおります。Readmeには2.8から3.2あたりを使えと
+>> 書かれておりUnix VMのソースをsqueakvm.orgから取って眺めております。
+>>
+>> 以前にこのMLかどこかで、PIC等のマイコンに組み込んだという話を聞いた
+>> 気がするのですが、ご存知の方はいらっしゃいますでしょうか。
+>> また、同様の試みをされている方がいらっしゃったら、ぜひVMのバージョン
+>> やビルドなどアドバイスいただけるとありがたいです。
+>>
+>> いつも質問ばかりですみません。
+>> よろしくお願いいたします。
+>>
+>
+>
+
+From itoh-private ＠ itolab.com  Mon May  9 19:22:04 2011
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Mon, 9 May 2011 19:22:04 +0900
+Subject: [Squeak-ja: 4558]
+ 組み込み用のSqueak VMについて
+Message-ID: <8A05C2F7-3FB8-49CD-9C4D-EA8E1F32703D@itolab.com>
+
+山梨学院大学の伊藤です。Squeakerの皆さんこんにちは。
+
+現在、とある機器にSqueakを組み込んで使いたいと思っています。
+imageとしてはMicroSqueakを利用しようと考えているのですが、対応する
+VMの選定について悩んでおります。Readmeには2.8から3.2あたりを使えと
+書かれておりUnix VMのソースをsqueakvm.orgから取って眺めております。
+
+以前にこのMLかどこかで、PIC等のマイコンに組み込んだという話を聞いた
+気がするのですが、ご存知の方はいらっしゃいますでしょうか。
+また、同様の試みをされている方がいらっしゃったら、ぜひVMのバージョン
+やビルドなどアドバイスいただけるとありがたいです。
+
+いつも質問ばかりですみません。
+よろしくお願いいたします。
+
+
+From itoh-private ＠ itolab.com  Mon May  9 20:15:02 2011
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Mon, 9 May 2011 20:15:02 +0900
+Subject: [Squeak-ja: 4559] Re:
+ 組み込み用のSqueak VMについて
+In-Reply-To: <BANLkTim-_i1kcFEOBUTs+cgFVFHRhfyBQw@mail.gmail.com>
+References: <8A05C2F7-3FB8-49CD-9C4D-EA8E1F32703D@itolab.com>
+ <5ECD9435-9D0A-43EF-BE7B-AE792F75347E@itolab.com>
+ <BANLkTim-_i1kcFEOBUTs+cgFVFHRhfyBQw@mail.gmail.com>
+Message-ID: <67E833D4-0214-466B-AAAE-9EE315E32EEF@itolab.com>
+
+阿部さん
+
+伊藤です。こんにちは。
+早速の情報ありがとうございます。
+以前に聞いた覚えがあるのは、まさにご指摘のものです。
+プログラムによるアセンブラ出力でしたか。残念です。
+
+On 2011/05/09, at 20:08, Kazuhiro ABE wrote:
+
+> 阿部です。
+> PICでSmalltalkということだと、少し古いですがPIC/Smalltalkがあります。
+> http://www.huv.com/uSeeker/smalltalk/pic.html
+> IDEとしてSqueak 2.8を用いアセンブラを書き出すようです。
+> PIC上で直接Smalltalkが動くわけではないのでご希望とは異なると思いますがご参考まで。
+> 
+> //abee
+> --
+> 阿部 和広  EMAIL abee ＠ squeakland.jp
+> 
+> 2011年5月9日19:52 Eiichiro Ito <itoh-private ＠ itolab.com>:
+>> 山梨学院大学の伊藤です。
+>> たびたびすみません。
+>> 
+>> メールを出しておいて気づいたのですが、MicroSqueakの配布物の中に
+>> VMソースがありますね。あわてて見過ごしておりました。すみません。
+>> ということで、VMに関する情報は別として、この方面の実績について
+>> お尋ねできればと思います。
+>> 
+>> よろしくお願いいたします。
+>> 
+>> On 2011/05/09, at 19:22, Eiichiro Ito wrote:
+>> 
+>>> 山梨学院大学の伊藤です。Squeakerの皆さんこんにちは。
+>>> 
+>>> 現在、とある機器にSqueakを組み込んで使いたいと思っています。
+>>> imageとしてはMicroSqueakを利用しようと考えているのですが、対応する
+>>> VMの選定について悩んでおります。Readmeには2.8から3.2あたりを使えと
+>>> 書かれておりUnix VMのソースをsqueakvm.orgから取って眺めております。
+>>> 
+>>> 以前にこのMLかどこかで、PIC等のマイコンに組み込んだという話を聞いた
+>>> 気がするのですが、ご存知の方はいらっしゃいますでしょうか。
+>>> また、同様の試みをされている方がいらっしゃったら、ぜひVMのバージョン
+>>> やビルドなどアドバイスいただけるとありがたいです。
+>>> 
+>>> いつも質問ばかりですみません。
+>>> よろしくお願いいたします。
+>>> 
+>> 
+>> 
+
+
+From korakurider ＠ gmail.com  Tue May 10 01:12:57 2011
+From: korakurider ＠ gmail.com (Korakurider)
+Date: Tue, 10 May 2011 01:12:57 +0900
+Subject: [Squeak-ja: 4560] Re:
+	Squeak Etoysのインストーラー作成と配布について
+In-Reply-To: <4DC7B4D1.3020005@asu.ac.jp>
+References: <4DC7B4D1.3020005@asu.ac.jp>
+Message-ID: <BANLkTimAvMdZWFC-TCkAT3Sq+8GUURW40A@mail.gmail.com>
+
+Korakuriderです。最近ちょっとお休みしていますが、本家版Squeak Etoysの
+開発メンテに参加しています。
+
+> Etoysのインストーラーソースがダウンロードできるみたいですので、インス
+> トーラーを作成して配布しようと考えているのですが、MTS版のSqueak Etoysで
+> は、オリジナルのEtoys3をインストール後に上書きでインストールする形になっ
+> ています。別になっているのはライセンスや何らかの問題があるからなのでしょ
+> うか？
+
+ご承知のとおり、本家版の配布キットのインストーラのソースは、
+　　http://etoys.squeak.org/svn/trunk/installers/
+です。
+http://etoys.squeak.org/svn/trunk/Etoys/NOTICE （Etoysキットにも同梱）
+のとおり MITライセンスとなっていますので、派生版を作って配布されることに
+何らライセンス上の問題はありません。
+
+MTS版の内部事情は存じませんが、最小限のエンジニアリング作業で済まされているのだと
+想像しています。
+
+広く配布されるのであれば、個人的な要望としては
++ なんらかの手段で、配布キットおよびインストールされた結果の上で
+　オリジナル版と派生版の区別がつくこと
++ 派生版の元になったオリジナルのバージョンがどこか（たとえば同梱リリースノート）に文書になっていること
+がクリアされていれば、本家側の立場での問題は感じません。
+
+> またオリジナルのSqueak EtoysやMTS版Squeak Etoysがある中で、安易に公開し
+> てしまうと混乱を招いてしまうのではないかとか色々と悩んでいます。
+
+本家版は、OLPC上で展開すること、およびOLPCを含む各プラットフォーム間での互換性
+を維持することという要件があり、従来の Nihongo# や squeakland2005J のように日本独自の要件や
+日本の現場・やコミュニティの皆さんの意向にあわせた形に調整をすることが難しい場合があります。
+そのため、日本に広く展開するのであれば、squeakland版をカスタマイズしたsqueakland2005J のように、
+本家 Etoys4.* をベースに日本独自の配布版を作ることが必要になるとは認識しています。
+
+逆に、本家版を皆さんが試されて不便に感じられたことや現場での要望があれば、
+（個別のカスタマイズ版を作られるのは自由ですが）、可能なものは本家版に取り込んでいきたい
+と思っています。ただ、必ず取り込めるとは限らないのと、反映には時間がかかってしまうので、
+現場で必要なものはどんどん、派生版として具現化していただければよいのではないでしょうか。
+
+私の認識では、日本では　事実上MTS版がSqueakland2005Jの後継バージョンと扱われている
+と思いますが、現在etoys.jpサイトで配布されているものは本家の少し古いバージョン（3.0）がベースに
+なっています。（Etoys 4.* 対応を検討されているとはお聞きしましたが、その後の状況は存じていません）
+この状況で Etoys4.* ベースの版を出した場合に、作品の互換性などで混乱が生じるリスクは確かに
+あり、一度状況を整理したほうがよいかもしれませんね。
+
+/Korakurider
+
+From miyazaki ＠ tb3.so-net.ne.jp  Tue May 10 10:13:42 2011
+From: miyazaki ＠ tb3.so-net.ne.jp (Hiroshi MIYAZAKI)
+Date: Tue, 10 May 2011 10:13:42 +0900
+Subject: [Squeak-ja: 4561] Re:
+	組み込み用のSqueak VMについて
+In-Reply-To: <8A05C2F7-3FB8-49CD-9C4D-EA8E1F32703D@itolab.com>
+References: <8A05C2F7-3FB8-49CD-9C4D-EA8E1F32703D@itolab.com>
+Message-ID: <BANLkTinyWHgW7i0Yzud7vUBhxH=Mu6jdkA@mail.gmail.com>
+
+はじめまして
+宮崎と申します．
+
+> 現在、とある機器にSqueakを組み込んで使いたいと思っています。
+:
+> 以前にこのMLかどこかで、PIC等のマイコンに組み込んだという話を聞いた
+> 気がするのですが、ご存知の方はいらっしゃいますでしょうか。
+NXtalkというLEGO Mindstorms NXTに実装されたSmalltalkがあります．
+http://www.hpi.uni-potsdam.de/hirschfeld/projects/nxtalk/index.html
+
+NXT以外のARM7環境への移植はNXOSも含めて難しくはなさそうです．
+PICよりは豪華な環境が必要ですが．
+
+From itoh-private ＠ itolab.com  Tue May 10 21:58:40 2011
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Tue, 10 May 2011 21:58:40 +0900
+Subject: [Squeak-ja: 4562] Re:
+ 組み込み用のSqueak VMについて
+In-Reply-To: <BANLkTinyWHgW7i0Yzud7vUBhxH=Mu6jdkA@mail.gmail.com>
+References: <8A05C2F7-3FB8-49CD-9C4D-EA8E1F32703D@itolab.com>
+ <BANLkTinyWHgW7i0Yzud7vUBhxH=Mu6jdkA@mail.gmail.com>
+Message-ID: <26A85ACA-F66E-4EB3-B98A-1BFF373AFE2D@itolab.com>
+
+伊藤です。はじめまして。
+
+NXT用の環境があるとは全く知りませんでした。
+NXTとPCのインターフェイスなど興味深いですね。
+有用な情報ありがとうございました。
+
+On 2011/05/10, at 10:13, Hiroshi MIYAZAKI wrote:
+
+> はじめまして
+> 宮崎と申します．
+> 
+>> 現在、とある機器にSqueakを組み込んで使いたいと思っています。
+> :
+>> 以前にこのMLかどこかで、PIC等のマイコンに組み込んだという話を聞いた
+>> 気がするのですが、ご存知の方はいらっしゃいますでしょうか。
+> NXtalkというLEGO Mindstorms NXTに実装されたSmalltalkがあります．
+> http://www.hpi.uni-potsdam.de/hirschfeld/projects/nxtalk/index.html
+> 
+> NXT以外のARM7環境への移植はNXOSも含めて難しくはなさそうです．
+> PICよりは豪華な環境が必要ですが．
+
+
+From hachi ＠ asu.ac.jp  Wed May 11 06:56:21 2011
+From: hachi ＠ asu.ac.jp (愛知産業大学 蜂須賀)
+Date: Wed, 11 May 2011 06:56:21 +0900
+Subject: [Squeak-ja: 4563] Re:
+ Squeak Etoysのインストーラー作成と配布について
+In-Reply-To: <BANLkTimAvMdZWFC-TCkAT3Sq+8GUURW40A@mail.gmail.com>
+References: <4DC7B4D1.3020005@asu.ac.jp>
+ <BANLkTimAvMdZWFC-TCkAT3Sq+8GUURW40A@mail.gmail.com>
+Message-ID: <4DC9B485.7060103@asu.ac.jp>
+
+お世話になります蜂須賀です。
+
+ありがとうございます。インストール後にオリジナル版と区別できるようにする
+事や、派生版の元になったオリジナルのバージョンを明確にするなど、私の中で
+引っかかっていた部分がかなりクリアになった気がします。
+
+広くに配布しようとは思っていないのですが、できればダウンロードに制限は設
+けず誰でも行えるようにしたいと思っていました。
+
+しかし、私たちが行っている変更には、MTS版のようにTrueTypeフォント対応や
+起動時の画面を白紙にしたりといった見た目で分かるような変更は含まれていな
+いため、ぱっと見ただけではオリジナルと区別がつかず悩んでいました。※よく
+みてみればタイルが「ひらがな」になっているのですが分かりにくいです。
+
+頂いたご意見を参考にしていきたいと思います。ありがとうございました。
+
+> Korakuriderです。最近ちょっとお休みしていますが、本家版Squeak Etoysの
+> 開発メンテに参加しています。
+> 
+>> Etoysのインストーラーソースがダウンロードできるみたいですので、インス
+>> トーラーを作成して配布しようと考えているのですが、MTS版のSqueak Etoysで
+>> は、オリジナルのEtoys3をインストール後に上書きでインストールする形になっ
+>> ています。別になっているのはライセンスや何らかの問題があるからなのでしょ
+>> うか？
+> 
+> ご承知のとおり、本家版の配布キットのインストーラのソースは、
+> 　　http://etoys.squeak.org/svn/trunk/installers/
+> です。
+> http://etoys.squeak.org/svn/trunk/Etoys/NOTICE （Etoysキットにも同梱）
+> のとおり MITライセンスとなっていますので、派生版を作って配布されることに
+> 何らライセンス上の問題はありません。
+> 
+> MTS版の内部事情は存じませんが、最小限のエンジニアリング作業で済まされているのだと
+> 想像しています。
+> 
+> 広く配布されるのであれば、個人的な要望としては
+> + なんらかの手段で、配布キットおよびインストールされた結果の上で
+> 　オリジナル版と派生版の区別がつくこと
+> + 派生版の元になったオリジナルのバージョンがどこか（たとえば同梱リリースノート）に文書になっていること
+> がクリアされていれば、本家側の立場での問題は感じません。
+> 
+>> またオリジナルのSqueak EtoysやMTS版Squeak Etoysがある中で、安易に公開し
+>> てしまうと混乱を招いてしまうのではないかとか色々と悩んでいます。
+> 
+> 本家版は、OLPC上で展開すること、およびOLPCを含む各プラットフォーム間での互換性
+> を維持することという要件があり、従来の Nihongo# や squeakland2005J のように日本独自の要件や
+> 日本の現場・やコミュニティの皆さんの意向にあわせた形に調整をすることが難しい場合があります。
+> そのため、日本に広く展開するのであれば、squeakland版をカスタマイズしたsqueakland2005J のように、
+> 本家 Etoys4.* をベースに日本独自の配布版を作ることが必要になるとは認識しています。
+> 
+> 逆に、本家版を皆さんが試されて不便に感じられたことや現場での要望があれば、
+> （個別のカスタマイズ版を作られるのは自由ですが）、可能なものは本家版に取り込んでいきたい
+> と思っています。ただ、必ず取り込めるとは限らないのと、反映には時間がかかってしまうので、
+> 現場で必要なものはどんどん、派生版として具現化していただければよいのではないでしょうか。
+> 
+> 私の認識では、日本では　事実上MTS版がSqueakland2005Jの後継バージョンと扱われている
+> と思いますが、現在etoys.jpサイトで配布されているものは本家の少し古いバージョン（3.0）がベースに
+> なっています。（Etoys 4.* 対応を検討されているとはお聞きしましたが、その後の状況は存じていません）
+> この状況で Etoys4.* ベースの版を出した場合に、作品の互換性などで混乱が生じるリスクは確かに
+> あり、一度状況を整理したほうがよいかもしれませんね。
+> 
+> /Korakurider
+> 
+
+
+From x19290 ＠ gmail.com  Wed May 11 18:46:21 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Wed, 11 May 2011 18:46:21 +0900
+Subject: [Squeak-ja: 4564]
+ BitBltの録画・再生が完全には成功しない
+Message-ID: <4DCA5AED.9080301@gmail.com>
+
+こんにちは。
+
+以前ブログに書いたように、PharoでBitBltを録画・再生する実験を行っていま
+すが、完全には成功していません。どのようにしたらうまく行きますか?
+
+よろしくお願いします。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+http://19290.net/wpmu/blog/2011/05/h2-bit-blt-study2.html (このメールの続き)
+
+(再現方法)
+
+添付のH2-BitBlt-Study2.stファイルをFileinし、該ファイルの先頭のコメント
+にしたがいます。該ファイルをFileinすることにより、以下が追加されます。
+
+* H2BltCollectorクラス
+* H2BltVramクラス
+* BitBlt>>primDisplayString2:from:to:map:xTable:kern:
+* BitBlt>>primDisplayString3:from:to:map:xTable:kern:
+* BitBlt>>copyBits2
+* BitBlt>>copyBits3
+* BitBlt>>copyBits4
+
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: H2-BitBlt-Study2.st
+URL:  <http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20110511/cde246dd/attachment.txt>
+
+From x19290 ＠ gmail.com  Wed May 11 18:50:08 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Wed, 11 May 2011 18:50:08 +0900
+Subject: [Squeak-ja: 4565] Re:
+ BitBltの録画・再生が完全には成功しない
+In-Reply-To: <4DCA5AED.9080301@gmail.com>
+References: <4DCA5AED.9080301@gmail.com>
+Message-ID: <4DCA5BD0.6060409@gmail.com>
+
+またUTF-8で送ってしまいました。
+
+念のため、読めない場合は、アーカイブ
+http://www.smalltalk.jp/pipermail/squeak-ja/2011-May/004564.html
+をご覧ください。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+
+From yoshiki ＠ vpri.org  Thu May 12 02:36:22 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed, 11 May 2011 10:36:22 -0700
+Subject: [Squeak-ja: 4566] Re:
+ BitBltの録画・再生が完全には成功しない
+In-Reply-To: <4DCA5AED.9080301@gmail.com>
+References: <4DCA5AED.9080301@gmail.com>
+Message-ID: <uvcxhgmw9.wl%yoshiki@vpri.org>
+
+At Wed, 11 May 2011 18:46:21 +0900,
+Hiroki Horiuchi wrote:
+> 
+> こんにちは。
+> 
+> 以前ブログに書いたように、PharoでBitBltを録画・再生する実験を行っていま
+> すが、完全には成功していません。どのようにしたらうまく行きますか?
+
+  面白い企画ですね。中身は良く見ていませんが、おそらくはBalloonCanvas
+まわりではないかと予想されます。たとえば、Squeak 4.2イメージで、MVC
+Projectを開き、そのなかで同様の処理をした場合はいかがでしょうか。
+
+  もしそれで動くとすれば、asBalloonCanvasのsendersを見て、
+BalloonCanvas経由で描画しているところをFormCanvasの機能でエミュレート
+するようにするとよいかもしれません。
+
+-- Yoshiki
+
+From miyasaka ＠ iris.dti.ne.jp  Thu May 12 02:41:55 2011
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu, 12 May 2011 02:41:55 +0900
+Subject: [Squeak-ja: 4567] Re:
+	Squeak Etoysのインストーラー作成と配布について
+In-Reply-To: <4DC9B485.7060103@asu.ac.jp>
+References: <4DC7B4D1.3020005@asu.ac.jp>
+ <BANLkTimAvMdZWFC-TCkAT3Sq+8GUURW40A@mail.gmail.com>
+ <4DC9B485.7060103@asu.ac.jp>
+Message-ID: <BANLkTimC6LjjbVak0OHS6-u0OgHmOHBMfw@mail.gmail.com>
+
+Korakuriderさん、蜂須賀さん
+
+こんばんは。
+「みんなでたのしくスクイーク」の宮坂です。
+返信が遅くなりすみませんでした。
+
+■MTS版について
+インストーラは、単にブラウザプラグインなどの設定方法がすぐにわからなかったので、安全策で２つに分けました。
+Etoys4.0対応を昨年末に検討したことがあるのですが、まだ完了しておりません。Korakuriderさんにもいろいろ相談させていただきましたが、その後進捗が滞っておりすみません。
+私の時間的制約が一番の理由なのですが、私のワークショップで使う機能はそれほど多くなく、3.0でも十分なため、あまり急いでいないという事情もございます。
+ただ、4.0のほうが安定しているでしょうし、もうすこしきれいなフォントを入れたくなってきたので、阿部さんにも相談の上、また改めて検討しているところです。（今のモナーフォントは当時フリーで使えるフォントがあまりない中で採用したものだったので）
+
+■Squeakland版
+利用環境に応じてEtoysのカスタマイズができることは大きなメリットかと思いますので、いろいろなカスタマイズ版が公開されることは私もいいことだと思います。
+とはいえ、Korakuriderさんも書かれていたとおり、状況を整理したほうがいいというのはそのとおりですね。
+もともと、MTS版も過渡的なものとして公開しておりましたので、日本語版の本家をどうするか、という問題は確かにございます。
+最近は、Scratchに比べて話題が少ないEtoysですので、なにか施策を講じたいところではありますが、悩ましいです。。。
+
+では、よろしくお願いします。
+
+宮坂
+
+
+
+
+
+
+2011年5月11日6:56 愛知産業大学 蜂須賀 <hachi ＠ asu.ac.jp>:
+> お世話になります蜂須賀です。
+>
+> ありがとうございます。インストール後にオリジナル版と区別できるようにする
+> 事や、派生版の元になったオリジナルのバージョンを明確にするなど、私の中で
+> 引っかかっていた部分がかなりクリアになった気がします。
+>
+> 広くに配布しようとは思っていないのですが、できればダウンロードに制限は設
+> けず誰でも行えるようにしたいと思っていました。
+>
+> しかし、私たちが行っている変更には、MTS版のようにTrueTypeフォント対応や
+> 起動時の画面を白紙にしたりといった見た目で分かるような変更は含まれていな
+> いため、ぱっと見ただけではオリジナルと区別がつかず悩んでいました。※よく
+> みてみればタイルが「ひらがな」になっているのですが分かりにくいです。
+>
+> 頂いたご意見を参考にしていきたいと思います。ありがとうございました。
+>
+>> Korakuriderです。最近ちょっとお休みしていますが、本家版Squeak Etoysの
+>> 開発メンテに参加しています。
+>>
+>>> Etoysのインストーラーソースがダウンロードできるみたいですので、インス
+>>> トーラーを作成して配布しようと考えているのですが、MTS版のSqueak Etoysで
+>>> は、オリジナルのEtoys3をインストール後に上書きでインストールする形になっ
+>>> ています。別になっているのはライセンスや何らかの問題があるからなのでしょ
+>>> うか？
+>>
+>> ご承知のとおり、本家版の配布キットのインストーラのソースは、
+>>　　 http://etoys.squeak.org/svn/trunk/installers/
+>> です。
+>> http://etoys.squeak.org/svn/trunk/Etoys/NOTICE （Etoysキットにも同梱）
+>> のとおり MITライセンスとなっていますので、派生版を作って配布されることに
+>> 何らライセンス上の問題はありません。
+>>
+>> MTS版の内部事情は存じませんが、最小限のエンジニアリング作業で済まされているのだと
+>> 想像しています。
+>>
+>> 広く配布されるのであれば、個人的な要望としては
+>> + なんらかの手段で、配布キットおよびインストールされた結果の上で
+>>　 オリジナル版と派生版の区別がつくこと
+>> + 派生版の元になったオリジナルのバージョンがどこか（たとえば同梱リリースノート）に文書になっていること
+>> がクリアされていれば、本家側の立場での問題は感じません。
+>>
+>>> またオリジナルのSqueak EtoysやMTS版Squeak Etoysがある中で、安易に公開し
+>>> てしまうと混乱を招いてしまうのではないかとか色々と悩んでいます。
+>>
+>> 本家版は、OLPC上で展開すること、およびOLPCを含む各プラットフォーム間での互換性
+>> を維持することという要件があり、従来の Nihongo# や squeakland2005J のように日本独自の要件や
+>> 日本の現場・やコミュニティの皆さんの意向にあわせた形に調整をすることが難しい場合があります。
+>> そのため、日本に広く展開するのであれば、squeakland版をカスタマイズしたsqueakland2005J のように、
+>> 本家 Etoys4.* をベースに日本独自の配布版を作ることが必要になるとは認識しています。
+>>
+>> 逆に、本家版を皆さんが試されて不便に感じられたことや現場での要望があれば、
+>> （個別のカスタマイズ版を作られるのは自由ですが）、可能なものは本家版に取り込んでいきたい
+>> と思っています。ただ、必ず取り込めるとは限らないのと、反映には時間がかかってしまうので、
+>> 現場で必要なものはどんどん、派生版として具現化していただければよいのではないでしょうか。
+>>
+>> 私の認識では、日本では　事実上MTS版がSqueakland2005Jの後継バージョンと扱われている
+>> と思いますが、現在etoys.jpサイトで配布されているものは本家の少し古いバージョン（3.0）がベースに
+>> なっています。（Etoys 4.* 対応を検討されているとはお聞きしましたが、その後の状況は存じていません）
+>> この状況で Etoys4.* ベースの版を出した場合に、作品の互換性などで混乱が生じるリスクは確かに
+>> あり、一度状況を整理したほうがよいかもしれませんね。
+>>
+>> /Korakurider
+>>
+>
+>
+
+From x19290 ＠ gmail.com  Thu May 12 11:15:34 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Thu, 12 May 2011 11:15:34 +0900
+Subject: [Squeak-ja: 4568] Re:
+ BitBltの録画・再生が完全には成功しない
+In-Reply-To: <uvcxhgmw9.wl%yoshiki@vpri.org>
+References: <4DCA5AED.9080301@gmail.com> <uvcxhgmw9.wl%yoshiki@vpri.org>
+Message-ID: <4DCB42C6.7030403@gmail.com>
+
+On 2011年05月12日 02:36, Yoshiki Ohshima wrote:
+
+> 面白い企画ですね。
+
+ありがとうございます。励みになります。
+
+> たとえば、Squeak 4.2イメージで、MVC
+> Projectを開き、そのなかで同様の処理をした場合はいかがでしょうか。
+
+MVCプロジェクト内でウィンドウタイトルは、正常に表示されました。
+
+> もしそれで動くとすれば、asBalloonCanvasのsendersを見て、
+> BalloonCanvas経由で描画しているところをFormCanvasの機能でエミュレート
+> するようにするとよいかもしれません。
+
+これがよくわかりません。あてずっぽうで、BalloonCanvas>>asBalloonCanvasを
+削除したところ、結果は同じ(グラデーションが再現されない)でした。
+FormCanvas>>asBalloonCanvasを^ self や^ self copyにしたところ、システム
+がフリーズしました。
+
+なお、前回(ブログで)文字がかすれると書いた問題は、BitBlt>>destForm:を追
+加して、(self copy destForm: H2BltVram singleton vram) copyBitsするよう
+にしたら直りました。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+From x19290 ＠ gmail.com  Thu May 12 13:51:32 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Thu, 12 May 2011 13:51:32 +0900
+Subject: [Squeak-ja: 4569] Re:
+ BitBltの録画・再生が完全には成功しない
+In-Reply-To: <4DCB42C6.7030403@gmail.com>
+References: <4DCA5AED.9080301@gmail.com> <uvcxhgmw9.wl%yoshiki@vpri.org>
+ <4DCB42C6.7030403@gmail.com>
+Message-ID: <4DCB6754.6060902@gmail.com>
+
+On 2011年05月12日 11:15, Hiroki Horiuchi wrote:
+
+> なお、前回(ブログで)文字がかすれると書いた問題は、BitBlt>>destForm:を追
+> 加して、(self copy destForm: H2BltVram singleton vram) copyBitsするよう
+> にしたら直りました。
+
+BitBlt>>destForm:は、その名のとおり、ただのセッターです。destFormが
+DisplayであるBitBlt (GrafPortかもしれない)をコピーして、そのdestFormを
+このセッターを使ってH2BltVram singleton vramにすげ替えてから、copyBitsし
+たということです。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+
+From yoshiki ＠ vpri.org  Thu May 12 14:07:50 2011
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed, 11 May 2011 22:07:50 -0700
+Subject: [Squeak-ja: 4570] Re:
+ BitBltの録画・再生が完全には成功しない
+In-Reply-To: <4DCB42C6.7030403@gmail.com>
+References: <4DCA5AED.9080301@gmail.com> <uvcxhgmw9.wl%yoshiki@vpri.org>
+ <4DCB42C6.7030403@gmail.com>
+Message-ID: <upqnoh5g9.wl%yoshiki@vpri.org>
+
+At Thu, 12 May 2011 11:15:34 +0900,
+Hiroki Horiuchi wrote:
+> 
+> On 2011年05月12日 02:36, Yoshiki Ohshima wrote:
+> 
+> > 面白い企画ですね。
+> 
+> ありがとうございます。励みになります。
+> 
+> > たとえば、Squeak 4.2イメージで、MVC
+> > Projectを開き、そのなかで同様の処理をした場合はいかがでしょうか。
+> 
+> MVCプロジェクト内でウィンドウタイトルは、正常に表示されました。
+
+  Displayや他のFormを操作するためのエンジンとしては、昔からのBitBltの
+他にBalloonEngineというものがあって、グラデーションやアンチエイリア
+シング付のポリゴン描画などはそちらが使われるようになっています。これが
+補足されていないために完全になっていないのではないかと推測しています。
+
+> > もしそれで動くとすれば、asBalloonCanvasのsendersを見て、
+> > BalloonCanvas経由で描画しているところをFormCanvasの機能でエミュレート
+> > するようにするとよいかもしれません。
+> 
+> これがよくわかりません。あてずっぽうで、BalloonCanvas>>asBalloonCanvasを
+> 削除したところ、結果は同じ(グラデーションが再現されない)でした。
+> FormCanvas>>asBalloonCanvasを^ self や^ self copyにしたところ、システム
+> がフリーズしました。
+
+FormCanvas>>drawPolygon:fillStyle:borderWidth:borderColor:
+
+drawPolygon: vertices fillStyle: aFillStyle borderWidth: bw borderColor: bc
+	"Use a BalloonCanvas"
+	self asBalloonCanvas 
+		drawPolygon: vertices asArray
+		fillStyle: (self shadowColor ifNil:[aFillStyle])
+		borderWidth: bw 
+		borderColor: bc
+
+というようになっているので、asBalloonCanvasが自分自身を返すと無限ルー
+プになってしまいますね。
+
+  BalloonCanvas経由の描画をどのように完全に補足するかというのはちょっ
+と考える必要がありますね。原理的には、copyBitsを補足するのと同様に、
+#flushの前でのEngineの状態をコピーすることでできるのかもしれませんが。
+
+-- Yoshiki
+
+From hachi ＠ asu.ac.jp  Fri May 13 08:01:59 2011
+From: hachi ＠ asu.ac.jp (愛知産業大学 蜂須賀)
+Date: Fri, 13 May 2011 08:01:59 +0900
+Subject: [Squeak-ja: 4571] Re:
+ Squeak Etoysのインストーラー作成と配布について
+In-Reply-To: <BANLkTimC6LjjbVak0OHS6-u0OgHmOHBMfw@mail.gmail.com>
+References: <4DC7B4D1.3020005@asu.ac.jp>
+ <BANLkTimAvMdZWFC-TCkAT3Sq+8GUURW40A@mail.gmail.com>
+ <4DC9B485.7060103@asu.ac.jp>
+ <BANLkTimC6LjjbVak0OHS6-u0OgHmOHBMfw@mail.gmail.com>
+Message-ID: <4DCC66E7.8010209@asu.ac.jp>
+
+お世話になります蜂須賀です。
+
+MTS版のインストーラーはそうゆう理由があったんですね。納得です。いろんな
+カスタマイズ版があってもいいと言ってもらえてちょっとホッとしました。
+
+広くに配布とかは考えていませんが、インストーラーだけでなくオリジナルとの
+相違点といった情報も公開していきたいと思っていますので、また、そのあたり
+で悩んだりしてご質問させて頂くかもしれませんが、その際はよろしくお願いい
+たします。
+
+ありがとうございました。
+
+> Korakuriderさん、蜂須賀さん
+> 
+> こんばんは。
+> 「みんなでたのしくスクイーク」の宮坂です。
+> 返信が遅くなりすみませんでした。
+> 
+> ■MTS版について
+> インストーラは、単にブラウザプラグインなどの設定方法がすぐにわからなかったので、安全策で２つに分けました。
+> Etoys4.0対応を昨年末に検討したことがあるのですが、まだ完了しておりません。Korakuriderさんにもいろいろ相談させていただきましたが、その後進捗が滞っておりすみません。
+> 私の時間的制約が一番の理由なのですが、私のワークショップで使う機能はそれほど多くなく、3.0でも十分なため、あまり急いでいないという事情もございます。
+> ただ、4.0のほうが安定しているでしょうし、もうすこしきれいなフォントを入れたくなってきたので、阿部さんにも相談の上、また改めて検討しているところです。（今のモナーフォントは当時フリーで使えるフォントがあまりない中で採用したものだったので）
+> 
+> ■Squeakland版
+> 利用環境に応じてEtoysのカスタマイズができることは大きなメリットかと思いますので、いろいろなカスタマイズ版が公開されることは私もいいことだと思います。
+> とはいえ、Korakuriderさんも書かれていたとおり、状況を整理したほうがいいというのはそのとおりですね。
+> もともと、MTS版も過渡的なものとして公開しておりましたので、日本語版の本家をどうするか、という問題は確かにございます。
+> 最近は、Scratchに比べて話題が少ないEtoysですので、なにか施策を講じたいところではありますが、悩ましいです。。。
+> 
+> では、よろしくお願いします。
+> 
+> 宮坂
+> 
+> 
+> 
+> 
+> 
+> 
+> 2011年5月11日6:56 愛知産業大学 蜂須賀<hachi ＠ asu.ac.jp>:
+>> お世話になります蜂須賀です。
+>>
+>> ありがとうございます。インストール後にオリジナル版と区別できるようにする
+>> 事や、派生版の元になったオリジナルのバージョンを明確にするなど、私の中で
+>> 引っかかっていた部分がかなりクリアになった気がします。
+>>
+>> 広くに配布しようとは思っていないのですが、できればダウンロードに制限は設
+>> けず誰でも行えるようにしたいと思っていました。
+>>
+>> しかし、私たちが行っている変更には、MTS版のようにTrueTypeフォント対応や
+>> 起動時の画面を白紙にしたりといった見た目で分かるような変更は含まれていな
+>> いため、ぱっと見ただけではオリジナルと区別がつかず悩んでいました。※よく
+>> みてみればタイルが「ひらがな」になっているのですが分かりにくいです。
+>>
+>> 頂いたご意見を参考にしていきたいと思います。ありがとうございました。
+>>
+>>> Korakuriderです。最近ちょっとお休みしていますが、本家版Squeak Etoysの
+>>> 開発メンテに参加しています。
+>>>
+>>>> Etoysのインストーラーソースがダウンロードできるみたいですので、インス
+>>>> トーラーを作成して配布しようと考えているのですが、MTS版のSqueak Etoysで
+>>>> は、オリジナルのEtoys3をインストール後に上書きでインストールする形になっ
+>>>> ています。別になっているのはライセンスや何らかの問題があるからなのでしょ
+>>>> うか？
+>>>
+>>> ご承知のとおり、本家版の配布キットのインストーラのソースは、
+>>> 　　 http://etoys.squeak.org/svn/trunk/installers/
+>>> です。
+>>> http://etoys.squeak.org/svn/trunk/Etoys/NOTICE （Etoysキットにも同梱）
+>>> のとおり MITライセンスとなっていますので、派生版を作って配布されることに
+>>> 何らライセンス上の問題はありません。
+>>>
+>>> MTS版の内部事情は存じませんが、最小限のエンジニアリング作業で済まされているのだと
+>>> 想像しています。
+>>>
+>>> 広く配布されるのであれば、個人的な要望としては
+>>> + なんらかの手段で、配布キットおよびインストールされた結果の上で
+>>> 　 オリジナル版と派生版の区別がつくこと
+>>> + 派生版の元になったオリジナルのバージョンがどこか（たとえば同梱リリースノート）に文書になっていること
+>>> がクリアされていれば、本家側の立場での問題は感じません。
+>>>
+>>>> またオリジナルのSqueak EtoysやMTS版Squeak Etoysがある中で、安易に公開し
+>>>> てしまうと混乱を招いてしまうのではないかとか色々と悩んでいます。
+>>>
+>>> 本家版は、OLPC上で展開すること、およびOLPCを含む各プラットフォーム間での互換性
+>>> を維持することという要件があり、従来の Nihongo# や squeakland2005J のように日本独自の要件や
+>>> 日本の現場・やコミュニティの皆さんの意向にあわせた形に調整をすることが難しい場合があります。
+>>> そのため、日本に広く展開するのであれば、squeakland版をカスタマイズしたsqueakland2005J のように、
+>>> 本家 Etoys4.* をベースに日本独自の配布版を作ることが必要になるとは認識しています。
+>>>
+>>> 逆に、本家版を皆さんが試されて不便に感じられたことや現場での要望があれば、
+>>> （個別のカスタマイズ版を作られるのは自由ですが）、可能なものは本家版に取り込んでいきたい
+>>> と思っています。ただ、必ず取り込めるとは限らないのと、反映には時間がかかってしまうので、
+>>> 現場で必要なものはどんどん、派生版として具現化していただければよいのではないでしょうか。
+>>>
+>>> 私の認識では、日本では　事実上MTS版がSqueakland2005Jの後継バージョンと扱われている
+>>> と思いますが、現在etoys.jpサイトで配布されているものは本家の少し古いバージョン（3.0）がベースに
+>>> なっています。（Etoys 4.* 対応を検討されているとはお聞きしましたが、その後の状況は存じていません）
+>>> この状況で Etoys4.* ベースの版を出した場合に、作品の互換性などで混乱が生じるリスクは確かに
+>>> あり、一度状況を整理したほうがよいかもしれませんね。
+>>>
+>>> /Korakurider
+>>>
+>>
+>>
+> 
+
+
+From x19290 ＠ gmail.com  Fri May 13 10:25:34 2011
+From: x19290 ＠ gmail.com (Hiroki Horiuchi)
+Date: Fri, 13 May 2011 10:25:34 +0900
+Subject: [Squeak-ja: 4572] Re:
+ BitBltの録画・再生が完全には成功しない
+In-Reply-To: <upqnoh5g9.wl%yoshiki@vpri.org>
+References: <4DCA5AED.9080301@gmail.com> <uvcxhgmw9.wl%yoshiki@vpri.org>
+ <4DCB42C6.7030403@gmail.com> <upqnoh5g9.wl%yoshiki@vpri.org>
+Message-ID: <4DCC888E.20407@gmail.com>
+
+On 2011年05月12日 14:07, Yoshiki Ohshima wrote:
+
+> BalloonCanvas経由の描画をどのように完全に補足するかというのはちょっ
+> と考える必要がありますね。原理的には、copyBitsを補足するのと同様に、
+> #flushの前でのEngineの状態をコピーすることでできるのかもしれませんが。
+--
+ありがとうございます。
+
+copyBitsを録画・再生するのと同様の方法で、グラデーションがほぼ再現できま
+した。いずれまとめるつもりですが、ご報告まで。
+--
+堀内寛己(ほりうちひろき)
+http://twitter.com/x19290
+
+
+From ume ＠ softumeya.com  Wed May 18 16:00:24 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 18 May 2011 16:00:24 +0900
+Subject: [Squeak-ja: 4573]
+	Appleストア銀座でSmalltalkセミナ
+Message-ID: <BANLkTi=U3RC6ruid6nC2g64Bn_-SG5o1Qg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+このたびAppleストア銀座でObjective-Cな人向けにCincom Smalltalkの紹介セミナをすることになりました。
+http://www.cincom.co.jp/products/seminar/smalltalk_seminar.html
+
+Objective-CとSmalltalkとの共通点はよく語られるところですが、Smalltalk側からの視点でというのはあまりないと思います。
+皆さんにとっても興味深いものになるのではないでしょうか。
+
+さらに、特典として(?)、最近入手しにくくなってしまったNC版のVisualWorks(最新の7.8です)もその場で申し込めます。
+
+27(金) 19:00からです。無料ですので、会社帰りなどにふらっとどうぞ。
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Fri May 20 12:33:19 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 20 May 2011 12:33:19 +0900
+Subject: [Squeak-ja: 4574]
+	第32回Smalltalk勉強会のお知らせ
+Message-ID: <BANLkTikHnCYWAooEV41UD2t-1RNJqenQEw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/5/30(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai32kaismalltalkbenkyoukai
+
+今回のテーマは「Pharo」です。
+27日にAppleでのセミナがあるので、新しい人向けに組み込みのProfStefを使ってチュートリアル的なことをしようと思います。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

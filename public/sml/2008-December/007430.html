@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7430] Re: 第4回Smalltalk勉強会の発表者を募集しています
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207430%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNBskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxJE5IL0k9PFQkckpnPTgkNyRGJCQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kORsoQg%3D%3D%3F%3D&In-Reply-To=4935EC45.3010401%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007429.html">
+   <LINK REL="Next"  HREF="007448.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7430] Re: 第4回Smalltalk勉強会の発表者を募集しています</H1>
+    <B>Masato Sumi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207430%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNBskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxJE5IL0k9PFQkckpnPTgkNyRGJCQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kORsoQg%3D%3D%3F%3D&In-Reply-To=4935EC45.3010401%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7430] Re: 第4回Smalltalk勉強会の発表者を募集しています">sumi ＠ seagreen.ocn.ne.jp
+       </A><BR>
+    <I>2008年 12月  3日 (水) 12:24:09 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007429.html">[SML 7429] Re: 第4回Smalltalk勉強会の発表者を募集しています
+</A></li>
+        <LI>次の記事 <A HREF="007448.html">[SML 7448] Re: 第4回Smalltalk勉強会の発表者を募集しています
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7430">[ 日付 ]</a>
+              <a href="thread.html#7430">[ スレッド ]</a>
+              <a href="subject.html#7430">[ 件名 ]</a>
+              <a href="author.html#7430">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>鷲見です。
+
+今回は特に濃さげなのに（いつも）参加できなくて残念です。
+
+PPS のはありませんが、比較的 XEROXオリジナルの Smalltalk-80
+に近い GUI を有する Apple Smalltalk なら手元にありますので
+どなたかに託すことは可能だと思います。Mac Plus のエミュレータ用
+ディスクイメージになっていますので、すぐ動かせます。
+
+あと、映像資料にとどまりますが、1978年ごろの Smalltalk-76 が
+動作する様子が、
+
+<A HREF="http://www.cs.washington.edu/research/constraints/videos/thinglab-1978.mov">http://www.cs.washington.edu/research/constraints/videos/thinglab-1978.mov</A>
+
+で見ることができます。QuickTime Player で cmd/ctr + K にて
+呼び出せるA/Vコントロールで三倍速くらいで再生すると退屈しなくて
+よいと思います。登場する ThingLab 自体も Squeak2.3 で動くので、
+映像と同様のデモをすると一部のマニアにウケるかもしれません。
+摂氏・華氏コンバータくらいですが動作するイメージも手元にあります。
+
+1978年というと Apple のジョブズたちが PARC を訪れ Lisa ひいては
+後の Macintosh の GUI の方向性にヒントを得たとき（1979年）に
+ちかいので、そちらの方面に興味のある方にも感慨深いものでしょう。
+
+それと、Smalltalk-76 が Java VM上に再現された
+処理系も公開されています。GUI こそ Swing に置き換わっていますが
+ブートストラップは当時のものを利用した本格派です。
+
+<A HREF="http://home.netsurf.de/helge.horch/esug/index.html">http://home.netsurf.de/helge.horch/esug/index.html</A>
+
+メタクラスがなく、制御文もメッセージ式でない Smalltalk-76 は、
+今流行りの Ruby に（-80より）比較的似ているとアラン・ケイが
+言ったとか言わなかったとかいう話も聞いています。
+
+参考まで 100 までの素数を求めるコードを両者の共通点が
+際だつように書いてみたものを以下に。（前者は、前述の
+エミュのワークスペースなどにコピペしてそのまま評価できます）
+
+&quot;Smalltalk-76&quot;
+limit ← 100.
+primes ← #() asStream.
+primes next ← 2.
+for% i from: (3 to: limit by: 2) do% [
+   isprime ← true.
+   for% prime from: primes contents do% [
+      i \ prime = 0 ? [isprime ← false]].
+   isprime ? [primes next ← i]].
+^primes contents
+
+#ruby
+limit = 100
+primes = []
+primes &lt;&lt; 2
+for i in (3..limit) do
+  is_prime = true
+  for prime in primes do
+    i % prime == 0 ? is_prime = false : nil
+  end
+  is_prime ? primes &lt;&lt; i : nil
+end
+primes
+
+
+-- 
+Masato Sumi
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007429.html">[SML 7429] Re: 第4回Smalltalk勉強会の発表者を募集しています
+</A></li>
+	<LI>次の記事 <A HREF="007448.html">[SML 7448] Re: 第4回Smalltalk勉強会の発表者を募集しています
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7430">[ 日付 ]</a>
+              <a href="thread.html#7430">[ スレッド ]</a>
+              <a href="subject.html#7430">[ 件名 ]</a>
+              <a href="author.html#7430">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

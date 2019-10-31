@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2446] MacOSX で FileDirectry fileNames の全角数字が半角になる
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202446%5D%20%3D%3Fiso-2022-jp%3Fb%3FTWFjT1NYIBskQiRHGyhCIEZpbGVE%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaXJlY3RyeSBmaWxlTmFtZXMgGyRCJE5BNDNRP3Q7eiQsSD4zUSRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEokaxsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002445.html">
+   <LINK REL="Next"  HREF="002447.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2446] MacOSX で FileDirectry fileNames の全角数字が半角になる</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202446%5D%20%3D%3Fiso-2022-jp%3Fb%3FTWFjT1NYIBskQiRHGyhCIEZpbGVE%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaXJlY3RyeSBmaWxlTmFtZXMgGyRCJE5BNDNRP3Q7eiQsSD4zUSRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEokaxsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2446] MacOSX で FileDirectry fileNames の全角数字が半角になる">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2005年 5月 18日 (水) 16:21:09 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002445.html">[Squeak-ja: 2445] メーリングリストの一時停止のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="002447.html">[Squeak-ja: 2447] Re: MacOSX で FileDirectry fileNames の全角数字が半角になる
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2446">[ 日付 ]</a>
+              <a href="thread.html#2446">[ スレッド ]</a>
+              <a href="subject.html#2446">[ 件名 ]</a>
+              <a href="author.html#2446">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE> 高橋@池袋です。
+
+MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で fileNameを取得すると全角数字が
+半角数字に入れ替わってしまうようです。
+
+例）本来のファイル名　取得されるファイル名
+×　test１.txt　→ test1.txt
+×　テスト１.txt → テスト1.txt
+○　test1.txt
+○　テスト1.txt
+
+ファイル・リストで上記のような名前のファイルを含むフォルダを見るとファイル名は半角数字で
+表示され、×印のファイル名では下側paneに内容表示をさせようとするとデバッガが起動します。
+
+image側の問題では無く
+FileDirectry&gt;&gt;primLookupEntryIn:index: のレベルで誤ったファイル名が返っているようです。
+
+全角数字以外がどうなのを調べた訳ではありませんが少なくとも１と２は×です。
+
+ではでは
+
+
+-------------------------------
+^. .^    Kouji Takahashi  &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tako ＠ aquilax.co.jp</A>&gt;
+ ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002445.html">[Squeak-ja: 2445] メーリングリストの一時停止のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="002447.html">[Squeak-ja: 2447] Re: MacOSX で FileDirectry fileNames の全角数字が半角になる
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2446">[ 日付 ]</a>
+              <a href="thread.html#2446">[ スレッド ]</a>
+              <a href="subject.html#2446">[ 件名 ]</a>
+              <a href="author.html#2446">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

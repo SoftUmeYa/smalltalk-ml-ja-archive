@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7897] Re: 第28回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207897%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIyOBskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3C4D4A4307.4010003%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007896.html">
+   <LINK REL="Next"  HREF="007898.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7897] Re: 第28回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207897%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIyOBskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3C4D4A4307.4010003%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 7897] Re: 第28回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2011年 2月  3日 (木) 14:54:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007896.html">[SML 7896] Re: 第28回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007898.html">[SML 7898]	第29回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7897">[ 日付 ]</a>
+              <a href="thread.html#7897">[ スレッド ]</a>
+              <a href="subject.html#7897">[ 件名 ]</a>
+              <a href="author.html#7897">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ウェブページからも容易に題材プログラムや補足資料を
+アクセスできるようにしておきました。
+<A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto28">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto28</A>
+
+--- 青木淳＠京都上賀茂：今夜は修学サポータたちと打ち上げ
+
+(11/02/03 10:48), Yasuda Yutaka wrote:
+&gt;<i> 安田です。
+</I>&gt;<i> 
+</I>&gt;<i> 今回はフックルーチンにフックルーチンを登録するというのが
+</I>&gt;<i> 面白かったです。
+</I>&gt;<i> 
+</I>&gt;<i> 1. 目標となるテキストフィールドのキーイベントハンドラを、
+</I>&gt;<i> 　そのテキストフィールドのコントローラに登録するのだが、
+</I>&gt;<i> 2. その処理自体をテキストフィールドがビルダーによって組み
+</I>&gt;<i> 　立てられている際に呼ばれるフックルーチンに登録する
+</I>&gt;<i> 　（ビルダーはその時そいつのコントローラを知っているから）
+</I>&gt;<i> 
+</I>&gt;<i> という入れ子になっている。。。
+</I>&gt;<i> 
+</I>&gt;<i> 登録方法も前者はクロージャによるもので、後者はメソッドの
+</I>&gt;<i> 登録だった。
+</I>&gt;<i> 
+</I>&gt;<i> なお僕のログはあくまで私の脳内ログですので誤りなどあるかと
+</I>&gt;<i> 思いますがご容赦下さいませ。
+</I>&gt;<i> 
+</I>&gt;<i> （2 hours のライブをノートして、帰宅して（判ってない奴が！）
+</I>&gt;<i> 　また2 hours でざっとまとめてるので、、はい、、いま見直したら
+</I>&gt;<i> 　違うメソッドの図を引っ張ってるのが一つあったり、メソッドの
+</I>&gt;<i> 　コロンがあったりなかったりですね、、ま、大筋は間違ってない
+</I>&gt;<i> 　と思いますが、、(^_^!) ）
+</I>&gt;<i> 
+</I>&gt;<i> でわでわ									Yasu.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On 2011/02/03, at 8:50, AOKI Atsushi wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> おはようございます、青木＠京都上賀茂です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 昨日に行ったSmalltalk勉強会@京都の報告です。そのメインテーマ
+</I>&gt;&gt;<i> は「Hook」になります。フックやホックと呼び慣わされています。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> このメールに昨夜に作成したプログラムを添付しておきます。
+</I>&gt;&gt;<i> 2011年1月4日(火)にポストさせていただいた添付コード(SSK10.st)
+</I>&gt;&gt;<i> <A HREF="http://www.smalltalk.jp/pipermail/sml/2011-January/007890.html">http://www.smalltalk.jp/pipermail/sml/2011-January/007890.html</A>
+</I>&gt;&gt;<i> を改良しているところです。（差分をとってくださいませ。）
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> また、安田さんからの詳細なログがあります。（すごい↓）
+</I>&gt;&gt;<i> <A HREF="http://aokilab.kyoto-su.ac.jp/aoki/misc/pdfs/SSK10_fromYasuda.pdf">http://aokilab.kyoto-su.ac.jp/aoki/misc/pdfs/SSK10_fromYasuda.pdf</A>
+</I>&gt;&gt;<i> Ustreamなどで勉強会の模様を生中継しなくともイケるほどです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 京都の勉強会のモットーは「Smalltalkをゆっくりと深く！」
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ------------------------------------------------------------
+</I>&gt;&gt;<i> AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</I>&gt;&gt;<i> &lt;SSK10_20110202.st&gt;
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007896.html">[SML 7896] Re: 第28回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007898.html">[SML 7898]	第29回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7897">[ 日付 ]</a>
+              <a href="thread.html#7897">[ スレッド ]</a>
+              <a href="subject.html#7897">[ 件名 ]</a>
+              <a href="author.html#7897">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

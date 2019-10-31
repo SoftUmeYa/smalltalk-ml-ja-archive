@@ -1,0 +1,454 @@
+From tetha ＠ st.rim.or.jp  Tue Aug  2 10:11:41 2011
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Tue, 2 Aug 2011 10:11:41 +0900
+Subject: [SML 7959] Re:
+ 第34回Smalltalk勉強会のお知らせ
+In-Reply-To: <CAH3eEdT9nqB3nmT+YXNoV1Lr6ja_qnswuKKmzZ46_L1_YPk8PA@mail.gmail.com>
+References: <CAH3eEdT9nqB3nmT+YXNoV1Lr6ja_qnswuKKmzZ46_L1_YPk8PA@mail.gmail.com>
+Message-ID: <C88E1EE1-8C67-494A-8B76-F7ECB95D69CF@st.rim.or.jp>
+
+こんにちは
+ビューポイントテクノロジーの林徹也です。
+
+先日の勉強会で使用したプログラムとスライド資料を以下のページにアップロードしました。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai34kaismalltalkbenkyoukai/shiryou
+
+Jtalk では Web ブラウザ上でプログラミングできるのですが、変更を保存するための WebDAV サーバーを設定する必要があったりと、ちょっと面倒です。
+その手間を省いてお気軽にハンズオン出来るよう Pharo Smalltalk で作られたサーバープログラムを同梱しました。
+当日ご来場できなかった方もお楽しみください。
+--
+
+On 2011/07/17, at 22:29, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。
+> 
+> 日時: 2011/7/29(金) 19:00-21:00 (2時間)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト:
+> 「自由自在Squeakプログラミング」
+> 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai34kaismalltalkbenkyoukai
+> 
+> 今回のテーマは先進的に「Jtalk」です。
+> Jtalkとは、JavaScriptランタイム上で動作するSmalltalkの処理系です。IDEも含んでいるためWebブラウザ上でWebアプリケーションのクライアントサイドを快適に開発することができます。まだまだデスクトップ上の通常のSmalltalk環境に比べると貧弱ですが、JavaScriptの関数を透過的に呼び出せたり、Node.jsとも連携できたりする期待の星なのです。
+> 
+> ビューポイントテクノロジーの林さんが発表されます。
+> 
+> 参加表明は特に必要ありません。ふらりとお越しください。
+> -- 
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+
+
+
+
+
+
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Aug  4 09:23:24 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 04 Aug 2011 09:23:24 +0900
+Subject: [SML 7960] Re:
+ 第34回Smalltalk勉強会＠京都
+In-Reply-To: <4E2FDD72.1030702@cc.kyoto-su.ac.jp>
+References: <4E2FDD72.1030702@cc.kyoto-su.ac.jp>
+Message-ID: <4E39E67C.4010605@cc.kyoto-su.ac.jp>
+
+暑い夜の勉強会、ご苦労さまでした。
+プログラムやログ（← from Mr. Sono）をアップロードしておきました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34
+
+以下、備忘録。
+来月はコントローラの中にメニューのディスパッチャーを構築するところから始める…
+モデル側のメニューとビュー＆コントローラ側のメニューをタグ（ID:nameKey）によって選別…
+それぞれの暫定メニューはすでに作成済…
+
+--- 青木淳＠京都上賀茂
+
+(11/07/27 18:42), AOKI Atsushi wrote:
+> 第34回Smalltalk勉強会＠京都を開催します。
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34
+>
+> 場所は先月と同様でキャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第34回 Smalltalk勉強会＠京都
+> 日時：2011年08月03日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 完成間近の窓MVCですが、コントローラ周りを整備し、モデルおよび
+> ビューとの調整を図ります。蒸し暑い京都の中、さわやかにSmalltalk
+> プログラミングをいたしましょう。いつも通り、急がず着実に進む
+> ことを優先し、ライブプログラミングで脱線もしようと思います。
+> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+> をご持参ください。
+>
+> --- 青木淳 [ http://aokilab.kyoto-su.ac.jp/ ]
+>
+
+
+From yasuda ＠ mfc.bakkers.gr.jp  Thu Aug  4 11:38:08 2011
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu, 4 Aug 2011 11:38:08 +0900
+Subject: [SML 7961] Re:
+ 第34回Smalltalk勉強会＠京都
+In-Reply-To: <4E39E67C.4010605@cc.kyoto-su.ac.jp>
+References: <4E2FDD72.1030702@cc.kyoto-su.ac.jp>
+ <4E39E67C.4010605@cc.kyoto-su.ac.jp>
+Message-ID: <E0F29D71-D36C-453E-9AD9-053D647388C5@mfc.bakkers.gr.jp>
+
+京産大の安田です。
+
+昨夜、最後の方にダダダッと過ぎてしまったタグによる
+ディスパッチャの件です。
+
+結果だけ書いても良いのですが、思考経路ごと出しておき
+ます。冗長ですがご勘弁ください。。
+
+昨夜の僕の思考：
+・メッセージを投げる相手が view か model か、誰かが
+　ディスパッチせんとあかんやろう
+・何かしらタグみたいな属性情報がメニューにつけられれば
+　良いのに
+・nameKey というのがあるらしい。どうやら使えそう。
+・MenuItem クラスによると nameKey: は Symbol を
+　入れることになっている
+・では選択されたメニューアイテムの nameKey を調べて、
+　その Symbol が #view だったら view に、#model だったら
+　model にメッセージを投げるディスパッチャを書けば良い
+　ではないか（ああスッキリ！）
+
+だったのですが、一夜明けて妹尾君のログを読み返している
+と、どうも名前がしっくりきません。。。
+
+・コードは nameKey という名前で書かれている
+　（Menu および MenuItem クラスあたり）
+・ UI ツールはこれを ID と名付けて提示している
+・前者の名前はまるで探索キーあるいは何かの分類か
+　グループ分けのためかと思えるが、後者は識別子（誰の？）
+　として認識させたい模様。。。
+・そして僕はこれをタグ（単なる目印）として使おうとして
+　いる。
+
+というわけで何かネジれて無いかなあ、、、と。。
+
+とりあえず
+
+aMenu := Menu new.
+aMenuItem := MenuItem labeled: 'test1'.
+aMenuItem value: #yayaya1.
+aMenuItem nameKey: #dododo1.
+aMenu addItem: aMenuItem.
+
+などして nameKey をくっつけて調べていたのですが、どうも
+Menu クラス にある addItem: value: nameKey: という
+method が気になります。
+（Smalltalk 的には addItem:value:nameKey: 表記が正解？）
+
+コードを以下に。
+
+addItem: aMenuItem value: theValueModel nameKey: aKeyObject
+
+	"Add a new MenuItem to the end of the menu.  theValueObject
+	is the ValueModel whose values is to be returned by the menu
+	when that menu item is selected (nil means it has no value in
+	which case the ordinal number of the menu item will be returned). 
+	 aKeyObject is a key object to be associated with the menu item
+	(or nil if none).  The new menu item will become part of the last
+	group of menu items."
+
+	self addItem: aMenuItem value: theValueModel.
+	aMenuItem nameKey: aKeyObject
+
+ここでは nameKey の引数が aKeyObject となっており、コメントを
+見ると「そのメニューアイテムが結びつけられているキーオブジェクト」
+だそうで、うーむ、これはオブジェクトをそのまま入れろと？？
+
+＃キーオブジェクト、が何かしら意味のあるターム？？
+
+うーん青木さんもオブジェクトそのまま書かせてくれれば良いのに、
+と言うてはったなあ、、
+
+というわけでエイヤと放り込んでみました。
+
+yellowButtonPressedEvent: event
+	"マウスの右ボタンが押されたときの処理をする。"
+
+	| aMenu aSymbol aMenuItem selectedMenuItem aKeyObject |
+	aMenu := Menu new.
+	aMenuItem := MenuItem labeled: 'test1'.
+	aMenu
+		addItem: aMenuItem
+		value: #test1
+		nameKey: self view. "こっちは view を押し込む"
+	aMenuItem := MenuItem labeled: 'test2'.
+	aMenu
+		addItem: aMenuItem
+		value: #test2
+		nameKey: self model.	"こっちは model"
+	aSymbol := aMenu startUp.
+	selectedMenuItem := aMenu selectionMemory.	"選択された奴をとりあげて"
+	aKeyObject := selectedMenuItem nameKey.	"お前の nameKey は何だ？"
+	aKeyObject inspect.	"インスペクタで結果を確認"
+	(aSymbol isKindOf: Symbol) ifTrue: [aKeyObject perform: aSymbol].	"そいつにメッセージを直投げ"
+	^nil
+
+うぉ。。。動きますね。。。（当然でしょうが、、）
+
+（ test1, test2 とかいったメッセージは実装していないのでエラーに
+　なりますが、とにかくインスペクタで見るとちゃんと目的の
+　view あるいは model インスタンスが返ってきているし、
+　デバッガが出す「そんなメッセージは無いよ」エラーの対象オブジェクト
+　がちゃんとそれぞれのインスタンスを向いてる。。）
+
+これ非常にコンパクトなのですが、しかしこれ、GUI では使えない
+ですよね、、、
+（GUI でインスタンスを書くことはできない、、、）
+
+GUI ツールなしで上みたいにコードするのなら良いのですが、僕は
+なんで X には ResEdit とか InterfaceBuilder が無いんだと悲しく
+なった人なので、できれば、、いや何とかして GUI は使いたい。。。
+
+どうしたものか。。。(^_^!)
+やっぱり当初のアイディアどおり、何かしら Symbol 入れて
+それ見て分岐するのがいいのか。。。
+
+というところで来月にまた頭を回したいと思います。
+
+＃いかん、昼になってしまった。。。
+
+でわでわ							Yasu.
+
+
+
+
+On 2011/08/04, at 9:23, AOKI Atsushi wrote:
+
+> 暑い夜の勉強会、ご苦労さまでした。
+> プログラムやログ（← from Mr. Sono）をアップロードしておきました。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34
+> 
+> 以下、備忘録。
+> 来月はコントローラの中にメニューのディスパッチャーを構築するところから始める…
+> モデル側のメニューとビュー＆コントローラ側のメニューをタグ（ID:nameKey）によって選別…
+> それぞれの暫定メニューはすでに作成済…
+> 
+> --- 青木淳＠京都上賀茂
+> 
+> (11/07/27 18:42), AOKI Atsushi wrote:
+>> 第34回Smalltalk勉強会＠京都を開催します。
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34
+>> 
+>> 場所は先月と同様でキャンプラ6階の第3講習室になります。
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>> 
+>> 第34回 Smalltalk勉強会＠京都
+>> 日時：2011年08月03日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>> 
+>> 完成間近の窓MVCですが、コントローラ周りを整備し、モデルおよび
+>> ビューとの調整を図ります。蒸し暑い京都の中、さわやかにSmalltalk
+>> プログラミングをいたしましょう。いつも通り、急がず着実に進む
+>> ことを優先し、ライブプログラミングで脱線もしようと思います。
+>> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+>> をご持参ください。
+>> 
+>> --- 青木淳 [ http://aokilab.kyoto-su.ac.jp/ ]
+>> 
+> 
+> 
+
+
+From ume ＠ softumeya.com  Sat Aug  6 10:09:36 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sat, 6 Aug 2011 10:09:36 +0900
+Subject: [SML 7962]
+	Smalltalkセミナ、大阪でもやります
+Message-ID: <CAH3eEdSAYNgZT6shz2HFTAPc4-v0GD74c23O06+j5A+Oddts-g@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+さて、前回5/27にAppleストア銀座で行ったObjective-Cな人向けのSmalltalkの紹介セミナなのですが、好評につき(?)、大阪でも行う運びとなりました。
+
+http://www.cincom.co.jp/products/seminar/healthcare_seminar2.html
+(医療系のセミナに組み込まれた形になっていますが、そこはあまり気になさらずに)
+
+前回のアナウンス:
+http://www.smalltalk.jp/pipermail/sml/2011-May/007931.html
+
+Objective-Cは見た目が奇妙とよく言われますが、なぜそうなっているのか、Smalltalkの側面から眺めると理由がわかったりします。今の時代でのSmalltalkの立ち位置的なことも話す予定です。
+
+8月17日(水) 13：30からです。無料です。私は真ん中なので14:30くらいからと思います。
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From hirowadenden ＠ hera.eonet.ne.jp  Sat Aug  6 11:54:42 2011
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Sat, 06 Aug 2011 11:54:42 +0900
+Subject: [SML 7963] Re:
+ 第34回Smalltalk勉強会＠京都
+In-Reply-To: <E0F29D71-D36C-453E-9AD9-053D647388C5@mfc.bakkers.gr.jp>
+References: <4E2FDD72.1030702@cc.kyoto-su.ac.jp>
+ <4E39E67C.4010605@cc.kyoto-su.ac.jp>
+ <E0F29D71-D36C-453E-9AD9-053D647388C5@mfc.bakkers.gr.jp>
+Message-ID: <4E3CACF2.5080802@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+(2011年08月04日 11:38), 安田さん wrote:
+> これ非常にコンパクトなのですが、しかしこれ、GUI では使えない
+> ですよね、、、
+> （GUI でインスタンスを書くことはできない、、、）
+> 
+> GUI ツールなしで上みたいにコードするのなら良いのですが、僕は
+> なんで X には ResEdit とか InterfaceBuilder が無いんだと悲しく
+> なった人なので、できれば、、いや何とかして GUI は使いたい。。。
+
+GUIで作成したメニューを修正していいものかよくわかりませんが、GUIで
+作成したメニューにインスタンスでnameKeyをセットすることで以下のように
+出来ました。(SSK_PaneMVC_20110803.stからの修正です)
+
+PaneModel>>yellowButtonMenu
+	| aMenu |
+	aMenu := self class yellowButtonMenu.
+	aMenu menuItems do: [:item | item nameKey: self].
+	^aMenu
+
+PaneController>>yellowButtonPressedEvent: event
+	| aMenu aSymbol selectedMenuItem aKeyObject |
+	aMenu := self model yellowButtonMenu.
+	aSymbol := aMenu startUp.
+	(aSymbol isKindOf: Symbol)
+		ifTrue:
+			[selectedMenuItem := aMenu selectionMemory.
+			aKeyObject := selectedMenuItem nameKey.
+			"aKeyObject inspect."
+			aKeyObject perform: aSymbol].
+	^nil
+
+PaneModel>>selectImageFile
+	Transcript
+		cr;
+		show: thisContext printString;
+		space;
+		show: self label
+
+
+MenuItemのvalueは"selector or block"とMenuItemのコメントにあるので、
+nameKeyを使わずに以下のようにもできました。
+
+PaneModel>>yellowButtonMenu
+	| aMenu |
+	aMenu := self class yellowButtonMenu.
+	aMenu menuItems do:
+			[:anItem |
+			| aSymbol |
+			aSymbol := anItem value.
+			(aSymbol isKindOf: Symbol) ifTrue: [anItem value: [self perform:
+aSymbol]]].
+	^aMenu
+
+PaneController>>yellowButtonPressedEvent: event
+	| aMenu selectedMenuItemValue |
+	aMenu := self model yellowButtonMenu.
+	selectedMenuItemValue := aMenu startUp.
+	(selectedMenuItemValue isKindOf: BlockClosure) ifTrue:
+[selectedMenuItemValue value].
+	^nil
+
+PaneModel>>selectImageFileは上記と同じ。
+
+以上です。
+
+-- hirowadenden
+
+From ume ＠ softumeya.com  Sat Aug 20 00:32:51 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sat, 20 Aug 2011 00:32:51 +0900
+Subject: [SML 7964]
+	第35回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSakhCWKn6GdYKsznOXD43-dHHTyABDVkzpXakKD2FCsw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/8/31(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai35kaismalltalkbenkyoukai
+
+今回のテーマは「音系」です。音楽系のアプリもSmalltalkで簡単に作れるというのはよく知られたところですが、実際に作った方は意外に少ないのではないでしょうか。
+そこでSqueakを使って音系のアプリを作り続けている西原聡士さんに、いろいろと解説をしていただくこととなりました。お楽しみに。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Aug 28 18:35:36 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun, 28 Aug 2011 18:35:36 +0900
+Subject: [SML 7965] Re:
+ 第34回Smalltalk勉強会＠京都
+In-Reply-To: <4E3CACF2.5080802@hera.eonet.ne.jp>
+References: <4E2FDD72.1030702@cc.kyoto-su.ac.jp>
+ <4E39E67C.4010605@cc.kyoto-su.ac.jp>
+ <E0F29D71-D36C-453E-9AD9-053D647388C5@mfc.bakkers.gr.jp>
+ <4E3CACF2.5080802@hera.eonet.ne.jp>
+Message-ID: <4E5A0BE8.1020307@cc.kyoto-su.ac.jp>
+
+(11/08/06 11:54), hirowadenden wrote:
+> ハンドル名で失礼します、hirowadendenと申します。
+...snipped...
+> MenuItemのvalueは"selector or block"とMenuItemのコメントにあるので、
+> nameKeyを使わずに以下のようにもできました。
+
+次回の勉強会＠京都では、この方式でゆきませう。
+評価系の話も織り交ぜようと思います。
+三日後に開催案内を出します。
+
+--- 青木淳
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Aug 31 11:17:56 2011
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 31 Aug 2011 11:17:56 +0900
+Subject: [SML 7966]
+	第35回Smalltalk勉強会＠京都
+Message-ID: <4E5D99D4.3050700@cc.kyoto-su.ac.jp>
+
+第35回Smalltalk勉強会＠京都を開催します。
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto35
+
+場所(部屋)が5階の第1演習室に変わりますので、注意してくださいませ。
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1601&frmCd=14-1-0-0-0
+
+第35回 Smalltalk勉強会＠京都
+日時：2011年09月07日（水）19:00?21:00
+キャンパスプラザ京都 5階 第1演習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+先月、完成間近の窓MVCと思いきや、VC側の機能とM側の機能をいかに切り分けてGUIを作るかで思案となりました。今月は、その続きを行いたいと思います。ある解決策（方針や方式）を提示し、コンセンサスを共有した上で、勉強会に参加している皆さん全員で一緒にプログラミングしてゆきます。ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+--- 青木淳 [ http://aokilab.kyoto-su.ac.jp/ ]
+
+

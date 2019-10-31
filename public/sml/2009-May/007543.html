@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7543] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207543%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=1bc06fd30905140847u51d146e2k6fc45cc93b32893e%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007542.html">
+   <LINK REL="Next"  HREF="007545.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7543] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207543%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=1bc06fd30905140847u51d146e2k6fc45cc93b32893e%40mail.gmail.com"
+       TITLE="[SML 7543] Re: 第7回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 5月 15日 (金) 02:17:56 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007542.html">[SML 7542] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007545.html">[SML 7545] Cのポインタ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7543">[ 日付 ]</a>
+              <a href="thread.html#7543">[ スレッド ]</a>
+              <a href="subject.html#7543">[ 件名 ]</a>
+              <a href="author.html#7543">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは、青木＠京都宇治です。
+
+&gt;<i> センダの話題のところで出てきた
+</I>&gt;<i> Compiler evaluate: 'self printString' for: 3 logged: false
+</I>&gt;<i> のお話は、その場ではちょっと消化不良だったので、帰宅してから
+</I>&gt;<i> Compilerのやっていることを読んでおりました。
+</I>
+Compilerを読むと勉強になりますもんね。一昨日にも開示したプロ
+グラムでもありますが、濱崎さんが提示のプログラムと同じ応答を
+得るプログラムをここに開示させてください。
+
+Compiler evaluate: 'thisContext sender receiver printString' for: 3 logged: false
+
+これは誰のために評価するのかという立場を明示したプログラムで
+して、thisContext(aMethodContext)にsenderとreceiverの単項メッ
+セージを送信しています。
+
+'3'が応答されるまでの経緯を追うことができれば、センダとレシー
+バの柵（しがらみ）が分かると思います。
+
+&gt;<i> それで、読んだコードに触発されて以下のコードを書きました。
+</I>&gt;<i> ------------- ここから -------
+</I>&gt;<i> | methodSearchBlock mainBlock |
+</I>&gt;<i> methodSearchBlock := [:class :messageSelector |
+</I>&gt;<i> class isNil
+</I>&gt;<i>     ifTrue: [nil]
+</I>&gt;<i>     ifFalse:
+</I>&gt;<i>         [(class selectors includes: messageSelector)
+</I>&gt;<i>             ifTrue: [class getMethodDictionary at: messageSelector]
+</I>&gt;<i>             ifFalse:
+</I>&gt;<i>                 [methodSearchBlock
+</I>&gt;<i>                     value: class superclass
+</I>&gt;<i>                     value: messageSelector]]].
+</I>&gt;<i> mainBlock := [:anObject :messageSelector :args |
+</I>&gt;<i> | method |
+</I>&gt;<i> method := methodSearchBlock
+</I>&gt;<i>     value: anObject class
+</I>&gt;<i>     value: messageSelector.
+</I>&gt;<i> method valueWithReceiver: anObject arguments: args].
+</I>&gt;<i> ^mainBlock value: 3 value: #+ value: #(4)
+</I>&gt;<i> --------------- ここまで ---------
+</I>&gt;<i> 仮想マシンが裏方でひっきりなしにやっていることではあるのですけれど、
+</I>&gt;<i> こんな風にあからさまに書いてしまうと、センダ、レシーバどころかメッセージ
+</I>&gt;<i> 送信そのものが消えてしまっていて、煎じ詰めればメソッド呼び出しのチェーンで
+</I>&gt;<i> しかないのね、と改めて思ってしまいます。当たり前と言えばそうなんですが。
+</I>
+そうりゃそうなりますよね、ノイマン型ですから、チューリングマ
+シンの枠から出ることはかないません。量子コンピュータならば…。
+
+とは言え、濱崎さんの触発プログラムコードは、メッセージ名とメ
+ソッド（文字へのポインタと関数へのポインタ）の動的な束縛を遂
+行するプログラムコードになっており、ユニバーサル系の実装です。
+
+インヘリタンスをブロッククロージャの再帰で駆け上りながら、メ
+ソッド辞書（文字へのポインタと関数へのポインタのテーブル）を
+ひいています。
+
+ここで、関数へのポインタが出てきていますが、xも*xも&amp;xも区別が
+つかず、**xや***xで「きゃぁ〜」と声を出し、「ポインタは難しい」
+と宣う弱いプログラマは、(*x)(…)の出現によって気絶します。:-)
+
+あるプログラミング言語を勉強したら、そのプログラミング言語で
+記述したプログラム自体を実行するプログラム（処理系）を、その
+プログラミング言語自身で書き下ろす経験をすれば、免許皆伝（勉
+強しているプログラミング言語をマスターしたこと）になります。
+
+プログラミング言語を教える立場の方々にとっては必須なことだと
+思いますが、多くを語れず…。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007542.html">[SML 7542] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007545.html">[SML 7545] Cのポインタ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7543">[ 日付 ]</a>
+              <a href="thread.html#7543">[ スレッド ]</a>
+              <a href="subject.html#7543">[ 件名 ]</a>
+              <a href="author.html#7543">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,214 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun  6 05:55:23 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 06 Jun 2012 05:55:23 +0900
+Subject: [SML 8013] Re:
+	第44回Smalltalk勉強会＠京都
+In-Reply-To: <4FC5E2A0.3000909@cc.kyoto-su.ac.jp>
+References: <4FC5E2A0.3000909@cc.kyoto-su.ac.jp>
+Message-ID: <4FCE723B.7020501@cc.kyoto-su.ac.jp>
+
+本日です、備忘のためポストいたしました。
+
+--- 青木淳
+
+(12/05/30 18:04), AOKI Atsushi wrote:
+> 第44回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto44
+>
+> 場所(部屋)はキャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第44回 Smalltalk勉強会＠京都
+> 日時：2012年06月06日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 前回でプログラム制御構造が一段落しましたので、新たな題材「GUI
+> シリーズ」に取り組んでゆこうと存じます。まず手始めにSmalltalk
+> ソースコードをHTML化してページにするドックレットのあたりから
+> 始めて、VisualWorksで提供されているウェジェット（GUI部品群）
+> をひとつひとつ丁寧に扱ってゆきます。ノート型のパーソナルコン
+> ピュータ（Windows 7 または Mac OS X）をご持参ください。
+>
+> --- 青木淳
+>
+> 追伸：
+> 来る09月29日(土)に【合同Smalltalk勉強会@名古屋】が開催されます。
+> 皆さま、カレンダーに書き込みをお願い申し上げます。
+> 【Smalltalk勉強会@東京】と【Smalltalk勉強会@京都】の合同になります。
+> 世話人は前田康行さん、きっと来月ぐらいにアナウンスがあると思います。
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Jun  8 04:35:42 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri, 08 Jun 2012 04:35:42 +0900
+Subject: [SML 8014] Re:
+	第44回Smalltalk勉強会＠京都
+In-Reply-To: <4FCE723B.7020501@cc.kyoto-su.ac.jp>
+References: <4FC5E2A0.3000909@cc.kyoto-su.ac.jp>
+ <4FCE723B.7020501@cc.kyoto-su.ac.jp>
+Message-ID: <4FD1028E.5040605@cc.kyoto-su.ac.jp>
+
+妹尾さんから勉強会ログが届きましたので、下記のページに収録しました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto44
+
+昨年のICSE（イクシィ）のLanzaさん（共著：Wettelさん、Robbesさん）の論文
+http://www.inf.usi.ch/faculty/lanza/Downloads/Wett2011a.pdf
+を紹介（概要を軽く案内）させていただきました。
+http://2011.icse-conferences.org/
+http://www.inf.usi.ch/faculty/lanza/
+都市のメタファを用いて描き出すレンダリングエンジンは、じゅんになります。
+そして、じゅん自体もソフトウェアの進化プロセスの研究素材になっています。
+
+すべては1998年5月のこのメーリングリストへのポストに端を発します。
+http://www.smalltalk.jp/SML/archives/SRA.archives/1998-March/002200.html
+
+今年のICSEは、今、まさにスイスで開催されます。
+http://www.ifi.uzh.ch/icse2012/
+
+--- 青木淳＠京都宇治
+
+
+(12/06/06 5:55), AOKI Atsushi wrote:
+> 本日です、備忘のためポストいたしました。
+>
+> --- 青木淳
+>
+> (12/05/30 18:04), AOKI Atsushi wrote:
+>> 第44回Smalltalk勉強会＠京都を開催します。
+>>
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto44
+>>
+>> 場所(部屋)はキャンプラ6階の第3講習室になります。
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第44回 Smalltalk勉強会＠京都
+>> 日時：2012年06月06日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 前回でプログラム制御構造が一段落しましたので、新たな題材「GUI
+>> シリーズ」に取り組んでゆこうと存じます。まず手始めにSmalltalk
+>> ソースコードをHTML化してページにするドックレットのあたりから
+>> 始めて、VisualWorksで提供されているウェジェット（GUI部品群）
+>> をひとつひとつ丁寧に扱ってゆきます。ノート型のパーソナルコン
+>> ピュータ（Windows 7 または Mac OS X）をご持参ください。
+>>
+>> --- 青木淳
+>>
+>> 追伸：
+>> 来る09月29日(土)に【合同Smalltalk勉強会@名古屋】が開催されます。
+>> 皆さま、カレンダーに書き込みをお願い申し上げます。
+>> 【Smalltalk勉強会@東京】と【Smalltalk勉強会@京都】の合同になります。
+>> 世話人は前田康行さん、きっと来月ぐらいにアナウンスがあると思います。
+
+
+From tomohiro ＠ sra.co.jp  Fri Jun  8 07:32:11 2012
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri, 08 Jun 2012 07:32:11 +0900
+Subject: [SML 8015] Re:
+ 第44回Smalltalk勉強会＠京都
+In-Reply-To: <4FD1028E.5040605@cc.kyoto-su.ac.jp>
+References: <4FC5E2A0.3000909@cc.kyoto-su.ac.jp>
+ <4FCE723B.7020501@cc.kyoto-su.ac.jp> <4FD1028E.5040605@cc.kyoto-su.ac.jp>
+Message-ID: <4FD12BEB.4040904@sra.co.jp>
+
+おだです。
+
+> 妹尾さんから勉強会ログが届きましたので、下記のページに収録しました。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto44
+
+楽しそうですね。何かの機会を作ってお邪魔したいところです。
+
+> 都市のメタファを用いて描き出すレンダリングエンジンは、じゅんになります。
+> そして、じゅん自体もソフトウェアの進化プロセスの研究素材になっています。
+
+じゅんも本当に息の長いプロジェクトになりましたね。
+まさに継続は力なり、です。
+
+可視化ということで言うと、
+私はPharo Smalltalkで別方向の可視化をやってます。
+HoneyGingerといって、http://squeaksource.blueplane.jp/HoneyGinger.html
+で公開しています。
+いくつかデモムービーを貼りつけてみますので、
+よかったらごらんください。すべてSmalltalkで動いてます。
+
+冷却水
+http://www.youtube.com/watch?v=qcjjqwTV4PI
+
+熱気のあるマウスカーソル
+http://www.youtube.com/watch?v=7Q0d-c8O6cA
+
+涼しいブラウザ
+http://www.youtube.com/watch?v=hqYQFIZ8HLg
+
+バシャバシャワールド
+http://www.youtube.com/watch?v=Cem1852DKpU
+
+落書きレンダリング
+http://www.youtube.com/watch?v=xEUHcnFiATs
+
+Smalltalkは遅いなんて言わせねーよ、ってことで。
+以上、宣伝でした。ツ
+---
+おだ
+
+From ume ＠ softumeya.com  Fri Jun  8 22:57:21 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 8 Jun 2012 22:57:21 +0900
+Subject: [SML 8016]
+	第44回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdQ7wBWY_5idV3J3zz4kpVhBzPKGvVaaT+OOsnUTzZULBg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2012/6/17(日) 14:30-17:00 (2時間30分)
+場所: ちよだプラットフォームスクウェア会議室504,505
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai44kaismalltalkbenkyoukai
+
+普段と異なり、日曜日に開催します。
+
+テーマですが、IPA未踏ソフトウェア創造事業でAlan Kay プロジェクトマネージャに採択され関わった人たちの同窓会です。
+プロジェクト終了後も皆さんいろいろな分野で活躍されており、その最近の活動を明らかにするというものです。
+
+有り体に言えばSmalltalkかそれに類するものを使ったメガデモ大会のようなものです。
+
+事前申し込み等は不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun 27 06:15:59 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 27 Jun 2012 06:15:59 +0900
+Subject: [SML 8017]
+	第45回Smalltalk勉強会＠京都
+Message-ID: <4FEA268F.8030208@cc.kyoto-su.ac.jp>
+
+第45回Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto45
+
+場所(部屋)はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第45回 Smalltalk勉強会＠京都
+日時：2012年07月04日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+新たな題材「GUIシリーズ」の第一弾として「クリックウェジェッ
+ト」と「三次元グラフィックス」の連動を取り上げます。青木研究
+室の宮崎雅文さんに登場していただきます。ノート型のパーソナル
+コンピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+--- 青木淳
+

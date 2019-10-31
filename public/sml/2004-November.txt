@@ -1,0 +1,263 @@
+From aoki ＠ sra.co.jp  Tue Nov  2 04:34:37 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7016] DynCシンポジウム開催のお知らせ
+Message-ID: <41868FCD.9090106@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+DynCシンポジウム開催のお知らせです。講演およびパネルへの参加
+は無料ですので、足を運んでいただければ幸いです。参加申し込み
+など、詳しい内容ついては、次のページをご覧ください。
+
+http://www.sra-ktl.co.jp/dync/symposium2004.html
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From nisinaka ＠ sra.co.jp  Mon Nov  8 18:45:22 2004
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7017] [ANNOUNCE] Jun for Java (Jun498)
+In-Reply-To: <20041002224648.9793.NISINAKA@sra.co.jp>
+References: <20041002224648.9793.NISINAKA@sra.co.jp>
+Message-ID: <20041108184226.E62D.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン498を公開します。
+
+  バージョン482からの主な変更点は、以下の通りです。
+
+    * JunOpenGL3dModel に複数のプロジェクションをプリセットとして
+      設定できるようにし、View メニューのサブメニュー "Preset" か
+      ら選べるようにしました。また、VRML97 パーサを拡張し、複数の 
+      Viewport ノードを読み込んで、JunOpenGL3dModel のプリセット
+      プロジェクションとして扱うことができるようにしました。
+
+    * JunOpenGL3dModel に背景色を設定できるようにしました。また、
+      VRML97 パーサを拡張し、Background ノードの skyColor フィー
+      ルドを JunOpenGL3dModel の背景色として読み込めるようにしま
+      した。
+
+    * 幾何のパッケージ 'sra.jun.geometry.*' を Jun582 相当に更新
+      しました。その結果として、(1) Jun3dBoundingBox を 
+      sra.jun.geometry.basic から sra.jun.geometry.boundaries に
+      移動しました。また (2) JunPolygon を Jun3dPolygon に改名し
+      ました。
+
+    * JunPerspective を JunPerspectiveProjection に改名しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From aoki ＠ sra.co.jp  Tue Nov 16 19:39:09 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7018] Jun603 for Smalltalk
+Message-ID: <BFB24602-37BB-11D9-B6C2-000A9579B48E@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun603」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆バンドルとパッケージを利用するようにしました。従来のカテゴ
+　リをそのまま残していますが、次期の VisualWorks（7.3 以降）
+　において、カテゴリからプログラムをブラウジングすることがで
+　きなくなるため、早めに対応しておきます。
+
+◆座標変換を伴う３次元オブジェクトにおいて、座標変換行列を適
+　用した３次元オブジェクトを求めるメソッドに不具合がありまし
+　た。色や透明度などの属性値をセットしていませんでした。直し
+　ておきました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Thu Nov 18 17:38:26 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7019] Jun604 for Smalltalk
+Message-ID: <373E7DB8-393D-11D9-AC99-000A9579B48E@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun604」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆クラスの定義体と名前空間の定義体を、<do-it> タグではなく、
+　<class> と <name-space> のダグ形式で格納するように改めまし
+　た。ソースファイルの読み込み速度をも向上させる改善を施して
+　います。
+
+◆じゅん for Java の Prolog インタプリタが、韓国からの依頼に
+　より、$ を扱えるように字句解析テーブルを変更したのですが、
+　それに合わせて じゅん for Smalltalk にも同様な変更を施しま
+　した。
+
+◆鏡像のための座標変換行列を、座標変換３次元オブジェクトに適
+　用すると、じゅんの法線ベクトル遅延評価系と OpenGL の法線ベ
+　クトル整調評価系との間で齟齬が生じていました。それを解消し
+　ておきました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Sun Nov 21 11:36:26 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7020] Jun605 for Smalltalk
+Message-ID: <419FFF2A.5010602@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun605」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆３次元描画オブジェクト（JunOpenGL3dObject のサブクラスのイ
+　ンスタンス）に表面積を応答するメソッドを追加しました。３次
+　元描画オブジェクトを３次元の幾何三角形群に変換して表面積を
+　積算する方式で実装しました。
+
+◆座標変換３次元描画オブジェクト（JunOpenGL3dTransformedObject
+　であることを応答する述語メソッドに不具合がありました。修正を
+　施しました。また、例題プログラムを追加改良しています。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Mon Nov 22 12:03:37 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7021] Jun499v14 for Smalltalk
+Message-ID: <41A15709.4030300@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+VisualWorks 3.x のための【じゅん (Jun499v14)】を用意しました。
+VisualWorks 7.x や 5i.x のための【Jun605】相当になります。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/VisualWorks3.0/
+	Jun499v14.zip
+	Jun499v14pcl30.zip
+
+じゅん オールインワン【Jun499v14】もアップロードしてあります。
+
+http://www.sra.co.jp/people/aoki/Jun/JunAllInOne/
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/JunAllInOne/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Mon Nov 29 17:17:27 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:55 2007
+Subject: [SML 7022] Jun606 for Smalltalk
+Message-ID: <1B56520D-41DF-11D9-A5A7-000A9579B48E@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun606」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/people/aoki/Jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+以下の２つの変更とも暫定的なもので、現行の問題を回避するため
+です。
+
+◆Lisp インタプリタのシンボルは、Smalltalk のリテラルシンボ
+　ル（#abc_____123）と同じなのですが、最近の Smalltalk では
+　クォートシンボル（#'abc + - 123'）が多用されるようになりま
+　した。特殊文字や空白などを含むシンボルを生成するためです。
+
+　これに Lisp インタプリタも対応すべく、ブレイスで囲んだオブ
+　ジェクト表記 {#'abc + - 123'} を用いて入出力できるようにし
+　ました。
+
+◆ウィンドウの表示内容を獲得して画像に変換する際に、いままで
+　は displayPendingInvalidation を用いていたのですが、VW 7.3
+　において、現在、上手く動きませんので、強制的に display を
+　送ることにしています。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+

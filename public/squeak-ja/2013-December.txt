@@ -1,0 +1,229 @@
+From ume ＠ softumeya.com  Fri Dec  6 00:57:18 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 6 Dec 2013 00:57:18 +0900
+Subject: [Squeak-ja: 4709]
+	Smalltalk忘年会のお知らせ
+Message-ID: <CAH3eEdTMhSZJeJGLNpC=y86+uBKt_WTr4p5XOytnnqkUmDiB=g@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+年末恒例のSmalltalkビアバッシュのお知らせです。
+
+第60回Smalltalk勉強会(兼忘年会)は、ビールを飲みながらSmalltalkによる華麗なデモやプレゼンを味わえる至高の空間を提供します。
+早い話が年忘れアルコールOKのLT大会ですので、お気軽にお越しください。
+
+下記で受け付けしています。一応20名までなのでお早めにどうぞ。
+http://atnd.org/events/46159
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From sadie ＠ kind.ocn.ne.jp  Fri Dec 20 11:27:05 2013
+From: sadie ＠ kind.ocn.ne.jp (Sunao Furukawa)
+Date: Fri, 20 Dec 2013 11:27:05 +0900
+Subject: [Squeak-ja: 4710]
+	Pharo 3.0 betaについて
+Message-ID: <52B3AAF9.3040108@kind.ocn.ne.jp>
+
+古川と申します。
+先日、Pharo 3.0のベータ版が出ていましたので早速、試してみたのですが、
+あまりPharo 2.0と変わっていないのではないかと思いました。
+というのは、以前、forum.world.stだかどこだかでPharo 3.0からは、
+Visual GUI Builderがついてくるという未確認情報を見ていて楽しみにしていた
+のですが、
+Code Freezeしたにもかかわらず何もないと思いました。
+sourcesファイルもPharoV20のままでメジャーバージョンアップなのに、
+PharoV20.sourcesのままなのって思いました。
+これから中身が変わるっていう可能性ってあるのでしょうか？
+Code FreezeしたらBug Fix以外の変更は無いと思うのですが。
+Visual GUI Builderについて詳しい方、情報があれば教えてください。
+今後もPolymorphをUIthemeのように使うことになるのでしょうか。
+なんか残念でした。
+以上、私の話を聞いていただいてありがとうございました。
+
+From ume ＠ softumeya.com  Fri Dec 20 20:54:05 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 20 Dec 2013 20:54:05 +0900
+Subject: [Squeak-ja: 4711] Re:
+	Pharo 3.0 betaについて
+In-Reply-To: <52B3AAF9.3040108@kind.ocn.ne.jp>
+References: <52B3AAF9.3040108@kind.ocn.ne.jp>
+Message-ID: <CAH3eEdR_NUx+buSTE8DTFCqp9V26+2mpvUYiGnAdRteKsk6-EA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+Pharoの話題とはちょっと珍しいですね。
+
+期待外れとのことでしたが、Pharo 2.0が出たのが今年の3月ですから、まあそんなものではないでしょうか。
+むしろ少ないリソースでよくやっていると思います。
+
+Smalltalk allClasses size で見ますと、
+
+Pharo 2.0 => 3250
+Pharo 3.0(beta) => 3848
+
+となっていました。クラス数が多ければ良いというものではありませんが、着実に育ってきています。
+
+- AthensというCairoを利用したベクターグラフィックエンジン
+- Opalという新たなコンパイラ
+- Continuationのサポート
+- InspectorやDebuggerがSpec UIベースに書き換えられた
+
+あたりが目玉と思います。
+
+2013年12月20日 11:27 Sunao Furukawa <sadie ＠ kind.ocn.ne.jp>:
+> 古川と申します。
+> 先日、Pharo 3.0のベータ版が出ていましたので早速、試してみたのですが、
+> あまりPharo 2.0と変わっていないのではないかと思いました。
+> というのは、以前、forum.world.stだかどこだかでPharo 3.0からは、
+> Visual GUI Builderがついてくるという未確認情報を見ていて楽しみにしていた
+> のですが、
+> Code Freezeしたにもかかわらず何もないと思いました。
+> sourcesファイルもPharoV20のままでメジャーバージョンアップなのに、
+> PharoV20.sourcesのままなのって思いました。
+> これから中身が変わるっていう可能性ってあるのでしょうか？
+> Code FreezeしたらBug Fix以外の変更は無いと思うのですが。
+> Visual GUI Builderについて詳しい方、情報があれば教えてください。
+> 今後もPolymorphをUIthemeのように使うことになるのでしょうか。
+> なんか残念でした。
+> 以上、私の話を聞いていただいてありがとうございました。
+
+おそらくUIPainterのことと思います。今年のGoogle Summer of Codeで始まったプロジェクトでまだまだバリバリ開発中のようです。
+http://uipainter-gsoc.over-blog.com/
+http://smalltalkhub.com/#!/~ErwanDouaille/UIPainter/commits
+
+エラーが出まくりますが、いちおう下記で入ります。
+Gofer new　smalltalkhubUser: 'ErwanDouaille' project: 'UIPainter';
+    configurationOf: 'UIPainter';
+    load.
+
+ConfigurationOfUIPainter load
+
+ちなみにソースファイルがPharoV20.sourcesのままとなっているのは、しばらく続くような気がします。Squeakも4.4でありながらSqueakV41.sourcesですし。
+
+ソースファイルはもともと殿堂入りしたソースが格納されるものなので、.changes等に比べると更新される度合いは低いと言えます。また、.sourcesに殿堂入りさせるとソースの変更履歴がクラスブラウザからのversions等で見られなくなるので、あまり頻繁に更新するとかえって不便だったりします。
+
+しかしながらPharo 2.0の.changesが700kb程度、Pharo
+3.0の.changesが28MB程度となっていますので、そろそろ.changesを整理して.sourcesに反映させる頃合いと思う人もいるかもしれません。最終版では.sourcesが更新される可能性も、まだ残っています。.
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From sadie ＠ kind.ocn.ne.jp  Sat Dec 21 11:00:13 2013
+From: sadie ＠ kind.ocn.ne.jp (Sunao Furukawa)
+Date: Sat, 21 Dec 2013 11:00:13 +0900
+Subject: [Squeak-ja: 4712] Re:
+ Pharo 3.0 betaについて
+In-Reply-To: <CAH3eEdR_NUx+buSTE8DTFCqp9V26+2mpvUYiGnAdRteKsk6-EA@mail.gmail.com>
+References: <52B3AAF9.3040108@kind.ocn.ne.jp>
+ <CAH3eEdR_NUx+buSTE8DTFCqp9V26+2mpvUYiGnAdRteKsk6-EA@mail.gmail.com>
+Message-ID: <52B4F62D.1080400@kind.ocn.ne.jp>
+
+どうもありがとうございます。古川です。
+梅澤さん、Pharoの話にも関わらず、すばやく詳しいレスありがとうございます。
+早速ですが、UIPainter試してみました。
+Workspaceからだと私にはうまくできなかったので、
+Monticelloからロードしてみました。
+Toolsにも表示されて少し感動しましたが、
+あまり、うまくは動いてくれませんでした。
+せめてテストコードは...と思いNautilusの中でRun testsを実行するのが限界で
+した。
+UIPainterTestは黄色でした。よくわかりませんが、グレーのテストもありました。
+あまり参考にはならないかもしれませんが報告させていただきます。
+御返答ありがとうございました。
+ちなみにPharoの話題ってSMLに出したほうがいいですか？
+失礼してばかりで申し訳ありません。
+
+(2013/12/20 20:54), Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> Pharoの話題とはちょっと珍しいですね。
+>
+> 期待外れとのことでしたが、Pharo 2.0が出たのが今年の3月ですから、まあそんなものではないでしょうか。
+> むしろ少ないリソースでよくやっていると思います。
+>
+> Smalltalk allClasses size で見ますと、
+>
+> Pharo 2.0 => 3250
+> Pharo 3.0(beta) => 3848
+>
+> となっていました。クラス数が多ければ良いというものではありませんが、着実に育ってきています。
+>
+> - AthensというCairoを利用したベクターグラフィックエンジン
+> - Opalという新たなコンパイラ
+> - Continuationのサポート
+> - InspectorやDebuggerがSpec UIベースに書き換えられた
+>
+> あたりが目玉と思います。
+>
+> 2013年12月20日 11:27 Sunao Furukawa <sadie ＠ kind.ocn.ne.jp>:
+>> 古川と申します。
+>> 先日、Pharo 3.0のベータ版が出ていましたので早速、試してみたのですが、
+>> あまりPharo 2.0と変わっていないのではないかと思いました。
+>> というのは、以前、forum.world.stだかどこだかでPharo 3.0からは、
+>> Visual GUI Builderがついてくるという未確認情報を見ていて楽しみにしていた
+>> のですが、
+>> Code Freezeしたにもかかわらず何もないと思いました。
+>> sourcesファイルもPharoV20のままでメジャーバージョンアップなのに、
+>> PharoV20.sourcesのままなのって思いました。
+>> これから中身が変わるっていう可能性ってあるのでしょうか？
+>> Code FreezeしたらBug Fix以外の変更は無いと思うのですが。
+>> Visual GUI Builderについて詳しい方、情報があれば教えてください。
+>> 今後もPolymorphをUIthemeのように使うことになるのでしょうか。
+>> なんか残念でした。
+>> 以上、私の話を聞いていただいてありがとうございました。
+> おそらくUIPainterのことと思います。今年のGoogle Summer of Codeで始まったプロジェクトでまだまだバリバリ開発中のようです。
+> http://uipainter-gsoc.over-blog.com/
+> http://smalltalkhub.com/#!/~ErwanDouaille/UIPainter/commits
+>
+> エラーが出まくりますが、いちおう下記で入ります。
+> Gofer new　smalltalkhubUser: 'ErwanDouaille' project: 'UIPainter';
+>     configurationOf: 'UIPainter';
+>     load.
+>
+> ConfigurationOfUIPainter load
+>
+> ちなみにソースファイルがPharoV20.sourcesのままとなっているのは、しばらく続くような気がします。Squeakも4.4でありながらSqueakV41.sourcesですし。
+>
+> ソースファイルはもともと殿堂入りしたソースが格納されるものなので、.changes等に比べると更新される度合いは低いと言えます。また、.sourcesに殿堂入りさせるとソースの変更履歴がクラスブラウザからのversions等で見られなくなるので、あまり頻繁に更新するとかえって不便だったりします。
+>
+> しかしながらPharo 2.0の.changesが700kb程度、Pharo
+> 3.0の.changesが28MB程度となっていますので、そろそろ.changesを整理して.sourcesに反映させる頃合いと思う人もいるかもしれません。最終版では.sourcesが更新される可能性も、まだ残っています。.
+>
+> ではでは。
+
+
+From ume ＠ softumeya.com  Sun Dec 22 20:31:32 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sun, 22 Dec 2013 20:31:32 +0900
+Subject: [Squeak-ja: 4713] Re:
+	Pharo 3.0 betaについて
+In-Reply-To: <52B4F62D.1080400@kind.ocn.ne.jp>
+References: <52B3AAF9.3040108@kind.ocn.ne.jp>
+ <CAH3eEdR_NUx+buSTE8DTFCqp9V26+2mpvUYiGnAdRteKsk6-EA@mail.gmail.com>
+ <52B4F62D.1080400@kind.ocn.ne.jp>
+Message-ID: <CAH3eEdSWMY2J+hgJeB6GZYyEbb+SKKfF+4RFKi+PgnJYXdMqqg@mail.gmail.com>
+
+梅澤です。
+
+> ちなみにPharoの話題ってSMLに出したほうがいいですか？
+> 失礼してばかりで申し訳ありません。
+>
+
+どちらかというとSMLという感じですが、多くの人は両方購読しているでしょうし、小さなコミュニティですのであまり気にする必要もないかと思います。
+
+Pharoも最近PhratchというScratchの移植版が出たりしており、Scratchの改良版を開発するのにも役立つプラットフォームになっていくでしょう。
+https://code.google.com/p/phratch/
+
+ではでは。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

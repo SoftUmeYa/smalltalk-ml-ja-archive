@@ -1,0 +1,908 @@
+From umejava ＠ mars.dti.ne.jp  Fri Apr  1 01:24:01 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2415] swikis.ddo.jpディスククラッシュ
+Message-ID: <JB200504010124014.11665750@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+日頃お使いいただいておりますswikis.ddo.jpですが、
+先ほどディスクがクラッシュしました。
+
+#はずれのHDDだったようです。
+
+バックアップは2/12のものが残っております。
+復旧の見通しはしばらく立っておりません。
+
+2/12-3/31日までの間で、更新されたWebページや、プロジェクト置き場の
+作品などでローカルに保存しているものがありましたら、お知らせください。
+
+よろしくお願い申し上げます。
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Sat Apr  2 02:23:24 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2416] Re: swikis.ddo.jpディスククラッシュ
+In-Reply-To: <JB200504010124014.11665750@mars.dti.ne.jp>
+References: <JB200504010124014.11665750@mars.dti.ne.jp>
+Message-ID: <JH2005040202232410.5516234@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+下記の件ですが、とりあえず復活しました。
+
+プロジェクト置き場の作品集、掲示板など、いくつか消えていますので
+バックアップをお持ちの方は、再びアップロードするなどの復元作業を
+していただけますと助かります。
+
+ブンブン言っていた旧ディスクで動かしていますので、あくまで
+当座しのぎです。新たなディスクが来しだい、そちらに移行させます。
+
+> 日頃お使いいただいておりますswikis.ddo.jpですが、
+> 先ほどディスクがクラッシュしました。
+> 
+> #はずれのHDDだったようです。
+> 
+> バックアップは2/12のものが残っております。
+> 復旧の見通しはしばらく立っておりません。
+> 
+> 2/12-3/31日までの間で、更新されたWebページや、プロジェクト置き場の
+> 作品などでローカルに保存しているものがありましたら、お知らせください。
+
+---
+[:masashi | ^umezawa]
+
+From tak ＠ metatoys.org  Mon Apr  4 16:24:17 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2417] Nihongo 7 アップデート
+Message-ID: <4250EBA1.4090002@metatoys.org>
+
+山宮です。
+
+しばらく遠ざかってましたが、Nihongo 7 のアップデートに新しいファイルを
+入れましたのでご報告します。使いたい方は、ワールドメニュー - ヘルプ - 
+サーバーからアップデートを取得で取り込んでください。
+
+0084watcherComponents-2.cs
+ビューワの値が編集できない問題を修正 - 山宮
+http://bugs.impara.de/view.php?id=1000
+
+0083LangEditorB64Comment.cs
+言語エディタの Base64 形式翻訳ファイルにコメント - 山宮
+
+0082TRANSConnectors-T2.cs
+Connectors の翻訳ファイル - 武田さん、山宮
+
+0081Connectors-Nihongo7.cs
+Connectors フラップが訳されない問題 - 武田さん
+
+武田さんのパッチはしばらく前に頂いていたのですが、反映が遅くなりました。
+他の訳語に合わせて少し変えました("Curvy ..." は 「曲線〜」という事にし
+ています)。
+
+また、言語エディタの使い方を http://languagegame.org:8080/propella/103 
+に書きましたのでご参考ください(どうもイマイチまだ分かりにくい文章になっ
+てしまっています。。。)
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From atsuya.morito ＠ nifty.com  Tue Apr  5 06:18:22 2005
+From: atsuya.morito ＠ nifty.com (morito atsuya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2418] よろしくお願いします。
+Message-ID: <4251AF1E.80205@nifty.com>
+
+みなさん、はじめまして
+
+森戸篤也といいます。
+茨城県立勝田工業高等学校　電子機械科に勤務しています。
+
+Squeakを子供向けの公開講座などで使おうと計画しています。
+
+そのひとつとして、茨城県立図書館と共同で「親子で楽しむロボット製作入門」
+という講座を実施します。Squeakでプログラム入門を行って、その後、ロボット
+製作をするという内容です。ロボットのプログラムは、残念ながらSqueakではあ
+りません。
+
+阿部 和広様より、チョロモードなどSqueakで動かせるという情報もいただき、講座の中で紹介しようと思っています。
+
+smaltalkもsqueakも初心者です。
+よろしくお願いします。
+
+
+
+From tak ＠ metatoys.org  Tue Apr  5 13:37:04 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2419] nihongo7 updates (4/5)
+Message-ID: <425215F0.1060700@metatoys.org>
+
+山宮です。
+
+Korakurider さんが早速翻訳を送ってくださったのでアップしました。
+
+0087NoHaloEtoysFlap.cs
+Navigator と Supplies 以外のフラップでハロを出す - 山宮
+http://bugs.impara.de/view.php?id=985
+
+0086TRANSObjectHelp050405.cs
+オブジェクトカタログヘルプ辞書 - Korakurider さん
+
+0085ObjectHelp050405.cs
+オブジェクトカタログ内のバルーンヘルプ翻訳 - Korakurider さん
+
+試したい方は nihongo7 の
+[ワールドメニュー] - [ヘルプ] - [サーバーからアップデートを取得]
+で取り込んでください。
+
+ではでは
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From k.suzaki ＠ aist.go.jp  Wed Apr  6 13:55:37 2005
+From: k.suzaki ＠ aist.go.jp (Kuniyasu Suzaki)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2420] squeak on APEC-KNOPPIX
+Message-ID: <20050406.135537.70204152.k.suzaki@aist.go.jp>
+
+
+須崎です。
+愛知県総合教育センターで作製された "APEC-KNOPPIX" に squeak がインストー
+ルされています。
+     http://www.ie-tokai.aichi-c.ed.jp/apecknoppix/
+
+簡単な解説HPで EToy の使い方が説明されています。
+    http://www.ie-tokai.aichi-c.ed.jp/apecknoppix/pdf/squeak.pdf
+
+その他のアプケーション選択も一味変わっていてsqueak な人には面白いのでは？
+    算数クロスワードパズル TuxMathScrabble
+       http://www.ie-tokai.aichi-c.ed.jp/apecknoppix/pdf/tuxmathscrabble.pdf
+    ぺイント TuxPaint
+       http://www.ie-tokai.aichi-c.ed.jp/apecknoppix/pdf/tuxpaint.pdf
+
+------
+suzaki
+
+From abee.abe ＠ nifty.ne.jp  Wed Apr  6 17:27:14 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2421] クローズアップ現代でスクイーク
+Message-ID: <42539D62385.1FB6ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+日本HPで行っているスクイークのワークショップの様子が、4月11日(月)の「クロー
+ズアップ現代」で放映されます。
+
+NHK総合 19:30-19:56, BS-2 23:55-24:21
+http://www.nhk.or.jp/gendai/
+(まだ予定には載っていません)
+
+この回は、団塊の世代が定年後をどの様に過ごすかをテーマにしたもので、 HP社
+員の方がワークショップにボランティア参加する様子を撮影されました。
+
+このワークショップは、すでにスクイークの基本をマスタした子供たちを対象に、
+世界聴診器と図工を組み合わせて、光や電圧、音に反応して動くものを作るもの
+でした。
+子供たちに作品には、異なるベルの音色(周波数)に反応するモーフを作って競争
+させるものや、クイズの○×を判定するスイッチを色画用紙の長さ(抵抗値)で識
+別するもの、振り子の先にセロハンと磁石を付け、下に置いたもうひとつの磁石
+の反発を使って、ランダムに画面のUFOを動かすものなどがありました。
+
+この日は山宮さん、林さん、吉正さんという豪華メンバに手伝ってもらったお陰
+もあって、なかなか面白いものになったと思います。
+
+番組中でどのくらい映るか分かりませんが、ぜひご覧ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From tak ＠ metatoys.org  Thu Apr  7 11:25:00 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2422] nihongo7 updates (4/7)
+Message-ID: <425499FC.4030306@metatoys.org>
+
+山宮です。
+いくつか保留になってたバグフィックスですが、
+上手く動いているようなのでアップデートに入れました。
+
+0090MBTypeIn.cs
+ビューワやタイルに全角で数字が入力できるように - 山宮
+
+0089bounceTranslation.cs
+バウンス時に音名が訳されない。バウンス時にエラー - 阿部さん、大島さん
+
+0088watcherComponents-3.cs
+一旦スクリプタに入ったタイルが取れない。色などのウォッチャーでエラー - 山宮
+http://bugs.impara.de/view.php?id=1000
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From tak ＠ metatoys.org  Thu Apr  7 11:35:30 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2423] Re: nihongo7 updates (4/7)
+In-Reply-To: <425499FC.4030306@metatoys.org>
+References: <425499FC.4030306@metatoys.org>
+Message-ID: <42549C72.2060700@metatoys.org>
+
+勝手に自分の手柄にしてしまいましたが。
+
+> 0090MBTypeIn.cs
+> ビューワやタイルに全角で数字が入力できるように - 山宮
+
+大島さん作。でした。
+
+> 0089bounceTranslation.cs
+> バウンス時に音名が訳されない。バウンス時にエラー - 阿部さん、大島さん
+> 
+> 0088watcherComponents-3.cs
+> 一旦スクリプタに入ったタイルが取れない。色などのウォッチャーでエラー - 山宮
+> http://bugs.impara.de/view.php?id=1000
+
+SqueakNihongo7 ではウェブブラウザからのアップデートも出来るようになっています。
+
+http://squeakland.jp/super/uploads/update.html
+にアクセスするとアップデートします。
+
+----
+
+参考: ウェブブラウザからスクイークを使う方法
+http://squeakland.org より英語版のスクイークをインストールした後、Nihongo7 に含まれる
+SqueakPlugin.image を英語版のものと交換して
+(windows なら C:\Program Files\squeak\Plugin\SqueakPlugin.image)
+
+これで SuperSwiki のギャラリーページ (例: http://squeakland.jp/super/gallery)
+から直接プロジェクトを実行できます。
+
+ただし、http://squeakland.org/kids/kidshome.html
+などで、「新しい更新を読み込みますか?」の質問には「いいえ」と答えてください。
+ここはインストーラーを出すまでには何とかしたいなあと思っています。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From yoshiki ＠ squeakland.org  Thu Apr  7 13:29:55 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2424] 毛玉 第2.6版
+Message-ID: <ur7hnw6nw.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+　おおしまです。
+
+  さらなる微調整を加えた、「毛玉」2.6版をリリースしました。
+
+　毛玉とは、スクイークイートイズのタイルを使った簡単なスクリプトで、数
+千、数万のオブジェクトを並列に操作できる環境です。複雑系や気体のシミュ
+レーションなどを簡単に書くことができます。Nihongo 7に読み込むと、タイ
+ルやメッセージの翻訳もばっちりとされているはずです。
+
+  
+http://www.is.titech.ac.jp/~ohshima/squeak/kedama/
+
+を参照してインストールしてみてください。
+
+今回はプラグインも変更されています。古いものでも動きますが、乱数生成を
+高速化したい場合は新しいものを上記のURLからダウンロードしてください。
+
+-- Yoshiki
+
+From tak ＠ metatoys.org  Fri Apr  8 14:15:15 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2425] windows 用 nihongo7 インストーラ
+Message-ID: <42561363.7020400@metatoys.org>
+
+山宮です。
+
+昨日インストーラの作り方を教えてもらったので
+さくっと windows 用のインストーラを作ってみました。
+
+http://metatoys.org/pub/SqueakNihongo7Installer.exe
+
+を実行して http://squeakland.jp/super/gallery にアクセスしてみましょう。
+ご意見お聞かせください。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From yoshiki ＠ squeakland.org  Sat Apr  9 03:08:46 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2426] Re: よろしくお願いします。
+In-Reply-To: <4251AF1E.80205@nifty.com>
+References: <4251AF1E.80205@nifty.com>
+Message-ID: <uis2xw381.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 森戸篤也といいます。
+> 茨城県立勝田工業高等学校　電子機械科に勤務しています。
+
+　こんにちは。
+
+> Squeakを子供向けの公開講座などで使おうと計画しています。
+
+　すばらしいですね。
+
+> そのひとつとして、茨城県立図書館と共同で「親子で楽しむロボット製作入門」
+> という講座を実施します。Squeakでプログラム入門を行って、その後、ロボット
+> 製作をするという内容です。ロボットのプログラムは、残念ながらSqueakではあ
+> りません。
+> 
+> 阿部 和広様より、チョロモードなどSqueakで動かせるという情報もいただき、講座の中で紹介しようと思っています。
+
+　ちょっと手を入れると、シリアルポートやネットワーク経由などで動かせる
+ようにもできるでしょうね。山梨大学の伊藤先生がだいぶんそちら方面で活
+動なさっています。
+
+> smaltalkもsqueakも初心者です。
+> よろしくお願いします。
+
+　こちらこそよろしくお願いします。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Sat Apr  9 03:11:58 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2427] Re: よろしくお願いします。
+In-Reply-To: <uis2xw381.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <4251AF1E.80205@nifty.com>
+	<uis2xw381.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <uhdihw32p.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 　ちょっと手を入れると、シリアルポートやネットワーク経由などで動かせる
+> ようにもできるでしょうね。山梨大学の伊藤先生がだいぶんそちら方面で活
+> 動なさっています。
+
+山梨学院大学です。打ち間違いをしてしまいました。すみません。
+
+http://www.itolab.com/
+
+-- Yoshiki
+
+
+
+From tak ＠ metatoys.org  Sat Apr  9 13:43:23 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2428] Re: windows 用 nihongo7 インストーラ
+In-Reply-To: <42561363.7020400@metatoys.org>
+References: <42561363.7020400@metatoys.org>
+Message-ID: <42575D6B.3030202@metatoys.org>
+
+山宮です。
+
+関連付けを調整したものをもう一度アップしました。今までの Squeak を
+アンインストールしてもちゃんと関連付けされるか試していただければ
+助かります。
+
+http://metatoys.org/pub/SqueakNihongo7Installer.exe
+
+korakurider wrote:
+> Korakuriderです。
+> --- Kazuhiro ABE <abee.abe@nifty.ne.jp> からのメッセージ
+> ：
+> 
+>>私のところでは「公開!」ボタンではSqueakland.jpはリスト
+> 
+> されず、「異なるサー
+> 
+>>バーに公開」メニューと「探す」ボタンおよびそのメニュー
+> 
+> でのみ表示されるよ
+> 
+>>うです。
+> 
+> 　　　このあたりはリリース前に何回も山宮さんとやりとりし
+> たところだったので略して書いてしまいましたが、阿部さんが
+> 書いていただいているのが正しいです。ごめんなさい。
+> 
+> あと追加で気がついたことを書きます。
+> Nihongo7のインストーラは、ファイル拡張子および対応するオ
+> ブジェクトクラスに関するレジストリ登録をしていないようで
+> す。このままだと、クリーンインストール後に*.prや*.image
+> をダブルクリックで開けなかったり、6.1が入っていた環境だ
+> と6.1が立ち上がってしまったりしますね。
+
+
+
+From abee.abe ＠ nifty.ne.jp  Sat Apr  9 18:44:41 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2429] Re: windows 用 nihongo7 インストーラ
+In-Reply-To: <42575D6B.3030202@metatoys.org>
+References: <42561363.7020400@metatoys.org> <42575D6B.3030202@metatoys.org>
+Message-ID: <4257A409178.0D83ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 09 Apr 2005 13:43:23 +0900
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>関連付けを調整したものをもう一度アップしました。今までの Squeak を
+>アンインストールしてもちゃんと関連付けされるか試していただければ
+>助かります。
+
+関連付けは大丈夫っぽいのですが、スタートメニューからSqueakを選んで起動し
+た場合にフリーズします。Alt + .でユーザインタラプトしてみると、添付のエラー
+が出ていました。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     2455 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050409/d83ca600/SqueakDebug.obj
+From umejava ＠ mars.dti.ne.jp  Sat Apr  9 22:00:48 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2430] Re: swikis.ddo.jpディスククラッシュ
+In-Reply-To: <JH2005040202232410.5516234@mars.dti.ne.jp>
+References: <JB200504010124014.11665750@mars.dti.ne.jp>
+	<JH2005040202232410.5516234@mars.dti.ne.jp>
+Message-ID: <JU200504092200484.2139703@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+新ディスクに付け替えました。しばらくは安定して動くことと思います。
+もしも今まで復旧用アップロードを躊躇されていたようでしたら、ぜひとも
+お願いします。
+
+Sat, 02 Apr 2005 02:23:24 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> 
+> 下記の件ですが、とりあえず復活しました。
+> 
+> プロジェクト置き場の作品集、掲示板など、いくつか消えていますので
+> バックアップをお持ちの方は、再びアップロードするなどの復元作業を
+> していただけますと助かります。
+> 
+> ブンブン言っていた旧ディスクで動かしていますので、あくまで
+> 当座しのぎです。新たなディスクが来しだい、そちらに移行させます。
+
+---
+[:masashi | ^umezawa]
+
+From korakurider ＠ yahoo.co.jp  Sat Apr  9 22:29:09 2005
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2431] Re: windows 用 nihongo7 インストーラ
+In-Reply-To: <42575D6B.3030202@metatoys.org>
+References: <42575D6B.3030202@metatoys.org>
+Message-ID: <JE20050409222909.1259991@yahoo.co.jp>
+
+Korakuriderです。山宮さんご苦労さまです。
+
+Takashi Yamamiya <tak@metatoys.org>さん：
+> 山宮です。
+> 
+> 関連付けを調整したものをもう一度アップしました。今までの Squeak を
+> アンインストールしてもちゃんと関連付けされるか試していただければ
+> 助かります。
+> 
+> http://metatoys.org/pub/SqueakNihongo7Installer.exe
+> 
+
+プログラムフォルダーに作られるショートカットから起動したときの動き
+がおかしかったです。（ナビゲータのフラップが開かないなど）
+調べた結果、ショートカットのリンク先指定で、イメージファイル名
+C:\Program Files\Squeak\SqueakNihongo7\SqueakPlugin.image
+の中にブランクが含まれているので、全体をダブルクォートで囲む
+必要があるようです。
+
+阿部さんの書かれていたエラーは再現できなかったですが、これは
+もう対応済みなんでしょうか？
+
+よろしくお願いいたします。
+
+__________________________________
+Do You Yahoo!?
+Upgrade Your Life
+http://bb.yahoo.co.jp/
+
+
+From tak ＠ metatoys.org  Sat Apr  9 23:48:44 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2432] Re: windows 用 nihongo7 インストーラ
+In-Reply-To: <JE20050409222909.1259991@yahoo.co.jp>
+References: <42575D6B.3030202@metatoys.org>
+	<JE20050409222909.1259991@yahoo.co.jp>
+Message-ID: <4257EB4C.8090503@metatoys.org>
+
+山宮です。
+
+何度もお手数おかけして申し訳ございません。
+
+言い訳を書きますと、VISE の入力項目で勝手に "" が付かない奴と付く奴が
+あるのと、自分の環境では上手く動いてしまうのと、貰ったサンプルが微妙に
+不十分なのです。。。
+
+というわけで、スタートメニューの引数に "" をつけたやつを同じURLにアップ
+しましたのでお試しください。阿部さんのは原因不明ですが、ログを見た限り
+やはりパスの分断がおこっているので、原因は同じかもしれません。
+
+korakurider@yahoo.co.jp wrote:
+> Korakuriderです。山宮さんご苦労さまです。
+> 
+> Takashi Yamamiya <tak@metatoys.org>さん：
+> 
+>>山宮です。
+>>
+>>関連付けを調整したものをもう一度アップしました。今までの Squeak を
+>>アンインストールしてもちゃんと関連付けされるか試していただければ
+>>助かります。
+>>
+>>http://metatoys.org/pub/SqueakNihongo7Installer.exe
+>>
+> 
+> 
+> プログラムフォルダーに作られるショートカットから起動したときの動き
+> がおかしかったです。（ナビゲータのフラップが開かないなど）
+> 調べた結果、ショートカットのリンク先指定で、イメージファイル名
+> C:\Program Files\Squeak\SqueakNihongo7\SqueakPlugin.image
+> の中にブランクが含まれているので、全体をダブルクォートで囲む
+> 必要があるようです。
+> 
+> 阿部さんの書かれていたエラーは再現できなかったですが、これは
+> もう対応済みなんでしょうか？
+> 
+> よろしくお願いいたします。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From abee.abe ＠ nifty.ne.jp  Sun Apr 10 00:08:51 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2433] Re: windows 用 nihongo7 インストーラ
+In-Reply-To: <4257EB4C.8090503@metatoys.org>
+References: <JE20050409222909.1259991@yahoo.co.jp>
+	<4257EB4C.8090503@metatoys.org>
+Message-ID: <4257F003287.0D87ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 09 Apr 2005 23:48:44 +0900
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>というわけで、スタートメニューの引数に "" をつけたやつを同じURLにアップ
+>しましたのでお試しください。阿部さんのは原因不明ですが、ログを見た限り
+>やはりパスの分断がおこっているので、原因は同じかもしれません。
+
+直ったことを確認しました。ありがとうございました。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From korakurider ＠ yahoo.co.jp  Sun Apr 10 00:25:40 2005
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2434] Re: windows 用 nihongo7 インストーラ
+In-Reply-To: <4257EB4C.8090503@metatoys.org>
+References: <4257EB4C.8090503@metatoys.org>
+Message-ID: <JD20050410002540.8251044@yahoo.co.jp>
+
+Korakuriderです。
+
+Takashi Yamamiya <tak@metatoys.org>さん：
+> 
+> というわけで、スタートメニューの引数に "" をつけたやつを同じURLにアッ
+プ
+> しましたのでお試しください。
+
+私の方の件（プログラムフォルダからの起動）も直りましたOK。
+どうもありがとうございました。
+
+
+__________________________________
+Do You Yahoo!?
+Upgrade Your Life
+http://bb.yahoo.co.jp/
+
+
+From abee.abe ＠ nifty.ne.jp  Sun Apr 10 01:20:32 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2435] Re: windows 用 nihongo7 インストーラ
+In-Reply-To: <4257F003287.0D87ABEE.ABE@smtp.nifty.com>
+References: <4257EB4C.8090503@metatoys.org>
+	<4257F003287.0D87ABEE.ABE@smtp.nifty.com>
+Message-ID: <425800D0380.0D8AABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 10 Apr 2005 00:08:51 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>直ったことを確認しました。ありがとうございました。
+
+デスクトップのショートカットで起動すると同じ問題が起こるようです。
+たびたびすみません。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From tak ＠ metatoys.org  Sun Apr 10 01:35:07 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2436] Re: windows 用 nihongo7 インストーラ
+In-Reply-To: <425800D0380.0D8AABEE.ABE@smtp.nifty.com>
+References: <4257EB4C.8090503@metatoys.org>	<4257F003287.0D87ABEE.ABE@smtp.nifty.com>
+	<425800D0380.0D8AABEE.ABE@smtp.nifty.com>
+Message-ID: <4258043B.7050307@metatoys.org>
+
+山宮です。
+
+ああ、一緒に見ておくべきでしたね。直しました。
+今アップロード中ですので、しばらくしてからお試しください。
+http://metatoys.org/pub/SqueakNihongo7Installer.exe
+
+> 阿部@新百合です。
+> 
+> On Sun, 10 Apr 2005 00:08:51 +0900
+> Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+> 
+>>直ったことを確認しました。ありがとうございました。
+> 
+> 
+> デスクトップのショートカットで起動すると同じ問題が起こるようです。
+> たびたびすみません。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From abee.abe ＠ nifty.ne.jp  Mon Apr 11 00:13:05 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2437] Nihongo7 「手元のディスクにのみ保存」でエラー
+In-Reply-To: <p06001009be6b57cfa1f4@nifty.ne.jp>
+References: <JE20050327011148.2507365@yahoo.co.jp>
+	<p06001009be6b57cfa1f4@nifty.ne.jp>
+Message-ID: <425942810.BCF1ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+山宮さんの最新のNihongo7インストーラを使って作品を作り、「手元のディスク
+にのみ保存」すると稀に添付のエラーが発生します。感覚的には10-20回に1回程
+度でしょうか。
+
+困ったことに再現性がなく、繰り返すと保存できたり、スナップショットを撮っ
+てイメージを開けなおすと保存できたりするので性質が悪いです。
+同じローカルディスクであっても、自動作成されるユーザ名のディレクトリを指
+定して保存した場合はエラーになったことはありません。
+
+これが以前にwildflowersさんが指摘していた問題と同じ原因かどうかは分かりま
+せん。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     4375 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050411/2070207a/SqueakDebug.obj
+From korakurider ＠ yahoo.co.jp  Mon Apr 11 01:31:43 2005
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2438] Re: Nihongo7 「手元のディスクにのみ保存」でエラー
+In-Reply-To: <425942810.BCF1ABEE.ABE@smtp.nifty.com>
+References: <425942810.BCF1ABEE.ABE@smtp.nifty.com>
+Message-ID: <JA20050411013143.22948388@yahoo.co.jp>
+
+Korakuriderです。
+
+数十回試したのですが、阿部さんが書かれていたエラーは再現できませんでし
+た。代わりに、一回だけ、添付のような別のエラーが発生し、プロジェクト保存
+処理中に使われる、一時ファイルを保存するためのフォルダが残ったままに
+なったことがあります。何か非同期で動いている部分があるような感じがします
+が、調べようにもVM側が返しているエラー内容の情報が少なすぎますね。
+
+
+Kazuhiro ABE <abee.abe@nifty.ne.jp>さん：
+> 
+> 山宮さんの最新のNihongo7インストーラを使って作品を作り、
+
+念のためですが、この現象とインストーラとは関係ないですよね？
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     2923 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050411/55e1b09d/SqueakDebug.obj
+From abee.abe ＠ nifty.ne.jp  Tue Apr 12 00:05:45 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2439] Re: クローズアップ現代でスクイーク
+In-Reply-To: <42539D62385.1FB6ABEE.ABE@smtp.nifty.com>
+References: <42539D62385.1FB6ABEE.ABE@smtp.nifty.com>
+Message-ID: <425A9249198.227BABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 06 Apr 2005 17:27:14 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>番組中でどのくらい映るか分かりませんが、ぜひご覧ください。
+
+一瞬でしたね。普通の人はあれがSqueakとは分からなかったでしょう。
+吉正さんが映ったのは確認しました。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From kyuppon ＠ hotmail.com  Tue Apr 12 05:41:38 2005
+From: kyuppon ＠ hotmail.com (kyuppon)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2440] Re: クローズアップ現代でスクイーク
+References: <42539D62385.1FB6ABEE.ABE@smtp.nifty.com>
+	<425A9249198.227BABEE.ABE@smtp.nifty.com>
+Message-ID: <BAY101-DAV543FC0EB256E204594C09A9320@phx.gbl>
+
+はじめまして！
+きゅっぽんです！よろしくお願いします。
+
+> 一瞬でしたね。普通の人はあれがSqueakとは分からなかったでしょう。
+> 吉正さんが映ったのは確認しました。
+>
+>  //abee
+
+私も番組の宣伝の時からチェックしていました。（Squeakの絵でわかりました）
+でも、たしかに一瞬でした。
+
+From abee.abe ＠ nifty.ne.jp  Tue Apr 12 17:34:05 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2441] Yahoo の新語探検に「スクイーク」
+Message-ID: <425B87FD86.C00EABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+とある人に教えてもらったのですが、今日(4/12)のYahooの新語探検に「スクイー
+ク」が載りました。内容はほぼ日本HPのリリースの引き写しですね(間違いもその
+まま)。
+
+http://dic.yahoo.co.jp/tribute/2005/04/12/1.html
+
+今日の新語は今日一日トピックスの右上に表示されるので、相当のアクセスがあ
+るものと思われます。
+
+http://dailynews.yahoo.co.jp/fc/
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Tue Apr 12 17:48:50 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2442] 日経 IT Pro ニュースに  Nihongo7
+Message-ID: <425B8B723A9.C00FABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+いささか旧聞に属する話で、既にblogなどでも取り上げられていますが、こちら
+にも書いておきます。
+2005/03/22の日経IT ProニュースでNihongo7のリリースが記事になっています。
+
+Squeak日本語新版「Squeak Nihongo7」が公開
+http://itpro.nikkeibp.co.jp/free/NBY/NEWS/20050325/2/
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From tak ＠ metatoys.org  Fri Apr 15 23:43:46 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2443] nihongo7 updates (4/15)
+Message-ID: <425FD322.2020500@metatoys.org>
+
+山宮です。
+
+今週アップデートした分をお知らせします。
+
+0096IgnoreNilProjectOnLoad.cs
+プロジェクトを探す際に選ばないで了解を押すとエラー  - Korakurider さん
+http://bugs.impara.de/view.php?id=1074
+
+0095TestTileTRANS.cs
+0094NameForHandedTile.cs
+スクリプタメニューから取り出した乱数タイルの名前「タイル」→「乱数」に
+「テストタイル」の名前「CompoundTile」→「テストタイル」に - Korakurider さん
+
+0093eToyFriendlyViewerFlap.cs
+eToysFriendlyでビューワフラップタブのハロを出なくする - 阿部さん
+
+0092translationForFlap.st
+フラップ周りの翻訳もれ - 阿部さん
+
+0091LanguageEditorOnDefault.cs
+言語エディタのデフォルトセッティング - Korakurider さん
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From tak ＠ metatoys.org  Sat Apr 16 00:12:51 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2444] windows 用 nihongo7 インストーラ(やまもとさんイラスト版)
+Message-ID: <425FD9F3.9000407@metatoys.org>
+
+山宮です。
+
+山本さんによるイラスト入りの、色々修正済みバージョンの
+インストーラーをこちらにアップしました。
+
+http://metatoys.org/pub/SqueakNihongo7Installer.exe
+
+阿部さんのたまに出るというエラー以外はもう問題ないんじゃないでしょうか。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+

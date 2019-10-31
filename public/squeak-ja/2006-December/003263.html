@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3263] Re: 多角形モーフの頂点をいじるタイル
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203263%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkI/M1E3QSViITwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUkTkQ6RUAkciQkJDgkayU/JSQlaxsoQg%3D%3D%3F%3D&In-Reply-To=C7FC43DC-174D-45AB-BA0E-490B30DCF94E%40st.rim.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003261.html">
+   <LINK REL="Next"  HREF="003267.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3263] Re: 多角形モーフの頂点をいじるタイル</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203263%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkI/M1E3QSViITwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUkTkQ6RUAkciQkJDgkayU/JSQlaxsoQg%3D%3D%3F%3D&In-Reply-To=C7FC43DC-174D-45AB-BA0E-490B30DCF94E%40st.rim.or.jp"
+       TITLE="[Squeak-ja: 3263] Re: 多角形モーフの頂点をいじるタイル">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2006年 12月  7日 (木) 00:22:51 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003261.html">[Squeak-ja: 3261] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+        <LI>次の記事 <A HREF="003267.html">[Squeak-ja: 3267] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3263">[ 日付 ]</a>
+              <a href="thread.html#3263">[ スレッド ]</a>
+              <a href="subject.html#3263">[ 件名 ]</a>
+              <a href="author.html#3263">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Wed, 6 Dec 2006 20:52:56 +0900
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt; wrote:
+&gt;<i>スクイークをコンパスと定規代わりに使うことで、他にも色々な作図方法があり
+</I>&gt;<i>そうです。
+</I>
+そうですね。これで軌跡を実体として残せるようになったというのが大きいと思
+います。
+
+&gt;&gt;<i> その過程で気付いたことですが、存在しない頂点にカーソルを合わせて、削除し
+</I>&gt;&gt;<i> ようとするとエラーになりますね。これはハンドリングして吸収したほうが良い
+</I>&gt;<i>
+</I>&gt;<i>バグ報告ありがとうございます。
+</I>&gt;<i>最後の頂点にカーソルを合わせて削除した場合などに、カーソル位置が不正な位
+</I>&gt;<i>置のままでしたので、順序的に前の方向にカーソルを戻すようにしました。
+</I>
+確認しました。ありがとうございます。
+
+&gt;&gt;<i> かもしれません。また、「頂点を一つだけにする」というコマンドがあると便利
+</I>&gt;&gt;<i> かもしれません。他の集合には「すべてを削除」というのがありますが、それに
+</I>&gt;&gt;<i> 相当するものです。
+</I>&gt;<i>
+</I>&gt;<i>「カーソル以外をすべて削除」というコマンドを追加してみました。
+</I>&gt;<i>フレーズ（文言）については、ご意見よろしくお願いします。
+</I>
+確認しました。これで良いと思います。
+早速使ってみましたので、よろしければどうぞ。
+
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/9109da35-09db-4521-9e7f-4606df556228">http://squeakland.jp/seaside/SBSuperSwiki/9109da35-09db-4521-9e7f-4606df556228</A>
+
+新しいリクエストなのですが、スクリプトで回転中心を動かせたり、直線の交点
+を求められると楽しいかもしれません。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003261.html">[Squeak-ja: 3261] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+	<LI>次の記事 <A HREF="003267.html">[Squeak-ja: 3267] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3263">[ 日付 ]</a>
+              <a href="thread.html#3263">[ スレッド ]</a>
+              <a href="subject.html#3263">[ 件名 ]</a>
+              <a href="author.html#3263">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

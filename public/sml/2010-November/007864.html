@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7864] Re: インクリメンタル・サーチ・ダイアログ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207864%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlcyUvJWolYSVzJT8layEmJTUhPCVBISYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUAlJCUiJW0lMBsoQg%3D%3D%3F%3D&In-Reply-To=%3C4CE9CECB.1030908%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007863.html">
+   <LINK REL="Next"  HREF="007865.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7864] Re: インクリメンタル・サーチ・ダイアログ</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207864%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlcyUvJWolYSVzJT8layEmJTUhPCVBISYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUAlJCUiJW0lMBsoQg%3D%3D%3F%3D&In-Reply-To=%3C4CE9CECB.1030908%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 7864] Re: インクリメンタル・サーチ・ダイアログ">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2010年 11月 22日 (月) 11:00:43 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007863.html">[SML 7863] インクリメンタル・サーチ・ダイアログ
+</A></li>
+        <LI>次の記事 <A HREF="007865.html">[SML 7865] プログラム整形（フォーマット）
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7864">[ 日付 ]</a>
+              <a href="thread.html#7864">[ スレッド ]</a>
+              <a href="subject.html#7864">[ 件名 ]</a>
+              <a href="author.html#7864">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>変数名が適切ではなかったので、再ポストします、あしからず。
+
+こんにちは、皆さん、青木淳＠京都上賀茂です。
+
+京都のSmalltalk勉強会において用いたインクリメンタル・サーチ・
+ダイアログのプログラミング・イディオムをポストしておきます。
+
+|<i> anArray aBlock aDialog |
+</I>anArray := (Smalltalk allClasses
+            collect: [:aClass | aClass toolListDisplayString]) asSortedCollection
+            anArray.
+aBlock :=
+        [:aPattern |
+        aPattern isEmpty
+            ifTrue: [anArray yourself]
+            ifFalse: [anArray select: [:anElement | aPattern , '*' match: anElement]]].
+aDialog := IncrementalSearchDialog forSelectionWithSearch: aBlock.
+^(aDialog select)
+    ifNotNil:
+            [:anElement |
+            Transcript
+                cr;
+                nextPutAll: anElement printString;
+                flush];
+    yourself
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+
+
+(10/11/22 10:51), AOKI Atsushi wrote:
+&gt;<i> こんにちは、皆さん、青木淳＠京都上賀茂です。
+</I>&gt;<i> 
+</I>&gt;<i> 京都のSmalltalk勉強会において用いたインクリメンタル・サーチ・
+</I>&gt;<i> ダイアログのプログラミング・イディオムをポストしておきます。
+</I>&gt;<i> 
+</I>&gt;<i> | asArray aBlock aDialog |
+</I>&gt;<i> asArray := (Smalltalk allClasses
+</I>&gt;<i>              collect: [:aClass | aClass toolListDisplayString]) asSortedCollection
+</I>&gt;<i>              asArray.
+</I>&gt;<i> aBlock :=
+</I>&gt;<i>          [:aPattern |
+</I>&gt;<i>          aPattern isEmpty
+</I>&gt;<i>              ifTrue: [asArray yourself]
+</I>&gt;<i>              ifFalse: [asArray select: [:anElement | aPattern , '*' match: anElement]]].
+</I>&gt;<i> aDialog := IncrementalSearchDialog forSelectionWithSearch: aBlock.
+</I>&gt;<i> ^(aDialog select)
+</I>&gt;<i>      ifNotNil:
+</I>&gt;<i>              [:anElement |
+</I>&gt;<i>              Transcript
+</I>&gt;<i>                  cr;
+</I>&gt;<i>                  nextPutAll: anElement printString;
+</I>&gt;<i>                  flush];
+</I>&gt;<i>      yourself
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i> AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</I>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007863.html">[SML 7863] インクリメンタル・サーチ・ダイアログ
+</A></li>
+	<LI>次の記事 <A HREF="007865.html">[SML 7865] プログラム整形（フォーマット）
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7864">[ 日付 ]</a>
+              <a href="thread.html#7864">[ スレッド ]</a>
+              <a href="subject.html#7864">[ 件名 ]</a>
+              <a href="author.html#7864">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

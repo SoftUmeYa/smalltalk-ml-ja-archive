@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3051] Re: Wiki としての SuperSwiki
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203051%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=44B6D714.8090201%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003050.html">
+   <LINK REL="Next"  HREF="003053.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3051] Re: Wiki としての SuperSwiki</H1>
+    <B>NAKATA, Shunsuke</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203051%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=44B6D714.8090201%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3051] Re: Wiki としての SuperSwiki">scriptonwikipage ＠ yahoo.co.jp
+       </A><BR>
+    <I>2006年 7月 14日 (金) 08:29:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003050.html">[Squeak-ja: 3050] m
+</A></li>
+        <LI>次の記事 <A HREF="003053.html">[Squeak-ja: 3053] Re: Wiki としての  SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3051">[ 日付 ]</a>
+              <a href="thread.html#3051">[ スレッド ]</a>
+              <a href="subject.html#3051">[ 件名 ]</a>
+              <a href="author.html#3051">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川さん
+
+中田です。
+
+
+私は職場でWiki(Wifky)で業務用のサイトを運営していて感じるのは、
+「便利」というのは究極的にはその人それぞれで違うということてです。
+
+私の職場はほとんどは技術者なのですが、中には技術補助の業務の方や、
+庶務(人事関連などを扱えう業務)やシステム管理の担当者など、業務内容が
+明らかに異なる人がいます。圧倒的多数の閲覧者であろう技術者のみに
+焦点をあててサイトを構築すると、技術者には便利なサイトになるでしょうが、
+その他の業務の方には不便になってしまいます。
+
+こういう問題を解決するには、ポートレットというところに行き着きますよね。
+サイトのトップページを利用者一人一人が自分の必要に合わせて変えてゆく。
+私の知る限り既存のポータルサーバーというのは、ポートレットはそのサーバー
+の中だけで閉じてるものです。
+
+例えば人によっては他部署の運営するポートレットを自分のページに
+貼り付けたいと思う人もいますが、それはポートレットに共通の規格が
+ないためにそれは適わない。(そのページごと内部フレームIFRAMEとして
+取込んで表示してしまうポートレットを自部署が使うポータルにあれば
+それに近しいことはできる形になりますが、)
+
+世の中のポートレットに統一した規格があれば、あちこちのサイトの
+ポートレットを取込んで、自分にとって本当に使いやすいページにできますね。
+
+横川さんがおっしゃるWeb2.0時代の情報サイトというのは、
+そういうものなのでしょうか。
+
+実はこういう考え方はポータルサイトという概念が生まれるよりもずっと
+前に存在していました。時代に理解されずに開発が終了してしまいましたが、
+10年以上前に Apple Computer が OpenDoc (あるいは Copland) という分散
+オブジェクトのシステムに着手したことがありましたよね。
+
+このときはまだ XML といった業界標準の汎用の構造的データ記述形式が
+存在しなかったので、Java Applet のクラスファイル (あるいは 実行可能
+JARファイル) に近いものを部品として想定していたはずです。
+
+Apple Computer が OpenDoc の開発を断念していなければ、
+インターネットの世界はもっともっと違っていたでしょうね。
+現在ではそれを JavaScript と XML (JAXP) で実現する流れがありますね。
+インターネット上のデスクトップ環境 YouOS や Google Spreadsheet など。
+そんな今の時代こそ Smalltalk の出番がきたというきもします。
+
+Smalltalk (Squeak) を使ってみて少し気になったのですが、Smalltalk は
+イメージファイルという環境で区切られた閉鎖的な環境ではないかと。
+Smalltalk の環境がネットワーク上で共有できるなら、それこそ、
+OpenDoc は簡単に実現できそうなものですが、今ひとつ残念です。
+Smalltalk の部品オブジェクトをネットワーク上でやり取りできれば、
+ポートレットなど朝飯前に作れますよね。
+
+もっとも、こういう方面での成長をとげてこなった(だろう,想像で言ってます)
+現在の Smalltalk の環境の場合、先に述べたようにセキュリティの面で
+問題がありますよね。外部からくるオブジェクトがそのままウィルスにも
+なってしまい得る。その意味では、能力の大きいPostScriptに制限をかけて、
+PDFが作成されたように、ネットワーク環境向けに、能力に制限をかけられる
+環境 (サンドバッグモデル) の開発が望まれるところですね。
+
+Smalltalk がんばれ!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+&gt;&gt;<i> ぼくは信頼や完成度をどう評価するかという評価基準から変えてみようと思って
+</I>&gt;&gt;<i> います。「辞書とはこういうものだ」という今ある常識自体を疑ってみようとい
+</I>&gt;&gt;<i> う考え方です。
+</I>&gt;&gt;<i> ですから、「Wikipedia自体がどうなるか」を言っているのではありません。辞
+</I>&gt;&gt;<i> 書のように見えてまったく別の仕組み、もしくはぜんぜん辞書っぽくないけど辞
+</I>&gt;&gt;<i> 書の項目を調べるのと同じような効果があるものができないかと考えてます。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> たとえば、Web2.0という得体の知れない言葉を調べるとしたら、去年のの解釈と
+</I>&gt;&gt;<i> 最近1ヶ月の解釈では違っていたり、経済方面の人とIT方面の人ではまたぜんぜ
+</I>&gt;&gt;<i> ん違っていたりというのは当たり前です。古くて変わらない情報は辞書を調べれ
+</I>&gt;&gt;<i> ばいいけど、新しくて活発に議論されている情報のためのツールはほとんど無い
+</I>&gt;&gt;<i> というのが現状でしょう。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 実はここまで書いて、大げさな言い方になってしまって困ってしまいました。
+</I>&gt;&gt;<i> とりあえずぼくがやれるのは単に新しいブログ・サーバを作ってみるだけという
+</I>&gt;&gt;<i> のが現状です。
+</I>&gt;&gt;<i> # こころざしは高く
+</I>&gt;&gt;<i> # 目標は低く
+</I>--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+<A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003050.html">[Squeak-ja: 3050] m
+</A></li>
+	<LI>次の記事 <A HREF="003053.html">[Squeak-ja: 3053] Re: Wiki としての  SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3051">[ 日付 ]</a>
+              <a href="thread.html#3051">[ スレッド ]</a>
+              <a href="subject.html#3051">[ 件名 ]</a>
+              <a href="author.html#3051">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

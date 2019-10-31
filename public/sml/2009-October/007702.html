@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7702] Re: HttpClientによるログイン認証について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207702%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=79F94BA2-EA9C-4509-961C-53A3DC24A204%40sie.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007701.html">
+   <LINK REL="Next"  HREF="007703.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7702] Re: HttpClientによるログイン認証について</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207702%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=79F94BA2-EA9C-4509-961C-53A3DC24A204%40sie.dendai.ac.jp"
+       TITLE="[SML 7702] Re: HttpClientによるログイン認証について">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 10月 27日 (火) 12:37:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007701.html">[SML 7701] HttpClientによるログイン認証について
+</A></li>
+        <LI>次の記事 <A HREF="007703.html">[SML 7703] Re: HttpClientによるログイン認証について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7702">[ 日付 ]</a>
+              <a href="thread.html#7702">[ スレッド ]</a>
+              <a href="subject.html#7702">[ 件名 ]</a>
+              <a href="author.html#7702">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>確かめもせずに思い込みだけの返信ですが、あしからず。
+おそらく文字セットの問題ではないかしらん。
+当該の文字コードのエンコーダ／デコーダが見つからないのでは。
+
+--- 青木淳＠脊髄反射
+
+久保田 吉彦 さんは書きました:
+&gt;<i> こんにちは、電大の久保田です。
+</I>&gt;<i> 
+</I>&gt;<i> Net.HttpClientの使いかたについて悩んでいます。
+</I>&gt;<i> ログインし、その後のページを取得したいのですが、うまくいきません。
+</I>&gt;<i> Javaですが、同じ目的のサンプルプログラムがあったので、それを参考に書いて 
+</I>&gt;<i> みました。
+</I>&gt;<i> mixiにログインし、その後のページを持ってくる例(http: 
+</I>&gt;<i> //blog.mikuriya.biz/archives/251)です。
+</I>&gt;<i> 
+</I>&gt;<i> 環境はVisualWorks7.6NCにWebSupportのパーセルをインストールしています。
+</I>&gt;<i> ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+</I>&gt;<i> mixiLogin := '<A HREF="http://mixi.jp/login.pl'.">http://mixi.jp/login.pl'.</A>
+</I>&gt;<i> mixiTopPage := '<A HREF="http://mixi.jp/home.pl'.">http://mixi.jp/home.pl'.</A>
+</I>&gt;<i> inputUserName := 'email'.
+</I>&gt;<i> inputPassword := 'password'.
+</I>&gt;<i> inputNextURL := 'next_url'.
+</I>&gt;<i> userName := 'めーるあどれす'.
+</I>&gt;<i> password := 'ぱすわーど'.
+</I>&gt;<i> nextUrl := '/home.pl'.
+</I>&gt;<i> 
+</I>&gt;<i> client := Net.HttpClient new.
+</I>&gt;<i> client enableCookies: true.   
+</I>&gt;<i> postRequest := HttpRequest post:mixiLogin.
+</I>&gt;<i> postRequest
+</I>&gt;<i>         addFormKey: inputUserName value: userName;
+</I>&gt;<i>         addFormKey: inputPassword value: password;
+</I>&gt;<i>         addFormKey: inputNextURL  value: nextUrl.
+</I>&gt;<i> postResponse := client executeRequest: postRequest.
+</I>&gt;<i> &quot;????&quot;
+</I>&gt;<i> getMethod := HttpRequest get: mixiTopPage.
+</I>&gt;<i> getResponse := client executeRequest: getMethod
+</I>&gt;<i> ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+</I>&gt;<i> 
+</I>&gt;<i> ????までは実行できます。全て選択して実行するとUnhandled exception: Key 
+</I>&gt;<i> not foundというExceptionがでます。
+</I>&gt;<i> 
+</I>&gt;<i> javaの例をみると????にあたるところにpostMethod.releaseConnection()という 
+</I>&gt;<i> 式が入っていました。VisualWorksにも同じようなものがあるかとシステムブラ 
+</I>&gt;<i> ウザをのぞいてみましたが目当てのものは見付かりませんでした。
+</I>&gt;<i> 
+</I>&gt;<i> HttpClientのインスタンスを1つ作成し、それに向って必要なだけ 
+</I>&gt;<i> executeRequest: aHttpRequestメッセージを送信すれば結果が得られると考えて 
+</I>&gt;<i> いるのですが、間違ているのでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> 久保田吉彦
+</I>&gt;<i> 東京電機大学 情報環境学部 情報環境学科
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007701.html">[SML 7701] HttpClientによるログイン認証について
+</A></li>
+	<LI>次の記事 <A HREF="007703.html">[SML 7703] Re: HttpClientによるログイン認証について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7702">[ 日付 ]</a>
+              <a href="thread.html#7702">[ スレッド ]</a>
+              <a href="subject.html#7702">[ 件名 ]</a>
+              <a href="author.html#7702">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

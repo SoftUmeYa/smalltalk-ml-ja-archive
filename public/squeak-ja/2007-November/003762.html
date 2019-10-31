@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3762] Re: Squeak日本語とPostgresqlとの接続
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203762%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhaxskQkZ8S1wbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOGwkSBsoQlBvc3RncmVzcWwbJEIkSCROQFxCMxsoQg%3D%3D%3F%3D&In-Reply-To=JM200710302351416.2212531%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="003763.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3762] Re: Squeak日本語とPostgresqlとの接続</H1>
+    <B>Hirokazu Sato</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203762%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhaxskQkZ8S1wbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOGwkSBsoQlBvc3RncmVzcWwbJEIkSCROQFxCMxsoQg%3D%3D%3F%3D&In-Reply-To=JM200710302351416.2212531%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3762] Re: Squeak日本語とPostgresqlとの接続">sato_hirokazu ＠ tba.t-com.ne.jp
+       </A><BR>
+    <I>2007年 11月  1日 (木) 02:49:00 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="003763.html">[Squeak-ja: 3763] Re: Unix用のリクエストいくつか
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3762">[ 日付 ]</a>
+              <a href="thread.html#3762">[ スレッド ]</a>
+              <a href="subject.html#3762">[ 件名 ]</a>
+              <a href="author.html#3762">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>梅澤さん
+
+こんばんは。さとうです。
+
+早速のご回答ありがとうございます。
+また梅澤さん自ら実際にインストールして試していただいたとのこと、
+光栄です。
+
+ご回答頂いた内容を試したところDBへの書込み及び結果の参 
+照ともに
+バッチリうまく行きました。
+ありがとうございました。
+
+通信系のエラーメッセージだったので、postgresV2が２バイトの
+ハンドリングができないのかと思ってしまい、それ以上考えが
+およびませんでした。
+
+&gt;<i> SeasideとPostgreSQLというのは面白い組み合わせですね。
+</I>&gt;<i> 私もちょっとインストールして試してみました。
+</I>
+
+SeasideだとAjaxも使えるし、Webの入力インター 
+フェースを作るには、
+面白そうだったのでフロントエンドに持ってきて、バックエンドには、
+高機能なフリーのRDBMSとしてPosgtreSQLにしています。
+
+では、失礼します。
+
+--
+さとうひろかず
+
+
+
+On 2007年 10月 30日 , at 23:51, Masashi Umezawa wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;<i> SeasideとPostgreSQLというのは面白い組み合わせですね。
+</I>&gt;<i> 私もちょっとインストールして試してみました。
+</I>&gt;<i>
+</I>&gt;<i> Windows XPで、PostgreSQLのデフォルトエンコーディングをUTF8 
+</I>&gt;<i> にしています。
+</I>&gt;<i>
+</I>&gt;<i> con execute: ('insert into fruits values (''スイカ'',''123'')'  
+</I>&gt;<i> convertToEncoding: #utf8).
+</I>&gt;<i>
+</I>&gt;<i> のようにすると、値がちゃんと入りました。
+</I>&gt;<i> Squeakの多バイト文字列はUnicodeに準じた独自表現なので、
+</I>&gt;<i> convertToEncoding: #utf8などを文字列に送って、DBのエ 
+</I>&gt;<i> ンコーディングに
+</I>&gt;<i> 合わせた上でDBに渡す必要があります。
+</I>&gt;<i>
+</I>&gt;<i> 得られるPGResult内の文字列も、単なるByteString 
+</I>&gt;<i> になってしまっているので、
+</I>&gt;<i> これもエンコードを指定して、Squeakの多バイト文字列に 
+</I>&gt;<i> 戻す必要があります。
+</I>&gt;<i>
+</I>&gt;<i> '文字化け文字列' convertFromEncoding: #utf8.
+</I>&gt;<i>
+</I>&gt;<i> のようにします。
+</I>&gt;<i>
+</I>&gt;<i> もう少しラッピングするなり、パッチを当てるなりしないと使い 
+</I>&gt;<i> にくいですが、
+</I>&gt;<i> 基本的な考え方はこのような感じです。
+</I>&gt;<i>
+</I>&gt;<i> では。
+</I>&gt;<i>
+</I>&gt;<i> Hirokazu Sato &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">sato_hirokazu ＠ tba.t-com.ne.jp</A>&gt; wrote:
+</I>&gt;&gt;<i> こんばんは。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 岡山でエンジニアをしています、さとうと申します。
+</I>&gt;&gt;<i> seasideを使って、Web経由でDBに書き込みができる自
+</I>&gt;&gt;<i> 部門の業務画面を
+</I>&gt;&gt;<i> 作ってあげようと思い、おおむねできたのでテストで日本語を入力
+</I>&gt;&gt;<i> してみたら、
+</I>&gt;&gt;<i> 以下のエラーがでてうまくDBに書き込みができません。
+</I>&gt;&gt;<i> 切り分けのため以下のコードを実行してみましたが同様の結果にな
+</I>&gt;&gt;<i> ります。
+</I>&gt;&gt;<i> (&quot;日本語&quot;の部分を半角英数にするとインサートできます）
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> | dbconn |
+</I>&gt;&gt;<i> dbconn _ PGConnection new.
+</I>&gt;&gt;<i> dbconn startup.
+</I>&gt;&gt;<i> dbconn execute: 'insert into t-table values
+</I>&gt;&gt;<i> (''2007/10/29'',''10:22'',''日本語'',''test'')'.
+</I>&gt;&gt;<i> dbconn terminate.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> エラー内容：
+</I>&gt;&gt;<i> &quot;ConnectionClosed: Connection closed while waiting for data.&quot;
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 試している環境：　OS: OSX 10.3.9
+</I>&gt;&gt;<i>                                     VM: Squeak 3.8.18beta1U
+</I>&gt;&gt;<i>                  Image: Seaside-JPatched070105　
+</I>&gt;&gt;<i>                                     PostgresqlClient:
+</I>&gt;&gt;<i>                  PostgreSQL Client for Squeak(PosgresV2)
+</I>&gt;&gt;<i>                   Published version: 1.0
+</I>&gt;&gt;<i>                   Created: 1 February 2006 5:13:15 pm
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 　特に環境にこだわりはありません。
+</I>&gt;&gt;<i> 　会社で利用するときはWindowsやLinuxプラット
+</I>&gt;&gt;<i> フォームになると思います。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 皆様の中でうまく行っている実績があれば特に環境にはこだわりま
+</I>&gt;&gt;<i> せんので、
+</I>&gt;&gt;<i> ご教授頂きたいです。
+</I>&gt;&gt;<i> よろしくお願いします。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> さとうひろかず
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa]
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="003763.html">[Squeak-ja: 3763] Re: Unix用のリクエストいくつか
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3762">[ 日付 ]</a>
+              <a href="thread.html#3762">[ スレッド ]</a>
+              <a href="subject.html#3762">[ 件名 ]</a>
+              <a href="author.html#3762">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

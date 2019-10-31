@@ -1,0 +1,2373 @@
+From tak ＠ metatoys.org  Thu Dec  1 15:41:35 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2738] Squeakland 2005j 前リリース版公開
+Message-ID: <438E9B1F.9040409@metatoys.org>
+
+こんにちは、山宮です。[Squeak-ja: 2731] Squeakland 2005 J リリース計画
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-November/002731.html 
+にてお伝えしたとおり、最新の前リリース版インストーラを公開します。全国の
+スクイークファンの皆様の積極的なデバッグ参加をお待ちしております。
+
+* ダウンロード
+
+Windows 用
+http://squeakland.jp/developer/download/installer/SqueakPluginJ-2005-11-30.exe
+Mac 用
+http://squeakland.jp/developer/download/installer/SqueakPluginJ-2005-11-30.dmg
+
+- このスクイークはリリース直前のバグ修正を目的とした物です。
+- 正式リリースは12月19日までお待ちください。
+- バグ報告、ご要望はこのメーリングリストやバグ報告サイト 
+  http://www.kukakuka.jp/squeak/bugs/ にお願いします。
+- インストール後、ご利用の前に必ずアップデートをして下さい。
+
+* アップデートの仕方。
+
+- エスケープキーでワールドメニューを出す
+- [ヘルプ] の [サーバからアップデートを取得] を選択。
+- ワールドメニューの [保存] でその状態を保存する
+
+* イメージについて
+
+単体のイメージは 
+http://squeakland.jp/developer/download/image/SqueakPluginJ-2005-11-30.zip 
+からダウンロード出来ます。特にまだ Linux や *BSD 版のインストーラがあ
+りませんので、腕に覚えのある方は挑戦してみては如何でしょうか？
+
+イメージは 
+http://www.squeakland.org/installers/SqueakPluginInstaller.exe に含ま
+れる SqueakPlugin.image に以下の操作を行った物です。
+
+- 日本語フォントをインストール
+- Utilities setUpdateServer: 'Squeakalpha' でアップデート元を変更
+- #514 までアップデート
+- ReleaseBuilderSqueakland new setupLanguageSpecifics を実行
+
+p.s. Windows インストーラの為に山本さんの壁紙
+http://www.thoruman.com/squeak/wallp/wp1.htm を使わせて頂きました。
+
+ではでは
+
+山宮隆
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From yoshiki ＠ squeakland.org  Thu Dec  1 16:06:54 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2739] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <438E9B1F.9040409@metatoys.org>
+References: <438E9B1F.9040409@metatoys.org>
+Message-ID: <ur78xjnxt.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> こんにちは、山宮です。[Squeak-ja: 2731] Squeakland 2005 J リリース計画
+> http://www.smalltalk.jp/pipermail/squeak-ja/2005-November/002731.html 
+> にてお伝えしたとおり、最新の前リリース版インストーラを公開します。全国の
+> スクイークファンの皆様の積極的なデバッグ参加をお待ちしております。
+
+  僕からもよろしくお願いします。ようやくコードを本家と一本化できる運び
+となったので、わくわくしますね。
+
+> Windows 用
+> http://squeakland.jp/developer/download/installer/SqueakPluginJ-2005-11-30.exe
+> Mac 用
+> http://squeakland.jp/developer/download/installer/SqueakPluginJ-2005-11-30.dmg
+
+  是非とも、ここでひとつこれのどちらかをダウンロードして実行して、過去
+の作品を読んだり新しく作ってみたりSqueakland.JPに置いたり読み込んだり
+してみてください。
+
+> - このスクイークはリリース直前のバグ修正を目的とした物です。
+> - 正式リリースは12月19日までお待ちください。
+> - バグ報告、ご要望はこのメーリングリストやバグ報告サイト 
+>   http://www.kukakuka.jp/squeak/bugs/ にお願いします。
+
+  バグ報告や要望は、メールでももちろん良いですので、遠慮なく書いてくだ
+さい。
+
+  もう一度よろしくお願いします。
+
+-- Yoshiki
+
+From kawa90 ＠ yahoo.co.jp  Thu Dec  1 20:11:52 2005
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2740] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <438E9B1F.9040409@metatoys.org>
+References: <438E9B1F.9040409@metatoys.org>
+Message-ID: <438EDA78.8040302@yahoo.co.jp>
+
+川村です。すばらしいプレゼントありがとうございます（まだ正式リリースじゃ
+ないけど）。
+
+少しいじりました。で、こちらからもプレゼントです。
+
+・StarMorph
+1)部品フラップから星を取り出す
+2)赤ハロで多角形を閉曲線にするを選択
+3)閉曲線にならない
+・TextMorph
+1)文字列をSqueakに変更
+2)黄ハロで文字列幅の倍くらいの大きさに変更
+3)ハロの強調と文字揃えで「中央寄せ」を選択
+4)ハロの強調と文字揃えで「右寄せ」となってしまう
+・TextMorph
+1)Squeakに変更
+2)フォントをBitstreamVeraSerifにすると斜体にならない
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.362 / Virus Database: 267.13.10/189 - Release Date: 2005/11/30
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+http://pr.mail.yahoo.co.jp/redribbon/
+
+From kawa90 ＠ yahoo.co.jp  Fri Dec  2 07:45:42 2005
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2741] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <438EDA78.8040302@yahoo.co.jp>
+References: <438E9B1F.9040409@metatoys.org> <438EDA78.8040302@yahoo.co.jp>
+Message-ID: <438F7D16.5040101@yahoo.co.jp>
+
+川村です。下記の内容は勘違いでした。開曲線というのを閉曲線と見間違えて、
+てっきり新機能かと。。。すいませんです。
+
+ところで、Mantis(Squeak Trac)に登録したものをレポータが取り下げすること
+出来るんでしょうか？
+勢いあまって、Mantis(Squeak Trac)に登録してしまった。。。
+
+>・StarMorph
+>1)部品フラップから星を取り出す
+>2)赤ハロで多角形を閉曲線にするを選択
+>3)閉曲線にならない
+>・TextMorph
+>  
+>
+それでは
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.362 / Virus Database: 267.13.10/189 - Release Date: 2005/11/30
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+http://pr.mail.yahoo.co.jp/redribbon/
+
+From mitsuhashi-masaaki ＠ tepsys.co.jp  Fri Dec  2 14:52:26 2005
+From: mitsuhashi-masaaki ＠ tepsys.co.jp (Masaaki Mitsuhashi)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2742] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <438E9B1F.9040409@metatoys.org>
+References: <438E9B1F.9040409@metatoys.org>
+Message-ID: <438FE11A.8070808@tepsys.co.jp>
+
+三橋です。
+もうすぐリリースですね。おつかれさまです。
+
+ブラウザでソースを見たとき、変数が t1 t2 ... 
+になっているのが気になりました。
+ベータ版なので仕方ないのでしょうか?
+-- 
+三橋雅昭 mitsuhashi-masaaki@tepsys.co.jp
+
+From abee ＠ squeakland.jp  Fri Dec  2 15:03:22 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2743] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <438FE11A.8070808@tepsys.co.jp>
+References: <438E9B1F.9040409@metatoys.org> <438FE11A.8070808@tepsys.co.jp>
+Message-ID: <438FE3AA42.5D73ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 02 Dec 2005 14:52:26 +0900
+Masaaki Mitsuhashi <mitsuhashi-masaaki@tepsys.co.jp> wrote:
+>ブラウザでソースを見たとき、変数が t1 t2 ... 
+>になっているのが気になりました。
+>ベータ版なので仕方ないのでしょうか?
+
+ユーザ用のプラグインイメージには、ソースファイルとチェンジファイルが添付
+されません。それなので、ブラウザでソースはデコンパイルされて表示されます。
+
+ソースを見たい場合は開発版を使ってもらうことになります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Fri Dec  2 15:14:08 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2744] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <438F7D16.5040101@yahoo.co.jp>
+References: <438EDA78.8040302@yahoo.co.jp> <438F7D16.5040101@yahoo.co.jp>
+Message-ID: <438FE6305F.5D75ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 02 Dec 2005 07:45:42 +0900
+Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+>ところで、Mantis(Squeak Trac)に登録したものをレポータが取り下げすること
+>出来るんでしょうか？
+>勢いあまって、Mantis(Squeak Trac)に登録してしまった。。。
+
+あちらのコメントにも書きましたが、いったん登録したものは消さずに残してお
+いてよいのではないでしょうか。この機能自体が分かりにくいですし、同じよう
+に思った人が、この登録を見つけて納得するということもあると思います。
+
+川村さんはじめ皆さんの報告は大変助かっています。これからもどんどんお願い
+します。
+
+http://www.kukakuka.jp/squeak/bugs/main_page.php
+
+初めての方は「検索」をクリックして、どんなものがあるのかを見てみるとよい
+かもしれません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From korakurider ＠ yahoo.co.jp  Fri Dec  2 16:21:46 2005
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2745] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <438FE6305F.5D75ABEE@smtp.nifty.com>
+Message-ID: <20051202072146.1530.qmail@web3002.mail.bbt.yahoo.co.jp>
+
+korakuriderです。
+いったん書いたものを消すことはその権限がある人しか基本的
+にできないです。
+SqueakTrac/Mantisの現在の設定では、開発者以上の権限を持
+っている人だと、案件を削除したり、案件の状態を変更できる
+ようになります。
+
+しかし、阿部さんが書かれているように、後の人への参考にな
+りますので、報告済みの案件に対して、勘違いの内容といった
+経緯を追記していただくとか、訂正を加えていただけるとうれ
+しいです。
+
+案件を消すことはしなくても、問題ではないと認識できたら、
+管理者か開発者の誰かが案件の状態は変更して、解決済みとわ
+かるようにすると思います。そのためにも、Mantis上に追記い
+ただければ助かります。
+
+※Mantisの運用内容は、Squeak Tracの方に順次書いていって
+いますので、そちらの方にもコメントやご質問を書いてみてく
+ださいな。また、Squeak Trac/Mantis のシステムそのものへ
+の改善要求も、Mantis上に書いてみてください。＞皆様
+
+ではでは
+
+--- Kazuhiro ABE <abee@squeakland.jp> からのメッセージ：
+> 阿部@新百合です。
+> 
+> On Fri, 02 Dec 2005 07:45:42 +0900
+> Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+> >ところで、Mantis(Squeak
+> Trac)に登録したものをレポータが取り下げすること
+> >出来るんでしょうか？
+> >勢いあまって、Mantis(Squeak
+> Trac)に登録してしまった。。。
+> 
+> あちらのコメントにも書きましたが、いったん登録したもの
+は消さずに残してお
+> いてよいのではないでしょうか。この機能自体が分かりにく
+いですし、同じよう
+> に思った人が、この登録を見つけて納得するということもあ
+ると思います。
+
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+http://pr.mail.yahoo.co.jp/redribbon/
+
+From kawa90 ＠ yahoo.co.jp  Fri Dec  2 22:10:10 2005
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2746] [Tips]Squeak pluginでHPやblogに動きのあるバナーをつける
+Message-ID: <439047B2.3010900@yahoo.co.jp>
+
+川村です。
+pre-release版でイートイのcheck中に思いついたものです。
+
+[Tips]Squeak pluginでHPやblogに動きのあるバナーをつける
+
+1)イートイでアニメーションを作成する
+作成方法がわからない方はThoruさんの
+http://www.thoruman.com/squeak/etoy/etoy.html
+のAnimeの項を参照して下さい。
+
+ちょっとここからがミソです。
+2)カーソル位置にある絵を表示するオブジェクトをデスクトップの左上隅に配置
+します
+
+3)アニメーションの大きさを控えます。スケッチモーフならば、赤ハロでデバッ
+グ/モーフの検査でインスペクタを出して幅・高さを得ます。コードペーンで
+self width
+self height
+をprint-itします。
+
+4)ワールドメニュー/フラップ/共有タブの表示のチェックをはずす
+
+5)ビューワフラップをなくすため、ビューワの◎をクリック
+
+6)チクタクさせてアニメ動作とする。
+
+7)ワールドメニュー/プロジェクト/手元のディスクにだけプロジェクトを保存す
+る（ナビゲータフラップがこの時点で表示されていないのでワールドメニューか
+らプロジェクトを保存します）。
+
+8)HP,BlogのHTML中に以下のようなHTMLコードを挿入します（変更するのは
+WIDTH,HEIGHTとsrcの部分で、下記例では 120,160,banner.003.prの部分で
+す）。手順3)で控えた幅・高さをWIDTH,HEIGHTの値に変更します。もちろん、プ
+ロジェクト名部分も変更します。
+
+<OBJECT
+ID="SqueakOCX Control"
+WIDTH=120 HEIGHT=160
+ALIGN=center BORDER=0
+CLASSID="CLSID:2BE9C39E-8386-4435-B337-FCDAD8EAB006"
+CODEBASE="http://www.squeakland.org/installers/SqueakPluginInstaller.exe">
+<PARAM name="src" value="banner.003.pr">
+<PARAM name="update" value="29">
+<PARAM name="pluginspage" value="http://www.squeakland.org/detect.html">
+<PARAM name="update_url" value="http://www.squeakland.org/update/">
+<PARAM name="apiSupported" value="true">
+<embed
+type="application/x-squeak-source"
+ALIGN="CENTER"
+WIDTH="120"
+HEIGHT="160"
+src="banner.003.pr"
+update="29"
+apiSupported="TRUE"
+pluginspage="http://www.squeakland.org/detect.html"
+update_url="http://www.squeakland.org/update/"
+></embed>
+</OBJECT>
+
+9) Webブラウザで確認します
+
+あーら、びっくりまるでflashで作ったかのような動きのあるバナーが出来上が
+ります。もちろん閲覧する人はSqueak pluginをインストールしている必要があ
+りますが。。。実際試してみました。
+
+正式リリースまでpre-release版であなたのHP,blogのワンポイントに動きのある
+バナーを作ってみてはいかがでしょうか？！正式リリースの暁には、記念にわた
+しもblogでやってみようと思ってみます。
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.362 / Virus Database: 267.13.10/190 - Release Date: 2005/12/01
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+http://pr.mail.yahoo.co.jp/redribbon/
+
+From kawa90 ＠ yahoo.co.jp  Sat Dec  3 08:12:57 2005
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2747] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <20051202072146.1530.qmail@web3002.mail.bbt.yahoo.co.jp>
+References: <20051202072146.1530.qmail@web3002.mail.bbt.yahoo.co.jp>
+Message-ID: <4390D4F9.6010101@yahoo.co.jp>
+
+川村です。
+
+korakuriderさん、どうもです。
+
+>案件を消すことはしなくても、問題ではないと認識できたら、
+>管理者か開発者の誰かが案件の状態は変更して、解決済みとわ
+>かるようにすると思います。そのためにも、Mantis上に追記い
+>ただければ助かります。
+>  
+>
+了解しました。勘違いの類はリポータが問題でないと言うコメント追記で解決済
+みになるということですね。
+
+>※Mantisの運用内容は、Squeak Tracの方に順次書いていって
+>いますので、そちらの方にもコメントやご質問を書いてみてく
+>ださいな。また、Squeak Trac/Mantis のシステムそのものへ
+>の改善要求も、Mantis上に書いてみてください。＞皆様
+>  
+>
+運用に関して質問です。
+
+・bug報告と改善提案とを区別して登録したい場合どうすればよろしいでしょうか？
+　カテゴリはすでにプロジェクトに割り当ててあるし、重要度の項目にも入れづ
+らいですね。
+　タイトルに「改善提案」と書くとか？−というか使い方がわかっていないだけ
+かも？
+
+・Mantisにおいてコード修正があった解決済みとアップデートストリームにパッ
+チが登録されるタイミングは同期しているのでしょうか？
+　過去においては、ある程度パッチが出てきたタイミングで山宮さんがSqueak-
+jaに告知をしていたと思いますが、変わるんですか？
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.362 / Virus Database: 267.13.11/191 - Release Date: 2005/12/02
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+http://pr.mail.yahoo.co.jp/redribbon/
+
+From korakurider ＠ yahoo.co.jp  Sat Dec  3 12:00:58 2005
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2748] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <4390D4F9.6010101@yahoo.co.jp>
+Message-ID: <20051203030058.81368.qmail@web3008.mail.bbt.yahoo.co.jp>
+
+Korakuriderです、こんにちは。
+
+最初にみなさんへ提案です。
+Mantisだけだと、本家のMantisインスタンス、Mantisシステム
+そのものと区別がつきにくいので、文脈でわかりにくい場合は
+以下のように呼ぶことにしませんか？
+
++ 日本のMantisインスタンスを指す場合には「Mantis-J」
++ 本家のMantisインスタンス（http://bugs.impara.de）を指
+す場合には「本家Mantis」:-)とか、「Impars Mantis」とか
++ Mantisシステムを一般的に指す場合は、単に「Mantis」
+
+--- Hideo Kawamura <kawa90@yahoo.co.jp> からのメッセージ
+：
+> 川村です。
+> 了解しました。勘違いの類はリポータが問題でないと言うコ
+メント追記で解決済
+> みになるということですね。
+　　そうです。そして誰か（開発者or管理者）が案件の状態を
+判断して、判断結果をresolvedとかclosedステータスをMantis
+に入力して、真の意味の解決済み状態になります。
+
+> ・bug報告と改善提案とを区別して登録したい場合どうすれ
+ばよろしいでしょうか？
+> 　タイトルに「改善提案」と書くとか？−というか使い方が
+わかっていないだけ
+> かも？
+
+　同じ現象をバグと見るか仕様の問題と見るかは、個々の方の
+期待値で変わってくるので、難しいところはありますね。ただ
+ご質問のような、いわゆる「仕様改善/追加」という意味であ
+れば、カテゴリ＝「機能」と入れていただければ、形式的な区
+別はつくと思いますが、どうでしょうか？
+　Tracの記事にも書いたとおり、これから運用方法をまとめて
+皆さんの共通認識にしていく必要があるので、疑問点やご提案
+はどんどんお願いしますね。
+
+
+> 
+> ・Mantisにおいてコード修正があった解決済みとアップデー
+トストリームにパッ
+> チが登録されるタイミングは同期しているのでしょうか？
+　限定された方とお話をした際の共通認識としては、だいたい
+以下のような考えでした。
++ 提案されたパッチで問題が解決できると確認された段階で「
+解決済み」に設定
++ メンテナさん（Scottさん、Mikeさん/Bertさん）にパッチが
+送れられたら、実績をコメントとして追記
++ メンテナさんがパッチを受け入れて、ストリームに流された
+ら、そのパッチの名前をコメントとして追記した上で「完了」
+に設定
+（これも決定事項ではありません）
+
+> 　過去においては、ある程度パッチが出てきたタイミングで
+山宮さんがSqueak-
+> jaに告知をしていたと思いますが、変わるんですか？
+　Nihongo7の時代は、Squeakland本家とは別のアップデートス
+トリーム http://squeakalpha.org/nihongo7/external/updates/
+を使っていました。これは日本側で独自に管理していたので、
+そこに山宮さんがパッチを流された際に併せて告知していただ
+いていたと思います。
+　2005jからは、本家のストリーム１つ（正確には squeakalpha,
+squeakland
+の２つ）に統合され、日本独自のストリームがなくなります。
+パッチを受け入れ判断してストリームに流すのは
+Scottさん、Mike
+さん/Bertさんなので、日本側で更新を告知するには、流れた
+ことを誰かがモニタしていて、見つけたら連絡という形になり
+ます。しかも、Mantis-J由来以外のパッチも流れるので、それ
+も含めて告知するためには、流れたパッチを誰かが読み解かな
+いといけません。このあたりを特定のどなたかに負担をかけず
+に回す仕組みは今後の課題ですね。
+
+ただ、今の時点でも
+http://www.squeakland.org/updates/updates.list 
+や、http://www.squeakalpha.org/updates/updates.list
+をアンテナで見張っていただければ、アップデートストリーム
+に何か流れたかをタイムリーに知ることができますよ。私自身
+はこれで更新を追いかけています。
+
+ではでは
+
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+http://pr.mail.yahoo.co.jp/redribbon/
+
+From mha03030 ＠ nifty.com  Sun Dec  4 20:07:11 2005
+From: mha03030 ＠ nifty.com (小池)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2749] 図形の往復運動
+Message-ID: <p05111000bfb87ab7bbdc@[220.146.158.2]>
+
+武蔵工業大学の小池と申します。とても基本的な質問でもうしわけないのです 
+が、図形を往復運動させる方法について教えてください。以前、阿部さんに図 
+形の円運動を利用する方法をお聞きしましたが、ある図形の円運動を別の図形 
+の往復運動に接続する方法がわかりません。お願いします。
+-- 
+
+From abee ＠ squeakland.jp  Tue Dec  6 23:27:40 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2750] Re: 図形の往復運動
+In-Reply-To: <p05111000bfb87ab7bbdc@[220.146.158.2]>
+References: <p05111000bfb87ab7bbdc@[220.146.158.2]>
+Message-ID: <43959FDC150.DFDDABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 4 Dec 2005 20:07:11 +0900
+小池 <mha03030@nifty.com> wrote:
+>武蔵工業大学の小池と申します。とても基本的な質問でもうしわけないのです 
+>が、図形を往復運動させる方法について教えてください。以前、阿部さんに図 
+>形の円運動を利用する方法をお聞きしましたが、ある図形の円運動を別の図形 
+>の往復運動に接続する方法がわかりません。お願いします。
+
+以前にお話したのは以下の方法ですが、具体的にどのあたりが分かりにくかった
+のか教えていただければと思います。
+
+http://squeakland.jp/super/launcher?%89%9D%95%9C%89%5E%93%AE.001.pr
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mha03030 ＠ nifty.com  Tue Dec  6 23:42:02 2005
+From: mha03030 ＠ nifty.com (小池)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2751] Re: 図形の往復運動
+In-Reply-To: <43959FDC150.DFDDABEE@smtp.nifty.com>
+References: <p05111000bfb87ab7bbdc@[220.146.158.2]>
+	<43959FDC150.DFDDABEE@smtp.nifty.com>
+Message-ID: <p05111002bfbb5158a3ad@[220.209.82.95]>
+
+阿部様
+小池＠武蔵工業大学です。
+
+ありがとうございます。
+自力で解決しました。
+
+１つの図形を円運動させておき、
+
+もう１つの図形のY座標の数値を円運動している図形のY座標からもらうという 
+方法です。
+
+わからなかったのは、
+右の箱のなかに入っているタイルの→のついた部分をドラッグしないと、
+うまくスクリプターに張り込めないことが、よくわかりませんでした。
+
+この動きをつくる目的は、
+エイやイカのヒレのサインカーブのような動きを
+複数の●などをならべて表現することです。
+
+１つの●はこれで上下運動するようになりましたが、
+次は、複数の●をならべてずらしながら上下運動させて
+サインカーブの運動を作りたいのです。
+
+それを、
+ひとつの図形の円運動から座標を取得して
+すべての●が動かせるといいのですが、
+すこしづつ周期をずらした座標データを取得できればいいのでしょうか。
+
+私も努力しますが、
+アイデアありましたら教えてください。
+よろしくお願いします。
+
+
+
+
+>阿部@新百合です。
+>
+>On Sun, 4 Dec 2005 20:07:11 +0900
+>小池 <mha03030@nifty.com> wrote:
+>>武蔵工業大学の小池と申します。とても基本的な質問でもうしわけないのです
+>>が、図形を往復運動させる方法について教えてください。以前、阿部さんに図
+>>形の円運動を利用する方法をお聞きしましたが、ある図形の円運動を別の図形
+>>の往復運動に接続する方法がわかりません。お願いします。
+>
+>以前にお話したのは以下の方法ですが、具体的にどのあたりが分かりにくかった
+>のか教えていただければと思います。
+>
+>http://squeakland.jp/super/launcher?%89%9D%95%9C%89%5E%93%AE.001.pr
+>
+>  //abee
+>--
+>阿部 和広  EMAIL abee@squeakland.jp
+
+
+-- 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）
+   武蔵工業大学　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-0015　神奈川県横浜市都筑区牛久保3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.musashi-tech.ac.jp/~koike/
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+From abee ＠ squeakland.jp  Wed Dec  7 14:36:28 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2752] Re: 図形の往復運動
+In-Reply-To: <p05111002bfbb5158a3ad@[220.209.82.95]>
+References: <43959FDC150.DFDDABEE@smtp.nifty.com>
+	<p05111002bfbb5158a3ad@[220.209.82.95]>
+Message-ID: <439674DC39B.8418ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 6 Dec 2005 23:42:02 +0900
+小池 <mha03030@nifty.com> wrote:
+>１つの図形を円運動させておき、
+>
+>もう１つの図形のY座標の数値を円運動している図形のY座標からもらうという 
+>方法です。
+>
+>わからなかったのは、
+>右の箱のなかに入っているタイルの→のついた部分をドラッグしないと、
+>うまくスクリプターに張り込めないことが、よくわかりませんでした。
+
+確かにeToysで代入する方法は分かりにくいです。たとえば、慶応の大岩研究室で
+作成された以下のWebページをご覧ください。
+
+http://www.crew.sfc.keio.ac.jp/squeak/text/ver1/html/index_p2_c4_s4.html
+
+このテキストや、山本さん、キムさん、京大などのチュートリアルを一度通読さ
+れることをおすすめします。
+
+http://www.crew.sfc.keio.ac.jp/squeak/text.html
+http://hw001.gate01.com/~thoru/squeak/funsqueak.html
+http://www.thoruman.com/squeak/pwsqueak/pwsqueak1.htm
+http://squeakland.jp/sqsqsqueak/
+http://www.wave-publishers.co.jp/kikansho/books/Jitsuyousho/squeak/squeak.html
+
+>この動きをつくる目的は、
+>エイやイカのヒレのサインカーブのような動きを
+>複数の●などをならべて表現することです。
+>
+>１つの●はこれで上下運動するようになりましたが、
+>次は、複数の●をならべてずらしながら上下運動させて
+>サインカーブの運動を作りたいのです。
+>
+>それを、
+>ひとつの図形の円運動から座標を取得して
+>すべての●が動かせるといいのですが、
+>すこしづつ周期をずらした座標データを取得できればいいのでしょうか。
+>
+>私も努力しますが、
+>アイデアありましたら教えてください。
+
+このような動きは、プロジェクト置き場でkenkさんが何年か前に作られていまし
+た。「へび」のシリーズをご覧ください。
+
+http://swikis.ddo.jp/abee/14
+
+私も位相角をずらして動かすものを作ってみました。
+
+http://squeakland.jp/super/launcher?%82%E4%82%E7%82%E4%82%E7.001.pr
+
+現在テスト中のSqueakland 2005J用です。以下にしたがってインストールをお願
+いします。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002738.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From turkey ＠ crew.sfc.keio.ac.jp  Wed Dec  7 15:40:28 2005
+From: turkey ＠ crew.sfc.keio.ac.jp (okada ken)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2753] ことだまSqueak
+In-Reply-To: <439674DC39B.8418ABEE@smtp.nifty.com>
+References: <p05111002bfbb5158a3ad@[220.209.82.95]>
+	<439674DC39B.8418ABEE@smtp.nifty.com>
+Message-ID: <20051207153614.6622.TURKEY@crew.sfc.keio.ac.jp>
+
+Squeak-ja の皆様、はじめまして。初投稿になります。
+
+慶應義塾大学大岩研究室の岡田と申します。
+
+> 確かにeToysで代入する方法は分かりにくいです。たとえば、慶応の大岩研究室で
+> 作成された以下のWebページをご覧ください。
+> 
+> http://www.crew.sfc.keio.ac.jp/squeak/text/ver1/html/index_p2_c4_s4.html
+
+阿部さん、紹介していただきありがとうございます。
+
+ところで、大岩研のSqueakチームでは「ことだまSqueak」というものを作ってい
+ます。eToys のタイルが正しい日本語として読めるような環境を作ることを目標
+に開発しています。
+
+
+例えば先ほど話題に出ていました代入文節ですが、これまでは
+
+　　車のｘ座標<-１００
+
+という表現だったものを、ことだまSqueakでは
+
+　　車のｘ座標を１００に変える
+
+という表現に変えています。実際の外観は以下のウェブをご覧下さい（以下はこ
+とだまSqueakに対応したテキストです）。
+http://www.crew.sfc.keio.ac.jp/squeak/text/ver2/html/index_p3_c5_s2.html#doc7_4957
+
+その他にも「日本語として読める」ことを目標に、インターフェースを色々と変
+えています。プログラムの学習の第一歩はコードの読解ですから、日本語として
+読み下せるタイルを用意することで、生徒さんはタイルをよく読んで意味を考え
+るようになるんじゃないか、などと考えています。
+
+
+ことだまSqueakのイメージとテキストが以下のホームページからダウンロードで
+きますので、よろしければご笑覧下さい。
+http://www.crew.sfc.keio.ac.jp/squeak/
+
+
+それでは。
+-- 
+okada ken <turkey@crew.sfc.keio.ac.jp>
+
+
+From mha03030 ＠ nifty.com  Wed Dec  7 17:17:57 2005
+From: mha03030 ＠ nifty.com (小池 星多)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2754] Re: 図形の往復運動
+In-Reply-To: <439674DC39B.8418ABEE@smtp.nifty.com>
+References: <43959FDC150.DFDDABEE@smtp.nifty.com>
+	<p05111002bfbb5158a3ad@[220.209.82.95]>
+	<439674DC39B.8418ABEE@smtp.nifty.com>
+Message-ID: <2040FB24-85D4-46D9-8468-A2CAC8EB0DD8@nifty.com>
+
+小池＠武蔵工業大学です。
+アドバイス
+阿部さんありがとうございます。
+試してみます。
+よろしくお願いします。
+
+
+
+On 2005/12/07, at 14:36, Kazuhiro ABE wrote:
+
+> 阿部@新百合です。
+>
+> On Tue, 6 Dec 2005 23:42:02 +0900
+> 小池 <mha03030@nifty.com> wrote:
+>> １つの図形を円運動させておき、
+>>
+>> もう１つの図形のY座標の数値を円運動している図形の 
+>> Y座標からもらうという
+>> 方法です。
+>>
+>> わからなかったのは、
+>> 右の箱のなかに入っているタイルの→のついた部分をドラッグしな 
+>> いと、
+>> うまくスクリプターに張り込めないことが、よくわかりませんでし 
+>> た。
+>
+> 確かにeToysで代入する方法は分かりにくいです。たとえば、 
+> 慶応の大岩研究室で
+> 作成された以下のWebページをご覧ください。
+>
+> http://www.crew.sfc.keio.ac.jp/squeak/text/ver1/html/ 
+> index_p2_c4_s4.html
+>
+> このテキストや、山本さん、キムさん、京大などのチュートリアルを 
+> 一度通読さ
+> れることをおすすめします。
+>
+> http://www.crew.sfc.keio.ac.jp/squeak/text.html
+> http://hw001.gate01.com/~thoru/squeak/funsqueak.html
+> http://www.thoruman.com/squeak/pwsqueak/pwsqueak1.htm
+> http://squeakland.jp/sqsqsqueak/
+> http://www.wave-publishers.co.jp/kikansho/books/Jitsuyousho/squeak/ 
+> squeak.html
+>
+>> この動きをつくる目的は、
+>> エイやイカのヒレのサインカーブのような動きを
+>> 複数の●などをならべて表現することです。
+>>
+>> １つの●はこれで上下運動するようになりましたが、
+>> 次は、複数の●をならべてずらしながら上下運動させて
+>> サインカーブの運動を作りたいのです。
+>>
+>> それを、
+>> ひとつの図形の円運動から座標を取得して
+>> すべての●が動かせるといいのですが、
+>> すこしづつ周期をずらした座標データを取得できればいいのでしょ 
+>> うか。
+>>
+>> 私も努力しますが、
+>> アイデアありましたら教えてください。
+>
+> このような動きは、プロジェクト置き場でkenkさんが何年か前 
+> に作られていまし
+> た。「へび」のシリーズをご覧ください。
+>
+> http://swikis.ddo.jp/abee/14
+>
+> 私も位相角をずらして動かすものを作ってみました。
+>
+> http://squeakland.jp/super/launcher?%82%E4%82%E7%82%E4%82%E7.001.pr
+>
+> 現在テスト中のSqueakland 2005J用です。以下にしたがってイ 
+> ンストールをお願
+> いします。
+>
+> http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002738.html
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）
+   武蔵工業大学　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-0015　神奈川県横浜市都筑区牛久保3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.musashi-tech.ac.jp/~koike/
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+From t_totuka ＠ tc4.so-net.ne.jp  Wed Dec  7 19:08:15 2005
+From: t_totuka ＠ tc4.so-net.ne.jp (戸塚 滝登)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2755] アラン・ケイ博士の少年時代とクラーク先生のお話
+Message-ID: <B3C85DBC-CC7C-4235-B0B8-9F8FE27C27AD@tc4.so-net.ne.jp>
+
+こんにちは、戸塚と言います。四半世紀に渡って教育現場でコンピュー 
+タ教育を実践し続けてきた元小学校教諭です。日本のパイオニア教師の 
+一人です。パパート博士のLogo、そしてケイ博士のSqueak 
+の大ファンです。このMLには初めてお便りを書きます。よろしく 
+お願いします。
+
+去る10月27日の大座畑さんのメールの後に続けた話題で 
+す。昨年の11月に京都国際会館で開催された京都賞受賞記念講演 
+でアラン・ケイ博士は『Turning Points』と題した大変印象深い 
+講演をなさいました。
+
+その中で10才のケイ少年が電磁石を手作りし、それを当時の担任 
+だったメアリ・クラーク先生に誉められて、学校嫌いだったケイ少年が 
+初めてサイエンスを学ぶ楽しさに目を開かれるというとても感動的な話 
+がありました。博士にとってはこの時感じた学ぶ楽しさこそが、後年、 
+自分がAltoと呼ばれる世界最初のパーソナルコンピュータと 
+SmallTalkを生み出すきっかけになったという内容でした。
+
+大変美しいエピソードなので、当時、小学館の教育技術誌に連載を受け 
+持っていた私は会場でいたく感激したことを覚えております。この話を 
+ぜひとも現場教師の方々に広く紹介したいと思いました。そして今回、 
+本の中にそっくり収録することができました。
+
+今週発売されたばかりですが、『コンピュータが連れてきた子どもた 
+ち』（小学館）という本です。中にケイ博士が あの伝説のマシ 
+ン：Alto の前で微笑んでいらっしゃる貴重な写真も収録されて 
+います。ぜひご覧ください。（高田先生と大島さんのご協力を頂きまし 
+た。本当にありがとうございました。）
+
+残念ながら、博士とAltoの写真を本の表紙に使おうとデザイナー 
+さんとイラストレーターさんが努力してくださったのですが、編集部の 
+意向で最終段階では赤ちゃんの写真を使ったデザインに変えられてしま 
+い、がっくりしています。（ケイ博士、ごめんなさい！）
+しかし、教育に関しては日本一保守的で有名な（？）出版社が、 
+SqueakやLogoのことを紹介した本を出したのですから世の中も変 
+わりましたね。きっとSqueakがこれからの教育現場のトレンドに 
+なるような気がしてワクワクしています。ではまた・・・。
+
+　2005年12月7日　戸塚滝登（早稲田大学客員研究 
+員、NHKこどもメディア研）
+
+
+
+From kawa90 ＠ yahoo.co.jp  Wed Dec  7 20:24:54 2005
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2756] SqueakLand2005J pre-release版の「新しく作る」の挙動について
+Message-ID: <4396C686.5060102@yahoo.co.jp>
+
+川村です。いつもお世話になってます。
+
+SqueakLand2005J pre-release版でナビゲータフラップの「新しく作る」をク
+リックすると必ずデスクトップ左上にプロジェクトビューが配置されるのです
+が、仕様変更でしょうか？
+
+個人的には順番に位置がずれて出てきてくれるのがいいのですが。。。連続して
+作成すると重なってしまって移動が面倒なんです。
+
+マイナーな意見かもしれないのでMantis-Jには登録しませんでした。
+
+ところで[Tips]Squeak pluginでHPやblogに動きのあるバナーをつける
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002746.html
+ですが、最後にカーソル位置にある絵を表示するモーフをロックするとハロがで
+なくてよろしいようで)。
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.362 / Virus Database: 267.13.11/191 - Release Date: 2005/12/02
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+http://pr.mail.yahoo.co.jp/redribbon/
+
+From ohzahata ＠ mac.com  Thu Dec  8 10:15:55 2005
+From: ohzahata ＠ mac.com ("大座畑 重光")
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2757] Re: アラン・ケイ博士の少年時代とクラーク先生のお話
+In-Reply-To: <8279133.1134004084162.JavaMail.indies.koji@mac.com>
+References: <8279133.1134004084162.JavaMail.indies.koji@mac.com>
+Message-ID: <13905534.1134004555919.JavaMail.ohzahata@mac.com>
+
+戸塚先生こんにちは、大座畑です。
+
+著書『コンピュータが連れてきた子どもたち』（小学館）のご紹介ありがとうございました。
+記念ワークショップでの講演だけでなく、記念講演の方もすばらしかったので
+出版を強く望んでいたところでした。
+アマゾンに注文するか、今日これから東京にいくので直接購入するか（笑）。
+さきほど、アマゾンのWebページで本書の紹介を拝見しましたが、
+確かに表紙のインパクトがいまいちのような気がしました。
+本の表紙がケイ博士とAltoの写真だったら、本の売れ行きが一桁違うかも！
+冗談ではなく、本当にそう思ってしまいました。
+戸塚先生とはじめてお会いしたのは、東京・池袋サンシャインだったでしょうか。
+そこでのシンポジウムでLOGOを使った教育・実践に関しての講演、たいへん感銘したことを憶えています。
+あれから16年位になるんでしょうか。益々のご活躍うれしく思います。
+またぜひお会いしたく思います。
+今後ともよろしくお願い致します。
+
+On 2005.12.07, at 19:10, 戸塚 滝登 <t_totuka@tc4.so-net.ne.jp> wrote:
+
+>こんにちは、戸塚と言います。四半世紀に渡って教育現場でコンピュー 
+>タ教育を実践し続けてきた元小学校教諭です。日本のパイオニア教師の 
+>一人です。パパート博士のLogo、そしてケイ博士のSqueak 
+>の大ファンです。このMLには初めてお便りを書きます。よろしく 
+>お願いします。
+>
+>去る10月27日の大座畑さんのメールの後に続けた話題で 
+>す。昨年の11月に京都国際会館で開催された京都賞受賞記念講演 
+>でアラン・ケイ博士は『Turning Points』と題した大変印象深い 
+>講演をなさいました。
+>
+>その中で10才のケイ少年が電磁石を手作りし、それを当時の担任 
+>だったメアリ・クラーク先生に誉められて、学校嫌いだったケイ少年が 
+>初めてサイエンスを学ぶ楽しさに目を開かれるというとても感動的な話 
+>がありました。博士にとってはこの時感じた学ぶ楽しさこそが、後年、 
+>自分がAltoと呼ばれる世界最初のパーソナルコンピュータと 
+>SmallTalkを生み出すきっかけになったという内容でした。
+>
+>大変美しいエピソードなので、当時、小学館の教育技術誌に連載を受け 
+>持っていた私は会場でいたく感激したことを覚えております。この話を 
+>ぜひとも現場教師の方々に広く紹介したいと思いました。そして今回、 
+>本の中にそっくり収録することができました。
+>
+>今週発売されたばかりですが、『コンピュータが連れてきた子どもた 
+>ち』（小学館）という本です。中にケイ博士が あの伝説のマシ 
+>ン：Alto の前で微笑んでいらっしゃる貴重な写真も収録されて 
+>います。ぜひご覧ください。（高田先生と大島さんのご協力を頂きまし 
+>た。本当にありがとうございました。）
+>
+>残念ながら、博士とAltoの写真を本の表紙に使おうとデザイナー 
+>さんとイラストレーターさんが努力してくださったのですが、編集部の 
+>意向で最終段階では赤ちゃんの写真を使ったデザインに変えられてしま 
+>い、がっくりしています。（ケイ博士、ごめんなさい！）
+>しかし、教育に関しては日本一保守的で有名な（？）出版社が、 
+>SqueakやLogoのことを紹介した本を出したのですから世の中も変 
+>わりましたね。きっとSqueakがこれからの教育現場のトレンドに 
+>なるような気がしてワクワクしています。ではまた・・・。
+>
+>　2005年12月7日　戸塚滝登（早稲田大学客員研究 
+>員、NHKこどもメディア研）
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/ 
+_/　大座畑　重光（Shigemitsu Ohzahata） 
+_/　マッキンテリジェンス（株）代表取締役(President/Macintelligence,Inc.) 
+_/　　　　　　　携帯電話:090-8890-4502 
+_/　　　　　　　e-mail:　ohzahata@mac.com 
+_/　　　　　　　URL:　　http://homepage.mac.com/ohzahata/
+
+
+From abee ＠ squeakland.jp  Thu Dec  8 12:06:50 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2758] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について
+In-Reply-To: <4396C686.5060102@yahoo.co.jp>
+References: <4396C686.5060102@yahoo.co.jp>
+Message-ID: <4397A34A66.8C3CABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 07 Dec 2005 20:24:54 +0900
+Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+>SqueakLand2005J pre-release版でナビゲータフラップの「新しく作る」をク
+>リックすると必ずデスクトップ左上にプロジェクトビューが配置されるのです
+>が、仕様変更でしょうか？
+
+機能としては以前からありましたが、デフォルトでそうなったのはNihongo7のプ
+ラグインイメージからだと思います。
+
+これはプリファレンスのProjectViewsInWindowsをチェックすると直ります。
+あるいはワールドメニューの「外観...」から「テーマ...」を選び、「
+outOfTheBox」に変更すると、他のプリファレンスも含めて開発版に近くなります。
+
+要はただのモーフなのでデフォルトの左上に出ているということですね。ウィン
+ドウになるとRealEstateAgentが置き場所を管理するので、なるべく重ならないよ
+うに並びます。
+
+>個人的には順番に位置がずれて出てきてくれるのがいいのですが。。。連続して
+>作成すると重なってしまって移動が面倒なんです。
+
+私もそう思います。
+その一方で、プロジェクトの出る位置が決まっていると、ワークショップなどで
+説明が楽ということもあります。
+単にeToysモードからウィンドウを無くしたかっただけかもしれません。
+
+>ところで[Tips]Squeak pluginでHPやblogに動きのあるバナーをつける
+>http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002746.html
+>ですが、最後にカーソル位置にある絵を表示するモーフをロックするとハロがで
+>なくてよろしいようで)。
+
+プリファレンスのmouseOverHalosのチェックを外すという手もあります。このプ
+リファレンスの状態はプロジェクトファイルに保存されます。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From hirohito.araki ＠ attglobal.net  Thu Dec  8 23:12:49 2005
+From: hirohito.araki ＠ attglobal.net (Hirohito Araki)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2759] Re: Squeakland 2005j 前リリース版公開
+Message-ID: <6.2.3.4.2.20051208225751.02dc0220@pop6.attglobal.net>
+
+はじめまして、　荒木＠HP-Squekers です。
+
+
+ > Windows 用
+ > 
+<http://squeakland.jp/developer/download/installer/SqueakPluginJ-2005-11-30.exe>http://squeakland.jp/developer/download/installer/SqueakPluginJ-2005-11-30.exe
+
+をさっそくダウンロードしてみました。
+
+Squeakland.JPのプロジェクトをいくつか読み込んでみましたが、
+「焼き肉いいにおい」「森」「レモン電池レース」の3つが
+読み込みエラーで開けませんでした。
+バグなのか仕様かわかりませんので報告しておきます。
+
+よろしくお願いします。
+
+-- araki 
+
+
+
+From abee ＠ squeakland.jp  Fri Dec  9 00:05:15 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2760] Re: Squeakland 2005j 前リリース版公開
+In-Reply-To: <6.2.3.4.2.20051208225751.02dc0220@pop6.attglobal.net>
+References: <6.2.3.4.2.20051208225751.02dc0220@pop6.attglobal.net>
+Message-ID: <43984BAB3C8.C35EABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 08 Dec 2005 23:12:49 +0900
+Hirohito Araki <hirohito.araki@attglobal.net> wrote:
+> > Windows 用
+> > 
+><http://squeakland.jp/developer/download/installer/SqueakPluginJ-2005-11-30.exe>http://squeakland.jp/developer/download/installer/SqueakPluginJ-2005-11-30.exe
+>
+>をさっそくダウンロードしてみました。
+>
+>Squeakland.JPのプロジェクトをいくつか読み込んでみましたが、
+>「焼き肉いいにおい」「森」「レモン電池レース」の3つが
+>読み込みエラーで開けませんでした。
+>バグなのか仕様かわかりませんので報告しておきます。
+
+ありがとうございます。これらは世界聴診器用ですね。どこにもそう書いていな
+いので分からなかったと思います(エラーメッセージやエラーログ
+(SqueakDebug.log)を添付してもらえると分かります)。
+Wsなんとかがないとか言われる場合は世界聴診器関係だと思って間違いないです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoneya ＠ cslab.co.jp  Fri Dec  9 14:18:24 2005
+From: yoneya ＠ cslab.co.jp (Yoneya Masahiro)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2761] 「冬休み小学生IT教室」のお知らせと質問
+References: <6.2.3.4.2.20051208225751.02dc0220@pop6.attglobal.net>
+	<43984BAB3C8.C35EABEE@smtp.nifty.com>
+Message-ID: <00e701c5fc7f$fa8b5a90$367910ac@gc2.cslab.co.jp>
+
+はじめまして、こんにちは。
+株式会社シーズ・ラボの米谷と申します。
+
+弊社では2002年より毎年、夏休みと冬休みに
+「小学生IT教室」を無料で開催しています。
+前回の冬休みからスクイークで
+簡単なプログラミングを体験してもらっていますが
+おかげさまで子供たちには大変好評です。
+
+来年の１月にも下記のとおりに
+スクイークを使った教室を開催します。
+
+==================================================================
+名称：冬休み小学生IT教室　
+　　　　「スクイーク e-トイによるビジュアルプログラミング体験」
+
+内容： スクイーク　e-トイを用いて初歩的なビジュアルプログラミングを体験していただきます。
+
+※「スクイーク　e-トイ」とは
+直感的な操作により簡単にプログラムを作成することができるソフトウェアで、
+教育現場での利用が期待されるものです。
+今回のIT教室ではSqueak-jaコミュニティの有志により作成された
+日本語版のスクイークを用います。
+
+日時：２００６年１月１３日（金）、１３：００〜１６：３０
+場所：シーズ・ラボ　セミナールーム
+　　　　札幌市中央区北５条西６丁目札幌センタービル１８F
+対象：小学生４〜６年
+前提：パソコンを操作したことのある方。キーボード・マウス操作をともないます。
+募集人数：１０名
+参加費用：無料
+注意事項：２００５年８月に開催いたしました「夏休み小学生IT教室」と同一内容となっておりますので、
+　　　　　　　８月にご参加いただいた方はご注意ください。
+申込方法：弊社ホームページ（http://www.cslab.co.jp/）よりお申し込みください。 
+
+              定員になり次第締め切りとさせていただきます。
+　　　　　　お申し込み受け付け後、電子メールにてご連絡いたします。
+
+［主催／お問い合せ先］
+株式会社シーズ・ラボ
+担当：藤田
+札幌市北区北７条西６丁目北苑ビル
+http://www.cslab.co.jp/
+contact-cap@cslab.co.jp
+TEL 011-758-3820
+FAX 011-758-3933
+================================================================
+
+参加受付は2005/12/15〜です。
+まだ、受付開始してませんのでご注意ください。
+
+
+１点質問があります。
+
+日本語版スクイークを利用させていただくにあたって、上記のとおり
+>※「スクイーク　e-トイ」とは
+の部分に
+>今回のIT教室ではSqueak-jaコミュニティの有志により作成された
+>日本語版のスクイークを用います。
+のように説明を入れたいと思うのですが、よろしいでしょうか？
+また、日本語化を実装されている方々に団体名がありましたらお教えください。
+その内容で弊社ホームページへの掲載と新聞社へのFaxを行います。
+
+どうぞよろしくお願いします。
+
++----------------------------------------+
+米谷 正広  yoneya@cslab.co.jp　[C's Lab Co.,Ltd]
+
+
+From yoshiki ＠ squeakland.org  Sat Dec 10 17:20:40 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2762] Re: 「冬休み小学生IT教室」のお知らせと質問
+In-Reply-To: <00e701c5fc7f$fa8b5a90$367910ac@gc2.cslab.co.jp>
+References: <6.2.3.4.2.20051208225751.02dc0220@pop6.attglobal.net>
+	<43984BAB3C8.C35EABEE@smtp.nifty.com>
+	<00e701c5fc7f$fa8b5a90$367910ac@gc2.cslab.co.jp>
+Message-ID: <ud5k5icrr.wl%yoshiki@squeakland.org>
+
+  こんにちは
+
+> 弊社では2002年より毎年、夏休みと冬休みに
+> 「小学生IT教室」を無料で開催しています。
+> 前回の冬休みからスクイークで
+> 簡単なプログラミングを体験してもらっていますが
+> おかげさまで子供たちには大変好評です。
+
+  おお、すばらしいですね。
+
+> １点質問があります。
+> 
+> 日本語版スクイークを利用させていただくにあたって、上記のとおり
+> >※「スクイーク　e-トイ」とは
+> の部分に
+> >今回のIT教室ではSqueak-jaコミュニティの有志により作成された
+> >日本語版のスクイークを用います。
+> のように説明を入れたいと思うのですが、よろしいでしょうか？
+> また、日本語化を実装されている方々に団体名がありましたらお教えください。
+> その内容で弊社ホームページへの掲載と新聞社へのFaxを行います。
+
+  えっと、正確なコミュニティ名や団体名は特に決まっていないように思いま
+すが、いちおうユーザー会としてのSqueak-jaというものが「皆の心の中にあ
+る」という定義がなされていますので、「Squeak-jaコミュニティの有志によ
+り」という記述でよいように思います。
+
+  これからもがんばってください。
+
+-- Yoshiki
+
+
+From yoneya ＠ cslab.co.jp  Mon Dec 12 10:01:37 2005
+From: yoneya ＠ cslab.co.jp (Yoneya Masahiro)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2763] Re: 「冬休み小学生IT教室」のお知らせと質問
+References: <6.2.3.4.2.20051208225751.02dc0220@pop6.attglobal.net><43984BAB3C8.C35EABEE@smtp.nifty.com><00e701c5fc7f$fa8b5a90$367910ac@gc2.cslab.co.jp>
+	<ud5k5icrr.wl%yoshiki@squeakland.org>
+Message-ID: <008501c5feb7$9ab65cc0$367910ac@gc2.cslab.co.jp>
+
+米谷＠シーズ・ラボです。
+
+回答ありがとうございます。
+
+>  えっと、正確なコミュニティ名や団体名は特に決まっていないように思いま
+> すが、いちおうユーザー会としてのSqueak-jaというものが「皆の心の中にあ
+> る」という定義がなされていますので、「Squeak-jaコミュニティの有志によ
+> り」という記述でよいように思います。
+
+了解しました。
+この名称を使わせていただきます。
+
+>  これからもがんばってください。
+
+ありがとうございます。
+教室開催後にあらためてレポートなどできればと思います。
+
++----------------------------------------+
+米谷 正広  yoneya@cslab.co.jp　[C's Lab Co.,Ltd] 
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Mon Dec 12 14:38:48 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2764] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について
+In-Reply-To: <4396C686.5060102@yahoo.co.jp>
+Message-ID: <BFC33BF8.3CBFC%sumi@seagreen.ocn.ne.jp>
+
+川村さん、皆さん、ごきげんよう。
+
+on 12/07/05 20:24, kawa90@yahoo.co.jp wrote:
+
+> 個人的には順番に位置がずれて出てきてくれるのがいいのですが。。。連続して
+> 作成すると重なってしまって移動が面倒なんです。
+
+一般にモーフは、alt（Mac ではコマンド）キーを押しながらドラッグ…という操作
+で比較的お手軽に移動可能です。この方法は、プロジェクトビュー以外にも、ブック、
+テキスト、ボタンなど、矩形や楕円、星のようにクリックしてピックアップできない
+モーフの類の位置決めの際にも使えて便利です。
+
+すでにご存じのことでしたら（あるいは“移動が面倒”の意味をとりちがえていたら）
+ごめんなさい。
+
+余談ですが、この alt/コマンド ドラッグによる移動方法はシステムウインドウやメ
+ニューでも使えるので、タイトルバーが何らかの理由で画面からはみ出してしまい、
+ウインドウの移動できなくなったときや、逆に、縦幅が画面より大きなウインドウの
+はみ出した下の部分をタイトルバーに頼らずに呼び出したいときなどにも重宝します。
+
+--
+Masato Sumi
+
+
+From kawa90 ＠ yahoo.co.jp  Mon Dec 12 22:32:41 2005
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2765] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について
+In-Reply-To: <BFC33BF8.3CBFC%sumi@seagreen.ocn.ne.jp>
+References: <BFC33BF8.3CBFC%sumi@seagreen.ocn.ne.jp>
+Message-ID: <439D7BF9.4000902@yahoo.co.jp>
+
+阿部さん、鷲見さん、川村です。いつもお世話になってます。返事が遅れました
+*m(_ _)m*。
+
+Kazuhiro ABE wrote:
+
+> 機能としては以前からありましたが、デフォルトでそうなったのはNihongo7のプ
+> ラグインイメージからだと思います。
+
+開発版ばかりいじってて、見逃していました。申し訳ありませんでした。。。
+うーん、勉強不足。
+
+> その一方で、プロジェクトの出る位置が決まっていると、ワークショップなどで
+> 説明が楽ということもあります。
+
+ということであれば、納得です。
+
+Masato Sumi wrote:
+
+> 一般にモーフは、alt（Mac ではコマンド）キーを押しながらドラッグ…という操作
+> で比較的お手軽に移動可能です。この方法は、プロジェクトビュー以外にも、ブッ
+
+うわー、知りませんでした。ありがとうございます。またまた、勉強不足を露呈
+してしまいました。
+
+ところで、恥かきついでに、jaの皆さんに質問があります。プロジェクトビュー
+を長押しで「アクティブにする」を選択するとデスクトップ中央に「埋め込みプ
+ロジェクトのフレーム」なるものが出てきますが、これはどういった場合に使う
+のでしょうか？まるでVMWareのようですが。。。
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.371 / Virus Database: 267.13.13/197 - Release Date: 2005/12/09
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+http://pr.mail.yahoo.co.jp/redribbon/
+
+From abee ＠ squeakland.jp  Mon Dec 12 23:05:40 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2766] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について
+In-Reply-To: <439D7BF9.4000902@yahoo.co.jp>
+References: <BFC33BF8.3CBFC%sumi@seagreen.ocn.ne.jp>
+	<439D7BF9.4000902@yahoo.co.jp>
+Message-ID: <439D83B415F.B7FCABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 12 Dec 2005 22:32:41 +0900
+Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+>ところで、恥かきついでに、jaの皆さんに質問があります。プロジェクトビュー
+>を長押しで「アクティブにする」を選択するとデスクトップ中央に「埋め込みプ
+>ロジェクトのフレーム」なるものが出てきますが、これはどういった場合に使う
+>のでしょうか？まるでVMWareのようですが。。。
+
+見ていて楽しいということもありますが、私は、そのプロジェクトの中にあるモー
+フを他のプロジェクトに動かしたいときに使っています。
+親プロジェクトから子プロジェクトへはサムネイルにドロップするだけでよいの
+ですが、その逆の場合ですね(ゴミ箱や共有フラップを使う手もありますが)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From e-itoh ＠ ygu.ac.jp  Tue Dec 13 10:31:11 2005
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2767] 質問： Croquet を使ったときに「頭痛、吐き気」を催すことがありますか？
+Message-ID: <20051213103111.7098723@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+Squeak-jaのみなさん、こんにちは。
+
+Croquetのことについて質問です。
+＃質問をどこに送るべきか迷ったのですが、きっとSqueakをお使いの方の
+＃中にはCroquetを使われている方がいらっしゃるだろうと思い投稿します。
+
+Q. Croquetを使った学生に頭痛や吐き気の症状が現れるといった事例は
+　ありますか？また、その対策はありますか？
+
+Squeakや関連の技術について紹介したり体験する実習の授業を行っており、
+ちょうどCroquetを扱っているのですが、ここである問題が起こっています。
+
+学生の一人が「気持ちが悪い」ということで、授業の継続が困難だと言う
+のです。配布したCroquetをインストールして実行したところで、吐き気が
+起こり、その後も頭痛が2日ほど止まらなくなってしまったそうなのです。
+
+この学生は以前にも3Dゲームで同様の経験をしたらしく、それ以降は避けて
+きたそうです。今日は手元のパソコンを使わず、プロジェクターに小さく映
+した画面を見るように勧めたのですが、恐怖でなかなか見れなかったそうで
+す。
+
+授業としては何とか問題なく進められそうなのですが、この学生も可愛そうな
+ので何とか原因や対策を考えたいと思います。もちろん医者に行って診断する
+のもできますが、検査にもいくばくかの時間やお金がかかりますし、深刻さや
+程度、あるいは「よく見られる症状なのか」など情報を得たいと思っています。
+
+もし、Croquet（や類似のシステム）を使った授業やイベントなどを行われた
+方で、同様の症状に会われた方がいらっしゃればそのときの状況や対策をお知
+らせ願えませんでしょうか？また、医学的な呼称などご存じの方もいらっしゃ
+れば教えていただけませんでしょうか？
+
+Squeak-jaの趣旨と異なる内容のメールで申し訳ございませんが、ご協力いただ
+ければと存じます。
+
+P.S.
+　そういえば私は子供のころに大きな鏡を見るだけでめまいが生じました。
+今は何ともないんですがそれに似た症状なのかもしれません。
+
+
+ 
+
+
+
+From konchan ＠ fxis.co.jp  Tue Dec 13 11:18:39 2005
+From: konchan ＠ fxis.co.jp (konchan)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2768] Re: 質問： Croquet を使ったときに「頭痛、吐き気」を催すことがありますか？
+In-Reply-To: <20051213103111.7098723@ygu.ac.jp>
+References: <20051213103111.7098723@ygu.ac.jp>
+Message-ID: <439E2F7F.3050004@fxis.co.jp>
+
+近藤と申します。
+
+Eiichiro Ito wrote:
+> Q. Croquetを使った学生に頭痛や吐き気の症状が現れるといった事例は
+> 　ありますか？また、その対策はありますか？
+世の中には「3D酔い」というものがあるようです。
+検索すると、それなりのサイトがヒットします。
+
+あくまでも一知識レベルでの想像ですので、やはり医療関係の方に相談するのが
+良いのではないでしょうか。
+
+--
+konchan@fxis.co.jp
+
+From "土本 (Florian) 強  Tue Dec 13 11:44:41 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:21 2007
+Subject: [Squeak-ja: 2769] Re: 質問： Croquet を使ったときに「頭痛、吐き気」を催すことがありますか？
+In-Reply-To: <20051213103111.7098723@ygu.ac.jp>
+References: <20051213103111.7098723@ygu.ac.jp>
+Message-ID: <20051213111613.36BC.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。土本( Florian )です。
+　Croquetではなく、一般的なFirst Parson(一人称視点)の3Dウォークスルーに
+関する内容として、知っている知識をお答えします。
+
+＃土本の本業はゲーム屋です。Croquetはあまり詳しくありません。大好きです
+＃が。
+
+メール「[Squeak-ja: 2767] 質問： Croquet を使ったときに「頭痛、吐き気」
+を催すことがありますか？」(2005/12/13 10:31) に於いて
+「Eiichiro Ito」 語りて曰く、
+
+Eiichiro> Q. Croquetを使った学生に頭痛や吐き気の症状が現れるといった事例は
+Eiichiro> 　ありますか？また、その対策はありますか？
+Eiichiro> 
+Eiichiro> Squeakや関連の技術について紹介したり体験する実習の授業を行っており、
+Eiichiro> ちょうどCroquetを扱っているのですが、ここである問題が起こっています。
+Eiichiro> 
+Eiichiro> 学生の一人が「気持ちが悪い」ということで、授業の継続が困難だと言う
+Eiichiro> のです。配布したCroquetをインストールして実行したところで、吐き気が
+Eiichiro> 起こり、その後も頭痛が2日ほど止まらなくなってしまったそうなのです。
+Eiichiro> 
+Eiichiro> この学生は以前にも3Dゲームで同様の経験をしたらしく、それ以降は避けて
+Eiichiro> きたそうです。今日は手元のパソコンを使わず、プロジェクターに小さく映
+Eiichiro> した画面を見るように勧めたのですが、恐怖でなかなか見れなかったそうで
+Eiichiro> す。
+Eiichiro> 
+Eiichiro> 授業としては何とか問題なく進められそうなのですが、この学生も可愛そうな
+Eiichiro> ので何とか原因や対策を考えたいと思います。もちろん医者に行って診断する
+Eiichiro> のもできますが、検査にもいくばくかの時間やお金がかかりますし、深刻さや
+Eiichiro> 程度、あるいは「よく見られる症状なのか」など情報を得たいと思っています。
+Eiichiro> 
+Eiichiro> もし、Croquet（や類似のシステム）を使った授業やイベントなどを行われた
+Eiichiro> 方で、同様の症状に会われた方がいらっしゃればそのときの状況や対策をお知
+Eiichiro> らせ願えませんでしょうか？また、医学的な呼称などご存じの方もいらっしゃ
+Eiichiro> れば教えていただけませんでしょうか？
+
+　俗に「3D酔い」「映像酔い」と呼ばれる現象です。正式な医学的名称は不明で
+す。
+
+	http://e-words.jp/w/3DE98594E38184.html
+
+　メカニズムとしては乗り物酔いと同じ物らしく、平衡感覚などによって補償さ
+れるべき視野の変化が、予想補償範囲とずれている(そもそも映像なので平衡感
+覚は変わっていない)事による違和感が蓄積して「酔い」の症状が引き起こされ
+るようです。
+　ゲーム、エンターテインメント映像の世界では一般的なものとして考えられて
+おり、明確なデータは示せませんが、実際の所「3D酔い」自体は結構な割合で引
+き起こされる人がいるようです。
+
+	http://www.aist.go.jp/aist_j/press_release/pr2003/pr20031218/pr20031218.html#b
+
+　症状自体は、単なる体質による物であり、この症状による永続的で深刻な身体
+的影響は今のところないようです。
+　原因の根本は乗り物酔いと同様ですので、予防策としては乗り物酔いと似た薬
+が効くと思われます。
+
+
+　他の方法論としては以下が考えられます。
+
+・当人がインタラクティビティとの関連づけを行う
+	自らの操作が映像に反映される場合の方が、操作とは無関係に映像が変
+化する物に比べて平衡感覚の錯覚による補償が行われる分症状は軽くなります。
+具体的には、自ら慣れている操作方法によって操作してもらう必要があります
+(Croquetにおいては、現実的ではありませんが)。
+	車に乗っているだけでは乗り物酔いをしますが、運転している人が乗り
+物酔いをあまりしないのと同様です。
+
+・現実感を薄くする
+	現実世界と近い状態での補償が行われなければ、ある程度症状は軽くな
+ります。具体的には、視野角を狭くし、小さいディスプレイで見てもらう必要が
+あります。
+	ただし、映像に没頭してしまうと見かけの視野角は狭くなる(ディスプ
+レイしか見えなくなる)ので、「注目しない」必要があります。もっとも、教育
+の現場で「真剣に見るな」というオーダーは学生に対して失礼だとは思いますし、
+前項の「インタラクティビティとの関連づけ」に矛盾しますが……。
+
+
+　「3D酔い」に対する対策では、現在以下のような物が存在します。
+
+	http://pcweb.mycom.co.jp/articles/2005/08/03/siggraph/
+
+　もちろん、一般に使用できる物ではありませんが、「3D酔い」のメカニズムは
+つかめると思います。
+
+
+　ゲームの世界では「3D酔い」は避けられないものとして今のところ考えられて
+います。アメリカ市場向けのゲームのほとんどがFirst Parsonであることを考え
+ると、ユーザーの側へ「慣れ」を要求しているものと思われます。
+　このため、一般向けの、多人数に対するイベントにおいて同様の症状が起きる
+ことを考えると、あらかじめ身体的リスクを告知する以外の方法がないのではな
+いかと思われます。
+
+
+　表面部分のみで、なおかつあまり建設的な意見の提示が出来ませんでしたが、
+私の知っている知識は以上です。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From e-itoh ＠ ygu.ac.jp  Tue Dec 13 21:48:05 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2770] Re: 質問： Croquet を使ったときに「頭痛、吐き気」を催すことがありますか？
+In-Reply-To: <20051213111613.36BC.FLORIAN@seagreen.ocn.ne.jp>
+References: <20051213103111.7098723@ygu.ac.jp>
+	<20051213111613.36BC.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <86zmn5w4ca.wl@tvr.itolab.ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+近藤さん、土本さん、早速のご返信ありがとうございます。
+
+近藤さん：
+＞世の中には「3D酔い」というものがあるようです。
+＞検索すると、それなりのサイトがヒットします。
+＞あくまでも一知識レベルでの想像ですので、やはり医療関係の方に相談するのが
+＞良いのではないでしょうか。
+　なるほど一般的な用語として「3D酔い」というものがあるのですね。
+病院にいくにもどんな科にいってどんな相談をするべきか、その時点で躊躇し
+てしまうだろうと思ったので、多少の知識を得ておきたいと思っておりました。
+
+土本さん：
+＞　もちろん、一般に使用できる物ではありませんが、「3D酔い」のメカニズムは
+＞つかめると思います。
+＞（以下略）
+　ありがとうございます。基本的に乗物酔いに近いものであるようですね。
+
+当該学生の症状である、「吐き気が比較的短い時間で始まること」や「頭痛が
+２、３日続くこと」は一般的な乗物酔いとは違う感じがしましたが、これは個
+人差によるものなのかもしれませんね。
+
+　やはり時期を見て病院（先のページでは内科、耳鼻科でしょうか）を訪ねる
+ように学生に勧めてみます。これからこういった環境を使う授業をする際には、
+土本さんのおっしゃるように事前に告知するか、そういった症状を訴えたとき
+にどう対応すべきか考えとく必要がありそうです。
+
+近藤さん、土本さん、アドバイス＆情報ありがとうございました。
+
+From abee ＠ squeakland.jp  Wed Dec 14 00:20:09 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2771] アートコンピューティング・シリーズ第９弾「汽水域」
+Message-ID: <439EE6A9106.8B7BABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+先日、Squeakers' Night in 未来パーティを開催した秋葉原のダイビルで、また
+また未来大のイベントが 12/17(土)の13:00-17:30に開かれます。
+今回はSqueakも参加者のひとつとして異種格闘に臨みます。戦うのは我等が山宮
+さんです。
+
+http://www.kazushi.info/modules/eguide/event.php?eid=11
+
+ぜひご参加ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mitsuhashi-masaaki ＠ tepsys.co.jp  Wed Dec 14 09:31:21 2005
+From: mitsuhashi-masaaki ＠ tepsys.co.jp (Masaaki Mitsuhashi)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2772] Re: 質問： Croquet を使ったときに「頭痛、吐き気」を催すことがありますか？
+In-Reply-To: <86zmn5w4ca.wl@tvr.itolab.ygu.ac.jp>
+References: <20051213103111.7098723@ygu.ac.jp>	<20051213111613.36BC.FLORIAN@seagreen.ocn.ne.jp>
+	<86zmn5w4ca.wl@tvr.itolab.ygu.ac.jp>
+Message-ID: <439F67D9.4070800@tepsys.co.jp>
+
+三橋です。
+
+3D酔いにしては症状が重いかもしれませんので、
+医師に相談されることをおすすめします。
+
+以前にアニメで激しく点滅するような映像を見たときにショック状態
+になるお子さんがいて、社会問題になったこともありましたので、
+3D酔い以外にも、CG映像等をみているお子さんの様子がどうもおかしい
+という場合は、医師にご相談ください。
+
+e-itoh@ygu.ac.jp wrote:
+> 病院にいくにもどんな科にいってどんな相談をするべきか、その時点で躊躇し
+> てしまうだろうと思ったので、多少の知識を得ておきたいと思っておりました。
+
+> 当該学生の症状である、「吐き気が比較的短い時間で始まること」や「頭痛が
+> ２、３日続くこと」は一般的な乗物酔いとは違う感じがしましたが、これは個
+> 人差によるものなのかもしれませんね。
+
+-- 
+三橋雅昭 mitsuhashi-masaaki@tepsys.co.jp
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Dec 14 13:53:15 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2773] AniAniWeb
+Message-ID: <JI2005121413531511.9223234@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+半ば死に体となっていた感のあったComSwikiですが、ここへきて、メイン開発者のJe77
+さんの動きが活発化しています。
+
+ComSwiki 1.5が先日リリースされました。以下はSqueak-Devからの転送です。
+
+新たな特徴としてはAniAniWebが実装されたということ。
+
+AniAniWebとは、WikiWikiWebをより安全にしたものとのことです。承認したユーザから
+のみの編集を受け付けます。
+
+その他、<? ?>タグでプラグインを自由に組み込めたりなど、なかなかユニークな
+特徴を備えています。
+
+<?blog?>や<?calendar?>、<?rss?>など、使えそうなプラグインもかなり用意されて
+います。
+
+Squeakでブログも十分可能になったということですね。
+
+ダウンロードは以下:
+http://minnow.cc.gatech.edu/swiki/15
+
+説明は以下:
+http://home.cc.gatech.edu/AniAniWeb
+
+AniAniWebの例は以下にたくさんあります:
+http://home.cc.gatech.edu/
+
+私も近いうちに入れてみようと思います。
+お楽しみください。
+
+mail from "Jochen F. Rick" <nadja@cc.gatech.edu>:
+----------from here----------
+Greetings,
+
+I am hereby announcing Swiki 1.5 ("One Of These Days"), running under 
+Comanche 7.0.2. You can get pre-packaged downloads from the Swiki Swiki:
+    http://minnow.cc.gatech.edu/swiki/15
+
+This is the first release to include AniAniWeb. I've been meaning to
+open-source AniAniWeb for some time, but I've been really busy. I'm still 
+really busy, but I thought I'd at least get it out there.
+
+Ani is a Wiki approach applied to personal home pages. It differs in
+several important ways from a Wiki. There is more structure and a bigger
+emphasis on looks. Most importantly, Ani has user accounts and a fairly
+sophisticated access control system. Owners of a site can control who has
+access to what. 
+
+For some examples of AniAniWeb in action, see
+  http://home.cc.gatech.edu/
+For documentation or to ask questions, go to 
+  http://home.cc.gatech.edu/AniAniWeb
+
+To start using AniAniWeb, in addition to the other instructions, you must set
+the alertSender and alertServer fields of the refs swiki. You can do this 
+using the AdminTool, by first clicking on refs and then clicking on settings.
+
+Please send all bug reports, comments, and random gunfire to
+swiki-bugs@cc.gatech.edu and/or pws@cc.gatech.edu
+
+Thanks for your consideration,
+
+Je77
+
+---
+[:masashi | ^umezawa]
+
+From t_totuka ＠ tc4.so-net.ne.jp  Wed Dec 14 17:09:58 2005
+From: t_totuka ＠ tc4.so-net.ne.jp (戸塚 滝登)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2774] バーチャル酔い（Vertigo)とポケモンアニメ事件と脳の視覚
+In-Reply-To: <20051213103111.7098723@ygu.ac.jp>
+Message-ID: <04D2E161-6C79-11DA-985F-00039306D396@tc4.so-net.ne.jp>
+
+早稲田大学子どもメディア研（NHKの方も同じ名称ですが）の戸塚です。
+
+山梨学院大学の伊藤さんの報告を興味深く読みました。私は3年前まで小学校現場でコンピュ−タ教育を24年に渡ってずっと実践し続けていた元小学校教師 
+なのですが、伊藤さんのような3Dの世界をウォークスルーしていてめまいを感じる子、理科学習でプラネタリウム内で星座を見ているうちに酔っぱらってし 
+まう子、はては1997年12月に発生したポケモンアニメ事件のように過度に明滅の激しいテレビ画面や動きの激しく変わる映像をを見ているうちに吐き気 
+を感じてしまう子どもたちによく出会いました。
+
+発達段階にもよるのですが、小学3年生から6年生（8歳から11歳）の場合、私の経験では100人ほどの中に必ず1〜2人はそんなお子さんはいらっしゃ 
+るように感じます。（毎年、必ず1人には出会いました。ほとんどの場合は女児でしたが。）
+
+PC画面の  
+3Dオブジェクトにマッピングされているテクスチャの「きめ」が荒すぎたり、不自然な質感を持っていたりすると（質感の細かさや光線の反射具合）頭痛や 
+目の痛みを感じて気味悪いと訴えるお子さん、画面の遠近感が現実世界よりも超広角ぎみに過度に強調されていると動き回っているうちにふらふらに酔っぱ 
+らったように感じてしまうお子さん、そしてカーソルやジョイスティックをほんわずかの角度だけ動かしたのに画面の方が大きな角度で大げさに動いてしまう 
+と吐き気やめまいを感じてしまうお子さんなど、いろいろな症例（？）に出会いました。
+
+個人差が激しいので対処法はさまざまでしたが、こんな場合は即、そのPCやソフトを使うのは止めさせるか、しばらく遠ざけたりしました。小学生の場合、 
+彼等の脳は発達途上にあります。ものを見る視覚野は思春期が来て、脳の可塑性が失われはじめるまでは形成途上にあるわけで、まだ大人の視覚のように3D 
+世界の遠近感や質感を正確に認識できるようにまでは，まだ”固まっていない”と考えられるのですね。
+
+あの1997年12月に起きたポケモンアニメ事件では500人もの子どもたちが光過敏性てんかんで入院しましたが、おそらく頭痛やめまいの症状を訴えた 
+のは全国で1万人を下らなかっただろうといわれています。
+私も当時専門家チームに混じって当時 NHKで問題のアニメ  
+を検討させていただいたのですが、その時の結論はやはり子どもの「視覚野の未成熟」でした。光トポグラフィーの映像はあの瞬間、前頭前野や後頭部の視覚 
+野ではげしいフリップみたいな現象が観察され、何か子どもの視覚野と体制感覚を司る部位に異常が起きているのが見て取れました。（現在ならfMRIの解 
+像度が格段に進歩しているので、Croquetで頭痛を訴えているその女学生さんの脳はその時どんなふるまいをしているのかが病院で見てもらえるのかも 
+しれませんが。）
+
+どこか今回の女学生さんは、そんな稀な症例を持つお子さんがそのままで成長なさっていったような感じがします。もしも私が伊藤さんだったら、この方には 
+きっぱり使うのをあきらめまるような気がします。別種のソフトを与えるか、違う課題を与えてあげるという救済策はできないか検討するもしれません？（無 
+理に使い続けると予想もしなかった症例を呼び寄せる可能性もあるからです。）どうかよろしくご考慮をお願いいたしますね。
+
+なお、伊藤さんが報告下さった症例は『旋回めまい（Vertigo）』と呼ばれるものの一種だそうで、古くから航空機パイロットや宇宙飛行士の訓練で頻 
+出する悩みなのだそうです。人間の脳に生得的に埋め込まれている視覚機能が正常に働きすぎて起きる錯覚（錯視）なのだそうで、バス酔いにかかりやすい人 
+とそうでない人がいるように、またよちよち歩きの赤ちゃんがよく「ふらりんころりん」と倒れまくるふるまいをするのと同じ原因で発生してくるそうです。
+（先日、私は『コンピュータが連れてきた子どもたち』という本を小学館から出しましたが、この中で伊藤さんの報告下さった症例について触れています。現 
+在本屋の店頭に並んでいると思いますので、詳しくはそちらを御覧下さればと思います。失礼しました。）
+
+
+
+From t_totuka ＠ tc4.so-net.ne.jp  Wed Dec 14 17:10:48 2005
+From: t_totuka ＠ tc4.so-net.ne.jp (戸塚 滝登)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2775] バーチャル酔い（Vertigo)とポケモンアニメ事件と脳の視覚
+In-Reply-To: <20051213103111.7098723@ygu.ac.jp>
+Message-ID: <2279992A-6C79-11DA-B6E7-00039306D396@tc4.so-net.ne.jp>
+
+早稲田大学子どもメディア研（NHKの方も同じ名称ですが）の戸塚です。
+
+山梨学院大学の伊藤さんの報告を興味深く読みました。私は3年前まで小学校現場でコンピュ−タ教育を24年に渡ってずっと実践し続けていた元小学校教師 
+なのですが、伊藤さんのような3Dの世界をウォークスルーしていてめまいを感じる子、理科学習でプラネタリウム内で星座を見ているうちに酔っぱらってし 
+まう子、はては1997年12月に発生したポケモンアニメ事件のように過度に明滅の激しいテレビ画面や動きの激しく変わる映像をを見ているうちに吐き気 
+を感じてしまう子どもたちによく出会いました。
+
+発達段階にもよるのですが、小学3年生から6年生（8歳から11歳）の場合、私の経験では100人ほどの中に必ず1〜2人はそんなお子さんはいらっしゃ 
+るように感じます。（毎年、必ず1人には出会いました。ほとんどの場合は女児でしたが。）
+
+PC画面の  
+3Dオブジェクトにマッピングされているテクスチャの「きめ」が荒すぎたり、不自然な質感を持っていたりすると（質感の細かさや光線の反射具合）頭痛や 
+目の痛みを感じて気味悪いと訴えるお子さん、画面の遠近感が現実世界よりも超広角ぎみに過度に強調されていると動き回っているうちにふらふらに酔っぱ 
+らったように感じてしまうお子さん、そしてカーソルやジョイスティックをほんわずかの角度だけ動かしたのに画面の方が大きな角度で大げさに動いてしまう 
+と吐き気やめまいを感じてしまうお子さんなど、いろいろな症例（？）に出会いました。
+
+個人差が激しいので対処法はさまざまでしたが、こんな場合は即、そのPCやソフトを使うのは止めさせるか、しばらく遠ざけたりしました。小学生の場合、 
+彼等の脳は発達途上にあります。ものを見る視覚野は思春期が来て、脳の可塑性が失われはじめるまでは形成途上にあるわけで、まだ大人の視覚のように3D 
+世界の遠近感や質感を正確に認識できるようにまでは，まだ”固まっていない”と考えられるのですね。
+
+あの1997年12月に起きたポケモンアニメ事件では500人もの子どもたちが光過敏性てんかんで入院しましたが、おそらく頭痛やめまいの症状を訴えた 
+のは全国で1万人を下らなかっただろうといわれています。
+私も当時専門家チームに混じって当時 NHKで問題のアニメ  
+を検討させていただいたのですが、その時の結論はやはり子どもの「視覚野の未成熟」でした。光トポグラフィーの映像はあの瞬間、前頭前野や後頭部の視覚 
+野ではげしいフリップみたいな現象が観察され、何か子どもの視覚野と体制感覚を司る部位に異常が起きているのが見て取れました。（現在ならfMRIの解 
+像度が格段に進歩しているので、Croquetで頭痛を訴えているその女学生さんの脳はその時どんなふるまいをしているのかが病院で見てもらえるのかも 
+しれませんが。）
+
+どこか今回の女学生さんは、そんな稀な症例を持つお子さんがそのままで成長なさっていったような感じがします。もしも私が伊藤さんだったら、この方には 
+きっぱり使うのをあきらめまるような気がします。別種のソフトを与えるか、違う課題を与えてあげるという救済策はできないか検討するもしれません？（無 
+理に使い続けると予想もしなかった症例を呼び寄せる可能性もあるからです。）どうかよろしくご考慮をお願いいたしますね。
+
+なお、伊藤さんが報告下さった症例は『旋回めまい（Vertigo）』と呼ばれるものの一種だそうで、古くから航空機パイロットや宇宙飛行士の訓練で頻 
+出する悩みなのだそうです。人間の脳に生得的に埋め込まれている視覚機能が正常に働きすぎて起きる錯覚（錯視）なのだそうで、バス酔いにかかりやすい人 
+とそうでない人がいるように、またよちよち歩きの赤ちゃんがよく「ふらりんころりん」と倒れまくるふるまいをするのと同じ原因で発生してくるそうです。
+（先日、私は『コンピュータが連れてきた子どもたち』という本を小学館から出しましたが、この中で伊藤さんの報告下さった症例について触れています。現 
+在本屋の店頭に並んでいると思いますので、詳しくはそちらを御覧下さればと思います。失礼しました。）
+
+
+
+From tako ＠ aquilax.co.jp  Wed Dec 14 17:41:32 2005
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2776] 求人 Squeak プログラマ
+Message-ID: <20051214084135.1E97343733@1server.aquilax.co.jp>
+
+高橋＠池袋（アキラックス）です。
+
+　Squeakプログラマを探しています。
+この話題がsqueak-jaにそぐわなければごめんなさい。
+
+　数人月の Squeak仕事が溜まってしまいました。
+経験・スキル・Full time/ Part time/ 在宅を問わず、お手伝いして
+いただける方を探しています（もちろん有給）。
+
+　アキラックス社ではWindows上で動作する歯科医院用医療事務
+コンピュータシステムを開発・販売しています。
+
+　私の関わる社内情報システム、ユーザメンテナンス業務にはSqueakを
+使っています。（本体プログラムは C++で私は社内唯一のSqueakerです。）
+
+------　主な案件
+
+○ メンテナンスプログラム（Windows上）　期限 来年２月末
+  数千台のユーザーのパソコンにSqueakは既にインストールされています。
+  そのシステムの日本語化や機能追加を行います。
+　弊社アプリケーションのファイル整合性のチェック／初期化など
+
+
+○ 社内情報システム（ComSwikiベース）の機能追加(Mac OSX上)　期限なし
+　弊社のユーザ情報・メンテナンス情報管理の中核システムです。
+　電話の発信制御・発着信内容のメモの蓄積・検索などの各種機能追加
+
+
+○ 弊社CTIシステム　期限なし
+　電話交換機と通信して、着信者表示・発信などを制御。
+　交換機とはWindows上でActiveX経由で通信します。
+
+
+○ 上記成果のSqueakコミュニティーへの還元
+
+
+ 興味のある方は、お気軽にご連絡下さい。
+電話の方は 勧誘と区別するために「Squeakの件で」と言って下さい。
+
+03-5992-0790 アキラックス 高橋 恒司(こうじ)　09:00〜17:30
+tako@aquilax.co.jp
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Aquilax Inc. (www.aquilax.co.jp)
+
+
+
+From yoshiki ＠ squeakland.org  Thu Dec 15 09:08:10 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2777] Re: SqueakLand2005J pre-release 版の「新しく作る」の挙動について
+In-Reply-To: <439D83B415F.B7FCABEE@smtp.nifty.com>
+References: <BFC33BF8.3CBFC%sumi@seagreen.ocn.ne.jp>
+	<439D7BF9.4000902@yahoo.co.jp>
+	<439D83B415F.B7FCABEE@smtp.nifty.com>
+Message-ID: <uirtrp6hh.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> On Mon, 12 Dec 2005 22:32:41 +0900
+> Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+> >ところで、恥かきついでに、jaの皆さんに質問があります。プロジェクトビュー
+> >を長押しで「アクティブにする」を選択するとデスクトップ中央に「埋め込みプ
+> >ロジェクトのフレーム」なるものが出てきますが、これはどういった場合に使う
+> >のでしょうか？まるでVMWareのようですが。。。
+> 
+> 見ていて楽しいということもありますが、私は、そのプロジェクトの中にあるモー
+> フを他のプロジェクトに動かしたいときに使っています。
+> 親プロジェクトから子プロジェクトへはサムネイルにドロップするだけでよいの
+> ですが、その逆の場合ですね(ゴミ箱や共有フラップを使う手もありますが)。
+
+  マニアックですね。
+
+  ちゃんと動く"World in World"は常に昔から待望の機能ではありました。ワー
+ルドも他のMorphと同様にいじったりできるべきだし、もしそうできれば、
+Thread NavigatorやBookなどいろいろなものが単純化されるはずなので。
+
+  ただ、今のSqueakでは「謎の機能」の域を脱していないですし、Morphicベー
+スだとなかなかこれ以上ちゃんと作るのは難しい面はあります。次世代Squeak
+ではぜひともばっちり使えるようにしたいところです。
+
+-- Yoshiki
+
+
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Sat Dec 17 07:09:05 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2778] C5 2006 デモ・ポスターセッションのお知らせ
+Message-ID: <20051216140905.79984781.htakada@db.soc.i.kyoto-u.ac.jp>
+
+squeak-ja の皆様
+
+京都大学の高田です。
+いつも御世話になっております。
+
+来年1月26,27日に米国バークレイにて開催されます国際会議 C5 2006 ですが，
+論文発表以外に，デモあるいはポスターでの発表を募集することになりました。
+ぜひいろんな方々と最近の成果や自分の中で温めているアイディアを議論したい
+という方は，まだまだ間に合いますのでぜひご応募下さい。
+
+デモ・ポスターセッションの募集案内を添付致します。問い合わせ先メイル
+アドレスは私に届きますので，ご質問は日本語で送って頂いて結構です。
+
+国際会議自体への参加登録は，
+
+http://www.db.soc.i.kyoto-u.ac.jp/c5-06/participation.html
+
+にて好評(?)受付中です。1月12日までに登録されますと割引料金で参加して頂け
+ます。また，推奨ホテル(Doubletree Berkeley Marina)への宿泊予約も，
+
+http://www.db.soc.i.kyoto-u.ac.jp/c5-06/local.html#hotel
+
+より御利用頂けます。12月31日(延長されました)までに予約しますと，会議割引
+が適用されます。バンケットもこのホテルで行われる予定になっていますので，
+ぜひ御利用下さい。
+
+皆様多数の御参加をお待ちしております。
+
+-----
+Call for Demos and Posters
+
+The Fourth International Conference on Creating, Connecting and
+Collaborating through Computing (C5 2006) will have a demo and poster
+session, in order to encourage a more interactive exchange of ideas
+and reports on work that is complete as well as work in progress.
+
+We have allocated 90 minutes for the demo and poster session, with an
+additional 30 minutes available before the session for preparation and
+set-up. People who would like to exhibit their work at the demo and
+poster session should submit the following information to
+c5-06@db.soc.i.kyoto-u.ac.jp by January 10, 2006.
+
+Title:
+Exhibitor's name:
+Abstract:
+Necessary Equipment: Desk, Poster board, power outlet, wireless network
+                     (please indicate items you need)
+
+The conference will provide a desk and/or a poster board, a power
+outlet (AC 120V with US-spec plug), and wireless network
+connection. Please bring other equipment (such as a laptop PC)
+necessary for your demo.
+
+If you have any question, please feel free to contact us at 
+c5-06@db.soc.i.kyoto-u.ac.jp.
+
+We are looking forward to meeting you in Berkeley, California.
+
+Best Regards,
+
+C5 2006 Program Co-Chairs
+Benay Dara-Abrams
+Rieko Kadobayashi
+Rick McGeer
+
+-- 
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+(COEシリコンバレー拠点滞在中, HP Labsパロアルト 客員研究員)
+
+From abee ＠ squeakland.jp  Mon Dec 19 23:32:22 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2779] Re: Squeakland 2005 J リリース計画
+In-Reply-To: <43735FF2.5070508@metatoys.org>
+References: <43735FF2.5070508@metatoys.org>
+Message-ID: <43A6C47644.BBC6ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+諸般の事情により、本日のリリースを延期します。
+新しいリリース日は決まり次第ご連絡します。
+詳細はMantis-Jをご覧ください。
+
+http://www.kukakuka.jp/squeak/bugs/view_all_bug_page.php
+
+申し訳ありません。
+
+On Thu, 10 Nov 2005 23:57:54 +0900
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>山宮です。
+>
+>次期スクイーク日本語版のリリーススケジュールをお伝えします(さっき 
+>skype の雑談で決まりました)。
+>
+>名称: Squeakland2005J
+>リリース日: 2005年12月19日
+>
+>今回のバージョンは、日本独自の物ではなく本家版のパッケージを変えただけ
+>という事を強調するために名前付けが変更されました。リリースまでの予定は
+>以下の通りです。
+>
+>12月01日までに
+>- Windows 版インストーラ作成(山宮)
+>- Mac 版のインストーラ作成(林さん)
+>- Nebraska 日本語でテスト(大島さん)
+>- ÷問題対応(大島さん)
+>- TTC フォントドロップ対応(大島さん)
+>- パッチをストリームに入れてもらうよう頼む
+>
+>12月01日 前リリース版公開
+>
+>12月01日 - 12月19日
+>- 最終バグチェック
+>- プレスリリース原案作成(大島さん)
+>- プレスリリース発表(阿部さん/発表は VPRI 名義で行う)
+>
+>12月19日 リリース
+>
+>-- 
+>Takashi Yamamiya := http://metatoys.org/
+>
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From e-itoh ＠ ygu.ac.jp  Wed Dec 21 09:43:34 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2780] Re: バーチャル酔い（Vertigo)とポケモンアニメ事件と脳の視覚
+In-Reply-To: <2279992A-6C79-11DA-B6E7-00039306D396@tc4.so-net.ne.jp>
+References: <20051213103111.7098723@ygu.ac.jp>
+	<2279992A-6C79-11DA-B6E7-00039306D396@tc4.so-net.ne.jp>
+Message-ID: <86zmmvcma1.wl@tvr.itolab.ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+三橋さん、戸塚さん、コメントありがとうございます。
+
+昨日当該学生に会いまして、みなさまから頂いたコメントについて話をしたと
+ころ、本人も気になるようで、医師に相談すると申しておりました。
+
+やはり精神的にも過敏になっているようで、昨日Squeakersのビデオを全員で
+見たところ、たまたまCroquetの画像があったときには反射的に目を背けてい
+たようです。
+＃この部分のあることを忘れてうっかり見せてしまいました。
+
+またこの件について進展がありましたらメーリングリストで報告させていただ
+こうと思います。
+
+コメントくださったみなさま、本当にありがとうございました。
+
+P.S.
+　戸塚さんにご紹介いただいた書籍は早速注文して拝見させていただきます。
+
+From abee ＠ squeakland.jp  Sat Dec 24 14:54:45 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2781] Squeakland 2005J リリース
+Message-ID: <43ACE2A52E2.7B5BABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+さきほど(12/24 14:50)、Squeakland 2005Jをリリースしました。詳細はスクイー
+クランドのニュースリリースをご覧ください。
+
+http://squeakland.jp/images/news/html/SqL05JRelease.htm
+
+Squeak-jaをはじめ、関係者の皆様に感謝します。ありがとうございました。
+また、リリース日が遅れましたことを改めてお詫びします。
+周りの方々にも宣伝していただけると助かります(特に教育とメディア関係)。
+
+年末年始はSqueakland 2005Jでご家族そろってお楽しみください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From vtalk ＠ mbox.kyoto-inet.or.jp  Sat Dec 24 17:36:31 2005
+From: vtalk ＠ mbox.kyoto-inet.or.jp (kenji nagai)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2782] Re: Squeakland 2005J リリース
+References: <43ACE2A52E2.7B5BABEE@smtp.nifty.com>
+Message-ID: <047301c6086a$1e225580$1401a8c0@NX9030>
+
+永井＠京都市です。
+
+おお，まさにイヴ・リリースになりましたね。
+おめでとうございます！
+また，関係者の皆様，本当にご苦労様でした。
+そして，有り難うございます。
+
+なんといっても「一本化された多言語機能」で
+「日本語版も同一のコードを用いているので、
+安定性が増し、世界中で作品交換が容易にな
+りました。」というのがすごいですね。
+これにより，ますます世界レベルの交流が進
+むのでしょう！
+
+やはり，スクイークはすごい！
+
+--
+永井＠京都市
+vtalk@mbox.kyoto-inet.or.jp
+
+
+> 阿部@新百合です。
+>
+> さきほど(12/24 14:50)、Squeakland 2005Jをリリースしました。詳細はスクイー
+> クランドのニュースリリースをご覧ください。
+>
+> http://squeakland.jp/images/news/html/SqL05JRelease.htm
+>
+> Squeak-jaをはじめ、関係者の皆様に感謝します。ありがとうございました。
+> また、リリース日が遅れましたことを改めてお詫びします。
+> 周りの方々にも宣伝していただけると助かります(特に教育とメディア関係)。
+>
+> 年末年始はSqueakland 2005Jでご家族そろってお楽しみください。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp 
+
+
+From e-itoh ＠ ygu.ac.jp  Sat Dec 24 22:17:54 2005
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2783] Re: Squeakland 2005J リリース
+References: <43ACE2A52E2.7B5BABEE@smtp.nifty.com>
+Message-ID: <20051224221754.1C9B2979@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+Squeakland 2005Jのリリースおめでとうございます。
+開発にかかわったみなさん、本当にお疲れさまでした。
+クリスマスに素晴らしいプレゼントをいただきありがとうございます。
+
+今年は授業などでかなりNihongo7を使わせていただいたのですが、事情
+あってSqueakland 2005Jのバグ報告に貢献できず、申し訳ございません
+でした。
+来年の授業ではさっそくSqueakland版を使わせていただこうと思います。
+
+ではみなさん、ごゆっくり年末年始をお過ごしくださいませ。
+良いお年を。
+
+--- abee@squeakland.jp ---
+
+>阿部@新百合です。
+>
+>さきほど(12/24 14:50)、Squeakland 2005Jをリリースしました。詳細はスクイー
+>クランドのニュースリリースをご覧ください。
+>
+>http://squeakland.jp/images/news/html/SqL05JRelease.htm
+>
+>Squeak-jaをはじめ、関係者の皆様に感謝します。ありがとうございました。
+>また、リリース日が遅れましたことを改めてお詫びします。
+>周りの方々にも宣伝していただけると助かります(特に教育とメディア関係)。
+>
+>年末年始はSqueakland 2005Jでご家族そろってお楽しみください。
+>
+> //abee
+>--
+>阿部 和広  EMAIL abee@squeakland.jp
+
+
+ 
+
+
+
+From abee ＠ squeakland.jp  Thu Dec 29 18:40:00 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2784] スクイーク、テレビに再び登場
+Message-ID: <43B3AEF0F7.0624ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+昨年8月、NEWS23の放送前に日本HPのインフォマーシャルが放送され、その中で
+スクイークが紹介されました。
+
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-August/001762.html
+
+来年の1月に再びこの枠でスクイークが取り上げられます。今回のテーマはは HP
+スーパーサイエンスキッズです。今回は関東だけでなく大阪でも放送されます。
+
+＜放映スケジュール＞ 放送時間 22:50-22:54の間の1分間
+
+TBS/東京放送 (関東地方のみ放映)
+・1月9日(月)	ワークショップ編
+		(本プロジェクトと、ワークショップ開催日程の紹介)
+・1月10日(火)	コンテスト編
+		(コンテストの開催とスクイーク作品募集のお知らせ)
+・1月11日(水)	ワークショップ編(1月9日と同内容)
+・1月12日(木)	コンテスト編(1月10日と同内容)
+
+MBS/毎日放送 (大阪地区のみ放映)
+・1月16日(月)	ワークショップ編(1月9日と同内容)
+		(本プロジェクトと、ワークショップ開催日程の紹介)
+・1月17日(火)	コンテスト編(1月10日と同内容)
+
+HPスーパーサイエンスキッズでは、スクイークワークショップへの参加とコンテ
+ストへの応募をお待ちしています。いずれも無料ですので、小3-中3のお子さんは
+ぜひWebをご覧ください。コンテストの商品はアメリカツアーです。
+
+http://www.supersciencekids.com
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Dec 29 18:48:04 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2785] Re: Squeakland 2005J リリース
+In-Reply-To: <43ACE2A52E2.7B5BABEE@smtp.nifty.com>
+References: <43ACE2A52E2.7B5BABEE@smtp.nifty.com>
+Message-ID: <43B3B0D4306.0625ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+永井さん、伊藤さん、ありがとうございます。
+お蔭様で、多くのダウンロード数を記録し、順調な滑り出しとなっています。
+
+来年のテレビ放送ではスクイークランドのURLも出ると聞いていますので、より多
+くの方に使ってもらえるものと期待しています。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002784.html
+
+リリース後も改良は随時行われていますので、Mantis-Jをよろしくお願いします
+(修正されたものはアップデートストリームを使ってネット経由で更新できます)。
+追加情報やパッチもどんどんお寄せください。
+
+http://www.kukakuka.jp/squeak/bugs/main_page.php
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Fri Dec 30 18:12:36 2005
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:22 2007
+Subject: [Squeak-ja: 2786] スクリーンダンプについて  (was: Re: SqueakNihongo7 についての感想・要望など  )
+In-Reply-To: <002401c5e2b5$75cc04f0$1401a8c0@NX9030>
+References: <200511061727467160.317@edu.city.kyoto.jp>
+	<002401c5e2b5$75cc04f0$1401a8c0@NX9030>
+Message-ID: <43B4FA0416D.E8A8ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+古い話題で恐縮です。
+抜本的な解決法ではないのですが、もうすこし簡単な方法として、ワールドを画
+像ファイルとして書き出すことができます。
+具体的には、背景でワールドのハロを出し、赤ハロメニューの「書き出し・・・」か
+ら、任意の画像フォーマットを選びます。フォーマットはJPEG, GIF, BMP, PNGに
+対応しています。
+プラグインイメージの場合、ファイルは「My Squeak」のアカウント名のフォルダ
+にできます。
+この方法はワールドに限らず、すべてのモーフで使えますので、ドキュメントを
+書くときなどに使うと便利です。
+
+お試しください。
+
+On Sun, 6 Nov 2005 18:35:44 +0900
+"kenji nagai" <vtalk@mbox.kyoto-inet.or.jp> wrote:
+>> Squeak　の印刷方法ですが、お知らせします。
+>> ①キーボードで　Fn+Prt Sc（プリントスクリーン）を押して、閉じ
+>> ②スタートからすべてのプログラム→アクセサリー→ペイントを起動
+>> ③ペイントの編集から貼り付け
+>> ④ファイル→印刷
+>>
+>> これは２００３からのPCの場合で、それ以前のPCはFｎキーは押す必要なく
+>> Prt Scのキーのみで印刷が出来ます。
+>> 上手くいかない時は下記へ連絡ください。
+>
+>これは，当方の説明不足でした。m(_ _)m
+>上記は，Windowsの基本機能を使っての印刷ですね。
+>当方のお教えいただきたいのは，スクイークから
+>直接，印刷する方法なのです。
+>
+>ちなみに，現在のところは，当方でも上記の方法，
+>もしくは，③で編集後，これをコピーして，ワー
+>プロソフトに貼り付けて印刷という方法でやって
+>います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+

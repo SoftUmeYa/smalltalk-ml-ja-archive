@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3726] Re: もう少し詳しく教えて下さい。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203726%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiRiJCY%2BLyQ3PlwbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckLzY1JCgkRjI8JDUkJCEjGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003723.html">
+   <LINK REL="Next"  HREF="003730.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3726] Re: もう少し詳しく教えて下さい。</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203726%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiRiJCY%2BLyQ3PlwbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckLzY1JCgkRjI8JDUkJCEjGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3726] Re: もう少し詳しく教えて下さい。">e-itoh ＠ ygu.ac.jp
+       </A><BR>
+    <I>2007年 10月 25日 (木) 21:43:50 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003723.html">[Squeak-ja: 3723] もう少し詳しく教えて下さい。
+</A></li>
+        <LI>次の記事 <A HREF="003730.html">[Squeak-ja: 3730] Re: リファレンスブック日本語版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3726">[ 日付 ]</a>
+              <a href="thread.html#3726">[ スレッド ]</a>
+              <a href="subject.html#3726">[ 件名 ]</a>
+              <a href="author.html#3726">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山梨学院大学の伊藤です。
+
+早坂さん、こんにちは。
+
+&gt;<i>　クリップボードは、どこにあるのでしょうか。
+</I>&gt;<i>/usr/share/icons/Wasp/scalable/stock ディレクトリにある
+</I>&gt;<i>clipboard.svgのことでしょうか。
+</I>&gt;<i>クリアするとは、削除するのですか。
+</I>　違います。きっとそのファイルを消すと別の問題が発生する
+でしょうから消さないでください。
+
+　私も同様のトラブルを経験したのはずっと以前のことなので
+記憶があいまいです。すみませんが一応ご承知おきください。
+
+私の遭遇した現象は以下のようなものです。
+1.とあるアプリケーション(defart)を開発中だった。
+2.いろいろ試している際、イメージを保存後にテスト実行と
+　いったことを繰り返していた。
+3.とある実行でシステムがハングし、直前に保存したイメー
+　ジで起動した。
+4.テキストを打てる場所(たぶんPluggableTextMorh)で文字
+　入力したとたん、Squeakがストンと落ちてしまった。
+5.（たしか）この時はSqueakDebug.logが残らなかった。
+6.再度起動しても、システムを再起動しても同様の現象が起
+　こった。
+
+この辺から記憶があいまいなのですが、確か次のように考え
+ていたように思います。
+
+1.配布イメージからやりなおすのが面倒だったので、何とか
+　落ちないような手立てがないか考えた。
+2.キーボード入力以外なら特に問題が発生しないので、キー
+　ボード入力周辺で何か怪しいことがないか調べた。
+3.キーを入力する際にテキストエリアの選択部分を消すコー
+　ドがあり、その中にクリップボード（ペーストバッファ）
+　関連のコードがあった？（今調べてないので本当かどうか
+　非常に怪しいです）
+4.本来ペーストバッファの内容はＯＳから得るだろうから、
+　再起動でも同様の事態になるのはおかしい。
+5.それでもおかしくなるのは、イメージ側で何らかのデータ
+　を持っているのか？
+6.イメージ側で持っているデータを消せば良いのでは？
+
+イメージ側で適当なテキストを選択してコピーしたら、うま
+くいったような記憶があります。
+
+ただ、今になって別のやり方をとった気もしてきました。
+
+別のやり方とは、debianでおかしくなったイメージをWind
+owsで開いてみて、文字入力やらコピーやら実行し、イメー
+ジ保存したらdebian側で問題が発生しなくなった、という
+ものです。
+
+どちらにせよ、必要なデータをファイルとして保存してか
+ら、新しいイメージで読み込んだ方が早いのではないでし
+ょうか？私の場合はいくらか事情があって上記のようにし
+ましたが早坂さんも何か訳アリでしょうか？
+
+以上、大した手がかりにも原因究明にもならないことをダ
+ラダラ書いてすみません。
+
+少しでも助けになれば幸いです。
+
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003723.html">[Squeak-ja: 3723] もう少し詳しく教えて下さい。
+</A></li>
+	<LI>次の記事 <A HREF="003730.html">[Squeak-ja: 3730] Re: リファレンスブック日本語版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3726">[ 日付 ]</a>
+              <a href="thread.html#3726">[ スレッド ]</a>
+              <a href="subject.html#3726">[ 件名 ]</a>
+              <a href="author.html#3726">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

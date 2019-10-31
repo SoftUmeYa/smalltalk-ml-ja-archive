@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2509] Re: Windows 版 Squeak での UDP パケット受信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202509%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=87irzqm23c.wl%25e-itoh%40ygu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002507.html">
+   <LINK REL="Next"  HREF="002512.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2509] Re: Windows 版 Squeak での UDP パケット受信について</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202509%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=87irzqm23c.wl%25e-itoh%40ygu.ac.jp"
+       TITLE="[Squeak-ja: 2509] Re: Windows 版 Squeak での UDP パケット受信について">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 7月  6日 (水) 00:56:40 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002507.html">[Squeak-ja: 2507] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+        <LI>次の記事 <A HREF="002512.html">[Squeak-ja: 2512] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2509">[ 日付 ]</a>
+              <a href="thread.html#2509">[ スレッド ]</a>
+              <a href="subject.html#2509">[ 件名 ]</a>
+              <a href="author.html#2509">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。レスになってませんが。。。
+
+&gt;<i>receiver := Socket newUDP setPort: 54321.
+</I>&gt;<i>buff := ByteArray new: 100.
+</I>&gt;<i>delay := Delay forMilliseconds: 100.
+</I>&gt;<i>localhost := NetNameResolver localHostAddress.
+</I>&gt;<i>received := nil.
+</I>&gt;<i>Transcript show: 'Receiver start'; cr.
+</I>&gt;<i>received := receiver receiveDataInto: buff.
+</I>&gt;<i>Transcript show: 'received(', received asString, '-', buff, ')'.
+</I>&gt;<i>Transcript show: 'Receiver end'; cr.
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>私のところで（Nihongo7 on Windows XP home SP2）、ワークスペースから'do
+it'すると
+見事にブロックされますが、UDPパケットを受信すると元に戻ります。
+
+これは至極まっとうな気もするのですが。
+セマフォでwaitメッセージを受けたプロセスは休眠してしまうので、UIも停止して
+フリーズしたかのようになると思うのですが。。。。
+
+ちなみに伊藤様のWindows2000はサービスパック２以降でしょうか？
+それ以前の版ではUDP受信の不具合があるようです。。。
+<A HREF="http://support.microsoft.com/kb/263823/JA/">http://support.microsoft.com/kb/263823/JA/</A>
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.9/39 - Release Date: 2005/07/04
+
+__________________________________
+Save the earth
+<A HREF="http://pr.mail.yahoo.co.jp/ondanka/">http://pr.mail.yahoo.co.jp/ondanka/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002507.html">[Squeak-ja: 2507] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+	<LI>次の記事 <A HREF="002512.html">[Squeak-ja: 2512] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2509">[ 日付 ]</a>
+              <a href="thread.html#2509">[ スレッド ]</a>
+              <a href="subject.html#2509">[ 件名 ]</a>
+              <a href="author.html#2509">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

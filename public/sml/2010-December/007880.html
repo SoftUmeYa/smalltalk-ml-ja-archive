@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7880] Re: 連想計算というリフレクティブな手法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207880%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3C4306F7126D35DA4B8A115EA505FA06860AC0ADAA%40JPESWA304.apo.epson.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007879.html">
+   <LINK REL="Next"  HREF="007883.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7880] Re: 連想計算というリフレクティブな手法</H1>
+    <B>Narita Takaoki</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207880%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3C4306F7126D35DA4B8A115EA505FA06860AC0ADAA%40JPESWA304.apo.epson.net%3E"
+       TITLE="[SML 7880] Re: 連想計算というリフレクティブな手法">Narita.Takaoki ＠ exc.epson.co.jp
+       </A><BR>
+    <I>2010年 12月 16日 (木) 13:59:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007879.html">[SML 7879] Re: 連想計算というリフレクティブな手法
+</A></li>
+        <LI>次の記事 <A HREF="007883.html">[SML 7883] 継続(continuation)というスタイル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7880">[ 日付 ]</a>
+              <a href="thread.html#7880">[ スレッド ]</a>
+              <a href="subject.html#7880">[ 件名 ]</a>
+              <a href="author.html#7880">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>成田です。
+
+&gt;<i> たとえば、Squeak で組み込みのなんちゃって Matrix において
+</I>&gt;<i> 
+</I>&gt;<i> Matrix &gt;&gt; raisedTo: n
+</I>&gt;<i>   | m |
+</I>&gt;<i>   n = 1 ifTrue: [^self].
+</I>&gt;<i>   n even ifTrue: [^(m := self raisedTo: n/2) +* m].
+</I>&gt;<i>   ^(self raisedTo: n - 1) +* self
+</I>&gt;<i> 
+</I>&gt;<i> を定義しておけば・・・
+</I>
+で、この際に Matrix だけじゃなくて、Integer とかでも同じ構造ですよね？
+他にも同様にあるだろうし。
+
+となると、一様にひとくくりに逐次平方を定義できないかなぁ・・・というので、
+Smalltalk 的にエレガントにやるにはどこで・・・という風になって、私は思
+考停止しました。(^^;
+
+Number など Magnifier の系統だけじゃなくて、Matrix みたいなものも含
+まれるので、代数構造をクラス構造に持ち込まないと一括扱いは難しい
+くなる？けれど、そもそも代数構造を持ち込むのも大仕事で破綻無くという
+のは至難っぽいし・・・それでどれだけありがたいのか良く分からないし。
+
+;; Smalltalk の何かと直行してそうな気もするし・・・
+;; そもそもそんな風にすべきではないという説も出てくるかもしれない。
+
+;; 遺伝的プログラミングとかはしやすくなりそう。
+;; 関数合成によるアルゴリズム発明もしやすくなる？
+
+;;;; みんな妄想の域だけれど。すなわちスーダラな予想。;-)
+
+--
+Narita Takaoki @ SETG, SEIKO EPSON Corp.
+Voice: 722-5718 (interphone)
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007879.html">[SML 7879] Re: 連想計算というリフレクティブな手法
+</A></li>
+	<LI>次の記事 <A HREF="007883.html">[SML 7883] 継続(continuation)というスタイル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7880">[ 日付 ]</a>
+              <a href="thread.html#7880">[ スレッド ]</a>
+              <a href="subject.html#7880">[ 件名 ]</a>
+              <a href="author.html#7880">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

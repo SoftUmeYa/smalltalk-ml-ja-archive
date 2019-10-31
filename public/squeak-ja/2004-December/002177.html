@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2177] Re: Squeak Nihongo 6.1 の  Initialize
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202177%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhayBOaWhvbmdvIDYu%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FMSAbJEIkThsoQiAgSW5pdGlhbGl6ZQ%3D%3D%3F%3D&In-Reply-To=287073018F1FCC48B871980C94CB156501FEF857%40tkoexc02.asiapacific.cpqcorp.net">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002176.html">
+   <LINK REL="Next"  HREF="002178.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2177] Re: Squeak Nihongo 6.1 の  Initialize</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202177%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhayBOaWhvbmdvIDYu%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FMSAbJEIkThsoQiAgSW5pdGlhbGl6ZQ%3D%3D%3F%3D&In-Reply-To=287073018F1FCC48B871980C94CB156501FEF857%40tkoexc02.asiapacific.cpqcorp.net"
+       TITLE="[Squeak-ja: 2177] Re: Squeak Nihongo 6.1 の  Initialize">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2004年 12月 25日 (土) 12:50:37 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002176.html">[Squeak-ja: 2176] Squeak Nihongo 6.1 のInitialize
+</A></li>
+        <LI>次の記事 <A HREF="002178.html">[Squeak-ja: 2178] Re: Squeak Nihongo 6.1 のInitialize
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2177">[ 日付 ]</a>
+              <a href="thread.html#2177">[ スレッド ]</a>
+              <a href="subject.html#2177">[ 件名 ]</a>
+              <a href="author.html#2177">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+こんにちは。
+
+On Sat, 25 Dec 2004 10:56:50 +0900
+&quot;Kondo, Fumito&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">fumito.kondo ＠ hp.com</A>&gt; wrote:
+&gt;<i>Squeak Nihongo 6.1を使っています。
+</I>&gt;<i>
+</I>&gt;<i>梅澤さんの「自由自在Squeakプログラミング」を教科書にしてプログラミングの勉強中ですが、新規のインスタンスがNewにより作成されるとインスタンスメソッドinitializeが自動的に起動されるというのを試していますが、うまく起動がかかりません。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>英語版のSqueakでは、同じコードで問題なく動くのですが、日本語版に問題があるのでしょうか？
+</I>
+この挙動はSqueakNihongo6.1がベースにしている英語版のバージョン(3.6)による
+ものです。試された英語版は3.7以降ではないでしょうか。
+
+# 個人的には暗黙にinitializeを呼ばない(陽に呼ぶ必要がある)という3.6以前の
+# 振る舞いも嫌いではありません。
+
+梅澤さんの本は、Nihongo6.1をベースにそれ以降の英語版の機能などを取り込ん
+だ専用のイメージを使うことを前提に書かれています。これは以下からダウンロー
+ドできます。
+
+<A HREF="http://swikis.ddo.jp/squeak/1">http://swikis.ddo.jp/squeak/1</A>
+
+Simple Change Sorterを使って、Nihongo6.1と梅澤さんのイメージを比較すると
+追加変更された部分がわかります。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee.abe ＠ nifty.ne.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002176.html">[Squeak-ja: 2176] Squeak Nihongo 6.1 のInitialize
+</A></li>
+	<LI>次の記事 <A HREF="002178.html">[Squeak-ja: 2178] Re: Squeak Nihongo 6.1 のInitialize
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2177">[ 日付 ]</a>
+              <a href="thread.html#2177">[ スレッド ]</a>
+              <a href="subject.html#2177">[ 件名 ]</a>
+              <a href="author.html#2177">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

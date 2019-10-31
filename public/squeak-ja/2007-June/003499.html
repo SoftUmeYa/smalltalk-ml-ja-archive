@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3499] Re: はじめまして。外部アプリケーション上のカーソル位置に squeak のテキスト変数を渡すにはどうすれば
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203499%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiRPJDgkYSReJDcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYhIzMwSXQlIiVXJWolMSE8JTclZyVzPmUkTiUrITwlPSVrGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMExDViRLGyhCIHNxdWVhayAbJEIkTiVGJS0lOSVISlE/dCRyGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRU8kOSRLJE8kSSQmJDkkbCRQGyhC%3F%3D&In-Reply-To=001101c7a5c2%2434043d40%24040ba8c0%40mickey">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003498.html">
+   <LINK REL="Next"  HREF="003503.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3499] Re: はじめまして。外部アプリケーション上のカーソル位置に squeak のテキスト変数を渡すにはどうすれば</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203499%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiRPJDgkYSReJDcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYhIzMwSXQlIiVXJWolMSE8JTclZyVzPmUkTiUrITwlPSVrGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMExDViRLGyhCIHNxdWVhayAbJEIkTiVGJS0lOSVISlE/dCRyGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRU8kOSRLJE8kSSQmJDkkbCRQGyhC%3F%3D&In-Reply-To=001101c7a5c2%2434043d40%24040ba8c0%40mickey"
+       TITLE="[Squeak-ja: 3499] Re: はじめまして。外部アプリケーション上のカーソル位置に squeak のテキスト変数を渡すにはどうすれば">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2007年 6月  3日 (日) 22:22:37 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003498.html">[Squeak-ja: 3498] はじめまして。外部アプリケーション上のカーソル位置にsqueakのテキスト変数を渡すにはどうすれば
+</A></li>
+        <LI>次の記事 <A HREF="003503.html">[Squeak-ja: 3503] Re: はじめまして。外部アプリケーション上のカーソル位置に squeak のテキスト変数を渡すにはどうすれば
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3499">[ 日付 ]</a>
+              <a href="thread.html#3499">[ スレッド ]</a>
+              <a href="subject.html#3499">[ 件名 ]</a>
+              <a href="author.html#3499">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+はじめまして。
+
+On Sun, 3 Jun 2007 18:33:04 +0900
+&quot;Habuka Toshihito&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">habuka ＠ xp.wind.jp</A>&gt; wrote:
+&gt;<i>今、子供のために、ひらがな練習ようのパレットを作っています。
+</I>
+面白そうですね。よろしければぜひSuperSwiki2などに公開してみてください。
+
+<A HREF="http://squeakland.jp/super2/">http://squeakland.jp/super2/</A>
+
+&gt;<i>文字パレットで入力した文字列を、外部アプリケーションの
+</I>&gt;<i>たとえば、インターネットブラウザの検索窓に置いたカーソル位置に
+</I>&gt;<i>入力するにはどうしたらよいかと今悩んでいます。
+</I>
+いくつか方法があると思います。いずれの場合もEtoysだけでは書けず、
+Smalltalkを使う必要があります。また、FileStreamはファイルの読み書きをする
+ものなので、今回はあまり関係ないかもしれません。
+
+1. Win32Shellを使う(Windowsの場合。開発者版が必要)
+2. HTTPClientを使う(Webブラウザの中でのみ実行可能)
+3. Scamperを使う(機能が貧弱。日本語化が必要)
+
+1の場合、通常のスクイークではWin32ShellをはじめとするFFI(OSの機能を呼び出
+す仕組み)が削除されているため、開発者版が必要になります。
+
+<A HREF="http://squeakland.jp/developer/">http://squeakland.jp/developer/</A>
+
+開発者版をご自分で使う分には問題ありませんが、一般に作品の配布する際に問
+題になるかもしれません。式はこんな感じです。
+
+Win32Shell new shellOpen: ('<A HREF="http://www.google.co.jp/search?hl=ja&amp;q=&#12473;&#12463;&#12452;&#12540;">http://www.google.co.jp/search?hl=ja&amp;q=スクイー</A>
+ク') convertToSystemString
+
+Etoysと組み合わせるとこんな感じになります。ダウンロードしてから開発者版で
+開いてください。
+
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679">http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679</A>
+
+2は最近山宮さんが発見した方法で、通常のスクイークでも使えますが、スクイー
+クをアプリケーションとして実行している場合は使うことができず、Webブラウザ
+の中でプラグインとして実行しているときにのみ使うことができます。式はこん
+な感じです。
+
+HTTPClient requestURL: ('<A HREF="http://www.google.co.jp/search?hl=ja&amp;q=&#12473;&#12463;&#12452;&#12540;">http://www.google.co.jp/search?hl=ja&amp;q=スクイー</A>
+ク') convertToSystemString target: '_blank'
+
+Etoysと組み合わせるとこんな感じになります。「起動」をクリックしてブラウザ
+の中で開いてください。
+
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509">http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509</A>
+
+3はスクイークに組み込まれているWebブラウザのScamperを使う方法です。
+Scamperはそれ自体がSmalltalkで書かれているので、使い方によってはなかなか
+面白いのですが、現在のWebブラウザと比べると極めて貧弱です。
+よって、詳細は省略しますが、日本語化については以下をご覧ください。
+
+<A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2007-April/003477.html">http://www.smalltalk.jp/pipermail/squeak-ja/2007-April/003477.html</A>
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003498.html">[Squeak-ja: 3498] はじめまして。外部アプリケーション上のカーソル位置にsqueakのテキスト変数を渡すにはどうすれば
+</A></li>
+	<LI>次の記事 <A HREF="003503.html">[Squeak-ja: 3503] Re: はじめまして。外部アプリケーション上のカーソル位置に squeak のテキスト変数を渡すにはどうすれば
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3499">[ 日付 ]</a>
+              <a href="thread.html#3499">[ スレッド ]</a>
+              <a href="subject.html#3499">[ 件名 ]</a>
+              <a href="author.html#3499">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

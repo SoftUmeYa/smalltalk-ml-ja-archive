@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4113] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204113%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=495BA901.3040404%40mx2.ttcn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004112.html">
+   <LINK REL="Next"  HREF="004114.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4113] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204113%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=495BA901.3040404%40mx2.ttcn.ne.jp"
+       TITLE="[Squeak-ja: 4113] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2009年 1月  1日 (木) 11:51:59 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004112.html">[Squeak-ja: 4112] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+        <LI>次の記事 <A HREF="004114.html">[Squeak-ja: 4114] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4113">[ 日付 ]</a>
+              <a href="thread.html#4113">[ スレッド ]</a>
+              <a href="subject.html#4113">[ 件名 ]</a>
+              <a href="author.html#4113">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>宝迫さん、皆様、旧年中はお世話になりました。本年もよろしくお願いします。
+
+お手間をお掛けしてすみません。私もUbuntu 8.10上のVirtualBoxを使って、KNOPPIX Edu7でご指摘の現象を確認しました。
+これはロケールがUTF-8でなく、EUC-JPであることが原因でした。ロケールの変更方法は色々あると思いますが、どうするのがベストなのか分からないので、識者の方にお任せしたいと思います。Squeakと同様にScratchにEUC-JPのエンコーダ、デコーダを用意するのも手ですが、ScratchはUTF一本で行っているので、あんまり複雑にしたくない気もします。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2009/01/01 2:16 yhousako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt;:
+&gt;<i> 宝迫＠新年になってしまいましたです．
+</I>&gt;<i> （喪中につき、年頭のご挨拶は失礼させて頂いております）
+</I>&gt;<i>
+</I>&gt;<i> 文字列の長さについて確認しました．いろいろ調べているうちに、年を越してし
+</I>&gt;<i> まいましたが、結論から言うと1文字でもダメです．
+</I>&gt;<i>
+</I>&gt;<i> 【実験したこと】
+</I>&gt;<i> OSP基本パッケージv2でScratchSynthを起動し、保存（名前を付けて保存）をク
+</I>&gt;<i> リックして保存の窓を開きました．その上でファイル名を入力する欄を一度ク
+</I>&gt;<i> リックし、「a」キーを押して「あ」と出てエンターキーで確定しただけでも前
+</I>&gt;<i> 回同様のエラーメッセージが表示されます．KNOPPIX Edu 7（5.1.1ベース）でも
+</I>&gt;<i> 同じでした．
+</I>&gt;<i>
+</I>&gt;<i> 同じことをKNOPPIX5.3.1やUbuntu8.10でやりましたが、こちらは問題ありません
+</I>&gt;<i> でした．
+</I>&gt;<i>
+</I>&gt;<i> 機械を換えて、同じ実験をしてみましたが、結果も同じでした．KNOPPIX5.1.1と
+</I>&gt;<i> 5.3.1の間には、これ以外にも様々な違いがあって、悩まされております．
+</I>&gt;<i>
+</I>&gt;<i> Kazuhiro ABE さんは書きました:
+</I>&gt;&gt;<i> こんにちは、阿部です。
+</I>&gt;&gt;<i> 確認ありがとうございます。
+</I>&gt;&gt;<i> OSP基本パッケージv2の問題ですが、確定前の文字列を11文字以上入力していないでしょうか。この場合、私のUbuntu
+</I>&gt;&gt;<i> 8.10でも同じエラーが出ることを確認しています。
+</I>&gt;&gt;<i> これは3.7-7JPatchedの既知のバグです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html">http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html</A>
+</I>&gt;&gt;<i> (イメージが違うのでエラーは違いますが原因は同じ)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> とりあえずの対処法としては文節を短く区切って確定してもらうことになると思います。
+</I>&gt;&gt;<i> このバグを修正したバージョンを廣島さんが作ってくれているので、大島さんが作ってくれたパッチと合わせてScratchにも適用できないか調べてみます。
+</I>&gt;&gt;<i> 大島さん、4108で書かれていた「新しいVM」というのは具体的にはどれを指すのでしょうか。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>  //abee
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------------
+</I>&gt;<i> 寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+</I>&gt;<i> みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+</I>&gt;<i> 指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+</I>&gt;<i> 全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+</I>&gt;<i> つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004112.html">[Squeak-ja: 4112] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+	<LI>次の記事 <A HREF="004114.html">[Squeak-ja: 4114] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4113">[ 日付 ]</a>
+              <a href="thread.html#4113">[ スレッド ]</a>
+              <a href="subject.html#4113">[ 件名 ]</a>
+              <a href="author.html#4113">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2486] Re: [N7]HttpUrlの不具合
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202486%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFtON11IdHRwVXJs%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5JVDZxOWcbKEI%3D%3F%3D&In-Reply-To=42AD75FD.5020403%40m2.pbc.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002473.html">
+   <LINK REL="Next"  HREF="002470.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2486] Re: [N7]HttpUrlの不具合</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202486%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFtON11IdHRwVXJs%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5JVDZxOWcbKEI%3D%3F%3D&In-Reply-To=42AD75FD.5020403%40m2.pbc.ne.jp"
+       TITLE="[Squeak-ja: 2486] Re: [N7]HttpUrlの不具合">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 6月 25日 (土) 01:09:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002473.html">[Squeak-ja: 2473] Re: [N7]HttpUrlの不具合
+</A></li>
+        <LI>次の記事 <A HREF="002470.html">[Squeak-ja: 2470] viewer window
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2486">[ 日付 ]</a>
+              <a href="thread.html#2486">[ スレッド ]</a>
+              <a href="subject.html#2486">[ 件名 ]</a>
+              <a href="author.html#2486">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>HttpUrlクラス利用時の注意点（続編）
+
+SwikiのBasic認証がかかっているページに大きなファイルをUpしようと
+HttpUrl&gt;&gt;postMultipartFormArgs:などを使う場合に下記の理由から
+例外ConnectionTimedOutが発生して中断してしまいます。
+
+1)Basic認証がかかっていないとみなしHTTPSocketで送信を試みます。
+2)認証がかかっているため、上記送信のSocketを相手から切断されて、
+OldSocket&gt;&gt;&gt;sendData:でタイムアウトの例外（実際はタイムアウトでは
+ないのですが…）が発生します。小さなデータでは送信が切断前に完了
+するため問題ありません。
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.0/27 - Release Date: 2005/06/23
+
+__________________________________
+Save the earth
+<A HREF="http://pr.mail.yahoo.co.jp/ondanka/">http://pr.mail.yahoo.co.jp/ondanka/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002473.html">[Squeak-ja: 2473] Re: [N7]HttpUrlの不具合
+</A></li>
+	<LI>次の記事 <A HREF="002470.html">[Squeak-ja: 2470] viewer window
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2486">[ 日付 ]</a>
+              <a href="thread.html#2486">[ スレッド ]</a>
+              <a href="subject.html#2486">[ 件名 ]</a>
+              <a href="author.html#2486">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

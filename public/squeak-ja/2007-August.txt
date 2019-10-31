@@ -1,0 +1,927 @@
+From mutoh ＠ openedu.org  Mon Aug  6 02:42:06 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3540] もえすく(was Re: 販売物へのSqueak
+In-Reply-To: <20070722070159.1216.OFG@kwansei.ac.jp>
+References: <20070722070159.1216.OFG@kwansei.ac.jp>
+Message-ID: <7ea1a768e2876bd13807d9ed04674d0b@openedu.org>
+
+むとう＠おうちです。
+
+久しぶりに長期で死んでました(;-;)
+
+いつの間にか、体験版も0.13になっていたんですね。
+Mac OS Xで、娘たち(8歳と4歳)に試してみましたが、「???」な感じでした(^-^;)
+
+SqueakFest'07 での先行デビューも好評(?)だったということで、さい先いいですね!!
+
+On 2007/07/22, at 7:19, 大藤 泰生 wrote:
+>> 8/17にお邪魔できるかどうかまだ分からないのですが、なんとか行けるように努力します(実はコミケに行ったことが無いので恐れています)。
+> 昨日、コミックマーケット72のカタログが発売されたため早速確認したところ、
+> 「たのしい正規表現」「まったりBSD」「もう少しだけPC-88」
+> 「ネットワークバカ一代」「らぶりぃ☆OS/2」……などの近所に配置されて
+> いましたので、ちゃんとコンピュータ・プログラミング関連のジャンルとして
+> 扱われたようです。やはりSqueakネタで出しているのは私だけでした。
+
+ああ、行きたい…
+# 特に2番目のやつが…
+
+> 販売用のCDは100枚だけ持ち込む予定ですが、まず売り切れることはないはず
+> ですので、ゆっくりお越し下さい。例年、11:00以降なら並ばずに入場できます。
+
+通信販売とかしないんですか;-)
+# 実は、同人誌とかやってたことあり。夏コミは15歳の時に一度だけ…
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org       URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・自転車操業中             http://qml.610T.org/cycling/
+
+
+From koubo2006 ＠ yengawa.jpn.org  Wed Aug  8 22:53:29 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3541] OLPC-Etoys
+Message-ID: <20070808212314.ABA7.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+先週あったSqueakFest'07へ日本から参加した方々も無事に帰国されているよう
+ですね。
+
+今年は行けなかったのでブログで読んでます。
+http://imamp.colum.edu/eceim/squeakfest07/blog/
+http://useit-squeakfest07.blogspot.com/
+
+この前にも話題が出た
+(http://www.smalltalk.jp/pipermail/squeak-ja/2007-July/003539.html )
+OLPCのEtoysの紹介が大島さんからあったようですね。
+
+http://imamp.colum.edu/eceim/squeakfest07/blog/?p=4
+の資料を見るとけっこう色々と改良したり整理したりしてるようなので、やっぱ
+りロードマップが気になります。
+MacやWindowsでも、いずれはこのEtoysを使うようになるのでしょうか?
+
+あと、OLPC-Etoysで教育コンテンツを提供するにはどうしたらいいか?という問
+い合わせが来てます。そのような話はどこで誰とすればいいのでしょうか?
+
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From yoshiki ＠ squeakland.org  Fri Aug 10 05:39:06 2007
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3542] Re: OLPC-Etoys
+In-Reply-To: <20070808212314.ABA7.KOUBO2006@yengawa.jpn.org>
+References: <20070808212314.ABA7.KOUBO2006@yengawa.jpn.org>
+Message-ID: <uhcn8sas5.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> あと、OLPC-Etoysで教育コンテンツを提供するにはどうしたらいいか?という問
+> い合わせが来てます。そのような話はどこで誰とすればいいのでしょうか?
+
+  OLPC Etoysチームも、皆で共有できるようなサーバーを立てるべきだとは思っ
+ています。それまでは、どこか別なサーバーにまずはアップロードしてもらい、
+それをアナウンスしてもらうのが良いかなとは思います。
+
+-- Yoshiki
+
+
+From abee ＠ squeakland.jp  Sat Aug 11 09:29:27 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3543] Re: OLPC-Etoys
+In-Reply-To: <20070808212314.ABA7.KOUBO2006@yengawa.jpn.org>
+References: <20070808212314.ABA7.KOUBO2006@yengawa.jpn.org>
+Message-ID: <46BD02E74.1191ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 08 Aug 2007 22:53:29 +0900
+Koji Yokokawa <koubo2006@yengawa.jpn.org> wrote:
+>OLPCのEtoysの紹介が大島さんからあったようですね。
+>
+>http://imamp.colum.edu/eceim/squeakfest07/blog/?p=4
+>の資料を見るとけっこう色々と改良したり整理したりしてるようなので、やっぱ
+>りロードマップが気になります。
+>MacやWindowsでも、いずれはこのEtoysを使うようになるのでしょうか?
+
+次のSqueakland版はOLPC Etoysがベースになるという理解で良いと思います。た
+だし、OLPC版が持っている機能(カメラ、サウンドなど)が必ずしもすべてのプラッ
+トホームで実現するわけではないと思われます。
+予定は未定的な面もあるので、Etoys MLに参加されるのが良いかもしれません。
+たとえば、最近では以下の山宮さんの発言もありました。
+
+http://lists.laptop.org/pipermail/etoys/2007-August/000829.html
+
+また、日本語化にも関係する話として、翻訳を手伝ってくれる人を募集中です。
+
+http://lists.laptop.org/pipermail/etoys/2007-July/000765.html
+
+あと、見栄えがよく、フリーの日本語フォントも必要だろうと思っています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Sat Aug 11 13:02:56 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3544] Re: Squeakland 2005J2 を公開しました。
+In-Reply-To: <46A9C74C2F7.F4EDABEE@smtp.nifty.com>
+References: <46A8DDDE.9070601@metatoys.org>	<6544a1da0707262356n60b59b22ra85affd042cbe3c6@mail.gmail.com>
+	<46A9C74C2F7.F4EDABEE@smtp.nifty.com>
+Message-ID: <46BD34F0.1030300@metatoys.org>
+
+山宮です
+
+Kazuhiro ABE wrote:
+> On Fri, 27 Jul 2007 15:56:03 +0900
+>
+> "Toshiyuki Takeda" <takeda.toshiyuki@gmail.com> wrote:
+>> Etoys 2.1の開発に関わっている方に今後のロードマップや、新版の特徴などを
+>> 示していただけると導入の指針になると思うのですがいかがでしょう。
+> 
+> ここはひとつViewpointsの人にお願いできればと思います。
+
+特徴は、ぱっと出るのは次の物です。
+
+- 毛玉2
+- 世界聴診器
+- 林さんの多角形の点を操作できるタイル
+- 見た目を OLPC チックにしてある。
+
+ロードマップは、正式な事は分かりません。私個人としては今年中に普通のパ
+ソコン版のフォントやハロなどの見た目や VM を纏めて、春までにリリースし
+たいです。開発者はもともと Windows や Mac で開発しているので今すぐにで
+も適当に安定したバージョン(OLPC 2.0 の最後など)を選んでワークショップ
+に使えます。
+
+ちゃんとした話は、もしかして大島さんが書いてくださるのでは無いかと思い
+ます。
+
+
+From abee ＠ squeakland.jp  Sun Aug 12 12:25:00 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3545] Squeakland.jp が止まっていました
+Message-ID: <46BE7D8C3A3.C868ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+8/12 12:10まで、http://squeakland.jp が停止していました。現在は復旧してい
+ます。原因や何時から止まっていたかは今のところ不明です。
+
+ご迷惑をお掛けして申し訳ありませんでした。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mutoh ＠ openedu.org  Mon Aug 13 17:16:46 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3546] KOF2007
+Message-ID: <c42761e41d1de19a0f9f81bc32ab1394@openedu.org>
+
+むとう＠おうちです。
+
+先日、とあるオブジェクト指向言語な勉強会に参加したんですが、そこで今年のKOF2007の日程がわかったので、FYIということで。
+
+どうも、2007/11/09,10に予定されているらしいです。
+
+今年も出すかどうかなどは、もう少し近づいてきてから考えれば良いかと思いますが、今からスケジュールをあけれる人は是非あけてください;-)
+何をやりたいかなどのアイデアも練っておいてくださいね。
+
+詳細はそのうち安田先生が教えてくださるかな?
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From koubo2006 ＠ yengawa.jpn.org  Thu Aug 16 20:22:42 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3547] Re: OLPC-Etoys
+In-Reply-To: <uhcn8sas5.wl%yoshiki@squeakland.org>
+References: <20070808212314.ABA7.KOUBO2006@yengawa.jpn.org>
+	<uhcn8sas5.wl%yoshiki@squeakland.org>
+Message-ID: <20070816201624.862E.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+了解しました。
+適当なところにアップロードしたら、とりあえずこのMLにも知らせておくと有志
+からフィードバックが得られるかもしれませんね。
+
+
+On Thu, 09 Aug 2007 16:39:06 -0400
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+
+>   大島です。
+> 
+> > あと、OLPC-Etoysで教育コンテンツを提供するにはどうしたらいいか?という問
+> > い合わせが来てます。そのような話はどこで誰とすればいいのでしょうか?
+> 
+>   OLPC Etoysチームも、皆で共有できるようなサーバーを立てるべきだとは思っ
+> ています。それまでは、どこか別なサーバーにまずはアップロードしてもらい、
+> それをアナウンスしてもらうのが良いかなとは思います。
+> 
+> -- Yoshiki
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From koubo2006 ＠ yengawa.jpn.org  Thu Aug 16 20:44:45 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3548] Re: OLPC-Etoys
+In-Reply-To: <46BD02E74.1191ABEE@smtp.nifty.com>
+References: <20070808212314.ABA7.KOUBO2006@yengawa.jpn.org>
+	<46BD02E74.1191ABEE@smtp.nifty.com>
+Message-ID: <20070816202102.8631.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+
+> 次のSqueakland版はOLPC Etoysがベースになるという理解で良いと思います。た
+> だし、OLPC版が持っている機能(カメラ、サウンドなど)が必ずしもすべてのプラッ
+> トホームで実現するわけではないと思われます。
+
+了解しました。
+OLPC Etoysの成果を受けてEtoysが使いやすくなることを期待してます。
+
+> 予定は未定的な面もあるので、Etoys MLに参加されるのが良いかもしれません。
+
+そんなメーリングリストがあるのを知りませんでした。
+http://lists.laptop.org/listinfo/etoys
+「Etoys MLについて
+OLPCに実装されるEtoys環境の仕様を話し合います。
+専門家以外の質問やコメント大歓迎!」
+ということなので、OLPC-Etoysのコンテンツ作成に興味があるひとも参加して、
+コンテンツを作ったらこちらにアナウンスするとよさそうですね。
+
+
+On Sat, 11 Aug 2007 09:29:27 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 阿部@新百合です。
+> 
+> On Wed, 08 Aug 2007 22:53:29 +0900
+> Koji Yokokawa <koubo2006@yengawa.jpn.org> wrote:
+> >OLPCのEtoysの紹介が大島さんからあったようですね。
+> >
+> >http://imamp.colum.edu/eceim/squeakfest07/blog/?p=4
+> >の資料を見るとけっこう色々と改良したり整理したりしてるようなので、やっぱ
+> >りロードマップが気になります。
+> >MacやWindowsでも、いずれはこのEtoysを使うようになるのでしょうか?
+> 
+> 次のSqueakland版はOLPC Etoysがベースになるという理解で良いと思います。た
+> だし、OLPC版が持っている機能(カメラ、サウンドなど)が必ずしもすべてのプラッ
+> トホームで実現するわけではないと思われます。
+> 予定は未定的な面もあるので、Etoys MLに参加されるのが良いかもしれません。
+> たとえば、最近では以下の山宮さんの発言もありました。
+> 
+> http://lists.laptop.org/pipermail/etoys/2007-August/000829.html
+> 
+> また、日本語化にも関係する話として、翻訳を手伝ってくれる人を募集中です。
+> 
+> http://lists.laptop.org/pipermail/etoys/2007-July/000765.html
+> 
+> あと、見栄えがよく、フリーの日本語フォントも必要だろうと思っています。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From abee ＠ squeakland.jp  Sun Aug 19 12:57:33 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3549] Re: 販売物への Squeak 添付について
+In-Reply-To: <20070722143332.C595.FLORIAN@seagreen.ocn.ne.jp>
+References: <20070722070159.1216.OFG@kwansei.ac.jp>
+	<20070722143332.C595.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <46C7BFAD123.E52BABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+コミケに行ってきました。
+聞きしに勝る人の多さと熱気に圧倒されました。
+勝手にOLPC XOを持ち込んでEtoysを動かしていたのですが、多少販売に貢献でき
+たかもしれません。以下、blogのまとめです。
+
+http://d.hatena.ne.jp/abee2/20070817/1187356916
+http://taka.no32.tk/diary/20070817.html#p01
+http://koike-infodesign-lab.cocolog-nifty.com/blog/2007/08/72_5c88.html
+http://imo-choco.cocolog-nifty.com/chocotto/2007/08/post_1fda.html
+http://d.hatena.ne.jp/suu-g/20070817/1187332598
+http://dps.kujin.net/?eid=284817
+
+大藤さん、皆さん、お疲れ様でした。
+
+On Sun, 22 Jul 2007 14:46:09 +0900
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+>大藤> 販売用のCDは100枚だけ持ち込む予定ですが、まず売り切れることはないはず
+>大藤> ですので、ゆっくりお越し下さい。例年、11:00以降なら並ばずに入場できます。
+>　当時の感触から行くと、100枚では少ないんじゃないかと思います。
+
+200枚用意されて80枚ほど売れたとのことです。アランさんとのツーショット写真
+も掲示されていたのですが。梅澤さん秘蔵の直筆色紙も展示すればよかったかも
+しれないですね。
+荷物や電源の問題があるとのことでしたが、実働デモがあれば違ったかもしれま
+せん。
+
+On Mon, 6 Aug 2007 02:42:06 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>SqueakFest'07 での先行デビューも好評(?)だったということで、さい先いいですね!!
+
+アランさんは笑って受け取ってくれましたが、ちゃんと説明できなかったので、
+たぶんよく分かっていないと思います。
+また、BOFとはいえ、アメリカの典型的な女の先生たちの前でプレゼンするのは少
+々勇気が要りました。当日の資料を以下に置きましたのでよろしければご覧くだ
+さい。
+
+http://squeakland.jp/abee/tmp/MoesukuSqF07BOF.001.zip
+
+>通信販売とかしないんですか;-)
+
+大藤さんにお願いして、半ば強引に話を進めています。たぶん近日中にアナウン
+スできるような気がします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sun Aug 19 13:43:26 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:49 2007
+Subject: [Squeak-ja: 3550] Re: SqueakFest '07 のご案内
+In-Reply-To: <46564254320.7DCDABEE@smtp.nifty.com>
+References: <4630512D11D.2870ABEE@smtp.nifty.com>
+	<46564254320.7DCDABEE@smtp.nifty.com>
+Message-ID: <46C7CA6E20F.E52CABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+ご報告が遅くなりましたが、先にご案内していたSqueakFest '07は8/1-3の会期を
+無事終了しました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-May/003496.html
+
+日本人参加者は11名と国際色豊かな全体から見ても相当の比率を占めていました。
+そのほとんどが何らかの形で発表を行い、世界的にも存在感を示せたと思います。
+
+中でも、杉並区和田小学校前校長の横山先生のご発表は永年の経験と実践による
+裏づけを反映したもので、意味のある小さな課題を設定することで、小学校低学
+年からでもスクイークを用いた学習が可能なことを示されました。これは、ただ
+教条的にdrive a carをなぞるワークショップや授業に対する前向きな批判でもあ
+ります。
+また、デジハリの中村さんのワークショップ事例紹介、都立高校講師の市川さん
+の授業での取り組みとリファレンスの作成も大変興味深いものでした。あのリファ
+レンスはいきなりできたわけではなく、膨大な例題を作るに当たって、よりよい
+授業のために何度も試行錯誤されていたことに感銘を受けました。
+梅澤さんのSuperSwiki2のハンズオンは作品公開と共有の手段として、今後広く使
+われる可能性があると思われます。SuperSwikiに比べて、Scratchのサイトがあれ
+ほどの参加者と作品でにぎわっている理由はたぶん優れた環境のせいもあるでし
+ょう。 SuperSwiki2はそのための環境になりえます。
+高田先生と大東和さんのスマートカードを使った作品交換の研究は、抽象的なデー
+タとしての作品ファイルを実際に手に持って受け渡せるカードにしたことで、子
+供たちが実感をもって扱えるようにするというものです。形式的操作が可能にな
+るのは小学校高学年からとも言いますので、これは面白い試みだと思います。
+大島さんのOLPC Etoysの概要紹介は、初めての人でも全体像が把握できるものに
+なっていたと思います。
+また、BOFでは、山宮さんのGetTextによるEtoysの翻訳の話、林さんの多角形モー
+フの話、市川さんのキャラを生かした別のチュートリアル、私のもえすくの紹介
+などが行われ、それぞれ受けを取っていたように思います。
+
+これらの発表の様子は以下のblogなどをご覧ください。
+
+http://imamp.colum.edu/eceim/squeakfest07/blog/
+http://useit-squeakfest07.blogspot.com/
+http://d.hatena.ne.jp/squeaker/20070801
+http://d.hatena.ne.jp/squeaker/20070802
+http://d.hatena.ne.jp/propella/20070805/p1
+
+参加者の皆さん、お疲れ様でした。また来年のSqueakFestでお会いしましょう。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From ofg ＠ kwansei.ac.jp  Wed Aug 22 06:30:51 2007
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3551] コミックマーケット72「もえすく」参加報告
+In-Reply-To: <679aft$29jtmu@mailgw1.kwansei.ac.jp>
+References: <679aft$29jtmu@mailgw1.kwansei.ac.jp>
+Message-ID: <20070822060051.F265.OFG@kwansei.ac.jp>
+
+大藤です。
+初参加＆無名なので本当に売れるか不安な「もえすく」でしたが結果的には
+64枚売れました。200枚作っていたので在庫がかなり残りましたが、売り切れ
+てしまうよりはましなので良かったです。
+売れ残りは阿部さんの紹介により、アカデミア社から通信販売されることに
+なりました。一応、自分の手元にも売れ残りをキープしてありますので、機
+会があれば他のイベント等でも発表したいと思います。
+いろいろ相談に乗っていただき、皆様ありがとうございました。
+
+大藤 泰生
+ofg@kwansei.ac.jp
+
+
+From "土本 (Florian) 強  Wed Aug 22 06:37:58 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3552] Re: コミックマーケット72「もえすく」参加報告
+In-Reply-To: <20070822060051.F265.OFG@kwansei.ac.jp>
+References: <679aft$29jtmu@mailgw1.kwansei.ac.jp>
+	<20070822060051.F265.OFG@kwansei.ac.jp>
+Message-ID: <20070822063506.C623.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+
+メール「[Squeak-ja: 3551] コミックマーケット72「もえすく」参加報告」(2007/08/22 06:30) に於いて
+「大藤 泰生」 語りて曰く、
+
+大藤> 初参加＆無名なので本当に売れるか不安な「もえすく」でしたが結果的には
+大藤> 64枚売れました。200枚作っていたので在庫がかなり残りましたが、売り切れ
+大藤> てしまうよりはましなので良かったです。
+
+　100枚では足りないかも、等とよけいな事言ってしまい申し訳ありませんでし
+た。
+
+大藤> 売れ残りは阿部さんの紹介により、アカデミア社から通信販売されることに
+大藤> なりました。一応、自分の手元にも売れ残りをキープしてありますので、機
+大藤> 会があれば他のイベント等でも発表したいと思います。
+
+　通信販売が始まりましたら是非見させていただきたいと思っています。
+
+　では、失礼します。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From mutoh ＠ openedu.org  Thu Aug 23 06:20:36 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3553] Re: KOF2007
+In-Reply-To: <c42761e41d1de19a0f9f81bc32ab1394@openedu.org>
+References: <c42761e41d1de19a0f9f81bc32ab1394@openedu.org>
+Message-ID: <7ea8c9b9e643fff5e4676758440b756c@openedu.org>
+
+むとう＠おうちです。
+
+On 2007/08/13, at 17:16, Takeshi MUTOH wrote:
+> 先日、とあるオブジェクト指向言語な勉強会に参加したんですが、そこで今年のKOF2007の日程がわかったので、FYIということで。
+>
+> どうも、2007/11/09,10に予定されているらしいです。
+
+すでに、公式ページでアナウンスされているようですね。
+	http://k-of.jp/2007/kof.html
+
+ブースもユーザ企画も9/18〆切らしいので，それまでに一度集まれる人だけでも集まりたいですね。
+
+また、当日の参加とかはムリだけど、こんなことやったらとか言うアイデアも大募集中です。
+
+みなさん、どうでしょうか?
+
+では。
+
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From abee ＠ squeakland.jp  Thu Aug 23 16:02:46 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3554] オープンソースカンファレンス  2007 Tokyo/Fall
+Message-ID: <46CD3116181.23E5ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+むとうさんからKOF2007のお話がありましたが、OSC2007 Tokyo/Fallの開催もアナ
+ウンスされています。
+
+>オープンソースカンファレンス2007 Tokyo/Fall 開催概要
+>日程：2007年10月5日(金)・6日(土) 10:00〜18:30(最終日は17:30)
+>
+>会場：大田区産業プラザ(PiO) (東京都大田区・京急蒲田駅徒歩3分)
+>
+>参加費：無料
+>
+>内容：オープンソースに関する最新情報の提供
+>・展示 - オープンソースコミュニティ、企業・団体による展示
+>・セミナー - オープンソースの最新情報を提供
+>
+>主催：オープンソースカンファレンス実行委員会
+>
+>企画運営：株式会社びぎねっと
+http://www.ospn.jp/osc2007-fall/
+
+Squeak-jaは、有志の皆さんによりOSC2004, 2005 Hokkaido, 2006 Hokkaidoに参
+加しています。また、2007 KansaiにはESPさんのお誘いで発表しました。
+
+今回のTokyo/Fallについてはいかがでしょうか。私の思いつくものとしては、OLPC
+Etoysに関する講演や展示などがあります。
+講演の締め切りは8/31で今回は枠が少ないそうです。皆さんのご意見をお聞かせ
+ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yasuda ＠ mfc.bakkers.gr.jp  Wed Aug 29 16:59:02 2007
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3555] Re: KOF2007
+Message-ID: <B8ED089E-DD0D-4E67-A9A7-BBF95CFE555B@mfc.bakkers.gr.jp>
+
+安田です。
+
+（うひゃあ名指しされてました。(@_@!) 気づかずすみません。。）
+
+> 先日、とあるオブジェクト指向言語な勉強会に参加したんですが、そこで今年のKOF2007の日程がわかったので、FYIということで。
+>
+> どうも、2007/11/09,10に予定されているらしいです。
+
+はいー。予定されております。。。
+http://k-of.jp/2007/kof.html
+
+> 詳細はそのうち安田先生が教えてくださるかな?
+
+詳細も何も、まだまだ真っ白ですが、とりあえず
+
+・11/9, 10 の金土、二日間
+・大阪南港 ATC （2006 年会場に同じ）
+・ブース（長机一つ予定）無料で提供します（金土、あるいは土のみも可）
+・セッションプログラム（BOFなど）のために使える部屋もあります
+
+というところです。今年は昨年と違って積極的に展示会場の横の
+喫茶スペースを使って無料休憩所的なことをしようと思っていますので、
+展示会場で立ちっぱなしということなく、ノンビリして頂けるかなと思って
+画策中です。
+
+＃電源コンセントと無線LANがあればみんなノンビリ座る？？
+
+金曜の夕方、展示会場横の喫茶スペースで懇親会予定ですので、コミュニティ
+側で会場予約などを気にせず来場者の方と飲み食べして頂けます。
+
+ブースもセッションプログラムも 9/18 をとりあえずの締め切りに
+していますが、何故か今年は早めにタタタっとブースが埋まりつつ
+あります。。(@_@!)
+とりあえずヤルカー！？という気分でありましたら早めのお申し込みを
+お勧めする次第であります。。。
+
+でわでわ						Yasu.
+
+
+From mutoh ＠ openedu.org  Wed Aug 29 16:53:44 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3556] Re: KOF2007
+In-Reply-To: <B8ED089E-DD0D-4E67-A9A7-BBF95CFE555B@mfc.bakkers.gr.jp>
+References: <B8ED089E-DD0D-4E67-A9A7-BBF95CFE555B@mfc.bakkers.gr.jp>
+Message-ID: <dba82ae16ed6214aa3bda45e1fba4992@openedu.org>
+
+むとう＠おうちです。
+
+
+On 2007/08/29, at 16:59, Yasuda Yutaka wrote:
+> （うひゃあ名指しされてました。(@_@!) 気づかずすみません。。）
+
+まあ、お約束みたいなものでして(^-^;)
+
+情報ありがとうございます。
+
+> ブースもセッションプログラムも 9/18 をとりあえずの締め切りに
+> していますが、何故か今年は早めにタタタっとブースが埋まりつつ
+> あります。。(@_@!)
+> とりあえずヤルカー！？という気分でありましたら早めのお申し込みを
+> お勧めする次第であります。。。
+
+という訳でもありますので、末尾の様に申し込ませていただきました。
+# あと、一人でもやる決意というか;-)
+
+内容とかは今後，詰めて行きましょう。
+
+次のメールで打ち合わせの日程調整関連流しますね。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+----
+	From: 	  mutoh@openedu.org
+	Subject: 	KOF2007展示企画の応募
+	Date: 	2007年8月29日 16:49:54:JST
+	To: 	  info2007@k-of.jp
+	Cc: 	  mutoh@openedu.org
+
+むとう@Squeak-jaと申します。
+
+KOF2007の展示企画に応募したいと思いますので，よろしくお願いします(_o_)
+
+     *  団体名	Squeak-ja
+     * 申し込み者氏名	武藤武士@Squeak-ja
+     * 申込者連絡先	mutoh@openedu.org
+     * 内容			プログラミング言語 Squeak の最新情報やコミュニティの取り組みを展示します。
+     * 希望日		1. 11/9(金),10(土) の両日
+
+
+From abee ＠ squeakland.jp  Wed Aug 29 17:56:35 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3557] Re: オープンソースカンファレンス  2007 Tokyo/Fall
+In-Reply-To: <46CD3116181.23E5ABEE@smtp.nifty.com>
+References: <46CD3116181.23E5ABEE@smtp.nifty.com>
+Message-ID: <46D534C3182.1ED0ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+先にご紹介したOSC2007 Tokyo/Fallですが、締め切りも近いと言うことで、
+展示ブース、ミニセミナー、セミナーを申し込みました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-August/003554.html
+
+公式ページの参加予定グループにもSqueak-jaが載っています。
+
+http://www.ospn.jp/osc2007-fall/
+
+武藤さんと同じく、いざとなれば一人でやる覚悟ですが :-)、ぜひ皆さんのご協
+力をお願いします。
+最近の私の興味の中心で、私自身ができることからすると、OLPC Etoysネタです
+が、他に何かやりたい方はいらっしゃいませんか。コアなSmalltalkネタから
+Etoysのプロジェクトまでなんでも結構ですので、よろしくお願いします。
+これが見たい聞きたいと言うものでも構いません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mutoh ＠ openedu.org  Wed Aug 29 21:04:34 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3558] KOF2007・・安任噌腓錣
+In-Reply-To: <dba82ae16ed6214aa3bda45e1fba4992@openedu.org>
+References: <B8ED089E-DD0D-4E67-A9A7-BBF95CFE555B@mfc.bakkers.gr.jp>
+	<dba82ae16ed6214aa3bda45e1fba4992@openedu.org>
+Message-ID: <b0221f98469a49ea175984e2a23ce48e@openedu.org>
+
+uC瞭錂・汗姶・・吶込墨堂旭粂
+忰代緕壽纈綺$BＬJe"hL裃栴轣跛・跌・
+忰浴蛹轣遶帙鴦蜿邵$B!<!&!&
+會繝繖緕竇込跚齡
+吶韭丨夬込囁・瘠$BdgFdJlFg>i\g;`%Mapanes!&<squeak-ja@small!&lk!&p>
+也齡㍗篋$B%`quea!&disc!&sion$Bni[u!,panese$B%3sq!&ak-ja.smalltalk.jp
+也齡㏄銖・黹鱸矼込取・雕・・・鼾瘡踉瘡覡褓・瘟跋瘤・蜩・鈕鎭齣・瘠㈱畩
+u[轣蛹・朔髟縺覘裃∫繿・齡栴轣跛・跌・霓齦礪繝・・齦碵竰蛯緇
+也齡㌔鱆蓍・込取・雕・・・鼾瘡踉瘡覡褓・蜷纈轣蛹・髟縺覘裃
+也齡㎜闢・$B%3mail!&:squeak-ja@small!&lk!&p>
+也齡㍑繻雕$B%3mail!&:squeak-ja"ieq!&st@small!&lk!&p?subjec!&help
+也齡㎎・黹鱸矼込取・雕・・・鼾瘡踉瘡覡褓・瘟跋瘤・蜩・鈕鎭齣・瘠㈱畩
+u[轣蛹・朔髟縺覘裃∫繿・齡栴轣跛・跌・霓齦礪繝・齦碵竰蛯緇
+忰也齡㎞繝繪・筬鶴・込怛筱$B!<!&Au!&2007$B%C2:27:2!&-000
+
+むとう＠おうちです。
+
+KOF2007ですが、現状展示企画(ブース)はやりますということです。
+むとうは、去年と同じようにDual bootableなCDを作ろうかなぁと考えています。
+
+ユーザ企画とかをどうするかは，ここででも事前打ち合わせでも調整したいですね。
+やるとしたら何が良いですか？
+Seaside or OLPC?
+# でも、OLPCやるにも、山宮さんもいないし、実機があるかどうか不明なんですが…
+
+で、事前打ち合わせなんですが，私の日程を調べてたら，申込〆切までには以下のような日がとりあえずあいている状況です。
+
+		9/2	3	8		9	15	16
+武藤		○	×	○(夕方)	○	×	×
+
+こんな感じで参加できる方おられましたら、ここでも直接私にでも結構ですので，連絡ください。
+
+場所は、参加者の適当な場所にすれば良いと思いますが，まあ梅田とか難波とかでしょうかね?
+
+皆さん，お気軽に参加してみて，熱い思いをお願いします!!
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From abee ＠ squeakland.jp  Thu Aug 30 00:10:30 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3559] Re: KOF2007 $NF|DxD4@0(was Re: KOF2007)
+In-Reply-To: <b0221f98469a49ea175984e2a23ce48e@openedu.org>
+References: <dba82ae16ed6214aa3bda45e1fba4992@openedu.org>
+	<b0221f98469a49ea175984e2a23ce48e@openedu.org>
+Message-ID: <46D58C663B3.75B9ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 29 Aug 2007 21:04:34 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>Seaside or OLPC?
+># でも、OLPCやるにも、山宮さんもいないし、実機があるかどうか不明なんですが…
+
+今のところ私自身が行けるどうか分からないのですが、少なくとも物をお貸しす
+ることはできると思います。
+
+# この機会にSugarのActivityとしてONScripterを載せてしまうとか :-)
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tako ＠ aquilax.co.jp  Thu Aug 30 09:42:31 2007
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3560] Re: オープンソースカンファレンス 2007 Tokyo/Fall
+Message-ID: <20070830004629.5D3F79AFC5@1server.aquilax.co.jp>
+
+　高橋＠池袋です。
+
+10月5日(金)は無理ですが、6日(土)は終日ＯＫです。
+ブース番、撤収要員などお手伝いさせて下さい。
+
+　ではでは　みなさんご機嫌よう
+
+At 5:56 PM 07.8.29, Kazuhiro ABE wrote:
+> 阿部@新百合です。
+> 
+> 先にご紹介したOSC2007 Tokyo/Fallですが、締め切りも近いと言うことで、
+> 展示ブース、ミニセミナー、セミナーを申し込みました。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-August/003554.html
+> 
+> 公式ページの参加予定グループにもSqueak-jaが載っています。
+> 
+> http://www.ospn.jp/osc2007-fall/
+> 
+> 武藤さんと同じく、いざとなれば一人でやる覚悟ですが :-)、ぜひ皆さんのご協
+> 力をお願いします。
+> 最近の私の興味の中心で、私自身ができることからすると、OLPC Etoysネタです
+> が、他に何かやりたい方はいらっしゃいませんか。コアなSmalltalkネタから
+> Etoysのプロジェクトまでなんでも結構ですので、よろしくお願いします。
+> これが見たい聞きたいと言うものでも構いません。
+> 
+>  //abee
+
+
+
+From koubo2006 ＠ yengawa.jpn.org  Thu Aug 30 13:41:51 2007
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3561] Re: オープンソースカンファレンス 2007 Tokyo/Fall
+In-Reply-To: <46D534C3182.1ED0ABEE@smtp.nifty.com>
+References: <46CD3116181.23E5ABEE@smtp.nifty.com>
+	<46D534C3182.1ED0ABEE@smtp.nifty.com>
+Message-ID: <20070830110607.8668.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+東京なら参加できますよ!
+設置、店番、撤収からMorphicやSeasideのコアなセミナーまでなんでもやります。
+
+
+On Wed, 29 Aug 2007 17:56:35 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 阿部@新百合です。
+> 
+> 先にご紹介したOSC2007 Tokyo/Fallですが、締め切りも近いと言うことで、
+> 展示ブース、ミニセミナー、セミナーを申し込みました。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-August/003554.html
+> 
+> 公式ページの参加予定グループにもSqueak-jaが載っています。
+> 
+> http://www.ospn.jp/osc2007-fall/
+> 
+> 武藤さんと同じく、いざとなれば一人でやる覚悟ですが :-)、ぜひ皆さんのご協
+> 力をお願いします。
+> 最近の私の興味の中心で、私自身ができることからすると、OLPC Etoysネタです
+> が、他に何かやりたい方はいらっしゃいませんか。コアなSmalltalkネタから
+> Etoysのプロジェクトまでなんでも結構ですので、よろしくお願いします。
+> これが見たい聞きたいと言うものでも構いません。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From "土本 (Florian) 強  Thu Aug 30 13:56:45 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3562] Re: オープンソースカンファレンス 2007 Tokyo/Fall
+In-Reply-To: <46D534C3182.1ED0ABEE@smtp.nifty.com>
+References: <46CD3116181.23E5ABEE@smtp.nifty.com>
+	<46D534C3182.1ED0ABEE@smtp.nifty.com>
+Message-ID: <20070830135248.EA2D.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+
+メール「[Squeak-ja: 3557] Re: オープンソースカンファレンス  2007 Tokyo/Fall」(2007/08/29 17:56) に於いて
+「Kazuhiro ABE」 語りて曰く、
+
+Kazuhiro> 武藤さんと同じく、いざとなれば一人でやる覚悟ですが :-)、ぜひ皆さんのご協
+Kazuhiro> 力をお願いします。
+Kazuhiro> 最近の私の興味の中心で、私自身ができることからすると、OLPC Etoysネタです
+Kazuhiro> が、他に何かやりたい方はいらっしゃいませんか。コアなSmalltalkネタから
+Kazuhiro> Etoysのプロジェクトまでなんでも結構ですので、よろしくお願いします。
+Kazuhiro> これが見たい聞きたいと言うものでも構いません。
+
+　もの運びの人夫と宴会の幹事くらいしかできませんが(^^;)、金曜日の午後と
+土曜日ならば終日時間が取れると思います。
+
+　eToys使いとしてもSmalltalk使いとしてもまだまだ甘いですが、よろしくお願
+いします。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From tomohiro ＠ sra.co.jp  Thu Aug 30 14:18:28 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3563] Re: オープンソースカンファレンス 2007 Tokyo/Fall
+In-Reply-To: <20070830135248.EA2D.FLORIAN@seagreen.ocn.ne.jp>
+References: <46CD3116181.23E5ABEE@smtp.nifty.com>
+	<46D534C3182.1ED0ABEE@smtp.nifty.com>
+	<20070830135248.EA2D.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <200708301418.29271.tomohiro@sra.co.jp>
+
+おだです。
+モノ運びや店番と、あまりパッとしませんがもし要望があれば自然言語処理ライブラリ
+の展示ぐらいはできます。今までSqueakに貢献できていないので、ぜひこの機会に
+ご奉公させてくださいまし。
+---
+おだ
+
+From mutoh ＠ openedu.org  Fri Aug 31 18:41:24 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3564] KOF2007の展示
+In-Reply-To: <46D58C663B3.75B9ABEE@smtp.nifty.com>
+References: <dba82ae16ed6214aa3bda45e1fba4992@openedu.org>
+	<b0221f98469a49ea175984e2a23ce48e@openedu.org>
+	<46D58C663B3.75B9ABEE@smtp.nifty.com>
+Message-ID: <1d78507bf3eb40b7d97afa43df707946@openedu.org>
+
+むとう＠おうちです。
+
+夏休み最後のご奉公でプール行ってたりで、遅くなりました。
+
+OSC2007 Tokyo/Fall助っ人が多くなって楽しそうになってきましたね;-)
+
+On 2007/08/30, at 0:10, Kazuhiro ABE wrote:
+>> Seaside or OLPC?
+>> # でも、OLPCやるにも、山宮さんもいないし、実機があるかどうか不明なんですが…
+> 今のところ私自身が行けるどうか分からないのですが、少なくとも物をお貸しす
+> ることはできると思います。
+
+貸していただけると，非常に嬉しいです(_o_)
+# とても寂しい時，ひとりでいじり倒してます;-)
+
+> # この機会にSugarのActivityとしてONScripterを載せてしまうとか :-)
+# ONScripterの国際化とかが待っている気がして，非常に怖いのですが(^-^;)
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+

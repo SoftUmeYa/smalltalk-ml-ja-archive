@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+
+<st-source>
+<time-stamp>From VisualWorks® NonCommercial, 7.6 of March 3, 2008 on October 19, 2009 at 4:42:33 pm</time-stamp>
+<!-- Package Translators* -->
+
+
+<component-property>
+<name>Translators</name> <type>package</type>
+<property>comment</property> <value>'By hirowadenden (Smalltalk Studies at Kyoto)
+'</value>
+</component-property>
+
+<name-space>
+<name>PrimeMinisters</name>
+<environment>Smalltalk</environment>
+<private>false</private>
+<imports>
+			private Smalltalk.*
+			</imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</name-space>
+
+<comment>
+<name-space-id>PrimeMinisters</name-space-id>
+<body>Smalltalk Studies at Kyoto</body>
+</comment>
+
+<class>
+<name>IO</name>
+<environment>PrimeMinisters</environment>
+<super>Core.Object</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars></inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.IO</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)
+
+</body>
+</comment>
+
+<class>
+<name>Downloader</name>
+<environment>PrimeMinisters</environment>
+<super>PrimeMinisters.IO</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars></inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.Downloader</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)
+
+</body>
+</comment>
+
+<class>
+<name>TableData</name>
+<environment>PrimeMinisters</environment>
+<super>Core.Object</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars>active title data </inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.TableData</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)
+</body>
+</comment>
+
+<class>
+<name>TableDataForImageLink</name>
+<environment>PrimeMinisters</environment>
+<super>PrimeMinisters.TableData</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars>thumbnailDependent linkNameDependent thumbnailHeight thumbnailWidth </inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.TableDataForImageLink</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)
+
+</body>
+</comment>
+
+<class>
+<name>Reader</name>
+<environment>PrimeMinisters</environment>
+<super>PrimeMinisters.IO</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars></inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.Reader</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)</body>
+</comment>
+
+<class>
+<name>RecordsTranslator</name>
+<environment>PrimeMinisters</environment>
+<super>Core.Object</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars>cssClassQueueForData cssClassForTitle tableDataObjects </inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.RecordsTranslator</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)</body>
+</comment>
+
+<class>
+<name>Table</name>
+<environment>PrimeMinisters</environment>
+<super>PrimeMinisters.RecordsTranslator</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars>dataRecords </inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.Table</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)
+</body>
+</comment>
+
+<class>
+<name>TableDataForPeriod</name>
+<environment>PrimeMinisters</environment>
+<super>PrimeMinisters.TableData</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars>daysOfPeriodItemTitle </inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.TableDataForPeriod</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)
+</body>
+</comment>
+
+<class>
+<name>Writer</name>
+<environment>PrimeMinisters</environment>
+<super>PrimeMinisters.IO</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars></inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category></category>
+<attributes>
+<package>Translators</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>PrimeMinisters.Writer</class-id>
+<body>By hirowadenden (Smalltalk Studies at Kyoto)
+</body>
+</comment>
+
+
+
+
+
+
+
+
+
+
+
+<methods>
+<class-id>PrimeMinisters.IO class</class-id> <category>constants</category>
+
+<body package="Translators" selector="directoryOfPages">directoryOfPages
+	
+	| aDirectory |
+	aDirectory := Filename defaultDirectory construct: 'PrimeMinisters'.
+	aDirectory exists ifFalse: [aDirectory makeDirectory].
+	^aDirectory</body>
+
+<body package="Translators" selector="encodingSymbol">encodingSymbol
+	
+	^#UTF_8</body>
+
+<body package="Translators" selector="fileNameOfCSV">fileNameOfCSV
+	
+	^'PrimeMinisters.csv'</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.RecordsTranslator class</class-id> <category>additional item titles</category>
+
+<body package="Translators" selector="daysOfPeriodItemTitle">daysOfPeriodItemTitle
+	
+	^'在位日数'</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.RecordsTranslator class</class-id> <category>special item titles</category>
+
+<body package="Translators" selector="numberItemTitle">numberItemTitle
+	
+	^'人目'</body>
+
+<body package="Translators" selector="periodItemTitle">periodItemTitle
+	
+	^'在位期間'</body>
+
+<body package="Translators" selector="thumbnailItemTitle">thumbnailItemTitle
+	
+	^'縮小画像'</body>
+
+<body package="Translators" selector="imageItemTitle">imageItemTitle
+	
+	^'画像'</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.RecordsTranslator class</class-id> <category>instance creation</category>
+
+<body package="Translators" selector="titles:">titles: titlesArray
+	
+	^(self new)
+		initialize;
+		titles: titlesArray;
+		yourself</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.RecordsTranslator</class-id> <category>initialize-release</category>
+
+<body package="Translators" selector="titles:">titles: titlesArray
+	
+	| index imageLinkTableData thumbnailTableData periodTableData numberTableData |
+	tableDataObjects := OrderedCollection new.
+	titlesArray
+		do:
+			[:aTitle | 
+			| aTableData |
+			aTableData := TableData new.
+			aTableData title: aTitle.
+			tableDataObjects add: aTableData].
+	tableDataObjects := tableDataObjects asArray.
+	numberTableData := tableDataObjects
+		at: (self indexOf: self class numberItemTitle).
+	thumbnailTableData := tableDataObjects
+		at: (self indexOf: self class thumbnailItemTitle).
+	thumbnailTableData active: false.
+	index := self indexOf: self class imageItemTitle.
+	imageLinkTableData := (tableDataObjects at: index) asTableDataForImageLink.
+	tableDataObjects at: index put: imageLinkTableData.
+	imageLinkTableData
+		linkNameDependent: numberTableData;
+		thumbnailDependent: thumbnailTableData;
+		thumbnailHeight: 32;
+		thumbnailWidth: 25.
+	index := self indexOf: self class periodItemTitle.
+	periodTableData := (tableDataObjects at: index) asTableDataForPeriod.
+	tableDataObjects at: index put: periodTableData.
+	periodTableData daysOfPeriodItemTitle: self class daysOfPeriodItemTitle</body>
+
+<body package="Translators" selector="initialize">initialize
+	
+	cssClassQueueForData := OrderedCollection new: 2.
+	cssClassQueueForData addLast: 'center-blue'.
+	cssClassQueueForData addLast: 'center-yellow'.
+	cssClassForTitle := 'center-pink'</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.RecordsTranslator</class-id> <category>accessing</category>
+
+<body package="Translators" selector="htmlTitleRecord">htmlTitleRecord
+	
+	| titleRecord |
+	titleRecord := OrderedCollection new.
+	tableDataObjects
+		do:
+			[:aTableData | 
+			titleRecord
+				addAll: (aTableData htmlTitleElementsWithCss: self cssClassForTitle)].
+	^titleRecord asArray</body>
+
+<body package="Translators" selector="indexOf:">indexOf: title
+	
+	^tableDataObjects findFirst: [:each | each title = title]</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.RecordsTranslator</class-id> <category>private</category>
+
+<body package="Translators" selector="cssClassForTitle">cssClassForTitle
+	
+	^cssClassForTitle</body>
+
+<body package="Translators" selector="cssClassForData">cssClassForData
+	"send this message only once for a record"
+	
+	| tdCss |
+	tdCss := cssClassQueueForData removeFirst.
+	cssClassQueueForData addLast: tdCss.
+	^tdCss</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.TableData class</class-id> <category>instance creation</category>
+
+<body package="Translators" selector="new">new
+	
+	^super new initialize</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.TableData</class-id> <category>accessing</category>
+
+<body package="Translators" selector="title:">title: aString
+	
+	title := aString</body>
+
+<body package="Translators" selector="htmlElementsWithCss:">htmlElementsWithCss: cssClass
+	
+	self active ifFalse: [^Array new].
+	^Array with: '&lt;td class="' , cssClass , '"&gt;' , self data , '&lt;/td&gt;'</body>
+
+<body package="Translators" selector="data:">data: aString
+	
+	data := aString</body>
+
+<body package="Translators" selector="active">active
+	
+	^active</body>
+
+<body package="Translators" selector="title">title
+	
+	^title</body>
+
+<body package="Translators" selector="active:">active: aBoolean
+	
+	active := aBoolean</body>
+
+<body package="Translators" selector="data">data
+	
+	^data</body>
+
+<body package="Translators" selector="htmlTitleElementsWithCss:">htmlTitleElementsWithCss: cssClass
+	
+	self active ifFalse: [^Array new].
+	^Array
+		with:
+			'&lt;td class="' , cssClass , '"&gt;&lt;strong&gt;' , self title , '&lt;/strong&gt;&lt;/td&gt;'</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.TableData</class-id> <category>converting</category>
+
+<body package="Translators" selector="asTableDataForImageLink">asTableDataForImageLink
+	
+	| aTableDataForImageLink |
+	aTableDataForImageLink := TableDataForImageLink new.
+	aTableDataForImageLink data: self data.
+	aTableDataForImageLink title: self title.
+	^aTableDataForImageLink</body>
+
+<body package="Translators" selector="asTableDataForPeriod">asTableDataForPeriod
+	
+	| aTableDataForPeriod |
+	aTableDataForPeriod := TableDataForPeriod new.
+	aTableDataForPeriod data: self data.
+	aTableDataForPeriod title: self title.
+	^aTableDataForPeriod</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.TableData</class-id> <category>initialize-release</category>
+
+<body package="Translators" selector="initialize">initialize
+	
+	active := true.
+	data := ''.
+	title := ''</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.TableDataForImageLink</class-id> <category>accessing</category>
+
+<body package="Translators" selector="thumbnailWidth:">thumbnailWidth: sizeInPixel
+	"when thumbnailWidth or thumbnailHeight equals 0,  the original size of the thumbnail image is used."
+	
+	thumbnailWidth := sizeInPixel</body>
+
+<body package="Translators" selector="thumbnailWidth">thumbnailWidth
+	"when thumbnailWidth or thumbnailHeight equals 0,  the original size of the thumbnail image is used."
+	
+	^thumbnailWidth</body>
+
+<body package="Translators" selector="thumbnailHeight:">thumbnailHeight: sizeInPixel
+	"when thumbnailWidth or thumbnailHeight equals 0,  the original size of the thumbnail image is used."
+	
+	thumbnailHeight := sizeInPixel</body>
+
+<body package="Translators" selector="htmlElementsWithCss:">htmlElementsWithCss: cssClass
+	
+	| thumbnailFileName thumbnailFile heightTag widthTag |
+	self active ifFalse: [^Array new].
+	heightTag := ''.
+	widthTag := ''.
+	(self thumbnailHeight = 0 and: [self thumbnailWidth = 0])
+		ifFalse:
+			[self thumbnailHeight = 0
+				ifFalse:
+					[heightTag := ' height="' , self thumbnailHeight printString , '"'].
+			self thumbnailWidth = 0
+				ifFalse:
+					[widthTag := ' width="' , self thumbnailWidth printString , '"']].
+	thumbnailFile := self thumbnailDependent data.
+	thumbnailFileName := thumbnailFile
+		last: thumbnailFile size - (thumbnailFile lastIndexOf: $/).
+	^Array
+		with:
+			'&lt;td class="' , cssClass , '"&gt;&lt;a name="' , self linkNameDependent data ,
+					'" href="' , self data , '"&gt;&lt;img class="borderless" src="' ,
+					thumbnailFile , '" alt="' , thumbnailFileName , '"' , heightTag ,
+					widthTag , '&gt;&lt;/a&gt;&lt;/td&gt;'</body>
+
+<body package="Translators" selector="thumbnailDependent">thumbnailDependent
+	
+	^thumbnailDependent</body>
+
+<body package="Translators" selector="linkNameDependent">linkNameDependent
+	
+	^linkNameDependent</body>
+
+<body package="Translators" selector="thumbnailDependent:">thumbnailDependent: aTableData
+	
+	thumbnailDependent := aTableData</body>
+
+<body package="Translators" selector="linkNameDependent:">linkNameDependent: aTableData
+	
+	linkNameDependent := aTableData</body>
+
+<body package="Translators" selector="thumbnailHeight">thumbnailHeight
+	"when thumbnailWidth or thumbnailHeight equals 0,  the original size of the thumbnail image is used."
+	
+	^thumbnailHeight</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.TableDataForImageLink</class-id> <category>initialize-release</category>
+
+<body package="Translators" selector="initialize">initialize
+	
+	super initialize.
+	thumbnailHeight := 0.
+	thumbnailWidth := 0</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.Reader class</class-id> <category>reading table</category>
+
+<body package="Translators" selector="tableFrom:">tableFrom: aFilenameOrString
+	
+	| readRecord table |
+	readRecord := [:aStream | 
+	| aString |
+	aString := JunStringUtility getLine: aStream.
+	JunStringUtility
+		separate: aString
+		dividers:
+			(Array
+				with: $,
+				with: Character cr)].
+	JunControlUtility
+		assert:
+			[(aFilenameOrString asFilename withEncoding: self encodingSymbol)
+				readStream]
+		do:
+			[:aStream | 
+			| record |
+			record := readRecord value: aStream.
+			table := PrimeMinisters.Table titles: record.
+			[aStream atEnd not]
+				whileTrue:
+					[record := readRecord value: aStream.
+					table addDataRecord: record]]
+		ensure: [:aStream | aStream close].
+	^table</body>
+
+<body package="Translators" selector="table">table
+	
+	^self tableFrom: (self directoryOfPages construct: self fileNameOfCSV)</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.Downloader class</class-id> <category>downloading</category>
+
+<body package="Translators" selector="table">table
+	
+	^self tableTo: self directoryOfPages</body>
+
+<body package="Translators" selector="tableTo:">tableTo: aDirectoryOrString
+	"the directory correponding to aDirectoryOrString must exists"
+	
+	| table csvFilename imageFiles thumbnailFiles aDirectory |
+	aDirectory := aDirectoryOrString asFilename.
+	csvFilename := self downloadCSVToDirectory: aDirectory.
+	table := PrimeMinisters.Reader tableFrom: csvFilename.
+	imageFiles := table imageFiles.
+	thumbnailFiles := table thumbnailFiles.
+	self downloadFiles: imageFiles toDirectory: aDirectory.
+	self downloadFiles: thumbnailFiles toDirectory: aDirectory.
+	^table</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Downloader class</class-id> <category>examples</category>
+
+<body package="Translators" selector="example1">example1
+	"PrimeMinisters.Downloader example1."
+	
+	^PrimeMinisters.Downloader table</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Downloader class</class-id> <category>defaults</category>
+
+<body package="Translators" selector="urlStringOfCSV">urlStringOfCSV
+	
+	^'http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/CSV2HTML/PrimeMinisters/PrimeMinisters.csv'</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Downloader class</class-id> <category>private</category>
+
+<body package="Translators" selector="downloadCSVToDirectory:">downloadCSVToDirectory: aDirectory
+	
+	| aURL aFilename |
+	aURL := JunURL named: self urlStringOfCSV.
+	aURL exists ifFalse: [^self error: 'URL not found: ' , aURL asString].
+	aFilename := aDirectory construct: self fileNameOfCSV.
+	aURL downloadTo: aFilename.
+	aFilename exists
+		ifFalse: [^self error: 'Can not download: ' , aURL asString].
+	^aFilename</body>
+
+<body package="Translators" selector="downloadFiles:toDirectory:">downloadFiles: files toDirectory: aDirectory
+	
+	files
+		do:
+			[:file | 
+			| aString aCollection subDirectory aURL aFilename |
+			aCollection := JunStringUtility
+				separate: file
+				dividers: (Array with: $/).
+			(aCollection
+				copyFrom: 1
+				to: aCollection size - 1)
+				do:
+					[:each | 
+					subDirectory := aDirectory construct: each.
+					subDirectory exists ifFalse: [subDirectory makeDirectory]].
+			aString := self urlStringOfCSV asURI directory asString , '/' , file.
+			aURL := JunURL named: aString.
+			aURL exists ifFalse: [^self error: 'URL not found: ' , aURL asString].
+			aFilename := subDirectory construct: aURL asURI tail.
+			aURL downloadTo: aFilename.
+			aFilename exists
+				ifFalse: [^self error: 'Can not download: ' , aURL asString]].
+	^files</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.TableDataForPeriod</class-id> <category>private</category>
+
+<body package="Translators" selector="computeNumberOfDays:">computeNumberOfDays: periodString
+	
+	| dateStrings startDateString startDate endDateString endDate convertDateStringToDate |
+	dateStrings := JunStringUtility separate: periodString dividers: #($〜).
+	(dateStrings size &lt; 1 or: [dateStrings size &gt; 2]) ifTrue: [^0].
+	startDateString := dateStrings at: 1.
+	dateStrings size = 2 ifTrue: [endDateString := dateStrings at: 2].
+	convertDateStringToDate := [:dateString | 
+	| dateArray |
+	dateArray := JunStringUtility separate: dateString dividers: #($年 $月 $日).
+	dateArray size = 3 ifFalse: [^0].
+	Date
+		newDay: (dateArray at: 3) asNumber
+		monthNumber: (dateArray at: 2) asNumber
+		year: (dateArray at: 1) asNumber].
+	startDate := convertDateStringToDate value: startDateString.
+	endDateString isNil
+		ifTrue: [endDate := Date today]
+		ifFalse: [endDate := convertDateStringToDate value: endDateString].
+	^(endDate subtractDate: startDate) + 1</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.TableDataForPeriod</class-id> <category>accessing</category>
+
+<body package="Translators" selector="daysOfPeriodItemTitle:">daysOfPeriodItemTitle: aString
+	
+	daysOfPeriodItemTitle := aString</body>
+
+<body package="Translators" selector="htmlElementsWithCss:">htmlElementsWithCss: cssClass
+	
+	self active ifFalse: [^Array new].
+	^Array
+		with: '&lt;td class="' , cssClass , '"&gt;' , self data , '&lt;/td&gt;'
+		with:
+			'&lt;td class="' , cssClass , '"&gt;'
+				,
+					(JunStringUtility
+						stringWithCommasFor: (self computeNumberOfDays: self data)) , '&lt;/td&gt;'</body>
+
+<body package="Translators" selector="htmlTitleElementsWithCss:">htmlTitleElementsWithCss: cssClass
+	
+	self active ifFalse: [^Array new].
+	^Array
+		with:
+			'&lt;td class="' , cssClass , '"&gt;&lt;strong&gt;' , self title , '&lt;/strong&gt;&lt;/td&gt;'
+		with:
+			'&lt;td class="' , cssClass , '"&gt;&lt;strong&gt;' , self daysOfPeriodItemTitle ,
+					'&lt;/strong&gt;&lt;/td&gt;'</body>
+
+<body package="Translators" selector="daysOfPeriodItemTitle">daysOfPeriodItemTitle
+	
+	^daysOfPeriodItemTitle</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.Writer class</class-id> <category>private</category>
+
+<body package="Translators" selector="indentForTableData">indentForTableData
+	
+	^12</body>
+
+<body package="Translators" selector="writeRecords:on:">writeRecords: records on: aStream
+	
+	records
+		do:
+			[:record | 
+			self indentForRecord timesRepeat: [aStream space].
+			aStream
+				nextPutAll: '&lt;tr&gt;';
+				cr.
+			record
+				do:
+					[:item | 
+					self indentForTableData timesRepeat: [aStream space].
+					aStream
+						nextPutAll: item;
+						cr].
+			self indentForRecord timesRepeat: [aStream space].
+			aStream
+				nextPutAll: '&lt;/tr&gt;';
+				cr]</body>
+
+<body package="Translators" selector="writeHeaderOn:">writeHeaderOn: aStream
+	
+	aStream nextPutAll:
+			'&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;meta http-equiv="Content-Style-Type" content="text/css"&gt;
+&lt;meta http-equiv="Content-Script-Type" content="text/javascript"&gt;
+&lt;meta name="keywords" content="Smalltalk,Oriented,Programming"&gt;
+&lt;meta name="description" content="Prime Ministers"&gt;
+&lt;meta name="author" content="One of Smalltalkers"&gt;
+&lt;link rev="made" href="mailto:sml@smalltalk.jp"&gt;
+&lt;link rel="index" href="index.html"&gt;
+&lt;style type="text/css"&gt;
+&lt;!--
+body {
+    background-color : #ffffff;
+    margin : 20px;
+    padding : 10px;
+    font-family : serif;
+    font-size : 10pt;
+}
+a {
+    text-decoration : underline;
+    color : #000000;
+}
+a:link {
+    background-color : #ffddbb;
+}
+a:visited {
+    background-color : #ccffcc;
+}
+a:hover {
+    background-color : #dddddd;
+}
+a:active {
+    background-color : #dddddd;
+}
+div.belt {
+    background-color : #eeeeee;
+    padding : 0px 4px;
+}
+div.right-small {
+    text-align : right;
+    font-size : 8pt;
+}
+img.borderless {
+    border-width : 0px;
+    vertical-align : middle;
+}
+table.belt {
+    border-style : solid;
+    border-width : 0px;
+    border-color : #000000;
+    background-color : #ffffff;
+    padding : 0px 0px;
+    width : 100%;
+}
+table.content {
+    border-style : solid;
+    border-width : 0px;
+    border-color : #000000;
+    padding : 2px 2px;
+}
+td.center-blue {
+    padding : 2px 2px;
+    text-align : center;
+    background-color : #ddeeff;
+}
+td.center-pink {
+    padding : 2px 2px;
+    text-align : center;
+    background-color : #ffddee;
+}
+td.center-yellow {
+    padding : 2px 2px;
+    text-align : center;
+    background-color : #ffffcc;
+}
+--&gt;
+&lt;/style&gt;
+&lt;title&gt;Prime Ministers&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="belt"&gt;
+&lt;h2&gt;Prime Ministers&lt;/h2&gt;
+&lt;/div&gt;
+&lt;table class="belt" summary="table"&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+      &lt;table class="content" summary="table"&gt;
+        &lt;tbody&gt;
+'</body>
+
+<body package="Translators" selector="writeFooterOn:">writeFooterOn: aStream
+	
+	aStream
+		nextPutAll:
+			'        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;div class="right-small"&gt;Created by ' , self class fullName asString ,
+					' on ' , JunCalendarModel stringFromDate , ' at '
+				, JunCalendarModel stringFromTime ,
+					'&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'</body>
+
+<body package="Translators" selector="indentForRecord">indentForRecord
+	
+	^10</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Writer class</class-id> <category>writing table</category>
+
+<body package="Translators" selector="table:toFile:">table: aTable toFile: aFilenameOrString
+	
+	JunControlUtility
+		assert:
+			[(aFilenameOrString asFilename withEncoding: self encodingSymbol)
+				writeStream]
+		do:
+			[:aStream | 
+			self writeHeaderOn: aStream.
+			self
+				writeRecords: aTable htmlRecords
+				on: aStream.
+			self writeFooterOn: aStream]
+		ensure: [:aStream | aStream close].
+	(JunURL named: aFilenameOrString asURI asString) browse</body>
+
+<body package="Translators" selector="table:">table: aTable
+	
+	self
+		table: aTable
+		toFile: self filenameOfHTML</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Writer class</class-id> <category>constants</category>
+
+<body package="Translators" selector="filenameOfHTML">filenameOfHTML
+	
+	^self directoryOfPages construct: 'index.html'</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.Table class</class-id> <category>examples</category>
+
+<body package="Translators" selector="example1">example1
+	"PrimeMinisters.Table example1."
+	
+	| aTable |
+	aTable := PrimeMinisters.Table download.
+	^aTable</body>
+
+<body package="Translators" selector="example2">example2
+	"PrimeMinisters.Table example2."
+	
+	| aTable |
+	aTable := PrimeMinisters.Table translate.
+	^aTable</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Table class</class-id> <category>translating</category>
+
+<body package="Translators" selector="translate">translate
+	"PrimeMinisters.Table translate."
+	
+	| aTable |
+	aTable := PrimeMinisters.Reader table.
+	PrimeMinisters.Writer table: aTable.
+	^aTable</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Table class</class-id> <category>downloading</category>
+
+<body package="Translators" selector="download">download
+	"PrimeMinisters.Table download."
+	
+	| aTable |
+	aTable := PrimeMinisters.Downloader table.
+	^aTable</body>
+</methods>
+
+
+<methods>
+<class-id>PrimeMinisters.Table</class-id> <category>accessing</category>
+
+<body package="Translators" selector="htmlRecords">htmlRecords
+	
+	| htmlRecords |
+	htmlRecords := OrderedCollection new.
+	htmlRecords add: self htmlTitleRecord.
+	htmlRecords addAll: self htmlDataRecords.
+	^htmlRecords asArray</body>
+
+<body package="Translators" selector="imageFiles">imageFiles
+	
+	| imageFiles |
+	imageFiles := OrderedCollection new.
+	dataRecords
+		do:
+			[:dataRecord | imageFiles add: (dataRecord at: (self indexOf: self class imageItemTitle))].
+	^imageFiles asArray</body>
+
+<body package="Translators" selector="thumbnailFiles">thumbnailFiles
+	
+	| thumbnailFiles |
+	thumbnailFiles := OrderedCollection new.
+	dataRecords
+		do:
+			[:dataRecord | 
+			thumbnailFiles
+				add: (dataRecord at: (self indexOf: self class thumbnailItemTitle))].
+	^thumbnailFiles asArray</body>
+
+<body package="Translators" selector="htmlDataRecords">htmlDataRecords
+	
+	| htmlRecords |
+	htmlRecords := OrderedCollection new.
+	dataRecords
+		do:
+			[:dataRecord | 
+			| htmlRecord cssClass |
+			cssClass := self cssClassForData.
+			tableDataObjects
+				with: dataRecord
+				do: [:tableDataObject :item | tableDataObject data: item].
+			htmlRecord := OrderedCollection new.
+			tableDataObjects
+				do:
+					[:tableDataObject | htmlRecord addAll: (tableDataObject htmlElementsWithCss: cssClass)].
+			htmlRecords add: htmlRecord asArray].
+	^htmlRecords asArray</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Table</class-id> <category>adding</category>
+
+<body package="Translators" selector="addDataRecord:">addDataRecord: aDataRecord
+	
+	tableDataObjects size = aDataRecord size
+		ifFalse: [self error: 'size mismatch'].
+	dataRecords add: aDataRecord</body>
+</methods>
+
+<methods>
+<class-id>PrimeMinisters.Table</class-id> <category>initialize-release</category>
+
+<body package="Translators" selector="initialize">initialize
+	
+	super initialize.
+	dataRecords := OrderedCollection new</body>
+</methods>
+
+
+
+</st-source>
+

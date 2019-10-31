@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3350] Mac版で作品名に全角スペースを用いた場合の問題
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203350%5D%20%3D%3Fiso-2022-jp%3Fb%3FTWFjGyRCSEckRzpuSUpMPiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQTQzUSU5JVohPCU5JHJNUSQkJD8%2BbDlnJE5MZEJqGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003355.html">
+   <LINK REL="Next"  HREF="003354.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3350] Mac版で作品名に全角スペースを用いた場合の問題</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203350%5D%20%3D%3Fiso-2022-jp%3Fb%3FTWFjGyRCSEckRzpuSUpMPiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQTQzUSU5JVohPCU5JHJNUSQkJD8%2BbDlnJE5MZEJqGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3350] Mac版で作品名に全角スペースを用いた場合の問題">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2007年 1月 15日 (月) 15:30:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003355.html">[Squeak-ja: 3355] Re: 福岡のスクイーク
+</A></li>
+        <LI>次の記事 <A HREF="003354.html">[Squeak-ja: 3354] 発表者募集開始！　研究発表会（C4） 2月10日
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3350">[ 日付 ]</a>
+              <a href="thread.html#3350">[ スレッド ]</a>
+              <a href="subject.html#3350">[ 件名 ]</a>
+              <a href="author.html#3350">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>みなさん、こんにちは。
+林です。
+
+　新たに判明した、Mac 版特有のバグについて報告します。
+
+　作品名をつける際に、以下の条件だと作品の保存に失敗します。
+また全角スペース文字は実際にファイルを確認すると半角スペース文字になって
+しまいます。
+
+　原因はまだ不明ですが、全角スペースを使用すると発生しますので、回避策と
+しては全角スペースの代わりに半角スペースやハイフンなどを利用する方法など
+があげられるかと思います（ちょっと苦しいですが）。
+
+[条件]
+全角文字を半角2文字として換算し作品名が
+
+	&quot;どこかに全角スペース + その他に半角22文字分以上ある場合&quot;
+
+例えば、全角スペースを□、半角スペースを△で表すとして、○は保存可能、
+×は保存に失敗するパターンです。
+
+○：あいうえお□かきくけこ		(全角スペース + 半角20文字分)
+×：あいうえお□かきくけこさ		(全角スペース + 半角22文字分)
+○：あいうえお△かきくけこさ		(半角スペース + 半角22文字分)
+
+また全角スペースの出現場所はどこであっても同じ。文字数に依存。
+
+×：□あいうえおかきくけこさ		(全角スペース + 半角22文字分)
+×：あいうえおかきくけこさ□		(全角スペース + 半角22文字分)
+○：□あいうえおかきくけこ		(全角スペース + 半角20文字分)
+○：あいうえおかきくけこ□		(全角スペース + 半角20文字分)
+
+なお、全角スペースが含まれてなければ、全角半角関係無く24文字までの作品名
+が可能です。
+
+○：あいうえおかきくけこさしすせそたちつてとなにぬね	(全角24文字)
+×：あいうえおかきくけこさしすせそたちつてとなにぬねの	(全角25文字)
+○：あいうえお△かきくけこさしすせそたちつてとなにぬ	(半角スペース + 全角23文字)
+×：あいうえお□かきくけこさしすせそたちつてとなにぬ	(全角スペース + 全角23文字)
+
+ご注意ください。
+
+--
+林 徹也 Tetsuya HAYASHI 
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003355.html">[Squeak-ja: 3355] Re: 福岡のスクイーク
+</A></li>
+	<LI>次の記事 <A HREF="003354.html">[Squeak-ja: 3354] 発表者募集開始！　研究発表会（C4） 2月10日
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3350">[ 日付 ]</a>
+              <a href="thread.html#3350">[ スレッド ]</a>
+              <a href="subject.html#3350">[ 件名 ]</a>
+              <a href="author.html#3350">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

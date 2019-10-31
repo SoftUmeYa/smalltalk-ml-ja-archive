@@ -1,0 +1,733 @@
+From umejava ＠ mars.dti.ne.jp  Wed May  5 13:46:51 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed May  5 13:47:01 2010
+Subject: [SML 7802] Squeak 4.1日本語化版リリース
+Message-ID: <Jx3ZF9KNzF40BRal9kIvYyqQ2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+先日リリースされたSqueak 4.1の日本語化版を以下に置きました。
+http://swikis.ddo.jp/umejava/48
+
+4.1からBlockClosureが使えるようになっています。再帰もバッチリです。
+
+ライセンスもMIT+Apacheでより明確になりました。
+http://www.squeak.org/SqueakLicense/
+
+この他、詳しくは先日の第19回Smalltalk勉強会の資料をご覧ください。
+http://docs.google.com/viewer?a=v&pid=sites&srcid=c21hbGx0YWxrLXVzZXJzLmpwfGhvbWV8Z3g6NTA4OGY2MGM5MDI0NzA4NQ
+
+VWもいいですが、自由にいじれる範囲においてはSqueakのほうが上です。
+ぜひお試しください。
+
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Thu May  6 12:01:24 2010
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Thu May  6 12:02:02 2010
+Subject: [SML 7803] 18th International Smalltalk Joint Conference - Call for
+	Contributions
+Message-ID: <n2lb81554461005052001k58c95b1bzf77fa8f4a0fcf05c@mail.gmail.com>
+
+18th International Smalltalk Joint Conference - Call for Contributions
+
+〓 〓 〓 〓 〓 〓 〓 〓Barcelona, Spain
+〓 〓 〓 〓 〓 〓 〓 〓September 13 - 17, 2010; Camp Smalltalk September 11-12
+〓 〓 〓 〓 〓 〓 〓 〓http://www.esug.org/conferences/2010/
+
+This call includes:
+〓 〓 〓 〓Developer program
+〓 〓 〓 〓Free ESUG tickets
+〓 〓 〓 〓Business day 16th of September (sponsored by Cincom Smalltalk)
+〓 〓 〓 〓International Workshop
+http://www.esug.org/Conferences/2010/International+Workshop+on+Smalltalk+Technologies
+〓 〓 〓 〓Student Volunteer
+http://www.esug.org/Conferences/2010/Student+Volunteers+program
+〓 〓 〓 〓Camp Smalltalk 〓11-12 September 2010
+
+----------------------------------------------------------------------
+
+For the past 18 years, the European Smalltalk User Group (ESUG) has
+organised the International Smalltalk Conference, a lively forum on
+cutting edge software technologies that attract people from both
+academia and industry for a whole week. The attendees are both
+engineers using Smalltalk in business and students and teachers
+using Smalltalk both for research and didactic purposes.
+
+As every year, this year's edition of the largest European Smalltalk
+event will include the regular Smalltalk developers conference with
+renowned invited speakers, a Smalltalk camp that proves fruitful for
+interactions and discussions. Besides, this year will be held the
+〓 〓 〓 〓- 6th edition of the Innovation Technology Awards where prizes will be
+〓 〓 〓 〓awarded to authors of best pieces of Smalltalk-related projects
+〓 〓 〓 〓- 〓an international workshop on Smalltalk and dynamic languages
+〓 〓 〓 〓http://www.esug.org/Conferences/2010/International+Workshop+on+Smalltalk+Technologies
+
+〓 〓 〓 〓* New this year:
+〓 〓 〓 〓 〓 〓 〓 〓- There will be a business day: thursday 16th of September 2010.
+〓 〓 〓 〓 〓 〓 〓 〓The focus will be on "Agile Development Processes and Smalltalk"
+
+〓 〓 〓 〓 〓 〓 〓 〓- ESUG will offer 10 free entrance tickets.
+〓 〓 〓 〓 〓 〓 〓 〓To get a free ticket you should send a mail to the esug
+board (board@esug.org)
+〓 〓 〓 〓 〓 〓 〓 〓 〓 〓 〓 〓Subject: [ESUG 2010 Free entrance] + your name
+〓 〓 〓 〓 〓 〓 〓 〓 〓 〓 〓 〓And you should write a small motivation.
+
+
+You can support the ESUG conference in many different ways:
+
+〓 〓 〓 〓* Sponsor the conference. New sponsoring packages are described at
+〓 〓 〓 〓 〓 〓 〓 〓http://www.esug.org/supportesug/becomeasponsor/
+〓 〓 〓 〓* Submit a talk, a software or a paper to one of the events. See
+〓 〓 〓 〓below.
+
+〓 〓 〓 〓* Attend the conference. We'd like to beat the previous record of
+〓 〓 〓 〓attendance (156 participants at Brest and 170 people at Amsterdam)!
+
+〓 〓 〓 〓* Students can get free registration and hosting if they enroll
+〓 〓 〓 〓into the the Student Volunteers program. See below.
+
+Developers Forum: International Smalltalk Developers Conference
+------------------------------------------------------------------------
+This year we are looking for YOUR experience on using Smalltalk.
+In addition, we are looking for tutorials. The
+list of topics includes, but is not limited to the following:
+
+* XP practices
+* Development tools
+* Experience reports
+* Model driven development
+* Web development
+* Team management
+* Meta-Modeling
+* Security
+* New libraries & frameworks
+* Educational material
+* Embedded systems and robotics
+* SOA and Web services
+* Interaction with other programming languages
+
+Submissions due on 1 July 〓2010
+Notification of acceptance on 15 of July 2010
+More information at http://www.esug.org/conferences/2010
+
+How to submit?
+------------------
+Pay attention: the places are limited so do not wait till the last
+minute to apply. Prospective presenters should submit a request to
+board@esug.org AND stephane.ducasse@free.fr
+following the template below. Please use this template since the
+emails will be automatically processed!
+
+Subject: [ESUG 2010 Developers] + your name
+
+First Name:
+
+Last Name:
+
+Email where you can always be reached:
+
+Title:
+
+Abstract:
+
+Bio:
+
+Any presentation not respecting this form will be discarded
+automatically
+
+
+Innovation Technology Award
+------------------------------------------------------------------------
+We are proud to announce the 6th Innovation Technology Awards. The
+top 3 teams with the most innovative software will receive,
+respectively, 500 Euros, 300 Euros and 200 Euros during an awards
+ceremony at the conference. Developers of any Smalltalk-based
+software are welcome to compete. This year we will request 3-5min videos.
+More information at
+http://www.esug.org/Conferences/2010/Innovation+Technology+Awards
+
+
+Student Volunteer Program
+------------------------------------------------------------------------
+If you are a student wanting to attend ESUG, have you considered
+being a student volunteer? Student volunteers help keep the
+conference running smoothly; in return, they have free
+accommodations, while still having most of the time to enjoy the
+conference.
+More information at
+http://www.esug.org/conferences/2010
+http://www.esug.org/Conferences/2010/Student+Volunteers+program
+
+We hope to see you there and have fun together.
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed May 12 06:40:36 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed May 12 06:40:45 2010
+Subject: [SML 7804] Re: 第19回Smalltalk勉強会＠京都
+In-Reply-To: <4BDA2B8A.40000@cc.kyoto-su.ac.jp>
+References: <4BDA2B8A.40000@cc.kyoto-su.ac.jp>
+Message-ID: <4BE9CED4.5050808@cc.kyoto-su.ac.jp>
+
+京都のSmalltalk勉強会、本日です！（第1水曜が端午の節句により）
+
+--- 青木淳＠京都宇治
+
+(10/04/30 9:59), AOKI Atsushi wrote:
+> 青木淳＠京都上賀茂（新緑の中から）です。
+> 
+> 第19回Smalltalk勉強会＠京都を開催します。
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto19
+> 
+> キャンプラ5階の第4演習室になります。お間違えのなきように。
+> 
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1605&frmCd=14-1-0-0-0
+> 
+> 第19回 Smalltalk勉強会＠京都
+> 日時：2010年05月12日（水）19:00〜21:00
+> キャンパスプラザ京都 5階 第4演習室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 前回の勉強会において取り組んでいる課題のおおよその解説が終わ
+> りましたので、今回の勉強会では樹状整列アルゴリズムとプログラ
+> ム構成をコードリーディングをしながら詳説します。前回に差し上
+> げた電子的な成果物一式、そして、ノート型のパーソナルコンピュ
+> ータ（Windows 7/Vista/XP または Mac OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From umejava ＠ mars.dti.ne.jp  Mon May 17 22:16:38 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon May 17 22:16:41 2010
+Subject: [SML 7805] 第20回Smalltalk勉強会のお知らせ
+Message-ID: <Jx_x4.OBzF8zshAXw.iN8c_w6@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/5/28(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai20kaismalltalkbenkyoukai
+
+今回のテーマは新手の軽量Webアプリフレームワーク「Iliad」です。
+http://www.iliadproject.org/index
+
+SeasideとAIDA/Webのいいとこ取りを目指しています。GNU Smalltalkをメインに
+開発が行われているところも面白いです。(SqueakやPharoでも動作します。VW版
+は近日リリースされる予定)
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Fri May 21 19:26:15 2010
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Fri May 21 19:26:52 2010
+Subject: [SML 7806] Fwd: [Esug-list] IWST 2010 CfP - Deadline Extension
+In-Reply-To: <AANLkTiksCp8VpWsq8epApEtvBUwsFsrEShGtZzsNLBhy@mail.gmail.com>
+References: <AANLkTiksCp8VpWsq8epApEtvBUwsFsrEShGtZzsNLBhy@mail.gmail.com>
+Message-ID: <AANLkTinx6z7kO-OHapfnKc41UfcYOw2LPuaILlrH0k4I@mail.gmail.com>
+
+Hi all,
+if some of you are interested, please find below a call for papers for
+a Smalltalk workshop in Europe.
+Ask me in private for more information.
+
+
+---------- Forwarded message ----------
+From: Michael Haupt <mhaupt@gmail.com>
+Date: Sat, May 15, 2010 at 12:05 AM
+Subject: [Esug-list] IWST 2010 CfP - Deadline Extension
+To: squeak-dev@lists.squeakfoundation.org,
+Pharo-project@lists.gforge.inria.fr,
+pharo-users@lists.gforge.inria.fr, seaside@lists.squeakfoundation.org,
+esug-list@lists.esug.org, pilud@googlegroups.com,
+smalltalk-research@googlegroups.com
+
+
+* apologies for multiple copies *
+
+The submission deadline for the International Workshop on Smalltalk
+Technologies (IWST) 2010 has been extended to June 18. Please find the
+details below.
+
+
+Call for Papers
+
+International Workshop on Smalltalk Technologies (IWST) 2010
+
+co-located with European Smalltalk User Group Conference (ESUG)
+Barcelona, Spain, September 11-17, 2010
+
+
+** Description
+
+The goal of the IWST workshop series is to create and foster a forum
+around advances or experience in Smalltalk. We welcome contributions
+on all aspects, theoretical as well as practical, of Smalltalk-related
+topics.
+
+There are two possible kinds of submissions, which must be in ACM SIGPLAN style:
+
+* Research papers (up to 10 pages). Submissions in this category will
+be rigorously reviewed, and accepted papers will be published in the
+ACM Digital Library (ACM SIGPLAN has approved, the final ACM approval
+is pending).
+
+* Demonstration papers (up to 4 pages). Submissions in this category
+will not be published in the ACM Digital Library, but will be
+available for download from the workshop web page.
+
+
+** Submission and Reviewing Process
+
+The EasyChair submission web site is at
+http://www.easychair.org/conferences/?conf=iwst10.
+
+Authors will be given the opportunity to comment on reviewers' work by
+providing feedback on the reviews. For this purpose, a questionnaire
+will be sent to authors. Their answers will be evaluated anonymously,
+and feedback will be handed on to reviewers.
+
+
+** Important Dates
+
+Submission: June 18, 2010 (Samoa time)
+Feedback: July 16, 2010
+
+ESUG Early Registration Deadline: July 9, 2010
+Authors will be able to register for the early rate if their
+registration depends on IWST notification.
+
+Workshop: September 12, 2010, Barcelona, Spain
+
+
+** Programme Committee
+
+Co-Chairs:
+Michael Haupt, Hasso-Plattner-Institut, University of Potsdam, Germany
+Robert Hirschfeld, Hasso-Plattner-Institut, University of Potsdam, Germany
+
+PC Members:
+Gabriela Arevalo, Universidad Nacional de La Plata, Argentina
+Johannes Brauer, NORDAKADEMIE, Germany
+Johan Brichau, Université catholique de Louvain, Belgium
+Marcus Denker, INRIA Lille - Nord Europe, France
+Theo D'Hondt, Vrije Universiteit Brussel, Belgium
+James Foster, GemStone Systems, Inc., USA
+Andy Kellens, Vrije Universiteit Brussel, Belgium
+Andreas Raab, Teleplace Inc., USA
+Lukas Renggli, Software Composition Group (SCG), University of Bern, Switzerland
+Randal L. Schwartz, Stonehenge Consulting Services, Inc.
+Dave Ungar, IBM Research
+_______________________________________________
+Esug-list mailing list
+Esug-list@lists.esug.org
+http://lists.esug.org/listinfo/esug-list
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+From serge.stinckwich ＠ gmail.com  Tue May 25 11:01:47 2010
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue May 25 11:02:26 2010
+Subject: [SML 7807] PhD thesis potentially in Smalltalk
+In-Reply-To: <AANLkTino5u2t9LtGBSUxQsFqv75QFG4pQNZDsTrbnlXX@mail.gmail.com>
+References: <4BEF1925.7060700@lirmm.fr>
+	<C27CA922-AC3D-4650-A83A-5758A2386113@inria.fr> 
+	<AANLkTino5u2t9LtGBSUxQsFqv75QFG4pQNZDsTrbnlXX@mail.gmail.com>
+Message-ID: <AANLkTilaOkND8QekhBXqJD6tM3ZcfJq_Ai5GzQMyo7C4@mail.gmail.com>
+
+> ---
+> TITLE: A Reflective Component-Oriented Programming Language
+>
+> SUPERVISORS: Chouki TIBERMACINE (tibermacin@lirmm.fr) and Christophe DONY (dony@lirmm.fr)
+>
+> FUNDING: French Government Fellowship (~1500 euros gross salary per month)
+>
+> PLACE: LIRMM, CNRS and Montpellier University (South of France)
+>
+> SUBJECT:
+>
+> Research on the modeling and implementation of applications by assembling components is growing up more and more. Component-based development allows the definition of independent software modules which are put in libraries, available on catalog, and assemblable as deployment and runtime units.
+>
+> In our research lab, we developed a voluntarily simple component-oriented programming language (SCL), which allowed an original and innovative integration of the concepts of component, port, interface, connector and aspect (see [1]).
+>
+> Component languages are used now in modeling environments in association with architecture description languages. We would like to study, on the basis of SCL, a reflective solution mixing a programming and an architecture description language, which allows:
+> - to link entities of conceptual reuse (component descriptors) with units of integration (component instances),
+> - via a reflective architecture and an API of meta-programming, allowing introspection and intercession, to describe with the same language architectures, constraints on these architectures (non-functional constraints as specified in [2]), and model transformations.
+>
+> Two SCL prototypes have been implemented in Smalltalk and Ruby. A prototype of the new language can be developed in JAVA or another language, and integrated with the Eclipse plugin of modeling component-based application (CLACS).
+>
+> [1] Luc Fabresse, Christophe Dony, and Marianne Huchard.
+> Foundations of a simple and unified component-oriented language.
+> Journal of Computer Languages, Systems and Structures, 34(2-3):130-149, Elsevier 2008.
+>
+> [2] Chouki Tibermacine, Régis Fleurquin, and Salah Sadou.
+> A family of languages for architecture constraint specification.
+> Journal of Systems and Software 83(5):815-831, Elsevier 2010.
+
+> THÈSE EN GÉNIE LOGICIEL / PROGRAMMATION
+>
+> TITRE : Langage réflexif de programmation par composants
+>
+> ENCADRANTS : Chouki TIBERMACINE (tibermacin@lirmm.fr) et Christophe DONY
+> (dony@lirmm.fr)
+>
+> BOURSE : Allocation de recherche MENRT
+>
+> LIEU : LIRMM, CNRS et Université de Montpellier
+>
+> RÉSUMÉ :
+>
+> Les recherches sur la modélisation et l'implémentation d'applications
+> par assemblages de composants sont maintenant passées à l'échelle. Le
+> développement par composants vise à permettre la production de
+> composants indépendants stockés dans des bibliothèques, consultables sur
+> catalogue et assemblables en unités d'exécution et de déploiement.
+>
+> Nous avons réalisé au LIRMM un langage de programmation par composants
+> (SCL) volontairement simple, qui a permis une intégration originale et
+> novatrice des concepts de composant, de port, d'interface, de
+> connecteurs et d'aspects (voir [1]).
+>
+> Les langages à composants s'utilisent maintenant en intégration dans les
+> environnements de modélisation et en connexion avec un langage de
+> description d'architecture. Nous souhaitons étudier, sur les bases de
+> SCL, un langage mixte, de programmation et de modélisation
+> d'architectures, réflexif, qui permettra :
+> - de faire le lien entre les entités de réutilisation conceptuelles que
+> sont les descripteurs de composants et les unités d'intégration que sont
+> les instances de composants,
+> - via 〓une architecture réflexive et une API de méta-programmation
+> permettant l'introspection et l'intercession, d'écrire, ou de décrire,
+> avec le même langage des architectures, des contraintes sur ces
+> architectures (contraintes non-fonctionnelles selon les modèles
+> développés par C. Tibermacine dans [2]), ainsi que des transformations
+> de modèles.
+>
+> Deux prototypes de SCL ont été implémentés en Smalltalk et en Ruby. Un
+> prototype de ce nouveau langage pourra être développé en JAVA ou autre
+> et intégré au plugin Eclipse de modélisation d'applications par
+> composants, CLACS.
+>
+> [1] Luc Fabresse, Christophe Dony, and Marianne Huchard.
+> Foundations of a simple and unified component-oriented language.
+> Journal of Computer Languages, Systems and Structures, 34(2-3):130-149,
+> Elsevier 2008.
+>
+> [2] Chouki Tibermacine, Régis Fleurquin, and Salah Sadou.
+> A family of languages for architecture constraint specification.
+> Journal of Systems and Software 83(5):815-831, Elsevier 2010.
+
+--
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed May 26 11:12:12 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed May 26 11:12:19 2010
+Subject: [SML 7808] 第20回Smalltalk勉強会＠京都
+Message-ID: <4BFC837C.30305@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+京都での勉強会における今後ですが、先月の勉強会の際に伺ったと
+ころ、以下のような要望が出てきました。
+
+　　Tips集（定石集）
+　　キャンバス（インターフェースビルダー）
+　　ランタイム化
+　　GUIプログラミングの紹介と解説
+　　VisualWorksから他のSmalltalkへの移植方法
+
+で、次回の勉強会から、GUIプログラミングの紹介と解説をしてゆこ
+うと思います。もちろん、キャンバス（インターフェースビルダー）
+を含める形で行います。
+
+ということで、第20回Smalltalk勉強会＠京都を開催します。万障繰
+り合わせてJR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto19
+
+場所は先月と同様のキャンプラ5階の第4演習室になります。
+
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=1605&frmCd=14-1-0-0-0
+
+第20回 Smalltalk勉強会＠京都
+日時：2010年06月02日（水）19:00〜21:00
+キャンパスプラザ京都 5階 第4演習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+早いもので20回目となりました。今回からGUIプログラミングの紹介
+と解説をしてゆこうと思います。もちろん、キャンバス（インター
+フェースビルダー）を含める形で行います。ブラックブックとノー
+ト型のパーソナルコンピュータ（Windows 7/Vista/XP または Mac
+OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From hirowadenden ＠ hera.eonet.ne.jp  Sat May 29 12:49:04 2010
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Sat May 29 12:50:20 2010
+Subject: [SML 7809] Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+Message-ID: <4C008EB0.5000800@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+以前[SML 7621]で、Ubuntu 9.04上でJunのOpenGL examplesが表示できない
+と報告させていただきましたが、今回OSをUbuntu 9.04->9.10->10.04LTSと
+アップグレードしたところ、表示されるようになっていました。
+
+[環境]
+VisualWorks7.6NC
+Jun784
+OS: Ubuntu 10.04LTS(Linux 2.6.32-22-generic i686)
+CPU: AMD Athlon(tm) Dual Core Processor 4850e
+メインメモリ: 2GByte
+チップセット: AMD 690G + ATI SB600
+オンボードグラフィック: ATI Radeon X1250
+                      (自動でメインメモリから128MByte割当て)
+ビデオドライバ: オープンソースATI radeonドライバ
+
+Ubuntu 9.10の環境で表示できていたかどうかは、未確認です。
+
+以上、取り急ぎ報告まで。
+
+-- hirowadenden
+
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat May 29 13:27:07 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat May 29 13:27:12 2010
+Subject: [SML 7810] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+In-Reply-To: <4C008EB0.5000800@hera.eonet.ne.jp>
+References: <4C008EB0.5000800@hera.eonet.ne.jp>
+Message-ID: <4C00979B.2020107@cc.kyoto-su.ac.jp>
+
+それはそれは、良かった、祝着至極です。
+
+ランチャーからベンチマークを動かして、
+結果をご報告願えれば、さらに幸いです。
+
+--- 青木淳
+
+(10/05/29 12:49), hirowadenden wrote:
+> ハンドル名で失礼します、hirowadendenと申します。
+> 
+> 以前[SML 7621]で、Ubuntu 9.04上でJunのOpenGL examplesが表示できない
+> と報告させていただきましたが、今回OSをUbuntu 9.04->9.10->10.04LTSと
+> アップグレードしたところ、表示されるようになっていました。
+> 
+> [環境]
+> VisualWorks7.6NC
+> Jun784
+> OS: Ubuntu 10.04LTS(Linux 2.6.32-22-generic i686)
+> CPU: AMD Athlon(tm) Dual Core Processor 4850e
+> メインメモリ: 2GByte
+> チップセット: AMD 690G + ATI SB600
+> オンボードグラフィック: ATI Radeon X1250
+>                        (自動でメインメモリから128MByte割当て)
+> ビデオドライバ: オープンソースATI radeonドライバ
+> 
+> Ubuntu 9.10の環境で表示できていたかどうかは、未確認です。
+> 
+> 以上、取り急ぎ報告まで。
+> 
+> -- hirowadenden
+From hirowadenden ＠ hera.eonet.ne.jp  Sat May 29 19:36:11 2010
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Sat May 29 19:37:57 2010
+Subject: [SML 7811] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+In-Reply-To: <4C00979B.2020107@cc.kyoto-su.ac.jp>
+References: <4C008EB0.5000800@hera.eonet.ne.jp>
+	<4C00979B.2020107@cc.kyoto-su.ac.jp>
+Message-ID: <4C00EE1B.2000108@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+#常用の環境をUbuntu 8.04LTSから10.04LTSへ移行中です
+
+(2010年05月29日 13:27), AOKI Atsushi wrote:
+> ランチャーからベンチマークを動かして、
+> 結果をご報告願えれば、さらに幸いです。
+
+ベンチマークを動かしてみましたが、
+
+Failed to check if 3D objects were rendered on the screen.
+Maybe it's because the window was hidden by another.
+Restarting [show complex 3D object] test.
+
+と、ウインドウにメッセージが出てしまいます。<Accept>を押すと
+Exceptionウインドウが出て、
+
+Unhandled exception: a primitive has failed
+
+と表示されています。最初のメッセージウインドウは表示されず
+いきなりExceptionウインドウが出る場合もあります。
+Stackの最初の数行は以下のとおりです:
+
+ApplicationWindow(Object)>>error:
+ApplicationWindow(Object)>>primitiveFailed
+ApplicationWindow(Window)>>deviceContentsOfAreaOriginX:y:width:height:into:startingAt:
+ApplicationWindow(DisplaySurface)>>contentsOfArea:into:startingAt:
+ApplicationWindow(DisplaySurface)>>contentsOfArea:
+ApplicationWindow(DisplaySurface)>>completeContentsOfArea:
+JunBenchmark>>waitForFinishRendering:
+optimized [] in [] in JunBenchmark>>show3dObject
+
+ちょっと見たところでは原因がよく分からないので、後で調べてみます。
+
+役に立たないかもしれませんが、とりあえず、show3dObjectを除いた場合の
+結果を以下に貼りつけます:
+
+OS: Ubuntu 10.04LTS(Linux 2.6.32-22-generic i686)
+CPU: AMD Athlon(tm) Dual Core Processor 4850e 2.5GHz
+memory: 2000MB
+displaySystem: ATI Radeon X1250(128MB from main memory)
+comment: except the show3dObject benchmark.
+reportId: CDCAA989
+reportFormat: 5
+time: May 29, 2010 18:35:53.610
+junVersion: Jun 784
+version: VisualWorks NonCommercial, 7.6 of March 3, 2008
+versionId: #[63 40 63 192 76 0 0 0 63 40 63 192]
+patches: OrderedCollection ('CScanner Release 3.2')
+platform: unix sysV I386 linux
+colorDepth: 24
+colorPalette: (Graphics.FixedPalette redShift: 16 redMask: 255
+greenShift: 8 greenMask: 255 blueShift: 0 blueMask: 255)
+memorySize: #(307200 61440 204800 40960 655360 4916648 400000)
+memoryReport: \5390984 bytes available\1225740 objects,  57552816 bytes
+in use
+: End Of Platform Description
+
+
+Jun Benchmarks (Times)
+----------------------
+
+Individual benchmark results (3 iterations):
+
+Benchmark       	Minimum	Maximum	A-Mean
+---------       	-------	-------	------
+
+Create 3D Object	2.48   	2.829  	2.69333
+Benzene Rotation	3.668  	3.805  	3.744
+Texture Rotation	0.42   	0.558  	0.483667
+Transformation  	12.561 	14.845 	13.7143
+Voronoi         	2.103  	3.025  	2.44
+Delaunay        	2.531  	2.644  	2.589
+
+Benchmark suite results (3 iterations):
+
+Rating Type	Minimum	Maximum	A-Mean
+-----------	-------	-------	------
+
+A-Mean     	4.05483	4.59583	4.27739
+
+-- hirowadenden
+
+From hirowadenden ＠ hera.eonet.ne.jp  Mon May 31 21:33:18 2010
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Mon May 31 21:35:05 2010
+Subject: [SML 7812] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+In-Reply-To: <4C00EE1B.2000108@hera.eonet.ne.jp>
+References: <4C008EB0.5000800@hera.eonet.ne.jp>	<4C00979B.2020107@cc.kyoto-su.ac.jp>
+	<4C00EE1B.2000108@hera.eonet.ne.jp>
+Message-ID: <4C03AC8E.2050104@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+(2010年05月29日 19:36), hirowadenden wrote:
+> Failed to check if 3D objects were rendered on the screen.
+> Maybe it's because the window was hidden by another.
+> Restarting [show complex 3D object] test.
+> 
+> と、ウインドウにメッセージが出てしまいます。<Accept>を押すと
+> Exceptionウインドウが出て、
+> 
+> Unhandled exception: a primitive has failed
+> 
+> と表示されています。最初のメッセージウインドウは表示されず
+> いきなりExceptionウインドウが出る場合もあります。
+> Stackの最初の数行は以下のとおりです:
+> 
+> ApplicationWindow(Object)>>error:
+> ApplicationWindow(Object)>>primitiveFailed
+> ApplicationWindow(Window)>>deviceContentsOfAreaOriginX:y:width:height:into:startingAt:
+> ApplicationWindow(DisplaySurface)>>contentsOfArea:into:startingAt:
+> ApplicationWindow(DisplaySurface)>>contentsOfArea:
+> ApplicationWindow(DisplaySurface)>>completeContentsOfArea:
+> JunBenchmark>>waitForFinishRendering:
+> optimized [] in [] in JunBenchmark>>show3dObject
+> 
+> ちょっと見たところでは原因がよく分からないので、後で調べてみます。
+
+少し調べてみました。
+ベンチマークで表示されたViewfinder(an ApplicationWindow)に対して
+メッセージcompleteContentsOfArea: aRectangleを(aRectangleを変えながら)
+送ってみました。
+ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されていない
+場合は、指定した領域の画像(a Depth32Image)が返ってきました。
+ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+領域と重なる場合は、incompleteAreaCopySignalが発生しました。
+何度か試してみましたが、primitiveFailedになることは無く、正常に動作している
+ようです。
+
+ちょっと手に負えそうにないので、しばらく(?)置かせていただきます。^^;;
+
+-- hirowadenden
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon May 31 21:47:05 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon May 31 21:47:11 2010
+Subject: [SML 7813] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+In-Reply-To: <4C03AC8E.2050104@hera.eonet.ne.jp>
+References: <4C008EB0.5000800@hera.eonet.ne.jp>	<4C00979B.2020107@cc.kyoto-su.ac.jp>	<4C00EE1B.2000108@hera.eonet.ne.jp>
+	<4C03AC8E.2050104@hera.eonet.ne.jp>
+Message-ID: <4C03AFC9.9000806@cc.kyoto-su.ac.jp>
+
+(10/05/31 21:33), hirowadenden wrote:
+> ベンチマークで表示されたViewfinder(an ApplicationWindow)に対して
+> メッセージcompleteContentsOfArea: aRectangleを(aRectangleを変えながら)
+> 送ってみました。
+> ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されていない
+> 場合は、指定した領域の画像(a Depth32Image)が返ってきました。
+> ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+> 領域と重なる場合は、incompleteAreaCopySignalが発生しました。
+
+この現象は、かつて私も遭遇したことがあります。
+遠い昔、マックの仮想マシンでも同様でした。
+
+> ちょっと手に負えそうにないので、しばらく(?)置かせていただきます。^^;;
+
+仮想マシンのソースコードが手元にない（私も手に負えない）ので、
+AR（アクションリクエスト）だけあげるのいいと思います。
+
+--- 青木淳＠京都宇治

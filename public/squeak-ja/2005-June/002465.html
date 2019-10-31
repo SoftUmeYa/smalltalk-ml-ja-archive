@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2465] Re: OSX での日本語入力
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202465%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9TWCAbJEIkRyRORnwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=429E4DC4.6070807%40zephyr.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002464.html">
+   <LINK REL="Next"  HREF="002466.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2465] Re: OSX での日本語入力</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202465%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9TWCAbJEIkRyRORnwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=429E4DC4.6070807%40zephyr.dti.ne.jp"
+       TITLE="[Squeak-ja: 2465] Re: OSX での日本語入力">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 6月  2日 (木) 10:27:00 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002464.html">[Squeak-ja: 2464] Re: OSX での日本語入力
+</A></li>
+        <LI>次の記事 <A HREF="002466.html">[Squeak-ja: 2466] サーバ停止のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2465">[ 日付 ]</a>
+              <a href="thread.html#2465">[ スレッド ]</a>
+              <a href="subject.html#2465">[ 件名 ]</a>
+              <a href="author.html#2465">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林です。ども。
+
+On 2005/06/02, at 9:07, NISHIHARA Satoshi wrote:
+
+&gt;<i> 動きました．
+</I>
+一安心です。
+
+&gt;<i> on 05.6.2 7:41 AM, Tetsuya HAYASHI wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> 結論からいきますと以下の組み合わせを試してみてはどうでしょう 
+</I>&gt;&gt;<i> か。
+</I>&gt;&gt;<i>      VM : Squeak VM ml-030424　（←ダメと言ってたのにすみませ 
+</I>&gt;&gt;<i> ん）
+</I>&gt;&gt;<i>      VI へのパッチ： ML-patch-MacOSX.1.cs　（以下の 
+</I>&gt;&gt;<i> URL）
+</I>&gt;&gt;<i> <A HREF="http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/ML-patch-">http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/ML-patch-</A>
+</I>&gt;&gt;<i> MacOSX.1.cs
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 上記のうち，チェンジ・セットだけでもエエようです．ファイル・イ 
+</I>&gt;<i> ンして保存
+</I>&gt;<i> した後は，Squeak VM ml-030424，
+</I>&gt;<i> Squeak 3.8.6Beta6.app (<A HREF="http://squeak.hp.infoseek.co.jp/">http://squeak.hp.infoseek.co.jp/</A> 
+</I>&gt;<i> nihongo.htm)，
+</I>&gt;<i> Squeak 3.7.4Beta1j のいずれでも，日本語入力が可能になります．
+</I>&gt;<i>
+</I>&gt;<i> ちなみに，J.M.McIntosh さんのhttp:
+</I>&gt;<i> //homepage.mac.com/johnmci/.Public/Squeak%203.8.6Beta6.app.sit
+</I>&gt;<i> でも動きます．
+</I>&gt;<i> より新しい
+</I>&gt;<i> <A HREF="http://homepage.mac.com/johnmci/.Public/Squeak%203.8.6Beta6.app.sit">http://homepage.mac.com/johnmci/.Public/Squeak%203.8.6Beta6.app.sit</A>
+</I>&gt;<i> ではダメでした．
+</I>
+たぶん、日本語入力に関してはトラブルは無いかと思いますが、日本語の
+ファイル名については、VM 3.7, 3.8 バージョンですとエラーに 
+なってし
+まうと思います。
+
+&gt;&gt;<i> SystemWindow をつまんで動かす時にクラッシュすることが報告されて
+</I>&gt;&gt;<i> ました。
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> SystemWindow とはルート・ウィンドウのことでしょうか？　それと 
+</I>&gt;<i> も，ワーク
+</I>&gt;<i> スペース等のクラシカルな内部ウィンドウ？　いずれもクラッシュし 
+</I>&gt;<i> ませんでした．
+</I>
+内部ウィンドウの方です。
+3.6 バージョンだと安定してるのかもしれません。
+
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002464.html">[Squeak-ja: 2464] Re: OSX での日本語入力
+</A></li>
+	<LI>次の記事 <A HREF="002466.html">[Squeak-ja: 2466] サーバ停止のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2465">[ 日付 ]</a>
+              <a href="thread.html#2465">[ スレッド ]</a>
+              <a href="subject.html#2465">[ 件名 ]</a>
+              <a href="author.html#2465">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

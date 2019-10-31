@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7766] Re: セーブされたファイルが自分でわかるプログラム
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207766%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU7ITwlViQ1JGwkPyVVJSEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlayQsPCtKLCRHJG8kKyRrJVclbSUwJWklYBsoQg%3D%3D%3F%3D&In-Reply-To=4B6704A1.5090901%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007765.html">
+   <LINK REL="Next"  HREF="007767.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7766] Re: セーブされたファイルが自分でわかるプログラム</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207766%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU7ITwlViQ1JGwkPyVVJSEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlayQsPCtKLCRHJG8kKyRrJVclbSUwJWklYBsoQg%3D%3D%3F%3D&In-Reply-To=4B6704A1.5090901%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7766] Re: セーブされたファイルが自分でわかるプログラム">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2010年 2月  2日 (火) 07:55:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007765.html">[SML 7765] Re: セーブされたファイルが自分でわかるプログラム
+</A></li>
+        <LI>次の記事 <A HREF="007767.html">[SML 7767] Re: 第16回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7766">[ 日付 ]</a>
+              <a href="thread.html#7766">[ スレッド ]</a>
+              <a href="subject.html#7766">[ 件名 ]</a>
+              <a href="author.html#7766">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おはようございます、青木＠京都宇治です。
+
+(10/02/02 1:43), AOKI Atsushi wrote:
+&gt;<i> 実行コンテクストをさかのぼる方式ですね。私の実装と似ています。
+</I>
+ちょっと無理がある（皆さんに披露するには忍びない）私の実装を
+示しておきます。基本的には濱崎さんの方式と同じでして、少しだ
+けrobustにしたというところでしょうか。
+
+|<i> aFilename aContext aBoolean aBlock |
+</I>aFilename := nil.
+aContext := thisContext.
+aBoolean := true.
+aBlock :=
+        [[aContext notNil and: [aBoolean yourself]] whileTrue:
+                [(aContext selector == #fileIn and: [aContext receiver isKindOf: Stream])
+                    ifTrue:
+                        [aFilename := aContext receiver stream fileName.
+                        aBoolean := false].
+                aContext := aContext sender]].
+[aBlock value]
+    on: aBlock messageNotUnderstoodSignal
+    do:
+        [:exception |
+        aFilename := nil.
+        exception return].
+Transcript
+    cr;
+    show: aFilename printString
+
+たとえば、上記のプログラムを「/usr/aoki/smalltalk/tmp.st」と
+いうファイルにセーブして、次のメッセージ式（プログラム）を実
+行したり、
+
+'/usr/aoki/smalltalk/tmp.st' asFilename fileIn
+
+ファイルブラウザ（ファイルリスト）などで、セーブしたファイル
+を選択してファイルイン（File In）したら、トランスクリプトに
+そのファイル名が出力されます。
+
+表題（サブジェクト）の「セーブされたファイルが自分でわかるプ
+ログラム」になっているかと思います。
+
+もちろん、当該のセーブしたファイルを、どこか別のディレクトリ
+に移動させてしまった後でも、ちゃんと動きます。
+
+明日の京都での勉強会では、ワークブックとワークスペースを多用
+するのですが、それらを一括管理（どこに置いておいてもいいよう
+に）するために、上述のプログラムを援用してゆきます。後日（勉
+強会が終了した後）に、それらのすべてを公開（このMLにアナウン
+ス）する所存です。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007765.html">[SML 7765] Re: セーブされたファイルが自分でわかるプログラム
+</A></li>
+	<LI>次の記事 <A HREF="007767.html">[SML 7767] Re: 第16回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7766">[ 日付 ]</a>
+              <a href="thread.html#7766">[ スレッド ]</a>
+              <a href="subject.html#7766">[ 件名 ]</a>
+              <a href="author.html#7766">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

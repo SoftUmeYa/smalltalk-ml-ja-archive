@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8081] Re: Real World Objectsの続きをブログに書きました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208081%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FUmVhbCBXb3JsZCBPYmplY3RzGyRCJE5CMyQtJHIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYlbSUwJEs9cSQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=%3CB886B4ED-A351-40F5-9C74-E8F80645DDD6%40sra.co.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008080.html">
+   <LINK REL="Next"  HREF="008082.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8081] Re: Real World Objectsの続きをブログに書きました</H1>
+    <B>Tomohiro Oda</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208081%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FUmVhbCBXb3JsZCBPYmplY3RzGyRCJE5CMyQtJHIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYlbSUwJEs9cSQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=%3CB886B4ED-A351-40F5-9C74-E8F80645DDD6%40sra.co.jp%3E"
+       TITLE="[SML 8081] Re: Real World Objectsの続きをブログに書きました">tomohiro ＠ sra.co.jp
+       </A><BR>
+    <I>2014年 2月  4日 (火) 14:32:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008080.html">[SML 8080]	Real World Objectsの続きをブログに書きました
+</A></li>
+        <LI>次の記事 <A HREF="008082.html">[SML 8082] Re:	Real World Objectsの続きをブログに書きました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8081">[ 日付 ]</a>
+              <a href="thread.html#8081">[ スレッド ]</a>
+              <a href="subject.html#8081">[ 件名 ]</a>
+              <a href="author.html#8081">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おだです。
+
+山下さんの話はSmalltalk勉強会でのビアバッシュでも楽しく拝聴させてもらいました。
+エッセイのほうも、さっそく読ませてもらいました。
+
+&gt;<i> つまり僕らの知性は物が複雑な形に積み上がった構造物から発生したんだ。
+</I>&gt;<i> 特定の粒子の配置に物理法則を適用するとオブジェクトができるみたいな
+</I>&gt;<i> 環境が近いかもしれない。
+</I>
+ツイッターにも書かせてもらいましたが、こちらにはちょっと長いバージョンを書きます。
+
+実は、「特定の粒子の配置に物理法則を適用するとオブジェクトができる」は
+私がHoneyGingerで追いかけているテーマでもあります。
+HoneyGingerでは粒子の動きを流体力学でシミュレーションしますが、
+近隣の粒子同士がお互いに参照し合って直接力を与え合ったりするのではなく、
+基本的に「物理法則」が各粒子に動きを与え、
+その結果として粒子は「進んでいく波」や「流れの中と外」のような
+構造的なものがあるかのように振る舞います。
+
+それは既存のGUIが固定された構造を持っていることへのアンチテーゼです。
+ウィンドウオブジェクトの上にペーンオブジェクトが乗っていて、
+ペーンオブジェクトの上にテキストとボタンが乗っている、
+ボタンを押したら、ウィンドウにcloseメッセージを投げる、
+ウィンドウは閉じる時にペーンオブジェクトやボタンを片付ける、
+みたいな構造。これがイヤでHoneyGingerを作り始めました。
+＃皮肉なことに、上記GUIの構造はSmalltalkが作ってきたものですが。
+
+たぶん、宇宙には構造なんてありません。
+人間の脳みそが、現実を理解するために導入した人工的な概念に過ぎないと思います。
+オブジェクトも本来は他から構造を与えられるのではなく、
+振る舞いの結果として構造があるかのように見える、あるいは
+振る舞いの説明として構造という概念を導入するとわかりやすい、
+というものだと思っています。
+
+ということを、山下さんのエッセイからの引用部分を読んで思い出しました。
+---
+おだ
+
+
+
+2014/02/04 0:00、Minori Yamashita &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">ympbyc ＠ gmail.com</A>&gt; のメール：
+
+&gt;<i> SMLのみなさん初めまして。勉強会でお会いした皆さんご無沙汰してます。
+</I>&gt;<i> カリフォルニアでしがない大学生をしている山下です。
+</I>&gt;<i> 
+</I>&gt;<i> 年末のビアバッシュの時に発表させて頂いたReal World Objectsの続きというか、背景というかをブログに書きました。この宇宙でのオブジェクトについてやその他のことを書きました。一人でも多くの方からツッコミを頂きたいので、誠に勝手ながら、こういう話をして一番面白がってくれそうなSmalltalkerの方々のメーリングリストに流させて頂きます。
+</I>&gt;<i> 
+</I>&gt;<i> 宇宙API Part1:
+</I>&gt;<i> <A HREF="http://ympbyc.hatenablog.com/entry/2014/02/03/%E5%AE%87%E5%AE%99API_Part1">http://ympbyc.hatenablog.com/entry/2014/02/03/%E5%AE%87%E5%AE%99API_Part1</A>
+</I>&gt;<i> 
+</I>&gt;<i> よろしくお願いします。
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> Minori Yamashita &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">ympbyc ＠ gmail.com</A>&gt;
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008080.html">[SML 8080]	Real World Objectsの続きをブログに書きました
+</A></li>
+	<LI>次の記事 <A HREF="008082.html">[SML 8082] Re:	Real World Objectsの続きをブログに書きました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8081">[ 日付 ]</a>
+              <a href="thread.html#8081">[ スレッド ]</a>
+              <a href="subject.html#8081">[ 件名 ]</a>
+              <a href="author.html#8081">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,103 @@
+From yoshiki ＠ vpri.org  Fri Apr  2 10:41:02 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Apr  2 10:41:27 2010
+Subject: [Squeak-ja: 4450] Google Summer of Code
+Message-ID: <u39zehbrl.wl%yoshiki@vpri.org>
+
+  みなさんこんにちは。
+
+  今年のGoogle Summer of Code (学生さんが夏休みの間にオープンソースプロジェ
+クトの手伝いを有償で行うという企画)では、私が友人と提案した、「Squeak
+上の粒子シミュレーションシステムKedamaをOpen CLでサポートすることによっ
+て高速化する」というプロジェクトも採用されています。
+
+http://gsoc2010.esug.org/projects/kedama
+
+が、残念なことにまだ肝心の学生さんがだれも名乗り出ていないという状況で
+す。GPGPUの勉強をしつつ、動的言語との連携方法を探り、さらにGoogleなど
+とコネができてお金ももらえるというなかなかない機会ですので、われと思う
+方はぜひぜひ応募をご検討ください。
+
+-- Yoshiki
+
+From umejava ＠ mars.dti.ne.jp  Sun Apr 11 18:04:47 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Apr 11 18:04:51 2010
+Subject: [Squeak-ja: 4451] 第2回Smalltalkハッカソンのお知らせ
+Message-ID: <JxIS_GG7Qw3Hixi8X7of1Jpw4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+第2回Smalltalkハッカソン「Pharo vs Squeak -- 明日はどっちだ?」を
+4/17(土)に行います。
+
+http://atnd.org/events/4045
+
+どしどしご参加ください。
+
+対決のようなタイトルになっていますが、実際には主にPharo 1.0 RC3とSqueak 4.x
+について、日本語環境でストレスなく使えるようにするためのハックを行う予定
+です。
+
+---
+[:masashi | ^umezawa]
+From yoshiki ＠ vpri.org  Fri Apr 16 14:29:23 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Apr 16 14:29:38 2010
+Subject: [Squeak-ja: 4452] Re: 第2回Smalltalkハッカソンのお知らせ
+Message-ID: <uiq7s3qz0.wl%yoshiki@vpri.org>
+
+At Sun, 11 Apr 2010 18:04:47 +0900,
+Masashi Umezawa wrote:
+> 
+> こんにちは
+> 梅澤です。
+> 
+> 第2回Smalltalkハッカソン「Pharo vs Squeak -- 明日はどっちだ?」を
+> 4/17(土)に行います。
+> 
+> http://atnd.org/events/4045
+> 
+> どしどしご参加ください。
+> 
+> 対決のようなタイトルになっていますが、実際には主にPharo 1.0 RC3とSqueak 4.x
+> について、日本語環境でストレスなく使えるようにするためのハックを行う予定
+> です。
+
+  それはすばらしいですね。僕はなんとなくPharoもTrunkもあまりまじめには
+追っていないのですが、もし質問があれば、開催中にでもぜひお寄せください。
+わかる範囲でなるべく協力したいと思います。
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Sun Apr 18 17:36:35 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Apr 18 17:36:44 2010
+Subject: [Squeak-ja: 4453] 第19回Smalltalk勉強会のお知らせ
+Message-ID: <JxEQM4pxPTGLBjfRxJn5y1Vw1@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/4/26(月) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai19kaismalltalkbenkyoukai
+
+今回のテーマはつい先ほど出たばかりの「Squeak 4.1」です。
+http://squeakboard.wordpress.com/2010/04/18/squeak-4-1-released/
+
+どんな機能が加わったのか、先日のハッカソンの結果を踏まえた日本語化の
+やり方などを扱っていく予定です。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]

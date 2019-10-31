@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7572] パーセルTwoflowerについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207572%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVEhPCU7JWsbKEJUd29mbG93ZXI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007567.html">
+   <LINK REL="Next"  HREF="007574.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7572] パーセルTwoflowerについて</H1>
+    <B>sunao furukawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207572%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVEhPCU7JWsbKEJUd29mbG93ZXI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7572] パーセルTwoflowerについて">sadie ＠ kind.ocn.ne.jp
+       </A><BR>
+    <I>2009年 6月  6日 (土) 15:54:07 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007567.html">[SML 7567] Re: メーリングリストの一時停止及び運用ドメインの変更のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="007574.html">[SML 7574] Re: パーセルTwoflowerについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7572">[ 日付 ]</a>
+              <a href="thread.html#7572">[ スレッド ]</a>
+              <a href="subject.html#7572">[ 件名 ]</a>
+              <a href="author.html#7572">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　古川と申します。
+　本を見ながらVisualWorksに触っているだけの私が娯楽に走るのも良いだろうと思って、Parcel ManagerのSuggestionsのToysでテトリスとかを見つけて遊んでいたところ、 
+そのすぐ下にTwoflowerBundleというWeb Browserを発見したので早速ロードしたところ、 
+
+
+Unhandled exception: Message not understood: #createDocument
+
+と冷たくノーティファイア画面が出てきました。デバッガを開いてみたところ、
+
+Twoflower.TfDocumentModel&gt;&gt;htmlString:
+
+というところの次からさまよい始めているということがわかりました。メソッドhtmlString:の中身は、
+
+htmlString: aString
+
+ self htmlAspect value: aString.
+ self createDocument.
+
+となっていました。システムブラウザでクラスTfDocumentModelを見てもcreateDocumentというメソッドはありませんでした。ひょっとしてVistaのユーザーアカウントコントロールでひっかかったかなと思い確認もしてみたのですがユーザーアカウントコントロールはオフでした（テトリスのハイスコアのファイルも書き込めています）。
+　TwoflowerはcreateDocument未実装のため使えないと解釈してしまっていいのでしょうか（まさかとは思いますが何回かブルースクリーンになったことがあるのでそれで消えたとか思うこともありました）。ちなみに使っているVisualWorksはVisualWorks7.6ncです。ほかのバージョンの事はわかりません。ほかの方の体験記か聞ければ幸いです。 
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007567.html">[SML 7567] Re: メーリングリストの一時停止及び運用ドメインの変更のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="007574.html">[SML 7574] Re: パーセルTwoflowerについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7572">[ 日付 ]</a>
+              <a href="thread.html#7572">[ スレッド ]</a>
+              <a href="subject.html#7572">[ 件名 ]</a>
+              <a href="author.html#7572">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

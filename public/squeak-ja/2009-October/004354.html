@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4354] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204354%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdvb2dsZSBJdD8gKFJlOiA%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIxMxskQjJzGyhCU21hbGx0YWxrGyRCSlkbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNi8ycSROJCpDTiRpJDsbKEIp%3F%3D&In-Reply-To=2d5d52a80909302234j6d650d67h6cb849c48150d539%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004353.html">
+   <LINK REL="Next"  HREF="004355.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4354] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)</H1>
+    <B>Korakurider</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204354%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdvb2dsZSBJdD8gKFJlOiA%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIxMxskQjJzGyhCU21hbGx0YWxrGyRCSlkbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNi8ycSROJCpDTiRpJDsbKEIp%3F%3D&In-Reply-To=2d5d52a80909302234j6d650d67h6cb849c48150d539%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4354] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)">korakurider ＠ gmail.com
+       </A><BR>
+    <I>2009年 10月  1日 (木) 15:15:36 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004353.html">[Squeak-ja: 4353] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+</A></li>
+        <LI>次の記事 <A HREF="004355.html">[Squeak-ja: 4355] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4354">[ 日付 ]</a>
+              <a href="thread.html#4354">[ スレッド ]</a>
+              <a href="subject.html#4354">[ 件名 ]</a>
+              <a href="author.html#4354">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは Korakuriderです。
+
+2009/10/1 Kazuhiro ABE &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee.abe ＠ nifty.ne.jp</A>&gt;:
+&gt;<i> こんにちは、阿部です。
+</I>&gt;<i>
+</I>&gt;<i> 2009年10月1日12:57 Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">admin ＠ yengawa.com</A>&gt;:
+</I>&gt;&gt;<i> ところで、阿部さんがライブコーディングした'Google It'が面白そうなので作
+</I>&gt;&gt;<i> りたいのですが、外部のWebブラウザを立ち上げる部分のコードはどうしていた
+</I>&gt;&gt;<i> のでしょうか?
+</I>&gt;<i>
+</I>&gt;<i> HTTPClient class&gt;&gt;requestURL:target: を使いました。このサンプルは以下にあります。
+</I>&gt;<i> <A HREF="http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509">http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509</A>
+</I>&gt;<i> このコメントにもありますが、この方法はSqueakをWebブラウザのプラグインで起動したときにのみ有効です。
+</I>&gt;<i> また、Squeakのバージョンによっては
+</I>&gt;<i> StandardFileStream&gt;&gt;requestURL:target:ifError:の中でセマフォがロックすることがあるので、その場合は適当に直してください。
+</I>&gt;<i>
+</I>&gt;<i> スタンドアロンのSqueakから呼び出す場合は、 Win32Shell&gt;&gt;shellOpen: を使います。これもサンプルがあります。
+</I>&gt;<i> <A HREF="http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679">http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679</A>
+</I>&gt;<i> コメントには開発版が必要とありますが、SqueakのバージョンによってはFFIも含めて入っていないこともあるので、その場合は適当なバージョンから引っこ抜いてきてください。
+</I>    ほとんど余談です。squeakland.org で今ベータ版を配布している Etoys4.0では、
+　　ScratchPluginを使ってブラウザを起動しています。
+　　（ほとんどそのためだけに ScratchPluginをバンドルしているようなものです）
+　　#launchBrowser あたりを見てみてください。
+
+/Korakurider
+
+&gt;<i>
+</I>&gt;<i>  //abee
+</I>&gt;<i> --
+</I>&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004353.html">[Squeak-ja: 4353] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+</A></li>
+	<LI>次の記事 <A HREF="004355.html">[Squeak-ja: 4355] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4354">[ 日付 ]</a>
+              <a href="thread.html#4354">[ スレッド ]</a>
+              <a href="subject.html#4354">[ 件名 ]</a>
+              <a href="author.html#4354">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

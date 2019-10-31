@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3905] Re: VMについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203905%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFZNGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=B77BE901-3EC2-4C41-ABBE-F05800017A79%40gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003904.html">
+   <LINK REL="Next"  HREF="003909.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3905] Re: VMについて</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203905%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFZNGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=B77BE901-3EC2-4C41-ABBE-F05800017A79%40gmail.com"
+       TITLE="[Squeak-ja: 3905] Re: VMについて">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 6月  2日 (月) 14:09:31 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003904.html">[Squeak-ja: 3904] VMについて
+</A></li>
+        <LI>次の記事 <A HREF="003909.html">[Squeak-ja: 3909] Re: VMについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3905">[ 日付 ]</a>
+              <a href="thread.html#3905">[ スレッド ]</a>
+              <a href="subject.html#3905">[ 件名 ]</a>
+              <a href="author.html#3905">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i> 吉田 翔です．
+</I>&gt;<i> 
+</I>&gt;<i> 最近SqueakのVMについて興味があり勉強をしたいのですが，い 
+</I>&gt;<i> きなりVMのソースを読むよりInterpreterクラスを勉強 
+</I>&gt;<i> してプラグインをある程度作れるようになってからの方がいいで 
+</I>&gt;<i> しょうか．
+</I>
+  プラグインはおまけでしょう。もともとはなかった概念ですし。
+  Interpreterから行くのがよいと思います。
+
+Squeak2.8程度のイメージとある程度古めのVM、および
+
+<A HREF="ftp://st.cs.uiuc.edu/pub/Smalltalk/Squeak/SmallSqueaksForPDAs/MiniSqueak2.2/mini.image">ftp://st.cs.uiuc.edu/pub/Smalltalk/Squeak/SmallSqueaksForPDAs/MiniSqueak2.2/mini.image</A>
+
+のようなmini.imageをダウンロードします。2.4cのイメージを起動し(たぶん
+お使いの機械はlittle endianのものだと思うので)、
+
+	(InterpreterSimulatorLSB new openOn: 'mini.image') test
+
+という式を実行すると、インタープリタのシミュレーションをイメージ内です
+ることができます。Interpreterのコードを読みつつ、実行しつつ、あるいは
+適当にbreak pointを入れて(実行しているselectorがある特定のものになった
+ら止まるように条件付きでself haltを入れたりすると便利)、様子をデバッガで
+観察したりするとかなりわかって来ると思います。
+
+  新しいVMやイメージではシミュレーションができないので(直すのもほ
+とんど無理というほど大変)、勉強のためには古いものがよいと思います。た
+だ、細かい修正は適宜行われているので、その工夫のところを学ぶためには古
+いものからの変更を理解しなくてはなりませんが。
+
+-- Yoshiki
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003904.html">[Squeak-ja: 3904] VMについて
+</A></li>
+	<LI>次の記事 <A HREF="003909.html">[Squeak-ja: 3909] Re: VMについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3905">[ 日付 ]</a>
+              <a href="thread.html#3905">[ スレッド ]</a>
+              <a href="subject.html#3905">[ 件名 ]</a>
+              <a href="author.html#3905">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7025] Jun609 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207025%5D%20Jun609%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007024.html">
+   <LINK REL="Next"  HREF="007026.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7025] Jun609 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207025%5D%20Jun609%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7025] Jun609 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2004年 12月 13日 (月) 21:59:30 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007024.html">[SML 7024] Jun607 for Smalltalk
+</A></li>
+        <LI>次の記事 <A HREF="007026.html">[SML 7026] Jun610
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7025">[ 日付 ]</a>
+              <a href="thread.html#7025">[ スレッド ]</a>
+              <a href="subject.html#7025">[ 件名 ]</a>
+              <a href="author.html#7025">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun609」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+<A HREF="http://www.sra.co.jp/smalltalk/jun/">http://www.sra.co.jp/smalltalk/jun/</A>
+<A HREF="http://www.sra.co.jp/smalltalk/jun/htmls/News.html">http://www.sra.co.jp/smalltalk/jun/htmls/News.html</A>
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+<A HREF="ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/">ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/</A>
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆グラファのノード削除時のメッセージ出力において、日本語辞書
+　を引く際に不適切なキーを用いていたところを修正しました。
+
+◆点群を視点と上方向ベクトルでソートする座標ソータを点探索ア
+　ルゴリズムを変更しました。視点から一番近い点から次の２番目
+　の点を探索する際に、上方向ベクトルの半空間で点群を絞り込ん
+　だ後、視線から１番目の点で生成できる直線への垂線の足を使う
+　ように改めています。
+
+◆マックにおけるレンダリングの際に VRAM が不足していることに
+　起因してビットマップが生成できない場合があり、リミッタをつ
+　けることで対処しました。
+
+◆３次元描画において、背面色がデバイスペイントやシンボルペイ
+　ントだった際に、いままで白色にしていましたが、デバイスペイ
+　ントやシンボルペイントを、きちんと色のインスタンスに変換し
+　て設定できるようにしました。これにより、ウィンドウ仕様にお
+　ける背面色指定や VisualWorks(Smalltalk) のデフォルトの背面
+　色が活きるようになりました。
+
+◆幾何平面の３次元描画オブジェクト化に変更を加えました。３６
+　角形の円盤を生成するようにしました。
+
+◆幾何三角形のそれぞれの辺を通り、その三角形に垂直な面を３つ
+　生成できるメソッドを追加し、ある座標が三角形の上にあるか否
+　かを判定できるメソッドを付加しています。
+
+◆３次元描画オブジェクトを軸付きでウィンドウ領域を指定して開
+　けるメソッド群を追加しました。
+
+◆座標変換３次元描画オブジェクトの内包オブジェクトを入れ子に
+　できるようにし、座標変換を OpenGL に任せるのではなく、じゅ
+　ん側で行ってレンダリングする方式に変更しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007024.html">[SML 7024] Jun607 for Smalltalk
+</A></li>
+	<LI>次の記事 <A HREF="007026.html">[SML 7026] Jun610
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7025">[ 日付 ]</a>
+              <a href="thread.html#7025">[ スレッド ]</a>
+              <a href="subject.html#7025">[ 件名 ]</a>
+              <a href="author.html#7025">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

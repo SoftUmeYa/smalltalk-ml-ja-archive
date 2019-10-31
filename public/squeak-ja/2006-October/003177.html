@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3177] モーフパッケージ化システム
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203177%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWIhPCVVJVElQyUxITwbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJTgyPSU3JTklRiVgGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003176.html">
+   <LINK REL="Next"  HREF="003178.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3177] モーフパッケージ化システム</H1>
+    <B>Kentaro Takemura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203177%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWIhPCVVJVElQyUxITwbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJTgyPSU3JTklRiVgGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3177] モーフパッケージ化システム">takemura ＠ bre.soc.i.kyoto-u.ac.jp
+       </A><BR>
+    <I>2006年 10月 17日 (火) 18:55:43 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003176.html">[Squeak-ja: 3176] Squeak曼荼羅
+</A></li>
+        <LI>次の記事 <A HREF="003178.html">[Squeak-ja: 3178] Re: モーフパッケージ化システム
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3177">[ 日付 ]</a>
+              <a href="thread.html#3177">[ スレッド ]</a>
+              <a href="subject.html#3177">[ 件名 ]</a>
+              <a href="author.html#3177">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>京都大学の竹村　顕大朗です
+
+現在、私の修士論文の研究において
+Squeakを使った教育を行う上での補助となる
+「モーフパッケージ化システム」というシステムを作っております。
+現時点ではまだシステムは出来上がってはおりませんが
+今回はそのシステムの背景・概要などを説明し
+皆様からのご意見、アドバイス等を伺いたくメールを出させていただきました。
+
+「モーフのパッケージ化システム」とは、特定の機能を持った一つないし複数のモーフを
+一つのキットとしてパッケージングし、それを自由に修正、配布する
+一連の枠組みを提供するシステムです。
+現在のSqueakを用いたワークショップ、授業においては
+普及し始めてからまだ間がないということもあり、
+DriveACarのような数個の雛形的内容を除いて
+指導内容・方法など決まったものがあまり無く、
+その成果の殆どが教員の力量に依存してしまうという状態になっております。
+そこで、今回私たちはこの「モーフパッケージ化システム」をつくり
+このような状況を改善しようと考えました。
+
+通常のプロジェクトにおいても、遊び場を利用して
+まとまった機能をもったモーフをコピーすることは可能でしたが、
+この方法ではプロジェクトを跨いだ利用はできません。
+また、プロジェクトを跨いだ利用をする為には「部品」フラップに登録する方法がありますが
+この場合、一度登録した内容を変更することが困難となります。
+そして、既存のほかの枠組みにおいては
+1.専門家でなくても自由にキットを作成できる簡便性
+2.誰でも任意かつ容易にキットを修正できる保守性
+3.簡単にキットを共有できる共有性
+の全ての要件を充たしているものは無く、
+この３つの要件こそがキットを誰でも作り共有するために必要なものと考えております。 
+
+
+このシステムはSqueakを用いた教育を行ううえで、
+そのカリキュラムを進める上で最適な専門キットをSqueakの専門家でなくても
+誰でも作成できるような仕組みを提供し、
+さらにそのキットを容易に配布・取得することができるようにすることで
+優れた教育プログラムを簡単に共有できるようにすることを狙いとしています。
+専門キットの作成に関しては専門家で無い教員であっても簡単に作れるよう
+通常のSqueak eToysのタイルスクリプティングの仕組みを流用し
+エラーの無い、簡単なプログラミングによる作成を考えております。
+また、キットの配布に関してはメタトイのスーパーパーツ瓶のようにSqueak単体で
+自由に配布、取得できるような仕組みを考えています。
+
+このような枠組みで現在詳細な仕様に関して検討中なのですが、
+実際、Squeakを現場で使用されている指導者の方からも
+仕様に関して、実際このようなシステムがあれば利用するかなどのご意見や、
+どのような点に留意すれば一般の教員にとってより利用しやすくなるのか
+などのアドバイスを頂きたいと考えております。
+
+それではよろしくお願いいたします。
+
+-/*/*-/-*/*--/*/*-/-*/-*-/*-*/
+京都大学大学院　情報学研究科
+社会情報学専攻
+竹村　顕大朗
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">takemura ＠ bre.soc.i.kyoto-u.ac.jp</A>
+/-*-*/-*/*-/-*/-/*/*-*-/*/-*-/
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003176.html">[Squeak-ja: 3176] Squeak曼荼羅
+</A></li>
+	<LI>次の記事 <A HREF="003178.html">[Squeak-ja: 3178] Re: モーフパッケージ化システム
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3177">[ 日付 ]</a>
+              <a href="thread.html#3177">[ スレッド ]</a>
+              <a href="subject.html#3177">[ 件名 ]</a>
+              <a href="author.html#3177">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2818] Re: Mac OS X 用インストーラー
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202818%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYyBPUyBYIBskQk1RGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlcyU5JUghPCVpITwbKEI%3D%3F%3D&In-Reply-To=a06001001bffb751ccb43%40asu.aasa.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002816.html">
+   <LINK REL="Next"  HREF="002819.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2818] Re: Mac OS X 用インストーラー</H1>
+    <B>Haruhiko Okumura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202818%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYyBPUyBYIBskQk1RGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlcyU5JUghPCVpITwbKEI%3D%3F%3D&In-Reply-To=a06001001bffb751ccb43%40asu.aasa.ac.jp"
+       TITLE="[Squeak-ja: 2818] Re: Mac OS X 用インストーラー">okumura ＠ edu.mie-u.ac.jp
+       </A><BR>
+    <I>2006年 1月 24日 (火) 16:21:55 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002816.html">[Squeak-ja: 2816] Re: Mac OS X 用インストーラー
+</A></li>
+        <LI>次の記事 <A HREF="002819.html">[Squeak-ja: 2819] Re: Mac OS X 用インストーラー
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2818">[ 日付 ]</a>
+              <a href="thread.html#2818">[ スレッド ]</a>
+              <a href="subject.html#2818">[ 件名 ]</a>
+              <a href="author.html#2818">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>奥村です。
+
+Kazuhiro Oyamatsu &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">oyak ＠ asu.aasa.ac.jp</A>&gt; wrote:
+
+&gt;<i> &gt;&gt;で、よくわからなかったのですがDouble-Click-To-Install.commandの６６行目の
+</I>&gt;<i> &gt;&gt;ditto -rsrcFork /Volumes/SqueakLand/SqueakLand /Applications/SqueakLand
+</I>&gt;<i> &gt;&gt;を
+</I>&gt;<i> &gt;&gt;ditto -rsrcFork /SqueakLand/SqueakLand /Applications/SqueakLand
+</I>&gt;<i> &gt;&gt;と変えたらインストールできました。
+</I>
+よくわからないのですが，これでうまくいくのでしょうか。
+
+10.4（Tiger）では /Volumes/SqueakLand としてマウントされるけれど，10.3
+では ~/Desktop/SqueakLand としてマウントされちゃうようで（~/Desktop/ に
+ダウンロードするからかもしれない），それに対してダブルクリックしたとき
+シェルは ~ で動くので，変えるとすれば
+
+ditto -rsrcFork Desktop/SqueakLand/SqueakLand /Applications/SqueakLand
+
+あるいは
+
+ditto -rsrcFork ~/Desktop/SqueakLand/SqueakLand /Applications/SqueakLand
+
+でしょうか。あまりちゃんと確かめてないので不安です。
+
+-- 
+奥村晴彦 <A HREF="http://oku.edu.mie-u.ac.jp/~okumura/">http://oku.edu.mie-u.ac.jp/~okumura/</A>
+〒514-8507 三重大学教育学部情報教育課程
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002816.html">[Squeak-ja: 2816] Re: Mac OS X 用インストーラー
+</A></li>
+	<LI>次の記事 <A HREF="002819.html">[Squeak-ja: 2819] Re: Mac OS X 用インストーラー
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2818">[ 日付 ]</a>
+              <a href="thread.html#2818">[ スレッド ]</a>
+              <a href="subject.html#2818">[ 件名 ]</a>
+              <a href="author.html#2818">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

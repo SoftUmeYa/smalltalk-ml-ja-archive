@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2119] TrueTypeフォントについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202119%5D%20%3D%3Fiso-2022-jp%3Fb%3FVHJ1ZVR5cGUbJEIlVSUpJXMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJUgkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002116.html">
+   <LINK REL="Next"  HREF="002120.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2119] TrueTypeフォントについて</H1>
+    <B>脇　紀和</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202119%5D%20%3D%3Fiso-2022-jp%3Fb%3FVHJ1ZVR5cGUbJEIlVSUpJXMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJUgkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2119] TrueTypeフォントについて">waki ＠ daito-con.co.jp
+       </A><BR>
+    <I>2004年 12月 17日 (金) 11:46:40 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002116.html">[Squeak-ja: 2116] Re: はじめまして
+</A></li>
+        <LI>次の記事 <A HREF="002120.html">[Squeak-ja: 2120] Re: TrueTypeフォントについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2119">[ 日付 ]</a>
+              <a href="thread.html#2119">[ スレッド ]</a>
+              <a href="subject.html#2119">[ 件名 ]</a>
+              <a href="author.html#2119">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>はじめまして、脇　紀和といいます。
+
+はじめて投稿します。
+質問の仕方がおかしいようでしたら
+以後、気をつけますのでご指摘願います。
+
+Squeakのフォントについて質問させてください。
+
+デフォルトのフォントサイズを使用すると
+大変見ずらいのでサイズを大きくしました。
+私は、NewYork フォントの 18 サイズが見やすいのですが、
+代入の矢印がアンダーバーになってしまうので、
+ＩＰＡで配布されている TrueTypeフォントを修正し
+TTCFontSet newTextStyleFromTTFile: 'IPAG.TTC'
+にて、TrueTypeフォントを導入しました。
+ここまでは問題ないのですが、この導入したフォントを
+Default text font に設定して、file list からバイナリーファイルを
+選択すると、ノーティファイアが立ち上がってしまいます。
+TTCFontSet&gt;&gt; widthOf: で問題があるようで、
+私のわかる範囲で調べてみたとこと、
+UTF8TextConverter の nextFromStream: でバイナリを読む際に
+読んだ値が127までならアスキーコードとして読むので問題ないのですが、
+128より上位のものを読んだときに２バイト、３バイト、４バイト文字と
+なるはずがバイナリなのでおかしくなり、結果的に
+MultiCharacter value: 16777323
+を返すのでおかしくなっているような感じがします。
+私の目のつけどことがおかしいのかも知れません。
+これ以上自分で対処できないので質問したいと考えました。
+
+TrueTypeフォントを Default text font にして
+問題が起きないようにできないでしょうか？
+
+どなたかご教授お願いいたします。
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002116.html">[Squeak-ja: 2116] Re: はじめまして
+</A></li>
+	<LI>次の記事 <A HREF="002120.html">[Squeak-ja: 2120] Re: TrueTypeフォントについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2119">[ 日付 ]</a>
+              <a href="thread.html#2119">[ スレッド ]</a>
+              <a href="subject.html#2119">[ 件名 ]</a>
+              <a href="author.html#2119">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,218 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu May  3 17:35:47 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 03 May 2012 17:35:47 +0900
+Subject: [SML 8008] Re:
+	第43回Smalltalk勉強会＠京都
+In-Reply-To: <4F9870EE.7050001@cc.kyoto-su.ac.jp>
+References: <4F9870EE.7050001@cc.kyoto-su.ac.jp>
+Message-ID: <4FA24363.7000905@cc.kyoto-su.ac.jp>
+
+昨夜、第43回Smalltalk勉強会@京都を開催しました。そこで決まっ
+た来月からの予定の簡単な報告をいたします。
+
+シリーズ化していたプログラム制御構造の話題が一段落しましたの
+で、来月からインタフェースビルダであるキャンバスのパレットを
+一つずつ扱ってゆきます。加えてDLL ＆ C Connectも間にはさむこ
+とにいたします。
+
+今後ともよろしくお願い申し上げます。
+
+--- 青木淳＠京都宇治
+
+(12/04/26 6:47), AOKI Atsushi wrote:
+> 第43回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto43
+>
+> 場所(部屋)はキャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第43回 Smalltalk勉強会＠京都
+> 日時：2012年05月02日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 前回は「閉包(クロージャ)」と「逐次・並行・約束」を行いました。
+> 今回もプログラム制御構造造を主題にして配付資料で勉強したいと
+> 思います。トピックスとして「継続(コンティニュエーション)」と
+> 「継続譲渡スタイル(CPS)」を解題してゆきます。ノート型のパーソ
+> ナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>
+> --- 青木淳＠京都宇治
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun May  6 09:31:11 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun, 06 May 2012 09:31:11 +0900
+Subject: [SML 8009] Re:
+	第43回Smalltalk勉強会＠京都
+In-Reply-To: <4FA24363.7000905@cc.kyoto-su.ac.jp>
+References: <4F9870EE.7050001@cc.kyoto-su.ac.jp>
+ <4FA24363.7000905@cc.kyoto-su.ac.jp>
+Message-ID: <4FA5C64F.4010304@cc.kyoto-su.ac.jp>
+
+妹尾さんから勉強会ログが届きましたので、下記のページに収録しました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto43
+配付資料に朱書き（赤のゴシック体）されています。（赤の隷書体は元々あったものです。）
+
+--- 青木淳＠京都宇治
+
+(12/05/03 17:35), AOKI Atsushi wrote:
+> 昨夜、第43回Smalltalk勉強会@京都を開催しました。そこで決まっ
+> た来月からの予定の簡単な報告をいたします。
+>
+> シリーズ化していたプログラム制御構造の話題が一段落しましたの
+> で、来月からインタフェースビルダであるキャンバスのパレットを
+> 一つずつ扱ってゆきます。加えてDLL ＆ C Connectも間にはさむこ
+> とにいたします。
+>
+> 今後ともよろしくお願い申し上げます。
+>
+> --- 青木淳＠京都宇治
+>
+> (12/04/26 6:47), AOKI Atsushi wrote:
+>> 第43回Smalltalk勉強会＠京都を開催します。
+>>
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto43
+>>
+>> 場所(部屋)はキャンプラ6階の第3講習室になります。
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第43回 Smalltalk勉強会＠京都
+>> 日時：2012年05月02日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 前回は「閉包(クロージャ)」と「逐次・並行・約束」を行いました。
+>> 今回もプログラム制御構造造を主題にして配付資料で勉強したいと
+>> 思います。トピックスとして「継続(コンティニュエーション)」と
+>> 「継続譲渡スタイル(CPS)」を解題してゆきます。ノート型のパーソ
+>> ナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>>
+>> --- 青木淳＠京都宇治
+
+From daisuke_oka ＠ nanosoftware.biz  Mon May  7 00:21:58 2012
+From: daisuke_oka ＠ nanosoftware.biz (岡大輔)
+Date: Mon, 7 May 2012 00:21:58 +0900
+Subject: [SML 8010] Re:
+	第43回Smalltalk勉強会＠京都
+In-Reply-To: <4FA5C64F.4010304@cc.kyoto-su.ac.jp>
+References: <4F9870EE.7050001@cc.kyoto-su.ac.jp>
+ <4FA24363.7000905@cc.kyoto-su.ac.jp>
+ <4FA5C64F.4010304@cc.kyoto-su.ac.jp>
+Message-ID: <CANMqmCOmPoAkGjuvdd=nwSJ6EZ8Es8r7jqzRzbRdbT7ZphTATA@mail.gmail.com>
+
+お疲れ様です。
+前回、京都勉強会でWindows 7を使用していた岡　大輔です。
+Macbook proを注文しましたので、次回の勉強会からMacを持っていきます。
+
+岡　大輔
+
+2012年5月6日9:31 AOKI Atsushi <atsushi ＠ cc.kyoto-su.ac.jp>:
+> 妹尾さんから勉強会ログが届きましたので、下記のページに収録しました。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto43
+> 配付資料に朱書き（赤のゴシック体）されています。（赤の隷書体は元々あったものです。）
+>
+> --- 青木淳＠京都宇治
+>
+>
+> (12/05/03 17:35), AOKI Atsushi wrote:
+>>
+>> 昨夜、第43回Smalltalk勉強会@京都を開催しました。そこで決まっ
+>> た来月からの予定の簡単な報告をいたします。
+>>
+>> シリーズ化していたプログラム制御構造の話題が一段落しましたの
+>> で、来月からインタフェースビルダであるキャンバスのパレットを
+>> 一つずつ扱ってゆきます。加えてDLL ＆ C Connectも間にはさむこ
+>> とにいたします。
+>>
+>> 今後ともよろしくお願い申し上げます。
+>>
+>> --- 青木淳＠京都宇治
+>>
+>> (12/04/26 6:47), AOKI Atsushi wrote:
+>>>
+>>> 第43回Smalltalk勉強会＠京都を開催します。
+>>>
+>>> 万障繰り合わせてJR京都駅前にお集まりください。
+>>>
+>>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto43
+>>>
+>>> 場所(部屋)はキャンプラ6階の第3講習室になります。
+>>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>>
+>>> 第43回 Smalltalk勉強会＠京都
+>>> 日時：2012年05月02日（水）19:00〜21:00
+>>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>>
+>>> 前回は「閉包(クロージャ)」と「逐次・並行・約束」を行いました。
+>>> 今回もプログラム制御構造造を主題にして配付資料で勉強したいと
+>>> 思います。トピックスとして「継続(コンティニュエーション)」と
+>>> 「継続譲渡スタイル(CPS)」を解題してゆきます。ノート型のパーソ
+>>> ナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+>>>
+>>> --- 青木淳＠京都宇治
+
+From ume ＠ softumeya.com  Fri May 18 09:58:47 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 18 May 2012 09:58:47 +0900
+Subject: [SML 8011]
+	第42回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdRTBQGMeF24RPFNN8cBs_2bzANejLrtkZ+_WEEBy+fBbw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2012/5/30(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai43kaismalltalkbenkyoukai
+
+今月のSmalltalk勉強会は、先日バージョンアップしたばかりのPharo 1.4のハッカソンです。
+1.4の新機能を試すのはもちろん、これを機にSmalltalkを勉強してみるのもよいでしょう。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed May 30 18:04:32 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 30 May 2012 18:04:32 +0900
+Subject: [SML 8012]
+	第44回Smalltalk勉強会＠京都
+Message-ID: <4FC5E2A0.3000909@cc.kyoto-su.ac.jp>
+
+第44回Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto44
+
+場所(部屋)はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第44回 Smalltalk勉強会＠京都
+日時：2012年06月06日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+前回でプログラム制御構造が一段落しましたので、新たな題材「GUI
+シリーズ」に取り組んでゆこうと存じます。まず手始めにSmalltalk
+ソースコードをHTML化してページにするドックレットのあたりから
+始めて、VisualWorksで提供されているウェジェット（GUI部品群）
+をひとつひとつ丁寧に扱ってゆきます。ノート型のパーソナルコン
+ピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+--- 青木淳
+
+追伸：
+来る09月29日(土)に【合同Smalltalk勉強会@名古屋】が開催されます。
+皆さま、カレンダーに書き込みをお願い申し上げます。
+【Smalltalk勉強会@東京】と【Smalltalk勉強会@京都の合同】になります。
+世話人は前田康行さん、きっと来月ぐらいにアナウンスがあると思います。
+

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2271] Re: ifTrue 等のカスケードについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202271%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGlmVHJ1ZSAbJEJFeSROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJSslOSUxITwlSSRLJEQkJCRGGyhC%3F%3D&In-Reply-To=20050117181112x%2Bj%23g7%40akademia.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002270.html">
+   <LINK REL="Next"  HREF="002272.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2271] Re: ifTrue 等のカスケードについて</H1>
+    <B>Masato Sumi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202271%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGlmVHJ1ZSAbJEJFeSROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJSslOSUxITwlSSRLJEQkJCRGGyhC%3F%3D&In-Reply-To=20050117181112x%2Bj%23g7%40akademia.co.jp"
+       TITLE="[Squeak-ja: 2271] Re: ifTrue 等のカスケードについて">sumi ＠ seagreen.ocn.ne.jp
+       </A><BR>
+    <I>2005年 1月 17日 (月) 18:50:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002270.html">[Squeak-ja: 2270] ifTrue 等のカスケードについて
+</A></li>
+        <LI>次の記事 <A HREF="002272.html">[Squeak-ja: 2272] Re: ifTrue 等のカスケードについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2271">[ 日付 ]</a>
+              <a href="thread.html#2271">[ スレッド ]</a>
+              <a href="subject.html#2271">[ 件名 ]</a>
+              <a href="author.html#2271">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>田川さん、ごきげんよう。鷲見です。
+
+true perform: #ifTrue: with: []; yourself
+
+とすればいけます。
+
+on 01/17/05 18:11, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tagawa ＠ akademia.co.jp</A> wrote:
+
+&gt;<i> そこには深い理由が隠されていたりするのでしょうか？
+</I>
+まずカスケード「;」は、レシーバを dup してそれを pop することで
+内部的には実現されています。
+
+[3 + 4; * 5] method symbolic
+
+=&gt; ...
+   30 &lt;22&gt; pushConstant: 3
+   31 &lt;88&gt; dup
+   32 &lt;23&gt; pushConstant: 4
+   33 &lt;B0&gt; send: +
+   34 &lt;87&gt; pop
+   35 &lt;24&gt; pushConstant: 5
+   36 &lt;B8&gt; send: *
+   ...
+
+他方で、#ifTrue: はソース上ではメッセージ送信を装っていますが、
+バイトコードレベルでは、効率を優先していわゆる goto 文で表現されます。
+
+[true ifTrue: [#hi]] method symbolic
+
+=&gt; ...
+   22 &lt;71&gt; pushConstant: true
+   23 &lt;99&gt; jumpFalse: 26
+   24 &lt;22&gt; pushConstant: #hi
+   25 &lt;90&gt; jumpTo: 27
+   26 &lt;73&gt; pushConstant: nil
+   ...
+
+ここからは想像ですが、ここに pop/dup を整合性よく入れるロジックを組むのが
+面倒だったのでコンパイル時に拒絶する仕様にしたのではないでしょうか。
+
+--
+Masato Sumi
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002270.html">[Squeak-ja: 2270] ifTrue 等のカスケードについて
+</A></li>
+	<LI>次の記事 <A HREF="002272.html">[Squeak-ja: 2272] Re: ifTrue 等のカスケードについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2271">[ 日付 ]</a>
+              <a href="thread.html#2271">[ スレッド ]</a>
+              <a href="subject.html#2271">[ 件名 ]</a>
+              <a href="author.html#2271">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

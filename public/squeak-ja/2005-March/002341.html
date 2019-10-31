@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2341] Re: Nihongo7について(NSqueak-2005-02-25.image)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202341%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283GyRCJEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhCKE5TcXVlYWstMjAwNS0wMi0yNS5pbWFnZSk%3D%3F%3D&In-Reply-To=42243EFA.7090100%40m2.pbc.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002340.html">
+   <LINK REL="Next"  HREF="002342.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2341] Re: Nihongo7について(NSqueak-2005-02-25.image)</H1>
+    <B>Takashi Yamamiya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202341%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283GyRCJEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhCKE5TcXVlYWstMjAwNS0wMi0yNS5pbWFnZSk%3D%3F%3D&In-Reply-To=42243EFA.7090100%40m2.pbc.ne.jp"
+       TITLE="[Squeak-ja: 2341] Re: Nihongo7について(NSqueak-2005-02-25.image)">tak ＠ metatoys.org
+       </A><BR>
+    <I>2005年 3月  1日 (火) 22:27:42 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002340.html">[Squeak-ja: 2340] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+        <LI>次の記事 <A HREF="002342.html">[Squeak-ja: 2342] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2341">[ 日付 ]</a>
+              <a href="thread.html#2341">[ スレッド ]</a>
+              <a href="subject.html#2341">[ 件名 ]</a>
+              <a href="author.html#2341">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮です。
+
+多分違う原因で、うちでも SqueakMap が使えなかったのですが、
+一つの可能性としては、
+
+FileDirectory default createDirectory: 'test'.
+self assert: (FileDirectory default directoryExists: 'test').
+
+が失敗してしまいます。まだ追求していませんが、とりあえずご報告まで。
+
+Hideo Kawamura wrote:
+&gt;<i> 川村です。お世話になってます。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i>ダウンロードしたばかりのNSqueak02-25では、こちらの症状は再現できませ
+</I>&gt;&gt;<i>んでした。
+</I>&gt;<i> 
+</I>&gt;<i> 少し詳しく調べました。
+</I>&gt;<i> 
+</I>&gt;<i> 試した環境を下図に示します。HTTP通信とその他TCP通信用のDNSサーバが２つあ
+</I>&gt;<i> り、HTTP通信はプロキシーを経由しますのでHTTPの名前解決は外部用のDNS
+</I>&gt;<i> server 2で行われます。一方NetNameResolverは内部用DNS server 1を使って名
+</I>&gt;<i> 前解決しようとして(*1)、指定されたエントリ'map1.squeakfoundation.org'が
+</I>&gt;<i> ないと返事するためエラーとなりました。
+</I>&gt;<i> *1)Windowsのネットワーク設定でDNSサーバはDNS server 1を指定している
+</I>&gt;<i> 
+</I>&gt;<i> +--+ +-----+ +-------+
+</I>&gt;<i> |PC|---+--------+Proxy|----+Inernet|
+</I>&gt;<i> +--+ | +--+--+ +-------+
+</I>&gt;<i> | |
+</I>&gt;<i> +-----+------+ | +-----+------+
+</I>&gt;<i> |DNS server 1| +---|DNS server 2|
+</I>&gt;<i> +-----+------+ +-----+------+
+</I>&gt;<i> 
+</I>&gt;<i> 下記Smalltalk式を実行してパケットレベル(Ethereal)で確認しました。
+</I>&gt;<i> NetNameResolver addressForName: 'map1.squeakfoundation.org'
+</I>&gt;<i> DNSサーバ(DNS server 1)から'standard query response, no such name'との返
+</I>&gt;<i> 答でした。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i>時間依存の症状ですかね？
+</I>&gt;<i> 
+</I>&gt;<i> というわけでタイムアウトではありませんでした。
+</I>&gt;<i> 
+</I>&gt;<i> プロキシーを使ってかつ、設定ＤＮＳサーバで名前解決できないと再現すると思
+</I>&gt;<i> います。企業や大学などプロキシを使っているところははまりやすいのでは...
+</I>&gt;<i> 
+</I>&gt;<i> #憶測ですが、以前のイメージではプロキシ経由のアクセスが実装されていない
+</I>&gt;<i> #ため、このようなコーディングになったのでは？実際NetNameResolver が返す
+</I>&gt;<i> #IPアドレスは使ってないし…。
+</I>
+-- 
+山宮 隆 ::= <A HREF="http://metatoys.org/">http://metatoys.org/</A>
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002340.html">[Squeak-ja: 2340] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+	<LI>次の記事 <A HREF="002342.html">[Squeak-ja: 2342] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2341">[ 日付 ]</a>
+              <a href="thread.html#2341">[ スレッド ]</a>
+              <a href="subject.html#2341">[ 件名 ]</a>
+              <a href="author.html#2341">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

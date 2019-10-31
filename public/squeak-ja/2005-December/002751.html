@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2751] Re: 図形の往復運動
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202751%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQj9eN0EkTjF9SXwbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMT9GMBsoQg%3D%3D%3F%3D&In-Reply-To=43959FDC150.DFDDABEE%40smtp.nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002750.html">
+   <LINK REL="Next"  HREF="002752.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2751] Re: 図形の往復運動</H1>
+    <B>小池</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202751%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQj9eN0EkTjF9SXwbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMT9GMBsoQg%3D%3D%3F%3D&In-Reply-To=43959FDC150.DFDDABEE%40smtp.nifty.com"
+       TITLE="[Squeak-ja: 2751] Re: 図形の往復運動">mha03030 ＠ nifty.com
+       </A><BR>
+    <I>2005年 12月  6日 (火) 23:42:02 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002750.html">[Squeak-ja: 2750] Re: 図形の往復運動
+</A></li>
+        <LI>次の記事 <A HREF="002752.html">[Squeak-ja: 2752] Re: 図形の往復運動
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2751">[ 日付 ]</a>
+              <a href="thread.html#2751">[ スレッド ]</a>
+              <a href="subject.html#2751">[ 件名 ]</a>
+              <a href="author.html#2751">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部様
+小池＠武蔵工業大学です。
+
+ありがとうございます。
+自力で解決しました。
+
+１つの図形を円運動させておき、
+
+もう１つの図形のY座標の数値を円運動している図形のY座標からもらうという 
+方法です。
+
+わからなかったのは、
+右の箱のなかに入っているタイルの→のついた部分をドラッグしないと、
+うまくスクリプターに張り込めないことが、よくわかりませんでした。
+
+この動きをつくる目的は、
+エイやイカのヒレのサインカーブのような動きを
+複数の●などをならべて表現することです。
+
+１つの●はこれで上下運動するようになりましたが、
+次は、複数の●をならべてずらしながら上下運動させて
+サインカーブの運動を作りたいのです。
+
+それを、
+ひとつの図形の円運動から座標を取得して
+すべての●が動かせるといいのですが、
+すこしづつ周期をずらした座標データを取得できればいいのでしょうか。
+
+私も努力しますが、
+アイデアありましたら教えてください。
+よろしくお願いします。
+
+
+
+
+&gt;<i>阿部@新百合です。
+</I>&gt;<i>
+</I>&gt;<i>On Sun, 4 Dec 2005 20:07:11 +0900
+</I>&gt;<i>小池 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mha03030 ＠ nifty.com</A>&gt; wrote:
+</I>&gt;&gt;<i>武蔵工業大学の小池と申します。とても基本的な質問でもうしわけないのです
+</I>&gt;&gt;<i>が、図形を往復運動させる方法について教えてください。以前、阿部さんに図
+</I>&gt;&gt;<i>形の円運動を利用する方法をお聞きしましたが、ある図形の円運動を別の図形
+</I>&gt;&gt;<i>の往復運動に接続する方法がわかりません。お願いします。
+</I>&gt;<i>
+</I>&gt;<i>以前にお話したのは以下の方法ですが、具体的にどのあたりが分かりにくかった
+</I>&gt;<i>のか教えていただければと思います。
+</I>&gt;<i>
+</I>&gt;<i><A HREF="http://squeakland.jp/super/launcher?%89%9D%95%9C%89%5E%93%AE.001.pr">http://squeakland.jp/super/launcher?%89%9D%95%9C%89%5E%93%AE.001.pr</A>
+</I>&gt;<i>
+</I>&gt;<i>  //abee
+</I>&gt;<i>--
+</I>&gt;<i>阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>
+
+-- 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）
+   武蔵工業大学　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mha03030 ＠ nifty.com</A>
+   Address:   〒224-0015　神奈川県横浜市都筑区牛久保3-3-1
+Tel  045-910-2912(直通）
+   <A HREF="http://www.yc.musashi-tech.ac.jp/~koike/">http://www.yc.musashi-tech.ac.jp/~koike/</A>
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002750.html">[Squeak-ja: 2750] Re: 図形の往復運動
+</A></li>
+	<LI>次の記事 <A HREF="002752.html">[Squeak-ja: 2752] Re: 図形の往復運動
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2751">[ 日付 ]</a>
+              <a href="thread.html#2751">[ スレッド ]</a>
+              <a href="subject.html#2751">[ 件名 ]</a>
+              <a href="author.html#2751">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

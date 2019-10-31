@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3977] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203977%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bBsoQiBzdCA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskTkZmGyhCICAoU3F1ZWFrMy45LjEtZmlu%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWwtNzA3NUop%3F%3D&In-Reply-To=20080901061913.ACD199A78E%401server.aquilax.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003976.html">
+   <LINK REL="Next"  HREF="003978.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3977] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203977%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bBsoQiBzdCA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskTkZmGyhCICAoU3F1ZWFrMy45LjEtZmlu%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWwtNzA3NUop%3F%3D&In-Reply-To=20080901061913.ACD199A78E%401server.aquilax.co.jp"
+       TITLE="[Squeak-ja: 3977] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 9月  3日 (水) 08:09:44 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003976.html">[Squeak-ja: 3976] 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+</A></li>
+        <LI>次の記事 <A HREF="003978.html">[Squeak-ja: 3978] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3977">[ 日付 ]</a>
+              <a href="thread.html#3977">[ スレッド ]</a>
+              <a href="subject.html#3977">[ 件名 ]</a>
+              <a href="author.html#3977">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i> 　対処法でfileInしたものをSqueak3.9.1-final-7075Jから
+</I>&gt;<i> fileOutし直した stファイルは問題なく「インストール」可能。
+</I>&gt;<i> 
+</I>&gt;<i> 　×と○のstファイルを比較してもほとんど違いが無いよう。
+</I>&gt;<i>     class定義の 変数名リスト末尾のspaceの有無ぐらい。
+</I>
+  ファイルの頭の3バイトが、Byte Ordr Markと呼ばれるUTF-8を表すためのバ
+イト列になって出てきていると思います。たとえば、
+
+  (FileStream readOnlyFileNamed: 'foo.cs') binary next: 3.
+
+という式をそれらのファイルで実行すると、返ってくる結果が違うはずです。
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003976.html">[Squeak-ja: 3976] 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+</A></li>
+	<LI>次の記事 <A HREF="003978.html">[Squeak-ja: 3978] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3977">[ 日付 ]</a>
+              <a href="thread.html#3977">[ スレッド ]</a>
+              <a href="subject.html#3977">[ 件名 ]</a>
+              <a href="author.html#3977">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

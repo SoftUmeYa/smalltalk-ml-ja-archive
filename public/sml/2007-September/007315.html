@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7315] Re: ブロック生成のメタプログラミング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207315%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46DF53E9.2090805%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007313.html">
+   <LINK REL="Next"  HREF="007316.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7315] Re: ブロック生成のメタプログラミング</H1>
+    <B>Masato Sumi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207315%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46DF53E9.2090805%40sra.co.jp"
+       TITLE="[SML 7315] Re: ブロック生成のメタプログラミング">sumi ＠ seagreen.ocn.ne.jp
+       </A><BR>
+    <I>2007年 9月 12日 (水) 01:30:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007313.html">[SML 7313] Re: ブロック生成のメタプログラミング
+</A></li>
+        <LI>次の記事 <A HREF="007316.html">[SML 7316] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7315">[ 日付 ]</a>
+              <a href="thread.html#7315">[ スレッド ]</a>
+              <a href="subject.html#7315">[ 件名 ]</a>
+              <a href="author.html#7315">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ご無沙汰しております。鷲見です。
+
+07/09/06 に AOKI Atsushi&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">aoki ＠ sra.co.jp</A>&gt; さんは書きました:
+&gt;<i> 伝言選択子（メッセージ・セレクタ）シンボルに対して用いるのが
+</I>&gt;<i> 適切です。使い方は以下のようになります。
+</I>
+面白い試みですね。ただちょっと疑問に思ったのでお伺いしたいのですが、
+ブロックをその都度生成する意義というのはどういうところにあるのでしょうか。
+
+たとえば Symbol に次のような振る舞いの #value: 、#value:value: を
+定義しても、同じようなことは可能だと思うのです。
+
+Symbol &gt;&gt; value: anObject
+    ^anObject perform: self
+
+Symbol &gt;&gt; value: anObject value: argument
+    ^anObject perform: self with: argument
+
+(1 to: 10) select: #even    &quot;=&gt; #(2 4 6 8 10) &quot;
+#(a b c) with: #(1 2 3) collect: #-&gt;   &quot;=&gt;  {#a-&gt;1 . #b-&gt;2 . #c-&gt;3} &quot;
+(1 to: 10) inject: 0 into: #+   &quot;=&gt; 55 &quot;
+
+
+自分なりに考えてみたところでは、実際にブロックを生成することで、通常、
+ブロックを引数に取るメソッド呼び出しのシグネチャのようなものを変えないため…、
+あるいは、シンボルがセレクタとしてまだ機能しないときの遅延処理のため…、
+といったものを思いつきましたが、他にもあれば教えていただければ幸いです。
+
+
+なお、#asBlockFor: のほうは、ある種のカリー化なので、ブロックをアドホックに
+生成する意義は大いにあると分かります。
+
+-- 
+Masato Sumi
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007313.html">[SML 7313] Re: ブロック生成のメタプログラミング
+</A></li>
+	<LI>次の記事 <A HREF="007316.html">[SML 7316] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7315">[ 日付 ]</a>
+              <a href="thread.html#7315">[ スレッド ]</a>
+              <a href="subject.html#7315">[ 件名 ]</a>
+              <a href="author.html#7315">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

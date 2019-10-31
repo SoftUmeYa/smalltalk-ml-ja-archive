@@ -1,0 +1,932 @@
+From umejava ＠ mars.dti.ne.jp  Wed Dec  3 08:50:32 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Dec  3 08:50:40 2008
+Subject: [Squeak-ja: 4094] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <JZ200811242126088.7312484@mars.dti.ne.jp>
+References: <JZ200811242126088.7312484@mars.dti.ne.jp>
+Message-ID: <JP200812030850326.4662843@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+かなり発表予定が充実してきました。
+http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+
+「あのSmalltalkがないじゃないか!」という方、ぜひご参戦ください。
+
+「なんだか濃ゆい。」という方、大丈夫です。お気軽にご参加ください。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 第4回Smalltalk勉強会の日時が決まりました。
+> 日時: 2008/12/19(金) 18:30-21:30 (3時間程度)
+> 場所: 株式会社豆蔵
+> 
+> 今回は年末スペシャルと銘打ち、いつもより広めの会場でセミナー+LT大会を
+> 予定しています。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+> 
+> 特に「レストアSmalltalk大集合」で、我こそはという方、ご自慢のSmalltalk
+> 持参でぜひご参戦いただければと思います。
+> 
+> 皆でSmalltalkを盛り上げていきましょう。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Thu Dec  4 04:27:26 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  4 04:27:38 2008
+Subject: [Squeak-ja: 4095] Re: Scratch 1.3.1がリリースされました。
+In-Reply-To: <2d5d52a80811270205n12829f29ue0c7a8f6f401f5ff@mail.gmail.com>
+References: <2d5d52a80811270205n12829f29ue0c7a8f6f401f5ff@mail.gmail.com>
+Message-ID: <2d5d52a80812031127j2d3165fby90fbff6bd5a836b7@mail.gmail.com>
+
+こんにちは、阿部です。
+11/25にScratchSource1.3.1がリリースされていました。
+
+http://info.scratch.mit.edu/Source_Code
+
+これで多言語化を含む1.3.1の新機能のソースコードを参照して変更することが可能になりました。ただし、ロゴや共有機能などの削除はScratchSource1.2.1と同様で、完全に1.3.1と同等ではありません。
+
+2008/11/27 19:05 Kazuhiro ABE <abee@squeakland.jp>:
+> Scratchは1024x768以上の解像度を想定していますが、Classmate
+> PCは800x480もしくは1024x600なので、低解像度用の対応が行われているのかもしれません(単に800x600に落としただけでは変化ありませんでした)。
+
+これは予想通りでした。
+
+ScratchFrameMorph isPT: true.
+
+上の式を評価することで、1000x530以上の解像度に対応します(PTはポルトガルのこと?)。具体的には最小ウィンドウサイズが変更されて、サブペインにスクロールバーが付き、合わせていくつかのボタンが省略もしくは縮小されます。
+これにより、ほとんどのネットブックでScratchを動かせるようになりました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From tetha ＠ st.rim.or.jp  Sun Dec  7 22:54:48 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Sun Dec  7 22:55:01 2008
+Subject: [Squeak-ja: 4096] 先日のFoW さんの件です。(Fwd: SeasideのMovieをアップしました
+References: <b672abbe0812031630u42b64beaq8bdd1704ed99161@mail.gmail.com>
+Message-ID: <8127DB81-5527-41E8-A06B-765CF44496AE@st.rim.or.jp>
+
+みなさん、こんばんは。
+林徹也です。
+連絡が遅れてしまいましたが、先日のFoWの様子のムービーが 
+アップロードされました。
+今回、来られなかったみなさまも是非、お楽しみください。
+
+
+では。
+--
+
+
+Begin forwarded message:
+
+> 差出人: "Yuichi Hasegawa" <hase@starlight-storm.com>
+> 日時: 2008年12月4日 9:30:54:JST
+> 宛先: fowmember@googlegroups.com
+> 件名: SeasideのMovieをアップしました
+> 返信先: fowmember@googlegroups.com
+>
+>
+> おはようございます。
+> 長谷川です。
+>
+> 　昨日おこなわれました「Seasideによるコンポーネント指向の 
+> Webアプリケーション」の模様をUPしましたので、お知らせ 
+> します。
+> 　タイトルが長かったので縮めて「Seaside」です(^^;)
+> 　http://gallery.me.com/hasegawadanna
+>
+> 　講師の梅澤さん、ありがとうございました。
+>
+> 以上です。よろしくお願い致します。
+> -- 
+> // 長谷川 裕一
+>
+> --~--~---------~--~----~------------~-------~--~----~
+> このメッセージは、次の Google グループへの参加を申し 
+> 込まれたことを確認す
+> るために送信されました。 Google グループ "FoW!"  
+> グループ。
+> このグループに投稿するには、次の宛先にメールを送信してくださ 
+> い。 fowmember@googlegroups.com
+> このグループから退会するには、次へメールをお送りください。  
+> fowmember+unsubscribe@googlegroups.com
+> その他のオプションについては、次の URL からグループに 
+> アクセスしてくださ
+> い。 http://groups.google.com/group/fowmember?hl=ja
+> -~----------~----~----~----~------~----~------~--~---
+>
+
+--
+林 徹也 Tetsuya HAYASHI
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Dec  9 23:18:20 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Dec  9 23:18:35 2008
+Subject: [Squeak-ja: 4097] Seasideによるコンポーネント指向のWebアプリケーション開発 on Google Video
+Message-ID: <JJ200812092318205.8393687@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+先日行われました勉強会FoW!でのセミナ
+「Seasideによるコンポーネント指向のWebアプリケーション開発」ですが、
+FoW!さんのご協力でGoogle Videoに載せてもらいましたので紹介しておきます。
+
+http://video.google.com/videoplay?docid=-1664398313656904232&ei=Rmw-SfWfJYaEwgO4vZCiCQ&q=fow
+
+阿部さんの「Dynabook の素顔」もありますね。
+http://video.google.com/videoplay?docid=-6242005289341417733&ei=Rmw-SfWfJYaEwgO4vZCiCQ&hl=ja
+
+ちなみに勉強会FoW!ではSmalltalk3部作として、林さんによるGNU Smalltalkのお話も
+予定されているようですので、こちらのほうも楽しみに待っていましょう。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Tue Dec 23 10:09:26 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Dec 23 10:09:43 2008
+Subject: [Squeak-ja: 4098] 第4回Smalltalk勉強会の資料をアップしました
+Message-ID: <JK200812231009268.6908890@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+先日19日に行われました第4回Smalltalk勉強会年末スペシャルですが、大いに
+盛り上がりました。普段はあまり来られないような顔ぶれも集まり、まれに見る
+濃さになったと思います。
+
+当日の資料を下記にアップしました。
+http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1/shiryou
+
+少しでも雰囲気が伝わればと思います。
+
+またこのようなスペシャルを定期的に行っていきますので、よろしくお願いします。
+
+通常版も1月に予定されていますので、こちらのほうもお気軽にどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From htakada ＠ acm.org  Fri Dec 26 18:27:58 2008
+From: htakada ＠ acm.org (Hideyuki Takada)
+Date: Fri Dec 26 18:28:10 2008
+Subject: [Squeak-ja: 4099] アランケイ博士京都大学名誉博士号授与記念講演会 および 国際会議C5のご案内
+Message-ID: <4fce2d310812260127h2a0430ddibf4c46d38943b6e9@mail.gmail.com>
+
+Squeak-ja の皆さま
+
+立命館大学の高田です。
+
+すでにご存知の方も多いかと思いますが，この度，アランケイ博士に京都大学
+から名誉博士号が授与されることになり，その記念講演会と祝賀会が1月20日に
+京都大学にて行われます。
+
+http://www.dl.kuis.kyoto-u.ac.jp/gcoe/event/53/
+
+また，同時期には国際会議 C5 が同じ会場にて行われております。
+
+http://www.cm.is.ritsumei.ac.jp/c5-09/
+
+かなり華やかなイベントになるかと思いますので，ぜひ皆さま，奮ってご参加の
+ほど，よろしくお願いいたします。
+
+-- 
+高田 秀志 (Hideyuki Takada)
+立命館大学 情報理工学部 情報システム学科
+From masuda ＠ im.dendai.ac.jp  Fri Dec 26 19:31:25 2008
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Fri Dec 26 19:31:35 2008
+Subject: [Squeak-ja: 4100] 子ども向けのオープンソース・プログラミング言語 (1/2)
+Message-ID: <4954B27D.8030401@im.dendai.ac.jp>
+
+増田＠電大です。
+
+ITmedia に Scratch が紹介されていますね。
+子ども向けのオープンソース・プログラミング言語 (1/2)
+http://www.itmedia.co.jp/enterprise/articles/0812/26/news022.html
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7emasuda/     FAX 03-5280-3592
+It's more fun to compute!
+From abee.abe ＠ nifty.ne.jp  Sun Dec 28 14:06:16 2008
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Dec 28 14:06:28 2008
+Subject: [Squeak-ja: 4101] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <492D4CCF.5040708@mx2.ttcn.ne.jp>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+	<uljv9au3g.wl%yoshiki@vpri.org>
+	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+	<492D4CCF.5040708@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>
+
+こんにちは、阿部です。
+一ヶ月前のScratchのSqueak組み込みシンセサイザ対応の話ですが、ちょっと時間があったのでやってみました。以下にイメージとチェンジを置いていますのでお試しください。
+http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+
+実際にLinuxでは試してはいませんが、MIDIが使えない環境であれば(SimpleMIDIPort
+midiIsSupportedがfalse)、自動的に組み込みシンセに切り替わるようになっています。
+
+使える楽器は限られており(base1, bassoon1, brass1, brass2, mellowBrass, clarinet,
+flute1, oboe1を適当に割当。デフォルトはoboe1)、音質もMIDI音源とは比べるべくもありませんが、音が鳴っているくらいは分かると思います。ドラムは無かったので、とりあえず選択された楽器と同じ音が鳴るようにしています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/11/26 22:19 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> 阿部様
+>
+> 宝迫です．面倒なことに突き合わせてしまって申し訳ありません．m(_ _)m
+> 以下、インラインにてお返事をさせて頂きます．
+>
+> Kazuhiro ABE さんは書きました:
+>> Squeak組み込みのソフトシンセであるScorePlayerはSimpleMIDIPortのインスタンスをhas-aしており、
+> (snip)
+>
+> Squeakには、ソフトシンセが組み込まれていたのですね．これがScratchで使え
+> ると良いのですけど、そうするためには、ソースをかなりいじらないといけない
+> ということはわかりました．
+>
+>> 1行では済まなさそうですが、どのくらいのニーズがあるでしょうか。
+>
+> そもそも、LinuxでScratchを使おう（実験とか、趣味とかというレベルではな
+> く、学校の授業などで実際に使うという意味）としている方がどのくらいいるか
+> ということを考えると、それほど多くなさそうです．ましてや、Picoボードとの
+> 組み合わせで、「楽器を作ろう」などということを考えているのは、さらに少数
+> 派ではないかと自覚しております．
+>
+> しかしながら、このことが教育現場におけるこれからの情報機器の活用に示唆を
+> 与えるものになるなら、そして、新しい道筋を開くものになるなら、是非成功さ
+> せたいと思っています．
+>
+>> いずれにしてもソースをいじれない1.3には即対応はできません
+>
+> 了解しました．すぐに対応できないことがわかりましたので、どのような授業に
+> するかという根本的なところも見直しながら、ScratchとPicoボードを使った授
+> 業を再考していきたいと思います．
+>
+> 何かご報告できることがありましたら、またお知らせ致します．たびたび、お手
+> を煩わせてしまい、申し訳ありませんでした．ありがとうございました．
+>
+> ------------------------------------------------------------------
+> 寳迫　芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Sun Dec 28 15:33:38 2008
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Dec 28 15:33:49 2008
+Subject: [Squeak-ja: 4102] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+	<uljv9au3g.wl%yoshiki@vpri.org>
+	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+	<492D4CCF.5040708@mx2.ttcn.ne.jp>
+	<2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>
+Message-ID: <2d5d52a80812272233u610c60afub21c903943c7d2a6@mail.gmail.com>
+
+こんにちは、阿部です。
+Ubuntu 8.10で確認したところ、不具合が見つかりましたので差し替えました。
+15:20以前にダウンロードした方はお手数ですが再度ダウンロードをお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/12/28 14:06 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+> こんにちは、阿部です。
+> 一ヶ月前のScratchのSqueak組み込みシンセサイザ対応の話ですが、ちょっと時間があったのでやってみました。以下にイメージとチェンジを置いていますのでお試しください。
+> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+>
+> 実際にLinuxでは試してはいませんが、MIDIが使えない環境であれば(SimpleMIDIPort
+> midiIsSupportedがfalse)、自動的に組み込みシンセに切り替わるようになっています。
+>
+> 使える楽器は限られており(base1, bassoon1, brass1, brass2, mellowBrass, clarinet,
+> flute1, oboe1を適当に割当。デフォルトはoboe1)、音質もMIDI音源とは比べるべくもありませんが、音が鳴っているくらいは分かると思います。ドラムは無かったので、とりあえず選択された楽器と同じ音が鳴るようにしています。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 2008/11/26 22:19 yhousako <yhousako@mx2.ttcn.ne.jp>:
+>> 阿部様
+>>
+>> 宝迫です．面倒なことに突き合わせてしまって申し訳ありません．m(_ _)m
+>> 以下、インラインにてお返事をさせて頂きます．
+>>
+>> Kazuhiro ABE さんは書きました:
+>>> Squeak組み込みのソフトシンセであるScorePlayerはSimpleMIDIPortのインスタンスをhas-aしており、
+>> (snip)
+>>
+>> Squeakには、ソフトシンセが組み込まれていたのですね．これがScratchで使え
+>> ると良いのですけど、そうするためには、ソースをかなりいじらないといけない
+>> ということはわかりました．
+>>
+>>> 1行では済まなさそうですが、どのくらいのニーズがあるでしょうか。
+>>
+>> そもそも、LinuxでScratchを使おう（実験とか、趣味とかというレベルではな
+>> く、学校の授業などで実際に使うという意味）としている方がどのくらいいるか
+>> ということを考えると、それほど多くなさそうです．ましてや、Picoボードとの
+>> 組み合わせで、「楽器を作ろう」などということを考えているのは、さらに少数
+>> 派ではないかと自覚しております．
+>>
+>> しかしながら、このことが教育現場におけるこれからの情報機器の活用に示唆を
+>> 与えるものになるなら、そして、新しい道筋を開くものになるなら、是非成功さ
+>> せたいと思っています．
+>>
+>>> いずれにしてもソースをいじれない1.3には即対応はできません
+>>
+>> 了解しました．すぐに対応できないことがわかりましたので、どのような授業に
+>> するかという根本的なところも見直しながら、ScratchとPicoボードを使った授
+>> 業を再考していきたいと思います．
+>>
+>> 何かご報告できることがありましたら、またお知らせ致します．たびたび、お手
+>> を煩わせてしまい、申し訳ありませんでした．ありがとうございました．
+>>
+>> ------------------------------------------------------------------
+>> 寳迫　芳人：yhousako@gmail.com
+>> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+>> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+>> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+>> つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Sun Dec 28 20:34:21 2008
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Dec 28 20:34:32 2008
+Subject: [Squeak-ja: 4103] Re: 子ども向けのオープンソース・プログラミング言語 (1/2)
+In-Reply-To: <4954B27D.8030401@im.dendai.ac.jp>
+References: <4954B27D.8030401@im.dendai.ac.jp>
+Message-ID: <2d5d52a80812280334w61c534dckc1cdff409a273c8b@mail.gmail.com>
+
+こんにちは、阿部です。
+Yahooニュースにも配信されたので、これで認知度が少しは上がるでしょう。
+http://headlines.yahoo.co.jp/hl?a=20081226-00000048-zdn_ep-sci
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/12/26 19:31 Hidetaka MASUDA <masuda@im.dendai.ac.jp>:
+> 増田＠電大です。
+>
+> ITmedia に Scratch が紹介されていますね。
+> 子ども向けのオープンソース・プログラミング言語 (1/2)
+> http://www.itmedia.co.jp/enterprise/articles/0812/26/news022.html
+> --
+> ------
+> 〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+> E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+> http://www.cdl.im.dendai.ac.jp/%7emasuda/     FAX 03-5280-3592
+> It's more fun to compute!
+From yhousako ＠ mx2.ttcn.ne.jp  Sun Dec 28 23:10:10 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Sun Dec 28 23:10:24 2008
+Subject: [Squeak-ja: 4104] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+In-Reply-To: <2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>	<uljv9au3g.wl%yoshiki@vpri.org>	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>	<492D4CCF.5040708@mx2.ttcn.ne.jp>
+	<2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>
+Message-ID: <495788C2.8050100@mx2.ttcn.ne.jp>
+
+阿部様
+
+宝迫です．年末のお忙しいところ対応して頂きありがとうございます．
+
+先ほどダウンロードしてKNOPPIX（CECのOSP基本パッケージv2）で試してみました．
+http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+
+＃なぜ「OSP基本パッケージv2」を使ったかというと、Scratchを使った授業を計
+画しており、その本番に使うのがこれだからという理由です．
+
+【進展した点】
+音が鳴りました！感激しました．音階（ドレミ）についても、OKです．Picoボー
+ドからもコントロールできました．
+
+【問題と思われる点】
+音色の変更ができません．というより、「○のドラムを…」や「楽器を○にする」
+で使われている数値（○の部分）が、音階の数値として使われているようです．
+そのため、この数値を変更すると音階が変わります．（音は多分オーボエです．）
+
+もう一つの問題として、音階と同時に音量も変化してしまいます．低い音は音量
+も小さく（聞こえなくなる）、高い音は音量も大きくなります．また「調べる」
+の「音量」と「スライダー」の値を表示させようとすると固まったり落ちたりし
+ます．
+
+音色、音階、音量の3つの要素を数値で設定しているため、ソース自体がややこ
+しくなっているかも知れないと思いました．
+
+あるいは、作って頂いたzipを展開し、その中に入っていたファイルを全て
+Scratchフォルダに放り込んで、runscratch.shをちょいと書き替えて起動すると
+いう手順が間違えているのも知れないですが…．
+
+以上、動作確認のご報告を致します．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> 一ヶ月前のScratchのSqueak組み込みシンセサイザ対応の話ですが、ちょっと時間があったのでやってみました。以下にイメージとチェンジを置いていますのでお試しください。
+> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+> 
+> 実際にLinuxでは試してはいませんが、MIDIが使えない環境であれば(SimpleMIDIPort
+> midiIsSupportedがfalse)、自動的に組み込みシンセに切り替わるようになっています。
+> 
+> 使える楽器は限られており(base1, bassoon1, brass1, brass2, mellowBrass, clarinet,
+> flute1, oboe1を適当に割当。デフォルトはoboe1)、音質もMIDI音源とは比べるべくもありませんが、音が鳴っているくらいは分かると思います。ドラムは無かったので、とりあえず選択された楽器と同じ音が鳴るようにしています。
+> 
+>  //abee
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Mon Dec 29 14:44:14 2008
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon Dec 29 14:44:28 2008
+Subject: [Squeak-ja: 4105] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+In-Reply-To: <495788C2.8050100@mx2.ttcn.ne.jp>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+	<uljv9au3g.wl%yoshiki@vpri.org>
+	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+	<492D4CCF.5040708@mx2.ttcn.ne.jp>
+	<2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>
+	<495788C2.8050100@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80812282144v16face9bkd41b43eb97124a39@mail.gmail.com>
+
+こんにちは、阿部です。
+
+とりあえず音が出たということでよかったです。試された手順はそれで問題ありません(csファイルはソースなので入れなくても大丈夫です)。
+
+現在のScratch(GM)の楽器番号に対するマッピングは、似た名前を参考にして以下のようになっています。
+
+33 34 35 36 37 38 39 40 は bass1
+71 は bassoon1
+62 は brass1
+63 は brass2
+64 は mellowBrassS
+72 は clarinet
+74 76 は flute1
+69 は oboe1
+17 18 19 20 21 は organ1
+それ以外はすべてデフォルトのoboe1です。
+
+これらはFM音源ですが、もともとの定義が悪く、ほとんど音色の違いが分かりません。また、bass1のようにほとんど聞こえないものもあります。しかし、64と72とかであれば分かると思います。
+ドラムについては、もともとドラムの音源がありませんので、単純にドラムの種類の指定が音階になっています。実用を狙ったわけではなく、ダミーで入っているとお考えください。
+
+音量については、人間の感覚的なラウドネス曲線に対する補正を行っていないので、
+周波数と音量が比例して感じられるのだと思います。
+http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A
+この対応をするかどうかですね。
+
+「調べる」については、今回いじっていないので、これとは別のScratch Boardまわりの問題ですね。
+ご存知と思いますが、以下のページにあるようにフィードバックを返してもらえるとよいと思います。
+http://info.scratch.mit.edu/Linux_installer
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/12/28 23:10 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> 阿部様
+>
+> 宝迫です．年末のお忙しいところ対応して頂きありがとうございます．
+>
+> 先ほどダウンロードしてKNOPPIX（CECのOSP基本パッケージv2）で試してみました．
+> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+>
+> ＃なぜ「OSP基本パッケージv2」を使ったかというと、Scratchを使った授業を計
+> 画しており、その本番に使うのがこれだからという理由です．
+>
+> 【進展した点】
+> 音が鳴りました！感激しました．音階（ドレミ）についても、OKです．Picoボー
+> ドからもコントロールできました．
+>
+> 【問題と思われる点】
+> 音色の変更ができません．というより、「○のドラムを…」や「楽器を○にする」
+> で使われている数値（○の部分）が、音階の数値として使われているようです．
+> そのため、この数値を変更すると音階が変わります．（音は多分オーボエです．）
+>
+> もう一つの問題として、音階と同時に音量も変化してしまいます．低い音は音量
+> も小さく（聞こえなくなる）、高い音は音量も大きくなります．また「調べる」
+> の「音量」と「スライダー」の値を表示させようとすると固まったり落ちたりし
+> ます．
+>
+> 音色、音階、音量の3つの要素を数値で設定しているため、ソース自体がややこ
+> しくなっているかも知れないと思いました．
+>
+> あるいは、作って頂いたzipを展開し、その中に入っていたファイルを全て
+> Scratchフォルダに放り込んで、runscratch.shをちょいと書き替えて起動すると
+> いう手順が間違えているのも知れないですが…．
+>
+> 以上、動作確認のご報告を致します．
+>
+> Kazuhiro ABE さんは書きました:
+>> こんにちは、阿部です。
+>> 一ヶ月前のScratchのSqueak組み込みシンセサイザ対応の話ですが、ちょっと時間があったのでやってみました。以下にイメージとチェンジを置いていますのでお試しください。
+>> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+>>
+>> 実際にLinuxでは試してはいませんが、MIDIが使えない環境であれば(SimpleMIDIPort
+>> midiIsSupportedがfalse)、自動的に組み込みシンセに切り替わるようになっています。
+>>
+>> 使える楽器は限られており(base1, bassoon1, brass1, brass2, mellowBrass, clarinet,
+>> flute1, oboe1を適当に割当。デフォルトはoboe1)、音質もMIDI音源とは比べるべくもありませんが、音が鳴っているくらいは分かると思います。ドラムは無かったので、とりあえず選択された楽器と同じ音が鳴るようにしています。
+>>
+>>  //abee
+>
+> ------------------------------------------------------------------
+> 寳迫　芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+From yhousako ＠ mx2.ttcn.ne.jp  Mon Dec 29 23:31:45 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Mon Dec 29 23:31:57 2008
+Subject: [Squeak-ja: 4106] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+In-Reply-To: <2d5d52a80812282144v16face9bkd41b43eb97124a39@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>	<uljv9au3g.wl%yoshiki@vpri.org>	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>	<492D4CCF.5040708@mx2.ttcn.ne.jp>	<2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>	<495788C2.8050100@mx2.ttcn.ne.jp>
+	<2d5d52a80812282144v16face9bkd41b43eb97124a39@mail.gmail.com>
+Message-ID: <4958DF51.7070607@mx2.ttcn.ne.jp>
+
+宝迫です．恥ずかしながら、大きな勘違いをしておりました．(^_^;;;
+そのために、動作確認でもさらに勘違いをしました．
+
+【勘違い1】
+Scratchの内部に完全なGM音源を持っていると思いこんでいました．阿部さんの
+メールを良く読んでいれば読み取れたはずなのですが、思い込みとは恐ろしいも
+のです．（反省）
+
+【勘違い2】
+GM音源では打楽器音は鍵盤に割り振られるので、「音階になっている」というこ
+とが「鍵盤に割り振られている」と同義であると勘違いをしておりました．これ
+も前のメールを良く読んでいればわかったはずでした．（赤面）
+
+改めて動作確認をしました．
+
+【動作確認の結果】
+「楽器を○にする」で音色の変更はできました．「○の音符を…」と「○のドラム
+を…」は、同じ動作になっています．「楽器を○にする」で音色を変えると、「○
+のドラムを…」で鳴る音も変わります．これも、［4101］で解説して頂いた通り
+です．
+
+Kazuhiro ABE さんは書きました:
+> これらはFM音源ですが、もともとの定義が悪く、ほとんど音色の違いが分かりません。
+
+2オペレータくらいでしょうか？確かに、音色の違いはわかりにくいと思いました．
+
+> 音量については、人間の感覚的なラウドネス曲線に対する補正を行っていないので、
+> 周波数と音量が比例して感じられるのだと思います。
+> http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A
+> この対応をするかどうかですね。
+
+この辺りも、普通のGM音源なら問題ないはずのところですよね．現実の問題とし
+ては、補正しないと実用的ではないと思います．簡単にできればよいのですが、
+いかがでしょうか．
+
+> 「調べる」については、今回いじっていないので、これとは別のScratch Boardまわりの問題ですね。
+> ご存知と思いますが、以下のページにあるようにフィードバックを返してもらえるとよいと思います。
+> http://info.scratch.mit.edu/Linux_installer
+
+今まで使っていなかったので、気づかなかったのだと思いますが、「調べる」の
+「音量」がどうも上手く動かないようです．（「スライダー…」は関係がなかった）
+
+こちらで確認したところ、Picoボードを挿していなくても同じで、スクリプトに
+何も組んでいない状態かスクリプトを組んであってもScratchを起動してから一
+度も音を出していない状態なら、「音量」にチェックを入れても動作に問題はあ
+りません．ところが、何らかの音（「ニャー」も含む）を出そうとすると、ダメ
+なのです．
+
+フィードバックに協力したいのは山々ですが、英語がからっきしダメなので、何
+をどうしたらよいかよく分かりません．(^_^;;;
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Tue Dec 30 13:30:15 2008
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Tue Dec 30 13:30:28 2008
+Subject: [Squeak-ja: 4107] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+In-Reply-To: <uiqr8paba.wl%yoshiki@vpri.org>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+Message-ID: <2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+
+こんにちは、阿部です。
+とりあえず、ScratchSourceCode1.3.1と3.7-7JPatchedを組み合わせてLinuxで日本語入力できるようにしてみました。別スレの組み込みシンセと同じイメージに入れています。
+http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+
+3.7-7JPatchedから上がってくるUTF-8は、1バイトごとにMorphicEventのkeyValueになっていますが、ScratchはMorphicEventのunicodeCharとしてUTF-32を期待しています。このパッチでは先頭バイトが16rE0以上なら3バイト取り出してUTF-32をつくり、unicodeCharに格納しています。超適当ですが動作確認はできるとできると思います。
+ちゃんとしたVMができるまでの間に合わせということで。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/11/01 9:19 Yoshiki Ohshima <yoshiki@vpri.org>:
+> At Sat, 01 Nov 2008 08:28:08 +0900,
+> yhousako wrote:
+>>
+>> 3.7-7JPatchedとSqueak2005J2の組み合わせでは、全く問題がなかったことを考
+>> えると．Scratch.image（1.3）の問題なのではないかと推察しました．このこと
+>> について、解決のヒントになるような情報を探してみましたが、解決に至ってお
+>> りません．そこで識者の皆様に、お知恵を拝借できればと思い、メールをさせて
+>> 頂いた次第です．よろしくお願い致します．
+>
+>  惜しいですね。
+>
+>  最近は本家のVM (3.10.3)にも廣島さんが作ってくれたものを基にした日本
+> 語入力を可能にするオプションがついていて、Etoysのイメージであればちゃ
+> んと入力できるはず、なのですが、いつからかまた壊れてしまっているのです
+> よね。
+>
+>  寳迫さんの手引きに従って環境を整えた後、3.10.3 VMで
+>
+>  squeak -vm-display-X11 -compositioninput Scratch.image
+>
+> のようにして起動すると、UTF-8の文字列が入力されているようなのですが、
+> 入力したものは化けてしまいます。
+>
+>  機会があったら直してみたいと思いますし、Johnにもコンタクトしてみたい
+> と思います。
+>
+> -- Yoshiki
+From yoshiki ＠ vpri.org  Tue Dec 30 18:35:53 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Dec 30 18:36:48 2008
+Subject: [Squeak-ja: 4108] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+In-Reply-To: <2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+Message-ID: <uocyuc8ee.wl%yoshiki@vpri.org>
+
+At Tue, 30 Dec 2008 13:30:15 +0900,
+Kazuhiro ABE wrote:
+> 
+> こんにちは、阿部です。
+> とりあえず、ScratchSourceCode1.3.1と3.7-7JPatchedを組み合わせてLinuxで日本語入力できるようにしてみました。別スレの組み込みシンセと同じイメージに入れています。
+> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+> 
+> 3.7-7JPatchedから上がってくるUTF-8は、1バイトごとにMorphicEventのkeyValueになっていますが、ScratchはMorphicEventのunicodeCharとしてUTF-32を期待しています。このパッチでは先頭バイトが16rE0以上なら3バイト取り出してUTF-32をつくり、unicodeCharに格納しています。超適当ですが動作確認はできるとできると思います。
+> ちゃんとしたVMができるまでの間に合わせということで。
+
+  こちらのほうではもうしばらくUnix VMがUTF-32をあげてくるようにはなら
+ないと思うのですが、新しいVMとEtoysイメージの組み合わせで日本語入力を
+可能にするパッチをしばらく前にsqueak-devに流しました。
+
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2008-December/133090.html
+
+こちらでアナウンスするのを忘れていましたが、よろしければいろいろなOSと
+の組み合わせでためしてはいただけないでしょうか。
+
+-- Yoshiki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: jaInputDec8-yo.1.cs
+型:         application/octet-stream
+サイズ:     2122 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20081230/96e1a18d/jaInputDec8-yo.1.obj
+From yhousako ＠ mx2.ttcn.ne.jp  Wed Dec 31 12:29:49 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Wed Dec 31 12:30:00 2008
+Subject: [Squeak-ja: 4109] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>	<48F09F06.1040806@mx2.ttcn.ne.jp>	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>	<490B9488.9050106@mx2.ttcn.ne.jp>
+	<uiqr8paba.wl%yoshiki@vpri.org>
+	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+Message-ID: <495AE72D.9080509@mx2.ttcn.ne.jp>
+
+宝迫です．お世話になります．
+
+日本語入力の動作確認しました．Ubuntu8.10とKNOPPIX5.3.1にインストールした
+Scratchでは、問題なく日本語入力ができるようになりました．しかし、CECの
+OSP基本パッケージv2（KNOPPIX5.1.1ベース）では、「UndefinedObjects are
+not indexable」というエラーメッセージが出ました．
+
+以下その内容です．
+----------------------------------------
+UndefinedObject(Object)>>error:
+UndefinedObject(Object)>>errorNotIndexable
+UndefinedObject(Object)>>size
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[] in PasteUpMorph>>doOneCycleNow
+Array(SequenceableCollection)>>do:
+PasteUpMorph>>handsDo:
+PasteUpMorph>>doOneCycleNow
+PasteUpMorph>>doOneCycle
+----------------------------------------
+私には何を言っているのかよくわからないのですが、日本語文字列を上手く受け
+渡しできていないということだけはわかりました．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> とりあえず、ScratchSourceCode1.3.1と3.7-7JPatchedを組み合わせてLinuxで日本語入力できるようにしてみました。別スレの組み込みシンセと同じイメージに入れています。
+> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+> 
+> 3.7-7JPatchedから上がってくるUTF-8は、1バイトごとにMorphicEventのkeyValueになっていますが、ScratchはMorphicEventのunicodeCharとしてUTF-32を期待しています。このパッチでは先頭バイトが16rE0以上なら3バイト取り出してUTF-32をつくり、unicodeCharに格納しています。超適当ですが動作確認はできるとできると思います。
+> ちゃんとしたVMができるまでの間に合わせということで。
+> 
+>  //abee
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Wed Dec 31 16:08:39 2008
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Wed Dec 31 16:08:51 2008
+Subject: [Squeak-ja: 4110] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <495AE72D.9080509@mx2.ttcn.ne.jp>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+	<495AE72D.9080509@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+
+こんにちは、阿部です。
+確認ありがとうございます。
+OSP基本パッケージv2の問題ですが、確定前の文字列を11文字以上入力していないでしょうか。この場合、私のUbuntu
+8.10でも同じエラーが出ることを確認しています。
+これは3.7-7JPatchedの既知のバグです。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html
+(イメージが違うのでエラーは違いますが原因は同じ)
+
+とりあえずの対処法としては文節を短く区切って確定してもらうことになると思います。
+このバグを修正したバージョンを廣島さんが作ってくれているので、大島さんが作ってくれたパッチと合わせてScratchにも適用できないか調べてみます。
+大島さん、4108で書かれていた「新しいVM」というのは具体的にはどれを指すのでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/12/31 12:29 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> 宝迫です．お世話になります．
+>
+> 日本語入力の動作確認しました．Ubuntu8.10とKNOPPIX5.3.1にインストールした
+> Scratchでは、問題なく日本語入力ができるようになりました．しかし、CECの
+> OSP基本パッケージv2（KNOPPIX5.1.1ベース）では、「UndefinedObjects are
+> not indexable」というエラーメッセージが出ました．
+>
+> 以下その内容です．
+> ----------------------------------------
+> UndefinedObject(Object)>>error:
+> UndefinedObject(Object)>>errorNotIndexable
+> UndefinedObject(Object)>>size
+> HandMorph>>handleEvent:
+> HandMorph>>processEvents
+> [] in PasteUpMorph>>doOneCycleNow
+> Array(SequenceableCollection)>>do:
+> PasteUpMorph>>handsDo:
+> PasteUpMorph>>doOneCycleNow
+> PasteUpMorph>>doOneCycle
+> ----------------------------------------
+> 私には何を言っているのかよくわからないのですが、日本語文字列を上手く受け
+> 渡しできていないということだけはわかりました．
+>
+> Kazuhiro ABE さんは書きました:
+>> こんにちは、阿部です。
+>> とりあえず、ScratchSourceCode1.3.1と3.7-7JPatchedを組み合わせてLinuxで日本語入力できるようにしてみました。別スレの組み込みシンセと同じイメージに入れています。
+>> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+>>
+>> 3.7-7JPatchedから上がってくるUTF-8は、1バイトごとにMorphicEventのkeyValueになっていますが、ScratchはMorphicEventのunicodeCharとしてUTF-32を期待しています。このパッチでは先頭バイトが16rE0以上なら3バイト取り出してUTF-32をつくり、unicodeCharに格納しています。超適当ですが動作確認はできるとできると思います。
+>> ちゃんとしたVMができるまでの間に合わせということで。
+>>
+>>  //abee
+>
+> ------------------------------------------------------------------
+> 寳迫　芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Wed Dec 31 16:50:18 2008
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Wed Dec 31 16:50:30 2008
+Subject: [Squeak-ja: 4111] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+	<495AE72D.9080509@mx2.ttcn.ne.jp>
+	<2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+Message-ID: <2d5d52a80812302350k68f62c19o16d06cff38eeccf4@mail.gmail.com>
+
+こんにちは、阿部です。
+
+大島さんの4056を参考に、
+http://www.smalltalk.jp/pipermail/squeak-ja/2008-November/004056.html
+
+最新と思われるSqueak-3.10-4.i686-pc-linux-gnuを使って、
+http://squeakvm.org/unix/
+
+Ubuntu 8.10で以下のように起動してみました。
+
+/usr/local/bin/squeak -vm-display-X11 -compositioninput
+ScratchSourceCode1.3.1synth.image
+
+結果、確定前文字列の制限もなく正しく入力できました。
+しかし、今度は音が出なくなりますね。
+
+soundStart: snd_add_pcm_handler: Function not implemented
+
+あちらを立てればこちらが立たずです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/12/31 16:08 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+> こんにちは、阿部です。
+> 確認ありがとうございます。
+> OSP基本パッケージv2の問題ですが、確定前の文字列を11文字以上入力していないでしょうか。この場合、私のUbuntu
+> 8.10でも同じエラーが出ることを確認しています。
+> これは3.7-7JPatchedの既知のバグです。
+>
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html
+> (イメージが違うのでエラーは違いますが原因は同じ)
+>
+> とりあえずの対処法としては文節を短く区切って確定してもらうことになると思います。
+> このバグを修正したバージョンを廣島さんが作ってくれているので、大島さんが作ってくれたパッチと合わせてScratchにも適用できないか調べてみます。
+> 大島さん、4108で書かれていた「新しいVM」というのは具体的にはどれを指すのでしょうか。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 2008/12/31 12:29 yhousako <yhousako@mx2.ttcn.ne.jp>:
+>> 宝迫です．お世話になります．
+>>
+>> 日本語入力の動作確認しました．Ubuntu8.10とKNOPPIX5.3.1にインストールした
+>> Scratchでは、問題なく日本語入力ができるようになりました．しかし、CECの
+>> OSP基本パッケージv2（KNOPPIX5.1.1ベース）では、「UndefinedObjects are
+>> not indexable」というエラーメッセージが出ました．
+>>
+>> 以下その内容です．
+>> ----------------------------------------
+>> UndefinedObject(Object)>>error:
+>> UndefinedObject(Object)>>errorNotIndexable
+>> UndefinedObject(Object)>>size
+>> HandMorph>>handleEvent:
+>> HandMorph>>processEvents
+>> [] in PasteUpMorph>>doOneCycleNow
+>> Array(SequenceableCollection)>>do:
+>> PasteUpMorph>>handsDo:
+>> PasteUpMorph>>doOneCycleNow
+>> PasteUpMorph>>doOneCycle
+>> ----------------------------------------
+>> 私には何を言っているのかよくわからないのですが、日本語文字列を上手く受け
+>> 渡しできていないということだけはわかりました．
+>>
+>> Kazuhiro ABE さんは書きました:
+>>> こんにちは、阿部です。
+>>> とりあえず、ScratchSourceCode1.3.1と3.7-7JPatchedを組み合わせてLinuxで日本語入力できるようにしてみました。別スレの組み込みシンセと同じイメージに入れています。
+>>> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+>>>
+>>> 3.7-7JPatchedから上がってくるUTF-8は、1バイトごとにMorphicEventのkeyValueになっていますが、ScratchはMorphicEventのunicodeCharとしてUTF-32を期待しています。このパッチでは先頭バイトが16rE0以上なら3バイト取り出してUTF-32をつくり、unicodeCharに格納しています。超適当ですが動作確認はできるとできると思います。
+>>> ちゃんとしたVMができるまでの間に合わせということで。
+>>>
+>>>  //abee
+>>
+>> ------------------------------------------------------------------
+>> 寳迫　芳人：yhousako@gmail.com
+>> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+>> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+>> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+>> つれづれなるままに…：http://4oc.blogspot.com/

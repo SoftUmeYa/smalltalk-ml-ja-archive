@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7565] OpNoDupとOpPop
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207565%5D%20%3D%3Fiso-2022-jp%3Fb%3FT3BOb0R1cBskQiRIGyhCT3BQb3A%3D%3F%3D&In-Reply-To=5C90003C-C5B3-47A5-A851-927DA2AC617C%40mfc.bakkers.gr.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007564.html">
+   <LINK REL="Next"  HREF="007569.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7565] OpNoDupとOpPop</H1>
+    <B>Takafumi Saikawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207565%5D%20%3D%3Fiso-2022-jp%3Fb%3FT3BOb0R1cBskQiRIGyhCT3BQb3A%3D%3F%3D&In-Reply-To=5C90003C-C5B3-47A5-A851-927DA2AC617C%40mfc.bakkers.gr.jp"
+       TITLE="[SML 7565] OpNoDupとOpPop">tscompor ＠ gmail.com
+       </A><BR>
+    <I>2009年 6月  4日 (木) 14:34:14 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007564.html">[SML 7564] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007569.html">[SML 7569] Re: OpNoDupとOpPop
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7565">[ 日付 ]</a>
+              <a href="thread.html#7565">[ スレッド ]</a>
+              <a href="subject.html#7565">[ 件名 ]</a>
+              <a href="author.html#7565">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>今日は。
+
+From: Yasuda Yutaka &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">yasuda ＠ mfc.bakkers.gr.jp</A>&gt;
+Subject: [SML 7563] Re: 第8回Smalltalk勉強会＠京都
+Date: Thu, 4 Jun 2009 12:47:24 +0900
+Message-ID: &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">5C90003C-C5B3-47A5-A851-927DA2AC617C ＠ mfc.bakkers.gr.jp</A>&gt;
+
+yasuda&gt; （あれ？単なる pop 命令てのは無いのか？？そういえば見た 
+yasuda&gt; ことがない。）
+
+102番にOpPopがあり、動作もそれほど違いが無さそうでしたので、
+MethodContextをインスペクトしている間に
+
+self method byteAt: 11 put: 102
+
+として書き換えてみましたが、簡単な例では問題なく動きました。
+(デコンパイルは失敗するようになってましたが)
+
+OpPopとOpNoDupで本当に違いが無いのか気になります。
+
+
+昔のSmalltalk-80には dup first や dup last にあたる物が
+無いように見えます。Bluebookの596ページには
+(<A HREF="http://stephane.ducasse.free.fr/FreeBooks/BlueBook/Bluebook.pdf">http://stephane.ducasse.free.fr/FreeBooks/BlueBook/Bluebook.pdf</A> の 618ページ)
+&quot;136 Duplicate Stack Top&quot; 以外見あたりませんし、Squeak1.2では
+
+self halt.
+OrderedCollection new add: 100; add: 110; add: 120
+
+が
+
+29 &lt;70&gt; self
+30 &lt;D0&gt; send: halt
+31 &lt;87&gt; pop
+32 &lt;41&gt; pushLit: OrderedCollection
+33 &lt;CC&gt; send: new
+34 &lt;88&gt; dup
+35 &lt;23&gt; pushConstant: 100
+36 &lt;E2&gt; send: add:
+37 &lt;87&gt; pop
+38 &lt;88&gt; dup
+39 &lt;24&gt; pushConstant: 110
+40 &lt;E2&gt; send: add:
+41 &lt;87&gt; pop
+42 &lt;25&gt; pushConstant: 120
+43 &lt;E2&gt; send: add:
+44 &lt;7C&gt; returnTop
+
+となりました。(16r88 = 10r136)
+
+
+才川隆文
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007564.html">[SML 7564] Re: 第8回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007569.html">[SML 7569] Re: OpNoDupとOpPop
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7565">[ 日付 ]</a>
+              <a href="thread.html#7565">[ スレッド ]</a>
+              <a href="subject.html#7565">[ 件名 ]</a>
+              <a href="author.html#7565">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2887] Re: VM全体のテストについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202887%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFZNGyRCQTRCTiROJUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklSCRLJEQkJCRGGyhC%3F%3D&In-Reply-To=upskmmf4z.wl%25yoshiki%40squeakland.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002886.html">
+   <LINK REL="Next"  HREF="002888.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2887] Re: VM全体のテストについて</H1>
+    <B>Takeshi MUTOH</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202887%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFZNGyRCQTRCTiROJUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklSCRLJEQkJCRGGyhC%3F%3D&In-Reply-To=upskmmf4z.wl%25yoshiki%40squeakland.org"
+       TITLE="[Squeak-ja: 2887] Re: VM全体のテストについて">mutoh ＠ openedu.org
+       </A><BR>
+    <I>2006年 3月 17日 (金) 18:08:07 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002886.html">[Squeak-ja: 2886] Re: VM全体のテストについて
+</A></li>
+        <LI>次の記事 <A HREF="002888.html">[Squeak-ja: 2888] PluggableListMorphについて教えてください。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2887">[ 日付 ]</a>
+              <a href="thread.html#2887">[ スレッド ]</a>
+              <a href="subject.html#2887">[ 件名 ]</a>
+              <a href="author.html#2887">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>むとうです。
+
+おおしまさま、詳細な解説ありがとうございます。
+
+At Thu, 16 Mar 2006 10:13:48 -0800,
+Yoshiki Ohshima &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yoshiki ＠ squeakland.org</A>&gt; wrote:
+&gt;<i>   Squeak VMの成り立ちは、VMのほとんどの部分をSqueakで書いて、それを
+</I>&gt;<i> ANSI Cに変換して、それをコンパイルしています。マシンおよびOSに期待され
+</I>&gt;<i> ている部分は32ビットの演算ができることと32ビットアドレス空間が取れるこ
+</I>&gt;<i> とだけで、endianの違いなどはCのヘッダファイルに書かれたマクロで吸収し
+</I>&gt;<i> ています。つまり、VM記述のCへの変換そのものは完全に機種非依存です。
+</I>
+確かに、Squeak自体もSqueakで書かれているというのはあちこちで目にしてい
+たはずなんですが、このレベルまで大丈夫なように記述されているのですね。
+
+&gt;<i>   というわけで、Cに変換したコードをコンパイルしてVMを作り、そのVMでイ
+</I>&gt;<i> メージが立ち上がるところまで行ったとすれば、それはVMのほとんどの箇所は
+</I>&gt;<i> 期待したとおりに動いている、ということになります。
+</I>
+とりあえず、このレベルの確認は毎回やっているので、少し安心しました。
+
+&gt;<i>   コードでテストできるのは、Pluginに入っているプリミティブがちゃんと呼
+</I>&gt;<i> べたかどうか、もし返り値などに意味があるなら正しい値が帰ってきたかどう
+</I>&gt;<i> か、というところまでかもしれません。これは、primitiveのバックアップコー
+</I>&gt;<i> ド(primitive呼び出しが失敗したときに自動的に実行されるコード)を適切に
+</I>&gt;<i> 書き換えてやることになるでしょうか。
+</I>
+Squeakで書かれたバックアップコードもあるので、primitiveとバックアップ
+コードの両方がダメでないと顕在化しないのですね。
+プラグイン回りのチェックの時には気を付けるようにします。
+
+というか、
+
+&gt;<i> Squeak 2.4のころも、Dan Ingallsがいつのまにかtext scanningのprimitive 
+</I>&gt;<i> に渡す定義を変えたために、通常のtext scanningがみなfailしていた、とい
+</I>&gt;<i> うことがありました。バックアップコードが適切に書かれていたのでなかなか
+</I>&gt;<i> 誰も気にしていなかったのですが(遅い遅い機械でベンチマークを走らせてい
+</I>&gt;<i> た僕のような人が文句を言うまで)、やっぱり人間見落としはありますからね。
+</I>
+実際にあったんですね(^-^;)
+
+&gt;<i> &gt; VMにかかわっている方も多いと思いますので、教えていただければ幸いです。
+</I>&gt;<i>   というわけで、あまり役に立てなくてすみません。上記のように、
+</I>&gt;<i> primitiveが失敗したかどうかを調べることには大いに意義があると思います。
+</I>
+ちょっと、コードの中のprimitiveがある回りを見てみます。
+
+&gt;<i>   参考になれば幸いです。
+</I>
+ありがとうございました。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://610T.org/">http://610T.org/</A>
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002886.html">[Squeak-ja: 2886] Re: VM全体のテストについて
+</A></li>
+	<LI>次の記事 <A HREF="002888.html">[Squeak-ja: 2888] PluggableListMorphについて教えてください。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2887">[ 日付 ]</a>
+              <a href="thread.html#2887">[ スレッド ]</a>
+              <a href="subject.html#2887">[ 件名 ]</a>
+              <a href="author.html#2887">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

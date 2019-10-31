@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4446] Re: drawOn中のエラーについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204446%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGRyYXdPbhskQkNmJE4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSglaSE8JEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=B60AD8DC-890D-4D97-BC8E-32CE755C26D1%40itolab.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004445.html">
+   <LINK REL="Next"  HREF="004447.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4446] Re: drawOn中のエラーについて</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204446%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGRyYXdPbhskQkNmJE4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSglaSE8JEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=B60AD8DC-890D-4D97-BC8E-32CE755C26D1%40itolab.com"
+       TITLE="[Squeak-ja: 4446] Re: drawOn中のエラーについて">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2010年 3月 23日 (火) 04:01:00 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004445.html">[Squeak-ja: 4445] Re: drawOn中のエラーについて
+</A></li>
+        <LI>次の記事 <A HREF="004447.html">[Squeak-ja: 4447] Re: drawOn中のエラーについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4446">[ 日付 ]</a>
+              <a href="thread.html#4446">[ スレッド ]</a>
+              <a href="subject.html#4446">[ 件名 ]</a>
+              <a href="author.html#4446">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Mon, 22 Mar 2010 23:19:20 +0900,
+Eiichiro Ito wrote:
+&gt;<i> 
+</I>&gt;<i> 山梨学院大学の伊藤です。
+</I>&gt;<i> 
+</I>&gt;<i> いつも質問ばかりですみません。
+</I>
+  いえいえ、なにをおっしゃいますやら。
+
+&gt;<i> PluggableTextMorphを使ってコンソール（あるいはTranscript）のようなモーフを
+</I>&gt;<i> 作っています。テキスト入力のたびに、入力文字列を追加するようにしています。
+</I>&gt;<i> たいがいうまくいくのですが、何度か（数回〜十数回）入力しているうちにエラー
+</I>&gt;<i> が発生して、モーフが赤く塗りつぶされた×印となってしまいます。
+</I>&gt;<i> 
+</I>&gt;<i> エラーの発生するタイミングは不定期ですが、いつもエラー内容は同じようです。
+</I>&gt;<i> MultiNewParagraph(NewParagraph)のfastFindFirstLineSuchThat: lineBlock
+</I>&gt;<i> でインスタンス変数linesにsizeを送った時点で、sizeのレシーバがnilだといって
+</I>&gt;<i> エラーになるのですが、デバッガで調べてもちゃんと値は入っているし、インス
+</I>&gt;<i> ペクタ上でsizeを送ってもきちんと値が出ます。
+</I>&gt;<i> 
+</I>&gt;<i> Mantisでは過去のsqueakのバージョンで同様のエラーが出た指摘があるのですが、
+</I>&gt;<i> 特にその後フォローされていないようです。（し、同じものかもわかりません）
+</I>&gt;<i> 
+</I>&gt;<i> どなたか回避策をお持ちの方はいらっしゃいませんでしょうか。
+</I>&gt;<i> また、赤いエラー画面を解除する方法ってないのでしょうか。
+</I>
+  このエラーは、Processを使っていたりして、Morphicの通常のサイクルとは
+独立して描画要求が起こったときに出るものだと思います。そのMorphへの更新
+要求をしているところを、直接行うのではなく#addDeferredUIMessage:経由で
+行うと直るかもしれません。
+
+  赤いエラー画面は、ハロのデバッグメニューから&quot;start drawing again&quot;を
+選ぶと解除できます。
+
+-- Yoshiki
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004445.html">[Squeak-ja: 4445] Re: drawOn中のエラーについて
+</A></li>
+	<LI>次の記事 <A HREF="004447.html">[Squeak-ja: 4447] Re: drawOn中のエラーについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4446">[ 日付 ]</a>
+              <a href="thread.html#4446">[ スレッド ]</a>
+              <a href="subject.html#4446">[ 件名 ]</a>
+              <a href="author.html#4446">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

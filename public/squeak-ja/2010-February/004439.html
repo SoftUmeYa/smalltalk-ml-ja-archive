@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4439] Re: gainerのwebからのアクセスについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204439%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGdhaW5lchskQiROGyhCd2Vi%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCskaSROJSIlLyU7JTkkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=539B501B-E1C6-41AF-835E-3EDFF9B5EBD0%40nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004437.html">
+   <LINK REL="Next"  HREF="004438.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4439] Re: gainerのwebからのアクセスについて</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204439%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGdhaW5lchskQiROGyhCd2Vi%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCskaSROJSIlLyU7JTkkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=539B501B-E1C6-41AF-835E-3EDFF9B5EBD0%40nifty.com"
+       TITLE="[Squeak-ja: 4439] Re: gainerのwebからのアクセスについて">ky ＠ yengawa.com
+       </A><BR>
+    <I>2010年 2月 19日 (金) 01:55:23 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004437.html">[Squeak-ja: 4437] Re: gainerのwebからのアクセスについて
+</A></li>
+        <LI>次の記事 <A HREF="004438.html">[Squeak-ja: 4438] Re: [SML 7782] Re: The Japanese version of ESUG
+	flyer update to Rev.82
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4439">[ 日付 ]</a>
+              <a href="thread.html#4439">[ スレッド ]</a>
+              <a href="subject.html#4439">[ 件名 ]</a>
+              <a href="author.html#4439">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+広く情報を求めた方が良いと思うので、こちらへ返信します。
+
+もしかしたら、Flashのクロスドメインアクセスの制限に触れているのではない
+でしょうか?
+
+クロスドメインポリシーファイルの仕様
+<A HREF="http://www.adobe.com/jp/devnet/articles/crossdomain_policy_file_spec.html">http://www.adobe.com/jp/devnet/articles/crossdomain_policy_file_spec.html</A>
+
+Flashはデフォルトではそのドメインのルートからポリシーファイル
+(crossdomain.xml)を読んで、そのファイルでアクセス許可されたところだけに
+Flash内部からアクセスできます。
+ソケット接続も許可が必要です。
+
+具体的には、次のポリシーファイルを <A HREF="http://192.168.0.1/crossdomain.xml">http://192.168.0.1/crossdomain.xml</A> と
+して置いてください。
+
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;!DOCTYPE cross-domain-policy SYSTEM
+&quot;<A HREF="http://www.adobe.com/xml/dtds/cross-domain-policy.dtd&quot;">http://www.adobe.com/xml/dtds/cross-domain-policy.dtd&quot;</A>&gt;
+
+&lt;cross-domain-policy&gt;
+	&lt;allow-access-from domain=&quot;*&quot; to-ports=&quot;2000&quot;/&gt;
+&lt;/cross-domain-policy&gt;
+
+
+
+koike wrote 10/02/18 11:23:
+&gt;<i> 横川さん
+</I>&gt;<i> 東京都市大学の小池です。
+</I>&gt;<i> ご無沙汰です。
+</I>&gt;<i> 
+</I>&gt;<i> 今、Gainerや、Arudinoなどを使った
+</I>&gt;<i> オープンソースなロボットを作ろうと考えて
+</I>&gt;<i> いろいろ調べて勉強しています。
+</I>&gt;<i> 
+</I>&gt;<i> 今、
+</I>&gt;<i> PCサーバーを内蔵してGaineがつながったロボットを他のPCから無線LANでコント 
+</I>&gt;<i> ロールすることを考えているのですが、
+</I>&gt;<i> うまくいきません。
+</I>&gt;<i> Gainerや、Arduinoをネット越しにコントロールできないのでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 横川さんのご専門ではないかもしれませんが、
+</I>&gt;<i> ネット上の問題とも思いますので、
+</I>&gt;<i> Gainerでいろいろ開発された経験から
+</I>&gt;<i> なにかヒントがあればお願いします。
+</I>&gt;<i> 
+</I>&gt;<i> 阿部さんにもお聞きしましたが、
+</I>&gt;<i> 実機がないとわからないといわれました。
+</I>&gt;<i> ごもっともです。
+</I>&gt;<i> 
+</I>&gt;<i> -----------------------------------------------------------
+</I>&gt;<i> 外部PCからリモコンするロボットを考えています。
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://labs.infoalive.com/tag/&#36554;">http://labs.infoalive.com/tag/車</A>
+</I>&gt;<i> 
+</I>&gt;<i> でやっていることに近いです。
+</I>&gt;<i> こちらはWIndows XPでやっていますが。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> （１）ロボットは内部にPC（ロボットPCと呼ぶ）を持っている（Windows XP）
+</I>&gt;<i> ロボットPCにはサーバーが起動している　サーバーはXAMPP
+</I>&gt;<i> PCは192.168.0.1で設定
+</I>&gt;<i> サーバーは正常に起動
+</I>&gt;<i> 外部PC (192.168.0.3に設定）からもアクセス可能
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> （２）ロボットPCにGainerをUSBで接続 Gainerからサーボモーターなどを制御し 
+</I>&gt;<i> たい。
+</I>&gt;<i> （３ロボットPCのXAMPPの外でgspをポート2000で起動（flashがgainerと交信す 
+</I>&gt;<i> るためのプロシキーサーバー）
+</I>&gt;<i> 
+</I>&gt;<i> （４）XAMPPに、gainerを動かすサンプルにあるbutton.swfをhtmlファイル 
+</I>&gt;<i> (button.html)から呼び出せるようにセット
+</I>&gt;<i> 
+</I>&gt;<i> （５）button.swfは
+</I>&gt;<i> プログラムを改造して
+</I>&gt;<i> 
+</I>&gt;<i> gio=new Gainer(&quot;localhpst&quot;,2000,Gainer.MODE1,true);
+</I>&gt;<i> 
+</I>&gt;<i> をgio=new Gainer(&quot;192.168.0.1&quot;,2000,Gainer.MODE1,true);
+</I>&gt;<i> 
+</I>&gt;<i> に変更した。
+</I>&gt;<i> 
+</I>&gt;<i> （６）外部のPC (192.168.0.3に設定）
+</I>&gt;<i> からロボットPCの
+</I>&gt;<i> <A HREF="http://192.168.0.1/button.html">http://192.168.0.1/button.html</A>
+</I>&gt;<i> に無線LAN経由でアクセス
+</I>&gt;<i> ロボットPCにはアクセスポイントをつけてある。
+</I>&gt;<i> 
+</I>&gt;<i> （７）button.swfは画面に現れるが、Gainerのボタンを押しても反応しない
+</I>&gt;<i> 　　　gspもdisconnectをいわれてしまう
+</I>&gt;<i> 
+</I>&gt;<i> （８）今度は、<A HREF="http://192.168.0.1:2000//button.html">http://192.168.0.1:2000//button.html</A>
+</I>&gt;<i> にアクセス
+</I>&gt;<i> gspは192.168.0.3からconnectされたと表示
+</I>&gt;<i> 
+</I>&gt;<i> （９）
+</I>&gt;<i> しかし、画面には表示されるがGainerのボタンを押しても反応しない
+</I>&gt;<i> 
+</I>&gt;<i> （１０）button.swfを外部PCにコピーして外部PCから再生すると、ロボットPCに 
+</I>&gt;<i> つながっているgainerと
+</I>&gt;<i> 交信できる。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> button.swfをロボットPCのXAMPP内においてそれを外部PCから呼び出して
+</I>&gt;<i> ロボットPCのGainerを動かしたいのですが、
+</I>&gt;<i> 
+</I>&gt;<i> どうしたらいいでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> 192.168.0.1のサーバー内部にあるbutton.swfを、192.168.0.3から呼び出して再 
+</I>&gt;<i> 生したときに
+</I>&gt;<i> 192.168.0.1にあるgspとの交信がうまくいかないようです。
+</I>&gt;<i> 
+</I>&gt;<i> XAMPPを介さないで192.168.0.3にあるbutton.swfを直接再生すると192.168.0.1 
+</I>&gt;<i> にあるGainerと交信できます。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004437.html">[Squeak-ja: 4437] Re: gainerのwebからのアクセスについて
+</A></li>
+	<LI>次の記事 <A HREF="004438.html">[Squeak-ja: 4438] Re: [SML 7782] Re: The Japanese version of ESUG
+	flyer update to Rev.82
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4439">[ 日付 ]</a>
+              <a href="thread.html#4439">[ スレッド ]</a>
+              <a href="subject.html#4439">[ 件名 ]</a>
+              <a href="author.html#4439">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

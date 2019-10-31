@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7341] 合計ぜすに平均を
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207341%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOWc3VyQ8JDkkS0o/NlEkchsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007342.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7341] 合計ぜすに平均を</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207341%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOWc3VyQ8JDkkS0o/NlEkchsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7341] 合計ぜすに平均を">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 12月 12日 (水) 15:01:47 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007342.html">[SML 7342] Re: 合計ぜすに平均を
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7341">[ 日付 ]</a>
+              <a href="thread.html#7341">[ スレッド ]</a>
+              <a href="subject.html#7341">[ 件名 ]</a>
+              <a href="author.html#7341">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠ＳＲＡ先端技術研究所です。
+
+一見、簡単そうな「平均（相加平均）を求める」プログラムを考え
+てみましょう。実は大変に奥深い内容を含みます。皆さんのプログ
+ラミングに対する話題のネタにしていただければ幸いです。
+
+たとえば、９９９人の成績（百点満点）の平均を求めるプログラム
+なんて、誰にでも作れそうですが、はたして本当でしょうか？
+
+まず、９９９人の成績の仮データを生成するところが難しいでしょ。
+乱数を使えば、なんとかなりそうですが、一様分布しか得られない
+ことが多いはず。実際には正規分布しますもん。正規分布した仮の
+成績データを即座に作り出せるプログラマが少ないですよね。
+
+それに、平均を求めるのに、９９９人の成績を合計して、人数で割
+る、なんてことをしたら、それこそペケ（平均プログラマ以下）。
+
+合計を使わないこと、９９９人も仮であり、人数はこれからもどん
+どん増えて、合計は桁あふれする恐れがあること、それでも即時に
+平均を応答できなければならないこと、これらを満たすプログラム
+（平均というオブジェクト）の作成です。
+
+末尾に完全なプログラム（Smalltalk らしいメタなプログラム）を
+添付しておきますが、要と記すと以下のようになります。
+
+|<i> normalDistribution numberOfPeople averageValue resultValue |
+</I>normalDistribution := JunNormalDistribution mean: 50 deviation: 15.
+numberOfPeople := 0.
+averageValue := 0.
+999 timesRepeat:
+        [resultValue := 0 max: (normalDistribution next min: 100).
+        numberOfPeople := numberOfPeople + 1.
+        averageValue := averageValue + ((resultValue - averageValue) * (1 / numberOfPeople))].
+^averageValue
+
+平均５０点で偏差１５の正規分布した仮の成績データをこしらえな
+がら、合計をすることなく、平均を計算しています。多倍長整数演
+算、分数、そして、浮動小数点ではない固定小数点数、などが具備
+されたオブジェクト指向プログラミング言語ならではですね。
+
+新たな成績（resultValue）を加えたときの新たな平均とは、その成
+績の昔の平均からのズレ（resultValue - averageValue）に対して
+影響力（1 / numberOfPeople）を乗じたものを、昔の平均に加えた
+ものである、というところにあります。
+
+多くの人の中で一人だけ突出しても、その影響は大したことないの
+が明解です。また、総数を２とした特殊な場合、足して２で割れば
+いいことも導出されます。
+
+３０、５０、７０、９０、・・・、と来たとき、私たちはいちいち
+合計して総数で割って平均なんか求めていないのよねぇ〜。突出を
+演出したい（自分の影響力を出したい）のに、衆（多勢）を頼むな
+んて可笑し過ぎますぅ〜。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+|<i> aClass normalDistribution averageObject |
+</I>aClass := Smalltalk.Jun
+            defineClass: #JunAverageObject
+            superclass: #{Jun.JunAbstractObject}
+            indexedType: #none
+            private: false
+            instanceVariableNames: 'numberOfPeople averageValue '
+            classInstanceVariableNames: ''
+            imports: ''
+            category: 'Jun-Goodies-Misc'.
+aClass
+    compile: 'initialize
+    super initialize.
+    numberOfPeople := 0.
+    averageValue := 0'
+        classified: 'initialize-release' asSymbol;
+    compile: 'value
+    ^averageValue'
+        classified: 'accessing' asSymbol;
+    compile: 'add: resultValue
+    numberOfPeople := numberOfPeople + 1.
+    averageValue := averageValue + ((resultValue - averageValue) * (1 / numberOfPeople))'
+        classified: 'adding' asSymbol.
+(Kernel.Parcel parcelNamed: 'Jun') addClass: aClass.
+(Store.Registry packageNamed: 'Jun-Goodies-Misc') addEntiretyOfClass: aClass.
+
+[normalDistribution := JunNormalDistribution mean: 50 deviation: 15.
+averageObject := aClass new.
+999 timesRepeat: [averageObject add: (0 max: (normalDistribution next min: 100))].
+^averageObject value]
+        ensure: [aClass removeFromSystem]
+
+
+------------------------------------------------------------
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007342.html">[SML 7342] Re: 合計ぜすに平均を
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7341">[ 日付 ]</a>
+              <a href="thread.html#7341">[ スレッド ]</a>
+              <a href="subject.html#7341">[ 件名 ]</a>
+              <a href="author.html#7341">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

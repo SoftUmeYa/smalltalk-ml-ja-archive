@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4105] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204105%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjEbJEIhSyROM1obKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNG8yOyRLJEQkJCRGGyhC%3F%3D&In-Reply-To=495788C2.8050100%40mx2.ttcn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004104.html">
+   <LINK REL="Next"  HREF="004106.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4105] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204105%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjEbJEIhSyROM1obKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNG8yOyRLJEQkJCRGGyhC%3F%3D&In-Reply-To=495788C2.8050100%40mx2.ttcn.ne.jp"
+       TITLE="[Squeak-ja: 4105] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2008年 12月 29日 (月) 14:44:14 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004104.html">[Squeak-ja: 4104] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+</A></li>
+        <LI>次の記事 <A HREF="004106.html">[Squeak-ja: 4106] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4105">[ 日付 ]</a>
+              <a href="thread.html#4105">[ スレッド ]</a>
+              <a href="subject.html#4105">[ 件名 ]</a>
+              <a href="author.html#4105">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+
+とりあえず音が出たということでよかったです。試された手順はそれで問題ありません(csファイルはソースなので入れなくても大丈夫です)。
+
+現在のScratch(GM)の楽器番号に対するマッピングは、似た名前を参考にして以下のようになっています。
+
+33 34 35 36 37 38 39 40 は bass1
+71 は bassoon1
+62 は brass1
+63 は brass2
+64 は mellowBrassS
+72 は clarinet
+74 76 は flute1
+69 は oboe1
+17 18 19 20 21 は organ1
+それ以外はすべてデフォルトのoboe1です。
+
+これらはFM音源ですが、もともとの定義が悪く、ほとんど音色の違いが分かりません。また、bass1のようにほとんど聞こえないものもあります。しかし、64と72とかであれば分かると思います。
+ドラムについては、もともとドラムの音源がありませんので、単純にドラムの種類の指定が音階になっています。実用を狙ったわけではなく、ダミーで入っているとお考えください。
+
+音量については、人間の感覚的なラウドネス曲線に対する補正を行っていないので、
+周波数と音量が比例して感じられるのだと思います。
+<A HREF="http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A">http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A</A>
+この対応をするかどうかですね。
+
+「調べる」については、今回いじっていないので、これとは別のScratch Boardまわりの問題ですね。
+ご存知と思いますが、以下のページにあるようにフィードバックを返してもらえるとよいと思います。
+<A HREF="http://info.scratch.mit.edu/Linux_installer">http://info.scratch.mit.edu/Linux_installer</A>
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2008/12/28 23:10 yhousako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt;:
+&gt;<i> 阿部様
+</I>&gt;<i>
+</I>&gt;<i> 宝迫です．年末のお忙しいところ対応して頂きありがとうございます．
+</I>&gt;<i>
+</I>&gt;<i> 先ほどダウンロードしてKNOPPIX（CECのOSP基本パッケージv2）で試してみました．
+</I>&gt;<i> <A HREF="http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip">http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip</A>
+</I>&gt;<i>
+</I>&gt;<i> ＃なぜ「OSP基本パッケージv2」を使ったかというと、Scratchを使った授業を計
+</I>&gt;<i> 画しており、その本番に使うのがこれだからという理由です．
+</I>&gt;<i>
+</I>&gt;<i> 【進展した点】
+</I>&gt;<i> 音が鳴りました！感激しました．音階（ドレミ）についても、OKです．Picoボー
+</I>&gt;<i> ドからもコントロールできました．
+</I>&gt;<i>
+</I>&gt;<i> 【問題と思われる点】
+</I>&gt;<i> 音色の変更ができません．というより、「○のドラムを…」や「楽器を○にする」
+</I>&gt;<i> で使われている数値（○の部分）が、音階の数値として使われているようです．
+</I>&gt;<i> そのため、この数値を変更すると音階が変わります．（音は多分オーボエです．）
+</I>&gt;<i>
+</I>&gt;<i> もう一つの問題として、音階と同時に音量も変化してしまいます．低い音は音量
+</I>&gt;<i> も小さく（聞こえなくなる）、高い音は音量も大きくなります．また「調べる」
+</I>&gt;<i> の「音量」と「スライダー」の値を表示させようとすると固まったり落ちたりし
+</I>&gt;<i> ます．
+</I>&gt;<i>
+</I>&gt;<i> 音色、音階、音量の3つの要素を数値で設定しているため、ソース自体がややこ
+</I>&gt;<i> しくなっているかも知れないと思いました．
+</I>&gt;<i>
+</I>&gt;<i> あるいは、作って頂いたzipを展開し、その中に入っていたファイルを全て
+</I>&gt;<i> Scratchフォルダに放り込んで、runscratch.shをちょいと書き替えて起動すると
+</I>&gt;<i> いう手順が間違えているのも知れないですが…．
+</I>&gt;<i>
+</I>&gt;<i> 以上、動作確認のご報告を致します．
+</I>&gt;<i>
+</I>&gt;<i> Kazuhiro ABE さんは書きました:
+</I>&gt;&gt;<i> こんにちは、阿部です。
+</I>&gt;&gt;<i> 一ヶ月前のScratchのSqueak組み込みシンセサイザ対応の話ですが、ちょっと時間があったのでやってみました。以下にイメージとチェンジを置いていますのでお試しください。
+</I>&gt;&gt;<i> <A HREF="http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip">http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 実際にLinuxでは試してはいませんが、MIDIが使えない環境であれば(SimpleMIDIPort
+</I>&gt;&gt;<i> midiIsSupportedがfalse)、自動的に組み込みシンセに切り替わるようになっています。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 使える楽器は限られており(base1, bassoon1, brass1, brass2, mellowBrass, clarinet,
+</I>&gt;&gt;<i> flute1, oboe1を適当に割当。デフォルトはoboe1)、音質もMIDI音源とは比べるべくもありませんが、音が鳴っているくらいは分かると思います。ドラムは無かったので、とりあえず選択された楽器と同じ音が鳴るようにしています。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>  //abee
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------------
+</I>&gt;<i> 寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+</I>&gt;<i> みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+</I>&gt;<i> 指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+</I>&gt;<i> 全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+</I>&gt;<i> つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004104.html">[Squeak-ja: 4104] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+</A></li>
+	<LI>次の記事 <A HREF="004106.html">[Squeak-ja: 4106] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4105">[ 日付 ]</a>
+              <a href="thread.html#4105">[ スレッド ]</a>
+              <a href="subject.html#4105">[ 件名 ]</a>
+              <a href="author.html#4105">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2242] プロジェクトファイル(.pr)で保存されるもの
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202242%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclbSU4JSclLyVIJVUbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSElJCVrGyhCKC5wcikbJEIkR0pdQjgkNSRsJGskYiROGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002241.html">
+   <LINK REL="Next"  HREF="002243.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2242] プロジェクトファイル(.pr)で保存されるもの</H1>
+    <B>&quot;土本 (Florian) 強</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202242%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclbSU4JSclLyVIJVUbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSElJCVrGyhCKC5wcikbJEIkR0pdQjgkNSRsJGskYiROGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2242] プロジェクトファイル(.pr)で保存されるもの">&quot;土本 (Florian) 強
+       </A><BR>
+    <I>2005年 1月  7日 (金) 02:30:24 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002241.html">[Squeak-ja: 2241] squeaklandメーリングリストにSqueakland.jpのことが流れました
+</A></li>
+        <LI>次の記事 <A HREF="002243.html">[Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2242">[ 日付 ]</a>
+              <a href="thread.html#2242">[ スレッド ]</a>
+              <a href="subject.html#2242">[ 件名 ]</a>
+              <a href="author.html#2242">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　土本( Florian )です。
+　先日の火入れ式では皆様に大変お世話になりました。
+
+
+　先日squeakland.jpのプロジェクト置き場に拙作(RainDrop)を山宮さんが置
+いてくださったのではじめて、projectファイル自体はSqueakToysで作った物
+である必要がないということを知りました。RainDropはMorphを継承してClass
+を直接System Browserで書いていった物であり、SqueakToysのタイルスクリプ
+ティングは全く使用していません。
+　このプロジェクトは直接Squeak-Plug inで再生できました。
+
+　これを受けて、もう少し本格的なグラフィックリソースとサウンドリソース
+を含めた作品を作ってみようと思っています。
+
+
+(1)サウンド、グラフィック、スクリプトデータなどの保存に付いての質問
+　サウンドに関しては、阿部さん曰く、
+
+	6x以降はプロジェクトファイルに音も一緒に保存されるので自分の作品に新しい音を追加できます。
+
+　とのことですので含めることは可能と思われますが、クラス変数内に含まれ
+る(あらかじめロードした)ColorFormなどをProjectファイル内に含めることは
+可能でしょうか。
+　また、マップデータやシナリオなどの情報をCollectionとしてクラス変数内
+に(あらかじめロードして)持ったものについても同様に可能でしょうか。
+
+
+(2)Projectファイルで保存されるもの
+　これらに付随して質問なのですが、projectファイルの正体はどのような物
+なのでしょうか？
+　予想としては、
+
+	プロジェクト内で作られたインスタンスを直列化したもの
+	プロジェクト内で作られたClassを直列化した物
+	プロジェクト内で作られたClassのソース(「ChangeSetの中のものを
+含めるか？」との質問があるため)
+
+　なのですが、残念ながら手元でpkzipとgzipを駆使してAscii文字列の入った
+バイナリにまでは直せたのですが、中身のデータの意味までは判りませんでし
+た。
+
+
+(3)公開についての質問
+　今回はProjectファイルとして公開することを前提として質問していますが、
+本来、作ったソフトウェアは、Squeak-Plug inで実行することを期待して
+Projectファイルとして公開するべきなのでしょうか？
+　それとも、sarファイルとしてパッケージの形にまとめるべきでしょうか？
+　それとも、mczファイルとしてアーカイブしリソースに関しては別途用意す
+べきでしょうか？
+
+　また、そもそもSqueakMapはどの程度「気軽に」登録しても良い物なのでしょ
+うか？
+
+
+　とくに(3)に関しては、ソフトウェアの使用目的によって異なってくるとは
+思いますが、識者の方々の意見が伺えればと思っています。
+
+　よろしくお願いします。
+
+
+
+
+(以下、余談です)
+　元々は、Squeaker's Scrapbook(<A HREF="http://squeak.sakura.ne.jp/">http://squeak.sakura.ne.jp/</A>)のフォーラ
+ムで質問しようと思っていた内容なのですが、私の手元の環境からではなかな
+かつながらないのでこちらから質問させていただきます。幸い、返答している
+方々は概ね被っているように見受けられますし、質問内容もWebから参照でき
+ますので一般に対する情報提供的にも劣る物ではないかな、と。
+
+　山宮さんの「再びメタトイ」
+(<A HREF="http://d.hatena.ne.jp/propella/20050105/p2">http://d.hatena.ne.jp/propella/20050105/p2</A>)の文章に対するコメントにあっ
+た「モンテッソーリ教育」を調べていて、学研の日本モンテッソーリ教育総合
+研究所の解説の中に一言「用具はすべて、子どもの手に合うほんものを使いま
+す」という言葉があったのが大変興味を引きました。
+　SqueakToysを使い始めた学生が、世界の構造や発見のプロセスを経てシミュ
+レータとしてのコンピュータ内での再現がつまり「記号化(コーディング)」と
+いう手段であり、これはたとえばFlashやJava-Applet などのマルチメディア
+タイトルやゲームとほぼ同等の物であるという事に気づいてもらえれば、さぞ
+かし興味が深まるだろうと類推されます。
+　この時、FlashやJava-Appletはブラウザ上で直接動かすことが出来ますが、
+Squeakの場合、多くはSqueak自体を立ち上げた上でsarなどをfile-inすること
+によって初めて動くようになるものが多いと思われます。これでは、実際に実
+行するまでの手数が多く、「作ったものをいろんな人に送りつける」という事
+に対する興味がそこで失われるのではないかな、との危惧があります。
+　これに対し、projectのファイル(*.prファイル)を直接HTMLのObject要素で
+リンクする事によって実行するSqueak Plug-inはSqueakを使用しているコミュ
+ニティの外への格好の表現手段として使えるように思えます。また、動いてい
+るものがFlashやJava-Appletと同様な形でWebページ内で動いていることを見
+るのは「自分がほんものを使っている」という感触をより強くするのではない
+かとも思われます。
+
+　このためにも、SqueakToysだけではなく、Smalltalkを直接使ったプログラ
+ミングと、その実行環境を使えないかな、と思ってこんな質問をしました。
+　もちろん、Flashのスクリプティングにも、Java-Appletにもそれなりの利点
+はあり、ブラウザ上でのSqueakToysおよびSmalltalkにこだわる物ではないの
+ですが、単に教育のモチベーション維持用ツールの一環として使ったり、コン
+ピュータシステムというものに対するハックの興味を「人に見せる」ところか
+らはじめるのも選択肢としては大変有用だと思っています。
+　何よりも、Squeakはシステムの中身を直接触れる今時希有な環境ですので
+(Javaもクラスライブラリのソース自体は付属してますけど、あれを読み解く
+のはさすがにちょっと……)。
+
+　以上、余談でした。
+
+-----------------------------------------------------------------
+土本( Florian )強/<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">florian ＠ seagreen.ocn.ne.jp</A>
+Florian's Neo Pages <A HREF="http://www.cise.co.jp/%7eflorian/">http://www.cise.co.jp/%7eflorian/</A>
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002241.html">[Squeak-ja: 2241] squeaklandメーリングリストにSqueakland.jpのことが流れました
+</A></li>
+	<LI>次の記事 <A HREF="002243.html">[Squeak-ja: 2243] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2242">[ 日付 ]</a>
+              <a href="thread.html#2242">[ スレッド ]</a>
+              <a href="subject.html#2242">[ 件名 ]</a>
+              <a href="author.html#2242">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

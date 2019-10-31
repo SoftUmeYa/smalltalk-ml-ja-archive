@@ -1,0 +1,189 @@
+From sadie ＠ kind.ocn.ne.jp  Sun Oct 11 15:45:17 2015
+From: sadie ＠ kind.ocn.ne.jp (Sunao Furukawa)
+Date: Sun, 11 Oct 2015 15:45:17 +0900
+Subject: [SML 8138] SmaCCについて
+Message-ID: <000201d103f0$644cbc80$2ce63580$@kind.ocn.ne.jp>
+
+古川と申します。
+Pharo4.0で以下のようにplaygroundしたのですが、うまくいきません。
+というか「LLVM-IR」のパッケージがloadされません。
+ほかの方はどうでしょうか。
+cogがあるからでしょうか。
+----------------------------------------------------------------------
+Metacello new
+    baseline: 'SmaCC';
+    repository: 'github://ThierryGoubier/SmaCC';
+    load
+----------------------------------------------------------------------
+Visualworksやdolphinなら入りますか？（www.refactoryworkers.com/SmaCC.html）
+から。
+
+すみません。よろしくお願いします。
+
+
+
+From ume ＠ softumeya.com  Mon Oct 12 12:26:39 2015
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Mon, 12 Oct 2015 12:26:39 +0900
+Subject: [SML 8139] Re: SmaCCについて
+In-Reply-To: <000201d103f0$644cbc80$2ce63580$@kind.ocn.ne.jp>
+References: <000201d103f0$644cbc80$2ce63580$@kind.ocn.ne.jp>
+Message-ID: <CAH3eEdTt-FQ20nqHvFz7Z1+buR6H8D9gfr_8FKJRfOZLfgd5Sw@mail.gmail.com>
+
+梅゜キ、ヌ、ケ。」
+
+Pharo 4、ヌサ釥キ、ニ、゜、゛、キ、ソ、ャ。「、荀マ、鶸maCC-LLVM-IR、マ・悅シ・ノ、オ、譴泙擦鵑任靴拭
+BaselineOfSmaCCでパッケージの依存関係が定義されているのですが(BaselineOfSmaCC>>baseline:)、そこにはSmaCC-LLVM-IRは入っていません。
+
+おそらく作りかけでベースラインにはまだ入れていないということなのではないでしょうか。
+
+Monticelloブラウザでgithub://ThierryGoubier/SmaCC:masterリポジトリをOpenし、SmaCC-LLVM-IRパッケージを選んで手動でロードすると入ります。
+
+ご参考まで。
+
+2015年10月11日 15:45 Sunao Furukawa <sadie ＠ kind.ocn.ne.jp>:
+> 古川と申します。
+> Pharo4.0で以下のようにplaygroundしたのですが、うまくいきません。
+> というか「LLVM-IR」のパッケージがloadされません。
+> ほかの方はどうでしょうか。
+> cogがあるからでしょうか。
+> ----------------------------------------------------------------------
+> Metacello new
+>     baseline: 'SmaCC';
+>     repository: 'github://ThierryGoubier/SmaCC';
+>     load
+> ----------------------------------------------------------------------
+> Visualworksやdolphinなら入りますか？（www.refactoryworkers.com/SmaCC.html）
+> から。
+>
+> すみません。よろしくお願いします。
+>
+>
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From sadie ＠ kind.ocn.ne.jp  Mon Oct 12 13:33:18 2015
+From: sadie ＠ kind.ocn.ne.jp (Sunao Furukawa)
+Date: Mon, 12 Oct 2015 13:33:18 +0900
+Subject: [SML 8140] Re: SmaCCについて
+In-Reply-To: <CAH3eEdTt-FQ20nqHvFz7Z1+buR6H8D9gfr_8FKJRfOZLfgd5Sw@mail.gmail.com>
+References: <000201d103f0$644cbc80$2ce63580$@kind.ocn.ne.jp>
+ <CAH3eEdTt-FQ20nqHvFz7Z1+buR6H8D9gfr_8FKJRfOZLfgd5Sw@mail.gmail.com>
+Message-ID: <000001d104a7$1e51ec70$5af5c550$@kind.ocn.ne.jp>
+
+クナタ釥ヌ、ケ。」
+ヌ゜゜キ、オ、」ク賁ヨサ「、熙ャ、ネ、ヲ、エ、カ、、、゛、キ、ソ。」
+ツ醋ムサイケヘ、ヒ、ハ、熙゛、キ、ソ。」
+、「、熙ャ、ネ、ヲ、エ、カ、、、゛、キ、ソ。」
+
+>-----Original Message-----
+>From: sml-bounces 。smalltalk.jp [mailto:sml-bounces ＠ smalltalk.jp] On
+>Behalf Of Masashi Umezawa
+>Sent: Monday, October 12, 2015 12:27 PM
+>To: Smalltalkers' Salon Mailing List <sml ＠ smalltalk.jp>
+>Subject: [SML 8139] Re: SmaCCについて
+>
+>梅澤です。
+>
+>Pharo 4で試してみましたが、やはりSmaCC-LLVM-IRはロードされませんでした。
+>
+>BaselineOfSmaCCでパッケージの依存関係が定義されているのですが
+>(BaselineOfSmaCC>>baseline:)、そこにはSmaCC-LLVM-IRは入っていません。
+>
+>おそらく作りかけでベースラインにはまだ入れていないということなのではな
+>いでしょうか。
+>
+>Monticelloブラウザでgithub://ThierryGoubier/SmaCC:masterリポジトリを
+>Openし、SmaCC-LLVM-IRパッケージを選んで手動でロードすると入ります。
+>
+>ご参考まで。
+>
+>2015年10月11日 15:45 Sunao Furukawa <sadie ＠ kind.ocn.ne.jp>:
+>> 古川と申します。
+>> Pharo4.0で以下のようにplaygroundしたのですが、うまくいきません。
+>> というか「LLVM-IR」のパッケージがloadされません。
+>> ほかの方はどうでしょうか。
+>> cogがあるからでしょうか。
+>> ----------------------------------------------------------------------
+>> Metacello new
+>>     baseline: 'SmaCC';
+>>     repository: 'github://ThierryGoubier/SmaCC';
+>>     load
+>> ----------------------------------------------------------------------
+>> Visualworksやdolphinなら入りますか？
+>（www.refactoryworkers.com/SmaCC.html）
+>> から。
+>>
+>> すみません。よろしくお願いします。
+>>
+>>
+>--
+>"SoftUmeYa, LLC"
+>[:masashi | ^umezawa]
+
+From serge.stinckwich ＠ gmail.com  Tue Oct 13 15:47:21 2015
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue, 13 Oct 2015 08:47:21 +0200
+Subject: [SML 8141] Re: SmaCCについて
+In-Reply-To: <000201d103f0$644cbc80$2ce63580$@kind.ocn.ne.jp>
+References: <000201d103f0$644cbc80$2ce63580$@kind.ocn.ne.jp>
+Message-ID: <CAOysuxUcDAC-fUx61pKSMxuUw_p18wh5muO9q5U0JzBg2oBEJA@mail.gmail.com>
+
+You should ask Thierry Goubier if you have any problem using SmaCC.
+
+Regards,
+
+2015-10-11 8:45 GMT+02:00 Sunao Furukawa <sadie 。kind.ocn.ne.jp>:
+> 古川と申します。
+> Pharo4.0で以下のようにplaygroundしたのですが、うまくいきません。
+> というか「LLVM-IR」のパッケージがloadされません。
+> ほかの方はどうでしょうか。
+> cogがあるからでしょうか。
+> ----------------------------------------------------------------------
+> Metacello new
+>     baseline: 'SmaCC';
+>     repository: 'github://ThierryGoubier/SmaCC';
+>     load
+> ----------------------------------------------------------------------
+> Visualworksやdolphinなら入りますか？（www.refactoryworkers.com/SmaCC.html）
+> から。
+>
+> すみません。よろしくお願いします。
+>
+>
+
+
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+
+From ume ＠ softumeya.com  Sat Oct 17 16:07:23 2015
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sat, 17 Oct 2015 16:07:23 +0900
+Subject: [SML 8142]
+	第81回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTxQxQ+jcH556D0bxsUemdXdOb_fAGY6NtBkhF6sso9eg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2015/10/30(金) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai81kaismalltalkbenkyoukai
+
+今回は「Smalltalkと継続的インテグレーション」ということで、builderとSTreeについてSORABITOの吉田さんが解説をされます。
+
+github等を使い、チームでSmalltalkによる開発をしてみたいという方には、興味深いトピックとなることでしょう。
+
+事前申し込みは不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

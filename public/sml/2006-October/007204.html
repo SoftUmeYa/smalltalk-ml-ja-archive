@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7204] Re: メソッド名について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207204%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVhJT0lQyVJTD4kSyREJCQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=45223ED4.4020700%40ps.inforyoma.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007202.html">
+   <LINK REL="Next"  HREF="007206.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7204] Re: メソッド名について</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207204%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVhJT0lQyVJTD4kSyREJCQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=45223ED4.4020700%40ps.inforyoma.or.jp"
+       TITLE="[SML 7204] Re: メソッド名について">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 10月  5日 (木) 15:43:20 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007202.html">[SML 7202] メソッド名について
+</A></li>
+        <LI>次の記事 <A HREF="007206.html">[SML 7206] Re: メソッド名について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7204">[ 日付 ]</a>
+              <a href="thread.html#7204">[ スレッド ]</a>
+              <a href="subject.html#7204">[ 件名 ]</a>
+              <a href="author.html#7204">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木です。
+
+少々込み入ったプログラミングをしていましたので、返信が遅くな
+りました。「Smalltalk イディオム」の第４章「制御」の「分岐」
+や「繰返し」のところのプログラムですが、VisualWorks 7.4.1 に
+おいて以下のようになります。
+
+------------------------------------------------------------
+【複数のメッセージセレクタを一気にブラウザにかける】--------
+
+|<i> messageSelectors browserNavigator browserEnvironment selectorEnvironment |
+</I>messageSelectors := #(#ifTrue: #ifFalse: #ifTrue:ifFalse: #and: #or:).
+browserNavigator := Refactory.Browser.BrowserNavigator new.
+browserEnvironment := Refactory.Browser.BrowserEnvironment new.
+selectorEnvironment := Refactory.Browser.SelectorEnvironment new.
+messageSelectors do:
+        [:aSelector |
+        (browserEnvironment implementorsOf: aSelector)
+            classesDo: [:aClass | selectorEnvironment addClass: aClass selector: aSelector]].
+browserNavigator browseEnvironment: selectorEnvironment
+
+------------------------------------------------------------
+【複数のメッセージプロトコルを一気にブラウザにかける】------
+
+|<i> messageProtocols browserNavigator selectorEnvironment |
+</I>messageProtocols := #(#enumerating #controlling).
+browserNavigator := Refactory.Browser.BrowserNavigator new.
+selectorEnvironment := Refactory.Browser.SelectorEnvironment new.
+SystemUtils allBehaviorsDo:
+        [:aClass |
+        (aClass organization listAtCategoriesNamed: messageProtocols)
+            do: [:aSelector | selectorEnvironment addClass: aClass selector: aSelector]].
+browserNavigator browseEnvironment: selectorEnvironment
+
+------------------------------------------------------------
+
+寺内さんが新たなクラスを作ってまで保持しようとするほどのこと
+ではないと思いますよ。大切なのは上記のプログラムを諳（そら）
+んじるまで唱（とな）えることです。
+
+すると、ブラウザ・ナビゲータ（リファクタリング・ブラウザ）や
+メッセージのセレクタ環境などの開発環境がわかるようになります。
+なぁ〜んだ、グローバル環境を巡って、セレクタ環境に貯め込んで、
+その環境をブラウザ・ナビゲータに開示させればいいのかぁ、とね。
+
+読書百遍而義自見（どくしょ・ひゃっぺん・して・ぎ・おのずから・
+あらわる）です。その域に達すると、いつでも上記ようなプログラ
+ムを書き下ろせます。メソッド名（メッセージ名）の迷いも消え失
+せます。諳んじるまで唱えてくださいまし。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007202.html">[SML 7202] メソッド名について
+</A></li>
+	<LI>次の記事 <A HREF="007206.html">[SML 7206] Re: メソッド名について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7204">[ 日付 ]</a>
+              <a href="thread.html#7204">[ スレッド ]</a>
+              <a href="subject.html#7204">[ 件名 ]</a>
+              <a href="author.html#7204">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

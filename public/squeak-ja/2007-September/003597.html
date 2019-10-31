@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3597] Re: Seasideでローカルディレクトリのファイルを扱うには
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203597%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYXNpZGUbJEIkRyVtGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyVrJUclIyVsJS8lSCVqJE4lVSUhJSQlayRyMDckJiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE8bKEI%3D%3F%3D&In-Reply-To=JE200709111215559.16233734%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003596.html">
+   <LINK REL="Next"  HREF="003598.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3597] Re: Seasideでローカルディレクトリのファイルを扱うには</H1>
+    <B>Sho Yoshida</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203597%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYXNpZGUbJEIkRyVtGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyVrJUclIyVsJS8lSCVqJE4lVSUhJSQlayRyMDckJiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE8bKEI%3D%3F%3D&In-Reply-To=JE200709111215559.16233734%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3597] Re: Seasideでローカルディレクトリのファイルを扱うには">newapplesho ＠ gmail.com
+       </A><BR>
+    <I>2007年 9月 12日 (水) 08:13:45 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003596.html">[Squeak-ja: 3596] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+        <LI>次の記事 <A HREF="003598.html">[Squeak-ja: 3598] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3597">[ 日付 ]</a>
+              <a href="thread.html#3597">[ スレッド ]</a>
+              <a href="subject.html#3597">[ 件名 ]</a>
+              <a href="author.html#3597">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>梅澤さん，ありがとうございます．
+
+設定に関して少しわからないことがあったので教えていただけないで 
+しょうか．
+
+&gt;<i> ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot')  
+</I>&gt;<i> fullName.
+</I>
+serverRoot:とはApacheの設定でよく見かけるserverRoot 
+と同じものなのでしょうか．
+
+&gt;<i> ma alias: '/seaside' to: [ma addPlug: [:request | seaside process:  
+</I>&gt;<i> request]].
+</I>
+alias:to:もApacheの設定のaliasと同じものなのでしょう 
+か．
+そうするとblockのところにdocumentRoot:を記述すればす 
+ることもできる好きなURLでdocumentRootにアクセスでき 
+るのでしょうか．
+
+この設定をしたあと
+KomSeasideJ stop.
+でサーバと止まらなくなりました．
+HttpServiceで起動したので，HttpServiceを止めればいいと思っ 
+たのですが止め方がわかりません．
+
+よろしくお願いいたします．
+
+
+
+
+
+On 2007/09/11, at 12:15, Masashi Umezawa wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;&gt;<i> Seasideでローカルディレクトリにあるファイルを扱いたいのですが，
+</I>&gt;&gt;<i> どのようにすればいいでしょうか．
+</I>&gt;&gt;<i> 特に今CSSで以下のような記述をしたときにどうすればいいのか
+</I>&gt;&gt;<i> 困っています．
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> body {
+</I>&gt;&gt;<i>    background: #e5e5dd url(./back.jpg) repeat-y;
+</I>&gt;&gt;<i>    color: #333333;
+</I>&gt;&gt;<i>    margin: 0pt;
+</I>&gt;&gt;<i>    padding: 0pt;
+</I>&gt;&gt;<i> }
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 自分なりに少し調べてみてWAFileLibraryのSubclassを作
+</I>&gt;&gt;<i> ることで画像を扱えるようですが，Classを使わず扱うことはで
+</I>&gt;&gt;<i> きないのでしょうか．
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> お手軽なのはComanche(KomHttpServer)の機能を使うことです。
+</I>&gt;<i>
+</I>&gt;<i> (詳しくは
+</I>&gt;<i> <A HREF="http://www.shaffer-consulting.com/david/Seaside/GettingSoftware/">http://www.shaffer-consulting.com/david/Seaside/GettingSoftware/</A> 
+</I>&gt;<i> index.html
+</I>&gt;<i> に記載があります)。
+</I>&gt;<i>
+</I>&gt;<i> Seasideをストップした後、
+</I>&gt;<i>
+</I>&gt;<i> | ma seaside |
+</I>&gt;<i> seaside := KomSeasideJ default.
+</I>&gt;<i> ma := ModuleAssembly core.
+</I>&gt;<i> ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot')  
+</I>&gt;<i> fullName.
+</I>&gt;<i> ma alias: '/seaside' to: [ma addPlug: [:request | seaside process:  
+</I>&gt;<i> request]].
+</I>&gt;<i> ma documentRoot: (FileDirectory default directoryNamed: 'FileRoot')  
+</I>&gt;<i> fullName.
+</I>&gt;<i> ma directoryIndex: 'index.html index.htm'.
+</I>&gt;<i> ma serveFiles.
+</I>&gt;<i> (HttpService startOn: 9090 named: 'httpd') plug: ma rootModule
+</I>&gt;<i>
+</I>&gt;<i> という感じで、静的ドキュメントをサーブできるようにして立ち上げ 
+</I>&gt;<i> 直します。
+</I>&gt;<i> FileRoot以下にファイルを置けば、通常のWebサーバのように 
+</I>&gt;<i> アクセスできます。
+</I>&gt;<i>
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa]
+</I>
+- - - -
+Sho Yoshida
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003596.html">[Squeak-ja: 3596] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+	<LI>次の記事 <A HREF="003598.html">[Squeak-ja: 3598] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3597">[ 日付 ]</a>
+              <a href="thread.html#3597">[ スレッド ]</a>
+              <a href="subject.html#3597">[ 件名 ]</a>
+              <a href="author.html#3597">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

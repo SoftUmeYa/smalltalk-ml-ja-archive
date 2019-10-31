@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7537] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207537%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A08AC4F.4060300%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007536.html">
+   <LINK REL="Next"  HREF="007538.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7537] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207537%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A08AC4F.4060300%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7537] Re: 第7回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 5月 14日 (木) 00:21:10 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007536.html">[SML 7536] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007538.html">[SML 7538] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7537">[ 日付 ]</a>
+              <a href="thread.html#7537">[ スレッド ]</a>
+              <a href="subject.html#7537">[ 件名 ]</a>
+              <a href="author.html#7537">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠京都宇治です。
+
+Smalltalk 勉強会＠京都を終えて、自宅に帰り着いて、ゆっくりし
+てたのですが、報告を書かなければ…と思い立ち、マックに向かい
+ました。
+
+今日は、私的変数・共有変数・特殊変数と進んで、メッセージに入
+ることができました。ところがですね、喧喧諤諤の状態、諸子百家
+の光景を呈し、かなり疲れましたぁ〜。
+
+ご参加いただいた方々の変数のイメージが、かなり相異するのだと
+思いました。また、メッセージを送る、ということに関しても同様
+ですね。
+
+ブラックブックやイディオムでも、変数への代入という言葉を使っ
+ていますが、正しくは束縛を使わなければならないのでしょう。オ
+ブジェクト指向プログラミングに現れる変数を合点したいのならば、
+もう代入を使っていては立ちゆかない、ということが今日の勉強会
+でハッキリしました。
+
+束縛を参照する名前の記述法が現れ、空間を仕切って名前を収める
+作法が登場し、環境の中に新たな名前の空間を導入できる、という
+事態の把握が望まれます。
+
+最内スコープ束縛方式を暗黙とした Smalltalk プログラミングに
+おいて、次の術語を明解にしておく必要があるのだろうと思います。
+
+名前（name）
+　：
+拘束（intern）
+束縛（bind）
+解放（unbind）
+　：
+参照（refer）
+代入（assign）
+引用（quote）
+　：
+範囲（scope）
+寿命（lifetime）
+　：
+
+また、変数を書き留める（note）には、外延を示す（denote）、内
+包を示す（connote）、などが関係してきます。 仮にも名前体系の
+構築ですからね、変数名やメッセージ名を用いたプログラミングは。
+
+メッセージ送信に関しても、センダの具現が話題にのぼりましたが、
+こちらもブラックブックやイディオムでは、レシーバはセンダに応
+答する、と書いておきました。
+
+応答できない場合もあることを念頭に入れておきませう。コンテク
+ストが切れていたり、センダが世を去っていたり、シュード変数の
+thisContext をいじれるようになると、多彩な状況を作り出して試
+すことができます。もちろん、並行や分散のプログラミングでも。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007536.html">[SML 7536] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007538.html">[SML 7538] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7537">[ 日付 ]</a>
+              <a href="thread.html#7537">[ スレッド ]</a>
+              <a href="subject.html#7537">[ 件名 ]</a>
+              <a href="author.html#7537">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

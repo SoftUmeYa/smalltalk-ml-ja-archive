@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3392] Re: 教育用ＰＣ リナックスで再生
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203392%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=20070130.200734.205152061.okumura%40edu.mie-u.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003391.html">
+   <LINK REL="Next"  HREF="003393.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3392] Re: 教育用ＰＣ リナックスで再生</H1>
+    <B>ひでたん</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203392%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=20070130.200734.205152061.okumura%40edu.mie-u.ac.jp"
+       TITLE="[Squeak-ja: 3392] Re: 教育用ＰＣ リナックスで再生">hidetan ＠ gmail.com
+       </A><BR>
+    <I>2007年 1月 30日 (火) 20:55:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003391.html">[Squeak-ja: 3391] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+        <LI>次の記事 <A HREF="003393.html">[Squeak-ja: 3393] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3392">[ 日付 ]</a>
+              <a href="thread.html#3392">[ スレッド ]</a>
+              <a href="subject.html#3392">[ 件名 ]</a>
+              <a href="author.html#3392">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>squeak-ja
+
+こんにちは，丹と申します．
+
+&gt;<i> &gt;   ファイルシステムが圧縮されていたのですね。
+</I>&gt;<i>
+</I>&gt;<i> cloopはzlib圧縮だと思いますが，もう少しましなものを使えばあと数十MBは軽
+</I>&gt;<i> く空くと思います。ただ，もともと遅いCPUのマシンなので，起動が遅くなりそ
+</I>&gt;<i> うですが。
+</I>
+圧縮アルゴリズムを変更(zlib -&gt; libbzip2)した，cloop を試してみたのです
+が，伸長時間が長くなりアプリケーションの起動に時間を要してしまうように
+なってしまいました．その時は，とりあえず実装しやすさと圧縮率優先で，
+libbzip2 を使いました．
+
+今の cloop は LZMA を使っているので，圧縮にかなり時間を要しますが，圧
+縮率と伸長時間のパフォーマンスは良くなっているようです．
+
+&gt;<i> これとは無関係ですが，Wikipediaをどこまで圧縮できるかというコンテストが
+</I>&gt;<i> 行われています（<A HREF="http://prize.hutter1.net/&#65289;&#12290;&#12356;&#12414;&#23637;&#38283;&#12523;&#12540;&#12481;&#12531;&#12418;&#21547;&#12417;&#12390;">http://prize.hutter1.net/）。いま展開ルーチンも含めて</A>
+</I>&gt;<i> 100M→17Mにできるところまでいっています。OLPCにWikipediaを詰め込むため
+</I>&gt;<i> に使えるかもしれません。
+</I>
+すごいですね．テキストに特化しているのでしょうか．
+# すると，Squeak もソースで格納しておいて実行前にコンパイルとか．(笑
+
+cloop の方も，ブロックにあるデータの種類をある程度判別して，ブロックご
+とにアルゴリズムを選択するように作れば，もっと詰めることができると思い
+ます．
+
+個人的には，家庭用ゲーム機のようにアプリケーションごとにメディアを交換
+して，Squeak 専用マシンにしてもらうのがよろしいかと思っていたりします．
+
+以上です．
+-- 
+丹 英之(TAN Hideyuki) mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hidetan ＠ gmail.com</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003391.html">[Squeak-ja: 3391] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+	<LI>次の記事 <A HREF="003393.html">[Squeak-ja: 3393] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3392">[ 日付 ]</a>
+              <a href="thread.html#3392">[ スレッド ]</a>
+              <a href="subject.html#3392">[ 件名 ]</a>
+              <a href="author.html#3392">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

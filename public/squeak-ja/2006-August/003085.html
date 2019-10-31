@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3085] 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203085%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsJW0lMSE8JWsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMEozMCRHJE4bKEJJbW1YMTFQbHVnaW4od2FzIFJlOiBzb3VyY2Ug%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3Fb2YgSW1tWDExUGx1Z2luKQ%3D%3D%3F%3D&In-Reply-To=20060820213010.408674f7.kawa90%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003082.html">
+   <LINK REL="Next"  HREF="003088.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3085] 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)</H1>
+    <B>Takeshi MUTOH</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203085%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsJW0lMSE8JWsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCMEozMCRHJE4bKEJJbW1YMTFQbHVnaW4od2FzIFJlOiBzb3VyY2Ug%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3Fb2YgSW1tWDExUGx1Z2luKQ%3D%3D%3F%3D&In-Reply-To=20060820213010.408674f7.kawa90%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3085] 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)">mutoh ＠ openedu.org
+       </A><BR>
+    <I>2006年 8月 25日 (金) 21:26:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003082.html">[Squeak-ja: 3082] Re: source of ImmX11Plugin
+</A></li>
+        <LI>次の記事 <A HREF="003088.html">[Squeak-ja: 3088] Re: 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3085">[ 日付 ]</a>
+              <a href="thread.html#3085">[ スレッド ]</a>
+              <a href="subject.html#3085">[ 件名 ]</a>
+              <a href="author.html#3085">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>むとう@おうちです。
+
+なんか、夏休みも終わりが近付いてきていて少し焦ってたり;-)
+
+At Sun, 20 Aug 2006 21:30:10 +0900,
+Hideo Kawamura &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kawa90 ＠ yahoo.co.jp</A>&gt; wrote:
+&gt;<i> おそらくFreeBSDでは問題ないと思われますが。。。
+</I>&gt;<i> 
+</I>&gt;<i> まずUbuntu(Linux)でsqueak.の症状はwww.squeakland.jp/から
+</I>&gt;<i> ダウンロード・展開したオブジェクトで起動するとキーボード
+</I>&gt;<i> 入力した時点でSegmentation faultになってしまうというもの
+</I>&gt;<i> でした。そこでgdbで調査するとsqUnixX11.cのXCreateFontSet
+</I>&gt;<i> 関数がNULLを返すのが原因だと分かったので、応急処置として
+</I>&gt;<i> 
+</I>&gt;<i> #define FONTNAME      &quot;-*-Fixed-Medium-R-Normal--14-*-ISO8859-1&quot;
+</I>&gt;<i> と変更しました。思うにUbuntuのデフォルトロケールがUTF8
+</I>&gt;<i> なので、いけなかったのではと思ってたり。ただ、EUC-JPに変
+</I>&gt;<i> 更するのもいろいろ大変そうだったので、ソースを変更しまし
+</I>&gt;<i> た。XLibやXIMに詳しくないので、あくまでも対処療法です。
+</I>
+UTF-8ロケールで問題が起きるのであれば、FreeBSDでもUTF-8で環境を作って
+いる人は同じ問題にはまる可能性はありますね…
+# ちょっと調べてみます(_O_)
+
+
+本当は調べるべきだとは思うのですが、御存じの方がいれば教えてください。
+ImmX11Pluginで日本語以外のロケールのIMを使っている場合、利用できるイメー
+ジなどは存在しているのでしょうか?
+例えば、韓国語とか中国語とかで利用可能な状態なんでしょうかね?
+# これが可能だと、FreeBSD portsにも突っ込みやすいかなと。
+
+情報をお持ちの方、教えていただけると幸いです。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://610T.org/">http://610T.org/</A>
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003082.html">[Squeak-ja: 3082] Re: source of ImmX11Plugin
+</A></li>
+	<LI>次の記事 <A HREF="003088.html">[Squeak-ja: 3088] Re: 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3085">[ 日付 ]</a>
+              <a href="thread.html#3085">[ スレッド ]</a>
+              <a href="subject.html#3085">[ 件名 ]</a>
+              <a href="author.html#3085">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

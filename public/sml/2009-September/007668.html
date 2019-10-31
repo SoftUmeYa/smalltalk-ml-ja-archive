@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7668] Re: HTMLの取得がうまくできません
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207668%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEhUTUwbJEIkTjxoRkAkLCQmJF4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJC8kRyQtJF4kOyRzGyhC%3F%3D&In-Reply-To=4AC04BC9.4030803%40mail.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007667.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7668] Re: HTMLの取得がうまくできません</H1>
+    <B>oku</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207668%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEhUTUwbJEIkTjxoRkAkLCQmJF4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJC8kRyQtJF4kOyRzGyhC%3F%3D&In-Reply-To=4AC04BC9.4030803%40mail.dendai.ac.jp"
+       TITLE="[SML 7668] Re: HTMLの取得がうまくできません">oku ＠ dream.club.ne.jp
+       </A><BR>
+    <I>2009年 9月 28日 (月) 15:27:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007667.html">[SML 7667]  Re: HTMLの取得がうまくできません
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7668">[ 日付 ]</a>
+              <a href="thread.html#7668">[ スレッド ]</a>
+              <a href="subject.html#7668">[ 件名 ]</a>
+              <a href="author.html#7668">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おくだいらです。
+
+3ヶ月くらい前に recent 取得時の仕様が変わりました。
+公式にアナウンスされたのは見た事ありません。
+
+<A HREF="http://d.hatena.ne.jp/con_mame/20090618">http://d.hatena.ne.jp/con_mame/20090618</A>
+
+ニコ生アラートを実装するなら API が公開されているのでそちらを
+使うようにしましょう。
+
+<A HREF="http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%83%A9%E3%83%BC%E3%83%88%28%E6%9C%AC%E5%AE%B6%29%E3%81%AE%E4%BB%95%E6%A7%98">http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%83%A9%E3%83%BC%E3%83%88%28%E6%9C%AC%E5%AE%B6%29%E3%81%AE%E4%BB%95%E6%A7%98</A>
+
+こちらは
+
+&gt;<i> ツールおよびサービスでこれらのAPIにアクセスする時、そのツール名
+</I>&gt;<i> /サービス名とバージョン情報が含まれているユーザーエージェントで
+</I>&gt;<i> アクセスすることを推奨します。
+</I>
+と書かれています。
+
+Hidetaka MASUDAさんの&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">4AC04BC9.4030803 ＠ mail.dendai.ac.jp</A>&gt;から
+&gt;<i> 増田です。
+</I>&gt;<i> 
+</I>&gt;<i> Java と Jun 760 で自分のサーバにアクセスして環境変数の違いを見てみまし
+</I>&gt;<i> た。異なっているのは、UserAgent ぐらいでした。
+</I>&gt;<i> 
+</I>&gt;<i> Java: HTTP_USER_AGENT	Java/1.6.0_05
+</I>&gt;<i> Jun:  HTTP_USER_AGENT
+</I>&gt;<i> 
+</I>&gt;<i> Jun の方は UserAgent が設定されていません。
+</I>&gt;<i> 
+</I>&gt;<i> 試しに Java の方で UserAgent をなしにしてみると、ニコニコ生放送もエラー
+</I>&gt;<i> になります。
+</I>&gt;<i> 
+</I>&gt;<i> 以下のプログラムの UserAgentなし の行を注釈なしにしてみてください。
+</I>&gt;<i> 
+</I>&gt;<i> --------------------------- cut here ------------------------------
+</I>&gt;<i> import java.io.*;
+</I>&gt;<i> import java.net.*;
+</I>&gt;<i> 
+</I>&gt;<i> class NicoGet {
+</I>&gt;<i>     public static void main(String[] args) {
+</I>&gt;<i>         try {
+</I>&gt;<i>             String urlString =
+</I>&gt;<i> &quot;<A HREF="http://live.nicovideo.jp/recent?p=1&amp;tab=common&quot;;">http://live.nicovideo.jp/recent?p=1&amp;tab=common&quot;;</A>
+</I>&gt;<i> 
+</I>&gt;<i>             URL url = new URL(urlString);
+</I>&gt;<i> 
+</I>&gt;<i>             URLConnection uc = url.openConnection();
+</I>&gt;<i>             // uc.setRequestProperty(&quot;User-Agent&quot;, &quot;&quot;);// UserAgentなし
+</I>&gt;<i>             InputStream input = uc.getInputStream();
+</I>&gt;<i> 
+</I>&gt;<i>             int c;
+</I>&gt;<i>             while ((c = input.read()) != -1) System.out.write(c);
+</I>&gt;<i>             input.close();
+</I>&gt;<i>         } catch (MalformedURLException ex) {
+</I>&gt;<i>             System.out.println(&quot;MalformedURLException: &quot; + ex);
+</I>&gt;<i>         } catch (IOException ex) {
+</I>&gt;<i>             System.out.println(&quot;IOException: &quot; + ex);
+</I>&gt;<i>         }
+</I>&gt;<i>     }
+</I>&gt;<i> }
+</I>&gt;<i> --------------------------- cut here ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> JunURL でも UserAgent が設定できると大丈夫なような気がするのですが、いか
+</I>&gt;<i> がでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> # ちょっとブラウズしてみましたがすぐにはわかりませんでしたので、どなたか
+</I>&gt;<i> わかる方のフォローをお願いします。
+</I>&gt;<i> 
+</I>&gt;<i> 久保田 吉彦 さんは書きました:
+</I>&gt;<i> &gt; 自家製ニコ生アラートのようなものをVisualWorksで作成しようと思い、下記の 
+</I>&gt;<i> &gt; プログラムでニコニコ生放送のページの情報を取得しようとしました。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; | anURL readStream writeStream |
+</I>&gt;<i> &gt; anURL := JunURL named: '<A HREF="http://live.nicovideo.jp/recent?p=1&amp;tab=common'">http://live.nicovideo.jp/recent?p=1&amp;tab=common'</A> .
+</I>&gt;<i> &gt; JunControlUtility
+</I>&gt;<i> &gt;     assert:[readStream := anURL readStream.
+</I>&gt;<i> &gt;             writeStream := 'nico.html' asFilename writeStream]
+</I>&gt;<i> &gt;     do:[[readStream atEnd not] whileTrue:
+</I>&gt;<i> &gt;             [writeStream nextPutAll:(JunStringUtility getLine: 
+</I>&gt;<i> &gt; readStream)]]
+</I>&gt;<i> &gt;     ensure:[writeStream close.
+</I>&gt;<i> &gt;             readStream close].
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 困っているのはWebブラウザでURLを開いたときに取得できるHTMLと異なった情報 
+</I>&gt;<i> &gt; を持ってきてしまうことです。
+</I>&gt;<i> &gt; nico.htmlを開くと'エラーが発生しました'と書かれたページが表示されます。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; いまのところ同じURLのHTMLを取得するプログラムをJavaとPythonで書いてみま 
+</I>&gt;<i> &gt; したが、こちらでは期待した情報が得られました。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; プログラムのどこがいけないのでしょうか?
+</I>&gt;<i> &gt; ご存知の方教えていただけませんでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> ------
+</I>&gt;<i> 〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+</I>&gt;<i> E-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">masuda ＠ im.dendai.ac.jp</A>                TEL 03-5280-3551
+</I>&gt;<i> <A HREF="http://www.cdl.im.dendai.ac.jp/%7emasuda/">http://www.cdl.im.dendai.ac.jp/%7emasuda/</A>     FAX 03-5280-3592
+</I>&gt;<i> It's more fun to compute!
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007667.html">[SML 7667]  Re: HTMLの取得がうまくできません
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7668">[ 日付 ]</a>
+              <a href="thread.html#7668">[ スレッド ]</a>
+              <a href="subject.html#7668">[ 件名 ]</a>
+              <a href="author.html#7668">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

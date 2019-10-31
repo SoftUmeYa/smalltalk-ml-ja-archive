@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7108] クラスライブラリに耳を傾ける
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207108%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8laSU5JWklJCVWJWklaiRLPCobKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJHI3OSQxJGsbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007107.html">
+   <LINK REL="Next"  HREF="007109.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7108] クラスライブラリに耳を傾ける</H1>
+    <B>NISHIHARA Satoshi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207108%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8laSU5JWklJCVWJWklaiRLPCobKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJHI3OSQxJGsbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7108] クラスライブラリに耳を傾ける">nishis ＠ zephyr.dti.ne.jp
+       </A><BR>
+    <I>2005年 7月 20日 (水) 09:50:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007107.html">[SML 7107] Jun646 for Smalltalk
+</A></li>
+        <LI>次の記事 <A HREF="007109.html">[SML 7109] Re: クラスライブラリに耳を傾ける
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7108">[ 日付 ]</a>
+              <a href="thread.html#7108">[ スレッド ]</a>
+              <a href="subject.html#7108">[ 件名 ]</a>
+              <a href="author.html#7108">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>なんて偉そうなサブジェクトですが，とりあえずクラスからなんぞ３つの要素を
+取り出すことができれば音を鳴らせるんでやってみました．
+
+ピッチはルート・クラスからの隔たりで半音間隔です，
+長さはそのクラスのサイズです．
+音量は，最初クラスの人気度 (リファレンス数) にしようと思ってたんですが，
+半端じゃない時間 (CD 2 枚分以上？) が掛かるんで，適当にセレクタ数で妥協
+しました．
+
+ほとんどのクラスはサイズも小さくて，セレクタ数もそんなに突飛な数には鳴っ
+てない，ごく一部のクラスがデカくてセレクタもいっぱいというのが聴いて判り
+ます (笑)．
+
+最初に鳴り出すドローンはいわゆるスクリャービンの神秘和音で，これはクラス
+関連とは全く無関係，単なる伴奏です．全体の演奏 (？) 約 7'50&quot; ほど掛かり
+ます．
+
+ついでに四重奏版も添付します．何かフリーっぽく聴こえて，けっこう笑えます．
+
+
+  | spaceUsedMax allSuperclassesMax selectorsMax collection basePitch instruments chromaticScale soundCollection totalDuration offsetSecond droneVolume droneMakeBlock droneL1 droneR1 droneL2 droneR2 droneL3 droneR3 score aMixedSound |
+  spaceUsedMax := 0.
+  allSuperclassesMax := 0.
+  selectorsMax := 0.
+  collection := OrderedCollection new: Metaclass allInstances size.
+  Cursor execute
+    showWhile: [SystemNavigation default
+        allBehaviorsDo: [:aClass | aClass isMeta
+            ifFalse: [| spaceUsed allSuperclasses selectors |
+              spaceUsed := aClass spaceUsed + aClass class spaceUsed.
+              allSuperclasses := aClass allSuperclasses size.
+              selectors := aClass selectors size + aClass class selectors size.
+              spaceUsedMax &lt; spaceUsed
+                ifTrue: [spaceUsedMax := spaceUsed].
+              allSuperclassesMax &lt; allSuperclasses
+                ifTrue: [allSuperclassesMax := allSuperclasses].
+              selectorsMax &lt; selectors
+                ifTrue: [selectorsMax := selectors].
+              collection
+                add: (Array
+                    with: aClass name
+                    with: spaceUsed
+                    with: allSuperclasses
+                    with: selectors)]]].
+  basePitch := 'c4'.
+  instruments := (FMSound class organization listAtCategoryNamed: #instruments)
+        select: [:each | (each beginsWith: #random) not].
+  chromaticScale := ((AbstractSound chromaticPitchesFrom: basePitch)
+        copyFrom: 1
+        to: 13) reverse.
+  soundCollection := OrderedCollection new: collection size.
+  totalDuration := 0.
+  Cursor execute
+    showWhile: [collection
+        do: [:each |
+          | pitch duration loudness aSound |
+          pitch := chromaticScale at: (each at: 3)
+                  + 1.
+          duration := (each at: 2)
+                / spaceUsedMax * 15 max: 0.15.
+          totalDuration := totalDuration + duration.
+          loudness := (each at: 4)
+                / selectorsMax max: 0.346.
+          aSound := FMSound perform: instruments atRandom.
+          soundCollection
+            add: (aSound
+                soundForPitch: pitch
+                dur: duration
+                loudness: loudness)]].
+  offsetSecond := 12.
+  droneVolume := 268.
+  droneMakeBlock := [:restDuration :dronePitch :droneDuration :droneLoudness | Array
+        with: (Array with: #rest with: restDuration)
+        with: (Array
+            with: dronePitch
+            with: droneDuration
+            with: droneLoudness)].
+  droneL1 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: 0
+            value: #c3
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneR1 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6
+            value: #'f#3'
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneL2 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6 * 2
+            value: #bf3
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneR2 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6 * 3
+            value: #e4
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneL3 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6 * 4
+            value: #a4
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  droneR3 := FMSound
+        noteSequenceOn: FMSound organ1
+        from: (droneMakeBlock
+            value: offsetSecond / 6 * 5
+            value: #d5
+            value: totalDuration + offsetSecond
+            value: droneVolume).
+  soundCollection
+    addFirst: (RestSound dur: offsetSecond).
+  score := SequentialSound new.
+  soundCollection
+    do: [:each | score add: each].
+  aMixedSound := MixedSound new add: droneL1 pan: 0.1;
+         add: droneL2 pan: 0.25;
+         add: droneL3 pan: 0.4;
+         add: droneR3 pan: 0.6;
+         add: droneR2 pan: 0.75;
+         add: droneR1 pan: 0.9;
+         add: score pan: 0.5.
+  aMixedSound play.
+  ^ {score. soundCollection. collection. spaceUsedMax. allSuperclassesMax. selectorsMax}
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">nishis ＠ zephyr.dti.ne.jp</A>
+URL:    <A HREF="http://www.zephyr.dti.ne.jp/~nishis/">http://www.zephyr.dti.ne.jp/~nishis/</A>
+--------------------------------------------
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: playClassLibraryQuartet.st
+URL:  <A HREF="http://www.akademia.co.jp/pipermail/sml/attachments/20050720/feec3f04/playClassLibraryQuartet.ksh">http://www.akademia.co.jp/pipermail/sml/attachments/20050720/feec3f04/playClassLibraryQuartet.ksh</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007107.html">[SML 7107] Jun646 for Smalltalk
+</A></li>
+	<LI>次の記事 <A HREF="007109.html">[SML 7109] Re: クラスライブラリに耳を傾ける
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7108">[ 日付 ]</a>
+              <a href="thread.html#7108">[ スレッド ]</a>
+              <a href="subject.html#7108">[ 件名 ]</a>
+              <a href="author.html#7108">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,570 @@
+From yoshiki ＠ squeakland.org  Wed Mar  1 15:28:47 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2881] Re: Squeak Board Election
+In-Reply-To: <ulkw2sbhv.wl%yoshiki@squeakland.org>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+	<ufymjuhrn.wl%yoshiki@squeakland.org>
+	<ulkw2sbhv.wl%yoshiki@squeakland.org>
+Message-ID: <ufym2brvl.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  開発者向けSqueakコミュニティでの投票に関する話ですが、
+
+http://people.squeakfoundation.org/article/54.html
+
+にあるように、7人の当選者が決まっています。おかげさまで、実は僕も当選
+しました。これから微力ながらあちらのほうのコミュニティにも力を尽くした
+いと思います。
+
+-- Yoshiki
+
+From sumi ＠ seagreen.ocn.ne.jp  Wed Mar  1 19:51:49 2006
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2882] Re: Squeak Board Election
+In-Reply-To: <ufym2brvl.wl%yoshiki@squeakland.org>
+Message-ID: <C02BABD3.3FA7B%sumi@seagreen.ocn.ne.jp>
+
+おおしまさん、お世話になっております。鷲見です。
+
+当選は間違いないと思ってはいましたが、２位とはすごいですね。組織票？ｗ
+
+これまでもいろいろとご尽力いただいておるところではありますが、
+今後ともよろしくお願いいたします。
+
+on 3/1/06 15:28, yoshiki@squeakland.org wrote:
+
+> おかげさまで、実は僕も当選
+> しました。これから微力ながらあちらのほうのコミュニティにも力を尽くした
+> いと思います。
+
+--
+Masato Sumi
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Mar 13 21:34:19 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2883] swikis.ddo.jpがまたもやピンチです
+Message-ID: <JW200603132134194.423578@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+「プロジェクト置き場」「SqueakSourceJ」
+「自由自在Squeakプログラミングサポートサイト」
+
+などが置かれている swikis.ddo.jp のサーバが現在落ちています。
+
+ファイルシステムが壊れました。復旧は明日以降になりそうです。
+
+ご迷惑をおかけしますが、ご了承ください。
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Tue Mar 14 09:34:34 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2884] Re: swikis.ddo.jpがまたもやピンチです
+In-Reply-To: <JW200603132134194.423578@mars.dti.ne.jp>
+References: <JW200603132134194.423578@mars.dti.ne.jp>
+Message-ID: <JL200603140934345.2872703@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さきほど復旧をいたしました。
+
+http://swikis.ddo.jp 系は3/11日時点の内容に戻りました。
+ftp://swikis.ddo.jp については、あろうことか2/15日の内容になっています。
+(FTPについては使っている人は多分少ないとは思いますが)
+
+ということで、失われた期間中に書かれたコンテンツは、お手数ですが、
+再書き込み・アップロードをしていただければと思います。
+
+よろしくお願い申し上げます。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 「プロジェクト置き場」「SqueakSourceJ」
+> 「自由自在Squeakプログラミングサポートサイト」
+> 
+> などが置かれている swikis.ddo.jp のサーバが現在落ちています。
+> 
+> ファイルシステムが壊れました。復旧は明日以降になりそうです。
+> 
+> ご迷惑をおかけしますが、ご了承ください。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From mutoh ＠ openedu.org  Thu Mar 16 18:34:14 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2885] VM全体のテストについて
+Message-ID: <ddd5gmn36x.wl%mutoh@openedu.org>
+
+むとうです。
+
+以前、FreeBSDでLinux用のVMが動かなくなったというのは、単にOpenGLライブ
+ラリ関連をインストールし忘れていただけでした(;-;)
+
+
+今回の本題ですが、FreeBSD用のVMを作ったりしていると、本当にこのVMは正
+しく動いているのかが気になります。
+
+例えば、FFIプラグインだと、
+	FFITester class >> testAll
+でチェックすればいいのかと思うのですが、VM全体に渡ってテストをしてくれ
+るようなものってありませんでしょうか?
+
+VMにかかわっている方も多いと思いますので、教えていただければ幸いです。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From yoshiki ＠ squeakland.org  Fri Mar 17 03:13:48 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2886] Re: VM全体のテストについて
+In-Reply-To: <ddd5gmn36x.wl%mutoh@openedu.org>
+References: <ddd5gmn36x.wl%mutoh@openedu.org>
+Message-ID: <upskmmf4z.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> 今回の本題ですが、FreeBSD用のVMを作ったりしていると、本当にこのVMは正
+> しく動いているのかが気になります。
+
+  そういうことはありますね。
+
+> 例えば、FFIプラグインだと、
+> 	FFITester class >> testAll
+> でチェックすればいいのかと思うのですが、VM全体に渡ってテストをしてくれ
+> るようなものってありませんでしょうか?
+
+  VM全体にわたってのテスト、というものは今のところないと思います。
+
+  Squeak VMの成り立ちは、VMのほとんどの部分をSqueakで書いて、それを
+ANSI Cに変換して、それをコンパイルしています。マシンおよびOSに期待され
+ている部分は32ビットの演算ができることと32ビットアドレス空間が取れるこ
+とだけで、endianの違いなどはCのヘッダファイルに書かれたマクロで吸収し
+ています。つまり、VM記述のCへの変換そのものは完全に機種非依存です。
+
+  というわけで、Cに変換したコードをコンパイルしてVMを作り、そのVMでイ
+メージが立ち上がるところまで行ったとすれば、それはVMのほとんどの箇所は
+期待したとおりに動いている、ということになります。
+
+  問題は、機種・OS依存の部分、特に入出力に関わる部分ですが、これはやっ
+ぱり自動化されたテストはやや難しいでしょうね。「期待されたとおりにコン
+ピュータのスクリーンにビットマップが表示されたかどうか」ということは、
+人間が目で見るのが最善でしょうし。
+
+  コードでテストできるのは、Pluginに入っているプリミティブがちゃんと呼
+べたかどうか、もし返り値などに意味があるなら正しい値が帰ってきたかどう
+か、というところまでかもしれません。これは、primitiveのバックアップコー
+ド(primitive呼び出しが失敗したときに自動的に実行されるコード)を適切に
+書き換えてやることになるでしょうか。
+
+> VMにかかわっている方も多いと思いますので、教えていただければ幸いです。
+
+  というわけで、あまり役に立てなくてすみません。上記のように、
+primitiveが失敗したかどうかを調べることには大いに意義があると思います。
+Squeak 2.4のころも、Dan Ingallsがいつのまにかtext scanningのprimitive 
+に渡す定義を変えたために、通常のtext scanningがみなfailしていた、とい
+うことがありました。バックアップコードが適切に書かれていたのでなかなか
+誰も気にしていなかったのですが(遅い遅い機械でベンチマークを走らせてい
+た僕のような人が文句を言うまで)、やっぱり人間見落としはありますからね。
+
+  参考になれば幸いです。
+
+-- Yoshiki
+
+From mutoh ＠ openedu.org  Fri Mar 17 18:08:07 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2887] Re: VM全体のテストについて
+In-Reply-To: <upskmmf4z.wl%yoshiki@squeakland.org>
+References: <ddd5gmn36x.wl%mutoh@openedu.org>
+	<upskmmf4z.wl%yoshiki@squeakland.org>
+Message-ID: <ddek11cubs.wl%mutoh@openedu.org>
+
+むとうです。
+
+おおしまさま、詳細な解説ありがとうございます。
+
+At Thu, 16 Mar 2006 10:13:48 -0800,
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>   Squeak VMの成り立ちは、VMのほとんどの部分をSqueakで書いて、それを
+> ANSI Cに変換して、それをコンパイルしています。マシンおよびOSに期待され
+> ている部分は32ビットの演算ができることと32ビットアドレス空間が取れるこ
+> とだけで、endianの違いなどはCのヘッダファイルに書かれたマクロで吸収し
+> ています。つまり、VM記述のCへの変換そのものは完全に機種非依存です。
+
+確かに、Squeak自体もSqueakで書かれているというのはあちこちで目にしてい
+たはずなんですが、このレベルまで大丈夫なように記述されているのですね。
+
+>   というわけで、Cに変換したコードをコンパイルしてVMを作り、そのVMでイ
+> メージが立ち上がるところまで行ったとすれば、それはVMのほとんどの箇所は
+> 期待したとおりに動いている、ということになります。
+
+とりあえず、このレベルの確認は毎回やっているので、少し安心しました。
+
+>   コードでテストできるのは、Pluginに入っているプリミティブがちゃんと呼
+> べたかどうか、もし返り値などに意味があるなら正しい値が帰ってきたかどう
+> か、というところまでかもしれません。これは、primitiveのバックアップコー
+> ド(primitive呼び出しが失敗したときに自動的に実行されるコード)を適切に
+> 書き換えてやることになるでしょうか。
+
+Squeakで書かれたバックアップコードもあるので、primitiveとバックアップ
+コードの両方がダメでないと顕在化しないのですね。
+プラグイン回りのチェックの時には気を付けるようにします。
+
+というか、
+
+> Squeak 2.4のころも、Dan Ingallsがいつのまにかtext scanningのprimitive 
+> に渡す定義を変えたために、通常のtext scanningがみなfailしていた、とい
+> うことがありました。バックアップコードが適切に書かれていたのでなかなか
+> 誰も気にしていなかったのですが(遅い遅い機械でベンチマークを走らせてい
+> た僕のような人が文句を言うまで)、やっぱり人間見落としはありますからね。
+
+実際にあったんですね(^-^;)
+
+> > VMにかかわっている方も多いと思いますので、教えていただければ幸いです。
+>   というわけで、あまり役に立てなくてすみません。上記のように、
+> primitiveが失敗したかどうかを調べることには大いに意義があると思います。
+
+ちょっと、コードの中のprimitiveがある回りを見てみます。
+
+>   参考になれば幸いです。
+
+ありがとうございました。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Fri Mar 24 10:10:08 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2888] PluggableListMorphについて教えてください。
+Message-ID: <BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+こんにちは。Squeakで簡単な思考過程のモデルを作りたいと思っている者です。
+その一部として、Browserにあるように、項目をスクロールして検索し、その内容を
+窓に表示する仕組みを作りたいのです。それでbrowserの一部をコピーしてハロをだ
+してみているのですが、この仕組みはPluggableListMorphで扱うのか ScrollPaneで
+扱うのか、そして項目リストの乗せ方はどうするのかなど、全体像がつかめず理解が
+すすみません。
+ヒントをお与え下さい。また参考にできる本やHPなどがあれば教えていただけません
+か。久保　道
+
+
+From takeda.toshiyuki ＠ gmail.com  Fri Mar 24 11:45:01 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2889] Re: PluggableListMorphについて教えてください。
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <6544a1da0603231845l7154893t259a19676655d661@mail.gmail.com>
+
+武田です。
+
+On 3/24/06, kubo-o <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> こんにちは。Squeakで簡単な思考過程のモデルを作りたいと思っている者です。
+
+それはおもしろそうです。
+
+PluggableListMorphを使えばいいと思いますが、理解しづらいですよね。
+いつもどのクラスに定義するか私自身迷うのですが、表示用のクラスか、リストを
+ハンドルするクラスを作って、そのMorphを扱うメソッドで、
+
+list := PluggableListMorph new
+              on: self
+              list: #contents
+              selected: #index
+              changeSelected: #index:
+              menu: nil
+	      keystroke: nil.
+
+みたいのを入れてください。そのクラスで、リストを返すcontents、
+リストの位置を返すindex、位置を変更するindex:を定義すると
+希望通りの動作になると思います。index:は、
+
+index: anNumber
+    index := anNumber
+    self changed: #index
+
+のように、changed:を入れてください。
+
+また、上のコードを入れて、sendersをクリックすると例がいくつも出てくるので
+もっと複雑な例を調べることもできます。
+
+取りあえずそんなところでいかがでしょう。
+
+武田俊之
+
+From umejava ＠ mars.dti.ne.jp  Fri Mar 24 22:53:44 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2890] Squeakware-edu 0.3ベータ版
+Message-ID: <JZ200603242253444.8115484@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Squeakware-edu 0.3ベータ版をリリースしました。
+http://swikis.ddo.jp/umejava/34
+
+Squeakwareとは、CDやUSBメモリからブート可能なSqueak入りLinuxです。
+
+Squeakware-edu 0.3ではSqueakland 2005Jを採用しています。
+CDやUSBメモリからブートするだけで、すぐにSqueakを楽しむことができます。
+
+今回は、世界聴診器、ODECo、ネットモーフをあらかじめインストールしたFull版も
+用意しています。これらのインストールにとまどっていた方も、気軽に試してみる
+ことができます。
+
+まだベータ扱いなので、不具合が見つかるかもしれません。その際はお気軽に
+ご連絡ください。
+
+Enjoy!
+---
+[:masashi | ^umezawa]
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Tue Mar 28 09:47:31 2006
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo-o)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2891]  Re: PluggableListMorphについて教えてください。
+Message-ID: <BIEDLAGDKLHEABOHHEOHGEDFCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+武田俊之様
+表記のことで、早速教えていただきまして、
+ありがとうございます。
+書いて頂いたことを理解してからご報告を、
+と思っていたのですが、まだ理解できません。
+list := PluggableListMorph new.
+list on: self list: #contents selected: #index changeSelected: #index menu:
+nil keystroke: nil
+とやってみたのですが、うまくいきません。
+基礎的な勉強が出来ていないので、この辺の
+理解に時間がかかります。
+お手数ですが、もう少し詳しく
+お願いします。
+久保　道
+
+ＰＳ：
+上記のような内容のものは、
+メーリングリストへ載せるのか、直接メールをするのか、
+そのことが分からないので、
+直接メールしました。間違っていたら
+お許し下さい。
+
+
+
+From tango ＠ eggegg.co.jp  Tue Mar 28 16:16:21 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2892] Re: PluggableListMorphについて教えてください。
+References: <BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <002f01c65237$87540ff0$6dc4d2ca@gomes>
+
+やまもとです。
+
+おいらもよくわかってないのですが
+こんなところはどうでしょう？
+
+http://coweb.cc.gatech.edu/cs2340/2247
+
+http://www.eli.sdsu.edu/courses/spring01/cs683/notes/plug/plug.html
+
+http://minnow.cc.gatech.edu/squeak/2962
+
+
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+----- Original Message ----- 
+From: "kubo-o" <kubo-o@mbox.kyoto-inet.or.jp>
+To: <squeak-ja@smalltalk.jp>
+Sent: Friday, March 24, 2006 10:10 AM
+Subject: [Squeak-ja: 2888] PluggableListMorphについて教えてください。
+
+
+> こんにちは。Squeakで簡単な思考過程のモデルを作りたいと思っている者です。
+> その一部として、Browserにあるように、項目をスクロールして検索し、その内容
+を
+> 窓に表示する仕組みを作りたいのです。それでbrowserの一部をコピーしてハロを
+だ
+> してみているのですが、この仕組みはPluggableListMorphで扱うのか ScrollPane
+で
+> 扱うのか、そして項目リストの乗せ方はどうするのかなど、全体像がつかめず理解
+が
+> すすみません。
+> ヒントをお与え下さい。また参考にできる本やHPなどがあれば教えていただけませ
+ん
+> か。久保　道
+>
+
+
+
+From nishis ＠ zephyr.dti.ne.jp  Tue Mar 28 17:01:42 2006
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2893] Re: PluggableListMorphについて教えてください。
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <BIEDLAGDKLHEABOHHEOHAEDDCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <4428ED66.6070403@zephyr.dti.ne.jp>
+
+on 06.3.24 10:10 AM, kubo-o wrote:
+> こんにちは。Squeakで簡単な思考過程のモデルを作りたいと思っている者です。
+> その一部として、Browserにあるように、項目をスクロールして検索し、その内容を
+> 窓に表示する仕組みを作りたいのです。それでbrowserの一部をコピーしてハロをだ
+
+去年，PluggableListMorph を使って同じようなヤツを作りました．
+フローとログのブラウザで，どちらも Thunderbird のように左がリ
+スト・ペインになってるやつです．対象によって表示する内容は画像
+だったりテキストだったりします．
+
+作り方は武田さんが書かれているとおりです．PluggableListMorph
+クラスをリファしているのを見て回ってあちこちパクってくればでき
+ます．わたしは ProcessBrowser を参考にしました (笑)．
+
+> してみているのですが、この仕組みはPluggableListMorphで扱うのか ScrollPaneで
+> 扱うのか、そして項目リストの乗せ方はどうするのかなど、全体像がつかめず理解が
+> すすみません。
+> ヒントをお与え下さい。また参考にできる本やHPなどがあれば教えていただけません
+> か。久保　道
+
+単なるベタなリストじゃなくて三角アイコンがついたツリー・タイプ
+のリストもわりと簡単に使えます． PluggableListMorph に喰わせる
+リストを，カスタマイズした ListItemWrapper のサブクラスでラッ
+プするだけだったと思います．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From yoshiki ＠ squeakland.org  Thu Mar 30 21:42:46 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2894] Re: PluggableListMorphについて教えてください。
+In-Reply-To: <BIEDLAGDKLHEABOHHEOHGEDFCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <BIEDLAGDKLHEABOHHEOHGEDFCBAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <ur74khznd.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  さて、プログラムについての質問では、書いているものについて十分な情報
+を出さない限り、なかなか確とした返事をするのは難しいです。
+
+> list := PluggableListMorph new.
+> list on: self list: #contents selected: #index changeSelected: #index menu:
+> nil keystroke: nil
+
+  この例でも、selfは実際にはどういうオブジェクトなのか、#contentsや
+#indexがどのように実装されているのか、ということがわからないですし、
+
+> とやってみたのですが、うまくいきません。
+
+  こちらも、何がどう「うまくいかない」のか判りません。(ちなみに、武田
+さんの最初の返事では、changeSelected:の後は#indexではなくて#index:でし
+たが、違いにはお気づきでしたか?)
+
+> 基礎的な勉強が出来ていないので、この辺の
+> 理解に時間がかかります。
+> お手数ですが、もう少し詳しく
+> お願いします。
+
+  というわけで、質問のほうをもう少し詳しくしていただけると、皆さんも答
+えやすくなるのではないかと思います。
+
+  質問から想像するに、梅澤さんの書かれた「自由自在 Squeakプログラミン
+グ」を入手なさって、頭から順に試していくのがよいかとも思われます。
+
+> 上記のような内容のものは、
+> メーリングリストへ載せるのか、直接メールをするのか、
+> そのことが分からないので、
+> 直接メールしました。間違っていたら
+> お許し下さい。
+
+  武田さんとのやりとりが進んでいるのかもしれませんが、答えられる人が複
+数いる場合に返答が早く得られますし、似たような疑問を持っている人がいる
+可能性があるので知識の共有ができたりもするので、通常はメーリングリスト
+に書いていただくのがよいかと思います。
+
+  参考になれば幸いです。
+
+-- Yoshiki
+
+From umejava ＠ mars.dti.ne.jp  Fri Mar 31 21:12:40 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:26 2007
+Subject: [Squeak-ja: 2895] Squeakware-edu 0.3リリース
+In-Reply-To: <JZ200603242253444.8115484@mars.dti.ne.jp>
+References: <JZ200603242253444.8115484@mars.dti.ne.jp>
+Message-ID: <JH200603312112408.27986078@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さきほど、Squeakware-edu 0.3を正式にリリースしました。
+http://swikis.ddo.jp/umejava/34
+
+今回からSuperSwiki2ベータ版へのアクセスが可能になっています。
+http://squeakland.jp/super2
+
+お楽しみください。
+
+なお、教育版でない、マニア向けのバリバリ版も出す予定です。
+こちらはWebアプリが開発でき、ソースをUSBメモリかSqueakSourceJに置けると
+いったイメージのものを目指しています。
+
+バリバリ版に「こういったものを入れると良い」などのアイデアがありましたら
+ぜひお聞かせください。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> Squeakware-edu 0.3ベータ版をリリースしました。
+> http://swikis.ddo.jp/umejava/34
+> 
+> Squeakwareとは、CDやUSBメモリからブート可能なSqueak入りLinuxです。
+> 
+> Squeakware-edu 0.3ではSqueakland 2005Jを採用しています。
+> CDやUSBメモリからブートするだけで、すぐにSqueakを楽しむことができます。
+> 
+> 今回は、世界聴診器、ODECo、ネットモーフをあらかじめインストールしたFull版も
+> 用意しています。これらのインストールにとまどっていた方も、気軽に試してみる
+> ことができます。
+> 
+> まだベータ扱いなので、不具合が見つかるかもしれません。その際はお気軽に
+> ご連絡ください。
+> 
+> Enjoy!
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+

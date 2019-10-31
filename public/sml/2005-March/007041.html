@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7041] Jun617 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207041%5D%20Jun617%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007046.html">
+   <LINK REL="Next"  HREF="007042.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7041] Jun617 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207041%5D%20Jun617%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7041] Jun617 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2005年 3月  4日 (金) 15:24:28 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007046.html">[SML 7046] Re: 過去記事のアーカイブについて
+</A></li>
+        <LI>次の記事 <A HREF="007042.html">[SML 7042] Re: Jun617 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7041">[ 日付 ]</a>
+              <a href="thread.html#7041">[ スレッド ]</a>
+              <a href="subject.html#7041">[ 件名 ]</a>
+              <a href="author.html#7041">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun617」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+<A HREF="http://www.sra.co.jp/smalltalk/jun/">http://www.sra.co.jp/smalltalk/jun/</A>
+<A HREF="http://www.sra.co.jp/smalltalk/jun/htmls/News.html">http://www.sra.co.jp/smalltalk/jun/htmls/News.html</A>
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+<A HREF="ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/">ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/</A>
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆フランス（パリ大学）より寄贈されたプログラムコードを反映さ
+　せました。 X11 for Mac OS X でも正常に動作するようになって
+　います。<A HREF="http://www.apple.com/jp/macosx/features/x11/">http://www.apple.com/jp/macosx/features/x11/</A>
+
+◆時間を決めて処理を行うプログラム制御メッセージ群を、じゅん
+　のアプリケーションＭＶＣに加えました。
+　以下では、self が JunApplicationModel / JunAbstractView /
+　JunAbstractController / JunAbstractControllerWithMenu など
+　のオブジェクトになります。
+
+　self punctuallyDo: aBlock forMicroseconds: microsecondTime
+　self punctuallyDo: aBlock forMilliseconds: millisecondTime
+　self punctuallyDo: aBlock during: millisecondTime
+　指定された時間内で指定された処理を実行しようとします。たと
+　え時間内に処理が終わったとしても、指定された時間分だけかか
+　るようにできています。時間内に処理が終わらない場合には、途
+　中で打ち切られます。つまり、確実に時間を守ることになります。
+
+　self do: aBlock forMicroseconds: microsecondTime
+　self do: aBlock forMilliseconds: millisecondTime
+　self do: aBlock during: millisecondTime
+　指定された時間内で指定された処理を実行しようとします。たと
+　え時間内に処理が終わったとしても、指定された時間分だけかか
+　るようにできています。ただし、時間内に処理が終わらない場合
+　には、処理の完了を待ちます。つまり、早く終えた場合にかぎり、
+　時間を守ることになります。
+　
+　self fork: aBlock forMicroseconds: microsecondTime
+　self fork: aBlock forMilliseconds: millisecondTime
+　self fork: aBlock during: millisecondTime
+　指定された時間内で指定された処理を実行しようとします。並行
+　プロセスとして実行されますので、このメッセージの発信元にす
+　ぐにプログラム制御が戻ります。指定された時間内に処理が終わ
+　らない場合には、途中で打ち切られます。つまり、裏でこの時間
+　内に可能な限り処理を進めておけ、ということになります。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007046.html">[SML 7046] Re: 過去記事のアーカイブについて
+</A></li>
+	<LI>次の記事 <A HREF="007042.html">[SML 7042] Re: Jun617 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7041">[ 日付 ]</a>
+              <a href="thread.html#7041">[ スレッド ]</a>
+              <a href="subject.html#7041">[ 件名 ]</a>
+              <a href="author.html#7041">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

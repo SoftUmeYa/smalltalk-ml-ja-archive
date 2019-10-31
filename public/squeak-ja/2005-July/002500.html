@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2500] Re: Windows 版 Squeak での UDP パケット受信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202500%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=JW2005070420473311.45073125%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002499.html">
+   <LINK REL="Next"  HREF="002501.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2500] Re: Windows 版 Squeak での UDP パケット受信について</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202500%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=JW2005070420473311.45073125%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 2500] Re: Windows 版 Squeak での UDP パケット受信について">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 7月  4日 (月) 21:12:42 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002499.html">[Squeak-ja: 2499] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+        <LI>次の記事 <A HREF="002501.html">[Squeak-ja: 2501] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2500">[ 日付 ]</a>
+              <a href="thread.html#2500">[ スレッド ]</a>
+              <a href="subject.html#2500">[ 件名 ]</a>
+              <a href="author.html#2500">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。
+
+receiveDataInto:ですか、ついぞTCP専用とずっと勘違いしていました。
+たしかにSocketPluginでUDPの場合,recvfrom()で受信していますね。
+
+とすると、receiveUDPDataInto:は何者なんでしょうか？
+
+それでは。
+
+
+Masashi Umezawa wrote:
+
+&gt;<i>こんにちは
+</I>&gt;<i>梅澤です。
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>receiveUDPDataInto:ではなく、receiveDataInto:を使ってもう 
+</I>&gt;&gt;<i>まく
+</I>&gt;&gt;<i>いきませんか？
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>そうそう、確かこれでいまくいきます。
+</I>&gt;<i>
+</I>&gt;<i>SqueakMapに&quot;Remote Broadcasting Toolkit&quot;という、UDPを使った送受信プログラムが
+</I>&gt;<i>超簡単に作れるライブラリを置いています。よろしければお使いください。
+</I>&gt;<i>
+</I>&gt;<i><A HREF="http://map1.squeakfoundation.org/sm/package/b2a8901d-2d9e-429a-ba9f-0d94998d9a9b">http://map1.squeakfoundation.org/sm/package/b2a8901d-2d9e-429a-ba9f-0d94998d9a9b</A>
+</I>&gt;<i>
+</I>&gt;<i>ではでは。
+</I>&gt;<i>---
+</I>&gt;<i>[:masashi | ^umezawa]
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.8/37 - Release Date: 2005/07/01
+
+__________________________________
+Save the earth
+<A HREF="http://pr.mail.yahoo.co.jp/ondanka/">http://pr.mail.yahoo.co.jp/ondanka/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002499.html">[Squeak-ja: 2499] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+	<LI>次の記事 <A HREF="002501.html">[Squeak-ja: 2501] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2500">[ 日付 ]</a>
+              <a href="thread.html#2500">[ スレッド ]</a>
+              <a href="subject.html#2500">[ 件名 ]</a>
+              <a href="author.html#2500">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

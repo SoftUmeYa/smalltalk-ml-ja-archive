@@ -1,0 +1,530 @@
+From umejava ＠ mars.dti.ne.jp  Wed Nov  5 22:06:50 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Nov  5 22:06:58 2008
+Subject: [SML 7412] 第3回Smalltalk勉強会のお知らせ
+Message-ID: <JJ200811052206503.784375@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、京都のSmalltalk勉強会はどうだったのでしょうかね。
+東京では3回目となる11月のSmalltalk勉強会の日程が決まりました。
+
+日時: 2008/11/19(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai3kaismalltalkbenkyoukai
+
+今回はあえて水曜日にしてみました。いつも金曜日は用事があって、という
+方、チャンスですよ。
+
+お気軽に、どしどしお越しください。
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Nov  6 09:28:07 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Nov  6 09:28:19 2008
+Subject: [SML 7413] Re: 第1回Smalltalk勉強会＠京都
+In-Reply-To: <49050D55.2070108@cc.kyoto-su.ac.jp>
+References: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>	<JA200810222154134.1712000@mars.dti.ne.jp>	<48FFBF6D.6010801@cc.kyoto-su.ac.jp>	<JI200810232028334.1833187@mars.dti.ne.jp>
+	<49050D55.2070108@cc.kyoto-su.ac.jp>
+Message-ID: <49123A17.3050103@cc.kyoto-su.ac.jp>
+
+青木です。
+
+昨日の１８時からＪＲ京都駅前の「キャンパスプラザ京都」におい
+て【Smalltalk 勉強会＠京都】の１回目を開催しました。１８名の
+方々のご参加をいただけました。ありがとうございました。
+
+＃京都北山のラングドシャ「茶の菓」の差し入れがありました！！
+＃http://www.malebranche.co.jp/gifts_chanoka.shtml
+
+会場が６Ｆの第３講習室ではなく、第２講習室になりました。机の
+配置がスクール形式で、プロジェクタも常設されている部屋でした
+ので、かなり講義風な進行になってしまいました。あしからずです。
+
+http://www.kyoto-su.ac.jp/graduate/satellite/
+http://www.kyoto-su.ac.jp/graduate/satellite/images/image01.jpg
+
+もっとサロン風にしたかったのですが、初回ということでお許しく
+ださいませ。講師の机に設置したスパイダー（触れてわかる：可触
+化のためのデバイス）をご参加いただいた方々全員に操作してもら
+えたのが良かったように思います。
+
+最新のアーカイブファイルの配布、そのインストールにまつわる話
+（ファイルの構成と役割など）を中心にさせていただきました。
+
+次回は１２月０３日（水）になります。テキストブック（ブラック
+ブック）にそった形式で、Smalltalk の中（醍醐味）を解説してゆ
+きたいと考えております。皆さんからもご要望を出していただけれ
+ば幸いです。
+
+＃その頃には歩行装具も取れていると思います。
+＃実は昨日が松葉杖から解放された直後でした。
+
+毎月の第１水曜日に開催をしてゆきますので、どうぞ今後ともよろ
+しくお願い申し上げます。東京とのジョイントなども視野に入れて
+ゆきませう。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From eri ＠ sra.co.jp  Thu Nov  6 13:29:59 2008
+From: eri ＠ sra.co.jp (SAWAMOTO Eri)
+Date: Thu Nov  6 13:30:15 2008
+Subject: [SML 7414] 関西オープンソースへ出展いたします
+In-Reply-To: <49123A17.3050103@cc.kyoto-su.ac.jp>
+References: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>	<JA200810222154134.1712000@mars.dti.ne.jp>	<48FFBF6D.6010801@cc.kyoto-su.ac.jp>	<JI200810232028334.1833187@mars.dti.ne.jp>	<49050D55.2070108@cc.kyoto-su.ac.jp>
+	<49123A17.3050103@cc.kyoto-su.ac.jp>
+Message-ID: <491272C7.4000303@sra.co.jp>
+
+澤本＠京産大です。みなさん、こんにちは。
+
+
+昨日の【Smalltalk 勉強会＠京都】に参加いただいた方々、
+ありがとうございました。
+昨日来れなかった方も
+次回１２月０３日（水）にぜひいらっしゃって下さい。
+
+
+さて、今週の土曜日、１０月８日に、
+大阪南港で行われる「関西オープンソース」に出展することになっています。
+http://k-of.jp/2008/
+
+ブースでは、じゅんおよびSPIDARのデモ（直接触っていただく）を、
+ステージでは、著書のトークおよび簡単なデモを行う予定です。
+
+---
+http://k-of.jp/2008/list_booth.html
+京都産業大学＆ＳＲＡ
+参加日：8日
+自作オープンソースおよび自著「Smalltalkで学ぶオブジェクト指向プログラミングの本質」の紹介と販売。
+
+---
+http://k-of.jp/2008/list_seminar.html#45
+【著者によるミニトーク】 Making of BlackBook
+11/8 15:00〜 (50 min) [ 会場 : 9F-セミナールーム3 ]
+講師：青木淳・浅岡浩子・澤本依里
+主催：京都産業大学＆ＳＲＡ
+講師３名による自著、「Smalltalkで学ぶオブジェクト指向プログラミングの本質」（通称：BlackBook）についての
+対談およびデモンストレーションを行います。
+
+
+関西方面の方々でお時間のある方は
+ぜひいらしてください。
+
+
+-- 
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+澤 本  依 里    SAWAMOTO Eri
+<eri@sra.co.jp>
+
+株式会社SRA　関西事業部　開発部
+〒550-0011
+大阪市西区阿波座2-1-1 大阪本町西第一ビルディング5F
+TEL : 06-6536-2331
+FAX : 06-6536-2452
+
+京都産業大学　コンピュータ理工学部　客員研究員
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+From ykoubo2008 ＠ yengawa.com  Thu Nov  6 17:12:26 2008
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Nov  6 17:12:35 2008
+Subject: [SML 7415] Make: Tokyo Meetingへ出展します
+Message-ID: <20081106171122.F2AB.56563FCC@yengawa.com>
+
+横川＠ヱンガワシステムズです。
+
+今週土曜に多摩美で開催されるMake:Tokyo Meeting O2に出展します。
+http://jp.makezine.com/blog/2008/11/make_tokyo_meeting_02_update.html
+
+Gainer IOボードによってSqueakと実世界をつなぐライブラリ「Squeak+Gainer」
+の紹介をします。
+http://lab.yengawa.com:8080/seaside/ypier/Projects/SqueakGainer
+当日はその場でSmalltalkオブジェクトと実世界をつないで、いろいろと遊んで
+みようと思っています。
+プレゼンテーションもやります。
+15:40-16:00　横川耕二（Squeak+Gainer）
+
+ぜひ遊びに来てください。
+
+-- !
+Koji Yokokawa <ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From nakano ＠ media.osaka-cu.ac.jp  Thu Nov  6 17:20:47 2008
+From: nakano ＠ media.osaka-cu.ac.jp (Hideo Nakano)
+Date: Thu Nov  6 17:20:56 2008
+Subject: [SML 7416] Re: 関西オープンソースへ出展いたします
+In-Reply-To: <491272C7.4000303@sra.co.jp>
+References: <49050D55.2070108@cc.kyoto-su.ac.jp>
+	<49123A17.3050103@cc.kyoto-su.ac.jp> <491272C7.4000303@sra.co.jp>
+Message-ID: <20081106.172047.85385224.nakano@media.osaka-cu.ac.jp>
+
+From: SAWAMOTO Eri <eri@sra.co.jp>
+Subject: [SML 7414] 関西オープンソースへ出展いたします
+Date: Thu, 06 Nov 2008 13:29:59 +0900
+Message-ID: <491272C7.4000303@sra.co.jp>
+
+eri> 澤本＠京産大です。みなさん、こんにちは。
+
+ 大阪市大の中野です。
+
+eri> 昨日の【Smalltalk 勉強会＠京都】に参加いただいた方々、
+eri> ありがとうございました。
+eri> 昨日来れなかった方も
+eri> 次回１２月０３日（水）にぜひいらっしゃって下さい。
+eri> 
+eri> 
+eri> さて、今週の土曜日、１０月８日に、
+eri> 大阪南港で行われる「関西オープンソース」に出展することになっています。
+eri> http://k-of.jp/2008/
+
+ KOFの実行委員長です。懇親会はこの手のイベントには珍しく腹いっぱい
+食べれるはずです。金曜日の夜ですが当日参加もOKです。寿司とステーキが
+腹いっぱい食べれるそうです。またベルギービールの樽も例年通りあります。
+
+eri> ブースでは、じゅんおよびSPIDARのデモ（直接触っていただく）を、
+eri> ステージでは、著書のトークおよび簡単なデモを行う予定です。
+
+eri> http://k-of.jp/2008/list_booth.html
+eri> 京都産業大学＆ＳＲＡ
+eri> 参加日：8日
+eri> 自作オープンソースおよび自著「Smalltalkで学ぶオブジェクト指向プログラミングの本質」の紹介と販売。
+eri> 
+eri> ---
+eri> http://k-of.jp/2008/list_seminar.html#45
+eri> 【著者によるミニトーク】 Making of BlackBook
+eri> 11/8 15:00〜 (50 min) [ 会場 : 9F-セミナールーム3 ]
+eri> 講師：青木淳・浅岡浩子・澤本依里
+eri> 主催：京都産業大学＆ＳＲＡ
+eri> 講師３名による自著、「Smalltalkで学ぶオブジェクト指向プログラミングの本質」（通称：BlackBook）についての
+eri> 対談およびデモンストレーションを行います。
+
+ 今、会場の前日設定中ですが、ブースはクリスマスツリーの横みたいですね。
+サンタの恰好もいいかなと、、、
+
+eri> 関西方面の方々でお時間のある方は
+eri> ぜひいらしてください。
+
+中野秀男
+nakano@media.osaka-cu.ac.jp
+中野＠学術情報総合センター(研究室10J).大阪市立大学
+大阪市立大学大学院創造都市研究科 兼 学術情報総合センター 
+創造都市研究科 都市情報学専攻 知識情報基盤研究分野
+Tel:06-6605-3388,FAX:06-6690-2736
+URL: http://www.media.osaka-cu.ac.jp/~nakano/
+From apollon ＠ nike.eonet.ne.jp  Thu Nov  6 23:14:20 2008
+From: apollon ＠ nike.eonet.ne.jp (FUJITA Masutsugu)
+Date: Thu Nov  6 23:14:34 2008
+Subject: [SML 7417] 第1回Smalltalk勉強会＠京都の感想
+In-Reply-To: <49123A17.3050103@cc.kyoto-su.ac.jp>
+References: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>	<JA200810222154134.1712000@mars.dti.ne.jp>	<48FFBF6D.6010801@cc.kyoto-su.ac.jp>	<JI200810232028334.1833187@mars.dti.ne.jp>	<49050D55.2070108@cc.kyoto-su.ac.jp>
+	<49123A17.3050103@cc.kyoto-su.ac.jp>
+Message-ID: <4912FBBC.2020703@nike.eonet.ne.jp>
+
+みなさん、こんにちは。
+京都で昨日あった勉強会の感想です。
+
+講師の先生方　遅くまで、ありがとうございました。
+松葉杖がとれたばかりという青木先生は、まだ痛そうでした。
+"祈"御快気であります。
+
+力覚提示装置ＳＰＩＤＡＲのデモはひたすら感動しました。
+確かに、これは触らないと凄さがわからないと思いました。
+必見ならぬ必触ですね。
+
+その他の内容（うろ覚え）は
+
+VisualWorks + Jun のインストール。USBメモリで最新版の配布。
+
+インストールしたフォルダ＝ワークディレクトリの内容の解説。
+glu32.dll opengl32.dll herald.bmp herald.wav JunWinQT.dll　などの概説。
+
+vw7.6ncディレクトリ内のContributedでJunが利用しているものがありますよと
+いうお話。
+Heeg Contributions　や　PostgreSQL　など。（知らなんだ）
+
+Junのマルチメディアナビゲーターのデモ。
+
+印象的であったのは
+
+「仮想機械(visual.exe or .app)にイメージ(.im)を食べさせて起動する」お話。
+
+「Smalltalkerは、ユーザーがマウスなどで行なった操作と同じことを
+プログラムで画面上のポインタを動かして再現できる」というお話。
+
+講師の３人の家庭的な雰囲気が、素人の私には心地よかったです。
+著者３人サイン本Black bookは家宝とします。
+
+来月もよろしくお願いします。
+
+-- 
+---------------------------------------------------------
+FUJITA Masutsugu
+
+
+From h-asaoka ＠ sra.co.jp  Fri Nov  7 12:48:12 2008
+From: h-asaoka ＠ sra.co.jp (ASAOKA Hiroko)
+Date: Fri Nov  7 12:48:30 2008
+Subject: [SML 7418] Re: 第1回Smalltalk勉強会＠京都の感想
+In-Reply-To: <4912FBBC.2020703@nike.eonet.ne.jp>
+References: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>	<JA200810222154134.1712000@mars.dti.ne.jp>	<48FFBF6D.6010801@cc.kyoto-su.ac.jp>	<JI200810232028334.1833187@mars.dti.ne.jp>	<49050D55.2070108@cc.kyoto-su.ac.jp>	<49123A17.3050103@cc.kyoto-su.ac.jp>
+	<4912FBBC.2020703@nike.eonet.ne.jp>
+Message-ID: <4913BA7C.2070708@sra.co.jp>
+
+浅岡＠京産大です。
+みなさま、こんにちは。
+
+先日の京都での Smalltalk勉強会、
+参加してくださったみなさま、ありがとうございました。
+
+藤田さん、細かな内容の報告をありがとうございます。
+＃そして、MALEBRANCHEのお濃茶ラングドシャの差し入れも
+＃ありがとうございました☆
+
+個人的には、これからは、あまり講義風じゃなくて、サロン風にして、
+もっと和気あいあいな雰囲気にしたいなーとは思っているのですが、
+みなさまはどのように感じていらっしゃるのでしょうかね？
+みなさまのいろいろな意見を聞いて
+良い勉強会になっていければいいな〜と思ってます。
+
+今後ともよろしくお願いいたします。
+
+-- 
+    浅岡 浩子(ASAOKA Hiroko)
+        http://www.sra.co.jp/people/h-asaoka/
+From kuwatani ＠ akademia.co.jp  Wed Nov 12 19:24:43 2008
+From: kuwatani ＠ akademia.co.jp (kuwatani@akademia.co.jp)
+Date: Wed Nov 12 19:24:50 2008
+Subject: [SML 7419] メーリングリストの運用ドメインの変更について
+Message-ID: <491AAEEB.7080003@akademia.co.jp>
+
+SMLメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+これまで SML を akademia.co.jp ドメインで運用していましたが
+運用上の都合により、当方で同じく運用している squeak-ja と同じ
+smalltalk.jp ドメインでの運用に切り換えたいと考えています。
+
+旧: sml@akademia.co.jp
+新: sml@smalltalk.jp
+
+SMLの登録者の情報はそのまま引き継ぎますので
+再登録などは必要ありませんが、メールの振り分け設定の変更など
+行って頂くことになります。
+
+特に反対ご意見が無ければ運用ドメインの移行の準備を進めたいと思います。
+ご意見ありましたら、よろしくお願いします。
+
+-- 
+kuwatani@akademia.co.jp
+
+From dogatana ＠ gaia.eonet.ne.jp  Mon Nov 24 10:16:16 2008
+From: dogatana ＠ gaia.eonet.ne.jp (toshi)
+Date: Mon Nov 24 10:13:15 2008
+Subject: [SML 7420] 第2回Smalltalk勉強会＠京都
+Message-ID: <492A0060.1090107@gaia.eonet.ne.jp>
+
+はじめまして。
+先日メーリングリストへ参加させていただいた市田と申します。
+
+とあるWebページでSmalltalk勉強会が京都で開催されているのを知りました。
+知ったのが第1回の後でしたので、第2回から参加させていただきたいと思うの
+ですが、参加の申し込みなどはこちらでよろしいのでしょうか。
+
+Smalltalk自体は全くの素人なのですが、普段手続き言語ばかり使用している
+ので変わったことをやってみたいなと思い、メーリングリストへも参加させ
+ていただきました。
+
+Smalltalk-user.jpを拝見しましたが、特に掲載されておらず、自由に参加で
+きるようにも思えるものの不安でしたので、発信しております。
+
+間違っていたら申し訳ありません。
+
+今後ともよろしくお願いします。
+
+--
+市田俊彦
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Nov 24 10:43:27 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Nov 24 10:43:35 2008
+Subject: [SML 7421] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <492A0060.1090107@gaia.eonet.ne.jp>
+References: <492A0060.1090107@gaia.eonet.ne.jp>
+Message-ID: <492A06BF.3050006@cc.kyoto-su.ac.jp>
+
+青木です。
+
+参加申込や参加登録などの必要はございません。気軽にお越しくだ
+さい。当日（2008年12月03日（水）の19時にノート型のパーソナル
+コンピュータとテキスト（ブラックブック）の持参をお願いします。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+
+来週の水曜日に皆さんにお会いできることを楽しみにしております。
+
+第2回 Smalltalk勉強会＠京都
+日時：2008年12月03日（水）19:00〜21:00
+場所：キャンパスプラザ京都 6階 大学院サテライト 第2講習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+ノート型のパーソナルコンピュータ（Windows Vista/XP または Mac OS X (on Intel Mac)）とテキスト（ブラックブック）をご持参ください。
+ライブでプログラミングをテキストに沿ってやってゆきます。
+裏話こと「Making of BlackBook」も予定しています。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+toshi さんは書きました:
+> はじめまして。
+> 先日メーリングリストへ参加させていただいた市田と申します。
+> 
+> とあるWebページでSmalltalk勉強会が京都で開催されているのを知りました。
+> 知ったのが第1回の後でしたので、第2回から参加させていただきたいと思うの
+> ですが、参加の申し込みなどはこちらでよろしいのでしょうか。
+> 
+> Smalltalk自体は全くの素人なのですが、普段手続き言語ばかり使用している
+> ので変わったことをやってみたいなと思い、メーリングリストへも参加させ
+> ていただきました。
+> 
+> Smalltalk-user.jpを拝見しましたが、特に掲載されておらず、自由に参加で
+> きるようにも思えるものの不安でしたので、発信しております。
+> 
+> 間違っていたら申し訳ありません。
+> 
+> 今後ともよろしくお願いします。
+> 
+> --
+> 市田俊彦
+From dogatana ＠ gaia.eonet.ne.jp  Mon Nov 24 15:25:36 2008
+From: dogatana ＠ gaia.eonet.ne.jp (toshi)
+Date: Mon Nov 24 15:22:35 2008
+Subject: [SML 7422] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <492A06BF.3050006@cc.kyoto-su.ac.jp>
+References: <492A0060.1090107@gaia.eonet.ne.jp>
+	<492A06BF.3050006@cc.kyoto-su.ac.jp>
+Message-ID: <492A48E0.2010006@gaia.eonet.ne.jp>
+
+市田です。
+
+AOKI Atsushi さんは書きました:
+ > 参加申込や参加登録などの必要はございません。気軽にお越しくだ
+> さい。当日（2008年12月03日（水）の19時にノート型のパーソナル
+> コンピュータとテキスト（ブラックブック）の持参をお願いします。
+
+早速の返事ありがとうございます。
+テキストは買っておりまして少しずつ読み始めたところです。
+当日までにインストールは済ませておきますので、よろしくお願いします。
+
+--
+市田俊彦
+
+From umejava ＠ mars.dti.ne.jp  Mon Nov 24 21:25:29 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Nov 24 21:25:37 2008
+Subject: [SML 7423] 第4回Smalltalk勉強会の発表者を募集しています
+Message-ID: <JL200811242125296.7273640@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+第4回Smalltalk勉強会の日時が決まりました。
+日時: 2008/12/19(金) 18:30-21:30 (3時間程度)
+場所: 株式会社豆蔵
+
+今回は年末スペシャルと銘打ち、いつもより広めの会場でセミナー+LT大会を
+予定しています。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+
+特に「レストアSmalltalk大集合」で、我こそはという方、ご自慢のSmalltalk
+持参でぜひご参戦いただければと思います。
+
+皆でSmalltalkを盛り上げていきましょう。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From tetha ＠ st.rim.or.jp  Fri Nov 28 07:08:01 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Fri Nov 28 07:08:12 2008
+Subject: [SML 7424] 正式アナウンス(Was: Fwd: お申込み開始：Seasideによるコンポーネント指向のWebアプリケーション開発
+References: <b672abbe0811260706s26e10f87ie32ea853ca9d4f5a@mail.gmail.com>
+Message-ID: <89C9AEB2-B1BC-48E7-ABC5-F937108A8521@st.rim.or.jp>
+
+たびたびのマルチポスト恐縮です。
+林徹也です。
+
+正式なアナウンスがありましたので、念のため転送させていただきます。
+
+みなさまよろしくお願い申し上げます。
+--
+
+
+Begin forwarded message:
+
+> 差出人: "Yuichi Hasegawa" <hase@starlight-storm.com>
+> 日時: 2008年11月27日 0:06:20:JST
+> 宛先: fowmember@googlegroups.com
+> 件名: お申込み開始：Seasideによるコンポーネント 
+> 指向のWebアプリケーション開発
+> 返信先: fowmember@googlegroups.com
+>
+>
+> こんばんわ。
+> 長谷川@スタッフです。
+>
+> つづけてになりますが、勉強会の受講募集を開始します。
+> 年末も近くなり、飲み会会場の確保も難しくなったため、おそら 
+> く今年度最後の勉強会です。盛り上がりましょう！
+>
+> お申込み先：uwatari@fullness.co.jp
+> #お申し込み後、受講受付のメールは発送しておりません。
+> ----------
+> タイトル:  Seasideによるコンポーネント指向のWeb 
+> アプリケーション開発
+> 講師：梅澤真史さん（SoftUmeYa：http:// 
+> softumeya.com/）
+> 日時：12/3(水) 19:00~20:30
+> 場所：高円寺　フルネストレーニングルーム（http:// 
+> www.fullness.co.jp/mroom/images/map.gif）
+> 参加費：無料
+> 募集人数：30名（先着順）
+> セミナ終了後に懇親会を予定しております。
+>
+> <今後の予定>
+> ＊12月中旬か来年… 知っ得 納得 Web 
+> フレームワーク（SpringMVC編かな？）
+> ----------
+>
+> -- 
+> // 長谷川 裕一
+>
+> --~--~---------~--~----~------------~-------~--~----~
+> このメッセージは、次の Google グループへの参加を申し 
+> 込まれたことを確認す
+> るために送信されました。 Google グループ "FoW!"  
+> グループ。
+> このグループに投稿するには、次の宛先にメールを送信してくださ 
+> い。 fowmember@googlegroups.com
+> このグループから退会するには、次へメールをお送りください。  
+> fowmember+unsubscribe@googlegroups.com
+> その他のオプションについては、次の URL からグループに 
+> アクセスしてくださ
+> い。 http://groups.google.com/group/fowmember?hl=ja
+> -~----------~----~----~----~------~----~------~--~---
+>
+
+--
+林 徹也 Tetsuya HAYASHI
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+

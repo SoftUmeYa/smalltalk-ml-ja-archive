@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7608] Re: クロージャ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207608%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUvJW0hPCU4JWMbKEI%3D%3F%3D&In-Reply-To=1bc06fd30907050024j690350f5i923b93fab7c14a49%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007603.html">
+   <LINK REL="Next"  HREF="007609.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7608] Re: クロージャ</H1>
+    <B>Hiroshi Umeoka</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207608%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUvJW0hPCU4JWMbKEI%3D%3F%3D&In-Reply-To=1bc06fd30907050024j690350f5i923b93fab7c14a49%40mail.gmail.com"
+       TITLE="[SML 7608] Re: クロージャ">umrlazybind ＠ gmail.com
+       </A><BR>
+    <I>2009年 7月  5日 (日) 19:40:16 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007603.html">[SML 7603] Re: クロージャ
+</A></li>
+        <LI>次の記事 <A HREF="007609.html">[SML 7609] Re: クロージャ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7608">[ 日付 ]</a>
+              <a href="thread.html#7608">[ スレッド ]</a>
+              <a href="subject.html#7608">[ 件名 ]</a>
+              <a href="author.html#7608">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎さん
+
+梅岡です。
+フォローしていただいてありがとうございます。
+こういうオリジナル言語の作成は楽しいですね。
+このコードの後半をみて、Smalltalkのメタプログラミングにとても興味が出てきました。
+
+2009/07/05 16:24 に 濱崎治&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">osamu.hamasaki ＠ gmail.com</A>&gt; さんは書きました:
+&gt;<i> 濱崎です。
+</I>&gt;<i> 2009/07/05 6:39 Hiroshi Umeoka &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">umrlazybind ＠ gmail.com</A>&gt;:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> おはようございます、梅岡です。
+</I>&gt;<i>
+</I>&gt;<i> ＜中略＞
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> amount
+</I>&gt;&gt;<i> がインスタンス変数のように機能しますね。まるでブロックがオブジェクトのように振る舞っています。クロージャって面白いっ、と単純に思いました。
+</I>&gt;<i>
+</I>&gt;<i> 梅岡さんの提示された例題を見て、ふと「こんなこと出来るかなあ」と思いついて
+</I>&gt;<i> やってみたら上手く動いたので、ご紹介します。
+</I>&gt;<i> --------------　ここから -----------------
+</I>&gt;<i> | accountCreater anAccount newBlockCreater newBlock method |
+</I>&gt;<i> accountCreater :=
+</I>&gt;<i> [:initialBalance |
+</I>&gt;<i> | balance |
+</I>&gt;<i> balance := initialBalance.
+</I>&gt;<i> (Dictionary new)
+</I>&gt;<i> at: #withdraw
+</I>&gt;<i> put:
+</I>&gt;<i> [:amount |
+</I>&gt;<i> balance := balance - amount.
+</I>&gt;<i> balance yourself];
+</I>&gt;<i> at: #deposit
+</I>&gt;<i> put:
+</I>&gt;<i> [ :amount |
+</I>&gt;<i> balance := balance + amount.
+</I>&gt;<i> balance yourself];
+</I>&gt;<i> at: #balance
+</I>&gt;<i> put:
+</I>&gt;<i> [balance yourself];
+</I>&gt;<i> yourself].
+</I>&gt;<i> anAccount := accountCreater value: 1000.
+</I>&gt;<i> Transcript clear.
+</I>&gt;<i> Transcript cr; show: (anAccount at: #balance) value printString.
+</I>&gt;<i> Transcript cr; show: ((anAccount at: #withdraw) value: 500) printString.
+</I>&gt;<i> Transcript cr; show: ((anAccount at: #deposit) value: 300) printString.
+</I>&gt;<i> newBlockCreater :=
+</I>&gt;<i> [| balance |
+</I>&gt;<i> [balance := 0.
+</I>&gt;<i> balance yourself]
+</I>&gt;<i> yourself].
+</I>&gt;<i>
+</I>&gt;<i> newBlock := newBlockCreater value.
+</I>&gt;<i> method := newBlock method.
+</I>&gt;<i> newBlock
+</I>&gt;<i> setMethod: method
+</I>&gt;<i> outerContext: (anAccount at: #balance) outerContext
+</I>&gt;<i> copiedValues: (anAccount at: #balance) copiedValues.
+</I>&gt;<i> anAccount at: #reset put: newBlock.
+</I>&gt;<i> Transcript cr; show: (anAccount at: #reset) value printString.
+</I>&gt;<i> ^anAccount
+</I>&gt;<i> --------------　ここまで -----------------
+</I>&gt;<i> 以前のSmalltalk勉強会＠京都で、「クラスがメソッドを保持しているのは、
+</I>&gt;<i> メモリの節約のためで」なんていうお話がありましたが、このプログラムでは
+</I>&gt;<i> オブジェクト自身がメソッドを持っていて、さらにオブジェクトを生成した後に
+</I>&gt;<i> メソッドを追加しています。がんばって書けば、インスタンス変数（？）を追加
+</I>&gt;<i> することも恐らく可能だと思います。
+</I>&gt;<i> --
+</I>&gt;<i>
+</I>&gt;<i> Osamu Hamasaki
+</I>&gt;<i>
+</I>&gt;<i>
+</I></PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007603.html">[SML 7603] Re: クロージャ
+</A></li>
+	<LI>次の記事 <A HREF="007609.html">[SML 7609] Re: クロージャ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7608">[ 日付 ]</a>
+              <a href="thread.html#7608">[ スレッド ]</a>
+              <a href="subject.html#7608">[ 件名 ]</a>
+              <a href="author.html#7608">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

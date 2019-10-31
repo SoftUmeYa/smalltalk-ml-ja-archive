@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4118] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204118%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=ueizjcu1e.wl%25yoshiki%40vpri.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004117.html">
+   <LINK REL="Next"  HREF="004119.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4118] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204118%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=ueizjcu1e.wl%25yoshiki%40vpri.org"
+       TITLE="[Squeak-ja: 4118] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2009年 1月  5日 (月) 09:35:50 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004117.html">[Squeak-ja: 4117] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+        <LI>次の記事 <A HREF="004119.html">[Squeak-ja: 4119] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4118">[ 日付 ]</a>
+              <a href="thread.html#4118">[ スレッド ]</a>
+              <a href="subject.html#4118">[ 件名 ]</a>
+              <a href="author.html#4118">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+私の環境では-vm-sound-OSSで音が出るようになりました。ありがとうございました。
+すこし不思議なのは、このオプションを付けると同時にMIDIポートも見えるようになることです。しかし、実際は使えません。
+
+SimpleMIDIPort midiIsSupported. &quot;true&quot;
+(SimpleMIDIPort primPortNameOf: 0) asByteArray. &quot;a ByteArray(125 20 51)&quot;
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2009/01/04 18:14 Yoshiki Ohshima &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yoshiki ＠ vpri.org</A>&gt;:
+&gt;<i> At Wed, 31 Dec 2008 16:50:18 +0900,
+</I>&gt;<i> Kazuhiro ABE wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> こんにちは、阿部です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 最新と思われるSqueak-3.10-4.i686-pc-linux-gnuを使って、
+</I>&gt;&gt;<i> <A HREF="http://squeakvm.org/unix/">http://squeakvm.org/unix/</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Ubuntu 8.10で以下のように起動してみました。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> /usr/local/bin/squeak -vm-display-X11 -compositioninput
+</I>&gt;&gt;<i> ScratchSourceCode1.3.1synth.image
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 結果、確定前文字列の制限もなく正しく入力できました。
+</I>&gt;&gt;<i> しかし、今度は音が出なくなりますね。
+</I>&gt;<i>
+</I>&gt;<i>  返事が遅くてすみません。VMはこれでよいと思います。
+</I>&gt;<i>
+</I>&gt;&gt;<i> soundStart: snd_add_pcm_handler: Function not implemented
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> あちらを立てればこちらが立たずです。
+</I>&gt;<i>
+</I>&gt;<i>  起動時に-vm-sound-ALSAをつける、それでだめなら-vm-sound-OSSをつけて
+</I>&gt;<i> みるとどうなるでしょうか。
+</I>&gt;<i>
+</I>&gt;<i> -- Yoshiki
+</I></PRE>
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004117.html">[Squeak-ja: 4117] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+	<LI>次の記事 <A HREF="004119.html">[Squeak-ja: 4119] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4118">[ 日付 ]</a>
+              <a href="thread.html#4118">[ スレッド ]</a>
+              <a href="subject.html#4118">[ 件名 ]</a>
+              <a href="author.html#4118">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

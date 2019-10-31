@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8106] Re: Smalltalk による電子カルテ作成
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208106%5D%20Re%3A%0A%20%3D%3Futf-8%3Fb%3FU21hbGx0YWxrIOOBq%2BOCiOOCi%2Bmbu%2BWtkOOCq%2BODq%2BODhg%3D%3D%3F%3D%0A%20%3D%3Futf-8%3Fb%3F5L2c5oiQ%3F%3D&In-Reply-To=%3CA5FE45DB-7992-4114-B41B-91C08DF9D760%40cheshireneko.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008105.html">
+   <LINK REL="Next"  HREF="008107.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8106] Re: Smalltalk による電子カルテ作成</H1>
+    <B>Squeak</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208106%5D%20Re%3A%0A%20%3D%3Futf-8%3Fb%3FU21hbGx0YWxrIOOBq%2BOCiOOCi%2Bmbu%2BWtkOOCq%2BODq%2BODhg%3D%3D%3F%3D%0A%20%3D%3Futf-8%3Fb%3F5L2c5oiQ%3F%3D&In-Reply-To=%3CA5FE45DB-7992-4114-B41B-91C08DF9D760%40cheshireneko.com%3E"
+       TITLE="[SML 8106] Re: Smalltalk による電子カルテ作成">squeak ＠ cheshireneko.com
+       </A><BR>
+    <I>2014年 12月  6日 (土) 08:00:50 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008105.html">[SML 8105]	Smalltalk による電子カルテ作成
+</A></li>
+        <LI>次の記事 <A HREF="008107.html">[SML 8107] Smalltalkビアバッシュ2014
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8106">[ 日付 ]</a>
+              <a href="thread.html#8106">[ スレッド ]</a>
+              <a href="subject.html#8106">[ 件名 ]</a>
+              <a href="author.html#8106">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>五十嵐です。
+
+
+&gt;<i> 以下ちょっと長め・・・一種のこれも問診か・・・
+</I>&gt;<i> 
+</I>&gt;<i> On Fri, 05 Dec 2014 08:44:33 +0900, Squeak &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">squeak ＠ cheshireneko.com</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> カルテは、ORCAとの接続を考えております。
+</I>&gt;&gt;<i> 現在は、BML（検査会社でもあります）のMedicalStationを使用しています。
+</I>&gt;&gt;<i> 多くのカルテがレセコンから、開発されていますので、仕方がないのですが、
+</I>&gt;&gt;<i> 検査や処方の欄が、レセプトを直接操作しているイメージです。
+</I>&gt;<i> 
+</I>&gt;<i> ORCA は、
+</I>&gt;<i> 
+</I>&gt;<i> ・医療情報（医薬情報、併用情報など）を利用した事故予防
+</I>&gt;<i> ・医療連携の IT 系インフラ構築
+</I>&gt;<i> ・診療報酬管理の（業務労力含め）低コスト化
+</I>&gt;<i> 
+</I>&gt;<i> を目しているように思えますが、この理解でよろしいでしょうか。
+</I>&gt;<i> 
+</I>
+多分そうだと思います。
+介護保険で医師が書く意見書（医見書）等のソフトとの連携や、
+インフルエンザ等の流行状況の状況等もオンラインで収集できるようです。
+ORCA自体には、あまり興味がありません。
+
+
+&gt;<i> クライアントが日本医師会なんて組織ですから、最大公約数的に
+</I>&gt;<i> なるか最小公倍数的になるかの極端になるのかも。いずれにせよ
+</I>&gt;<i> 最低限のこと（レセプト管理）が絶対できないといけなくて、そ
+</I>&gt;<i> の実現方法のより良いやり方（何ができて、どういうインターフ
+</I>&gt;<i> ェースによっているか）は人によって異なるので最大公約数的に
+</I>&gt;<i> 対応したらレセプト直接操作になっちゃったという感じなのかも。
+</I>&gt;<i> （笑）
+</I>
+ORCA導入医療機関は着実に伸びてきているようです。
+当院のMedicalStationのアップデートは、月1回のCD-ROMです。
+一部オンラインでもアップデートできますが....
+　
+電子カルテ＝レセプト＋カルテ　となっていますが、
+目指すカルテ＝電子カルテーレセプト　ではなくて、
+カルテ側から純カルテをつくってみたいということです。
+
+
+&gt;&gt;<i> 医療面接（いわゆる問診）の構造化がされておりません。
+</I>&gt;&gt;<i> パネルでの入力方式をとっているカルテもありますが、本質ではないと感じております。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 多彩な患者さんの主訴、病歴等を、医療用語を使った言語に置き換えていく場が、2号用紙の左側の診断なのです。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 電子カルテを使ってから、ますます医師が顔を合わせてくれないと患者さんが嘆いておりますが、
+</I>&gt;&gt;<i> 医師は2号用紙というワープロと戦っているのです（笑）。
+</I>&gt;<i> 
+</I>&gt;<i> うちの両親も後期高齢者のご多分にもれず定期的に通院していま
+</I>&gt;<i> すが、父の主治医がそんな感じだそうです。
+</I>&gt;<i> 
+</I>&gt;<i> ディスプレイからほとんど目を離さないとか。言ってはなんです
+</I>&gt;<i> が、話しを聞いた感じでは医師というよりはシステムに操られて
+</I>&gt;<i> いる人型端末というか・・・
+</I>&gt;<i> 
+</I>&gt;<i> 素人の見解でも触診など必要そうな病気なのですがほとんどしな
+</I>&gt;<i> いそうで、それも込みで父はすごい嫌がっていますね。まあ血液
+</I>&gt;<i> 検査の方が重要ではあるのでしょうけれど。
+</I>&gt;<i> 
+</I>&gt;<i> この部分の目標は、構造化面接の記録とその際の記録作業が面接
+</I>&gt;<i> （問診）自体を妨げないこととかになるんでしょうかね？
+</I>
+医療機関によっては、電子カルテを操作する人を配置しているところもあるようです。
+多分、患者さんが話したとおりに記述しているのでしょうが、
+私の目標は医療用語による構造化された記述です。
+
+例えば、患者さんが
+「昨日から、熱がでて、色のついた鼻水がひどくて、夜咳で眠れない。」
+という訴えをテクニカルタームにまとめるようなことです。
+「」ぐらいに単純な訴えならいいのですが、不定愁訴という医師が恐れる訴えがある患者さんだと、
+そのまま患者さんの訴えを書くと、文学作品になってしまいます（笑）。
+医療用語により構造化された記述は、医療スタッフ間の情報交換に耐える記述である必要があると思います。
+
+これは、IT業界の方がクライアントの話を仕様に落としこんだり、弁護士が法律用語で記述した訴状を
+書いたりするのと、そう変わらないことと思います。
+
+&gt;<i> で整理しますと、最終的なバックエンドとして ORCA との連携が
+</I>&gt;<i> 可能な、適当な仕様の電子医療カルテのフロントエンドを
+</I>&gt;<i> Smalltalk で作れればということでしょうか。
+</I>
+多分そういうことになります。
+私の目指す形としては、「患者ー介入（診断や治療）モデルの時系列的記述」とでも
+なるでしょうか。
+臨床疫学的な知識や、診断基準、ガイドラインを、ファイルメーカーで外側に配置する予定です。
+
+
+NEZ.CheshireNEKO.Squeak
+CheshireNEKO Company
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">squeak ＠ cheshireneko.com</A>
+
+
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: &lt;<A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20141206/8e5cf7ba/attachment.html">http://www.smalltalk.jp/pipermail/sml/attachments/20141206/8e5cf7ba/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008105.html">[SML 8105]	Smalltalk による電子カルテ作成
+</A></li>
+	<LI>次の記事 <A HREF="008107.html">[SML 8107] Smalltalkビアバッシュ2014
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8106">[ 日付 ]</a>
+              <a href="thread.html#8106">[ スレッド ]</a>
+              <a href="subject.html#8106">[ 件名 ]</a>
+              <a href="author.html#8106">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

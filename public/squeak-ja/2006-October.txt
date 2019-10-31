@@ -1,0 +1,1513 @@
+From kuwatani ＠ akademia.co.jp  Tue Oct  3 12:19:35 2006
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3157] Squeak-ja復旧のお知らせ
+Message-ID: <4521D6C7.8040606@akademia.co.jp>
+
+Squeak-jp登録者のみなさま
+
+Squeak-jaの管理をしています桑谷です．
+
+現在Squeak-jaを運用しているドメイン(smalltalk.jp)が復旧しました．
+今までどおりSqueak-jaのメーリングリスト及びWebを使用できます．
+今後もSqueak-jaをよろしくお願いします．
+
+http://www.smalltalk.jp/mailman/listinfo/squeak-ja 
+--------
+桑谷 剛史
+kuwatani@akademia.co.jp
+
+
+
+From tak ＠ metatoys.org  Tue Oct  3 16:00:18 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3158] OLPC etoys
+Message-ID: <45220A82.8080001@metatoys.org>
+
+山宮です。
+
+OLPC etoys http://wiki.laptop.org/go/Etoys について質問があったのでこ
+ちらに書きます。100ドルラップトップの為に作成している OLPC etoys に関
+して以前 squeakland のメーリングリストでアナウンスがありました。
+
+http://squeakland.org/pipermail/squeakland/2006-September/003292.html
+
+以下の URL で開発中のイメージがダウンロード出来ます。
+
+ちびっこ向け http://tinlizzie.org/olpc/OLPCPlugin-latest.zip
+開発者向け http://tinlizzie.org/olpc/OLPC-Squeak-latest.zip  
+
+OLPC etoys についての議論は OLPC etoys メーリングリストにて行われています。
+http://mailman.laptop.org/mailman/listinfo/etoys
+
+* Squeakland2005J との違い
+
+OLPC etoys は OLPC の特徴あるシステムの為に作られたスクイークイメージ
+です。OLPC の特徴としては、実行速度、特に画像処理が低速であること。画
+面が高解像度(1200 x 900) のわりに画面サイズが小さい事(7.5インチ)。カラー
+が不鮮明である事。などがあり、OLPC etoys もそれにあわせて最適化が計ら
+れています。また、最適化だけでなく多くのバグフィックスも行われています。
+OLPC etoys は OLPC に特化した物であり、色々な制約から今のところスクイー
+クのバージョンアップを目指した物にはなっていません。
+
+* プロジェクトの互換性
+
+OLPC etoys は Squeakland2005J とだいたい上位互換です。つまり、
+Squeakland2005J で作成されたプロジェクトは日本語フォントをロードした 
+OLPC etoys の上で動作しますが、OLPC etoys で作った物は Squeakland2005J 
+で動きません。
+
+だいたいというのは、今のところ毛玉には互換性がありません。他の部分で 
+Squeakland2005J で作成したプロジェクトが OLPC etoys で動かなければ、そ
+れはバグの可能性がありますので教えていただけると大変助かります。
+
+
+From ofg ＠ kwansei.ac.jp  Wed Oct  4 02:39:53 2006
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3159] 萌えるSqueak『もえすく』
+Message-ID: <20061004023507.874F.OFG@kwansei.ac.jp>
+
+大藤です。
+MLへの投稿は1年ぶりぐらいになります。
+最近、仕事の合間に「萌えるSqueak」というのを製作中でして、このたび体験版が完成しました。
+コンセプト：「萌える英単語」や「萌えるＣ言語」などと同様に、萌えをエサにオタクの方々にSqueakを紹介する。
+内容：eToysの操作説明と簡単なクイズのみ。
+公式サイト：http://moesuku.ofg.jp/
+
+ただ、アランさんの写真とかsqueakland.jpの写真とかを無断使用してしまってますので、まだどこにも告知しておりません。使用許可はどちらへお願いすればよろしいでしょうか？
+ひどい内容ですがご助言よろしくお願いいたします。
+
+大藤 泰生
+ofg@kwansei.ac.jp
+
+
+From abee ＠ squeakland.jp  Wed Oct  4 06:24:00 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3160] Re: 萌えるSqueak『もえすく』
+In-Reply-To: <20061004023507.874F.OFG@kwansei.ac.jp>
+References: <20061004023507.874F.OFG@kwansei.ac.jp>
+Message-ID: <2d5d52a80610031424g8aa6e6ej69bf2046b46cdc3c@mail.gmail.com>
+
+阿部@広島です。
+
+06/10/04 に 大藤 泰生<ofg@kwansei.ac.jp> さんは書きました:
+> 最近、仕事の合間に「萌えるSqueak」というのを製作中でして、このたび体験版が完成しました。
+> コンセプト：「萌える英単語」や「萌えるＣ言語」などと同様に、萌えをエサにオタクの方々にSqueakを紹介する。
+
+コミケに出すのは私たちの長年の夢でした。それをかなえてくれる人が現れてうれしいです。
+
+> ただ、アランさんの写真とかsqueakland.jpの写真とかを無断使用してしまってますので、まだどこにも告知しておりません。使用許可はどちらへお願いすればよろしいでしょうか？
+
+構わないのではないでしょうか。広報用写真ですし。
+たぶんしかるべき人が「父」に奏上してくれると思います。もちろん直メしてもよいと思います。
+
+> ひどい内容ですがご助言よろしくお願いいたします。
+
+個人的にはつぼにはまりまくりで大笑いだったのですが、公教育の現場にも持ち込めるように一部文言を修正したライトバージョンを作ってもらえるとうれしいです。あと広島人としては全編広島弁のゲンバージョンとか(いかん、怖い考えになってしまった)。
+
+# 仕込んでおいた「むしょく」ネタに反応してくれた人は初めてです。
+
+まじめな話として、茶ハロと黒ハロの使い分けや、Alt+クリックとホイールクリックをあらかじめ選択させるところとか感心しました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Wed Oct  4 08:29:15 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3161] Re: 萌えるSqueak『もえすく』
+In-Reply-To: <2d5d52a80610031424g8aa6e6ej69bf2046b46cdc3c@mail.gmail.com>
+References: <20061004023507.874F.OFG@kwansei.ac.jp>
+	<2d5d52a80610031424g8aa6e6ej69bf2046b46cdc3c@mail.gmail.com>
+Message-ID: <u4pulm110.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> 06/10/04 に 大藤 泰生<ofg@kwansei.ac.jp> さんは書きました:
+> > 最近、仕事の合間に「萌えるSqueak」というのを製作中でして、このたび体験版が完成しました。
+> > コンセプト：「萌える英単語」や「萌えるＣ言語」などと同様に、萌えをエサにオタクの方々にSqueakを紹介する。
+> 
+> コミケに出すのは私たちの長年の夢でした。それをかなえてくれる人が現れ
+> てうれしいです。
+
+  私たち、というのが誰のことかは知りませんが、これはすごいです。大藤さ
+ん。
+
+> > ただ、アランさんの写真とかsqueakland.jpの写真とかを無断使用してしまってますので、まだどこにも告知しておりません。使用許可はどちらへお願いすればよろしいでしょうか？
+> 
+> 構わないのではないでしょうか。広報用写真ですし。
+> たぶんしかるべき人が「父」に奏上してくれると思います。もちろん直メし
+> てもよいと思います。
+
+  来週会うときに見せたいと思います。直接メールをしていただくのが良いと
+は思いますが、なんでしたらそのときに聞いてみましょうか。
+
+> > ひどい内容ですがご助言よろしくお願いいたします。
+> 
+> 個人的にはつぼにはまりまくりで大笑いだったのですが、公教育の現場にも持ち込めるように一部文言を修正したライトバージョンを作ってもらえるとうれしいです。あと広島人としては全編広島弁のゲンバージョンとか(いかん、怖い考えになってしまった)。
+
+  広島人のスクイークに対する思い入れにはすごいものがありますからね。
+
+  「エラーが出たらどのボタンを押すか」、というクイズに対して「当然デバッ
+グ」と思った私です。
+
+> まじめな話として、茶ハロと黒ハロの使い分けや、Alt+クリックとホイールクリックをあらかじめ選択させるところとか感心しました。
+
+  * １章のタイトルが出ているところで延々待ってしまいました。
+  * 終了方法は、ナビゲータの中の終了ボタンを教えるほうが良い。
+  * クイズは間違う余地が本来ないので、ユーザーが間違ったときには正解を
+    教えて次に進んでしまうような形のほうが良いかも(あるいは「黒騎士
+  　アラン」とは誰なのか教えてもらえるとか)。
+
+というのが最初の感想です。
+
+  これからもがんばってください。
+
+-- Yoshiki
+
+From umejava ＠ mars.dti.ne.jp  Wed Oct  4 10:53:37 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3162] Re: 萌えるSqueak『もえすく』
+In-Reply-To: <20061004023507.874F.OFG@kwansei.ac.jp>
+References: <20061004023507.874F.OFG@kwansei.ac.jp>
+Message-ID: <JY2006100410533717.9774078@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+いいですねー。これ。Squeakware-eduあたりとバンドルしてみるのも面白い
+のではないでしょうか。もしくはLinux環境で動作するのであれば、
+「萌えるSqueakware」も可能ですね。
+
+大藤 泰生 <ofg@kwansei.ac.jp> wrote:
+> 大藤です。
+> MLへの投稿は1年ぶりぐらいになります。
+> 最近、仕事の合間に「萌えるSqueak」というのを製作中でして、このたび体験版が完成しました。
+> コンセプト：「萌える英単語」や「萌えるＣ言語」などと同様に、萌えをエサにオタクの方々にSqueakを紹介する。
+> 内容：eToysの操作説明と簡単なクイズのみ。
+> 公式サイト：http://moesuku.ofg.jp/
+> 
+> ただ、アランさんの写真とかsqueakland.jpの写真とかを無断使用してしまってますので、まだどこにも告知しておりません。使用許可はどちらへお願いすればよろしいでしょうか？
+> ひどい内容ですがご助言よろしくお願いいたします。
+> 
+
+---
+[:masashi | ^umezawa]
+
+From "土本 (Florian) 強  Wed Oct  4 12:44:27 2006
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3163] Re: 萌えるSqueak『もえすく』
+In-Reply-To: <JY2006100410533717.9774078@mars.dti.ne.jp>
+References: <20061004023507.874F.OFG@kwansei.ac.jp>
+	<JY2006100410533717.9774078@mars.dti.ne.jp>
+Message-ID: <20061004122701.44B7.FLORIAN@seagreen.ocn.ne.jp>
+
+　こんにちは。土本( Florian )です。
+
+　先にやられてしまったなぁ、というのが正直な感想です。
+
+＃「Squeakたん」で検索してみて下さい:-)
+
+メール「[Squeak-ja: 3162] Re: 萌えるSqueak『もえすく』」(2006/10/04 10:53) に於いて
+「Masashi Umezawa」 語りて曰く、
+
+Masashi> いいですねー。これ。Squeakware-eduあたりとバンドルしてみるのも面白い
+Masashi> のではないでしょうか。もしくはLinux環境で動作するのであれば、
+Masashi> 「萌えるSqueakware」も可能ですね。
+
+　今回、ソリューションとしてNScripterを使用していらっしゃるようですので、
+Linux環境では互換スクリプトエンジンであるONScripterを使用できるはずです
+ので、Squeakware上に載せることは可能だと思います。
+
+　ただ、出来るようであればこのスクリプト自体もSqueak上で動いていれば面白
+かったでしょうね。とらハのエンジンは作った方がいらっしゃるのですが……。
+NScripterはまだ無いようです。
+
+
+　ともあれ、非常に面白い試みですので期待しています。がんばって下さい。
+
+-----------------------------------------------------------------
+ゲーム製作工房パイディア(Paidia)
+       土本( Florian )強
+mailto:  florian@seagreen.ocn.ne.jp
+webto:   http://florianswiki.dyndns.org/Web/
+phoneto: (03)5724-5688
+=================================================================
+
+
+From mutoh ＠ openedu.org  Wed Oct  4 13:57:11 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3164] Re: 萌えるSqueak『もえすく』
+In-Reply-To: <20061004122701.44B7.FLORIAN@seagreen.ocn.ne.jp>
+References: <20061004023507.874F.OFG@kwansei.ac.jp>
+	<JY2006100410533717.9774078@mars.dti.ne.jp>
+	<20061004122701.44B7.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <86u02k4r14.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+これ、素晴らしいですね。
+# KOF2006で体験版CD-ROM出しませんか?とか;-)
+## KOF2006 Squeak CDを作るっていう手もあるのか…
+
+At Wed, 04 Oct 2006 12:44:27 +0900,
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+> Masashi> いいですねー。これ。Squeakware-eduあたりとバンドルしてみるのも面白い
+> Masashi> のではないでしょうか。もしくはLinux環境で動作するのであれば、
+> Masashi> 「萌えるSqueakware」も可能ですね。
+> 　今回、ソリューションとしてNScripterを使用していらっしゃるようですので、
+> Linux環境では互換スクリプトエンジンであるONScripterを使用できるはずです
+> ので、Squeakware上に載せることは可能だと思います。
+
+いつもの如く、
+	「FreeBSDで動かすためなら手段を選ばない;-)」
+で、wineで動かそうとした後にそういうものがあるのに気がつきました。
+# http://ogapee.at.infoseek.co.jp/onscripter.html
+
+で、ちょっと諸事情で古いバージョン(20050719)で試したのですが、キャラク
+タの絵が壊れてました。これは、ONScripterエンジンが古いせいかなとこれか
+ら最新のもので試す予定です。
+
+みかちゃんフォントを使うと、いい感じに「ダメ」です;-)
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From ofg ＠ kwansei.ac.jp  Wed Oct  4 22:06:07 2006
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3165] Re: 萌えるSqueak『もえすく』
+Message-ID: <20061004220433.356D.OFG@kwansei.ac.jp>
+
+大藤です。
+さまざまなご意見・ご感想ありがとうございます。今後の開発に活かさせて頂きます。
+
+＞阿部さん
+自分も一応は中学高校で授業をする身ですので、いずれ毒抜きバージョンも作ってみたいと思います。
+
+＞大島さん
+私は英語がかなり苦手ですので、お父様へのお伺いをお願いしてよろしいでしょうか？
+
+＞梅澤さん
+ONScripterでLinux版作成も可能かもしれませんが、PNG画像の処理がネックになるようなのでしばらくはご容赦下さい。
+
+＞土本さん
+昨年のエイプリルフールに萌え企画があったのでしょうか。見逃してしまい残念です。
+
+＞むとうさん
+KOF2006 Squeak CD というのを作るのでしたら、ぜひ『もえすく』体験版を入れていただきたいです。それとも体験版のCDを作って持ち込んだ方が良いのでしょうか。20〜30枚程度ならすぐ作れそうな気もしますが、何枚ぐらいあればいいのでしょう？
+
+大藤 泰生
+ofg@kwansei.ac.jp
+
+
+From mutoh ＠ openedu.org  Thu Oct  5 16:57:36 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3166] Re: 萌えるSqueak『もえすく』
+In-Reply-To: <20061004220433.356D.OFG@kwansei.ac.jp>
+References: <20061004220433.356D.OFG@kwansei.ac.jp>
+Message-ID: <86lknv42kv.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+At Wed, 04 Oct 2006 22:06:07 +0900,
+大藤 泰生 <ofg@kwansei.ac.jp> wrote:
+> KOF2006 Squeak CD というのを作るのでしたら、ぜひ『もえすく』体験版を
+> 入れていただきたいです。
+
+「KOF2006 Squeak CD」は、現所では作れるかどうかわからない状態です。
+が、作るのでしたら、是非中に『もえすく』体験版を入れさせてください(_O_)
+
+
+で、許可を得る前に絵を使ってしまってますが、例のONScriptでFreeBSDで動
+かすと以下のURLにあるような絵になってしまいます。
+	http://qml.610t.org/squeak/MoeSqu.html
+
+MacOS X版のONScriptでも同じ症状だったので、ONScriptのエンジンに問題が
+あるのかなぁと考えてますが、ちょっとこれからボチボチと原因究明してみた
+いなと思ってます。
+
+> それとも体験版のCDを作って持ち込んだ方が良いのでしょうか。20〜30枚程
+> 度ならすぐ作れそうな気もしますが、何枚ぐらいあればいいのでしょう？
+
+もし、「KOF2006 Squeak CD」が作れない状況だったら、こちらの方向でお願
+いしていいですかね?
+
+まあ、現場焼き;-)と言う手もあるので、それ程多く無くても良いのかなぁと
+は思います。
+# スペシャルジャケットとかの方が意味がある?
+
+もし、お手すきのようでしたら、KOF2006の方も一緒に参加していただけると
+うれしいかなと思いますです。
+# これは、みなさんへのお願いですけども。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From htakada ＠ acm.org  Thu Oct  5 22:21:16 2006
+From: htakada ＠ acm.org (Hideyuki Takada)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3167] 国際会議 C5 2007 論文投稿 締切間近!
+In-Reply-To: <20060825122527.8211.HTAKADA@cs.ritsumei.ac.jp>
+References: <20060825122527.8211.HTAKADA@cs.ritsumei.ac.jp>
+Message-ID: <452506CC.6030401@acm.org>
+
+皆様
+
+立命館大学の高田です。
+
+恒例となりました(?) 国際会議 C5 の論文投稿締切が 16日と近づいて参りまし
+たので，再度ご案内させていただきたいと思います。
+
+論文集は過去の4回と同様に IEEE CS より発行される予定です。たくさんのご投
+稿をお待ち申し上げております。
+
+高田 秀志 (C5 2007 広報・出版担当)
+http://www.cm.is.ritsumei.ac.jp/c5-07/
+
+=====
+CALL FOR PAPERS AND WORKSHOP PROPOSALS
+
+The Fifth International Conference on
+Creating, Connecting and Collaborating through Computing (C5 2007)
+
+January 24 - 26, 2007, Kyoto University, Kyoto, Japan
+http://www.cm.is.ritsumei.ac.jp/c5-07/
+
+Organized by
+Hewlett-Packard Company
+Kyoto University 21st Century COE Program for Knowledge Society
+Infrastructure
+Viewpoints Research Institute
+
+SCOPE
+
+ Computers, networks, and other forms of technology are now pervasive
+ in our information-based society. However, most users still function
+ as passive consumers of technology. To evolve into a true knowledge
+ society, it is critical that we transform computer-based human
+ activities to engage users in the active process of creating,
+ connecting, and collaborating together.
+
+ The C5 conference is for researchers, technology developers,
+ educators, and technology users who are concerned about developing
+ and enabling human-oriented creation, connection, and collaboration
+ processes. C5 is an international forum for presenting ongoing work
+ as well as new work currently under development and for discussing
+ future needs and directions in creative computing and multimedia
+ authoring environments. We welcome equally the submission of
+ technical papers and practitioner/experience reports for paper
+ presentations. In addition, we are adding a workshop track for the
+ third day of the conference and are soliciting proposals for half-day
+ and full-day interactive workshops.
+
+TOPICS OF INTEREST
+
+ Topics of interest include but not limited to
+ - Development and applications of collaboration tools and environments
+ - User collaboration utilizing 3D, multimedia, and animation objects
+ - Technologies for creating educational environments
+ - Computer-Supported Collaborative Learning (CSCL) and
+   Technology-Enabled Learning (TEL)
+ - Computer-Supported Cooperative Work (CSCW), distributed work, and
+   virtual teaming
+ - Hybrid technology activities, such as scientific experiments,
+   instrumentation, robots, and game playing
+ - Development of applications/content for non traditional learning
+   environments, e.g. mentoring, peer-to-peer, "teacherless"
+   environments (in developing countries), e.g., $100 laptop
+ - Applications and tools for education from K-12 through higher education
+
+PAPER SUBMISSION GUIDELINES
+
+ Original papers concerned with both theory and practice are solicited.
+
+ A full paper with 8 page limit should be submitted by the paper
+ submission deadline. The papers are reviewed by the program comittee
+ and authors will be notified about acceptance. Accepted authors have
+ to submit a camera ready version of the full paper with 8 page limit
+ by the camera-ready copy deadline.  Papers should follow the
+ formatting instructions provided by 8.5" x 11", Two-Column Format of
+ "IEEE Computer Society Press - Proceedings Author Guidelines" (please
+ refer to "INFORMATION FOR AUTHORS" at
+ http://www.computer.org/portal/site/cscps/index.jsp).
+
+ Submitted papers and camera-ready papers should be sent
+ electronically through our online submission site
+ (http://www.cm.is.ritsumei.ac.jp/c5-07/myreview/). The PDF,
+ Postscript and MS-WORD formats are acceptable.
+
+WORKSHOP PROPOSAL GUIDELINES
+
+ The third day of the conference (Jan. 26, 2007) has been allotted for
+ workshops and field trips. The workshop day is intended to offer
+ conference participants the opportunity to learn more about
+ human-oriented creation, connection, and collaboration processes and
+ tools through interactive group experiences. Workshops allow
+ conference participants to apply what they have learned in the
+ plenary sessions and paper presentations through hands-on activities,
+ facilitated discussions, and field trips to schools and sites
+ offering technology-enabled learning activities.
+
+ Workshop proposals should include workshop title, description of
+ topic, workshop organizers, workshop duration (half-day or full-day)
+ and estimated expenses (printing, etc.). Proposals should be sent to
+ the conference contact e-mail address indicated at the conference web
+ page.
+
+IMPORTANT DATES
+ Full paper submission: October 16, 2006
+ Workshop proposals: October 30, 2006
+ Notification of acceptance: November 30, 2006
+ Full paper camera-ready copies: January 7, 2007
+ Proposals for demos and posters: January 7, 2007
+
+PUBLICATION
+ Preliminary version of the proceedings will be distributed during the
+ conference. The formal version of the proceedings will be published
+ by the IEEE Computer Society and sent to authors after the
+ conference.
+
+ORGANIZING COMMITTEE
+
+Honorary Co-Chairs
+ Alan Kay, Viewpoints Research Institute, USA
+ Makoto Nagao, National Institute of Information and Communications
+Technology (NICT), Japan
+
+Conference Co-Chairs
+ Kim Rose, Viewpoints Research Institute, USA
+ Katsumi Tanaka , Kyoto University, Japan
+
+Program Co-Chairs
+ Benay Dara-Abrams, DALaboratories, USA
+ Rieko Kadobayashi, National Institute of Information and Communications
+Technology (NICT), Japan
+ Rick McGeer, Hewlett-Packard Company, USA
+ Kazuyuki Moriya, Kyoto University, Japan
+
+Workshop Track Chair
+ Benay Dara-Abrams, DALaboratories, USA
+
+Local Arrangement Chair
+ Hajime Kita, Kyoto University, Japan
+
+Publicity and Publication Chair
+ Hideyuki Takada, Ritsumeikan University, Japan
+
+Program Committee
+ Michael Bischoff, University of Applied Sciences Luebeck, Germany
+ Masahiro Fujita, University of Tokyo, Japan
+ Mark Guzdial, Georgia Institute of Technology, USA
+ Masaki Hayashi, Sega Sammy Media, Inc., Japan
+ Tsuneo Jozen, Osaka Electro-Communication University, Japan
+ Shinichi Konomi, University of Tokyo, Japan
+ Julian Lombardi, Duke University, USA
+ Maic Masuch, Otto-von-Guericke-University of Magdeburg, Germany
+ Mark McCahill, University of Minnesota, USA
+ Maggie McPherson, University of Leeds, UK
+ John David Miller, Intel Corporation, USA
+ Shinya Nakagawa, HP Labs, Japan
+ Haruhiko Okumura, Mie University, Japan
+ Zhiyong Peng, Wuhan University, China
+ Ian Piumarta, Viewpoints Research Institute, USA
+ Andreas Raab, Qwaq, Inc., USA
+ David Reed, MIT Media Lab/HP Labs, USA
+ Nathanael Scharli, Google, Switzerland
+ David Smith, Qwaq, Inc., USA
+ Kazutoshi Sumiya, University of Hyogo, Japan
+ Toshiyuki Takeda, Kwansei Gakuin University, Japan
+ Shin'ichi Ueshima, Kansai University, Japan
+
+
+-- 
+Hideyuki Takada, Ph.D
+Department of Computer Science
+College of Information Science and Engineering, Ritsumeikan University
+
+From csdpp363 ＠ ybb.ne.jp  Fri Oct  6 10:43:43 2006
+From: csdpp363 ＠ ybb.ne.jp (藤岡　董)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3168] １年前の１７年１１月３日（水）に関西学院へ伺った、藤岡　董です。
+References: <20061004023507.874F.OFG@kwansei.ac.jp>
+Message-ID: <000b01c6e8e8$dbe08920$0203a8c0@FM1448016633>
+
+大藤　泰生　さま、藤岡　董です。ご無沙汰しております。お久しぶりです。
+
+大いに、ご活躍されているお姿、敬意を表してます。質問があるのです、私は素人なので、しょうもない
+
+質問で申し訳ありません。
+
+Ｓｑｕｅａｋ　の作品を開いたら、エラーがでる。出ると　「Ａｂａｎｄｏｎ」　をクリックし画面は閉じる。
+
+“プロジェクトを探す（より多くの場所から）の時も、稀に有るのですが、上記同様のエラーの画面がでる。
+
+この現象の原因は、どこにあるのでしょうか？宜しくお願いします。
+
+****************************
+*藤岡　董 （ Tadasu Fujioka )
+*TEL  ：　072-622-6826
+*EAX ： 050-1414-6826
+*携帯 ：090-8658-7113
+*E-Mail：csdpp363@ybb.ne.jp
+****************************
+----- Original Message ----- 
+From: "大藤 泰生" <ofg@kwansei.ac.jp>
+To: <squeak-ja@smalltalk.jp>
+Sent: Wednesday, October 04, 2006 2:39 AM
+Subject: [Squeak-ja: 3159] 萌えるSqueak『もえすく』
+
+
+> 大藤です。
+> MLへの投稿は1年ぶりぐらいになります。
+> 最近、仕事の合間に「萌えるSqueak」というのを製作中でして、このたび体験版が完成しました。
+> コンセプト：「萌える英単語」や「萌えるＣ言語」などと同様に、萌えをエサにオタクの方々にSqueakを紹介する。
+> 内容：eToysの操作説明と簡単なクイズのみ。
+> 公式サイト：http://moesuku.ofg.jp/
+>
+> ただ、アランさんの写真とかsqueakland.jpの写真とかを無断使用してしまってますので、まだどこにも告知しておりません。使用許可はどちらへお願いすればよろしいでしょうか？
+> ひどい内容ですがご助言よろしくお願いいたします。
+>
+> 大藤 泰生
+> ofg@kwansei.ac.jp
+>
+> 
+
+
+
+From csdpp363 ＠ ybb.ne.jp  Fri Oct  6 17:27:16 2006
+From: csdpp363 ＠ ybb.ne.jp (藤岡　董)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3169] １年前の１７年１１月３日（水）に関西学院へ伺った、藤岡　董です。
+Message-ID: <003c01c6e921$3c194740$0203a8c0@FM1448016633>
+
+
+　大藤　泰生　さま、藤岡　董です。ご無沙汰しております。お久しぶりです。
+
+大いに、ご活躍されているお姿、敬意を表してます。質問があるのです、私は素人なので、つまらない
+
+質問で申し訳ありません。
+
+Ｓｑｕｅａｋ　の作品を開いたら、エラーがでる。出ると　「Ａｂａｎｄｏｎ」　をクリックし画面は閉じる。
+
+“プロジェクトを探す（より多くの場所から）の時も、稀に有るのですが、上記同様のエラーの画面がでる。
+
+この現象の原因は、どこにあるのでしょうか？教えて下さい！宜しくお願いします。
+
+****************************
+*藤岡　董 （ Tadasu Fujioka )
+*TEL  ：　072-622-6826
+*EAX ： 050-1414-6826
+*携帯 ：090-8658-7113
+*E-Mail：csdpp363@ybb.ne.jp
+**************************** 
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20061006/4682ee32/attachment.htm
+From csdpp363 ＠ ybb.ne.jp  Fri Oct  6 17:41:53 2006
+From: csdpp363 ＠ ybb.ne.jp (藤岡　董)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3170] 講習で”Ｓｑｕｅａｋ”とは何？の説明は・・・
+Message-ID: <004101c6e923$47022d50$0203a8c0@FM1448016633>
+
+　Ｓｑｕｅａｋ−ｊａ　の皆様へ　藤岡　董と申します。
+
+　いつも皆様の、ご活躍を楽しく、拝見させていただいております。
+
+　この度、私が、Ｓｑｕｅａｋ　を初めての人を対象に、講習を行うことになりました。 
+
+
+　Ｓｑｕｅａｋ　とは何か？から、説明をしたいのです。そこで皆様にお伺いします。 
+
+
+　素人の人ばかりが、受講生なので、一言で　Ｓｑｕｅａｋ　とは何か？　と
+
+　もう少し、詳しく具体的にも、説明をしたいのですが、皆様のご意見をお聞かせください。
+
+　どうか宜しくお願いいたします。
+
+****************************
+*藤岡　董 （ Tadasu Fujioka )
+*TEL  ：　072-622-6826
+*EAX ： 050-1414-6826
+*携帯 ：090-8658-7113
+*E-Mail：csdpp363@ybb.ne.jp
+**************************** 
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20061006/ab3f6b1e/attachment.html
+From ofg ＠ kwansei.ac.jp  Sat Oct  7 12:29:10 2006
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3171] Re: １年前の１７年１１月３日（水）に関西学院へ伺った、
+Message-ID: <20061007122634.D446.OFG@kwansei.ac.jp>
+
+＞むとうさん
+ONScripterの画像異常はPNG画像用のプラグインが原因かと思われます。
+完成版マスターアップの際にはPNG画像を標準形式に変換し、対応できるようにしたいと思います。
+
+＞大島さん
+ご指摘頂いた箇所をいくつか修正致しました。
+あと、関西学院高等部で私の上司にあたる丹羽先生がよろしくお伝え下さいとのことです。
+
+＞藤岡さん
+昨年は文化祭にお越し頂きありがとうございました。
+私個人宛のメールをML宛に返信してしまっていると思われます。返信の際は宛先にご注意下さい。
+エラーの相談の件は、もう少し状況を詳しく記述して頂かないと厳しいと思います。
+スクイークとは何かについては『もえすく』http://moesuku.ofg.jp/での記述が自分なりの説明です。
+講習会で使うにはかなり不適切な表現だらけですが。
+
+
+関西学院高等部
+大藤 泰生
+ofg@kwansei.ac.jp
+
+From tak ＠ metatoys.org  Tue Oct 10 22:37:28 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3172] KOF イベントのミーティング梅田でやります。
+Message-ID: <452BA218.6080600@metatoys.org>
+
+こんにちは。山宮＠上新庄です。
+
+11月17日と18日に、KOF(http://k-of.jp/2006/) が開かれるのですが、そろそ
+ろアイデア出しやなんかのために集まろうという事になりましたのでご連絡い
+たします。
+
+日時: 10月13日(金曜日) 19:00
+集合場所: 阪急梅田ビッグマン前(で、良いですかね。。。)
+
+KOF に来られる方も来られない方も、とりあえずどんな事が出来るか色々考え
+てみましょう。今のところ武田さんと武藤さんと私が集まる予定です。せっか
+くの機会ですので他にもスクイークに関っておられる方は是非是非いらして下
+さい！
+来られる方はメールを頂けると嬉しいです。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From kuwatani ＠ akademia.co.jp  Thu Oct 12 12:59:26 2006
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3173] テストメールです
+Message-ID: <452DBD9E.2090609@akademia.co.jp>
+
+squeak-jaの管理をしています 桑谷 です．
+
+メール配信のテストです．
+
+----
+桑谷 剛史
+kuwatani@akademia.co.jp
+
+
+
+From kuwatani ＠ akademia.co.jp  Thu Oct 12 18:45:34 2006
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3174] メール配信の不具合のお詫び
+Message-ID: <452E0EBE.9070802@akademia.co.jp>
+
+Squeak-jaにご参加のみなさま
+
+メーリングリストの管理をしている 桑谷 です．
+
+週末からメールが配信されない不具合が起きていました．
+現在は復旧し未送信になっていたメールも送信されていると思います．
+メールが届いていない，間が抜けているという方はアーカイブで
+確認いただければと思います．
+
+Squeak-jaアーカイブ：http://www.smalltalk.jp/pipermail/squeak-ja/
+
+ご迷惑をおかけいたしました．
+----
+桑谷 剛史
+kuwatani@akademia.co.jp
+
+
+
+From htakada ＠ acm.org  Thu Oct 12 19:04:16 2006
+From: htakada ＠ acm.org (Hideyuki Takada)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3175] C5-07 論文締め切り延長 (Re: 国際会議 C5 2007 論文投稿 締切間近!)
+In-Reply-To: <452506CC.6030401@acm.org>
+References: <20060825122527.8211.HTAKADA@cs.ritsumei.ac.jp>
+	<452506CC.6030401@acm.org>
+Message-ID: <452E1320.1050105@acm.org>
+
+皆様
+
+立命館大学の高田です。
+
+先日ご案内致しました C5 2007 の論文締め切りが，10月23日に延長されまし
+た。さらにたくさんのご投稿をお待ち申し上げております。
+
+Hideyuki Takada wrote:
+> 皆様
+> 
+> 立命館大学の高田です。
+> 
+> 恒例となりました(?) 国際会議 C5 の論文投稿締切が 16日と近づいて参りまし
+> たので，再度ご案内させていただきたいと思います。
+> 
+> 論文集は過去の4回と同様に IEEE CS より発行される予定です。たくさんのご投
+> 稿をお待ち申し上げております。
+> 
+> 高田 秀志 (C5 2007 広報・出版担当)
+> http://www.cm.is.ritsumei.ac.jp/c5-07/
+
+=====
+CALL FOR PAPERS AND WORKSHOP PROPOSALS
+
+*** NEW PAPER SUBMISSION DEADLINE: OCTOBER 23, 2006 ***
+
+The Fifth International Conference on
+Creating, Connecting and Collaborating through Computing (C5 2007)
+
+January 24 - 26, 2007, Kyoto University, Kyoto, Japan
+http://www.cm.is.ritsumei.ac.jp/c5-07/
+
+Organized by
+Hewlett-Packard Company
+Kyoto University 21st Century COE Program for Knowledge Society
+Infrastructure
+Viewpoints Research Institute
+
+SCOPE
+
+ Computers, networks, and other forms of technology are now pervasive
+ in our information-based society. However, most users still function
+ as passive consumers of technology. To evolve into a true knowledge
+ society, it is critical that we transform computer-based human
+ activities to engage users in the active process of creating,
+ connecting, and collaborating together.
+
+ The C5 conference is for researchers, technology developers,
+ educators, and technology users who are concerned about developing
+ and enabling human-oriented creation, connection, and collaboration
+ processes. C5 is an international forum for presenting ongoing work
+ as well as new work currently under development and for discussing
+ future needs and directions in creative computing and multimedia
+ authoring environments. We welcome equally the submission of
+ technical papers and practitioner/experience reports for paper
+ presentations. In addition, we are adding a workshop track for the
+ third day of the conference and are soliciting proposals for half-day
+ and full-day interactive workshops.
+
+TOPICS OF INTEREST
+
+ Topics of interest include but not limited to
+ - Development and applications of collaboration tools and environments
+ - User collaboration utilizing 3D, multimedia, and animation objects
+ - Technologies for creating educational environments
+ - Computer-Supported Collaborative Learning (CSCL) and
+   Technology-Enabled Learning (TEL)
+ - Computer-Supported Cooperative Work (CSCW), distributed work, and
+   virtual teaming
+ - Hybrid technology activities, such as scientific experiments,
+   instrumentation, robots, and game playing
+ - Development of applications/content for non traditional learning
+   environments, e.g. mentoring, peer-to-peer, "teacherless"
+   environments (in developing countries), e.g., $100 laptop
+ - Applications and tools for education from K-12 through higher education
+
+PAPER SUBMISSION GUIDELINES
+
+ Original papers concerned with both theory and practice are solicited.
+
+ A full paper with 8 page limit should be submitted by the paper
+ submission deadline. The papers are reviewed by the program comittee
+ and authors will be notified about acceptance. Accepted authors have
+ to submit a camera ready version of the full paper with 8 page limit
+ by the camera-ready copy deadline.  Papers should follow the
+ formatting instructions provided by 8.5" x 11", Two-Column Format of
+ "IEEE Computer Society Press - Proceedings Author Guidelines" (please
+ refer to "INFORMATION FOR AUTHORS" at
+ http://www.computer.org/portal/site/cscps/index.jsp).
+
+ Submitted papers and camera-ready papers should be sent
+ electronically through our online submission site
+ (http://www.cm.is.ritsumei.ac.jp/c5-07/myreview/). The PDF,
+ Postscript and MS-WORD formats are acceptable.
+
+WORKSHOP PROPOSAL GUIDELINES
+
+ The third day of the conference (Jan. 26, 2007) has been allotted for
+ workshops and field trips. The workshop day is intended to offer
+ conference participants the opportunity to learn more about
+ human-oriented creation, connection, and collaboration processes and
+ tools through interactive group experiences. Workshops allow
+ conference participants to apply what they have learned in the
+ plenary sessions and paper presentations through hands-on activities,
+ facilitated discussions, and field trips to schools and sites
+ offering technology-enabled learning activities.
+
+ Workshop proposals should include workshop title, description of
+ topic, workshop organizers, workshop duration (half-day or full-day)
+ and estimated expenses (printing, etc.). Proposals should be sent to
+ the conference contact e-mail address indicated at the conference web
+ page.
+
+IMPORTANT DATES
+ Full paper submission: October 23, 2006 (Extended)
+ Workshop proposals: October 30, 2006
+ Notification of acceptance: November 30, 2006
+ Full paper camera-ready copies: January 7, 2007
+ Proposals for demos and posters: January 7, 2007
+
+PUBLICATION
+ Preliminary version of the proceedings will be distributed during the
+ conference. The formal version of the proceedings will be published
+ by the IEEE Computer Society and sent to authors after the
+ conference.
+
+ORGANIZING COMMITTEE
+
+Honorary Co-Chairs
+ Alan Kay, Viewpoints Research Institute, USA
+ Makoto Nagao, National Institute of Information and Communications
+Technology (NICT), Japan
+
+Conference Co-Chairs
+ Kim Rose, Viewpoints Research Institute, USA
+ Katsumi Tanaka , Kyoto University, Japan
+
+Program Co-Chairs
+ Benay Dara-Abrams, DALaboratories, USA
+ Rieko Kadobayashi, National Institute of Information and Communications
+Technology (NICT), Japan
+ Rick McGeer, Hewlett-Packard Company, USA
+ Kazuyuki Moriya, Kyoto University, Japan
+
+Workshop Track Chair
+ Benay Dara-Abrams, DALaboratories, USA
+
+Local Arrangement Chair
+ Hajime Kita, Kyoto University, Japan
+
+Publicity and Publication Chair
+ Hideyuki Takada, Ritsumeikan University, Japan
+
+Program Committee
+ Michael Bischoff, University of Applied Sciences Luebeck, Germany
+ Masahiro Fujita, University of Tokyo, Japan
+ Mark Guzdial, Georgia Institute of Technology, USA
+ Masaki Hayashi, Sega Sammy Media, Inc., Japan
+ Tsuneo Jozen, Osaka Electro-Communication University, Japan
+ Shinichi Konomi, University of Tokyo, Japan
+ Julian Lombardi, Duke University, USA
+ Maic Masuch, Otto-von-Guericke-University of Magdeburg, Germany
+ Mark McCahill, University of Minnesota, USA
+ Maggie McPherson, University of Leeds, UK
+ John David Miller, Intel Corporation, USA
+ Shinya Nakagawa, HP Labs, Japan
+ Haruhiko Okumura, Mie University, Japan
+ Zhiyong Peng, Wuhan University, China
+ Ian Piumarta, Viewpoints Research Institute, USA
+ Andreas Raab, Qwaq, Inc., USA
+ David Reed, MIT Media Lab/HP Labs, USA
+ Nathanael Scharli, Google, Switzerland
+ David Smith, Qwaq, Inc., USA
+ Kazutoshi Sumiya, University of Hyogo, Japan
+ Toshiyuki Takeda, Kwansei Gakuin University, Japan
+ Shin'ichi Ueshima, Kansai University, Japan
+
+-- 
+Hideyuki Takada, Ph.D
+Department of Computer Science
+College of Information Science and Engineering, Ritsumeikan University
+
+From mutoh ＠ openedu.org  Sat Oct 14 09:57:04 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3176] Squeak曼荼羅
+Message-ID: <86bqofemu7.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+昨日、KOF2006の打ち合わせしてきました。
+
+KOF2006に向けてのメールでの話合いなどで、Squeakっていろんな側面がある
+ので、それをうまくまとめられないかなという話になりまして、
+	Squeak曼荼羅
+を書いてみるのはどうだろうかと言う話になりました。
+
+まあ、いろんな側面を理解して、どの側面を提示していくかを考える叩き台に
+したいなという意味も込めて、かなり適当なんですがむとうが叩き台として書
+いてみたものを以下に置いています。
+	http://qml.610t.org/squeak/mandara.html
+
+思い付くものをザクッと切ってしまったので、抜けている要素や側面も多いと
+思いますし、ビジュアル的にも字ばっかりであんまりいい感じではありません
+が、一つの叩き台として、皆さんから御意見をいただければと思います。
+
+
+イベントをやる立場からすると、「私はこの側面を見たい」という御意見だけ
+でも助かりますので、よろしくお願いします。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+From takemura ＠ bre.soc.i.kyoto-u.ac.jp  Tue Oct 17 18:55:43 2006
+From: takemura ＠ bre.soc.i.kyoto-u.ac.jp (Kentaro Takemura)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3177] モーフパッケージ化システム
+References: <86bqofemu7.wl%mutoh@openedu.org>
+Message-ID: <001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC>
+
+京都大学の竹村　顕大朗です
+
+現在、私の修士論文の研究において
+Squeakを使った教育を行う上での補助となる
+「モーフパッケージ化システム」というシステムを作っております。
+現時点ではまだシステムは出来上がってはおりませんが
+今回はそのシステムの背景・概要などを説明し
+皆様からのご意見、アドバイス等を伺いたくメールを出させていただきました。
+
+「モーフのパッケージ化システム」とは、特定の機能を持った一つないし複数のモーフを
+一つのキットとしてパッケージングし、それを自由に修正、配布する
+一連の枠組みを提供するシステムです。
+現在のSqueakを用いたワークショップ、授業においては
+普及し始めてからまだ間がないということもあり、
+DriveACarのような数個の雛形的内容を除いて
+指導内容・方法など決まったものがあまり無く、
+その成果の殆どが教員の力量に依存してしまうという状態になっております。
+そこで、今回私たちはこの「モーフパッケージ化システム」をつくり
+このような状況を改善しようと考えました。
+
+通常のプロジェクトにおいても、遊び場を利用して
+まとまった機能をもったモーフをコピーすることは可能でしたが、
+この方法ではプロジェクトを跨いだ利用はできません。
+また、プロジェクトを跨いだ利用をする為には「部品」フラップに登録する方法がありますが
+この場合、一度登録した内容を変更することが困難となります。
+そして、既存のほかの枠組みにおいては
+1.専門家でなくても自由にキットを作成できる簡便性
+2.誰でも任意かつ容易にキットを修正できる保守性
+3.簡単にキットを共有できる共有性
+の全ての要件を充たしているものは無く、
+この３つの要件こそがキットを誰でも作り共有するために必要なものと考えております。 
+
+
+このシステムはSqueakを用いた教育を行ううえで、
+そのカリキュラムを進める上で最適な専門キットをSqueakの専門家でなくても
+誰でも作成できるような仕組みを提供し、
+さらにそのキットを容易に配布・取得することができるようにすることで
+優れた教育プログラムを簡単に共有できるようにすることを狙いとしています。
+専門キットの作成に関しては専門家で無い教員であっても簡単に作れるよう
+通常のSqueak eToysのタイルスクリプティングの仕組みを流用し
+エラーの無い、簡単なプログラミングによる作成を考えております。
+また、キットの配布に関してはメタトイのスーパーパーツ瓶のようにSqueak単体で
+自由に配布、取得できるような仕組みを考えています。
+
+このような枠組みで現在詳細な仕様に関して検討中なのですが、
+実際、Squeakを現場で使用されている指導者の方からも
+仕様に関して、実際このようなシステムがあれば利用するかなどのご意見や、
+どのような点に留意すれば一般の教員にとってより利用しやすくなるのか
+などのアドバイスを頂きたいと考えております。
+
+それではよろしくお願いいたします。
+
+-/*/*-/-*/*--/*/*-/-*/-*-/*-*/
+京都大学大学院　情報学研究科
+社会情報学専攻
+竹村　顕大朗
+takemura@bre.soc.i.kyoto-u.ac.jp
+/-*-*/-*/*-/-*/-/*/*-*-/*/-*-/
+
+
+
+From takeda.toshiyuki ＠ gmail.com  Wed Oct 18 11:13:27 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3178] Re: モーフパッケージ化システム
+In-Reply-To: <001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC>
+References: <86bqofemu7.wl%mutoh@openedu.org>
+	<001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC>
+Message-ID: <6544a1da0610171913p418efb29i95f08124ad66f114@mail.gmail.com>
+
+このあたりの意図がわかるようでわからないので、もう少し具体的に、
+たとえばこのキットを使えば、「車の運転」ワークショップがどう改善
+されるのか教えていただけるでしょうか。
+
+武田
+
+On 10/17/06, Kentaro Takemura <takemura@bre.soc.i.kyoto-u.ac.jp> wrote:
+
+> 通常のプロジェクトにおいても、遊び場を利用して
+> まとまった機能をもったモーフをコピーすることは可能でしたが、
+> この方法ではプロジェクトを跨いだ利用はできません。
+> また、プロジェクトを跨いだ利用をする為には「部品」フラップに登録する方法がありますが
+> この場合、一度登録した内容を変更することが困難となります。
+> そして、既存のほかの枠組みにおいては
+> 1.専門家でなくても自由にキットを作成できる簡便性
+> 2.誰でも任意かつ容易にキットを修正できる保守性
+> 3.簡単にキットを共有できる共有性
+> の全ての要件を充たしているものは無く、
+> この３つの要件こそがキットを誰でも作り共有するために必要なものと考えております。
+
+From takemura ＠ bre.soc.i.kyoto-u.ac.jp  Wed Oct 18 13:20:12 2006
+From: takemura ＠ bre.soc.i.kyoto-u.ac.jp (Kentaro Takemura)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3179] Re: モーフパッケージ化システム
+References: <86bqofemu7.wl%mutoh@openedu.org>
+	<001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC>
+Message-ID: <001401c6f26c$b4fbd2f0$6c0aa8c0@KSPC>
+
+武田様
+竹村　顕大朗です
+
+> このあたりの意図がわかるようでわからないので、もう少し具体的に、
+> たとえばこのキットを使えば、「車の運転」ワークショップがどう改善
+> されるのか教えていただけるでしょうか。
+
+車の運転を例に出すなら、
+例えば山宮さんのメタトイスクイークであれば
+DriveACar用のタイルカテゴリが用意されていたわけですが
+既存のタイルを取捨選択したカテゴリがビューワに出てくるだけで、
+オリジナルのタイルがあったりビューワ内のタイルの構成を変更することはできませんでした。
+また、全てのモーフにこの同じカテゴリが出てくる仕様となっています。
+このシステムにおいては、たとえば車とハンドルのような2つのモーフを予め用意し
+車には車向けのタイル群（「進める」、「回す」など）
+ハンドルにはハンドル向けのタイル群（「向き」など）
+を個別に割り当てることが可能なほか、
+普通のモーフのビューワに存在しないタイル
+（車の運転ではいい例が思いつきませんが強いて言えば「自動運転する」など）
+を新しいカテゴリの中に入れることができます。
+また、各個人でそのワークショップの内容に応じて
+カテゴリやタイルにさらに編集を加えることも可能にしたいと考えています。
+（例えば車の軌跡を見るために「ペンが下りているか」をカテゴリに加えるなど）
+
+このようにすることにより、各モーフごとに
+ビューワを見るだけで、作業の手順がわかりやすくなり
+授業の進行がよりスムーズになると考えています。
+例えば、ハンドルの「ハンドルカテゴリ」に「向き」しかなければ
+自然とハンドルで注目すべきタイルは「向き」であるとわかってもらえると考えています。
+
+このような説明でよろしいでしょうか？
+それでは
+
+-/*/*-/-*/*--/*/*-/-*/-*-/*-*/
+京都大学大学院　情報学研究科
+社会情報学専攻
+竹村　顕大朗
+takemura@bre.soc.i.kyoto-u.ac.jp
+/-*-*/-*/*-/-*/-/*/*-*-/*/-*-/
+
+> 武田
+>
+> On 10/17/06, Kentaro Takemura <takemura@bre.soc.i.kyoto-u.ac.jp> wrote:
+>
+>> 通常のプロジェクトにおいても、遊び場を利用して
+>> まとまった機能をもったモーフをコピーすることは可能でしたが、
+>> この方法ではプロジェクトを跨いだ利用はできません。
+>> また、プロジェクトを跨いだ利用をする為には「部品」フラップに登録する方法がありますが
+>> この場合、一度登録した内容を変更することが困難となります。
+>> そして、既存のほかの枠組みにおいては
+>> 1.専門家でなくても自由にキットを作成できる簡便性
+>> 2.誰でも任意かつ容易にキットを修正できる保守性
+>> 3.簡単にキットを共有できる共有性
+>> の全ての要件を充たしているものは無く、
+>> この３つの要件こそがキットを誰でも作り共有するために必要なものと考えております。
+>
+>
+
+
+
+From tango ＠ eggegg.co.jp  Wed Oct 18 16:13:03 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3180] Re: モーフパッケージ化システム
+References: <86bqofemu7.wl%mutoh@openedu.org><001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC>
+	<001401c6f26c$b4fbd2f0$6c0aa8c0@KSPC>
+Message-ID: <008901c6f284$da6eb0d0$6dc4d2ca@gomes>
+
+やまもとです。
+
+
+っていうことはビューワの編集ができるということでしょうか？
+オリジナルのタイルも追加できる？
+
+なんかおもしろそうですね！！
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+----- Original Message ----- 
+From: "Kentaro Takemura" <takemura@bre.soc.i.kyoto-u.ac.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Wednesday, October 18, 2006 1:20 PM
+Subject: [Squeak-ja: 3179] Re: モーフパッケージ化システム
+
+
+> 武田様
+> 竹村　顕大朗です
+>
+> > このあたりの意図がわかるようでわからないので、もう少し具体的に、
+> > たとえばこのキットを使えば、「車の運転」ワークショップがどう改善
+> > されるのか教えていただけるでしょうか。
+>
+> 車の運転を例に出すなら、
+> 例えば山宮さんのメタトイスクイークであれば
+> DriveACar用のタイルカテゴリが用意されていたわけですが
+> 既存のタイルを取捨選択したカテゴリがビューワに出てくるだけで、
+> オリジナルのタイルがあったりビューワ内のタイルの構成を変更することはできま
+せんでした。
+> また、全てのモーフにこの同じカテゴリが出てくる仕様となっています。
+> このシステムにおいては、たとえば車とハンドルのような2つのモーフを予め用意
+し
+> 車には車向けのタイル群（「進める」、「回す」など）
+> ハンドルにはハンドル向けのタイル群（「向き」など）
+> を個別に割り当てることが可能なほか、
+> 普通のモーフのビューワに存在しないタイル
+> （車の運転ではいい例が思いつきませんが強いて言えば「自動運転する」など）
+> を新しいカテゴリの中に入れることができます。
+> また、各個人でそのワークショップの内容に応じて
+> カテゴリやタイルにさらに編集を加えることも可能にしたいと考えています。
+> （例えば車の軌跡を見るために「ペンが下りているか」をカテゴリに加えるなど）
+>
+> このようにすることにより、各モーフごとに
+> ビューワを見るだけで、作業の手順がわかりやすくなり
+> 授業の進行がよりスムーズになると考えています。
+> 例えば、ハンドルの「ハンドルカテゴリ」に「向き」しかなければ
+> 自然とハンドルで注目すべきタイルは「向き」であるとわかってもらえると考えて
+います。
+>
+> このような説明でよろしいでしょうか？
+> それでは
+>
+> -/*/*-/-*/*--/*/*-/-*/-*-/*-*/
+> 京都大学大学院　情報学研究科
+> 社会情報学専攻
+> 竹村　顕大朗
+> takemura@bre.soc.i.kyoto-u.ac.jp
+> /-*-*/-*/*-/-*/-/*/*-*-/*/-*-/
+>
+> > 武田
+> >
+> > On 10/17/06, Kentaro Takemura <takemura@bre.soc.i.kyoto-u.ac.jp> wrote:
+> >
+> >> 通常のプロジェクトにおいても、遊び場を利用して
+> >> まとまった機能をもったモーフをコピーすることは可能でしたが、
+> >> この方法ではプロジェクトを跨いだ利用はできません。
+> >> また、プロジェクトを跨いだ利用をする為には「部品」フラップに登録する方
+法がありますが
+> >> この場合、一度登録した内容を変更することが困難となります。
+> >> そして、既存のほかの枠組みにおいては
+> >> 1.専門家でなくても自由にキットを作成できる簡便性
+> >> 2.誰でも任意かつ容易にキットを修正できる保守性
+> >> 3.簡単にキットを共有できる共有性
+> >> の全ての要件を充たしているものは無く、
+> >> この３つの要件こそがキットを誰でも作り共有するために必要なものと考えて
+おります。
+> >
+> >
+>
+
+
+From takeda.toshiyuki ＠ gmail.com  Wed Oct 18 21:35:34 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3181] Re: モーフパッケージ化システム
+In-Reply-To: <001401c6f26c$b4fbd2f0$6c0aa8c0@KSPC>
+References: <86bqofemu7.wl%mutoh@openedu.org>
+	<001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC>
+	<001401c6f26c$b4fbd2f0$6c0aa8c0@KSPC>
+Message-ID: <6544a1da0610180535v471ed561xa415a625aed4e10b@mail.gmail.com>
+
+なるほど。たとえば、「キット」フラップからキットをドロップしたら、
+車とハンドルがでてきて、それらはカスタマイズされたカテゴリを持っている、
+ようなイメージですね。
+
+便利な場面も多そうですが、
+
+> 例えば、ハンドルの「ハンドルカテゴリ」に「向き」しかなければ
+> 自然とハンドルで注目すべきタイルは「向き」であるとわかってもらえると考えています。
+
+これが教育上いいかどうかは意見がわかれるところでしょう。
+
+たけだ
+
+From abee ＠ squeakland.jp  Fri Oct 20 17:41:12 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3182] Re: Squeak 曼荼羅
+In-Reply-To: <86bqofemu7.wl%mutoh@openedu.org>
+References: <86bqofemu7.wl%mutoh@openedu.org>
+Message-ID: <45388BA8A3.E819ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+遅いレスですみません。
+
+On Sat, 14 Oct 2006 09:57:04 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>	http://qml.610t.org/squeak/mandara.html
+>
+>思い付くものをザクッと切ってしまったので、抜けている要素や側面も多いと
+>思いますし、ビジュアル的にも字ばっかりであんまりいい感じではありません
+>が、一つの叩き台として、皆さんから御意見をいただければと思います。
+
+拝見しました。セカチョーやCロボを載せてくださってありがとうございます。
+販売元のアカデミアと相談したのですが、展示用にデモ機を提供することは可能
+とのことです(Squeak関連書籍もたぶん可能)。
+人も出せるとよいのですが、これはちょっと難しいみたいです。私自身も他のイ
+ベントと被っているので難しいかもしれません。すみません。
+
+あと、アカデミアとしてはSqueakで開発された遠隔教育システムであるC-Roomも
+展示してもらえると嬉しいという話もあります。もし可能な場合は鳥取から遠隔
+でデモするそうです。
+
+http://www.akademia.co.jp/
+
+よろしくご検討ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From hayasaka ＠ pluto.dti.ne.jp  Sat Oct 21 13:53:33 2006
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3183] Re: Squeak-ja まとめ読み, 24 巻, 11 号
+References: <200610210300.k9L30Fws019672@pop.pluto.dti.ne.jp>
+Message-ID: <000b01c6f4cc$dc9cb100$020ba8c0@computer>
+
+
+----- Original Message ----- 
+From: <squeak-ja-request@smalltalk.jp>
+To: <squeak-ja@smalltalk.jp>
+Sent: Saturday, October 21, 2006 12:00 PM
+Subject: Squeak-ja まとめ読み, 24 巻, 11 号
+
+
+> Squeak-ja メーリングリストへの投稿は以下のアドレスに送ってください．
+> squeak-ja@smalltalk.jp
+>
+> Webブラウザを使って入退会するには以下のURLにどうぞ．
+> http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+> メールを使う場合，件名(Subject:)または本文に help と書いて以下の
+> アドレスに送信してください．
+> squeak-ja-request@smalltalk.jp
+>
+> メーリングリストの管理者への連絡は，以下のアドレスにお願いします.
+> squeak-ja-owner@smalltalk.jp
+>
+> 返信する場合，件名を書き直して内容がわかるようにしてください．
+> そのままだと，以下のようになってしまいます． "Re: Squeak-ja
+> まとめ読み, XX 巻 XX 号"
+>
+>
+> 本日の話題:
+>
+>   1. [Squeak-ja: 3182] Re: Squeak 曼荼羅 (Kazuhiro ABE)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Fri, 20 Oct 2006 17:41:12 +0900
+> From: Kazuhiro ABE <abee@squeakland.jp>
+> Subject: [Squeak-ja: 3182] Re: Squeak 曼荼羅
+> To: Squeak discussion in Japanese <squeak-ja@smalltalk.jp>
+> Message-ID: <45388BA8A3.E819ABEE@smtp.nifty.com>
+> Content-Type: text/plain; charset=ISO-2022-JP
+>
+> 阿部@新百合です。
+>
+> 遅いレスですみません。
+>
+> On Sat, 14 Oct 2006 09:57:04 +0900
+> Takeshi MUTOH <mutoh@openedu.org> wrote:
+>> http://qml.610t.org/squeak/mandara.html
+>>
+>>思い付くものをザクッと切ってしまったので、抜けている要素や側面も多いと
+>>思いますし、ビジュアル的にも字ばっかりであんまりいい感じではありません
+>>が、一つの叩き台として、皆さんから御意見をいただければと思います。
+>
+> 拝見しました。セカチョーやCロボを載せてくださってありがとうございます。
+> 販売元のアカデミアと相談したのですが、展示用にデモ機を提供することは可能
+> とのことです(Squeak関連書籍もたぶん可能)。
+> 人も出せるとよいのですが、これはちょっと難しいみたいです。私自身も他のイ
+> ベントと被っているので難しいかもしれません。すみません。
+>
+> あと、アカデミアとしてはSqueakで開発された遠隔教育システムであるC-Roomも
+> 展示してもらえると嬉しいという話もあります。もし可能な場合は鳥取から遠隔
+> でデモするそうです。
+>
+> http://www.akademia.co.jp/
+>
+> よろしくご検討ください。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+>
+> ------------------------------
+>
+> _______________________________________________
+> Squeak-ja mailing list
+> Squeak-ja@smalltalk.jp
+> http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+>
+>
+> 以上: Squeak-ja まとめ読み, 24 巻, 11 号
+> **************************************** 
+
+
+From miyasaka ＠ iris.dti.ne.jp  Sun Oct 22 00:45:51 2006
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3184] 学生・社会人向けのワークショップのお知らせ（参加者募集中）
+Message-ID: <4b24f0d0610210845s754788eu8715bc563061d24@mail.gmail.com>
+
+Squeak-jaのみなさまへ
+
+お世話になっております
+デジタルハリウッド大学院の宮坂です。
+
+■参加者募集のお知らせ（学生・社会人）
+先日、学生や社会人を対象にしたスクイーク＋世界聴診器のワークショップを秋葉原にて行いましたが、次は同様なワークショップを下記のとおり八王子で開催予定します。
+ただいま参加者募集中ですので、ご興味のある方は、ぜひお申し込みください。
+
+（１）日時
+2006年11月11日（土）
+第1部　スクイークの基本操作　10:30-12:00
+第2部　スクイークと世界聴診器の利用　13:00-16:30（最大延長17:00）
+※スクイークの使い方をご存知の方は、第2部からの参加も可能です。（Dirve a carが作れるくらいのスキルがあればだいじょうぶです）
+
+（２）場所
+デジタルハリウッド大学　制作スタジオ（八王子キャンパス）
+http://www.dhw.ac.jp/access/index.html#hachi
+
+（３）お申し込み方法
+詳細およびお申し込みについては、こちらをご覧ください。
+http://mts-j.hiho.jp/2006/10/itc-ws-b.html
+
+
+■前回ワークショップのご報告
+9月30日（土）に実施した、大学生や社会人の方を対象としたスクイーク＋世界聴診器のワークショップの模様はこちらをご覧ください。
+http://mts-j.hiho.jp/2006/10/2006930.html
+参加者の皆さん、阿部さん、林さん、山宮さん、HPSSKの関係者のみなさん、ありがとうございました！
+
+ではまた。
+よろしくお願いいたします！！
+
+-- 
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+TEL : 070-6566-0623
+D-FAX : 020-4666-0069
+e-mail : miyasaka.toshio@gmail.com
+mobile : miyasaka0623_wan_wan@di.pdx.ne.jp
+---------------------------------------------
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+http://mts-j.hiho.jp/
+http://www.dhw.co.jp/gs/
+---------------------------------------------
+メールアドレスをGmailに変更しましたが、以前のアドレス
+(miyasaka@iris.dti.ne.jp)でも受信はできます。
+
+From korakurider ＠ yahoo.co.jp  Thu Oct 26 00:43:26 2006
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3185] 月刊アスキーで立命館小特別授業の記事
+Message-ID: <JC200610260043263.1001940@yahoo.co.jp>
+
+Korakuriderです。
+昨日発売の、新装刊「月刊アスキー」１０月２４日号に、去る6月にアランさん
+が立命館小学校を訪問された際の特別授業の取材記事（4ページ）が掲載されて
+いました。
+http://monthly.ascii.co.jp/
+
+もちろんスクイークのことも言及がありますが、むしろ立命館小学校やその取り
+組みを紹介するという感じの記事でした。
+よろしければご覧ください。
+
+--------------------------------------
+YOSOGAI-WARI  SOFTBANK MOBILE
+http://pr.mail.yahoo.co.jp/keitai/
+
+From mutoh ＠ openedu.org  Fri Oct 27 19:13:48 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3186] 関西オープンソース2006の懇親会
+Message-ID: <86mz7i9icj.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+関西オープンソース2006の懇親会の参加者募集が始まっています。
+# http://k-of.jp/2006/party.html
+
+
+鋭意準備中のわたしたちSqueak-jaブース参加者も、Squeakを楽しむ仲間を勧
+誘するという崇高な目的を持って;-)、こちらに参加しようということになっ
+てます。
+
+金曜日の夜ですので、お仕事が終わったあとででも是非駆けつけて、Squeakに
+ついて熱く語りましょう!!
+
+
+あと、当日店番とかは無理だけど、準備とかなら手伝えるぞって人も大募集中
+です。特に、KOF2006 Squeaker CD-ROM(仮)と題したCD-ROMを現在作成中です
+ので、そのデザインワークやCD-ROMのテスト、説明htmlの記述とチェックなど
+など、お手伝いいだだける人がおられましたら、御連絡下さい。
+
+あ、Squeak曼荼羅をきれいに描いてくれるってのもありです;-)
+
+
+折角のお祭りです。
+皆さんで盛り上げ、盛り上がりましょう!!
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From yoshiki ＠ squeakland.org  Tue Oct 31 03:25:11 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3187] Re: 月刊アスキーで立命館小特別授業の記事
+In-Reply-To: <JC200610260043263.1001940@yahoo.co.jp>
+References: <JC200610260043263.1001940@yahoo.co.jp>
+Message-ID: <u7iyh64qg.wl%yoshiki@squeakland.org>
+
+  メールがあまり得意ではない大島です。
+
+> Korakuriderです。
+> 昨日発売の、新装刊「月刊アスキー」１０月２４日号に、去る6月にアランさん
+> が立命館小学校を訪問された際の特別授業の取材記事（4ページ）が掲載されて
+> いました。
+> http://monthly.ascii.co.jp/
+> 
+> もちろんスクイークのことも言及がありますが、むしろ立命館小学校やその取り
+> 組みを紹介するという感じの記事でした。
+> よろしければご覧ください。
+
+  だいぶ前のものになってしまいますが、どのような記事だったのか、秘密の
+方法で教えていただける方などいらっしゃればよろしくお願いします。
+
+-- Yoshiki
+

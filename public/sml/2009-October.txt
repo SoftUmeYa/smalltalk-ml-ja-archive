@@ -1,0 +1,2527 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Oct  1 12:36:09 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Oct  1 12:36:17 2009
+Subject: [SML 7670] 第12回Smalltalk勉強会＠京都
+Message-ID: <4AC423A9.7050705@cc.kyoto-su.ac.jp>
+
+今朝にポストしたのですが、突っ返されたので、再ポストします。
+
+--- 青木淳＠京都上賀茂
+
+-------- Original Message --------
+Subject: 第12回Smalltalk勉強会＠京都
+Date: Thu, 01 Oct 2009 05:05:27 +0900
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+To: Smalltalkers' Salon Mailing List <sml@smalltalk.jp>
+
+青木＠京都宇治です。
+
+第12回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+JR京都駅前にご参集ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto12
+
+第12回 Smalltalk勉強会＠京都
+日時：2009年10月07日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+先月の勉強会で提示しました簡単な課題「CSV to HTML」に関して、
+擦った揉んだしようと思います。ヒントにしたがって作り上げます
+と、まるでCのプログラムのような手続き的な造作になりますので、
+メッセージで駆動されるSmalltalkらしいオブジェクト的なプログラ
+ムへと作り変えます。配役や役割を策定する過程を介して、さんざ
+ん揉めながら、ごたついてゆきましょう。この発句から挙句へとた
+どり着く経緯（いきさつ）が勉強ですから…。
+
+できますれば、ノート型のパーソナルコンピュータ（Windows Vista
+/XP または Mac OS X (on Intel Mac)）をご持参ください。
+
+また、VisualWorksの次期バージョンである7.7に対応させた「じゅ
+ん for Smalltalk（Jun784）」も配布いたします。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+From serge.stinckwich ＠ gmail.com  Tue Oct  6 16:28:20 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue Oct  6 16:28:48 2009
+Subject: [SML 7671] Re: Some ideas
+In-Reply-To: <JxgX5CRrUKYrvsFpKYgsW6eA7@mars.dti.ne.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com> 
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com> 
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com> 
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<JxgX5CRrUKYrvsFpKYgsW6eA7@mars.dti.ne.jp>
+Message-ID: <b81554460910060028y5c6cda38q309c1a140029a0a6@mail.gmail.com>
+
+Hi all,
+I register for the meeting.
+What is the planning ?
+I could make a presentation about Pharo (30 min ?) and ESUG (15 min ?).
+
+See you,
+
+2009/9/18 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> Hi Serge,
+>
+> As you see in [SML 7646], 〓now Smalltalk-uses.jp has announced "Smalltalkers meeting at Nagoya".
+> http://www.smalltalk-users.jp/Home/gao-zhi/smalltalkgoudoubenkyoukainagoya
+>
+> We have opened up a registration page.
+> http://atnd.org/events/1593
+>
+> Looking forward to see you and all at Nagoya!
+>
+> Best regards,
+>
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>> Hi Serge
+>>
+>> > December 12th i have a talk to PRIMA'09 agent school already.
+>>
+>> OK, so December 19th would be best.
+>>
+>> > How many people attend your meeting generally ?
+>>
+>> In Tokyo area, approx 10-15 people. I'm not sure in Kyoto area,
+>> but Mr. Aoki will answer the question. ;)
+>>
+>> Best regards,
+>> ---
+>> [:masashi | ^umezawa]
+>
+> ---
+> [:masashi | ^umezawa]
+>
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Oct  7 06:51:00 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Oct  7 06:51:09 2009
+Subject: [SML 7672] Re: 第12回Smalltalk勉強会＠京都
+In-Reply-To: <4AC423A9.7050705@cc.kyoto-su.ac.jp>
+References: <4AC423A9.7050705@cc.kyoto-su.ac.jp>
+Message-ID: <4ACBBBC4.2050305@cc.kyoto-su.ac.jp>
+
+京都での勉強会、今日（reminder）です！
+
+典型的なパターンをいくつか用いたオブジェクト風の設計図＆プロ
+グラムを用意しました。参加する方々のブートストラップにしてい
+ただければ幸いです。（まだけっしていいものではありません。）
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+私は書きました:
+> 今朝にポストしたのですが、突っ返されたので、再ポストします。
+> 
+> --- 青木淳＠京都上賀茂
+> 
+> -------- Original Message --------
+> Subject: 第12回Smalltalk勉強会＠京都
+> Date: Thu, 01 Oct 2009 05:05:27 +0900
+> From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+> To: Smalltalkers' Salon Mailing List <sml@smalltalk.jp>
+> 
+> 青木＠京都宇治です。
+> 
+> 第12回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+> JR京都駅前にご参集ください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto12
+> 
+> 第12回 Smalltalk勉強会＠京都
+> 日時：2009年10月07日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 先月の勉強会で提示しました簡単な課題「CSV to HTML」に関して、
+> 擦った揉んだしようと思います。ヒントにしたがって作り上げます
+> と、まるでCのプログラムのような手続き的な造作になりますので、
+> メッセージで駆動されるSmalltalkらしいオブジェクト的なプログラ
+> ムへと作り変えます。配役や役割を策定する過程を介して、さんざ
+> ん揉めながら、ごたついてゆきましょう。この発句から挙句へとた
+> どり着く経緯（いきさつ）が勉強ですから…。
+> 
+> できますれば、ノート型のパーソナルコンピュータ（Windows Vista
+> /XP または Mac OS X (on Intel Mac)）をご持参ください。
+> 
+> また、VisualWorksの次期バージョンである7.7に対応させた「じゅ
+> ん for Smalltalk（Jun784）」も配布いたします。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Wed Oct  7 23:42:28 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Oct  7 23:42:36 2009
+Subject: [SML 7673] Re: Some ideas
+In-Reply-To: <b81554460910060028y5c6cda38q309c1a140029a0a6@mail.gmail.com>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<JxgX5CRrUKYrvsFpKYgsW6eA7@mars.dti.ne.jp>
+	<b81554460910060028y5c6cda38q309c1a140029a0a6@mail.gmail.com>
+Message-ID: <JxpFZboSh0Ol7e42JWB1eqgg4@mars.dti.ne.jp>
+
+Hi Serge,
+
+We are planning seminar programs, but still in detail.
+
+- Smalltalk tutorial (60 min) -- need to assign (fresh) speaker
+- Aoki's special seminar -- (need to specify time & topic)
+- Introduction of Seaside 3.0 (Me, about 60-90 min)
+- Smalltalk Mini Hackathon (10:00-12:00 120 min)
+
+So your offer is very welcome. We can add:
+- Pharo introduction (30 min)
+- About ESUG activities (15 min)
+
+Probably we should also include lighting-talks. I'll call for candidates.
+
+Best regards,
+
+Serge Stinckwich <serge.stinckwich@gmail.com> wrote:
+> Hi all,
+> I register for the meeting.
+> What is the planning ?
+> I could make a presentation about Pharo (30 min ?) and ESUG (15 min ?).
+> 
+> See you,
+> 
+> 2009/9/18 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> > Hi Serge,
+> >
+> > As you see in [SML 7646], 〓now Smalltalk-uses.jp has announced "Smalltalkers meeting at Nagoya".
+> > http://www.smalltalk-users.jp/Home/gao-zhi/smalltalkgoudoubenkyoukainagoya
+> >
+> > We have opened up a registration page.
+> > http://atnd.org/events/1593
+> >
+> > Looking forward to see you and all at Nagoya!
+> >
+> > Best regards,
+> >
+> > Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> >> Hi Serge
+> >>
+> >> > December 12th i have a talk to PRIMA'09 agent school already.
+> >>
+> >> OK, so December 19th would be best.
+> >>
+> >> > How many people attend your meeting generally ?
+> >>
+> >> In Tokyo area, approx 10-15 people. I'm not sure in Kyoto area,
+> >> but Mr. Aoki will answer the question. ;)
+> >>
+> >> Best regards,
+> >> ---
+> >> [:masashi | ^umezawa]
+> >
+> > ---
+> > [:masashi | ^umezawa]
+> >
+> 
+> 
+> 
+> -- 
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Smalltalkers do: [:it | All with: Class, (And love: it)]
+> http://doesnotunderstand.org/
+
+---
+[:masashi | ^umezawa]
+From kubota ＠ sie.dendai.ac.jp  Thu Oct  8 12:39:26 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Thu Oct  8 12:39:40 2009
+Subject: [SML 7674] ニコ生APIのコメントサーバとのやりとりができません
+Message-ID: <2312BE51-351C-475A-8C58-8270891939AB@sie.dendai.ac.jp>
+
+こんにちは電大の久保田です。
+
+ニコ生アラートのようなものを以下のURLで公開されている 
+APIを使ってちょこちょこ書いています。
+
+http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%83% 
+A9%E3%83%BC%E3%83%88(%E6%9C%AC%E5%AE%B6)%E3%81%AE%E4%BB%95%E6%A7%98
+
+以下のプログラム(きたないですが)でAPIの使いか 
+たをちょっと勉強をしているのですが、上記URLのログイン 
+API、認証APIその2は使えたのですがコメントサーバーの 
+項目がうまくいきません。
+自分ではコメントサーバにXMLを送信してその返事を待つことを 
+10回くりかえしているつもりですが、コメントにあるように reply :=  
+stream through: Character cr.  を実行するとプログラムが停止して 
+しまいます(step3がTranscriptに表示されず、ループもそ 
+こでおわる)。
+デバッガ開いて追ってみましたがなぜだかわかりませでした?
+Socketプログラムはくわしくないのでおかしなことをしているのでしょ 
+うか?
+
+また、実行するとException"Unhandled exception:CA Not inTrust  
+Registry!"と出てきます。いまはProceedボタンを押してプログ 
+ラムを実行していますが、このExceptionを出さない方法はない 
+のでしょうか?
+
+作成している環境はVisualWorks7.6NC+Jun784それに 
+WobSupportパーセルを使っています。
+
+
+    | host port socket connection elements stream reply threadId key  
+elementCollection pdoc parser httpRequest httpResponse client message |
+
+"ログインAPIその1"
+     client := Net.HttpClient new.
+     httpRequest := Net.HttpRequest post:
+             'https://secure.nicovideo.jp/secure/login? 
+site=nicolive_antenna'.
+     httpRequest
+         userAgent: 'テスト1';
+         addFormKey: 'mail' value: 'メールアドレス';
+         addFormKey: 'password' value: 'パスワード'.
+     httpResponse := client executeRequest: httpRequest.
+     parser := XML.XMLParser new.
+     parser validate: false.
+     pdoc := parser parse: httpResponse decodedContents readStream.
+     elementCollection := pdoc root elementNamed: 'ticket'.
+     key := elementCollection elements first text.
+     Transcript
+         cr;
+         show: 'key:' , key.
+
+"認証APIその2"
+     client := Net.HttpClient new.
+     httpRequest := Net.HttpRequest post:
+             'http://live.nicovideo.jp/api/getalertstatus'.
+     httpRequest
+         userAgent: 'テスト2';
+         addFormKey: 'ticket' value: key.
+     httpResponse := client executeRequest: httpRequest.
+     parser := XML.XMLParser new.
+     parser validate: false.
+     pdoc := parser parse: httpResponse decodedContents readStream.
+     elements := pdoc root children last.
+     host := (elements elementsNamed: 'addr') first elements first text.
+     port := (elements elementsNamed: 'port') first elements first text.
+     threadId := (elements elementsNamed: 'thread') first elements  
+first text.
+     Transcript
+         cr;
+         show: host , ':' , port , ':' , threadId.
+
+"コメントサーバー"
+     socket := SocketAccessor
+         newTCPclientToHost: host
+         port: port asNumber.
+     connection := ExternalConnection new.
+     connection
+         input: socket;
+         output: socket.
+     stream := connection readAppendStream.
+     stream lineEndTransparent.
+     message := '<thread thread=' , threadId ,
+             ' version="20061206" res_from="-1"/>'.
+     Transcript
+         cr;
+         show: message.
+     10
+         timesRepeat:
+             [Transcript
+                 cr;
+                 show: 'step1'.
+             stream
+                 nextPutAll: message; "<= XMLの送信"
+                 cr;
+                 commit.
+             Transcript
+                 cr;
+                 show: 'step2'.
+             reply := stream through: Character cr.    "<=ここで 
+プログラムが止まる"
+             Transcript
+                 cr;
+                 show: 'step3'].
+     stream close.
+     ^reply
+From serge.stinckwich ＠ gmail.com  Fri Oct  9 13:11:59 2009
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Fri Oct  9 13:14:12 2009
+Subject: [SML 7675] Re: Some ideas
+In-Reply-To: <JxpFZboSh0Ol7e42JWB1eqgg4@mars.dti.ne.jp>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com> 
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com> 
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com> 
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<JxgX5CRrUKYrvsFpKYgsW6eA7@mars.dti.ne.jp> 
+	<b81554460910060028y5c6cda38q309c1a140029a0a6@mail.gmail.com> 
+	<JxpFZboSh0Ol7e42JWB1eqgg4@mars.dti.ne.jp>
+Message-ID: <b81554460910082111m6e277dc6ld5ece2e538159844@mail.gmail.com>
+
+2009/10/7 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> Hi Serge,
+>
+> We are planning seminar programs, but still in detail.
+>
+> - Smalltalk tutorial (60 min) -- need to assign (fresh) speaker
+> - Aoki's special seminar -- (need to specify time & topic)
+> - Introduction of Seaside 3.0 (Me, about 60-90 min)
+> - Smalltalk Mini Hackathon (10:00-12:00 120 min)
+>
+> So your offer is very welcome. We can add:
+> - Pharo introduction (30 min)
+> - About ESUG activities (15 min)
+>
+> Probably we should also include lighting-talks. I'll call for candidates.
+
+Nice, i could adapt to your needs also.
+
+See you,
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From kubota ＠ sie.dendai.ac.jp  Fri Oct  9 17:49:18 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Fri Oct  9 17:49:24 2009
+Subject: [SML 7676] Re: ニコ生APIのコメントサーバとのやりとりができません
+In-Reply-To: <2312BE51-351C-475A-8C58-8270891939AB@sie.dendai.ac.jp>
+References: <2312BE51-351C-475A-8C58-8270891939AB@sie.dendai.ac.jp>
+Message-ID: <76F84ABB-D590-4E8B-9235-9EF2035A45CE@sie.dendai.ac.jp>
+
+こんにちは、電大の久保田です。
+
+まだ問題解決できず悩んでいます。
+コメントサーバへのアクセスをWebにあったプログラムを参考に 
+作ってみました。動きますが、Rubyです。ちゃんとサーバからの 
+応答を取得します。
+ーーーーーーーーーーーーーーーーー
+require 'socket'
+
+socket = TCPSocket.open("twr.live.nicovideo.jp","2538")
+query = "<thread thread=\"1000000013\" version=\"20061206\" res_from= 
+\"-1\"/>\0"
+
+puts query
+socket.print query
+
+socket.each("\0") do |line|
+  puts line
+end
+ーーーーーーーーーーーーーーーーー
+これと同じことをSmalltalkでやりたいわけです。
+
+次のようにプログラムを書いてみましたがreplyを受けとるとこ 
+ろで応答が返ってきません。
+原因が分からないので、どなたかプログラムのどこが悪いのかご指摘願 
+えないでしょうか。
+ーーーーーーーーーーーーーーーーー
+|socket stream query reply|
+socket :=SocketAccessor newTCPclientToHost:'twr.live.nicovideo.jp'  
+port: 2538.
+stream := socket readAppendStream.
+query := '<thread thread="1000000013" version="20061206"  
+res_from="-1"/>\0'
+
+Transcript cr; show:query.
+stream nextPutAll: query ;cr ;commit.
+
+[true] whileTrue: [
+	reply := stream upToAll:'\0'.
+	Transcript cr; show: reply.]
+ーーーーーーーーーーーーーーーーー
+
+以上、よろしくお願い致します。
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+
+On 2009/10/08, at 12:39, 久保田 吉彦 wrote:
+
+> こんにちは電大の久保田です。
+>
+> ニコ生アラートのようなものを以下のURLで公開されている 
+> APIを使ってちょこちょこ書いています。
+>
+> http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3% 
+> 83%A9%E3%83%BC%E3%83%88(%E6%9C%AC%E5%AE%B6)%E3%81%AE%E4%BB%95%E6%A7%98
+>
+> 以下のプログラム(きたないですが)でAPIの使い 
+> かたをちょっと勉強をしているのですが、上記URLのログイン 
+> API、認証APIその2は使えたのですがコメントサーバー 
+> の項目がうまくいきません。
+> 自分ではコメントサーバにXMLを送信してその返事を待つことを 
+> 10回くりかえしているつもりですが、コメントにあるように  
+> reply := stream through: Character cr.  を実行するとプログラム 
+> が停止してしまいます(step3がTranscriptに表示され 
+> ず、ループもそこでおわる)。
+> デバッガ開いて追ってみましたがなぜだかわかりませでした?
+> Socketプログラムはくわしくないのでおかしなことをしているので 
+> しょうか?
+>
+> また、実行するとException"Unhandled exception:CA Not inTrust  
+> Registry!"と出てきます。いまはProceedボタンを押してプロ 
+> グラムを実行していますが、このExceptionを出さない方法は 
+> ないのでしょうか?
+>
+> 作成している環境はVisualWorks7.6NC+Jun784それに 
+> WobSupportパーセルを使っています。
+>
+>
+>    | host port socket connection elements stream reply threadId key  
+> elementCollection pdoc parser httpRequest httpResponse client  
+> message |
+>
+> "ログインAPIその1"
+>     client := Net.HttpClient new.
+>     httpRequest := Net.HttpRequest post:
+>             'https://secure.nicovideo.jp/secure/login? 
+> site=nicolive_antenna'.
+>     httpRequest
+>         userAgent: 'テスト1';
+>         addFormKey: 'mail' value: 'メールアドレス';
+>         addFormKey: 'password' value: 'パスワード'.
+>     httpResponse := client executeRequest: httpRequest.
+>     parser := XML.XMLParser new.
+>     parser validate: false.
+>     pdoc := parser parse: httpResponse decodedContents readStream.
+>     elementCollection := pdoc root elementNamed: 'ticket'.
+>     key := elementCollection elements first text.
+>     Transcript
+>         cr;
+>         show: 'key:' , key.
+>
+> "認証APIその2"
+>     client := Net.HttpClient new.
+>     httpRequest := Net.HttpRequest post:
+>             'http://live.nicovideo.jp/api/getalertstatus'.
+>     httpRequest
+>         userAgent: 'テスト2';
+>         addFormKey: 'ticket' value: key.
+>     httpResponse := client executeRequest: httpRequest.
+>     parser := XML.XMLParser new.
+>     parser validate: false.
+>     pdoc := parser parse: httpResponse decodedContents readStream.
+>     elements := pdoc root children last.
+>     host := (elements elementsNamed: 'addr') first elements first  
+> text.
+>     port := (elements elementsNamed: 'port') first elements first  
+> text.
+>     threadId := (elements elementsNamed: 'thread') first elements  
+> first text.
+>     Transcript
+>         cr;
+>         show: host , ':' , port , ':' , threadId.
+>
+> "コメントサーバー"
+>     socket := SocketAccessor
+>         newTCPclientToHost: host
+>         port: port asNumber.
+>     connection := ExternalConnection new.
+>     connection
+>         input: socket;
+>         output: socket.
+>     stream := connection readAppendStream.
+>     stream lineEndTransparent.
+>     message := '<thread thread=' , threadId ,
+>             ' version="20061206" res_from="-1"/>'.
+>     Transcript
+>         cr;
+>         show: message.
+>     10
+>         timesRepeat:
+>             [Transcript
+>                 cr;
+>                 show: 'step1'.
+>             stream
+>                 nextPutAll: message; "<= XMLの送信"
+>                 cr;
+>                 commit.
+>             Transcript
+>                 cr;
+>                 show: 'step2'.
+>             reply := stream through: Character cr.    "<=ここ 
+> でプログラムが止まる"
+>             Transcript
+>                 cr;
+>                 show: 'step3'].
+>     stream close.
+>     ^reply
+
+From kubota ＠ sie.dendai.ac.jp  Fri Oct  9 17:49:18 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Fri Oct  9 18:05:22 2009
+Subject: [SML 7677] Re: ニコ生APIのコメントサーバとのやりとりができません
+In-Reply-To: <2312BE51-351C-475A-8C58-8270891939AB@sie.dendai.ac.jp>
+References: <2312BE51-351C-475A-8C58-8270891939AB@sie.dendai.ac.jp>
+Message-ID: <76F84ABB-D590-4E8B-9235-9EF2035A45CE@sie.dendai.ac.jp>
+
+こんにちは、電大の久保田です。
+
+まだ問題解決できず悩んでいます。
+コメントサーバへのアクセスをWebにあったプログラムを参考に 
+作ってみました。動きますが、Rubyです。ちゃんとサーバからの 
+応答を取得します。
+ーーーーーーーーーーーーーーーーー
+require 'socket'
+
+socket = TCPSocket.open("twr.live.nicovideo.jp","2538")
+query = "<thread thread=\"1000000013\" version=\"20061206\" res_from= 
+\"-1\"/>\0"
+
+puts query
+socket.print query
+
+socket.each("\0") do |line|
+  puts line
+end
+ーーーーーーーーーーーーーーーーー
+これと同じことをSmalltalkでやりたいわけです。
+
+次のようにプログラムを書いてみましたがreplyを受けとるとこ 
+ろで応答が返ってきません。
+原因が分からないので、どなたかプログラムのどこが悪いのかご指摘願 
+えないでしょうか。
+ーーーーーーーーーーーーーーーーー
+|socket stream query reply|
+socket :=SocketAccessor newTCPclientToHost:'twr.live.nicovideo.jp'  
+port: 2538.
+stream := socket readAppendStream.
+query := '<thread thread="1000000013" version="20061206"  
+res_from="-1"/>\0'
+
+Transcript cr; show:query.
+stream nextPutAll: query ;cr ;commit.
+
+[true] whileTrue: [
+	reply := stream upToAll:'\0'.
+	Transcript cr; show: reply.]
+ーーーーーーーーーーーーーーーーー
+
+以上、よろしくお願い致します。
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+
+On 2009/10/08, at 12:39, 久保田 吉彦 wrote:
+
+> こんにちは電大の久保田です。
+>
+> ニコ生アラートのようなものを以下のURLで公開されている 
+> APIを使ってちょこちょこ書いています。
+>
+> http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3% 
+> 83%A9%E3%83%BC%E3%83%88(%E6%9C%AC%E5%AE%B6)%E3%81%AE%E4%BB%95%E6%A7%98
+>
+> 以下のプログラム(きたないですが)でAPIの使い 
+> かたをちょっと勉強をしているのですが、上記URLのログイン 
+> API、認証APIその2は使えたのですがコメントサーバー 
+> の項目がうまくいきません。
+> 自分ではコメントサーバにXMLを送信してその返事を待つことを 
+> 10回くりかえしているつもりですが、コメントにあるように  
+> reply := stream through: Character cr.  を実行するとプログラム 
+> が停止してしまいます(step3がTranscriptに表示され 
+> ず、ループもそこでおわる)。
+> デバッガ開いて追ってみましたがなぜだかわかりませでした?
+> Socketプログラムはくわしくないのでおかしなことをしているので 
+> しょうか?
+>
+> また、実行するとException"Unhandled exception:CA Not inTrust  
+> Registry!"と出てきます。いまはProceedボタンを押してプロ 
+> グラムを実行していますが、このExceptionを出さない方法は 
+> ないのでしょうか?
+>
+> 作成している環境はVisualWorks7.6NC+Jun784それに 
+> WobSupportパーセルを使っています。
+>
+>
+>    | host port socket connection elements stream reply threadId key  
+> elementCollection pdoc parser httpRequest httpResponse client  
+> message |
+>
+> "ログインAPIその1"
+>     client := Net.HttpClient new.
+>     httpRequest := Net.HttpRequest post:
+>             'https://secure.nicovideo.jp/secure/login? 
+> site=nicolive_antenna'.
+>     httpRequest
+>         userAgent: 'テスト1';
+>         addFormKey: 'mail' value: 'メールアドレス';
+>         addFormKey: 'password' value: 'パスワード'.
+>     httpResponse := client executeRequest: httpRequest.
+>     parser := XML.XMLParser new.
+>     parser validate: false.
+>     pdoc := parser parse: httpResponse decodedContents readStream.
+>     elementCollection := pdoc root elementNamed: 'ticket'.
+>     key := elementCollection elements first text.
+>     Transcript
+>         cr;
+>         show: 'key:' , key.
+>
+> "認証APIその2"
+>     client := Net.HttpClient new.
+>     httpRequest := Net.HttpRequest post:
+>             'http://live.nicovideo.jp/api/getalertstatus'.
+>     httpRequest
+>         userAgent: 'テスト2';
+>         addFormKey: 'ticket' value: key.
+>     httpResponse := client executeRequest: httpRequest.
+>     parser := XML.XMLParser new.
+>     parser validate: false.
+>     pdoc := parser parse: httpResponse decodedContents readStream.
+>     elements := pdoc root children last.
+>     host := (elements elementsNamed: 'addr') first elements first  
+> text.
+>     port := (elements elementsNamed: 'port') first elements first  
+> text.
+>     threadId := (elements elementsNamed: 'thread') first elements  
+> first text.
+>     Transcript
+>         cr;
+>         show: host , ':' , port , ':' , threadId.
+>
+> "コメントサーバー"
+>     socket := SocketAccessor
+>         newTCPclientToHost: host
+>         port: port asNumber.
+>     connection := ExternalConnection new.
+>     connection
+>         input: socket;
+>         output: socket.
+>     stream := connection readAppendStream.
+>     stream lineEndTransparent.
+>     message := '<thread thread=' , threadId ,
+>             ' version="20061206" res_from="-1"/>'.
+>     Transcript
+>         cr;
+>         show: message.
+>     10
+>         timesRepeat:
+>             [Transcript
+>                 cr;
+>                 show: 'step1'.
+>             stream
+>                 nextPutAll: message; "<= XMLの送信"
+>                 cr;
+>                 commit.
+>             Transcript
+>                 cr;
+>                 show: 'step2'.
+>             reply := stream through: Character cr.    "<=ここ 
+> でプログラムが止まる"
+>             Transcript
+>                 cr;
+>                 show: 'step3'].
+>     stream close.
+>     ^reply
+
+From kubota ＠ sie.dendai.ac.jp  Fri Oct  9 18:08:41 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Fri Oct  9 18:08:44 2009
+Subject: [SML 7678] Re: ニコ生APIのコメントサーバとのやりとりができません
+In-Reply-To: <76F84ABB-D590-4E8B-9235-9EF2035A45CE@sie.dendai.ac.jp>
+References: <2312BE51-351C-475A-8C58-8270891939AB@sie.dendai.ac.jp>
+	<76F84ABB-D590-4E8B-9235-9EF2035A45CE@sie.dendai.ac.jp>
+Message-ID: <30648D5B-314E-4039-BC6A-AEC087642BE9@sie.dendai.ac.jp>
+
+2重送信してしまいました、すいません
+
+
+On 2009/10/09, at 17:49, 久保田 吉彦 wrote:
+
+> こんにちは、電大の久保田です。
+>
+> まだ問題解決できず悩んでいます。
+> コメントサーバへのアクセスをWebにあったプログラムを参考 
+> に作ってみました。動きますが、Rubyです。ちゃんとサーバか 
+> らの応答を取得します。
+> ーーーーーーーーーーーーーーーーー
+> require 'socket'
+>
+> socket = TCPSocket.open("twr.live.nicovideo.jp","2538")
+> query = "<thread thread=\"1000000013\" version=\"20061206\"  
+> res_from=\"-1\"/>\0"
+>
+> puts query
+> socket.print query
+>
+> socket.each("\0") do |line|
+>  puts line
+> end
+> ーーーーーーーーーーーーーーーーー
+> これと同じことをSmalltalkでやりたいわけです。
+>
+> 次のようにプログラムを書いてみましたがreplyを受けとると 
+> ころで応答が返ってきません。
+> 原因が分からないので、どなたかプログラムのどこが悪いのかご指摘 
+> 願えないでしょうか。
+> ーーーーーーーーーーーーーーーーー
+> |socket stream query reply|
+> socket :=SocketAccessor newTCPclientToHost:'twr.live.nicovideo.jp'  
+> port: 2538.
+> stream := socket readAppendStream.
+> query := '<thread thread="1000000013" version="20061206"  
+> res_from="-1"/>\0'
+>
+> Transcript cr; show:query.
+> stream nextPutAll: query ;cr ;commit.
+>
+> [true] whileTrue: [
+> 	reply := stream upToAll:'\0'.
+> 	Transcript cr; show: reply.]
+> ーーーーーーーーーーーーーーーーー
+>
+> 以上、よろしくお願い致します。
+>
+> 久保田吉彦
+> 東京電機大学 情報環境学部 情報環境学科
+>
+>
+> On 2009/10/08, at 12:39, 久保田 吉彦 wrote:
+>
+>> こんにちは電大の久保田です。
+>>
+>> ニコ生アラートのようなものを以下のURLで公開されている 
+>> APIを使ってちょこちょこ書いています。
+>>
+>> http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3% 
+>> 83%A9%E3%83%BC%E3%83%88(%E6%9C%AC%E5%AE%B6)%E3%81%AE%E4%BB%95%E6% 
+>> A7%98
+>>
+>> 以下のプログラム(きたないですが)でAPIの使い 
+>> かたをちょっと勉強をしているのですが、上記URLのログイン 
+>> API、認証APIその2は使えたのですがコメントサーバー 
+>> の項目がうまくいきません。
+>> 自分ではコメントサーバにXMLを送信してその返事を待つこと 
+>> を10回くりかえしているつもりですが、コメントにあるよう 
+>> に reply := stream through: Character cr.  を実行すると 
+>> プログラムが停止してしまいます(step3がTranscript 
+>> に表示されず、ループもそこでおわる)。
+>> デバッガ開いて追ってみましたがなぜだかわかりませでした?
+>> Socketプログラムはくわしくないのでおかしなことをしているので 
+>> しょうか?
+>>
+>> また、実行するとException"Unhandled exception:CA Not inTrust  
+>> Registry!"と出てきます。いまはProceedボタンを押してプロ 
+>> グラムを実行していますが、このExceptionを出さない方法は 
+>> ないのでしょうか?
+>>
+>> 作成している環境はVisualWorks7.6NC+Jun784それに 
+>> WobSupportパーセルを使っています。
+>>
+>>
+>>    | host port socket connection elements stream reply threadId  
+>> key elementCollection pdoc parser httpRequest httpResponse client  
+>> message |
+>>
+>> "ログインAPIその1"
+>>     client := Net.HttpClient new.
+>>     httpRequest := Net.HttpRequest post:
+>>             'https://secure.nicovideo.jp/secure/login? 
+>> site=nicolive_antenna'.
+>>     httpRequest
+>>         userAgent: 'テスト1';
+>>         addFormKey: 'mail' value: 'メールアドレス';
+>>         addFormKey: 'password' value: 'パスワード'.
+>>     httpResponse := client executeRequest: httpRequest.
+>>     parser := XML.XMLParser new.
+>>     parser validate: false.
+>>     pdoc := parser parse: httpResponse decodedContents readStream.
+>>     elementCollection := pdoc root elementNamed: 'ticket'.
+>>     key := elementCollection elements first text.
+>>     Transcript
+>>         cr;
+>>         show: 'key:' , key.
+>>
+>> "認証APIその2"
+>>     client := Net.HttpClient new.
+>>     httpRequest := Net.HttpRequest post:
+>>             'http://live.nicovideo.jp/api/getalertstatus'.
+>>     httpRequest
+>>         userAgent: 'テスト2';
+>>         addFormKey: 'ticket' value: key.
+>>     httpResponse := client executeRequest: httpRequest.
+>>     parser := XML.XMLParser new.
+>>     parser validate: false.
+>>     pdoc := parser parse: httpResponse decodedContents readStream.
+>>     elements := pdoc root children last.
+>>     host := (elements elementsNamed: 'addr') first elements first  
+>> text.
+>>     port := (elements elementsNamed: 'port') first elements first  
+>> text.
+>>     threadId := (elements elementsNamed: 'thread') first elements  
+>> first text.
+>>     Transcript
+>>         cr;
+>>         show: host , ':' , port , ':' , threadId.
+>>
+>> "コメントサーバー"
+>>     socket := SocketAccessor
+>>         newTCPclientToHost: host
+>>         port: port asNumber.
+>>     connection := ExternalConnection new.
+>>     connection
+>>         input: socket;
+>>         output: socket.
+>>     stream := connection readAppendStream.
+>>     stream lineEndTransparent.
+>>     message := '<thread thread=' , threadId ,
+>>             ' version="20061206" res_from="-1"/>'.
+>>     Transcript
+>>         cr;
+>>         show: message.
+>>     10
+>>         timesRepeat:
+>>             [Transcript
+>>                 cr;
+>>                 show: 'step1'.
+>>             stream
+>>                 nextPutAll: message; "<= XMLの送信"
+>>                 cr;
+>>                 commit.
+>>             Transcript
+>>                 cr;
+>>                 show: 'step2'.
+>>             reply := stream through: Character cr.    "<=ここ 
+>> でプログラムが止まる"
+>>             Transcript
+>>                 cr;
+>>                 show: 'step3'].
+>>     stream close.
+>>     ^reply
+
+From umejava ＠ mars.dti.ne.jp  Sat Oct 10 15:19:40 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Oct 10 15:19:44 2009
+Subject: [SML 7679] Re: ニコ生APIのコメントサーバとのやりとりができません
+In-Reply-To: <76F84ABB-D590-4E8B-9235-9EF2035A45CE@sie.dendai.ac.jp>
+References: <2312BE51-351C-475A-8C58-8270891939AB@sie.dendai.ac.jp>
+	<76F84ABB-D590-4E8B-9235-9EF2035A45CE@sie.dendai.ac.jp>
+Message-ID: <JxZFXN7TUX3uF3KvzLFBMLXQ2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+こんな感じではないでしょうか。
+
+accessor := SocketAccessor newTCPclientToHost:'twr.live.nicovideo.jp' port: 2538.
+query := '<thread thread="1000000013" version="20061206" res_from="-1"/>'.
+connection := accessor asExternalConnection.
+connection writeStream nextPutAll: query; nextPut:(Character value: 0); commit.
+
+rstr := connection readStream.
+[[rstr atEnd] whileFalse: [
+Transcript cr; show: (rstr upTo: (Character value: 0))]] fork.
+
+[] forkで括っているのは、"do it"後に操作しやすくするためです。
+なくてもかまいません。
+
+ポイントは0で終わる文字列の作り方にあると思います。
+またこの手のやつは一時変数ではなくワークスペース変数にしておいたほうが、
+デバッグがしやすくて良いですよ。
+
+ではでは。
+
+
+久保田 吉彦 <kubota@sie.dendai.ac.jp> wrote:
+> こんにちは、電大の久保田です。
+> 
+> まだ問題解決できず悩んでいます。
+> コメントサーバへのアクセスをWebにあったプログラムを参考に 
+> 作ってみました。動きますが、Rubyです。ちゃんとサーバからの 
+> 応答を取得します。
+> ーーーーーーーーーーーーーーーーー
+> require 'socket'
+> 
+> socket = TCPSocket.open("twr.live.nicovideo.jp","2538")
+> query = "<thread thread=\"1000000013\" version=\"20061206\" res_from= 
+> \"-1\"/>\0"
+> 
+> puts query
+> socket.print query
+> 
+> socket.each("\0") do |line|
+>   puts line
+> end
+> ーーーーーーーーーーーーーーーーー
+> これと同じことをSmalltalkでやりたいわけです。
+> 
+> 次のようにプログラムを書いてみましたがreplyを受けとるとこ 
+> ろで応答が返ってきません。
+> 原因が分からないので、どなたかプログラムのどこが悪いのかご指摘願 
+> えないでしょうか。
+> ーーーーーーーーーーーーーーーーー
+> |socket stream query reply|
+> socket :=SocketAccessor newTCPclientToHost:'twr.live.nicovideo.jp'  
+> port: 2538.
+> stream := socket readAppendStream.
+> query := '<thread thread="1000000013" version="20061206"  
+> res_from="-1"/>\0'
+> 
+> Transcript cr; show:query.
+> stream nextPutAll: query ;cr ;commit.
+> 
+> [true] whileTrue: [
+>   reply := stream upToAll:'\0'.
+>   Transcript cr; show: reply.]
+> ーーーーーーーーーーーーーーーーー
+> 
+> 以上、よろしくお願い致します。
+> 
+> 久保田吉彦
+> 東京電機大学 情報環境学部 情報環境学科
+> 
+> 
+> On 2009/10/08, at 12:39, 久保田 吉彦 wrote:
+> 
+> > こんにちは電大の久保田です。
+> >
+> > ニコ生アラートのようなものを以下のURLで公開されている 
+> > APIを使ってちょこちょこ書いています。
+> >
+> > http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3% 
+> > 83%A9%E3%83%BC%E3%83%88(%E6%9C%AC%E5%AE%B6)%E3%81%AE%E4%BB%95%E6%A7%98
+> >
+> > 以下のプログラム(きたないですが)でAPIの使い 
+> > かたをちょっと勉強をしているのですが、上記URLのログイン 
+> > API、認証APIその2は使えたのですがコメントサーバー 
+> > の項目がうまくいきません。
+> > 自分ではコメントサーバにXMLを送信してその返事を待つことを 
+> > 10回くりかえしているつもりですが、コメントにあるように  
+> > reply := stream through: Character cr.  を実行するとプログラム 
+> > が停止してしまいます(step3がTranscriptに表示され 
+> > ず、ループもそこでおわる)。
+> > デバッガ開いて追ってみましたがなぜだかわかりませでした?
+> > Socketプログラムはくわしくないのでおかしなことをしているので 
+> > しょうか?
+> >
+> > また、実行するとException"Unhandled exception:CA Not inTrust  
+> > Registry!"と出てきます。いまはProceedボタンを押してプロ 
+> > グラムを実行していますが、このExceptionを出さない方法は 
+> > ないのでしょうか?
+> >
+> > 作成している環境はVisualWorks7.6NC+Jun784それに 
+> > WobSupportパーセルを使っています。
+> >
+> >
+> >    | host port socket connection elements stream reply threadId key  
+> > elementCollection pdoc parser httpRequest httpResponse client  
+> > message |
+> >
+> > "ログインAPIその1"
+> >     client := Net.HttpClient new.
+> >     httpRequest := Net.HttpRequest post:
+> >             'https://secure.nicovideo.jp/secure/login? 
+> > site=nicolive_antenna'.
+> >     httpRequest
+> >         userAgent: 'テスト1';
+> >         addFormKey: 'mail' value: 'メールアドレス';
+> >         addFormKey: 'password' value: 'パスワード'.
+> >     httpResponse := client executeRequest: httpRequest.
+> >     parser := XML.XMLParser new.
+> >     parser validate: false.
+> >     pdoc := parser parse: httpResponse decodedContents readStream.
+> >     elementCollection := pdoc root elementNamed: 'ticket'.
+> >     key := elementCollection elements first text.
+> >     Transcript
+> >         cr;
+> >         show: 'key:' , key.
+> >
+> > "認証APIその2"
+> >     client := Net.HttpClient new.
+> >     httpRequest := Net.HttpRequest post:
+> >             'http://live.nicovideo.jp/api/getalertstatus'.
+> >     httpRequest
+> >         userAgent: 'テスト2';
+> >         addFormKey: 'ticket' value: key.
+> >     httpResponse := client executeRequest: httpRequest.
+> >     parser := XML.XMLParser new.
+> >     parser validate: false.
+> >     pdoc := parser parse: httpResponse decodedContents readStream.
+> >     elements := pdoc root children last.
+> >     host := (elements elementsNamed: 'addr') first elements first  
+> > text.
+> >     port := (elements elementsNamed: 'port') first elements first  
+> > text.
+> >     threadId := (elements elementsNamed: 'thread') first elements  
+> > first text.
+> >     Transcript
+> >         cr;
+> >         show: host , ':' , port , ':' , threadId.
+> >
+> > "コメントサーバー"
+> >     socket := SocketAccessor
+> >         newTCPclientToHost: host
+> >         port: port asNumber.
+> >     connection := ExternalConnection new.
+> >     connection
+> >         input: socket;
+> >         output: socket.
+> >     stream := connection readAppendStream.
+> >     stream lineEndTransparent.
+> >     message := '<thread thread=' , threadId ,
+> >             ' version="20061206" res_from="-1"/>'.
+> >     Transcript
+> >         cr;
+> >         show: message.
+> >     10
+> >         timesRepeat:
+> >             [Transcript
+> >                 cr;
+> >                 show: 'step1'.
+> >             stream
+> >                 nextPutAll: message; "<= XMLの送信"
+> >                 cr;
+> >                 commit.
+> >             Transcript
+> >                 cr;
+> >                 show: 'step2'.
+> >             reply := stream through: Character cr.    "<=ここ 
+> > でプログラムが止まる"
+> >             Transcript
+> >                 cr;
+> >                 show: 'step3'].
+> >     stream close.
+> >     ^reply
+
+
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Oct 10 16:25:38 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Oct 10 16:25:41 2009
+Subject: [SML 7680] Re: 第12回Smalltalk勉強会＠京都
+In-Reply-To: <4ACBBBC4.2050305@cc.kyoto-su.ac.jp>
+References: <4AC423A9.7050705@cc.kyoto-su.ac.jp>
+	<4ACBBBC4.2050305@cc.kyoto-su.ac.jp>
+Message-ID: <4AD036F2.9030600@cc.kyoto-su.ac.jp>
+
+私は書きました:
+> 京都での勉強会、今日（reminder）です！
+
+報告が遅くなってしまいました。土曜日も、日曜日も、そして、体
+育の日で休みのはずの月曜日も休日開講日で、休みがありませぬ。
+
+> 典型的なパターンをいくつか用いたオブジェクト風の設計図＆プロ
+> グラムを用意しました。参加する方々のブートストラップにしてい
+> ただければ幸いです。（まだけっしていいものではありません。）
+
+以下のページから、勉強会で行ったことを、たどれるようにしてお
+きました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto12
+http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/CSV2HTML/index-j.html#Casting
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From kubota ＠ sie.dendai.ac.jp  Sat Oct 10 16:29:06 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Sat Oct 10 16:29:13 2009
+Subject: [SML 7681] Re: ニコ生APIのコメントサーバとのやりとりができません
+In-Reply-To: <JxZFXN7TUX3uF3KvzLFBMLXQ2@mars.dti.ne.jp>
+References: <2312BE51-351C-475A-8C58-8270891939AB@sie.dendai.ac.jp>
+	<76F84ABB-D590-4E8B-9235-9EF2035A45CE@sie.dendai.ac.jp>
+	<JxZFXN7TUX3uF3KvzLFBMLXQ2@mars.dti.ne.jp>
+Message-ID: <BB9E93AE-CC47-4FF3-96BD-E0B99F7AB354@sie.dendai.ac.jp>
+
+こんにちは、電大の久保田です。
+
+RubyであっさりできてSmalltalkでつまづいていて、なんだかく 
+やしい気持ちでいました。
+投稿した後もいろいろためしましたが、Character value: 0 に 
+は気がつきませんでした。
+ようやく解決しました、どうもありがとうござういました。
+
+On 2009/10/10, at 15:19, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> こんな感じではないでしょうか。
+>
+> accessor := SocketAccessor  
+> newTCPclientToHost:'twr.live.nicovideo.jp' port: 2538.
+> query := '<thread thread="1000000013" version="20061206"  
+> res_from="-1"/>'.
+> connection := accessor asExternalConnection.
+> connection writeStream nextPutAll: query; nextPut:(Character value:  
+> 0); commit.
+>
+> rstr := connection readStream.
+> [[rstr atEnd] whileFalse: [
+> Transcript cr; show: (rstr upTo: (Character value: 0))]] fork.
+>
+> [] forkで括っているのは、"do it"後に操作しやすくするため 
+> です。
+> なくてもかまいません。
+>
+> ポイントは0で終わる文字列の作り方にあると思います。
+> またこの手のやつは一時変数ではなくワークスペース変数にしておい 
+> たほうが、
+> デバッグがしやすくて良いですよ。
+>
+> ではでは。
+>
+>
+> 久保田 吉彦 <kubota@sie.dendai.ac.jp> wrote:
+>> こんにちは、電大の久保田です。
+>>
+>> まだ問題解決できず悩んでいます。
+>> コメントサーバへのアクセスをWebにあったプログラムを参考に
+>> 作ってみました。動きますが、Rubyです。ちゃんとサーバか 
+>> らの
+>> 応答を取得します。
+>> ーーーーーーーーーーーーーーーーー
+>> require 'socket'
+>>
+>> socket = TCPSocket.open("twr.live.nicovideo.jp","2538")
+>> query = "<thread thread=\"1000000013\" version=\"20061206\" res_from=
+>> \"-1\"/>\0"
+>>
+>> puts query
+>> socket.print query
+>>
+>> socket.each("\0") do |line|
+>>   puts line
+>> end
+>> ーーーーーーーーーーーーーーーーー
+>> これと同じことをSmalltalkでやりたいわけです。
+>>
+>> 次のようにプログラムを書いてみましたがreplyを受けとるとこ
+>> ろで応答が返ってきません。
+>> 原因が分からないので、どなたかプログラムのどこが悪いのかご指 
+>> 摘願
+>> えないでしょうか。
+>> ーーーーーーーーーーーーーーーーー
+>> |socket stream query reply|
+>> socket :=SocketAccessor newTCPclientToHost:'twr.live.nicovideo.jp'
+>> port: 2538.
+>> stream := socket readAppendStream.
+>> query := '<thread thread="1000000013" version="20061206"
+>> res_from="-1"/>\0'
+>>
+>> Transcript cr; show:query.
+>> stream nextPutAll: query ;cr ;commit.
+>>
+>> [true] whileTrue: [
+>>   reply := stream upToAll:'\0'.
+>>   Transcript cr; show: reply.]
+>> ーーーーーーーーーーーーーーーーー
+>>
+>> 以上、よろしくお願い致します。
+>>
+>> 久保田吉彦
+>> 東京電機大学 情報環境学部 情報環境学科
+>>
+>>
+>> On 2009/10/08, at 12:39, 久保田 吉彦 wrote:
+>>
+>>> こんにちは電大の久保田です。
+>>>
+>>> ニコ生アラートのようなものを以下のURLで公開されている
+>>> APIを使ってちょこちょこ書いています。
+>>>
+>>> http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%
+>>> 83%A9%E3%83%BC%E3%83%88(%E6%9C%AC%E5%AE%B6)%E3%81%AE%E4%BB%95%E6% 
+>>> A7%98
+>>>
+>>> 以下のプログラム(きたないですが)でAPIの使い
+>>> かたをちょっと勉強をしているのですが、上記URLのログイン
+>>> API、認証APIその2は使えたのですがコメントサーバー
+>>> の項目がうまくいきません。
+>>> 自分ではコメントサーバにXMLを送信してその返事を待つこ 
+>>> とを
+>>> 10回くりかえしているつもりですが、コメントにあるように
+>>> reply := stream through: Character cr.  を実行するとプログラム
+>>> が停止してしまいます(step3がTranscriptに表示され
+>>> ず、ループもそこでおわる)。
+>>> デバッガ開いて追ってみましたがなぜだかわかりませでした?
+>>> Socketプログラムはくわしくないのでおかしなことをしているので
+>>> しょうか?
+>>>
+>>> また、実行するとException"Unhandled exception:CA Not inTrust
+>>> Registry!"と出てきます。いまはProceedボタンを押してプロ
+>>> グラムを実行していますが、このExceptionを出さない方法は
+>>> ないのでしょうか?
+>>>
+>>> 作成している環境はVisualWorks7.6NC+Jun784それに
+>>> WobSupportパーセルを使っています。
+>>>
+>>>
+>>>    | host port socket connection elements stream reply threadId key
+>>> elementCollection pdoc parser httpRequest httpResponse client
+>>> message |
+>>>
+>>> "ログインAPIその1"
+>>>     client := Net.HttpClient new.
+>>>     httpRequest := Net.HttpRequest post:
+>>>             'https://secure.nicovideo.jp/secure/login?
+>>> site=nicolive_antenna'.
+>>>     httpRequest
+>>>         userAgent: 'テスト1';
+>>>         addFormKey: 'mail' value: 'メールアドレス';
+>>>         addFormKey: 'password' value: 'パスワード'.
+>>>     httpResponse := client executeRequest: httpRequest.
+>>>     parser := XML.XMLParser new.
+>>>     parser validate: false.
+>>>     pdoc := parser parse: httpResponse decodedContents readStream.
+>>>     elementCollection := pdoc root elementNamed: 'ticket'.
+>>>     key := elementCollection elements first text.
+>>>     Transcript
+>>>         cr;
+>>>         show: 'key:' , key.
+>>>
+>>> "認証APIその2"
+>>>     client := Net.HttpClient new.
+>>>     httpRequest := Net.HttpRequest post:
+>>>             'http://live.nicovideo.jp/api/getalertstatus'.
+>>>     httpRequest
+>>>         userAgent: 'テスト2';
+>>>         addFormKey: 'ticket' value: key.
+>>>     httpResponse := client executeRequest: httpRequest.
+>>>     parser := XML.XMLParser new.
+>>>     parser validate: false.
+>>>     pdoc := parser parse: httpResponse decodedContents readStream.
+>>>     elements := pdoc root children last.
+>>>     host := (elements elementsNamed: 'addr') first elements first
+>>> text.
+>>>     port := (elements elementsNamed: 'port') first elements first
+>>> text.
+>>>     threadId := (elements elementsNamed: 'thread') first elements
+>>> first text.
+>>>     Transcript
+>>>         cr;
+>>>         show: host , ':' , port , ':' , threadId.
+>>>
+>>> "コメントサーバー"
+>>>     socket := SocketAccessor
+>>>         newTCPclientToHost: host
+>>>         port: port asNumber.
+>>>     connection := ExternalConnection new.
+>>>     connection
+>>>         input: socket;
+>>>         output: socket.
+>>>     stream := connection readAppendStream.
+>>>     stream lineEndTransparent.
+>>>     message := '<thread thread=' , threadId ,
+>>>             ' version="20061206" res_from="-1"/>'.
+>>>     Transcript
+>>>         cr;
+>>>         show: message.
+>>>     10
+>>>         timesRepeat:
+>>>             [Transcript
+>>>                 cr;
+>>>                 show: 'step1'.
+>>>             stream
+>>>                 nextPutAll: message; "<= XMLの送信"
+>>>                 cr;
+>>>                 commit.
+>>>             Transcript
+>>>                 cr;
+>>>                 show: 'step2'.
+>>>             reply := stream through: Character cr.    "<=ここ
+>>> でプログラムが止まる"
+>>>             Transcript
+>>>                 cr;
+>>>                 show: 'step3'].
+>>>     stream close.
+>>>     ^reply
+>
+>
+>
+> ---
+> [:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Sat Oct 10 16:34:07 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Oct 10 16:34:12 2009
+Subject: [SML 7682] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <4AB7810E.6080408@cc.kyoto-su.ac.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>
+	<4AB3E079.3010701@cc.kyoto-su.ac.jp>
+	<Jxc7_t.Am3Xpsugl5aRh3ZVA7@mars.dti.ne.jp>
+	<4AB61971.7060505@cc.kyoto-su.ac.jp>
+	<JxcrfOKYqjzGk3f9cjk6.QKw2@mars.dti.ne.jp>
+	<4AB7810E.6080408@cc.kyoto-su.ac.jp>
+Message-ID: <JxY3SqisZ1VIdMPsk4hOvN4Q9@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+
+(snip)
+
+> > 京都方面のメンバで代わりにチュートリアルをしていただけるような
+> > 方がいると助かるのですが...もちろん東京でも探してみます。
+> 
+> 次回の京都での勉強会で、参加メンバに訊ねてみます。もしも東京
+> でも京都でも適任が見つからないようならば、アラフィフの私めが
+> チュートリアルを担当するのも吝かではありませぬ。
+
+その後状況はいかがでしょうか? こちらはなかなか難しいなーという
+感じです。
+
+> > また、本件とは別に青木さんの好きなテーマで何か話していただけると
+> > うれしく思います。東京のメンバが非常に聞きたがっているのですよね。
+> 
+> はい、喜んで。ウェブアプリケーション系は他の方々が行うでしょ
+> うから、コントロール系をライトモチーフにいたしましょうかね…。
+
+
+タイトルと時間、概要をいただけると助かります。そろそろ
+プログラムを詳細にしたものを下記ページに載せていきたいと
+思っておりますので。
+
+http://www.smalltalk-users.jp/Home/gao-zhi/smalltalkgoudoubenkyoukainagoya
+
+なお、Alan Kay率いるViewpoints Researchの山宮さんには、STEPSという
+プロジェクトについて30分ほどお話いただけることとなりました。
+こちらも皆さん、お楽しみに。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Sat Oct 10 16:47:34 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Oct 10 16:47:38 2009
+Subject: [SML 7683] Re: Some ideas
+In-Reply-To: <b81554460910082111m6e277dc6ld5ece2e538159844@mail.gmail.com>
+References: <b81554460909140032p6b55b99aqc5e1e4095853ab3@mail.gmail.com>
+	<JxT9tl2rbTre5lDjQ05wPUAQ3@mars.dti.ne.jp>
+	<b81554460909150015y660ec34fv27c368784781910@mail.gmail.com>
+	<JxG_qShvnlpppxPXvqxF5MUA2@mars.dti.ne.jp>
+	<b81554460909160619l78a80518xbfbe311a91cf936b@mail.gmail.com>
+	<JxjVgzOmcAWjdnlbRrkR6_EQ5@mars.dti.ne.jp>
+	<JxgX5CRrUKYrvsFpKYgsW6eA7@mars.dti.ne.jp>
+	<b81554460910060028y5c6cda38q309c1a140029a0a6@mail.gmail.com>
+	<JxpFZboSh0Ol7e42JWB1eqgg4@mars.dti.ne.jp>
+	<b81554460910082111m6e277dc6ld5ece2e538159844@mail.gmail.com>
+Message-ID: <JxGU8UExNAUoUkzmDbuvjirQd@mars.dti.ne.jp>
+
+Hi Serge,
+
+> > So your offer is very welcome. We can add:
+> > - Pharo introduction (30 min)
+> > - About ESUG activities (15 min)
+> >
+> > Probably we should also include lighting-talks. I'll call for candidates.
+> 
+> Nice, i could adapt to your needs also.
+> 
+
+Could you specify official title and summary for your talks?
+I'd like to update agenda section of the sites in a week or so.
+http://www.smalltalk-users.jp/Home/gao-zhi/smalltalkgoudoubenkyoukainagoya
+http://atnd.org/events/1593
+
+BTW, Takashi Yamamiya will also join the meeting and talk about STEPS 
+project in VPRI. This would be very interesting.
+
+Best regards.
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Oct 10 17:39:12 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Oct 10 17:39:15 2009
+Subject: [SML 7684] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <JxY3SqisZ1VIdMPsk4hOvN4Q9@mars.dti.ne.jp>
+References: <Jx.6t2dBYwUW5969lrLE668Q2@mars.dti.ne.jp>	<4AB3E079.3010701@cc.kyoto-su.ac.jp>	<Jxc7_t.Am3Xpsugl5aRh3ZVA7@mars.dti.ne.jp>	<4AB61971.7060505@cc.kyoto-su.ac.jp>	<JxcrfOKYqjzGk3f9cjk6.QKw2@mars.dti.ne.jp>	<4AB7810E.6080408@cc.kyoto-su.ac.jp>
+	<JxY3SqisZ1VIdMPsk4hOvN4Q9@mars.dti.ne.jp>
+Message-ID: <4AD04830.1000307@cc.kyoto-su.ac.jp>
+
+Masashi Umezawa さんは書きました:
+> その後状況はいかがでしょうか? 
+
+しまったぁ〜、訊ねるのを忘れました。ごめんなさい。
+
+> こちらはなかなか難しいなーという感じです。
+
+私見ですが、状況は同じだと思われます。
+
+--- 青木淳
+From hirowadenden ＠ hera.eonet.ne.jp  Mon Oct 12 13:10:40 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Mon Oct 12 13:13:16 2009
+Subject: [SML 7685] Re: 第12回Smalltalk勉強会＠京都
+In-Reply-To: <4AD036F2.9030600@cc.kyoto-su.ac.jp>
+References: <4AC423A9.7050705@cc.kyoto-su.ac.jp>	<4ACBBBC4.2050305@cc.kyoto-su.ac.jp>
+	<4AD036F2.9030600@cc.kyoto-su.ac.jp>
+Message-ID: <4AD2AC40.20200@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+この間は、勉強会に参加させていただきありがとうございます。
+(参加者の中で一人ノートパソコンを持参してなかった者です (^^;;)
+
+AOKI Atsushi さんは書きました:
+>> 典型的なパターンをいくつか用いたオブジェクト風の設計図＆プロ
+>> グラムを用意しました。参加する方々のブートストラップにしてい
+>> ただければ幸いです。（まだけっしていいものではありません。）
+> 
+> 以下のページから、勉強会で行ったことを、たどれるようにしてお
+> きました。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto12
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/CSV2HTML/index-j.html#Casting
+
+勉強会では設計図を見てすぐには理解できなかったのですが、自宅でプログラム
+と見比べながらようやく理解できました。このプログラムを元に自分でもプログ
+ラミングして一応動いたのですが、cvsのレコードの項目を解析してhtmlのテー
+ブルのレコードを作る所がごちゃごちゃになってしまったので、作り直している
+所です。それとDownloaderに相当する所もまだできていません。
+
+ところで、次回の勉強会までに勉強会に参加されていない方も含めて、作成した
+プログラムなどをこのメーリングリストでレビューし合う事はできませんでしょ
+うか?　他の方がどのようにプログラミングされるのか興味があるのと、自分の
+プログラミングについてご教示いただけたらと思っています。次回の勉強会まで
+待ちきれないもので...(^^;;
+自分のプログラムができるまでに他の方のプログラムやヒントがメーリングリス
+トに流れてくると困る方がいらっしゃるかもしれませんし、メーリングリストや
+勉強会の趣旨に合わないかもしれないことを心配しています。皆様どうかご検討
+ください。
+
+-- hirowadenden
+
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 18 12:02:44 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Oct 18 12:02:49 2009
+Subject: [SML 7686] 第14回Smalltalk勉強会のお知らせ
+Message-ID: <JxdC8eJostPN3p8GEbckjaDA6@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2009/10/28(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai14kaismalltalkbenkyoukai
+
+GNU Smalltalkの入ったノートPCをお持ち下さい。
+
+「シロクマの力」が助けてくれるでしょう
+http://swikis.ddo.jp/umejava/63
+
+今回はGSTを使ったSmalltalk入門的な内容になると思いますので、Smalltalkを
+使ったことのない初心者の方、お待ちしています。もちろんベテランも大歓迎です。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Oct 18 16:15:56 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Oct 18 16:16:01 2009
+Subject: [SML 7687] Re: 第12回Smalltalk勉強会＠京都
+In-Reply-To: <4AD2AC40.20200@hera.eonet.ne.jp>
+References: <4AC423A9.7050705@cc.kyoto-su.ac.jp>	<4ACBBBC4.2050305@cc.kyoto-su.ac.jp>	<4AD036F2.9030600@cc.kyoto-su.ac.jp>
+	<4AD2AC40.20200@hera.eonet.ne.jp>
+Message-ID: <4ADAC0AC.4030600@cc.kyoto-su.ac.jp>
+
+青木です。
+
+先週に秋学期の授業が佳境に入りまして、学生さんたちが届けてく
+れるレポートメールへの返信に追われておりました。言語を記述す
+る言語の存在の意識化でして、秘密の庫（メタ系）の扉を開けるこ
+とができた学生さんたちも多く、あまりにレポートが愉快なのです。
+
+そんなこんなで、ＳＭＬへのフォローが遅くなり失礼いたしました。
+
+hirowadenden さんは書きました:
+> ところで、次回の勉強会までに勉強会に参加されていない方も含めて、作成した
+> プログラムなどをこのメーリングリストでレビューし合う事はできませんでしょ
+> うか?　他の方がどのようにプログラミングされるのか興味があるのと、自分の
+> プログラミングについてご教示いただけたらと思っています。次回の勉強会まで
+> 待ちきれないもので...(^^;;
+
+このhirowadendenさんのお気持ち、よくわかります。ぜひＳＭＬを
+レビューの場に使ってくださいませ。
+
+> 自分のプログラムができるまでに他の方のプログラムやヒントがメーリングリス
+> トに流れてくると困る方がいらっしゃるかもしれませんし、メーリングリストや
+> 勉強会の趣旨に合わないかもしれないことを心配しています。皆様どうかご検討
+> ください。
+
+ＳＭＬを介してプログラムの交信をすることは、このＭＬの主旨に
+合致しています。勉強会の趣意もＳＭＬの趣意もたがいにたがうも
+のではありませんので、心配はご無用で願います。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From hirowadenden ＠ hera.eonet.ne.jp  Sun Oct 18 18:07:32 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Sun Oct 18 18:07:57 2009
+Subject: [SML 7688] Re: 第12回Smalltalk勉強会＠京都
+In-Reply-To: <4ADAC0AC.4030600@cc.kyoto-su.ac.jp>
+References: <4AC423A9.7050705@cc.kyoto-su.ac.jp>	<4ACBBBC4.2050305@cc.kyoto-su.ac.jp>	<4AD036F2.9030600@cc.kyoto-su.ac.jp>	<4AD2AC40.20200@hera.eonet.ne.jp>
+	<4ADAC0AC.4030600@cc.kyoto-su.ac.jp>
+Message-ID: <4ADADAD4.1090801@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+AOKI Atsushi さんは書きました:
+> そんなこんなで、ＳＭＬへのフォローが遅くなり失礼いたしました。
+> 
+> hirowadenden さんは書きました:
+>> ところで、次回の勉強会までに勉強会に参加されていない方も含めて、作成した
+>> プログラムなどをこのメーリングリストでレビューし合う事はできませんでしょ
+>> うか?　他の方がどのようにプログラミングされるのか興味があるのと、自分の
+>> プログラミングについてご教示いただけたらと思っています。次回の勉強会まで
+>> 待ちきれないもので...(^^;;
+> 
+> このhirowadendenさんのお気持ち、よくわかります。ぜひＳＭＬを
+> レビューの場に使ってくださいませ。
+> 
+>> 自分のプログラムができるまでに他の方のプログラムやヒントがメーリングリス
+>> トに流れてくると困る方がいらっしゃるかもしれませんし、メーリングリストや
+>> 勉強会の趣旨に合わないかもしれないことを心配しています。皆様どうかご検討
+>> ください。
+> 
+> ＳＭＬを介してプログラムの交信をすることは、このＭＬの主旨に
+> 合致しています。勉強会の趣意もＳＭＬの趣意もたがいにたがうも
+> のではありませんので、心配はご無用で願います。
+
+返信ありがとうございます。
+前回投稿ときには、2nd Versionだった私のプログラムも、5th Versionになりま
+した。作成しているときに気づいた点を、次のバージョンで修正するような形で
+やっています。始めるときには、これで完成だと思ってやっているのですが、な
+かなか終わりません。
+今やっている修正が終わりましたらプログラムを投稿させていただきますので、
+その時には、ご教示いただきたくよろしくお願いいたします。
+
+-- hirowadenden
+
+
+
+From hirowadenden ＠ hera.eonet.ne.jp  Mon Oct 19 19:21:38 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Mon Oct 19 19:21:50 2009
+Subject: [SML 7689] Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+Message-ID: <4ADC3DB2.4020404@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+#プログラムとクラスダイアグラム添付して投稿したのですが、40KBの制限に
+引っかかってしまったので、このメールにはプログラムのみを添付して再送いた
+します。後ほどダイアグラムを添付したメールを送らせていただきます。
+
+Smalltalk勉強会＠京都での課題プログラムが一応できましたので、クラスダイ
+アグラムとともにプログラムを添付させていただきました。ご覧いただいて、ご
+指摘などいただけましたら幸いです。私としては、Tableクラスを工夫したつも
+りなんですがどうでしょうか?
+クラスダイアグラムはJunのToolsを使って描きましたが、UMLはあまりよく知ら
+ないので書き方が間違っているかもしれません。
+なお、パッケージ名はTranslatorsになっていますのでFile inされるときには上
+書きにご注意ください。
+
+Tableクラスの概略は以下のとおりです:
+・Tableクラスのtranslateにあるように以下のようにすると、CSVファイから
+index.htmlを生成します。
+	| aTable |
+	aTable := PrimeMinisters.Reader table.
+	PrimeMinisters.Writer table: aTable.
+	^aTable
+・TableクラスにCSVファイルの1行目の項目名一覧をからTableのインスタンスを
+生成しています。
+	Table titles: 項目名一覧の配列
+このとき、項目名に対応させてTableDataのインスタンスを生成しますが、'画像
+'と'在位期間'の項目に対してはそれぞれTableDataのサブクラスである
+TableDataForImageLink,TableDataForPeriodのインスタンスを生成します。
+・Tableのインスタンスに、CSVファイルの2行目以降のデータを追加します。
+	(aTable addDataRecord: 1行分のデータ配列) を各行について繰り返す
+・TableのインスタンスにhtmlRecordsを送ると、HTMLの表本体に含まれるべき
+HTML要素を行ごとにまとめて返します(<tr>タグは含まず)。
+	 aTable htmlRecords
+TableData(もしくは、サブクラスであるTableDataForImageLink,
+TableDataForPeriod)のインスタンスが対応する項目名と項目の値をHTML要素に
+変換しています。
+
+以下の点はもう少し考えたいと思っています:
+・TableとDownloader, Reader, Writerの関係がしっくりしない感じがしています。
+・<img>タグのheightとwidthは固定値を設定してしまっています。(ブラウザ上
+でサムネールが同じ大きさで表示されるようにしているのだと完成版の
+index.htmlを見てかってに思い込んでしまい、プログラムの方をよく見ていませ
+んでした。)
+
+当方の作成環境は以下のとおりです:
+  Ubuntu 9.04(i386版)
+  VisualWorks7.6NC
+  Jun781
+  Jpl023
+
+また、他の方も課題について作成されたプログラムや作成する際の考え方等を投
+稿されるのを楽しみにしています。
+
+-- hirowadenden
+
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: HirowadendenVersionOfPrimeMinisters.st
+型:         text/xml
+サイズ:     27158 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/sml/attachments/20091019/8753517f/HirowadendenVersionOfPrimeMinisters-0001.xml
+From hirowadenden ＠ hera.eonet.ne.jp  Mon Oct 19 19:32:46 2009
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Mon Oct 19 19:32:34 2009
+Subject: [SML 7690] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+In-Reply-To: <4ADC3DB2.4020404@hera.eonet.ne.jp>
+References: <4ADC3DB2.4020404@hera.eonet.ne.jp>
+Message-ID: <4ADC404E.9050703@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+さきほどのメールに続けてクラスダイアグラムを添付して送らせていただきます。
+よろしくお願いいたします。
+
+-- hirowadenden
+
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: HirowadendenVersionOfPrimeMinisters.diagram
+URL:  http://www.smalltalk.jp/pipermail/sml/attachments/20091019/48bf99dc/HirowadendenVersionOfPrimeMinisters.asc
+From abee ＠ squeakland.jp  Wed Oct 21 16:46:41 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Oct 21 16:47:08 2009
+Subject: [SML 7691] 21 世紀コンピューティングカンファレンス
+Message-ID: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com>
+
+こんにちは、阿部です。
+# Squeak-jaとSMLへのマルチポストです。
+
+11/4に京都、11/6に東京で開催される「21 世紀コンピューティングカンファレンス」でアラン・ケイ博士の講演が行われます。
+http://www.microsoft.com/japan/events/21ccc/default.mspx
+http://www.msra.cn/labevents/21stcomputing/2009/Alank.html#t1
+
+講演のタイトルは、
+
+T-shirt Computing"?
+Steps Toward The Reinvention Of Programming "
+
+です。
+また、パネルディスカッションにはバトラー・ランプソン博士が出席されます。
+ランプソン博士は、Altoとそれに続くWildflowerシリーズ(Dマシン)の設計者として知られています。
+特に、Altoのコンセプトをまとめたメモ、"Why Alto"は有名です。
+http://www.digibarn.com/friends/butler-lampson/index.html
+
+Windows Liveへの登録が必要ですが、参加は無料です。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From sadie ＠ kind.ocn.ne.jp  Wed Oct 21 17:22:47 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Wed Oct 21 17:22:51 2009
+Subject: [SML 7692] GNU Smalltalkについて
+Message-ID: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+
+　こんにちは、古川と申します。
+　GNU Smalltalkで動的型付けができるかどうかということを聞かせてください。
+　以下のようなコードを書きました。
+
+| a b |
+a:=1.
+b:=4.
+^a+b
+
+　このようなコードを書いて、Worksheetでprint itすると、「String error: did 
+not understand #+」と言われます。
+　一時変数も宣言したし、動的型付けができないというのはおかしすぎると思いました。 
+
+　私が重大な勘違いをしているかもしれません。同じコードでVisualWorksだとうまくいきました（答えとして５を返されました）。
+　そもそも1+1を計算するだけでもキャレットをつけないとnilと返事されます。東京でのSmalltalk勉強会で今度GNU Smalltalkを取り扱うようですがどのようなところをやるのでしょうか。
+　ちなみに環境はVMware上のFreeBSD6.4でGNU Smalltalk version 3.0.4です（ちなみにSeasideは3.1以上でないとできないらしいですが・・・）。たくさん謎があって聞きたいことはたくさんあるのですが、とくに上記のような単純な計算ができないのは致命的だと思ってこの質問をさせていただくことにしました。もしも、Linuxならうまくいくのであれば動作事例を教えてください。
+　以上、初歩的なことですがどうかよろしくお願いします。 
+
+From abee ＠ squeakland.jp  Wed Oct 21 17:28:39 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Oct 21 17:29:06 2009
+Subject: [SML 7693] Re: 21 世紀コンピューティングカンファレンス
+In-Reply-To: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com>
+References: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com>
+Message-ID: <2d5d52a80910210128n1945ce9el46ba32ecbddb8907@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2009年10月21日16:46 Kazuhiro ABE <abee@squeakland.jp>:
+> 11/4に京都、11/6に東京で開催される「21 世紀コンピューティングカンファレンス」でアラン・ケイ博士の講演が行われます。
+
+これは日付が逆でした。正しくは「11/4に東京、11/6に京都」でした。さらに言えば、11/4は慶應義塾大学
+日吉キャンパスなので東京も間違いです(マイクロソフトのサイトでは関東となっています)。
+大変失礼しました。
+
+# Korakuriderさん、ご指摘ありがとうございました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009年10月21日16:46 Kazuhiro ABE <abee@squeakland.jp>:
+> こんにちは、阿部です。
+> # Squeak-jaとSMLへのマルチポストです。
+>
+> 11/4に京都、11/6に東京で開催される「21 世紀コンピューティングカンファレンス」でアラン・ケイ博士の講演が行われます。
+> http://www.microsoft.com/japan/events/21ccc/default.mspx
+> http://www.msra.cn/labevents/21stcomputing/2009/Alank.html#t1
+>
+> 講演のタイトルは、
+>
+> T-shirt Computing"?
+> Steps Toward The Reinvention Of Programming "
+>
+> です。
+> また、パネルディスカッションにはバトラー・ランプソン博士が出席されます。
+> ランプソン博士は、Altoとそれに続くWildflowerシリーズ(Dマシン)の設計者として知られています。
+> 特に、Altoのコンセプトをまとめたメモ、"Why Alto"は有名です。
+> http://www.digibarn.com/friends/butler-lampson/index.html
+>
+> Windows Liveへの登録が必要ですが、参加は無料です。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+From Narita.Takaoki ＠ exc.epson.co.jp  Wed Oct 21 18:25:38 2009
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Wed Oct 21 18:30:33 2009
+Subject: [SML 7694] Re: GNU Smalltalkについて
+References: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860990EAA1@JPESWA304.apo.epson.net>
+
+こんにちは、成田と申します。
+
+gst --version で 3.0.5 を FreeBSD 7.2R で起動して
+みましたが、端末上でやるかぎり下記のごとき現象にはならず、期待される動作と思しきを
+していますが。
+
+とりあえず、詳細原因等は、もっと詳しい人が教えてくれるのではと思いますが、こちらでの
+状況のみですが情報提供まで。
+
+--
+Narita Takaoki @ SEIKO EPSON CORPORATION
+
+
+-----Original Message-----
+From: sml-bounces@smalltalk.jp 代理 sunao furukawa
+Sent: 2009/10/21 (水) 17:22
+To: Smalltalkers' Salon Mailing List
+Subject: [SML 7692] GNU Smalltalkについて
+ 
+　こんにちは、古川と申します。
+　GNU Smalltalkで動的型付けができるかどうかということを聞かせてください。
+　以下のようなコードを書きました。
+
+| a b |
+a:=1.
+b:=4.
+^a+b
+
+　このようなコードを書いて、Worksheetでprint itすると、「String error: did 
+not understand #+」と言われます。
+　一時変数も宣言したし、動的型付けができないというのはおかしすぎると思いました。 
+
+　私が重大な勘違いをしているかもしれません。同じコードでVisualWorksだとうまくいきました（答えとして５を返されました）。
+　そもそも1+1を計算するだけでもキャレットをつけないとnilと返事されます。東京でのSmalltalk勉強会で今度GNU Smalltalkを取り扱うようですがどのようなところをやるのでしょうか。
+　ちなみに環境はVMware上のFreeBSD6.4でGNU Smalltalk version 3.0.4です（ちなみにSeasideは3.1以上でないとできないらしいですが・・・）。たくさん謎があって聞きたいことはたくさんあるのですが、とくに上記のような単純な計算ができないのは致命的だと思ってこの質問をさせていただくことにしました。もしも、Linuxならうまくいくのであれば動作事例を教えてください。
+　以上、初歩的なことですがどうかよろしくお願いします。 
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20091021/ddf7c1a4/attachment.html
+From umrlazybind ＠ gmail.com  Wed Oct 21 18:45:53 2009
+From: umrlazybind ＠ gmail.com (梅岡 浩)
+Date: Wed Oct 21 18:46:05 2009
+Subject: [SML 7695] Re: GNU Smalltalkについて
+In-Reply-To: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+References: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+Message-ID: <FE92C618-98D4-4DD1-9213-2408C5318D12@gmail.com>
+
+古川さん
+
+はじめまして、梅岡と申します。
+GNU Smalltalk3.1 / MacOSX 10.5.8でgstでインタープリタを 
+起動し直接実行、あるいはファイルインしても期待する答えは得ら 
+れるようです。
+ちょっと気になったのですが、
+
+> Worksheetでprint itすると、
+
+とありますが、Gnu Smalltalk上で、Worksheetでprint it  
+というのはどういう手順でしょうか？
+何かフロントエンドを使用しているのでしょうか？
+Gnu Smalltalkはほとんど触っていないので不勉強で申し訳ないです。
+
+
+On 2009/10/21, at 17:22, sunao furukawa wrote:
+
+> 　こんにちは、古川と申します。
+> 　GNU Smalltalkで動的型付けができるかどうかということ 
+> を聞かせてください。
+> 　以下のようなコードを書きました。
+>
+> | a b |
+> a:=1.
+> b:=4.
+> ^a+b
+>
+> 　このようなコードを書いて、Worksheetでprint it 
+> すると、「String error: did not understand #+」と言わ 
+> れます。
+> 　一時変数も宣言したし、動的型付けができないというのはおか 
+> しすぎると思いました。
+> 　私が重大な勘違いをしているかもしれません。同じコードで 
+> VisualWorksだとうまくいきました（答えとして５を返されました）。
+> 　そもそも1+1を計算するだけでもキャレットをつけないとnil 
+> と返事されます。東京でのSmalltalk勉強会で今度GNU Smalltalk 
+> を取り扱うようですがどのようなところをやるのでしょうか。
+> 　ちなみに環境はVMware上のFreeBSD6.4でGNU Smalltalk  
+> version 3.0.4です（ちなみにSeasideは3.1以上でな 
+> いとできないらしいですが・・・）。たくさん謎があって聞きた 
+> いことはたくさんあるのですが、とくに上記のような単純な計算 
+> ができないのは致命的だと思ってこの質問をさせていただくこと 
+> にしました。もしも、Linuxならうまくいくのであれば動作 
+> 事例を教えてください。
+> 　以上、初歩的なことですがどうかよろしくお願いします。
+
+From sadie ＠ kind.ocn.ne.jp  Wed Oct 21 20:41:16 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Wed Oct 21 20:41:21 2009
+Subject: [SML 7696] Re: GNU Smalltalkについて
+In-Reply-To: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+References: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+Message-ID: <8D0CABBD4CD44FE18611A720A6DB1174@sunaoPC>
+
+　再びですが古川です。
+　対話型インタープリターで以下のようにやってみました。
+-------------------------------------------
+#gst
+GNU Smalltalk ready
+
+st> | a b |
+st> a :=1
+1
+st> b :=4
+4
+st> a+b
+5
+-------------------------------------------
+これだと確かにうまくいきます。
+私がやったのは、GUIからです。
+#cd /usr/local/share/smalltalk/scripts
+#gst Browser.st &
+そしてSmalltalk Transcriptの画面が出るのでメニューのSmalltalkからWorksheetを選択して、
+Worksheetの画面が出てきたらペインの中に、
+--------
+| a b |
+a:=1.
+b:=4.
+^a+b
+--------
+と入力し、全部マウスで選択したら右クリックでprint itを出して左クリックで実行しました。
+　問題はその後エラーの画面が出ました。若干迷惑かもしれませんがエラーの内容をコピペします。
+----------------------------------------------------------------------------------
+MessageNotUnderstood(Exception)>>signal
+String(Object)>>doesNotUnderstand: #+
+[] in 
+BLOX.BLOXBrowser.PWorksheetText(BLOX.BLOXBrowser.PText)>>evalAndPrintResult
+[] in Behavior class(Behavior)>>evalString:to:ifError:
+STInST.GSTFileInParser(STInST.RBParser)>>parserError:
+STInST.STEvaluationDriver(STInST.STParsingDriver)>>parserError:
+STInST.STCompiler>>compileError:
+STInST.STCompiler>>lookupName:
+STInST.STCompiler>>compileAssignmentFor:
+STInST.STCompiler>>acceptAssignmentNode:
+STInST.RBAssignmentNode>>acceptVisitor:
+optimized [] in STInST.STCompiler>>compileStatements:
+OrderedCollection(SequenceableCollection)>>keysAndValuesDo:
+STInST.STCompiler>>compileStatements:
+STInST.STCompiler>>acceptSequenceNode:
+STInST.RBSequenceNode>>acceptVisitor:
+STInST.STCompiler(STInST.RBProgramNodeVisitor)>>visitNode:
+STInST.STCompiler class>>compile:asMethodOf:classified:parser:environment:
+STInST.STEvaluationDriver>>evaluate:
+STInST.GSTFileInParser(STInST.STFileParser)>>evaluate:
+STInST.GSTFileInParser>>evaluate:
+STInST.GSTFileInParser>>parseDoits
+STInST.GSTFileInParser(STInST.STFileInParser)>>parseSmalltalk
+STInST.GSTFileInParser class(STInST.STFileParser
+class)>>parseSmalltalk:with:onError:
+STInST.STEvaluationDriver(STInST.STParsingDriver)>>parseSmalltalk:with:onError:
+Behavior class(Behavior)>>evalString:to:ifError:
+Behavior class(Behavior)>>evaluate:to:ifError:
+BLOX.BLOXBrowser.PWorksheetText(BLOX.BLOXBrowser.PText)>>doEval:ifError:
+BLOX.BLOXBrowser.PWorksheetText>>doEval:ifError:
+BLOX.BLOXBrowser.PWorksheetText(BLOX.BLOXBrowser.PText)>>evalAndPrintResult
+DirectedMessage(Message)>>sendTo:
+DirectedMessage>>send
+BLOX.BMenuItem(BLOX.BMenuObject)>>invokeCallback
+-----------------------------------------------------------------------------
+　私はWorksheetをVisualWorksにおけるWorkspaceのようにとらえていたので以上のようにやりました。
+　portsをバージョンアップしてやってみようと思います。ひょっとしたらファイルが壊れていてコンパイラがparseに失敗するのかもしれません。
+　また、もしかしたらですがGUIからやってみて同じエラーに遭遇した人がいたら教えてください。
+
+From tetha ＠ st.rim.or.jp  Thu Oct 22 06:16:37 2009
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Oct 22 06:16:41 2009
+Subject: [SML 7697] Re: GNU Smalltalkについて
+In-Reply-To: <8D0CABBD4CD44FE18611A720A6DB1174@sunaoPC>
+References: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+	<8D0CABBD4CD44FE18611A720A6DB1174@sunaoPC>
+Message-ID: <2120D6CC-8BBC-4CB9-9C10-FC864567BA83@st.rim.or.jp>
+
+古川さん
+ビューポイントテクノロジーの林です。
+
+Mac OSX 10.5.8 + X11 環境に Mac ports からインストールした  
+gst 3.1 で同様のGUIを利用出来ました。
+Worksheet での実行も可能です。
+なお起動するには gst-blox コマンドを利用しました。
+
+その他にも最近では、VisualGSTなる派生プロジェクトもある 
+ようですね。
+
+http://visualgst.bioskop.fr/
+
+
+取り急ぎ、ご参考まで
+--
+
+
+On 2009/10/21, at 20:41, sunao furukawa wrote:
+
+> 　再びですが古川です。
+> 　対話型インタープリターで以下のようにやってみました。
+> -------------------------------------------
+> #gst
+> GNU Smalltalk ready
+>
+> st> | a b |
+> st> a :=1
+> 1
+> st> b :=4
+> 4
+> st> a+b
+> 5
+> -------------------------------------------
+> これだと確かにうまくいきます。
+> 私がやったのは、GUIからです。
+> #cd /usr/local/share/smalltalk/scripts
+> #gst Browser.st &
+> そしてSmalltalk Transcriptの画面が出るのでメニューの 
+> SmalltalkからWorksheetを選択して、
+> Worksheetの画面が出てきたらペインの中に、
+> --------
+> | a b |
+> a:=1.
+> b:=4.
+> ^a+b
+> --------
+> と入力し、全部マウスで選択したら右クリックでprint it 
+> を出して左クリックで実行しました。
+> 　問題はその後エラーの画面が出ました。若干迷惑かもしれませ 
+> んがエラーの内容をコピペします。
+> ----------------------------------------------------------------------------------
+> MessageNotUnderstood(Exception)>>signal
+> String(Object)>>doesNotUnderstand: #+
+> [] in  
+> BLOX 
+> .BLOXBrowser 
+> .PWorksheetText(BLOX.BLOXBrowser.PText)>>evalAndPrintResult
+> [] in Behavior class(Behavior)>>evalString:to:ifError:
+> STInST.GSTFileInParser(STInST.RBParser)>>parserError:
+> STInST.STEvaluationDriver(STInST.STParsingDriver)>>parserError:
+> STInST.STCompiler>>compileError:
+> STInST.STCompiler>>lookupName:
+> STInST.STCompiler>>compileAssignmentFor:
+> STInST.STCompiler>>acceptAssignmentNode:
+> STInST.RBAssignmentNode>>acceptVisitor:
+> optimized [] in STInST.STCompiler>>compileStatements:
+> OrderedCollection(SequenceableCollection)>>keysAndValuesDo:
+> STInST.STCompiler>>compileStatements:
+> STInST.STCompiler>>acceptSequenceNode:
+> STInST.RBSequenceNode>>acceptVisitor:
+> STInST.STCompiler(STInST.RBProgramNodeVisitor)>>visitNode:
+> STInST.STCompiler  
+> class>>compile:asMethodOf:classified:parser:environment:
+> STInST.STEvaluationDriver>>evaluate:
+> STInST.GSTFileInParser(STInST.STFileParser)>>evaluate:
+> STInST.GSTFileInParser>>evaluate:
+> STInST.GSTFileInParser>>parseDoits
+> STInST.GSTFileInParser(STInST.STFileInParser)>>parseSmalltalk
+> STInST.GSTFileInParser class(STInST.STFileParser
+> class)>>parseSmalltalk:with:onError:
+> STInST 
+> .STEvaluationDriver 
+> (STInST.STParsingDriver)>>parseSmalltalk:with:onError:
+> Behavior class(Behavior)>>evalString:to:ifError:
+> Behavior class(Behavior)>>evaluate:to:ifError:
+> BLOX 
+> .BLOXBrowser.PWorksheetText(BLOX.BLOXBrowser.PText)>>doEval:ifError:
+> BLOX.BLOXBrowser.PWorksheetText>>doEval:ifError:
+> BLOX 
+> .BLOXBrowser 
+> .PWorksheetText(BLOX.BLOXBrowser.PText)>>evalAndPrintResult
+> DirectedMessage(Message)>>sendTo:
+> DirectedMessage>>send
+> BLOX.BMenuItem(BLOX.BMenuObject)>>invokeCallback
+> -----------------------------------------------------------------------------
+> 　私はWorksheetをVisualWorksにおける 
+> Workspaceのようにとらえていたので以上のようにやりました。
+> 　portsをバージョンアップしてやってみようと思います。 
+> ひょっとしたらファイルが壊れていてコンパイラがparseに 
+> 失敗するのかもしれません。
+> 　また、もしかしたらですがGUIからやってみて同じエラー 
+> に遭遇した人がいたら教えてください。
+>
+>
+>
+
+
+
+From sadie ＠ kind.ocn.ne.jp  Thu Oct 22 13:33:41 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Thu Oct 22 13:33:50 2009
+Subject: [SML 7698] Re: GNU Smalltalkについて
+In-Reply-To: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+References: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+Message-ID: <7673C48989A744ABAA74E54A9F3F9210@sunaoPC>
+
+　ご迷惑をおかけしました。古川です。
+　結論から言えば、FreeBSD6.4Rでpkg_addをやり直して再インストールしたら、3.0.4でも正しく実行できるようになりました。
+　portsでの3.1へのportsnapを用いたアップグレードには失敗しました。OpenGLの周辺のプログラムのインストールで地道な作業を繰り返したのですがいちいちひっかかるのか馬鹿馬鹿しくなって途中でやめました。
+　libtoolのmakeなどもやったのですがそのせいとは言いませんが前回書いた猿のようなコードが正しく実行できるようになりました。また1+1もキャレットをつけなくても正しくprint itできました。猿のようなコードも 
+同じです。
+　最初にpkg_add -r したGNU Smalltalkのご機嫌が良くなかったという結論に到達しました。いままで協力していただいた皆さん。ありがとうございました。
+From sadie ＠ kind.ocn.ne.jp  Thu Oct 22 16:18:27 2009
+From: sadie ＠ kind.ocn.ne.jp (sunao furukawa)
+Date: Thu Oct 22 16:18:36 2009
+Subject: [SML 7699] Re: GNU Smalltalkについて
+In-Reply-To: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+References: <E1B0594415954C71B8AE948101C174E9@sunaoPC>
+Message-ID: <B215CEA9509749DABC2768DD5C646A86@sunaoPC>
+
+　ご迷惑をおかけしました。古川です。
+　配信されないようなので再送します。
+　結論から言えば、FreeBSD6.4Rでpkg_addをやり直して再インストールしたら、3.0.4でも正しく実行できるようになりました。
+　portsでの3.1へのportsnapを用いたアップグレードには失敗しました。OpenGLの周辺のプログラムのインストールで地道な作業を繰り返したのですがいちいちひっかかるのか馬鹿馬鹿しくなって途中でやめました。
+　libtoolのmakeなどもやったのですがそのせいとは言いませんが前回書いた猿のようなコードが正しく実行できるようになりました。また1+1もキャレットをつけなくても正しくprint itできました。猿のようなコードも
+同じです。
+　最初にpkg_add -r したGNU Smalltalkのご機嫌が良くなかったという結論に到達しました。いままで協力していただいた皆さん。ありがとうございました。
+From kuwatani ＠ akademia.co.jp  Fri Oct 23 14:41:17 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Oct 23 14:41:20 2009
+Subject: [SML 7700] メーリングリストの不具合のご報告
+Message-ID: <4AE141FD.3050506@akademia.co.jp>
+
+SMLメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+先日メーリングリストの運用サーバのDNSの設定を変更した際に
+メーリングリストからメールが配送されないまたは
+配信が遅れてしまう不具合が起きておりました．
+ご迷惑をおかけして申し訳ありませんでした．
+
+▼不具合が起きていた期間
+10月22日 14時から3時間程度
+
+-- 
+kuwatani@akademia.co.jp
+
+From kubota ＠ sie.dendai.ac.jp  Tue Oct 27 12:14:13 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Tue Oct 27 12:14:39 2009
+Subject: [SML 7701] HttpClientによるログイン認証について
+Message-ID: <79F94BA2-EA9C-4509-961C-53A3DC24A204@sie.dendai.ac.jp>
+
+こんにちは、電大の久保田です。
+
+Net.HttpClientの使いかたについて悩んでいます。
+ログインし、その後のページを取得したいのですが、うまくいきません。
+Javaですが、同じ目的のサンプルプログラムがあったので、それを参考 
+に書いてみました。
+mixiにログインし、その後のページを持ってくる例(http:// 
+blog.mikuriya.biz/archives/251)です。
+
+環境はVisualWorks7.6NCにWebSupportのパーセルをインス 
+トールしています。
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+mixiLogin := 'http://mixi.jp/login.pl'.
+mixiTopPage := 'http://mixi.jp/home.pl'.
+inputUserName := 'email'.
+inputPassword := 'password'.
+inputNextURL := 'next_url'.
+userName := 'めーるあどれす'.
+password := 'ぱすわーど'.
+nextUrl := '/home.pl'.
+
+client := Net.HttpClient new.
+client enableCookies: true.	
+postRequest := HttpRequest post:mixiLogin.
+postRequest
+		addFormKey: inputUserName value: userName;
+		addFormKey: inputPassword value: password;
+		addFormKey: inputNextURL  value: nextUrl.
+postResponse := client executeRequest: postRequest.
+"????"
+getMethod := HttpRequest get: mixiTopPage.
+getResponse := client executeRequest: getMethod
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+????までは実行できます。全て選択して実行するとUnhandled  
+exception: Key not foundというExceptionがでます。
+
+javaの例をみると????にあたるところに 
+postMethod.releaseConnection()という式が入っていました。 
+VisualWorksにも同じようなものがあるかとシステムブラウザをのぞい 
+てみましたが目当てのものは見付かりませんでした。
+
+HttpClientのインスタンスを1つ作成し、それに向って必要なだけ 
+executeRequest: aHttpRequestメッセージを送信すれば結果が得られる 
+と考えているのですが、間違ているのでしょうか。
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Oct 27 12:37:04 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Oct 27 12:37:07 2009
+Subject: [SML 7702] Re: HttpClientによるログイン認証について
+In-Reply-To: <79F94BA2-EA9C-4509-961C-53A3DC24A204@sie.dendai.ac.jp>
+References: <79F94BA2-EA9C-4509-961C-53A3DC24A204@sie.dendai.ac.jp>
+Message-ID: <4AE66AE0.5060007@cc.kyoto-su.ac.jp>
+
+確かめもせずに思い込みだけの返信ですが、あしからず。
+おそらく文字セットの問題ではないかしらん。
+当該の文字コードのエンコーダ／デコーダが見つからないのでは。
+
+--- 青木淳＠脊髄反射
+
+久保田 吉彦 さんは書きました:
+> こんにちは、電大の久保田です。
+> 
+> Net.HttpClientの使いかたについて悩んでいます。
+> ログインし、その後のページを取得したいのですが、うまくいきません。
+> Javaですが、同じ目的のサンプルプログラムがあったので、それを参考に書いて 
+> みました。
+> mixiにログインし、その後のページを持ってくる例(http: 
+> //blog.mikuriya.biz/archives/251)です。
+> 
+> 環境はVisualWorks7.6NCにWebSupportのパーセルをインストールしています。
+> ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+> mixiLogin := 'http://mixi.jp/login.pl'.
+> mixiTopPage := 'http://mixi.jp/home.pl'.
+> inputUserName := 'email'.
+> inputPassword := 'password'.
+> inputNextURL := 'next_url'.
+> userName := 'めーるあどれす'.
+> password := 'ぱすわーど'.
+> nextUrl := '/home.pl'.
+> 
+> client := Net.HttpClient new.
+> client enableCookies: true.   
+> postRequest := HttpRequest post:mixiLogin.
+> postRequest
+>         addFormKey: inputUserName value: userName;
+>         addFormKey: inputPassword value: password;
+>         addFormKey: inputNextURL  value: nextUrl.
+> postResponse := client executeRequest: postRequest.
+> "????"
+> getMethod := HttpRequest get: mixiTopPage.
+> getResponse := client executeRequest: getMethod
+> ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+> 
+> ????までは実行できます。全て選択して実行するとUnhandled exception: Key 
+> not foundというExceptionがでます。
+> 
+> javaの例をみると????にあたるところにpostMethod.releaseConnection()という 
+> 式が入っていました。VisualWorksにも同じようなものがあるかとシステムブラ 
+> ウザをのぞいてみましたが目当てのものは見付かりませんでした。
+> 
+> HttpClientのインスタンスを1つ作成し、それに向って必要なだけ 
+> executeRequest: aHttpRequestメッセージを送信すれば結果が得られると考えて 
+> いるのですが、間違ているのでしょうか。
+> 
+> 久保田吉彦
+> 東京電機大学 情報環境学部 情報環境学科
+
+From kubota ＠ sie.dendai.ac.jp  Tue Oct 27 15:16:08 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Tue Oct 27 15:16:35 2009
+Subject: [SML 7703] Re: HttpClientによるログイン認証について
+In-Reply-To: <4AE66AE0.5060007@cc.kyoto-su.ac.jp>
+References: <79F94BA2-EA9C-4509-961C-53A3DC24A204@sie.dendai.ac.jp>
+	<4AE66AE0.5060007@cc.kyoto-su.ac.jp>
+Message-ID: <6465BAEB-6982-42B7-AC36-BE30F432E9FF@sie.dendai.ac.jp>
+
+こんにちは、電大の久保田です。
+
+青木先生のおっしゃった通り、デバッガを見たらエンコーダが入ってい 
+るIdentityDictionaryに'euc-jp'が入っていませんでし 
+た。そのためKey not foundのExceptionが出ているようで 
+す。
+
+原因は判ったのですが、どう対処していいやら分りません。どなたか対 
+処方法ご存知のかたいらっしゃいませんでしょうか。
+#うーん、なさけない
+
+On 2009/10/27, at 12:37, AOKI Atsushi wrote:
+
+> 確かめもせずに思い込みだけの返信ですが、あしからず。
+> おそらく文字セットの問題ではないかしらん。
+> 当該の文字コードのエンコーダ／デコーダが見つからないのでは。
+>
+> --- 青木淳＠脊髄反射
+>
+> 久保田 吉彦 さんは書きました:
+>> こんにちは、電大の久保田です。
+>>
+>> Net.HttpClientの使いかたについて悩んでいます。
+>> ログインし、その後のページを取得したいのですが、うまくいきま 
+>> せん。
+>> Javaですが、同じ目的のサンプルプログラムがあったので、それを 
+>> 参考に書いて
+>> みました。
+>> mixiにログインし、その後のページを持ってくる例(http:
+>> //blog.mikuriya.biz/archives/251)です。
+>>
+>> 環境はVisualWorks7.6NCにWebSupportのパーセルをイ 
+>> ンストールしています。
+>> ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+>> mixiLogin := 'http://mixi.jp/login.pl'.
+>> mixiTopPage := 'http://mixi.jp/home.pl'.
+>> inputUserName := 'email'.
+>> inputPassword := 'password'.
+>> inputNextURL := 'next_url'.
+>> userName := 'めーるあどれす'.
+>> password := 'ぱすわーど'.
+>> nextUrl := '/home.pl'.
+>>
+>> client := Net.HttpClient new.
+>> client enableCookies: true.
+>> postRequest := HttpRequest post:mixiLogin.
+>> postRequest
+>>         addFormKey: inputUserName value: userName;
+>>         addFormKey: inputPassword value: password;
+>>         addFormKey: inputNextURL  value: nextUrl.
+>> postResponse := client executeRequest: postRequest.
+>> "????"
+>> getMethod := HttpRequest get: mixiTopPage.
+>> getResponse := client executeRequest: getMethod
+>> ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+>>
+>> ????までは実行できます。全て選択して実行するとUnhandled  
+>> exception: Key
+>> not foundというExceptionがでます。
+>>
+>> javaの例をみると????にあたるところに 
+>> postMethod.releaseConnection()という
+>> 式が入っていました。VisualWorksにも同じようなものがある 
+>> かとシステムブラ
+>> ウザをのぞいてみましたが目当てのものは見付かりませんでした。
+>>
+>> HttpClientのインスタンスを1つ作成し、それに向って必要な 
+>> だけ
+>> executeRequest: aHttpRequestメッセージを送信すれば結果が得ら 
+>> れると考えて
+>> いるのですが、間違ているのでしょうか。
+>>
+>> 久保田吉彦
+>> 東京電機大学 情報環境学部 情報環境学科
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Oct 27 15:47:18 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Oct 27 15:47:21 2009
+Subject: [SML 7704] Re: HttpClientによるログイン認証について
+In-Reply-To: <6465BAEB-6982-42B7-AC36-BE30F432E9FF@sie.dendai.ac.jp>
+References: <79F94BA2-EA9C-4509-961C-53A3DC24A204@sie.dendai.ac.jp>	<4AE66AE0.5060007@cc.kyoto-su.ac.jp>
+	<6465BAEB-6982-42B7-AC36-BE30F432E9FF@sie.dendai.ac.jp>
+Message-ID: <4AE69776.2040707@cc.kyoto-su.ac.jp>
+
+久保田吉彦さんは書きました:
+> 青木先生のおっしゃった通り、デバッガを見たらエンコーダが入っている 
+> IdentityDictionaryに'euc-jp'が入っていませんでした。そのためKey not 
+> foundのExceptionが出ているようです。
+
+だいぶ昔ですが、私も似たような状況に陥ったことがよみがえり、
+とっさに（脊髄反射で）、もしや！思ったのですが、当たりでしたか…。
+
+> 原因は判ったのですが、どう対処していいやら分りません。どなたか対処方法ご 
+> 存知のかたいらっしゃいませんでしょうか。
+> #うーん、なさけない
+
+お使いの環境が Windows 版の VisualWorks ならば、
+エンコーディングシンボルの #euc-jp を
+#JapaneseEUC に写像すればいいと思います。
+
+VisualWorks の日本語版でなければ、Jpl を援用できます。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/
+
+これまた久保田さんのコードを確かめもせずに、
+応答しておりますので、とんちんかんなフォローやもしれませぬ。
+その際には、あしからず、ご容赦くださいませ。
+
+--- 青木淳＠取り急ぎ
+
+From kubota ＠ sie.dendai.ac.jp  Tue Oct 27 20:31:20 2009
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Tue Oct 27 20:31:46 2009
+Subject: [SML 7705] Re: HttpClientによるログイン認証について
+In-Reply-To: <4AE69776.2040707@cc.kyoto-su.ac.jp>
+References: <79F94BA2-EA9C-4509-961C-53A3DC24A204@sie.dendai.ac.jp>	<4AE66AE0.5060007@cc.kyoto-su.ac.jp>
+	<6465BAEB-6982-42B7-AC36-BE30F432E9FF@sie.dendai.ac.jp>
+	<4AE69776.2040707@cc.kyoto-su.ac.jp>
+Message-ID: <B71A7F0C-23C7-4BD6-8803-34E21FD4BED1@sie.dendai.ac.jp>
+
+電大の久保田です。
+
+青木先生の助言で無事mixiにログインしてページ情報を得ること 
+ができました。
+ありがとうございました。
+
+これでひと安心と思っていたのですがまた問題がでてきました。 
+HTTPSでの通信です。
+ニコニコ動画にログインするプログラムを書いてみました。
+
+1)nicoLoginその1を使った場合Unhandled exception:  
+NetHttpMovedError(302 Found)がでる。
+2)nicoLoginその2を使った場合Unhandled exception:  
+WSAECONNABORTEDがでる。
+
+といった状況です。リダイレクトの設定はNet.Settings  
+httpRedirectRequest: true.にしています。ネットワークプログラムは 
+ほとんど書いたことがないので良く分らないのですが、1)の場合 
+リダイレクト可の設定にしてあるのになぜExceptionが出るのか 
+わかりませんまた、2)の場合HTTPでのmixiへのログ 
+インが出きたのにHTTPSでの通信の場合なぜ 
+WSAECONNABORTEDが出るのか分りません。どなたかご存知のかたいらっ 
+しゃいませんか?
+それともニコニコ動画のページはプログラムではログインできない作り 
+になっているのでしょうか?
+
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー 
+ーー
+"nicoLogin := 'https://secure.nicovideo.jp/secure/login? 
+site=niconico'." "その1"
+nicoLogin := 'https://secure.nicovideo.jp/secure/login_form'.  
+"その2"
+nicoTopPage := 'http://www.nicovideo.jp'.
+inputUserName := 'email'.
+inputPassword := 'password'.
+inputNextURL := 'next_url'.
+
+client := Net.HttpClient new.
+client enableCookies: true.	
+httpRequest := HttpRequest post:nicoLogin.
+httpRequest
+		userAgent: 'VW76NC';
+		addFormKey: 'email' value: 'いーめーるあどれす';
+		addFormKey: 'password' value: 'ぱすわーど';
+		addFormKey: 'next_url' value:''.
+httpResponse := client executeRequest: httpRequest. "<=ここで 
+Net.HttpMovedError(302 Found)が発生"
+httpRequest inspect.
+agent :=client cookieAgent.
+agent cacheCookies: true.
+
+getMethod := HttpRequest get: nicoTopPage.
+getMethod userAgent:'VW76NC'.
+response := client executeRequest: getMethod. "<=ここで 
+WSAECONNABORTEDが発生"
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー 
+ーー
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+On 2009/10/27, at 15:47, AOKI Atsushi wrote:
+
+> 久保田吉彦さんは書きました:
+>> 青木先生のおっしゃった通り、デバッガを見たらエンコーダが入っ 
+>> ている
+>> IdentityDictionaryに'euc-jp'が入っていませんでした。そ 
+>> のためKey not
+>> foundのExceptionが出ているようです。
+>
+> だいぶ昔ですが、私も似たような状況に陥ったことがよみがえり、
+> とっさに（脊髄反射で）、もしや！思ったのですが、当たりでした 
+> か…。
+>
+>> 原因は判ったのですが、どう対処していいやら分りません。どなた 
+>> か対処方法ご
+>> 存知のかたいらっしゃいませんでしょうか。
+>> #うーん、なさけない
+>
+> お使いの環境が Windows 版の VisualWorks ならば、
+> エンコーディングシンボルの #euc-jp を
+> #JapaneseEUC に写像すればいいと思います。
+>
+> VisualWorks の日本語版でなければ、Jpl を援用できます。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/
+>
+> これまた久保田さんのコードを確かめもせずに、
+> 応答しておりますので、とんちんかんなフォローやもしれませぬ。
+> その際には、あしからず、ご容赦くださいませ。
+>
+> --- 青木淳＠取り急ぎ
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Oct 29 08:55:29 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Oct 29 08:55:33 2009
+Subject: [SML 7706] 第13回Smalltalk勉強会＠京都
+Message-ID: <4AE8D9F1.4050109@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+第13回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+JR京都駅前にご参集ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto13
+
+第13回 Smalltalk勉強会＠京都
+日時：2009年11月04日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+この勉強会が発足して一年が経ちました。早いものですね。今月は
+先月に引き続き、課題の続きを行います。デザインレビューおよび
+コードレビューを行う過程を皆さんと共有してゆきましょう。会場
+でUML図を描いてデザインを行うのも良し、システムブラウザを用い
+てプログラミングを行うのも良し、三三五五の行動に時間の半分を
+使い、あとの半分をそれらの議論や検討に使いましょう。
+
+できますれば、ノート型のパーソナルコンピュータ（Windows Vista
+/XP または Mac OS X (on Intel Mac)）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

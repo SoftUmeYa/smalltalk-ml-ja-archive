@@ -1,0 +1,174 @@
+From ume ＠ softumeya.com  Thu Oct 17 00:44:45 2013
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Thu, 17 Oct 2013 00:44:45 +0900
+Subject: [Squeak-ja: 4704]
+	第58回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTDL+a++gpPywcmpAc6ZADj=K09X8Tpm3r3++E8BZJXyA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2013/10/31(木) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai58kaismalltalkbenkyoukai
+
+今回のテーマはNativeBoostです。
+数あるSqueak/PharoのFFIの仕組みの中でも最新のもので、Smalltalk側へのコールバックもサポートし、さらにインラインアセンブラで動的にネイティブコードを生成して呼び出せるという優れものです。
+勉強会では基本的な使い方をメインに解説し、余裕があれば何らかの外部ライブラリをラッピングしていくという流れにしようと思っています。「これをラッピングしたい」などリクエストやアイデアがあればぜひお寄せください。
+
+事前申し込み等は不要です。お気軽にどうぞ。
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From inosig ＠ carrot.ocn.ne.jp  Wed Oct 30 10:27:57 2013
+From: inosig ＠ carrot.ocn.ne.jp (S.Inoue)
+Date: Wed, 30 Oct 2013 10:27:57 +0900
+Subject: [Squeak-ja: 4705]
+ のＮＨＫニュースにScratchのあのネコが
+Message-ID: <5270609D.5030007@carrot.ocn.ne.jp>
+
+昨日（２９日）ＮＨＫ総合テレビの首都圏ニュースの中で、東京の高校で「IT人
+材育成の授業」が行われたとの放送がありました。
+
+グーグルのシュミット会長が東京の高校で、生徒を前にこれからは誰でもがプロ
+グラミングする時代と講演し、そのあとパソコンを前にした学生が映ったのです
+が、その画面に登場したのは何とスクラッチで、あのネコの歩く姿が！
+
+短い時間でしたが、首都圏だけとはいえＮＨＫなので、ご覧になった方は多かっ
+たと思いますが、見逃された方は・・・
+
+ＮＨＫの首都圏ＮＥＷＳ　ＷＥＢサイトの「きょうときのうのニュース」の項目
+の中で下のほうにある「グーグルＩＴ人材育成の授業」をクリックしますと、放
+送内容と同じものが動画で見ることができます。（恐らく今日３０日だけ）
+
+グーグルがＮＰＯと共同でこの活動を全国的に広めるとのことですが、このこと
+について、私が見落としているかも知れませんが、ここにはどなたも書かれては
+おられないようです。どうして。
+
+１０月３０日　　（ぶんた）井上　繁
+
+
+
+２
+
+
+
+
+
+From abee.abe ＠ nifty.ne.jp  Wed Oct 30 14:05:03 2013
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Wed, 30 Oct 2013 14:05:03 +0900
+Subject: [Squeak-ja: 4706] Re:
+	のＮＨＫニュースにScratchのあのネコが
+In-Reply-To: <5270609D.5030007@carrot.ocn.ne.jp>
+References: <5270609D.5030007@carrot.ocn.ne.jp>
+Message-ID: <CADv7uFEXJpJj2L80kxpmZHPt2+qTk6jKsvFSrmME3Qf_Z7T2MQ@mail.gmail.com>
+
+ぶんたさん
+
+ご紹介ありがとうございます。阿部です。
+このプロジェクトの監修を担当しています。
+プロジェクトのWebサイトは以下にあります。
+
+Getting to Know Computers Program「コンピューターに親しもう」プログラム（仮）
+http://www.canvas.ws/programming/
+
+その他、関連記事のリンクは以下の通りです。
+
+・Googleが日本のIT教育支援、5000台のRaspberry Piを提供へ、Schmidt会長も“授業”（ITpro）
+http://itpro.nikkeibp.co.jp/article/NEWS/20131029/514542/
+
+・グーグル会長来日講演の意外な中身（ITpro編集長日記）
+http://itpro.nikkeibp.co.jp/article/COLUMN/20131029/514642/
+
+・Google、10代向けに「ゼロからプログラミング」ワークショップ　Raspberry Piで初歩学ぶ（ITmedia）
+http://www.itmedia.co.jp/news/articles/1310/29/news105.html
+
+・プロセスと結果、Googleシュミット会長が重んじるのは？　日本の高校生と対話（ITmedia）
+http://www.itmedia.co.jp/news/articles/1310/29/news108.html
+
+・Raspberry Piを活用--グーグルなど、子ども向けプログラミング講座開始（CNET）
+http://japan.cnet.com/news/service/35039138/
+
+・Google、日本の小中高校生に「Raspberry Pi」でプログラミング実習を開始（インターネットWatch）
+http://internet.watch.impress.co.jp/docs/news/20131029_621377.html
+
+・名刺サイズのPCでプログラミング学習、GoogleとCANVASが共同企画を発表（リセマム）
+http://resemom.jp/article/2013/10/29/15781.html
+
+・グーグルが学校でＩＴ育成授業（NHK Webニュース）
+http://www3.nhk.or.jp/news/html/20131029/k10015650771000.html
+
+・グーグル:日本でコンピューター科学教育を支援　シュミット会長（毎日新聞）
+http://mainichi.jp/feature/news/20131029mog00m040016000c.html
+
+・[CNET Japan] Raspberry Piを活用--グーグルなど、子ども向けプログラミング講座開始（朝日新聞デジタル）
+http://www.asahi.com/tech_science/cnet/CNT201310290044.html
+
+今回使うScratchは1.4で、当然、Squeak Smalltalkも入っています。
+まだ始まったばかりでこれからが本番ですが、せっかくのチャンスなので頑張ります。
+よろしくお願いいたします。
+
+ //abee
+--
+阿部 和広  EMAIL abee ＠ squeakland.jp
+
+2013年10月30日 10:27 S.Inoue <inosig ＠ carrot.ocn.ne.jp>:
+> 昨日（２９日）ＮＨＫ総合テレビの首都圏ニュースの中で、東京の高校で「IT人
+> 材育成の授業」が行われたとの放送がありました。
+>
+> グーグルのシュミット会長が東京の高校で、生徒を前にこれからは誰でもがプロ
+> グラミングする時代と講演し、そのあとパソコンを前にした学生が映ったのです
+> が、その画面に登場したのは何とスクラッチで、あのネコの歩く姿が！
+>
+> 短い時間でしたが、首都圏だけとはいえＮＨＫなので、ご覧になった方は多かっ
+> たと思いますが、見逃された方は・・・
+>
+> ＮＨＫの首都圏ＮＥＷＳ　ＷＥＢサイトの「きょうときのうのニュース」の項目
+> の中で下のほうにある「グーグルＩＴ人材育成の授業」をクリックしますと、放
+> 送内容と同じものが動画で見ることができます。（恐らく今日３０日だけ）
+>
+> グーグルがＮＰＯと共同でこの活動を全国的に広めるとのことですが、このこと
+> について、私が見落としているかも知れませんが、ここにはどなたも書かれては
+> おられないようです。どうして。
+>
+> １０月３０日　　（ぶんた）井上　繁
+>
+>
+>
+> ２
+>
+>
+>
+>
+
+From inosig ＠ carrot.ocn.ne.jp  Wed Oct 30 20:39:43 2013
+From: inosig ＠ carrot.ocn.ne.jp (S.Inoue)
+Date: Wed, 30 Oct 2013 20:39:43 +0900
+Subject: [Squeak-ja: 4707] Re:
+ のＮＨＫニュースにScratchのあのネコが
+In-Reply-To: <CADv7uFEXJpJj2L80kxpmZHPt2+qTk6jKsvFSrmME3Qf_Z7T2MQ@mail.gmail.com>
+References: <5270609D.5030007@carrot.ocn.ne.jp>
+ <CADv7uFEXJpJj2L80kxpmZHPt2+qTk6jKsvFSrmME3Qf_Z7T2MQ@mail.gmail.com>
+Message-ID: <5270EFFF.9000104@carrot.ocn.ne.jp>
+
+阿部先生へ
+
+詳しい現状のご紹介有難うございました。
+
+阿部先生がこのプロジェクトのコアであったことが確認できまして、心より喜ん
+でおります。
+
+楽しみなことになって参りました。お忙しくなることでしょうが、頑張ってくだ
+さるよう。
+
+では。　　「ぶんた」からでした。
+
+
+

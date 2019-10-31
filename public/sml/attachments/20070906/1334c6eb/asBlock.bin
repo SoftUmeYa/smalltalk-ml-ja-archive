@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+
+<st-source>
+<!-- Changes in change set asBlock -->
+<time-stamp>From VisualWorks NonCommercial, 7.5 of April 16, 2007 on September 5, 2007 at 3:08:45 pm</time-stamp>
+
+
+<methods>
+<class-id>Core.SequenceableCollection</class-id> <category>enumerating</category>
+
+<body package="Collections-Abstract" selector="with:collect:">with: aSequenceableCollection collect: aBlock 
+	| otherCollection newCollection |
+	self size ~= aSequenceableCollection size ifTrue: [^self noMatchError].
+	newCollection := self species withSize: self size.
+	otherCollection := ReadStream on: aSequenceableCollection.
+	1 to: self size
+		do: 
+			[:index | 
+			newCollection at: index
+				put: (aBlock value: (self at: index) value: otherCollection next)].
+	^newCollection</body>
+</methods>
+
+
+<methods>
+<class-id>Core.Symbol</class-id> <category>converting</category>
+
+<body package="Collections-Text" selector="asBlock">asBlock
+	| aStream numberOfArguments aCode |
+	
+	[aStream := String new writeStream.
+	aStream nextPutAll: '['.
+	numberOfArguments := self numArgs.
+	(1 to: numberOfArguments + 1) do: 
+			[:n | 
+			aStream
+				nextPutAll: ':a';
+				nextPutAll: n printString;
+				space].
+	aStream
+		nextPutAll: '|';
+		cr.
+	aStream
+		nextPutAll: '| arguments |';
+		cr.
+	aStream
+		nextPutAll: 'arguments := Array new: ';
+		nextPutAll: numberOfArguments printString;
+		nextPutAll: '.';
+		cr.
+	(2 to: numberOfArguments + 1) do: 
+			[:n | 
+			aStream
+				nextPutAll: 'arguments at: ';
+				nextPutAll: (n - 1) printString;
+				nextPutAll: ' put: a';
+				nextPutAll: n printString;
+				nextPutAll: '.';
+				cr].
+	aStream
+		nextPutAll: 'a1 perform: ';
+		nextPutAll: self printString;
+		nextPutAll: ' withArguments: arguments'.
+	aStream nextPutAll: ']'.
+	aCode := aStream contents] 
+			ensure: [aStream close].
+	^Compiler 
+		evaluate: aCode
+		for: nil
+		logged: false</body>
+
+<body package="Collections-Text" selector="asBlockFor:">asBlockFor: aReceiver 
+	| aStream numberOfArguments aCode |
+	
+	[aStream := String new writeStream.
+	aStream nextPutAll: '['.
+	numberOfArguments := self numArgs.
+	(1 to: numberOfArguments) do: 
+			[:n | 
+			aStream
+				nextPutAll: ':a';
+				nextPutAll: n printString;
+				space].
+	aStream
+		nextPutAll: '|';
+		cr.
+	aStream
+		nextPutAll: '| arguments |';
+		cr.
+	aStream
+		nextPutAll: 'arguments := Array new: ';
+		nextPutAll: numberOfArguments printString;
+		nextPutAll: '.';
+		cr.
+	(1 to: numberOfArguments) do: 
+			[:n | 
+			aStream
+				nextPutAll: 'arguments at: ';
+				nextPutAll: n printString;
+				nextPutAll: ' put: a';
+				nextPutAll: n printString;
+				nextPutAll: '.';
+				cr].
+	aStream
+		nextPutAll: 'self perform: ';
+		nextPutAll: self printString;
+		nextPutAll: ' withArguments: arguments'.
+	aStream nextPutAll: ']'.
+	aCode := aStream contents] 
+			ensure: [aStream close].
+	^Compiler 
+		evaluate: aCode
+		for: aReceiver
+		logged: false</body>
+</methods>
+
+
+
+</st-source>

@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7621] Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207621%5D%20%3D%3Fiso-2022-jp%3Fb%3FVWJ1bnR1IDkuMDQbJEIkRxsoQkp1bg%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkckk9PCgkNSQ7JGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSn1LISRyNjUkKCRGJC8kQCQ1JCQbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007620.html">
+   <LINK REL="Next"  HREF="007622.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7621] Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207621%5D%20%3D%3Fiso-2022-jp%3Fb%3FVWJ1bnR1IDkuMDQbJEIkRxsoQkp1bg%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkckk9PCgkNSQ7JGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSn1LISRyNjUkKCRGJC8kQCQ1JCQbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7621] Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2009年 8月  8日 (土) 11:34:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007620.html">[SML 7620] Re: 第10回Smalltalk勉強会＠京都（Re:  残念）
+</A></li>
+        <LI>次の記事 <A HREF="007622.html">[SML 7622] Re: Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7621">[ 日付 ]</a>
+              <a href="thread.html#7621">[ スレッド ]</a>
+              <a href="subject.html#7621">[ 件名 ]</a>
+              <a href="author.html#7621">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>はじめまして。
+ハンドル名で失礼します、hirowadendenと申します。
+今までに何度となく挫折していますが、性懲りもなくまたSmalltalkを勉強しよ
+うと思っています。
+
+Ubuntu 9.04(i386版)にVisualWorks7.6ncとJun781をインストールし、Junのイン
+ストール確認のためにJun LauncherのexpamplesのCube, Benzenなどを起動した
+のですが、OpenGL関連のexamplesはビューの中身が表示されません。正しく表示
+するための方法もしくはヒントをご教示ください。なお、Soroban, Spiro
+Design, Cartoon MovieなどOpenGLではないexamplesは正しく表示されています。
+
+[環境]
+VisualWorks7.6NC (&quot;じゅん for Smalltalk&quot;ページのインストール方法を参考
+に、CD-ROMイメージから必要なファイルを解凍してインストール)
+Jun781 (&quot;じゅん for Smalltalk&quot;ページのインストール方法を参考に、パーセル
+からインストール)
+※ libGL.so, libGLU.so, libX11.so, libXext.soが存在しないので、
+/usr/local/libの下に以下のシンボリックリンクを作成:
+ libGL.so -&gt; /usr/lib/libGL.so.1
+ libGLU.so -&gt; /usr/lib/libGLU.so.1
+ libX11.so -&gt; /usr/lib/libX11.so.6
+ libXext.so -&gt; /usr/lib/libXext.so.6
+上記リンク先は、さらに以下のようなシンボリックリンクになっています:
+ /usr/lib/libGL.so.1 -&gt; libGL.so.1.2
+ /usr/lib/libGLU.so.1 -&gt; libGLU.so.1.3.070300
+ /usr/lib/libX11.so.6 -&gt; libX11.so.6.2.0
+ /usr/lib/libXext.so.6 -&gt; libXext.so.6.4.0
+
+OS: Ubuntu 9.04 (Linux 2.6.28-14-generic i686)
+CPU: AMD Athlon(tm) Dual Core Processor 4850e
+メインメモリ: 2GByte
+チップセット: AMD 690G + ATI SB600
+オンボードグラフィック: ATI Radeon X1250 (自動でメインメモリから128MByte
+割当て)
+ビデオドライバ: the open-source &quot;radeon&quot; driver
+&lt;glxinfoから抜粋の情報&gt;
+direct rendering: Yes
+server glx vendor string: SGI
+server glx version string: 1.2
+client glx vendor string: SGI
+client glx version string: 1.4GLX version: 1.2
+OpenGL vendor string: DRI R300 Project
+OpenGL renderer string: Mesa DRI R300 20060815 x86/MMX+/3DNow!+/SSE2 NO-TCL
+OpenGL version string: 1.3 Mesa 7.4
+
+[やったこと]
+(1)&quot;Jun Launcher&quot;のexamplesからOpenGL関連のexampleを起動
+・&quot;Jun Launcher&quot;のexamplesからCube, BenzenなどOpenGL関連のexampleを起動
+すると、Viewfinderのウインドウが開き、メニューやホイールは表示されるが、
+ビューの中身は真っ白である。
+・Viewfinderのウインドウを閉じると、VisualWorksを起動したシェル画面に以
+下のようなメッセージがでる。
+    X11 Error:
+    Display:	0x095809b0
+    Serial:	0x0000879e
+    Major:	154
+    Minor:	15
+    XID:	0x040000ed
+    GLXBadDrawable
+
+(2)&quot;JunOpenGLInterface example1&quot;を&quot;Do it&quot;(これは正常に動作)
+・&quot;Do it&quot;したウインドウ内にカラフルな六角形が表示され、マウスボタンをク
+リックすると、ウインドウ内の表示が&quot;Do it&quot;する前に戻る。
+
+(3)&quot;JunOpenGLInterface example2&quot;を&quot;Do it&quot;
+・&quot;Depth32Image&quot;というタイトルのウインドウが開くが、ウインドウの中身は
+真っ白である。
+・&quot;Depth32Image&quot;というタイトルのウインドウが開くときに、VisualWorksを起
+動したシェル画面に以下のようなメッセージがでる。(閉じるときにはメッセー
+ジはでない)
+    X11 Error:
+    Display:	0x095809b0
+    Serial:	0x000276fb
+    Major:	154
+    Minor:	15
+    XID:	0x04000163
+    GLXBadDrawable
+
+(4)&quot;JunOpenGLInterface glVersion.&quot;を&quot;Inspect it&quot;
+・a ByteStringが返されるが、中身は空('')。('1.3 Mesa 7.4'となるべき?)
+
+(5)&quot;JunOpenGLInterface glVersion.&quot;を&quot;Debug it&quot;
+・Stepping intoで順に追っていくと、JunGLMesaInterface&gt;&gt;glGetString: でエ
+ラーになり、_errorCodeはa SystemError(#'bad handle',nil)になっており、こ
+こで続行(Run)すると、&quot;Unhandled exception: bad hadle&quot;とExceptionのウイン
+ドウが開く。(4)の詳細を追うことができない。
+
+(6)&quot;JunOpenGLInterface gluVersion.&quot;を&quot;Inspect it&quot;(これは正常に動作)
+・a ByteStringが返され、中身は'1.3'。
+
+(7)&quot;JunOpenGLInterface gluVersion.&quot;を&quot;Debug it&quot;
+・Stepping intoで順に追っていくと、JunGLMesaInterface&gt;&gt;gluGetString: で
+エラーになり、_errorCodeはa SystemError(#'bad handle',nil)になっており、
+ここで続行(Run)すると、&quot;Unhandled exception: bad hadle&quot;とExceptionのウイ
+ンドウが開く。(6)では正常に動作していたのに、&quot;Debug it&quot;すると例外が発生
+してしまう。
+
+(8)(本件とは関係ないかもしれませんが)Jun4Java729をSun jdk1.5.0_18上で実
+行し、&quot;じゅんランチャー&quot;の実例集からキューブ, ベンゼンを起動
+・デフォルトOpenGLビューがJunGLCanvasのときは正常に表示される。
+・デフォルトOpenGLビューがJunGLJPanelのときはJun for Smalltalkと同じく
+ビューファインダのウインドウが開きメニューやホイールは表示されるが、
+ビューの中身は表示されない。
+
+(1)〜(3)を&quot;Debug it&quot;で追うのは手強そうだったので、(4)〜(7)を試しました
+が、普通に実行するのと、&quot;Debug it&quot;で実行するのでは結果が違うので分からな
+くなってしまいました。
+Jun4Javaでは表示できているので、Jun for SmalltalkでもOpenGLのexamplesを
+表示できるのではないかと思っています。どんなことでも結構ですので、ご教示
+いただきたくお願い致します。
+
+-- hirowadenden
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007620.html">[SML 7620] Re: 第10回Smalltalk勉強会＠京都（Re:  残念）
+</A></li>
+	<LI>次の記事 <A HREF="007622.html">[SML 7622] Re: Ubuntu 9.04でJunのOpenGL examplesを表示させる方法を教えてください
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7621">[ 日付 ]</a>
+              <a href="thread.html#7621">[ スレッド ]</a>
+              <a href="subject.html#7621">[ 件名 ]</a>
+              <a href="author.html#7621">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

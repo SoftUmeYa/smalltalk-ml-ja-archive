@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7139] Re: 並び替えの致命傷
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207139%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkpCJFNCWCQoJE5DV0w/PX0bKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007137.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7139] Re: 並び替えの致命傷</H1>
+    <B>Katsuyuki Saegusa</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207139%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkpCJFNCWCQoJE5DV0w/PX0bKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7139] Re: 並び替えの致命傷">saegusa ＠ saesoft.jp
+       </A><BR>
+    <I>2006年 2月 25日 (土) 08:59:12 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007137.html">[SML 7137] [ANNOUNCE] Jun for Java (Jun547)
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7139">[ 日付 ]</a>
+              <a href="thread.html#7139">[ スレッド ]</a>
+              <a href="subject.html#7139">[ 件名 ]</a>
+              <a href="author.html#7139">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+[SML 7132] 並び替えの致命傷のメール
+ Smalltalkのクラスの勉強になりました。
+
+私はまだ従来の言語的な思考から抜け出せないのかも
+しれませんので、皆様の意見をお願いします。
+
+整列している・していないコレクションに、１個だけ追加したい
+場合もあるし、いっぺんに沢山入れたい場合もあります。
+
+そのたびに、SortedCollectionとOrderdCollectionを変換しあう、
+というのも、そそっかしい私には、難しい作業のように思います。
+
+もし、標準のクラス？に自分が手を加えられるなら、こういう仕様に
+したいな、と思ってしまいます。
+
+
+１）OrderdCollectionの場合、quickSortメソッドがあると...
+
+aLiteralArray := #(0 9 1 8 2 7 3 6 4 5).
+aOrderdCollection := OrderedCollection new.
+aLiteralArray do: [:each | aOrderdCollection add: each].
+aOrderdCollection quickSort: [:n1 :n2 | n1 &gt;= n2].
+
+
+私家版をつくるならaddArray,quickSortを加えて...
+
+aLiteralArray := #(0 9 1 8 2 7 3 6 4 5).
+aOrderdCollection := OrderdCollection new. 
+aOrderdCollection  
+  addArray: aLiteralArray; 
+  quickSort: [:n1 :n2 | n1 &gt;= n2].
+
+
+
+２）SortedCollectionの場合、ソートのロックができると...
+
+aLiteralArray := #(0 9 1 8 2 7 3 6 4 5).
+aSortedCollection := SortedCollection new.
+aSortedCollection sortBlock: [:n1 :n2 | n1 &gt;= n2].
+aSortedCollection lockSort.
+aLiteralArray do: [:each | aSortedCollection add: each].
+aSortedCollection unlockSort.
+
+私家版をつくるならaddArrayリバーシングを実装して
+先頭と最後にlock,unlockをいれてしまおう...
+
+aLiteralArray := #(0 9 1 8 2 7 3 6 4 5).
+aSortedCollection := SortedCollection new.
+aSortedCollection  
+  sortBlock: [:n1 :n2 | n1 &gt;= n2];
+  addArray:  aLiteralArray.
+  
+みたいに書けるとおっちょこちょいでもOKだ、と思ってしまうのです。
+
+ところで、こういった変更を「標準のライブラリ」に施すことは
+行儀の良い作法とは言えない気がするのですが、どのように
+するのが良いのでしょうか。
+
+現在私は、クラスのソースが全てあって、依存関係のない実行形式
+１個を大変高速に出力できるコンパイラを使っている場合は、
+気に入らないライブラリは全部触ってビルドしなおします。
+あるいは、状況によってはソースをフォークして
+MySortedCollectionみたいなのを作ってみたり。
+
+ただ、そうなってくると開発環境がアップデートするとバグを迂回した
+ところが違う実装になってたりして、全ソースの差分をとるのが
+結構大変です。勉強にはなりますが。。。
+
+K.Saegusa
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007137.html">[SML 7137] [ANNOUNCE] Jun for Java (Jun547)
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7139">[ 日付 ]</a>
+              <a href="thread.html#7139">[ スレッド ]</a>
+              <a href="subject.html#7139">[ 件名 ]</a>
+              <a href="author.html#7139">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

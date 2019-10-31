@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7760] セーブされたファイルが自分でわかるプログラム
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207760%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTshPCVWJDUkbCQ/JVUlISUkJWsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCw8K0osJEckbyQrJGslVyVtJTAlaSVgGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007759.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7760] セーブされたファイルが自分でわかるプログラム</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207760%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTshPCVWJDUkbCQ/JVUlISUkJWsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCw8K0osJEckbyQrJGslVyVtJTAlaSVgGyhC%3F%3D&In-Reply-To="
+       TITLE="[SML 7760] セーブされたファイルが自分でわかるプログラム">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2010年 1月 31日 (日) 20:07:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007759.html">[SML 7759] 第16回Smalltalk勉強会＠京都
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7760">[ 日付 ]</a>
+              <a href="thread.html#7760">[ スレッド ]</a>
+              <a href="subject.html#7760">[ 件名 ]</a>
+              <a href="author.html#7760">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Smalltalkerの皆さんへ
+
+ここに述べるみたいなプログラムを書き下ろせるでしょうか。プロ
+グラムの中で、そのプログラム自身がセーブされているファイル名
+を用いるプログラムです。
+
+たとえば、以下のようなプログラムを書くとします。ただし、この
+プログラムをセーブしたファイル名を、このプログラムの中で使用
+しなければなりません。どこにセーブしてもいいのです。ファイル
+としてどこにセーブされるのかわからないのに、このプログラムの
+中で当該のファイル名を使わなければならないのです。
+
+|<i> aFilename |
+</I>aFilename := ＜このプログラムをセーブしたファイル名＞.
+Transcript cr; show: aFilename printString
+
+もしも、上記のプログラムを「/usr/aoki/smalltalk/tmp.st」とい
+うファイルにセーブしたとしたら、次のプログラムを実行したり、
+
+'/usr/aoki/smalltalk/tmp.st' asFilename fileIn
+
+ファイルリスト（ファイルブラウザ）などで当該のファイルを選択
+してファイルインしたら、トランスクリプトにそのファイル名が出
+力されなければなりません。
+
+何を言っているのかわからないかもしれませんが…、うまく説明で
+きないことを許してください。今度の勉強会＠京都で援用しようと
+思い立ち、それなりに実装したのですが、もっと良策があるやもし
+れないなぁと考え、皆さんに訊ねてみようとポストした次第です。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007759.html">[SML 7759] 第16回Smalltalk勉強会＠京都
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7760">[ 日付 ]</a>
+              <a href="thread.html#7760">[ スレッド ]</a>
+              <a href="subject.html#7760">[ 件名 ]</a>
+              <a href="author.html#7760">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

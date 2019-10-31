@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2458] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202458%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hY09TWCAbJEIkRxsoQiAg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FRmlsZURpcmVjdHJ5IGZpbGVOYW1lcyAbJEIkTkE0M1E/dDt6JCwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSD4zUSRLJEokaxsoQg%3D%3D%3F%3D&In-Reply-To=D752B4D6-02AD-43F0-911E-BA7CB387D59F%40st.rim.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002455.html">
+   <LINK REL="Next"  HREF="002453.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2458] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202458%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hY09TWCAbJEIkRxsoQiAg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FRmlsZURpcmVjdHJ5IGZpbGVOYW1lcyAbJEIkTkE0M1E/dDt6JCwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSD4zUSRLJEokaxsoQg%3D%3D%3F%3D&In-Reply-To=D752B4D6-02AD-43F0-911E-BA7CB387D59F%40st.rim.or.jp"
+       TITLE="[Squeak-ja: 2458] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 5月 31日 (火) 16:16:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002455.html">[Squeak-ja: 2455] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+</A></li>
+        <LI>次の記事 <A HREF="002453.html">[Squeak-ja: 2453] OSC2005/Hokkaido
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2458">[ 日付 ]</a>
+              <a href="thread.html#2458">[ スレッド ]</a>
+              <a href="subject.html#2458">[ 件名 ]</a>
+              <a href="author.html#2458">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林です。こんにちは。
+
+昨日に続き MacOS X VM 関係の件です。
+リリースノートを見てみたのですが…
+
+バージョン 3.8.7b2 あたりでキーボードイベントの扱いを修正 
+しているようです。
+また、この際に文字コードが UTF-32 に変更されたようです（今 
+は UCS2 を前提）。
+これについては Squeak のイメージの方を修正しないと難しそう 
+です。
+どなたかチャレンジしてみませんか？
+# もしくは、これはプラットフォームをまたがって共通化する伏線なの 
+かな？
+
+またファイル周りに関しても、ターミナルからコマンドで起動できるよ 
+うにした
+際に若干、手が入ってるようです。ただ、これは当初の問題とはちょっ 
+と関係無
+いかもしれません。
+
+なお、上記リリースノートにもメモがありますが、3.8 シリーズ 
+はまだまだ安定
+してない印象です。
+ファイル名に関する実験は、source forge に残された  
+3.7.5b3 を使った方が、
+いいのかもしれません。
+
+では。
+
+On 2005/05/30, at 23:17, Tetsuya HAYASHI wrote:
+
+&gt;<i> 林です。どうも。
+</I>&gt;<i>
+</I>&gt;<i> On 2005/05/27, at 15:06, Kouji takahashi wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> 高橋@池袋です。 VMMakingの進捗状況などの報告です。
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> お疲れさまです。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> ビルドしたVMで日本語imageが動作するところまできたの
+</I>&gt;&gt;<i> ですが、漢字を含むファイルはfilenameが''になりま 
+</I>&gt;&gt;<i> す。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> John M McIntoshさんのVMでも同様です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> うちのMacOSが余計なお世話をしているのかな？
+</I>&gt;&gt;<i> 何かのヒントありませんか？
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ソースの方は追いかけてないので、はっきりと言えないのですが。
+</I>&gt;<i> JMM さんの以下のサイト
+</I>&gt;<i>
+</I>&gt;<i>     <A HREF="http://homepage.mac.com/johnmci/FileSharing.html">http://homepage.mac.com/johnmci/FileSharing.html</A>
+</I>&gt;<i>
+</I>&gt;<i> にアップロードされてる VM (Squeak 3.8.8beta2.app.sit) を 
+</I>&gt;<i> ダウン
+</I>&gt;<i> ロードし、「パッケージの内容を表示」で Info.plist の  
+</I>&gt;<i> encoding
+</I>&gt;<i> の値を UTF-8 に書き換えて試してみました。
+</I>&gt;<i>
+</I>&gt;<i> 結果は、やはり同様にファイル名のハンドリングに失敗しました。
+</I>&gt;<i> なお、悪いことに日本語の入力もできませんでした。
+</I>&gt;<i>
+</I>&gt;<i> キーボードイベント周りも見てみる必要がありそうです。
+</I>&gt;<i>
+</I>&gt;<i> # 果たして、これが 64bit 化の問題なのかどうか？
+</I>&gt;<i> # もしかしたら、少しバージョンが巻き戻っていそうな予感もします。
+</I>&gt;<i> # 一時期、MacRoman コーディングの関係で日本語の入力が出 
+</I>&gt;<i> 来なく
+</I>&gt;<i> # なったバージョンがあったような覚えがあります。
+</I>
+
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002455.html">[Squeak-ja: 2455] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+</A></li>
+	<LI>次の記事 <A HREF="002453.html">[Squeak-ja: 2453] OSC2005/Hokkaido
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2458">[ 日付 ]</a>
+              <a href="thread.html#2458">[ スレッド ]</a>
+              <a href="subject.html#2458">[ 件名 ]</a>
+              <a href="author.html#2458">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

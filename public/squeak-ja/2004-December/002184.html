@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2184] Re: Alice on SqueakNihongo6.1 ?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202184%5D%20Re%3A%20Alice%20on%20SqueakNihongo6.1%20%3F&In-Reply-To=20041225.143608.41646560.muroya%40tokuyama-u.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002181.html">
+   <LINK REL="Next"  HREF="002188.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2184] Re: Alice on SqueakNihongo6.1 ?</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202184%5D%20Re%3A%20Alice%20on%20SqueakNihongo6.1%20%3F&In-Reply-To=20041225.143608.41646560.muroya%40tokuyama-u.ac.jp"
+       TITLE="[Squeak-ja: 2184] Re: Alice on SqueakNihongo6.1 ?">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2004年 12月 26日 (日) 03:02:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002181.html">[Squeak-ja: 2181] Alice on SqueakNihongo6.1 ?
+</A></li>
+        <LI>次の記事 <A HREF="002188.html">[Squeak-ja: 2188] Re: Alice on SqueakNihongo6.1 ?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2184">[ 日付 ]</a>
+              <a href="thread.html#2184">[ スレッド ]</a>
+              <a href="subject.html#2184">[ 件名 ]</a>
+              <a href="author.html#2184">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+はじめまして。
+
+On Sat, 25 Dec 2004 14:36:08 +0900 (JST)
+Shin MUROYA &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">muroya ＠ yukawa.kyoto-u.ac.jp</A>&gt; wrote:
+&gt;<i>いま学部2年生の必修科目のソフトウエア演習で
+</I>&gt;<i>squeak を使ってプログラミングを教えつつあります。
+</I>
+近年、大学においてもSqueakで情報処理の基礎を教えるケースが増えてきたよう
+に感じます。
+
+&gt;<i>現在 WIndows-XP 上でSqueakNihongo6.1を使っています。
+</I>&gt;<i>SqueakToys は「スクイークであそぼう」をネタ本にして
+</I>&gt;<i>こなせそうなのですが、もっと欲張りの学生のために、
+</I>&gt;<i>eToys を越えた使い方も用意しておきたいと考えています。
+</I>
+それは大切だと思います。
+
+&gt;<i>質問は 
+</I>&gt;<i>1、SqueakNihongo6.1.image から起動後、以前のバージョンで
+</I>&gt;<i>起動直後にでていたような、3D や Game の入った
+</I>&gt;<i>&quot; The World of Squeaking&quot; Window を開くにはどうしたら
+</I>&gt;<i>良いのでしょうか?
+</I>
+基本的には、SqeuakMapからPackage Loaderを使って、これらを読み込むことにな
+ります。ただし、SqueakMapに同じものがなかったり、読み込みに失敗したり、読
+み込めても正しく動かない場合があります。
+
+&gt;<i>2、また、このグラフィカルなメニューが出せないとしたら、
+</I>&gt;<i>たとえば、3D の Alice を使うにはどのようにすればよいのでしょうか。
+</I>
+Aliceについて、Nihongo6.1で読み込みできるようにクイックハックしてみました。
+ただし、単に読めるというだけで、ちゃんとテストしていませんし、不具合があ
+るかもしれません。
+実際に山本さんのチュートリアルのさわりを試してみるとPoohが動かなかったの
+でそれも直しています。
+
+<A HREF="http://hw001.gate01.com/~thoru/squeak/etoy/alice1.html">http://hw001.gate01.com/~thoru/squeak/etoy/alice1.html</A>
+
+以下にインストール手順を示します。
+
+1. Nihongo6.1を起動して、ワールドメニューの「別名で保存・・・」を選び、イメー
+   ジを適当な名前で保存します。
+2. ファイルリストで添付のNihongo61AliceQuickHack.1.csをインストールします。
+3. ワールドメニューの「開く・・・」から「Package Loader」を選びます。
+4. SqueakMapパッケージをアップグレードするか聞かれるので、「はい」と答え
+   ます。
+5. Package Loaderから「Baloon 3D」を選んで黄ボタンメニューから「install」
+   を選びます。
+6. Package Loaderから「FullImageProjectAlice」を選んで黄ボタンメニューか
+   ら「install」を選びます。
+7. ワールドメニューの「保存」を選び、イメージを保存します。
+
+お試しください。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee.abe ＠ nifty.ne.jp</A>
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Nihongo61AliceQuickHack.1.cs
+型:         application/octet-stream
+サイズ:     1060 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20041226/5452ea0c/Nihongo61AliceQuickHack.1.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20041226/5452ea0c/Nihongo61AliceQuickHack.1.obj</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002181.html">[Squeak-ja: 2181] Alice on SqueakNihongo6.1 ?
+</A></li>
+	<LI>次の記事 <A HREF="002188.html">[Squeak-ja: 2188] Re: Alice on SqueakNihongo6.1 ?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2184">[ 日付 ]</a>
+              <a href="thread.html#2184">[ スレッド ]</a>
+              <a href="subject.html#2184">[ 件名 ]</a>
+              <a href="author.html#2184">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

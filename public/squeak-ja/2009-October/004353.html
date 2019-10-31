@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4353] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204353%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdvb2dsZSBJdD8gKFJlOiA%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIxMxskQjJzGyhCU21hbGx0YWxrGyRCSlkbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNi8ycSROJCpDTiRpJDsbKEIp%3F%3D&In-Reply-To=4AC428BE.7030907%40yengawa.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004352.html">
+   <LINK REL="Next"  HREF="004354.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4353] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204353%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdvb2dsZSBJdD8gKFJlOiA%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIxMxskQjJzGyhCU21hbGx0YWxrGyRCSlkbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCNi8ycSROJCpDTiRpJDsbKEIp%3F%3D&In-Reply-To=4AC428BE.7030907%40yengawa.com"
+       TITLE="[Squeak-ja: 4353] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2009年 10月  1日 (木) 14:34:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004352.html">[Squeak-ja: 4352] Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+</A></li>
+        <LI>次の記事 <A HREF="004354.html">[Squeak-ja: 4354] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4353">[ 日付 ]</a>
+              <a href="thread.html#4353">[ スレッド ]</a>
+              <a href="subject.html#4353">[ 件名 ]</a>
+              <a href="author.html#4353">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+
+2009年10月1日12:57 Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">admin ＠ yengawa.com</A>&gt;:
+&gt;<i> ところで、阿部さんがライブコーディングした'Google It'が面白そうなので作
+</I>&gt;<i> りたいのですが、外部のWebブラウザを立ち上げる部分のコードはどうしていた
+</I>&gt;<i> のでしょうか?
+</I>
+HTTPClient class&gt;&gt;requestURL:target: を使いました。このサンプルは以下にあります。
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509">http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509</A>
+このコメントにもありますが、この方法はSqueakをWebブラウザのプラグインで起動したときにのみ有効です。
+また、Squeakのバージョンによっては
+StandardFileStream&gt;&gt;requestURL:target:ifError:の中でセマフォがロックすることがあるので、その場合は適当に直してください。
+
+スタンドアロンのSqueakから呼び出す場合は、 Win32Shell&gt;&gt;shellOpen: を使います。これもサンプルがあります。
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679">http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679</A>
+コメントには開発版が必要とありますが、SqueakのバージョンによってはFFIも含めて入っていないこともあるので、その場合は適当なバージョンから引っこ抜いてきてください。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004352.html">[Squeak-ja: 4352] Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+</A></li>
+	<LI>次の記事 <A HREF="004354.html">[Squeak-ja: 4354] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4353">[ 日付 ]</a>
+              <a href="thread.html#4353">[ スレッド ]</a>
+              <a href="subject.html#4353">[ 件名 ]</a>
+              <a href="author.html#4353">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

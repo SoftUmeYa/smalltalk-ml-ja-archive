@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204280%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHN3aWtpMS41GyRCJEcbKEJh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FICBQcmltaXRpdmUgSGFzIGZhaWxlZA%3D%3D%3F%3D&In-Reply-To=20090709084023.0B5F.41E77AC0%40seagreen.ocn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004279.html">
+   <LINK REL="Next"  HREF="004281.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204280%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHN3aWtpMS41GyRCJEcbKEJh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FICBQcmltaXRpdmUgSGFzIGZhaWxlZA%3D%3D%3F%3D&In-Reply-To=20090709084023.0B5F.41E77AC0%40seagreen.ocn.ne.jp"
+       TITLE="[Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2009年 7月  9日 (木) 09:09:14 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004279.html">[Squeak-ja: 4279] swiki1.5でa Primitive Has failed
+</A></li>
+        <LI>次の記事 <A HREF="004281.html">[Squeak-ja: 4281] Re: swiki1.5でa  Primitive Has failed
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4280">[ 日付 ]</a>
+              <a href="thread.html#4280">[ スレッド ]</a>
+              <a href="subject.html#4280">[ 件名 ]</a>
+              <a href="author.html#4280">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Thu, 09 Jul 2009 08:47:21 +0900,
+土本 (Florian) 強 wrote:
+&gt;<i> 
+</I>&gt;<i> 　土本です。
+</I>&gt;<i> 
+</I>&gt;<i> 　長いこと使っているswiki1.5のサーバーを再起動させたら、a Primitive has
+</I>&gt;<i> failedのエラーが出るようになってしまいました。
+</I>&gt;<i> 　自分で作ったWikiを削除し、refs,ani,defaultだけにしたところ起動するよう
+</I>&gt;<i> ですが、せっかくのデータが亡くなってしまうのは残念です。
+</I>&gt;<i> 　何か似たような状況になった方はおられますでしょうか？
+</I>&gt;<i> 
+</I>&gt;<i> 　errorの直前では、
+</I>&gt;<i> 
+</I>&gt;<i> String class(Behavior)&gt;&gt;basicNew:
+</I>&gt;<i> String class(Behavior)&gt;&gt;new;
+</I>&gt;<i> String(SequenceableCollection)&gt;&gt;copyFrom:to:
+</I>&gt;<i> XmlSwikiStorage&gt;&gt;loadPage:from:startingAt:
+</I>&gt;<i> 
+</I>&gt;<i> 　辺りからのエラーのようです。basicNew(&lt;primitive: 71&gt;)が正常に動かない
+</I>&gt;<i> 状況というとオブジェクトメモリが不足しているのでしょうか？
+</I>
+  プラットフォームによってはそうかもしれませんが、new: (new;ではないで
+すよね)でのエラーの場合、インデックスの計算が間違っていて負の数がnew:
+に渡っているということもありますね。やはり実際のデータと渡っている引数
+の値を見てみるのが良いのではないでしょうか。
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004279.html">[Squeak-ja: 4279] swiki1.5でa Primitive Has failed
+</A></li>
+	<LI>次の記事 <A HREF="004281.html">[Squeak-ja: 4281] Re: swiki1.5でa  Primitive Has failed
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4280">[ 日付 ]</a>
+              <a href="thread.html#4280">[ スレッド ]</a>
+              <a href="subject.html#4280">[ 件名 ]</a>
+              <a href="author.html#4280">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3359] Re: 教育用ＰＣ リナックスで再生
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203359%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=u1wluqrpb.wl%25yoshiki%40squeakland.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003357.html">
+   <LINK REL="Next"  HREF="003362.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3359] Re: 教育用ＰＣ リナックスで再生</H1>
+    <B>Kuniyasu Suzaki</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203359%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=u1wluqrpb.wl%25yoshiki%40squeakland.org"
+       TITLE="[Squeak-ja: 3359] Re: 教育用ＰＣ リナックスで再生">k.suzaki ＠ aist.go.jp
+       </A><BR>
+    <I>2007年 1月 17日 (水) 17:12:45 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003357.html">[Squeak-ja: 3357] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+        <LI>次の記事 <A HREF="003362.html">[Squeak-ja: 3362] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3359">[ 日付 ]</a>
+              <a href="thread.html#3359">[ スレッド ]</a>
+              <a href="subject.html#3359">[ 件名 ]</a>
+              <a href="author.html#3359">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+須崎です。
+
+Making Sausage:How the OLPC Machine was designed 
+  Jim Gettys
+の講演を聴いてきました。面白かったです。
+
+技術的にはディスプレイと電源管理が肝のようですね。ディスプレイは教科書
+の置き換えといくことで高解像度(1200x900 200DPI)なのでかなりがんばって
+います。デュアルモードでモノクロ(Reflective)とカラー(Transmissive)が切
+り替えられるのですね。戸外でも判りやすいとThinkPADとの比較の写真がでました。
+電源もバックライトをつけて1W, つけなくて 0.2Wとかなりのもんです。
+
+BIOSもLinuxBIOSと言うことで ACPIがないということでした。これ無しで電源
+管理をするとなると通常のPCとは異なる電源管理をしそうですね。まあ、CPU
+がARM9コアなので通常のPCとはまったく違いますが。
+
+UI はGTK+/Pango/ATK/Cairo stack で構成されていてこれらをPythonで管理す
+るということと。あと面白かったのは、でかいアプリケーションは走らせるな
+と言う発表は受けていました。
+
+明日の発表も聞いて余力があれば:-) 報告します。
+
+------
+suzaki
+
+ &gt;&gt;From: Yoshiki Ohshima &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yoshiki ＠ squeakland.org</A>&gt;
+ &gt;&gt;Subject: [Squeak-ja: 3357] Re: 教育用ＰＣ リナックスで再生
+ &gt;&gt;
+ &gt;&gt;  大島です。
+ &gt;&gt;
+ &gt;&gt;&gt; いま、Linux Conf Australia に参加しているのですが、OLPCが持ち込まれて
+ &gt;&gt;&gt; フレースペースで使っている人がいます。ちょっと触らせてもらったのですが、
+ &gt;&gt;&gt; 小さく軽く、使いやすそうですね。ただキーボードが小さいのとCPUパワーの
+ &gt;&gt;&gt; 少なそうなのは気になりました。
+ &gt;&gt;
+ &gt;&gt;  キーボードは意外となれるものですよ。15分くらい意識して使っていると、
+ &gt;&gt;その後大分使えるようになります。B1のキーボードはスペースやエンターキー
+ &gt;&gt;など大きいものが反応しないことがあるのでまだ現実に引き戻されることもあ
+ &gt;&gt;りますが。
+ &gt;&gt;
+ &gt;&gt;  OLPC版のEtoysは大分改良してありますので使い出があると思います。
+ &gt;&gt;
+ &gt;&gt;&gt; Making Sausage:How the OLPC Machine was designed 
+ &gt;&gt;&gt;    Jim Gettys
+ &gt;&gt;&gt; 
+ &gt;&gt;&gt; Tutorial: OLPC suger UI Tutoral
+ &gt;&gt;&gt;   Christopher Blizzard
+ &gt;&gt;&gt; 
+ &gt;&gt;&gt; <A HREF="http://lca2007.linux.org.au/Programme">http://lca2007.linux.org.au/Programme</A>
+ &gt;&gt;&gt;
+ &gt;&gt;&gt; があるので聞くつもりです。面白ければ報告します。
+ &gt;&gt;	
+ &gt;&gt;  あー、彼らはこれに行っていたのですか。締め切り前なのに。機会があった
+ &gt;&gt;ら、JimとChrisによろしくお伝えください。
+ &gt;&gt;
+ &gt;&gt;-- Yoshiki
+ &gt;&gt;
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003357.html">[Squeak-ja: 3357] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+	<LI>次の記事 <A HREF="003362.html">[Squeak-ja: 3362] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3359">[ 日付 ]</a>
+              <a href="thread.html#3359">[ スレッド ]</a>
+              <a href="subject.html#3359">[ 件名 ]</a>
+              <a href="author.html#3359">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

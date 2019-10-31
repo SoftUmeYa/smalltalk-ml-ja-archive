@@ -1,0 +1,2737 @@
+From abee ＠ squeakland.jp  Sat Sep  1 18:00:54 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3565] Re: オープンソースカンファレンス  2007 Tokyo/Fall
+In-Reply-To: <20070830004629.5D3F79AFC5@1server.aquilax.co.jp>
+References: <20070830004629.5D3F79AFC5@1server.aquilax.co.jp>
+Message-ID: <46D92A4637D.6C31ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+皆さん、ありがとうございます。
+状況を表にしました(敬称略)。
+
+	10/5金	10/6土
+高橋	×	○
+横川	○	○
+土本	△午後	○
+小田	○	○
+阿部	○	○
+
+コマはこんな感じです。
+
+> ・ 机 - (1,800(w)×450(d)) 1つ 来場者と対面式に配置・椅子 2つ (調整可) 
+> ・ 出展機材 - 大型機器の展示可。
+> ・ 電源 - 電源タップはご用意ください
+> ・ ネットワーク - 有線 or 無線 LANで利用可能予定
+>    ※ HUB、ネットワークケーブルはご用意ください。
+>    ※ カスケード用に長いケーブルがあると便利です。 
+> ・ プロジェクターについて - プロジェクターとスクリーンをお持込いだだければ ご利用いただけます。
+> ・ 物品販売不可
+
+搬出入等の詳細は追って連絡があるとのことです。
+
+今のところ、私は普通のノートPCとXOの2台を持ち込む予定です。
+プロジェクタもありますので、必要ならこれも持って行きます。
+物品販売不可なのでもえすくとか売れませんが、ちらしなどは置けるでしょう。
+なにをやりましょうか。やはりSqueak(Smalltalk)に興味を持ってもらえるような
+ものがよいですよね。客層からして、子供の話よりも実用的な話が受けそうな気
+がします。
+
+講演は、ミニセミナーとセミナーに申し込んでいます。
+ミニセミナーは「展示会場にて行う、一人10分程度のショートプレゼン」で「展
+示・セミナー内容の紹介などにご利用頂けます」とのことです。10/5昼優先で申
+し込んでいます。テーマはOLPC Etoysとしていますが、たぶん変更できると思い
+ます。
+セミナーは別室(定員27-64名)で60分の枠となっています。10/6午後、64名優先で
+申し込んでいます。テーマはOLPC Etoysです。
+
+横川さん、小田さんはネタをお持ちのようなので、これをどのように使うか考え
+ましょう。できれば講演の半分くらいはOLPC Etoysにもらえると嬉しいです(OSC
+2007 Kansaiの15分はさすがにきつかった)。
+
+検討用のSwikiのページを作りましたのでお使いください。spam避けのパスワード
+は「osc2007」です。
+
+http://swikis.ddo.jp/abee/39
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From ykoubo2007 ＠ yengawa.com  Sun Sep  2 13:36:29 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3566] Re: オープンソースカンファレンス 2007 Tokyo/Fall
+In-Reply-To: <46D92A4637D.6C31ABEE@smtp.nifty.com>
+References: <20070830004629.5D3F79AFC5@1server.aquilax.co.jp>
+	<46D92A4637D.6C31ABEE@smtp.nifty.com>
+Message-ID: <20070902133033.869F.YKOUBO2007@yengawa.com>
+
+横川です。
+
+On Sat, 01 Sep 2007 18:00:54 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 横川さん、小田さんはネタをお持ちのようなので、これをどのように使うか考え
+> ましょう。できれば講演の半分くらいはOLPC Etoysにもらえると嬉しいです(OSC
+> 2007 Kansaiの15分はさすがにきつかった)。
+
+ぼくのほうは明確にネタがあるわけではないので、時間をもらえたらそれにあわ
+せて用意します。
+時間はOLPCで30分使うとして、小田さんと2等分すれば15分ぐらいですか。
+何がいいですかね?
+
+せっかくだからプログラマ向けのライブ感があるもので、他のコミュニティの人
+にSqueakをいじってみようかと思ってもらえたらいいですね。
+独自のMorphをその場で作って、開発過程をみせるとか?
+Seasideで簡単なアプリ(ブログサービスなど?)を作って見せるとか?
+
+
+-- !
+Koji Yokokawa ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From abee ＠ squeakland.jp  Sun Sep  2 15:58:33 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3567] Re: KOF2007 の展示
+In-Reply-To: <1d78507bf3eb40b7d97afa43df707946@openedu.org>
+References: <46D58C663B3.75B9ABEE@smtp.nifty.com>
+	<1d78507bf3eb40b7d97afa43df707946@openedu.org>
+Message-ID: <46DA5F19279.1AFEABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 31 Aug 2007 18:41:24 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>貸していただけると，非常に嬉しいです(_o_)
+># とても寂しい時，ひとりでいじり倒してます;-)
+
+ぜひhackされてください。
+
+># ONScripterの国際化とかが待っている気がして，非常に怖いのですが(^-^;)
+
+その前にSugarの・・・。罠ですね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Mon Sep  3 01:50:28 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3568] Re: コミックマーケット 72 「もえすく」参加報告
+In-Reply-To: <20070822063506.C623.FLORIAN@seagreen.ocn.ne.jp>
+References: <20070822060051.F265.OFG@kwansei.ac.jp>
+	<20070822063506.C623.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <46DAE9D43B4.D28DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 22 Aug 2007 06:37:58 +0900
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+>大藤> 売れ残りは阿部さんの紹介により、アカデミア社から通信販売されることに
+>大藤> なりました。一応、自分の手元にも売れ残りをキープしてありますので、機
+>大藤> 会があれば他のイベント等でも発表したいと思います。
+>
+>　通信販売が始まりましたら是非見させていただきたいと思っています。
+
+始まりました。送料お安め、2点以上購入5%割引有りですので、この機会にぜひ他
+のSqueak関連商品もよろしくお願いします。
+
+http://moesuku.ofg.jp/
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From ofg ＠ kwansei.ac.jp  Mon Sep  3 03:29:05 2007
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3569] 『もえすく』通信販売開始
+Message-ID: <20070903032807.2885.OFG@kwansei.ac.jp>
+
+大藤です。
+今夏のコミケで発表させていただいた「萌えるSqueak『もえすく』」が、
+アカデミアのサイト上から通信販売で購入できるようになりました。
+注文ページはこちらです。
+http://www.academianetwork.co.jp/service/moe/
+入手しそびれた方は、この機会にぜひどうぞ。
+
+※『もえすく』が何かについてはこちらへ。
+http://moesuku.ofg.jp/
+
+
+大藤 泰生
+ofg@kwansei.ac.jp
+
+
+From tomohiro ＠ sra.co.jp  Tue Sep  4 11:19:31 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3570] Re: オープンソースカンファレンス 2007 Tokyo/Fall
+In-Reply-To: <20070902133033.869F.YKOUBO2007@yengawa.com>
+References: <20070830004629.5D3F79AFC5@1server.aquilax.co.jp>
+	<46D92A4637D.6C31ABEE@smtp.nifty.com>
+	<20070902133033.869F.YKOUBO2007@yengawa.com>
+Message-ID: <200709041119.32192.tomohiro@sra.co.jp>
+
+おだです。反応が遅れてすみません。
+
+> ぼくのほうは明確にネタがあるわけではないので、時間をもらえたらそれにあわ
+> せて用意します。
+
+同じくです。
+
+> 時間はOLPCで30分使うとして、小田さんと2等分すれば15分ぐらいですか。
+> 何がいいですかね?
+
+おお、デモ時間を割り当ててくれるとは思っていませんでした。
+では、15分を越えないようなデモを考えてみます。
+
+ネタとしては、「Smalltalkと英語の不思議な関係」と題して
+
+o Smalltalkブラウザを拡張してSmalltalkのソースコードから
+　自然言語処理的に抽出されたキーワードをハイライト表示する。
+
+o Smalltalkブラウザで開いているソースコードと類似したソースを
+　最近開いたソースの中から探してきてブラウザごと表示する。
+
+o Smalltalkで動作しているProcessのcontextが存在する
+　methodのソースコードを集めてキーワードを抽出して表示する。
+　(処理系が今何を考えているのか脳ミソの中を暴く)
+
+みたいなことを即興デモ風にやってみたいと思います。
+
+当日までにしておかなければならない手続きなどはありますかね？
+---
+おだ
+
+From hkida ＠ hiroshima-u.ac.jp  Tue Sep  4 18:56:21 2007
+From: hkida ＠ hiroshima-u.ac.jp (Hideaki KIDA)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3571] windowXPにおける起動時，公開時のエラーについて
+Message-ID: <200709040956.AA00348@kida-xp.hiroshima-u.ac.jp>
+
+初めて投稿させていただきます。
+私広島大学附属高等学校で情報を担当しております喜田と申します。
+この度，非常勤講師として本校に来ている大学院生がSqueakを使って
+プログラミングの学習をしたいということで，学校のPC40台に
+インストール致しました。
+学校のPCはwindowsXP pro SP2です。
+生徒は制限ユーザでログインします。
+そのせいで，管理者権限でインストールして，
+生徒のIDでログインすると，ショートカットもできず，
+無理やりコピーしても，有効なショートカットにならないといった感じでした。
+このショートカットについては，どうにかセキュリティを変更することでなんとかなったのですが，
+起動時，また公開（保存？）時にエラーが起こり，公開できません。
+これができないと，授業中に作ったものを保存できないので，
+次の時間また最初からになってしまいます。
+生徒には共有サーバに個人の保存場所があり，そちらに保存したいと考えています。
+あまり，プログラミング等に詳しくないのもので，対応もよくわかりません。
+どのようにすればよいか，ご助言頂けたらと思います。
+よろしくお願いいたします。
+ちなみに，学校では高校2年生に対して，情報の授業でSqueakを使う予定です。
+
+From hirohito.araki ＠ attglobal.net  Tue Sep  4 20:44:50 2007
+From: hirohito.araki ＠ attglobal.net (Hirohito Araki)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3572] Re: windowXP における起動時，公開時のエラーについて
+Message-ID: <7.0.0.16.2.20070904203111.025927b8@attglobal.net>
+
+
+ >生徒には共有サーバに個人の保存場所があり，そちらに保存したいと考えています。
+公開する場所が次の手順で指定できます。
+
+１．公開するを長押し（公開するにカーソルを当ててそのまま少し待つ）
+２．『公開オプション』が表示されるので、『異なるサーバに公開』を選択する
+３．作品名を入力して、『了解』をクリック
+４．フォルダーを選択してください　と選択画面がでるので、ここで共有サー 
+バーの個人保管場所を選択します。
+５．選択されたフォルダが赤字の表示に変わるので、保存先を確認して『保 
+存』をクリック
+
+Windowsエクスプローラを使って、事前に共有サーバーの保存場所にSqueak保存 
+用フォルダーを作成しておくと便利です
+//araki 
+
+
+From korakurider ＠ yahoo.co.jp  Wed Sep  5 11:22:32 2007
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3573] Re: windowXP における起動時，公開時のエラーについて
+In-Reply-To: <200709040956.AA00348@kida-xp.hiroshima-u.ac.jp>
+Message-ID: <20070905022232.86955.qmail@web3605.mail.tnz.yahoo.co.jp>
+
+Korakuriderです、こんにちは。
+御質問の件は、ちゃんとシステムのセキュリティを管理してい
+るところでSqueakをお使いになる際に常に問題になることです
+。どのような運用が最適かは個々のサイトごとに異なるると思
+います。
+先生のところでうまく運用できるようになった時の設定や運用
+経験などを後日このMLで共有していただければ、他の学校の方
+にも参考になると思いますので、もしよろしければお願いいた
+します。
+
+--- Hideaki KIDA <hkida@hiroshima-u.ac.jp> wrote:
+> この度，非常勤講師として本校に来ている大学院生がSqueak
+を使って
+> プログラミングの学習をしたいということで，学校のPC40台
+に
+> インストール致しました。
+　　インストールされたのは、squeakland.jpにあるものです
+ね？（確認）
+
+> 起動時，また公開（保存？）時にエラーが起こり，公開でき
+ません。
+　　権限が制限されたユーザでSqueakを使おうとして発生する
+可能性がある代表的なエラーは次の３つがあります。
+
+(1) 「c:\program files\squeak\plugin\squeak.ini」が作成
+できない
+　このファイルはsqueakの実行環境をいろいろ設定するもので
+す。（http://squeakvm.org/win32/settings.html に説明があ
+ります。英語で読みにくいですが）
+　squeakが起動される時、このファイルが存在しなければ作成
+しようとしますが、制限ユーザだとこのフォルダに書き込む権
+限がないのでエラーになるはずです。
+　squeakを管理者ユーザでインストールした後、そのまま一回
+管理者ユーザでsqueakを起動してファイルを作成しておけば、
+その後制限つきユーザで起動してもエラーにはなりません。ま
+た、インストール直後にsqueak.iniの内容をカスタマイズして
+おくか、カスタマイズ済みのファイルを置いておけばよいでし
+ょう（後述）。
+
+（２）「c:\program fies\squeak\ユーザ名\squeak.keys」が
+作成できない
+　やはりsqueakが起動される際ファイルがなければ作成しよう
+としてエラーになります。
+squeak.iniの中のSecurityセクションで
+
+　　SecureDirectory=フォルダ
+
+という指定を書けば、squeak.keys用に他の場所を指定できま
+す。ここで制限つきユーザがアクセスできる場所を指定すると
+か、あらかじめsqueak.keysが置いてある場所を指定すればよ
+いでしょう。
+（こちらの指定では環境変数は使えません）
+
+
+（３）「c:\My Squeak\ユーザ名」 フォルダが作成できない
+　Squeakでプロジェクトを保存する場合、いったんこのフォル
+ダにプロジェクトのファイルをまず書き出し、その後に目的の
+公開場所にコピーします。したがってこのフォルダが作成でき
+ないと、（公開先がどこであれ）保存できません。
+squeak.iniの中のSecurityセクションで
+
+　　UserDirectory=フォルダ
+
+という指定を書けば、別の場所を指定できますので、制限つき
+ユーザがアクセスできる場所を指定すればよいでしょう。
+（こちらの指定では環境変数も使用できます）
+
+---------------------------------------
+※カスタマイズ例
+想定：
+　　　ファイル公開の際のローカル保存場所は
+               C:\Documents and Settings\ユーザ
+　
+　　　squeak.keysの場所はカスタマイズせず、管理者ユーザ
+で一度squeakを起動して作成しておく。
+
+---ここから（squeak.iniの末尾にこの内容を貼り付けてくだ
+さい）
+[Security] 
+UserDirectory=%HOMEPATH%
+---ここまで
+
+
+> 生徒には共有サーバに個人の保存場所があり，そちらに保存
+したいと考えています。
+　　もしサーバー上の保存場所をPCにドライブ接続しているの
+でしたら、
+UserDirectoryにその保存場所を直接指定すれば、
+（公開ボタン長押しの「他のサーバーへ公開」ではなく）
+単に「公開」でサーバー上に直接保存できます。
+
+
+ではでは
+/Korakurider
+
+--------------------------------------
+Easy + Joy + Powerful = Yahoo! Bookmarks x Toolbar
+http://pr.mail.yahoo.co.jp/toolbar/
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Sep  5 13:31:05 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3574] Re: オープンソースカンファレンス 2007 Tokyo/Fall
+In-Reply-To: <46D534C3182.1ED0ABEE@smtp.nifty.com>
+References: <46CD3116181.23E5ABEE@smtp.nifty.com>
+	<46D534C3182.1ED0ABEE@smtp.nifty.com>
+Message-ID: <JF200709051331053.3083078@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+10/5-6ともに参加できます。特に新たなネタはないですが、デモ要員として
+使っていただければと思います。
+
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+> 阿部@新百合です。
+> 
+> 先にご紹介したOSC2007 Tokyo/Fallですが、締め切りも近いと言うことで、
+> 展示ブース、ミニセミナー、セミナーを申し込みました。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-August/003554.html
+> 
+> 公式ページの参加予定グループにもSqueak-jaが載っています。
+> 
+> http://www.ospn.jp/osc2007-fall/
+> 
+> 武藤さんと同じく、いざとなれば一人でやる覚悟ですが :-)、ぜひ皆さんのご協
+> 力をお願いします。
+> 最近の私の興味の中心で、私自身ができることからすると、OLPC Etoysネタです
+> が、他に何かやりたい方はいらっしゃいませんか。コアなSmalltalkネタから
+> Etoysのプロジェクトまでなんでも結構ですので、よろしくお願いします。
+> これが見たい聞きたいと言うものでも構いません。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+---
+[:masashi | ^umezawa]
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Wed Sep  5 17:01:51 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3575] SampleCodeのinstallについて
+Message-ID: <CBEIKPMBLLMDEOEJIHCCIEAICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+梅澤さんにお尋ねします。
+「自由自在」を勉強しています。
+８章のMole Attack(1).stをfillInしようとすると
+sytax errorになりますが、
+やり方がまずいのでしょうか。
+久保　道
+
+From umejava ＠ mars.dti.ne.jp  Wed Sep  5 17:41:34 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3576] Re: SampleCodeのinstallについて
+In-Reply-To: <CBEIKPMBLLMDEOEJIHCCIEAICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <CBEIKPMBLLMDEOEJIHCCIEAICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <JX2007090517413410.18112296@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+推測ですが、ファイルインしようとしているイメージが「自由自在」用のものでは
+ないということはありませんでしょうか。
+
+http://swikis.ddo.jp/squeak
+
+にあるものを使っていただければ読み込みはできると思います。
+
+当時ベースとしたSqueakは3.6で、現在のSqueakは3.9(or 3.8)になります。
+この間.stファイルの保存の形式が微妙に変わりました。(BOMなしUTF-8から
+BOMありUTF-8)。そのためにこのような現象が起こります。
+
+以上、よろしくお願い申し上げます。
+
+"久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さんにお尋ねします。
+> 「自由自在」を勉強しています。
+> ８章のMole Attack(1).stをfillInしようとすると
+> sytax errorになりますが、
+> やり方がまずいのでしょうか。
+> 久保　道
+
+---
+[:masashi | ^umezawa]
+
+From newapplesho ＠ gmail.com  Wed Sep  5 19:55:01 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:50 2007
+Subject: [Squeak-ja: 3577] オープンソースカンファレンスについて
+Message-ID: <16FEA7B8-D1DA-4D0B-8F7A-C6C13E55D209@gmail.com>
+
+大学でSqueakを使っている吉田といいます．
+
+オープンソースカンファレンスについて教えていただきたいのですが， 
+学生でも参加できるものなのでしょうか．
+Squeakのセミナーを受けたいのですが，参加資格とかあるのでしょうか．
+
+よろしくお願いいたします．
+
+吉田　翔
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From abee ＠ squeakland.jp  Wed Sep  5 21:00:52 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3578] Re: オープンソースカンファレンスについて
+In-Reply-To: <16FEA7B8-D1DA-4D0B-8F7A-C6C13E55D209@gmail.com>
+References: <16FEA7B8-D1DA-4D0B-8F7A-C6C13E55D209@gmail.com>
+Message-ID: <46DE9A74353.C90DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 5 Sep 2007 19:55:01 +0900
+Sho Yoshida <newapplesho@gmail.com> wrote:
+>オープンソースカンファレンスについて教えていただきたいのですが， 
+>学生でも参加できるものなのでしょうか．
+>Squeakのセミナーを受けたいのですが，参加資格とかあるのでしょうか．
+
+正確にはオープンソースカンファレンス実行委員会にお問い合わせいただければ
+と思いますが、過去の例だと参加費は無料で参加資格も特にありません。
+
+http://www.ospn.jp/osc2007-fall/
+
+ただし、定員はあり、事前申込が必要になると思います(まだ受付は始まっていな
+いようです)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From newapplesho ＠ gmail.com  Wed Sep  5 21:58:48 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3579] Re: オープンソースカンファレンスについて
+In-Reply-To: <46DE9A74353.C90DABEE@smtp.nifty.com>
+References: <16FEA7B8-D1DA-4D0B-8F7A-C6C13E55D209@gmail.com>
+	<46DE9A74353.C90DABEE@smtp.nifty.com>
+Message-ID: <718A6A5D-8882-4DDA-9F7B-D9A88A297398@gmail.com>
+
+吉田です．
+
+阿部さんありがとうございます．
+
+
+On 2007/09/05, at 21:00, Kazuhiro ABE wrote:
+
+> 阿部@新百合です。
+>
+> On Wed, 5 Sep 2007 19:55:01 +0900
+> Sho Yoshida <newapplesho@gmail.com> wrote:
+>> オープンソースカンファレンスについて教えていただきたいのです 
+>> が，
+>> 学生でも参加できるものなのでしょうか．
+>> Squeakのセミナーを受けたいのですが，参加資格とかあるのでしょ 
+>> うか．
+>
+> 正確にはオープンソースカンファレンス実行委員会にお問い合わせい 
+> ただければ
+> と思いますが、過去の例だと参加費は無料で参加資格も特にありませ 
+> ん。
+>
+> http://www.ospn.jp/osc2007-fall/
+>
+> ただし、定員はあり、事前申込が必要になると思います(まだ 
+> 受付は始まっていな
+> いようです)。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Sep  6 17:32:06 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3580] Re: SampleCodeのinstallについて
+In-Reply-To: <JX2007090517413410.18112296@mars.dti.ne.jp>
+Message-ID: <CBEIKPMBLLMDEOEJIHCCMEAJCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+梅澤さん
+お忙しいのに早速に教えていただいて
+ありがとうございました。
+Squeak3.6を探して試してみます。
+とりあえずお礼まで。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Masashi Umezawa
+Sent: Wednesday, September 05, 2007 5:42 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3576] Re: SampleCodeのinstallについて
+
+
+こんにちは
+梅澤です。
+
+推測ですが、ファイルインしようとしているイメージが「自由自在」用のものでは
+ないということはありませんでしょうか。
+
+http://swikis.ddo.jp/squeak
+
+にあるものを使っていただければ読み込みはできると思います。
+
+当時ベースとしたSqueakは3.6で、現在のSqueakは3.9(or 3.8)になります。
+この間.stファイルの保存の形式が微妙に変わりました。(BOMなしUTF-8から
+BOMありUTF-8)。そのためにこのような現象が起こります。
+
+以上、よろしくお願い申し上げます。
+
+"久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さんにお尋ねします。
+> 「自由自在」を勉強しています。
+> ８章のMole Attack(1).stをfillInしようとすると
+> sytax errorになりますが、
+> やり方がまずいのでしょうか。
+> 久保　道
+
+---
+[:masashi | ^umezawa]
+
+
+From umejava ＠ mars.dti.ne.jp  Thu Sep  6 18:27:11 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3581] Re: SampleCodeのinstallについて
+In-Reply-To: <CBEIKPMBLLMDEOEJIHCCMEAJCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <CBEIKPMBLLMDEOEJIHCCMEAJCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <JF200709061827114.497515@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+http://swikis.ddo.jp/squeak にも記載がありますが
+
+「自由自在」に対応したイメージは
+ftp://swikis.ddo.jp/SqueakDevJa/forBook/SqueakNihongo6Dev-Windows.zip (Windows)
+ftp://swikis.ddo.jp/SqueakDevJa/forBook/SqueakNihongo6Dev-Mac.zip (Mac)
+ftp://swikis.ddo.jp/SqueakDevJa/forBook/SqueakNihongo6Dev-Linux.tgz (Linux)
+
+です。
+
+Squeak3.6を探す必要はありません。(上記がSqueak3.6です)
+
+"久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さん
+> お忙しいのに早速に教えていただいて
+> ありがとうございました。
+> Squeak3.6を探して試してみます。
+> とりあえずお礼まで。
+> 久保　道
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp
+> [mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Masashi Umezawa
+> Sent: Wednesday, September 05, 2007 5:42 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 3576] Re: SampleCodeのinstallについて
+> 
+> 
+> こんにちは
+> 梅澤です。
+> 
+> 推測ですが、ファイルインしようとしているイメージが「自由自在」用のものでは
+> ないということはありませんでしょうか。
+> 
+> http://swikis.ddo.jp/squeak
+> 
+> にあるものを使っていただければ読み込みはできると思います。
+> 
+> 当時ベースとしたSqueakは3.6で、現在のSqueakは3.9(or 3.8)になります。
+> この間.stファイルの保存の形式が微妙に変わりました。(BOMなしUTF-8から
+> BOMありUTF-8)。そのためにこのような現象が起こります。
+> 
+> 以上、よろしくお願い申し上げます。
+> 
+> "久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> > 梅澤さんにお尋ねします。
+> > 「自由自在」を勉強しています。
+> > ８章のMole Attack(1).stをfillInしようとすると
+> > sytax errorになりますが、
+> > やり方がまずいのでしょうか。
+> > 久保　道
+> 
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From hkida ＠ hiroshima-u.ac.jp  Thu Sep  6 19:39:11 2007
+From: hkida ＠ hiroshima-u.ac.jp (Hideaki KIDA)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3582] Re: windowXP における起動時，公開時のエラーについて
+Message-ID: <000201c7f072$2c30eb90$0c01210a@fsc.hiroshimau.ac.jp>
+
+Korakurider　様
+
+ご助言ありがとうございます。
+まずは、ご指摘のとおりやってみようと思います。
+MLでの返信の方法がわからず、掲載のメールアドレスに
+返信させていただきました。
+うまくいきましたら、MLに投稿させて頂きます。
+それでは失礼いたします。
+
+********************************
+喜田英昭　　　hkdia@hiroshima-u.ac.jp
+
+広島大学附属中高等学校　数学科、情報科
+〒734-0005　広島市南区翠一丁目１番１号
+tel：082-251-0192
+fax：082-252-0725
+
+From nishis ＠ zephyr.dti.ne.jp  Thu Sep  6 22:07:44 2007
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3583] Re: [SML 7312] ブロック生成のメタプログラミング
+In-Reply-To: <46DF53E9.2090805@sra.co.jp>
+References: <46DF53E9.2090805@sra.co.jp>
+Message-ID: <46DFFBA0.8010603@zephyr.dti.ne.jp>
+
+Squeak-ja にも Cc: します．全文引用ですみません．
+
+え〜，Symbol>>asBlock と Symbol>>asBlockFor: をフォーマットしただけで
+す． SequenceableCollection>>with:collect: は Squeak オリジナルのを使い
+ます．他は Collection>>fold: を定義しました．人の褌で何とやらです (笑)．
+
+on 07.9.6 10:12 AM, AOKI Atsushi wrote:
+> ＳＲＡ先端技術研究所の青木です。
+> 
+> じゅんメーリングリストの話題をＳＭＬにも流すことにしました。
+> 
+> ブロック生成の例として、シンボルが asBlock / asBlockFor: の
+> メッセージを理解できるようにするプログラムを添付します。。
+> 
+> 似たようなプログラムがちらほらと存在するのですが、どれもベタ
+> なプログラムでエレガントさに欠けますので、ユニバーサル・メッ
+> セージ（万能関数）を用いたメタプログラミング（高階関数）手法
+> で実装しておきました。
+> 
+> ＃VisualWorks のプログラムですが、Squeak でも動作することを
+> ＃西原さんが確かめてくれています。
+> 
+> 伝言選択子（メッセージ・セレクタ）シンボルに対して用いるのが
+> 適切です。使い方は以下のようになります。
+> 
+> #size asBlock
+> 
+> #@ asBlock
+> 
+> #x:y: asBlock
+> 
+> #x:y: asBlockFor: Point
+> 
+> どんなブロックが生成されているのかは、逆コンパイルをしてみれ
+> ば判明します。
+> 
+> #size asBlock method decompiledSource
+> ==> '
+> [:t1 |
+> | t2 |
+> t2 := Array new: 0.
+> t1 perform: #size withArguments: t2]'
+> 
+> #@ asBlock method decompiledSource
+> ==> '
+> [:t1 :t2 |
+> | t3 |
+> (t3 := Array new: 1) at: 1 put: t2.
+> t1 perform: #@ withArguments: t3]'
+> 
+> #x:y: asBlock method decompiledSource
+> ==> '
+> [:t1 :t2 :t3 |
+> | t4 |
+> (t4 := Array new: 2) at: 1 put: t2.
+> t4 at: 2 put: t3.
+> t1 perform: #x:y: withArguments: t4]'
+> 
+> (#x:y: asBlockFor: Point) method decompiledSource
+> ==> '
+> [:t1 :t2 |
+> | t3 |
+> (t3 := Array new: 2) at: 1 put: t1.
+> t3 at: 2 put: t2.
+> self perform: #x:y: withArguments: t3]'
+> 
+> 伝言選択子としてのシンボルがブロックになる効用は、次のような
+> 典型的な場合が考えられます。
+> 
+> (0 to: 9) select: #even asBlock
+> ==> #(0 2 4 6 8)
+> 
+> (0 to: 9) reject: #even asBlock
+> ==> #(1 3 5 7 9)
+> 
+> (0 to: 9) collect: #even asBlock
+> ==> #(true false true false true false true false true false)
+> 
+> #('asaoka' 'aoki') collect: #size asBlock
+> ==> #(6 4)
+> 
+> #(0 2 4 6 8) with: #(1 3 5 7 9) collect: #@ asBlock
+> ==> #(0@1 2@3 4@5 6@7 8@9)
+> 
+> #(0 2 4 6 8) with: #(1 3 5 7 9) collect: (#x:y: asBlockFor: Point)
+> ==> #(0@1 2@3 4@5 6@7 8@9)
+> 
+> #(0 2 4 6 8) fold: #+ asBlock
+> ==> 20
+> 
+> #(1 3 5 7 9) fold: #* asBlock
+> ==> 945
+> 
+> #(12 21 -19) inject: 9999 into: #min: asBlock
+> ==> -19
+> 
+> #(12 21 -19) inject: -9999 into: #max: asBlock
+> ==> 21
+> 
+> 今、ある人たちと協力して、この機構を VisualWorks の新バージョ
+> ンに導入しよう、というロビー活動をしてます。ぜひ Squeak でも。
+> 
+> asBlock / asBlockFor: のメッセージに応えられる他のオブジェク
+> トの候補としては Message / MessageSend / BlockClosure などの
+> オブジェクトたちがあげられると思います。
+> 
+> Smalltalk はメタプログラミングが気軽に（あまりにあっけなく）
+> できるので、プログラマに備わっているファンタジー創世の能力が
+> 刺激され、増幅されることがしばしばでしょう。
+> 
+> また、メタプログラミングはスーパープログラマへの道です。自己
+> 相似の中に入ってフラクタルな次元に遊ぶ、という感じになります。
+> 
+> このように言及しても、成長段階にあるプログラマには通じないで
+> しょうから、C プログラミングの状況で、誤解を恐れずに翻訳する
+> と、おおよそ以下のようになると思います。
+> 
+> 今、ここに「test.c」というプログラムがあったとします。この実
+> 行可能プログラム「test」が走行している真っ只中でやっているこ
+> とは、走行状況に応じて「subs.c」というソースコードを創り出し、
+> それをコンパイル＆リンクするための「Makefile」も創り出してお
+> いて「make」を起動（fork:dup&exec&wait）させ、「subs」という
+> 実行可能プログラムを獲得します。そして最後に「subs」を起動し、
+> その実行結果をもらって、「test」が走行し続けるというものです。
+> もちろん「subs.c」や「Makefile」そして「subs」などは跡形も無
+> く（unlink）しておくのは当然のこと。
+> 
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+> 
+
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: BlockGeneration-Tests.1.cs
+URL:  http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070906/f122ee32/BlockGeneration-Tests.1.asc
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: BlockGeneration.1.cs
+URL:  http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070906/f122ee32/BlockGeneration.1.pot
+From abee ＠ squeakland.jp  Fri Sep  7 23:59:32 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3584] Re: オープンソースカンファレンス  2007 Tokyo/Fall
+In-Reply-To: <JF200709051331053.3083078@mars.dti.ne.jp>
+References: <46D534C3182.1ED0ABEE@smtp.nifty.com>
+	<JF200709051331053.3083078@mars.dti.ne.jp>
+Message-ID: <46E16754B.988FABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 05 Sep 2007 13:31:05 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>10/5-6ともに参加できます。特に新たなネタはないですが、デモ要員として
+>使っていただければと思います。
+
+ありがとうございます。Swikiの表を更新しました。
+
+# 椅子が2脚では足らなさそうですね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sat Sep  8 00:18:45 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3585] Re: オープンソースカンファレンス  2007 Tokyo/Fall
+In-Reply-To: <200709041119.32192.tomohiro@sra.co.jp>
+References: <20070902133033.869F.YKOUBO2007@yengawa.com>
+	<200709041119.32192.tomohiro@sra.co.jp>
+Message-ID: <46E16BD59F.9890ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 02 Sep 2007 13:36:29 +0900
+Koji Yokokawa <ykoubo2007@yengawa.com> wrote:
+>せっかくだからプログラマ向けのライブ感があるもので、他のコミュニティの人
+>にSqueakをいじってみようかと思ってもらえたらいいですね。
+>独自のMorphをその場で作って、開発過程をみせるとか?
+
+それはいいかも。
+
+>Seasideで簡単なアプリ(ブログサービスなど?)を作って見せるとか?
+
+梅澤さんの十八番の5分でmixiですね。
+
+たぶん今でもウィンドウを回すだけで受けが取れたりすると思いますが、それだ
+けではなんですからね。あと、多摩美とのコラボの話はできないのですか。
+
+On Tue, 4 Sep 2007 11:19:31 +0900
+Tomohiro Oda <tomohiro@sra.co.jp> wrote:
+>では、15分を越えないようなデモを考えてみます。
+>
+>ネタとしては、「Smalltalkと英語の不思議な関係」と題して
+>
+>o Smalltalkブラウザを拡張してSmalltalkのソースコードから
+>　自然言語処理的に抽出されたキーワードをハイライト表示する。
+>
+>o Smalltalkブラウザで開いているソースコードと類似したソースを
+>　最近開いたソースの中から探してきてブラウザごと表示する。
+>
+>o Smalltalkで動作しているProcessのcontextが存在する
+>　methodのソースコードを集めてキーワードを抽出して表示する。
+>　(処理系が今何を考えているのか脳ミソの中を暴く)
+>
+>みたいなことを即興デモ風にやってみたいと思います。
+
+おお、自己参照できる言語のすごさが人々に伝わりそうですね。
+
+>当日までにしておかなければならない手続きなどはありますかね？
+
+事務的なものは私のほうで行いますので大丈夫です。
+特に必要な機材があれば教えてください。
+
+あと、ミニセミナーでなにかやりたいとかないですか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sat Sep  8 00:47:26 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3586] Re: オープンソースカンファレンス  2007 Tokyo/Fall
+In-Reply-To: <46E16BD59F.9890ABEE@smtp.nifty.com>
+References: <200709041119.32192.tomohiro@sra.co.jp>
+	<46E16BD59F.9890ABEE@smtp.nifty.com>
+Message-ID: <46E1728E28F.9891ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+セミナーとミニセミナーのタイトルを、汎用性を持たせて以下のようにしたいと
+思います。
+
+「100ドルノートPCとEtoys、開発環境としてのSqueak」
+
+いかがでしょうか。
+もしよろしければ、締め切りは過ぎていますが事務局に変更をお願いしてみます。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tomohiro ＠ sra.co.jp  Sat Sep  8 01:49:01 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3587] Re: オープンソースカンファレンス  2007 Tokyo/Fall
+In-Reply-To: <46E1728E28F.9891ABEE@smtp.nifty.com>
+References: <200709041119.32192.tomohiro@sra.co.jp>
+	<46E16BD59F.9890ABEE@smtp.nifty.com>
+	<46E1728E28F.9891ABEE@smtp.nifty.com>
+Message-ID: <200709080149.02494.tomohiro@sra.co.jp>
+
+おだです。
+
+> 「100ドルノートPCとEtoys、開発環境としてのSqueak」
+異存ありません。
+---
+おだ
+
+From ykoubo2007 ＠ yengawa.com  Sat Sep  8 02:36:10 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3588] Re: オープンソースカンファレンス 2007 Tokyo/Fall
+In-Reply-To: <46E1728E28F.9891ABEE@smtp.nifty.com>
+References: <46E16BD59F.9890ABEE@smtp.nifty.com>
+	<46E1728E28F.9891ABEE@smtp.nifty.com>
+Message-ID: <20070908023442.4A90.YKOUBO2007@yengawa.com>
+
+横川です。
+良いと思います。
+よろしくお願いします。
+
+On Sat, 08 Sep 2007 00:47:26 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 阿部@新百合です。
+> 
+> セミナーとミニセミナーのタイトルを、汎用性を持たせて以下のようにしたいと
+> 思います。
+> 
+> 「100ドルノートPCとEtoys、開発環境としてのSqueak」
+> 
+> いかがでしょうか。
+> もしよろしければ、締め切りは過ぎていますが事務局に変更をお願いしてみます。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+
+-- !
+Koji Yokokawa ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sat Sep  8 19:33:31 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3589] Re: SampleCodeのinstallについて
+In-Reply-To: <JF200709061827114.497515@mars.dti.ne.jp>
+Message-ID: <CBEIKPMBLLMDEOEJIHCCCEANCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+こんにちは、梅澤さん。
+先日教えていただいた通り、
+たどってみました。できました。
+その応用で少し、自分用に編集して使えるようになり、
+感激しております。
+ありがとうございました。
+画像をなぜシンボルで扱うのかということについても、
+５９頁の説明で納得できました。
+梅澤さんが「情念を込めて」（５頁）と言われれいる意味が
+よく判ります。
+わたしも説明をするときは、この精神を
+見習います。
+久保　道
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Masashi Umezawa
+Sent: Thursday, September 06, 2007 6:27 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3581] Re: SampleCodeのinstallについて
+
+
+こんにちは
+梅澤です。
+
+http://swikis.ddo.jp/squeak にも記載がありますが
+
+「自由自在」に対応したイメージは
+ftp://swikis.ddo.jp/SqueakDevJa/forBook/SqueakNihongo6Dev-Windows.zip
+(Windows)
+ftp://swikis.ddo.jp/SqueakDevJa/forBook/SqueakNihongo6Dev-Mac.zip (Mac)
+ftp://swikis.ddo.jp/SqueakDevJa/forBook/SqueakNihongo6Dev-Linux.tgz (Linux)
+
+です。
+
+Squeak3.6を探す必要はありません。(上記がSqueak3.6です)
+
+"久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さん
+> お忙しいのに早速に教えていただいて
+> ありがとうございました。
+> Squeak3.6を探して試してみます。
+> とりあえずお礼まで。
+> 久保　道
+>
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp
+> [mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Masashi Umezawa
+> Sent: Wednesday, September 05, 2007 5:42 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 3576] Re: SampleCodeのinstallについて
+>
+>
+> こんにちは
+> 梅澤です。
+>
+> 推測ですが、ファイルインしようとしているイメージが「自由自在」用のものでは
+> ないということはありませんでしょうか。
+>
+> http://swikis.ddo.jp/squeak
+>
+> にあるものを使っていただければ読み込みはできると思います。
+>
+> 当時ベースとしたSqueakは3.6で、現在のSqueakは3.9(or 3.8)になります。
+> この間.stファイルの保存の形式が微妙に変わりました。(BOMなしUTF-8から
+> BOMありUTF-8)。そのためにこのような現象が起こります。
+>
+> 以上、よろしくお願い申し上げます。
+>
+> "久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> > 梅澤さんにお尋ねします。
+> > 「自由自在」を勉強しています。
+> > ８章のMole Attack(1).stをfillInしようとすると
+> > sytax errorになりますが、
+> > やり方がまずいのでしょうか。
+> > 久保　道
+>
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+
+From mutoh ＠ openedu.org  Sun Sep  9 20:11:38 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3590] SqueakPlugin2005J2の在処
+Message-ID: <38d78d43ccfa92cdd6cc3b81e7d211be@openedu.org>
+
+むとう＠おうちです。
+
+皆さん、お忙しいのか、KOF2007本当に一人ブースかもですね…
+
+
+えっと、
+	http://squeakland.jp/plugin/installers/ux.html
+のイメージに対するリンクである
+	http://squeakland.jp/plugin/installers/SqueakPlugin2005J2.zip
+ですが、404 Not Foundになっているようです。
+
+正しい場所はどちらでしょうか?
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From abee ＠ squeakland.jp  Sun Sep  9 21:08:56 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3591] Re: SqueakPlugin2005J2 の在処
+In-Reply-To: <38d78d43ccfa92cdd6cc3b81e7d211be@openedu.org>
+References: <38d78d43ccfa92cdd6cc3b81e7d211be@openedu.org>
+Message-ID: <46E3E2581B3.5899ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 9 Sep 2007 20:11:38 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>皆さん、お忙しいのか、KOF2007本当に一人ブースかもですね…
+
+関西の皆様、どうぞよろしくお願いします。
+
+>えっと、
+>	http://squeakland.jp/plugin/installers/ux.html
+>のイメージに対するリンクである
+>	http://squeakland.jp/plugin/installers/SqueakPlugin2005J2.zip
+>ですが、404 Not Foundになっているようです。
+>
+>正しい場所はどちらでしょうか?
+
+すみません。さきほど修正しました。ご確認ください。
+Linux版に関しては7/26の公開時からこの状況でした。申し訳ありません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From miyasaka ＠ iris.dti.ne.jp  Mon Sep 10 12:04:36 2007
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3592] 子ども向けワークショップ指導者養成セミナーのお知らせ（参加者募集中）
+Message-ID: <4b24f0d0709092004k3e9c79f1ybd2be40769c62ac0@mail.gmail.com>
+
+squeak-jaの皆様へ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+いつもスクークを活用させていただいております！
+
+さて、このたび、子ども向けワークショップの指導者育成を目的としたセミナーを開催することになりましたのでご案内させていただきます。
+
+子どもを対象にした問題解決過程における創造力、自主的思考力が養われるというGEMS（ジェムス）と呼ばれる「科学と数学の体験学習プログラム」のための指導者育成を目的とした２日間のワークショップです。
+（なお、２日目にはGEMS教材ではないのですが「世界聴診器」もご紹介する予定）
+
+こうした体験型の教材をスクイークと上手く組み合わせることで、スクイークを利用した教育カリキュラムを充実させることも可能かと思います。スクイークを実際の教育活動で活用されている方や、スクイークの開発をされている方も、この機会に是非参加をご検討ください。本セミナーを「子ども達にとって本当に必要な教育」を考える上でのひとつのきっかけにしていただければ幸いです。
+
+■タイトル
+【子ども体験教室リーダー養成】
+科学と数学の体験学習プログラム　ＧＥＭＳリーダー養成ワークショップ
+
+■日時
+2007年10月14日（日）、21日（日）　※2日間コース
+10:30〜17：30（受付開始10:10）
+
+■会場
+デジタルハリウッド大学　秋葉原メインキャンパス（ダイビル7F）
+
+■対象者
+教員、野外・環境・科学教育・地域サークルの指導者及び指導者を目指す大学生や社会人の方。
+または子ども向けの教育活動に興味がある方であればどなたでも。
+スクイークと組み合わせてこうした体験型の教材を利用したい方も是非ご参加ください。
+
+■講師
+ジャパンGEMSセンター
+
+■受講料
+大学生　2,500円、　社会人　3,500円
+GEMSの市販テキスト「ウーブレック-科学者は何をする人？」をお持ちでない方は別途テキスト代（定価1,575円）が必要です。
+
+※日本GEMSセンターが開催する本ワークショップは、通常ですと15,000〜20,000円の受講料が必要になります。（URL参照）
+今回は「子どもゆめ基金」からの支援を受けているため、上記の受講料での開催が可能となりました。
+
+■お申込み方法
+詳しくはこちらをご覧ください。
+http://mts-j.hiho.jp/2007/09/post_12.html
+
+
+＜主催＞
+みんなでたのしくスクイーク実行委員会
+この活動は、独立行政法人国立青少年教育振興機構が行う子どもゆめ基金の助成を受けて行うものです。
+
+＜GEMSとは＞
+GEMS（ジェムス：Great Explorations in Math and
+Science）はLHS（ローレンス・ホール・オブ・サイエンス）で２０年近く研究され続けてきた科学・数学のカリキュラムの一つで、体験学習法の理論に基づく、アクティビティ（活動体験）が中心のカリキュラムです。
+詳しくはこちらをご覧ください。
+http://www.jeef.or.jp/GEMS/aboutGEMS.html
+
+なお、終了後には有志による懇親会も予定していますので、スクイーク関係者の方々との情報交換もたのしみにしております。
+
+よろしくお願いいたします。
+
+
+P.S.
+なお、１１月には阿部さんを中心にスクイークのカリキュラムを考える「カリキュラム検討会」も予定しております。別途ご案内させていただきますので、今しばらくお待ちください。
+
+-- 
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学大学院
+デジタルコンテンツ研究科　研究員
+---------------------------------------------
+ブログ時々更新中！
+http://blogs.itmedia.co.jp/projectdx/
+
+From newapplesho ＠ gmail.com  Mon Sep 10 16:07:27 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3593] Seasideでローカルディレクトリのファイルを扱うには
+Message-ID: <73446BF9-CD2B-4634-8FB6-0387EAFB60D1@gmail.com>
+
+吉田　翔です．
+
+Seasideでローカルディレクトリにあるファイルを扱いたいのですが， 
+どのようにすればいいでしょうか．
+特に今CSSで以下のような記述をしたときにどうすればいいのか 
+困っています．
+
+body {
+   background: #e5e5dd url(./back.jpg) repeat-y;
+   color: #333333;
+   margin: 0pt;
+   padding: 0pt;
+}
+
+
+自分なりに少し調べてみてWAFileLibraryのSubclassを作 
+ることで画像を扱えるようですが，Classを使わず扱うことはで 
+きないのでしょうか．
+
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From abee ＠ squeakland.jp  Mon Sep 10 18:04:50 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3594] Fw: オープンソースカンファレンス 2007 Tokyo/Fall セミナー事前登録受付開始のご案内
+Message-ID: <46E508B2131.7DFCABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+オープンソースカンファレンス実行委員会より、セミナー事前登録受付開始の案
+内がありましたので転送します。
+私たちの「100ドルノートPCとEtoys、開発環境としてのSqueak」は、10/6(土)
+10:30-11:30、会議室Fとなりました。定員が27名と少ないので、お早めに申し込
+まれることをおすすめします。
+その他、ミニセミナー、展示の案内はまだですが、追って連絡があると思います。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+Forwarded by Kazuhiro ABE <abee@squeakland.jp>
+---------------- Original message follows ----------------
+ From: オープンソースカンファレンス2007 - Tokyo/Fall <osc2007@begi.net>
+ To: abee@squeakland.jp
+ Date: Mon, 10 Sep 2007 17:52:22 +0900
+ Subject: オープンソースカンファレンス2007 Tokyo/Fall セミナー事前登録受付開始のご案内
+--
+
+==================================================================
+                  セミナー事前登録受付開始！！
+     「オープンソースカンファレンス2007 Tokyo/Fall」のご案内 
+==================================================================
+
+10月5日(金)・6日(土)に開催されます、「オープンソースカンファレンス
+2007 Tokyo/Fall」のセミナー参加登録受付を、Web上にて開始いたしまし
+た。
+
+
+既にユーザ登録がお済みの方は、ログイン後、左側の「参加登録メニュー」
+より、セミナーへの参加申込を行ってください。
+
+               http://www.ospn.jp/osc2007-fall/
+
+
+オープンソース・IT 技術に関するイベントとして、多彩なセミナーと、
+オープンソースに触れられる展示で旬の最新情報をお届けします。
+セミナー・ブースでの展示は、全て無料でご参加いただけます。
+
+毎回数多くの方にご参加いただき、セミナー参加の登録もすぐに満員と
+なってしまいますので、お早めのご登録をおすすめします。
+
+
+皆様のご来場を、心よりお待ちいたしております。
+
+                         オープンソースカンファレンス実行委員会
+
+─────────────────────────────────
+『オープンソースカンファレンス2007 Tokyo/Fall』
+
+日  時：10月5日(金)・6日(土) 10:00-18:30 (最終日は 17:30 まで)
+会  場：大田区産業プラザ(PiO) (東京都大田区・京急蒲田駅徒歩3分)
+参加費：無料(事前登録制)
+内  容：オープンソースに関する最新情報の提供
+       ・展示      オープンソースコミュニティ・企業・団体による展示
+       ・セミナー  オープンソースの最新情報を提供
+主  催：オープンソースカンファレンス実行委員会
+
+                http://www.ospn.jp/osc2007-fall/
+─────────────────────────────────
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■事前登録についてのご注意
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+セミナーにつきましては、ご用意できるお席に限りがございます。
+お早めに事前登録をお済ませ下さい。
+
+セミナー参加申込はこちらから ⇒⇒ http://www.ospn.jp/osc2007-fall/
+
+▲ オフィシャルホームページは随時更新されていきます。
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■参加団体一覧 (2007年9月10日現在)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+------------------------------------------------------------------
+●協賛
+・NEC
+・日本ヒューレット・パッカード株式会社
+・株式会社ワイズノット
+・マイクロソフト株式会社
+・日本AMD
+・アシアル株式会社
+・株式会社サードウェア
+・ターボリナックス株式会社
+・株式会社野村総合研究所
+・ノベル株式会社
+・NTTコムウェア株式会社
+・サン・マイクロシステムズ株式会社
+・株式会社インフォネット
+・サイオステクノロジー株式会社
+・データアクセス株式会社
+・日本仮想化技術株式会社
+・日本スケーリックス株式会社 
+・リナックスアカデミー
+・株式会社シャノン
+・株式会社IDGジャパン
+・株式会社アスキー
+・株式会社インプレスジャパン
+・株式会社オライリー・ジャパン
+・株式会社技術評論社(Software Design)
+・株式会社翔泳社
+・株式会社シンクイット(ThinkIT)
+・ソフトバンク クリエイティブ株式会社
+・株式会社日経BP - 日経Linux
+・株式会社毎日コミュニケーションズ
+------------------------------------------------------------------
+●後援
+・有限責任中間法人 Mozilla Japan
+・特定非営利活動法人エルピーアイジャパン
+・日本Linux協会
+・日本UNIXユーザ会
+------------------------------------------------------------------
+●参加予定グループ等 (50音順・敬称略)
+・Firebird日本ユーザー会
+・Geeklog Japanese日本ユーザ会
+・Japan JBoss User Group (JJBug)
+・Momonga Project
+・MonaOS
+・OpenLibSys.org
+・OpenOffice.org日本ユーザー会
+・OSASK計画
+・Plone研究会
+・Squeak-ja
+・Tritonnプロジェクト
+・Ubuntu Japanese Team
+・XOOPS Cube OSC 出展委員会
+・ZK Project
+・オニオン ソフトウェア
+・NPO法人オープンソースソフトウェア協会（OSSAJ）
+・仮想化友の会
+・小江戸らぐ
+・セキュアOSユーザー会
+・東京エリア Debian 勉強会
+・なでしこ友の会
+・日本Apache Geronimoユーザグループ
+・日本Asteriskユーザ会
+・日本LDAPユーザー会
+・日本MySQLユーザ会
+・日本NetBSDユーザーグループ
+・日本PostgreSQLユーザ会
+・日本Rubyの会
+・日本Sambaユーザ会
+・日本viユーザ会
+・日本Zopeユーザ会
+・はりぼて友の会
+・もじら組
+------------------------------------------------------------------
+●企画運営：株式会社びぎねっと
+------------------------------------------------------------------
+■最新情報は → http://www.ospn.jp/osc2007-fall/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□■ 開催概要 ■□━━━━━━━━━━━━━━━━━━━━━━━━
+■名    称：オープンソースカンファレンス2007 Tokyo/Fall』
+■会    期：2007年10月5日(金)・6日(土) / 2日間
+■開催時間：10:00〜18:30 (9:30受付開始)
+            カンファレンス：10:00〜16:30 (最終日は 15:00 まで)
+            展示会場      ：10:00〜18:30 (最終日は 17:30 まで)
+■入 場 料：無料 (事前登録制)
+■会    場：大田区産業プラザ(PiO) (東京都大田区・京急蒲田駅徒歩3分)
+■公式 URL：http://www.ospn.jp/osc2007-fall/
+■主    催：オープンソースカンファレンス実行委員会
+==================================================================
+問い合わせ先：オープンソースカンファレンス事務局(osc2007@Begi.net)
+==================================================================
+
+※本メールは転送自由です。
+
+From mutoh ＠ openedu.org  Mon Sep 10 18:03:15 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3595] [イベント関連] チラシとポスター
+Message-ID: <6d8e5c6c77814728042da6a9f61064e1@openedu.org>
+
+むとう＠おうちです。
+
+阿部さん、2005J2の修正ありがとうございました(_o_)
+
+
+KOF2007用の作業としてボチボチといろいろやってるんですが、OSC2007でも使えたらと思いまして、流しておきますね。
+
+去年、KOF2006に参加した時、他のブースの皆様方がチラシなどを配っていて、それでエントリポイントなんかが分かっていいなと思いました。
+それで、今年はチラシを配りたいなと思いまして、内容を練っています。
+	http://qml.610t.org/squeak/chirashi2007.html
+
+「もっとこう書けば」とか、「大事なあれ忘れてるで」とか、いろいろご意見伺えれば嬉しいです。
+
+一応、A4ペラ両面のチラシにしようかと思ってますです。
+
+
+あと、去年はブースにSqueak曼荼羅(http://qml.610t.org/squeak/mandara.html)を貼ったのですが、今年 
+も同じにするのは芸が無いかなと思ってます。
+が、悲しいかな、素敵なアイデアが浮かんできませんし、もともとこういうアート仕事は苦手ときています。
+
+どなたか、ブースにぴったりな、これぞSqueakという素敵なポスターを作っていただけませんでしょうか?
+アイデアだけでも嬉しいです。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Sep 11 12:15:55 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3596] Re: Seasideでローカルディレクトリのファイルを扱うには
+In-Reply-To: <73446BF9-CD2B-4634-8FB6-0387EAFB60D1@gmail.com>
+References: <73446BF9-CD2B-4634-8FB6-0387EAFB60D1@gmail.com>
+Message-ID: <JE200709111215559.16233734@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> Seasideでローカルディレクトリにあるファイルを扱いたいのですが， 
+> どのようにすればいいでしょうか．
+> 特に今CSSで以下のような記述をしたときにどうすればいいのか 
+> 困っています．
+> 
+> body {
+>    background: #e5e5dd url(./back.jpg) repeat-y;
+>    color: #333333;
+>    margin: 0pt;
+>    padding: 0pt;
+> }
+> 
+> 
+> 自分なりに少し調べてみてWAFileLibraryのSubclassを作 
+> ることで画像を扱えるようですが，Classを使わず扱うことはで 
+> きないのでしょうか．
+> 
+
+お手軽なのはComanche(KomHttpServer)の機能を使うことです。
+
+(詳しくは
+http://www.shaffer-consulting.com/david/Seaside/GettingSoftware/index.html
+に記載があります)。
+
+Seasideをストップした後、
+
+| ma seaside |
+seaside := KomSeasideJ default.
+ma := ModuleAssembly core.
+ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot') fullName.
+ma alias: '/seaside' to: [ma addPlug: [:request | seaside process: request]].
+ma documentRoot: (FileDirectory default directoryNamed: 'FileRoot') fullName.
+ma directoryIndex: 'index.html index.htm'.
+ma serveFiles.
+(HttpService startOn: 9090 named: 'httpd') plug: ma rootModule
+
+という感じで、静的ドキュメントをサーブできるようにして立ち上げ直します。
+FileRoot以下にファイルを置けば、通常のWebサーバのようにアクセスできます。
+
+---
+[:masashi | ^umezawa]
+
+From newapplesho ＠ gmail.com  Wed Sep 12 08:13:45 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3597] Re: Seasideでローカルディレクトリのファイルを扱うには
+In-Reply-To: <JE200709111215559.16233734@mars.dti.ne.jp>
+References: <73446BF9-CD2B-4634-8FB6-0387EAFB60D1@gmail.com>
+	<JE200709111215559.16233734@mars.dti.ne.jp>
+Message-ID: <237B76C9-E18E-4EB1-8909-E44B6A2FA9BE@gmail.com>
+
+梅澤さん，ありがとうございます．
+
+設定に関して少しわからないことがあったので教えていただけないで 
+しょうか．
+
+> ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot')  
+> fullName.
+
+serverRoot:とはApacheの設定でよく見かけるserverRoot 
+と同じものなのでしょうか．
+
+> ma alias: '/seaside' to: [ma addPlug: [:request | seaside process:  
+> request]].
+
+alias:to:もApacheの設定のaliasと同じものなのでしょう 
+か．
+そうするとblockのところにdocumentRoot:を記述すればす 
+ることもできる好きなURLでdocumentRootにアクセスでき 
+るのでしょうか．
+
+この設定をしたあと
+KomSeasideJ stop.
+でサーバと止まらなくなりました．
+HttpServiceで起動したので，HttpServiceを止めればいいと思っ 
+たのですが止め方がわかりません．
+
+よろしくお願いいたします．
+
+
+
+
+
+On 2007/09/11, at 12:15, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+>> Seasideでローカルディレクトリにあるファイルを扱いたいのですが，
+>> どのようにすればいいでしょうか．
+>> 特に今CSSで以下のような記述をしたときにどうすればいいのか
+>> 困っています．
+>>
+>> body {
+>>    background: #e5e5dd url(./back.jpg) repeat-y;
+>>    color: #333333;
+>>    margin: 0pt;
+>>    padding: 0pt;
+>> }
+>>
+>>
+>> 自分なりに少し調べてみてWAFileLibraryのSubclassを作
+>> ることで画像を扱えるようですが，Classを使わず扱うことはで
+>> きないのでしょうか．
+>>
+>
+> お手軽なのはComanche(KomHttpServer)の機能を使うことです。
+>
+> (詳しくは
+> http://www.shaffer-consulting.com/david/Seaside/GettingSoftware/ 
+> index.html
+> に記載があります)。
+>
+> Seasideをストップした後、
+>
+> | ma seaside |
+> seaside := KomSeasideJ default.
+> ma := ModuleAssembly core.
+> ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot')  
+> fullName.
+> ma alias: '/seaside' to: [ma addPlug: [:request | seaside process:  
+> request]].
+> ma documentRoot: (FileDirectory default directoryNamed: 'FileRoot')  
+> fullName.
+> ma directoryIndex: 'index.html index.htm'.
+> ma serveFiles.
+> (HttpService startOn: 9090 named: 'httpd') plug: ma rootModule
+>
+> という感じで、静的ドキュメントをサーブできるようにして立ち上げ 
+> 直します。
+> FileRoot以下にファイルを置けば、通常のWebサーバのように 
+> アクセスできます。
+>
+> ---
+> [:masashi | ^umezawa]
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Sep 12 11:44:00 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3598] Re: Seasideでローカルディレクトリのファイルを扱うには
+In-Reply-To: <237B76C9-E18E-4EB1-8909-E44B6A2FA9BE@gmail.com>
+References: <73446BF9-CD2B-4634-8FB6-0387EAFB60D1@gmail.com>
+	<JE200709111215559.16233734@mars.dti.ne.jp>
+	<237B76C9-E18E-4EB1-8909-E44B6A2FA9BE@gmail.com>
+Message-ID: <JL200709121144005.14551828@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> > ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot')  
+> > fullName.
+> 
+> serverRoot:とはApacheの設定でよく見かけるserverRoot 
+> と同じものなのでしょうか．
+
+そうですね。
+
+> > ma alias: '/seaside' to: [ma addPlug: [:request | seaside process:  
+> > request]].
+> 
+> alias:to:もApacheの設定のaliasと同じものなのでしょう 
+> か．
+> そうするとblockのところにdocumentRoot:を記述すればす 
+> ることもできる好きなURLでdocumentRootにアクセスでき 
+> るのでしょうか．
+
+微妙に違います。ModAliasのコメントを見てみると良いと思います。
+
+> この設定をしたあと
+> KomSeasideJ stop.
+> でサーバと止まらなくなりました．
+> HttpServiceで起動したので，HttpServiceを止めればいいと思っ 
+> たのですが止め方がわかりません．
+
+HttpServiceに望むメソッドがない場合は、スーパークラスをたどってみると
+答えがあったりします。
+
+HttpService serviceOnPort: 9090.
+HttpService servicesNamed: 'httpd'.
+
+あたりで、起動したサービスを捕まえられます。捕まえた後でstop(またはunregister)
+ですね。
+
+(HttpService serviceOnPort: 9090) ifNotNilDo: [:service | service stop].
+
+では。
+---
+[:masashi | ^umezawa]
+
+From newapplesho ＠ gmail.com  Thu Sep 13 21:06:20 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3599] Re: Seasideでローカルディレクトリのファイルを扱うには
+In-Reply-To: <JL200709121144005.14551828@mars.dti.ne.jp>
+References: <73446BF9-CD2B-4634-8FB6-0387EAFB60D1@gmail.com>
+	<JE200709111215559.16233734@mars.dti.ne.jp>
+	<237B76C9-E18E-4EB1-8909-E44B6A2FA9BE@gmail.com>
+	<JL200709121144005.14551828@mars.dti.ne.jp>
+Message-ID: <6CF37FA6-1DE9-41FB-90DD-1EDC78FAF5B8@gmail.com>
+
+吉田 翔です．
+
+梅澤さんありがとうございます．
+
+もっと探索能力を身に付けないといけないと改めて思いました．
+
+
+
+
+On 2007/09/12, at 11:44, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+>>> ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot')
+>>> fullName.
+>>
+>> serverRoot:とはApacheの設定でよく見かけるserverRoot
+>> と同じものなのでしょうか．
+>
+> そうですね。
+>
+>>> ma alias: '/seaside' to: [ma addPlug: [:request | seaside process:
+>>> request]].
+>>
+>> alias:to:もApacheの設定のaliasと同じものなので 
+>> しょう
+>> か．
+>> そうするとblockのところにdocumentRoot:を記述すれ 
+>> ばす
+>> ることもできる好きなURLでdocumentRootにアクセスでき
+>> るのでしょうか．
+>
+> 微妙に違います。ModAliasのコメントを見てみると良いと思い 
+> ます。
+>
+>> この設定をしたあと
+>> KomSeasideJ stop.
+>> でサーバと止まらなくなりました．
+>> HttpServiceで起動したので，HttpServiceを止めればいいと 
+>> 思っ
+>> たのですが止め方がわかりません．
+>
+> HttpServiceに望むメソッドがない場合は、スーパークラスをたどっ 
+> てみると
+> 答えがあったりします。
+>
+> HttpService serviceOnPort: 9090.
+> HttpService servicesNamed: 'httpd'.
+>
+> あたりで、起動したサービスを捕まえられます。捕まえた後でstop 
+> (またはunregister)
+> ですね。
+>
+> (HttpService serviceOnPort: 9090) ifNotNilDo: [:service | service  
+> stop].
+>
+> では。
+> ---
+> [:masashi | ^umezawa]
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From ykoubo2007 ＠ yengawa.com  Fri Sep 14 03:59:49 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3600] Fw: Collaboration with a japanese lab
+Message-ID: <20070914034747.D1D7.YKOUBO2007@yengawa.com>
+
+横川です。
+フランスの若きSqueaker、Julienから共同研究者募集メールが転送されて来ま
+したので、こちらへ転転送します。
+
+もとはSqueakでロボット制御などをしているDr. Sergeからのメールです。
+日本フランス共同研究のプログラムにSqueakやEtoysで応募したいので、日本側
+の研究者を探しているそうです。
+フランスと日本で同時に応募しなければいけないそうで、日本側の窓口はJSTで
+す。
+
+平成19年度　日本‐フランス研究交流課題の募集のお知らせ
+http://www.jst.go.jp/sicp/announce_fr3rd.html
+
+フランス側詳細:
+http://www.drei.cnrs.fr/stock/Appli_GuidelineJST_CNRS2007revfinal.doc
+
+興味あるけどSqueakはちょっと。。。という方でも、私(や他のSqueakプログラ
+マ)がサポートいたしますので、お気軽にご相談ください。
+なお10月1日締め切りなので、お急ぎください。
+
+
+ちなみに、転送してくれたJulienは10月から京都大学に留学します。
+今年のESUGではこんな発表してました。
+http://video.google.com/videoplay?docid=-7624011308156027771
+高校生のサマーキャンプでSqueakで制御するロボット作成を指導したそうです。
+そして、メールにもあるようにOSC2007 Tokyo/fallに来るので、みなさんよろし
+く!
+
+
+
+Forwarded by Koji Yokokawa 
+----------------------- Original Message -----------------------
+ From:    "Julien Bourdon" 
+ To:      "Koji Yokokawa" 
+ Cc:      "Serge Stinckwich" 
+ Date:    Wed, 12 Sep 2007 21:56:32 +0200
+ Subject: Fwd: Collaboration with a japanese lab
+----
+
+Hi Koji !
+
+Just received this offer to sponsor a French-Japanese research
+project. Would you know of someone who would be interested in a
+project around Squeak and EToys (e.g. in the robotics domain)? Each
+partner would receive 3000?/year (around ¥476,000) to complete it.
+
+>これは間違っていて、本当は30000 euros/year for 3 years.
+>JSTの資料によると日本側は3年で上限1千5百万円ほど。
+
+Could you forward this to the Squeak-jp list?
+
+By the way, I might be able to make it for OSC2007 in Tokyo, probably
+on Saturday. Great, ne?
+
+Anyway, see you very soon !
+
+---------- Forwarded message ----------
+From: Serge Stinckwich 
+Date: 12 Sep 2007 18:27
+Subject: Collaboration with a japanese lab
+To: c5-08-committee
+Cc: Julien Bourdon 
+
+
+Hi all,
+i just received a call for participation to a join research program
+between France and Japan (see below).
+This program offer up to 30000 euros/year for each partner.
+
+Maybe you know someone around you in a japanese laboratory that might
+be interested to do something around Squeak and EToys (robotics or
+any other topic) with me ? This could be a great opportunity to do
+more fun activities with Squeak.
+
+There is a list of topics in the guidelines of this program (enclosed
+in my mail).
+If you are interested or know any people that might be, answer me in
+private.
+
+Best regards,
+
+--                                                         oooo
+Dr. Serge Stinckwich                                     OOOOOOOO
+Universite de Caen>CNRS UMR 6072>GREYC>MAD               OOESUGOO
+                                                           oooooo
+Smalltalkers do: [:it | All with: Class, (And love: it)]   \  /
+                                                             ##
+
+
+
+
+
+
+
+-- 
+Julien Bourdon
+http://purl.org/NET/JulienBourdon
+peopleIKnow do: [:each | each thinksThat: self isAddictedTo: #squeak]
+
+--------------------- Original Message Ends --------------------
+
+
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Sep 15 10:52:19 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3601] Re: Fw: Collaboration with a japanese lab
+In-Reply-To: <20070914034747.D1D7.YKOUBO2007@yengawa.com>
+References: <20070914034747.D1D7.YKOUBO2007@yengawa.com>
+Message-ID: <JW200709151052194.3698828@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+これは良いお話ですね。
+
+募集要項を読んでみると大学などの既存の研究機関を対象としているようですので、
+大学の研究室ですでにSqueakを使って研究をしており、もう少し人員、予算を確保
+したいというときに有効活用できるのではないでしょうか。
+
+#なんとなく周りを見ると複数の巣浪人Smalltalkerが手持ちぶさたにしている感じが
+#ありますし...
+
+横川さんのメールにもありますが、お気軽にご相談ください。
+
+Koji Yokokawa <ykoubo2007@yengawa.com> wrote:
+> 横川です。
+> フランスの若きSqueaker、Julienから共同研究者募集メールが転送されて来ま
+> したので、こちらへ転転送します。
+> 
+> もとはSqueakでロボット制御などをしているDr. Sergeからのメールです。
+> 日本フランス共同研究のプログラムにSqueakやEtoysで応募したいので、日本側
+> の研究者を探しているそうです。
+> フランスと日本で同時に応募しなければいけないそうで、日本側の窓口はJSTで
+> す。
+> 
+> 平成19年度　日本‐フランス研究交流課題の募集のお知らせ
+> http://www.jst.go.jp/sicp/announce_fr3rd.html
+> 
+> フランス側詳細:
+> http://www.drei.cnrs.fr/stock/Appli_GuidelineJST_CNRS2007revfinal.doc
+> 
+> 興味あるけどSqueakはちょっと。。。という方でも、私(や他のSqueakプログラ
+> マ)がサポートいたしますので、お気軽にご相談ください。
+> なお10月1日締め切りなので、お急ぎください。
+> 
+> 
+> ちなみに、転送してくれたJulienは10月から京都大学に留学します。
+> 今年のESUGではこんな発表してました。
+> http://video.google.com/videoplay?docid=-7624011308156027771
+> 高校生のサマーキャンプでSqueakで制御するロボット作成を指導したそうです。
+> そして、メールにもあるようにOSC2007 Tokyo/fallに来るので、みなさんよろし
+> く!
+> 
+> 
+> 
+> Forwarded by Koji Yokokawa 
+> ----------------------- Original Message -----------------------
+>  From:    "Julien Bourdon" 
+>  To:      "Koji Yokokawa" 
+>  Cc:      "Serge Stinckwich" 
+>  Date:    Wed, 12 Sep 2007 21:56:32 +0200
+>  Subject: Fwd: Collaboration with a japanese lab
+> ----
+> 
+> Hi Koji !
+> 
+> Just received this offer to sponsor a French-Japanese research
+> project. Would you know of someone who would be interested in a
+> project around Squeak and EToys (e.g. in the robotics domain)? Each
+> partner would receive 3000?/year (around ¥476,000) to complete it.
+> 
+> >これは間違っていて、本当は30000 euros/year for 3 years.
+> >JSTの資料によると日本側は3年で上限1千5百万円ほど。
+> 
+> Could you forward this to the Squeak-jp list?
+> 
+> By the way, I might be able to make it for OSC2007 in Tokyo, probably
+> on Saturday. Great, ne?
+> 
+> Anyway, see you very soon !
+> 
+> ---------- Forwarded message ----------
+> From: Serge Stinckwich 
+> Date: 12 Sep 2007 18:27
+> Subject: Collaboration with a japanese lab
+> To: c5-08-committee
+> Cc: Julien Bourdon 
+> 
+> 
+> Hi all,
+> i just received a call for participation to a join research program
+> between France and Japan (see below).
+> This program offer up to 30000 euros/year for each partner.
+> 
+> Maybe you know someone around you in a japanese laboratory that might
+> be interested to do something around Squeak and EToys (robotics or
+> any other topic) with me ? This could be a great opportunity to do
+> more fun activities with Squeak.
+> 
+> There is a list of topics in the guidelines of this program (enclosed
+> in my mail).
+> If you are interested or know any people that might be, answer me in
+> private.
+> 
+> Best regards,
+> 
+> --                                                         oooo
+> Dr. Serge Stinckwich                                     OOOOOOOO
+> Universite de Caen>CNRS UMR 6072>GREYC>MAD               OOESUGOO
+>                                                            oooooo
+> Smalltalkers do: [:it | All with: Class, (And love: it)]   \  /
+>                                                              ##
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> -- 
+> Julien Bourdon
+> http://purl.org/NET/JulienBourdon
+> peopleIKnow do: [:each | each thinksThat: self isAddictedTo: #squeak]
+> 
+> --------------------- Original Message Ends --------------------
+> 
+> 
+> 
+> -- !
+> Koji Yokokawa <ykoubo2007@yengawa.com>
+>     http://www.yengawa.com/
+>     ^self new!
+
+
+
+---
+[:masashi | ^umezawa]
+
+From miyasaka ＠ iris.dti.ne.jp  Sat Sep 15 16:12:58 2007
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3602] Re: 子ども向けワークショップ指導者養成セミナーのお知らせ（参加者募集中）
+In-Reply-To: <4b24f0d0709092004k3e9c79f1ybd2be40769c62ac0@mail.gmail.com>
+References: <4b24f0d0709092004k3e9c79f1ybd2be40769c62ac0@mail.gmail.com>
+Message-ID: <4b24f0d0709150012i628d853lfbb28c5f5db21d98@mail.gmail.com>
+
+squeak-jaの皆様へ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+先日お知らせさせていただいた10月14日、21日のＧＥＭＳリーダー養成ワークショップについていくつかご連絡させていただきます。
+
+■お申込みをご検討されている方へ
+できるだけスクイークの関係者の方々に参加していただきたいので、いまのところsqueak-jaとHPSSK以外にはお知らせをしておりませんが、来週からはその他の団体にも広く募集の告知を行なう予定です。
+
+募集の告知を他団体にも行なうと早期に定員に達してしまう可能性もございます。
+恐れ入りますが、squeak-jaの方で、今回の大人向けワークショップへのご参加をご検討中の方は、お早めのお申込みをいただければ幸いです。
+
+▽お申込み・詳細はこちらからどうぞ。
+http://mts-j.hiho.jp/2007/09/post_12.html
+
+
+■お申込みいただいた方々へ
+早速７名の方からお申込みをいただきました。ありがとうございました。
+詳細のご連絡が遅れておりますがいましばらくお待ちいただけますでしょうか。
+
+以上、よろしくお願いいたします！！
+
+-- 
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学大学院
+デジタルコンテンツ研究科　研究員
+---------------------------------------------
+
+
+
+On 9/10/07, Toshio Miyasaka <miyasaka@iris.dti.ne.jp> wrote:
+> squeak-jaの皆様へ
+>
+> お世話になっております。
+> デジタルハリウッド大学院の宮坂です。
+> いつもスクークを活用させていただいております！
+>
+> さて、このたび、子ども向けワークショップの指導者育成を目的としたセミナーを開催することになりましたのでご案内させていただきます。
+>
+> 子どもを対象にした問題解決過程における創造力、自主的思考力が養われるというGEMS（ジェムス）と呼ばれる「科学と数学の体験学習プログラム」のための指導者育成を目的とした２日間のワークショップです。
+> （なお、２日目にはGEMS教材ではないのですが「世界聴診器」もご紹介する予定）
+>
+> こうした体験型の教材をスクイークと上手く組み合わせることで、スクイークを利用した教育カリキュラムを充実させることも可能かと思います。スクイークを実際の教育活動で活用されている方や、スクイークの開発をされている方も、この機会に是非参加をご検討ください。本セミナーを「子ども達にとって本当に必要な教育」を考える上でのひとつのきっかけにしていただければ幸いです。
+>
+> ■タイトル
+> 【子ども体験教室リーダー養成】
+> 科学と数学の体験学習プログラム　ＧＥＭＳリーダー養成ワークショップ
+>
+> ■日時
+> 2007年10月14日（日）、21日（日）　※2日間コース
+> 10:30〜17：30（受付開始10:10）
+>
+> ■会場
+> デジタルハリウッド大学　秋葉原メインキャンパス（ダイビル7F）
+>
+> ■対象者
+> 教員、野外・環境・科学教育・地域サークルの指導者及び指導者を目指す大学生や社会人の方。
+> または子ども向けの教育活動に興味がある方であればどなたでも。
+> スクイークと組み合わせてこうした体験型の教材を利用したい方も是非ご参加ください。
+>
+> ■講師
+> ジャパンGEMSセンター
+>
+> ■受講料
+> 大学生　2,500円、　社会人　3,500円
+> GEMSの市販テキスト「ウーブレック-科学者は何をする人？」をお持ちでない方は別途テキスト代（定価1,575円）が必要です。
+>
+> ※日本GEMSセンターが開催する本ワークショップは、通常ですと15,000〜20,000円の受講料が必要になります。（URL参照）
+> 今回は「子どもゆめ基金」からの支援を受けているため、上記の受講料での開催が可能となりました。
+>
+> ■お申込み方法
+> 詳しくはこちらをご覧ください。
+> http://mts-j.hiho.jp/2007/09/post_12.html
+>
+>
+> ＜主催＞
+> みんなでたのしくスクイーク実行委員会
+> この活動は、独立行政法人国立青少年教育振興機構が行う子どもゆめ基金の助成を受けて行うものです。
+>
+> ＜GEMSとは＞
+> GEMS（ジェムス：Great Explorations in Math and
+> Science）はLHS（ローレンス・ホール・オブ・サイエンス）で２０年近く研究され続けてきた科学・数学のカリキュラムの一つで、体験学習法の理論に基づく、アクティビティ（活動体験）が中心のカリキュラムです。
+> 詳しくはこちらをご覧ください。
+> http://www.jeef.or.jp/GEMS/aboutGEMS.html
+>
+> なお、終了後には有志による懇親会も予定していますので、スクイーク関係者の方々との情報交換もたのしみにしております。
+>
+> よろしくお願いいたします。
+>
+>
+> P.S.
+> なお、１１月には阿部さんを中心にスクイークのカリキュラムを考える「カリキュラム検討会」も予定しております。別途ご案内させていただきますので、今しばらくお待ちください。
+>
+> --
+> 宮坂俊夫 (Toshio Miyasaka )
+> ---------------------------------------------
+> デジタルハリウッド大学大学院
+> デジタルコンテンツ研究科　研究員
+> ---------------------------------------------
+> ブログ時々更新中！
+> http://blogs.itmedia.co.jp/projectdx/
+>
+
+From ro ＠ bjbsh.com  Tue Sep 18 16:53:37 2007
+From: ro ＠ bjbsh.com (Lu Yifeng)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3603] 子供の近視予防のため
+Message-ID: <01fc01c7f9c9$1dda3190$8f00a8c0@crop.bjbsh.com>
+
+squeak-jaの皆様へ
+
+こんにちは、盧です。
+
+子供の近視予防のため、
+１）Squeak中のシステムフォントのサイズを大きくしたいです。
+２）Squeak起動後、３０分毎に、自動的に休憩してくださいような
+　メッセージを出したい、または音楽を流して休憩を促したいです。
+
+方法があるでしょうか。
+
+よろしくお願い致します。
+
+
+
+From abee ＠ squeakland.jp  Tue Sep 18 17:29:17 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:51 2007
+Subject: [Squeak-ja: 3604] Re: 子供の近視予防のため
+In-Reply-To: <01fc01c7f9c9$1dda3190$8f00a8c0@crop.bjbsh.com>
+References: <01fc01c7f9c9$1dda3190$8f00a8c0@crop.bjbsh.com>
+Message-ID: <46EF8C5D30F.BD9AABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 18 Sep 2007 15:53:37 +0800
+"Lu Yifeng" <ro@bjbsh.com> wrote:
+>子供の近視予防のため、
+>１）Squeak中のシステムフォントのサイズを大きくしたいです。
+
+Escキーを押してワールドメニューを出し、「外観・・・」「システム・フォント...」
+を選ぶことで変更可能です。どれがどれに対応しているか分かりにくく、ここで
+変えられないフォントもありますが、試行錯誤でお願いします。
+このとき、せっかく変更してもSqueakを終了させると元に戻ってしまいますので、
+設定後にワールドメニューの「保存」を行う必要があります。設定の前には作品
+を開いたりせず、起動直後のまっさらな状態で行ってください。
+
+また、SqueakでなくOS側の設定で見た目の文字を大きくする方法もあります。た
+とえば、解像度をSVGA(800x600)にすれば、XGA(1024x768)の1.28倍の大きさにな
+ります。
+
+>２）Squeak起動後、３０分毎に、自動的に休憩してくださいような
+>　メッセージを出したい、または音楽を流して休憩を促したいです。
+
+簡単なスクリプトで可能だと思います。
+たとえば、任意のスケッチに「秒数」という変数を追加し、チクタクの刻み値を
+1にして、こんなスクリプトを実行します。
+
+[スケッチの][秒数に以下を足す][1]
+テスト [スケッチの][秒数][は次で割り切れるか][1800]
+    はい [スケッチ][が音を鳴らす][ゲコゲコ]
+    いいえ
+
+「はい」のところは工夫してみてください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Tue Sep 25 19:36:40 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3605] Re: Fw: オープンソースカンファレンス 2007 Tokyo/Fall セミナー事前登録受付開始のご案内
+In-Reply-To: <46E508B2131.7DFCABEE@smtp.nifty.com>
+References: <46E508B2131.7DFCABEE@smtp.nifty.com>
+Message-ID: <46F8E4B817B.0959ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 10 Sep 2007 18:04:50 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>私たちの「100ドルノートPCとEtoys、開発環境としてのSqueak」は、10/6(土)
+>10:30-11:30、会議室Fとなりました。定員が27名と少ないので、お早めに申し込
+>まれることをおすすめします。
+
+お陰様で満員となりました。ありがとうございます。
+
+>その他、ミニセミナー、展示の案内はまだですが、追って連絡があると思います。
+
+ミニセミナーの時間と場所は以下の通りです。こちらは事前登録の必要はありま
+せん。
+
+10月5日(金) b会場
+時間: 16:40-16:50
+タイトル: 一人の子供に一台のノートPCとSqueak - 学ぶことを学ぶためのOLPC
+担当: Squeak-ja
+講師: 阿部 和広 (Squeak-ja)
+内容: 世界の子供たちに安価なノートPCと革新的な教育を提供するOLPCの活動と
+Squeak Etoysを紹介します。
+
+展示ブース一覧については以下をご覧ください。
+
+http://www.ospn.jp/osc2007-fall/modules/xfsection/article.php?articleid=1
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mutoh ＠ openedu.org  Thu Sep 27 17:47:25 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3606] Re: KOF2007の展示
+In-Reply-To: <1d78507bf3eb40b7d97afa43df707946@openedu.org>
+References: <dba82ae16ed6214aa3bda45e1fba4992@openedu.org>
+	<b0221f98469a49ea175984e2a23ce48e@openedu.org>
+	<46D58C663B3.75B9ABEE@smtp.nifty.com>
+	<1d78507bf3eb40b7d97afa43df707946@openedu.org>
+Message-ID: <07ec7bb8c32de2593f0177afd7e6c429@openedu.org>
+
+むとう＠おうちです。
+
+昨日、事務局の方から連絡がありまして、無事ブースの方2日とも確保できました。
+	http://k-of.jp/2007/exhibition.html
+
+一部のブースは、共同利用だということで、ラッキーだったのかもしれません。
+
+当日お待ちしてますので、ぜひお越し下さい。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From abee ＠ squeakland.jp  Fri Sep 28 16:01:29 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3607] 近刊のご紹介「 Squeak プログラミング−−簡単に作れるビジュアル教材」
+Message-ID: <46FCA6C9322.1077ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+10/30に東京電機大学出版局より以下の本が出版されます。
+久々のSqueak本ですね。私もまだ読んでいないのですが面白そうです。特に
+第9章のTips集が気になります。
+東京電機大学出版局様のご厚意により、10/5,6に開催されるOSC2007のSqueak-ja
+ブースで、この本のチラシを配布します。もしかしたら見本誌も展示できるかも
+しれません。
+
+書名：　Squeakプログラミング−−簡単に作れるビジュアル教材
+著者名：福村好美・湯川高志・五百部敦志 著
+体裁：　B5判・184頁
+定価：　2415円（税込）（本体2300円＋税）
+発行：　2007年10月30日
+ISBN：　978-4-501-54370-9
+
+内容概説
+・Squeakは、ビジュアルな開発環境で、シミュレーション環境を構築できるツー
+　ルです。
+・Squeakを活用することで、プログラミングの専門知識が無くても、簡単に「動
+　く教材」を作成できます。
+・実験・実習を伴う授業・研修や、ウェブベースのeラーニングにおける「動く教
+　材」の作成方法を、実例をもとに解説しました。
+・ICTを活用した学習環境の構築をサポートします。
+
+主要目次
+・第I部 基礎編
+　第1章 Squeak eToysとは
+　第2章 起動するまで
+　第3章 基本的な構成要素とそれらの操作
+　第4章 タイルプログラミング
+・第II部 実践編
+　第5章 基本動作〜部品の直線移動
+　第6章 複合運動〜サブモーフ
+　第7章 数学関数による動作制御〜タイルの定義
+　第8章 動作を動的に変化させる〜プレイヤ変数
+第III部 ノウハウ編
+　第9章 Tips集
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Fri Sep 28 17:26:41 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3608] SuperSwiki2のバージョンアップ
+Message-ID: <JY2007092817264115.2549625@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SuperSwiki2をバージョンアップしました。よろしければお使いください。
+http://swikis.ddo.jp/SuperSwiki2/2
+
+まったく同じものがSqueakland.jpで上がっています。
+http://squeakland.jp/super2/
+
+今回からe-Toyプロジェクトの共有に加え、簡易Wiki機能もサポートされて
+いますので、その名の通り、Wikiとして使うことも一応出来ます。
+
+特にall-in-oneタイプは、展開して起動するだけですので、サーバ設定
+などに不慣れな方でも、すぐに使っていただくことが出来ます。
+(Win、Mac, Linux全てをサポートします)
+ftp://swikis.ddo.jp/SuperSwiki2/all-in-one/SuperSwiki2Server20070916-all-in-one.ja.zip
+
+USBメモリなどにコピーして使えば、プロジェクトのデータをサーバ本体と
+ともに気軽に持ち歩けます。ワークショップでの利用などに便利と思います。
+(保存するプロジェクトの量にもよりますが、256MB程度のUSBメモリが必要に
+なります。最近は3000円くらいでしょう)
+
+Squeakプラグイン側の設定は、下記をご参照ください。(今回から既存の
+Squeakプラグインからの接続も可能になりました)
+http://swikis.ddo.jp/SuperSwiki2/28
+
+では。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Fri Sep 28 18:23:04 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3609] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <JY2007092817264115.2549625@mars.dti.ne.jp>
+References: <JY2007092817264115.2549625@mars.dti.ne.jp>
+Message-ID: <46FCC7F8273.86E3ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 28 Sep 2007 17:26:41 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>SuperSwiki2をバージョンアップしました。よろしければお使いください。
+>http://swikis.ddo.jp/SuperSwiki2/2
+
+すばらしいです。
+
+>Squeakプラグイン側の設定は、下記をご参照ください。(今回から既存の
+>Squeakプラグインからの接続も可能になりました)
+>http://swikis.ddo.jp/SuperSwiki2/28
+
+squeakland.jpのSuperSwiki2につなぐ場合、knownServersに置くファイルの設定
+を教えてもらえますか。以下ではうまくいかないようです。
+
+name:	SuperSwiki2
+directory:	/super2/SuperSwikiProj
+type:	bss
+server:	squeakland.jp
+acceptsUploads:	true
+
+serverをsuperswiki2.blueplane.jpに変えてもだめでした。
+
+うまく行けば、csにしてアップデートストリームに流してもらおうと思います。
+そうすれば現在のSuperSwiki(Squeakland.JP)と同じように、誰でもナビゲータの
+「公開する」や「探す」でアクセス可能になります。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Fri Sep 28 18:59:18 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3610] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <46FCC7F8273.86E3ABEE@smtp.nifty.com>
+References: <JY2007092817264115.2549625@mars.dti.ne.jp>
+	<46FCC7F8273.86E3ABEE@smtp.nifty.com>
+Message-ID: <JL200709281859188.8106406@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+> 阿部@新百合です。
+> 
+> On Fri, 28 Sep 2007 17:26:41 +0900
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> >SuperSwiki2をバージョンアップしました。よろしければお使いください。
+> >http://swikis.ddo.jp/SuperSwiki2/2
+> 
+> すばらしいです。
+
+ありがとうございます。
+
+> >Squeakプラグイン側の設定は、下記をご参照ください。(今回から既存の
+> >Squeakプラグインからの接続も可能になりました)
+> >http://swikis.ddo.jp/SuperSwiki2/28
+> 
+> squeakland.jpのSuperSwiki2につなぐ場合、knownServersに置くファイルの設定
+> を教えてもらえますか。以下ではうまくいかないようです。
+> 
+> name: SuperSwiki2
+> directory:    /super2/SuperSwikiProj
+> type: bss
+> server:   squeakland.jp
+> acceptsUploads:   true
+> 
+> serverをsuperswiki2.blueplane.jpに変えてもだめでした。
+
+name:   SuperSwiki2
+directory:  /super/SuperSwikiProj
+type:   bss
+server: blueplane.jp:9090
+acceptsUploads: true
+
+となります。プロキシを指定できません。SuperSwiki2サーバのホストとポートを
+直に指定します。(技術的なことをいうと、プロキシとなっているApacheもDelegateも
+昨今HTTP1.1なので、つなぐことが出来ないのです。これはSqueakプラグイン側の
+問題です。)
+
+> うまく行けば、csにしてアップデートストリームに流してもらおうと思います。
+> そうすれば現在のSuperSwiki(Squeakland.JP)と同じように、誰でもナビゲータの
+> 「公開する」や「探す」でアクセス可能になります。
+
+「探す」については実は問題があって、長押しで出てくる「SuperSwikiを検索」に
+ついてのみ日本語による検索ができません。(これは2でない旧SuperSwikiについても
+同じだと思います。)
+Squeakプラグイン側にパッチを当てる必要があります。参考までに添付してみました。
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: EToyProjectQueryMorphFix-mu.1.cs
+型:         application/octet-stream
+サイズ:     903 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070928/fcf96a3f/EToyProjectQueryMorphFix-mu.1.obj
+From abee ＠ squeakland.jp  Fri Sep 28 21:49:57 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3611] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <JL200709281859188.8106406@mars.dti.ne.jp>
+References: <46FCC7F8273.86E3ABEE@smtp.nifty.com>
+	<JL200709281859188.8106406@mars.dti.ne.jp>
+Message-ID: <46FCF87525E.86E7ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 28 Sep 2007 18:59:18 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>name:   SuperSwiki2
+>directory:  /super/SuperSwikiProj
+>type:   bss
+>server: blueplane.jp:9090
+>acceptsUploads: true
+>
+>となります。プロキシを指定できません。SuperSwiki2サーバのホストとポートを
+>直に指定します。(技術的なことをいうと、プロキシとなっているApacheもDelegateも
+>昨今HTTP1.1なので、つなぐことが出来ないのです。これはSqueakプラグイン側の
+>問題です。)
+
+ありがとうございます。これでアクセスできることを確認しました。
+前にも同じことを聞いたような気もします。すみません。
+
+>「探す」については実は問題があって、長押しで出てくる「SuperSwikiを検索」に
+>ついてのみ日本語による検索ができません。(これは2でない旧SuperSwikiについても
+>同じだと思います。)
+>Squeakプラグイン側にパッチを当てる必要があります。参考までに添付してみました。
+
+おお、ぜんぜん気付いていませんでした。確かに旧SuperSwikiでも検索できませ
+ん。梅澤さんのパッチで検索できるようになることを確認しました。これは意外
+と便利ですね。
+
+大島さん、よろしければこれをアップデートストリームに入れてもらえないでしょ
+うか。
+
+>> うまく行けば、csにしてアップデートストリームに流してもらおうと思います。
+>> そうすれば現在のSuperSwiki(Squeakland.JP)と同じように、誰でもナビゲータの
+>> 「公開する」や「探す」でアクセス可能になります。
+
+あらためてSqueakland2005J2をみたところ、インストール時に
+静的なファイルとしてprefs\knownServers\squeakland.jpを作成していますね。
+2005Jでは、JapaneseEnvironment>>setupSqueaklandSpecificsで
+ServerDirectoryに追加していたのですが、これは取りやめたと言うことでしょう
+か(>山宮さん)。このメソッド自体は残っているのですが呼ばれていないようです。
+このメソッドを拡張するのは簡単ですが、どのように作るべきでしょうね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Sat Sep 29 00:11:11 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3612] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <46FCF87525E.86E7ABEE@smtp.nifty.com>
+References: <46FCC7F8273.86E3ABEE@smtp.nifty.com>	<JL200709281859188.8106406@mars.dti.ne.jp>
+	<46FCF87525E.86E7ABEE@smtp.nifty.com>
+Message-ID: <46FD198F.2090307@metatoys.org>
+
+山宮です。
+
+> あらためてSqueakland2005J2をみたところ、インストール時に
+> 静的なファイルとしてprefs\knownServers\squeakland.jpを作成していますね。
+> 2005Jでは、JapaneseEnvironment>>setupSqueaklandSpecificsで
+> ServerDirectoryに追加していたのですが、これは取りやめたと言うことでしょう
+> か(>山宮さん)。このメソッド自体は残っているのですが呼ばれていないようです。
+> このメソッドを拡張するのは簡単ですが、どのように作るべきでしょうね。
+
+はい。ServerDirectory は起動時に削除するという設定になってしまったので、
+イメージにサーバ設定を保存できなくなってしまいました。
+私もびっくりしました。
+
+ワークショップ用のイメージを作る際は、どこかプリファレンスを変更すると、
+前みたいにイメージにも保存出来ると思います。
+
+
+From abee ＠ squeakland.jp  Sat Sep 29 00:47:40 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3613] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <46FD198F.2090307@metatoys.org>
+References: <46FCF87525E.86E7ABEE@smtp.nifty.com>
+	<46FD198F.2090307@metatoys.org>
+Message-ID: <46FD221C18E.A29EABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 28 Sep 2007 08:11:11 -0700
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>はい。ServerDirectory は起動時に削除するという設定になってしまったので、
+>イメージにサーバ設定を保存できなくなってしまいました。
+>私もびっくりしました。
+>
+>ワークショップ用のイメージを作る際は、どこかプリファレンスを変更すると、
+>前みたいにイメージにも保存出来ると思います。
+
+むむむ。それでは、とりあえずSuperSwiki2にSqueakの中からアクセスしたい人は、
+各人が作るか、添付のファイルをprefs\knownServersに置いてもらうとして、次
+のリリース時(2005J3?)にこのファイルもインストールされるようにしましょう。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SuperSwiki2
+型:         application/octet-stream
+サイズ:     109 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070929/f30dee0f/SuperSwiki2.obj
+From hachi ＠ asu.ac.jp  Sat Sep 29 17:07:07 2007
+From: hachi ＠ asu.ac.jp (H.Hachisuka)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3614] Scratchについて
+Message-ID: <46FE07AB.9010306@asu.ac.jp>
+
+蜂須賀です。
+
+Scratch(MITが開発した子供向けのブロック風のプログラム言語)ですが、調べて
+みたところスクイークで開発されているみたいなのですが、ここのMLでは取り上
+げられた事がないように思います。スクイークとは別物と考えた方がいいので
+しょうか？
+
+From abee ＠ squeakland.jp  Sun Sep 30 18:40:04 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3615] Re: Scratch について
+In-Reply-To: <46FE07AB.9010306@asu.ac.jp>
+References: <46FE07AB.9010306@asu.ac.jp>
+Message-ID: <46FF6EF42C6.0A64ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 29 Sep 2007 17:07:07 +0900
+"H.Hachisuka" <hachi@asu.ac.jp> wrote:
+>Scratch(MITが開発した子供向けのブロック風のプログラム言語)ですが、調べて
+>みたところスクイークで開発されているみたいなのですが、ここのMLでは取り上
+>げられた事がないように思います。スクイークとは別物と考えた方がいいので
+>しょうか？
+
+言葉は出てきたことがありますが、確かに説明はなかったですね。
+
+Scratchは、Squeak上でSmalltalk(古いSqueak 2.8をベースにしたMIT Squeak)を
+使って開発されていますが、Etoysとは直接のつながりはありません。また、ユー
+ザはSqueak上で動いていることを意識する必要はありません。
+本来のSqueakはEtoysも含めた環境全体を指しますが、日本でスクイークというと、
+ほとんど Etoysのことなので、その意味では別物です。
+
+中心的な開発者のJohn MaloneyさんはSqueakのキーパーソンでもあり、特に
+Morphicと呼ばれるUIのフレームワークで知られています(「Squeak入門 第3章」
+参照)。そういうこともあって、ScratchにはEtoys的な要素がいくつか含まれてい
+ます(どちらもLOGOのバリエーションと言った方が良いかもしれませんが)。
+スケッチ(Scratchではスプライト)に対してタイル (同ブロック)を組み合わせて
+スプリプトを書いていくことなどがそうです。 Etoysを使ったことがある人なら
+簡単に使えるようになるでしょう。
+
+Scratchのルック&フィールは他のMITメディアラボのソフトと統一されており、レ
+イアウトが固定されていて、隠れているものがありません。目に見えているもの
+をシングルクリックあるいはドラッグすることで操作できます(ハロ、ビューワ、
+スクリプト、ワールド、全スクリプト、ウォッチャに相当するもが常に表示され
+ています)。
+Etoysでは、必要な機能がメニューの奥深くに隠れていたり、どこかに行ってしま
+ったり、つかむのに苦労したりなどということがありますが、このようなことが
+Scratchではあまりありません。マニュアルやヘルプなどのドキュメントも品質が
+高いです。
+
+ScratchはEtoysとは時間や制御に関する考え方が異なっており、Scratchは普通の
+プログラミング言語に近いです。スクリプトは勝手にループしませんし、刻み値
+もありません。スクリプトはイベントで起動され、タイミングは個々のブロック
+中のウェイトで合わせます。一般的な制御構文も一通り揃っています。
+
+Etoysがシミュレーションに特化しているのに対し、Scratchはインタラクティブ
+な音やアニメーション、ゲームに強く、それに必要な素材が最初から豊富に用意
+されているので、直ちに作品作りに取り掛かることができます。ゲームコントロー
+ラとして使えるScratchPadというセンサもあります(世界聴診器に似ていますが
+USB接続です)。
+
+これらの作品を公開するためのSuperSwikiのような場所が最初から用意されてい
+るのも特徴です。この仕組みは非常に洗練されており、プラグインがインストー
+ルされていなくてもJavaとWebブラウザで実行可能です。ここにはすでに32,000以
+上の作品が登録されています。
+
+http://scratch.mit.edu/
+
+その一方で、Etoysの特徴であるメタ的なところはほとんどなく、Scratch自体が
+どのように作られているのかを調べたり、分解して変更したりといったことはで
+きません。ScratchはScratch自体で書かれていませんし、Smalltalkのコードは隠
+されています。
+
+また、複数のスプライト間の関連を表現することが難しく、車をハンドルで操作
+するといったことがややトリッキーになります。 スクリプトに名前を付けること
+もできないので、ブロードキャストというラベルつきのイベントを使って呼び出
+します。
+たとえば、Drive a Carを Scratchで書くと以下のようになります。
+
+http://scratch.mit.edu/projects/abee/6783
+http://scratch.mit.edu/projects/abee/6779
+
+あと、日本語化については、私が試しにやってみたものがありますが、ちゃんと
+した多言語化は大島さんがやると聞いています。
+
+以上のように、Scratchは非常に完成度が高く、興味深いシステムです。目的が違
+うので必ずしもEtoysを置き換えるものではありませんが、デザイン面などでEtoys
+が参考にすべきことはたくさんあると思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mutoh ＠ openedu.org  Sun Sep 30 19:03:44 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3616] チラシ、again
+Message-ID: <a73317a9a22aeb967bdd37f065f315bb@openedu.org>
+
+むとう＠おうちです。
+
+なんか、気がつけば明日から月が変わるし、OSCももうすぐですよね。
+
+で、ESUGさんが最近Smalltalkのflyerを作られたということです。
+- http://damien.cassou.free.fr/flyer-smalltalk.pdf
+# フランス語なんで、私は内容分からないんですが(^-^;)
+
+で、このスタイルがなかなかいいなと思いまして、ちょっと以前からいじっているチラシ用の文章を、
+このスタイルに突っ込んでみました。
+- http://qml.610t.org/squeak/chirashi2007.html
+- http://qml.610t.org/squeak/mutoh_20070930.files/flyer.pdf
+# 最後のページの曼荼羅はまあお遊びなので;-)
+
+いかがでしょうかね?
+
+まだ文章とか入れれそうなので、ちょっともう少し分かりやすくできないか考えてみます。
+
+問題は、３つ折りする手間が増えることなんですが…
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From ykoubo2007 ＠ yengawa.com  Sun Sep 30 23:36:39 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3617] Re: Scratchについて
+In-Reply-To: <46FE07AB.9010306@asu.ac.jp>
+References: <46FE07AB.9010306@asu.ac.jp>
+Message-ID: <20070930231511.1D7F.YKOUBO2007@yengawa.com>
+
+横川です。
+確かにScratchはSqueakで作られてますが、Scratchで普通に遊んでいる限り中の
+Squeak的なモノはいっさい外に出てきませんよね。
+
+でも、無理やりSqueakにアクセスする裏技もあるみたいですよ。
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2007-September/120191.html
+
+
+On Sat, 29 Sep 2007 17:07:07 +0900
+"H.Hachisuka" <hachi@asu.ac.jp> wrote:
+
+> 蜂須賀です。
+> 
+> Scratch(MITが開発した子供向けのブロック風のプログラム言語)ですが、調べて
+> みたところスクイークで開発されているみたいなのですが、ここのMLでは取り上
+> げられた事がないように思います。スクイークとは別物と考えた方がいいので
+> しょうか？
+> 
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+

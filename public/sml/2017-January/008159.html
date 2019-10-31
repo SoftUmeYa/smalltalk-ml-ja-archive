@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8159] Re:	NesTalkをpharo5.0に移植途中なのですが・・・
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208159%5D%20Re%3A%0A%09%3D%3Futf-8%3Fb%3FTmVzVGFsa%2BOCknBoYXJvNS4w44Gr56e75qSN6YCU5Lit44Gq%3F%3D%0A%09%3D%3Futf-8%3Fb%3F44Gu44Gn44GZ44GM44O744O744O7%3F%3D&In-Reply-To=%3CCAO%3DzwV0nzoLPJ5fyMApt8XrtErmYcJ__4P9iXsgasAxBCewQ9w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008158.html">
+   <LINK REL="Next"  HREF="008161.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8159] Re:	NesTalkをpharo5.0に移植途中なのですが・・・</H1>
+    <B>Masato Sumi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208159%5D%20Re%3A%0A%09%3D%3Futf-8%3Fb%3FTmVzVGFsa%2BOCknBoYXJvNS4w44Gr56e75qSN6YCU5Lit44Gq%3F%3D%0A%09%3D%3Futf-8%3Fb%3F44Gu44Gn44GZ44GM44O744O744O7%3F%3D&In-Reply-To=%3CCAO%3DzwV0nzoLPJ5fyMApt8XrtErmYcJ__4P9iXsgasAxBCewQ9w%40mail.gmail.com%3E"
+       TITLE="[SML 8159] Re:	NesTalkをpharo5.0に移植途中なのですが・・・">sumi ＠ seagreen.ocn.ne.jp
+       </A><BR>
+    <I>2017年 1月 17日 (火) 12:21:12 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008158.html">[SML 8158]	NesTalkをpharo5.0に移植途中なのですが・・・
+</A></li>
+        <LI>次の記事 <A HREF="008161.html">[SML 8161] Re:	NesTalkをpharo5.0に移植途中なのですが・・・
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8159">[ 日付 ]</a>
+              <a href="thread.html#8159">[ スレッド ]</a>
+              <a href="subject.html#8159">[ 件名 ]</a>
+              <a href="author.html#8159">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>古川さん
+
+#deprecated: は非推奨メソッドに組み込んでおき、コールされた場合に警告を出すためのメソッドで、
+試しておられるような使い方は見たことがないのですが、当方の勘違いでしょうか？
+
+あと、古川さんは OS は何を使われていますか？
+
+
+手元の環境（Win 8.1）で試しましたが、#romFile: で ROM ファイルを読み込めないだけで
+これをとりあえず
+
+romFile: path
+    ^ path asFileReference readStreamDo:
+        [:stream | self readCartridge: stream]
+
+のように修正すれば他には特に修正なしに動きました。よく調べていませんが、
+Pharo の Path&gt;&gt;#segments あたりが Win でうまく機能していないせいのように見受けられます。
+
+macOS はちょっと古いバージョン（10.9）でしか試していないのですが、
+Win で動かすときような修正の必要はなく、インストールしただけで特にいじらずとも起動まではしました。
+しかし、Pharo が macOS で動くときに #keyDonw、#keyUp イベントでちゃんとキーコードを保持できていないらしく
+操作不能な状態に陥っているように見受けられます。
+とりあえず、#keyStroke イベントはちゃんとキーコードを保持できているようなので、
+#handlesKeyDown: と同じ内容の #handlesKeyStroke: メソッドを NesTalkWindow に追加してみたところ、
+それらしき反応はしてくれるようです（ただ、これだけですとボタンが押しっぱなしになるので相変わらずプレイは不能ですが…）
+
+--
+sumim
+
+
+2017年1月15日 20:00 Sunao Furukawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sadie ＠ kind.ocn.ne.jp</A>&gt;:
+&gt;<i> 古川と申します。
+</I>&gt;<i> NesTalkでマリオを動かす
+</I>&gt;<i> <A HREF="http://oohito.com/nqthm/archives/2060">http://oohito.com/nqthm/archives/2060</A>
+</I>&gt;<i> を参考に
+</I>&gt;<i> NesTalkをpharo 5.0に移植しようと思って作業しているのですが、
+</I>&gt;<i> FileStreamのメソッドをdeprecated:にすればいいと思っていました。
+</I>&gt;<i> しかし、validate:aByteArrayの引数で具体的な値が入りません。
+</I>&gt;<i> pharo2.0でやれば、シンボルのブロックが代入されているところで、
+</I>&gt;<i> pharo5.0ではFileStreamの変数が指定されています。
+</I>&gt;<i> どう直したらいいでしょう。
+</I>&gt;<i>
+</I>&gt;<i> 変更したメソッドを書いておきます。なお、BabyMockはsmalltalkhubから
+</I>&gt;<i> loadしました。
+</I>&gt;<i> --------------------------------------------------------------
+</I>&gt;<i> romFile: path
+</I>&gt;<i>         ^ FileSystem disk / path binaryReadStreamDo:
+</I>&gt;<i>                 [:stream | self readCartridge: stream]
+</I>&gt;<i>
+</I>&gt;<i> ---------------------------------------------------------------
+</I>&gt;<i> readCartridge: stream
+</I>&gt;<i>         | roms vroms header |
+</I>&gt;<i>         stream deprecated: 'binary'.
+</I>&gt;<i>         header := NtCartridgeHeader fromByteArray: (stream deprecated:
+</I>&gt;<i> 'next: 16').
+</I>&gt;<i>         roms := self readRoms: stream header: header.
+</I>&gt;<i>         vroms := self readVroms: stream header: header.
+</I>&gt;<i>         ^ self new
+</I>&gt;<i>                 setHeader: header
+</I>&gt;<i>                 roms: roms
+</I>&gt;<i>                 vroms: vroms
+</I>&gt;<i>                 tiles: (self tilesPerVrom: vroms)
+</I>&gt;<i> ----------------------------------------------------------------
+</I>&gt;<i> 虫のいい話で申し訳ありません。ポイントは'next: 16'がdeprecated:にした時に
+</I>&gt;<i> 値を読み込まないことだと思います。
+</I>&gt;<i>
+</I></PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008158.html">[SML 8158]	NesTalkをpharo5.0に移植途中なのですが・・・
+</A></li>
+	<LI>次の記事 <A HREF="008161.html">[SML 8161] Re:	NesTalkをpharo5.0に移植途中なのですが・・・
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8159">[ 日付 ]</a>
+              <a href="thread.html#8159">[ スレッド ]</a>
+              <a href="subject.html#8159">[ 件名 ]</a>
+              <a href="author.html#8159">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

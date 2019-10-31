@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4668]	Andreas Raabさんが亡くなりました。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204668%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FQW5kcmVhcyBSYWFiGyRCJDUkcyQsSzQkLyRKJGokXiQ3GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJD8hIxsoQg%3D%3D%3F%3D&In-Reply-To=%3CCADv7uFHZbPVo9j9E3WzxJY4A%2Bf7LpQuPGf%3DQw5r_EAG%3Dugfdaw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004671.html">
+   <LINK REL="Next"  HREF="004669.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4668]	Andreas Raabさんが亡くなりました。</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204668%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FQW5kcmVhcyBSYWFiGyRCJDUkcyQsSzQkLyRKJGokXiQ3GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJD8hIxsoQg%3D%3D%3F%3D&In-Reply-To=%3CCADv7uFHZbPVo9j9E3WzxJY4A%2Bf7LpQuPGf%3DQw5r_EAG%3Dugfdaw%40mail.gmail.com%3E"
+       TITLE="[Squeak-ja: 4668]	Andreas Raabさんが亡くなりました。">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2013年 1月 15日 (火) 22:25:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004671.html">[Squeak-ja: 4671] Re:	Stephen Howellさんの講演会とワークショップ
+</A></li>
+        <LI>次の記事 <A HREF="004669.html">[Squeak-ja: 4669] Re:	Andreas Raabさんが亡くなりました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4668">[ 日付 ]</a>
+              <a href="thread.html#4668">[ スレッド ]</a>
+              <a href="subject.html#4668">[ 件名 ]</a>
+              <a href="author.html#4668">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部です。
+今朝、大島さんから連絡をもらい、間違いの可能性もあるかと思っていたのですが、本当でした。
+Squeakに多大な貢献をされたAndreas Raabさんが亡くなりました。
+<A HREF="http://lists.squeakfoundation.org/pipermail/squeak-dev/2013-January/167861.html">http://lists.squeakfoundation.org/pipermail/squeak-dev/2013-January/167861.html</A>
+
+アンドレアスさんは学生時代にWin32のVMを書きました。その後、ひとつひとつ挙げるのが大変なくらい多くのプロジェクトに関わり、沢山のコードを書き、コミュニティに貢献しました。
+彼の人柄について語るのに私は適任ではないと思います。私が英語を話せないこともあり(もちろん、ドイツ語も)、会った時もほとんど会話らしい会話をした記憶がありません。
+ただ、私の知っている人の中で最もクレバーな一人だったと思います。
+何かやりたいことがあったときに、目的のものが彼の仕事から見つかることが実に多かったです。
+他のみんなと仕事をしているときも、「すでにアンドレアスがやってくれた」、「それはアンドレアスがやってくれるだろう」という会話をよくしていました。
+そして彼のコードには絶大な信頼を寄せていました。(先日のSmalltalk勉強会でちよっと話の出たSqueakSSLも彼が作りました)
+
+私は、本当のところ、人が死ぬとどうなるかよく分かりません。でも、コードは残ります。
+
+|<i> authorInitials collection smalltalk |
+</I>authorInitials := 'ar'.
+collection := OrderedCollection new.
+smalltalk := (Smalltalk includesKey: #SystemNavigation)
+	ifTrue: [(Smalltalk at: #SystemNavigation) default]
+	ifFalse: [Smalltalk].
+smalltalk allBehaviorsDo: [:class |
+	class selectorsDo: [:selector |
+		| method timeStamp |
+		method := class compiledMethodAt: selector.
+		timeStamp := Utilities timeStampForMethod: method.
+		(timeStamp includesSubString: authorInitials) ifTrue: [
+			collection add: timeStamp, ' ', class name, ' ', selector]]].
+^ collection
+
+# もっとシンプルなコードがすでにsqueak-devに上がっているのですが、せっかく書いことだし。バグってたら直してください。
+# あと、これに使っているallBehaviorsDo:のコメントは彼らしいと思いました)
+
+Smalltalkのように新陳代謝するシステムでは、彼のコードもいずれはなくなっていくことでしょう。
+でも、authorInitialsに'ar'を見つけた時に、彼のことを思い出すのも良いかもしれないと思っています。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004671.html">[Squeak-ja: 4671] Re:	Stephen Howellさんの講演会とワークショップ
+</A></li>
+	<LI>次の記事 <A HREF="004669.html">[Squeak-ja: 4669] Re:	Andreas Raabさんが亡くなりました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4668">[ 日付 ]</a>
+              <a href="thread.html#4668">[ スレッド ]</a>
+              <a href="subject.html#4668">[ 件名 ]</a>
+              <a href="author.html#4668">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

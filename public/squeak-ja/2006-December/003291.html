@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3291] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203291%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQj1pPzQ8VCROPEEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTGQhJxsoQiBCUmVnZXhwIGZvciBTcXVlYWsg%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskLD5lPGokLyQkJCskSiQkGyhC%3F%3D&In-Reply-To=DAC71DAC3DC763ka.minami%40nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003290.html">
+   <LINK REL="Next"  HREF="003286.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3291] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない</H1>
+    <B>濱口裕史</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203291%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQj1pPzQ8VCROPEEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTGQhJxsoQiBCUmVnZXhwIGZvciBTcXVlYWsg%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskLD5lPGokLyQkJCskSiQkGyhC%3F%3D&In-Reply-To=DAC71DAC3DC763ka.minami%40nifty.com"
+       TITLE="[Squeak-ja: 3291] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない">hamaguchi.u2 ＠ gmail.com
+       </A><BR>
+    <I>2006年 12月 12日 (火) 15:07:35 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003290.html">[Squeak-ja: 3290] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない
+</A></li>
+        <LI>次の記事 <A HREF="003286.html">[Squeak-ja: 3286] SeasideJOne ベータ版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3291">[ 日付 ]</a>
+              <a href="thread.html#3291">[ スレッド ]</a>
+              <a href="subject.html#3291">[ 件名 ]</a>
+              <a href="author.html#3291">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>南谷さん
+
+詳細にご回答いただき、ありがとうございました。
+
+参考にさせていただき、
+SqueakPlugin-dev-527にて、BRegexp for Squeakを正常に動作させることが出来ました。
+ありがとうございます。
+
+Squeak(Smalltalk)のえもいわれぬ魅力にとらえられ、
+試行錯誤しつつ勉強中です。
+Webや書籍による情報も豊富とは言えない中、
+このメーリングリストで今回のようにしっかりご回答いただけると、
+非常に心強い気がします。
+甘えてばかりではいけませんが、
+またお世話になるかもしれません。
+どうぞ、宜しくお願いいたします。
+
+以上。
+
+06/12/12 に Kazuki Minamitani &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">ka.minami ＠ nifty.com</A>&gt; さんは書きました:
+&gt;<i>
+</I>&gt;<i> こんにちは、南谷です。
+</I>&gt;<i> BRegexp for Squeakの作者です。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 今現在、日本語の扱えるSqueakで一番整備されていて、新しいものは、
+</I>&gt;<i> Squeaklandで配布されている開発者版（SqueakPlugin-dev-527）だと思います。
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.squeakland.jp/developer/">http://www.squeakland.jp/developer/</A>
+</I>&gt;<i>
+</I>&gt;<i> Squeak3.8ベースで、Nihongo6から見ると二世代後のものです。
+</I>&gt;<i> BRegexp for Squeakは、こちらで支障なく動くようですので、Squeakをダウング
+</I>&gt;<i> レードするのではなく、アップグレードしてお試しいただくのがいいと思います。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Syntax Errorが出るのは、多分パッケージされているソースファイルのエンコー
+</I>&gt;<i> ディングが違うのだと思います。対応するのはそんなに手間ではないと思います
+</I>&gt;<i> が、3.7系は開発が止まってから大分経っていますし、現在メイン(だと思われ
+</I>&gt;<i> る)の3.8系で利用できています。
+</I>&gt;<i> ですので、今のところは3.7系に対応させる作業はしないつもりでいます。
+</I>&gt;<i>
+</I>&gt;<i> 3.7系でどうしても、という方がもし居られましたらご連絡ください。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Tue, 12 Dec 2006 11:27:32 +0900
+</I>&gt;<i> &quot;濱口裕史&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hamaguchi.u2 ＠ gmail.com</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt;阿部さん
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;早速のご回答ありがとうございました。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;とりあえずは、BRegexp for Squeakが対応しているバージョンに
+</I>&gt;<i> &gt;Squeakをダウングレードして勉強を進めたいと思います。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;今後ともよろしくおねがいします。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;06/12/12 に Kazuhiro ABE &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt; さんは書きました:
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 阿部@新百合です。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; On Mon, 11 Dec 2006 21:52:51 +0900
+</I>&gt;<i> &gt;&gt; &quot;濱口裕史&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hamaguchi.u2 ＠ gmail.com</A>&gt; wrote:
+</I>&gt;<i> &gt;&gt; &gt;よろしく御願いします。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; よろしくお願いします。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; # サブジェクトに「初心者の質問：」と入れないといけないというローカルルー
+</I>&gt;<i> &gt;&gt; # ルは無いと思いますので適当にお願いします。もちろんつけても結構です。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; &gt;Squeak(Squeak3.7.1)をはじめて3日、文法を一通りおさえ、
+</I>&gt;<i> &gt;&gt; &gt;現在クラスライブラリ探索中です。
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt;正規表現モジュールがデフォルトでSqueakには含まれていないようなので、
+</I>&gt;<i> &gt;&gt; &gt;BRegexp for Squeak(
+</I>&gt;<i> &gt;&gt; &gt;<A HREF="http://kminami.fc2web.com/Squeak/Goodies/BRegexp/index.html">http://kminami.fc2web.com/Squeak/Goodies/BRegexp/index.html</A>)
+</I>&gt;<i> &gt;&gt; &gt;の.sarファイルをダウンロードし、
+</I>&gt;<i> &gt;&gt; &gt;ファイルリストからインストールしてみました。
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt;すると、インストールのプログレスバーの進捗が8割進んだくらいでストップし
+</I>&gt;<i> &gt;&gt; &gt;、&quot;Syntax Error&quot;ウィンドに、以下の文言が現れました。
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt;&lt;上の枠&gt;
+</I>&gt;<i> &gt;&gt; &gt;BWin32Adapter api call apiBREWVERSION
+</I>&gt;<i> &gt;&gt; &gt;
+</I>&gt;<i> &gt;&gt; &gt;&lt;下の枠&gt;
+</I>&gt;<i> &gt;&gt; &gt;apiBREWVERSION
+</I>&gt;<i> &gt;&gt; &gt;    &lt;&gt; expected -&gt;apicall: char* 'BRE_BREWVERSION' () module:
+</I>&gt;<i> &gt;&gt; &gt;'BRE_Wrap.dll'&gt;
+</I>&gt;<i> &gt;&gt; &gt;    ^ self externalCallFailed
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; BRegexp for Squeakのページには動作確認として、Squeak3.6と
+</I>&gt;<i> &gt;&gt; SqueakNihongo6.1が挙げられています。お使いの3.7.1は未対応のため上のエラー
+</I>&gt;<i> &gt;&gt; が発生したものと思われます。
+</I>&gt;<i> &gt;&gt; 手元のNihongo6.1にインストールして確認したところ、問題なくテストケースを
+</I>&gt;<i> &gt;&gt; 実行することができました。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 特に3.7.1にこだわることが無いのなら、3.6あるいはNihongo6.1にダウングレー
+</I>&gt;<i> &gt;&gt; ドしても良いのではないでしょうか。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; <A HREF="http://squeakland.jp/plugin/installers/SqueakNihongo6.1.zip">http://squeakland.jp/plugin/installers/SqueakNihongo6.1.zip</A>
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 代替のライブラリ、あるいはBRegexp for Squeakを3.7.1以降で動作させる方法に
+</I>&gt;<i> &gt;&gt; ついては、他の方にお任せします。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; //abee
+</I>&gt;<i> &gt;&gt; --
+</I>&gt;<i> &gt;&gt; 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;---html-part included links-------
+</I>&gt;<i> &gt;mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i> &gt;mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hamaguchi.u2 ＠ gmail.com</A>
+</I>&gt;<i> --
+</I>&gt;<i> 南谷 千城
+</I>&gt;<i> e-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">ka.minami ＠ nifty.com</A>
+</I>&gt;<i>
+</I>-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20061212/41d5e2d6/attachment.html">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20061212/41d5e2d6/attachment.html</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003290.html">[Squeak-ja: 3290] Re: 初心者の質問： BRegexp for Squeak のインストールが上手くいかない
+</A></li>
+	<LI>次の記事 <A HREF="003286.html">[Squeak-ja: 3286] SeasideJOne ベータ版
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3291">[ 日付 ]</a>
+              <a href="thread.html#3291">[ スレッド ]</a>
+              <a href="subject.html#3291">[ 件名 ]</a>
+              <a href="author.html#3291">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

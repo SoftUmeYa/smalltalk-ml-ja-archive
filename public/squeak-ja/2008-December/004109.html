@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4109] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204109%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLJE5GfEtcGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=2d5d52a80812292030g7ce61119i80115d0f57d5c6fd%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004108.html">
+   <LINK REL="Next"  HREF="004110.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4109] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について</H1>
+    <B>yhousako</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204109%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLJE5GfEtcGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=2d5d52a80812292030g7ce61119i80115d0f57d5c6fd%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4109] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について">yhousako ＠ mx2.ttcn.ne.jp
+       </A><BR>
+    <I>2008年 12月 31日 (水) 12:29:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004108.html">[Squeak-ja: 4108] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+</A></li>
+        <LI>次の記事 <A HREF="004110.html">[Squeak-ja: 4110] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4109">[ 日付 ]</a>
+              <a href="thread.html#4109">[ スレッド ]</a>
+              <a href="subject.html#4109">[ 件名 ]</a>
+              <a href="author.html#4109">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>宝迫です．お世話になります．
+
+日本語入力の動作確認しました．Ubuntu8.10とKNOPPIX5.3.1にインストールした
+Scratchでは、問題なく日本語入力ができるようになりました．しかし、CECの
+OSP基本パッケージv2（KNOPPIX5.1.1ベース）では、「UndefinedObjects are
+not indexable」というエラーメッセージが出ました．
+
+以下その内容です．
+----------------------------------------
+UndefinedObject(Object)&gt;&gt;error:
+UndefinedObject(Object)&gt;&gt;errorNotIndexable
+UndefinedObject(Object)&gt;&gt;size
+HandMorph&gt;&gt;handleEvent:
+HandMorph&gt;&gt;processEvents
+[] in PasteUpMorph&gt;&gt;doOneCycleNow
+Array(SequenceableCollection)&gt;&gt;do:
+PasteUpMorph&gt;&gt;handsDo:
+PasteUpMorph&gt;&gt;doOneCycleNow
+PasteUpMorph&gt;&gt;doOneCycle
+----------------------------------------
+私には何を言っているのかよくわからないのですが、日本語文字列を上手く受け
+渡しできていないということだけはわかりました．
+
+Kazuhiro ABE さんは書きました:
+&gt;<i> こんにちは、阿部です。
+</I>&gt;<i> とりあえず、ScratchSourceCode1.3.1と3.7-7JPatchedを組み合わせてLinuxで日本語入力できるようにしてみました。別スレの組み込みシンセと同じイメージに入れています。
+</I>&gt;<i> <A HREF="http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip">http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip</A>
+</I>&gt;<i> 
+</I>&gt;<i> 3.7-7JPatchedから上がってくるUTF-8は、1バイトごとにMorphicEventのkeyValueになっていますが、ScratchはMorphicEventのunicodeCharとしてUTF-32を期待しています。このパッチでは先頭バイトが16rE0以上なら3バイト取り出してUTF-32をつくり、unicodeCharに格納しています。超適当ですが動作確認はできるとできると思います。
+</I>&gt;<i> ちゃんとしたVMができるまでの間に合わせということで。
+</I>&gt;<i> 
+</I>&gt;<i>  //abee
+</I>
+------------------------------------------------------------------
+寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004108.html">[Squeak-ja: 4108] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+</A></li>
+	<LI>次の記事 <A HREF="004110.html">[Squeak-ja: 4110] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4109">[ 日付 ]</a>
+              <a href="thread.html#4109">[ スレッド ]</a>
+              <a href="subject.html#4109">[ 件名 ]</a>
+              <a href="author.html#4109">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

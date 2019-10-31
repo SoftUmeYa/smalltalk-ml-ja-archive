@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7186] &quot;Rectangle class&gt;&gt;new&quot;について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207186%5D%20%3D%3Fiso-2022-jp%3Fb%3FIlJlY3RhbmdsZSBjbGFzcz4%2BbmV3Ig%3D%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007183.html">
+   <LINK REL="Next"  HREF="007187.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7186] &quot;Rectangle class&gt;&gt;new&quot;について</H1>
+    <B>NOBUTAKA Terauchi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207186%5D%20%3D%3Fiso-2022-jp%3Fb%3FIlJlY3RhbmdsZSBjbGFzcz4%2BbmV3Ig%3D%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7186] &quot;Rectangle class&gt;&gt;new&quot;について">europa ＠ ps.inforyoma.or.jp
+       </A><BR>
+    <I>2006年 9月 25日 (月) 04:08:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007183.html">[SML 7183] Re: &quot;0 @ 0&quot;に対する集中砲火に対して
+</A></li>
+        <LI>次の記事 <A HREF="007187.html">[SML 7187] Re: &quot;Rectangle class&gt;&gt;new&quot;について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7186">[ 日付 ]</a>
+              <a href="thread.html#7186">[ スレッド ]</a>
+              <a href="subject.html#7186">[ 件名 ]</a>
+              <a href="author.html#7186">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは。寺内です。
+
+&quot;0 @ 0 extent: 300 @ 300&quot;を調査中にRectangle classのnewで疑問
+に思うことが出てきました。
+## 「全然進んでいないじゃないか」というツッコミは無しの方向で
+## お願いします。
+
+疑問点を下記に記します。
+
+-----
+Rectangle class&gt;&gt;newは、
+
+new
+	&quot;Override for backwards compatability&quot;
+
+	^self basicNew
+
+と定義されています。
+
+このnewは、Rectangle class&gt;&gt;origin:extent:で使われていました。
+basicNewを使わずに、newをオーバーライドして使用するのは、過去
+の資産との互換性を保つためと考えてよろしいのでしょうか？
+-----
+
+コメントにそう書かれている思いますが、英語力（単語の訳を並べる
+だけしかできない）に自信がないので確認をとりたいと思い投稿しま
+した。
+あと、compatabilityは私の入力ミスではありません。定義内容をそ
+のままコピーしています。
+
+
+---
+NOBUTAKA Terauchi&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">europa ＠ ps.inforyoma.or.jp</A>&gt;
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007183.html">[SML 7183] Re: &quot;0 @ 0&quot;に対する集中砲火に対して
+</A></li>
+	<LI>次の記事 <A HREF="007187.html">[SML 7187] Re: &quot;Rectangle class&gt;&gt;new&quot;について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7186">[ 日付 ]</a>
+              <a href="thread.html#7186">[ スレッド ]</a>
+              <a href="subject.html#7186">[ 件名 ]</a>
+              <a href="author.html#7186">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

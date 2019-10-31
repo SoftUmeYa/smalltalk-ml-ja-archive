@@ -1,0 +1,557 @@
+From kuwatani ＠ akademia.co.jp  Fri Oct  1 14:11:02 2004
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7001] SML の移管のお知らせ
+Message-ID: <mailman.0.1193968254.13937.sml@akademia.co.jp>
+
+SML メンバの皆様
+
+10月1日よりSMLの管理をすることとなりました 桑谷剛史 です．
+よろしくお願い致します．
+
+この度，SMLの移管にともないメーリングリストのシステムが変更となりました．
+そこで，以前のSMLに参加されていた皆様方のメールアドレスを新しいSMLの方に
+こちらで再登録させていただきました．
+
+なお，新しいSMLのメーリングリストのメールアドレスとWebサイトのURLは以下のように
+なっています．
+
+  メールアドレス：sml@akadeima.co.jp
+  Webサイト     ：http://www.akademia.co.jp/Smalltalk/SML
+
+皆様方のSMLの設定内容に関しましては初期状態に戻っております．
+お手数ではございますが，再設定の方よろしくお願い致します．
+設定方法については新しいSMLのサイトを参考にしていただければと思います．
+
+  SMLのサービスについて：
+    http://www.akademia.co.jp/Smalltalk/SML/services.html
+
+アーカイブの移行については現在作業中です．
+準備ができ次第ご連絡いたします．
+
+何分このような大きなMLを管理するのは初めてでありますので至らぬ点が
+多々あると思いますが，何卒よろしくお願い致します．
+
+_______________________________
+桑谷剛史＠SML管理人
+アカデミアシステムズ株式会社
+
+
+
+From gen ＠ akademia.co.jp  Fri Oct  1 14:44:35 2004
+From: gen ＠ akademia.co.jp (Gen Suzuki)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7002] Re: SML の移管のお知らせ
+Message-ID: <20041001141828.1B14.GEN@akademia.co.jp>
+
+ＳＭＬメンバーの皆様、桑谷さん
+
+鈴木　元＠アカデミアシステムズです。
+
+今回、ＳＭＬの移管に際しては、、
+旧管理者の矢田部さんの他、渡辺さん、増田さん、阿部さんに
+多大なご指導、ご援助をいただきました。ありがとうございました。
+
+今後とも、どうぞよろしくお願いいたします。
+
+＝＝＝
+
+On Fri, 01 Oct 2004 14:11:02 +0900
+Tsuyoshi KUWATANI <kuwatani@akademia.co.jp> wrote:
+
+> SML メンバの皆様
+> 
+> 10月1日よりSMLの管理をすることとなりました 桑谷剛史 です．
+> よろしくお願い致します．
+> 
+> この度，SMLの移管にともないメーリングリストのシステムが変更となりました．
+> そこで，以前のSMLに参加されていた皆様方のメールアドレスを新しいSMLの方に
+> こちらで再登録させていただきました．
+> 
+> なお，新しいSMLのメーリングリストのメールアドレスとWebサイトのURLは以下のように
+> なっています．
+> 
+>   メールアドレス：sml@akadeima.co.jp
+>   Webサイト     ：http://www.akademia.co.jp/Smalltalk/SML
+> 
+> 皆様方のSMLの設定内容に関しましては初期状態に戻っております．
+> お手数ではございますが，再設定の方よろしくお願い致します．
+> 設定方法については新しいSMLのサイトを参考にしていただければと思います．
+> 
+>   SMLのサービスについて：
+>     http://www.akademia.co.jp/Smalltalk/SML/services.html
+> 
+> アーカイブの移行については現在作業中です．
+> 準備ができ次第ご連絡いたします．
+> 
+> 何分このような大きなMLを管理するのは初めてでありますので至らぬ点が
+> 多々あると思いますが，何卒よろしくお願い致します．
+> 
+> _______________________________
+> 桑谷剛史＠SML管理人
+> アカデミアシステムズ株式会社
+> 
+> 
+> _______________________________________________
+> SML mailing list
+> SML@akademia.co.jp
+> http://www.akademia.co.jp/mailman/listinfo/sml
+
+===============================================================
+鈴木　元
+アカデミアシステムズ株式会社
+gen@akademia.co.jp
+gen_suzuki@nifty.com
+
+===============================================================
+
+
+
+From nisinaka ＠ sra.co.jp  Sat Oct  2 22:50:49 2004
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7003] [ANNOUNCE] Jun for Java (Jun482)
+Message-ID: <20041002224648.9793.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン482を公開します。
+
+  バージョン454からの主な変更点は、以下の通りです。
+
+    * Java 2 Platform Standard Edition 5.0 に対応しました。 
+
+    * JunOpenGL3dObject の典型的なオブジェクトとして、単位球(半径
+      1の球)に内接する多面体を追加しました。 
+              
+    * 正三角形で構成される多面体として単位球を生成するメソッドを 
+      JunOpenGL3dObject の static メソッドとして実装しました。 
+      
+    * JunOpenGLIllusion は、錯視を表現するフラックスオブジェクト
+      を生成するためのクラスです。 
+
+    * JunApplicationModelに対応する共通の抽象クラスとして、
+      JunAbstractView と JunAbstractController を導入しました。 
+
+    * Mac OS X 10.3.5 と Java 1.4.2 Update1 に対応しました。 
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From abee.abe ＠ nifty.ne.jp  Sun Oct  3 00:33:23 2004
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7004] 投稿のフッタ
+Message-ID: <415ECA43FA.0B44ABEE.ABE@127.0.0.1>
+
+阿部@新百合です。
+旧管理人の皆様お疲れ様でした。新管理人の方、よろしくお願いします。
+
+早速ですが、投稿に以下のフッタが必ず付くみたいなのですが、これを外せない
+でしょうか。
+
+>SML mailing list
+>sml@akademia.co.jp
+>http://www.akademia.co.jp/mailman/listinfo/sml
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From aoki ＠ sra.co.jp  Sun Oct  3 23:47:20 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7005] Jun597 for Smalltalk
+Message-ID: <416010F8.1050903@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun597」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆グラフ・ノード・アークに種別判定のための述語を実装しました。
+
+◆修正日時属性の更新アルゴリズムを変更しました。
+
+◆正六面体の生成メソッドの中の不用な処理を除去しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From kuwatani ＠ akademia.co.jp  Mon Oct  4 09:25:25 2004
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7006] Re: 投稿のフッタ
+In-Reply-To: <415ECA43FA.0B44ABEE.ABE@127.0.0.1>
+References: <415ECA43FA.0B44ABEE.ABE@127.0.0.1>
+Message-ID: <20041004092525_9Lu?S@akademia.co.jp>
+
+阿部さん
+
+桑谷です．
+
+投稿の下部にフッターが付かないように設定を変更しました．
+
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+
+> 阿部@新百合です。
+> 旧管理人の皆様お疲れ様でした。新管理人の方、よろしくお願いします。
+> 
+> 早速ですが、投稿に以下のフッタが必ず付くみたいなのですが、これを外せない
+> でしょうか。
+> 
+> >SML mailing list
+> >sml@akademia.co.jp
+> >http://www.akademia.co.jp/mailman/listinfo/sml
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee.abe@nifty.ne.jp
+> _______________________________________________
+> SML mailing list
+> sml@akademia.co.jp
+> http://www.akademia.co.jp/mailman/listinfo/sml
+________________________________________
+桑谷剛史＠SML管理人
+アカデミアシステムズ株式会社
+
+
+
+From abee.abe ＠ nifty.ne.jp  Mon Oct  4 14:02:49 2004
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7007] 旧 SML 閉鎖の案内
+In-Reply-To: <20041004092525_9Lu?S@akademia.co.jp>
+References: <415ECA43FA.0B44ABEE.ABE@127.0.0.1>
+	<20041004092525_9Lu?S@akademia.co.jp>
+Message-ID: <4160D979198.08C6ABEE.ABE@127.0.0.1>
+
+阿部@新百合です。
+桑谷さん、フッタの変更ありがとうございました。
+
+ところで、現在旧SMLのWebページにアクセスすると表示される閉鎖の案内に新
+SMLの案内(URLなど)を書いていただくことは可能でしょうか(> 矢田部さん)。
+
+今のだと、事情を知らずに検索やリンクを辿って開いた人はびっくりしてしまう
+と思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From aoki ＠ sra.co.jp  Mon Oct  4 16:16:21 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7008] Jun598 for Smalltalk
+Message-ID: <4B0A32E1-15D5-11D9-AC3E-000A9579B48E@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun598」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆グラフ設定・ノード設定・アーク設定によるグラファの更新をよ
+　り適切に行うように改良しました。
+
+◆ノードをマウスでつかんで引きずった際に、ノード設定の位置情
+　報もリアルタイムで更新されるようにしました。
+
+◆クラスに定義されている暗黙の属性表を、インスタンスの属性表
+　と同じ方式で引けるように変更しています。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From yatabe ＠ sra.co.jp  Mon Oct  4 21:10:03 2004
+From: yatabe ＠ sra.co.jp (Hiroyuki Yatabe)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7009] Re: 旧 SML 閉鎖の案内
+In-Reply-To: <4160D979198.08C6ABEE.ABE@127.0.0.1>
+References: <415ECA43FA.0B44ABEE.ABE@127.0.0.1>	<20041004092525_9Lu?S@akademia.co.jp>
+	<4160D979198.08C6ABEE.ABE@127.0.0.1>
+Message-ID: <41613D9B.5020106@sra.co.jp>
+
+矢田部です。
+
+On 04.10.4 2:02 PM, Kazuhiro ABE wrote:
+> 
+> ところで、現在旧SMLのWebページにアクセスすると表示される閉鎖の案内に新
+> SMLの案内(URLなど)を書いていただくことは可能でしょうか(> 矢田部さん)。
+
+はい。簡単ではありますが、URL を載せておきました。
+
+    http://www.sra.co.jp/smalltalk/SML-closed.html
+
+# 日本語がおかしいぞ、などご意見がありましたら、ご一報ください。
+
+----
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+  矢田部 浩之(Hiroyuki Yatabe)
+  MailTo: yatabe@sra.co.jp
+
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+From m-asada ＠ sra.co.jp  Tue Oct  5 16:20:15 2004
+From: m-asada ＠ sra.co.jp (Mitsuhiro Asada)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7010] [ANNOUNCE] ImageSearcher for Java 026
+Message-ID: <20041005161938.845E.M-ASADA@sra.co.jp>
+
+浅田です。
+
+「イメージサーチャ for Java（イメージサーチャ for Web）」のバージョン
+026を公開します。
+
+    http://www.sra.co.jp/people/m-asada/Isr4Java/
+    ftp://ftp.sra.co.jp/pub/lang/java/isr4java/
+
+イメージサーチャは、ファイル名やカテゴリ名などの名前やキーワードに頼ら
+ずに、目的の画像を捜し出すプログラムです。特徴的な色(typical color)、平
+均明度(average luminance)、9つの色(nine colors)、広がり(image extent)、
+スペクトル中心(center spectra)、手書き画像(freehand image)などを指定す
+ることにより、画像自身が持っている属性を手掛かりとして、目的の画像を絞
+り込み検索します。
+
+バージョン025からの主な変更点は、以下の通りです。
+
+  ・Java 2 Platform Standard Edition 5.0 に対応しました。
+
+  ・PostgreSQL/Oracle を使って画像検索をする際に、一時テーブルを使わない
+    ようにしました。
+
+  ・Image Straem でGIFイメージに対応しました。
+  
+  ・HTTPファイルアップロードで使うライブラリを "com.oreilly.servlet" か
+    ら "Apache Commons FileUpload" に変更しました。
+
+______________________________________________________________________
+Mitsuhiro Asada <m-asada@sra.co.jp>
+
+From aoki ＠ sra.co.jp  Wed Oct  6 15:18:23 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7011] Jun599 for Smalltalk
+Message-ID: <86EB6DF2-175F-11D9-AE1B-000A9579B48E@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun599」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆文字列分割処理に区切記号を指定しないメッセージ（メソッド）
+　を加えました。
+
+◆グラファにおける手書き処理に状態変数を加えました。alt キー
+　修飾だけではなく、この状態変数の如何によって、手書き処理の
+　如何を操作することができます。
+
+◆ノートメニューにおいて、そのノードに接続されているアークの
+　集合を、入って来るアークと出て行くアークにきちんと分けてリ
+　ストするようにしました。
+
+◆樹状や同心円状に整列した際に、ノード設定の座標値が追随して
+　いませんでした。連動するように改めました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Thu Oct  7 19:20:30 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7012] Jun600 for Smalltalk
+Message-ID: <83F06446-184A-11D9-8D52-000A9579B48E@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun600」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆グラファにグラフを入れる際の必要な処理（保持している部品群
+　を水に流すこと）が足りませんでした。
+
+◆グラフをウィンドウを介して見ている領域の更新を怠っていると
+　ころがありました。きちんと更新するように直しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From takeda ＠ kwansei.ac.jp  Tue Oct 19 20:37:37 2004
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7013] 開催案内: 大人のスクイーク
+Message-ID: <46F35DFA-21C3-11D9-91B2-000393B4B3DE@kwansei.ac.jp>
+
+関西学院大学の武田です。
+
+明後日(10/21)なのですが、「大人のスクイーク」というタイトルの
+ワークショップを大阪のメビック扇町でやります。
+
+Squeak/Smalltalkをさわったことのないプログラマ向けです。
+
+くわしくはホームページをご覧ください。
+
+http://homepage2.nifty.com/poplife/squeak/otona.html
+
+台風に接近していますし、ノートPCなど持ってきていただかなければ
+なりませんが、大阪圏でSqueakに興味がある方にお声がけいただければ
+幸いです。
+
+武田俊之
+関西学院大学情報メディア教育センター
+
+
+From aoki ＠ sra.co.jp  Sun Oct 24 01:02:21 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7014] Jun601 for Smalltalk
+Message-ID: <417A808D.40201@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun601」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆幾何を抽象しているクラスにミスタイプがありました。一時変数
+　なので問題は起きないのですが、あまりにもハーフトーンには読
+　めないので。:-)
+
+◆直線を捨象しているクラスにおいて、境界球を応答すべきところ
+　が、境界箱を返していました。修正しました。
+
+◆３次元オブジェクトの動きを司るフラックスの下部についている
+　トラッカの表示位置を狭めました。 Mac OS X における右下のリ
+　サイズ領域と衝突を避けるためです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Sun Oct 31 20:57:32 2004
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:54 2007
+Subject: [SML 7015] Jun602 for Smalltalk
+Message-ID: <4184D32C.4000603@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun602」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆スピロデザインを改良しました。従来の内接に加えて、外接もで
+　きるようにし、虹色も可能にしました。詳しくは次のページをご
+　覧ください。
+　http://www.sra.co.jp/smalltalk/jun/Topics/SpiroDesign/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7296] Natural Smalltalk,
+	a natural language processing library on/against Squeak
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207296%5D%20Natural%20Smalltalk%2C%0A%09a%20natural%20language%20processing%20library%20on/against%20Squeak&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007297.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7296] Natural Smalltalk,
+	a natural language processing library on/against Squeak</H1>
+    <B>Tomohiro Oda</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207296%5D%20Natural%20Smalltalk%2C%0A%09a%20natural%20language%20processing%20library%20on/against%20Squeak&In-Reply-To="
+       TITLE="[SML 7296] Natural Smalltalk,
+	a natural language processing library on/against Squeak">tomohiro ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 4月  7日 (土) 10:09:57 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007297.html">[SML 7297] 無料セミナーの案内
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7296">[ 日付 ]</a>
+              <a href="thread.html#7296">[ スレッド ]</a>
+              <a href="subject.html#7296">[ 件名 ]</a>
+              <a href="author.html#7296">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おだです。
+
+Smalltalkや英語のテキストを自然言語処理の技術で分析する
+Squeak上のツールライブラリ Natural Smalltalkを開発しま
+したので公開します。
+
+<A HREF="http://map.squeak.org/package/624ed871-4e89-4343-8652-af38a873d0b4/autoversion/1">http://map.squeak.org/package/624ed871-4e89-4343-8652-af38a873d0b4/autoversion/1</A>
+
+Smalltalk（に限らずプログラミング言語）の自然言語的な側面
+に興味があり、Smalltalkプログラムに自然言語処理技術を適用
+して何ができるか試行錯誤をしているのですが、その試行錯誤で
+生まれたコードをまとめてライブラリとして公開することにしま
+した。
+
+NaturalSmalltalkではSmalltalkのプログラムを英単語に
+分解してクラスタリングやキーワード抽出、自動分類に用います。
+こうしてプログラムを単語に分解することで、
+* クラスタリング(K-means法)
+* 自動分類(tfidf, Naive Bayes)
+* キーワード抽出(tfidf, posterier probability)
+* 可視化(FastMap)
+をおこないます。
+
+また、実行された各メソッドの時間計測とキーワード抽出をおこなう
+MessageSpyや、Squeak環境内で実行中のプロセス群の実行コンテキスト
+のソースコードからキーワードを抽出するWhatyaDoingが応用例題として
+付属しています。
+
+実行の様子のスナップショットをいくつか添付します。
+ぜひ使ってみて感想をお聞かせください。
+---
+おだ
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Collection.png
+型:         image/png
+サイズ:     5710 バイト
+説明:       無し
+URL:        <A HREF="http://www.akademia.co.jp/pipermail/sml/attachments/20070407/3fc211e1/Collection.png">http://www.akademia.co.jp/pipermail/sml/attachments/20070407/3fc211e1/Collection.png</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007297.html">[SML 7297] 無料セミナーの案内
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7296">[ 日付 ]</a>
+              <a href="thread.html#7296">[ スレッド ]</a>
+              <a href="subject.html#7296">[ 件名 ]</a>
+              <a href="author.html#7296">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

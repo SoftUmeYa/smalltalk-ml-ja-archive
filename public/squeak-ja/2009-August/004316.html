@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4316] Re: SeaSideでのXHTML利用について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204316%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYVNpZGUbJEIkRyROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FWEhUTUwbJEJNeE1RJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4A95DA16.6050404%40itolab.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004315.html">
+   <LINK REL="Next"  HREF="004317.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4316] Re: SeaSideでのXHTML利用について</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204316%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYVNpZGUbJEIkRyROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FWEhUTUwbJEJNeE1RJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=4A95DA16.6050404%40itolab.com"
+       TITLE="[Squeak-ja: 4316] Re: SeaSideでのXHTML利用について">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2009年 8月 28日 (金) 07:29:32 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004315.html">[Squeak-ja: 4315] SeaSideでのXHTML利用について
+</A></li>
+        <LI>次の記事 <A HREF="004317.html">[Squeak-ja: 4317] Re: SeaSideでのXHTML利用について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4316">[ 日付 ]</a>
+              <a href="thread.html#4316">[ スレッド ]</a>
+              <a href="subject.html#4316">[ 件名 ]</a>
+              <a href="author.html#4316">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Thu, 27 Aug 2009 09:57:58 +0900,
+Eiichiro Ito wrote:
+&gt;<i> 
+</I>&gt;<i> 山梨の伊藤です。皆さんこんにちは。
+</I>&gt;<i> 
+</I>&gt;<i> SeaSideについての質問です。
+</I>&gt;<i> 
+</I>&gt;<i> 現在、SeaSideを使って簡単なLMSを作ろうとしています。
+</I>&gt;<i> 教材をXHTMLで作っておいて、それをSeaSide経由で表示させたいのですが、
+</I>&gt;<i> どう行うべきか悩んでいます。
+</I>&gt;<i> 
+</I>&gt;<i> 方法としては、以下の２つを考えてみました。
+</I>&gt;<i> 1. XHTML教材のbody部分を抜き出して、そのまま出力する。
+</I>&gt;<i> 2. XHTML教材をパースして、SeaSideでレンダリングを行うようなコンバータ
+</I>&gt;<i> 　を作る。
+</I>&gt;<i> 
+</I>&gt;<i> しかし、1はどうやってXHTMLコードをSeaSide経由で出すのかわかりませんし、
+</I>&gt;<i> SeaSideの考え方からいっても良い方法とは思えません。一方で、2はいろんな
+</I>&gt;<i> タグを考慮にいれると実装が面倒です。（でも、それしかないかなとも思って
+</I>&gt;<i> います）
+</I>&gt;<i> 
+</I>&gt;<i> なお、LMSの仕様から、XHTML教材を(apacheなど)別のサーバから提供するこ
+</I>&gt;<i> とは考えておらず、（画像等を除き）すべてSeaSideから提供したいと思って
+</I>&gt;<i> います。
+</I>&gt;<i> 
+</I>&gt;<i> どなたか（他の方法も含めて）アドバイスをいただけませんでしょうか。
+</I>
+  (「梅澤さんが詳しいと思いますが」と書いてみるテスト。)
+
+  - 「そのまま出力する」というのは、WAHtmlCanvasの#html:メソッドを呼ぶ
+    ということでしょうか?基本的には文字列として出力するだけですので、
+    XHTMLでも何でも引数として渡せると思います(たぶん)。
+
+  - あるいは、WAKomとWADispatcherのレベルで、特定のURLであればそれをファ
+    イル名だと思って内容を返すようにするということもできるかと思います。
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004315.html">[Squeak-ja: 4315] SeaSideでのXHTML利用について
+</A></li>
+	<LI>次の記事 <A HREF="004317.html">[Squeak-ja: 4317] Re: SeaSideでのXHTML利用について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4316">[ 日付 ]</a>
+              <a href="thread.html#4316">[ スレッド ]</a>
+              <a href="subject.html#4316">[ 件名 ]</a>
+              <a href="author.html#4316">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

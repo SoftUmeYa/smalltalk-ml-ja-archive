@@ -1,0 +1,788 @@
+From interact ＠ s-paru.com  Tue Aug  5 06:59:59 2008
+From: interact ＠ s-paru.com (=?utf-7?B?K2RUQk9MVEFBWmkxT2pBLQ==?=)
+Date: Tue Aug  5 07:00:30 2008
+Subject: [Squeak-ja: 3955] =?utf-7?q?+MEpcCzBtMFcwfjBZ-?=
+Message-ID: <06B5CAFE2B4040DE868FCBB2B4D57EB1@shojiparu>
+
+
+Squeak-ja +X6FOLQ-
+
++ZqYwbk4KMGcwb3rLecswZzBZMEwwAWZCMGswb3cfWQ8wbmaRMFUwTDCIMH8wTDBIMGMwXzCI=
+MEYwamXlMEx9mjBPMFMwbjBU-
++MI0wZzBZMAI-
+
++MAAwSlwLMG0wVzB+MFkwAg-
+
++MABnAI/RMAF5wTBuMOEw/DDrMKIwyTDsMLn/CA-interact+AEA-s-paru.com+/wkwazCmM=
+KQw6zC5MEwwhDBfMIkwaGdl-
++MH4wWTAC-
+
++MABOyjBuMGgwUzCNiKtbszBrMG8wQjBjMGYwRDBqMG4wZzBZMEwwAV/1MG4wXzCBMGswtTCk=
+MMhpHH0i/wg-Google+MAE-
+Yahoo+ACH/CTCSMFcwfjBXMF8wiTABTguKGDC5MOwwwzDJMGsw4TD8MOswojDJMOwwuTBMihi=
+PCTBVMIwwZjBEMH4wVzBfMAI-
+
++MABOC4oYMLkw7DDDMMmKGI8JMG4w4TD8MOswojDJMOwwuTBvMAFbiVFoMG4wZzBXMIcwRjBL=
+/x8-
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-March/003462.html
+
++MAB1KE72MG4wfzBrMGZZMXk8MEQwXzBXMH4wWTAC-
+
++Z3FOrDD7Tgmd+Q-
++MAB1MDAATi0wAGYtMABOjA-
+
+
+From yoshiki ＠ vpri.org  Tue Aug  5 08:37:01 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Aug  5 08:37:40 2008
+Subject: [Squeak-ja: 3956] Re: お尋ねします
+In-Reply-To: <06B5CAFE2B4040DE868FCBB2B4D57EB1@shojiparu>
+References: <06B5CAFE2B4040DE868FCBB2B4D57EB1@shojiparu>
+Message-ID: <u7iawnyhu.wl%yoshiki@vpri.org>
+
+  田中さん
+
+> 　最近、私のメールアドレス（interact@s-paru.com）にウイルスがやたらと来
+> ます。
+> 
+> 　今のところ被害にはあっていなのですが、念のためにサイト検索（Google、
+> Yahoo!）をしましたら、下記スレッドにメールアドレスが記載されていました。
+> 
+> 　下記スレッド記載のメールアドレスは、安全のでしょうか？
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-March/003462.html
+
+  このサイトにアーカイブされているアドレスは多少いじってはあるものの、
+確かに大きくは変えていないのでちょっとしたWebクローラであればアドレス
+を抽出できているとは思います。ただ、やはりメーリングリスト投稿用に使わ
+れたアドレスですでにアーカイブされている以上、サーバー側ではもはや余り
+打つ手はないと思われます。業者同士でアドレスを売買しているわけですし。
+
+  現在のemailシステムにおいては、アドレスはやり取りしている知り合いの
+コンピュータからも、途中の経路でパケットを見ている人からも漏れてしまう
+ものですので、メールを使い続ける以上は受け手側での処理が必要となるのは
+致し方ないと思います。
+
+  大規模なISPが提供するスパムフィルタ・ウイルスフィルタはかなり有効で
+すので、メールアドレスが自前のドメインのものであっても、転送してフィル
+タリングさせるなどの方式を取っていただくのが現実的ではないかと思われま
+す。
+
+  参考になれば幸いです。
+
+-- Yoshiki
+From interact ＠ s-paru.com  Tue Aug  5 10:21:38 2008
+From: interact ＠ s-paru.com (=?utf-7?B?K2RUQk9MVEFBWmkxT2pBLQ==?=)
+Date: Tue Aug  5 10:21:52 2008
+Subject: [Squeak-ja: 3957] =?utf-7?q?Re=3A_+-MEpcCzBtMFcwfjBZ-?=
+In-Reply-To: <u7iawnyhu.wl%yoshiki@vpri.org>
+References: +ADw-06B5CAFE2B4040DE868FCBB2B4D57EB1+AEA-shojiparu+AD4-
+	+ADw-u7iawnyhu.wl+ACU-yoshiki+AEA-vpri.org+AD4-
+Message-ID: <600E73FD686E4105936F06729D950F07@shojiparu>
+
+
+Squeak-ja +X6FOLQ-
+
++MABl6ZAfMFSQI31hMEIwijBMMGgwRjBUMFYwRDB+MFcwXzAC-
+
++MAAwpjCkMOswuTDBMKcwwzCvMG8wATDXMO0w0DCkMMAw/P8I-ISP+/wlQdDBoMAF5wTBu/zD=
+/IzBnMIIwhDBjMGYwRDB+MFkwAg-
+
++MAA-IPv6 =
++MIIwfjBYMEswYDBdMEYwZzBZMEwwATBdMIwwZzCCMLkw0TDgMNUwozDrML8w+zCmMKQw6zC5=
+MNUwozDrML8wbzAB-
++X8WJgU4NU+9rIDBgMF0wRjBnMFkwbTAC-
+
++MAAw4TD8MOswojDJMOwwuTBuMOYw/DC2MPxUDTBvMAGJB2Vwii1bmjBXMGZPfzBEUgYwUTBm=
+MAEwRDCNMEQwjTBqMGgwUzCN-
++MGt2e5MyMFcwZjBEMH4wWTBMMAEwUzBuMKIwyTDsMLkwa5bGTi0wVzBmMEQwfjBZMG4wZzAB=
+MEQwWjCMWQlm9DCSMFUwWzBm-
++MEQwXzBgME0wfjBZMAI-
+
++MABUDVI6MGowaTBrMIJTcFI3MFcwZjBEMH4wWTBuMGcwAXJ5W5owZzBNMH4wWzCTMG4wZzAB=
+-Squeak-ja +dSgwbjCiMMk-
++MOwwuTCSX4xl5TABdnuTMjBVMFswZjBEMF8wYDBNMH4wWTAC-
+
++MACP0TBPTgmd+TBLMIlX/HOJMGuO4lxFMFcwfjBZMG4wZzABMF0wbl+MMAEwojDJMOwwuVkJ=
+ZvQwkjBKmFgwRDBEMF8wVzB+-
++MFkwAg-
+
++MAAwaDBTMI0wZzABWQlm9DBZMIswaDBNMG4wtTCkMMgwojDJMOwwuTBvMGkwYTCJMGcwVzBf=
+MGcwVzCHMEYwS/8f-
+
++MAB1MDAATi0wAGYtMABOjA-
+=20
+
++AD4wAA------Original Message-----
++AD4wAA-From: squeak-ja-bounces+AEA-smalltalk.jp
++AD4wAABb-mailto:squeak-ja-bounces+AEA-smalltalk.jp+AF0- On Behalf Of =
+Yoshiki Ohshima
++AD4wAA-Sent: Tuesday, August 05, 2008 8:37 AM
++AD4wAA-To: Squeak discussion in Japanese
++AD4wAA-Subject: +AFs-Squeak-ja: 3956+AF0- Re: +MEpcCzBtMFcwfjBZ-
++AD4wAA-
++AD4wAA-  +dTBOLTBVMJM-
++AD4wAA-
++AD4wAAA+- =
++MABnAI/RMAF5wTBuMOEw/DDrMKIwyTDsMLn/CA-interact+AEA-s-paru.com+/wkwazCmM=
+KQw6zC5MEwwhDBfMIkwaGdl-
++AD4wAAA+- +MH4wWTAC-
++AD4wAAA+-
++AD4wAAA+- =
++MABOyjBuMGgwUzCNiKtbszBrMG8wQjBjMGYwRDBqMG4wZzBZMEwwAV/1MG4wXzCBMGswtTCk=
+MMhpHH0i/wg-Google+MAE-
++AD4wAAA+- =
+Yahoo+ACH/CTCSMFcwfjBXMF8wiTABTguKGDC5MOwwwzDJMGsw4TD8MOswojDJMOwwuTBMihi=
+PCTBVMIwwZjBEMH4wVzBfMAI-
++AD4wAAA+-
++AD4wAAA+- =
++MABOC4oYMLkw7DDDMMmKGI8JMG4w4TD8MOswojDJMOwwuTBvMAFbiVFoMG4wZzBXMIcwRjBL=
+/x8-
++AD4wAAA+-
++AD4wAAA+- =
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-March/003462.html
++AD4wAA-
++AD4wAA-  =
++MFMwbjC1MKQwyDBrMKIw/DCrMKQw1jBVMIwwZjBEMIswojDJMOwwuTBvWRpcETBEMFgwYzBm=
+MG8wQjCLMIIwbjBuMAE-
++AD4wAHi6MEswa1knME0wTzBvWQkwSDBmMEQwajBEMG4wZzBhMIcwYzBoMFcwXw-Web+MK8w7=
+TD8MOkwZzBCMIwwcDCiMMkw7DC5-
++AD4wADCSYr1R+jBnME0wZjBEMIswaDBvYB0wRDB+MFkwAjBfMGAwATCEMG8wijDhMPww6jDz=
+MLAw6jC5MMhilXo/dSgwa09/MI8-
++AD4wADCMMF8wojDJMOwwuTBnMFkwZzBrMKIw/DCrMKQw1jBVMIwwZjBEMItO5U4KMAEwtTD8=
+MNAw/FB0MGcwbzCCMG8whE9ZMIo-
++AD4wAGJTMGRiSzBvMGowRDBoYB0wjzCMMH4wWTACaW2ABVQMWOswZzCiMMkw7DC5MJJY8oy3=
+MFcwZjBEMIswjzBRMGcwWTBXMAI-
++AD4wAA-
++AD4wAA-  =
++c/5XKDBu-email+MLcwuTDGMOAwazBKMEQwZjBvMAEwojDJMOwwuTBvMIQwilPWMIowVzBmM=
+EQwi3flMIpUCDBEMG4-
++AD4wADCzMPMw1DDlMPwwvzBLMIkwgjABkBROLTBufUyN7zBnMNEwsTDDMMgwkomLMGYwRDCL=
+TrowSzCJMIJvDzCMMGYwVzB+MEY-
++AD4wADCCMG4wZzBZMG4wZzABMOEw/DDrMJJPfzBEfZowUTCLTuVOCjBvU9cwUWJLUHQwZzBu=
+UeZ0BjBMX8WJgTBoMGowizBuMG8-
++AD4wAIH0MFdluTBqMEQwaGAdMEQwfjBZMAI-
++AD4wAA-
++AD4wAA-  =
++WSeJj2ohMGo-ISP+MExj0E+bMFkwizC5MNEw4DDVMKMw6zC/MPswpjCkMOswuTDVMKMw6zC/=
+MG8wSzBqMIpnCVK5MGc-
++AD4wADBZMG4wZzABMOEw/DDrMKIwyTDsMLkwTIHqUk0wbjDJMOEwpDDzMG4wgjBuMGcwQjBj=
+MGYwgjABjuKQATBXMGYw1TCjMOs-
++AD4wADC/MOow8zCwMFUwWzCLMGowaTBuZblfDzCSU9YwYzBmMEQwXzBgME8wbjBMc/5bn3aE=
+MGcwbzBqMEQwSzBoYB0wjzCMMH4-
++AD4wADBZMAI-
++AD4wAA-
++AD4wAA-  +U8KAAzBrMGowjDBwXngwRDBnMFkwAg-
++AD4wAA-
++AD4wAA--- Yoshiki
++AD4wAA-
++AD4wAA-
+
+
+From abee ＠ squeakland.jp  Tue Aug  5 10:39:46 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Aug  5 10:39:55 2008
+Subject: [Squeak-ja: 3958] Re: お尋ねします
+Message-ID: <2d5d52a80808041839r12f01512o3fd9681768f142fc@mail.gmail.com>
+
+こんにちは、阿部です。
+squeak-ja@smalltalk.jpは投稿用のアドレスです。これに送ると全会員に届きます(ちなみに今日現在で646名)。各種手続きは以下のWebページで可能です。http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+手続きに必要なパスワードは毎月始めに送られる備忘メールに記載されている他、ここから新たに得ることも可能です。
+管理者宛にメールで連絡が必要な場合は以下にお願いします。
+squeak-ja-owner@smalltalk.jp
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/8/5, 田中　昭二 <interact@s-paru.com>:
+>
+> Squeak-ja 御中
+>
+> 早速ご連絡ありがとうございました。
+>
+> ウイルスチェックは、プロバイダー（ISP）側と、私のＰＣでもやっています。
+>
+> IPv6 もまじかだそうですが、それでもスパムフィルタ・ウイルスフィルタは、
+> 必要不可欠だそうですね。
+>
+> メールアドレスのユーザー名は、複数設定して使い分けて、いろいろなところ
+> に登録していますが、このアドレスに集中していますので、いずれ変更をさせて
+> いただきます。
+>
+> 名刺などにも印刷していますので、特定できませんので、Squeak-ja 用のアド
+> レスを後日、登録させていただきます。
+>
+> 近く三鷹から埼玉に転居しますので、その後、アドレス変更をお願いいたしま
+> す。
+>
+> ところで、変更するときのサイトアドレスはどちらでしたでしょうか？
+>
+> 田　中　昭　二
+>
+>
+> >　-----Original Message-----
+> >　From: squeak-ja-bounces@smalltalk.jp
+> >　[mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Yoshiki Ohshima
+> >　Sent: Tuesday, August 05, 2008 8:37 AM
+> >　To: Squeak discussion in Japanese
+> >　Subject: [Squeak-ja: 3956] Re: お尋ねします
+> >
+> >　  田中さん
+> >
+> >　> 最近、私のメールアドレス（interact@s-paru.com）にウイルスがやたらと来
+> >　> ます。
+> >　>
+> >　> 今のところ被害にはあっていなのですが、念のためにサイト検索（Google、
+> >　> Yahoo!）をしましたら、下記スレッドにメールアドレスが記載されていました。
+> >　>
+> >　> 下記スレッド記載のメールアドレスは、安全のでしょうか？
+> >　>
+> >　> http://www.smalltalk.jp/pipermail/squeak-ja/2007-March/003462.html
+> >
+> >　  このサイトにアーカイブされているアドレスは多少いじってはあるものの、
+> >　確かに大きくは変えていないのでちょっとしたWebクローラであればアドレス
+> >　を抽出できているとは思います。ただ、やはりメーリングリスト投稿用に使わ
+> >　れたアドレスですでにアーカイブされている以上、サーバー側ではもはや余り
+> >　打つ手はないと思われます。業者同士でアドレスを売買しているわけですし。
+> >
+> >　  現在のemailシステムにおいては、アドレスはやり取りしている知り合いの
+> >　コンピュータからも、途中の経路でパケットを見ている人からも漏れてしまう
+> >　ものですので、メールを使い続ける以上は受け手側での処理が必要となるのは
+> >　致し方ないと思います。
+> >
+> >　  大規模なISPが提供するスパムフィルタ・ウイルスフィルタはかなり有効で
+> >　すので、メールアドレスが自前のドメインのものであっても、転送してフィル
+> >　タリングさせるなどの方式を取っていただくのが現実的ではないかと思われま
+> >　す。
+> >
+> >　  参考になれば幸いです。
+> >
+> >　-- Yoshiki
+From yoshiki ＠ vpri.org  Thu Aug  7 03:00:30 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Aug  7 03:01:41 2008
+Subject: [Squeak-ja: 3959] Re: +MEpcCzBtMFcwfjBZ-
+In-Reply-To: <600E73FD686E4105936F06729D950F07@shojiparu>
+References: <u7iawnyhu.wl%yoshiki@vpri.org>
+	<600E73FD686E4105936F06729D950F07@shojiparu>
+Message-ID: <uskti10sh.wl%yoshiki@vpri.org>
+
+> 　IPv6 もまじかだそうですが、それでもスパムフィルタ・ウイルスフィルタは、
+> 必要不可欠だそうですね。
+
+  そうですね。新しいコミュニケーションシステムにいずれ地すべり的に移行
+するとは思うのですが、いつになるでしょうか。
+
+> 　ところで、変更するときのサイトアドレスはどちらでしたでしょうか？
+
+http://www.smalltalk.jp/mailman/listinfo/squeak-ja
+
+の下のほうにある「退会またはオプションの変更」のところにメールアドレス
+を入力してボタンを押し、次のスクリーンで変更できます。パスワードは月に
+一度送られているはずの「会員情報備忘通知」メールに書かれていると思いま
+す。
+
+-- Yoshiki
+From oyak ＠ asu.aasa.ac.jp  Tue Aug 12 11:28:31 2008
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Tue Aug 12 11:28:44 2008
+Subject: [Squeak-ja: 3960] Etoy 回転させながらすすむ
+Message-ID: <isapiwc.83f08d3d.2aa8.48a0f54f.e92e2.8a@email.s-idc.net>
+
+こんにちは、
+愛知淑徳大の親松です。
+Scratch@MITでは阿部さんを始め皆さんにお世話になりました。
+
+Etoyに関する質問です。
+図形を、例えば楕円を、回転させながら一方向に進めることは可能でしょうか？
+進行方向（重心運動）と図形の回転（内部運動）は別々にとれないのでしょうか？
+
+Etoyだけだとだめそうに見えたのですがいかがでしょうか？
+
+親松和浩
+From abee ＠ squeakland.jp  Tue Aug 12 11:37:26 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Aug 12 11:37:37 2008
+Subject: [Squeak-ja: 3961] Re: Etoy 回転させながらすすむ
+In-Reply-To: <isapiwc.83f08d3d.2aa8.48a0f54f.e92e2.8a@email.s-idc.net>
+References: <isapiwc.83f08d3d.2aa8.48a0f54f.e92e2.8a@email.s-idc.net>
+Message-ID: <2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96@mail.gmail.com>
+
+こんにちは、阿部です。
+こちらこそ、ボストンではお世話になりました。また貴重なバグレポートをありがとうございました。
+
+2008/08/12 11:28 Kazuhiro Oyamatsu <oyak@asu.aasa.ac.jp>:
+> Etoyに関する質問です。
+> 図形を、例えば楕円を、回転させながら一方向に進めることは可能でしょうか？
+> 進行方向（重心運動）と図形の回転（内部運動）は別々にとれないのでしょうか？
+
+「回す」と「進める」の組み合わせだと難しいですが、「回す」と「x座標に以下を足す」の組み合わせで可能です。たとえば、サイクロイドは以下のようになります。
+http://squeakland.jp/seaside/SBSuperSwiki/4c7bfb6d-00a3-4e1f-b403-61325adfe269
+もし斜めに動かしたい場合は「y座標に以下を足す」も使ってベクトルを合成します。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+From yoshiki ＠ vpri.org  Tue Aug 12 11:42:56 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Aug 12 11:43:23 2008
+Subject: [Squeak-ja: 3962] Re: Etoy 回転させながらすすむ
+In-Reply-To: <2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96@mail.gmail.com>
+References: <isapiwc.83f08d3d.2aa8.48a0f54f.e92e2.8a@email.s-idc.net>
+	<2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96@mail.gmail.com>
+Message-ID: <uy733c5sf.wl%yoshiki@vpri.org>
+
+At Tue, 12 Aug 2008 11:37:26 +0900,
+Kazuhiro ABE wrote:
+> 
+> こんにちは、阿部です。
+> こちらこそ、ボストンではお世話になりました。また貴重なバグレポートをありがとうございました。
+> 
+> 2008/08/12 11:28 Kazuhiro Oyamatsu <oyak@asu.aasa.ac.jp>:
+> > Etoyに関する質問です。
+> > 図形を、例えば楕円を、回転させながら一方向に進めることは可能でしょうか？
+> > 進行方向（重心運動）と図形の回転（内部運動）は別々にとれないのでしょうか？
+> 
+> 「回す」と「進める」の組み合わせだと難しいですが、「回す」と「x座標に以下を足す」の組み合わせで可能です。たとえば、サイクロイドは以下のようになります。
+> http://squeakland.jp/seaside/SBSuperSwiki/4c7bfb6d-00a3-4e1f-b403-61325adfe269
+> もし斜めに動かしたい場合は「y座標に以下を足す」も使ってベクトルを合
+> 成します。
+
+  最新のEtoysであれば、"forward direction"もタイルで操作できますので、
+
+Ellipse forward by 5
+Ellipse forward direction increase by -5
+Ellipse turn by 5
+
+というスクリプトを作ることはできます。
+
+-- Yoshiki
+From oyak ＠ asu.aasa.ac.jp  Tue Aug 12 12:59:06 2008
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Tue Aug 12 12:59:20 2008
+Subject: [Squeak-ja: 3963] Re: Etoy 回転させながらすすむ
+In-Reply-To: <uy733c5sf.wl%yoshiki@vpri.org>
+References: <isapiwc.83f08d3d.2aa8.48a0f54f.e92e2.8a@email.s-idc.net>
+	<2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96@mail.gmail.com>
+	<uy733c5sf.wl%yoshiki@vpri.org>
+Message-ID: <isapiwc.83f08d3d.2aa8.48a10a8a.645b2.4a@email.s-idc.net>
+
+阿部さん、大島さん、
+
+早速のコメントをありがとうございます。
+なるほど「進める」部分を、自分で（x座標、y座標を指定して）スクリプトにしてしまえばいいのですね。XOを開けられなかったし、我ながら頭が固いなーと感じます。
+
+最新版のEtoyは便利そうでいいなと感じますがこれは今macでは使えないのでしょうか？
+
+いずれにしてもくるくる回しながら動かすには工夫が必要なのですね。
+
+親松
+
+>At Tue, 12 Aug 2008 11:37:26 +0900,
+>Kazuhiro ABE wrote:
+>> 
+>> こんにちは、阿部です。
+>> こちらこそ、ボストンではお世話になりました。また貴重なバグレポートをありがとうございました。
+>> 
+>> 2008/08/12 11:28 Kazuhiro Oyamatsu <oyak@asu.aasa.ac.jp>:
+>> > Etoyに関する質問です。
+>> > 図形を、例えば楕円を、回転させながら一方向に進めることは可能でしょうか？
+>> > 進行方向（重心運動）と図形の回転（内部運動）は別々にとれないのでしょうか？
+>> 
+>> 「回す」と「進める」の組み合わせだと難しいですが、「回す」と「x座標に以下を足す」の組み合わせで可能です。たとえば、サイクロイドは以下のようになります。
+>> http://squeakland.jp/seaside/SBSuperSwiki/4c7bfb6d-00a3-4e1f-b403-61325adfe269
+>> もし斜めに動かしたい場合は「y座標に以下を足す」も使ってベクトルを合
+>> 成します。
+>
+>  最新のEtoysであれば、"forward direction"もタイルで操作できますので、
+>
+>Ellipse forward by 5
+>Ellipse forward direction increase by -5
+>Ellipse turn by 5
+>
+>というスクリプトを作ることはできます。
+>
+>-- Yoshiki
+From yoshiki ＠ vpri.org  Tue Aug 12 13:08:34 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Aug 12 13:09:07 2008
+Subject: [Squeak-ja: 3964] Re: Etoy 回転させながらすすむ
+In-Reply-To: <isapiwc.83f08d3d.2aa8.48a10a8a.645b2.4a@email.s-idc.net>
+References: <isapiwc.83f08d3d.2aa8.48a0f54f.e92e2.8a@email.s-idc.net>
+	<2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96@mail.gmail.com>
+	<uy733c5sf.wl%yoshiki@vpri.org>
+	<isapiwc.83f08d3d.2aa8.48a10a8a.645b2.4a@email.s-idc.net>
+Message-ID: <uwsimdge5.wl%yoshiki@vpri.org>
+
+At Tue, 12 Aug 2008 12:59:06 +0900,
+Kazuhiro Oyamatsu wrote:
+> 
+> 最新版のEtoyは便利そうでいいなと感じますがこれは今macでは使えないの
+> でしょうか？
+
+  http://etoys.laptop.org/
+
+から、
+
+http://etoys.laptop.org/src/etoys-image-and-pr.zip
+
+をダウンロードして解凍し、中に入っているイメージファイルをSqueaklandの
+VMを使って起動すれば使えます。もう少しだけで、インストーラーでワンタッ
+チインストールできるものがリリースされます。
+
+-- Yoshiki
+From oyak ＠ asu.aasa.ac.jp  Tue Aug 12 22:04:12 2008
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Tue Aug 12 22:04:21 2008
+Subject: [Squeak-ja: 3965] Re: Etoy 回転させながらすすむ
+In-Reply-To: <uwsimdge5.wl%yoshiki@vpri.org>
+References: <isapiwc.83f08d3d.2aa8.48a0f54f.e92e2.8a@email.s-idc.net>
+	<2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96@mail.gmail.com>
+	<uy733c5sf.wl%yoshiki@vpri.org>
+	<isapiwc.83f08d3d.2aa8.48a10a8a.645b2.4a@email.s-idc.net>
+	<uwsimdge5.wl%yoshiki@vpri.org>
+Message-ID: <isapiwc.83f08d3d.2aa8.48a18a4c.cfeb3.a0@email.s-idc.net>
+
+>At Tue, 12 Aug 2008 12:59:06 +0900,
+>Kazuhiro Oyamatsu wrote:
+>> 
+>> 最新版のEtoyは便利そうでいいなと感じますがこれは今macでは使えないの
+>> でしょうか？
+>
+>  http://etoys.laptop.org/
+>
+>から、
+>
+>http://etoys.laptop.org/src/etoys-image-and-pr.zip
+>
+>をダウンロードして解凍し、中に入っているイメージファイルをSqueaklandの
+>VMを使って起動すれば使えます。もう少しだけで、インストーラーでワンタッ
+>チインストールできるものがリリースされます。
+>
+>-- Yoshiki
+
+ありがとうございます。ダウンロードして起動してみました。
+方向の処理は面倒ですし、日本語にも切り替えられたのでこれを使ってみようと思います。
+
+親松
+From oyak ＠ asu.aasa.ac.jp  Wed Aug 13 17:53:25 2008
+From: oyak ＠ asu.aasa.ac.jp (Kazuhiro Oyamatsu)
+Date: Wed Aug 13 17:53:36 2008
+Subject: [Squeak-ja: 3966] 最新版 Etoy 日本語での表示の乱れ
+In-Reply-To: <isapiwc.83f08d3d.2aa8.48a18a4c.cfeb3.a0@email.s-idc.net>
+References: <isapiwc.83f08d3d.2aa8.48a0f54f.e92e2.8a@email.s-idc.net>
+	<2d5d52a80808111937r6a2871o8e4cb9b01d3ecb96@mail.gmail.com>
+	<uy733c5sf.wl%yoshiki@vpri.org>
+	<isapiwc.83f08d3d.2aa8.48a10a8a.645b2.4a@email.s-idc.net>
+	<uwsimdge5.wl%yoshiki@vpri.org>
+	<isapiwc.83f08d3d.2aa8.48a18a4c.cfeb3.a0@email.s-idc.net>
+Message-ID: <isapiwc.83f08d3d.e9b.48a2a105.c5b4a.b3@email.s-idc.net>
+
+>>At Tue, 12 Aug 2008 12:59:06 +0900,
+>>Kazuhiro Oyamatsu wrote:
+>>> 
+>>> 最新版のEtoyは便利そうでいいなと感じますがこれは今macでは使えないの
+>>> でしょうか？
+>>
+>>  http://etoys.laptop.org/
+>>
+>>から、
+>>
+>>http://etoys.laptop.org/src/etoys-image-and-pr.zip
+>>
+>>をダウンロードして解凍し、中に入っているイメージファイルをSqueaklandの
+>>VMを使って起動すれば使えます。もう少しだけで、インストーラーでワンタッ
+>>チインストールできるものがリリースされます。
+>>
+>>-- Yoshiki
+>
+>ありがとうございます。ダウンロードして起動してみました。
+>方向の処理は面倒ですし、日本語にも切り替えられたのでこれを使ってみようと思います。
+>
+>親松
+
+で、最新版を使ってみました。報告します。
+言語を日本語にして、フォントを読み込み、
+SuperSwiki2においた（前のバージョンで作った）「星と1分子吸着領域判定ver2」を読み込み、変数の数値のタイルを（ハロを出さずにマウスでつまんで）移動させると、動かした後に沿って矢印の表示が残ります。ハロを出してきちんと移動させる分には問題ありません。
+
+SuperSwiki2に日本語名のままアップしてしまいましたが、良くなかったらごめんなさい。
+
+最新版のデモやサンプルやチュートリアルは、Kadamaもあり充実していますね。
+親松
+From abee ＠ squeakland.jp  Thu Aug 14 09:56:07 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Aug 14 09:56:16 2008
+Subject: [Squeak-ja: 3967] SuperSwiki2と日本語作品名 (was: Re: 最新版 Etoy 日本語での表示の乱れ)
+Message-ID: <2d5d52a80808131756g25bfb7ean46902b226cc0ced2@mail.gmail.com>
+
+こんにちは、阿部です。
+最新版の振る舞いについては、大島さんや他の方にお任せするとして、SuperSwiki2についてです。
+
+2008/08/13 17:53 Kazuhiro Oyamatsu <oyak@asu.aasa.ac.jp>:
+> SuperSwiki2に日本語名のままアップしてしまいましたが、良くなかったらごめんなさい。
+
+SuperSwiki2は日本語の作品名を許しますのでご安心ください(これはSuperSwikiに対するアドバンテージのひとつです)。
+
+ただ、いま見ると、Webブラウザの中から起動したりダウンロードしたりするのは大丈夫なのですが、Squeakのナビゲータの「探す」から見ると、日本語のファイル名が正しく表示されず、開くこともできないようです。
+梅澤さん、なにか心当たりがありますか。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+From sheemer ＠ ryukyu.ne.jp  Thu Aug 14 23:16:32 2008
+From: sheemer ＠ ryukyu.ne.jp (KYUSHIMA Masahiro)
+Date: Thu Aug 14 23:16:45 2008
+Subject: [Squeak-ja: 3968] Alan Kay shares a powerful idea about ideas | Video
+	on TED.com
+Message-ID: <71B5BDA6-ADA5-4EA4-BF79-708488C7BF6F@ryukyu.ne.jp>
+
+http://www.ted.com/index.php/talks/alan_kay_shares_a_powerful_idea_about_ideas.html
+
+ちょっと話題提供です。アランケイがTEDでプレゼンしてます 
+が、どうも
+squeakそのものを使ってプレゼンしているようにみえます。
+
+-- 
+KYUSHIMA Masahiro, MD
+Division of Cardiology,
+Chief, Division of Medical Informatics,
+Okinawa Chubu Hospital, Okinawa, Japan. +81-98-875-6743(fax)
+http://www.ryukyu.ne.jp/~sheemer/
+
+
+
+From umejava ＠ mars.dti.ne.jp  Thu Aug 14 23:22:25 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Aug 14 23:22:34 2008
+Subject: [Squeak-ja: 3969] Re: SuperSwiki2と日本語作品名 (was: Re: 最新版 Etoy 日本語での表示の乱れ)
+In-Reply-To: <2d5d52a80808131756g25bfb7ean46902b226cc0ced2@mail.gmail.com>
+References: <2d5d52a80808131756g25bfb7ean46902b226cc0ced2@mail.gmail.com>
+Message-ID: <JP200808142322259.8153015@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ずいぶん昔の話なので、忘れてしまっていたのですが、問題は2つあるようです。
+
+まず、「SuperSwikiを検索」から検索する場合、下記にあるように日本語で
+探すためにはSqueakプラグインの修正が必要です。
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003610.html
+
+次に、「探す」でSuperSwiki2を選んだときのプロジェクト名のリストですが、
+日本語が表示されないのは、私のサーバの環境に依存する問題のようです。
+(Delegateを少し疑っています)
+
+ローカルでSuperSwiki2を動かしている分には日本語で正しくリストされます。
+
+解決はちょっと大変そうです。週末にでもアタックしてみたいと思います。
+
+ではでは。
+
+"Kazuhiro ABE" <abee@squeakland.jp> wrote:
+> こんにちは、阿部です。
+> 最新版の振る舞いについては、大島さんや他の方にお任せするとして、SuperSwiki2についてです。
+> 
+> 2008/08/13 17:53 Kazuhiro Oyamatsu <oyak@asu.aasa.ac.jp>:
+> > SuperSwiki2に日本語名のままアップしてしまいましたが、良くなかったらごめんなさい。
+> 
+> SuperSwiki2は日本語の作品名を許しますのでご安心ください(これはSuperSwikiに対するアドバンテージのひとつです)。
+> 
+> ただ、いま見ると、Webブラウザの中から起動したりダウンロードしたりするのは大丈夫なのですが、Squeakのナビゲータの「探す」から見ると、日本語のファイル名が正しく表示されず、開くこともできないようです。
+> 梅澤さん、なにか心当たりがありますか。
+> 
+>  //abee
+> --
+> 阿部 和広 EMAIL abee@squeakland.jp
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Thu Aug 14 23:36:03 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Aug 14 23:36:16 2008
+Subject: [Squeak-ja: 3970] Re: SuperSwiki2と日本語作品名 (was: Re: 最新版 Etoy 日本語での表示の乱れ)
+In-Reply-To: <JP200808142322259.8153015@mars.dti.ne.jp>
+References: <2d5d52a80808131756g25bfb7ean46902b226cc0ced2@mail.gmail.com>
+	<JP200808142322259.8153015@mars.dti.ne.jp>
+Message-ID: <2d5d52a80808140736nfd0505fu81e62b36231da59a@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2008/08/14 23:22 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> ずいぶん昔の話なので、忘れてしまっていたのですが、問題は2つあるようです。
+>
+> まず、「SuperSwikiを検索」から検索する場合、下記にあるように日本語で
+> 探すためにはSqueakプラグインの修正が必要です。
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003610.html
+
+そういう話がありましたね。私も忘れていました。
+これは使用頻度が低いので実害は少ないと思います。
+
+> 次に、「探す」でSuperSwiki2を選んだときのプロジェクト名のリストですが、
+> 日本語が表示されないのは、私のサーバの環境に依存する問題のようです。
+> (Delegateを少し疑っています)
+
+これは以前はできていたような気がするのですが、確信は持てません。
+
+> ローカルでSuperSwiki2を動かしている分には日本語で正しくリストされます。
+>
+> 解決はちょっと大変そうです。週末にでもアタックしてみたいと思います。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Fri Aug 15 00:03:08 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Aug 15 00:03:22 2008
+Subject: [Squeak-ja: 3971] Re: Alan Kay shares a powerful idea about ideas |
+	Video on TED.com
+In-Reply-To: <71B5BDA6-ADA5-4EA4-BF79-708488C7BF6F@ryukyu.ne.jp>
+References: <71B5BDA6-ADA5-4EA4-BF79-708488C7BF6F@ryukyu.ne.jp>
+Message-ID: <2d5d52a80808140803l329ce102s4a54b923c9f70087@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2008/08/14 23:16 KYUSHIMA Masahiro <sheemer@ryukyu.ne.jp>:
+> http://www.ted.com/index.php/talks/alan_kay_shares_a_powerful_idea_about_ideas.html
+> ちょっと話題提供です。アランケイがTEDでプレゼンしてますが、どうも
+> squeakそのものを使ってプレゼンしているようにみえます。
+
+情報ありがとうございます。TEDのプレゼンは見たことがありませんでした。
+
+アランさんはいつもSqueakでプレゼンしています。アランさんが使っている巨大なイメージファイルには大量のプロジェクトが含まれており、スレッドナビゲータを使って、聴衆やテーマに応じて組み替えたり、新しいプロジェクトを足したりしています。
+たとえば、以下に2001年のC&C賞受賞記念講演の記事がありますが、そこでもTEDと同じプロジェクトが使われていたことが分かります。
+http://journal.mycom.co.jp/news/2001/10/31/18.html
+よく、アランさんがPowerBookを使っていたとか、Let's
+noteだったとかが話題になりますが、重要なのはそこではなくて、マシンが何であれ、自ら最新の暫定版Dynabook(パーソナル・ダイナミック・メディア)たるSqueakを仮想マシン上で使っているところに注目すべきでしょう。
+
+私が今までのプレゼンの中で一番驚いたのは、通常のSqueakでプレゼンしていると見せかけておいて、最後の最後でズームバックすると実はCroquetの3D空間の中に浮かんでいるウィンドウだったというものです。
+個人的には、2003年のHP Worldで、ロサンゼルスから東京のSqueakをNebraskaで遠隔操作してプレゼンを行ったのも懐かしい思い出です(このとき梅澤さんとホテルに缶詰で準備をしました)。
+http://journal.mycom.co.jp/news/2003/04/24/12.html
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+From umejava ＠ mars.dti.ne.jp  Sat Aug 16 19:15:17 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Aug 16 19:15:29 2008
+Subject: [Squeak-ja: 3972] Re: SuperSwiki2と日本語作品名 (was: Re: 最新版 Etoy 日本語での表示の乱れ)
+In-Reply-To: <2d5d52a80808140736nfd0505fu81e62b36231da59a@mail.gmail.com>
+References: <2d5d52a80808131756g25bfb7ean46902b226cc0ced2@mail.gmail.com>
+	<JP200808142322259.8153015@mars.dti.ne.jp>
+	<2d5d52a80808140736nfd0505fu81e62b36231da59a@mail.gmail.com>
+Message-ID: <JO200808161915173.5567328@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+先ほどプロジェクトの一覧表示で日本語表示されない件を解決しました。
+ご確認ください。
+
+原因は極めて単純なもので、単にSuperSwiki2のロケールが英語になっていたため
+でした。
+
+ではでは。
+
+"Kazuhiro ABE" <abee@squeakland.jp> wrote:
+> こんにちは、阿部です。
+> 
+> 2008/08/14 23:22 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> > ずいぶん昔の話なので、忘れてしまっていたのですが、問題は2つあるようです。
+> >
+> > まず、「SuperSwikiを検索」から検索する場合、下記にあるように日本語で
+> > 探すためにはSqueakプラグインの修正が必要です。
+> > http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003610.html
+> 
+> そういう話がありましたね。私も忘れていました。
+> これは使用頻度が低いので実害は少ないと思います。
+> 
+> > 次に、「探す」でSuperSwiki2を選んだときのプロジェクト名のリストですが、
+> > 日本語が表示されないのは、私のサーバの環境に依存する問題のようです。
+> > (Delegateを少し疑っています)
+> 
+> これは以前はできていたような気がするのですが、確信は持てません。
+> 
+> > ローカルでSuperSwiki2を動かしている分には日本語で正しくリストされます。
+> >
+> > 解決はちょっと大変そうです。週末にでもアタックしてみたいと思います。
+> 
+> よろしくお願いします。
+> 
+>  //abee
+> --
+> 阿部 和広 EMAIL abee@squeakland.jp
+
+
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Sat Aug 16 20:32:21 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sat Aug 16 20:32:30 2008
+Subject: [Squeak-ja: 3973] Re: SuperSwiki2と日本語作品名 (was: Re: 最新版 Etoy 日本語での表示の乱れ)
+In-Reply-To: <JO200808161915173.5567328@mars.dti.ne.jp>
+References: <2d5d52a80808131756g25bfb7ean46902b226cc0ced2@mail.gmail.com>
+	<JP200808142322259.8153015@mars.dti.ne.jp>
+	<2d5d52a80808140736nfd0505fu81e62b36231da59a@mail.gmail.com>
+	<JO200808161915173.5567328@mars.dti.ne.jp>
+Message-ID: <2d5d52a80808160432x76772cfaib4513ea2a6eb10a0@mail.gmail.com>
+
+こんにちは、阿部です。
+直っていることを確認しました。ありがとうございます。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+
+2008/08/16 19:15 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> こんにちは
+> 梅澤です。
+>
+> 先ほどプロジェクトの一覧表示で日本語表示されない件を解決しました。
+> ご確認ください。
+>
+> 原因は極めて単純なもので、単にSuperSwiki2のロケールが英語になっていたため
+> でした。
+>
+> ではでは。
+From abee ＠ squeakland.jp  Sun Aug 17 18:51:27 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sun Aug 17 18:51:36 2008
+Subject: [Squeak-ja: 3974] Squeakland.jpが停止していました。
+Message-ID: <2d5d52a80808170251g3e8706fep53a253428c27310d@mail.gmail.com>
+
+こんにちは、阿部です。
+本日(8/17)の6:47から18:46までSqueakland.jpが停止していました。
+現在は復旧しています。
+ご迷惑をお掛けして申し訳ありませんでした。
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Sat Aug 30 14:28:18 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sat Aug 30 14:28:31 2008
+Subject: [Squeak-ja: 3975] オープンソースカンファレンス 2008 Tokyo/Fall
+Message-ID: <2d5d52a80808292228j47ec3da9g6f70d663111a8bd8@mail.gmail.com>
+
+こんにちは、阿部です。
+Squeak-jaは各地のOSCに参加していますが、10/3(金), 4(土)に東京で開催されるOSC 2008
+Tokyo/Fallに今年も参加します。今回は7月に設立されたSmalltalk-users.jpと共同で出展します。
+ただし、私たちのブース展示は「10/4(土)のみ」ですので、ご注意ください。
+今までと趣向を変え、ビジネスにも使えるSmalltalkということで、VisualWorksのデモなども予定しています。
+セミナーはいつになるか未定ですが、MIT Media Labが開発している新しい教育用ビジュアル言語「Scratch」について、私がお話しする予定です。
+参加は無料ですので、お気軽にお立ち寄りください。お手伝いいただける方も歓迎です。
+
+オープンソースカンファレンス 2008 Tokyo/Fall
+http://www.ospn.jp/osc2008-fall/
+
+Smalltalk-users.jp
+http://sites.google.com/a/smalltalk-users.jp/home/Home
+
+ //abee
+--
+阿部 和広 EMAIL abee@squeakland.jp

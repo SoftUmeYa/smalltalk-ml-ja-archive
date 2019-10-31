@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2530] 「どう書く」応用編の見せ方募集
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202530%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVYkSSQmPXEkLyFXMX4bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTVFKVCROOCskO0p9Smc9OBsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002529.html">
+   <LINK REL="Next"  HREF="002531.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2530] 「どう書く」応用編の見せ方募集</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202530%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVYkSSQmPXEkLyFXMX4bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTVFKVCROOCskO0p9Smc9OBsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2530] 「どう書く」応用編の見せ方募集">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2005年 7月 13日 (水) 19:54:21 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002529.html">[Squeak-ja: 2529] MacOSX でブラウザプラグインを利用
+</A></li>
+        <LI>次の記事 <A HREF="002531.html">[Squeak-ja: 2531] Re: 「どう書く」応用編の見せ方募集
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2530">[ 日付 ]</a>
+              <a href="thread.html#2530">[ スレッド ]</a>
+              <a href="subject.html#2530">[ 件名 ]</a>
+              <a href="author.html#2530">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤@LLDNプログラム委員です。
+
+さて、8/27(土)のLLDNの「どう書く」ですが、今年のお題は漢数字電卓です。
+
+下記のような仕様です。(まだドラフト)
+
+---
+    * 入力: 漢数字 自然数
+
+        一，二，三，四，五，六，七，八，九
+        十，百，千，億 (32bit unsigned)
+        大字(だいじ)は使わない
+
+    * 出力: 漢数字 自然数，零
+
+        一，二，三，四，五，六，七，八，九
+        十，百，千，億 (32bit unsigned)
+        大字(だいじ)は使わない
+
+    * 演算子: ＋，−，×，÷，（，）
+    * 文字コード 標準ではEUC
+        変換ができればなんでもよい
+
+    * その他: 入力は中置記法，零で割るとエラー
+    * 演算子の順位: ×，÷が優先，左結合
+    * 数値の内部表現はおまかせ
+---
+
+「どう書く」では、上記の仕様を最低限満たす「基本編」と、
+言語のすさまじさを見せつける「応用編」の2つの作品の提出が求められています。
+
+今回プログラミングを担当されるのは鷲見さんですが、「応用編」に関しては
+いろいろな人のアイデアを集めておいた方が有利かと思います。
+
+例: 
+- 解を出すまでの過程が視覚的に見える(パースツリー、3Dポリゴン)
+- 意味もなく解を読み上げる
+- ロボットが動き出し、達筆で答えを書く
+
+などなど、「応用編」にふさわしい「見せ方」といったものがありましたら、
+このMLにどしどしお寄せください。
+
+それではよろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002529.html">[Squeak-ja: 2529] MacOSX でブラウザプラグインを利用
+</A></li>
+	<LI>次の記事 <A HREF="002531.html">[Squeak-ja: 2531] Re: 「どう書く」応用編の見せ方募集
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2530">[ 日付 ]</a>
+              <a href="thread.html#2530">[ スレッド ]</a>
+              <a href="subject.html#2530">[ 件名 ]</a>
+              <a href="author.html#2530">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

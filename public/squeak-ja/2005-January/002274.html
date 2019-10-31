@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2274] Re: Squeakからカメラの画像を取得(Linux)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202274%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhaxskQiQrJGkbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSslYSVpJE4yaEF8JHI8aEZAGyhCKExpbnV4KQ%3D%3D%3F%3D&In-Reply-To=1BBFE46C-68FC-11D9-87DD-000A95AD0BEA%40sie.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002273.html">
+   <LINK REL="Next"  HREF="002275.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2274] Re: Squeakからカメラの画像を取得(Linux)</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202274%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVhaxskQiQrJGkbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSslYSVpJE4yaEF8JHI8aEZAGyhCKExpbnV4KQ%3D%3D%3F%3D&In-Reply-To=1BBFE46C-68FC-11D9-87DD-000A95AD0BEA%40sie.dendai.ac.jp"
+       TITLE="[Squeak-ja: 2274] Re: Squeakからカメラの画像を取得(Linux)">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2005年 1月 18日 (火) 15:28:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002273.html">[Squeak-ja: 2273] Squeakからカメラの画像を取得(Linux)
+</A></li>
+        <LI>次の記事 <A HREF="002275.html">[Squeak-ja: 2275] Nihongo 7
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2274">[ 日付 ]</a>
+              <a href="thread.html#2274">[ スレッド ]</a>
+              <a href="subject.html#2274">[ 件名 ]</a>
+              <a href="author.html#2274">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+&gt;<i> Linuxで動いてるSqueakからUSBカメラの画像を取得するプラグインを公開しました。
+</I>&gt;<i> <A HREF="http://www.se.sie.dendai.ac.jp/~kubota/">http://www.se.sie.dendai.ac.jp/~kubota/</A>
+</I>&gt;<i> とりあえず動けばいいや的考えで作ったので、いろいろ問題あるかも知れま
+</I>せん。
+
+　やりましたね。
+
+  実際に試したわけではありませんが、ちょっとだけコメントを。
+
+  * WebCamMorph&gt;&gt;initialize:のあたりはビジーループになっているような気
+    がしますが、フレームがきたときにSemaphoreをシグナルするような仕組
+    みのほうがよいかも知れません。
+
+  * WebCamMorphのように、中身を他のProcessから書き換えるときは
+    WorldState class&gt;&gt;addDeferredUIMessage:というメソッドを使って、
+     Morphicのループと協調して動くようにしないと、思わぬタイミングでエ
+     ラーが出たりします。
+
+ これからもがんばってください。
+
+-- Yoshiki
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002273.html">[Squeak-ja: 2273] Squeakからカメラの画像を取得(Linux)
+</A></li>
+	<LI>次の記事 <A HREF="002275.html">[Squeak-ja: 2275] Nihongo 7
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2274">[ 日付 ]</a>
+              <a href="thread.html#2274">[ スレッド ]</a>
+              <a href="subject.html#2274">[ 件名 ]</a>
+              <a href="author.html#2274">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

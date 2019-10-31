@@ -1,0 +1,977 @@
+From kuwatani ＠ akademia.co.jp  Mon May  9 17:43:27 2005
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2445] メーリングリストの一時停止のお知らせ
+Message-ID: <20050509174327C0J&m6@akademia.co.jp>
+
+Squeak-ja参加者の皆様
+
+Squeak-jaの管理をしています 桑谷 です．
+
+突然ですが，先日メーリングリストを運用しているサーバが攻撃を受け
+サーバが落とされるという事件がありました．
+
+現在システムはある程度復元しましたがサーバメンテナンスのため
+下記の日程でメーリングリストを一時停止したいと思います．
+大変急な話ですが，何卒よろしくお願い致します．
+
+                              記
+
+         日時：2005年5月10日(火)  終日
+
+													以上
+_______________________________
+桑谷剛史＠Sqeuak-ja管理人
+アカデミアシステムズ株式会社
+
+
+
+From tako ＠ aquilax.co.jp  Wed May 18 16:21:09 2005
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2446] MacOSX で FileDirectry fileNames の全角数字が半角になる
+Message-ID: <20050518072107.2404B43742@1server.aquilax.co.jp>
+
+ 高橋@池袋です。
+
+MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で fileNameを取得すると全角数字が
+半角数字に入れ替わってしまうようです。
+
+例）本来のファイル名　取得されるファイル名
+×　test１.txt　→ test1.txt
+×　テスト１.txt → テスト1.txt
+○　test1.txt
+○　テスト1.txt
+
+ファイル・リストで上記のような名前のファイルを含むフォルダを見るとファイル名は半角数字で
+表示され、×印のファイル名では下側paneに内容表示をさせようとするとデバッガが起動します。
+
+image側の問題では無く
+FileDirectry>>primLookupEntryIn:index: のレベルで誤ったファイル名が返っているようです。
+
+全角数字以外がどうなのを調べた訳ではありませんが少なくとも１と２は×です。
+
+ではでは
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+From tetha ＠ st.rim.or.jp  Wed May 18 19:45:46 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2447] Re: MacOSX で FileDirectry fileNames の全角数字が半角になる
+In-Reply-To: <20050518072107.2404B43742@1server.aquilax.co.jp>
+References: <20050518072107.2404B43742@1server.aquilax.co.jp>
+Message-ID: <DE8ECC2A-5EA8-49FB-BEF9-E75649EB2600@st.rim.or.jp>
+
+高橋さん、こんにちは
+みなさん、どうも
+林徹也です。
+
+On 2005/05/18, at 16:21, Kouji takahashi wrote:
+
+>  高橋@池袋です。
+>
+> MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で  
+> fileNameを取得すると全角数字が
+> 半角数字に入れ替わってしまうようです。
+
+私のところの Tiger (10.4.1) と Squeak  
+3.8.6Beta6.app でも同じ問題が
+確認できました。
+
+> 例）本来のファイル名　取得されるファイル名
+> ×　test１.txt　→ test1.txt
+> ×　テスト１.txt → テスト1.txt
+> ○　test1.txt
+> ○　テスト1.txt
+>
+> ファイル・リストで上記のような名前のファイルを含むフォルダを見 
+> るとファイル名は半角数字で
+> 表示され、×印のファイル名では下側paneに内容表示をさせよ 
+> うとするとデバッガが起動します。
+>
+> image側の問題では無く
+> FileDirectry>>primLookupEntryIn:index: のレベルで誤ったファイ 
+> ル名が返っているようです。
+
+ご指摘の通り、これは、VM の問題かと推察されます。
+Carbon Squeak VM は、ディレクトリのエントリを取得する際に、古い 
+APIを
+使ってるので内部的に UTF-8 <-> ShiftJIS と相互に変換して動 
+いており、
+さらに、UTF-8について Apple では decomposed な 
+ものを用いてる関係から
+起きてる問題ではないかと思われます。
+
+今手元で確認できないのですが…
+もし、よければどなたか、VM ソースの中の  
+CFStringNormalize 関数で引数
+の定数を以下のように
+
+kCFStringNormalizationFormKC
+     → kCFStringNormalizationFormC
+
+kCFStringNormalizationFormKD
+     → kCFStringNormalizationFormD
+
+変更してビルドしたものだとどうなるでしょうか？
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From koubo2005 ＠ yengawa.jpn.org  Wed May 18 20:10:38 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2448] Swimmyについて
+Message-ID: <20050518190121.E722.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+昨年のIPA未踏ソフトウェアプロジェクトでAlan Kay PMのもとでSqueak eToy上
+にSwimmyという子供のためのマルチエージェントプログラミング環境の作成を行
+いました。C5やSqueak-BOFで紹介して皆さんにいろいろとアドバイスを頂きあり
+がとうございました。
+成果報告がここに載りました。
+http://www.ipa.go.jp/jinzai/esp/2004mito1/kaihatuseika.html#Akay
+
+実はこの成果物の画面が今発売中の日経BYTE5月号P.41にちらりと載っています。
+ポストオブジェクト指向特集のエージェント指向のところで、エージェントによ
+るプログラミングをわかりやすく体験できるものとしてSwimmyが紹介されていま
+す。内容は簡単な紹介程度ですが、Swimmyの操作画面が大きく写されていてサン
+プルのアプリケーションが簡潔に説明されています。
+# 記者の八木さんには制約多い中で比較的大きく取り上げていただき感謝していま
+# す。
+
+肝心のSwimmyはNihongo7などに標準で入っているConnectorでは動かないし不安
+定なので一般公開できずにいます。これではいけないと思い、Swimmy改め
+Swimmieとして、最新のConnectorへも対応する大幅な作り直しを考えてます。
+# これがとても大変で事実上頓挫してますが。。。
+とりあえず今後は以下のURLで状況をお知らせする予定です。
+
+Swimmieホームページ
+http://swimmie.webhop.org
+
+では。
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From tako ＠ aquilax.co.jp  Fri May 20 10:51:40 2005
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2449] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+Message-ID: <20050520015138.C25F743732@1server.aquilax.co.jp>
+
+高橋@池袋です。林さん素早いお返事ありがとうございます。
+
+昨日からVMのビルドをトライしているのですがうまくゆきません。
+一旦、頭を冷やして来週にでも再度挑戦してみようと思います。
+
+症状
+interp.cのコンパイルで
+int positive64BitIntegerFor( squeakInt64 integerValue ) の行で
+error: parse error before "integerValue"
+
+squeakInt64が未定義なのですかね？
+
+
+それまでの過程
+platforms:Mac OS:VM:doccumentation:readm を見て作業をすすめました。
+初めてのビルドなので私のミスだと思いますが64bit化のせいかも知れません。
+VMMakingが意外と簡単なので驚きました。（うまくいっていませんが...）
+
+
+subversionのインストール、platformsのdownload
+ svn co http://squeak.hp1.hp.com/sbn/squeak/trunk
+
+Squeak3.7+5989-fullをdownload。
+SqueakMap で VMMaker3.8b3 とBaloon3Dをインストール
+（Tim Rowledgeさんのサイトが　500 Internal Errorでaccessできないので
+VMMakerは 3.8b3 以外はインストール不可でした。）
+
+platforms:Mac OS　の　specialChangeSetsをInstall
+
+VMMakerでsrc作成、Gnuify
+
+config.h
+aio.h
+interp.h
+が必要そうなので32bit VM用に適当に(RISC OSなどから)pratforms:Mac OS:VM にcopy（おいおい）
+
+ビルド→error
+
+　ではでは
+
+At 19:45 05.5.18, Tetsuya HAYASHI wrote:
+> 高橋さん、こんにちは
+> みなさん、どうも
+> 林徹也です。
+> 
+> On 2005/05/18, at 16:21, Kouji takahashi wrote:
+> 
+> >  高橋@池袋です。
+> >
+> > MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で  
+> > fileNameを取得すると全角数字が
+> > 半角数字に入れ替わってしまうようです。
+> 
+> 私のところの Tiger (10.4.1) と Squeak  
+> 3.8.6Beta6.app でも同じ問題が
+> 確認できました。
+> 
+> > 例）本来のファイル名　取得されるファイル名
+> > ×　test１.txt　→ test1.txt
+> > ×　テスト１.txt → テスト1.txt
+> > ○　test1.txt
+> > ○　テスト1.txt
+> >
+> > ファイル・リストで上記のような名前のファイルを含むフォルダを見 
+> > るとファイル名は半角数字で
+> > 表示され、×印のファイル名では下側paneに内容表示をさせよ 
+> > うとするとデバッガが起動します。
+> >
+> > image側の問題では無く
+> > FileDirectry>>primLookupEntryIn:index: のレベルで誤ったファイ 
+> > ル名が返っているようです。
+> 
+> ご指摘の通り、これは、VM の問題かと推察されます。
+> Carbon Squeak VM は、ディレクトリのエントリを取得する際に、古い 
+> APIを
+> 使ってるので内部的に UTF-8 <-> ShiftJIS と相互に変換して動 
+> いており、
+> さらに、UTF-8について Apple では decomposed な 
+> ものを用いてる関係から
+> 起きてる問題ではないかと思われます。
+> 
+> 今手元で確認できないのですが…
+> もし、よければどなたか、VM ソースの中の  
+> CFStringNormalize 関数で引数
+> の定数を以下のように
+> 
+> kCFStringNormalizationFormKC
+>      → kCFStringNormalizationFormC
+> 
+> kCFStringNormalizationFormKD
+>      → kCFStringNormalizationFormD
+> 
+> 変更してビルドしたものだとどうなるでしょうか？
+> 
+> 
+> --
+> Tetsuya HAYASHI <tetha@st.rim.or.jp>
+> PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+From tetha ＠ st.rim.or.jp  Fri May 20 15:14:05 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2450] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+In-Reply-To: <20050520015138.C25F743732@1server.aquilax.co.jp>
+References: <20050520015138.C25F743732@1server.aquilax.co.jp>
+Message-ID: <200C1499-6C27-41CD-B3FE-1FDAAE240D5C@st.rim.or.jp>
+
+高橋さん、林です。どうも。
+さっそくのチャレンジがんばってください。
+
+ところで、試しに先日出た 3.8 final のイメージでVM 
+ソースを生成して
+みるとどうでしょう？
+
+http://box1.squeakfoundation.org/files/3.8/Squeak3.8-6665.zip
+
+# そういえば、VM ソースは source forge から  
+subversion に移動して
+# たのでしたっけ。
+# 失念してました（お恥ずかしい）。
+
+On 2005/05/20, at 10:51, Kouji takahashi wrote:
+
+>
+> subversionのインストール、platformsのdownload
+>  svn co http://squeak.hp1.hp.com/sbn/squeak/trunk
+>
+> Squeak3.7+5989-fullをdownload。
+> SqueakMap で VMMaker3.8b3 とBaloon3Dをインストール
+> （Tim Rowledgeさんのサイトが　500 Internal Errorで 
+> accessできないので
+> VMMakerは 3.8b3 以外はインストール不可でした。）
+>
+> platforms:Mac OS　の　specialChangeSetsをInstall
+>
+> VMMakerでsrc作成、Gnuify
+>
+> config.h
+> aio.h
+> interp.h
+> が必要そうなので32bit VM用に適当に(RISC OSなどから) 
+> pratforms:Mac OS:VM にcopy（おいおい）
+>
+> ビルド→error
+>
+> 　ではでは
+>
+> At 19:45 05.5.18, Tetsuya HAYASHI wrote:
+>
+>> 高橋さん、こんにちは
+>> みなさん、どうも
+>> 林徹也です。
+>>
+>> On 2005/05/18, at 16:21, Kouji takahashi wrote:
+>>
+>>
+>>>  高橋@池袋です。
+>>>
+>>> MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で
+>>> fileNameを取得すると全角数字が
+>>> 半角数字に入れ替わってしまうようです。
+>>>
+>>
+>> 私のところの Tiger (10.4.1) と Squeak
+>> 3.8.6Beta6.app でも同じ問題が
+>> 確認できました。
+>>
+>>
+>>> 例）本来のファイル名　取得されるファイル名
+>>> ×　test１.txt　→ test1.txt
+>>> ×　テスト１.txt → テスト1.txt
+>>> ○　test1.txt
+>>> ○　テスト1.txt
+>>>
+>>> ファイル・リストで上記のような名前のファイルを含むフォルダを見
+>>> るとファイル名は半角数字で
+>>> 表示され、×印のファイル名では下側paneに内容表示をさせよ
+>>> うとするとデバッガが起動します。
+>>>
+>>> image側の問題では無く
+>>> FileDirectry>>primLookupEntryIn:index: のレベルで誤ったファイ
+>>> ル名が返っているようです。
+>>>
+>>
+>> ご指摘の通り、これは、VM の問題かと推察されます。
+>> Carbon Squeak VM は、ディレクトリのエントリを取得する際に、古い
+>> APIを
+>> 使ってるので内部的に UTF-8 <-> ShiftJIS と相互に変換し 
+>> て動
+>> いており、
+>> さらに、UTF-8について Apple では  
+>> decomposed な
+>> ものを用いてる関係から
+>> 起きてる問題ではないかと思われます。
+>>
+>> 今手元で確認できないのですが…
+>> もし、よければどなたか、VM ソースの中の
+>> CFStringNormalize 関数で引数
+>> の定数を以下のように
+>>
+>> kCFStringNormalizationFormKC
+>>      → kCFStringNormalizationFormC
+>>
+>> kCFStringNormalizationFormKD
+>>      → kCFStringNormalizationFormD
+>>
+>> 変更してビルドしたものだとどうなるでしょうか？
+>>
+>>
+>> --
+>> Tetsuya HAYASHI <tetha@st.rim.or.jp>
+>> PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+>>
+>
+>
+> -------------------------------
+> ^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+>  ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From tak ＠ metatoys.org  Sun May 22 15:34:16 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2451] nihongo7 updates (5/21)
+Message-ID: <429027E8.5010906@metatoys.org>
+
+ご無沙汰しております。山宮＠マウンテンビューです。
+
+4月15日以降の更新です。
+
+更新済プラグイン
+http://metatoys.org/pub/nihongo7/SqueakNihongo7Plugin.zip
+Windows 向けインストーラ(しちさんのご指摘により typo 修正)
+http://metatoys.org/pub/nihongo7/SqueakNihongo7Installer.exe
+
+開発者版は http://squeakland.jp/developer/ よりダウンロードして
+各自アップデートしてください。
+
+エンジョイ！
+
+-----
+
+0098ScriptInstanceStatus.cs
+過去のプロジェクトに全スクリプトエラーが含まれているとエラー - Korakurider さん
+
+0097clearKnownThreads-tetha.cs
+プロジェクトのインスタンスのゴミを削除 - 林さん
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From tako ＠ aquilax.co.jp  Fri May 27 15:06:52 2005
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2452] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+Message-ID: <20050527060651.41CD54357E@1server.aquilax.co.jp>
+
+高橋@池袋です。 VMMakingの進捗状況などの報告です。
+
+ビルドしたVMで日本語imageが動作するところまできたの
+ですが、漢字を含むファイルはfilenameが''になります。
+
+John M McIntoshさんのVMでも同様です。
+
+うちのMacOSが余計なお世話をしているのかな？
+何かのヒントありませんか？
+
+せっかくの林さんの提案も上記の症状のため効果が確認できていません。
+
+====以下ビルドについて
+今週頭ぐらいまでは subversionのソースの整合性がとれていなかったようです。
+木曜日朝のソース(revision 1195)＋以下の修正でビルドができました。
+１. interp.hのcopy
+        unix:src64:vmから Mac OSにcopy
+２. sqPlatformSpecific.hの修正
+        「#undefs for dispatchFunctionPointer, dispatchFunctionPointerOnin」を削除
+
+2.の方は 24日の McIntoshさんのメールではundefしたぞと明記されているのですが
+リンクでエラーとなるため sq.h内のマクロをそのまま使うようにしました。
+PlugInを使っていないのでたまたま動作しているだけかも知れません。
+
+ではでは
+
+追伸
+　日経ＭＡＣ（創刊〜廃刊までほとんど）を処分します。
+　引き取ってやろうという殊勝な方はいませんか？
+
+At 15:14 05.5.20, Tetsuya HAYASHI wrote:
+> 高橋さん、林です。どうも。
+> さっそくのチャレンジがんばってください。
+> 
+> ところで、試しに先日出た 3.8 final のイメージでVM 
+> ソースを生成して
+> みるとどうでしょう？
+> 
+> http://box1.squeakfoundation.org/files/3.8/Squeak3.8-6665.zip
+> 
+> # そういえば、VM ソースは source forge から  
+> subversion に移動して
+> # たのでしたっけ。
+> # 失念してました（お恥ずかしい）。
+> 
+> On 2005/05/20, at 10:51, Kouji takahashi wrote:
+> 
+> >
+> > subversionのインストール、platformsのdownload
+> >  svn co http://squeak.hp1.hp.com/sbn/squeak/trunk
+> >
+> > Squeak3.7+5989-fullをdownload。
+> > SqueakMap で VMMaker3.8b3 とBaloon3Dをインストール
+> > （Tim Rowledgeさんのサイトが　500 Internal Errorで 
+> > accessできないので
+> > VMMakerは 3.8b3 以外はインストール不可でした。）
+> >
+> > platforms:Mac OS　の　specialChangeSetsをInstall
+> >
+> > VMMakerでsrc作成、Gnuify
+> >
+> > config.h
+> > aio.h
+> > interp.h
+> > が必要そうなので32bit VM用に適当に(RISC OSなどから) 
+> > pratforms:Mac OS:VM にcopy（おいおい）
+> >
+> > ビルド→error
+> >
+> > 　ではでは
+> >
+> > At 19:45 05.5.18, Tetsuya HAYASHI wrote:
+> >
+> >> 高橋さん、こんにちは
+> >> みなさん、どうも
+> >> 林徹也です。
+> >>
+> >> On 2005/05/18, at 16:21, Kouji takahashi wrote:
+> >>
+> >>
+> >>>  高橋@池袋です。
+> >>>
+> >>> MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で
+> >>> fileNameを取得すると全角数字が
+> >>> 半角数字に入れ替わってしまうようです。
+> >>>
+> >>
+> >> 私のところの Tiger (10.4.1) と Squeak
+> >> 3.8.6Beta6.app でも同じ問題が
+> >> 確認できました。
+> >>
+> >>
+> >>> 例）本来のファイル名　取得されるファイル名
+> >>> ×　test１.txt　→ test1.txt
+> >>> ×　テスト１.txt → テスト1.txt
+> >>> ○　test1.txt
+> >>> ○　テスト1.txt
+> >>>
+> >>> ファイル・リストで上記のような名前のファイルを含むフォルダを見
+> >>> るとファイル名は半角数字で
+> >>> 表示され、×印のファイル名では下側paneに内容表示をさせよ
+> >>> うとするとデバッガが起動します。
+> >>>
+> >>> image側の問題では無く
+> >>> FileDirectry>>primLookupEntryIn:index: のレベルで誤ったファイ
+> >>> ル名が返っているようです。
+> >>>
+> >>
+> >> ご指摘の通り、これは、VM の問題かと推察されます。
+> >> Carbon Squeak VM は、ディレクトリのエントリを取得する際に、古い
+> >> APIを
+> >> 使ってるので内部的に UTF-8 <-> ShiftJIS と相互に変換し 
+> >> て動
+> >> いており、
+> >> さらに、UTF-8について Apple では  
+> >> decomposed な
+> >> ものを用いてる関係から
+> >> 起きてる問題ではないかと思われます。
+> >>
+> >> 今手元で確認できないのですが…
+> >> もし、よければどなたか、VM ソースの中の
+> >> CFStringNormalize 関数で引数
+> >> の定数を以下のように
+> >>
+> >> kCFStringNormalizationFormKC
+> >>      → kCFStringNormalizationFormC
+> >>
+> >> kCFStringNormalizationFormKD
+> >>      → kCFStringNormalizationFormD
+> >>
+> >> 変更してビルドしたものだとどうなるでしょうか？
+> >>
+> >>
+> >> --
+> >> Tetsuya HAYASHI <tetha@st.rim.or.jp>
+> >> PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+> >>
+> >
+> >
+> > -------------------------------
+> > ^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+> >  ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+> 
+> 
+> 
+> 
+> --
+> Tetsuya HAYASHI <tetha@st.rim.or.jp>
+> PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+From takuya ＠ computer.org  Fri May 27 18:14:08 2005
+From: takuya ＠ computer.org (Takuya Kamada)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2453] OSC2005/Hokkaido
+Message-ID: <20050527180214.0646.TAKUYA@computer.org>
+
+  Squeak修行中の蒲田と言います。
+
+  初回投稿なのに、藪から棒な話で申し訳ないのですが、以下のイベントにちょっ
+と関係しているので、書かせてください。
+
+  7月9日に、北海道大学のクラーク会館で、Open Source Conference 2005 in
+Hokkaido(以下、OSC-Do)が開催されることになりました。
+
+名称 : オープンソースカンファレンス2005 in Hokkaido
+日時 : 7月9日(土)
+場所 : 北海道大学クラーク会館
+       http://www.hokudai.ac.jp/bureau/map/mapindx1.htm
+詳細 : http://www.ospn.jp:16080/osc2005/wiki/index.php?OSC2005-Do
+
+  現在、参加コミュニティ(セミナー、展示)を募集しています。Squeak-jpは、
+参加されますか?
+  本当は「僕が発表します」なんて言えると良いのですが、まだまだ他人様に
+Squeakを解説できるレベルでは無いので、こんな尻つぼみな書き方になってしまっ
+て、ちょっと情けないです。ごめんなさい。
+  もし、Squeak関係でOSC-Doに参加する予定があれば、お手伝いしたいと思いま
+すので、お知らせ下さい。
+
+  開催のご案内と、参加予定のお問い合わせでした。
+
+-- Community Info. -----------------------------------------------------
+Tech-Ezo  : 次回はWikiかSNS。もしかしたらCMS。詳細 http://tech-ezo.jp
+CLR/H     : 次回は6月4日。詳細は、http://mixi.jp/view_event.pl?id=820558
+OSC2005-Do: 7月9日(土)@北大クラ館:現在、参加コミュニティ募集中↓
+          : http://www.ospn.jp:16080/osc2005/wiki/index.php?OSC2005-Do
+-- Takuya Kamada -------------------------------- takuya@computer.org ---
+
+
+From fumito.kondo ＠ hp.com  Fri May 27 18:29:07 2005
+From: fumito.kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2454] Squeakのコンサート、展示などのご案内
+Message-ID: <287073018F1FCC48B871980C94CB156503C0CAC9@tkoexc02.asiapacific.cpqcorp.net>
+
+皆さんこんにちは、
+
+日本HPの近藤です。
+
+「世界ミーム博覧会2005」のご案内をさせていただきます。
+
+「世界ミーム博覧会2005」では、技術展にSqueakが展示されたり、コンサートでSqueakを用いたマルチエージェントモデルによる音楽の演奏会があったり、また、6月24日は、Alan Kayさんも万博瀬戸会場に来て、簡単な講演と子供たちとの交流を予定しております。
+
+開場は、6月24日は、シンポジウム・コンサートが行われる名古屋能楽堂と万博瀬戸会場の2箇所で、25日は、瀬戸会場のみとなります。
+
+Squeakを用いたコンサートは、おそらく日本ではこれが初めてではないかと思います。
+作曲と音楽作成に関わるプログラミングを私、近藤が担当し、分散マルチエージェントの環境のプログラミングをこのメーリングリストでもおなじみの横川耕二さんが担当しました。
+
+シンポジウム・コンサートは無料ですが、事前申し込みが必要です。
+
+申し込みは、下記URLにあります。
+万障お繰り合わせの上、是非ともご参加ください。
+
+http://www.memeproject.jp/hiki.cgi?%28EXPO%29Program
+
+
+以下、「世界ミーム博覧会2005」のご紹介です。
+
+===========================================================
+
+リチャード・ドーキンス(1976)によって「ミーム」と名付けられた文化遺伝子。
+この概念は、人工物の進化、技術の進化、文化の進化、知の伝播、概念形成、組織の
+形成など我々を取り巻く様々な生活の側面に関係してきそうです。
+　「ミーム」をヒントにして、愛知万博の理念である「自然の叡智」を自然の進化、
+人工物の進化という視点から見つめ、今日の文明社会が抱える環境問題、民族間紛争、
+人間性の荒廃などのさまざまな課題の糸口が見つからないでしょうか？
+　国内外の専門家によるシンポジウム、市民団体による座談会、芸術祭、子供たちに
+伝えるワークショップ・電子絵本、人と生態系とのかかわりを見る生態系展示、
+ミームに関わる技術展など盛りだくさんのイベントを愛知万博の市民プロジェクトで
+展開します。
+
+　ミームに深く関係すると思われるオブジェクト指向技術の生みの親であるAlan Kay
+博士も参加していただくことになりました。
+
+　詳細は下記のURLをご覧ください。
+
+◎「世界ミーム博覧会2005」======================================
+
+　日時：2005年6月24日(金)-25日(土)
+　会場：「愛・地球博」瀬戸会場 市民パビリオン［対話劇場］
+　　　　　　 http://www.expo2005.or.jp/
+　　　　 名古屋能楽堂/名古屋市中区三の丸一丁目１番１号
+　　　　　　 http://www.nagoyajo.naka.nagoya.jp/
+　入場無料（愛・地球博への入場料は除外）
+　　URL:　www.memeProject.jp
+
+　問い合せ先： mailto:info@memeProject.jp
+
+
+また、「世界ミーム博覧会2005」では、毎月News Letterを発行しております。
+News Letterのお申し込み、バックナンバーをご覧になりたい方は、下記にアクセスして
+ください。
+http://www.memeproject.jp/hiki.cgi?NL
+
+
+
+
+
+
+近藤史人
+シニアコンサルタント
+コンサルティング＆インテグレーション統括本部
+日本ヒューレット・パッカード株式会社
+Fumito Kondo
+Senior Consultant
+Consulting&Integration
+Hewlett-Packard  JAPAN
+Phone: +81-52-566-5900
+FAX  :  +81-52-566-5990
+e-Mail:Fumito.Kondo@hp.com
+
+From tetha ＠ st.rim.or.jp  Mon May 30 23:17:23 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2455] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+In-Reply-To: <20050527060651.41CD54357E@1server.aquilax.co.jp>
+References: <20050527060651.41CD54357E@1server.aquilax.co.jp>
+Message-ID: <D752B4D6-02AD-43F0-911E-BA7CB387D59F@st.rim.or.jp>
+
+林です。どうも。
+
+On 2005/05/27, at 15:06, Kouji takahashi wrote:
+
+> 高橋@池袋です。 VMMakingの進捗状況などの報告です。
+
+お疲れさまです。
+
+> ビルドしたVMで日本語imageが動作するところまできたの
+> ですが、漢字を含むファイルはfilenameが''になります。
+>
+> John M McIntoshさんのVMでも同様です。
+>
+> うちのMacOSが余計なお世話をしているのかな？
+> 何かのヒントありませんか？
+
+ソースの方は追いかけてないので、はっきりと言えないのですが。
+JMM さんの以下のサイト
+
+     http://homepage.mac.com/johnmci/FileSharing.html
+
+にアップロードされてる VM (Squeak 3.8.8beta2.app.sit) をダ 
+ウン
+ロードし、「パッケージの内容を表示」で Info.plist の  
+encoding
+の値を UTF-8 に書き換えて試してみました。
+
+結果は、やはり同様にファイル名のハンドリングに失敗しました。
+なお、悪いことに日本語の入力もできませんでした。
+
+キーボードイベント周りも見てみる必要がありそうです。
+
+# 果たして、これが 64bit 化の問題なのかどうか？
+# もしかしたら、少しバージョンが巻き戻っていそうな予感もします。
+# 一時期、MacRoman コーディングの関係で日本語の入力が出来 
+なく
+# なったバージョンがあったような覚えがあります。
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From yoshiki ＠ squeakland.org  Tue May 31 05:30:31 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2456] Re: OSC2005/Hokkaido
+In-Reply-To: <20050527180214.0646.TAKUYA@computer.org>
+References: <20050527180214.0646.TAKUYA@computer.org>
+Message-ID: <u8y1wlamw.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+  返事が遅くなってしまってすみません。
+
+>   7月9日に、北海道大学のクラーク会館で、Open Source Conference 2005 in
+> Hokkaido(以下、OSC-Do)が開催されることになりました。
+> 
+> 名称 : オープンソースカンファレンス2005 in Hokkaido
+> 日時 : 7月9日(土)
+> 場所 : 北海道大学クラーク会館
+>        http://www.hokudai.ac.jp/bureau/map/mapindx1.htm
+> 詳細 : http://www.ospn.jp:16080/osc2005/wiki/index.php?OSC2005-Do
+
+  おお。
+
+>   現在、参加コミュニティ(セミナー、展示)を募集しています。Squeak-jpは、
+> 参加されますか?
+>   本当は「僕が発表します」なんて言えると良いのですが、まだまだ他人様に
+> Squeakを解説できるレベルでは無いので、こんな尻つぼみな書き方になってしまっ
+> て、ちょっと情けないです。ごめんなさい。
+>   もし、Squeak関係でOSC-Doに参加する予定があれば、お手伝いしたいと思いま
+> すので、お知らせ下さい。
+> 
+>   開催のご案内と、参加予定のお問い合わせでした。
+
+  僕は個人的には無理ですが、どなたかきっと北の大地に興味をお持ちの方が
+いらっしゃるのではないかと思います。心当たりのある方、いかがでしょう。
+
+-- Yoshiki
+
+From sumi ＠ seagreen.ocn.ne.jp  Tue May 31 11:34:17 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2457] Re: OSC2005/Hokkaido
+In-Reply-To: <20050527180214.0646.TAKUYA@computer.org>
+Message-ID: <BEC1FC38.33270%sumi@seagreen.ocn.ne.jp>
+
+蒲田さん、おおしまさん、ごきげんよう。鷲見です。
+
+ぼーとしてうっかり見過ごしていました(^_^;)。ごめんなさい。＞蒲田さん
+
+その週末に向けてちょっと立て込んでいるため、音頭をとっての参画はできないうえ、
+そうでなくとも、ふだんからあまり凝ったネタは提供できない私ですが、
+蒲田さんか、あるいは他のどなたかの旗振りをいただけるということであれば、
+オーソドックスな Squeak 紹介や簡単なレクチャー（無難なところで eToys）など
+の担当は可能ですので、そんな程度の寄与でよければお気軽にお申し付けください。
+
+ほかの在札、在道の Squeak 愛好家の皆さんのご予定はいかがでしょうか。
+大仰にせず展示などは適当にして（ぉぃ）、これを機に集まるだけでも楽しいとは
+思うですが。
+
+on 05/27/05 18:14, takuya@computer.org wrote:
+
+> 現在、参加コミュニティ(セミナー、展示)を募集しています。Squeak-jpは、
+> 参加されますか?
+> 本当は「僕が発表します」なんて言えると良いのですが、まだまだ他人様に
+> Squeakを解説できるレベルでは無いので、こんな尻つぼみな書き方になってしまっ
+> て、ちょっと情けないです。ごめんなさい。
+
+--
+Masato Sumi
+
+
+From tetha ＠ st.rim.or.jp  Tue May 31 16:16:25 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2458] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+In-Reply-To: <D752B4D6-02AD-43F0-911E-BA7CB387D59F@st.rim.or.jp>
+References: <20050527060651.41CD54357E@1server.aquilax.co.jp>
+	<D752B4D6-02AD-43F0-911E-BA7CB387D59F@st.rim.or.jp>
+Message-ID: <60D24F3A-3CAA-4E5F-A033-7A652AC8FAA4@st.rim.or.jp>
+
+林です。こんにちは。
+
+昨日に続き MacOS X VM 関係の件です。
+リリースノートを見てみたのですが…
+
+バージョン 3.8.7b2 あたりでキーボードイベントの扱いを修正 
+しているようです。
+また、この際に文字コードが UTF-32 に変更されたようです（今 
+は UCS2 を前提）。
+これについては Squeak のイメージの方を修正しないと難しそう 
+です。
+どなたかチャレンジしてみませんか？
+# もしくは、これはプラットフォームをまたがって共通化する伏線なの 
+かな？
+
+またファイル周りに関しても、ターミナルからコマンドで起動できるよ 
+うにした
+際に若干、手が入ってるようです。ただ、これは当初の問題とはちょっ 
+と関係無
+いかもしれません。
+
+なお、上記リリースノートにもメモがありますが、3.8 シリーズ 
+はまだまだ安定
+してない印象です。
+ファイル名に関する実験は、source forge に残された  
+3.7.5b3 を使った方が、
+いいのかもしれません。
+
+では。
+
+On 2005/05/30, at 23:17, Tetsuya HAYASHI wrote:
+
+> 林です。どうも。
+>
+> On 2005/05/27, at 15:06, Kouji takahashi wrote:
+>
+>
+>> 高橋@池袋です。 VMMakingの進捗状況などの報告です。
+>>
+>
+> お疲れさまです。
+>
+>
+>> ビルドしたVMで日本語imageが動作するところまできたの
+>> ですが、漢字を含むファイルはfilenameが''になりま 
+>> す。
+>>
+>> John M McIntoshさんのVMでも同様です。
+>>
+>> うちのMacOSが余計なお世話をしているのかな？
+>> 何かのヒントありませんか？
+>>
+>
+> ソースの方は追いかけてないので、はっきりと言えないのですが。
+> JMM さんの以下のサイト
+>
+>     http://homepage.mac.com/johnmci/FileSharing.html
+>
+> にアップロードされてる VM (Squeak 3.8.8beta2.app.sit) を 
+> ダウン
+> ロードし、「パッケージの内容を表示」で Info.plist の  
+> encoding
+> の値を UTF-8 に書き換えて試してみました。
+>
+> 結果は、やはり同様にファイル名のハンドリングに失敗しました。
+> なお、悪いことに日本語の入力もできませんでした。
+>
+> キーボードイベント周りも見てみる必要がありそうです。
+>
+> # 果たして、これが 64bit 化の問題なのかどうか？
+> # もしかしたら、少しバージョンが巻き戻っていそうな予感もします。
+> # 一時期、MacRoman コーディングの関係で日本語の入力が出 
+> 来なく
+> # なったバージョンがあったような覚えがあります。
+
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From takuya ＠ computer.org  Tue May 31 22:42:20 2005
+From: takuya ＠ computer.org (Takuya Kamada)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2459] Re: OSC2005/Hokkaido
+In-Reply-To: <BEC1FC38.33270%sumi@seagreen.ocn.ne.jp>
+References: <20050527180214.0646.TAKUYA@computer.org>
+	<BEC1FC38.33270%sumi@seagreen.ocn.ne.jp>
+Message-ID: <20050531222836.69AC.TAKUYA@computer.org>
+
+  蒲田です。おおしまさん、鷲見さん、お返事ありがとうございます。
+
+--- おおしまさん ------------------------
+>   返事が遅くなってしまってすみません。
+--- 鷲見さん ----------------------------
+> ぼーとしてうっかり見過ごしていました(^_^;)。ごめんなさい。＞蒲田さん
+  どういたしまして。お忙しい中、気にかけていただけて、嬉しいです。今後と
+も、よろしくお願いします。
+
+--- 鷲見さん ----------------------------
+> 蒲田さんか、あるいは他のどなたかの旗振りをいただけるということであれば、
+> オーソドックスな Squeak 紹介や簡単なレクチャー（無難なところで eToys）など
+> の担当は可能ですので、そんな程度の寄与でよければお気軽にお申し付けください。
+  僕は、ぜひお話、聞ければなぁと思います。お忙しいのに、わがままなお願い
+かしらん...。
+  「会場を確認して」「何を準備して」「印刷して」とか言っていただければ、
+準備隊として動けます。当日、展示があるなら、留守番もOKです。
+
+> 大仰にせず展示などは適当にして（ぉぃ）、これを機に集まるだけでも楽しいとは
+> 思うですが。
+  OSC-Doの主催者も「集まって楽しもう」が、基本にあるようですので、集まっ
+てわいわいやってるだけで、喜んでもらえると思うです。
+
+-- Community Info. -----------------------------------------------------
+Tech-Ezo  : 次回はWikiかSNS。もしかしたらCMS。詳細 http://tech-ezo.jp
+CLR/H     : 次回は6月4日。詳細は、http://mixi.jp/view_event.pl?id=820558
+OSC2005-Do: 7月9日(土)@北大クラ館:現在、参加コミュニティ募集中↓
+          : http://www.ospn.jp:16080/osc2005/wiki/index.php?OSC2005-Do
+-- Takuya Kamada -------------------------------- takuya@computer.org ---
+自宅 〒069-1454(郵便物は〒だけでOK) Tel.(0123)82-6103:/Fax.(0204)669-9411
+------------------------ http://www.mucleus.jp/etc/profile/index.html ---
+
+

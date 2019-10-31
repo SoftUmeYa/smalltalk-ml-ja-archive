@@ -1,0 +1,112 @@
+From nisinaka ＠ sra.co.jp  Fri Jul  6 15:01:10 2007
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7308] [ANNOUNCE] Jun for Java (Jun668)
+Message-ID: <20070706150004.5D1D.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン668を公開します。
+
+  バージョン662からの主な変更点は、以下の通りです。
+
+    * (new feature) Jun2dPolyline/Jun3dPolyline を Jun682 相当に
+      更新しました。メソッド 'subdivideAsSpline()' は、ポリライン
+      をスプラインに変換します。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/Polyline.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/Spline.png
+
+    * (new feature) パッケージ 'jp.co.sra.jun.geometry.solid' に
+      は、典型的な形状を表現するためのクラス群が含まれています。
+
+    * (new feature) パッケージ 'jp.co.sra.jun.geometry.boxtree' 
+      には、オブジェクトの境界箱を取得するためのクラス群が含まれ
+      ています。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/2DBoundingBoxTree.gif
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/3DBoundingBoxTree.gif
+
+    * (new feature) JunDiscreteFourierTransformation は、離散フー
+      リエ変換(Discrete Fourier Transform)を計算するクラスです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/668/DiscreteFourierTransformation.png
+
+    * (new feature) JunFormTriangulation1 とJunFormTriangulation3 
+      を実装しました。これらは共に三角形分割を行うためのクラスで
+      すが、それぞれ異なるアルゴリズムを用いて実装しています。
+
+    * (bug fix) Jun2dDelaunaryProcessor の例題が動かなくなってい
+      たバグを修正しました。
+
+    * (new feature) Jun2dTriangles/Jun3dTriangles は、三角形の集
+      合を扱うためのクラスです。
+
+    * (new feature) Jun2dBoundingBalls/Jun3dBoundingBalls は、オ
+      ブジェクトの境界を円または球として取得するためのクラスです。
+
+    * (incompatibility) JunBoundingObjects、JunBoundingBoxes、お
+      よびそのサブクラス群を、パッケージ
+      'jp.co.sra.jun.geometry.pluralities' に移動しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From m-asada ＠ sra.co.jp  Fri Jul  6 17:32:47 2007
+From: m-asada ＠ sra.co.jp (Mitsuhiro Asada)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7309] [ANNOUNCE] ImageSearcher for Java 031
+Message-ID: <20070706173046.2D2F.M-ASADA@sra.co.jp>
+
+浅田です。
+
+「イメージサーチャ for Java（イメージサーチャ for Web）」のバージョン
+031を公開します。
+
+    http://www.sra.co.jp/people/m-asada/Isr4Java/
+    ftp://ftp.sra.co.jp/pub/lang/java/isr4java/
+
+イメージサーチャは、ファイル名やカテゴリ名などの名前やキーワードに頼ら
+ずに、目的の画像を捜し出すプログラムです。特徴的な色(typical color)、平
+均明度(average luminance)、9つの色(nine colors)、広がり(image extent)、
+スペクトル中心(center spectra)、手書き画像(freehand image)などを指定す
+ることにより、画像自身が持っている属性を手掛かりとして、目的の画像を絞
+り込み検索します。
+
+バージョン030からの主な変更点は、以下の通りです。
+
+  ・StSortedCollectionを非推奨クラスとし、その代わりにTreeSet/TreeMapや、
+    Arrays/Collectionを用いることにしました。
+
+______________________________________________________________________
+Mitsuhiro Asada
+
+
+From tyson ＠ tuba.ocn.ne.jp  Sat Jul 21 23:14:50 2007
+From: tyson ＠ tuba.ocn.ne.jp (Iwasaki)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7310] よろしくお願いします
+Message-ID: <20070721141441.8C2C034011@mv-osn-hcb003.ocn.ad.jp>
+
+はじめまして。
+岩崎と申します。
+
+最近Cincom Smalltalkの個人用開発ライセンスを購入しました。
+趣味でやってます。
+全くの初心者で、現在初歩の勉強中です。
+よろしくお願いいたします。
+
+
+

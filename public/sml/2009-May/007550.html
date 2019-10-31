@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7550] Re: オーバロードはポリモフィズムか?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207550%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUqITwlUCVtITwlSSRPJV0bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolYiVVJSMlOiVgJCsbKEI/%3F%3D&In-Reply-To=20090503.072325.207585970.tscompor%40gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007535.html">
+   <LINK REL="Next"  HREF="007536.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7550] Re: オーバロードはポリモフィズムか?</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207550%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUqITwlUCVtITwlSSRPJV0bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolYiVVJSMlOiVgJCsbKEI/%3F%3D&In-Reply-To=20090503.072325.207585970.tscompor%40gmail.com"
+       TITLE="[SML 7550] Re: オーバロードはポリモフィズムか?">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 5月 16日 (土) 19:29:59 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007535.html">[SML 7535] Re: オーバロードはポリモフィズムか?
+</A></li>
+        <LI>次の記事 <A HREF="007536.html">[SML 7536] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7550">[ 日付 ]</a>
+              <a href="thread.html#7550">[ スレッド ]</a>
+              <a href="subject.html#7550">[ 件名 ]</a>
+              <a href="author.html#7550">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>子どもの日に書き下ろしていたのですが、ポストをためらっており
+ました。すいぶんと経ってしまいましたが、ポストします。今ちょ
+うど才川さんと私信でやり取りをしているところですしね。多数死
+は隠蔽されがちだから。
+
+-------- Original Message --------
+Subject: Re: [SML 7535] Re: オーバロードはポリモフィズムか?
+Date: Tue, 05 May 2009 16:25:23 +0900
+From: AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;
+To: Smalltalkers' Salon Mailing List &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sml ＠ smalltalk.jp</A>&gt;
+
+Takafumi Saikawa さんは書きました:
+&gt;<i> Smalltalkの多形には
+</I>&gt;<i> overloadingとinclusionが混在していると考えられますが如何でしょうか。
+</I>
+はい、そのように取ることもできますね。Cardelli さんと Wegner
+さんの書いたものをすえても、分けるのは難しいものがありますよ。
+
+Smalltalkの場合、メッセージセレクタ（文字へのポインタ）とコン
+パイルドメソッド（関数へのポインタ）の束縛を抱えた辞書のひき
+方（メソッドサーチ法）が一つ（単数）なのに、それを無理矢理に
+局面で分け、三つ四つ（複数）にしているような感じも受けます。
+それこそ、まさにポリモァ（多形）です。:-)
+
+調査論文なので、文献学的というか、大した歴史もないのに歴史学
+的でしょ。彼らの論文に基づく限りにおいては、書かれたものの範
+疇から逸脱できないようにも思えます。プログラムも書かれたもの
+ですし…。
+
+# 多分に権威的に語られた事実っぽい（ディクタなのにファクタに
+# してしまっている）ところもありますので、気をつけて。:-)
+
+観察しているプログラム（1985年当時に見ることができたMesa/Ada
+/Modula/ML/CLU/Smalltalkなどで書かれたもの）たちの調査分類よ
+りも、自分の目の前でボツになって（村八分にして殺して）ゆくプ
+ログラムの中に散見できた多形（多相）もどき（成り損ないや危う
+い思考）のほうが、より多くを教えてくれるように思います。多数
+死は隠蔽されがちなので。
+
+# 調査論文はダメだと言っているのはありませんよ。確かに論文を
+# 読んでもプログラミングは上手くなりませんけどね。:-)
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007535.html">[SML 7535] Re: オーバロードはポリモフィズムか?
+</A></li>
+	<LI>次の記事 <A HREF="007536.html">[SML 7536] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7550">[ 日付 ]</a>
+              <a href="thread.html#7550">[ スレッド ]</a>
+              <a href="subject.html#7550">[ 件名 ]</a>
+              <a href="author.html#7550">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

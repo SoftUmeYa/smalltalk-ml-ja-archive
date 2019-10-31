@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7386] プログラム集
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207386%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclbSUwJWklYD04GyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007385.html">
+   <LINK REL="Next"  HREF="007387.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7386] プログラム集</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207386%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclbSUwJWklYD04GyhC%3F%3D&In-Reply-To="
+       TITLE="[SML 7386] プログラム集">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2008年 9月  9日 (火) 08:41:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007385.html">[SML 7385] ワークショップ＠近江八幡
+</A></li>
+        <LI>次の記事 <A HREF="007387.html">[SML 7387] 第1回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7386">[ 日付 ]</a>
+              <a href="thread.html#7386">[ スレッド ]</a>
+              <a href="subject.html#7386">[ 件名 ]</a>
+              <a href="author.html#7386">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠京都産業大学です。
+
+拙著「ブラックブック」に収録できなかったものを「プログラム集」
+としてまとめて公開しています。
+
+<A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/">http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/</A>
+
+昨日にアップロードしたものは、ソースコードからバイトコードを
+作り出す過程を、字句解析・構文解析・コード生成・最適化の４つ
+のフェーズに大別して、サンプルプログラムにしたものです。
+
+VisualWorks 7.6 ＋ Jun770 で動かしていますが、ブラックブック
+の付録である VisualWork 7.5 ＋ Jun760 でも動かすことができま
+す。以下にその方法を書きます。
+
+まず、プログラムスキャナのプログラムを読み込みます。第７章の
+「より深いプログラミング」の第２節「本格的な文法」の「プログ
+ラムスキャナ」のところに記したプログラムです。
+
+|<i> aFilename aString aURL |
+</I>aFilename := 'Foo-ProgramScanner.st' asFilename.
+aString := '<A HREF="http://www.sra.co.jp/people/aoki/SmalltalkBook/sts/'">http://www.sra.co.jp/people/aoki/SmalltalkBook/sts/'</A>
+            , aFilename asString.
+aURL := JunURL named: aString.
+aURL exists ifFalse: [^nil].
+aURL downloadTo: aFilename.
+aFilename exists ifFalse: [^nil].
+^aFilename fileIn
+
+正常に読み込んだら、構文解析のプログラム中の「JunParseTree」
+を「FooProgramScanner」に変更します。
+
+|<i> sourceCodeString methodNodeHolder parseTree |
+</I>sourceCodeString := '
+            | a b c d |
+            a := 10.
+            b := 20.
+            c := 30.
+            d := a + (b * c).
+            ^d
+        '.
+methodNodeHolder := Compiler new
+    parseNoPattern: sourceCodeString readStream
+    in: Object
+    notifying: nil.
+&quot;parseTree := JunParseTree&quot;
+parseTree := FooProgramScanner
+    node: methodNodeHolder node
+    class: Object
+    code: sourceCodeString.
+parseTree show.
+^parseTree
+
+これで、きちんと動くと思います。いっそのこと次のプログラムで
+「Jun760」から「Jun770」へアップグレードするのもいいかもです。
+
+JunSystem downloadAndUpgradeJunFrom: '<A HREF="http://www.sra.co.jp/people/aoki/SmalltalkBook/gzs/Jun.tar.gz'">http://www.sra.co.jp/people/aoki/SmalltalkBook/gzs/Jun.tar.gz'</A>
+
+以上です。ＳＭＬに参加されている皆さんの日々のプログラミング
+の参考にしていただける幸いです。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007385.html">[SML 7385] ワークショップ＠近江八幡
+</A></li>
+	<LI>次の記事 <A HREF="007387.html">[SML 7387] 第1回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7386">[ 日付 ]</a>
+              <a href="thread.html#7386">[ スレッド ]</a>
+              <a href="subject.html#7386">[ 件名 ]</a>
+              <a href="author.html#7386">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

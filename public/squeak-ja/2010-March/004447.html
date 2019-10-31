@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4447] Re: drawOn中のエラーについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204447%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGRyYXdPbhskQkNmJE4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSglaSE8JEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=umxy018r7.wl%25yoshiki%40vpri.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004446.html">
+   <LINK REL="Next"  HREF="004448.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4447] Re: drawOn中のエラーについて</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204447%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IGRyYXdPbhskQkNmJE4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSglaSE8JEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=umxy018r7.wl%25yoshiki%40vpri.org"
+       TITLE="[Squeak-ja: 4447] Re: drawOn中のエラーについて">itoh-private ＠ itolab.com
+       </A><BR>
+    <I>2010年 3月 23日 (火) 08:26:56 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004446.html">[Squeak-ja: 4446] Re: drawOn中のエラーについて
+</A></li>
+        <LI>次の記事 <A HREF="004448.html">[Squeak-ja: 4448] 【ご案内】米国タフツ大学の研究者を招いてのSTEMカンファレンスのご案内
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4447">[ 日付 ]</a>
+              <a href="thread.html#4447">[ スレッド ]</a>
+              <a href="subject.html#4447">[ 件名 ]</a>
+              <a href="author.html#4447">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>伊藤です。
+
+大島さん、阿部さん、こんにちは。
+さっそくアドバイスいただき、ありがとうございます。
+
+&gt;&gt;<i> どなたか回避策をお持ちの方はいらっしゃいませんでしょうか。
+</I>&gt;&gt;<i> また、赤いエラー画面を解除する方法ってないのでしょうか。
+</I>&gt;<i>   このエラーは、Processを使っていたりして、Morphicの通常のサイクルとは
+</I>&gt;<i> 独立して描画要求が起こったときに出るものだと思います。そのMorphへの更新
+</I>&gt;<i> 要求をしているところを、直接行うのではなく#addDeferredUIMessage:経由で
+</I>&gt;<i> 行うと直るかもしれません。
+</I>　まさにおっしゃる通りでした。ネットワーク経由のメッセージを別プロセス
+で受け取っていました。ネタをばらすと、ロボット上で動かしているLittleSmalltak
+のコマンド送受信に使っており、エラーの際の受信メッセージの多いときに発生して
+いたので何か変だなと思っていました。addDeferredUIMessageの使い方もわかって
+大変勉強になりました。
+
+&gt;<i>  赤いエラー画面は、ハロのデバッグメニューから&quot;start drawing again&quot;を
+</I>&gt;<i> 選ぶと解除できます。
+</I>　こちらも大変たすかります。このときに使うメニューなんですね。
+
+お忙しいところ本当にありがとうございました。
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004446.html">[Squeak-ja: 4446] Re: drawOn中のエラーについて
+</A></li>
+	<LI>次の記事 <A HREF="004448.html">[Squeak-ja: 4448] 【ご案内】米国タフツ大学の研究者を招いてのSTEMカンファレンスのご案内
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4447">[ 日付 ]</a>
+              <a href="thread.html#4447">[ スレッド ]</a>
+              <a href="subject.html#4447">[ 件名 ]</a>
+              <a href="author.html#4447">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

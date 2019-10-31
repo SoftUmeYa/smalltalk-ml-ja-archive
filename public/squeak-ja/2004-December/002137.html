@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2137] Re: Mac版一式アーカイブについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202137%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYxskQkhHMGw8MCUiGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyUkJVYkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=6FE23F69-51BB-11D9-8AB2-000D934724F6%40st.rim.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002136.html">
+   <LINK REL="Next"  HREF="002192.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2137] Re: Mac版一式アーカイブについて</H1>
+    <B>HAYASHI, Tetsuya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202137%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYxskQkhHMGw8MCUiGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyUkJVYkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=6FE23F69-51BB-11D9-8AB2-000D934724F6%40st.rim.or.jp"
+       TITLE="[Squeak-ja: 2137] Re: Mac版一式アーカイブについて">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2004年 12月 20日 (月) 12:18:36 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002136.html">[Squeak-ja: 2136] Re: Mac版一式アーカイブについて
+</A></li>
+        <LI>次の記事 <A HREF="002192.html">[Squeak-ja: 2192] Re: Mac版一式アーカイブについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2137">[ 日付 ]</a>
+              <a href="thread.html#2137">[ スレッド ]</a>
+              <a href="subject.html#2137">[ 件名 ]</a>
+              <a href="author.html#2137">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>みなさん、こんにちは。
+林徹也です。
+自己レスでまとめリプライ失礼しますです。m(__)m
+
+kazuya さん、鷲見さん、秋山さん。
+さっそく試していただきましてありがとうございます。
+（この他、親松さんからも連絡いただいてます）
+
+On 2004/12/19, at 22:47, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">vef03715 ＠ nifty.com</A> wrote:
+
+&gt;<i> どうも、kazuya です。ご無沙汰してます。
+</I>&gt;<i>
+</I>&gt;<i> 以前は、BeOS で最新版Squeak を試みましたが、あえなく挫折・・・
+</I>
+　今度は是非 Zeta（でしたっけ？）でチャレンジされてみては…
+
+&gt;<i> DL 後、自動解凍されて、SueakNihongo6.1 のフォルダができました。
+</I>&gt;<i> ざっと試してみましたが、問題無く動作しております。
+</I>&gt;<i> VM とimage の一式がパッケージされているのは、初心者にはイイですね。
+</I>
+　私は、VM と image が「分かれててもいいかな」と思ってたのですが、
+確かに一緒になってた方が、扱いが簡単ですよね。
+
+On 2004/12/19, at 23:06, Masato Sumi wrote:
+
+&gt;<i> OS 9 / Mozilla 1.3.1 で DL / StuffIt Expander 5.5J で展開
+</I>&gt;<i> OS X / Safari / StuffIt Expander 7.0.3J
+</I>&gt;<i>
+</I>&gt;<i> で問題なく展開でき動作することが確認できました。
+</I>
+　鷲見さん、OS9 での確認ありがとうございます。
+
+On 2004/12/20, at 10:29, Tomoaki Akiyama wrote:
+&gt;<i> Squeakが起動しました。ちなみにSqueakV3.sourcesのタイムスタンプが2040年
+</I>&gt;<i> 2月5日になってますけど、意図的にこうしているのでしょうか？
+</I>
+う〜ん。気付きませんでした。
+今回、開発版の方から SqueakV3.sources を持って来たのですが、こちらです
+でに日付がおかしくなってるみたいです。
+
+<A HREF="http://squeak.org/download/">http://squeak.org/download/</A>
+の
+<A HREF="ftp://st.cs.uiuc.edu/pub/Smalltalk/Squeak/3.7/mac/Squeak3.7-current-">ftp://st.cs.uiuc.edu/pub/Smalltalk/Squeak/3.7/mac/Squeak3.7-current-</A> 
+MacOS-Full.sit
+
+新しすぎるから？とも思い、遡ってみてみたのですが、すでにバージョン3.4
+辺りから、どっかで、日付情報を落っことしてしまってるようです（POSIX 的
+には 1904/1/1 に見える）。
+果たして、理由があるのかはちょっと分からないのですが、動作上は問題無い
+はずだと思うのですけど、ファイルの取扱上トラブルの素になるかもしれませ
+ん。
+　Windows 版のものと共通にしましょうか。
+
+あと、ふと気付いたのですが（話題を混ぜてしまってすみません）。
+From: 	  <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee.abe ＠ nifty.ne.jp</A>
+Subject: 	[Squeak-ja: 2037] Re: テキストフォントと日本語
+Date: 	2004年12月7日 5:08:14:JST
+Message-Id: 	&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">41B4BC2E33A.7F3AABEE.ABE ＠ smtp.nifty.com</A>&gt;
+で話題になっていたパッチをすでに組込んでいた方がいいでしょうか？
+（逆に混乱の元ですかね）
+
+他のプラットホームの方々のご意見をお聞きした方がいいかもしれませんです
+ね。
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002136.html">[Squeak-ja: 2136] Re: Mac版一式アーカイブについて
+</A></li>
+	<LI>次の記事 <A HREF="002192.html">[Squeak-ja: 2192] Re: Mac版一式アーカイブについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2137">[ 日付 ]</a>
+              <a href="thread.html#2137">[ スレッド ]</a>
+              <a href="subject.html#2137">[ 件名 ]</a>
+              <a href="author.html#2137">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

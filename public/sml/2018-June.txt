@@ -1,0 +1,122 @@
+From serge.stinckwich ＠ gmail.com  Mon Jun  4 19:08:31 2018
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Mon, 4 Jun 2018 11:08:31 +0100
+Subject: [SML 8191] Pharo MOOC
+Message-ID: <CAOysuxUMoGFwhY-RHkSxgmdVsyRjisFR8Zc6RChNwXuGuRPMrg@mail.gmail.com>
+
+Hi,
+the third session of the Pharo MOOC will start again October 8th, 2018.
+
+You can freely register from now on the following web site:
+https://www.fun-mooc.fr/courses/course-v1:inria+41010+session03/about?
+
+?Regards,?
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (SU/IRD/UY1)
+"Programs must be written for people to read, and only incidentally for
+machines to execute."http://www.doesnotunderstand.org/
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20180604/f9491a4c/attachment.html>
+
+From serge.stinckwich ＠ gmail.com  Mon Jun  4 19:20:36 2018
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Mon, 4 Jun 2018 11:20:36 +0100
+Subject: [SML 8192] Re: Pharo MOOC
+In-Reply-To: <CAOysuxUMoGFwhY-RHkSxgmdVsyRjisFR8Zc6RChNwXuGuRPMrg@mail.gmail.com>
+References: <CAOysuxUMoGFwhY-RHkSxgmdVsyRjisFR8Zc6RChNwXuGuRPMrg@mail.gmail.com>
+Message-ID: <CAOysuxVmWhWO2HqPqAzAdhky0ydpeUX93rKf-98uyzUfAHNKcA@mail.gmail.com>
+
+BTW, this year the MOOC will be subtitled in Japanese thanks to
+Tomohiro-san.
+
+
+
+On Mon, Jun 4, 2018 at 11:08 AM Serge Stinckwich <serge.stinckwich ＠ gmail.com>
+wrote:
+
+> Hi,
+> the third session of the Pharo MOOC will start again October 8th, 2018.
+>
+> You can freely register from now on the following web site:
+> https://www.fun-mooc.fr/courses/course-v1:inria+41010+session03/about?
+>
+> ?Regards,?
+> --
+> Serge Stinckwich
+> UMI UMMISCO 209 (SU/IRD/UY1)
+> "Programs must be written for people to read, and only incidentally for
+> machines to execute."http://www.doesnotunderstand.org/
+>
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (SU/IRD/UY1)
+"Programs must be written for people to read, and only incidentally for
+machines to execute."http://www.doesnotunderstand.org/
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20180604/ef8a0b88/attachment.html>
+
+From ume ＠ softumeya.com  Sat Jun 16 00:14:14 2018
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Sat, 16 Jun 2018 00:14:14 +0900
+Subject: [SML 8193]
+	第113回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdQHONx8hmvA83BSsE1Y-K5WiJiinjyFXBcsAahscJB3XQ@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai113kaismalltalkbenkyoukai
+
+日時: 2018/6/26(火) 19:00-21:00
+場所: SORABITO株式会社
+
+今回は「Pharoで3D」。小田さんの発表です。
+最新の3DライブラリであるWoden 2の紹介です。
+
+事前の申し込みは不要です。ふらりとどうぞ。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From serge.stinckwich ＠ gmail.com  Wed Jun 27 22:10:32 2018
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 27 Jun 2018 14:10:32 +0100
+Subject: [SML 8194] [ANN] PolyMath release 0.101
+Message-ID: <CAOysuxUH2ouL9xNoW+aJjptCjKxgaPWkYDeNntO_H7Sxz4=7pQ@mail.gmail.com>
+
+We are pleased to announce the release of PolyMath 0.101
+PolyMath is a numerical computing and data analysis library on top of Pharo.
+
+The code is available here: https://github.com/PolyMathOrg/PolyMath
+and can be loaded in a fresh Pharo 6.1 image with:
+
+Metacello new
+  repository: 'http://smalltalkhub.com/mc/PolyMath/PolyMath/main';
+  configuration: 'PolyMath';
+  version: '0.101';
+  load
+
+The current work is mostly focused on cleaning the codebase in order to
+release the 1.0 version for September 2018. Please help us, by looking at
+the issues here: https://github.com/PolyMathOrg/PolyMath/issues , joining
+#polymath channel on Discord or polymath mailing-list:
+https://groups.google.com/forum/#!forum/polymath-project
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (SU/IRD/UY1)
+"Programs must be written for people to read, and only incidentally for
+machines to execute."http://www.doesnotunderstand.org/
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20180627/80f8208a/attachment.html>
+

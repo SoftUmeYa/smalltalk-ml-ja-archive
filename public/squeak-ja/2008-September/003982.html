@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3982] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203982%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bBsoQiBzdCA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskTkZmGyhCIChTcXVlYWszLjkuMS1maW5h%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FbC03MDc1Sik%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003980.html">
+   <LINK REL="Next"  HREF="003983.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3982] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203982%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bBsoQiBzdCA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskTkZmGyhCIChTcXVlYWszLjkuMS1maW5h%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FbC03MDc1Sik%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3982] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2008年 9月  5日 (金) 14:31:36 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003980.html">[Squeak-ja: 3980] Scratch 1.3がリリースされました。
+</A></li>
+        <LI>次の記事 <A HREF="003983.html">[Squeak-ja: 3983] 「Seaside へ GO!!」の第二回
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3982">[ 日付 ]</a>
+              <a href="thread.html#3982">[ スレッド ]</a>
+              <a href="subject.html#3982">[ 件名 ]</a>
+              <a href="author.html#3982">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　高橋＠池袋です。
+
+１日頭を冷やして先程見直してみました。
+
+Squeak3.9.1-Final-7075J.image   BMOあり
+SqueakNihongo6.2.image          BOMなし
+
+　新imageからのfileOutには問題有りません。
+旧imageからのfileOutには、classとcategory いずれからも
+BOMは付いていませんでした。
+
+　新imageでは fileOut関連methodがあちこち変更されており
+数行の変更ではダメなようです。
+
+　新image中の以下のmethodが肝のようですね。
+WrieStream Class &gt; file reader service &gt; 
+writeSourceCodeFrom: aStrem baseName: baseName isSt: stOrCsFlg useHtml: useHtml
+
+　このmethodでascii以外の文字の有無を調べてconverterを切替え。
+MacRomanTextConverter　／　UTF8TextConverter
+　UTF8TextConverterが BOM を追加とい流れのようです。
+
+
+　謎が解けました。どうもありがとうございました。
+
+
+At 6:29 AM 08.9.4, Yoshiki Ohshima wrote:
+&gt;<i> At Wed, 3 Sep 2008 10:27:25 +0900,
+</I>&gt;<i> Kouji takahashi wrote:
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 　大島さん、お返事ありがとうございます。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 　DumpしたところBOMは付いていません。（新旧imageいずれのfileOutも）
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 　クラスをfileOutしたstファイルには
+</I>&gt;<i> &gt; ef bb bf (HEX)が 'From Squeak...' の前に付いていますが
+</I>&gt;<i> &gt; クラスカテゴリからのstファイルには 'From Squeak...'ごと
+</I>&gt;<i> &gt; 欠落しています。
+</I>&gt;<i> 
+</I>&gt;<i>   ちょっと用語が混乱してしまっているかもしれませんが、'From Squeak...'
+</I>&gt;<i> はコメントのようなもので、あまり気にしないでよいと思います。ef bb bfが
+</I>&gt;<i> ついていれば大丈夫です。
+</I>&gt;<i> 
+</I>&gt;<i> &gt; 　また別のカテゴリからのstファイルでうまくインストールできた物も
+</I>&gt;<i> &gt; ありました(日本語使用のもの)。
+</I>&gt;<i> 
+</I>&gt;<i>   これはほかの要素が絡んでいるようにおもいますね。
+</I>&gt;<i> 
+</I>&gt;<i> -- Yoshiki
+</I>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003980.html">[Squeak-ja: 3980] Scratch 1.3がリリースされました。
+</A></li>
+	<LI>次の記事 <A HREF="003983.html">[Squeak-ja: 3983] 「Seaside へ GO!!」の第二回
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3982">[ 日付 ]</a>
+              <a href="thread.html#3982">[ スレッド ]</a>
+              <a href="subject.html#3982">[ 件名 ]</a>
+              <a href="author.html#3982">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

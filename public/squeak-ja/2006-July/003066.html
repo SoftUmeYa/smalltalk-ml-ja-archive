@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3066] KJ法のつづき
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203066%5D%20%3D%3Fiso-2022-jp%3Fb%3FS0obJEJLISROJEQkRSQtGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003065.html">
+   <LINK REL="Next"  HREF="003067.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3066] KJ法のつづき</H1>
+    <B>kubo-o</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203066%5D%20%3D%3Fiso-2022-jp%3Fb%3FS0obJEJLISROJEQkRSQtGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3066] KJ法のつづき">kubo-o ＠ mbox.kyoto-inet.or.jp
+       </A><BR>
+    <I>2006年 7月 19日 (水) 21:56:40 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003065.html">[Squeak-ja: 3065] Re: x64 linux上のSqueakVM
+</A></li>
+        <LI>次の記事 <A HREF="003067.html">[Squeak-ja: 3067] Re: KJ法のつづき
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3066">[ 日付 ]</a>
+              <a href="thread.html#3066">[ スレッド ]</a>
+              <a href="subject.html#3066">[ 件名 ]</a>
+              <a href="author.html#3066">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>先日来KJ法に挑戦している者です。
+KJ法で書くカードをPluggableTextMorph（cardと呼んでいます）で作ります。
+cardを出して書き込んで、つまんで画面上で集めます。
+そこで、不要なcardは消したいのですが、その方法がわかりません。
+
+PluggableTextMorphの右上のボタンをクリックして出すlistMenuで
+以下のように２つの動作をさせたいのです。
+一つ目のdeleteはうまくいきます。
+二つ目はcard分類のためにPluggableTextMorphの
+色を変えるためのものです。
+この中で使っている#setColor: は
+PluggableTextMorphのビューワーを出して
+そこで色を変えるという動作のコードを見て知った
+ものですが、うまく動きません。
+どうかよろしくお願い致します。
+
+listMenu: aMenu
+     | differentMenu  |
+	differentMenu _ MenuMorph new.
+	differentMenu
+	　　add: 'deleteCard' target: t2 action: #delete;
+           　　 add: 'cardColor' target: t2 action: #setColor: Color white;
+	^ differentMenu.
+久保　道
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003065.html">[Squeak-ja: 3065] Re: x64 linux上のSqueakVM
+</A></li>
+	<LI>次の記事 <A HREF="003067.html">[Squeak-ja: 3067] Re: KJ法のつづき
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3066">[ 日付 ]</a>
+              <a href="thread.html#3066">[ スレッド ]</a>
+              <a href="subject.html#3066">[ 件名 ]</a>
+              <a href="author.html#3066">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

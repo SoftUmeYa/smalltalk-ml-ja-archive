@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2230] Re: プログラミングの質問です
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202230%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=287073018F1FCC48B871980C94CB156501FEF86D%40tkoexc02.asiapacific.cpqcorp.net">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002228.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2230] Re: プログラミングの質問です</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202230%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=287073018F1FCC48B871980C94CB156501FEF86D%40tkoexc02.asiapacific.cpqcorp.net"
+       TITLE="[Squeak-ja: 2230] Re: プログラミングの質問です">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2004年 12月 31日 (金) 23:19:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002228.html">[Squeak-ja: 2228] Re: プログラミングの質問です
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2230">[ 日付 ]</a>
+              <a href="thread.html#2230">[ スレッド ]</a>
+              <a href="subject.html#2230">[ 件名 ]</a>
+              <a href="author.html#2230">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Fri, 31 Dec 2004 12:15:31 +0900
+&quot;Kondo, Fumito&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">fumito.kondo ＠ hp.com</A>&gt; wrote:
+&gt;<i>ActiveWorldにたくさんのエージェントを乗せて、それぞれが自律的に動くマルチ
+</I>&gt;<i>エージェントのアプリケーションをプログラミングで作りたいと思っていますが、
+</I>&gt;<i>こういうことをするには、Agentというクラスを作り、ActiveWorldで動く各々の
+</I>&gt;<i>エージェント画像は、インスタンスとして作るとすると、その際に、 drawOn:メ
+</I>&gt;<i>ソッドにaCanvasという引数を書いて、Work Spaceでクラス new openInWorldを　
+</I>&gt;<i>“do it”するという方法で出来るのでしょうか？
+</I>
+基本的にはこれで動くと思います。
+すでに画像を表示するためのImageMorphというクラスがありますから、 Agentを
+このサブクラスにすることもできます。
+その場合は、drawOn:を再定義をするのではなく、インスタンス毎にインスタンス
+変数imageの中身を変えるメソッドを書くことになります。
+
+&gt;<i>　Active Worldで動く、画像のインスタンスをプログラム上では、どのように扱
+</I>&gt;<i>えばいいのか分かりません。梅沢さんの本では、画像がひとつなので、selfにメ
+</I>&gt;<i>ソッドを送れば、操作できるようになっていますが、複数の画像エージェントを
+</I>&gt;<i>扱いたい場合、どのようにようにすればよろしいでしょうか？
+</I>
+複数の画像エージェントを管理するためのクラスを作ることが多いと思います。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee.abe ＠ nifty.ne.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002228.html">[Squeak-ja: 2228] Re: プログラミングの質問です
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2230">[ 日付 ]</a>
+              <a href="thread.html#2230">[ スレッド ]</a>
+              <a href="subject.html#2230">[ 件名 ]</a>
+              <a href="author.html#2230">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

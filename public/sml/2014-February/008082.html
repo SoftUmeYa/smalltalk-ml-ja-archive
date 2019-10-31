@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8082] Re:	Real World Objectsの続きをブログに書きました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208082%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FUmVhbCBXb3JsZCBPYmplY3RzGyRCJE5CMyQtJHIbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYlbSUwJEs9cSQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=%3CCADoqC%2BYjpwQXpxKTUSaYiwjDtztfScdDw9vY_Dygmn0Lw%3D8fcA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008081.html">
+   <LINK REL="Next"  HREF="008083.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8082] Re:	Real World Objectsの続きをブログに書きました</H1>
+    <B>Minori Yamashita</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208082%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FUmVhbCBXb3JsZCBPYmplY3RzGyRCJE5CMyQtJHIbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYlbSUwJEs9cSQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=%3CCADoqC%2BYjpwQXpxKTUSaYiwjDtztfScdDw9vY_Dygmn0Lw%3D8fcA%40mail.gmail.com%3E"
+       TITLE="[SML 8082] Re:	Real World Objectsの続きをブログに書きました">ympbyc ＠ gmail.com
+       </A><BR>
+    <I>2014年 2月  4日 (火) 21:46:39 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008081.html">[SML 8081] Re: Real World Objectsの続きをブログに書きました
+</A></li>
+        <LI>次の記事 <A HREF="008083.html">[SML 8083] Re:	Real World Objectsの続きをブログに書きました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8082">[ 日付 ]</a>
+              <a href="thread.html#8082">[ スレッド ]</a>
+              <a href="subject.html#8082">[ 件名 ]</a>
+              <a href="author.html#8082">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おださん
+
+読んで頂いて感想まで頂きありがとうございます。
+
+&gt;<i> HoneyGingerでは粒子の動きを流体力学でシミュレーションしますが、
+</I>&gt;<i> 近隣の粒子同士がお互いに参照し合って直接力を与え合ったりするのではなく、
+</I>&gt;<i> 基本的に「物理法則」が各粒子に動きを与え、
+</I>&gt;<i> その結果として粒子は「進んでいく波」や「流れの中と外」のような
+</I>&gt;<i> 構造的なものがあるかのように振る舞います。
+</I>
+HoneyGingerってそういう仕組みになってたんですね！この宇宙で机が机の形をしていられるのは素粒子の相互作用によるものだと思うので、物理法則によって粒子の集合がまるで構造物のように振る舞うというのは現実に即したモデルだと思いました。
+僕の記事でつらつら書いたアイディアは頭で考えただけで実装をまったく伴っていないので、HoneyGingerのコードを読んだら大変参考になりそうだと思います。
+
+HoneyGingerについてのメンションありがとうございます！
+
+
+
+2014-02-03 Tomohiro Oda &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">tomohiro ＠ sra.co.jp</A>&gt;:
+
+&gt;<i> おだです。
+</I>&gt;<i>
+</I>&gt;<i> 山下さんの話はSmalltalk勉強会でのビアバッシュでも楽しく拝聴させてもらいました。
+</I>&gt;<i> エッセイのほうも、さっそく読ませてもらいました。
+</I>&gt;<i>
+</I>&gt;<i> &gt; つまり僕らの知性は物が複雑な形に積み上がった構造物から発生したんだ。
+</I>&gt;<i> &gt; 特定の粒子の配置に物理法則を適用するとオブジェクトができるみたいな
+</I>&gt;<i> &gt; 環境が近いかもしれない。
+</I>&gt;<i>
+</I>&gt;<i> ツイッターにも書かせてもらいましたが、こちらにはちょっと長いバージョンを書きます。
+</I>&gt;<i>
+</I>&gt;<i> 実は、「特定の粒子の配置に物理法則を適用するとオブジェクトができる」は
+</I>&gt;<i> 私がHoneyGingerで追いかけているテーマでもあります。
+</I>&gt;<i> HoneyGingerでは粒子の動きを流体力学でシミュレーションしますが、
+</I>&gt;<i> 近隣の粒子同士がお互いに参照し合って直接力を与え合ったりするのではなく、
+</I>&gt;<i> 基本的に「物理法則」が各粒子に動きを与え、
+</I>&gt;<i> その結果として粒子は「進んでいく波」や「流れの中と外」のような
+</I>&gt;<i> 構造的なものがあるかのように振る舞います。
+</I>&gt;<i>
+</I>&gt;<i> それは既存のGUIが固定された構造を持っていることへのアンチテーゼです。
+</I>&gt;<i> ウィンドウオブジェクトの上にペーンオブジェクトが乗っていて、
+</I>&gt;<i> ペーンオブジェクトの上にテキストとボタンが乗っている、
+</I>&gt;<i> ボタンを押したら、ウィンドウにcloseメッセージを投げる、
+</I>&gt;<i> ウィンドウは閉じる時にペーンオブジェクトやボタンを片付ける、
+</I>&gt;<i> みたいな構造。これがイヤでHoneyGingerを作り始めました。
+</I>&gt;<i> ＃皮肉なことに、上記GUIの構造はSmalltalkが作ってきたものですが。
+</I>&gt;<i>
+</I>&gt;<i> たぶん、宇宙には構造なんてありません。
+</I>&gt;<i> 人間の脳みそが、現実を理解するために導入した人工的な概念に過ぎないと思います。
+</I>&gt;<i> オブジェクトも本来は他から構造を与えられるのではなく、
+</I>&gt;<i> 振る舞いの結果として構造があるかのように見える、あるいは
+</I>&gt;<i> 振る舞いの説明として構造という概念を導入するとわかりやすい、
+</I>&gt;<i> というものだと思っています。
+</I>&gt;<i>
+</I>&gt;<i> ということを、山下さんのエッセイからの引用部分を読んで思い出しました。
+</I>&gt;<i> ---
+</I>&gt;<i> おだ
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 2014/02/04 0:00、Minori Yamashita &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">ympbyc ＠ gmail.com</A>&gt; のメール：
+</I>&gt;<i>
+</I>&gt;<i> &gt; SMLのみなさん初めまして。勉強会でお会いした皆さんご無沙汰してます。
+</I>&gt;<i> &gt; カリフォルニアでしがない大学生をしている山下です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 年末のビアバッシュの時に発表させて頂いたReal World
+</I>&gt;<i> Objectsの続きというか、背景というかをブログに書きました。この宇宙でのオブジェクトについてやその他のことを書きました。一人でも多くの方からツッコミを頂きたいので、誠に勝手ながら、こういう話をして一番面白がってくれそうなSmalltalkerの方々のメーリングリストに流させて頂きます。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 宇宙API Part1:
+</I>&gt;<i> &gt;
+</I>&gt;<i> <A HREF="http://ympbyc.hatenablog.com/entry/2014/02/03/%E5%AE%87%E5%AE%99API_Part1">http://ympbyc.hatenablog.com/entry/2014/02/03/%E5%AE%87%E5%AE%99API_Part1</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; よろしくお願いします。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --
+</I>&gt;<i> &gt; Minori Yamashita &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">ympbyc ＠ gmail.com</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+-- 
+Minori Yamashita &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">ympbyc ＠ gmail.com</A>&gt;
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: &lt;<A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20140204/d4ce0058/attachment.html">http://www.smalltalk.jp/pipermail/sml/attachments/20140204/d4ce0058/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008081.html">[SML 8081] Re: Real World Objectsの続きをブログに書きました
+</A></li>
+	<LI>次の記事 <A HREF="008083.html">[SML 8083] Re:	Real World Objectsの続きをブログに書きました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8082">[ 日付 ]</a>
+              <a href="thread.html#8082">[ スレッド ]</a>
+              <a href="subject.html#8082">[ 件名 ]</a>
+              <a href="author.html#8082">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,88 @@
+From kuwatani ＠ akademia.co.jp  Tue Jul  4 12:13:38 2006
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:50:59 2007
+Subject: [SML 7162] サーバーメンテナンスのお知らせ
+Message-ID: <44A9DCE2.7050802@akademia.co.jp>
+
+SML登録メンバーのみなさま
+
+MLの管理をしています 桑谷 です．
+お世話になります．
+
+この度，下記の日程で弊社サーバーのメンテナンスを行うこととなりました．
+この間，メールを使用できなくなる時間帯がありますが，できる限り
+ご迷惑のかからないよう作業を進めていきますので，ご了承のほど
+よろしくお願いいたします．
+
+                              記
+
+        日時：7月7日(金) 8:00〜11:00
+        場所：ML運用サーバー
+        内容：サーバーのハードウェアメンテナンス
+
+                                                         以上
+-- 
+***************************************
+桑谷 剛史(Tsuyoshi KUWATANI)
+アカデミアシステムズ株式会社
+TEL: 0857-21-2360
+FAX: 0857-21-2362
+URL: http://www.akademia.co.jp/
+E-mail: kuwatani@akademia.co.jp
+〒680-0053 鳥取市寺町50番地 NTT寺町ビル
+***************************************
+
+
+
+
+
+From nisinaka ＠ sra.co.jp  Wed Jul 19 19:22:25 2006
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:00 2007
+Subject: [SML 7163] [ANNOUNCE] Jun for Java (Jun579)
+Message-ID: <20060719192147.AA64.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン579を公開します。
+
+  バージョン568からの主な変更点は、以下の通りです。
+
+    * (new feature) JunOpenGL3dModel にスーパーインポーズのための
+      フレームワークを導入しました。JunOpenGL3dView の Graphics 
+      を用いて、何でも描画することができます。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/579/Superimpose.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/579/Superimpose.mov
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/579/Superimpose.avi
+
+    * (new feature) JunImageBorderDecorator は、任意の画像に枠を
+      付けるためのクラスです。
+
+    * (incompatibility) Jun574 で行われたパッケージのリファクタリ
+      ングを行いました。パッケージ 
+      'jp.co.sra.jun.goodies.images.*' は 
+      'jp.co.sra.jun.goodies.image.*' に改名し、パッケージ 
+      'jp.co.sra.jun.goodies.movie.*' のクラス群は 
+      'jp.co.sra.jun.goodies.movie.framework.*' に移動しました。
+
+    * (modification) JunCartoonMovie を Jun578 相当に更新しました。
+
+    * (modification) JunImagesToMovie を Jun573 相当に更新しまし
+      た。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+

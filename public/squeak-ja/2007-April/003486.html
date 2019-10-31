@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3486] Re: UNIX版 VMでの多言語入力
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203486%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVOSVgbJEJIRxsoQiBWTQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckTkI/OEA4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=ups5pmt5b.wl%25yoshiki%40squeakland.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003485.html">
+   <LINK REL="Next"  HREF="003481.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3486] Re: UNIX版 VMでの多言語入力</H1>
+    <B>Tsutomu Hiroshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203486%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVOSVgbJEJIRxsoQiBWTQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckTkI/OEA4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=ups5pmt5b.wl%25yoshiki%40squeakland.org"
+       TITLE="[Squeak-ja: 3486] Re: UNIX版 VMでの多言語入力">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2007年 4月 30日 (月) 08:24:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003485.html">[Squeak-ja: 3485] Re: UNIX版 VMでの多言語入力
+</A></li>
+        <LI>次の記事 <A HREF="003481.html">[Squeak-ja: 3481] NaturalSmalltalk and ClassCreaser
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3486">[ 日付 ]</a>
+              <a href="thread.html#3486">[ スレッド ]</a>
+              <a href="subject.html#3486">[ 件名 ]</a>
+              <a href="author.html#3486">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>廣島です．
+別のメアドから大島さんにはお送りしましたが，
+あらためて投稿させていただきます．
+
+&gt;&gt;<i> ギリシャ語(ISO Latin-7)の入力には XIM を使うのでしょうか？　
+</I>&gt;&gt;<i> もしかして Latin-1 のような Compose を使うのでしょうか？
+</I>&gt;<i> 
+</I>&gt;<i>   ギリシャ語を入力するには、Control-Shiftを押すとキーボードの
+</I>&gt;<i> モードが切り替わるという話のようでした。切り替
+</I>&gt;<i> えると、xevで見たときワンストロークで(&quot;A&quot;のキーを押すと)、
+</I>&gt;<i> 
+</I>&gt;<i> KeyPress event, serial 29, synthetic NO, window 0x1e00001,
+</I>&gt;<i>     root 0x64, subw 0x0, time 3200328687, (155,64), root:(194,585),
+</I>&gt;<i>     state 0x2010, keycode 38 (keysym 0x7e1, Greek_alpha), same_screen YES,
+</I>&gt;<i>     XLookupString gives 0 bytes: 
+</I>&gt;<i>     XmbLookupString gives 0 bytes: 
+</I>&gt;<i>     XFilterEvent returns: False
+</I>&gt;<i> 
+</I>&gt;<i> というコードがSqueak VMに届くようです。
+</I>&gt;<i> 
+</I>
+xev の結果から推察すると
+Greek_alpha は通常のキャラクタでなく，
+KeySym 扱いのようですね．
+そうだとすると translateCode を通されます．
+
+man XmbLookupString 抜粋：status_return の値
+
+　　　　　XLookupKeySym    A KeySym has been returned instead of a
+                         string and is returned in keysym_return.
+                         The content of the buffer_return argument
+                         is not modified, and the function returns
+                         zero.
+
+sqUnixX11.c:static int x2sqKeyInput(XKeyEvent *xevt)の該当箇所
+
+     case XLookupKeySym:
+#	 if defined(DEBUG_CONV)
+	fprintf(stderr, &quot;x2sqKey XLookupKeySym\n&quot;);
+#	 endif
+	{
+	  int charCode= translateCode(symbolic);
+#	   if defined(DEBUG_CONV)
+	  printf(&quot;SYM %d -&gt; %d\n&quot;, symbolic, charCode);
+#	   endif
+	  if (charCode &lt; 0)
+	    return -1;	/* unknown key */
+	  if ((charCode == 127) &amp;&amp; mapDelBs)
+	    charCode= 8;
+	  return lastKey= charCode;
+	}
+
+
+sqUnixX11.c:static int x2sqKeyPlain(XKeyEvent *xevt)の該当箇所
+
+  if (nConv == 0 &amp;&amp; (charCode= translateCode(symbolic)) &lt; 0)
+    return -1;	/* unknown key */
+
+translateCode では少数のコントロールキー以外は，
+未知のキーとして -1 を返すことになってます．
+
+KeySym の定義を /usr/include/X11/keysymdef.h で調べると，
+0xf???  はコントロールキー，
+0x100?? はアクセントキー，
+0x0???  は文字のキーのようです．
+
+これをふまえて，
+translateCode をしかるべく変更する必要があります．
+ただこのファイルをみる限り，
+KeySym と UNICODE との対応は単純ではなさそうです．
+(perl や　awk で　対応表を抽出する？)
+=================
+廣島　勉
+Tsutomu Hiroshima
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003485.html">[Squeak-ja: 3485] Re: UNIX版 VMでの多言語入力
+</A></li>
+	<LI>次の記事 <A HREF="003481.html">[Squeak-ja: 3481] NaturalSmalltalk and ClassCreaser
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3486">[ 日付 ]</a>
+              <a href="thread.html#3486">[ スレッド ]</a>
+              <a href="subject.html#3486">[ 件名 ]</a>
+              <a href="author.html#3486">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

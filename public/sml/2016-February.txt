@@ -1,0 +1,121 @@
+From serge.stinckwich ＠ gmail.com  Wed Feb 17 05:23:56 2016
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue, 16 Feb 2016 21:23:56 +0100
+Subject: [SML 8145] Fwd: GSOC 2016
+In-Reply-To: <CAOysuxVNj0-bfm43w97Vbg=PcAf0OWudj3K1UBCV176d8w5xQg@mail.gmail.com>
+References: <CAOysuxWF2SSm6LWjY5W-xj+N2OKtTnVS9sxX_vfsL4HCyf86bg@mail.gmail.com>
+ <CAOysuxVNj0-bfm43w97Vbg=PcAf0OWudj3K1UBCV176d8w5xQg@mail.gmail.com>
+Message-ID: <CAOysuxW4nY-YFOXrGD9NSDonMS75Q4obu-tT+19p2k5zp345_g@mail.gmail.com>
+
+---------- Forwarded message ----------
+From: Serge Stinckwich <serge.stinckwich ＠ gmail.com>
+Date: Tue, Feb 16, 2016 at 9:18 PM
+Subject: Fwd: GSOC 2016
+To: Any question about pharo is welcome <pharo-users ＠ lists.pharo.org>,
+Moose-related development <moose-dev ＠ iam.unibe.ch>
+
+
+Dear all,
+
+this is a reminder ! The deadline is Feb 19th 2016.
+
+Uko&Serge, Pharo GSOC 2016 co-administrators
+
+PS: We are looking for more co-administrators to help us finish Pharo
+application.
+Please ask me in PM.
+
+================================================
+
+Dear pharoers,
+
+this year Pharo consortium (and community) is going to take part in the
+Google Summer of Code event[1] as a standalone organization. This is
+an opportunity to promote Pharo, get some job done and have students
+paid.
+
+Currently we are at the most important stage as we are preparing the
+organization application, and hoping that we will be accepted and
+granted decent amount of project slots. Everyone can help with
+application by submitting ideas for student projects.
+
+I reuse the list of the last year :
+https://github.com/pharo-project/pharo-project-proposals/blob/master/Topics.st
+
+It is in STON format, and result will be generated at: http://gsoc.pharo.org/
+
+Please add (or update) your ideas following the format of existing projects and
+open a pull request with them (you will need a github account).
+Preferably submit ideas with possible mentors, but if none are
+available at the moment ideas without mentors are also welcome.
+
+The template to submit projects is :
+
+PharoTopic new
+title: 'The name of your project;
+contact: 'email address';
+supervisors: 'Supervisors names';
+keywords: 'keywords separated by spaces;
+context: 'a description of the context of the project';
+goal: 'description of the goal';
+level: 'Beginner or Intermediate or Advanced';
+yourself.
+
+We will need a lot of projects/idea before February 19th 2016, the
+deadline for applying to GSOC 2016.
+
+Do not hesitate to ask me questions.
+
+If you don't know how to edit the list, please send your project description
+following the template to me.
+
+[1] https://summerofcode.withgoogle.com/
+
+
+--
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://www.doesnotunderstand.org/
+
+From ume ＠ softumeya.com  Wed Feb 17 23:50:46 2016
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 17 Feb 2016 23:50:46 +0900
+Subject: [SML 8146]
+	第85回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdRxnsbe12_K9rjxhC7GGi_j_YXy7+dp_TWk+RKAzgY0tA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2016/2/26(金) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+http://www.smalltalk-users.jp/Home/gao-zhi/dai85kaismalltalkbenkyoukai
+
+今回はCitrineという新言語の紹介です。SmalltalkerでもありRubyコミッタでもある高野さん(@takano32)の解説です。
+
+タイトル:
+「Smalltalk との比較で深まる Citrine の理解」
+
+概要:
+Citrine ( http://citrine-lang.org/ ) は最近開発が盛んなプログラミング言語です。
+Smalltalk の影響を大きく受けた言語として OSDN などのメディアでも取り上げられています(
+https://osdn.jp/magazine/16/02/02/160000 )。
+Smalltalk に影響を受けている部分は多々あるものの、異質な言語として仕上がっています。
+今回の勉強会では Citrine の表面的な特徴について解説した後、内部的な構造についても解説します。
+また、Smalltalk との比較で Citrine の新しい側面をみていきます。
+
+事前申し込みは不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

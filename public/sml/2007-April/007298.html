@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7298] はじめまして &amp; Jun  に関して質問
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207298%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE8kOCRhJF4kNyRGGyhCICYgSnVuICA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEs0WCQ3JEY8QUxkGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007297.html">
+   <LINK REL="Next"  HREF="007299.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7298] はじめまして &amp; Jun  に関して質問</H1>
+    <B>shortsleeved</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207298%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE8kOCRhJF4kNyRGGyhCICYgSnVuICA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEs0WCQ3JEY8QUxkGyhC%3F%3D&In-Reply-To="
+       TITLE="[SML 7298] はじめまして &amp; Jun  に関して質問">shortsleeved ＠ mac.com
+       </A><BR>
+    <I>2007年 4月 18日 (水) 22:11:03 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007297.html">[SML 7297] 無料セミナーの案内
+</A></li>
+        <LI>次の記事 <A HREF="007299.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7298">[ 日付 ]</a>
+              <a href="thread.html#7298">[ スレッド ]</a>
+              <a href="subject.html#7298">[ 件名 ]</a>
+              <a href="author.html#7298">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>はじめまして、佐藤と申します。
+
+最近、Jun for Smalltalk のコードを勉強させていただいていま 
+す。
+早速ですが、ひとつ質問があります。
+Jun740で、以下を do it すると、無限ループしてしまうように 
+みえます。
+
+----
+JunPlane on: 0 , 1 , 1 vertical: (0 , 0 , 0 to: -1 , 0 , 0)
+----
+
+コードを追っていくと、#on:vertical: メソッド中の p3  
+を再計算しいる以下の部分、
+
+-----
+     p3 := thePoint.
+     ((p1 to: p2) isParallelWithLine: (p1 to: p3))
+         ifTrue:
+             [thirdLine := firstLine.
+             threeAxes := Array
+                         with: (0 , 0 , 0 to: 0 , 0 , 1)
+                         with: (0 , 0 , 0 to: 1 , 0 , 0)
+                         with: (0 , 0 , 0 to: 0 , 1 , 0).
+             thirdAxis := threeAxes
+                         detect: [:line | (line to = firstAxis to)  
+not and: [(line to = secondAxis to) not]].
+             aTransformation := Jun3dTransformation translate:  
+thirdAxis to.
+             thePoint := nil.
+             [thePoint isNil or: [thePoint equal: p2]] whileTrue:
+                     [thirdLine := thirdLine transform: aTransformation.
+                     thePoint := aPlane intersectingPointWithLine:  
+thirdLine].
+             p3 := thePoint].
+-----
+
+が、おかしいように思われました。文章ではうまく説明しにくいのです 
+が、ここで、thirdAxis を求める必要はなく、最初の p3  
+の計算時とは違う方向に移動させれば良いだけだと判断し、上記部分を 
+以下のように書き換えてみました。
+
+-----
+     p3 := thePoint.
+     ((p1 to: p2) isParallelWithLine: (p1 to: p3))
+         ifTrue:
+             [thirdLine := firstLine.
+             aTransformation := Jun3dTransformation translate:  
+firstAxis to.
+             thePoint := nil.
+             [thePoint isNil or: [thePoint equal: p2]] whileTrue:
+                     [thirdLine := thirdLine transform: aTransformation.
+                     thePoint := aPlane intersectingPointWithLine:  
+thirdLine].
+             p3 := thePoint].
+-----
+
+このようにすると、無限ループしなくなったのですが、ここで質問があ 
+ります。
+この修正は、今回のケース &quot;JunPlane on: 0 , 1 , 1 vertical: (0 ,  
+0 , 0 to: -1 , 0 , 0)&quot; でたまたまうまくいっただけなのでしょう 
+か、それとも、あらゆるケースで通用するものなのでしょうか。
+どなたかご回答いただければ幸いです。
+
+以上、よろしくお願いします。
+
+
+
+--
+<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">shortsleeved ＠ mac.com</A>
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.akademia.co.jp/pipermail/sml/attachments/20070418/7c3fefbc/attachment.html">http://www.akademia.co.jp/pipermail/sml/attachments/20070418/7c3fefbc/attachment.html</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007297.html">[SML 7297] 無料セミナーの案内
+</A></li>
+	<LI>次の記事 <A HREF="007299.html">[SML 7298] はじめまして &amp; Jun  に関して質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7298">[ 日付 ]</a>
+              <a href="thread.html#7298">[ スレッド ]</a>
+              <a href="subject.html#7298">[ 件名 ]</a>
+              <a href="author.html#7298">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

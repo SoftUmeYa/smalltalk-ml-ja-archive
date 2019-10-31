@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7034] [ANNOUNCE] Jun for Java (Jun499)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207034%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun499%29&In-Reply-To=20041108184226.E62D.NISINAKA%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007035.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7034] [ANNOUNCE] Jun for Java (Jun499)</H1>
+    <B>Yoshiyuki NISHINAKA</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207034%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun499%29&In-Reply-To=20041108184226.E62D.NISINAKA%40sra.co.jp"
+       TITLE="[SML 7034] [ANNOUNCE] Jun for Java (Jun499)">nisinaka ＠ sra.co.jp
+       </A><BR>
+    <I>2005年 1月 19日 (水) 00:45:13 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007035.html">[SML 7035] Jun612 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7034">[ 日付 ]</a>
+              <a href="thread.html#7034">[ スレッド ]</a>
+              <a href="subject.html#7034">[ 件名 ]</a>
+              <a href="author.html#7034">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>「じゅん for Java」のバージョン499を公開します。
+
+  Java2 SDK 1.3 に対応する最後のバージョンとなる予定です。
+
+  バージョン498からの主な変更点は、以下の通りです。
+
+    * JunPoint の扱いを整理して、メソッドのパラメタや戻り値のうち、
+      抽象化可能なものを Jun3dPoint/Jun2dPoint から JunPoint にし
+      ました。
+
+    * JunOpenGL3dTransformedObject のバグを修正し、Jun608 相当に
+      更新しました。照明の座標変換が適切に行われていませんでした。
+
+    * sra.jun.geometry.support.JunPointSorter を実装しました。2次
+      元および3次元の任意の点群を、視点や上方向ベクトルの情報を用
+      いて、並べ替えを行います。
+
+        <A HREF="http://www.sra.co.jp/people/aoki/Jun/Topics/PointSorter/index.html">http://www.sra.co.jp/people/aoki/Jun/Topics/PointSorter/index.html</A>
+
+    * JunOpenGL3dPatchedObject を修正しました。(a) 頂点ごとに法線
+      ベクトルと色を指定することができます、(b) 座標変換を行った
+      ときに各ポリゴンの属性を保持します、(c) VRML から読み込む際
+      にテクスチャを無視していたバグを修正しました、(d) VRML に書
+      き出す際に色や法線ベクトルが指定されていない頂点があれば最
+      後に行われた指定を用いて指定します。
+
+    * JunOpenGL3dObject に表示のためのユーティリティメソッドを定
+      義しました。プロジェクションやウィンドウの大きさ・位置を指
+      定して、JunOpenGL3dObject を表示することができます。
+
+    * 鏡像座標変換を適用する際に、すべての頂点について法線ベクト
+      ルを確立するようにしました。Jun604 相当の修正です。
+
+    * X-Z 平面上、Y 座標負の方向に JunOpenGL3dCone を生成できない
+      不具合を修正しました。
+
+    * sra.jun.geometry.support.JunBSplineFunction を追加し、
+      JunNurbsCurve#atT_(double) を実装しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    <A HREF="ftp://ftp.sra.co.jp/pub/lang/java/jun4java/">ftp://ftp.sra.co.jp/pub/lang/java/jun4java/</A>
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html">http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html</A>
+
+
+                                 西中 芳幸 (<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">nisinaka ＠ sra.co.jp</A>)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007035.html">[SML 7035] Jun612 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7034">[ 日付 ]</a>
+              <a href="thread.html#7034">[ スレッド ]</a>
+              <a href="subject.html#7034">[ 件名 ]</a>
+              <a href="author.html#7034">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2342] Re: Nihongo7について(NSqueak-2005-02-25.image)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202342%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283GyRCJEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhCKE5TcXVlYWstMjAwNS0wMi0yNS5pbWFnZSk%3D%3F%3D&In-Reply-To=42246DCE.8020309%40metatoys.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002341.html">
+   <LINK REL="Next"  HREF="002343.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2342] Re: Nihongo7について(NSqueak-2005-02-25.image)</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202342%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283GyRCJEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhCKE5TcXVlYWstMjAwNS0wMi0yNS5pbWFnZSk%3D%3F%3D&In-Reply-To=42246DCE.8020309%40metatoys.org"
+       TITLE="[Squeak-ja: 2342] Re: Nihongo7について(NSqueak-2005-02-25.image)">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 3月  1日 (火) 23:17:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002341.html">[Squeak-ja: 2341] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+        <LI>次の記事 <A HREF="002343.html">[Squeak-ja: 2343] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2342">[ 日付 ]</a>
+              <a href="thread.html#2342">[ スレッド ]</a>
+              <a href="subject.html#2342">[ 件名 ]</a>
+              <a href="author.html#2342">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。
+
+再現方法がわかりました。
+１）NSqueak-2005-02-25をダウンロード。
+２）解凍
+３）起動
+４）アップデートボタンを押して、アップデートストリーム(Nihongo7 Updates)
+よりアップデート
+５）SqueakMapパッケージローダを起動
+６）エラー発生（添付SqueakDebug参照）
+
+ここで４）→５）のシーケンスで必ず発生します。例えば４）を実行後保存・終
+了を選択して、
+再度実行するとエラーは発生しませんでした。また４）を行わず起動直後に５）
+の操作を
+しても問題ありませんでした。
+
+５つのチェンジセットを読み込んだ直後のTranscriptの内容を見ると
+(vmPathName is Undeclared) という文字列がいくつか出ています。思うに
+なんらかの原因でＶＭのパスを忘れて,SqueakMapのキャッシュディレクトリ
+(./sm)を作成しよう
+とした時にエラーとなったのでは？
+
+以上
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.zip
+型:         application/x-zip-compressed
+サイズ:     1349 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050301/976d90ea/SqueakDebug.bin">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050301/976d90ea/SqueakDebug.bin</A>
+-------------- next part --------------
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.300 / Virus Database: 266.5.1 - Release Date: 2005/02/27
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002341.html">[Squeak-ja: 2341] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+	<LI>次の記事 <A HREF="002343.html">[Squeak-ja: 2343] Re: Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2342">[ 日付 ]</a>
+              <a href="thread.html#2342">[ スレッド ]</a>
+              <a href="subject.html#2342">[ 件名 ]</a>
+              <a href="author.html#2342">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

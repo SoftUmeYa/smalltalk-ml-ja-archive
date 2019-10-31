@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4254] Re: Etoysに日本語TTフォントを入れる方法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204254%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3lzGyRCJEtGfEtcGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCOGwbKEJUVBskQiVVJSklcyVIJHJGfiRsJGtKfUshGyhC%3F%3D&In-Reply-To=4A279EAB.5010509%40yengawa.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004253.html">
+   <LINK REL="Next"  HREF="004255.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4254] Re: Etoysに日本語TTフォントを入れる方法</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204254%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3lzGyRCJEtGfEtcGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCOGwbKEJUVBskQiVVJSklcyVIJHJGfiRsJGtKfUshGyhC%3F%3D&In-Reply-To=4A279EAB.5010509%40yengawa.com"
+       TITLE="[Squeak-ja: 4254] Re: Etoysに日本語TTフォントを入れる方法">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2009年 6月  4日 (木) 19:54:00 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004253.html">[Squeak-ja: 4253] Etoysに日本語TTフォントを入れる方法
+</A></li>
+        <LI>次の記事 <A HREF="004255.html">[Squeak-ja: 4255] Re: Etoysに日本語TTフォントを入れる方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4254">[ 日付 ]</a>
+              <a href="thread.html#4254">[ スレッド ]</a>
+              <a href="subject.html#4254">[ 件名 ]</a>
+              <a href="author.html#4254">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは・髟阡三ど瑤任后
+まず・髟阡賓ぢフォントについてですが・髟阡産膿携任ぢで提供されていると思います。
+これをEtoysで読み込むためにはTTCに変換する必要がう髟阡擦蠅泙后怏鈔阯ぢでう髟阡擦譴墺喞ぢに含まれるMAKETTC.EXEを使う瘢雹のが便利です。
+TTCに変換できたらEtoysを起動し・髟阡纂頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 語措妾択のウ髟阡札ぅ灰ぢ旗)をクリックして日本語ぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 攫召蠡悗┐泙后海里箸①インタ・踉札優奪箸棒楝海気譴討い譴佗⇆廚淵侫．ぅ襪♠瀬逅札鵐蹇ドされ・髟阡仔鐱楔譽癲ドぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂＠ 攫召蠡悗錣蠅泙后
+それから以王踉擦陸踉三を髭苳参舛靴墺ぢフォントを読み込みます(これはTTCFontSet
+class&gt;&gt;newTextStyleFromTTFile:のコメントにも書かれています)。
+
+TTCFontReader encodingTag: JapaneseEnvironment leadingChar.
+TTCFontSet newTextStyleFromTTFile: 'TTCファイルのパス巳苳
+これで指定したTTCフォントが使えるよう瘢雹になっているはずです。う髟阡擦箸魯錙ルドメニュ・踉擦痢岾梓僉逅察逅察逅察廚㎠蕁屮轡好謄燹逅札侫⑤鵐㍑ぢ」を選んで・髟阡仕吠儿垢靴討世気ぁ發舛蹐鵝スナップショットはお忘れなく。
+
+，縫皀福フォントですが・髟阡擦海瞭匹濆澆虜櫃縫┘蕁が発生します。そのため・髟阡斬臈腓気鵑砲蠅い靴謄僖奪舛鮑遒辰討發蕕い泙靴拭海譴耀ぢ版Etoysのチェンジセットにも含まれていますが・髟阡笂ファイルを添付します(ReadMona-yo.1.cs)。そのcsをイメ・踉札犬縫侫．ぅ襯ぅ鵑靴討Ⅳ海箸鮟釮韻弌側苳擦陸踉至順は同じです。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2009/06/04 19:15 Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">admin ＠ yengawa.com</A>&gt;:
+&gt;<i> $<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">BzT ＠ n</A>$G$9!#
+</I>&gt;<i>
+</I>&gt;<i> EtoysにIPAフォントぜ頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂量 ＠ 朝鹿曽・瘢雹ゴシックを入れて使いたいと思っています。
+</I>&gt;<i> <A HREF="http://ossipedia.ipa.go.jp/ipafont/fontspec.html">http://ossipedia.ipa.go.jp/ipafont/fontspec.html</A>
+</I>&gt;<i> このまえ阿部さんがEtoysへモナ・踉札侫⑤鵐箸鯑譴討い泙靴燭♤どう瘢雹いう瘢雹蟒
+鹿評守で入れたのでしょう瘢雹か?
+</I>&gt;<i> 単にフォントファイルをEtoysへドロップして読ませただけではフォント選択項
+</I>&gt;<i> 目が文字化けしているし・髟阡仕⇆僂垢襪汎鐱楔譴？？？？&quot;という瘢雹表┐砲覆辰討
+鹿評守まいます。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- !
+</I>&gt;<i> Koji Yokokawa <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">ykoubo2008 ＠ yengawa.com</A>&gt;
+</I>&gt;<i>    <A HREF="http://www.yengawa.com/">http://www.yengawa.com/</A>
+</I>&gt;<i>    ^self new!
+</I>&gt;<i>
+</I>-------------- next part --------------
+テキスト形旭奮阿療塞侫侫．ぅ襪鯤欖匹靴泙靴㍑ファイル巳苳吶痲酪釶⊿鎬窺笂
+型:         application/octet-stream
+サイズ:     791 バイト
+$<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">B ＠ bL</A>@:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20090604/862b4666/ReadMona-yo.1.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20090604/862b4666/ReadMona-yo.1.obj</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004253.html">[Squeak-ja: 4253] Etoysに日本語TTフォントを入れる方法
+</A></li>
+	<LI>次の記事 <A HREF="004255.html">[Squeak-ja: 4255] Re: Etoysに日本語TTフォントを入れる方法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4254">[ 日付 ]</a>
+              <a href="thread.html#4254">[ スレッド ]</a>
+              <a href="subject.html#4254">[ 件名 ]</a>
+              <a href="author.html#4254">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

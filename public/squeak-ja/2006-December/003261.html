@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3261] Re: 多角形モーフの頂点をいじるタイル
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203261%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkI/M1E3QSViITwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUkTkQ6RUAkciQkJDgkayU/JSQlaxsoQg%3D%3D%3F%3D&In-Reply-To=45742E56199.2737ABEE%40smtp.nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003255.html">
+   <LINK REL="Next"  HREF="003263.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3261] Re: 多角形モーフの頂点をいじるタイル</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203261%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkI/M1E3QSViITwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUkTkQ6RUAkciQkJDgkayU/JSQlaxsoQg%3D%3D%3F%3D&In-Reply-To=45742E56199.2737ABEE%40smtp.nifty.com"
+       TITLE="[Squeak-ja: 3261] Re: 多角形モーフの頂点をいじるタイル">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2006年 12月  6日 (水) 20:52:56 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003255.html">[Squeak-ja: 3255] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+        <LI>次の記事 <A HREF="003263.html">[Squeak-ja: 3263] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3261">[ 日付 ]</a>
+              <a href="thread.html#3261">[ スレッド ]</a>
+              <a href="subject.html#3261">[ 件名 ]</a>
+              <a href="author.html#3261">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部さん、コメントありがとうございます。
+林です。
+
+On 2006/12/04, at 23:19, Kazuhiro ABE wrote:
+
+&gt;<i> これは素晴らしいですね。
+</I>&gt;<i> これを使った例を三つほど作ってみましたのでご覧ください。どれも基本は同じ
+</I>&gt;<i> で、ちょっと違うだけです。いずれにも林さんのチェンジセットが含まれていま
+</I>&gt;<i> す。
+</I>
+さっそくのサンプルありがとうございます。
+スクイークをコンパスと定規代わりに使うことで、他にも色々な作図方法があり
+そうです。
+
+&gt;<i> その過程で気付いたことですが、存在しない頂点にカーソルを合わせて、削除し
+</I>&gt;<i> ようとするとエラーになりますね。これはハンドリングして吸収したほうが良い
+</I>
+バグ報告ありがとうございます。
+最後の頂点にカーソルを合わせて削除した場合などに、カーソル位置が不正な位
+置のままでしたので、順序的に前の方向にカーソルを戻すようにしました。
+
+&gt;<i> かもしれません。また、「頂点を一つだけにする」というコマンドがあると便利
+</I>&gt;<i> かもしれません。他の集合には「すべてを削除」というのがありますが、それに
+</I>&gt;<i> 相当するものです。
+</I>
+「カーソル以外をすべて削除」というコマンドを追加してみました。
+フレーズ（文言）については、ご意見よろしくお願いします。
+
+また、星やブロブでもカテゴリ「多角形」が選べてしまい、操作をするとエラー
+になるケースがありましたので、残念ですが、星やブロブにちょっかいを出せな
+いようにカテゴリを選べないようにしました。
+
+最新版は以下のURLになります。
+<A HREF="http://squeakland.jp/seaside/SBSuperSwiki/5f6bdeed-33cb-4a13-915f-044fda7917d9">http://squeakland.jp/seaside/SBSuperSwiki/5f6bdeed-33cb-4a13-915f-044fda7917d9</A>
+
+--
+林 徹也 Tetsuya HAYASHI 
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003255.html">[Squeak-ja: 3255] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+	<LI>次の記事 <A HREF="003263.html">[Squeak-ja: 3263] Re: 多角形モーフの頂点をいじるタイル
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3261">[ 日付 ]</a>
+              <a href="thread.html#3261">[ スレッド ]</a>
+              <a href="subject.html#3261">[ 件名 ]</a>
+              <a href="author.html#3261">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

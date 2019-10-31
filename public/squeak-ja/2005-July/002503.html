@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2503] Re: Windows 版 Squeak での UDP パケット受信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202503%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=20050704182821.5BC21489%40ygu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002508.html">
+   <LINK REL="Next"  HREF="002504.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2503] Re: Windows 版 Squeak での UDP パケット受信について</H1>
+    <B>e-itoh ＠ ygu.ac.jp</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202503%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=20050704182821.5BC21489%40ygu.ac.jp"
+       TITLE="[Squeak-ja: 2503] Re: Windows 版 Squeak での UDP パケット受信について">e-itoh ＠ ygu.ac.jp
+       </A><BR>
+    <I>2005年 7月  5日 (火) 11:13:59 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002508.html">[Squeak-ja: 2508] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+        <LI>次の記事 <A HREF="002504.html">[Squeak-ja: 2504] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2503">[ 日付 ]</a>
+              <a href="thread.html#2503">[ スレッド ]</a>
+              <a href="subject.html#2503">[ 件名 ]</a>
+              <a href="author.html#2503">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山梨学院大学の伊藤です。
+
+みなさま、アドバイスをいただきありがとうございます。
+光明が見えてきたものの、まだ最終的な解決はできておりません。
+
+武田さん、梅澤さん＞＞
+
+receiveDataInfo:を使ってみたところ、下記のサンプルで動作することを確認
+できました。
+
+receiver := Socket newUDP setPort: 54321.
+buff := ByteArray new: 100.
+delay := Delay forMilliseconds: 100.
+localhost := NetNameResolver localHostAddress.
+received := nil.
+Transcript show: 'Receiver start'; cr.
+received := receiver receiveDataInto: buff.
+Transcript show: 'received(', received asString, '-', buff, ')'.
+Transcript show: 'Receiver end'; cr.
+
+昨日同様のコードを試したときはダメだったのですが、どうやら気が動転して
+ミスしてしまったようです。すみません。
+
+ここからが挙動のおかしいところです。
+
+本来のプログラムは１秒おきにAIBOに向けてUDPのパケットを送り続け、AIBO
+からパケット受信したらそれを表示するというものです。
+
+そこで、sendData:とreceiveDataInfo:を使って１秒おきに送受信を繰り返す
+ようにしたところ、AIBOが起動中には想定どおりの動き（パケットのエコーバッ
+ク）をするものの、AIBOの電源を途中で切るとスクイーク側がブロックしてし
+まいます。
+
+止まるのはいつも、Socket&gt;&gt;waitForDataIfClosed:です。dataAvailableは
+通過しているのでreadSemaphoreで止まっているように思えます。
+
+なお、Unix版ではそのようなことにはならず、AIBOの停止、実行に関わりな
+くパケットの送受信を行えます。
+
+今日はVMのビルドに再チャレンジしてみます。みなさま、何か他にもアドバ
+イスがございましたらよろしくお願いいたします。
+
+P.S.
+梅澤さんへ＞＞
+
+  素のnihongo7へPackage LoaderからRemote Broadcasting Toolkitをinstall
+したら以下のようなエラーでインストールできませんでした。
+
+Error occurred during install:
+UndefinedObject&gt;&gt;readOnlyFileNamed:
+Would you like to open a debugger?
+
+SARInstaller&gt;&gt;fileInで、directoryがnilになってました。こちらは別途原因
+究明しようと思います。
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002508.html">[Squeak-ja: 2508] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+	<LI>次の記事 <A HREF="002504.html">[Squeak-ja: 2504] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2503">[ 日付 ]</a>
+              <a href="thread.html#2503">[ スレッド ]</a>
+              <a href="subject.html#2503">[ 件名 ]</a>
+              <a href="author.html#2503">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

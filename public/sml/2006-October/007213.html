@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7213] Re: メソッド名について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207213%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVhJT0lQyVJTD4kSyREJCQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=45223ED4.4020700%40ps.inforyoma.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007225.html">
+   <LINK REL="Next"  HREF="007214.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7213] Re: メソッド名について</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207213%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVhJT0lQyVJTD4kSyREJCQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=45223ED4.4020700%40ps.inforyoma.or.jp"
+       TITLE="[SML 7213] Re: メソッド名について">koubo2006 ＠ yengawa.jpn.org
+       </A><BR>
+    <I>2006年 10月  6日 (金) 20:14:17 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007225.html">[SML 7225] Re: メソッド名について
+</A></li>
+        <LI>次の記事 <A HREF="007214.html">[SML 7214] Re: メソッド名について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7213">[ 日付 ]</a>
+              <a href="thread.html#7213">[ スレッド ]</a>
+              <a href="subject.html#7213">[ 件名 ]</a>
+              <a href="author.html#7213">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+
+例にしたプログラムをメソッドとして定義するべきかどうかは別にして、メソッ
+ド名をどうつけたらいいのか?という疑問はだれでも持つものだと思います。
+それに、メソッド名の重要性に気づいてMLへ広く問いかける時点でそうとう
+プログラミングのセンスが良いと感じました。
+
+ぼくもメソッドやクラスの命名にいつも苦労しているので、数年の職業
+Smalltalkerとしての経験から得た具体的なやり方を紹介します。
+
+まず一番重要なのは、
+
+「既存のライブラリ内で意味の似ているメソッドを参考にする」
+
+既存ライブラリを調べて、うまい具合に意味の似たメソッドが見つかればそれを
+参考にして似た名前をつけます。こうすると、他の人がそのメソッドの意味を既
+存のメソッドから推測できるのでより理解しやすくなります。
+今回の場合「ブラウズするためのプログラム」という意味に近いメソッドを探し
+てみてはどうでしょうか。
+
+でも、これはライブラリをある程度読み込まないと見つけられません。だから、
+初心者は変な名前をつけてしまうのは仕方なくて、よく知れば知るほどうまい名
+前をつけられるようになります。上達するにはライブラリをよく読むしかありま
+せん。これはどんな言語でも(自然言語も)同じだと思います。
+
+しかし、Smalltalkのような動的に型を決定する言語だと、意味が似ているから
+といってまったく同じ名前をつけることには危険があります。
+
+「既存のライブラリ内で使われているメソッド名は(特別なとき意外は)使わない」
+
+たとえばあるOrderedCollectionインスタンスに値を入れるだけだからといって
+「at:」をうっかりそのまま使ってしまうと、あとで「そのクラスのat:」を呼び
+出しているところをsendersで探そうとしても膨大な数の「他のクラスのat:」の
+マッチに埋もれて見つけられなくなります。
+(ぼくはこの現象を「多態性洋(た・たいせいよう)に沈む」と呼んでいます;-)
+
+まったく同じメソッド名をつけても良い「特別なとき」とは多態性が成立すると
+きです。(詳しくは「リスコフの置換原則」を参照)
+この意味でも「includes:」を使うのは避けたほうが良いです。
+
+そして、意味の似ているメソッドが見つからないときは、次のように新しく命名
+します。
+
+「クラス名を主語、メソッド名を述語みたいに発音して英語っぽくする」
+
+ご存知の通り、Smalltalkはオブジェクトへのメッセージ送信によって処理を進
+めるという計算モデルを基本にしています。それにあわせるために、なるべく主
+語・述語のような形にします。そして、そのように読んだときにメソッドの意味
+が伝わるかどうかチェックします。
+
+これはクラス名の命名にも関わります。「includes:」がなぜ「include:」では
+ないのか?という疑問への答えでもあります。でも、Smaltalkは文法的な制約で
+完全な英語にはならないので、なんとなく英語っぽく聞こえるだけでOK(既存ラ
+イブラリも英語として変なのがほとんどです)。
+
+A MethodSearchBlock includes these selectors.
+
+の日本語訳はどうなるか? などと試してみてください。クラス名も直したくなっ
+てなってくるかもしれません。
+
+それでも、よさそうな名前がどうしても思いつかないよ!というときはたくさん
+あります。そんなときは腹をくくって最終手段です。
+
+「良い名前が思いつかないときは思い切って変な名前をつけてしまう」
+
+MethodSearchBlock class&gt;&gt;findImplementersFromAllClassesAndBrowseThem:
+なんてふうにだらだら書いてしまうのはすごく「変な名前」だし、読むとやるこ
+とがわかるのでおすすめw
+includesXXX: もこのまま使えばじゅうぶん変なので、最終手段としてつけるな
+らOKなのです。
+
+上記のような命名の苦労をしたあげくに変な名前をつけてしまうことは、実は、
+とても大切です。こうすると変な名前はいつまでも気になってしまうので、次の
+もっとも重要な作業をやりやすくします。
+
+「より良い名前を思いついたときには躊躇せずにリファクタリングする」
+
+
+以上、参考になれば幸いです。
+
+
+On Tue, 03 Oct 2006 19:43:32 +0900
+NOBUTAKA Terauchi &lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">europa ＠ ps.inforyoma.or.jp</A>&gt; wrote:
+
+&gt;<i> クラスは、
+</I>&gt;<i> Object
+</I>&gt;<i>      MethodSearchBlock
+</I>&gt;<i> として定義しました。
+</I>&gt;<i> インスタンス変数などは定義していません。
+</I>&gt;<i> 
+</I>&gt;<i> 1. 「複数のメッセージセレクタを一気にブラウズするためのプログラム」を
+</I>&gt;<i>    クラスメソッド includes: messageSelectors として定義しました。
+</I>&gt;<i> 
+</I>&gt;<i> 2.  次に、「あるメッセージカテゴリに定義されているメソッドを検索するプロ
+</I>&gt;<i>     グラム」を定義しようとしました。ただ、最後にメソッドを列挙するという
+</I>&gt;<i>     機能は同じなので includes: messageCategories にするとメソッド名が重
+</I>&gt;<i>     複してしまいます。
+</I>&gt;<i>     そこで、includesCategory: messageCategories として定義しました。
+</I>&gt;<i> 
+</I>&gt;<i> この場合、1.のメソッド名も includesXXX としたほうが分かりやすいように思
+</I>&gt;<i> えてきました。
+</I>&gt;<i> ただ、XXXの部分が思いつきません。システム全体を検索しているのでAllClass
+</I>&gt;<i> とするほうが良いのでしょうか？
+</I>&gt;<i> それとも、クラスを分けた方が良いのでしょうか？
+</I>
+
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">koubo2006 ＠ yengawa.jpn.org</A>&gt;
+    <A HREF="http://yengawa.com/">http://yengawa.com/</A>
+    ^self new!
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007225.html">[SML 7225] Re: メソッド名について
+</A></li>
+	<LI>次の記事 <A HREF="007214.html">[SML 7214] Re: メソッド名について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7213">[ 日付 ]</a>
+              <a href="thread.html#7213">[ スレッド ]</a>
+              <a href="subject.html#7213">[ 件名 ]</a>
+              <a href="author.html#7213">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

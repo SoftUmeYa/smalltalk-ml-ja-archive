@@ -1,0 +1,749 @@
+From nisinaka ＠ sra.co.jp  Mon May  1 13:11:26 2006
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:59 2007
+Subject: [SML 7149] [ANNOUNCE] Jun for Java (Jun568)
+Message-ID: <20060501131110.4DF2.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン568を公開します。
+
+  バージョン551からの主な変更点は、以下の通りです。
+
+    * (modification) Intel Macに対応して、JNIライブラリを更新しま
+      した。
+
+    * (bug fix) JunMoviePlayerのバグを修正しました。
+
+    * (incompatibility) メソッド名と戻り値の対応を厳密にしました。
+      現在、'asImage() という名前のメソッドは StImage を返し、
+      'toImage()' は java.awt.Image を返します。
+
+    * (new feature) JunImageDisplayModelは画像に特化した表示モデ
+      ルです。
+
+    * (new feature) JunGrapherはグラフ構造を持つデータを操作する
+      ためのユーザインタフェースを提供するクラスです。
+
+        http://www.sra.co.jp/smalltalk/jun/Topics/Graph/index.html
+        http://www.sra.co.jp/smalltalk/jun/Topics/ConcentricArranging/index.html
+
+    * (new feature) パッケージ 'jp.co.sra.jun.topology.graph.*' 
+      には、グラフ要素である「グラフ」「ノード」「アーク」を表現
+      するクラス群が含まれています。
+
+    * (new feature) パッケージ 'jp.co.sra.jun.goodies.tables.*' 
+      には、属性テーブルや隣接テーブル、隣接行列など、さまざまな
+      表形式のデータを表現するためのクラス群が含まれています。
+
+    * (new feature) JunSpiroDesignはスピログラフを生成、表示する
+      ためのクラスです。画像のスナップショットを生成したり、アニ
+      メーション時のの画像群を生成したりすることができます。
+
+        http://www.sra.co.jp/smalltalk/jun/Topics/SpiroDesign/index.html
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From aoki ＠ sra.co.jp  Mon May  1 14:13:10 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:59 2007
+Subject: [SML 7150] Jun678 for Smalltalk
+Message-ID: <445598E6.50004@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+オランダの Albert Kerssies さんがフレームバッファ・オブジェク
+トの拡張（EXT_framebuffer_object）を「じゅん for Smalltalk」
+で使えるようにするプログラムを作って送り届けてくださいました。
+有ることが難いことです！
+
+　ＦＢＯ（フレームバッファ・オブジェクトの拡張）の定義：
+　http://oss.sgi.com/projects/ogl-sample/registry/EXT/framebuffer_object.txt
+
+先ほど、それを組み込んだ【Jun678】をアップロードしました。
+　　　　　　　　　　　　　クラス数：    884
+　　　　　　　　　　　　メソッド数： 30,054
+　　　　　　　　　　　　ステップ数：354,318
+　　　１メソッドあたりのステップ数：     11.8
+　http://www.sra.co.jp/public/sra/technical/jun/
+　ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+以前（約２ヶ月前）に中京大学の田中真一さんに作成していただい
+たピクセルバッファの拡張（WGL_ARB_pbuffer）の枠組みと合わせて
+あります。
+
+　ピクセルバッファ (2006/03/02)
+　http://www.sra.co.jp/people/aoki/Jun/Topics/PixelBuffer/
+
+　フレームバッファ (2006/05/01)
+　http://www.sra.co.jp/people/aoki/Jun/Topics/FrameBuffer/
+
+なお、ピクセルバッファとフレームバッファは、排他的に使用する
+ように実装してあります。
+
+------------------------------------------------------------
+
+【前提条件】
+
+以下のページにリストされているディスプレイアダプタ（グラフィ
+ックカード）で、フレームバッファを用いた高速描画の恩恵を受け
+ることができます。
+
+　拡張が使用可能なビデオカードの一覧：
+　http://www.delphi3d.net/hardware/extsupport.php?extension=GL_EXT_framebuffer_object
+
+Windows XP / 2000 & VisualWorks 7.4 以上の組み合わせのみの拡
+張となります。ただし、必ず新しいバージョンの opengl32.dll な
+らびに glu32.dll をお使いください。
+
+　○最適：　opengl32.dll　5.1　OpenGL Client DLL
+　○最適：　glu32.dll 　　5.1　OpenGL Utility Library DLL
+
+　×不可：　opengl32.dll　4.0　OpenGL Client DLL
+　×不可：　glu32.dll 　　4.0　OpenGL Utility Library DLL
+
+【利用方法】
+
+使い方は簡単です。ビューファインダなどのレンダリングモデルに
+対して「フレームバッファを使うよ（useFrameBuffer: true）」と
+宣ふだけです。
+
+    | aBody aModel |
+    aBody := JunOpenGL3dObject capsaicin.
+    aModel := JunOpenGLDisplayModel displayObject: aBody.
+    aModel useFrameBuffer: true.
+    aModel open
+
+このプログラムはカプサイシン（唐辛子の辛み成分）の 25,970 個
+のポリゴン群をフレームバッファを用いて描画します。
+
+【了承事項】
+
+搭載したばかりですので、すべての機能が動くのかを確認している
+最中です。各種のグラフィックカードでの動作状況を把握したいと
+思いますので、皆さんのご協力をお願いします。グラフィックカー
+ドの機種名と正常動作の可否を報告していただけると助かります。
+このメールの末尾に OpenGL の拡張を容易に調査する方法を記して
+おきます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+【OpenGL Extensions Viewer】
+
+自分のマシンのグラフィックカード（ディスプレイアダプタとかビ
+デオカードとも言いますが）の OpenGL の拡張を調査できるプログ
+ラムがあります。
+
+http://www.realtech-vr.com/glview/
+
+現時点での最新バージョンは 2.2.4 です。Windows 版と Mac OS X
+版の両方があります。
+
+Windows 版：
+ftp://ftp2.realtech-vr.com/realtechv/pub/glview224.exe
+Mac OS X 版：
+ftp://ftp2.realtech-vr.com/realtechv/pub/glview224.dmg
+
+以下のような情報（抜粋してありますが）を得ることができます。
+
+------------------------------------------------------------
+【IBM ThinkPad T43】
+
+System Info
+Windows XP Professional
+
+Vendor
+ATI Technologies Inc.
+2.0.5285 WinXP Release
+
+Renderer
+MOBILITY RADEON X300 x86/SSE2
+
+Extensions
+GL_ARB_depth_texture
+GL_ARB_fragment_program
+GL_ARB_fragment_program_shadow
+GL_ARB_fragment_shader
+GL_ARB_multisample
+GL_ARB_multitexture
+GL_ARB_occlusion_query
+GL_ARB_point_parameters
+GL_ARB_point_sprite
+GL_ARB_shader_objects
+GL_ARB_shading_language_100
+GL_ARB_shadow
+GL_ARB_shadow_ambient
+GL_ARB_texture_border_clamp
+GL_ARB_texture_compression
+GL_ARB_texture_cube_map
+GL_ARB_texture_env_add
+GL_ARB_texture_env_combine
+GL_ARB_texture_env_crossbar
+GL_ARB_texture_env_dot3
+GL_ARB_texture_mirrored_repeat
+GL_ARB_transpose_matrix
+GL_ARB_vertex_blend
+GL_ARB_vertex_buffer_object
+GL_ARB_vertex_program
+GL_ARB_vertex_shader
+GL_ARB_window_pos
+GL_ATI_draw_buffers
+GL_ATI_element_array
+GL_ATI_envmap_bumpmap
+GL_ATI_fragment_shader
+GL_ATI_map_object_buffer
+GL_ATI_separate_stencil
+GL_ATI_texture_env_combine3
+GL_ATI_texture_float
+GL_ATI_texture_mirror_once
+GL_ATI_vertex_array_object
+GL_ATI_vertex_attrib_array_object
+GL_ATI_vertex_streams
+GL_ATIX_texture_env_combine3
+GL_ATIX_texture_env_route
+GL_ATIX_vertex_shader_output_point_size
+GL_EXT_abgr
+GL_EXT_bgra
+GL_EXT_blend_color
+GL_EXT_blend_func_separate
+GL_EXT_blend_minmax
+GL_EXT_blend_subtract
+GL_EXT_clip_volume_hint
+GL_EXT_compiled_vertex_array
+GL_EXT_draw_range_elements
+GL_EXT_fog_coord
+GL_EXT_framebuffer_object
+GL_EXT_multi_draw_arrays
+GL_EXT_packed_pixels
+GL_EXT_point_parameters
+GL_EXT_rescale_normal
+GL_EXT_secondary_color
+GL_EXT_separate_specular_color
+GL_EXT_shadow_funcs
+GL_EXT_stencil_wrap
+GL_EXT_texgen_reflection
+GL_EXT_texture3D
+GL_EXT_texture_compression_s3tc
+GL_EXT_texture_cube_map
+GL_EXT_texture_edge_clamp
+GL_EXT_texture_env_add
+GL_EXT_texture_env_combine
+GL_EXT_texture_env_dot3
+GL_EXT_texture_filter_anisotropic
+GL_EXT_texture_lod_bias
+GL_EXT_texture_mirror_clamp
+GL_EXT_texture_object
+GL_EXT_texture_rectangle
+GL_EXT_vertex_array
+GL_EXT_vertex_shader
+GL_HP_occlusion_test
+GL_NV_blend_square
+GL_NV_occlusion_query
+GL_NV_texgen_reflection
+GL_S3_s3tc
+GL_SGI_color_matrix
+GL_SGIS_generate_mipmap
+GL_SGIS_multitexture
+GL_SGIS_texture_border_clamp
+GL_SGIS_texture_edge_clamp
+GL_SGIS_texture_lod
+GL_SUN_multi_draw_arrays
+GL_WIN_swap_hint
+WGL_ARB_extensions_string
+WGL_ARB_make_current_read
+WGL_ARB_multisample
+WGL_ARB_pbuffer
+WGL_ARB_pixel_format
+WGL_ARB_render_texture
+WGL_ATI_pixel_format_float
+WGL_ATI_render_texture_rectangle
+WGL_EXT_extensions_string
+WGL_EXT_swap_control
+
+Core features
+v1.1 (100 % - 7/7)
+v1.2 (100 % - 8/8)
+v1.3 (100 % - 9/9)
+v1.4 (100 % - 15/15)
+v1.5 (100 % - 3/3)
+v2.0 (100 % - 9/9)
+
+------------------------------------------------------------
+【IBM ThinkPad T41】
+
+System information
+Windows XP Professional
+
+Vendor
+ATI Technologies Inc.
+1.3.1006 WinXP Release
+
+Renderer
+MOBILITY RADEON 7500 DDR x86/SSE2
+
+Extensions
+GL_ARB_multitexture
+GL_ARB_occlusion_query
+GL_ARB_texture_border_clamp
+GL_ARB_texture_compression
+GL_ARB_texture_cube_map
+GL_ARB_texture_env_add
+GL_ARB_texture_env_combine
+GL_ARB_texture_env_crossbar
+GL_ARB_texture_env_dot3
+GL_ARB_texture_mirrored_repeat
+GL_ARB_transpose_matrix
+GL_ARB_vertex_blend
+GL_ARB_vertex_buffer_object
+GL_ARB_window_pos
+GL_ATI_envmap_bumpmap
+GL_ATI_map_object_buffer
+GL_ATI_texture_env_combine3
+GL_ATI_texture_mirror_once
+GL_ATI_vertex_array_object
+GL_ATI_vertex_streams
+GL_ATIX_texture_env_combine3
+GL_ATIX_texture_env_route
+GL_EXT_abgr
+GL_EXT_bgra
+GL_EXT_clip_volume_hint
+GL_EXT_compiled_vertex_array
+GL_EXT_draw_range_elements
+GL_EXT_fog_coord
+GL_EXT_multi_draw_arrays
+GL_EXT_packed_pixels
+GL_EXT_point_parameters
+GL_EXT_rescale_normal
+GL_EXT_secondary_color
+GL_EXT_separate_specular_color
+GL_EXT_stencil_wrap
+GL_EXT_texgen_reflection
+GL_EXT_texture3D
+GL_EXT_texture_compression_s3tc
+GL_EXT_texture_cube_map
+GL_EXT_texture_edge_clamp
+GL_EXT_texture_env_add
+GL_EXT_texture_env_combine
+GL_EXT_texture_env_dot3
+GL_EXT_texture_filter_anisotropic
+GL_EXT_texture_lod_bias
+GL_EXT_texture_mirror_clamp
+GL_EXT_texture_object
+GL_EXT_texture_rectangle
+GL_EXT_vertex_array
+GL_HP_occlusion_test
+GL_NV_blend_square
+GL_NV_occlusion_query
+GL_NV_texgen_reflection
+GL_S3_s3tc
+GL_SGI_color_matrix
+GL_SGIS_generate_mipmap
+GL_SGIS_multitexture
+GL_SGIS_texture_border_clamp
+GL_SGIS_texture_edge_clamp
+GL_SGIS_texture_lod
+GL_SUN_multi_draw_arrays
+GL_WIN_swap_hint
+WGL_ARB_extensions_string
+WGL_ARB_make_current_read
+WGL_ARB_pbuffer
+WGL_ARB_pixel_format
+WGL_ARB_render_texture
+WGL_EXT_extensions_string
+WGL_EXT_swap_control
+
+Core features set
+v1.1 (100 % - 7/7)
+v1.2 (100 % - 8/8)
+v1.3 (100 % - 9/9)
+v1.4 (66 % - 10/15)
+v1.5 (66 % - 2/3)
+v2.0 (0 % - 0/9)
+
+------------------------------------------------------------
+【IBM ThinkPad X41 Tablet】
+
+System Info
+Windows XP Professional
+
+Vendor
+Intel
+1.4.0 - Build 4.14.10.4466
+
+Renderer
+Intel 915GM
+
+Extensions
+GL_3DFX_texture_compression_FXT1
+GL_ARB_depth_texture
+GL_ARB_fragment_program
+GL_ARB_multitexture
+GL_ARB_point_parameters
+GL_ARB_shadow
+GL_ARB_texture_border_clamp
+GL_ARB_texture_compression
+GL_ARB_texture_cube_map
+GL_ARB_texture_env_add
+GL_ARB_texture_env_combine
+GL_ARB_texture_env_crossbar
+GL_ARB_texture_env_dot3
+GL_ARB_transpose_matrix
+GL_ARB_vertex_buffer_object
+GL_ARB_vertex_program
+GL_ARB_window_pos
+GL_EXT_abgr
+GL_EXT_bgra
+GL_EXT_blend_color
+GL_EXT_blend_func_separate
+GL_EXT_blend_minmax
+GL_EXT_blend_subtract
+GL_EXT_clip_volume_hint
+GL_EXT_compiled_vertex_array
+GL_EXT_cull_vertex
+GL_EXT_draw_range_elements
+GL_EXT_fog_coord
+GL_EXT_multi_draw_arrays
+GL_EXT_packed_pixels
+GL_EXT_rescale_normal
+GL_EXT_secondary_color
+GL_EXT_separate_specular_color
+GL_EXT_shadow_funcs
+GL_EXT_stencil_two_side
+GL_EXT_stencil_wrap
+GL_EXT_texture3D
+GL_EXT_texture_compression_s3tc
+GL_EXT_texture_env_add
+GL_EXT_texture_env_combine
+GL_EXT_texture_filter_anisotropic
+GL_IBM_texture_mirrored_repeat
+GL_NV_blend_square
+GL_NV_texgen_reflection
+GL_SGIS_generate_mipmap
+GL_WIN_swap_hint
+WGL_ARB_buffer_region
+WGL_ARB_extensions_string
+WGL_ARB_make_current_read
+WGL_ARB_pbuffer
+WGL_ARB_pixel_format
+WGL_EXT_swap_control
+
+Core features
+v1.1 (100 % - 7/7)
+v1.2 (100 % - 8/8)
+v1.3 (100 % - 9/9)
+v1.4 (100 % - 15/15)
+v1.5 (66 % - 2/3)
+v2.0 (11 % - 1/9)
+
+------------------------------------------------------------
+
+
+
+From m-asada ＠ sra.co.jp  Mon May  1 15:26:38 2006
+From: m-asada ＠ sra.co.jp (Mitsuhiro Asada)
+Date: Fri Nov  2 10:50:59 2007
+Subject: [SML 7151] [ANNOUNCE] ImageSearcher for Java 028
+Message-ID: <20060501152554.5DD1.M-ASADA@sra.co.jp>
+
+浅田です。
+
+「イメージサーチャ for Java（イメージサーチャ for Web）」のバージョン
+028を公開します。
+
+    http://www.sra.co.jp/people/m-asada/Isr4Java/
+    ftp://ftp.sra.co.jp/pub/lang/java/isr4java/
+
+イメージサーチャは、ファイル名やカテゴリ名などの名前やキーワードに頼ら
+ずに、目的の画像を捜し出すプログラムです。特徴的な色(typical color)、平
+均明度(average luminance)、9つの色(nine colors)、広がり(image extent)、
+スペクトル中心(center spectra)、手書き画像(freehand image)などを指定す
+ることにより、画像自身が持っている属性を手掛かりとして、目的の画像を絞
+り込み検索します。
+
+バージョン027からの主な変更点は、以下の通りです。
+
+  ・(modification) Intel Macに対応して、JNIライブラリを更新しました。
+
+  ・(modification) GUIのデフォルトLook&FeelをSwingにしました。
+
+  ・(modification) IsrImageStreamで画像を読み書きする際に "Java Image
+    I/O" を使うようにしました。JAIとJIMIはJ2SDK1.4でBMPファイルを出力す
+    るときだけ必要になります。
+
+  ・(modification) StPL7.7 に対応しました。
+
+______________________________________________________________________
+Mitsuhiro Asada <m-asada@sra.co.jp>
+
+
+
+From m-asada ＠ sra.co.jp  Mon May  1 18:18:48 2006
+From: m-asada ＠ sra.co.jp (Mitsuhiro Asada)
+Date: Fri Nov  2 10:50:59 2007
+Subject: [SML 7152] [ANNOUNCE] ImageSearcher for Java 028
+Message-ID: <20060501181803.AEE1.M-ASADA@sra.co.jp>
+
+浅田です。
+
+「イメージサーチャ for Java（イメージサーチャ for Web）」のバージョン
+028を公開します。
+
+    http://www.sra.co.jp/people/m-asada/Isr4Java/
+    ftp://ftp.sra.co.jp/pub/lang/java/isr4java/
+
+イメージサーチャは、ファイル名やカテゴリ名などの名前やキーワードに頼ら
+ずに、目的の画像を捜し出すプログラムです。特徴的な色(typical color)、平
+均明度(average luminance)、9つの色(nine colors)、広がり(image extent)、
+スペクトル中心(center spectra)、手書き画像(freehand image)などを指定す
+ることにより、画像自身が持っている属性を手掛かりとして、目的の画像を絞
+り込み検索します。
+
+バージョン027からの主な変更点は、以下の通りです。
+
+  ・(modification) Intel Macに対応して、JNIライブラリを更新しました。
+
+  ・(modification) GUIのデフォルトLook&FeelをSwingにしました。
+
+  ・(modification) IsrImageStreamで画像を読み書きする際に "Java Image
+    I/O" を使うようにしました。JAIとJIMIはJ2SDK1.4でBMPファイルを出力す
+    るときだけ必要になります。
+
+  ・(modification) StPL7.7 に対応しました。
+
+______________________________________________________________________
+Mitsuhiro Asada <m-asada@sra.co.jp>
+
+
+
+From aoki ＠ sra.co.jp  Thu May 18 19:04:26 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:59 2007
+Subject: [SML 7153] オブジェクト指向の理想と現実
+Message-ID: <446C46AA.5080005@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+ソフトウェア技術者協会（ＳＥＡ）の６月のフォーラムの案内です。
+テーマは「オブジェクト指向の理想と現実」になります。ＳＭＬの
+方々もふるって御参加ください。
+
+場所は東京の東銀座ですが、どうぞ遠方の皆さんも何か用事や理由
+を作ってお集まりくださいませ。:-)
+
+桜井麻里さんと石川雅彦さんのコーディネートで、酒匂寛さんと私
+が話し手になります。酒匂さんとダブルキャストで話すのは久しぶ
+りで、私自身もとても楽しみです。後半に討論の時間が設けられて
+いますから、オブジェクト指向の理想と現実に関して意見を交換し
+合いませう。
+
+＃昨日は「アスペクト指向技術は実用に使えるか」というフォーラ
+＃ムが開催されたのですが、とても盛況でした。酒匂さんも私も参
+＃加しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+------------------------------------------------------------------------
+                        SEA Forum June
+
+                オブジェクト指向の理想と現実
+
+                主催：　ソフトウェア技術者協会（SEA）
+                        http://www.sea.jp/
+-------------------------------------------------------------------------
+
+  オブジェクト指向は、多くのソフトウェア開発プロジェクトにおいて日常的に
+適用される開発手法となっています。多くの場合、適用の目的は生成したコポー
+ネントの再利用率を高めることにより、高生産性、高保守性を狙うことにあると
+考えられます。この傾向は、オブジェクト指向分析/設計/開発を効率的に実施す
+る技法とツーの普及によって益々拍車がかかっています。
+
+  しかし普及と成熟の一方で、誤解や混乱が拡大しているとの指摘も挙がってい
+ます。例えば、開発フェーズにおいてオブジェクト指向言語を採用しているもの
+の、一つのクラスしか存在しないプログラム、１メソッドが数百行のコードから
+成るプログラム、責務の混合したプログラム、相互に依存度の高いコンポーネン
+ト群などの存在を容易に許してしまいます。このような問題は、プロジェクト管
+理や品質管理体制の強化によっては解決することが困難な側面があります。つま
+り、分析設計開発の各フェーズにおいて支援ツールの採用実績を挙げ、テストを
+通過し、納期が守られているというポイントはクリアしているため、見かけ上は
+オブジェクト指向開発プロジェクトは成功したと評価されますが、実際は手続き
+型言語と変わらない設計、開発が行われているケースも観測されています。
+
+  オブジェクト指向の理想と現実の乖離に焦点をあてた今回のフォーラムでは、
+黎明期よりオブジェクト指向手法に親しみ、理論家であると同時に優れた実践家
+としても知られるお二人の講師をお迎えしました。この場で私達は、オブジェク
+ト指向が正しく適用された世界がどのようなものであるかを再認識すると同時に、
+実際の開発現場においてその世界に到達するにはどうしたらよいかをディスカッ
+ションしたいと思います。
+
+  実際の開発プロジェクトにたずさわる、多くのソフトウェア技術者の参加をお
+待ちしています。
+
+        *****************   開 催 要 領   *****************
+
+１．日時：2006年6月16日(金)　13:30受付, 14:00開始, 17:30 終了
+
+２．プログラム　
+    13:30 - 14:00 受付
+　　14:00 - 16:00 講演
+       (1)オブジェクト指向において保存・変形・視座・多重・名前・位相を。
+                 青木 淳 (SRA先端技術研究所)
+
+             オブジェクト指向プログラミングを２０年以上も続けてきた観点
+             から、保存・変形・視座・多重・名前・位相について言い及びま
+             す。
+             現在、日経ソフトウエアに連載されている「青木淳のプログラマ
+             魂」のトピックスになります。それぞれについて、どのようにオ
+             ブジェクト指向で昇華されているのかを開示してゆきます。一介
+             のプログラマが到達したひとつの世界観（理想と現実）の紹介に
+             なります。
+
+      (2)オブジェクト指向の理想と現実（「使えない」モデルはいらない）
+　　　　　　　   酒匂 寛 (Designers' Den, SEA 幹事)
+
+             オブジェクト指向開発においては「モデル」が話題になることが
+             多いのですが、現場におけるそのモデルの位置付けは曖昧です。
+             多くの場合初期段階にスケッチのように書かれて、あとは保守も
+             されないという場合が多いのではないでしょうか。
+             しかし、こうなる理由は明らかで、書かれたモデルが「検証」で
+             きないことに起因しています。多くの開発プロジェクトの混乱が
+             仕様（モデル）の混乱に起因することを考えると、これは大変残
+             念なことです。
+             今回は形式手法をプロジェクトに導入することによって、モデル
+             を活性化する方法について、事例を交えながらお話します。
+
+    16:00 - 16:10 Break
+    16:10 - 17:30 討論：オブジェクト指向の理想と現実
+　　　　　　  コーディネータ：　桜井麻里(SEA 幹事)
+　　　　　　　パネリスト： 青木淳(SRA先端技術研究所)
+                           酒匂寛(Designers' Den, SEA 幹事)
+              および参加者のみなさん
+
+３．会場：　全国情報サービス産業厚生年金基金（JJK）会館 7F B会議室　　
+                        (東京都中央区築地4-1-14)
+　　　　　　　　        http://www.jjk.or.jp/info/guidemap.html
+
+４．定員：　５０名　（申込み順，定員になり次第，受付を締め切ります）
+
+５．参加費：　SEA 正会員    2,000円
+　　　　　　　SEA 賛助会員  3,000円
+　　　　　　　一般          4,000円
+
+６．申込み方法：
+        下の申込み票に必要事項を記入し，SEA事務局 sea@sea.or.jpまで
+　　　　e-mail（テキストメールのみ： HTMLや添付ファイルは不可）でお
+　　　　申込みください．折り返し受付確認の mail を返信します．
+        当日会場１階の受付デスクで，受付番号とお名前を申し出てください．
+        入館証（バッジ）をお渡しします．
+　　　　参加費は当日現金でお支払いください．領収書をさしあげます．
+
+---------------------------------------------------------------------
+ SEA Forum June (6/16 @ JJK会館)　参加申込み　（2006年　月　日）
+
+氏名：__________________ ふりがな（______________________)
+所属：___________________________________________________
+住所：___________________________________________________
+電話・ＦＡＸ：________________ / ________________________
+E-mail: _____________________________
+種別（いずれかにチェック・記入）：
+        □　ＳＥＡ会員（No: _________)
+        □　ＳＥＡ賛助会員 (会社名: _______________________________)
+        □　一般
+この Forum をどうして知りましたか？
+        □　SEA からの案内で
+        □　SEA の Web Page (http://www.sea.jp) を見て
+        □　IPA-SEC からの案内で
+        □　ML(メーリングリスト)で (ML 名：_________________________)
+        □　その他（知人からの紹介 etc)：___________________________
+
+	*注：賛助会員企業一覧：http://www.sea.jp/sanjo.txt
+
+-----------( Mail to: sea@sea.or.jp テキストメールに限る  )----------
+
+
+
+From aoki ＠ sra.co.jp  Tue May 30 15:20:37 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:59 2007
+Subject: [SML 7154] Jun683 for Smalltalk
+Message-ID: <447BE435.3000608@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア「じゅん」のリリースを開始してから、かれこ
+れ１０年以上が経過しました。１０年前と比べると、ＣＰＵの性能、
+搭載メモリ容量、色数、描画能力など、雲泥の差がありますよね。
+
+折りしも、イギリスのマンチェスター大学や日本の国立情報学研究
+所などから、じゅんの描画の際の遮光処理を、フラットシェーディ
+ング（コンスタントシェーディング）からスムーズシェーディング
+（グーローシェーディング）にしてほしい、とのリクエストが寄せ
+られました。
+
+この機を逸せず、遮光処理のデフォルトをスムーズシェーディング
+に切り替えました。先ほど、そのように変更した【Jun683】をアッ
+プロードしました。
+　　　　　　　　　　　　　クラス数：    884
+　　　　　　　　　　　　メソッド数： 30,108
+　　　　　　　　　　　　ステップ数：355,521
+　　　１メソッドあたりのステップ数：     11.8
+　http://www.sra.co.jp/public/sra/technical/jun/
+　ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+じゅんが用意している典型的な３次元オブジェクの構成面に法線ベ
+クトルを立てました。次のページをご覧ください。
+
+　http://www.sra.co.jp/people/aoki/Jun/Topics/FromFlatToSmooth/
+
+メビウスの帯を、隠線隠面で描いたもの、フラットシェーディング
+で描いたもの、そして、遮光デフォルトにしたスムーズシェーディ
+ングで描いたもの、これらをサンプルプログラムと共に示しておき
+ました。いずれも同じテセレーション（tesselation）です。2,016
+個の三角パッチ群で構成されています。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Tue May 30 16:42:02 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:59 2007
+Subject: [SML 7155] Re: オブジェクト指向の理想と現実
+In-Reply-To: <446C46AA.5080005@sra.co.jp>
+References: <446C46AA.5080005@sra.co.jp>
+Message-ID: <447BF74A.4060104@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+> ソフトウェア技術者協会（ＳＥＡ）の６月のフォーラムの案内です。
+> テーマは「オブジェクト指向の理想と現実」になります。ＳＭＬの
+> 方々もふるって御参加ください。
+
+満員御礼だそうです。
+　　　　http://www.sea.jp/Events/index.html
+　　　　http://www.sea.jp/Events/forum/20060616.html
+
+ＳＭＬからの参加者がいらっしゃいましたら、どうぞ気軽にお声を
+かけてくださいませ。では、６月１６日（金）１３時半に東銀座で。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+

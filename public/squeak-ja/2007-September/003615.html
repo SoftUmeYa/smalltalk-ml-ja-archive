@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3615] Re: Scratch について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203615%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2ggGyRCJEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=46FE07AB.9010306%40asu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003614.html">
+   <LINK REL="Next"  HREF="003617.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3615] Re: Scratch について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203615%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjcmF0Y2ggGyRCJEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=46FE07AB.9010306%40asu.ac.jp"
+       TITLE="[Squeak-ja: 3615] Re: Scratch について">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2007年 9月 30日 (日) 18:40:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003614.html">[Squeak-ja: 3614] Scratchについて
+</A></li>
+        <LI>次の記事 <A HREF="003617.html">[Squeak-ja: 3617] Re: Scratchについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3615">[ 日付 ]</a>
+              <a href="thread.html#3615">[ スレッド ]</a>
+              <a href="subject.html#3615">[ 件名 ]</a>
+              <a href="author.html#3615">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Sat, 29 Sep 2007 17:07:07 +0900
+&quot;H.Hachisuka&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hachi ＠ asu.ac.jp</A>&gt; wrote:
+&gt;<i>Scratch(MITが開発した子供向けのブロック風のプログラム言語)ですが、調べて
+</I>&gt;<i>みたところスクイークで開発されているみたいなのですが、ここのMLでは取り上
+</I>&gt;<i>げられた事がないように思います。スクイークとは別物と考えた方がいいので
+</I>&gt;<i>しょうか？
+</I>
+言葉は出てきたことがありますが、確かに説明はなかったですね。
+
+Scratchは、Squeak上でSmalltalk(古いSqueak 2.8をベースにしたMIT Squeak)を
+使って開発されていますが、Etoysとは直接のつながりはありません。また、ユー
+ザはSqueak上で動いていることを意識する必要はありません。
+本来のSqueakはEtoysも含めた環境全体を指しますが、日本でスクイークというと、
+ほとんど Etoysのことなので、その意味では別物です。
+
+中心的な開発者のJohn MaloneyさんはSqueakのキーパーソンでもあり、特に
+Morphicと呼ばれるUIのフレームワークで知られています(「Squeak入門 第3章」
+参照)。そういうこともあって、ScratchにはEtoys的な要素がいくつか含まれてい
+ます(どちらもLOGOのバリエーションと言った方が良いかもしれませんが)。
+スケッチ(Scratchではスプライト)に対してタイル (同ブロック)を組み合わせて
+スプリプトを書いていくことなどがそうです。 Etoysを使ったことがある人なら
+簡単に使えるようになるでしょう。
+
+Scratchのルック&amp;フィールは他のMITメディアラボのソフトと統一されており、レ
+イアウトが固定されていて、隠れているものがありません。目に見えているもの
+をシングルクリックあるいはドラッグすることで操作できます(ハロ、ビューワ、
+スクリプト、ワールド、全スクリプト、ウォッチャに相当するもが常に表示され
+ています)。
+Etoysでは、必要な機能がメニューの奥深くに隠れていたり、どこかに行ってしま
+ったり、つかむのに苦労したりなどということがありますが、このようなことが
+Scratchではあまりありません。マニュアルやヘルプなどのドキュメントも品質が
+高いです。
+
+ScratchはEtoysとは時間や制御に関する考え方が異なっており、Scratchは普通の
+プログラミング言語に近いです。スクリプトは勝手にループしませんし、刻み値
+もありません。スクリプトはイベントで起動され、タイミングは個々のブロック
+中のウェイトで合わせます。一般的な制御構文も一通り揃っています。
+
+Etoysがシミュレーションに特化しているのに対し、Scratchはインタラクティブ
+な音やアニメーション、ゲームに強く、それに必要な素材が最初から豊富に用意
+されているので、直ちに作品作りに取り掛かることができます。ゲームコントロー
+ラとして使えるScratchPadというセンサもあります(世界聴診器に似ていますが
+USB接続です)。
+
+これらの作品を公開するためのSuperSwikiのような場所が最初から用意されてい
+るのも特徴です。この仕組みは非常に洗練されており、プラグインがインストー
+ルされていなくてもJavaとWebブラウザで実行可能です。ここにはすでに32,000以
+上の作品が登録されています。
+
+<A HREF="http://scratch.mit.edu/">http://scratch.mit.edu/</A>
+
+その一方で、Etoysの特徴であるメタ的なところはほとんどなく、Scratch自体が
+どのように作られているのかを調べたり、分解して変更したりといったことはで
+きません。ScratchはScratch自体で書かれていませんし、Smalltalkのコードは隠
+されています。
+
+また、複数のスプライト間の関連を表現することが難しく、車をハンドルで操作
+するといったことがややトリッキーになります。 スクリプトに名前を付けること
+もできないので、ブロードキャストというラベルつきのイベントを使って呼び出
+します。
+たとえば、Drive a Carを Scratchで書くと以下のようになります。
+
+<A HREF="http://scratch.mit.edu/projects/abee/6783">http://scratch.mit.edu/projects/abee/6783</A>
+<A HREF="http://scratch.mit.edu/projects/abee/6779">http://scratch.mit.edu/projects/abee/6779</A>
+
+あと、日本語化については、私が試しにやってみたものがありますが、ちゃんと
+した多言語化は大島さんがやると聞いています。
+
+以上のように、Scratchは非常に完成度が高く、興味深いシステムです。目的が違
+うので必ずしもEtoysを置き換えるものではありませんが、デザイン面などでEtoys
+が参考にすべきことはたくさんあると思います。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003614.html">[Squeak-ja: 3614] Scratchについて
+</A></li>
+	<LI>次の記事 <A HREF="003617.html">[Squeak-ja: 3617] Re: Scratchについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3615">[ 日付 ]</a>
+              <a href="thread.html#3615">[ スレッド ]</a>
+              <a href="subject.html#3615">[ 件名 ]</a>
+              <a href="author.html#3615">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

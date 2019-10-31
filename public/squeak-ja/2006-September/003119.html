@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3119] Re: OmniBaseJ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203119%5D%20Re%3A%20OmniBaseJ&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003117.html">
+   <LINK REL="Next"  HREF="003121.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3119] Re: OmniBaseJ</H1>
+    <B>Saito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203119%5D%20Re%3A%20OmniBaseJ&In-Reply-To="
+       TITLE="[Squeak-ja: 3119] Re: OmniBaseJ">zaki_k_saito ＠ s8.dion.ne.jp
+       </A><BR>
+    <I>2006年 9月 13日 (水) 11:11:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003117.html">[Squeak-ja: 3117] Re: OmniBaseJ
+</A></li>
+        <LI>次の記事 <A HREF="003121.html">[Squeak-ja: 3121] Re: OmniBaseJ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3119">[ 日付 ]</a>
+              <a href="thread.html#3119">[ スレッド ]</a>
+              <a href="subject.html#3119">[ 件名 ]</a>
+              <a href="author.html#3119">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+齊藤ともうします
+
+早速のご対応ありがとうございます
+日本語を含んだ変数名についてのテストケースです
+
+'----------------------------------------------------------------------------------------------'
+
+'From Squeakland 3.8-05 of 7 September 2005 [latest update: #552] on 13 
+September 2006 at 10:58:48 am'!
+Object subclass: #Test
+ instanceVariableNames: 'a b c v場所'
+ classVariableNames: ''
+ poolDictionaries: ''
+ category: '食製1-物品'!]lang[(55 2 60 2 2 2 1)0,5,0,5,0,5,0!
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+a
+ &quot;Answer the value of a&quot;
+
+ ^ a! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+a: anObject
+ &quot;Set the value of a&quot;
+
+ a _ anObject! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+b
+ &quot;Answer the value of b&quot;
+
+ ^ b! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+b: anObject
+ &quot;Set the value of b&quot;
+
+ b _ anObject! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+c
+ &quot;Answer the value of c&quot;
+
+ ^ c! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+c: anObject
+ &quot;Set the value of c&quot;
+
+ c _ anObject! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!
+m場所
+
+ ^ v場所!]lang[(1 2 6 2)0,5,0,5! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!
+m場所: anObject
+
+ v場所 _ anObject!]lang[(1 2 14 2 11)0,5,0,5,0! !
+
+
+
+'------------------------------------------------------------------'
+
+db_OmniBase openOn:'c:\testOmni'.
+tra_db newTransaction.
+inst_Test new.
+inst a:'漢字１'.
+inst b:'漢字2'.
+inst c:Time now.
+inst m場所:'千葉県'.
+tra root at:#TEST put: inst.
+Transcript cr; show: inst a printString.
+Transcript cr; show: inst b printString.
+Transcript cr; show: inst c printString.
+Transcript cr; show: inst m場所 printString.
+tra commit.
+db close.
+
+==&gt;'漢字１'
+==&gt;'漢字2'
+==&gt;10:52:09 am
+==&gt;'千葉県'
+
+'-----------------------------------------------------------------'
+
+db_OmniBase openOn:'c:\testOmni'.
+tra_db newTransaction.
+ans_tra root at:#TEST.
+Transcript cr; show: ans a printString.
+Transcript cr; show: ans b printString.
+Transcript cr; show: ans c printString.
+Transcript cr; show: ans m場所 printString.
+tra commit.
+db close.
+
+==&gt;'漢字１'
+==&gt;'漢字2'
+==&gt;10:52:09 am
+==&gt;nil
+'-------------------------------------------------------------------------'
+お送りいただいた&quot;日本語クラス名用のパッチ&quot;は
+これから、ためしてみます
+
+
+
+
+----- Original Message ----- 
+From: &quot;Masashi Umezawa&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">umejava ＠ mars.dti.ne.jp</A>&gt;
+To: &quot;Squeak discussion in Japanese&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja ＠ smalltalk.jp</A>&gt;
+Sent: Tuesday, September 12, 2006 7:59 PM
+Subject: [Squeak-ja: 3117] Re: OmniBaseJ
+
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;<i> とりあえず、日本語クラス名用のパッチを書いてみました。日本語変数名は、
+</I>&gt;<i> 自分の環境では、うまくいってしまったので、何も対処していません。
+</I>&gt;<i> (テストケースがあればお知らせください。)
+</I>&gt;<i>
+</I>&gt;<i> 添付のチェンジセットをインストールするか、もしくはMCZをロードします。
+</I>&gt;<i>
+</I>&gt;<i> MCZは
+</I>&gt;<i> <A HREF="http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.8.mcz">http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.8.mcz</A>
+</I>&gt;<i>
+</I>&gt;<i> にあります。
+</I>&gt;<i>
+</I>&gt;<i> &quot;Saito&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">zaki_k_saito ＠ s8.dion.ne.jp</A>&gt; wrote:
+</I>&gt;&gt;<i> こんにちはOmniBaseJでの質問ですクラス名や変数名に日本語を使うとうまくいきませんが、無理でしょうか&gt;[Squeak-ja: 2676] OmniBaseJ&gt;こんにちは
+</I>&gt;&gt;<i> &gt;梅澤です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt;Squeak上で、大きなデータを扱いたいとき、データベースがあると良いなという
+</I>&gt;&gt;<i> &gt;要求がわき起こってくるものです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt;しかし、いわゆるリレーショナルDBでは、Squeakが持っているオブジェクト指向の 
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt;簡明さが、オブジェクト &lt;-&gt; 表 の変換作業によって失われてしまいます。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt;ということで、どうせ使うのであればオブジェクト指向DBということになります。 
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt;このたび、OmniBaseというフリーで使えるSqueak上のオブジェクト指向DBを日本語化
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt;しましたので、ぜひお使いください。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt;下記に情報があります。
+</I>&gt;&gt;<i> &gt;<A HREF="http://swikis.ddo.jp/umejava/24">http://swikis.ddo.jp/umejava/24</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt;SmalltalkのDictionaryを使うのとほぼ同じ感覚でDBが使えます。便利ですよ。
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa] 
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003117.html">[Squeak-ja: 3117] Re: OmniBaseJ
+</A></li>
+	<LI>次の記事 <A HREF="003121.html">[Squeak-ja: 3121] Re: OmniBaseJ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3119">[ 日付 ]</a>
+              <a href="thread.html#3119">[ スレッド ]</a>
+              <a href="subject.html#3119">[ 件名 ]</a>
+              <a href="author.html#3119">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7170] Re: &quot;0 @ 0&quot; について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207170%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6ICIwIEAgMCIgGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=45140BBC.2040301%40ps.inforyoma.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007169.html">
+   <LINK REL="Next"  HREF="007174.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7170] Re: &quot;0 @ 0&quot; について</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207170%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6ICIwIEAgMCIgGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=45140BBC.2040301%40ps.inforyoma.or.jp"
+       TITLE="[SML 7170] Re: &quot;0 @ 0&quot; について">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 9月 23日 (土) 02:37:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007169.html">[SML 7169] &quot;0 @ 0&quot; について
+</A></li>
+        <LI>次の記事 <A HREF="007174.html">[SML 7174] Re: &quot;0 @ 0&quot; について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7170">[ 日付 ]</a>
+              <a href="thread.html#7170">[ スレッド ]</a>
+              <a href="subject.html#7170">[ 件名 ]</a>
+              <a href="author.html#7170">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木です。
+
+&gt;<i> 数年前に投稿したきりでROMのみでしたが、一度は挫折した
+</I>&gt;<i> Smalltalkを青木さん「Smalltalkイディオム」で再挑戦しています。
+</I>
+拙著「Smalltalk イディオム」は上級者向けに書き下ろしましたの
+で、これから取り組もうという方々には難しいように思います。
+
+&gt;<i> しかし、いきなり躓いてしまいました。
+</I>&gt;<i> 「2.基本-&gt;do it」の最初のプログラムの&quot;0 @ 0&quot;でメッセージの
+</I>&gt;<i> 遣り取りを調べていくと、&quot;self basicNew&quot;が出てきたところで追い
+</I>&gt;<i> かけられなくなりました。
+</I>
+なるほど。ミイラ取りがミイラになる感じですよね。ここを切り抜
+けないと、どうしようもないのですが、後回しにして進むのも良策
+ですよ。
+
+どうしても追いかけられないのがイヤ（気にくわない）というので
+あれば、メタクラス系列へ歩を進める必要があります、次のＰＤＦ
+の２ページ目から５ページ目が参考になりますので、どうぞご覧に
+なってください。特に３ページ目が重要です。
+
+<A HREF="http://www.sra.co.jp/people/aoki/SmalltalkLecture/SmalltalkLecture06.pdf">http://www.sra.co.jp/people/aoki/SmalltalkLecture/SmalltalkLecture06.pdf</A>
+
+『new』や『basicNew』はインスタンスに送るメッセージではなく、
+クラスに送るメッセージですから、メソッドサーチの系列はメタク
+ラス階層をたどるのです。クラス階層ではありません。寺内さんは
+道を間違えて遭難している状態です。
+
+［aPoint］〜＞【Point】→ 【ArithmeticValue】→ 【Magnitude】
+→ 【Object】→【nil】という「クラス階層」をたどっていて、
+
+［Point］〜＞【Point class】→ 【ArithmeticValue class】→
+【Magnitude class】→ 【Object class】→ 【Cass】→
+【ClassDescription】→【Behavior】→ 【Object】→【nil】とい
+うメタクラス階層をたどっていないのです。
+
+もっとも大切なことは、［インスタンス］〜＞【クラス】のところ
+でして、(100 @ 200) がレシーバであれば［aPoint］〜＞【Point】
+であり、Point がレシーバであれば［Point］〜＞【Point class】
+になります。
+
+Smalltalk では、クラスといえども、インスタンスなので、メタ
+クラスの「唯一のインスタンス（シングルトン）」なんです。
+
+&gt;<i> &quot;Core.&quot;が付加されている意味がわかりません。
+</I>
+名前空間（NameSpace）です。クラス名に幾つも前置できます。たと
+えば、今、寺内さんが用いているブラウザ（プログラミング）の環
+境は「Refactory.Browser.BrowserEnvironment」というようにです。
+
+名前にスコープを与えて、衝突（自分がつけた名前と他人がつけた
+名前が同じになること）を避ける目的で VisualWorks 5i.x から導
+入されました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007169.html">[SML 7169] &quot;0 @ 0&quot; について
+</A></li>
+	<LI>次の記事 <A HREF="007174.html">[SML 7174] Re: &quot;0 @ 0&quot; について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7170">[ 日付 ]</a>
+              <a href="thread.html#7170">[ スレッド ]</a>
+              <a href="subject.html#7170">[ 件名 ]</a>
+              <a href="author.html#7170">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

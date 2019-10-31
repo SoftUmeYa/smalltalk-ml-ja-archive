@@ -1,0 +1,1213 @@
+From abee ＠ squeakland.jp  Tue Aug  8 13:19:45 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3072] 月刊 ascii 新装刊準備号にスクイークの記事
+Message-ID: <44D810E1304.CC55ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+月刊ascii 新装刊準備号に「タブレットPCを駆使しプログラミングを学ぶ小学校
+IT教育の最前線　立命館小学校でアラン・ケイが特別授業」という4ページの記事
+が載っています。
+これは6月に京都の立命館小学校で行われたスクイークを使った公開授業の取材に
+よるものです。
+
+この新装刊準備号の入手方法がよく分からないのですが、もしご覧になる機会が
+ありましたらお読みください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Tue Aug  8 13:26:29 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3073] 8/11( 金 )-17( 木 ) Squeakland.jp が停止します。
+Message-ID: <44D81275D4.CC56ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Squeakland.jpは、サーバを置かせてもらっている多摩美八王子キャンパスの構内
+電気総合点検にともなう停電のため、 8/11(金)から 8/17(木)まで停止します。
+
+この期間中にワークショップなどを予定されている方は特にご注意ください。必
+要なものはあらかじめダウンロードをお願いします。
+また、SuperSwikiも合わせて停止しますので、この間はSqueakland.jpへの作品の
+公開や参照もできなくなります。
+
+ご迷惑をおかけしますが、何卒よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Wed Aug  9 00:00:09 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3074] [ 変更 ] 8/12( 土 )-14( 月 ) 午前 Squeakland.jp が停止します。
+In-Reply-To: <44D81275D4.CC56ABEE@smtp.nifty.com>
+References: <44D81275D4.CC56ABEE@smtp.nifty.com>
+Message-ID: <44D8A6F937.CC6AABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+多摩美の皆さんのご尽力で、停止期間が8/12(土)から8/14(月)午前までと短くな
+りました。ありがとうございました。
+
+On Tue, 08 Aug 2006 13:26:29 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>Squeakland.jpは、サーバを置かせてもらっている多摩美八王子キャンパスの構内
+>電気総合点検にともなう停電のため、 8/11(金)から 8/17(木)まで停止します。
+>
+>この期間中にワークショップなどを予定されている方は特にご注意ください。必
+>要なものはあらかじめダウンロードをお願いします。
+>また、SuperSwikiも合わせて停止しますので、この間はSqueakland.jpへの作品の
+>公開や参照もできなくなります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From lum ＠ uni.sony.co.jp  Wed Aug  9 16:12:51 2006
+From: lum ＠ uni.sony.co.jp (Michitoshi Sato)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3075] source of ImmX11Plugin
+Message-ID: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>
+
+
+佐藤通敏です。
+このMLは読んでいるだけなのですが、
+
+SqueakのSolaris用パッケージを作ろうとしています。
+Squeak-3.7-7.src.tar.gzを展開してコンパイルして実行したところ
+日本語が正しく表示できています。
+
+ところが、日本語を入力する段になって、上手くいかないので、調べてみた
+ところ、ImmX11Plugin がソースに含まれていないようです。
+
+このプラグインのソースは何処から入手することができるのでしょうか？
+
+宣しくお願い致します。
+
+
+
+From kawa90 ＠ yahoo.co.jp  Thu Aug 10 01:15:06 2006
+From: kawa90 ＠ yahoo.co.jp (・ ひでお)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3076] Re: source of ImmX11Plugin
+In-Reply-To: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>
+Message-ID: <20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>
+
+かわむらです。佐藤さんはじめまして。
+武藤さんのページ
+http://qml.610t.org/squeak/VM.html
+経由でXIM用パッチは
+http://squeak.hp.infoseek.co.jp/squeak/linux/SqueakImmX11Plugin2a.tar.gz
+にあるようです。
+
+老婆心ながら最新Ubuntu(Linux)ではうまく日本語入力できなかったです。という
+よりSegmentation faultになってしまったので、一部ソースを修正した記憶があ
+ります。
+
+それでは。
+--- Michitoshi Sato <lum@uni.sony.co.jp> wrote:
+
+> 
+> 佐藤通敏です。
+> このMLは読んでいるだけなのですが、
+> 
+> SqueakのSolaris用パッケージを作ろうとしています。
+> Squeak-3.7-7.src.tar.gzを展開してコンパイルして実行したところ
+> 日本語が正しく表示できています。
+> 
+> ところが、日本語を入力する段になって、上手くいかないので、調べてみた
+> ところ、ImmX11Plugin がソースに含まれていないようです。
+> 
+> このプラグインのソースは何処から入手することができるのでしょうか？
+> 
+> 宣しくお願い致します。
+> 
+> 
+> 
+
+
+--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+http://pr.mail.yahoo.co.jp/auction/
+
+From mutoh ＠ openedu.org  Mon Aug 14 20:42:12 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3077] Re: source of ImmX11Plugin
+In-Reply-To: <20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>
+References: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>
+	<20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>
+Message-ID: <86odunee7f.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+夏休みの宿題として、XIM入りのsqueakをFreeBSDに入れようと考えてます;-)
+
+At Thu, 10 Aug 2006 01:15:06 +0900 (JST),
+・ ひでお <kawa90@yahoo.co.jp> wrote:
+> 武藤さんのページ
+> http://qml.610t.org/squeak/VM.html
+> 経由でXIM用パッチは
+> http://squeak.hp.infoseek.co.jp/squeak/linux/SqueakImmX11Plugin2a.tar.gz
+> にあるようです。
+> 
+> 老婆心ながら最新Ubuntu(Linux)ではうまく日本語入力できなかったです。という
+> よりSegmentation faultになってしまったので、一部ソースを修正した記憶があ
+> ります。
+
+この症状ってどんな感じでしたでしょうか?
+
+あと、ソースの修正ってなにを修正されたか覚えておられてますか?
+
+
+僕の把握している範囲だと、
+
+- 3.6-3 -> 3.7-7
+-- src/plugins.extがplatforms/unix/src/plugins.extに移動したので最初のパッチがあたらない
+-- EXTERNAL_PLUGINSにSqueak3Dが追加されている
+
+- 3.7-7 -> 3.9-7
+-- SqueakFFIPrimsがINTERNAL_PLUGINに変わった
+# なんか、今イメージの方でFFI削除されているみたいですが…
+-- PseudoTTYPlugin, UnixOSProcessPlugin, AioPluginがEXTERNAL PLUGINSに追加
+ぐらいだったと思うんですが。
+
+参考までに。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+
+From miyasaka ＠ iris.dti.ne.jp  Tue Aug 15 12:14:04 2006
+From: miyasaka ＠ iris.dti.ne.jp (miyasaka@iris.dti.ne.jp)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3078] スクイークワークショップのご報告
+Message-ID: <1155611644439.61194521@DTI-Tools>
+
+Squeak-jaの皆様へ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+いつもスクイークを活用させていただき、ありがとうございます！
+現在我々が行っているワークショップなどの活動について、簡単ですがご報告
+させていただきます。
+
+■高松の「eとぴあ・かがわ」
+8月10〜13日の４日間、香川県情報通信交流館 「e-とぴあ・かがわ」でスク
+イークのワークショップを行ってきました。
+テーマは「ゲームを作ろう！」です。
+参加者は各回15〜20名くらいで、当方のスタッフ3名＋eとぴあのスタッフ2〜3
+名の5〜6名体制でサポートをしました。
+参加してくれた子供たちは皆とても喜んでくれたようで、スタッフ一同本当に
+いい経験ができました。
+詳しくは下記のサイトの「スクイーク美術館」にワークショップの模様と子供
+たちの作品が掲載されていますので、ご参考ください。
+http://mts-j.hiho.jp/
+
+「eとぴあ・かがわ」では今年の２月にもワークショップを行ったのですが、今
+後も不定期にスクイークのワークショップは開催する予定とのこと。
+高松の子供たちもスクイークを学ぶことができる機会がこれからもっともっと
+増えてくればと思います。
+
+■ワークショップ「デジタル絵本を作ろう」
+６月から月１回の頻度で「デジタル絵本を作ろう！」というテーマで、デジタ
+ルハリウッド大学秋葉原校を会場に定期的にワークショップを開催しています。
+http://mts-j.hiho.jp/2006/06/post_4.html
+6月の初回はどたばたしてしまいましたが、2回目の7月はなんとか形になってき
+ました。（次回は8月26日です）
+この調子でいけば、今年度中には「デジタル絵本」制作を効果的に学習するた
+めのノウハウが蓄積できると考えているのですが、どうなることやら。。。
+
+■経産省ITクラフトマンシップ事業
+今年度の経済産業省「ITクラフトマンシップ事業」に採択されました。
+http://www.meti.go.jp/press/20060703002/20060703002.html
+テーマは「国際競争力のあるITクラフトマン育成プログラム〜世界聴診器
+（World-Stethoscope ）のゲームプログラミングへの応用〜」です。
+世界聴診器の開発者でもある阿部さんにもご協力いただき、教材制作やワーク
+ショップの開催を行う予定です。
+「スクイーク＋世界聴診器」の魅力を少しでも多くの子供たちに伝えられるよ
+うに、多くの方に使っていただける教材を作りたい考えております。
+別途進捗状況はご報告させていただきますので、アドバイスなどいただければ
+幸いです。
+
+今後も、微力ながら、スクイークの魅力をたくさんの子供たちに伝えていけれ
+ばと思います。
+時々、またご報告させていただきますので、ご指導ご鞭撻のほど、よろしくお
+願いいたします！！
+
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+http://mts-j.hiho.jp/
+http://www.dhw.co.jp/gs/
+---------------------------------------------
+
+From hayasaka ＠ pluto.dti.ne.jp  Tue Aug 15 13:15:33 2006
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3079] DebianGNU/Linuxのsqueakインストール方法
+Message-ID: <000201c6c021$74170fc0$020ba8c0@computer>
+
+　はじめて投稿します、早坂という者です。
+
+　LinuxにSqueakをインストールしようと試みていますが、
+DebianGNU/Linuxでは、apt-get update, apt-get install squeaklandで、
+エラーが起きます。apt-get install squeaklandを実行すると、
+squeaklandに依存するsqueakland-image, squeakland-plugin,
+squeakland-vm がインストールされない、E: 壊れたパッケージと
+表示されます。なぜでしょうか。この理由と解決する方法があれば、
+教えて下さい。なお、Knoppixでは、同じ方法で問題なく、
+インストールできます。
+
+　　　　　　　　　　　　　　　　　　　　　　　　　　早坂　吉昭
+
+
+From maruyama ＠ an.wakwak.com  Tue Aug 15 15:01:15 2006
+From: maruyama ＠ an.wakwak.com (MARUYAMA Yutaka)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3080] Re: DebianGNU/Linuxのsqueakインストール方法
+In-Reply-To: <000201c6c021$74170fc0$020ba8c0@computer>
+References: <000201c6c021$74170fc0$020ba8c0@computer>
+Message-ID: <20060815.150115.74728435.maruyama@an.wakwak.com>
+
+丸山と申します。
+
+Debianと一口に言ってもディストリビューションが色々
+あるので(Sarge, Etch等)、それを明記した方がいいと
+思います。
+今回のケースは
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2006-August/106630.html
+ではないでしょうか？
+
+From yoshiki ＠ squeakland.org  Sat Aug 19 06:55:50 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3081] C5の論文募集
+Message-ID: <u4pw9lndl.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  来年の1月に第五回(すごい)C5国際会議が京都で開催されます。10月16日が
+論文締め切りです。今回から「ワークショップ」というトラックも行われるこ
+とになったようですので、こちらにワークショップの提案をすることもできる
+と思います。
+
+  皆様奮ってご参加ください。
+
+-- Yoshiki
+
+-----------------------------------------------------------------
+CALL FOR PAPERS AND WORKSHOP PROPOSALS
+
+The Fifth International Conference on
+Creating, Connecting and Collaborating through Computing (C5 2007)
+
+January 24 - 26, 2007, Kyoto University, Kyoto, Japan
+http://www.cm.is.ritsumei.ac.jp/c5-07/
+
+Organized by
+Hewlett-Packard Company
+Kyoto University 21st Century COE Program for Knowledge Society Infrastructure
+Viewpoints Research Institute
+
+SCOPE
+
+  Computers, networks, and other forms of technology are now pervasive
+  in our information-based society. However, most users still function
+  as passive consumers of technology. To evolve into a true knowledge
+  society, it is critical that we transform computer-based human
+  activities to engage users in the active process of creating,
+  connecting, and collaborating together.
+
+  The C5 conference is for researchers, technology developers,
+  educators, and technology users who are concerned about developing
+  and enabling human-oriented creation, connection, and collaboration
+  processes. C5 is an international forum for presenting ongoing work
+  as well as new work currently under development and for discussing
+  future needs and directions in creative computing and multimedia
+  authoring environments. We welcome equally the submission of
+  technical papers and practitioner/experience reports for paper
+  presentations. In addition, we are adding a workshop track for the
+  third day of the conference and are soliciting proposals for half-day
+  and full-day interactive workshops.
+
+TOPICS OF INTEREST
+
+  Topics of interest include but not limited to
+  - Development and applications of collaboration tools and environments
+  - User collaboration utilizing 3D, multimedia, and animation objects
+  - Technologies for creating educational environments
+  - Computer-Supported Collaborative Learning (CSCL) and
+    Technology-Enabled Learning (TEL)
+  - Computer-Supported Cooperative Work (CSCW), distributed work, and
+    virtual teaming
+  - Hybrid technology activities, such as scientific experiments,
+    instrumentation, robots, and game playing
+  - Development of applications/content for non traditional learning
+    environments, e.g. mentoring, peer-to-peer, "teacherless"
+    environments (in developing countries), e.g., $100 laptop
+  - Applications and tools for education from K-12 through higher education
+
+PAPER SUBMISSION GUIDELINES
+
+  Original papers concerned with both theory and practice are solicited.
+
+  A full paper with 8 page limit should be submitted by the paper
+  submission deadline. The papers are reviewed by the program comittee
+  and authors will be notified about acceptance. Accepted authors have
+  to submit a camera ready version of the full paper with 8 page limit
+  by the camera-ready copy deadline.  Papers should follow the
+  formatting instructions provided by 8.5" x 11", Two-Column Format of
+  "IEEE Computer Society Press - Proceedings Author Guidelines" (please
+  refer to "INFORMATION FOR AUTHORS" at
+  http://www.computer.org/portal/site/cscps/index.jsp).
+
+  Submitted papers and camera-ready papers should be sent
+  electronically through our online submission site
+  (http://www.cm.is.ritsumei.ac.jp/c5-07/myreview/). The PDF,
+  Postscript and MS-WORD formats are acceptable.
+
+WORKSHOP PROPOSAL GUIDELINES
+
+  The third day of the conference (Jan. 26, 2007) has been allotted 
+for workshops
+  and field trips. The workshop day is intended to offer conference participants
+  the opportunity to learn more about human-oriented creation, 
+connection, and collaboration
+  processes and tools through interactive group experiences. Workshops 
+allow conference
+  participants to apply what they have learned in the plenary sessions 
+and paper presentations
+  through hands-on activities, facilitated discussions, and field 
+trips to schools and sites
+  offering technology-enabled learning activities.
+
+  Workshop proposals should include workshop title, description of
+  topic, workshop organizers, workshop duration (half-day or full-day)
+  and estimated expenses (printing, etc.). Proposals should be sent to
+  the conference contact e-mail address indicated at the conference web
+  page.
+
+IMPORTANT DATES
+  Full paper submission: October 16, 2006
+  Workshop proposals: October 30, 2006
+  Notification of acceptance: November 30, 2006
+  Full paper camera-ready copies: January 7, 2007
+  Proposals for demos and posters: January 7, 2007
+
+PUBLICATION
+  Preliminary version of the proceedings will be distributed during the
+  conference. The formal version of the proceedings will be published
+  by the IEEE Computer Society and sent to authors after the
+  conference.
+
+ORGANIZING COMMITTEE
+
+Honorary Co-Chairs
+  Alan Kay, Viewpoints Research Institute, USA
+  Makoto Nagao, National Institute of Information and Communications 
+Technology (NICT), Japan
+
+Conference Co-Chairs
+  Kim Rose, Viewpoints Research Institute, USA
+  Katsumi Tanaka , Kyoto University, Japan
+
+Program Co-Chairs
+  Benay Dara-Abrams, DALaboratories, USA
+  Rieko Kadobayashi, National Institute of Information and 
+Communications Technology (NICT), Japan
+  Rick McGeer, Hewlett-Packard Company, USA
+  Kazuyuki Moriya, Kyoto University, Japan
+
+Workshop Track Chair
+  Benay Dara-Abrams, DALaboratories, USA
+
+Local Arrangement Chair
+  Hajime Kita, Kyoto University, Japan
+
+Publicity and Publication Chair
+  Hideyuki Takada, Ritsumeikan University, Japan
+
+From kawa90 ＠ yahoo.co.jp  Sun Aug 20 21:30:10 2006
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3082] Re: source of ImmX11Plugin
+In-Reply-To: <86odunee7f.wl%mutoh@openedu.org>
+References: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>
+	<20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>
+	<86odunee7f.wl%mutoh@openedu.org>
+Message-ID: <20060820213010.408674f7.kawa90@yahoo.co.jp>
+
+川村です。夏期休暇で返事が遅れました。
+
+おそらくFreeBSDでは問題ないと思われますが。。。
+
+まずUbuntu(Linux)でsqueak.の症状はwww.squeakland.jp/から
+ダウンロード・展開したオブジェクトで起動するとキーボード
+入力した時点でSegmentation faultになってしまうというもの
+でした。そこでgdbで調査するとsqUnixX11.cのXCreateFontSet
+関数がNULLを返すのが原因だと分かったので、応急処置として
+
+#define FONTNAME      "-*-Fixed-Medium-R-Normal--14-*-ISO8859-1"
+と変更しました。思うにUbuntuのデフォルトロケールがUTF8
+なので、いけなかったのではと思ってたり。ただ、EUC-JPに変
+更するのもいろいろ大変そうだったので、ソースを変更しまし
+た。XLibやXIMに詳しくないので、あくまでも対処療法です。
+
+それでは
+
+On Mon, 14 Aug 2006 20:42:12 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+
+> むとう＠おうちです。
+> 
+> 夏休みの宿題として、XIM入りのsqueakをFreeBSDに入れようと考えてます;-)
+> 
+> At Thu, 10 Aug 2006 01:15:06 +0900 (JST),
+> ・ ひでお <kawa90@yahoo.co.jp> wrote:
+> > 武藤さんのページ
+> > http://qml.610t.org/squeak/VM.html
+> > 経由でXIM用パッチは
+> > http://squeak.hp.infoseek.co.jp/squeak/linux/SqueakImmX11Plugin2a.tar.gz
+> > にあるようです。
+> > 
+> > 老婆心ながら最新Ubuntu(Linux)ではうまく日本語入力できなかったです。という
+> > よりSegmentation faultになってしまったので、一部ソースを修正した記憶があ
+> > ります。
+> 
+> この症状ってどんな感じでしたでしょうか?
+> 
+> あと、ソースの修正ってなにを修正されたか覚えておられてますか?
+> 
+> 
+> 僕の把握している範囲だと、
+> 
+> - 3.6-3 -> 3.7-7
+> -- src/plugins.extがplatforms/unix/src/plugins.extに移動したので最初のパッチがあたらない
+> -- EXTERNAL_PLUGINSにSqueak3Dが追加されている
+> 
+> - 3.7-7 -> 3.9-7
+> -- SqueakFFIPrimsがINTERNAL_PLUGINに変わった
+> # なんか、今イメージの方でFFI削除されているみたいですが…
+> -- PseudoTTYPlugin, UnixOSProcessPlugin, AioPluginがEXTERNAL PLUGINSに追加
+> ぐらいだったと思うんですが。
+> 
+> 参考までに。
+> 
+> では。
+> --
+> 武藤 武士＠「あおによし」自宅より 
+>  E-mail:mutoh@openedu.org	URL:http://610T.org/
+>  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+>  ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+> 
+> 
+--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+http://pr.mail.yahoo.co.jp/auction/
+
+From epi9tetus ＠ gmail.com  Thu Aug 24 01:55:18 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3083] 子供向けWSのリクエストをこちらに書いても？
+Message-ID: <7aa126770608230955m32ff59bm230a3d695f4f7e4f@mail.gmail.com>
+
+いつも興味深く拝見しつつ、さほど習得が進んでいるわけではなく、恥ずかしながら
+質問いたします。
+
+子供が通う小学校で、スクイークのWSを実施して頂いております。
+一連の課題がアニメーションで終了するためか、子供はアニメーションで遊ぶ道具として
+時々プロジェクトを作成しては喜んでいます。
+
+今回もWSが実施されましたが、子供を含めた前回参加のお友達も参加を見送りました。
+その理由は「内容が全く同じだから」「自分で作ったのを持ち込めないから」との
+ことでした。
+
+お絵かきソフトやアニメーション作成ためだけのプログラムでは無いことを学校の先生から
+指導できない状況であるために、子供たちへの情報が希薄であると感じています。
+
+子供と相談した結果、例えば普段スクイークを自宅でも触ることがある小学生たちや
+その保護者からWSへのリクエストをこちらに投稿するのは迷惑だろうか？という
+質問を送信させていただくことにしました。
+
+個人的には、せっかく興味を持って触り始めたので、このままフェードアウトせずに
+もう少し楽しみながらスクイークの世界を探索してほしいと感じています。
+
+WSの形態にも思うところがあり、お伝えして役に立つ場で発言できれば良いなと思う
+のですが、学校では「リクエストされては困る」といわれており＾＾；
+まずは、そういったトピックがこの場に望まれているかどうかをお尋ねした次第です。
+
+長文失礼いたしました。
+EPI♪
+
+From yoshiki ＠ squeakland.org  Thu Aug 24 12:02:40 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3084] Re: スクイークワークショップのご報告
+In-Reply-To: <1155611644439.61194521@DTI-Tools>
+References: <1155611644439.61194521@DTI-Tools>
+Message-ID: <uveoikf8v.wl%yoshiki@squeakland.org>
+
+  宮坂さん
+
+  僕もとても期待していますので、がんばってください。
+
+-- Yoshiki
+
+At Tue, 15 Aug 2006 12:14:04 +0900 (JST),
+miyasaka@iris.dti.ne.jp wrote:
+> 
+> Squeak-jaの皆様へ
+> 
+> お世話になっております。
+> デジタルハリウッド大学院の宮坂です。
+> 
+> いつもスクイークを活用させていただき、ありがとうございます！
+> 現在我々が行っているワークショップなどの活動について、簡単ですがご報告
+> させていただきます。
+> 
+> ■高松の「eとぴあ・かがわ」
+> 8月10〜13日の４日間、香川県情報通信交流館 「e-とぴあ・かがわ」でスク
+> イークのワークショップを行ってきました。
+> テーマは「ゲームを作ろう！」です。
+> 参加者は各回15〜20名くらいで、当方のスタッフ3名＋eとぴあのスタッフ2〜3
+> 名の5〜6名体制でサポートをしました。
+> 参加してくれた子供たちは皆とても喜んでくれたようで、スタッフ一同本当に
+> いい経験ができました。
+> 詳しくは下記のサイトの「スクイーク美術館」にワークショップの模様と子供
+> たちの作品が掲載されていますので、ご参考ください。
+> http://mts-j.hiho.jp/
+> 
+> 「eとぴあ・かがわ」では今年の２月にもワークショップを行ったのですが、今
+> 後も不定期にスクイークのワークショップは開催する予定とのこと。
+> 高松の子供たちもスクイークを学ぶことができる機会がこれからもっともっと
+> 増えてくればと思います。
+> 
+> ■ワークショップ「デジタル絵本を作ろう」
+> ６月から月１回の頻度で「デジタル絵本を作ろう！」というテーマで、デジタ
+> ルハリウッド大学秋葉原校を会場に定期的にワークショップを開催しています。
+> http://mts-j.hiho.jp/2006/06/post_4.html
+> 6月の初回はどたばたしてしまいましたが、2回目の7月はなんとか形になってき
+> ました。（次回は8月26日です）
+> この調子でいけば、今年度中には「デジタル絵本」制作を効果的に学習するた
+> めのノウハウが蓄積できると考えているのですが、どうなることやら。。。
+> 
+> ■経産省ITクラフトマンシップ事業
+> 今年度の経済産業省「ITクラフトマンシップ事業」に採択されました。
+> http://www.meti.go.jp/press/20060703002/20060703002.html
+> テーマは「国際競争力のあるITクラフトマン育成プログラム〜世界聴診器
+> （World-Stethoscope ）のゲームプログラミングへの応用〜」です。
+> 世界聴診器の開発者でもある阿部さんにもご協力いただき、教材制作やワーク
+> ショップの開催を行う予定です。
+> 「スクイーク＋世界聴診器」の魅力を少しでも多くの子供たちに伝えられるよ
+> うに、多くの方に使っていただける教材を作りたい考えております。
+> 別途進捗状況はご報告させていただきますので、アドバイスなどいただければ
+> 幸いです。
+> 
+> 今後も、微力ながら、スクイークの魅力をたくさんの子供たちに伝えていけれ
+> ばと思います。
+> 時々、またご報告させていただきますので、ご指導ご鞭撻のほど、よろしくお
+> 願いいたします！！
+> 
+> 宮坂俊夫 (Toshio Miyasaka )
+> ---------------------------------------------
+> デジタルハリウッド大学院
+> デジタルコンテンツ研究科　研究員
+> http://mts-j.hiho.jp/
+> http://www.dhw.co.jp/gs/
+> ---------------------------------------------
+
+From mutoh ＠ openedu.org  Fri Aug 25 21:26:47 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:32 2007
+Subject: [Squeak-ja: 3085] 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+In-Reply-To: <20060820213010.408674f7.kawa90@yahoo.co.jp>
+References: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>
+	<20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>
+	<86odunee7f.wl%mutoh@openedu.org>
+	<20060820213010.408674f7.kawa90@yahoo.co.jp>
+Message-ID: <868xldc86w.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+なんか、夏休みも終わりが近付いてきていて少し焦ってたり;-)
+
+At Sun, 20 Aug 2006 21:30:10 +0900,
+Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+> おそらくFreeBSDでは問題ないと思われますが。。。
+> 
+> まずUbuntu(Linux)でsqueak.の症状はwww.squeakland.jp/から
+> ダウンロード・展開したオブジェクトで起動するとキーボード
+> 入力した時点でSegmentation faultになってしまうというもの
+> でした。そこでgdbで調査するとsqUnixX11.cのXCreateFontSet
+> 関数がNULLを返すのが原因だと分かったので、応急処置として
+> 
+> #define FONTNAME      "-*-Fixed-Medium-R-Normal--14-*-ISO8859-1"
+> と変更しました。思うにUbuntuのデフォルトロケールがUTF8
+> なので、いけなかったのではと思ってたり。ただ、EUC-JPに変
+> 更するのもいろいろ大変そうだったので、ソースを変更しまし
+> た。XLibやXIMに詳しくないので、あくまでも対処療法です。
+
+UTF-8ロケールで問題が起きるのであれば、FreeBSDでもUTF-8で環境を作って
+いる人は同じ問題にはまる可能性はありますね…
+# ちょっと調べてみます(_O_)
+
+
+本当は調べるべきだとは思うのですが、御存じの方がいれば教えてください。
+ImmX11Pluginで日本語以外のロケールのIMを使っている場合、利用できるイメー
+ジなどは存在しているのでしょうか?
+例えば、韓国語とか中国語とかで利用可能な状態なんでしょうかね?
+# これが可能だと、FreeBSD portsにも突っ込みやすいかなと。
+
+情報をお持ちの方、教えていただけると幸いです。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+From abee ＠ squeakland.jp  Sun Aug 27 21:14:55 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3086] Re: 子供向け WS のリクエストをこちらに書いても？
+In-Reply-To: <7aa126770608230955m32ff59bm230a3d695f4f7e4f@mail.gmail.com>
+References: <7aa126770608230955m32ff59bm230a3d695f4f7e4f@mail.gmail.com>
+Message-ID: <44F18CBF14.A9D4ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 24 Aug 2006 01:55:18 +0900
+"EPI♪" <epi9tetus@gmail.com> wrote:
+>WSの形態にも思うところがあり、お伝えして役に立つ場で発言できれば良いなと思う
+>のですが、学校では「リクエストされては困る」といわれており＾＾；
+>まずは、そういったトピックがこの場に望まれているかどうかをお尋ねした次第です。
+
+以前に、
+
+>要は、Squeakに関することなら、誰が何を書いてもかまわないということです。
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-May/002969.html
+
+と書いたように、何を書かれても結構です。
+
+直接お会いしてお話しすると、「難しい話題が多くて書き込みにくい」「初心者
+が質問をすると怒られるのではないか」と言われることがあります。そんなこと
+はありませんので、お気軽にどうぞ。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From epi9tetus ＠ gmail.com  Mon Aug 28 00:03:04 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3087] Re: 子供向け WS のリクエストをこちらに書いても？
+In-Reply-To: <44F18CBF14.A9D4ABEE@smtp.nifty.com>
+References: <7aa126770608230955m32ff59bm230a3d695f4f7e4f@mail.gmail.com>
+	<44F18CBF14.A9D4ABEE@smtp.nifty.com>
+Message-ID: <7aa126770608270803m3eae21f7s145bbe5afaf4c526@mail.gmail.com>
+
+阿部様、ご返信有り難うございます。
+
+> >要は、Squeakに関することなら、誰が何を書いてもかまわないということです。
+> http://www.smalltalk.jp/pipermail/squeak-ja/2006-May/002969.html
+> と書いたように、何を書かれても結構です。
+
+子供たちの意見と保護者の感想などを整理して別トピにて記述させて頂きたいと
+存じます。
+
+> 直接お会いしてお話しすると、「難しい話題が多くて書き込みにくい」「初心者
+> が質問をすると怒られるのではないか」と言われることがあります。そんなこと
+> はありませんので、お気軽にどうぞ。
+
+両方とも当てはまりますが、自分の運営する芸術関連のMLでそのように言われると
+「自分の知識の中で疑問に思うことを多少なりとも努力して、結果と質問を表現して
+下されば、コミュニケーションは成立つはずです＾＾　むしろ黙っておられると読んで
+いるのかさえ、わかりませんから＾＾」と返事しているために、勇気を出して投稿して
+いる部分があります＾＾；
+
+場違いな投稿をしてしまっても、指摘して頂けるような印象を受けましたので、
+参加継続させて頂いております。
+
+取り急ぎお礼のみにて失礼致します。
+
+あぴ
+
+From lum ＠ uni.sony.co.jp  Mon Aug 28 08:10:25 2006
+From: lum ＠ uni.sony.co.jp (Michitoshi Sato)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3088] Re: 日本語ロケール以外でのImmX11Plugin(was Re: source of ImmX11Plugin)
+In-Reply-To: Your message of "Fri, 25 Aug 2006 21:26:47 JST."
+	<868xldc86w.wl%mutoh@openedu.org>
+Message-ID: <200608272310.k7RNAP0q000819@maurina.uni.sony.co.jp>
+
+佐藤通敏です。
+
+返事が遅くなりましたが、おかげさまで、Squeakで日本語の入力が
+できるようになりました。
+
+> むとう@おうちです。
+> 
+> なんか、夏休みも終わりが近付いてきていて少し焦ってたり;-)
+> 
+> At Sun, 20 Aug 2006 21:30:10 +0900,
+> Hideo Kawamura <kawa90@yahoo.co.jp> wrote:
+> > おそらくFreeBSDでは問題ないと思われますが。。。
+> > 
+> > まずUbuntu(Linux)でsqueak.の症状はwww.squeakland.jp/から
+> > ダウンロード・展開したオブジェクトで起動するとキーボード
+> > 入力した時点でSegmentation faultになってしまうというもの
+> > でした。そこでgdbで調査するとsqUnixX11.cのXCreateFontSet
+> > 関数がNULLを返すのが原因だと分かったので、応急処置として
+> > 
+> > #define FONTNAME      "-*-Fixed-Medium-R-Normal--14-*-ISO8859-1"
+> > と変更しました。思うにUbuntuのデフォルトロケールがUTF8
+> > なので、いけなかったのではと思ってたり。ただ、EUC-JPに変
+> > 更するのもいろいろ大変そうだったので、ソースを変更しまし
+> > た。XLibやXIMに詳しくないので、あくまでも対処療法です。
+> 
+> UTF-8ロケールで問題が起きるのであれば、FreeBSDでもUTF-8で環境を作って
+> いる人は同じ問題にはまる可能性はありますね…
+> # ちょっと調べてみます(_O_)
+
+SolarisでJDS(Gnome-2)にUTF-8ですが、問題ありませんでした。
+
+> 本当は調べるべきだとは思うのですが、御存じの方がいれば教えてください。
+> ImmX11Pluginで日本語以外のロケールのIMを使っている場合、利用できるイメー
+> ジなどは存在しているのでしょうか?
+> 例えば、韓国語とか中国語とかで利用可能な状態なんでしょうかね?
+> # これが可能だと、FreeBSD portsにも突っ込みやすいかなと。
+> 
+> 情報をお持ちの方、教えていただけると幸いです。
+> 
+> では。
+> --
+> 武藤 武士＠「あおによし」自宅より 
+>  E-mail:mutoh@openedu.org	URL:http://610T.org/
+>  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+>  ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+> 
+
+
+From epi9tetus ＠ gmail.com  Tue Aug 29 00:33:53 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3089] 子供向け WS（ワークショップ） のリクエスト
+Message-ID: <7aa126770608280833p2efb7903gd0366cbd6f2b3ec2@mail.gmail.com>
+
+小学生対象のWSについて、受講した子供たちや保護者からの感想とリクエストを
+まとめました。（子ども達7名、保護者5名からの集計です）
+
+１）参加した小学生の申し込みの動機
+・パソコンは家で触らせてもらえないから。
+・パソコンがうまくなりたいから。
+・面白そうだから。
+・家で、参加するように言われたら。
+
+２）参加した子供たちの保護者が子供に薦めた動機
+・スクイークは勉強になると聞いたから
+・子供が興味を示したから。
+・パソコンに興味はあるが、よく分からないから。
+
+３）前回参加して、今回参加しなかった理由（子供たち）
+・前と全く同じ内容だと聞いたから。
+・絵を描く時間が少なかったから。
+・1回でも休むと駄目といわれたから。
+・前回、何をしろと言われているのかよく分からず楽しくなかったから。
+
+４）リクエスト（子ども達）
+・予め何をするのか教えて欲しい（参加者への資料を先に配布希望）
+・自分で持参した写真を使いたい。（媒体の持込又は、ダウンロード）
+・ゲームを作りたい。
+・おたまじゃくし以外のアイテムをアニメーションにしたい。
+・作業中に、教えてくれる人を増やして欲しい。
+・自分で作ってきたプロジェクトを見て欲しい。
+・使える色を増やす方法を教えて欲しい。
+・箱の使い方をもっと教えて欲しい。（多分、更に複雑なアニメーションと言うことです）
+・グラデーションを使いたい。
+・先生の声が小さい（それぞれのテーブルで指導して下さる際）
+・親や先生と一緒に作業したい。
+・後で作ったものを見られるようにして欲しい。
+・プリントアウトして持って帰りたい。（スクリーンショット？）
+
+
+５）リクエスト（保護者）
+・小学校の先生と指導の先生の連携をもっととって欲しい。
+・ひとつづつのプロジェクトの目的をもっと明確にして欲しい。
+・予め資料の配布をして欲しい。
+・キーボードを利用した文字入力もプロジェクトに加えて欲しい。
+・助手の方（解説者以外の指導者）の指導の仕方を改善して欲しい。
+
+６）スクイークは何だと思いますか？（子ども達と保護者）
+・スクイークは星や自動車を描くことの出来るもの。アニメも上達したら出来る。
+・マウスで遊べるソフト。
+・パソコンに慣れるためのソフト。
+・ゲームがついているのに、学校や家ではさせてもらえないから面白くない。
+・ホームページ作成やチャットが出来ないソフト。
+・プリントアウトできない。
+・どのように役に立つのかよく分からない。
+・アニメを作るためのソフト。
+・ゲームが作れるソフト。
+
+
+以上が集計結果です。
+
+2度目に参加しなかった子ども達も、前回は楽しかったと言っていますが、
+それなのに参加しなかった理由を尋ねたので、上記のようにネガティブなコメントや
+リクエストが多いことをご承知下さるよう、お願いします。
+
+具体的に、気になる点や所感は以下の通りです。
+
+項目（１）（２）から感じられるのは、スクイークのWSと言うよりもパソコンに触る機会と
+とらえて参加している傾向が強いと言う点で、それぞれのパソコンに持つ期待感が
+現れていると思います。
+
+（３）〜（６）について、学校の先生方も多くオブザーブに来られているものの、作業は
+子ども達の方がよく理解しているために、態度が悪くても何も言えず（言う余裕がない）、
+指導の先生方もスクイークについてはエキスパートであられるものの
+子どもへの対応と言う点については、注意のそれた子をうまく軌道修正する術を
+身に付けておられないと言う印象が強く、役割分担の必要を感じました。
+（教えてもらっているのに、リールのついた椅子の上でスーパーマンになっている子ども
+など。）
+
+又、内容については、子ども達の習得度について個人差が激しく、ねらいを段階に分けて
+設定し、それを予め子どもと先生、参加する保護者に知らせておくことで、それぞれが
+充実した時間をもてるのでは無いかと感じられます。
+
+特に、子ども達が自発的に自分で復習してきたプロジェクトなどを「持ってきては駄目」と
+一言で済ますのではなく、継続してスクイークへの興味を維持できる流れを作る工夫が
+今後の継続に繋がるのではないかと感じます。
+
+小学校では、子供から先生にワークショップ以外の授業やパソコンクラブの場において
+「スクイークがしたい♪」とリクエストした場合、「難しいから駄目」と返事があるそうですが、
+何か宿題的なものをワークショップ後に残していただけると、保護者からもサポートできると
+思います。
+この辺りの大人間のコミュニケーションについて、イニシアティヴを取っているのは
+どの機関なのかよく分からないのですが、折角の好奇心を良い形で展開させてやれる
+方法は無いものかと感じられます。
+（家庭で、その後のプロジェクトを提案するのは至難の業ですので・・・）
+
+プログラム自体が対話形式だとの印象を受けることから、WSの展開の方法も対話形式
+に持って行けると、更に内容の濃いものになるのでは無いかと思いました。
+
+最後に私個人からの質問ですが、一つの課題を実践した後に、それを用いて考察や
+評価する時間が存在していないように思われますが、それが本来の形なのか、又は
+タイムアップになっているのか？気になりました。
+
+長文失礼致しました。
+
+EPI♪
+
+From yoshiki ＠ squeakland.org  Tue Aug 29 08:49:11 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3090] Re: 子供向け WS（ワークショップ） のリクエスト
+In-Reply-To: <7aa126770608280833p2efb7903gd0366cbd6f2b3ec2@mail.gmail.com>
+References: <7aa126770608280833p2efb7903gd0366cbd6f2b3ec2@mail.gmail.com>
+Message-ID: <ufyfgfmko.wl%yoshiki@squeakland.org>
+
+  EPIさん、報告どうもありがとうございます。
+
+  先生方は確かに子供を「しゃきっとさせる」技を持っている人が多いような
+気はしますね。
+
+  Squeakはアニメーションもできるものの、決してアニメーション作りのため
+に作られたツールではないというミスマッチがあるわけなんですよね。どちら
+かといえば、「アニメーションというものは、実は連続するものから一定間隔
+で絵を取り出して見せているだけなんだよ」というアイディアそのものを学ん
+でもらうため、さらには「連続したものから一定間隔で何かを取り出す、とい
+うアイディアは、本当にいろいろなことで使えるんだよ」ということを教える
+ツールという趣なわけですが、なかなかどうしてもそこは伝わりにくいところ
+ではあります。
+
+  「理科や算数が分かるようになる」ということでそういう方面によった話に
+集中したほうが、保護者の方が「キーボードもちゃんと打てるようにしてくれ
+るかと思った」というような過剰な期待を抱かないので良いかもしれませんね。
+
+  またまたいろいろな報告をお待ちしています。
+
+-- Yoshiki
+
+At Tue, 29 Aug 2006 00:33:53 +0900,
+EPI♪ wrote:
+> 
+> 小学生対象のWSについて、受講した子供たちや保護者からの感想とリクエストを
+> まとめました。（子ども達7名、保護者5名からの集計です）
+> 
+> １）参加した小学生の申し込みの動機
+> ・パソコンは家で触らせてもらえないから。
+> ・パソコンがうまくなりたいから。
+> ・面白そうだから。
+> ・家で、参加するように言われたら。
+> 
+> ２）参加した子供たちの保護者が子供に薦めた動機
+> ・スクイークは勉強になると聞いたから
+> ・子供が興味を示したから。
+> ・パソコンに興味はあるが、よく分からないから。
+> 
+> ３）前回参加して、今回参加しなかった理由（子供たち）
+> ・前と全く同じ内容だと聞いたから。
+> ・絵を描く時間が少なかったから。
+> ・1回でも休むと駄目といわれたから。
+> ・前回、何をしろと言われているのかよく分からず楽しくなかったから。
+> 
+> ４）リクエスト（子ども達）
+> ・予め何をするのか教えて欲しい（参加者への資料を先に配布希望）
+> ・自分で持参した写真を使いたい。（媒体の持込又は、ダウンロード）
+> ・ゲームを作りたい。
+> ・おたまじゃくし以外のアイテムをアニメーションにしたい。
+> ・作業中に、教えてくれる人を増やして欲しい。
+> ・自分で作ってきたプロジェクトを見て欲しい。
+> ・使える色を増やす方法を教えて欲しい。
+> ・箱の使い方をもっと教えて欲しい。（多分、更に複雑なアニメーションと言うことです）
+> ・グラデーションを使いたい。
+> ・先生の声が小さい（それぞれのテーブルで指導して下さる際）
+> ・親や先生と一緒に作業したい。
+> ・後で作ったものを見られるようにして欲しい。
+> ・プリントアウトして持って帰りたい。（スクリーンショット？）
+> 
+> 
+> ５）リクエスト（保護者）
+> ・小学校の先生と指導の先生の連携をもっととって欲しい。
+> ・ひとつづつのプロジェクトの目的をもっと明確にして欲しい。
+> ・予め資料の配布をして欲しい。
+> ・キーボードを利用した文字入力もプロジェクトに加えて欲しい。
+> ・助手の方（解説者以外の指導者）の指導の仕方を改善して欲しい。
+> 
+> ６）スクイークは何だと思いますか？（子ども達と保護者）
+> ・スクイークは星や自動車を描くことの出来るもの。アニメも上達したら出来る。
+> ・マウスで遊べるソフト。
+> ・パソコンに慣れるためのソフト。
+> ・ゲームがついているのに、学校や家ではさせてもらえないから面白くない。
+> ・ホームページ作成やチャットが出来ないソフト。
+> ・プリントアウトできない。
+> ・どのように役に立つのかよく分からない。
+> ・アニメを作るためのソフト。
+> ・ゲームが作れるソフト。
+> 
+> 
+> 以上が集計結果です。
+> 
+> 2度目に参加しなかった子ども達も、前回は楽しかったと言っていますが、
+> それなのに参加しなかった理由を尋ねたので、上記のようにネガティブなコメントや
+> リクエストが多いことをご承知下さるよう、お願いします。
+> 
+> 具体的に、気になる点や所感は以下の通りです。
+> 
+> 項目（１）（２）から感じられるのは、スクイークのWSと言うよりもパソコンに触る機会と
+> とらえて参加している傾向が強いと言う点で、それぞれのパソコンに持つ期待感が
+> 現れていると思います。
+> 
+> （３）〜（６）について、学校の先生方も多くオブザーブに来られているものの、作業は
+> 子ども達の方がよく理解しているために、態度が悪くても何も言えず（言う余裕がない）、
+> 指導の先生方もスクイークについてはエキスパートであられるものの
+> 子どもへの対応と言う点については、注意のそれた子をうまく軌道修正する術を
+> 身に付けておられないと言う印象が強く、役割分担の必要を感じました。
+> （教えてもらっているのに、リールのついた椅子の上でスーパーマンになっている子ども
+> など。）
+> 
+> 又、内容については、子ども達の習得度について個人差が激しく、ねらいを段階に分けて
+> 設定し、それを予め子どもと先生、参加する保護者に知らせておくことで、それぞれが
+> 充実した時間をもてるのでは無いかと感じられます。
+> 
+> 特に、子ども達が自発的に自分で復習してきたプロジェクトなどを「持ってきては駄目」と
+> 一言で済ますのではなく、継続してスクイークへの興味を維持できる流れを作る工夫が
+> 今後の継続に繋がるのではないかと感じます。
+> 
+> 小学校では、子供から先生にワークショップ以外の授業やパソコンクラブの場において
+> 「スクイークがしたい♪」とリクエストした場合、「難しいから駄目」と返事があるそうですが、
+> 何か宿題的なものをワークショップ後に残していただけると、保護者からもサポートできると
+> 思います。
+> この辺りの大人間のコミュニケーションについて、イニシアティヴを取っているのは
+> どの機関なのかよく分からないのですが、折角の好奇心を良い形で展開させてやれる
+> 方法は無いものかと感じられます。
+> （家庭で、その後のプロジェクトを提案するのは至難の業ですので・・・）
+> 
+> プログラム自体が対話形式だとの印象を受けることから、WSの展開の方法も対話形式
+> に持って行けると、更に内容の濃いものになるのでは無いかと思いました。
+> 
+> 最後に私個人からの質問ですが、一つの課題を実践した後に、それを用いて考察や
+> 評価する時間が存在していないように思われますが、それが本来の形なのか、又は
+> タイムアップになっているのか？気になりました。
+> 
+> 長文失礼致しました。
+> 
+> EPI♪
+
+From takeda.toshiyuki ＠ gmail.com  Tue Aug 29 11:27:22 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3091] Re: 子供向け WS（ワークショップ） のリクエスト
+In-Reply-To: <7aa126770608280833p2efb7903gd0366cbd6f2b3ec2@mail.gmail.com>
+References: <7aa126770608280833p2efb7903gd0366cbd6f2b3ec2@mail.gmail.com>
+Message-ID: <6544a1da0608281927p5a1792cbod4978ad4572b8099@mail.gmail.com>
+
+武田です。
+
+> 最後に私個人からの質問ですが、一つの課題を実践した後に、それを用いて考察や
+> 評価する時間が存在していないように思われますが、それが本来の形なのか、又は
+> タイムアップになっているのか？気になりました。
+
+「指導者」の考え方がわからないのですが、振り返り（リフレクション）の
+時間を取ることはよくあります。私が関わる場合は必須にしています。
+やり方はさまざまです。
+
+しかし、ワークショップはなかなか決まった通り進行しないので、時間切れに
+なってしまうこともあるかもしれません。その場合、保護者が家できちんと聞いて
+あげれば、それがリフレクションになるのではないでしょうか。
+
+From epi9tetus ＠ gmail.com  Tue Aug 29 21:30:47 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3092] Re: 子供向け WS（ワークショップ） のリクエスト
+In-Reply-To: <6544a1da0608281927p5a1792cbod4978ad4572b8099@mail.gmail.com>
+References: <7aa126770608280833p2efb7903gd0366cbd6f2b3ec2@mail.gmail.com>
+	<6544a1da0608281927p5a1792cbod4978ad4572b8099@mail.gmail.com>
+Message-ID: <7aa126770608290530g49e54effg1275344bc70b6dd5@mail.gmail.com>
+
+EPI♪です。ご返信、有り難うございました。
+
+>決してアニメーション作りのために作られたツールではないという
+>　----中略----
+>アイディアそのものを学んでもらうため、さらには「連続したものから一定間隔で何かを
+>取り出す、というアイディアは、本当にいろいろなことで使えるんだよ」ということ
+
+この点を実施校の先生方に先ず理解して頂けると、実施して下さるWSがより内容の
+濃いものになり、後に繋がると思っています。
+
+〜〜〜
+
+> しかし、ワークショップはなかなか決まった通り進行しないので、時間切れに
+> なってしまうこともあるかもしれません。その場合、保護者が家できちんと聞いて
+> あげれば、それがリフレクションになるのではないでしょうか。
+
+その場合も保護者向けの資料があれば、自宅でも続きが出来る場合が多いと期待
+しています。
+
+親　「WSはどうだった？何をしてきたの？」
+子　「いっぱい絵を描いて楽しかったよ＾＾ｖ」
+この程度の会話で終わっているのは、勿体無いような気がします。
+
+スクイーク自体をPCだと思っておられる親も少なからずおられ（ソフトという概念が無い）
+「うちのPCはWORDですから。WSに行かせて、興味をもたれてもそんな高いものを
+買えませんから行かせていません。」と聞いたときには驚きました。
+
+子どもが持ち帰る資料に「保護者の方へ」という別途資料を添付して、簡単な案内や
+WSのねらいが記載してあるだけでも、随分子ども達を取り巻く環境は変わるように
+思います。　（甘いかな？・・・）
+
+個々のWSで用意するよりも、実施校で予め出力して配布できるようなPDF資料を
+フォーラムかどこかに置いてあると良いのかも知れないです。
+（"小学校高学年用WS資料-保護者向け"など）
+
+長文失礼いたしました。
+
+EPI♪
+
+From korakurider ＠ yahoo.co.jp  Tue Aug 29 23:53:44 2006
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3093] 週刊アスキー9/12号にスクイークの記事
+Message-ID: <JS200608292353443.5941373@yahoo.co.jp>
+
+Korakuriderです。
+本日発売の週刊アスキーにスクイークの紹介記事が載っていました。
+少しですがアランさんのインタビューも入っています。
+取り急ぎ。
+
+--------------------------------------
+For All Sports Lovers!
+http://pr.mail.yahoo.co.jp/yells/
+
+From abee ＠ squeakland.jp  Wed Aug 30 00:21:26 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3094] Re: 週刊アスキー 9/12 号にスクイークの記事
+In-Reply-To: <JS200608292353443.5941373@yahoo.co.jp>
+References: <JS200608292353443.5941373@yahoo.co.jp>
+Message-ID: <44F45B763E0.101FABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 29 Aug 2006 23:53:44 +0900
+korakurider@yahoo.co.jp wrote:
+>本日発売の週刊アスキーにスクイークの紹介記事が載っていました。
+>少しですがアランさんのインタビューも入っています。
+
+私も少し取材されたのですが、もう出ていたのですね。
+早速チェックします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Wed Aug 30 00:33:46 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3095] Re: 週刊アスキー 9/12 号にスクイークの記事
+In-Reply-To: <44F45B763E0.101FABEE@smtp.nifty.com>
+References: <JS200608292353443.5941373@yahoo.co.jp>
+	<44F45B763E0.101FABEE@smtp.nifty.com>
+Message-ID: <ud5ajftet.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> On Tue, 29 Aug 2006 23:53:44 +0900
+> korakurider@yahoo.co.jp wrote:
+> >本日発売の週刊アスキーにスクイークの紹介記事が載っていました。
+> >少しですがアランさんのインタビューも入っています。
+> 
+> 私も少し取材されたのですが、もう出ていたのですね。
+> 早速チェックします。
+
+  僕も阿部さんの勇姿を見てみたいのですが、どうしたらよいのでしょうね。
+
+# ガンプラエキスポってなんだ?
+
+-- Yoshiki
+
+From umejava ＠ mars.dti.ne.jp  Wed Aug 30 09:12:37 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3096] LL Ringで発表してきました
+Message-ID: <JK2006083009123711.3769578@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+報告が遅れましたが、26日、南谷君とともに、LL RingでSqueakのプレゼンをして
+きました。入場曲は、ゾンビなイメージということで、結局「スリラー」にしました。
+
+当日の様子は、下記でうかがい知ることができます。
+
+http://ll.jus.or.jp/2006/blog/trackback#trackbacks
+http://www.google.co.jp/search?q=ll+ring+squeak
+http://ani.blueplane.jp/ume/42
+
+今回は、アナウンスをのんびりしているうちに、チケットがあっという間に
+売り切れてしまったということもあり、会場にはSqueakerの方達はほとんど皆無
+という、awayな状態でのプレゼンでした。
+
+来年は、もっと早めにアナウンスします。
+Squeakコミュの健在ぶりを示すべく、皆さん大挙して押し寄せましょう。
+
+では。
+---
+[:masashi | ^umezawa]
+

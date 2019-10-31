@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7322] Re: ブロック生成のメタプログラミング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207322%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46E6CEE9.8030201%40zephyr.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007319.html">
+   <LINK REL="Next"  HREF="007323.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7322] Re: ブロック生成のメタプログラミング</H1>
+    <B>Masato Sumi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207322%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46E6CEE9.8030201%40zephyr.dti.ne.jp"
+       TITLE="[SML 7322] Re: ブロック生成のメタプログラミング">sumi ＠ seagreen.ocn.ne.jp
+       </A><BR>
+    <I>2007年 9月 12日 (水) 13:14:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007319.html">[SML 7319] Re: ブロック生成のメタプログラミング
+</A></li>
+        <LI>次の記事 <A HREF="007323.html">[SML 7323] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7322">[ 日付 ]</a>
+              <a href="thread.html#7322">[ スレッド ]</a>
+              <a href="subject.html#7322">[ 件名 ]</a>
+              <a href="author.html#7322">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>鷲見です。
+
+07/09/12 に NISHIHARA Satoshi&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">nishis ＠ zephyr.dti.ne.jp</A>&gt; さんは書きました:
+&gt;<i> 感覚的には
+</I>&gt;<i> foldl (+) 0 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</I>&gt;<i> に近い……かな？
+</I>
+Haskell だと、関数名それ自体がインテリジェントな関数本体のような
+イメージもなくもない（カリー化をデフォで持っていたり…）ので、
+もっとシンプルなモデルで動く Scheme に言い換えると、
+
+(fold + 0 '(1 2 3 4 5))
+
+に対応するのはむしろ Symbol&gt;&gt;#value:、#value:value: を前提とした
+
+#(1 2 3 4 5) inject: 0 into: #+
+
+のほうで、今回のメタプログラミングの #asBlock を使ったこちら
+
+#(1 2 3 4 5) inject: 0 into: #+ asBlock
+
+は、例えるなら cut マクロを用いた
+
+(fold (cut + &lt;&gt; &lt;&gt;) 0 '(1 2 3 4 5))
+
+のほうに対応するような気が感覚的にはします(^_^;)。
+
+-- 
+Masato Sumi
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007319.html">[SML 7319] Re: ブロック生成のメタプログラミング
+</A></li>
+	<LI>次の記事 <A HREF="007323.html">[SML 7323] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7322">[ 日付 ]</a>
+              <a href="thread.html#7322">[ スレッド ]</a>
+              <a href="subject.html#7322">[ 件名 ]</a>
+              <a href="author.html#7322">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

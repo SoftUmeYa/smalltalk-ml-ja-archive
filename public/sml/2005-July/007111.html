@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7111] Smalltalkerのための初等数学
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207111%5D%20%3D%3Fiso-2022-jp%3Fb%3FU21hbGx0YWxrZXIbJEIkTiQ/JGEkTj1pGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRXk/dDNYGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007110.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7111] Smalltalkerのための初等数学</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207111%5D%20%3D%3Fiso-2022-jp%3Fb%3FU21hbGx0YWxrZXIbJEIkTiQ/JGEkTj1pGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRXk/dDNYGyhC%3F%3D&In-Reply-To="
+       TITLE="[SML 7111] Smalltalkerのための初等数学">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2005年 7月 27日 (水) 10:55:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007110.html">[SML 7110] Alan Kay leaves HP
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7111">[ 日付 ]</a>
+              <a href="thread.html#7111">[ スレッド ]</a>
+              <a href="subject.html#7111">[ 件名 ]</a>
+              <a href="author.html#7111">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+今「Smalltalker のための初等数学」を書き下ろしています。数の
+種類・集合・写像などを題目にかかげて、数学的操作のいかほどま
+で、Smalltalk にて可能なのかを明らかにしています。
+
+直弟子がなかなか集合操作をまとめてくれない（三年間もほったら
+かしな）ので、たまりかねて書き下ろしたという事情もあります。
+VisualWorks 7.3.1 をベースにしていますが、5i.4 でも 3.x でも
+動作可能なプログラムを含みます。（ということは Squeak でも）
+
+今年度の京都産業大学理学部コンピュータ科学科の夏期集中講義で
+用いたいと思うのですが、ちょっと時間が足りない感じなんです。
+（もし来年度も非常勤講師を勤められるならば講義で使います。）
+
+自然数・整数・有理数・有限小数・循環小数・無理数・無限小数・
+虚数・複素数を、Smalltalk に具備されている数システムと対比し、
+集合と写像のクラスを新設します。
+
+    Primary-Mathematics（パッケージ）
+    Primary（名前空間）
+    Primary.Set（集合のクラス）
+    Primary.Mapping（写像のクラス）
+    Primary-Mathematics（パーセル）
+
+正しいパッケージの作り方、名前空間の定義方法、新しいクラスを
+出現させる真っ当なやり方などと合わせて指南します。そして、以
+下にリストする項目を扱います。
+
+    集合と要素そして濃度
+    部分集合と真部分集合
+    空集合と全体集合
+    共通部分（積集合）と互いに素
+    合弁集合（和集合）と補集合そして差集合
+    順序対と直積そして関係（特に２項関係）
+    集合の集合（べき集合）
+
+    写像と定義域そして値域
+    全射と単射そして全単射
+    合成写像と恒等写像そして逆写像
+
+この後に、命題論理や述語論理、オーダー計算として領域計算量と
+時間計算量などに書き及び、Smalltalk の中にそれらに適したクラ
+スライブラリを出現させたいと思っています。
+
+ゆくゆくは、じゅん化学関連ライブラリ「ケモじゅん（ChemoJun）」
+
+<A HREF="http://www.sra.co.jp/people/aoki/ChemoJun/">http://www.sra.co.jp/people/aoki/ChemoJun/</A>
+
+と同様に、じゅん数学関連ライブラリ「マスじゅん（MathsJun）」
+にまで育てあげられれば幸いなのですが、さて、どうなりますか…
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007110.html">[SML 7110] Alan Kay leaves HP
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7111">[ 日付 ]</a>
+              <a href="thread.html#7111">[ スレッド ]</a>
+              <a href="subject.html#7111">[ 件名 ]</a>
+              <a href="author.html#7111">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

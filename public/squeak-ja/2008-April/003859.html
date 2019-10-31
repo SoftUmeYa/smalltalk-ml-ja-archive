@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3859] Re: OLPC-VM ImmX11 パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203859%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=53849.125.198.205.84.1207192267.risu%40mail.nucba.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003858.html">
+   <LINK REL="Next"  HREF="003860.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3859] Re: OLPC-VM ImmX11 パッチ</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203859%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=53849.125.198.205.84.1207192267.risu%40mail.nucba.ac.jp"
+       TITLE="[Squeak-ja: 3859] Re: OLPC-VM ImmX11 パッチ">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 4月  7日 (月) 07:36:11 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003858.html">[Squeak-ja: 3858] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+        <LI>次の記事 <A HREF="003860.html">[Squeak-ja: 3860] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3859">[ 日付 ]</a>
+              <a href="thread.html#3859">[ スレッド ]</a>
+              <a href="subject.html#3859">[ 件名 ]</a>
+              <a href="author.html#3859">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  大島です。
+
+  setxkbmap -layout es
+
+をすると、'や`が&quot;dead-key&quot;となって、次に何かを押したときに入力されるよ
+うになります。そのとき、古いVMでLC_CTYPE環境変数がja_JP.UTF8のようになっ
+ていてx2sqKeyがx2sqKeyInputになっているときには、'などを押してもVMには
+文字が報告されず、次に文字を押したときにアクセントつきの文字としてVMに
+報告されるということでした。
+
+  新しいVMのオプションで、LC_CTYPEに従って入力するモードをつける必要が
+あるのではないかと思ってきています。
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003858.html">[Squeak-ja: 3858] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+	<LI>次の記事 <A HREF="003860.html">[Squeak-ja: 3860] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3859">[ 日付 ]</a>
+              <a href="thread.html#3859">[ スレッド ]</a>
+              <a href="subject.html#3859">[ 件名 ]</a>
+              <a href="author.html#3859">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

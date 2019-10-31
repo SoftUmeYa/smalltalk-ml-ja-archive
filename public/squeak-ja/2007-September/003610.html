@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3610] Re: SuperSwiki2 のバージョンアップ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203610%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kyIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lUCE8JTglZyVzJSIlQyVXGyhC%3F%3D&In-Reply-To=46FCC7F8273.86E3ABEE%40smtp.nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003609.html">
+   <LINK REL="Next"  HREF="003611.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3610] Re: SuperSwiki2 のバージョンアップ</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203610%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kyIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lUCE8JTglZyVzJSIlQyVXGyhC%3F%3D&In-Reply-To=46FCC7F8273.86E3ABEE%40smtp.nifty.com"
+       TITLE="[Squeak-ja: 3610] Re: SuperSwiki2 のバージョンアップ">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2007年 9月 28日 (金) 18:59:18 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003609.html">[Squeak-ja: 3609] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+        <LI>次の記事 <A HREF="003611.html">[Squeak-ja: 3611] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3610">[ 日付 ]</a>
+              <a href="thread.html#3610">[ スレッド ]</a>
+              <a href="subject.html#3610">[ 件名 ]</a>
+              <a href="author.html#3610">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+Kazuhiro ABE &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt; wrote:
+&gt;<i> 阿部@新百合です。
+</I>&gt;<i> 
+</I>&gt;<i> On Fri, 28 Sep 2007 17:26:41 +0900
+</I>&gt;<i> Masashi Umezawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">umejava ＠ mars.dti.ne.jp</A>&gt; wrote:
+</I>&gt;<i> &gt;SuperSwiki2をバージョンアップしました。よろしければお使いください。
+</I>&gt;<i> &gt;<A HREF="http://swikis.ddo.jp/SuperSwiki2/2">http://swikis.ddo.jp/SuperSwiki2/2</A>
+</I>&gt;<i> 
+</I>&gt;<i> すばらしいです。
+</I>
+ありがとうございます。
+
+&gt;<i> &gt;Squeakプラグイン側の設定は、下記をご参照ください。(今回から既存の
+</I>&gt;<i> &gt;Squeakプラグインからの接続も可能になりました)
+</I>&gt;<i> &gt;<A HREF="http://swikis.ddo.jp/SuperSwiki2/28">http://swikis.ddo.jp/SuperSwiki2/28</A>
+</I>&gt;<i> 
+</I>&gt;<i> squeakland.jpのSuperSwiki2につなぐ場合、knownServersに置くファイルの設定
+</I>&gt;<i> を教えてもらえますか。以下ではうまくいかないようです。
+</I>&gt;<i> 
+</I>&gt;<i> name: SuperSwiki2
+</I>&gt;<i> directory:    /super2/SuperSwikiProj
+</I>&gt;<i> type: bss
+</I>&gt;<i> server:   squeakland.jp
+</I>&gt;<i> acceptsUploads:   true
+</I>&gt;<i> 
+</I>&gt;<i> serverをsuperswiki2.blueplane.jpに変えてもだめでした。
+</I>
+name:   SuperSwiki2
+directory:  /super/SuperSwikiProj
+type:   bss
+server: blueplane.jp:9090
+acceptsUploads: true
+
+となります。プロキシを指定できません。SuperSwiki2サーバのホストとポートを
+直に指定します。(技術的なことをいうと、プロキシとなっているApacheもDelegateも
+昨今HTTP1.1なので、つなぐことが出来ないのです。これはSqueakプラグイン側の
+問題です。)
+
+&gt;<i> うまく行けば、csにしてアップデートストリームに流してもらおうと思います。
+</I>&gt;<i> そうすれば現在のSuperSwiki(Squeakland.JP)と同じように、誰でもナビゲータの
+</I>&gt;<i> 「公開する」や「探す」でアクセス可能になります。
+</I>
+「探す」については実は問題があって、長押しで出てくる「SuperSwikiを検索」に
+ついてのみ日本語による検索ができません。(これは2でない旧SuperSwikiについても
+同じだと思います。)
+Squeakプラグイン側にパッチを当てる必要があります。参考までに添付してみました。
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: EToyProjectQueryMorphFix-mu.1.cs
+型:         application/octet-stream
+サイズ:     903 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070928/fcf96a3f/EToyProjectQueryMorphFix-mu.1.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20070928/fcf96a3f/EToyProjectQueryMorphFix-mu.1.obj</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003609.html">[Squeak-ja: 3609] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+	<LI>次の記事 <A HREF="003611.html">[Squeak-ja: 3611] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3610">[ 日付 ]</a>
+              <a href="thread.html#3610">[ スレッド ]</a>
+              <a href="subject.html#3610">[ 件名 ]</a>
+              <a href="author.html#3610">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

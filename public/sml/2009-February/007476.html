@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7476] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207476%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoIzQycxsoQlNtYWxsdGFsaw%3D%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUISElQCUkJTglJyU5JUgbKEI%3D%3F%3D&In-Reply-To=498AFECD.9000204%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007470.html">
+   <LINK REL="Next"  HREF="007471.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7476] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207476%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoIzQycxsoQlNtYWxsdGFsaw%3D%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUISElQCUkJTglJyU5JUgbKEI%3D%3F%3D&In-Reply-To=498AFECD.9000204%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7476] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 2月  7日 (土) 15:43:55 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007470.html">[SML 7470] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+</A></li>
+        <LI>次の記事 <A HREF="007471.html">[SML 7471] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7476">[ 日付 ]</a>
+              <a href="thread.html#7476">[ スレッド ]</a>
+              <a href="subject.html#7476">[ 件名 ]</a>
+              <a href="author.html#7476">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+
+2009/02/05 23:59 AOKI Atsushi &lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;:
+
+&gt;<i> ブラックブックに、２〜３５進数までを表示するプログラムが紹介されていますが、
+</I>&gt;<i> &gt; なぜそれ３５までなのか、というところです。
+</I>&gt;<i> &gt; ０〜９の９つの数字、そしてA〜Zのアルファベット２６個で数が表現できますが、
+</I>&gt;<i> &gt; すべてを使い切れば３５個まで、ということになります。
+</I>&gt;<i> &gt; ではそれ以上は・・・？？？
+</I>&gt;<i> &gt; さっそく試していた方もいらっしゃったようでした！
+</I>&gt;<i>
+</I>&gt;<i> どうなるのか、試していた方々、フォローしていただけると幸いです。
+</I>&gt;<i>
+</I>&gt;<i> --- 青木淳＠京都宇治
+</I>&gt;<i>
+</I>
+試していた一人です。
+
+次のようなコードを書いていました。
+
+|<i> aStream |
+</I>aStream := WriteStream with: String new.
+
+0 to: 300 do:
+    [:i |
+aStream nextPutAll: i printString.
+aStream nextPut: $=.
+aStream nextPutAll: (i printStringRadix: 300).
+aStream nextPut: Character space].
+
+aStream contents
+
+
+Print Itすると判りますが、キーボードで普通に打ち込めそうなのは71まで。
+ですが、コンパイル出来るのは、36進数までですね。$[が出てきたところで、
+Syntax Errorになります。
+
+        Compiler evaluate: '300r['
+
+をPrint Itすると判ります。
+
+Scannerが字句を読み取る際、数のリテラルを読み取るのに、最終的には
+
+        Character&gt;&gt;digitValue
+
+が呼ばれるのですが、このメソッドでは数字として、'0'〜'9'、'A'〜'Z'、'a'〜'z'
+しか認めないコードになっています。ですので、数のリテラル表現でコンパイル
+可能なのは36進数までということになります。
+
+一方、出力する側はというと
+
+Number&gt;&gt;printStringRadix:
+
+を使うと、最終的には
+
+      Character class&gt;&gt;digitValue:
+
+が呼ばれて、10以上の数に対しては、その数に55を足した数に対応する
+文字を返すようになっています。数に対応する文字を決めるのはprimitiveに
+なっているので、何が返るかはprimitiveがどんな文字コード表に基づいて
+実装されているかによります。
+
+以上です。
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.akademia.co.jp/pipermail/sml/attachments/20090207/ede44aff/attachment.html">http://www.akademia.co.jp/pipermail/sml/attachments/20090207/ede44aff/attachment.html</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007470.html">[SML 7470] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+</A></li>
+	<LI>次の記事 <A HREF="007471.html">[SML 7471] Re: 第４回Smalltalk勉強会＠京都　ダイジェスト
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7476">[ 日付 ]</a>
+              <a href="thread.html#7476">[ スレッド ]</a>
+              <a href="subject.html#7476">[ 件名 ]</a>
+              <a href="author.html#7476">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,47 @@
+From nisinaka ＠ sra.co.jp  Thu Aug 28 11:53:05 2008
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Thu Aug 28 11:53:17 2008
+Subject: [SML 7384] [ANNOUNCE] Jun for Java (Jun705)
+Message-ID: <20080828114915.3470.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン705を公開します。
+
+  バージョン701からの主な変更点は、以下の通りです。
+
+    * (modification) JunOpenGLStereoDisplayModel を Jun705 相当に
+      更新しました。デフォルトの投影(Projection)と描画
+      (Presentation)を返すメソッドをオーバーライドしています。
+
+    * (new feature) JunInternetConnectionDialog は、HTTPプロキシ
+      の設定を行うためのダイアログです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/705/InternetConnection.png
+
+    * (new feature) JunPrintPreview は、マルチページのポスターを
+      印刷するためのクラスです。スケールを指定したり、ページ数を
+      指定したり、実際に印刷するページをマウスクリックで選んだり
+      することができます。JunPrintPreviewDialog は、
+      JunPrintPreview を使って、プレビューと印刷の設定を行うため
+      のダイアログです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/705/PrintPreview.png
+
+    * (bug fix) JunFileNavigator で、左列に誤ったディレクトリが表
+      示される場合がありました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+

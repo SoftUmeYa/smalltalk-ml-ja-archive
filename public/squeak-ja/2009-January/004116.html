@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4116] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204116%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=495CD275.4070502%40mx2.ttcn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004115.html">
+   <LINK REL="Next"  HREF="004120.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4116] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204116%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GfEtcOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=495CD275.4070502%40mx2.ttcn.ne.jp"
+       TITLE="[Squeak-ja: 4116] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について">abee.abe ＠ nifty.ne.jp
+       </A><BR>
+    <I>2009年 1月  2日 (金) 02:26:42 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004115.html">[Squeak-ja: 4115] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+        <LI>次の記事 <A HREF="004120.html">[Squeak-ja: 4120] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4116">[ 日付 ]</a>
+              <a href="thread.html#4116">[ スレッド ]</a>
+              <a href="subject.html#4116">[ 件名 ]</a>
+              <a href="author.html#4116">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+千葉さん、ありがとうございました。
+私の環境(Ubuntu 8.10上のVirtualBoxを使って、KNOPPIX
+Edu7のisoファイルをブート)では、この方法でScratchからの入力ができました。OSPv2はアカウント申請中なので入手にしばらくかかると思います。
+この方法で確かにUTF-8に変わったことを調べるため、printenvした環境変数と、viなどでファイルを作成したものをod
+-xして文字コードを見ています。SCIM-AnthyからScratchに上がってくる文字もUTF-8でした。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2009/01/01 23:25 yhousako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt;:
+&gt;<i> 千葉さん．こちらでもお世話になります．
+</I>&gt;<i>
+</I>&gt;<i> 宝迫です．正月早々情報を頂きありがとうございます．OSPv2とEdu7で実験して
+</I>&gt;<i> みました．結果としては、残念ながらうまくいきませんでした．
+</I>&gt;<i>
+</I>&gt;<i> 念のためにWebサイトなどを見て回り、ロケールの設定をいくつか試してみまし
+</I>&gt;<i> た．教えて頂いた「ja.UTF-8」以外に試したものとして
+</I>&gt;<i>
+</I>&gt;<i> ja.utf8
+</I>&gt;<i> ja_JP.UTF-8
+</I>&gt;<i>
+</I>&gt;<i> でもやってみましたが、ダメでした．
+</I>&gt;<i>
+</I>&gt;<i> ついでに/etc/locale.genも眺めてみましたが、5.3.1と5.1.1では日本語設定に
+</I>&gt;<i> 違いはなく、いじるのをやめました．
+</I>&gt;<i> ＃システム自体に問題が生じると困るので．
+</I>&gt;<i>
+</I>&gt;<i> システムのロケールだけでなく、SCIMとAnthyの問題というのも考えられると思
+</I>&gt;<i> います．ちょっと探すと古いSCIM-Anthyは、UTF-8非対応という情報もありまし
+</I>&gt;<i> た．（真偽の程はどうかわかりませんが）
+</I>&gt;<i>
+</I>&gt;<i> こちらを解決する必要があるような気がしました．
+</I>&gt;<i>
+</I>&gt;<i> Daisaku CHIBA さんは書きました:
+</I>&gt;&gt;<i> 宝迫さん、阿部さん
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 千葉＠KNOPPIX教育利用研究会が横から失礼します。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &quot;KNOPPIX5.1.1ベースでロケールをUTF-8にすれば良い&quot;
+</I>&gt;&gt;<i> という話であれば、起動時のboot optionで、
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>   boot: knoppix lang=ja.UTF-8
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> と入力して起動して頂くと幸せになれると思います。
+</I>&gt;&gt;<i> ＃申し訳ありませんが、手元に環境がないので試してはいません。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ＜ご参考＞
+</I>&gt;&gt;<i> KNOPPIXのロケールは、以下の通り過渡期にありますが、
+</I>&gt;&gt;<i> UTF-8に移行する方向ですので、
+</I>&gt;&gt;<i> ScratchのUTF一本化の流れと矛盾はありません。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>   ・5.0.0からEUCとUTF-8の並行運用開始（デフォルトはEUC）
+</I>&gt;&gt;<i>   <A HREF="http://buxus.s31.xrea.com/pukiwiki/pukiwiki.php?news%2F2006-04-13">http://buxus.s31.xrea.com/pukiwiki/pukiwiki.php?news%2F2006-04-13</A>
+</I>&gt;&gt;<i>   ・5.1.1でも上記と同じ  ← これがOSP基本パッケージのベース
+</I>&gt;&gt;<i>   ・5.3.1からデフォルトがUTF-8に変更（並行運用は維持）
+</I>&gt;&gt;<i>   <A HREF="http://www.rcis.aist.go.jp/project/knoppix/KNOPPIX531CD-20080520AC.pdf">http://www.rcis.aist.go.jp/project/knoppix/KNOPPIX531CD-20080520AC.pdf</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 以上
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------------
+</I>&gt;<i> 寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+</I>&gt;<i> みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+</I>&gt;<i> 指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+</I>&gt;<i> 全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+</I>&gt;<i> つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</I></PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004115.html">[Squeak-ja: 4115] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+	<LI>次の記事 <A HREF="004120.html">[Squeak-ja: 4120] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4116">[ 日付 ]</a>
+              <a href="thread.html#4116">[ スレッド ]</a>
+              <a href="subject.html#4116">[ 件名 ]</a>
+              <a href="author.html#4116">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

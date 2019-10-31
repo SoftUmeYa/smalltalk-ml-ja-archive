@@ -1,0 +1,317 @@
+From serge.stinckwich ＠ gmail.com  Tue Mar 12 01:44:08 2013
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Mon, 11 Mar 2013 16:44:08 -0000
+Subject: [SML 8047] Google Summer of Code 2013 Program - European Smalltalk
+	User Group
+Message-ID: <CAOysuxXrc385zbfUcmPbb42+5+5g1yMsTVB=oPsbKi=Sf12FqQ@mail.gmail.com>
+
+Hi all,
+
+As every year, Google launched its "Google Summer of
+Code " initiative from June to September 2013.
+Google Summer of Code is a global program that offers student
+developers stipends (5000 US dollars) to write code for various open
+source software projects during summer (3 months). A unique
+opportunity for students to participate in the development of free
+software.
+
+More details are available online here:
+http://www.google-melange.com/gsoc/homepage/google/gsoc2013
+
+I am the co-admin of GSOC 2013 for ESUG (European
+Smalltalk User Group) community and we will propose the March 29,
+2013, projects for students in the context of the GSOC 2013 program.
+
+If you are a student and you want to discover a new programming
+language (Smalltalk) do not hesitate to contact me.
+
+You can also visit our website:
+http://gsoc2013.esug.org/
+
+and join the mailing list for students:
+http://groups.google.com/group/smalltalk-gsoc-students
+
+Students will have to choose their project between April 22 and May 3, 2013
+
+From serge.stinckwich ＠ gmail.com  Tue Mar 19 01:20:23 2013
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Mon, 18 Mar 2013 16:20:23 -0000
+Subject: [SML 8048] Fwd: [Pharo-project] [ANN] Pharo 2.0
+In-Reply-To: <C274F0D4-57B4-45D5-AD2A-5D00776B931D@inria.fr>
+References: <C274F0D4-57B4-45D5-AD2A-5D00776B931D@inria.fr>
+Message-ID: <CAOysuxUJy=TSmDddTShu9H-8JYXTgB_aOO-pjpp=rOKhvKK4-A@mail.gmail.com>
+
+Pharo 2.0 is out !
+
+
+---------- Forwarded message ----------
+From: Marcus Denker <marcus.denker ＠ inria.fr>
+Date: Mon, Mar 18, 2013 at 11:12 AM
+Subject: [Pharo-project] [ANN] Pharo 2.0
+To: "Pharo-project ＠ lists.gforge.inria.fr ML"
+<Pharo-project ＠ lists.gforge.inria.fr>
+Cc: ESUG Mailing list <esug-list ＠ lists.esug.org>, A friendly place
+where any question about pharo is welcome
+<pharo-users ＠ lists.gforge.inria.fr>
+
+
+We are proud to announce the release of Pharo 2.0!
+
+You can find information about Pharo at: http://www.pharo-project.org
+
+About this release
+------------------
+All in all, there were over 1600 issues treated in the issue tracker
+and 1350 improvements integrated into 2.0.
+
+http://code.google.com/p/pharo/issues/list?can=1&q=Milestone%3D2.0+status%3AIntegrated
+
+Read it again, yes 1350 is huge, take two minutes and have a look at the list of
+improvements! Now you got the feel of the effort. And this was a true community
+effort. It is possible because people worldwide helped! We want to
+deeply thank them.
+
+We want to thank Inria for its constant support, in particular for the
+salary of Igor
+Stasenko and Esteban Lorenzano, and for the help in the infrastructure.
+
+We have accomplished this huge task for a better system because we
+were together. Do not
+forget that we are working on a consortium to support our system:
+
+- http://consortium.pharo.org (for companies and organizations)
+- http://association.pharo.org (for individuals)
+
+Our goal is to build a system so that we can make a living with our
+creativity and
+programming skills.
+
+You can find information about Pharo on http://www.pharo-project.org.
+In particular,
+you may be interested in:
+
+- Joining us and getting help http://www.pharo-project.org/community
+- Getting the Pharo By Example book (available as a free PDF):
+http://www.pharobyexample.org
+- Watching the screencasts http://www.pharocasts.com
+- Reporting problems http://www.pharo-project.org/community/issue-tracking
+- Reading the forth coming book http://rmod.lille.inria.fr/pbe2
+- Reading the Pharo vision document http://bit.ly/HNkEru
+
+Thanks a lot for your participation, energy and fun.
+
+                                -- The Pharo Team
+
+Summarized issues for 2.0
+==================
+
+UI
+---
+
+- Spec
+- Widget enhancements
+- Layout improvements/cleanups
+- Keybindings
+- New icons (famfam)
+- Growl style notifications
+- Revamp progress bar
+
+Developer tools
+---------------
+
+- Nautilus browser
+- Critics browser
+- Improved version diff browsing
+- Spotlight
+- Revamp Code Completion and smart chars
+- Interactive navigation using ctrl/cmd+click over classes/methods
+- Shout themes
+- Andreas profiler
+
+Networking
+-----------
+
+- Update Zinc
+- Zodiac (SSL)
+
+System
+-------
+
+- System Announcer
+- RPackage replacing PackageInfo
+- Command line tools / Headless mode
+- Native boost
+- Update Ring metamodel
+- Fuel serializer
+- Freetype fonts
+
+Kernel
+------
+
+- DateAndTime refactoring
+- Updated FileSystem and replaced FileDirectory
+
+VM
+--
+
+- Latests cog builds
+- SSLPlugin
+- FilePlugin enhancements
+- SocketPlugin fixes
+- Included libraries: freetype2, cairo
+
+Cleanups
+-------------
+
+- FileDirectory removed (replaced by FileSystem)
+- SmartRefStream and ReferenceStream removed (replaced by Fuel)
+- PackageInfo deprecated (replaced by RPackage)
+
+Other
+-------
+
+- Zeroconf scripts
+- Continuous Integration for every aspect of our release process.
+
+Not all the changes are reported here, but this is to give you an impression,
+you can find better explanation here:
+https://code.google.com/p/pharo/wiki/ActionsInPharo20
+
+
+
+
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From serge.stinckwich ＠ gmail.com  Thu Mar 28 05:55:28 2013
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed, 27 Mar 2013 21:55:28 +0100
+Subject: [SML 8049] Re: Google Summer of Code 2013 Program - European
+	Smalltalk User Group
+In-Reply-To: <CAOysuxXrc385zbfUcmPbb42+5+5g1yMsTVB=oPsbKi=Sf12FqQ@mail.gmail.com>
+References: <CAOysuxXrc385zbfUcmPbb42+5+5g1yMsTVB=oPsbKi=Sf12FqQ@mail.gmail.com>
+Message-ID: <CAOysuxVjStUhBup43g1iTpr1e2mvULLSm2fMdrntzq5m5T8i3A@mail.gmail.com>
+
+Dear Smalltalkers,
+
+we are looking for your cool project ideas for GSOC 2013 !
+You still have 48 hours do to that.
+
+Don't loose this opportunity.
+Thank you.
+
+On Mon, Mar 11, 2013 at 5:43 PM, Serge Stinckwich
+<serge.stinckwich ＠ gmail.com> wrote:
+> Hi all,
+>
+> As every year, Google launched its "Google Summer of
+> Code " initiative from June to September 2013.
+> Google Summer of Code is a global program that offers student
+> developers stipends (5000 US dollars) to write code for various open
+> source software projects during summer (3 months). A unique
+> opportunity for students to participate in the development of free
+> software.
+>
+> More details are available online here:
+> http://www.google-melange.com/gsoc/homepage/google/gsoc2013
+>
+> I am the co-admin of GSOC 2013 for ESUG (European
+> Smalltalk User Group) community and we will propose the March 29,
+> 2013, projects for students in the context of the GSOC 2013 program.
+>
+> If you are a student and you want to discover a new programming
+> language (Smalltalk) do not hesitate to contact me.
+>
+> You can also visit our website:
+> http://gsoc2013.esug.org/
+>
+> and join the mailing list for students:
+> http://groups.google.com/group/smalltalk-gsoc-students
+>
+> Students will have to choose their project between April 22 and May 3, 2013.
+>
+> You can find more information about the Smalltalk programming language
+> Smalltalk and its eco-system here:
+> http://www.world.st/
+>
+> See also below the announce in english.
+> Sincerely,
+>
+> ---------- Forwarded message ----------
+> From: Janko Mivšek <janko.mivsek ＠ eranova.si>
+> Date: Sat, Mar 9, 2013 at 1:03 PM
+> Subject: [Pharo-project] GSoC13: Google Summer of Code started, your
+> ideas please!
+> To: Squeak <squeak-dev ＠ lists.squeakfoundation.org>,
+> "Pharo-project ＠ lists.gforge.inria.fr"
+> <Pharo-project ＠ lists.gforge.inria.fr>, Pharo users
+> <pharo-users ＠ lists.gforge.inria.fr>, Discussion of Cuis Smalltalk
+> <cuis ＠ jvuletich.org>
+>
+>
+> Dear Smalltalkers,
+>
+> Time for your cool project ideas on this year Smalltalk GSoC!
+>
+> For now just express any idea you have here on the mailing list. Later
+> we will together develop it to be in complete format together with two
+> mentors needed. Deadline is end of March, so we have three weeks of time.
+> To see how fully developed ideas look like please look at 2012 ones at:
+> http://gsoc2012.esug.org/ideas.
+>
+> Note also that students yourselves can propose a GSoC project. So if you
+> like to be a student on this year GSoC and have a nice idea, don't be
+> shy and propose it here! The community will listen you and guide to the
+> really nicely proposed project. Last year 6 student proposed projects
+> were accepted and finished successfully!
+>
+> For the community, start looking around for students. Think about how to
+> approach the universities near by you, do you know who to contact
+> there, etc.
+>
+> We are namely preparing an application to this year Smalltalk Google
+> Summer of Code under ESUG umbrella, as last year. If accepted, Google
+> will pay few stipendiums to students on our Smalltalk projects.
+>
+> More on our special Smalltalk GSoC 2013 website:
+>
+>         http://gsoc2013.esug.org
+>
+> I'm specially inviting mentors of all past GSoCs to rejoin the mentors
+> mailing list, where we discuss all details about this year GSoC:
+>
+>         http://groups.google.com/group/smalltalk-gsoc-mentors
+>
+> While students interested on GSoC please join a special Smalltalk GSoC
+> mailing list for you:
+>
+>         http://groups.google.com/group/smalltalk-gsoc-students
+>
+> Best regards
+> Janko
+>
+>
+> --
+> Janko Mivšek
+> Aida/Web
+> Smalltalk Web Application Server
+> http://www.aidaweb.si
+>
+> --
+> Serge Stinckwich
+> UCBN & UMI UMMISCO 209 (IRD/UPMC)
+> Every DSL ends up being Smalltalk
+> http://doesnotunderstand.org/
+
+
+
+-- 
+Serge Stinckwich
+UCBN & UMI UMMISCO 209 (IRD/UPMC)
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+

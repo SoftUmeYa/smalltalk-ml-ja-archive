@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7993] Re:	第40回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207993%5D%20Re%3A%0A%09%3D%3Futf-8%3Fb%3F56ysNDDlm55TbWFsbHRhbGvli4nlvLfkvJrvvKDkuqzpg70%3D%3F%3D&In-Reply-To=%3C4F2BAF4D.1020505%40hera.eonet.ne.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007992.html">
+   <LINK REL="Next"  HREF="007994.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7993] Re:	第40回Smalltalk勉強会＠京都</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207993%5D%20Re%3A%0A%09%3D%3Futf-8%3Fb%3F56ysNDDlm55TbWFsbHRhbGvli4nlvLfkvJrvvKDkuqzpg70%3D%3F%3D&In-Reply-To=%3C4F2BAF4D.1020505%40hera.eonet.ne.jp%3E"
+       TITLE="[SML 7993] Re:	第40回Smalltalk勉強会＠京都">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2012年 2月  3日 (金) 18:56:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007992.html">[SML 7992] Re:	第40回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007994.html">[SML 7994] Re: 第40回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7993">[ 日付 ]</a>
+              <a href="thread.html#7993">[ スレッド ]</a>
+              <a href="subject.html#7993">[ 件名 ]</a>
+              <a href="author.html#7993">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+yellow button menuからsource dataを切り替える部分を勉強会とは異なる
+方法でやってみたので投稿します。
+
+妹尾さん執筆の勉強会ログの5ページの真ん中あたりの
+FourierPaneController&gt;&gt;yellowButtonMenu
+	^nil
+を追加するところまでは同じです。
+(勉強会ログでは、yellowButtonPressedEventとなっていますが、 
+yellowButtonMenuですよね?)
+
+そのあとは、以下のFourierPaneModel&gt;&gt;yellowButtonMenuと
+Fourier1dModel&gt;&gt;yellowButtonMenuを追加します。
+(GUIビルダは使いません)
+
+FourierPaneModel&gt;&gt;yellowButtonMenu
+	^self application ifNotNil: [:anApplication | anApplication 
+yellowButtonMenu] ifNil: [super yellowButtonMenu]
+
+
+Fourier1dModel&gt;&gt;yellowButtonMenu
+	| labels values |
+	labels := OrderedCollection new.
+	values := OrderedCollection new.
+	(self defaultFourierTransformClass class organization 
+listAtCategoryNamed: #data) do:
+			[:aSelector |
+			| aStream aString |
+			aStream := String new writeStream.
+			aSelector asString do:
+					[:aCharacter |
+					aCharacter isLowercase
+						ifTrue: [aStream nextPut: aCharacter]
+						ifFalse:
+							[aStream
+								space;
+								nextPut: aCharacter]].
+			aString := aStream contents.
+			aStream close.
+			aString := aString copyFrom: (aString findFirst: [:aCharacter | 
+aCharacter = Character space]) + 1
+						to: aString size.
+			labels add: aString.
+			values add: [self setSourceData: (self defaultFourierTransformClass 
+perform: aSelector)]].
+	^Menu labelArray: labels asArray values: values asArray
+
+
+以上です。
+
+-- hirowadenden
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007992.html">[SML 7992] Re:	第40回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007994.html">[SML 7994] Re: 第40回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7993">[ 日付 ]</a>
+              <a href="thread.html#7993">[ スレッド ]</a>
+              <a href="subject.html#7993">[ 件名 ]</a>
+              <a href="author.html#7993">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

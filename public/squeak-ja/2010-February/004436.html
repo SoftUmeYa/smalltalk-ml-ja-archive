@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4436] gainerのwebからのアクセスについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204436%5D%20%3D%3Fiso-2022-jp%3Fb%3FZ2FpbmVyGyRCJE4bKEJ3ZWI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCskaSROJSIlLyU7JTkkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=4AED3F37.6040503%40yengawa.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004435.html">
+   <LINK REL="Next"  HREF="004437.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4436] gainerのwebからのアクセスについて</H1>
+    <B>koike</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204436%5D%20%3D%3Fiso-2022-jp%3Fb%3FZ2FpbmVyGyRCJE4bKEJ3ZWI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCskaSROJSIlLyU7JTkkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=4AED3F37.6040503%40yengawa.com"
+       TITLE="[Squeak-ja: 4436] gainerのwebからのアクセスについて">mha03030 ＠ nifty.com
+       </A><BR>
+    <I>2010年 2月 18日 (木) 11:23:54 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004435.html">[Squeak-ja: 4435] Re: [SML 7780] Re:  ESUGチラシの翻訳についてのご意見募集
+</A></li>
+        <LI>次の記事 <A HREF="004437.html">[Squeak-ja: 4437] Re: gainerのwebからのアクセスについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4436">[ 日付 ]</a>
+              <a href="thread.html#4436">[ スレッド ]</a>
+              <a href="subject.html#4436">[ 件名 ]</a>
+              <a href="author.html#4436">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川さん
+東京都市大学の小池です。
+ご無沙汰です。
+
+今、Gainerや、Arudinoなどを使った
+オープンソースなロボットを作ろうと考えて
+いろいろ調べて勉強しています。
+
+今、
+PCサーバーを内蔵してGaineがつながったロボットを他の 
+PCから無線LANでコントロールすることを考えているのですが、
+うまくいきません。
+Gainerや、Arduinoをネット越しにコントロールできないので 
+しょうか。
+
+
+横川さんのご専門ではないかもしれませんが、
+ネット上の問題とも思いますので、
+Gainerでいろいろ開発された経験から
+なにかヒントがあればお願いします。
+
+阿部さんにもお聞きしましたが、
+実機がないとわからないといわれました。
+ごもっともです。
+
+-----------------------------------------------------------
+外部PCからリモコンするロボットを考えています。
+
+<A HREF="http://labs.infoalive.com/tag/&#36554;">http://labs.infoalive.com/tag/車</A>
+
+でやっていることに近いです。
+こちらはWIndows XPでやっていますが。
+
+
+（１）ロボットは内部にPC（ロボットPCと呼ぶ）を 
+持っている（Windows XP）
+ロボットPCにはサーバーが起動している　サーバーはXAMPP
+PCは192.168.0.1で設定
+サーバーは正常に起動
+外部PC (192.168.0.3に設定）からもアクセス可能
+
+
+（２）ロボットPCにGainerをUSBで接続  
+Gainerからサーボモーターなどを制御したい。
+（３ロボットPCのXAMPPの外でgspをポート 
+2000で起動（flashがgainerと交信するためのプロシ 
+キーサーバー）
+
+（４）XAMPPに、gainerを動かすサンプルにあるbutton.swf 
+をhtmlファイル(button.html)から呼び出せるようにセット
+
+（５）button.swfは
+プログラムを改造して
+
+gio=new Gainer(&quot;localhpst&quot;,2000,Gainer.MODE1,true);
+
+をgio=new Gainer(&quot;192.168.0.1&quot;,2000,Gainer.MODE1,true);
+
+に変更した。
+
+（６）外部のPC (192.168.0.3に設定）
+からロボットPCの
+<A HREF="http://192.168.0.1/button.html">http://192.168.0.1/button.html</A>
+に無線LAN経由でアクセス
+ロボットPCにはアクセスポイントをつけてある。
+
+（７）button.swfは画面に現れるが、Gainerのボタン 
+を押しても反応しない
+　　　gspもdisconnectをいわれてしまう
+
+（８）今度は、<A HREF="http://192.168.0.1:2000//button.html">http://192.168.0.1:2000//button.html</A>
+にアクセス
+gspは192.168.0.3からconnectされたと表示
+
+（９）
+しかし、画面には表示されるがGainerのボタンを押しても反 
+応しない
+
+（１０）button.swfを外部PCにコピーして外部PC 
+から再生すると、ロボットPCにつながっているgainerと
+交信できる。
+
+
+
+button.swfをロボットPCのXAMPP内においてそれを外部 
+PCから呼び出して
+ロボットPCのGainerを動かしたいのですが、
+
+どうしたらいいでしょうか。
+
+192.168.0.1のサーバー内部にあるbutton.swf 
+を、192.168.0.3から呼び出して再生したときに
+192.168.0.1にあるgspとの交信がうまくいかないようです。
+
+XAMPPを介さないで192.168.0.3にあるbutton.swfを直 
+接再生すると192.168.0.1にあるGainerと交信できます。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004435.html">[Squeak-ja: 4435] Re: [SML 7780] Re:  ESUGチラシの翻訳についてのご意見募集
+</A></li>
+	<LI>次の記事 <A HREF="004437.html">[Squeak-ja: 4437] Re: gainerのwebからのアクセスについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4436">[ 日付 ]</a>
+              <a href="thread.html#4436">[ スレッド ]</a>
+              <a href="subject.html#4436">[ 件名 ]</a>
+              <a href="author.html#4436">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

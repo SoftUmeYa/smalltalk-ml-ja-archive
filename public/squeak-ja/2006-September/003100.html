@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3100] Re: SqueakNOS の実機動作について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203100%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha05PUyA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE48QjUhRjA6biRLJEQkJCRGGyhC%3F%3D&In-Reply-To=C127F0BF.1273C%25yhousako%40mx2.ttcn.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003099.html">
+   <LINK REL="Next"  HREF="003101.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3100] Re: SqueakNOS の実機動作について</H1>
+    <B>Takeshi MUTOH</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203100%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha05PUyA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE48QjUhRjA6biRLJEQkJCRGGyhC%3F%3D&In-Reply-To=C127F0BF.1273C%25yhousako%40mx2.ttcn.ne.jp"
+       TITLE="[Squeak-ja: 3100] Re: SqueakNOS の実機動作について">mutoh ＠ openedu.org
+       </A><BR>
+    <I>2006年 9月  9日 (土) 06:02:11 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003099.html">[Squeak-ja: 3099] Re: SqueakNOS の実機動作について
+</A></li>
+        <LI>次の記事 <A HREF="003101.html">[Squeak-ja: 3101] Re: SqueakNOS の実機動作について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3100">[ 日付 ]</a>
+              <a href="thread.html#3100">[ スレッド ]</a>
+              <a href="subject.html#3100">[ 件名 ]</a>
+              <a href="author.html#3100">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>むとう@おうちです。
+
+At Sat, 09 Sep 2006 04:17:03 +0900,
+Yoshito Housako &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ mx2.ttcn.ne.jp</A>&gt; wrote:
+&gt;<i> はじめまして．宝迫（ほうさこ）＠埼玉県小学校教員です．
+</I>
+はじめまして、よろしくお願いします。
+
+&gt;<i> On 2006.9.8 6:32 PM, &quot;Takeshi MUTOH&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>&gt; wrote:
+</I>&gt;<i> &gt; 手元では、qemuやVMware Playerで動作することは確認したのですが、手当た
+</I>&gt;<i> &gt; り次第にCDROMを突っ込んで試している実機で動いたことが無いのです。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 実際に動作を確認できた方がおられましたら、スペック等教えていただければ
+</I>&gt;<i> &gt; 幸いです。
+</I>&gt;<i> 動作確認のレベルにもよりますが、うちのPCではCD-ROMで起動しました．
+</I>
+あ、動いてるんですねぇ…
+
+&gt;<i> 1.
+</I>&gt;<i> CPU：AMD Duron 1.4GHz
+</I>&gt;<i> MEM：512MB
+</I>&gt;<i> ちょっと古いMouse ComputerのPCです．もっともかなり手を加えていますので、箱と
+</I>&gt;<i> マザーボードとCPU以外にオリジナルのものはありません．
+</I>&gt;<i> 
+</I>&gt;<i> 2.
+</I>&gt;<i> CPU：INTEL Celeron D 2.53GHz
+</I>&gt;<i> MEM：512MB
+</I>&gt;<i> Albatron ABox 865Gというベアボーンを使った自作機です．
+</I>
+このマシンたちですが、ネットワークカードとかは付いてますか?
+その場合、ネットワークは利用可能でしたでしょうか?
+
+いまのところ、RTL8139とLanceNICしかデバイスドライバが書かれていないよ
+うですが…
+# qemuでネットワークの動作確認方法が分からない…
+
+あと、SqueakNOSのバージョンは、いつごろのものでしょうか?
+
+&gt;<i> 当然2.の方が動作が速いのですが、いずれにしてもCD-ROMで起動するとマウスの矢印
+</I>&gt;<i> が画面に残るという現象があったり、右クリックが使えなかったり、Squeakの終了
+</I>&gt;<i> がPCの終了になっていなかったり（フリーズor異常動作のようになる）という問題が
+</I>&gt;<i> 発生しました．実用レベルではないと思います．
+</I>
+マウスカーソルが残る問題は、普通のSqueak VMが(Windows,Macなどの)OS側で
+処理を任せていて、適当なフックが無いので処理できないとどっかで読みまし
+た。
+
+他は結構致命的ですね…
+まあ、実用というより、今は人柱として使う時期なのだとは理解してますけど;-)
+# デバイスドライバをオブジェクト指向で書いてみたいとか…
+
+
+情報、ありがとうございました。
+もう少し動きそうなマシン、探してみます。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://610T.org/">http://610T.org/</A>
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003099.html">[Squeak-ja: 3099] Re: SqueakNOS の実機動作について
+</A></li>
+	<LI>次の記事 <A HREF="003101.html">[Squeak-ja: 3101] Re: SqueakNOS の実機動作について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3100">[ 日付 ]</a>
+              <a href="thread.html#3100">[ スレッド ]</a>
+              <a href="subject.html#3100">[ 件名 ]</a>
+              <a href="author.html#3100">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

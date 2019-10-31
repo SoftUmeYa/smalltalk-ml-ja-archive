@@ -1,0 +1,82 @@
+From goonsh ＠ gmail.com  Sat Feb  4 16:37:29 2012
+From: goonsh ＠ gmail.com (NISHIHARA Satoshi)
+Date: Sat, 4 Feb 2012 16:37:29 +0900
+Subject: [Squeak-ja: 4620]
+	PortMidiPlugin for Squeak 初回限定版 (for Mac OS X) Thrill-seekers Only version is available.
+Message-ID: <CAHQL79ABQa4HoZAU3tuHGWo-zEmBm=_wemisi73MLHEJEK_JNg@mail.gmail.com>
+
+西原です．
+PortMidiPluginの初回限定版for Mac OS X onlyを出しました．
+
+PortMidiPluginは，Platform Independent Library for MIDI I/OなPortMidiライブラリ
+http://portmedia.sourceforge.net/portmidi/
+を使ってMIDIのやりとりを行うプラグインです．
+プラグインのバイナリと，後述するKhoros-Core* and Khoros-MIDI-*パッケージをインストールすると，使えるようになります．
+
+Squeakには標準でSimpleMIDIPortとMIDIPluginを持っていて，例えばMac OS
+X/Windowsなら他になにも追加することなQuickTime DLS
+Synth等の音源を鳴らすことができますが，MIDI系のいわゆるソフトウェア音源/バーチャル音源(Software
+Synthesizer)に繋ぐことができません．それで，このプラグインを作りました．
+とりあえずの目標としてSimpleMIDIPort同等の機能を持つことを目指しました．※1
+
+PortMidiライブラリはプラグイン中に含まれており，別途インストールする必要はありません．逆に言うと，すでにインストールされていても使いません．
+
+Squeak用のクラス群は以下にあります．
+http://www.squeaksource.com/Khoros.html
+Khoros-Core* and Khoros-MIDI-*はクライアント側で使います．
+PortMidiPrimitives-* はVMMaker-edなイメージで使うプラグインのソースクラスです．
+
+プラグインのビルドに必要なソース郡，およびMac OS X用のプラグインのバイナリは以下にあります．
+http://code.google.com/p/khoros/
+ソースはMercurialでクローンしてください．バイナリはそのまま落とせます．
+現状，他のプラットフォームのビルド&テスト環境がないので，バイナリはMac OS X のみです．
+VMのContents/Resouces/に放り込んでください．
+今のところ，プラットフォーム依存のコードはありません (はず)．PortMidiのビルドができる環境なら，このプラグインもビルドできると思います．
+
+使い方等はPortMidiInterfaceTester, PortMidiInterface, それにPortMidiPortなどのクラス群にあります．
+PmScorePlayerMorphはSimpleMIDIPortの代わりにPortMidiPortを使う*だけ*のモルフです．
+
+PortMidiPluginのソースはMaestro Stephen Travis PopeさんがSiren for VisualWorks
+7.5用に書いたportmidi_lite.cをベースにしており，これのwrapper++として動きます．
+
+※1 制約：
+SqueakオリジナルのMIDIPluginが持っているMIDIParameterGet/Setは実装されていません．
+※2 追加機能：
+・1バイトおよび4バイトのMIDIメッセージの読み書き
+・システム・エクスクルーシブ・メッセージの読み書き(原始版)
+・メッセージのフィルタリング，チャンネルのマスク機能などなど
+
+読み込み用にオープンされたポートでフィルタリングを行なっているのは，PortMidiのデフォルト設定であるアクティヴ・センシングのみに変更しています．実デバイスをつなぐと，クロック・メッセージがどんどこ流れてくるかも知れません．必要があれば適宜フィルタリングしてください．
+
+-- 
+--
+"NISHIHARA Satoshi"
+[:goonsh :nsh | ^ nishis perform: goonsh with: nsh]
+
+From ume ＠ softumeya.com  Tue Feb 14 10:34:24 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 14 Feb 2012 10:34:24 +0900
+Subject: [Squeak-ja: 4621]
+	第40回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdQPkHzbDVB8S2NN1EZLrOCT759S58A6oT=6cRW-KBNyUw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/2/29(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai40kaismalltalkbenkyoukai
+
+今月のSmalltalk勉強会は、いつものセミナー形式ではなく、ハッカソンです。皆で楽しくコーディングしましょう。
+題材は最近巷で話題のAmber Smalltalkです。
+WebブラウザさえあればいつでもSmalltalkプログラミングができるという新たな処理系で、急速なピッチで開発が進められる注目株です。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

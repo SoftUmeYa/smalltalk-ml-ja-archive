@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4603] Re: Scratch + Arduinoいろいろ試してます
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204603%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCArIEFyZHVpbm8bJEIkJCRtJCQkbTtuGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckRiReJDkbKEI%3D%3F%3D&In-Reply-To=%3C4E2AC5F3.4050204%40yengawa.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004606.html">
+   <LINK REL="Next"  HREF="004602.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4603] Re: Scratch + Arduinoいろいろ試してます</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204603%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCArIEFyZHVpbm8bJEIkJCRtJCQkbTtuGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckRiReJDkbKEI%3D%3F%3D&In-Reply-To=%3C4E2AC5F3.4050204%40yengawa.com%3E"
+       TITLE="[Squeak-ja: 4603] Re: Scratch + Arduinoいろいろ試してます">ky ＠ yengawa.com
+       </A><BR>
+    <I>2011年 7月 23日 (土) 22:00:35 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004606.html">[Squeak-ja: 4606] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+        <LI>次の記事 <A HREF="004602.html">[Squeak-ja: 4602] Scrattinoの紹介
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4603">[ 日付 ]</a>
+              <a href="thread.html#4603">[ スレッド ]</a>
+              <a href="subject.html#4603">[ 件名 ]</a>
+              <a href="author.html#4603">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+
+コードをコンパイルしてArduinoへ送り込むあたりをSqueakでやっている人も居
+て、このようなプロジェクトが公開されています。
+(ぼくは使ったことがないので、どれくらい「使える」物なのかはわかりません
+が参考になれば)
+
+Arduino
+<A HREF="http://www.squeaksource.com/Arduino.html">http://www.squeaksource.com/Arduino.html</A>
+
+ちなみに、これはPhysical EtoysというArduinoをはじめとしてLego Mindstorms
+Nxt, Nintendo Wiimoteなどの身近なハードウェアをSqueakで利用する大きなプ
+ロジェクトの一部です。
+
+Physical Etoys
+<A HREF="http://tecnodacta.com.ar/gira/projects/physical-etoys/">http://tecnodacta.com.ar/gira/projects/physical-etoys/</A>
+
+
+Toshiyuki Kamada wrote 11/07/23 5:52:
+&gt;<i> 鎌田です。
+</I>&gt;<i> 
+</I>&gt;<i> 阿部さん、早速ありがとうございます。
+</I>&gt;<i> 
+</I>&gt;&gt;<i> たぶんこれはGoGo Boardのコードですね。
+</I>&gt;&gt;<i> <A HREF="http://www.gogoboard.org/">http://www.gogoboard.org/</A>
+</I>&gt;<i> 
+</I>&gt;<i> むむむ、GoGo BoardとSensorBoardが切り分けられているのは気づいていたので注意していたのですが、結局そちらでしたか（SensorBoardにモータはつながらないから、僕が仕様を知らないWeDoの隠れ仕様なのかなと漠然と考えていました）。WeDoがA,
+</I>&gt;<i> B 2個のモータをもつ、というのは後述のご示唆で確認できました。
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Scratchが標準でサポートするデバイスには、SensorBoard(aka PicoBoard)、WeDo、そしてGoGo Boardがあります。
+</I>&gt;&gt;<i> この内、SensorBoardとGoGo
+</I>&gt;&gt;<i> Boardは排他で、ScratchBoard監視盤(SensorBoardMorph)のShift+右ボタンメニューで切り替えます(SensorBoardMorph&gt;&gt;rightButtonMenu)。
+</I>&gt;&gt;<i> モーター関連のメソッドはGoGo BoardとWeDoのものが混ざっており、センダーなどを確認してどちらに属するものか調べる必要があります。
+</I>&gt;<i> 
+</I>&gt;<i> ありがとうございます。コードの該当部分を確認しました。
+</I>&gt;<i> 
+</I>&gt;&gt;&gt;<i> ただ、モータ番号を指定するブロック（Morph）はありませんので、現在の実装がどうなっているのか、変更するならどのあたりか、といったことを若干ご示唆いただければと思っております。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> SensorBoardWithMotorで私が変更したのはSensorBoardの方です。このプロトコルは、ボードへのデータ送信要求として1サイクルごとにPCから1バイト(16r01)を送っていたので、これをモーター1個分の回転方向用に2ビット、モーターのパワー用に6ビット使って送信するように変えました(SensorBoardMorph&gt;&gt;processIncomingData)。
+</I>&gt;<i> 
+</I>&gt;<i> なるほど、ハンドシェイク用の1バイトを流用した形でしたか。納得です。
+</I>&gt;<i> 
+</I>&gt;&gt;<i> UIのブロックとそのためのメソッドはWeDo用のものを流用しています(ScriptableScratchMorph&gt;&gt;motorOn:など)。
+</I>&gt;&gt;<i> その他の変更箇所は、SensorBoardWithMotor.1.csをご覧ください。
+</I>&gt;&gt;<i> この設計は、ArduinoにSensorBoardとWeDoの両方の機能を持たせ、ハード、ソフト共に最低限の変更(モータードライバーとWeDo用コネクターの追加など)で低コストに両方の機能を活かしつつ、プロジェクトファイルの互換性を維持することを意図しています(公式サイトで共有可能)。それらを超える能力は狙っていません。
+</I>&gt;<i> 
+</I>&gt;<i> ありがとうございます。ScriptableScratchMorphにセレクタがあるのですね。
+</I>&gt;<i> 
+</I>&gt;<i> 一点だけ、知識が足りなくて、.csというのがどこを指しているのかわかりませんでした。
+</I>&gt;<i> 一応、ChangeFileを通して変更箇所は把握できたつもりです。（おかげさまで、Smalltalkの使い方を徐々に思い出してきました）
+</I>&gt;<i> 
+</I>&gt;&gt;<i> GoGo BoardにしてもWeDoにしても、DCモーターの制御しかできませんので、ブロックもそれ用のものしか用意されていません。もし、サーボモーターを使われるのであれば、自分でスケッチを書き、プロトコルを決め、ブロックも用意する必要があります。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> それを実際に行なっているのがS4Aです。
+</I>&gt;&gt;<i> <A HREF="http://seaside.citilab.eu/scratch?_s=yQf-lmh7eaq_Ev0_&amp;_k=_Ac121eeMFBO3xsR">http://seaside.citilab.eu/scratch?_s=yQf-lmh7eaq_Ev0_&amp;_k=_Ac121eeMFBO3xsR</A>
+</I>&gt;&gt;<i> Smalltalkの拡張でサーボモーターをお使いになるのであれば、これを参考にすることをお勧めします。
+</I>&gt;<i> 
+</I>&gt;<i> なんと、これは派手にやっていますね。たいへん参考になります。
+</I>&gt;<i> 
+</I>&gt;<i> 実は僕もScratchのプロジェクト互換は考慮していなくて、MYUロボ的に自律動作できるVMをArduinoに載せて、そのバイトコードをScratchのブロックからコンパイルして送り込むような改変をする、ある意味Scratchコミュニティに対して全く失礼な構想を持っています。ただし、Scratchとの協調動作もできるようにしたいと思っているので、Scratchを単なるプログラミングインタフェースに貶めてしまうようなつもりは全くありません。
+</I>&gt;<i> 
+</I>&gt;<i> むしろ、ModKitの、ScratchのUI模倣、ブロックはすべてWiredの命令、というのが筋悪に感じています。
+</I>&gt;<i> 
+</I>&gt;&gt;<i> あるいは、リモートセンサープロトコルを使って、サーボモーターを制御するサーバーとScratchがソケットで通信するように書くのも手です。その場合、サーバーの記述言語はSmalltalkで無くても構いません。また、Scratch側の変更が不要となります。
+</I>&gt;&gt;<i> <A HREF="http://wiki.scratch.mit.edu/wiki/Remote_Sensors_Protocol">http://wiki.scratch.mit.edu/wiki/Remote_Sensors_Protocol</A>
+</I>&gt;&gt;<i> これを行っているのがCatenaryです。
+</I>&gt;&gt;<i> <A HREF="https://sites.google.com/site/chalkmarrowfiles/">https://sites.google.com/site/chalkmarrowfiles/</A>
+</I>&gt;<i> 
+</I>&gt;<i> はい、これは承知しています。遠隔センサープロトコルを知れば、まずやってみることかなと思います。
+</I>&gt;<i> ただ、制御がScratch側にしかないので、ひもつき（無線でも電波が届く範囲）なのは少し物足りなく思いました。
+</I>&gt;<i> 
+</I>&gt;<i> というのも、サーボモーターで質問したのはひとつの例で、他にはGPSロガーをプログラミングして近所を巡ってきた結果を視覚化するとか、そんな応用まで考えています。Scratch（では、もはやないのかもしれませんが、派生物）とは、いつでも切り離せて、再び接続して協調動作させることもできる（同じプロジェクトのなかで、どちらもできる）といいなと思っています。PCとマイコンが主従関係にあるのではなくて、相互補完の関係になるのが理想です。
+</I>
+-- 
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">ky ＠ yengawa.com</A>&gt;
+<A HREF="http://www.yengawa.com/">http://www.yengawa.com/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004606.html">[Squeak-ja: 4606] Re:	Scratch + Arduinoいろいろ試してます
+</A></li>
+	<LI>次の記事 <A HREF="004602.html">[Squeak-ja: 4602] Scrattinoの紹介
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4603">[ 日付 ]</a>
+              <a href="thread.html#4603">[ スレッド ]</a>
+              <a href="subject.html#4603">[ 件名 ]</a>
+              <a href="author.html#4603">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

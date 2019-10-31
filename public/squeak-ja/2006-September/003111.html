@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3111] Re: source of ImmX11Plugin
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203111%5D%20Re%3A%20source%20of%20ImmX11Plugin&In-Reply-To=450520C0.1080302%40nucba.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003106.html">
+   <LINK REL="Next"  HREF="003112.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3111] Re: source of ImmX11Plugin</H1>
+    <B>Takeshi MUTOH</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203111%5D%20Re%3A%20source%20of%20ImmX11Plugin&In-Reply-To=450520C0.1080302%40nucba.ac.jp"
+       TITLE="[Squeak-ja: 3111] Re: source of ImmX11Plugin">mutoh ＠ openedu.org
+       </A><BR>
+    <I>2006年 9月 12日 (火) 05:12:28 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003106.html">[Squeak-ja: 3106] Re: source of ImmX11Plugin
+</A></li>
+        <LI>次の記事 <A HREF="003112.html">[Squeak-ja: 3112] Re: source of ImmX11Plugin
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3111">[ 日付 ]</a>
+              <a href="thread.html#3111">[ スレッド ]</a>
+              <a href="subject.html#3111">[ 件名 ]</a>
+              <a href="author.html#3111">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>むとう@おうちです。
+
+At Mon, 11 Sep 2006 17:39:28 +0900,
+Tsutomu Hiroshima &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tsutomu ＠ nucba.ac.jp</A>&gt; wrote:
+&gt;<i> SqueakImmX11Plugin2a.tar.gz には
+</I>&gt;<i> Focus Event の扱いに些細な問題があって，
+</I>&gt;<i> SqueakImmX11Plugin2c.tar.gz に更新しおいたのですが，
+</I>&gt;<i> 性根が面倒くさがりのもので，
+</I>&gt;<i> ずいぶん前に ML に流したまま，ほったらかしにしていました。
+</I>
+いつも、成果を利用させてもらってありがとうございます(_O_)
+
+すいません、何故自分がSqueakImmX11Plugin2a.tar.gzで作業しているかをアー
+カイブなどを見ながら思い出していたんですが、
+SqueakImmX11Plugin2c.tar.gzなどを置かれているサーバへのリンクは避けて
+欲しいという記述があったので、そうなる前のもので作業をしていたというこ
+とらしいです。
+
+どこか別のサーバに置いて公開するなどの手は取れないもんでしょうかね?
+もし、置いても構わないようでしたら、うちとかで準備しますけども…
+
+&gt;<i> そうこうしているうちに我が家の Linux は Vine3.2 -&gt; FC5 となり，
+</I>&gt;<i> euc-jp -&gt; utf-8 環境となったこともあって，
+</I>&gt;<i> うまく動くか VM 3.7-7 で試してみました。
+</I>&gt;<i> FC 5 ではとりあえず日本語入力できています。
+</I>&gt;<i> utf-8 のコードをパッチに組み込んでおいて本当によかったと，
+</I>&gt;<i> 胸をなでおろしています。
+</I>
+すいません、報告忘れてました。FreeBSDでも試しましたが、2aのままでも問
+題無くja_JP.UTF-8 localeで動いているようです。
+
+
+あと、なにをボケていたのか、全画面でXIMが使えないのへの対応も
+CompositionFocus.1.csで実装されているのを見落としていて、これを入れて
+問題無くXIM入力できることを確認できました。
+
+これって、SqueakPlugin2005Jとかのイメージに入れるのは問題があるんでし
+たっけ?
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://610T.org/">http://610T.org/</A>
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003106.html">[Squeak-ja: 3106] Re: source of ImmX11Plugin
+</A></li>
+	<LI>次の記事 <A HREF="003112.html">[Squeak-ja: 3112] Re: source of ImmX11Plugin
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3111">[ 日付 ]</a>
+              <a href="thread.html#3111">[ スレッド ]</a>
+              <a href="subject.html#3111">[ 件名 ]</a>
+              <a href="author.html#3111">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

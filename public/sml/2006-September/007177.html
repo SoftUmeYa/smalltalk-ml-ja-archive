@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7177] Re: &quot;0 @ 0&quot; について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207177%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6ICIwIEAgMCIgGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=45140BBC.2040301%40ps.inforyoma.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007173.html">
+   <LINK REL="Next"  HREF="007178.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7177] Re: &quot;0 @ 0&quot; について</H1>
+    <B>Osamu Hamasaki</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207177%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6ICIwIEAgMCIgGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=45140BBC.2040301%40ps.inforyoma.or.jp"
+       TITLE="[SML 7177] Re: &quot;0 @ 0&quot; について">osamu_hamasaki ＠ nifty.com
+       </A><BR>
+    <I>2006年 9月 24日 (日) 11:27:37 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007173.html">[SML 7173] Re: &quot;0 @ 0&quot; について
+</A></li>
+        <LI>次の記事 <A HREF="007178.html">[SML 7178] Re: &quot;0 @ 0&quot; について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7177">[ 日付 ]</a>
+              <a href="thread.html#7177">[ スレッド ]</a>
+              <a href="subject.html#7177">[ 件名 ]</a>
+              <a href="author.html#7177">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+寺内さん、初めまして。
+
+On 2006/09/23, at 1:13, NOBUTAKA Terauchi wrote:
+
+&gt;<i> 「2.基本-&gt;do it」の最初のプログラムの&quot;0 @  
+</I>&gt;<i> 0&quot;でメッセージの
+</I>&gt;<i> 遣り取りを調べていくと、&quot;self basicNew&quot;が出てきたところ 
+</I>&gt;<i> で追い
+</I>&gt;<i> かけられなくなりました。
+</I>
+中略
+
+&gt;<i> 最初は、SmallIntegerに定義されているbasicNewと思い 
+</I>&gt;<i> ましたが、
+</I>&gt;<i> System Browser -&gt; Class -&gt; Spawn HierarchyでPointを表示 
+</I>&gt;<i> すると
+</I>&gt;<i>
+</I>&gt;<i> Object
+</I>&gt;<i>   Magnitude
+</I>&gt;<i>     ArithmeticValue
+</I>&gt;<i>       Point
+</I>&gt;<i>
+</I>&gt;<i> と表示され、上記のクラスがスーパークラスに存在しませんでした。
+</I>&gt;<i> ここで完全に行き詰まってしまいました。
+</I>
+HierarchyBrowserで&quot;Class&quot;のタブを選択していても、 
+Objectに辿り着いてしまうと
+そこで打ち止めになってしまって、その先が探せなくて困りますよね。
+
+SmalltalkのVMが、あるオブジェクトに送られたメッセージに対 
+応するメソッドを
+見つける手順は、基本的には次の通りです。
+
+１．そのオブジェクトのクラスのメソッド辞書中からそのメッセージを 
+探す
+　　見つかれば、そのクラスで対応するメソッドが定義されている
+２．見つからなければ、そのクラスのスーパークラスのメソッド辞書中 
+から探す。
+　　見つからなければ、そのまたスーパークラスのメソッド辞書中から 
+探す。
+　　という具合に、見つかるまで繰り返す。
+３．クラス階層の頂点まで達しても（つまりスーパークラスが 
+nilになるクラスまで
+　　辿り着いてしまっても）見つからなければ、そのオブジェクトは 
+メッセージに
+　　答えられない。
+
+これは、Smalltalkイディオムの&quot;3.3 インヘリタン 
+ス&quot;のメソッドサーチのくだりの
+ところにも書かれています。
+
+これをそのままSmalltalkのコードで書いてみました。
+幸い、クラスのスーパークラスを求めるためのメソッドや、クラスのメ 
+ソッド辞書に
+書かれているメッセージセレクタの集合を求めるためのメソッドがある 
+ので、これを
+使っています。
+
+
+|<i> methodSearchBlock aBlock |
+</I>
+methodSearchBlock := [ :aStream :aClass :messageSelector |
+	aStream nextPutAll: aClass printString.
+	(aClass selectors includes: messageSelector)
+		ifTrue: [true]
+		ifFalse: [
+			aClass superclass isNil
+				ifTrue: [false]
+				ifFalse: [
+					aStream nextPutAll: ' -&gt; '.
+					methodSearchBlock
+						value: aStream
+						value: aClass superclass
+						value: messageSelector]]].
+
+aBlock := [ :anObject :messageSelector |
+	| aStream |
+	aStream := WriteStream on: String new.
+	(methodSearchBlock value: aStream value: anObject class value:  
+messageSelector)
+		ifTrue: [aStream contents]
+		ifFalse: [anObject printString, ' can not understand ',  
+messageSelector printString]].
+
+aBlock value: foo value: bar
+
+最後の行のfooをメッセージを受け取るオブジェクト（クラスでも 
+OK。Smalltalkでは
+クラスもオブジェクトですから。）、barを送るメッセージセレ 
+クタに置き換えてから、
+全体をセレクトしてprintItして下さい。
+
+例1：　aBlock value: <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">1 ＠ 1</A> value: #printString
+例2：　aBlock value: Point value: #basicNew
+
+そうすると、クラス階層のどこかで見つかった場合、見つかるまでに 
+辿っていった
+クラス階層が出力されます。
+
+例１でやってみると、ブラウザで探すのと同じように、Objectま 
+で遡っていくのが
+お分かり頂けると思います。
+例２でやってみると、”Object class&quot;の次が&quot;Class&quot;とい 
+うクラスになって、ブラウザ
+では遡れない、さらにその先に遡っているのがお分かりいただけると思 
+います。
+
+この結果から判ることは、ブラウザのクラス側で遡って行って、 
+Objectまで辿り着い
+ても見つからなかったら、Classというクラスのインスタンス側 
+に移ってさらに辿って
+いく、という方法を覚えておけば当面は幸せになれる、ということです 
+ね。
+
+こんな風に自分でコードを書いてSmalltalkの仕組みを理解して 
+いけるのも、Smalltalkの
+面白いところですね。
+
+以上です。ご参考になれば幸いです。
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007173.html">[SML 7173] Re: &quot;0 @ 0&quot; について
+</A></li>
+	<LI>次の記事 <A HREF="007178.html">[SML 7178] Re: &quot;0 @ 0&quot; について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7177">[ 日付 ]</a>
+              <a href="thread.html#7177">[ スレッド ]</a>
+              <a href="subject.html#7177">[ 件名 ]</a>
+              <a href="author.html#7177">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

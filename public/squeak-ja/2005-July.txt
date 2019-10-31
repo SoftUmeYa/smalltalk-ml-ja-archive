@@ -1,0 +1,2974 @@
+From htakada ＠ db.soc.i.kyoto-u.ac.jp  Fri Jul  1 00:36:00 2005
+From: htakada ＠ db.soc.i.kyoto-u.ac.jp (Hideyuki Takada)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2492] 公開ワークショップ「創造・学習・コンピュータ -Squeakを使った創造・学習-」のご案内
+Message-ID: <20050630.083600.235232402.htakada@acm.org>
+
+squeak-jaの皆様
+
+京都大学の高田です。
+
+京都大学では，Squeakを使った創造性教育に関する授業をアランケイ博士と共
+同でUCLAとの遠隔講義により行っています。その成果発表の場として，下記の
+公開ワークショップを開催させて頂くことになりました。
+
+また，今回は山宮さんにも「スクイークの未来像」と題して特別講演をして頂
+けることになりました。その他，京都でのカリキュラム開発についてもご紹介
+させて頂きたいと思っております。
+
+参加申し込みは不要です。多数のご参加を頂ければ幸いです。よろしくお願い
+致します。
+
+-----
+公開ワークショップ
+「創造・学習・コンピュータ - Squeakを使った創造・学習 -」
+
+主催：京都大学学術情報メディアセンター
+　　　京都市立堀川高等学校
+　　　ALAN-K プロジェクト
+
+日時：　２００５年７月１６日（土）１４：００〓１７：００
+場所：　京都大学学術情報メディアセンター南館２F
+参加費：無料
+
+プログラム
+１．堀川高校の授業でのSqueakを使ったプロジェクト報告（5件）
+　　　
+２．京都大学の授業でのSqueakを使ったプロジェクト報告（5件）
+　　  
+３．デモ展示（３０分程度） 
+　　堀川高校，京都大学の学生製作の作品展示
+　　ALAN-Kプロジェクトの作品展示（カリキュラムの紹介） 
+
+４．特別講演 　「スクイークの未来像」 　山宮 隆 氏
+
+連絡先：京都大学学術情報メディアセンター　喜多研究室
+ 　　　　http://www.ipe.media.kyoto-u.ac.jp
+
+----
+高田 秀志 (Hideyuki Takada)
+京都大学情報学研究科 社会情報学専攻 COE知識基盤 研究員
+
+From abee.abe ＠ nifty.ne.jp  Fri Jul  1 15:41:01 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2493] Re: Squeak Nihongo 7 update (#100)
+In-Reply-To: <42BF358B.2040507@metatoys.org>
+References: <20050627015210.BBAA.FLORIAN@seagreen.ocn.ne.jp>
+	<42BF358B.2040507@metatoys.org>
+Message-ID: <42C4E57D3D6.2C53ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+山宮さん、ダウンロードページの更新ありがとうございました。
+私も重箱の隅で恐縮なのですが、ダウンロードページのアイコンのリンクが6.1を
+指していたので、7に変えておきました。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From suto ＠ amcac.ac.jp  Fri Jul  1 22:00:23 2005
+From: suto ＠ amcac.ac.jp (suto)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2494] Re: SqueakToys の変数
+In-Reply-To: <42C3D685291.84F7ABEE.ABE@smtp.nifty.com>
+References: <a682cd2f28c5804220fea95aca0b26d0@amcac.ac.jp>
+	<42C3D685291.84F7ABEE.ABE@smtp.nifty.com>
+Message-ID: <ff127b03f85983fbeae199fd1e9c868d@amcac.ac.jp>
+
+阿部さん：
+
+秋田公立美術工芸短期大学の須藤です。
+レス、ありがとうございます。
+
+>> （１）
+>> 関数に「引数」を設定したとき、その引数を表すタイルを条件分岐のタイル（テスト）の
+>> 条件部分に入れようとしても入ってくれないのですが、
+>> 引数を見て処理を条件分岐させることはできないのでしょうか？
+>
+> テストに入れられるフレーズ(たとえば[楕円の][x座標]など)をダミーで入れてお
+> き、引数付スクリプタの引数部分をクリックして取り出せる引数のタイル([数値]
+> など)を古いテストの上にドラッグして置き換えれば大丈夫です。
+>
+
+無事、タイルを入れることができました。
+
+>> （２）
+>> また、関数を再帰的に呼び出すとき、
+>> 「現在の引数に１を足した数を引数として再帰呼び出し」のようなことをやりたいのですが、
+>> 「引数に１を足す」方法が分かりません。可能でしょうか？
+>
+> 引数の定数([5]など)の右にある緑の三角をクリックして式を伸ばし、先程と同じ
+> ように定数を引数タイルで置き換えてやればいけます。
+>
+
+こちらもうまくゆきました。
+
+
+
+>> （３）
+>> 上記の解決策として、「変数」を新たに作成して「引数」を代入し、
+>> 条件分岐などはこの変数を参照することで処理しています。
+>> しかし、ここで作成された変数はいわゆるグローバル変数（インスタンス変数？）のようで、
+>> 再帰呼び出しを行うと期待した結果を得ることができません。
+>> （現在は再帰から返ってきたところで引数を再代入することで回避）
+>> いわゆるローカル変数を使うにはどうすればいいのでしょうか？
+>
+> 入れ物などをつかって、スタックを自分で作って管理するという荒業があります
+> が、それ自体が目的でない限りお勧めしません。その部分だけSmalltalkで書くこ
+> とも出来ます。プロジェクト置き場には、ドラゴン曲線など、まだ引数がなかっ
+> た時代の力作があります。
+>
+
+さすがに自作スタックを作るほどのものでもないので、こちらは試してみませんでした。
+再帰をつかってコッホ曲線をつくるプロジェクトを作ってみたので
+私も公開してみたいと思います。
+これで、専攻科生にフラクタルの基礎を教えることができます。
+（どこまで理解してもらえるかは謎ですが・・・）
+どうもありがとうございました。
+
+---
+須藤秀紹（すとうひでつぐ）
+秋田公立美術工芸短期大学 産業デザイン学科
+〒010-1632 秋田市新屋大川町12-3
+TEL 018-888-8108 / FAX 018-888-8109
+http://www.amcac.ac.jp/~suto
+
+
+From e-itoh ＠ ygu.ac.jp  Mon Jul  4 18:28:21 2005
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2495] Windows 版 Squeak での UDP パケット受信について
+Message-ID: <20050704182821.5BC21489@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+いつも質問ばかりで恐縮ですが、どうも自分で解決できないようなので質問
+させてください。
+
+現在、とあるアプリケーションでUDP通信を利用したいと思っております。要
+するにAIBO上のC++プログラムと、Squeak上のプログラムとで定期的にUDPパケッ
+トを送りあうことを考えています。
+
+そこでUDPを利用したプログラムを書いているのですが、どうもUnixとWindows 
+で挙動が異なるので困っています。Unix上での通信は基本的に想像どおりに動
+くのですが、Windowsではうまく受信ができないようなのです。
+
+下は動作を確認するためのサンプルです、仮にプログラムreceiverとします。
+（ど素人のためのど素人によるSqueak入門から拝借いたしました）
+
+receiver := Socket newUDP setPort: 54321.
+buff := ByteArray new: 100.
+delay := Delay forMilliseconds: 100.
+received := nil.
+Transcript show: 'Receiver start'; cr.
+[received := receiver receiveUDPDataInto: buff.
+ received first isZero ] whileTrue: [ delay wait ].
+Transcript show: 'received(', buff, ')'; cr.
+Transcript show: 'Receiver end'; cr.
+
+これを一方のスクイークのWorkspaceで動かしておき、下のサンプル（sender）
+を別のスクイークで評価します。
+
+src := Socket newUDP.
+host := NetNameResolver addressFromString: '192.168.254.64'.
+src sendUDPData: 'Hello' toHost: host port: 54321.
+
+＃ipアドレスは仮のもので、receiverを起動しているPCに応じて適宜変えます。
+
+こうして、それぞれWindowsやUnix上で動かすと動作結果が変わります。
+
+receiver=Unix版     sender=Unix版    → OK
+receiver=Unix版     sender=Windows版 → OK
+receiver=Windows版  sender=Unix版    → NG
+receiver=Windows版  sender=Windows版 → NG
+
+結果から考えるにWindowsではUDPパケットの受信がうまくいかないようで、
+delay waitで止まったきりになります。受信メソッドとして
+receiveUDPDataInto:fromHost:port:を使った場合でも同様の結果となります。
+
+実際、WindowsでUDP通信を利用するにはどうすればよいのでしょうか？
+どなたかWindows版でUDPの通信に成功している方がいらっしゃれば、ご教示
+いただければと存じます。
+
+なお、環境は以下の通りです。
+
+[Image]
+  Squeak nihongo7
+
+[Unix VM: (squeak -version)]
+3.6.3 #1 2004年  4月 18日 日曜日 21:09:15 JST gcc 2.95.3
+Squeak3.6 of '6 October 2003' [latest update: #5429]
+Linux sk203 2.4.22-0vl2.8smp #1 SMP 2003年 12月 3日 水曜日 00:54:08 JST i686
+default plugin location: /usr/lib/squeak/3.6.3/*.so
+
+[Windows VM:(About Squeak)]
+Squeak 3.7.1 (release) from Sep 23 2004
+Compiler: gcc 2.95.2 19991024 (release)
+
+
+ 
+
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Mon Jul  4 19:33:05 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2496] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <20050704182821.5BC21489@ygu.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+Message-ID: <42C91061.2040201@m2.pbc.ne.jp>
+
+川村です。いつもお世話になっています。
+
+下記症状の件、私も遭遇して結局ＶＭを再構築したらうまくいきました。
+その内容は下記ＵＲＬを参考にしてください。
+http://blog.goo.ne.jp/hkawa90/e/815a494a459786f1833b73bd78456674
+
+でＶＭを変更せずにUDP受信する方法は今のところ見つかってません。
+回答になってませんが。。。。
+
+便乗質問ですが、わかる方がいれば教えてください。
+
+それでは。
+
+Eiichiro Ito wrote:
+
+>山梨学院大学の伊藤です。
+>
+>いつも質問ばかりで恐縮ですが、どうも自分で解決できないようなので質問
+>させてください。
+>
+>現在、とあるアプリケーションでUDP通信を利用したいと思っております。要
+>するにAIBO上のC++プログラムと、Squeak上のプログラムとで定期的にUDPパケッ
+>トを送りあうことを考えています。
+>
+>そこでUDPを利用したプログラムを書いているのですが、どうもUnixとWindows 
+>で挙動が異なるので困っています。Unix上での通信は基本的に想像どおりに動
+>くのですが、Windowsではうまく受信ができないようなのです。
+>
+>下は動作を確認するためのサンプルです、仮にプログラムreceiverとします。
+>（ど素人のためのど素人によるSqueak入門から拝借いたしました）
+>
+>receiver := Socket newUDP setPort: 54321.
+>buff := ByteArray new: 100.
+>delay := Delay forMilliseconds: 100.
+>received := nil.
+>Transcript show: 'Receiver start'; cr.
+>[received := receiver receiveUDPDataInto: buff.
+> received first isZero ] whileTrue: [ delay wait ].
+>Transcript show: 'received(', buff, ')'; cr.
+>Transcript show: 'Receiver end'; cr.
+>
+>これを一方のスクイークのWorkspaceで動かしておき、下のサンプル（sender）
+>を別のスクイークで評価します。
+>
+>src := Socket newUDP.
+>host := NetNameResolver addressFromString: '192.168.254.64'.
+>src sendUDPData: 'Hello' toHost: host port: 54321.
+>
+>＃ipアドレスは仮のもので、receiverを起動しているPCに応じて適宜変えます。
+>
+>こうして、それぞれWindowsやUnix上で動かすと動作結果が変わります。
+>
+>receiver=Unix版     sender=Unix版    → OK
+>receiver=Unix版     sender=Windows版 → OK
+>receiver=Windows版  sender=Unix版    → NG
+>receiver=Windows版  sender=Windows版 → NG
+>
+>結果から考えるにWindowsではUDPパケットの受信がうまくいかないようで、
+>delay waitで止まったきりになります。受信メソッドとして
+>receiveUDPDataInto:fromHost:port:を使った場合でも同様の結果となります。
+>
+>実際、WindowsでUDP通信を利用するにはどうすればよいのでしょうか？
+>どなたかWindows版でUDPの通信に成功している方がいらっしゃれば、ご教示
+>いただければと存じます。
+>
+>なお、環境は以下の通りです。
+>
+>[Image]
+>  Squeak nihongo7
+>
+>[Unix VM: (squeak -version)]
+>3.6.3 #1 2004年  4月 18日 日曜日 21:09:15 JST gcc 2.95.3
+>Squeak3.6 of '6 October 2003' [latest update: #5429]
+>Linux sk203 2.4.22-0vl2.8smp #1 SMP 2003年 12月 3日 水曜日 00:54:08 JST i686
+>default plugin location: /usr/lib/squeak/3.6.3/*.so
+>
+>[Windows VM:(About Squeak)]
+>Squeak 3.7.1 (release) from Sep 23 2004
+>Compiler: gcc 2.95.2 19991024 (release)
+>
+>
+> 
+>
+>
+>
+>
+>
+>  
+>
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.8/37 - Release Date: 2005/07/01
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From takeda ＠ kwansei.ac.jp  Mon Jul  4 20:10:39 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2497] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <20050704182821.5BC21489@ygu.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+Message-ID: <9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>
+
+武田です。
+
+プログラムでUDP使っているものの、今のソースになった経緯が 
+記憶の
+彼方なのですが、
+
+> そこでUDPを利用したプログラムを書いているのですが、どうも 
+> UnixとWindows
+> で挙動が異なるので困っています。Unix上での通信は基本的に 
+> 想像どおりに動
+> くのですが、Windowsではうまく受信ができないようなのです。
+
+receiveUDPDataInto:ではなく、receiveDataInto:を使ってもう 
+まく
+いきませんか？
+
+武田俊之
+
+From e-itoh ＠ ygu.ac.jp  Mon Jul  4 20:26:47 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2498] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>
+Message-ID: <874qbag6bs.wl%e-itoh@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+川村さん、武田さん、ご返事くださいましてありがとうございます。
+
+川村さん＞下記症状の件、私も遭遇して結局ＶＭを再構築したらうまくいきました。
+　早速ホームページを拝見しながら、VMの再構築にチャレンジしております。
+こちらも初めてなので試行錯誤中です。
+
+武田さん＞receiveUDPDataInto:ではなく、receiveDataInto:を使ってもう 
+　　　　＞まくいきませんか？
+　試してみたところ、やはり同様にUnixでは動作するものの、Windowsでは
+動作しませんでした。
+停止する箇所は、delay waitではなく、Socket::waitForDataIfClosedに変
+わりましたが。
+
+　他にもアドバイスなどございましたらよろしくお願いいたします。
+
+From umejava ＠ mars.dti.ne.jp  Mon Jul  4 20:47:33 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2499] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>
+Message-ID: <JW2005070420473311.45073125@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 
+> receiveUDPDataInto:ではなく、receiveDataInto:を使ってもう 
+> まく
+> いきませんか？
+> 
+
+そうそう、確かこれでいまくいきます。
+
+SqueakMapに"Remote Broadcasting Toolkit"という、UDPを使った送受信プログラムが
+超簡単に作れるライブラリを置いています。よろしければお使いください。
+
+http://map1.squeakfoundation.org/sm/package/b2a8901d-2d9e-429a-ba9f-0d94998d9a9b
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From kawa90 ＠ m2.pbc.ne.jp  Mon Jul  4 21:12:42 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2500] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <JW2005070420473311.45073125@mars.dti.ne.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>	<9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>
+	<JW2005070420473311.45073125@mars.dti.ne.jp>
+Message-ID: <42C927BA.6060708@m2.pbc.ne.jp>
+
+川村です。
+
+receiveDataInto:ですか、ついぞTCP専用とずっと勘違いしていました。
+たしかにSocketPluginでUDPの場合,recvfrom()で受信していますね。
+
+とすると、receiveUDPDataInto:は何者なんでしょうか？
+
+それでは。
+
+
+Masashi Umezawa wrote:
+
+>こんにちは
+>梅澤です。
+>
+>  
+>
+>>receiveUDPDataInto:ではなく、receiveDataInto:を使ってもう 
+>>まく
+>>いきませんか？
+>>
+>>    
+>>
+>
+>そうそう、確かこれでいまくいきます。
+>
+>SqueakMapに"Remote Broadcasting Toolkit"という、UDPを使った送受信プログラムが
+>超簡単に作れるライブラリを置いています。よろしければお使いください。
+>
+>http://map1.squeakfoundation.org/sm/package/b2a8901d-2d9e-429a-ba9f-0d94998d9a9b
+>
+>ではでは。
+>---
+>[:masashi | ^umezawa]
+>
+>
+>
+>  
+>
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.8/37 - Release Date: 2005/07/01
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Mon Jul  4 21:38:11 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2501] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <42C927BA.6060708@m2.pbc.ne.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>	<9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>	<JW2005070420473311.45073125@mars.dti.ne.jp>
+	<42C927BA.6060708@m2.pbc.ne.jp>
+Message-ID: <42C92DB3.30005@m2.pbc.ne.jp>
+
+川村です。
+
+>とすると、receiveUDPDataInto:は何者なんでしょうか？
+>  
+>
+私がUDPで参考にしたものはすべてreceiveUDPDataInto:だったんですが…
+
+http://www.visoracle.com/squeakfaq/udp-socket.html
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2004-October/083286.html
+
+それでは。
+
+>それでは。
+>
+>
+>Masashi Umezawa wrote:
+>
+>  
+>
+>>こんにちは
+>>梅澤です。
+>>
+>> 
+>>
+>>    
+>>
+>>>receiveUDPDataInto:ではなく、receiveDataInto:を使ってもう 
+>>>まく
+>>>いきませんか？
+>>>
+>>>   
+>>>
+>>>      
+>>>
+>>そうそう、確かこれでいまくいきます。
+>>
+>>SqueakMapに"Remote Broadcasting Toolkit"という、UDPを使った送受信プログラムが
+>>超簡単に作れるライブラリを置いています。よろしければお使いください。
+>>
+>>http://map1.squeakfoundation.org/sm/package/b2a8901d-2d9e-429a-ba9f-0d94998d9a9b
+>>
+>>ではでは。
+>>---
+>>[:masashi | ^umezawa]
+>>
+>>
+>>
+>> 
+>>
+>>    
+>>
+>
+>
+>  
+>
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.8/37 - Release Date: 2005/07/01
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Jul  4 23:01:46 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2502] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <42C92DB3.30005@m2.pbc.ne.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>
+	<JW2005070420473311.45073125@mars.dti.ne.jp>
+	<42C927BA.6060708@m2.pbc.ne.jp> <42C92DB3.30005@m2.pbc.ne.jp>
+Message-ID: <JA200507042301466.1919406@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Mon, 04 Jul 2005 21:38:11 +0900
+Hideo Kawamura <kawa90@m2.pbc.ne.jp> wrote:
+> 川村です。
+> 
+> >とすると、receiveUDPDataInto:は何者なんでしょうか？
+> >  
+> >
+> 私がUDPで参考にしたものはすべてreceiveUDPDataInto:だったんですが…
+> 
+> http://www.visoracle.com/squeakfaq/udp-socket.html
+> http://lists.squeakfoundation.org/pipermail/squeak-dev/2004-October/083286.html
+> 
+> それでは。
+> 
+
+私も正直何なのか、よくわかっていません。エラーが出ないやつを選んで作ったのが
+Remote Broadcasting Toolkitです。
+
+可能性としてはreceiveUDPDataInto:が、receiveDataInto:に統合されて、
+receiveUDPDataInto:がなんとなく置き去りにされたということです。
+
+この辺りは、よりコアな人に解説してもらいましょう。
+
+---
+[:masashi | ^umezawa]
+
+From e-itoh ＠ ygu.ac.jp  Tue Jul  5 11:13:59 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2503] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <20050704182821.5BC21489@ygu.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+Message-ID: <87irzqm23c.wl%e-itoh@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+みなさま、アドバイスをいただきありがとうございます。
+光明が見えてきたものの、まだ最終的な解決はできておりません。
+
+武田さん、梅澤さん＞＞
+
+receiveDataInfo:を使ってみたところ、下記のサンプルで動作することを確認
+できました。
+
+receiver := Socket newUDP setPort: 54321.
+buff := ByteArray new: 100.
+delay := Delay forMilliseconds: 100.
+localhost := NetNameResolver localHostAddress.
+received := nil.
+Transcript show: 'Receiver start'; cr.
+received := receiver receiveDataInto: buff.
+Transcript show: 'received(', received asString, '-', buff, ')'.
+Transcript show: 'Receiver end'; cr.
+
+昨日同様のコードを試したときはダメだったのですが、どうやら気が動転して
+ミスしてしまったようです。すみません。
+
+ここからが挙動のおかしいところです。
+
+本来のプログラムは１秒おきにAIBOに向けてUDPのパケットを送り続け、AIBO
+からパケット受信したらそれを表示するというものです。
+
+そこで、sendData:とreceiveDataInfo:を使って１秒おきに送受信を繰り返す
+ようにしたところ、AIBOが起動中には想定どおりの動き（パケットのエコーバッ
+ク）をするものの、AIBOの電源を途中で切るとスクイーク側がブロックしてし
+まいます。
+
+止まるのはいつも、Socket>>waitForDataIfClosed:です。dataAvailableは
+通過しているのでreadSemaphoreで止まっているように思えます。
+
+なお、Unix版ではそのようなことにはならず、AIBOの停止、実行に関わりな
+くパケットの送受信を行えます。
+
+今日はVMのビルドに再チャレンジしてみます。みなさま、何か他にもアドバ
+イスがございましたらよろしくお願いいたします。
+
+P.S.
+梅澤さんへ＞＞
+
+  素のnihongo7へPackage LoaderからRemote Broadcasting Toolkitをinstall
+したら以下のようなエラーでインストールできませんでした。
+
+Error occurred during install:
+UndefinedObject>>readOnlyFileNamed:
+Would you like to open a debugger?
+
+SARInstaller>>fileInで、directoryがnilになってました。こちらは別途原因
+究明しようと思います。
+
+From umejava ＠ mars.dti.ne.jp  Tue Jul  5 11:53:15 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2504] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <87irzqm23c.wl%e-itoh@ygu.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<87irzqm23c.wl%e-itoh@ygu.ac.jp>
+Message-ID: <JG200507051153155.8931156@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> P.S.
+> 梅澤さんへ＞＞
+> 
+>   素のnihongo7へPackage LoaderからRemote Broadcasting Toolkitをinstall
+> したら以下のようなエラーでインストールできませんでした。
+> 
+> Error occurred during install:
+> UndefinedObject>>readOnlyFileNamed:
+> Would you like to open a debugger?
+> 
+> SARInstaller>>fileInで、directoryがnilになってました。こちらは別途原因
+> 究明しようと思います。
+
+
+そうですか? こちらは先ほどWindows環境で素のNihongo7にパッケージローダから
+インストールを試みましたが、順調にうまくいきました。テストコードも
+含め、動作しているようです。
+
+なぞですねー。
+
+---
+[:masashi | ^umezawa]
+
+From e-itoh ＠ ygu.ac.jp  Tue Jul  5 11:59:03 2005
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2505] Re: Windows 版 Squeak での UDP パケット受信について
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<87irzqm23c.wl%e-itoh@ygu.ac.jp>
+	<JG200507051153155.8931156@mars.dti.ne.jp>
+Message-ID: <20050705115903.6BE57271@ygu.ac.jp>
+
+伊藤です。
+
+梅澤さん、こんにちは。
+お手を煩わせてしまってすみません。
+
+>こんにちは
+>梅澤です。
+>そうですか? こちらは先ほどWindows環境で素のNihongo7にパッケージローダから
+>インストールを試みましたが、順調にうまくいきました。テストコードも
+>含め、動作しているようです。
+>
+>なぞですねー。
+　おかしいですね。Squeaklandより開発者版をダウンロードして、インスト
+ールした形でした。
+　私のやり方が間違っていたか、私のところのWindowsの環境（Windows 2000）
+に問題あるのかもしれません。再度別のマシンでやりなおしてみます。
+　調べていただきありがとうございました。
+
+
+ 
+
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Jul  5 11:59:31 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2506] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <JG200507051153155.8931156@mars.dti.ne.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<87irzqm23c.wl%e-itoh@ygu.ac.jp>
+	<JG200507051153155.8931156@mars.dti.ne.jp>
+Message-ID: <JU200507051159318.9307171@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+まったくの推測ですが、SqueakMapのキャッシュがおかしくなっている可能性が
+あります。一度Squeakのルートディレクトリ化にあるsmディレクトリを
+消してからやるとうまくいくかもしれません。
+
+> そうですか? こちらは先ほどWindows環境で素のNihongo7にパッケージローダから
+> インストールを試みましたが、順調にうまくいきました。テストコードも
+> 含め、動作しているようです。
+> 
+> なぞですねー。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From takeda ＠ kwansei.ac.jp  Tue Jul  5 14:54:42 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2507] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <87irzqm23c.wl%e-itoh@ygu.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<87irzqm23c.wl%e-itoh@ygu.ac.jp>
+Message-ID: <518A3CF8-7E38-45C5-86DE-8FBBEEF90A2F@kwansei.ac.jp>
+
+武田です。
+
+やっと思い出してきました。
+
+私のプログラムでは以下のようなループになっています。
+waitForDataUntil:は、OldSocket>>waitForDataUntil:を 
+Socketに
+コピーして使っています。
+
+     aBlock
+         whileTrue: [
+             (socket waitForDataUntil: Socket standardDeadline)
+                 ifTrue: [
+                      buffer _ self listenUDPData.
+                      handler value: buffer.
+                 ]
+         ]
+
+
+listenUDPDataの中で、receiveDataInto:を使っています。
+（実はCroquetからのパクリ）
+
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Tue Jul  5 21:37:29 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2508] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <JA200507042301466.1919406@mars.dti.ne.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>	<9D83E7CF-D8F5-4B32-B66B-7972C794BF11@kwansei.ac.jp>	<JW2005070420473311.45073125@mars.dti.ne.jp>	<42C927BA.6060708@m2.pbc.ne.jp>
+	<42C92DB3.30005@m2.pbc.ne.jp>
+	<JA200507042301466.1919406@mars.dti.ne.jp>
+Message-ID: <42CA7F09.9040001@m2.pbc.ne.jp>
+
+川村です。
+receiveUDPDataInto:についてもう少し調べてみました。
+
+Windows版VMでは3.5から実装されていて、ほとんど変更ありません。
+しかしこの実装では動かないことを確認しています。理由はUDPパケッ
+ト受信すべきところを、UDPパケット送信関数を呼び出しています。
+
+で、Unix版VMをみると、Windows版と実装が違いなんか動きそうな
+ソースです（環境がないので、確認していません)。
+
+あくまでも推測ですが、動くサンプルはUnix版で確認されたものでは
+ないかと。。。Windows環境でUDPはあまり需要がないのか？(Googleで
+探してみると、ポツポツとreceiveUDPDataInto:が動かないという記述が
+あります)
+
+で、receiveUDPDataInto:についてVMソースで
+sqSocketReceiveUDPDataBufCountaddressportmoreFlag関数を
+--------cut here---------
+int result;
+struct sockaddr_in saddr;
+int addrSize= sizeof(saddr);
+
+if (!SocketValid(s)) return -1;
+if(UDPSocketType != s->socketType) return -1;
+if(bufSize <= 0) return -1;
+memset(&saddr, 0, sizeof(saddr));
+result = recvfrom(SOCKET(s), (void *)buf, bufSize, 0,
+(struct sockaddr *)&saddr, &addrSize);
+if(result >= 0) {
+*address= ntohl(saddr.sin_addr.s_addr);
+*port= ntohs(saddr.sin_port);
+} else
+result = 0;
+return result;
+--------cut here---------
+とし(Unix版のパクリ)、VMを再構築するとWindowsで動作するように
+なります。
+
+暇な方は上記修正版VM(Ver 3.7.1)を下記においておいたので試してみてください。
+http://squeak.qp.land.to/index.php?plugin=attach&pcmd=open&file=Squeak.zip&refer=%A5%D5%A5%A1%A5%A4%A5%EB%C3%D6%A4%AD%BE%EC
+
+それでは
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.9/39 - Release Date: 2005/07/04
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Wed Jul  6 00:56:40 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2509] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <87irzqm23c.wl%e-itoh@ygu.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<87irzqm23c.wl%e-itoh@ygu.ac.jp>
+Message-ID: <42CAADB8.8090601@m2.pbc.ne.jp>
+
+川村です。レスになってませんが。。。
+
+>receiver := Socket newUDP setPort: 54321.
+>buff := ByteArray new: 100.
+>delay := Delay forMilliseconds: 100.
+>localhost := NetNameResolver localHostAddress.
+>received := nil.
+>Transcript show: 'Receiver start'; cr.
+>received := receiver receiveDataInto: buff.
+>Transcript show: 'received(', received asString, '-', buff, ')'.
+>Transcript show: 'Receiver end'; cr.
+>  
+>
+私のところで（Nihongo7 on Windows XP home SP2）、ワークスペースから'do
+it'すると
+見事にブロックされますが、UDPパケットを受信すると元に戻ります。
+
+これは至極まっとうな気もするのですが。
+セマフォでwaitメッセージを受けたプロセスは休眠してしまうので、UIも停止して
+フリーズしたかのようになると思うのですが。。。。
+
+ちなみに伊藤様のWindows2000はサービスパック２以降でしょうか？
+それ以前の版ではUDP受信の不具合があるようです。。。
+http://support.microsoft.com/kb/263823/JA/
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.9/39 - Release Date: 2005/07/04
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From abee.abe ＠ nifty.ne.jp  Thu Jul  7 02:58:08 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2510] キッズのためのデジタルクリエイター教室  (was: Re: お知らせ  )
+In-Reply-To: <200506280556.j5S5uWNd001771@smtp01.dti.ne.jp>
+References: <42BF358B.2040507@metatoys.org>
+	<200506280556.j5S5uWNd001771@smtp01.dti.ne.jp>
+Message-ID: <42CC1BB01EF.5721ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 28 Jun 2005 14:56:34 +0900
+"Toshio Miyasaka" <miyasaka@iris.dti.ne.jp> wrote:
+>ショートノーティスで恐縮ですが、７月３日にスクイークワークショップを開催する
+>ことになりました。
+>対象者はキッズ（5〜8才）で、親子の共同作業で作品を作って頂く予定です。
+
+このレポートが載っていますね。大成功だったようでなによりです。低年齢のお
+子さんはいかがでしたか。
+http://www.kds.kddi.com/topics/000068.html
+
+今後も続くのですね。
+http://www.kds.kddi.com/summer2005/kids/
+
+>世界聴診器のモーフを使ったゲームを作成する予定です。
+
+これはいかがでしたか。世界聴診器モーフのDTMF(ピポパ音)デコーダはおまけ機
+能だったので、あんまりテストしてなかったりしました。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From Haruko.Mitake ＠ jp.yokogawa.com  Thu Jul  7 08:52:29 2005
+From: Haruko.Mitake ＠ jp.yokogawa.com (Haruko.Mitake@jp.yokogawa.com)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2511] Re: キッズのためのデジタルクリエイター教室  (was: Re: お知らせ  )
+Message-ID: <B602895FDBA7034D8B46FFCDB3987A2A0E36D226@EXCHANGE02.jp.ykgw.net>
+
+はじめまして、井上と申します。
+
+７月３日のスクイークワークショップに親子で参加いたしました。
+宮坂さま、スタッフの皆さま、大変お世話になりました。
+
+> >ショートノーティスで恐縮ですが、７月３日にスクイークワークショップを開催する
+> >ことになりました。
+> >対象者はキッズ（5〜8才）で、親子の共同作業で作品を作って頂く予定です。
+> 
+> このレポートが載っていますね。大成功だったようでなによりです。低年齢のお
+> 子さんはいかがでしたか。
+> http://www.kds.kddi.com/topics/000068.html
+　
+一番前の席で他の親子さんたちの動きがわからなかったですが、
+自分たちは、すごく楽しめました。
+まず、子供がお絵かきをして（ウチはヒヨコ）、
+次に親がスクリプトを作りました。
+
+親は、Windowsのマウス操作に慣れているので、
+Squeakの操作（ハロを出したりとかetc）に最初戸惑いましたが、
+子供は問題ないようでした。
+
+あと、どこにどのスクリプト（のテンプレート）があるのか、すぐ忘れてしまうので、
+それがちょっと難儀でしたが、なんとかゲームを完成し、親子で対戦できました。
+二羽のヒヨコがパタパタ追いかけあったり逃げたり、面白〜い！
+あっというまの３時間、、とっても楽しかったです！
+
+> 
+> >世界聴診器のモーフを使ったゲームを作成する予定です。
+> 
+> これはいかがでしたか。世界聴診器モーフのDTMF(ピポパ音)デコーダはおまけ機
+> 能だったので、あんまりテストしてなかったりしました。
+　
+特定の音は、１回押しただけでは反応せず、２~３回押すと反応していました。
+音のせい？マイクのせい、、？かもしれません？？
+
+宮坂さま、楽しい機会を作ってくださって、ありがとうございました。
+他のワークショップもまた都合がついたら参加したいと思います。
+
+
+Haruko Resonant Seed
+「幸せ革命」
+http://infostore.jp/dp.do?af=haruko&ip=bashar3&pd=sk000777
+
+
+From e-itoh ＠ ygu.ac.jp  Thu Jul  7 10:06:43 2005
+From: e-itoh ＠ ygu.ac.jp (e-itoh@ygu.ac.jp)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2512] Re: Windows 版 Squeak での UDP パケット受信について
+In-Reply-To: <87irzqm23c.wl%e-itoh@ygu.ac.jp>
+References: <20050704182821.5BC21489@ygu.ac.jp>
+	<87irzqm23c.wl%e-itoh@ygu.ac.jp>
+Message-ID: <871x6b1l24.wl%e-itoh@ygu.ac.jp>
+
+伊藤です。
+
+学期抹え急に仕事がたてこんでおり、返事がおくれてしまって申し訳ございま
+せん。
+
+川村さんからアドバイス頂いたとおり、VMのリビルドによって当座の問題はク
+リアできました。しかし、バージョンアップ時にメソッドが消えてしまう可能
+性もありそうなので、今後のことを考えると、武田さんのおっしゃるやり方や、
+梅澤さんのRemote Broadcasting Toolkitを利用させていただく方がいいかも
+しれないと思っています。
+
+ともかく、実験できる時間がなくなってしまったので、また改めて報告させて
+いただきます。
+
+みなさま、本当にありがとうございました。
+
+From miyasaka ＠ iris.dti.ne.jp  Fri Jul  8 09:59:18 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2513] Re: キッズのためのデジタルクリエイター教室
+In-Reply-To: <B602895FDBA7034D8B46FFCDB3987A2A0E36D226@EXCHANGE02.jp.ykgw.net>
+Message-ID: <200507080059.j680xL7U005320@smtp00.dti.ne.jp>
+
+阿部様、井上様
+
+おはようございます。
+デジタルハリウッド大学院の宮坂です。
+
+ワークショップに関するメールをありがとうございました。
+どうなることかと心配だったワークショップも無事終わってホッとしています。
+参加された井上さまにも喜んでいただけたようでうれしい限りです。
+
+■ワークショップの模様
+今回は８組のファミリーの方々に参加していただきました。
+我々のほうは、講師の私とチューター役のスタッフが３名の計４名体制です。
+２組のパソコンが途中でフリーズしてしまい、１時間かけて作った作品がなくなって
+しまうというハプニングなどもあり、我々スタッフは本当にバタバタしていました
+が、それでも参加者のみなさまにはそれなりに喜んでいただけたようです。
+http://www.kds.kddi.com/topics/000068.html
+
+■世界聴診器
+世界聴診器のモーフは本当にすばらしいですね。
+今回は外部マイクを購入し、携帯電話に輪ゴムでくくりつけて使いました。
+携帯の「ピポパ」音で上下左右に自分の描いた絵が動かせるというのは、大人がやっ
+ても、ちょっと子供心を刺激されてわくわくしてしまいます。
+井上さんからのレポートにもあったとおり、２〜３回押さないと上手く認識してくれ
+ないような場合もありますが、ただ、それもゲームのうちと考えれば、今のままでも
+だいじょうぶかと思いました。
+（なんとなく、私の感覚では「２」の音が認識されにくいような印象がありますが）
+
+世界聴診器は、まさにリアルとデジタルを結ぶすばらしいインターフェースだと思い
+ます。
+これからも、ワークショップのなかで活用させていただきたいと思います。
+ところで世界聴診器がSqueak Nihongo7に対応されるのはいつ頃になりますでしょう
+か？
+楽しみにしております。
+
+■次回のワークショップ
+今後も継続的にワークショップを開催する予定ですので、ご興味ある方は是非ご参加
+ください。
+http://www.kds.kddi.com/summer2005/kids/
+
+取り急ぎご報告まで。
+今後ともよろしくお願いいたします。
+
+-------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+-------------------------------------------
+e-mail : miyasaka@iris.dti.ne.jp
+homepage : http://mts-j.hiho.jp/
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Haruko.Mitake@jp.yokogawa.com
+Sent: Thursday, July 07, 2005 8:52 AM
+To: squeak-ja@smalltalk.jp
+Subject: [Squeak-ja: 2511] Re: キッズのためのデジタルクリエイター教室 (was:
+Re: お知らせ )
+
+はじめまして、井上と申します。
+
+７月３日のスクイークワークショップに親子で参加いたしました。
+宮坂さま、スタッフの皆さま、大変お世話になりました。
+
+> >ショートノーティスで恐縮ですが、７月３日にスクイークワークショップを開催
+する
+> >ことになりました。
+> >対象者はキッズ（5〜8才）で、親子の共同作業で作品を作って頂く予定です。
+>
+> このレポートが載っていますね。大成功だったようでなによりです。低年齢のお
+> 子さんはいかがでしたか。
+> http://www.kds.kddi.com/topics/000068.html
+　
+一番前の席で他の親子さんたちの動きがわからなかったですが、
+自分たちは、すごく楽しめました。
+まず、子供がお絵かきをして（ウチはヒヨコ）、
+次に親がスクリプトを作りました。
+
+親は、Windowsのマウス操作に慣れているので、
+Squeakの操作（ハロを出したりとかetc）に最初戸惑いましたが、
+子供は問題ないようでした。
+
+あと、どこにどのスクリプト（のテンプレート）があるのか、すぐ忘れてしまうの
+で、
+それがちょっと難儀でしたが、なんとかゲームを完成し、親子で対戦できました。
+二羽のヒヨコがパタパタ追いかけあったり逃げたり、面白〜い！
+あっというまの３時間、、とっても楽しかったです！
+
+>
+> >世界聴診器のモーフを使ったゲームを作成する予定です。
+>
+> これはいかがでしたか。世界聴診器モーフのDTMF(ピポパ音)デコーダはおまけ機
+> 能だったので、あんまりテストしてなかったりしました。
+　
+特定の音は、１回押しただけでは反応せず、２~３回押すと反応していました。
+音のせい？マイクのせい、、？かもしれません？？
+
+宮坂さま、楽しい機会を作ってくださって、ありがとうございました。
+他のワークショップもまた都合がついたら参加したいと思います。
+
+
+Haruko Resonant Seed
+「幸せ革命」
+http://infostore.jp/dp.do?af=haruko&ip=bashar3&pd=sk000777
+
+
+From umejava ＠ mars.dti.ne.jp  Fri Jul  8 19:42:16 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2514] LLDNの「デモ自慢」参加募集
+Message-ID: <JY200507081942165.5408875@mars.dti.ne.jp>
+
+こんにちは
+梅澤@LLDNプログラム委員です。
+
+来る8/27(土)LLDNが開催されます。
+http://ll.jus.or.jp/2005/
+
+「夜の部」で「デモ自慢」というプログラムが開催されることとなりました。
+Squeakで書いたクールなアプリを、他の平凡言語(ウソです。すみません)の
+コミュニティに見せつけたい！という方、ぜひとも参戦されると盛り上がる
+のではないでしょうか。
+
+なお、午前の「どう書く」に関してですが、今年は鷲見さんにご協力いただく
+ことになりました。
+
+#まあ、また優勝ですね。
+
+なお、当日はSqueaker同士で内輪の打ち上げ会をやることも考えております。
+濃い空間を求める方、ぜひどうぞ。
+
+では。
+
+ ============================================================
+   Lightweight Language Night「デモ自慢」作品募集のお知らせ
+ ============================================================
+ 
+    あなたの自慢のソフトウエアをLL Nightでデモしませんか?
+ 
+ Lightweight Language Nightでは「デモ自慢」セッションを開催し
+ ます。あなたの自信作をアピールするまたとないチャンスです。素
+ 晴らしい作品には惜しみない賞賛が、つまらない作品には容赦ない
+ ブーイングが与えられることでしょう。この試練に立ち向かう勇者
+ よ来たれ!
+ 
+ 　日時　　　　　　：2005年8月27日(土) 19:00〜
+ 　場所　　　　　　：東京新宿歌舞伎町「ロフトプラスワン」
+ 　対象ソフトウエア：軽量言語で書かれていること
+ 　応募資格　　　　：当日会場で発表できること
+ 　　　　　　　　　　会場からのツッコミに耐えられること
+ 　募集人数　　　　：4名
+ 　持ち時間　　　　：1人15分(質疑応答含む)
+ 　応募方法　　　　：メールの標題に「デモ自慢応募」と書いて
+ 　　　　　　　　　　info2005@ll.jus.or.jp 宛てにご応募ください。
+ 　　　　　　　　　　作品の概要やアピールしたい点もお忘れなく。
+ 　締め切り　　　　：7月31日(日)23:59
+ 　LLDN Webサイト　：http://ll.jus.or.jp/2005/
+ 
+ ※応募者多数の場合は実行委員会で選考させていただきます。
+ 
+ ============================================================
+
+---
+[:masashi | ^umezawa]
+
+From seki.at.druby.org ＠ gmail.com  Sun Jul 10 11:06:43 2005
+From: seki.at.druby.org ＠ gmail.com (Masatoshi SEKI)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2515] Re: LLDNの「デモ自慢」参加募集
+In-Reply-To: <JY200507081942165.5408875@mars.dti.ne.jp>
+References: <JY200507081942165.5408875@mars.dti.ne.jp>
+Message-ID: <57a8e86805070919067c2a3c4b@mail.gmail.com>
+
+咳です。
+
+05/07/08 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> こんにちは
+> 梅澤@LLDNプログラム委員です。
+> 
+> 来る8/27(土)LLDNが開催されます。
+> http://ll.jus.or.jp/2005/
+> 
+> 「夜の部」で「デモ自慢」というプログラムが開催されることとなりました。
+> Squeakで書いたクールなアプリを、他の平凡言語(ウソです。すみません)の
+> コミュニティに見せつけたい！という方、ぜひとも参戦されると盛り上がる
+> のではないでしょうか。
+
+去年のデモ、インパクトあったみたいですよね。
+平凡言語は実装ネタ(なんだろ。バイトコードが、フレームワークが、とか)に
+走りそうな気がするので、普通にSqueak見せる方が自慢になる気がします。
+
+が、
+
+あえてその場でSqueakに新しいプリミティブを追加して、VMを作り直して
+別のアーキテクチャで動かしてみせるとか…。
+ってアプリじゃないか。
+
+
+
+> なお、当日はSqueaker同士で内輪の打ち上げ会をやることも考えております。
+> 濃い空間を求める方、ぜひどうぞ。
+
+濃いのですか。興味あります。
+
+# でも今回は平凡言語方面で書籍の営業活動してこないと…
+
+From takuya ＠ nisiq.net  Sun Jul 10 14:28:09 2005
+From: takuya ＠ nisiq.net (takuya@nisiq.net)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2516] Re: OSC2005/Hokkaido
+In-Reply-To: <20050531222836.69AC.TAKUYA@computer.org>
+References: <BEC1FC38.33270%sumi@seagreen.ocn.ne.jp>
+	<20050531222836.69AC.TAKUYA@computer.org>
+Message-ID: <20050710142604.C1E6.TAKUYA@nisiq.net>
+
+  蒲田です。
+
+  昨日のOSC-Doが開催されました。ギリギリになってからの告知だったにもかか
+わらず、多くの方に参加いただきました。
+
+  周辺の展示が、Linuxやweb application関連、そして組み込み...とSqueakと
+ジャンルが違うものばかりだったので、実は、ちょっと心配していましたが、色
+々な方たちに興味を持っていただくことができました。
+
+  鷲見さんにお願いしたセッションは、事前登録段階で会場が満席になるほどの
+集客でした。お話も、SmalltalkとSqueakの関係や、Squeakの持つ様々な面をご
+紹介いただき、大好評でした。忙しい中、鷲見さんには面白いお話を準備してい
+ただき、ありがとうございました。そればかりか、後半は、展示ブースの説明ま
+でやっていただいて、申し訳なかったです。
+
+  また、50枚焼いて持っていったSqueakwareとSqueakKitのCDも、当初「余るか
+もなぁ」と心配していたのですが、午前中で出払ってしまうほど興味を持ってい
+ただきました。CDの配布を快諾してくださった梅澤さん、山宮さんに感謝です。
+
+  OSC関係者や他の展示参加者にもSqueakは好評で、「なつかし〜、Smalltalkだ
+ぜ」なんて言いながら自分のPCにインストールしていた方や、更には「展示スペー
+スにおいてあった"Powerful Ideas in the Classroom"のサンプル、展示の空き
+時間に全部クリアした」などといういう話も聞きました。
+
+  今回のイベントがきっかけとなって、「Squeakで遊ぶ」人たちが少しでも増え
+ると良いなぁ...と思いながら、取り急ぎ、昨日の結果報告まで。
+
+  最後になりましたが、鷲見さん、梅澤さん、山宮さん、ご協力くださった方、
+参加してくださった方、そして、Squeakの技術的な問題に無関係なOSC-Doのメッ
+セージが流れることにガマンしてくださったSqueak mailing listのみなさんに
+多謝です。ありがとうございました。
+
+-- Community Info. -----------------------------------------------------
+Tech-Ezo  : 次回はWikiかSNS。もしかしたらCMS。詳細 http://tech-ezo.jp
+CLR/H     : 次回は7月23日.詳細は,http://mixi.jp/view_event.pl?id=1140751
+-- Takuya Kamada -------------------------------- takuya@computer.org ---
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Jul 10 21:58:06 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2517] LLDNの「ダメ自慢」参加募集
+Message-ID: <JO2005071021580622.3360578@mars.dti.ne.jp>
+
+こんにちは
+梅澤@LLDNプログラム委員です。
+
+Squeakをダメだと思っている人はあまりいないかと思いますが(?)、
+LLDNの夜の部では、下記のような「ダメ自慢」というセッションもあります。
+
+日頃Squeakでプログラミングしていて、鬱憤がたまりにたまっている
+という方、出てみると良いかもしれません。
+
+======================================================================
+
+Lightweight Language Night 言語ダメ自慢セッションへのご協力のお願い
+
+ 2005年8月27日に開催されます LLDN の夜の部、Lightweight Language
+Night で各言語のダメ自慢を競ってもらおうというセッションを企画しました。
+つきましてはこのセッションに参加していただく方を募集いたします。
+
+ 現在の企画案は以下の通りです。
+
+ ・参加言語コミュニティは 4つ程度。各言語1人ずつ。
+ ・参加者には、自分の言語のもっともダメだと思う点を2つ準備してもらい
+   ます。
+ ・また、ダメな点の発表スライドとして
+
+       - キャッチーなタイトル(プロレス技のような感じで)
+       - 具体的な説明
+
+    をひとつのダメな点につきそれぞれ1枚ずつ用意していただきます。
+
+ ・発表は各言語順番に1つずつ行い、それぞれについて議論(雑談?) + 会場
+   からの意見を募集します。これを2周ぐらい回します。この議論に関しても
+
+       - 他の言語をけなしてはいけない
+       - 自分の言語のよりダメな部分を自慢するのが望ましい
+
+   というルールを設けます。
+
+ 参加してもよいという方は、LL 実行委員会までお名前・メールアドレス・
+所属言語をお知らせください。
+
+ 自虐ネタでも何でも、より多くのウケを取ってやるぜという、勇気ある発表
+者の参加をお待ちしております。
+======================================================================
+
+---
+[:masashi | ^umezawa]
+
+From sumi ＠ seagreen.ocn.ne.jp  Sun Jul 10 23:40:47 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:13 2007
+Subject: [Squeak-ja: 2518] Re: OSC2005/Hokkaido
+In-Reply-To: <20050710142604.C1E6.TAKUYA@nisiq.net>
+Message-ID: <BEF7627D.34D25%sumi@seagreen.ocn.ne.jp>
+
+皆さん、ごきげんよう。鷲見です。
+
+蒲田さん、お世話になりました。
+
+on 07/10/05 14:28, takuya@nisiq.net wrote:
+
+> 鷲見さんにお願いしたセッションは、事前登録段階で会場が満席になるほどの
+> 集客でした。お話も、SmalltalkとSqueakの関係や、Squeakの持つ様々な面をご
+> 紹介いただき、大好評でした。忙しい中、鷲見さんには面白いお話を準備してい
+> ただき、ありがとうございました。そればかりか、後半は、展示ブースの説明ま
+> でやっていただいて、申し訳なかったです。
+
+こちらこそ、手続きからなにからお願いしてしまって申し訳なかったです。
+
+準備にもあまり時間がかけられなかったので、ぶっつけ本番同然で、うまくできるか
+ちょっとひやひやものでしたが、観客のみなさんの暖かい反応にも助けられながら無
+事、時間内に収めることができました。なかには、ブースのほうにも訪ねてくださっ
+たかたもおられたのでうれしかったです。
+
+いろいろとありがとうございました。
+
+−−
+
+デモには Squeak 3.8 full に日本語フォントを追加したものを使用しました。
+これだけで日本語情報が扱えるようになるとは本当にすばらしいことですね。
+大島さんはじめ、Nihongo7 関係の皆様のご尽力には感謝にたえません。
+
+なお、今回はインストール済みソフトとして Alice と Nebraska （と、もちろんプ
+レゼン用に日本語）を使いたくて単純にそれらが削除されていない Squeak 3.8 full
+を選んだのですが、3.8 では（もともと Alice の eToys モドキを動かすためにもの
+と思われる） isPlayerLike 関係の“なんちゃって”リファクタリングのために
+eToys モドキがうまく動かなくなってしまうという本末転倒なことが起こっていて、
+ちょっと辟易とさせられたりしました。
+
+これは例によって lazy fix にて回避できたのですが、Nebraska についてはフォン
+ト関係のトラブルでクライアントが動作しなくなってしまっているようで使わなかっ
+た（使えなかった）ので、あとから思えば Nebraska は最初からあきらめて、
+Nihongo7 に Alice をインストールした方が早かったかも…と(^_^;)。
+
+日本語関係では、クラス名に日本語を使うと、メソッドの versions がうまく機能し
+なくなるのにも気が付きましたので、（まあデモでもなければ、そういうことをする
+人はいないとは思いますが…）取り急ぎご報告まで。
+
+--
+Masato Sumi
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Jul 11 01:41:00 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2519] Re: OSC2005/Hokkaido
+In-Reply-To: <BEF7627D.34D25%sumi@seagreen.ocn.ne.jp>
+References: <BEF7627D.34D25%sumi@seagreen.ocn.ne.jp>
+Message-ID: <JY200507110141008.1693968@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> これは例によって lazy fix にて回避できたのですが、Nebraska についてはフォン
+> ト関係のトラブルでクライアントが動作しなくなってしまっているようで使わなかっ
+> た（使えなかった）ので、あとから思えば Nebraska は最初からあきらめて、
+> Nihongo7 に Alice をインストールした方が早かったかも…と(^_^;)。
+> 
+
+Nebraskaに関しては、代わりになるものを、私が作ろうとしています。今は諸事情で
+中断していますが、そのうちに復活します。
+
+http://swikis.ddo.jp/SeeThroughTalk
+
+諸事情というのは実はNetMorphの更新です。次期バージョンは大幅に使いやすくなる
+予定なので、ご期待ください。
+
+http://swikis.ddo.jp/NetMorph
+
+では。
+---
+[:masashi | ^umezawa]
+
+From abee.abe ＠ nifty.ne.jp  Mon Jul 11 13:44:10 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2520] Re: OSC2005/Hokkaido
+In-Reply-To: <20050710142604.C1E6.TAKUYA@nisiq.net>
+References: <20050531222836.69AC.TAKUYA@computer.org>
+	<20050710142604.C1E6.TAKUYA@nisiq.net>
+Message-ID: <42D1F91A1D6.FD2FABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+関係者の皆さん、お疲れ様でした。
+
+On Sun, 10 Jul 2005 14:28:09 +0900
+takuya@nisiq.net wrote:
+>  鷲見さんにお願いしたセッションは、事前登録段階で会場が満席になるほどの
+>集客でした。お話も、SmalltalkとSqueakの関係や、Squeakの持つ様々な面をご
+>紹介いただき、大好評でした。忙しい中、鷲見さんには面白いお話を準備してい
+>ただき、ありがとうございました。そればかりか、後半は、展示ブースの説明ま
+>でやっていただいて、申し訳なかったです。
+
+ぽつぽつとblogにも感想が載り始めていますね。
+
+http://d.hatena.ne.jp/kunit/20050710
+http://d.hatena.ne.jp/habuakihiro/20050711
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Mon Jul 11 14:44:49 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2521] 作品の入れ籠を制限したい
+Message-ID: <p04320424bef7b7cc8949@amateras.ma.ns.musashi-tech.ac.jp>
+
+井上です。
+
+最近のうちの子どもたちはたまにsqueakのことを思い出して熱中しては放り出
+してしばらく忘れてしまうという繰り返しになってます。というわけでなかな
+かお見せできるような作品はできてません。シューティングゲームや爆弾ばっ
+かり作ってるし・・・
+
+ところで、作品の中に作品を作ってまたその中に・・・と入れ籠になるのを制
+限することはできませんか？勝手にやらせているとうちの子どもたちは辺り構
+わず作品を作って行くのでどんどん深く潜ってしまうのです。最上位位置以外
+に作品を作れないようにすれば、自然と作品保存を覚えるようになるかなとい
+う気もします。
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From abee.abe ＠ nifty.ne.jp  Mon Jul 11 15:05:59 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2522] Re: キッズのためのデジタルクリエイター教室
+In-Reply-To: <200507080059.j680xL7U005320@smtp00.dti.ne.jp>
+References: <B602895FDBA7034D8B46FFCDB3987A2A0E36D226@EXCHANGE02.jp.ykgw.net>
+	<200507080059.j680xL7U005320@smtp00.dti.ne.jp>
+Message-ID: <42D20C472B1.FD32ABEE.ABE@smtp.nifty.com>
+
+阿部%新百合@ビューポイントテクノロジーです。
+
+On Fri, 8 Jul 2005 09:59:18 +0900
+"Toshio Miyasaka" <miyasaka@iris.dti.ne.jp> wrote:
+>■ワークショップの模様
+>今回は８組のファミリーの方々に参加していただきました。
+>我々のほうは、講師の私とチューター役のスタッフが３名の計４名体制です。
+>２組のパソコンが途中でフリーズしてしまい、１時間かけて作った作品がなくなって
+>しまうというハプニングなどもあり、我々スタッフは本当にバタバタしていました
+>が、それでも参加者のみなさまにはそれなりに喜んでいただけたようです。
+>http://www.kds.kddi.com/topics/000068.html
+
+フリーズは本当に困った問題で、ユーザインタラプトくらいで回避できるものも
+あれば、そうでないものもあります。このあたり、Nihongo7では相当改善された
+のではないかと思います(残念ながら、なくなったわけではないです)。世界聴診
+器に由来するバグの可能性も捨てきれません。
+
+回避策としては、こまめな保存(公開)なのですが、この操作自体が結構煩雑で、
+あまり早い段階で行うと混乱のもとになりかねません(名前のキーボード入力も鬼
+門)。むずかしいです。
+
+>■世界聴診器
+>世界聴診器のモーフは本当にすばらしいですね。
+>今回は外部マイクを購入し、携帯電話に輪ゴムでくくりつけて使いました。
+>携帯の「ピポパ」音で上下左右に自分の描いた絵が動かせるというのは、大人がやっ
+>ても、ちょっと子供心を刺激されてわくわくしてしまいます。
+>井上さんからのレポートにもあったとおり、２〜３回押さないと上手く認識してくれ
+>ないような場合もありますが、ただ、それもゲームのうちと考えれば、今のままでも
+>だいじょうぶかと思いました。
+>（なんとなく、私の感覚では「２」の音が認識されにくいような印象がありますが）
+
+たぶんマイクの入力レベル調整の問題のような気がします(あるいは携帯のキー操
+作音の音量、もしくはノイズレベルが高いとか、マイクに指向性があるとか)。
+Windowsの録音コントロールのスライダを操作して最適な位置を探ってみてくださ
+い。マイクによっては「トーン」ボタンをクリックして「マイクブースト」をチェッ
+クしないと小さすぎることもあります。私のところでも試してみたのですが、正
+しく調整すれば、ほぼ100%の認識でした。
+
+>世界聴診器は、まさにリアルとデジタルを結ぶすばらしいインターフェースだと思い
+>ます。
+>これからも、ワークショップのなかで活用させていただきたいと思います。
+>ところで世界聴診器がSqueak Nihongo7に対応されるのはいつ頃になりますでしょう
+>か？
+>楽しみにしております。
+
+ありがとうございます。実はNihongo7対応のものはずいぶん前に作っており、山
+宮さんの改良版などもあるのですが、まだちゃんと公開できていません。もうし
+ばらくお待ちください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From sumi ＠ seagreen.ocn.ne.jp  Mon Jul 11 23:44:37 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2523] m17nVersionsFix  (was Re: OSC2005/Hokkaido
+In-Reply-To: <BEF7627D.34D25%sumi@seagreen.ocn.ne.jp>
+Message-ID: <BEF8B4DF.34DE0%sumi@seagreen.ocn.ne.jp>
+
+皆さん、ごきげんよう。鷲見です。
+
+下のもののフィックスを試みてみました。Nihongo7 でも機能するはずです。
+
+on 07/10/05 23:40, sumi@seagreen.ocn.ne.jp wrote:
+
+> 日本語関係では、クラス名に日本語を使うと、メソッドの versions がうまく機能し
+> なくなるのにも気が付きましたので、（まあデモでもなければ、そういうことをする
+> 人はいないとは思いますが…）取り急ぎご報告まで。
+
+--
+Masato Sumi
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: 無し
+型:         application/octet-stream
+サイズ:     391 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050711/bb844c47/attachment.obj
+From sumi ＠ seagreen.ocn.ne.jp  Tue Jul 12 00:02:40 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2524] Re: OSC2005/Hokkaido
+In-Reply-To: <42D1F91A1D6.FD2FABEE.ABE@smtp.nifty.com>
+Message-ID: <BEF8B91E.34DE1%sumi@seagreen.ocn.ne.jp>
+
+阿部さん、梅澤さん、ごきげんよう。鷲見です。
+
+on 07/11/05 13:44, abee.abe@nifty.ne.jp wrote:
+
+> ぽつぽつとblogにも感想が載り始めていますね。
+
+情報、ありがとうございます。こうしてブログでの言及があると嬉しいですね。
+
+
+on 07/11/05 01:41, umejava@mars.dti.ne.jp wrote:
+
+> Nebraskaに関しては、代わりになるものを、私が作ろうとしています。今は諸事情で
+> 中断していますが、そのうちに復活します。
+> 
+> http://swikis.ddo.jp/SeeThroughTalk
+
+ちらと頭には浮かんだのですが、チャレンジする余裕がありませんでした。スミマセ
+ン。また、こういう機会があれば、そのときはぜひ使わせていただきたいので、お忙
+しいとは思いますが、復活のほうよろしくお願いします。
+
+--
+Masato Sumi
+
+
+From abee.abe ＠ nifty.ne.jp  Tue Jul 12 15:46:54 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2525] 杉並区和田小学校でのスクイークを使った活動  (was: Re: 和田小学校での SqueakToys ワークショップ  )
+In-Reply-To: <42B7ADC91D9.4937ABEE.ABE@smtp.nifty.com>
+References: <JJ200506211408023.3566828@mars.dti.ne.jp>
+	<42B7ADC91D9.4937ABEE.ABE@smtp.nifty.com>
+Message-ID: <42D3675E38C.B93AABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 21 Jun 2005 15:03:53 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>ベールに包まれていた和田小の活動内容もそろそろディスクローズしていきます
+>ので、今後にご期待ください(狼少年にならないよう自戒を込めて)。
+
+HP-Squeakersの須藤さんのご尽力によりSqueakland.jpに紹介ページができました。
+http://www.squeakland.jp/wadasyou/wadasyou.html
+
+今後充実させていこうと思いますのでよろしくお願いします。
+また、うちの活動も載せてよというのも大歓迎です。このML宛にもらえると嬉し
+いです。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Tue Jul 12 16:28:09 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2526] Re: 作品の入れ籠を制限したい
+In-Reply-To: <p04320424bef7b7cc8949@amateras.ma.ns.musashi-tech.ac.jp>
+References: <p04320424bef7b7cc8949@amateras.ma.ns.musashi-tech.ac.jp>
+Message-ID: <42D3710924B.B93EABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 11 Jul 2005 14:44:49 +0900
+iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp> wrote:
+>最近のうちの子どもたちはたまにsqueakのことを思い出して熱中しては放り出
+>してしばらく忘れてしまうという繰り返しになってます。というわけでなかな
+>かお見せできるような作品はできてません。シューティングゲームや爆弾ばっ
+>かり作ってるし・・・
+
+楽しみにしています :-)
+
+>ところで、作品の中に作品を作ってまたその中に・・・と入れ籠になるのを制
+>限することはできませんか？勝手にやらせているとうちの子どもたちは辺り構
+>わず作品を作って行くのでどんどん深く潜ってしまうのです。最上位位置以外
+>に作品を作れないようにすれば、自然と作品保存を覚えるようになるかなとい
+>う気もします。
+
+作ってみました。添付のファイルをクリーンなSqueakにドロップし、文字列を全
+選択してfileIn selection (G)してください。その後、ワールドでESCキーを押し
+て、「別名で保存・・・」し、以後はこのイメージをお使いください。
+Nihongo6.1用です。他のバージョンでは文字コードの変換が必要な場合がありま
+す。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: ProjectNavigationMorph-newProject.st
+型:         application/octet-stream
+サイズ:     329 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050712/a4d0ba5c/ProjectNavigationMorph-newProject.obj
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Tue Jul 12 21:38:05 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2527] Re: 作品の入れ籠を制限したい
+In-Reply-To: <42D3710924B.B93EABEE.ABE@smtp.nifty.com>
+References: <p04320424bef7b7cc8949@amateras.ma.ns.musashi-tech.ac.jp>
+	<42D3710924B.B93EABEE.ABE@smtp.nifty.com>
+Message-ID: <20050712213805332583.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+井上です。
+
+Kazuhiro ABEさんがTue, 12 Jul 2005 16:28:09 +0900に
+「[Squeak-ja: 2526] Re: 作品の入れ籠を制限したい」の件で：
+> 作ってみました。添付のファイルをクリーンなSqueakにドロップし、文字列を全
+
+どうもありがとうございました。うまくいってます。これで「ごちゃごちゃがい
+やだったら保存しなさい！」とか「保存しないと消すぞ」とか脅しがきけばよい
+のですが。(^^;
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From sumi ＠ seagreen.ocn.ne.jp  Wed Jul 13 00:40:22 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2528]  ×÷のカット＆ペーストでエラー
+Message-ID: <BEFA1375.34E73%sumi@seagreen.ocn.ne.jp>
+
+皆さん、ごきげんよう。鷲見です。
+
+Squeak 3.8 や Nihongo7 で、$×、$÷ など charCode が 16rA0 〜 16rFF 範囲内の
+文字を含む文字列をカット＆ペーストすると文字化けが起きたり、例外があがります
+（Mac OS 9、Win XP で確認）。
+
+EncodedCharSet class >> #charFromUnicode: 冒頭の unicode < 256 を unicode <
+16rA0 などと変えると、とりあえず直るようです。ご報告まで。
+
+--
+Masato Sumi
+
+
+From tetha ＠ st.rim.or.jp  Wed Jul 13 08:39:06 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2529] MacOSX でブラウザプラグインを利用
+Message-ID: <066B7FE0-2591-4E43-AB53-B683CDEE0B0A@st.rim.or.jp>
+
+みなさん、こんにちは
+林徹也です。どうも。
+Mac ネタであります。
+
+SuperSwiki の利用を考えると、MacOSX でも Webブラウザ 
+プラグイン
+として Squeak を起動できるといいのですが、今のところいくつ 
+か問題
+があるようです。
+ちょっと長文になるので、以下の URL にメモしました。
+ご興味のある方はご参照ください。
+
+     http://d.hatena.ne.jp/tetha/20050713
+
+また、恐縮ですが、このメールにパッチを添付させていただきました。
+（本末転倒？）
+当座しのぎにはこれでいけるのではないかと思えるのですが、一抹の
+不安を感じております。
+みなさんのアイデアや意見がありましたらどんどんお願いいたします。
+
+# そもそもMacOSX版での問題の再現確認からしていただく必要が 
+ある
+# かもしれません。
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: MacOSXNihongo7PluginPatch.1.cs
+型:         application/octet-stream
+サイズ:     1185 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050713/99c80997/MacOSXNihongo7PluginPatch.1.obj
+From umejava ＠ mars.dti.ne.jp  Wed Jul 13 19:54:21 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2530] 「どう書く」応用編の見せ方募集
+Message-ID: <JQ200507131954215.20661281@mars.dti.ne.jp>
+
+こんにちは
+梅澤@LLDNプログラム委員です。
+
+さて、8/27(土)のLLDNの「どう書く」ですが、今年のお題は漢数字電卓です。
+
+下記のような仕様です。(まだドラフト)
+
+---
+    * 入力: 漢数字 自然数
+
+        一，二，三，四，五，六，七，八，九
+        十，百，千，億 (32bit unsigned)
+        大字(だいじ)は使わない
+
+    * 出力: 漢数字 自然数，零
+
+        一，二，三，四，五，六，七，八，九
+        十，百，千，億 (32bit unsigned)
+        大字(だいじ)は使わない
+
+    * 演算子: ＋，−，×，÷，（，）
+    * 文字コード 標準ではEUC
+        変換ができればなんでもよい
+
+    * その他: 入力は中置記法，零で割るとエラー
+    * 演算子の順位: ×，÷が優先，左結合
+    * 数値の内部表現はおまかせ
+---
+
+「どう書く」では、上記の仕様を最低限満たす「基本編」と、
+言語のすさまじさを見せつける「応用編」の2つの作品の提出が求められています。
+
+今回プログラミングを担当されるのは鷲見さんですが、「応用編」に関しては
+いろいろな人のアイデアを集めておいた方が有利かと思います。
+
+例: 
+- 解を出すまでの過程が視覚的に見える(パースツリー、3Dポリゴン)
+- 意味もなく解を読み上げる
+- ロボットが動き出し、達筆で答えを書く
+
+などなど、「応用編」にふさわしい「見せ方」といったものがありましたら、
+このMLにどしどしお寄せください。
+
+それではよろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+
+From nishis ＠ zephyr.dti.ne.jp  Wed Jul 13 21:36:57 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2531] Re: 「どう書く」応用編の見せ方募集
+In-Reply-To: <JQ200507131954215.20661281@mars.dti.ne.jp>
+References: <JQ200507131954215.20661281@mars.dti.ne.jp>
+Message-ID: <42D50AE9.5020304@zephyr.dti.ne.jp>
+
+on 05.7.13 7:54 PM, Masashi Umezawa wrote:
+> 今回プログラミングを担当されるのは鷲見さんですが、「応用編」に関しては
+> いろいろな人のアイデアを集めておいた方が有利かと思います。
+> 例: 
+> - 解を出すまでの過程が視覚的に見える(パースツリー、3Dポリゴン)
+> - 意味もなく解を読み上げる
+> - ロボットが動き出し、達筆で答えを書く
+> などなど、「応用編」にふさわしい「見せ方」といったものがありましたら、
+> このMLにどしどしお寄せください。
+> それではよろしくお願い申し上げます。
+
+脊髄反射で何も考えずに．
+
+やっぱ「見える」ことだと思うです．
+
+前提：四則演算だけに限ってます．
+乗算←加算の加算
+除算←減算の減算
+と考えれば
+
+1)
+数値に「応じた大きさ」のレシーバが，切り取られて行ったり，パラメータが
+くっ付いたりして行って，「大きくなったり小さくなったり」する．そいつにマ
+ウス・カーソルを乗っけるとバルーンで答えが出る／ストリングモルフかテキス
+トモルフが乗っていて，update: の旅に自分の大きさが表示される，とか．
+
+2)
+レシーバやパラメータの大きさが変化するんではなくて，「小人さん」が現れて
+えっちらおっちら塊を運んで (転がして) くっ付けたり切り取ったりする．
+
+3)
+式をデコンパイルしたあと halt を掛けて「ヴィジュアルなデバッガ」に落ち，
+ステップ実行で計算する．
+
+4)
+「何も判らない」窓口が受けて，ネットワーク越しに「計算センター」に問い合
+わせる．ネブラスカみたいなので，実際に割り込んで計算する．
+
+「脊髄反射」なんで，石を投げないでください．m(_ _)m
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From tak ＠ metatoys.org  Wed Jul 13 21:49:23 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2532] Re: 「どう書く」応用編の見せ方募集
+In-Reply-To: <JQ200507131954215.20661281@mars.dti.ne.jp>
+References: <JQ200507131954215.20661281@mars.dti.ne.jp>
+Message-ID: <42D50DD3.40605@metatoys.org>
+
+Masashi Umezawa wrote:
+> 今回プログラミングを担当されるのは鷲見さんですが、「応用編」に関しては
+> いろいろな人のアイデアを集めておいた方が有利かと思います。
+> 
+> 例: 
+> - 解を出すまでの過程が視覚的に見える(パースツリー、3Dポリゴン)
+> - 意味もなく解を読み上げる
+> - ロボットが動き出し、達筆で答えを書く
+> 
+> などなど、「応用編」にふさわしい「見せ方」といったものがありましたら、
+> このMLにどしどしお寄せください。
+> 
+> それではよろしくお願い申し上げます。
+
+ビジュアルではないですが、客層的には
+
+1) 入力を受け取る
+2) 解を返す Slang 文を生成する
+3) VMMaker で C に変換
+4) gcc でコンパイル
+5) プラグインとして Squeak から呼び出して答えを表示
+
+と言うのは如何でしょうか。
+
+ここで小人さんが現れて隣のパソコンに NetMorph で運んでそこから無意味に 3D になる。。。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From koubo2005 ＠ yengawa.jpn.org  Wed Jul 13 22:09:43 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2533] Re: 「どう書く」応用編の見せ方募集
+In-Reply-To: <JQ200507131954215.20661281@mars.dti.ne.jp>
+References: <JQ200507131954215.20661281@mars.dti.ne.jp>
+Message-ID: <20050713220836.1EBC.KOUBO2005@yengawa.jpn.org>
+
+結果のMorphをDrive a carのようにハンドルで運転してみせる。
+
+On Wed, 13 Jul 2005 19:54:21 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+
+> 今回プログラミングを担当されるのは鷲見さんですが、「応用編」に関しては
+> いろいろな人のアイデアを集めておいた方が有利かと思います。
+> 
+> 例: 
+> - 解を出すまでの過程が視覚的に見える(パースツリー、3Dポリゴン)
+> - 意味もなく解を読み上げる
+> - ロボットが動き出し、達筆で答えを書く
+> 
+> などなど、「応用編」にふさわしい「見せ方」といったものがありましたら、
+> このMLにどしどしお寄せください。
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Thu Jul 14 16:40:08 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2534] Re: 「どう書く」応用編の見せ方募集
+In-Reply-To: <JQ200507131954215.20661281@mars.dti.ne.jp>
+Message-ID: <BEFC45E8.34F72%sumi@seagreen.ocn.ne.jp>
+
+皆さん、ごきんげんよう。鷲見です。
+
+いろいろと楽しいアイデアをありがとうございます。
+
+ここのところ、パーサーに手を入れてその場で乗除優先にしてみせる（ひいては漢数
+字四則演算を print it できるようにする）…といったかんじのことをお手軽にでき
+ないか画策していたんですが、けっきょく難しくてあっさりギブアップしていたりし
+ましたので、助かります。
+
+しっかし、乗除優先っていうのがなんとも面倒ですねぇ…(^_^;)。とりあえず、
+Scanner >> # scanStringStruct  みたいなアプローチでどうかと画策しています。
+
+--
+Masato Sumi
+
+
+From abee.abe ＠ nifty.ne.jp  Sun Jul 17 23:50:51 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2535] ペン軌跡を多角形モーフに
+Message-ID: <42DA704B319.3D47ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+昨日、京大で開かれた公開ワークショップの時にでた質問にペン軌跡を多角形に
+して線分の角度を測れないかというのがあったような気がします。
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-July/002492.html
+
+ペン軌跡を多角形モーフにする機能は、SmalltalkのPen用としては既に実装され
+ています(PolygonMorph>>shapeFromPen:color:borderWidth:borderColor:)。
+ただ、これはeToysのペン軌跡には使えないので作ってみました。Nihongo7用です。
+ペンを上げてから下げると頂点の集合が空になります。下げた状態で下げても空
+になりません。
+多角形を作るには赤ハロメニューの「特別・・・」の「ペンの軌跡から多角形を
+作る」を選びます。多角形の線幅と色はペンの設定を引き継ぎます。ペンの種類
+は無視されます。
+頂点の角度を測る機能はありません。
+
+こういうのがあったらいいねという話は以前に山宮さんとしていたのですが、す
+っかり忘れていました。似たような機能はドリトルにもあります。
+もしかしたら、ドロー系のツールを作るきっかけになるかもしれません。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: makePolygonFromPenTrails.2.cs.gz
+型:         application/octet-stream
+サイズ:     2064 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050717/eb680c32/makePolygonFromPenTrails.2.cs.obj
+From korakurider ＠ yahoo.co.jp  Mon Jul 18 00:13:30 2005
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2536] Re: ペン軌跡を多角形モーフに
+In-Reply-To: <42DA704B319.3D47ABEE.ABE@smtp.nifty.com>
+References: <42DA704B319.3D47ABEE.ABE@smtp.nifty.com>
+Message-ID: <JK20050718001330.132351331@yahoo.co.jp>
+
+Korakuriderです。
+以前squeakland MLの方で似たような質問があり、Scott Wallaceさんが
+サンプルを流してくれていました。
+（Nihongo7で開いて動くことは確認しました）
+http://squeakland.org/pipermail/squeakland/2005-May/002597.html
+
+このサンプルは、ペン軌跡を、多角形ではなくスケッチに変換するというもの
+でした。元の質問をされた方の目的に合うかどうかわかりませんが、何かの
+参考になれば幸いです。
+
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From abee.abe ＠ nifty.ne.jp  Mon Jul 18 00:31:33 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2537] Re: ペン軌跡を多角形モーフに
+In-Reply-To: <42DA704B319.3D47ABEE.ABE@smtp.nifty.com>
+References: <42DA704B319.3D47ABEE.ABE@smtp.nifty.com>
+Message-ID: <42DA79D52B7.3D48ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 17 Jul 2005 23:50:51 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>ただ、これはeToysのペン軌跡には使えないので作ってみました。Nihongo7用です。
+
+すみません。これはちゃんとファイルインできませんでした。添付のものをお使
+いください。これもたまに挙動が変ですが適当に直してみてください。。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: makePolygonFromPenTrails.3.cs.gz
+型:         application/octet-stream
+サイズ:     2068 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050718/364cbe00/makePolygonFromPenTrails.3.cs.obj
+From umejava ＠ mars.dti.ne.jp  Thu Jul 21 09:30:20 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2538] Squeaker夜の集い
+Message-ID: <JH200507210930207.3569343@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、8/27日(土)にLLDNがあるということは、すでに何度もご案内させていただき
+ましたが、Squeaker達がデモをするのは、夕方までとなっております。
+
+夜の部は、すでにチケットが完売してしまったこともあり、夕方以降は気心の知れた
+Squeaker同士で、独自のイベントをやるのが良かろうと考えました。
+
+どこか会場をさがしていたのですが、幸いにして、このMLの管理もしておられる
+アカデミアシステムズ株式会社さんのほうで、27日に東京オフィスを解放して
+いただけることになりました。
+
+場所は、三田(地下鉄三田駅、またはＪＲ田町駅より徒歩6-7分)になります。
+
+MIC(MINATOインキュベーションセンター)の3階、303号室です。
+http://www.micim.jp/jp/index.html
+
+住所:〒108-0073 東京都港区三田3-4-1 MIC303号室
+電話:03-5443-3660
+
+エンドレスで、ピザなどほおばりながら、自由にSqueakのデモを行う場となります。
+名付けて「Squeaker夜の集い」です。
+
+開始は、新宿からの距離を考えて18:00からとします。当日集まって移動したりなど
+は特に行いません。各自で好きなように移動していただければと思います。
+(差し入れなどもあれば、非常にうれしいです)
+
+事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方は
+私か、このML宛にお返事いただければと思います。
+
+よろしくお願い申し上げます。
+---
+[:masashi | ^umezawa]
+
+From abee.abe ＠ nifty.ne.jp  Fri Jul 22 14:08:03 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2539] 日本語プログラミング言語「言霊」をビジュアル言語「 Squeak 」に組み込み
+In-Reply-To: <JH200507210930207.3569343@mars.dti.ne.jp>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>
+Message-ID: <42E07F33288.7C1EABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+経済産業省は「ITクラフトマンシップ・プロジェクト」として、小中学生の高度IT
+教育を実施するそうです。
+その選定テーマのひとつに慶應義塾大学SFC研究所による日本語プログラミング言
+語「言霊」のビジュアル言語「Squeak」に組み込みと開発環境のオープンソース・
+ソフトウエアとしての公開が選ばれています。
+他にもドリトルとか岐阜のロボットとか興味深いものがありますね。
+
+「小学生を真のエンジニアに」，経産省が全国15プロジェクトで高度IT人材育成
+http://itpro.nikkeibp.co.jp/free/ITPro/NEWS/20050712/164483/
+
+平成１７年度「ＩＴクラフトマンシップ・プロジェクト」 選定結果について
+http://rd.search.goo.ne.jp/click?DEST=http://www.meti.go.jp/press/20050711002/050711it.pdf&no=1
+
+言霊コミュニティサイト - 日本語で楽しくプログラミング
+http://www.crew.sfc.keio.ac.jp/projects/kotodama/
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From shortsleeved ＠ mac.com  Sat Jul 23 10:08:07 2005
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2540] Goodies&Toys の一部をNihongo7で動くようにしてみました
+Message-ID: <2E881330-9B6A-4145-9E18-30BA9CFFE8A3@mac.com>
+
+はじめまして、shortsleeved と申します。
+はてなダイアリーで、たまにSqueakがらみのことを書かせていた 
+だいてます。
+先日、「Squeak: Goodies and Toys」(http://nishis- 
+web.hp.infoseek.co.jp/smalltalk/Squeak/goodies/index.html) とい 
+う、西原さんのページを発見して、おもしろそうなGoodiesが 
+いっぱいあったので、そのうちのごく一部をNihongo7で動くよう 
+にしてみました(http://d.hatena.ne.jp/shortsleeved/ 
+20050714 で一応公開してます)。
+
+Code Review（GoodiesのNo.4）
+Message Spy（GoodiesのNo.16）
+Message Tracer（GoodiesのNo.17）
+examplesがとりあえず動くのを確認したといった程度のもので、オリジ 
+ナルの動作（意図）通りになっているかどうか、わかりません。 
+CodeReview は MethodReview>>doTempVariable:name: に手を入 
+れる必要があるそうなのですが、添付のものはそこまでやってません。 
+というか、どういうふうに手を入れればいいのか分かってないです。西 
+原さんご自身が使われている分はすでに直っているらしいので、そちら 
+が公開されるのを期待してます(^-^;
+
+はてなダイアリーにコメントありがとうございました。＞西原様。
+
+今後もよろしくお願いします。＞皆様。
+
+--
+
+shortsleeved
+
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: goodies_4_16_17.zip
+型:         application/zip
+サイズ:     27132 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050723/2309e6ca/goodies_4_16_17.zip
+From abee.abe ＠ nifty.ne.jp  Mon Jul 25 15:01:02 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2541] 世界聴診器モーフ Nihongo7 対応版  (was: Re: キッズのためのデジタルクリエイター教室  )
+In-Reply-To: <42D20C472B1.FD32ABEE.ABE@smtp.nifty.com>
+References: <200507080059.j680xL7U005320@smtp00.dti.ne.jp>
+	<42D20C472B1.FD32ABEE.ABE@smtp.nifty.com>
+Message-ID: <42E4801E1AC.E148ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 11 Jul 2005 15:05:59 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>>ところで世界聴診器がSqueak Nihongo7に対応されるのはいつ頃になりますでしょう
+>>か？
+>>楽しみにしております。
+>
+>ありがとうございます。実はNihongo7対応のものはずいぶん前に作っており、山
+>宮さんの改良版などもあるのですが、まだちゃんと公開できていません。もうし
+>ばらくお待ちください。
+
+公開しました(2005/5/28版)。遅くなって申し訳ありません。
+
+http://swikis.ddo.jp/WorldStethoscope/14
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From tetha ＠ st.rim.or.jp  Mon Jul 25 16:49:22 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2542] Mac版 Squeak Nihongo7 パッケージ
+Message-ID: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+
+みなさん、こんにちは。
+林です。どうも。
+
+ちょっと出遅れましたが、Mac 用の Squeak Nihongo7 のパッケージを用意し 
+ました。
+今回は残念ながらクラシック版の方はインストーラプログラムを準備できな 
+かったので、英語版を一旦インストールしてからイメージファイルだけ置き換 
+えていただくようになってしまいました。
+OSX の方は本家に準じる形式でコマンドファイルによりインストールするよう 
+になっています。
+
+詳細は、以下のURLをご参照ください。
+
+http://squeakland.jp/plugin/installers/mac-classic-std.html
+http://squeakland.jp/plugin/installers/mac-x-std.html
+
+何か不明な点や不具合が起きましたら、ご報告いただけると助かります。
+
+では。
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+From shortsleeved ＠ mac.com  Mon Jul 25 21:05:23 2005
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2543] Re: Mac版 Squeak Nihongo7 パッケージ
+In-Reply-To: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+References: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+Message-ID: <7BE7DEB4-9FF5-4683-9854-0FCBC2AD65CD@mac.com>
+
+こんにちは、shortsleeved です。
+SqueakNihongo7Mac10.x.x.dmgをインストールしてみました。
+インストールから自動起動はうまくいきましたが、私の環境ではサウン 
+ドが鳴りません。
+環境は
+   G5 iMac
+   Mac OS X 10.4.2 Tiger
+です。
+
+SqueakPlugin.image + Squeak 3.0(Squeak VM 3.7.5b1) では鳴らない 
+のですが、SqueakPlugin.image + Squeak VM 3.8.6b6 だと鳴り 
+ました（SqueakPlugin.imagの情報のパネルの「このアプリケー 
+ションで開く」でVMを切り替えて試しました）。
+私のMacには何種類かのバージョンのSqueakがインストー 
+ルされているせいで、なにかおかしな組み合わせになってしまったのか 
+もしれません。
+
+とりあえず、ご報告致します（なにか頓珍漢なことしてたらごめんなさ 
+い）。
+
+On 2005/07/25, at 16:49, Tetsuya HAYASHI wrote:
+
+> みなさん、こんにちは。
+> 林です。どうも。
+>
+> ちょっと出遅れましたが、Mac 用の Squeak Nihongo7  
+> のパッケージを用意しました。
+> 今回は残念ながらクラシック版の方はインストーラプログラムを準備 
+> できなかったので、英語版を一旦インストールしてからイメージファ 
+> イルだけ置き換えていただくようになってしまいました。
+> OSX の方は本家に準じる形式でコマンドファイルによりインストール 
+> するようになっています。
+>
+> 詳細は、以下のURLをご参照ください。
+>
+> http://squeakland.jp/plugin/installers/mac-classic-std.html
+> http://squeakland.jp/plugin/installers/mac-x-std.html
+>
+> 何か不明な点や不具合が起きましたら、ご報告いただけると助かりま 
+> す。
+>
+> では。
+> --
+> Tetsuya HAYASHI <tetha@st.rim.or.jp>
+> PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+>
+>
+>
+
+
+From tetha ＠ st.rim.or.jp  Tue Jul 26 00:15:57 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2544] Re: Mac版 Squeak Nihongo7 パッケージ
+In-Reply-To: <7BE7DEB4-9FF5-4683-9854-0FCBC2AD65CD@mac.com>
+References: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+	<7BE7DEB4-9FF5-4683-9854-0FCBC2AD65CD@mac.com>
+Message-ID: <414A058E-E4C7-40D7-BC3E-5480EDF1E2E6@st.rim.or.jp>
+
+shortsleevedさん、こんばんは。
+林です。
+
+さっそくの確認ありがとうございます。
+
+On 2005/07/25, at 21:05, shortsleeved wrote:
+
+> こんにちは、shortsleeved です。
+> SqueakNihongo7Mac10.x.x.dmgをインストールしてみました。
+> インストールから自動起動はうまくいきましたが、私の環境ではサウンドが 
+> 鳴りません。
+> 環境は
+>   G5 iMac
+>   Mac OS X 10.4.2 Tiger
+> です。
+>
+> SqueakPlugin.image + Squeak 3.0(Squeak VM 3.7.5b1) では鳴らないので 
+> すが、SqueakPlugin.image + Squeak VM 3.8.6b6 だと鳴りました 
+> （SqueakPlugin.imagの情報のパネルの「このアプリケーションで開く」で 
+> VMを切り替えて試しました）。
+> 私のMacには何種類かのバージョンのSqueakがインストールされているせい 
+> で、なにかおかしな組み合わせになってしまったのかもしれません。
+
+「ピアノ鍵盤」なども旨く鳴ってくれないのでしょうか？
+
+Mac の場合、複数イメージの同時起動にVMを都度コピーしなければいけなかっ 
+たりして、私のところもVMは同じバージョンのものが結構な数が存在していて 
+困ってるのですが、イメージファイルを直接VMにドラッグドロップして起動し 
+てみたらどうなりますでしょうか？
+（すでに試されていたらすみません）
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From shortsleeved ＠ mac.com  Tue Jul 26 03:33:06 2005
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:14 2007
+Subject: [Squeak-ja: 2545] Re: Mac版 Squeak Nihongo7 パッケージ
+In-Reply-To: <414A058E-E4C7-40D7-BC3E-5480EDF1E2E6@st.rim.or.jp>
+References: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+	<7BE7DEB4-9FF5-4683-9854-0FCBC2AD65CD@mac.com>
+	<414A058E-E4C7-40D7-BC3E-5480EDF1E2E6@st.rim.or.jp>
+Message-ID: <6EEC9123-59DF-432A-B648-EBB3F9DAFD27@mac.com>
+
+shortsleevedです。
+
+On 2005/07/26, at 0:15, Tetsuya HAYASHI wrote:
+
+> 「ピアノ鍵盤」なども旨く鳴ってくれないのでしょうか？
+>
+> Mac の場合、複数イメージの同時起動にVMを都度コピーしなけ 
+> ればいけなかったりして、私のところもVMは同じバージョンの 
+> ものが結構な数が存在していて困ってるのですが、イメージファイル 
+> を直接VMにドラッグドロップして起動してみたらどうなります 
+> でしょうか？
+> （すでに試されていたらすみません）
+
+以下のようにして起動してみたのですが、いずれも音が鳴りませんでし 
+た。（「ピアノ鍵盤」で試してみました）
+
+   ・SqueakPlugin.imageをSqueak 3.0.appにドロップ
+   ・Squeak 3.0.appダブルクリック後、 
+SqueakPlugin.imageを選択
+
+
+
+From tetha ＠ st.rim.or.jp  Tue Jul 26 09:40:42 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2546] Re: Mac版 Squeak Nihongo7 パッケージ
+In-Reply-To: <6EEC9123-59DF-432A-B648-EBB3F9DAFD27@mac.com>
+References: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+	<7BE7DEB4-9FF5-4683-9854-0FCBC2AD65CD@mac.com>
+	<414A058E-E4C7-40D7-BC3E-5480EDF1E2E6@st.rim.or.jp>
+	<6EEC9123-59DF-432A-B648-EBB3F9DAFD27@mac.com>
+Message-ID: <D792695F-5836-4735-A1DE-D17C0931A5A5@st.rim.or.jp>
+
+林です。どうも。
+
+う〜ん。弱りました。
+3.7.5b1 はもしかしたら iMac G5 が出る前にビルドされたもので動作確認と 
+れてないかもしれません。
+ただ、3.8 シリーズはまだ不安定なので、パッケージ標準で配布するのは 
+ちょっとためらってしまいます。
+もし、お時間がありましたら、以下の 3.7.5b3 も試していただけると助かり 
+ます。
+     ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.7/mac/squeak3.7.5b3-mac- 
+vm.sit
+
+On 2005/07/26, at 3:33, shortsleeved wrote:
+
+> shortsleevedです。
+>
+> On 2005/07/26, at 0:15, Tetsuya HAYASHI wrote:
+>
+>
+>> 「ピアノ鍵盤」なども旨く鳴ってくれないのでしょうか？
+>>
+>> Mac の場合、複数イメージの同時起動にVMを都度コピーしなければいけな 
+>> かったりして、私のところもVMは同じバージョンのものが結構な数が存在 
+>> していて困ってるのですが、イメージファイルを直接VMにドラッグドロッ 
+>> プして起動してみたらどうなりますでしょうか？
+>> （すでに試されていたらすみません）
+>>
+>
+> 以下のようにして起動してみたのですが、いずれも音が鳴りませんでした。 
+> （「ピアノ鍵盤」で試してみました）
+>
+>   ・SqueakPlugin.imageをSqueak 3.0.appにドロップ
+>   ・Squeak 3.0.appダブルクリック後、SqueakPlugin.imageを選択
+>
+>
+>
+
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From yoshiki ＠ squeakland.org  Tue Jul 26 18:24:03 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2547] Re: Goodies&Toys の一部をNihongo7で動くようにしてみました
+In-Reply-To: <2E881330-9B6A-4145-9E18-30BA9CFFE8A3@mac.com>
+References: <2E881330-9B6A-4145-9E18-30BA9CFFE8A3@mac.com>
+Message-ID: <ur7dlvs24.wl%yoshiki@squeakland.org>
+
+　　shortsleevedさんこんにちは
+
+すばらしいですね。おいおいいろいろ試してみたいと思います。これからもよ
+ろしくお願いします。
+
+-- Yoshiki
+
+At Sat, 23 Jul 2005 10:08:07 +0900,
+shortsleeved wrote:
+> 
+> [1  <text/plain; ISO-2022-JP (7bit)>]
+> はじめまして、shortsleeved と申します。
+> はてなダイアリーで、たまにSqueakがらみのことを書かせていた 
+> だいてます。
+> 先日、「Squeak: Goodies and Toys」(http://nishis- 
+> web.hp.infoseek.co.jp/smalltalk/Squeak/goodies/index.html) とい 
+> う、西原さんのページを発見して、おもしろそうなGoodiesが 
+> いっぱいあったので、そのうちのごく一部をNihongo7で動くよう 
+> にしてみました(http://d.hatena.ne.jp/shortsleeved/ 
+> 20050714 で一応公開してます)。
+> 
+> Code Review（GoodiesのNo.4）
+> Message Spy（GoodiesのNo.16）
+> Message Tracer（GoodiesのNo.17）
+> examplesがとりあえず動くのを確認したといった程度のもので、オリジ 
+> ナルの動作（意図）通りになっているかどうか、わかりません。 
+> CodeReview は MethodReview>>doTempVariable:name: に手を入 
+> れる必要があるそうなのですが、添付のものはそこまでやってません。 
+> というか、どういうふうに手を入れればいいのか分かってないです。西 
+> 原さんご自身が使われている分はすでに直っているらしいので、そちら 
+> が公開されるのを期待してます(^-^;
+> 
+> はてなダイアリーにコメントありがとうございました。＞西原様。
+> 
+> 今後もよろしくお願いします。＞皆様。
+> 
+> --
+> 
+> shortsleeved
+> 
+> 
+> 
+> [2 goodies_4_16_17.zip <application/zip (base64)>]
+> 
+
+From shortsleeved ＠ mac.com  Tue Jul 26 19:49:17 2005
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2548] Re: Mac版 Squeak Nihongo7 パッケージ
+In-Reply-To: <D792695F-5836-4735-A1DE-D17C0931A5A5@st.rim.or.jp>
+References: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+	<7BE7DEB4-9FF5-4683-9854-0FCBC2AD65CD@mac.com>
+	<414A058E-E4C7-40D7-BC3E-5480EDF1E2E6@st.rim.or.jp>
+	<6EEC9123-59DF-432A-B648-EBB3F9DAFD27@mac.com>
+	<D792695F-5836-4735-A1DE-D17C0931A5A5@st.rim.or.jp>
+Message-ID: <3576E062-4FA1-4CF5-B1F7-29A500D2717B@mac.com>
+
+shortsleevedです。
+
+squeak3.7.5b3-mac-vm.sit を試してみました（イメージファイルをド 
+ラッグ&ドロップ）が、残念ながら、音は鳴りませんでした。
+iMac G5 の問題なんでしょうか。私のところだけなら、いいのですが。
+
+On 2005/07/26, at 9:40, Tetsuya HAYASHI wrote:
+
+> 林です。どうも。
+>
+> う〜ん。弱りました。
+> 3.7.5b1 はもしかしたら iMac G5 が出る前にビルドされたも 
+> ので動作確認とれてないかもしれません。
+> ただ、3.8 シリーズはまだ不安定なので、パッケージ標準で配 
+> 布するのはちょっとためらってしまいます。
+> もし、お時間がありましたら、以下の 3.7.5b3 も試していた 
+> だけると助かります。
+>     ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.7/mac/squeak3.7.5b3-mac- 
+> vm.sit
+>
+> On 2005/07/26, at 3:33, shortsleeved wrote:
+>
+>
+>> shortsleevedです。
+>>
+>> On 2005/07/26, at 0:15, Tetsuya HAYASHI wrote:
+>>
+>>
+>>
+>>> 「ピアノ鍵盤」なども旨く鳴ってくれないのでしょうか？
+>>>
+>>> Mac の場合、複数イメージの同時起動にVMを都度コピーしな 
+>>> ければいけなかったりして、私のところもVMは同じバージョ 
+>>> ンのものが結構な数が存在していて困ってるのですが、イメージ 
+>>> ファイルを直接VMにドラッグドロップして起動してみたらど 
+>>> うなりますでしょうか？
+>>> （すでに試されていたらすみません）
+>>>
+>>>
+>>
+>> 以下のようにして起動してみたのですが、いずれも音が鳴りません 
+>> でした。（「ピアノ鍵盤」で試してみました）
+>>
+>>   ・SqueakPlugin.imageをSqueak 3.0.appにドロップ
+>>   ・Squeak 3.0.appダブルクリック後、 
+>> SqueakPlugin.imageを選択
+>>
+>>
+>>
+>>
+>
+>
+>
+> --
+> Tetsuya HAYASHI <tetha@st.rim.or.jp>
+> PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+>
+>
+
+
+From takeda.toshiyuki ＠ gmail.com  Tue Jul 26 20:18:55 2005
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2549] Re: Mac版 Squeak Nihongo7 パッケージ
+In-Reply-To: <3576E062-4FA1-4CF5-B1F7-29A500D2717B@mac.com>
+References: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+	<7BE7DEB4-9FF5-4683-9854-0FCBC2AD65CD@mac.com>
+	<414A058E-E4C7-40D7-BC3E-5480EDF1E2E6@st.rim.or.jp>
+	<6EEC9123-59DF-432A-B648-EBB3F9DAFD27@mac.com>
+	<D792695F-5836-4735-A1DE-D17C0931A5A5@st.rim.or.jp>
+	<3576E062-4FA1-4CF5-B1F7-29A500D2717B@mac.com>
+Message-ID: <6544a1da0507260418150699d4@mail.gmail.com>
+
+武田です。
+
+On 7/26/05, shortsleeved <shortsleeved@mac.com> wrote:
+
+> iMac G5 の問題なんでしょうか。私のところだけなら、いいのですが。
+
+私のPowerBook G4 (10.4)、iMac G4 (10.3)では音がなりました。
+
+From okumura ＠ edu.mie-u.ac.jp  Tue Jul 26 20:43:57 2005
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2550] Re: Mac版 Squeak Nihongo7 パッケージ
+In-Reply-To: <6544a1da0507260418150699d4@mail.gmail.com>
+References: <D792695F-5836-4735-A1DE-D17C0931A5A5@st.rim.or.jp>
+	<3576E062-4FA1-4CF5-B1F7-29A500D2717B@mac.com>
+	<6544a1da0507260418150699d4@mail.gmail.com>
+Message-ID: <20050726.204357.41644025.okumura@oku.edu.mie-u.ac.jp>
+
+はじめまして，奥村＠三重大です。
+
+  http://squeakland.jp/plugin/installers/SqueakNihongo7Mac10.x.x.dmg
+
+をPower Mac G5（Mac OS X 10.4.2）にインストールしてみましたが，ピアノ
+鍵盤で音が鳴っています。
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From tetha ＠ st.rim.or.jp  Tue Jul 26 23:18:22 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2551] Re: Mac版 Squeak Nihongo7 パッケージ
+In-Reply-To: <D792695F-5836-4735-A1DE-D17C0931A5A5@st.rim.or.jp>
+References: <977460C4-30D1-429E-B1F6-AD8E438695F1@st.rim.or.jp>
+	<7BE7DEB4-9FF5-4683-9854-0FCBC2AD65CD@mac.com>
+	<414A058E-E4C7-40D7-BC3E-5480EDF1E2E6@st.rim.or.jp>
+	<6EEC9123-59DF-432A-B648-EBB3F9DAFD27@mac.com>
+	<D792695F-5836-4735-A1DE-D17C0931A5A5@st.rim.or.jp>
+Message-ID: <1B8EA3E2-0BA0-4A4D-ADC1-F14A78E2C75D@st.rim.or.jp>
+
+林です。どうも。
+
+武田さん、奥村さん、確認ありがとうございます。
+そういえば私のところの環境ですが、PowerBook G4 12 inch (Tiger 10.4.2) 
+でした。
+
+On 2005/07/26, at 19:49, shortsleeved wrote:
+> shortsleevedです。
+>
+> squeak3.7.5b3-mac-vm.sit を試してみました（イメージファイルをドラッグ 
+> &ドロップ）が、残念ながら、音は鳴りませんでした。
+> iMac G5 の問題なんでしょうか。私のところだけなら、いいのですが。
+
+iMac G5 で、squeak-dev のアーカイブを検索してみると以下のような記事が 
+ひっかかりました。
+
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2004-December/ 
+085856.html
+
+今回の件とは直接関係はなさそうですが、ちょっと気になります。
+
+iMacG5の方には、3.8シリーズのVMを使っていただくしかないのかも…
+ウェブブラウザプラグインについてはJMMさんのところにあるようです。
+http://homepage.mac.com/johnmci/FileSharing.html
+上記の    experimental -> NPSqueak.bundle.zip
+
+
+On 2005/07/26, at 20:18, Toshiyuki Takeda wrote:
+> 武田です。
+>
+> On 7/26/05, shortsleeved <shortsleeved@mac.com> wrote:
+>
+>
+>> iMac G5 の問題なんでしょうか。私のところだけなら、いいのですが。
+>>
+>
+> 私のPowerBook G4 (10.4)、iMac G4 (10.3)では音がなりました。
+
+
+On 2005/07/26, at 20:43, Haruhiko Okumura wrote:
+> はじめまして，奥村＠三重大です。
+>
+>   http://squeakland.jp/plugin/installers/SqueakNihongo7Mac10.x.x.dmg
+>
+> をPower Mac G5（Mac OS X 10.4.2）にインストールしてみましたが，ピアノ
+> 鍵盤で音が鳴っています。
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Thu Jul 28 15:54:14 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2552] Re: Squeaker 夜の集い
+In-Reply-To: <JH200507210930207.3569343@mars.dti.ne.jp>
+Message-ID: <BF0EB025.35918%sumi@seagreen.ocn.ne.jp>
+
+梅澤さん、皆さん、ごきげんよう。鷲見です。
+
+遅レス、すみません。
+参加、希望します。よろしくお願いします。
+
+on 07/21/05 09:30, umejava@mars.dti.ne.jp wrote:
+
+> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方は
+> 私か、このML宛にお返事いただければと思います。
+
+--
+Masato Sumi
+
+
+From abee.abe ＠ nifty.ne.jp  Thu Jul 28 21:23:03 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2553] 多摩美術大学のスクイーク・ワークショップ
+Message-ID: <42E8CE27366.E20CABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+現在(7/27-30)、多摩美術大学の情報デザイン学科デザインコースの夏季集中ワー
+クショップとしてスクイークを取り上げています。
+今までの子供向けワークショップと異なり、デザイナとしてSqueakを使うとなに
+ができるかという視点で行っています。
+
+基本的に学内のイベントのため、皆さんにご案内していませんでしたが、今回 
+(ほぼ)リアルタイムでワークショップの内容や作業中の作品をSwikiで公開すると
+いう試みを行っています。
+以下のページとリンク先を更新していますので、よろしければご覧ください。掲
+示板への書き込みも歓迎します。
+
+http://squeakland.jp/super/33
+
+これには、日本HPが提供し、多摩美とボランティアの皆さんが運用している
+Squeakland.jpサーバと、山宮隆さんがセットアップしてカスタマイズした
+SuperSwikiが使われています。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From kawa90 ＠ m2.pbc.ne.jp  Fri Jul 29 23:30:47 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2554] Re: Squeaker夜の集い
+In-Reply-To: <JH200507210930207.3569343@mars.dti.ne.jp>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>
+Message-ID: <42EA3D97.8090800@m2.pbc.ne.jp>
+
+ど素人の川村です。
+
+> エンドレスで、ピザなどほおばりながら、自由にSqueakのデモを行う場となり
+ます。
+> 名付けて「Squeaker夜の集い」です。
+
+hobbyistなんですが、見学可能でしょうか？
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.338 / Virus Database: 267.9.6/59 - Release Date: 2005/07/27
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From umejava ＠ mars.dti.ne.jp  Fri Jul 29 23:53:53 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2555] Re: Squeaker夜の集い
+In-Reply-To: <42EA3D97.8090800@m2.pbc.ne.jp>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>
+	<42EA3D97.8090800@m2.pbc.ne.jp>
+Message-ID: <JB200507292353535.8986406@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Fri, 29 Jul 2005 23:30:47 +0900
+Hideo Kawamura <kawa90@m2.pbc.ne.jp> wrote:
+> ど素人の川村です。
+> 
+> > エンドレスで、ピザなどほおばりながら、自由にSqueakのデモを行う場となり
+> ます。
+> > 名付けて「Squeaker夜の集い」です。
+> 
+> hobbyistなんですが、見学可能でしょうか？
+> 
+
+どうぞどうぞ、ご参加ください。見るだけでもまったくかまいません。
+要は交流の場にしたいだけですから。
+
+デモの予定は下記で見ることが出来ます。
+http://swikis.ddo.jp/umejava/21
+
+では。
+---
+[:masashi | ^umezawa]
+
+From koubo2005 ＠ yengawa.jpn.org  Sat Jul 30 00:14:36 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2556] Re: Squeaker夜の集い
+In-Reply-To: <JH200507210930207.3569343@mars.dti.ne.jp>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>
+Message-ID: <20050730001202.91D4.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+返信忘れてました。
+参加します。
+
+出し物は。。。何か出るかもしれません。
+
+
+On Thu, 21 Jul 2005 09:30:20 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+
+> こんにちは
+> 梅澤です。
+> 
+> さて、8/27日(土)にLLDNがあるということは、すでに何度もご案内させていただき
+> ましたが、Squeaker達がデモをするのは、夕方までとなっております。
+> 
+> 夜の部は、すでにチケットが完売してしまったこともあり、夕方以降は気心の知れた
+> Squeaker同士で、独自のイベントをやるのが良かろうと考えました。
+> 
+> どこか会場をさがしていたのですが、幸いにして、このMLの管理もしておられる
+> アカデミアシステムズ株式会社さんのほうで、27日に東京オフィスを解放して
+> いただけることになりました。
+> 
+> 場所は、三田(地下鉄三田駅、またはＪＲ田町駅より徒歩6-7分)になります。
+> 
+> MIC(MINATOインキュベーションセンター)の3階、303号室です。
+> http://www.micim.jp/jp/index.html
+> 
+> 住所:〒108-0073 東京都港区三田3-4-1 MIC303号室
+> 電話:03-5443-3660
+> 
+> エンドレスで、ピザなどほおばりながら、自由にSqueakのデモを行う場となります。
+> 名付けて「Squeaker夜の集い」です。
+> 
+> 開始は、新宿からの距離を考えて18:00からとします。当日集まって移動したりなど
+> は特に行いません。各自で好きなように移動していただければと思います。
+> (差し入れなどもあれば、非常にうれしいです)
+> 
+> 事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方は
+> 私か、このML宛にお返事いただければと思います。
+> 
+> よろしくお願い申し上げます。
+> ---
+> [:masashi | ^umezawa]
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From abee.abe ＠ nifty.ne.jp  Sat Jul 30 00:47:49 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2557] Re: Squeaker 夜の集い
+In-Reply-To: <42EA3D97.8090800@m2.pbc.ne.jp>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>
+	<42EA3D97.8090800@m2.pbc.ne.jp>
+Message-ID: <42EA4FA5BD.9540ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 29 Jul 2005 23:30:47 +0900
+Hideo Kawamura <kawa90@m2.pbc.ne.jp> wrote:
+>ど素人の川村です。
+(snip)
+>hobbyistなんですが、見学可能でしょうか？
+
+これはご謙遜を。川村さんは(たぶん)世界最大で最強のSqueakサイトを運営され
+ているではないですか。これでど素人ならプロは顔色無しですよ。ほんとに。
+
+http://squeak.qp.land.to/
+
+かつて「北海の昇り竜」鷲見さんの登場により、梅澤さんの時代も終わったなと
+思ったものですが、今は川村さんの時代です。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From tetha ＠ st.rim.or.jp  Sat Jul 30 11:48:20 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2558] SqueakBasket についてご紹介
+Message-ID: <6B2D5B54-94A4-47C9-BF84-860AD2BE5361@st.rim.or.jp>
+
+みなさん、こんにちは。
+林です。
+
+もっと早くアナウンスをしたかったのですが、諸処の都合と進捗が悪く遅く 
+なってしまいました。
+これまで、２００４年度第２回未踏ソフトウェア創造事業として、 
+SqueakBasket （スクイーク・バスケットもしくは単にバスケットと呼んでく 
+ださい）というプロジェクトを進めて来ました。
+これは、SuperSwiki や山宮さんの SuperPartsBin などのようにモーフや作品 
+をやりとりするためのツールで、メールの仕組みを利用します。ですので、 
+メールのアドレスを持ってれば特にサーバーをたてたりする必要はありません 
+（逆にこれ専用のメールアドレスを取る必要があるかもしれません）。
+
+現在、Swiki サイトを構築中ですので、ぜひご参照ください。
+
+     http://squeakbasket.org/swiki/
+
+なお、機能についてはまだ全部提供できる段階でないので、徐々にリリースを 
+行っていきます。
+また、ユーザインタフェースなどは問題含みのところも多いので、忌憚の無い 
+ご意見お待ちしております。
+
+以上、よろしくお願いします。
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Jul 30 11:54:33 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2559] Re: Squeaker 夜の集い
+In-Reply-To: <42EA4FA5BD.9540ABEE.ABE@smtp.nifty.com>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>
+	<42EA3D97.8090800@m2.pbc.ne.jp>
+	<42EA4FA5BD.9540ABEE.ABE@smtp.nifty.com>
+Message-ID: <JG200507301154336.2351765@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+
+> これはご謙遜を。川村さんは(たぶん)世界最大で最強のSqueakサイトを運営され
+> ているではないですか。これでど素人ならプロは顔色無しですよ。ほんとに。
+> 
+> http://squeak.qp.land.to/
+> 
+
+そうそう、更新をさぼっている私のリンク集に比べて、なんと整理されて情報も
+新しいことか。すばらしいと思います。
+
+> かつて「北海の昇り竜」鷲見さんの登場により、梅澤さんの時代も終わったなと
+> 思ったものですが、今は川村さんの時代です。
+> 
+
+と、いうことで形無しですが、「夜の集い」よろしくお願いします。
+阿部さんも「他人の褌で相撲を取る」というネタを用意してくださるそうです。
+
+---
+[:masashi | ^umezawa]
+
+From fine1983_0111_thanks_kikuchi ＠ yahoo.co.jp  Sat Jul 30 14:02:39 2005
+From: fine1983_0111_thanks_kikuchi ＠ yahoo.co.jp (菊池 佑太)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2560] はじめまして　東京学芸大学の学生です
+Message-ID: <20050730050239.14609.qmail@web902.mail.yahoo.co.jp>
+
+東京学芸大学の菊池と申します。９月に東京学芸大学附属小学
+校でsqueakの授業を行う予定で、現在superswikiを導入してい
+るところです。授業対象が小学生ということもあり、まずはsuperswiki
+のwebページを日本語化しなければならないと考えたのですが
+、編集の仕方がよくわかりません。特に、添付のページと検索
+のページを日本語化したいのですが、近くにswiki関係に詳し
+い人間がいないもので困っております。恐縮な事と思いますが
+、詳しくご存知の方いらっしゃいましたら教えて頂けないでし
+ょうか。　よろしくお願いします。
+
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Sat Jul 30 18:46:25 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:15 2007
+Subject: [Squeak-ja: 2561] Re: Squeaker 夜の集い
+In-Reply-To: <JG200507301154336.2351765@mars.dti.ne.jp>
+References: <JH200507210930207.3569343@mars.dti.ne.jp>	<42EA3D97.8090800@m2.pbc.ne.jp>	<42EA4FA5BD.9540ABEE.ABE@smtp.nifty.com>
+	<JG200507301154336.2351765@mars.dti.ne.jp>
+Message-ID: <42EB4C71.9060903@m2.pbc.ne.jp>
+
+こんにちは、川村です。
+Squeaker 夜の集い、参加します。
+
+Masashi Umezawa wrote:
+
+>と、いうことで形無しですが、「夜の集い」よろしくお願いします。
+>  
+>
+こちらこそ、よろしくお願いします。
+
+> デモの予定は下記で見ることが出来ます。
+> http://swikis.ddo.jp/umejava/21
+
+デモを見るだけでも行かなくちゃって感じです。
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.338 / Virus Database: 267.9.7/60 - Release Date: 2005/07/28
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+

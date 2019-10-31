@@ -1,0 +1,860 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan  6 06:20:24 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jan  6 06:20:33 2010
+Subject: [SML 7741] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B340C65.7020800@cc.kyoto-su.ac.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>
+Message-ID: <4B43AD18.2090104@cc.kyoto-su.ac.jp>
+
+おはようございます。新年早々の勉強会、今日（reminder）です！
+
+--- 青木淳＠要求仕様と基本設計の過程を重点的にしてゆく予定…
+
+(09/12/25 9:50), AOKI Atsushi wrote:
+> 第15回Smalltalk勉強会@京都を開催いたします。万障繰り合わせて
+> JR京都駅前にご参集ください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto15
+> 
+> 第15回 Smalltalk勉強会＠京都
+> 日時：2010年01月06日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 新年早々の勉強会は課題を一新してウィンドウ（グラフィックスの）
+> プログラミングから走り始めたいと思います。テキスト（ブラック
+> ブック）を用いて助走したら、工事中のオブジェクトを登場させ、
+> 要求仕様書にしたがってデザインし、すぐにプログラミングを行い、
+> スパイラルモデル（プロセス）を廻してゆきたいと考えています。
+> ノート型のパーソナルコンピュータ（Windows 7/Vista/XP または
+> Mac OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From nisinaka ＠ sra.co.jp  Wed Jan  6 11:24:12 2010
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Wed Jan  6 11:24:14 2010
+Subject: [SML 7742] [ANNOUNCE] Jun for Java (Jun746)
+Message-ID: <20100106112407.1587.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン746を公開します。
+
+  バージョン734からの主な変更点は、以下の通りです。
+
+    * (modification) JunImageUtility を Jun746 相当に更新しました。
+      モーフィングとワープのためのメソッドを追加しています。
+
+    * (modification) Jun2dLine / Jun3dLine / Jun2dPolyline / 
+      Jun3dPolyline を Jun744 相当に更新しました。指定した長さに
+      変換するためのメソッドを追加しています。
+
+    * (modification) JunPlane を Jun741 相当に更新しました。法線
+      ベクトルなどを含めた三次元オブジェクトに変換するためのメソッ
+      ドを追加しています。
+
+    * (modification) Jun2dBoundingBox と Jun3dBoundingBox を 
+      Jun740 相当に更新しました。境界箱の最小幅および最大幅を答え
+      るメソッドを追加しています。
+
+    * (modification) Jun2dPoint と Jun3dPoint を Jun739 相当に更
+      新しました。回転のための座標変換行列を生成するメソッドを追
+      加しています。
+
+    * (modification) JunOpenGL3dObject と 
+      JunOpenGL3dCompoundObject を Jun738 相当に更新しました。指
+      定したオブジェクトを含んでいるかどうかを判別するメソッドを
+      定義しました。
+
+    * (modification) JunOpenGL3dModel を Jun738 相当に更新しまし
+      た。三次元オブジェクト選択のためのメソッドを追加しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Jan  9 11:18:38 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Jan  9 11:18:44 2010
+Subject: [SML 7743] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B43AD18.2090104@cc.kyoto-su.ac.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>
+	<4B43AD18.2090104@cc.kyoto-su.ac.jp>
+Message-ID: <4B47E77E.5040601@cc.kyoto-su.ac.jp>
+
+寒い日が続きますね、青木淳＠京都上賀茂です。
+
+(10/01/06 6:20), AOKI Atsushi wrote:
+> おはようございます。新年早々の勉強会、今日（reminder）です！
+> --- 青木淳＠要求仕様と基本設計の過程を重点的にしてゆく予定…
+
+以下のページから、京都の勉強会で行っていること（取り組んでい
+る課題）を参照できるようにしておきました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto15
+
+本日から三連休です。補足資料：取り組んでいる課題のリンクから
+たどれる要求仕様書にそって、皆さんもプログラミング（開発）に
+チャレンジしてみてくださいませ。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/ProjectZero/Requirement/index.html
+
+私は複数（4つ）のプログラミング言語で実装しました。Smalltalk
+が一番エレガントでした、手前味噌分を差し引いても。:-)
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From osamu.hamasaki ＠ gmail.com  Mon Jan 11 17:01:00 2010
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Mon Jan 11 17:01:08 2010
+Subject: [SML 7744] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B47E77E.5040601@cc.kyoto-su.ac.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>
+	<4B43AD18.2090104@cc.kyoto-su.ac.jp>
+	<4B47E77E.5040601@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>
+
+濱崎です。
+
+次回はユーザーインターフェース周りを重点的に取り組むということで、
+UMLによるモデルと、Controllerに書くことになるであろう、マウスの
+クリックとドラッグに関わるプログラムの断片を書きました。
+
+UMLのモデルはastah* community版を使用して書きました。
+以下のところから入手することが可能です。
+
+      http://astah.change-vision.com/ja/product/astah-community.html
+
+プログラムの方は、トランスクリプトに表示する都合で、チェック時間を
+１秒と長めに取ってありますが、実際のプログラムではもっと短くてよい
+はずです。
+
+如何なものでしょう？
+ご意見を頂ければありがたいです。
+
+------ 以下、プログラムの断片 ----------
+
+| window sensor previousPoint clickBlock draggingBlock |
+Transcript cr; show: 'Start!'.
+window := ScheduledControllers activeController view.
+sensor := window controller sensor.
+[sensor redButtonPressed] whileFalse.
+previousPoint := sensor cursorPoint.
+clickBlock :=
+	[Transcript cr; show: 'Click Point: '; show: previousPoint printString].
+draggingBlock :=
+	[Cursor crossHair
+		showWhile:
+			[[sensor redButtonPressed]
+				whileTrue:
+					[| presentPoint |
+					presentPoint := sensor cursorPoint.
+					Transcript cr; show: 'Drag! moving amount: ';
+						show: (presentPoint - previousPoint) printString.
+					previousPoint := presentPoint.
+					(Delay forSeconds: 1) wait]]].
+(Delay forSeconds: 1) wait.
+sensor redButtonPressed
+	ifTrue: [draggingBlock value]
+	ifFalse: [clickBlock value].
+Transcript cr; show: 'Finished!!'; cr.
+
+-----------------------
+
+
+2010年1月9日11:18 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+> 寒い日が続きますね、青木淳＠京都上賀茂です。
+>
+> (10/01/06 6:20), AOKI Atsushi wrote:
+>> おはようございます。新年早々の勉強会、今日（reminder）です！
+>> --- 青木淳＠要求仕様と基本設計の過程を重点的にしてゆく予定…
+>
+> 以下のページから、京都の勉強会で行っていること（取り組んでい
+> る課題）を参照できるようにしておきました。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto15
+>
+> 本日から三連休です。補足資料：取り組んでいる課題のリンクから
+> たどれる要求仕様書にそって、皆さんもプログラミング（開発）に
+> チャレンジしてみてくださいませ。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/ProjectZero/Requirement/index.html
+>
+> 私は複数（4つ）のプログラミング言語で実装しました。Smalltalk
+> が一番エレガントでした、手前味噌分を差し引いても。:-)
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+
+
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: TreeSortModel_byOH.asta
+型:         application/octet-stream
+サイズ:     27242 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/sml/attachments/20100111/25fd749c/TreeSortModel_byOH-0001.obj
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Jan 11 18:38:51 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Jan 11 18:38:55 2010
+Subject: [SML 7745] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>	<4B43AD18.2090104@cc.kyoto-su.ac.jp>	<4B47E77E.5040601@cc.kyoto-su.ac.jp>
+	<1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>
+Message-ID: <4B4AF1AB.9050808@cc.kyoto-su.ac.jp>
+
+(10/01/11 17:01), 濱崎治さん wrote:
+> 次回はユーザーインターフェース周りを重点的に取り組むということで、
+> UMLによるモデルと、Controllerに書くことになるであろう、マウスの
+> クリックとドラッグに関わるプログラムの断片を書きました。
+
+ありがとうございます。
+
+> UMLのモデルはastah* community版を使用して書きました。
+> 以下のところから入手することが可能です。
+> http://astah.change-vision.com/ja/product/astah-community.html
+
+昨年の11月ぐらいに名称がJUDEから変更になったのですよね。
+
+> 如何なものでしょう？
+> ご意見を頂ければありがたいです。
+
+拝見します。
+
+参考のため、マウスの青・黄・赤ボタンの押下を検出して、クリッ
+ク動作をするか、ドラック動作をするか、いずれかを決めるコード
+を末尾に添えます。mouseButtonChecking がキーメソッドです。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+ProjectM.Controller
+
+Smalltalk Studies in Kyoto on 2009/12/27 at 23:30 by AOKI Atsushi
+
+category:
+
+Forest-ProjectZ
+
+inheritance:
+
+Core.Object
+    UI.Controller
+        ProjectM.Controller
+
+instance variables:
+
+class instance variables:
+
+shared variables:
+
+instance methods:
+
+blueButtonPressedEvent: event [events]
+    self mouseButtonActivity.
+    ^nil
+
+redButtonPressedEvent: event [events]
+    self mouseButtonActivity.
+    ^nil
+
+yellowButtonPressedEvent: event [events]
+    self mouseButtonActivity.
+    ^nil
+
+mouseButtonActivity [activities]
+    Cursor crossHair
+        showWhile:
+            [| symbol |
+            symbol := self mouseButtonChecking.
+            symbol = #click ifTrue: [self clickActivity].
+            symbol = #grab ifTrue: [self grabActivity]].
+    self sensor waitNoButton
+
+mouseButtonChecking [activities]
+    | mouse limit |
+    mouse := self sensor.
+    limit := Time millisecondClockValue + 333.
+    [Time millisecondClockValue < limit]
+        whileTrue:
+            [mouse anyButtonPressed ifFalse: [^#click].
+            Processor yield].
+    ^#grab
+
+clickActivity [activities]
+    (view whichOfNodes: self sensor cursorPoint)
+        ifNotNil:
+            [:aNode |
+            Transcript
+                cr;
+                show: aNode getName]
+
+grabActivity [activities]
+    | mouse previous current |
+    mouse := self sensor.
+    previous := current := mouse cursorPoint.
+    [mouse anyButtonPressed]
+        whileTrue:
+            [current := mouse cursorPoint.
+            previous = current
+                ifFalse:
+                    [(self view)
+                        scrollBy: current - previous;
+                        displayOn: view graphicsContext.
+                    previous := current]]
+
+class methods:
+From osamu.hamasaki ＠ gmail.com  Mon Jan 11 20:49:18 2010
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Mon Jan 11 20:49:22 2010
+Subject: [SML 7746] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B4AF1AB.9050808@cc.kyoto-su.ac.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>
+	<4B43AD18.2090104@cc.kyoto-su.ac.jp>
+	<4B47E77E.5040601@cc.kyoto-su.ac.jp>
+	<1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>
+	<4B4AF1AB.9050808@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd31001110349h6ba688f9p51e5f9545ab9d2de@mail.gmail.com>
+
+濱崎です。
+
+2010年1月11日18:38 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+>> UMLのモデルはastah* community版を使用して書きました。
+>> 以下のところから入手することが可能です。
+>> http://astah.change-vision.com/ja/product/astah-community.html
+>
+> 昨年の11月ぐらいに名称がJUDEから変更になったのですよね。
+
+ちなみに、非公式Mac版というのがあります。以下のところから入手できます。
+
+　http://astah-users.change-vision.com/ja/modules/weblog/details.php?blog_id=247
+
+これを使えば、Macでもアプリケーションやドキュメントのアイコンのダブルクリックで
+起動出来るようになります。
+
+>> 如何なものでしょう？
+>> ご意見を頂ければありがたいです。
+>
+> 拝見します。
+
+よろしくお願いします。
+
+-- 
+
+Osamu Hamasaki
+From hirowadenden ＠ hera.eonet.ne.jp  Mon Jan 11 22:51:33 2010
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Mon Jan 11 22:54:55 2010
+Subject: [SML 7747] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <1bc06fd31001110349h6ba688f9p51e5f9545ab9d2de@mail.gmail.com>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>	<4B43AD18.2090104@cc.kyoto-su.ac.jp>	<4B47E77E.5040601@cc.kyoto-su.ac.jp>	<1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>	<4B4AF1AB.9050808@cc.kyoto-su.ac.jp>
+	<1bc06fd31001110349h6ba688f9p51e5f9545ab9d2de@mail.gmail.com>
+Message-ID: <4B4B2CE5.6060703@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+# ツール探しが終わらずなかなか課題のプログラム開発には入れません ^^;;
+
+ドキュメントを書くHTMLエディタに何を使うかがなかなか決まりません。
+最初はOpenOffice.orgを使うつもりでしたが、レイアウトが崩れてしまい
+使えそうにありません。
+WYSIWYGで使えそうなAmayaとKompozerというのを試しましたが、Amayaは
+sjisがうまく表示されないようで、Kompozerは改行コードがLFでしか保存
+できないようで今回はダメなようです。今は、WYSIWYGではないBluefish
+とScreemというのを試しています。
+
+UMLエディタはUMLetというのを使おうかと思っています。
+http://www.umlet.com/
+プログラム画面上にダイアグラムの例が出ているので割と取っ付きやすい
+のではないかと思います。Javaで動くのでWin,OS X,LinuxでOKだと思います。
+Eclipseのplug-inもあるようです。
+
+スケジュールもOpenOffice.orgで書こうかと思っていたのですが、
+GanttProjectというのを見つけたので試して見ようかと思っています。
+http://www.ganttproject.biz/
+これもJavaで動くのでWin,OS X,Linuxで使えるのではないかと思います。
+
+バージョン管理はSubversion、アプリケーションの構築にはmakeとシェル
+スクリプトを使うのかなと考えていますが、ツールの使い方だけで大分時間が
+かかりそうです。
+
+今回の課題をやられている方は、どのようなツールを使おうとされている
+(あるいは既に使われている)のでしょうか?　できれば参考にさせていただき
+たいのでお教え願いたく。よろしくお願いいたします。
+
+濱崎治 さんは書きました:
+> 濱崎です。
+> 
+> 2010年1月11日18:38 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+>>> UMLのモデルはastah* community版を使用して書きました。
+>>> 以下のところから入手することが可能です。
+>>> http://astah.change-vision.com/ja/product/astah-community.html
+>> 昨年の11月ぐらいに名称がJUDEから変更になったのですよね。
+> 
+> ちなみに、非公式Mac版というのがあります。以下のところから入手できます。
+> 
+> 　http://astah-users.change-vision.com/ja/modules/weblog/details.php?blog_id=247
+
+-- hirowadenden
+
+From masuda ＠ im.dendai.ac.jp  Mon Jan 11 23:00:33 2010
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Mon Jan 11 23:00:44 2010
+Subject: [SML 7748] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B4B2CE5.6060703@hera.eonet.ne.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>	<4B43AD18.2090104@cc.kyoto-su.ac.jp>	<4B47E77E.5040601@cc.kyoto-su.ac.jp>	<1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>	<4B4AF1AB.9050808@cc.kyoto-su.ac.jp>	<1bc06fd31001110349h6ba688f9p51e5f9545ab9d2de@mail.gmail.com>
+	<4B4B2CE5.6060703@hera.eonet.ne.jp>
+Message-ID: <4B4B2F01.5010308@im.dendai.ac.jp>
+
+増田@電大です。
+
+dia もいいですよ。Visio を使ったことがあるとすんなり使えます。
+http://ja.wikipedia.org/wiki/Dia_%28%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%29
+
+hirowadenden さんは書きました:
+> UMLエディタはUMLetというのを使おうかと思っています。
+> http://www.umlet.com/
+> プログラム画面上にダイアグラムの例が出ているので割と取っ付きやすい
+> のではないかと思います。Javaで動くのでWin,OS X,LinuxでOKだと思います。
+> Eclipseのplug-inもあるようです。
+> 
+> 濱崎治 さんは書きました:
+>> 2010年1月11日18:38 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+>>>> UMLのモデルはastah* community版を使用して書きました。
+>>>> 以下のところから入手することが可能です。
+>>>> http://astah.change-vision.com/ja/product/astah-community.html
+>>> 昨年の11月ぐらいに名称がJUDEから変更になったのですよね。
+>> ちなみに、非公式Mac版というのがあります。以下のところから入手できます。
+>>
+>> 　http://astah-users.change-vision.com/ja/modules/weblog/details.php?blog_id=247
+> 
+> -- hirowadenden
+> 
+
+
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7emasuda/     FAX 03-5280-3592
+It's more fun to compute!
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Jan 11 23:30:02 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Jan 11 23:30:09 2010
+Subject: [SML 7749] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B4B2CE5.6060703@hera.eonet.ne.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>	<4B43AD18.2090104@cc.kyoto-su.ac.jp>	<4B47E77E.5040601@cc.kyoto-su.ac.jp>	<1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>	<4B4AF1AB.9050808@cc.kyoto-su.ac.jp>	<1bc06fd31001110349h6ba688f9p51e5f9545ab9d2de@mail.gmail.com>
+	<4B4B2CE5.6060703@hera.eonet.ne.jp>
+Message-ID: <4B4B35EA.1030506@cc.kyoto-su.ac.jp>
+
+(10/01/11 22:51), hirowadenden wrote:
+> 今回の課題をやられている方は、どのようなツールを使おうとされている
+> (あるいは既に使われている)のでしょうか?　できれば参考にさせていただき
+> たいのでお教え願いたく。よろしくお願いいたします。
+
+私は自作のツールを用いることを基本としており、複雑な絵図を描
+く時にだけOmniGraffleを援用します。Webページへの画像の切り貼
+りにはPreviewの一本槍、主力環境がマックですので…。:-)
+
+    Mac OS X Snow Leopard の場合
+        VisualWorks 7.8 + Jun787
+        Xcode 3.2.1 + java 1.6.0 + ruby 1.8.7 + gcc 4.2.1
+        Subversion 1.6.5
+        OmniGraffle 5.2.1
+        Preview 5.0.1
+
+    Windows 7 の場合
+        VisualWorks 7.8 + Jun787
+        Cygwin 6.1 + java 1.6.0 + ruby 1.8.7 + gcc 3.4.4
+        Subversion 1.6.6
+
+# 必要に迫られてJun787でDFDも描けるようにしました。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From hirowadenden ＠ hera.eonet.ne.jp  Tue Jan 12 00:35:10 2010
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Tue Jan 12 00:35:50 2010
+Subject: [SML 7750] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B4B2F01.5010308@im.dendai.ac.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>	<4B43AD18.2090104@cc.kyoto-su.ac.jp>	<4B47E77E.5040601@cc.kyoto-su.ac.jp>	<1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>	<4B4AF1AB.9050808@cc.kyoto-su.ac.jp>	<1bc06fd31001110349h6ba688f9p51e5f9545ab9d2de@mail.gmail.com>	<4B4B2CE5.6060703@hera.eonet.ne.jp>
+	<4B4B2F01.5010308@im.dendai.ac.jp>
+Message-ID: <4B4B452E.3020000@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+Hidetaka MASUDA さんは書きました:
+> 増田@電大です。
+> 
+> dia もいいですよ。Visio を使ったことがあるとすんなり使えます。
+> http://ja.wikipedia.org/wiki/Dia_%28%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%29
+
+ありがとうございます。
+残念ながらVisioは使ったことはありませんが、Diaは聞いたことがあります。
+一度インストールして触ってみます。
+
+-- hirowadenden
+
+
+
+
+
+From hirowadenden ＠ hera.eonet.ne.jp  Tue Jan 12 01:03:48 2010
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Tue Jan 12 01:04:47 2010
+Subject: [SML 7751] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B4B35EA.1030506@cc.kyoto-su.ac.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>	<4B43AD18.2090104@cc.kyoto-su.ac.jp>	<4B47E77E.5040601@cc.kyoto-su.ac.jp>	<1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>	<4B4AF1AB.9050808@cc.kyoto-su.ac.jp>	<1bc06fd31001110349h6ba688f9p51e5f9545ab9d2de@mail.gmail.com>	<4B4B2CE5.6060703@hera.eonet.ne.jp>
+	<4B4B35EA.1030506@cc.kyoto-su.ac.jp>
+Message-ID: <4B4B4BE4.9080308@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+
+AOKI Atsushi さんは書きました:
+> 私は自作のツールを用いることを基本としており、複雑な絵図を描
+> く時にだけOmniGraffleを援用します。Webページへの画像の切り貼
+> りにはPreviewの一本槍、主力環境がマックですので…。:-)
+> 
+>     Mac OS X Snow Leopard の場合
+>         VisualWorks 7.8 + Jun787
+>         Xcode 3.2.1 + java 1.6.0 + ruby 1.8.7 + gcc 4.2.1
+>         Subversion 1.6.5
+>         OmniGraffle 5.2.1
+>         Preview 5.0.1
+> 
+>     Windows 7 の場合
+>         VisualWorks 7.8 + Jun787
+>         Cygwin 6.1 + java 1.6.0 + ruby 1.8.7 + gcc 3.4.4
+>         Subversion 1.6.6
+> 
+> # 必要に迫られてJun787でDFDも描けるようにしました。
+
+ありがとうございます。私も
+Smalltalkで小さなツールくらいは作れるようになりたいものです。
+
+PreviewというのはMacのアプリケーションだったんですね。
+一瞬、htmlファイルの画像リンクを編集してWebブラウザでプレビュー
+するのかと思ってしまいました。 ^^;;
+
+こちらでインストールしたSubversionは1.4.6(Ubuntu8.04)と
+ちょっと古いようなので、変更履歴を調べてみます。
+
+-- hirowadenden
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Jan 12 09:27:36 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Jan 12 09:27:41 2010
+Subject: [SML 7752] Re: 第15回Smalltalk勉強会＠京都
+In-Reply-To: <4B4B4BE4.9080308@hera.eonet.ne.jp>
+References: <4B340C65.7020800@cc.kyoto-su.ac.jp>	<4B43AD18.2090104@cc.kyoto-su.ac.jp>	<4B47E77E.5040601@cc.kyoto-su.ac.jp>	<1bc06fd31001110001p5f8911a9gb5724fe338801c6b@mail.gmail.com>	<4B4AF1AB.9050808@cc.kyoto-su.ac.jp>	<1bc06fd31001110349h6ba688f9p51e5f9545ab9d2de@mail.gmail.com>	<4B4B2CE5.6060703@hera.eonet.ne.jp>	<4B4B35EA.1030506@cc.kyoto-su.ac.jp>
+	<4B4B4BE4.9080308@hera.eonet.ne.jp>
+Message-ID: <4B4BC1F8.1030504@cc.kyoto-su.ac.jp>
+
+(10/01/12 1:03), hirowadenden wrote:
+> Smalltalkで小さなツールくらいは作れるようになりたいものです。
+
+たとえ小さなツールであっても、自作すると、その人の持ち味が出
+るようになります。ひいては、その人を際立たせる、その人ならで
+はのことになり、他の人が容易に真似できない、という匠（工）へ
+とつながると思います。
+
+＃ねっとからさがしてきてつかうばかりではなりたたないところ…
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Jan 12 13:27:00 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Jan 12 13:27:03 2010
+Subject: [SML 7753] 可分なところが攻められる
+Message-ID: <4B4BFA14.9070207@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+プログラミング言語とプログラマ思考ということで、Smalltalk に
+言い及びましたので、このメーリングリストにもお知らせします。
+
+週刊BCN連載「視点」より
+http://www.cc.kyoto-su.ac.jp/~atsushi/Links/bcn/BCN_ShiTen_20100111.html
+（↑のページ末尾に入稿した素の文面も載せています。）
+
+Smalltalk にクラスは存在しない、と言い切ってしまったぁ。:-)
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From tadashi_chiba ＠ hotmail.com  Thu Jan 14 17:26:37 2010
+From: tadashi_chiba ＠ hotmail.com (Chiba Tadashi)
+Date: Thu Jan 14 17:26:44 2010
+Subject: [SML 7754] 新規参加
+Message-ID: <KAW101-W3377F3DDDA1A7B7BAE5A92936A0@phx.gbl>
+
+
+はじめまして。千葉　直と申します。
+
+ 
+
+smalltalkは全くの初心者です。オブジェクト言語に興味があります。
+
+ 
+
+よろしくお願いいたします。
+ 		 	   		  
+_________________________________________________________________
+Windows 7とOfficeが安くなる！（ダウンロード版）
+http://promotion.live.jp/special/msstore/
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20100114/308ef4d2/attachment.htm
+From tadashi_chiba ＠ hotmail.com  Thu Jan 14 17:28:02 2010
+From: tadashi_chiba ＠ hotmail.com (Chiba Tadashi)
+Date: Thu Jan 14 17:28:05 2010
+Subject: [SML 7755] テスト
+Message-ID: <KAW101-W7C99FB892DCB035E276C2936A0@phx.gbl>
+
+
+テストです。 		 	   		  
+_________________________________________________________________
+【無料！】マイクロソフト公式メーラーで、メールを一括チェック
+http://windows7.jp.msn.com/master/windows_live/
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20100114/9474e125/attachment.htm
+From tadashi_chiba ＠ hotmail.com  Thu Jan 14 17:34:26 2010
+From: tadashi_chiba ＠ hotmail.com (Chiba Tadashi)
+Date: Thu Jan 14 17:34:28 2010
+Subject: [SML 7756] GNU Smalltalkがインストールできない件について
+Message-ID: <KAW101-W3632DFADA5ACA77A12D32C936A0@phx.gbl>
+
+
+はじめまして。千葉と申します。初めて投稿いたします。
+
+ 
+
+初歩的なことですが、GNU Smalltalkがインストールできません。
+ 
+まずは下記サイトでGNU Smalltalkを知りました。
+http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi
+そこからリンクをたどっていき、下記サイトに行き着きました
+http://swikis.ddo.jp/umejava/63
+ここでシロクマの力とVMwareをダウンロードしましたが、PofWB-gst3.1.isoって何？
+.isoファイルの取り扱い方がわかりません。VMwareはPofWB-gst3.1.vmwareというフォルダの中に
+いくつかファイルがあるのですがどれも取り扱い方がわかりません。PofWB-gst3.1.vmxというファイルがキーになると思うのですが…
+しかたがないのでVMwareはhttp://www.vmware.com/jp/products/player/からVMware-player-3.0.0-203739.exeというファイルをダウンロードしてきてインストールしようと思いましたが、エラーになってインストールできませんでした。そこでhttp://old.nabble.com/GNU-Smalltalk-Windows-Installer-(Beta)-td18283997.htmlからsetup.exeをダウンロードしてインストールしましたが、gstと入力しても、[could't load system file 'Bailtins.st' : No such file or directory image bootstrap failed, use option --kernel -directory]と表示されてエラーとなります。
+googleでもいろいろ調べてみましたがだめでした。
+ 
+勉強会のときは人に借りていたｐｃに正常にインストールができました。その時はシロクマもVMwareも正常にインストールしていた記憶があります。
+
+
+よろしくお願いいたします。
+ 		 	   		  
+_________________________________________________________________
+Windows 7とOfficeが安くなる！（ダウンロード版）
+http://promotion.live.jp/special/msstore/
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20100114/0cfa83df/attachment.htm
+From umejava ＠ mars.dti.ne.jp  Thu Jan 14 22:19:24 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Jan 14 22:19:27 2010
+Subject: [SML 7757] Re: GNU Smalltalkがインストールできない件について
+In-Reply-To: <KAW101-W3632DFADA5ACA77A12D32C936A0@phx.gbl>
+References: <KAW101-W3632DFADA5ACA77A12D32C936A0@phx.gbl>
+Message-ID: <Jx74adqDbBVT1s31zTlBN9MQ5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+.isoはCD-Rに焼き付けるためのディスクイメージです。
+例えば下記のようなページが参考になるでしょう。
+http://pocketstudio.jp/win/iso/cdrom.html
+
+焼いた後、CDブートを行うとシロクマの力が上がります。
+(ハードによっては上がらない場合もあります。最近のPCであれば
+大抵は大丈夫です)
+
+.vmxはVMWareの仮想マシンの設定ファイルです。VMWareがインストール
+されていれば、ダブルクリックや右クリックのメニューから仮想マシンを
+起動できます。
+
+VMWareがインストール出来ないとのことですが、おそらくPCの
+性能が不足しているのではないでしょうか。
+
+最小要件をご確認ください。
+http://www.vmware.com/jp/products/player/faqs.html
+
+なお、古いPC等でSmalltalkを簡単に試されたいのであればSqueakを
+お勧めします。
+http://swikis.ddo.jp/umejava/48
+
+以上、ご参考まで。
+
+Chiba Tadashi <tadashi_chiba@hotmail.com> wrote:
+> 
+> はじめまして。千葉と申します。初めて投稿いたします。
+> 
+>  
+> 
+> 初歩的なことですが、GNU Smalltalkがインストールできません。
+>  
+> まずは下記サイトでGNU Smalltalkを知りました。
+> http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi
+> そこからリンクをたどっていき、下記サイトに行き着きました
+> http://swikis.ddo.jp/umejava/63
+> ここでシロクマの力とVMwareをダウンロードしましたが、PofWB-gst3.1.isoって何？
+> .isoファイルの取り扱い方がわかりません。VMwareはPofWB-gst3.1.vmwareというフォルダの中に
+> いくつかファイルがあるのですがどれも取り扱い方がわかりません。PofWB-gst3.1.vmxというファイルがキーになると思うのですが…
+> しかたがないのでVMwareはhttp://www.vmware.com/jp/products/player/からVMware-player-3.0.0-203739.exeというファイルをダウンロードしてきてインストールしようと思いましたが、エラーになってインストールできませんでした。そこでhttp://old.nabble.com/GNU-Smalltalk-Windows-Installer-(Beta)-td18283997.htmlからsetup.exeをダウンロードしてインストールしましたが、gstと入力しても、[could't load system file 'Bailtins.st' : No such file or directory image bootstrap failed, use option --kernel -directory]と表示されてエラーと
+なります。
+> googleでもいろいろ調べてみましたがだめでした。
+>  
+> 勉強会のときは人に借りていたｐｃに正常にインストールができました。その時はシロクマもVMwareも正常にインストールしていた記憶があります。
+> 
+> 
+> よろしくお願いいたします。
+>                     
+> _________________________________________________________________
+> Windows 7とOfficeが安くなる！（ダウンロード版）
+> http://promotion.live.jp/special/msstore/
+
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Fri Jan 15 19:31:26 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Jan 15 19:31:46 2010
+Subject: [SML 7758] 第16回Smalltalk勉強会のお知らせ
+Message-ID: <JxX5o20XnzoQR17z587te7Jg6@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/1/27(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai16kaismalltalkbenkyoukai
+
+今回のテーマは「何が変わった? VisualWorks 7.7」です。
+この1月に新たにリリースされたVisualWorks 7.7を取り上げます。
+
+VisualWorksというと2.5.2cで記憶が止まっている人もいるのではないか
+と思います。ぜひ最新のVWに触れてみて下さい。
+NC版も近いうちにダウンロードできるようになりますが、当日はシンコム・
+システムズ・ジャパン様のご厚意により、NC版のCD-Rが配られる予定です。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan 27 09:12:47 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jan 27 09:12:57 2010
+Subject: [SML 7759] 第16回Smalltalk勉強会＠京都
+Message-ID: <4B5F84FF.7050903@cc.kyoto-su.ac.jp>
+
+青木淳＠京都上賀茂です。
+
+第16回Smalltalk勉強会@京都を開催いたします。万障繰り合わせて
+JR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto16
+
+第16回 Smalltalk勉強会＠京都
+日時：2010年02月03日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+取り組んでいる課題の要求仕様書にしたがって開発（設計）を進め
+ると「描画のためのMVCの機構」と「複数の木を表現する森の機構」
+の二つに大別できることがわかります。1月度の勉強会で決めました
+通り、2月度（今回）の勉強会では、描画のためのMVCの機構を作り
+上げたいと思います。みんなで一緒にプログラミングを行いますの
+で、ノート型のパーソナルコンピュータ（Windows 7/Vista/XP また
+は Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+ちょっと補足になりますが…
+
+Mac OS X の仮想マシンにおいて、大きな Pixmap への描画が異常な
+までに遅いのです。VisualWorks 7.7 のリリースノートのページ2-3
+にも記載があります。
+
+http://www.cincomsmalltalk.com/blog/jarober/ReleaseNotes7.7.pdf
+
+樹状整列アニメーションの際には工夫が必要になります。この工夫
+に関しては、3月度の勉強会で明らかにしてゆきたいと思います。
+
+------------------------------------------------------------
+その他に蛇足ですが…
+
+Ctrl-F，Ctrl-G，Ctrl-T などのキーアサインを使ってきた方々、
+VisualWorks 7.7 からは、Ctrl-Shift-F，Ctrl-Shift-G，Ctrl-Shift-T
+になります。これも上述のリリースノートのページ2-29に記載され
+ています。
+
+以前に話題にした二項メッセージセレクタの両端にスペースを必要
+とすることも「Binary Selectors Longer than Two Characters」と
+して、ページ2-29に記載があります。
+
+仮想マシンのインタンスを生成して、マルチコアの CPU で… など
+もおもしろい。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Jan 31 20:07:47 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Jan 31 20:07:55 2010
+Subject: [SML 7760] セーブされたファイルが自分でわかるプログラム
+Message-ID: <4B656483.7080601@cc.kyoto-su.ac.jp>
+
+Smalltalkerの皆さんへ
+
+ここに述べるみたいなプログラムを書き下ろせるでしょうか。プロ
+グラムの中で、そのプログラム自身がセーブされているファイル名
+を用いるプログラムです。
+
+たとえば、以下のようなプログラムを書くとします。ただし、この
+プログラムをセーブしたファイル名を、このプログラムの中で使用
+しなければなりません。どこにセーブしてもいいのです。ファイル
+としてどこにセーブされるのかわからないのに、このプログラムの
+中で当該のファイル名を使わなければならないのです。
+
+| aFilename |
+aFilename := ＜このプログラムをセーブしたファイル名＞.
+Transcript cr; show: aFilename printString
+
+もしも、上記のプログラムを「/usr/aoki/smalltalk/tmp.st」とい
+うファイルにセーブしたとしたら、次のプログラムを実行したり、
+
+'/usr/aoki/smalltalk/tmp.st' asFilename fileIn
+
+ファイルリスト（ファイルブラウザ）などで当該のファイルを選択
+してファイルインしたら、トランスクリプトにそのファイル名が出
+力されなければなりません。
+
+何を言っているのかわからないかもしれませんが…、うまく説明で
+きないことを許してください。今度の勉強会＠京都で援用しようと
+思い立ち、それなりに実装したのですが、もっと良策があるやもし
+れないなぁと考え、皆さんに訊ねてみようとポストした次第です。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

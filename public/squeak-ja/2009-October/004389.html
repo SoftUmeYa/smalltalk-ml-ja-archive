@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4389] SqueakDBXの導入について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204389%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrREJYGyRCJE5GM0Z%2BGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004381.html">
+   <LINK REL="Next"  HREF="004390.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4389] SqueakDBXの導入について</H1>
+    <B>daisuke yamashita</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204389%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrREJYGyRCJE5GM0Z%2BGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 4389] SqueakDBXの導入について">y.daisuke.homeaddres ＠ gmail.com
+       </A><BR>
+    <I>2009年 10月 29日 (木) 01:43:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004381.html">[Squeak-ja: 4381] メーリングリストの不具合のご報告
+</A></li>
+        <LI>次の記事 <A HREF="004390.html">[Squeak-ja: 4390] 日本語版SqueakとEtoyの違い
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4389">[ 日付 ]</a>
+              <a href="thread.html#4389">[ スレッド ]</a>
+              <a href="subject.html#4389">[ 件名 ]</a>
+              <a href="author.html#4389">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>初めまして。
+
+ヤマシタと申します。
+
+最近、squeakを始めました、初心者です。
+その中で、SqueakDBXを使用してDB(Postgres)操作をしたいと思っています。
+すでにOpenDBXは導入しているのですが、DBにconnectしようとすると、エラーが発生します。
+なんとか解決しようと試みましたが解決できず、お力をお貸し頂ければと思い投稿致しました。
+
+環境：MacOSX 10.6.1
+DB; PostgreSQL 8.4.1 ソースコンパイル（configureオプションなし)
+使用Squeak:  SeasideJOne-090425-plusDB
+他: pgAdminで接続できるのは確認済み。 PostgresはPostmasterによるDaemon起動 -i　オプション付き
+
+OpenDBXの導入手順は以下に記載しました。
+<A HREF="http://d.hatena.ne.jp/dai_yamashita/20091015/1255617048">http://d.hatena.ne.jp/dai_yamashita/20091015/1255617048</A>
+
+他、以下に記載されているMacでのVW内にシンボリックリンクは設定。
+（他は場所がさがしたのですが、不明のため設定できず。squeakdbxに最近つながるようになって設定をみれましたw）
+<A HREF="http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX">http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX</A>
+
+以下がコードです。
+connectionSettings := DBXConnectionSettings host: '127.0.0.1' port:
+'5432' database: 'dbname'  userName: 'user' userPassword: 'pass'.
+
+conn := DBXConnection platform: DBXPostgresPlatform new settings:
+connectionSettings.
+
+conn connect. &lt;= エラー発生
+
+Error内容(全部のdumpをするにはどうしたらよいか不明です。。。）
+OpenDBXMacOSX(object)&gt;&gt;error:
+
+inspectでみるとconnでresultがnilなので、初期の設定等に問題があると思うのですが。。。
+他、情報の不足等があり、不明な点で切り分けができない等がありましたら、ご指摘頂ければ幸いです。
+
+以上、何卒よろしくお願い致します。
+また、今後学んでいくにあたり、どうしても自分で解決できない点がありましたら、お力沿え頂ければ幸いです。
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004381.html">[Squeak-ja: 4381] メーリングリストの不具合のご報告
+</A></li>
+	<LI>次の記事 <A HREF="004390.html">[Squeak-ja: 4390] 日本語版SqueakとEtoyの違い
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4389">[ 日付 ]</a>
+              <a href="thread.html#4389">[ スレッド ]</a>
+              <a href="subject.html#4389">[ 件名 ]</a>
+              <a href="author.html#4389">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3484] KNOPPIX Edu6 に Squeak がバンドルされています
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203484%5D%20%3D%3Fiso-2022-jp%3Fb%3FS05PUFBJWCBFZHU2IBskQiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FIFNxdWVhayAbJEIkLCVQJXMlSSVrJDUkbCRGJCQkXiQ5GyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003483.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3484] KNOPPIX Edu6 に Squeak がバンドルされています</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203484%5D%20%3D%3Fiso-2022-jp%3Fb%3FS05PUFBJWCBFZHU2IBskQiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FIFNxdWVhayAbJEIkLCVQJXMlSSVrJDUkbCRGJCQkXiQ5GyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3484] KNOPPIX Edu6 に Squeak がバンドルされています">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2007年 4月 26日 (木) 19:41:07 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003483.html">[Squeak-ja: 3483] Re: SqueakFest '07 のご案内
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3484">[ 日付 ]</a>
+              <a href="thread.html#3484">[ スレッド ]</a>
+              <a href="subject.html#3484">[ 件名 ]</a>
+              <a href="author.html#3484">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+KNOPPIX教育利用研究会のMLで濱田先生に教えてもらったのですが、KNOPPIX
+Edu6に Squeak(Squeakland 2005J)がバンドルされています(改良点やアプリケー
+ション一覧には載っていません)。
+
+<A HREF="http://www.alpha.co.jp/biz/products/knoppix/edu/">http://www.alpha.co.jp/biz/products/knoppix/edu/</A>
+
+これにより、学校等におけるSqueak活用の機会が広がったわけで、大変ありがた
+いことです。
+
+ところで、このSqueakなのですが、同じく濱田先生のご報告によると、Kメニュー
+の「プログラム演習」「Squeak」で起動すると日本語入力ができません
+(Ctrl+Spaceで日本語入力モードに切り替わらない)。シェルから直接VMを起動す
+れば大丈夫です。
+Kメニューからは、/usr/local/bin/start-squeakというスクリプトを呼んでおり、
+その中でホームにMy Squeakとsecureディレクトリを作成した後に
+kdesusqueak.shをkdesu経由で起動しています。
+
+kdesu &quot;/usr/local/bin/kdesusqueak.sh ${USER}&quot; || exit 1
+
+kdesusqueak.shではSqueakのインストール先(/opt/Squeak)にMy Squeakと
+sequreのシンボリックリンクを張った後、以下のようにVMを起動しています。
+
+/opt/Squeak/squeak -plugins /opt/Squeak /opt/Squeak/SqueakPlugin.image
+
+シェルでsuしてから同じように起動しても。やはり日本語入力できませんでした。
+どうするのがよいでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003483.html">[Squeak-ja: 3483] Re: SqueakFest '07 のご案内
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3484">[ 日付 ]</a>
+              <a href="thread.html#3484">[ スレッド ]</a>
+              <a href="subject.html#3484">[ 件名 ]</a>
+              <a href="author.html#3484">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

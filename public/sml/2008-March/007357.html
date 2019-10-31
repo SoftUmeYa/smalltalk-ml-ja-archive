@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7357] いまさら他人に聞けない話１
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207357%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkXiQ1JGlCPj9NJEtKOSQxJEobKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCRPQyMxGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007356.html">
+   <LINK REL="Next"  HREF="007358.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7357] いまさら他人に聞けない話１</H1>
+    <B>sunao furukawa</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207357%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkXiQ1JGlCPj9NJEtKOSQxJEobKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCRPQyMxGyhC%3F%3D&In-Reply-To="
+       TITLE="[SML 7357] いまさら他人に聞けない話１">sadie ＠ kind.ocn.ne.jp
+       </A><BR>
+    <I>2008年 3月 24日 (月) 10:19:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007356.html">[SML 7356] Re: 自己紹介
+</A></li>
+        <LI>次の記事 <A HREF="007358.html">[SML 7358] Re: いまさら他人に聞けない話１
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7357">[ 日付 ]</a>
+              <a href="thread.html#7357">[ スレッド ]</a>
+              <a href="subject.html#7357">[ 件名 ]</a>
+              <a href="author.html#7357">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　古川直と申します。
+　一応Cincomのオンラインチュートリアル２までやってみたのですがいくつか戸惑っ
+たところがあるので投稿させていただきます。
+　といっても少し恥ずかしい初歩的な質問かもしれません。実は私は「サクサク
+Smalltalk」という本を持っています。その本の４章の７節目にメッセージの結合と
+いう節があります。そこには,
+
+(agenda item: 7) title: 'Plans'.
+
+という行があります。そしてその解説として次のようにかかれていました。
+「まずメッセージ item: 7 が agenda に送られ、次にメッセージ title: 'Plans'を
+送り、結果のオブジェクトを得る。」。
+　私がつまずいたのは「次にメッセージ title: 'Plans'を送り」という部分です。
+というのも何にメッセージ title: 'Plans'を送るのか明確には記入されていません
+でした。要するにメッセージ title: 'Plans'のレシーバが何なのかがわかりません
+でした。その結果、チュートリアルの中の次のメソッドが理解できませんでした。
+　具体的には、
+start
+filter := (Dialog request: 'フィルタを入力してください '
+initialAnswer: 'ws00').
+(filter size) &gt; 0
+ifTrue: [ self startHits.
+self startPageCount.
+Dialog warn: 'すべての統計を実行しました'. ]
+ifFalse: [ Dialog warn: '問題なし。ごきげんよう'].
+
+というコードのうちの「(filter size) &gt; 0 」という部分が理解できませんでした。
+
+　チュートリアルを読み進むうちに次のようなメソッドに突き当たりました。
+start
+ filter size &gt; 0
+ ifTrue:
+  [self status: 'Processing...'.
+  logFiles := self getLogFiles.
+  self workHorse.
+  self status: 'Processing Complete']
+ ifFalse: [Dialog warn: 'Please enter a filter']
+
+　ここで疑問になったのは、「filter size &gt; 0」という部分です。
+　比較してみて、何がわからないのかというと「(filter size) &gt; 0 」は二項メッ
+セージ「&gt;0」のレシーバがfilterなのかどうかというところです。また、「filter
+size &gt; 0」はfilterに単項メッセージsizeを送り、それから帰ってきたオブジェクト
+に二項メッセージ&gt;0を送っているのかというところです。
+　もしよろしかったらご教授ください。
+
+　また、これも疑問なのですがCincomのオンラインチュートリアル２で作った配布イ
+メージのサイズが10MBを超えました。皆さんが作るプログラムではどれくらいのファ
+イルサイズになるのか興味があります。相場を知りたいです。どなたか教えてくださ
+い。
+
+　以上少し長いメールになりました。よろしくお願いします。
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007356.html">[SML 7356] Re: 自己紹介
+</A></li>
+	<LI>次の記事 <A HREF="007358.html">[SML 7358] Re: いまさら他人に聞けない話１
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7357">[ 日付 ]</a>
+              <a href="thread.html#7357">[ スレッド ]</a>
+              <a href="subject.html#7357">[ 件名 ]</a>
+              <a href="author.html#7357">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2912] Re: PluggableTextMorphについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202912%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZVRleHRNb3Jw%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaBskQiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002911.html">
+   <LINK REL="Next"  HREF="002913.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2912] Re: PluggableTextMorphについて</H1>
+    <B>Thoru Yamamoto</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202912%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZVRleHRNb3Jw%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaBskQiRLJEQkJCRGGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2912] Re: PluggableTextMorphについて">tango ＠ eggegg.co.jp
+       </A><BR>
+    <I>2006年 4月  7日 (金) 17:08:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002911.html">[Squeak-ja: 2911] PluggableTextMorphについて
+</A></li>
+        <LI>次の記事 <A HREF="002913.html">[Squeak-ja: 2913] Re: PluggableTextMorphについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2912">[ 日付 ]</a>
+              <a href="thread.html#2912">[ スレッド ]</a>
+              <a href="subject.html#2912">[ 件名 ]</a>
+              <a href="author.html#2912">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>やまもとです。
+
+&gt;<i> PluggableTextMorphをキャンセルするため、
+</I>&gt;<i> 左上に×印のマークがありますが、
+</I>
+どうやらPluggableListとウィンドウ（SystemWindow）を
+混同されているのでわ？
+
+で、久保さんの投稿をきっかけに
+おいらもPluggableListがよくわからんちんで
+いままでなかなか使えなかったのですが
+これをきっかけに再お勉強、再トライしてみますた。
+左がサブクラスを表示するPluggableListMorphで
+右ペインが左ペインで選択したクラスのメソッドを表示する
+PluggableTextMorphでする。
+それらをSystemWindowにaddMorphしています。
+
+TestWindow new initialize openAViewOnMe
+
+でWindowがひらくです。
+
+とりあえず思ったとおりにはどうさしているのですが
+問題がありましたらごめん。＜ご指摘大歓迎。
+ここにソースコード書くの勇気いりまする・・・・（汗）
+
+
+
+以下ソースコード。
+'From Squeakland.396-Nihongo7.29 of 18 March 2005 [latest update: #100] on 7
+April 2006 at 4:55:52 pm'!
+Object subclass: #TestWindow
+	instanceVariableNames: 'list selectedIndex contents'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ThoruTest'!
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 20:04'!
+contents
+	^ contents! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 19:50'!
+initialize
+	list _ (Collection withAllSubclasses collect: [ :each | each name])
+					asSortedCollection: [ :a :b | a = b].
+	selectedIndex _ 1.! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 19:50'!
+list
+	^list! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 19:50'!
+listIndex
+	^selectedIndex! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/6/2006 00:23'!
+listIndex: anInteger
+	selectedIndex _ anInteger.
+	contents _ (Smalltalk at: (list at: selectedIndex)) organization
+allMethodSelectors asString.
+
+	self changed: #listIndex.
+	self changed: #contents! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 20:12'!
+listMenu: aMenu
+	| targetClass differentMenu className |
+	className _ list
+		at: selectedIndex
+		ifAbsent: [
+			^aMenu add: 'nothing selected' target: self selector: #beep
+		].
+	targetClass _ Smalltalk
+		at: className
+		ifAbsent: [
+			^aMenu add: 'that class is history!!!!' target: self selector: #beep
+		].
+	differentMenu _ DumberMenuMorph new.
+	differentMenu
+		add: 'browse' target: targetClass selector: #browse;
+		add: 'inspect' target: targetClass selector: #inspect;
+		add: 'explore' target: targetClass selector: #explore.
+	^ differentMenu! !
+
+!TestWindow methodsFor: 'as yet unclassified' stamp: 'ty 4/5/2006 20:16'!
+openAViewOnMe
+	| window aListMorph aTextMorph |
+
+	aListMorph _ PluggableListMorph
+		on: self
+		list: #list
+		selected: #listIndex
+		changeSelected: #listIndex:
+		menu: #listMenu:.
+	aListMorph color: Color white.
+	aTextMorph _ PluggableTextMorph
+		on: self
+		text: #contents
+		accept: #acceptContents
+		readSelection: nil
+		menu: nil.
+	window _ SystemWindow labelled: 'ThoruTest'.
+	window
+		color: Color white;
+		setWindowColor: (Color r: 0.645 g: 0.645 b: 1.0);
+		addMorph: aListMorph
+		frame: (<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">0 ＠ 0</A> corner: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">0.3 ＠ 1</A>);
+		addMorph: aTextMorph
+		frame: (<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">0.3 ＠ 0</A> corner: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">1 ＠ 1</A>).
+	window extent: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">400 ＠ 200.</A>
+	^ window openInHand
+!
+]style[(13 399 104 100)f2b,f2,f4,f2! !
+
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tango ＠ eggegg.co.jp</A>
+www:    <A HREF="http://www.thoruman.com">http://www.thoruman.com</A>
+-------------------------------
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002911.html">[Squeak-ja: 2911] PluggableTextMorphについて
+</A></li>
+	<LI>次の記事 <A HREF="002913.html">[Squeak-ja: 2913] Re: PluggableTextMorphについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2912">[ 日付 ]</a>
+              <a href="thread.html#2912">[ スレッド ]</a>
+              <a href="subject.html#2912">[ 件名 ]</a>
+              <a href="author.html#2912">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

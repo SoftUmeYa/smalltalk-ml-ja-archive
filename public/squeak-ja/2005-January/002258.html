@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2258] Re: プロジェクトファイル(.pr)で保存されるもの
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202258%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUglVSUhJSQlaxsoQigucHIpGyRCJEdKXUI4JDUkbCRrJGIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEI%3D%3F%3D&In-Reply-To=uy8ezp3v4.wl%40YOSHIKI-T2.mb.infoweb.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002256.html">
+   <LINK REL="Next"  HREF="002244.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2258] Re: プロジェクトファイル(.pr)で保存されるもの</H1>
+    <B>&quot;土本 (Florian) 強</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202258%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lOCUnJS8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUglVSUhJSQlaxsoQigucHIpGyRCJEdKXUI4JDUkbCRrJGIbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEI%3D%3F%3D&In-Reply-To=uy8ezp3v4.wl%40YOSHIKI-T2.mb.infoweb.ne.jp"
+       TITLE="[Squeak-ja: 2258] Re: プロジェクトファイル(.pr)で保存されるもの">&quot;土本 (Florian) 強
+       </A><BR>
+    <I>2005年 1月 12日 (水) 15:34:54 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002256.html">[Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+        <LI>次の記事 <A HREF="002244.html">[Squeak-ja: 2244] プラグイン中のFormのインスタンス変数の値について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2258">[ 日付 ]</a>
+              <a href="thread.html#2258">[ スレッド ]</a>
+              <a href="subject.html#2258">[ 件名 ]</a>
+              <a href="author.html#2258">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　土本( Florian )です。
+
+メール「[Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの」(2005/01/12 15:18) に於いて
+「Yoshiki Ohshima」 語りて曰く、
+
+Yoshiki&gt; &gt; 　なるほど。
+Yoshiki&gt; &gt; 　Worldに限らず、どこかのMorphのプロパティ辞書に一括してリソースを持た
+Yoshiki&gt; &gt; せる方針で問題なさそうですね。
+Yoshiki&gt; 
+Yoshiki&gt;   どこかのMorphの(sub)instanceの辞書に、ということですよね。
+
+　任意Morphのinstance(a Morphというのかな？)にです。Morphとだけいうと
+たとえば画面上に存在する実体(instance)を想定してしまいますが、Morphと
+いうClassとも取れますね。
+
+Yoshiki&gt; &gt; ・3.6ベースのイメージでSystemBrowserを開いたままプロジェクト(prファイ
+Yoshiki&gt; &gt; ル)としてセーブ
+Yoshiki&gt; &gt; ・3.8ベースのイメージでプロジェクトをロード
+Yoshiki&gt; &gt; 
+Yoshiki&gt; &gt; 　すると、実際のアプリ(いつものRainDrop)とSystemBrowserが開いたままプ
+Yoshiki&gt; &gt; ロジェクトが生成されます。Look &amp; Feelが変化してなかなか楽しい……ので
+Yoshiki&gt; &gt; すが、よく見ると、なんかSystemBrowserが3.6の見かけをしているような……。
+Yoshiki&gt; &gt; 
+Yoshiki&gt; &gt; 　試しに別のWorldに移って新たにSystemBrowserを開いても3.6の
+Yoshiki&gt; &gt; SystemBrowserが。ってことは、これは、
+Yoshiki&gt; &gt; 
+Yoshiki&gt; &gt; ・3.6のSystemBrowserのクラスがChangeSetの形でprファイルに含まれていた
+Yoshiki&gt; &gt; 
+Yoshiki&gt; &gt; 　……ということなのでしょうか。
+Yoshiki&gt; 
+Yoshiki&gt;   Browserというクラスのインスタンスがserializeされて入っていて、それを
+Yoshiki&gt;   ロードするときに「がっちゃん」と読み込んだ側のイメージに入っている同
+Yoshiki&gt;   じ名前のクラスのインスタンスとして読み込んだ、ということです。コード
+Yoshiki&gt;   は運ばれていません。
+
+　はじめは私も直列化されたSystemBrowserのインスタンスだけが読み込まれ
+ているのだと思いました。
+　だとすると、読み込んだプロジェクトの中にあったSystemBrowserが3.6の姿
+をしていることは説明がつくのですが、別のworldに移ってデスクトップメニュー
+からSystemBrowserを開いた時にも3.6のSystemBrowserの形をしていたのは説
+明がつかないような気がします。
+
+　もう一度確認してみます。私の見間違いならばいいのですが。
+
+Yoshiki&gt; &gt; 　Projectの形でセーブすると、確かに一見さんには判りやすい形になるので
+Yoshiki&gt; &gt; すが、下手なもの開いたままプロジェクト公開しちゃうと他の人の環境を破壊
+Yoshiki&gt; &gt; する羽目になるような気がします。たとえば、workspaceを開いた状態で今プ
+Yoshiki&gt; &gt; ロジェクトを公開していますが、まさか、workspaceのクラスの中身がプロジェ
+Yoshiki&gt; &gt; クトのロード時に書き換わってしまうとかいうことすらも考えられます。
+Yoshiki&gt; &gt; 　この辺り、どのようなルール付けで保管されているのかが少し気になりま
+Yoshiki&gt; &gt; す。
+Yoshiki&gt; 
+Yoshiki&gt;   コードは、そのprojectに関連付けられているchange setに入っているもの
+Yoshiki&gt; のみが入ります。ですので、必ずしも破壊されることを心配する必要はありま
+Yoshiki&gt; せん。
+
+　諒解しました。
+
+Yoshiki&gt; &gt; Takashi&gt; 見てのとおりかなり気軽な物も多いので、相当気軽だと思っています。説明を
+Yoshiki&gt; &gt; Takashi&gt; ちゃんと書けば特に迷惑では無いと思います。
+Yoshiki&gt; &gt; 
+Yoshiki&gt; &gt; 　諒解しました。
+Yoshiki&gt; &gt; 　説明……。やっぱり、abstructに関しては英語ですよね……。善処します
+Yoshiki&gt; &gt; (^^;)。
+Yoshiki&gt; 
+Yoshiki&gt; &gt; 　諒解しました。
+Yoshiki&gt; &gt; 　基本的にはsarで、デモとしてプラグインで見せる時にはprで公開するポリ
+Yoshiki&gt; &gt; シーにします。
+Yoshiki&gt; 
+Yoshiki&gt;   そうですね。
+Yoshiki&gt; 
+Yoshiki&gt;   期待しています。
+
+　ありがとうございます。
+　やんわりと生暖かい目で見守ってやってください。余り作業時間が取れなさ
+そうなので。
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">florian ＠ seagreen.ocn.ne.jp</A>
+Florian's Neo Pages <A HREF="http://www.cise.co.jp/%7eflorian/">http://www.cise.co.jp/%7eflorian/</A>
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002256.html">[Squeak-ja: 2256] Re: プロジェクトファイル(.pr)で保存されるもの
+</A></li>
+	<LI>次の記事 <A HREF="002244.html">[Squeak-ja: 2244] プラグイン中のFormのインスタンス変数の値について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2258">[ 日付 ]</a>
+              <a href="thread.html#2258">[ スレッド ]</a>
+              <a href="subject.html#2258">[ 件名 ]</a>
+              <a href="author.html#2258">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

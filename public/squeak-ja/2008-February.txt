@@ -1,0 +1,2258 @@
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Feb  7 08:54:48 2008
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Feb  7 08:54:56 2008
+Subject: [Squeak-ja: 3815] ループしているプロセスの停止について
+Message-ID: <CBEIKPMBLLMDEOEJIHCCKEKICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+また教えていただきたいことができましたので、
+ご多忙中に恐縮ですがよろしくお願いいたします。
+次のようなcodeを書いてdo it　しました。
+arm := LineMorph from: 290@300 to: 710@300  color: Color black width: 5.
+[[ arm openInWorld.
+   ( Delay forSeconds: 1) wait] repeat] fork
+当然loopになってしまい、止めたいのです。
+そこで自由自在Squeak　p.277に習って
+(ActiveWorld submorphs select: [:each | each isKindOf: PolygonMorph]) 
+  do: [:each | each delete].
+としてみましたが、効き目ありません。
+もちろんAlt + .　もやってみましたけれど。
+どうしたらよいでしょうか。
+ご教示をお願いいたします。
+久保　道 
+From abee ＠ squeakland.jp  Thu Feb  7 16:14:19 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Feb  7 16:14:47 2008
+Subject: [Squeak-ja: 3816] Re: ループしているプロセスの停止について
+In-Reply-To: <CBEIKPMBLLMDEOEJIHCCKEKICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <CBEIKPMBLLMDEOEJIHCCKEKICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <47AAAFCB15.4FF5ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+いきなりforkを送ると、あとでそのプロセスを捕まえにくくなるので、まずは変
+数に入れたほうが良いと思います。
+
+arm := LineMorph from: 290@300 to: 710@300  color: Color black width: 5.
+process := [[ arm openInWorld.
+   ( Delay forSeconds: 1) wait] repeat] newProcess.
+process resume
+
+これを終了するときは以下のようにします。
+
+process terminate
+
+他どのようなメソッドがあるかはProcessクラスのインスタンスメソッドを見てく
+ださい。
+forkは単なる予約語ではなく、メッセージですから、ブロックにforkを送ったと
+きになにが起こっているかを考える必要があります。
+ワークスペースなどでforkを選択し、Alt+bを押すとその定義を調べることができ
+ます。
+せっかく中身を参照できるわけですから、今回の問題に限らず、分からないこと
+があったら、中を調べてみるのは良い習慣だと思います。
+
+また、自由自在では一章を費やして並行処理について解説しています(第12章)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From umejava ＠ mars.dti.ne.jp  Sat Feb  9 18:36:52 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Feb  9 18:37:00 2008
+Subject: [Squeak-ja: 3817] Seaside入門をオープンソースカンファレンス2008 Tokyo/Springでやります
+Message-ID: <JA200802091836526.28928953@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、デブサミもまだ終わっていないのですが、東京では2/29-3/1にかけて、
+オープンソースカンファレンス2008 Tokyo/Springが行われます。
+http://www.ospn.jp/osc2008-spring/
+
+Squeak-jaのブースは出ませんが(いい加減疲れました)、代わりにハンズオンセミナを
+行います。
+
+「異端のWebフレームワークSeaside入門 」です。
+http://www.ospn.jp/osc2008-spring/modules/eguide/event.php?eid=54
+
+内容は過去に「Squeakers' Night in 未来パーティ 2.0」で行ったものと基本的には
+同じなのですが、多少は新しい話題が入るかもしれません。
+http://swikis.ddo.jp/umejava/38
+
+少なくともSeasideJOnePlusはSqueak 3.9+Seaside 2.8ベースに更新する予定です。
+http://swikis.ddo.jp/umejava/41
+
+よろしければお越し下さい。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From ykoubo2007 ＠ yengawa.com  Sun Feb 10 10:19:47 2008
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Sun Feb 10 10:20:07 2008
+Subject: [Squeak-ja: 3818] JPEG EXIF
+Message-ID: <20080210101030.7C78.7126EAF9@yengawa.com>
+
+横川です。
+仕事でSqueakにデジカメ写真のデータを取り込む必要が出てきました。
+JPEGのEXIFデータを読むコードがあれば使いたいのですが、どこかにあったとか
+参考になりそうなモノを書いたことがあるとかの情報はありませんか?
+
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From umejava ＠ mars.dti.ne.jp  Mon Feb 11 21:02:40 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Feb 11 21:02:46 2008
+Subject: [Squeak-ja: 3819] Re: Monticelloについて
+In-Reply-To: <JX200710300835537.2520015@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+	<C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+	<JZ200710292253518.7755250@mars.dti.ne.jp>
+	<JK2007102923054911.8473421@mars.dti.ne.jp>
+	<0DD6FA36-8304-4CBA-AE70-E9D587C76CAB@gmail.com>
+	<JX200710300835537.2520015@mars.dti.ne.jp>
+Message-ID: <JM200802112102404.1164531@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ものすごく古い話題なのですが、Monticelloの日本語対応パッチを更新しました。
+今回から日本語を公開時コメントに含めても、ファイルを壊さずに使うことが
+出来ます。(BOMつきUTF8で書きます)
+
+ただし、このパッチが当たっていない外部のシステム(SqueakSourceなど)を
+使う場合、MCZとしてちゃんと認識してくれないという問題が起こります。
+
+対策としては
+
+-別システムにも出来る限りパッチを当てる(無理な場合があります)
+-日本語の公開時コメントは内部でコントロールできるシステムにのみ利用する
+
+といった形になります。日本語の公開コメントを使わない場合、互換性は
+保たれますので、いずれにせよ入れておいて損はないパッチと言えます。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> デバッグログを見るに、
+> MczInstaller>>extractVersionInfoでこけていますね。
+> 
+> > なお、Monticelloの公開時コメントやパッケージ名に日本語を使ったり
+> > すると、きっと動かないと思います。ソースコード(とクラスコメント)内に
+> > 日本語を使うことができるようになったという程度のものです。
+> 
+> と書きましたが、公開時コメントで日本語を過去に使ったことがある.mcz
+> を使われているのだと思います。
+> 
+> .mczファイルを展開してできるversionというファイルを見ると、日本語
+> が含まれたりしていませんでしょうか。
+> 
+> つまりもう少し修正が必要なのですが、範囲が大きくなりそうなので保留中です。
+> 
+> Sho Yoshida <newapplesho@gmail.com> wrote:
+> > 吉田です．
+> > 
+> > 梅澤さん，何度もすみません．
+> > 違うイメージにMonticello-m17n-patch.7.csをfile inして 
+> > mczファイルを作成し，読み込んだところエラーが起こってしまいま 
+> > した．
+> > ただ，Monticello-m17n-patch.7.csをfile inしたあとに 
+> > Monticello-m17n-patch.4.cをfile inしてmczファイル 
+> > を作成するとうまくいきました．
+> > 
+> > 僕のSqueakの環境が悪いのでしょうか．
+> > よろしくお願いいたします．
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Monticello-m17n-patch.20.cs
+型:         application/octet-stream
+サイズ:     4099 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080211/cdaf8c6f/Monticello-m17n-patch.20.obj
+From umejava ＠ mars.dti.ne.jp  Mon Feb 11 21:20:07 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Feb 11 21:20:25 2008
+Subject: [Squeak-ja: 3820] Squeak開発者版(3.9ベース)
+Message-ID: <JP200802112120079.2211515@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+デブサミ記念というわけでもないのですが、Squeak 3.9ベースで普段の開発に使う
+ためのイメージを作ってみました。
+
+Squeak開発者版:
+http://swikis.ddo.jp/umejava/48
+
+日本の開発者はおそらくSqueakPlugin-dev-556.zip(Squeak3.8ベース)
+を使われていることが多いのですが、最新の公式バージョンはSqueak 3.9であり、
+それを前提としたライブラリ群も増えてきているので、日本語周りを中心になん
+とか整備しようと思い立ちました。
+
+開発ツール関連のメニューやボタンなどもがんばって訳したので、見た目の
+親近感は増したかもしれません。安定して動くようにあれこれパッチも当てて
+います。(例のMonticelloのパッチも含まれています)
+
+直リンク:
+ftp://swikis.ddo.jp/SqueakDevJa/images/Squeak3.9-final-7067J.zip
+
+スクリーンショット:
+http://swikis.ddo.jp/umejava/uploads/48/SQ39J.jpg
+
+なお、定期的にメンテしていきますので、これは入れた方が良いというパッチが
+ありましたら、連絡いただけますと助かります。
+http://swikis.ddo.jp/umejava/49
+にあるように、ネットワーク経由で最新の状態にすることができます。
+
+Etoys系以外でSqueakを使うという人には、選択肢となり得るイメージでしょう。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Tue Feb 12 13:14:06 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Feb 12 13:14:15 2008
+Subject: [Squeak-ja: 3821] SeasideJインストール済みイメージ更新
+Message-ID: <JP200802121314064.19027031@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SeasideJのインストール済みイメージを更新しました。
+http://swikis.ddo.jp/umejava/22
+ftp://swikis.ddo.jp/SeasideJ/Seaside-JPatched080211-sq39.zip
+
+本家サイトのSeaside-2.8-finalイメージ(Squeak3.9ベース)に、
+Japanese Environment Installerを当てて作成しています。
+
+SeasideJOneも直に出しますが、待ちきれない人はファイル差し替えで
+自力で作ることもできます。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From tako ＠ aquilax.co.jp  Wed Feb 13 10:49:27 2008
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Wed Feb 13 10:56:19 2008
+Subject: [Squeak-ja: 3822] 巨大 image 用 VM (MacOSX PowerPC) 求む
+Message-ID: <20080213015607.021CC9F884@1server.aquilax.co.jp>
+
+高橋＠池袋です。
+
+MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+VMはありますか？
+
+各種データを読み込んでファイルサイズが 483.6Mになって
+しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+予定です。
+
+--------
+　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+変更して使っています。問題は一応解決しているのですが
+このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+32bitクリーンと記載されています。
+
+　正常起動しなくなった時の症状は
+image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+　SqueakMaxHeapSize 640 * 1024 * 1024
+
+--------
+　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+defaultの状態で正常に動作するようですが、
+　1.ファイルパス MacOS→ Unix への変更が必要
+　2.ファイル名に日本語が使えない？
+などの問題があります。
+
+--------
+ここで質問ですが
+
+巨大日本語imageを扱うノウハウを教えて下さい。
+
+Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+
+MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+　必要ならIntelMac、 OSX 10.5への変更も可能です。
+
+Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+するのは info.plistの細工程度では難しいですか？
+　ファイル名の記載。日本語対応
+
+その他アイデア・ヒントがあれば教えて下さい。
+
+よろしくお願いします。
+
+--------
+追伸
+　デブサミ参加の皆さんお手伝いできなくてすみません。
+
+　２年に１度の健康保険の改正作業をしています。もちろんSqueakで。
+上記 imageには、保険請求可能な全薬剤などの情報が満載されています。
+
+
+
+From ykoubo2007 ＠ yengawa.com  Thu Feb 14 23:06:24 2008
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Feb 14 23:06:39 2008
+Subject: [Squeak-ja: 3823] デブサミ後夜祭でSqueak+Gainer見せます(Was:  デブサミ後夜祭 Squeaker達の何か with Scala)
+In-Reply-To: <JN200801221950254.3861687@mars.dti.ne.jp>
+References: <JN200801221950254.3861687@mars.dti.ne.jp>
+Message-ID: <20080214230009.7C90.7126EAF9@yengawa.com>
+
+横川です。
+デブサミでSqueak-jaブースに立ち寄っていただいた皆様ありがとうございまし
+た。
+でも、Squeak-ja的には明日の「デブサミ後夜祭」が本番ですね:)
+
+告知し忘れていましたが、明日はぼくもSqueak+Gainerをお見せします。
+(先ほどあわててエントリーを追加しました)
+http://swikis.ddo.jp/umejava/47
+SqueakでチョロQをコントロールしてリアルDrive a Carをする予定です。
+
+よろしくお願いします。
+
+On Tue, 22 Jan 2008 19:50:25 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+
+> こんにちは
+> 梅澤です。
+> 
+> > 更に、デブサミに併せてオフ会のようなものができると良いなあと思っています。
+> > どなたか会場を提供していただける会社なり、組織なりをご存じないでしょうか。
+> 
+> と言っていたわけですが、会場と日程が決定いたしました。
+> 
+> 「デブサミ後夜祭 Squeaker達の何か with Scala」
+> 2008/2/15(金) 19:00-22:00 株式会社 豆蔵 トレーニングルーム
+> です。
+> 
+> 詳しくは下記をご覧下さい。
+> http://swikis.ddo.jp/umejava/47
+> 
+> 巷で話題のScala言語について、豆蔵の羽生田さんにお話しいただく予定です。
+> つまり、コミュニティをまたがった初のジョイント企画というわけなのです。
+> 
+> SqueakだけでなくScalaに興味のある方もどしどしお越し下さい。
+> 
+> 例によって発表者を募集中です。Wikiに書き込んでください。
+> 
+> また、参加に事前登録などは不要ですが、大体の人数を把握したいので、リプライを
+> いただけるとありがたいです。
+> 
+> では。
+> ---
+> [:masashi | ^umezawa]
+> 
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From masuda ＠ im.dendai.ac.jp  Thu Feb 14 23:45:13 2008
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Thu Feb 14 23:46:26 2008
+Subject: [Squeak-ja: 3824] 東京電機大学未来科学部イブニングセミナー 石井裕氏 独創・協創・競創の風土とタンジブル・ビット
+Message-ID: <47B453F9.6000903@im.dendai.ac.jp>
+
+増田＠電大です。
+
+Squeak 関係者にはヒューマン・インタラクション、ユーザ・インタフェース関
+係に興味のある方が多いと思いますので、以下の無料セミナーについてお知らせ
+させていただきます。
+
+なお、http://mirai.dendai.ac.jp/openlab/2007/seminar/ の紹介文の1行目は
+以下のようになっています。
+
+MITメディアラボは、「未来は予測するものではなく、発明するもの」というア
+ラン・ケイの言葉を体現する研究所であり、世界中の先進的な企業とのコラボ
+レーションを、創造のエンジンとしている。
+
+
+
+東京電機大学
+未来科学部イブニングセミナー
+　　　　　　　　　　　　
+
+　　　　　　　　記
+
+１．日時:	2008年 ３月１１日(火) 　16:30-18:00
+
+２．会場:	東京都千代田区神田錦町２−２
+ 		東京電機大学神田キャンパス　丹羽ホール
+
+３．講師：	石井　裕氏
+　　　			マサチューセッツ工科大学（MIT）
+メディア・ラボ教授
+
+４．演題：
+独創・協創・競創の風土とタンジブル・ビット
+http://mirai.dendai.ac.jp/openlab/2007/seminar/
+
+５．参加費：	無料
+
+６．その他
+講演後、石井講師ご出席で懇親会を行います。
+１１号館１７Ｆ　18:15−19:30　
+
+７．申し込み先
+下記申し込みＵＲＬからお申し込みください。
+http://www.mlab.im.dendai.ac.jp/event/20080311/
+
+８．問い合わせ先
+　　			東京電機大学未来科学部情報メディア学科
+	yajima@im.dendai.ac.jp
+
+以上
+
+-- 
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科 増田 英孝
+E-mail: masuda@im.dendai.ac.jp TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/ FAX 03-5280-3592
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Fri Feb 15 12:33:27 2008
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Fri Feb 15 12:33:47 2008
+Subject: [Squeak-ja: 3825] Re: ループしているプロセスの停止について
+In-Reply-To: <47AAAFCB15.4FF5ABEE@smtp.nifty.com>
+Message-ID: <200802150333.m1F3XVmt021405@proxy2.aams.jp>
+
+阿部さん、さっそく教えていただいて、
+ありがとうございました。
+ただ、前回書きましたように私の場合は、
+ご指示くださったように
+「まずは変数に入れたほうが良い」という点が
+できていなかったので、困っています。
+最終的には必要なcodeだけ取り出して
+別につくりなおすことにします。
+お返事遅れて失礼いたしました。
+久保　道
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Kazuhiro ABE
+Sent: Thursday, February 07, 2008 4:14 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3816] Re: ループしているプロセスの停止について
+
+阿部@新百合です。
+
+いきなりforkを送ると、あとでそのプロセスを捕まえにくくなるので、まずは変
+数に入れたほうが良いと思います。
+
+arm := LineMorph from: 290@300 to: 710@300  color: Color black width: 5.
+process := [[ arm openInWorld.
+   ( Delay forSeconds: 1) wait] repeat] newProcess.
+process resume
+
+これを終了するときは以下のようにします。
+
+process terminate
+
+他どのようなメソッドがあるかはProcessクラスのインスタンスメソッドを見てく
+ださい。
+forkは単なる予約語ではなく、メッセージですから、ブロックにforkを送ったと
+きになにが起こっているかを考える必要があります。
+ワークスペースなどでforkを選択し、Alt+bを押すとその定義を調べることができ
+ます。
+せっかく中身を参照できるわけですから、今回の問題に限らず、分からないこと
+があったら、中を調べてみるのは良い習慣だと思います。
+
+また、自由自在では一章を費やして並行処理について解説しています(第12章)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+No virus found in this incoming message.
+Checked by AVG.
+Version: 7.5.516 / Virus Database: 269.19.21/1267 - Release Date: 2008/02/08
+20:12
+
+
+No virus found in this outgoing message.
+Checked by AVG.
+Version: 7.5.516 / Virus Database: 269.20.5/1279 - Release Date: 2008/02/14
+18:35
+
+
+From umejava ＠ mars.dti.ne.jp  Fri Feb 15 13:53:26 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Feb 15 13:53:36 2008
+Subject: [Squeak-ja: 3826] Re: ループしているプロセスの停止について
+In-Reply-To: <200802150333.m1F3XVmt021405@proxy2.aams.jp>
+References: <200802150333.m1F3XVmt021405@proxy2.aams.jp>
+Message-ID: <JT200802151353268.6813125@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+すでにループしてしまっているイメージをなんとか救いたいということでしたら、
+私であればまず、LineMorphのopenInWorldを一時的にoverrideします。
+
+LineMorph>>openInWorld
+    ^self
+
+その後で、ProcessBrowserを使ってプロセスを殺します。
+Worldメニューのデバッグ->open process browserです。
+
+優先度40のプロセスがおそらく2つ上がっていると思います。the UI processの
+ほうはMorphicのおおもとのループですから止めてはいけません。
+
+Delayでwaitしながら進んでいるプロセスを選択してterminateさせます。
+
+プロセスを殺した後で、LineMorphのopenInWorldを消しておけばよいでしょう。
+
+ProcessBrowserについて詳しくは「自由自在」の12章です。
+
+久保　道 <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 阿部さん、さっそく教えていただいて、
+> ありがとうございました。
+> ただ、前回書きましたように私の場合は、
+> ご指示くださったように
+> 「まずは変数に入れたほうが良い」という点が
+> できていなかったので、困っています。
+> 最終的には必要なcodeだけ取り出して
+> 別につくりなおすことにします。
+> お返事遅れて失礼いたしました。
+> 久保　道
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+> On Behalf Of Kazuhiro ABE
+> Sent: Thursday, February 07, 2008 4:14 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 3816] Re: ループしているプロセスの停止について
+> 
+> 阿部@新百合です。
+> 
+> いきなりforkを送ると、あとでそのプロセスを捕まえにくくなるので、まずは変
+> 数に入れたほうが良いと思います。
+> 
+> arm := LineMorph from: 290@300 to: 710@300  color: Color black width: 5.
+> process := [[ arm openInWorld.
+>    ( Delay forSeconds: 1) wait] repeat] newProcess.
+> process resume
+> 
+> これを終了するときは以下のようにします。
+> 
+> process terminate
+> 
+> 他どのようなメソッドがあるかはProcessクラスのインスタンスメソッドを見てく
+> ださい。
+> forkは単なる予約語ではなく、メッセージですから、ブロックにforkを送ったと
+> きになにが起こっているかを考える必要があります。
+> ワークスペースなどでforkを選択し、Alt+bを押すとその定義を調べることができ
+> ます。
+> せっかく中身を参照できるわけですから、今回の問題に限らず、分からないこと
+> があったら、中を調べてみるのは良い習慣だと思います。
+> 
+> また、自由自在では一章を費やして並行処理について解説しています(第12章)。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+> No virus found in this incoming message.
+> Checked by AVG.
+> Version: 7.5.516 / Virus Database: 269.19.21/1267 - Release Date: 2008/02/08
+> 20:12
+> 
+> 
+> No virus found in this outgoing message.
+> Checked by AVG.
+> Version: 7.5.516 / Virus Database: 269.20.5/1279 - Release Date: 2008/02/14
+> 18:35
+> 
+
+
+
+---
+[:masashi | ^umezawa]
+From sonoda ＠ laptop-jp.org  Fri Feb 15 15:26:33 2008
+From: sonoda ＠ laptop-jp.org (Y.Sonoda)
+Date: Fri Feb 15 15:26:44 2008
+Subject: [Squeak-ja: 3827] Re: デブサミ後夜祭でSqueak+Gainer見せます(Was: デブサミ後夜祭 Squeaker達の何か with Scala)
+In-Reply-To: <20080214230009.7C90.7126EAF9@yengawa.com>
+References: <JN200801221950254.3861687@mars.dti.ne.jp>
+	<20080214230009.7C90.7126EAF9@yengawa.com>
+Message-ID: <7f3aeb4c0802142226y46cce89rf8a335a3b74dc274@mail.gmail.com>
+
+苑田です。
+
+08/02/14 に Koji Yokokawa<ykoubo2007@yengawa.com> さんは書きました:
+> 告知し忘れていましたが、明日はぼくもSqueak+Gainerをお見せします。
+> (先ほどあわててエントリーを追加しました)
+> http://swikis.ddo.jp/umejava/47
+> SqueakでチョロQをコントロールしてリアルDrive a Carをする予定です。
+
+ご無沙汰をしております。
+
+先ほどホームページの方を拝見しましたが、これは面白いですね！
+参加できないのが残念です。
+
+是非チョロQがスクイークで動いている様子のビデオを
+アップお願いします。m(v_v;m
+From ykoubo2007 ＠ yengawa.com  Fri Feb 15 16:30:41 2008
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Fri Feb 15 16:30:56 2008
+Subject: [Squeak-ja: 3828] Re: デブサミ後夜祭でSqueak+Gainer見せます(Was: デブサミ後夜祭 Squeaker達の何か with Scala)
+In-Reply-To: <7f3aeb4c0802142226y46cce89rf8a335a3b74dc274@mail.gmail.com>
+References: <20080214230009.7C90.7126EAF9@yengawa.com>
+	<7f3aeb4c0802142226y46cce89rf8a335a3b74dc274@mail.gmail.com>
+Message-ID: <20080215160032.0110.7126EAF9@yengawa.com>
+
+横川です。
+興味を持っていただきありがとうございます。
+
+On Fri, 15 Feb 2008 15:26:33 +0900
+Y.Sonoda <sonoda@laptop-jp.org> wrote:
+
+> 苑田です。
+> 
+> 08/02/14 に Koji Yokokawa<ykoubo2007@yengawa.com> さんは書きました:
+> > 告知し忘れていましたが、明日はぼくもSqueak+Gainerをお見せします。
+> > (先ほどあわててエントリーを追加しました)
+> > http://swikis.ddo.jp/umejava/47
+> > SqueakでチョロQをコントロールしてリアルDrive a Carをする予定です。
+> 
+> ご無沙汰をしております。
+> 
+> 先ほどホームページの方を拝見しましたが、これは面白いですね！
+> 参加できないのが残念です。
+> 
+> 是非チョロQがスクイークで動いている様子のビデオを
+> アップお願いします。m(v_v;m
+
+実はYouTubeに少々わかりにくいビデオをあげてあります。
+http://www.youtube.com/watch?v=ttf3e4jBX0E
+リアルジョイスティック→Squeak内のジョイスティック→Gainer→チョロQ
+という構成です。
+
+今日どなたかにビデオを撮ってもらえればうれしいのですが、居ませんかね?
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From abee ＠ squeakland.jp  Fri Feb 15 17:34:34 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Feb 15 17:34:58 2008
+Subject: [Squeak-ja: 3829] Re: デブサミ後夜祭で Squeak+Gainer 見せます (Was: デブサミ後夜祭 Squeaker 達の何か  with Scala)
+In-Reply-To: <20080215160032.0110.7126EAF9@yengawa.com>
+References: <7f3aeb4c0802142226y46cce89rf8a335a3b74dc274@mail.gmail.com>
+	<20080215160032.0110.7126EAF9@yengawa.com>
+Message-ID: <47B54E9A3E1.1DFFABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 15 Feb 2008 16:30:41 +0900
+Koji Yokokawa <ykoubo2007@yengawa.com> wrote:
+>実はYouTubeに少々わかりにくいビデオをあげてあります。
+>http://www.youtube.com/watch?v=ttf3e4jBX0E
+>リアルジョイスティック→Squeak内のジョイスティック→Gainer→チョロQ
+>という構成です。
+
+今回初めてGainerを見たのですが、非常に面白かったです。入力だけでなく、出
+力もあるのが魅力的です。
+ある意味、プリミティブなクリケットですね。クリケットはピコでも高いので、
+うまくパッケージングできれば、ワークショップで使えそうです。
+LOGOのタートルロボットに回帰する動きがある反面、クリケットからScratchのよ
+うにバーチャルに向かうものもあるのが興味深いです。
+
+Squeakからロボットの類をコントロールする試みは他にもいろいろありますので、
+合わせてどうぞ。
+
+[Squeak-ja] チョロモードコントローラ
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2003-July/000432.html
+ピポパ音を使います。チョロQに限定するなら一番簡単で安いかもしれません。
+
+Cロボ
+http://swikis.ddo.jp/WorldStethoscope/30
+USB-シリアル経由です。デフォルトで光センサ入力x1、モーター出力x2です (拡
+張可)。搭載マイコンがプログラマブルなのはGainerと一緒ですが、PSoCではない
+ので自由度ではやや劣ります。組み立ててすぐ動かせるのがメリットかもしれま
+せん。
+　
+Robovie-MS
+http://swikis.ddo.jp/WorldStethoscope/37
+いわゆる二足歩行ロボットです。USB-シリアル経由で接続し、2軸の加速度センサ
+と 17個のサーボモータを持ちます(拡張可)。ファームまではいじれません。
+正確な角度で動かせるところなど、とても面白いのですが、この手のロボットは
+非常に高価なのが残念なところです。
+
+ほかにもマインドストームや自律水中ロボットなど、探すといろいろ見つかりま
+す。センサーだけなら、世界聴診器やScratch Board、Wiiリモコンなどの実装例
+があります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Fri Feb 15 17:49:43 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Feb 15 17:50:11 2008
+Subject: [Squeak-ja: 3830] Re: デブサミ 2008 に出展します。
+In-Reply-To: <2d5d52a80712280429w561557c0v857f123b5ee23ccc@mail.gmail.com>
+References: <2d5d52a80712280429w561557c0v857f123b5ee23ccc@mail.gmail.com>
+Message-ID: <47B55227280.1E00ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+多数のご来場ありがとうございました(差し入れも!)。
+
+今回は初デブサミということで、今までのOSCやKOFとは違った客層の方が多かっ
+たように思います(端的に言うとスーツが多い)。
+Squeakの認知度もあまり高くなかったのですが、しっかり説明すると興味を持っ
+てもらえる方が多数いらっしゃいました。
+Seasideもありますし、これをきっかけに、日本のエンタープライズ市場に参入で
+きると、ご飯が食べられるようになって生活の安定のためにはよいかもしれませ
+ん :-)
+
+次の機会もどうぞよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Fri Feb 15 17:55:26 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Feb 15 17:55:42 2008
+Subject: [Squeak-ja: 3831] Re: Seaside 入門をオープンソースカンファレンス 2008 Tokyo/Spring でやります
+In-Reply-To: <JA200802091836526.28928953@mars.dti.ne.jp>
+References: <JA200802091836526.28928953@mars.dti.ne.jp>
+Message-ID: <47B5537E84.1E01ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+この参加登録が始まってます。OSCのセミナはいつもすぐ満席になりますので、興
+味のある方はお早めに申し込まれると良いと思います。
+
+http://www.ospn.jp/osc2008-spring/modules/eguide/event.php?eid=54
+
+ここにもありますが、今回は「ノートPC持参」が原則になっています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+On Sat, 09 Feb 2008 18:36:52 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>さて、デブサミもまだ終わっていないのですが、東京では2/29-3/1にかけて、
+>オープンソースカンファレンス2008 Tokyo/Springが行われます。
+>http://www.ospn.jp/osc2008-spring/
+>
+>Squeak-jaのブースは出ませんが(いい加減疲れました)、代わりにハンズオンセミナを
+>行います。
+>
+>「異端のWebフレームワークSeaside入門 」です。
+>http://www.ospn.jp/osc2008-spring/modules/eguide/event.php?eid=54
+>
+>内容は過去に「Squeakers' Night in 未来パーティ 2.0」で行ったものと基本的には
+>同じなのですが、多少は新しい話題が入るかもしれません。
+>http://swikis.ddo.jp/umejava/38
+>
+>少なくともSeasideJOnePlusはSqueak 3.9+Seaside 2.8ベースに更新する予定です。
+>http://swikis.ddo.jp/umejava/41
+
+From sonoda ＠ laptop-jp.org  Fri Feb 15 20:02:21 2008
+From: sonoda ＠ laptop-jp.org (Y.Sonoda)
+Date: Fri Feb 15 20:02:29 2008
+Subject: [Squeak-ja: 3832] Re: Seaside 入門をオープンソースカンファレンス 2008 Tokyo/Spring でやります
+In-Reply-To: <47B5537E84.1E01ABEE@smtp.nifty.com>
+References: <JA200802091836526.28928953@mars.dti.ne.jp>
+	<47B5537E84.1E01ABEE@smtp.nifty.com>
+Message-ID: <7f3aeb4c0802150302h4b5e5433gdbb6f8fd1d41763d@mail.gmail.com>
+
+苑田です。
+
+早速申し込みました！
+
+が、はたしてほんとにいけるのか！？
+むむむ
+From umejava ＠ mars.dti.ne.jp  Sat Feb 16 09:32:08 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Feb 16 09:32:18 2008
+Subject: [Squeak-ja: 3833] Re: デブサミ後夜祭 Squeaker達の何か with Scala
+In-Reply-To: <JN200801221950254.3861687@mars.dti.ne.jp>
+References: <JN200801221950254.3861687@mars.dti.ne.jp>
+Message-ID: <JA200802160932084.2521671@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+後夜祭も無事に終了しました。参加者・発表者の皆様、ありがとうございます。
+
+よろしければ感想などをWikiにどうぞ。
+http://swikis.ddo.jp/umejava/47
+
+またこのような機会を設けたいと思います。日本全国どこへでもでかけますし、
+どのようなコミュニティともジョイントしますので(「誰の挑戦も受ける」とも
+いいますか)、皆様よろしくお願いします。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> > 更に、デブサミに併せてオフ会のようなものができると良いなあと思っています。
+> > どなたか会場を提供していただける会社なり、組織なりをご存じないでしょうか。
+> 
+> と言っていたわけですが、会場と日程が決定いたしました。
+> 
+> 「デブサミ後夜祭 Squeaker達の何か with Scala」
+> 2008/2/15(金) 19:00-22:00 株式会社 豆蔵 トレーニングルーム
+> です。
+> 
+> 詳しくは下記をご覧下さい。
+> http://swikis.ddo.jp/umejava/47
+> 
+> 巷で話題のScala言語について、豆蔵の羽生田さんにお話しいただく予定です。
+> つまり、コミュニティをまたがった初のジョイント企画というわけなのです。
+> 
+> SqueakだけでなくScalaに興味のある方もどしどしお越し下さい。
+> 
+> 例によって発表者を募集中です。Wikiに書き込んでください。
+> 
+> また、参加に事前登録などは不要ですが、大体の人数を把握したいので、リプライを
+> いただけるとありがたいです。
+> 
+> では。
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Sat Feb 16 10:03:58 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Feb 16 10:04:05 2008
+Subject: [Squeak-ja: 3834] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+In-Reply-To: <20080213015607.021CC9F884@1server.aquilax.co.jp>
+References: <20080213015607.021CC9F884@1server.aquilax.co.jp>
+Message-ID: <JM200802161003588.4431296@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+普段Macを使っていないのでなんとも言えませんが、
+
+ファイル名の文字化け程度であれば
+LanguageEnvironment defaultFileNameConverterを適切なものにする
+などで対処できるのではないでしょうか。
+あとはFilePathあたりを見てみると良いと思います。
+
+イメージが大きくなる問題ですが、全てのデータをオンメモリにせずに
+使わないものは部分的にDBに格納しておくと良いのではないでしょうか。
+
+仕事でOmniBaseJを使っていますが、アプリの性質により部分的にチューニング
+する必要はあるものの、割と大きなデータに耐えてくれます。
+(スペック的には4Gまでをサポート)
+
+ご参考になれば幸いです。
+
+tako@aquilax.co.jp (Kouji takahashi) wrote:
+> 高橋＠池袋です。
+> 
+> MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+> VMはありますか？
+> 
+> 各種データを読み込んでファイルサイズが 483.6Mになって
+> しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+> 予定です。
+> 
+> --------
+> 　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+> ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+> 変更して使っています。問題は一応解決しているのですが
+> このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+> John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+> 32bitクリーンと記載されています。
+> 
+> 　正常起動しなくなった時の症状は
+> image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+> 10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+> 　SqueakMaxHeapSize 640 * 1024 * 1024
+> 
+> --------
+> 　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+> defaultの状態で正常に動作するようですが、
+> 　1.ファイルパス MacOS→ Unix への変更が必要
+> 　2.ファイル名に日本語が使えない？
+> などの問題があります。
+> 
+> --------
+> ここで質問ですが
+> 
+> 巨大日本語imageを扱うノウハウを教えて下さい。
+> 
+> Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+> 
+> MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+> 　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+> 　必要ならIntelMac、 OSX 10.5への変更も可能です。
+> 
+> Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+> するのは info.plistの細工程度では難しいですか？
+> 　ファイル名の記載。日本語対応
+> 
+> その他アイデア・ヒントがあれば教えて下さい。
+> 
+> よろしくお願いします。
+> 
+> --------
+> 追伸
+> 　デブサミ参加の皆さんお手伝いできなくてすみません。
+> 
+> 　２年に１度の健康保険の改正作業をしています。もちろんSqueakで。
+> 上記 imageには、保険請求可能な全薬剤などの情報が満載されています。
+> 
+---
+[:masashi | ^umezawa]
+From tako ＠ aquilax.co.jp  Sat Feb 16 11:31:05 2008
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Sat Feb 16 11:37:48 2008
+Subject: [Squeak-ja: 3835] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+Message-ID: <20080216023740.80A499A74A@1server.aquilax.co.jp>
+
+梅澤さん　アドバイスありがとうございます。
+
+ 32bitクリーンVMはまだ無いということで、imageサイズの
+縮小を行おうと思います。
+
+　作業内容は 薬剤と処置に２分できるのでimageを単純に２つに
+分けるでけで充分だと思います。
+
+
+> 仕事でOmniBaseJを使っていますが、アプリの性質により部分的にチューニング
+> する必要はあるものの、割と大きなデータに耐えてくれます。
+> (スペック的には4Gまでをサポート)
+
+　今、梅澤さんのサイトで拝見しました。非常に簡便に利用できるよう
+ですね。存在自体は知っていても実際に利用した経験がないと思い浮か
+ばないものですね。大変参考になりました。
+
+　でも今回の作業では変更箇所が多岐に渡りそうなので次回以降の
+検討事項となりそうです。
+
+　あと本家の32bitクリーンVMでのファイル周りも時間があれば
+調査してみます。
+
+　ではでは
+
+
+At 10:03 AM 08.2.16, Masashi Umezawa wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 普段Macを使っていないのでなんとも言えませんが、
+> 
+> ファイル名の文字化け程度であれば
+> LanguageEnvironment defaultFileNameConverterを適切なものにする
+> などで対処できるのではないでしょうか。
+> あとはFilePathあたりを見てみると良いと思います。
+> 
+> イメージが大きくなる問題ですが、全てのデータをオンメモリにせずに
+> 使わないものは部分的にDBに格納しておくと良いのではないでしょうか。
+> 
+> 仕事でOmniBaseJを使っていますが、アプリの性質により部分的にチューニング
+> する必要はあるものの、割と大きなデータに耐えてくれます。
+> (スペック的には4Gまでをサポート)
+> 
+> ご参考になれば幸いです。
+> 
+> tako@aquilax.co.jp (Kouji takahashi) wrote:
+> > 高橋＠池袋です。
+> > 
+> > MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+> > VMはありますか？
+> > 
+> > 各種データを読み込んでファイルサイズが 483.6Mになって
+> > しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+> > 予定です。
+> > 
+> > --------
+> > 　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+> > ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+> > 変更して使っています。問題は一応解決しているのですが
+> > このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+> > John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+> > 32bitクリーンと記載されています。
+> > 
+> > 　正常起動しなくなった時の症状は
+> > image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+> > 10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+> > 　SqueakMaxHeapSize 640 * 1024 * 1024
+> > 
+> > --------
+> > 　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+> > defaultの状態で正常に動作するようですが、
+> > 　1.ファイルパス MacOS→ Unix への変更が必要
+> > 　2.ファイル名に日本語が使えない？
+> > などの問題があります。
+> > 
+> > --------
+> > ここで質問ですが
+> > 
+> > 巨大日本語imageを扱うノウハウを教えて下さい。
+> > 
+> > Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+> > 
+> > MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+> > 　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+> > 　必要ならIntelMac、 OSX 10.5への変更も可能です。
+> > 
+> > Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+> > するのは info.plistの細工程度では難しいですか？
+> > 　ファイル名の記載。日本語対応
+> > 
+> > その他アイデア・ヒントがあれば教えて下さい。
+> > 
+> > よろしくお願いします。
+> > 
+> > --------
+> > 追伸
+> > 　デブサミ参加の皆さんお手伝いできなくてすみません。
+> > 
+> > 　２年に１度の健康保険の改正作業をしています。もちろんSqueakで。
+> > 上記 imageには、保険請求可能な全薬剤などの情報が満載されています。
+> > 
+> ---
+> [:masashi | ^umezawa]
+
+
+From newapplesho ＠ gmail.com  Sat Feb 16 23:51:27 2008
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Sat Feb 16 23:51:38 2008
+Subject: [Squeak-ja: 3836] Re: Monticelloについて
+In-Reply-To: <JM200802112102404.1164531@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+	<C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+	<JZ200710292253518.7755250@mars.dti.ne.jp>
+	<JK2007102923054911.8473421@mars.dti.ne.jp>
+	<0DD6FA36-8304-4CBA-AE70-E9D587C76CAB@gmail.com>
+	<JX200710300835537.2520015@mars.dti.ne.jp>
+	<JM200802112102404.1164531@mars.dti.ne.jp>
+Message-ID: <E7CA1500-4A5B-4BA3-9254-8FC437909B87@gmail.com>
+
+こんばんは．
+吉田です．
+
+梅澤さん，Monticelloの日本語対応パッチありがとうございます．
+卒論のパッケージ化をするために使わせていただきます．
+
+
+
+On 2008/02/11, at 21:02, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> ものすごく古い話題なのですが、Monticelloの日本語対応 
+> パッチを更新しました。
+> 今回から日本語を公開時コメントに含めても、ファイルを壊さず 
+> に使うことが
+> 出来ます。(BOMつきUTF8で書きます)
+>
+> ただし、このパッチが当たっていない外部のシステム 
+> (SqueakSourceなど)を
+> 使う場合、MCZとしてちゃんと認識してくれないという問題 
+> が起こります。
+>
+> 対策としては
+>
+> -別システムにも出来る限りパッチを当てる(無理な場合が 
+> あります)
+> -日本語の公開時コメントは内部でコントロールできるシステムに 
+> のみ利用する
+>
+> といった形になります。日本語の公開コメントを使わない場合、 
+> 互換性は
+> 保たれますので、いずれにせよ入れておいて損はないパッチと言 
+> えます。
+>
+> ではでは。
+>
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>> こんにちは
+>> 梅澤です。
+>>
+>> デバッグログを見るに、
+>> MczInstaller>>extractVersionInfoでこけていますね。
+>>
+>>> なお、Monticelloの公開時コメントやパッケージ名に日 
+>>> 本語を使ったり
+>>> すると、きっと動かないと思います。ソースコード(とク 
+>>> ラスコメント)内に
+>>> 日本語を使うことができるようになったという程度のものです。
+>>
+>> と書きましたが、公開時コメントで日本語を過去に使ったことがあ 
+>> る.mcz
+>> を使われているのだと思います。
+>>
+>> .mczファイルを展開してできるversionというファイルを 
+>> 見ると、日本語
+>> が含まれたりしていませんでしょうか。
+>>
+>> つまりもう少し修正が必要なのですが、範囲が大きくなりそうな 
+>> ので保留中です。
+>>
+>> Sho Yoshida <newapplesho@gmail.com> wrote:
+>>> 吉田です．
+>>>
+>>> 梅澤さん，何度もすみません．
+>>> 違うイメージにMonticello-m17n-patch.7.csをfile  
+>>> inして
+>>> mczファイルを作成し，読み込んだところエラーが起こってしまいま
+>>> した．
+>>> ただ，Monticello-m17n-patch.7.csをfile inした 
+>>> あとに
+>>> Monticello-m17n-patch.4.cをfile inしてmczファイル
+>>> を作成するとうまくいきました．
+>>>
+>>> 僕のSqueakの環境が悪いのでしょうか．
+>>> よろしくお願いいたします．
+> ---
+> [:masashi | ^umezawa]<Monticello-m17n-patch.20.cs>
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From tetha ＠ st.rim.or.jp  Sun Feb 17 00:48:45 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Sun Feb 17 00:49:02 2008
+Subject: [Squeak-ja: 3837] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+In-Reply-To: <20080213015607.021CC9F884@1server.aquilax.co.jp>
+References: <20080213015607.021CC9F884@1server.aquilax.co.jp>
+Message-ID: <A423BE5D-E19A-4308-8809-215B7386F92E@st.rim.or.jp>
+
+高橋さん、こんばんは。
+林です。
+
+メモリの件は分からないのですが、ファイル名については 
+Squeak 3.8.18beta1U.app (というか最新の VM) の Info.plist の 
+SqueakEncodingType を macintosh から UTF-8 に変更すれば、日本語ファイル名
+を扱えるはずです。
+パス名が Unix 風なのは仕様ですね。
+
+ご質問と外してたらすみません。
+
+取り急ぎ。
+--
+
+On 2008/02/13, at 10:49, Kouji takahashi wrote:
+
+> 高橋＠池袋です。
+>
+> MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+> VMはありますか？
+>
+> 各種データを読み込んでファイルサイズが 483.6Mになって
+> しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+> 予定です。
+>
+> --------
+> 　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+> ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+> 変更して使っています。問題は一応解決しているのですが
+> このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+> John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+> 32bitクリーンと記載されています。
+>
+> 　正常起動しなくなった時の症状は
+> image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+> 10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+> 　SqueakMaxHeapSize 640 * 1024 * 1024
+>
+> --------
+> 　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+> defaultの状態で正常に動作するようですが、
+> 　1.ファイルパス MacOS→ Unix への変更が必要
+> 　2.ファイル名に日本語が使えない？
+> などの問題があります。
+>
+> --------
+> ここで質問ですが
+>
+> 巨大日本語imageを扱うノウハウを教えて下さい。
+>
+> Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+>
+> MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+> 　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+> 　必要ならIntelMac、 OSX 10.5への変更も可能です。
+>
+> Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+> するのは info.plistの細工程度では難しいですか？
+> 　ファイル名の記載。日本語対応
+>
+> その他アイデア・ヒントがあれば教えて下さい。
+>
+> よろしくお願いします。
+>
+> --------
+> 追伸
+> 　デブサミ参加の皆さんお手伝いできなくてすみません。
+>
+> 　２年に１度の健康保険の改正作業をしています。もちろんSqueakで。
+> 上記 imageには、保険請求可能な全薬剤などの情報が満載されています。
+>
+>
+>
+>
+>
+
+From tako ＠ aquilax.co.jp  Sun Feb 17 21:32:32 2008
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Sun Feb 17 21:39:14 2008
+Subject: [Squeak-ja: 3838] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+Message-ID: <20080217123906.2085C9A74A@1server.aquilax.co.jp>
+
+林さん　ご無沙汰しています。
+
+うまくいったようです。ありがとうございました。
+
+昼間　出かけていたので遅くなりました。
+
+
+●最新VM Squeak-3.9-8.app(3.9a-7024 の info.plist は
+　大幅に変更されてました。
+　SqueakEncodingType も　SqueakMaxHeapSize も無し。
+　適当なところにSqueakEncodingType を追加しても変化なし。
+
+●squeak.orgの archiveには 3.8系VMがありませんでした。
+　3.8系は何らかの理由で削除されたのでしょうかね。
+
+●Googleで 3.8 VMを検索。
+　岐阜工業高等専門学校のサイトから 3.8.15b1 を発見。
+　SqueakEncodingType macintosh → UTF-8
+　SqueakMaxHeapSize 512*1024*1024 →800*1024*1024
+　で問題のimageが開くことを確認。
+　日本語ファイル名、日本語キーボード入力もＯＫ。
+
+　これが32bitクリーンかどうかは明日以降　超巨大imageを作って
+検証するつもりです。
+
+　4Gの半分の2G のメモリが扱えるだけで何年も持つはず。
+その間に64bit VMが安定してくれればしめしめです。
+
+　imageと changesの２ファイルで作業の進行記録とする私の
+怠かわな習慣を続けられそうです。
+
+　ではでは
+
+
+At 0:48 AM 08.2.17, Tetsuya HAYASHI wrote:
+> 高橋さん、こんばんは。
+> 林です。
+> 
+> メモリの件は分からないのですが、ファイル名については 
+> Squeak 3.8.18beta1U.app (というか最新の VM) の Info.plist の 
+> SqueakEncodingType を macintosh から UTF-8 に変更すれば、日本語ファイル名
+> を扱えるはずです。
+> パス名が Unix 風なのは仕様ですね。
+> 
+> ご質問と外してたらすみません。
+> 
+> 取り急ぎ。
+> --
+> 
+> On 2008/02/13, at 10:49, Kouji takahashi wrote:
+> 
+> > 高橋＠池袋です。
+> >
+> > MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+> > VMはありますか？
+> >
+> > 各種データを読み込んでファイルサイズが 483.6Mになって
+> > しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+> > 予定です。
+> >
+> > --------
+> > 　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+> > ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+> > 変更して使っています。問題は一応解決しているのですが
+> > このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+> > John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+> > 32bitクリーンと記載されています。
+> >
+> > 　正常起動しなくなった時の症状は
+> > image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+> > 10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+> > 　SqueakMaxHeapSize 640 * 1024 * 1024
+> >
+> > --------
+> > 　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+> > defaultの状態で正常に動作するようですが、
+> > 　1.ファイルパス MacOS→ Unix への変更が必要
+> > 　2.ファイル名に日本語が使えない？
+> > などの問題があります。
+> >
+> > --------
+> > ここで質問ですが
+> >
+> > 巨大日本語imageを扱うノウハウを教えて下さい。
+> >
+> > Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+> >
+> > MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+> > 　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+> > 　必要ならIntelMac、 OSX 10.5への変更も可能です。
+> >
+> > Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+> > するのは info.plistの細工程度では難しいですか？
+> > 　ファイル名の記載。日本語対応
+> >
+> > その他アイデア・ヒントがあれば教えて下さい。
+> >
+> > よろしくお願いします。
+> >
+
+
+From nishis ＠ zephyr.dti.ne.jp  Sun Feb 17 22:09:33 2008
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Sun Feb 17 22:09:44 2008
+Subject: [Squeak-ja: 3839] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+In-Reply-To: <20080217123906.2085C9A74A@1server.aquilax.co.jp>
+References: <20080217123906.2085C9A74A@1server.aquilax.co.jp>
+Message-ID: <47B8320D.4070602@zephyr.dti.ne.jp>
+
+on 08.2.17 9:32 PM, Kouji takahashi wrote:
+> ●squeak.orgの archiveには 3.8系VMがありませんでした。
+> 　3.8系は何らかの理由で削除されたのでしょうかね。
+> At 0:48 AM 08.2.17, Tetsuya HAYASHI wrote:
+>> メモリの件は分からないのですが、ファイル名については 
+>> Squeak 3.8.18beta1U.app (というか最新の VM) の Info.plist の 
+>> SqueakEncodingType を macintosh から UTF-8 に変更すれば、日本語ファイル名
+>> を扱えるはずです。
+>> パス名が Unix 風なのは仕様ですね。
+
+JMM 氏の
+http://www.smalltalkconsulting.com/squeak.html
+上から二つめのリンク先にあります．
+
+ftp://ftp.squeak.org/current_stable/mac/
+にも置いてあります．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+From tetha ＠ st.rim.or.jp  Sun Feb 17 22:41:23 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Sun Feb 17 22:41:34 2008
+Subject: [Squeak-ja: 3840] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+In-Reply-To: <20080217123906.2085C9A74A@1server.aquilax.co.jp>
+References: <20080217123906.2085C9A74A@1server.aquilax.co.jp>
+Message-ID: <39A9BB58-E85C-4D61-AFE3-06699D2D5E76@st.rim.or.jp>
+
+こんばんは。
+林です。
+
+On 2008/02/17, at 21:32, Kouji takahashi wrote:
+
+> ●最新VM Squeak-3.9-8.app(3.9a-7024 の info.plist は
+> 　大幅に変更されてました。
+> 　SqueakEncodingType も　SqueakMaxHeapSize も無し。
+> 　適当なところにSqueakEncodingType を追加しても変化なし。
+>
+> ●squeak.orgの archiveには 3.8系VMがありませんでした。
+> 　3.8系は何らかの理由で削除されたのでしょうかね。
+
+http://www.squeak.org/Download/
+このページの
+	MacOSX(Universal)
+をお使いください。
+
+	MacOSX PPC (Built from Unix source tree)
+こちらの 3-9-8 はバージョンは上記のものよりも新しいですが、Unix版のソース
+から作られたまったく別なものなので、国際化対応が不十分かと思われます（こ
+っちは Cocoa で上記のは Carbon という違いがあります）。
+
+取り急ぎ。
+では。
+--
+
+> ●Googleで 3.8 VMを検索。
+> 　岐阜工業高等専門学校のサイトから 3.8.15b1 を発見。
+> 　SqueakEncodingType macintosh → UTF-8
+> 　SqueakMaxHeapSize 512*1024*1024 →800*1024*1024
+> 　で問題のimageが開くことを確認。
+> 　日本語ファイル名、日本語キーボード入力もＯＫ。
+>
+> 　これが32bitクリーンかどうかは明日以降　超巨大imageを作って
+> 検証するつもりです。
+>
+> 　4Gの半分の2G のメモリが扱えるだけで何年も持つはず。
+> その間に64bit VMが安定してくれればしめしめです。
+>
+> 　imageと changesの２ファイルで作業の進行記録とする私の
+> 怠かわな習慣を続けられそうです。
+>
+> 　ではでは
+>
+>
+> At 0:48 AM 08.2.17, Tetsuya HAYASHI wrote:
+>> 高橋さん、こんばんは。
+>> 林です。
+>>
+>> メモリの件は分からないのですが、ファイル名については 
+>> Squeak 3.8.18beta1U.app (というか最新の VM) の Info.plist の 
+>> SqueakEncodingType を macintosh から UTF-8 に変更すれば、日本語ファイル名
+>> を扱えるはずです。
+>> パス名が Unix 風なのは仕様ですね。
+>>
+>> ご質問と外してたらすみません。
+>>
+>> 取り急ぎ。
+>> --
+>>
+>> On 2008/02/13, at 10:49, Kouji takahashi wrote:
+>>
+>>> 高橋＠池袋です。
+>>>
+>>> MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+>>> VMはありますか？
+>>>
+>>> 各種データを読み込んでファイルサイズが 483.6Mになって
+>>> しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+>>> 予定です。
+>>>
+>>> --------
+>>> 　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+>>> ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+>>> 変更して使っています。問題は一応解決しているのですが
+>>> このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+>>> John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+>>> 32bitクリーンと記載されています。
+>>>
+>>> 　正常起動しなくなった時の症状は
+>>> image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+>>> 10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+>>> 　SqueakMaxHeapSize 640 * 1024 * 1024
+>>>
+>>> --------
+>>> 　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+>>> defaultの状態で正常に動作するようですが、
+>>> 　1.ファイルパス MacOS→ Unix への変更が必要
+>>> 　2.ファイル名に日本語が使えない？
+>>> などの問題があります。
+>>>
+>>> --------
+>>> ここで質問ですが
+>>>
+>>> 巨大日本語imageを扱うノウハウを教えて下さい。
+>>>
+>>> Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+>>>
+>>> MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+>>> 　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+>>> 　必要ならIntelMac、 OSX 10.5への変更も可能です。
+>>>
+>>> Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+>>> するのは info.plistの細工程度では難しいですか？
+>>> 　ファイル名の記載。日本語対応
+>>>
+>>> その他アイデア・ヒントがあれば教えて下さい。
+>>>
+>>> よろしくお願いします。
+>>>
+>
+>
+>
+>
+
+From mha03030 ＠ nifty.com  Sun Feb 17 23:21:39 2008
+From: mha03030 ＠ nifty.com (koike)
+Date: Sun Feb 17 23:21:56 2008
+Subject: [Squeak-ja: 3841] 「武蔵工業大学環境情報学部　小池情報デザイン研究室 平成19年度卒業研究展」のお知らせ
+In-Reply-To: <39A9BB58-E85C-4D61-AFE3-06699D2D5E76@st.rim.or.jp>
+References: <20080217123906.2085C9A74A@1server.aquilax.co.jp>
+	<39A9BB58-E85C-4D61-AFE3-06699D2D5E76@st.rim.or.jp>
+Message-ID: <115F2072-9BA0-490A-B226-09045B54C794@nifty.com>
+
+（このメールは転載自由です。大学、企業などのMLに流していた 
+だいてかまいません。）
+
+武蔵工業大学の小池です。
+武蔵工業大学環境情報学部　小池情報デザイン研究室では、ユーザーの 
+活動からデザインを行っています。以下の日程で平成19年度卒業 
+研究展および三年生の併設展を開催します。この展覧会は小池研究室単 
+独で行い、研究室の学生たちが展覧会の企画、運営を行っています。是 
+非おこしください。
+
+Squeak 関連では、先日お伝えした
+「Squeakで学ぼう」のサイト、動画の制作プロセスの展示や、 
+100ドルPCの実物展示も行います。
+
+
+ＬＯＱＵＡＣＩＳ（ロクアキス）〜活動からのデザイン〜
+開催期間
+2008年2月22日(金)〜2月24日 
+(日)
+
+開催時間
+22(金) 12:00 ー 17:00
+23(土) 11:00 ー 18:30
+24(日) 11:00 ー 18:00
+
+会場
+IID世田谷ものづくり学校 内「IIDギャラリー」
+〒154-0001　東京都世田谷区池尻2-4-5
+http://www.r-school.net/
+
+入場料　　無料
+
+特別講演
+株式会社デジタルステージ代表取締役　平野友康 氏　
+演題　『「旅する会社」が創り出すデザインのカタチ』
+会場　ものづくり学校 内プレゼンルーム
+時間　24日（日）午後１時-2時　
+24日午前11時に会場前で整理券配布開始
+
+展覧会Web
+http://www.yc.musashi-tech.ac.jp/~sotsuten/loquacis/
+
+併設展Web
+http://www.yc.musashi-tech.ac.jp/~design/kouki/2007//
+
+小池研究室ブログ
+http://www.yc.musashi-tech.ac.jp/~koike/
+
+展覧会のお問い合わせは小池(mha03030@nifty.com)まで御願いし 
+ます。
+
+
+■内容
+小池研究室が行っている６つの研究室プロジェクトや研究を展示します。
+
+●ネットワークとしてのロボットデザイン
+　幼稚園をフィールドにNECのパーソナルロボットPaPeRo 
+を幼稚園に持ち込み、幼稚園コミュニティの活動中で、ロボットのデザ 
+インを考えます。
+
+●学習環境のデザイン
+　高校の情報教育をフィールドに、アラン・ケイが開発した 
+Squeak を使用した教材のWeb、YouTubeにアップした動画 
+チュートリアル、物理教材などを実際に制作しながら、教育環境のデザ 
+インについて考えます。会場では、Squeakを使用した教材や、 
+Squeakの動く100ドルPCの実物を展示します。
+
+Squeakで学ぼう
+http://www.yc.musashi-tech.ac.jp/~design/squeak/index.html
+（プロジェクトで制作したSqueakチュートリアルサイト）
+
+●子育て支援のデザイン
+　大学のある横浜市都筑区をフィールドに、行政、住民団体などによる 
+子育て支援の状態を調査しながら、行政と住民のコラボレーションによ 
+る子育て支援のデザインについて考えます。会場ではNPO団体と 
+制作中の都筑区の子育てマップを展示します。
+
+●コミュニティバスのデザイン
+　多摩ニュータウンをフィールドにコミュニティバスを巡る行政、住民 
+などのネットワークを調査し、ユーザーのためのコミュニティバスのデ 
+ザインについて考えます。会場には、多摩ニュータウンの老人会におい 
+てコミュニティバスのヒアリングをするときに使用したコミュニティバ 
+スの1/10のモデルを展示します。
+
+●さがすためのデザイン
+　自分に合う音楽を探すことができる音楽SNSのインタフェース 
+をデザインします。
+会場では、提案する音楽SNSのインタフェースのモデルを展示し 
+ます。
+
+●ブランドのデザイン
+　サーフショップやスケートボードショップをフィールドにショップの 
+ブランドが、ショップを巡るコミュニティの中でどのように作られるの 
+かを明らかにします。
+
+
+■３年併設展
+　自分の活動から情報機器などのインタフェースをデザインする課題を 
+展示します。
+内容は「うつすためのデザイン（デジタルカメラのインタフェースデザ 
+イン）」、「かうためのデザイン（ネットショップのインタフェースデ 
+ザイン）」、「うつすためのデザイン（携帯音楽プレーヤーのインタ 
+フェースデザイン）」です。
+
+
+■特別講演会
+　デジタルステージの平野さんに講演をしていただきます。ユーザー中 
+心のソフトウエァのインタフェースデザインを「旅」「合宿」のブレイ 
+ンストーミングの中で次々と生み出していきます。そのプロセスをお話 
+していただきます。会場は定員40名ですが、展覧会場に講演の様 
+子を動画転送しますので、定員を超えても講演は聴くことができます。
+
+
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）
+   武蔵工業大学　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-0015　神奈川県横浜市都筑区牛久保西3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.musashi-tech.ac.jp/~koike/
+（研究室ブログ発信中！）
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+
+From tako ＠ aquilax.co.jp  Mon Feb 18 13:03:36 2008
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Mon Feb 18 13:10:25 2008
+Subject: [Squeak-ja: 3842] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+Message-ID: <20080218041008.DE0099A74A@1server.aquilax.co.jp>
+
+高橋＠アキラックスです。
+
+西原さん、林さん、情報ありがとうございます。
+
+うまくいきました。
+
+> http://www.squeak.org/Download/
+> このページの
+>         MacOSX(Universal)
+> をお使いください。
+
+↑が 3.8.18beta1U とは全く気付きませんでした。
+一応メジャーということでこれを使って以下のテスト。
+
+SqueakEncodingType macintosh → UTF-8
+SqueakMaxHeapSize 約600 M → 1500 M (1024 * 1024)
+
+上記の変更後に 100MByteぐらいのInstanceをくり返しdeepcopy inspect。
+VM Statistics の memoryが 1.2G超まで正常に動作するのを
+確認しました。
+
+　物理メモリ 1.5Gでは スワップが顕著になったので
+ここでテスト中止。新しい版として保存。
+　ここでも激しくswap。少し小さくしておかなかったのを後悔。
+
+保存 約30分で終了。image size 1.27GB
+
+imageの起動
+　→×　15分程度頑張った後、VM自発的に終了
+
+SqueakMaxHeapSize 1500 M　→　1800 M
+　→×　10分ぐらいでVM自発的に終了
+
+SqueakMaxHeapSize 1800 M　→　1900 M
+　→○ 5分程度で起動。
+　image巨大化の為に作った100M／個の inspecterを２個close。
+   VM statistics 
+　　memory -733,909,328 bytaes
+　　　old -777,997,016
+　　　young 255,016
+　　　free 3,832,672 bytes
+　　GC Full 1 totaling　171,515ms(44.0% uptime). avg 171515.0ms
+　　　 incr 528 totaling 701ms(0.0% uptime) avg 1.0ms
+　　　 tenures 1 (avg 528 GCs/tenure)
+　　念のため 日本語入力、ＯＫ。
+
+　Virtual Machineではなく Vertial Memoryのテストのようになって
+しまいましたが　「一件落着」。
+
+　皆さんありがとうございました。
+
+上記テスト中に vmParameterAt: の記述に矛盾発見。
+SmalltalkImage > vm parameters > vmParameterAt: のcommentと
+http://wiki.squeak.org/squeak/3710 (Garbage Collector Parameters)が
+入れ代わって記述されています。
+
+parameterIndex  comment         wiki
+      24        growing         shirink
+      25        shrink          growing
+
+wikiのネタ元は JMM氏なのでどっちも真実っぽい。
+
+暇になったら調べてみます。
+
+　ではでは
+
+
+At 10:41 PM 08.2.17, Tetsuya HAYASHI wrote:
+> こんばんは。
+> 林です。
+> 
+> On 2008/02/17, at 21:32, Kouji takahashi wrote:
+> 
+> > ●最新VM Squeak-3.9-8.app(3.9a-7024 の info.plist は
+> > 　大幅に変更されてました。
+> > 　SqueakEncodingType も　SqueakMaxHeapSize も無し。
+> > 　適当なところにSqueakEncodingType を追加しても変化なし。
+> >
+> > ●squeak.orgの archiveには 3.8系VMがありませんでした。
+> > 　3.8系は何らかの理由で削除されたのでしょうかね。
+> 
+> http://www.squeak.org/Download/
+> このページの
+>         MacOSX(Universal)
+> をお使いください。
+> 
+>         MacOSX PPC (Built from Unix source tree)
+> こちらの 3-9-8 はバージョンは上記のものよりも新しいですが、Unix版のソース
+> から作られたまったく別なものなので、国際化対応が不十分かと思われます（こ
+> っちは Cocoa で上記のは Carbon という違いがあります）。
+> 
+> 取り急ぎ。
+> では。
+> --
+> 
+> > ●Googleで 3.8 VMを検索。
+> > 　岐阜工業高等専門学校のサイトから 3.8.15b1 を発見。
+> > 　SqueakEncodingType macintosh → UTF-8
+> > 　SqueakMaxHeapSize 512*1024*1024 →800*1024*1024
+> > 　で問題のimageが開くことを確認。
+> > 　日本語ファイル名、日本語キーボード入力もＯＫ。
+> >
+> > 　これが32bitクリーンかどうかは明日以降　超巨大imageを作って
+> > 検証するつもりです。
+> >
+> > 　4Gの半分の2G のメモリが扱えるだけで何年も持つはず。
+> > その間に64bit VMが安定してくれればしめしめです。
+> >
+> > 　imageと changesの２ファイルで作業の進行記録とする私の
+> > 怠かわな習慣を続けられそうです。
+> >
+> > 　ではでは
+> >
+> >
+> > At 0:48 AM 08.2.17, Tetsuya HAYASHI wrote:
+> >> 高橋さん、こんばんは。
+> >> 林です。
+> >>
+> >> メモリの件は分からないのですが、ファイル名については 
+> >> Squeak 3.8.18beta1U.app (というか最新の VM) の Info.plist の 
+> >> SqueakEncodingType を macintosh から UTF-8 に変更すれば、日本語ファイル名
+> >> を扱えるはずです。
+> >> パス名が Unix 風なのは仕様ですね。
+> >>
+> >> ご質問と外してたらすみません。
+> >>
+> >> 取り急ぎ。
+> >> --
+> >>
+> >> On 2008/02/13, at 10:49, Kouji takahashi wrote:
+> >>
+> >>> 高橋＠池袋です。
+> >>>
+> >>> MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+> >>> VMはありますか？
+> >>>
+> >>> 各種データを読み込んでファイルサイズが 483.6Mになって
+> >>> しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+> >>> 予定です。
+> >>>
+> >>> --------
+> >>> 　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+> >>> ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+> >>> 変更して使っています。問題は一応解決しているのですが
+> >>> このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+> >>> John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+> >>> 32bitクリーンと記載されています。
+> >>>
+> >>> 　正常起動しなくなった時の症状は
+> >>> image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+> >>> 10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+> >>> 　SqueakMaxHeapSize 640 * 1024 * 1024
+> >>>
+> >>> --------
+> >>> 　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+> >>> defaultの状態で正常に動作するようですが、
+> >>> 　1.ファイルパス MacOS→ Unix への変更が必要
+> >>> 　2.ファイル名に日本語が使えない？
+> >>> などの問題があります。
+> >>>
+> >>> --------
+> >>> ここで質問ですが
+> >>>
+> >>> 巨大日本語imageを扱うノウハウを教えて下さい。
+> >>>
+> >>> Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+> >>>
+> >>> MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+> >>> 　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+> >>> 　必要ならIntelMac、 OSX 10.5への変更も可能です。
+> >>>
+> >>> Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+> >>> するのは info.plistの細工程度では難しいですか？
+> >>> 　ファイル名の記載。日本語対応
+> >>>
+> >>> その他アイデア・ヒントがあれば教えて下さい。
+> >>>
+> >>> よろしくお願いします。
+> >>>
+> >
+> >
+> >
+> >
+
+
+From nishis ＠ zephyr.dti.ne.jp  Mon Feb 18 19:54:47 2008
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Mon Feb 18 19:54:57 2008
+Subject: [Squeak-ja: 3843] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+In-Reply-To: <20080218041008.DE0099A74A@1server.aquilax.co.jp>
+References: <20080218041008.DE0099A74A@1server.aquilax.co.jp>
+Message-ID: <47B963F7.60506@zephyr.dti.ne.jp>
+
+うちのイメージ・サイズはせいぜいが 100MB なのでまだまだなんですが，今後
++300MB あるいは +900MB ぐらいは増えるかも知れんということで，どないす
+べ〜と考えていました．この先， MPEG1 も入れるとなると……．
+
+というわけで，参考にさせていただきます．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+From abee ＠ squeakland.jp  Wed Feb 20 02:31:18 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Feb 20 02:31:37 2008
+Subject: [Squeak-ja: 3844] Ian Piumarta さんの来日と講演について
+Message-ID: <47BB1266FE.280EABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Alan Kayさんが主宰するNPOであるViewpoints Resarch InstituteのIan
+Piumartaさんが来日し、現在開発中の新しい言語について何件かの講演を行いま
+す。
+この言語は、しばしば「Ianのやつ」として言及されているもので、Coke&Pepsi
+やGolden Boxなどと呼ばれることもあります。
+今回の講演は未来のSqueakというかDynabookが進む方向を占う上で、重要なもの
+になると思われます。
+
+第10回プログラミングおよびプログラミング言語ワークショップ
+PPL2008
+http://www.nue.riec.tohoku.ac.jp/ppl2008/
+主催: 日本ソフトウェア科学会 プログラミング論研究会  
+日程: 2008年3月5日(水)〜3月7日(金)  
+会場: 仙台市 秋保温泉 緑水亭  
+
+招待講演 Ian Piumarta 氏 (Viewpoints Research Institute) 
+タイトル Steps Toward the Reinvention of Programming 
+要旨 Fundamental research can be practical, concrete and create
+immediately useful artefacts. Powerful examples of fundamental research
+that were practical and had immediate benefits were the inventions of
+the networked personal computer, dynamic object-oriented programming,
+the graphical user interface, and the Internet. An excruciating example
+of an area that still needs much more than incremental improvement is
+programming, both in the large and in the small. Code is too: large,
+complex, costly, buggy, insecure, segregated, and inexpressive. We have
+plans to attempt a qualitative reinvention of programming and to start
+one of the subprojects this year: to make a practical working
+mathematical model of a complete personal computer system. 
+In his talk Dr. Piumarta will give an overview of this five-year
+research project at Viewpoints Research Institute, funded by the U.S.
+National Science Foundation. He will discuss the background and
+philosophy of the approach, and will demonstrate parts of the underlying
+architecture created so far. 
+
+学術情報メディアセンターセミナー「Steps Toward the Reinvention of
+Programming」
+http://www.media.kyoto-u.ac.jp/activity/info/event/2008/02/steps_toward_the_reinvention_o.php
+【臨時開催】
+　京都大学学術情報メディアセンターでは、このたび、非営利団体Viewpoints
+Research Institute のIan Piumarta氏をお招きし、米国NSFの委託で行われてい
+るプログラミングのプロジェクトに関連して「Steps Toward the Reinvention
+of Programming」をテーマにセミナーを開催することとなりました。
+　皆様の積極的な参加をお待ちしております。
+
+開催要項 日時 2008年3月10日（月曜日） 13時00分〜14時30分 
+場所 京都大学 学術情報メディアセンター北館3階講習室（エレベーターをご利用いただけます。）
+
+プログラム 講演：Steps Toward the Reinvention of Programming
+Ian Piumarta 博士(Viewpoints Research Institute)
+要旨：同上
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From hamada ＠ holst.sm.fukuoka-u.ac.jp  Fri Feb 22 18:33:23 2008
+From: hamada ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi Hamada)
+Date: Fri Feb 22 18:33:40 2008
+Subject: [Squeak-ja: 3845] 数学ソフトウェアとフリードキュメントVI
+Message-ID: <20080222.093323.74736572.hamada@holst.sm.fukuoka-u.ac.jp>
+
+福岡大学の濱田です。
+
+3月22日に近畿大学でワークショップ
+「数学ソフトウェアとフリードキュメントVI」を開催します。
+皆様のお越しをお待ちしております。
+
+なお、ワークショップ当日、ひきつづき行われる日本数学会年会にて、
+SqueakVM3.7-7-JPatched.tgz, SqueakPlugin2005J2.zip
+を収録した KNOPPIX/Math/2008 の展示配布も行う予定です。
+# 残念ながら Dr.GeoII の収録は間に合いませんでした。
+
+福岡大学 濱田龍義
+
+* 2008年3月22日（土） 13:00 -- 18:00
+* 近畿大学38号館2階多目的利用室 （アクセス）
+* 〒577-8502 東大阪市小若江3-4-1
+      o 近鉄大阪線・長瀬駅下車、徒歩約10分
+* 入場無料、事前申込不要
+* 照会先：野呂正行（神戸大学理学部）noro at math.kobe-u.ac.jp
+          濱田龍義（福岡大学理学部）hamada at holst.sm.fukuoka-u.ac.jp
+* 後援：日本数学会情報システム運用委員会
+
+プログラム
+13:00-13:30	金光安芸子（日本電子計算株式会社）
+		Mathematica6の新機能とMathematicaPlayerファミリのご紹介
+13:40-14:30	大塚厚二（広島国際学院大）
+		偏微分方程式境界値問題解析ツール FreeFem++
+14:40-15:10	出口博章（神戸大学）
+		直感的数式エディタMathBlackBoardの紹介
+15:20-16:10	大島利雄（東京大学）
+		dviout の開発と内部構造
+16:20-16:50	桐生裕介（スタジオフォンズ）
+		数学ソフトウェア、フロントエンド、芸術の現状
+17:00-17:50	落合豊行、加古富志雄（奈良女子大学）
+		SnapPea, K2K, and btd の Java による統合化ソフトウェア SKB
+
+なお、詳しい情報については、
+http://geom.math.metro-u.ac.jp/wiki/
+を参照ください。
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sat Feb 23 21:29:17 2008
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Sat Feb 23 21:29:05 2008
+Subject: [Squeak-ja: 3846] Re: ループしているプロセスの停止について
+In-Reply-To: <JT200802151353268.6813125@mars.dti.ne.jp>
+Message-ID: <200802231228.m1NCSuka021829@proxy1.aams.jp>
+
+梅澤さん、ありがとうございました。
+ご教示いただいたようにして、
+すっかりきれいに消えました。
+戯れに？processをさわって、
+お手数をかけました。
+おかげさまで、またSqueakの
+奥深さを垣間見た気がして、
+うれしいです。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Masashi Umezawa
+Sent: Friday, February 15, 2008 1:53 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3826] Re: ループしているプロセスの停止について
+
+こんにちは
+梅澤です。
+
+すでにループしてしまっているイメージをなんとか救いたいということでしたら、
+私であればまず、LineMorphのopenInWorldを一時的にoverrideします。
+
+LineMorph>>openInWorld
+    ^self
+
+その後で、ProcessBrowserを使ってプロセスを殺します。
+Worldメニューのデバッグ->open process browserです。
+
+優先度40のプロセスがおそらく2つ上がっていると思います。the UI processの
+ほうはMorphicのおおもとのループですから止めてはいけません。
+
+Delayでwaitしながら進んでいるプロセスを選択してterminateさせます。
+
+プロセスを殺した後で、LineMorphのopenInWorldを消しておけばよいでしょう。
+
+ProcessBrowserについて詳しくは「自由自在」の12章です。
+
+久保　道 <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 阿部さん、さっそく教えていただいて、
+> ありがとうございました。
+> ただ、前回書きましたように私の場合は、
+> ご指示くださったように
+> 「まずは変数に入れたほうが良い」という点が
+> できていなかったので、困っています。
+> 最終的には必要なcodeだけ取り出して
+> 別につくりなおすことにします。
+> お返事遅れて失礼いたしました。
+> 久保　道
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]
+> On Behalf Of Kazuhiro ABE
+> Sent: Thursday, February 07, 2008 4:14 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 3816] Re: ループしているプロセスの停止について
+>
+> 阿部@新百合です。
+>
+> いきなりforkを送ると、あとでそのプロセスを捕まえにくくなるので、まずは変
+> 数に入れたほうが良いと思います。
+>
+> arm := LineMorph from: 290@300 to: 710@300  color: Color black width: 5.
+> process := [[ arm openInWorld.
+>    ( Delay forSeconds: 1) wait] repeat] newProcess.
+> process resume
+>
+> これを終了するときは以下のようにします。
+>
+> process terminate
+>
+> 他どのようなメソッドがあるかはProcessクラスのインスタンスメソッドを見てく
+> ださい。
+> forkは単なる予約語ではなく、メッセージですから、ブロックにforkを送ったと
+> きになにが起こっているかを考える必要があります。
+> ワークスペースなどでforkを選択し、Alt+bを押すとその定義を調べることができ
+> ます。
+> せっかく中身を参照できるわけですから、今回の問題に限らず、分からないこと
+> があったら、中を調べてみるのは良い習慣だと思います。
+>
+> また、自由自在では一章を費やして並行処理について解説しています(第12章)。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> No virus found in this incoming message.
+> Checked by AVG.
+> Version: 7.5.516 / Virus Database: 269.19.21/1267 - Release Date:
+2008/02/08
+> 20:12
+>
+>
+> No virus found in this outgoing message.
+> Checked by AVG.
+> Version: 7.5.516 / Virus Database: 269.20.5/1279 - Release Date:
+2008/02/14
+> 18:35
+>
+
+
+
+---
+[:masashi | ^umezawa]
+
+No virus found in this incoming message.
+Checked by AVG.
+Version: 7.5.516 / Virus Database: 269.20.9/1292 - Release Date: 2008/02/21
+16:09
+
+
+No virus found in this outgoing message.
+Checked by AVG.
+Version: 7.5.516 / Virus Database: 269.20.9/1294 - Release Date: 2008/02/22
+18:39
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Feb 24 21:02:50 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Feb 24 21:03:00 2008
+Subject: [Squeak-ja: 3847] OSC2008 Seaside入門用SeasideJOnePlus作りました　was:  Seaside入門をオープンソースカンファレンス2008 Tokyo/Springでやります
+In-Reply-To: <JA200802091836526.28928953@mars.dti.ne.jp>
+References: <JA200802091836526.28928953@mars.dti.ne.jp>
+Message-ID: <JR200802242102503.517984@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、OSC2008 Tokyo/SpringでのSeaside入門ですが、
+http://www.ospn.jp/osc2008-spring/modules/eguide/event.php?eid=54
+
+上記のハンズオンで使うためのSeasideJOne(Plus)を作成しました。
+http://swikis.ddo.jp/umejava/41
+
+まだ、セミナ案内ページからはリンクしていません。一通り試したつもりですが、
+皆さんも展開して起動できるかなど確認していただけると助かります。
+(特にMacではPPCでしか試していません)
+
+また、当日は「Smalltalkわからんよ」という人も結構いらっしゃるようですので、
+混乱が予想されます。お手伝いにはせ参じてくださる方を募集中です。
+
+#あ、もちろん通常の参加者の方も募集中ですよー。
+
+それでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> さて、デブサミもまだ終わっていないのですが、東京では2/29-3/1にかけて、
+> オープンソースカンファレンス2008 Tokyo/Springが行われます。
+> http://www.ospn.jp/osc2008-spring/
+> 
+> Squeak-jaのブースは出ませんが(いい加減疲れました)、代わりにハンズオンセミナを
+> 行います。
+> 
+> 「異端のWebフレームワークSeaside入門 」です。
+> http://www.ospn.jp/osc2008-spring/modules/eguide/event.php?eid=54
+> 
+> 内容は過去に「Squeakers' Night in 未来パーティ 2.0」で行ったものと基本的には
+> 同じなのですが、多少は新しい話題が入るかもしれません。
+> http://swikis.ddo.jp/umejava/38
+> 
+> 少なくともSeasideJOnePlusはSqueak 3.9+Seaside 2.8ベースに更新する予定です。
+> http://swikis.ddo.jp/umejava/41
+> 
+> よろしければお越し下さい。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From newapplesho ＠ gmail.com  Wed Feb 27 19:07:36 2008
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Wed Feb 27 19:07:56 2008
+Subject: [Squeak-ja: 3848] Re: OSC2008 Seaside入門用SeasideJOnePlus作りました　was:  Seaside入門をオープンソースカンファレンス2008 Tokyo/Springでやります
+In-Reply-To: <JR200802242102503.517984@mars.dti.ne.jp>
+References: <JA200802091836526.28928953@mars.dti.ne.jp>
+	<JR200802242102503.517984@mars.dti.ne.jp>
+Message-ID: <94888E04-182A-46AE-9392-63479DA7846E@gmail.com>
+
+吉田です．
+
+遅いかもしれませんが，SeasideJOneをintel Macでき 
+ちんと動作しました．
+
+自分のマシンと大学のマシンの二台で試しました，
+
+Mac OS 10.5.2(MacBook Pro,core duo 1.83GHz)
+Mac OS 10.4.11(Mac mini,core duo 1.83GHz)
+
+あと，展開する際にはMac標準のアーカイブユーティリ 
+ティ.appを使った方がいいかもしれません．
+Macユーザがよく使うStuffIt Expander.app(12.0.1)で展開を 
+するとフォルダ名が
+「SeasideJOne-080223-plus フォルダ」となり，command 
+ファイルを実行しても動きませんでした．
+ただ，「SeasideJOne-080223-plus」とフォルダ名を変更すれ 
+ば．きちんと起動しました．
+
+
+On 2008/02/24, at 21:02, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> さて、OSC2008 Tokyo/SpringでのSeaside入門ですが、
+> http://www.ospn.jp/osc2008-spring/modules/eguide/event.php?eid=54
+>
+> 上記のハンズオンで使うためのSeasideJOne(Plus)を作成し 
+> ました。
+> http://swikis.ddo.jp/umejava/41
+>
+> まだ、セミナ案内ページからはリンクしていません。一通り試し 
+> たつもりですが、
+> 皆さんも展開して起動できるかなど確認していただけると助かります。
+> (特にMacではPPCでしか試していません)
+>
+> また、当日は「Smalltalkわからんよ」という人も結構い 
+> らっしゃるようですので、
+> 混乱が予想されます。お手伝いにはせ参じてくださる方を募集中です。
+>
+> #あ、もちろん通常の参加者の方も募集中ですよー。
+>
+> それでは。
+>
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>> こんにちは
+>> 梅澤です。
+>>
+>> さて、デブサミもまだ終わっていないのですが、東京では 
+>> 2/29-3/1にかけて、
+>> オープンソースカンファレンス2008 Tokyo/Springが行わ 
+>> れます。
+>> http://www.ospn.jp/osc2008-spring/
+>>
+>> Squeak-jaのブースは出ませんが(いい加減疲れまし 
+>> た)、代わりにハンズオンセミナを
+>> 行います。
+>>
+>> 「異端のWebフレームワークSeaside入門 」です。
+>> http://www.ospn.jp/osc2008-spring/modules/eguide/event.php?eid=54
+>>
+>> 内容は過去に「Squeakers' Night in 未来パーティ  
+>> 2.0」で行ったものと基本的には
+>> 同じなのですが、多少は新しい話題が入るかもしれません。
+>> http://swikis.ddo.jp/umejava/38
+>>
+>> 少なくともSeasideJOnePlusはSqueak 3.9+Seaside 2.8ベー 
+>> スに更新する予定です。
+>> http://swikis.ddo.jp/umejava/41
+>>
+>> よろしければお越し下さい。
+>>
+>> ではでは。
+>> ---
+>> [:masashi | ^umezawa]
+>
+> ---
+> [:masashi | ^umezawa]
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080227/865b1fe2/attachment.htm
+From umejava ＠ mars.dti.ne.jp  Wed Feb 27 21:55:48 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Feb 27 21:56:12 2008
+Subject: [Squeak-ja: 3849] Re: OSC2008 Seaside入門用SeasideJOnePlus作りました　was:  Seaside入門をオープンソースカンファレンス2008 Tokyo/Springでやります
+In-Reply-To: <94888E04-182A-46AE-9392-63479DA7846E@gmail.com>
+References: <JA200802091836526.28928953@mars.dti.ne.jp>
+	<JR200802242102503.517984@mars.dti.ne.jp>
+	<94888E04-182A-46AE-9392-63479DA7846E@gmail.com>
+Message-ID: <JE200802272155484.618875@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+確認ありがとうございます。
+
+おそらくフォルダ名に日本語かスペースが含まれているとうまく起動できない
+のですね。このあたりのノウハウをご存じの方がいらっしゃいましたら
+情報をお寄せください。
+
+次回以降に反映させたいと思います。
+
+では。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 吉田です．
+> 
+> 遅いかもしれませんが，SeasideJOneをintel Macでき 
+> ちんと動作しました．
+> 
+> 自分のマシンと大学のマシンの二台で試しました，
+> 
+> Mac OS 10.5.2(MacBook Pro,core duo 1.83GHz)
+> Mac OS 10.4.11(Mac mini,core duo 1.83GHz)
+> 
+> あと，展開する際にはMac標準のアーカイブユーティリ 
+> ティ.appを使った方がいいかもしれません．
+> Macユーザがよく使うStuffIt Expander.app(12.0.1)で展開を 
+> するとフォルダ名が
+> 「SeasideJOne-080223-plus フォルダ」となり，command 
+> ファイルを実行しても動きませんでした．
+> ただ，「SeasideJOne-080223-plus」とフォルダ名を変更すれ 
+> ば．きちんと起動しました．
+> 
+
+---
+[:masashi | ^umezawa]

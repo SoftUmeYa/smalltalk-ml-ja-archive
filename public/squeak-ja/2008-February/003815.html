@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3815] ループしているプロセスの停止について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203815%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWshPCVXJDckRiQkJGsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclbSU7JTkkTkRkO18kSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="003816.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3815] ループしているプロセスの停止について</H1>
+    <B>久保　道</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203815%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWshPCVXJDckRiQkJGsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclbSU7JTkkTkRkO18kSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3815] ループしているプロセスの停止について">kubo-o ＠ mbox.kyoto-inet.or.jp
+       </A><BR>
+    <I>2008年 2月  7日 (木) 08:54:48 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="003816.html">[Squeak-ja: 3816] Re: ループしているプロセスの停止について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3815">[ 日付 ]</a>
+              <a href="thread.html#3815">[ スレッド ]</a>
+              <a href="subject.html#3815">[ 件名 ]</a>
+              <a href="author.html#3815">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>また教えていただきたいことができましたので、
+ご多忙中に恐縮ですがよろしくお願いいたします。
+次のようなcodeを書いてdo it　しました。
+arm := LineMorph from: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">290 ＠ 300</A> to: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">710 ＠ 300</A>  color: Color black width: 5.
+[[ arm openInWorld.
+   ( Delay forSeconds: 1) wait] repeat] fork
+当然loopになってしまい、止めたいのです。
+そこで自由自在Squeak　p.277に習って
+(ActiveWorld submorphs select: [:each | each isKindOf: PolygonMorph]) 
+  do: [:each | each delete].
+としてみましたが、効き目ありません。
+もちろんAlt + .　もやってみましたけれど。
+どうしたらよいでしょうか。
+ご教示をお願いいたします。
+久保　道 
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="003816.html">[Squeak-ja: 3816] Re: ループしているプロセスの停止について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3815">[ 日付 ]</a>
+              <a href="thread.html#3815">[ スレッド ]</a>
+              <a href="subject.html#3815">[ 件名 ]</a>
+              <a href="author.html#3815">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

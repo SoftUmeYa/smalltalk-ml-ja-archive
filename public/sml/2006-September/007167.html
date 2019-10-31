@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7167] Jun694 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207167%5D%20Jun694%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007166.html">
+   <LINK REL="Next"  HREF="007168.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7167] Jun694 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207167%5D%20Jun694%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7167] Jun694 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 9月 14日 (木) 16:19:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007166.html">[SML 7166] [ANNOUNCE] Jun for Java (Jun607)
+</A></li>
+        <LI>次の記事 <A HREF="007168.html">[SML 7168] Vista Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7167">[ 日付 ]</a>
+              <a href="thread.html#7167">[ スレッド ]</a>
+              <a href="subject.html#7167">[ 件名 ]</a>
+              <a href="author.html#7167">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木です。
+
+【Jun694】をアップロードしています。どうぞお試しくださいませ。
+
+<A HREF="http://www.sra.co.jp/public/sra/technical/jun/">http://www.sra.co.jp/public/sra/technical/jun/</A>
+
+【じゅんシティ】を作ってみました。およそ百バージョン毎に撮影
+しました。GIF アニメーションにしておきましたので、どうぞ皆さ
+んもご覧ください。1996年から2006年の十年間の推移になります。
+
+<A HREF="http://www.sra.co.jp/people/aoki/misc/gifs/CityOfJun.gif">http://www.sra.co.jp/people/aoki/misc/gifs/CityOfJun.gif</A>
+
+【VisualWorks 3.x → 5i.x → 7.x】とインフラが推移するにつれ
+て、【じゅん for Smalltalk】のビル群が立ち上がって増えてゆく
+のがわかります。（開発プロセスの可視化の一種になるでしょ！）
+
+そうそう、最近、Smalltalk で機器制御プログラムも書きましたよ。
+３次元の力覚デバイスで、８本の糸の長さを計測し、８個のモータ
+のトルクを制御して力を提示します。2キロヘルツ（0.5 msec.）の
+制御速度をノートマシン（Pentium M 2GHz）で出すことに成功しま
+した。
+
+＃制御プログラムというと C や C++ などが向いていると思われが
+＃ちですが、これぐらいならば、Smalltalk でもやれるぞ！という
+＃証拠になります。
+
+試しに【スパイダー・タートル】を作成してみました。タートル・
+グラフィックスのタートル（亀）です。スパイダーのグリップを亀
+に見立て、ここへゆきなさい、あそこにいきなさい、と指示すると、
+そのように動くという代物です。次のようなプログラムになります。
+
+    | spidarTurtle |
+    spidarTurtle := SpidarTurtle new.
+    spidarTurtle openIn: (100 @ 250 extent: 400 @ 400).
+    spidarTurtle
+        assert: [spidarTurtle resume]
+        do:
+            [| amount |
+            amount := 6.
+            spidarTurtle home.
+            spidarTurtle goto: amount , 0 , 0.
+            spidarTurtle goto: amount negated , 0 , 0.
+            spidarTurtle home.
+            spidarTurtle goto: 0 , amount , 0.
+            spidarTurtle goto: 0 , amount negated , 0.
+            spidarTurtle home.
+            spidarTurtle goto: 0 , 0 , amount.
+            spidarTurtle goto: 0 , 0 , amount negated.
+            spidarTurtle home]
+        ensure: [spidarTurtle terminate].
+    ^spidarTurtle
+
+このプログラムを実行すると、真ん中にあったグリップが６センチ
+だけＸ軸の正方向に動き、その次に１２センチ分、Ｘ軸の負方向に
+動き、また真ん中に戻り・・・、という具合に、３次元座標軸の上
+を行ったり来たりします。
+
+円（正18角形）と星（一筆書き）の GIF アニメーションを置きま
+したので、仮想スパイダーの映像として、ご覧になってください。
+
+<A HREF="http://www.sra.co.jp/people/aoki/misc/gifs/circle.gif">http://www.sra.co.jp/people/aoki/misc/gifs/circle.gif</A>
+<A HREF="http://www.sra.co.jp/people/aoki/misc/gifs/star.gif">http://www.sra.co.jp/people/aoki/misc/gifs/star.gif</A>
+
+計算方式ですが、goto: と言われると、現在の地点から指定された
+地点までのまわりに、カテナリー（懸垂線）形状のポテンシャル・
+フィールドを作り、垂れ下がった底へ向かって落ちてゆく、という
+収斂演算です。８個のモータを操って、糸の張力（並進力とトルク）
+を調整するプログラムになります。
+
+【参考ＵＲＬ】
+<A HREF="http://resource.renesas.com/lib/jpn/superh/visit/03.html">http://resource.renesas.com/lib/jpn/superh/visit/03.html</A>
+<A HREF="http://www.pi.titech.ac.jp/press/press0347.html">http://www.pi.titech.ac.jp/press/press0347.html</A>
+<A HREF="http://sklab-www.pi.titech.ac.jp/frame_index-j.html">http://sklab-www.pi.titech.ac.jp/frame_index-j.html</A>
+
+以上、最近の青木の Smalltalk プログラミング報告でした。
+
+【じゅんシティ】や【スパイダー・タートル】にご興味がある方は
+ご連絡くださいませ。一緒に頑張ってゆきませう！
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007166.html">[SML 7166] [ANNOUNCE] Jun for Java (Jun607)
+</A></li>
+	<LI>次の記事 <A HREF="007168.html">[SML 7168] Vista Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7167">[ 日付 ]</a>
+              <a href="thread.html#7167">[ スレッド ]</a>
+              <a href="subject.html#7167">[ 件名 ]</a>
+              <a href="author.html#7167">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2403] Re: SqueakNihongo7 ： Mac OS X
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202403%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha05paG9uZ283IA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIScbKEIgTWFjIE9TIFg%3D%3F%3D&In-Reply-To=p06001002be656f85c2d1%40nifty.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002400.html">
+   <LINK REL="Next"  HREF="002404.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2403] Re: SqueakNihongo7 ： Mac OS X</H1>
+    <B>HAYASHI, Tetsuya</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202403%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha05paG9uZ283IA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIScbKEIgTWFjIE9TIFg%3D%3F%3D&In-Reply-To=p06001002be656f85c2d1%40nifty.ne.jp"
+       TITLE="[Squeak-ja: 2403] Re: SqueakNihongo7 ： Mac OS X">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 3月 22日 (火) 16:22:05 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002400.html">[Squeak-ja: 2400] Re: SqueakNihongo7 ： Mac OS X
+</A></li>
+        <LI>次の記事 <A HREF="002404.html">[Squeak-ja: 2404] Re: SqueakNihongo7 ： Mac OS X 問題解決しました！
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2403">[ 日付 ]</a>
+              <a href="thread.html#2403">[ スレッド ]</a>
+              <a href="subject.html#2403">[ 件名 ]</a>
+              <a href="author.html#2403">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林です。ども。
+
+On 2005/03/22, at 15:48, wildflowers wrote:
+
+&gt;<i> おかげさまで、概ね、状況がわかってきました。
+</I>&gt;<i> ところで、SqueakLand版というのは、Nihongo6.1のことでしょうか？
+</I>
+え〜と。一言でいうと違います。以下の本家サイトにあるものです。
+	<A HREF="http://squeakland.org/plugin/installers/mac-x-std.html">http://squeakland.org/plugin/installers/mac-x-std.html</A>
+これをインストールすると ウェブブラウザのプラグイン版のVMもインストールさ
+れて、丁度、JavaApplet や Flash のように Squeak のプロジェクト（作品）を
+  HTML ページの埋め込みオブジェクトとして扱うことができるというものです。
+これはこれまで日本語対応されてリリースされたことはないものだと思います。
+（ファイルを手で入れ替えるなど一部の有志の方が実験的に試みた程度）
+
+&gt;<i> この版はおいてあるのですが、
+</I>&gt;<i> ~/Library/Preferences/Squeak/
+</I>&gt;<i> はないのです。
+</I>&gt;<i> 念のためもう一度ダウンロードしなおして、Nihongo6.1を起動してみましたが、（問題なく起動しますが）上記のディレクトリはできません。
+</I>&gt;<i> 英語版のSqueakLand版をいれないとならないのでしょうか？
+</I>
+　具体的にはインストールパッケージが提供されますので、そのスクリプトで作
+成されます。
+まだ、テスト的な扱いですが、以下のURLにアップされてるパッケージ
+(SqueakNihongo7Plugin.pkg)を試していただければと思います。
+
+	<A HREF="http://homepage.mac.com/tetha/">http://homepage.mac.com/tetha/</A>	
+
+&gt;<i> At 3:23 PM +0900 05.3.22, HAYASHI, Tetsuya wrote:
+</I>&gt;&gt;<i> 林です。ども。
+</I>&gt;&gt;<i> 今回、MacOSX 版 VM の StuffIt アーカイブを作成した張本人です (^^;
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 　というわけでエラーの内容を知るのが難しいのですが、おそらく、イメージの
+</I>&gt;&gt;<i> 起動まで行ってるということは、SqueakPlugin.image が利用するプリファレンス
+</I>&gt;&gt;<i> 関係のファイルを見に行こうとしてエラーになってるのではないかと思えます。
+</I>&gt;&gt;<i> wildflowers さんのホームの配下に
+</I>&gt;&gt;<i> 	~/Library/Preferences/Squeak/
+</I>&gt;&gt;<i> というディレクトリはありますでしょうか？
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> なおこのディレクトリは、今回の開発者向けリリースではなく、SqueakLand版と
+</I>&gt;&gt;<i> 呼ばれるバージョンでのインストールスクリプトにより作成されます。
+</I>&gt;&gt;<i> ですので、妙な表現になりますが、もし、SqueakLand版のインストールされてな
+</I>&gt;&gt;<i> いのでしたら
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 	現時点ではエラーになるのが本来の正しい動作
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> といえるかと思えます。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002400.html">[Squeak-ja: 2400] Re: SqueakNihongo7 ： Mac OS X
+</A></li>
+	<LI>次の記事 <A HREF="002404.html">[Squeak-ja: 2404] Re: SqueakNihongo7 ： Mac OS X 問題解決しました！
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2403">[ 日付 ]</a>
+              <a href="thread.html#2403">[ スレッド ]</a>
+              <a href="subject.html#2403">[ 件名 ]</a>
+              <a href="author.html#2403">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

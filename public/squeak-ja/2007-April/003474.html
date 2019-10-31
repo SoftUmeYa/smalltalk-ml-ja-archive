@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3474] Re: Mac版Squeakの操作方法に関して
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203474%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYxskQkhHGyhCU3F1ZWFr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5BYDpuSn1LISRLNFgkNyRGGyhC%3F%3D&In-Reply-To=20070410204139.B5F7.TURKEY%40crew.sfc.keio.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003473.html">
+   <LINK REL="Next"  HREF="003475.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3474] Re: Mac版Squeakの操作方法に関して</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203474%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYxskQkhHGyhCU3F1ZWFr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5BYDpuSn1LISRLNFgkNyRGGyhC%3F%3D&In-Reply-To=20070410204139.B5F7.TURKEY%40crew.sfc.keio.ac.jp"
+       TITLE="[Squeak-ja: 3474] Re: Mac版Squeakの操作方法に関して">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2007年 4月 11日 (水) 08:48:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003473.html">[Squeak-ja: 3473] Mac版Squeakの操作方法に関して
+</A></li>
+        <LI>次の記事 <A HREF="003475.html">[Squeak-ja: 3475] Re: Mac版Squeakの操作方法に関して
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3474">[ 日付 ]</a>
+              <a href="thread.html#3474">[ スレッド ]</a>
+              <a href="subject.html#3474">[ 件名 ]</a>
+              <a href="author.html#3474">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>岡田さん、こんにちは。
+林です。
+
+これは私もちょっと問題かなと思ってたことであります。
+
+On 2007/04/10, at 20:42, okada ken wrote:
+
+&gt;<i> 疑問点その１．
+</I>&gt;<i> ハロの出し方として公式なものが「アップル（コマンド）キー＋左クリック」と
+</I>&gt;<i> いうのは理解しているのですが、何故か状況によっては「右クリック」でもハロ
+</I>&gt;<i> が出ます。ただ出るときと出ないときがあって（前者は確実にハロが出る）、こ
+</I>&gt;<i> れはどういう挙動なのだと理解すればいいのか、良く分かりません。
+</I>&gt;<i>
+</I>&gt;<i> 「右クリックでハロって出せるの？」というのが疑問です。
+</I>
+　マウスのシステム環境設定次第なのですが右クリックで出すことができます。
+
+Windows のホイールマウスのホイールボタンを「中」ボタンとして、Smalltalk
+プログラム上の論理的な名称「レッド」、「イエロー」、「ブルー」との対応は
+
+	Win:   左      中（ホイール）  右
+	論理名: レッド  ブルー         イエロー
+
+となってますが。
+　一方 Mac ですけど、お使いになってるマウス（のドライバ）次第ですが、私の
+手元の Mighty Mouse では、ホイールに「ボタン3」、右クリックに「副ボタン」
+（これらはMacのシステム環境設定上での名称）を割り当てることができます。
+<A HREF="http://plusd.itmedia.co.jp/pcupdate/articles/0508/11/news018_2.html">http://plusd.itmedia.co.jp/pcupdate/articles/0508/11/news018_2.html</A>
+
+この場合、論理名および従来のMac特殊キー組合せとの対応は
+
+	Mac:     左      中（ボタン3）  右（副ボタン）
+	論理名:   レッド  イエロー       ブルー
+	特殊キー: なし    Opt キー       Cmd キー
+
+という対応になります。
+ですので、右クリックでハロが出て、ホイールをクリックすると Winでのポップ
+アップメニューを出すアクションになります（一応念のため、これは現在の私の
+個人的な設定状況に従った場合です。すくなくとも問題になっているマシンは、
+右クリックに「副ボタン」が割り当てられているように思われます）。
+　余談ですが、ホイールに「副ボタン」、右クリックに「ボタン3」を割り当てれば、
+Winと同じ操作環境になりそうですが、Mighty Mouse ではそれが出来ないようで
+す。もしかしたら別な機種のマウスでしたら、割当を交換することができるのか
+もしれません。
+ただ、システム管理者のご都合もあるのではと推測いたします。
+（X11 のソフトを使おうとするとこの設定の方が便利だったりします）
+
+　なお、ワールドメニューの
+「ヘルプ…」→「プリファレンス」のswapMouseButtons 
+でホイールと右クリックの動作を入れ替えることも出来るようです。
+
+　ところで、ハロが出たり出なかったりという件ですが、以下の件とも関係して
+そうです。
+
+&gt;<i> 疑問点その２．
+</I>&gt;<i> ワールドメニューの出す時に「左クリック長押し」だと確実に出るのですが、
+</I>&gt;<i> Mac版ってそういう仕様なんですか？単なる「左クリック」でも出るのですが、
+</I>&gt;<i> こちらは出るときと出ないときがあります。
+</I>&gt;<i>
+</I>&gt;<i> 「ワールドメニューを出すときの操作は、単なる左クリック？それとも左クリッ
+</I>&gt;<i> ク長押し？」というのが疑問です。
+</I>
+　基本的には「単なる左クリック」でいいはずです。
+出たり出なかったりという辺りはハロもそうですけど VM のバグのように思われます。
+（イベントの取りこぼしがありそうです）
+また、お使いの Mac が Intel Mac であった場合、配布されている VM が PPC 専
+用なので、俗にいうロゼッタというエミュレータ上で動作しているため、これが
+影響しているのかもしれません。
+
+　もし、ハロが出ないモーフや状況が特定できるようでしたら教えていただけま
+すと助かります。
+
+「環境設定」がらみの話で、うろんな返信になってしまいましたが、お役に立ち
+ましたら幸いです。
+
+--
+林 徹也 Tetsuya HAYASHI
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003473.html">[Squeak-ja: 3473] Mac版Squeakの操作方法に関して
+</A></li>
+	<LI>次の記事 <A HREF="003475.html">[Squeak-ja: 3475] Re: Mac版Squeakの操作方法に関して
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3474">[ 日付 ]</a>
+              <a href="thread.html#3474">[ スレッド ]</a>
+              <a href="subject.html#3474">[ 件名 ]</a>
+              <a href="author.html#3474">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

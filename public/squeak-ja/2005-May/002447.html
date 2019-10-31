@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2447] Re: MacOSX で FileDirectry fileNames の全角数字が半角になる
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202447%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hY09TWCAbJEIkRxsoQiBG%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaWxlRGlyZWN0cnkgZmlsZU5hbWVzIBskQiROQTQzUT90O3okLEg%2BGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM1EkSyRKJGsbKEI%3D%3F%3D&In-Reply-To=20050518072107.2404B43742%401server.aquilax.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002446.html">
+   <LINK REL="Next"  HREF="002448.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2447] Re: MacOSX で FileDirectry fileNames の全角数字が半角になる</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202447%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hY09TWCAbJEIkRxsoQiBG%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaWxlRGlyZWN0cnkgZmlsZU5hbWVzIBskQiROQTQzUT90O3okLEg%2BGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM1EkSyRKJGsbKEI%3D%3F%3D&In-Reply-To=20050518072107.2404B43742%401server.aquilax.co.jp"
+       TITLE="[Squeak-ja: 2447] Re: MacOSX で FileDirectry fileNames の全角数字が半角になる">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 5月 18日 (水) 19:45:46 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002446.html">[Squeak-ja: 2446] MacOSX で FileDirectry fileNames の全角数字が半角になる
+</A></li>
+        <LI>次の記事 <A HREF="002448.html">[Squeak-ja: 2448] Swimmyについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2447">[ 日付 ]</a>
+              <a href="thread.html#2447">[ スレッド ]</a>
+              <a href="subject.html#2447">[ 件名 ]</a>
+              <a href="author.html#2447">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>高橋さん、こんにちは
+みなさん、どうも
+林徹也です。
+
+On 2005/05/18, at 16:21, Kouji takahashi wrote:
+
+&gt;<i>  高橋@池袋です。
+</I>&gt;<i>
+</I>&gt;<i> MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で  
+</I>&gt;<i> fileNameを取得すると全角数字が
+</I>&gt;<i> 半角数字に入れ替わってしまうようです。
+</I>
+私のところの Tiger (10.4.1) と Squeak  
+3.8.6Beta6.app でも同じ問題が
+確認できました。
+
+&gt;<i> 例）本来のファイル名　取得されるファイル名
+</I>&gt;<i> ×　test１.txt　→ test1.txt
+</I>&gt;<i> ×　テスト１.txt → テスト1.txt
+</I>&gt;<i> ○　test1.txt
+</I>&gt;<i> ○　テスト1.txt
+</I>&gt;<i>
+</I>&gt;<i> ファイル・リストで上記のような名前のファイルを含むフォルダを見 
+</I>&gt;<i> るとファイル名は半角数字で
+</I>&gt;<i> 表示され、×印のファイル名では下側paneに内容表示をさせよ 
+</I>&gt;<i> うとするとデバッガが起動します。
+</I>&gt;<i>
+</I>&gt;<i> image側の問題では無く
+</I>&gt;<i> FileDirectry&gt;&gt;primLookupEntryIn:index: のレベルで誤ったファイ 
+</I>&gt;<i> ル名が返っているようです。
+</I>
+ご指摘の通り、これは、VM の問題かと推察されます。
+Carbon Squeak VM は、ディレクトリのエントリを取得する際に、古い 
+APIを
+使ってるので内部的に UTF-8 &lt;-&gt; ShiftJIS と相互に変換して動 
+いており、
+さらに、UTF-8について Apple では decomposed な 
+ものを用いてる関係から
+起きてる問題ではないかと思われます。
+
+今手元で確認できないのですが…
+もし、よければどなたか、VM ソースの中の  
+CFStringNormalize 関数で引数
+の定数を以下のように
+
+kCFStringNormalizationFormKC
+     → kCFStringNormalizationFormC
+
+kCFStringNormalizationFormKD
+     → kCFStringNormalizationFormD
+
+変更してビルドしたものだとどうなるでしょうか？
+
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002446.html">[Squeak-ja: 2446] MacOSX で FileDirectry fileNames の全角数字が半角になる
+</A></li>
+	<LI>次の記事 <A HREF="002448.html">[Squeak-ja: 2448] Swimmyについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2447">[ 日付 ]</a>
+              <a href="thread.html#2447">[ スレッド ]</a>
+              <a href="subject.html#2447">[ 件名 ]</a>
+              <a href="author.html#2447">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

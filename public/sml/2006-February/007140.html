@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7140] Re: Smalltalk システムでのデータの保存、データベースについての質問
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207140%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsayAbJEIlNyU5JUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWAkRyROJUchPCU/JE5KXUI4ISIlRyE8JT8lWSE8JTkkSyREGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkRiROPEFMZBsoQg%3D%3D%3F%3D&In-Reply-To=20060223010544.7ba0fcd4.tar_zcvf%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007135.html">
+   <LINK REL="Next"  HREF="007138.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7140] Re: Smalltalk システムでのデータの保存、データベースについての質問</H1>
+    <B>鈴木 藍</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207140%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsayAbJEIlNyU5JUYbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWAkRyROJUchPCU/JE5KXUI4ISIlRyE8JT8lWSE8JTkkSyREGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkRiROPEFMZBsoQg%3D%3D%3F%3D&In-Reply-To=20060223010544.7ba0fcd4.tar_zcvf%40yahoo.co.jp"
+       TITLE="[SML 7140] Re: Smalltalk システムでのデータの保存、データベースについての質問">tar_zcvf ＠ yahoo.co.jp
+       </A><BR>
+    <I>2006年 2月 25日 (土) 17:22:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007135.html">[SML 7135] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+        <LI>次の記事 <A HREF="007138.html">[SML 7138] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7140">[ 日付 ]</a>
+              <a href="thread.html#7140">[ スレッド ]</a>
+              <a href="subject.html#7140">[ 件名 ]</a>
+              <a href="author.html#7140">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+  鈴木 藍です。
+
+&gt;<i>   Oracle も試してみようと思ったのですが、テストコードが見つからなかったのでまた今度。
+</I>
+  投げ出さないでやりました。もう解決済みのスレッドですが、一応ということで
+  失礼します。
+  
+  OracleEXDI (と、話題にあがったサイベースのドライバ CTLibEXDI) とその他
+  データベースに関する文書が $VISUALWORKS_HOME/doc/DatabaseAppDevGuide.pdf に
+  あります。
+  あと、データフォームにデータベースのデータをマッピングするツールや
+  クラスにデータをマッピングするツールの話が書いてありました。
+  読むのが面倒で読んでません。
+
+  さて、Oracle データベースとの接続は以下のコードで確認できました。  
+----------------------------------
+|<i> aConnection aSession aResultList resultData |
+</I>aConnection := OracleConnection new.
+aConnection
+	username: 'elbereth';
+	password: 'elf';
+	environment: 'orcl'.
+aConnection connect.
+aConnection begin.
+aSession := aConnection getSession.
+aSession prepare: 'SELECT name, essential FROM artifact'.
+aSession execute.
+aResultList := aSession answer.
+&quot;aConnection commit&quot;
+resultData := WriteStream on: String new.
+aResultList columnDescriptions do: 
+		[:columnDescription | 
+		resultData
+			nextPutAll: columnDescription name;
+			tab;
+			nextPutAll: '|';
+			tab].
+resultData
+	cr;
+	nextPutAll: '----------------------------------------------------------------';
+	cr.
+aResultList upToEnd do: 
+		[:row | 
+		row do: 
+				[:field | 
+				resultData
+					nextPutAll: field;
+					tab].
+		resultData cr].
+Transcript
+	cr;
+	show: resultData contents
+----------------------------------
+  
+  実行結果は以下の感じ。
+----------------------------------
+NAME	|	ESSENTIAL	|	
+----------------------------------------------------------------
+Excalibur	long sword	
+Magicbane	athame	
+----------------------------------
+
+  他にも、引数をとる SQL や PLSQL のコードを書いたり呼び出したりもできるみたいです。
+  これも他の言語のドライバ同様、引数は (?,?) みたいな形でとります。
+  OracleEXDI のパーセルにバンドルされている、Oracle データベースの
+  データ型をあらわすクラス Date, Double が気になりますが、状況にもよりますけれど
+  まあ Java のように型変換で鬱になったりはしないのではないかと(願っています)。
+  
+  ORMPB.
+  (O/R Makes Prgrammers Blue.) 
+  
+
+//鈴木 藍
+
+-- <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">spiral ＠ soulhack.net</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007135.html">[SML 7135] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+	<LI>次の記事 <A HREF="007138.html">[SML 7138] Re: Smalltalk システムでのデータの保存、データベースについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7140">[ 日付 ]</a>
+              <a href="thread.html#7140">[ スレッド ]</a>
+              <a href="subject.html#7140">[ 件名 ]</a>
+              <a href="author.html#7140">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

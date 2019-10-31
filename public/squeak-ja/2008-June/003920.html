@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3920] Re: squeakを、応用した、手書きの「インデックス」
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203920%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHNxdWVhaxskQiRyISIbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMX5NUSQ3JD8hIjxqPXEkLSROIVYlJCVzJUclQyUvGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJTkhVxsoQg%3D%3D%3F%3D&In-Reply-To=F7B73F200C014877A628DFB3295230AF%40kohfowPC">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003919.html">
+   <LINK REL="Next"  HREF="003921.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3920] Re: squeakを、応用した、手書きの「インデックス」</H1>
+    <B>Masato Sumi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203920%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHNxdWVhaxskQiRyISIbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMX5NUSQ3JD8hIjxqPXEkLSROIVYlJCVzJUclQyUvGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJTkhVxsoQg%3D%3D%3F%3D&In-Reply-To=F7B73F200C014877A628DFB3295230AF%40kohfowPC"
+       TITLE="[Squeak-ja: 3920] Re: squeakを、応用した、手書きの「インデックス」">sumi ＠ seagreen.ocn.ne.jp
+       </A><BR>
+    <I>2008年 6月  6日 (金) 11:29:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003919.html">[Squeak-ja: 3919] squeakを、応用した、手書きの「インデックス」
+</A></li>
+        <LI>次の記事 <A HREF="003921.html">[Squeak-ja: 3921] 日韓共同Squeaker夜の集い(七夕編)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3920">[ 日付 ]</a>
+              <a href="thread.html#3920">[ スレッド ]</a>
+              <a href="subject.html#3920">[ 件名 ]</a>
+              <a href="author.html#3920">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>kohfow さん、ごきげんよう。鷲見です。
+
+Squeak で、ローロデックスっぽくジェスチャーでページめくりが
+できる、手書きのメモ帳のようなソフトを作って、携帯やそれに
+類するデバイスで持ち運んで使いたい…という理解であっていますか？
+
+
+ジェスチャーの認識機構は Genie と呼ばれるサービスが
+Squeak3.6 まで組み込まれていたので、これを使うことで
+ページめくりをさせるジェスチャーを登録すればＯＫだと
+思います。Squeak3.6 は squeak.org のアーカイブから
+入手可能です。
+
+<A HREF="http://ftp.squeak.org/3.6/">http://ftp.squeak.org/3.6/</A>
+
+Genie の使い方は AGenieIntroduction というクラスのクラス
+コメントに詳しくあるので、そちらをお読みになってください。
+
+
+手書きのメモ自体は、ペイント機能をそのまま使ってもよいですが、
+Pen というクラスに属するオブジェクトを使ったほんの数行の
+コードを組むことでも実現できますので、Smalltalk の練習には
+いいかもしれません。Smalltalk は C++ とはちょっと勝手が
+違うかもしれませんが、おおざっぱには、継承時にデータ型を（さほど）
+意識しないでよいことと、メンバ変数を外部からアクセスする
+際に、かならずメンバー関数の呼び出しを介する必要がある…と
+いったいくつかの違いを知れば、応用は可能だと思います。
+ただ、文法がかなり違うので、相応の慣れは必要かもしれません。
+
+そうして描いた手書きのメモデータを、どういった場所において
+管理するか…という工夫も必要でしょう。いちばん
+手っ取り早いのはプロジェクトと呼ばれる仮想デスクトップを
+メモの１ページに見立ててしまうことです。ただ、これだと
+ページ数が増えたときに、いろいろとやっかいなことがあるかも
+しれません。Squeak3.6 には GeeMail という、名前にはメール
+がついていますが実体は絵も含めることができるメモ帳ソフトが
+あるので、これを使うのも手だと思います。もちろん独自の
+メモ帳ソフトを Smalltalk で組んでしまうのもよいでしょう。
+
+ただ問題は、そうして作ったソフトを運用でき、持ち運びが可能な
+デバイスですね。Squeak を上の Genie や ペイント機能、GeeMail
+といった機能をフルに活用できるかたちで、快適に動かすことが
+できる小型デバイスで、かつ、ペン操作が可能なものとなると、
+かなり限られてしまいます。実をいうと私もずっと探し続けているのですが
+まだ「これは！と」いうものにたどり着けていません。
+
+まあ、そんなデバイスが現われたときのために、ふだんから、
+Squeak システムでどんなことができるのか試しがてらに遊んでおくのも
+一興かとは思います。がんばってください。
+
+-- 
+Masato Sumi
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003919.html">[Squeak-ja: 3919] squeakを、応用した、手書きの「インデックス」
+</A></li>
+	<LI>次の記事 <A HREF="003921.html">[Squeak-ja: 3921] 日韓共同Squeaker夜の集い(七夕編)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3920">[ 日付 ]</a>
+              <a href="thread.html#3920">[ スレッド ]</a>
+              <a href="subject.html#3920">[ 件名 ]</a>
+              <a href="author.html#3920">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

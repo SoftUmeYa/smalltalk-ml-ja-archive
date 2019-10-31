@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7265] メッセージパッシング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207265%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWElQyU7ITwlOCVRJUMlNyVzJTAbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007264.html">
+   <LINK REL="Next"  HREF="007266.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7265] メッセージパッシング</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207265%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWElQyU7ITwlOCVRJUMlNyVzJTAbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7265] メッセージパッシング">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 2月  8日 (木) 14:12:02 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007264.html">[SML 7264] Jpl適用後のPublic Store Repositoryアクセス対応パッチ
+</A></li>
+        <LI>次の記事 <A HREF="007266.html">[SML 7266] Re: メッセージパッシング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7265">[ 日付 ]</a>
+              <a href="thread.html#7265">[ スレッド ]</a>
+              <a href="subject.html#7265">[ 件名 ]</a>
+              <a href="author.html#7265">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>皆さんへ
+
+じゅんのメーリングリストに質問したことを、ＳＭＬへの公開質問
+にさせてください。message passing の良い日本語訳を捜してます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+-------- Original Message --------
+Subject: [Jun 5807] メッセージパッシング
+Date: Wed, 07 Feb 2007 14:17:02 +0900
+From: AOKI Atsushi
+
+青木です。
+
+ちょっと術語の日本語訳で助力をお願いします。message passing
+も、message sending も、共にメッセージ送信と訳されていると思
+いますが、パッシングの意味をより強く表出するような言葉があり
+ませんかね？
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+-------- Original Message --------
+Subject: [Jun 5809] Re: メッセージパッシング
+Date: Wed, 7 Feb 2007 14:50:00 +0900
+From: Tomohiro Oda
+
+計算モデル寄りの話ならメッセージ送受、
+処理系実装寄りの話ならメッセージ配送、
+などはどうでしょう。
+
+
+-------- Original Message --------
+Subject: Re: [Jun 5809] Re: メッセージパッシング
+Date: Thu, 08 Feb 2007 13:40:47 +0900
+From: AOKI Atsushi
+
+Tomohiro Oda wrote:
+&gt;<i> 計算モデル寄りの話ならメッセージ送受、
+</I>&gt;<i> 処理系実装寄りの話ならメッセージ配送、
+</I>&gt;<i> などはどうでしょう。
+</I>
+なかなか！いい感じですね。伝送や推移そして経路や並行などが計
+り知れる言葉が好ましいのです。
+
+大胆にも浅岡さんが日経ソフトウエア連載の第６回で、シュード変
+数（pseudo variable：模擬変数）の【thisContext】を紹介してい
+ます。メッセージパッシングへと誘（いさな）う良い切り口でしょ。
+
+あるオブジェクトがこのメッセージをすでに受信していますか？と
+いうプログラミングは以下のようになります。たぶん Java で書き
+直そうとするときに嫌われるであろう Smalltalk のプログラム。
+
+has: anObject alreadyReceived: thisMessage
+    aContext := thisContext.
+    aBlock := [:context |
+            (anObject == context receiver and: [thisMessage == context selector])
+                ifTrue: [^true].
+            context sender ifNotNil: [:it | aBlock value: it sender]].
+    aBlock value: aContext sender.
+    ^false
+
+自分の実行環境（実行文脈／実行経緯）＝過去をたどって調べあげ、
+真偽を答えますので、模擬変数【thisContext】を引いていますね。
+
+上記のプログラムは、調べ上げるスコープを、自分のプロセス（ス
+レッド）内に閉じていますが、最近の私は、これまた大胆にも並行
+プロセス（マルチスレッド）の実行環境下でも動くようなプログラ
+ミングをしました。ターボなスパイダーを実現するプログラミング
+でやったのです。ためになりましたよぉ〜！（並行で動作するマル
+チスレッドのソースコードデバッガの自作ですから。）
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007264.html">[SML 7264] Jpl適用後のPublic Store Repositoryアクセス対応パッチ
+</A></li>
+	<LI>次の記事 <A HREF="007266.html">[SML 7266] Re: メッセージパッシング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7265">[ 日付 ]</a>
+              <a href="thread.html#7265">[ スレッド ]</a>
+              <a href="subject.html#7265">[ 件名 ]</a>
+              <a href="author.html#7265">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

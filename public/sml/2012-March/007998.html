@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7998] Re:	第41回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207998%5D%20Re%3A%0A%09%3D%3Futf-8%3Fb%3F56ysNDHlm55TbWFsbHRhbGvli4nlvLfkvJrvvKDkuqzpg70%3D%3F%3D&In-Reply-To=%3C4F59B884.4080007%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007997.html">
+   <LINK REL="Next"  HREF="007999.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7998] Re:	第41回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207998%5D%20Re%3A%0A%09%3D%3Futf-8%3Fb%3F56ysNDHlm55TbWFsbHRhbGvli4nlvLfkvJrvvKDkuqzpg70%3D%3F%3D&In-Reply-To=%3C4F59B884.4080007%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 7998] Re:	第41回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2012年 3月  9日 (金) 17:00:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007997.html">[SML 7997] Re:	第41回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007999.html">[SML 7999] Re: 配付資料希望です。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7998">[ 日付 ]</a>
+              <a href="thread.html#7998">[ スレッド ]</a>
+              <a href="subject.html#7998">[ 件名 ]</a>
+              <a href="author.html#7998">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>妹尾さんから勉強会ログが届きましたので、サーバにアップロードしておきました。
+もちろん、用いたプログラムもアップロードしてあります。
+
+<A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto41">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto41</A>
+
+少々の報告をしますと、まず、ガベージコレクションとオブジェクトの構造に関する「処理時間と清掃回数」について解題しました。
+ヒープストレージに取られるオブジェクトの構造から、次の２つのプログラムの違い（処理時間の差）を明らかにしてゆきました。
+
+【整数演算】
+	| aClosure |
+	aClosure :=
+			[| result |
+			result := 1.
+			[result &lt;= 500000000] whileTrue: [result := result + 1].
+			result yourself].
+	^Time microsecondsToRun: [aClosure value]
+
+【浮動小数点数演算】
+	| aClosure |
+	aClosure :=
+			[| result |
+			result := 1.0d.
+			[result &lt;= 500000000.0d] whileTrue: [result := result + 1.0d].
+			result yourself].
+	^Time microsecondsToRun: [aClosure value]
+
+その次に、本人になりかわって他人からのメッセージに応答するオブジェクト「代理人」の実装方法を紹介しました。
+すべてのメッセージに応答できなければ、すべてのメッセージに応答できる、という禅問答のような仕掛けを明らかにしてゆきました。
+
+これら２つ「処理時間と清掃回数」と「代理人」に関する配付資料があります。
+青木研究室で用いている内部資料になるのですが、ご入り用であれば、電子的に差し上げます、私宛にリクエストしてくださいまし。
+
+--- 青木淳＠京都上賀茂
+
+
+(12/03/07 7:18), AOKI Atsushi wrote:
+&gt;<i> 本日です。青木研で用いている資料を配りたいと思います。
+</I>&gt;<i> 今夜はメソッドサーチを利用した「代理人」とプログラム制御構造の担い手である「閉包」を行います。
+</I>&gt;<i> 時間があれば、ガベージコレクションとオブジェクトの構造に関する「処理時間と清掃回数」についても解題したいと考えています。
+</I>&gt;<i>
+</I>&gt;<i> --- 青木淳＠京都上賀茂
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> (12/02/29 7:41), AOKI Atsushi wrote:
+</I>&gt;&gt;<i> 第41回Smalltalk勉強会＠京都を開催します。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 万障繰り合わせてJR京都駅前にお集まりください。
+</I>&gt;&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto41">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto41</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 場所(部屋)はキャンプラ6階の第3講習室になります。
+</I>&gt;&gt;<i> <A HREF="http://www.kyoto-su.ac.jp/graduate/satellite/index.html">http://www.kyoto-su.ac.jp/graduate/satellite/index.html</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 第41回 Smalltalk勉強会＠京都
+</I>&gt;&gt;<i> 日時：2012年03月07日（水）19:00〜21:00
+</I>&gt;&gt;<i> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+</I>&gt;&gt;<i> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 窓MVCを用いたフーリエ信号処理のデザインとプログラミングが前回
+</I>&gt;&gt;<i> でほぼ完了しました。今回はプログラム制御構造などをレクチャし
+</I>&gt;&gt;<i> ながら、前回のフーリエ信号処理プログラムをブラッシュアップし
+</I>&gt;&gt;<i> てみようと思います。トピックスとしてメソッドサーチ・閉包(ク
+</I>&gt;&gt;<i> ロージャ)・逐次・並行・約束・代理・継続(コンティニュエーショ
+</I>&gt;&gt;<i> ン)・継続譲渡スタイル(CPS)などを解題してゆきます。ノート型の
+</I>&gt;&gt;<i> パーソナルコンピュータ（Windows 7 または Mac OS X）をご持参く
+</I>&gt;&gt;<i> ださい。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --- 青木淳＠京都宇治
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007997.html">[SML 7997] Re:	第41回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007999.html">[SML 7999] Re: 配付資料希望です。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7998">[ 日付 ]</a>
+              <a href="thread.html#7998">[ スレッド ]</a>
+              <a href="subject.html#7998">[ 件名 ]</a>
+              <a href="author.html#7998">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8139] Re: SmaCCについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208139%5D%20Re%3A%20%3D%3Futf-8%3Fb%3FU21hQ0PjgavjgaTjgYTjgaY%3D%3F%3D&In-Reply-To=%3CCAH3eEdTt-FQ20nqHvFz7Z1%2BbuR6H8D9gfr_8FKJRfOZLfgd5Sw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008138.html">
+   <LINK REL="Next"  HREF="008140.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8139] Re: SmaCCについて</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208139%5D%20Re%3A%20%3D%3Futf-8%3Fb%3FU21hQ0PjgavjgaTjgYTjgaY%3D%3F%3D&In-Reply-To=%3CCAH3eEdTt-FQ20nqHvFz7Z1%2BbuR6H8D9gfr_8FKJRfOZLfgd5Sw%40mail.gmail.com%3E"
+       TITLE="[SML 8139] Re: SmaCCについて">ume ＠ softumeya.com
+       </A><BR>
+    <I>2015年 10月 12日 (月) 12:26:39 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008138.html">[SML 8138] SmaCCについて
+</A></li>
+        <LI>次の記事 <A HREF="008140.html">[SML 8140] Re: SmaCCについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8139">[ 日付 ]</a>
+              <a href="thread.html#8139">[ スレッド ]</a>
+              <a href="subject.html#8139">[ 件名 ]</a>
+              <a href="author.html#8139">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>梅澤です。
+
+Pharo 4で試してみましたが、やはりSmaCC-LLVM-IRはロードされませんでした。
+
+BaselineOfSmaCCでパッケージの依存関係が定義されているのですが(BaselineOfSmaCC&gt;&gt;baseline:)、そこにはSmaCC-LLVM-IRは入っていません。
+
+おそらく作りかけでベースラインにはまだ入れていないということなのではないでしょうか。
+
+Monticelloブラウザで<A HREF="github://ThierryGoubier/SmaCC:master&#12522;&#12509;&#12472;&#12488;&#12522;&#12434;Open&#12375;&#12289;SmaCC-LLVM-IR&#12497;&#12483;&#12465;&#12540;&#12472;&#12434;&#36984;&#12435;&#12391;&#25163;&#21205;&#12391;&#12525;&#12540;&#12489;&#12377;&#12427;&#12392;&#20837;&#12426;&#12414;&#12377;&#12290;">github://ThierryGoubier/SmaCC:masterリポジトリをOpenし、SmaCC-LLVM-IRパッケージを選んで手動でロードすると入ります。</A>
+
+ご参考まで。
+
+2015年10月11日 15:45 Sunao Furukawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sadie ＠ kind.ocn.ne.jp</A>&gt;:
+&gt;<i> 古川と申します。
+</I>&gt;<i> Pharo4.0で以下のようにplaygroundしたのですが、うまくいきません。
+</I>&gt;<i> というか「LLVM-IR」のパッケージがloadされません。
+</I>&gt;<i> ほかの方はどうでしょうか。
+</I>&gt;<i> cogがあるからでしょうか。
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i> Metacello new
+</I>&gt;<i>     baseline: 'SmaCC';
+</I>&gt;<i>     repository: '<A HREF="github://ThierryGoubier/SmaCC">github://ThierryGoubier/SmaCC</A>';
+</I>&gt;<i>     load
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i> Visualworksやdolphinなら入りますか？（www.refactoryworkers.com/SmaCC.html）
+</I>&gt;<i> から。
+</I>&gt;<i>
+</I>&gt;<i> すみません。よろしくお願いします。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-- 
+&quot;SoftUmeYa, LLC&quot;
+[:masashi | ^umezawa]
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008138.html">[SML 8138] SmaCCについて
+</A></li>
+	<LI>次の記事 <A HREF="008140.html">[SML 8140] Re: SmaCCについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8139">[ 日付 ]</a>
+              <a href="thread.html#8139">[ スレッド ]</a>
+              <a href="subject.html#8139">[ 件名 ]</a>
+              <a href="author.html#8139">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

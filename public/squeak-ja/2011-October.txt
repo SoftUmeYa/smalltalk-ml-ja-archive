@@ -1,0 +1,109 @@
+From tomohiro ＠ sra.co.jp  Wed Oct 12 14:38:35 2011
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Wed, 12 Oct 2011 14:38:35 +0900
+Subject: [Squeak-ja: 4611] HoneyGinger
+Message-ID: <4E9527DB.8090307@sra.co.jp>
+
+おだです。
+
+平滑化粒子モデルによる粘性流体シミュレーション環境HoneyGingerを
+MITライセンスでリリースしました。
+http://squeaksource.blueplane.jp/HoneyGinger.html
+
+まだ作りかけ状態ですが、「全てのソフトウェアは作りかけ」の精神で、
+さっさと公開することにしました。
+
+物理シミュレーションというと、大規模高速なものが科学の諸領域で
+応用されていますが、HoneyGingerは計算モデルはさておき、
+「流体との対話」をどうやっておこなうか、「流れ」をどう感じ、
+流体をどう乱すのかを、実験的に実装していくプロジェクトです。
+
+動作環境はSqueakおよびPharoで、CogVMを強く推奨します。
+ライセンスはMITライセンスです。
+Monticelloレポジトリは
+http://squeaksource.blueplane.jp/HoneyGinger
+です。
+
+HGSimulatorのクラスメソッドをいくつか試して
+ぜひ流体と戯れてみてください。
+---
+おだ
+
+From ume ＠ softumeya.com  Tue Oct 18 23:37:01 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 18 Oct 2011 23:37:01 +0900
+Subject: [Squeak-ja: 4612]
+	第37回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSvUJTmjsYutyCPQZ3Q6OMGCW4xSRvHodA8MjP0j4+jvg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/10/31(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「自由自在Squeakプログラミング」
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai37kaismalltalkbenkyoukai
+
+今回のテーマは久しぶりにScratchです。サイバー大学の阿部さんにご講演いただきます。
+タイトル: 「簡単だけど奥深い！Scratchプログラミングの魅力」
+10月24日からITpro(http://itpro.nikkeibp.co.jp/)で連載される同名記事のライブな解説となるようです。お楽しみに。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From ume ＠ softumeya.com  Thu Oct 20 00:21:54 2011
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Thu, 20 Oct 2011 00:21:54 +0900
+Subject: [Squeak-ja: 4613] Re:
+	第37回Smalltalk勉強会のお知らせ
+In-Reply-To: <CAH3eEdSvUJTmjsYutyCPQZ3Q6OMGCW4xSRvHodA8MjP0j4+jvg@mail.gmail.com>
+References: <CAH3eEdSvUJTmjsYutyCPQZ3Q6OMGCW4xSRvHodA8MjP0j4+jvg@mail.gmail.com>
+Message-ID: <CAH3eEdTxCpZ_K-OfnVKA_4EEz+=zUgDQuE-9gufb50u5pF=qJw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+今回は人数が少し多めになりそうですので、ATNDで事前参加登録することにしました。
+http://atnd.org/events/21154
+
+お手数ですがよろしくお願いします。
+
+2011年10月18日23:37 Masashi Umezawa <ume ＠ softumeya.com>:
+> こんにちは
+> 梅澤です。
+>
+> 定例のSmalltalk勉強会のお知らせです。
+>
+> 日時: 2011/10/31(月) 19:00-21:00 (2時間)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト:
+>  「自由自在Squeakプログラミング」
+>  「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai37kaismalltalkbenkyoukai
+>
+> 今回のテーマは久しぶりにScratchです。サイバー大学の阿部さんにご講演いただきます。
+> タイトル: 「簡単だけど奥深い！Scratchプログラミングの魅力」
+> 10月24日からITpro(http://itpro.nikkeibp.co.jp/)で連載される同名記事のライブな解説となるようです。お楽しみに。
+>
+> 参加表明は特に必要ありません。ふらりとお越しください。
+> --
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+>
+
+
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

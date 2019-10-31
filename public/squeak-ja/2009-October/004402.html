@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4402] Re: SqueakDBXの導入について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204402%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0RCWBskQiROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRjNGfiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=a49cf92a0910310228j2d940ffes86a51614fb12e5b4%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004401.html">
+   <LINK REL="Next"  HREF="004403.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4402] Re: SqueakDBXの導入について</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204402%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0RCWBskQiROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRjNGfiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=a49cf92a0910310228j2d940ffes86a51614fb12e5b4%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4402] Re: SqueakDBXの導入について">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2009年 10月 31日 (土) 20:53:31 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004401.html">[Squeak-ja: 4401] Re: SqueakDBXの導入について
+</A></li>
+        <LI>次の記事 <A HREF="004403.html">[Squeak-ja: 4403] 添付ファイルについて (was: Re: SqueakDBXの導入について)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4402">[ 日付 ]</a>
+              <a href="thread.html#4402">[ スレッド ]</a>
+              <a href="subject.html#4402">[ 件名 ]</a>
+              <a href="author.html#4402">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>梅澤です。
+
+1M程度であれば、まずは添付で送っていただいて大丈夫と思います。
+はじかれてしまうようでしたら、別の方法にするというのはいかがでしょうか。
+
+SqueakDebug.logの内容から推測すると、外部ライブラリが見つからないか、
+呼び出せていないような感じがします。
+
+以上、よろしくお願い申し上げます。
+
+daisuke yamashita &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">y.daisuke.homeaddres ＠ gmail.com</A>&gt; wrote:
+&gt;<i> ヤマシタです。
+</I>&gt;<i> 
+</I>&gt;<i> 申し訳ありません。
+</I>&gt;<i> タイトルに余分なものが入った状態で、送ってしまいました。。。
+</I>&gt;<i> 以後、気をつけます。
+</I>&gt;<i> 
+</I>&gt;<i> さて、DebugReportの導入を実施してログを取得しました。
+</I>&gt;<i> 容量が大きいのですが、872KB程度あるのですが、皆様はどういう形でアップなり
+</I>&gt;<i> 情報を提供されていますでしょうか？
+</I>&gt;<i> 
+</I>&gt;<i> 記録としてのこすならMLに配布がよいと思いますが、サーバにご迷惑をおかけしますし、
+</I>&gt;<i> 他のファイルアップローダ等だと後日なくなってしまう可能性がありますので、
+</I>&gt;<i> どうしたらよいものかと思っております。
+</I>&gt;<i> 
+</I>&gt;<i> 何か、良い方法がありましたら、ご教授頂けると幸いです。
+</I>&gt;<i> 
+</I>&gt;<i> 以上、よろしくお願い致します。
+</I>&gt;<i> 
+</I>&gt;<i> OLD Message=====================================================
+</I>&gt;<i> 
+</I>&gt;<i> 梅澤さん
+</I>&gt;<i> 
+</I>&gt;<i> エラーログの取得についてのご指示ありがとうございます。
+</I>&gt;<i> 
+</I>&gt;<i> DebugReportの導入を今から実施をしようと思っています。
+</I>&gt;<i> 
+</I>&gt;<i> 先にDebug.logの内容を記載させて頂きます。
+</I>&gt;<i> 何となく、postgres関係の設定のような気もしていますが、
+</I>&gt;<i> localhostはすべてtrustなので、問題ないと思っているのですが。。。
+</I>&gt;<i> 
+</I>&gt;<i> 以下、デバッグ内容です。
+</I>&gt;<i> 他、ご指示を頂ければ幸いです。
+</I>&gt;<i> 
+</I>&gt;<i> ================================================
+</I>&gt;<i> Error: Unable to find function address
+</I>&gt;<i> 29 October 2009 1:31:13 am
+</I>&gt;<i> 
+</I>&gt;<i> VM: Mac OS - a SmalltalkImage
+</I>&gt;<i> Image: Squeak3.9 [latest update: #7067]
+</I>&gt;<i> 
+</I>&gt;<i> SecurityManager state:
+</I>&gt;<i> Restricted: false
+</I>&gt;<i> FileAccess: true
+</I>&gt;<i> SocketAccess: true
+</I>&gt;<i> Working Dir /Users/daisuke/Develop/SeasideJOne-090425-plusDB/image
+</I>&gt;<i> Trusted Dir /foobar/tooBar/forSqueak/bogus
+</I>&gt;<i> Untrusted Dir /Users/daisuke/Library/Preferences/Squeak/Internet/My Squeak
+</I>&gt;<i> 
+</I>&gt;<i> OpenDBXMacOSX(Object)&gt;&gt;error:
+</I>&gt;<i>        Receiver: an OpenDBXMacOSX
+</I>&gt;<i>        Arguments and temporary variables:
+</I>&gt;<i>                aString:        'Unable to find function address'
+</I>&gt;<i>        Receiver's instance variables:
+</I>&gt;<i> an OpenDBXMacOSX
+</I>&gt;<i> 
+</I>&gt;<i> OpenDBXMacOSX(Object)&gt;&gt;externalCallFailed
+</I>&gt;<i>        Receiver: an OpenDBXMacOSX
+</I>&gt;<i>        Arguments and temporary variables:
+</I>&gt;<i>                errCode:        13
+</I>&gt;<i>        Receiver's instance variables:
+</I>&gt;<i> an OpenDBXMacOSX
+</I>&gt;<i> 
+</I>&gt;<i> OpenDBXMacOSX(OpenDBXUnix)&gt;&gt;apiInitialize:backend:host:port:
+</I>&gt;<i>        Receiver: an OpenDBXMacOSX
+</I>&gt;<i>        Arguments and temporary variables:
+</I>&gt;<i>                handle:         a WordArray(0)
+</I>&gt;<i>                backend:        'pgsql'
+</I>&gt;<i>                host:   '127.0.0.1'
+</I>&gt;<i>                port:   '5432'
+</I>&gt;<i>        Receiver's instance variables:
+</I>&gt;<i> an OpenDBXMacOSX
+</I>&gt;<i> 
+</I>&gt;<i> DBXPostgresPlatform(DBXPlatform)&gt;&gt;createConnection:
+</I>&gt;<i>        Receiver: a DBXPostgresPlatform
+</I>&gt;<i>        Arguments and temporary variables:
+</I>&gt;<i>                aConnection:    a DBXConnection
+</I>&gt;<i>                err:    nil
+</I>&gt;<i>                handleArray:    a WordArray(0)
+</I>&gt;<i>                handle:         nil
+</I>&gt;<i>        Receiver's instance variables:
+</I>&gt;<i> a DBXPostgresPlatform
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> --- The full stack ---
+</I>&gt;<i> OpenDBXMacOSX(Object)&gt;&gt;error:
+</I>&gt;<i> OpenDBXMacOSX(Object)&gt;&gt;externalCallFailed
+</I>&gt;<i> OpenDBXMacOSX(OpenDBXUnix)&gt;&gt;apiInitialize:backend:host:port:
+</I>&gt;<i> DBXPostgresPlatform(DBXPlatform)&gt;&gt;createConnection:
+</I>&gt;<i>  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</I>&gt;<i> DBXConnection&gt;&gt;connect
+</I>&gt;<i> UndefinedObject&gt;&gt;DoIt
+</I>&gt;<i> Compiler&gt;&gt;evaluate:in:to:notifying:ifFail:logged:
+</I>&gt;<i> [] in TextMorphEditor(ParagraphEditor)&gt;&gt;evaluateSelection {[rcvr class
+</I>&gt;<i> evaluatorClass new   evaluate: self selectionAsStream   in: ctxt...]}
+</I>&gt;<i> BlockContext&gt;&gt;on:do:
+</I>&gt;<i> TextMorphEditor(ParagraphEditor)&gt;&gt;evaluateSelection
+</I>&gt;<i> TextMorphEditor(ParagraphEditor)&gt;&gt;doIt
+</I>&gt;<i> [] in TextMorphEditor(ParagraphEditor)&gt;&gt;doIt: {[self doIt]}
+</I>&gt;<i> TextMorphEditor(Controller)&gt;&gt;terminateAndInitializeAround:
+</I>&gt;<i> TextMorphEditor(ParagraphEditor)&gt;&gt;doIt:
+</I>&gt;<i> TextMorphEditor(ParagraphEditor)&gt;&gt;dispatchOnCharacter:with:
+</I>&gt;<i> TextMorphEditor&gt;&gt;dispatchOnCharacter:with:
+</I>&gt;<i> TextMorphEditor(ParagraphEditor)&gt;&gt;readKeyboard
+</I>&gt;<i> TextMorphEditor&gt;&gt;readKeyboard
+</I>&gt;<i> [] in TextMorphForEditView(TextMorph)&gt;&gt;keyStroke: {[editor readKeyboard]}
+</I>&gt;<i> TextMorphForEditView(TextMorph)&gt;&gt;handleInteraction:fromEvent:
+</I>&gt;<i> TextMorphForEditView&gt;&gt;handleInteraction:fromEvent:
+</I>&gt;<i> TextMorphForEditView(TextMorph)&gt;&gt;keyStroke:
+</I>&gt;<i> TextMorphForEditView&gt;&gt;keyStroke:
+</I>&gt;<i> TextMorphForEditView(TextMorph)&gt;&gt;handleKeystroke:
+</I>&gt;<i> KeyboardEvent&gt;&gt;sentTo:
+</I>&gt;<i> TextMorphForEditView(Morph)&gt;&gt;handleEvent:
+</I>&gt;<i> TextMorphForEditView(Morph)&gt;&gt;handleFocusEvent:
+</I>&gt;<i> [] in HandMorph&gt;&gt;sendFocusEvent:to:clear: {[ActiveHand := self.
+</I>&gt;<i> ActiveEvent := anEvent.  result := focusHolder     han...]}
+</I>&gt;<i> [] in PasteUpMorph&gt;&gt;becomeActiveDuring: {[aBlock value]}
+</I>&gt;<i> BlockContext&gt;&gt;on:do:
+</I>&gt;<i> PasteUpMorph&gt;&gt;becomeActiveDuring:
+</I>&gt;<i> HandMorph&gt;&gt;sendFocusEvent:to:clear:
+</I>&gt;<i> HandMorph&gt;&gt;sendEvent:focus:clear:
+</I>&gt;<i> HandMorph&gt;&gt;sendKeyboardEvent:
+</I>&gt;<i> HandMorph&gt;&gt;handleEvent:
+</I>&gt;<i> HandMorph&gt;&gt;processEvents
+</I>&gt;<i> [] in WorldState&gt;&gt;doOneCycleNowFor: {[:h |  ActiveHand := h.  h
+</I>&gt;<i> processEvents.  capturingGesture := capturingGest...]}
+</I>&gt;<i> Array(SequenceableCollection)&gt;&gt;do:
+</I>&gt;<i> WorldState&gt;&gt;handsDo:
+</I>&gt;<i> WorldState&gt;&gt;doOneCycleNowFor:
+</I>&gt;<i> WorldState&gt;&gt;doOneCycleFor:
+</I>&gt;<i> PasteUpMorph&gt;&gt;doOneCycle
+</I>&gt;<i> [] in Project class&gt;&gt;spawnNewProcess {[[World doOneCycle.  Processor
+</I>&gt;<i> yield.  false] whileFalse.  nil]}
+</I>&gt;<i> [] in BlockContext&gt;&gt;newProcess {[self value.  Processor terminateActive]}
+</I>&gt;<i> 
+</I>&gt;<i> ============
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> &gt; こんにちは
+</I>&gt;<i> &gt; 梅澤です。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 発生しているエラーについてですが、SqueakDebug.logというファイルが書かれて
+</I>&gt;<i> &gt; いるはずですので、まずはそれを添付してもらうとよいのではないでしょうか。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; もしくはDebugReportをインストールしておくと、さらに詳しい情報をダンプ
+</I>&gt;<i> &gt; できますのでお勧めです。(MLに送るにはちょっと大きすぎるかもしれませんが)
+</I>&gt;<i> &gt; <A HREF="http://squeaksource.blueplane.jp/DebugReport.html">http://squeaksource.blueplane.jp/DebugReport.html</A>
+</I>&gt;<i> &gt; <A HREF="http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt">http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; SqueakDBXですが、日本語環境ではわたしも試したことがありませんので、果たして
+</I>&gt;<i> &gt; うまくつながるのか、非常に興味があります。
+</I>
+
+
+---
+[:masashi | ^umezawa]
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004401.html">[Squeak-ja: 4401] Re: SqueakDBXの導入について
+</A></li>
+	<LI>次の記事 <A HREF="004403.html">[Squeak-ja: 4403] 添付ファイルについて (was: Re: SqueakDBXの導入について)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4402">[ 日付 ]</a>
+              <a href="thread.html#4402">[ スレッド ]</a>
+              <a href="subject.html#4402">[ 件名 ]</a>
+              <a href="author.html#4402">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

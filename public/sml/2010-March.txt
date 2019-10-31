@@ -1,0 +1,184 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Mar  3 07:03:25 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Mar  3 07:03:39 2010
+Subject: [SML 7789] Re: 第17回Smalltalk勉強会＠京都
+In-Reply-To: <4B849346.5040301@cc.kyoto-su.ac.jp>
+References: <4B849346.5040301@cc.kyoto-su.ac.jp>
+Message-ID: <4B8D8B2D.8030309@cc.kyoto-su.ac.jp>
+
+本日（reminder）です！
+
+ワークスペースを多用して『プログラミングのプログラミング』をや
+りましょう。『樹状整列』のプログラムを完成に導きたいと思います。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/ProjectZero/Requirement/
+
+VisualWorks のワークスペースはローカル変数（フィールド）を持ち、
+タブ（タックインデックス）よるページでプログラム（メソッド）を
+保持していると考えると、まるで『ワークスペースがオブジェクトの
+ようです』と言っても差し支えありません。これは↑↑濱崎さん曰く。
+
+--- 青木淳＠京都宇治
+
+(10/02/24 11:47), AOKI Atsushi wrote:
+> 青木淳＠京都上賀茂です。
+> 
+> 第17回Smalltalk勉強会@京都を開催いたします。年度末の月次でお
+> 忙しいと思いますが、万障繰り合わせてJR京都駅前にお集まりくだ
+> さい。桃の節句（ひな祭り）をSmalltalkで楽しみませう！
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto17
+> 
+> 第17回 Smalltalk勉強会＠京都
+> 日時：2010年03月03日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 年度末（今回）の勉強会では、取り組んでいる課題の要求仕様書に
+> したがって、複数の木を表現する森の機構を作り上げましょう。前
+> 回と同様にVisualWorks 7.7 NC上でプログラミングのプログラミン
+> グを行います。ノート型のパーソナルコンピュータ（Windows 7/
+> Vista/XP または Mac OS X）をご持参ください。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From nisinaka ＠ sra.co.jp  Wed Mar 10 11:21:02 2010
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Wed Mar 10 11:21:08 2010
+Subject: [SML 7790] [ANNOUNCE] Jun for Java (Jun758)
+Message-ID: <20100310112024.09A9.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン758を公開します。
+
+  バージョン746からの主な変更点は、以下の通りです。
+
+    * (new feature) JunFeelTheMoon は、月の満ち欠けを表示するクラ
+      スです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/758/FeelTheMoon.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/758/FeelTheMoon.gif
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/758/201003/index_ja.html
+
+    * (modification) JunApplicationModel が新しいモデルを生成する
+      際、元のモデルのウィンドウが開いていれば、同じサイズで新し
+      いウィンドウを開くようになりました。
+
+    * (bug fix) JunOpenGL3dModel の照明のメニュー項目のチェックマー
+      クが、正しい状態を示していなかった不具合を修正しました。
+
+    * (new feature) JunOpenGL3dTypicalObjectsBall を Jun757 相当
+      に更新しました。典型的なオブジェクトとして「月(moon)」を追
+      加しました。
+
+    * (modification) JunOpenGL3dObject およびそのサブクラス群を 
+      Jun752 相当に更新しました。単に名前の属性を持つ代わりに、テー
+      ブルの形式でプロパティを保持するようになりました。
+
+    * (bug fix) JunBorderGenerator のマーチングキューブを修正しま
+      した。
+
+    * (modification) JunButtonWithMenuModel が、カスケードメニュー
+      を扱うことが出来るようになりました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+From umejava ＠ mars.dti.ne.jp  Sat Mar 20 23:29:20 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Mar 20 23:29:25 2010
+Subject: [SML 7791] 第18回Smalltalk勉強会のお知らせ
+Message-ID: <Jxf7NzyMfF..fL3dxVWPOIjA4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/3/26(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai18kaismalltalkbenkyoukai
+
+テーマは「いろいろなDBにつなぐ」です。
+
+今回もハッカソン風にやります。皆でワイワイと好きなDBにつないで自慢する?
+という形式になります。オールドファンの方はObjectLensでやってみるのも
+良いでしょう。新しめの人はGlorp経由、もしくはCouchDBなどのKVSにつないで
+みるのも一興かと。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Mar 24 11:18:03 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Mar 24 11:18:09 2010
+Subject: [SML 7792] 第18回Smalltalk勉強会＠京都
+Message-ID: <4BA9765B.9020003@cc.kyoto-su.ac.jp>
+
+青木淳＠京都上賀茂です。
+
+研究室が引っ越しました。（from 1号館4階1402研究室 to 第2実験室棟3階73研究室）
+http://www.cc.kyoto-su.ac.jp/~atsushi/Profile/index-j.html#Laboratory
+雛祭りの日の勉強会の報告と補足資料を綴れなくて、ごめんなさい。
+
+さて、新年度が近づいてきました！　第18回Smalltalk勉強会@京都
+を開催します。万障繰り合わせて、JR京都駅前にお集まりください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto18
+
+第18回 Smalltalk勉強会＠京都
+日時：2010年04月07日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+前回の勉強会において取り組んでいる課題のプログラムができあが
+りましたので、今回はそのプログラムの詳しい解説を行います。加
+えて、成果物一式（要求仕様書・開発計画書・基本設計書・詳細設
+計書・テスト仕様書・テスト結果報告書・開発実績報告書・プログ
+ラム・マニュアルのすべて）を電子的に差し上げます。ノート型の
+パーソナルコンピュータ（Windows 7/Vista/XP または Mac OS X）
+をご持参ください。
+
+------------------------------------------------------------
+
+キャンパスプラザ京都（京都市大学のまち交流センター：通称キャ
+ンプラ）の予約が確定しております。キャンプラ内ではありますが、
+開催する部屋がコロコロと変わることになりますから、ご留意くだ
+さいませ。
+
+使用目的　　：研究会（勉強会）
+使用時間帯　：18:00-21:30
+使用予定日　：
+　04/07　６階　第３講習室（←京都産業大学サテライト）
+　05/12　５階　第※演習室
+　06/02　５階　第※演習室
+　07/07　５階　第※演習室
+　08/04　５階　第※演習室
+　09/01　６階　第３講習室（←京都産業大学サテライト）
+　10/06　６階　第３講習室（←京都産業大学サテライト）
+　11/10　２階　第２会議室
+　12/01　２階　第２会議室
+　01/05　６階　第３講習室（←京都産業大学サテライト）
+　02/02　６階　第３講習室（←京都産業大学サテライト）
+　03/02　６階　第３講習室（←京都産業大学サテライト）
+　※演習室の部屋番号は現在確認中
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

@@ -1,0 +1,260 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Apr  4 08:48:21 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 04 Apr 2012 08:48:21 +0900
+Subject: [SML 8003] Re:
+	第42回Smalltalk勉強会＠京都
+In-Reply-To: <4F732CF2.2010202@cc.kyoto-su.ac.jp>
+References: <4F732CF2.2010202@cc.kyoto-su.ac.jp>
+Message-ID: <4F7B8C45.2010305@cc.kyoto-su.ac.jp>
+
+本日です！
+
+--- 青木淳
+
+
+(12/03/29 0:23), AOKI Atsushi wrote:
+> 第42回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto42
+>
+> 場所(部屋)はキャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第42回 Smalltalk勉強会＠京都
+> 日時：2012年04月04日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 前回は「処理時間と清掃回数」と「代理人」を行いました。今回も
+> プログラム制御構造を主題にして配付資料で勉強したいと思います。
+> トピックスとして「閉包(クロージャ)」と「逐次・並行・約束」を
+> 解題してゆきます。ノート型のパーソナルコンピュータ
+> （Windows 7 または Mac OS X）をご持参ください。
+>
+> --- 青木淳＠京都宇治
+
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Apr  8 19:44:42 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun, 08 Apr 2012 19:44:42 +0900
+Subject: [SML 8004] Re:
+	第42回Smalltalk勉強会＠京都
+In-Reply-To: <4F7B8C45.2010305@cc.kyoto-su.ac.jp>
+References: <4F732CF2.2010202@cc.kyoto-su.ac.jp>
+ <4F7B8C45.2010305@cc.kyoto-su.ac.jp>
+Message-ID: <4F816C1A.7040100@cc.kyoto-su.ac.jp>
+
+妹尾さんから勉強会ログが届きましたので、サーバにアップロードしておきました。
+もちろん、勉強会で紹介したプログラム（改訂版）もアップロードしてあります。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto42
+
+勉強会ログには、改訂版の「処理時間と清掃回数」と「閉包」
+と「逐次・並行・約束」の配付資料も含めてあります。
+
+--- 青木淳＠京都宇治
+
+
+(12/04/04 8:48), AOKI Atsushi wrote:
+> 本日です！
+>
+> --- 青木淳
+>
+>
+> (12/03/29 0:23), AOKI Atsushi wrote:
+>> 第42回Smalltalk勉強会＠京都を開催します。
+>>
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto42
+>>
+>> 場所(部屋)はキャンプラ6階の第3講習室になります。
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第42回 Smalltalk勉強会＠京都
+>> 日時：2012年04月04日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 前回は「処理時間と清掃回数」と「代理人」を行いました。今回も
+>> プログラム制御構造を主題にして配付資料で勉強したいと思います。
+>> トピックスとして「閉包(クロージャ)」と「逐次・並行・約束」を
+>> 解題してゆきます。ノート型のパーソナルコンピュータ
+>> （Windows 7 または Mac OS X）をご持参ください。
+>>
+>> --- 青木淳＠京都宇治
+
+From serge.stinckwich ＠ gmail.com  Thu Apr 12 11:03:45 2012
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Thu, 12 Apr 2012 09:03:45 +0700
+Subject: [SML 8005] 6th Workshop on Dynamic Languages and Applications DYLA
+	2012
+Message-ID: <CAOysuxXM0xYvGUUZz-ZUru5T8ywuB9uavzA-u_HFmoYGRiA3bQ@mail.gmail.com>
+
+===================================================================
+6th Workshop on Dynamic Languages and Applications
+Colocated with 26th European Conference on Object-Oriented Programming
+(ECOOP 2012)
+11?16 June 2012, Beijing, China
+===================================================================
+
+Web site: http://scg.unibe.ch/wiki/events/dyla2012
+
+The DYLA Workshop series focuses on the revival of dynamic languages.
+These days, dynamic languages (like Lisp, Ruby, Python, JavaScript,
+Lua, etc...) are getting ever more popular. This is a call to arms for
+academia! We need to explore the future of dynamic languages through
+its human aspects and technical issues. We also ought to look back and
+pick up solutions from existing dynamic languages (such as Scheme,
+Smalltalk, or Self) to be rediscovered and spread around.
+
+Goal and Topics
+
+The goal of this workshop is to act as a forum where we can discuss
+new advances in the design, implementation and application of
+dynamically typed languages that, sometimes radically, diverge from
+the statically typed class-based mainstream with limited reflective
+capabilities. Another objective of the workshop is to discuss new as
+well as older “forgotten” languages and features in this context.
+The workshop will have a demo-oriented style. The idea is to allow
+participants to demonstrate new and interesting features and discuss
+what they feel is relevant for the dynamic language community. All
+participants need to submit a two-page description (LNCS format) of
+their presentation or/and tool demonstration. Each accepted paper will
+be presented for 20?30 minutes. Moreover, all workshop attendees
+will be asked to give 10-minute “lightning demos” of whatever they
+bring with them. A dedicated session will be allocated for this,
+provided there is ample time available. A session on pair programming
+is also planned. People will then get a chance to share their
+technology by closely interacting with other participants.
+
+Submission page is http://www.easychair.org/conferences/?conf=dyla2012
+
+The expected audience of this workshop is practitioners and
+researchers sharing the same interest in dynamically typed languages.
+Lua, Python, Ruby, Scheme and Smalltalk are gaining a significant
+popularity both in industry and academia. However, each community has
+the tendency to only look at what it produced. Broadening the scope of
+each community is the goal of the workshop. To achieve this goal we
+will form a PC with leading persons from all languages mentioned
+above, fostering participation from all targeted communities.
+
+Topics of interest include, but are certainly not limited to:
+- what features make a language a dynamic one?
+- agents, actors, active object, distribution, concurrency and mobility
+- delegation, prototypes, mixins, traits
+- first-class closures, continuations, environments
+- reflection and meta-programming
+- (dynamic) aspects for dynamic languages
+- higher-order objects & messages
+- other exotic dynamic features
+- multi-paradigm & static/dynamic-marriages
+- (concurrent/distributed/mobile/aspect) virtual machines
+- optimization of dynamic languages
+- automated reasoning about programs written in dynamic languages
+- improved or novel IDE support for dynamic languages
+- empirical studies about the application of dynamic languages
+- best practices and patterns specific to dynamic languages
+- use of dynamic features by library & framework developers
+- reverse engineering and analysis of dynamic applications
+- program correctness through unit testing (as opposed to types)
+- applications of dynamic languages: embedded systems, robotic
+systems, web site, ...
+
+And any topic relevant in applying and/or supporting dynamic
+languages: Smalltalk, Python, Ruby, Javascript, Scheme, Lisp, Self,
+ABCL, Prolog, Ioke, Clojure and many more...
+
+Important dates
+- Due date for full workshop papers submission: April 17th, 2012
+- Notification of acceptance: April 27th, 2012
+- Workshop: June 12th, 2012
+
+Organizers
+
+- Alexandre Bergel, University of Chile, Santiago, Chile
+- Damien Cassou, Arles research group at INRIA, France
+- Jorge Ressia, University of Bern, Switzerland
+- Serge Stinckwich, UMMISCO, IRD/UPMC/VNU, Vietnam
+
+Program Committee
+
+- Alexandre Bergel, University of Chile, Santiago, Chile
+- Carl Friedrich Bolz, Heinrich-Heine-Universität, Germany
+- Camillo Bruni, Camillo Bruni, RMoD, INRIA, France
+- Damien Cassou, Arles research group at INRIA, France
+- Adrian Kuhn, UBC, Canada
+- Olivier Michel, UPEC, France
+- Lukas Renggli, Google, Switzerland
+- Jorge Ressia, University of Bern, Switzerland
+- Serge Stinckwich, UMMISCO, IRD/UPMC/VNU, Vietnam
+- Juan Pablo Sandoval Alcocer, University of Chile, Chile
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+
+From ume ＠ softumeya.com  Fri Apr 20 22:38:10 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Fri, 20 Apr 2012 22:38:10 +0900
+Subject: [SML 8006]
+	第42回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTGH+URVUOWt4ZcunKsKBYhsCmZJRcxguZ-KLeW5EceJg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2012/4/26(木) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai42kaismalltalkbenkyoukai
+
+今月のSmalltalk勉強会は、Seasideの開発事例について、吉田さんが発表されます。
+---
+タイトル:
+　もしイチゴ農家の園主がSmalltalkの「Seaside」（で作られたシステム）を使ってみたら
+概要:
+　愛知県のイチゴ農家がSeasideを使って愛知県トップを目指すストーリー・・・ではなく，Seasideで作ったWeb
+APを実際に一般公開してみたお話です．Smalltalk選定理由から開発，公開までの流れを話します．※当日一部変更あり
+---
+なかなか面白そうではありませんか!
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Apr 26 06:47:26 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 26 Apr 2012 06:47:26 +0900
+Subject: [SML 8007]
+	第43回Smalltalk勉強会＠京都
+Message-ID: <4F9870EE.7050001@cc.kyoto-su.ac.jp>
+
+第43回Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto43
+
+場所(部屋)はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第43回 Smalltalk勉強会＠京都
+日時：2012年05月02日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+前回は「閉包(クロージャ)」と「逐次・並行・約束」を行いました。
+今回もプログラム制御構造造を主題にして配付資料で勉強したいと
+思います。トピックスとして「継続(コンティニュエーション)」と
+「継続譲渡スタイル(CPS)」を解題してゆきます。ノート型のパーソ
+ナルコンピュータ（Windows 7 または Mac OS X）をご持参ください。
+
+--- 青木淳＠京都宇治
+

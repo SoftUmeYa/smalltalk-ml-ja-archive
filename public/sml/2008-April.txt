@@ -1,0 +1,72 @@
+From nisinaka ＠ sra.co.jp  Tue Apr  1 15:39:38 2008
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Tue Apr  1 15:39:46 2008
+Subject: [SML 7360] [ANNOUNCE] Jun for Java (Jun700)
+Message-ID: <20080401152734.0035.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン700を公開します。
+
+  バージョン699からの主な変更点は、以下の通りです。
+
+    * (incompatibility) 'Java 2 Platform, Standard Edition, 1.4'
+      への対応を終了します。
+
+    * (modification) 位相関連のクラスで deprcated と指定されたメ
+      ソッドの使用を撤廃しました。
+
+    * (modification) 位相関連のクラスの JavaDoc コメントを整理し
+      ました。
+
+    * (bug fix) インスタンス変数のイニシャライザに関連するバグを
+      修正しました。JunAbstractObject のサブクラスになったクラス
+      は、コンストラクタで 'initialize' メソッドが呼び出されるの
+      で、イニシャライザでの初期化は行わないようにしました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Apr  9 07:00:08 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Apr  9 07:00:23 2008
+Subject: [SML 7361] 新しいホームページを作成
+Message-ID: <47FBEAE8.8010005@cc.kyoto-su.ac.jp>
+
+３日前にポストしたメールが、私の新しいアドレスから出したこと
+でＳＭＬへ配送されませんでした。もう一度ポストさせてください。
+
+-------- Original Message --------
+Subject: 新しいホームページを作成
+Date: Sun, 06 Apr 2008 16:50:17 +0900
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+To: Smalltalkers' Salon Mailing List <sml@akademia.co.jp>
+
+青木＠京都宇治です。
+
+昨日、京都の川端通りを南（十条）から北上して、修学院離宮の近
+くまで行ったのですが、鴨川および高野川に沿って植えられている
+桜花が満開です。まさに春爛漫、ものすごい人出。
+
+この土曜日と日曜日を使って、新しいホームページを開設しました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+あわてて建てたウェブページですので、内容に欠けますが、これか
+ら充実させてゆく所存です。Smalltalk 関連の事をたくさん加えて
+ゆきます。なお、従来のホームページやメールアドレスも温存です。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+

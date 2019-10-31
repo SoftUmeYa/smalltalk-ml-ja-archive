@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2656] Re: 日本語のUTF-8
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202656%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bCROGyhCVVRG%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FLTg%3D%3F%3D&In-Reply-To=20050923092008.B855.KOUBO2005%40yengawa.jpn.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002655.html">
+   <LINK REL="Next"  HREF="002657.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2656] Re: 日本語のUTF-8</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202656%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bCROGyhCVVRG%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FLTg%3D%3F%3D&In-Reply-To=20050923092008.B855.KOUBO2005%40yengawa.jpn.org"
+       TITLE="[Squeak-ja: 2656] Re: 日本語のUTF-8">koubo2005 ＠ yengawa.jpn.org
+       </A><BR>
+    <I>2005年 9月 25日 (日) 12:11:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002655.html">[Squeak-ja: 2655] 日本語のUTF-8
+</A></li>
+        <LI>次の記事 <A HREF="002657.html">[Squeak-ja: 2657] 教えてください
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2656">[ 日付 ]</a>
+              <a href="thread.html#2656">[ スレッド ]</a>
+              <a href="subject.html#2656">[ 件名 ]</a>
+              <a href="author.html#2656">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+Unicodeを良く知らないでやってますが、こんな風にするとShift-JISとかで読ん
+だ文字と一致するWideStringを作れました。
+
+asCorrectLeadingChar: aWideString 
+	&quot;Return a new string which has correct leadingChar.&quot;
+	^ aWideString
+		collect: [:char | 
+			| fixedChar code | 
+			fixedChar := char.
+			code := char asUnicode.
+			(Unicode isJapanese: code)
+				ifTrue: [fixedChar := Character leadingChar: JapaneseEnvironment leadingChar code: code].
+			fixedChar]
+
+
+On Fri, 23 Sep 2005 09:33:54 +0900
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2005 ＠ yengawa.jpn.org</A>&gt; wrote:
+
+&gt;<i> 横川です。
+</I>&gt;<i> UTF-8で書いた日本語をSqueakで読む方法を個人メールで聞いたのですが、情報
+</I>&gt;<i> 共有のため流します。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> &gt; 山宮です。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; UTF-8 自体には「日本語である」という情報が無いので日本語に出来ません。
+</I>&gt;<i> &gt; なので例えば
+</I>&gt;<i> &gt; ((FileStream readOnlyFileNamed: 'UTF8.txt') converter: UTF8TextConverter new) contents collect: [:c | (Character leadingChar: JapaneseEnvironment leadingChar code: c charCode)]
+</I>&gt;<i> &gt; のように一つ一つの文字に「日本語である」と明示的におしえてあげ
+</I>&gt;<i> &gt; なくてはなりません。(もっと探せばスマートな方法があると思います。)
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Koji Yokokawa wrote:
+</I>&gt;<i> &gt; &gt; 横川です。
+</I>&gt;<i> &gt; &gt; SqueakのMultilingualとLocaleについて教えてください。
+</I>&gt;<i> &gt; &gt; (詳しいお二人に出してます。)
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Squeak3.8でLocaleをenなどにしているとUTF-8で書いた日本語の内部表現
+</I>&gt;<i> &gt; &gt; &lt;WideString&gt;がShift-JISなどと異なるのですが、どうしてですか?
+</I>&gt;<i> &gt; &gt; あらかじめLocaleをjaにしておくと一致するのですが、UTF-8で読んだ日本語文
+</I>&gt;<i> &gt; &gt; 字をLocaleに左右されずに常にShift-JISやEUC-JPと一致させるにはどうすれば
+</I>&gt;<i> &gt; &gt; よいのか悩んでます。
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 具体的には同じ文字をUTF-8とShift-JISで書いたファイルを用意して以下を実行
+</I>&gt;<i> &gt; &gt; するとイメージのLocaleによらず常に同じになることを期待してたのです。
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; ((FileStream readOnlyFileNamed: 'UTF8.txt') converter: UTF8TextConverter
+</I>&gt;<i> &gt; &gt; new) contents 
+</I>&gt;<i> &gt; &gt; = 
+</I>&gt;<i> &gt; &gt; ((FileStream readOnlyFileNamed: 'SJIS.txt') converter: ShiftJISTextConverter
+</I>&gt;<i> &gt; &gt; new) contents
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- !
+</I>&gt;<i> Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2005 ＠ yengawa.jpn.org</A>&gt;
+</I>&gt;<i>     self new!
+</I>
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2005 ＠ yengawa.jpn.org</A>&gt;
+    self new!
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002655.html">[Squeak-ja: 2655] 日本語のUTF-8
+</A></li>
+	<LI>次の記事 <A HREF="002657.html">[Squeak-ja: 2657] 教えてください
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2656">[ 日付 ]</a>
+              <a href="thread.html#2656">[ スレッド ]</a>
+              <a href="subject.html#2656">[ 件名 ]</a>
+              <a href="author.html#2656">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

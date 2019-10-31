@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7697] Re: GNU Smalltalkについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207697%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdOVSBTbWFsbHRhbGsbJEIkSyREGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=8D0CABBD4CD44FE18611A720A6DB1174%40sunaoPC">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007696.html">
+   <LINK REL="Next"  HREF="007698.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7697] Re: GNU Smalltalkについて</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207697%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdOVSBTbWFsbHRhbGsbJEIkSyREGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=8D0CABBD4CD44FE18611A720A6DB1174%40sunaoPC"
+       TITLE="[SML 7697] Re: GNU Smalltalkについて">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2009年 10月 22日 (木) 06:16:37 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007696.html">[SML 7696] Re: GNU Smalltalkについて
+</A></li>
+        <LI>次の記事 <A HREF="007698.html">[SML 7698] Re: GNU Smalltalkについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7697">[ 日付 ]</a>
+              <a href="thread.html#7697">[ スレッド ]</a>
+              <a href="subject.html#7697">[ 件名 ]</a>
+              <a href="author.html#7697">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>古川さん
+ビューポイントテクノロジーの林です。
+
+Mac OSX 10.5.8 + X11 環境に Mac ports からインストールした  
+gst 3.1 で同様のGUIを利用出来ました。
+Worksheet での実行も可能です。
+なお起動するには gst-blox コマンドを利用しました。
+
+その他にも最近では、VisualGSTなる派生プロジェクトもある 
+ようですね。
+
+<A HREF="http://visualgst.bioskop.fr/">http://visualgst.bioskop.fr/</A>
+
+
+取り急ぎ、ご参考まで
+--
+
+
+On 2009/10/21, at 20:41, sunao furukawa wrote:
+
+&gt;<i> 　再びですが古川です。
+</I>&gt;<i> 　対話型インタープリターで以下のようにやってみました。
+</I>&gt;<i> -------------------------------------------
+</I>&gt;<i> #gst
+</I>&gt;<i> GNU Smalltalk ready
+</I>&gt;<i>
+</I>&gt;<i> st&gt; | a b |
+</I>&gt;<i> st&gt; a :=1
+</I>&gt;<i> 1
+</I>&gt;<i> st&gt; b :=4
+</I>&gt;<i> 4
+</I>&gt;<i> st&gt; a+b
+</I>&gt;<i> 5
+</I>&gt;<i> -------------------------------------------
+</I>&gt;<i> これだと確かにうまくいきます。
+</I>&gt;<i> 私がやったのは、GUIからです。
+</I>&gt;<i> #cd /usr/local/share/smalltalk/scripts
+</I>&gt;<i> #gst Browser.st &amp;
+</I>&gt;<i> そしてSmalltalk Transcriptの画面が出るのでメニューの 
+</I>&gt;<i> SmalltalkからWorksheetを選択して、
+</I>&gt;<i> Worksheetの画面が出てきたらペインの中に、
+</I>&gt;<i> --------
+</I>&gt;<i> | a b |
+</I>&gt;<i> a:=1.
+</I>&gt;<i> b:=4.
+</I>&gt;<i> ^a+b
+</I>&gt;<i> --------
+</I>&gt;<i> と入力し、全部マウスで選択したら右クリックでprint it 
+</I>&gt;<i> を出して左クリックで実行しました。
+</I>&gt;<i> 　問題はその後エラーの画面が出ました。若干迷惑かもしれませ 
+</I>&gt;<i> んがエラーの内容をコピペします。
+</I>&gt;<i> ----------------------------------------------------------------------------------
+</I>&gt;<i> MessageNotUnderstood(Exception)&gt;&gt;signal
+</I>&gt;<i> String(Object)&gt;&gt;doesNotUnderstand: #+
+</I>&gt;<i> [] in  
+</I>&gt;<i> BLOX 
+</I>&gt;<i> .BLOXBrowser 
+</I>&gt;<i> .PWorksheetText(BLOX.BLOXBrowser.PText)&gt;&gt;evalAndPrintResult
+</I>&gt;<i> [] in Behavior class(Behavior)&gt;&gt;evalString:to:ifError:
+</I>&gt;<i> STInST.GSTFileInParser(STInST.RBParser)&gt;&gt;parserError:
+</I>&gt;<i> STInST.STEvaluationDriver(STInST.STParsingDriver)&gt;&gt;parserError:
+</I>&gt;<i> STInST.STCompiler&gt;&gt;compileError:
+</I>&gt;<i> STInST.STCompiler&gt;&gt;lookupName:
+</I>&gt;<i> STInST.STCompiler&gt;&gt;compileAssignmentFor:
+</I>&gt;<i> STInST.STCompiler&gt;&gt;acceptAssignmentNode:
+</I>&gt;<i> STInST.RBAssignmentNode&gt;&gt;acceptVisitor:
+</I>&gt;<i> optimized [] in STInST.STCompiler&gt;&gt;compileStatements:
+</I>&gt;<i> OrderedCollection(SequenceableCollection)&gt;&gt;keysAndValuesDo:
+</I>&gt;<i> STInST.STCompiler&gt;&gt;compileStatements:
+</I>&gt;<i> STInST.STCompiler&gt;&gt;acceptSequenceNode:
+</I>&gt;<i> STInST.RBSequenceNode&gt;&gt;acceptVisitor:
+</I>&gt;<i> STInST.STCompiler(STInST.RBProgramNodeVisitor)&gt;&gt;visitNode:
+</I>&gt;<i> STInST.STCompiler  
+</I>&gt;<i> class&gt;&gt;compile:asMethodOf:classified:parser:environment:
+</I>&gt;<i> STInST.STEvaluationDriver&gt;&gt;evaluate:
+</I>&gt;<i> STInST.GSTFileInParser(STInST.STFileParser)&gt;&gt;evaluate:
+</I>&gt;<i> STInST.GSTFileInParser&gt;&gt;evaluate:
+</I>&gt;<i> STInST.GSTFileInParser&gt;&gt;parseDoits
+</I>&gt;<i> STInST.GSTFileInParser(STInST.STFileInParser)&gt;&gt;parseSmalltalk
+</I>&gt;<i> STInST.GSTFileInParser class(STInST.STFileParser
+</I>&gt;<i> class)&gt;&gt;parseSmalltalk:with:onError:
+</I>&gt;<i> STInST 
+</I>&gt;<i> .STEvaluationDriver 
+</I>&gt;<i> (STInST.STParsingDriver)&gt;&gt;parseSmalltalk:with:onError:
+</I>&gt;<i> Behavior class(Behavior)&gt;&gt;evalString:to:ifError:
+</I>&gt;<i> Behavior class(Behavior)&gt;&gt;evaluate:to:ifError:
+</I>&gt;<i> BLOX 
+</I>&gt;<i> .BLOXBrowser.PWorksheetText(BLOX.BLOXBrowser.PText)&gt;&gt;doEval:ifError:
+</I>&gt;<i> BLOX.BLOXBrowser.PWorksheetText&gt;&gt;doEval:ifError:
+</I>&gt;<i> BLOX 
+</I>&gt;<i> .BLOXBrowser 
+</I>&gt;<i> .PWorksheetText(BLOX.BLOXBrowser.PText)&gt;&gt;evalAndPrintResult
+</I>&gt;<i> DirectedMessage(Message)&gt;&gt;sendTo:
+</I>&gt;<i> DirectedMessage&gt;&gt;send
+</I>&gt;<i> BLOX.BMenuItem(BLOX.BMenuObject)&gt;&gt;invokeCallback
+</I>&gt;<i> -----------------------------------------------------------------------------
+</I>&gt;<i> 　私はWorksheetをVisualWorksにおける 
+</I>&gt;<i> Workspaceのようにとらえていたので以上のようにやりました。
+</I>&gt;<i> 　portsをバージョンアップしてやってみようと思います。 
+</I>&gt;<i> ひょっとしたらファイルが壊れていてコンパイラがparseに 
+</I>&gt;<i> 失敗するのかもしれません。
+</I>&gt;<i> 　また、もしかしたらですがGUIからやってみて同じエラー 
+</I>&gt;<i> に遭遇した人がいたら教えてください。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007696.html">[SML 7696] Re: GNU Smalltalkについて
+</A></li>
+	<LI>次の記事 <A HREF="007698.html">[SML 7698] Re: GNU Smalltalkについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7697">[ 日付 ]</a>
+              <a href="thread.html#7697">[ スレッド ]</a>
+              <a href="subject.html#7697">[ 件名 ]</a>
+              <a href="author.html#7697">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

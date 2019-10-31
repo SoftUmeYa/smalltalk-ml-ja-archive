@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7548] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207548%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0AE566.1000302%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007544.html">
+   <LINK REL="Next"  HREF="007549.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7548] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>toshihiko ichida</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207548%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0AE566.1000302%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7548] Re: 第7回Smalltalk勉強会＠京都">dogatana ＠ gaia.eonet.ne.jp
+       </A><BR>
+    <I>2009年 5月 16日 (土) 10:11:07 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007544.html">[SML 7544] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007549.html">[SML 7549] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7548">[ 日付 ]</a>
+              <a href="thread.html#7548">[ スレッド ]</a>
+              <a href="subject.html#7548">[ 件名 ]</a>
+              <a href="author.html#7548">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>いちだです。
+
+AOKI Atsushi さんは書きました:
+
+&gt;<i> 今日は、私的変数・共有変数・特殊変数と進んで、メッセージに入
+</I>&gt;<i> ることができました。ところがですね、喧喧諤諤の状態、諸子百家
+</I>&gt;<i> の光景を呈し、かなり疲れましたぁ〜。
+</I>
+いつも楽しく参加させてもらっています。
+
+&gt;<i> 最内スコープ束縛方式を暗黙とした Smalltalk プログラミングに
+</I>&gt;<i> おいて、次の術語を明解にしておく必要があるのだろうと思います。
+</I>
+勉強会で XML.Text と Core.Text の２つのTexクラスという「名前」
+の解決について質問させていただきました。
+
+そのときにも最内スコープであるとの回答をいただいたと思うので
+す、クラス名については、どうもスコープの階層が無いように感じ
+ておりまだモヤモヤ感が残ってます。
+
+例えば Jun3Dimage というクラスの定義の冒頭には
+
+Smalltalk.Jun defineClass: #Jun3dImage
+	superclass: #{Jun.JunAbstractObject}
+
+とあり、名前空間としては Smalltalk.Jun に所属していますが、
+インスタンスを作成するときには
+  aImage := Smalltalk.Jun.3dImage new
+としなくても
+  aImage := 3dImage new
+とするだけでも 3dImage という名前のクラスのインスタンスを生
+成できます。SmalltalkはデフォルトとしてもJunが省略できてし
+まうのは何故だろうという疑問です。
+
+これから、同一クラス名となったときの曖昧さを解消するために、
+名前空間で擬似的に階層を扱えるが、作成したクラスは全て同じス
+コープにあるという理解をしたのですが、正しいでしょうか？
+
+あるいはスコープ階層は、クラス内でクラスを定義したときに出
+てくるものなのだろうかと想像したりします。
+（Smalltalkでできるのかどうか知らないのですが）
+
+--
+いちだ
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007544.html">[SML 7544] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007549.html">[SML 7549] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7548">[ 日付 ]</a>
+              <a href="thread.html#7548">[ スレッド ]</a>
+              <a href="subject.html#7548">[ 件名 ]</a>
+              <a href="author.html#7548">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

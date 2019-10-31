@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2808] Re: Mac OS X 用インストーラー
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202808%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYyBPUyBYIBskQk1RGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlcyU5JUghPCVpITwbKEI%3D%3F%3D&In-Reply-To=a06001000bff69b846935%40asu.aasa.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002803.html">
+   <LINK REL="Next"  HREF="002816.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2808] Re: Mac OS X 用インストーラー</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202808%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYyBPUyBYIBskQk1RGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlcyU5JUghPCVpITwbKEI%3D%3F%3D&In-Reply-To=a06001000bff69b846935%40asu.aasa.ac.jp"
+       TITLE="[Squeak-ja: 2808] Re: Mac OS X 用インストーラー">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2006年 1月 22日 (日) 22:24:19 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002803.html">[Squeak-ja: 2803] Mac OS X 用インストーラー
+</A></li>
+        <LI>次の記事 <A HREF="002816.html">[Squeak-ja: 2816] Re: Mac OS X 用インストーラー
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2808">[ 日付 ]</a>
+              <a href="thread.html#2808">[ スレッド ]</a>
+              <a href="subject.html#2808">[ 件名 ]</a>
+              <a href="author.html#2808">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>親松さん、こんばんは。
+今回、Mac版のパッケージを作成しました林です。
+ご報告ありがとうございます。
+
+On 2006/01/20, at 23:24, Kazuhiro Oyamatsu wrote:
+
+&gt;<i> こんにちは、
+</I>&gt;<i> 親松＠愛知淑徳大です。
+</I>&gt;<i>
+</I>&gt;<i> SqueakLand2005Jのリリースをありがとうございます。
+</I>&gt;<i>
+</I>&gt;<i> 最初、私だけの問題かなとも思いましたが、念のため２つ報告します。
+</I>&gt;<i> Mac OS X 10.3.9、Safari 1.3(v312)です。
+</I>&gt;<i>
+</I>&gt;<i> １つめ☆
+</I>&gt;<i> 昨日たまたまSqueakLand2005J(Mac OS X)をインストーラーで 
+</I>&gt;<i> インストールしようとしましたが、
+</I>&gt;<i> /Appication/Squeakland
+</I>&gt;<i> の中身が空っぽでうまくいきませんでした。
+</I>&gt;<i> で、よくわからなかったのですがDouble-Click-To- 
+</I>&gt;<i> Install.commandの６６行目の
+</I>&gt;<i> ditto -rsrcFork /Volumes/SqueakLand/SqueakLand /Applications/ 
+</I>&gt;<i> SqueakLand
+</I>&gt;<i> を
+</I>&gt;<i> ditto -rsrcFork /SqueakLand/SqueakLand /Applications/SqueakLand
+</I>&gt;<i> と変えたらインストールできました。
+</I>
+残念ながら私は手持ちを全て Tiger に移行してしまっている 
+為、再現出来てないのですが、インストール時の障害として、 
+MANTIS に登録しておきたいと思います。
+余談ですが、今のインストーラーは英語版のものをそのまま使っていま 
+す。
+これがまた、シェルスクリプトなのでユーザとの対応が適切になされて 
+おらず（インストール失敗時のメッセージとか）、無愛想なのですが、 
+一方で、今回の親松さんの様にユーザが適宜修正することも出来るじゃ 
+ない。
+というのを狙っているのかなとか妄想してたりしてます。
+
+でもやはり、インストーラは最終的にはPKG形式になって欲しい 
+ですね…
+
+&gt;<i> ２つめ☆
+</I>&gt;<i> Safariで
+</I>&gt;<i> squeakland.jpのチュートリアルのページ
+</I>&gt;<i> <A HREF="http://squeakland.jp/author/etoys.html">http://squeakland.jp/author/etoys.html</A>
+</I>&gt;<i> の
+</I>&gt;<i> Etoys and Simstories in SqueakやPainting Tutorial
+</I>&gt;<i> を見ようとするとエラーが出ます。
+</I>&gt;<i> でも本家の
+</I>&gt;<i> <A HREF="http://www.squeakland.org/">http://www.squeakland.org/</A>
+</I>&gt;<i> で見る分にはOKです。
+</I>
+こちらは、再現できました。
+Safari, FireFox 共にプロジェクトのロードが失敗しました。
+
+一方、 VirtualPC + WinXP + IE + 2005J で試してみたら旨く 
+いってしまいました。
+
+イメージに違いは無いはずなので、ブラウザ・プラグインの造りが  
+Mac と Win で微妙に違ってるのではと疑ってます。
+少し、調べる必要があるようです。
+同時に、これは URL の指定方法の話になってくると思えるので、 
+SqueakLand.jp の管理の方たちとも相談して対応したいと思います。
+よく見ると両者で微妙に、URL が違ってるのですよね。
+
+squeakland.jp の場合
+<A HREF="http://www.squeakland.org/project.jsp?/projects/etoys/EtoysSimstories.">http://www.squeakland.org/project.jsp?/projects/etoys/EtoysSimstories.</A> 
+004.pr
+
+squeakland.org の場合
+<A HREF="http://www.squeakland.org/project.jsp?http://www.squeakland.org/">http://www.squeakland.org/project.jsp?http://www.squeakland.org/</A> 
+projects/etoys/EtoysSimstories.004.pr
+
+
+今後ともよろしくお願いいたします。
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002803.html">[Squeak-ja: 2803] Mac OS X 用インストーラー
+</A></li>
+	<LI>次の記事 <A HREF="002816.html">[Squeak-ja: 2816] Re: Mac OS X 用インストーラー
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2808">[ 日付 ]</a>
+              <a href="thread.html#2808">[ スレッド ]</a>
+              <a href="subject.html#2808">[ 件名 ]</a>
+              <a href="author.html#2808">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

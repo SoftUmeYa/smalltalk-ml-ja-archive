@@ -1,0 +1,705 @@
+From umejava ＠ mars.dti.ne.jp  Mon Oct  6 20:52:42 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Oct  6 20:53:03 2008
+Subject: [SML 7396] 第2回Smalltalk勉強会のお知らせ
+Message-ID: <JY200810062052423.3570390@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+前回、思わぬ参加人数の多さににぎわったSmalltalk勉強会、今月もやりますよー。
+
+日時: 2008/10/17(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+詳しくは下記をご覧下さい。
+http://www.smalltalk-users.jp/Home/gao-zhi
+
+Smalltalkを使ったことのない初心者の方、お待ちしています。
+もちろんベテランの方もどうぞ。
+
+お気軽に、どしどしお越しください。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Oct  6 23:19:45 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Oct  6 23:20:00 2008
+Subject: [SML 7397] Making of BlackBook
+Message-ID: <48EA1E81.2090406@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+来る16日(木)に「ITpro EXPO 2008 Autumn」のメイン・シアターに
+ブラックブックの著者３人がそろって登壇します。
+
+------------------------------------------------------------
+http://itpro.nikkeibp.co.jp/expo/
+http://itpro.nikkeibp.co.jp/article/COLUMN/20080921/315176/
+10月16日(木) 15:00〜15:30
+【著者によるミニトーク】Making of BlackBook
+「Smalltalkで学ぶオブジェクト指向の本質」
+著者/京都産業大学 青木淳 氏，SRA 浅岡浩子 氏，同 澤本依里 氏
+------------------------------------------------------------
+
+皆さんがお持ちの本にサイン（ハンコなどを含めて）可能ですので、
+時間がありましたら、お運びくださいませ。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Oct  6 23:25:39 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Oct  6 23:25:56 2008
+Subject: [SML 7398] Re: 第2回Smalltalk勉強会のお知らせ
+In-Reply-To: <JY200810062052423.3570390@mars.dti.ne.jp>
+References: <JY200810062052423.3570390@mars.dti.ne.jp>
+Message-ID: <48EA1FE3.6050001@cc.kyoto-su.ac.jp>
+
+Masashi Umezawa さんは書きました:
+> 前回、思わぬ参加人数の多さににぎわったSmalltalk勉強会、今月もやりますよー。
+
+祝着至極なことですねぇ〜。
+
+京都でもSmalltalk勉強会を催そうかしらん…、
+関西地域の方々、いかがでしょうか？
+
+京産大で講義している「言語処理系論」は、かなり高レベルですが、
+それを上回る（もっとSmalltalkに特化する）ことが可能ですよ。
+
+--- 青木淳＠東の京には負けてられないわ :-)
+
+From yasuda ＠ mfc.bakkers.gr.jp  Mon Oct  6 23:53:00 2008
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Mon Oct  6 23:53:12 2008
+Subject: [SML 7399] Re: 第2回Smalltalk勉強会のお知らせ
+In-Reply-To: <48EA1FE3.6050001@cc.kyoto-su.ac.jp>
+References: <JY200810062052423.3570390@mars.dti.ne.jp>
+	<48EA1FE3.6050001@cc.kyoto-su.ac.jp>
+Message-ID: <ABED10A0-579A-41CD-AC14-65630BEE91F8@mfc.bakkers.gr.jp>
+
+安田です。
+
+>> 前回、思わぬ参加人数の多さににぎわったSmalltalk勉強 
+>> 会、今月もやりますよー。
+
+良かった。。。
+
+> 京都でもSmalltalk勉強会を催そうかしらん…、
+> 関西地域の方々、いかがでしょうか？
+
+京都駅前のコンソーシアム京都の京産大サテライトオフィスを
+ご検討でしょうか。
+30 人くらいがスクール形式で入れてなかなか良いです。
+
+持ち込みマシンを使って hands on ということになると、
+電源の用意などが要るかと思いますが、お手伝いしますよ。
+
+あと、青木さんも何度か出演いただいた KOF があります。
+11/7, 8 の金土に、大阪 ATC です。現在持ち込み企画募集中 
+です。
+
+http://k-of.jp/
+
+＃私、実行委員の一人なので、要するに勧誘であります。。
+
+ここで 50 分借りてやる、というのも良いかと思います。
+（マシンを使って hands on というのはちょっと難しいの
+　ですが、、、）
+
+ここで何かイベントをして、そこで次回 hands on 勉強会あり
+ます、と広報する、、、回りくどいな。。(^_^!)
+
+＃でも newcomer （SML 以外の人?）が勧誘でき 
+るかも。
+
+でわでわ							Yasu.
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Oct  7 08:24:55 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Oct  7 08:25:06 2008
+Subject: [SML 7400] Re: 第2回Smalltalk勉強会のお知らせ
+In-Reply-To: <ABED10A0-579A-41CD-AC14-65630BEE91F8@mfc.bakkers.gr.jp>
+References: <JY200810062052423.3570390@mars.dti.ne.jp>	<48EA1FE3.6050001@cc.kyoto-su.ac.jp>
+	<ABED10A0-579A-41CD-AC14-65630BEE91F8@mfc.bakkers.gr.jp>
+Message-ID: <48EA9E47.4020001@cc.kyoto-su.ac.jp>
+
+青木＠京都産業大学です。
+
+> > 京都でもSmalltalk勉強会を催そうかしらん…、
+> > 関西地域の方々、いかがでしょうか？
+> 京都駅前のコンソーシアム京都の京産大サテライトオフィスを
+> ご検討でしょうか。
+> 30 人くらいがスクール形式で入れてなかなか良いです。
+
+お察しの通り（財）大学コンソーシアム京都のキャンパスプラザを
+利用しようと目論んでいます。
+
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=593&frmCd=14-1-0-0-0
+
+ＪＲ京都駅の最寄りで、ビックカメラとアパホテルの向かいになり、
+関西地域の方々にアクセスしていただくには、もってこいですから。
+
+> 持ち込みマシンを使って hands on ということになると、
+> 電源の用意などが要るかと思いますが、お手伝いしますよ。
+
+このＳＭＬの皆さんの反応次第だと思いますが、もし開催の運びに
+なりましたら、ぜひとも助力をお願いします。
+
+勉強会の参加表明や賛同表明をＳＭＬへポストするのは、ちょっと
+はばかられる、という人がいらっしゃいましたら、私宛に表明をし
+ていただいても構いません。atsushi@cc.kyoto-su.ac.jp がメール
+アドレスになります。
+
+ぜひとも、東の京だけではなく、京の都での勉強会を開催したいと
+思っています。ご賛同とご協力をお願いしまぁ〜す。
+
+> あと、青木さんも何度か出演いただいた KOF があります。
+> 11/7, 8 の金土に、大阪 ATC です。現在持ち込み企画募集中です。
+> http://k-of.jp/
+
+数年前に何回か KOF に出演させていただきました。たいへんにお世
+話になりました。ありがとうございました。
+
+> ＃私、実行委員の一人なので、要するに勧誘であります。。
+> ここで 50 分借りてやる、というのも良いかと思います。
+> （マシンを使って hands on というのはちょっと難しいの
+> 　ですが、、、）
+> ここで何かイベントをして、そこで次回 hands on 勉強会あり
+> ます、と広報する、、、回りくどいな。。(^_^!)
+> ＃でも newcomer （SML 以外の人?）が勧誘できるかも。
+
+なるほど、乗りますよん、詳しい話を聞かせてくださいませ。多謝。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From nakano ＠ media.osaka-cu.ac.jp  Tue Oct  7 08:48:18 2008
+From: nakano ＠ media.osaka-cu.ac.jp (Hideo Nakano)
+Date: Tue Oct  7 08:48:29 2008
+Subject: [SML 7401] Re: 第2回Smalltalk勉強会のお知らせ
+In-Reply-To: <48EA9E47.4020001@cc.kyoto-su.ac.jp>
+References: <48EA1FE3.6050001@cc.kyoto-su.ac.jp>
+	<ABED10A0-579A-41CD-AC14-65630BEE91F8@mfc.bakkers.gr.jp>
+	<48EA9E47.4020001@cc.kyoto-su.ac.jp>
+Message-ID: <20081007.084818.74737565.nakano@media.osaka-cu.ac.jp>
+
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+Subject: [SML 7400] Re: 第2回Smalltalk勉強会のお知らせ
+Date: Tue, 07 Oct 2008 08:24:55 +0900
+Message-ID: <48EA9E47.4020001@cc.kyoto-su.ac.jp>
+
+atsushi> 青木＠京都産業大学です。
+
+ 中野です。
+
+atsushi> > > 京都でもSmalltalk勉強会を催そうかしらん…、
+atsushi> > > 関西地域の方々、いかがでしょうか？
+atsushi> > 京都駅前のコンソーシアム京都の京産大サテライトオフィスを
+atsushi> > ご検討でしょうか。
+atsushi> > 30 人くらいがスクール形式で入れてなかなか良いです。
+atsushi> 
+atsushi> お察しの通り（財）大学コンソーシアム京都のキャンパスプラザを
+atsushi> 利用しようと目論んでいます。
+atsushi> 
+atsushi> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=593&frmCd=14-1-0-0-0
+
+ あ、いいですね。
+
+atsushi> ＪＲ京都駅の最寄りで、ビックカメラとアパホテルの向かいになり、
+atsushi> 関西地域の方々にアクセスしていただくには、もってこいですから。
+
+atsushi> > 持ち込みマシンを使って hands on ということになると、
+atsushi> > 電源の用意などが要るかと思いますが、お手伝いしますよ。
+atsushi> 
+atsushi> このＳＭＬの皆さんの反応次第だと思いますが、もし開催の運びに
+atsushi> なりましたら、ぜひとも助力をお願いします。
+atsushi> 
+atsushi> 勉強会の参加表明や賛同表明をＳＭＬへポストするのは、ちょっと
+atsushi> はばかられる、という人がいらっしゃいましたら、私宛に表明をし
+atsushi> ていただいても構いません。atsushi@cc.kyoto-su.ac.jp がメール
+atsushi> アドレスになります。
+
+ わたしも、いっぱん人ですが賛同します。以前から和尚が京都と聞いたとき
+から考えていました。老後、プログラミングをという密かな想いもあります。
+
+atsushi> ぜひとも、東の京だけではなく、京の都での勉強会を開催したいと
+atsushi> 思っています。ご賛同とご協力をお願いしまぁ〜す。
+atsushi> 
+atsushi> > あと、青木さんも何度か出演いただいた KOF があります。
+atsushi> > 11/7, 8 の金土に、大阪 ATC です。現在持ち込み企画募集中です。
+atsushi> > http://k-of.jp/
+atsushi> 
+atsushi> 数年前に何回か KOF に出演させていただきました。たいへんにお世
+atsushi> 話になりました。ありがとうございました。
+atsushi> 
+atsushi> > ＃私、実行委員の一人なので、要するに勧誘であります。。
+atsushi> > ここで 50 分借りてやる、というのも良いかと思います。
+atsushi> > （マシンを使って hands on というのはちょっと難しいの
+atsushi> > 　ですが、、、）
+atsushi> > ここで何かイベントをして、そこで次回 hands on 勉強会あり
+atsushi> > ます、と広報する、、、回りくどいな。。(^_^!)
+atsushi> > ＃でも newcomer （SML 以外の人?）が勧誘できるかも。
+atsushi> 
+atsushi> なるほど、乗りますよん、詳しい話を聞かせてくださいませ。多謝。
+
+ KOFもよろしく！
+
+中野秀男
+nakano@media.osaka-cu.ac.jp
+中野＠学術情報総合センター(研究室10J).大阪市立大学
+大阪市立大学大学院創造都市研究科 兼 学術情報総合センター 
+創造都市研究科 都市情報学専攻 知識情報基盤研究分野
+Tel:06-6605-3388,FAX:06-6690-2736
+URL: http://www.media.osaka-cu.ac.jp/~nakano/
+From spaxi0409 ＠ gmail.com  Tue Oct  7 22:33:19 2008
+From: spaxi0409 ＠ gmail.com (荒川淳夫)
+Date: Tue Oct  7 22:33:29 2008
+Subject: [SML 7402] Re: 第2回Smalltalk勉強会のお知らせ
+In-Reply-To: <20081007.084818.74737565.nakano@media.osaka-cu.ac.jp>
+References: <48EA1FE3.6050001@cc.kyoto-su.ac.jp>
+	<ABED10A0-579A-41CD-AC14-65630BEE91F8@mfc.bakkers.gr.jp>
+	<48EA9E47.4020001@cc.kyoto-su.ac.jp>
+	<20081007.084818.74737565.nakano@media.osaka-cu.ac.jp>
+Message-ID: <a8bd27930810070633o2bc781ccu6e30d4ba43f7eb0e@mail.gmail.com>
+
+荒川ともうします。
+
+京都産業大学　青木先生、みなさん
+　お世話になります。
+
+私も京都での勉強会に賛同いたします。
+また、準備等でお手伝いできることがあれば、可能な限り、微力ながらさせて頂きます。
+
+以上です。よろしくお願いいたします。
+P.S.
+貴校、益川先生ノーベル賞おめでとうございます。
+今頃、大学は大騒ぎになっているんでしょうね。。
+
+
+2008/10/07 8:48 Hideo Nakano <nakano@media.osaka-cu.ac.jp>:
+> From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+> Subject: [SML 7400] Re: 第2回Smalltalk勉強会のお知らせ
+> Date: Tue, 07 Oct 2008 08:24:55 +0900
+> Message-ID: <48EA9E47.4020001@cc.kyoto-su.ac.jp>
+>
+> atsushi> 青木＠京都産業大学です。
+>
+>  中野です。
+>
+> atsushi> > > 京都でもSmalltalk勉強会を催そうかしらん…、
+> atsushi> > > 関西地域の方々、いかがでしょうか？
+> atsushi> > 京都駅前のコンソーシアム京都の京産大サテライトオフィスを
+> atsushi> > ご検討でしょうか。
+> atsushi> > 30 人くらいがスクール形式で入れてなかなか良いです。
+> atsushi>
+> atsushi> お察しの通り（財）大学コンソーシアム京都のキャンパスプラザを
+> atsushi> 利用しようと目論んでいます。
+> atsushi>
+> atsushi> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=593&frmCd=14-1-0-0-0
+>
+>  あ、いいですね。
+>
+> atsushi> ＪＲ京都駅の最寄りで、ビックカメラとアパホテルの向かいになり、
+> atsushi> 関西地域の方々にアクセスしていただくには、もってこいですから。
+>
+> atsushi> > 持ち込みマシンを使って hands on ということになると、
+> atsushi> > 電源の用意などが要るかと思いますが、お手伝いしますよ。
+> atsushi>
+> atsushi> このＳＭＬの皆さんの反応次第だと思いますが、もし開催の運びに
+> atsushi> なりましたら、ぜひとも助力をお願いします。
+> atsushi>
+> atsushi> 勉強会の参加表明や賛同表明をＳＭＬへポストするのは、ちょっと
+> atsushi> はばかられる、という人がいらっしゃいましたら、私宛に表明をし
+> atsushi> ていただいても構いません。atsushi@cc.kyoto-su.ac.jp がメール
+> atsushi> アドレスになります。
+>
+>  わたしも、いっぱん人ですが賛同します。以前から和尚が京都と聞いたとき
+> から考えていました。老後、プログラミングをという密かな想いもあります。
+>
+> atsushi> ぜひとも、東の京だけではなく、京の都での勉強会を開催したいと
+> atsushi> 思っています。ご賛同とご協力をお願いしまぁ〜す。
+> atsushi>
+> atsushi> > あと、青木さんも何度か出演いただいた KOF があります。
+> atsushi> > 11/7, 8 の金土に、大阪 ATC です。現在持ち込み企画募集中です。
+> atsushi> > http://k-of.jp/
+> atsushi>
+> atsushi> 数年前に何回か KOF に出演させていただきました。たいへんにお世
+> atsushi> 話になりました。ありがとうございました。
+> atsushi>
+> atsushi> > ＃私、実行委員の一人なので、要するに勧誘であります。。
+> atsushi> > ここで 50 分借りてやる、というのも良いかと思います。
+> atsushi> > （マシンを使って hands on というのはちょっと難しいの
+> atsushi> > ですが、、、）
+> atsushi> > ここで何かイベントをして、そこで次回 hands on 勉強会あり
+> atsushi> > ます、と広報する、、、回りくどいな。。(^_^!)
+> atsushi> > ＃でも newcomer （SML 以外の人?）が勧誘できるかも。
+> atsushi>
+> atsushi> なるほど、乗りますよん、詳しい話を聞かせてくださいませ。多謝。
+>
+>  KOFもよろしく！
+>
+> 中野秀男
+> nakano@media.osaka-cu.ac.jp
+> 中野＠学術情報総合センター(研究室10J).大阪市立大学
+> 大阪市立大学大学院創造都市研究科 兼 学術情報総合センター
+> 創造都市研究科 都市情報学専攻 知識情報基盤研究分野
+> Tel:06-6605-3388,FAX:06-6690-2736
+> URL: http://www.media.osaka-cu.ac.jp/~nakano/
+>
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Oct  8 08:15:17 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Oct  8 08:15:28 2008
+Subject: [SML 7403] Re: 第2回Smalltalk勉強会のお知らせ
+In-Reply-To: <a8bd27930810070633o2bc781ccu6e30d4ba43f7eb0e@mail.gmail.com>
+References: <48EA1FE3.6050001@cc.kyoto-su.ac.jp>	<ABED10A0-579A-41CD-AC14-65630BEE91F8@mfc.bakkers.gr.jp>	<48EA9E47.4020001@cc.kyoto-su.ac.jp>	<20081007.084818.74737565.nakano@media.osaka-cu.ac.jp>
+	<a8bd27930810070633o2bc781ccu6e30d4ba43f7eb0e@mail.gmail.com>
+Message-ID: <48EBED85.5080003@cc.kyoto-su.ac.jp>
+
+おはようございます、青木淳＠京都産業大学です。
+
+荒川淳夫さんは書きました:
+> 私も京都での勉強会に賛同いたします。
+
+ご賛同ありがとうございます。
+
+> また、準備等でお手伝いできることがあれば、可能な限り、微力ながらさせて頂きます。
+
+ご助力の申し出を痛み入ります。きっとお願いすることになると思
+います。第1回Smalltalk勉強会＠京都を開催に向けて始動いたしま
+した。
+
+> P.S.
+> 貴校、益川先生ノーベル賞おめでとうございます。
+> 今頃、大学は大騒ぎになっているんでしょうね。。
+
+はい！そうれはもう…。名誉なことですよね。
+http://www.kyoto-su.ac.jp/more/2008/305/nobel/
+
+P.S.
+益川先生は京都産業大学の研究機構長を勤めていらっしゃいました
+ので、本学のリエゾン委員会で何回も席を同じくさせていただいて
+います。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From mutsuki.nakajima ＠ gmail.com  Thu Oct 16 19:04:40 2008
+From: mutsuki.nakajima ＠ gmail.com (Mutsuki Nakajima)
+Date: Thu Oct 16 19:05:00 2008
+Subject: [SML 7404] Re: Making of BlackBook
+In-Reply-To: <48EA1E81.2090406@cc.kyoto-su.ac.jp>
+References: <48EA1E81.2090406@cc.kyoto-su.ac.jp>
+Message-ID: <8cdfcfef0810160304u13781cb8yd7be63c66d0b59b0@mail.gmail.com>
+
+青木さん、浅岡さん、澤本さん、
+
+野暮用があり途中からのセッション参加となりましたが、
+青木さんには十年ぶり位にお会いできうれしく感じました。
+「Smalltalk良いですよ」と、ことあるごとに話していますが、
+志の低いところ(ないところ)で満足されている方々が多く、
+「ブラックブック」の発刊を機に、オブジェクト指向の本質を
+少しでも感じ取れる人が増えてくれることを切に望みます。
+
+私信のようで申し訳ありません。
+
+# みなさまのサイン、ありがとうございました。
+
+なかじま、
+
+2008/10/06 23:19 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+> 青木＠京都宇治です。
+>
+> 来る16日(木)に「ITpro EXPO 2008 Autumn」のメイン・シアターに
+> ブラックブックの著者３人がそろって登壇します。
+>
+> 皆さんがお持ちの本にサイン（ハンコなどを含めて）可能ですので、
+> 時間がありましたら、お運びくださいませ。
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Oct 17 09:20:48 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Oct 17 09:20:58 2008
+Subject: [SML 7405] Re: Making of BlackBook
+In-Reply-To: <8cdfcfef0810160304u13781cb8yd7be63c66d0b59b0@mail.gmail.com>
+References: <48EA1E81.2090406@cc.kyoto-su.ac.jp>
+	<8cdfcfef0810160304u13781cb8yd7be63c66d0b59b0@mail.gmail.com>
+Message-ID: <48F7DA60.5050904@cc.kyoto-su.ac.jp>
+
+青木です。
+
+昨夜は有明（お台場）に一泊して、朝一番の新幹線で京都へ戻りま
+した。今し方、大学に着いたところです。本日の２時限目に言語処
+理系論の授業があるのです。
+
+Mutsuki Nakajima さんは書きました:
+> 野暮用があり途中からのセッション参加となりましたが、
+> 青木さんには十年ぶり位にお会いできうれしく感じました。
+
+私も久しぶりに中嶋さんのお顔を見ることができて感慨も一入でし
+た。同行した直弟子の浅岡さんも澤本さんも嬉しかったようです。
+
+> 「Smalltalk良いですよ」と、ことあるごとに話していますが、
+> 志の低いところ(ないところ)で満足されている方々が多く、
+> 「ブラックブック」の発刊を機に、オブジェクト指向の本質を
+> 少しでも感じ取れる人が増えてくれることを切に望みます。
+
+京都でも「Smalltalk 勉強会」を始めますよ！ＪＲ京都駅前に場所
+を確保できましたのでね。詳しいことは後ほど正式にアナウンスさ
+せていただきます。
+
+> 私信のようで申し訳ありません。
+
+私もちょっと私信チックに…、実は、先週に右アキレス腱を断裂し、
+縫合手術を受けたばかりで、松葉杖の姿だったのです。主催者（日
+経ＢＰ社）がテーブルを用意し、そのテーブルに白布をかけてくれ
+たおかげで、ほどんどの聴衆の方々には気がつかれなかったように
+思います。中嶋さんも舞台裏でビックリされてましたもんね。
+
+松葉杖で歩行や階段昇降をしてみて、街の中はバリアだらけである
+ことを身をもって実感しました。いい経験になります。あと３週間
+ほど松葉杖なのですが、大学内もバリアがフルにある状況なんで…。
+
+> # みなさまのサイン、ありがとうございました。
+
+どういたしまして。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From eri ＠ sra.co.jp  Fri Oct 17 09:55:13 2008
+From: eri ＠ sra.co.jp (SAWAMOTO Eri)
+Date: Fri Oct 17 09:55:23 2008
+Subject: [SML 7406] Re: Making of BlackBook
+In-Reply-To: <8cdfcfef0810160304u13781cb8yd7be63c66d0b59b0@mail.gmail.com>
+References: <48EA1E81.2090406@cc.kyoto-su.ac.jp>
+	<8cdfcfef0810160304u13781cb8yd7be63c66d0b59b0@mail.gmail.com>
+Message-ID: <48F7E271.20300@sra.co.jp>
+
+澤本です。
+みなさま、おはようございます。
+
+青木さんと２０年来のお知り合いである中嶋さんにお会いでき、
+お話させていただけてうれしかったです。
+ありがとうございます。
+
+昨日のITpro EXPOの模様が
+すでにサイトにアップされていました。
+http://itpro.nikkeibp.co.jp/article/NEWS/20081016/317080/
+
+当日来れなかったという方、
+ちょっとした雰囲気だけでも味わっていただけたらと思います。
+
+＃青木さん、松葉杖での東京出張、本当にお疲れ様でした。
+＃もうすぐ始まる講義、がんばりましょう！！
+
+
+-- 
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+澤 本  依 里    SAWAMOTO Eri
+<eri@sra.co.jp>
+
+株式会社SRA　関西事業部　開発部
+〒550-0011
+大阪市西区阿波座2-1-1 大阪本町西第一ビルディング5F
+TEL : 06-6536-2331
+FAX : 06-6536-2452
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Oct 22 11:11:31 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Oct 22 11:11:40 2008
+Subject: [SML 7407] 第1回Smalltalk勉強会＠京都
+Message-ID: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>
+
+お待たせをいたしました【Smalltalk勉強会＠京都】を開催します。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html
+
+今年度末までの開催場所を確保できました。JR京都駅前（ビックカ
+メラとアパホテルの向かい）の京都産業大学サテライト（キャンパ
+スプラザ京都の6階にある第3講習室）になります。
+
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=593&frmCd=14-1-0-0-0
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+気軽にお越しください。素人から玄人まで大歓迎です。Smalltalkに
+よるペアプログラミングをやりましょう！
+
+------------------------------------------------------------
+第1回 Smalltalk勉強会＠京都
+
+　　日時：2008年11月05日（水）19:00〜21:00
+　　場所：キャンパスプラザ京都 6階 大学院サテライト 第3講習室
+　　テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+ノート型のパーソナルなコンピュータをご持参ください。
+Windows Vista/XP または Mac OS X (on Intel Mac)
+
+ブラックブックの著者3名がそろって参加します。
+インストールからやってゆきます。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Wed Oct 22 21:54:13 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Oct 22 21:54:23 2008
+Subject: [SML 7408] Re: 第1回Smalltalk勉強会＠京都
+In-Reply-To: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>
+References: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>
+Message-ID: <JA200810222154134.1712000@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ついに始動ですね。Smalltalk-usres.jpのほうからもリンクを張らせていただきました。
+http://www.smalltalk-users.jp/Home/gao-zhi/%E7%AC%AC1%E5%9B%9E-smalltalk%E5%8B%89%E5%BC%B7%E4%BC%9A%EF%BC%A0%E4%BA%AC%E9%83%BD
+
+カレンダーにも今後の予定を転機しています。
+http://cal.smalltalk-users.jp
+
+来年3月まで予定が決まっているというのはすごいですね。
+
+東京も負けずに盛り上げていこうと思います。
+
+
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> お待たせをいたしました【Smalltalk勉強会＠京都】を開催します。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html
+> 
+> 今年度末までの開催場所を確保できました。JR京都駅前（ビックカ
+> メラとアパホテルの向かい）の京都産業大学サテライト（キャンパ
+> スプラザ京都の6階にある第3講習室）になります。
+> 
+> http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=593&frmCd=14-1-0-0-0
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+> 
+> 気軽にお越しください。素人から玄人まで大歓迎です。Smalltalkに
+> よるペアプログラミングをやりましょう！
+> 
+> ------------------------------------------------------------
+> 第1回 Smalltalk勉強会＠京都
+> 
+> 　　日時：2008年11月05日（水）19:00〜21:00
+> 　　場所：キャンパスプラザ京都 6階 大学院サテライト 第3講習室
+> 　　テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> ノート型のパーソナルなコンピュータをご持参ください。
+> Windows Vista/XP または Mac OS X (on Intel Mac)
+> 
+> ブラックブックの著者3名がそろって参加します。
+> インストールからやってゆきます。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Oct 23 09:03:57 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Oct 23 09:04:09 2008
+Subject: [SML 7409] Re: 第1回Smalltalk勉強会＠京都
+In-Reply-To: <JA200810222154134.1712000@mars.dti.ne.jp>
+References: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>
+	<JA200810222154134.1712000@mars.dti.ne.jp>
+Message-ID: <48FFBF6D.6010801@cc.kyoto-su.ac.jp>
+
+Masashi Umezawa さんは書きました:
+> ついに始動ですね。Smalltalk-usres.jpのほうからもリンクを張らせていただきました。
+
+ブラックブックのリンクがたどれない模様です。
+お手数ですが、下記のページへのアンカーに書き換えてくださいまし。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/index-j.html
+
+> 来年3月まで予定が決まっているというのはすごいですね。
+
+便利の良いところでないと、気軽に足を運んでもらえないだろう、
+という心配から、なんとか京都駅の近くにしたかったのです。
+
+大阪からも新快速で３０分になりますのでね。
+滋賀方面からもアクセスしやすいですし。
+奈良方面からも近鉄で来やすいと思います。
+
+> 東京も負けずに盛り上げていこうと思います。
+
+お互いに励みませう！
+
+--- 青木淳＠松葉杖はつらいですぅ〜
+From umejava ＠ mars.dti.ne.jp  Thu Oct 23 20:28:33 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Oct 23 21:18:47 2008
+Subject: [SML 7410] Re: 第1回Smalltalk勉強会＠京都
+In-Reply-To: <48FFBF6D.6010801@cc.kyoto-su.ac.jp>
+References: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>
+	<JA200810222154134.1712000@mars.dti.ne.jp>
+	<48FFBF6D.6010801@cc.kyoto-su.ac.jp>
+Message-ID: <JI200810232028334.1833187@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> Masashi Umezawa さんは書きました:
+> > ついに始動ですね。Smalltalk-usres.jpのほうからもリンクを張らせていただきました。
+> 
+> ブラックブックのリンクがたどれない模様です。
+> お手数ですが、下記のページへのアンカーに書き換えてくださいまし。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Documents/BlackBook/index-j.html
+
+失礼しました。早速修正しておきました。
+
+なお、http://www.smalltalk-users.jp/ のサイトを自ら編集できるようにする、
+smalltalk-users.jpのサブドメインで新たなサイトを立ち上げる、などの設定も
+可能ですので、もしもご要望があればお気軽にお申し付け下さい。
+
+> > 来年3月まで予定が決まっているというのはすごいですね。
+> 
+> 便利の良いところでないと、気軽に足を運んでもらえないだろう、
+> という心配から、なんとか京都駅の近くにしたかったのです。
+> 
+> 大阪からも新快速で３０分になりますのでね。
+> 滋賀方面からもアクセスしやすいですし。
+> 奈良方面からも近鉄で来やすいと思います。
+
+東京からも一度くらい参加したいものです。1月にはC5カンファレンスもありますので
+京都ではSmalltalkイベントが目白押しですね。
+http://www.cm.is.ritsumei.ac.jp/c5-09/
+
+> 
+> > 東京も負けずに盛り上げていこうと思います。
+> 
+> お互いに励みませう！
+
+ありがとうございます。お怪我はお大事に、、
+
+> 
+> --- 青木淳＠松葉杖はつらいですぅ〜
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Oct 27 09:37:41 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Oct 27 09:37:54 2008
+Subject: [SML 7411] Re: 第1回Smalltalk勉強会＠京都
+In-Reply-To: <JI200810232028334.1833187@mars.dti.ne.jp>
+References: <48FE8BD3.6050709@cc.kyoto-su.ac.jp>	<JA200810222154134.1712000@mars.dti.ne.jp>	<48FFBF6D.6010801@cc.kyoto-su.ac.jp>
+	<JI200810232028334.1833187@mars.dti.ne.jp>
+Message-ID: <49050D55.2070108@cc.kyoto-su.ac.jp>
+
+おはようございます、青木淳＠京都産業大学です。
+
+来る11月05日（水）の「第1回 Smalltalk勉強会＠京都」ですが、
+3次元の力覚デバイス「スパイダー（SPIDAR-G）」を持ち込み、可触
+化（触れて分かる）のデモも行うつもりです。ぜひご参加ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+
+第1回 Smalltalk勉強会＠京都
+日時　　：2008年11月05日（水）19:00〜21:00
+場所　　：キャンパスプラザ京都 6階 大学院サテライト 第3講習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+　　　　　ノート型のパーソナルなコンピュータをご持参ください。
+　　　　　Windows Vista/XP または Mac OS X (on Intel Mac)
+　　　　　ブラックブックの著者3名がそろって参加します。
+　　　　　インストールからやってゆきます。
+　　　　　また、3次元の力覚デバイス「スパイダー（SPIDAR-G）」
+　　　　　を持ち込み、可触化（触れて分かる）のデモも行います。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

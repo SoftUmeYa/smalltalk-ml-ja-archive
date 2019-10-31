@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7721] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207721%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRvIEhUTUw%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVckRyQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=4B0149A9.6060407%40hera.eonet.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007716.html">
+   <LINK REL="Next"  HREF="007722.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7721] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207721%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQkpZNi8ycSF3GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCNX5FVBsoQiAbJEIyXUJqGyhCIBskQiFWGyhCQ1NWIHRvIEhUTUw%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIVckRyQtJF4kNyQ/GyhC%3F%3D&In-Reply-To=4B0149A9.6060407%40hera.eonet.ne.jp"
+       TITLE="[SML 7721] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2009年 11月 19日 (木) 20:37:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007716.html">[SML 7716] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+        <LI>次の記事 <A HREF="007722.html">[SML 7722] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7721">[ 日付 ]</a>
+              <a href="thread.html#7721">[ スレッド ]</a>
+              <a href="subject.html#7721">[ 件名 ]</a>
+              <a href="author.html#7721">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+前回投稿したクラス図を表示するコードですが、気が付いた点を少し修正したので
+再投稿させていただきます。よろしけばお使いください。修正箇所は以下のとおり
+です(機能には変更ありません):
+・クラスに対応するJunRoughClassEntityを捜すときのキーを、名前の文字列か
+らクラスそのものに変更しました。
+・描画するクラス全体を保持するのに、クラスの名前をキーにしたDictionaryを
+用いていましたがDictionaryである必要は無く、OrderedCollectionに変更し
+ました。
+
+以下はコードです。
+
+|<i> aNameSpace aDiagram entitiesDictionary classes nameSpacesAndClasses x
+</I>y xStart yMax solitaryClasses topClasses layoutOrder addSubclasses |
+aNameSpace := PrimeMinisters.
+classes := OrderedCollection new.
+solitaryClasses := OrderedCollection new.
+topClasses := OrderedCollection new.
+layoutOrder := OrderedCollection new.
+nameSpacesAndClasses := aNameSpace withAllNameSpacesAndAllClasses.
+entitiesDictionary := Dictionary new: nameSpacesAndClasses size.
+aDiagram := JunRoughClassDiagram new.
+nameSpacesAndClasses
+  do:
+    [:item |
+    (JunStringUtility
+      stringMatch: item name asString
+      and: '*Test')
+      ifFalse:
+        [| anEntity |
+        item isBehavior
+          ifTrue:
+            [anEntity := JunRoughClassEntity fromClass: item.
+            anEntity detail: true.
+            classes add: item]
+          ifFalse:
+            [anEntity := JunRoughClassEntity label: item printString.
+            anEntity origin: 0 @ 0].
+        anEntity fitExtent.
+        aDiagram addEntity: anEntity.
+        entitiesDictionary at: item put: anEntity]].
+classes
+  do:
+    [:class |
+    (class superclass = nil
+      or: [(entitiesDictionary includesKey: class superclass) not])
+      ifTrue:
+        [(class subclasses select: [:each | entitiesDictionary
+includesKey: each])
+          size = 0
+          ifTrue: [solitaryClasses add: class]
+          ifFalse: [topClasses add: class]]].
+layoutOrder add: topClasses.
+addSubclasses := [:classCollection |
+|<i> subclassCollection |
+</I>subclassCollection := OrderedCollection new.
+classCollection
+  do:
+    [:class |
+    subclassCollection
+      addAll:
+        (class subclasses
+          select: [:subclass | entitiesDictionary includesKey: subclass])].
+subclassCollection size ~= 0
+  ifTrue:
+    [layoutOrder add: subclassCollection.
+    addSubclasses value: subclassCollection]].
+addSubclasses value: topClasses.
+layoutOrder add: solitaryClasses.
+xStart := 20.
+x := xStart.
+y := 50.
+yMax := 0.
+layoutOrder
+  do:
+    [:lineLayout |
+    lineLayout
+      do:
+        [:class |
+        | anEntity anExtent |
+        anEntity := entitiesDictionary at: class.
+        anExtent := anEntity extent.
+        anEntity origin: x @ y.
+        x := x + anExtent x.
+        yMax := yMax max: anExtent y.
+        x := x + 30].
+    x := xStart.
+    y := y + yMax + 30.
+    yMax := 0].
+classes
+  do:
+    [:class |
+    class superclass
+      ifNotNil:
+        [(entitiesDictionary includesKey: class superclass)
+          ifTrue:
+            [(aDiagram
+              connect: (entitiesDictionary at: class)
+              to: (entitiesDictionary at: class superclass)) kind:
+#is_a_kind_of]]].
+aDiagram openIn: (0 @ 0 extent: 1260 @ 740)
+
+
+-- hirowadenden
+
+
+
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007716.html">[SML 7716] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+	<LI>次の記事 <A HREF="007722.html">[SML 7722] Re: Smalltalk勉強会＠京都 課題 「CSV to HTML」できました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7721">[ 日付 ]</a>
+              <a href="thread.html#7721">[ スレッド ]</a>
+              <a href="subject.html#7721">[ 件名 ]</a>
+              <a href="author.html#7721">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

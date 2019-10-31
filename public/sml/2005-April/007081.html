@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7081] Jun632 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207081%5D%20Jun632%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007080.html">
+   <LINK REL="Next"  HREF="007082.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7081] Jun632 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207081%5D%20Jun632%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7081] Jun632 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2005年 4月 20日 (水) 11:22:55 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007080.html">[SML 7080] Jun631 for Smalltalk
+</A></li>
+        <LI>次の記事 <A HREF="007082.html">[SML 7082] Jun633 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7081">[ 日付 ]</a>
+              <a href="thread.html#7081">[ スレッド ]</a>
+              <a href="subject.html#7081">[ 件名 ]</a>
+              <a href="author.html#7081">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun632」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+<A HREF="http://www.sra.co.jp/smalltalk/jun/">http://www.sra.co.jp/smalltalk/jun/</A>
+<A HREF="http://www.sra.co.jp/smalltalk/jun/htmls/News.html">http://www.sra.co.jp/smalltalk/jun/htmls/News.html</A>
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+<A HREF="ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/">ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/</A>
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆アルゴリズムのアニメーションおよびムービー作成の例題を増や
+  しました。
+
+  ■ボロノイとドロネー
+  <A HREF="http://www.sra.co.jp/smalltalk/jun/Topics/VoronoiAndDelaunay/">http://www.sra.co.jp/smalltalk/jun/Topics/VoronoiAndDelaunay/</A>
+  ■細線化（芯線化）
+  <A HREF="http://www.sra.co.jp/smalltalk/jun/Topics/Thinning/">http://www.sra.co.jp/smalltalk/jun/Topics/Thinning/</A>
+  ■モンテカルロ法（Monte Carlo Method）
+  <A HREF="http://www.sra.co.jp/smalltalk/jun/Topics/MonteCarlo/">http://www.sra.co.jp/smalltalk/jun/Topics/MonteCarlo/</A>
+
+◆イメージユーティリティを新設しました。任意のパレットと深度
+  を持った画像を現在のパレットと深度に高速に変換するための機
+  能、クリップボードとのやり取り、スクリーンからの切り取り、
+  画像ファイルの読み書き機能などを内包しています。
+
+◆イメージアジャスタの機能を、より安定化させました。32 と 24
+  ビット幅の相互変換の間にあった不具合を取り除いていますので、
+  少々低速になりましたが…。
+
+◆じゅんのアプリケーションモデルにおいて、モデル間の親密さを
+  ハンドリングできるようにしました。これにより様々なウィンド
+  ウをグループ化して扱うことができます。たとえば、あるウィン
+  ドウが閉まると、それに関連するウィンドウたちを一気に閉じる
+  ことなど。
+
+◆VisualWorks 7.x になってから、ウィンドウが閉まる際の通知事
+  象のプロトコルカテゴリが、events から interface closing に
+  変わりましたので、それにあわせました。
+
+◆画像表示 MVC および何でもオブジェクト表示 MVC において、マ
+  ウスの赤ボタンを押すと、正規化座標やスクリーン座標が表示さ
+  れますが、VisualWorks 7.x になってから、白地に文字ができな
+  いという不具合がありました。修正を施しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007080.html">[SML 7080] Jun631 for Smalltalk
+</A></li>
+	<LI>次の記事 <A HREF="007082.html">[SML 7082] Jun633 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7081">[ 日付 ]</a>
+              <a href="thread.html#7081">[ スレッド ]</a>
+              <a href="subject.html#7081">[ 件名 ]</a>
+              <a href="author.html#7081">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

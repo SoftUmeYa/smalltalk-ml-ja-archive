@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4375] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204375%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQjlnGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRjFKWTYvMnEbKEJAGyRCTD44RTIwJE5GYk1GJEc8QUxkJDcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kOSEjGyhC%3F%3D&In-Reply-To=c57315d40910192328r6b2c7054ucdccdca0a1113504%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004374.html">
+   <LINK REL="Next"  HREF="004376.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4375] Re: Smalltalk合同勉強会@名古屋の内容で質問します。</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204375%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNtYWxsdGFsaxskQjlnGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRjFKWTYvMnEbKEJAGyRCTD44RTIwJE5GYk1GJEc8QUxkJDcbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kOSEjGyhC%3F%3D&In-Reply-To=c57315d40910192328r6b2c7054ucdccdca0a1113504%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4375] Re: Smalltalk合同勉強会@名古屋の内容で質問します。">itoh-private ＠ itolab.com
+       </A><BR>
+    <I>2009年 10月 20日 (火) 21:22:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004374.html">[Squeak-ja: 4374] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+</A></li>
+        <LI>次の記事 <A HREF="004376.html">[Squeak-ja: 4376] 21 世紀コンピューティングカンファレンス
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4375">[ 日付 ]</a>
+              <a href="thread.html#4375">[ スレッド ]</a>
+              <a href="subject.html#4375">[ 件名 ]</a>
+              <a href="author.html#4375">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山宮さん、皆さん
+
+久保さんの質問の陰で、回答を興味深く読ませていただきました。
+山宮さんや大島さんの活躍の様子はウェブを通じて拝見させていただいて
+おりますが、山宮さんのご説明のおかげでより理解を深めることができた
+ように思います。
+#名古屋で山宮さんのお話を伺えないのが本当に残念です。
+
+移動など大変だとは思いますが、ぜひお身体にはお気をつけてください。
+
+ありがとうございました。
+
+On 2009/10/20, at 15:28, Takashi Yamamiya wrote:
+
+&gt;<i> 久保さん。
+</I>&gt;<i>
+</I>&gt;<i> 2009/10/19 kubo &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kubo-o ＠ mbox.kyoto-inet.or.jp</A>&gt;:
+</I>&gt;&gt;<i> 問題の領域の方はなんとなくイメージできる？のですが、
+</I>&gt;&gt;<i> それを、どのようにしてreinventionしようとされているのか、
+</I>&gt;&gt;<i> 方法側がまったく見えません。
+</I>&gt;&gt;<i> 山宮さんのお話は、
+</I>&gt;&gt;<i> それをLispでどう取り組むのか
+</I>&gt;&gt;<i> ということなのでしょうか。
+</I>&gt;<i>
+</I>&gt;<i> ご質問ありがとうございます。ご指摘の通り STEPS は広い範囲 
+</I>&gt;<i> を目標にしてい
+</I>&gt;<i> ますので、今私が関係している部分だけご紹介します。ドメイン特化言 
+</I>&gt;<i> 語とい
+</I>&gt;<i> う用語が一番ぴったりだと思います。
+</I>&gt;<i>
+</I>&gt;<i> プログラミング言語では大は小を兼ねるという事は無くて、問題に応じ 
+</I>&gt;<i> てちょ
+</I>&gt;<i> うど良い複雑さの言語を選ぶ事で、プログラムが分かりやすく短くなり 
+</I>&gt;<i> ます。
+</I>&gt;<i> 例えば文字列検索に使う正規表現は、ただ記法が短いだけでなく、1)  
+</I>&gt;<i> 必ず停止
+</I>&gt;<i> する。2) 入れ子構造を扱わない。という性質のおかげでバグが 
+</I>&gt;<i> 入りにくく
+</I>&gt;<i> 高速なコードを書けるという利点があります。
+</I>&gt;<i>
+</I>&gt;<i> この考えを進めると、あらゆる問題領域にそれぞれのミニ言語があって 
+</I>&gt;<i> も良い
+</I>&gt;<i> という事になります。また、コンピュータへ入力は全て言語であると考 
+</I>&gt;<i> える事
+</I>&gt;<i> も出来ます。例えば、インターネットのパケットは、ある決まり事に 
+</I>&gt;<i> 従って送
+</I>&gt;<i> られてきますし、マウスやキーボードからの入力もただのランダム信号 
+</I>&gt;<i> では無
+</I>&gt;<i> く、それぞれがあるゼスチャーとして解釈される言語です。するとコン 
+</I>&gt;<i> ピュー
+</I>&gt;<i> タとは様々な言語を解釈するルール集だと考える事が出来ます。
+</I>&gt;<i>
+</I>&gt;<i> STEPS の一部では、そのルールを記述するメタ文法として解析表現文法 
+</I>&gt;<i> を、低
+</I>&gt;<i> レベルな意味を記述するのに lisp 風の言語を使っています。 
+</I>&gt;<i> lisp は一種の機
+</I>&gt;<i> 械語として使っているだけで、ユーザから見える部分は Smalltalk  
+</I>&gt;<i> 風の言語に
+</I>&gt;<i> なる予定です。
+</I>&gt;<i>
+</I>&gt;<i> 現在の Squeak の先祖である Smalltalk 72 の文法は今よ 
+</I>&gt;<i> りもっと柔軟で、文
+</I>&gt;<i> 法自体をプログラムとして書く事が出来ました。例えばブロック構文無 
+</I>&gt;<i> しで処
+</I>&gt;<i> 理をメソッドに渡す事が出来ました。STEPS プロジェクトはそこ 
+</I>&gt;<i> まで先祖返
+</I>&gt;<i> りしてあり得たかもしれない未来を Reinvention しようとして 
+</I>&gt;<i> います。
+</I>&gt;<i>
+</I>&gt;<i> 山宮
+</I>
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004374.html">[Squeak-ja: 4374] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+</A></li>
+	<LI>次の記事 <A HREF="004376.html">[Squeak-ja: 4376] 21 世紀コンピューティングカンファレンス
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4375">[ 日付 ]</a>
+              <a href="thread.html#4375">[ スレッド ]</a>
+              <a href="subject.html#4375">[ 件名 ]</a>
+              <a href="author.html#4375">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

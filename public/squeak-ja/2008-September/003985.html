@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3985] Re: ナビゲーションの操作方法について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203985%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVKJVMlMiE8JTcbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWclcyROQWA6bkp9SyEkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=19BF3645AB4B4DED95FF14E9CF434D65%40computer">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003984.html">
+   <LINK REL="Next"  HREF="003986.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3985] Re: ナビゲーションの操作方法について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203985%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVKJVMlMiE8JTcbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWclcyROQWA6bkp9SyEkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=19BF3645AB4B4DED95FF14E9CF434D65%40computer"
+       TITLE="[Squeak-ja: 3985] Re: ナビゲーションの操作方法について">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 9月  9日 (火) 20:40:19 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003984.html">[Squeak-ja: 3984] ナビゲーションの操作方法について
+</A></li>
+        <LI>次の記事 <A HREF="003986.html">[Squeak-ja: 3986] Re: ナビゲーションの操作方法について (早坂　吉昭)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3985">[ 日付 ]</a>
+              <a href="thread.html#3985">[ スレッド ]</a>
+              <a href="subject.html#3985">[ 件名 ]</a>
+              <a href="author.html#3985">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+スレッド・ナビゲータは必要なプロジェクトをすべて開いた「後で」使います。
+必要なプロジェクトファイルをSqueakのウィンドウにドラッグしたり、ナビゲータの「探す」から、選んで開いた後に、スレッド・ナビゲータを開いてみてください。
+プロジェクトの順番は真ん中のオレンジ色のボタンをクリックして、「このスレッドを編集する」を選び、サムネイルをドラッグすることで変えられます。
+操作については、川村さんのサイトやことだま(この部分はSqueakland版と同じ)の解説が参考になると思います。
+<A HREF="http://squeak.qp.land.to/wiki/index.php?Tools%2FThreadNavigation">http://squeak.qp.land.to/wiki/index.php?Tools%2FThreadNavigation</A>
+<A HREF="http://www.crew.sfc.keio.ac.jp/squeak/text/htmlver_text/index_p4_c10.html#doc12_9338">http://www.crew.sfc.keio.ac.jp/squeak/text/htmlver_text/index_p4_c10.html#doc12_9338</A>
+
+あと、とても重要な点なのですが、このようにして作ったスレッドはSqueakを一旦終了すると消えてしまいます。それを避けるには、イメージ(Squeak環境全体)の保存を行う必要があります。しかも、通常のSqueakland版では、誤操作や悪意のあるプロジェクトを避けるために、この操作ができなくなっています。これを回避するには、プレゼンの際に開発者版を使うか(Squeakland版で作ったプロジェクトは問題なく読み込めます)、
+<A HREF="http://squeakland.jp/developer/">http://squeakland.jp/developer/</A>
+
+Squeakland版で以下の操作を行う必要があります。
+
+1. Escキーを押してワールドメニューを開き、「ヘルプ」から「プリファレンス」を選びます。
+2. 開いたPreferenceのウィンドウで、「securityChecksEnabled」を「Search」ボタンで検索します。
+3. 見つかったsecurityChecksEnabledのチェックをクリックして外します。
+4. Preferenceウィンドウを閉じ、もう一度、Escキーを押してワールドメニューを開き、「別名で保存」や「新しい版で保存」を選んでイメージを保存します。デフォルトの保存場所はC:\My
+Squeakです(Windowsの場合)。
+
+以上の作業は、「プロジェクトを開く前」に行わなければなりません。すでにプロジェクトを開いていたら、一旦Squeakを終了して最初からお願いします。
+これついて、詳しくは以下の山宮さんのサイトをご覧ください。
+<A HREF="http://d.hatena.ne.jp/propella/20050805/p1">http://d.hatena.ne.jp/propella/20050805/p1</A>
+
+この作業を行った後に、Squeakを一旦終了してから、保存したイメージをダブルクリックで起動し、上に書いたプロジェクトの読み込みやスレッド・ナビゲータの設定を行って、イメージを保存してください。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+2008/09/09 19:34 早坂　吉昭 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hayasaka ＠ pluto.dti.ne.jp</A>&gt;:
+&gt;<i> こんにちは。　早坂です。
+</I>&gt;<i>
+</I>&gt;<i> 　プレゼンテーションを作成しようとしているのですが、
+</I>&gt;<i> オブジェクトカタログ（Objectｓtools）のナビゲーション
+</I>&gt;<i> （ThreadNavigation）を使って、プロジェクトソータに
+</I>&gt;<i> プロジェクトを呼び出すと茶色のプロジェクト名がついた
+</I>&gt;<i> サムネイルが表示されるだけで、所望のプロジェクトの
+</I>&gt;<i> サムネイルが表示されません。
+</I>&gt;<i> どこの操作が悪いのかわかりません。
+</I>&gt;<i> 教えて頂けると幸いです。
+</I>&gt;<i>
+</I>&gt;<i> 早坂　吉昭
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003984.html">[Squeak-ja: 3984] ナビゲーションの操作方法について
+</A></li>
+	<LI>次の記事 <A HREF="003986.html">[Squeak-ja: 3986] Re: ナビゲーションの操作方法について (早坂　吉昭)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3985">[ 日付 ]</a>
+              <a href="thread.html#3985">[ スレッド ]</a>
+              <a href="subject.html#3985">[ 件名 ]</a>
+              <a href="author.html#3985">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,2792 @@
+From yoshiki ＠ squeakland.org  Thu Sep  7 04:15:35 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3097] Re: LL Ringで発表してきました
+In-Reply-To: <JK2006083009123711.3769578@mars.dti.ne.jp>
+References: <JK2006083009123711.3769578@mars.dti.ne.jp>
+Message-ID: <upse8dcx4.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> http://ll.jus.or.jp/2006/blog/trackback#trackbacks
+> http://www.google.co.jp/search?q=ll+ring+squeak
+> http://ani.blueplane.jp/ume/42
+
+  多くの場所で話題になっているように、
+http://www.sbbit.jp/article/art.asp?newsid=2658#で動画が見られるよう
+になっていますね。やっぱりデモ最強です。
+
+  でかい文字でやる人が多いみたいですが、どうせやるならもっとぱちぱち
+Lessigみたいにやれば良いのに、と思ってはしまいますね。もっと小気味良く
+切り替えたり、言うことをそのまま書くのではなくて象徴的にやったりとか。
+(といっても僕自身はあまり好きなスタイルではないですが。)
+
+> 今回は、アナウンスをのんびりしているうちに、チケットがあっという間に
+> 売り切れてしまったということもあり、会場にはSqueakerの方達はほとんど皆無
+> という、awayな状態でのプレゼンでした。
+> 
+> 来年は、もっと早めにアナウンスします。
+> Squeakコミュの健在ぶりを示すべく、皆さん大挙して押し寄せましょう。
+
+  梅澤さんのしゃべり技術あってのことというのもありますので、来年も期待
+ですね。使ってもらえるようなネタを提供するべく精進します。
+
+-- Yoshiki
+
+From mutoh ＠ openedu.org  Fri Sep  8 18:32:49 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3098] SqueakNOSの実機動作について
+Message-ID: <867j0e8zzy.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+梅澤さんのAniAniWebでも拝見したので、直接メール送ろうかとも思ったので
+すが、情報共有の意味でこちらに送ります。
+
+SqueakNOSなんですが、実機で動作できたかたっておられますか?
+
+SqueakNOSは、Squeak No Operating Systemの略で、本当にOSとしてSqueakを
+動作させるプロジェクトです。
+最近の仮想化技術の進展とフリーの実装の提供などの影響があるのかもしれな
+いですが、5年ぶりに復活したらしいです。
+
+手元では、qemuやVMware Playerで動作することは確認したのですが、手当た
+り次第にCDROMを突っ込んで試している実機で動いたことが無いのです。
+
+実際に動作を確認できた方がおられましたら、スペック等教えていただければ
+幸いです。
+
+
+ちなみに、私が名古屋のBUG(NBUG)で8月に発表してきた資料も御覧ください。
+	http://qml.610t.org/squeak/nbug.html
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Sep  9 04:17:03 2006
+From: yhousako ＠ mx2.ttcn.ne.jp (Yoshito Housako)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3099] Re: SqueakNOS の実機動作について
+In-Reply-To: <867j0e8zzy.wl%mutoh@openedu.org>
+Message-ID: <C127F0BF.1273C%yhousako@mx2.ttcn.ne.jp>
+
+はじめまして．宝迫（ほうさこ）＠埼玉県小学校教員です．
+
+Squeakに興味を持ってこちらのMLに参加しましたが長らくROMしておりました．
+
+On 2006.9.8 6:32 PM, "Takeshi MUTOH" <mutoh@openedu.org> wrote:
+> 手元では、qemuやVMware Playerで動作することは確認したのですが、手当た
+> り次第にCDROMを突っ込んで試している実機で動いたことが無いのです。
+> 
+> 実際に動作を確認できた方がおられましたら、スペック等教えていただければ
+> 幸いです。
+
+動作確認のレベルにもよりますが、うちのPCではCD-ROMで起動しました．
+
+2台のPCで試しました．
+
+1.
+CPU：AMD Duron 1.4GHz
+MEM：512MB
+ちょっと古いMouse ComputerのPCです．もっともかなり手を加えていますので、箱と
+マザーボードとCPU以外にオリジナルのものはありません．
+
+2.
+CPU：INTEL Celeron D 2.53GHz
+MEM：512MB
+Albatron ABox 865Gというベアボーンを使った自作機です．
+
+当然2.の方が動作が速いのですが、いずれにしてもCD-ROMで起動するとマウスの矢印
+が画面に残るという現象があったり、右クリックが使えなかったり、Squeakの終了
+がPCの終了になっていなかったり（フリーズor異常動作のようになる）という問題が
+発生しました．実用レベルではないと思います．
+
+個人的には、KNOPPIXのような1CD/DVDで起動するものに注目し、教育利用を進めてい
+きたいと考えておりますので、このような取り組みには今後も注目したいと思ってい
+ます．
+
+情報を提供して頂きありがとうございました．
+
+------------------------------------------------------------
+寳迫　芳人（ほうさこ　よしと）
+yhousako@mx2.ttcn.ne.jp
+みんなで教育を考えよう！
+http://www.geocities.jp/yhousako/
+指導案＆教材集
+http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク
+http://www.geocities.jp/shiroato_net/
+
+
+From mutoh ＠ openedu.org  Sat Sep  9 06:02:11 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3100] Re: SqueakNOS の実機動作について
+In-Reply-To: <C127F0BF.1273C%yhousako@mx2.ttcn.ne.jp>
+References: <867j0e8zzy.wl%mutoh@openedu.org>
+	<C127F0BF.1273C%yhousako@mx2.ttcn.ne.jp>
+Message-ID: <8664fy8430.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+At Sat, 09 Sep 2006 04:17:03 +0900,
+Yoshito Housako <yhousako@mx2.ttcn.ne.jp> wrote:
+> はじめまして．宝迫（ほうさこ）＠埼玉県小学校教員です．
+
+はじめまして、よろしくお願いします。
+
+> On 2006.9.8 6:32 PM, "Takeshi MUTOH" <mutoh@openedu.org> wrote:
+> > 手元では、qemuやVMware Playerで動作することは確認したのですが、手当た
+> > り次第にCDROMを突っ込んで試している実機で動いたことが無いのです。
+> > 
+> > 実際に動作を確認できた方がおられましたら、スペック等教えていただければ
+> > 幸いです。
+> 動作確認のレベルにもよりますが、うちのPCではCD-ROMで起動しました．
+
+あ、動いてるんですねぇ…
+
+> 1.
+> CPU：AMD Duron 1.4GHz
+> MEM：512MB
+> ちょっと古いMouse ComputerのPCです．もっともかなり手を加えていますので、箱と
+> マザーボードとCPU以外にオリジナルのものはありません．
+> 
+> 2.
+> CPU：INTEL Celeron D 2.53GHz
+> MEM：512MB
+> Albatron ABox 865Gというベアボーンを使った自作機です．
+
+このマシンたちですが、ネットワークカードとかは付いてますか?
+その場合、ネットワークは利用可能でしたでしょうか?
+
+いまのところ、RTL8139とLanceNICしかデバイスドライバが書かれていないよ
+うですが…
+# qemuでネットワークの動作確認方法が分からない…
+
+あと、SqueakNOSのバージョンは、いつごろのものでしょうか?
+
+> 当然2.の方が動作が速いのですが、いずれにしてもCD-ROMで起動するとマウスの矢印
+> が画面に残るという現象があったり、右クリックが使えなかったり、Squeakの終了
+> がPCの終了になっていなかったり（フリーズor異常動作のようになる）という問題が
+> 発生しました．実用レベルではないと思います．
+
+マウスカーソルが残る問題は、普通のSqueak VMが(Windows,Macなどの)OS側で
+処理を任せていて、適当なフックが無いので処理できないとどっかで読みまし
+た。
+
+他は結構致命的ですね…
+まあ、実用というより、今は人柱として使う時期なのだとは理解してますけど;-)
+# デバイスドライバをオブジェクト指向で書いてみたいとか…
+
+
+情報、ありがとうございました。
+もう少し動きそうなマシン、探してみます。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Sep  9 11:27:35 2006
+From: yhousako ＠ mx2.ttcn.ne.jp (Yoshito Housako)
+Date: Thu Dec  6 11:03:33 2007
+Subject: [Squeak-ja: 3101] Re: SqueakNOS の実機動作について
+In-Reply-To: <8664fy8430.wl%mutoh@openedu.org>
+Message-ID: <C12855A7.12771%yhousako@mx2.ttcn.ne.jp>
+
+宝迫です．
+
+こういう話題に首をつっこめるほどSqueakに精通していないのですが…．(^_^;;;
+
+On 2006.9.9 6:02 AM, "Takeshi MUTOH" <mutoh@openedu.org> wrote:
+> このマシンたちですが、ネットワークカードとかは付いてますか?
+
+ついていますが、どうもうまく認識＆設定されていないようです．
+
+「ようです」というのは、そうすればネットワークの設定が可能なのかがよくわかっ
+ていないからです．いろいろ調べて試してみましたが、とりあえずWebサイトにはア
+クセスすることができず、DHCPからアドレスを取得することもできず、IPアドレスの
+設定をする場所も見つからなかったというわけです．
+
+> あと、SqueakNOSのバージョンは、いつごろのものでしょうか?
+
+http://sourceforge.net/project/showfiles.php?group_id=3891
+
+から持ってきたSqueakNOS-8-Aug-2006.isoを使いました．
+
+> 他は結構致命的ですね…
+> まあ、実用というより、今は人柱として使う時期なのだとは理解してますけど;-)
+
+少し補足すると、OSとして利用するための右クリックのメニューは使えます．しかし、
+肝心なSqueakの部品に対する右クリックが使えません．なぜなのかは分かりません．
+
+> 情報、ありがとうございました。
+
+いえいえ、いつもROMばかりで心苦しく思っておりましたので．
+
+ちなみに、このSqueakNOSは、起動が非常に速いので驚きました．その点では、本当
+に実用化して欲しいと思います．逆に各種ディバイスの認識や設定などをすっ飛ばし
+て起動しているから、これだけ速く起動ができるということも考えられます．
+＃どっちを取るかは難しい問題でしょうけど．
+
+最近高速化されたKNOPPIXとSqueakの組み合わせで、起動即Squeakな環境が作れるの
+ではないかと思っていますが、作業をする時間と技術がありません．(^_^;;;
+
+------------------------------------------------------------
+寳迫　芳人（ほうさこ　よしと）
+yhousako@mx2.ttcn.ne.jp
+
+
+
+From zaki_k_saito ＠ s8.dion.ne.jp  Sat Sep  9 14:21:52 2006
+From: zaki_k_saito ＠ s8.dion.ne.jp (Saito)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3102]  OmniBaseJ
+Message-ID: <000601c6d3cf$dc011fb0$0200a8c0@kouhei>
+
+こんにちはOmniBaseJでの質問ですクラス名や変数名に日本語を使うとうまくいきませんが、無理でしょうか>[Squeak-ja: 2676] OmniBaseJ>こんにちは
+>梅澤です。
+
+>Squeak上で、大きなデータを扱いたいとき、データベースがあると良いなという
+>要求がわき起こってくるものです。
+
+>しかし、いわゆるリレーショナルDBでは、Squeakが持っているオブジェクト指向の
+>簡明さが、オブジェクト <-> 表 の変換作業によって失われてしまいます。
+
+>ということで、どうせ使うのであればオブジェクト指向DBということになります。
+
+>このたび、OmniBaseというフリーで使えるSqueak上のオブジェクト指向DBを日本語化 
+>
+>しましたので、ぜひお使いください。
+
+>下記に情報があります。
+>http://swikis.ddo.jp/umejava/24
+
+>SmalltalkのDictionaryを使うのとほぼ同じ感覚でDBが使えます。便利ですよ。
+
+>では。
+>---
+>[:masashi | ^umezawa]
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060909/5be33c44/attachment.html
+From koubo2006 ＠ yengawa.jpn.org  Sun Sep 10 13:24:23 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3103] [Q]ワールドメニュー制御
+Message-ID: <20060910131151.EEDD.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+Squeak Plugin2005Jでアプリケーションを作っています。
+
+ワールドをクリックしてもワールドメニューを出さないようにするにはどうする
+のでしょうか?
+ワールドメニューだけをkeihannaテーマの状態にしたいのです。
+
+よろしくお願いします。
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From abee ＠ squeakland.jp  Sun Sep 10 22:48:10 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3104] Re: [Q]ワールドメニュー制御
+In-Reply-To: <20060910131151.EEDD.KOUBO2006@yengawa.jpn.org>
+References: <20060910131151.EEDD.KOUBO2006@yengawa.jpn.org>
+Message-ID: <2d5d52a80609100648g2ffd735ao66a969fb93062eb2@mail.gmail.com>
+
+阿部@天満橋です。
+
+06/09/10 に Koji Yokokawa<koubo2006@yengawa.jpn.org> さんは書きました:
+> ワールドをクリックしてもワールドメニューを出さないようにするにはどうする
+> のでしょうか?
+> ワールドメニューだけをkeihannaテーマの状態にしたいのです。
+
+PasteUpMorph>>invokeWorldMenu:をいじればよいと思います。PreferencesとしてはeToyFriendlyですが、これをfalseにすると他にも影響が出ます。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From koubo2006 ＠ yengawa.jpn.org  Sun Sep 10 23:31:32 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3105] Re: [Q]ワールドメニュー制御
+In-Reply-To: <2d5d52a80609100648g2ffd735ao66a969fb93062eb2@mail.gmail.com>
+References: <20060910131151.EEDD.KOUBO2006@yengawa.jpn.org>
+	<2d5d52a80609100648g2ffd735ao66a969fb93062eb2@mail.gmail.com>
+Message-ID: <20060910232032.EEE0.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+ありがとうございます。
+PreferencesではeToyFriendlyでしたか。どうりでWorldとかMenuとかで検索して
+も出てこないわけだ。
+助かりました。
+
+On Sun, 10 Sep 2006 22:48:10 +0900
+"Kazuhiro ABE" <abee@squeakland.jp> wrote:
+
+> 阿部@天満橋です。
+> 
+> 06/09/10 に Koji Yokokawa<koubo2006@yengawa.jpn.org> さんは書きました:
+> > ワールドをクリックしてもワールドメニューを出さないようにするにはどうする
+> > のでしょうか?
+> > ワールドメニューだけをkeihannaテーマの状態にしたいのです。
+> 
+> PasteUpMorph>>invokeWorldMenu:をいじればよいと思います。PreferencesとしてはeToyFriendlyですが、これをfalseにすると他にも影響が出ます。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From tsutomu ＠ nucba.ac.jp  Mon Sep 11 17:39:28 2006
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3106] Re: source of ImmX11Plugin
+In-Reply-To: <20060820213010.408674f7.kawa90@yahoo.co.jp>
+References: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>	<20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>	<86odunee7f.wl%mutoh@openedu.org>
+	<20060820213010.408674f7.kawa90@yahoo.co.jp>
+Message-ID: <450520C0.1080302@nucba.ac.jp>
+
+廣島です。生存証明です。
+
+SqueakImmX11Plugin2a.tar.gz には
+Focus Event の扱いに些細な問題があって，
+SqueakImmX11Plugin2c.tar.gz に更新しおいたのですが，
+性根が面倒くさがりのもので，
+ずいぶん前に ML に流したまま，ほったらかしにしていました。
+
+そうこうしているうちに我が家の Linux は Vine3.2 -> FC5 となり，
+euc-jp -> utf-8 環境となったこともあって，
+うまく動くか VM 3.7-7 で試してみました。
+FC 5 ではとりあえず日本語入力できています。
+utf-8 のコードをパッチに組み込んでおいて本当によかったと，
+胸をなでおろしています。
+
+2c を 3.7-7 向けにパスを修正したのを，
+http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin3a.tar.gz
+に置きました。
+
+ただ，plugins.ext へのパッチがなぜこんな形にしてあるのか，
+失念してしまいました。
+（VM Maker で src を生成するのを念頭に置いているのかも？？）
+＝＝＝＝＝＝＝＝＝
+廣島　勉
+
+From mutoh ＠ openedu.org  Mon Sep 11 18:55:18 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3107] Re: SqueakNOS の実機動作について
+In-Reply-To: <C12855A7.12771%yhousako@mx2.ttcn.ne.jp>
+References: <8664fy8430.wl%mutoh@openedu.org>
+	<C12855A7.12771%yhousako@mx2.ttcn.ne.jp>
+Message-ID: <86venu7mnt.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+At Sat, 09 Sep 2006 11:27:35 +0900,
+Yoshito Housako <yhousako@mx2.ttcn.ne.jp> wrote:
+> こういう話題に首をつっこめるほどSqueakに精通していないのですが…．(^_^;;;
+
+私もです;-)
+# 境界領域で生きる男…
+
+> On 2006.9.9 6:02 AM, "Takeshi MUTOH" <mutoh@openedu.org> wrote:
+> > このマシンたちですが、ネットワークカードとかは付いてますか?
+> ついていますが、どうもうまく認識＆設定されていないようです．
+> 
+> 「ようです」というのは、そうすればネットワークの設定が可能なのかがよくわかっ
+> ていないからです．いろいろ調べて試してみましたが、とりあえずWebサイトにはア
+> クセスすることができず、DHCPからアドレスを取得することもできず、IPアドレスの
+> 設定をする場所も見つからなかったというわけです．
+
+ネットワークが認識されていて、デバイスドライバが対応している場合、(右
+側にある縦長の)Transcriptに例えば以下のように表示されます。
+{{{
+handler for IRQ #10 installed: a Realtek8139PCIDevice
+a Realtek8139PCIDevice installed as defaultNetworkInterface
+an EthernetInterface installed as networkingStack
+}}}
+
+この状態で(中央下にある)Workspaceのネットワーク初期化部分("setup")を、
+適切なパラメータを与えて設定してあげるとネットワークが使えるようになる
+はずです。 
+{{{
+"setup"
+Computer current networkingStack internetAddress: (InternetAddress fromString: '192.168.247.128'.
+Computer current networkingStack up.
+}}}
+
+後は、LAN内の他のマシンからpingでも(この例の場合、192.168.247.128に)投
+げてあげると応答が帰ってきて、Transcriptにもなにやら表示されます。
+
+DHCPで設定するのもできるんですかね?
+
+> ちなみに、このSqueakNOSは、起動が非常に速いので驚きました．その点では、本当
+> に実用化して欲しいと思います．逆に各種ディバイスの認識や設定などをすっ飛ばし
+> て起動しているから、これだけ速く起動ができるということも考えられます．
+> ＃どっちを取るかは難しい問題でしょうけど．
+
+まあ、まだファイルシステムもメモリへのエミュレーションだけだったりです
+し、もう一頑張り必要なのは確かだと思います。
+# BSDな人には真っ先にファイルシステムを突っ込まれました;-)
+
+あと、日本語Input Methodとかどうすんねんとかも問題になりますし。
+
+> 最近高速化されたKNOPPIXとSqueakの組み合わせで、起動即Squeakな環境が作れるの
+> ではないかと思っていますが、作業をする時間と技術がありません．(^_^;;;
+
+CDのデータ配置をブートで読まれる順に最適化するんでしたっけ?
+# FreeBSDのブータブルで環境作ろうと思って、まだ全然作業してない…
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+From yhousako ＠ mx2.ttcn.ne.jp  Mon Sep 11 21:33:14 2006
+From: yhousako ＠ mx2.ttcn.ne.jp (Yoshito Housako)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3108] Re: SqueakNOS の実機動作について
+In-Reply-To: <86venu7mnt.wl%mutoh@openedu.org>
+Message-ID: <C12B869A.12968%yhousako@mx2.ttcn.ne.jp>
+
+宝迫です．
+
+On 2006.9.11 6:55 PM, "Takeshi MUTOH" <mutoh@openedu.org> wrote:
+> ネットワークが認識されていて、デバイスドライバが対応している場合、(右
+> 側にある縦長の)Transcriptに例えば以下のように表示されます。
+（以下略）
+
+お知らせ頂いたような表示は見あたりませんでした．やはり認識できていないようで
+す．もしかすると、isoを走らせるホストOSの機能を使うような設定にしかなってい
+ないのではないかと思います．
+
+>> 最近高速化されたKNOPPIXとSqueakの組み合わせで、起動即Squeakな環境が作れるの
+>> ではないかと思っていますが、作業をする時間と技術がありません．(^_^;;;
+> 
+> CDのデータ配置をブートで読まれる順に最適化するんでしたっけ?
+> # FreeBSDのブータブルで環境作ろうと思って、まだ全然作業してない…
+
+＃KNOPPIXの話題を続けてしまって恐縮ですが…．
+
+KNOPPIXの場合は、HDにインストールしてさまざまなアプリを入れたり削除したりし
+て自分の好みのものを作り、KNOPPIXの起動イメージを作成するTOOLでISOを作成する
+だけなんですが、高速化のためにはアルファシステムズさんがつくった「高速化キッ
+ト」を使うと簡単にできるようです．
+
+http://www.alpha.co.jp/biz/rdg/ac-knoppix/
+
+KNOPPIXな皆さんと仲良くさせて頂いている関係で、最近はUSBメモリから起動す
+るKNOPPIX環境をさまざまな教育場面で活用できないかと考えています．
+＃USBメモリにインストールすれば、柔軟な変更が可能ですし、一々CD-ROMに焼かな
+くて済むので、いつでも思い通りのKNOPPIXを持ち歩けることになります．
+
+いろいろやりたいことや構想はあるのですが、時間がないというのが一番の壁です．
+
+------------------------------------------------------------
+寳迫　芳人（ほうさこ　よしと）
+yhousako@mx2.ttcn.ne.jp
+
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Sep 12 00:11:11 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3109] ESUG Conference 2006でのSqSquare
+Message-ID: <JN200609120011117.13464593@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+9/4-8にプラハで行われたESUG 14th International Smalltalk Conference 2006
+に出席してきました。
+
+SqSquareでデモをしてきたわけですが、どうにか3位に滑り込むことができました。
+http://ani.blueplane.jp/ume/44
+http://www.esug.org/conferences/14thinternationalsmalltalkconference2006/innovationawards/winnersandnominations/
+
+Smalltalkバルーンもいただきました。今後「夜の集い」のようなイベントをする
+ことがあれば、ぜひ皆さんにお見せしたいと思います。
+
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Tue Sep 12 00:23:37 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3110] Re: SqueakNOS の実機動作について
+In-Reply-To: <C12B869A.12968%yhousako@mx2.ttcn.ne.jp>
+References: <C12B869A.12968%yhousako@mx2.ttcn.ne.jp>
+Message-ID: <JD200609120023374.14210062@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+既にご存じかもしれませんが、USBメモリから起動できるSqueak入りの
+Linuxとして、Squeakwareというものがあります。
+http://swikis.ddo.jp/umejava/11
+
+こちらはSLAXというディストリビューションが元になっていますが、
+KNOPPIX同様にカスタマイズは非常に容易です。
+
+よろしければこちらもどうぞ。
+
+> ＃KNOPPIXの話題を続けてしまって恐縮ですが…．
+> 
+> KNOPPIXの場合は、HDにインストールしてさまざまなアプリを入れたり削除したりし
+> て自分の好みのものを作り、KNOPPIXの起動イメージを作成するTOOLでISOを作成する
+> だけなんですが、高速化のためにはアルファシステムズさんがつくった「高速化キッ
+> ト」を使うと簡単にできるようです．
+> 
+> http://www.alpha.co.jp/biz/rdg/ac-knoppix/
+> 
+> KNOPPIXな皆さんと仲良くさせて頂いている関係で、最近はUSBメモリから起動す
+> るKNOPPIX環境をさまざまな教育場面で活用できないかと考えています．
+> ＃USBメモリにインストールすれば、柔軟な変更が可能ですし、一々CD-ROMに焼かな
+> くて済むので、いつでも思い通りのKNOPPIXを持ち歩けることになります．
+> 
+> いろいろやりたいことや構想はあるのですが、時間がないというのが一番の壁です．
+> 
+---
+[:masashi | ^umezawa]
+
+From mutoh ＠ openedu.org  Tue Sep 12 05:12:28 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3111] Re: source of ImmX11Plugin
+In-Reply-To: <450520C0.1080302@nucba.ac.jp>
+References: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>
+	<20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>
+	<86odunee7f.wl%mutoh@openedu.org>
+	<20060820213010.408674f7.kawa90@yahoo.co.jp>
+	<450520C0.1080302@nucba.ac.jp>
+Message-ID: <86u03e6u37.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+At Mon, 11 Sep 2006 17:39:28 +0900,
+Tsutomu Hiroshima <tsutomu@nucba.ac.jp> wrote:
+> SqueakImmX11Plugin2a.tar.gz には
+> Focus Event の扱いに些細な問題があって，
+> SqueakImmX11Plugin2c.tar.gz に更新しおいたのですが，
+> 性根が面倒くさがりのもので，
+> ずいぶん前に ML に流したまま，ほったらかしにしていました。
+
+いつも、成果を利用させてもらってありがとうございます(_O_)
+
+すいません、何故自分がSqueakImmX11Plugin2a.tar.gzで作業しているかをアー
+カイブなどを見ながら思い出していたんですが、
+SqueakImmX11Plugin2c.tar.gzなどを置かれているサーバへのリンクは避けて
+欲しいという記述があったので、そうなる前のもので作業をしていたというこ
+とらしいです。
+
+どこか別のサーバに置いて公開するなどの手は取れないもんでしょうかね?
+もし、置いても構わないようでしたら、うちとかで準備しますけども…
+
+> そうこうしているうちに我が家の Linux は Vine3.2 -> FC5 となり，
+> euc-jp -> utf-8 環境となったこともあって，
+> うまく動くか VM 3.7-7 で試してみました。
+> FC 5 ではとりあえず日本語入力できています。
+> utf-8 のコードをパッチに組み込んでおいて本当によかったと，
+> 胸をなでおろしています。
+
+すいません、報告忘れてました。FreeBSDでも試しましたが、2aのままでも問
+題無くja_JP.UTF-8 localeで動いているようです。
+
+
+あと、なにをボケていたのか、全画面でXIMが使えないのへの対応も
+CompositionFocus.1.csで実装されているのを見落としていて、これを入れて
+問題無くXIM入力できることを確認できました。
+
+これって、SqueakPlugin2005Jとかのイメージに入れるのは問題があるんでし
+たっけ?
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+From tsutomu ＠ nucba.ac.jp  Tue Sep 12 12:08:59 2006
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3112] Re: source of ImmX11Plugin
+In-Reply-To: <86u03e6u37.wl%mutoh@openedu.org>
+References: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>	<20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>	<86odunee7f.wl%mutoh@openedu.org>	<20060820213010.408674f7.kawa90@yahoo.co.jp>	<450520C0.1080302@nucba.ac.jp>
+	<86u03e6u37.wl%mutoh@openedu.org>
+Message-ID: <450624CB.3080205@nucba.ac.jp>
+
+廣島です。武藤さん，こんにちは。
+
+> SqueakImmX11Plugin2c.tar.gzなどを置かれているサーバへのリンクは避けて
+> 欲しいという記述があったので、そうなる前のもので作業をしていたというこ
+> とらしいです。
+> 
+> どこか別のサーバに置いて公開するなどの手は取れないもんでしょうかね?
+> もし、置いても構わないようでしたら、うちとかで準備しますけども…
+
+UNIX 固有の問題ですので，
+ML の投稿にファイルを添付するのは憚られます。
+かといって HP をメンテする手間が惜しいので，
+不特定からのリンクを避けて，
+ML にファイル直の URL を公開してきました。
+# FTP サーバだったら良かったのに...
+
+ML に流した URL のファイルは煮るなり，
+焼くなり自由に使ってくれて結構です。
+武藤さんのページに置いてくだされば，
+不精者の私はとてもありがたいです。
+＝＝＝＝
+廣島　勉
+
+From yhousako ＠ mx2.ttcn.ne.jp  Tue Sep 12 16:55:06 2006
+From: yhousako ＠ mx2.ttcn.ne.jp (Yoshito Housako)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3113] Re: SqueakNOS の実機動作について
+In-Reply-To: <JD200609120023374.14210062@mars.dti.ne.jp>
+Message-ID: <C12C96EA.12A36%yhousako@mx2.ttcn.ne.jp>
+
+宝迫です．
+
+On 2006.9.12 0:23 AM, "Masashi Umezawa" <umejava@mars.dti.ne.jp> wrote:
+> 既にご存じかもしれませんが、USBメモリから起動できるSqueak入りの
+> Linuxとして、Squeakwareというものがあります。
+
+ご紹介頂きありがとうございます．以前にどこか（このML？）で紹介されていました
+よね．edu3.0をダウンロードしてCDに焼いて起動してみました．
+＃オリジナルのSqueakwareは、どうやってダウンロードするのかわかりませんでした．
+(^_^;;;
+
+以前にも紹介しましたが、試したのは下記のマシーンです．
+
+1.
+CPU：AMD Duron 1.4GHz
+MEM：512MB
+
+2.
+CPU：INTEL Celeron D 2.53GHz
+MEM：512MB
+
+2の方は、ディスプレーに4つの同じ画面が重なって表示されるという現象が出てしま
+い、まともに使えませんでした．
+
+1の方は、起動＆動作はしましたが、どうも画面の表示が大きくて使いにくい（800
+×600くらいかな？）状態でした．
+
+これらを総合すると、どうやらディスプレーとの相性の問題があるのではないかと感
+じております．
+
+ディスプレーは、cruce KL-17Nという安物のLCDディスプレーです．
+
+------------------------------------------------------------
+寳迫　芳人（ほうさこ　よしと）
+yhousako@mx2.ttcn.ne.jp
+
+
+
+From takemura ＠ bre.soc.i.kyoto-u.ac.jp  Tue Sep 12 17:01:46 2006
+From: takemura ＠ bre.soc.i.kyoto-u.ac.jp (Kentaro Takemura)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3114] アニメーション専用モーフ
+Message-ID: <003601c6d641$b1bfe780$3e1aee0a@tam>
+
+はじめまして
+京都大学大学院アランケイ研究室の竹村　顕大朗と申します。
+
+去年の６月からメーリングリストには加入しておりましたが
+投稿は今回が初めてになります。
+
+７月の下旬に京都市立高倉小学校に小学４〜６年生を対象とする
+アニメーションを中心としたスクイークのワークショップを開催したのですが、
+その際、アニメーション専用のオリジナルモーフを用いて行いました。
+結果としては、アニメーションのやり方がわからなくて立ち往生する子供が減り
+普段よりもスムーズにワークショップを進めることができました。
+
+そこで今回Web上にて、そのワークショップで使用した教材とともに
+このアニメーション専用のモーフを公開することにいたしました。
+http://www.edu.soc.i.kyoto-u.ac.jp/
+興味のある方は上記の研究室の公式サイトよりダウンロードの上お試しください。
+それでは失礼いたしました。
+
+-/*/*-/-*/*--/*/*-/-*/-*-/*-*/
+京都大学大学院　情報学研究科
+社会情報学専攻
+竹村　顕大朗
+takemura@bre.soc.i.kyoto-u.ac.jp
+/-*-*/-*/*-/-*/-/*/*-*-/*/-*-/ 
+
+
+
+From abee ＠ squeakland.jp  Tue Sep 12 18:00:07 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3115] Re: アニメーション専用モーフ
+In-Reply-To: <003601c6d641$b1bfe780$3e1aee0a@tam>
+References: <003601c6d641$b1bfe780$3e1aee0a@tam>
+Message-ID: <450677174B.C05EABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 12 Sep 2006 17:01:46 +0900
+"Kentaro Takemura" <takemura@bre.soc.i.kyoto-u.ac.jp> wrote:
+>そこで今回Web上にて、そのワークショップで使用した教材とともに
+>このアニメーション専用のモーフを公開することにいたしました。
+>http://www.edu.soc.i.kyoto-u.ac.jp/
+
+肝心の二日目のテキスト(text2.pdf)のリンク先がtest2.pdfになっているようで
+す。取り急ぎお知らせ迄。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Tue Sep 12 19:53:09 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3116] Re: SqueakNOS の実機動作について
+In-Reply-To: <C12C96EA.12A36%yhousako@mx2.ttcn.ne.jp>
+References: <C12C96EA.12A36%yhousako@mx2.ttcn.ne.jp>
+Message-ID: <JK200609121953095.2955593@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Yoshito Housako <yhousako@mx2.ttcn.ne.jp> wrote:
+> 宝迫です．
+> 
+> On 2006.9.12 0:23 AM, "Masashi Umezawa" <umejava@mars.dti.ne.jp> wrote:
+> > 既にご存じかもしれませんが、USBメモリから起動できるSqueak入りの
+> > Linuxとして、Squeakwareというものがあります。
+> 
+> ご紹介頂きありがとうございます．以前にどこか（このML？）で紹介されていました
+> よね．edu3.0をダウンロードしてCDに焼いて起動してみました．
+> ＃オリジナルのSqueakwareは、どうやってダウンロードするのかわかりませんでした．
+> (^_^;;;
+
+お試しありがとうございます。Squeakware 0.3の正式版は実はまだリリースされて
+いません。eduのみのリリースになっています。本家Squeakのバージョンが3.9として
+正式にリリースされ、安定化した時点で、作ろうと思っています。
+
+
+(略)
+> これらを総合すると、どうやらディスプレーとの相性の問題があるのではないかと感
+> じております．
+> 
+
+下記にあるように、boot: のプロンプトがでたときにslax guisafeと打つと、うまく
+いく場合もあります。(いかないことも、もちろんあります)
+http://swikis.ddo.jp/umejava/34
+
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Tue Sep 12 19:59:44 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3117] Re: OmniBaseJ
+In-Reply-To: <000601c6d3cf$dc011fb0$0200a8c0@kouhei>
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei>
+Message-ID: <JT2006091219594410.3350812@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+とりあえず、日本語クラス名用のパッチを書いてみました。日本語変数名は、
+自分の環境では、うまくいってしまったので、何も対処していません。
+(テストケースがあればお知らせください。)
+
+添付のチェンジセットをインストールするか、もしくはMCZをロードします。
+
+MCZは
+http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.8.mcz
+
+にあります。
+
+"Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+> こんにちはOmniBaseJでの質問ですクラス名や変数名に日本語を使うとうまくいきませんが、無理でしょうか>[Squeak-ja: 2676] OmniBaseJ>こんにちは
+> >梅澤です。
+> 
+> >Squeak上で、大きなデータを扱いたいとき、データベースがあると良いなという
+> >要求がわき起こってくるものです。
+> 
+> >しかし、いわゆるリレーショナルDBでは、Squeakが持っているオブジェクト指向の
+> >簡明さが、オブジェクト <-> 表 の変換作業によって失われてしまいます。
+> 
+> >ということで、どうせ使うのであればオブジェクト指向DBということになります。
+> 
+> >このたび、OmniBaseというフリーで使えるSqueak上のオブジェクト指向DBを日本語化 
+> >
+> >しましたので、ぜひお使いください。
+> 
+> >下記に情報があります。
+> >http://swikis.ddo.jp/umejava/24
+> 
+> >SmalltalkのDictionaryを使うのとほぼ同じ感覚でDBが使えます。便利ですよ。
+> 
+
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: OmniBaseJ-Patch0912.1.cs
+型:         application/octet-stream
+サイズ:     2034 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060912/eec5fb20/OmniBaseJ-Patch0912.1.obj
+From yhousako ＠ mx2.ttcn.ne.jp  Tue Sep 12 21:27:45 2006
+From: yhousako ＠ mx2.ttcn.ne.jp (Yoshito Housako)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3118] Re: SqueakNOS の実機動作について
+In-Reply-To: <JK200609121953095.2955593@mars.dti.ne.jp>
+Message-ID: <C12CD6D1.12A61%yhousako@mx2.ttcn.ne.jp>
+
+宝迫です．
+
+On 2006.9.12 7:53 PM, "Masashi Umezawa" <umejava@mars.dti.ne.jp> wrote:
+> お試しありがとうございます。Squeakware 0.3の正式版は実はまだリリースされて
+> いません。eduのみのリリースになっています。本家Squeakのバージョンが3.9として
+> 正式にリリースされ、安定化した時点で、作ろうと思っています。
+
+了解しました．楽しみにしております．
+
+> 下記にあるように、boot: のプロンプトがでたときにslax guisafeと打つと、うまく
+> いく場合もあります。
+
+ありがとうございます．見逃しておりました．早速やってみましたら、両方のマシー
+ンでうまく表示されました．ありがとうございました．
+＃Linuxなどをいじっていると、よくビデオチップとディスプレーの問題に遭遇する
+のでいつものことかと思っていました．
+＃AMD Duron 1.4GHzの方では、若干画面が切れる感じでしたが、操作には影響がない
+感じでした．
+
+slaxベースというのも良いですね．(^_^)
+
+------------------------------------------------------------
+寳迫　芳人（ほうさこ　よしと）
+yhousako@mx2.ttcn.ne.jp
+
+
+
+From zaki_k_saito ＠ s8.dion.ne.jp  Wed Sep 13 11:11:53 2006
+From: zaki_k_saito ＠ s8.dion.ne.jp (Saito)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3119] Re: OmniBaseJ
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei>
+	<JT2006091219594410.3350812@mars.dti.ne.jp>
+Message-ID: <000c01c6d6d9$fb5e33e0$0200a8c0@kouhei>
+
+こんにちは
+齊藤ともうします
+
+早速のご対応ありがとうございます
+日本語を含んだ変数名についてのテストケースです
+
+'----------------------------------------------------------------------------------------------'
+
+'From Squeakland 3.8-05 of 7 September 2005 [latest update: #552] on 13 
+September 2006 at 10:58:48 am'!
+Object subclass: #Test
+ instanceVariableNames: 'a b c v場所'
+ classVariableNames: ''
+ poolDictionaries: ''
+ category: '食製1-物品'!]lang[(55 2 60 2 2 2 1)0,5,0,5,0,5,0!
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+a
+ "Answer the value of a"
+
+ ^ a! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+a: anObject
+ "Set the value of a"
+
+ a _ anObject! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+b
+ "Answer the value of b"
+
+ ^ b! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+b: anObject
+ "Set the value of b"
+
+ b _ anObject! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+c
+ "Answer the value of c"
+
+ ^ c! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!
+c: anObject
+ "Set the value of c"
+
+ c _ anObject! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!
+m場所
+
+ ^ v場所!]lang[(1 2 6 2)0,5,0,5! !
+
+!Test methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!
+m場所: anObject
+
+ v場所 _ anObject!]lang[(1 2 14 2 11)0,5,0,5,0! !
+
+
+
+'------------------------------------------------------------------'
+
+db_OmniBase openOn:'c:\testOmni'.
+tra_db newTransaction.
+inst_Test new.
+inst a:'漢字１'.
+inst b:'漢字2'.
+inst c:Time now.
+inst m場所:'千葉県'.
+tra root at:#TEST put: inst.
+Transcript cr; show: inst a printString.
+Transcript cr; show: inst b printString.
+Transcript cr; show: inst c printString.
+Transcript cr; show: inst m場所 printString.
+tra commit.
+db close.
+
+==>'漢字１'
+==>'漢字2'
+==>10:52:09 am
+==>'千葉県'
+
+'-----------------------------------------------------------------'
+
+db_OmniBase openOn:'c:\testOmni'.
+tra_db newTransaction.
+ans_tra root at:#TEST.
+Transcript cr; show: ans a printString.
+Transcript cr; show: ans b printString.
+Transcript cr; show: ans c printString.
+Transcript cr; show: ans m場所 printString.
+tra commit.
+db close.
+
+==>'漢字１'
+==>'漢字2'
+==>10:52:09 am
+==>nil
+'-------------------------------------------------------------------------'
+お送りいただいた"日本語クラス名用のパッチ"は
+これから、ためしてみます
+
+
+
+
+----- Original Message ----- 
+From: "Masashi Umezawa" <umejava@mars.dti.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Tuesday, September 12, 2006 7:59 PM
+Subject: [Squeak-ja: 3117] Re: OmniBaseJ
+
+
+> こんにちは
+> 梅澤です。
+>
+> とりあえず、日本語クラス名用のパッチを書いてみました。日本語変数名は、
+> 自分の環境では、うまくいってしまったので、何も対処していません。
+> (テストケースがあればお知らせください。)
+>
+> 添付のチェンジセットをインストールするか、もしくはMCZをロードします。
+>
+> MCZは
+> http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.8.mcz
+>
+> にあります。
+>
+> "Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+>> こんにちはOmniBaseJでの質問ですクラス名や変数名に日本語を使うとうまくいきませんが、無理でしょうか>[Squeak-ja: 2676] OmniBaseJ>こんにちは
+>> >梅澤です。
+>>
+>> >Squeak上で、大きなデータを扱いたいとき、データベースがあると良いなという
+>> >要求がわき起こってくるものです。
+>>
+>> >しかし、いわゆるリレーショナルDBでは、Squeakが持っているオブジェクト指向の 
+>> >
+>> >簡明さが、オブジェクト <-> 表 の変換作業によって失われてしまいます。
+>>
+>> >ということで、どうせ使うのであればオブジェクト指向DBということになります。 
+>> >
+>>
+>> >このたび、OmniBaseというフリーで使えるSqueak上のオブジェクト指向DBを日本語化
+>> >
+>> >しましたので、ぜひお使いください。
+>>
+>> >下記に情報があります。
+>> >http://swikis.ddo.jp/umejava/24
+>>
+>> >SmalltalkのDictionaryを使うのとほぼ同じ感覚でDBが使えます。便利ですよ。
+>>
+>
+> ---
+> [:masashi | ^umezawa] 
+
+
+
+From takemura ＠ bre.soc.i.kyoto-u.ac.jp  Wed Sep 13 12:23:35 2006
+From: takemura ＠ bre.soc.i.kyoto-u.ac.jp (Kentaro Takemura)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3120]  Re: アニメーション専用モーフ
+References: <003601c6d641$b1bfe780$3e1aee0a@tam>
+	<450677174B.C05EABEE@smtp.nifty.com>
+Message-ID: <000b01c6d6e3$ff77a830$3e1aee0a@tam>
+
+竹村です
+ご指摘ありがとうございました。
+修正いたしました。
+
+-/*/*-/-*/*--/*/*-/-*/-*-/*-*/
+京都大学大学院　情報学研究科
+社会情報学専攻
+竹村　顕大朗
+takemura@bre.soc.i.kyoto-u.ac.jp
+/-*-*/-*/*-/-*/-/*/*-*-/*/-*-/
+----- Original Message ----- 
+From: "Kazuhiro ABE" <abee@squeakland.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Tuesday, September 12, 2006 6:00 PM
+Subject: [Squeak-ja: 3115] Re: アニメーション専用モーフ
+
+
+> 阿部@新百合です。
+>
+> On Tue, 12 Sep 2006 17:01:46 +0900
+> "Kentaro Takemura" <takemura@bre.soc.i.kyoto-u.ac.jp> wrote:
+>>そこで今回Web上にて、そのワークショップで使用した教材とともに
+>>このアニメーション専用のモーフを公開することにいたしました。
+>>http://www.edu.soc.i.kyoto-u.ac.jp/
+>
+> 肝心の二日目のテキスト(text2.pdf)のリンク先がtest2.pdfになっているようで
+> す。取り急ぎお知らせ迄。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Sep 13 17:08:41 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3121] Re: OmniBaseJ
+In-Reply-To: <000c01c6d6d9$fb5e33e0$0200a8c0@kouhei>
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei>
+	<JT2006091219594410.3350812@mars.dti.ne.jp>
+	<000c01c6d6d9$fb5e33e0$0200a8c0@kouhei>
+Message-ID: <JM200609131708413.33964921@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ありがとうございます。再現できました。パッチを書いてみたので
+お試しください。
+
+MCZは
+http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.10.mcz
+
+になります。
+
+"Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+> こんにちは
+> 齊藤ともうします
+> 
+> 早速のご対応ありがとうございます
+> 日本語を含んだ変数名についてのテストケースです
+> 
+
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: OmniBaseJ-Patch0913.6.cs
+型:         application/octet-stream
+サイズ:     9910 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060913/3822cb18/OmniBaseJ-Patch0913.6.obj
+From abee ＠ squeakland.jp  Wed Sep 13 21:34:14 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3122] $100 ラップトップのデュアルモードディスプレイでスクイークが動作  !
+Message-ID: <4507FAC6347.63F7ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+Engadget Japaneseにも載っていますが、
+
+OLPC 100ドルノートPC： デュアルモードディスプレイのプロトタイプ完成
+http://japanese.engadget.com/2006/09/12/olpc-2b1-dualmode-display/
+
+Dual Mode Display Prototype Photos
+http://www.olpcnews.com/hardware/screen/dual_mode_display_pr.html
+
+スクイークの皆さん、写真にうつり過ぎ。
+
+http://piumarta.com/photos/olpc/
+
+あと、大島さん、それは大きさの比較にならないから。
+
+しかし、よい写真ですね(特に山宮さんとキムさん)。ああ、一週間遅ければ私も
+いたのに。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From zaki_k_saito ＠ s8.dion.ne.jp  Wed Sep 13 22:13:51 2006
+From: zaki_k_saito ＠ s8.dion.ne.jp (Saito)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3123] Re: OmniBaseJ
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei><JT2006091219594410.3350812@mars.dti.ne.jp><000c01c6d6d9$fb5e33e0$0200a8c0@kouhei>
+	<JM200609131708413.33964921@mars.dti.ne.jp>
+Message-ID: <001001c6d736$74d79890$0200a8c0@kouhei>
+
+こんばんは
+齊藤です
+
+早速試させてもらいました
+
+日本語を含んだ変数名についての動作は
+正常でしたが、
+クラス名を日本語にした場合の動作が
+うまくいきませんでした。
+
+
+
+"-------------------------------------------------------------------------------------------"
+
+'From Squeakland 3.8-05 of 7 September 2005 [latest update: #552] on 13 
+September 2006 at 10:03:14 pm'!
+Object subclass: #テスト
+ instanceVariableNames: 'a b c v場所'
+ classVariableNames: ''
+ poolDictionaries: ''
+ category: '食製1-物品'!]lang[(18 3 33 2 60 2 2 2 1)0,5,0,5,0,5,0,5,0!
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+a
+ "Answer the value of a"
+
+ ^ a! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+a: anObject
+ "Set the value of a"
+
+ a _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+b
+ "Answer the value of b"
+
+ ^ b! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+b: anObject
+ "Set the value of b"
+
+ b _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+c
+ "Answer the value of c"
+
+ ^ c! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+c: anObject
+ "Set the value of c"
+
+ c _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!]lang[(3 
+55)5,0!
+m場所
+
+ ^ v場所!]lang[(1 2 6 2)0,5,0,5! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!]lang[(3 
+55)5,0!
+m場所: anObject
+
+ v場所 _ anObject!]lang[(1 2 14 2 11)0,5,0,5,0! !
+
+----- Original Message ----- 
+From: "Masashi Umezawa" <umejava@mars.dti.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Wednesday, September 13, 2006 5:08 PM
+Subject: [Squeak-ja: 3121] Re: OmniBaseJ
+
+
+> こんにちは
+> 梅澤です。
+>
+> ありがとうございます。再現できました。パッチを書いてみたので
+> お試しください。
+>
+> MCZは
+> http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.10.mcz
+>
+> になります。
+>
+> "Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+>> こんにちは
+>> 齊藤ともうします
+>>
+>> 早速のご対応ありがとうございます
+>> 日本語を含んだ変数名についてのテストケースです
+>>
+>
+> ---
+> [:masashi | ^umezawa] 
+
+
+
+From zaki_k_saito ＠ s8.dion.ne.jp  Wed Sep 13 22:53:01 2006
+From: zaki_k_saito ＠ s8.dion.ne.jp (Saito)
+Date: Thu Dec  6 11:03:34 2007
+Subject: [Squeak-ja: 3124] Re: OmniBaseJ
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei><JT2006091219594410.3350812@mars.dti.ne.jp><000c01c6d6d9$fb5e33e0$0200a8c0@kouhei>
+	<JM200609131708413.33964921@mars.dti.ne.jp>
+Message-ID: <001401c6d73b$eddc7c10$0200a8c0@kouhei>
+
+すみません、先ほどのメールでは
+実行結果が
+記載されていませんでしたので
+再送信します
+
+'From Squeakland 3.8-05 of 7 September 2005 [latest update: #552] on 13 
+September 2006 at 10:03:14 pm'!
+Object subclass: #テスト
+ instanceVariableNames: 'a b c v場所'
+ classVariableNames: ''
+ poolDictionaries: ''
+ category: '食製1-物品'!]lang[(18 3 33 2 60 2 2 2 1)0,5,0,5,0,5,0,5,0!
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+a
+ "Answer the value of a"
+
+ ^ a! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+a: anObject
+ "Set the value of a"
+
+ a _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+b
+ "Answer the value of b"
+
+ ^ b! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+b: anObject
+ "Set the value of b"
+
+ b _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+c
+ "Answer the value of c"
+
+ ^ c! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/9/2006 13:31'!]lang[(3 
+54)5,0!
+c: anObject
+ "Set the value of c"
+
+ c _ anObject! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!]lang[(3 
+55)5,0!
+m場所
+
+ ^ v場所!]lang[(1 2 6 2)0,5,0,5! !
+
+!テスト methodsFor: 'accessing' stamp: 'ys-11 9/13/2006 10:57'!]lang[(3 
+55)5,0!
+m場所: anObject
+
+ v場所 _ anObject!]lang[(1 2 14 2 11)0,5,0,5,0! !
+
+
+'------------------------------------------------------------------'
+
+db_OmniBase openOn:'c:\testOmni'.
+tra_db newTransaction.
+inst_テスト new.
+inst a:'漢字１'.
+inst b:'漢字2'.
+inst c:Time now.
+inst m場所:'千葉県'.
+tra root at:#TEST put: inst.
+Transcript cr; show: inst class name.
+Transcript cr; show: inst a printString.
+Transcript cr; show: inst b printString.
+Transcript cr; show: inst c printString.
+Transcript cr; show: inst m場所 printString.
+tra commit.
+db close.
+
+==>テスト
+==>'漢字１'
+==>'漢字2'
+==>9:36:10 pm
+==>'千葉県'
+
+'-----------------------------------------------------------------'
+
+db_OmniBase openOn:'c:\testOmni'.
+tra_db newTransaction.
+ans_tra root at:#TEST.
+Transcript cr; show: ans   class name.
+Transcript cr; show: ans a printString.
+Transcript cr; show: ans b printString.
+Transcript cr; show: ans c printString.
+Transcript cr; show: ans m場所 printString.
+tra commit.
+db close.
+
+==>ODBReference
+でエラーノーテイファイアになる
+
+----- Original Message ----- 
+From: "Masashi Umezawa" <umejava@mars.dti.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Wednesday, September 13, 2006 5:08 PM
+Subject: [Squeak-ja: 3121] Re: OmniBaseJ
+
+
+> こんにちは
+> 梅澤です。
+>
+> ありがとうございます。再現できました。パッチを書いてみたので
+> お試しください。
+>
+> MCZは
+> http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.10.mcz
+>
+> になります。
+>
+> "Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+>> こんにちは
+>> 齊藤ともうします
+>>
+>> 早速のご対応ありがとうございます
+>> 日本語を含んだ変数名についてのテストケースです
+>>
+>
+> ---
+> [:masashi | ^umezawa] 
+
+
+
+From umejava ＠ mars.dti.ne.jp  Thu Sep 14 11:45:04 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3125] Re: OmniBaseJ
+In-Reply-To: <001001c6d736$74d79890$0200a8c0@kouhei>
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei><JT2006091219594410.3350812@mars.dti.ne.jp><000c01c6d6d9$fb5e33e0$0200a8c0@kouhei>
+	<JM200609131708413.33964921@mars.dti.ne.jp>
+	<001001c6d736$74d79890$0200a8c0@kouhei>
+Message-ID: <JO200609141145044.13665015@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+おそらく今回のパッチで対処できたと思います。
+
+MCZは
+http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.11.mcz
+
+になります。
+
+ご確認ください。
+
+"Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+> こんばんは
+> 齊藤です
+> 
+> 早速試させてもらいました
+> 
+> 日本語を含んだ変数名についての動作は
+> 正常でしたが、
+> クラス名を日本語にした場合の動作が
+> うまくいきませんでした。
+> 
+
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: OmniBaseJ-Patch0914.5.cs
+型:         application/octet-stream
+サイズ:     9794 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060914/7d6dec07/OmniBaseJ-Patch0914.5.obj
+From zaki_k_saito ＠ s8.dion.ne.jp  Thu Sep 14 12:45:37 2006
+From: zaki_k_saito ＠ s8.dion.ne.jp (Saito)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3126] Re: OmniBaseJ
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei><JT2006091219594410.3350812@mars.dti.ne.jp><000c01c6d6d9$fb5e33e0$0200a8c0@kouhei><JM200609131708413.33964921@mars.dti.ne.jp><001001c6d736$74d79890$0200a8c0@kouhei>
+	<JO200609141145044.13665015@mars.dti.ne.jp>
+Message-ID: <000e01c6d7b0$3e1928d0$0200a8c0@kouhei>
+
+こんにちは
+齊藤です
+
+ありがとうございます
+早速試させていただきました。
+
+日本語を含んだ変数名、クラス名とも
+正常に処理されました。
+ついでに、クラス変数、クラスインスタンス変数も
+試してみましたが正常でした。
+もっともこれは、クラスそのものをOmniBaseJへ
+書き込んでです。
+
+ガンガン使わせていただきますので
+今後ともよろしくお願いします。
+
+----- Original Message ----- 
+From: "Masashi Umezawa" <umejava@mars.dti.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Thursday, September 14, 2006 11:45 AM
+Subject: [Squeak-ja: 3125] Re: OmniBaseJ
+
+
+> こんにちは
+> 梅澤です。
+> 
+> おそらく今回のパッチで対処できたと思います。
+> 
+> MCZは
+> http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.11.mcz
+> 
+> になります。
+> 
+> ご確認ください。
+> 
+> "Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+>> こんばんは
+>> 齊藤です
+>> 
+>> 早速試させてもらいました
+>> 
+>> 日本語を含んだ変数名についての動作は
+>> 正常でしたが、
+>> クラス名を日本語にした場合の動作が
+>> うまくいきませんでした。
+>> 
+> 
+> ---
+> [:masashi | ^umezawa]
+
+
+From kenk.ito ＠ gmail.com  Thu Sep 14 13:45:16 2006
+From: kenk.ito ＠ gmail.com (kenkichi itou)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3127] Re: Squeakware-edu-0.3 サーバ版
+Message-ID: <a5d7dc7e0609132145j65ee4a52n848a74e583abea92@mail.gmail.com>
+
+[Squeak-ja:3054] ７月１４日へのReです
+
+梅沢様
+
+伊藤謙吉です。SupperSwiki2のテストを行いました。Windows版 Linux版とも問題なし作動しまました。
+使用したPCは CeleronM １．５GHｚ 、 Athlon64 ３２００＋ でいずれも１GのRAMを持っています。
+Windows版は特にコメントなしです。
+Linux版のSqueakwareはCdromに焼き、１CDromまでは問題ありませんでした。
+slaxには大分慣れてきましたので、まずはこれをHDに移してテストしました。特に問題はありませんでした。
+梅沢さん説明にありましたようMySLAXCreatorを使用しました。USBメモリーからのBootUpは成功したこと一度だけで（勝率
+１０％以下です）で鬼門でありました。
+１）USBメモリーをBootデバイスとしてBIOSのなかで設定する必要あります。このときUBSメモリーをHDのカテゴリーで認識する場合と、フロッピーデスクのカテゴリーで認識する場合があります。私は
+A）東芝製の５１２M と B)BUFFALO製 １G
+を使用しましたが B)はHDのカテゴリーであったが、A)HDとフロッピーとの両方の場合がありました？
+Bootはできませんでした。結局今回はB)のみがBootに使用できました。
+２）MySLAXCreatorは説明にはUBSに焼くにはコマンドの -expertをつけて使えとあったようでありますがよく分かりませんでした。
+結局MySLAXCreatorの順番に従い、boot用のCDから再度 iso.imageを作り上げ
+、CDに焼き付ける条件が示されますので続け、エラーメッセージが出た後USBに焼き付ける条件が出ますので続けると出来上がります。
+３）このUSBを用いますと、プロジェクトのUPLOAD（作品の公開）は自動的にUBSに反映されます。
+ただしブラウザーのカスタマイズとか背景の変更とか細かな変更は別にやる必要がありますので自動loginをはずして、テキストレベルで、configsave,configrestore
+コマンドを用いました。差分ファイルをslaxconf.moとしてUBSのrootにおきました
+。２度目からはsave,restoreを聞いてきますので私はこの方を使っております。プロジェクトの保存は２重になるのかもしれませんが？
+プロジェクトはまだ数個しか入れていませんが、使い勝手はよさそうです。これからプロジェクトの整理に使うつもりです。
+
+ご意見をお伺いしたいのは
+１）Bootに使えるUSBと使えないUSBがあると考えればよいのですか？
+２）MySLAXCreator乱暴な使い方かと思いますのでいい使い方教えてください。
+
+よろしくお願いします。
+
+伊藤謙吉
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060914/41e232fb/attachment.html
+From umejava ＠ mars.dti.ne.jp  Thu Sep 14 15:39:21 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3128] Re: Squeakware-edu-0.3 サーバ版
+In-Reply-To: <a5d7dc7e0609132145j65ee4a52n848a74e583abea92@mail.gmail.com>
+References: <a5d7dc7e0609132145j65ee4a52n848a74e583abea92@mail.gmail.com>
+Message-ID: <JV200609141539215.5305437@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Squeakwareをお使いいただきありがとうございます。configsaveを使った環境の保存など、
+かなり使い込まれていますね。
+
+> ご意見をお伺いしたいのは
+> １）Bootに使えるUSBと使えないUSBがあると考えればよいのですか？
+> ２）MySLAXCreator乱暴な使い方かと思いますのでいい使い方教えてください。
+> 
+> よろしくお願いします。
+
+1)についてですが、USBメモリからのブートでは、一般にPCとUSBメモリ間の
+相性問題が発生しやすいです。
+
+起動するPCのBIOSで、USBメモリからのブートに対応しきれていない場合もありますし、
+USBメモリのほうで、ブートに対応していない場合もあります。
+
+PCのほうは、BIOSを更新すると起動ができるようになることもあります。
+例えばslax-jaのページには下記のような情報がありました。
+http://hatochan.dyndns.org/slax-ja/index.php?slax-ja%2Fuserreports%2Fusbmemoryboot
+
+USBメモリに関しては、「ブート可能」と明確に謳ってあるものを買うのがもっとも
+安全です。経験上は、特に明記していなくてもほぼブート可能です。超小型などの
+変わった形のタイプは、特殊な作りとなっているからか、ブートができないことが
+多いようです。
+
+2)についてですが、私の場合は.isoイメージをMySLAX Creatorを使ってマウントし、
+USBメモリに焼いています。ウィザードを立ち上げ、Select sourceの項で、
+'Select an SLAX ISO image'のファイル選択でisoイメージを選んで'Mount'します。
+すると、右側の'USB Stick'ボタンがアクティブになるので、これをクリックすれば
+後はUSBメモリに焼く画面に移行します。(途中のCD作成をスキップします)
+ちなみにバージョン1.4.1を使用しています。
+
+以上、ご参考になりましたら幸いです。
+
+---
+[:masashi | ^umezawa]
+
+From mutoh ＠ openedu.org  Thu Sep 14 15:53:54 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3129] Re: source of ImmX11Plugin
+In-Reply-To: <450624CB.3080205@nucba.ac.jp>
+References: <200608090712.k797CpU9001653@maurina.uni.sony.co.jp>
+	<20060809161506.82235.qmail@web3005.mail.tnz.yahoo.co.jp>
+	<86odunee7f.wl%mutoh@openedu.org>
+	<20060820213010.408674f7.kawa90@yahoo.co.jp>
+	<450520C0.1080302@nucba.ac.jp> <86u03e6u37.wl%mutoh@openedu.org>
+	<450624CB.3080205@nucba.ac.jp>
+Message-ID: <867j076irh.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+返事が遅くなって、申し訳ありません。
+
+At Tue, 12 Sep 2006 12:08:59 +0900,
+Tsutomu Hiroshima <tsutomu@nucba.ac.jp> wrote:
+> > SqueakImmX11Plugin2c.tar.gzなどを置かれているサーバへのリンクは避けて
+> > 欲しいという記述があったので、そうなる前のもので作業をしていたというこ
+> > とらしいです。
+> > 
+> > どこか別のサーバに置いて公開するなどの手は取れないもんでしょうかね?
+> > もし、置いても構わないようでしたら、うちとかで準備しますけども…
+> UNIX 固有の問題ですので，
+> ML の投稿にファイルを添付するのは憚られます。
+> かといって HP をメンテする手間が惜しいので，
+> 不特定からのリンクを避けて，
+> ML にファイル直の URL を公開してきました。
+> # FTP サーバだったら良かったのに...
+
+サーバ類は本来の仕事以外に作業を増やしますもんね。
+
+> ML に流した URL のファイルは煮るなり，
+> 焼くなり自由に使ってくれて結構です。
+
+サーバへの負荷やメンテナンスなどの問題などもあると思いますので、
+
+> 武藤さんのページに置いてくだされば，
+> 不精者の私はとてもありがたいです。
+
+こちらを採用させてください。
+とりあえず、
+	http://squeak.610t.org/patches/
+に提供されたパッチを置いていこうと思っています。
+新しいパッチなども、私にメールで送っていただければ公開するようにします
+ので、よろしくお願いします(_O_)
+
+他にも、公開したいものがある方は御連絡いただければ相談に乗りたいと思い
+ますので、お気軽にご相談ください。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From abee ＠ squeakland.jp  Thu Sep 14 18:30:47 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3130] Re: Squeakware-edu-0.3 サーバ版
+In-Reply-To: <JV200609141539215.5305437@mars.dti.ne.jp>
+References: <a5d7dc7e0609132145j65ee4a52n848a74e583abea92@mail.gmail.com>
+	<JV200609141539215.5305437@mars.dti.ne.jp>
+Message-ID: <2d5d52a80609140230n5e86866dhd06baeb98aee3b82@mail.gmail.com>
+
+阿部@八王子です。
+
+06/09/14 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> USBメモリに関しては、「ブート可能」と明確に謳ってあるものを買うのがもっとも
+> 安全です。経験上は、特に明記していなくてもほぼブート可能です。超小型などの
+> 変わった形のタイプは、特殊な作りとなっているからか、ブートができないことが
+> 多いようです。
+
+VAIO type U (VGN-UX90S)は駄目でした。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Sep 14 18:38:52 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3131] Re: IntelMac での SqueakLandJ2005 tinyBenchmarks
+In-Reply-To: <20060210021515.072954375B@1server.aquilax.co.jp>
+References: <20060210021515.072954375B@1server.aquilax.co.jp>
+Message-ID: <2d5d52a80609140238p75a10f5g20a8b11b610f84f4@mail.gmail.com>
+
+阿部@八王子です。
+
+06/02/10 に Kouji takahashi<tako@aquilax.co.jp> さんは書きました:
+> 現行の IntelとPowerPCのiMac上でSqueakLand J2005 の
+> tinyBenchmarks を行いました。
+>
+>                         bytecode/sec    sends/sec  : 私的処理
+> Intel iMac 2.0G(667M) :  50,473.520   : 2,270,514  : 82,551ms
+> iMacG5     2.1G(700M) : 150,888,365   : 6,279,058  : 29,003ms
+> ()内はバスクロック↑  :      2.98倍   :    2.76倍  : 2.84倍
+
+某所でCore DuoのiMac(2GHz, 667MHz)を触ったのでベンチマークを取ってみました。
+
+1 tinyBenchmarks '67121132 bytecodes/sec; 2406199 sends/sec'
+
+ご参考まで。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Sep 14 23:06:35 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3132] Re: source of ImmX11Plugin
+In-Reply-To: <867j076irh.wl%mutoh@openedu.org>
+References: <450624CB.3080205@nucba.ac.jp> <867j076irh.wl%mutoh@openedu.org>
+Message-ID: <450961EB13D.82EDABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 14 Sep 2006 15:53:54 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>At Tue, 12 Sep 2006 12:08:59 +0900,
+>Tsutomu Hiroshima <tsutomu@nucba.ac.jp> wrote:
+>> 武藤さんのページに置いてくだされば，
+>> 不精者の私はとてもありがたいです。
+>
+>こちらを採用させてください。
+
+私自身、あまり活用しているわけではないのですが、梅澤さんのSqueakSourceJを
+使うのはいかがでしょうか。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-April/002941.html
+http://squeaksource.blueplane.jp/
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Thu Sep 14 23:39:36 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3133] Re: source of ImmX11Plugin
+In-Reply-To: <450961EB13D.82EDABEE@smtp.nifty.com>
+References: <450624CB.3080205@nucba.ac.jp> <867j076irh.wl%mutoh@openedu.org>
+	<450961EB13D.82EDABEE@smtp.nifty.com>
+Message-ID: <JD200609142339365.671859@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ご紹介ありがとうございます。
+
+SqueakSourceは、Squeakからの操作に特化していますので、置けるファイルは
+MCZに限定されます。プラグイン用のCのソースや、tarballなどの管理は
+原則としてできません。(むりやりにすべてをMCZにすればなんとかなるでしょうが)
+
+よってSqueakSourceJを使うのは今回は無理です。blueplane.jp上のSwikiや
+AniAniWebでしたらご連絡いただければ提供できます。
+
+Swiki: http://swikis.ddo.jp/
+AniAniWeb: http://ani.blueplane.jp/
+
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+> 阿部@新百合です。
+> 
+> On Thu, 14 Sep 2006 15:53:54 +0900
+> Takeshi MUTOH <mutoh@openedu.org> wrote:
+> >At Tue, 12 Sep 2006 12:08:59 +0900,
+> >Tsutomu Hiroshima <tsutomu@nucba.ac.jp> wrote:
+> >> 武藤さんのページに置いてくだされば，
+> >> 不精者の私はとてもありがたいです。
+> >
+> >こちらを採用させてください。
+> 
+> 私自身、あまり活用しているわけではないのですが、梅澤さんのSqueakSourceJを
+> 使うのはいかがでしょうか。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2006-April/002941.html
+> http://squeaksource.blueplane.jp/
+
+---
+[:masashi | ^umezawa]
+
+From kenk.ito ＠ gmail.com  Fri Sep 15 23:55:56 2006
+From: kenk.ito ＠ gmail.com (kenkichi itou)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3134] Re: Squeakware-edu-0.3 サーバ版
+In-Reply-To: <2d5d52a80609140230n5e86866dhd06baeb98aee3b82@mail.gmail.com>
+References: <a5d7dc7e0609132145j65ee4a52n848a74e583abea92@mail.gmail.com>
+	<JV200609141539215.5305437@mars.dti.ne.jp>
+	<2d5d52a80609140230n5e86866dhd06baeb98aee3b82@mail.gmail.com>
+Message-ID: <a5d7dc7e0609150755i54fbe47cge9a52122dfcb6dc2@mail.gmail.com>
+
+梅沢様 阿部様 Re 有難うございました。前回の情報、追加訂正します
+PCによる違いが大きいことが分かりました。
+
+１｝ Celeron M を使用したPC
+cpu Celeron M 1.5 GHz
+aopen社 XCcubeEZ855 ベアボーンセット
+（チップセットIntel855GME＋ICH4-M）
+OS WindowsXP Home Edition
+
+２） Athlon64 ３２００＋を使用したPC
+cpu Athlon64 3200+ (2Ghz)
+ASUS社マザーボード A8N-SLI SE
+（チップセットNVIDIA nForce4 SLI)
+OS WindowsXP profesional x64 Edition
+
+MySLAXCreator は
+１）では正常に作動、 iso fileの読み込み、USB書き込み エラーメッセージなしに終了。
+２）ではiso fileの読み込み不可、CD書き込みでエラーを起こした後、UBSに書き込み。
+
+１）のPCを使い で
+A) 東芝５１２M （TOSHUBA 512MB USB2.0)
+B) BUFFALO １G (BUFFALO RUF2-E １G)
+に Squeakware-edu-0.3-server-jp.iso を書き込んだ。正常に終了。
+
+A)、B)のUSBメモリーを用い、Bootテストを行った。
+1） のPCでは A),B)ともフロッピーカテゴリーで認識、Bootも両方正常であった。
+２）のPCでは B)のみをHDカテゴリーで認識、Bootはできた。
+
+２）のPCは動作に？？ のことがありましたし、WindowsXP x64の問題はMS社もみとめておりますので、１）のPCが標準と思います。Bootup
+可能なUSBの範囲も広そうです？ ２）のPCを使ったことで問題を複雑にしたように思いました。
+
+伊藤謙吉 kenk.ito@gmail.com
+
+
+
+
+06/09/14 に Kazuhiro ABE <abee@squeakland.jp> さんは書きました:
+>
+> 阿部@八王子です。
+>
+> 06/09/14 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> > USBメモリに関しては、「ブート可能」と明確に謳ってあるものを買うのがもっとも
+> > 安全です。経験上は、特に明記していなくてもほぼブート可能です。超小型などの
+> > 変わった形のタイプは、特殊な作りとなっているからか、ブートができないことが
+> > 多いようです。
+>
+> VAIO type U (VGN-UX90S)は駄目でした。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060915/60e180f5/attachment.htm
+From yasuda ＠ mfc.bakkers.gr.jp  Sat Sep 16 00:04:06 2006
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3135] KOF 2006 （大阪でのイベント）
+Message-ID: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+
+安田と申します。
+
+KOF 2006 が 11/17, 18 の金土と二日間、大阪は ATC （南港）にて
+開催されます。（私は実行委員だったりします）
+
+ずっと以前に一度 Squeak のブースを KOF に出して頂いた事もあり、
+ふたたび出展のお誘いであります。
+
+http://k-of.jp/program.html
+
+にあるように、机一つではありますが、無料で出展いただけます。
+この機会にまだ Squeak を見たことがない人たち向けにアピール、
+というのはいかがでしょうか。(^_^)//
+
+ご興味ありましたら一報くださいませ。
+
+でわでわ					Yasu.
+
+
+From tak ＠ metatoys.org  Sat Sep 16 00:15:21 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3136] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+Message-ID: <450AC389.1050808@metatoys.org>
+
+山宮です。
+
+ぜひやりましょう！
+私はこのあたりちょうど暇にしてる予定です。
+ところで、誰が関西に居るのか良く知らないのですが、
+武田さんや武藤さんいかがですか？
+
+Yasuda Yutaka wrote:
+> 安田と申します。
+> 
+> KOF 2006 が 11/17, 18 の金土と二日間、大阪は ATC （南港）にて
+> 開催されます。（私は実行委員だったりします）
+> 
+> ずっと以前に一度 Squeak のブースを KOF に出して頂いた事もあり、
+> ふたたび出展のお誘いであります。
+> 
+> http://k-of.jp/program.html
+> 
+> にあるように、机一つではありますが、無料で出展いただけます。
+> この機会にまだ Squeak を見たことがない人たち向けにアピール、
+> というのはいかがでしょうか。(^_^)//
+> 
+> ご興味ありましたら一報くださいませ。
+> 
+> でわでわ					Yasu.
+
+
+From tak ＠ metatoys.org  Sat Sep 16 00:36:03 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3137] KOF 2006 ブース希望
+Message-ID: <450AC863.4090305@metatoys.org>
+
+関西オープンソース2006＋関西コミュニティ大決戦展示企画募集担当者様
+
+こんにちは。山宮と申します。
+KOF 2006 のブース展示を希望します。
+
+* 団体名 : squeak-ja
+* 申し込み者氏名 : 山宮隆
+* 申込者連絡先 : tak@metatoys.org
+* 内容 : プログラミング言語 Squeak の最新情報やコミュニティの取り組みを展示します。
+* 希望日 1. 11/17(金),18(土) の両日
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From mutoh ＠ openedu.org  Sat Sep 16 07:03:26 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3138] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <450AC389.1050808@metatoys.org>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+	<450AC389.1050808@metatoys.org>
+Message-ID: <863bas7pox.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+At Fri, 15 Sep 2006 11:15:21 -0400,
+Takashi Yamamiya <tak@metatoys.org> wrote:
+> ぜひやりましょう！
+> 私はこのあたりちょうど暇にしてる予定です。
+> ところで、誰が関西に居るのか良く知らないのですが、
+> 武田さんや武藤さんいかがですか？
+
+了解です。
+# おとなのワークショップっすかね;-)
+
+今日、別件(また、K*BUG;-)でもKOFの話が出る予定ですんで、またなんか分かっ
+たら連絡します。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From zaki_k_saito ＠ s8.dion.ne.jp  Sat Sep 16 11:53:00 2006
+From: zaki_k_saito ＠ s8.dion.ne.jp (Saito)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3139] Re: OmniBaseJ
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei><JT2006091219594410.3350812@mars.dti.ne.jp><000c01c6d6d9$fb5e33e0$0200a8c0@kouhei><JM200609131708413.33964921@mars.dti.ne.jp><001001c6d736$74d79890$0200a8c0@kouhei>
+	<JO200609141145044.13665015@mars.dti.ne.jp>
+Message-ID: <001401c6d93b$38c106f0$0200a8c0@kouhei>
+
+こんにちは
+齊藤です
+
+お世話様です
+
+もう一つだけ報告させていただきます
+
+db_OmniBase createOn:'c:\テストオムニ'.
+tra_db newTransaction.
+tra root at:#TEST put:'TESTSTRING'.
+tra commit.
+db close.
+
+など、ＤＢ名に日本語を使用したとき
+うまく通ってくれません。
+
+
+
+
+----- Original Message ----- 
+From: "Masashi Umezawa" <umejava@mars.dti.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Thursday, September 14, 2006 11:45 AM
+Subject: [Squeak-ja: 3125] Re: OmniBaseJ
+
+
+> こんにちは
+> 梅澤です。
+> 
+> おそらく今回のパッチで対処できたと思います。
+> 
+> MCZは
+> http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.11.mcz
+> 
+> になります。
+> 
+> ご確認ください。
+> 
+> "Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+>> こんばんは
+>> 齊藤です
+>> 
+>> 早速試させてもらいました
+>> 
+>> 日本語を含んだ変数名についての動作は
+>> 正常でしたが、
+>> クラス名を日本語にした場合の動作が
+>> うまくいきませんでした。
+>> 
+> 
+> ---
+> [:masashi | ^umezawa]
+
+
+From tak ＠ metatoys.org  Sat Sep 16 15:04:40 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3140] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <863bas7pox.wl%mutoh@openedu.org>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>	<450AC389.1050808@metatoys.org>
+	<863bas7pox.wl%mutoh@openedu.org>
+Message-ID: <450B93F8.7010504@metatoys.org>
+
+山宮です。
+
+> 了解です。
+> # おとなのワークショップっすかね;-)
+
+おお、大人のワークショップ、良いですね！
+実は長らくワークショップから遠ざかっていたので、どんな事が出来るのか
+見当がつかないのですが、何かアイデアありますか？
+
+私は暇なのでブースを二日分申し込んだのですが、この機会にユルく
+集まる機会になればと思います。とりあえずスクイークの動く
+100ドルラップトップの基盤は持っていきます。
+
+> 今日、別件(また、K*BUG;-)でもKOFの話が出る予定ですんで、またなんか分かっ
+> たら連絡します。
+
+ええー。掛け持ちですか。でもこっちの方がマイナーなので、是非是非、お願いします。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+
+From yasuda ＠ mfc.bakkers.gr.jp  Sat Sep 16 23:38:27 2006
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3141] Re: KOF 2006 （大阪でのイベント）
+Message-ID: <2AB3DA66-6896-415C-87C4-3DFE7553B4DE@mfc.bakkers.gr.jp>
+
+安田です。
+
+> こんにちは。山宮と申します。
+> KOF 2006 のブース展示を希望します。
+
+おおぅ。早速のお申し込み、ありがとうございました。
+追って、手のものチガウ担当の者から受け付けましたメイルが正式に
+でていくと思います。
+
+では、現場でお会いしましょう。楽しみにしています。（一緒に
+楽しくやりましょう）
+
+でわでわ					Yasu.
+
+
+From mutoh ＠ openedu.org  Sun Sep 17 07:00:20 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3142] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <450B93F8.7010504@metatoys.org>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+	<450AC389.1050808@metatoys.org> <863bas7pox.wl%mutoh@openedu.org>
+	<450B93F8.7010504@metatoys.org>
+Message-ID: <861wqb79qj.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+おはようございます。
+
+At Sat, 16 Sep 2006 02:04:40 -0400,
+Takashi Yamamiya <tak@metatoys.org> wrote:
+> > 了解です。
+> > # おとなのワークショップっすかね;-)
+> おお、大人のワークショップ、良いですね！
+> 実は長らくワークショップから遠ざかっていたので、どんな事が出来るのか
+> 見当がつかないのですが、何かアイデアありますか？
+
+個人的にはSeaSide(J)とかでWebアプリとかは結構グッと来るんじゃ無いのか
+なぁと思います。
+
+他に適当に思い付くものとしては、
+- (子供向けの)ワークショップをするためのTips
+-- Upload用サーバの準備の仕方とか
+-- Squeakware-eduをUSBに準備する方法とか
+- 生活用イメージを作る
+-- これだけは入れとけとか
+とか、かなぁ。
+# 僕がこれはできるってことじゃなく、聞きたいという部分が多いですが(^-^;)
+
+あ、これまでのSqueakNOSなんかのネタは僕でもできますね。
+# 深くはないです(_O_)
+
+> 私は暇なのでブースを二日分申し込んだのですが、この機会にユルく
+> 集まる機会になればと思います。とりあえずスクイークの動く
+> 100ドルラップトップの基盤は持っていきます。
+
+おお、100ドルラップトップの開発基盤が見れるっすか!!
+# 違うOS動かしてみたい人とか多そうだ…
+
+別の話だと、PDAなら手元に
+- PocketPostPet(Squeak入り)
+- Zaurus C-700(Squeak入り)
+- iPAQ 3660(バッテリーが変)
+- MobileGear II MC/R530(NetBSD入り)
+- Sigmarion
+- Fujitsuの海外向全画面WindowsCE端末(名前忘れた)
+とかありますので、利用することは可能です。
+
+> > 今日、別件(また、K*BUG;-)でもKOFの話が出る予定ですんで、またなんか分かっ
+> > たら連絡します。
+> ええー。掛け持ちですか。でもこっちの方がマイナーなので、是非是非、お願いします。
+
+で、結局昨日のK*BUG側でどうするかってのはまだ未定です。
+なので、当面はsqueak-ja側で動こうと思ってますけど、完全にと言うお約束
+はちょっと許してください(_O_)
+# 一応、K*BUG運営委員という名前が付いてるのです。
+
+
+昨日聞いた話だと、これまでよりこじんまりとした感じになるらしいです。
+# ある人は「同人っぽい感じ」という謎の形容をされてましたが。
+
+会場は、0'z棟 6F,IMT棟 6F***らしい***ということなんですが、この間って
+連絡通路無いんですよね…
+ブース展示はマーレ広場と展示スペース(の一部)で、ステージはマーレ広場部
+分のピアノのあたりになるんだったん***じゃ無かったっけ***と聞きました。
+O's棟の部屋方は、講演会になるのだったかな?
+
+あと、一般の買いもの客の人も普通に利用する場所のそばにブース展示がある
+ので、一般の人に訴求力があるようなプレゼンテーションをするのが良いのか
+なぁと思ったりします。
+
+A4 1枚ぐらいの簡単なSqueakの説明パンフレット(「おとうさま、おかあさま
+へ」とか)とか作っといて、持っていってもらうのも手かな?
+# 「Squeakは専用コンピュータじゃありません、無料です」とか;-)
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+
+From ka.minami ＠ nifty.com  Mon Sep 18 00:29:10 2006
+From: ka.minami ＠ nifty.com (Kazuki Minamitani)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3143] [ANN] DebugReport
+Message-ID: <E7C6DA6E05B43Dka.minami@nifty.com>
+
+南谷です。
+
+Debuggerの内容をそのままHTMLに落とすツールを作りました。
+NotifierかDebuggerからボタン一押しでサンプルのようなものを出力します。
+
+サンプル:
+http://squeak.sakura.ne.jp/etc/DebugReportSample
+
+
+パッケージはSqueakMapかSqueakSourceJから入手できます。
+
+SqueakSourceJ - DebugReport;
+http://swikis.ddo.jp:9091/DebugReport.html
+
+
+SqueakDebug.logに比べると、格段に状況の把握が楽になります。
+バグ報告などに役立てていただけると嬉しいです。
+
+--
+南谷 千城
+e-mail: ka.minami@nifty.com
+
+From tak ＠ metatoys.org  Mon Sep 18 06:36:07 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3144] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <861wqb79qj.wl%mutoh@openedu.org>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>	<450AC389.1050808@metatoys.org>
+	<863bas7pox.wl%mutoh@openedu.org>	<450B93F8.7010504@metatoys.org>
+	<861wqb79qj.wl%mutoh@openedu.org>
+Message-ID: <450DBFC7.7000100@metatoys.org>
+
+山宮＠ホテル缶詰です。こんにちは。
+
+> むとう@おうちです。
+> 
+> おはようございます。
+
+> 個人的にはSeaSide(J)とかでWebアプリとかは結構グッと来るんじゃ無いのか
+> なぁと思います。
+> 
+> 他に適当に思い付くものとしては、
+> - (子供向けの)ワークショップをするためのTips
+> -- Upload用サーバの準備の仕方とか
+> -- Squeakware-eduをUSBに準備する方法とか
+> - 生活用イメージを作る
+> -- これだけは入れとけとか
+> とか、かなぁ。
+> # 僕がこれはできるってことじゃなく、聞きたいという部分が多いですが(^-^;)
+
+実は私自身SeaSide(J)とか、そういう真面目な用途でスクイークを使った事が
+無いので何とも言えないんですよ。。。この辺人材求むです。プロジェクトや
+コードの共有の仕方とか、地味な話なら出来ます。
+
+> あ、これまでのSqueakNOSなんかのネタは僕でもできますね。
+> # 深くはないです(_O_)
+
+これめっちゃ面白そう！あと BSD ねたもお願いします
+
+>> 私は暇なのでブースを二日分申し込んだのですが、この機会にユルく
+>> 集まる機会になればと思います。とりあえずスクイークの動く
+>> 100ドルラップトップの基盤は持っていきます。
+> 
+> おお、100ドルラップトップの開発基盤が見れるっすか!!
+> # 違うOS動かしてみたい人とか多そうだ…
+
+色々特殊なので他の OS 動かすのが難しいみたいです。linux ですら fedora 
+以外は大変みたい。でもそのうち喜んで挑戦するつわものが現れるでしょう。
+
+> 別の話だと、PDAなら手元に
+> - PocketPostPet(Squeak入り)
+> - Zaurus C-700(Squeak入り)
+> - iPAQ 3660(バッテリーが変)
+> - MobileGear II MC/R530(NetBSD入り)
+> - Sigmarion
+> - Fujitsuの海外向全画面WindowsCE端末(名前忘れた)
+> とかありますので、利用することは可能です。
+
+おお。それは素晴らしい。全部並んで動いている所が見たいです。
+
+>>> 今日、別件(また、K*BUG;-)でもKOFの話が出る予定ですんで、またなんか分かっ
+>>> たら連絡します。
+>> ええー。掛け持ちですか。でもこっちの方がマイナーなので、是非是非、お願いします。
+> 
+> で、結局昨日のK*BUG側でどうするかってのはまだ未定です。
+> なので、当面はsqueak-ja側で動こうと思ってますけど、完全にと言うお約束
+> はちょっと許してください(_O_)
+
+まだ先の話ですので気楽に考えておいてくださいね。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+
+From takeda.toshiyuki ＠ gmail.com  Mon Sep 18 23:43:00 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3145] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <450AC389.1050808@metatoys.org>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+	<450AC389.1050808@metatoys.org>
+Message-ID: <6544a1da0609180743x6fcf9a40q1a2371183bd832d5@mail.gmail.com>
+
+武田です。
+
+少し忙しい時期なのでどうなるかわかりませんが、準備はお手伝いできることもあると思います。
+
+２年前は地味でしたが、ちょっと準備するだけでもよくなりそうです。
+
+OLPCはインパクトあるでしょう。
+
+From takeda.toshiyuki ＠ gmail.com  Tue Sep 19 12:32:37 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3146] Re: IntelMac での SqueakLandJ2005 tinyBenchmarks
+In-Reply-To: <2d5d52a80609140238p75a10f5g20a8b11b610f84f4@mail.gmail.com>
+References: <20060210021515.072954375B@1server.aquilax.co.jp>
+	<2d5d52a80609140238p75a10f5g20a8b11b610f84f4@mail.gmail.com>
+Message-ID: <6544a1da0609182032l5a686440ma2d4b9f2f5ef47e9@mail.gmail.com>
+
+武田です。手持ちのMacBook(2GHz, 667MHz)で試したところ、
+
+1 tinyBenchmarks  '55030094 bytecodes/sec; 2389118 sends/sec'
+
+でした。ちなみに、Squeak 3.8.12beta4U/Squeak3.8-6665full.image上だと以下のようになりました。
+
+1 tinyBenchmarks '352617079 bytecodes/sec; 7953816 sends/sec'
+
+From tak ＠ metatoys.org  Tue Sep 19 13:11:55 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3147] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <6544a1da0609180743x6fcf9a40q1a2371183bd832d5@mail.gmail.com>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+	<450AC389.1050808@metatoys.org>
+	<6544a1da0609180743x6fcf9a40q1a2371183bd832d5@mail.gmail.com>
+Message-ID: <c57315d40609182111y4c041b48kb0ad4360285dd9e5@mail.gmail.com>
+
+山宮です。
+
+> 少し忙しい時期なのでどうなるかわかりませんが、準備はお手伝いできることも
+> あると思います。
+
+そういえば以前大人のワークショップをされた時の資料は
+今でもウェブに残っているのでしょうか？
+私の弱い検索力では見つける事が出来ませんでした。
+
+> ２年前は地味でしたが、ちょっと準備するだけでもよくなりそうです。
+
+今年も特に萌え要素ないし、地味に行く気まんまんですが。。。
+というか、さすがに万が一にも二日間ずっとひとりは寂しいので、
+直メールでも構いませんので他に来れそうな方は連絡ください。
+私がトイレに行ってる間の店番要員や掛け持ちでも大歓迎です！
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+From umejava ＠ mars.dti.ne.jp  Tue Sep 19 15:01:48 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3148] Re: OmniBaseJ
+In-Reply-To: <001401c6d93b$38c106f0$0200a8c0@kouhei>
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei><JT2006091219594410.3350812@mars.dti.ne.jp><000c01c6d6d9$fb5e33e0$0200a8c0@kouhei><JM200609131708413.33964921@mars.dti.ne.jp><001001c6d736$74d79890$0200a8c0@kouhei>
+	<JO200609141145044.13665015@mars.dti.ne.jp>
+	<001401c6d93b$38c106f0$0200a8c0@kouhei>
+Message-ID: <JW200609191501484.8339250@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+日本語パス名にも対応させてみました。
+http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.12.mcz
+
+今回の一連の対応で、OmniBaseJも単にマルチバイト文字列が格納、
+取得できるというレベルから、かなり本格的な日本語対応になったかと
+思います。
+
+フィードバックありがとうございます。
+
+"Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+> こんにちは
+> 齊藤です
+> 
+> お世話様です
+> 
+> もう一つだけ報告させていただきます
+> 
+> db_OmniBase createOn:'c:\テストオムニ'.
+> tra_db newTransaction.
+> tra root at:#TEST put:'TESTSTRING'.
+> tra commit.
+> db close.
+> 
+> など、ＤＢ名に日本語を使用したとき
+> うまく通ってくれません。
+> 
+
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: OmniBaseJ-Patch0919.1.cs
+型:         application/octet-stream
+サイズ:     11371 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20060919/6208e29b/OmniBaseJ-Patch0919.1.obj
+From zaki_k_saito ＠ s8.dion.ne.jp  Tue Sep 19 18:08:28 2006
+From: zaki_k_saito ＠ s8.dion.ne.jp (Saito)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3149] Re: OmniBaseJ
+References: <000601c6d3cf$dc011fb0$0200a8c0@kouhei><JT2006091219594410.3350812@mars.dti.ne.jp><000c01c6d6d9$fb5e33e0$0200a8c0@kouhei><JM200609131708413.33964921@mars.dti.ne.jp><001001c6d736$74d79890$0200a8c0@kouhei><JO200609141145044.13665015@mars.dti.ne.jp><001401c6d93b$38c106f0$0200a8c0@kouhei>
+	<JW200609191501484.8339250@mars.dti.ne.jp>
+Message-ID: <001201c6dbcb$2b9bc270$0200a8c0@kouhei>
+
+こんばんは
+齊藤です
+
+うまく動くようになりました
+ありがとうございます
+
+
+----- Original Message ----- 
+From: "Masashi Umezawa" <umejava@mars.dti.ne.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Tuesday, September 19, 2006 3:01 PM
+Subject: [Squeak-ja: 3148] Re: OmniBaseJ
+
+
+> こんにちは
+> 梅澤です。
+> 
+> 日本語パス名にも対応させてみました。
+> http://squeaksource.blueplane.jp/OmniBaseJ/OmniBaseJ-mu.12.mcz
+> 
+> 今回の一連の対応で、OmniBaseJも単にマルチバイト文字列が格納、
+> 取得できるというレベルから、かなり本格的な日本語対応になったかと
+> 思います。
+> 
+> フィードバックありがとうございます。
+> 
+> "Saito" <zaki_k_saito@s8.dion.ne.jp> wrote:
+>> こんにちは
+>> 齊藤です
+>> 
+>> お世話様です
+>> 
+>> もう一つだけ報告させていただきます
+>> 
+>> db_OmniBase createOn:'c:\テストオムニ'.
+>> tra_db newTransaction.
+>> tra root at:#TEST put:'TESTSTRING'.
+>> tra commit.
+>> db close.
+>> 
+>> など、ＤＢ名に日本語を使用したとき
+>> うまく通ってくれません。
+>> 
+> 
+> ---
+> [:masashi | ^umezawa]
+
+
+From mutoh ＠ openedu.org  Wed Sep 20 14:45:14 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3150] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <450DBFC7.7000100@metatoys.org>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+	<450AC389.1050808@metatoys.org> <863bas7pox.wl%mutoh@openedu.org>
+	<450B93F8.7010504@metatoys.org> <861wqb79qj.wl%mutoh@openedu.org>
+	<450DBFC7.7000100@metatoys.org>
+Message-ID: <86fyenrt05.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+返事が遅くなってすみません。
+
+At Sun, 17 Sep 2006 17:36:07 -0400,
+Takashi Yamamiya <tak@metatoys.org> wrote:
+> > 個人的にはSeaSide(J)とかでWebアプリとかは結構グッと来るんじゃ無いのか
+> > なぁと思います。
+	(snip)
+> 実は私自身SeaSide(J)とか、そういう真面目な用途でスクイークを使った事が
+> 無いので何とも言えないんですよ。。。この辺人材求むです。プロジェクトや
+> コードの共有の仕方とか、地味な話なら出来ます。
+
+そういうのも個人的には聞きたいです。
+
+> > あ、これまでのSqueakNOSなんかのネタは僕でもできますね。
+> > # 深くはないです(_O_)
+> これめっちゃ面白そう！あと BSD ねたもお願いします
+
+Squeak/BSDネタで良ければそれはお話できるんですが…
+
+
+ちょっとよく考えてみると、現状で申し込んだのはブースですよね?
+結構、講演系の話が多くなってるかなぁという気がしますです。
+まあ、ブースの前で1時間ごとに話をするっていうのもあるのかもしれません
+が、講演は講演で別の場所が用意されているので、そっちを使わせてもらう手
+もあるのかもしれません。
+# が、いずれにせよ更にマンパワーが必要になりそうですが。
+
+噂では、jusはjus関西研究会をやるとか、K*BUGも話はなんぼでもできるとか
+あるみたいです。
+
+> >> 私は暇なのでブースを二日分申し込んだのですが、この機会にユルく
+> >> 集まる機会になればと思います。とりあえずスクイークの動く
+> >> 100ドルラップトップの基盤は持っていきます。
+> > おお、100ドルラップトップの開発基盤が見れるっすか!!
+> > # 違うOS動かしてみたい人とか多そうだ…
+> 色々特殊なので他の OS 動かすのが難しいみたいです。linux ですら fedora 
+> 以外は大変みたい。でもそのうち喜んで挑戦するつわものが現れるでしょう。
+
+多分、「やっていい」といえば、その場でhack始める人達も来てるような気が
+しますです;-)
+
+> > 別の話だと、PDAなら手元に
+> > - PocketPostPet(Squeak入り)
+> > - Zaurus C-700(Squeak入り)
+> > - iPAQ 3660(バッテリーが変)
+> > - MobileGear II MC/R530(NetBSD入り)
+> > - Sigmarion
+> > - Fujitsuの海外向全画面WindowsCE端末(名前忘れた)
+> > とかありますので、利用することは可能です。
+> おお。それは素晴らしい。全部並んで動いている所が見たいです。
+
+OLPC開発基板とかPDA勢ぞろいとかは、まさに展示向きですね。
+# 普通のPCは無いんかいという話も;-)
+
+注意しないと、「スクイークと言うコンピュータが必要」という誤解を招いて
+しまうのかもしれないですけども。
+
+手元のPDAについては、今からボチボチ準備していきますです。
+
+> >> ええー。掛け持ちですか。でもこっちの方がマイナーなので、是非是非、お願いします。
+> > で、結局昨日のK*BUG側でどうするかってのはまだ未定です。
+> > なので、当面はsqueak-ja側で動こうと思ってますけど、完全にと言うお約束
+> > はちょっと許してください(_O_)
+> まだ先の話ですので気楽に考えておいてくださいね。
+
+なまけものなので、できることはボチボチ始めときます。
+
+当日に関しても、トイレ交替はできるようにしますね;-)
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From miyasaka ＠ iris.dti.ne.jp  Thu Sep 21 02:47:47 2006
+From: miyasaka ＠ iris.dti.ne.jp (miyasaka@iris.dti.ne.jp)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3151] 大人向けのワークショップのお知らせ（世界聴診器）
+Message-ID: <1158774467771.124209247131@DTI-Tools>
+
+Squeak-jaのみなさまへ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+下記のとおり、9月30日（土）に大学生や社会人の方を対象としたスクイーク
+ワークショップを開催します。
+阿部さんを講師にお招きし、世界聴診器を使ったゲームプログラミングを行う
+予定ですので、みなさま是非ご参加ください。
+
+開始時間がam10:30〜と早い時間からですが、当日は同じ会場でHPスーパーサ
+イエンスキッズ（HPSSK）のスクイークワークショップも開催されていますの
+で、15:00に終了後は、HPSSKのワークショップを見学していただくことも可能
+かと思います。
+
+また、10月には八王子で同様なワークショップを開催する予定ですので、改め
+て2〜3週間前にはご連絡させていただきます。
+
+詳しくはこのURLもご覧ください。
+http://mts-j.hiho.jp/2006/09/itc0930.html
+
+−−−−−−−−−−−−−−−−−−−−−−−−−−−
+
+■ 日　時 ： 2006年9月30日（土）　am10：30　〜　15：00 
+
+■ 場　所 ： デジタルハリウッド大学　秋葉原メインキャンパス
+　　　　　　　http://www.dhw.ac.jp/access/index.html#akiba
+
+■ 定　員 ： 15名
+　・既にデジハリ関係者が7名ほど参加予定ですので一般の方は7〜8名まで可
+能です。
+　・先着順に受付させていただきます。
+
+■ 参加料 ： 無料
+
+■ 対象者：　スクイークe-Toysの基本操作を知っている方
+　・今回は世界聴診器がメインですので、基本操作を知っている方に限定させ
+ていただきます。
+　・スキルとしては、Drive a Carが作れるくらいのスキルがあれば大丈夫です。
+
+■内容
+音・光・温度・電圧等の事象をスクイークで扱うことができる「世界聴診器」
+を使ったプログラミングを学生・社会人のみなさまに体感していただきます。
+ダンボールや紙コップ、色紙などのいろいろな素材を用意しておきますので、
+世界聴診器を使って自分なりのゲームコントローラを自作し、スクイークでの
+ゲームプログラミングを楽しんでください。
+ひとりでも多くの方にスクイーク＋世界聴診器の魅力を感じていただき、指導
+者となっていただくことを目的としたワークショップです。
+
+■お申し込み方法
+http://mts-j.hiho.jp/2006/09/itc0930.html
+
+−−−−−−−−−−−−−−−−−−−−−−−−−−−
+
+以上、よろしくお願いいたします！！
+
+-- 
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+http://mts-j.hiho.jp/
+http://www.dhw.co.jp/gs/
+---------------------------------------------
+
+From tak ＠ metatoys.org  Sun Sep 24 04:35:14 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3152] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <86fyenrt05.wl%mutoh@openedu.org>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+	<450AC389.1050808@metatoys.org> <863bas7pox.wl%mutoh@openedu.org>
+	<450B93F8.7010504@metatoys.org> <861wqb79qj.wl%mutoh@openedu.org>
+	<450DBFC7.7000100@metatoys.org> <86fyenrt05.wl%mutoh@openedu.org>
+Message-ID: <c57315d40609231235m6c705f29raebd24211fea505e@mail.gmail.com>
+
+山宮です。
+
+> ちょっとよく考えてみると、現状で申し込んだのはブースですよね?
+> 結構、講演系の話が多くなってるかなぁという気がしますです。
+> まあ、ブースの前で1時間ごとに話をするっていうのもあるのかもしれません
+> が、講演は講演で別の場所が用意されているので、そっちを使わせてもらう手
+> もあるのかもしれません。
+> # が、いずれにせよ更にマンパワーが必要になりそうですが。
+
+まだステージ出演の募集が始まってなかったのでとりあえずブースだけ
+申し込んでおきました。ステージの案も大募集ですよ！
+
+とはいえ。私としてはスクイークを知らしめるというよりも他のグループが
+どんな事をやってるか知りたいというのも大きいですので、
+あまりマンパワー全開で頑張る意気込みまでは。。。気楽にやりましょう！
+
+>>>> 私は暇なのでブースを二日分申し込んだのですが、この機会にユルく
+>>>> 集まる機会になればと思います。とりあえずスクイークの動く
+>>>> 100ドルラップトップの基盤は持っていきます。
+>>> おお、100ドルラップトップの開発基盤が見れるっすか!!
+>>> # 違うOS動かしてみたい人とか多そうだ…
+>> 色々特殊なので他の OS 動かすのが難しいみたいです。linux ですら fedora
+>> 以外は大変みたい。でもそのうち喜んで挑戦するつわものが現れるでしょう。
+>
+> 多分、「やっていい」といえば、その場でhack始める人達も来てるような気が
+> しますです;-)
+
+もちろん現場ハックも大歓迎です。基板の入手はともかく、OS やアプリは公開されて
+いるので、日本でももっと話題になったらいいなーと思います。
+
+From takeda.toshiyuki ＠ gmail.com  Mon Sep 25 23:47:18 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3153] Re: KOF 2006 （大阪でのイベント）
+In-Reply-To: <c57315d40609182111y4c041b48kb0ad4360285dd9e5@mail.gmail.com>
+References: <AF37BA13-B6CE-4E58-B42E-5F5BBCEF2689@mfc.bakkers.gr.jp>
+	<450AC389.1050808@metatoys.org>
+	<6544a1da0609180743x6fcf9a40q1a2371183bd832d5@mail.gmail.com>
+	<c57315d40609182111y4c041b48kb0ad4360285dd9e5@mail.gmail.com>
+Message-ID: <6544a1da0609250747o67a3911dy12cc7babd916ab40@mail.gmail.com>
+
+武田です。
+
+> そういえば以前大人のワークショップをされた時の資料は
+> 今でもウェブに残っているのでしょうか？
+
+ないです。2年も経つと賞味期限切れでしょう。
+
+「ユーザ企画」ってのもあるんですね。この枠をワークショップに使えるんでしょうか？
+ネタはいくらでもありそうですが、どの方向でいくかがむずかしいですね。
+
+> 今年も特に萌え要素ないし、地味に行く気まんまんですが。。。
+
+セカチョーと遊んでもらうために、果物やら野菜やら花やら並べて華やかにするとか。
+
+From abee ＠ squeakland.jp  Wed Sep 27 02:36:08 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3154] 多言語化 Squeak のホームページが現在アクセスできなくなっています。
+Message-ID: <4519650833D.C007ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+現在、多言語化Squeakのホームページ(http://squeak.hp.infoseek.co.jp/)が
+403 Forbiddenでアクセスできなくなっています(梅澤さん、お知らせありがとう
+ございます)。
+アクセスログによると、この状況は8/18からと思われ、現在infoseekに理由を問
+い合わせ中です。
+
+このサイトは永らく更新されておらず、読まれている方もあまりいらっしゃらな
+いと思いますが、もしこのページの情報が必要な場合はInternet Archiveをご利
+用ください。
+
+http://web.archive.org/web/*/http://squeak.hp.infoseek.co.jp/
+
+ご迷惑をお掛けしますが、よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Wed Sep 27 09:37:13 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:35 2007
+Subject: [Squeak-ja: 3155] コンピュータは人間を進化させるか アラン・ケイ氏インタビュー
+Message-ID: <4519C7B91BC.C00AABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2006/9/25にインプレスのPC Watchの不定期連載「後藤貴子の米国ハイテク事情」
+に「コンピュータは人間を進化させるかアラン・ケイ氏インタビュー」という記
+事が掲載されています。
+
+http://pc.watch.impress.co.jp/docs/2006/0925/high43.htm
+
+後藤さんは先日korakuriderさんが紹介してくださった週刊アスキーの記事の著者
+でもあります。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-August/003093.html
+
+今回のものは数あるアランさんのインタビュー記事の中でも、核心に近いところ
+をうまく引き出した素晴らしい記事だと思います。個人的にはアランさんの絵に
+ぐっと来ました。
+
+既に各所で取り上げられているので、皆さんご存知と思いますが、念のため、こ
+ちらでもご紹介させていただきました。
+
+ //abee
+
+P.S. この効果でSqueakland.jpは9/25に平時の約7倍となる135584ヒットを記録し
+ました。
+
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Wed Sep 27 21:14:26 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:36 2007
+Subject: [Squeak-ja: 3156] 多言語化 Squeak のホームページが削除されました。
+In-Reply-To: <4519650833D.C007ABEE@smtp.nifty.com>
+References: <4519650833D.C007ABEE@smtp.nifty.com>
+Message-ID: <451A6B227F.59E6ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+# SMLとのマルチポストです。
+
+2006/8/18頃、infoseekにより多言語化Squeakのホームページ
+(http://squeak.hp.infoseek.co.jp/)が削除されました。理由は規約違反とのこ
+とです。私はこれに異議がありますが、一切の質問や苦情は受け付けられないと
+のことなので、回復は困難と思われます。
+
+長い間、皆さんのご支援で続けてきたサイトがこのような形で終わることになり
+残念です。
+思えば、このサイトは2002/4にNHK教育で放送された「未来への教室」に合わせて、
+番組を見た人がダウンロードしてすぐ使えるようにと大島さんと相談して急遽開
+設したものでした。それまでの多言語化Squeak(当時は多国語化Squeakと呼称)は
+ソースファイルの形でしか提供されておらず、一般の人が使うには敷居が高いも
+のでした。
+
+http://www.akademia.co.jp/Smalltalk/SML/archives/SRA.archives/2002-April/005597.html
+
+初期のSqueakNihongoにはいろいろな問題がありましたが、皆さんのフィードバッ
+クを受けて改善され、現在は Squeakland 2005Jになっています。
+
+http://www.squeakland.jp/images/news/html/SqL05JRelease.htm
+
+その後も、ニュースや平井さんの記事を掲載するなど、 2004/12のスクイークラ
+ンド開設まではポータルサイトとして機能してました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2004-December/002143.html
+
+現在はSqueakの利用者数も当時とは桁違いで、メディアで取り上げられる機会も
+多くなり、教育の現場にも浸透して来ました。これに合わせて、利用者層も開発
+者から子供や先生にシフトしてきたのも事実です。このサイト自体、最近はほと
+んど更新されることもなくなっていたので、ちょうどよい頃合だったのかもしれ
+ません。
+
+もし、多言語化Squeakのホームページの情報が必要な方がいらっしゃいましたら、
+Internet Archiveをお使いください。上記の平井さんの記事のほか、書籍の紹介、
+多言語化Squeakの歴史などが載っています。
+
+http://web.archive.org/web/*/http://squeak.hoops.ne.jp/
+http://web.archive.org/web/*/http://squeak.hp.infoseek.co.jp/
+
+また、リンク先としてこのページのURLを載せている方がいらっしゃいましたら、
+大変お手数ですが、削除していただくか、上記のInternet ArchiveのURLに変更願
+います。
+
+長い間ありがとうございました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+

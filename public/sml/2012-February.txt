@@ -1,0 +1,236 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Feb  1 08:56:31 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 01 Feb 2012 08:56:31 +0900
+Subject: [SML 7991] Re:
+	第40回Smalltalk勉強会＠京都
+In-Reply-To: <4F1F9616.7030802@cc.kyoto-su.ac.jp>
+References: <4F1F9616.7030802@cc.kyoto-su.ac.jp>
+Message-ID: <4F287FAF.9080201@cc.kyoto-su.ac.jp>
+
+本日です！（備忘のためのポストです）
+
+先月の休会の遅れを取り戻すために準備したプログラム：SSK_20120111_094507.stを用意しておきました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto39
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/sts/SSK_20120111_094507.st
+
+--- 青木淳＠京都上賀茂
+
+(12/01/25 14:41), AOKI Atsushi wrote:
+> 第40回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto40
+>
+> 場所(部屋)が変わりまして、キャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第40回 Smalltalk勉強会＠京都
+> 日時：2012年02月01日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ変換
+> のGUI)におけるマウスによるインタラクションのデザインとプログ
+> ラミングを続けます。パワースペクトルの窓から領域指定ができる
+> ようになってきましたので、それを使って採用するフーリエ変換の
+> 実部と虚部を決め、逆フーリエ変換を施して再描画します。年度内
+> (3/7)までにアプリケーションの形になるように頑張りましょう。
+> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+> をご持参ください。
+>
+> --- 青木淳＠京都上賀茂
+
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Feb  3 11:21:01 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri, 03 Feb 2012 11:21:01 +0900
+Subject: [SML 7992] Re:
+	第40回Smalltalk勉強会＠京都
+In-Reply-To: <4F287FAF.9080201@cc.kyoto-su.ac.jp>
+References: <4F1F9616.7030802@cc.kyoto-su.ac.jp>
+ <4F287FAF.9080201@cc.kyoto-su.ac.jp>
+Message-ID: <4F2B448D.8020109@cc.kyoto-su.ac.jp>
+
+京都で行ったSmalltalk勉強会(第40回)の報告です。
+皆さんで作成したプログラムや勉強会ログ(←妹尾さん執筆)などをアップロードしておきました。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto40
+
+--- 青木淳＠京都上賀茂
+
+(12/02/01 8:56), AOKI Atsushi wrote:
+> 本日です！（備忘のためのポストです）
+>
+> 先月の休会の遅れを取り戻すために準備したプログラム：SSK_20120111_094507.stを用意しておきました。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto39
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/sts/SSK_20120111_094507.st
+>
+> --- 青木淳＠京都上賀茂
+>
+> (12/01/25 14:41), AOKI Atsushi wrote:
+>> 第40回Smalltalk勉強会＠京都を開催します。
+>>
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto40
+>>
+>> 場所(部屋)が変わりまして、キャンプラ6階の第3講習室になります。
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第40回 Smalltalk勉強会＠京都
+>> 日時：2012年02月01日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 窓MVCを用いたフーリエ信号処理(1次元と2次元の離散フーリエ変換
+>> のGUI)におけるマウスによるインタラクションのデザインとプログ
+>> ラミングを続けます。パワースペクトルの窓から領域指定ができる
+>> ようになってきましたので、それを使って採用するフーリエ変換の
+>> 実部と虚部を決め、逆フーリエ変換を施して再描画します。年度内
+>> (3/7)までにアプリケーションの形になるように頑張りましょう。
+>> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+>> をご持参ください。
+>>
+>> --- 青木淳＠京都上賀茂
+
+From hirowadenden ＠ hera.eonet.ne.jp  Fri Feb  3 18:56:29 2012
+From: hirowadenden ＠ hera.eonet.ne.jp (hirowadenden)
+Date: Fri, 03 Feb 2012 18:56:29 +0900
+Subject: [SML 7993] Re:
+	第40回Smalltalk勉強会＠京都
+In-Reply-To: <4F2B448D.8020109@cc.kyoto-su.ac.jp>
+References: <4F1F9616.7030802@cc.kyoto-su.ac.jp>
+ <4F287FAF.9080201@cc.kyoto-su.ac.jp> <4F2B448D.8020109@cc.kyoto-su.ac.jp>
+Message-ID: <4F2BAF4D.1020505@hera.eonet.ne.jp>
+
+ハンドル名で失礼します、hirowadendenと申します。
+yellow button menuからsource dataを切り替える部分を勉強会とは異なる
+方法でやってみたので投稿します。
+
+妹尾さん執筆の勉強会ログの5ページの真ん中あたりの
+FourierPaneController>>yellowButtonMenu
+	^nil
+を追加するところまでは同じです。
+(勉強会ログでは、yellowButtonPressedEventとなっていますが、 
+yellowButtonMenuですよね?)
+
+そのあとは、以下のFourierPaneModel>>yellowButtonMenuと
+Fourier1dModel>>yellowButtonMenuを追加します。
+(GUIビルダは使いません)
+
+FourierPaneModel>>yellowButtonMenu
+	^self application ifNotNil: [:anApplication | anApplication 
+yellowButtonMenu] ifNil: [super yellowButtonMenu]
+
+
+Fourier1dModel>>yellowButtonMenu
+	| labels values |
+	labels := OrderedCollection new.
+	values := OrderedCollection new.
+	(self defaultFourierTransformClass class organization 
+listAtCategoryNamed: #data) do:
+			[:aSelector |
+			| aStream aString |
+			aStream := String new writeStream.
+			aSelector asString do:
+					[:aCharacter |
+					aCharacter isLowercase
+						ifTrue: [aStream nextPut: aCharacter]
+						ifFalse:
+							[aStream
+								space;
+								nextPut: aCharacter]].
+			aString := aStream contents.
+			aStream close.
+			aString := aString copyFrom: (aString findFirst: [:aCharacter | 
+aCharacter = Character space]) + 1
+						to: aString size.
+			labels add: aString.
+			values add: [self setSourceData: (self defaultFourierTransformClass 
+perform: aSelector)]].
+	^Menu labelArray: labels asArray values: values asArray
+
+
+以上です。
+
+-- hirowadenden
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Feb  3 19:35:57 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri, 03 Feb 2012 19:35:57 +0900
+Subject: [SML 7994] Re:
+ 第40回Smalltalk勉強会＠京都
+In-Reply-To: <4F2BAF4D.1020505@hera.eonet.ne.jp>
+References: <4F1F9616.7030802@cc.kyoto-su.ac.jp>
+ <4F287FAF.9080201@cc.kyoto-su.ac.jp> <4F2B448D.8020109@cc.kyoto-su.ac.jp>
+ <4F2BAF4D.1020505@hera.eonet.ne.jp>
+Message-ID: <4F2BB88D.1030507@cc.kyoto-su.ac.jp>
+
+(12/02/03 18:56), hirowadenden wrote:
+> ハンドル名で失礼します、hirowadendenと申します。
+> yellow button menuからsource dataを切り替える部分を勉強会とは異なる
+> 方法でやってみたので投稿します。
+
+元データのメソッドを増やせば、何もせずともメニュー項目が増える。
+いい感じですね！（こうでなくっちゃ、メニュービルダやウィンドウビルダでは、こうはゆかないし。）
+
+--- 青木淳＠京都上賀茂
+
+From ume ＠ softumeya.com  Tue Feb 14 10:32:59 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 14 Feb 2012 10:32:59 +0900
+Subject: [SML 7995]
+	第40回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdRXRsG8mQRqNJh3rbqbs5pSVbj+9NtMqBdZ0od1HAwhvg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2011/2/29(水) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai40kaismalltalkbenkyoukai
+
+今月のSmalltalk勉強会は、いつものセミナー形式ではなく、ハッカソンです。皆で楽しくコーディングしましょう。
+題材は最近巷で話題のAmber Smalltalkです。
+WebブラウザさえあればいつでもSmalltalkプログラミングができるという新たな処理系で、急速なピッチで開発が進められる注目株です。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Feb 29 07:41:34 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 29 Feb 2012 07:41:34 +0900
+Subject: [SML 7996]
+	第41回Smalltalk勉強会＠京都
+Message-ID: <4F4D581E.5000505@cc.kyoto-su.ac.jp>
+
+第41回Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto41
+
+場所(部屋)はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第41回 Smalltalk勉強会＠京都
+日時：2012年03月07日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+窓MVCを用いたフーリエ信号処理のデザインとプログラミングが前回
+でほぼ完了しました。今回はプログラム制御構造などをレクチャし
+ながら、前回のフーリエ信号処理プログラムをブラッシュアップし
+てみようと思います。トピックスとしてメソッドサーチ・閉包(ク
+ロージャ)・逐次・並行・約束・代理・継続(コンティニュエーショ
+ン)・継続譲渡スタイル(CPS)などを解題してゆきます。ノート型の
+パーソナルコンピュータ（Windows 7 または Mac OS X）をご持参く
+ださい。
+
+--- 青木淳＠京都宇治
+

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3002] Scamper はすごい (was: Re: セキュリティについての質問です )
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203002%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2NhbXBlciAbJEIkTyQ5JDQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQbKEIgKHdhczogUmU6IBskQiU7JS0lZSVqJUYbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJSMkSyREJCQkRiROPEFMZCRHJDkbKEIgKQ%3D%3D%3F%3D&In-Reply-To=u4pzrczmf.wl%25yoshiki%40squeakland.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003006.html">
+   <LINK REL="Next"  HREF="003003.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3002] Scamper はすごい (was: Re: セキュリティについての質問です )</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203002%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2NhbXBlciAbJEIkTyQ5JDQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQbKEIgKHdhczogUmU6IBskQiU7JS0lZSVqJUYbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJSMkSyREJCQkRiROPEFMZCRHJDkbKEIgKQ%3D%3D%3F%3D&In-Reply-To=u4pzrczmf.wl%25yoshiki%40squeakland.org"
+       TITLE="[Squeak-ja: 3002] Scamper はすごい (was: Re: セキュリティについての質問です )">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2006年 6月  8日 (木) 23:12:54 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003006.html">[Squeak-ja: 3006] Re: セキュリティについての質問です
+</A></li>
+        <LI>次の記事 <A HREF="003003.html">[Squeak-ja: 3003] Re: Scamper はすごい
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3002">[ 日付 ]</a>
+              <a href="thread.html#3002">[ スレッド ]</a>
+              <a href="subject.html#3002">[ 件名 ]</a>
+              <a href="author.html#3002">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Mon, 15 May 2006 04:10:32 -0700
+Yoshiki Ohshima &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yoshiki ＠ squeakland.org</A>&gt; wrote:
+&gt;<i>  Scamperは実験的なもので、そもそもBasic認証程度以上のことをしているサ
+</I>&gt;<i>イトではほとんど何もできないと思います。そもそも、なぜScamperを使おう
+</I>&gt;<i>と思われたのか、使ってみて「これは役に立たないな」と思われなかったのか
+</I>&gt;<i>^^;そこが気になります。
+</I>
+これだと、Scamperダメダメじゃんという印象を持たれる方もいらっしゃると思う
+ので、すこし擁護します。
+
+確かに、ScamperをIEやFirefoxなどのWebブラウザと比較すると激しく見劣りしま
+す。というか、比較すること自体が無意味です。
+ただ、Scamperにも良いところがあります。それは、表示された文字が単なる文字
+ではなく、Smalltalkの式としてその場で評価できる(実行できる)ということです。
+これは非常に強力な機能で、ある意味、ダイナミックメディアとしてのSmalltalk
+の真骨頂と言えるかもしれません。
+
+これを活かして作られたのが市川さんの「スクイークSmalltalk初めの一歩」や、
+山本さんの「Techo+Scamperで遊ぶ」です。
+
+<A HREF="http://ich.homelinux.net:8080/squeak/15">http://ich.homelinux.net:8080/squeak/15</A>
+<A HREF="http://www.languagegame.org:8080/zoo/153">http://www.languagegame.org:8080/zoo/153</A>
+
+そして、これを支えているScamperの拡張が、市川さんのScamperMであり、山宮さ
+んのScamperWorkspaceです。
+
+<A HREF="http://ich.homelinux.net:8080/squeak/58">http://ich.homelinux.net:8080/squeak/58</A>
+<A HREF="http://languagegame.org:8080/propella/91">http://languagegame.org:8080/propella/91</A>
+
+# これでよろしいですか。補足をお願いします。
+
+これらを使うと、eToysとは異なる不思議な感覚や視点を得ることができるので、
+ぜひお試しください。IEではなかなかこうは行きません(不可能ではないですが)。
+
+# アクティブエッセイもそうですが、このようなダイナミックさはダイナブック
+# 以来一貫しており、これからも志向していく特徴だと思います。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003006.html">[Squeak-ja: 3006] Re: セキュリティについての質問です
+</A></li>
+	<LI>次の記事 <A HREF="003003.html">[Squeak-ja: 3003] Re: Scamper はすごい
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3002">[ 日付 ]</a>
+              <a href="thread.html#3002">[ スレッド ]</a>
+              <a href="subject.html#3002">[ 件名 ]</a>
+              <a href="author.html#3002">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

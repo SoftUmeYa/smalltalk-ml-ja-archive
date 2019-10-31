@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3668] Unix用のリクエストいくつか
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203668%5D%20%3D%3Fiso-2022-jp%3Fb%3FVW5peBskQk1RJE4laiUvJSgbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklSCQkJC8kRCQrGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003686.html">
+   <LINK REL="Next"  HREF="003706.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3668] Unix用のリクエストいくつか</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203668%5D%20%3D%3Fiso-2022-jp%3Fb%3FVW5peBskQk1RJE4laiUvJSgbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJTklSCQkJC8kRCQrGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3668] Unix用のリクエストいくつか">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2007年 10月 14日 (日) 18:35:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003686.html">[Squeak-ja: 3686] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+        <LI>次の記事 <A HREF="003706.html">[Squeak-ja: 3706] Re: Unix用のリクエストいくつか
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3668">[ 日付 ]</a>
+              <a href="thread.html#3668">[ スレッド ]</a>
+              <a href="subject.html#3668">[ 件名 ]</a>
+              <a href="author.html#3668">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+2005J3のリリースの際に、もう一つ入れて欲しいパッチがあります。
+
+Unix(Linux,BSD)環境で全画面表示を行った際にIMのフォーカスが失われてしまう
+問題のパッチです。
+
+画面が狭い環境ではWebブラウザからプロジェクト起動後、全画面表示に切り替える
+場合もあるかと思います。そのときに現状では日本語が入力できなくなってしまい
+非常に不便です。
+
+もともと廣島さんがパッチを書かれたもので、これまで何度か話題になっています。
+<A HREF="http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-June/001636.html">http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-June/001636.html</A>
+<A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003111.html">http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003111.html</A>
+
+ちょっとだけ改訂した版を添付します。(CompositionWindowFocusFix.1.cs)
+基本的な中身は変わっておらず、インデントを整理し、代入を:=に変換しただけ
+のものです。
+
+さらに、廣島さんのSqueakImmX11Plugin4d.tar.gzを適用し、コンパイル
+したLinux用のVMを下記に置きました。
+<A HREF="ftp://swikis.ddo.jp/SqueakDevJa/linux/SqueakVM3.9-8-JPatched.tgz">ftp://swikis.ddo.jp/SqueakDevJa/linux/SqueakVM3.9-8-JPatched.tgz</A>
+
+現状のコンパイル済みLinux用VM(3.7-7ベース)を置き換えるものとして
+考えています。
+<A HREF="http://squeakland.jp/plugin/installers/ux.html">http://squeakland.jp/plugin/installers/ux.html</A>
+
+Linux使いの方は、上記VMとCompositionWindowFocusFix.1.csの両方をお試し
+いただけると助かります。(当方ではVine 4.1とFedora Core 6で確認しています)
+
+ではでは。
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: CompositionWindowFocusFix.1.cs
+型:         application/octet-stream
+サイズ:     2358 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071014/faf71f4e/CompositionWindowFocusFix.1.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071014/faf71f4e/CompositionWindowFocusFix.1.obj</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003686.html">[Squeak-ja: 3686] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+	<LI>次の記事 <A HREF="003706.html">[Squeak-ja: 3706] Re: Unix用のリクエストいくつか
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3668">[ 日付 ]</a>
+              <a href="thread.html#3668">[ スレッド ]</a>
+              <a href="subject.html#3668">[ 件名 ]</a>
+              <a href="author.html#3668">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

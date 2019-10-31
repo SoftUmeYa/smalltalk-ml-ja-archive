@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7696] Re: GNU Smalltalkについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207696%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdOVSBTbWFsbHRhbGsbJEIkSyREGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=E1B0594415954C71B8AE948101C174E9%40sunaoPC">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007695.html">
+   <LINK REL="Next"  HREF="007697.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7696] Re: GNU Smalltalkについて</H1>
+    <B>sunao furukawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207696%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdOVSBTbWFsbHRhbGsbJEIkSyREGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=E1B0594415954C71B8AE948101C174E9%40sunaoPC"
+       TITLE="[SML 7696] Re: GNU Smalltalkについて">sadie ＠ kind.ocn.ne.jp
+       </A><BR>
+    <I>2009年 10月 21日 (水) 20:41:16 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007695.html">[SML 7695] Re: GNU Smalltalkについて
+</A></li>
+        <LI>次の記事 <A HREF="007697.html">[SML 7697] Re: GNU Smalltalkについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7696">[ 日付 ]</a>
+              <a href="thread.html#7696">[ スレッド ]</a>
+              <a href="subject.html#7696">[ 件名 ]</a>
+              <a href="author.html#7696">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　再びですが古川です。
+　対話型インタープリターで以下のようにやってみました。
+-------------------------------------------
+#gst
+GNU Smalltalk ready
+
+st&gt; | a b |
+st&gt; a :=1
+1
+st&gt; b :=4
+4
+st&gt; a+b
+5
+-------------------------------------------
+これだと確かにうまくいきます。
+私がやったのは、GUIからです。
+#cd /usr/local/share/smalltalk/scripts
+#gst Browser.st &amp;
+そしてSmalltalk Transcriptの画面が出るのでメニューのSmalltalkからWorksheetを選択して、
+Worksheetの画面が出てきたらペインの中に、
+--------
+|<i> a b |
+</I>a:=1.
+b:=4.
+^a+b
+--------
+と入力し、全部マウスで選択したら右クリックでprint itを出して左クリックで実行しました。
+　問題はその後エラーの画面が出ました。若干迷惑かもしれませんがエラーの内容をコピペします。
+----------------------------------------------------------------------------------
+MessageNotUnderstood(Exception)&gt;&gt;signal
+String(Object)&gt;&gt;doesNotUnderstand: #+
+[] in 
+BLOX.BLOXBrowser.PWorksheetText(BLOX.BLOXBrowser.PText)&gt;&gt;evalAndPrintResult
+[] in Behavior class(Behavior)&gt;&gt;evalString:to:ifError:
+STInST.GSTFileInParser(STInST.RBParser)&gt;&gt;parserError:
+STInST.STEvaluationDriver(STInST.STParsingDriver)&gt;&gt;parserError:
+STInST.STCompiler&gt;&gt;compileError:
+STInST.STCompiler&gt;&gt;lookupName:
+STInST.STCompiler&gt;&gt;compileAssignmentFor:
+STInST.STCompiler&gt;&gt;acceptAssignmentNode:
+STInST.RBAssignmentNode&gt;&gt;acceptVisitor:
+optimized [] in STInST.STCompiler&gt;&gt;compileStatements:
+OrderedCollection(SequenceableCollection)&gt;&gt;keysAndValuesDo:
+STInST.STCompiler&gt;&gt;compileStatements:
+STInST.STCompiler&gt;&gt;acceptSequenceNode:
+STInST.RBSequenceNode&gt;&gt;acceptVisitor:
+STInST.STCompiler(STInST.RBProgramNodeVisitor)&gt;&gt;visitNode:
+STInST.STCompiler class&gt;&gt;compile:asMethodOf:classified:parser:environment:
+STInST.STEvaluationDriver&gt;&gt;evaluate:
+STInST.GSTFileInParser(STInST.STFileParser)&gt;&gt;evaluate:
+STInST.GSTFileInParser&gt;&gt;evaluate:
+STInST.GSTFileInParser&gt;&gt;parseDoits
+STInST.GSTFileInParser(STInST.STFileInParser)&gt;&gt;parseSmalltalk
+STInST.GSTFileInParser class(STInST.STFileParser
+class)&gt;&gt;parseSmalltalk:with:onError:
+STInST.STEvaluationDriver(STInST.STParsingDriver)&gt;&gt;parseSmalltalk:with:onError:
+Behavior class(Behavior)&gt;&gt;evalString:to:ifError:
+Behavior class(Behavior)&gt;&gt;evaluate:to:ifError:
+BLOX.BLOXBrowser.PWorksheetText(BLOX.BLOXBrowser.PText)&gt;&gt;doEval:ifError:
+BLOX.BLOXBrowser.PWorksheetText&gt;&gt;doEval:ifError:
+BLOX.BLOXBrowser.PWorksheetText(BLOX.BLOXBrowser.PText)&gt;&gt;evalAndPrintResult
+DirectedMessage(Message)&gt;&gt;sendTo:
+DirectedMessage&gt;&gt;send
+BLOX.BMenuItem(BLOX.BMenuObject)&gt;&gt;invokeCallback
+-----------------------------------------------------------------------------
+　私はWorksheetをVisualWorksにおけるWorkspaceのようにとらえていたので以上のようにやりました。
+　portsをバージョンアップしてやってみようと思います。ひょっとしたらファイルが壊れていてコンパイラがparseに失敗するのかもしれません。
+　また、もしかしたらですがGUIからやってみて同じエラーに遭遇した人がいたら教えてください。
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007695.html">[SML 7695] Re: GNU Smalltalkについて
+</A></li>
+	<LI>次の記事 <A HREF="007697.html">[SML 7697] Re: GNU Smalltalkについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7696">[ 日付 ]</a>
+              <a href="thread.html#7696">[ スレッド ]</a>
+              <a href="subject.html#7696">[ 件名 ]</a>
+              <a href="author.html#7696">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

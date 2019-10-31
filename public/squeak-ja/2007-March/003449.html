@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3449] Mac用ベータ版VMでファイル名に濁音／半濁音が使えないバグの修正
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203449%5D%20%3D%3Fiso-2022-jp%3Fb%3FTWFjGyRCTVElWSE8JT9IRxsoQlZN%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEclVSUhJSQla0w%2BJEtCeTI7IT9IPkJ5MjskLDtIJCgkSiQkGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVAlMCROPSRANRsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003456.html">
+   <LINK REL="Next"  HREF="003450.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3449] Mac用ベータ版VMでファイル名に濁音／半濁音が使えないバグの修正</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203449%5D%20%3D%3Fiso-2022-jp%3Fb%3FTWFjGyRCTVElWSE8JT9IRxsoQlZN%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEclVSUhJSQla0w%2BJEtCeTI7IT9IPkJ5MjskLDtIJCgkSiQkGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVAlMCROPSRANRsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3449] Mac用ベータ版VMでファイル名に濁音／半濁音が使えないバグの修正">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2007年 3月  9日 (金) 18:26:03 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003456.html">[Squeak-ja: 3456] Re: MorphとMVCについて
+</A></li>
+        <LI>次の記事 <A HREF="003450.html">[Squeak-ja: 3450] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3449">[ 日付 ]</a>
+              <a href="thread.html#3449">[ スレッド ]</a>
+              <a href="subject.html#3449">[ 件名 ]</a>
+              <a href="author.html#3449">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>みなさん、こんにちは。
+林です。
+
+　どちらかというと Mac で開発者環境をご利用されてる方向けの情報です。
+
+　別メールにも書きましたが、 squeak.orgなどで配布されてる最新VMにはファイ
+ル名に「濁音／半濁音」を扱えないバグがあります。
+このバグを修正した VM を以下のページにアップロードしました。
+
+<A HREF="http://magicbasket.jp/SqueakDev/3">http://magicbasket.jp/SqueakDev/3</A>
+<A HREF="http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip">http://magicbasket.jp/SqueakDev/uploads/3/Squeak_VM070309J.app.zip</A>
+
+　もしよろしければ動作確認していただけると助かります。
+（例えば濁音／半濁音のファイルを作成、リストしてみるなど）
+一応、開発者の John M. McIntosh さんにはパッチを送りますが、反映されるま
+ではしばらくかかると思われます（丁度、今日最新版が出たみたいですので）。
+お急ぎの方は当面このVMをお使いください。
+なお、ユニバーサルバイナリでビルドしたのですけど、Intel mac を持ってない
+ので動作確認しておりません。問題があるようでしたらご連絡ください。
+
+　また、以前、[Squeak-ja: 2446] で高橋さんからご報告いただいた半角／全角
+数字の問題への修正も入ってます（この時は対応が宙ぶらりんになってしまって
+ました。すみません）。
+
+では。
+
+--
+林 徹也 Tetsuya HAYASHI 
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003456.html">[Squeak-ja: 3456] Re: MorphとMVCについて
+</A></li>
+	<LI>次の記事 <A HREF="003450.html">[Squeak-ja: 3450] Re: Mac 用ベータ版 VM でファイル名に濁音／半濁音が使えないバグの修正
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3449">[ 日付 ]</a>
+              <a href="thread.html#3449">[ スレッド ]</a>
+              <a href="subject.html#3449">[ 件名 ]</a>
+              <a href="author.html#3449">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

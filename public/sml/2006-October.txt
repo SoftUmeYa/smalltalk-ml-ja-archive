@@ -1,0 +1,1388 @@
+From europa ＠ ps.inforyoma.or.jp  Tue Oct  3 19:43:32 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7202] メソッド名について
+Message-ID: <45223ED4.4020700@ps.inforyoma.or.jp>
+
+寺内です。お久しぶりです。
+
+ThinkPad s30の調子が悪く、Mac miniに非常に惹かれています。
+
+
+ここから質問です。
+-----
+Smalltalkイディオム->4.制御->分岐、繰返しにある「複数のメッセージセレク
+タを一気にブラウズするためのプログラム」と「あるメッセージカテゴリに定義
+されているメソッドを検索するプログラム」をクラスメソッドとして定義しよう
+としています。(いつでも使用できるようするため)
+
+クラスは、
+Object
+     MethodSearchBlock
+として定義しました。
+インスタンス変数などは定義していません。
+
+1. 「複数のメッセージセレクタを一気にブラウズするためのプログラム」を
+   クラスメソッド includes: messageSelectors として定義しました。
+
+2.  次に、「あるメッセージカテゴリに定義されているメソッドを検索するプロ
+    グラム」を定義しようとしました。ただ、最後にメソッドを列挙するという
+    機能は同じなので includes: messageCategories にするとメソッド名が重
+    複してしまいます。
+    そこで、includesCategory: messageCategories として定義しました。
+
+この場合、1.のメソッド名も includesXXX としたほうが分かりやすいように思
+えてきました。
+ただ、XXXの部分が思いつきません。システム全体を検索しているのでAllClass
+とするほうが良いのでしょうか？
+それとも、クラスを分けた方が良いのでしょうか？
+
+includes: というメソッド名は、ベストプラクティス・パターン(ケント・ベッ
+ク著)の「メソッドには、それが何を達成するかにちなんだ名前をつけましょ
+う。」を参考にしました。(パクリました)
+
+
+これが正解というものは無いかもしれませんが、よろしくお願いします。
+
+
+あと、前回皆さんから指摘して頂いたことにより、Smalltalkイディオムの内容
+を前回読んだ時よりも理解できるようになりました。(当社比)
+
+改めてお礼申し上げます。
+
+
+---
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+From nisinaka ＠ sra.co.jp  Wed Oct  4 18:20:58 2006
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7203] [ANNOUNCE] Jun for Java (Jun609)
+In-Reply-To: <20060912170928.CCA2.NISINAKA@sra.co.jp>
+References: <20060719192147.AA64.NISINAKA@sra.co.jp>
+	<20060912170928.CCA2.NISINAKA@sra.co.jp>
+Message-ID: <20061004181716.7180.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン609を公開します。
+
+  バージョン607からの主な変更点は、以下の通りです。
+
+    * (incompatibility) StPL8.0 での修正にともなって、StPL7.0 か
+      ら deprecated であった古いメニューのフレームワークに関連す
+      るメソッドを削除しました。
+
+    * (modification) JunOpenGLDisplayController を Jun624 相当に
+      更新しました。慣性による回転の処理に 
+      'do_forMilliseconds_(StBlockClosure, int)' を用いています。
+
+    * (new feature) 三角形を分割するためのメソッド群を 
+      Jun2dTriangle/Jun3dTriangle に定義しました。これらのメソッ
+      ドを用いて、三次元の立体や二次元の平面を分割することができ
+      ます。詳細は以下のURLを参照してください:
+
+        http://www.sra.co.jp/people/aoki/Jun/Topics/DividingBody/index.html
+
+    * (new feature) JunControlUtility は、タスクの実行を制御する
+      ためのユーティリティメソッド群を提供するクラスです。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From aoki ＠ sra.co.jp  Thu Oct  5 15:43:20 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7204] Re: メソッド名について
+In-Reply-To: <45223ED4.4020700@ps.inforyoma.or.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+Message-ID: <4524A988.7080602@sra.co.jp>
+
+青木です。
+
+少々込み入ったプログラミングをしていましたので、返信が遅くな
+りました。「Smalltalk イディオム」の第４章「制御」の「分岐」
+や「繰返し」のところのプログラムですが、VisualWorks 7.4.1 に
+おいて以下のようになります。
+
+------------------------------------------------------------
+【複数のメッセージセレクタを一気にブラウザにかける】--------
+
+| messageSelectors browserNavigator browserEnvironment selectorEnvironment |
+messageSelectors := #(#ifTrue: #ifFalse: #ifTrue:ifFalse: #and: #or:).
+browserNavigator := Refactory.Browser.BrowserNavigator new.
+browserEnvironment := Refactory.Browser.BrowserEnvironment new.
+selectorEnvironment := Refactory.Browser.SelectorEnvironment new.
+messageSelectors do:
+        [:aSelector |
+        (browserEnvironment implementorsOf: aSelector)
+            classesDo: [:aClass | selectorEnvironment addClass: aClass selector: aSelector]].
+browserNavigator browseEnvironment: selectorEnvironment
+
+------------------------------------------------------------
+【複数のメッセージプロトコルを一気にブラウザにかける】------
+
+| messageProtocols browserNavigator selectorEnvironment |
+messageProtocols := #(#enumerating #controlling).
+browserNavigator := Refactory.Browser.BrowserNavigator new.
+selectorEnvironment := Refactory.Browser.SelectorEnvironment new.
+SystemUtils allBehaviorsDo:
+        [:aClass |
+        (aClass organization listAtCategoriesNamed: messageProtocols)
+            do: [:aSelector | selectorEnvironment addClass: aClass selector: aSelector]].
+browserNavigator browseEnvironment: selectorEnvironment
+
+------------------------------------------------------------
+
+寺内さんが新たなクラスを作ってまで保持しようとするほどのこと
+ではないと思いますよ。大切なのは上記のプログラムを諳（そら）
+んじるまで唱（とな）えることです。
+
+すると、ブラウザ・ナビゲータ（リファクタリング・ブラウザ）や
+メッセージのセレクタ環境などの開発環境がわかるようになります。
+なぁ〜んだ、グローバル環境を巡って、セレクタ環境に貯め込んで、
+その環境をブラウザ・ナビゲータに開示させればいいのかぁ、とね。
+
+読書百遍而義自見（どくしょ・ひゃっぺん・して・ぎ・おのずから・
+あらわる）です。その域に達すると、いつでも上記ようなプログラ
+ムを書き下ろせます。メソッド名（メッセージ名）の迷いも消え失
+せます。諳んじるまで唱えてくださいまし。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Thu Oct  5 16:08:06 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7205] Re: じゅんのVisualWorks5i.x対応を打ち止め
+In-Reply-To: <451B7D0A.8040400@sra.co.jp>
+References: <451B7D0A.8040400@sra.co.jp>
+Message-ID: <4524AF56.6040208@sra.co.jp>
+
+青木です。
+
+先週末に【Jun699】と【Jun700】をリリースしました。VisualWorks
+5ix 用の打ち止めバージョン【Jun699】と VisualWorks 7.x に最適
+化したバージョン【Jun700】になります。
+
+http://www.sra.co.jp/people/aoki/Jun/htmls/News.html
+
+もはや【Jun700】は VisualWorks 5i.x で動作しません。今後、こ
+の【Jun700】の後継のみを行ってゆきます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+AOKI Atsushi wrote:
+>
+> 青木です。
+>
+> 現在の じゅん のバージョンは【Jun698】です。VisualWorks 5i.x
+> と 7.x を一緒にサポートするのが難しい状況になってきました。
+>
+> 次期バージョンの【Jun699】で VisualWorks 5i.x の対応を打ち止
+> めにし、VisualWorks 7.x のみをサポートしてゆくことにしたいと
+> 思います。
+>
+> VisualWorks と じゅん のバージョンの対応関係は以下の通りです。
+>
+> 	VisualWorks 2.5  : Jun005 〜 Jun234
+> 	VisualWorks 3.x  : Jun300 〜 Jun499
+> 	VisualWorks 5i.x : Jun413 〜 Jun699
+> 	VisualWorks 7.x  : Jun538 〜
+>
+> ネットワーク周りが 5i.x と 7.x では、あまりに異なりますので、
+> 仕方がないという状況です。どうぞよろしくお願い申し上げます。
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From europa ＠ ps.inforyoma.or.jp  Thu Oct  5 22:59:13 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7206] Re: メソッド名について
+In-Reply-To: <4524A988.7080602@sra.co.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp> <4524A988.7080602@sra.co.jp>
+Message-ID: <45250FB1.4020300@ps.inforyoma.or.jp>
+
+こんばんは、寺内です。
+
+青木さん、お忙しい中返信ありがとうございます。
+
+
+> 寺内さんが新たなクラスを作ってまで保持しようとするほどのこと
+> ではないと思いますよ。大切なのは上記のプログラムを諳（そら）
+> んじるまで唱（とな）えることです。
+> 
+> すると、ブラウザ・ナビゲータ（リファクタリング・ブラウザ）や
+> メッセージのセレクタ環境などの開発環境がわかるようになります。
+> なぁ〜んだ、グローバル環境を巡って、セレクタ環境に貯め込んで、
+> その環境をブラウザ・ナビゲータに開示させればいいのかぁ、とね。
+> 
+> 読書百遍而義自見（どくしょ・ひゃっぺん・して・ぎ・おのずから・
+> あらわる）です。その域に達すると、いつでも上記ようなプログラ
+> ムを書き下ろせます。メソッド名（メッセージ名）の迷いも消え失
+> せます。諳んじるまで唱えてくださいまし。
+
+
+「Smalltalkイディオムに載っているプログラム、イディオムを諳ん
+じることができるようになることが必要だ」ということですね。
+なかなか長そうな道のりですが、がんばってみます。
+
+
+それでは、ありがとうございました。
+
+
+-----
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+From aoki ＠ sra.co.jp  Fri Oct  6 10:58:19 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7207] Re: メソッド名について
+In-Reply-To: <45250FB1.4020300@ps.inforyoma.or.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp> <4524A988.7080602@sra.co.jp>
+	<45250FB1.4020300@ps.inforyoma.or.jp>
+Message-ID: <4525B83B.4070507@sra.co.jp>
+
+青木です。
+
+> 「Smalltalkイディオムに載っているプログラム、イディオムを諳ん
+> じることができるようになることが必要だ」ということですね。
+> なかなか長そうな道のりですが、がんばってみます。
+
+はい、長い道程だと感じるのでしょう。ですがね、実は一番の近道
+なんですよ。本当です、私が保証します。
+
+論語読みの論語知らず（ろんごよみのろんごしらず）は悪い意味に
+使われることが多いと思いますが、私は「論語も読めない人が論語
+を理解できるわけがない」と解します。
+
+諳んじるほど唱えることに対して、わけもわからず諳んじても仕方
+ないでしょ、と卑下する向きもありますが、現代のプログラミング
+教育（特に大学）で一番欠落していることだ、と私は思っています。
+
+多量のプログラムを読ませて、内容の概略を答えさせるような試験
+がないですよね。プログラムを声に出して読む方法も教えません。
+すぐにプログラミング言語の文法説明（それも細かすぎる理解）を
+促して、書くことばかりを教え込んでしまいますからね。
+
+まずは、Smalltalk 読みの Smalltalk 知らず、これを育てた上で、
+その後から熟成してくるものを引き出してあげればいいでしょう。
+事実、私がそうやってやってきて今に至っています。そして、弟子
+たちにもそのように指導します。
+
+寺内さん、拙著「Smalltalk イディオム」を VisualWorks 3.1c を
+基にしてまず読んで、諳んじられるようになったら、記載されてい
+るプログラムと同じことを、VisualWorks 7.4.1 ではどうやってや
+るのだろう、という感じで行ってゆくと、かなりの読みができるよ
+うになります。（同時に書き出せるようにもなっています。）
+
+じゅん for Smalltalk を じゅん for Java に移したり、その逆を
+やったりすることを、私のまわりでは多く行っていますが、それが
+まさにプログラムの読み（＆書き）の切れ間のない修練になってい
+ます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From tomohiro ＠ sra.co.jp  Fri Oct  6 13:57:22 2006
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7208] Re: メソッド名について
+In-Reply-To: <4525B83B.4070507@sra.co.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+	<45250FB1.4020300@ps.inforyoma.or.jp> <4525B83B.4070507@sra.co.jp>
+Message-ID: <200610061357.22672.tomohiro@sra.co.jp>
+
+おだです。
+蛇足かもしれませんが、一言。
+
+> 論語読みの論語知らず（ろんごよみのろんごしらず）は悪い意味に
+> 使われることが多いと思いますが、私は「論語も読めない人が論語
+> を理解できるわけがない」と解します。
+>
+> 諳んじるほど唱えることに対して、わけもわからず諳んじても仕方
+> ないでしょ、と卑下する向きもありますが、現代のプログラミング
+> 教育（特に大学）で一番欠落していることだ、と私は思っています。
+
+要するに、掛け算の九九と同じだと思うんですよね。
+5x3を、「5に3を掛けるとは、5が3つということだから、5＋5＋5=15」
+と「掛け算とは何ぞや」から入るのも結構ですが、少なくともその後で
+「ごさんじゅうご」を暗記しないと使いものになりません。
+5x3の解を求めにのなら、「掛け算とは何ぞや」から求めてもいいですが、
+本当に解きたいのは物理の問題だったり、買い物でのお勘定だったり
+もっとレイヤーが高いところにあるはずです。そういう問題に対して、
+九九の暗記ができているのとできていないのでは、まるで違いますよね。
+
+だから逆に言えば、イディオムの暗記をあまり仰々しく捉える必要はないと思います。
+だって、九九を暗唱できる人は、すでに掛け算イディオムを81個も暗記し活用してきた
+実績に裏付けられた能力と経験を持っているのですから。
+---
+おだ
+
+From shinsahara ＠ shinsahara.com  Fri Oct  6 16:33:01 2006
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7209] Re: メソッド名について
+In-Reply-To: <200610061357.22672.tomohiro@sra.co.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+	<45250FB1.4020300@ps.inforyoma.or.jp> <4525B83B.4070507@sra.co.jp>
+	<200610061357.22672.tomohiro@sra.co.jp>
+Message-ID: <9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+
+佐原です。
+
+On 2006/10/06, at 13:57, Tomohiro Oda wrote:
+
+> おだです。
+> 蛇足かもしれませんが、一言。
+
+>> 諳んじるほど唱えることに対して、わけもわからず諳んじても仕方
+>> ないでしょ、と卑下する向きもありますが、現代のプログラミング
+>> 教育（特に大学）で一番欠落していることだ、と私は思っています。
+
+> だから逆に言えば、イディオムの暗記をあまり仰々しく捉える必要は 
+> ないと思います。
+> だって、九九を暗唱できる人は、すでに掛け算イディオムを81 
+> 個も暗記し活用してきた
+> 実績に裏付けられた能力と経験を持っているのですから。
+
+豚足ですが、ひと言。
+81個なら覚えたが、8100個ほどになると覚えられない私はどうし 
+たら？ :-)
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: 080-5402-9755(in Japan and Corea), 080-5030-9755(in the world  
+except Corea)
+------------------------------------------------------------------------
+
+
+
+From masuda ＠ im.dendai.ac.jp  Fri Oct  6 16:44:59 2006
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7210] Re: メソッド名について
+In-Reply-To: <9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+References: <4525B83B.4070507@sra.co.jp>
+	<200610061357.22672.tomohiro@sra.co.jp>
+	<9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+Message-ID: <20061006.164459.83622295.masuda@im.dendai.ac.jp>
+
+増田＠電大です。
+
+> From: Shin Sahara from Home <shinsahara@shinsahara.com>
+> 
+> 豚足ですが、ひと言。
+> 81個なら覚えたが、8100個ほどになると覚えられない私はどうし 
+> たら？ :-)
+
+サクサク Smalltalk にもありますが、「知りたいことを見つける方法を知っ
+ている」ようになれば覚えなくてもいいかと。
+
+あと、名前については 13.2 ネーミングルール → メソッド名 あたりが参考
+になるのではないかと思います。
+
+------
+〒101-8457 東京電機大学 工学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp            TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/ FAX 03-5280-3592
+It's more fun to compute!
+
+From tomohiro ＠ sra.co.jp  Fri Oct  6 17:16:37 2006
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7211] Re: メソッド名について
+In-Reply-To: <9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+	<200610061357.22672.tomohiro@sra.co.jp>
+	<9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+Message-ID: <200610061716.37517.tomohiro@sra.co.jp>
+
+おだです。
+
+> 81個なら覚えたが、8100個ほどになると覚えられない私はどうし
+> たら？ :-)
+
+え、僕なんて母語である日本語の慣用表現すら8100個も列挙できません。
+＃いわんやSmalltalkをや :-)
+---
+おだ
+
+From aoki ＠ sra.co.jp  Fri Oct  6 17:41:09 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7212] Re: メソッド名について
+In-Reply-To: <9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>	<45250FB1.4020300@ps.inforyoma.or.jp>
+	<4525B83B.4070507@sra.co.jp>	<200610061357.22672.tomohiro@sra.co.jp>
+	<9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+Message-ID: <452616A5.9040401@sra.co.jp>
+
+青木です。
+
+Shin Sahara from Home wrote:
+> 豚足ですが、ひと言。
+
+豚足かぁ〜、折る指の数が足りないわね。:-)
+
+> 81個なら覚えたが、8100個ほどになると覚えられない私はどうしたら？ :-)
+
+日経ソフトウエア１０月号（８月２４日に既刊）の「名前」のとこ
+ろで、ジップ法則をあげて、そんなに多数を諳んじる必要はないの
+ですよ、と明記しています。
+
+http://www15.nikkeibp.co.jp/software/backno/2006/0610indexc.html
+
+自らのプログラミング系において、名前の出現頻度順位を押さえて
+いないのは、プログラマとしてかなり恥ずかしいことです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From koubo2006 ＠ yengawa.jpn.org  Fri Oct  6 20:14:17 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7213] Re: メソッド名について
+In-Reply-To: <45223ED4.4020700@ps.inforyoma.or.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+Message-ID: <20061006153608.805C.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+
+例にしたプログラムをメソッドとして定義するべきかどうかは別にして、メソッ
+ド名をどうつけたらいいのか?という疑問はだれでも持つものだと思います。
+それに、メソッド名の重要性に気づいてMLへ広く問いかける時点でそうとう
+プログラミングのセンスが良いと感じました。
+
+ぼくもメソッドやクラスの命名にいつも苦労しているので、数年の職業
+Smalltalkerとしての経験から得た具体的なやり方を紹介します。
+
+まず一番重要なのは、
+
+「既存のライブラリ内で意味の似ているメソッドを参考にする」
+
+既存ライブラリを調べて、うまい具合に意味の似たメソッドが見つかればそれを
+参考にして似た名前をつけます。こうすると、他の人がそのメソッドの意味を既
+存のメソッドから推測できるのでより理解しやすくなります。
+今回の場合「ブラウズするためのプログラム」という意味に近いメソッドを探し
+てみてはどうでしょうか。
+
+でも、これはライブラリをある程度読み込まないと見つけられません。だから、
+初心者は変な名前をつけてしまうのは仕方なくて、よく知れば知るほどうまい名
+前をつけられるようになります。上達するにはライブラリをよく読むしかありま
+せん。これはどんな言語でも(自然言語も)同じだと思います。
+
+しかし、Smalltalkのような動的に型を決定する言語だと、意味が似ているから
+といってまったく同じ名前をつけることには危険があります。
+
+「既存のライブラリ内で使われているメソッド名は(特別なとき意外は)使わない」
+
+たとえばあるOrderedCollectionインスタンスに値を入れるだけだからといって
+「at:」をうっかりそのまま使ってしまうと、あとで「そのクラスのat:」を呼び
+出しているところをsendersで探そうとしても膨大な数の「他のクラスのat:」の
+マッチに埋もれて見つけられなくなります。
+(ぼくはこの現象を「多態性洋(た・たいせいよう)に沈む」と呼んでいます;-)
+
+まったく同じメソッド名をつけても良い「特別なとき」とは多態性が成立すると
+きです。(詳しくは「リスコフの置換原則」を参照)
+この意味でも「includes:」を使うのは避けたほうが良いです。
+
+そして、意味の似ているメソッドが見つからないときは、次のように新しく命名
+します。
+
+「クラス名を主語、メソッド名を述語みたいに発音して英語っぽくする」
+
+ご存知の通り、Smalltalkはオブジェクトへのメッセージ送信によって処理を進
+めるという計算モデルを基本にしています。それにあわせるために、なるべく主
+語・述語のような形にします。そして、そのように読んだときにメソッドの意味
+が伝わるかどうかチェックします。
+
+これはクラス名の命名にも関わります。「includes:」がなぜ「include:」では
+ないのか?という疑問への答えでもあります。でも、Smaltalkは文法的な制約で
+完全な英語にはならないので、なんとなく英語っぽく聞こえるだけでOK(既存ラ
+イブラリも英語として変なのがほとんどです)。
+
+A MethodSearchBlock includes these selectors.
+
+の日本語訳はどうなるか? などと試してみてください。クラス名も直したくなっ
+てなってくるかもしれません。
+
+それでも、よさそうな名前がどうしても思いつかないよ!というときはたくさん
+あります。そんなときは腹をくくって最終手段です。
+
+「良い名前が思いつかないときは思い切って変な名前をつけてしまう」
+
+MethodSearchBlock class>>findImplementersFromAllClassesAndBrowseThem:
+なんてふうにだらだら書いてしまうのはすごく「変な名前」だし、読むとやるこ
+とがわかるのでおすすめw
+includesXXX: もこのまま使えばじゅうぶん変なので、最終手段としてつけるな
+らOKなのです。
+
+上記のような命名の苦労をしたあげくに変な名前をつけてしまうことは、実は、
+とても大切です。こうすると変な名前はいつまでも気になってしまうので、次の
+もっとも重要な作業をやりやすくします。
+
+「より良い名前を思いついたときには躊躇せずにリファクタリングする」
+
+
+以上、参考になれば幸いです。
+
+
+On Tue, 03 Oct 2006 19:43:32 +0900
+NOBUTAKA Terauchi <europa@ps.inforyoma.or.jp> wrote:
+
+> クラスは、
+> Object
+>      MethodSearchBlock
+> として定義しました。
+> インスタンス変数などは定義していません。
+> 
+> 1. 「複数のメッセージセレクタを一気にブラウズするためのプログラム」を
+>    クラスメソッド includes: messageSelectors として定義しました。
+> 
+> 2.  次に、「あるメッセージカテゴリに定義されているメソッドを検索するプロ
+>     グラム」を定義しようとしました。ただ、最後にメソッドを列挙するという
+>     機能は同じなので includes: messageCategories にするとメソッド名が重
+>     複してしまいます。
+>     そこで、includesCategory: messageCategories として定義しました。
+> 
+> この場合、1.のメソッド名も includesXXX としたほうが分かりやすいように思
+> えてきました。
+> ただ、XXXの部分が思いつきません。システム全体を検索しているのでAllClass
+> とするほうが良いのでしょうか？
+> それとも、クラスを分けた方が良いのでしょうか？
+
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From aoki ＠ sra.co.jp  Fri Oct  6 21:07:15 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7214] Re: メソッド名について
+In-Reply-To: <20061006153608.805C.KOUBO2006@yengawa.jpn.org>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+	<20061006153608.805C.KOUBO2006@yengawa.jpn.org>
+Message-ID: <452646F3.9000801@sra.co.jp>
+
+こんばんは、青木です。
+
+> 例にしたプログラムをメソッドとして定義するべきかどうかは別にして、メソッ
+> ド名をどうつけたらいいのか?という疑問はだれでも持つものだと思います。
+
+その通りです。日経ソフトウエアの１０月号にも『変数名や関数名
+は英字で始まる英数字であれば何でもいい、と説明されることが多
+いのでしょうが、大間違いですよ。それらを勝手にできると思い込
+んでいるようなプログラマは愚かしさの極（きわ）みです。羅針盤
+を持たずに大海へ漕ぎ出すのと同じ。チョコレート一枚だけで山野
+に分け入る危なさがあります。』と書きました。
+
+私も弟子たちも日々「名前づけ」に悩まされています。ヒトは脳が
+足りない生き物ですから、致し方ありますまい。先人が記した名前
+を労（ねぎら）うことが大切でしょう。
+
+> それに、メソッド名の重要性に気づいてMLへ広く問いかける時点でそうとう
+> プログラミングのセンスが良いと感じました。
+
+横川さんもセンスが良さそうにお見受けします。ぜひともドンドン
+ＳＭＬにポストしていただければ幸いです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Fri Oct  6 21:33:51 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7215] Re: メソッド名について
+In-Reply-To: <20061006.164459.83622295.masuda@im.dendai.ac.jp>
+References: <4525B83B.4070507@sra.co.jp>	<200610061357.22672.tomohiro@sra.co.jp>	<9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+	<20061006.164459.83622295.masuda@im.dendai.ac.jp>
+Message-ID: <45264D2F.6050809@sra.co.jp>
+
+こんばんは、青木です。
+
+> サクサク Smalltalk にもありますが、「知りたいことを見つける方法を知っ
+> ている」ようになれば覚えなくてもいいかと。
+> あと、名前については 13.2 ネーミングルール → メソッド名 あたりが参考
+> になるのではないかと思います。
+
+増田さん、つかぬことをお伺いしますが、「サクサクSmalltalk」
+もウェブに公開できないのかしらん？
+
+原著者のサイモン・ルイスさんや東京電機大学出版局との関係もあ
+るかと思いますが、小売りのルートに出していても、捗（はか）が
+行かないような気がします。
+
+たとえば、私はサッサと（数千部が売れたら）絶版にしてしまって、
+ウェブ公開するという手を使っています。
+
+増田さんが「サクサクSmalltalk」を最新の Smalltalk の状況に合
+わせて新たにウェブ上に書き下ろすという手もありますよ。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+
+From shinsahara ＠ shinsahara.com  Fri Oct  6 21:48:25 2006
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7216] Re: メソッド名について
+In-Reply-To: <20061006.164459.83622295.masuda@im.dendai.ac.jp>
+References: <4525B83B.4070507@sra.co.jp>
+	<200610061357.22672.tomohiro@sra.co.jp>
+	<9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+	<20061006.164459.83622295.masuda@im.dendai.ac.jp>
+Message-ID: <7E1109B4-809B-4031-9B50-D4F91D65FFB8@shinsahara.com>
+
+佐原です。
+
+On 2006/10/06, at 16:44, Hidetaka MASUDA wrote:
+
+> 増田＠電大です。
+>
+>> From: Shin Sahara from Home <shinsahara@shinsahara.com>
+>>
+>> 豚足ですが、ひと言。
+>> 81個なら覚えたが、8100個ほどになると覚えられない私はど 
+>> うし
+>> たら？ :-)
+>
+> サクサク Smalltalk にもありますが、「知りたいことを見つ 
+> ける方法を知っ
+> ている」ようになれば覚えなくてもいいかと。
+
+「知りたいことを知っている人」なら多数知っているのですが、皆、酒 
+好きで...
+
+> あと、名前については 13.2 ネーミングルール  
+> → メソッド名 あたりが参考
+> になるのではないかと思います。
+
+ブラウザーで探す方は苦労しないのですが、覚えていてタッチタイプし 
+ろと言われると... :-)
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: 080-5402-9755(in Japan and Corea), 080-5030-9755(in the world  
+except Corea)
+------------------------------------------------------------------------
+
+
+
+From tomohiro ＠ sra.co.jp  Fri Oct  6 21:48:36 2006
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7217] Re: メソッド名について
+In-Reply-To: <452646F3.9000801@sra.co.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+	<20061006153608.805C.KOUBO2006@yengawa.jpn.org>
+	<452646F3.9000801@sra.co.jp>
+Message-ID: <200610062148.36991.tomohiro@sra.co.jp>
+
+おだです。
+
+> 私も弟子たちも日々「名前づけ」に悩まされています。ヒトは脳が
+> 足りない生き物ですから、致し方ありますまい。先人が記した名前
+> を労（ねぎら）うことが大切でしょう。
+
+脳が足りないというか、脳を十分に使えない生き物、とも言えます。
+
+というのも、自然言語では、書くための語彙（列挙できる単語の数）は、
+読むための語彙（意味を聞かれて答えることができる単語の数）の
+10分の1程度と言われています。つまり、英単語を2万語暗記しても
+実際に英作文で使えるのは2千語だけということです。
+
+残りの10分の9を使うためには、読むための語彙だから読むしかありません。
+ただ頭の中で名前を考えるだけでは、脳ミソを十分に使えないどころか、
+たった一分しか使えません。
+
+この点からも増田さんの言われる「知りたいことを見つける方法を知っている」
+ことはとても重要で、「読む」という行動を通して脳ミソの残りの九分のいくらか
+を活用できる可能性が出てきます。単に辞書を引いたりググったりsender search
+するのではなく、残り10分の9の語彙の中から適した単語を含むような文
+（ソースコード）を探し当てる能力、ということです。
+---
+おだ＠あるいは北斗神拳を会得して人間の肉体の潜在能力の残り9割を引き出すか・・・
+
+From aoki ＠ sra.co.jp  Fri Oct  6 22:20:42 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7218] Re: メソッド名について
+In-Reply-To: <45223ED4.4020700@ps.inforyoma.or.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+Message-ID: <7F5AF77F-2DBD-4003-90B3-3F29E17FFB45@sra.co.jp>
+
+On 2006/10/03, at 19:43, NOBUTAKA Terauchi wrote:
+> ThinkPad s30の調子が悪く、Mac miniに非常に惹かれています。
+
+私はマック使いなのですが、「Mac mini」はあまりお勧めしませ 
+ん。
+最初の「Mac mini」よりは、だいぶ良くなったのですが、それでも
+買う気になれません。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From europa ＠ ps.inforyoma.or.jp  Sat Oct  7 03:36:00 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7219] Re: メソッド名について
+In-Reply-To: <4525B83B.4070507@sra.co.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+	<4524A988.7080602@sra.co.jp>	<45250FB1.4020300@ps.inforyoma.or.jp>
+	<4525B83B.4070507@sra.co.jp>
+Message-ID: <4526A210.3000400@ps.inforyoma.or.jp>
+
+こんばんは、寺内です。
+
+> はい、長い道程だと感じるのでしょう。ですがね、実は一番の近道
+> なんですよ。本当です、私が保証します。
+
+「急がば回れ」ですね。
+Smalltalkイディオムを読み進めるとともに、記載されているプログ
+ラム、イディオムをローカルへコピーして、いつでも読めるようにし
+ておきます。
+
+> 寺内さん、拙著「Smalltalk イディオム」を VisualWorks 3.1c を
+> 基にしてまず読んで、諳んじられるようになったら、記載されてい
+> るプログラムと同じことを、VisualWorks 7.4.1 ではどうやってや
+> るのだろう、という感じで行ってゆくと、かなりの読みができるよ
+> うになります。（同時に書き出せるようにもなっています。）
+
+早くそうなりたいものです。
+
+それでは、ありがとうございました。
+
+
+-----
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Sat Oct  7 03:36:10 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7220] Re: メソッド名について
+In-Reply-To: <200610061357.22672.tomohiro@sra.co.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>	<45250FB1.4020300@ps.inforyoma.or.jp>
+	<4525B83B.4070507@sra.co.jp>
+	<200610061357.22672.tomohiro@sra.co.jp>
+Message-ID: <4526A21A.7030309@ps.inforyoma.or.jp>
+
+こんばんは、寺内です。
+
+> 要するに、掛け算の九九と同じだと思うんですよね。
+> 5x3を、「5に3を掛けるとは、5が3つということだから、5＋5＋5=15」
+> と「掛け算とは何ぞや」から入るのも結構ですが、少なくともその後で
+> 「ごさんじゅうご」を暗記しないと使いものになりません。
+> 5x3の解を求めにのなら、「掛け算とは何ぞや」から求めてもいいですが、
+> 本当に解きたいのは物理の問題だったり、買い物でのお勘定だったり
+> もっとレイヤーが高いところにあるはずです。そういう問題に対して、
+> 九九の暗記ができているのとできていないのでは、まるで違いますよね。
+
+確かにそうですね。
+難しく考えずに、素直に「読んで諳んじる」ことが大事ということですね。
+とりあえずは、読むことに専念します。
+
+ありがとうございました。
+
+
+-----
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Sat Oct  7 03:35:53 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7221] Re: メソッド名について
+In-Reply-To: <7F5AF77F-2DBD-4003-90B3-3F29E17FFB45@sra.co.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+	<7F5AF77F-2DBD-4003-90B3-3F29E17FFB45@sra.co.jp>
+Message-ID: <4526A209.10808@ps.inforyoma.or.jp>
+
+こんばんは、寺内です。
+
+> 私はマック使いなのですが、「Mac mini」はあまりお勧めしません。
+> 最初の「Mac mini」よりは、だいぶ良くなったのですが、それでも
+> 買う気になれません。
+
+最低でもiMacぐらいからでしょうか。
+「Mac OS X」になってから遊ぶ要素満載(中身がBSD)になっているらしいですね。
+あとは、我が家の財務大臣を説得するだけです。(難攻不落ですが...)
+
+それでは、失礼します。
+
+
+-----
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+
+From europa ＠ ps.inforyoma.or.jp  Sat Oct  7 03:35:41 2006
+From: europa ＠ ps.inforyoma.or.jp (NOBUTAKA Terauchi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7222] Re: メソッド名について
+In-Reply-To: <20061006153608.805C.KOUBO2006@yengawa.jpn.org>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>
+	<20061006153608.805C.KOUBO2006@yengawa.jpn.org>
+Message-ID: <4526A1FD.3000002@ps.inforyoma.or.jp>
+
+こんばんは、寺内です。
+
+横川さん、具体的な助言ありがとうございます。
+
+> しかし、Smalltalkのような動的に型を決定する言語だと、意味が似ているから
+> といってまったく同じ名前をつけることには危険があります。
+> 
+> 「既存のライブラリ内で使われているメソッド名は(特別なとき意外は)使わない」
+> 
+> たとえばあるOrderedCollectionインスタンスに値を入れるだけだからといって
+> 「at:」をうっかりそのまま使ってしまうと、あとで「そのクラスのat:」を呼び
+> 出しているところをsendersで探そうとしても膨大な数の「他のクラスのat:」の
+> マッチに埋もれて見つけられなくなります。
+> (ぼくはこの現象を「多態性洋(た・たいせいよう)に沈む」と呼んでいます;-)
+
+なるほど、これは全く知りませんでした。
+逆に、なるだけクラスライブラリで使用されているメソッド名にしたほうが良い
+と思っていました。
+
+> まったく同じメソッド名をつけても良い「特別なとき」とは多態性が成立すると
+> きです。(詳しくは「リスコフの置換原則」を参照)
+> この意味でも「includes:」を使うのは避けたほうが良いです。
+> 
+> そして、意味の似ているメソッドが見つからないときは、次のように新しく命名
+> します。
+> 
+> 「クラス名を主語、メソッド名を述語みたいに発音して英語っぽくする」
+> 
+> ご存知の通り、Smalltalkはオブジェクトへのメッセージ送信によって処理を進
+> めるという計算モデルを基本にしています。それにあわせるために、なるべく主
+> 語・述語のような形にします。そして、そのように読んだときにメソッドの意味
+> が伝わるかどうかチェックします。
+
+また知らない単語がでてきた・・・・・。
+Googleで検索、検索、
+「リスコフの置換原則」-> 派生型はその基本型と置換可能でなければならない
+ということですね。
+
+> それでも、よさそうな名前がどうしても思いつかないよ!というときはたくさん
+> あります。そんなときは腹をくくって最終手段です。
+> 
+> 「良い名前が思いつかないときは思い切って変な名前をつけてしまう」
+
+了解です。すぐ、実行に移します。
+
+> 「より良い名前を思いついたときには躊躇せずにリファクタリングする」
+
+
+それにしても、投稿すればするほど、Smalltalkerへの道程があと何年からあと
+何光年(死んでも無理)へ変わっていくと感じるのは気のせいでしょうか？
+
+また、何か疑問点があれば投稿するのでよろしくお願いします。
+
+
+-----
+NOBUTAKA Terauchi<europa@ps.inforyoma.or.jp>
+
+
+
+
+
+From nishis ＠ zephyr.dti.ne.jp  Sat Oct  7 05:03:24 2006
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7223] Re: メソッド名について
+In-Reply-To: <4526A209.10808@ps.inforyoma.or.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>	<7F5AF77F-2DBD-4003-90B3-3F29E17FFB45@sra.co.jp>
+	<4526A209.10808@ps.inforyoma.or.jp>
+Message-ID: <4526B68C.8040307@zephyr.dti.ne.jp>
+
+on 06.10.7 3:35 AM, NOBUTAKA Terauchi wrote:
+> こんばんは、寺内です。
+> 
+>> 私はマック使いなのですが、「Mac mini」はあまりお勧めしません。
+>> 最初の「Mac mini」よりは、だいぶ良くなったのですが、それでも
+>> 買う気になれません。
+> 
+> 最低でもiMacぐらいからでしょうか。
+> 「Mac OS X」になってから遊ぶ要素満載(中身がBSD)になっているらしいですね。
+> あとは、我が家の財務大臣を説得するだけです。(難攻不落ですが...)
+> 
+> それでは、失礼します。
+
+青木さんがダメ出しした Mac mini ですが，使ってます (笑)．例の
+突発性失神症が出るようになって困ってた黒の MacBook の交代要員
+です．ディスク容量の問題があって高価い方にしましたが，安価い方
+なら 10 万でお釣りがくる値段は，他に選択肢がありません (笑)．
+ただ，筐体がかなり熱くなります． HDD の温度はノートより高くな
+ります．そのノートも PowerBook よりかは高くなる傾向があるよう
+な．総じてインテル系の Mac は熱くなるようです．ああ，それから
+メモリは標準の 512MB では使い物になりません．
+
+というわけで，今年は黒の MacBook, Mac mini と二台も買わされま
+した．えれぇ出費です．
+
+わたしの向かいの席の S さんは 20 インチの iMac を使ってます．
+ここだけ Mac 植民地になってます． Windows の帝国支配はなかなか
+に面倒クサいです．
+
+＃黒の MacBook は未だ帰らず．どうにかしてよ，アップルさんよ！
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From koubo2006 ＠ yengawa.jpn.org  Sat Oct  7 08:28:11 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7224] Re: メソッド名について
+In-Reply-To: <452646F3.9000801@sra.co.jp>
+References: <20061006153608.805C.KOUBO2006@yengawa.jpn.org>
+	<452646F3.9000801@sra.co.jp>
+Message-ID: <20061007072151.805F.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+おはようございます。
+
+On Fri, 06 Oct 2006 21:07:15 +0900
+AOKI Atsushi <aoki@sra.co.jp> wrote:
+
+> その通りです。日経ソフトウエアの１０月号にも『変数名や関数名
+> は英字で始まる英数字であれば何でもいい、と説明されることが多
+> いのでしょうが、大間違いですよ。それらを勝手にできると思い込
+> んでいるようなプログラマは愚かしさの極（きわ）みです。羅針盤
+> を持たずに大海へ漕ぎ出すのと同じ。チョコレート一枚だけで山野
+> に分け入る危なさがあります。』と書きました。
+
+青木さんの記事は以前から楽しく拝見していましたが、最近はフォローできてま
+せんでした。
+いつか書籍などでまとめて読めることも期待してます。
+
+
+> 私も弟子たちも日々「名前づけ」に悩まされています。ヒトは脳が
+> 足りない生き物ですから、致し方ありますまい。先人が記した名前
+> を労（ねぎら）うことが大切でしょう。
+
+労うというのがどういう意味かつかめませんが、試行錯誤、取捨選択されて生き
+残っている名前には簡潔でわかりやすいものがたくさんありますね。
+でも良いものばかりでもなくて、VWのCollectionにincludes:とともにcontains:
+というのもあるのは間違いやすくていかがなものかと思ったり。
+
+
+> 横川さんもセンスが良さそうにお見受けします。ぜひともドンドン
+> ＳＭＬにポストしていただければ幸いです。
+
+ありがとうございます。
+もっぱらSqueakでとりあえず動くコードを書き散らかしてばかりいるので、SML
+はちょっと敷居が高いのです。
+
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From aoki ＠ sra.co.jp  Sat Oct  7 09:08:51 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7225] Re: メソッド名について
+In-Reply-To: <4526A210.3000400@ps.inforyoma.or.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>	<4524A988.7080602@sra.co.jp>	<45250FB1.4020300@ps.inforyoma.or.jp>	<4525B83B.4070507@sra.co.jp>
+	<4526A210.3000400@ps.inforyoma.or.jp>
+Message-ID: <4526F013.3060308@sra.co.jp>
+
+おはようございます、青木です。
+
+寺内さん、もし VisualWorks 3.1c をベースに読んでみようと思う
+ならば、便利なアーカイブがありますよ。
+
+http://www.sra.co.jp/people/aoki/Jun/JunAllInOne/
+
+イリノイ大学からアーカイブを持ってくるよりも楽だと思います。
+じゅん（Jun449v15）が一緒に入っていますが、邪魔になることは
+ありません。
+
+http://www.sra.co.jp/people/aoki/SmalltalkIdioms/
+http://www.sra.co.jp/people/aoki/SmalltalkIdiomsForVWNC30/
+
+むしろ、Smalltalk イディオムに記載されているプログラムを確実
+に動かすことができます。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Sat Oct  7 09:08:54 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7226] Re: メソッド名について
+In-Reply-To: <4526A209.10808@ps.inforyoma.or.jp>
+References: <45223ED4.4020700@ps.inforyoma.or.jp>	<7F5AF77F-2DBD-4003-90B3-3F29E17FFB45@sra.co.jp>
+	<4526A209.10808@ps.inforyoma.or.jp>
+Message-ID: <4526F016.5030901@sra.co.jp>
+
+青木です。
+
+> 最低でもiMacぐらいからでしょうか。
+
+御意。
+
+> 「Mac OS X」になってから遊ぶ要素満載(中身がBSD)になっているらしいですね。
+
+はい、その通りです。
+
+> あとは、我が家の財務大臣を説得するだけです。(難攻不落ですが...)
+
+青木家においても、大阪城のような難攻不落の財務大臣がいますが、
+『私語（ささや）き戦術』なるものを用いて落城へ追い込みますよ。
+
+寝ても覚めても「マック」と私語くわけです。お茶を一服、ご飯を
+一口、その度ごとに「あぁマック」、出勤や帰宅の際にも欠かさず
+に「いいよなぁマック」という具合。
+
+財務大臣から「うるさいわねぇ〜、もういいから、買いなさい！」
+が出るまでがんばります。
+
+寺内家で上手くゆくかどうかは保証のかぎりではありませんけどね。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From shige_hisa25 ＠ hotmail.com  Mon Oct  9 16:45:46 2006
+From: shige_hisa25 ＠ hotmail.com (重畠　 久人)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7227] Re: Jun694 for Smalltalk
+In-Reply-To: <4509027D.6070602@sra.co.jp>
+Message-ID: <BAY13-F20663B51E68DC73358EFE9F4160@phx.gbl>
+
+unsubscribe vygey2d shige_hisa25@hotmail.com
+
+_________________________________________________________________
+au版メッセンジャーEZアプリ新登場！いますぐ無料ダウンロード！ 
+http://promotion.live.jp/messenger/mobile.htm 
+
+
+From masuda ＠ im.dendai.ac.jp  Tue Oct 10 12:59:43 2006
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7228] Re: メソッド名について
+In-Reply-To: <45264D2F.6050809@sra.co.jp>
+References: <9C4E8EBA-D2BF-4CAD-BA1A-96F1AC8C9D1D@shinsahara.com>
+	<20061006.164459.83622295.masuda@im.dendai.ac.jp>
+	<45264D2F.6050809@sra.co.jp>
+Message-ID: <20061010.125943.32722676.masuda@im.dendai.ac.jp>
+
+増田＠電大です。
+
+> From: AOKI Atsushi <aoki@sra.co.jp>
+> 
+> > サクサク Smalltalk にもありますが、「知りたいことを見つける方法を知っ
+> > ている」ようになれば覚えなくてもいいかと。
+> > あと、名前については 13.2 ネーミングルール → メソッド名 あたりが参考
+> > になるのではないかと思います。
+> 
+> 増田さん、つかぬことをお伺いしますが、「サクサクSmalltalk」
+> もウェブに公開できないのかしらん？
+
+残念ながら諸々の事情で無理と思います。
+
+> 原著者のサイモン・ルイスさんや東京電機大学出版局との関係もあ
+> るかと思いますが、小売りのルートに出していても、捗（はか）が
+> 行かないような気がします。
+
+電大出版は細くても長く売るところが特長でもあります。当分絶版等にはなら
+ないと思います。
+
+> たとえば、私はサッサと（数千部が売れたら）絶版にしてしまって、
+> ウェブ公開するという手を使っています。
+
+ので、この手は使えそうにありません。
+
+> 増田さんが「サクサクSmalltalk」を最新の Smalltalk の状況に合
+> わせて新たにウェブ上に書き下ろすという手もありますよ。
+
+  ↑ この方法が一番現実的ですね。
+
+------
+〒101-8457 東京電機大学 工学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp            TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/ FAX 03-5280-3592
+It's more fun to compute!
+
+From m-asada ＠ sra.co.jp  Wed Oct 11 15:59:15 2006
+From: m-asada ＠ sra.co.jp (Mitsuhiro Asada)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7229] [ANNOUNCE] ImageSearcher for Java 029
+Message-ID: <20061011155848.1763.M-ASADA@sra.co.jp>
+
+浅田です。
+
+「イメージサーチャ for Java（イメージサーチャ for Web）」のバージョン
+029を公開します。
+
+    http://www.sra.co.jp/people/m-asada/Isr4Java/
+    ftp://ftp.sra.co.jp/pub/lang/java/isr4java/
+
+イメージサーチャは、ファイル名やカテゴリ名などの名前やキーワードに頼ら
+ずに、目的の画像を捜し出すプログラムです。特徴的な色(typical color)、平
+均明度(average luminance)、9つの色(nine colors)、広がり(image extent)、
+スペクトル中心(center spectra)、手書き画像(freehand image)などを指定す
+ることにより、画像自身が持っている属性を手掛かりとして、目的の画像を絞
+り込み検索します。
+
+バージョン028からの主な変更点は、以下の通りです。
+
+  ・(incompatibility) StPL8.0 での修正にともなって、StPL7.0 から 
+    deprecated であった古いメニューのフレームワークに関連すメソッド
+    を削除しました。
+
+______________________________________________________________________
+Mitsuhiro Asada <m-asada@sra.co.jp>
+
+
+
+From kuwatani ＠ akademia.co.jp  Thu Oct 12 12:58:15 2006
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7230] テストメールです
+Message-ID: <452DBD57.2090602@akademia.co.jp>
+
+SMLの管理をしています 桑谷 です．
+
+メール配信のテストです．
+
+----
+桑谷 剛史
+kuwatani@akademia.co.jp
+
+
+From kuwatani ＠ akademia.co.jp  Thu Oct 12 18:47:39 2006
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7231] メール配信の不具合のお詫び
+Message-ID: <452E0F3B.7070902@akademia.co.jp>
+
+SMLにご参加のみなさま
+
+メーリングリストの管理をしている 桑谷 です．
+
+週末からメールが配信されない不具合が起きていました．
+現在は復旧し未送信になっていたメールも送信されていると思います．
+メールが届いていない，間が抜けているという方はアーカイブで
+確認いただければと思います．
+
+SMLアーカイブ：http://www.akademia.co.jp/Smalltalk/SML/archives/archive/
+
+ご迷惑をおかけいたしました．
+----
+桑谷 剛史
+kuwatani@akademia.co.jp
+
+
+
+
+From nakano ＠ media.osaka-cu.ac.jp  Fri Oct 13 01:17:18 2006
+From: nakano ＠ media.osaka-cu.ac.jp (Hideo Nakano)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7232] Re: メソッド名について
+In-Reply-To: <4526F016.5030901@sra.co.jp>
+References: <7F5AF77F-2DBD-4003-90B3-3F29E17FFB45@sra.co.jp>
+	<4526A209.10808@ps.inforyoma.or.jp> <4526F016.5030901@sra.co.jp>
+Message-ID: <20061013.011718.48503137.nakano@media.osaka-cu.ac.jp>
+
+From: AOKI Atsushi <aoki@sra.co.jp>
+Subject: [SML 7226] Re: メソッド名について
+Date: Sat, 07 Oct 2006 09:08:54 +0900
+
+aoki> 青木です。
+
+ 中野です。こんなところは反応できる。
+
+> 最低でもiMacぐらいからでしょうか。
+
+aoki> 御意。
+
+> 「Mac OS X」になってから遊ぶ要素満載(中身がBSD)になっているらしいですね。
+
+aoki> はい、その通りです。
+
+> あとは、我が家の財務大臣を説得するだけです。(難攻不落ですが...)
+
+aoki> 青木家においても、大阪城のような難攻不落の財務大臣がいますが、
+aoki> 『私語（ささや）き戦術』なるものを用いて落城へ追い込みますよ。
+
+ 難攻不落で笑ってしまいました。押しても動かないのでしょうね。
+
+aoki> 寝ても覚めても「マック」と私語くわけです。お茶を一服、ご飯を
+aoki> 一口、その度ごとに「あぁマック」、出勤や帰宅の際にも欠かさず
+aoki> に「いいよなぁマック」という具合。
+aoki> 
+aoki> 財務大臣から「うるさいわねぇ〜、もういいから、買いなさい！」
+aoki> が出るまでがんばります。
+aoki> 
+aoki> 寺内家で上手くゆくかどうかは保証のかぎりではありませんけどね。
+
+ わたしとこは自宅がiBook G4で、研究室は初代iMacでしたがXが動かないので、
+Miniを買って、iMacはDisplay。MACな方はWindowsを買ってもMAC風GUIにされ
+ますね。
+
+中野秀男
+nakano@media.osaka-cu.ac.jp
+中野＠学術情報総合センター(研究室10J).大阪市立大学
+大阪市立大学大学院創造都市研究科 兼 学術情報総合センター 
+創造都市研究科 都市情報学専攻 情報基盤研究分野
+Tel:06-6605-3388,FAX:06-6690-2736
+URL: http://www.media.osaka-cu.ac.jp/~nakano/
+
+From aoki ＠ sra.co.jp  Fri Oct 13 09:58:53 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7233] Re: メソッド名について
+In-Reply-To: <20061013.011718.48503137.nakano@media.osaka-cu.ac.jp>
+References: <7F5AF77F-2DBD-4003-90B3-3F29E17FFB45@sra.co.jp>	<4526A209.10808@ps.inforyoma.or.jp>
+	<4526F016.5030901@sra.co.jp>
+	<20061013.011718.48503137.nakano@media.osaka-cu.ac.jp>
+Message-ID: <452EE4CD.1090809@sra.co.jp>
+
+青木です。
+
+>  中野です。こんなところは反応できる。
+
+まぁ〜！なんと。
+
+> > 青木家においても、大阪城のような難攻不落の財務大臣がいますが、
+> > 『私語（ささや）き戦術』なるものを用いて落城へ追い込みますよ。
+>
+>  難攻不落で笑ってしまいました。押しても動かないのでしょうね。
+
+この『私語（ささや）き戦術』は、ボルダー時代に一緒だった酒匂
+さんから伝授されたものなんです。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From shin-sahara ＠ kuzo.csk.com  Fri Oct 13 10:47:42 2006
+From: shin-sahara ＠ kuzo.csk.com (佐原 伸)
+Date: Fri Nov  2 10:51:01 2007
+Subject: [SML 7234] Re: メソッド名について
+In-Reply-To: <452EE4CD.1090809@sra.co.jp>
+References: <7F5AF77F-2DBD-4003-90B3-3F29E17FFB45@sra.co.jp>	<4526A209.10808@ps.inforyoma.or.jp>
+	<4526F016.5030901@sra.co.jp>
+	<20061013.011718.48503137.nakano@media.osaka-cu.ac.jp>
+	<452EE4CD.1090809@sra.co.jp>
+Message-ID: <8BA910CE-DEC7-4B56-82A6-2C4AA15AF5DD@kuzo.csk.com>
+
+佐原です。
+
+On 2006/10/13, at 9:58, AOKI Atsushi wrote:
+
+> 青木です。
+>
+>>  中野です。こんなところは反応できる。
+>
+> まぁ〜！なんと。
+>
+>>> 青木家においても、大阪城のような難攻不落の財務大臣がいますが、
+>>> 『私語（ささや）き戦術』なるものを用いて落城へ追い込みますよ。
+>>
+>>  難攻不落で笑ってしまいました。押しても動かないのでしょうね。
+>
+> この『私語（ささや）き戦術』は、ボルダー時代に一緒だった酒匂
+> さんから伝授されたものなんです。
+
+酒匂君に伝授したのは私です。
+
+私の方は進化していて「買っちゃった」戦略になっています :-)
+
+
+From aoki ＠ sra.co.jp  Tue Oct 24 17:58:31 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7235] タイトルは「Smalltalk道場」
+Message-ID: <453DD5B7.9030705@sra.co.jp>
+
+青木です。
+
+来月の今日になりますが、日経ソフトウエアで、Smalltalk プログ
+ラミングの連載が始まります。タイトルは「Smalltalk 道場」にな
+りました。
+
+　プログラマ道場（日経バイト2005年4月号〜2006年1月号）
+　プログラマ魂（日経ソフトウエア2006年6月号〜2006年11月号）
+
+　Smalltalk道場（日経ソフトウエア2007年1月号〜2007年12月号）
+
+と続くことになりますので、次があるとすれば、
+
+　Smalltalk魂
+
+になるのかしらん。『VisualWorksWithJun』を付録 CD-ROM に収め
+ます。シンコム・システムズ・ジャパンから、ご協力をいただいて、
+VisualWorks 7.4.1 Non-Commercial と Jun705 for Smalltalk が、
+アーカイブを展開して、すぐに動かせる形で、読者の手に入ります。
+
+ですから、来月の今日『１１月２４日（金）』をお忘れなく。逃す
+と、その後の連載のプログラミングができませんので、カレンダや
+備忘録に印をつけてくださいませ。
+
+このメーリングリストに参加していらっしゃる多くの方々に、実際
+に手を動かしながら、読み進めていただけることを願っています。
+
+発刊日が近づきましたら、再び案内をさせていただきます。斬新な
+切り込み？で、Smalltalk 初心者を対象に書き綴ってゆきますから、
+どうぞ、お楽しみに！
+
+#「hello, world」から導入するような愚かなことはしません。:-)
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+

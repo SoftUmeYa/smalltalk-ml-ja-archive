@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3873] Re: Object特異的な情報を含むメッセージの発信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203873%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=002d01c8b28e%2465111e60%244da415ca%40hbyori2c37">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003872.html">
+   <LINK REL="Next"  HREF="003875.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3873] Re: Object特異的な情報を含むメッセージの発信について</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203873%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=002d01c8b28e%2465111e60%244da415ca%40hbyori2c37"
+       TITLE="[Squeak-ja: 3873] Re: Object特異的な情報を含むメッセージの発信について">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 5月 10日 (土) 20:41:16 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003872.html">[Squeak-ja: 3872] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+        <LI>次の記事 <A HREF="003875.html">[Squeak-ja: 3875] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3873">[ 日付 ]</a>
+              <a href="thread.html#3873">[ スレッド ]</a>
+              <a href="subject.html#3873">[ 件名 ]</a>
+              <a href="author.html#3873">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+そういうことでしたら、単にメッセージの引数として必要なオブジェクトを渡してやればよいように思います。
+
+月 位置と速度を計算する: 地球.
+
+のような感じです。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+08/05/10 に Hiromichi Tsurui&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tsurui ＠ med.juntendo.ac.jp</A>&gt; さんは書きました:
+&gt;<i>
+</I>&gt;<i> 阿部さん、山宮さん、早速のお返事ありがとうございます。
+</I>&gt;<i>
+</I>&gt;<i> 例として、月と地球の運動をシミュレートすることを考えています。それぞれは、インスタンス変数として、質量、現在位置及び現在の速度を持つとします。月は、現在の地球の位置と質量（これは一回伝達されれば十分ですが）の情報が得られると、自身の質量、位置、速度から微小時間後の位置、速度が求まります。地球に関しても同じことです。この微小時間のメッセージのやり取り繰りを返すことにより有限時間での両者の動きをシミュレートしたいと考えているわけです。端的に言って、地球がその質量及び位置を月へ、月がその質量及び位置を地球へ直接に伝達する方法はないのでしょうか、という質問です。assureUniClass,
+</I>&gt;<i> compile: classified:を用いますと、（まだ十分把握できてい
+</I>&gt;<i> ないのですが）、間に介在するものが、月の位置を月から聞き出して地球に教え、地球の位置を地球から聞き出しつきに教える、という形になるような気がいたします。より一般的には、Object間で直接情報のやり取りをする方法はあるのでしょうか、ということになります。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 鶴井
+</I></PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003872.html">[Squeak-ja: 3872] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+	<LI>次の記事 <A HREF="003875.html">[Squeak-ja: 3875] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3873">[ 日付 ]</a>
+              <a href="thread.html#3873">[ スレッド ]</a>
+              <a href="subject.html#3873">[ 件名 ]</a>
+              <a href="author.html#3873">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

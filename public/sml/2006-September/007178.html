@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7178] Re: &quot;0 @ 0&quot; について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207178%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6ICIwIEAgMCIgGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=D9A57758-3B09-49D2-A092-A345A2234D3F%40nifty.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007177.html">
+   <LINK REL="Next"  HREF="007179.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7178] Re: &quot;0 @ 0&quot; について</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207178%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6ICIwIEAgMCIgGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=D9A57758-3B09-49D2-A092-A345A2234D3F%40nifty.com"
+       TITLE="[SML 7178] Re: &quot;0 @ 0&quot; について">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2006年 9月 24日 (日) 12:31:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007177.html">[SML 7177] Re: &quot;0 @ 0&quot; について
+</A></li>
+        <LI>次の記事 <A HREF="007179.html">[SML 7179] Re: &quot;0 @ 0&quot; について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7178">[ 日付 ]</a>
+              <a href="thread.html#7178">[ スレッド ]</a>
+              <a href="subject.html#7178">[ 件名 ]</a>
+              <a href="author.html#7178">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木です。
+
+いいプログラムです。さすが濱崎さん！
+ブロックの再帰構造プログラムで、座布団一枚！いや二枚！！
+
+&gt;<i> こんな風に自分でコードを書いてSmalltalkの仕組みを理解していけるのも、
+</I>&gt;<i> Smalltalkの面白いところですね。
+</I>
+はい、Smalltalk のことは Smalltalk に訊ねなさい！、ですよね。
+
+出力先をブロックに加え、引数並びを整えて、クラス名を名前空間
+も含めたフルネームで出すようにしてみました。
+
+|<i> methodSearchBlock aBlock |
+</I>methodSearchBlock :=
+        [:aClass :messageSelector :aStream |
+        | aBoolean |
+        aStream nextPutAll: aClass fullName.
+        (aClass selectors includes: messageSelector)
+            ifTrue: [aBoolean := true]
+            ifFalse:
+                [aClass superclass isNil
+                    ifTrue: [aBoolean := false]
+                    ifFalse:
+                        [aStream nextPutAll: ' -&gt; '.
+                        aBoolean := methodSearchBlock
+                                    value: aClass superclass
+                                    value: messageSelector
+                                    value: aStream]].
+        aStream flush.
+        aBoolean yourself].
+aBlock :=
+        [:anObject :messageSelector :aStream |
+        (methodSearchBlock
+            value: anObject class &quot;&lt;-- It's very important to beginners.&quot;
+            value: messageSelector
+            value: aStream)
+                ifFalse:
+                    [aStream
+                        cr;
+                        nextPutAll: anObject printString;
+                        nextPutAll: ' can''t understand ';
+                        nextPutAll: messageSelector printString;
+                        flush].
+        aStream yourself].
+aBlock
+    value: Point
+    value: #basicNew
+    value: (Transcript
+            clear;
+            yourself)
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007177.html">[SML 7177] Re: &quot;0 @ 0&quot; について
+</A></li>
+	<LI>次の記事 <A HREF="007179.html">[SML 7179] Re: &quot;0 @ 0&quot; について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7178">[ 日付 ]</a>
+              <a href="thread.html#7178">[ スレッド ]</a>
+              <a href="subject.html#7178">[ 件名 ]</a>
+              <a href="author.html#7178">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

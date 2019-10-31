@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7022] Jun606 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207022%5D%20Jun606%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007021.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7022] Jun606 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207022%5D%20Jun606%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7022] Jun606 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2004年 11月 29日 (月) 17:17:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007021.html">[SML 7021] Jun499v14 for Smalltalk
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7022">[ 日付 ]</a>
+              <a href="thread.html#7022">[ スレッド ]</a>
+              <a href="subject.html#7022">[ 件名 ]</a>
+              <a href="author.html#7022">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun606」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+<A HREF="http://www.sra.co.jp/smalltalk/jun/">http://www.sra.co.jp/smalltalk/jun/</A>
+<A HREF="http://www.sra.co.jp/people/aoki/Jun/htmls/News.html">http://www.sra.co.jp/people/aoki/Jun/htmls/News.html</A>
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+<A HREF="ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/">ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/</A>
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+以下の２つの変更とも暫定的なもので、現行の問題を回避するため
+です。
+
+◆Lisp インタプリタのシンボルは、Smalltalk のリテラルシンボ
+　ル（#abc_____123）と同じなのですが、最近の Smalltalk では
+　クォートシンボル（#'abc + - 123'）が多用されるようになりま
+　した。特殊文字や空白などを含むシンボルを生成するためです。
+
+　これに Lisp インタプリタも対応すべく、ブレイスで囲んだオブ
+　ジェクト表記 {#'abc + - 123'} を用いて入出力できるようにし
+　ました。
+
+◆ウィンドウの表示内容を獲得して画像に変換する際に、いままで
+　は displayPendingInvalidation を用いていたのですが、VW 7.3
+　において、現在、上手く動きませんので、強制的に display を
+　送ることにしています。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007021.html">[SML 7021] Jun499v14 for Smalltalk
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7022">[ 日付 ]</a>
+              <a href="thread.html#7022">[ スレッド ]</a>
+              <a href="subject.html#7022">[ 件名 ]</a>
+              <a href="author.html#7022">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

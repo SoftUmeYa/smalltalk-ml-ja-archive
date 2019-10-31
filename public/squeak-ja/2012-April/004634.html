@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4634] K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204634%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FSypCVUcgMjAxMi8wNC8yMRskQiROJGAkSCQmSC9JPSFWGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FRnJlZUJTRCBwb3J0IGxhbmcvc3F1ZWFrNC40LjctMjM3NRskQiRYGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GOyFXJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=%3CA7EB866D-94A7-4BB2-8730-45C25DE36DED%40openedu.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004633.html">
+   <LINK REL="Next"  HREF="004635.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4634] K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について</H1>
+    <B>Takeshi MUTOH</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204634%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FSypCVUcgMjAxMi8wNC8yMRskQiROJGAkSCQmSC9JPSFWGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FRnJlZUJTRCBwb3J0IGxhbmcvc3F1ZWFrNC40LjctMjM3NRskQiRYGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE5GOyFXJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=%3CA7EB866D-94A7-4BB2-8730-45C25DE36DED%40openedu.org%3E"
+       TITLE="[Squeak-ja: 4634] K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について">mutoh ＠ openedu.org
+       </A><BR>
+    <I>2012年 4月 23日 (月) 10:15:03 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004633.html">[Squeak-ja: 4633]	第42回Smalltalk勉強会のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="004635.html">[Squeak-ja: 4635] Re:	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4634">[ 日付 ]</a>
+              <a href="thread.html#4634">[ スレッド ]</a>
+              <a href="subject.html#4634">[ 件名 ]</a>
+              <a href="author.html#4634">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>むとう＠おうちです。
+ご無沙汰しております。
+
+一昨日の2012/04/21に、K*BUG 勉強会で
+	FreeBSD port lang/squeak4.4.7-2375への道
+という題名で発表してきました。
+# K*BUG2012年4月勉強会 <A HREF="http://www.zusaar.com/event/264001">http://www.zusaar.com/event/264001</A>
+
+相変わらず、誰に役に立つのかわからない領域の発表ですが、情報共有までに。
+
+
+で、最近の Sqeuak 回りの話に関して、間違った情報を拡散しないために、少し質問させて下さい。
+# 恐らく、Smalltalk勉強会の資料なんかにも書いてあると思うのですが、それは今から調べます(_O_)
+
+
+CogVMは、パフォーマンスの良いVMって理解しているのですが、マルチコアだったりするとより幸せなんでしょうか?
+それとも、JITが素晴らしかったりするんでしょうか?
+
+イメージ回りだと、Pharo と (まだ書いてませんが)Cuis があると思うのですが、比較した場合の売りってどう書けばピッタリきますかね?
+
+あ、そういえば最近のSqueakイメージはそっけない立ち上がりですが、やっぱりEtoysの方に教育向けがシフトしたからですかね?
+
+教育向けといえば、 Scratch に大分とシフトしてきているような印象があります。
+Scratchの熱いところと言えば、以下のような感じなんでしょうか?
+- 色々なハードウエア (Physical Computing環境)が使える
+-- &#12394;&#12398;&#12412;&#65374;&#12393;&#12394;&#12393;&#12434;&#12289;&#21508;&#22320;&#12398;Make &#31995;&#12398;&#12452;&#12505;&#12531;&#12488;&#12391;&#23637;&#31034;
+-- WeDoの代わりを安価に構成できる
+- 各地での教育現場での利用例が増えてきている
+- Scratch Dayが2012/05/19ともうすぐ
+
+以上、誤解があれば修正しますので、よろしくお願いします(_O_)
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://qml.610T.org/">http://qml.610T.org/</A>
+ ・つぶやいてみても、オレの声はとどかない by 610t
+ ・自転車操業中             <A HREF="http://qml.610T.org/cycling/">http://qml.610T.org/cycling/</A>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004633.html">[Squeak-ja: 4633]	第42回Smalltalk勉強会のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="004635.html">[Squeak-ja: 4635] Re:	K*BUG 2012/04/21のむとう発表「FreeBSD port lang/squeak4.4.7-2375への道」について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4634">[ 日付 ]</a>
+              <a href="thread.html#4634">[ スレッド ]</a>
+              <a href="subject.html#4634">[ 件名 ]</a>
+              <a href="author.html#4634">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

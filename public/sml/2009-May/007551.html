@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7551] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207551%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0E12AB.2010301%40gaia.eonet.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007555.html">
+   <LINK REL="Next"  HREF="007553.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7551] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207551%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0E12AB.2010301%40gaia.eonet.ne.jp"
+       TITLE="[SML 7551] Re: 第7回Smalltalk勉強会＠京都">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 5月 16日 (土) 21:48:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007555.html">[SML 7555] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007553.html">[SML 7553] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7551">[ 日付 ]</a>
+              <a href="thread.html#7551">[ スレッド ]</a>
+              <a href="subject.html#7551">[ 件名 ]</a>
+              <a href="author.html#7551">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは、濱崎です。
+2009/05/16 10:11 toshihiko ichida &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">dogatana ＠ gaia.eonet.ne.jp</A>&gt;:
+
+&gt;<i> いちだです。
+</I>
+＜中略＞
+
+&gt;<i>
+</I>&gt;<i> 例えば Jun3Dimage というクラスの定義の冒頭には
+</I>&gt;<i>
+</I>&gt;<i> Smalltalk.Jun defineClass: #Jun3dImage
+</I>&gt;<i>        superclass: #{Jun.JunAbstractObject}
+</I>&gt;<i>
+</I>&gt;<i> とあり、名前空間としては Smalltalk.Jun に所属していますが、
+</I>&gt;<i> インスタンスを作成するときには
+</I>&gt;<i>  aImage := Smalltalk.Jun.3dImage new
+</I>&gt;<i> としなくても
+</I>&gt;<i>  aImage := 3dImage new
+</I>&gt;<i> とするだけでも 3dImage という名前のクラスのインスタンスを生
+</I>&gt;<i> 成できます。SmalltalkはデフォルトとしてもJunが省略できてし
+</I>&gt;<i> まうのは何故だろうという疑問です。
+</I>
+
+Junが特別なことをしているのは、青木さんからお答えがありましたが、
+それ以外に、Workspaceで実行していらっしゃるのなら、Workspaceにも
+仕掛けがあって、Namespaceの名前を前置しなくても全てのNamespaceに
+ある共有変数を参照可能です。
+
+WorkspaceのSmalltalkメニューに「Namespaces...」という項目のが有ります。
+これを選択するとお判り頂けますが、デフォルトで全てのNamespaceがイン
+ポートされていると思います。
+
+ですので、Workspaceでメッセージ式を評価した場合は、名前空間の階層が
+無いかのように振る舞います。
+
+-----------
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20090516/ebd26599/attachment.html">http://www.smalltalk.jp/pipermail/sml/attachments/20090516/ebd26599/attachment.html</A>
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007555.html">[SML 7555] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007553.html">[SML 7553] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7551">[ 日付 ]</a>
+              <a href="thread.html#7551">[ スレッド ]</a>
+              <a href="subject.html#7551">[ 件名 ]</a>
+              <a href="author.html#7551">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

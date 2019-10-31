@@ -1,0 +1,6127 @@
+From hachi ＠ asu.ac.jp  Mon Oct  1 16:27:19 2007
+From: hachi ＠ asu.ac.jp (H.Hachisuka)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3618] Re: Scratch について
+In-Reply-To: <46FF6EF42C6.0A64ABEE@smtp.nifty.com>
+References: <46FE07AB.9010306@asu.ac.jp> <46FF6EF42C6.0A64ABEE@smtp.nifty.com>
+Message-ID: <4700A157.5000502@asu.ac.jp>
+
+蜂須賀です。
+
+smalltalk.jpのDNSが復帰したみたいですのでメールさせて頂きます。桑谷さん
+お疲れ様でした。
+
+Scratchの詳しい情報ありがとうございます。私は最近Scratchをダウンロードし
+て試してみたのですが、かなり完成されたイメージを受けました。個人的にはス
+クイークの方がやわらかいイメージがあって好きなのですが、使っている方はい
+るのかな？と思って検索しても、日本語での情報があまりなかったため、場が違
+うかなと思いつつも、ここのMLで聞いてみました。
+
+これまでEToyの事をあまり深く考えた事がなかったのですが、阿部さんの言われ
+る「Etoysがシミュレーションに特化しているのに対し、Scratchはインタラク
+ティブな音やアニメーション、ゲームに強く....」も含めて、改めてEToyについ
+て考えさせられました。
+
+Scratchの日本語化ですが、利用を検討している人には朗報なのではないでしょ
+うか？実は私も試しに阿部さんの多国語化Squeak 2.8をScratchにマージして部
+分的に表示を日本語（ひらがな）にしてみたりしているのですが、本当の意味で
+の多言語への対応には期待をしてしまいます。
+
+> 阿部@新百合です。
+> 
+> On Sat, 29 Sep 2007 17:07:07 +0900
+> "H.Hachisuka" <hachi@asu.ac.jp> wrote:
+>> Scratch(MITが開発した子供向けのブロック風のプログラム言語)ですが、調べて
+>> みたところスクイークで開発されているみたいなのですが、ここのMLでは取り上
+>> げられた事がないように思います。スクイークとは別物と考えた方がいいので
+>> しょうか？
+> 
+> 言葉は出てきたことがありますが、確かに説明はなかったですね。
+> 
+> Scratchは、Squeak上でSmalltalk(古いSqueak 2.8をベースにしたMIT Squeak)を
+> 使って開発されていますが、Etoysとは直接のつながりはありません。また、ユー
+> ザはSqueak上で動いていることを意識する必要はありません。
+> 本来のSqueakはEtoysも含めた環境全体を指しますが、日本でスクイークというと、
+> ほとんど Etoysのことなので、その意味では別物です。
+> 
+> 中心的な開発者のJohn MaloneyさんはSqueakのキーパーソンでもあり、特に
+> Morphicと呼ばれるUIのフレームワークで知られています(「Squeak入門 第3章」
+> 参照)。そういうこともあって、ScratchにはEtoys的な要素がいくつか含まれてい
+> ます(どちらもLOGOのバリエーションと言った方が良いかもしれませんが)。
+> スケッチ(Scratchではスプライト)に対してタイル (同ブロック)を組み合わせて
+> スプリプトを書いていくことなどがそうです。 Etoysを使ったことがある人なら
+> 簡単に使えるようになるでしょう。
+> 
+> Scratchのルック&フィールは他のMITメディアラボのソフトと統一されており、レ
+> イアウトが固定されていて、隠れているものがありません。目に見えているもの
+> をシングルクリックあるいはドラッグすることで操作できます(ハロ、ビューワ、
+> スクリプト、ワールド、全スクリプト、ウォッチャに相当するもが常に表示され
+> ています)。
+> Etoysでは、必要な機能がメニューの奥深くに隠れていたり、どこかに行ってしま
+> ったり、つかむのに苦労したりなどということがありますが、このようなことが
+> Scratchではあまりありません。マニュアルやヘルプなどのドキュメントも品質が
+> 高いです。
+> 
+> ScratchはEtoysとは時間や制御に関する考え方が異なっており、Scratchは普通の
+> プログラミング言語に近いです。スクリプトは勝手にループしませんし、刻み値
+> もありません。スクリプトはイベントで起動され、タイミングは個々のブロック
+> 中のウェイトで合わせます。一般的な制御構文も一通り揃っています。
+> 
+> Etoysがシミュレーションに特化しているのに対し、Scratchはインタラクティブ
+> な音やアニメーション、ゲームに強く、それに必要な素材が最初から豊富に用意
+> されているので、直ちに作品作りに取り掛かることができます。ゲームコントロー
+> ラとして使えるScratchPadというセンサもあります(世界聴診器に似ていますが
+> USB接続です)。
+> 
+> これらの作品を公開するためのSuperSwikiのような場所が最初から用意されてい
+> るのも特徴です。この仕組みは非常に洗練されており、プラグインがインストー
+> ルされていなくてもJavaとWebブラウザで実行可能です。ここにはすでに32,000以
+> 上の作品が登録されています。
+> 
+> http://scratch.mit.edu/
+> 
+> その一方で、Etoysの特徴であるメタ的なところはほとんどなく、Scratch自体が
+> どのように作られているのかを調べたり、分解して変更したりといったことはで
+> きません。ScratchはScratch自体で書かれていませんし、Smalltalkのコードは隠
+> されています。
+> 
+> また、複数のスプライト間の関連を表現することが難しく、車をハンドルで操作
+> するといったことがややトリッキーになります。 スクリプトに名前を付けること
+> もできないので、ブロードキャストというラベルつきのイベントを使って呼び出
+> します。
+> たとえば、Drive a Carを Scratchで書くと以下のようになります。
+> 
+> http://scratch.mit.edu/projects/abee/6783
+> http://scratch.mit.edu/projects/abee/6779
+> 
+> あと、日本語化については、私が試しにやってみたものがありますが、ちゃんと
+> した多言語化は大島さんがやると聞いています。
+> 
+> 以上のように、Scratchは非常に完成度が高く、興味深いシステムです。目的が違
+> うので必ずしもEtoysを置き換えるものではありませんが、デザイン面などでEtoys
+> が参考にすべきことはたくさんあると思います。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+> 
+
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Oct  1 18:48:12 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3619] SeasideJを更新しました
+Message-ID: <JE200710011848124.17128953@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、OSC2007 Tokyo/Fall記念というわけでもないですが、SeasideJを
+Seaside2.7ベースへとアップデートしました。
+
+SeasideJ:
+http://swikis.ddo.jp/umejava/22
+
+SeasideJOne:
+http://swikis.ddo.jp/umejava/39
+
+SeasideJOnePlus:
+http://swikis.ddo.jp/umejava/41
+
+お楽しみください。
+
+特にPlusに含まれているSqueakers' Night in 未来パーティ 2.0用に準備した教材
+(ftp://swikis.ddo.jp/SeasideJ/lesson/SeasideTutorial20070126.pdf)は、
+もう少しいろいろなところで使われないともったいないような気もしていますので、
+ご活用ください。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From tak ＠ metatoys.org  Tue Oct  2 13:39:55 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3620] Re: チラシ、again
+In-Reply-To: <a73317a9a22aeb967bdd37f065f315bb@openedu.org>
+References: <a73317a9a22aeb967bdd37f065f315bb@openedu.org>
+Message-ID: <4701CB9B.8080702@metatoys.org>
+
+山宮です。
+
+Takeshi MUTOH wrote:
+> - http://qml.610t.org/squeak/chirashi2007.html
+> - http://qml.610t.org/squeak/mutoh_20070930.files/flyer.pdf
+> # 最後のページの曼荼羅はまあお遊びなので;-)
+> 
+> いかがでしょうかね?
+
+いつもながら素晴らしい熱気ですね。表紙の Intent future!! は
+The best way to predict the future is to invent it. にかけた洒落でしょうか。
+
+ところで、わたくし色々調整の末 KOF に参加する事が出来る事になりました。
+どうなるか分からなかったので言い出せなかったのですが、どうぞよろしくお願いします。
+阿部さんも来られるんですよね？
+
+
+
+From "土本 (Florian) 強  Tue Oct  2 17:10:37 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3621] OSC2007 Tokyo/Fall Squeak-jaブース打ち上げのご案内
+Message-ID: <20071002170833.A925.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本です。
+
+　OSC2007 Tokyo/Fall参加者で打ち上げ(というか懇親会のようなもの)が出来れ
+ばと思っています。ご近所お誘い合わせの上ご参加下さいませ(^^)。
+
+　一応以下の予定で考えています。
+
+日時
+	10/6(土)
+	18:30-
+		OSC2007 Tokyo/Fallが17:30終了ですので、片付けと移動を考
+		えればこれくらいが良いと思います。
+
+場所
+	蒲田界隈のどこか
+		多分、JR蒲田と京急蒲田のあいだ辺りのどこかになると思いま
+		す。
+
+参加者
+	高橋	○
+	梅澤	○
+	阿部	○
+	土本	○
+	小田	○
+	横川	？
+	Julien	？
+	小池	？
+	大島	×
+
+応募締め切り
+	10/4(木)
+	18:00
+
+　参加者に関しては現時点でOSC2007 Tokyo/Fallに参加することが判っている方
+を書いていますが、他に当日夕方当たりに蒲田に来られる方であれば大歓迎です
+(^^)。一般参加でふらっと寄ったついでに宴会にでも参加して頂ければ。
+
+
+　では、失礼します。
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From mutoh ＠ openedu.org  Tue Oct  2 18:20:49 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3622] Re: チラシ、again
+In-Reply-To: <4701CB9B.8080702@metatoys.org>
+References: <a73317a9a22aeb967bdd37f065f315bb@openedu.org>
+	<4701CB9B.8080702@metatoys.org>
+Message-ID: <d64d01610719d6f5ba82981367274d76@openedu.org>
+
+むとう＠おうちです。
+
+On 2007/10/02, at 13:39, Takashi Yamamiya wrote:
+>> - http://qml.610t.org/squeak/chirashi2007.html
+>> - http://qml.610t.org/squeak/mutoh_20070930.files/flyer.pdf
+>> # 最後のページの曼荼羅はまあお遊びなので;-)
+>>
+>> いかがでしょうかね?
+>
+> いつもながら素晴らしい熱気ですね。表紙の Intent future!! は
+> The best way to predict the future is to invent it. にかけた洒落でしょうか。
+
+すいません、Invent Future!!のtypeです(_o_)
+内容も、Squeak-jaとはなんぞやとかも無かったりしますので、また修正します。
+
+こんな情報は是非入れろとかありましたら、ここででも武藤に直接でも構いませんので、ご指摘ください(_o_)
+
+> ところで、わたくし色々調整の末 KOF に参加する事が出来る事になりました。
+> どうなるか分からなかったので言い出せなかったのですが、どうぞよろしくお願いします。
+
+うれしいです!!
+  また、まったりとブースしましょう;-)
+
+> 阿部さんも来られるんですよね？
+
+はい、来られると伺っています。
+ユーザ企画の方も現在事務局の方と調整中です。
+
+
+あと、「もえすく」の方、販売予定ですので、コミケまで行けないというかたは是非!!
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From ykoubo2007 ＠ yengawa.com  Tue Oct  2 22:49:13 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3623] Re: OSC2007 Tokyo/Fall Squeak-jaブース打ち上げのご案内
+In-Reply-To: <20071002170833.A925.FLORIAN@seagreen.ocn.ne.jp>
+References: <20071002170833.A925.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <20071002173112.1DA0.YKOUBO2007@yengawa.com>
+
+横川です。
+幹事ご苦労様です。
+
+> 	横川	？
+> 	Julien	？
+
+打ち上げ参加します。
+Julienも土曜の夜まで蒲田に泊まるので、たぶん参加すると思います。
+
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From abee ＠ squeakland.jp  Wed Oct  3 01:20:10 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3624] マイコミジャーナルにもえすくの記事
+Message-ID: <47026FBA9F.62FDABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2007/10/1のマイコミジャーナルに大藤さんのレポートが載っています。
+一気にメジャーですね。
+
+アラン・ケイも萌えた!? - 萌えるSqueak「もえすく」
+http://journal.mycom.co.jp/articles/2007/10/01/moesuku/menu.html
+
+R指定(?)フリー版や続編の構想も語られています。これはwktkですね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From miyasaka ＠ iris.dti.ne.jp  Wed Oct  3 19:43:38 2007
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3625] 【参加者募集】カリキュラム検討会のお知らせ
+Message-ID: <4b24f0d0710030343g2dfadd32g344224b967402a0d@mail.gmail.com>
+
+squeak-jaの皆様
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+「もえすく」の記事は私も読みましたが、すばらしいですね。＾＾
+
+さて、阿部さんからのご提案により、スクイークの新しいカリキュラムを検討するための検討会を開催することになりました。
+阿部さんのファシリテーションのもと、参加者みんなでDrive a carに替わる新たなカリキュラムの検討と開発を行います。
+
+作成したカリキュラムはスクイークランド上で無償公開するとともに、11/25にサイエンスアゴラ2007で行う体験ワークショップでも実際に利用する予定です。
+http://scienceportal.jp/scienceagora/agora2007/071125.html
+
+■日時
+１１月１７日（土）　10:00〜18:00
+
+■場所
+デジタルハリウッド大学院（秋葉原）
+
+■定員
+15名程度
+
+■参加費
+有志の集まりなのでもちろん無料です。
+
+■対象者
+Squeak eToyの基本操作を知っていて、さらに、下記のいずれかの条件を満たしている方を対象としています。
+１）「子どもの思考力を高めるスクイーク（著：キムローズ他）」 を読んでいること。
+２）あるいは「マインドストーム（著：シーモア パパート）」を読んでいること。
+３）あるいは、「Squeakers DVD」を見ていること。
+http://www.academianetwork.co.jp/service/index.html
+
+■参加申し込み
+件名を「カリキュラム検討会参加希望」として、こちらのメールアドレスまでご連絡ください。
+dhsqueakers@gmail.com
+その際に、下記の情報を記載いただけますでしょうか。
+・お名前
+・所属／役職
+・電話番号
+・メールアドレス
+・参加を希望する理由
+・スクイーク経験年数やワークショップ開催実績など
+
+■申し込み締め切り
+10月17日頃に締め切らせていただき、参加者を確定する予定です。
+もし、定員を超えるお申し込みがあった場合には、参加希望の理由などを参考にこちらで１５名程度に絞らせていただく場合もございますが、ご了承いただけますでしょうか。
+
+以下、阿部さんからの趣旨説明の抜粋です。ご参考ください。
+---------------------
+私個人の印象なのですが、最近、ワークショップを行っていて、違和感を感じる
+ことが多くなってきました。
+表現しづらいのですが、私はワークショップを通して子供たちを変えることがで
+きたのだろうかというようなことです。もう少し具体的に言えば、ワークショッ
+プが終わった後に、子供たち自身で疑問に思うことを自分で試したり、考えたり
+するようになっただろうかということです。
+パパート流に言えば「学ぶことを学ぶ」(learning learning)ということなのです
+が、たぶん、自由製作を続けていっても、これにはつながりません。
+これを変えるには、ユーレカでもアハ体験でもよいのですが、自分自身で分かっ
+た、できたということが明確で、そのことが続けるための報酬(楽しい、面白かっ
+た)になるようなゴールを設定する必要があります。そもそも、子供は世界の仕組
+みを理解しようとしているので、それにうまく沿った形にすれば自ずと集中する
+でしょう。
+この観点から、比較的うまく行ったと思えるのは、七角形の作図、レモン電池
+レースくらいです。実践したわけではありませんが、重力の実験もそうでしょう。
+マインドストームには他にも「三角屋根の家」「花の絵」の例があげられていま
+す。
+「三角屋根の家」はLOGOの例で、正方形の積み木に正三角形の積み木が載ってい
+るような絵をタートルグラフィックスで描かせるものです(添付参照)。
+正方形と正三角形の描き方はあらかじめ教えておくのですが、これの面白いとこ
+ろは最初は失敗する(直感に反する)ようにできていることです。この課題の本質
+はその問題 (バグ)を修正する過程 (デバッグ)にあります(パパートはこれを「強
+力なアイデア」 (powerful idea)と呼んでいます)。その過程で、子供は幾何につ
+いて考えざるを得ません。
+
+要は、こういうものをたくさん作りたいということです。
+
+このとき、気をつけないといけないのは、誰でも手順通りに進められるようなカ
+リキュラムを作ろうとしているのではないということです。パパートも手順を厳
+密に定義したピアジェ式学習法なるものは言辞矛盾で存在し得ないと言っていま
+す。
+考えないといけないのは、ゴールとガイド(ファシリテート)、コラボレーション
+の方法です。
+また、これは大人のためというわけでもありません。子供の役に立つものが、大
+人に役に立たない筈が無いと考えています。
+-----------------------------
+
+
+以上、よろしくお願いいたします。
+
+--
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学大学院
+デジタルコンテンツ研究科　研究員
+---------------------------------------------
+
+From ofg ＠ kwansei.ac.jp  Wed Oct  3 21:30:01 2007
+From: ofg ＠ kwansei.ac.jp (大藤 泰生)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3626] Re: マイコミジャーナルにもえすくの記事
+In-Reply-To: <68fjjs$2isdp2@mailgw1.kwansei.ac.jp>
+References: <68fjjs$2isdp2@mailgw1.kwansei.ac.jp>
+Message-ID: <20071003212619.D01C.OFG@kwansei.ac.jp>
+
+大藤です。
+マイコミジャーナルの記事は、先方からの依頼でだいぶ前に原稿を納入していた
+のですが、すっかり忘れた頃に掲載されて驚きました。
+続編の制作についての記述もありますが、書いてみただけで全く手をつけており
+ませんので、あまり期待せずにお待ち下さい……。
+
+大藤 泰生
+ofg@kwansei.ac.jp
+
+
+From mutoh ＠ openedu.org  Thu Oct  4 18:22:02 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3627] Re: チラシ、again
+In-Reply-To: <d64d01610719d6f5ba82981367274d76@openedu.org>
+References: <a73317a9a22aeb967bdd37f065f315bb@openedu.org>
+	<4701CB9B.8080702@metatoys.org>
+	<d64d01610719d6f5ba82981367274d76@openedu.org>
+Message-ID: <e6fbe958dd83a351ebb206406f5171da@openedu.org>
+
+むとう＠おうちです。
+
+OSC2007 Tokyo/Fallもう明日からなんですね。
+
+皆さん、がんばってください!!
+
+On 2007/10/02, at 18:20, Takeshi MUTOH wrote:
+>>> - http://qml.610t.org/squeak/chirashi2007.html
+>>> - http://qml.610t.org/squeak/mutoh_20070930.files/flyer.pdf
+>>> # 最後のページの曼荼羅はまあお遊びなので;-)
+>>>
+>>> いかがでしょうかね?
+>>
+>> いつもながら素晴らしい熱気ですね。表紙の Intent future!! は
+>> The best way to predict the future is to invent it. にかけた洒落でしょうか。
+>
+> すいません、Invent Future!!のtypeです(_o_)
+> 内容も、Squeak-jaとはなんぞやとかも無かったりしますので、また修正します。
+
+すいません、イベントギリギリ前で使えないかと思いますが、とりあえず暫定版作りましたので、もしよろしければどうぞ。
+- http://qml.610t.org/squeak/mutoh_20071004.files/flyer.pdf
+
+本来のKOF2007版とは違って、(KOF2007を含む)OSC2007 Tokyo/Fall後のイベントを入れてあります。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From "土本 (Florian) 強  Thu Oct  4 22:09:01 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3628] Re: OSC2007 Tokyo/Fall Squeak-jaブース打ち上げのご案内
+In-Reply-To: <20071002170833.A925.FLORIAN@seagreen.ocn.ne.jp>
+References: <20071002170833.A925.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <20071004220533.4FCB.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本です。
+
+　先日お伝えした打ち上げですが、以下の予約を取っておきました。
+
+日時
+	10/6(土)
+	18:30-
+		OSC2007 Tokyo/Fallが17:30終了ですので、片付けと移動を考
+		えればこれくらいが良いと思います。
+
+場所
+	湘南食堂(http://r.gnavi.co.jp/a102500/)
+		さいしょ、お刺身だけ6名分頼んでおきました(宴会が他に入っ
+		ているらしく、オーダーが遅れそうなんだそうな(^^;))。
+		予約の名前は「ツチモト」で取ってあります。
+
+参加者
+	高橋	○
+	梅澤	○
+	阿部	○
+	土本	○
+	小田	○
+	横川	○
+	Julien	○
+	小池	×
+	(武蔵工大)	○x2
+	大島	×
+
+　多分、1-2名ぐらいなら一応席が空けられるとは思いますので、まだ参加希望
+を出していないという方は遠慮無くどうぞ(^^)。
+
+　では、失礼します。
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From abee ＠ squeakland.jp  Thu Oct  4 22:37:26 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3629] Re: チラシ、  again
+In-Reply-To: <e6fbe958dd83a351ebb206406f5171da@openedu.org>
+References: <d64d01610719d6f5ba82981367274d76@openedu.org>
+	<e6fbe958dd83a351ebb206406f5171da@openedu.org>
+Message-ID: <4704EC96B0.A8E5ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+ありがとうございます。OSCには何部か刷って持って行きます。
+
+# さきほど、小田さんと準備に行ってきました。今回の会場は広いです。私たち
+# のブースは奥のほうですが、良い場所だと思います。
+
+昨日試しに印刷してみた感じでは、折線を表裏で合わせるのがちょっと大変かも
+しれません(と思ったら線が無くなってますね)。
+武藤さんもおっしゃっていたように折る手間もばかになりませんし、単純に表裏
+の印刷だけでよいかもしれません。
+
+On Thu, 4 Oct 2007 18:22:02 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>むとう＠おうちです。
+>
+>OSC2007 Tokyo/Fallもう明日からなんですね。
+>
+>皆さん、がんばってください!!
+>
+>On 2007/10/02, at 18:20, Takeshi MUTOH wrote:
+>>>> - http://qml.610t.org/squeak/chirashi2007.html
+>>>> - http://qml.610t.org/squeak/mutoh_20070930.files/flyer.pdf
+>>>> # 最後のページの曼荼羅はまあお遊びなので;-)
+>>>>
+>>>> いかがでしょうかね?
+>>>
+>>> いつもながら素晴らしい熱気ですね。表紙の Intent future!! は
+>>> The best way to predict the future is to invent it. にかけた洒落でしょうか。
+>>
+>> すいません、Invent Future!!のtypeです(_o_)
+>> 内容も、Squeak-jaとはなんぞやとかも無かったりしますので、また修正します。
+>
+>すいません、イベントギリギリ前で使えないかと思いますが、とりあえず暫定版作りましたので、もしよろしければどうぞ。
+>- http://qml.610t.org/squeak/mutoh_20071004.files/flyer.pdf
+>
+>本来のKOF2007版とは違って、(KOF2007を含む)OSC2007 Tokyo/Fall後のイベントを入れてあります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tako ＠ aquilax.co.jp  Fri Oct  5 13:47:05 2007
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3630] Engadget オフライン東京 大島さん登場
+Message-ID: <20071005045116.5BFC09AC2D@1server.aquilax.co.jp>
+
+　昨晩の「Engadgetオフライン東京」で OLPCを掲げる
+yoshiki（大島？）さんのビデオが上がっています。
+
+　http://japanese.engadget.com/2007/10/04/engadget-/
+
+ ではでは
+
+
+
+From yoshiki ＠ vpri.org  Fri Oct  5 16:15:19 2007
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3631] Re: Engadget オフライン東京 大島さん登場
+In-Reply-To: <20071005045116.5BFC09AC2D@1server.aquilax.co.jp>
+References: <20071005045116.5BFC09AC2D@1server.aquilax.co.jp>
+Message-ID: <u1wca9gmw.wl%yoshiki@vpri.org>
+
+  大島です。
+
+  なりゆきで参加しましたが、やはりOLPC XOは目立ってました。しゃべり方
+は頭悪そうでかなりだめですね。
+
+-- Yoshiki
+
+At Fri, 5 Oct 2007 13:47:05 +0900,
+Kouji takahashi wrote:
+> 
+> 　昨晩の「Engadgetオフライン東京」で OLPCを掲げる
+> yoshiki（大島？）さんのビデオが上がっています。
+> 
+> 　http://japanese.engadget.com/2007/10/04/engadget-/
+> 
+>  ではでは
+
+From abee ＠ squeakland.jp  Fri Oct  5 19:23:00 2007
+From: abee ＠ squeakland.jp (abee@squeakland.jp)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3632] Re: Engadget オフライン東京 大島さん登場
+In-Reply-To: <u1wca9gmw.wl%yoshiki@vpri.org>
+References: <20071005045116.5BFC09AC2D@1server.aquilax.co.jp>
+	<u1wca9gmw.wl%yoshiki@vpri.org>
+Message-ID: <2d5d52a80710050323s6a3d363exdcbb2759095715ef@mail.gmail.com>
+
+阿部@八丁畷です。
+OSCの会場で見ました。ここでもXOは大人気です。Squeakを食ってしまっている感もあります。
+明日は大島さんの腕の振りを参考にして振り回したいと思います。
+
+
+07/10/05 に Yoshiki Ohshima<yoshiki@vpri.org> さんは書きました:
+>   大島です。
+>
+>   なりゆきで参加しましたが、やはりOLPC XOは目立ってました。しゃべり方
+> は頭悪そうでかなりだめですね。
+>
+> -- Yoshiki
+>
+> At Fri, 5 Oct 2007 13:47:05 +0900,
+> Kouji takahashi wrote:
+> >
+> > 　昨晩の「Engadgetオフライン東京」で OLPCを掲げる
+> > yoshiki（大島？）さんのビデオが上がっています。
+> >
+> > 　http://japanese.engadget.com/2007/10/04/engadget-/
+> >
+> >  ではでは
+>
+
+
+-- 
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Fri Oct  5 23:14:35 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3633] OSC2007 Tokyo/.Fall 日経 ITpro で Squeak-ja ブースが紹介されました。
+Message-ID: <470646CB2AB.913DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+初日にご来場の皆さん、スタッフの皆さん、お疲れ様でした。
+
+2007/10/5の日経ITproでSqueak-jaブースが紹介されました。
+
+オープンソース・コミュニティ40組以上が集結した「OSC2007 Tokyo/Fall」開催 
+http://itpro.nikkeibp.co.jp/article/NEWS/20071005/283949/?ST=oss
+
+XOの写真がどーんと言う感じですが、Squeak関連書籍も映りこんでいます。
+日経の皆さんはとても熱心で、編集長、副編集長、記者の方がそれぞれ別々に話
+を聴かれていきました。
+
+今日の展示は、ほぼ来場者が途切れることなく、みな説明に終始していました。
+ミニセミナーも立ち見が出て盛況でした。明日の展示とセミナーも頑張ります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Mon Oct  8 02:14:12 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3634] OSC2007 Tokyo/Fall 無事終了
+In-Reply-To: <470646CB2AB.913DABEE@smtp.nifty.com>
+References: <470646CB2AB.913DABEE@smtp.nifty.com>
+Message-ID: <470913E416D.878DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+お陰様でOSC2007 Tokyo/Fallへの出展、セミナー、ミニセミナーは無事終了しま
+した。来場者の発表はまだですが、たぶん数千だと思われます。
+
+初日と同じく、私たちのブースに人が途切れることは無く、セミナも立ち見が出
+る盛況でした。
+小田さんの発表は、英語の文章と同じようにSmalltalkのプログラムを解析して有
+意な情報を取り出せるか、また、現在実行中のコンテクストを調べて、計算中の
+コンピュータの頭を覗いてみようという試みで、正に自己参照可能な動的言語と
+してのSmalltalkの面目躍如でした。
+横川さんの発表は、普段あまり気にすることの無いEtoysの仕組みをSmalltalkの
+実装から紐解くもので、例題をデモしながら徐々に拡張して見せました。事前の
+準備と正確な時間配分に脱帽です。
+私のは前回のOSC2007 Kansaiとあまり変わらず、OLPCとXOの概要と目的、Etoysと
+の関係を実機デモを交えて説明しました。これは皆さんのOLPC活動へのオルグを
+目的としたものです。
+司会は飛び入りの大島さんにお願いしました。いつもながらの仕切りとOLPCに関
+する情報の補足で助かりました。
+
+ブース展示の一番人気はやはりOLPC XOでしたが、これをきっかけに Squeakの話
+につながるケースも多々ありました。SqueakやSmalltalkを知らない人でも説明す
+ることで関心を持ってもらえたと思います。これも百戦錬磨のSqueakerの皆さん
+の熱心さによるものです。
+
+会場では土本さんや皆さんが写真や動画をたくさん撮ってくださったので、今後
+どこかで見られる機会があるかもしれません。
+
+ブースに立ち寄ってくださった方、スタッフとして参加してくださった皆さん、
+本当にありがとうございました。
+次はKOF2007ですが、こちらもぜひ多数の積極的な参加をお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From "土本 (Florian) 強  Mon Oct  8 10:27:34 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3635] Re: OSC2007 Tokyo/Fall 無事終了
+In-Reply-To: <470913E416D.878DABEE@smtp.nifty.com>
+References: <470646CB2AB.913DABEE@smtp.nifty.com>
+	<470913E416D.878DABEE@smtp.nifty.com>
+Message-ID: <20071008102430.976D.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本です。
+
+　まずは参加者の皆さん、お疲れ様でした。非常に盛況で楽しかったです。
+
+メール「[Squeak-ja: 3634] OSC2007 Tokyo/Fall 無事終了」(2007/10/08 02:14) に於いて
+「Kazuhiro ABE」 語りて曰く、
+
+Kazuhiro> 会場では土本さんや皆さんが写真や動画をたくさん撮ってくださったので、今後
+Kazuhiro> どこかで見られる機会があるかもしれません。
+
+　基本的にスナップショット代わりの動画ばかりですので、雰囲気を掴むぐらい
+しかできませんが、10分程度にまとめたものを明日にでもYouTubeに上げられれ
+ばと思っています。来たお客さんを全てとろうとしてはいたのですが、最後3時
+間ぐらいはお客さんが多くてそれどころではなかったのが残念です。
+　あと、2回のセミナーに関しては、OLPC XOを触っている所*以外*は(触ってい
+る所はプロジェクターに映していたので撮影できませんでした)全て取ってあり
+ますので、こちらもまとめてお見せできればと思っています。
+
+　では。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From mutoh ＠ openedu.org  Mon Oct  8 20:16:01 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:52 2007
+Subject: [Squeak-ja: 3636] ESUGチラシの日本語訳
+Message-ID: <0e12c26c6f91710b3b8676348343538b@openedu.org>
+
+むとう＠おうちです。
+
+OSC Tokyo/fall参加の皆様、お疲れさまです。
+楽しそうな雰囲気が伝わってきました。
+
+
+さて、ESUGのチラシなんですが、英語の翻訳を作っていただけたので、日本語にもしようと作業しています。
+- https://svn.squeak.org/Advertisement/flyers/smalltalk/
+-- 英語: http://damien.cassou.free.fr/smalltalk-flyer-en.pdf
+-- フランス語: http://damien.cassou.free.fr/smalltalk-flyer-fr.pdf
+
+
+かなり意訳で訳してしまっていますが、暫定版が以下にあります。
+-- 日本語: http://qml.610t.org/squeak/mutoh_20071008.files/flyer.pdf
+
+で、以下の2カ所を訳せてないんですが、いいアイデアありませんでしょうか?
+
+{{{
+メッセージは自然言語の方法に習って、
+The message is based on a natural language, with a subject, a verb and 
+complements.
+}}}
+
+{{{
+   STIC(企業のactorsやSmalltalk editors(?)の協会)によって北アメリカで行われている毎年の会議。
+   Annual conference, organised in North America by the STIC, an 
+association with industrial actors and Smalltalk editors.
+}}}
+
+
+他にも、それはおかしいでとかのご意見も大募集中です。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From yoshiki ＠ vpri.org  Tue Oct  9 15:33:23 2007
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3637] Re: ESUGチラシの日本語訳
+In-Reply-To: <0e12c26c6f91710b3b8676348343538b@openedu.org>
+References: <0e12c26c6f91710b3b8676348343538b@openedu.org>
+Message-ID: <uir5g94r0.wl%yoshiki@vpri.org>
+
+  大島です。
+
+  私の趣味からすると文としてはまだ翻訳調が強いと思います。英語版の単語
+の使い方に関しては、フランス人が無理やり訳したという面もあるので、フラ
+ンス語版にも当たったほうが良いかもしれません。
+
+> {{{
+> メッセージは自然言語の方法に習って、
+> The message is based on a natural language, with a subject, a verb and 
+> complements.
+> }}}
+
+  メソッドの起動はメッセージを送信することによって行われます。メッセー
+ジ送信の記法は自然言語に基づいており、主語と動詞、および補語から成り立っ
+ています。
+
+> {{{
+>    STIC(企業のactorsやSmalltalk editors(?)の協会)によって北アメリカで行われている毎年の会議。
+>    Annual conference, organised in North America by the STIC, an 
+> association with industrial actors and Smalltalk editors.
+> }}}
+
+  STIC(Smalltalk界で重要な役割を果たしている企業やSmalltalk開発者から
+なる組織)によって、毎年北アメリカで会議が行われています。
+
+のような感じでしょうか。
+
+-- Yoshiki
+
+From "土本 (Florian) 強  Tue Oct  9 23:58:01 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3638] OSC2007 Tokyo/Fallビデオについて
+Message-ID: <20071009233153.99A5.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本(Florian)です。
+
+　まずは第1弾をお送りします。
+
+OSC2007 Tokyo/Fall Squeak-jaブース(初日)
+	http://jp.youtube.com/watch?v=nlEwrZ7ZMEo
+
+　連続してYouTubeに上げようとしていますが、いろいろ難航しています。
+
+1.YouTubeは10分以下の映像じゃないと入らない
+	初日のミニセミナーはなんとか。
+	二日目のセミナーはどう切っても一人分すら入らない(一人あたま15分
+以上)
+
+2.YouTubeは100MByte以下じゃないと入らない。
+	何も考えずにMPEG1で圧縮したら100M越えてしまう……。
+	ビットレートを下げて再レンダリング中
+
+3.マシンが激しく重い
+	10分の映像を圧縮するのに20分以上かかるとは……(^^;)。
+
+　徐々に上げていきますので、気長にお待ちください。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From "土本 (Florian) 強  Wed Oct 10 00:39:09 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3639] OSC2007 Tokyo/Fallビデオについて(続報)
+Message-ID: <20071010001729.99A7.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本(Florian)です。
+
+　早速見ている方が結構居るようなので、五月雨式に第2弾です。
+
+OSC2007 Tokyo/Fall OLPCミニセミナー
+	http://jp.youtube.com/watch?v=tAaZgoYyfH0
+
+　講師は阿部さんです。
+
+OSC2007 Tokyo/Fall Squeak-jaブース(二日目)
+	http://jp.youtube.com/watch?v=f7iAirsspc0
+
+　では。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From abee ＠ squeakland.jp  Wed Oct 10 01:01:03 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3640] Re: OSC2007 Tokyo/Fall ビデオについて
+In-Reply-To: <20071009233153.99A5.FLORIAN@seagreen.ocn.ne.jp>
+References: <20071009233153.99A5.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <470BA5BF6E.5EB0ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+ありがとうございます。
+とても臨場感がありますね。記憶がよみがえります。
+
+# 自分が写っているのを見るのは何時もながら気恥ずかしいです。
+# 大島さんの体重移動にも注目。
+
+どうぞ無理の無い範囲でよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From y ＠ sailweb.net  Wed Oct 10 07:27:18 2007
+From: y ＠ sailweb.net (y@sailweb.net)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3641] 初めまして。
+Message-ID: <7f3aeb4c0710091527x547324a7x27a3f3e39fb7d2df@mail.gmail.com>
+
+初めまして、Spikyといいます。
+
+先日OSC2007では大島さんや阿部さんを始めSqueak関係の皆様に
+大変お世話になりました。また僭越ながら講演の最後の質問時間に
+OLPCへの協力のお願いを一言させていただきありがとうございました。
+
+Squeakのことももっと勉強せねばとMLに参加した次第です。
+皆様どうぞよろしくお願いいたします。
+
+From tomohiro ＠ sra.co.jp  Wed Oct 10 13:09:46 2007
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3642] Re: ESUGチラシの日本語訳
+In-Reply-To: <0e12c26c6f91710b3b8676348343538b@openedu.org>
+References: <0e12c26c6f91710b3b8676348343538b@openedu.org>
+Message-ID: <200710101309.47684.tomohiro@sra.co.jp>
+
+おだです。
+
+まずはメールにあった部分から。
+大島さんも素晴しい訳を書かれていますが、参考例は多いほうがよいだろうということで。
+> {{{
+> メッセージは自然言語の方法に習って、
+> The message is based on a natural language, with a subject, a verb and
+> complements.
+> }}}
+
+メッセージは自然言語と同じように、主語と動詞、そして補語によって表現されます。
+
+> {{{
+>    STIC(企業のactorsやSmalltalk editors(?)の協会)によって北アメリカで行われている毎年の会議。
+>    Annual conference, organised in North America by the STIC, an
+> association with industrial actors and Smalltalk editors.
+> }}}
+
+年に1度のカンファレンスがSTIC（企業やSmalltalk開発者の協会）の主催で北米で開かれます。
+
+ぐらいな感じでいかがでしょうか？
+
+flyerについては、「です、ます」調と「である」調が混在しているのが気になりました。
+おそらく「です、ます」調に揃えたほうがオープンな雰囲気になるのではないかと思います。
+
+また、細かい所で気になったのは、
+
+表紙の
+>純粋にオブジェクト指向で
+は、
+純粋なオブジェクト指向で
+にしたらいかがでしょうか？
+
+また、用語集のイメージの所で
+> Smalltalk環境は、イメージという永続的なオブジェクトストアを含みます。
+とありますが、「オブジェクトストア」がちょっと気になるので
+Smalltalk環境はイメージという永続的なオブジェクト領域を持っています。
+みたいな感じでどうでしょうか？
+
+Smalltalkの重要な概念の所では、
+> Smalltalkはオブジェクト指向言語、動的に型付けされている、
+に「であり」を補って
+Smalltalkはオブジェクト指向言語であり、動的に型付けされている、
+にすると通りがよくなると思います。
+
+また、
+> 以下のとても一貫性のある事実からきています。
+は、
+一貫性に関する以下の事実からきています。
+でどうでしょうか。
+
+メッセージの送信に関する部分で引数の数の説明は、
+引数を1つだけ取ります。
+引数を1つ以上取ります。
+のように、英語の数詞を日本語では副詞のような使い方をすると
+英語的な硬さが取れることが多いです。
+
+以上、参考になれば幸いです。
+---
+おだ
+
+From "土本 (Florian) 強  Wed Oct 10 17:36:46 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3643] OSC2007 Tokyo/Fallビデオについて(さらに続報)
+Message-ID: <20071010173125.E63C.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+
+OSC2007 セミナー
+	http://jp.youtube.com/view_play_list?p=56076C541BE1DCDB
+
+　セミナーを一通りまとめたものを上げました。プレイリストを使って都合1時
+間以上入っていますので、時間がある時に見てください。
+
+　では。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From mutoh ＠ openedu.org  Wed Oct 10 17:43:43 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3644] Re: ESUGチラシの日本語訳
+In-Reply-To: <200710101309.47684.tomohiro@sra.co.jp>
+References: <0e12c26c6f91710b3b8676348343538b@openedu.org>
+	<200710101309.47684.tomohiro@sra.co.jp>
+Message-ID: <10462a9b26529a8240512df4bbf7fe75@openedu.org>
+
+むとう＠おうちです。
+
+大島さん、おださん、ありがとうございます(_o_)
+
+お二人のご意見を参考にさせていただいて、他もできるだけ翻訳調とならないように直してみました。
+	http://qml.610t.org/squeak/mutoh_20071010.files/flyer.pdf
+
+いかがでしょうか?
+
+
+On 2007/10/9, at 15:33, Yoshiki Ohshima wrote:
+>   私の趣味からすると文としてはまだ翻訳調が強いと思います。英語版の単語
+> の使い方に関しては、フランス人が無理やり訳したという面もあるので、フラ
+> ンス語版にも当たったほうが良いかもしれません。
+
+わたし、フランス語わからないんです(;-;)
+# かといって、第二外国語だったドイツ語もダメですが(;-;)
+
+squeak-devにまで出していただいてありがとうございます(_o_)
+# しかし、先にそっちに自分の名前が出るとは思ってなかった…
+
+On 2007/10/10, at 13:09, Tomohiro Oda wrote:
+> flyerについては、「です、ます」調と「である」調が混在しているのが気になりました。
+> おそらく「です、ます」調に揃えたほうがオープンな雰囲気になるのではないかと思います。
+
+すいません、勢いで訳して、見直しが甘かったです(_o_)
+
+他のご指摘も非常にわかりやすくなるものばかりで、参考になりました。
+ありがとうございます。
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From yoshiki ＠ vpri.org  Thu Oct 11 13:27:31 2007
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3645] Re: ESUGチラシの日本語訳
+In-Reply-To: <10462a9b26529a8240512df4bbf7fe75@openedu.org>
+References: <0e12c26c6f91710b3b8676348343538b@openedu.org>
+	<200710101309.47684.tomohiro@sra.co.jp>
+	<10462a9b26529a8240512df4bbf7fe75@openedu.org>
+Message-ID: <u8x6a8edo.wl%yoshiki@vpri.org>
+
+  大島です。
+
+> お二人のご意見を参考にさせていただいて、他もできるだけ翻訳調とならないように直してみました。
+> 	http://qml.610t.org/squeak/mutoh_20071010.files/flyer.pdf
+> 
+> いかがでしょうか?
+
+  すばやいですね。ありがとうございます。
+
+----------------------
+　「イメージという永続的なオブジェクト領域があります」
+=> 
+　「イメージと呼ばれる、システム内の全オブジェクトを永続的に保存できる
+しくみがあります」(これもかなり意訳ですが。)
+----------------------
+「イメージには...コードを含み...」
+=> 
+「イメージは...オブジェクトとして抽象化したアプリケーションのコードと
+状態を含みます。」
+----------------------
+
+というくらいではないでしょうか。日本の本やWebサイトを追加する、という
+のももしかしたら名案かもしれません。
+
+> On 2007/10/9, at 15:33, Yoshiki Ohshima wrote:
+> >   私の趣味からすると文としてはまだ翻訳調が強いと思います。英語版の単語
+> > の使い方に関しては、フランス人が無理やり訳したという面もあるので、フラ
+> > ンス語版にも当たったほうが良いかもしれません。
+> 
+> わたし、フランス語わからないんです(;-;)
+> # かといって、第二外国語だったドイツ語もダメですが(;-;)
+
+  僕もフランス語はまずわかりませんが^^; (というか第二外国語だったドイ
+ツ語もだめです。)
+
+-- Yoshiki
+
+From ykoubo2007 ＠ yengawa.com  Thu Oct 11 16:08:25 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3646] Re: OSC2007 Tokyo/Fallビデオについて(さらに続報)
+In-Reply-To: <20071010173125.E63C.FLORIAN@seagreen.ocn.ne.jp>
+References: <20071010173125.E63C.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <20071011143707.9C40.YKOUBO2007@yengawa.com>
+
+横川です。
+編集お疲れ様です。
+OSCは楽しかったですね。
+# 打ち上げでは騒いでしまい、すみません。
+
+ぼくは相変わらず発声が悪くて何を言ってるかわからず、いけませんね。
+それからプロジェクタ画面も入れて撮ってもらえばよかったと後悔。
+
+補足すると、妙なタイミングで呆れたような笑いが起こっているのは、淡々としゃ
+べりつつ画面上だけでボケて、Etoysで作ったキャラクタ・エージェントが適宜
+ツッコミを入れるという漫才形式で進めているからです。
+
+
+On Wed, 10 Oct 2007 17:36:46 +0900
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+
+> 　土本( Florian )です。
+> 
+> OSC2007 セミナー
+> 	http://jp.youtube.com/view_play_list?p=56076C541BE1DCDB
+> 
+> 　セミナーを一通りまとめたものを上げました。プレイリストを使って都合1時
+> 間以上入っていますので、時間がある時に見てください。
+> 
+> 　では。
+> 
+> !
+> 土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+>                 blog:  'http://d.hatena.ne.jp/Florian/'
+>                 webto:   'http://florianswiki.dyndns.org/Web/'
+> openInWorld. "do it."
+> !
+> 
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From "土本 (Florian) 強  Thu Oct 11 16:14:19 2007
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3647] Re: OSC2007 Tokyo/Fallビデオについて(さらに続報)
+In-Reply-To: <20071011143707.9C40.YKOUBO2007@yengawa.com>
+References: <20071010173125.E63C.FLORIAN@seagreen.ocn.ne.jp>
+	<20071011143707.9C40.YKOUBO2007@yengawa.com>
+Message-ID: <20071011161110.B4B2.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+
+メール「[Squeak-ja: 3646] Re: OSC2007 Tokyo/Fallビデオについて(さらに続報)」(2007/10/11 16:08) に於いて
+「Koji Yokokawa」 語りて曰く、
+
+Koji> 編集お疲れ様です。
+Koji> OSCは楽しかったですね。
+Koji> # 打ち上げでは騒いでしまい、すみません。
+
+　打ち上げは……にぎやかでしたね(含自分(^^;))。
+　いやでも、非常に良いお店でした(^^)。お店はよく判らなかったので、検索で
+1位に引っかかったのを使いました。まさにGoogleMaps様々です。
+
+Koji> ぼくは相変わらず発声が悪くて何を言ってるかわからず、いけませんね。
+Koji> それからプロジェクタ画面も入れて撮ってもらえばよかったと後悔。
+
+　申し訳ありません。
+　実は、プロジェクタがそこそこ写るということに気づいたのが阿部さんがしゃ
+べっている最中だったので、前半30分はあまりプロジェクタが入っていないので
+す。
+　今後は、あらかじめ露出の確認をした方が良いですね。
+
+Koji> 補足すると、妙なタイミングで呆れたような笑いが起こっているのは、淡々としゃ
+Koji> べりつつ画面上だけでボケて、Etoysで作ったキャラクタ・エージェントが適宜
+Koji> ツッコミを入れるという漫才形式で進めているからです。
+
+　こっそり押しているゲームパッドが良い感じでしたね(^^)。
+
+
+　では。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+
+From ykoubo2007 ＠ yengawa.com  Fri Oct 12 18:56:45 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3648] めいどコスチューム
+Message-ID: <20071012185347.9C4E.YKOUBO2007@yengawa.com>
+
+頭文字KY、
+横川です。
+# スパムフィルタに引っかかりませんように。。。
+
+土本さんの投稿されたビデオにあったように、OSC2007 Tokyo/Fallで「ぬぎぬぎ
+Etoys」という短いセミナーをしました。
+これはEtoysでは物足りなかったりSmalltalkに興味があるけどEtoysを見て戸惑っ
+ている大人向けにEtoysの裏にある構造と独自のEtoyを作る方法をごく簡単に紹
+介するものでした。
+# けして公序良俗に反するものではありません。念のため。
+
+あそこで使った資料はコスプレやヌード○○○の画像が入っている過激な(?)も
+のなので公開できませんが、実演した独自Etoysを作るライブ・プログラミング
+の部分はあらためてスクリーンキャストを作りました。
+
+セミナーでは時間の関係で端折ったシーンも入っているディレクターズカットで
+す。
+ぜひご覧ください。
+
+「めいどコスチューム」ライブ・プログラミング
+http://www.yengawa.com/gallery/MadeCostume/index.html
+音が出るので注意。
+
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From tetha ＠ st.rim.or.jp  Sat Oct 13 00:16:50 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3649] お待たせしましたMac版2005J2です
+Message-ID: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+
+みなさん、こんばんは。
+林 徹也です。
+
+ようやく、Mac版2005J2 リリースの準備ができました。
+（すでに、2005J3の噂も耳にしますが）
+遅れましてたいへん申し訳ありません。
+
+今回の Mac版2005J2 の主な特徴としては、
+
+・Intel Mac にも正式対応（ユニバーサル版）
+・ブラウザプラグイン機能の一新
+・インストーラ付き
+
+であります。
+
+特に、最後のインストーラにつきましては、まだ充分なテストが出来ておりません。
+できましたら皆様にテストをお助けいただければとお願いします。
+それまでの間はWebページからのリンクは変更しないでおくことにいたします。
+ダウンロードのURLは以下の通りとなっております。
+
+http://squeakland.jp/plugin/installers/SqueakPlugin2005J2.dmg
+
+※※　注意点！！（とても重要）　※※
+これまでのインストールコマンドもそうでしたが、インストールを実行すると、My Squeak フォルダの中身が削除されてしまいます。インストール前に必ずMy Squeakフォルダの中身を別なフォルダにコピーしてバックアップしておいてください。そうでないとせっかく作った作品が無くなってしまいます。
+この際、フォルダのエイリアスごとコピーしても実体が削除されてしまうので、面倒ですがフォルダの「中身」のファイルをコピーするようご注意ください。
+
+なお、管理者権限の無いユーザでもインストール出来るように別パッケージが用意されてます。
+（共有マシンで管理者パスワードが分からなかったりする場合のためのものです）
+
+http://squeakland.jp/plugin/installers/SqueakPlugin2005J.dmg
+
+注意点はこちらも同じです。どなたかお試しいただければとお願いします。
+
+その他トラブルやご質問なども、こちら（squeak-ja）までご連絡ください。
+
+以上、よろしくお願いします。
+--
+
+
+From tetha ＠ st.rim.or.jp  Sat Oct 13 01:37:50 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3650] [訂正]お待たせしましたMac版2005J2です
+Message-ID: <321A2408-3C23-4B56-9CFE-F42BAF99B0D1@st.rim.or.jp>
+
+さっそくの訂正。申し訳ありません。
+
+> なお、管理者権限の無いユーザでもインストール出来るように別パッケージが用意されてます。
+> （共有マシンで管理者パスワードが分からなかったりする場合のためのものです）
+>
+> http://squeakland.jp/plugin/installers/SqueakPlugin2005J.dmg
+間違いです。
+
+正しいURLは以下の通りです。
+
+http://squeakland.jp/plugin/installers/SqueakPlugin2005J2-nonAdmin.dmg
+
+以上、よろしくお願いします。
+--
+
+
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Oct 13 06:11:22 2007
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3651] Re: お待たせしましたMac版2005J2です
+In-Reply-To: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+References: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+Message-ID: <470FE2FA.1030400@mx2.ttcn.ne.jp>
+
+宝迫（ほうさこ）＠Macユーザーです
+
+Tetsuya HAYASHI さんは書きました:
+> ようやく、Mac版2005J2 リリースの準備ができました。
+(snip)
+> 特に、最後のインストーラにつきましては、まだ充分なテストが出来ておりません。
+> できましたら皆様にテストをお助けいただければとお願いします。
+
+以下のような環境でインストールしましたが、問題なく動きました．
+
+eMac G4 700MHz
+Mac OS X 10.4.10
+メモリ：512MB
+
+＃こんな古いMacでは、あまり有益な情報ではないかも知れませんが…．(^_^;;;
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+
+From tetha ＠ st.rim.or.jp  Sat Oct 13 13:58:32 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3652] Re: お待たせしましたMac版2005J2です
+In-Reply-To: <470FE2FA.1030400@mx2.ttcn.ne.jp>
+References: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+	<470FE2FA.1030400@mx2.ttcn.ne.jp>
+Message-ID: <A69DA7BE-2858-4257-ADF4-DA7066CBBC10@st.rim.or.jp>
+
+宝迫さん。さっそくの確認ありがとうございます。
+
+On 2007/10/13, at 6:11, yhousako wrote:
+
+> ＃こんな古いMacでは、あまり有益な情報ではないかも知れませんが…．(^_^;;;
+
+いえいえ。
+古い機種での動作確認（互換性）こそ重要ですので助かります。
+今後ともよろしくお願いします。
+
+--
+
+
+
+
+From abee ＠ squeakland.jp  Sat Oct 13 18:47:50 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3653] 【サイエンスアゴラ 2007 】スクイーク体験ワークショップ
+Message-ID: <47109446123.4359ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+東京国際交流館で開催されるサイエンスアゴラ2007の一環として、みんなで楽し
+くスクイークの協力により、スクイーク体験ワークショップを11月25日の13:00〜
+16:30に開催します。
+
+http://mts-j.hiho.jp/2007/10/agora2007.html
+
+OLPCの活動について、XO(100ドルノートPC)のハードウェアに関する情報は多いの
+ですが、それに搭載されるソフトウェアや、それを使ってどのような教育が行わ
+れるのかについては、ほとんど知られていません。
+
+今回のワークショップでは、OLPC用に改良されたSqueak Etoysを使って、子供た
+ちが行う予定のワークショップを参加者の皆さんに体験してもらいます(演習には
+PCを使いますが、デモ用に実機も1台用意します)。
+
+# このカリキュラムは、先に宮坂さんから案内のあったカリキュラム検討会で作
+# られたものを用いる予定です。
+# http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003625.html
+
+今回は、前提を省略していきなり問題の核心に入るため、定員を20名に絞り、参
+加資格もEtoys経験者に限定しています(見学は可能です)。絵に描いた車を走らせ
+る以外に何ができるのか、Etoysが本当に狙っているものはなにかなどを知ること
+で、今後の活動に生かしていただければと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From newapplesho ＠ gmail.com  Sat Oct 13 21:39:45 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:53 2007
+Subject: [Squeak-ja: 3654] Re: お待たせしましたMac版2005J2です
+In-Reply-To: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+References: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+Message-ID: <85E6BFF7-4DE8-4C1E-8881-A79830A861F5@gmail.com>
+
+吉田　翔です．
+
+2005J2公開ありがとうございます．
+
+以下の環境でインストールして，問題なくインストールできました．
+
+MacBook Pro 1.83GHz
+Mac OS X 10.4.10
+メモリ 1GB
+
+
+On 2007/10/13, at 0:16, Tetsuya HAYASHI wrote:
+
+> みなさん、こんばんは。
+> 林 徹也です。
+>
+> ようやく、Mac版2005J2 リリースの準備ができました。
+> （すでに、2005J3の噂も耳にしますが）
+> 遅れましてたいへん申し訳ありません。
+>
+> 今回の Mac版2005J2 の主な特徴としては、
+>
+> ・Intel Mac にも正式対応（ユニバーサル版）
+> ・ブラウザプラグイン機能の一新
+> ・インストーラ付き
+>
+> であります。
+>
+> 特に、最後のインストーラにつきましては、まだ充分なテストが出来 
+> ておりません。
+> できましたら皆様にテストをお助けいただければとお願いします。
+> それまでの間はWebページからのリンクは変更しないでおくこ 
+> とにいたします。
+> ダウンロードのURLは以下の通りとなっております。
+>
+> http://squeakland.jp/plugin/installers/SqueakPlugin2005J2.dmg
+>
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From abee ＠ squeakland.jp  Sat Oct 13 22:44:14 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3655] Re: お待たせしました Mac 版 2005J2 です
+In-Reply-To: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+References: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+Message-ID: <4710CBAE4D.B0C3ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 13 Oct 2007 00:16:50 +0900
+Tetsuya HAYASHI <tetha@st.rim.or.jp> wrote:
+>ようやく、Mac版2005J2 リリースの準備ができました。
+
+ありがとうございます。
+
+>（すでに、2005J3の噂も耳にしますが）
+
+先に話のあったSuperSwiki2の「公開」と「探す」に対応したものを考えています
+(山宮さんに依頼中)。
+林さんからは今回のMac版は先行して対応していると聞いています。それなので、
+Macユーザの皆さんにはこれを試してもらえると良いかもしれません。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003613.html
+
+>今回の Mac版2005J2 の主な特徴としては、
+>
+>・Intel Mac にも正式対応（ユニバーサル版）
+>・ブラウザプラグイン機能の一新
+>・インストーラ付き
+
+プラグイン対応と言うことで、たとえばSuperSwiki2にある作品を、お使いのWeb
+ブラウザの中で実行できるかどうかを合わせて調べてもらえると良いように思い
+ます。
+
+http://squeakland.jp/super2
+(作品のページを開いて「起動」)
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sun Oct 14 01:54:06 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3656] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <JL200709281859188.8106406@mars.dti.ne.jp>
+References: <46FCC7F8273.86E3ABEE@smtp.nifty.com>
+	<JL200709281859188.8106406@mars.dti.ne.jp>
+Message-ID: <4710F82E2D8.B0C6ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 28 Sep 2007 18:59:18 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>「探す」については実は問題があって、長押しで出てくる「SuperSwikiを検索」に
+>ついてのみ日本語による検索ができません。(これは2でない旧SuperSwikiについても
+>同じだと思います。)
+>Squeakプラグイン側にパッチを当てる必要があります。参考までに添付してみました。
+
+大島さん、
+いまアップデートサーバが落ちているみたいで確認できないのですが、梅澤さん
+のパッチをアップデートストリームに乗せていただけないでしょうか。
+そうすれば、J3に入れることができます。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Sun Oct 14 04:07:25 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3657] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <46FD221C18E.A29EABEE@smtp.nifty.com>
+References: <46FCF87525E.86E7ABEE@smtp.nifty.com>	<46FD198F.2090307@metatoys.org>
+	<46FD221C18E.A29EABEE@smtp.nifty.com>
+Message-ID: <4711176D.9080008@metatoys.org>
+
+山宮です。
+
+細かい話ですが、SuperSwiki2 ソフトウェアの名称なので、
+「探す」から見える場所の名前としては blueplane.jp が相応しいのではないでしょうか？
+つまり設定ファイルは
+
+# prefs/knownServers/blueplane.jp
+name:	blueplane.jp
+directory:	/super/SuperSwikiProj
+type:	bss
+server:	blueplane.jp:9090
+acceptsUploads:	false
+
+の方が良いと思います。如何でしょうか？
+
+Kazuhiro ABE wrote:
+> むむむ。それでは、とりあえずSuperSwiki2にSqueakの中からアクセスしたい人は、
+> 各人が作るか、添付のファイルをprefs\knownServersに置いてもらうとして、次
+> のリリース時(2005J3?)にこのファイルもインストールされるようにしましょう。
+
+
+From abee ＠ squeakland.jp  Sun Oct 14 05:04:17 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3658] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <4711176D.9080008@metatoys.org>
+References: <46FCF87525E.86E7ABEE@smtp.nifty.com>
+	<46FD198F.2090307@metatoys.org> <46FD221C18E.A29EABEE@smtp.nifty.com>
+	<4711176D.9080008@metatoys.org>
+Message-ID: <2d5d52a80710131304j6dc2a7e0vffc4c0d6a07fcb79@mail.gmail.com>
+
+阿部@新百合です。
+
+07/10/14 に Takashi Yamamiya<tak@metatoys.org> さんは書きました:
+> 細かい話ですが、SuperSwiki2 ソフトウェアの名称なので、
+> 「探す」から見える場所の名前としては blueplane.jp が相応しいのではないでしょうか？
+> つまり設定ファイルは
+>
+> # prefs/knownServers/blueplane.jp
+> name:	blueplane.jp
+> directory:	/super/SuperSwikiProj
+> type:	bss
+> server:	blueplane.jp:9090
+> acceptsUploads:	false
+>
+> の方が良いと思います。如何でしょうか？
+
+そうですね。本来であれば、proxyに隠れてblueplane.jpは前面に出ないはずだったのですが、技術的な制約もあってこうなってしまいました。Webからアクセスする限りにおいては、http://squeakland.jp/super2として見えているということもあります。
+同様に従来のSuperSwikiは、http://squeakland.jp/superですが、これは「探す」からはsqueakland.jpです。そんなこともあって、対照性を持たせることの限界を感じて今のSuperSwiki2としてみました。
+使える文字に制約がないのならSqueakland.jp's SuperSwiki2でいかがでしょう。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Sun Oct 14 05:23:30 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3659] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <2d5d52a80710131304j6dc2a7e0vffc4c0d6a07fcb79@mail.gmail.com>
+References: <46FCF87525E.86E7ABEE@smtp.nifty.com>	<46FD198F.2090307@metatoys.org>
+	<46FD221C18E.A29EABEE@smtp.nifty.com>	<4711176D.9080008@metatoys.org>
+	<2d5d52a80710131304j6dc2a7e0vffc4c0d6a07fcb79@mail.gmail.com>
+Message-ID: <47112942.8070405@metatoys.org>
+
+Kazuhiro ABE wrote:
+> 阿部@新百合です。
+> 
+> 07/10/14 に Takashi Yamamiya<tak@metatoys.org> さんは書きました:
+>> 細かい話ですが、SuperSwiki2 ソフトウェアの名称なので、
+>> 「探す」から見える場所の名前としては blueplane.jp が相応しいのではないでしょうか？
+>> つまり設定ファイルは
+>>
+>> # prefs/knownServers/blueplane.jp
+>> name:	blueplane.jp
+>> directory:	/super/SuperSwikiProj
+>> type:	bss
+>> server:	blueplane.jp:9090
+>> acceptsUploads:	false
+>>
+>> の方が良いと思います。如何でしょうか？
+> 
+> そうですね。本来であれば、proxyに隠れてblueplane.jpは前面に出ないはずだったのですが、技術的な制約もあってこうなってしまいました。Webからアクセスする限りにおいては、http://squeakland.jp/super2として見えているということもあります。
+> 同様に従来のSuperSwikiは、http://squeakland.jp/superですが、これは「探す」からはsqueakland.jpです。そんなこともあって、対照性を持たせることの限界を感じて今のSuperSwiki2としてみました。
+> 使える文字に制約がないのならSqueakland.jp's SuperSwiki2でいかがでしょう。
+
+山宮です。squeakland.jp も他の文字（Squeakland.jp's SuperSwiki1 等) に変更したほうが良い
+というご意見でしょうか？また、web との対象性を考えるなら、URL そのまま
+http://squeakland.jp/super2 という名前にするのも一案だと思います。
+
+name:	http://squeakland.jp/super2
+directory:	/super/SuperSwikiProj
+type:	bss
+server:	blueplane.jp:9090
+acceptsUploads:	false
+
+上記のようにしないと、「探す」で表示されるプロジェクトをブラウザから
+http://squeakland.jp/super2 でアクセス出来る事をユーザが知る手段がありません。
+
+よろしくお願いします。
+
+
+From tetha ＠ st.rim.or.jp  Sun Oct 14 08:27:32 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3660] Re: お待たせしました Mac 版 2005J2 です
+In-Reply-To: <4710CBAE4D.B0C3ABEE@smtp.nifty.com>
+References: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+	<4710CBAE4D.B0C3ABEE@smtp.nifty.com>
+Message-ID: <A6EDB1D1-85E6-4D3E-A7DA-983EE0C6BC41@st.rim.or.jp>
+
+林です。
+
+On 2007/10/13, at 22:44, Kazuhiro ABE wrote:
+
+>> （すでに、2005J3の噂も耳にしますが）
+>
+> 先に話のあったSuperSwiki2の「公開」と「探す」に対応したものを考えています
+> (山宮さんに依頼中)。
+> 林さんからは今回のMac版は先行して対応していると聞いています。それなので、
+> Macユーザの皆さんにはこれを試してもらえると良いかもしれません。
+>
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003613.html
+
+これに関して念のためコメントいたしますが、
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003610.html
+
+こちらのパッチについてはまだ取り込んでいません。
+ですので、Mac 版も J3 をリリースすることになるかと思われます。
+（アップデートストリームから取り込むということもあるかもしれませんが）
+
+>> 今回の Mac版2005J2 の主な特徴としては、
+>>
+>> ・Intel Mac にも正式対応（ユニバーサル版）
+>> ・ブラウザプラグイン機能の一新
+>> ・インストーラ付き
+>
+> プラグイン対応と言うことで、たとえばSuperSwiki2にある作品を、お使いのWeb
+> ブラウザの中で実行できるかどうかを合わせて調べてもらえると良いように思い
+> ます。
+>
+> http://squeakland.jp/super2
+> (作品のページを開いて「起動」)
+
+こちらにつきましても、問題がありまして、Webブラウザの中で起動した場合、
+「テキスト」モーフに日本語を入力できないというバグがあります。
+どなたかデバッグにチャレンジする有志の方、急募です (^^;
+--
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 14 09:33:03 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3661] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <47112942.8070405@metatoys.org>
+References: <46FCF87525E.86E7ABEE@smtp.nifty.com>
+	<46FD198F.2090307@metatoys.org> <46FD221C18E.A29EABEE@smtp.nifty.com>
+	<4711176D.9080008@metatoys.org>
+	<2d5d52a80710131304j6dc2a7e0vffc4c0d6a07fcb79@mail.gmail.com>
+	<47112942.8070405@metatoys.org>
+Message-ID: <JC200710140933034.2736156@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> > そうですね。本来であれば、proxyに隠れてblueplane.jpは前面に出ないはずだったのですが、技術的な制約もあってこうなってしまいました。Webからアクセスする限りにおいては、http://squeakland.jp/super2として見えているということもあります。
+> > 同様に従来のSuperSwikiは、http://squeakland.jp/superですが、これは「探す」からはsqueakland.jpです。そんなこともあって、対照性を持たせることの限界を感じて今のSuperSwiki2としてみました。
+> > 使える文字に制約がないのならSqueakland.jp's SuperSwiki2でいかがでしょう。
+> 
+> 山宮です。squeakland.jp も他の文字（Squeakland.jp's SuperSwiki1 等) に変更したほうが良い
+> というご意見でしょうか？また、web との対象性を考えるなら、URL そのまま
+> http://squeakland.jp/super2 という名前にするのも一案だと思います。
+> 
+> name: http://squeakland.jp/super2
+> directory:    /super/SuperSwikiProj
+> type: bss
+> server:   blueplane.jp:9090
+> acceptsUploads:   false
+> 
+> 上記のようにしないと、「探す」で表示されるプロジェクトをブラウザから
+> http://squeakland.jp/super2 でアクセス出来る事をユーザが知る手段がありません。
+> 
+
+Squeakland.jp's SuperSwiki2は長すぎる気もしますので、SuperSwiki-JP、
+SuperSwiki2-JPなどでも良いなと思っていました。URLにしてしまうのも良い
+ですね。
+
+後はSuperSwiki2にはSuperSwikiの既存のプロジェクトのインポート機能が
+あるので、現SuperSwikiのプロジェクトを全てSuperSwiki2に取り込んで一本化
+してしまうという方法もありかと思います。そうすると今まで通りsqueakland.jp
+だけという形にできます。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From tak ＠ metatoys.org  Sun Oct 14 15:02:54 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3662] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <JC200710140933034.2736156@mars.dti.ne.jp>
+References: <46FCF87525E.86E7ABEE@smtp.nifty.com>	<46FD198F.2090307@metatoys.org>
+	<46FD221C18E.A29EABEE@smtp.nifty.com>	<4711176D.9080008@metatoys.org>	<2d5d52a80710131304j6dc2a7e0vffc4c0d6a07fcb79@mail.gmail.com>	<47112942.8070405@metatoys.org>
+	<JC200710140933034.2736156@mars.dti.ne.jp>
+Message-ID: <4711B10E.2010901@metatoys.org>
+
+山宮です。
+
+> 後はSuperSwiki2にはSuperSwikiの既存のプロジェクトのインポート機能が
+> あるので、現SuperSwikiのプロジェクトを全てSuperSwiki2に取り込んで一本化
+> してしまうという方法もありかと思います。そうすると今まで通りsqueakland.jp
+> だけという形にできます。
+
+私はこれが一番シンプルで良いと思います。
+ユーザから見て余計な選択肢は無くてもよいです。
+
+
+From takeda.toshiyuki ＠ gmail.com  Sun Oct 14 15:46:01 2007
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3663] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <4711B10E.2010901@metatoys.org>
+References: <46FCF87525E.86E7ABEE@smtp.nifty.com>
+	<46FD198F.2090307@metatoys.org> <46FD221C18E.A29EABEE@smtp.nifty.com>
+	<4711176D.9080008@metatoys.org>
+	<2d5d52a80710131304j6dc2a7e0vffc4c0d6a07fcb79@mail.gmail.com>
+	<47112942.8070405@metatoys.org>
+	<JC200710140933034.2736156@mars.dti.ne.jp>
+	<4711B10E.2010901@metatoys.org>
+Message-ID: <6544a1da0710132346g5ef5108auf6e40a6661afacc5@mail.gmail.com>
+
+武田です。
+
+On 10/14/07, Takashi Yamamiya <tak@metatoys.org> wrote:
+> 山宮です。
+>
+> > 後はSuperSwiki2にはSuperSwikiの既存のプロジェクトのインポート機能が
+> > あるので、現SuperSwikiのプロジェクトを全てSuperSwiki2に取り込んで一本化
+> > してしまうという方法もありかと思います。そうすると今まで通りsqueakland.jp
+> > だけという形にできます。
+>
+> 私はこれが一番シンプルで良いと思います。
+> ユーザから見て余計な選択肢は無くてもよいです。
+
+2005Jから探す場合もこれで大丈夫なのでしょうか？
+
+武田俊之
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 14 16:07:10 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3664] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <6544a1da0710132346g5ef5108auf6e40a6661afacc5@mail.gmail.com>
+References: <46FCF87525E.86E7ABEE@smtp.nifty.com>
+	<46FD198F.2090307@metatoys.org> <46FD221C18E.A29EABEE@smtp.nifty.com>
+	<4711176D.9080008@metatoys.org>
+	<2d5d52a80710131304j6dc2a7e0vffc4c0d6a07fcb79@mail.gmail.com>
+	<47112942.8070405@metatoys.org>
+	<JC200710140933034.2736156@mars.dti.ne.jp>
+	<4711B10E.2010901@metatoys.org>
+	<6544a1da0710132346g5ef5108auf6e40a6661afacc5@mail.gmail.com>
+Message-ID: <JX200710141607108.11779718@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+"Toshiyuki Takeda" <takeda.toshiyuki@gmail.com> wrote:
+> 武田です。
+> 
+> On 10/14/07, Takashi Yamamiya <tak@metatoys.org> wrote:
+> > 山宮です。
+> >
+> > > 後はSuperSwiki2にはSuperSwikiの既存のプロジェクトのインポート機能が
+> > > あるので、現SuperSwikiのプロジェクトを全てSuperSwiki2に取り込んで一本化
+> > > してしまうという方法もありかと思います。そうすると今まで通りsqueakland.jp
+> > > だけという形にできます。
+> >
+> > 私はこれが一番シンプルで良いと思います。
+> > ユーザから見て余計な選択肢は無くてもよいです。
+> 
+> 2005Jから探す場合もこれで大丈夫なのでしょうか？
+> 
+
+2005Jの場合は、古い設定のままなのでSuperSwikiを見ることになってしまい
+ます。2005J3にアップグレードするか、もしくは設定ファイルを書き換える操作
+が必要になります。
+
+squeakland.jpで直接SuperSwiki2を上げることができれば全て解決なのですが、
+現状間借りしているアカデミアシステムズさんのほうで動的サービスを上げる
+ことが、セキュリティ上難しいようです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Sun Oct 14 17:05:34 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3665] Re: KOF2007 ユーザ企画 ( 講演会  )
+In-Reply-To: <d64d01610719d6f5ba82981367274d76@openedu.org>
+References: <4701CB9B.8080702@metatoys.org>
+	<d64d01610719d6f5ba82981367274d76@openedu.org>
+Message-ID: <4711CDCE157.FC35ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 2 Oct 2007 18:20:49 +0900
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+>ユーザ企画の方も現在事務局の方と調整中です。
+
+確定しましたのでお知らせします。今回は広い部屋(定員60人)なので大丈夫だと
+思いますが、下記の要領で申し込みをお願いします。
+
+会場：大阪南港ATC ITM棟 9F-G4
+開始時刻：11/10(土) 11:00〜 (50 min)
+主催：Squeak-ja 
+
+内容：
+一人の子供に一台のノートPCとSqueak - 学ぶことを学ぶためのOLPC
+阿部 和広 (サイバー大学)
+MITメディアラボ創設者のニコラス・ネグロポンテを中心に、発展途上国の子供た
+ちへ100ドルノートPCを使った革新的な教育を提供するOLPCの活動と、そのための
+アプリケーションの一つであるSqueak Etoysを実機のデモを交えて紹介します。
+
+ゲームを通じた学び - Squeakによる授業の実践例
+大藤 泰生 (関西学院高等部)
+中学校におけるSqueak Etoysを用いた授業の内容、授業中に子供たちが作ったゲー
+ム、チュートリアルソフト「もえすく」について紹介します。
+
+参加を希望される方は「kof2007squeakja@yahoo.co.jp」宛に、表題を
+「KOF2007 Squeak-jaユーザ企画参加希望」として、参加者1人につき1通メールを
+お送りください。本文は空で結構です。こちらからは返信しませんが、定員オー
+バーなどで参加をお断りする場合のみご連絡差し上げます。
+当日はユーザ企画としての受付は行いませんので、直接会場へいらしてください。
+お知らせについては「http://qml.610t.org/squeak/KOF2007.html」をご覧くださ
+い。
+
+展示は11/9, 10の両日とも行います。多数のご来場をお待ちしております。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sun Oct 14 17:32:11 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3666] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <JX200710141607108.11779718@mars.dti.ne.jp>
+References: <6544a1da0710132346g5ef5108auf6e40a6661afacc5@mail.gmail.com>
+	<JX200710141607108.11779718@mars.dti.ne.jp>
+Message-ID: <4711D40B226.FC37ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 14 Oct 2007 16:07:10 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>2005Jの場合は、古い設定のままなのでSuperSwikiを見ることになってしまい
+>ます。2005J3にアップグレードするか、もしくは設定ファイルを書き換える操作
+>が必要になります。
+>
+>squeakland.jpで直接SuperSwiki2を上げることができれば全て解決なのですが、
+>現状間借りしているアカデミアシステムズさんのほうで動的サービスを上げる
+>ことが、セキュリティ上難しいようです。
+
+それでは、
+
+・当面新旧共存
+・旧のプロジェクトを新にコピー
+・旧の方には移行を促すREADMEプロジェクトをアップ
+
+とし、名前については、それぞれ、
+
+squeakland.jp/super
+squeakland.jp/super2
+
+でいかがでしょうか。これだとURLも示せますし、現在の青いダイアログの幅から
+見て途切れることもありません(バルーンヘルプのURLとは違ってしまいますがこ
+れは仕方ない)。また、手打ちする際に「http://」がなくてもプラウザが補完し
+てくれるでしょう。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tak ＠ metatoys.org  Sun Oct 14 17:59:04 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3667] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <4711D40B226.FC37ABEE@smtp.nifty.com>
+References: <6544a1da0710132346g5ef5108auf6e40a6661afacc5@mail.gmail.com>	<JX200710141607108.11779718@mars.dti.ne.jp>
+	<4711D40B226.FC37ABEE@smtp.nifty.com>
+Message-ID: <4711DA58.8070109@metatoys.org>
+
+山宮です。
+
+> ・当面新旧共存
+> ・旧のプロジェクトを新にコピー
+> ・旧の方には移行を促すREADMEプロジェクトをアップ
+> 
+> とし、名前については、それぞれ、
+> 
+> squeakland.jp/super
+> squeakland.jp/super2
+> 
+> でいかがでしょうか。これだとURLも示せますし、現在の青いダイアログの幅から
+> 見て途切れることもありません(バルーンヘルプのURLとは違ってしまいますがこ
+> れは仕方ない)。また、手打ちする際に「http://」がなくてもプラウザが補完し
+> てくれるでしょう。
+
+私としては、中途半端に省略するよりはっきり URL だと分かる http:// があるほうが好みですが、
+そんなに小さな画面でスクイークを遊んでいる様子を考えていなかったので、
+阿部さんの決定でしたらそのように作業します。
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 14 18:35:04 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3668] Unix用のリクエストいくつか
+Message-ID: <JO200710141835045.20654593@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+2005J3のリリースの際に、もう一つ入れて欲しいパッチがあります。
+
+Unix(Linux,BSD)環境で全画面表示を行った際にIMのフォーカスが失われてしまう
+問題のパッチです。
+
+画面が狭い環境ではWebブラウザからプロジェクト起動後、全画面表示に切り替える
+場合もあるかと思います。そのときに現状では日本語が入力できなくなってしまい
+非常に不便です。
+
+もともと廣島さんがパッチを書かれたもので、これまで何度か話題になっています。
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2004-June/001636.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003111.html
+
+ちょっとだけ改訂した版を添付します。(CompositionWindowFocusFix.1.cs)
+基本的な中身は変わっておらず、インデントを整理し、代入を:=に変換しただけ
+のものです。
+
+さらに、廣島さんのSqueakImmX11Plugin4d.tar.gzを適用し、コンパイル
+したLinux用のVMを下記に置きました。
+ftp://swikis.ddo.jp/SqueakDevJa/linux/SqueakVM3.9-8-JPatched.tgz
+
+現状のコンパイル済みLinux用VM(3.7-7ベース)を置き換えるものとして
+考えています。
+http://squeakland.jp/plugin/installers/ux.html
+
+Linux使いの方は、上記VMとCompositionWindowFocusFix.1.csの両方をお試し
+いただけると助かります。(当方ではVine 4.1とFedora Core 6で確認しています)
+
+ではでは。
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: CompositionWindowFocusFix.1.cs
+型:         application/octet-stream
+サイズ:     2358 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071014/faf71f4e/CompositionWindowFocusFix.1.obj
+From abee ＠ squeakland.jp  Sun Oct 14 18:36:08 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3669] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <4711DA58.8070109@metatoys.org>
+References: <4711D40B226.FC37ABEE@smtp.nifty.com>
+	<4711DA58.8070109@metatoys.org>
+Message-ID: <4711E3082C3.FC38ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 14 Oct 2007 01:59:04 -0700
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>私としては、中途半端に省略するよりはっきり URL だと分かる http:// があるほうが好みですが、
+>そんなに小さな画面でスクイークを遊んでいる様子を考えていなかったので、
+>阿部さんの決定でしたらそのように作業します。
+
+ご存知のように青いダイアログは絶対座標ですので、画面の大きさには左右され
+ません。ただ、文字寄せが左なので、右にある文字はフォントサイズの変更で隠
+れる可能性があります(たとえば、Accuny 18で切れます)。
+http://の有無については、現状として付いていないということもあります。
+また、どんどん言い訳めいてきますが、子供に指示するときになるべく短い言葉
+のほうがよいということもあります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From makoto ＠ kobe-u.ac.jp  Sun Oct 14 19:43:10 2007
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3670] Re: お待たせしましたMac版2005J2です
+In-Reply-To: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+References: <75902F81-8109-460E-A9BC-86C087058D06@st.rim.or.jp>
+Message-ID: <20071014194310883753.9c7f3c1d@kobe-u.ac.jp>
+
+高橋＠神戸大学です。
+
+2005J2公開ありがとうございます.
+
+++ Tetsuya HAYASHIさんの『[Squeak-ja: 3649] お待たせしましたMac版2005J2です』
+| (Sat, 13 Oct 2007 00:16:50 +0900)の件について
+--
+> 今回の Mac版2005J2 の主な特徴としては、
+> 
+> ・Intel Mac にも正式対応（ユニバーサル版）
+> ・ブラウザプラグイン機能の一新
+> ・インストーラ付き
+> 
+> であります。
+> 
+> 特に、最後のインストーラにつきましては、まだ充分なテストが出来ておりません。
+> できましたら皆様にテストをお助けいただければとお願いします。
+
+以下の環境にインストールしました。
+
+MacBook 1.83GHz Intel Core Duo
+Mac OS X バージョン10.4.10
+メモリ 1GB
+
+iBook G4 1.42GHz
+Mac OS X バージョン10.4.10
+メモリ 1GB
+
+インストールに問題は全くありませんが，気の付いたことがありましたので報告します。
+
+１　作品のデフォルトの保存場所が，My Squeakから書類下のSqueaklandフォルダに
+変更になっています。作品の保存場所が書類の中になったのはよいと思いますが，
+「大切な情報」の中にそのことを記述した方が良いのではないでしょうか。
+今のままだと2005Jからアップグレードした人が戸惑うような気がします。
+
+２　インストーラの「大切な情報」の文書中に誤字・脱字があります。
+　　「この場合、スクークを ~/Library/Application Support/Squeakland フォルダと」
+　-->「この場合、スクイークを…」
+　　「もう一つは My Squeak という生で上記の4) で作成されたフォルダのエイリアスです。」
+　-->「もう一つは My Squeak という名前で…」
+
+以上です。
+
+From tako ＠ aquilax.co.jp  Mon Oct 15 09:48:51 2007
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3671] Re: お待たせしました Mac 版 2005J2 です
+Message-ID: <20071015005319.B6AEA9B1F4@1server.aquilax.co.jp>
+
+　高橋＠池袋です。御無沙汰です。
+
+
+> できましたら皆様にテストをお助けいただければとお願いします。
+
+MacOSX 10.3.9 eMac PowerPC G4 1.25G-768Mで
+
+http://squeakland.jp/plugin/installers/SqueakPlugin2005J2-nonAdmin.dmg
+を試しました。へそ曲がりですが管理者権限ユーザで実行。
+
+terminalに不審な挙動がありました。
+
+当方では terminalが常時起動しています(2つのWindow)。
+1.topコマンド
+2.Boinc client(Seti)の command line versionをバックグランド実行、bashに戻っている。
+
+また、「Squeak 3.7.3Beta4jpc」も起動していました。
+
+
+不審な挙動は２つ
+A.「インストールする.command」double clickでterminalにfocusは移動したが
+　scriptは実行されなかった。focusは topが走っているwidowに移動。
+
+→ 第3のterminalを開き、「インストールする.command」を Drag and Drop、
+　　[return]で実行しました。
+
+B. 「ditto: /Volumes/SqueakLand/Prefs: No such file or directory」で停止？。
+　focusは再び topの Windowに移動。
+
+
+　Squeakが自動起動、MySqueakフォルダ、Squeak 3.0アイコンはデスクトップに
+作成され、MySqueakフォルダ内のSqueak起動もＯＫでした。
+
+　さて、いかがいたしましょうか？
+
+
+> ようやく、Mac版2005J2 リリースの準備ができました。
+> （すでに、2005J3の噂も耳にしますが）
+> 遅れましてたいへん申し訳ありません。
+
+　有り難いことです。
+
+ではでは
+
+At 0:16 AM 07.10.13, Tetsuya HAYASHI wrote:
+> みなさん、こんばんは。
+> 林 徹也です。
+> 
+> ようやく、Mac版2005J2 リリースの準備ができました。
+> （すでに、2005J3の噂も耳にしますが）
+> 遅れましてたいへん申し訳ありません。
+> 
+> 今回の Mac版2005J2 の主な特徴としては、
+> 
+> ・Intel Mac にも正式対応（ユニバーサル版）
+> ・ブラウザプラグイン機能の一新
+> ・インストーラ付き
+> 
+> であります。
+> 
+> 特に、最後のインストーラにつきましては、まだ充分なテストが出来ておりません。
+> できましたら皆様にテストをお助けいただければとお願いします。
+> それまでの間はWebページからのリンクは変更しないでおくことにいたします。
+> ダウンロードのURLは以下の通りとなっております。
+> 
+> http://squeakland.jp/plugin/installers/SqueakPlugin2005J2.dmg
+> 
+> ※※　注意点！！（とても重要）　※※
+> これまでのインストールコマンドもそうでしたが、インストールを実行すると、My Squeak フォルダの中身が削除されてしまいます。インストール前に必ずMy Squeakフォルダの中身を別なフォルダにコピーしてバックアップしておいてください。そうでないとせっかく作った作品が無くなってしまいます。
+> この際、フォルダのエイリアスごとコピーしても実体が削除されてしまうので、面倒ですがフォルダの「中身」のファイルをコピーするようご注意ください。
+> 
+> なお、管理者権限の無いユーザでもインストール出来るように別パッケージが用意されてます。
+> （共有マシンで管理者パスワードが分からなかったりする場合のためのものです）
+> 
+> http://squeakland.jp/plugin/installers/SqueakPlugin2005J.dmg
+> 
+> 注意点はこちらも同じです。どなたかお試しいただければとお願いします。
+> 
+> その他トラブルやご質問なども、こちら（squeak-ja）までご連絡ください。
+> 
+> 以上、よろしくお願いします。
+> --
+
+
+
+From hayasaka ＠ pluto.dti.ne.jp  Mon Oct 15 11:33:10 2007
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3672] Seasideについて。
+Message-ID: <000501c80ed3$ba9f0090$020ba8c0@computer>
+
+始めての書き込みです。
+早坂　吉昭と言います。
+
+　いま、Seasideを勉強中ですが、なにか良い日本語か英語の
+チュートリアルは、ありませんか。
+梅澤さんが日本語の本を出して頂けるとありがたいです。
+
+　また、Web ApplicationでRuby on Railsが好評ですが、
+Seasideが、これよりも優れている点を教えて下さい。
+よろしく、お願いします。
+
+早坂　吉昭
+
+
+
+
+From mutoh ＠ openedu.org  Mon Oct 15 16:59:38 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3673] Re: ESUGチラシの日本語訳
+In-Reply-To: <u8x6a8edo.wl%yoshiki@vpri.org>
+References: <0e12c26c6f91710b3b8676348343538b@openedu.org>
+	<200710101309.47684.tomohiro@sra.co.jp>
+	<10462a9b26529a8240512df4bbf7fe75@openedu.org>
+	<u8x6a8edo.wl%yoshiki@vpri.org>
+Message-ID: <b7d9cc5ba24846df9a5ec192bc4280bc@openedu.org>
+
+むとう＠おうちです。
+
+大島さんの修正を入れて、squeak-devでおっしゃっている日本語の本の方も入れて、更新してみました。
+- http://qml.610t.org/squeak/mutoh_20071015.files/flyer.pdf
+
+一回、宙ぶらりんにしているDamien Cassouさんにもメール返しておきます。
+
+On 2007/10/11, at 13:27, Yoshiki Ohshima wrote:
+>> お二人のご意見を参考にさせていただいて、他もできるだけ翻訳調とならないように直してみました。
+>> 	http://qml.610t.org/squeak/mutoh_20071010.files/flyer.pdf
+>> いかがでしょうか?
+>   すばやいですね。ありがとうございます。
+
+すいません、今回はあんまりすばやくなかったですが(^-^;)
+
+> 日本の本やWebサイトを追加する、という
+> のももしかしたら名案かもしれません。
+
+まあ、こちらはsqueak-jaのチラシに入れればいいかなぁと考えてました。
+
+ただ、ESUGのチラシは、余っても別のイベントで配れるように(?)、時間に関わる情報が少ないのですが、OSC 
+Tokyo/fallの時に作ったチラシは、時間ものが一杯だったので、次のイベントには使い回しできないあたりがやらしいのですよね。
+
+チラシにはどんな情報が提供されると、嬉しいんでしょうねぇ。
+# まあ、ダレ向けに作るチラシなのかというのも重要なのでしょうが…
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Oct 15 20:45:42 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3674] Re: Seasideについて。
+In-Reply-To: <000501c80ed3$ba9f0090$020ba8c0@computer>
+References: <000501c80ed3$ba9f0090$020ba8c0@computer>
+Message-ID: <JF200710152045425.1425281@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 始めての書き込みです。
+> 早坂　吉昭と言います。
+> 
+> 　いま、Seasideを勉強中ですが、なにか良い日本語か英語の
+> チュートリアルは、ありませんか。
+> 梅澤さんが日本語の本を出して頂けるとありがたいです。
+
+現状ではSeasideJOnePlusに含まれるチュートリアルをお勧めします。
+http://swikis.ddo.jp/umejava/41
+
+中身はこれです。
+ftp://swikis.ddo.jp/SeasideJ/lesson/SeasideTutorial20070126.pdf
+
+日本語の本はいつか出したいとは思っているのですが、1年以上はかかる
+作業なので、なかなか機会を見つけられません。
+
+> 　また、Web ApplicationでRuby on Railsが好評ですが、
+> Seasideが、これよりも優れている点を教えて下さい。
+> よろしく、お願いします。
+
+Seasideは継続を使って状態の管理を行ってくれるので、複雑な画面の
+遷移を持ったWebアプリケーションに向いていると言えるでしょう。
+
+一方RailsはRDBを前提としており、割と単純なデータ参照・更新系の
+アプリケーションを手早く作成するのに最適と思います。
+
+既存のWebアプリケーションフレームワークになれた人はおそらく
+Railsの方が入りやすいと思います。今までのWebアプリケーション開発
+の枠組みをあまり変化させずに、便利さを追求したものといえるかも
+しれません。
+
+Seasideの場合、Webアプリケーションならではの変な約束ごとが
+なく、あたかも通常のGUIアプリケーションを書いているかのように
+開発できます。GUIアプリケーションになれた人であればうってつけですが、
+Webアプリばかり書いてきたという人にとっては、かえって閾が高く
+なってしまうのかもしれません。私個人としてはSeasideの書き方は
+長年親しんだMVCそのものであり、非常に気に入っています。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Mon Oct 15 21:05:35 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3675] Re: Seaside について。
+In-Reply-To: <JF200710152045425.1425281@mars.dti.ne.jp>
+References: <000501c80ed3$ba9f0090$020ba8c0@computer>
+	<JF200710152045425.1425281@mars.dti.ne.jp>
+Message-ID: <4713578F91.87A5ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 15 Oct 2007 20:45:42 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>> 　いま、Seasideを勉強中ですが、なにか良い日本語か英語の
+>> チュートリアルは、ありませんか。
+>> 梅澤さんが日本語の本を出して頂けるとありがたいです。
+>
+>現状ではSeasideJOnePlusに含まれるチュートリアルをお勧めします。
+>http://swikis.ddo.jp/umejava/41
+
+みねこあさんの「Seaside チュートリアル 」はどうでしょうか。
+
+http://d.hatena.ne.jp/minekoa/20070910/1189431069
+
+もとになった英語のものも紹介されています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From newapplesho ＠ gmail.com  Tue Oct 16 00:13:30 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3676] Re: Seasideについて。
+In-Reply-To: <000501c80ed3$ba9f0090$020ba8c0@computer>
+References: <000501c80ed3$ba9f0090$020ba8c0@computer>
+Message-ID: <07D8B7F7-1EBB-4405-85DE-1AD61496A2AD@gmail.com>
+
+こんばんは．
+吉田　翔です．
+
+僕は現在大学生で卒業研究をSeasideを使って行っているのです 
+が，Seasideを始めるときに少し調べたSeasideのサイトを 
+紹介します．
+もしよかったら参考にしてみてください．
+
+Lukasさんが書いているSeasideのTutorail
+http://www.lukas-renggli.ch/smalltalk/seaside
+
+Seasideの論文？ (僕は全部読んでいませんが・・・)
+http://www.iam.unibe.ch/~scg/Archive/Papers/Duca04eSeaside.pdf
+
+Seasideの本家サイトFAQ
+http://www.seaside.st/documentation/faq-old? 
+15&_k=VczzFRDw&_n&_s=DVbJmkXmcSzCnLbF
+
+あと sumimさんが以前RailsとSeasideについて書い 
+ている記事
+http://d.hatena.ne.jp/sumim/20070123/p2
+
+
+あと梅澤さんが公開なさっている，SeasideJOnePlusは 
+Seasideを勉強するときにすごく役立ったので，ぜひ読んでみてくださ 
+い．
+またSeaside自体にもTestページとかがあり，そこでもい 
+ろいろ勉強できます．
+
+僕はかなり英語が苦手なので，ほとんど英語のサイトは最後まで読めて 
+いません．
+でもSeasideを素人なりに探索しながらそれなりな物は作れてい 
+ます．
+
+個人的な意見だとRailsは作成ルールが厳しい気がしました． 
+(僕が下手だけかもしれませんが・・・)
+
+
+Seasideの話だったので，思わず投稿してしまいました．
+
+
+On 2007/10/15, at 11:33, 早坂　吉昭 wrote:
+
+> 始めての書き込みです。
+> 早坂　吉昭と言います。
+>
+> 　いま、Seasideを勉強中ですが、なにか良い日本語か英語の
+> チュートリアルは、ありませんか。
+> 梅澤さんが日本語の本を出して頂けるとありがたいです。
+>
+> 　また、Web ApplicationでRuby on Railsが好評ですが、
+> Seasideが、これよりも優れている点を教えて下さい。
+> よろしく、お願いします。
+>
+> 早坂　吉昭
+>
+>
+>
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From tak ＠ metatoys.org  Tue Oct 16 02:24:10 2007
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3677] PC 版 2005J3
+Message-ID: <4713A23A.4080906@metatoys.org>
+
+山宮です。PC 版 200J3 インストーラを以下にアップしました。
+http://languagegame.org/pub/sqland2005j3/SqueakPlugin2005J3.exe
+
+自分でインストーラを作りたい方は、
+http://languagegame.org/pub/sqland2005j3/ に必要なファイルを纏めてある
+ので参考にして下さい。
+
+SuperSwiki の設定は、阿部さんの指示通り以下のようにしました。
+
+# prefs/knownServers/squeakland.jp.super
+name:	squeakland.jp/super
+directory:	/super/SuperSwikiProj
+type:	bss
+server:	squeakland.jp
+acceptsUploads:	false
+encodingName:	shift_jis
+
+# prefs/knownServers/squeakland.jp.super2
+name:	squeakland.jp/super2
+directory:	/super/SuperSwikiProj
+type:	bss
+server:	blueplane.jp:9090
+acceptsUploads:	false
+
+super2 の方が表示順が下になってしまうのがイマイチです。。。でもこれで 
+いよいよ SuperSwiki2 がメジャーになりますね。
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003610.html 
+の件など、まだ変更があると思いますがとりあえず現時点版を公開しました。
+
+
+From tetha ＠ st.rim.or.jp  Tue Oct 16 08:29:10 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3678] Re: お待たせしました Mac 版 2005J2 です
+In-Reply-To: <20071015005319.B6AEA9B1F4@1server.aquilax.co.jp>
+References: <20071015005319.B6AEA9B1F4@1server.aquilax.co.jp>
+Message-ID: <0ABE2F33-4F55-4573-B831-85C37F9DDDA5@st.rim.or.jp>
+
+高橋さん。
+貴重なケースの報告ありがとうございます。
+林です。
+
+ちょっと今すぐ対応がとれない状況にあるのですが、2点ほど思い当たることがあります。
+1点は、Squeak を起動した状態でインストールは失敗してしまう可能性があります。
+もう1点は、こちらでのパッケージングのミスです。仮想ボリューム名を SqueakLand にすべきところを Squeakland にしてしまった？
+
+後者についてはこちらで対応しなければならないので、もうしばらくお待ちください。
+
+また、近々、パッケージのビルドセットもアップロードしておきます。
+--
+
+On 2007/10/15, at 9:48, Kouji takahashi wrote:
+
+> 　高橋＠池袋です。御無沙汰です。
+>
+>
+>> できましたら皆様にテストをお助けいただければとお願いします。
+>
+> MacOSX 10.3.9 eMac PowerPC G4 1.25G-768Mで
+>
+> http://squeakland.jp/plugin/installers/SqueakPlugin2005J2-nonAdmin.dmg
+> を試しました。へそ曲がりですが管理者権限ユーザで実行。
+>
+> terminalに不審な挙動がありました。
+>
+> 当方では terminalが常時起動しています(2つのWindow)。
+> 1.topコマンド
+> 2.Boinc client(Seti)の command line versionをバックグランド実行、bashに戻っている。
+>
+> また、「Squeak 3.7.3Beta4jpc」も起動していました。
+>
+>
+> 不審な挙動は２つ
+> A.「インストールする.command」double clickでterminalにfocusは移動したが
+> 　scriptは実行されなかった。focusは topが走っているwidowに移動。
+>
+> → 第3のterminalを開き、「インストールする.command」を Drag and Drop、
+> 　　[return]で実行しました。
+>
+> B. 「ditto: /Volumes/SqueakLand/Prefs: No such file or directory」で停止？。
+> 　focusは再び topの Windowに移動。
+>
+>
+> 　Squeakが自動起動、MySqueakフォルダ、Squeak 3.0アイコンはデスクトップに
+> 作成され、MySqueakフォルダ内のSqueak起動もＯＫでした。
+>
+> 　さて、いかがいたしましょうか？
+>
+>
+>> ようやく、Mac版2005J2 リリースの準備ができました。
+>> （すでに、2005J3の噂も耳にしますが）
+>> 遅れましてたいへん申し訳ありません。
+>
+> 　有り難いことです。
+>
+> ではでは
+>
+> At 0:16 AM 07.10.13, Tetsuya HAYASHI wrote:
+>> みなさん、こんばんは。
+>> 林 徹也です。
+>>
+>> ようやく、Mac版2005J2 リリースの準備ができました。
+>> （すでに、2005J3の噂も耳にしますが）
+>> 遅れましてたいへん申し訳ありません。
+>>
+>> 今回の Mac版2005J2 の主な特徴としては、
+>>
+>> ・Intel Mac にも正式対応（ユニバーサル版）
+>> ・ブラウザプラグイン機能の一新
+>> ・インストーラ付き
+>>
+>> であります。
+>>
+>> 特に、最後のインストーラにつきましては、まだ充分なテストが出来ておりません。
+>> できましたら皆様にテストをお助けいただければとお願いします。
+>> それまでの間はWebページからのリンクは変更しないでおくことにいたします。
+>> ダウンロードのURLは以下の通りとなっております。
+>>
+>> http://squeakland.jp/plugin/installers/SqueakPlugin2005J2.dmg
+>>
+>> ※※　注意点！！（とても重要）　※※
+>> これまでのインストールコマンドもそうでしたが、インストールを実行すると、My Squeak フォルダの中身が削除されてしまいます。インストール前に必ずMy Squeakフォルダの中身を別なフォルダにコピーしてバックアップしておいてください。そうでないとせっかく作った作品が無くなってしまいます。
+>> この際、フォルダのエイリアスごとコピーしても実体が削除されてしまうので、面倒ですがフォルダの「中身」のファイルをコピーするようご注意ください。
+>>
+>> なお、管理者権限の無いユーザでもインストール出来るように別パッケージが用意されてます。
+>> （共有マシンで管理者パスワードが分からなかったりする場合のためのものです）
+>>
+>> http://squeakland.jp/plugin/installers/SqueakPlugin2005J.dmg
+>>
+>> 注意点はこちらも同じです。どなたかお試しいただければとお願いします。
+>>
+>> その他トラブルやご質問なども、こちら（squeak-ja）までご連絡ください。
+>>
+>> 以上、よろしくお願いします。
+>> --
+>
+>
+>
+>
+
+
+From abee ＠ squeakland.jp  Tue Oct 16 12:18:15 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3679] Re: PC 版  2005J3
+In-Reply-To: <4713A23A.4080906@metatoys.org>
+References: <4713A23A.4080906@metatoys.org>
+Message-ID: <47142D772F0.0E2BABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 15 Oct 2007 10:24:10 -0700
+Takashi Yamamiya <tak@metatoys.org> wrote:
+>山宮です。PC 版 200J3 インストーラを以下にアップしました。
+>http://languagegame.org/pub/sqland2005j3/SqueakPlugin2005J3.exe
+
+ありがとうございます。
+Windows XP SP2でインストールでき、superとsuper2にアクセスできることを確認
+しました。
+
+>super2 の方が表示順が下になってしまうのがイマイチです。。。でもこれで 
+>いよいよ SuperSwiki2 がメジャーになりますね。
+
+そうですね。いけると思います。
+
+>http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003610.html 
+>の件など、まだ変更があると思いますがとりあえず現時点版を公開しました。
+
+たしかにずるずる延びるのは避けたいところですが、タイミング的に林さんの
+Mac版のリリースに合わせると良いように思うので、同期を取りたいと思います。
+
+# アップデートストリームの件は大島さんからレスがないのが気になります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Tue Oct 16 12:26:16 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3680] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <JX200710141607108.11779718@mars.dti.ne.jp>
+References: <6544a1da0710132346g5ef5108auf6e40a6661afacc5@mail.gmail.com>
+	<JX200710141607108.11779718@mars.dti.ne.jp>
+Message-ID: <47142F582.0E2CABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+J3(たぶんどれも同じ)の「探す」で、squeakland/super2を見たときに、ファイル
+サイズが表示されるべきところにバージョン番号が見えているようです。
+サーバ側の問題だと思うのですが、いかがでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From y ＠ sailweb.net  Tue Oct 16 12:45:54 2007
+From: y ＠ sailweb.net (y@sailweb.net)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3681] [OLPC]Squeakのページ訳終わりました
+Message-ID: <7f3aeb4c0710152045i3684ee6agc37fb91681c7338e@mail.gmail.com>
+
+どもSpikyです。
+
+先日よりMLに参加させていただいているものです。
+
+OLPCサイトの翻訳ボランティアをやっているものですが、
+Squeakのページの訳が終わりました。
+
+　　http://wiki.laptop.org/go/Squeak/lang-ja
+
+ここんところ忙しくてわずか１ページに数週間もかかって
+しまいました（実質作業は数十分程度なのですが、汗）
+
+引き続きEtoysの訳に移ります。
+
+　　http://wiki.laptop.org/go/Etoys/lang-ja
+
+なおこれまでと同様、mixiのOLPCコミュでも進捗を報告してます。http://mixi.jp/view_community.pl?id=2456985
+
+OLPCにご興味のある方、自分でも何か手伝えないかと
+思っておられる方がおられましたら、是非サイトの翻訳作業に
+ご協力をお願いします。
+
+　OLPC wikiサイト：
+　http://wiki.laptop.org/
+　日本語訳用テンプレート作成済みリスト：
+　http://wiki.laptop.org/go/User:Spiky
+　（当方ページの下のToDoリストにリストをあげています）
+
+訳をするにあたりテンプレートを作る必要があるのですが、
+ちょっとめんどくさい作業なので、日本語訳の無いページで
+テンプレートの無いページは、気が付き次第、なるべく
+テンプレートだけ先行して作るようにしていますが、
+うでに覚えのある方は、ご自身でテンプレートを作って
+訳をすることも、もちろん可能です。
+
+ご協力おねがいしまーす(^_^)/
+
+From hayasaka ＠ pluto.dti.ne.jp  Tue Oct 16 14:04:09 2007
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3682] ありがとうございました。
+Message-ID: <000a01c80fb1$fc254c70$020ba8c0@computer>
+
+早坂です。
+
+　梅澤様をはじめ、阿部様、吉田様から
+Seasideの情報を頂き、ありがとうございました。
+　私の知らないチュートリアルサイトも教えて
+頂いたので、順次、調べて行きたいと思います。
+
+　また、梅澤様のRuby on Railsとの比較は、
+大変参考になりました。
+
+早坂　吉昭
+
+From miyasaka ＠ iris.dti.ne.jp  Tue Oct 16 17:26:02 2007
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3683] Re: 【サイエンスアゴラ 2007 】スクイーク体験ワークショップ
+In-Reply-To: <47109446123.4359ABEE@smtp.nifty.com>
+References: <47109446123.4359ABEE@smtp.nifty.com>
+Message-ID: <4b24f0d0710160126n4914c01cy5df014f7d13d222e@mail.gmail.com>
+
+(この記事は、投稿者本人の希望により、管理者が公式アーカイブから削除しました。)
+
+From miyasaka ＠ iris.dti.ne.jp  Tue Oct 16 17:35:15 2007
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3684] Re: 【サイエンスアゴラ 2007 】スクイーク体験ワークショップ
+In-Reply-To: <4b24f0d0710160126n4914c01cy5df014f7d13d222e@mail.gmail.com>
+References: <47109446123.4359ABEE@smtp.nifty.com>
+	<4b24f0d0710160126n4914c01cy5df014f7d13d222e@mail.gmail.com>
+Message-ID: <4b24f0d0710160135q1f41656cj98337092bb0f2c@mail.gmail.com>
+
+squeak-jaの皆様
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+直前に送信したメールですが、阿部さん個人に送るつもりで書いたのですが、間違ってsqueak-jaが宛先に入っておりました。
+メールの誤送信です。
+たいへん失礼いたしました。
+
+サイエンスアゴラ2007の件、近日中に参加者募集のお知らせを改めてご連絡させていただきますので、いましばらくおまちください。
+
+取り急ぎお詫びのご連絡まで。
+よろしくお願いいたします。
+
+--
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学大学院
+デジタルコンテンツ研究科　研究員
+---------------------------------------------
+
+
+
+On 10/16/07, Toshio Miyasaka <miyasaka@iris.dti.ne.jp> wrote:
+> 阿部さん
+>
+> 最近squeak-jaをチェックしてなくて、いまこのメールに気がつきました。
+> 昨日お話したとおり、内容を初心者向けと経験者向けに分けますね。
+> あとで、私のほうから内容の訂正と参加者募集のお知らせをしておきますので。
+>
+> ちなみに、細かいことですが、表記は「みんなでたのしくスクイーク」ですので、念の為。＾＾
+> （「楽しく」ではなく「たのしく」）
+>
+> あと、正確には、「主催」がみんなでたのしくスクイーク、「協力」がＨＰＳＳＫになります。（ステークホルダーのバランスは正確に表記したほうがいいかも）
+>
+> ではでは！
+>
+> 宮坂
+>
+> On 10/13/07, Kazuhiro ABE <abee@squeakland.jp> wrote:
+> > 阿部@新百合です。
+> >
+> > 東京国際交流館で開催されるサイエンスアゴラ2007の一環として、みんなで楽し
+> > くスクイークの協力により、スクイーク体験ワークショップを11月25日の13:00〜
+> > 16:30に開催します。
+> >
+> > http://mts-j.hiho.jp/2007/10/agora2007.html
+> >
+> > OLPCの活動について、XO(100ドルノートPC)のハードウェアに関する情報は多いの
+> > ですが、それに搭載されるソフトウェアや、それを使ってどのような教育が行わ
+> > れるのかについては、ほとんど知られていません。
+> >
+> > 今回のワークショップでは、OLPC用に改良されたSqueak Etoysを使って、子供た
+> > ちが行う予定のワークショップを参加者の皆さんに体験してもらいます(演習には
+> > PCを使いますが、デモ用に実機も1台用意します)。
+> >
+> > # このカリキュラムは、先に宮坂さんから案内のあったカリキュラム検討会で作
+> > # られたものを用いる予定です。
+> > # http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003625.html
+> >
+> > 今回は、前提を省略していきなり問題の核心に入るため、定員を20名に絞り、参
+> > 加資格もEtoys経験者に限定しています(見学は可能です)。絵に描いた車を走らせ
+> > る以外に何ができるのか、Etoysが本当に狙っているものはなにかなどを知ること
+> > で、今後の活動に生かしていただければと思います。
+> >
+> >  //abee
+> > --
+> > 阿部 和広  EMAIL abee@squeakland.jp
+> >
+>
+>
+
+From umejava ＠ mars.dti.ne.jp  Tue Oct 16 18:35:58 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:54 2007
+Subject: [Squeak-ja: 3685] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <47142F582.0E2CABEE@smtp.nifty.com>
+References: <6544a1da0710132346g5ef5108auf6e40a6661afacc5@mail.gmail.com>
+	<JX200710141607108.11779718@mars.dti.ne.jp>
+	<47142F582.0E2CABEE@smtp.nifty.com>
+Message-ID: <JF200710161835585.1452765@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+> 阿部@新百合です。
+> 
+> J3(たぶんどれも同じ)の「探す」で、squeakland/super2を見たときに、ファイル
+> サイズが表示されるべきところにバージョン番号が見えているようです。
+> サーバ側の問題だと思うのですが、いかがでしょうか。
+> 
+
+これはSuperSwiki2の仕様といいますか、そもそもプロジェクトの保存にファイルを
+使っていませんので、ファイルサイズの代わりにバージョンを出しているのです。
+
+ファイルサイズを出すにはデータベースからプロジェクトのバイナリデータを
+取り出さなればなりません。プロジェクトリストの表示でそれを行うと、結局
+全てのプロジェクトをDBから取り出すことになってしまいますので、なかなか
+パフォーマンス的に大変なことになります。
+
+アップロード時に得たファイルサイズの情報を別途DBに入れておけば良いのですが、
+手間の割には、あまり必要ない情報なのではないか、ということで現状のような
+作りになっています。(必要だ、ということであればなんとかします)
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Tue Oct 16 19:15:47 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3686] Re: SuperSwiki2 のバージョンアップ
+In-Reply-To: <JF200710161835585.1452765@mars.dti.ne.jp>
+References: <47142F582.0E2CABEE@smtp.nifty.com>
+	<JF200710161835585.1452765@mars.dti.ne.jp>
+Message-ID: <47148F53E.9612ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+了解しました。どうしてもと言うことは無いです。いちおう、サイズ順でソート
+する機能も合ったりしますが、必須ではありません。
+これを愛用している人はたぶんいないですよね。バージョン順というのも面白い
+かもしれませんし。
+
+On Tue, 16 Oct 2007 18:35:58 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>> J3(たぶんどれも同じ)の「探す」で、squeakland/super2を見たときに、ファイル
+>> サイズが表示されるべきところにバージョン番号が見えているようです。
+>> サーバ側の問題だと思うのですが、いかがでしょうか。
+>> 
+>
+>これはSuperSwiki2の仕様といいますか、そもそもプロジェクトの保存にファイルを
+>使っていませんので、ファイルサイズの代わりにバージョンを出しているのです。
+>
+>ファイルサイズを出すにはデータベースからプロジェクトのバイナリデータを
+>取り出さなればなりません。プロジェクトリストの表示でそれを行うと、結局
+>全てのプロジェクトをDBから取り出すことになってしまいますので、なかなか
+>パフォーマンス的に大変なことになります。
+>
+>アップロード時に得たファイルサイズの情報を別途DBに入れておけば良いのですが、
+>手間の割には、あまり必要ない情報なのではないか、ということで現状のような
+>作りになっています。(必要だ、ということであればなんとかします)
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tetha ＠ st.rim.or.jp  Wed Oct 17 07:51:38 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3687] Re: PC 版  2005J3
+In-Reply-To: <47142D772F0.0E2BABEE@smtp.nifty.com>
+References: <4713A23A.4080906@metatoys.org>
+	<47142D772F0.0E2BABEE@smtp.nifty.com>
+Message-ID: <F28B3A01-6FCE-4285-B4ED-BF3039E40651@st.rim.or.jp>
+
+林 徹也です。どうも。
+
+On 2007/10/16, at 12:18, Kazuhiro ABE wrote:
+
+>> http://www.smalltalk.jp/pipermail/squeak-ja/2007-September/003610.html 
+>> の件など、まだ変更があると思いますがとりあえず現時点版を公開しました。
+>
+> たしかにずるずる延びるのは避けたいところですが、タイミング的に林さんの
+> Mac版のリリースに合わせると良いように思うので、同期を取りたいと思います。
+
+直近、できれば今週末に作業したいと思います
+なお、先日のパッケージを作成したビルドセットを以下の URL でアップロードし
+ました。
+手順書は JMM さんのものです。これに日本語リソースを追加すればパッケージを
+作成することが出来ます。興味がおありの方はご覧ください（アイデア／ご意見
+募集中です）。
+
+http://squeakland.jp/plugin/installers/Oct2005J2installerwork.zip
+
+では。
+--
+
+
+From newapplesho ＠ gmail.com  Thu Oct 18 22:30:11 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3688] MacのVMでheadlessを使うには
+Message-ID: <F2191BFF-CF7E-4AA6-9C2F-5A2FEA8D61A0@gmail.com>
+
+吉田　翔です．
+
+初歩的な質問ですみません．
+MacのVMでheadlessモードを使う際には Unix用のVM 
+(Darwin ?)を使って行えばいいのでしょうか．
+
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From abee ＠ squeakland.jp  Thu Oct 18 22:42:53 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3689] 保存書庫の不具合について
+Message-ID: <471762DD113.3A4AABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+現在、保存書庫に不具合が発生しています。
+具体的には、
+
+2007年 10月 16日 (火) 12:30:19 JST 
+[Squeak-ja: 3680] Re: SuperSwiki2 のバージョンアップ   Kazuhiro ABE
+
+より後の投稿がアーカイブされていません。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/date.html#end
+
+メールの配信には問題ありません。原因については現在調査中です。
+ご迷惑をお掛けして申し訳ありません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From pikateu_14 ＠ hotmail.com  Thu Oct 18 23:10:31 2007
+From: pikateu_14 ＠ hotmail.com (itikawa aiko)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3690] リファレンスブック日本語版
+Message-ID: <BAY102-W83023314ABB41F8A4E5E0E29E0@phx.gbl>
+
+
+はじめまして
+いちかわあいこです。
+
+ＭＬデビューします。
+
+SuperSwiki2に暫定版リファレンスブック日本語版2.0をアップしました。
+Squeakfestで発表した英語版の日本語化です。
+まだ、全部日本語にできていないのですが、たぶん・・・来週には・・・
+
+こんなスクリプト例がほしいなどありましたら、アドバイスを宜しくお願いします。
+_________________________________________________________________
+【MSNビデオ】超貴重！驚きの大物対談が実現。作家 村上龍が話題のあの人に迫る
+http://video.msn.co.jp/rvr/default.htm
+
+From tetha ＠ st.rim.or.jp  Fri Oct 19 11:09:22 2007
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3691] Re: MacのVMでheadlessを使うには
+In-Reply-To: <F2191BFF-CF7E-4AA6-9C2F-5A2FEA8D61A0@gmail.com>
+References: <F2191BFF-CF7E-4AA6-9C2F-5A2FEA8D61A0@gmail.com>
+Message-ID: <ABB5200F-C0A7-4FDA-8A4B-6D39922E244E@st.rim.or.jp>
+
+吉田さん、こんにちは。
+林徹也です。
+
+On 2007/10/18, at 22:30, Sho Yoshida wrote:
+
+> MacのVMでheadlessモードを使う際には Unix用のVM(Darwin ?)を使って行えばいいのでしょうか．
+
+バージョン3.8.13b4U 以降でしたら Mac Carbon 版でも headless モードが使え
+るみたいです。
+
+VM の実行ファイルはパッケージの奥に入っていてそれを指定するのですが、
+
+VM のパッケージ -> Contents -> MacOS -> Squeak VM Opt
+                                       ↑これがVMの実行ファイル
+
+コマンドラインからですとこんな感じになるようです。
+
+"<VMまでのパス名>/3.8.18beta1U.app/Contents/MacOS/Squeak\ VM\ Opt" -headless <イメージファイルパス名>
+
+--
+
+
+From newapplesho ＠ gmail.com  Fri Oct 19 11:59:04 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3692] Re: MacのVMでheadlessを使うには
+In-Reply-To: <ABB5200F-C0A7-4FDA-8A4B-6D39922E244E@st.rim.or.jp>
+References: <F2191BFF-CF7E-4AA6-9C2F-5A2FEA8D61A0@gmail.com>
+	<ABB5200F-C0A7-4FDA-8A4B-6D39922E244E@st.rim.or.jp>
+Message-ID: <34367A0C-5C49-4424-A9C9-9D6503BE4A0B@gmail.com>
+
+吉田です．
+
+林さん，ありがとうございます．
+headlessモードがきちんと使えました．
+
+Mac版のVMはいろいろ種類があって大変そうですね．
+
+
+On 2007/10/19, at 11:09, Tetsuya HAYASHI wrote:
+
+> 吉田さん、こんにちは。
+> 林徹也です。
+>
+> On 2007/10/18, at 22:30, Sho Yoshida wrote:
+>
+>> MacのVMでheadlessモードを使う際には Unix用の 
+>> VM(Darwin ?)を使って行えばいいのでしょうか．
+>
+> バージョン3.8.13b4U 以降でしたら Mac Carbon 版でも  
+> headless モードが使え
+> るみたいです。
+>
+> VM の実行ファイルはパッケージの奥に入っていてそれを指定するの 
+> ですが、
+>
+> VM のパッケージ -> Contents -> MacOS -> Squeak VM Opt
+>                                        ↑これがVMの実行 
+> ファイル
+>
+> コマンドラインからですとこんな感じになるようです。
+>
+> "<VMまでのパス名>/3.8.18beta1U.app/Contents/MacOS/Squeak\ VM\  
+> Opt" -headless <イメージファイルパス名>
+>
+> --
+>
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sat Oct 20 10:29:53 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3693] 改行コードの使い方
+Message-ID: <CBEIKPMBLLMDEOEJIHCCAEEFCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+久保　道です。
+またまた初歩的な質問で恐縮ですが、
+ご教示下さい。
+  writeStream := FileStream newFileNamed:'test.txt'.
+   writeStream nextPutAll:'改行コードを探す。'.
+   writeStream cr.
+   writeStream nextPutAll:'見つからない。'.
+  Transcript show: writeStream contents.
+  writeStream close.
+と書くとTranscriptには改行されて表示されますが、
+test.txtの内容には改行が反映されません。
+これは恐らくUFT-8の関係かと思うのですが、
+具体的にtest.txtで表示するにはどうすれば
+よいのでしょうか。
+同様に、ｔａｂとspaceについても
+ご教示いただければありがたいのですが。
+
+From umejava ＠ mars.dti.ne.jp  Sat Oct 20 23:39:57 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3694] Re: 改行コードの使い方
+In-Reply-To: <CBEIKPMBLLMDEOEJIHCCAEEFCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <CBEIKPMBLLMDEOEJIHCCAEEFCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <JZ200710202339574.1464218@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+おそらく改行コードがCRで書かれているだけと思います。
+
+ご存じのように改行コードはWindowsでCRLF、MacでCR、LinuxでLFです。
+SqueakはMac出身という歴史的な経緯から改行はCRを使うようになっています。
+
+あらかじめ
+writeStream wantsLineEndConversion: true.
+としておくと、そのプラットフォームに即した改行コードに変換されて
+ファイル出力されます。
+
+ではでは。
+
+"久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 久保　道です。
+> またまた初歩的な質問で恐縮ですが、
+> ご教示下さい。
+>   writeStream := FileStream newFileNamed:'test.txt'.
+>    writeStream nextPutAll:'改行コードを探す。'.
+>    writeStream cr.
+>    writeStream nextPutAll:'見つからない。'.
+>   Transcript show: writeStream contents.
+>   writeStream close.
+> と書くとTranscriptには改行されて表示されますが、
+> test.txtの内容には改行が反映されません。
+> これは恐らくUFT-8の関係かと思うのですが、
+> 具体的にtest.txtで表示するにはどうすれば
+> よいのでしょうか。
+> 同様に、ｔａｂとspaceについても
+> ご教示いただければありがたいのですが。
+
+---
+[:masashi | ^umezawa]
+
+From ykoubo2007 ＠ yengawa.com  Sun Oct 21 00:11:55 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3695] NetMorphの地図
+Message-ID: <20071020235950.5988.YKOUBO2007@yengawa.com>
+
+横川です。
+多摩美術大学のゼミでNetMorphを使って共同作品を作る計画があります。
+そこでNetMorphの地図について質問があります。
+
+いま http://swikis.ddo.jp/NetMorph/10 からイメージをダウンロードして、隣
+組を作ってひとつのPC上で接続確認できたところです。
+
+地図をループさせるにはどうすればよいのですか?
+左へ行ったものが右端から出てくるという具合にしたいです。
+
+それから、サーバ設定のグリッド1,2,3という設定の意味と使い方がわかりませ
+ん。デフォルトでそれぞれ2@3、3@3、2@3となっていましたが、これはどういう
+意味なのでしょうか?
+
+
+NetMorphチームの方々、よろしくお願いします。
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From abee ＠ squeakland.jp  Sun Oct 21 02:05:53 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3696] Re: リファレンスブック日本語版
+In-Reply-To: <BAY102-W83023314ABB41F8A4E5E0E29E0@phx.gbl>
+References: <BAY102-W83023314ABB41F8A4E5E0E29E0@phx.gbl>
+Message-ID: <471A3571279.4B5CABEE@smtp.nifty.com>
+
+阿部@新百合です。
+ご無沙汰しています。
+
+On Thu, 18 Oct 2007 23:10:31 +0900
+itikawa aiko <pikateu_14@hotmail.com> wrote:
+>ＭＬデビューします。
+
+お名前は何度も出ていたのですが、ついにご本人の登場ですね。
+
+>SuperSwiki2に暫定版リファレンスブック日本語版2.0をアップしました。
+>Squeakfestで発表した英語版の日本語化です。
+>まだ、全部日本語にできていないのですが、たぶん・・・来週には・・・
+
+これですね。
+
+http://squeakland.jp/seaside/SBSuperSwiki/aae008c9-60ef-47e0-bd4f-faab8be87141
+
+すばらしいです。
+
+>こんなスクリプト例がほしいなどありましたら、アドバイスを宜しくお願いします。
+
+リファレンスだから当たり前なのですが、たとえば「動かす」の「三角形を描く」
+で「（３６０÷ｎ）の値を回転量に入れれば、ｎ角形が描けます」とあるのはい
+きなりネタバレという気がしなくもありません。
+ネタバレ注意と言うか、ちょっと考えさせる間があると嬉しいかもしれません。
+
+あと、セカチョーと書いてみるテスト。
+それから、手間がかかりそうですが、OLPC版とかどうでしょう。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sun Oct 21 02:12:01 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3697] Re: [OLPC]Squeak のページ訳終わりました
+In-Reply-To: <7f3aeb4c0710152045i3684ee6agc37fb91681c7338e@mail.gmail.com>
+References: <7f3aeb4c0710152045i3684ee6agc37fb91681c7338e@mail.gmail.com>
+Message-ID: <471A36E1282.4B5DABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 16 Oct 2007 12:45:54 +0900
+y@sailweb.net wrote:
+>OLPCサイトの翻訳ボランティアをやっているものですが、
+>Squeakのページの訳が終わりました。
+>
+>　　http://wiki.laptop.org/go/Squeak/lang-ja
+
+拝見して、すこし変えてみました。
+
+# このページは原文にかなり難ありですね。Squeak愛が感じられない。
+# どなたか直されませんか。
+
+>ここんところ忙しくてわずか１ページに数週間もかかって
+>しまいました（実質作業は数十分程度なのですが、汗）
+>
+>引き続きEtoysの訳に移ります。
+>
+>　　http://wiki.laptop.org/go/Etoys/lang-ja
+
+いつもありがとうございます。
+
+>なおこれまでと同様、mixiのOLPCコミュでも進捗を報告してます。http://mixi.jp/view_community.pl?id=2456985
+>
+>OLPCにご興味のある方、自分でも何か手伝えないかと
+>思っておられる方がおられましたら、是非サイトの翻訳作業に
+>ご協力をお願いします。
+>
+>　OLPC wikiサイト：
+>　http://wiki.laptop.org/
+>　日本語訳用テンプレート作成済みリスト：
+>　http://wiki.laptop.org/go/User:Spiky
+>　（当方ページの下のToDoリストにリストをあげています）
+
+私からもぜひご協力をお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 21 10:10:53 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3698] Re: NetMorphの地図
+In-Reply-To: <20071020235950.5988.YKOUBO2007@yengawa.com>
+References: <20071020235950.5988.YKOUBO2007@yengawa.com>
+Message-ID: <JB200710211010534.2890359@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ループの機能は残念ながらありません。NetMorphを多少書き換えないといけない
+でしょう。
+
+グリッドの設定は、班での共有、教室内での共有、などの入れ子のグループを
+意識したものです。
+
+具体的には、2@3、3@3であれば、2@3で並んだ班がまずつくられ、それぞれの班が
+3@3で並んでいくことになります。
+
+大きなグリッドの中で自動でイメージを並べていくときに、ばらばらに散らばる
+よりは、小さな島を形成していった方が、お互いにつながっていて便利、という
+ことです。手動でレイアウトを決める場合には特に気にしなくとも良いと思います。
+
+また、イメージ数が多くなると、自動サーバでは動作が不安定になりますので、
+サーバ固定で、6程度のイメージで行うのが現状ではお勧めです。
+
+Koji Yokokawa <ykoubo2007@yengawa.com> wrote:
+> 横川です。
+> 多摩美術大学のゼミでNetMorphを使って共同作品を作る計画があります。
+> そこでNetMorphの地図について質問があります。
+> 
+> いま http://swikis.ddo.jp/NetMorph/10 からイメージをダウンロードして、隣
+> 組を作ってひとつのPC上で接続確認できたところです。
+> 
+> 地図をループさせるにはどうすればよいのですか?
+> 左へ行ったものが右端から出てくるという具合にしたいです。
+> 
+> それから、サーバ設定のグリッド1,2,3という設定の意味と使い方がわかりませ
+> ん。デフォルトでそれぞれ2@3、3@3、2@3となっていましたが、これはどういう
+> 意味なのでしょうか?
+> 
+> 
+> NetMorphチームの方々、よろしくお願いします。
+> 
+> -- !
+> Koji Yokokawa <ykoubo2007@yengawa.com>
+>     http://www.yengawa.com/
+>     ^self new!
+
+---
+[:masashi | ^umezawa]
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sun Oct 21 10:49:38 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3699] Re: 改行コードの使い方
+In-Reply-To: <JZ200710202339574.1464218@mars.dti.ne.jp>
+Message-ID: <200710210148.l9L1mNYH018006@proxy2.aams.jp>
+
+梅澤さん
+久保です。
+いつも早々にお返事をいただいて、
+ありがとうございます。
+さっそく試してみました。
+これで、相当たくさんのテキストで書いたリストを
+Squeak上で引っ張り出しては処理し書き換えては
+保存する作業が楽にできます。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Masashi Umezawa
+Sent: Saturday, October 20, 2007 11:40 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3694] Re: 改行コードの使い方
+
+こんにちは
+梅澤です。
+
+おそらく改行コードがCRで書かれているだけと思います。
+
+ご存じのように改行コードはWindowsでCRLF、MacでCR、LinuxでLFです。
+SqueakはMac出身という歴史的な経緯から改行はCRを使うようになっています。
+
+あらかじめ
+writeStream wantsLineEndConversion: true.
+としておくと、そのプラットフォームに即した改行コードに変換されて
+ファイル出力されます。
+
+ではでは。
+
+"久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 久保　道です。
+> またまた初歩的な質問で恐縮ですが、
+> ご教示下さい。
+>   writeStream := FileStream newFileNamed:'test.txt'.
+>    writeStream nextPutAll:'改行コードを探す。'.
+>    writeStream cr.
+>    writeStream nextPutAll:'見つからない。'.
+>   Transcript show: writeStream contents.
+>   writeStream close.
+> と書くとTranscriptには改行されて表示されますが、
+> test.txtの内容には改行が反映されません。
+> これは恐らくUFT-8の関係かと思うのですが、
+> 具体的にtest.txtで表示するにはどうすれば
+> よいのでしょうか。
+> 同様に、ｔａｂとspaceについても
+> ご教示いただければありがたいのですが。
+
+---
+[:masashi | ^umezawa]
+
+No virus found in this incoming message.
+Checked by AVG.
+Version: 7.5.488 / Virus Database: 269.15.3/1082 - Release Date: 2007/10/20
+14:59
+
+
+No virus found in this outgoing message.
+Checked by AVG.
+Version: 7.5.488 / Virus Database: 269.15.3/1082 - Release Date: 2007/10/20
+14:59
+
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 21 14:06:52 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3700] Re: 改行コードの使い方
+In-Reply-To: <200710210148.l9L1mNYH018006@proxy2.aams.jp>
+References: <200710210148.l9L1mNYH018006@proxy2.aams.jp>
+Message-ID: <JC200710211406527.11456515@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ファイル操作であれば、FileManあたりをインストールすると、
+非常に簡単にできるようになると思います。
+http://map.squeak.org/package/f9917683-25da-4a6c-a013-b36527a100c1
+
+よろしければお試しください。
+
+久保　道 <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さん
+> 久保です。
+> いつも早々にお返事をいただいて、
+> ありがとうございます。
+> さっそく試してみました。
+> これで、相当たくさんのテキストで書いたリストを
+> Squeak上で引っ張り出しては処理し書き換えては
+> 保存する作業が楽にできます。
+> 久保　道
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+> On Behalf Of Masashi Umezawa
+> Sent: Saturday, October 20, 2007 11:40 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 3694] Re: 改行コードの使い方
+> 
+> こんにちは
+> 梅澤です。
+> 
+> おそらく改行コードがCRで書かれているだけと思います。
+> 
+> ご存じのように改行コードはWindowsでCRLF、MacでCR、LinuxでLFです。
+> SqueakはMac出身という歴史的な経緯から改行はCRを使うようになっています。
+> 
+> あらかじめ
+> writeStream wantsLineEndConversion: true.
+> としておくと、そのプラットフォームに即した改行コードに変換されて
+> ファイル出力されます。
+> 
+> ではでは。
+> 
+> "久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> > 久保　道です。
+> > またまた初歩的な質問で恐縮ですが、
+> > ご教示下さい。
+> >   writeStream := FileStream newFileNamed:'test.txt'.
+> >    writeStream nextPutAll:'改行コードを探す。'.
+> >    writeStream cr.
+> >    writeStream nextPutAll:'見つからない。'.
+> >   Transcript show: writeStream contents.
+> >   writeStream close.
+> > と書くとTranscriptには改行されて表示されますが、
+> > test.txtの内容には改行が反映されません。
+> > これは恐らくUFT-8の関係かと思うのですが、
+> > 具体的にtest.txtで表示するにはどうすれば
+> > よいのでしょうか。
+> > 同様に、ｔａｂとspaceについても
+> > ご教示いただければありがたいのですが。
+> 
+> ---
+> [:masashi | ^umezawa]
+> 
+> No virus found in this incoming message.
+> Checked by AVG.
+> Version: 7.5.488 / Virus Database: 269.15.3/1082 - Release Date: 2007/10/20
+> 14:59
+> 
+> 
+> No virus found in this outgoing message.
+> Checked by AVG.
+> Version: 7.5.488 / Virus Database: 269.15.3/1082 - Release Date: 2007/10/20
+> 14:59
+> 
+
+
+
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 21 14:13:13 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3701] SuperSwikiのプロジェクトをSuperSwiki2に取り込みました
+Message-ID: <JV2007102114131311.11837750@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さきほどSuperSwikiのプロジェクトをSuperSwiki2にまとめてインポートしました。
+http://squeakland.jp/super2/
+
+1時間くらいかかりましたが、なんとか成功したようです。
+
+SuperSwikiからインポートされた作品のみを見るには、「ギャラリー」ページで
+「旧SuperSwiki」のカテゴリを選択し、絞り込みをします。
+
+不具合などありましたら、お知らせください。
+
+では。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Sun Oct 21 16:47:10 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3702] Re: 改行コードの使い方
+In-Reply-To: <200710210148.l9L1mNYH018006@proxy2.aams.jp>
+References: <JZ200710202339574.1464218@mars.dti.ne.jp>
+	<200710210148.l9L1mNYH018006@proxy2.aams.jp>
+Message-ID: <471B03FE81.37D1ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+ファイルリストのテキストペインの黄ボタンメニューにある「view as hex」を使
+うことで16進ダンプを見ることができます。text.txtを実際に見てみると
+16rD(CRの文字コード)が見つかります。
+
+# 今回のように実際に実行可能なサンプルがあると助かります。
+
+テキストエディタで見えているものは、必ずしもファイルの中身と一致していな
+いので、まずはダンプしてみるとよいと思います。
+
+多くの問題は一番単純な原因による可能性が高いので(オッカムの剃刀)、今回の
+ケースの場合、改行されていないように見えるのであれば、UTF-8を検討する前に
+改行コード自体の可能性に当たるべきと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Sun Oct 21 18:18:54 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3703] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+In-Reply-To: <JV2007102114131311.11837750@mars.dti.ne.jp>
+References: <JV2007102114131311.11837750@mars.dti.ne.jp>
+Message-ID: <471B197E325.37D2ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 21 Oct 2007 14:13:13 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>さきほどSuperSwikiのプロジェクトをSuperSwiki2にまとめてインポートしました。
+>http://squeakland.jp/super2/
+>
+>1時間くらいかかりましたが、なんとか成功したようです。
+
+ありがとうございます。確認しました。
+
+先に書いた通り、旧SuperSwikiに移行を促す案内のためのプロジェクトをアップ
+しました(「【重要】必ずお読みください。移行の案内です。」)。
+これにはprefs/knownServersの設定ファイルを自動的に作成するスクリプトも含
+まれています。
+
+今までは試験運用中として、Squeakland.jpからはリンクしていなかったのですが、
+これもJ3と合わせて行いましょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From y ＠ sailweb.net  Mon Oct 22 11:39:45 2007
+From: y ＠ sailweb.net (y@sailweb.net)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3704] Re: [OLPC]Squeak のページ訳終わりました
+In-Reply-To: <471A36E1282.4B5DABEE@smtp.nifty.com>
+References: <7f3aeb4c0710152045i3684ee6agc37fb91681c7338e@mail.gmail.com>
+	<471A36E1282.4B5DABEE@smtp.nifty.com>
+Message-ID: <7f3aeb4c0710211939k7cc5786aw3e088e718326810f@mail.gmail.com>
+
+Spikyです。
+
+> 拝見して、すこし変えてみました。
+
+手直しありがとうございますm(v v;m
+
+>
+> # このページは原文にかなり難ありですね。Squeak愛が感じられない。
+> # どなたか直されませんか。
+
+Memracomって人が最初のページを書かれているようですが、
+Suqeakコミュでは結構知られた方なんでしょうか？
+　http://wiki.laptop.org/go/User:Memracom
+
+やっぱ「愛」は大事ですよね(^_^)/
+
+From hayasaka ＠ pluto.dti.ne.jp  Mon Oct 22 15:12:01 2007
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3705] DebianでSqueakが アボートします。
+Message-ID: <000801c81472$75d63920$020ba8c0@computer>
+
+早坂です。
+
+　Debian SargeでSqueakを動かすとe-Toyは、
+正常に動作するのですが、Worldメニューから
+Workspaceブラウザに書き込もうとすると
+アボートしてしまいSqueakが終了してしまいます。
+原因がわからず困っています。
+原因、解決方法を教えて頂けると有難いです。
+
+早坂　吉昭
+
+From newapplesho ＠ gmail.com  Mon Oct 22 18:00:27 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3706] Re: Unix用のリクエストいくつか
+In-Reply-To: <JO200710141835045.20654593@mars.dti.ne.jp>
+References: <JO200710141835045.20654593@mars.dti.ne.jp>
+Message-ID: <FE54F3CF-C85A-49F9-8C8B-EE4D99DE412C@gmail.com>
+
+吉田　翔です．
+
+FedoraCore7とUtuntu6.10でVMを使ってみたところ， 
+「あ」を連続で11回打った後に「Enter」をするとエラー 
+がでてしまいました．
+さらに一度エラーがあると日本語入力ができなくなってしまいます．
+
+対処方法がわからないので教えていただけないでしょうか．
+情報として何を渡せばいいのかわからないので，Debug.logをそ 
+のまま添付します．
+
+よろしくお願いいたします．
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     2414 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071022/ff2091e1/SqueakDebug.obj
+-------------- next part --------------
+
+On 2007/10/14, at 18:35, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> 2005J3のリリースの際に、もう一つ入れて欲しいパッチがあります。
+>
+> Unix(Linux,BSD)環境で全画面表示を行った際にIMのフォーカ 
+> スが失われてしまう
+> 問題のパッチです。
+>
+> 画面が狭い環境ではWebブラウザからプロジェクト起動後、全 
+> 画面表示に切り替える
+> 場合もあるかと思います。そのときに現状では日本語が入力できなく 
+> なってしまい
+> 非常に不便です。
+>
+> もともと廣島さんがパッチを書かれたもので、これまで何度か話題に 
+> なっています。
+> http://www.smalltalk.jp/Squeak-ja/archives/ 
+> lists.squeakfoundation.org/squeak-ja/2004-June/001636.html
+> http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003111.html
+>
+> ちょっとだけ改訂した版を添付します。(CompositionWindowFocusFix. 
+> 1.cs)
+> 基本的な中身は変わっておらず、インデントを整理し、代入 
+> を:=に変換しただけ
+> のものです。
+>
+> さらに、廣島さんのSqueakImmX11Plugin4d.tar.gzを適用し、 
+> コンパイル
+> したLinux用のVMを下記に置きました。
+> ftp://swikis.ddo.jp/SqueakDevJa/linux/SqueakVM3.9-8-JPatched.tgz
+>
+> 現状のコンパイル済みLinux用VM(3.7-7ベース)を 
+> 置き換えるものとして
+> 考えています。
+> http://squeakland.jp/plugin/installers/ux.html
+>
+> Linux使いの方は、上記VMとCompositionWindowFocusFix. 
+> 1.csの両方をお試し
+> いただけると助かります。(当方ではVine 4.1とFedora  
+> Core 6で確認しています)
+>
+> ではでは。
+> ---
+> [:masashi | ^umezawa]<CompositionWindowFocusFix.1.cs>
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From e-itoh ＠ ygu.ac.jp  Mon Oct 22 19:25:36 2007
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3707] Re: Debian で Squeak が アボートします。
+References: <000801c81472$75d63920$020ba8c0@computer>
+Message-ID: <20071022192536.769F3389@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+＃お役に立てるかわかりませんが。
+
+しばらくdebian sarge上のSqueakをメインで使っていた時期があり
+ました。
+以前、同様な経験をしたことがあります。その時はクリップボード
+をクリア（Squeak上で適当な文字を選択）することで解決しました。
+もしお試しでなければいかがでしょう。
+
+--- "早坂　吉昭" <hayasaka@pluto.dti.ne.jp> ---
+
+>早坂です。
+>
+>　Debian SargeでSqueakを動かすとe-Toyは、
+>正常に動作するのですが、Worldメニューから
+>Workspaceブラウザに書き込もうとすると
+>アボートしてしまいSqueakが終了してしまいます。
+>原因がわからず困っています。
+>原因、解決方法を教えて頂けると有難いです。
+>
+>早坂　吉昭
+
+
+
+
+
+
+From e-itoh ＠ ygu.ac.jp  Mon Oct 22 19:31:41 2007
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3708] Re: Debian  で Squeak  が アボートします。
+References: <000801c81472$75d63920$020ba8c0@computer>
+	<20071022192536.769F3389@ygu.ac.jp>
+Message-ID: <20071022193141.76C08830@ygu.ac.jp>
+
+伊藤です。たびたびすみません。
+
+＃そもそも外した解決法かもしれないとは置いておいて。
+
+もしかしたらクリップボードを空にしたのは別のアプリ上だった
+かもしれません。そのあたりの記憶はちょっとアヤフヤです。
+いいかげんな情報ですみません。
+
+--- "Eiichiro Ito" <e-itoh@ygu.ac.jp> ---
+
+>山梨学院大学の伊藤です。
+>
+>＃お役に立てるかわかりませんが。
+>
+>しばらくdebian sarge上のSqueakをメインで使っていた時期があり
+>ました。
+>以前、同様な経験をしたことがあります。その時はクリップボード
+>をクリア（Squeak上で適当な文字を選択）することで解決しました。
+>もしお試しでなければいかがでしょう。
+>
+>--- "早坂　吉昭" <hayasaka@pluto.dti.ne.jp> ---
+>
+>>早坂です。
+>>
+>>　Debian SargeでSqueakを動かすとe-Toyは、
+>>正常に動作するのですが、Worldメニューから
+>>Workspaceブラウザに書き込もうとすると
+>>アボートしてしまいSqueakが終了してしまいます。
+>>原因がわからず困っています。
+>>原因、解決方法を教えて頂けると有難いです。
+>>
+>>早坂　吉昭
+>
+>
+>
+>
+
+
+
+
+
+
+From ykoubo2007 ＠ yengawa.com  Mon Oct 22 22:26:31 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3709] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+In-Reply-To: <471B197E325.37D2ABEE@smtp.nifty.com>
+References: <JV2007102114131311.11837750@mars.dti.ne.jp>
+	<471B197E325.37D2ABEE@smtp.nifty.com>
+Message-ID: <20071022222224.59A0.YKOUBO2007@yengawa.com>
+
+横川です。
+Squeakland2005J2で「移行の案内」プロジェクトを読んで移行ボタンを押したら
+エラーになりました。
+とりあえずエラーログを送ります。
+
+
+On Sun, 21 Oct 2007 18:18:54 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 先に書いた通り、旧SuperSwikiに移行を促す案内のためのプロジェクトをアップ
+> しました(「【重要】必ずお読みください。移行の案内です。」)。
+> これにはprefs/knownServersの設定ファイルを自動的に作成するスクリプトも含
+> まれています。
+
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     3169 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071022/fa8d0b65/SqueakDebug.obj
+From umejava ＠ mars.dti.ne.jp  Mon Oct 22 23:52:31 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3710] Re: Unix用のリクエストいくつか
+In-Reply-To: <FE54F3CF-C85A-49F9-8C8B-EE4D99DE412C@gmail.com>
+References: <JO200710141835045.20654593@mars.dti.ne.jp>
+	<FE54F3CF-C85A-49F9-8C8B-EE4D99DE412C@gmail.com>
+Message-ID: <JC200710222352313.4754328@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+バグレポートありがとうございます。
+
+UTF8の環境において、IMからある程度の長さの未確定文字列を一度に確定すると
+起こるようですね。
+
+VM側の問題であり、イメージ側で対処すべきものではないように思えます。
+確定文字列用のバッファ量を超えたときのキーイベントの返し方が間違っている
+のではないでしょうか。
+
+イメージ側ではUTF8の最初の1バイト目が飛ばされてしまっているように見えます。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 吉田　翔です．
+> 
+> FedoraCore7とUtuntu6.10でVMを使ってみたところ， 
+> 「あ」を連続で11回打った後に「Enter」をするとエラー 
+> がでてしまいました．
+> さらに一度エラーがあると日本語入力ができなくなってしまいます．
+> 
+> 対処方法がわからないので教えていただけないでしょうか．
+> 情報として何を渡せばいいのかわからないので，Debug.logをそ 
+> のまま添付します．
+> 
+> よろしくお願いいたします．
+
+
+---
+[:masashi | ^umezawa]
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Tue Oct 23 13:47:13 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3711] Re: 改行コードの使い方
+In-Reply-To: <JC200710211406527.11456515@mars.dti.ne.jp>
+Message-ID: <CBEIKPMBLLMDEOEJIHCCIEEICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+梅澤さん、ありがおうございます。
+ご案内いただいたところへ行ってみました。
+初めてのことで、森に迷い込んだような印象です。
+しかしその奥深さに感動しております、
+訳もわからずに…。
+とりあえずFileMan-mu.99.mczをダウンロードして
+みたのですが、これはどのようにして開くのでしょうか。
+解凍ですか。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Masashi Umezawa
+Sent: Sunday, October 21, 2007 2:07 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3700] Re: 改行コードの使い方
+
+
+こんにちは
+梅澤です。
+
+ファイル操作であれば、FileManあたりをインストールすると、
+非常に簡単にできるようになると思います。
+http://map.squeak.org/package/f9917683-25da-4a6c-a013-b36527a100c1
+
+よろしければお試しください。
+
+久保　道 <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さん
+> 久保です。
+> いつも早々にお返事をいただいて、
+> ありがとうございます。
+> さっそく試してみました。
+> これで、相当たくさんのテキストで書いたリストを
+> Squeak上で引っ張り出しては処理し書き換えては
+> 保存する作業が楽にできます。
+> 久保　道
+>
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]
+> On Behalf Of Masashi Umezawa
+> Sent: Saturday, October 20, 2007 11:40 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 3694] Re: 改行コードの使い方
+>
+> こんにちは
+> 梅澤です。
+>
+> おそらく改行コードがCRで書かれているだけと思います。
+>
+> ご存じのように改行コードはWindowsでCRLF、MacでCR、LinuxでLFです。
+> SqueakはMac出身という歴史的な経緯から改行はCRを使うようになっています。
+>
+> あらかじめ
+> writeStream wantsLineEndConversion: true.
+> としておくと、そのプラットフォームに即した改行コードに変換されて
+> ファイル出力されます。
+>
+> ではでは。
+>
+> "久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> > 久保　道です。
+> > またまた初歩的な質問で恐縮ですが、
+> > ご教示下さい。
+> >   writeStream := FileStream newFileNamed:'test.txt'.
+> >    writeStream nextPutAll:'改行コードを探す。'.
+> >    writeStream cr.
+> >    writeStream nextPutAll:'見つからない。'.
+> >   Transcript show: writeStream contents.
+> >   writeStream close.
+> > と書くとTranscriptには改行されて表示されますが、
+> > test.txtの内容には改行が反映されません。
+> > これは恐らくUFT-8の関係かと思うのですが、
+> > 具体的にtest.txtで表示するにはどうすれば
+> > よいのでしょうか。
+> > 同様に、ｔａｂとspaceについても
+> > ご教示いただければありがたいのですが。
+>
+> ---
+> [:masashi | ^umezawa]
+>
+> No virus found in this incoming message.
+> Checked by AVG.
+> Version: 7.5.488 / Virus Database: 269.15.3/1082 - Release Date:
+2007/10/20
+> 14:59
+>
+>
+> No virus found in this outgoing message.
+> Checked by AVG.
+> Version: 7.5.488 / Virus Database: 269.15.3/1082 - Release Date:
+2007/10/20
+> 14:59
+>
+
+
+
+---
+[:masashi | ^umezawa]
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Oct 23 19:42:26 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3712] Re: 改行コードの使い方
+In-Reply-To: <CBEIKPMBLLMDEOEJIHCCIEEICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+References: <CBEIKPMBLLMDEOEJIHCCIEEICAAA.kubo-o@mbox.kyoto-inet.or.jp>
+Message-ID: <JC2007102319422610.4483609@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ファイルリストを開いて、「ロード」で入ります。
+
+mczはMonticelloのパッケージです。詳しくは「自由自在」の
+本に記述があります。
+
+ロード後はFmFileEntryクラスのexamplesメソッド群を見ると
+なんとなく使い方がわかると思います。
+
+"久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さん、ありがおうございます。
+> ご案内いただいたところへ行ってみました。
+> 初めてのことで、森に迷い込んだような印象です。
+> しかしその奥深さに感動しております、
+> 訳もわからずに…。
+> とりあえずFileMan-mu.99.mczをダウンロードして
+> みたのですが、これはどのようにして開くのでしょうか。
+> 解凍ですか。
+> 久保　道
+> 
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Tue Oct 23 22:26:55 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3713] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+In-Reply-To: <20071022222224.59A0.YKOUBO2007@yengawa.com>
+References: <471B197E325.37D2ABEE@smtp.nifty.com>
+	<20071022222224.59A0.YKOUBO2007@yengawa.com>
+Message-ID: <471DF69FBF.FFBFABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 22 Oct 2007 22:26:31 +0900
+Koji Yokokawa <ykoubo2007@yengawa.com> wrote:
+>Squeakland2005J2で「移行の案内」プロジェクトを読んで移行ボタンを押したら
+>エラーになりました。
+>とりあえずエラーログを送ります。
+
+レポートありがとうございます。
+修正版をアップしましたのでご確認ください。
+
+以下は反省の弁です。
+
+今回のエラーは、プリファレンス用ディレクトリ(prefs)の存在を保証してくれる
+メソッド、ExternalSettings>>assuredPreferenceDirectoryが、サンドボックス
+(FileDirectory default)以外へのアクセスが制限されているときに(ネットワー
+ク経由でプロジェクトを開いた後)、正常に動作しなくなることが原因でした。
+
+prefsはサンドボックス内に作られるので大丈夫だろうと思っていたのですが、上
+記のメソッドから呼ばれているFileDirectory>>assureExistenceOfPath:が再帰的
+にパス中のディレクトリの存在を確認する際、FileDirectory defalut以上のディ
+レクトリに対してdirectoryExists:を送っても常にfalseを返すことから、結果と
+してログにあるエラーを起こしていました。
+
+このエラーを見つけられなかったのは、テストの途中でSqueakletsにプロジェク
+トのキャッシュが作られ、こちらを読み込んでいたために制限モードに移行して
+いなかったからでした(もし横川さんがSqueakを立ち上げなおして、同じプロジェ
+クトを開き、再度ボタンを押していればエラーにならなかったはずです。これは
+セキュリティホールの可能性があります)。
+
+現在はassuredPreferenceDirectoryの使用を取りやめ、FileDirectory defaultの
+存在を前提として、prefs以下を作成するように変更しています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Wed Oct 24 00:28:10 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3714] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+In-Reply-To: <JV2007102114131311.11837750@mars.dti.ne.jp>
+References: <JV2007102114131311.11837750@mars.dti.ne.jp>
+Message-ID: <471E130AFC.FFC2ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 21 Oct 2007 14:13:13 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>さきほどSuperSwikiのプロジェクトをSuperSwiki2にまとめてインポートしました。
+>http://squeakland.jp/super2/
+
+見た限り、プロジェクトの説明(説明, 著者, カテゴリ, サブカテゴリ, キーワー
+ド)が反映されていないようなのですが、これもやはり難しいでしょうか。
+
+# これらは大部分のものに記述されていないのですが、書かれた物も無いわけ
+# ではありません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Wed Oct 24 08:08:40 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3715] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+In-Reply-To: <471E130AFC.FFC2ABEE@smtp.nifty.com>
+References: <JV2007102114131311.11837750@mars.dti.ne.jp>
+	<471E130AFC.FFC2ABEE@smtp.nifty.com>
+Message-ID: <JU200710240808405.1731671@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+結論を先に言いますと、project_info_dbファイル群が古いもののままで
+インポートしてしまったようです。山宮さんから最新のものをいただくのを
+忘れていました。
+
+新たにインポートし直そうと思います。しばしお待ちください。
+
+以下、SuperSwiki2の動作を述べます。
+
+---
+{作者、説明、バージョン、カテゴリ、サブカテゴリ、キーワード}
+は、記入があった場合には反映されます。(カテゴリに記入があった場合、
+デフォルトの「旧SuperSwiki」を上書きします)
+
+{ユーザID、パスワード、対応スクイーク}
+これらは、もともとSuperSwikiに概念がないのでされません。
+
+インポートには、SuperSwikiの"super"以下のディレクトリ"uploads"と
+"project_info_db"の両方が必要です。
+---
+
+ではでは。
+
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+> 阿部@新百合です。
+> 
+> On Sun, 21 Oct 2007 14:13:13 +0900
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> >さきほどSuperSwikiのプロジェクトをSuperSwiki2にまとめてインポートしました。
+> >http://squeakland.jp/super2/
+> 
+> 見た限り、プロジェクトの説明(説明, 著者, カテゴリ, サブカテゴリ, キーワー
+> ド)が反映されていないようなのですが、これもやはり難しいでしょうか。
+> 
+> # これらは大部分のものに記述されていないのですが、書かれた物も無いわけ
+> # ではありません。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Wed Oct 24 08:21:07 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:55 2007
+Subject: [Squeak-ja: 3716] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+In-Reply-To: <JU200710240808405.1731671@mars.dti.ne.jp>
+References: <JV2007102114131311.11837750@mars.dti.ne.jp>
+	<471E130AFC.FFC2ABEE@smtp.nifty.com>
+	<JU200710240808405.1731671@mars.dti.ne.jp>
+Message-ID: <JQ2007102408210713.2478468@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+補足しますと、2007年7月以降にSuperSwikiに公開したプロジェクトについては
+プロジェクト情報が反映されていないはずです。
+
+それ以前のもので、公開時に記入したのに反映がされていなかったものが
+あった場合には、別のバグの可能性がありますのでお知らせください。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 結論を先に言いますと、project_info_dbファイル群が古いもののままで
+> インポートしてしまったようです。山宮さんから最新のものをいただくのを
+> 忘れていました。
+> 
+> 新たにインポートし直そうと思います。しばしお待ちください。
+> 
+> 以下、SuperSwiki2の動作を述べます。
+> 
+> ---
+> {作者、説明、バージョン、カテゴリ、サブカテゴリ、キーワード}
+> は、記入があった場合には反映されます。(カテゴリに記入があった場合、
+> デフォルトの「旧SuperSwiki」を上書きします)
+> 
+> {ユーザID、パスワード、対応スクイーク}
+> これらは、もともとSuperSwikiに概念がないのでされません。
+> 
+> インポートには、SuperSwikiの"super"以下のディレクトリ"uploads"と
+> "project_info_db"の両方が必要です。
+> ---
+> 
+> ではでは。
+> 
+> Kazuhiro ABE <abee@squeakland.jp> wrote:
+> > 阿部@新百合です。
+> > 
+> > On Sun, 21 Oct 2007 14:13:13 +0900
+> > Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> > >さきほどSuperSwikiのプロジェクトをSuperSwiki2にまとめてインポートしました。
+> > >http://squeakland.jp/super2/
+> > 
+> > 見た限り、プロジェクトの説明(説明, 著者, カテゴリ, サブカテゴリ, キーワー
+> > ド)が反映されていないようなのですが、これもやはり難しいでしょうか。
+> > 
+> > # これらは大部分のものに記述されていないのですが、書かれた物も無いわけ
+> > # ではありません。
+> > 
+> >  //abee
+> > --
+> > 阿部 和広  EMAIL abee@squeakland.jp
+> 
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From ykoubo2007 ＠ yengawa.com  Wed Oct 24 10:32:25 2007
+From: ykoubo2007 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3717] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+In-Reply-To: <471DF69FBF.FFBFABEE@smtp.nifty.com>
+References: <20071022222224.59A0.YKOUBO2007@yengawa.com>
+	<471DF69FBF.FFBFABEE@smtp.nifty.com>
+Message-ID: <20071024102230.59AF.YKOUBO2007@yengawa.com>
+
+横川です。
+
+My Squeakを消して、新しいプロジェクトを試したら無事にスクリプトが実行で
+きて、super2にアクセスできました。
+スクリプトでこういうこともできるのは面白いですね。
+
+
+On Tue, 23 Oct 2007 22:26:55 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 阿部@新百合です。
+> 
+> On Mon, 22 Oct 2007 22:26:31 +0900
+> Koji Yokokawa <ykoubo2007@yengawa.com> wrote:
+> >Squeakland2005J2で「移行の案内」プロジェクトを読んで移行ボタンを押したら
+> >エラーになりました。
+> >とりあえずエラーログを送ります。
+> 
+> レポートありがとうございます。
+> 修正版をアップしましたのでご確認ください。
+> 
+
+
+-- !
+Koji Yokokawa <ykoubo2007@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+From kuwatani ＠ akademia.co.jp  Wed Oct 24 18:55:33 2007
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3718] Re: 保存書庫の不具合について
+In-Reply-To: <471762DD113.3A4AABEE@smtp.nifty.com>
+References: <471762DD113.3A4AABEE@smtp.nifty.com>
+Message-ID: <471F1695.9040502@akademia.co.jp>
+
+桑谷です．
+
+アーカイブの不具合ですが調査のためにシステムを
+止めたり起動したりしているうちに正常にアーカイブされるようになったようです．
+アーカイブのためのキューにメールが溜まっていたようですが
+なぜ溜まったままになっていたのかはわかっていません．
+
+一先ず復活したようなのでご報告ということで...
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/date.html
+
+Kazuhiro ABE さんは書きました:
+> 阿部@新百合です。
+> 
+> 現在、保存書庫に不具合が発生しています。
+> 具体的には、
+> 
+> 2007年 10月 16日 (火) 12:30:19 JST 
+> [Squeak-ja: 3680] Re: SuperSwiki2 のバージョンアップ   Kazuhiro ABE
+> 
+> より後の投稿がアーカイブされていません。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/date.html#end
+> 
+> メールの配信には問題ありません。原因については現在調査中です。
+> ご迷惑をお掛けして申し訳ありません。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+
+-- 
+桑谷 剛史(Tsuyoshi KUWATANI)
+kuwatani@akademia.co.jp
+
+
+From kuwatani ＠ akademia.co.jp  Wed Oct 24 18:54:19 2007
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3719] Re: 保存書庫の不具合について
+In-Reply-To: <471762DD113.3A4AABEE@smtp.nifty.com>
+References: <471762DD113.3A4AABEE@smtp.nifty.com>
+Message-ID: <471F164B.9000500@akademia.co.jp>
+
+桑谷です．
+
+アーカイブの不具合ですが調査のためにシステムを
+止めたり起動したりしているうちに正常にアーカイブされるようになったようです．
+アーカイブのためのキューにメールが溜まっていたようですが
+なぜ溜まったままになっていたのかはわかっていません．
+
+一先ず復活したようなのでご報告ということで...
+http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/date.html
+
+Kazuhiro ABE さんは書きました:
+> 阿部@新百合です。
+> 
+> 現在、保存書庫に不具合が発生しています。
+> 具体的には、
+> 
+> 2007年 10月 16日 (火) 12:30:19 JST 
+> [Squeak-ja: 3680] Re: SuperSwiki2 のバージョンアップ   Kazuhiro ABE
+> 
+> より後の投稿がアーカイブされていません。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/date.html#end
+> 
+> メールの配信には問題ありません。原因については現在調査中です。
+> ご迷惑をお掛けして申し訳ありません。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+
+-- 
+桑谷 剛史(Tsuyoshi KUWATANI)
+kuwatani@akademia.co.jp
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Oct 24 20:36:09 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3720] Squeakers' Night in 九州
+Message-ID: <JD200710242036095.1772687@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、例年行っておりますSqueakers' Nightですが、
+http://swikis.ddo.jp/umejava/38
+
+東京ばかりでは不公平という話もありますので、これからは全国行脚
+していくことにします。
+
+第一弾として、まずは九州でやってみようかと考えています。
+
+Squeak-jaは12月8日のOSC Fukuokaに出展します。
+http://www.ospn.jp/osc2007-fukuoka/
+
+そこで、これに合わせて「Squeakers' Night in 九州」を行います。
+
+会場はサイバー大学福岡キャンパスのどこかになる予定です。
+http://www.cyber-u.ac.jp/campus/support/facilities.html
+
+日時についてですが、いくつか候補があります。
+
+12月7日(金) 夕方-夜
+12月8日(土) 夕方-夜
+12月9日(日) 昼間
+
+です。
+
+皆さん、特にご希望はありますでしょうか。声を上げていただければ、
+柔軟に対応したいと思います。
+
+また、さらにディープな集まりを求める方は、「Camp Smalltalk in 九州」
+をやってみるという話もあります。これはデモ大会ではなく、開発合宿の
+ようなものです。やはり声が上がり、参加人数がある程度集まれば、こちら
+の用意もしたいと思います。
+
+日本に数名しかいない希少種、Smalltalkerに触れる良い機会ですよ。
+
+ではでは。Go Smalltalk!
+
+---
+[:masashi | ^umezawa]
+
+From mutoh ＠ openedu.org  Thu Oct 25 08:34:09 2007
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3721] Re: 保存書庫の不具合について
+In-Reply-To: <471F1695.9040502@akademia.co.jp>
+References: <471762DD113.3A4AABEE@smtp.nifty.com>
+	<471F1695.9040502@akademia.co.jp>
+Message-ID: <f64639926ae9eba419dca6b9efe939d1@openedu.org>
+
+むとう＠おうちです。
+
+いつも素晴らしい場を提供していただいてありがとうございます。
+
+On 2007/10/24, at 18:55, Tsuyoshi KUWATANI wrote:
+> アーカイブの不具合ですが調査のためにシステムを
+> 止めたり起動したりしているうちに正常にアーカイブされるようになったようです．
+> アーカイブのためのキューにメールが溜まっていたようですが
+> なぜ溜まったままになっていたのかはわかっていません．
+>
+> 一先ず復活したようなのでご報告ということで...
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/date.html
+
+これですが、どうもメールに添付されている番号([Squeak-ja: 3718])とアーカイブ上での番号がずれてませんでしょうか?
+
+例えば、「Squeakers' Night in 九州」の記事のメールに付けられた番号は、
+	[Squeak-ja: 3720]
+ですが、アーカイブでは3702になっているようです。
+	http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003702.html
+
+なんなんでしょうね？
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+  ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+  ・健康でいられるのが一番だなぁ…
+
+
+From kuwatani ＠ akademia.co.jp  Thu Oct 25 09:15:25 2007
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3722] Re: 保存書庫の不具合について
+In-Reply-To: <f64639926ae9eba419dca6b9efe939d1@openedu.org>
+References: <471762DD113.3A4AABEE@smtp.nifty.com>	<471F1695.9040502@akademia.co.jp>
+	<f64639926ae9eba419dca6b9efe939d1@openedu.org>
+Message-ID: <471FE01D.8090205@akademia.co.jp>
+
+桑谷です．
+
+Takeshi MUTOH さんは書きました:
+> これですが、どうもメールに添付されている番号([Squeak-ja: 3718])とアーカ 
+> イブ上での番号がずれてませんでしょうか?
+> 
+> 例えば、「Squeakers' Night in 九州」の記事のメールに付けられた番号は、
+>     [Squeak-ja: 3720]
+> ですが、アーカイブでは3702になっているようです。
+>     http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003702.html
+
+途中3693から3710のメールがアーカイブされていないようで番号とファイル名が
+ずれてしまっているようです．抜けたメールを復活させてアーカイブを
+再構築したいと思います．
+
+-- 
+***************************************
+桑谷 剛史(Tsuyoshi KUWATANI)
+アカデミアシステムズ株式会社
+TEL: 0857-21-2360
+FAX: 0857-21-2362
+URL: http://www.akademia.co.jp/
+E-mail: kuwatani@akademia.co.jp
+〒680-0053 鳥取市寺町50番地 NTT寺町ビル
+***************************************
+
+From hayasaka ＠ pluto.dti.ne.jp  Thu Oct 25 15:07:32 2007
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3723] もう少し詳しく教えて下さい。
+References: <200710221455.l9MEtE1H003988@pop.pluto.dti.ne.jp>
+Message-ID: <000201c816cd$551119f0$020ba8c0@computer>
+
+早坂です。
+
+伊藤　様
+ご教授ありがとうございます。
+
+　クリップボードは、どこにあるのでしょうか。
+/usr/share/icons/Wasp/scalable/stock ディレクトリにある
+clipboard.svgのことでしょうか。
+クリアするとは、削除するのですか。
+
+もう少し詳しく教えて頂ければ、有難いです。
+
+早坂　吉昭
+
+
+> 山梨学院大学の伊藤です。
+>
+> ＃お役に立てるかわかりませんが。
+>
+> しばらくdebian sarge上のSqueakをメインで使っていた時期があり
+> ました。
+> 以前、同様な経験をしたことがあります。その時はクリップボード
+> をクリア（Squeak上で適当な文字を選択）することで解決しました。
+> もしお試しでなければいかがでしょう。
+>
+> --- "早坂　吉昭" <hayasaka@pluto.dti.ne.jp> ---
+>
+>>早坂です。
+>>
+>>　Debian SargeでSqueakを動かすとe-Toyは、
+>>正常に動作するのですが、Worldメニューから
+>>Workspaceブラウザに書き込もうとすると
+>>アボートしてしまいSqueakが終了してしまいます。
+>>原因がわからず困っています。
+>>原因、解決方法を教えて頂けると有難いです。
+>>
+>>早坂　吉昭
+
+> 伊藤です。たびたびすみません。
+>
+> ＃そもそも外した解決法かもしれないとは置いておいて。
+>
+> もしかしたらクリップボードを空にしたのは別のアプリ上だった
+> かもしれません。そのあたりの記憶はちょっとアヤフヤです。
+> いいかげんな情報ですみません。
+>
+
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Oct 25 20:04:42 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3724] Re: 改行コードの使い方
+In-Reply-To: <JC2007102319422610.4483609@mars.dti.ne.jp>
+Message-ID: <CBEIKPMBLLMDEOEJIHCCMEEKCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+梅澤さん、ありがとうございました。
+codingに精一杯で、あそこまで「自由自在」を
+読めていなませんでした。すみません。
+お蔭様で様子は大分判りかけてきました。
+ちなみにFileMan-mu.18.mczはなんだろうかと
+ロードしてみましたが、coreに含まれた内容の
+ようですね。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Masashi Umezawa
+Sent: Tuesday, October 23, 2007 7:42 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3712] Re: 改行コードの使い方
+
+
+こんにちは
+梅澤です。
+
+ファイルリストを開いて、「ロード」で入ります。
+
+mczはMonticelloのパッケージです。詳しくは「自由自在」の
+本に記述があります。
+
+ロード後はFmFileEntryクラスのexamplesメソッド群を見ると
+なんとなく使い方がわかると思います。
+
+"久保　道" <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さん、ありがおうございます。
+> ご案内いただいたところへ行ってみました。
+> 初めてのことで、森に迷い込んだような印象です。
+> しかしその奥深さに感動しております、
+> 訳もわからずに…。
+> とりあえずFileMan-mu.99.mczをダウンロードして
+> みたのですが、これはどのようにして開くのでしょうか。
+> 解凍ですか。
+> 久保　道
+> 
+
+---
+[:masashi | ^umezawa]
+
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Thu Oct 25 20:22:14 2007
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3725] Re: 改行コードの使い方
+In-Reply-To: <471B03FE81.37D1ABEE@smtp.nifty.com>
+Message-ID: <CBEIKPMBLLMDEOEJIHCCGEEMCAAA.kubo-o@mbox.kyoto-inet.or.jp>
+
+阿部さん、ありがとうございます。
+ご説明のことがよく理解できず、
+もう少し考えてみますので、
+とりあえずお礼まで。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp
+[mailto:squeak-ja-bounces@smalltalk.jp]On Behalf Of Kazuhiro ABE
+Sent: Sunday, October 21, 2007 4:47 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3702] Re: 改行コードの使い方
+
+
+阿部@新百合です。
+
+ファイルリストのテキストペインの黄ボタンメニューにある「view as hex」を使
+うことで16進ダンプを見ることができます。text.txtを実際に見てみると
+16rD(CRの文字コード)が見つかります。
+
+# 今回のように実際に実行可能なサンプルがあると助かります。
+
+テキストエディタで見えているものは、必ずしもファイルの中身と一致していな
+いので、まずはダンプしてみるとよいと思います。
+
+多くの問題は一番単純な原因による可能性が高いので(オッカムの剃刀)、今回の
+ケースの場合、改行されていないように見えるのであれば、UTF-8を検討する前に
+改行コード自体の可能性に当たるべきと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+
+From e-itoh ＠ ygu.ac.jp  Thu Oct 25 21:43:50 2007
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3726] Re: もう少し詳しく教えて下さい。
+References: <200710221455.l9MEtE1H003988@pop.pluto.dti.ne.jp>
+	<000201c816cd$551119f0$020ba8c0@computer>
+Message-ID: <20071025214350.54961677@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+早坂さん、こんにちは。
+
+>　クリップボードは、どこにあるのでしょうか。
+>/usr/share/icons/Wasp/scalable/stock ディレクトリにある
+>clipboard.svgのことでしょうか。
+>クリアするとは、削除するのですか。
+　違います。きっとそのファイルを消すと別の問題が発生する
+でしょうから消さないでください。
+
+　私も同様のトラブルを経験したのはずっと以前のことなので
+記憶があいまいです。すみませんが一応ご承知おきください。
+
+私の遭遇した現象は以下のようなものです。
+1.とあるアプリケーション(defart)を開発中だった。
+2.いろいろ試している際、イメージを保存後にテスト実行と
+　いったことを繰り返していた。
+3.とある実行でシステムがハングし、直前に保存したイメー
+　ジで起動した。
+4.テキストを打てる場所(たぶんPluggableTextMorh)で文字
+　入力したとたん、Squeakがストンと落ちてしまった。
+5.（たしか）この時はSqueakDebug.logが残らなかった。
+6.再度起動しても、システムを再起動しても同様の現象が起
+　こった。
+
+この辺から記憶があいまいなのですが、確か次のように考え
+ていたように思います。
+
+1.配布イメージからやりなおすのが面倒だったので、何とか
+　落ちないような手立てがないか考えた。
+2.キーボード入力以外なら特に問題が発生しないので、キー
+　ボード入力周辺で何か怪しいことがないか調べた。
+3.キーを入力する際にテキストエリアの選択部分を消すコー
+　ドがあり、その中にクリップボード（ペーストバッファ）
+　関連のコードがあった？（今調べてないので本当かどうか
+　非常に怪しいです）
+4.本来ペーストバッファの内容はＯＳから得るだろうから、
+　再起動でも同様の事態になるのはおかしい。
+5.それでもおかしくなるのは、イメージ側で何らかのデータ
+　を持っているのか？
+6.イメージ側で持っているデータを消せば良いのでは？
+
+イメージ側で適当なテキストを選択してコピーしたら、うま
+くいったような記憶があります。
+
+ただ、今になって別のやり方をとった気もしてきました。
+
+別のやり方とは、debianでおかしくなったイメージをWind
+owsで開いてみて、文字入力やらコピーやら実行し、イメー
+ジ保存したらdebian側で問題が発生しなくなった、という
+ものです。
+
+どちらにせよ、必要なデータをファイルとして保存してか
+ら、新しいイメージで読み込んだ方が早いのではないでし
+ょうか？私の場合はいくらか事情があって上記のようにし
+ましたが早坂さんも何か訳アリでしょうか？
+
+以上、大した手がかりにも原因究明にもならないことをダ
+ラダラ書いてすみません。
+
+少しでも助けになれば幸いです。
+
+
+
+
+
+
+From abee ＠ squeakland.jp  Thu Oct 25 23:38:11 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3727] Re: Squeakers' Night in 九州
+In-Reply-To: <JD200710242036095.1772687@mars.dti.ne.jp>
+References: <JD200710242036095.1772687@mars.dti.ne.jp>
+Message-ID: <4720AA533C0.7FC7ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 24 Oct 2007 20:36:09 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>第一弾として、まずは九州でやってみようかと考えています。
+
+私も参ります。
+
+>皆さん、特にご希望はありますでしょうか。声を上げていただければ、
+>柔軟に対応したいと思います。
+>
+>また、さらにディープな集まりを求める方は、「Camp Smalltalk in 九州」
+>をやってみるという話もあります。これはデモ大会ではなく、開発合宿の
+>ようなものです。やはり声が上がり、参加人数がある程度集まれば、こちら
+>の用意もしたいと思います。
+
+濱田先生、Spikyさんいかがでしょうか。
+長崎遠征(!)も不可能ではないかもしれません。
+
+>日本に数名しかいない希少種、Smalltalkerに触れる良い機会ですよ。
+
+かつて、福岡は日本で最もSmalltalker密度が高い街でした。
+ラーメンを食べながらメッセージを送りあっていたものです。
+今回はさしずめstrike backですね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From hamada ＠ holst.sm.fukuoka-u.ac.jp  Fri Oct 26 11:18:50 2007
+From: hamada ＠ holst.sm.fukuoka-u.ac.jp (Tatsuyoshi HAMADA)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3728] Re: Squeakers' Night in 九州
+In-Reply-To: <4720AA533C0.7FC7ABEE@smtp.nifty.com>
+References: <JD200710242036095.1772687@mars.dti.ne.jp>
+	<4720AA533C0.7FC7ABEE@smtp.nifty.com>
+Message-ID: <20071026.111850.41630242.hamada@holst.sm.fukuoka-u.ac.jp>
+
+濱田＠福大です。
+
+abee> >また、さらにディープな集まりを求める方は、「Camp Smalltalk in 九州」
+abee> >をやってみるという話もあります。これはデモ大会ではなく、開発合宿の
+abee> >ようなものです。やはり声が上がり、参加人数がある程度集まれば、こちら
+abee> >の用意もしたいと思います。
+abee> 
+abee> 濱田先生、Spikyさんいかがでしょうか。
+abee> 長崎遠征(!)も不可能ではないかもしれません。
+
+阿部様、お誘いありがとうございます。
+ちょうど、その時期に東京に出張しておりますので、
+OSC2007 Fukuoka には出席できないのです。
+
+ただ、11月の5日から集中講義のため、1週間は神戸大に滞在していますので、
+KOF には顔を出せるので、楽しみにしています。
+
+
+
+From gun ＠ cup.com  Fri Oct 26 14:05:57 2007
+From: gun ＠ cup.com (GUN the codeslinger)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3729] Re: Squeakers' Night in 九州
+In-Reply-To: <20071026.111850.41630242.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <JD200710242036095.1772687@mars.dti.ne.jp>
+	<4720AA533C0.7FC7ABEE@smtp.nifty.com>
+	<20071026.111850.41630242.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <JD200710261405573.14796576@cup.com>
+
+はじめまして。コレが初発言となります、鍋田@codeslingerと申します。
+
+当方、博多にいる'隠れsmalltaker'ですので。
+今回のosc fukuokaに、smalltaker/squeakerが参加されるのはとても楽しみにしています。
+# ジツはosc-fukuoka実行委員の一人。
+
+>abee> >また、さらにディープな集まりを求める方は、「Camp Smalltalk in 九州」
+>abee> >をやってみるという話もあります。これはデモ大会ではなく、開発合宿の
+>abee> >ようなものです。やはり声が上がり、参加人数がある程度集まれば、こちら
+>abee> >の用意もしたいと思います。
+
+ぜひお願いします。
+私は業務でsmalltalkをやった経験がありますが。
+福岡でsmalltalkの話が出来る人と、会ったことがありません。(汗)
+
+
+# osc-fukuokaのLTで、seasideの話をしようかと考えていました
+# たいして使っていないケド(汗)
+
+-----
+GUN the codeslinger <gun@cup.com>
+
+From pikateu_14 ＠ hotmail.com  Fri Oct 26 14:59:05 2007
+From: pikateu_14 ＠ hotmail.com (いちかわ　あいこ)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3730] Re: リファレンスブック日本語版
+References: <BAY0-MC3-F55YM3scxw000f9888@bay0-mc3-f5.bay0.hotmail.com>
+Message-ID: <BAY102-DAV193278EDB34539D40F7E00E2960@phx.gbl>
+
+いちかわです
+
+阿部さん、アドバイスありがとうございます。
+私もリファレンスを作るとき、「どこまで説明したらよいか」を迷いました。
+もし、多くの人が使う場合には、「問題集」的なリファレンスでもいいかもしれません。 
+
+
+
+セカチョー（笑）を含め、これの日本語化が終了したら、次はそれですね！
+がんばりますっ
+
+いちかわあいこ
+
+
+From umejava ＠ mars.dti.ne.jp  Fri Oct 26 19:03:35 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3731] Re: Squeakers' Night in 九州
+In-Reply-To: <JD200710261405573.14796576@cup.com>
+References: <JD200710242036095.1772687@mars.dti.ne.jp>
+	<4720AA533C0.7FC7ABEE@smtp.nifty.com>
+	<20071026.111850.41630242.hamada@holst.sm.fukuoka-u.ac.jp>
+	<JD200710261405573.14796576@cup.com>
+Message-ID: <JC200710261903354.1803984@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+GUN the codeslinger <gun@cup.com> wrote:
+> はじめまして。コレが初発言となります、鍋田@codeslingerと申します。
+> 
+> 当方、博多にいる'隠れsmalltaker'ですので。
+> 今回のosc fukuokaに、smalltaker/squeakerが参加されるのはとても楽しみにしています。
+> # ジツはosc-fukuoka実行委員の一人。
+
+お返事ありがとうございます。正直だれからも反応ないかなと思っていました
+ので、心強いです。どんどん盛り上げていきましょう。
+
+> >abee> >また、さらにディープな集まりを求める方は、「Camp Smalltalk in 九州」
+> >abee> >をやってみるという話もあります。これはデモ大会ではなく、開発合宿の
+> >abee> >ようなものです。やはり声が上がり、参加人数がある程度集まれば、こちら
+> >abee> >の用意もしたいと思います。
+> 
+> ぜひお願いします。
+> 私は業務でsmalltalkをやった経験がありますが。
+> 福岡でsmalltalkの話が出来る人と、会ったことがありません。(汗)
+
+では行う方向で動いてみようと思います。参加希望の方はどしどし声を
+上げていただければと思います。(希望日なども)
+
+> # osc-fukuokaのLTで、seasideの話をしようかと考えていました
+> # たいして使っていないケド(汗)
+> 
+
+東京で行ったSeasideチュートリアルをもう一度行うのも良いかもしれませんね。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Fri Oct 26 19:09:10 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3732] Re: KOF2007 ユーザ企画 ( 講演会  )
+In-Reply-To: <4711CDCE157.FC35ABEE@smtp.nifty.com>
+References: <d64d01610719d6f5ba82981367274d76@openedu.org>
+	<4711CDCE157.FC35ABEE@smtp.nifty.com>
+Message-ID: <4721BCC6C3.0C61ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+先日お知らせした、KOF2007の講演(ユーザ企画)について、当日飛び込みでも大丈
+夫ですが、なるべく人数を把握したいと思いますので、以下の要領で申し込みを
+お願いします。空メールを送るだけなので簡単です。
+私のOLPCの話は毎度おなじみのものですが、大藤先生の中学校での実践ともえす
+くの話は本邦初だと思います。
+当日行けるかどうか分からないと言う場合でも一応送っていただけると助かりま
+す。
+11/9,10のブース展示はどうぞお気軽にいらしてください。また、山宮さんが
+11/10 11/10(土) 10:35〜10:50のステージ企画でOLPCとSqueakについて話される
+ことになりました。
+
+http://qml.610t.org/squeak/KOF2007.html
+
+よろしくお願いします。
+
+On Sun, 14 Oct 2007 17:05:34 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>会場：大阪南港ATC ITM棟 9F-G4
+>開始時刻：11/10(土) 11:00〜 (50 min)
+>主催：Squeak-ja 
+>
+>内容：
+>一人の子供に一台のノートPCとSqueak - 学ぶことを学ぶためのOLPC
+>阿部 和広 (サイバー大学)
+>MITメディアラボ創設者のニコラス・ネグロポンテを中心に、発展途上国の子供た
+>ちへ100ドルノートPCを使った革新的な教育を提供するOLPCの活動と、そのための
+>アプリケーションの一つであるSqueak Etoysを実機のデモを交えて紹介します。
+>
+>ゲームを通じた学び - Squeakによる授業の実践例
+>大藤 泰生 (関西学院高等部)
+>中学校におけるSqueak Etoysを用いた授業の内容、授業中に子供たちが作ったゲー
+>ム、チュートリアルソフト「もえすく」について紹介します。
+>
+>参加を希望される方は「kof2007squeakja@yahoo.co.jp」宛に、表題を
+>「KOF2007 Squeak-jaユーザ企画参加希望」として、参加者1人につき1通メールを
+>お送りください。本文は空で結構です。こちらからは返信しませんが、定員オー
+>バーなどで参加をお断りする場合のみご連絡差し上げます。
+>当日はユーザ企画としての受付は行いませんので、直接会場へいらしてください。
+>お知らせについては「http://qml.610t.org/squeak/KOF2007.html」をご覧くださ
+>い。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Fri Oct 26 23:52:15 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3733] Re: SuperSwiki のプロジェクトを SuperSwiki2 に取り込みました
+In-Reply-To: <JU200710240808405.1731671@mars.dti.ne.jp>
+References: <JV2007102114131311.11837750@mars.dti.ne.jp>
+	<471E130AFC.FFC2ABEE@smtp.nifty.com>
+	<JU200710240808405.1731671@mars.dti.ne.jp>
+Message-ID: <JR200710262352154.3516406@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さきほどインポートし直しました。もともとアップロードに失敗したか、
+ファイル名がおかしくなっていると思われるプロジェクト以外は復活できている
+と思います。
+
+http://squeakland.jp/super2/
+
+ご確認、お楽しみください。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 結論を先に言いますと、project_info_dbファイル群が古いもののままで
+> インポートしてしまったようです。山宮さんから最新のものをいただくのを
+> 忘れていました。
+> 
+> 新たにインポートし直そうと思います。しばしお待ちください。
+> 
+> 以下、SuperSwiki2の動作を述べます。
+> 
+
+---
+[:masashi | ^umezawa]
+
+From newapplesho ＠ gmail.com  Sat Oct 27 00:11:56 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3734] Monticelloについて
+Message-ID: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+
+吉田　翔です．
+
+Squeak3.9のMonticelloを使おうと思ったら以下の問題が起 
+こってしまいました．
+
+１．プログラムの中に日本語が含まれると，読み込む際にエラーが 
+起きてしまう．
+２．Monticello BrowserのScriptsボタンが使えない．
+
+Monticelloについては自由自在Squeakで勉強しましたが，最新の 
+Monticelloは本からどんな変化しているのでしょうか．
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Oct 27 19:46:40 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3735] Re: Monticelloについて
+In-Reply-To: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+Message-ID: <JD200710271946404.28515687@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+下記のバグに関係があるかもしれませんね。
+http://squeak.pinkzo.net/bugs/view.php?id=64
+
+こういうときはSqueakDebug.logがあると大体のあたりがつきます。
+またはDebugReportでしょう。
+http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003143.html
+
+Monticelloについては、例によって混沌としており
+Version 2が開発中で、1.5というのも存在するようです。
+http://www.squeaksource.com/Monticello2.html
+http://lists.squeakfoundation.org/pipermail/packages/2007-August/000420.html
+
+ではでは。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 吉田　翔です．
+> 
+> Squeak3.9のMonticelloを使おうと思ったら以下の問題が起 
+> こってしまいました．
+> 
+> １．プログラムの中に日本語が含まれると，読み込む際にエラーが 
+> 起きてしまう．
+> ２．Monticello BrowserのScriptsボタンが使えない．
+> 
+> Monticelloについては自由自在Squeakで勉強しましたが，最新の 
+> Monticelloは本からどんな変化しているのでしょうか．
+> 
+> - - - -
+> Sho Yoshida
+> newapplesho@gmail.com
+> 
+
+
+
+---
+[:masashi | ^umezawa]
+
+From e-itoh ＠ ygu.ac.jp  Sat Oct 27 21:26:36 2007
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3736] 非 Morph を ObjectsTool へ追加する方法について
+Message-ID: <20071027212636.C859739@ygu.ac.jp>
+
+山梨学院大学の伊藤です。
+
+Squeakerのみなさんこんばんは。
+
+作成中のプログラムをObjectsTool（オブジェクトのカタログ）に
+登録しようと思っています。
+
+Morphの場合には、descriptionForPartsBinというクラスメソッド
+を定義しておくとObjectsToolにカテゴリやモーフが登録されます。
+ところが、SystemWindowを使ってウィンドウ表示するModelのサブ
+クラスの場合、Morphのサブクラスではないため登録されません。
+でも実際にはObjectsToolのツールにはSystemWindowを使うBrowser
+やWorkspaceが登録されています。
+
+BrowserやWorkspaceのようにObjectsToolに登録する方法をご存じ
+の方がいらっしゃったら教えていただけませんでしょうか？
+
+よろしくお願いいたします。
+
+
+
+
+
+
+From abee ＠ squeakland.jp  Sat Oct 27 22:39:05 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3737] Re: 非 Morph を ObjectsTool へ追加する方法について
+In-Reply-To: <20071027212636.C859739@ygu.ac.jp>
+References: <20071027212636.C859739@ygu.ac.jp>
+Message-ID: <47233F7922F.5331ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 27 Oct 2007 21:26:36 +0900 (JST)
+"Eiichiro Ito" <e-itoh@ygu.ac.jp> wrote:
+>BrowserやWorkspaceのようにObjectsToolに登録する方法をご存じ
+>の方がいらっしゃったら教えていただけませんでしょうか？
+
+ToolsカテゴリでよろしければクラスメソッドにregisterInFlapsRegistryを定義
+し、それを実行すれば登録されるようです(あと登録を解除する為のunloadも)。
+具体的な定義については、implementorsで他のクラスの実装例をご覧ください。
+もしTools以外にする場合は、Morph>>supplementaryPartsDescriptionsあたりを
+いじることになると思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From e-itoh ＠ ygu.ac.jp  Sat Oct 27 22:41:57 2007
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3738] Re: 非 Morph  を ObjectsTool  へ追加する方法について
+References: <20071027212636.C859739@ygu.ac.jp>
+	<47233F7922F.5331ABEE@smtp.nifty.com>
+Message-ID: <20071027224157.E4A8200@ygu.ac.jp>
+
+伊藤です。
+
+阿部さん、こんばんは。
+早速アドバイスいただきありがとうございます。
+
+なるほど、Morph>>supplementaryPartsDescriptionsは見落としてい
+ました。
+Toolsではなく別のカテゴリを作りたかったのでMorphクラスをいじ
+らないとだめのようですね。
+
+#よく考えたらDrag and Dropも実装しようとすると、SystemWindow
+#ではダメなので、もういっそのことMorphでやり直した方がいいか
+#もと思い始めてきました。
+
+お忙しいところありがとうございました。
+
+--- "Kazuhiro ABE" <abee@squeakland.jp> ---
+
+>阿部@新百合です。
+>
+>On Sat, 27 Oct 2007 21:26:36 +0900 (JST)
+>"Eiichiro Ito" <e-itoh@ygu.ac.jp> wrote:
+>>BrowserやWorkspaceのようにObjectsToolに登録する方法をご存じ
+>>の方がいらっしゃったら教えていただけませんでしょうか？
+>
+>ToolsカテゴリでよろしければクラスメソッドにregisterInFlapsRegistryを定義
+>し、それを実行すれば登録されるようです(あと登録を解除する為のunloadも)。
+>具体的な定義については、implementorsで他のクラスの実装例をご覧ください。
+>もしTools以外にする場合は、Morph>>supplementaryPartsDescriptionsあたりを
+>いじることになると思います。
+>
+> //abee
+>--
+>阿部 和広  EMAIL abee@squeakland.jp
+
+
+
+
+
+
+From newapplesho ＠ gmail.com  Sat Oct 27 23:02:17 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3739] Re: Monticelloについて
+In-Reply-To: <JD200710271946404.28515687@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+Message-ID: <99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+
+梅澤さんへ
+
+吉田です．いつもありがとうございます．
+
+>
+> 下記のバグに関係があるかもしれませんね。
+> http://squeak.pinkzo.net/bugs/view.php?id=64
+
+
+こちらのサイトで公開されているパッチを当てても読み込む際にSyntax  
+Errorで
+途中で止まってしまいます．
+その際にDebug.logは作られませんでした．
+
+
+またMonticelloのScriptsボタンのエラーを 
+Debug.logで送らさせていただきます．
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     3396 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071027/a71c254c/SqueakDebug.obj
+-------------- next part --------------
+
+>
+> こういうときはSqueakDebug.logがあると大体のあたりがつ 
+> きます。
+> またはDebugReportでしょう。
+> http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003143.html
+>
+
+DebugReportなんて便利なものもあるんですね．
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From hayasaka ＠ pluto.dti.ne.jp  Sun Oct 28 17:36:44 2007
+From: hayasaka ＠ pluto.dti.ne.jp (Hayasaka Yoshiaki)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3740] まだ未解決です。
+In-Reply-To: <000c01c81862$ebaa5750$020ba8c0@computer>
+References: <000c01c81862$ebaa5750$020ba8c0@computer>
+Message-ID: <1193560604.3520.37.camel@hayasaka.pluto.dti.ne.jp>
+
+伊藤　様
+
+ご教授ありがとうございます。
+
+いろいろと格闘していますが、まだ解決していません。
+
+取り急ぎ、お礼を申し上げます。
+
+早坂　吉昭
+
+> > 山梨学院大学の伊藤です。
+> >
+> > 早坂さん、こんにちは。
+> >
+> >>　クリップボードは、どこにあるのでしょうか。
+> >>/usr/share/icons/Wasp/scalable/stock ディレクトリにある
+> >>clipboard.svgのことでしょうか。
+> >>クリアするとは、削除するのですか。
+> > 　違います。きっとそのファイルを消すと別の問題が発生する
+> > でしょうから消さないでください。
+> >
+> > 　私も同様のトラブルを経験したのはずっと以前のことなので
+> > 記憶があいまいです。すみませんが一応ご承知おきください。
+> >
+> > 私の遭遇した現象は以下のようなものです。
+> > 1.とあるアプリケーション(defart)を開発中だった。
+> > 2.いろいろ試している際、イメージを保存後にテスト実行と
+> > 　いったことを繰り返していた。
+> > 3.とある実行でシステムがハングし、直前に保存したイメー
+> > 　ジで起動した。
+> > 4.テキストを打てる場所(たぶんPluggableTextMorh)で文字
+> > 　入力したとたん、Squeakがストンと落ちてしまった。
+> > 5.（たしか）この時はSqueakDebug.logが残らなかった。
+> > 6.再度起動しても、システムを再起動しても同様の現象が起
+> > 　こった。
+> >
+> > この辺から記憶があいまいなのですが、確か次のように考え
+> > ていたように思います。
+> >
+> > 1.配布イメージからやりなおすのが面倒だったので、何とか
+> > 　落ちないような手立てがないか考えた。
+> > 2.キーボード入力以外なら特に問題が発生しないので、キー
+> > 　ボード入力周辺で何か怪しいことがないか調べた。
+> > 3.キーを入力する際にテキストエリアの選択部分を消すコー
+> > 　ドがあり、その中にクリップボード（ペーストバッファ）
+> > 　関連のコードがあった？（今調べてないので本当かどうか
+> > 　非常に怪しいです）
+> > 4.本来ペーストバッファの内容はＯＳから得るだろうから、
+> > 　再起動でも同様の事態になるのはおかしい。
+> > 5.それでもおかしくなるのは、イメージ側で何らかのデータ
+> > 　を持っているのか？
+> > 6.イメージ側で持っているデータを消せば良いのでは？
+> >
+> > イメージ側で適当なテキストを選択してコピーしたら、うま
+> > くいったような記憶があります。
+> >
+> > ただ、今になって別のやり方をとった気もしてきました。
+> >
+> > 別のやり方とは、debianでおかしくなったイメージをWind
+> > owsで開いてみて、文字入力やらコピーやら実行し、イメー
+> > ジ保存したらdebian側で問題が発生しなくなった、という
+> > ものです。
+> >
+> > どちらにせよ、必要なデータをファイルとして保存してか
+> > ら、新しいイメージで読み込んだ方が早いのではないでし
+> > ょうか？私の場合はいくらか事情があって上記のようにし
+> > ましたが早坂さんも何か訳アリでしょうか？
+> >
+> > 以上、大した手がかりにも原因究明にもならないことをダ
+> > ラダラ書いてすみません。
+> >
+> > 少しでも助けになれば幸いです。
+> >
+
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 28 17:50:19 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3741] Re: Monticelloについて
+In-Reply-To: <99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+Message-ID: <JB200710281750194.651125@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 梅澤さんへ
+> 
+> 吉田です．いつもありがとうございます．
+> 
+> >
+> > 下記のバグに関係があるかもしれませんね。
+> > http://squeak.pinkzo.net/bugs/view.php?id=64
+> 
+> 
+> こちらのサイトで公開されているパッチを当てても読み込む際にSyntax  
+> Errorで
+> 途中で止まってしまいます．
+> その際にDebug.logは作られませんでした．
+> 
+
+Syntax Errorで止まっている場合でも、エラーのウィンドウ上で、
+"debug calling process"を選ぶことで原因となったデバッガを開くことが
+できます。
+
+その後、デバッガのハロ経由でDebuggerのインスタンスを捕まえて、
+debugLogのメッセージを送ると、ログを出力させることができると思います。
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+
+From newapplesho ＠ gmail.com  Sun Oct 28 21:59:17 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3742] Re: Monticelloについて
+In-Reply-To: <JB200710281750194.651125@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+Message-ID: <47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+
+梅澤さんへ
+
+吉田です．お返事ありがとうございます．
+Debuglogを出力できたので，送ります．
+
+自分では原因がわからなかったのでよろしくお願いいたします．
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     4469 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071028/8e2c4a2e/SqueakDebug.obj
+-------------- next part --------------
+
+
+On 2007/10/28, at 17:50, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> Sho Yoshida <newapplesho@gmail.com> wrote:
+>> 梅澤さんへ
+>>
+>> 吉田です．いつもありがとうございます．
+>>
+>>>
+>>> 下記のバグに関係があるかもしれませんね。
+>>> http://squeak.pinkzo.net/bugs/view.php?id=64
+>>
+>>
+>> こちらのサイトで公開されているパッチを当てても読み込む際に 
+>> Syntax
+>> Errorで
+>> 途中で止まってしまいます．
+>> その際にDebug.logは作られませんでした．
+>>
+>
+> Syntax Errorで止まっている場合でも、エラーのウィンドウ上で、
+> "debug calling process"を選ぶことで原因となったデバッガを開 
+> くことが
+> できます。
+>
+> その後、デバッガのハロ経由でDebuggerのインスタンスを 
+> 捕まえて、
+> debugLogのメッセージを送ると、ログを出力させることができる 
+> と思います。
+>
+> ではでは。
+>
+> ---
+> [:masashi | ^umezawa]
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From newapplesho ＠ gmail.com  Sun Oct 28 22:12:35 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3743] 保存書庫について
+Message-ID: <8E8D82C5-1B2A-4005-A5DE-512E6B38D9DD@gmail.com>
+
+吉田　翔です．
+
+今Squeak-jaの保存書庫を見たら，またアーカイブが途中で止 
+まっているようです．
+不具合がまた起こっているのでしょうか．
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct 28 22:26:54 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3744] Re: Monticelloについて
+In-Reply-To: <47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+Message-ID: <JF200710282226548.4956546@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+UTF8のコンバータがStreamにかかっていないように見えますね。
+
+これだけでは情報が足りないので、バグが再現できるような
+テストケースを作ってもらえませんでしょうか。
+
+ダミーの日本語文字列入りのソースを書いて.mczにするなどの方法で
+できると思います。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 梅澤さんへ
+> 
+> 吉田です．お返事ありがとうございます．
+> Debuglogを出力できたので，送ります．
+> 
+> 自分では原因がわからなかったのでよろしくお願いいたします．
+> 
+
+---
+[:masashi | ^umezawa]
+
+From newapplesho ＠ gmail.com  Sun Oct 28 22:51:37 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3745] Re: Monticelloについて
+In-Reply-To: <JF200710282226548.4956546@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+Message-ID: <C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+
+梅澤さんへ
+
+吉田です．
+早速ありがとうございます．
+
+どんなケースを作ればいいのか，わからなかったので以前作った簡 
+単なツールに日本語を含めてみました．
+添付したstを取り込んでmczにして読み込んでも，エ 
+ラーが起こりました．
+
+日本語はTwoPTextEditer>>commentの中に書きました．
+
+いいテストケースが作れなくてすみません．
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SCL-Tool.st
+型:         application/octet-stream
+サイズ:     2400 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071028/0236ea07/SCL-Tool.obj
+-------------- next part --------------
+
+
+
+
+On 2007/10/28, at 22:26, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> UTF8のコンバータがStreamにかかっていないように見えますね。
+>
+> これだけでは情報が足りないので、バグが再現できるような
+> テストケースを作ってもらえませんでしょうか。
+>
+> ダミーの日本語文字列入りのソースを書いて.mczにするな 
+> どの方法で
+> できると思います。
+>
+> Sho Yoshida <newapplesho@gmail.com> wrote:
+>> 梅澤さんへ
+>>
+>> 吉田です．お返事ありがとうございます．
+>> Debuglogを出力できたので，送ります．
+>>
+>> 自分では原因がわからなかったのでよろしくお願いいたします．
+>>
+>
+> ---
+> [:masashi | ^umezawa]
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From abee ＠ squeakland.jp  Sun Oct 28 23:46:08 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:56 2007
+Subject: [Squeak-ja: 3746] Re: 保存書庫について
+In-Reply-To: <8E8D82C5-1B2A-4005-A5DE-512E6B38D9DD@gmail.com>
+References: <8E8D82C5-1B2A-4005-A5DE-512E6B38D9DD@gmail.com>
+Message-ID: <4724A0B03E1.E40FABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 28 Oct 2007 22:12:35 +0900
+Sho Yoshida <newapplesho@gmail.com> wrote:
+>今Squeak-jaの保存書庫を見たら，またアーカイブが途中で止 
+>まっているようです．
+>不具合がまた起こっているのでしょうか．
+
+そのようです。詳しくは桑谷さんの調査を待ちたいと思いますが、このような事
+例についてご存知の方がいらっしゃいましたら教えていただければと思います。
+
+Squeak-jaが行っているサービスではないのですが、Nabbleというサイトで独自に
+アーカイブが取られています。
+
+http://www.nabble.com/Squeak---Japan-f14186.html
+
+このシステムにユーザ登録したり、ここからポストしてもMLに反映される保証は
+無いので、あまりお勧めはしていません。また、アーカイブ内容のメンテナンス
+要求があったとしてもこちらでは対応できません。自己責任でお使いください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Mon Oct 29 01:11:14 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3747] Re: Squeakers' Night in 九州
+In-Reply-To: <20071026.111850.41630242.hamada@holst.sm.fukuoka-u.ac.jp>
+References: <4720AA533C0.7FC7ABEE@smtp.nifty.com>
+	<20071026.111850.41630242.hamada@holst.sm.fukuoka-u.ac.jp>
+Message-ID: <4724B4A213A.E415ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 26 Oct 2007 11:18:50 +0900 (JST)
+Tatsuyoshi HAMADA <hamada@holst.sm.fukuoka-u.ac.jp> wrote:
+>阿部様、お誘いありがとうございます。
+>ちょうど、その時期に東京に出張しておりますので、
+>OSC2007 Fukuoka には出席できないのです。
+
+それは残念です。
+
+>ただ、11月の5日から集中講義のため、1週間は神戸大に滞在していますので、
+>KOF には顔を出せるので、楽しみにしています。
+
+お待ちしております。どうぞよろしくお願いいたします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From hayasaka ＠ pluto.dti.ne.jp  Mon Oct 29 10:47:14 2007
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3748] まだ未解決です（文字化けを起こしました）。
+References: <200710281353.l9SDrYRW003212@pop.pluto.dti.ne.jp>
+Message-ID: <000801c819cd$a1b2aa50$020ba8c0@computer>
+
+早坂です。
+
+　Linux（Debian）のメールを使ったら、
+文字化けを起こしました。
+大変申し訳ありませんでした(UTF-8を使用した)。
+送信内容は、以下の通りです。
+
+伊藤様
+
+御教授ありがとうございました。
+いろいろと試みていますが、まだ解決しておりません。
+
+取り急ぎ、御礼申し上げます。
+
+早坂　吉昭
+
+
+From tsutomu ＠ nucba.ac.jp  Mon Oct 29 13:34:14 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3749] Re: Unix用のリクエストいくつか
+In-Reply-To: <JC200710222352313.4754328@mars.dti.ne.jp>
+References: <JO200710141835045.20654593@mars.dti.ne.jp>	<FE54F3CF-C85A-49F9-8C8B-EE4D99DE412C@gmail.com>
+	<JC200710222352313.4754328@mars.dti.ne.jp>
+Message-ID: <472562C6.60108@nucba.ac.jp>
+
+廣島です．お久しぶりです．
+遅ればせながら，エラーをこちらでも確認しました．
+
+platforms/unix/vm/sqUnixEvent.c
+
+で，インプットイベントの循環バッファのサイズが，
+
+#define IEB_SIZE         64     /* must be power of 2 */
+
+となっています．
+変換文字列が一定数以上だとバッファを1周して
+変換文字列の最初を上書きしてしまい問題が生じるようです．
+utf8 あ 11文字で 33 バイト，
+EventKeyDown と EventKeyChar のイベントが各バイトで生じるので，
+66個のイベントが一度に生じます．計算はぴったり合います．
+
+さて，どう対処したものか？
+=================
+廣島　勉
+Tsutomu Hiroshima
+
+From umejava ＠ mars.dti.ne.jp  Mon Oct 29 22:53:51 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3750] Re: Monticelloについて
+In-Reply-To: <C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+	<C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+Message-ID: <JZ200710292253518.7755250@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ちょっと調べてみたところ、どうやらmcz内の.stファイルを、オリジナルの
+パッチではBOMなしのUTF8で書くようになっていたことに原因があるようでした。
+
+ということで、BOMつきUTF8にするように修正しました。
+
+このパッチは3.9系でのみ、動作を確認しています。
+
+読み込めなくなった旧.mczは、展開してsource.stを開き、BOM付きのUTF8で
+保存しなおし、また固めることで復活させることが出来ます。これは現時点
+では手動で行うしかありません。
+
+パッチですが、最近のMonticelloの動向などを見つつ、もう少し整理しよう
+と思います。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 梅澤さんへ
+> 
+> 吉田です．
+> 早速ありがとうございます．
+> 
+> どんなケースを作ればいいのか，わからなかったので以前作った簡 
+> 単なツールに日本語を含めてみました．
+> 添付したstを取り込んでmczにして読み込んでも，エ 
+> ラーが起こりました．
+> 
+> 日本語はTwoPTextEditer>>commentの中に書きました．
+> 
+
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Monticello-m17n-patch.6.cs
+型:         application/octet-stream
+サイズ:     2701 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071029/b83d0d6a/Monticello-m17n-patch.6.obj
+From umejava ＠ mars.dti.ne.jp  Mon Oct 29 23:05:49 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3751] Re: Monticelloについて
+In-Reply-To: <JZ200710292253518.7755250@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+	<C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+	<JZ200710292253518.7755250@mars.dti.ne.jp>
+Message-ID: <JK2007102923054911.8473421@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+すみません。ちょっとしょぼい誤りを見つけたので早速訂正して送ります。
+
+なお、Monticelloの公開時コメントやパッケージ名に日本語を使ったり
+すると、きっと動かないと思います。ソースコード(とクラスコメント)内に
+日本語を使うことができるようになったという程度のものです。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> ちょっと調べてみたところ、どうやらmcz内の.stファイルを、オリジナルの
+> パッチではBOMなしのUTF8で書くようになっていたことに原因があるようでした。
+> 
+> ということで、BOMつきUTF8にするように修正しました。
+> 
+> このパッチは3.9系でのみ、動作を確認しています。
+> 
+> 読み込めなくなった旧.mczは、展開してsource.stを開き、BOM付きのUTF8で
+> 保存しなおし、また固めることで復活させることが出来ます。これは現時点
+> では手動で行うしかありません。
+> 
+> パッチですが、最近のMonticelloの動向などを見つつ、もう少し整理しよう
+> と思います。
+> 
+> Sho Yoshida <newapplesho@gmail.com> wrote:
+> > 梅澤さんへ
+> > 
+> > 吉田です．
+> > 早速ありがとうございます．
+> > 
+> > どんなケースを作ればいいのか，わからなかったので以前作った簡 
+> > 単なツールに日本語を含めてみました．
+> > 添付したstを取り込んでmczにして読み込んでも，エ 
+> > ラーが起こりました．
+> > 
+> > 日本語はTwoPTextEditer>>commentの中に書きました．
+> > 
+> 
+> ---
+> [:masashi | ^umezawa]
+
+
+
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Monticello-m17n-patch.7.cs
+型:         application/octet-stream
+サイズ:     2647 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071029/1242d1ef/Monticello-m17n-patch.7.obj
+From sato_hirokazu ＠ tba.t-com.ne.jp  Mon Oct 29 23:40:13 2007
+From: sato_hirokazu ＠ tba.t-com.ne.jp (Hirokazu Sato)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3752] Squeak日本語とPostgresqlとの接続
+Message-ID: <297BCD5C-A8F6-406E-B91D-4787E8317582@tba.t-com.ne.jp>
+
+こんばんは。
+
+岡山でエンジニアをしています、さとうと申します。
+seasideを使って、Web経由でDBに書き込みができる自 
+部門の業務画面を
+作ってあげようと思い、おおむねできたのでテストで日本語を入力 
+してみたら、
+以下のエラーがでてうまくDBに書き込みができません。
+切り分けのため以下のコードを実行してみましたが同様の結果にな 
+ります。
+("日本語"の部分を半角英数にするとインサートできます）
+
+| dbconn |
+dbconn _ PGConnection new.
+dbconn startup.
+dbconn execute: 'insert into t-table values  
+(''2007/10/29'',''10:22'',''日本語'',''test'')'.
+dbconn terminate.
+
+
+エラー内容：
+"ConnectionClosed: Connection closed while waiting for data."
+
+
+試している環境：　OS: OSX 10.3.9
+                                     VM: Squeak 3.8.18beta1U
+	 			    Image: Seaside-JPatched070105　
+                                     PostgresqlClient:
+					PostgreSQL Client for Squeak(PosgresV2)
+					 Published version: 1.0
+					 Created: 1 February 2006 5:13:15 pm
+
+　特に環境にこだわりはありません。
+　会社で利用するときはWindowsやLinuxプラット 
+フォームになると思います。
+
+皆様の中でうまく行っている実績があれば特に環境にはこだわりま 
+せんので、
+ご教授頂きたいです。
+よろしくお願いします。
+
+--
+さとうひろかず
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071029/936b480f/attachment.html
+From newapplesho ＠ gmail.com  Mon Oct 29 23:54:05 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3753] Re: Monticelloについて
+In-Reply-To: <JK2007102923054911.8473421@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+	<C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+	<JZ200710292253518.7755250@mars.dti.ne.jp>
+	<JK2007102923054911.8473421@mars.dti.ne.jp>
+Message-ID: <68F12515-1E1E-47BD-BC72-D39895E10158@gmail.com>
+
+吉田です．
+
+梅澤さん，本当に色々とありがとうございます．
+さっそく使ってみました．
+日本語が含まれていてもきちんと動作しました．
+すごくうれしいです．
+
+BOMの問題はこんなところでもあるんですね．
+
+
+
+On 2007/10/29, at 23:05, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> すみません。ちょっとしょぼい誤りを見つけたので早速訂正して 
+> 送ります。
+>
+> なお、Monticelloの公開時コメントやパッケージ名に日本 
+> 語を使ったり
+> すると、きっと動かないと思います。ソースコード(とクラ 
+> スコメント)内に
+> 日本語を使うことができるようになったという程度のものです。
+>
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>> こんにちは
+>> 梅澤です。
+>>
+>> ちょっと調べてみたところ、どうやらmcz内の.st 
+>> ファイルを、オリジナルの
+>> パッチではBOMなしのUTF8で書くようになっていた 
+>> ことに原因があるようでした。
+>>
+>> ということで、BOMつきUTF8にするように修正しました。
+>>
+>> このパッチは3.9系でのみ、動作を確認しています。
+>>
+>> 読み込めなくなった旧.mczは、展開してsource.st 
+>> を開き、BOM付きのUTF8で
+>> 保存しなおし、また固めることで復活させることが出来ます。こ 
+>> れは現時点
+>> では手動で行うしかありません。
+>>
+>> パッチですが、最近のMonticelloの動向などを見つつ、も 
+>> う少し整理しよう
+>> と思います。
+>>
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+
+From newapplesho ＠ gmail.com  Tue Oct 30 01:36:59 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3754] Re: Monticelloについて
+In-Reply-To: <JK2007102923054911.8473421@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+	<C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+	<JZ200710292253518.7755250@mars.dti.ne.jp>
+	<JK2007102923054911.8473421@mars.dti.ne.jp>
+Message-ID: <0DD6FA36-8304-4CBA-AE70-E9D587C76CAB@gmail.com>
+
+吉田です．
+
+梅澤さん，何度もすみません．
+違うイメージにMonticello-m17n-patch.7.csをfile inして 
+mczファイルを作成し，読み込んだところエラーが起こってしまいま 
+した．
+ただ，Monticello-m17n-patch.7.csをfile inしたあとに 
+Monticello-m17n-patch.4.cをfile inしてmczファイル 
+を作成するとうまくいきました．
+
+僕のSqueakの環境が悪いのでしょうか．
+よろしくお願いいたします．
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071030/e50ec9da/attachment.htm
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     4169 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071030/e50ec9da/SqueakDebug.obj
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071030/e50ec9da/attachment-0001.htm
+From umejava ＠ mars.dti.ne.jp  Tue Oct 30 08:35:53 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3755] Re: Monticelloについて
+In-Reply-To: <0DD6FA36-8304-4CBA-AE70-E9D587C76CAB@gmail.com>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+	<C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+	<JZ200710292253518.7755250@mars.dti.ne.jp>
+	<JK2007102923054911.8473421@mars.dti.ne.jp>
+	<0DD6FA36-8304-4CBA-AE70-E9D587C76CAB@gmail.com>
+Message-ID: <JX200710300835537.2520015@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+デバッグログを見るに、
+MczInstaller>>extractVersionInfoでこけていますね。
+
+> なお、Monticelloの公開時コメントやパッケージ名に日本語を使ったり
+> すると、きっと動かないと思います。ソースコード(とクラスコメント)内に
+> 日本語を使うことができるようになったという程度のものです。
+
+と書きましたが、公開時コメントで日本語を過去に使ったことがある.mcz
+を使われているのだと思います。
+
+.mczファイルを展開してできるversionというファイルを見ると、日本語
+が含まれたりしていませんでしょうか。
+
+つまりもう少し修正が必要なのですが、範囲が大きくなりそうなので保留中です。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 吉田です．
+> 
+> 梅澤さん，何度もすみません．
+> 違うイメージにMonticello-m17n-patch.7.csをfile inして 
+> mczファイルを作成し，読み込んだところエラーが起こってしまいま 
+> した．
+> ただ，Monticello-m17n-patch.7.csをfile inしたあとに 
+> Monticello-m17n-patch.4.cをfile inしてmczファイル 
+> を作成するとうまくいきました．
+> 
+> 僕のSqueakの環境が悪いのでしょうか．
+> よろしくお願いいたします．
+
+---
+[:masashi | ^umezawa]
+
+From tsutomu ＠ nucba.ac.jp  Tue Oct 30 09:11:28 2007
+From: tsutomu ＠ nucba.ac.jp (Hiroshima Tsutomu Kougi)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3756] SqueakImmX11Plugin4e
+Message-ID: <36518.125.196.190.185.1193703088.risu@mail.nucba.ac.jp>
+
+廣島です．
+UNIX VM で件のインプットイベント循環バッファの問題を回避したパッチを作成しま
+した．
+興味のある方はテストをお願いします．
+
+大まかな解決策は次の通りです．
+
+Xutf8LookupStrings 等で製作した文字列バッファをグローバルで保持し，
+インプットイベントバッファの空きの分だけ転送する．
+以降，イベントハンドラでは文字列バッファが空になるまで転送を繰り返す．
+その間は新規イベントを受け付けず，
+イメージがイベントハンドラの合間でインプットイベントバッファを処理するのを待
+つ．
+
+元々の VM の考え方では，
+キー入力は 1 バイトずつで完結しているものとしていて，
+文字列バッファの最初の 1 バイトだけをインプットイベントバッファに転送して残
+りは捨てる．
+インプットイベントバッファが溢れたら古いイベントから捨てる
+という手順でした
+
+小さくない変更なので他の所に影響が出るかもしれません．
+特にある期間新規イベントを受け付けないことがある当たりが心配です．
+
+http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4e.tar.gz
+
+
+From newapplesho ＠ gmail.com  Tue Oct 30 09:47:59 2007
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3757] Re: Monticelloについて
+In-Reply-To: <JX200710300835537.2520015@mars.dti.ne.jp>
+References: <B412001D-6296-438A-AC8E-C6092555CDEE@gmail.com>
+	<JD200710271946404.28515687@mars.dti.ne.jp>
+	<99E0E8F7-23E5-4745-83AB-F84AFC6CC2AB@gmail.com>
+	<JB200710281750194.651125@mars.dti.ne.jp>
+	<47902026-8296-4868-9F05-328AB4FBCF4B@gmail.com>
+	<JF200710282226548.4956546@mars.dti.ne.jp>
+	<C028CBD0-4D50-434F-8D8B-F64589A6B1C5@gmail.com>
+	<JZ200710292253518.7755250@mars.dti.ne.jp>
+	<JK2007102923054911.8473421@mars.dti.ne.jp>
+	<0DD6FA36-8304-4CBA-AE70-E9D587C76CAB@gmail.com>
+	<JX200710300835537.2520015@mars.dti.ne.jp>
+Message-ID: <B0C1277D-4445-4E1D-BBBF-06FA5CBEC6A1@gmail.com>
+
+吉田です．
+
+梅澤さん，朝早くからありがとうございます．
+versionを見たところ，日本語が含まれていました．
+過去のmczの日本語のこともいけないことに気がつがず，すみ 
+ません．
+もっとメールの内容をきちんと理解しなければなりませんでした．
+
+公開コメントに日本語を使えないのは問題がないので，
+Monticello-m17n-patch.7.csを大事に使わせていただきます．
+
+
+On 2007/10/30, at 8:35, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> デバッグログを見るに、
+> MczInstaller>>extractVersionInfoでこけていますね。
+>
+>> なお、Monticelloの公開時コメントやパッケージ名に日本 
+>> 語を使ったり
+>> すると、きっと動かないと思います。ソースコード(とク 
+>> ラスコメント)内に
+>> 日本語を使うことができるようになったという程度のものです。
+>
+> と書きましたが、公開時コメントで日本語を過去に使ったことがあ 
+> る.mcz
+> を使われているのだと思います。
+>
+> .mczファイルを展開してできるversionというファイルを見 
+> ると、日本語
+> が含まれたりしていませんでしょうか。
+>
+> つまりもう少し修正が必要なのですが、範囲が大きくなりそうな 
+> ので保留中です。
+>
+
+From tsutomu ＠ nucba.ac.jp  Tue Oct 30 14:05:03 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3758] Re: まだ未解決です（文字化けを起こしました）。
+In-Reply-To: <000801c819cd$a1b2aa50$020ba8c0@computer>
+References: <200710281353.l9SDrYRW003212@pop.pluto.dti.ne.jp>
+	<000801c819cd$a1b2aa50$020ba8c0@computer>
+Message-ID: <4726BB7F.3030207@nucba.ac.jp>
+
+廣島です．
+UNIX VM 内部をいじり回す私としては，
+/* 解決にはいたらないかもしれませんが */
+参考となる情報が欲しいです．
+
+起動方法がコマンドラインからならば，
+- 落ちたときにターミナルに何か出てませんか？
+
+伊藤さんの経験によると，イメージ次第で落ちたり落ちなかったりするはずですが，
+- どのイメージでも落ちる．
+- 特定のイメージで落ちる．
+- 落ちなかったイメージが最近落ちる様になった．
+
+Workspace への書き込みで落ちるようですが，
+- Workspace を開けば落ちる．
+- Workspace にフォーカスを持っていった時に，
+　つまりキーを押す前に落ちる．
+- Workspace にフォーカスを持っていった時は落ちないが，
+　そこで何らかのキーを押すと落ちる．
+- Workspace を開かなくても，つまりキーを受け付けるウィンドウが
+　開いてなくともキーを押せば落ちる．
+
+-- 
+廣島　勉
+
+From e-itoh ＠ ygu.ac.jp  Tue Oct 30 16:19:05 2007
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3759] Re: まだ未解決です（文字化けを起こしました）。
+References: <200710281353.l9SDrYRW003212@pop.pluto.dti.ne.jp>
+	<000801c819cd$a1b2aa50$020ba8c0@computer>
+	<4726BB7F.3030207@nucba.ac.jp>
+Message-ID: <20071030161905.63F87682@ygu.ac.jp>
+
+廣島さん、早坂さん
+
+伊藤です。
+素人の浅はかな対処方法なぞを掲載して混乱させてしまったよう
+です。申し訳ございませんでした。
+
+＃debianがメインだったころは廣島さんのお世話になっておりま
+＃した。ありがとうございました。
+
+今では「落ちる」イメージが手元にないので、私のあいまいな記
+憶による情報ではなく、早坂さんの具体的な情報を待ちたいです
+ね。
+
+--- "Tsutomu Hiroshima" <tsutomu@nucba.ac.jp> ---
+
+>廣島です．
+>UNIX VM 内部をいじり回す私としては，
+>/* 解決にはいたらないかもしれませんが */
+>参考となる情報が欲しいです．
+>
+>起動方法がコマンドラインからならば，
+>- 落ちたときにターミナルに何か出てませんか？
+>
+>伊藤さんの経験によると，イメージ次第で落ちたり落ちなかったりするはずですが，
+>- どのイメージでも落ちる．
+>- 特定のイメージで落ちる．
+>- 落ちなかったイメージが最近落ちる様になった．
+>
+>Workspace への書き込みで落ちるようですが，
+>- Workspace を開けば落ちる．
+>- Workspace にフォーカスを持っていった時に，
+>　つまりキーを押す前に落ちる．
+>- Workspace にフォーカスを持っていった時は落ちないが，
+>　そこで何らかのキーを押すと落ちる．
+>- Workspace を開かなくても，つまりキーを受け付けるウィンドウが
+>　開いてなくともキーを押せば落ちる．
+>
+>-- 
+>廣島　勉
+
+
+
+
+
+
+From abee ＠ squeakland.jp  Tue Oct 30 17:36:19 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3760] Re: 近刊のご紹介「 Squeak プログラミング−−簡単に作れるビジュアル教材」
+In-Reply-To: <46FCA6C9322.1077ABEE@smtp.nifty.com>
+References: <46FCA6C9322.1077ABEE@smtp.nifty.com>
+Message-ID: <4726ED0337A.1C62ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+無事発売されたようです。
+
+http://www.tdupress.jp/cgi-bin/html.cgi?i=ISBN978-4-501-54370-9
+
+いくつかのネット書店でも既に注文可能になっています。また、有限会社アカデ
+ミアでも近々取り扱いを始める予定です。もえすくなどと一緒にどうぞ。
+
+KOF2007, OSC2007 Fukuokaでも日本で販売されているすべてのSqueak関連書籍と
+合わせて展示しますのでよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Tue Oct 30 23:51:41 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3761] Re: Squeak日本語とPostgresqlとの接続
+In-Reply-To: <297BCD5C-A8F6-406E-B91D-4787E8317582@tba.t-com.ne.jp>
+References: <297BCD5C-A8F6-406E-B91D-4787E8317582@tba.t-com.ne.jp>
+Message-ID: <JM200710302351416.2212531@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SeasideとPostgreSQLというのは面白い組み合わせですね。
+私もちょっとインストールして試してみました。
+
+Windows XPで、PostgreSQLのデフォルトエンコーディングをUTF8にしています。
+
+con execute: ('insert into fruits values (''スイカ'',''123'')' convertToEncoding: #utf8). 
+
+のようにすると、値がちゃんと入りました。
+Squeakの多バイト文字列はUnicodeに準じた独自表現なので、
+convertToEncoding: #utf8などを文字列に送って、DBのエンコーディングに
+合わせた上でDBに渡す必要があります。
+
+得られるPGResult内の文字列も、単なるByteStringになってしまっているので、
+これもエンコードを指定して、Squeakの多バイト文字列に戻す必要があります。
+
+'文字化け文字列' convertFromEncoding: #utf8.
+
+のようにします。
+
+もう少しラッピングするなり、パッチを当てるなりしないと使いにくいですが、
+基本的な考え方はこのような感じです。
+
+では。
+
+Hirokazu Sato <sato_hirokazu@tba.t-com.ne.jp> wrote:
+> こんばんは。
+> 
+> 岡山でエンジニアをしています、さとうと申します。
+> seasideを使って、Web経由でDBに書き込みができる自 
+> 部門の業務画面を
+> 作ってあげようと思い、おおむねできたのでテストで日本語を入力 
+> してみたら、
+> 以下のエラーがでてうまくDBに書き込みができません。
+> 切り分けのため以下のコードを実行してみましたが同様の結果にな 
+> ります。
+> ("日本語"の部分を半角英数にするとインサートできます）
+> 
+> | dbconn |
+> dbconn _ PGConnection new.
+> dbconn startup.
+> dbconn execute: 'insert into t-table values  
+> (''2007/10/29'',''10:22'',''日本語'',''test'')'.
+> dbconn terminate.
+> 
+> 
+> エラー内容：
+> "ConnectionClosed: Connection closed while waiting for data."
+> 
+> 
+> 試している環境：　OS: OSX 10.3.9
+>                                      VM: Squeak 3.8.18beta1U
+>                   Image: Seaside-JPatched070105　
+>                                      PostgresqlClient:
+>                   PostgreSQL Client for Squeak(PosgresV2)
+>                    Published version: 1.0
+>                    Created: 1 February 2006 5:13:15 pm
+> 
+> 　特に環境にこだわりはありません。
+> 　会社で利用するときはWindowsやLinuxプラット 
+> フォームになると思います。
+> 
+> 皆様の中でうまく行っている実績があれば特に環境にはこだわりま 
+> せんので、
+> ご教授頂きたいです。
+> よろしくお願いします。
+> 
+> --
+> さとうひろかず
+> 
+
+---
+[:masashi | ^umezawa]
+

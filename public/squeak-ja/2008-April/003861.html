@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3861] Re: OLPC-VM ImmX11 パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203861%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=uej9ds7i2.wl%25yoshiki%40vpri.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003860.html">
+   <LINK REL="Next"  HREF="003862.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3861] Re: OLPC-VM ImmX11 パッチ</H1>
+    <B>Tsutomu Hiroshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203861%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9MUEMtVk0gSW1tWDExIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=uej9ds7i2.wl%25yoshiki%40vpri.org"
+       TITLE="[Squeak-ja: 3861] Re: OLPC-VM ImmX11 パッチ">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2008年 4月 15日 (火) 18:33:34 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003860.html">[Squeak-ja: 3860] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+        <LI>次の記事 <A HREF="003862.html">[Squeak-ja: 3862] Re: OLPC-VM ImmX11 パッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3861">[ 日付 ]</a>
+              <a href="thread.html#3861">[ スレッド ]</a>
+              <a href="subject.html#3861">[ 件名 ]</a>
+              <a href="author.html#3861">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>廢髟阡仕腓任后ヂ臈腓気鵝
+こんにちは．
+
+&gt;<i>   大島です。
+</I>&gt;<i>
+</I>&gt;&gt;<i>   新しいVMのオプションで・髟阡銘瀉壅佚に拾苳擦辰篤呂垢襯癲ドをつける必要が
+</I>&gt;&gt;<i> う髟阡擦襪里任呂覆い㎠隼廚辰討④討い泙后
+鹿評守鹿評守  これをテストするパッチを作りました。内部的に関数が増えてしまってちょっ
+</I>&gt;<i> とかっこ悪いのですが・髟阡仔鐱楔譴覆匹鯑呂垢襪箸④砲魯灰泪鵐疋薀ぅ鵐Ⅴ廛轡
+鹿評守ンを指定するよう瘢雹になっています。
+</I>&gt;<i>
+</I>&gt;<i>   squeakvm.orgのtrunkのほう瘢雹の1843以降に入ったと思いますので・髟阡嬶婦ユ・踉
+鹿評守ザ・踉擦粒Г気鵑茲蹐靴韻譴丱謄好箸靴討澆討世気ぁ
+鹿評
+のコ・踉札纐 姥騎ぢを見ました．
+$<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">B8_49 ＠ -</A>$N$?$a;EJ}$,$J$$$3$H$G$7$g$&amp;$,!$
+x2sqKeyInput が以前のバ・踉札献腑鵑箸覆蝓
+デフォルトでこれが使われるという瘢雹のは残念です．
+堅牢な入力処理が開発されるまでの過渡的な処置でう髟阡擦襪海箸魎蠅い泙后
+
+以降，本来 UNIX-VM 開発の ML に英語で投げるべき内容です．ご容浪さい．
+
+Tcl/Tk の日本語化をされた SRA の ひらの さんは，かつてう髟阡擦觀忍踉雑板で，
+「SingleByte 環境の開発圓任浪申叔燭辰討盥餾櫺銃呂呂任④覆ぁ
+のよう瘢雹な意の発言をなさってました．
+かく言う瘢雹私もかつて Perl/Tk(UNIX) の日本語化パッチをネットに流したことがう髟阡擦
+ます．
+現在では UTF-8 化されて，日本語表┐砲鰐簑蠅呂覆覆蠅泙靴燭♤
+今もパッチを当てないと日本語入力は出来ません．
+
+さて，x2sqKeyInput の舁徂瑤魄棏僂靴泙后
+デバッグコ・踉札匹櫓踉肢り除いてう髟阡擦襪里嚢堡峭罎瑤鵑任い泙后
+
+鰻恭     蜴竢 罹睫闖謨靦蜴腮蜒妹卲鱚齠繖当緕Ⅸ齡鱸鈑皷淏閹蜴腥齷轤闌蜒逅雌鶇鰻挟     齬蜚竏 鶇
+鰻教       鰻橋       竅黼 慳闖謨靂闔綺          齡蛹竢逅闢蜴
+鰻薫         鱚鴈 ⑰鰻訓
+鰻群       竅黼 慳闖謨霖葹鴦鰻袈       竅黼 慳闖謨霏阡荳
+鰻鍵         赱齡妹偆 阨銓 鱚竢粤蜴艘維⑰
+鰻鹸         鱚鴈 赱齡妹俿
+鰻元
+鰻原       竅黼 慳闖謨靄纖囮躡
+鰻弘         鰻恒           蜴竏癇衷粤瘤鼬癆綯閼紲⒲寘硼跚礬鰻控           蜀 葹鮹閼 逢
+鰻攻             鱚鴈 ⑰  謗阯諷
+鰻昂           蜀 ┬竏癇衷粤 十 渦粂 逅殺瘢雹 轣霙繻拓鰻晃             竏癇衷粤源
+鰻更           鱚鴈 赱齡妹偆 竏癇衷粤姥旭         姥葦
+姥芦       粤聲
+姥鯵         胛鱸銓罔齡粤鴪蜩 竅銕阡 葹韶緕樌
+姥梓         鱚鴈 赱齡妹偆 ⑰姥圧       姥斡     鱚鴈 赱齡妹偆 ⑰姥扱   
+罹睫闖謨靦蜴はバッファ string に入力バイト列を埋めて返りますが，
+1780 行目でその最初のバイトを残して後は里討討い泙后
+嚔鈑跂濁 の環境が前提の処理でう髟阡擦 罹睫闖謨靦蜴を使う瘢雹意味はう髟阡擦蠅泙擦鵝
+
+齣妹卲赱蜴 と比較します．
+これは国際化入力モジュ・踉札襪僚藉銧修侏茲覆う苳詞合か，
+オプション -nointl を指定したときに使われる関数です．
+
+1957 static int x2sqKeyPlain(XKeyEvent *xevt, KeySym *symbolic)
+1958 {
+1959   unsigned char buf[32];
+1960   int nConv= XLookupString(xevt, (char *)buf, sizeof(buf), symbolic, 0);
+1961   int charCode= buf[0];
+1966   if (nConv == 0 &amp;&amp; (charCode= translateCode(*symbolic)) &lt; 0)
+1967     return -1;  /* unknown key */
+1968   if ((charCode == 127) &amp;&amp; mapDelBs)
+1969     charCode= 8;
+1970   if (charCode &gt; 256) /* ALT+?? */
+1971     {
+1972       modifierState= charCode &gt;&gt; 8;
+1973       charCode &amp;= 0xff;
+1974     }
+1975   return recode(charCode);
+1976 }
+
+x2sqKeyInput が前段で入力モジュ・踉札襪僚藉銧修鮖遒澆訶世函
+入力文字列の問い合わせに使用する X 関数( 1763, 1960 行目 )が違っています．
+この XmbLookupString / XLookupString の動作は SingleByte 環境ではほぼ同じで
+す．
+
+こちらも XLookupString が埋めた入力バイト列 buf のう瘢雹ち，
+最初のバイトだけを 1961 行目で茲蟒个掘ぢは里討討い泙后
+
+嚔鈑跂濁 環境でう髟阡擦譴 齣妹劜鉋 と x2sqKeyPlain の結果は変わりません．
+
+MultiByte 環境では
+x2sqKeyPlain では国際化入力モジュ・踉札襪㎠㎠覆い掘
+齣妹劜鉋 では MultyByte 文字の最初のバイトしか送られないため，
+m17n の image ではパニックになります．
+
+大島さんの発言にう髟阡擦辰拭
+
+守鰐价でないFedoraではスペイン語配列にしたときにnにチルダ
+</I>&gt;<i> がついた文字を入力したときに・髟阡四計なバイトも付いてきてしまいます。
+</I>
+&gt;<i> これは・髟阡嵳にはすでに0xF1の文字が一文字だけ来ているのでしょう瘢雹か
+</I>
+は，きっと SingleByte 環境 + SingleByte を期待する image を前提とした話です
+ね．
+
+スペイン語でも文字コ・踉札匹 羝 な環境 LC_CTYPE=es_ES.utf8 では，
+XmbLookupString は ñ を 2バイト として扱う瘢雹ので，
+x2sqKeyInput の汰任鰐簑蠅箸覆襪呂困任后
+ 薙粹鱇 はどのロケ・踉札襪任皀妊侫⑤襯箸 羝 でしょう瘢雹か? */
+
+要するに，x2sqKeyInput は，
+SingleByte 環境では x2sqKeyPlain と動作が変わらず，
+MultiByte 環境では害になるので，
+これを使う瘢雹意味は無いはずなのです．
+
+長文になりましたので，続き(?)は回を改めて投稿します．
+=======
+廢髟阡仕隋（
+鹿侑転
+
+
+次⑬緕籬鶯蜒跂⑬    屡匸
+    斜昭嫐        次⑬鱚痲鶚Ⅹ
+	写評前の記事 質 頒兎就旭蓋彊㍽譬詔囁瘠㈱畉 蓋彊吶鰐价㎡附轂臼 パッチ
+鹿曽鹿跚	写評次の記事 質 頒兎就旭蓋恐㍽譬詔囁瘠㈱畉 蓋恐吶鰐价㎡附轂臼 パッチ
+鹿曽鹿跚         写評 実承Ⅶ諒造喀鹿他 
+              釈 蓿繙就籬㍽譯蓋怯⊂日付 歇              釈 蓿繙就鱚痲㍽譯蓋怯⊂スレッド 歇              釈 蓿繙就齦礪繝蔗迪３原陰詔 件名 歇              釈 蓿繙就癜闥㍽譯蓋怯⊂著者 歇         鹿棉       鹿嫐
+取鮠
+釈 蓿繙就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂囁瘠㈱メーリングリストの案内
+鹿畩錫鮠
+鹿硼糯昭貍

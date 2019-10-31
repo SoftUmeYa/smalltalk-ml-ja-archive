@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7961] Re: 第34回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207961%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIzNBskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3CE0F29D71-D36C-453E-9AD9-053D647388C5%40mfc.bakkers.gr.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007960.html">
+   <LINK REL="Next"  HREF="007963.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7961] Re: 第34回Smalltalk勉強会＠京都</H1>
+    <B>Yasuda Yutaka</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207961%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIzNBskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3CE0F29D71-D36C-453E-9AD9-053D647388C5%40mfc.bakkers.gr.jp%3E"
+       TITLE="[SML 7961] Re: 第34回Smalltalk勉強会＠京都">yasuda ＠ mfc.bakkers.gr.jp
+       </A><BR>
+    <I>2011年 8月  4日 (木) 11:38:08 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007960.html">[SML 7960] Re: 第34回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007963.html">[SML 7963] Re: 第34回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7961">[ 日付 ]</a>
+              <a href="thread.html#7961">[ スレッド ]</a>
+              <a href="subject.html#7961">[ 件名 ]</a>
+              <a href="author.html#7961">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>京産大の安田です。
+
+昨夜、最後の方にダダダッと過ぎてしまったタグによる
+ディスパッチャの件です。
+
+結果だけ書いても良いのですが、思考経路ごと出しておき
+ます。冗長ですがご勘弁ください。。
+
+昨夜の僕の思考：
+・メッセージを投げる相手が view か model か、誰かが
+　ディスパッチせんとあかんやろう
+・何かしらタグみたいな属性情報がメニューにつけられれば
+　良いのに
+・nameKey というのがあるらしい。どうやら使えそう。
+・MenuItem クラスによると nameKey: は Symbol を
+　入れることになっている
+・では選択されたメニューアイテムの nameKey を調べて、
+　その Symbol が #view だったら view に、#model だったら
+　model にメッセージを投げるディスパッチャを書けば良い
+　ではないか（ああスッキリ！）
+
+だったのですが、一夜明けて妹尾君のログを読み返している
+と、どうも名前がしっくりきません。。。
+
+・コードは nameKey という名前で書かれている
+　（Menu および MenuItem クラスあたり）
+・ UI ツールはこれを ID と名付けて提示している
+・前者の名前はまるで探索キーあるいは何かの分類か
+　グループ分けのためかと思えるが、後者は識別子（誰の？）
+　として認識させたい模様。。。
+・そして僕はこれをタグ（単なる目印）として使おうとして
+　いる。
+
+というわけで何かネジれて無いかなあ、、、と。。
+
+とりあえず
+
+aMenu := Menu new.
+aMenuItem := MenuItem labeled: 'test1'.
+aMenuItem value: #yayaya1.
+aMenuItem nameKey: #dododo1.
+aMenu addItem: aMenuItem.
+
+などして nameKey をくっつけて調べていたのですが、どうも
+Menu クラス にある addItem: value: nameKey: という
+method が気になります。
+（Smalltalk 的には addItem:value:nameKey: 表記が正解？）
+
+コードを以下に。
+
+addItem: aMenuItem value: theValueModel nameKey: aKeyObject
+
+	&quot;Add a new MenuItem to the end of the menu.  theValueObject
+	is the ValueModel whose values is to be returned by the menu
+	when that menu item is selected (nil means it has no value in
+	which case the ordinal number of the menu item will be returned). 
+	 aKeyObject is a key object to be associated with the menu item
+	(or nil if none).  The new menu item will become part of the last
+	group of menu items.&quot;
+
+	self addItem: aMenuItem value: theValueModel.
+	aMenuItem nameKey: aKeyObject
+
+ここでは nameKey の引数が aKeyObject となっており、コメントを
+見ると「そのメニューアイテムが結びつけられているキーオブジェクト」
+だそうで、うーむ、これはオブジェクトをそのまま入れろと？？
+
+＃キーオブジェクト、が何かしら意味のあるターム？？
+
+うーん青木さんもオブジェクトそのまま書かせてくれれば良いのに、
+と言うてはったなあ、、
+
+というわけでエイヤと放り込んでみました。
+
+yellowButtonPressedEvent: event
+	&quot;マウスの右ボタンが押されたときの処理をする。&quot;
+
+	| aMenu aSymbol aMenuItem selectedMenuItem aKeyObject |
+	aMenu := Menu new.
+	aMenuItem := MenuItem labeled: 'test1'.
+	aMenu
+		addItem: aMenuItem
+		value: #test1
+		nameKey: self view. &quot;こっちは view を押し込む&quot;
+	aMenuItem := MenuItem labeled: 'test2'.
+	aMenu
+		addItem: aMenuItem
+		value: #test2
+		nameKey: self model.	&quot;こっちは model&quot;
+	aSymbol := aMenu startUp.
+	selectedMenuItem := aMenu selectionMemory.	&quot;選択された奴をとりあげて&quot;
+	aKeyObject := selectedMenuItem nameKey.	&quot;お前の nameKey は何だ？&quot;
+	aKeyObject inspect.	&quot;インスペクタで結果を確認&quot;
+	(aSymbol isKindOf: Symbol) ifTrue: [aKeyObject perform: aSymbol].	&quot;そいつにメッセージを直投げ&quot;
+	^nil
+
+うぉ。。。動きますね。。。（当然でしょうが、、）
+
+（ test1, test2 とかいったメッセージは実装していないのでエラーに
+　なりますが、とにかくインスペクタで見るとちゃんと目的の
+　view あるいは model インスタンスが返ってきているし、
+　デバッガが出す「そんなメッセージは無いよ」エラーの対象オブジェクト
+　がちゃんとそれぞれのインスタンスを向いてる。。）
+
+これ非常にコンパクトなのですが、しかしこれ、GUI では使えない
+ですよね、、、
+（GUI でインスタンスを書くことはできない、、、）
+
+GUI ツールなしで上みたいにコードするのなら良いのですが、僕は
+なんで X には ResEdit とか InterfaceBuilder が無いんだと悲しく
+なった人なので、できれば、、いや何とかして GUI は使いたい。。。
+
+どうしたものか。。。(^_^!)
+やっぱり当初のアイディアどおり、何かしら Symbol 入れて
+それ見て分岐するのがいいのか。。。
+
+というところで来月にまた頭を回したいと思います。
+
+＃いかん、昼になってしまった。。。
+
+でわでわ							Yasu.
+
+
+
+
+On 2011/08/04, at 9:23, AOKI Atsushi wrote:
+
+&gt;<i> 暑い夜の勉強会、ご苦労さまでした。
+</I>&gt;<i> プログラムやログ（← from Mr. Sono）をアップロードしておきました。
+</I>&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34</A>
+</I>&gt;<i> 
+</I>&gt;<i> 以下、備忘録。
+</I>&gt;<i> 来月はコントローラの中にメニューのディスパッチャーを構築するところから始める…
+</I>&gt;<i> モデル側のメニューとビュー＆コントローラ側のメニューをタグ（ID:nameKey）によって選別…
+</I>&gt;<i> それぞれの暫定メニューはすでに作成済…
+</I>&gt;<i> 
+</I>&gt;<i> --- 青木淳＠京都上賀茂
+</I>&gt;<i> 
+</I>&gt;<i> (11/07/27 18:42), AOKI Atsushi wrote:
+</I>&gt;&gt;<i> 第34回Smalltalk勉強会＠京都を開催します。
+</I>&gt;&gt;<i> 万障繰り合わせてJR京都駅前にお集まりください。
+</I>&gt;&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto34</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 場所は先月と同様でキャンプラ6階の第3講習室になります。
+</I>&gt;&gt;<i> <A HREF="http://www.kyoto-su.ac.jp/graduate/satellite/index.html">http://www.kyoto-su.ac.jp/graduate/satellite/index.html</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 第34回 Smalltalk勉強会＠京都
+</I>&gt;&gt;<i> 日時：2011年08月03日（水）19:00〜21:00
+</I>&gt;&gt;<i> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+</I>&gt;&gt;<i> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 完成間近の窓MVCですが、コントローラ周りを整備し、モデルおよび
+</I>&gt;&gt;<i> ビューとの調整を図ります。蒸し暑い京都の中、さわやかにSmalltalk
+</I>&gt;&gt;<i> プログラミングをいたしましょう。いつも通り、急がず着実に進む
+</I>&gt;&gt;<i> ことを優先し、ライブプログラミングで脱線もしようと思います。
+</I>&gt;&gt;<i> ノート型のパーソナルコンピュータ（Windows 7 または Mac OS X）
+</I>&gt;&gt;<i> をご持参ください。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> --- 青木淳 [ <A HREF="http://aokilab.kyoto-su.ac.jp/">http://aokilab.kyoto-su.ac.jp/</A> ]
+</I>&gt;&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007960.html">[SML 7960] Re: 第34回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007963.html">[SML 7963] Re: 第34回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7961">[ 日付 ]</a>
+              <a href="thread.html#7961">[ スレッド ]</a>
+              <a href="subject.html#7961">[ 件名 ]</a>
+              <a href="author.html#7961">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

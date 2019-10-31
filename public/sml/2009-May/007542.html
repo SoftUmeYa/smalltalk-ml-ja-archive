@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7542] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207542%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0AE566.1000302%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007541.html">
+   <LINK REL="Next"  HREF="007543.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7542] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207542%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0AE566.1000302%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7542] Re: 第7回Smalltalk勉強会＠京都">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 5月 15日 (金) 00:47:10 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007541.html">[SML 7541] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007543.html">[SML 7543] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7542">[ 日付 ]</a>
+              <a href="thread.html#7542">[ スレッド ]</a>
+              <a href="subject.html#7542">[ 件名 ]</a>
+              <a href="author.html#7542">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+2009/05/14 0:21 AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;:
+
+&gt;<i> 青木＠京都宇治です。
+</I>
+＜中略＞
+
+&gt;<i> 今日は、私的変数・共有変数・特殊変数と進んで、メッセージに入
+</I>&gt;<i> ることができました。ところがですね、喧喧諤諤の状態、諸子百家
+</I>&gt;<i> の光景を呈し、かなり疲れましたぁ〜。
+</I>
+
+お疲れさまでした。私としては楽しく議論が出来てよかったです。
+
+＜中略＞
+
+&gt;<i> メッセージ送信に関しても、センダの具現が話題にのぼりましたが、
+</I>&gt;<i> こちらもブラックブックやイディオムでは、レシーバはセンダに応
+</I>&gt;<i> 答する、と書いておきました。
+</I>
+
+センダの話題のところで出てきた
+
+               Compiler evaluate: 'self printString' for: 3 logged: false
+
+のお話は、その場ではちょっと消化不良だったので、帰宅してから
+Compilerのやっていることを読んでおりました。
+
+それで、読んだコードに触発されて以下のコードを書きました。
+
+------------- ここから -------
+
+|<i> methodSearchBlock mainBlock |
+</I>methodSearchBlock := [:class :messageSelector |
+class isNil
+ifTrue: [nil]
+ifFalse:
+[(class selectors includes: messageSelector)
+ifTrue: [class getMethodDictionary at: messageSelector]
+ifFalse:
+[methodSearchBlock
+value: class superclass
+value: messageSelector]]].
+
+mainBlock := [:anObject :messageSelector :args |
+|<i> method |
+</I>method := methodSearchBlock
+value: anObject class
+value: messageSelector.
+method valueWithReceiver: anObject arguments: args].
+
+^mainBlock value: 3 value: #+ value: #(4)
+
+--------------- ここまで ---------
+
+仮想マシンが裏方でひっきりなしにやっていることではあるのですけれど、
+こんな風にあからさまに書いてしまうと、センダ、レシーバどころかメッセージ
+送信そのものが消えてしまっていて、煎じ詰めればメソッド呼び出しのチェーンで
+しかないのね、と改めて思ってしまいます。当たり前と言えばそうなんですが。
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20090515/21d42982/attachment.html">http://www.smalltalk.jp/pipermail/sml/attachments/20090515/21d42982/attachment.html</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007541.html">[SML 7541] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007543.html">[SML 7543] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7542">[ 日付 ]</a>
+              <a href="thread.html#7542">[ スレッド ]</a>
+              <a href="subject.html#7542">[ 件名 ]</a>
+              <a href="author.html#7542">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

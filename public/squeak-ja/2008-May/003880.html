@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3880] Re: Object特異的な情報を含むメッセージの発信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203880%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003879.html">
+   <LINK REL="Next"  HREF="003881.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3880] Re: Object特異的な情報を含むメッセージの発信について</H1>
+    <B>Hiromichi Tsurui</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203880%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3880] Re: Object特異的な情報を含むメッセージの発信について">tsurui ＠ med.juntendo.ac.jp
+       </A><BR>
+    <I>2008年 5月 13日 (火) 09:38:18 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003879.html">[Squeak-ja: 3879] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+        <LI>次の記事 <A HREF="003881.html">[Squeak-ja: 3881] ことだま on Squeakの本
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3880">[ 日付 ]</a>
+              <a href="thread.html#3880">[ スレッド ]</a>
+              <a href="subject.html#3880">[ 件名 ]</a>
+              <a href="author.html#3880">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+Yoshikiさん
+
+懇切なお返事ありがとうございます。
+メッセージの引数としてobjectをとれ、その結果object間で極めて一般的な情報のやり取りができることがわかりました。
+このことを年頭におきますと、プログラムの記述が見通しが良く簡潔になることが納得できます。
+
+鶴井
+
+
+
+&gt;<i>  鶴井さん
+</I>&gt;<i>
+</I>&gt;&gt;<i> &gt;  オブジェクト間のやりとりというものは、すべて「メッセージ」という概念
+</I>&gt;&gt;<i> &gt; で抽象化されていますが、メッセージには「引数」を付けて送ることができ、
+</I>&gt;&gt;<i> &gt; メッセージ送信者自身を現す&quot;self&quot;を含め、送信者が「知っている」(送信者
+</I>&gt;&gt;<i> &gt; が参照可能である)任意のオブジェクト、またはそれらを含む任意の式を引数
+</I>&gt;&gt;<i> &gt; とすることができます。というわけで、阿部さんの言うように一般的には
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; b message: self.
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; というメッセージをaが実行すれば良いことになります。
+</I>&gt;&gt;<i> この場合、送信者ａを指定するにはどうすれば宜しいですか？
+</I>&gt;&gt;<i> 送信者は暗黙にプログラマーだけかと思っていました。GUIでのevent handlingで予め用意されている場合以外は。
+</I>&gt;<i>
+</I>&gt;<i>  あるメソッドの中でaという変数にあるオブジェクトが束縛されているなら、
+</I>&gt;<i>
+</I>&gt;<i>  b message: a
+</I>&gt;<i>
+</I>&gt;<i> と書けばよいということでしょうか。
+</I>&gt;<i>
+</I>&gt;<i>  (私の書いたのは微妙に間違いがあって、「送信者を現すself」と書いたの
+</I>&gt;<i> は話をややこしくしたかもしれません。厳密に言えば「送信者」は「メソッド
+</I>&gt;<i> を実行しているコンテキスト」ということになりますので。ただ、その辺は今
+</I>&gt;<i> はあまり気にする必要はないと思われます。)
+</I>&gt;<i>
+</I>&gt;<i>  例えばWorkspaceとTranscriptを開き(VisualWorksならデフォルトですで
+</I>&gt;<i> に開かれていると思いますが)、Workspaceのほうに
+</I>&gt;<i>
+</I>&gt;<i>  Transcript show: 'abc'.
+</I>&gt;<i>
+</I>&gt;<i> と書いてdo it したり、
+</I>&gt;<i>
+</I>&gt;<i>  Transcript show: 3 printString.
+</I>&gt;<i>
+</I>&gt;<i> と書いてdo it したり、
+</I>&gt;<i>
+</I>&gt;<i>  | a b |
+</I>&gt;<i>  a := 'abc'.
+</I>&gt;<i>  b := 'def'.
+</I>&gt;<i>  Transcript show: a.
+</I>&gt;<i>  Transcript space.
+</I>&gt;<i>  Transcript show: b.
+</I>&gt;<i>  Transcript space.
+</I>&gt;<i>  Transcript show: a, b.
+</I>&gt;<i>
+</I>&gt;<i> という8行を書いてそれを選択してdo it してみてください。aやbやそれを演
+</I>&gt;<i> 算した結果をTranscriptオブジェクトへのメッセージ送信に付加できることが
+</I>&gt;<i> わかるかと思います。
+</I>&gt;<i>
+</I>&gt;<i> -- Yoshiki
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003879.html">[Squeak-ja: 3879] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+	<LI>次の記事 <A HREF="003881.html">[Squeak-ja: 3881] ことだま on Squeakの本
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3880">[ 日付 ]</a>
+              <a href="thread.html#3880">[ スレッド ]</a>
+              <a href="subject.html#3880">[ 件名 ]</a>
+              <a href="author.html#3880">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

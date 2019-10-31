@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7264] Jpl適用後のPublic Store Repositoryアクセス対応パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207264%5D%20%3D%3Fiso-2022-jp%3Fb%3FSnBsGyRCRSxNUThlJE4bKEJQdWJsaWMgU3Rv%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FcmUgUmVwb3NpdG9yeRskQiUiJS8lOyU5QlAxfiVRJUMlQRsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007265.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7264] Jpl適用後のPublic Store Repositoryアクセス対応パッチ</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207264%5D%20%3D%3Fiso-2022-jp%3Fb%3FSnBsGyRCRSxNUThlJE4bKEJQdWJsaWMgU3Rv%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FcmUgUmVwb3NpdG9yeRskQiUiJS8lOyU5QlAxfiVRJUMlQRsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7264] Jpl適用後のPublic Store Repositoryアクセス対応パッチ">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2007年 2月  4日 (日) 22:04:06 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007265.html">[SML 7265] メッセージパッシング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7264">[ 日付 ]</a>
+              <a href="thread.html#7264">[ スレッド ]</a>
+              <a href="subject.html#7264">[ 件名 ]</a>
+              <a href="author.html#7264">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+Jplをロードした後に、Cincom Public Store Repositoryにつながらなくなるという
+現象が起こるようです。
+(ランチャーの&quot;Store&quot;-&quot;Connect to Repository...&quot;でCincom Public Repository
+を選択)
+
+Cincom Public Store Repositoryにはフリーで利用できるVWのツールやクラス
+ライブラリ群が多く収められているので、これはよからぬ事態です。
+
+ざっと見たところ、Postgresとの接続を行っている部分に問題がありそうだったので
+パッチを書いてみました。
+
+このパッチ適用後は、 Public Store Repositoryからのロードが通常通り行えるよう
+になります。
+
+お試しください。
+
+今ひとつこの修正でよいのか自信がないので、過去にVisualWorks+Postgres+日本語
+で接続を行ったノウハウをお持ちの方がいらっしゃれば、情報をお寄せいただける
+とありがたいです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: 070204-PatchForPostgresWithJpl.st
+型:         application/octet-stream
+サイズ:     2485 バイト
+説明:       無し
+URL:        <A HREF="http://www.akademia.co.jp/pipermail/sml/attachments/20070204/4adb3920/070204-PatchForPostgresWithJpl.obj">http://www.akademia.co.jp/pipermail/sml/attachments/20070204/4adb3920/070204-PatchForPostgresWithJpl.obj</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007265.html">[SML 7265] メッセージパッシング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7264">[ 日付 ]</a>
+              <a href="thread.html#7264">[ スレッド ]</a>
+              <a href="subject.html#7264">[ 件名 ]</a>
+              <a href="author.html#7264">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

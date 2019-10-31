@@ -1,0 +1,227 @@
+From VisualWorks® NonCommercial, 7.7 of 2009年12月15日 on 2010年12月31日 at 13:13:14
+
+ Package SSK* 
+Class Smalltalk.OldFashionedBrowser
+
+    Superclass: UI.ApplicationModel
+    Type: none
+    Instance variables: classTable classList methodList isMeta codeText 
+    Attributes: #(#(#package 'SSK'))
+
+OldFashionedBrowser comment
+
+Smalltalk Studies in Kyoto
+
+OldFashionedBrowser class methods for 'interface specs'
+
+windowSpec
+    "Tools.UIPainter new openOnClass: self andSelector: #windowSpec"
+
+    <resource: #canvas>
+    ^#(#{UI.FullSpec} 
+        #window: 
+        #(#{UI.WindowSpec} 
+            #label: 'Old Fashioned Browser' 
+            #min: #(#{Core.Point} 400 300 ) 
+            #max: #(#{Core.Point} 0 0 ) 
+            #bounds: #(#{Graphics.Rectangle} 1280 720 2080 1170 ) ) 
+        #component: 
+        #(#{UI.SpecCollection} 
+            #collection: #(
+                #(#{UI.SequenceViewSpec} 
+                    #layout: #(#{Graphics.LayoutFrame} 8 0 8 0 -4 0.5 -4 0.5 ) 
+                    #name: #classList 
+                    #model: #classList 
+                    #menu: #classListMenu 
+                    #useModifierKeys: true 
+                    #selectionType: #highlight ) 
+                #(#{UI.SequenceViewSpec} 
+                    #layout: #(#{Graphics.LayoutFrame} 4 0.5 8 0 -8 1 -40 0.5 ) 
+                    #name: #methodList 
+                    #model: #methodList 
+                    #menu: #methodListMenu 
+                    #useModifierKeys: true 
+                    #selectionType: #highlight ) 
+                #(#{UI.RadioButtonSpec} 
+                    #layout: #(#{Graphics.LayoutOrigin} 15 0.5 -30 0.5 ) 
+                    #name: #instanceButton 
+                    #model: #isMeta 
+                    #label: 'instance' 
+                    #select: false ) 
+                #(#{UI.RadioButtonSpec} 
+                    #layout: #(#{Graphics.LayoutOrigin} 15 0.75 -30 0.5 ) 
+                    #name: #classButton 
+                    #model: #isMeta 
+                    #label: 'class' 
+                    #select: true ) 
+                #(#{UI.TextEditorSpec} 
+                    #layout: #(#{Graphics.LayoutFrame} 8 0 4 0.5 -8 1 -8 1 ) 
+                    #name: #codeText 
+                    #model: #codeText 
+                    #tabRequiresControl: true ) 
+                #(#{UI.ResizingSplitterSpec} 
+                    #layout: #(#{Graphics.LayoutFrame} 8 0 -2 0.5 -8 1 2 0.5 ) 
+                    #name: #horizontalResizer 
+                    #horizontal: true 
+                    #minAboveSize: 100 
+                    #minBelowSize: 100 
+                    #aboveWidgets: 'classList methodList instanceButton classButton verticalResizer' 
+                    #belowWidgets: 'codeText' ) 
+                #(#{UI.ResizingSplitterSpec} 
+                    #layout: #(#{Graphics.LayoutFrame} -2 0.5 8 0 2 0.5 -4 0.5 ) 
+                    #name: #verticalResizer 
+                    #horizontal: false 
+                    #minAboveSize: 100 
+                    #minBelowSize: 100 
+                    #aboveWidgets: 'classList ' 
+                    #belowWidgets: 'methodList instanceButton classButton' ) ) ) )
+
+OldFashionedBrowser class methods for 'examples'
+
+example
+    "OldFashionedBrowser example."
+
+    ^(OldFashionedBrowser new)
+        open;
+        yourself
+
+OldFashionedBrowser class methods for 'resources'
+
+classListMenu
+    "Tools.MenuEditor new openOnClass: self andSelector: #classListMenu"
+
+    <resource: #menu>
+    ^#(#{UI.Menu} #(
+            #(#{UI.MenuItem} 
+                #rawLabel: 'Find Class...' 
+                #value: #findClass ) ) #(1 ) nil ) decodeAsLiteralArray
+
+methodListMenu
+    "Tools.MenuEditor new openOnClass: self andSelector: #methodListMenu"
+
+    <resource: #menu>
+    ^#(#{UI.Menu} #(
+            #(#{UI.MenuItem} 
+                #rawLabel: 'Find Method...' 
+                #value: #findMethod ) ) #(1 ) nil ) decodeAsLiteralArray
+
+OldFashionedBrowser methods for 'aspects'
+
+codeText
+
+    codeText ifNil: [codeText := ValueHolder with: Text new].
+    ^codeText
+
+methodList
+
+    methodList
+        ifNil: 
+            [methodList := SelectionInList new.
+            BlockValue block: self codeTextBlock arguments: (Array with: methodList)].
+    ^methodList
+
+classList
+
+    classList
+        ifNil: 
+            [classList := SelectionInList new.
+            classList list: classTable keys asSortedCollection.
+            BlockValue block: self methodListBlock arguments: (Array with: classList)].
+    ^classList
+
+isMeta
+
+    isMeta
+        ifNil: 
+            [isMeta := ValueHolder with: false.
+            BlockValue block: self methodListBlock arguments: (Array with: isMeta)].
+    ^isMeta
+
+OldFashionedBrowser methods for 'menu messages'
+
+findClass
+
+    self classList list isEmpty ifTrue: [^nil].
+    self
+        incrementalSearch: self classList
+        windowLabel: 'Find Class'
+        firstLabel: 'Filter:'
+        secondLabel: 'Classes:'
+
+findMethod
+
+    self methodList list isEmpty ifTrue: [^nil].
+    self
+        incrementalSearch: self methodList
+        windowLabel: 'Find Method'
+        firstLabel: 'Filter:'
+        secondLabel: 'Methods:'
+
+OldFashionedBrowser methods for 'initialize-release'
+
+initialize
+
+    super initialize.
+    classTable := Dictionary new: 1000.
+    SystemUtils allClassesDo: [:aClass | classTable at: aClass toolListDisplayString put: aClass].
+    classList := nil.
+    methodList := nil.
+    isMeta := nil.
+    codeText := nil.
+    ^self yourself
+
+OldFashionedBrowser methods for 'accessing'
+
+selectedMethod
+
+    ^self selectedClass
+        ifNil: [nil yourself]
+        ifNotNil: 
+            [:aClass |
+            self methodList selection ifNil: [nil yourself] ifNotNil: [:aSelector | aClass compiledMethodAt: aSelector]]
+
+selectedClass
+
+    ^self classList selection
+        ifNil: [nil yourself]
+        ifNotNil: 
+            [:aKey |
+            [:aClass | self isMeta value ifTrue: [aClass class] ifFalse: [aClass yourself]]
+                value: (classTable at: aKey)]
+
+OldFashionedBrowser methods for 'private'
+
+methodListBlock
+
+    ^
+    [| aSelector |
+    aSelector := self methodList selection.
+    self methodList list: (self selectedClass
+                ifNil: [SortedCollection new]
+                ifNotNil: [:aClass | aClass selectors asSortedCollection]).
+    (aSelector notNil and: [self methodList list includes: aSelector])
+        ifTrue: [self methodList selection: aSelector]]
+
+codeTextBlock
+
+    ^
+    [self codeText value: (self selectedClass
+                ifNil: [Text new]
+                ifNotNil: 
+                    [:aClass |
+                    self selectedMethod
+                        ifNil: [aClass definition asText]
+                        ifNotNil: [:aMethod | (aClass sourceMethodAt: aMethod selector) asText]])]
+
+incrementalSearch: aSelectionInList windowLabel: windowLabelString firstLabel: firstLabelString secondLabel: secondLabelString
+
+    ((IncrementalSearchDialog forSelectionWithSearch: 
+            [:aPattern |
+            (aPattern isEmpty
+                ifTrue: [aSelectionInList list copy]
+                ifFalse: [aSelectionInList list select: [:each | aPattern , '*' match: each]]) asSortedCollection])
+        windowLabel: windowLabelString;
+        firstLabel: firstLabelString;
+        secondLabel: secondLabelString;
+        select) ifNotNil: [:anElement | aSelectionInList selection: anElement]
+

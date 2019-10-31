@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7914] Re: Squeak/Pharoの低レベルGUIのしくみ?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207914%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCJE5EYyVsJVklaxsoQkdVSQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4kNyQvJF8bKEI/%3F%3D&In-Reply-To=%3Cur5947hy2.wl%25yoshiki%40vpri.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007913.html">
+   <LINK REL="Next"  HREF="007915.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7914] Re: Squeak/Pharoの低レベルGUIのしくみ?</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207914%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCJE5EYyVsJVklaxsoQkdVSQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4kNyQvJF8bKEI/%3F%3D&In-Reply-To=%3Cur5947hy2.wl%25yoshiki%40vpri.org%3E"
+       TITLE="[SML 7914] Re: Squeak/Pharoの低レベルGUIのしくみ?">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2011年 4月 15日 (金) 04:26:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007913.html">[SML 7913] Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+        <LI>次の記事 <A HREF="007915.html">[SML 7915] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7914">[ 日付 ]</a>
+              <a href="thread.html#7914">[ スレッド ]</a>
+              <a href="subject.html#7914">[ 件名 ]</a>
+              <a href="author.html#7914">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>At Thu, 14 Apr 2011 15:25:43 +0900,
+Hiroki Horiuchi wrote:
+&gt;<i> 
+</I>&gt;<i> こんにちは。
+</I>&gt;<i> 
+</I>&gt;<i> Squeak/Pharoの、低レベルGUIのしくみに興味があります。それで手持ちの環境(
+</I>&gt;<i> Pharo 1.2.1 + Debian GNU/Linux)でxtrace(1)を使って外から調べました。
+</I>&gt;<i> 
+</I>&gt;<i> リクエストに関しては、最初の方でCreateWindowが2回だけ行われたあとは、
+</I>&gt;<i> PutImageが盛んに行われていることがわかりました。このPutImageがどういった
+</I>&gt;<i> 経緯で呼ばれているのかがわかれば、低レベルGUIの出力方面については、かな
+</I>&gt;<i> り調べられると思うのですが、その経緯の見当がまったくつきません。
+</I>&gt;<i> 
+</I>&gt;<i> 一方、イベントについては、これらがどのように処理されているのか、まったく
+</I>&gt;<i> わかりません。
+</I>&gt;<i> 
+</I>&gt;<i> これらの不明点について、ヒントをいただけませんか? よろしくお願いします。
+</I>&gt;<i> --
+</I>&gt;<i> 堀内寛己(ほりうちひろき)
+</I>
+  面白いですね。ただ、xtraceでみるというのは、脳の高次機能を電極を指し
+て局所的に見るようなもので、全体像はわかりにくいとは思います(私もその
+手のことはよくしていたこともあります)。
+
+  走っているSmalltalk側から調べるのであれば、Pharoの場合&quot;Settings&quot; の
+&quot;Debugging&quot;の中から、&quot;Flash damaged morphic region&quot;のフラグをオンにして
+使ってみると、画面上で書き直しを必要とするリージョンがちかちかと反転し
+て見えるようになります。基本的にはそこがそのままPutImageならPutImage の
+呼び出しにつながります。
+
+  System Browserを開いてDisplayScreenの
+#primShowRectLeft:right:top:bottom:メソッドを見ると、中に&lt;primitive:
+127&gt;と書いてあって、このメソッドが呼ばれたときにはプリミティブ関数127
+番が呼ばれることになっています。これが(生成されたコードの)
+
+<A HREF="http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/src/vm/interp.c?rev=2353&amp;view=auto">http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/src/vm/interp.c?rev=2353&amp;view=auto</A>
+にある void *primitiveTable[577]から検索されて、
+primitiveShowDisplayRectが見つかり、その後いくつかの関数呼び出しを経て
+
+<A HREF="http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/vm-display-X11/sqUnixX11.c?rev=2375&amp;view=auto">http://squeakvm.org/cgi-bin/viewcvs.cgi/trunk/platforms/unix/vm-display-X11/sqUnixX11.c?rev=2375&amp;view=auto</A>
+
+のdisplay_ioShowDisplay()にたどり着き、そこでPutImage()が呼ばれている
+と思います。
+
+ですが、鍵はioShowDisplay()はSmalltalk側の
+#primShowRectLeft:right:top:bottom:(および
+#primRetryShowRectLeft:right:top:bottom:)を渡ってきた引数ごと1対1 にサ
+ポートするだけであって、#primShowRectLeft:right:top:bottom:の呼ばれるパ
+ターンがわかればすべてがわかるということだと思います。たとえば、
+xtraceが走っている状態で、
+
+1 to: 10 do: [:i |
+	Display forceToScreen: (<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">0 ＠ 0</A> corner: <A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">i ＠ i</A> * 10)]
+
+のような式をワークスペースで実行すると、(たぶん)10回のPutImage呼び出し
+が観測されると思います。
+
+  そして、GUIフレームワークというのは
+
+  while (1) {
+    ユーザーのイベントを処理する();
+    タイミングに関係するイベントを処理する();
+    画面を書き換える();
+  }
+
+というだけのことなのですが、WorldState&gt;&gt;doOneCycleNowFor:にまさにそれだけの
+ことが書いてあります(#displayWorldSafely:からforceToScreen:にたどり着く
+までにもまた少しいろいろと呼び出しはありますが)。
+	
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007913.html">[SML 7913] Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+	<LI>次の記事 <A HREF="007915.html">[SML 7915] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7914">[ 日付 ]</a>
+              <a href="thread.html#7914">[ スレッド ]</a>
+              <a href="subject.html#7914">[ 件名 ]</a>
+              <a href="author.html#7914">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

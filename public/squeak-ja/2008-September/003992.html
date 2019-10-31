@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3992] Re: GainerとSerialとわたし
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203992%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdhaW5lchskQiRIGyhCU2Vy%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaWFsGyRCJEgkbyQ/JDcbKEI%3D%3F%3D&In-Reply-To=20080913220954.EE7E.56563FCC%40yengawa.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003991.html">
+   <LINK REL="Next"  HREF="003990.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3992] Re: GainerとSerialとわたし</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203992%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdhaW5lchskQiRIGyhCU2Vy%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FaWFsGyRCJEgkbyQ/JDcbKEI%3D%3F%3D&In-Reply-To=20080913220954.EE7E.56563FCC%40yengawa.com"
+       TITLE="[Squeak-ja: 3992] Re: GainerとSerialとわたし">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2008年 9月 13日 (土) 22:54:50 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003991.html">[Squeak-ja: 3991] Re: GainerとSerialとわたし
+</A></li>
+        <LI>次の記事 <A HREF="003990.html">[Squeak-ja: 3990] 新しいSqueakland.orgのウェブサイトとEtoys
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3992">[ 日付 ]</a>
+              <a href="thread.html#3992">[ スレッド ]</a>
+              <a href="subject.html#3992">[ 件名 ]</a>
+              <a href="author.html#3992">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+
+2008/09/13 22:11 Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">ykoubo2008 ＠ yengawa.com</A>&gt;:
+&gt;<i> シリアルポートの自動認識の常套手段ってあるのでしょうか? &gt;詳しい人
+</I>&gt;<i> Scratch Boardはどうしてるのかな?
+</I>
+Scratchの最新版は1.3ですが、ソースが公開されているものは1.2.1です。
+<A HREF="http://scratch.mit.edu/pages/source">http://scratch.mit.edu/pages/source</A>
+これを見ると、Windowsのことしか考えていないように見えるのですが、COM1-32までをスキャンするようになっています(SensorBoardMorph&gt;&gt;portNames)。
+おもしろいのは、stepしながら、scanStateを変更していき(off, start, checkData,
+on)、それに応じて、実行されるメソッドも変えていっているところでしょうか(SensorBoardMorph &gt;&gt;scanForPort)。
+そのため、デバッガでは追いかけられず、苦労したような記憶があります。
+
+ //abee
+--
+阿部 和広 EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003991.html">[Squeak-ja: 3991] Re: GainerとSerialとわたし
+</A></li>
+	<LI>次の記事 <A HREF="003990.html">[Squeak-ja: 3990] 新しいSqueakland.orgのウェブサイトとEtoys
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3992">[ 日付 ]</a>
+              <a href="thread.html#3992">[ スレッド ]</a>
+              <a href="subject.html#3992">[ 件名 ]</a>
+              <a href="author.html#3992">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

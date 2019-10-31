@@ -1,0 +1,3247 @@
+From yoshiki ＠ squeakland.org  Tue Mar  1 00:44:51 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2336] Re: Nihongo7について(NSqueak-2005-02-25.image)
+In-Reply-To: <422300E5.2010509@m2.pbc.ne.jp>
+References: <422300E5.2010509@m2.pbc.ne.jp>
+Message-ID: <ur7j03czw.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> Nihongo7(NSqueak-2005-02-25)完成度がどんどん高くなっていますね。開発関係
+> 者の方々ありがとうございます。開発用イメージ (NSqueak-2005-02-25.image)
+> 開発途中版で気がついた点を書きます。
+
+　いえいえ、試していただいてありがとうございます(どうやら"Nihongo 7"アッ
+プデートサーバーも試されたようですね)。
+
+> ■FormSetFont exampleがエラーとなります
+> Workspaceのキャレット位置に画像をpasteできるはずなんだけど…
+> 3.8g-6857もだめです。pasteしようとすると'FormSetFOnt>>
+> createCharacterToGlyphMap でsubscript is out of bounds:67'となります。も
+> うサポートされないんですかね？
+
+　やや、見てみます。
+
+> 参考までにバージョン(#highestUpdate)で処理を変えている部分として
+> SMSimpleInstaller>>fileIntoChangeSetNamed:fromStream:
+> がありました。
+
+  報告ありがとうございます。Goeranとも相談して見ます。
+
+> #そんな環境で使うなと言われるかもしませんが…
+
+　いえいえ、そんなことはないですよ。
+
+-- Yoshiki
+
+From miyasaka ＠ iris.dti.ne.jp  Tue Mar  1 02:42:27 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:07 2007
+Subject: [Squeak-ja: 2337] ワークショップのご報告など
+In-Reply-To: <ur7j03czw.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <200502281742.j1SHgYBw026616@smtp5.dti.ne.jp>
+
+squeak-jaの皆様へ
+
+こんばんは。
+デジタルハリウッド大学院の宮坂です。
+
+■ホームページについて
+我々の活動のためのホームページをリニューアルしました。
+http://mts-j.hiho.jp/
+デジハリのクリエータのみなさんの力作です。
+とはいえ、まだまだ改善の余地があるのは十分承知しておりますが。。。
+今後、少しずつ改善していく予定ですので、皆様からもフィードバックなどいただけ
+れば幸いです。
+
+■小学校でのワークショップ
+２月１７、１８日で、座間市立相模が丘小学校でワークショップをおこなってきまし
+た。
+子供達も、先生方にも、よろこんでいただけたようです。
+アンケートの結果、ほぼ全ての生徒が「すごく楽しかった」「またスクイークでプロ
+グラミングしたい」と回答してくれました。
+詳しくはホームページにも掲載されているので、ご参考ください。
+http://mts-j.hiho.jp/workshop.html
+
+今後も、なんらかの形で、ワークショップだけは継続していきたいと思うこの頃で
+す。
+取り急ぎご報告まで。
+よろしくお願いいたします。
+
+---------------------------------------------------
+ホームページが新しくなりました。
+>> http://mts-j.hiho.jp/
+---------------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院デジタルコンテンツ研究科
+miysaka@iris.dti.ne.jp
+大学院のホームページ >> http://www.dhw.co.jp/gs/
+---------------------------------------------------
+
+
+From tomoaki ＠ akiyama.nu  Tue Mar  1 11:38:57 2005
+From: tomoaki ＠ akiyama.nu (Tomoaki Akiyama)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2338] Re: ワークショップのご報告など
+In-Reply-To: <200502281742.j1SHgYBw026616@smtp5.dti.ne.jp>
+References: <ur7j03czw.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<200502281742.j1SHgYBw026616@smtp5.dti.ne.jp>
+Message-ID: <86psykqeda.wl%tomoaki@akiyama.nu>
+
+At Tue, 1 Mar 2005 02:42:27 +0900,
+Toshio Miyasaka wrote:
+
+> ■ホームページについて
+> 我々の活動のためのホームページをリニューアルしました。
+> http://mts-j.hiho.jp/
+> デジハリのクリエータのみなさんの力作です。
+> とはいえ、まだまだ改善の余地があるのは十分承知しておりますが。。。
+> 今後、少しずつ改善していく予定ですので、皆様からもフィードバックなどいただけ
+> れば幸いです。
+
+　ええと、FireFox 1.0で最小フォントを14に指定した状態で、
+
+http://mts-j.hiho.jp/chara.html
+
+にアクセスすると、セリフが吹き出しからはみ出してしまいます。フォントの
+大きさを決め打ちにしたデザインは、アクセシビリティの観点からよろしくな
+いと思います。
+
+				Tomoaki Akiyama 秋山　智朗
+				mailto:tomoaki@akiyama.nu
+				http://tomoaki.akiyama.nu/
+		http://tomoaki.akiyama.nu/publickey.html
+        C591 6AAF 532F 9FEB E386  DD10 615F 5DE1 E2CC 8E5A
+
+From yoshiki ＠ squeakland.org  Tue Mar  1 13:44:34 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2339] Re: Nihongo7について(NSqueak-2005-02-25.image)
+In-Reply-To: <422300E5.2010509@m2.pbc.ne.jp>
+References: <422300E5.2010509@m2.pbc.ne.jp>
+Message-ID: <u1xb02cwd.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> ■SqueakMapパッケージローダがエラーとなります
+> 3.8g-6857では起動とパッケージのインストールまで一通りできたが、Nihongo7
+> では「全サーバの応答がありません」(Error:All SqueakMap master servers
+> are down)って怒られてしまう。
+
+　ダウンロードしたばかりのNSqueak02-25では、こちらの症状は再現できませ
+んでした。
+
+> で試した環境は
+> NetNameResolver addressForName: 'map1.squeakfoundation.org' timeout: 5
+> がタイムアウトしてしまう環境でした。'map1.squeakfoundation.org'がDNSから
+> ひっぱてこれない?
+
+　時間依存の症状ですかね？
+
+> 参考までにバージョン(#highestUpdate)で処理を変えている部分として
+> SMSimpleInstaller>>fileIntoChangeSetNamed:fromStream:
+> がありました。
+
+　こちらはそうですね。
+
+-- Yoshiki
+
+From kawa90 ＠ m2.pbc.ne.jp  Tue Mar  1 19:07:54 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2340] Re: Nihongo7について(NSqueak-2005-02-25.image)
+In-Reply-To: <u1xb02cwd.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <422300E5.2010509@m2.pbc.ne.jp>
+	<u1xb02cwd.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <42243EFA.7090100@m2.pbc.ne.jp>
+
+川村です。お世話になってます。
+
+> ダウンロードしたばかりのNSqueak02-25では、こちらの症状は再現できませ
+> んでした。
+少し詳しく調べました。
+
+試した環境を下図に示します。HTTP通信とその他TCP通信用のDNSサーバが２つあ
+り、HTTP通信はプロキシーを経由しますのでHTTPの名前解決は外部用のDNS
+server 2で行われます。一方NetNameResolverは内部用DNS server 1を使って名
+前解決しようとして(*1)、指定されたエントリ'map1.squeakfoundation.org'が
+ないと返事するためエラーとなりました。
+*1)Windowsのネットワーク設定でDNSサーバはDNS server 1を指定している
+
++--+ +-----+ +-------+
+|PC|---+--------+Proxy|----+Inernet|
++--+ | +--+--+ +-------+
+| |
++-----+------+ | +-----+------+
+|DNS server 1| +---|DNS server 2|
++-----+------+ +-----+------+
+
+下記Smalltalk式を実行してパケットレベル(Ethereal)で確認しました。
+NetNameResolver addressForName: 'map1.squeakfoundation.org'
+DNSサーバ(DNS server 1)から'standard query response, no such name'との返
+答でした。
+
+> 時間依存の症状ですかね？
+というわけでタイムアウトではありませんでした。
+
+プロキシーを使ってかつ、設定ＤＮＳサーバで名前解決できないと再現すると思
+います。企業や大学などプロキシを使っているところははまりやすいのでは...
+
+#憶測ですが、以前のイメージではプロキシ経由のアクセスが実装されていない
+#ため、このようなコーディングになったのでは？実際NetNameResolver が返す
+#IPアドレスは使ってないし…。
+
+以上
+--------------
+Hideo Kawamura(川村 秀男)
+http://www.realintegrity.net/~squeak/pukiwiki
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.300 / Virus Database: 266.5.1 - Release Date: 2005/02/27
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+http://pr.mail.yahoo.co.jp/so2005/
+
+
+From tak ＠ metatoys.org  Tue Mar  1 22:27:42 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2341] Re: Nihongo7について(NSqueak-2005-02-25.image)
+In-Reply-To: <42243EFA.7090100@m2.pbc.ne.jp>
+References: <422300E5.2010509@m2.pbc.ne.jp>	<u1xb02cwd.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<42243EFA.7090100@m2.pbc.ne.jp>
+Message-ID: <42246DCE.8020309@metatoys.org>
+
+山宮です。
+
+多分違う原因で、うちでも SqueakMap が使えなかったのですが、
+一つの可能性としては、
+
+FileDirectory default createDirectory: 'test'.
+self assert: (FileDirectory default directoryExists: 'test').
+
+が失敗してしまいます。まだ追求していませんが、とりあえずご報告まで。
+
+Hideo Kawamura wrote:
+> 川村です。お世話になってます。
+> 
+> 
+>>ダウンロードしたばかりのNSqueak02-25では、こちらの症状は再現できませ
+>>んでした。
+> 
+> 少し詳しく調べました。
+> 
+> 試した環境を下図に示します。HTTP通信とその他TCP通信用のDNSサーバが２つあ
+> り、HTTP通信はプロキシーを経由しますのでHTTPの名前解決は外部用のDNS
+> server 2で行われます。一方NetNameResolverは内部用DNS server 1を使って名
+> 前解決しようとして(*1)、指定されたエントリ'map1.squeakfoundation.org'が
+> ないと返事するためエラーとなりました。
+> *1)Windowsのネットワーク設定でDNSサーバはDNS server 1を指定している
+> 
+> +--+ +-----+ +-------+
+> |PC|---+--------+Proxy|----+Inernet|
+> +--+ | +--+--+ +-------+
+> | |
+> +-----+------+ | +-----+------+
+> |DNS server 1| +---|DNS server 2|
+> +-----+------+ +-----+------+
+> 
+> 下記Smalltalk式を実行してパケットレベル(Ethereal)で確認しました。
+> NetNameResolver addressForName: 'map1.squeakfoundation.org'
+> DNSサーバ(DNS server 1)から'standard query response, no such name'との返
+> 答でした。
+> 
+> 
+>>時間依存の症状ですかね？
+> 
+> というわけでタイムアウトではありませんでした。
+> 
+> プロキシーを使ってかつ、設定ＤＮＳサーバで名前解決できないと再現すると思
+> います。企業や大学などプロキシを使っているところははまりやすいのでは...
+> 
+> #憶測ですが、以前のイメージではプロキシ経由のアクセスが実装されていない
+> #ため、このようなコーディングになったのでは？実際NetNameResolver が返す
+> #IPアドレスは使ってないし…。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Tue Mar  1 23:17:41 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2342] Re: Nihongo7について(NSqueak-2005-02-25.image)
+In-Reply-To: <42246DCE.8020309@metatoys.org>
+References: <422300E5.2010509@m2.pbc.ne.jp>	<u1xb02cwd.wl@YOSHIKI-T2.mb.infoweb.ne.jp>	<42243EFA.7090100@m2.pbc.ne.jp>
+	<42246DCE.8020309@metatoys.org>
+Message-ID: <42247985.6090807@m2.pbc.ne.jp>
+
+川村です。
+
+再現方法がわかりました。
+１）NSqueak-2005-02-25をダウンロード。
+２）解凍
+３）起動
+４）アップデートボタンを押して、アップデートストリーム(Nihongo7 Updates)
+よりアップデート
+５）SqueakMapパッケージローダを起動
+６）エラー発生（添付SqueakDebug参照）
+
+ここで４）→５）のシーケンスで必ず発生します。例えば４）を実行後保存・終
+了を選択して、
+再度実行するとエラーは発生しませんでした。また４）を行わず起動直後に５）
+の操作を
+しても問題ありませんでした。
+
+５つのチェンジセットを読み込んだ直後のTranscriptの内容を見ると
+(vmPathName is Undeclared) という文字列がいくつか出ています。思うに
+なんらかの原因でＶＭのパスを忘れて,SqueakMapのキャッシュディレクトリ
+(./sm)を作成しよう
+とした時にエラーとなったのでは？
+
+以上
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.zip
+型:         application/x-zip-compressed
+サイズ:     1349 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050301/976d90ea/SqueakDebug.bin
+-------------- next part --------------
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.300 / Virus Database: 266.5.1 - Release Date: 2005/02/27
+From yoshiki ＠ squeakland.org  Tue Mar  1 23:37:12 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2343] Re: Nihongo7について(NSqueak-2005-02-25.image)
+In-Reply-To: <42247985.6090807@m2.pbc.ne.jp>
+References: <422300E5.2010509@m2.pbc.ne.jp>
+	<u1xb02cwd.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<42243EFA.7090100@m2.pbc.ne.jp> <42246DCE.8020309@metatoys.org>
+	<42247985.6090807@m2.pbc.ne.jp>
+Message-ID: <ur7iz1lgn.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> ５つのチェンジセットを読み込んだ直後のTranscriptの内容を見ると
+> (vmPathName is Undeclared) という文字列がいくつか出ています。思うに
+> なんらかの原因でＶＭのパスを忘れて,SqueakMapのキャッシュディレクトリ
+> (./sm)を作成しよう
+> とした時にエラーとなったのでは？
+
+　これそのものが原因かどうかはわかりませんが、アップデートファ
+イルのひとつである0004filePathMethodRename.csとして、間違えたやつをアッ
+プロードしてしまいました。ファイルの性質上さらなるアップデートでは修正
+できないので、今からそっとそのファイルを置き換えます。すみません。
+
+  武田さんに送ってもらった翻訳を含めて、いくつかさらにアップロードすべ
+きものがあります。今日もう一段まとめたものを作りますので、テストのほう
+よろしくお願いします。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Tue Mar  1 23:45:30 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2344] Re: Nihongo7について(NSqueak-2005-02-25.image)
+In-Reply-To: <ur7iz1lgn.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<42247985.6090807@m2.pbc.ne.jp> <42246DCE.8020309@metatoys.org>
+References: <422300E5.2010509@m2.pbc.ne.jp>
+	<u1xb02cwd.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<42243EFA.7090100@m2.pbc.ne.jp> <42246DCE.8020309@metatoys.org>
+	<42247985.6090807@m2.pbc.ne.jp>
+	<ur7iz1lgn.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <upsyj1l2t.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 　これそのものが原因かどうかはわかりませんが、アップデートファ
+> イルのひとつである0004filePathMethodRename.csとして、間違えたやつをアッ
+> プロードしてしまいました。ファイルの性質上さらなるアップデートでは修正
+> できないので、今からそっとそのファイルを置き換えます。すみません。
+
+　これをやりました。その後、
+
+> 再現方法がわかりました。
+> １）NSqueak-2005-02-25をダウンロード。
+> ２）解凍
+> ３）起動
+> ４）アップデートボタンを押して、アップデートストリーム(Nihongo7 Updates)
+> よりアップデート
+> ５）SqueakMapパッケージローダを起動
+
+  をしてもエラーは出ません。
+
+また、
+
+> FileDirectory default createDirectory: 'test'.
+> self assert: (FileDirectory default directoryExists: 'test').
+
+も成功します。
+
+ちなみに、パッケージをインストールしようとするとエラーが出ますが、
+SMSimpleInstaller>>fileIntoChangeSetNamed:fromStream:のしかるべき行を
+
+(Smalltalk respondsTo: #changes)
+
+のように変えると直ります。この変更もアップデートサーバーに載せたいと思
+います。
+
+  報告ありがとうございます。
+
+-- Yoshiki
+
+From yukari.shirota ＠ gakushuin.ac.jp  Wed Mar  2 11:04:31 2005
+From: yukari.shirota ＠ gakushuin.ac.jp (SHIROTA Yukari)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2345] Re: 画像のOID
+References: <200502270301.MAA01561@mx03.gakushuin.ac.jp>
+Message-ID: <42251F2F.8000401@gakushuin.ac.jp>
+
+白田＠学習院です．
+
+大島様，リプライをどうもありがとうございました．
+（自分で読んでも分かりにくい文章だと反省しています．
+きちんと内容を把握してくださり，感謝です）
+
+> 　Squeak内部に入った後はもはや「ファイル」ではないですし、Squeak内部、
+> 外部で編集されることを思うと一意性をどう定義するか、というのは簡単な問
+> 題ではないと思います。理想的には画像同士の同値性比較を、ビットの内容を
+> 見た値同値でやる、ということも考えられますが、現状はちょっと怖い感じは
+> します。
+
+そうなんです．
+属性値の同値性をどう定義するか，という問題
+ですよね．
+多分，文字列であれば，きちんと値の比較を
+行っていますよね．
+私のfirst impression としては，ビットマップなりで
+（fileのbit列としてのdiffでもとって）判定すれば
+いいじゃ，ないか．と思いました．
+
+小学生がみて，「同じ絵なのに，等号がTRUEにならない」という
+ような混乱は今までなかったのかなぁ，と思いました．
+
+というような，議論はいくらでも（？）思いつくのですが，
+eToyプログラムの腕が全然あがりません．兄弟もすみません．
+知りません．「大砲をうつのに，玉をどんどんコピーする」
+というようなプログラムはどう書くのか，どこかに資料は
+ないものでしょうか？　キーワードひとつでもかまいません．
+宜しくお願い申し上げます。
+
+
+> Message: 1
+> Date: Sat, 26 Feb 2005 16:32:30 +0900
+> From: SHIROTA Yukari <yukari.shirota@gakushuin.ac.jp>
+> Subject: [Squeak-ja: 2333] 画像のOID
+> To: squeak-ja@smalltalk.jp
+> Message-ID: <4220260E.9070505@gakushuin.ac.jp>
+> Content-Type: text/plain; charset=ISO-2022-JP
+> 
+> 白田＠学習院です．
+> 
+> プログラムをしていて，悩んだ結果分かった
+> ことです
+> （きっと，皆さんは当然なのでしょうが）
+> jpegなどの画像をそのままスケッチと
+> して多数使う場合，同じスケッチをコピー
+> して使います．
+> そのとき，スケッチが違えばOIDが違うのは
+> 分かります．オブジェクト指向ですから．
+> しかし，画像ファイルにまで，違うOIDが
+> 振られるのですね．（これ正しいでしょうか？）
+> 
+> 画像でオブジェクトを識別するテストを書いて
+> いたのですが，どうしてもうまくいかなかった
+> のですが，
+> 
+> ｘｘｘの見た目を似せるｘｘｘ
+> 
+> を予め実行すると，できました．
+> 
+> 個人的意見としては，画像ファイルにまでOIDを
+> ふると，分かりにくくなるように思うのですが，
+> 皆様のご意見はいかがでしょうか？
+> 
+> 
+> 
+> ------------------------------
+> 
+> Message: 2
+> Date: Sat, 26 Feb 2005 17:07:03 -0800
+> From: Yoshiki Ohshima <yoshiki@squeakland.org>
+> Subject: [Squeak-ja: 2334] Re: 画像のOID
+> To: Squeak discussion in Japanese <squeak-ja@smalltalk.jp>
+> Message-ID: <ur7j2u7yg.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+> Content-Type: text/plain; charset=ISO-2022-JP
+> 
+>   おおしまです。
+> 
+> 
+>>プログラムをしていて，悩んだ結果分かった
+>>ことです
+>>（きっと，皆さんは当然なのでしょうが）
+> 
+> 
+> 　いえいえ、僕にとっても日々発見です。
+> 
+> 
+>>jpegなどの画像をそのままスケッチと
+>>して多数使う場合，同じスケッチをコピー
+>>して使います．
+>>そのとき，スケッチが違えばOIDが違うのは
+>>分かります．オブジェクト指向ですから．
+>>しかし，画像ファイルにまで，違うOIDが
+>>振られるのですね．（これ正しいでしょうか？）
+> 
+> 
+>   おそらくは、外部のファイルとして存在していた画像を元に作ったスケッチ、
+> ということですよね。もとのリソースを覚えておくべき、という意見はありま
+> すが、現状はSqueak内部に取り込んだ後は、区別のないスケッチになります。
+> 
+>   内部に2回以上取り込んだときにも、「同じビット列を含んだ違うオブジェ
+> クト」になります。違うオブジェクトである以上、定義から言って違うOIDと
+> なりますね。
+> 
+>   Squeak内部外部で編集されることを思うと比較的正しい動作だと思います。
+> 
+> 
+>>画像でオブジェクトを識別するテストを書いて
+>>いたのですが，どうしてもうまくいかなかった
+>>のですが，
+> 
+> 
+> 　確かに、画像の#=は#==を使って定義されているので、「同じかどうか」は
+> 内容まではみてくれません。
+> 
+> 
+>>ｘｘｘの見た目を似せるｘｘｘ
+>>
+>>を予め実行すると，できました．
+>>
+>>個人的意見としては，画像ファイルにまでOIDを
+>>ふると，分かりにくくなるように思うのですが，
+>>皆様のご意見はいかがでしょうか？
+> 
+> 
+> 　Squeak内部に入った後はもはや「ファイル」ではないですし、Squeak内部、
+> 外部で編集されることを思うと一意性をどう定義するか、というのは簡単な問
+> 題ではないと思います。理想的には画像同士の同値性比較を、ビットの内容を
+> 見た値同値でやる、ということも考えられますが、現状はちょっと怖い感じは
+> します。
+> 
+>   ところで、「兄弟」という機能をご存知ですか?ひとつの画像から兄弟を作っ
+> ておき、「兄弟に触れているか?」という機能を使う可能性も考えられます。
+> (触れているか・重なっているかという概念が使える課題なのかはちょっと良
+> くわかりませんが。
+
+
+From tak ＠ metatoys.org  Wed Mar  2 11:30:56 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2346] Re: 画像のOID
+In-Reply-To: <42251F2F.8000401@gakushuin.ac.jp>
+References: <200502270301.MAA01561@mx03.gakushuin.ac.jp>
+	<42251F2F.8000401@gakushuin.ac.jp>
+Message-ID: <42252560.4090307@metatoys.org>
+
+山宮です。
+
+沢山の玉を打つには「兄弟」がお勧めです。
+http://metatoys.org/tmp/etoysManiac/
+に作りかけのチュートリアルがあるのですが、
+兄弟の項目が参考になるのではと思います。
+
+(このチュートリアルは Nihongo7 を元にしているので、Nihongo6.1 では
+サンプルが動かなかったり記述が違ったりします。)
+よろしくお願いします。
+
+> というような，議論はいくらでも（？）思いつくのですが，
+> eToyプログラムの腕が全然あがりません．兄弟もすみません．
+> 知りません．「大砲をうつのに，玉をどんどんコピーする」
+> というようなプログラムはどう書くのか，どこかに資料は
+> ないものでしょうか？　キーワードひとつでもかまいません．
+> 宜しくお願い申し上げます。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From yukari.shirota ＠ gakushuin.ac.jp  Wed Mar  2 11:50:57 2005
+From: yukari.shirota ＠ gakushuin.ac.jp (SHIROTA Yukari)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2347] etoysManiac
+References: <200502270301.MAA01561@mx03.gakushuin.ac.jp>
+	<42251F2F.8000401@gakushuin.ac.jp> <42252560.4090307@metatoys.org>
+Message-ID: <42252A11.9060305@gakushuin.ac.jp>
+
+白田＠学習院です．
+
+山宮様，すごく勉強になりました．
+もっともっと書いてください．
+読むものが少なくて困っているので．
+
+ほかの皆様も，「こんなものがある」
+というページがあれば教えてください．
+（一応，普通の検索はかけてみている
+つもりですが）
+
+
+
+Takashi Yamamiya wrote:
+> 山宮です。
+> 
+> 沢山の玉を打つには「兄弟」がお勧めです。
+> http://metatoys.org/tmp/etoysManiac/
+> に作りかけのチュートリアルがあるのですが、
+> 兄弟の項目が参考になるのではと思います。
+> 
+> (このチュートリアルは Nihongo7 を元にしているので、Nihongo6.1 では
+> サンプルが動かなかったり記述が違ったりします。)
+> よろしくお願いします。
+> 
+> 
+>>というような，議論はいくらでも（？）思いつくのですが，
+>>eToyプログラムの腕が全然あがりません．兄弟もすみません．
+>>知りません．「大砲をうつのに，玉をどんどんコピーする」
+>>というようなプログラムはどう書くのか，どこかに資料は
+>>ないものでしょうか？　キーワードひとつでもかまいません．
+>>宜しくお願い申し上げます。
+-----------------------------------
+
+
+From tango ＠ eggegg.co.jp  Wed Mar  2 14:02:32 2005
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2348] Re: 画像のOID
+References: <200502270301.MAA01561@mx03.gakushuin.ac.jp><42251F2F.8000401@gakushuin.ac.jp>
+	<42252560.4090307@metatoys.org>
+Message-ID: <002101c51ee5$0de01320$6dc4d2ca@gomes>
+
+やまもとです。
+
+> 沢山の玉を打つには「兄弟」がお勧めです。
+> http://metatoys.org/tmp/etoysManiac/
+> に作りかけのチュートリアルがあるのですが、
+> 兄弟の項目が参考になるのではと思います。
+
+こ、これは知らなかった。
+こうゆう「ちょうひとにやさしいかいせつ」を
+もっともっと書いてくださいよ〜！！やまみやさん。
+すんばらしい〜！！
+
+
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+From yoshiki ＠ squeakland.org  Wed Mar  2 14:17:48 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2349] 新しい日本語版Squeak: 現在鋭意作成中！
+In-Reply-To: <ubra992jr.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ur7jflz2d.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<ubra992jr.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <u8y561v9f.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+
+  おおしまです。
+
+  また間が空いてしまいましたが、いくつかの変更を加えました。変更点は、
+
+  * 武田さんによるコネクター周りの翻訳
+  * 川村さん指摘のSqueakMapの不具合
+  * 古いプロジェクトのロード時に行われていたフォント変更の高速化
+  * 言語エディターに小さな機能を追加
+  * SocketStreamの変更
+
+という感じです。山宮さんにまたまとめてもらいましたので、
+
+http://metatoys.org/pub/NSqueak-2005-03-02.zip
+
+からダウンロードして中にあるSqueakPlugin.imageというファイルを取り出し
+てください。SqueakPlugin.imageをダブルクリックして起動するか、あるいは
+VMの実行形式の上にドロップ、またはコマンドラインから指定して起動すると、
+現状のイメージが試せます。ここで、普段使うような感じでいろいろ試したり、
+あるいはプロジェクト置き場にあるようなものを作り直してみたりして、気が
+付いたところや問題になりそうなところを遠慮なく報告していただけないでしょ
+うか。
+
+　よろしくお願いします。
+
+-- Yoshiki
+
+From korakurider ＠ yahoo.co.jp  Wed Mar  2 14:19:42 2005
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2350] Dot
+Message-ID: <20050302051942.94316.qmail@web3006.mail.bbt.yahoo.co.jp>
+
+Korakuriderという者です。はじめまして。
+Nihongo6.1のeToyをいじっていると、画面上の妙な場所にいつ
+の間にか小さい黒丸の姿をした、Dotという名前のImageMorph
+ができていることがあります。特に入れ物で何かしているとか
+なりの確率で遭遇します。
+ずっとそういうものと思って放置してきたのですが、さきほど
+教えていただいた、山宮さんの「etoysマニア」にドットのお
+話が載っていて、関係ある話ではないかと思っています。
+これはいったいなんなんでしょうか？
+都度消すようにしていますが、消してもいいのでしょうか？
+ちなみにNihongo7では遭遇したことがありませんそもそもこれ
+が画面に出てこないようにできないんでしょうか。
+よろしくお願いします。
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+http://pr.mail.yahoo.co.jp/so2005/
+
+
+From yoshiki ＠ squeakland.org  Wed Mar  2 23:50:08 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2351] Re: Dot
+In-Reply-To: <20050302051942.94316.qmail@web3006.mail.bbt.yahoo.co.jp>
+References: <20050302051942.94316.qmail@web3006.mail.bbt.yahoo.co.jp>
+Message-ID: <u650a14rj.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> Korakuriderという者です。はじめまして。
+> Nihongo6.1のeToyをいじっていると、画面上の妙な場所にいつ
+> の間にか小さい黒丸の姿をした、Dotという名前のImageMorph
+> ができていることがあります。特に入れ物で何かしているとか
+> なりの確率で遭遇します。
+> ずっとそういうものと思って放置してきたのですが、さきほど
+> 教えていただいた、山宮さんの「etoysマニア」にドットのお
+> 話が載っていて、関係ある話ではないかと思っています。
+> これはいったいなんなんでしょうか？
+
+　他のプログラミング言語からのアナロジーで言えば、nilやNULLに相当する
+もので、引数や、あるいはカーソル位置のプレイヤのようにプレイヤ型のもの
+で「とにもかくにもデフォルトの値」を必要とするものがあるときに使われま
+す。
+
+  eToysはなんでも眼に見える、という思想なのでそういうものも画面上に作
+られていました。「デフォルトの値」なので、画面上にいさえすれば良い、と
+いう不思議な存在です。
+
+> 都度消すようにしていますが、消してもいいのでしょうか？
+
+　消しても良いのですが何度でも復活してしまうので、Nihongo6.1では、そっ
+とビューワタブかフラップの裏にでも隠しておくのが良いかもしれません。
+
+> ちなみにNihongo7では遭遇したことがありませんそもそもこれ
+> が画面に出てこないようにできないんでしょうか。
+
+  例の本の著者(*)であるKim Roseも、大分経ってから「で、この黒い点はな
+んなわけ」というようなことを言い出しました。それで、eToysの細かいとこ
+ろを作っているScott Wallaceによって、Dotの作られる位置が画面外ぎりぎり
+になるようになりました。Nihongo7もそれを受け継いだので、現在はドットは
+ぎりぎり画面外に存在するようになっています。
+
+　もし仲間はずれにしたくなければ、ワールドで「迷子を連れ戻す」などを実
+行してみてください。
+
+[*]
+http://www.amazon.co.jp/exec/obidos/ASIN/4872902114/250-4061965-2509850
+
+-- Yoshiki
+
+From korakurider ＠ yahoo.co.jp  Thu Mar  3 10:07:16 2005
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2352] Re: Dot
+In-Reply-To: <u650a14rj.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <20050303010716.53735.qmail@web3009.mail.bbt.yahoo.co.jp>
+
+Korakuriderです。
+--- Yoshiki Ohshima <yoshiki@squeakland.org> からのメッ
+セージ：
+> Nihongo7もそれを受け継いだので、現在はドットは
+> ぎりぎり画面外に存在するようになっています。
+
+Nihongo6.1以前→Nihongo7で、「Dot」から「ドット」に名前
+が変わった（日本語化？）わけですね。
+謎が解けてすっきりしました。
+ありがとうございました。
+
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+http://pr.mail.yahoo.co.jp/so2005/
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Thu Mar  3 10:27:07 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2353] [N7]file inできない？
+Message-ID: <422667EB.6000601@m2.pbc.ne.jp>
+
+川村です。お世話になってます。
+N6.1でfile outしたソースがNihongo7(3/2版)で読み込みに失敗します。
+具体的にはN6.1で書いていたソースをfile outしてN7でfile inしようとしたら、
+<<<This string contains a character (ascii value 132) that is not
+normally used in code>>>
+というメッセージで'Syntax Error'となりました。上記の部分は日本語でコメン
+トを記述している
+ところです。もちろんN6.1では問題なく読み込みできます。
+
+読み込みに失敗したソースを添付します。
+以上
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://www.realintegrity.net/~squeak/pukiwiki
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+-------------- next part --------------
+文字コード指定の無い添付文書を保管しました...
+名前: VS-Image.st
+URL:  http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050303/21a5c605/VS-Image.asc
+-------------- next part --------------
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.308 / Virus Database: 266.6.0 - Release Date: 2005/03/02
+From yoshiki ＠ squeakland.org  Thu Mar  3 10:41:04 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2354] Spam: Re: [N7]file inできない？ない？
+In-Reply-To: <422667EB.6000601@m2.pbc.ne.jp>
+References: <422667EB.6000601@m2.pbc.ne.jp>
+Message-ID: <u1xax1p73.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+ファイルインの仕方に工夫が要ります。
+
+> 川村です。お世話になってます。
+> N6.1でfile outしたソースがNihongo7(3/2版)で読み込みに失敗します。
+> 具体的にはN6.1で書いていたソースをfile outしてN7でfile inしようとしたら、
+> <<<This string contains a character (ascii value 132) that is not
+> normally used in code>>>
+> というメッセージで'Syntax Error'となりました。上記の部分は日本語でコメン
+> トを記述している
+> ところです。もちろんN6.1では問題なく読み込みできます。
+> 
+> 読み込みに失敗したソースを添付します。
+
+  Nihongo7(というかSqueak 3.8)から、UTF-8なファイルアウトの頭にはBOMが
+付いていないといけないことになりました。移行のためには、Nihongo7のワー
+クスペースで
+
+f _ FileStream readOnlyFileNamed: 'VS-Image.st'.
+f fileInEncodingName: 'utf-8'.
+f close.
+
+のようにしてファイルインし、結果をその後書き出すようにしてください。
+
+  ご不便を掛けてすみません。
+
+-- Yoshiki
+
+From abee.abe ＠ nifty.ne.jp  Thu Mar  3 10:39:19 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:08 2007
+Subject: [Squeak-ja: 2355] Re: Dot
+In-Reply-To: <20050303010716.53735.qmail@web3009.mail.bbt.yahoo.co.jp>
+References: <u650a14rj.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<20050303010716.53735.qmail@web3009.mail.bbt.yahoo.co.jp>
+Message-ID: <42266AC73D8.48F0ABEE.ABE@smtp.nifty.com>
+
+阿部@長野です。
+
+On Thu, 3 Mar 2005 10:07:16 +0900 (JST)
+korakurider <korakurider@yahoo.co.jp> wrote:
+>Nihongo6.1以前→Nihongo7で、「Dot」から「ドット」に名前
+>が変わった（日本語化？）わけですね。
+
+Nihongo6.1以前でも日本語化したつもりだったのですが、機構的に抜けがあった
+ということですね(worldなども同様)。たとえば、ドットのビューワや、任意のモー
+フのビューワで「その他」カテゴリなどをみていただくと、日本語と英語が混在
+しているのが分かります。
+
+バージョンが違ってもその役割は一貫しています。
+
+# 私の教えた子供たちの一部では「ミスター・ドット」と呼ばれて人気者になって
+# います。見つけ次第捨てられてますが :-)
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From korakurider ＠ yahoo.co.jp  Thu Mar  3 10:43:34 2005
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2356] Re: 新しい日本語版 Squeak: 現在鋭意作成中！
+In-Reply-To: <u8y561v9f.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <20050303014334.29547.qmail@web3010.mail.bbt.yahoo.co.jp>
+
+Korakuriderです。お世話になっています。
+今度は、etoysプロジェクトの保存関係を中心に試してみまし
+た。いずれもcosmeticsレベルの話ですみません。
+
++ Nihongo7から、Squeak起動時に My Squeak/ユーザ名という
+フォルダを作るみたいですが、Windows98で動かした場合、「
+ユーザ名」の部分が 「%USERNAME%」になってしまいます。Win98
+ユーザはもう少ないと思いますが。。。
+（試してませんがWin95も同様の現象になると思います）
+
++ eToysのターゲット層を考えると、保存するときのデフォル
+トの名前は、「unnamed」でなく以前と同じ「名無し」の方が
+よいと感じます。（単に翻訳の進捗の話であれば結構です）
+
++ プロジェクトを保存するとサムネイルのGIFファイルをいっ
+しょに作成するようになったようです。全然害はないですが、
+以前のバージョンから入ったユーザさん対応用としてメモして
+おきます。
+
+
+
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+http://pr.mail.yahoo.co.jp/so2005/
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Thu Mar  3 10:53:41 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2357] Re: Spam: Re: [N7]file inできない？ない？
+In-Reply-To: <u1xax1p73.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <422667EB.6000601@m2.pbc.ne.jp>
+	<u1xax1p73.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <42266E25.6070907@m2.pbc.ne.jp>
+
+川村です。お世話になってます。
+解決しました。
+
+ありがとうございました。
+
+Yoshiki Ohshima wrote:
+
+>  おおしまです。
+>
+>ファイルインの仕方に工夫が要ります。
+>
+>  
+>
+>>川村です。お世話になってます。
+>>N6.1でfile outしたソースがNihongo7(3/2版)で読み込みに失敗します。
+>>具体的にはN6.1で書いていたソースをfile outしてN7でfile inしようとしたら、
+>><<<This string contains a character (ascii value 132) that is not
+>>normally used in code>>>
+>>というメッセージで'Syntax Error'となりました。上記の部分は日本語でコメン
+>>トを記述している
+>>ところです。もちろんN6.1では問題なく読み込みできます。
+>>
+>>読み込みに失敗したソースを添付します。
+>>    
+>>
+>
+>  Nihongo7(というかSqueak 3.8)から、UTF-8なファイルアウトの頭にはBOMが
+>付いていないといけないことになりました。移行のためには、Nihongo7のワー
+>クスペースで
+>
+>f _ FileStream readOnlyFileNamed: 'VS-Image.st'.
+>f fileInEncodingName: 'utf-8'.
+>f close.
+>
+>のようにしてファイルインし、結果をその後書き出すようにしてください。
+>
+>  ご不便を掛けてすみません。
+>
+>-- Yoshiki
+>
+>
+>
+>  
+>
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://www.realintegrity.net/~squeak/pukiwiki
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.308 / Virus Database: 266.6.0 - Release Date: 2005/03/02
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+http://pr.mail.yahoo.co.jp/so2005/
+
+
+From tak ＠ metatoys.org  Thu Mar  3 10:54:31 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2358] Re: 画像のOID
+In-Reply-To: <002101c51ee5$0de01320$6dc4d2ca@gomes>
+References: <200502270301.MAA01561@mx03.gakushuin.ac.jp><42251F2F.8000401@gakushuin.ac.jp>	<42252560.4090307@metatoys.org>
+	<002101c51ee5$0de01320$6dc4d2ca@gomes>
+Message-ID: <42266E57.9030009@metatoys.org>
+
+山宮です。
+
+> こ、これは知らなかった。
+> こうゆう「ちょうひとにやさしいかいせつ」を
+> もっともっと書いてくださいよ〜！！やまみやさん。
+> すんばらしい〜！！
+
+身に余るお言葉有難うございます。これははこだて未来大での
+ワークショップ用に作ったドキュメントだったので、今まで公開
+してませんでした。まだ特殊イメージでしか開かない例が残っている
+のですが、とりあえず
+
+http://metatoys.org/etoysMania/
+
+においておきます。
+(前の URL はほんとの仮置き場だったので)
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From yoshiki ＠ squeakland.org  Fri Mar  4 08:00:57 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2359] Re: 新しい日本語版 Squeak: 現在鋭意作成中！
+In-Reply-To: <20050303014334.29547.qmail@web3010.mail.bbt.yahoo.co.jp>
+References: <u8y561v9f.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<20050303014334.29547.qmail@web3010.mail.bbt.yahoo.co.jp>
+Message-ID: <uu0nsz652.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> Korakuriderです。お世話になっています。
+> 今度は、etoysプロジェクトの保存関係を中心に試してみまし
+> た。いずれもcosmeticsレベルの話ですみません。
+
+　いえいえ、いろんなことを何でも書いてください。
+
+> + Nihongo7から、Squeak起動時に My Squeak/ユーザ名という
+> フォルダを作るみたいですが、Windows98で動かした場合、「
+> ユーザ名」の部分が 「%USERNAME%」になってしまいます。Win98
+> ユーザはもう少ないと思いますが。。。
+> （試してませんがWin95も同様の現象になると思います）
+
+　うーむ。これは問題ですね。英語版にも同じ問題がありそうです。
+
+> + eToysのターゲット層を考えると、保存するときのデフォル
+> トの名前は、「unnamed」でなく以前と同じ「名無し」の方が
+> よいと感じます。（単に翻訳の進捗の話であれば結構です）
+
+　あ、これは直したほうが良いですね。
+
+> + プロジェクトを保存するとサムネイルのGIFファイルをいっ
+> しょに作成するようになったようです。全然害はないですが、
+> 以前のバージョンから入ったユーザさん対応用としてメモして
+> おきます。
+
+　ありがとうございます。SuperSwikiでエラーが出る可能性を低くするという
+対症療法的な意味でも、gifは書かないようにする、ということも考えられる
+んですよね。どちらのほうが良いでしょうか。
+
+  どうもありがとうございます。
+
+-- Yoshiki
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sat Mar  5 10:13:05 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2360] 使い込んだイメージファイルが全く開けなくなりました
+Message-ID: <20050305101305037058.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+井上＠武蔵工大です。
+
+うちのクッキーは最近はスクリプティングより、もっと単純に、いろいろな絵を
+描いてコピーしてそれを手で動かして遊ぶことに夢中になっており（自分の頭が
+最も自分に忠実なプログラム・スクリプトということなんでしょう。）、作品と
+してお見せできるようなものがあまりありません。
+それで放っておいたのですが、先ほど、イメージファイルが開けないと言ってき
+ました。私がやってみても確かに起動しません。クッキーの使う他のイメージ
+ファイル（20MB〜250MBのものが10個ほどもあり、問題のものは58MBです。）は
+問題ないようです。問題がある時に作られるデバッグのログもできません。クッ
+キーにはこれは捨てるしかないよと言ったのですが、もしかしたら何か救う手だ
+てがあるでしょうか？
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From tango ＠ eggegg.co.jp  Sat Mar  5 16:39:30 2005
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2361] Re: 使い込んだイメージファイルが全く開けなくなりました
+References: <20050305101305037058.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <001801c52156$7b08b740$6dc4d2ca@gomes>
+
+やまもとです。
+
+> うちのクッキーは最近はスクリプティングより、もっと単純に、いろいろな絵を
+> 描いてコピーしてそれを手で動かして遊ぶことに夢中になっており（自分の頭が
+> 最も自分に忠実なプログラム・スクリプトということなんでしょう。）、作品と
+> してお見せできるようなものがあまりありません。
+
+絵だけでもりっぱなさくひんだよおおん。
+プログラムで動けば良いってもんじゃないし・・・。
+っていうかみたいっす！
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sat Mar  5 17:26:19 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2362] Re: 使い込んだイメージファイルが全く開けなくなりました
+In-Reply-To: <001801c52156$7b08b740$6dc4d2ca@gomes>
+References: <20050305101305037058.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<001801c52156$7b08b740$6dc4d2ca@gomes>
+Message-ID: <20050305172619230411.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+Thoru YamamotoさんがSat, 5 Mar 2005 16:39:30 +0900に
+「[Squeak-ja: 2361] Re: 使い込んだイメージファイルが全く開けなくなりまし
+た」の件で：
+> 絵だけでもりっぱなさくひんだよおおん。
+> プログラムで動けば良いってもんじゃないし・・・。
+> っていうかみたいっす！
+
+そう言っていただけると嬉しいです。わけが分かりそうなもの(^^;をいくつか保
+存させてみます。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From "土本 (Florian) 強  Sun Mar  6 11:59:02 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2363] OSC2005について
+Message-ID: <20050306115209.A331.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本です。
+
+　つい今し方まで知らなかったのですが、昨年「Squeak祭り2004」行ったOSC
+の本年版「OpenSourceConference2005」がもう間もなく行われるみたいですね。
+
+http://www.ospn.jp:16080/osc2005/
+
+　今回はSqueak-jaでは参加しないのですか？
+
+＃もう発表者の募集は締め切っちゃったのかな？
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From abee.abe ＠ nifty.ne.jp  Sun Mar  6 12:29:47 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2364] Squeakland.jp ダウン
+Message-ID: <422A792B3D9.F7D4ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+現在、
+
+http://squeakland.jp/
+
+がダウンしているようです。原因と復旧時期は今のところ不明です。
+ご迷惑をおかけしますが、今しばらくお待ちください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Sun Mar  6 13:02:02 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2365] Re: 使い込んだイメージファイルが全く開けなくなりました
+In-Reply-To: <20050305101305037058.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <20050305101305037058.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <422A80BA83.F7D6ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sat, 5 Mar 2005 10:13:05 +0900
+iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp> wrote:
+>うちのクッキーは最近はスクリプティングより、もっと単純に、いろいろな絵を
+>描いてコピーしてそれを手で動かして遊ぶことに夢中になっており（自分の頭が
+>最も自分に忠実なプログラム・スクリプトということなんでしょう。）、作品と
+>してお見せできるようなものがあまりありません。
+
+長野のスペシャルオリンピックスでは8日間ほど会場に立って、選手やボランティ
+ア、地域の皆さんとスクイークで遊んでみました。
+選手のみなさんはなんといってもゲームが好きなのですが、中には絵に興味があ
+る人もいて、描いた絵に私が「進める」や「回す」を加えて動かすと喜んでもら
+えました。
+レバノンの選手が、家の絵を描いて私にプレゼントしてくれたのが嬉しかったで
+すね。私も絵だけでもいいじゃんと思いました。
+また、何かと批判のあるSqueakのスケッチエディタですが、初めてでいきなり使
+えるのは重要かもと思ったりしました。星の使い方を発見する様子などは見てい
+てなかなかエキサイティングでした。
+
+合わせて、子供たちの作った作品の展示も行いました。めかぶさんクッキーくん
+の作品はどこでも人気ですが、今回も皆さん興味を持って遊んでくれました。動
+物パズルや踊り、feedfishが特に良かったようです。
+
+>それで放っておいたのですが、先ほど、イメージファイルが開けないと言ってき
+>ました。私がやってみても確かに起動しません。クッキーの使う他のイメージ
+>ファイル（20MB〜250MBのものが10個ほどもあり、問題のものは58MBです。）は
+>問題ないようです。問題がある時に作られるデバッグのログもできません。クッ
+>キーにはこれは捨てるしかないよと言ったのですが、もしかしたら何か救う手だ
+>てがあるでしょうか？
+
+過去の例から見て、回復の可能性はあまり高くないですが、圧縮してどこかftpや
+httpできるところに一瞬置いていただければ見てみます。大島さんも見てくれる
+かもしれません。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From abee.abe ＠ nifty.ne.jp  Sun Mar  6 13:08:04 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2366] Re: OSC2005 について
+In-Reply-To: <20050306115209.A331.FLORIAN@seagreen.ocn.ne.jp>
+References: <20050306115209.A331.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <422A822421E.F7D7ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 06 Mar 2005 11:59:02 +0900
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+>　つい今し方まで知らなかったのですが、昨年「Squeak祭り2004」行ったOSC
+>の本年版「OpenSourceConference2005」がもう間もなく行われるみたいですね。
+>
+>http://www.ospn.jp:16080/osc2005/
+>
+>　今回はSqueak-jaでは参加しないのですか？
+
+かなり前からお知らせはもらっていたのですが、他にかまけて後手に回ってしま
+いました。私自身は別件のイベントを入れてしまったので、ちょっと対応できそ
+うにありません。
+
+>＃もう発表者の募集は締め切っちゃったのかな？
+
+たぶん、まだ大丈夫だと思います。
+もし展示や発表を希望される方がいらっしゃいましたらご紹介します。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sun Mar  6 13:31:09 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2367] Re: 使い込んだイメージファイルが全く開けなくなりました
+In-Reply-To: <422A80BA83.F7D6ABEE.ABE@smtp.nifty.com>
+References: <20050305101305037058.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<422A80BA83.F7D6ABEE.ABE@smtp.nifty.com>
+Message-ID: <20050306133109699328.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+井上です。
+
+Kazuhiro ABEさんがSun, 06 Mar 2005 13:02:02 +0900に
+「[Squeak-ja: 2365] Re: 使い込んだイメージファイルが全く開けなくなりまし
+た」の件で：
+> 合わせて、子供たちの作った作品の展示も行いました。めかぶさんクッキーくん
+> の作品はどこでも人気ですが、今回も皆さん興味を持って遊んでくれました。動
+> 物パズルや踊り、feedfishが特に良かったようです。
+
+どうもありがとうございます。このことをめかぶとクッキーに話すと喜んでおり
+ました。
+＃ですがクッキーは「ぼくのfeedfish？忘れちゃったー」などと言ってます。
+＃子どもはどんどん興味が移るので前のことはどんどん忘れていくようです。
+(^^;
+
+>> キーにはこれは捨てるしかないよと言ったのですが、もしかしたら何か救う手だ
+>> てがあるでしょうか？
+> 
+> 過去の例から見て、回復の可能性はあまり高くないですが、圧縮してどこかftpや
+> httpできるところに一瞬置いていただければ見てみます。大島さんも見てくれる
+> かもしれません。
+
+すみません。こちらでやれることがあれば指示していただこうと思って質問いた
+しましたが、直接見ていただければ心強いです。回復は望めないだろうなとあき
+らめはついておりますし、何よりクッキーの方は問題を半分忘れて別のことに取
+りかかっております。(^^;
+http://www.ns.musashi-tech.ac.jp/%7einoue/Pages/damaged.tar.gz
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From abee.abe ＠ nifty.ne.jp  Sun Mar  6 14:37:00 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2368] Re: 使い込んだイメージファイルが全く開けなくなりました
+In-Reply-To: <20050306133109699328.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <422A80BA83.F7D6ABEE.ABE@smtp.nifty.com>
+	<20050306133109699328.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <422A96FC269.F7D8ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 6 Mar 2005 13:31:09 +0900
+iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp> wrote:
+>どうもありがとうございます。このことをめかぶとクッキーに話すと喜んでおり
+>ました。
+>＃ですがクッキーは「ぼくのfeedfish？忘れちゃったー」などと言ってます。
+>＃子どもはどんどん興味が移るので前のことはどんどん忘れていくようです。
+>(^^;
+
+そういうことはあるかもしれませんね :-)
+
+置き場の掲示板に写真を何枚か載せましたのでご覧ください。
+
+http://swikis.ddo.jp/abee/11
+
+>すみません。こちらでやれることがあれば指示していただこうと思って質問いた
+>しましたが、直接見ていただければ心強いです。回復は望めないだろうなとあき
+>らめはついておりますし、何よりクッキーの方は問題を半分忘れて別のことに取
+>りかかっております。(^^;
+
+正しいイメージファイルは、16進で
+
+66 19 00 00 40 ...
+
+から始まりますが、いただいたイメージは、
+
+EE FD 87 11 5C ...
+
+となっています。
+一部に判読できる箇所もありますが、66 19 00 ...のパタンがこのファイル中に
+見つからなかったため、何らかの原因で先頭が切れたか、他のファイルの一部が
+この部分に上書きされたか、スナップショットに失敗したかなどが考えられます。
+いずれにしても復旧は困難と思われます。
+
+残念でした。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sun Mar  6 23:31:48 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2369] Re: 使い込んだイメージファイルが全く開けなくなりました
+In-Reply-To: <422A96FC269.F7D8ABEE.ABE@smtp.nifty.com>
+References: <422A80BA83.F7D6ABEE.ABE@smtp.nifty.com>
+	<20050306133109699328.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<422A96FC269.F7D8ABEE.ABE@smtp.nifty.com>
+Message-ID: <20050306233148581891.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+井上です。
+
+Kazuhiro ABEさんがSun, 06 Mar 2005 14:37:00 +0900に
+「[Squeak-ja: 2368] Re: 使い込んだイメージファイルが全く開けなくなりまし
+た」の件で：
+> 一部に判読できる箇所もありますが、66 19 00 ...のパタンがこのファイル中に
+> 見つからなかったため、何らかの原因で先頭が切れたか、他のファイルの一部が
+> この部分に上書きされたか、スナップショットに失敗したかなどが考えられます。
+> いずれにしても復旧は困難と思われます。
+
+調査していただきましてどうもありがとうございました。ごちゃごちゃしたまま
+イメージ保存を繰り返す使い方をしてますから、何か変なことが起こってしまっ
+たんでしょうね。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From yoshiki ＠ squeakland.org  Mon Mar  7 02:27:56 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2370] Re: 使い込んだイメージファイルが全く開けなくなりました
+In-Reply-To: <20050306133109699328.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <20050305101305037058.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<422A80BA83.F7D6ABEE.ABE@smtp.nifty.com>
+	<20050306133109699328.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <uoedwy99f.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> > 過去の例から見て、回復の可能性はあまり高くないですが、圧縮してどこかftpや
+> > httpできるところに一瞬置いていただければ見てみます。大島さんも見てくれる
+> > かもしれません。
+> 
+> すみません。こちらでやれることがあれば指示していただこうと思って質問いた
+> しましたが、直接見ていただければ心強いです。回復は望めないだろうなとあき
+> らめはついておりますし、何よりクッキーの方は問題を半分忘れて別のことに取
+> りかかっております。(^^;
+> http://www.ns.musashi-tech.ac.jp/%7einoue/Pages/damaged.tar.gz
+
+　僕も見てみましたが、判りませんでした。なんだったんでしょうね。
+
+-- Yoshiki
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Mon Mar  7 11:58:59 2005
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2371] Re: 使い込んだイメージファイルが全く開けなくなりました
+In-Reply-To: <uoedwy99f.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <20050305101305037058.GyazMail.inoue@ma.ns.musashi-tech.ac.jp><422A8
+	0BA83.F7D6ABEE.ABE@smtp.nifty.com><20050306133109699328.GyazMail.ino
+	ue@ma.ns.musashi-tech.ac.jp>
+	<uoedwy99f.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <p04320451be517359cc03@amateras.ma.ns.musashi-tech.ac.jp>
+
+Yoshiki Ohshima さんが 2005.3.6ごろに
+「[Squeak-ja: 2370] Re: 使い込んだイメージファイルが全く」の件で：
+> 　僕も見てみましたが、判りませんでした。なんだったんでしょうね。
+
+お手数おかけしました。直前に何かしたかと聞いたのですが、覚えていないよ
+うでした。
+＃強制終了のようなことはなかったようです。
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From abee.abe ＠ nifty.ne.jp  Mon Mar  7 22:46:30 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2372] Squeakland.jp 復旧
+In-Reply-To: <422A792B3D9.F7D4ABEE.ABE@smtp.nifty.com>
+References: <422A792B3D9.F7D4ABEE.ABE@smtp.nifty.com>
+Message-ID: <422C5B3627A.91E1ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+復旧したようです。ご迷惑をおかけしました。
+
+On Sun, 06 Mar 2005 12:29:47 +0900
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+>現在、
+>
+>http://squeakland.jp/
+>
+>がダウンしているようです。原因と復旧時期は今のところ不明です。
+>ご迷惑をおかけしますが、今しばらくお待ちください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From sumi ＠ seagreen.ocn.ne.jp  Sun Mar 13 21:18:24 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2373] ＩＴおもしろ体験教室
+Message-ID: <BE5A5E9F.3058D%sumi@seagreen.ocn.ne.jp>
+
+皆さん、ごきげんよう。鷲見です。
+
+昨日、北海道・北見市にて異業種交流テクノ北見２１主催の「ＩＴおもしろ体験教室」
+と銘打たれた親子向けイベントにボランティア講師として招かれ、eToys レクチャー
+をしてまいりました。
+
+参加者は小学校２年生から６年生の１４組２０名。時間は１５分ほどの２回のジュー
+ス休憩込みの２時間半でした。補助員として２名＋にご協力いただきました。パソコ
+ンは原則、一組一台割当てで、デスクトップ型あるいはノート型にマウスを接続した
+状態での使用です。各マシンは LAN で接続されており、インターネット接続可。OS
+は Win 98 、2000、XP の混在でした。
+
+Squeak には Thoru さんの「スクイークであそぼう」付属の CD-ROM 同梱の Squeak-
+Nihongo4 を使用しました。なお同書は、主催者のはからいで、参加児童に（同伴保
+護者には加えて「子どもの思考力を高めるスクイーク」が）プレゼントとして提供さ
+れました。
+
+内容は、段取りおよび時間的な制約から、お馴染みのドライビングシミュレータどま
+り済ませ、児童のオリジナル作品製作までは至りませんでした。具体的には、車を描
+がいてもらい、ビューワからの制御、旋回するスクリプト、回転半径の動的変更から
+ハンドル角度との連携、ハンドル感度の調節、車のはみ出し検知信号の設置、センサー
+による自動操縦といったところです。
+
+目立ったトラブルとしては、自動制御の前段階でハンドルを任意の角度で固定するス
+クリプトを記述、実行させた際、回転ハローでハンドルを（おそらく）無理に動かそ
+うとするとハングアップする例が頻発したこと、原因は不明ですが作業の最後のほう
+で、エマージェンシーエバリュエータ起動メッセージが表示されたマシンが２台あっ
+たこと、プロジェクト保存作業が完了できないものが３件ほどあったことです。
+
+なお、参加者の全作品（最後の最後で失われてしまった１件以外。プロジェクト保存
+作業完了不可のものについては仮想イメージへの保存で対処しました）は CD-ROM 化
+して後日、参加者に郵送されます。プロジェクトファイルを集める作業は思いのほか
+手間取ったので、ここの段取りは事前に詰めておく必要を感じました。
+
+ＮＨＫ北見放送局、北海道新聞北見支社の記者のかたも来られ、興味を持って取材を
+されていたのが印象的でした。なお、ＮＨＫについては、さっそく翌朝（つまり今朝）
+の７時前のローカル枠（道ローカルか、北見ローカルかは分からないのですが）で、
+１〜２分のスポットではありましたが、教室の模様が放映されました。
+
+以上、ざっと思い付く範囲ですが、何かの参考になればと思い、簡単なご報告まで。
+
+--
+Masato Sumi
+
+
+From korakurider ＠ yahoo.co.jp  Mon Mar 14 20:56:57 2005
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2374] [N7] フォント関係
+Message-ID: <20050314115657.37970.qmail@web3012.mail.bbt.yahoo.co.jp>
+
+Korakuriderです。
+Nihongo7について、２点気がついたことをご報告いたします（3/11
+版で実験しました）。
+
+(1) Text Morphのフォント選択メニューで、MultiMSMinchoな
+どのフォントについても"new size"が指示できるようになって
+いるのですが、実際にはエラーになります。せっかくのTrueType
+フォントなので惜しいです（イメージのサイズはown riskとし
+て）。最悪エラーが出るよりはメニューを殺したほうがいいか
+もしれません。
+
+# 鷲見さんのTTCFontSetNewSize.csを参考にさせていただきな
+がら、new size機能追加の実験中でしたが、(2)の後固まって
+脱出できなくなり、実験コードも失いました (;;)
+# もう一度tryして、うまくいったらお送りします。
+
+(2) TextMorphの幅を黄ハロで縮小していくと、幅が1文字分を
+割り込んだくらいまでいった時にエラーになります。なお、テ
+キストの内容に日本語がまったく使われていない場合はフォン
+ト指定に関わらずエラーにはなりませんでした。
+
+よろしくお願いします。
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+http://pr.mail.yahoo.co.jp/so2005/
+
+
+From yoshiki ＠ squeakland.org  Mon Mar 14 23:27:11 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2375] Re: ＩＴおもしろ体験教室
+In-Reply-To: <BE5A5E9F.3058D%sumi@seagreen.ocn.ne.jp>
+References: <BE5A5E9F.3058D%sumi@seagreen.ocn.ne.jp>
+Message-ID: <ull8ql2v4.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 目立ったトラブルとしては、自動制御の前段階でハンドルを任意の角度で固定するス
+> クリプトを記述、実行させた際、回転ハローでハンドルを（おそらく）無理に動かそ
+> うとするとハングアップする例が頻発したこと、原因は不明ですが作業の最後のほう
+> で、エマージェンシーエバリュエータ起動メッセージが表示されたマシンが２台あっ
+> たこと、プロジェクト保存作業が完了できないものが３件ほどあったことで
+> す。
+
+　Nihongo4というのは、現状かなり無謀な選択ではないかと思ったりはしたの
+ですが、なにか深い理由はあったのでしょうか。せっかくなのでびしっ
+とNihongo7のプレリリース版を使ってくだされば、トラブルなしで行けたのに...
+
+> 以上、ざっと思い付く範囲ですが、何かの参考になればと思い、簡単なご報告まで。
+
+  すばらしいです。これからもよろしくお願いします。
+
+-- Yoshiki
+
+From chigusa.kita ＠ nifty.ne.jp  Mon Mar 14 21:21:41 2005
+From: chigusa.kita ＠ nifty.ne.jp (Chigusa Kita)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2376] Re: ＩＴおもしろ体験教室
+In-Reply-To: <BE5A5E9F.3058D%sumi@seagreen.ocn.ne.jp>
+References: <BE5A5E9F.3058D%sumi@seagreen.ocn.ne.jp>
+Message-ID: <p0600100fbe5b3146daf7@nifty.ne.jp>
+
+鷲見さま
+
+ご報告，興味深く拝見しました。実際行うといろいろなトラブルが発生するんですね。参考にさせて頂きます。
+「子どもの思考力を高めるスクイーク」を保護者のみなさんにプレゼントしてくださったとのこと，感謝します。
+キムさんが喜ばれることでしょう。
+日本語版がバージョンアップしても，本の記述内容がちゃんと整合性を保てるのか，ちょっと心配してもいるのですが……。
+
+喜多
+
+At 9:18 PM +0900 05.3.13, Masato Sumi wrote:
+>皆さん、ごきげんよう。鷲見です。
+>
+>昨日、北海道・北見市にて異業種交流テクノ北見２１主催の「ＩＴおもしろ体験教室」
+>と銘打たれた親子向けイベントにボランティア講師として招かれ、eToys レクチャー
+>をしてまいりました。
+>
+>参加者は小学校２年生から６年生の１４組２０名。時間は１５分ほどの２回のジュー
+>ス休憩込みの２時間半でした。補助員として２名＋にご協力いただきました。パソコ
+>ンは原則、一組一台割当てで、デスクトップ型あるいはノート型にマウスを接続した
+>状態での使用です。各マシンは LAN で接続されており、インターネット接続可。OS
+>は Win 98 、2000、XP の混在でした。
+>
+>Squeak には Thoru さんの「スクイークであそぼう」付属の CD-ROM 同梱の Squeak-
+>Nihongo4 を使用しました。なお同書は、主催者のはからいで、参加児童に（同伴保
+>護者には加えて「子どもの思考力を高めるスクイーク」が）プレゼントとして提供さ
+>れました。
+>
+>内容は、段取りおよび時間的な制約から、お馴染みのドライビングシミュレータどま
+>り済ませ、児童のオリジナル作品製作までは至りませんでした。具体的には、車を描
+>がいてもらい、ビューワからの制御、旋回するスクリプト、回転半径の動的変更から
+>ハンドル角度との連携、ハンドル感度の調節、車のはみ出し検知信号の設置、センサー
+>による自動操縦といったところです。
+>
+>目立ったトラブルとしては、自動制御の前段階でハンドルを任意の角度で固定するス
+>クリプトを記述、実行させた際、回転ハローでハンドルを（おそらく）無理に動かそ
+>うとするとハングアップする例が頻発したこと、原因は不明ですが作業の最後のほう
+>で、エマージェンシーエバリュエータ起動メッセージが表示されたマシンが２台あっ
+>たこと、プロジェクト保存作業が完了できないものが３件ほどあったことです。
+>
+>なお、参加者の全作品（最後の最後で失われてしまった１件以外。プロジェクト保存
+>作業完了不可のものについては仮想イメージへの保存で対処しました）は CD-ROM 化
+>して後日、参加者に郵送されます。プロジェクトファイルを集める作業は思いのほか
+>手間取ったので、ここの段取りは事前に詰めておく必要を感じました。
+>
+>ＮＨＫ北見放送局、北海道新聞北見支社の記者のかたも来られ、興味を持って取材を
+>されていたのが印象的でした。なお、ＮＨＫについては、さっそく翌朝（つまり今朝）
+>の７時前のローカル枠（道ローカルか、北見ローカルかは分からないのですが）で、
+>１〜２分のスポットではありましたが、教室の模様が放映されました。
+>
+>以上、ざっと思い付く範囲ですが、何かの参考になればと思い、簡単なご報告まで。
+>
+>--
+>Masato Sumi
+
+
+From tak ＠ metatoys.org  Mon Mar 14 23:41:32 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2377] Nihongo7
+Message-ID: <4235A29C.8070608@metatoys.org>
+
+山宮です。
+
+みなさま、テストにご協力頂きまして有難うございます。
+Squeak Nihongo 7 の現在のスナップショットを纏めました。
+
+http://metatoys.org/pub/NSqueak-2005-03-14.zip
+
+この中に色々入っていますが、特に、SqueakPlugin.image をテストして頂け
+れば助かります。
+
+また、http://www.squeakland.org/detect.html より英語版のスクイークをイ
+ンストールし、英語版の SqueakPlugin.image と入れ替えるとウェブブラウザ
+から遊ぶ事が出来ます。 > 日本語 SuperSwiki http://squeakland.jp/super/
+
+ウェブブラウザからは、http://squeakland.jp/super/uploads/update.html 
+より最新の更新を取り込む事が出来ます。しばらく激しくアップデートする事
+が予想されますので、マメにアップデートしていただけると有難いです。
+
+# 実は、SqueakPlugin.image をデスクトップに置くといきなりエラーが出る
+# 問題がすでに分かっていますので、日本語パス以外のところにおいてください。
+# NSqueak の方は大丈夫です。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From sumi ＠ seagreen.ocn.ne.jp  Tue Mar 15 09:26:24 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2378] Re: ＩＴおもしろ体験教室
+In-Reply-To: <ull8ql2v4.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <BE5C5AC0.30677%sumi@seagreen.ocn.ne.jp>
+
+おおしまさん、ごきげんよう。鷲見です。
+
+on 03/14/05 23:27, yoshiki@squeakland.org wrote:
+
+> 　Nihongo4というのは、現状かなり無謀な選択ではないかと思ったりはしたの
+> ですが、なにか深い理由はあったのでしょうか。せっかくなのでびしっ
+> とNihongo7のプレリリース版を使ってくだされば、トラブルなしで行けたのに...
+
+あぁ…、精力的に Nihongo7 を整備をしてくださっている最中に、それに背を向ける
+ようなことをしてスミマセン。「スクイークであそぼう」を持って帰ってもらうこと
+を先に決めてしまっていたので、参加者のお子さんが家に帰って試そうとしたとき、
+付属の CD-ROM を使ってインストールしたマシンで同じようにできることを念頭に置
+いて、あえてそうしました。
+
+事前から、ダウンロードして使う…ということへの（我々の想像できない）意外な障
+壁の高さについて、いろいろと見聞きして知ったうえでの判断だったのですが、やは
+りお子さんと直接対話をすると、その判断と今回の選択（Nihongo4）は正しかったと
+の結論でいます。ゴメンナサイ。
+
+--
+Masato Sumi
+
+
+From yoshiki ＠ squeakland.org  Tue Mar 15 09:41:54 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2379] Re: ＩＴおもしろ体験教室
+In-Reply-To: <BE5C5AC0.30677%sumi@seagreen.ocn.ne.jp>
+References: <ull8ql2v4.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<BE5C5AC0.30677%sumi@seagreen.ocn.ne.jp>
+Message-ID: <uoedlkael.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> あぁ…、精力的に Nihongo7 を整備をしてくださっている最中に、それに背を向ける
+> ようなことをしてスミマセン。「スクイークであそぼう」を持って帰ってもらうこと
+> を先に決めてしまっていたので、参加者のお子さんが家に帰って試そうとしたとき、
+> 付属の CD-ROM を使ってインストールしたマシンで同じようにできることを念頭に置
+> いて、あえてそうしました。
+
+　はい、スクイークで遊ぼうの話が出たのでそうかなとは思ったのですが、
+Nihongo4aでなくNihongo4と書いてあったので、ちょっと微妙な突っ込みを入
+れたくなってしまったのです。
+
+> 事前から、ダウンロードして使う…ということへの（我々の想像できない）意外な障
+> 壁の高さについて、いろいろと見聞きして知ったうえでの判断だったのですが、やは
+> りお子さんと直接対話をすると、その判断と今回の選択（Nihongo4）は正しかったと
+> の結論でいます。ゴメンナサイ。
+
+  ダウンロードの大変さはわかりますが、保存の失敗などの話を考えると、
+ちょっとお勧めはできませんでしたが。
+
+  少なくとも、インストーラを完備するべく(山宮さんが)準備中なので、次回
+以降に期待しています(してください)。
+
+-- Yoshiki
+
+From sumi ＠ seagreen.ocn.ne.jp  Tue Mar 15 09:49:36 2005
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2380] Re: ＩＴおもしろ体験教室
+In-Reply-To: <p0600100fbe5b3146daf7@nifty.ne.jp>
+Message-ID: <BE5C602F.30678%sumi@seagreen.ocn.ne.jp>
+
+喜多さん、ごきげんよう。鷲見です。
+
+on 03/14/05 21:21, chigusa.kita@nifty.ne.jp wrote:
+
+> ご報告，興味深く拝見しました。実際行うといろいろなトラブルが発生するんですね。
+> 参考にさせて頂きます。
+
+子供たちの行動を見ると、いかに普段から、自分が無意識に行動や興味に枷というか
+箍というか、そんなようなものをかけてしまっているかを痛感します。
+
+> 「子どもの思考力を高めるスクイーク」を保護者のみなさんにプレゼントしてくださっ
+> たとのこと，感謝します。
+> キムさんが喜ばれることでしょう。
+
+地元の学校の教頭先生がお二方、見学に来られていたのですが、少なくとも人づてに
+は、感銘を受けておられたように聞いています。あとから思えば、この先生がたにも
+プレゼントできればよかったなぁ…と。
+
+> 日本語版がバージョンアップしても，本の記述内容がちゃんと整合性を保てるのか，ち
+> ょっと心配してもいるのですが……。
+
+修正が容易なはずの Web で公開したドキュメントやチュートリアルですらそうなの
+ですが、本ならなおさら、その改訂が難しく、スクイークシステムのように変化し続
+けることが使命の、あるいは過去のバージョンを含んだバリエーションが多数あるソ
+フトを題材とするときの痛いところではありますね。整合性の問題はありましょうが、
+キムさんの主張や提案を親御さんが汲み取ってくれることを期待したいところです。
+
+--
+Masato Sumi
+
+
+From korakurider ＠ yahoo.co.jp  Tue Mar 15 13:01:18 2005
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2381] [N7] SuperSwiki 関係
+Message-ID: <20050315040118.24077.qmail@web3010.mail.bbt.yahoo.co.jp>
+
+Korakurider@昼休み中です。こんにちは。
+Nihongo7では最初から SuperSwikiのサーバが登録されて何か
+できるようになっていますが、これに関していくつかご報告と
+意見を書かせていただきます。
+（3/14版、サーバはSqueakLand-jのものを使用、）
+
+(1) 「プロジェクトを探す」だとうまく読み込めるのですが、
+「SuperSWikiを検索」の場合、検索結果のプロジェクトを選ん
+で入るところで Project not foundのエラーになります。
+#ちなみに検索条件のダイアログは、日本語化されないまま
+#になっています。いっそのことプラグイン版では「SuperSWiki
+を検索」メニュー自体殺してもいいかもしれません。
+
+(2) 「プロジェクト置き場」とかは、Squeakのバージョン毎に
+作品の置き場所が分けられています。デフォルトでSuperSwiki
+が使える状態でリリースされるのでしたら、SqueakLand-jのサ
+ーバでこのようなことを考慮する必要はないのでしょうか？6.1
+上で使っている人自体少ないから関係ないですかね。
+
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+http://pr.mail.yahoo.co.jp/so2005/
+
+
+From tak ＠ metatoys.org  Tue Mar 15 13:15:05 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2382] Re: [N7] SuperSwiki 関係
+In-Reply-To: <20050315040118.24077.qmail@web3010.mail.bbt.yahoo.co.jp>
+References: <20050315040118.24077.qmail@web3010.mail.bbt.yahoo.co.jp>
+Message-ID: <42366148.6070102@metatoys.org>
+
+山宮です。
+
+ご意見ありがとうございます！
+
+> (1) 「プロジェクトを探す」だとうまく読み込めるのですが、
+> 「SuperSWikiを検索」の場合、検索結果のプロジェクトを選ん
+> で入るところで Project not foundのエラーになります。
+> #ちなみに検索条件のダイアログは、日本語化されないまま
+> #になっています。いっそのことプラグイン版では「SuperSWiki
+> を検索」メニュー自体殺してもいいかもしれません。
+そんな機能があったとは知りませんでした。
+もうちょっと中身を見てから考えます。
+
+> (2) 「プロジェクト置き場」とかは、Squeakのバージョン毎に
+> 作品の置き場所が分けられています。デフォルトでSuperSwiki
+> が使える状態でリリースされるのでしたら、SqueakLand-jのサ
+> ーバでこのようなことを考慮する必要はないのでしょうか？6.1
+> 上で使っている人自体少ないから関係ないですかね。
+今後そういう事も考えた方が良いでしょうね。
+とりあえずは Squeakland.jp の SuperSwiki を Nihngo7 以外で使う事は
+各自のリスクでという事にしたいと思っています。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From korakurider ＠ yahoo.co.jp  Wed Mar 16 02:07:33 2005
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2383] Re: [N7] SuperSwiki 関係
+In-Reply-To: <20050315040118.24077.qmail@web3010.mail.bbt.yahoo.co.jp>
+References: <20050315040118.24077.qmail@web3010.mail.bbt.yahoo.co.jp>
+Message-ID: <JO200503160207332.3375226@yahoo.co.jp>
+
+Korakuriderです、こんばんは。
+引き続き書かせていただきます。(3/15版で実験しています）
+
+「探す」や「公開」のダイアログには、Squeakland.jp以外の
+海外のサーバも見えているのですが、ワークショップの現場でそのまま
+使われることを考えると、デフォルトではJP以外見せない方がよいよう
+に思うのですがいかがでしょう？（必要ならREADMEなどで設定方法を載せる）
+少なくともプラグイン版ではいらないように思います。
+（開発版だともっと多くのサーバが見えますが、実際に生きているの
+は少なそうですね）
+
+個人的意見として、「他のサーバへ公開」「より多くの場所から探す」
+以外では（デフォルトとして）SuperSwikiのサーバは見えないほうが、
+現場では安全な気がします。
+
+他の方もご意見があればお聞かせください。
+
+
+余談
+プロジェクト置き場へ作品を登録する際、作者・説明などを記入するきまり
+になっています。SuperSwikiの場合これに相当するのはSqueakの中で
+プロジェクト保存時に入力する情報ということになるんですかね？
+でもワークショップの現場では、名前以外を入力しているのを見たこと
+がありません。
+プロジェクト置き場へのアップロードはもともと敷居が高いので、
+みなさん手順どおりにアップロードしていただいているようですが、
+現在のNihongo7の機能は敷居が低すぎて？無意識にSuperSwikiに保存してしまい、
+素性のわからないものがサーバーにたまりそうですね。
+
+__________________________________
+Do You Yahoo!?
+Upgrade Your Life
+http://bb.yahoo.co.jp/
+
+
+From tak ＠ metatoys.org  Wed Mar 16 02:29:21 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2384] Re: [N7] SuperSwiki 関係
+In-Reply-To: <JO200503160207332.3375226@yahoo.co.jp>
+References: <20050315040118.24077.qmail@web3010.mail.bbt.yahoo.co.jp>
+	<JO200503160207332.3375226@yahoo.co.jp>
+Message-ID: <42371B71.70605@metatoys.org>
+
+山宮です。
+
+> 「探す」や「公開」のダイアログには、Squeakland.jp以外の
+> 海外のサーバも見えているのですが、ワークショップの現場でそのまま
+> 使われることを考えると、デフォルトではJP以外見せない方がよいよう
+> に思うのですがいかがでしょう？（必要ならREADMEなどで設定方法を載せる）
+> 少なくともプラグイン版ではいらないように思います。
+> （開発版だともっと多くのサーバが見えますが、実際に生きているの
+> は少なそうですね）
+> 
+> 個人的意見として、「他のサーバへ公開」「より多くの場所から探す」
+> 以外では（デフォルトとして）SuperSwikiのサーバは見えないほうが、
+> 現場では安全な気がします。
+
+実は今公開している SqueakPlugin.image では、Squeakland.jp のサーバーしか
+登録していません(つもり)。他のサーバーも見えているのは、多分 SqueakPlugin.image
+の置いてあるフォルダに、prefs というフォルダがあるのだと思います。
+(本家のインストーラでインストールすれば作られます)。
+この中に、追加のサーバーをファイルとして記述できるようになっています。
+
+日本語版のインストーラが出来れば、そういったファイルも日本語用に
+カスタマイズできるので、そのような問題はなくなるかと思います。
+
+> 余談
+> プロジェクト置き場へ作品を登録する際、作者・説明などを記入するきまり
+> になっています。SuperSwikiの場合これに相当するのはSqueakの中で
+> プロジェクト保存時に入力する情報ということになるんですかね？
+> でもワークショップの現場では、名前以外を入力しているのを見たこと
+> がありません。
+> プロジェクト置き場へのアップロードはもともと敷居が高いので、
+> みなさん手順どおりにアップロードしていただいているようですが、
+> 現在のNihongo7の機能は敷居が低すぎて？無意識にSuperSwikiに保存してしまい、
+> 素性のわからないものがサーバーにたまりそうですね。
+
+にちゃんねる化するかも知れませんね。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From korakurider ＠ yahoo.co.jp  Wed Mar 16 12:06:55 2005
+From: korakurider ＠ yahoo.co.jp (korakurider)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2385] Re: [N7] SuperSwiki 関係
+In-Reply-To: <42371B71.70605@metatoys.org>
+Message-ID: <20050316030655.82008.qmail@web3011.mail.bbt.yahoo.co.jp>
+
+Korakuriderです。
+山宮さん：
+> 実は今公開している SqueakPlugin.image
+> では、Squeakland.jp のサーバーしか
+> 登録していません(つもり)。他のサーバーも見えているのは
+、多分
+> SqueakPlugin.image
+> の置いてあるフォルダに、prefs
+> というフォルダがあるのだと思います。
+　　いや、クリーンな環境で動かした3/15のプラグイン版でも
+、
+　　長押しの「公開」「探す」には、squeakalpha.orgが見え
+てますよ。
+　　パスワードがかかってるので実害はなさそうですが。
+
+
+__________________________________
+Do You Yahoo!?
+Upgrade Your Life
+http://bb.yahoo.co.jp/
+
+
+From tak ＠ metatoys.org  Wed Mar 16 15:55:46 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2386] Re: [N7] SuperSwiki 関係
+In-Reply-To: <20050316030655.82008.qmail@web3011.mail.bbt.yahoo.co.jp>
+References: <20050316030655.82008.qmail@web3011.mail.bbt.yahoo.co.jp>
+Message-ID: <4237D872.10208@metatoys.org>
+
+山宮です。
+
+>>実は今公開している SqueakPlugin.image
+>>では、Squeakland.jp のサーバーしか
+>>登録していません(つもり)。他のサーバーも見えているのは
+> 
+> 、多分
+> 
+>>SqueakPlugin.image
+>>の置いてあるフォルダに、prefs
+>>というフォルダがあるのだと思います。
+> 
+> 　　いや、クリーンな環境で動かした3/15のプラグイン版でも
+> 、
+> 　　長押しの「公開」「探す」には、squeakalpha.orgが見え
+> てますよ。
+> 　　パスワードがかかってるので実害はなさそうですが。
+
+うっかりしてました。それは私達がコードをアップロードする用のサーバでした。
+確かに消したほうが良さそうですね。
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From tak ＠ metatoys.org  Wed Mar 16 19:01:36 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2387] [N7] 2005-03-16 イメージ
+Message-ID: <42380400.9070402@metatoys.org>
+
+山宮です。
+
+今日も新しいイメージをまとめました。
+大島さんのすごい勢いには頭が下がります。
+
+http://metatoys.org/pub/NSqueak-2005-03-16.zip
+
+0054paramTileInTest-sw.cs
+真偽値引数タイルを条件分岐で使えるように - スコットさん
+http://bugs.impara.de/view.php?id=974
+
+0053ServerErrorHandling.cs
+繋がらないサーバを選択してもエラーが出ないように - 山宮
+http://bugs.impara.de/view.php?id=988
+
+0052GZipFileServiceClose.cs
+FileList でコードを読むと消せなくなる問題 - 山宮
+http://bugs.impara.de/view.php?id=986
+
+0051stopTickers.cs
+ノーティファイア出現時スクリプトを止める。- 大島さん
+http://bugs.impara.de/view.php?id=984
+
+0050grabWorld.cs
+ワールドがつかめてしまわないように。 - 大島さん
+http://bugs.impara.de/view.php?id=983
+
+0048AddTranslationMar15.cs
+阿部さんの未翻訳指摘。ノーティファイア、元画像、スタンプ消すに助詞なし、button up
+任意のファイルを探す、メニューを実行する、修復を試みる結果、- 大島さん
+
+0049TRANSAbeSanMar15.cs
+0047stickypadname.cs
+付箋紙の訳 - 大島さん
+
+0046NoHaloObjects.cs
+eToyFriendly 時、公開ダイアログ、文字入力ダイアログ、フラップタブ、絵ボタン、
+メニュー、ペイント、ビューワでハロが出ないように - 大島さん
+http://bugs.impara.de/view.php?id=985
+
+0045bb.cs
+モーフの位置の数字を大きくするとハング - 大島さん
+直メール
+
+0044gradientFillFix.cs
+回転してもグラデーション色が操作出来るように - 大島さん
+http://bugs.impara.de/view.php?id=967
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From tak ＠ metatoys.org  Fri Mar 18 01:30:40 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2388] [N7] 2005-03-17 イメージ
+Message-ID: <4239B0B0.3060403@metatoys.org>
+
+山宮です。
+
+今日の(昨日の)ぶんの最新イメージです。
+
+http://metatoys.org/pub/NSqueak-2005-03-17.zip
+
+0066addNewSizeToTTCFontSet.cs
+TTC フォントで新しいサイズが作れる - 能勢さん、大島さん
+
+0065HideAdvancedMenus.cs
+eToyFriendly 時実験的なメニューを隠す - 山宮
+
+0064UncondFixLayout.cs
+プロジェクト読み込み時にスクリプトエディタの崩れを直す - 大島さん
+
+0063TRANSMar16-2.cs
+0062AddTranslationMar16-2.cs
+ドラッグ開始、ヘルプはありません、モーフが削除できないか等の翻訳 - 大島さん
+
+0061TextComposerFix.cs
+テキストモーフを小さくするとハングする問題 - 大島さん
+
+0060robustWorld.cs
+ワールドが回ったり動いたりしないように - 大島さん
+
+0059TRANSMar16-1.cs
+0058fixLayoutTranslation.cs
+fixLayout の翻訳 - 大島さん
+
+0057QuerySuperSwikiSJIS1a.cs
+「SuperSwikiを検索」をSJIS と仮定して動かす - 能勢さん
+
+0056TRANSEtoyProjectQueryJ.cs
+0055TransEToyProjectQuery.cs
+「SuperSwikiを検索」関連の翻訳 - 能勢さん
+
+-- 
+山宮 隆 ::= http://metatoys.org/
+cell:090-9052-6014 office:06-6324-3047
+skype:yamamiyatakashi
+
+
+
+From yoshiki ＠ squeakland.org  Tue Mar 22 09:59:48 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2389] SqueakNihongo7 リリース
+Message-ID: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+  山宮さん、阿部さん、korakuriderさんと日夜相談をしながら、また武田さ
+ん、伊藤さんをはじめコミュニティのみなさんの協力も受けながら、日本語化
+されたSqueakの新しいバージョン、SqueakNihongo7をリリースしました。
+eToysまわりは本家最新版のSqueakland 3.8 をベースにしながらも、そちらに
+あった不具合も積極的に修正しながら機能強化、安定化を行いました。現時点
+では最強のeToy環境になったと自負しています。
+
+  ユーザーから見た変更点としては以下のようなものがあります。
+
+  * 細かなインターフェイスの変更が多々行われました。例えば、ジョイス
+    ティックやボタン上にマウスを持って行っただけで自動的にハロが出てい
+    たのを抑制した、というようなものがあげられます。
+
+  * デフォルトの英字フォントが変わりました。タイルの中で使われるフォン
+    トも変わりました。
+
+  * 英字TrueTypeがいくつかロードされています。日本語と混在させて使って
+    も、以前のようにエラーを出さなくなりました。
+
+  * タイルが少し増えました。使い方を工夫すると凝ったことのできる「入れ
+    物」に関するタイルをはじめ、面白いものが増えています。
+
+  * 蜂須賀さんによるパッチを元にし、SuperSwikiとの整合性を高めました。
+
+互換性に関しては、あらかじめロードされているフォントの違いから、気をつ
+けるべきことがあります。基本的には、Nihongo4系列およびNihongo6系列で作
+成した作品・プロジェクトはロードできます。が、新しいバージョンにないフォ
+ントを使っていた場合、ロード時にフォントを置き換える作業が必要となるた
+め、余分に時間がかかります。可能であれば、古いプロジェクトをロードした
+後で保存しなおし、プロジェクトファイルを作り直してください。
+
+　現在、ダブルクリックするだけでインストールできて、ウェブ上のプロジェ
+クトもそこから実行できるようなインストーラを各プラットフォーム用に作る
+ことにしています。ですが、SqueakNihongo6.1のような使い方で当座は良い、
+という方は、
+
+http://www.squeakland.jp/developer/
+
+から
+
+http://www.squeakland.jp/developer/download/image/SqueakPluginNihongo7.zip
+
+をダウンロードし、SqueakNihongo6.1.imageのあるフォルダーに
+SqueakPlugin.imageをコピーしてそれを使ってください。
+
+  開発者の方がSmalltalkのコードを書くために使いたい、という場合も
+
+http://www.squeakland.jp/developer/
+
+適宜必要なVM、.sourcesファイルとと開発者用イメージ
+
+http://www.squeakland.jp/developer/download/image/SqueakNihongo7.zip
+
+をダウンロードし、SqueakNihongo7.imageを起動してください。
+
+　これからもさまざまなフィードバックをよろしくお願いします。
+
+-- Yoshiki
+
+From PFH02326 ＠ nifty.ne.jp  Tue Mar 22 10:57:17 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2390] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <p06001001be652af3d1a4@nifty.ne.jp>
+
+こんにちは
+さっそくMac OS Xにダウンロードしてみましたが、開発者用もプラグイン版も起動しません……。VMにimageファイルをドロップすればいいはずですよね？
+
+ちなみに以前のバージョンは同じ環境（Mac  OS X 10.3.8）で起動します。
+
+wf
+
+At 4:59 PM -0800 05.3.21, Yoshiki Ohshima wrote:
+>  おおしまです。
+>
+>  山宮さん、阿部さん、korakuriderさんと日夜相談をしながら、また武田さ
+>ん、伊藤さんをはじめコミュニティのみなさんの協力も受けながら、日本語化
+>されたSqueakの新しいバージョン、SqueakNihongo7をリリースしました。
+>eToysまわりは本家最新版のSqueakland 3.8 をベースにしながらも、そちらに
+>あった不具合も積極的に修正しながら機能強化、安定化を行いました。現時点
+>では最強のeToy環境になったと自負しています。
+>
+>  ユーザーから見た変更点としては以下のようなものがあります。
+>
+>  * 細かなインターフェイスの変更が多々行われました。例えば、ジョイス
+>    ティックやボタン上にマウスを持って行っただけで自動的にハロが出てい
+>    たのを抑制した、というようなものがあげられます。
+>
+>  * デフォルトの英字フォントが変わりました。タイルの中で使われるフォン
+>    トも変わりました。
+>
+>  * 英字TrueTypeがいくつかロードされています。日本語と混在させて使って
+>    も、以前のようにエラーを出さなくなりました。
+>
+>  * タイルが少し増えました。使い方を工夫すると凝ったことのできる「入れ
+>    物」に関するタイルをはじめ、面白いものが増えています。
+>
+>  * 蜂須賀さんによるパッチを元にし、SuperSwikiとの整合性を高めました。
+>
+>互換性に関しては、あらかじめロードされているフォントの違いから、気をつ
+>けるべきことがあります。基本的には、Nihongo4系列およびNihongo6系列で作
+>成した作品・プロジェクトはロードできます。が、新しいバージョンにないフォ
+>ントを使っていた場合、ロード時にフォントを置き換える作業が必要となるた
+>め、余分に時間がかかります。可能であれば、古いプロジェクトをロードした
+>後で保存しなおし、プロジェクトファイルを作り直してください。
+>
+>　現在、ダブルクリックするだけでインストールできて、ウェブ上のプロジェ
+>クトもそこから実行できるようなインストーラを各プラットフォーム用に作る
+>ことにしています。ですが、SqueakNihongo6.1のような使い方で当座は良い、
+>という方は、
+>
+>http://www.squeakland.jp/developer/
+>
+>から
+>
+>http://www.squeakland.jp/developer/download/image/SqueakPluginNihongo7.zip
+>
+>をダウンロードし、SqueakNihongo6.1.imageのあるフォルダーに
+>SqueakPlugin.imageをコピーしてそれを使ってください。
+>
+>  開発者の方がSmalltalkのコードを書くために使いたい、という場合も
+>
+>http://www.squeakland.jp/developer/
+>
+>適宜必要なVM、.sourcesファイルとと開発者用イメージ
+>
+>http://www.squeakland.jp/developer/download/image/SqueakNihongo7.zip
+>
+>をダウンロードし、SqueakNihongo7.imageを起動してください。
+>
+>　これからもさまざまなフィードバックをよろしくお願いします。
+>
+>-- Yoshiki
+
+
+From yoshiki ＠ squeakland.org  Tue Mar 22 11:51:52 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2391] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <p06001001be652af3d1a4@nifty.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be652af3d1a4@nifty.ne.jp>
+Message-ID: <ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> こんにちは
+> さっそくMac OS Xにダウンロードしてみましたが、開発者用もプラグイン版
+> も起動しません……。VMにimageファイルをドロップすればいいはずですよ
+> ね？
+
+　そうですか。起動しません、というのはもうちょっと具体的に言うとどのよ
+うな状態ですか?
+
+> ちなみに以前のバージョンは同じ環境（Mac  OS X 10.3.8）で起動します。
+
+　「以前のバージョン」のVMに、新しいイメージをドロップするとどうなるで
+しょうか。
+
+-- Yoshiki
+
+From shinoda ＠ mac.com  Tue Mar 22 12:14:38 2005
+From: shinoda ＠ mac.com (SHINODA Nobuo)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2392] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <p06001001be652af3d1a4@nifty.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be652af3d1a4@nifty.ne.jp>
+Message-ID: <ceb3d041d4626131a167c20f4a862807@mac.com>
+
+篠田と申します。
+
+早速ダウンロードして起動してみましたが，私の環境では起動しています。
+Max OS X 10.3.8 です。 zip ファイルの解凍には StuffIt Expander 9.0.1 を使いました。
+
+On 2005/03/22, at 10:57, wildflowers wrote:
+
+> こんにちは
+> さっそくMac OS 
+> Xにダウンロードしてみましたが、開発者用もプラグイン版も起動しません……。VMにimageファイルをドロップすればいいはずですよね？
+>
+> ちなみに以前のバージョンは同じ環境（Mac  OS X 10.3.8）で起動します。
+>
+> wf
+---
+篠田伸夫  SHINODA Nobuo           <http://homepage.mac.com/shinoda/>
+
+
+From PFH02326 ＠ nifty.ne.jp  Tue Mar 22 12:15:35 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2393] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp> <ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <p06001002be653db2368f@nifty.ne.jp>
+
+おへんじありがとうございます。
+
+At 6:51 PM -0800 05.3.21, Yoshiki Ohshima wrote:
+>  おおしまです。
+>
+>> こんにちは
+>> さっそくMac OS Xにダウンロードしてみましたが、開発者用もプラグイン版
+>> も起動しません……。VMにimageファイルをドロップすればいいはずですよ
+>> ね？
+>
+>　そうですか。起動しません、というのはもうちょっと具体的に言うとどのよ
+>うな状態ですか?
+
+文字通り何も起こらないということです。
+
+>
+>> ちなみに以前のバージョンは同じ環境（Mac  OS X 10.3.8）で起動します。
+>
+>　「以前のバージョン」のVMに、新しいイメージをドロップするとどうなるで
+>しょうか。
+
+開発者用は緑の画面になって（多分無事に）起動されました。
+プラグイン版は、「エラーが起きました。「Abandon」ボタンをクリックしてください。ごめんね」となります。画面は真っ黒です。
+
+wf
+
+From PFH02326 ＠ nifty.ne.jp  Tue Mar 22 12:24:48 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:09 2007
+Subject: [Squeak-ja: 2394] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <ceb3d041d4626131a167c20f4a862807@mac.com>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp> <ceb3d041d4626131a167c20f4a862807@mac.com>
+Message-ID: <p06001003be654030cc01@nifty.ne.jp>
+
+篠田さま
+
+情報ありがとうございます。
+
+ではダウンロード中か解凍中にファイルが壊れたのでしょうか……。
+もう一度ダウンロードしなおしてみます。
+
+wf
+
+At 0:14 PM +0900 05.3.22, SHINODA Nobuo wrote:
+>篠田と申します。
+>
+>早速ダウンロードして起動してみましたが，私の環境では起動しています。
+>Max OS X 10.3.8 です。 zip ファイルの解凍には StuffIt Expander 9.0.1 を使いました。
+>
+>On 2005/03/22, at 10:57, wildflowers wrote:
+>
+>>こんにちは
+>>さっそくMac OS Xにダウンロードしてみましたが、開発者用もプラグイン版も起動しません……。VMにimageファイルをドロップすればいいはずですよね？
+>>
+>>ちなみに以前のバージョンは同じ環境（Mac  OS X 10.3.8）で起動します。
+>>
+>>wf
+>---
+>篠田伸夫  SHINODA Nobuo           <http://homepage.mac.com/shinoda/>
+
+
+From kimurako ＠ mac.com  Tue Mar 22 12:32:29 2005
+From: kimurako ＠ mac.com (木邨 光一)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2395] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be652af3d1a4@nifty.ne.jp>
+	<ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <5175f6df4a7ed95f3e1c11efaa519c3f@mac.com>
+
+こんにちは、ご無沙汰しております。木村です。
+
+
+>
+>> こんにちは
+>> さっそくMac OS Xにダウンロードしてみましたが、開発者用もプラグイン版
+>> も起動しません……。VMにimageファイルをドロップすればいいはずですよ
+>> ね？
+>
+> 　そうですか。起動しません、というのはもうちょっと具体的に言うとどのよ
+> うな状態ですか?
+>
+>> ちなみに以前のバージョンは同じ環境（Mac  OS X 10.3.8）で起動します。
+>
+> 　「以前のバージョン」のVMに、新しいイメージをドロップするとどうなるで
+> しょうか。
+
+
+私も試してみましたが、起動しませんでした。
+OSは10.3.8　VMはSqueak 3.8.6Beta6でimageと一緒に
+http://www.squeakland.jp/developer/
+から落としました。一度imageのダブルクリックで起動したのですが
+その後は全く起動しません。試しにsqueak.orgからSqueak3.7-current-MacOS-Full.sitを
+落として解凍したのですが、それも起動しなくなっています。
+そのNihongo7とSqueak3.7-current-MacOS-Fullを他のMacに転送しましたが、
+別の環境でもどちらも起動しませんでした。
+驚いて、これはヤバいとすべてを捨ててから、再起動しBackUpのCDから以前のNIhongoの
+セットを入れ、そのフォルダーにNIhongo7を入れ、Squeak 3.7.1b3-J-040328のVMで
+起動したところ無事、起動できました。
+
+> 篠田と申します。
+>
+> 早速ダウンロードして起動してみましたが，私の環境では起動しています。
+> Max OS X 10.3.8 です。 zip ファイルの解凍には StuffIt Expander 9.0.1 を使いました。　
+
+う〜ん、Stuffit Expanderのヴァージョンは7.0.3だし、、、、
+ウィルスチェックのVirex 7.5はつかっているし、、、？？？
+
+
+今のところそこまでです。この後もしらべてみます。
+
+
+//kimurako
+
+
+
+From yoshiki ＠ squeakland.org  Tue Mar 22 12:40:46 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2396] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <p06001002be653db2368f@nifty.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be652af3d1a4@nifty.ne.jp>
+	<ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001002be653db2368f@nifty.ne.jp>
+Message-ID: <uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> >　そうですか。起動しません、というのはもうちょっと具体的に言うとどのよ
+> >うな状態ですか?
+> 
+> 文字通り何も起こらないということです。
+
+　ちょっと不思議ですね。
+
+> >　「以前のバージョン」のVMに、新しいイメージをドロップするとどうなるで
+> >しょうか。
+> 
+> 開発者用は緑の画面になって（多分無事に）起動されました。
+
+　ねずみが出てきて、めがきょろきょろしたりしていますか?
+
+> プラグイン版は、「エラーが起きました。「Abandon」ボタンをクリックしてください。ごめんね」となります。画面は真っ黒です。
+
+　それは、エラーですね(言うまでもないことですが)。「ログ記録」というボ
+タンがあると思いますが、それを押すとMy Squeak フォルダ(OS Xだとどこに
+作られるか知らないのですが)以下に、SqueakDebug.logというファイルが作ら
+れます。もし見つかったらそのファイルを送ってみていただけないでしょうか。
+
+-- Yoshiki
+
+From kimurako ＠ mac.com  Tue Mar 22 12:54:51 2005
+From: kimurako ＠ mac.com (木邨 光一)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2397] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <5175f6df4a7ed95f3e1c11efaa519c3f@mac.com>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be652af3d1a4@nifty.ne.jp>
+	<ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<5175f6df4a7ed95f3e1c11efaa519c3f@mac.com>
+Message-ID: <586d958d08c1194f487e71a82a75e2ec@mac.com>
+
+木村です。
+
+自己レスですいません。
+VMをウイルスチェックの無い状態で落として、解凍すれば問題は起きませんでした。
+無事。起動で問題はなしです。お騒がせいたしました。すいません。ぺこり。
+また、反省して冬眠に入ります。
+
+
+// kimurako
+
+
+> こんにちは、ご無沙汰しております。木村です。
+>
+>
+>>
+>>> こんにちは
+>>> さっそくMac OS Xにダウンロードしてみましたが、開発者用もプラグイン版
+>>> も起動しません……。VMにimageファイルをドロップすればいいはずですよ
+>>> ね？
+>>
+>> 　そうですか。起動しません、というのはもうちょっと具体的に言うとどのよ
+>> うな状態ですか?
+>>
+>>> ちなみに以前のバージョンは同じ環境（Mac  OS X 10.3.8）で起動します。
+>>
+>> 　「以前のバージョン」のVMに、新しいイメージをドロップするとどうなるで
+>> しょうか。
+>
+>
+> 私も試してみましたが、起動しませんでした。
+> OSは10.3.8　VMはSqueak 3.8.6Beta6でimageと一緒に
+> http://www.squeakland.jp/developer/
+> から落としました。一度imageのダブルクリックで起動したのですが
+> その後は全く起動しません。試しにsqueak.orgからSqueak3.7-current-MacOS-Full.sitを
+> 落として解凍したのですが、それも起動しなくなっています。
+> そのNihongo7とSqueak3.7-current-MacOS-Fullを他のMacに転送しましたが、
+> 別の環境でもどちらも起動しませんでした。
+> 驚いて、これはヤバいとすべてを捨ててから、再起動しBackUpのCDから以前のNIhongoの
+> セットを入れ、そのフォルダーにNIhongo7を入れ、Squeak 3.7.1b3-J-040328のVMで
+> 起動したところ無事、起動できました。
+>
+>> 篠田と申します。
+>>
+>> 早速ダウンロードして起動してみましたが，私の環境では起動しています。
+>> Max OS X 10.3.8 です。 zip ファイルの解凍には StuffIt Expander 9.0.1 を使いました。　
+>
+> う〜ん、Stuffit Expanderのヴァージョンは7.0.3だし、、、、
+> ウィルスチェックのVirex 7.5はつかっているし、、、？？？
+>
+>
+> 今のところそこまでです。この後もしらべてみます。
+>
+>
+> //kimurako
+>
+>
+
+
+From PFH02326 ＠ nifty.ne.jp  Tue Mar 22 14:21:48 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2398] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp><ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be653db2368f@nifty.
+	ne.jp> <uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <p06001001be655a88d753@nifty.ne.jp>
+
+お騒がせしています。ごめんなさい。
+
+篠田さん　木邨さんのメールを見て、まず、ダウンロードしなおしましたが、まったく変わらず、次にVirex7.5を外してみましたが、私の場合これでは状況は改善せず、さらに、Stuff-itのバージョンを上げてみたところ、今度は、半分うまくいくようになりました。
+半分、というのは、以下のような状態だからです。
+開発者用は、ねずみがでてくるのですが、「めがきょろきょろ」はしていません。止まっています。（でも、特にエラーメッセージはでません。）
+プラグイン版は、「エラーが起きました。「Abandon」ボタンをクリックしてください。ごめんね」が出ながらも開きはするのですが、はやりおかしな動作をします。
+
+そこで、おおしまさんの言うように、ログ記録を押してみたのですが、どこにファイルが出来たのかわかりません。
+デスクトップ検索をかけてもでてきません。
+OS Xの方で、どこにファイルが出来るのかご存じの方があったら教えてください。
+
+wf
+
+
+At 7:40 PM -0800 05.3.21, Yoshiki Ohshima wrote:
+>  おおしまです。
+>
+>> >　そうですか。起動しません、というのはもうちょっと具体的に言うとどのよ
+>> >うな状態ですか?
+>>
+>> 文字通り何も起こらないということです。
+>
+>　ちょっと不思議ですね。
+>
+>> >　「以前のバージョン」のVMに、新しいイメージをドロップするとどうなるで
+>> >しょうか。
+>>
+>> 開発者用は緑の画面になって（多分無事に）起動されました。
+>
+>　ねずみが出てきて、めがきょろきょろしたりしていますか?
+>
+> > プラグイン版は、「エラーが起きました。「Abandon」ボタンをクリックしてください。ごめんね」となります。画面は真っ黒です。
+>
+>　それは、エラーですね(言うまでもないことですが)。「ログ記録」というボ
+>タンがあると思いますが、それを押すとMy Squeak フォルダ(OS Xだとどこに
+>作られるか知らないのですが)以下に、SqueakDebug.logというファイルが作ら
+>れます。もし見つかったらそのファイルを送ってみていただけないでしょうか。
+>
+>-- Yoshiki
+
+
+From tetha ＠ st.rim.or.jp  Tue Mar 22 15:23:11 2005
+From: tetha ＠ st.rim.or.jp (HAYASHI, Tetsuya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2399] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <p06001001be655a88d753@nifty.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp><ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be653db2368f@nifty.
+	ne.jp> <uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be655a88d753@nifty.ne.jp>
+Message-ID: <d571788a92b9433ab0a37643147254f5@st.rim.or.jp>
+
+林です。ども。
+今回、MacOSX 版 VM の StuffIt アーカイブを作成した張本人です (^^;
+
+On 2005/03/22, at 14:21, wildflowers wrote:
+
+> お騒がせしています。ごめんなさい。
+
+　いえ、とんでもありません。
+テストしていただいた形になりこちらこそ恐縮です。
+StuffIt については、トラブルを招いてるようなのでオプションを再度調整して
+みます。
+
+<snip>
+
+> プラグイン版は、「エラーが起きました。「Abandon」ボタンをクリックしてください。ごめんね」が出ながらも開きはするのですが、はやりおかし 
+> な動作をします。
+>
+> そこで、おおしまさんの言うように、ログ記録を押してみたのですが、どこにファイルが出来たのかわかりません。
+> デスクトップ検索をかけてもでてきません。
+> OS Xの方で、どこにファイルが出来るのかご存じの方があったら教えてください。
+
+　エラーのログファイル SqueakDebug.log ですが、基本的にイメージファイルと
+同じディレクトリに作成される仕様のはずです。ただし、SqueakPlugin.image は
+本来ウェブブラウザ内で利用するものであるためかセキュリティ上、ファイルと
+してログを残さないように見えます（識者の方フォロー願います）。
+
+　というわけでエラーの内容を知るのが難しいのですが、おそらく、イメージの
+起動まで行ってるということは、SqueakPlugin.image が利用するプリファレンス
+関係のファイルを見に行こうとしてエラーになってるのではないかと思えます。
+wildflowers さんのホームの配下に
+	~/Library/Preferences/Squeak/
+というディレクトリはありますでしょうか？
+
+なおこのディレクトリは、今回の開発者向けリリースではなく、SqueakLand版と
+呼ばれるバージョンでのインストールスクリプトにより作成されます。
+ですので、妙な表現になりますが、もし、SqueakLand版のインストールされてな
+いのでしたら
+
+	現時点ではエラーになるのが本来の正しい動作
+
+といえるかと思えます。
+
+> At 7:40 PM -0800 05.3.21, Yoshiki Ohshima wrote:
+>>  おおしまです。
+>>
+>>>> 　そうですか。起動しません、というのはもうちょっと具体的に言うとどのよ
+>>>> うな状態ですか?
+>>>
+>>> 文字通り何も起こらないということです。
+>>
+>> 　ちょっと不思議ですね。
+>>
+>>>> 　「以前のバージョン」のVMに、新しいイメージをドロップするとどうなるで
+>>>> しょうか。
+>>>
+>>> 開発者用は緑の画面になって（多分無事に）起動されました。
+>>
+>> 　ねずみが出てきて、めがきょろきょろしたりしていますか?
+>>
+>>> プラグイン版は、「エラーが起きました。「Abandon」ボタンをクリックしてください。ごめんね」となります。画面は真っ黒です。
+>>
+>> 　それは、エラーですね(言うまでもないことですが)。「ログ記録」というボ
+>> タンがあると思いますが、それを押すとMy Squeak フォルダ(OS Xだとどこに
+>> 作られるか知らないのですが)以下に、SqueakDebug.logというファイルが作ら
+>> れます。もし見つかったらそのファイルを送ってみていただけないでしょうか。
+>>
+>> -- Yoshiki
+>
+>
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From PFH02326 ＠ nifty.ne.jp  Tue Mar 22 15:48:48 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2400] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <d571788a92b9433ab0a37643147254f5@st.rim.or.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp><ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be653db2368f@nifty.
+	ne.jp>
+	<uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be655a88d753@nifty.ne.
+	jp> <d571788a92b9433ab0a37643147254f5@st.rim.or.jp>
+Message-ID: <p06001002be656f85c2d1@nifty.ne.jp>
+
+林さま
+
+温かく対応して頂きまして感謝します。
+
+おかげさまで、概ね、状況がわかってきました。
+ところで、SqueakLand版というのは、Nihongo6.1のことでしょうか？
+この版はおいてあるのですが、
+~/Library/Preferences/Squeak/
+はないのです。
+念のためもう一度ダウンロードしなおして、Nihongo6.1を起動してみましたが、（問題なく起動しますが）上記のディレクトリはできません。
+英語版のSqueakLand版をいれないとならないのでしょうか？
+
+いちいちお尋ねばかりで申し訳ありません。
+
+wf
+
+At 3:23 PM +0900 05.3.22, HAYASHI, Tetsuya wrote:
+>林です。ども。
+>今回、MacOSX 版 VM の StuffIt アーカイブを作成した張本人です (^^;
+>
+>
+>　というわけでエラーの内容を知るのが難しいのですが、おそらく、イメージの
+>起動まで行ってるということは、SqueakPlugin.image が利用するプリファレンス
+>関係のファイルを見に行こうとしてエラーになってるのではないかと思えます。
+>wildflowers さんのホームの配下に
+>	~/Library/Preferences/Squeak/
+>というディレクトリはありますでしょうか？
+>
+>なおこのディレクトリは、今回の開発者向けリリースではなく、SqueakLand版と
+>呼ばれるバージョンでのインストールスクリプトにより作成されます。
+>ですので、妙な表現になりますが、もし、SqueakLand版のインストールされてな
+>いのでしたら
+>
+>	現時点ではエラーになるのが本来の正しい動作
+>
+>といえるかと思えます。
+>
+
+From tetha ＠ st.rim.or.jp  Tue Mar 22 15:53:44 2005
+From: tetha ＠ st.rim.or.jp (HAYASHI, Tetsuya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2401] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <d571788a92b9433ab0a37643147254f5@st.rim.or.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp><ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be653db2368f@nifty.
+	ne.jp> <uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be655a88d753@nifty.ne.jp>
+	<d571788a92b9433ab0a37643147254f5@st.rim.or.jp>
+Message-ID: <aeb1e3cdfd8c533df7d7886b82e3e4fe@st.rim.or.jp>
+
+林です。自己フォローです。
+
+On 2005/03/22, at 15:23, HAYASHI, Tetsuya wrote:
+
+> 　エラーのログファイル SqueakDebug.log ですが、基本的にイメージファイルと
+> 同じディレクトリに作成される仕様のはずです。ただし、SqueakPlugin.image は
+> 本来ウェブブラウザ内で利用するものであるためかセキュリティ上、ファイルと
+> してログを残さないように見えます（識者の方フォロー願います）。
+
+開発者版ならば、イメージファイルと同じ場所。
+SqueakLand版(SqueakPlugin.image)ならば、My Squeak ディレクトリ。
+My Squeak ディレクトリは、~/Library/Preferences/Squeak/Internet の下のよ
+うです。
+
+もし、~/Library/Preferences/Squeak が無いとログが残らない。
+ということになるかと思います。
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From takeda ＠ kwansei.ac.jp  Tue Mar 22 16:04:57 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2402] Squeakメンターズワークショップ
+Message-ID: <b9470215fc329d10758ce7c28a2ea4bb@kwansei.ac.jp>
+
+関西学院大学の武田です。
+
+Nihongo7の公開、おめでとうございます。
+
+4月16日（土）に、Squeakワークショップの指導者（と指導に興味ある方）
+が意見交換できる場をメンターズワークショップとして設けます。
+少々遠いですが、みなさまぜひお越しください。
+
+=====================================
+Squeakメンターズワークショップ
+
+日時: 2005年4月16日（土）10時30分から13時
+
+場所: 関西学院大学情報メディア教育センター　第１PC教室
+
+ファシリテーション: 武田俊之
+
+内容: ワークショップの基本となるDrive-A-Carを1時間程度、
+　　子どもの気持ちで体験します。
+
+　　そのあとで、ワークショップの進め方などについての疑問点、
+	経験談、背景となる教育理論、方法論などについて意見を交換します。
+
+対象: Squeakワークショップに興味のある方。
+　　意見交換のため、ベテランの参加も歓迎します。
+
+その他: タブレットPCを貸し出しします。
+　　PCの持ち込みは可能ですが、インターネット接続は提供できません。
+
+申込先: 武田 (takeda@kwansei.ac.jp)までメールでお願いします。
+
+--
+武田俊之
+関西学院大学情報メディア教育センター
+Tel: 0798-54-6130 Fax: 0798-51-0913
+
+
+From tetha ＠ st.rim.or.jp  Tue Mar 22 16:22:05 2005
+From: tetha ＠ st.rim.or.jp (HAYASHI, Tetsuya)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2403] Re: SqueakNihongo7 ： Mac OS X
+In-Reply-To: <p06001002be656f85c2d1@nifty.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp><ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be653db2368f@nifty.
+	ne.jp>
+	<uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be655a88d753@nifty.ne.
+	jp> <d571788a92b9433ab0a37643147254f5@st.rim.or.jp>
+	<p06001002be656f85c2d1@nifty.ne.jp>
+Message-ID: <3fd5c97263e02d0a633ebbb455781a3a@st.rim.or.jp>
+
+林です。ども。
+
+On 2005/03/22, at 15:48, wildflowers wrote:
+
+> おかげさまで、概ね、状況がわかってきました。
+> ところで、SqueakLand版というのは、Nihongo6.1のことでしょうか？
+
+え〜と。一言でいうと違います。以下の本家サイトにあるものです。
+	http://squeakland.org/plugin/installers/mac-x-std.html
+これをインストールすると ウェブブラウザのプラグイン版のVMもインストールさ
+れて、丁度、JavaApplet や Flash のように Squeak のプロジェクト（作品）を
+  HTML ページの埋め込みオブジェクトとして扱うことができるというものです。
+これはこれまで日本語対応されてリリースされたことはないものだと思います。
+（ファイルを手で入れ替えるなど一部の有志の方が実験的に試みた程度）
+
+> この版はおいてあるのですが、
+> ~/Library/Preferences/Squeak/
+> はないのです。
+> 念のためもう一度ダウンロードしなおして、Nihongo6.1を起動してみましたが、（問題なく起動しますが）上記のディレクトリはできません。
+> 英語版のSqueakLand版をいれないとならないのでしょうか？
+
+　具体的にはインストールパッケージが提供されますので、そのスクリプトで作
+成されます。
+まだ、テスト的な扱いですが、以下のURLにアップされてるパッケージ
+(SqueakNihongo7Plugin.pkg)を試していただければと思います。
+
+	http://homepage.mac.com/tetha/	
+
+> At 3:23 PM +0900 05.3.22, HAYASHI, Tetsuya wrote:
+>> 林です。ども。
+>> 今回、MacOSX 版 VM の StuffIt アーカイブを作成した張本人です (^^;
+>>
+>>
+>> 　というわけでエラーの内容を知るのが難しいのですが、おそらく、イメージの
+>> 起動まで行ってるということは、SqueakPlugin.image が利用するプリファレンス
+>> 関係のファイルを見に行こうとしてエラーになってるのではないかと思えます。
+>> wildflowers さんのホームの配下に
+>> 	~/Library/Preferences/Squeak/
+>> というディレクトリはありますでしょうか？
+>>
+>> なおこのディレクトリは、今回の開発者向けリリースではなく、SqueakLand版と
+>> 呼ばれるバージョンでのインストールスクリプトにより作成されます。
+>> ですので、妙な表現になりますが、もし、SqueakLand版のインストールされてな
+>> いのでしたら
+>>
+>> 	現時点ではエラーになるのが本来の正しい動作
+>>
+>> といえるかと思えます。
+>>
+>>
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From PFH02326 ＠ nifty.ne.jp  Tue Mar 22 18:28:36 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2404] Re: SqueakNihongo7 ： Mac OS X 問題解決しました！
+In-Reply-To: <3fd5c97263e02d0a633ebbb455781a3a@st.rim.or.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp><ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be653db2368f@nifty.
+	ne.jp><uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be655a88d753@nif
+	ty.ne.jp>
+	<d571788a92b9433ab0a37643147254f5@st.rim.or.jp><p06001002be656f85c2d1@nift
+	y.ne.jp> <3fd5c97263e02d0a633ebbb455781a3a@st.rim.or.jp>
+Message-ID: <p06001004be65952d95f9@nifty.ne.jp>
+
+林さま、みなさま
+
+教えて頂いたとおりにSqueakLand版をインストールしてから、Nihongo7を起動してみると、問題なく起動できました。
+ディレクトリもできたのですが、もうエラーメッセージが出ないのでログを作れません。（よかったです）
+
+ありがとうございました。
+wf
+
+
+From e-itoh ＠ ygu.ac.jp  Tue Mar 22 21:55:51 2005
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2405] Re: SqueakNihongo7 リリース
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <20050322215551.7E888056@ygu.ac.jp>
+
+伊藤です。
+
+Squeak Nihongo 7のリリースおめでとうございます。
+おおしまさん、山宮さん、阿部さんをはじめ、みなさまのおかげで、
+また快適な環境を使わせていただけるのは本当に有難く思います。
+
+逆にほんの少ししかお手伝いできず申し訳なく思っておりますが、
+新年度の授業の結果をフィードバックすることで、お礼に代えさせて
+いただきたいと思います。
+
+今年は３つの授業でSqueakが使えそうです。一つはプログラミング入門
+用、もう一つは初級〜中級プログラミング用、最後は新入生教育を兼ねた
+情報リテラシーです。できれば最後の情報リテラシーでは、Squeakを使っ
+たプレゼンテーションなどができればいいなと思っております。
+
+今後ともぜひよろしくお願いいたします。
+
+
+ 
+
+
+
+From miyasaka ＠ iris.dti.ne.jp  Thu Mar 24 15:23:09 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2406] 教えてください
+In-Reply-To: <20050322215551.7E888056@ygu.ac.jp>
+Message-ID: <200503240623.j2O6NBlB006638@smtp5.dti.ne.jp>
+
+Squeak-jaのみなさまへ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+Squeak Nihongo 7のリリースおめでとうございます。
+新しい機能を利用させていただくのが楽しみです。
+
+さて、今回は、私の仕事に関連した活動についてご相談させてください。
+（普段は普通に働いていますが、夜だけ学生をしているのです）
+
+私は今、テレビ会議システムを利用した開発途上国向けの遠隔教育事業を担当してい
+ます。
+http://www.gdln.org/
+http://www.jointokyo.org/jp/
+http://www.jica-net.com/ja2/index.html
+
+その遠隔教育プログラムのひとつに「Kids Initiative」という子供のためのテレビ
+会議システムを使った国際交流プログラムがあります。
+http://www.jointokyo.org/jp/news/event_2004_1221.jsp
+このプログラムの担当者にスクイークの話をしたところ、国際交流プログラムのなか
+でスクイークを使ってみたいと相談を受けました。
+そこで教えて下さい。
+
+■教えていただきたいこと
+下記対象国に在住の方で、Squeakワークショップの講師やチューターができる方がい
+らしたらご紹介いただけけませんでしょうか？
+もちろん日本人である必要はありません。
+こうした国々にもスクイークのコミュニティのようなものはあるのでしょうか？
+もし何かご存知の方がいらしたら、私までメールにてご連絡いただければ幸いです。
+miyasaka@iris.dti.ne.jp
+
+■対象国
+「Kids Initiative」プログラムの対象国は次のとおりです。
+East Timor
+Philippines
+Singapore
+Thailand
+Vietnam
+Mongolia
+Papua New Guinea
+Sri Lanka DLC
+（Korea）
+（Australia）
+（China Beijing）
+（Japan）
+
+■補足
+従来行っているテレビ会議システムを使った国際交流プログラムでも、描いた絵を発
+表し合うような場合もあったので、その代わりにスクイークで作った作品をお互いに
+発表しあうようなプログラムになると思います。
+まずはオフラインによる作品作りを行い、その後でテレビ会議による交流を行うよう
+な２本立てのイメージです。
+
+上記の対象国には、既にテレビ会議システムと約２０台のパソコンが設置された遠隔
+教育センターがあるので、場所や機材についてはそろっています。
+なので、相手国側でスクイークを教えることができる方がいれば、この企画がより現
+実的になるのですが。。。
+もちろん、実施することになったとしたら、交通費や講師謝金などのお礼はできると
+思います。
+
+取り急ぎ。
+よろしくお願いいたします。
+
+---------------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院デジタルコンテンツ研究科
+自宅：miysaka@iris.dti.ne.jp
+http://www.dhw.co.jp/gs/
+http://mts-j.hiho.jp/
+---------------------------------------------------
+
+
+From yoshiki ＠ squeakland.org  Sat Mar 26 04:49:41 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2407] Re: SqueakNihongo7 リリース
+In-Reply-To: <20050322215551.7E888056@ygu.ac.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<20050322215551.7E888056@ygu.ac.jp>
+Message-ID: <uhdiz8q0a.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> Squeak Nihongo 7のリリースおめでとうございます。
+> おおしまさん、山宮さん、阿部さんをはじめ、みなさまのおかげで、
+> また快適な環境を使わせていただけるのは本当に有難く思います。
+
+　ありがとうございます。
+
+> 今年は３つの授業でSqueakが使えそうです。一つはプログラミング入門
+> 用、もう一つは初級〜中級プログラミング用、最後は新入生教育を兼ねた
+> 情報リテラシーです。できれば最後の情報リテラシーでは、Squeakを使っ
+> たプレゼンテーションなどができればいいなと思っております。
+
+　すばらしいですね。Nihongo7リリース用の毛玉も現在まとめ中ですので、そ
+ちらもぜひとも試してみてください。
+
+> 今後ともぜひよろしくお願いいたします。
+
+　こちらこそよろしくお願いします。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Sat Mar 26 04:57:24 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2408] Re: SqueakNihongo7 ： Mac OS X 問題解決しました！
+In-Reply-To: <p06001004be65952d95f9@nifty.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be652af3d1a4@nifty.ne.jp>
+	<ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001002be653db2368f@nifty.ne.jp>
+	<uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <ufyyj8pnf.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 教えて頂いたとおりにSqueakLand版をインストールしてから、Nihongo7を起
+> 動してみると、問題なく起動できました。ディレクトリもできたのですが、
+> もうエラーメッセージが出ないのでログを作れません。（よかったです）
+
+　そういうものでしたか。動いてよかったですね。
+
+　とはいうものの、起動したのに目玉が動かないというのはかなり不思議な状
+況のようにも思います。もしMac使いで興味のある方はしかるべきフォルダを
+消して起動してみて、デバッガから何か辿ってわかりそうかどうか暇なときに
+でも見てみてください。
+
+-- Yoshiki
+
+
+From PFH02326 ＠ nifty.ne.jp  Sat Mar 26 05:55:11 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2409] Re: SqueakNihongo7 ： 目玉
+In-Reply-To: <ufyyj8pnf.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp><ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be653db2368f@nifty.
+	ne.jp><uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<ufyyj8pnf.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <p06001000be6a2aba7e66@nifty.ne.jp>
+
+目玉ですが、じっとみていると、たまにちょっと動きます。
+（カーソルの移動と連動しているんでしょうか？）
+それでいいのでしたら動いています。
+ただ、きょろきょろといつも動いている感じではないというだけです。
+
+wf
+
+At 11:57 AM -0800 05.3.25, Yoshiki Ohshima wrote:
+>  おおしまです。
+>
+>> 教えて頂いたとおりにSqueakLand版をインストールしてから、Nihongo7を起
+>> 動してみると、問題なく起動できました。ディレクトリもできたのですが、
+>> もうエラーメッセージが出ないのでログを作れません。（よかったです）
+>
+>　そういうものでしたか。動いてよかったですね。
+>
+>　とはいうものの、起動したのに目玉が動かないというのはかなり不思議な状
+>況のようにも思います。もしMac使いで興味のある方はしかるべきフォルダを
+>消して起動してみて、デバッガから何か辿ってわかりそうかどうか暇なときに
+>でも見てみてください。
+>
+>-- Yoshiki
+
+
+From yoshiki ＠ squeakland.org  Sat Mar 26 06:06:36 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2410] Re: SqueakNihongo7 ： 目玉
+In-Reply-To: <p06001000be6a2aba7e66@nifty.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001001be652af3d1a4@nifty.ne.jp>
+	<ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001002be653db2368f@nifty.ne.jp>
+	<uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<ufyyj8pnf.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<p06001000be6a2aba7e66@nifty.ne.jp>
+Message-ID: <ueke38mg3.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 目玉ですが、じっとみていると、たまにちょっと動きます。
+> （カーソルの移動と連動しているんでしょうか？）
+> それでいいのでしたら動いています。
+
+　あ、そういう意味でしたか。カーソルを「見る」ようになっていますので、
+カーソルを動かさないと動きません。
+
+> ただ、きょろきょろといつも動いている感じではないというだけです。
+
+  そういう仕様も面白かったかもしれませんね。時々マウスカーソルを追うの
+をやめて勝手に動くと言う...
+
+  ありがとうございます。
+
+-- Yoshiki
+
+From PFH02326 ＠ nifty.ne.jp  Sat Mar 26 16:27:18 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2411] Nihongo7 のプラグイン版の「公開」について
+In-Reply-To: <ueke38mg3.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <ud5tsa41n.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001001be652af3d1a4@nifty.ne.
+	jp><ubr9c9yuv.wl@YOSHIKI-T2.mb.infoweb.ne.jp><p06001002be653db2368f@nifty.
+	ne.jp><uacow9wld.wl@YOSHIKI-T2.mb.infoweb.ne.jp><ufyyj8pnf.wl@YOSHIKI-T2.m
+	b.infoweb.ne.jp><p06001000be6a2aba7e66@nifty.ne.jp>
+	<ueke38mg3.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <p06001006be6abe6fa5ad@nifty.ne.jp>
+
+いつも初心者の質問ばかりでごめんなさい。
+
+プラグイン版でスクリプトをいくつか書いたのでとっておこうと思い、公開をクリックして、自分のところだけに保存を選んで、名前をつけて、カテゴリ名などもつけてみたのですが、公開中というウィンドウが出たきり、スクイークの画面全体に格子がかかったようになって、全然うごかなくなりました。
+
+どうなっているんでしょうか。
+
+wf
+
+From PFH02326 ＠ nifty.ne.jp  Sat Mar 26 16:40:26 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2412] Re: Nihongo7 のプラグイン版の「公開」について
+Message-ID: <p06001008be6ac1e775f9@nifty.ne.jp>
+
+先ほどの質問に自己レス的補足です。。。
+
+その後、My Squeakのフォルダの中を見てみると、保存したプロジェクトが入っていたので、これをクリックすると開いてさきほどの格子のかかった状態はなくなりました。
+
+格子のかかった状態はなんなのですか？
+
+wf
+
+From korakurider ＠ yahoo.co.jp  Sun Mar 27 01:11:48 2005
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2413] Re: Nihongo7 のプラグイン版の「公開」について
+In-Reply-To: <p06001006be6abe6fa5ad@nifty.ne.jp>
+References: <p06001006be6abe6fa5ad@nifty.ne.jp>
+Message-ID: <JE20050327011148.2507365@yahoo.co.jp>
+
+Korakuriderです。
+
+wildflowers <PFH02326@nifty.ne.jp>さん：
+>どもつけてみたのですが、公開中というウィンドウが出たきり、スクイークの
+>画面全体に格子がかかったようになって、全然うごかなくなりました。
+    wildflowersさんのところで何が起きているのかはわからないのですが、
+    Nihongo７で、ネットワークの先のSuperSwikiサーバに保存しようとして
+    ネットワーク接続ができなかった場合に、ご指摘のような現象になること
+    を経験しています。
+    保存の際その格子のかかった画面が出たままになった場合、ナビゲータ
+    の「前のプロジェクト」を押すと、だいたいその状況を脱出できるようです。
+    なお、さきほどのサーバへのエラーの場合、なぜか格子が消えたあとに
+    Notifierが出ていました。（この動き自体はあまりよくないので、直したい
+    と思っています＞開発者各位）Notifierが出ていれば、そこで何がおきたか
+    を調べることができるのですが。。。
+    参考になれば幸いです。
+
+__________________________________
+Do You Yahoo!?
+Upgrade Your Life
+http://bb.yahoo.co.jp/
+
+
+From PFH02326 ＠ nifty.ne.jp  Sun Mar 27 03:23:42 2005
+From: PFH02326 ＠ nifty.ne.jp (wildflowers)
+Date: Thu Dec  6 11:03:10 2007
+Subject: [Squeak-ja: 2414] Re: Nihongo7 のプラグイン版の「公開」について
+In-Reply-To: <JE20050327011148.2507365@yahoo.co.jp>
+References: <p06001006be6abe6fa5ad@nifty.ne.jp>
+	<JE20050327011148.2507365@yahoo.co.jp>
+Message-ID: <p06001009be6b57cfa1f4@nifty.ne.jp>
+
+Korakuriderさん、ありがとうございました。
+
+初心者にとっては、格子の掛かった状態になったときに、なんらかのメッセージがでてくれるほうがありがたいと思いました。
+ウィンドウに「公開中」となっているのですが、これが、「公開へ向けて作業をしている最中」を意味するのか、「現在保存が済んで公開されている状態」を意味するのかがわからず、どうしたらいいのか途方にくれてしまうので。
+
+このウィンドウに出てくるメッセージが、格子がかかった状態になったら
+「さっき保存したプロジェクトのアイコンをダブルクリックするとまた戻れるよ」
+とか
+「ナビゲータで前のプロジェクトにもどってね」
+とかでてくると安心するんですが。
+
+wf
+
+At 1:11 AM +0900 05.3.27, korakurider@yahoo.co.jp wrote:
+>Korakuriderです。
+>
+>wildflowers <PFH02326@nifty.ne.jp>さん：
+>>どもつけてみたのですが、公開中というウィンドウが出たきり、スクイークの
+>>画面全体に格子がかかったようになって、全然うごかなくなりました。
+>    wildflowersさんのところで何が起きているのかはわからないのですが、
+>    Nihongo７で、ネットワークの先のSuperSwikiサーバに保存しようとして
+>    ネットワーク接続ができなかった場合に、ご指摘のような現象になること
+>    を経験しています。
+>    保存の際その格子のかかった画面が出たままになった場合、ナビゲータ
+>    の「前のプロジェクト」を押すと、だいたいその状況を脱出できるようです。
+>    なお、さきほどのサーバへのエラーの場合、なぜか格子が消えたあとに
+>    Notifierが出ていました。（この動き自体はあまりよくないので、直したい
+>    と思っています＞開発者各位）Notifierが出ていれば、そこで何がおきたか
+>    を調べることができるのですが。。。
+>    参考になれば幸いです。
+>
+>__________________________________
+>Do You Yahoo!?
+>Upgrade Your Life
+>http://bb.yahoo.co.jp/
+
+

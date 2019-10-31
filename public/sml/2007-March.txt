@@ -1,0 +1,397 @@
+From nisinaka ＠ sra.co.jp  Tue Mar  6 12:58:16 2007
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7286] [ANNOUNCE] Jun for Java (Jun642)
+Message-ID: <20070306125725.D2CF.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン642を公開します。
+
+  バージョン637からの主な変更点は、以下の通りです。
+
+    * (new feature) JunOpenGLDisplayController に 
+      MouseWheelListener を実装し、JunOpenGLDisplayModel において
+      マウスホイールのアクションを用いて3次元オブジェクトを操作で
+      きるようにしました。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/642/MouseWheelAction.png
+
+    * (modification) JunBorderGenerator を整理し、不要なクラスを
+      削除しました。
+
+    * (modification) JunOpenGLTexture を Jun641 相当に更新しまし
+      た。配置を指定して、文字列からテクスチャを生成するユーティ
+      リティメソッドを実装しています。
+
+    * (modification) パッケージ 'jp.co.sra.jun.goodies.catalog.*' 
+      を Jun420 相当に更新しました。対応する画像・動画を増やして
+      います。
+
+    * (new feature) 3次元チャートのラベルを、テクスチャでの表示だ
+      けでなく、スケーラブルな3次元オブジェクトとして表示すること
+      もできるようになりました。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/642/3DChart_bar1.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/642/3DChart_bar2.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/642/3DChart_bar3.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/642/3DChart_pie1.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/642/3DChart_line1.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/642/3DChart_combination1.png
+
+    * (modification) 拡張子 'mp4' をデフォルトの動画拡張子に含め
+      ました。
+
+    * (bug fix) JunOpenGLFluxMutableObject において、座標変換情報
+      をリスプリストから読み込んでいなかったバグを修正しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From aoki ＠ sra.co.jp  Wed Mar  7 04:01:26 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7287] Jun728 for Smalltalk
+Message-ID: <45EDBA86.3080708@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+じゅんの最新バージョン【Jun728】をアップロードしました。
+
+　http://www.sra.co.jp/public/sra/technical/jun/
+　ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+　ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+３次元オブジェクトのためのカタログ（複数のビューファインダが
+整然と並んで一覧表になったもの）を用意しました。次のページを
+参照してください。
+
+　http://www.sra.co.jp/people/aoki/Jun/Topics/Catalog/
+
+LST ファイル群が置いてあるディレクトリからも、カタログを作成
+できます。また、下記のようなページも簡単に生み出せます。
+
+　http://www.sra.co.jp/people/aoki/Jun/Topics/Catalog/Jun727C3O/
+
+カタログファイル（C3O ファイル）としてセーブすると、投影、照
+明、運動量など、各種のパラメータ群も一緒に保存しますので、か
+なり重宝するじゃないかと思います。書き出されたファイルサイズ
+は大きくなりますが、zip や gzip をすれば可搬的になるでしょう。
+
+なお、カタログの中のビューファインダのマウス操作ですが、赤ボ
+タンが選択で、黄ボタンがポップアップメニュー、ダブルクリック
+でウェジェット付きビューファインダのオープン、長押し＆ドラッ
+グで場所替え、なのですが、修飾キーで以下のことができます。
+
+　altDown & 赤ボタンで grab（注視点を中心に回転）
+　altDown & 黄ボタンで drag（投影面上で平行移動）
+
+カタログ以外にも、いろいろ手を加えています。バージョンブラウ
+ザで差分を読み取ってもらえると助かります。その方法は次の通り。
+
+古いじゅんを「Jun705」とし、新しいじゅんを「Jun728」としたら、
+その差分を得るために、ソースコードのアーカイブをダウンロード
+して展開します。
+
+| oldVersion newVersion baseString |
+oldVersion := 'Jun705'.
+newVersion := 'Jun728'.
+baseString := 'http://www.sra.co.jp/people/aoki/st/jun/versions/'.
+(Array with: oldVersion with: newVersion) do:
+        [:versionString |
+        | urlString |
+        urlString := baseString , versionString , '.tar.gz'.
+        (JunTGZ
+            extract: (JunURL named: urlString)
+            to: Filename defaultDirectory
+            log: Transcript) ifNil: [^false]].
+^true
+
+約４０万行以上のソースコードを一気に比較し、差分を観るための
+ブラウザを開きます。（私のマシンで５分ほどかかります。）
+
+| oldVersion newVersion oldDirectory newDirectory aBrowser |
+oldVersion := 'Jun705'.
+newVersion := 'Jun728'.
+oldDirectory := Filename defaultDirectory construct: oldVersion.
+newDirectory := Filename defaultDirectory construct: newVersion.
+aBrowser := JunSourceCodeDifferenceBrowser
+            openOnDirectoryName: oldDirectory
+            withDirectoryName: newDirectory.
+aBrowser doSpawnModifiedClasses.
+^aBrowser
+
+どうぞ、お楽しみください。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Mar 14 08:16:38 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7288] Jpl022 and Jun731 for Smalltalk
+Message-ID: <45F730D6.9030509@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+もうすぐリリースされるであろう VisualWorks 7.5 ですが、7.4.1
+に比べて、様々なところが改良されています。特に EncodedStream
+が Jpl や Jun に与える影響（良い方向への変化）が大きいです。
+
+7.5 のリリースに先立って【Jpl022】と【Jun731】を作成し、はや
+ばやと 7.5 に対応しました。もちろん現行の 7.4.1 でも動作可能
+です。お楽しみください。
+
+【Jpl022】
+　http://www.sra.co.jp/people/aoki/Jpl/index.html
+
+【Jun731】
+　http://www.sra.co.jp/people/aoki/Jun/htmls/News.html
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Fri Mar 16 23:01:52 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7289] 分子間力を体感できる【HaptiChem】
+Message-ID: <45FAA350.3010101@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+昨日（３月１５日）に「分子間力を体感できる【HaptiChem】」の
+報道発表が行われました。「ハプティ・ケム」と発音します。ハプ
+ティック（力覚）とケミストリー（化学）の合成語（造語）です。
+以下にリストしたウェブ上の記事をご覧ください。
+
+ITmedia　ぐぐっと引き合う分子間力を体感できる「HaptiChem」
+http://www.itmedia.co.jp/news/articles/0703/15/news104.html
+
+ITpro　分子を触って力を感じる——国立情報学研究所が新しい化学教材を公開
+http://itpro.nikkeibp.co.jp/article/NEWS/20070315/265391/?ST=ittrend
+
+日経バイオ　国立情報学研究所が分子間力の体験型教材を開発、
+東京工業大学附属科学技術高校にて模擬授業を開催
+http://biotech.nikkeibp.co.jp/bionewsn/detail.jsp?id=20042698&newsid=SPC2007031545092&pg_nm=1&sai1=0&new1=1&news1=1&icate=0&yunw=1
+
+８本の糸で吊られた球（グリップ）を分子に見立て、分子の間に働
+く力を体感できるようにしたシステムです。８本の糸の先についた
+トルクコントロール（回転力制御）可能なステッピングモータを司
+ります。
+
+これをすべて【Smalltalk Concurrent Programming】で実現をして
+います。糸の長さを測定して３次元座標を求めるプロセスは 3000Hz
+程度、３次元座標からフォース（力）を算出するプロセスは 1000Hz
+程度。そして、それらを描画するプロセスは 30Hz（DVD 描画速度）
+ぐらいです。
+
+１秒間に 3000回〜 30回ぐらいの周期で行わなければならない処理
+を複数立ち上げても、現代の Smalltalk はそこそこの性能を発揮
+できること、それを物語っていると思います。ゴミ集めプロセスに
+よる劣化もありません。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Fri Mar 16 23:12:53 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7290] Re: 分子間力を体感できる【HaptiChem】
+In-Reply-To: <45FAA350.3010101@sra.co.jp>
+References: <45FAA350.3010101@sra.co.jp>
+Message-ID: <45FAA5E5.7060102@sra.co.jp>
+
+なお、報道発表の説明資料も、国立情報学研究所から公開されてい
+ますので、興味のある方々はどうぞご覧くださいませ。
+
+http://www.nii.ac.jp/
+http://www.nii.ac.jp/news_jp/2007/03/haptichem.shtml
+http://www.nii.ac.jp/kouhou/NIIPress06_11-1.pdf
+http://www.nii.ac.jp/kouhou/NIIPress06_11-2.pdf
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Mon Mar 19 12:00:35 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7291] Jun734 for Smalltalk
+Message-ID: <45FDFCD3.40307@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+この週末に Netherlands の Albert Kerssies さんから寄贈された
+プログラムをマージして、新しい【Jun734】を作りました。
+
+http://www.sra.co.jp/people/aoki/Jun/htmls/News.html
+
+OBJ ファイル（３次元形状を表現するファイル形式）まわりのコー
+ドになります。詳しくは次のページをご覧ください。
+
+http://www.sra.co.jp/people/aoki/Jun/Topics/OBJ/
+
+ポリゴンメッシュですから、まだポリラインなどの線画のファイル
+入出力はありませんが、OBJ ファイルで記述された形状を取り込め
+るので、重宝すると思います。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Tue Mar 20 10:47:02 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7292] Re: 分子間力を体感できる【HaptiChem】
+In-Reply-To: <45FAA5E5.7060102@sra.co.jp>
+References: <45FAA350.3010101@sra.co.jp> <45FAA5E5.7060102@sra.co.jp>
+Message-ID: <45FF3D16.70102@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+ムービー付きの掲載記事も出ています。興味がありましたら、ご覧
+ください。生徒さんたちの反応が直に伝わってきますよ。
+
+http://techon.nikkeibp.co.jp/article/NEWS/20070319/129070/
+
+電気的な力（クーロン力）であれば、逆二乗の法則（距離の二乗に
+反比例）。ファンデルワールス力であれば、逆六乗の法則。イオン
+どうしの力であれば、逆一乗の法則。実際に働く力は、それらのΣ
+になります。
+
+高校や中学では、式だけを理解させられますし、教える先生自身も
+働く力を実際に体感して、教壇に立っているわけではないでしょ。
+理解も大切でしょうが、行解はもっと大切です。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Mar 21 01:35:35 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7293] Re: 分子間力を体感できる【HaptiChem】
+In-Reply-To: <45FF3D16.70102@sra.co.jp>
+References: <45FAA350.3010101@sra.co.jp> <45FAA5E5.7060102@sra.co.jp>
+	<45FF3D16.70102@sra.co.jp>
+Message-ID: <46000D57.1090607@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+分子間力を体感できる【HaptiChem】ですが、デモンストレーション
+の要請に応ずることになりそうです。もしそうなれば、近々にその
+詳細が下記のページに記載されると思います。
+
+http://research.nii.ac.jp/~cheminfo/HaptiChem/
+
+Smalltalk による高周波数のメカ制御の事例になると思いますので、
+Smalltalker の皆さん、興味津々でしょ。そして、先のポストを見
+て、実際に力覚デバイス（スパイダーＧ）に触れてみたいと思った
+方々、記載事項にしたがって応募してみてくださいませ。
+
+＃ともすると、私が直にデモするやもしれませんが・・・。
+＃百聞は一触にしかず。（Touching is knowing.）
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Thu Mar 22 13:12:08 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7294] Re: 分子間力を体感できる【HaptiChem】
+In-Reply-To: <46000D57.1090607@sra.co.jp>
+References: <45FAA350.3010101@sra.co.jp>
+	<45FAA5E5.7060102@sra.co.jp>	<45FF3D16.70102@sra.co.jp>
+	<46000D57.1090607@sra.co.jp>
+Message-ID: <46020218.3080201@sra.co.jp>
+
+> 分子間力を体感できる【HaptiChem】ですが、デモンストレーション
+> の要請に応ずることになりそうです。もしそうなれば、近々にその
+> 詳細が下記のページに記載されると思います。
+> http://research.nii.ac.jp/~cheminfo/HaptiChem/
+
+http://research.nii.ac.jp/~cheminfo/HaptiChem/HCmovie/
+ここに記載されているメールアドレスへリクエストしてください。
+
+さらに後続の掲載記事をお知らせします。
+
+【アスキー】
+NII,分子の間に働く力を”体感”できる教材『HaptiChem』をデモ授業で公開
+http://www.ascii.jp/elem/000/000/023/23108/
+
+【毎日新聞】
+触って感じる化学教材 国立情報研が開発
+http://www.mainichi-msn.co.jp/shakai/edu/elearningschool/class/news/20070316org00m040042000c.html
+
+【CCSニュース】
+VR技術応用で分子間力を”体感”、高等学校教育用に展開へ
+http://homepage2.nifty.com/ccsnews2/2007/1q/2007_1Qniisatohaptichem.htm
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From nisinaka ＠ sra.co.jp  Tue Mar 27 15:04:19 2007
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7295] [ANNOUNCE] Jun for Java (Jun646)
+Message-ID: <20070327145856.BF1B.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン646を公開します。
+
+  バージョン642からの主な変更点は、以下の通りです。
+
+    * (bug fix) JunFileNavigator において、左のリスト上にあるファ
+      イルをクリックしても、左のリストが更新されないバグを修正し
+      ました。
+
+    * (modification) JunMultiMediaNavigator を Jun656 相当に更新
+      しました。3Dのファイル(lstまたはwrl)を表示することができま
+      す。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/646/MultiMediaNavigator.png
+
+    * (modification) JunThumbWheel を Jun651 相当に更新しました。
+      マウスホイールのアクションに対応しています。
+
+    * (modification) JunOpenGL3dObject の typical objects を増や
+      しました。
+
+    * (modification) JunLauncher の起動時に、バナーを表示するよう
+      にしました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+

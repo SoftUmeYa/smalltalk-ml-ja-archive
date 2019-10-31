@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7764] Re: セーブされたファイルが自分でわかるプログラム
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207764%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU7ITwlViQ1JGwkPyVVJSEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlayQsPCtKLCRHJG8kKyRrJVclbSUwJWklYBsoQg%3D%3D%3F%3D&In-Reply-To=1bc06fd31002010527o46ba982eq1ad04ecf5c2faa9a%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007763.html">
+   <LINK REL="Next"  HREF="007765.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7764] Re: セーブされたファイルが自分でわかるプログラム</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207764%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiU7ITwlViQ1JGwkPyVVJSEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJSQlayQsPCtKLCRHJG8kKyRrJVclbSUwJWklYBsoQg%3D%3D%3F%3D&In-Reply-To=1bc06fd31002010527o46ba982eq1ad04ecf5c2faa9a%40mail.gmail.com"
+       TITLE="[SML 7764] Re: セーブされたファイルが自分でわかるプログラム">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2010年 2月  1日 (月) 23:08:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007763.html">[SML 7763] Re: セーブされたファイルが自分でわかるプログラム
+</A></li>
+        <LI>次の記事 <A HREF="007765.html">[SML 7765] Re: セーブされたファイルが自分でわかるプログラム
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7764">[ 日付 ]</a>
+              <a href="thread.html#7764">[ スレッド ]</a>
+              <a href="subject.html#7764">[ 件名 ]</a>
+              <a href="author.html#7764">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+
+度々すみません。少し書き換えました。
+
+|<i> aContext aFilename |
+</I>aContext := thisContext.
+[aContext sender selector = #fileIn]
+	whileFalse: [aContext := aContext sender].
+aFilename := aContext sender receiver fileName.
+Transcript cr; show:  aFilename asAbsoluteFilename asString
+
+如何でしょう？
+VisualWorksのFileInの実行シーケンスに依存し過ぎな感ではあります。
+
+2010年2月1日22:27 濱崎治 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">osamu.hamasaki ＠ gmail.com</A>&gt;:
+&gt;<i> 濱崎です。
+</I>&gt;<i>
+</I>&gt;<i> 私も問題を正しく理解しているか自信がないですが、
+</I>&gt;<i> こんなのでは如何でしょうか？
+</I>
+＜中略＞
+
+&gt;<i> 2010年1月31日20:07 AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;:
+</I>&gt;&gt;<i> Smalltalkerの皆さんへ
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ここに述べるみたいなプログラムを書き下ろせるでしょうか。プロ
+</I>&gt;&gt;<i> グラムの中で、そのプログラム自身がセーブされているファイル名
+</I>&gt;&gt;<i> を用いるプログラムです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> たとえば、以下のようなプログラムを書くとします。ただし、この
+</I>&gt;&gt;<i> プログラムをセーブしたファイル名を、このプログラムの中で使用
+</I>&gt;&gt;<i> しなければなりません。どこにセーブしてもいいのです。ファイル
+</I>&gt;&gt;<i> としてどこにセーブされるのかわからないのに、このプログラムの
+</I>&gt;&gt;<i> 中で当該のファイル名を使わなければならないのです。
+</I>
+-- 
+
+Osamu Hamasaki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007763.html">[SML 7763] Re: セーブされたファイルが自分でわかるプログラム
+</A></li>
+	<LI>次の記事 <A HREF="007765.html">[SML 7765] Re: セーブされたファイルが自分でわかるプログラム
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7764">[ 日付 ]</a>
+              <a href="thread.html#7764">[ スレッド ]</a>
+              <a href="subject.html#7764">[ 件名 ]</a>
+              <a href="author.html#7764">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2335] Nihongo7について(NSqueak-2005-02-25.image)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202335%5D%20%3D%3Fiso-2022-jp%3Fb%3FTmlob25nbzcbJEIkSyREJCQbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEIoTlNxdWVhay0yMDA1LTAyLTI1LmltYWdlKQ%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002334.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2335] Nihongo7について(NSqueak-2005-02-25.image)</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202335%5D%20%3D%3Fiso-2022-jp%3Fb%3FTmlob25nbzcbJEIkSyREJCQbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEIoTlNxdWVhay0yMDA1LTAyLTI1LmltYWdlKQ%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2335] Nihongo7について(NSqueak-2005-02-25.image)">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 2月 28日 (月) 20:30:45 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002334.html">[Squeak-ja: 2334] Re: 画像のOID
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2335">[ 日付 ]</a>
+              <a href="thread.html#2335">[ スレッド ]</a>
+              <a href="subject.html#2335">[ 件名 ]</a>
+              <a href="author.html#2335">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。
+Nihongo7(NSqueak-2005-02-25)完成度がどんどん高くなっていますね。開発関係
+者の方々ありがとうございます。開発用イメージ (NSqueak-2005-02-25.image)
+開発途中版で気がついた点を書きます。
+
+■FormSetFont exampleがエラーとなります
+Workspaceのキャレット位置に画像をpasteできるはずなんだけど…
+3.8g-6857もだめです。pasteしようとすると'FormSetFOnt&gt;&gt;
+createCharacterToGlyphMap でsubscript is out of bounds:67'となります。も
+うサポートされないんですかね？
+
+■SqueakMapパッケージローダがエラーとなります
+3.8g-6857では起動とパッケージのインストールまで一通りできたが、Nihongo7
+では「全サーバの応答がありません」(Error:All SqueakMap master servers
+are down)って怒られてしまう。
+
+で試した環境は
+NetNameResolver addressForName: 'map1.squeakfoundation.org' timeout: 5
+がタイムアウトしてしまう環境でした。'map1.squeakfoundation.org'がDNSから
+ひっぱてこれない?
+
+調べてみるとSMSqueakMap class&gt;&gt;pingServer:の結果が異なりました。
+N7 :SMSqueakMap pingServer: 'map1.squeakfoundation.org'→false
+3.8:SMSqueakMap pingServer: 'map1.squeakfoundation.org'→true
+
+SMSqueakMap class&gt;&gt;pingServer:をみると
+
+[(SystemVersion current highestUpdate &lt; 5252)
+
+という記述があり
+N7 :SystemVersion current highestUpdate→7
+3.8:SystemVersion current highestUpdate→6587
+となるのでNetNameResolverでタイムアウトを起こしてエラーとなったようで
+す。5252を0に書き換えると正しく起動でき、 SqueakMapからパッケージをイン
+ストールできました。
+ちなみにSystemVersion current updatesの結果は次のようになりました。
+
+N7 :SystemVersion current updates a Set(1 2 3 4 5 6 7)
+3.8:SystemVersion current updates a Set(5977 〜6587)
+
+参考までにバージョン(#highestUpdate)で処理を変えている部分として
+SMSimpleInstaller&gt;&gt;fileIntoChangeSetNamed:fromStream:
+がありました。
+
+#そんな環境で使うなと言われるかもしませんが…
+
+それでは
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.300 / Virus Database: 266.5.1 - Release Date: 2005/02/27
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+<A HREF="http://pr.mail.yahoo.co.jp/so2005/">http://pr.mail.yahoo.co.jp/so2005/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002334.html">[Squeak-ja: 2334] Re: 画像のOID
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2335">[ 日付 ]</a>
+              <a href="thread.html#2335">[ スレッド ]</a>
+              <a href="subject.html#2335">[ 件名 ]</a>
+              <a href="author.html#2335">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

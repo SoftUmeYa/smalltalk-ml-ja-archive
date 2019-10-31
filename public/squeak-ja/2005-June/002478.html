@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2478] [N7]HttpSocket クラスについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202478%5D%20%3D%3Fiso-2022-jp%3Fb%3FW043XUh0dHBTb2NrZXQg%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8laSU5JEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002475.html">
+   <LINK REL="Next"  HREF="002480.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2478] [N7]HttpSocket クラスについて</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202478%5D%20%3D%3Fiso-2022-jp%3Fb%3FW043XUh0dHBTb2NrZXQg%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8laSU5JEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2478] [N7]HttpSocket クラスについて">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 6月 17日 (金) 00:49:18 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002475.html">[Squeak-ja: 2475] Re: 「自由自在 Squeakプログラミング」増刷します
+</A></li>
+        <LI>次の記事 <A HREF="002480.html">[Squeak-ja: 2480] サーバ停止のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2478">[ 日付 ]</a>
+              <a href="thread.html#2478">[ スレッド ]</a>
+              <a href="subject.html#2478">[ 件名 ]</a>
+              <a href="author.html#2478">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。いつもお世話になってます。
+pukiwikiにファイルアップロードするものを作っていて気がついたことを報告し
+ます。
+
+HttpSocket class&gt;&gt;httpPostMultipart:args:accept:request:で
+'Content-Disposition'ヘッダ形式が一般的なものと異なってました。
+
+--- HTML4.0仕様書では(<A HREF="http://www.w3.org/TR/REC-html40/interact/forms.html">http://www.w3.org/TR/REC-html40/interact/forms.html</A>)
+Content-Disposition: form-data; name=&quot;xxx&quot;; filename=&quot;yyy.txt&quot;
+---
+Squeakでは(日本語7)
+---
+Content-disposition: multipart/form-data; name=&quot;xxx&quot; filename=&quot;yyy.txt&quot;
+---
+・'name'の後のデリミタ';'がない
+・'Disposition'が小文字
+・'multipart/form-data'って？
+
+サーバ側の実装により正しくForm送信がうまくいかない場合が出てきます。実際
+pukiwikiではHTML4.0仕様書の定義で厳格に解析しているようで、アップでき
+ず、新たにHttpSocket class&gt;&gt;httpPostMultipart:args:accept:request:をベー
+スに実装しました。
+
+少なくとも、デリミタ';'がないのはまずいのでは。。。
+
+それでは
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.7.5/18 - Release Date: 2005/06/15
+
+__________________________________
+Save the earth
+<A HREF="http://pr.mail.yahoo.co.jp/ondanka/">http://pr.mail.yahoo.co.jp/ondanka/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002475.html">[Squeak-ja: 2475] Re: 「自由自在 Squeakプログラミング」増刷します
+</A></li>
+	<LI>次の記事 <A HREF="002480.html">[Squeak-ja: 2480] サーバ停止のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2478">[ 日付 ]</a>
+              <a href="thread.html#2478">[ スレッド ]</a>
+              <a href="subject.html#2478">[ 件名 ]</a>
+              <a href="author.html#2478">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,573 @@
+From umejava ＠ mars.dti.ne.jp  Mon Dec  3 21:14:04 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3787] Re: Squeakers' Night in 九州
+In-Reply-To: <JU200711012213213.1126390@mars.dti.ne.jp>
+References: <JD200710242036095.1772687@mars.dti.ne.jp>
+	<JU200711012213213.1126390@mars.dti.ne.jp>
+Message-ID: <JP200712032114044.10734453@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+いよいよ今週の金曜日に迫って参りましたSqueakers' Night in 九州ですが、
+まだまだ参加者を募集しております。
+
+#と、いいますか、人数が少なめですので、空きは十二分にあります。
+
+ぜひぜひ、お越しください。
+
+お待ちしております。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 「Squeakers' Night in 九州」ですが、正式な開催日時が決まりました。
+> http://swikis.ddo.jp/umejava/45
+> 
+> 2007/12/7(金) 18:00-20:00、サイバー大学 福岡キャンパス 教室です。
+> 
+> 例によって発表者、参加者を募集します。
+> 
+> 発表者は上記Wikiに自由に書き込んでいただければと思います。
+> 
+> 事前の申し込みは不要ですが、大体の人数を把握したいので
+> 参加を希望される方は、私宛にメールをいただければ幸いです。
+> 
+> それでは、九州でお会いしましょう。
+> 
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> > こんにちは
+> > 梅澤です。
+> > 
+> > さて、例年行っておりますSqueakers' Nightですが、
+> > http://swikis.ddo.jp/umejava/38
+> > 
+> > 東京ばかりでは不公平という話もありますので、これからは全国行脚
+> > していくことにします。
+> > 
+> > 第一弾として、まずは九州でやってみようかと考えています。
+> > 
+> > Squeak-jaは12月8日のOSC Fukuokaに出展します。
+> > http://www.ospn.jp/osc2007-fukuoka/
+> > 
+> > そこで、これに合わせて「Squeakers' Night in 九州」を行います。
+> > 
+> > 会場はサイバー大学福岡キャンパスのどこかになる予定です。
+> > http://www.cyber-u.ac.jp/campus/support/facilities.html
+> > 
+> > 日時についてですが、いくつか候補があります。
+> > 
+> > 12月7日(金) 夕方-夜
+> > 12月8日(土) 夕方-夜
+> > 12月9日(日) 昼間
+> > 
+> > です。
+> > 
+> > 皆さん、特にご希望はありますでしょうか。声を上げていただければ、
+> > 柔軟に対応したいと思います。
+> > 
+> > また、さらにディープな集まりを求める方は、「Camp Smalltalk in 九州」
+> > をやってみるという話もあります。これはデモ大会ではなく、開発合宿の
+> > ようなものです。やはり声が上がり、参加人数がある程度集まれば、こちら
+> > の用意もしたいと思います。
+> > 
+> > 日本に数名しかいない希少種、Smalltalkerに触れる良い機会ですよ。
+> > 
+> > ではでは。Go Smalltalk!
+> > 
+> 
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+
+From t_inage ＠ kiwi.ne.jp  Wed Dec  5 22:54:31 2007
+From: t_inage ＠ kiwi.ne.jp (t_inage@kiwi.ne.jp)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3788] Re: サイトが落ちてしまいました（涙）
+Message-ID: <000000094abwiqID1sBpWg0T3f84EoFvc@br2102.jig.jp>
+
+> Squeak-MLの皆様
+> 
+> 苑田です。
+> 
+> 先日アナウンスした長崎でのワークショップの主催となっている
+> OLPC volunteer team, Japanサイトなのですが、はやくもEngadgetや
+> /.サイトで紹介されてしまったので、あわてて整備をしておりましたら、
+> とつぜんサイトが表示されなくなってしまいました。
+> 
+> あまりにもタイミングが良すぎますが、意図したものではございません（汗）
+> 
+> いまDrupalを使っているのですが、どーもモジュールをたくさん入れすぎたか
+> メモリを食うモジュールをactivateしてしまったことによってphpのメモリ
+> 不足が発生しているのではと考えております。
+> 
+> なにぶん家に帰らないと対処ができないので、あとしばらくこのままです。
+> 
+> あまり見ておられる方はいないと思いますが、もしサイトが落ちている
+> ことで何か書き込みなりありましたら、「落ちてるらしいよ」とそっと
+> レスいただくか、あるいはあそこに書き込みがあったよ、と教えて
+> いただけると非常に助かります。
+> 
+> 本人非常にあせっているのですが、いかんせんなんともしがたい状況に
+> ありまして。。。
+
+
+--
+<t_inage@kiwi.ne.jp>
+
+From t_inage ＠ kiwi.ne.jp  Wed Dec  5 23:10:33 2007
+From: t_inage ＠ kiwi.ne.jp (稲毛 透)
+Date: Thu Dec  6 11:03:59 2007
+Subject: [Squeak-ja: 3789] [お詫び] メール誤転送の件
+Message-ID: <4756B159.8090108@kiwi.ne.jp>
+
+Squeak-jaご利用の皆様
+
+こんばんは。稲毛と申します。
+先ほど携帯電話でメールをチェックしていた際に苑田さんからのメールを誤って
+転送してしまいました。
+大変申し訳ございませんでした。
+
+苑田さん他、メールを受信されました皆様に謝罪するとともに、削除するなどの対応をしていただきます様、よろしくお願いいたします。
+
+取り急ぎ、ご連絡まで。
+
+-- 
+稲毛 透
+
+
+
+From gun ＠ cup.com  Thu Dec 13 02:37:35 2007
+From: gun ＠ cup.com (GUN the codeslinger)
+Date: Thu Dec 13 03:22:59 2007
+Subject: [Squeak-ja: 3790] Re: Squeaker軍団の来福
+In-Reply-To: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+References: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+Message-ID: <JH200712130237353.19516903@cup.com>
+
+先日、福岡に来られた阿部御一行の皆様。
+金曜のSqueakerNightと土曜のOSC福岡はお疲れ様でしたー。
+
+私は、金曜の方は、交通機関の関係(？)で大幅遅刻してしまい。
+皆さんの話をあまり聞けなかったのが、とてもとても残念でしたが。
+その後の食事会やOSCの懇親会などで、楽しいお話ができてよかったです。
+
+なにせ、私にとっては、始めて出会うSmallTakersでしたから。(^^;)
+# 福岡の他のSmallTakerと会うことも期待していたのだけど、、(汗)
+
+
+今後も、もし福岡でこうしたイベントがあれば、よろこんで参加(or企画？)しますので。
+よろしくです。もうサイバー大学の場所はわかりましたし。(苦笑
+
+# 個人的には、OSC懇談会での、Squeaker軍団とRuby笹田さんの話が興味深かった。
+
+-----
+GUN the codeslinger <gun@cup.com>
+From umejava ＠ mars.dti.ne.jp  Thu Dec 13 09:43:41 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec 13 10:09:01 2007
+Subject: [Squeak-ja: 3791] Re: Squeaker軍団の来福
+In-Reply-To: <JH200712130237353.19516903@cup.com>
+References: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+	<JH200712130237353.19516903@cup.com>
+Message-ID: <JU200712130943418.4800312@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Squeakers' Nightも、OSC 2007 Fukuokaも非常に楽しかったです。
+福岡は住みやすそうなところでした。
+またこのようなイベントがあると良いですね。
+
+さてさてSqueakers' Night in 九州のページを更新しておきました。
+http://swikis.ddo.jp/umejava/45
+発表資料を載せてあります。(関係者の方々、載せてください)
+
+当日は、テクニカルな話題になりすぎないように調節したので、実際に
+話したものとは資料が異なりますが、ご了承ください。
+
+OSC 2007 Fukuokaの感想のようなものもあります。
+http://umejava.vox.com/library/post/squeak-osc-2007-fukuoka.html
+
+ではでは。
+
+GUN the codeslinger <gun@cup.com> wrote:
+> 先日、福岡に来られた阿部御一行の皆様。
+> 金曜のSqueakerNightと土曜のOSC福岡はお疲れ様でしたー。
+> 
+> 私は、金曜の方は、交通機関の関係(？)で大幅遅刻してしまい。
+> 皆さんの話をあまり聞けなかったのが、とてもとても残念でしたが。
+> その後の食事会やOSCの懇親会などで、楽しいお話ができてよかったです。
+> 
+> なにせ、私にとっては、始めて出会うSmallTakersでしたから。(^^;)
+> # 福岡の他のSmallTakerと会うことも期待していたのだけど、、(汗)
+> 
+> 
+> 今後も、もし福岡でこうしたイベントがあれば、よろこんで参加(or企画？)しますので。
+> よろしくです。もうサイバー大学の場所はわかりましたし。(苦笑
+> 
+> # 個人的には、OSC懇談会での、Squeaker軍団とRuby笹田さんの話が興味深かった。
+> 
+> -----
+> GUN the codeslinger <gun@cup.com>
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Thu Dec 13 17:16:12 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec 13 17:50:34 2007
+Subject: [Squeak-ja: 3792] Re: Squeaker軍団の来福
+In-Reply-To: <JH200712130237353.19516903@cup.com>
+References: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+	<JH200712130237353.19516903@cup.com>
+Message-ID: <2d5d52a80712130016l335328efrf7ad27243923b8d1@mail.gmail.com>
+
+阿部@新百合です。
+
+07/12/13 に GUN the codeslinger<gun@cup.com> さんは書きました:
+> 金曜のSqueakerNightと土曜のOSC福岡はお疲れ様でしたー。
+
+こちらこそ、ありがとうございました。連れて行ってもらったお店はとてもおいしかったです。
+
+> なにせ、私にとっては、始めて出会うSmallTakersでしたから。(^^;)
+> # 福岡の他のSmallTakerと会うことも期待していたのだけど、、(汗)
+
+それだと、小さな捕獲者、購読者、貸借人ですよー。挑戦に応える人というのもありますね。言い得て妙かも。これを言うのも久々ですが、Smalltalkerでよろしくお願いします(Tは小文字)。
+
+> 今後も、もし福岡でこうしたイベントがあれば、よろこんで参加(or企画？)しますので。
+> よろしくです。もうサイバー大学の場所はわかりましたし。(苦笑
+
+よろしくお願いします。次も貸してくれるでしょうか。
+
+> # 個人的には、OSC懇談会での、Squeaker軍団とRuby笹田さんの話が興味深かった。
+
+歴史的和解ですね。これからはお互いを褒め合うことになったので、ご協力をお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Thu Dec 13 17:55:29 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec 13 18:29:55 2007
+Subject: [Squeak-ja: 3793] Re: Squeaker軍団の来福
+In-Reply-To: <JU200712130943418.4800312@mars.dti.ne.jp>
+References: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+	<JH200712130237353.19516903@cup.com>
+	<JU200712130943418.4800312@mars.dti.ne.jp>
+Message-ID: <2d5d52a80712130055k72e4cdc1o2d86cf0f49d28d74@mail.gmail.com>
+
+阿部@新百合です。
+
+07/12/13 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> http://swikis.ddo.jp/umejava/45
+> 発表資料を載せてあります。(関係者の方々、載せてください)
+
+すみません。今回私のはeyes onlyということで勘弁してください。
+
+> OSC 2007 Fukuokaの感想のようなものもあります。
+> http://umejava.vox.com/library/post/squeak-osc-2007-fukuoka.html
+
+検索すると他にもいくつか見つかりました。
+
+http://www.csfactory.jp/blog/2007/12/09/
+http://d.hatena.ne.jp/tknzk/20071209/1197209455
+http://masamic.cocolog-nifty.com/3days/2007/12/osc2007_077c.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From gun ＠ cup.com  Sat Dec 15 18:27:51 2007
+From: gun ＠ cup.com (GUN the codeslinger)
+Date: Tue Dec 18 19:00:14 2007
+Subject: [Squeak-ja: 3794] Re: Squeaker軍団の来福
+In-Reply-To: <JU200712130943418.4800312@mars.dti.ne.jp>
+References: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+	<JH200712130237353.19516903@cup.com>
+	<JU200712130943418.4800312@mars.dti.ne.jp>
+Message-ID: <JV200712151827514.65804672@cup.com>
+
+ども、GUN(Nabeta)です。
+
+金曜のSqueakers' Nightの後の立ち話にて、
+たしか梅澤さんが「Smalltalkでのデザインパターン本」に言及してましたが。
+その本に興味がわいてさがしたのですが、以下の本でしょうか？
+
+  「 ケント・ベックのSmalltalkベストプラクティス・パターン」
+
+
+>さてさてSqueakers' Night in 九州のページを更新しておきました。
+>http://swikis.ddo.jp/umejava/45
+>発表資料を載せてあります。(関係者の方々、載せてください)
+
+資料ありがとうございます。
+ビジネスで使える〜の方は、ちょっと聞きたかったかも(^^;;
+
+
+-----
+GUN the codeslinger <gun@cup.com>
+From umejava ＠ mars.dti.ne.jp  Sat Dec 15 19:06:51 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Dec 18 19:00:17 2007
+Subject: [Squeak-ja: 3795] Re: Squeaker軍団の来福
+In-Reply-To: <JV200712151827514.65804672@cup.com>
+References: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+	<JH200712130237353.19516903@cup.com>
+	<JU200712130943418.4800312@mars.dti.ne.jp>
+	<JV200712151827514.65804672@cup.com>
+Message-ID: <JG200712151906513.498265@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+GUN the codeslinger <gun@cup.com> wrote:
+> ども、GUN(Nabeta)です。
+> 
+> 金曜のSqueakers' Nightの後の立ち話にて、
+> たしか梅澤さんが「Smalltalkでのデザインパターン本」に言及してましたが。
+> その本に興味がわいてさがしたのですが、以下の本でしょうか？
+> 
+>   「 ケント・ベックのSmalltalkベストプラクティス・パターン」
+
+上記の本はデザインパターンというよりは「イディオム」に近いものですね。
+もっとも内容は良いと思います。訳も当時がんばりましたのでだいぶ読みやすい
+でしょう。
+
+私があの時話題に上げたのは"The Design Patterns Smalltalk Companion"です。
+http://www.amazon.co.jp/Design-Patterns-Smalltalk-Companion-Software/dp/0201184621
+
+GoFのデザパタ本を裏側から、動的言語の側面から見た本とでも言えましょうか。
+デザインパターンのより深い理解にも役立ちますし、Smalltalkがデザインパターンの
+形成にいかに役立ってきたかがわかる名著です。お勧めです。
+
+> 
+> >さてさてSqueakers' Night in 九州のページを更新しておきました。
+> >http://swikis.ddo.jp/umejava/45
+> >発表資料を載せてあります。(関係者の方々、載せてください)
+> 
+> 資料ありがとうございます。
+> ビジネスで使える〜の方は、ちょっと聞きたかったかも(^^;;
+
+また話す機会がきっとあることでしょう。日本全国どこへでも行きますよ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From jg1gwl ＠ mx3.ttcn.ne.jp  Thu Dec 27 00:11:22 2007
+From: jg1gwl ＠ mx3.ttcn.ne.jp (SUGIMOTO Kenji)
+Date: Thu Dec 27 00:20:18 2007
+Subject: [Squeak-ja: 3796] "One Laptop" a hit in Peruvian village
+References: <474A793C1AC.EFDAABEE@smtp.nifty.com><JH200712130237353.19516903@cup.com><JU200712130943418.4800312@mars.dti.ne.jp><JV200712151827514.65804672@cup.com>
+	<JG200712151906513.498265@mars.dti.ne.jp>
+Message-ID: <006801c847d2$caf6b810$0400a8c0@ibm971h8kx>
+
+始めまして。杉本と申します。OLPCの記事を読みましたので、関係ないかなと
+思いながら投稿いたします。
+
+http://edition.cnn.com/2007/TECH/ptech/12/25/onelaptop.onevillage.ap/index.html
+
+From yoshiki ＠ vpri.org  Fri Dec 28 12:15:00 2007
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Dec 28 12:15:44 2007
+Subject: [Squeak-ja: 3797] Re: "One Laptop" a hit in Peruvian village
+In-Reply-To: <006801c847d2$caf6b810$0400a8c0@ibm971h8kx>
+References: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+	<JH200712130237353.19516903@cup.com>
+	<JU200712130943418.4800312@mars.dti.ne.jp>
+	<JV200712151827514.65804672@cup.com>
+	<JG200712151906513.498265@mars.dti.ne.jp>
+	<006801c847d2$caf6b810$0400a8c0@ibm971h8kx>
+Message-ID: <ubq8bqzm3.wl%yoshiki@vpri.org>
+
+  大島です。
+
+> 始めまして。杉本と申します。OLPCの記事を読みましたので、関係ないかなと
+> 思いながら投稿いたします。
+> 
+> http://edition.cnn.com/2007/TECH/ptech/12/25/onelaptop.onevillage.ap/index.html
+
+  ありがとうございます。最後に出てくるArrendondo さんの遊んでいる
+"checkers"や"chess"は、実はEtoysの中のものではないかと踏んでいるのです
+が、どうでしょうか。
+
+-- Yoshiki
+From abee ＠ squeakland.jp  Fri Dec 28 21:29:03 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Dec 28 21:29:12 2007
+Subject: [Squeak-ja: 3798] デブサミ2008に出展します。
+Message-ID: <2d5d52a80712280429w561557c0v857f123b5ee23ccc@mail.gmail.com>
+
+阿部@福山です。
+
+2008年2月13日（水）・14日（木）に目黒で開催されるデブサミ2008にSqueak-jaと
+して出展します。残念ながら今回は講演はありませんが、2日ともブース出展しま
+すので、ぜひご来場ください。
+また、お手伝いしてくださる方がいらっしゃいましたらぜひよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+◇◆━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◆◇
+　　　　技術者コミュニティとの連携から生まれた総合ITコンファレンス
+　　　　　　 ◇◆ Developers Summit 2008 （デブサミ2008）◆◇
+　　　　　　　　　 2008年2月13日（水）・14日（木）開催！
+◇◆━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◆◇
+
+　◇◆◇◆◇◆◇◆◇◆越境しよう！コードで世界を変えよう◆◇◆◇◆◇◆◇
+
+　IT業界を称して3K、7K、と伝えるマスメディア…確かにIT業界にはそのよう
+　な一面もあることは否定できません。しかしながら、今やデベロッパーは
+　世界を変える力を持っている、と言っても過言ではないでしょう。
+
+　全てのデベロッパーは、ITで世界を変えていく力を自身の中に秘めている。
+　オープンソース・プロダクト・コミュニティへの参加や、お客様のシステム、
+　サービスを作ることの中で、コードを通じ、日々未来を創造しているのです。
+
+　今回のデブサミでは、世界を変えることができる力（＝コードを書く力）を
+　持つデベロッパーにとって「世界で活躍することは決して垣根の高い話では
+　ない！」ことを、最新のテクノロジーや開発手法、そしてコミュニティの可
+　能性とパワーを通して、お伝えできればと思います。
+
+　このデブサミの場を通して、参加された皆さんの知的好奇心を満たす多彩な
+　セッションを用意してお待ちしています。
+。
+━━━━━━━━━━━━━━━━━━━━━━━━━━━……‥‥・・
+◆名 称：Developers Summit 2008 （デブサミ2008）
+◆会 期：2008年2月13日（水）・14日（木）
+◆会 場：目黒雅叙園（東京・目黒）
+◆主 催：株式会社 翔泳社
+・‥‥……━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▼無料の70セッションは完全事前登録制！お申込はこちら▼
+http://codezine.jp/devsumi/2008/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+◇◆ デブサミ2008 テーマ別セッション（無料） ◆◇
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+　自分のボーダーを超えるために、必要なテクノロジーは何なのか？
+　今回は大きく5つのテーマを選びました。
+　是非この機会に、これまで自分にとっての「未開」に触れてみてください。
+　デブサミは、今年も充実の70セッションを無料でお届けいたします。
+
+
+◆TPSに学びアジャイルを実践する「開発プロセス」
+　パネルディスカッション：TPSで進化するアジャイル開発
+　新車開発"巨大プロジェクト"マネジメント
+　反復開発とテスト - 7年
+　・・など 計6セッション
+
+◆ソフトウェアの将来を展望するための「これからのアーキテクチャ」
+　 "さがす"こととは、そしてより良く"さがす"方法を考える
+　ＩＴ業界の基盤変化に対応した最新の業務システムのあり方
+　データを忘れていませんか？−全社的データアーキテクチャ構築への提言−
+　ロボットで分かった、人の構造が動きを導く
+　スプーンで飛行船を飛ばそう！〜子どもにソフトウェア開発とは何なのか伝えよう！
+　・・など 計12セッション
+
+◆テクノロジーの変化を体感するための「DevelopmentStyle 2.0」
+　 Microsoft Presents Joel on Developer Summit
+　言語の未来を語る
+　デベロッパーテスティング・ライブ - 自信を持ってコードを書くための心・技・体 -
+　ネット・コミュニケーション2.0
+　・・など 計41セッション
+
+◆仕事の醍醐味を味わう「プロジェクトマネジメント」
+　 SubversionとMaven 2による構成管理：バージョン管理・ビルド・リリース・
+　自動化／お客様から選ばれるコンサルタントとは？その１０のポイント
+　プロジェクト成功への道〜プロジェクトの見積りについて〜
+　 IPA/笑力研究会によるワークショップ
+　・・など 計7セッション
+
+◆日本の技術を世界に、世界の最先端を日本にするための「SaaS Development」
+　日本発、世界に通じるディベロップメント
+　・・など 計4セッション
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+◇◆ デブサミ2008 特別セミナー（有料） ◆◇
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+　プロジェクトマネジメントの世界標準である、PMBOKガイド第3版を基に、現場
+　実務に適応できる基礎的なスキルを習得する2日間コース。今回もデブサミ特別
+　価格にて開催！
+
+　「プロジェクトマネジメント 2日間セミナー（PMBOK第三版概要）」
+　株式会社タリアセンコンサルティング 青柳 次男 氏
+
+　▼本セミナーの詳細・お申込はこちら
+　　 http://codezine.jp/devsumi/2008/kouza/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+◇◆ デブサミ2008 オフィシャルコミュニティ ◆◇
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+　 アイネタジャパン／アジャイルプロセス協議会／eパウダ〜／WINGSプロジェクト
+　 SQL Serverユーザーグループ／XML技術者育成推進委員会／XMLコンソーシアム
+　 O-one／オブジェクト倶楽部／組込みソフトウェア管理者・技術者育成研究会
+　 codeseek／こみゅぷらす／JASIPA／JUDEユーザーズコミュニティ
+　情報処理学会ソフトウェア工学研究会パターンワーキンググループ
+　 XOOPS Cubeデブサミ委員会／Squeak-ja／WRO Japan実行委員会
+　 dev2devデベロッパグループ／.Net ユーザーエクスペリエンス研究所
+　 TOPPERSプロジェクト／日本Apache Geronimoユーザグループ
+　日本XPユーザーグループ／日本 Java ユーザグループ／日本Springユーザ会(JSUG)
+　日本Pythonユーザ会／日本PHPユーザ会／日本PostgreSQLユーザ会
+　日本MySQLユーザ会／日本UNIXユーザ会／日本Linux協会／日本Rubyの会
+　 PMI東京支部／Visual Studioユーザーグループ／Firebird日本ユーザー会
+　 Flex User Group／プロジェクト・ファシリテーション・プロジェクト
+　プロジェクトマネジメント学会／UMLモデリング推進協議会
+　要求開発アライアンス／Linuxコンソーシアム／Ruby ビジネスコモンズ
+　 wipse／わんくま同盟
+　 ※50音順（12月28日現在）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+◇◆ デブサミ2008 スポンサー ◆◇
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+　 アイエニウェア・ソリューションズ（株）／アジターソフトウェアジャパン（株）
+　アドビシステムズ （株）／インフラジスティックス・ジャパン（株）
+　（株）ウェブキャリア／エンピレックス（株）／（株）カール
+　技研商事インターナショナル（株）／Career Laboratory事業部 （テクノブレーン（株））
+　グレープシティ（株）／（株）コンポーネントソース／サン・マイクロシステムズ（株）
+　（株）ジャストシステム ／（株）セールスフォース・ドットコム
+　（株）タリアセンコンサルティング／テクマトリックス（株）／（株）東陽テクニカ
+　日本アイ・ビー・エム（株）／（株）野村総合研究所 ／（株）日立製作所
+　ファイルメーカー（株）／（株）プロトン／ボーランド（株） CodeGear事業本部
+　 ※50音順（12月28日現在）
+
+==========================================================================
+●最新情報・参加登録はこちら ⇒ http://codezine.jp/devsumi/2008/
+==========================================================================
+From umejava ＠ mars.dti.ne.jp  Sun Dec 30 14:52:10 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Dec 30 14:52:14 2007
+Subject: [Squeak-ja: 3799] Re: デブサミ2008に出展します。
+In-Reply-To: <2d5d52a80712280429w561557c0v857f123b5ee23ccc@mail.gmail.com>
+References: <2d5d52a80712280429w561557c0v857f123b5ee23ccc@mail.gmail.com>
+Message-ID: <JP200712301452104.793812@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+デブサミ参加します。
+
+更に、デブサミに併せてオフ会のようなものができると良いなあと思っています。
+どなたか会場を提供していただける会社なり、組織なりをご存じないでしょうか。
+
+ではでは。
+
+"Kazuhiro ABE" <abee@squeakland.jp> wrote:
+> 阿部@福山です。
+> 
+> 2008年2月13日（水）・14日（木）に目黒で開催されるデブサミ2008にSqueak-jaと
+> して出展します。残念ながら今回は講演はありませんが、2日ともブース出展しま
+> すので、ぜひご来場ください。
+> また、お手伝いしてくださる方がいらっしゃいましたらぜひよろしくお願いします。
+> 
+>  //abee
+> --
+---
+[:masashi | ^umezawa]

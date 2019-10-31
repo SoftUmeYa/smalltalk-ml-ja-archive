@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3694] Re: 改行コードの使い方
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203694%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjJ%2BOVQlMyE8JUkbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE47SCQkSn0bKEI%3D%3F%3D&In-Reply-To=CBEIKPMBLLMDEOEJIHCCAEEFCAAA.kubo-o%40mbox.kyoto-inet.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003693.html">
+   <LINK REL="Next"  HREF="003699.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3694] Re: 改行コードの使い方</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203694%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjJ%2BOVQlMyE8JUkbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJE47SCQkSn0bKEI%3D%3F%3D&In-Reply-To=CBEIKPMBLLMDEOEJIHCCAEEFCAAA.kubo-o%40mbox.kyoto-inet.or.jp"
+       TITLE="[Squeak-ja: 3694] Re: 改行コードの使い方">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2007年 10月 20日 (土) 23:39:57 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003693.html">[Squeak-ja: 3693] 改行コードの使い方
+</A></li>
+        <LI>次の記事 <A HREF="003699.html">[Squeak-ja: 3699] Re: 改行コードの使い方
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3694">[ 日付 ]</a>
+              <a href="thread.html#3694">[ スレッド ]</a>
+              <a href="subject.html#3694">[ 件名 ]</a>
+              <a href="author.html#3694">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+おそらく改行コードがCRで書かれているだけと思います。
+
+ご存じのように改行コードはWindowsでCRLF、MacでCR、LinuxでLFです。
+SqueakはMac出身という歴史的な経緯から改行はCRを使うようになっています。
+
+あらかじめ
+writeStream wantsLineEndConversion: true.
+としておくと、そのプラットフォームに即した改行コードに変換されて
+ファイル出力されます。
+
+ではでは。
+
+&quot;久保　道&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kubo-o ＠ mbox.kyoto-inet.or.jp</A>&gt; wrote:
+&gt;<i> 久保　道です。
+</I>&gt;<i> またまた初歩的な質問で恐縮ですが、
+</I>&gt;<i> ご教示下さい。
+</I>&gt;<i>   writeStream := FileStream newFileNamed:'test.txt'.
+</I>&gt;<i>    writeStream nextPutAll:'改行コードを探す。'.
+</I>&gt;<i>    writeStream cr.
+</I>&gt;<i>    writeStream nextPutAll:'見つからない。'.
+</I>&gt;<i>   Transcript show: writeStream contents.
+</I>&gt;<i>   writeStream close.
+</I>&gt;<i> と書くとTranscriptには改行されて表示されますが、
+</I>&gt;<i> test.txtの内容には改行が反映されません。
+</I>&gt;<i> これは恐らくUFT-8の関係かと思うのですが、
+</I>&gt;<i> 具体的にtest.txtで表示するにはどうすれば
+</I>&gt;<i> よいのでしょうか。
+</I>&gt;<i> 同様に、ｔａｂとspaceについても
+</I>&gt;<i> ご教示いただければありがたいのですが。
+</I>
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003693.html">[Squeak-ja: 3693] 改行コードの使い方
+</A></li>
+	<LI>次の記事 <A HREF="003699.html">[Squeak-ja: 3699] Re: 改行コードの使い方
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3694">[ 日付 ]</a>
+              <a href="thread.html#3694">[ スレッド ]</a>
+              <a href="subject.html#3694">[ 件名 ]</a>
+              <a href="author.html#3694">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

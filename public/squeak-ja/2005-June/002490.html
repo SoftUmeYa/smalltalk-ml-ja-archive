@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2490] SqueakToysの変数
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202490%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrVG95cxskQiROSlEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCP3QbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002489.html">
+   <LINK REL="Next"  HREF="002491.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2490] SqueakToysの変数</H1>
+    <B>suto</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202490%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrVG95cxskQiROSlEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCP3QbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2490] SqueakToysの変数">suto ＠ amcac.ac.jp
+       </A><BR>
+    <I>2005年 6月 30日 (木) 09:23:44 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002489.html">[Squeak-ja: 2489] お知らせ
+</A></li>
+        <LI>次の記事 <A HREF="002491.html">[Squeak-ja: 2491] Re: SqueakToys の変数
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2490">[ 日付 ]</a>
+              <a href="thread.html#2490">[ スレッド ]</a>
+              <a href="subject.html#2490">[ 件名 ]</a>
+              <a href="author.html#2490">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>秋田公立美術工芸短期大学の須藤です。
+いつもお世話になっています。
+
+SqueakToysのタイルプログラミング（？）の変数についての質問です。
+
+（１）
+関数に「引数」を設定したとき、その引数を表すタイルを条件分岐のタイル（テスト）の
+条件部分に入れようとしても入ってくれないのですが、
+引数を見て処理を条件分岐させることはできないのでしょうか？
+
+（２）
+また、関数を再帰的に呼び出すとき、
+「現在の引数に１を足した数を引数として再帰呼び出し」のようなことをやりたいのですが、
+「引数に１を足す」方法が分かりません。可能でしょうか？
+
+（３）
+上記の解決策として、「変数」を新たに作成して「引数」を代入し、
+条件分岐などはこの変数を参照することで処理しています。
+しかし、ここで作成された変数はいわゆるグローバル変数（インスタンス変数？）のようで、
+再帰呼び出しを行うと期待した結果を得ることができません。
+（現在は再帰から返ってきたところで引数を再代入することで回避）
+いわゆるローカル変数を使うにはどうすればいいのでしょうか？
+
+（３）に関しては、（２）が解決すれば Lisp でいうところの破壊的代入をしない、
+という作戦でなんとかなりそうと予想しています。
+
+使用している環境は、knoppix ＋Squeak 6.1（日本語）です。
+よろしくお願いします。
+
+---
+須藤秀紹（すとうひでつぐ）
+秋田公立美術工芸短期大学 産業デザイン学科
+〒010-1632 秋田市新屋大川町12-3
+TEL 018-888-8108 / FAX 018-888-8109
+<A HREF="http://www.amcac.ac.jp/~suto">http://www.amcac.ac.jp/~suto</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002489.html">[Squeak-ja: 2489] お知らせ
+</A></li>
+	<LI>次の記事 <A HREF="002491.html">[Squeak-ja: 2491] Re: SqueakToys の変数
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2490">[ 日付 ]</a>
+              <a href="thread.html#2490">[ スレッド ]</a>
+              <a href="subject.html#2490">[ 件名 ]</a>
+              <a href="author.html#2490">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

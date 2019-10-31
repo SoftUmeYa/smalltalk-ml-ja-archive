@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2452] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202452%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hY09TWCAbJEIkRxsoQiAg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FRmlsZURpcmVjdHJ5IGZpbGVOYW1lcyAbJEIkTkE0M1E/dDt6JCwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSD4zUSRLJEokaxsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002451.html">
+   <LINK REL="Next"  HREF="002455.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2452] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202452%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hY09TWCAbJEIkRxsoQiAg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FRmlsZURpcmVjdHJ5IGZpbGVOYW1lcyAbJEIkTkE0M1E/dDt6JCwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSD4zUSRLJEokaxsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2452] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2005年 5月 27日 (金) 15:06:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002451.html">[Squeak-ja: 2451] nihongo7 updates (5/21)
+</A></li>
+        <LI>次の記事 <A HREF="002455.html">[Squeak-ja: 2455] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2452">[ 日付 ]</a>
+              <a href="thread.html#2452">[ スレッド ]</a>
+              <a href="subject.html#2452">[ 件名 ]</a>
+              <a href="author.html#2452">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>高橋@池袋です。 VMMakingの進捗状況などの報告です。
+
+ビルドしたVMで日本語imageが動作するところまできたの
+ですが、漢字を含むファイルはfilenameが''になります。
+
+John M McIntoshさんのVMでも同様です。
+
+うちのMacOSが余計なお世話をしているのかな？
+何かのヒントありませんか？
+
+せっかくの林さんの提案も上記の症状のため効果が確認できていません。
+
+====以下ビルドについて
+今週頭ぐらいまでは subversionのソースの整合性がとれていなかったようです。
+木曜日朝のソース(revision 1195)＋以下の修正でビルドができました。
+１. interp.hのcopy
+        unix:src64:vmから Mac OSにcopy
+２. sqPlatformSpecific.hの修正
+        「#undefs for dispatchFunctionPointer, dispatchFunctionPointerOnin」を削除
+
+2.の方は 24日の McIntoshさんのメールではundefしたぞと明記されているのですが
+リンクでエラーとなるため sq.h内のマクロをそのまま使うようにしました。
+PlugInを使っていないのでたまたま動作しているだけかも知れません。
+
+ではでは
+
+追伸
+　日経ＭＡＣ（創刊〜廃刊までほとんど）を処分します。
+　引き取ってやろうという殊勝な方はいませんか？
+
+At 15:14 05.5.20, Tetsuya HAYASHI wrote:
+&gt;<i> 高橋さん、林です。どうも。
+</I>&gt;<i> さっそくのチャレンジがんばってください。
+</I>&gt;<i> 
+</I>&gt;<i> ところで、試しに先日出た 3.8 final のイメージでVM 
+</I>&gt;<i> ソースを生成して
+</I>&gt;<i> みるとどうでしょう？
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://box1.squeakfoundation.org/files/3.8/Squeak3.8-6665.zip">http://box1.squeakfoundation.org/files/3.8/Squeak3.8-6665.zip</A>
+</I>&gt;<i> 
+</I>&gt;<i> # そういえば、VM ソースは source forge から  
+</I>&gt;<i> subversion に移動して
+</I>&gt;<i> # たのでしたっけ。
+</I>&gt;<i> # 失念してました（お恥ずかしい）。
+</I>&gt;<i> 
+</I>&gt;<i> On 2005/05/20, at 10:51, Kouji takahashi wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; subversionのインストール、platformsのdownload
+</I>&gt;<i> &gt;  svn co <A HREF="http://squeak.hp1.hp.com/sbn/squeak/trunk">http://squeak.hp1.hp.com/sbn/squeak/trunk</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Squeak3.7+5989-fullをdownload。
+</I>&gt;<i> &gt; SqueakMap で VMMaker3.8b3 とBaloon3Dをインストール
+</I>&gt;<i> &gt; （Tim Rowledgeさんのサイトが　500 Internal Errorで 
+</I>&gt;<i> &gt; accessできないので
+</I>&gt;<i> &gt; VMMakerは 3.8b3 以外はインストール不可でした。）
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; platforms:Mac OS　の　specialChangeSetsをInstall
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; VMMakerでsrc作成、Gnuify
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; config.h
+</I>&gt;<i> &gt; aio.h
+</I>&gt;<i> &gt; interp.h
+</I>&gt;<i> &gt; が必要そうなので32bit VM用に適当に(RISC OSなどから) 
+</I>&gt;<i> &gt; pratforms:Mac OS:VM にcopy（おいおい）
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; ビルド→error
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 　ではでは
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; At 19:45 05.5.18, Tetsuya HAYASHI wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt; 高橋さん、こんにちは
+</I>&gt;<i> &gt;&gt; みなさん、どうも
+</I>&gt;<i> &gt;&gt; 林徹也です。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; On 2005/05/18, at 16:21, Kouji takahashi wrote:
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;&gt;  高橋@池袋です。
+</I>&gt;<i> &gt;&gt;&gt;
+</I>&gt;<i> &gt;&gt;&gt; MacOSX(10.3.9)上の Squeak 3.7.3Bete4jpc.app で
+</I>&gt;<i> &gt;&gt;&gt; fileNameを取得すると全角数字が
+</I>&gt;<i> &gt;&gt;&gt; 半角数字に入れ替わってしまうようです。
+</I>&gt;<i> &gt;&gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 私のところの Tiger (10.4.1) と Squeak
+</I>&gt;<i> &gt;&gt; 3.8.6Beta6.app でも同じ問題が
+</I>&gt;<i> &gt;&gt; 確認できました。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;&gt; 例）本来のファイル名　取得されるファイル名
+</I>&gt;<i> &gt;&gt;&gt; ×　test１.txt　→ test1.txt
+</I>&gt;<i> &gt;&gt;&gt; ×　テスト１.txt → テスト1.txt
+</I>&gt;<i> &gt;&gt;&gt; ○　test1.txt
+</I>&gt;<i> &gt;&gt;&gt; ○　テスト1.txt
+</I>&gt;<i> &gt;&gt;&gt;
+</I>&gt;<i> &gt;&gt;&gt; ファイル・リストで上記のような名前のファイルを含むフォルダを見
+</I>&gt;<i> &gt;&gt;&gt; るとファイル名は半角数字で
+</I>&gt;<i> &gt;&gt;&gt; 表示され、×印のファイル名では下側paneに内容表示をさせよ
+</I>&gt;<i> &gt;&gt;&gt; うとするとデバッガが起動します。
+</I>&gt;<i> &gt;&gt;&gt;
+</I>&gt;<i> &gt;&gt;&gt; image側の問題では無く
+</I>&gt;<i> &gt;&gt;&gt; FileDirectry&gt;&gt;primLookupEntryIn:index: のレベルで誤ったファイ
+</I>&gt;<i> &gt;&gt;&gt; ル名が返っているようです。
+</I>&gt;<i> &gt;&gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; ご指摘の通り、これは、VM の問題かと推察されます。
+</I>&gt;<i> &gt;&gt; Carbon Squeak VM は、ディレクトリのエントリを取得する際に、古い
+</I>&gt;<i> &gt;&gt; APIを
+</I>&gt;<i> &gt;&gt; 使ってるので内部的に UTF-8 &lt;-&gt; ShiftJIS と相互に変換し 
+</I>&gt;<i> &gt;&gt; て動
+</I>&gt;<i> &gt;&gt; いており、
+</I>&gt;<i> &gt;&gt; さらに、UTF-8について Apple では  
+</I>&gt;<i> &gt;&gt; decomposed な
+</I>&gt;<i> &gt;&gt; ものを用いてる関係から
+</I>&gt;<i> &gt;&gt; 起きてる問題ではないかと思われます。
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 今手元で確認できないのですが…
+</I>&gt;<i> &gt;&gt; もし、よければどなたか、VM ソースの中の
+</I>&gt;<i> &gt;&gt; CFStringNormalize 関数で引数
+</I>&gt;<i> &gt;&gt; の定数を以下のように
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; kCFStringNormalizationFormKC
+</I>&gt;<i> &gt;&gt;      → kCFStringNormalizationFormC
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; kCFStringNormalizationFormKD
+</I>&gt;<i> &gt;&gt;      → kCFStringNormalizationFormD
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 変更してビルドしたものだとどうなるでしょうか？
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; --
+</I>&gt;<i> &gt;&gt; Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+</I>&gt;<i> &gt;&gt; PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; -------------------------------
+</I>&gt;<i> &gt; ^. .^    Kouji Takahashi  &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tako ＠ aquilax.co.jp</A>&gt;
+</I>&gt;<i> &gt;  ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> --
+</I>&gt;<i> Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+</I>&gt;<i> PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+</I>
+
+-------------------------------
+^. .^    Kouji Takahashi  &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tako ＠ aquilax.co.jp</A>&gt;
+ ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002451.html">[Squeak-ja: 2451] nihongo7 updates (5/21)
+</A></li>
+	<LI>次の記事 <A HREF="002455.html">[Squeak-ja: 2455] Re: MacOSX で  FileDirectry fileNames の全角数字が半角になる
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2452">[ 日付 ]</a>
+              <a href="thread.html#2452">[ スレッド ]</a>
+              <a href="subject.html#2452">[ 件名 ]</a>
+              <a href="author.html#2452">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

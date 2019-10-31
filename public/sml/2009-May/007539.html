@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7539] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207539%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=200905140752.50955.tomohiro%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007538.html">
+   <LINK REL="Next"  HREF="007540.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7539] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207539%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=200905140752.50955.tomohiro%40sra.co.jp"
+       TITLE="[SML 7539] Re: 第7回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 5月 14日 (木) 08:40:19 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007538.html">[SML 7538] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007540.html">[SML 7540] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7539">[ 日付 ]</a>
+              <a href="thread.html#7539">[ スレッド ]</a>
+              <a href="subject.html#7539">[ 件名 ]</a>
+              <a href="author.html#7539">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠上賀茂です。
+
+Tomohiro Oda さんは書きました:
+&gt;<i> これらに加えて、指し示される側について、
+</I>&gt;<i> 識別子(id)
+</I>&gt;<i> 参照(reference)
+</I>&gt;<i> 番地(address)
+</I>&gt;<i> 領域(memory block)
+</I>&gt;<i> ビット列(bit sequence)
+</I>&gt;<i> ：
+</I>&gt;<i> 型(type)
+</I>&gt;<i> クラス(class)
+</I>&gt;<i> といったあたりを整理する必要がありそうですね。
+</I>
+はい、そう思います。
+
+昨夜も板書したのですが、プログラミング言語Cで「x += 1;」とい
+う記述（note）をしますでしょ。この記述に現れているxは少なくと
+も2つことを表現しています。
+
+xに1を足してxに入れる「x = x + 1;」と書き改めれば、もっとハッ
+キリします。右辺のxはxと名づけた内容ですが、左辺のxはxと名づ
+けた番地になります。
+
+記述が同じなのに書き記す所（この例の場合、右辺であるか、左辺
+であるか）によって異なっていることを、腑に落とさずに歩みを進
+めると、参照操作が出現したときに失速します。*xも&amp;xも区別がつ
+かず、**xや***xで「きゃぁ〜」と声を出し、「ポインタは難しい」
+とぬかすことになります。:-)
+
+単写（複写をしても同値）が保たれる拘束、等値を云々しながらの
+束縛、等々へと通じている道を見失いますね。
+
+&gt;<i> 認知言語学では名前に関しては典型例を示す(prototype)ということにも注目します。
+</I>&gt;<i> あと、同じく認知言語学では、Meaning is a process rather than a discrete 'thing'
+</I>&gt;<i> that can be 'packaged' by language.などと言われていて、プログラミング言語から
+</I>&gt;<i> 見ると、「なるほどねえ」と納得できることが多々あります。
+</I>&gt;<i> また、意味がプロセスである以上、CPUと脳という2種類のプロセッサそれぞれ向けに
+</I>&gt;<i> 定義される「意味」があるはずだと思いますが、プログラミング言語の人間向けの意味論
+</I>&gt;<i> の研究は残念ながら今のところあまり見かけません。
+</I>
+まったくもって仰せの通りです。
+
+メッセージ名（メッセージセレクタ）とメソッドの束縛が動的に行
+われるようになって久しいですが、いまやクラス名（キャピタルシ
+ンボル）とクラスの束縛さえも動的に行われる状況となっています
+ので、egaerからlazyへと時代が移っているのだと思います。
+
+あなたの値は何ですか？と問われるまで（valueというメッセージが
+送信されるまで）評価や束縛をサボって（遅らせて）いるのが普通
+になりましたから、意味がプロセスという観点からすれば、まとめ
+るのも容易ではないでしょう。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007538.html">[SML 7538] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007540.html">[SML 7540] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7539">[ 日付 ]</a>
+              <a href="thread.html#7539">[ スレッド ]</a>
+              <a href="subject.html#7539">[ 件名 ]</a>
+              <a href="author.html#7539">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

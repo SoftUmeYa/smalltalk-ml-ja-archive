@@ -1,0 +1,1616 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jul  1 04:10:16 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jul  1 04:10:30 2009
+Subject: [SML 7580] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+Message-ID: <4A4A6318.10201@cc.kyoto-su.ac.jp>
+
+おはようございます、青木＠京都宇治です。
+
+備忘のためにポストします。今日は京都でのSmalltalk勉強会です。
+ブロッククロージャのための特別資料を用意しました。万障繰り合
+わせてご参集くださいませ。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+Subject: 第9回Smalltalk勉強会＠京都
+Date: Tue, 23 Jun 2009 10:45:05 +0900
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+To: Smalltalkers' Salon Mailing List <sml@smalltalk.jp>
+
+> 青木＠京都上賀茂です。
+> 
+> 第9回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+> JR京都駅前にご参集ください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto9
+> 
+> 第9回 Smalltalk勉強会＠京都
+> 日時：2009年07月01日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> 前回は3.6のカスケードまでゆきましたので、今回は代入やリターン
+> をサクっと終わらせて、3.7のブロックを解題してゆきます。ブロッ
+> クは略称でして、正式な名称はブロッククロージャになります。コ
+> ンテクスト（ブロックコンテクストやメソッドコンテクスト）との
+> 縁がとても深いオブジェクトであり、 Smalltalk実行評価系の中核
+> をなします。ブロッククロージャをモノにできれば、Smalltalkをモ
+> ノにしたと言っても過言ではありません。勉強会を始めて第9回目に
+> なりますが、ここが大きな山場でしょう。なお一層、ゆっくりと進
+> みたいと思います。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+From shin-sahara ＠ kuzo.csk.com  Thu Jul  2 15:02:47 2009
+From: shin-sahara ＠ kuzo.csk.com (佐原 伸)
+Date: Thu Jul  2 15:03:03 2009
+Subject: [SML 7581] Re: Duration
+In-Reply-To: <4A484653.6080405@cc.kyoto-su.ac.jp>
+References: <4A484653.6080405@cc.kyoto-su.ac.jp>
+Message-ID: <7FAF8143-9322-4240-8E2B-9D7096720905@kuzo.csk.com>
+
+今日から兼業農家ならぬ、兼業ソフトウェア技術者の佐原です。
+
+On 2009/06/29, at 13:42, AOKI Atsushi wrote:
+
+> さて、さて、皆さん、Duration の適切な日本語訳は何で 
+> しょうか？
+
+「間」ではどうでしょう？
+
+
+------------------------------------------------------------------------
+Shin Sahara
+Executive General Manage
+VDM Promotion Section
+Manufacturing Group
+CSK Systems Corporation
+E-Mail: ss@shinsahara.com(I can read anywhere), shin- 
+sahara@kuzo.csk.com (I can read in CSK only)
+Phone: +81-3-6901-5104
+Fax: +81-3-6901-5111
+Mobile:  +81-80-1114-3378(in the world), +81-80-3089-7518(in the world),
+------------------------------------------------------------------------
+Shin Sahara
+Adviser
+TAO BEARS LLC.
+E-Mail: ss@shinsahara.com, ss@taobears.com(現在まだ不通）
+Tel: +81-45-641-8344
+Fax: +81-45-641-8344
+------------------------------------------------------------------------
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090702/ddcf550d/attachment.htm
+From Narita.Takaoki ＠ exc.epson.co.jp  Thu Jul  2 15:25:36 2009
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Thu Jul  2 15:25:38 2009
+Subject: [SML 7582] Re: Duration
+In-Reply-To: <7FAF8143-9322-4240-8E2B-9D7096720905@kuzo.csk.com>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860AC0A87B@JPESWA304.apo.epson.net>
+
+セイコーエプソンの成田です。
+
+> On 2009/06/29, at 13:42, AOKI Atsushi wrote:
+>
+> さて、さて、皆さん、Duration の適切な日本語訳は何でしょうか？
+
+これって Java から「良いもの」をいただいてきたってもんなんでしょうかね？
+どういう経緯で VisualWorks に入ってきたんだろう・・・
+
+# 別に良いとか悪いとか関係なく、単なる興味にしか過ぎないけれど。
+
+> 「間」ではどうでしょう？
+
+「間」と言われると時間（期間）的な間だけじゃなくて、空間的な間、時節の
+間（間が悪いとかの間）なども含まれてしまいます。なんらかの限定をする
+ような修飾がないとちょっと不安です。
+
+で、「期間」以外の概念を含んでいるのでしょうか、Duration は？また、「期
+間」は、Duration 以外の概念を含んでいるのでしょうか？
+
+--
+成田隆興 @ 機器ソフトウェア管理部 機器ソフトウェア統括センター
+  セイコーエプソン株式会社
+From tomohiro ＠ sra.co.jp  Thu Jul  2 15:35:27 2009
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Thu Jul  2 15:35:30 2009
+Subject: [SML 7583] Re: Duration
+In-Reply-To: <4306F7126D35DA4B8A115EA505FA06860AC0A87B@JPESWA304.apo.epson.net>
+References: <4306F7126D35DA4B8A115EA505FA06860AC0A87B@JPESWA304.apo.epson.net>
+Message-ID: <200907021535.27292.tomohiro@sra.co.jp>
+
+おだです。
+
+> で、「期間」以外の概念を含んでいるのでしょうか、Duration は？また、「期
+> 間」は、Duration 以外の概念を含んでいるのでしょうか？
+
+期間という場合、特定の日時から特定の日時までの区間を表わすことがあると思います。
+青木さんが示した用例から言うと、私には「時間量」ぐらいしか思いつきません。
+---
+おだ
+
+木 7月 2 2009 15:25:36 に Narita Takaoki さんは書きました:
+> セイコーエプソンの成田です。
+>
+> > On 2009/06/29, at 13:42, AOKI Atsushi wrote:
+> >
+> > さて、さて、皆さん、Duration の適切な日本語訳は何でしょうか？
+>
+> これって Java から「良いもの」をいただいてきたってもんなんでしょうかね？
+> どういう経緯で VisualWorks に入ってきたんだろう・・・
+>
+> # 別に良いとか悪いとか関係なく、単なる興味にしか過ぎないけれど。
+>
+> > 「間」ではどうでしょう？
+>
+> 「間」と言われると時間（期間）的な間だけじゃなくて、空間的な間、時節の
+> 間（間が悪いとかの間）なども含まれてしまいます。なんらかの限定をする
+> ような修飾がないとちょっと不安です。
+>
+> で、「期間」以外の概念を含んでいるのでしょうか、Duration は？また、「期
+> 間」は、Duration 以外の概念を含んでいるのでしょうか？
+>
+> --
+> 成田隆興 @ 機器ソフトウェア管理部 機器ソフトウェア統括センター
+>   セイコーエプソン株式会社
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jul  2 15:39:48 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jul  2 15:39:51 2009
+Subject: [SML 7584] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <4A4A6318.10201@cc.kyoto-su.ac.jp>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+	<4A4A6318.10201@cc.kyoto-su.ac.jp>
+Message-ID: <4A4C5634.8080000@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+昨夜のSmalltalk勉強会@京都の報告をさせていただきます。テキス
+トの3.6を簡単に済ませて、山場の3.7の「ブロック」に入りました。
+
+ブロッククロージャが実行算法（アルゴリズム）と実行環境（コン
+テクスト）を閉包するものであることを、参加いただいた方々に得
+心していただけたように思います。
+
+勉強会で用いた特別資料をウェブ公開させていただきます。昨夜は、
+インスタンス・評価（引数無しの実行）・評価（引数付きの実行）・
+評価（引数の間引き実行）・評価（引数の間引き実行）を行いまし
+た。cull系のメッセージ群が目新しかったのではないでしょうか。
+
+http://www.cc.kyoto-su.ac.jp/atsushi/Programs/BlockClosure/index-j.html
+
+この特別資料は、まだまだ加筆したいと思っていますので、今後に
+期待してくださいませ。
+
+また、濱崎さんより助太刀のプログラムを提示していただき、なお
+一層の理解と行解が進んだように思いますので、そのプログラムも
+濱崎さんに成り代わりまして私から紹介させていただきます。
+
+次のプログラムを実行すると、ブロックを調べるためのインスペク
+タが開いてきます。そのインスペクタのウィンドウの下部ペインに
+はself valueと入力されているはずです。
+
+| aValue aBlock |
+aValue := 2.
+aBlock :=
+        [| a b c |
+        a := b := c := aValue.
+        (a * b * c) yourself].
+anInspector := Tools.Trippy.InspectorShell new.
+((anInspector class classPool)
+    at: #EvaluationPaneWasLastShown put: true;
+    at: #SharedTextHolder) value: 'self value'.
+anInspector
+    open;
+    inspect: aBlock
+
+では、self valueを評価（実行）してください。8と応答されると思
+います。
+
+その次に、下記のプログラムを実行してください。トランスクリプ
+トにはProgram finished.と出力されます。
+
+| aValue aBlock |
+aValue := 2.
+aBlock :=
+        [| a b c |
+        a := b := c := aValue.
+        (a * b * c) yourself].
+anInspector := Tools.Trippy.InspectorShell new.
+((anInspector class classPool)
+    at: #EvaluationPaneWasLastShown put: true;
+    at: #SharedTextHolder) value: 'self value'.
+anInspector
+    open;
+    inspect: aBlock.
+aValue := 3.
+Transcript
+    clear;
+    nextPutAll: 'Program finished.'
+
+そして、同様にインスペクタの中でself valueを評価してください。
+今度は27と応答されると思います。
+
+実行が完了しているはずのプログラムの実行環境をブロックが保持
+していることがお分かりですか。
+
+それが証拠に、最初のプログラムで、(a * b * c) yourselfの前に
+^をつけて、同じことをしてみると、アラート（ウォークバック）が
+現れます。戻るべきコンテクストが無いんだけど…、と言われます。
+
+| aValue aBlock |
+aValue := 2.
+aBlock :=
+        [| a b c |
+        a := b := c := aValue.
+        ^(a * b * c) yourself].
+anInspector := Tools.Trippy.InspectorShell new.
+((anInspector class classPool)
+    at: #EvaluationPaneWasLastShown put: true;
+    at: #SharedTextHolder) value: 'self value'.
+anInspector
+    open;
+    inspect: aBlock
+
+実行算法（アルゴリズム）と実行環境（コンテクスト）の双方を閉
+包するブロッククロージャは、様々な常識的な定義の再考察を迫っ
+てきます。たとえば、一時変数の説明の言い回しも考え直さねばな
+らんなぁ〜、とね。
+
+来月はブロッククロージャ第２段として、プログラム制御構造を核
+にして行いたいと思います。分岐・繰り返し・再帰・巻き戻し・例
+外はもとより、並行・約束・継続までをやりたいと目論んでいます。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jul  2 15:43:14 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jul  2 15:43:18 2009
+Subject: [SML 7585] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <4A4C5634.8080000@cc.kyoto-su.ac.jp>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+	<4A4A6318.10201@cc.kyoto-su.ac.jp>
+	<4A4C5634.8080000@cc.kyoto-su.ac.jp>
+Message-ID: <4A4C5702.4000008@cc.kyoto-su.ac.jp>
+
+私は書きました:
+> http://www.cc.kyoto-su.ac.jp/atsushi/Programs/BlockClosure/index-j.html
+URLを間違ってしまいました。「~」が抜けていました。
+
+正しくは
+http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/BlockClosure/
+です。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From Narita.Takaoki ＠ exc.epson.co.jp  Thu Jul  2 16:15:56 2009
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Thu Jul  2 16:15:59 2009
+Subject: [SML 7586] Re: Duration
+In-Reply-To: <200907021535.27292.tomohiro@sra.co.jp>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860AC0A87C@JPESWA304.apo.epson.net>
+
+成田です。
+
+> > で、「期間」以外の概念を含んでいるのでしょうか、Duration は？また、「期
+> > 間」は、Duration 以外の概念を含んでいるのでしょうか？
+> 
+> 期間という場合、特定の日時から特定の日時までの区間を表わすことがあると思います。
+> 青木さんが示した用例から言うと、私には「時間量」ぐらいしか思いつきません。
+
+「〜に転用できる or 〜にも使える or 実現方法としてそうなった」と「〜のために作った」とは、
+結果が同じでも名前の付け方の立場がかなり違うと思えます。「Duration は、こんなこともで
+きます」というベースで話すか、「Duration は、こういうことをするためのものです」というベース
+で話すかは、私には全然別の話に思えます。
+
+その上でどっちの立場で名前付けをするのか？という方針の決定の問題になるかと考えます
+が、どっちの名付け方をするかは、Smalltalk の全体的な方針というか傾向で選択した方が
+良いと判断します。
+
+＃もとの名前(Duration)を変えるという選択肢もあるわけだけれど・・・
+
+それとも本当は Duration をどう訳すかではなくて、「こういうふうに使えるものをどう名づける
+か？」というお題なのかな？
+
+というのは置いておいて、duration の語意からすれば期間が適当な気もするけれど、用法か
+ら名づけるなら時間量が適当と確かに思えますね。
+
+--
+成田隆興 @ 機器ソフトウェア管理部 機器ソフトウェア統括センター
+  セイコーエプソン株式会社
+From umejava ＠ mars.dti.ne.jp  Thu Jul  2 21:35:06 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Jul  2 21:35:09 2009
+Subject: [SML 7587] Re: Duration
+In-Reply-To: <4306F7126D35DA4B8A115EA505FA06860AC0A87B@JPESWA304.apo.epson.net>
+References: <4306F7126D35DA4B8A115EA505FA06860AC0A87B@JPESWA304.apo.epson.net>
+Message-ID: <JxFo4g0SDOV.qqdZSpgEpdKw2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Narita Takaoki <Narita.Takaoki@exc.epson.co.jp> wrote:
+> セイコーエプソンの成田です。
+> 
+> > On 2009/06/29, at 13:42, AOKI Atsushi wrote:
+> >
+> > さて、さて、皆さん、Duration の適切な日本語訳は何でしょうか？
+> 
+> これって Java から「良いもの」をいただいてきたってもんなんでしょうかね？
+> どういう経緯で VisualWorks に入ってきたんだろう・・・
+
+
+Javaからもらってきたというよりは、ANSI Smalltalkで定義されているので、それを
+反映させたということではないでしょうか。
+http://wiki.squeak.org/squeak/172
+
+#もちろん、VisualWorksならではの拡張もされているとは思いますが。
+
+7.7より前であっても、Chronosを使えばDurationを導入することはできました。
+http://www.chronos-st.org/
+
+こちらもANSI Smalltalk準拠になっています。時間関係でそこまでするか??
+と思うくらいの、大変リッチなライブラリであり、かつ様々なSmalltalkで
+動作するので非常に便利です。
+
+---
+[:masashi | ^umezawa]
+From tomohiro ＠ sra.co.jp  Fri Jul  3 09:23:17 2009
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Jul  3 09:23:25 2009
+Subject: [SML 7588] Re: Duration
+In-Reply-To: <4306F7126D35DA4B8A115EA505FA06860AC0A87C@JPESWA304.apo.epson.net>
+References: <4306F7126D35DA4B8A115EA505FA06860AC0A87C@JPESWA304.apo.epson.net>
+Message-ID: <200907030923.17623.tomohiro@sra.co.jp>
+
+おだです。
+
+> 「〜に転用できる or 〜にも使える or 実現方法としてそうなった」と「〜のために作った」とは、
+> 結果が同じでも名前の付け方の立場がかなり違うと思えます。「Duration は、こんなこともで
+> きます」というベースで話すか、「Duration は、こういうことをするためのものです」というベース
+> で話すかは、私には全然別の話に思えます。
+
+そうですね。
+名前の付け方というのは色々あると思います。
+経緯をあらわすものもあれば、将来像をあらわすものもあります。
+内容を表現することもあるし、役割を表現することもあります。
+
+私はSmalltalkなどのOOPLにおけるクラスの多くは実装としての
+実体であって、その役割というものは他のクラスとの関係性のなかで
+決まってくるものだと思っています。
+そういう意味で、DurationのsuperclassであるMagnitudeの存在は
+無視し難いものがありますし、Magnitudeおよびその仲間達との
+差異というものも重要な要素だと思います。その流れから「時間量」
+という言葉が頭に浮かびました。「時間巾」でもいいかもしれません。
+
+と言いながら、ほかにどんな名前が出てくるのか、わくわくしながら
+見ているというのが正直なところです :-)
+---
+おだ
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Jul  3 09:27:24 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Jul  3 09:27:26 2009
+Subject: [SML 7589] Re: Duration
+In-Reply-To: <200907030923.17623.tomohiro@sra.co.jp>
+References: <4306F7126D35DA4B8A115EA505FA06860AC0A87C@JPESWA304.apo.epson.net>
+	<200907030923.17623.tomohiro@sra.co.jp>
+Message-ID: <4A4D506C.4060607@cc.kyoto-su.ac.jp>
+
+Tomohiro Oda さんは書きました:
+> と言いながら、ほかにどんな名前が出てくるのか、わくわくしながら
+> 見ているというのが正直なところです :-)
+
+まったくもって同感です。:-)
+
+--- 青木淳＠京都上賀茂
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Jul  3 09:38:07 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Jul  3 09:38:09 2009
+Subject: [SML 7590] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <4A4C5702.4000008@cc.kyoto-su.ac.jp>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>	<4A4A6318.10201@cc.kyoto-su.ac.jp>	<4A4C5634.8080000@cc.kyoto-su.ac.jp>
+	<4A4C5702.4000008@cc.kyoto-su.ac.jp>
+Message-ID: <4A4D52EF.7040802@cc.kyoto-su.ac.jp>
+
+勉強会のときに他し事（あだしごと）として話しました暖簾（のれ
+ん）ですが、ウェブページにあげました。青木ハンコの押印が…。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Profile/index-j.html#Laboratory
+
+手細工で「ものつくり」をする器用さは、プログラミング能力とも
+正の相関があると思います。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From Narita.Takaoki ＠ exc.epson.co.jp  Fri Jul  3 12:55:22 2009
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Fri Jul  3 12:55:25 2009
+Subject: [SML 7591] Re: Duration
+In-Reply-To: <JxFo4g0SDOV.qqdZSpgEpdKw2@mars.dti.ne.jp>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860AC0A882@JPESWA304.apo.epson.net>
+
+成田です。
+
+> 梅澤です。
+> > セイコーエプソンの成田です。
+> > 
+> > > On 2009/06/29, at 13:42, AOKI Atsushi wrote:
+> > >
+> > > さて、さて、皆さん、Duration の適切な日本語訳は何でしょうか？
+> > 
+> > これって Java から「良いもの」をいただいてきたってもんなんでしょうかね？
+> > どういう経緯で VisualWorks に入ってきたんだろう・・・
+> 
+> 
+> Javaからもらってきたというよりは、ANSI Smalltalkで定義されているので、それを
+> 反映させたということではないでしょうか。
+> http://wiki.squeak.org/squeak/172
+
+Dec.1997 に入っているということは、Java より先と推論して、Java がむしろ、これみて
+良いものだと入れたという可能性がありますね。
+
+ANSIのだと
+
+　<magnitude>--+---<DateAndTime>
+                         |
+                         +---<Duration>
+
+となっとりますね。で、
+
+  Description: Represents a length of time.
+
+と書かれている。
+
+--
+成田隆興 @ 機器ソフトウェア管理部 機器ソフトウェア統括センター
+  セイコーエプソン株式会社
+Voice: 0263-86-5476  Fax: 0263-86-5491
+From Narita.Takaoki ＠ exc.epson.co.jp  Fri Jul  3 15:03:10 2009
+From: Narita.Takaoki ＠ exc.epson.co.jp (Narita Takaoki)
+Date: Fri Jul  3 15:03:12 2009
+Subject: [SML 7592] Re: Duration
+In-Reply-To: <200907030923.17623.tomohiro@sra.co.jp>
+Message-ID: <4306F7126D35DA4B8A115EA505FA06860AC0A88B@JPESWA304.apo.epson.net>
+
+成田です。
+
+> おだです。
+	：
+> 私はSmalltalkなどのOOPLにおけるクラスの多くは実装としての
+> 実体であって、その役割というものは他のクラスとの関係性のなかで
+> 決まってくるものだと思っています。
+
+実在は本質に先立つ、に近い考え方でしょうか。構造主義的かな？
+
+私は設計者がどういう意図、思惑でもって作ったかを適切に表す名前であればそれ
+で良いかと考えます。どちらかというと系の中での機能性に着目している立場かも。
+ま、これも実在は本質に先立つ立場ではあるのだけれど。
+
+とはいえ強い信念ではないので、他の立場も話の筋が通ればなんぼでも許容はし
+ます。
+
+名前が付くとそれが発想を制約したりする弊害はありますが、テクノロジスト（エンジ
+ニア）たるもの、他の技術領域の技術を転用・適用する（一種の発明）のは、その機
+能の一つであり、そのアビリティーに欠けるなら、その人の仕事は人の跡を辿ること
+が多いと思えます。
+
+となるなら、ソフトウェアエンジニアも、そのものの名前はどうあれ使えるところに適切
+に使う能力は求められるし、それが出来れば名前は制約にはならないはず。
+
+加えるに、そのものの名前はどうあれ使えるところに適切に使うには、そのものをハ
+ックする技能や、抽象的に捉えなおす思考や、なんやかんやを必要とすると思う。ハ
+ックした結果を何らかの自身で転用できる知識形態、情報へ転化（昇華）できて、さ
+らにその知識や情報を実際の目の前の状況にあわせて適用、適応させることができ
+ないと「着実な」転用は無理ではないか？と思います。
+
+閑話休題。
+
+> そういう意味で、DurationのsuperclassであるMagnitudeの存在は
+> 無視し難いものがありますし、Magnitudeおよびその仲間達との
+> 差異というものも重要な要素だと思います。その流れから「時間量」
+> という言葉が頭に浮かびました。「時間巾」でもいいかもしれません。
+
+うーん、時間曲尺、時間尺、時間のべがね、時間測度、時間計算尺・・・題意がわか
+らんので、この辺で私は打ち止めかな？
+
+--
+成田隆興 @ 機器ソフトウェア管理部 機器ソフトウェア統括センター
+  セイコーエプソン株式会社
+From osamu.hamasaki ＠ gmail.com  Fri Jul  3 23:39:47 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Fri Jul  3 23:39:51 2009
+Subject: [SML 7593] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <4A4C5634.8080000@cc.kyoto-su.ac.jp>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+	<4A4A6318.10201@cc.kyoto-su.ac.jp>
+	<4A4C5634.8080000@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd30907030739i4629c35do375c8a6c4e54d471@mail.gmail.com>
+
+濱崎です。
+
+2009/07/02 15:39 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+
+> 青木＠京都上賀茂です。
+
+＜中略＞
+
+>
+> 実行算法（アルゴリズム）と実行環境（コンテクスト）の双方を閉
+> 包するブロッククロージャは、様々な常識的な定義の再考察を迫っ
+> てきます。たとえば、一時変数の説明の言い回しも考え直さねばな
+> らんなぁ〜、とね。
+>
+
+もうひとつ「一時変数と言って良いのか？」と考えることになる例を書いて
+みました。
+
+まずは下準備で、ワークスペースで以下のプログラムを実行して下さい。
+３つのワークスペース変数を用意します。
+
+| aWorkbook |
+aWorkbook := ScheduledControllers activeController model.
+aWorkbook addLocal: #ResetBlock.
+aWorkbook addLocal: #IncrementBlock.
+aWorkbook addLocal: #DecrementBlock
+
+
+次に、同じワークスペースで以下のプログラムを実行して下さい。
+３つのブロッククロージャを作って先ほど用意したワークスペース変数に
+束縛します。
+
+| x |
+ResetBlock :=
+[x := 0.
+Transcript show: x printString].
+
+IncrementBlock :=
+[x := x + 1.
+Transcript space; show: x printString].
+
+DecrementBlock :=
+[x := x - 1.
+Transcript space; show: x printString]
+
+
+次に、また同じワークスペースで以下のプログラムを実行して下さい。
+三歩進んで二歩下がる数の列をトランスクリプトに表示するプログラムですが、
+一時変数 x に関し、このプログラムで用意した物と、ブロッククロージャの中で
+使われている物は、全く縁が切れているのがお分かり頂けると思います。
+
+| x |
+Transcript clear.
+ResetBlock value.
+x := 100.
+2 timesRepeat: [
+3 timesRepeat: [IncrementBlock value].
+2 timesRepeat: [DecrementBlock value]].
+Transcript cr; show: x printString.
+2 timesRepeat: [
+3 timesRepeat: [IncrementBlock value].
+2 timesRepeat: [DecrementBlock value]]
+
+
+最後に、同じワークスペースで以下のプログラムを実行して下さい。
+後始末をします。
+
+| aWorkbook anEnvironment |
+aWorkbook := ScheduledControllers activeController model.
+anEnvironment := aWorkbook doItEnvironment.
+#(#ResetBlock #IncrementBlock #DecrementBlock)
+do: [:each | anEnvironment removeKey: each].
+Transcript clear
+
+以上です。
+
+------------
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090703/8547f33b/attachment.html
+From take ＠ takeoka.net  Sat Jul  4 13:14:25 2009
+From: take ＠ takeoka.net (Shozo TAKEOKA)
+Date: Sat Jul  4 13:14:32 2009
+Subject: [SML 7594] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <1bc06fd30907030739i4629c35do375c8a6c4e54d471@mail.gmail.com>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+	<4A4A6318.10201@cc.kyoto-su.ac.jp>
+	<4A4C5634.8080000@cc.kyoto-su.ac.jp>
+	<1bc06fd30907030739i4629c35do375c8a6c4e54d471@mail.gmail.com>
+Message-ID: <843103c60907032114o5ff60b73y99370c1feb282e3a@mail.gmail.com>
+
+> もうひとつ「一時変数と言って良いのか？」と考えることになる例を書いて
+
+一般的に、クロージャ中にバインドされている変数は、
+一時変数と言えないと思います。
+
+「一時変数」という言葉の定義によりますが、
+通常は、
+  一時変数は、その寿命(エクステント)は、関数(手続き)から抜けた時に、消滅するもの
+と思われていると思います。
+
+クロージャ中に保持されている変数は、スコープは局所的ですが、
+エクステントは、クロージャの存在と同じなので、
+一般的に言われている「一時変数」ではない、と思いますし、
+通常「一時変数」と呼ばないと思います。
+
+たけおか
+
+
+
+2009/7/3 濱崎治 <osamu.hamasaki@gmail.com>:
+> 濱崎です。
+>
+> 2009/07/02 15:39 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+>>
+>> 青木＠京都上賀茂です。
+>
+> ＜中略＞
+>>
+>> 実行算法（アルゴリズム）と実行環境（コンテクスト）の双方を閉
+>> 包するブロッククロージャは、様々な常識的な定義の再考察を迫っ
+>> てきます。たとえば、一時変数の説明の言い回しも考え直さねばな
+>> らんなぁ〜、とね。
+>
+>
+> もうひとつ「一時変数と言って良いのか？」と考えることになる例を書いて
+> みました。
+> まずは下準備で、ワークスペースで以下のプログラムを実行して下さい。
+> ３つのワークスペース変数を用意します。
+> | aWorkbook |
+> aWorkbook := ScheduledControllers activeController model.
+> aWorkbook addLocal: #ResetBlock.
+> aWorkbook addLocal: #IncrementBlock.
+> aWorkbook addLocal: #DecrementBlock
+>
+> 次に、同じワークスペースで以下のプログラムを実行して下さい。
+> ３つのブロッククロージャを作って先ほど用意したワークスペース変数に
+> 束縛します。
+> | x |
+> ResetBlock :=
+> [x := 0.
+> Transcript show: x printString].
+> IncrementBlock :=
+> [x := x + 1.
+> Transcript space; show: x printString].
+> DecrementBlock :=
+> [x := x - 1.
+> Transcript space; show: x printString]
+>
+> 次に、また同じワークスペースで以下のプログラムを実行して下さい。
+> 三歩進んで二歩下がる数の列をトランスクリプトに表示するプログラムですが、
+> 一時変数 x に関し、このプログラムで用意した物と、ブロッククロージャの中で
+> 使われている物は、全く縁が切れているのがお分かり頂けると思います。
+> | x |
+> Transcript clear.
+> ResetBlock value.
+> x := 100.
+> 2 timesRepeat: [
+> 3 timesRepeat: [IncrementBlock value].
+> 2 timesRepeat: [DecrementBlock value]].
+> Transcript cr; show: x printString.
+> 2 timesRepeat: [
+> 3 timesRepeat: [IncrementBlock value].
+> 2 timesRepeat: [DecrementBlock value]]
+>
+> 最後に、同じワークスペースで以下のプログラムを実行して下さい。
+> 後始末をします。
+> | aWorkbook anEnvironment |
+> aWorkbook := ScheduledControllers activeController model.
+> anEnvironment := aWorkbook doItEnvironment.
+> #(#ResetBlock #IncrementBlock #DecrementBlock)
+> do: [:each | anEnvironment removeKey: each].
+> Transcript clear
+> 以上です。
+> ------------
+>
+> Osamu Hamasaki
+>
+>
+From take ＠ takeoka.net  Sat Jul  4 13:24:03 2009
+From: take ＠ takeoka.net (Shozo TAKEOKA)
+Date: Sat Jul  4 13:24:07 2009
+Subject: [SML 7595] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <843103c60907032114o5ff60b73y99370c1feb282e3a@mail.gmail.com>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+	<4A4A6318.10201@cc.kyoto-su.ac.jp>
+	<4A4C5634.8080000@cc.kyoto-su.ac.jp>
+	<1bc06fd30907030739i4629c35do375c8a6c4e54d471@mail.gmail.com>
+	<843103c60907032114o5ff60b73y99370c1feb282e3a@mail.gmail.com>
+Message-ID: <843103c60907032124w21b96e0vbff54eaded34e100@mail.gmail.com>
+
+> クロージャ中に保持されている変数は、スコープは局所的ですが、
+　　　:
+> 通常「一時変数」と呼ばないと思います。
+
+普通「局所変数(ローカル変数)」といいますよね。スコープは局所的だし。
+エクステントはともかく。
+
+僕は、「一時変数」という日本語は、ほんとにテンポラリな時しか使わないのですが…
+
+たけおか
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Jul  4 21:20:04 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Jul  4 21:20:33 2009
+Subject: [SML 7596] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <843103c60907032124w21b96e0vbff54eaded34e100@mail.gmail.com>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>	<4A4A6318.10201@cc.kyoto-su.ac.jp>	<4A4C5634.8080000@cc.kyoto-su.ac.jp>	<1bc06fd30907030739i4629c35do375c8a6c4e54d471@mail.gmail.com>	<843103c60907032114o5ff60b73y99370c1feb282e3a@mail.gmail.com>
+	<843103c60907032124w21b96e0vbff54eaded34e100@mail.gmail.com>
+Message-ID: <4A4F48F4.6010001@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+濱崎さんに新たに示していただいたプログラムも面白いですね。先
+のメールにて私が濱崎さんに成り代わって示しましたプログラムと
+比較すると、縁が結ばれていること、そして、縁が切れていること、
+これらが明瞭に対照されます。
+
+続いて、変数をスコープ（範囲）とエクステント（寿命）で言及す
+ることの大切さを、たけおかさんに示していただきました。理解に
+も行解にも役立ちます。
+
+一時変数や局所変数など、変数の名称や定義で縛るよりも、当該の
+プログラムを動かした事実（プログラマが遭遇した目の前の事実）
+で縛るほうが有効でしょう。ひとりでも多くの方々に当該のプログ
+ラムを動かしていただきたいと思います。
+
+言葉にはプログラマが遭遇する事実をあまりにも明瞭に切ってしま
+う性質があります。気をつけなければなりません。まずは術語云々
+から遠離しておいたほうがいいと思います。
+
+聞いた話の内容を自分で再現した人、話を聞いただけに留めた人、
+大きな差になります。本田宗一郎さん風にゆきませう、言葉の定義
+のみを重んじる人たち、どうも百パーセント信じきれないものがあ
+りますからね。:-)
+
+私がここに記したこと自体が「盲人に語るのでなければ言葉で伝え
+ようとするな。言葉は自明で本質的なことを語るのみにせよ。」と
+言い残したレオナルド・ダ・ヴィンチさんのこころざしに反するか
+もしれないのですが…。
+
+＃ここに書いたことをプログラムで伝える、これ、まだ私にはでき
+＃ないんですよ。再現できないことが言及されている論文なんて…。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umrlazybind ＠ gmail.com  Sun Jul  5 06:39:01 2009
+From: umrlazybind ＠ gmail.com (Hiroshi Umeoka)
+Date: Sun Jul  5 06:39:09 2009
+Subject: [SML 7597] クロージャ
+Message-ID: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+
+おはようございます、梅岡です。
+先日の京都の勉強会、Smalltalkのブロッククロージャを興味深く拝聴しました。
+個人的な話しで恐縮なのですが、FortranとCしか知らない駆け出しの頃、何気なく新宿紀伊国屋で手にしたマグロウヒルの「プログラムの構造と実行」という本でクロージャを目にし、読んでみて驚愕したのがついこの間のことのようです。
+プログラムが実行されるスタックやらコンテキストを意識するようになったのはそれからでした。
+その例題は、確かこんな感じでした。
+(本はLisp系言語であるSchemeで書かれていましたが、ここではSmalltalkで挑戦です:-)
+〓
+
+〓〓〓〓〓〓| accountTemplate accountX accountY |
+
+"口座を定義。ブロックを返すブロック"
+accountTemplate :=
+    [:initial |
+    | amount |
+        amount := initial.
+        [:withdraw |
+            amount := amount - withdraw] ].
+
+"初回の預け入れで口座を複数開設"
+accountX := accountTemplate value: 1000.
+accountY := accountTemplate value: 6666.
+
+"各口座からの引き出しと残高表示"
+Transcript
+	cr;
+	show: (accountX value: 30) printString;
+	cr;
+	show: (accountY value: 222) printString.
+	cr;
+	show: (accountY value: 111) printString.
+
+
+----
+970
+6444
+6333
+----
+
+amount がインスタンス変数のように機能しますね。まるでブロックがオブジェクトのように振る舞っています。クロージャって面白いっ、と単純に思いました。
+ちなみに、このとき以来Schemeにハマったのですが、このクロージャの次に衝撃を受けたのが、竹岡さんのユニマガの連載「マジカルミステリーツアーいたしましょ」のSchemeの「継続(Continuation)」で並行処理を書く記事でした。
+(最近ああいう記事を載せる雑誌が見当たらなくて寂しいです)
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Jul  5 09:20:51 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Jul  5 09:21:24 2009
+Subject: [SML 7597] クロージャ
+In-Reply-To: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+References: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+Message-ID: <4A4FF1E3.4020708@cc.kyoto-su.ac.jp>
+
+青フレ。ユ・譽奪轡絅廛螢⑤絅△鮓㎠討泙靴拭
+> amount がインスタンス変数のように機能しますね。まるでブロッ
+> クがオブジェクトのように振る舞っています。クロージャって面
+> 白いっ、と単純に思いました。
+
+面白いです！いいですねぇ〓、こういうの。一カ所だけ小さな訂正
+をし（.を;に換え）て、梅岡さんの伝えたいことが伝わりました。
+瓶（へい）から瓶へ、こぼさずにうつすにはプログラムがベスト。
+
+> ちなみに、このとき以来Schemeにハマったのですが、このクロー
+> ジャの次に衝撃を受けたのが、竹岡さんのユニマガの連載「マジ
+> カルミステリーツアーいたしましょ」の
+> Schemeの「継続(Continuation)」で並行処理を書く記事でした。
+
+私も似たような体験をしています。述語を解釈してゆく際にバック
+トラック（後戻り）を用いるのですが、これを翻訳まで持ち込むの
+に「継続（Continuation）」を使ったのです。これが合うのですよ。
+
+あとでやらなきゃいけないことをクロージャにして次々に膨らませ
+ならが渡してゆくって、私たちの通常の仕事にやり方に似ているか
+もしれない、と率直に思いました。並行処理も可能ですし。
+
+コール＆リターンのプログラム制御構造ばかりではないんだってこ
+とをクロージャを介して学びました。
+
+> (最近ああいう記事を載せる雑誌が見当たらなくて寂しいです)
+
+はい、寂しいですね。やはり読者の弱体が根因でしょうか、それが
+プレスメディアの方々の弱体につながって…。
+
+プログラムのコードレビューも姿を消しつつあるように思います。
+ソフトウェア開発が軽薄短小になってゆくのに、さおなんかさした
+くないですもん、流されますからね。
+
+京都でのSmalltalk勉強会では、とにもかくにもプログラムのコード
+を一行一行と読みながら進めてゆくことをモットーにしています。
+ぜひとも次回もご参加くださいませ。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From shimada.cake ＠ gmail.com  Sun Jul  5 14:07:20 2009
+From: shimada.cake ＠ gmail.com (Keiki SHIMADA)
+Date: Sun Jul  5 14:07:23 2009
+Subject: [SML 7599] Re: Duration
+In-Reply-To: <4306F7126D35DA4B8A115EA505FA06860AC0A88B@JPESWA304.apo.epson.net>
+References: <200907030923.17623.tomohiro@sra.co.jp>
+	<4306F7126D35DA4B8A115EA505FA06860AC0A88B@JPESWA304.apo.epson.net>
+Message-ID: <21926f720907042207j763ea71x98ba797bf7afc3d1@mail.gmail.com>
+
+島田と申します。
+
+『時間』という名前を思い浮かべました。
+でも一般的な用法では「時間」という言葉も「時刻」の概念を含んでしまっているので難しいですね。
+From take ＠ takeoka.net  Sun Jul  5 15:31:52 2009
+From: take ＠ takeoka.net (Shozo TAKEOKA)
+Date: Sun Jul  5 15:31:56 2009
+Subject: [SML 7600] Re: クロージャ
+In-Reply-To: <4A4FF1E3.4020708@cc.kyoto-su.ac.jp>
+References: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+	<4A4FF1E3.4020708@cc.kyoto-su.ac.jp>
+Message-ID: <843103c60907042331x47b89101k6f0cdc86e15780d4@mail.gmail.com>
+
+たけおか 昔人間です。
+
+>> ジャの次に衝撃を受けたのが、竹岡さんのユニマガの連載「マジ
+>> カルミステリーツアーいたしましょ」の
+
+うっ、よくぞ読んで頂けました… (^^;
+編集者の方々は元気で、単行本を作っておられます。
+
+> 私も似たような体験をしています。述語を解釈してゆく際にバック
+> トラック（後戻り）を用いるのですが、これを翻訳まで持ち込むの
+> に「継続（Continuation）」を使ったのです。これが合うのですよ。
+
+コルーチン(coroutine)について書かれた数少ない論文は、
+コンパイラの各パスを、コルーチンで実現し、スマートにできるよという話でした。
+(昔はコンパイラ実現は大変に難しい技術でした)
+(コルーチンは継続が一階データになる直前の機構です。
+ continuation passingは、コルーチン実現とも取れます)
+
+
+わたくし、京都本社なのですが、ほとんど京都に居らず…残念です。
+
+たけおか@AXE
+From take ＠ takeoka.net  Sun Jul  5 15:49:08 2009
+From: take ＠ takeoka.net (Shozo TAKEOKA)
+Date: Sun Jul  5 15:49:12 2009
+Subject: [SML 7601] Re: Duration
+In-Reply-To: <200907021535.27292.tomohiro@sra.co.jp>
+References: <4306F7126D35DA4B8A115EA505FA06860AC0A87B@JPESWA304.apo.epson.net>
+	<200907021535.27292.tomohiro@sra.co.jp>
+Message-ID: <843103c60907042349s69de8018x3445c35e73b60dc9@mail.gmail.com>
+
+たけおかです。Smalltalkの今にはついて行けてないので、read onlyでした。
+
+成田> で、「期間」以外の概念を含んでいるのでしょうか、Duration は？また、「期
+成田> 間」は、Duration 以外の概念を含んでいるのでしょうか？
+
+おだ> 期間という場合、特定の日時から特定の日時までの区間を表わすことがあると思います。
+
+工学部的には、duration は「期間」でいいんじゃないでしょうか?
+工学的には、よく「ある期間...」という言い回しをしますが、それはduration の訳語で
+定着しているのではないでしょうか?
+
+時間、時刻に関する議論をしているときは、「時間の区間」という言い方もしますが、
+そんなまどろっこしい言い方は普通はしませんよね。
+(弊社は、実時間OSやそれを使用した仕事をやっている都合上、
+頻繁に「時間の区間」という表現を使いますが…
+それは、主にスキルの低い社員が居る時に厳密に話をしたいときです。
+誤解の心配がない時は「期間」と言っています)
+
+クラス名 Duration は、翻訳する必要がないですよね。
+
+たけおか
+From osamu.hamasaki ＠ gmail.com  Sun Jul  5 16:24:24 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sun Jul  5 16:24:28 2009
+Subject: [SML 7602] Re: クロージャ
+In-Reply-To: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+References: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+Message-ID: <1bc06fd30907050024j690350f5i923b93fab7c14a49@mail.gmail.com>
+
+濱崎です。
+2009/07/05 6:39 Hiroshi Umeoka <umrlazybind@gmail.com>:
+
+> おはようございます、梅岡です。
+
+＜中略＞
+
+>
+> amount
+> がインスタンス変数のように機能しますね。まるでブロックがオブジェクトのように振る舞っています。クロージャって面白いっ、と単純に思いました。
+
+
+梅岡さんの提示された例題を見て、ふと「こんなこと出来るかなあ」と思いついて
+やってみたら上手く動いたので、ご紹介します。
+
+-------------- ここから -----------------
+
+| accountCreater anAccount newBlockCreater newBlock method |
+accountCreater :=
+[:initialBalance |
+| balance |
+balance := initialBalance.
+(Dictionary new)
+at: #withdraw
+put:
+[:amount |
+balance := balance - amount.
+balance yourself];
+at: #deposit
+put:
+[ :amount |
+balance := balance + amount.
+balance yourself];
+at: #balance
+put:
+[balance yourself];
+yourself].
+
+anAccount := accountCreater value: 1000.
+Transcript clear.
+Transcript cr; show: (anAccount at: #balance) value printString.
+Transcript cr; show: ((anAccount at: #withdraw) value: 500) printString.
+Transcript cr; show: ((anAccount at: #deposit) value: 300) printString.
+
+newBlockCreater :=
+[| balance |
+[balance := 0.
+balance yourself]
+yourself].
+
+newBlock := newBlockCreater value.
+method := newBlock method.
+newBlock
+setMethod: method
+outerContext: (anAccount at: #balance) outerContext
+copiedValues: (anAccount at: #balance) copiedValues.
+anAccount at: #reset put: newBlock.
+
+Transcript cr; show: (anAccount at: #reset) value printString.
+^anAccount
+
+-------------- ここまで -----------------
+
+以前のSmalltalk勉強会＠京都で、「クラスがメソッドを保持しているのは、
+メモリの節約のためで」なんていうお話がありましたが、このプログラムでは
+オブジェクト自身がメソッドを持っていて、さらにオブジェクトを生成した後に
+メソッドを追加しています。がんばって書けば、インスタンス変数（？）を追加
+することも恐らく可能だと思います。
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090705/0ef71b45/attachment.htm
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Jul  5 16:42:08 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Jul  5 16:42:15 2009
+Subject: [SML 7603] Re: クロージャ
+In-Reply-To: <1bc06fd30907050024j690350f5i923b93fab7c14a49@mail.gmail.com>
+References: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+	<1bc06fd30907050024j690350f5i923b93fab7c14a49@mail.gmail.com>
+Message-ID: <4A505950.6010903@cc.kyoto-su.ac.jp>
+
+濱崎治さんは書きました:
+> 梅岡さんの提示された例題を見て、ふと「こんなこと出来るかなあ」
+> と思いついてやってみたら上手く動いたので、ご紹介します。
+
+確（しか）と紹介されました。:-) 瓶から瓶へ伝わりましたよ。差
+し詰め、クロージャでオブジェクトを実現、と言ったところですね。
+
+特に、ブロッククロージャにメソッドとコンテクストと値群の複写
+を指定しているところが巧妙だと思いました。
+
+次回のSmalltalk勉強会@京都は、濱崎さんと梅岡さんにお願いした
+いくらいです。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From tscompor ＠ gmail.com  Sun Jul  5 17:49:38 2009
+From: tscompor ＠ gmail.com (Takafumi Saikawa)
+Date: Sun Jul  5 17:49:42 2009
+Subject: [SML 7604] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <4A4C5634.8080000@cc.kyoto-su.ac.jp>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>
+	<4A4A6318.10201@cc.kyoto-su.ac.jp>
+	<4A4C5634.8080000@cc.kyoto-su.ac.jp>
+Message-ID: <20090705.174829.190218468.tscompor@gmail.com>
+
+今日は
+
+From: AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>
+Subject: [SML 7584] Re: 第9回Smalltalk勉強会＠京都
+Date: Thu, 02 Jul 2009 15:39:48 +0900
+Message-ID: <4A4C5634.8080000@cc.kyoto-su.ac.jp>
+
+atsushi> | aValue aBlock |
+atsushi> aValue := 2.
+atsushi> aBlock :=
+atsushi>         [| a b c |
+atsushi>         a := b := c := aValue.
+atsushi>         (a * b * c) yourself].
+atsushi> anInspector := Tools.Trippy.InspectorShell new.
+atsushi> ((anInspector class classPool)
+atsushi>     at: #EvaluationPaneWasLastShown put: true;
+atsushi>     at: #SharedTextHolder) value: 'self value'.
+atsushi> anInspector
+atsushi>     open;
+atsushi>     inspect: aBlock
+
+ここの
+a := b := c := aValue.
+というような代入が連なる文を初めて見たのですが、意味としては
+c := aValue.
+b := c.
+a := b.
+と同じなのですよね？
+
+(特に2項の)メッセージ式についての一貫した左結合性を思い出すと、
+aValue =: c =: b =: a.
+と書きたくなります。
+
+
+才川隆文
+From umrlazybind ＠ gmail.com  Sun Jul  5 18:38:14 2009
+From: umrlazybind ＠ gmail.com (Hiroshi Umeoka)
+Date: Sun Jul  5 18:38:18 2009
+Subject: [SML 7605] Re: クロージャ
+In-Reply-To: <4A4FF1E3.4020708@cc.kyoto-su.ac.jp>
+References: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+	<4A4FF1E3.4020708@cc.kyoto-su.ac.jp>
+Message-ID: <e957e4bc0907050238y2217ee85lff4a58ab8ea6e09d@mail.gmail.com>
+
+青木さん
+
+梅岡です。
+今日は子供が試合で早くから家を出たのでプリキュアは見なかったです:-)
+
+> 面白いです！いいですねぇ〜、こういうの。一カ所だけ小さな訂正
+> をし（.を;に換え）て、梅岡さんの伝えたいことが伝わりました。
+
+うわ、本当にお恥ずかしい！
+下の行をあとからコピー＆ペーストしたのが，丸わかりです。
+
+> あとでやらなきゃいけないことをクロージャにして次々に膨らませ
+> ならが渡してゆくって、私たちの通常の仕事にやり方に似ているか
+> もしれない、と率直に思いました。並行処理も可能ですし。
+>
+> コール＆リターンのプログラム制御構造ばかりではないんだってこ
+> とをクロージャを介して学びました。
+
+はい、本当に。
+「後続の処理」を抽象化し、それをハンドリングできる、ということが新鮮でした。
+それでハマってしまって本業そっちのけでelispでいろんなインタープリタを書いてた時代がありました。
+Emacsなら大きな顔して仕事中に広げてられますから;-)
+
+>> (最近ああいう記事を載せる雑誌が見当たらなくて寂しいです)
+> はい、寂しいですね。やはり読者の弱体が根因でしょうか、それが
+> プレスメディアの方々の弱体につながって…。
+
+今はWEB主体なんでしょうか。でもやっぱり雑誌にもがんばって欲しいです。
+クロージャや継続の話しを若い子に話すと、面白がる傾向は今でもあると思います。
+XMLをS式に見立ててWEBサービスのインタープリタ作ろうよ、というと結構食いついてきます（S式、とは言葉にしませんが）。
+From umrlazybind ＠ gmail.com  Sun Jul  5 18:52:01 2009
+From: umrlazybind ＠ gmail.com (Hiroshi Umeoka)
+Date: Sun Jul  5 18:52:04 2009
+Subject: [SML 7606] Re: クロージャ
+In-Reply-To: <843103c60907042331x47b89101k6f0cdc86e15780d4@mail.gmail.com>
+References: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+	<4A4FF1E3.4020708@cc.kyoto-su.ac.jp>
+	<843103c60907042331x47b89101k6f0cdc86e15780d4@mail.gmail.com>
+Message-ID: <e957e4bc0907050252x4adca16dq514209017362ff00@mail.gmail.com>
+
+梅岡です。
+
+> たけおか 昔人間です。
+
+いえいえ、いまでもマイコン小僧現役かと思います。
+何年か前お話しさせていただいた際、熱くFortranコンパイラの最適化の話しをされていたのを思い出します。
+あのユニマガ連載がその後のプログラマ人生に大きく影響を与えたのは（いい意味でも悪い意味でも）確かです:-)
+
+> コルーチン(coroutine)について書かれた数少ない論文は、
+> コンパイラの各パスを、コルーチンで実現し、スマートにできるよという話でした。
+> (昔はコンパイラ実現は大変に難しい技術でした)
+> (コルーチンは継続が一階データになる直前の機構です。
+>  continuation passingは、コルーチン実現とも取れます)
+
+あれで俄然コルーチンに興味が湧きました。
+で、やっぱりCPS(Continuation Passing
+Style)とか、そんな論文を（具体的に何に役立つのかは知ったこっちゃなかったのですが）読んでました。
+それでなんてCoolなんだ、Schemeって、って思ってました（本当に何に役立つかなんてどうでもよかったのですが）。
+#もうSimulaの実装は手に入らなかったし、Adaとかのドキュメントを読んだりしましたが、Schemeの方が簡潔で書いている人も多かった。
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Jul  5 19:00:04 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Jul  5 19:00:10 2009
+Subject: [SML 7607] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <20090705.174829.190218468.tscompor@gmail.com>
+References: <4A4033A1.6020100@cc.kyoto-su.ac.jp>	<4A4A6318.10201@cc.kyoto-su.ac.jp>	<4A4C5634.8080000@cc.kyoto-su.ac.jp>
+	<20090705.174829.190218468.tscompor@gmail.com>
+Message-ID: <4A5079A4.7080401@cc.kyoto-su.ac.jp>
+
+Takafumi Saikawa さんは書きました:
+> a := b := c := aValue.
+> というような代入が連なる文を初めて見たのですが、意味としては
+> c := aValue.
+> b := c.
+> a := b.
+> と同じなのですよね？
+> 
+> (特に2項の)メッセージ式についての一貫した左結合性を思い出すと、
+> aValue =: c =: b =: a.
+> と書きたくなります。
+
+さすが才川さん。鋭いご指摘です。ブラックブックにも書いておき
+ました。96ページから97ページをご覧ください。構文木の図を省略
+しますが、以下にブラックブックの本文を引用します。
+
+------------------------------------------------------------
+
+　代入した結果の値は、代入されたオブジェクトとなるので、次の
+ように代入を重ねる書き方も可能です。
+
+| firstObject secondObject thirdObject anArray |
+firstObject := secondObject := thirdObject := nil.
+anArray := Array
+with: firstObject
+with: secondObject
+with: thirdObject.
+anArray yourself
+==> #(nil nil nil)
+
+　このプログラムの構文ツリーを出してみると、一文の中に複数の
+代入がある場合には、右から処理されていることがわかります（図3.21）。
+中央の一番深い枝をご覧ください。
+
+図3.21　代入を重ねた場合の処理順序を調べる
+
+　thirdObject にnil が代入された結果がsecondObject に代入され、
+secondObject に代入されたものが firstObject に代入されています。
+左から順々に処理されるメッセージとは逆ですね。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umrlazybind ＠ gmail.com  Sun Jul  5 19:40:16 2009
+From: umrlazybind ＠ gmail.com (Hiroshi Umeoka)
+Date: Sun Jul  5 19:40:19 2009
+Subject: [SML 7608] Re: クロージャ
+In-Reply-To: <1bc06fd30907050024j690350f5i923b93fab7c14a49@mail.gmail.com>
+References: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+	<1bc06fd30907050024j690350f5i923b93fab7c14a49@mail.gmail.com>
+Message-ID: <e957e4bc0907050340s3df8b038t598e969122b2fbe6@mail.gmail.com>
+
+濱崎さん
+
+梅岡です。
+フォローしていただいてありがとうございます。
+こういうオリジナル言語の作成は楽しいですね。
+このコードの後半をみて、Smalltalkのメタプログラミングにとても興味が出てきました。
+
+2009/07/05 16:24 に 濱崎治<osamu.hamasaki@gmail.com> さんは書きました:
+> 濱崎です。
+> 2009/07/05 6:39 Hiroshi Umeoka <umrlazybind@gmail.com>:
+>>
+>> おはようございます、梅岡です。
+>
+> ＜中略＞
+>>
+>> amount
+>> がインスタンス変数のように機能しますね。まるでブロックがオブジェクトのように振る舞っています。クロージャって面白いっ、と単純に思いました。
+>
+> 梅岡さんの提示された例題を見て、ふと「こんなこと出来るかなあ」と思いついて
+> やってみたら上手く動いたので、ご紹介します。
+> --------------　ここから -----------------
+> | accountCreater anAccount newBlockCreater newBlock method |
+> accountCreater :=
+> [:initialBalance |
+> | balance |
+> balance := initialBalance.
+> (Dictionary new)
+> at: #withdraw
+> put:
+> [:amount |
+> balance := balance - amount.
+> balance yourself];
+> at: #deposit
+> put:
+> [ :amount |
+> balance := balance + amount.
+> balance yourself];
+> at: #balance
+> put:
+> [balance yourself];
+> yourself].
+> anAccount := accountCreater value: 1000.
+> Transcript clear.
+> Transcript cr; show: (anAccount at: #balance) value printString.
+> Transcript cr; show: ((anAccount at: #withdraw) value: 500) printString.
+> Transcript cr; show: ((anAccount at: #deposit) value: 300) printString.
+> newBlockCreater :=
+> [| balance |
+> [balance := 0.
+> balance yourself]
+> yourself].
+>
+> newBlock := newBlockCreater value.
+> method := newBlock method.
+> newBlock
+> setMethod: method
+> outerContext: (anAccount at: #balance) outerContext
+> copiedValues: (anAccount at: #balance) copiedValues.
+> anAccount at: #reset put: newBlock.
+> Transcript cr; show: (anAccount at: #reset) value printString.
+> ^anAccount
+> --------------　ここまで -----------------
+> 以前のSmalltalk勉強会＠京都で、「クラスがメソッドを保持しているのは、
+> メモリの節約のためで」なんていうお話がありましたが、このプログラムでは
+> オブジェクト自身がメソッドを持っていて、さらにオブジェクトを生成した後に
+> メソッドを追加しています。がんばって書けば、インスタンス変数（？）を追加
+> することも恐らく可能だと思います。
+> --
+>
+> Osamu Hamasaki
+>
+>
+From osamu.hamasaki ＠ gmail.com  Sun Jul  5 21:41:22 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Sun Jul  5 21:41:26 2009
+Subject: [SML 7609] Re: クロージャ
+In-Reply-To: <e957e4bc0907050340s3df8b038t598e969122b2fbe6@mail.gmail.com>
+References: <e957e4bc0907041439n4d010c00oaa7291a14214cf83@mail.gmail.com>
+	<1bc06fd30907050024j690350f5i923b93fab7c14a49@mail.gmail.com>
+	<e957e4bc0907050340s3df8b038t598e969122b2fbe6@mail.gmail.com>
+Message-ID: <1bc06fd30907050541m5deee8d5i9c5b368583a9867a@mail.gmail.com>
+
+濱崎です。
+
+2009/07/05 19:40 Hiroshi Umeoka <umrlazybind@gmail.com>:
+
+> 濱崎さん
+>
+> 梅岡です。
+> フォローしていただいてありがとうございます。
+> こういうオリジナル言語の作成は楽しいですね。
+> このコードの後半をみて、Smalltalkのメタプログラミングにとても興味が出てきました。
+
+
+はい、とても楽しいです。このところ週末はSmalltalkプログラミング三昧です。
+梅岡さんも楽しいプログラミングをSmalltalkで是非。
+
+ちなみに、インスタンス変数（？）を追加することも出来ました。
+
+---------- ここから ----------
+
+| accountCreater anAccount newBlockCreater newBlock newCopiedValues
+oldCopiedValues |
+accountCreater :=
+[:initialBalance |
+| balance |
+balance := initialBalance.
+(Dictionary new)
+at: #withdraw
+put:
+[:amount |
+balance := balance - amount.
+balance yourself];
+at: #deposit
+put:
+[ :amount |
+balance := balance + amount.
+balance yourself];
+at: #balance
+put:
+[balance yourself];
+yourself].
+
+anAccount := accountCreater value: 1000.
+Transcript clear.
+Transcript cr; show: (anAccount at: #balance) value printString.
+Transcript cr; show: ((anAccount at: #withdraw) value: 400) printString.
+Transcript cr; show: ((anAccount at: #deposit) value: 300) printString.
+
+newBlockCreater :=
+[:initialId |
+| balance id |
+id := initialId.
+[balance := 0.
+id := 0] yourself.  "This is Dummy which trick compiler to make valid
+copiedValues"
+[id yourself]
+yourself].
+
+newBlock := newBlockCreater value: #SML.
+newCopiedValues := newBlock copiedValues.
+oldCopiedValues := (anAccount at: #balance) copiedValues.
+oldCopiedValues
+keysAndValuesDo: [:index :value | newCopiedValues at: index put: value].
+newBlock
+setMethod: newBlock method
+outerContext: (anAccount at: #balance) outerContext
+copiedValues: newCopiedValues.
+anAccount
+do:
+[:block |
+block
+setMethod: block method
+outerContext: block outerContext
+copiedValues: newCopiedValues].
+anAccount at: #id put: newBlock.
+
+Transcript cr; show: (anAccount at: #id) value printString.
+Transcript cr; show: ((anAccount at: #withdraw) value: 200) printString.
+^anAccount
+
+---------- ここまで ----------
+
+コンパイラを騙すコードが少々必要になりましたが、
+他は概ね想定していたとおりでした。
+
+-- 
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090705/1d6ae25b/attachment.html
+From tscompor ＠ gmail.com  Sun Jul  5 22:00:10 2009
+From: tscompor ＠ gmail.com (fumi)
+Date: Sun Jul  5 22:00:14 2009
+Subject: [SML 7610] Re: 第9回Smalltalk勉強会＠京都
+In-Reply-To: <4A5079A4.7080401@cc.kyoto-su.ac.jp>
+References: <4A4C5634.8080000@cc.kyoto-su.ac.jp>
+	<20090705.174829.190218468.tscompor@gmail.com>
+	<4A5079A4.7080401@cc.kyoto-su.ac.jp>
+Message-ID: <20090705.215900.186976773.tscompor@gmail.com>
+
+構文木を見て良く分かりましたが、
+代入の表現 X := A も全体として値 A を持つ訳ですね。
+
+またAssignmentNode>>emitValue:が何をしているのか調べていて
+VariableDefinitionから下の継承木の多彩さに驚きました。
+
+
+才川隆文
+From umejava ＠ mars.dti.ne.jp  Mon Jul  6 23:01:49 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jul  6 23:01:58 2009
+Subject: [SML 7611] Web Velocity評価版がでています
+Message-ID: <Jxbwvr4_yRupORX0Ir0QpUSg4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Cincomの新製品"Web Velocity"をご存じでしょうか?
+
+一言で言えばSeasideを拡張したフルスタックの
+Webアプリケーションフレームワークです。
+
+SmalltalkでRuby on Railsをやってみたらこうなったという感じで
+Smalltalkならではの強みが十分に発揮されたものになっています。
+
+特徴や触ってみた印象をブログに書いてみました。
+よろしければご覧下さい。
+http://ani.blueplane.jp/ume/152
+
+評価版は下記からダウンロードできます。Win, Mac, Linuxで動きます。
+http://www.web-velocity.com/WVAccess/Main
+
+フィードバック等はGoogle Groupがあるので、そこに送ることができます。
+http://groups.google.com/group/webvelocity
+
+動画もありますよ。
+http://www.cincomsmalltalk.com/userblogs/cincom/blogView?content=smalltalk_videos_web_velocity
+
+SmalltalkとWebは実は結構相性がよいです。ぜひぜひ、お楽しみ下さい。
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Mon Jul 13 21:43:11 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jul 13 21:43:18 2009
+Subject: [SML 7612] 第11回Smalltalk勉強会のお知らせ
+Message-ID: <Jxp._PFPmk.iBbUPvkMqdYkg1@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2009/7/24(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai11kaismalltalkbenkyoukai
+
+今回のテーマは「SmalltalkでWeb-その2 フルスタック編」です。
+
+SeasideをベースとしたフルスタックのWebアプリフレームワーク、
+"Web Velocity"を中心に扱います。
+
+Web Velocityの持つWebブラウザ上での統合開発環境、Scaffolding、
+ORマッピング等を取り上げる予定でいます。
+
+余裕があれば"Glass"の話になるかもしれません。上から下まで全てが
+オブジェクトのWebという世界を味わってみるのも良いでしょう
+
+補足:
+Web Velocityは下記からインストールできます。
+http://www.web-velocity.com/WVAccess/Main
+Glassは下記からインストールできます。
+http://seaside.gemstone.com/
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+気になる方はこのMLにメールを送っていただいても良いです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Tue Jul 21 21:34:03 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jul 21 21:34:07 2009
+Subject: [SML 7613] Re: 第11回Smalltalk勉強会のお知らせ
+In-Reply-To: <Jxp._PFPmk.iBbUPvkMqdYkg1@mars.dti.ne.jp>
+References: <Jxp._PFPmk.iBbUPvkMqdYkg1@mars.dti.ne.jp>
+Message-ID: <Jx5EyFfxNwayNim9MQm4Cq3A4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+24日の勉強会なのですが、Web Velocityに加え、PostgreSQLかMySQLを
+事前にインストールしておいていただけると助かります。
+
+当日は皆で簡単なサンプルアプリ(ブログ)を作っていきます。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。
+> 
+> 日時: 2009/7/24(金) 19:00- (2,3時間程度)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> または「自由自在Squeakプログラミング」
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai11kaismalltalkbenkyoukai
+> 
+> 今回のテーマは「SmalltalkでWeb-その2 フルスタック編」です。
+> 
+> SeasideをベースとしたフルスタックのWebアプリフレームワーク、
+> "Web Velocity"を中心に扱います。
+> 
+> Web Velocityの持つWebブラウザ上での統合開発環境、Scaffolding、
+> ORマッピング等を取り上げる予定でいます。
+> 
+> 余裕があれば"Glass"の話になるかもしれません。上から下まで全てが
+> オブジェクトのWebという世界を味わってみるのも良いでしょう
+> 
+> 補足:
+> Web Velocityは下記からインストールできます。
+> http://www.web-velocity.com/WVAccess/Main
+> Glassは下記からインストールできます。
+> http://seaside.gemstone.com/
+> 
+> 参加表明は特に必要ありません。ふらりとどうぞ。
+> 気になる方はこのMLにメールを送っていただいても良いです。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Tue Jul 28 22:03:35 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jul 28 22:03:38 2009
+Subject: [SML 7614] 第1回Smalltalkハッカソンのお知らせ
+Message-ID: <JxJSi0dNlc8XQyn_ltV8eGLg5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+暑い季節がやってきました。こんな時こそSmalltalkでガンガンコーディングを
+して、代謝を高めることが重要です。
+
+さて、そんなわけで第1回Smalltalkハッカソンのお知らせです。
+
+日時: 2009/8/8(土) 13:00-18:00
+場所: 株式会社フルネス トレーニングルーム
+
+詳しくは
+http://www.smalltalk-users.jp/Home/gao-zhi/smalltalk-hackathon-1
+をどうぞ。
+
+なお、参加人数に限りがありますのでご希望の方はお早めにお申し込みください。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jul 29 18:16:08 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jul 29 18:16:21 2009
+Subject: [SML 7615] 第10回Smalltalk勉強会＠京都
+Message-ID: <4A701358.1030206@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。裏山からは蜩（ひぐらし）のカナカナとの
+声が…。秋の季語なのに…。この暑いさなかに…。
+
+第10回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+JR京都駅前にご参集ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto10
+
+第10回 Smalltalk勉強会＠京都
+日時：2009年08月05日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+ブロッククロージャの続きを行います。プログラム制御構造を中核
+にして解題してゆきたいと思います。これは面白い！というプログ
+ラム例を持ち寄っていただければ幸いです。
+また、VisualWorksの次期バージョンである7.7に対応させた「じゅ
+ん for Smalltalk（Jun782）」も配布いたします。
+
+暑気払いになるかしらん…、パティスリー菓欒（からん）の西賀茂
+チーズ（チーズケーキ）を持参する予定です。
+http://www.tbs.co.jp/hanamaru/cafe/c090204.html
+http://hanamake.sblo.jp/article/26278678.html
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

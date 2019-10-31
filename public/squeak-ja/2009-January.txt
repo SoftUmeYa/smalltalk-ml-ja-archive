@@ -1,0 +1,1860 @@
+From yhousako ＠ mx2.ttcn.ne.jp  Thu Jan  1 02:16:49 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Thu Jan  1 02:17:05 2009
+Subject: [Squeak-ja: 4112] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>	<48F09F06.1040806@mx2.ttcn.ne.jp>	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>	<490B9488.9050106@mx2.ttcn.ne.jp>
+	<uiqr8paba.wl%yoshiki@vpri.org>	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>	<495AE72D.9080509@mx2.ttcn.ne.jp>
+	<2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+Message-ID: <495BA901.3040404@mx2.ttcn.ne.jp>
+
+宝迫＠新年になってしまいましたです．
+（喪中につき、年頭のご挨拶は失礼させて頂いております）
+
+文字列の長さについて確認しました．いろいろ調べているうちに、年を越してし
+まいましたが、結論から言うと1文字でもダメです．
+
+【実験したこと】
+OSP基本パッケージv2でScratchSynthを起動し、保存（名前を付けて保存）をク
+リックして保存の窓を開きました．その上でファイル名を入力する欄を一度ク
+リックし、「a」キーを押して「あ」と出てエンターキーで確定しただけでも前
+回同様のエラーメッセージが表示されます．KNOPPIX Edu 7（5.1.1ベース）でも
+同じでした．
+
+同じことをKNOPPIX5.3.1やUbuntu8.10でやりましたが、こちらは問題ありません
+でした．
+
+機械を換えて、同じ実験をしてみましたが、結果も同じでした．KNOPPIX5.1.1と
+5.3.1の間には、これ以外にも様々な違いがあって、悩まされております．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> 確認ありがとうございます。
+> OSP基本パッケージv2の問題ですが、確定前の文字列を11文字以上入力していないでしょうか。この場合、私のUbuntu
+> 8.10でも同じエラーが出ることを確認しています。
+> これは3.7-7JPatchedの既知のバグです。
+> 
+> http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html
+> (イメージが違うのでエラーは違いますが原因は同じ)
+> 
+> とりあえずの対処法としては文節を短く区切って確定してもらうことになると思います。
+> このバグを修正したバージョンを廣島さんが作ってくれているので、大島さんが作ってくれたパッチと合わせてScratchにも適用できないか調べてみます。
+> 大島さん、4108で書かれていた「新しいVM」というのは具体的にはどれを指すのでしょうか。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Thu Jan  1 11:51:59 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Jan  1 11:52:12 2009
+Subject: [Squeak-ja: 4113] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <495BA901.3040404@mx2.ttcn.ne.jp>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+	<495AE72D.9080509@mx2.ttcn.ne.jp>
+	<2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+	<495BA901.3040404@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>
+
+宝迫さん、皆様、旧年中はお世話になりました。本年もよろしくお願いします。
+
+お手間をお掛けしてすみません。私もUbuntu 8.10上のVirtualBoxを使って、KNOPPIX Edu7でご指摘の現象を確認しました。
+これはロケールがUTF-8でなく、EUC-JPであることが原因でした。ロケールの変更方法は色々あると思いますが、どうするのがベストなのか分からないので、識者の方にお任せしたいと思います。Squeakと同様にScratchにEUC-JPのエンコーダ、デコーダを用意するのも手ですが、ScratchはUTF一本で行っているので、あんまり複雑にしたくない気もします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/01/01 2:16 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> 宝迫＠新年になってしまいましたです．
+> （喪中につき、年頭のご挨拶は失礼させて頂いております）
+>
+> 文字列の長さについて確認しました．いろいろ調べているうちに、年を越してし
+> まいましたが、結論から言うと1文字でもダメです．
+>
+> 【実験したこと】
+> OSP基本パッケージv2でScratchSynthを起動し、保存（名前を付けて保存）をク
+> リックして保存の窓を開きました．その上でファイル名を入力する欄を一度ク
+> リックし、「a」キーを押して「あ」と出てエンターキーで確定しただけでも前
+> 回同様のエラーメッセージが表示されます．KNOPPIX Edu 7（5.1.1ベース）でも
+> 同じでした．
+>
+> 同じことをKNOPPIX5.3.1やUbuntu8.10でやりましたが、こちらは問題ありません
+> でした．
+>
+> 機械を換えて、同じ実験をしてみましたが、結果も同じでした．KNOPPIX5.1.1と
+> 5.3.1の間には、これ以外にも様々な違いがあって、悩まされております．
+>
+> Kazuhiro ABE さんは書きました:
+>> こんにちは、阿部です。
+>> 確認ありがとうございます。
+>> OSP基本パッケージv2の問題ですが、確定前の文字列を11文字以上入力していないでしょうか。この場合、私のUbuntu
+>> 8.10でも同じエラーが出ることを確認しています。
+>> これは3.7-7JPatchedの既知のバグです。
+>>
+>> http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html
+>> (イメージが違うのでエラーは違いますが原因は同じ)
+>>
+>> とりあえずの対処法としては文節を短く区切って確定してもらうことになると思います。
+>> このバグを修正したバージョンを廣島さんが作ってくれているので、大島さんが作ってくれたパッチと合わせてScratchにも適用できないか調べてみます。
+>> 大島さん、4108で書かれていた「新しいVM」というのは具体的にはどれを指すのでしょうか。
+>>
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> ------------------------------------------------------------------
+> 寳迫　芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+From chibad ＠ alpha.co.jp  Thu Jan  1 15:25:59 2009
+From: chibad ＠ alpha.co.jp (Daisaku CHIBA)
+Date: Thu Jan  1 15:26:11 2009
+Subject: [Squeak-ja: 4114] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>
+References: <495BA901.3040404@mx2.ttcn.ne.jp>
+	<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>
+Message-ID: <20090101151633.E2EA.E782595A@alpha.co.jp>
+
+宝迫さん、阿部さん
+
+千葉＠KNOPPIX教育利用研究会が横から失礼します。
+
+"KNOPPIX5.1.1ベースでロケールをUTF-8にすれば良い"
+という話であれば、起動時のboot optionで、
+
+  boot: knoppix lang=ja.UTF-8
+
+と入力して起動して頂くと幸せになれると思います。
+＃申し訳ありませんが、手元に環境がないので試してはいません。
+
+
+＜ご参考＞
+KNOPPIXのロケールは、以下の通り過渡期にありますが、
+UTF-8に移行する方向ですので、
+ScratchのUTF一本化の流れと矛盾はありません。
+
+  ・5.0.0からEUCとUTF-8の並行運用開始（デフォルトはEUC）
+  http://buxus.s31.xrea.com/pukiwiki/pukiwiki.php?news%2F2006-04-13
+  ・5.1.1でも上記と同じ  ← これがOSP基本パッケージのベース
+  ・5.3.1からデフォルトがUTF-8に変更（並行運用は維持）
+  http://www.rcis.aist.go.jp/project/knoppix/KNOPPIX531CD-20080520AC.pdf
+
+
+以上
+
+Thu, 1 Jan 2009 11:51:59 +0900
+<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>
+
+> 宝迫さん、皆様、旧年中はお世話になりました。本年もよろしくお願いします。
+> 
+> お手間をお掛けしてすみません。私もUbuntu 8.10上のVirtualBoxを使って、KNOPPIX Edu7でご指摘の現象を確認しました。
+> これはロケールがUTF-8でなく、EUC-JPであることが原因でした。ロケールの変更方法は色々あると思いますが、どうするのがベストなのか分からないので、識者の方にお任せしたいと思います。Squeakと同様にScratchにEUC-JPのエンコーダ、デコーダを用意するのも手ですが、ScratchはUTF一本で行っているので、あんまり複雑にしたくない気もします。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+> 2009/01/01 2:16 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> > 宝迫＠新年になってしまいましたです．
+> > （喪中につき、年頭のご挨拶は失礼させて頂いております）
+> >
+> > 文字列の長さについて確認しました．いろいろ調べているうちに、年を越してし
+> > まいましたが、結論から言うと1文字でもダメです．
+> >
+> > 【実験したこと】
+> > OSP基本パッケージv2でScratchSynthを起動し、保存（名前を付けて保存）をク
+> > リックして保存の窓を開きました．その上でファイル名を入力する欄を一度ク
+> > リックし、「a」キーを押して「あ」と出てエンターキーで確定しただけでも前
+> > 回同様のエラーメッセージが表示されます．KNOPPIX Edu 7（5.1.1ベース）でも
+> > 同じでした．
+> >
+> > 同じことをKNOPPIX5.3.1やUbuntu8.10でやりましたが、こちらは問題ありません
+> > でした．
+> >
+> > 機械を換えて、同じ実験をしてみましたが、結果も同じでした．KNOPPIX5.1.1と
+> > 5.3.1の間には、これ以外にも様々な違いがあって、悩まされております．
+> >
+> > Kazuhiro ABE さんは書きました:
+> >> こんにちは、阿部です。
+> >> 確認ありがとうございます。
+> >> OSP基本パッケージv2の問題ですが、確定前の文字列を11文字以上入力していないでしょうか。この場合、私のUbuntu
+> >> 8.10でも同じエラーが出ることを確認しています。
+> >> これは3.7-7JPatchedの既知のバグです。
+> >>
+> >> http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html
+> >> (イメージが違うのでエラーは違いますが原因は同じ)
+> >>
+> >> とりあえずの対処法としては文節を短く区切って確定してもらうことになると思います。
+> >> このバグを修正したバージョンを廣島さんが作ってくれているので、大島さんが作ってくれたパッチと合わせてScratchにも適用できないか調べてみます。
+> >> 大島さん、4108で書かれていた「新しいVM」というのは具体的にはどれを指すのでしょうか。
+> >>
+> >>  //abee
+> >> --
+> >> 阿部 和広  EMAIL abee@squeakland.jp
+> >
+> > ------------------------------------------------------------------
+> > 寳迫　芳人：yhousako@gmail.com
+> > みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> > 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> > 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> > つれづれなるままに…：http://4oc.blogspot.com/
+
+
+
+-- 
+ 千葉大作  mailto:chibad@alpha.co.jp  tel:+81-44-738-4125
+ （株）アルファシステムズ 
+ 経営企画本部技術推進部第二システム研究課
+
+From yhousako ＠ mx2.ttcn.ne.jp  Thu Jan  1 23:25:57 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Thu Jan  1 23:26:10 2009
+Subject: [Squeak-ja: 4115] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <20090101151633.E2EA.E782595A@alpha.co.jp>
+References: <495BA901.3040404@mx2.ttcn.ne.jp>	<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>
+	<20090101151633.E2EA.E782595A@alpha.co.jp>
+Message-ID: <495CD275.4070502@mx2.ttcn.ne.jp>
+
+千葉さん．こちらでもお世話になります．
+
+宝迫です．正月早々情報を頂きありがとうございます．OSPv2とEdu7で実験して
+みました．結果としては、残念ながらうまくいきませんでした．
+
+念のためにWebサイトなどを見て回り、ロケールの設定をいくつか試してみまし
+た．教えて頂いた「ja.UTF-8」以外に試したものとして
+
+ja.utf8
+ja_JP.UTF-8
+
+でもやってみましたが、ダメでした．
+
+ついでに/etc/locale.genも眺めてみましたが、5.3.1と5.1.1では日本語設定に
+違いはなく、いじるのをやめました．
+＃システム自体に問題が生じると困るので．
+
+システムのロケールだけでなく、SCIMとAnthyの問題というのも考えられると思
+います．ちょっと探すと古いSCIM-Anthyは、UTF-8非対応という情報もありまし
+た．（真偽の程はどうかわかりませんが）
+
+こちらを解決する必要があるような気がしました．
+
+Daisaku CHIBA さんは書きました:
+> 宝迫さん、阿部さん
+> 
+> 千葉＠KNOPPIX教育利用研究会が横から失礼します。
+> 
+> "KNOPPIX5.1.1ベースでロケールをUTF-8にすれば良い"
+> という話であれば、起動時のboot optionで、
+> 
+>   boot: knoppix lang=ja.UTF-8
+> 
+> と入力して起動して頂くと幸せになれると思います。
+> ＃申し訳ありませんが、手元に環境がないので試してはいません。
+> 
+> ＜ご参考＞
+> KNOPPIXのロケールは、以下の通り過渡期にありますが、
+> UTF-8に移行する方向ですので、
+> ScratchのUTF一本化の流れと矛盾はありません。
+> 
+>   ・5.0.0からEUCとUTF-8の並行運用開始（デフォルトはEUC）
+>   http://buxus.s31.xrea.com/pukiwiki/pukiwiki.php?news%2F2006-04-13
+>   ・5.1.1でも上記と同じ  ← これがOSP基本パッケージのベース
+>   ・5.3.1からデフォルトがUTF-8に変更（並行運用は維持）
+>   http://www.rcis.aist.go.jp/project/knoppix/KNOPPIX531CD-20080520AC.pdf
+> 
+> 以上
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Fri Jan  2 02:26:42 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Jan  2 02:27:05 2009
+Subject: [Squeak-ja: 4116] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <495CD275.4070502@mx2.ttcn.ne.jp>
+References: <495BA901.3040404@mx2.ttcn.ne.jp>
+	<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>
+	<20090101151633.E2EA.E782595A@alpha.co.jp>
+	<495CD275.4070502@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80901010926n4e57d35od34f9652d4b756e1@mail.gmail.com>
+
+こんにちは、阿部です。
+千葉さん、ありがとうございました。
+私の環境(Ubuntu 8.10上のVirtualBoxを使って、KNOPPIX
+Edu7のisoファイルをブート)では、この方法でScratchからの入力ができました。OSPv2はアカウント申請中なので入手にしばらくかかると思います。
+この方法で確かにUTF-8に変わったことを調べるため、printenvした環境変数と、viなどでファイルを作成したものをod
+-xして文字コードを見ています。SCIM-AnthyからScratchに上がってくる文字もUTF-8でした。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/01/01 23:25 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> 千葉さん．こちらでもお世話になります．
+>
+> 宝迫です．正月早々情報を頂きありがとうございます．OSPv2とEdu7で実験して
+> みました．結果としては、残念ながらうまくいきませんでした．
+>
+> 念のためにWebサイトなどを見て回り、ロケールの設定をいくつか試してみまし
+> た．教えて頂いた「ja.UTF-8」以外に試したものとして
+>
+> ja.utf8
+> ja_JP.UTF-8
+>
+> でもやってみましたが、ダメでした．
+>
+> ついでに/etc/locale.genも眺めてみましたが、5.3.1と5.1.1では日本語設定に
+> 違いはなく、いじるのをやめました．
+> ＃システム自体に問題が生じると困るので．
+>
+> システムのロケールだけでなく、SCIMとAnthyの問題というのも考えられると思
+> います．ちょっと探すと古いSCIM-Anthyは、UTF-8非対応という情報もありまし
+> た．（真偽の程はどうかわかりませんが）
+>
+> こちらを解決する必要があるような気がしました．
+>
+> Daisaku CHIBA さんは書きました:
+>> 宝迫さん、阿部さん
+>>
+>> 千葉＠KNOPPIX教育利用研究会が横から失礼します。
+>>
+>> "KNOPPIX5.1.1ベースでロケールをUTF-8にすれば良い"
+>> という話であれば、起動時のboot optionで、
+>>
+>>   boot: knoppix lang=ja.UTF-8
+>>
+>> と入力して起動して頂くと幸せになれると思います。
+>> ＃申し訳ありませんが、手元に環境がないので試してはいません。
+>>
+>> ＜ご参考＞
+>> KNOPPIXのロケールは、以下の通り過渡期にありますが、
+>> UTF-8に移行する方向ですので、
+>> ScratchのUTF一本化の流れと矛盾はありません。
+>>
+>>   ・5.0.0からEUCとUTF-8の並行運用開始（デフォルトはEUC）
+>>   http://buxus.s31.xrea.com/pukiwiki/pukiwiki.php?news%2F2006-04-13
+>>   ・5.1.1でも上記と同じ  ← これがOSP基本パッケージのベース
+>>   ・5.3.1からデフォルトがUTF-8に変更（並行運用は維持）
+>>   http://www.rcis.aist.go.jp/project/knoppix/KNOPPIX531CD-20080520AC.pdf
+>>
+>> 以上
+>
+> ------------------------------------------------------------------
+> 寳迫　芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+From yoshiki ＠ vpri.org  Sun Jan  4 18:14:21 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Sun Jan  4 18:15:14 2009
+Subject: [Squeak-ja: 4117] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80812302350k68f62c19o16d06cff38eeccf4@mail.gmail.com>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+	<495AE72D.9080509@mx2.ttcn.ne.jp>
+	<2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+	<2d5d52a80812302350k68f62c19o16d06cff38eeccf4@mail.gmail.com>
+Message-ID: <ueizjcu1e.wl%yoshiki@vpri.org>
+
+At Wed, 31 Dec 2008 16:50:18 +0900,
+Kazuhiro ABE wrote:
+> 
+> こんにちは、阿部です。
+> 
+> 最新と思われるSqueak-3.10-4.i686-pc-linux-gnuを使って、
+> http://squeakvm.org/unix/
+> 
+> Ubuntu 8.10で以下のように起動してみました。
+> 
+> /usr/local/bin/squeak -vm-display-X11 -compositioninput
+> ScratchSourceCode1.3.1synth.image
+> 
+> 結果、確定前文字列の制限もなく正しく入力できました。
+> しかし、今度は音が出なくなりますね。
+
+  返事が遅くてすみません。VMはこれでよいと思います。
+
+> soundStart: snd_add_pcm_handler: Function not implemented
+> 
+> あちらを立てればこちらが立たずです。
+
+  起動時に-vm-sound-ALSAをつける、それでだめなら-vm-sound-OSSをつけて
+みるとどうなるでしょうか。
+
+-- Yoshiki
+From abee.abe ＠ nifty.ne.jp  Mon Jan  5 09:35:50 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon Jan  5 09:36:04 2009
+Subject: [Squeak-ja: 4118] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <ueizjcu1e.wl%yoshiki@vpri.org>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+	<495AE72D.9080509@mx2.ttcn.ne.jp>
+	<2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+	<2d5d52a80812302350k68f62c19o16d06cff38eeccf4@mail.gmail.com>
+	<ueizjcu1e.wl%yoshiki@vpri.org>
+Message-ID: <2d5d52a80901041635q678807d8l45f41ed796a89e65@mail.gmail.com>
+
+こんにちは、阿部です。
+私の環境では-vm-sound-OSSで音が出るようになりました。ありがとうございました。
+すこし不思議なのは、このオプションを付けると同時にMIDIポートも見えるようになることです。しかし、実際は使えません。
+
+SimpleMIDIPort midiIsSupported. "true"
+(SimpleMIDIPort primPortNameOf: 0) asByteArray. "a ByteArray(125 20 51)"
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/01/04 18:14 Yoshiki Ohshima <yoshiki@vpri.org>:
+> At Wed, 31 Dec 2008 16:50:18 +0900,
+> Kazuhiro ABE wrote:
+>>
+>> こんにちは、阿部です。
+>>
+>> 最新と思われるSqueak-3.10-4.i686-pc-linux-gnuを使って、
+>> http://squeakvm.org/unix/
+>>
+>> Ubuntu 8.10で以下のように起動してみました。
+>>
+>> /usr/local/bin/squeak -vm-display-X11 -compositioninput
+>> ScratchSourceCode1.3.1synth.image
+>>
+>> 結果、確定前文字列の制限もなく正しく入力できました。
+>> しかし、今度は音が出なくなりますね。
+>
+>  返事が遅くてすみません。VMはこれでよいと思います。
+>
+>> soundStart: snd_add_pcm_handler: Function not implemented
+>>
+>> あちらを立てればこちらが立たずです。
+>
+>  起動時に-vm-sound-ALSAをつける、それでだめなら-vm-sound-OSSをつけて
+> みるとどうなるでしょうか。
+>
+> -- Yoshiki
+From yoshiki ＠ vpri.org  Wed Jan  7 20:20:43 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed Jan  7 21:40:16 2009
+Subject: [Squeak-ja: 4119] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80901041635q678807d8l45f41ed796a89e65@mail.gmail.com>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+	<2d5d52a80812292030g7ce61119i80115d0f57d5c6fd@mail.gmail.com>
+	<495AE72D.9080509@mx2.ttcn.ne.jp>
+	<2d5d52a80812302308r70c510e1p499b203581037ed@mail.gmail.com>
+	<2d5d52a80812302350k68f62c19o16d06cff38eeccf4@mail.gmail.com>
+	<ueizjcu1e.wl%yoshiki@vpri.org>
+	<2d5d52a80901041635q678807d8l45f41ed796a89e65@mail.gmail.com>
+Message-ID: <u7i579xbo.wl%yoshiki@vpri.org>
+
+At Mon, 5 Jan 2009 09:35:50 +0900,
+Kazuhiro ABE wrote:
+> 
+> こんにちは、阿部です。
+> 私の環境では-vm-sound-OSSで音が出るようになりました。ありがとうござ
+> いました。
+
+  僕はVMのALSAまわりはすこしいじって、いくつか拡張されたprimitiveが
+ALSAドライバのみに存在するものもありますので、ALSA関係のライブラリを入
+れたりして動くようにすると世界聴診器も少し幸せになるかもしれません。
+
+> すこし不思議なのは、このオプションを付けると同時にMIDIポートも見えるようになることです。しかし、実際は使えません。
+> 
+> SimpleMIDIPort midiIsSupported. "true"
+> (SimpleMIDIPort primPortNameOf: 0) asByteArray. "a ByteArray(125 20 51)"
+
+  うーむ。これはmidiIsSupportedがうそをついているということですかね?
+
+-- Yoshiki
+From abee.abe ＠ nifty.ne.jp  Mon Jan 12 10:18:29 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon Jan 12 10:18:43 2009
+Subject: [Squeak-ja: 4120] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80901010926n4e57d35od34f9652d4b756e1@mail.gmail.com>
+References: <495BA901.3040404@mx2.ttcn.ne.jp>
+	<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>
+	<20090101151633.E2EA.E782595A@alpha.co.jp>
+	<495CD275.4070502@mx2.ttcn.ne.jp>
+	<2d5d52a80901010926n4e57d35od34f9652d4b756e1@mail.gmail.com>
+Message-ID: <2d5d52a80901111718w6030835ex8325cd243faa2c2a@mail.gmail.com>
+
+こんにちは、阿部です。
+OSP_B_V2_20080710でも起動時にF6でブートオプションを指定し、「lang=ja.UTF-8」とすることで、Edu7と同様に日本語入力できることを確認しました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/01/02 2:26 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+> こんにちは、阿部です。
+> 千葉さん、ありがとうございました。
+> 私の環境(Ubuntu 8.10上のVirtualBoxを使って、KNOPPIX
+> Edu7のisoファイルをブート)では、この方法でScratchからの入力ができました。OSPv2はアカウント申請中なので入手にしばらくかかると思います。
+> この方法で確かにUTF-8に変わったことを調べるため、printenvした環境変数と、viなどでファイルを作成したものをod
+> -xして文字コードを見ています。SCIM-AnthyからScratchに上がってくる文字もUTF-8でした。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 2009/01/01 23:25 yhousako <yhousako@mx2.ttcn.ne.jp>:
+>> 千葉さん．こちらでもお世話になります．
+>>
+>> 宝迫です．正月早々情報を頂きありがとうございます．OSPv2とEdu7で実験して
+>> みました．結果としては、残念ながらうまくいきませんでした．
+>>
+>> 念のためにWebサイトなどを見て回り、ロケールの設定をいくつか試してみまし
+>> た．教えて頂いた「ja.UTF-8」以外に試したものとして
+>>
+>> ja.utf8
+>> ja_JP.UTF-8
+>>
+>> でもやってみましたが、ダメでした．
+>>
+>> ついでに/etc/locale.genも眺めてみましたが、5.3.1と5.1.1では日本語設定に
+>> 違いはなく、いじるのをやめました．
+>> ＃システム自体に問題が生じると困るので．
+>>
+>> システムのロケールだけでなく、SCIMとAnthyの問題というのも考えられると思
+>> います．ちょっと探すと古いSCIM-Anthyは、UTF-8非対応という情報もありまし
+>> た．（真偽の程はどうかわかりませんが）
+>>
+>> こちらを解決する必要があるような気がしました．
+>>
+>> Daisaku CHIBA さんは書きました:
+>>> 宝迫さん、阿部さん
+>>>
+>>> 千葉＠KNOPPIX教育利用研究会が横から失礼します。
+>>>
+>>> "KNOPPIX5.1.1ベースでロケールをUTF-8にすれば良い"
+>>> という話であれば、起動時のboot optionで、
+>>>
+>>>   boot: knoppix lang=ja.UTF-8
+>>>
+>>> と入力して起動して頂くと幸せになれると思います。
+>>> ＃申し訳ありませんが、手元に環境がないので試してはいません。
+>>>
+>>> ＜ご参考＞
+>>> KNOPPIXのロケールは、以下の通り過渡期にありますが、
+>>> UTF-8に移行する方向ですので、
+>>> ScratchのUTF一本化の流れと矛盾はありません。
+>>>
+>>>   ・5.0.0からEUCとUTF-8の並行運用開始（デフォルトはEUC）
+>>>   http://buxus.s31.xrea.com/pukiwiki/pukiwiki.php?news%2F2006-04-13
+>>>   ・5.1.1でも上記と同じ  ← これがOSP基本パッケージのベース
+>>>   ・5.3.1からデフォルトがUTF-8に変更（並行運用は維持）
+>>>   http://www.rcis.aist.go.jp/project/knoppix/KNOPPIX531CD-20080520AC.pdf
+>>>
+>>> 以上
+>>
+>> ------------------------------------------------------------------
+>> 寳迫　芳人：yhousako@gmail.com
+>> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+>> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+>> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+>> つれづれなるままに…：http://4oc.blogspot.com/
+From yhousako ＠ mx2.ttcn.ne.jp  Mon Jan 12 13:18:50 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Mon Jan 12 13:19:04 2009
+Subject: [Squeak-ja: 4121] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80901111718w6030835ex8325cd243faa2c2a@mail.gmail.com>
+References: <495BA901.3040404@mx2.ttcn.ne.jp>	<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>	<20090101151633.E2EA.E782595A@alpha.co.jp>	<495CD275.4070502@mx2.ttcn.ne.jp>	<2d5d52a80901010926n4e57d35od34f9652d4b756e1@mail.gmail.com>
+	<2d5d52a80901111718w6030835ex8325cd243faa2c2a@mail.gmail.com>
+Message-ID: <496AC4AA.7010007@mx2.ttcn.ne.jp>
+
+宝迫です．
+
+これまでのものも含めて確認作業＆情報提供して頂きありがとうございました．
+SCIM-Anthyの問題でもなさそうなので、OSPv2とEdu7について、うちではうまく
+いっていない原因が、インストールの時点から「lang=ja.UTF-8」でやっていな
+いからなのかも知れないと思っています．時間を見つけてやってみます．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> OSP_B_V2_20080710でも起動時にF6でブートオプションを指定し、「lang=ja.UTF-8」とすることで、Edu7と同様に日本語入力できることを確認しました。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+> 2009/01/02 2:26 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+>> こんにちは、阿部です。
+>> 千葉さん、ありがとうございました。
+>> 私の環境(Ubuntu 8.10上のVirtualBoxを使って、KNOPPIX
+>> Edu7のisoファイルをブート)では、この方法でScratchからの入力ができました。OSPv2はアカウント申請中なので入手にしばらくかかると思います。
+>> この方法で確かにUTF-8に変わったことを調べるため、printenvした環境変数と、viなどでファイルを作成したものをod
+>> -xして文字コードを見ています。SCIM-AnthyからScratchに上がってくる文字もUTF-8でした。
+>>
+>>  //abee
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Mon Jan 12 18:51:25 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Mon Jan 12 18:51:39 2009
+Subject: [Squeak-ja: 4122] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <496AC4AA.7010007@mx2.ttcn.ne.jp>
+References: <495BA901.3040404@mx2.ttcn.ne.jp>
+	<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>
+	<20090101151633.E2EA.E782595A@alpha.co.jp>
+	<495CD275.4070502@mx2.ttcn.ne.jp>
+	<2d5d52a80901010926n4e57d35od34f9652d4b756e1@mail.gmail.com>
+	<2d5d52a80901111718w6030835ex8325cd243faa2c2a@mail.gmail.com>
+	<496AC4AA.7010007@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80901120151r14ecb8cardc76befe847813c6@mail.gmail.com>
+
+こんにちは、阿部です。
+isoファイルをそのまま焼いてCD-ROMブートしてみるのと、うまく行かない環境で起動後にprintenvしてもらうのが良いように思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/01/12 13:18 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> 宝迫です．
+>
+> これまでのものも含めて確認作業＆情報提供して頂きありがとうございました．
+> SCIM-Anthyの問題でもなさそうなので、OSPv2とEdu7について、うちではうまく
+> いっていない原因が、インストールの時点から「lang=ja.UTF-8」でやっていな
+> いからなのかも知れないと思っています．時間を見つけてやってみます．
+>
+> Kazuhiro ABE さんは書きました:
+>> こんにちは、阿部です。
+>> OSP_B_V2_20080710でも起動時にF6でブートオプションを指定し、「lang=ja.UTF-8」とすることで、Edu7と同様に日本語入力できることを確認しました。
+>>
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+>>
+>> 2009/01/02 2:26 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+>>> こんにちは、阿部です。
+>>> 千葉さん、ありがとうございました。
+>>> 私の環境(Ubuntu 8.10上のVirtualBoxを使って、KNOPPIX
+>>> Edu7のisoファイルをブート)では、この方法でScratchからの入力ができました。OSPv2はアカウント申請中なので入手にしばらくかかると思います。
+>>> この方法で確かにUTF-8に変わったことを調べるため、printenvした環境変数と、viなどでファイルを作成したものをod
+>>> -xして文字コードを見ています。SCIM-AnthyからScratchに上がってくる文字もUTF-8でした。
+>>>
+>>>  //abee
+>
+> ------------------------------------------------------------------
+> 寳迫　芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+From umejava ＠ mars.dti.ne.jp  Mon Jan 12 21:52:29 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jan 12 21:53:01 2009
+Subject: [Squeak-ja: 4123] 第5回Smalltalk勉強会のお知らせ
+Message-ID: <JC200901122152296.5530828@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+勉強会のお知らせです。今年もSmalltalkを盛り上げていきましょう。
+
+日時: 2009/1/23(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai5kaismalltalkbenkyoukai
+
+今回は「制御構造を自分で作る」ことを仮のテーマとします。
+
+お気軽に、どしどしお越しください。
+
+---
+[:masashi | ^umezawa]
+From yhousako ＠ mx2.ttcn.ne.jp  Tue Jan 13 03:28:43 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Tue Jan 13 03:28:56 2009
+Subject: [Squeak-ja: 4124] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80901120151r14ecb8cardc76befe847813c6@mail.gmail.com>
+References: <495BA901.3040404@mx2.ttcn.ne.jp>	<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>	<20090101151633.E2EA.E782595A@alpha.co.jp>	<495CD275.4070502@mx2.ttcn.ne.jp>	<2d5d52a80901010926n4e57d35od34f9652d4b756e1@mail.gmail.com>	<2d5d52a80901111718w6030835ex8325cd243faa2c2a@mail.gmail.com>	<496AC4AA.7010007@mx2.ttcn.ne.jp>
+	<2d5d52a80901120151r14ecb8cardc76befe847813c6@mail.gmail.com>
+Message-ID: <496B8BDB.9050008@mx2.ttcn.ne.jp>
+
+宝迫です．
+
+別の仕事の傍らで実験を続けています．（そろそろ寝ます）(^_^;;;
+
+今の段階でわかったことだけ書いておきます．
+
+これまで実験に使っていたScratchは、OSPv2で作った「継続的なKNOPPIXイメー
+ジ」のホームフォルダに保存しておりました．この*KNOPPIXイメージを作る前*
+に「lang=ja.UTF-8」として起動しないと、UTF-8にならないことがわかりました．
+＃KNOPPIXイメージを作った後に「lang=ja.UTF-8」として起動しても、printenv
+すると「lang=ja.eucJP」となってしまっていました．
+
+逆に、はじめに「lang=ja.UTF-8」として起動させたOSPv2で「継続的なKNOPPIX
+イメージ」を作れば、以降はこの設定をしなくても自動的にUTF-8になりまし
+た．たぶん、この状態でScratchのインストール作業をすれば、特に問題がなく
+なるのではないかと思っています．
+
+続きはまた．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> isoファイルをそのまま焼いてCD-ROMブートしてみるのと、うまく行かない環境で
+> 起動後にprintenvしてもらうのが良いように思います。
+>
+>  //abee
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From hayasaka ＠ pluto.dti.ne.jp  Tue Jan 13 09:54:14 2009
+From: hayasaka ＠ pluto.dti.ne.jp (早坂　吉昭)
+Date: Tue Jan 13 09:54:36 2009
+Subject: [Squeak-ja: 4125] Scratchの方針を教えてください。
+References: <200901120300.n0C30eiK001393@pop.pluto.dti.ne.jp>
+Message-ID: <95F8E11A77674B70B2A6C7558B8DECDF@computer>
+
+こんにちは、　早坂です。
+
+　Scratchの話題が増えてきましたが、
+今後のSqueak-jaをどうするのか教えて下さい。
+Scratch-jaを独立して、新たにどなたか立ち上げるのか、
+あるいは、SqueakとScratchを統合した新しい会を立ち上げるのか、
+検討されている方針があれば教えて頂ければ、ありがたいです。
+（私としては、OLPCも含めて統合した、なにか新しい会を希望します。）
+
+早坂　吉昭 
+
+From yoshiki ＠ vpri.org  Tue Jan 13 10:48:50 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Jan 13 10:49:09 2009
+Subject: [Squeak-ja: 4126] Re: Scratchの方針を教えてください。
+In-Reply-To: <95F8E11A77674B70B2A6C7558B8DECDF@computer>
+References: <200901120300.n0C30eiK001393@pop.pluto.dti.ne.jp>
+	<95F8E11A77674B70B2A6C7558B8DECDF@computer>
+Message-ID: <u1vv87z7h.wl%yoshiki@vpri.org>
+
+At Tue, 13 Jan 2009 09:54:14 +0900,
+早坂　吉昭 wrote:
+> 
+> こんにちは、　早坂です。
+> 
+> 　Scratchの話題が増えてきましたが、
+> 今後のSqueak-jaをどうするのか教えて下さい。
+> Scratch-jaを独立して、新たにどなたか立ち上げるのか、
+> あるいは、SqueakとScratchを統合した新しい会を立ち上げるのか、
+> 検討されている方針があれば教えて頂ければ、ありがたいです。
+
+  僕の知る限りでは、特に方針というものはありませんでした。
+
+  とりあえずScratchの話題としては、今までのところVMまわりや日本語入力
+周りなどSqueakやEtoysと共に語れるものが多かったのでそれなりに意義があっ
+たと思います。確かに論理的にはおいおい分離したメーリングリストができて
+いくものかもしれませんが、内容のオーバラップ具合を見ると分けなくても良
+いかなという気はしますね。
+
+> （私としては、OLPCも含めて統合した、なにか新しい会を希望します。）
+
+  あるいは、このメーリングリストの目的を変更する、ということも考えられ
+ますね。OLPCの話題はScratchやEtoysとは直交して(というのかな)存在するの
+で、Squeak EtoysやScratchの遺伝子を引き継ぐシステムに関するメーリング
+リストとして進めていくのも良いかもしれません。
+
+  貴重なご意見をありがとうございます。
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Tue Jan 13 22:09:12 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jan 13 22:09:27 2009
+Subject: [Squeak-ja: 4127] SeasideJOnePlusDB正式版
+Message-ID: <JY200901132209128.3173546@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SeasideJOnePlusDBをこのたび更新しました。
+
+概要:
+http://swikis.ddo.jp/umejava/SeasideJOnePlus
+
+直リンク:
+ftp://swikis.ddo.jp/SeasideJ/one/SeasideJOne-090112-plusDB.zip
+
+SeasideJOneは展開するだけですぐにSeasideを試すことができるall-in-one
+パッケージです。Windows, Mac, Linuxのすべてで動作します。
+
+PlusDBバージョンにはSStoreという超簡易DB、OmniBaseというODBMSが搭載されて
+います。これらはいわゆる組み込みDBであり、Squeakイメージ内にインストール
+済みです。
+
+またObject-Relational MappingレイヤとしてGlorpが入っています。
+GlorpはいろいろなRDBMSにつながりますが、PostgreSQL用のコネクタがデフォルト
+で入っています。
+
+さて、今回の目玉はDB接続のためのサンプルの同梱です。
+http://swikis.ddo.jp/umejava/uploads/41/ReadMe-ToDoList.txt
+
+このToDoListのWebアプリは、SStoreとOmniBaseとGlorpの全てにつながるように
+なっています。各DB用のセッションアダプタクラスを切り替えるだけで、接続が
+切り替わります。
+
+SmalltalkでどうDBに接続するのかの手頃な例になっていると思いますので、ぜひ、
+お試し下さい。
+
+なお、PostgreSQLのインストールが面倒という方は、ブータブル版もあります。
+こちらはSqLinuxOSというSqueak入りのLinuxで実現されています。
+
+概要:
+http://swikis.ddo.jp/umejava/52
+
+直リンク:
+ftp://swikis.ddo.jp/SqueakDevJa/sqlos/SqLinuxOS2009-Seaside.iso.zip
+
+isoファイルをVMwareなどで起動すれば、既存の環境を一切汚さずに、
+SeasideJOnePlusDBを試すことができます。(PostgresのサービスがSqLinuxOS
+で自動起動するようになっています)
+
+さらにSeasideとDBとの連携については、SeasideへGO!!でより詳しく扱っていく
+予定です。こちらもよろしくお願いします。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From yhousako ＠ mx2.ttcn.ne.jp  Wed Jan 14 02:43:41 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Wed Jan 14 02:44:01 2009
+Subject: [Squeak-ja: 4128] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+In-Reply-To: <2d5d52a80901120151r14ecb8cardc76befe847813c6@mail.gmail.com>
+References: <495BA901.3040404@mx2.ttcn.ne.jp>	<2d5d52a80812311851w1dfd0595v4007de5ef6eaf3d5@mail.gmail.com>	<20090101151633.E2EA.E782595A@alpha.co.jp>	<495CD275.4070502@mx2.ttcn.ne.jp>	<2d5d52a80901010926n4e57d35od34f9652d4b756e1@mail.gmail.com>	<2d5d52a80901111718w6030835ex8325cd243faa2c2a@mail.gmail.com>	<496AC4AA.7010007@mx2.ttcn.ne.jp>
+	<2d5d52a80901120151r14ecb8cardc76befe847813c6@mail.gmail.com>
+Message-ID: <496CD2CD.8010702@mx2.ttcn.ne.jp>
+
+宝迫：前回の続きです．
+
+「lang=ja.UTF-8」で起動したOSPv2でKNOPPIXイメージをUSBメモリに保存し、そ
+のホームフォルダ内でScratchのインストール作業を行いました．
+
+すると、日本語が入力できるようになりました．（万歳）
+
+めでたしめでたし、と言いたいところだったのですが、USBメモリ内にファイル
+保存用のフォルダを作り、それをScratchから開いて*日本語ファイル名*で保存
+しようとすると「このフォルダは読み取り専用ではないですか？」というような
+メッセージが出て「tmp0（数は連番）」というようなファイルができて日本語
+ファイル名での保存ができませんでした．
+＃アルファベットと数字だけのファイル名なら保存できました．
+
+Projectsフォルダ内に直接保存するなら問題ありませんので、たいした問題では
+ないのですが、KNOPPIXから外してWinやMacのScratchで作ったファイルを開きた
+いときには、ちょっと面倒かなと思いました．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> isoファイルをそのまま焼いてCD-ROMブートしてみるのと、うまく行かない環境で
+> 起動後にprintenvしてもらうのが良いように思います。
+>
+>  //abee
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee.abe ＠ nifty.ne.jp  Thu Jan 15 14:36:36 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Jan 15 14:36:56 2009
+Subject: [Squeak-ja: 4129] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+In-Reply-To: <4958DF51.7070607@mx2.ttcn.ne.jp>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+	<uljv9au3g.wl%yoshiki@vpri.org>
+	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+	<492D4CCF.5040708@mx2.ttcn.ne.jp>
+	<2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>
+	<495788C2.8050100@mx2.ttcn.ne.jp>
+	<2d5d52a80812282144v16face9bkd41b43eb97124a39@mail.gmail.com>
+	<4958DF51.7070607@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80901142136u43602cc9g133b3ec20c84209b@mail.gmail.com>
+
+こんにちは、阿部です。
+ラウドネス補正については、Scratchのプログラムでも対応できると思いますので、そちらで試してみてもらえますか。
+「音量」の問題は確認できました。ピコボードがない場合でも音センサの代わりにPCのマイクが使われます。一度でも音を鳴らすと、この機能がアクティベートされてしまい、結果してサウンドレコーダの録音と同じく、エラーやハングが発生するようです。
+この問題に対応したイメージを今までと同じ名前で以下に置きました。
+http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+
+UNIX系のプラットホームの場合(Smalltalk platformName = 'unix')、録音機能を殺しています。
+合わせて、3.7-7JPatched VMを使った際に、長い変換候補でもエラーにならないようにしています(ただし文字は化けます)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/12/29 23:31 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> 宝迫です．恥ずかしながら、大きな勘違いをしておりました．(^_^;;;
+> そのために、動作確認でもさらに勘違いをしました．
+>
+> 【勘違い1】
+> Scratchの内部に完全なGM音源を持っていると思いこんでいました．阿部さんの
+> メールを良く読んでいれば読み取れたはずなのですが、思い込みとは恐ろしいも
+> のです．（反省）
+>
+> 【勘違い2】
+> GM音源では打楽器音は鍵盤に割り振られるので、「音階になっている」というこ
+> とが「鍵盤に割り振られている」と同義であると勘違いをしておりました．これ
+> も前のメールを良く読んでいればわかったはずでした．（赤面）
+>
+> 改めて動作確認をしました．
+>
+> 【動作確認の結果】
+> 「楽器を○にする」で音色の変更はできました．「○の音符を…」と「○のドラム
+> を…」は、同じ動作になっています．「楽器を○にする」で音色を変えると、「○
+> のドラムを…」で鳴る音も変わります．これも、［4101］で解説して頂いた通り
+> です．
+>
+> Kazuhiro ABE さんは書きました:
+>> これらはFM音源ですが、もともとの定義が悪く、ほとんど音色の違いが分かりません。
+>
+> 2オペレータくらいでしょうか？確かに、音色の違いはわかりにくいと思いました．
+>
+>> 音量については、人間の感覚的なラウドネス曲線に対する補正を行っていないので、
+>> 周波数と音量が比例して感じられるのだと思います。
+>> http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A
+>> この対応をするかどうかですね。
+>
+> この辺りも、普通のGM音源なら問題ないはずのところですよね．現実の問題とし
+> ては、補正しないと実用的ではないと思います．簡単にできればよいのですが、
+> いかがでしょうか．
+>
+>> 「調べる」については、今回いじっていないので、これとは別のScratch Boardまわりの問題ですね。
+>> ご存知と思いますが、以下のページにあるようにフィードバックを返してもらえるとよいと思います。
+>> http://info.scratch.mit.edu/Linux_installer
+>
+> 今まで使っていなかったので、気づかなかったのだと思いますが、「調べる」の
+> 「音量」がどうも上手く動かないようです．（「スライダー…」は関係がなかった）
+>
+> こちらで確認したところ、Picoボードを挿していなくても同じで、スクリプトに
+> 何も組んでいない状態かスクリプトを組んであってもScratchを起動してから一
+> 度も音を出していない状態なら、「音量」にチェックを入れても動作に問題はあ
+> りません．ところが、何らかの音（「ニャー」も含む）を出そうとすると、ダメ
+> なのです．
+>
+> フィードバックに協力したいのは山々ですが、英語がからっきしダメなので、何
+> をどうしたらよいかよく分かりません．(^_^;;;
+>
+> ------------------------------------------------------------------
+> 寳迫　芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+From abee ＠ squeakland.jp  Thu Jan 15 22:22:16 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Jan 15 22:22:33 2009
+Subject: [Squeak-ja: 4130] オープンソースカンファレンス2009 Tokyo/Spring
+Message-ID: <2d5d52a80901150522x5b6f1deek277e302a2884bab7@mail.gmail.com>
+
+こんにちは、阿部です。
+Squeak-jaは各地のOSCに参加していますが、2/20(金), 21(土)に東京で開催されるOSC2009
+Tokyo/Springに前回に引き続きSmalltalk-users.jpと共同で出展します。ただし、私たちのブース展示は「2/21(土)のみ」ですので、ご注意ください。
+今回はセミナーにも出ず、のんびりと過ごそうと思います。参加は無料ですので、お気軽にお立ち寄りください。お手伝いいただける方も歓迎です。
+
+オープンソースカンファレンス2009 Tokyo/Spring
+http://www.ospn.jp/osc2009-spring/
+
+Smalltalk-users.jp
+http://sites.google.com/a/smalltalk-users.jp/home/Home
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Thu Jan 15 22:40:00 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Jan 15 22:40:23 2009
+Subject: [Squeak-ja: 4131] Developers Summit 2009 （デブサミ2009）
+Message-ID: <2d5d52a80901150539u47281f46kc2167cbac5823dae@mail.gmail.com>
+
+こんにちは、阿部です。
+
+昨年に引き続き、今年も2月12日（木）・13日（金）に東京は目黒で開催されるデブサミ2009にSmalltalk-users.jpと合同で出展します(詳細は末尾)。今回は講演はありませんが、2日ともブース展示しますので、ぜひご来場ください。
+また、Reject Live !と称して、コミュ二ティのための時間を40分ほど用意してもらっています。ここで行うネタのアイデアをいただけるとうれしいです。セミナのように、話す側、聞く側がはっきり分かれるようなものでない方がよいのではと漠然と思っています。
+
+-日時：2/12
+-場所：Hackathon会場
+-15:35-16:15(案) Smalltalk-users.jp / Squeak-ja
+
+当日ブースを手伝ってもらえる方も募集中です。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+◇◆━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◆◇
+　　　　技術者コミュニティとの連携から生まれた総合ITコンファレンス
+　　　　　　 ◇◆ Developers Summit 2009 （デブサミ2009）◆◇
+　　　　　　　　　 2009年2月12日（木）・13日（金）開催！
+◇◆━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◆◇
+
+　◇◆◇◆◇◆◇◆◇◆つなぐ、つながる、そして未来へ◆◇◆◇◆◇◆◇◆◇
+
+　Developers Summit（通称：デブサミ）は、デベロッパーコミュニティとの連
+　携から生まれた総合ITカンファレンスです。デベロッパーの知的交流の場を作
+　ることで、世の中がもっと豊かになることを願って、年1回開催しているITエ
+　ンジニアの祭典です。
+
+　 2009年のテーマは「つなぐ、つながる、そして未来へ」。
+　日進月歩で進んでいるITの世界では、とかく新しい技術がクローズアップされ
+　がちです。しかし、どんな技術でも突然生まれるものではありません。過去か
+　らの技術の継承、新しいサービスとの出会い、ユーザーとの新たな関わり、ネ
+　ットワークの伝達、コミュニティを通じた交流。こうした「つながり」によっ
+　て世界が創られ、未来が生まれていきます。
+
+　さまざまな技術や考え方にデブサミの場で触れ合っていただき、そこで得たも
+　のをデベロッパーのみなさんに現場に持ち帰っていただくことができれば幸い
+　です。みなさまのご参加を心より、お待ちしています！
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━……‥‥・・
+◆名 称：Developers Summit 2009 （デブサミ2009）
+◆会 期：2009年2月12日（木）・13日（金）
+◆会 場：目黒雅叙園（東京・目黒）
+◆主 催：株式会社 翔泳社
+・‥‥……━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▼無料の70セッションは完全事前登録制！お申込はこちら▼
+http://codezine.jp/devsumi/2009
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+◇◆ デブサミ2009 テーマ別セッション（無料） ◆◇
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+　デブサミは、今年も充実の70セッションを無料でお届けいたします。
+
+◆価値あるソフトウェアを提供し続けるための「開発プロセス」
+　・開発プロセスの心
+　・・など 計7セッション
+　 http://codezine.jp/devsumi/2009/midokoro/#01
+
+◆ソフトウェアの将来を展望するための「これからのアーキテクチャ」
+　・テクノロジーは世界をインターフェイスする
+　・自律型移動ロボットのソフトウェア技術
+　・パネルディスカッションクラウド時代のプログラミングスタイルを語り合おう
+　・・など 計12セッション
+　 http://codezine.jp/devsumi/2009/midokoro/#02
+
+◆テクノロジーの変化を体感するための「Development Style」
+　・Ruby 1.9の現状と導入ポイント
+　・クラウドによるソフトウェア開発パラダイムの進化
+　・Silverlightの可能性と最近のデザイナの取り組み
+　・OpenSocialパネルディスカッション：2009年、OpenSocial普及元年に「これか
+　　ら」を大予言
+　・プロとしてのOracleアーキテクチャ入門 〜 番外編 〜
+　・「偶然」からキャリアをつくる
+　・・など 計45セッション
+　 http://codezine.jp/devsumi/2009/midokoro/#03
+
+◆仕事の醍醐味を味わうための「プロジェクトマネジメント」
+　・『脱Excel』を実現！統合プロジェクト管理パッケージ『SI Object Browser
+　　　 PM』を利用してIT企業も近代化しよう 〜PMBOKの9管理エリアをすべてカ
+　　　バー、原価比例法、EVM法をＷサポートしたプロジェクト管理！！〜
+　・・など 計6セッション
+　 http://codezine.jp/devsumi/2009/midokoro/#04
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+◇◆ デブサミ2009 特別セミナー（有料） ◆◇
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+　プロジェクトマネジメントの世界標準である、PMBOKガイド第3版を基に、現場
+　実務に適応できる基礎的なスキルを習得する2日間コース。今回もデブサミ特別
+　価格 29,400円（税込）にて開催！
+
+　「プロジェクトマネジメント 2日間セミナー（PMBOK第三版概要）」
+　株式会社タリアセンコンサルティング 青柳 次男 氏
+
+　▼本セミナーの詳細・お申込はこちら
+　　 http://codezine.jp/devsumi/2009/kouza/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+◇◆ デブサミ2009 オフィシャルコミュニティ ◆◇
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+　アジャイルプロセス協議会／Antenna Project／Windows+Services Consortium／
+　 SQL Server ユーザーグループ／XML技術者育成推進委員会／
+　 XMLコンソーシアム／JASIPA／O-One／オブジェクト倶楽部／
+　 grails code reading／codeseek／こみゅぷらす／ZABBIX-JP／
+　 JUDEユーザーズコミュニティ／XOOPS Cube プロジェクト／
+　 SKIPユーザグループ／Smalltalk-users.jp/Squeak-ja／
+　組込みソフトウェア管理者・技術者育成研究会／DevLOVE／
+　 TOPPERSプロジェクト／.Net ユーザーエクスペリエンス研究所／
+　日本Apache Geronimoユーザグループ／日本XPユーザーグループ／
+　日本Javaユーザグループ／日本Springユーザ会／
+　日本OpenSolarisユーザーグループ／日本PostgreSQLユーザ会／
+　日本MySQLユーザ会／日本UNIXユーザ会／日本Linux協会／日本Rubyの会／
+　 PMI日本支部／Visual Studio ユーザーグループ／Firebird日本ユーザー会／
+　プロジェクト・ファシリテーション・プロジェクト／
+　プロジェクトマネジメント学会／勉強会勉強会／要求開発アライアンス／
+　 Linuxコンソーシアム／Rubyビジネス・コモンズ／わんくま同盟
+　 ※50音順（1月14日現在）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+◇◆ デブサミ2009 スポンサー ◆◇
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+　アイエニウェア・ソリューションズ（株）／アドビ システムズ（株）／
+　インフラジスティックス・ジャパン（株）／
+　エンバカデロ・テクノロジーズ合同会社／（株）オージス総研／（株）カール／
+　技研商事インターナショナル（株）／
+　 Career Laboratory事業部 （テクノブレーン（株））／グレープシティ（株）
+　コベリティ 日本支社／（株）コンポーネントソース／
+　サン・マイクロシステムズ（株）／（株）システムインテグレータ／
+　（株）タリアセンコンサルティング／日本アイ・ビー・エム（株）
+　日本オラクル（株）／日本コンピュウェア（株）／（株）日立製作所／
+　ファイルメーカー（株）／マイクロソフト（株）／（株）ラネクシー
+　 ※50音順（1月14日現在）
+
+==========================================================================
+●最新情報・参加登録はこちら ⇒ http://codezine.jp/devsumi/2009
+==========================================================================
+From newapplesho ＠ gmail.com  Fri Jan 16 01:08:56 2009
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Fri Jan 16 01:09:15 2009
+Subject: [Squeak-ja: 4132] Re: SeasideJOnePlusDB正式版
+In-Reply-To: <JY200901132209128.3173546@mars.dti.ne.jp>
+References: <JY200901132209128.3173546@mars.dti.ne.jp>
+Message-ID: <E2065F51-AA45-4A69-80EE-779D002F8962@gmail.com>
+
+吉田 翔です．
+
+梅澤さん，いつもすばらしいイメージを配布していただきありがと 
+うございます．
+Seasideとさまざまなデータベースの連携方法が分かり勉強になります．
+
+Magmaについて興味を持ち，少し使っています．
+今後 ，SeasideJOnePlusDBにMagmaも取り扱う予 
+定はあるでしょうか．
+
+
+中部大学大学院
+工学研究科　情報工学専攻
+吉田 翔(Sho Yoshida)
+
+On 2009/01/13, at 22:09, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> SeasideJOnePlusDBをこのたび更新しました。
+>
+> 概要:
+> http://swikis.ddo.jp/umejava/SeasideJOnePlus
+>
+> 直リンク:
+> ftp://swikis.ddo.jp/SeasideJ/one/SeasideJOne-090112-plusDB.zip
+>
+> SeasideJOneは展開するだけですぐにSeasideを試すことができる 
+> all-in-one
+> パッケージです。Windows, Mac, Linuxのすべてで動作します。
+>
+> PlusDBバージョンにはSStoreという超簡易DB、OmniBase 
+> というODBMSが搭載されて
+> います。これらはいわゆる組み込みDBであり、Squeak 
+> イメージ内にインストール
+> 済みです。
+>
+> またObject-Relational MappingレイヤとしてGlorp 
+> が入っています。
+> GlorpはいろいろなRDBMSにつながりますが、PostgreSQL 
+> 用のコネクタがデフォルト
+> で入っています。
+>
+> さて、今回の目玉はDB接続のためのサンプルの同梱です。
+> http://swikis.ddo.jp/umejava/uploads/41/ReadMe-ToDoList.txt
+>
+> このToDoListのWebアプリは、SStoreと 
+> OmniBaseとGlorpの全てにつながるように
+> なっています。各DB用のセッションアダプタクラスを切り 
+> 替えるだけで、接続が
+> 切り替わります。
+>
+> SmalltalkでどうDBに接続するのかの手頃な例になっている 
+> と思いますので、ぜひ、
+> お試し下さい。
+>
+> なお、PostgreSQLのインストールが面倒という方は、ブー 
+> タブル版もあります。
+> こちらはSqLinuxOSというSqueak入りのLinux 
+> で実現されています。
+>
+> 概要:
+> http://swikis.ddo.jp/umejava/52
+>
+> 直リンク:
+> ftp://swikis.ddo.jp/SqueakDevJa/sqlos/SqLinuxOS2009-Seaside.iso.zip
+>
+> isoファイルをVMwareなどで起動すれば、既存の環境を一切 
+> 汚さずに、
+> SeasideJOnePlusDBを試すことができます。(Postgresの 
+> サービスがSqLinuxOS
+> で自動起動するようになっています)
+>
+> さらにSeasideとDBとの連携については、Seasideへ 
+> GO!!でより詳しく扱っていく
+> 予定です。こちらもよろしくお願いします。
+> http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/
+>
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From admin ＠ yengawa.com  Fri Jan 16 01:42:16 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Fri Jan 16 01:42:34 2009
+Subject: [Squeak-ja: 4133] C5 2009で研究報告します
+Message-ID: <496F6768.50107@yengawa.com>
+
+横川です。
+来週2009年1月19-22日に京都で開催されるC5国際カンファレンス(http:
+//www.cm.is.ritsumei.ac.jp/c5-09/ )でSqueakで作ったツールの研究報告をし
+ます。
+Squeakの話は直接は出てきませんが、利用例としてお知らせします。
+
+"Integration of Expression and Analysis using Constructive Scrapbook"
+Takeshi Sunaga, Koji Yokokawa and Won Jae-sung
+
+1月20日(火曜日)15:20-
+(http://www.cm.is.ritsumei.ac.jp/c5-09/index.php?Program#s9eec23e )
+
+多摩美術大学 須永研究室で研究している市民芸術のための表現ツール
+「CSbook」の報告です。このプロジェクトではワーキングプロトタイプによる
+Activity Based Design手法を使ってツールデザインを行っています。Squeakを
+使ってアジャイルプロセスでプロトタイプを作成しました。
+
+C5へ参加される人は気軽にお声がけください。
+
+-- !
+Koji Yokokawa <ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From "土本 (Florian) 強  Fri Jan 16 13:31:35 2009
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Fri Jan 16 13:32:04 2009
+Subject: [Squeak-ja: 4134] Re: 第5回Smalltalk勉強会のお知らせ
+In-Reply-To: <JC200901122152296.5530828@mars.dti.ne.jp>
+References: <JC200901122152296.5530828@mars.dti.ne.jp>
+Message-ID: <20090116132908.4265.41E77AC0@seagreen.ocn.ne.jp>
+
+　土本です。
+　こっそり今年の目標として「Smalltalkで仕事」を掲げています。
+	http://d.hatena.ne.jp/Florian/20081221
+
+メール「[Squeak-ja: 4123] 第5回Smalltalk勉強会のお知らせ」(2009/01/12 21:52) に於いて
+「Masashi Umezawa」 語りて曰く、
+
+Masashi> 勉強会のお知らせです。今年もSmalltalkを盛り上げていきましょう。
+Masashi> 
+Masashi> 日時: 2009/1/23(金) 19:00- (2,3時間程度)
+Masashi> 場所: シンコム・システムズ・ジャパン株式会社
+Masashi> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+Masashi> または「自由自在Squeakプログラミング」
+
+　参加したいのですが、どちらに連絡すればよろしいのでしょうか？
+
+　よろしくお願いします。
+
+!
+土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+                blog:  'http://d.hatena.ne.jp/Florian/'
+                webto:   'http://florianswiki.dyndns.org/Web/'
+openInWorld. "do it."
+!
+
+From umejava ＠ mars.dti.ne.jp  Fri Jan 16 15:02:42 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Jan 16 15:02:53 2009
+Subject: [Squeak-ja: 4135] Re: SeasideJOnePlusDB正式版
+In-Reply-To: <E2065F51-AA45-4A69-80EE-779D002F8962@gmail.com>
+References: <JY200901132209128.3173546@mars.dti.ne.jp>
+	<E2065F51-AA45-4A69-80EE-779D002F8962@gmail.com>
+Message-ID: <JM200901161502425.2857781@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Magmaについては、もちろん取り扱う予定です。Squeakではかなりスタンダード
+なOODBですからね。
+
+サンプルを作成したときのMagmaに重大なバグがあったので、今回のものには
+入れられなかったのですが、最新のバージョンでは直っている模様です。
+
+次回にはぜひ同梱したいと思います。
+
+ではでは。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 吉田 翔です．
+> 
+> 梅澤さん，いつもすばらしいイメージを配布していただきありがと 
+> うございます．
+> Seasideとさまざまなデータベースの連携方法が分かり勉強になります．
+> 
+> Magmaについて興味を持ち，少し使っています．
+> 今後 ，SeasideJOnePlusDBにMagmaも取り扱う予 
+> 定はあるでしょうか．
+> 
+> 
+> 中部大学大学院
+> 工学研究科　情報工学専攻
+> 吉田 翔(Sho Yoshida)
+> 
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Fri Jan 16 15:08:33 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Jan 16 15:08:46 2009
+Subject: [Squeak-ja: 4136] Re: 第5回Smalltalk勉強会のお知らせ
+In-Reply-To: <20090116132908.4265.41E77AC0@seagreen.ocn.ne.jp>
+References: <JC200901122152296.5530828@mars.dti.ne.jp>
+	<20090116132908.4265.41E77AC0@seagreen.ocn.ne.jp>
+Message-ID: <JH200901161508339.3208765@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+こっそりではなくて、ぜひ堂々と目標にされると良いと思いますよ。
+
+参加表明についてですが、このMLでも良いですし、もしくは当日飛び込みで
+ふらりと来ていただいてもかまいません。あまりに参加人数が多くなり、
+入場制限が必要になる日が来たときには、何らかの方法を考えようと思っています。
+
+"土本 (Florian) 強" <florian@seagreen.ocn.ne.jp> wrote:
+> 　土本です。
+> 　こっそり今年の目標として「Smalltalkで仕事」を掲げています。
+>   http://d.hatena.ne.jp/Florian/20081221
+> 
+> メール「[Squeak-ja: 4123] 第5回Smalltalk勉強会のお知らせ」(2009/01/12 21:52) に於いて
+> 「Masashi Umezawa」 語りて曰く、
+> 
+> Masashi> 勉強会のお知らせです。今年もSmalltalkを盛り上げていきましょう。
+> Masashi> 
+> Masashi> 日時: 2009/1/23(金) 19:00- (2,3時間程度)
+> Masashi> 場所: シンコム・システムズ・ジャパン株式会社
+> Masashi> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> Masashi> または「自由自在Squeakプログラミング」
+> 
+> 　参加したいのですが、どちらに連絡すればよろしいのでしょうか？
+> 
+> 　よろしくお願いします。
+> 
+> !
+> 土本(Florian)強 mailto: '<florian@seagreen.ocn.ne.jp>'
+>                 blog:  'http://d.hatena.ne.jp/Florian/'
+>                 webto:   'http://florianswiki.dyndns.org/Web/'
+> openInWorld. "do it."
+> !
+
+---
+[:masashi | ^umezawa]
+From mutoh ＠ openedu.org  Sat Jan 17 01:16:21 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Sat Jan 17 01:16:39 2009
+Subject: [Squeak-ja: 4137] Re: C5 2009で研究報告します
+In-Reply-To: <496F6768.50107@yengawa.com>
+References: <496F6768.50107@yengawa.com>
+Message-ID: <86d4enkyzu.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+酔っぱらってます。
+
+At Fri, 16 Jan 2009 01:42:16 +0900,
+Koji Yokokawa <admin@yengawa.com> wrote:
+> 来週2009年1月19-22日に京都で開催されるC5国際カンファレンス(http:
+> //www.cm.is.ritsumei.ac.jp/c5-09/ )でSqueakで作ったツールの研究報告をし
+> ます。
+> Squeakの話は直接は出てきませんが、利用例としてお知らせします。
+> 
+> "Integration of Expression and Analysis using Constructive Scrapbook"
+> Takeshi Sunaga, Koji Yokokawa and Won Jae-sung
+> 
+> 1月20日(火曜日)15:20-
+> (http://www.cm.is.ritsumei.ac.jp/c5-09/index.php?Program#s9eec23e )
+
+僕は、この日だけ、行きます。
+ちょうど、よかった;-)
+
+で、BoFの日(1/22?)には行けないのですが、どなたか板託して嫌じゃない人います?
+# http://qml.610t.org/squeak/Squeak2007.html 改
+
+嫌なら、やめます。
+
+当日は、DMW2008/05基板とかGainerとか、Arduino世界聴診器とか用意してい
+くつもりしてますので、お声かけてくださいな;-)
+
+では、京都でお会いしましょう;-)
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・にんじんだもの、赤くもなればあまくもなる
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+
+From admin ＠ yengawa.com  Sat Jan 17 02:09:06 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Sat Jan 17 02:09:23 2009
+Subject: [Squeak-ja: 4138] Re: C5 2009で研究報告します
+In-Reply-To: <86d4enkyzu.wl%mutoh@openedu.org>
+References: <496F6768.50107@yengawa.com> <86d4enkyzu.wl%mutoh@openedu.org>
+Message-ID: <4970BF32.6000703@yengawa.com>
+
+よこかわ@おうちです。
+同じく酔っぱらってます。
+
+Takeshi MUTOH wrote 09.1.17 1:16 AM:
+> むとう＠おうちです。
+> 
+> 酔っぱらってます。
+> 
+> At Fri, 16 Jan 2009 01:42:16 +0900,
+> Koji Yokokawa <admin@yengawa.com> wrote:
+>> 来週2009年1月19-22日に京都で開催されるC5国際カンファレンス(http:
+>> //www.cm.is.ritsumei.ac.jp/c5-09/ )でSqueakで作ったツールの研究報告をし
+>> ます。
+>> Squeakの話は直接は出てきませんが、利用例としてお知らせします。
+>>
+>> "Integration of Expression and Analysis using Constructive Scrapbook"
+>> Takeshi Sunaga, Koji Yokokawa and Won Jae-sung
+>>
+>> 1月20日(火曜日)15:20-
+>> (http://www.cm.is.ritsumei.ac.jp/c5-09/index.php?Program#s9eec23e )
+> 
+> 僕は、この日だけ、行きます。
+> ちょうど、よかった;-)
+
+おお!
+アランさんの講演がありますからね。
+ぼくの下手な英語はナマ温かく見守ってください。
+
+> で、BoFの日(1/22?)には行けないのですが、どなたか板託して嫌じゃない人います?
+> # http://qml.610t.org/squeak/Squeak2007.html 改
+> 
+> 嫌なら、やめます。
+
+手彫りwwww
+
+> 
+> 当日は、DMW2008/05基板とかGainerとか、Arduino世界聴診器とか用意してい
+> くつもりしてますので、お声かけてくださいな;-)
+
+それはそうとう面白そうですね。
+ArduinoやミューロボをSqueakにつなげたりしている韓国の学生Donghee Parkも
+来日するので一緒にコアな話をしましょう。
+
+> 
+> では、京都でお会いしましょう;-)
+> --
+> 武藤 武士＠「あおによし」自宅より 
+>  E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+>  ・にんじんだもの、赤くもなればあまくもなる
+>  ・自転車操業中 	    http://qml.610T.org/cycling/
+> 
+> 
+
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Jan 17 02:49:12 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Sat Jan 17 02:49:29 2009
+Subject: [Squeak-ja: 4139] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+In-Reply-To: <2d5d52a80901142136u43602cc9g133b3ec20c84209b@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>	<uljv9au3g.wl%yoshiki@vpri.org>	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>	<492D4CCF.5040708@mx2.ttcn.ne.jp>	<2d5d52a80812272106j7d7a1207s69e5494b1e241d47@mail.gmail.com>	<495788C2.8050100@mx2.ttcn.ne.jp>	<2d5d52a80812282144v16face9bkd41b43eb97124a39@mail.gmail.com>	<4958DF51.7070607@mx2.ttcn.ne.jp>
+	<2d5d52a80901142136u43602cc9g133b3ec20c84209b@mail.gmail.com>
+Message-ID: <4970C898.6090708@mx2.ttcn.ne.jp>
+
+宝迫＠ぼちぼち授業の環境を準備しているところです．
+＃児童数分+αのUSBメモリにKNOPPIXイメージをコピーしています．
+
+Kazuhiro ABE さんは書きました:
+> ラウドネス補正については、Scratchのプログラムでも対応できると思いますので、そちらで試してみてもらえますか。
+
+了解しました．やってみます．
+
+> 「音量」の問題は確認できました。ピコボードがない場合でも音センサの代わりにPCのマイクが使われます。一度でも音を鳴らすと、この機能がアクティベートされてしまい、結果してサウンドレコーダの録音と同じく、エラーやハングが発生するようです。
+> この問題に対応したイメージを今までと同じ名前で以下に置きました。
+> http://squeakland.jp/abee/tmp/ScratchSourceCode1.3.1synth.zip
+
+動作確認しました．ありがとうございます．今回は学校で動作確認をしたのです
+が、子どもたちが集まってきて、興味津々の様子でした．
+
+> UNIX系のプラットホームの場合(Smalltalk platformName = 'unix')、録音機能を殺しています。
+> 合わせて、3.7-7JPatched VMを使った際に、長い変換候補でもエラーにならないようにしています(ただし文字は化けます)。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee ＠ squeakland.jp  Mon Jan 19 09:43:22 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Mon Jan 19 09:43:42 2009
+Subject: [Squeak-ja: 4140] スクラッチ アイデアブック ゼロから学ぶスクラッチプログラミング
+Message-ID: <2d5d52a80901181643t4cbeb328gcca6f0342ec6ee33@mail.gmail.com>
+
+こんにちは、阿部です。
+1/25に日本初のScratchの本が出版されます(一部大手書店では先週末から店頭に並んでいるそうです)。
+
+スクラッチ アイデアブック
+ゼロから学ぶスクラッチプログラミング
+発売：カットシステム
+ISBN：978-4-87783-217-9
+税込3,087円《税抜2,940円》
+石原 正雄 著
+CD-ROM ×1
+発売日：2009年01月25日
+サイズ：B5変型判 	
+ページ数：192 	
+http://www.cutt.co.jp/book/978-4-87783-217-9.html
+
+著者の石原さんはMindStormsやPicoCricketで有名なラーニングシステムの社長さんです。私も原稿を少し見させてもらいましたが、子供にも分かりやすい入門書だと思いました。外部センサのPicoBoardの説明も入っているのがうれしいですね。
+http://www.mdstorm.com/picoboard/
+
+山本さんの「スクイークであそぼう」が日本におけるSqueak
+Etoys普及の決め手になったことは間違いありません。いくらネットが普及したと言っても、学校や家庭では紙の本の存在は重要です。この本もそのようになることを期待しています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Tue Jan 20 12:37:20 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Jan 20 12:37:35 2009
+Subject: [Squeak-ja: 4141] Re: スクラッチ アイデアブック ゼロから学ぶスクラッチプログラミング
+In-Reply-To: <2d5d52a80901181643t4cbeb328gcca6f0342ec6ee33@mail.gmail.com>
+References: <2d5d52a80901181643t4cbeb328gcca6f0342ec6ee33@mail.gmail.com>
+Message-ID: <2d5d52a80901191937u735442d6h619c4b7f3a304e17@mail.gmail.com>
+
+こんにちは、阿部です。
+出版社の価格情報が間違っていました。税込2,940円《税抜2,800円》が正しい価格です。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/01/19 9:43 Kazuhiro ABE <abee@squeakland.jp>:
+> こんにちは、阿部です。
+> 1/25に日本初のScratchの本が出版されます(一部大手書店では先週末から店頭に並んでいるそうです)。
+>
+> スクラッチ アイデアブック
+> ゼロから学ぶスクラッチプログラミング
+> 発売：カットシステム
+> ISBN：978-4-87783-217-9
+> 税込3,087円《税抜2,940円》
+> 石原 正雄 著
+> CD-ROM ×1
+> 発売日：2009年01月25日
+> サイズ：B5変型判
+> ページ数：192
+> http://www.cutt.co.jp/book/978-4-87783-217-9.html
+>
+> 著者の石原さんはMindStormsやPicoCricketで有名なラーニングシステムの社長さんです。私も原稿を少し見させてもらいましたが、子供にも分かりやすい入門書だと思いました。外部センサのPicoBoardの説明も入っているのがうれしいですね。
+> http://www.mdstorm.com/picoboard/
+>
+> 山本さんの「スクイークであそぼう」が日本におけるSqueak
+> Etoys普及の決め手になったことは間違いありません。いくらネットが普及したと言っても、学校や家庭では紙の本の存在は重要です。この本もそのようになることを期待しています。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+From yhousako ＠ mx2.ttcn.ne.jp  Tue Jan 20 22:35:04 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Tue Jan 20 22:35:18 2009
+Subject: [Squeak-ja: 4142] Re: スクラッチ アイデアブック ゼロから学ぶスクラッチプログラミング
+In-Reply-To: <2d5d52a80901181643t4cbeb328gcca6f0342ec6ee33@mail.gmail.com>
+References: <2d5d52a80901181643t4cbeb328gcca6f0342ec6ee33@mail.gmail.com>
+Message-ID: <4975D308.1030804@mx2.ttcn.ne.jp>
+
+宝迫です．情報を紹介して頂きありがとうございます．先ほど、Amazonで「注文
+可能になったらメールで連絡」してもらえるようにポチッとしておきました．出
+版されるのが楽しみです．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> 1/25に日本初のScratchの本が出版されます(一部大手書店では先週末から店頭に並んでいるそうです)。
+> 
+> スクラッチ アイデアブック
+> ゼロから学ぶスクラッチプログラミング
+> 発売：カットシステム
+(snip)
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From sonoda ＠ laptop-jp.org  Wed Jan 21 10:50:00 2009
+From: sonoda ＠ laptop-jp.org (Y.Sonoda)
+Date: Wed Jan 21 10:50:19 2009
+Subject: [Squeak-ja: 4143] Re: スクラッチ アイデアブック ゼロから学ぶスクラッチプログラミング
+In-Reply-To: <2d5d52a80901181643t4cbeb328gcca6f0342ec6ee33@mail.gmail.com>
+References: <2d5d52a80901181643t4cbeb328gcca6f0342ec6ee33@mail.gmail.com>
+Message-ID: <7f3aeb4c0901201750t43093114p620e3e38db87179@mail.gmail.com>
+
+苑田です。
+
+ずいぶんとご無沙汰をしております。
+いよいよScratchの本が出版されるのですね。
+非常に楽しみです。
+
+あと以前お話していた翻訳本の解題にOLPCの話を書くという
+話ですが、出版局からの意向により大幅に削られて、OLPCの
+項がなくなってしまいました（涙）
+阿部さんの苦労がしのばれる次第です。
+なので別の機会を狙います。
+
+2009/01/19 9:43 Kazuhiro ABE <abee@squeakland.jp>:
+> こんにちは、阿部です。
+> 1/25に日本初のScratchの本が出版されます(一部大手書店では先週末から店頭に並んでいるそうです)。
+>
+> スクラッチ アイデアブック
+> ゼロから学ぶスクラッチプログラミング
+> 発売：カットシステム
+> ISBN：978-4-87783-217-9
+> 税込3,087円《税抜2,940円》
+> 石原 正雄 著
+> CD-ROM ×1
+> 発売日：2009年01月25日
+> サイズ：B5変型判
+> ページ数：192
+> http://www.cutt.co.jp/book/978-4-87783-217-9.html
+>
+> 著者の石原さんはMindStormsやPicoCricketで有名なラーニングシステムの社長さんです。私も原稿を少し見させてもらいましたが、子供にも分かりやすい入門書だと思いました。外部センサのPicoBoardの説明も入っているのがうれしいですね。
+> http://www.mdstorm.com/picoboard/
+>
+> 山本さんの「スクイークであそぼう」が日本におけるSqueak
+> Etoys普及の決め手になったことは間違いありません。いくらネットが普及したと言っても、学校や家庭では紙の本の存在は重要です。この本もそのようになることを期待しています。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+From abee.abe ＠ nifty.ne.jp  Wed Jan 21 11:03:32 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Wed Jan 21 11:03:45 2009
+Subject: [Squeak-ja: 4144] Re: スクラッチ アイデアブック ゼロから学ぶスクラッチプログラミング
+In-Reply-To: <7f3aeb4c0901201750t43093114p620e3e38db87179@mail.gmail.com>
+References: <2d5d52a80901181643t4cbeb328gcca6f0342ec6ee33@mail.gmail.com>
+	<7f3aeb4c0901201750t43093114p620e3e38db87179@mail.gmail.com>
+Message-ID: <2d5d52a80901201803r587dbacfk1ff6dc684fa85d54@mail.gmail.com>
+
+こんにちは、阿部です。
+
+いま他のSqueakerの皆さんと一緒に京都で開催されているC5というカンファレンスに参加しています。先日の高田先生の案内にもあったように、アランさんの京都大学名誉博士号授与記念イベントを兼ねているのですが、昨日の記念講演とそれに続くレセプションは、ALAN-Kプロジェクトの推進に多大な貢献をされた故上林弥彦先生の追悼に充てられていました。
+苑田さんの活動もご遺志を継ぐものだと思いますので、今後ともよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/01/21 10:50 Y.Sonoda <sonoda@laptop-jp.org>:
+> 苑田です。
+>
+> ずいぶんとご無沙汰をしております。
+> いよいよScratchの本が出版されるのですね。
+> 非常に楽しみです。
+>
+> あと以前お話していた翻訳本の解題にOLPCの話を書くという
+> 話ですが、出版局からの意向により大幅に削られて、OLPCの
+> 項がなくなってしまいました（涙）
+> 阿部さんの苦労がしのばれる次第です。
+> なので別の機会を狙います。
+>
+> 2009/01/19 9:43 Kazuhiro ABE <abee@squeakland.jp>:
+>> こんにちは、阿部です。
+>> 1/25に日本初のScratchの本が出版されます(一部大手書店では先週末から店頭に並んでいるそうです)。
+>>
+>> スクラッチ アイデアブック
+>> ゼロから学ぶスクラッチプログラミング
+>> 発売：カットシステム
+>> ISBN：978-4-87783-217-9
+>> 税込3,087円《税抜2,940円》
+>> 石原 正雄 著
+>> CD-ROM ×1
+>> 発売日：2009年01月25日
+>> サイズ：B5変型判
+>> ページ数：192
+>> http://www.cutt.co.jp/book/978-4-87783-217-9.html
+>>
+>> 著者の石原さんはMindStormsやPicoCricketで有名なラーニングシステムの社長さんです。私も原稿を少し見させてもらいましたが、子供にも分かりやすい入門書だと思いました。外部センサのPicoBoardの説明も入っているのがうれしいですね。
+>> http://www.mdstorm.com/picoboard/
+>>
+>> 山本さんの「スクイークであそぼう」が日本におけるSqueak
+>> Etoys普及の決め手になったことは間違いありません。いくらネットが普及したと言っても、学校や家庭では紙の本の存在は重要です。この本もそのようになることを期待しています。
+>>
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+From tetha ＠ st.rim.or.jp  Fri Jan 23 08:54:26 2009
+From: tetha ＠ st.rim.or.jp (tetha@st.rim.or.jp)
+Date: Fri Jan 23 08:54:41 2009
+Subject: [Squeak-ja: 4145] Re: 第5回Smalltalk勉強会のお知らせ
+In-Reply-To: <JC200901122152296.5530828@mars.dti.ne.jp>
+References: <JC200901122152296.5530828@mars.dti.ne.jp>
+Message-ID: <b8c2540c0901221554m11fbf7a4m79ae9f0d09258e28@mail.gmail.com>
+
+林徹也です。
+つまらないものですが京都みやげをお持ちします。
+紙筒とかご用意されるといいかもしれません。
+
+# すでに今朝の東西線で少し損耗してしまいましたが(>_<)
+
+09/01/12 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> こんにちは
+> 梅澤です。
+>
+> 勉強会のお知らせです。今年もSmalltalkを盛り上げていきましょう。
+>
+> 日時: 2009/1/23(金) 19:00- (2,3時間程度)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> または「自由自在Squeakプログラミング」
+>
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai5kaismalltalkbenkyoukai
+>
+> 今回は「制御構造を自分で作る」ことを仮のテーマとします。
+>
+> お気軽に、どしどしお越しください。
+>
+> ---
+> [:masashi | ^umezawa]
+>
+>
+>
+From tetha ＠ st.rim.or.jp  Fri Jan 23 08:58:34 2009
+From: tetha ＠ st.rim.or.jp (tetha@st.rim.or.jp)
+Date: Fri Jan 23 08:59:01 2009
+Subject: [Squeak-ja: 4146] Re: 第5回Smalltalk勉強会のお知らせ
+In-Reply-To: <b8c2540c0901221554m11fbf7a4m79ae9f0d09258e28@mail.gmail.com>
+References: <JC200901122152296.5530828@mars.dti.ne.jp>
+	<b8c2540c0901221554m11fbf7a4m79ae9f0d09258e28@mail.gmail.com>
+Message-ID: <b8c2540c0901221558o5e7f534dqb0d46acee0b04d70@mail.gmail.com>
+
+すみません補足ですが、人数分はありませんので、抽選なりなんなりよしなに。
+
+よろしくお願いします。
+
+
+09/01/23 に tetha@st.rim.or.jp<tetha@st.rim.or.jp> さんは書きました:
+> 林徹也です。
+> つまらないものですが京都みやげをお持ちします。
+> 紙筒とかご用意されるといいかもしれません。
+>
+> # すでに今朝の東西線で少し損耗してしまいましたが(>_<)
+>
+> 09/01/12 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+>> こんにちは
+>> 梅澤です。
+>>
+>> 勉強会のお知らせです。今年もSmalltalkを盛り上げていきましょう。
+>>
+>> 日時: 2009/1/23(金) 19:00- (2,3時間程度)
+>> 場所: シンコム・システムズ・ジャパン株式会社
+>> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>> または「自由自在Squeakプログラミング」
+>>
+>> 詳しくは下記をどうぞ。
+>> http://www.smalltalk-users.jp/Home/gao-zhi/dai5kaismalltalkbenkyoukai
+>>
+>> 今回は「制御構造を自分で作る」ことを仮のテーマとします。
+>>
+>> お気軽に、どしどしお越しください。
+>>
+>> ---
+>> [:masashi | ^umezawa]
+>>
+>>
+>>
+>
+From yoshiki ＠ vpri.org  Fri Jan 23 17:35:18 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Jan 23 17:35:45 2009
+Subject: [Squeak-ja: 4147] Re: 第5回Smalltalk勉強会のお知らせ
+In-Reply-To: <b8c2540c0901221554m11fbf7a4m79ae9f0d09258e28@mail.gmail.com>
+References: <JC200901122152296.5530828@mars.dti.ne.jp>
+	<b8c2540c0901221554m11fbf7a4m79ae9f0d09258e28@mail.gmail.com>
+Message-ID: <u7i4mv2rd.wl%yoshiki@vpri.org>
+
+  僕はおみやげはないのですが(いやげものもありませんが)、Bert
+Freudenbergを連れて参加します。よろしくお願いします。
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Mon Jan 26 21:36:29 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jan 26 21:36:46 2009
+Subject: [Squeak-ja: 4148] 出張! Smalltalk勉強会のお知らせ
+Message-ID: <JX200901262136294.686281@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+先日の第5回Smalltalk勉強会は盛り上がりましたね。特にBertさんのfor文は
+秀逸であったと思います。
+
+さて、Smalltalk-users.jpでは、2/12,13のデブサミ2009でブース展示します。
+http://codezine.jp/devsumi/2009/
+
+12日には、さらに、「出張! Smalltalk勉強会」を行います。
+
+普段Smalltalk勉強会に足を運びたくてもできない、あるいはSmalltalkのことを
+よく知らない初心者向けのセッションとなっています。
+http://www.seshop.com/event/dev/2009/timetable/Default.asp?mode=detail&eid=124&sid=790&tr=17%5FReject+Live+%21#790
+http://www.smalltalk-users.jp/Home/gao-zhi/shutchousmalltalkbenkyoukaidebusami2009
+
+通常デブサミのセッションは参加登録が必要ですが、本セッションははぐれもの
+のため、自由参加となっています。お気軽に遊びに来て下さい。
+
+ではでは。
+---
+[:masashi | ^umezawa]

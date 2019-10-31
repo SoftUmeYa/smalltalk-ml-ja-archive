@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2334] Re: 画像のOID
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202334%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjJoQXwkThsoQk9JRA%3D%3D%3F%3D&In-Reply-To=4220260E.9070505%40gakushuin.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002333.html">
+   <LINK REL="Next"  HREF="002335.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2334] Re: 画像のOID</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202334%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjJoQXwkThsoQk9JRA%3D%3D%3F%3D&In-Reply-To=4220260E.9070505%40gakushuin.ac.jp"
+       TITLE="[Squeak-ja: 2334] Re: 画像のOID">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2005年 2月 27日 (日) 10:07:03 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002333.html">[Squeak-ja: 2333] 画像のOID
+</A></li>
+        <LI>次の記事 <A HREF="002335.html">[Squeak-ja: 2335] Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2334">[ 日付 ]</a>
+              <a href="thread.html#2334">[ スレッド ]</a>
+              <a href="subject.html#2334">[ 件名 ]</a>
+              <a href="author.html#2334">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+&gt;<i> プログラムをしていて，悩んだ結果分かった
+</I>&gt;<i> ことです
+</I>&gt;<i> （きっと，皆さんは当然なのでしょうが）
+</I>
+　いえいえ、僕にとっても日々発見です。
+
+&gt;<i> jpegなどの画像をそのままスケッチと
+</I>&gt;<i> して多数使う場合，同じスケッチをコピー
+</I>&gt;<i> して使います．
+</I>&gt;<i> そのとき，スケッチが違えばOIDが違うのは
+</I>&gt;<i> 分かります．オブジェクト指向ですから．
+</I>&gt;<i> しかし，画像ファイルにまで，違うOIDが
+</I>&gt;<i> 振られるのですね．（これ正しいでしょうか？）
+</I>
+  おそらくは、外部のファイルとして存在していた画像を元に作ったスケッチ、
+ということですよね。もとのリソースを覚えておくべき、という意見はありま
+すが、現状はSqueak内部に取り込んだ後は、区別のないスケッチになります。
+
+  内部に2回以上取り込んだときにも、「同じビット列を含んだ違うオブジェ
+クト」になります。違うオブジェクトである以上、定義から言って違うOIDと
+なりますね。
+
+  Squeak内部外部で編集されることを思うと比較的正しい動作だと思います。
+
+&gt;<i> 画像でオブジェクトを識別するテストを書いて
+</I>&gt;<i> いたのですが，どうしてもうまくいかなかった
+</I>&gt;<i> のですが，
+</I>
+　確かに、画像の#=は#==を使って定義されているので、「同じかどうか」は
+内容まではみてくれません。
+
+&gt;<i> ｘｘｘの見た目を似せるｘｘｘ
+</I>&gt;<i> 
+</I>&gt;<i> を予め実行すると，できました．
+</I>&gt;<i> 
+</I>&gt;<i> 個人的意見としては，画像ファイルにまでOIDを
+</I>&gt;<i> ふると，分かりにくくなるように思うのですが，
+</I>&gt;<i> 皆様のご意見はいかがでしょうか？
+</I>
+　Squeak内部に入った後はもはや「ファイル」ではないですし、Squeak内部、
+外部で編集されることを思うと一意性をどう定義するか、というのは簡単な問
+題ではないと思います。理想的には画像同士の同値性比較を、ビットの内容を
+見た値同値でやる、ということも考えられますが、現状はちょっと怖い感じは
+します。
+
+  ところで、「兄弟」という機能をご存知ですか?ひとつの画像から兄弟を作っ
+ておき、「兄弟に触れているか?」という機能を使う可能性も考えられます。
+(触れているか・重なっているかという概念が使える課題なのかはちょっと良
+くわかりませんが。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002333.html">[Squeak-ja: 2333] 画像のOID
+</A></li>
+	<LI>次の記事 <A HREF="002335.html">[Squeak-ja: 2335] Nihongo7について(NSqueak-2005-02-25.image)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2334">[ 日付 ]</a>
+              <a href="thread.html#2334">[ スレッド ]</a>
+              <a href="subject.html#2334">[ 件名 ]</a>
+              <a href="author.html#2334">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

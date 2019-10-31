@@ -1,0 +1,3764 @@
+From kuwatani ＠ akademia.co.jp  Thu Oct  1 12:37:36 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Oct  1 12:37:42 2009
+Subject: [Squeak-ja: 4351] メーリングリストの一時停止及び運用ドメインの不具合のお詫び
+In-Reply-To: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+References: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+Message-ID: <4AC42400.2080805@akademia.co.jp>
+
+Squeak-jaメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+▼メーリングリスト一時停止のお知らせ
+
+サーバの運用を行っている建物の電源工事により
+下記の期間，メーリングリストのサービスを一時停止いたします．
+
+ 日 時：2009年10月10日(土)　9:00 〜 11:00
+ 内 容：電源設備の定期点検によるサービスの停止
+
+ご迷惑をおかけしますが，よろしくお願いします．
+
+
+▼運用ドメイン停止のお詫び
+
+こちらの手違いによりsmalltalk.jpドメインの有効期限が切れていたため
+本日の午前中，メーリングリストに投稿できない状態になっておりました．
+投稿しようとされていた方には大変ご迷惑をおかけして申し訳ありませんでした．
+
+-- 
+kuwatani@akademia.co.jp
+From admin ＠ yengawa.com  Thu Oct  1 12:57:50 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Oct  1 12:58:01 2009
+Subject: [Squeak-ja: 4352] Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+Message-ID: <4AC428BE.7030907@yengawa.com>
+
+横川です。
+勉強会面白かったですね。
+様々な実用例や実に多様なライブラリに歴史の長さを感じました。
+
+ところで、阿部さんがライブコーディングした'Google It'が面白そうなので作
+りたいのですが、外部のWebブラウザを立ち上げる部分のコードはどうしていた
+のでしょうか?
+
+# 今朝投稿できなかったようなので再送
+
+
+Masashi Umezawa wrote 09.9.13 9:45 PM:
+> こんにちは
+> 梅澤です。
+> 
+> 9月のSmalltalk勉強会なのですが、「事例発表スペシャル」と銘打ちまして
+> Smalltalkの生きた事例を発表する場とすることになりました。
+> 
+> 日時: 2009/9/28(月) 18:30-21:30 (3時間!)
+> 場所: 株式会社オージス総研
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai13kaismalltalkbenkyoukai
+> 
+> すでに発表者となりそうな方にはいくらか打診を行っているのですが、「我こそは」
+> 「この事例がないと」などありましたら、お気軽にご連絡いただければと思います。
+> 
+> また、参加について手続きは特に必要ありません。ふらりとどうぞ。
+> 気になる方は「お問い合わせ」からメールを送っていただいても良いです。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+> 
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From abee.abe ＠ nifty.ne.jp  Thu Oct  1 14:34:29 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Oct  1 14:34:53 2009
+Subject: [Squeak-ja: 4353] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <4AC428BE.7030907@yengawa.com>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+	<4AC428BE.7030907@yengawa.com>
+Message-ID: <2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2009年10月1日12:57 Koji Yokokawa <admin@yengawa.com>:
+> ところで、阿部さんがライブコーディングした'Google It'が面白そうなので作
+> りたいのですが、外部のWebブラウザを立ち上げる部分のコードはどうしていた
+> のでしょうか?
+
+HTTPClient class>>requestURL:target: を使いました。このサンプルは以下にあります。
+http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509
+このコメントにもありますが、この方法はSqueakをWebブラウザのプラグインで起動したときにのみ有効です。
+また、Squeakのバージョンによっては
+StandardFileStream>>requestURL:target:ifError:の中でセマフォがロックすることがあるので、その場合は適当に直してください。
+
+スタンドアロンのSqueakから呼び出す場合は、 Win32Shell>>shellOpen: を使います。これもサンプルがあります。
+http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679
+コメントには開発版が必要とありますが、SqueakのバージョンによってはFFIも含めて入っていないこともあるので、その場合は適当なバージョンから引っこ抜いてきてください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From korakurider ＠ gmail.com  Thu Oct  1 15:15:36 2009
+From: korakurider ＠ gmail.com (Korakurider)
+Date: Thu Oct  1 15:15:40 2009
+Subject: [Squeak-ja: 4354] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+	<4AC428BE.7030907@yengawa.com>
+	<2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>
+Message-ID: <75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+
+こんにちは Korakuriderです。
+
+2009/10/1 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+> こんにちは、阿部です。
+>
+> 2009年10月1日12:57 Koji Yokokawa <admin@yengawa.com>:
+>> ところで、阿部さんがライブコーディングした'Google It'が面白そうなので作
+>> りたいのですが、外部のWebブラウザを立ち上げる部分のコードはどうしていた
+>> のでしょうか?
+>
+> HTTPClient class>>requestURL:target: を使いました。このサンプルは以下にあります。
+> http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509
+> このコメントにもありますが、この方法はSqueakをWebブラウザのプラグインで起動したときにのみ有効です。
+> また、Squeakのバージョンによっては
+> StandardFileStream>>requestURL:target:ifError:の中でセマフォがロックすることがあるので、その場合は適当に直してください。
+>
+> スタンドアロンのSqueakから呼び出す場合は、 Win32Shell>>shellOpen: を使います。これもサンプルがあります。
+> http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679
+> コメントには開発版が必要とありますが、SqueakのバージョンによってはFFIも含めて入っていないこともあるので、その場合は適当なバージョンから引っこ抜いてきてください。
+    ほとんど余談です。squeakland.org で今ベータ版を配布している Etoys4.0では、
+　　ScratchPluginを使ってブラウザを起動しています。
+　　（ほとんどそのためだけに ScratchPluginをバンドルしているようなものです）
+　　#launchBrowser あたりを見てみてください。
+
+/Korakurider
+
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+From abee.abe ＠ nifty.ne.jp  Thu Oct  1 16:42:41 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Oct  1 16:43:04 2009
+Subject: [Squeak-ja: 4355] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+	<4AC428BE.7030907@yengawa.com> 
+	<2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com> 
+	<75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+Message-ID: <2d5d52a80910010042idaec498ib04d981b10c3df19@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2009年10月1日15:15 Korakurider <korakurider@gmail.com>:
+>    ほとんど余談です。squeakland.org で今ベータ版を配布している Etoys4.0では、
+> ScratchPluginを使ってブラウザを起動しています。
+> （ほとんどそのためだけに ScratchPluginをバンドルしているようなものです）
+> #launchBrowser あたりを見てみてください。
+
+本当ですね。ライセンスファイルがなくてよいのかと思ったら、ScratchPluginのクラスコメントに書いてありました。
+個人的には、これで扱い辛くてバギーなSerialPortの代わりにScratchPluginのメソッドが使えるのがうれしいです。
+あと、視覚効果とか音声圧縮なども使えますね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From ykoubo2008 ＠ yengawa.com  Sun Oct  4 18:07:42 2009
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Sun Oct  4 18:08:09 2009
+Subject: [Squeak-ja: 4356] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>	<4AC428BE.7030907@yengawa.com>	<2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>
+	<75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+Message-ID: <4AC865DE.7030106@yengawa.com>
+
+横川です。
+阿部さん、Korakuriderさん
+ありがとうございます。
+
+Squeakland 2005JではWebブラウザ内でプロジェクトを動かしたときにだけ
+HTTPClient class>>requestURL:target: が使えて、
+スタンドアロンで動かしたときはOSに依存するということですね。
+
+そして、Etoys 4はScratchPluginが入っているということで、Mac Leopardに
+Etoys4-Mac-RC2をインストールして試しました。
+ScratchPlugin primOpenURL: 'http://scratch.mit.edu/'
+をDoItしたら見事にウェブブラウザでスクラッチのページが開きました。
+
+(Etoys4をインストールするとSuperSwiki2の作品がブラウザ内で起動しなくなり
+ましたが、squeakland.jpからSqueakland 2005Jを再びインストールしたらなお
+りました。)
+
+おまけに、Sqeak+GainerのときにSqueakのシリアル通信で苦労したので、Etoys
+でScratchPluginのSerial portを使えるのはとても助かりそう。
+
+
+Korakurider wrote 09.10.1 3:15 PM:
+> こんにちは Korakuriderです。
+> 
+> 2009/10/1 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+>> こんにちは、阿部です。
+>>
+>> 2009年10月1日12:57 Koji Yokokawa <admin@yengawa.com>:
+>>> ところで、阿部さんがライブコーディングした'Google It'が面白そうなので作
+>>> りたいのですが、外部のWebブラウザを立ち上げる部分のコードはどうしていた
+>>> のでしょうか?
+>> HTTPClient class>>requestURL:target: を使いました。このサンプルは以下にあります。
+>> http://squeakland.jp/seaside/SBSuperSwiki/30e5a0c0-37c3-4b64-8568-73d43e264509
+>> このコメントにもありますが、この方法はSqueakをWebブラウザのプラグインで起動したときにのみ有効です。
+>> また、Squeakのバージョンによっては
+>> StandardFileStream>>requestURL:target:ifError:の中でセマフォがロックすることがあるので、その場合は適当に直してください。
+>>
+>> スタンドアロンのSqueakから呼び出す場合は、 Win32Shell>>shellOpen: を使います。これもサンプルがあります。
+>> http://squeakland.jp/seaside/SBSuperSwiki/bcfb7ab8-9126-4312-9f17-fa53762b0679
+>> コメントには開発版が必要とありますが、SqueakのバージョンによってはFFIも含めて入っていないこともあるので、その場合は適当なバージョンから引っこ抜いてきてください。
+>     ほとんど余談です。squeakland.org で今ベータ版を配布している Etoys4.0では、
+> 　　ScratchPluginを使ってブラウザを起動しています。
+> 　　（ほとんどそのためだけに ScratchPluginをバンドルしているようなものです）
+> 　　#launchBrowser あたりを見てみてください。
+> 
+> /Korakurider
+> 
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+>>
+> 
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From umejava ＠ mars.dti.ne.jp  Sun Oct  4 22:34:30 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Oct  4 22:34:34 2009
+Subject: [Squeak-ja: 4357] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <4AC865DE.7030106@yengawa.com>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+	<4AC428BE.7030907@yengawa.com>
+	<2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>
+	<75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+	<4AC865DE.7030106@yengawa.com>
+Message-ID: <JxPAClCCIew9h5zJVmONN5QQ5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> (Etoys4をインストールするとSuperSwiki2の作品がブラウザ内で起動しなくなり
+> ましたが、squeakland.jpからSqueakland 2005Jを再びインストールしたらなお
+> りました。)
+> 
+
+Etoys4は旧プロジェクトとの上位互換性を持っていますので、SuperSwiki2上に
+置いてある2005Jで作成されたプロジェクトが起動できないということは基本的に
+ないと思います。
+
+Etoys4を入れた状態でSuperSwiki2においてあるプロジェクトをいくつか起動して
+みたところ、ちゃんと動作しているようです(Windows + Firefoxで確認)
+
+Etoys4は現在RC2なので、バグがあるとしたら早めにetoys-devに報告したほうが
+良いと思います。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From ykoubo2008 ＠ yengawa.com  Mon Oct  5 00:09:46 2009
+From: ykoubo2008 ＠ yengawa.com (2008 YKoubo)
+Date: Mon Oct  5 00:09:50 2009
+Subject: [Squeak-ja: 4358] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <JxPAClCCIew9h5zJVmONN5QQ5@mars.dti.ne.jp>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+	<4AC428BE.7030907@yengawa.com>
+	<2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>
+	<75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+	<4AC865DE.7030106@yengawa.com>
+	<JxPAClCCIew9h5zJVmONN5QQ5@mars.dti.ne.jp>
+Message-ID: <f8c56ee40910040809t7e9f3378sba5d35c8edb1e63c@mail.gmail.com>
+
+横川です。
+こちらはMac  + Firefox 3.5です。
+他に同じ現象でたひといますか?
+
+2009年10月4日22:34 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+
+> こんにちは
+> 梅澤です。
+>
+> > (Etoys4をインストールするとSuperSwiki2の作品がブラウザ内で起動しなくなり
+> > ましたが、squeakland.jpからSqueakland 2005Jを再びインストールしたらなお
+> > りました。)
+> >
+>
+> Etoys4は旧プロジェクトとの上位互換性を持っていますので、SuperSwiki2上に
+> 置いてある2005Jで作成されたプロジェクトが起動できないということは基本的に
+> ないと思います。
+>
+> Etoys4を入れた状態でSuperSwiki2においてあるプロジェクトをいくつか起動して
+> みたところ、ちゃんと動作しているようです(Windows + Firefoxで確認)
+>
+> Etoys4は現在RC2なので、バグがあるとしたら早めにetoys-devに報告したほうが
+> 良いと思います。
+>
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+>
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20091005/48217bfe/attachment.htm
+From yoshiki ＠ vpri.org  Mon Oct  5 01:49:05 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Mon Oct  5 01:49:17 2009
+Subject: [Squeak-ja: 4359] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <f8c56ee40910040809t7e9f3378sba5d35c8edb1e63c@mail.gmail.com>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+	<4AC428BE.7030907@yengawa.com>
+	<2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>
+	<75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+	<4AC865DE.7030106@yengawa.com>
+	<JxPAClCCIew9h5zJVmONN5QQ5@mars.dti.ne.jp>
+	<f8c56ee40910040809t7e9f3378sba5d35c8edb1e63c@mail.gmail.com>
+Message-ID: <ueipjhzpa.wl%yoshiki@vpri.org>
+
+At Mon, 5 Oct 2009 00:09:46 +0900,
+2008 YKoubo wrote:
+> 
+> 横川です。
+> こちらはMac  + Firefox 3.5です。
+> 他に同じ現象でたひといますか?
+
+  起動しないという報告はなかったように思いますが、repaintされていると
+ころだけしか画面に反映されないという問題はまだMac+Firefoxの組み合わせ
+で一部の人で出ているようです。あとは、Snow LeopardでSafariが64 bit API
+を使うようになったために動かないという問題はあります。
+
+  お手数ですが、もうすこし情報をお願いします。
+
+-- Yoshiki
+From yhousako ＠ mx2.ttcn.ne.jp  Mon Oct  5 20:58:47 2009
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Mon Oct  5 20:59:03 2009
+Subject: [Squeak-ja: 4360] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <ueipjhzpa.wl%yoshiki@vpri.org>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>	<4AC428BE.7030907@yengawa.com>	<2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>	<75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>	<4AC865DE.7030106@yengawa.com>	<JxPAClCCIew9h5zJVmONN5QQ5@mars.dti.ne.jp>	<f8c56ee40910040809t7e9f3378sba5d35c8edb1e63c@mail.gmail.com>
+	<ueipjhzpa.wl%yoshiki@vpri.org>
+Message-ID: <4AC9DF77.2000103@mx2.ttcn.ne.jp>
+
+寳迫＠Mac＆Linuxユーザーです。
+＃時間がないので少しだけですが。
+
+うちのMacでEtoys4 Mac RC2をインストールして動作確認をしました。
+MacOSX10.5.8 + FireFox3.5.3です。
+http://squeakland.jp/seaside/SBSuperSwiki/
+
+のギャラリーから、作品を選択して「起動」しましたが、特に問題なく動いてい
+ます（Safari4.0.3でも）。とはいえ、同じ手順でやっているかどうか不安があ
+ります。
+
+どんな手順で操作すると、「SuperSwiki2の作品がブラウザ内で起動し」ないの
+か、詳しく書いてもらえたら、同じ手順で動作確認します。
+＃本職が忙しいので、ちょっとお時間を頂くかもしれませんが。(^_^;;;
+
+Yoshiki Ohshima さんは書きました:
+> At Mon, 5 Oct 2009 00:09:46 +0900,
+> 2008 YKoubo wrote:
+>> 横川です。
+>> こちらはMac  + Firefox 3.5です。
+>> 他に同じ現象でたひといますか?
+> 
+>   起動しないという報告はなかったように思いますが、repaintされていると
+> ころだけしか画面に反映されないという問題はまだMac+Firefoxの組み合わせ
+> で一部の人で出ているようです。あとは、Snow LeopardでSafariが64 bit API
+> を使うようになったために動かないという問題はあります。
+> 
+>   お手数ですが、もうすこし情報をお願いします。
+> 
+> -- Yoshiki
+
+--------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From ykoubo2008 ＠ yengawa.com  Mon Oct  5 23:56:24 2009
+From: ykoubo2008 ＠ yengawa.com (2008 YKoubo)
+Date: Mon Oct  5 23:56:29 2009
+Subject: [Squeak-ja: 4361] Re: Google It? (Re: 第13回Smalltalk勉強会のお知らせ)
+In-Reply-To: <4AC9DF77.2000103@mx2.ttcn.ne.jp>
+References: <JxwghhfEp1gDdK7klqBerkDw3@mars.dti.ne.jp>
+	<4AC428BE.7030907@yengawa.com>
+	<2d5d52a80909302234j6d650d67h6cb849c48150d539@mail.gmail.com>
+	<75eb0b0e0909302315w3ea0f67vee5afc41f6684d8e@mail.gmail.com>
+	<4AC865DE.7030106@yengawa.com>
+	<JxPAClCCIew9h5zJVmONN5QQ5@mars.dti.ne.jp>
+	<f8c56ee40910040809t7e9f3378sba5d35c8edb1e63c@mail.gmail.com>
+	<ueipjhzpa.wl%yoshiki@vpri.org> <4AC9DF77.2000103@mx2.ttcn.ne.jp>
+Message-ID: <f8c56ee40910050756k7fb4830ek34a8f12b8e8aab0c@mail.gmail.com>
+
+横川です。
+こちらも同じくMacOSX10.5.8 + FireFox3.5.3 でした。
+再度Etoys4 RC2をインストールしてSuperSwiki2を見てみたらブラウザ内で起動できました。
+再現できなくなったので原因究明は難しいですね。
+
+2009年10月5日20:58 yhousako <yhousako@mx2.ttcn.ne.jp>:
+
+> 寳迫＠Mac＆Linuxユーザーです。
+> ＃時間がないので少しだけですが。
+>
+> うちのMacでEtoys4 Mac RC2をインストールして動作確認をしました。
+> MacOSX10.5.8 + FireFox3.5.3です。
+> http://squeakland.jp/seaside/SBSuperSwiki/
+>
+> のギャラリーから、作品を選択して「起動」しましたが、特に問題なく動いてい
+> ます（Safari4.0.3でも）。とはいえ、同じ手順でやっているかどうか不安があ
+> ります。
+>
+> どんな手順で操作すると、「SuperSwiki2の作品がブラウザ内で起動し」ないの
+> か、詳しく書いてもらえたら、同じ手順で動作確認します。
+> ＃本職が忙しいので、ちょっとお時間を頂くかもしれませんが。(^_^;;;
+>
+> Yoshiki Ohshima さんは書きました:
+> > At Mon, 5 Oct 2009 00:09:46 +0900,
+> > 2008 YKoubo wrote:
+> >> 横川です。
+> >> こちらはMac  + Firefox 3.5です。
+> >> 他に同じ現象でたひといますか?
+> >
+> >   起動しないという報告はなかったように思いますが、repaintされていると
+> > ころだけしか画面に反映されないという問題はまだMac+Firefoxの組み合わせ
+> > で一部の人で出ているようです。あとは、Snow LeopardでSafariが64 bit API
+> > を使うようになったために動かないという問題はあります。
+> >
+> >   お手数ですが、もうすこし情報をお願いします。
+> >
+> > -- Yoshiki
+>
+> --------------------------------------------------------
+> 寳迫 芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+>
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20091005/04a46c1c/attachment.html
+From yoshiki ＠ vpri.org  Sun Oct 18 01:14:32 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Sun Oct 18 01:14:48 2009
+Subject: [Squeak-ja: 4362] Squeakland.orgについて
+Message-ID: <uvdieov4n.wl%yoshiki@vpri.org>
+
+  こんにちは
+
+  しばらく大きなニュースはありませんでしたが、Squeak Etoysの本家のほう
+では、ちょっとした組織変更がありSqueakland Foundationというところが
+Etoysの面倒を見ることになっています。squeakland.orgのサイトには大分労力
+が注がれていて、アカウントを取得してプロジェクトのアップロードもできる
+ようになっていたりします。
+
+ウェブサイトのテキストを翻訳することもできるのですが、日本語への翻訳を
+してくださる方を探しています。
+
+http://tracker.squeakland.org/browse/SQ-480
+
+説明に書かれているように、.propertiesの中にある=の右側を書き換えるだけ
+で、家でもできる簡単なお仕事です。もうひとつの
+
+http://tracker.squeakland.org/browse/SQ-481
+
+方は僕は良くわかりませんが、質問をするとたぶんadminアカウントがもらえ
+るのではないかと思います。
+
+どなたかやってみたいという方はぜひお願いします。またその他のさまざまな
+形での援助も歓迎ですのでよろしくお願いします。
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Sun Oct 18 12:01:21 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Oct 18 12:01:25 2009
+Subject: [Squeak-ja: 4363] 第14回Smalltalk勉強会のお知らせ
+Message-ID: <JxJKQgQKdIQbaIodL2rFQ0xw4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2009/10/28(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai14kaismalltalkbenkyoukai
+
+GNU Smalltalkの入ったノートPCをお持ち下さい。
+
+「シロクマの力」が助けてくれるでしょう
+http://swikis.ddo.jp/umejava/63
+
+今回はGSTを使ったSmalltalk入門的な内容になると思いますので、Smalltalkを
+使ったことのない初心者の方、お待ちしています。もちろんベテランも大歓迎です。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sun Oct 18 22:35:17 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo)
+Date: Sun Oct 18 22:35:19 2009
+Subject: [Squeak-ja: 4364] Smalltalk合同勉強会@名古屋の内容で質問します。
+Message-ID: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>
+
+勉強会に参加させて頂けるかどうかをきめるために、プログラムに書かれている、次
+の内容が知りたいのです。お手数ですが、よろしく。
+STEPSプロジェクトの紹介 (山宮隆) , Pharoの紹介 (Serge Stinckwich),ESUGの活動
+報告 (Serge Stinckwich)。
+久保　道
+
+
+
+From ykoubo2008 ＠ yengawa.com  Mon Oct 19 10:21:53 2009
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Mon Oct 19 10:22:08 2009
+Subject: [Squeak-ja: 4365] Re: Squeakland.orgについて
+In-Reply-To: <uvdieov4n.wl%yoshiki@vpri.org>
+References: <uvdieov4n.wl%yoshiki@vpri.org>
+Message-ID: <4ADBBF31.4090002@yengawa.com>
+
+横川です。
+
+最近ちょっと忙しいのですが、Etoysを仕事でつかっていることもあり、誰もい
+ないなら週末にでも時間を作ってやってみます。
+ということで、SQ-480にコメント書いておきました。
+
+翻訳に迷うところがあればこのMLへ投げて意見をうかがうかもしれません。
+みなさんよろしくお願いします。
+
+Yoshiki Ohshima wrote 09.10.18 1:14 AM:
+>   こんにちは
+> 
+>   しばらく大きなニュースはありませんでしたが、Squeak Etoysの本家のほう
+> では、ちょっとした組織変更がありSqueakland Foundationというところが
+> Etoysの面倒を見ることになっています。squeakland.orgのサイトには大分労力
+> が注がれていて、アカウントを取得してプロジェクトのアップロードもできる
+> ようになっていたりします。
+> 
+> ウェブサイトのテキストを翻訳することもできるのですが、日本語への翻訳を
+> してくださる方を探しています。
+> 
+> http://tracker.squeakland.org/browse/SQ-480
+> 
+> 説明に書かれているように、.propertiesの中にある=の右側を書き換えるだけ
+> で、家でもできる簡単なお仕事です。もうひとつの
+> 
+> http://tracker.squeakland.org/browse/SQ-481
+> 
+> 方は僕は良くわかりませんが、質問をするとたぶんadminアカウントがもらえ
+> るのではないかと思います。
+> 
+> どなたかやってみたいという方はぜひお願いします。またその他のさまざまな
+> 形での援助も歓迎ですのでよろしくお願いします。
+> 
+> -- Yoshiki
+> 
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From yoshiki ＠ vpri.org  Mon Oct 19 11:32:32 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Mon Oct 19 11:32:47 2009
+Subject: [Squeak-ja: 4366] Re: Squeakland.orgについて
+In-Reply-To: <4ADBBF31.4090002@yengawa.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org>
+	<4ADBBF31.4090002@yengawa.com>
+Message-ID: <ueip0p0zj.wl%yoshiki@vpri.org>
+
+At Mon, 19 Oct 2009 10:21:53 +0900,
+Koji Yokokawa wrote:
+> 
+> 横川です。
+> 
+> 最近ちょっと忙しいのですが、Etoysを仕事でつかっていることもあり、誰もい
+> ないなら週末にでも時間を作ってやってみます。
+> ということで、SQ-480にコメント書いておきました。
+> 
+> 翻訳に迷うところがあればこのMLへ投げて意見をうかがうかもしれません。
+> みなさんよろしくお願いします。
+
+  ありがとうございます！よろしくお願いします。
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Mon Oct 19 18:58:15 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Oct 19 18:58:22 2009
+Subject: [Squeak-ja: 4367] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>
+Message-ID: <Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+kubo <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 勉強会に参加させて頂けるかどうかをきめるために、プログラムに書かれている、次
+> の内容が知りたいのです。お手数ですが、よろしく。
+
+年末の名古屋での勉強会ですが、お陰様で18名とそろそろ定員に近づいてきました。
+http://atnd.org/events/1593
+
+> STEPSプロジェクトの紹介 (山宮隆) , Pharoの紹介 (Serge Stinckwich),ESUGの活動
+> 報告 (Serge Stinckwich)。
+> 久保　道
+> 
+
+PharoとはSqueakから派生した開発者向けのSmalltalkです。
+http://www.pharo-project.org/home
+
+ESUGとはEuropean Smalltalk Users Groupの略で、Smalltalkを広める活動を
+手広く行っています。
+http://www.esug.org/
+
+STEPSについては論文が下記にありますね。
+http://www.vpri.org/pdf/tr2008004_steps08.pdf
+
+これらについての簡単な紹介ではないかと思います。詳しくは本人達に聞いてみるのが
+よいかもしれません。(山宮さんもSergeさんもこのMLのメンバーです)
+
+---
+[:masashi | ^umezawa]
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Mon Oct 19 21:38:32 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo)
+Date: Mon Oct 19 21:38:32 2009
+Subject: [Squeak-ja: 4368] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>
+	<Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+Message-ID: <000001ca50b9$12209ee0$3661dca0$@kyoto-inet.or.jp>
+
+梅澤さん、ありがとうございました。
+大体の内容がわかりました。
+参加させていただきたいと
+思います。
+はてなIDで、申し込みの操作をしたのですが、
+うまくいきません。
+どうすればよいのでしょう。
+頼りないことで、申し訳ありませんが。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Masashi Umezawa
+Sent: Monday, October 19, 2009 6:58 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4367] Re: Smalltalk合同勉強会@名古屋の内容で質問しま
+す。
+
+こんにちは
+梅澤です。
+
+kubo <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 勉強会に参加させて頂けるかどうかをきめるために、プログラムに書かれている、
+次
+> の内容が知りたいのです。お手数ですが、よろしく。
+
+年末の名古屋での勉強会ですが、お陰様で18名とそろそろ定員に近づいてきました。
+http://atnd.org/events/1593
+
+> STEPSプロジェクトの紹介 (山宮隆) , Pharoの紹介 (Serge Stinckwich),ESUGの活
+動
+> 報告 (Serge Stinckwich)。
+> 久保　道
+>
+
+PharoとはSqueakから派生した開発者向けのSmalltalkです。
+http://www.pharo-project.org/home
+
+ESUGとはEuropean Smalltalk Users Groupの略で、Smalltalkを広める活動を
+手広く行っています。
+http://www.esug.org/
+
+STEPSについては論文が下記にありますね。
+http://www.vpri.org/pdf/tr2008004_steps08.pdf
+
+これらについての簡単な紹介ではないかと思います。詳しくは本人達に聞いてみるの
+が
+よいかもしれません。(山宮さんもSergeさんもこのMLのメンバーです)
+
+---
+[:masashi | ^umezawa]
+
+
+
+
+
+From tak ＠ metatoys.org  Tue Oct 20 02:36:25 2009
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Tue Oct 20 02:36:35 2009
+Subject: [Squeak-ja: 4369] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>
+	<Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+Message-ID: <c57315d40910191036q6ad0d815g3b0e969a8a19c6db@mail.gmail.com>
+
+久保さん。
+
+山宮です。
+
+2009/10/19 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> kubo <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>> 勉強会に参加させて頂けるかどうかをきめるために、プログラムに書かれている、次
+>> の内容が知りたいのです。お手数ですが、よろしく。
+
+> STEPSについては論文が下記にありますね。
+> http://www.vpri.org/pdf/tr2008004_steps08.pdf
+
+梅澤さんが挙げてくださったリンクにある STEPS プロジェクトの概要について
+ちょっと話したあとで、その中でも私が関わっている lisp っぽい言語処理系
+についてお話したいと思います。あんまり Smalltalk に関係ないかもしれませ
+ん。
+
+よろしくお願いします。
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Tue Oct 20 10:20:55 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo)
+Date: Tue Oct 20 10:20:54 2009
+Subject: [Squeak-ja: 4370] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <c57315d40910191036q6ad0d815g3b0e969a8a19c6db@mail.gmail.com>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>	<Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+	<c57315d40910191036q6ad0d815g3b0e969a8a19c6db@mail.gmail.com>
+Message-ID: <000001ca5123$93151ca0$b93f55e0$@kyoto-inet.or.jp>
+
+山宮さん。
+さっそくお返事を
+ありがとうございました。
+STEPSのレポートは難しくて読みこなせませんが、
+とても広範囲の問題をターゲットにして、
+取り組んでおられるのだなぁ、という感じが判る程度です。
+問題の領域の方はなんとなくイメージできる？のですが、
+それを、どのようにしてreinventionしようとされているのか、
+方法側がまったく見えません。
+山宮さんのお話は、
+それをLispでどう取り組むのか
+ということなのでしょうか。
+ちょっと、勘違いのお返事になったかも
+しれません。
+なにも判かっとらん…、ということでしたら、
+お手数ですが、少しヒントをいただけませんか。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Takashi Yamamiya
+Sent: Tuesday, October 20, 2009 2:36 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4369] Re: Smalltalk合同勉強会@名古屋の内容で質問しま
+す。
+
+久保さん。
+
+山宮です。
+
+2009/10/19 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> kubo <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+>> 勉強会に参加させて頂けるかどうかをきめるために、プログラムに書かれてい
+る、次
+>> の内容が知りたいのです。お手数ですが、よろしく。
+
+> STEPSについては論文が下記にありますね。
+> http://www.vpri.org/pdf/tr2008004_steps08.pdf
+
+梅澤さんが挙げてくださったリンクにある STEPS プロジェクトの概要について
+ちょっと話したあとで、その中でも私が関わっている lisp っぽい言語処理系
+についてお話したいと思います。あんまり Smalltalk に関係ないかもしれませ
+ん。
+
+よろしくお願いします。
+
+
+
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Oct 20 11:50:34 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Oct 20 11:50:38 2009
+Subject: [Squeak-ja: 4371] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <000001ca50b9$12209ee0$3661dca0$@kyoto-inet.or.jp>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>
+	<Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+	<000001ca50b9$12209ee0$3661dca0$@kyoto-inet.or.jp>
+Message-ID: <JxDwc9rAXVwPg_cucdwdlYwg2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+時間を変えてリトライしてみるか、あるいはGoogleアカウントやYahoo IDなど
+でもログインできるはずですので、そちらで試してみるのも良いと思います。
+
+kubo <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> 梅澤さん、ありがとうございました。
+> 大体の内容がわかりました。
+> 参加させていただきたいと
+> 思います。
+> はてなIDで、申し込みの操作をしたのですが、
+> うまくいきません。
+> どうすればよいのでしょう。
+> 頼りないことで、申し訳ありませんが。
+> 久保　道
+> 
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+> On Behalf Of Masashi Umezawa
+> Sent: Monday, October 19, 2009 6:58 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 4367] Re: Smalltalk合同勉強会@名古屋の内容で質問しま
+> す。
+> 
+> こんにちは
+> 梅澤です。
+> 
+> kubo <kubo-o@mbox.kyoto-inet.or.jp> wrote:
+> > 勉強会に参加させて頂けるかどうかをきめるために、プログラムに書かれている、
+> 次
+> > の内容が知りたいのです。お手数ですが、よろしく。
+> 
+> 年末の名古屋での勉強会ですが、お陰様で18名とそろそろ定員に近づいてきました。
+> http://atnd.org/events/1593
+> 
+> > STEPSプロジェクトの紹介 (山宮隆) , Pharoの紹介 (Serge Stinckwich),ESUGの活
+> 動
+> > 報告 (Serge Stinckwich)。
+> > 久保　道
+> >
+> 
+> PharoとはSqueakから派生した開発者向けのSmalltalkです。
+> http://www.pharo-project.org/home
+> 
+> ESUGとはEuropean Smalltalk Users Groupの略で、Smalltalkを広める活動を
+> 手広く行っています。
+> http://www.esug.org/
+> 
+> STEPSについては論文が下記にありますね。
+> http://www.vpri.org/pdf/tr2008004_steps08.pdf
+> 
+> これらについての簡単な紹介ではないかと思います。詳しくは本人達に聞いてみるの
+> が
+> よいかもしれません。(山宮さんもSergeさんもこのMLのメンバーです)
+> 
+> ---
+> [:masashi | ^umezawa]
+> 
+> 
+> 
+> 
+
+
+
+---
+[:masashi | ^umezawa]
+From tak ＠ metatoys.org  Tue Oct 20 15:28:04 2009
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Tue Oct 20 15:28:10 2009
+Subject: [Squeak-ja: 4372] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <000001ca5123$93151ca0$b93f55e0$@kyoto-inet.or.jp>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>
+	<Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+	<c57315d40910191036q6ad0d815g3b0e969a8a19c6db@mail.gmail.com>
+	<000001ca5123$93151ca0$b93f55e0$@kyoto-inet.or.jp>
+Message-ID: <c57315d40910192328r6b2c7054ucdccdca0a1113504@mail.gmail.com>
+
+久保さん。
+
+2009/10/19 kubo <kubo-o@mbox.kyoto-inet.or.jp>:
+> 問題の領域の方はなんとなくイメージできる？のですが、
+> それを、どのようにしてreinventionしようとされているのか、
+> 方法側がまったく見えません。
+> 山宮さんのお話は、
+> それをLispでどう取り組むのか
+> ということなのでしょうか。
+
+ご質問ありがとうございます。ご指摘の通り STEPS は広い範囲を目標にしてい
+ますので、今私が関係している部分だけご紹介します。ドメイン特化言語とい
+う用語が一番ぴったりだと思います。
+
+プログラミング言語では大は小を兼ねるという事は無くて、問題に応じてちょ
+うど良い複雑さの言語を選ぶ事で、プログラムが分かりやすく短くなります。
+例えば文字列検索に使う正規表現は、ただ記法が短いだけでなく、1) 必ず停止
+する。2) 入れ子構造を扱わない。という性質のおかげでバグが入りにくく
+高速なコードを書けるという利点があります。
+
+この考えを進めると、あらゆる問題領域にそれぞれのミニ言語があっても良い
+という事になります。また、コンピュータへ入力は全て言語であると考える事
+も出来ます。例えば、インターネットのパケットは、ある決まり事に従って送
+られてきますし、マウスやキーボードからの入力もただのランダム信号では無
+く、それぞれがあるゼスチャーとして解釈される言語です。するとコンピュー
+タとは様々な言語を解釈するルール集だと考える事が出来ます。
+
+STEPS の一部では、そのルールを記述するメタ文法として解析表現文法を、低
+レベルな意味を記述するのに lisp 風の言語を使っています。lisp は一種の機
+械語として使っているだけで、ユーザから見える部分は Smalltalk 風の言語に
+なる予定です。
+
+現在の Squeak の先祖である Smalltalk 72 の文法は今よりもっと柔軟で、文
+法自体をプログラムとして書く事が出来ました。例えばブロック構文無しで処
+理をメソッドに渡す事が出来ました。STEPS プロジェクトはそこまで先祖返
+りしてあり得たかもしれない未来を Reinvention しようとしています。
+
+山宮
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Tue Oct 20 20:57:29 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (kubo)
+Date: Tue Oct 20 20:57:29 2009
+Subject: [Squeak-ja: 4373] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <c57315d40910192328r6b2c7054ucdccdca0a1113504@mail.gmail.com>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>	<Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>	<c57315d40910191036q6ad0d815g3b0e969a8a19c6db@mail.gmail.com>	<000001ca5123$93151ca0$b93f55e0$@kyoto-inet.or.jp>
+	<c57315d40910192328r6b2c7054ucdccdca0a1113504@mail.gmail.com>
+Message-ID: <000001ca517c$80797b00$816c7100$@kyoto-inet.or.jp>
+
+山宮さん。
+
+さっそく、なんか、もう、勉強会になってきたような、
+判りやすい解説を、ありがとうございました。
+この話は、どこかでチューリングマシンと
+関連があるのかな、と思ったりします。
+判った風なこという能力はありませんが、
+>あり得たかもしれない未来を Reinvention しよう
+ということのねらいが、どんなことなのか、
+楽しみにしております。では。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Takashi Yamamiya
+Sent: Tuesday, October 20, 2009 3:28 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4372] Re: Smalltalk合同勉強会@名古屋の内容で質問しま
+す。
+
+久保さん。
+
+2009/10/19 kubo <kubo-o@mbox.kyoto-inet.or.jp>:
+> 問題の領域の方はなんとなくイメージできる？のですが、
+> それを、どのようにしてreinventionしようとされているのか、
+> 方法側がまったく見えません。
+> 山宮さんのお話は、
+> それをLispでどう取り組むのか
+> ということなのでしょうか。
+
+ご質問ありがとうございます。ご指摘の通り STEPS は広い範囲を目標にしてい
+ますので、今私が関係している部分だけご紹介します。ドメイン特化言語とい
+う用語が一番ぴったりだと思います。
+
+プログラミング言語では大は小を兼ねるという事は無くて、問題に応じてちょ
+うど良い複雑さの言語を選ぶ事で、プログラムが分かりやすく短くなります。
+例えば文字列検索に使う正規表現は、ただ記法が短いだけでなく、1) 必ず停止
+する。2) 入れ子構造を扱わない。という性質のおかげでバグが入りにくく
+高速なコードを書けるという利点があります。
+
+この考えを進めると、あらゆる問題領域にそれぞれのミニ言語があっても良い
+という事になります。また、コンピュータへ入力は全て言語であると考える事
+も出来ます。例えば、インターネットのパケットは、ある決まり事に従って送
+られてきますし、マウスやキーボードからの入力もただのランダム信号では無
+く、それぞれがあるゼスチャーとして解釈される言語です。するとコンピュー
+タとは様々な言語を解釈するルール集だと考える事が出来ます。
+
+STEPS の一部では、そのルールを記述するメタ文法として解析表現文法を、低
+レベルな意味を記述するのに lisp 風の言語を使っています。lisp は一種の機
+械語として使っているだけで、ユーザから見える部分は Smalltalk 風の言語に
+なる予定です。
+
+現在の Squeak の先祖である Smalltalk 72 の文法は今よりもっと柔軟で、文
+法自体をプログラムとして書く事が出来ました。例えばブロック構文無しで処
+理をメソッドに渡す事が出来ました。STEPS プロジェクトはそこまで先祖返
+りしてあり得たかもしれない未来を Reinvention しようとしています。
+
+山宮
+
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: winmail.dat
+型:         application/ms-tnef
+サイズ:     4506 バイト
+説明:       無し
+URL:        http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20091020/e777a46d/winmail.bin
+From abee.abe ＠ nifty.ne.jp  Tue Oct 20 21:16:47 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Tue Oct 20 21:17:11 2009
+Subject: [Squeak-ja: 4374] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <c57315d40910192328r6b2c7054ucdccdca0a1113504@mail.gmail.com>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp> 
+	<Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+	<c57315d40910191036q6ad0d815g3b0e969a8a19c6db@mail.gmail.com> 
+	<000001ca5123$93151ca0$b93f55e0$@kyoto-inet.or.jp>
+	<c57315d40910192328r6b2c7054ucdccdca0a1113504@mail.gmail.com>
+Message-ID: <2d5d52a80910200516x2c357e1fh17c8ed5527cfffe8@mail.gmail.com>
+
+こんにちは、阿部です。
+個人的にVPRIの活動が最近良く分からなくなっていたのですが、山宮さんの説明はとても分かりやすかったです。ありがとうございます。
+残念ながら私は名古屋に行けないのですが、可能ならぜひ東京にもいらしてください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009年10月20日15:28 Takashi Yamamiya <tak@metatoys.org>:
+> 久保さん。
+>
+> 2009/10/19 kubo <kubo-o@mbox.kyoto-inet.or.jp>:
+>> 問題の領域の方はなんとなくイメージできる？のですが、
+>> それを、どのようにしてreinventionしようとされているのか、
+>> 方法側がまったく見えません。
+>> 山宮さんのお話は、
+>> それをLispでどう取り組むのか
+>> ということなのでしょうか。
+>
+> ご質問ありがとうございます。ご指摘の通り STEPS は広い範囲を目標にしてい
+> ますので、今私が関係している部分だけご紹介します。ドメイン特化言語とい
+> う用語が一番ぴったりだと思います。
+>
+> プログラミング言語では大は小を兼ねるという事は無くて、問題に応じてちょ
+> うど良い複雑さの言語を選ぶ事で、プログラムが分かりやすく短くなります。
+> 例えば文字列検索に使う正規表現は、ただ記法が短いだけでなく、1) 必ず停止
+> する。2) 入れ子構造を扱わない。という性質のおかげでバグが入りにくく
+> 高速なコードを書けるという利点があります。
+>
+> この考えを進めると、あらゆる問題領域にそれぞれのミニ言語があっても良い
+> という事になります。また、コンピュータへ入力は全て言語であると考える事
+> も出来ます。例えば、インターネットのパケットは、ある決まり事に従って送
+> られてきますし、マウスやキーボードからの入力もただのランダム信号では無
+> く、それぞれがあるゼスチャーとして解釈される言語です。するとコンピュー
+> タとは様々な言語を解釈するルール集だと考える事が出来ます。
+>
+> STEPS の一部では、そのルールを記述するメタ文法として解析表現文法を、低
+> レベルな意味を記述するのに lisp 風の言語を使っています。lisp は一種の機
+> 械語として使っているだけで、ユーザから見える部分は Smalltalk 風の言語に
+> なる予定です。
+>
+> 現在の Squeak の先祖である Smalltalk 72 の文法は今よりもっと柔軟で、文
+> 法自体をプログラムとして書く事が出来ました。例えばブロック構文無しで処
+> 理をメソッドに渡す事が出来ました。STEPS プロジェクトはそこまで先祖返
+> りしてあり得たかもしれない未来を Reinvention しようとしています。
+>
+> 山宮
+>
+From itoh-private ＠ itolab.com  Tue Oct 20 21:22:58 2009
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Tue Oct 20 21:23:25 2009
+Subject: [Squeak-ja: 4375] Re: Smalltalk合同勉強会@名古屋の内容で質問します。
+In-Reply-To: <c57315d40910192328r6b2c7054ucdccdca0a1113504@mail.gmail.com>
+References: <000001ca4ff7$d58637e0$8092a7a0$@kyoto-inet.or.jp>
+	<Jx2cs1eYSYyppm7CYPMs8vdA2@mars.dti.ne.jp>
+	<c57315d40910191036q6ad0d815g3b0e969a8a19c6db@mail.gmail.com>
+	<000001ca5123$93151ca0$b93f55e0$@kyoto-inet.or.jp>
+	<c57315d40910192328r6b2c7054ucdccdca0a1113504@mail.gmail.com>
+Message-ID: <4BFCE338-DEB4-402C-BF9A-9464BBF77B0A@itolab.com>
+
+山宮さん、皆さん
+
+久保さんの質問の陰で、回答を興味深く読ませていただきました。
+山宮さんや大島さんの活躍の様子はウェブを通じて拝見させていただいて
+おりますが、山宮さんのご説明のおかげでより理解を深めることができた
+ように思います。
+#名古屋で山宮さんのお話を伺えないのが本当に残念です。
+
+移動など大変だとは思いますが、ぜひお身体にはお気をつけてください。
+
+ありがとうございました。
+
+On 2009/10/20, at 15:28, Takashi Yamamiya wrote:
+
+> 久保さん。
+>
+> 2009/10/19 kubo <kubo-o@mbox.kyoto-inet.or.jp>:
+>> 問題の領域の方はなんとなくイメージできる？のですが、
+>> それを、どのようにしてreinventionしようとされているのか、
+>> 方法側がまったく見えません。
+>> 山宮さんのお話は、
+>> それをLispでどう取り組むのか
+>> ということなのでしょうか。
+>
+> ご質問ありがとうございます。ご指摘の通り STEPS は広い範囲 
+> を目標にしてい
+> ますので、今私が関係している部分だけご紹介します。ドメイン特化言 
+> 語とい
+> う用語が一番ぴったりだと思います。
+>
+> プログラミング言語では大は小を兼ねるという事は無くて、問題に応じ 
+> てちょ
+> うど良い複雑さの言語を選ぶ事で、プログラムが分かりやすく短くなり 
+> ます。
+> 例えば文字列検索に使う正規表現は、ただ記法が短いだけでなく、1)  
+> 必ず停止
+> する。2) 入れ子構造を扱わない。という性質のおかげでバグが 
+> 入りにくく
+> 高速なコードを書けるという利点があります。
+>
+> この考えを進めると、あらゆる問題領域にそれぞれのミニ言語があって 
+> も良い
+> という事になります。また、コンピュータへ入力は全て言語であると考 
+> える事
+> も出来ます。例えば、インターネットのパケットは、ある決まり事に 
+> 従って送
+> られてきますし、マウスやキーボードからの入力もただのランダム信号 
+> では無
+> く、それぞれがあるゼスチャーとして解釈される言語です。するとコン 
+> ピュー
+> タとは様々な言語を解釈するルール集だと考える事が出来ます。
+>
+> STEPS の一部では、そのルールを記述するメタ文法として解析表現文法 
+> を、低
+> レベルな意味を記述するのに lisp 風の言語を使っています。 
+> lisp は一種の機
+> 械語として使っているだけで、ユーザから見える部分は Smalltalk  
+> 風の言語に
+> なる予定です。
+>
+> 現在の Squeak の先祖である Smalltalk 72 の文法は今よ 
+> りもっと柔軟で、文
+> 法自体をプログラムとして書く事が出来ました。例えばブロック構文無 
+> しで処
+> 理をメソッドに渡す事が出来ました。STEPS プロジェクトはそこ 
+> まで先祖返
+> りしてあり得たかもしれない未来を Reinvention しようとして 
+> います。
+>
+> 山宮
+
+From abee ＠ squeakland.jp  Wed Oct 21 16:46:41 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Oct 21 16:47:06 2009
+Subject: [Squeak-ja: 4376] 21 世紀コンピューティングカンファレンス
+Message-ID: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com>
+
+こんにちは、阿部です。
+# Squeak-jaとSMLへのマルチポストです。
+
+11/4に京都、11/6に東京で開催される「21 世紀コンピューティングカンファレンス」でアラン・ケイ博士の講演が行われます。
+http://www.microsoft.com/japan/events/21ccc/default.mspx
+http://www.msra.cn/labevents/21stcomputing/2009/Alank.html#t1
+
+講演のタイトルは、
+
+T-shirt Computing"?
+Steps Toward The Reinvention Of Programming "
+
+です。
+また、パネルディスカッションにはバトラー・ランプソン博士が出席されます。
+ランプソン博士は、Altoとそれに続くWildflowerシリーズ(Dマシン)の設計者として知られています。
+特に、Altoのコンセプトをまとめたメモ、"Why Alto"は有名です。
+http://www.digibarn.com/friends/butler-lampson/index.html
+
+Windows Liveへの登録が必要ですが、参加は無料です。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Wed Oct 21 17:28:39 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Oct 21 17:29:03 2009
+Subject: [Squeak-ja: 4377] Re: 21 世紀コンピューティングカンファレンス
+In-Reply-To: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com>
+References: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com>
+Message-ID: <2d5d52a80910210128n1945ce9el46ba32ecbddb8907@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2009年10月21日16:46 Kazuhiro ABE <abee@squeakland.jp>:
+> 11/4に京都、11/6に東京で開催される「21 世紀コンピューティングカンファレンス」でアラン・ケイ博士の講演が行われます。
+
+これは日付が逆でした。正しくは「11/4に東京、11/6に京都」でした。さらに言えば、11/4は慶應義塾大学
+日吉キャンパスなので東京も間違いです(マイクロソフトのサイトでは関東となっています)。
+大変失礼しました。
+
+# Korakuriderさん、ご指摘ありがとうございました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009年10月21日16:46 Kazuhiro ABE <abee@squeakland.jp>:
+> こんにちは、阿部です。
+> # Squeak-jaとSMLへのマルチポストです。
+>
+> 11/4に京都、11/6に東京で開催される「21 世紀コンピューティングカンファレンス」でアラン・ケイ博士の講演が行われます。
+> http://www.microsoft.com/japan/events/21ccc/default.mspx
+> http://www.msra.cn/labevents/21stcomputing/2009/Alank.html#t1
+>
+> 講演のタイトルは、
+>
+> T-shirt Computing"?
+> Steps Toward The Reinvention Of Programming "
+>
+> です。
+> また、パネルディスカッションにはバトラー・ランプソン博士が出席されます。
+> ランプソン博士は、Altoとそれに続くWildflowerシリーズ(Dマシン)の設計者として知られています。
+> 特に、Altoのコンセプトをまとめたメモ、"Why Alto"は有名です。
+> http://www.digibarn.com/friends/butler-lampson/index.html
+>
+> Windows Liveへの登録が必要ですが、参加は無料です。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+From sonoda ＠ laptop-jp.org  Thu Oct 22 08:40:47 2009
+From: sonoda ＠ laptop-jp.org (Y.Sonoda)
+Date: Thu Oct 22 08:40:51 2009
+Subject: [Squeak-ja: 4378] Re: 21 世紀コンピューティングカンファレンス
+In-Reply-To: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com>
+References: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com>
+Message-ID: <7f3aeb4c0910211640s618c22ck1689181f4a7763b0@mail.gmail.com>
+
+苑田です。
+
+インドネシアから昨日帰国しました。
+下記、非常に興味があります。
+11/6の東京講演のほうをなんとか聴講したいと思います。
+まずはWindows Liveへ登録ですね！
+
+2009年10月21日16:46 Kazuhiro ABE <abee@squeakland.jp>:
+> こんにちは、阿部です。
+> # Squeak-jaとSMLへのマルチポストです。
+>
+> 11/4に京都、11/6に東京で開催される「21 世紀コンピューティングカンファレンス」でアラン・ケイ博士の講演が行われます。
+> http://www.microsoft.com/japan/events/21ccc/default.mspx
+> http://www.msra.cn/labevents/21stcomputing/2009/Alank.html#t1
+>
+> 講演のタイトルは、
+>
+> T-shirt Computing"?
+> Steps Toward The Reinvention Of Programming "
+>
+> です。
+> また、パネルディスカッションにはバトラー・ランプソン博士が出席されます。
+> ランプソン博士は、Altoとそれに続くWildflowerシリーズ(Dマシン)の設計者として知られています。
+> 特に、Altoのコンセプトをまとめたメモ、"Why Alto"は有名です。
+> http://www.digibarn.com/friends/butler-lampson/index.html
+>
+> Windows Liveへの登録が必要ですが、参加は無料です。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+From abee.abe ＠ nifty.ne.jp  Thu Oct 22 11:13:55 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Oct 22 11:14:19 2009
+Subject: [Squeak-ja: 4379] Re: 21 世紀コンピューティングカンファレンス
+In-Reply-To: <7f3aeb4c0910211640s618c22ck1689181f4a7763b0@mail.gmail.com>
+References: <2d5d52a80910210046k74b4d807g7d63afcaa2e5ce74@mail.gmail.com> 
+	<7f3aeb4c0910211640s618c22ck1689181f4a7763b0@mail.gmail.com>
+Message-ID: <2d5d52a80910211913q6aee49aby30764e88f67487d@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2009年10月22日8:40 Y.Sonoda <sonoda@laptop-jp.org>:
+> 11/6の東京講演のほうをなんとか聴講したいと思います。
+
+昨日訂正したとおり、関東は11/4ですのでどうぞお間違いなく。
+http://www.smalltalk.jp/pipermail/squeak-ja/2009-October/004377.html
+申し訳ありません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009年10月22日8:40 Y.Sonoda <sonoda@laptop-jp.org>:
+> 苑田です。
+>
+> インドネシアから昨日帰国しました。
+> 下記、非常に興味があります。
+> 11/6の東京講演のほうをなんとか聴講したいと思います。
+> まずはWindows Liveへ登録ですね！
+>
+> 2009年10月21日16:46 Kazuhiro ABE <abee@squeakland.jp>:
+>> こんにちは、阿部です。
+>> # Squeak-jaとSMLへのマルチポストです。
+>>
+>> 11/4に京都、11/6に東京で開催される「21 世紀コンピューティングカンファレンス」でアラン・ケイ博士の講演が行われます。
+>> http://www.microsoft.com/japan/events/21ccc/default.mspx
+>> http://www.msra.cn/labevents/21stcomputing/2009/Alank.html#t1
+>>
+>> 講演のタイトルは、
+>>
+>> T-shirt Computing"?
+>> Steps Toward The Reinvention Of Programming "
+>>
+>> です。
+>> また、パネルディスカッションにはバトラー・ランプソン博士が出席されます。
+>> ランプソン博士は、Altoとそれに続くWildflowerシリーズ(Dマシン)の設計者として知られています。
+>> 特に、Altoのコンセプトをまとめたメモ、"Why Alto"は有名です。
+>> http://www.digibarn.com/friends/butler-lampson/index.html
+>>
+>> Windows Liveへの登録が必要ですが、参加は無料です。
+>>
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+>>
+>
+From htakada ＠ acm.org  Thu Oct 22 20:14:16 2009
+From: htakada ＠ acm.org (Hideyuki Takada)
+Date: Thu Oct 22 20:14:21 2009
+Subject: [Squeak-ja: 4380] 【締切延長】論文募集のご案内: C5 2010 - La Jolla California
+Message-ID: <4fce2d310910220414g7314cc21y84fef78b5d6e45e6@mail.gmail.com>
+
+皆様
+
+立命館大学の高田です。
+
+先日ご案内いたしました国際会議 C5 2010 ですが，論文投稿締切が 11月13日に延長されましたので，
+お知らせいたします。まだこれから書き始めても間に合うと思いますので，ご投稿をよろしくお願い
+いたします。
+
+-----
+              The Eighth International Conference on
+  Creating, Connecting and Collaborating through Computing (C5 2010)
+
+               January 25-28, 2010, La Jolla, CA, US
+               http://www.cm.is.ritsumei.ac.jp/c5-10/
+
+        ** PAPER SUBMISSION DEADLINE EXTENDED TO NOVEMBER 13 **
+
+                           CALL FOR PAPERS
+
+ Computers, networks, and other forms of technology are now pervasive
+ in our information-based society. However, most users still function
+ as passive consumers of technology. To evolve into a true knowledge
+ society, it is critical that we transform computer-based human
+ activities to engage users in the active process of creating,
+ connecting, and collaborating together.
+
+ The C5 conference is for researchers, technology developers,
+ educators, and technology users who are concerned about developing
+ and enabling human-oriented creation, connection, and collaboration
+ processes. C5 is an international forum for presenting ongoing work
+ as well as new work currently under development and for discussing
+ future needs and directions in creative computing and multimedia
+ authoring environments. We welcome equally the submission of
+ theoretical and technical papers, practitioner/experience reports and
+ papers that bridge the gap between theory and practice.
+
+ C5 2010 invites submissions of full papers in the following
+ categories (but not limited to):
+
+ - Collaboration & Communication
+ - Technology-Human Interaction
+ - Visualization
+ - Virtual Worlds
+ - Social Networks
+ - Learning
+
+ Full papers must report original work that has not been previously
+ published. Papers must present reports of significant work in
+ research, development and applications with regards to one or more of
+ the conference topics of interest. All submissions will be reviewed
+ by a distinguished international program committee.
+
+Paper Submission
+
+Paper Format
+
+ A full paper with a limit of eight (8) pages, formatted in two
+ columns and 10 point font, should be submitted by the paper
+ submission deadline. Each paper will be reviewed by the program
+ committee, and authors will be notified regarding
+ acceptance. Accepted authors must submit a camera ready version of
+ the full paper with an eight (8) page limit by the camera-ready copy
+ deadline.
+
+ Papers should follow the formatting instructions provided by 8.5" x
+ 11", Two-Column Format of "IEEE Computer Society Press - Proceedings
+ Author Guidelines" (please refer to INFORMATION FOR
+ AUTHORS in Conference Publishing Service). Submitted papers and
+ camera-ready papers should be sent electronically in PDF through our
+ online submission site below.
+
+Online Paper Submission Site
+
+ http://www.easychair.org/conferences/?conf=c510
+
+Publication of the Proceedings
+
+ A preliminary version of the proceedings will be distributed during
+ the conference. The formal version of the proceedings will be
+ published by the IEEE Computer Society (requesting) and sent to
+ authors after the conference. For each accepted paper, at least one
+ of the authors needs to attend the conference and deliver the
+ presentation; otherwise the paper will not be included in the formal
+ proceedings.
+
+Important Dates
+
+ - Full paper submission: November 13, 2009 (Extended)
+ - Notification of acceptance: December 11, 2009
+ - Full paper camera-ready copies: January 11, 2010
+
+Web presence and Contact
+
+ Website: http://www.cm.is.ritsumei.ac.jp/c5-10
+
+ If you have any questions or comments, please contact the program
+ chairs.
+
+--
+高田 秀志 (Hideyuki Takada)
+立命館大学 情報理工学部 情報システム学科
+From kuwatani ＠ akademia.co.jp  Fri Oct 23 14:36:43 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Fri Oct 23 14:36:46 2009
+Subject: [Squeak-ja: 4381] メーリングリストの不具合のご報告
+In-Reply-To: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+References: <2d5d52a80902172258k63bfecf9oae684cb1837e6b91@mail.gmail.com>
+Message-ID: <4AE140EB.1020601@akademia.co.jp>
+
+Squeak-jaメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+先日メーリングリストの運用サーバのDNSの設定を変更した際に
+メーリングリストからメールが配送されないまたは
+配信が遅れてしまう不具合が起きておりました．
+ご迷惑をおかけして申し訳ありませんでした．
+
+▼不具合が起きていた期間
+10月22日 14時から3時間程度
+
+-- 
+kuwatani@akademia.co.jp
+From ykoubo2008 ＠ yengawa.com  Mon Oct 26 22:50:25 2009
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Mon Oct 26 22:50:35 2009
+Subject: [Squeak-ja: 4382] Re: Squeakland.orgについて
+In-Reply-To: <ueip0p0zj.wl%yoshiki@vpri.org>
+References: <uvdieov4n.wl%yoshiki@vpri.org>	<4ADBBF31.4090002@yengawa.com>
+	<ueip0p0zj.wl%yoshiki@vpri.org>
+Message-ID: <4AE5A921.9090802@yengawa.com>
+
+横川です。
+
+Squeakland.orgの翻訳で、やはり迷うところが出ています。
+より良い訳があればご教示ください。
+
+まずは一番重要なことから...
+Etoysの日本語名を「イートイ」にしました。
+
+あとは特に気になるところをいくつか並べていきます。
+(各行の>以降が元の文字)
+
+squeakland.nav.discuss=話題>discuss
+(「議論」ではカタいので)
+
+squeakland.nav.tracker=トラッカー>tracker
+(issue trackingのシステムです。現在のリンク先は英語なので英文字でもいい
+かな?)
+
+squeakland.nav.wiki=ウィキ>wiki
+(英文字のままの方がしっくりくるけど、ウィキペディアがあるのでカタカナに
+してみました)
+
+squeakland.home.etoysIs1= 子どもたちにパワフルなアイデアを魅力的に教える
+教育の道具です。>an educational tool for teaching children powerful
+ideas in compelling ways
+(最初のページの初っぱなの重要な文句です。Powerful Idea本ではどんな訳でし
+たっけ?)
+
+squeakland.showcase.subject=テーマ>Subject
+(ショーケースの作品プロパティでScienceとかMathmaticsとかを選ぶのですが、
+教科とするとカタいので)
+
+
+以上、よろしくお願いします。
+
+Yoshiki Ohshima wrote 09.10.19 11:32 AM:
+> At Mon, 19 Oct 2009 10:21:53 +0900,
+> Koji Yokokawa wrote:
+>> 横川です。
+>>
+>> 最近ちょっと忙しいのですが、Etoysを仕事でつかっていることもあり、誰もい
+>> ないなら週末にでも時間を作ってやってみます。
+>> ということで、SQ-480にコメント書いておきました。
+>>
+>> 翻訳に迷うところがあればこのMLへ投げて意見をうかがうかもしれません。
+>> みなさんよろしくお願いします。
+> 
+>   ありがとうございます！よろしくお願いします。
+> 
+> -- Yoshiki
+> 
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+From yoshiki ＠ vpri.org  Tue Oct 27 08:26:42 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Oct 27 08:26:55 2009
+Subject: [Squeak-ja: 4383] Re: Squeakland.orgについて
+In-Reply-To: <4AE5A921.9090802@yengawa.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4ADBBF31.4090002@yengawa.com>
+	<ueip0p0zj.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com>
+Message-ID: <uy6mx91ot.wl%yoshiki@vpri.org>
+
+At Mon, 26 Oct 2009 22:50:25 +0900,
+Koji Yokokawa wrote:
+> 
+> 横川です。
+> 
+> Squeakland.orgの翻訳で、やはり迷うところが出ています。
+> より良い訳があればご教示ください。
+> 
+> まずは一番重要なことから...
+> Etoysの日本語名を「イートイ」にしました。
+
+  思うにイートイズとズがついているほうが流行っていればよかったようにも
+思うのですが、イートイも使われてはいましたね。スクイークと訳す手もある
+ようには思いますが。
+
+> squeakland.nav.discuss=話題>discuss
+> (「議論」ではカタいので)
+
+  意訳がありなら「意見交換」というのもあるかもしれませんね。
+
+> squeakland.nav.tracker=トラッカー>tracker
+> (issue trackingのシステムです。現在のリンク先は英語なので英文字でもいい
+> かな?)
+
+  カタカナでも良いのではないでしょうか。英語圏の人でも、squeakland.org
+に行くような一般的な人は"tracker"が何を意味するのかはわからないでしょ
+うね。
+
+> squeakland.nav.wiki=ウィキ>wiki
+> (英文字のままの方がしっくりくるけど、ウィキペディアがあるのでカタカナに
+> してみました)
+> 
+> squeakland.home.etoysIs1= 子どもたちにパワフルなアイデアを魅力的に教える
+> 教育の道具です。>an educational tool for teaching children powerful
+> ideas in compelling ways
+> (最初のページの初っぱなの重要な文句です。Powerful Idea本ではどんな訳でし
+> たっけ?)
+
+  「パワフルな考え方」だったような気もしますが、「パワフルなアイディア」
+でも良いのではないでしょうか。
+
+> squeakland.showcase.subject=テーマ>Subject
+> (ショーケースの作品プロパティでScienceとかMathmaticsとかを選ぶのですが、
+> 教科とするとカタいので)
+
+  科目が無難ではないでしょうか。
+
+-- Yoshiki
+From korakurider ＠ gmail.com  Tue Oct 27 08:54:19 2009
+From: korakurider ＠ gmail.com (Korakurider)
+Date: Tue Oct 27 08:54:22 2009
+Subject: [Squeak-ja: 4384] Re: Squeakland.orgについて
+In-Reply-To: <uy6mx91ot.wl%yoshiki@vpri.org>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4ADBBF31.4090002@yengawa.com>
+	<ueip0p0zj.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com>
+	<uy6mx91ot.wl%yoshiki@vpri.org>
+Message-ID: <75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com>
+
+Korakuriderです。
+
+2009/10/27 Yoshiki Ohshima <yoshiki@vpri.org>:
+> At Mon, 26 Oct 2009 22:50:25 +0900,
+> Koji Yokokawa wrote:
+>>
+>> 横川です。
+>>
+>> Squeakland.orgの翻訳で、やはり迷うところが出ています。
+>> より良い訳があればご教示ください。
+>>
+>> まずは一番重要なことから...
+>> Etoysの日本語名を「イートイ」にしました。
+>
+>  思うにイートイズとズがついているほうが流行っていればよかったようにも
+> 思うのですが、イートイも使われてはいましたね。スクイークと訳す手もある
+> ようには思いますが。
+>
+>> squeakland.nav.discuss=話題>discuss
+>> (「議論」ではカタいので)
+>
+>  意訳がありなら「意見交換」というのもあるかもしれませんね。
+　　カタイ路線だと、他には「会議室」とかですかね。
+
+>
+>> squeakland.nav.tracker=トラッカー>tracker
+>> (issue trackingのシステムです。現在のリンク先は英語なので英文字でもいい
+>> かな?)
+>
+>  カタカナでも良いのではないでしょうか。英語圏の人でも、squeakland.org
+> に行くような一般的な人は"tracker"が何を意味するのかはわからないでしょ
+> うね。
+　　　カタカナでよいなら「バグトラッカー」のほうがよいと感じます。
+
+>
+>> squeakland.nav.wiki=ウィキ>wiki
+>> (英文字のままの方がしっくりくるけど、ウィキペディアがあるのでカタカナに
+>> してみました)
+>>
+>> squeakland.home.etoysIs1= 子どもたちにパワフルなアイデアを魅力的に教える
+>> 教育の道具です。>an educational tool for teaching children powerful
+>> ideas in compelling ways
+>> (最初のページの初っぱなの重要な文句です。Powerful Idea本ではどんな訳でし
+>> たっけ?)
+>
+>  「パワフルな考え方」だったような気もしますが、「パワフルなアイディア」
+> でも良いのではないでしょうか。
+>
+>> squeakland.showcase.subject=テーマ>Subject
+>> (ショーケースの作品プロパティでScienceとかMathmaticsとかを選ぶのですが、
+>> 教科とするとカタいので)
+>
+>  科目が無難ではないでしょうか。
+　　Etoys側の保存画面での入力に対応した属性ですから、Etoysをリリースする
+　　前にこの訳語を議論するべきでしたね。。。 （後悔）
+　　Etoys側は現在「主題」になっています。
+　　選択肢にLanguage Artsとかがありますから、科目もピンと来ない気がしたので主題を選びました。
+
+>
+> -- Yoshiki
+>
+From ykoubo2008 ＠ yengawa.com  Tue Oct 27 12:34:34 2009
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Tue Oct 27 12:40:25 2009
+Subject: [Squeak-ja: 4385] Re: Squeakland.orgについて
+In-Reply-To: <75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org>
+	<4ADBBF31.4090002@yengawa.com>	<ueip0p0zj.wl%yoshiki@vpri.org>
+	<4AE5A921.9090802@yengawa.com>	<uy6mx91ot.wl%yoshiki@vpri.org>
+	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com>
+Message-ID: <4AE66A4A.4030501@yengawa.com>
+
+横川です。
+
+
+Korakurider wrote 09.10.27 8:54 AM:
+> Korakuriderです。
+> 
+> 2009/10/27 Yoshiki Ohshima <yoshiki@vpri.org>:
+>> At Mon, 26 Oct 2009 22:50:25 +0900,
+>> Koji Yokokawa wrote:
+>>> 横川です。
+>>>
+>>> Squeakland.orgの翻訳で、やはり迷うところが出ています。
+>>> より良い訳があればご教示ください。
+>>>
+>>> まずは一番重要なことから...
+>>> Etoysの日本語名を「イートイ」にしました。
+>>  思うにイートイズとズがついているほうが流行っていればよかったようにも
+>> 思うのですが、イートイも使われてはいましたね。スクイークと訳す手もある
+>> ようには思いますが。
+
+前例にならって「ズ」を抜いたのですが、固有名詞なんだからなるべく発音を近
+づけるのが良いですね。(Beatlesが「ビートル」じゃおかしいしw)
+「イートイズ」にしようと思います。
+
+元はSqueakだったし、「スクイーク」という呼び名は日本でだいぶ馴染んできた
+のでもったいないのですが、これからは海外の友達と話すときに「スクイーク」
+では通じなくなりますからやめましょう。
+
+>>
+>>> squeakland.nav.discuss=話題>discuss
+>>> (「議論」ではカタいので)
+>>  意訳がありなら「意見交換」というのもあるかもしれませんね。
+> 　　カタイ路線だと、他には「会議室」とかですかね。
+
+discussの中に「フォーラム>forums」や「チャット>chat」などへのリンクが
+あったので、広く「意見交換」というのも良さそう。
+でも「話題」も短くて捨てがたい。
+
+> 
+>>> squeakland.nav.tracker=トラッカー>tracker
+>>> (issue trackingのシステムです。現在のリンク先は英語なので英文字でもいい
+>>> かな?)
+>>  カタカナでも良いのではないでしょうか。英語圏の人でも、squeakland.org
+>> に行くような一般的な人は"tracker"が何を意味するのかはわからないでしょ
+>> うね。
+> 　　　カタカナでよいなら「バグトラッカー」のほうがよいと感じます。
+
+「バグトラッカー」は内容がわかっていいですね。これにします。
+
+> 
+>>> squeakland.nav.wiki=ウィキ>wiki
+>>> (英文字のままの方がしっくりくるけど、ウィキペディアがあるのでカタカナに
+>>> してみました)
+>>>
+>>> squeakland.home.etoysIs1= 子どもたちにパワフルなアイデアを魅力的に教える
+>>> 教育の道具です。>an educational tool for teaching children powerful
+>>> ideas in compelling ways
+>>> (最初のページの初っぱなの重要な文句です。Powerful Idea本ではどんな訳でし
+>>> たっけ?)
+>>  「パワフルな考え方」だったような気もしますが、「パワフルなアイディア」
+>> でも良いのではないでしょうか。
+
+では「パワフルなアイデア」のままいきますか。
+ちなみに、「アイデア」ではなくて「アイディア」だという指摘ではないですよね?
+
+>>
+>>> squeakland.showcase.subject=テーマ>Subject
+>>> (ショーケースの作品プロパティでScienceとかMathmaticsとかを選ぶのですが、
+>>> 教科とするとカタいので)
+>>  科目が無難ではないでしょうか。
+> 　　Etoys側の保存画面での入力に対応した属性ですから、Etoysをリリースする
+> 　　前にこの訳語を議論するべきでしたね。。。 （後悔）
+> 　　Etoys側は現在「主題」になっています。
+> 　　選択肢にLanguage Artsとかがありますから、科目もピンと来ない気がしたので主題を選びました。
+
+これはEtoysにあわせて「主題」にしましょう。
+
+プロジェクトのプロパティは以下のようにしました。
+これらはEtoys4以前のバージョンで作られたプロジェクトを手動でアップロード
+するときのFormパラメータの説明に使われています。
+
+squeakland.showcase.screenshot=画面の画像>Screenshot
+squeakland.showcase.author=作者>Author
+squeakland.showcase.description=説明>Description
+squeakland.showcase.tags=タグ>Tags
+squeakland.showcase.subject=主題>Subject
+squeakland.showcase.age=対象年れい>Target Age
+squeakland.showcase.region=地域>Region
+
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From abee.abe ＠ nifty.ne.jp  Tue Oct 27 12:54:14 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Tue Oct 27 12:54:39 2009
+Subject: [Squeak-ja: 4386] Re: Squeakland.orgについて
+In-Reply-To: <4AE66A4A.4030501@yengawa.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4ADBBF31.4090002@yengawa.com> 
+	<ueip0p0zj.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com> 
+	<uy6mx91ot.wl%yoshiki@vpri.org>
+	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com> 
+	<4AE66A4A.4030501@yengawa.com>
+Message-ID: <2d5d52a80910262054x2d692365v108e59417c738d46@mail.gmail.com>
+
+こんにちは、阿部です。
+Etoysについてですが、「みんなでたのしくスクイーク」のサイトでは、「スクイークEtoys」と呼んでいますね。
+http://d-mts.com/
+スクイークのネームバリューを生かしつつ、その新しいバージョンとしてのEtoysに移行したいという意味合いだと思います。
+あと、powerful ideaはマインドストームでは、ずばり「強力なアイデア」ですね。
+http://www.miraisha.co.jp/np/isbn/9784624400439
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009年10月27日12:34 Koji Yokokawa <ykoubo2008@yengawa.com>:
+> 横川です。
+>
+>
+> Korakurider wrote 09.10.27 8:54 AM:
+>> Korakuriderです。
+>>
+>> 2009/10/27 Yoshiki Ohshima <yoshiki@vpri.org>:
+>>> At Mon, 26 Oct 2009 22:50:25 +0900,
+>>> Koji Yokokawa wrote:
+>>>> 横川です。
+>>>>
+>>>> Squeakland.orgの翻訳で、やはり迷うところが出ています。
+>>>> より良い訳があればご教示ください。
+>>>>
+>>>> まずは一番重要なことから...
+>>>> Etoysの日本語名を「イートイ」にしました。
+>>>  思うにイートイズとズがついているほうが流行っていればよかったようにも
+>>> 思うのですが、イートイも使われてはいましたね。スクイークと訳す手もある
+>>> ようには思いますが。
+>
+> 前例にならって「ズ」を抜いたのですが、固有名詞なんだからなるべく発音を近
+> づけるのが良いですね。(Beatlesが「ビートル」じゃおかしいしw)
+> 「イートイズ」にしようと思います。
+>
+> 元はSqueakだったし、「スクイーク」という呼び名は日本でだいぶ馴染んできた
+> のでもったいないのですが、これからは海外の友達と話すときに「スクイーク」
+> では通じなくなりますからやめましょう。
+>
+>>>
+>>>> squeakland.nav.discuss=話題>discuss
+>>>> (「議論」ではカタいので)
+>>>  意訳がありなら「意見交換」というのもあるかもしれませんね。
+>> カタイ路線だと、他には「会議室」とかですかね。
+>
+> discussの中に「フォーラム>forums」や「チャット>chat」などへのリンクが
+> あったので、広く「意見交換」というのも良さそう。
+> でも「話題」も短くて捨てがたい。
+>
+>>
+>>>> squeakland.nav.tracker=トラッカー>tracker
+>>>> (issue trackingのシステムです。現在のリンク先は英語なので英文字でもいい
+>>>> かな?)
+>>>  カタカナでも良いのではないでしょうか。英語圏の人でも、squeakland.org
+>>> に行くような一般的な人は"tracker"が何を意味するのかはわからないでしょ
+>>> うね。
+>> カタカナでよいなら「バグトラッカー」のほうがよいと感じます。
+>
+> 「バグトラッカー」は内容がわかっていいですね。これにします。
+>
+>>
+>>>> squeakland.nav.wiki=ウィキ>wiki
+>>>> (英文字のままの方がしっくりくるけど、ウィキペディアがあるのでカタカナに
+>>>> してみました)
+>>>>
+>>>> squeakland.home.etoysIs1= 子どもたちにパワフルなアイデアを魅力的に教える
+>>>> 教育の道具です。>an educational tool for teaching children powerful
+>>>> ideas in compelling ways
+>>>> (最初のページの初っぱなの重要な文句です。Powerful Idea本ではどんな訳でし
+>>>> たっけ?)
+>>>  「パワフルな考え方」だったような気もしますが、「パワフルなアイディア」
+>>> でも良いのではないでしょうか。
+>
+> では「パワフルなアイデア」のままいきますか。
+> ちなみに、「アイデア」ではなくて「アイディア」だという指摘ではないですよね?
+>
+>>>
+>>>> squeakland.showcase.subject=テーマ>Subject
+>>>> (ショーケースの作品プロパティでScienceとかMathmaticsとかを選ぶのですが、
+>>>> 教科とするとカタいので)
+>>>  科目が無難ではないでしょうか。
+>> Etoys側の保存画面での入力に対応した属性ですから、Etoysをリリースする
+>> 前にこの訳語を議論するべきでしたね。。。 （後悔）
+>> Etoys側は現在「主題」になっています。
+>> 選択肢にLanguage Artsとかがありますから、科目もピンと来ない気がしたので主題を選びました。
+>
+> これはEtoysにあわせて「主題」にしましょう。
+>
+> プロジェクトのプロパティは以下のようにしました。
+> これらはEtoys4以前のバージョンで作られたプロジェクトを手動でアップロード
+> するときのFormパラメータの説明に使われています。
+>
+> squeakland.showcase.screenshot=画面の画像>Screenshot
+> squeakland.showcase.author=作者>Author
+> squeakland.showcase.description=説明>Description
+> squeakland.showcase.tags=タグ>Tags
+> squeakland.showcase.subject=主題>Subject
+> squeakland.showcase.age=対象年れい>Target Age
+> squeakland.showcase.region=地域>Region
+>
+>
+> --
+> -- !
+> Koji Yokokawa ykoubo2008@yengawa.com>
+>    http://www.yengawa.com/
+>    ^self new!
+>
+>
+From yoshiki ＠ vpri.org  Tue Oct 27 14:30:16 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Oct 27 14:30:27 2009
+Subject: [Squeak-ja: 4387] Re: Squeakland.orgについて
+In-Reply-To: <4AE66A4A.4030501@yengawa.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4ADBBF31.4090002@yengawa.com>
+	<ueip0p0zj.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com>
+	<uy6mx91ot.wl%yoshiki@vpri.org>
+	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com>
+	<4AE66A4A.4030501@yengawa.com>
+Message-ID: <uskd58kuv.wl%yoshiki@vpri.org>
+
+At Tue, 27 Oct 2009 12:34:34 +0900,
+Koji Yokokawa wrote:
+> 
+> >>> squeakland.nav.tracker=トラッカー>tracker
+> >>> (issue trackingのシステムです。現在のリンク先は英語なので英文字でもいい
+> >>> かな?)
+> >>  カタカナでも良いのではないでしょうか。英語圏の人でも、squeakland.org
+> >> に行くような一般的な人は"tracker"が何を意味するのかはわからないでしょ
+> >> うね。
+> > 　　　カタカナでよいなら「バグトラッカー」のほうがよいと感じます。
+> 
+> 「バグトラッカー」は内容がわかっていいですね。これにします。
+
+　そうですね。
+
+> >>  「パワフルな考え方」だったような気もしますが、「パワフルなアイディア」
+> >> でも良いのではないでしょうか。
+> 
+> では「パワフルなアイデア」のままいきますか。
+> ちなみに、「アイデア」ではなくて「アイディア」だという指摘ではないですよね?
+
+  という指摘ではないです。阿部さんの書くように「強力な」という路線でも
+良いとは思います。
+
+> >>> squeakland.showcase.subject=テーマ>Subject
+> >>> (ショーケースの作品プロパティでScienceとかMathmaticsとかを選ぶのですが、
+> >>> 教科とするとカタいので)
+> >>  科目が無難ではないでしょうか。
+> > 　　Etoys側の保存画面での入力に対応した属性ですから、Etoysをリリースする
+> > 　　前にこの訳語を議論するべきでしたね。。。 （後悔）
+> > 　　Etoys側は現在「主題」になっています。
+> > 　　選択肢にLanguage Artsとかがありますから、科目もピンと来ない気がしたので主題を選びました。
+> 
+> これはEtoysにあわせて「主題」にしましょう。
+
+  そうですね。
+
+> プロジェクトのプロパティは以下のようにしました。
+> これらはEtoys4以前のバージョンで作られたプロジェクトを手動でアップロード
+> するときのFormパラメータの説明に使われています。
+> 
+> squeakland.showcase.screenshot=画面の画像>Screenshot
+
+  「画面の画像」というのも歴史的理由があったんでしたっけ?
+
+> squeakland.showcase.author=作者>Author
+> squeakland.showcase.description=説明>Description
+> squeakland.showcase.tags=タグ>Tags
+> squeakland.showcase.subject=主題>Subject
+> squeakland.showcase.age=対象年れい>Target Age
+
+  これはまぜがきにするということではなくて「対象年齢」ですよね(Etoys
+V4のなかにあるように)
+
+-- Yoshiki
+From miyasaka ＠ iris.dti.ne.jp  Wed Oct 28 00:15:59 2009
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Wed Oct 28 00:16:24 2009
+Subject: [Squeak-ja: 4388] Re: Squeakland.orgについて
+In-Reply-To: <2d5d52a80910262054x2d692365v108e59417c738d46@mail.gmail.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4ADBBF31.4090002@yengawa.com> 
+	<ueip0p0zj.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com> 
+	<uy6mx91ot.wl%yoshiki@vpri.org>
+	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com> 
+	<4AE66A4A.4030501@yengawa.com>
+	<2d5d52a80910262054x2d692365v108e59417c738d46@mail.gmail.com>
+Message-ID: <4b24f0d0910270815m5463a52fpe92b52db1915c735@mail.gmail.com>
+
+横川さん
+
+こんばんは。デジハリの宮坂です。
+Squeakland.orgの翻訳の件、ありがとうございます。
+できれば私も手をあげようかと思っていたのですが、時間的な制約もあり迷っていたところでした。
+日本語化が進んで、スクイークランドがさらに盛り上がってきたらうれしいですね。
+Etoys本体やSqueakland.orgの日本語対応が進んできたら、私たちがやっている「http://d-mts.com/」は役目を終えることになりますが、それはそれでいいことだと思うので、どうかよろしくお願いします。
+
+さて、Etoysの呼び方について１点ご相談です。
+阿部さんのメールにもあるとおりなんらかの形で「スクイーク」という呼称を残すことはできないでしょうか？
+
+「Etoys」で統一したいという開発者の方々の想いはとてもよくわかるのですが、その半面、教育の現場でやっと「スクイーク」という呼称が定着してきたのに、ちょっと（というかすごく）残念、という気持ちもあります。
+おそらく、現場でEtoysを教えている人のなかには、同じように「スクイーク」という名前を残してほしいと思っている人も少なくないのではないでしょうか。
+
+そういった意味で「スクイークEtoys」のような呼称は、「Windows
+XP/Vista/7」のように、スクイークであることもわかり、Etoysという呼称でもあることも表現できているので、悪くはないと思うのですが。
+（Squeakland.orgのロゴには「Squeak Etoys」という名称が表示されていることですし）
+
+ということで、可能な範囲でご検討いただければ幸いです。
+いろいろな意見があり、調整もたいへんだと思いますが、どうかよろしくお願いいたします。
+
+宮坂
+
+
+2009年10月27日12:54 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+> こんにちは、阿部です。
+> Etoysについてですが、「みんなでたのしくスクイーク」のサイトでは、「スクイークEtoys」と呼んでいますね。
+> http://d-mts.com/
+> スクイークのネームバリューを生かしつつ、その新しいバージョンとしてのEtoysに移行したいという意味合いだと思います。
+> あと、powerful ideaはマインドストームでは、ずばり「強力なアイデア」ですね。
+> http://www.miraisha.co.jp/np/isbn/9784624400439
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 2009年10月27日12:34 Koji Yokokawa <ykoubo2008@yengawa.com>:
+>> 横川です。
+>>
+>>
+>> Korakurider wrote 09.10.27 8:54 AM:
+>>> Korakuriderです。
+>>>
+>>> 2009/10/27 Yoshiki Ohshima <yoshiki@vpri.org>:
+>>>> At Mon, 26 Oct 2009 22:50:25 +0900,
+>>>> Koji Yokokawa wrote:
+>>>>> 横川です。
+>>>>>
+>>>>> Squeakland.orgの翻訳で、やはり迷うところが出ています。
+>>>>> より良い訳があればご教示ください。
+>>>>>
+>>>>> まずは一番重要なことから...
+>>>>> Etoysの日本語名を「イートイ」にしました。
+>>>>  思うにイートイズとズがついているほうが流行っていればよかったようにも
+>>>> 思うのですが、イートイも使われてはいましたね。スクイークと訳す手もある
+>>>> ようには思いますが。
+>>
+>> 前例にならって「ズ」を抜いたのですが、固有名詞なんだからなるべく発音を近
+>> づけるのが良いですね。(Beatlesが「ビートル」じゃおかしいしw)
+>> 「イートイズ」にしようと思います。
+>>
+>> 元はSqueakだったし、「スクイーク」という呼び名は日本でだいぶ馴染んできた
+>> のでもったいないのですが、これからは海外の友達と話すときに「スクイーク」
+>> では通じなくなりますからやめましょう。
+>>
+>>>>
+>>>>> squeakland.nav.discuss=話題>discuss
+>>>>> (「議論」ではカタいので)
+>>>>  意訳がありなら「意見交換」というのもあるかもしれませんね。
+>>> カタイ路線だと、他には「会議室」とかですかね。
+>>
+>> discussの中に「フォーラム>forums」や「チャット>chat」などへのリンクが
+>> あったので、広く「意見交換」というのも良さそう。
+>> でも「話題」も短くて捨てがたい。
+>>
+>>>
+>>>>> squeakland.nav.tracker=トラッカー>tracker
+>>>>> (issue trackingのシステムです。現在のリンク先は英語なので英文字でもいい
+>>>>> かな?)
+>>>>  カタカナでも良いのではないでしょうか。英語圏の人でも、squeakland.org
+>>>> に行くような一般的な人は"tracker"が何を意味するのかはわからないでしょ
+>>>> うね。
+>>> カタカナでよいなら「バグトラッカー」のほうがよいと感じます。
+>>
+>> 「バグトラッカー」は内容がわかっていいですね。これにします。
+>>
+>>>
+>>>>> squeakland.nav.wiki=ウィキ>wiki
+>>>>> (英文字のままの方がしっくりくるけど、ウィキペディアがあるのでカタカナに
+>>>>> してみました)
+>>>>>
+>>>>> squeakland.home.etoysIs1= 子どもたちにパワフルなアイデアを魅力的に教える
+>>>>> 教育の道具です。>an educational tool for teaching children powerful
+>>>>> ideas in compelling ways
+>>>>> (最初のページの初っぱなの重要な文句です。Powerful Idea本ではどんな訳でし
+>>>>> たっけ?)
+>>>>  「パワフルな考え方」だったような気もしますが、「パワフルなアイディア」
+>>>> でも良いのではないでしょうか。
+>>
+>> では「パワフルなアイデア」のままいきますか。
+>> ちなみに、「アイデア」ではなくて「アイディア」だという指摘ではないですよね?
+>>
+>>>>
+>>>>> squeakland.showcase.subject=テーマ>Subject
+>>>>> (ショーケースの作品プロパティでScienceとかMathmaticsとかを選ぶのですが、
+>>>>> 教科とするとカタいので)
+>>>>  科目が無難ではないでしょうか。
+>>> Etoys側の保存画面での入力に対応した属性ですから、Etoysをリリースする
+>>> 前にこの訳語を議論するべきでしたね。。。 （後悔）
+>>> Etoys側は現在「主題」になっています。
+>>> 選択肢にLanguage Artsとかがありますから、科目もピンと来ない気がしたので主題を選びました。
+>>
+>> これはEtoysにあわせて「主題」にしましょう。
+>>
+>> プロジェクトのプロパティは以下のようにしました。
+>> これらはEtoys4以前のバージョンで作られたプロジェクトを手動でアップロード
+>> するときのFormパラメータの説明に使われています。
+>>
+>> squeakland.showcase.screenshot=画面の画像>Screenshot
+>> squeakland.showcase.author=作者>Author
+>> squeakland.showcase.description=説明>Description
+>> squeakland.showcase.tags=タグ>Tags
+>> squeakland.showcase.subject=主題>Subject
+>> squeakland.showcase.age=対象年れい>Target Age
+>> squeakland.showcase.region=地域>Region
+>>
+>>
+>> --
+>> -- !
+>> Koji Yokokawa ykoubo2008@yengawa.com>
+>>    http://www.yengawa.com/
+>>    ^self new!
+>>
+>>
+>
+From y.daisuke.homeaddres ＠ gmail.com  Thu Oct 29 01:43:22 2009
+From: y.daisuke.homeaddres ＠ gmail.com (daisuke yamashita)
+Date: Thu Oct 29 01:43:29 2009
+Subject: [Squeak-ja: 4389] SqueakDBXの導入について
+Message-ID: <a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07@mail.gmail.com>
+
+初めまして。
+
+ヤマシタと申します。
+
+最近、squeakを始めました、初心者です。
+その中で、SqueakDBXを使用してDB(Postgres)操作をしたいと思っています。
+すでにOpenDBXは導入しているのですが、DBにconnectしようとすると、エラーが発生します。
+なんとか解決しようと試みましたが解決できず、お力をお貸し頂ければと思い投稿致しました。
+
+環境：MacOSX 10.6.1
+DB; PostgreSQL 8.4.1 ソースコンパイル（configureオプションなし)
+使用Squeak:  SeasideJOne-090425-plusDB
+他: pgAdminで接続できるのは確認済み。 PostgresはPostmasterによるDaemon起動 -i　オプション付き
+
+OpenDBXの導入手順は以下に記載しました。
+http://d.hatena.ne.jp/dai_yamashita/20091015/1255617048
+
+他、以下に記載されているMacでのVW内にシンボリックリンクは設定。
+（他は場所がさがしたのですが、不明のため設定できず。squeakdbxに最近つながるようになって設定をみれましたw）
+http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX
+
+以下がコードです。
+connectionSettings := DBXConnectionSettings host: '127.0.0.1' port:
+'5432' database: 'dbname'  userName: 'user' userPassword: 'pass'.
+
+conn := DBXConnection platform: DBXPostgresPlatform new settings:
+connectionSettings.
+
+conn connect. <= エラー発生
+
+Error内容(全部のdumpをするにはどうしたらよいか不明です。。。）
+OpenDBXMacOSX(object)>>error:
+
+inspectでみるとconnでresultがnilなので、初期の設定等に問題があると思うのですが。。。
+他、情報の不足等があり、不明な点で切り分けができない等がありましたら、ご指摘頂ければ幸いです。
+
+以上、何卒よろしくお願い致します。
+また、今後学んでいくにあたり、どうしても自分で解決できない点がありましたら、お力沿え頂ければ幸いです。
+From mha03030 ＠ nifty.com  Thu Oct 29 09:07:32 2009
+From: mha03030 ＠ nifty.com (koike)
+Date: Thu Oct 29 09:07:36 2009
+Subject: [Squeak-ja: 4390] 日本語版SqueakとEtoyの違い
+In-Reply-To: <a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07@mail.gmail.com>
+References: <a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07@mail.gmail.com>
+Message-ID: <1B5AF83F-EC35-43ED-8B4B-9A84968B8B37@nifty.com>
+
+東京都市大学の小池です。
+
+今年、研究室で
+Squeakの教育指導者向けの中級のチュートリアルを作ろうとしています。
+
+小池研は高校生用のSqueakのチュートリアルを以前作りました。
+
+http://www.yc.tcu.ac.jp/~design/squeak/index.html
+
+
+中級のチュートリアルの対象ですが、
+日本のスクイークランドにある日本語版Squeak
+と
+Squeak.orgにあるEtoyのうち
+
+Etoyにしようと考えています。
+
+この２つの違いと、どちらを基準にチュートリアルを作ったらいいのか
+アドバイスをいただけたらと思います。
+
+よろしくお願いします。
+
+
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）Ph.D
+   東京都市大学（旧武蔵工業大学）　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.tcu.ac.jp/~koike/
+（研究室ブログ発信中！）
+武蔵工業大学は、2009年4月から東京都市大学に名称変 
+更しました。
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+
+From fumito.kondo ＠ dpsweb.co.jp  Thu Oct 29 11:38:51 2009
+From: fumito.kondo ＠ dpsweb.co.jp (kondo)
+Date: Thu Oct 29 11:38:55 2009
+Subject: [Squeak-ja: 4391] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <JxK_r_lGtmdgGFsYqYCVusrg4@mars.dti.ne.jp>
+Message-ID: <B6FBFCCC5E5D4E128EE785F3146FFA28@kondou01euz9md>
+
+梅澤さん、
+
+お世話になります。
+
+元日本HPの近藤です。（今は、早期退職して別の会社にいます）
+
+12月19日の名古屋の合同勉強会、補欠で申し込んでいたのですが、
+あいにく、この日に仕事が入ってしまいました。
+
+大変申し訳ありませんが、キャンセルさせてください。
+
+よろしくお願いいたします。
+
+
+
+近藤史人
+エグゼクティブ・コンサルタント
+株式会社ディー・ピー・エス
+090-6576-5867
+fumito.kondo@dpsweb.co.jp
+
+
+
+> -----Original Message-----
+> From: squeak-ja-bounces@smalltalk.jp
+> [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Masashi Umezawa
+> Sent: Friday, September 18, 2009 11:02 PM
+> To: Squeak discussion in Japanese
+> Subject: [Squeak-ja: 4347] Smalltalk合同勉強会@名古屋
+>
+>
+> こんにちは
+> 梅澤です。
+>
+> 12月19日(土)に「Smalltalk合同勉強会@名古屋」を開催することとなりました
+> 。
+> 東京と京都の勉強会の面々が名古屋に集結、という感じなのですが、もちろん
+> 日本や世界のどこから来ていただいてもかまいません。
+>
+> 今回は会場の都合もありますので、参加の方は下記で登録をお願いします。
+http://atnd.org/events/1593
+
+詳しい内容は今後つめていきます。いくつかのセミナーに加え、もしかしたら
+ハッカソンという感じです。アイデアありましたらどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From korakurider ＠ gmail.com  Thu Oct 29 13:12:30 2009
+From: korakurider ＠ gmail.com (Korakurider)
+Date: Thu Oct 29 13:12:34 2009
+Subject: [Squeak-ja: 4392] Re: 日本語版SqueakとEtoyの違い
+In-Reply-To: <1B5AF83F-EC35-43ED-8B4B-9A84968B8B37@nifty.com>
+References: <a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07@mail.gmail.com>
+	<1B5AF83F-EC35-43ED-8B4B-9A84968B8B37@nifty.com>
+Message-ID: <75eb0b0e0910282112i16ee7925jf25e607ff8c07b7e@mail.gmail.com>
+
+Korakuriderです、こんにちは。
+Etoys4の開発に細々とボランティア参加していました。
+
+2009/10/29 koike <mha03030@nifty.com>:
+> 東京都市大学の小池です。
+>
+> 今年、研究室で
+> Squeakの教育指導者向けの中級のチュートリアルを作ろうとしています。
+>
+> 小池研は高校生用のSqueakのチュートリアルを以前作りました。
+>
+> http://www.yc.tcu.ac.jp/~design/squeak/index.html
+>
+>
+> 中級のチュートリアルの対象ですが、
+> 日本のスクイークランドにある日本語版Squeak
+> と
+> Squeak.orgにあるEtoyのうち
+    Squeakland.org ですよね。（ここでは、こちらの方を本家と呼びますね）
+>
+> Etoyにしようと考えています。
+>
+> この２つの違いと、どちらを基準にチュートリアルを作ったらいいのか
+> アドバイスをいただけたらと思います。
+　　日本版スクイークランドにあるものは 本家で昔リリースしていた Squeakland2005
+　　と呼ばれるものに、若干の設定のカスタマイズやフォントなどの調整を加えたものです。
+
+　　その後、本家では OLPC対応版の開発が行われ、それが発展したものが現在本家で
+　　入手できる Etoys 4.0 と呼ばれるものです。ですから、現在の本家のものが後継バージョン
+　　ということになります。
+　　Etoys4は上位互換ということで開発されているので、古いバージョンのスクイークで作成した
+　　作品（プロジェクト）は、Etoys4で読み込めることになっています。ただ、逆はだめです。
+
+    Etoys4とSqueakland2005Jでは、細かいところがかなり変わっていますね。
+　　主なものは リリースノートで説明されています。
+　　 http://squeakland.org/news/newsletter/web.jsp?id=112#article7653
+
+　　画面下部のフラップから上部のツールバーへのUI変更とか、
+　　プロジェクトのロード・保存の画面、
+　　テストタイルや乱数タイルの出し方、　とかは普通のユーザにも目立つところです。
+
+　　ご存知かと思いますが、Squeakの開発はVPRIからSqueakland foundationに主体が移っていて、
+　　Etoys4はその新体制での最初のリリースで、全世界向けに、OLPCを含む全プラットフォーム
+　　用として出しています。改良された点もたくさんあります。逆に今後2005のメンテナンスが行われ
+　　ることは、自分で手を動かすとかでないと考えにくいと思います。
+
+　　ですから、作成されたコンテンツを海外やOLPCのユーザさんにも使ってもらおうとか、
+　　半年以上とかのレンジで今後に続くプロジェクトなのであれば、新しいのを使うのがよいと思います。
+　　使っていただいて、どしどしバグレポートを書いていただけるとうれしいです。
+
+　　ただ、なにせ出たところですから、まだ不都合もあるかもしれませんので、たとえば1ヶ月以内に
+　　ワークショップをするけど安全に進めたい、ということなら、Squeakland2005Jの方をお勧めし
+　　します。この古い枯れたバージョンを使うこと自体に、何も問題はないと思います。
+
+
+　　宮坂さんが開発されていた MTS版？（現在 http://d-mts.com/ で配布されています）は、
+　　本家の少し古いバージョン（Etoys3）に 、独自に日本向けの改良を加えられた
+　　ものです。Etoys4版はご検討中と聞きました。
+　　本家版だと、起動時にダイアログボックスで確認してフォントをロードしないといけないのですが、
+　　MTS版だと日本語フォントが最初からロードされて配布されているので、日本で一般に使うには
+　　MTS版のほうが使いやすいとは思います。
+
+　　海外ではSqueakland2005 の後  Etoys3というバージョンが出ていたのですが、
+　　日本では Squeakland2005 が出てから時間が止まっていました。宮坂さんのチームは新しい
+　　のをお使いだと思うのですが、古いバージョンを使われているところはまだまだ多いと思います。
+　　今Etoys3/4でコンテンツを作っても、そのバージョンを使っているところが
+　　日本にはまだ少ないという、過渡期の問題はあると思います。
+
+
+　　MTS版では、タイルや画面上の文言が一部修正されています。そのままだと、
+　　どちらのバージョンを使うかによっては、作られたチュートリアルと細かい違いが出る恐れがあります。
+　　この問題については、本家の日本語翻訳をMTS版にあわせることも含めて、宮坂さんと相談
+　　しているところでした（まだあまり進んでいませんが）。小池さんのところでも、「この翻訳はちょっと。。。」というような箇所を見つけられましたら、ご意見頂戴いただければ幸いです。
+
+/Korakurider
+From umejava ＠ mars.dti.ne.jp  Fri Oct 30 00:09:21 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Oct 30 00:09:24 2009
+Subject: [Squeak-ja: 4393] Re: SqueakDBXの導入について
+In-Reply-To: <a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07@mail.gmail.com>
+References: <a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07@mail.gmail.com>
+Message-ID: <Jx4e249193M2iVKKa4IaNvdAb@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+発生しているエラーについてですが、SqueakDebug.logというファイルが書かれて
+いるはずですので、まずはそれを添付してもらうとよいのではないでしょうか。
+
+もしくはDebugReportをインストールしておくと、さらに詳しい情報をダンプ
+できますのでお勧めです。(MLに送るにはちょっと大きすぎるかもしれませんが)
+http://squeaksource.blueplane.jp/DebugReport.html
+http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt
+
+SqueakDBXですが、日本語環境ではわたしも試したことがありませんので、果たして
+うまくつながるのか、非常に興味があります。
+
+daisuke yamashita <y.daisuke.homeaddres@gmail.com> wrote:
+> 初めまして。
+> 
+> ヤマシタと申します。
+> 
+> 最近、squeakを始めました、初心者です。
+> その中で、SqueakDBXを使用してDB(Postgres)操作をしたいと思っています。
+> すでにOpenDBXは導入しているのですが、DBにconnectしようとすると、エラーが発生します。
+> なんとか解決しようと試みましたが解決できず、お力をお貸し頂ければと思い投稿致しました。
+> 
+> 環境：MacOSX 10.6.1
+> DB; PostgreSQL 8.4.1 ソースコンパイル（configureオプションなし)
+> 使用Squeak:  SeasideJOne-090425-plusDB
+> 他: pgAdminで接続できるのは確認済み。 PostgresはPostmasterによるDaemon起動 -i　オプション付き
+> 
+> OpenDBXの導入手順は以下に記載しました。
+> http://d.hatena.ne.jp/dai_yamashita/20091015/1255617048
+> 
+> 他、以下に記載されているMacでのVW内にシンボリックリンクは設定。
+> （他は場所がさがしたのですが、不明のため設定できず。squeakdbxに最近つながるようになって設定をみれましたw）
+> http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX
+> 
+> 以下がコードです。
+> connectionSettings := DBXConnectionSettings host: '127.0.0.1' port:
+> '5432' database: 'dbname'  userName: 'user' userPassword: 'pass'.
+> 
+> conn := DBXConnection platform: DBXPostgresPlatform new settings:
+> connectionSettings.
+> 
+> conn connect. <= エラー発生
+> 
+> Error内容(全部のdumpをするにはどうしたらよいか不明です。。。）
+> OpenDBXMacOSX(object)>>error:
+> 
+> inspectでみるとconnでresultがnilなので、初期の設定等に問題があると思うのですが。。。
+> 他、情報の不足等があり、不明な点で切り分けができない等がありましたら、ご指摘頂ければ幸いです。
+> 
+> 以上、何卒よろしくお願い致します。
+> また、今後学んでいくにあたり、どうしても自分で解決できない点がありましたら、お力沿え頂ければ幸いです。
+
+
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Fri Oct 30 00:12:29 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Oct 30 00:12:32 2009
+Subject: [Squeak-ja: 4394] Re: Smalltalk合同勉強会@名古屋
+In-Reply-To: <B6FBFCCC5E5D4E128EE785F3146FFA28@kondou01euz9md>
+References: <B6FBFCCC5E5D4E128EE785F3146FFA28@kondou01euz9md>
+Message-ID: <JxWcoVoWgX20IaqCIlrsTl2wd@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+了解いたしました。今回は残念ですが、きっと来年に第2回合同勉強会もあるのでは
+ないかと思っております。
+
+またの機会によろしくお願い申し上げます。
+
+kondo <fumito.kondo@dpsweb.co.jp> wrote:
+> 梅澤さん、
+> 
+> お世話になります。
+> 
+> 元日本HPの近藤です。（今は、早期退職して別の会社にいます）
+> 
+> 12月19日の名古屋の合同勉強会、補欠で申し込んでいたのですが、
+> あいにく、この日に仕事が入ってしまいました。
+> 
+> 大変申し訳ありませんが、キャンセルさせてください。
+> 
+> よろしくお願いいたします。
+> 
+> 
+> 
+> 近藤史人
+> エグゼクティブ・コンサルタント
+> 株式会社ディー・ピー・エス
+> 090-6576-5867
+> fumito.kondo@dpsweb.co.jp
+> 
+> 
+> 
+> > -----Original Message-----
+> > From: squeak-ja-bounces@smalltalk.jp
+> > [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Masashi Umezawa
+> > Sent: Friday, September 18, 2009 11:02 PM
+> > To: Squeak discussion in Japanese
+> > Subject: [Squeak-ja: 4347] Smalltalk合同勉強会@名古屋
+> >
+> >
+> > こんにちは
+> > 梅澤です。
+> >
+> > 12月19日(土)に「Smalltalk合同勉強会@名古屋」を開催することとなりました
+> > 。
+> > 東京と京都の勉強会の面々が名古屋に集結、という感じなのですが、もちろん
+> > 日本や世界のどこから来ていただいてもかまいません。
+> >
+> > 今回は会場の都合もありますので、参加の方は下記で登録をお願いします。
+> http://atnd.org/events/1593
+> 
+> 詳しい内容は今後つめていきます。いくつかのセミナーに加え、もしかしたら
+> ハッカソンという感じです。アイデアありましたらどうぞ。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+
+
+---
+[:masashi | ^umezawa]
+From mha03030 ＠ nifty.com  Fri Oct 30 00:29:27 2009
+From: mha03030 ＠ nifty.com (koike)
+Date: Fri Oct 30 00:29:32 2009
+Subject: [Squeak-ja: 4395] Re: 日本語版SqueakとEtoyの違い
+In-Reply-To: <75eb0b0e0910282112i16ee7925jf25e607ff8c07b7e@mail.gmail.com>
+References: <a49cf92a0910280943p16604fdet3dc0fb5dd6db6d07@mail.gmail.com>
+	<1B5AF83F-EC35-43ED-8B4B-9A84968B8B37@nifty.com>
+	<75eb0b0e0910282112i16ee7925jf25e607ff8c07b7e@mail.gmail.com>
+Message-ID: <950F5F67-05FB-4F21-982E-D9EDC20DA1A4@nifty.com>
+
+Korakurider 様
+
+東京都市大学の小池です。
+はじめまして。
+
+アドバイスありがとうございます。
+
+将来のことを考え
+
+Etoys 4.0をベースに
+チュートリアルを作っていきます。
+
+学生３人と作業しています。
+
+Korakurideたちが翻訳されているものについては
+チュートリアルを作る過程において
+見せていただくことがあるかと思います。
+
+今後ともよろしくお願いします。
+
+
+
+
+
+
+
+On 2009/10/29, at 13:12, Korakurider wrote:
+
+> Korakuriderです、こんにちは。
+> Etoys4の開発に細々とボランティア参加していました。
+>
+> 2009/10/29 koike <mha03030@nifty.com>:
+>> 東京都市大学の小池です。
+>>
+>> 今年、研究室で
+>> Squeakの教育指導者向けの中級のチュートリアルを作ろうとして 
+>> います。
+>>
+>> 小池研は高校生用のSqueakのチュートリアルを以前作りま 
+>> した。
+>>
+>> http://www.yc.tcu.ac.jp/~design/squeak/index.html
+>>
+>>
+>> 中級のチュートリアルの対象ですが、
+>> 日本のスクイークランドにある日本語版Squeak
+>> と
+>> Squeak.orgにあるEtoyのうち
+>    Squeakland.org ですよね。（ここでは、こちらの方を本家と 
+> 呼びますね）
+>>
+>> Etoyにしようと考えています。
+>>
+>> この２つの違いと、どちらを基準にチュートリアルを作ったらい 
+>> いのか
+>> アドバイスをいただけたらと思います。
+> 　　日本版スクイークランドにあるものは 本家で昔リリー 
+> スしていた Squeakland2005
+> 　　と呼ばれるものに、若干の設定のカスタマイズやフォントな 
+> どの調整を加えたものです。
+>
+> 　　その後、本家では OLPC対応版の開発が行われ、それが 
+> 発展したものが現在本家で
+> 　　入手できる Etoys 4.0 と呼ばれるものです。ですか 
+> ら、現在の本家のものが後継バージョン
+> 　　ということになります。
+> 　　Etoys4は上位互換ということで開発されているので、 
+> 古いバージョンのスクイークで作成した
+> 　　作品（プロジェクト）は、Etoys4で読み込めることに 
+> なっています。ただ、逆はだめです。
+>
+>    Etoys4とSqueakland2005Jでは、細かいところがかなり 
+> 変わっていますね。
+> 　　主なものは リリースノートで説明されています。
+> 　　 http://squeakland.org/news/newsletter/web.jsp? 
+> id=112#article7653
+>
+> 　　画面下部のフラップから上部のツールバーへのUI変更とか、
+> 　　プロジェクトのロード・保存の画面、
+> 　　テストタイルや乱数タイルの出し方、　とかは普通のユーザ 
+> にも目立つところです。
+>
+> 　　ご存知かと思いますが、Squeakの開発はVPRIから 
+> Squeakland foundationに主体が移っていて、
+> 　　Etoys4はその新体制での最初のリリースで、全世界向け 
+> に、OLPCを含む全プラットフォーム
+> 　　用として出しています。改良された点もたくさんあります。 
+> 逆に今後2005のメンテナンスが行われ
+> 　　ることは、自分で手を動かすとかでないと考えにくいと思います。
+>
+> 　　ですから、作成されたコンテンツを海外やOLPCのユー 
+> ザさんにも使ってもらおうとか、
+> 　　半年以上とかのレンジで今後に続くプロジェクトなのであれ 
+> ば、新しいのを使うのがよいと思います。
+> 　　使っていただいて、どしどしバグレポートを書いていただけ 
+> るとうれしいです。
+>
+> 　　ただ、なにせ出たところですから、まだ不都合もあるかもし 
+> れませんので、たとえば1ヶ月以内に
+> 　　ワークショップをするけど安全に進めたい、ということな 
+> ら、Squeakland2005Jの方をお勧めし
+> 　　します。この古い枯れたバージョンを使うこと自体に、何も 
+> 問題はないと思います。
+>
+>
+> 　　宮坂さんが開発されていた MTS版？（現在 http://d- 
+> mts.com/ で配布されています）は、
+> 　　本家の少し古いバージョン（Etoys3）に 、独自 
+> に日本向けの改良を加えられた
+> 　　ものです。Etoys4版はご検討中と聞きました。
+> 　　本家版だと、起動時にダイアログボックスで確認してフォン 
+> トをロードしないといけないのですが、
+> 　　MTS版だと日本語フォントが最初からロードされて配布 
+> されているので、日本で一般に使うには
+> 　　MTS版のほうが使いやすいとは思います。
+>
+> 　　海外ではSqueakland2005 の後  Etoys3という 
+> バージョンが出ていたのですが、
+> 　　日本では Squeakland2005 が出てから時間が止まって 
+> いました。宮坂さんのチームは新しい
+> 　　のをお使いだと思うのですが、古いバージョンを使われてい 
+> るところはまだまだ多いと思います。
+> 　　今Etoys3/4でコンテンツを作っても、そのバージョン 
+> を使っているところが
+> 　　日本にはまだ少ないという、過渡期の問題はあると思います。
+>
+>
+> 　　MTS版では、タイルや画面上の文言が一部修正されてい 
+> ます。そのままだと、
+> 　　どちらのバージョンを使うかによっては、作られたチュート 
+> リアルと細かい違いが出る恐れがあります。
+> 　　この問題については、本家の日本語翻訳をMTS版にあわ 
+> せることも含めて、宮坂さんと相談
+> 　　しているところでした（まだあまり進んでいませんが）。小 
+> 池さんのところでも、「この翻訳はちょっと。。。」というよう 
+> な箇所を見つけられましたら、ご意見頂戴いただければ幸いです。
+>
+> /Korakurider
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）Ph.D
+   東京都市大学（旧武蔵工業大学）　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.tcu.ac.jp/~koike/
+（研究室ブログ発信中！）
+武蔵工業大学は、2009年4月から東京都市大学に名称変 
+更しました。
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+
+From ykoubo2008 ＠ yengawa.com  Fri Oct 30 12:30:37 2009
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Fri Oct 30 12:30:49 2009
+Subject: [Squeak-ja: 4396] Re: Squeakland.orgについて
+In-Reply-To: <4b24f0d0910270815m5463a52fpe92b52db1915c735@mail.gmail.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4ADBBF31.4090002@yengawa.com>
+	<ueip0p0zj.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com>
+	<uy6mx91ot.wl%yoshiki@vpri.org>	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com>
+	<4AE66A4A.4030501@yengawa.com>	<2d5d52a80910262054x2d692365v108e59417c738d46@mail.gmail.com>
+	<4b24f0d0910270815m5463a52fpe92b52db1915c735@mail.gmail.com>
+Message-ID: <4AEA5DDD.6030405@yengawa.com>
+
+横川です。
+
+- ウェブサイトの"Etoys"の対訳について
+今回はスクイークランド(Squeakland.org)の翻訳であるし、まだ(?)Squeak以外
+でEtoysが実装されていないのだから"Etoys"とだけ書いてあるところを「スク
+イーク・イートイズ」と読んでも問題ないと思います。
+
+具体的には最初のページの"Etoys is ..."を
+「スクイーク・イートイズとは...」
+にするということになります。
+
+また別の案ですが、Etoysは英文字のママがいいですか?
+「スクイークEtoysとは...」
+馴染みやすさではカタカナが上ですが、迷うところですよね。
+
+
+- 「強力なアイデア」
+パパートにつながることがわかりやすいというのはいいですね。
+これにしときます。
+
+- 「対象年齢」
+>>> squeakland.showcase.age=対象年れい>Target Age
+
+これはもともと「齢」が小学生には難しいかもしれないので、こうしてました。
+Etoys4の現状にあわせます。
+
+
+Toshio Miyasaka wrote 09.10.28 0:15 AM:
+> 横川さん
+> 
+> こんばんは。デジハリの宮坂です。
+> Squeakland.orgの翻訳の件、ありがとうございます。
+> できれば私も手をあげようかと思っていたのですが、時間的な制約もあり迷っていたところでした。
+> 日本語化が進んで、スクイークランドがさらに盛り上がってきたらうれしいですね。
+> Etoys本体やSqueakland.orgの日本語対応が進んできたら、私たちがやっている「http://d-mts.com/」は役目を終えることになりますが、それはそれでいいことだと思うので、どうかよろしくお願いします。
+> 
+> さて、Etoysの呼び方について１点ご相談です。
+> 阿部さんのメールにもあるとおりなんらかの形で「スクイーク」という呼称を残すことはできないでしょうか？
+> 
+> 「Etoys」で統一したいという開発者の方々の想いはとてもよくわかるのですが、その半面、教育の現場でやっと「スクイーク」という呼称が定着してきたのに、ちょっと（というかすごく）残念、という気持ちもあります。
+> おそらく、現場でEtoysを教えている人のなかには、同じように「スクイーク」という名前を残してほしいと思っている人も少なくないのではないでしょうか。
+> 
+> そういった意味で「スクイークEtoys」のような呼称は、「Windows
+> XP/Vista/7」のように、スクイークであることもわかり、Etoysという呼称でもあることも表現できているので、悪くはないと思うのですが。
+> （Squeakland.orgのロゴには「Squeak Etoys」という名称が表示されていることですし）
+> 
+> ということで、可能な範囲でご検討いただければ幸いです。
+> いろいろな意見があり、調整もたいへんだと思いますが、どうかよろしくお願いいたします。
+> 
+> 宮坂
+> 
+> 
+> 2009年10月27日12:54 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+>> こんにちは、阿部です。
+>> Etoysについてですが、「みんなでたのしくスクイーク」のサイトでは、「スクイークEtoys」と呼んでいますね。
+>> http://d-mts.com/
+>> スクイークのネームバリューを生かしつつ、その新しいバージョンとしてのEtoysに移行したいという意味合いだと思います。
+>> あと、powerful ideaはマインドストームでは、ずばり「強力なアイデア」ですね。
+>> http://www.miraisha.co.jp/np/isbn/9784624400439
+>>
+>>  //abee
+>> --
+>> 阿部 和広  EMAIL abee@squeakland.jp
+>>
+>> 2009年10月27日12:34 Koji Yokokawa <ykoubo2008@yengawa.com>:
+>>> 横川です。
+>>>
+>>>
+>>> Korakurider wrote 09.10.27 8:54 AM:
+>>>> Korakuriderです。
+>>>>
+>>>> 2009/10/27 Yoshiki Ohshima <yoshiki@vpri.org>:
+>>>>> At Mon, 26 Oct 2009 22:50:25 +0900,
+>>>>> Koji Yokokawa wrote:
+>>>>>> 横川です。
+>>>>>>
+>>>>>> Squeakland.orgの翻訳で、やはり迷うところが出ています。
+>>>>>> より良い訳があればご教示ください。
+>>>>>>
+>>>>>> まずは一番重要なことから...
+>>>>>> Etoysの日本語名を「イートイ」にしました。
+>>>>>  思うにイートイズとズがついているほうが流行っていればよかったようにも
+>>>>> 思うのですが、イートイも使われてはいましたね。スクイークと訳す手もある
+>>>>> ようには思いますが。
+>>> 前例にならって「ズ」を抜いたのですが、固有名詞なんだからなるべく発音を近
+>>> づけるのが良いですね。(Beatlesが「ビートル」じゃおかしいしw)
+>>> 「イートイズ」にしようと思います。
+>>>
+>>> 元はSqueakだったし、「スクイーク」という呼び名は日本でだいぶ馴染んできた
+>>> のでもったいないのですが、これからは海外の友達と話すときに「スクイーク」
+>>> では通じなくなりますからやめましょう。
+>>>
+>>>>>> squeakland.nav.discuss=話題>discuss
+>>>>>> (「議論」ではカタいので)
+>>>>>  意訳がありなら「意見交換」というのもあるかもしれませんね。
+>>>> カタイ路線だと、他には「会議室」とかですかね。
+>>> discussの中に「フォーラム>forums」や「チャット>chat」などへのリンクが
+>>> あったので、広く「意見交換」というのも良さそう。
+>>> でも「話題」も短くて捨てがたい。
+>>>
+>>>>>> squeakland.nav.tracker=トラッカー>tracker
+>>>>>> (issue trackingのシステムです。現在のリンク先は英語なので英文字でもいい
+>>>>>> かな?)
+>>>>>  カタカナでも良いのではないでしょうか。英語圏の人でも、squeakland.org
+>>>>> に行くような一般的な人は"tracker"が何を意味するのかはわからないでしょ
+>>>>> うね。
+>>>> カタカナでよいなら「バグトラッカー」のほうがよいと感じます。
+>>> 「バグトラッカー」は内容がわかっていいですね。これにします。
+>>>
+>>>>>> squeakland.nav.wiki=ウィキ>wiki
+>>>>>> (英文字のままの方がしっくりくるけど、ウィキペディアがあるのでカタカナに
+>>>>>> してみました)
+>>>>>>
+>>>>>> squeakland.home.etoysIs1= 子どもたちにパワフルなアイデアを魅力的に教える
+>>>>>> 教育の道具です。>an educational tool for teaching children powerful
+>>>>>> ideas in compelling ways
+>>>>>> (最初のページの初っぱなの重要な文句です。Powerful Idea本ではどんな訳でし
+>>>>>> たっけ?)
+>>>>>  「パワフルな考え方」だったような気もしますが、「パワフルなアイディア」
+>>>>> でも良いのではないでしょうか。
+>>> では「パワフルなアイデア」のままいきますか。
+>>> ちなみに、「アイデア」ではなくて「アイディア」だという指摘ではないですよね?
+>>>
+>>>>>> squeakland.showcase.subject=テーマ>Subject
+>>>>>> (ショーケースの作品プロパティでScienceとかMathmaticsとかを選ぶのですが、
+>>>>>> 教科とするとカタいので)
+>>>>>  科目が無難ではないでしょうか。
+>>>> Etoys側の保存画面での入力に対応した属性ですから、Etoysをリリースする
+>>>> 前にこの訳語を議論するべきでしたね。。。 （後悔）
+>>>> Etoys側は現在「主題」になっています。
+>>>> 選択肢にLanguage Artsとかがありますから、科目もピンと来ない気がしたので主題を選びました。
+>>> これはEtoysにあわせて「主題」にしましょう。
+>>>
+>>> プロジェクトのプロパティは以下のようにしました。
+>>> これらはEtoys4以前のバージョンで作られたプロジェクトを手動でアップロード
+>>> するときのFormパラメータの説明に使われています。
+>>>
+>>> squeakland.showcase.screenshot=画面の画像>Screenshot
+>>> squeakland.showcase.author=作者>Author
+>>> squeakland.showcase.description=説明>Description
+>>> squeakland.showcase.tags=タグ>Tags
+>>> squeakland.showcase.subject=主題>Subject
+>>> squeakland.showcase.age=対象年れい>Target Age
+>>> squeakland.showcase.region=地域>Region
+>>>
+>>>
+>>> --
+>>> -- !
+>>> Koji Yokokawa ykoubo2008@yengawa.com>
+>>>    http://www.yengawa.com/
+>>>    ^self new!
+>>>
+>>>
+> 
+
+-- 
+-- !
+Koji Yokokawa ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From yoshiki ＠ vpri.org  Fri Oct 30 18:10:49 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Oct 30 18:11:03 2009
+Subject: [Squeak-ja: 4397] Re: Squeakland.orgについて
+In-Reply-To: <4AEA5DDD.6030405@yengawa.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4ADBBF31.4090002@yengawa.com>
+	<ueip0p0zj.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com>
+	<uy6mx91ot.wl%yoshiki@vpri.org>
+	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com>
+	<4AE66A4A.4030501@yengawa.com>
+	<2d5d52a80910262054x2d692365v108e59417c738d46@mail.gmail.com>
+	<4b24f0d0910270815m5463a52fpe92b52db1915c735@mail.gmail.com>
+	<4AEA5DDD.6030405@yengawa.com>
+Message-ID: <u4oph2qna.wl%yoshiki@vpri.org>
+
+At Fri, 30 Oct 2009 12:30:37 +0900,
+Koji Yokokawa wrote:
+> 
+> また別の案ですが、Etoysは英文字のママがいいですか?
+> 「スクイークEtoysとは...」
+> 馴染みやすさではカタカナが上ですが、迷うところですよね。
+
+  おそらくはカタカナが無難でしょうね。
+
+  横川さんの忙しいところ本当にありがとうございます。
+
+-- Yoshiki
+From abee.abe ＠ nifty.ne.jp  Fri Oct 30 19:43:56 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Oct 30 19:44:20 2009
+Subject: [Squeak-ja: 4398] Re: Squeakland.orgについて
+In-Reply-To: <u4oph2qna.wl%yoshiki@vpri.org>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <ueip0p0zj.wl%yoshiki@vpri.org> 
+	<4AE5A921.9090802@yengawa.com> <uy6mx91ot.wl%yoshiki@vpri.org> 
+	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com> 
+	<4AE66A4A.4030501@yengawa.com>
+	<2d5d52a80910262054x2d692365v108e59417c738d46@mail.gmail.com> 
+	<4b24f0d0910270815m5463a52fpe92b52db1915c735@mail.gmail.com> 
+	<4AEA5DDD.6030405@yengawa.com> <u4oph2qna.wl%yoshiki@vpri.org>
+Message-ID: <2d5d52a80910300343o273a25b6k62910e356421df44@mail.gmail.com>
+
+こんにちは、阿部です。
+Etoysについて、Etoys 4のインストーラやインストール後のシステムにおいて、日本語に訳されず「Etoys」となっています。
+読み方をはっきりさせる意味で、どこかで「Etoys(イートイズ)」のように書いておくのも良いかもしれません。
+もちろん、本体の方を「イートイズ」に統一するという案もありだと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009年10月30日18:10 Yoshiki Ohshima <yoshiki@vpri.org>:
+> At Fri, 30 Oct 2009 12:30:37 +0900,
+> Koji Yokokawa wrote:
+>>
+>> また別の案ですが、Etoysは英文字のママがいいですか?
+>> 「スクイークEtoysとは...」
+>> 馴染みやすさではカタカナが上ですが、迷うところですよね。
+>
+>  おそらくはカタカナが無難でしょうね。
+>
+>  横川さんの忙しいところ本当にありがとうございます。
+>
+> -- Yoshiki
+>
+From miyasaka ＠ iris.dti.ne.jp  Fri Oct 30 22:45:34 2009
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Fri Oct 30 22:45:58 2009
+Subject: [Squeak-ja: 4399] Re: Squeakland.orgについて
+In-Reply-To: <2d5d52a80910300343o273a25b6k62910e356421df44@mail.gmail.com>
+References: <uvdieov4n.wl%yoshiki@vpri.org> <4AE5A921.9090802@yengawa.com> 
+	<uy6mx91ot.wl%yoshiki@vpri.org>
+	<75eb0b0e0910261654g23b1e939wecbf21dc91ef15c4@mail.gmail.com> 
+	<4AE66A4A.4030501@yengawa.com>
+	<2d5d52a80910262054x2d692365v108e59417c738d46@mail.gmail.com> 
+	<4b24f0d0910270815m5463a52fpe92b52db1915c735@mail.gmail.com> 
+	<4AEA5DDD.6030405@yengawa.com> <u4oph2qna.wl%yoshiki@vpri.org> 
+	<2d5d52a80910300343o273a25b6k62910e356421df44@mail.gmail.com>
+Message-ID: <4b24f0d0910300645w3b6bce65qda9874a71ca87488@mail.gmail.com>
+
+横川さん
+
+ご検討ありがとうございました！
+「スクイーク」の呼称を残していただけるのは本当にうれしいです。
+英字でもカタカタでも、あとはお任せしますので、よろしくお願いいたします。
+（本当にうれしいですことです。ありがとうございました！！）
+
+ご参考までに、私も「d-mts.com」を作ったときに、下記のいずれかの表記にするかで迷いました。
+「スクイーク・イートイズ」（読みやすい表記。強いて難点があるとするとちょっと文字数が多いこと？）
+「スクイークEtoys」（多少短くはなるが確かに読みやすさには難ありかも。Etoys.exe/Etoys.imageとの関連はわかりやすいかも）
+「Squeak Etoys」（海外のOSやアプリはオフィシャルサイトではだいたい英字表記。確かに読み方は最初に書いておく必要あるかも）
+
+そのときは、なんとなく「スクイークEtoys」がいいかなと思ったのですが、それほど深い意図があったわけではありません
+あとは決めの問題だと思いますので、どうかよろしくお願いいたします！！
+
+宮坂
+
+
+
+
+2009年10月30日19:43 Kazuhiro ABE <abee.abe@nifty.ne.jp>:
+> こんにちは、阿部です。
+> Etoysについて、Etoys 4のインストーラやインストール後のシステムにおいて、日本語に訳されず「Etoys」となっています。
+> 読み方をはっきりさせる意味で、どこかで「Etoys(イートイズ)」のように書いておくのも良いかもしれません。
+> もちろん、本体の方を「イートイズ」に統一するという案もありだと思います。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+> 2009年10月30日18:10 Yoshiki Ohshima <yoshiki@vpri.org>:
+>> At Fri, 30 Oct 2009 12:30:37 +0900,
+>> Koji Yokokawa wrote:
+>>>
+>>> また別の案ですが、Etoysは英文字のママがいいですか?
+>>> 「スクイークEtoysとは...」
+>>> 馴染みやすさではカタカナが上ですが、迷うところですよね。
+>>
+>>  おそらくはカタカナが無難でしょうね。
+>>
+>>  横川さんの忙しいところ本当にありがとうございます。
+>>
+>> -- Yoshiki
+>>
+>
+From y.daisuke.homeaddres ＠ gmail.com  Sat Oct 31 01:53:12 2009
+From: y.daisuke.homeaddres ＠ gmail.com (daisuke yamashita)
+Date: Sat Oct 31 01:53:17 2009
+Subject: [Squeak-ja: 4400] Re: SqueakDBXの導入について (Masashi Umezawa)
+Message-ID: <a49cf92a0910300953t796e9a9dha3dcb9355d21328c@mail.gmail.com>
+
+梅澤さん
+
+エラーログの取得についてのご指示ありがとうございます。
+
+DebugReportの導入を今から実施をしようと思っています。
+
+先にDebug.logの内容を記載させて頂きます。
+何となく、postgres関係の設定のような気もしていますが、
+localhostはすべてtrustなので、問題ないと思っているのですが。。。
+
+以下、デバッグ内容です。
+他、ご指示を頂ければ幸いです。
+
+================================================
+Error: Unable to find function address
+29 October 2009 1:31:13 am
+
+VM: Mac OS - a SmalltalkImage
+Image: Squeak3.9 [latest update: #7067]
+
+SecurityManager state:
+Restricted: false
+FileAccess: true
+SocketAccess: true
+Working Dir /Users/daisuke/Develop/SeasideJOne-090425-plusDB/image
+Trusted Dir /foobar/tooBar/forSqueak/bogus
+Untrusted Dir /Users/daisuke/Library/Preferences/Squeak/Internet/My Squeak
+
+OpenDBXMacOSX(Object)>>error:
+	Receiver: an OpenDBXMacOSX
+	Arguments and temporary variables:
+		aString: 	'Unable to find function address'
+	Receiver's instance variables:
+an OpenDBXMacOSX
+
+OpenDBXMacOSX(Object)>>externalCallFailed
+	Receiver: an OpenDBXMacOSX
+	Arguments and temporary variables:
+		errCode: 	13
+	Receiver's instance variables:
+an OpenDBXMacOSX
+
+OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+	Receiver: an OpenDBXMacOSX
+	Arguments and temporary variables:
+		handle: 	a WordArray(0)
+		backend: 	'pgsql'
+		host: 	'127.0.0.1'
+		port: 	'5432'
+	Receiver's instance variables:
+an OpenDBXMacOSX
+
+DBXPostgresPlatform(DBXPlatform)>>createConnection:
+	Receiver: a DBXPostgresPlatform
+	Arguments and temporary variables:
+		aConnection: 	a DBXConnection
+		err: 	nil
+		handleArray: 	a WordArray(0)
+		handle: 	nil
+	Receiver's instance variables:
+a DBXPostgresPlatform
+
+
+--- The full stack ---
+OpenDBXMacOSX(Object)>>error:
+OpenDBXMacOSX(Object)>>externalCallFailed
+OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+DBXPostgresPlatform(DBXPlatform)>>createConnection:
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+DBXConnection>>connect
+UndefinedObject>>DoIt
+Compiler>>evaluate:in:to:notifying:ifFail:logged:
+[] in TextMorphEditor(ParagraphEditor)>>evaluateSelection {[rcvr class
+evaluatorClass new   evaluate: self selectionAsStream   in: ctxt...]}
+BlockContext>>on:do:
+TextMorphEditor(ParagraphEditor)>>evaluateSelection
+TextMorphEditor(ParagraphEditor)>>doIt
+[] in TextMorphEditor(ParagraphEditor)>>doIt: {[self doIt]}
+TextMorphEditor(Controller)>>terminateAndInitializeAround:
+TextMorphEditor(ParagraphEditor)>>doIt:
+TextMorphEditor(ParagraphEditor)>>dispatchOnCharacter:with:
+TextMorphEditor>>dispatchOnCharacter:with:
+TextMorphEditor(ParagraphEditor)>>readKeyboard
+TextMorphEditor>>readKeyboard
+[] in TextMorphForEditView(TextMorph)>>keyStroke: {[editor readKeyboard]}
+TextMorphForEditView(TextMorph)>>handleInteraction:fromEvent:
+TextMorphForEditView>>handleInteraction:fromEvent:
+TextMorphForEditView(TextMorph)>>keyStroke:
+TextMorphForEditView>>keyStroke:
+TextMorphForEditView(TextMorph)>>handleKeystroke:
+KeyboardEvent>>sentTo:
+TextMorphForEditView(Morph)>>handleEvent:
+TextMorphForEditView(Morph)>>handleFocusEvent:
+[] in HandMorph>>sendFocusEvent:to:clear: {[ActiveHand := self.
+ActiveEvent := anEvent.  result := focusHolder     han...]}
+[] in PasteUpMorph>>becomeActiveDuring: {[aBlock value]}
+BlockContext>>on:do:
+PasteUpMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendKeyboardEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[] in WorldState>>doOneCycleNowFor: {[:h |  ActiveHand := h.  h
+processEvents.  capturingGesture := capturingGest...]}
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+PasteUpMorph>>doOneCycle
+[] in Project class>>spawnNewProcess {[[World doOneCycle.  Processor
+yield.  false] whileFalse.  nil]}
+[] in BlockContext>>newProcess {[self value.  Processor terminateActive]}
+
+============
+
+
+> こんにちは
+> 梅澤です。
+>
+> 発生しているエラーについてですが、SqueakDebug.logというファイルが書かれて
+> いるはずですので、まずはそれを添付してもらうとよいのではないでしょうか。
+>
+> もしくはDebugReportをインストールしておくと、さらに詳しい情報をダンプ
+> できますのでお勧めです。(MLに送るにはちょっと大きすぎるかもしれませんが)
+> http://squeaksource.blueplane.jp/DebugReport.html
+> http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt
+>
+> SqueakDBXですが、日本語環境ではわたしも試したことがありませんので、果たして
+> うまくつながるのか、非常に興味があります。
+From y.daisuke.homeaddres ＠ gmail.com  Sat Oct 31 18:28:11 2009
+From: y.daisuke.homeaddres ＠ gmail.com (daisuke yamashita)
+Date: Sat Oct 31 18:28:18 2009
+Subject: [Squeak-ja: 4401] Re: SqueakDBXの導入について
+Message-ID: <a49cf92a0910310228j2d940ffes86a51614fb12e5b4@mail.gmail.com>
+
+ヤマシタです。
+
+申し訳ありません。
+タイトルに余分なものが入った状態で、送ってしまいました。。。
+以後、気をつけます。
+
+さて、DebugReportの導入を実施してログを取得しました。
+容量が大きいのですが、872KB程度あるのですが、皆様はどういう形でアップなり
+情報を提供されていますでしょうか？
+
+記録としてのこすならMLに配布がよいと思いますが、サーバにご迷惑をおかけしますし、
+他のファイルアップローダ等だと後日なくなってしまう可能性がありますので、
+どうしたらよいものかと思っております。
+
+何か、良い方法がありましたら、ご教授頂けると幸いです。
+
+以上、よろしくお願い致します。
+
+OLD Message=====================================================
+
+梅澤さん
+
+エラーログの取得についてのご指示ありがとうございます。
+
+DebugReportの導入を今から実施をしようと思っています。
+
+先にDebug.logの内容を記載させて頂きます。
+何となく、postgres関係の設定のような気もしていますが、
+localhostはすべてtrustなので、問題ないと思っているのですが。。。
+
+以下、デバッグ内容です。
+他、ご指示を頂ければ幸いです。
+
+================================================
+Error: Unable to find function address
+29 October 2009 1:31:13 am
+
+VM: Mac OS - a SmalltalkImage
+Image: Squeak3.9 [latest update: #7067]
+
+SecurityManager state:
+Restricted: false
+FileAccess: true
+SocketAccess: true
+Working Dir /Users/daisuke/Develop/SeasideJOne-090425-plusDB/image
+Trusted Dir /foobar/tooBar/forSqueak/bogus
+Untrusted Dir /Users/daisuke/Library/Preferences/Squeak/Internet/My Squeak
+
+OpenDBXMacOSX(Object)>>error:
+       Receiver: an OpenDBXMacOSX
+       Arguments and temporary variables:
+               aString:        'Unable to find function address'
+       Receiver's instance variables:
+an OpenDBXMacOSX
+
+OpenDBXMacOSX(Object)>>externalCallFailed
+       Receiver: an OpenDBXMacOSX
+       Arguments and temporary variables:
+               errCode:        13
+       Receiver's instance variables:
+an OpenDBXMacOSX
+
+OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+       Receiver: an OpenDBXMacOSX
+       Arguments and temporary variables:
+               handle:         a WordArray(0)
+               backend:        'pgsql'
+               host:   '127.0.0.1'
+               port:   '5432'
+       Receiver's instance variables:
+an OpenDBXMacOSX
+
+DBXPostgresPlatform(DBXPlatform)>>createConnection:
+       Receiver: a DBXPostgresPlatform
+       Arguments and temporary variables:
+               aConnection:    a DBXConnection
+               err:    nil
+               handleArray:    a WordArray(0)
+               handle:         nil
+       Receiver's instance variables:
+a DBXPostgresPlatform
+
+
+--- The full stack ---
+OpenDBXMacOSX(Object)>>error:
+OpenDBXMacOSX(Object)>>externalCallFailed
+OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+DBXPostgresPlatform(DBXPlatform)>>createConnection:
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+DBXConnection>>connect
+UndefinedObject>>DoIt
+Compiler>>evaluate:in:to:notifying:ifFail:logged:
+[] in TextMorphEditor(ParagraphEditor)>>evaluateSelection {[rcvr class
+evaluatorClass new   evaluate: self selectionAsStream   in: ctxt...]}
+BlockContext>>on:do:
+TextMorphEditor(ParagraphEditor)>>evaluateSelection
+TextMorphEditor(ParagraphEditor)>>doIt
+[] in TextMorphEditor(ParagraphEditor)>>doIt: {[self doIt]}
+TextMorphEditor(Controller)>>terminateAndInitializeAround:
+TextMorphEditor(ParagraphEditor)>>doIt:
+TextMorphEditor(ParagraphEditor)>>dispatchOnCharacter:with:
+TextMorphEditor>>dispatchOnCharacter:with:
+TextMorphEditor(ParagraphEditor)>>readKeyboard
+TextMorphEditor>>readKeyboard
+[] in TextMorphForEditView(TextMorph)>>keyStroke: {[editor readKeyboard]}
+TextMorphForEditView(TextMorph)>>handleInteraction:fromEvent:
+TextMorphForEditView>>handleInteraction:fromEvent:
+TextMorphForEditView(TextMorph)>>keyStroke:
+TextMorphForEditView>>keyStroke:
+TextMorphForEditView(TextMorph)>>handleKeystroke:
+KeyboardEvent>>sentTo:
+TextMorphForEditView(Morph)>>handleEvent:
+TextMorphForEditView(Morph)>>handleFocusEvent:
+[] in HandMorph>>sendFocusEvent:to:clear: {[ActiveHand := self.
+ActiveEvent := anEvent.  result := focusHolder     han...]}
+[] in PasteUpMorph>>becomeActiveDuring: {[aBlock value]}
+BlockContext>>on:do:
+PasteUpMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendKeyboardEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[] in WorldState>>doOneCycleNowFor: {[:h |  ActiveHand := h.  h
+processEvents.  capturingGesture := capturingGest...]}
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+PasteUpMorph>>doOneCycle
+[] in Project class>>spawnNewProcess {[[World doOneCycle.  Processor
+yield.  false] whileFalse.  nil]}
+[] in BlockContext>>newProcess {[self value.  Processor terminateActive]}
+
+============
+
+
+> こんにちは
+> 梅澤です。
+>
+> 発生しているエラーについてですが、SqueakDebug.logというファイルが書かれて
+> いるはずですので、まずはそれを添付してもらうとよいのではないでしょうか。
+>
+> もしくはDebugReportをインストールしておくと、さらに詳しい情報をダンプ
+> できますのでお勧めです。(MLに送るにはちょっと大きすぎるかもしれませんが)
+> http://squeaksource.blueplane.jp/DebugReport.html
+> http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt
+>
+> SqueakDBXですが、日本語環境ではわたしも試したことがありませんので、果たして
+> うまくつながるのか、非常に興味があります。
+From umejava ＠ mars.dti.ne.jp  Sat Oct 31 20:53:31 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Oct 31 20:53:35 2009
+Subject: [Squeak-ja: 4402] Re: SqueakDBXの導入について
+In-Reply-To: <a49cf92a0910310228j2d940ffes86a51614fb12e5b4@mail.gmail.com>
+References: <a49cf92a0910310228j2d940ffes86a51614fb12e5b4@mail.gmail.com>
+Message-ID: <Jxq7ZD9GBCEgU927v0AM8fvA3@mars.dti.ne.jp>
+
+梅澤です。
+
+1M程度であれば、まずは添付で送っていただいて大丈夫と思います。
+はじかれてしまうようでしたら、別の方法にするというのはいかがでしょうか。
+
+SqueakDebug.logの内容から推測すると、外部ライブラリが見つからないか、
+呼び出せていないような感じがします。
+
+以上、よろしくお願い申し上げます。
+
+daisuke yamashita <y.daisuke.homeaddres@gmail.com> wrote:
+> ヤマシタです。
+> 
+> 申し訳ありません。
+> タイトルに余分なものが入った状態で、送ってしまいました。。。
+> 以後、気をつけます。
+> 
+> さて、DebugReportの導入を実施してログを取得しました。
+> 容量が大きいのですが、872KB程度あるのですが、皆様はどういう形でアップなり
+> 情報を提供されていますでしょうか？
+> 
+> 記録としてのこすならMLに配布がよいと思いますが、サーバにご迷惑をおかけしますし、
+> 他のファイルアップローダ等だと後日なくなってしまう可能性がありますので、
+> どうしたらよいものかと思っております。
+> 
+> 何か、良い方法がありましたら、ご教授頂けると幸いです。
+> 
+> 以上、よろしくお願い致します。
+> 
+> OLD Message=====================================================
+> 
+> 梅澤さん
+> 
+> エラーログの取得についてのご指示ありがとうございます。
+> 
+> DebugReportの導入を今から実施をしようと思っています。
+> 
+> 先にDebug.logの内容を記載させて頂きます。
+> 何となく、postgres関係の設定のような気もしていますが、
+> localhostはすべてtrustなので、問題ないと思っているのですが。。。
+> 
+> 以下、デバッグ内容です。
+> 他、ご指示を頂ければ幸いです。
+> 
+> ================================================
+> Error: Unable to find function address
+> 29 October 2009 1:31:13 am
+> 
+> VM: Mac OS - a SmalltalkImage
+> Image: Squeak3.9 [latest update: #7067]
+> 
+> SecurityManager state:
+> Restricted: false
+> FileAccess: true
+> SocketAccess: true
+> Working Dir /Users/daisuke/Develop/SeasideJOne-090425-plusDB/image
+> Trusted Dir /foobar/tooBar/forSqueak/bogus
+> Untrusted Dir /Users/daisuke/Library/Preferences/Squeak/Internet/My Squeak
+> 
+> OpenDBXMacOSX(Object)>>error:
+>        Receiver: an OpenDBXMacOSX
+>        Arguments and temporary variables:
+>                aString:        'Unable to find function address'
+>        Receiver's instance variables:
+> an OpenDBXMacOSX
+> 
+> OpenDBXMacOSX(Object)>>externalCallFailed
+>        Receiver: an OpenDBXMacOSX
+>        Arguments and temporary variables:
+>                errCode:        13
+>        Receiver's instance variables:
+> an OpenDBXMacOSX
+> 
+> OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+>        Receiver: an OpenDBXMacOSX
+>        Arguments and temporary variables:
+>                handle:         a WordArray(0)
+>                backend:        'pgsql'
+>                host:   '127.0.0.1'
+>                port:   '5432'
+>        Receiver's instance variables:
+> an OpenDBXMacOSX
+> 
+> DBXPostgresPlatform(DBXPlatform)>>createConnection:
+>        Receiver: a DBXPostgresPlatform
+>        Arguments and temporary variables:
+>                aConnection:    a DBXConnection
+>                err:    nil
+>                handleArray:    a WordArray(0)
+>                handle:         nil
+>        Receiver's instance variables:
+> a DBXPostgresPlatform
+> 
+> 
+> --- The full stack ---
+> OpenDBXMacOSX(Object)>>error:
+> OpenDBXMacOSX(Object)>>externalCallFailed
+> OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+> DBXPostgresPlatform(DBXPlatform)>>createConnection:
+>  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+> DBXConnection>>connect
+> UndefinedObject>>DoIt
+> Compiler>>evaluate:in:to:notifying:ifFail:logged:
+> [] in TextMorphEditor(ParagraphEditor)>>evaluateSelection {[rcvr class
+> evaluatorClass new   evaluate: self selectionAsStream   in: ctxt...]}
+> BlockContext>>on:do:
+> TextMorphEditor(ParagraphEditor)>>evaluateSelection
+> TextMorphEditor(ParagraphEditor)>>doIt
+> [] in TextMorphEditor(ParagraphEditor)>>doIt: {[self doIt]}
+> TextMorphEditor(Controller)>>terminateAndInitializeAround:
+> TextMorphEditor(ParagraphEditor)>>doIt:
+> TextMorphEditor(ParagraphEditor)>>dispatchOnCharacter:with:
+> TextMorphEditor>>dispatchOnCharacter:with:
+> TextMorphEditor(ParagraphEditor)>>readKeyboard
+> TextMorphEditor>>readKeyboard
+> [] in TextMorphForEditView(TextMorph)>>keyStroke: {[editor readKeyboard]}
+> TextMorphForEditView(TextMorph)>>handleInteraction:fromEvent:
+> TextMorphForEditView>>handleInteraction:fromEvent:
+> TextMorphForEditView(TextMorph)>>keyStroke:
+> TextMorphForEditView>>keyStroke:
+> TextMorphForEditView(TextMorph)>>handleKeystroke:
+> KeyboardEvent>>sentTo:
+> TextMorphForEditView(Morph)>>handleEvent:
+> TextMorphForEditView(Morph)>>handleFocusEvent:
+> [] in HandMorph>>sendFocusEvent:to:clear: {[ActiveHand := self.
+> ActiveEvent := anEvent.  result := focusHolder     han...]}
+> [] in PasteUpMorph>>becomeActiveDuring: {[aBlock value]}
+> BlockContext>>on:do:
+> PasteUpMorph>>becomeActiveDuring:
+> HandMorph>>sendFocusEvent:to:clear:
+> HandMorph>>sendEvent:focus:clear:
+> HandMorph>>sendKeyboardEvent:
+> HandMorph>>handleEvent:
+> HandMorph>>processEvents
+> [] in WorldState>>doOneCycleNowFor: {[:h |  ActiveHand := h.  h
+> processEvents.  capturingGesture := capturingGest...]}
+> Array(SequenceableCollection)>>do:
+> WorldState>>handsDo:
+> WorldState>>doOneCycleNowFor:
+> WorldState>>doOneCycleFor:
+> PasteUpMorph>>doOneCycle
+> [] in Project class>>spawnNewProcess {[[World doOneCycle.  Processor
+> yield.  false] whileFalse.  nil]}
+> [] in BlockContext>>newProcess {[self value.  Processor terminateActive]}
+> 
+> ============
+> 
+> 
+> > こんにちは
+> > 梅澤です。
+> >
+> > 発生しているエラーについてですが、SqueakDebug.logというファイルが書かれて
+> > いるはずですので、まずはそれを添付してもらうとよいのではないでしょうか。
+> >
+> > もしくはDebugReportをインストールしておくと、さらに詳しい情報をダンプ
+> > できますのでお勧めです。(MLに送るにはちょっと大きすぎるかもしれませんが)
+> > http://squeaksource.blueplane.jp/DebugReport.html
+> > http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt
+> >
+> > SqueakDBXですが、日本語環境ではわたしも試したことがありませんので、果たして
+> > うまくつながるのか、非常に興味があります。
+
+
+
+---
+[:masashi | ^umezawa]
+From abee.abe ＠ nifty.ne.jp  Sat Oct 31 21:12:39 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sat Oct 31 21:13:04 2009
+Subject: [Squeak-ja: 4403] 添付ファイルについて (was: Re: SqueakDBXの導入について)
+Message-ID: <2d5d52a80910310512u7f6cce3di538ee40400accd53@mail.gmail.com>
+
+こんにちは、阿部@管理者モードです。
+現在の設定は本文、添付ファイルを含めて40KBです。これはMailmanのデフォルトの設定値で、これに関する議論は今まで行われていないと思います。
+
+個人的な意見としては、昨今は以前に比べて利用できるネットワークの帯域が広がり、安価になったものの、モバイル環境や従量課金の人もいないわけではないので、このサイズを超えるファイルは、なるべくどこかのサーバにアップしてリンクを貼ってもらうほうが良いように思います。もし、適当なサーバが見つからないようであれば、squeakland.jpに置きますので、私宛に送ってもらえればと思います。
+
+Squeak-jaは今日現在で658名の参加者がいる大きなMLなので、意見の統一というのはなかなか難しいかもしれませんね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009年10月31日20:53 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> 梅澤です。
+>
+> 1M程度であれば、まずは添付で送っていただいて大丈夫と思います。
+> はじかれてしまうようでしたら、別の方法にするというのはいかがでしょうか。
+>
+> SqueakDebug.logの内容から推測すると、外部ライブラリが見つからないか、
+> 呼び出せていないような感じがします。
+>
+> 以上、よろしくお願い申し上げます。
+>
+> daisuke yamashita <y.daisuke.homeaddres@gmail.com> wrote:
+>> ヤマシタです。
+>>
+>> 申し訳ありません。
+>> タイトルに余分なものが入った状態で、送ってしまいました。。。
+>> 以後、気をつけます。
+>>
+>> さて、DebugReportの導入を実施してログを取得しました。
+>> 容量が大きいのですが、872KB程度あるのですが、皆様はどういう形でアップなり
+>> 情報を提供されていますでしょうか？
+>>
+>> 記録としてのこすならMLに配布がよいと思いますが、サーバにご迷惑をおかけしますし、
+>> 他のファイルアップローダ等だと後日なくなってしまう可能性がありますので、
+>> どうしたらよいものかと思っております。
+>>
+>> 何か、良い方法がありましたら、ご教授頂けると幸いです。
+>>
+>> 以上、よろしくお願い致します。
+>>
+>> OLD Message=====================================================
+>>
+>> 梅澤さん
+>>
+>> エラーログの取得についてのご指示ありがとうございます。
+>>
+>> DebugReportの導入を今から実施をしようと思っています。
+>>
+>> 先にDebug.logの内容を記載させて頂きます。
+>> 何となく、postgres関係の設定のような気もしていますが、
+>> localhostはすべてtrustなので、問題ないと思っているのですが。。。
+>>
+>> 以下、デバッグ内容です。
+>> 他、ご指示を頂ければ幸いです。
+>>
+>> ================================================
+>> Error: Unable to find function address
+>> 29 October 2009 1:31:13 am
+>>
+>> VM: Mac OS - a SmalltalkImage
+>> Image: Squeak3.9 [latest update: #7067]
+>>
+>> SecurityManager state:
+>> Restricted: false
+>> FileAccess: true
+>> SocketAccess: true
+>> Working Dir /Users/daisuke/Develop/SeasideJOne-090425-plusDB/image
+>> Trusted Dir /foobar/tooBar/forSqueak/bogus
+>> Untrusted Dir /Users/daisuke/Library/Preferences/Squeak/Internet/My Squeak
+>>
+>> OpenDBXMacOSX(Object)>>error:
+>>        Receiver: an OpenDBXMacOSX
+>>        Arguments and temporary variables:
+>>                aString:        'Unable to find function address'
+>>        Receiver's instance variables:
+>> an OpenDBXMacOSX
+>>
+>> OpenDBXMacOSX(Object)>>externalCallFailed
+>>        Receiver: an OpenDBXMacOSX
+>>        Arguments and temporary variables:
+>>                errCode:        13
+>>        Receiver's instance variables:
+>> an OpenDBXMacOSX
+>>
+>> OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+>>        Receiver: an OpenDBXMacOSX
+>>        Arguments and temporary variables:
+>>                handle:         a WordArray(0)
+>>                backend:        'pgsql'
+>>                host:   '127.0.0.1'
+>>                port:   '5432'
+>>        Receiver's instance variables:
+>> an OpenDBXMacOSX
+>>
+>> DBXPostgresPlatform(DBXPlatform)>>createConnection:
+>>        Receiver: a DBXPostgresPlatform
+>>        Arguments and temporary variables:
+>>                aConnection:    a DBXConnection
+>>                err:    nil
+>>                handleArray:    a WordArray(0)
+>>                handle:         nil
+>>        Receiver's instance variables:
+>> a DBXPostgresPlatform
+>>
+>>
+>> --- The full stack ---
+>> OpenDBXMacOSX(Object)>>error:
+>> OpenDBXMacOSX(Object)>>externalCallFailed
+>> OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+>> DBXPostgresPlatform(DBXPlatform)>>createConnection:
+>>  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+>> DBXConnection>>connect
+>> UndefinedObject>>DoIt
+>> Compiler>>evaluate:in:to:notifying:ifFail:logged:
+>> [] in TextMorphEditor(ParagraphEditor)>>evaluateSelection {[rcvr class
+>> evaluatorClass new   evaluate: self selectionAsStream   in: ctxt...]}
+>> BlockContext>>on:do:
+>> TextMorphEditor(ParagraphEditor)>>evaluateSelection
+>> TextMorphEditor(ParagraphEditor)>>doIt
+>> [] in TextMorphEditor(ParagraphEditor)>>doIt: {[self doIt]}
+>> TextMorphEditor(Controller)>>terminateAndInitializeAround:
+>> TextMorphEditor(ParagraphEditor)>>doIt:
+>> TextMorphEditor(ParagraphEditor)>>dispatchOnCharacter:with:
+>> TextMorphEditor>>dispatchOnCharacter:with:
+>> TextMorphEditor(ParagraphEditor)>>readKeyboard
+>> TextMorphEditor>>readKeyboard
+>> [] in TextMorphForEditView(TextMorph)>>keyStroke: {[editor readKeyboard]}
+>> TextMorphForEditView(TextMorph)>>handleInteraction:fromEvent:
+>> TextMorphForEditView>>handleInteraction:fromEvent:
+>> TextMorphForEditView(TextMorph)>>keyStroke:
+>> TextMorphForEditView>>keyStroke:
+>> TextMorphForEditView(TextMorph)>>handleKeystroke:
+>> KeyboardEvent>>sentTo:
+>> TextMorphForEditView(Morph)>>handleEvent:
+>> TextMorphForEditView(Morph)>>handleFocusEvent:
+>> [] in HandMorph>>sendFocusEvent:to:clear: {[ActiveHand := self.
+>> ActiveEvent := anEvent.  result := focusHolder     han...]}
+>> [] in PasteUpMorph>>becomeActiveDuring: {[aBlock value]}
+>> BlockContext>>on:do:
+>> PasteUpMorph>>becomeActiveDuring:
+>> HandMorph>>sendFocusEvent:to:clear:
+>> HandMorph>>sendEvent:focus:clear:
+>> HandMorph>>sendKeyboardEvent:
+>> HandMorph>>handleEvent:
+>> HandMorph>>processEvents
+>> [] in WorldState>>doOneCycleNowFor: {[:h |  ActiveHand := h.  h
+>> processEvents.  capturingGesture := capturingGest...]}
+>> Array(SequenceableCollection)>>do:
+>> WorldState>>handsDo:
+>> WorldState>>doOneCycleNowFor:
+>> WorldState>>doOneCycleFor:
+>> PasteUpMorph>>doOneCycle
+>> [] in Project class>>spawnNewProcess {[[World doOneCycle.  Processor
+>> yield.  false] whileFalse.  nil]}
+>> [] in BlockContext>>newProcess {[self value.  Processor terminateActive]}
+>>
+>> ============
+>>
+>>
+>> > こんにちは
+>> > 梅澤です。
+>> >
+>> > 発生しているエラーについてですが、SqueakDebug.logというファイルが書かれて
+>> > いるはずですので、まずはそれを添付してもらうとよいのではないでしょうか。
+>> >
+>> > もしくはDebugReportをインストールしておくと、さらに詳しい情報をダンプ
+>> > できますのでお勧めです。(MLに送るにはちょっと大きすぎるかもしれませんが)
+>> > http://squeaksource.blueplane.jp/DebugReport.html
+>> > http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt
+>> >
+>> > SqueakDBXですが、日本語環境ではわたしも試したことがありませんので、果たして
+>> > うまくつながるのか、非常に興味があります。
+>
+>
+>
+> ---
+> [:masashi | ^umezawa]
+>
+From umejava ＠ mars.dti.ne.jp  Sat Oct 31 22:36:39 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sat Oct 31 22:36:48 2009
+Subject: [Squeak-ja: 4404] Re: 添付ファイルについて (was: Re: SqueakDBXの導入について)
+In-Reply-To: <2d5d52a80910310512u7f6cce3di538ee40400accd53@mail.gmail.com>
+References: <2d5d52a80910310512u7f6cce3di538ee40400accd53@mail.gmail.com>
+Message-ID: <Jxv94hql3YV4.S6NHlQY_jRQ2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+40KBですか。。。利便性を考えると1MB程度はあっても良いかと個人的には思います。
+
+では今回に関してはどこかのサーバに置くなり、阿部さんに送りなりしてして
+いただければと思います。
+
+Kazuhiro ABE <abee.abe@nifty.ne.jp> wrote:
+> こんにちは、阿部@管理者モードです。
+> 現在の設定は本文、添付ファイルを含めて40KBです。これはMailmanのデフォルトの設定値で、これに関する議論は今まで行われていないと思います。
+> 
+> 個人的な意見としては、昨今は以前に比べて利用できるネットワークの帯域が広がり、安価になったものの、モバイル環境や従量課金の人もいないわけではないので、このサイズを超えるファイルは、なるべくどこかのサーバにアップしてリンクを貼ってもらうほうが良いように思います。もし、適当なサーバが見つからないようであれば、squeakland.jpに置きますので、私宛に送ってもらえればと思います。
+> 
+> Squeak-jaは今日現在で658名の参加者がいる大きなMLなので、意見の統一というのはなかなか難しいかもしれませんね。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+> 2009年10月31日20:53 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> > 梅澤です。
+> >
+> > 1M程度であれば、まずは添付で送っていただいて大丈夫と思います。
+> > はじかれてしまうようでしたら、別の方法にするというのはいかがでしょうか。
+> >
+> > SqueakDebug.logの内容から推測すると、外部ライブラリが見つからないか、
+> > 呼び出せていないような感じがします。
+> >
+> > 以上、よろしくお願い申し上げます。
+> >
+> > daisuke yamashita <y.daisuke.homeaddres@gmail.com> wrote:
+> >> ヤマシタです。
+> >>
+> >> 申し訳ありません。
+> >> タイトルに余分なものが入った状態で、送ってしまいました。。。
+> >> 以後、気をつけます。
+> >>
+> >> さて、DebugReportの導入を実施してログを取得しました。
+> >> 容量が大きいのですが、872KB程度あるのですが、皆様はどういう形でアップなり
+> >> 情報を提供されていますでしょうか？
+> >>
+> >> 記録としてのこすならMLに配布がよいと思いますが、サーバにご迷惑をおかけしますし、
+> >> 他のファイルアップローダ等だと後日なくなってしまう可能性がありますので、
+> >> どうしたらよいものかと思っております。
+> >>
+> >> 何か、良い方法がありましたら、ご教授頂けると幸いです。
+> >>
+> >> 以上、よろしくお願い致します。
+> >>
+> >> OLD Message=====================================================
+> >>
+> >> 梅澤さん
+> >>
+> >> エラーログの取得についてのご指示ありがとうございます。
+> >>
+> >> DebugReportの導入を今から実施をしようと思っています。
+> >>
+> >> 先にDebug.logの内容を記載させて頂きます。
+> >> 何となく、postgres関係の設定のような気もしていますが、
+> >> localhostはすべてtrustなので、問題ないと思っているのですが。。。
+> >>
+> >> 以下、デバッグ内容です。
+> >> 他、ご指示を頂ければ幸いです。
+> >>
+> >> ================================================
+> >> Error: Unable to find function address
+> >> 29 October 2009 1:31:13 am
+> >>
+> >> VM: Mac OS - a SmalltalkImage
+> >> Image: Squeak3.9 [latest update: #7067]
+> >>
+> >> SecurityManager state:
+> >> Restricted: false
+> >> FileAccess: true
+> >> SocketAccess: true
+> >> Working Dir /Users/daisuke/Develop/SeasideJOne-090425-plusDB/image
+> >> Trusted Dir /foobar/tooBar/forSqueak/bogus
+> >> Untrusted Dir /Users/daisuke/Library/Preferences/Squeak/Internet/My Squeak
+> >>
+> >> OpenDBXMacOSX(Object)>>error:
+> >>        Receiver: an OpenDBXMacOSX
+> >>        Arguments and temporary variables:
+> >>                aString:        'Unable to find function address'
+> >>        Receiver's instance variables:
+> >> an OpenDBXMacOSX
+> >>
+> >> OpenDBXMacOSX(Object)>>externalCallFailed
+> >>        Receiver: an OpenDBXMacOSX
+> >>        Arguments and temporary variables:
+> >>                errCode:        13
+> >>        Receiver's instance variables:
+> >> an OpenDBXMacOSX
+> >>
+> >> OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+> >>        Receiver: an OpenDBXMacOSX
+> >>        Arguments and temporary variables:
+> >>                handle:         a WordArray(0)
+> >>                backend:        'pgsql'
+> >>                host:   '127.0.0.1'
+> >>                port:   '5432'
+> >>        Receiver's instance variables:
+> >> an OpenDBXMacOSX
+> >>
+> >> DBXPostgresPlatform(DBXPlatform)>>createConnection:
+> >>        Receiver: a DBXPostgresPlatform
+> >>        Arguments and temporary variables:
+> >>                aConnection:    a DBXConnection
+> >>                err:    nil
+> >>                handleArray:    a WordArray(0)
+> >>                handle:         nil
+> >>        Receiver's instance variables:
+> >> a DBXPostgresPlatform
+> >>
+> >>
+> >> --- The full stack ---
+> >> OpenDBXMacOSX(Object)>>error:
+> >> OpenDBXMacOSX(Object)>>externalCallFailed
+> >> OpenDBXMacOSX(OpenDBXUnix)>>apiInitialize:backend:host:port:
+> >> DBXPostgresPlatform(DBXPlatform)>>createConnection:
+> >>  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+> >> DBXConnection>>connect
+> >> UndefinedObject>>DoIt
+> >> Compiler>>evaluate:in:to:notifying:ifFail:logged:
+> >> [] in TextMorphEditor(ParagraphEditor)>>evaluateSelection {[rcvr class
+> >> evaluatorClass new   evaluate: self selectionAsStream   in: ctxt...]}
+> >> BlockContext>>on:do:
+> >> TextMorphEditor(ParagraphEditor)>>evaluateSelection
+> >> TextMorphEditor(ParagraphEditor)>>doIt
+> >> [] in TextMorphEditor(ParagraphEditor)>>doIt: {[self doIt]}
+> >> TextMorphEditor(Controller)>>terminateAndInitializeAround:
+> >> TextMorphEditor(ParagraphEditor)>>doIt:
+> >> TextMorphEditor(ParagraphEditor)>>dispatchOnCharacter:with:
+> >> TextMorphEditor>>dispatchOnCharacter:with:
+> >> TextMorphEditor(ParagraphEditor)>>readKeyboard
+> >> TextMorphEditor>>readKeyboard
+> >> [] in TextMorphForEditView(TextMorph)>>keyStroke: {[editor readKeyboard]}
+> >> TextMorphForEditView(TextMorph)>>handleInteraction:fromEvent:
+> >> TextMorphForEditView>>handleInteraction:fromEvent:
+> >> TextMorphForEditView(TextMorph)>>keyStroke:
+> >> TextMorphForEditView>>keyStroke:
+> >> TextMorphForEditView(TextMorph)>>handleKeystroke:
+> >> KeyboardEvent>>sentTo:
+> >> TextMorphForEditView(Morph)>>handleEvent:
+> >> TextMorphForEditView(Morph)>>handleFocusEvent:
+> >> [] in HandMorph>>sendFocusEvent:to:clear: {[ActiveHand := self.
+> >> ActiveEvent := anEvent.  result := focusHolder     han...]}
+> >> [] in PasteUpMorph>>becomeActiveDuring: {[aBlock value]}
+> >> BlockContext>>on:do:
+> >> PasteUpMorph>>becomeActiveDuring:
+> >> HandMorph>>sendFocusEvent:to:clear:
+> >> HandMorph>>sendEvent:focus:clear:
+> >> HandMorph>>sendKeyboardEvent:
+> >> HandMorph>>handleEvent:
+> >> HandMorph>>processEvents
+> >> [] in WorldState>>doOneCycleNowFor: {[:h |  ActiveHand := h.  h
+> >> processEvents.  capturingGesture := capturingGest...]}
+> >> Array(SequenceableCollection)>>do:
+> >> WorldState>>handsDo:
+> >> WorldState>>doOneCycleNowFor:
+> >> WorldState>>doOneCycleFor:
+> >> PasteUpMorph>>doOneCycle
+> >> [] in Project class>>spawnNewProcess {[[World doOneCycle.  Processor
+> >> yield.  false] whileFalse.  nil]}
+> >> [] in BlockContext>>newProcess {[self value.  Processor terminateActive]}
+> >>
+> >> ============
+> >>
+> >>
+> >> > こんにちは
+> >> > 梅澤です。
+> >> >
+> >> > 発生しているエラーについてですが、SqueakDebug.logというファイルが書かれて
+> >> > いるはずですので、まずはそれを添付してもらうとよいのではないでしょうか。
+> >> >
+> >> > もしくはDebugReportをインストールしておくと、さらに詳しい情報をダンプ
+> >> > できますのでお勧めです。(MLに送るにはちょっと大きすぎるかもしれませんが)
+> >> > http://squeaksource.blueplane.jp/DebugReport.html
+> >> > http://swikis.ddo.jp/umejava/uploads/45/DebugReport20071207.ppt
+> >> >
+> >> > SqueakDBXですが、日本語環境ではわたしも試したことがありませんので、果たして
+> >> > うまくつながるのか、非常に興味があります。
+> >
+> >
+> >
+> > ---
+> > [:masashi | ^umezawa]
+> >
+
+
+
+---
+[:masashi | ^umezawa]

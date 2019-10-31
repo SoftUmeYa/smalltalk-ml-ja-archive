@@ -1,0 +1,1380 @@
+From nishis ＠ zephyr.dti.ne.jp  Mon Feb  1 00:50:21 2010
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Mon Feb  1 00:50:24 2010
+Subject: [SML 7761] Re: セーブされたファイルが自分でわかるプログラム
+In-Reply-To: <4B656483.7080601@cc.kyoto-su.ac.jp>
+References: <4B656483.7080601@cc.kyoto-su.ac.jp>
+Message-ID: <FC7E96A3-0052-4754-89E3-23B7BC20BCA6@zephyr.dti.ne.jp>
+
+西原です．
+すみません，まずは問題を理解していないダメな例ということで．
+
+1)
+Polymorphを入れたSqueakで，ファイル選択作成ダイアログを 
+使って確認しました．
+
+	| writingBlock |
+	writingBlock :=
+			[ :aStream |
+			aStream
+				nextPutAll: '| aFilename |';
+				cr;
+				nextPutAll: 'aFilename := ';
+				nextPut: $';
+				nextPutAll: aStream name asString;
+				nextPut: $';
+				nextPut: $.;
+				cr;
+				nextPutAll: 'Transcript cr; show: aFilename printString' ].
+	(UITheme builder fileSave: 'choose or create file') ifNotNilDo:
+			[ :aFileStream |
+			[ writingBlock value: aFileStream ] ensure: [ aFileStream close ] ]
+
+2)
+| aFilename |
+JunControlUtility
+	assert:
+		[(aFilename := JunFileDialog request) ifNil: [^nil].
+		aFilename writeStream]
+	do:
+		[:aStream |
+		aStream
+			nextPutAll: '| aFilename |';
+			cr;
+			nextPutAll: 'aFilename := ';
+			nextPut: $';
+			nextPutAll: aStream fileName asString;
+			nextPut: $';
+			nextPut: $.;
+			cr;
+			nextPutAll: 'Transcript cr; show: aFilename printString']
+	ensure: [:aStream | aStream close].
+
+
+
+
+On 2010/01/31, at 20:07, AOKI Atsushi wrote:
+
+> Smalltalkerの皆さんへ
+>
+> ここに述べるみたいなプログラムを書き下ろせるでしょうか。プロ
+> グラムの中で、そのプログラム自身がセーブされているファイル名
+> を用いるプログラムです。
+>
+> たとえば、以下のようなプログラムを書くとします。ただし、この
+> プログラムをセーブしたファイル名を、このプログラムの中で使用
+> しなければなりません。どこにセーブしてもいいのです。ファイル
+> としてどこにセーブされるのかわからないのに、このプログラムの
+> 中で当該のファイル名を使わなければならないのです。
+>
+> | aFilename |
+> aFilename := ＜このプログラムをセーブしたファイル名＞.
+> Transcript cr; show: aFilename printString
+>
+> もしも、上記のプログラムを「/usr/aoki/smalltalk/ 
+> tmp.st」とい
+> うファイルにセーブしたとしたら、次のプログラムを実行したり、
+>
+> '/usr/aoki/smalltalk/tmp.st' asFilename fileIn
+>
+> ファイルリスト（ファイルブラウザ）などで当該のファイルを選択
+> してファイルインしたら、トランスクリプトにそのファイル名が出
+> 力されなければなりません。
+>
+> 何を言っているのかわからないかもしれませんが…、うまく説明で
+> きないことを許してください。今度の勉強会＠京都で援用しようと
+> 思い立ち、それなりに実装したのですが、もっと良策があるやもし
+> れないなぁと考え、皆さんに訊ねてみようとポストした次第です。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Feb  1 04:24:40 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Feb  1 04:24:45 2010
+Subject: [SML 7762] Re: セーブされたファイルが自分でわかるプログラム
+In-Reply-To: <FC7E96A3-0052-4754-89E3-23B7BC20BCA6@zephyr.dti.ne.jp>
+References: <4B656483.7080601@cc.kyoto-su.ac.jp>
+	<FC7E96A3-0052-4754-89E3-23B7BC20BCA6@zephyr.dti.ne.jp>
+Message-ID: <4B65D8F8.4080700@cc.kyoto-su.ac.jp>
+
+(10/02/01 0:50), NISHIHARA Satoshi wrote:
+> すみません，まずは問題を理解していないダメな例ということで．
+
+なるほど、なるほど。プログラムをファイルとしてセーブする際に
+そのファイル名をプログラムの中に編み込んでしまうやり方ですね。
+
+欲を申しますと、当該のセーブしたファイルを、どこか別のディレ
+クトリに移動させてしまった後でも、動く（移動先のファイル名を
+トランスクリプトに出力する）ようにしていただけると、さらに助
+かります。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From osamu.hamasaki ＠ gmail.com  Mon Feb  1 22:27:31 2010
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Mon Feb  1 22:27:36 2010
+Subject: [SML 7763] Re: セーブされたファイルが自分でわかるプログラム
+In-Reply-To: <4B656483.7080601@cc.kyoto-su.ac.jp>
+References: <4B656483.7080601@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd31002010527o46ba982eq1ad04ecf5c2faa9a@mail.gmail.com>
+
+濱崎です。
+
+私も問題を正しく理解しているか自信がないですが、
+こんなのでは如何でしょうか？
+
+| aContext aStream |
+aContext := thisContext.
+[aContext sender selector = #fileIn]
+	whileFalse: [aContext := aContext sender].
+aStream := aContext sender receiver.
+Transcript cr; show: aStream name
+
+
+2010年1月31日20:07 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+> Smalltalkerの皆さんへ
+>
+> ここに述べるみたいなプログラムを書き下ろせるでしょうか。プロ
+> グラムの中で、そのプログラム自身がセーブされているファイル名
+> を用いるプログラムです。
+>
+> たとえば、以下のようなプログラムを書くとします。ただし、この
+> プログラムをセーブしたファイル名を、このプログラムの中で使用
+> しなければなりません。どこにセーブしてもいいのです。ファイル
+> としてどこにセーブされるのかわからないのに、このプログラムの
+> 中で当該のファイル名を使わなければならないのです。
+>
+> | aFilename |
+> aFilename := ＜このプログラムをセーブしたファイル名＞.
+> Transcript cr; show: aFilename printString
+>
+> もしも、上記のプログラムを「/usr/aoki/smalltalk/tmp.st」とい
+> うファイルにセーブしたとしたら、次のプログラムを実行したり、
+>
+> '/usr/aoki/smalltalk/tmp.st' asFilename fileIn
+>
+> ファイルリスト（ファイルブラウザ）などで当該のファイルを選択
+> してファイルインしたら、トランスクリプトにそのファイル名が出
+> 力されなければなりません。
+>
+> 何を言っているのかわからないかもしれませんが…、うまく説明で
+> きないことを許してください。今度の勉強会＠京都で援用しようと
+> 思い立ち、それなりに実装したのですが、もっと良策があるやもし
+> れないなぁと考え、皆さんに訊ねてみようとポストした次第です。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+
+
+
+-- 
+
+Osamu Hamasaki
+From osamu.hamasaki ＠ gmail.com  Mon Feb  1 23:08:27 2010
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Mon Feb  1 23:08:30 2010
+Subject: [SML 7764] Re: セーブされたファイルが自分でわかるプログラム
+In-Reply-To: <1bc06fd31002010527o46ba982eq1ad04ecf5c2faa9a@mail.gmail.com>
+References: <4B656483.7080601@cc.kyoto-su.ac.jp>
+	<1bc06fd31002010527o46ba982eq1ad04ecf5c2faa9a@mail.gmail.com>
+Message-ID: <1bc06fd31002010608s18b72c60q48a8e887b9b43e2c@mail.gmail.com>
+
+濱崎です。
+
+度々すみません。少し書き換えました。
+
+| aContext aFilename |
+aContext := thisContext.
+[aContext sender selector = #fileIn]
+	whileFalse: [aContext := aContext sender].
+aFilename := aContext sender receiver fileName.
+Transcript cr; show:  aFilename asAbsoluteFilename asString
+
+如何でしょう？
+VisualWorksのFileInの実行シーケンスに依存し過ぎな感ではあります。
+
+2010年2月1日22:27 濱崎治 <osamu.hamasaki@gmail.com>:
+> 濱崎です。
+>
+> 私も問題を正しく理解しているか自信がないですが、
+> こんなのでは如何でしょうか？
+
+＜中略＞
+
+> 2010年1月31日20:07 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+>> Smalltalkerの皆さんへ
+>>
+>> ここに述べるみたいなプログラムを書き下ろせるでしょうか。プロ
+>> グラムの中で、そのプログラム自身がセーブされているファイル名
+>> を用いるプログラムです。
+>>
+>> たとえば、以下のようなプログラムを書くとします。ただし、この
+>> プログラムをセーブしたファイル名を、このプログラムの中で使用
+>> しなければなりません。どこにセーブしてもいいのです。ファイル
+>> としてどこにセーブされるのかわからないのに、このプログラムの
+>> 中で当該のファイル名を使わなければならないのです。
+
+-- 
+
+Osamu Hamasaki
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Feb  2 01:43:13 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Feb  2 01:43:23 2010
+Subject: [SML 7765] Re: セーブされたファイルが自分でわかるプログラム
+In-Reply-To: <1bc06fd31002010608s18b72c60q48a8e887b9b43e2c@mail.gmail.com>
+References: <4B656483.7080601@cc.kyoto-su.ac.jp>	<1bc06fd31002010527o46ba982eq1ad04ecf5c2faa9a@mail.gmail.com>
+	<1bc06fd31002010608s18b72c60q48a8e887b9b43e2c@mail.gmail.com>
+Message-ID: <4B6704A1.5090901@cc.kyoto-su.ac.jp>
+
+(10/02/01 23:08), 濱崎治 wrote:
+> 如何でしょう？
+> VisualWorksのFileInの実行シーケンスに依存し過ぎな感ではあります。
+
+実行コンテクストをさかのぼる方式ですね。私の実装と似ています。
+このやり方以外にありませんかしらん。
+
+以下は余談です。
+
+オブジェクト指向プログラミングにおいて「レシーバにメッセージ
+を送る」ことが強調されますが、Smalltalk では「誰がメッセージ
+を送ったのか」を調べ上げることができますので、頼まれた人は頼
+んだ人の選り好みができます。より実社会を映すのではないかしら。
+誰があんなヤツの言うことを聞くものか…と。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Feb  2 07:55:29 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Feb  2 07:55:35 2010
+Subject: [SML 7766] Re: セーブされたファイルが自分でわかるプログラム
+In-Reply-To: <4B6704A1.5090901@cc.kyoto-su.ac.jp>
+References: <4B656483.7080601@cc.kyoto-su.ac.jp>	<1bc06fd31002010527o46ba982eq1ad04ecf5c2faa9a@mail.gmail.com>	<1bc06fd31002010608s18b72c60q48a8e887b9b43e2c@mail.gmail.com>
+	<4B6704A1.5090901@cc.kyoto-su.ac.jp>
+Message-ID: <4B675BE1.3020400@cc.kyoto-su.ac.jp>
+
+おはようございます、青木＠京都宇治です。
+
+(10/02/02 1:43), AOKI Atsushi wrote:
+> 実行コンテクストをさかのぼる方式ですね。私の実装と似ています。
+
+ちょっと無理がある（皆さんに披露するには忍びない）私の実装を
+示しておきます。基本的には濱崎さんの方式と同じでして、少しだ
+けrobustにしたというところでしょうか。
+
+| aFilename aContext aBoolean aBlock |
+aFilename := nil.
+aContext := thisContext.
+aBoolean := true.
+aBlock :=
+        [[aContext notNil and: [aBoolean yourself]] whileTrue:
+                [(aContext selector == #fileIn and: [aContext receiver isKindOf: Stream])
+                    ifTrue:
+                        [aFilename := aContext receiver stream fileName.
+                        aBoolean := false].
+                aContext := aContext sender]].
+[aBlock value]
+    on: aBlock messageNotUnderstoodSignal
+    do:
+        [:exception |
+        aFilename := nil.
+        exception return].
+Transcript
+    cr;
+    show: aFilename printString
+
+たとえば、上記のプログラムを「/usr/aoki/smalltalk/tmp.st」と
+いうファイルにセーブして、次のメッセージ式（プログラム）を実
+行したり、
+
+'/usr/aoki/smalltalk/tmp.st' asFilename fileIn
+
+ファイルブラウザ（ファイルリスト）などで、セーブしたファイル
+を選択してファイルイン（File In）したら、トランスクリプトに
+そのファイル名が出力されます。
+
+表題（サブジェクト）の「セーブされたファイルが自分でわかるプ
+ログラム」になっているかと思います。
+
+もちろん、当該のセーブしたファイルを、どこか別のディレクトリ
+に移動させてしまった後でも、ちゃんと動きます。
+
+明日の京都での勉強会では、ワークブックとワークスペースを多用
+するのですが、それらを一括管理（どこに置いておいてもいいよう
+に）するために、上述のプログラムを援用してゆきます。後日（勉
+強会が終了した後）に、それらのすべてを公開（このMLにアナウン
+ス）する所存です。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Feb  3 05:25:42 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Feb  3 05:25:49 2010
+Subject: [SML 7767] Re: 第16回Smalltalk勉強会＠京都
+In-Reply-To: <4B5F84FF.7050903@cc.kyoto-su.ac.jp>
+References: <4B5F84FF.7050903@cc.kyoto-su.ac.jp>
+Message-ID: <4B688A46.7050207@cc.kyoto-su.ac.jp>
+
+本日（reminder）です！
+
+--- 青木淳＠京都宇治
+
+(10/01/27 9:12), AOKI Atsushi wrote:
+> 青木淳＠京都上賀茂です。
+> 
+> 第16回Smalltalk勉強会@京都を開催いたします。万障繰り合わせて
+> JR京都駅前にお集まりください。
+> 
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto16
+> 
+> 第16回 Smalltalk勉強会＠京都
+> 日時：2010年02月03日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 取り組んでいる課題の要求仕様書にしたがって開発（設計）を進め
+> ると「描画のためのMVCの機構」と「複数の木を表現する森の機構」
+> の二つに大別できることがわかります。1月度の勉強会で決めました
+> 通り、2月度（今回）の勉強会では、描画のためのMVCの機構を作り
+> 上げたいと思います。みんなで一緒にプログラミングを行いますの
+> で、ノート型のパーソナルコンピュータ（Windows 7/Vista/XP また
+> は Mac OS X）をご持参ください。
+> 
+...snipped...
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From nishis ＠ zephyr.dti.ne.jp  Sat Feb  6 01:04:51 2010
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Sat Feb  6 01:04:50 2010
+Subject: [SML 7768] Re: 第16回Smalltalk勉強会＠京都
+In-Reply-To: <4B5F84FF.7050903@cc.kyoto-su.ac.jp>
+References: <4B5F84FF.7050903@cc.kyoto-su.ac.jp>
+Message-ID: <4B6C41A3.7070105@zephyr.dti.ne.jp>
+
+on 10.1.27 9:12 AM, AOKI Atsushi wrote:
+> Mac OS X の仮想マシンにおいて、大きな Pixmap への描画が異常な
+> までに遅いのです。VisualWorks 7.7 のリリースノートのページ2-3
+> にも記載があります。
+> 
+> http://www.cincomsmalltalk.com/blog/jarober/ReleaseNotes7.7.pdf
+> 
+> 樹状整列アニメーションの際には工夫が必要になります。この工夫
+> に関しては、3月度の勉強会で明らかにしてゆきたいと思います。
+
+ElementalGraph>>#example32 を走らせた結果が，
+VWNC7.7+Jun786:
+    188.2 sec 3071 modes , 0.061 sec/node
+Squeak3.10.2-7179web09.07.1
+    229.09 sec 4449 nodes, 0.051 sec/node
+となって Squeak の方が速かったので意外に思っていたところでした．
+
+exampleSmalltalk だけかと思ったけど， exampleTree や exampleForest も
+ノードで平均すると Squeak の方が速いです．
+
+でも鳥瞰操作の方は圧倒的に VWNC7.7 の方が速い……．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Feb  6 16:02:57 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sat Feb  6 16:03:04 2010
+Subject: [SML 7769] Re: 第16回Smalltalk勉強会＠京都
+In-Reply-To: <4B688A46.7050207@cc.kyoto-su.ac.jp>
+References: <4B5F84FF.7050903@cc.kyoto-su.ac.jp>
+	<4B688A46.7050207@cc.kyoto-su.ac.jp>
+Message-ID: <4B6D1421.6090807@cc.kyoto-su.ac.jp>
+
+青木淳＠大阪上本町です。
+
+2月3日(水)に行った京都の勉強会の内容を補足資料としてまとめま
+した。かなりの修正および加筆を施していますので、勉強会に参加
+された方々、プログラム群を差し替えていただけると助かります。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto16
+
+「プログラミングのプログラミング」で「描画のためのMVCの機構」
+をこしらえています。遠方や都合で勉強会に加われない方々も参考
+にしていただければ幸いです。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/ProgrammingOfProgramming/
+
+正常に動作することを、VisualWorks 7.6 / 7.7 / 7.8 で確かめて
+います。どなたか Squeak 版も作って、ウェブページに仕立てあげ
+てくださいませ。> 西原さん :-)
+
+なお、当該のページは HTML lint で糸くず取りを施しております。
+トヨタがニュースを賑わせていますが、他山の石をもって玉を攻む。
+やはり品質の維持や向上に努めることは大切。
+
+lint（C ならば -Wall など -W*、Java ならば FindBugs、Ruby な
+らば Reek、Smalltalk ならば Review、…）をかけずにプログラム
+を出すのは、ちょっと…。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Mon Feb  8 22:33:29 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Feb  8 22:33:33 2010
+Subject: [SML 7770] オープンソースカンファレンス2010 Tokyo/Spring
+Message-ID: <JxrpBLr1Wyue6wtPdXKfsedg4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Smalltalk-users.jpは、2月26日(金)・27日(土)に行われる
+オープンソースカンファレンス2010 Tokyo/Springに出展します。
+http://www.ospn.jp/osc2010-spring/
+
+会場が日野方面で、ちょっと遠いのですが、元気にデモ
+しています。ぜひお立ち寄りください。
+
+展示を手伝っていただける方も募集中です。また、これをデモ
+すると良いのでは?など、リクエストありましたらお寄せ下さい。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From serge.stinckwich ＠ gmail.com  Tue Feb  9 10:59:41 2010
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Tue Feb  9 11:00:11 2010
+Subject: [SML 7771] Fwd: [Pharo-project] New Smalltalk-Research group
+In-Reply-To: <a38fadc51002081314y201d7f21g30aa5a2dc3a30ce9@mail.gmail.com>
+References: <a38fadc51002081314y201d7f21g30aa5a2dc3a30ce9@mail.gmail.com>
+Message-ID: <b81554461002081759x64898c24tcf36a6677b48b911@mail.gmail.com>
+
+There is now a mailing-list for researchers that want to discuss about
+Smalltalk and object-oriented programming. See below to join.
+
+
+---------- Forwarded message ----------
+From: Mariano Martinez Peck <marianopeck@gmail.com>
+Date: 2010/2/9
+Subject: [Pharo-project] New Smalltalk-Research group
+To: Pharo Development <pharo-project@lists.gforge.inria.fr>
+Cc : "Magritte, Pier and Related Tools ..." <smallwiki@iam.unibe.ch>,
+The general-purpose Squeak developers list
+<squeak-dev@lists.squeakfoundation.org>, Seaside - general discussion
+<seaside@lists.squeakfoundation.org>, glorp-group@googlegroups.com,
+squeakdbx <squeakdbx@lists.squeakfoundation.org>, ESUG Members
+<esug-list@lists.esug.org>, AIDA/Web general discussion list
+<aida@aidaweb.si>, magma <magma@lists.squeakfoundation.org>
+
+
+Hi folks.
+
+We were discussing about this in the Pharo mailing list but the idea
+is for all Smalltalkers. I am not sure if this will work, but it is
+worth to try it as I don't have anything to loose.
+
+We were thinking to have a place, an environment and hopefully a
+community, where we can freely discuss about Smalltalk papers or OO in
+general. All smalltalkers of all flavors can join, discuss, tell their
+experiences and thoughts, share and learn.
+
+The main purpose about that list is:
+
+- be able to FREELY discuss about papers about Smalltalk or OO in
+general. I say freely because maybe someone gives an opinion of a
+paper that the person who wrote it is also in this place. We are all
+professional and I think we can discuss with respect.
+- LEARN.
+
+Other uses:
+- Don't reinvent the wheel. Maybe I wanted to do something and I read
+that XXX person did YYY. So, I can look at it.
+- Be aware of what other people is doing, working, writing and learning.
+- Have different opinions of a certain topic / paper.
+- A little step to join all the Smalltalk community in one place. We
+can meet people, join forces, etc.
+- Help in the preparation, ANN, collaborate, etc in Workshops,
+conferences, and so on.
+- Ask for help on review. Several times someone has several papers to
+review for a certain conference. This can be a place to ask for that
+help.
+- Publish papers that were rejected from someone. How many times some
+papers where rejected but do you still read it and find it useful ?
+- Educate people and being educated.
+- Share latex template, commands, or tricks related to smalltalk code
+for example.
+- Discuss about research in general.
+- Ask for a certain topic. Suppose I want to start to work in XXX
+topic, I can ask to see if someone knows related papers or work.
+- others
+
+In two words: DISCUSS AND LEARN.
+
+FAQ:
+
+1) Which is the address?
+http://groups.google.com/group/smalltalk-research
+
+2) Do I need to be "Researcher" to join ?
+Not necessary. You may just be interested.
+
+3) Is there a Nabble interface?
+Yes: http://n4.nabble.com/Smalltalk-Research-f1473466.html
+
+Now, please what I would appreciate is if you can help me to you
+distribute (I am not in Gemstone, Cincom or GNU for example) this ANN.
+It would be cool to create a community.〓 I know there are a lot of
+Smalltalk researchers that doesn't have time to follow the active
+smalltalks lists. If you can send private mails to them would be
+fantastic!
+
+Thank you very much.
+
+Mariano
+_______________________________________________
+Pharo-project mailing list
+Pharo-project@lists.gforge.inria.fr
+http://lists.gforge.inria.fr/cgi-bin/mailman/listinfo/pharo-project
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From umejava ＠ mars.dti.ne.jp  Tue Feb  9 21:58:47 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Feb  9 21:58:52 2010
+Subject: [SML 7772] Fwd: 【OSC東京】ランチの「学食」利用希望者の登録、ご協力ください
+Message-ID: <Jx80Ah8dZMGaNW4lNZjZvXGg5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+OSC 2010 Tokyo/Springなのですが、下記のようにランチと懇親会の案内
+が来ています。
+
+特にランチは周りにお店がないようですので、参加される方はお気をつけ
+下さい。
+
+ちなみに私は両方申し込んでおきました。
+
+ではでは。
+
+----------from here----------
+OSC事務局の長石です。
+お世話になっております。
+
+昼食（学食）と、懇親会の登録について、ご協力お願いします。
+
+昼食については「行ってみたけど売り切れだった＞＜」ということに
+ならない為に、希望者は、必ず登録してください。
+関係者にも転送していただけますでしょうか？
+
+
+
+■昼食について■
+明星大学の周辺には、食事ができるお店などがありません。
+昼食は各自持参していただくか、大学の学食をご利用いただくことになりますが、
+来場者が殺到すると、食材がなくなり提供ができない可能性があります。
+
+防止策として、来場者と出展関係者に事前調査をして、学食での食事の
+希望者数を伝える事にしました。
+学食利用予定の方は、お手数ですが、「セミナー事前登録」をクリックしていただき、
+各日程の12:00〜13:00のところに、チェックを入れて、登録してください。
+http://www.ospn.jp/osc2010-spring/
+
+※学食への報告の都合で、2/19(金)までに登録をお願いします。
+※登録は予約ということではないので、その点はご了承ください。
+※学食利用予定の方は、お手数ですがどうぞ調査にご協力ください。
+
+■懇親会のご案内■
+1日目終了後、OSC出展者、関係者の懇親会を開催します。
+こちらもまだの方は、できれば今すぐに、事前登録をお願いします。
+皆様のご参加お待ちしております。
+http://www.ospn.jp/osc2010-spring/modules/eguide/event.php?eid=71
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Fri Feb 12 23:32:09 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Feb 12 23:32:14 2010
+Subject: [SML 7773] 第17回Smalltalk勉強会のお知らせ
+Message-ID: <Jxgpr9.ek.Cmf9NpWn6Iuo2w4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2010/2/22(月) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai17kaismalltalkbenkyoukai
+
+「言語拡張」がテーマです。
+しばらくセミナー形式が続いたので、今回はハッカソン風に皆でワイワイと
+コーディングしたいと思います。(初心者の方も歓迎ですよー)
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From mutoh ＠ openedu.org  Tue Feb 16 21:47:42 2010
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Tue Feb 16 21:47:51 2010
+Subject: [SML 7774] ESUGチラシの翻訳についてのご意見募集
+Message-ID: <864olh4aa9.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+以前、Squeak-jaの方で作業をしたESUGチラシというものがあるのですが、現
+在の翻訳の更新をしております。
+
+オリジナルは、以下のURLです。
+- http://damien.cassou.free.fr/smalltalk-flyer-english.pdf
+
+日本語翻訳版は、以下にあります。
+- http://squeak.610t.org/ESUGflyer/flyer-Rev82.pdf
+
+詰め込む都合で若干意訳になっていたりする部分もあり、日本独自のコンテン
+ツも入れておりますが、識者の皆様のご意見ご感想、ご要望をいただければと
+思います。
+
+
+よろしくお願いします。
+
+では。
+
+PS:
+SMLのロゴってのは、何かありましたっけ?
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・つぶやいてみても、オレの声はとどかない by 610t
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Feb 17 03:24:45 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Feb 17 03:24:51 2010
+Subject: [SML 7775] Re: ESUGチラシの翻訳についてのご意見募集
+In-Reply-To: <864olh4aa9.wl%mutoh@openedu.org>
+References: <864olh4aa9.wl%mutoh@openedu.org>
+Message-ID: <4B7AE2ED.8000708@cc.kyoto-su.ac.jp>
+
+(10/02/16 21:47), Takeshi MUTOH wrote:
+> 日本語翻訳版は、以下にあります。
+> - http://squeak.610t.org/ESUGflyer/flyer-Rev82.pdf
+
+ザクッと拝見しました。とても結構だと思います。ご苦労さまです。
+
+> SMLのロゴってのは、何かありましたっけ?
+
+無かったと思います。
+
+確かブルーブックの挿絵はアデールさんの自作絵。
+
+Smalltalkでしゃべる人は絵も上手いような感じが何となくします。
+
+私もブラックブックの中に自作絵をいくつか入れています。
+
+--- 青木淳＠でもロゴのセンスは無し
+
+From yoshiki ＠ vpri.org  Wed Feb 17 03:41:24 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed Feb 17 03:41:35 2010
+Subject: [SML 7776] Re: [Squeak-ja: 4427] ESUGチラシの翻訳についてのご意見募集
+In-Reply-To: <86635x4acr.wl%mutoh@openedu.org>
+References: <86635x4acr.wl%mutoh@openedu.org>
+Message-ID: <usk9158h7.wl%yoshiki@vpri.org>
+
+At Tue, 16 Feb 2010 21:46:12 +0900,
+Takeshi MUTOH wrote:
+> 
+> むとう＠おうちです。
+> 
+> 以前もこちらでお話しさせていただいたと思いますが、久しぶりにESUGチラシ
+> の翻訳の更新をしております。
+
+  ありがとうございます。
+
+> オリジナルは、以下のURLです。
+> - http://damien.cassou.free.fr/smalltalk-flyer-english.pdf
+
+  前も思ったのですが、じっくり読むと、原文からしてかなり無理やりな文章
+で、たとえば、"Applications"の選択も偏りがありますよね。
+
+  - "Smalltalk"のcreationは"early 1980s"なのか。
+  - 5年や10年以上前に作られたような"current applications"が"the state
+    of software"を"advance"するということがあるのか。
+  - SophieはJavaになったし、ScratchはActionScriptになるのだがそれでよ
+    いのか。OpenCroquetよりも、Teleplaceで置き換えたほうが良いのではな
+    いか。
+  - Junを入れても良いのではないか。
+
+  - Imageの説明で、containsが入れ子になっている。
+  - 実行時にデバッグできるということは"Image"の説明なのか。
+  - Virtual Machineが「ほかのプログラムを実行できるプログラム」という
+    のはあまりにも漠然としすぎ。
+  - programmerが型を"indicate"しないとしても、型推論があればstatic
+    typeなのではないか(more resuableかどうかという大事なことを、型の
+    有無だけからいってはいけないのではないか)。
+
+  - EventsにアルゼンチンのSmalltalksについて書いても良いのではないか。
+
+  - 裏面のReserved charactersという見出しは正しいのか
+
+  - ...
+
+> 日本語翻訳版は、以下にあります。
+> - http://squeak.610t.org/ESUGflyer/flyer-Rev82.pdf
+> 
+> 詰め込む都合で若干意訳になっていたりする部分もあり、日本独自のコンテン
+> ツも入れておりますが、識者の皆様のご意見ご感想、ご要望をいただければと
+> 思います。
+
+  裏面の、「以下の事実の結果です」から「規則の数はとても少なく、規則の
+例外はありません」というところまでがちょっとスムースではないとは思いま
+した。「イメージに対して開発が行われる」というのもなんらかの言い方があ
+りそうですね。
+
+  期限があるかもしれませんが、Damienにも確認して、原本を更新してもらう
+ことを検討するのも良いかとは思います。
+
+-- Yoshiki
+From mutoh ＠ openedu.org  Wed Feb 17 05:51:20 2010
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Wed Feb 17 05:51:27 2010
+Subject: [SML 7777] Re: [Squeak-ja: 4428] Re: ESUGチラシの翻訳についてのご意見募集
+In-Reply-To: <usk9158h7.wl%yoshiki@vpri.org>
+References: <86635x4acr.wl%mutoh@openedu.org> <usk9158h7.wl%yoshiki@vpri.org>
+Message-ID: <863a1052gn.wl%mutoh@openedu.org>
+
+むとう＠おうちです。
+
+書き忘れてましたが、〆切はH.22/2/22 2:22頃です;-)
+
+At Tue, 16 Feb 2010 10:41:24 -0800,
+Yoshiki Ohshima <yoshiki@vpri.org> wrote:
+> > オリジナルは、以下のURLです。
+> > - http://damien.cassou.free.fr/smalltalk-flyer-english.pdf
+> 
+>   前も思ったのですが、じっくり読むと、原文からしてかなり無理やりな文章
+> で、たとえば、"Applications"の選択も偏りがありますよね。
+  (snip)
+>   期限があるかもしれませんが、Damienにも確認して、原本を更新してもらう
+> ことを検討するのも良いかとは思います。
+
+どのみち、更新の連絡はしようと思っていたので、英語のメーリングリストの
+方にも連絡してみようと思います。
+# 前回、どこで話してたかなぁ? squeak-devだっけ?
+
+ご意見はごもっともだと思うのですが、私の英語能力で伝わるか、心許ないの
+で援護してもらえませんでしょうか?
+
+あと、Junってやっぱり、マルチメディアに入るんですかね?
+# いや、Junって範囲が広すぎて…
+
+よろしくお願いします(_o_)
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・つぶやいてみても、オレの声はとどかない by 610t
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+From yoshiki ＠ vpri.org  Wed Feb 17 06:05:47 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed Feb 17 06:05:59 2010
+Subject: [SML 7778] Re: [Squeak-ja: 4428] Re: ESUGチラシの翻訳についてのご意見募集
+In-Reply-To: <863a1052gn.wl%mutoh@openedu.org>
+References: <86635x4acr.wl%mutoh@openedu.org> <usk9158h7.wl%yoshiki@vpri.org>
+	<863a1052gn.wl%mutoh@openedu.org>
+Message-ID: <ur5ok6gd0.wl%yoshiki@vpri.org>
+
+At Wed, 17 Feb 2010 05:51:20 +0900,
+Takeshi MUTOH wrote:
+> 
+> どのみち、更新の連絡はしようと思っていたので、英語のメーリングリストの
+> 方にも連絡してみようと思います。
+> # 前回、どこで話してたかなぁ? squeak-devだっけ?
+
+  どこでしたかねえ。
+
+> ご意見はごもっともだと思うのですが、私の英語能力で伝わるか、心許ないの
+> で援護してもらえませんでしょうか?
+
+  対案を考えるほどの元気がないのですが、僕が箇条書きにした内容を英語で
+書き直すのでよければやりますよ。
+
+-- Yoshiki
+From yoshiki ＠ vpri.org  Wed Feb 17 07:20:20 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed Feb 17 07:20:40 2010
+Subject: [SML 7779] Re: [Squeak-ja: 4427] ESUGチラシの翻訳についてのご意見募集
+In-Reply-To: <usk9158h7.wl%yoshiki@vpri.org>
+References: <86635x4acr.wl%mutoh@openedu.org> <usk9158h7.wl%yoshiki@vpri.org>
+Message-ID: <upr446cwr.wl%yoshiki@vpri.org>
+
+  というような感じです。ほかにもご意見があればどうぞ。
+
+  - Is it correct to say the "creation" of Smalltalk is in "the early
+    1980s"?
+  - It reads a bit awkward to name applications made about 10 to 5
+    years ago and say they are "current applications" and "advancing
+    the state of software".
+  - Sophie went on to Java, and Scratch is going on to
+    ActionScript/Flash.  It would be better to mention Teleplace but
+    remove OpenCroquet.
+  - It would be good to mention Jun.
+
+  - The description of the "Image" uses two "contains" and confusing a
+    bit; it is not clear that image "is" the environment and consists
+    of these things.
+  - "debugging while it is executing" should not a part of the description
+    of the "Image".
+  - Saying that a virtual machine is "a program which (?) ... executes
+    other programs" is a bit too vague.  I think that the description
+    for the virtual machine should go the along the line of "a virtual
+    machine is a machine, but happened to be done in software", and
+    not limited to executing programs but accessing other virtual
+    hardware components.
+  - Since there are languages with the type inference, "the developer ...
+    indicate the type is not a good explanation of static typing.  And
+    whether code is reusable or not is a big problem; explaining it
+    only from the static/dynamic typing POV seems overly controvercial.
+
+  - In "Events", perhaps the Smalltalks event in Argentina may be a
+    good addition.
+
+  - On the back side, "Reserved characters" look odd.  Rather it is
+    part of syntax?
+
+-- Yoshiki
+From shin-sahara ＠ kuzo.csk.com  Wed Feb 17 13:41:32 2010
+From: shin-sahara ＠ kuzo.csk.com (佐原 伸)
+Date: Wed Feb 17 13:41:36 2010
+Subject: [SML 7780] Re: [Squeak-ja: 4427] ESUGチラシの翻訳についてのご意見募集
+In-Reply-To: <upr446cwr.wl%yoshiki@vpri.org>
+References: <86635x4acr.wl%mutoh@openedu.org> <usk9158h7.wl%yoshiki@vpri.org>
+	<upr446cwr.wl%yoshiki@vpri.org>
+Message-ID: <571EE281-BFA6-4BDE-AFF2-4A01175367C5@kuzo.csk.com>
+
+佐原です。
+
+私の英文チェックプログラムGrammarianが、下記の通り構文チェックしました :-)
+
+On 2010/02/17, at 7:20, Yoshiki Ohshima wrote:
+
+>  というような感じです。ほかにもご意見があればどうぞ。
+> 
+>  - Is it correct to say the "creation" of Smalltalk is in "the early
+>    1980s"?
+>  - It reads a bit awkward to name applications made about 10 to 5
+>    years ago and say they are "current applications" and "advancing
+>    the state of software".
+>  - Sophie went on to Java, and Scratch is going on to
+>    ActionScript/Flash.  It would be better to mention Teleplace but
+>    remove OpenCroquet.
+>  - It would be good to mention Jun.
+> 
+>  - The description of the "Image" uses two "contains" and confusing a
+>    bit; it is not clear that image "is" the environment and consists
+>    of these things.
+>  - "debugging while it is executing" should not a part of the description
+>    of the "Image".
+>  - Saying that a virtual machine is "a program which (?) ... executes
+>    other programs" is a bit too vague.  I think that the description
+>    for the virtual machine should go the along the line of "a virtual
+>    machine is a machine, but happened to be done in software", and
+>    not limited to executing programs but accessing other virtual
+>    hardware components.
+>  - Since there are languages with the type inference, "the developer ...
+>    indicate the type is not a good explanation of static typing.  And
+>    whether code is reusable or not is a big problem; explaining it
+
+Do not use a semicolon before a participial modifier.
+
+>    only from the static/dynamic typing POV seems overly controvercial.
+
+s/overly/over/
+s/controvercial/controversial/
+
+以上です。
+
+> 
+>  - In "Events", perhaps the Smalltalks event in Argentina may be a
+>    good addition.
+> 
+>  - On the back side, "Reserved characters" look odd.  Rather it is
+>    part of syntax?
+> 
+> -- Yoshiki
+> 
+> 
+
+From mutoh ＠ openedu.org  Wed Feb 17 17:16:58 2010
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Wed Feb 17 17:17:04 2010
+Subject: [SML 7781] The Japanese version of ESUG flyer update to Rev.82
+Message-ID: <86tytg2s5h.wl%mutoh@openedu.org>
+
+むとう＠おしごとばです。
+
+なんか、ひっじょーに不安になってきたので、とりあえず日本側に投げてみます。
+
+きっつーい、ツッコミお願いします(_o_)
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・つぶやいてみても、オレの声はとどかない by 610t
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+----------------------------------------------------------------------
+Hi, folks!!
+
+Now, I update the Japanese version of ESUG flyer to English version
+Rev.82 for the event named OSC 2010/Tokyo Spring.
+- (In Japanese) http://www.ospn.jp/osc2010-spring/ 
+
+Umezawa-san will open a booth as Smalltalk-users.jp.
+Now, SML ML and Squeak-ja ML check my translation.
+
+It's at here:
+- http://squeak.610t.org/ESUGflyer/flyer-Rev82.pdf
+
+In Japanese version, I add some Japanese contents like some books, and
+some links. Is it Ok?
+
+Yoshiki-san give me some comment below, but almost of all are good
+comment for the English version of ESUG flyer.
+  - Is it correct to say the "creation" of Smalltalk is in "the early
+    1980s"?
+  - It reads a bit awkward to name applications made about 10 to 5
+    years ago and say they are "current applications" and "advancing
+    the state of software".
+  - Sophie went on to Java, and Scratch is going on to
+    ActionScript/Flash.  It would be better to mention Teleplace but
+    remove OpenCroquet.
+  - It would be good to mention Jun.
+
+  - The description of the "Image" uses two "contains" and confusing a
+    bit; it is not clear that image "is" the environment and consists
+    of these things.
+  - "debugging while it is executing" should not a part of the description
+    of the "Image".
+  - Saying that a virtual machine is "a program which (?) ... executes
+    other programs" is a bit too vague.  I think that the description
+    for the virtual machine should go the along the line of "a virtual
+    machine is a machine, but happened to be done in software", and
+    not limited to executing programs but accessing other virtual
+    hardware components.
+  - Since there are languages with the type inference, "the developer ...
+    indicate the type is not a good explanation of static typing.  And
+    whether code is reusable or not is a big problem; explaining it
+    only from the static/dynamic typing POV seems over controversial.
+
+  - In "Events", perhaps the Smalltalks event in Argentina may be a
+    good addition.
+
+  - On the back side, "Reserved characters" look odd.  Rather it is
+    part of syntax?
+
+How about update the English version of ESUG flyer?
+
+Thanks in advance.
+--
+	Takeshi MUTOH <mutoh@openedu.org>
+From serge.stinckwich ＠ gmail.com  Wed Feb 17 19:11:16 2010
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Wed Feb 17 19:11:50 2010
+Subject: [SML 7782] Re: The Japanese version of ESUG flyer update to Rev.82
+In-Reply-To: <86tytg2s5h.wl%mutoh@openedu.org>
+References: <86tytg2s5h.wl%mutoh@openedu.org>
+Message-ID: <b81554461002170211y1af16246p8e228f8e6c60aa2d@mail.gmail.com>
+
+2010/2/17 Takeshi MUTOH <mutoh@openedu.org>:
+> むとう＠おしごとばです。
+>
+> なんか、ひっじょーに不安になってきたので、とりあえず日本側に投げてみます。
+>
+> きっつーい、ツッコミお願いします(_o_)
+> --
+> 武藤 武士＠「あおによし」自宅より
+>  E-mail:mutoh@openedu.org       URL:http://qml.610T.org/
+>  ・つぶやいてみても、オレの声はとどかない by 610t
+>  ・自転車操業中            http://qml.610T.org/cycling/
+> ----------------------------------------------------------------------
+> Hi, folks!!
+>
+> Now, I update the Japanese version of ESUG flyer to English version
+> Rev.82 for the event named OSC 2010/Tokyo Spring.
+> - (In Japanese) http://www.ospn.jp/osc2010-spring/
+>
+> Umezawa-san will open a booth as Smalltalk-users.jp.
+> Now, SML ML and Squeak-ja ML check my translation.
+>
+> It's at here:
+> - http://squeak.610t.org/ESUGflyer/flyer-Rev82.pdf
+>
+> In Japanese version, I add some Japanese contents like some books, and
+> some links. Is it Ok?
+>
+> Yoshiki-san give me some comment below, but almost of all are good
+> comment for the English version of ESUG flyer.
+>  - Is it correct to say the "creation" of Smalltalk is in "the early
+>    1980s"?
+>  - It reads a bit awkward to name applications made about 10 to 5
+>    years ago and say they are "current applications" and "advancing
+>    the state of software".
+>  - Sophie went on to Java, and Scratch is going on to
+>    ActionScript/Flash.  It would be better to mention Teleplace but
+>    remove OpenCroquet.
+>  - It would be good to mention Jun.
+>
+>  - The description of the "Image" uses two "contains" and confusing a
+>    bit; it is not clear that image "is" the environment and consists
+>    of these things.
+>  - "debugging while it is executing" should not a part of the description
+>    of the "Image".
+>  - Saying that a virtual machine is "a program which (?) ... executes
+>    other programs" is a bit too vague.  I think that the description
+>    for the virtual machine should go the along the line of "a virtual
+>    machine is a machine, but happened to be done in software", and
+>    not limited to executing programs but accessing other virtual
+>    hardware components.
+>  - Since there are languages with the type inference, "the developer ...
+>    indicate the type is not a good explanation of static typing.  And
+>    whether code is reusable or not is a big problem; explaining it
+>    only from the static/dynamic typing POV seems over controversial.
+>
+>  - In "Events", perhaps the Smalltalks event in Argentina may be a
+>    good addition.
+>
+>  - On the back side, "Reserved characters" look odd.  Rather it is
+>    part of syntax?
+>
+> How about update the English version of ESUG flyer?
+
+
+Hi all,
+nice to see that the flyer that we start with Damien Cassou some years
+ago is used also in Japan ;-)
+If you made some updates to the japanese or english version of the
+flyer, please send modifications to Damien (in CC of this message).
+
+Thank you.
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Smalltalkers do: [:it | All with: Class, (And love: it)]
+http://doesnotunderstand.org/
+From umejava ＠ mars.dti.ne.jp  Wed Feb 17 22:38:44 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Feb 17 22:38:54 2010
+Subject: [SML 7783] Re: The Japanese version of ESUG flyer update to Rev.82
+In-Reply-To: <b81554461002170211y1af16246p8e228f8e6c60aa2d@mail.gmail.com>
+References: <86tytg2s5h.wl%mutoh@openedu.org>
+	<b81554461002170211y1af16246p8e228f8e6c60aa2d@mail.gmail.com>
+Message-ID: <JxcavwtxULxqsamaOMlvEnfQ3@mars.dti.ne.jp>
+
+Hi all,
+
+Updating ESUG flyer would be quite nice.
+
+My simple suggesting is:
+How about including Pharo and VWNC links in "Internet" section?
+
+Cheers,
+
+Serge Stinckwich <serge.stinckwich@gmail.com> wrote:
+> 2010/2/17 Takeshi MUTOH <mutoh@openedu.org>:
+> > むとう＠おしごとばです。
+> >
+> > なんか、ひっじょーに不安になってきたので、とりあえず日本側に投げてみます。
+> >
+> > きっつーい、ツッコミお願いします(_o_)
+> > --
+> > 武藤 武士＠「あおによし」自宅より
+> >  E-mail:mutoh@openedu.org       URL:http://qml.610T.org/
+> >  ・つぶやいてみても、オレの声はとどかない by 610t
+> >  ・自転車操業中            http://qml.610T.org/cycling/
+> > ----------------------------------------------------------------------
+> > Hi, folks!!
+> >
+> > Now, I update the Japanese version of ESUG flyer to English version
+> > Rev.82 for the event named OSC 2010/Tokyo Spring.
+> > - (In Japanese) http://www.ospn.jp/osc2010-spring/
+> >
+> > Umezawa-san will open a booth as Smalltalk-users.jp.
+> > Now, SML ML and Squeak-ja ML check my translation.
+> >
+> > It's at here:
+> > - http://squeak.610t.org/ESUGflyer/flyer-Rev82.pdf
+> >
+> > In Japanese version, I add some Japanese contents like some books, and
+> > some links. Is it Ok?
+> >
+> > Yoshiki-san give me some comment below, but almost of all are good
+> > comment for the English version of ESUG flyer.
+> >  - Is it correct to say the "creation" of Smalltalk is in "the early
+> >    1980s"?
+> >  - It reads a bit awkward to name applications made about 10 to 5
+> >    years ago and say they are "current applications" and "advancing
+> >    the state of software".
+> >  - Sophie went on to Java, and Scratch is going on to
+> >    ActionScript/Flash.  It would be better to mention Teleplace but
+> >    remove OpenCroquet.
+> >  - It would be good to mention Jun.
+> >
+> >  - The description of the "Image" uses two "contains" and confusing a
+> >    bit; it is not clear that image "is" the environment and consists
+> >    of these things.
+> >  - "debugging while it is executing" should not a part of the description
+> >    of the "Image".
+> >  - Saying that a virtual machine is "a program which (?) ... executes
+> >    other programs" is a bit too vague.  I think that the description
+> >    for the virtual machine should go the along the line of "a virtual
+> >    machine is a machine, but happened to be done in software", and
+> >    not limited to executing programs but accessing other virtual
+> >    hardware components.
+> >  - Since there are languages with the type inference, "the developer ...
+> >    indicate the type is not a good explanation of static typing.  And
+> >    whether code is reusable or not is a big problem; explaining it
+> >    only from the static/dynamic typing POV seems over controversial.
+> >
+> >  - In "Events", perhaps the Smalltalks event in Argentina may be a
+> >    good addition.
+> >
+> >  - On the back side, "Reserved characters" look odd.  Rather it is
+> >    part of syntax?
+> >
+> > How about update the English version of ESUG flyer?
+> 
+> 
+> Hi all,
+> nice to see that the flyer that we start with Damien Cassou some years
+> ago is used also in Japan ;-)
+> If you made some updates to the japanese or english version of the
+> flyer, please send modifications to Damien (in CC of this message).
+> 
+> Thank you.
+> -- 
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Smalltalkers do: [:it | All with: Class, (And love: it)]
+> http://doesnotunderstand.org/
+
+
+
+---
+[:masashi | ^umezawa]
+From yoshiki ＠ vpri.org  Thu Feb 18 02:11:52 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Feb 18 02:13:13 2010
+Subject: [SML 7784] Re: The Japanese version of ESUG flyer update to Rev.82
+In-Reply-To: <b81554461002170211y1af16246p8e228f8e6c60aa2d@mail.gmail.com>
+References: <86tytg2s5h.wl%mutoh@openedu.org>
+	<b81554461002170211y1af16246p8e228f8e6c60aa2d@mail.gmail.com>
+Message-ID: <umxz76b3b.wl%yoshiki@vpri.org>
+
+  Hi, Serge,
+
+At Wed, 17 Feb 2010 17:11:16 +0700,
+Serge Stinckwich wrote:
+> 
+> Hi all,
+> nice to see that the flyer that we start with Damien Cassou some years
+> ago is used also in Japan ;-)
+> If you made some updates to the japanese or english version of the
+> flyer, please send modifications to Damien (in CC of this message).
+
+  I thought you are still on this mailing list when I was writing my
+email.  Mutoh-san's idea in sending the email draft to the Japanese
+community was to make sure that it reads ok and doesn't offend Damien
+or others, but oh well^^; (I think it is ok so there is no problem.)
+Thank you for cutting through it.
+
+  Not sure who has the time and how is the best to revise it...  Since
+it was for ESUG, somebody in that community (or Damien, of course) may
+volunteer?
+
+-- Yoshiki
+From yoshiki ＠ vpri.org  Thu Feb 18 02:29:55 2010
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Feb 18 02:30:13 2010
+Subject: [SML 7785] Re: [Squeak-ja: 4427] ESUGチラシの翻訳についてのご意見募集
+In-Reply-To: <571EE281-BFA6-4BDE-AFF2-4A01175367C5@kuzo.csk.com>
+References: <86635x4acr.wl%mutoh@openedu.org> <usk9158h7.wl%yoshiki@vpri.org>
+	<upr446cwr.wl%yoshiki@vpri.org>
+	<571EE281-BFA6-4BDE-AFF2-4A01175367C5@kuzo.csk.com>
+Message-ID: <uljer6a98.wl%yoshiki@vpri.org>
+
+At Wed, 17 Feb 2010 13:41:32 +0900,
+佐原 伸 wrote:
+> 
+> 佐原です。
+> 
+> 私の英文チェックプログラムGrammarianが、下記の通り構文チェックしました :-)
+>
+> 以上です。
+
+  ありがとうございます。メーリングリスト宛に出してよかったです。
+
+-- Yoshiki
+From mutoh ＠ openedu.org  Thu Feb 18 14:58:49 2010
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Feb 18 14:59:03 2010
+Subject: [SML 7786] Re: The Japanese version of ESUG flyer update to Rev.82
+In-Reply-To: <b81554461002170211y1af16246p8e228f8e6c60aa2d@mail.gmail.com>
+References: <86tytg2s5h.wl%mutoh@openedu.org>
+	<b81554461002170211y1af16246p8e228f8e6c60aa2d@mail.gmail.com>
+Message-ID: <86ocjn2ig6.wl%mutoh@openedu.org>
+
+Hi, Serge and Damien!!
+
+Thanks for your kindness, Serge.
+
+Can you understand my english?
+If so, how about discussion about ESUG flyer at squeak-dev or other
+Smalltalkers place.
+
+Thanks.
+--
+	Takeshi MUTOH <mutoh@openedu.org>
+
+At Wed, 17 Feb 2010 17:11:16 +0700,
+Serge Stinckwich <serge.stinckwich@gmail.com> wrote:
+      (snip)
+> > Hi, folks!!
+> >
+> > Now, I update the Japanese version of ESUG flyer to English version
+> > Rev.82 for the event named OSC 2010/Tokyo Spring.
+> > - (In Japanese) http://www.ospn.jp/osc2010-spring/
+> >
+> > Umezawa-san will open a booth as Smalltalk-users.jp.
+> > Now, SML ML and Squeak-ja ML check my translation.
+> >
+> > It's at here:
+> > - http://squeak.610t.org/ESUGflyer/flyer-Rev82.pdf
+> >
+> > In Japanese version, I add some Japanese contents like some books, and
+> > some links. Is it Ok?
+> >
+> > Yoshiki-san give me some comment below, but almost of all are good
+> > comment for the English version of ESUG flyer.
+> >  - Is it correct to say the "creation" of Smalltalk is in "the early
+> >    1980s"?
+> >  - It reads a bit awkward to name applications made about 10 to 5
+> >    years ago and say they are "current applications" and "advancing
+> >    the state of software".
+> >  - Sophie went on to Java, and Scratch is going on to
+> >    ActionScript/Flash.  It would be better to mention Teleplace but
+> >    remove OpenCroquet.
+> >  - It would be good to mention Jun.
+> >
+> >  - The description of the "Image" uses two "contains" and confusing a
+> >    bit; it is not clear that image "is" the environment and consists
+> >    of these things.
+> >  - "debugging while it is executing" should not a part of the description
+> >    of the "Image".
+> >  - Saying that a virtual machine is "a program which (?) ... executes
+> >    other programs" is a bit too vague.  I think that the description
+> >    for the virtual machine should go the along the line of "a virtual
+> >    machine is a machine, but happened to be done in software", and
+> >    not limited to executing programs but accessing other virtual
+> >    hardware components.
+> >  - Since there are languages with the type inference, "the developer ...
+> >    indicate the type is not a good explanation of static typing.  And
+> >    whether code is reusable or not is a big problem; explaining it
+> >    only from the static/dynamic typing POV seems over controversial.
+> >
+> >  - In "Events", perhaps the Smalltalks event in Argentina may be a
+> >    good addition.
+> >
+> >  - On the back side, "Reserved characters" look odd.  Rather it is
+> >    part of syntax?
+> >
+> > How about update the English version of ESUG flyer?
+> 
+> 
+> Hi all,
+> nice to see that the flyer that we start with Damien Cassou some years
+> ago is used also in Japan ;-)
+> If you made some updates to the japanese or english version of the
+> flyer, please send modifications to Damien (in CC of this message).
+> 
+> Thank you.
+> -- 
+> Serge Stinckwich
+> UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+> Smalltalkers do: [:it | All with: Class, (And love: it)]
+> http://doesnotunderstand.org/
+> 
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Feb 24 11:47:34 2010
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Feb 24 11:47:41 2010
+Subject: [SML 7787] 第17回Smalltalk勉強会＠京都
+Message-ID: <4B849346.5040301@cc.kyoto-su.ac.jp>
+
+青木淳＠京都上賀茂です。
+
+第17回Smalltalk勉強会@京都を開催いたします。年度末の月次でお
+忙しいと思いますが、万障繰り合わせてJR京都駅前にお集まりくだ
+さい。桃の節句（ひな祭り）をSmalltalkで楽しみませう！
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto17
+
+第17回 Smalltalk勉強会＠京都
+日時：2010年03月03日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+年度末（今回）の勉強会では、取り組んでいる課題の要求仕様書に
+したがって、複数の木を表現する森の機構を作り上げましょう。前
+回と同様にVisualWorks 7.7 NC上でプログラミングのプログラミン
+グを行います。ノート型のパーソナルコンピュータ（Windows 7/
+Vista/XP または Mac OS X）をご持参ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Wed Feb 24 23:38:33 2010
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Feb 24 23:38:37 2010
+Subject: [SML 7788] Re: オープンソースカンファレンス2010 Tokyo/Spring
+In-Reply-To: <JxrpBLr1Wyue6wtPdXKfsedg4@mars.dti.ne.jp>
+References: <JxrpBLr1Wyue6wtPdXKfsedg4@mars.dti.ne.jp>
+Message-ID: <JxoM9pOeC4LDZV_48iVVFQqg2@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+リマインダです。いよいよあさってからです。
+お気軽にどうぞ。
+
+シンコム社とSmalltalk-users.jpの両方でブースを出しています。
+VisualWorks7.7NCやWeb Velocity評価版なども手に入りますよー。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> Smalltalk-users.jpは、2月26日(金)・27日(土)に行われる
+> オープンソースカンファレンス2010 Tokyo/Springに出展します。
+> http://www.ospn.jp/osc2010-spring/
+> 
+> 会場が日野方面で、ちょっと遠いのですが、元気にデモ
+> しています。ぜひお立ち寄りください。
+> 
+> 展示を手伝っていただける方も募集中です。また、これをデモ
+> すると良いのでは?など、リクエストありましたらお寄せ下さい。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+
+
+---
+[:masashi | ^umezawa]

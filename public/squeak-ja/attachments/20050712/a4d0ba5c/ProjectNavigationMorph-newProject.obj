@@ -1,0 +1,1 @@
+'From SqueakNihongo6.1 of 17 April 2004 [latest update: #0] on 12 July 2005 at 4:24:45 pm'!!ProjectNavigationMorph methodsFor: 'the actions' stamp: 'ka 7/12/2005 16:16'!newProject	Project current isTopProject		ifFalse: [^ self inform: '最初のプロジェクト以外では作れません'].	Project newMorphicOn: nil! !

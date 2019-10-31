@@ -1,0 +1,392 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Mar  7 07:18:02 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed, 07 Mar 2012 07:18:02 +0900
+Subject: [SML 7997] Re:
+	第41回Smalltalk勉強会＠京都
+In-Reply-To: <4F4D581E.5000505@cc.kyoto-su.ac.jp>
+References: <4F4D581E.5000505@cc.kyoto-su.ac.jp>
+Message-ID: <4F568D1A.4040108@cc.kyoto-su.ac.jp>
+
+本日です。青木研で用いている資料を配りたいと思います。
+今夜はメソッドサーチを利用した「代理人」とプログラム制御構造の担い手である「閉包」を行います。
+時間があれば、ガベージコレクションとオブジェクトの構造に関する「処理時間と清掃回数」についても解題したいと考えています。
+
+--- 青木淳＠京都上賀茂
+
+(12/02/29 7:41), AOKI Atsushi wrote:
+> 第41回Smalltalk勉強会＠京都を開催します。
+>
+> 万障繰り合わせてJR京都駅前にお集まりください。
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto41
+>
+> 場所(部屋)はキャンプラ6階の第3講習室になります。
+> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>
+> 第41回 Smalltalk勉強会＠京都
+> 日時：2012年03月07日（水）19:00〜21:00
+> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> 窓MVCを用いたフーリエ信号処理のデザインとプログラミングが前回
+> でほぼ完了しました。今回はプログラム制御構造などをレクチャし
+> ながら、前回のフーリエ信号処理プログラムをブラッシュアップし
+> てみようと思います。トピックスとしてメソッドサーチ・閉包(ク
+> ロージャ)・逐次・並行・約束・代理・継続(コンティニュエーショ
+> ン)・継続譲渡スタイル(CPS)などを解題してゆきます。ノート型の
+> パーソナルコンピュータ（Windows 7 または Mac OS X）をご持参く
+> ださい。
+>
+> --- 青木淳＠京都宇治
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Mar  9 17:00:04 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri, 09 Mar 2012 17:00:04 +0900
+Subject: [SML 7998] Re:
+	第41回Smalltalk勉強会＠京都
+In-Reply-To: <4F568D1A.4040108@cc.kyoto-su.ac.jp>
+References: <4F4D581E.5000505@cc.kyoto-su.ac.jp>
+ <4F568D1A.4040108@cc.kyoto-su.ac.jp>
+Message-ID: <4F59B884.4080007@cc.kyoto-su.ac.jp>
+
+妹尾さんから勉強会ログが届きましたので、サーバにアップロードしておきました。
+もちろん、用いたプログラムもアップロードしてあります。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto41
+
+少々の報告をしますと、まず、ガベージコレクションとオブジェクトの構造に関する「処理時間と清掃回数」について解題しました。
+ヒープストレージに取られるオブジェクトの構造から、次の２つのプログラムの違い（処理時間の差）を明らかにしてゆきました。
+
+【整数演算】
+	| aClosure |
+	aClosure :=
+			[| result |
+			result := 1.
+			[result <= 500000000] whileTrue: [result := result + 1].
+			result yourself].
+	^Time microsecondsToRun: [aClosure value]
+
+【浮動小数点数演算】
+	| aClosure |
+	aClosure :=
+			[| result |
+			result := 1.0d.
+			[result <= 500000000.0d] whileTrue: [result := result + 1.0d].
+			result yourself].
+	^Time microsecondsToRun: [aClosure value]
+
+その次に、本人になりかわって他人からのメッセージに応答するオブジェクト「代理人」の実装方法を紹介しました。
+すべてのメッセージに応答できなければ、すべてのメッセージに応答できる、という禅問答のような仕掛けを明らかにしてゆきました。
+
+これら２つ「処理時間と清掃回数」と「代理人」に関する配付資料があります。
+青木研究室で用いている内部資料になるのですが、ご入り用であれば、電子的に差し上げます、私宛にリクエストしてくださいまし。
+
+--- 青木淳＠京都上賀茂
+
+
+(12/03/07 7:18), AOKI Atsushi wrote:
+> 本日です。青木研で用いている資料を配りたいと思います。
+> 今夜はメソッドサーチを利用した「代理人」とプログラム制御構造の担い手である「閉包」を行います。
+> 時間があれば、ガベージコレクションとオブジェクトの構造に関する「処理時間と清掃回数」についても解題したいと考えています。
+>
+> --- 青木淳＠京都上賀茂
+>
+>
+> (12/02/29 7:41), AOKI Atsushi wrote:
+>> 第41回Smalltalk勉強会＠京都を開催します。
+>>
+>> 万障繰り合わせてJR京都駅前にお集まりください。
+>> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto41
+>>
+>> 場所(部屋)はキャンプラ6階の第3講習室になります。
+>> http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+>>
+>> 第41回 Smalltalk勉強会＠京都
+>> 日時：2012年03月07日（水）19:00〜21:00
+>> キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+>> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>>
+>> 窓MVCを用いたフーリエ信号処理のデザインとプログラミングが前回
+>> でほぼ完了しました。今回はプログラム制御構造などをレクチャし
+>> ながら、前回のフーリエ信号処理プログラムをブラッシュアップし
+>> てみようと思います。トピックスとしてメソッドサーチ・閉包(ク
+>> ロージャ)・逐次・並行・約束・代理・継続(コンティニュエーショ
+>> ン)・継続譲渡スタイル(CPS)などを解題してゆきます。ノート型の
+>> パーソナルコンピュータ（Windows 7 または Mac OS X）をご持参く
+>> ださい。
+>>
+>> --- 青木淳＠京都宇治
+
+
+From asugitan ＠ kh.rim.or.jp  Fri Mar  9 17:20:22 2012
+From: asugitan ＠ kh.rim.or.jp (Akinori Sugitani)
+Date: Fri, 09 Mar 2012 17:20:22 +0900
+Subject: [SML 7999] Re: 配付資料希望です。
+In-Reply-To: <4F59B884.4080007@cc.kyoto-su.ac.jp>
+References: <4F4D581E.5000505@cc.kyoto-su.ac.jp>
+ <4F568D1A.4040108@cc.kyoto-su.ac.jp> <4F59B884.4080007@cc.kyoto-su.ac.jp>
+Message-ID: <4F59BD46.2070607@kh.rim.or.jp>
+
+ご無沙汰しております。
+いろいろ重なったりで、12月から連続で勉強会欠席いたしました。
+
+(2012/03/09 17:00), AOKI Atsushi wrote:
+> これら２つ「処理時間と清掃回数」と「代理人」に関する配付資料があります。
+> 青木研究室で用いている内部資料になるのですが、ご入り用であれば、電子的に
+> 差し上げます、私宛にリクエストしてくださいまし。
+
+理解できる自信はありませんが、上記の件、よろしくお願い申し上げます。
+
+------------------------
+杉谷　明則
+
+
+
+From ume ＠ softumeya.com  Thu Mar 22 23:17:40 2012
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Thu, 22 Mar 2012 23:17:40 +0900
+Subject: [SML 8000]
+	第41回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdTtgzLhYDfeYYGyAr8r1YGqgCKFtfQ=6Q4gut8j0aYBiA@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2012/3/30(金) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:「自由自在Squeakプログラミング」 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai41kaismalltalkbenkyoukai
+
+今月のSmalltalk勉強会では、Newspeakを取り上げます。
+Newspeakとは、Dartでも有名なGilad Brachaさん達の手によって開発された、新世代プログラミング言語です。
+
+何かと保守的と言われるDartに比べると、Newspeakはかなりとんがった仕様となっています。変数への直接アクセスがなく、グローバルな名前というものも存在しません。名前空間、モジュールやパッケージもなく、(入れ子になった)「クラス」がそうした役割を全て果たします。
+その他、パターンリテラルによって簡潔にパターンマッチ処理を記述できたり、Mixinやアクターを採用したりなど、いわゆる最近の言語ではやりのエッセンスも取り入れています。
+
+当日は簡単な解説のあと、実際に処理系をあれこれいじって楽しむといった流れにする予定です。
+
+参加表明は特に必要ありません。ふらりとお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Mar 29 00:23:30 2012
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu, 29 Mar 2012 00:23:30 +0900
+Subject: [SML 8001]
+	第42回Smalltalk勉強会＠京都
+Message-ID: <4F732CF2.2010202@cc.kyoto-su.ac.jp>
+
+第42回Smalltalk勉強会＠京都を開催します。
+
+万障繰り合わせてJR京都駅前にお集まりください。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto42
+
+場所(部屋)はキャンプラ6階の第3講習室になります。
+http://www.kyoto-su.ac.jp/graduate/satellite/index.html
+
+第42回 Smalltalk勉強会＠京都
+日時：2012年04月04日（水）19:00〜21:00
+キャンパスプラザ京都 京都産業大学サテライト講習室（6階 第3講習室）
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+前回は「処理時間と清掃回数」と「代理人」を行いました。今回も
+プログラム制御構造を主題にして配付資料で勉強したいと思います。
+トピックスとして「閉包(クロージャ)」と「逐次・並行・約束」を
+解題してゆきます。ノート型のパーソナルコンピュータ
+（Windows 7 または Mac OS X）をご持参ください。
+
+--- 青木淳＠京都宇治
+
+From serge.stinckwich ＠ gmail.com  Thu Mar 29 22:03:13 2012
+From: serge.stinckwich ＠ gmail.com (Serge Stinckwich)
+Date: Thu, 29 Mar 2012 20:03:13 +0700
+Subject: [SML 8002] 20th International Smalltalk Joint Conference - Call for
+	Contributions
+In-Reply-To: <CA+y5gghy5pi6pc3uTEFmW-+XNgZG0fHBON9i-ebLUntxfVdk8g@mail.gmail.com>
+References: <CA+y5gghy5pi6pc3uTEFmW-+XNgZG0fHBON9i-ebLUntxfVdk8g@mail.gmail.com>
+Message-ID: <CAOysuxVsbvq2tS4ZSjm4W+Q2-bbQ7JbEpociZNBEUtWFW65ccw@mail.gmail.com>
+
+20th International Smalltalk Joint Conference - Call for Contributions
+
+? ? ? ? ? ? ? Gent, Belgium
+? ? ? ? ? ? ? August 27-31, 2012; Camp Smalltalk August 25-26
+? ? ? ? ? ? ? http://esug.org/Conferences/2012
+
+This call includes:
+? ? ? 1) Developers forum
+? ? ? 2) Innovation Technology Award
+? ? ? 3) International Workshop
+? ? ? 4) Student Volunteer program
+? ? ? 5) Free ESUG tickets program
+
+----------------------------------------------------------------------
+
+For the past 20 years, the European Smalltalk User Group (ESUG) has
+organised the International Smalltalk Conference, a lively forum on
+cutting edge software technologies that attract people from both
+academia and industry for a whole week. The attendees are both
+engineers using Smalltalk in business and students and teachers using
+Smalltalk both for research and didactic purposes.
+
+This year's edition of the largest European Smalltalk event will
+include:
+
+? ? ? - The regular Smalltalk developers conference with
+? ? ? ? renowned invited speakers
+
+? ? ? - a Smalltalk camp that proved fruitful for interactions and
+? ? ? ? discussions (August 25-26)
+
+? ? ? - 9th edition of the Innovation Technology Awards where prizes
+? ? ? ? will be awarded to authors of best pieces of
+? ? ? ? Smalltalk-related projects
+
+? ? ? - IWST: an international workshop on Smalltalk and dynamic
+? ? ? ? languages
+
+You can support the ESUG conference in many different ways:
+
+? ? ? - Sponsor the conference. New sponsoring packages are described
+? ? ? ? at http://www.esug.org/About/SupportESUG
+
+? ? ? - Submit a talk, a software or a paper to one of the events.
+? ? ? ? See below.
+
+? ? ? - Attend the conference. We'd like to beat the previous record
+? ? ? ? of attendance (170 people at
+? ? ? ? Amsterdam)!
+
+? ? ? - Students can get free registration and hosting if they enroll
+? ? ? ? into the the Student Volunteers program. See below.
+
+1) Developers Forum: International Smalltalk Developers Conference
+----------------------------------------------------------------------
+
+This year we are looking for YOUR experience on using Smalltalk. In
+addition, we are looking for tutorials. The list of topics includes,
+but is not limited to the following:
+
+? ? ? - XP practices
+? ? ? - Development tools
+? ? ? - Experience reports
+? ? ? - Model driven development
+? ? ? - Web development
+? ? ? - Team management
+? ? ? - Meta-Modeling
+? ? ? - Security
+? ? ? - New libraries & frameworks
+? ? ? - Educational material
+? ? ? - Embedded systems and robotics
+? ? ? - SOA and Web services
+? ? ? - Interaction with other programming languages
+
+Submissions due on 15 June 2012
+Notification of acceptance on 25 June 2012
+
+How to submit?
+
+Pay attention: the places are limited so do not wait till the last
+minute to apply. Prospective presenters should submit a request to
+board ＠ esug.org AND damien.cassou ＠ gmail.com AND
+stephane.ducasse ＠ free.fr following the template below. Please use this
+template since the emails will be automatically processed!
+
+Subject: [ESUG 2012 Developers] + your name
+
+First Name:
+
+Last Name:
+
+Email where you can always be reached:
+
+Title:
+
+Abstract: (max 1400 characters)
+
+Bio: (max 1400 characters)
+
+Any presentation not respecting this form will be discarded
+automatically
+
+2) Innovation Technology Award
+----------------------------------------------------------------------
+
+We are proud to announce the 9th Innovation Technology Awards. The top
+3 teams with the most innovative software will receive, respectively,
+500 Euros, 300 Euros and 200 Euros during an awards ceremony at the
+conference. Developers of any Smalltalk-based software are welcome to
+compete. This year we will request 3-5min videos.
+
+More information at:
+http://www.esug.org/Conferences/2012/Innovation-Technology-Awards
+
+
+3) International Workshop - IWST 2012
+----------------------------------------------------------------------
+
+International Workshop on Smalltalk Technologies, August 28
+
+The goals of the workshop is to create a forum around advances or
+experience in Smalltalk and to trigger discussions and exchanges of
+ideas. Participants are invited to submit research articles. We will
+not enforce any length restriction. Nevertheless, we expect papers of
+two kinds:
+
+- Short position papers describing emerging ideas.
+- Long research papers with deeper description of experiments and of
+?research results.
+
+We welcome research papers on all aspects, theoretical as well as
+practical, of Smalltalk related topics. All accepted papers will be
+published in ACM DL, and the authors of the best papers will be
+invited to submit an extended version to a journal special issue (to
+be confirmed).
+
+Submissions deadline: June 15, 2012
+Notification of acceptance: July 15, 2012
+
+More information at:
+http://www.esug.org/Conferences/2012/International-Workshop---IWST-2012
+
+4) Student Volunteer Program
+----------------------------------------------------------------------
+
+If you are a student wanting to attend ESUG, have you considered being
+a student volunteer? Student volunteers help keep the conference
+running smoothly; in return, they have free accommodations, while
+still having most of the time to enjoy the conference.
+
+More information at:
+http://www.esug.org/Conferences/2012/StudentVolunteers
+
+5) Free ESUG tickets program
+----------------------------------------------------------------------
+
+ESUG will offer 10 free entrance tickets. To get a free ticket you
+should send a mail to board ＠ esug.org
+
+Subject: [ESUG 2012 Free entrance] + your name
+
+And you should write a small motivation.
+
+
+
+
+We hope to see you there and have fun together.
+
+
+--
+The ESUG board
+Board mailing list: board ＠ lists.esug.org
+
+
+
+-- 
+Serge Stinckwich
+UMI UMMISCO 209 (IRD/UPMC), Hanoi, Vietnam
+Every DSL ends up being Smalltalk
+http://doesnotunderstand.org/
+

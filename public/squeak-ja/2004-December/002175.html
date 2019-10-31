@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2175] Re: SuperSwiki 日本語パッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202175%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsJVElQyVBGyhC%3F%3D&In-Reply-To=41CC333F.90203%40metatoys.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002173.html">
+   <LINK REL="Next"  HREF="002182.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2175] Re: SuperSwiki 日本語パッチ</H1>
+    <B>H.Hachisuka</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202175%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsJVElQyVBGyhC%3F%3D&In-Reply-To=41CC333F.90203%40metatoys.org"
+       TITLE="[Squeak-ja: 2175] Re: SuperSwiki 日本語パッチ">hachi ＠ asu.ac.jp
+       </A><BR>
+    <I>2004年 12月 25日 (土) 10:41:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002173.html">[Squeak-ja: 2173] SuperSwiki 日本語パッチ
+</A></li>
+        <LI>次の記事 <A HREF="002182.html">[Squeak-ja: 2182] Re: SuperSwiki 日本語パッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2175">[ 日付 ]</a>
+              <a href="thread.html#2175">[ スレッド ]</a>
+              <a href="subject.html#2175">[ 件名 ]</a>
+              <a href="author.html#2175">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは蜂須賀です。
+
+　うる覚えなのですが、確か、archiveMembers の ZipFileMember が持っている
+ファイル名(fileName)がMultiStringではなくて、プラットフォームに依存する
+Stringだったからだったような覚えがあります。
+
+　&quot;SuperSwikiServer&gt;&gt;upLoadProject:members:retry:&quot;の中では、&quot;アップロー
+ド中 ○○○...&quot;という表示を発していますので、entry fileName
+convertFromSystemString でMultiStringに戻した結果を表示させて、
+
+　さらに、SuperSwikiに送信する際には、entry fileName
+convertFromSystemString convertToSuperSwikiServerString として
+MultiStringに変換して、さらにサーバ側の文字コード(シフトJIS)に変換したよ
+うな記憶があります。
+
+今思うと、力任せというかその場限りのトリッキーなfixで、ちょっと恥ずかし
+くなってきますね....
+
+&gt;<i> こんにちは。山宮です。
+</I>&gt;<i> 
+</I>&gt;<i> 先日は SuperSwiki で日本語が使えるパッチを頂いて有難うございました。色々
+</I>&gt;<i> 試してみて、蜂須賀さんのコードが大変上手く動作する事を確認しました。そ
+</I>&gt;<i> こで一つ質問しても宜しいでしょうか?
+</I>&gt;<i> 
+</I>&gt;<i> SuperSwikiServer&gt;&gt;upLoadProject:members:retry:
+</I>&gt;<i> 
+</I>&gt;<i> の中で内部文字コードを sjis に変換する時に convertFromSystemString を
+</I>&gt;<i> 使っているようなのですが、他の部分では convertFromSuperSwikiServerString
+</I>&gt;<i> を使っています。ここだけあえてプラットフォームに依存する 
+</I>&gt;<i> convertFromSystemString を使っておられるのはどのような理由でしょ
+</I>&gt;<i> うか?教えてください。
+</I>&gt;<i> 
+</I>&gt;<i> 蜂須賀さんのコードを元に、もう少し実験や修正を加えましたらその分もまた
+</I>&gt;<i> 公開いたします。よろしくお願いします。
+</I>&gt;<i> 
+</I>&gt;<i> # 多くの方が興味をもたれる話題ですので ML に投稿しました。蜂須賀さんの
+</I>&gt;<i> # コードは <A HREF="http://www.asu.ac.jp/hachi/5.html">http://www.asu.ac.jp/hachi/5.html</A> でご覧になれます。
+</I>&gt;<i> 
+</I>
+
+-- 
+/*
+　愛知産業大学 事務部情報管理課
+　蜂須賀 仁志 / e-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hachi ＠ asu.ac.jp</A>
+                jpnic handle: HH420JP
+　444-0005 愛知県岡崎市岡町原山12-5
+　TEL: 0564-48-4511 FAX: 0564-48-7756
+*/
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002173.html">[Squeak-ja: 2173] SuperSwiki 日本語パッチ
+</A></li>
+	<LI>次の記事 <A HREF="002182.html">[Squeak-ja: 2182] Re: SuperSwiki 日本語パッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2175">[ 日付 ]</a>
+              <a href="thread.html#2175">[ スレッド ]</a>
+              <a href="subject.html#2175">[ 件名 ]</a>
+              <a href="author.html#2175">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

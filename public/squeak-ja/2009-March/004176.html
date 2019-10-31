@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4176] Re: GainerとSerialとわたし
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204176%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdhaW5lchskQiRIGyhCU2Vy%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaWFsGyRCJEgkbyQ/JDcbKEI%3D%3F%3D&In-Reply-To=2d5d52a80903130104o8cdd4abxcd7f3120a6b07ea7%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004174.html">
+   <LINK REL="Next"  HREF="004173.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4176] Re: GainerとSerialとわたし</H1>
+    <B>Takeshi MUTOH</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204176%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEdhaW5lchskQiRIGyhCU2Vy%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaWFsGyRCJEgkbyQ/JDcbKEI%3D%3F%3D&In-Reply-To=2d5d52a80903130104o8cdd4abxcd7f3120a6b07ea7%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4176] Re: GainerとSerialとわたし">mutoh ＠ openedu.org
+       </A><BR>
+    <I>2009年 3月 15日 (日) 05:47:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004174.html">[Squeak-ja: 4174] Re: GainerとSerialとわたし
+</A></li>
+        <LI>次の記事 <A HREF="004173.html">[Squeak-ja: 4173] squeak によるデータベース接続
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4176">[ 日付 ]</a>
+              <a href="thread.html#4176">[ スレッド ]</a>
+              <a href="subject.html#4176">[ 件名 ]</a>
+              <a href="author.html#4176">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>むとう＠おうちです。
+
+On 2009/03/13, at 17:04, Kazuhiro ABE wrote:
+&gt;&gt;<i> しかし、ここ見るとScratchPlugin関連のソースもあるの 
+</I>&gt;&gt;<i> ですね。
+</I>&gt;<i> 私のSD 3月号の記事では「ない」と書いてしまいました 
+</I>&gt;<i> が、おっしゃるとおり、「ある」の間違いです。すみません。
+</I>&gt;<i> <A HREF="http://d.hatena.ne.jp/abee2/20090210/1234263060">http://d.hatena.ne.jp/abee2/20090210/1234263060</A>
+</I>
+あ、この記事もまだ読んでないです(_o_)
+
+&gt;&gt;<i> そもそも、COM10より大きいので使えてる人います?
+</I>&gt;<i> 私もダメです。
+</I>&gt;<i> どうやらこれはWin32の仕様というかバグというかでMicrosoft 
+</I>&gt;<i> が回避方法を公開していますが、今のところ 
+</I>&gt;<i> sqWin32SerialPort.cは対応していないようです。
+</I>&gt;<i> <A HREF="http://support.microsoft.com/default.aspx?scid=kb;ja;JP115831">http://support.microsoft.com/default.aspx?scid=kb;ja;JP115831</A>
+</I>
+私もそう思っています。
+- <A HREF="http://qml.610t.org/squeak/mutoh_20090207.html">http://qml.610t.org/squeak/mutoh_20090207.html</A>
+
+ちょっと、WindowsVMの開発環境を作る元気がなくて、検証ま 
+ではしてないんですが…
+
+
+あと、書き忘れてましたが、Linuxの方は他の方も以下のよう 
+な修正を出されてます。
+- <A HREF="http://bugs.squeak.org/view.php?id=7266">http://bugs.squeak.org/view.php?id=7266</A>
+
+けど、これしてしまうと、イメージ側でunixかどうかみて 
+コード書かないとダメなので、いかがなもんかいなと個人的には 
+思ってます。
+# まあ、僕のプラグイン直接書き換えるってのよりは100倍ま 
+しだとは思いますが;-p
+
+僕の考えている落としどころとしては、VMのコマンドライン 
+オプションにdevice prefixを指定できるようにするってのな 
+んですが、皆さんはどう思われます?
+
+では。
+--
+武藤 武士＠「あおによし」自宅より
+  E-mail:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">mutoh ＠ openedu.org</A>	URL:<A HREF="http://qml.610T.org/">http://qml.610T.org/</A>
+  ・にんげんは一度に一つしかでけへんいうとるやろ
+  ・健康でいられるのが一番だなぁ…
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004174.html">[Squeak-ja: 4174] Re: GainerとSerialとわたし
+</A></li>
+	<LI>次の記事 <A HREF="004173.html">[Squeak-ja: 4173] squeak によるデータベース接続
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4176">[ 日付 ]</a>
+              <a href="thread.html#4176">[ スレッド ]</a>
+              <a href="subject.html#4176">[ 件名 ]</a>
+              <a href="author.html#4176">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7915] Re: Squeak/Pharoの低レベルGUIのしくみ?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207915%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCJE5EYyVsJVklaxsoQkdVSQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4kNyQvJF8bKEI/%3F%3D&In-Reply-To=%3C4DA79091.9070806%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007914.html">
+   <LINK REL="Next"  HREF="007916.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7915] Re: Squeak/Pharoの低レベルGUIのしくみ?</H1>
+    <B>Hiroki Horiuchi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207915%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCJE5EYyVsJVklaxsoQkdVSQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4kNyQvJF8bKEI/%3F%3D&In-Reply-To=%3C4DA79091.9070806%40gmail.com%3E"
+       TITLE="[SML 7915] Re: Squeak/Pharoの低レベルGUIのしくみ?">x19290 ＠ gmail.com
+       </A><BR>
+    <I>2011年 4月 15日 (金) 09:25:53 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007914.html">[SML 7914] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+        <LI>次の記事 <A HREF="007916.html">[SML 7916] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7915">[ 日付 ]</a>
+              <a href="thread.html#7915">[ スレッド ]</a>
+              <a href="subject.html#7915">[ 件名 ]</a>
+              <a href="author.html#7915">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おはようございます。
+&gt;<i> 鍵はioShowDisplay()はSmalltalk側の
+</I>&gt;<i> #primShowRectLeft:right:top:bottom:(および
+</I>&gt;<i> #primRetryShowRectLeft:right:top:bottom:)
+</I>&gt;<i>   
+</I>出力については、これが知りたかったことのすべてです。
+
+&gt;<i>   そして、GUIフレームワークというのは
+</I>&gt;<i>
+</I>&gt;<i>   while (1) {
+</I>&gt;<i>     ユーザーのイベントを処理する();
+</I>&gt;<i>     タイミングに関係するイベントを処理する();
+</I>&gt;<i>     画面を書き換える();
+</I>&gt;<i>   }
+</I>&gt;<i>
+</I>&gt;<i> というだけのことなのですが、WorldState&gt;&gt;doOneCycleNowFor:にまさにそれだけの
+</I>&gt;<i> ことが書いてあります
+</I>&gt;<i>   
+</I>この無限ループが、Project&gt;&gt;spawnNewProcess内の
+[ World doOneCycle. Processor yield. false ] whileFalse: [ ]
+なのですね。
+
+よくわかりました。ありがとうございます。
+--
+堀内寛己(ほりうちひろき)
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007914.html">[SML 7914] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+	<LI>次の記事 <A HREF="007916.html">[SML 7916] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7915">[ 日付 ]</a>
+              <a href="thread.html#7915">[ スレッド ]</a>
+              <a href="subject.html#7915">[ 件名 ]</a>
+              <a href="author.html#7915">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

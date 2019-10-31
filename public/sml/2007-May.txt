@@ -1,0 +1,247 @@
+From nisinaka ＠ sra.co.jp  Tue May  1 15:35:57 2007
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7303] [ANNOUNCE] Jun for Java (Jun655)
+Message-ID: <20070501153444.2895.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン655を公開します。
+
+  バージョン646からの主な変更点は、以下の通りです。
+
+    * (new feature) JunPlane と Jun3dLine と Jun2dLineを、Jun655 
+      相当に更新しました。JunPlane の 'reflectingLineWithLine_()' 
+      という新しいメソッドを使って、線分が面に反射したときの線分
+      を求めることが出来ます。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/655/Reflection.gif
+
+    * (modification) JunOpenGL3dModel を Jun650 相当に更新しまし
+      た。各種設定を、テーブルを使って管理するように修正していま
+      す。
+
+    * (new feature) JunStopwatch は、ストップウォッチの機能を実装
+      したクラスです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/655/Stopwatch.gif
+
+    * (modification) JunCursorAnimator を Jun651 相当に更新しまし
+      た。ストップウォッチカーソルを定義しています。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/655/StopwatchCursors.gif
+
+    * (new feature) JunStereoLevelMeter は、左右ふたつの値にふた
+      つの JunLevelGaugeMeter を配置したクラスです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/655/StereoLevelMeter.gif
+
+    * (new feature) JunLevelGaugeMeter は、複数の 
+      JunLevelGagueModel を組み合わせて、ゲージをメータとして扱う
+      ためのクラスです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/655/LevelGaugeMeter.gif
+
+    * (bug fix) リサイズおよびスクロールに関連した 
+      JunGraphicViewSwingのバグを修正しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From aoki ＠ sra.co.jp  Tue May 15 15:03:54 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7304] ルルとウォールドーそして…
+Message-ID: <46494D4A.1030300@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+もうご存じの方々も、すでに用いていらっしゃる方々も多いと思い
+ますが、VisualWorks 7.5「lulu: ルル」がリリースされています。
+先月の23日に非商用版も公開されています。
+
+  http://smalltalk.cincom.com/
+
+  Cincom Smalltalk Spring 2007
+  April 23, 2007 14:40:01 EDT
+
+  We've shipped Cincom Smalltalk 2007 - CDs should start
+  going to customers on Wednesday, April 25, and the
+  non-commercial downloads will be available by (or possibly
+  before) then. Enjoy!
+
+次期バージョン 7.5.1 のコードネームが「waldo: ウォールドー」
+になったようで、継続開発も始まっています。
+
+じゅんの最新バージョンは Jun744 であり、ルルでもウォールドー
+でもパーセルインが可能です。パーセル自体はルルで作成しました。
+
+  http://www.sra.co.jp/people/aoki/Jun/htmls/News.html
+
+なお、日経ソフトウエア連載は、VisualWorks 7.4.1 の旧バージョ
+ンのままで最終回（１０月２４日発売予定）までゆこうと思います。
+
+そして、この日経ソフトウエア連載「Smalltalk 道場」を母体にし
+て、かなりの加筆を行い、新しい Smalltalk の本を出す予定です。
+お楽しみに！
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Wed May 16 00:44:22 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7305] Re: ルルとウォールドーそして…
+In-Reply-To: <46494D4A.1030300@sra.co.jp>
+References: <46494D4A.1030300@sra.co.jp>
+Message-ID: <4649D556.7020805@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+> なお、日経ソフトウエア連載は、VisualWorks 7.4.1 の旧バージョ
+> ンのままで最終回（１０月２４日発売予定）までゆこうと思います。
+
+当該の日経ソフトウエア連載「Smalltalk 道場」の件ですが、現在、
+第６回「手描き」が出ています。
+
+http://itpro.nikkeibp.co.jp/NSW/
+http://itpro.nikkeibp.co.jp/article/MAG/20070420/269093/
+
+次号から後半に入りますので、VisualWorks に乗った「じゅん」の
+持ち味を前面に出してゆきます。
+
+今、浅岡さんが第１０回「幾何」を書き下ろしています。そして、
+私が第１１回「変容」を算段しているところです。
+
+当初、第１１回は「位相」を書くことにしていたのですが、やはり
+難し過ぎるだろう、ということで、「変容」に改題しました。
+
+以下に執筆予定を書き添えます。
+
+------------------------------------------------------------
+第７回【視界】　　　　　　　　　　２００７年０５月２４日発売
+
+ここまで２次元空間を扱ってきましたが、ここで一気に３次元空間
+へ誘導します。ビューボリューム（視体積）を扱うプロジェクショ
+ンとビューファインダというオブジェクトを紹介してゆきます。天
+動説と地動説のような話を交えつつ、ものの見方を転回する大切さ
+を伝えます。
+
+------------------------------------------------------------
+第８回【点描・線描・面描】　　　　２００７年０６月２２日発売
+
+可視化をプログラミングのデバックやテストに用いる重要性を説き
+ます。プリント文などでプログラムを作っている方々の目にこびり
+ついている鱗（うろこ）を落とします。レンダリング（描画）する
+ということ、グラフィック（生き生きとした）ということ、これら
+のそもそも意味を解題します。
+
+------------------------------------------------------------
+第９回【肌理】　　　　　　　　　　２００７年０７月２４日発売
+
+テクスチャマッピングと呼ばれる肌理（きめ）の扱い方を説きます。
+ジェームス・ギブソンさんのアフォーダンスとも関連が深い題材で
+すから、肌理の変化が視覚にもたらす作用を、新しい心理学の立場
+を踏まえながら、面白いプログラムを作ってゆきます。
+
+------------------------------------------------------------
+第１０回【幾何】　　　　　　　　　２００７年０８月２４日発売
+
+座標・角度・直線・折線・曲線・平面・曲面・境界・分線・分面な
+どの幾何オブジェクトを紹介しながら、視てわかる楽しいプログラ
+ミングを行います。裏には数学の幾何の大定理が潜んでいるのです
+が、それを感じさせないほどに面白くやります。無理数の代表であ
+るπを考えてみます。
+
+------------------------------------------------------------
+第１１回【変容】　　　　　　　　　２００７年０９月２４日発売
+
+ある姿（形容）から別の姿へと徐々に変わってゆく変容（モーフ）
+を扱います。チョウやカエルなどが発育の時期に応じて形を変えて
+ゆく（メタモルフォーゼする）ように、オブジェクト指向のプログ
+ラミングもオープンソースのプログラミングもプログラマに変身や
+変態を促します。それを見すえるためにワープ・ブレンド・モーフ
+の一連をやってみましょう。
+
+------------------------------------------------------------
+第１２回【お楽しみ】　　　　　　　２００７年１０月２４日発売
+
+最終回になりますので、これまでの１１回分を総括する内容にした
+いと思います。まだ思案中ということで・・・
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From nisinaka ＠ sra.co.jp  Thu May 24 15:23:53 2007
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:04 2007
+Subject: [SML 7306] [ANNOUNCE] Jun for Java (Jun662)
+Message-ID: <20070524152134.7DDF.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン662を公開します。
+
+  バージョン655からの主な変更点は、以下の通りです。
+
+    * (modification) JunDelaunay2dDiagram を Jun662 相当に更新し
+      ました。凸包(convex hull)と最小内包円(minimal enclosing
+      circle)を求めるメソッドを実装しています。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/662/ConvexHull.gif
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/662/MinimalEnclosingCircle.gif
+
+    * (modification) JunOpenGL3dObject を Jun665 相当に更新しまし
+      た。典型的なオブジェクトとして矢印を増やしています。
+
+    * (modification) JunOpenGL3dTransformedObject を Jun656 相当
+      に更新しました。内部的に使用しているオブジェクトをキャッシュ
+      して、処理効率を向上しました。
+
+    * (modification) JunGeometry とそのサブクラス群を Jun658 相当
+      に更新しました。平面や三角形群に変換するメソッドを追加して
+      います。
+
+    * (new feature) 離散ウェーブレット変換(discrete wavelet
+      transform)を実装しています。1次元と2次元のデータを扱うクラ
+      スが、それぞれ JunDiscreteWavelet1dTransformation と
+      JunDiscreteWavelet2dTransformationに分かれています。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/662/DWT1d.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/662/DWT2d01.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/662/DWT2d02.png
+
+    * (modification) JunMatrix/JunDoubleMatrix を Jun660 相当に更
+      新しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7681] Re: ニコ生APIのコメントサーバとのやりとりができません
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207681%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVLJTNAOBsoQkFQSRskQiROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTMlYSVzJUglNSE8JVAkSCROJGQkaiRIJGokLCRHJC0kXiQ7GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJHMbKEI%3D%3F%3D&In-Reply-To=JxZFXN7TUX3uF3KvzLFBMLXQ2%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007679.html">
+   <LINK REL="Next"  HREF="007682.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7681] Re: ニコ生APIのコメントサーバとのやりとりができません</H1>
+    <B>久保田 吉彦</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207681%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVLJTNAOBsoQkFQSRskQiROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTMlYSVzJUglNSE8JVAkSCROJGQkaiRIJGokLCRHJC0kXiQ7GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJHMbKEI%3D%3F%3D&In-Reply-To=JxZFXN7TUX3uF3KvzLFBMLXQ2%40mars.dti.ne.jp"
+       TITLE="[SML 7681] Re: ニコ生APIのコメントサーバとのやりとりができません">kubota ＠ sie.dendai.ac.jp
+       </A><BR>
+    <I>2009年 10月 10日 (土) 16:29:06 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007679.html">[SML 7679] Re: ニコ生APIのコメントサーバとのやりとりができません
+</A></li>
+        <LI>次の記事 <A HREF="007682.html">[SML 7682] Re: Smalltalk合同勉強会@名古屋
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7681">[ 日付 ]</a>
+              <a href="thread.html#7681">[ スレッド ]</a>
+              <a href="subject.html#7681">[ 件名 ]</a>
+              <a href="author.html#7681">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、電大の久保田です。
+
+RubyであっさりできてSmalltalkでつまづいていて、なんだかく 
+やしい気持ちでいました。
+投稿した後もいろいろためしましたが、Character value: 0 に 
+は気がつきませんでした。
+ようやく解決しました、どうもありがとうござういました。
+
+On 2009/10/10, at 15:19, Masashi Umezawa wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;<i> こんな感じではないでしょうか。
+</I>&gt;<i>
+</I>&gt;<i> accessor := SocketAccessor  
+</I>&gt;<i> newTCPclientToHost:'twr.live.nicovideo.jp' port: 2538.
+</I>&gt;<i> query := '&lt;thread thread=&quot;1000000013&quot; version=&quot;20061206&quot;  
+</I>&gt;<i> res_from=&quot;-1&quot;/&gt;'.
+</I>&gt;<i> connection := accessor asExternalConnection.
+</I>&gt;<i> connection writeStream nextPutAll: query; nextPut:(Character value:  
+</I>&gt;<i> 0); commit.
+</I>&gt;<i>
+</I>&gt;<i> rstr := connection readStream.
+</I>&gt;<i> [[rstr atEnd] whileFalse: [
+</I>&gt;<i> Transcript cr; show: (rstr upTo: (Character value: 0))]] fork.
+</I>&gt;<i>
+</I>&gt;<i> [] forkで括っているのは、&quot;do it&quot;後に操作しやすくするため 
+</I>&gt;<i> です。
+</I>&gt;<i> なくてもかまいません。
+</I>&gt;<i>
+</I>&gt;<i> ポイントは0で終わる文字列の作り方にあると思います。
+</I>&gt;<i> またこの手のやつは一時変数ではなくワークスペース変数にしておい 
+</I>&gt;<i> たほうが、
+</I>&gt;<i> デバッグがしやすくて良いですよ。
+</I>&gt;<i>
+</I>&gt;<i> ではでは。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 久保田 吉彦 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">kubota ＠ sie.dendai.ac.jp</A>&gt; wrote:
+</I>&gt;&gt;<i> こんにちは、電大の久保田です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> まだ問題解決できず悩んでいます。
+</I>&gt;&gt;<i> コメントサーバへのアクセスをWebにあったプログラムを参考に
+</I>&gt;&gt;<i> 作ってみました。動きますが、Rubyです。ちゃんとサーバか 
+</I>&gt;&gt;<i> らの
+</I>&gt;&gt;<i> 応答を取得します。
+</I>&gt;&gt;<i> ーーーーーーーーーーーーーーーーー
+</I>&gt;&gt;<i> require 'socket'
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> socket = TCPSocket.open(&quot;twr.live.nicovideo.jp&quot;,&quot;2538&quot;)
+</I>&gt;&gt;<i> query = &quot;&lt;thread thread=\&quot;1000000013\&quot; version=\&quot;20061206\&quot; res_from=
+</I>&gt;&gt;<i> \&quot;-1\&quot;/&gt;\0&quot;
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> puts query
+</I>&gt;&gt;<i> socket.print query
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> socket.each(&quot;\0&quot;) do |line|
+</I>&gt;&gt;<i>   puts line
+</I>&gt;&gt;<i> end
+</I>&gt;&gt;<i> ーーーーーーーーーーーーーーーーー
+</I>&gt;&gt;<i> これと同じことをSmalltalkでやりたいわけです。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 次のようにプログラムを書いてみましたがreplyを受けとるとこ
+</I>&gt;&gt;<i> ろで応答が返ってきません。
+</I>&gt;&gt;<i> 原因が分からないので、どなたかプログラムのどこが悪いのかご指 
+</I>&gt;&gt;<i> 摘願
+</I>&gt;&gt;<i> えないでしょうか。
+</I>&gt;&gt;<i> ーーーーーーーーーーーーーーーーー
+</I>&gt;&gt;<i> |socket stream query reply|
+</I>&gt;&gt;<i> socket :=SocketAccessor newTCPclientToHost:'twr.live.nicovideo.jp'
+</I>&gt;&gt;<i> port: 2538.
+</I>&gt;&gt;<i> stream := socket readAppendStream.
+</I>&gt;&gt;<i> query := '&lt;thread thread=&quot;1000000013&quot; version=&quot;20061206&quot;
+</I>&gt;&gt;<i> res_from=&quot;-1&quot;/&gt;\0'
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Transcript cr; show:query.
+</I>&gt;&gt;<i> stream nextPutAll: query ;cr ;commit.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> [true] whileTrue: [
+</I>&gt;&gt;<i>   reply := stream upToAll:'\0'.
+</I>&gt;&gt;<i>   Transcript cr; show: reply.]
+</I>&gt;&gt;<i> ーーーーーーーーーーーーーーーーー
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 以上、よろしくお願い致します。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 久保田吉彦
+</I>&gt;&gt;<i> 東京電機大学 情報環境学部 情報環境学科
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 2009/10/08, at 12:39, 久保田 吉彦 wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> こんにちは電大の久保田です。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> ニコ生アラートのようなものを以下のURLで公開されている
+</I>&gt;&gt;&gt;<i> APIを使ってちょこちょこ書いています。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> <A HREF="http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%">http://dic.nicovideo.jp/a/%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%A2%E3%</A>
+</I>&gt;&gt;&gt;<i> 83%A9%E3%83%BC%E3%83%88(%E6%9C%AC%E5%AE%B6)%E3%81%AE%E4%BB%95%E6% 
+</I>&gt;&gt;&gt;<i> A7%98
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 以下のプログラム(きたないですが)でAPIの使い
+</I>&gt;&gt;&gt;<i> かたをちょっと勉強をしているのですが、上記URLのログイン
+</I>&gt;&gt;&gt;<i> API、認証APIその2は使えたのですがコメントサーバー
+</I>&gt;&gt;&gt;<i> の項目がうまくいきません。
+</I>&gt;&gt;&gt;<i> 自分ではコメントサーバにXMLを送信してその返事を待つこ 
+</I>&gt;&gt;&gt;<i> とを
+</I>&gt;&gt;&gt;<i> 10回くりかえしているつもりですが、コメントにあるように
+</I>&gt;&gt;&gt;<i> reply := stream through: Character cr.  を実行するとプログラム
+</I>&gt;&gt;&gt;<i> が停止してしまいます(step3がTranscriptに表示され
+</I>&gt;&gt;&gt;<i> ず、ループもそこでおわる)。
+</I>&gt;&gt;&gt;<i> デバッガ開いて追ってみましたがなぜだかわかりませでした?
+</I>&gt;&gt;&gt;<i> Socketプログラムはくわしくないのでおかしなことをしているので
+</I>&gt;&gt;&gt;<i> しょうか?
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> また、実行するとException&quot;Unhandled exception:CA Not inTrust
+</I>&gt;&gt;&gt;<i> Registry!&quot;と出てきます。いまはProceedボタンを押してプロ
+</I>&gt;&gt;&gt;<i> グラムを実行していますが、このExceptionを出さない方法は
+</I>&gt;&gt;&gt;<i> ないのでしょうか?
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 作成している環境はVisualWorks7.6NC+Jun784それに
+</I>&gt;&gt;&gt;<i> WobSupportパーセルを使っています。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>    | host port socket connection elements stream reply threadId key
+</I>&gt;&gt;&gt;<i> elementCollection pdoc parser httpRequest httpResponse client
+</I>&gt;&gt;&gt;<i> message |
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> &quot;ログインAPIその1&quot;
+</I>&gt;&gt;&gt;<i>     client := Net.HttpClient new.
+</I>&gt;&gt;&gt;<i>     httpRequest := Net.HttpRequest post:
+</I>&gt;&gt;&gt;<i>             '<A HREF="https://secure.nicovideo.jp/secure/login?">https://secure.nicovideo.jp/secure/login?</A>
+</I>&gt;&gt;&gt;<i> site=nicolive_antenna'.
+</I>&gt;&gt;&gt;<i>     httpRequest
+</I>&gt;&gt;&gt;<i>         userAgent: 'テスト1';
+</I>&gt;&gt;&gt;<i>         addFormKey: 'mail' value: 'メールアドレス';
+</I>&gt;&gt;&gt;<i>         addFormKey: 'password' value: 'パスワード'.
+</I>&gt;&gt;&gt;<i>     httpResponse := client executeRequest: httpRequest.
+</I>&gt;&gt;&gt;<i>     parser := XML.XMLParser new.
+</I>&gt;&gt;&gt;<i>     parser validate: false.
+</I>&gt;&gt;&gt;<i>     pdoc := parser parse: httpResponse decodedContents readStream.
+</I>&gt;&gt;&gt;<i>     elementCollection := pdoc root elementNamed: 'ticket'.
+</I>&gt;&gt;&gt;<i>     key := elementCollection elements first text.
+</I>&gt;&gt;&gt;<i>     Transcript
+</I>&gt;&gt;&gt;<i>         cr;
+</I>&gt;&gt;&gt;<i>         show: 'key:' , key.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> &quot;認証APIその2&quot;
+</I>&gt;&gt;&gt;<i>     client := Net.HttpClient new.
+</I>&gt;&gt;&gt;<i>     httpRequest := Net.HttpRequest post:
+</I>&gt;&gt;&gt;<i>             '<A HREF="http://live.nicovideo.jp/api/getalertstatus'.">http://live.nicovideo.jp/api/getalertstatus'.</A>
+</I>&gt;&gt;&gt;<i>     httpRequest
+</I>&gt;&gt;&gt;<i>         userAgent: 'テスト2';
+</I>&gt;&gt;&gt;<i>         addFormKey: 'ticket' value: key.
+</I>&gt;&gt;&gt;<i>     httpResponse := client executeRequest: httpRequest.
+</I>&gt;&gt;&gt;<i>     parser := XML.XMLParser new.
+</I>&gt;&gt;&gt;<i>     parser validate: false.
+</I>&gt;&gt;&gt;<i>     pdoc := parser parse: httpResponse decodedContents readStream.
+</I>&gt;&gt;&gt;<i>     elements := pdoc root children last.
+</I>&gt;&gt;&gt;<i>     host := (elements elementsNamed: 'addr') first elements first
+</I>&gt;&gt;&gt;<i> text.
+</I>&gt;&gt;&gt;<i>     port := (elements elementsNamed: 'port') first elements first
+</I>&gt;&gt;&gt;<i> text.
+</I>&gt;&gt;&gt;<i>     threadId := (elements elementsNamed: 'thread') first elements
+</I>&gt;&gt;&gt;<i> first text.
+</I>&gt;&gt;&gt;<i>     Transcript
+</I>&gt;&gt;&gt;<i>         cr;
+</I>&gt;&gt;&gt;<i>         show: host , ':' , port , ':' , threadId.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> &quot;コメントサーバー&quot;
+</I>&gt;&gt;&gt;<i>     socket := SocketAccessor
+</I>&gt;&gt;&gt;<i>         newTCPclientToHost: host
+</I>&gt;&gt;&gt;<i>         port: port asNumber.
+</I>&gt;&gt;&gt;<i>     connection := ExternalConnection new.
+</I>&gt;&gt;&gt;<i>     connection
+</I>&gt;&gt;&gt;<i>         input: socket;
+</I>&gt;&gt;&gt;<i>         output: socket.
+</I>&gt;&gt;&gt;<i>     stream := connection readAppendStream.
+</I>&gt;&gt;&gt;<i>     stream lineEndTransparent.
+</I>&gt;&gt;&gt;<i>     message := '&lt;thread thread=' , threadId ,
+</I>&gt;&gt;&gt;<i>             ' version=&quot;20061206&quot; res_from=&quot;-1&quot;/&gt;'.
+</I>&gt;&gt;&gt;<i>     Transcript
+</I>&gt;&gt;&gt;<i>         cr;
+</I>&gt;&gt;&gt;<i>         show: message.
+</I>&gt;&gt;&gt;<i>     10
+</I>&gt;&gt;&gt;<i>         timesRepeat:
+</I>&gt;&gt;&gt;<i>             [Transcript
+</I>&gt;&gt;&gt;<i>                 cr;
+</I>&gt;&gt;&gt;<i>                 show: 'step1'.
+</I>&gt;&gt;&gt;<i>             stream
+</I>&gt;&gt;&gt;<i>                 nextPutAll: message; &quot;&lt;= XMLの送信&quot;
+</I>&gt;&gt;&gt;<i>                 cr;
+</I>&gt;&gt;&gt;<i>                 commit.
+</I>&gt;&gt;&gt;<i>             Transcript
+</I>&gt;&gt;&gt;<i>                 cr;
+</I>&gt;&gt;&gt;<i>                 show: 'step2'.
+</I>&gt;&gt;&gt;<i>             reply := stream through: Character cr.    &quot;&lt;=ここ
+</I>&gt;&gt;&gt;<i> でプログラムが止まる&quot;
+</I>&gt;&gt;&gt;<i>             Transcript
+</I>&gt;&gt;&gt;<i>                 cr;
+</I>&gt;&gt;&gt;<i>                 show: 'step3'].
+</I>&gt;&gt;&gt;<i>     stream close.
+</I>&gt;&gt;&gt;<i>     ^reply
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa]
+</I>
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007679.html">[SML 7679] Re: ニコ生APIのコメントサーバとのやりとりができません
+</A></li>
+	<LI>次の記事 <A HREF="007682.html">[SML 7682] Re: Smalltalk合同勉強会@名古屋
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7681">[ 日付 ]</a>
+              <a href="thread.html#7681">[ スレッド ]</a>
+              <a href="subject.html#7681">[ 件名 ]</a>
+              <a href="author.html#7681">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

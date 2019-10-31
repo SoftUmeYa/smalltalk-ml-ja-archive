@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2796] Re: Scamperのリファクタリングしました。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202796%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjYW1wZXIbJEIkTiVqGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUlISUvJT8laiVzJTAkNyReJDckPyEjGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002793.html">
+   <LINK REL="Next"  HREF="002797.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2796] Re: Scamperのリファクタリングしました。</H1>
+    <B>伊藤謙吉</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202796%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNjYW1wZXIbJEIkTiVqGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVUlISUvJT8laiVzJTAkNyReJDckPyEjGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2796] Re: Scamperのリファクタリングしました。">kenk.ito41g31182 ＠ bc.wakwak.com
+       </A><BR>
+    <I>2006年 1月  7日 (土) 17:34:05 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002793.html">[Squeak-ja: 2793] Re: Scamperのリファクタリングしました。
+</A></li>
+        <LI>次の記事 <A HREF="002797.html">[Squeak-ja: 2797] Re: Scamperのリファクタリングしました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2796">[ 日付 ]</a>
+              <a href="thread.html#2796">[ スレッド ]</a>
+              <a href="subject.html#2796">[ 件名 ]</a>
+              <a href="author.html#2796">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>はじめまして　kenk (伊藤謙吉　本年年男です）　です。
+ScamperM　トライしました。
+
+----- Original Message ----- 
+From: &quot;ICHIKAWA, Yuji&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">y.ich ＠ f3.dion.ne.jp</A>&gt;
+To: &quot;Squeak discussion in Japanese&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja ＠ smalltalk.jp</A>&gt;
+Sent: Friday, January 06, 2006 12:34 AM
+Subject: [Squeak-ja: 2793] Re: Scamperのリファクタリングしました。
+
+
+&gt;<i> こんばんは。市川です。
+</I>&gt;<i>
+</I>&gt;<i> リファクタリングしたScamperで多言語化対応しました。
+</I>&gt;<i> <A HREF="http://ich.homelinux.net:8080/squeak/58">http://ich.homelinux.net:8080/squeak/58</A>
+</I>
+ダウンロードして　２００５Jの開発版に読み込みました。（WindowXP上です）
+MCZファイル初めてでしたので、解凍して、ｓｔファイルを　fileinしました。
+だいたい動きました。　私の　Comswiki　のHPでは文字化けです。
+なぜか、squeakland.org のHPが開けませんでした。
+
+&gt;<i> 残念ながら日本語しか動作確認していません。
+</I>&gt;<i> ウェブページがcharsetを定義していて、TextConverterとフォントがあればうまく機能すると思うのですが・・・
+</I>&gt;<i>
+</I>市川さんのHPと私のHPのソースコード見てみたら、私のには charsetの指定が抜けておりました。 ref の　template　に　追加しましたら、うまく動くようになりました。
+ここ３年ぐらいのprファイルも直接オープンすることも確認しました。（２００５Jのおかげで
+今は必要となくなった動作ですが）。
+英語版　３.８ に　ScamperMを読み込んでテストしました。
+英語のwebは開くようです。squeakland.orgは開けません。
+（　Scamper　でも　開けませんでした）
+日本語は文字化けをしております。市川さんの読みどおりのようです。
+大雑把な結果ですがご報告します。
+
+kenk
+
+
+&gt;<i> 従来のScamperを変更する方法を止めて、新しくクラスを用意したので、気楽にお試しください。
+</I>&gt;<i> と言いたいところですが、HTTPSocketやString（のencodeForHTTP)など変更が意外と飛び火していますので、大切なイメージでは使わないほうがいいかもしれません。
+</I>&gt;<i>
+</I>&gt;<i> やっていることはかなり前から変わっていないのですが、今回プログラミング的にかなり満足を得ることができました^^
+</I>&gt;<i>
+</I>&gt;<i> ＃yahooとか、ユーザーがある単語の後次にどんな単語を検索するかデータを取っているんですね。びっくりしました。
+</I>&gt;<i> −
+</I>&gt;<i> 市川雄二
+</I>&gt;<i>
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002793.html">[Squeak-ja: 2793] Re: Scamperのリファクタリングしました。
+</A></li>
+	<LI>次の記事 <A HREF="002797.html">[Squeak-ja: 2797] Re: Scamperのリファクタリングしました。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2796">[ 日付 ]</a>
+              <a href="thread.html#2796">[ スレッド ]</a>
+              <a href="subject.html#2796">[ 件名 ]</a>
+              <a href="author.html#2796">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,430 @@
+From umejava ＠ mars.dti.ne.jp  Thu Apr  2 21:55:16 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Apr  2 21:56:08 2009
+Subject: [Squeak-ja: 4198] Re: SmallTalk R4.1だそうです
+In-Reply-To: <JxASfJUyf7iVLfGnZ3xOhg8ga@mars.dti.ne.jp>
+References: <JxASfJUyf7iVLfGnZ3xOhg8ga@mars.dti.ne.jp>
+Message-ID: <Jxa_fxUeCi_t1mohe8QDPT7Q5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+お気づきと思いますが念のため。
+
+SmallTalk R4.1ですが、すべてSmalltalk勉強会@東京の有志の手による
+エイプリルフールのお遊びです。
+http://smalltalk.smalltalk-users.jp/
+
+実際に動くものを作ったというところがポイントですので、ぜひダウンロード
+してお楽しみ下さい。
+
+割と高度な技が使われているので、ソースを読んでみるといろいろと勉強に
+なるかと思います。
+
+次回以降のSmalltalk勉強会で、その設計、および実装について取り上げて
+いきたいと思います。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 東京のSmalltalk勉強会では、VisualWorksとSqueakの両方を対象に進めて
+> いるのですが、どうにも微妙な違いが多く、学習の妨げとなっていました。
+> 
+> もっと誰もが簡単に使える、パワフルな処理系はないものか、と思って
+> いたところ、SmallTalk R4.1なるものが存在することがわかりました。
+> 
+> http://smalltalk.smalltalk-users.jp/
+> #どうやらObjectWorks R4.1の傍系のようです。
+> 
+> Adele Goldbergさんが、昔オープンソース化しようとしていた、あの4.1が
+> ついに満を持して復活したのでしょうか。よくわからないものの、とにかく
+> 強力な機能に満ちあふれています。
+> 
+> (サイトを引用します)
+> - Rubyばりにpが使える。デバッグに最適
+> - PHPのようにGOTOをサポート
+> - JavaのごとくFinalクラスをサポート
+> - Eiffelのようにaliasが使える!?
+> - C++にあまり似ていないfriendメソッドが使える。enemyメソッドも使える!
+> - 31個までのwith:のサポート...
+> 
+> いい感じですね。以後の勉強会ではこのSmallTalk R4.1をデフォルトの
+> Smalltalkとして進めていこうと思います。
+> 
+> ではでは。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Mon Apr  6 22:36:46 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Apr  6 22:37:05 2009
+Subject: [Squeak-ja: 4199] smalltalk_fanでつぶやきましょう
+Message-ID: <Jx8Cb5pJIfVFnYeik0YxcVBQ9@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+皆様、Twitterお使いでしょうか?
+
+このたびコミュニティ用のアカウントsmalltalk_fanを作ったので、お気軽にフォローしてみてください。
+http://twitter.com/smalltalk_fan
+
+普段は聞けない、生のSmalltalkerの声が聞けるかもしれません。;-)
+
+---
+[:masashi | ^umezawa]
+From n-takesh ＠ rmail.plala.or.jp  Tue Apr  7 22:00:04 2009
+From: n-takesh ＠ rmail.plala.or.jp (Norio TAKESHITA)
+Date: Tue Apr  7 22:00:15 2009
+Subject: [Squeak-ja: 4200] Re: smalltalk_fanでつぶやきましょう
+In-Reply-To: <Jx8Cb5pJIfVFnYeik0YxcVBQ9@mars.dti.ne.jp>
+References: <Jx8Cb5pJIfVFnYeik0YxcVBQ9@mars.dti.ne.jp>
+Message-ID: <000601c9b780$c507cf10$4f176d30$@plala.or.jp>
+
+竹下が亡くなりましたのでメールは停止して下さい。よろしくお願いいたします。
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Masashi Umezawa
+Sent: Monday, April 06, 2009 10:37 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4199] smalltalk_fanでつぶやきましょう
+
+こんにちは
+梅澤です。
+
+皆様、Twitterお使いでしょうか?
+
+このたびコミュニティ用のアカウントsmalltalk_fanを作ったので、お気軽にフォ
+ローしてみてください。
+http://twitter.com/smalltalk_fan
+
+普段は聞けない、生のSmalltalkerの声が聞けるかもしれません。;-)
+
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Thu Apr  9 22:20:50 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Apr  9 22:21:05 2009
+Subject: [Squeak-ja: 4201] 第8回Smalltalk勉強会のお知らせ
+Message-ID: <Jx.6lle7_6_WjOUCI4yNGwyQ5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。今回は金曜日です。
+
+日時: 2009/4/17(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai8kaismalltalkbenkyoukai
+
+今回は「第1回SmallTalk勉強会」でもあります。
+言語で言語を作る喜び、苦労話、自責の念、変態的なテクニックなどに
+ついて、R4.1の開発者が語ります。メタと通常のプログラミングの
+垣根がなくなるSmalltalk的な体験を味わって欲しいということですね。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+気になる方はこのMLにメールを送っていただいても良いです。
+
+ではでは。
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Mon Apr 13 21:32:36 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Apr 13 21:32:54 2009
+Subject: [Squeak-ja: 4202] 「Seaside へ GO!!」の第五回が掲載されました
+Message-ID: <JxQesrKtpjN1wsK3lkqAwAUw5@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、「Seaside へ GO!!」の第五回が「オブジェクトの広場」に掲載されました。
+
+今回はGlorpを用いたRDB(PostgreSQL)接続編です。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/seaside5/index.html
+
+SeasideJOnePlusDBを使ってすぐに試すことができます。
+http://swikis.ddo.jp/umejava/SeasideJOnePlus#3
+
+ちと長いので、2回に分けてお楽しみ下さい。;-)
+
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Wed Apr 15 21:06:36 2009
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Apr 15 21:07:01 2009
+Subject: [Squeak-ja: 4203] SCRATCH DAY in TOKYOの開催について
+Message-ID: <2d5d52a80904150506x619fa5dct350ce32dc9c7c1fb@mail.gmail.com>
+
+こんにちは、阿部です。
+
+来る5/16、MIT Media Lab Lifelong Kindergartenの呼びかけにより、世界中で「Scratch
+Day」というイベントが開催されることになりました。これは、Scratchのワークショップやセミナ、ミーティングなどを各地で同時に行おうというものです。
+
+Scratch Day: May 16, 2009
+http://day.scratch.mit.edu/home
+
+日本でも何箇所か参加を表明していますが、川口市でも「SCRATCH DAY in TOKYO」というイベントを13:00-16:30に開催します。
+
+SCRATCH DAY in TOKYO
+http://www.kpc.cdc.jp/scratch/?p=104
+
+内容は子供向けのワークショップと大人向けのセミナとハンズオンをパラレルで進行し、最後にジョインします。会場のメディアセブンは川口駅前の公共施設ですが、以前からScratchのワークショップを定期的に開催しています。セミナは、私の他、小学校、高校、大学、企業、塾などで実際にScratchを使っている方を講師にお迎えする予定です。
+
+先月、Scratchのリーダーであるレズニック教授が来日された折も日本での活動やScratchDayに対する期待を話されていました。たぶん当日はScratchの新バージョンやロボットとの連携についてもデモできると思います。
+
+ご興味があればぜひご参加ください。子供、大人共に事前参加登録が必要です。参加方法は上記のURLをご覧ください(適宜アップデートされます)。
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Sun Apr 19 10:51:00 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Sun Apr 19 10:51:08 2009
+Subject: [Squeak-ja: 4204] e-Toysの使い方で質問
+Message-ID: <mailman.54.1240105868.8436.squeak-ja@smalltalk.jp>
+
+大変初歩的なことで恐縮ですが、
+
+画面で描いた絵にhaloを出す方法を教えてください。
+
+部品を使った時は、Alt＋左クリックでhaloが出ますが
+
+自分の絵には、どうすればhaloがでますか。
+
+久保　道
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20090419/db282f05/attachment.htm
+From umejava ＠ mars.dti.ne.jp  Sun Apr 19 12:09:29 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Sun Apr 19 12:09:39 2009
+Subject: [Squeak-ja: 4205] SmallTalk R4.1のつくりかた
+In-Reply-To: <Jx.6lle7_6_WjOUCI4yNGwyQ5@mars.dti.ne.jp>
+References: <Jx.6lle7_6_WjOUCI4yNGwyQ5@mars.dti.ne.jp>
+Message-ID: <JxxNZHhlI9jTzrkNdAUU0xgg4@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+第8回Smalltalk勉強会に参加していただいた方、ありがとうございます。
+
+さて、当日の資料「SmallTalk R4.1のつくりかた」を置きましたので、
+興味のある方はぜひご覧ください。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai8kaismalltalkbenkyoukai/shiryou
+発表時にわかった図の誤りなど、修正してあります。
+
+ロングバージョンは56ページにもなる長編です。こちらは後でじっくりと
+読むために作ったものです。週末の暇つぶしにでもどうぞ。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 定例のSmalltalk勉強会のお知らせです。今回は金曜日です。
+> 
+> 日時: 2009/4/17(金) 19:00- (2,3時間程度)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> または「自由自在Squeakプログラミング」
+> 
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai8kaismalltalkbenkyoukai
+> 
+> 今回は「第1回SmallTalk勉強会」でもあります。
+> 言語で言語を作る喜び、苦労話、自責の念、変態的なテクニックなどに
+> ついて、R4.1の開発者が語ります。メタと通常のプログラミングの
+> 垣根がなくなるSmalltalk的な体験を味わって欲しいということですね。
+> 
+> 参加表明は特に必要ありません。ふらりとどうぞ。
+> 気になる方はこのMLにメールを送っていただいても良いです。
+> 
+> ではでは。
+> 
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From abee.abe ＠ nifty.ne.jp  Sun Apr 19 13:09:38 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Sun Apr 19 13:10:03 2009
+Subject: [Squeak-ja: 4206] Re: e-Toysの使い方で質問
+In-Reply-To: <200904190152.n3J1q5KB018290@mxg513.nifty.com>
+References: <200904190152.n3J1q5KB018290@mxg513.nifty.com>
+Message-ID: <2d5d52a80904182109s2b60fa8es40abde3142500d3a@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2009/04/19 10:51 久保　道 <kubo-o@mbox.kyoto-inet.or.jp>:
+> 部品を使った時は、Alt＋左クリックでhaloが出ますが
+>
+> 自分の絵には、どうすればhaloがでますか。
+
+同じ方法です。色の付いた部分をAlt＋左クリックすることに気をつけてください。
+細い線や透明な部分のあるスケッチの場合は注意が必要です。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From mucleus ＠ gmail.com  Sun Apr 19 23:35:59 2009
+From: mucleus ＠ gmail.com (Takuya Kamada)
+Date: Sun Apr 19 23:36:33 2009
+Subject: [Squeak-ja: 4207] OSC-do + LDD
+Message-ID: <20090419233521.A2AC.58A1EBBA@gmail.com>
+
+  OSC北海道スタッフの蒲田です。
+
+  6/20(土)に、札幌市産業振興センタで、Open Source Conference 北海道が開
+催されることになっています。
+
+  昨年は、Squeakの展示とセミナーを行っていただいたのですが、今年はどうし
+ましょうか。選択肢としては...
+   (a) 展示を行う
+   (b) セミナーを行う。
+   (c) 展示とセミナーを行う。
+   (d) 「名前だけ参加」する。
+          (フライヤにコミュニティの名前だけ出ます。「今年は何もしないけ
+           れど、僕たちのこと、忘れないでね。」という意思表示です。)
+   (e) 何もしない。
+
+  今年は、セミナー希望が多くて最終的には選別が行われる可能性が高いのです
+が、展示は競争率が低い様に思えます。個人的には、「せめて展示。可能であれ
+ばセミナー」と思っているのですが、当日はスタッフとして動くので、ほとんど
+お手伝いできそうにありません。このため、Squeak-jaが参加する場合もほかの
+方にお願いせざるを得ないところが、少々心苦しいのですが...。
+  ご意見いただけると、うれしいです。ご一考、よろしくお願いいたします。
+
+-- Community & Event Info. ---------------------------------------------
+OSC+LDD : 6/20(土)@産業振興センタ。http://www.local.gr.jp/?OSC2009do
+------------------------------------------------------ Takuya Kamada ---
+
+From sumi ＠ seagreen.ocn.ne.jp  Mon Apr 20 00:48:05 2009
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Mon Apr 20 00:48:30 2009
+Subject: [Squeak-ja: 4208] Re: OSC-do + LDD
+In-Reply-To: <20090419233521.A2AC.58A1EBBA@gmail.com>
+References: <20090419233521.A2AC.58A1EBBA@gmail.com>
+Message-ID: <86c0320c0904190848h1e33205g77adcd1edd74eea0@mail.gmail.com>
+
+蒲田さん、いつもお世話になります。鷲見です。
+
+今のところ 20日の予定は他にはないので、展示の店番くらいは
+できそうです。
+
+
+2009/04/19 23:35 Takuya Kamada <mucleus@gmail.com>:
+>  6/20(土)に、札幌市産業振興センタで、Open Source Conference 北海道が開
+> 催されることになっています。
+
+> 個人的には、「せめて展示。可能であれ
+> ばセミナー」と思っているのですが、当日はスタッフとして動くので、ほとんど
+> お手伝いできそうにありません。このため、Squeak-jaが参加する場合もほかの
+> 方にお願いせざるを得ないところが、少々心苦しいのですが...。
+
+-- 
+Masato Sumi
+From kubo-o ＠ mbox.kyoto-inet.or.jp  Mon Apr 20 20:49:47 2009
+From: kubo-o ＠ mbox.kyoto-inet.or.jp (久保　道)
+Date: Mon Apr 20 20:50:14 2009
+Subject: [Squeak-ja: 4209] Re: e-Toysの使い方で質問
+In-Reply-To: <2d5d52a80904182109s2b60fa8es40abde3142500d3a@mail.gmail.com>
+Message-ID: <mailman.65.1240228214.8436.squeak-ja@smalltalk.jp>
+
+阿部さん、
+ありがとうございました。
+色の付いた部分をAlt＋左クリックしていたのですが、
+「ほぞんする」をやってなくて、
+うまくいかなかったようです。
+相変わらず、軽率でお恥ずかしいです。
+久保　道
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp]
+On Behalf Of Kazuhiro ABE
+Sent: Sunday, April 19, 2009 1:10 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 4206] Re: e-Toysの使い方で質問
+
+こんにちは、阿部です。
+
+2009/04/19 10:51 久保　道 <kubo-o@mbox.kyoto-inet.or.jp>:
+> 部品を使った時は、Alt＋左クリックでhaloが出ますが
+>
+> 自分の絵には、どうすればhaloがでますか。
+
+同じ方法です。色の付いた部分をAlt＋左クリックすることに気をつけてください。
+細い線や透明な部分のあるスケッチの場合は注意が必要です。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+
+
+From abee.abe ＠ nifty.ne.jp  Tue Apr 21 21:31:41 2009
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Tue Apr 21 21:32:05 2009
+Subject: [Squeak-ja: 4210] Re: OSC-do + LDD
+In-Reply-To: <20090419233521.A2AC.58A1EBBA@gmail.com>
+References: <20090419233521.A2AC.58A1EBBA@gmail.com>
+Message-ID: <2d5d52a80904210531v3b03649bl45d645ff477638b6@mail.gmail.com>
+
+こんにちは、阿部です。
+蒲田さん、ご無沙汰しております。去年はお世話になりました。
+6/20なのですが、a, b, cについて、私はちょっと難しいようです。
+せっかくお声掛けいただいたのに申し訳ありません。
+こちらでお手伝いできることがありましたら、おっしゃってください。
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2009/04/19 23:35 Takuya Kamada <mucleus@gmail.com>:
+>  OSC北海道スタッフの蒲田です。
+>
+>  6/20(土)に、札幌市産業振興センタで、Open Source Conference 北海道が開
+> 催されることになっています。
+>
+>  昨年は、Squeakの展示とセミナーを行っていただいたのですが、今年はどうし
+> ましょうか。選択肢としては...
+>   (a) 展示を行う
+>   (b) セミナーを行う。
+>   (c) 展示とセミナーを行う。
+>   (d) 「名前だけ参加」する。
+>          (フライヤにコミュニティの名前だけ出ます。「今年は何もしないけ
+>           れど、僕たちのこと、忘れないでね。」という意思表示です。)
+>   (e) 何もしない。
+>
+>  今年は、セミナー希望が多くて最終的には選別が行われる可能性が高いのです
+> が、展示は競争率が低い様に思えます。個人的には、「せめて展示。可能であれ
+> ばセミナー」と思っているのですが、当日はスタッフとして動くので、ほとんど
+> お手伝いできそうにありません。このため、Squeak-jaが参加する場合もほかの
+> 方にお願いせざるを得ないところが、少々心苦しいのですが...。
+>  ご意見いただけると、うれしいです。ご一考、よろしくお願いいたします。
+>
+> -- Community & Event Info. ---------------------------------------------
+> OSC+LDD : 6/20(土)@産業振興センタ。http://www.local.gr.jp/?OSC2009do
+> ------------------------------------------------------ Takuya Kamada ---
+>
+>

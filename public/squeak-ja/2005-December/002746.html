@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2746] [Tips]Squeak pluginでHPやblogに動きのあるバナーをつける
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202746%5D%20%3D%3Fiso-2022-jp%3Fb%3FW1RpcHNdU3F1ZWFrIHBsdWdpbg%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEcbKEJIUBskQiRkGyhCYmxvZxskQiRLRjAkLSROJCIkayVQGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUohPCRyJEQkMSRrGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002743.html">
+   <LINK REL="Next"  HREF="002749.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2746] [Tips]Squeak pluginでHPやblogに動きのあるバナーをつける</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202746%5D%20%3D%3Fiso-2022-jp%3Fb%3FW1RpcHNdU3F1ZWFrIHBsdWdpbg%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEcbKEJIUBskQiRkGyhCYmxvZxskQiRLRjAkLSROJCIkayVQGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJUohPCRyJEQkMSRrGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2746] [Tips]Squeak pluginでHPやblogに動きのあるバナーをつける">kawa90 ＠ yahoo.co.jp
+       </A><BR>
+    <I>2005年 12月  2日 (金) 22:10:10 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002743.html">[Squeak-ja: 2743] Re: Squeakland 2005j 前リリース版公開
+</A></li>
+        <LI>次の記事 <A HREF="002749.html">[Squeak-ja: 2749] 図形の往復運動
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2746">[ 日付 ]</a>
+              <a href="thread.html#2746">[ スレッド ]</a>
+              <a href="subject.html#2746">[ 件名 ]</a>
+              <a href="author.html#2746">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。
+pre-release版でイートイのcheck中に思いついたものです。
+
+[Tips]Squeak pluginでHPやblogに動きのあるバナーをつける
+
+1)イートイでアニメーションを作成する
+作成方法がわからない方はThoruさんの
+<A HREF="http://www.thoruman.com/squeak/etoy/etoy.html">http://www.thoruman.com/squeak/etoy/etoy.html</A>
+のAnimeの項を参照して下さい。
+
+ちょっとここからがミソです。
+2)カーソル位置にある絵を表示するオブジェクトをデスクトップの左上隅に配置
+します
+
+3)アニメーションの大きさを控えます。スケッチモーフならば、赤ハロでデバッ
+グ/モーフの検査でインスペクタを出して幅・高さを得ます。コードペーンで
+self width
+self height
+をprint-itします。
+
+4)ワールドメニュー/フラップ/共有タブの表示のチェックをはずす
+
+5)ビューワフラップをなくすため、ビューワの◎をクリック
+
+6)チクタクさせてアニメ動作とする。
+
+7)ワールドメニュー/プロジェクト/手元のディスクにだけプロジェクトを保存す
+る（ナビゲータフラップがこの時点で表示されていないのでワールドメニューか
+らプロジェクトを保存します）。
+
+8)HP,BlogのHTML中に以下のようなHTMLコードを挿入します（変更するのは
+WIDTH,HEIGHTとsrcの部分で、下記例では 120,160,banner.003.prの部分で
+す）。手順3)で控えた幅・高さをWIDTH,HEIGHTの値に変更します。もちろん、プ
+ロジェクト名部分も変更します。
+
+&lt;OBJECT
+ID=&quot;SqueakOCX Control&quot;
+WIDTH=120 HEIGHT=160
+ALIGN=center BORDER=0
+CLASSID=&quot;CLSID:2BE9C39E-8386-4435-B337-FCDAD8EAB006&quot;
+CODEBASE=&quot;<A HREF="http://www.squeakland.org/installers/SqueakPluginInstaller.exe&quot;">http://www.squeakland.org/installers/SqueakPluginInstaller.exe&quot;</A>&gt;
+&lt;PARAM name=&quot;src&quot; value=&quot;banner.003.pr&quot;&gt;
+&lt;PARAM name=&quot;update&quot; value=&quot;29&quot;&gt;
+&lt;PARAM name=&quot;pluginspage&quot; value=&quot;<A HREF="http://www.squeakland.org/detect.html&quot;">http://www.squeakland.org/detect.html&quot;</A>&gt;
+&lt;PARAM name=&quot;update_url&quot; value=&quot;<A HREF="http://www.squeakland.org/update/&quot;">http://www.squeakland.org/update/&quot;</A>&gt;
+&lt;PARAM name=&quot;apiSupported&quot; value=&quot;true&quot;&gt;
+&lt;embed
+type=&quot;application/x-squeak-source&quot;
+ALIGN=&quot;CENTER&quot;
+WIDTH=&quot;120&quot;
+HEIGHT=&quot;160&quot;
+src=&quot;banner.003.pr&quot;
+update=&quot;29&quot;
+apiSupported=&quot;TRUE&quot;
+pluginspage=&quot;<A HREF="http://www.squeakland.org/detect.html&quot;">http://www.squeakland.org/detect.html&quot;</A>
+update_url=&quot;<A HREF="http://www.squeakland.org/update/&quot;">http://www.squeakland.org/update/&quot;</A>
+&gt;<i>&lt;/embed&gt;
+</I>&lt;/OBJECT&gt;
+
+9) Webブラウザで確認します
+
+あーら、びっくりまるでflashで作ったかのような動きのあるバナーが出来上が
+ります。もちろん閲覧する人はSqueak pluginをインストールしている必要があ
+りますが。。。実際試してみました。
+
+正式リリースまでpre-release版であなたのHP,blogのワンポイントに動きのある
+バナーを作ってみてはいかがでしょうか？！正式リリースの暁には、記念にわた
+しもblogでやってみようと思ってみます。
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: <A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+Blog: <A HREF="http://squeak.qp.land.to/mt">http://squeak.qp.land.to/mt</A>
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.362 / Virus Database: 267.13.10/190 - Release Date: 2005/12/01
+
+--------------------------------------
+STOP HIV/AIDS.
+Yahoo! JAPAN Redribbon Campaign 2005
+<A HREF="http://pr.mail.yahoo.co.jp/redribbon/">http://pr.mail.yahoo.co.jp/redribbon/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002743.html">[Squeak-ja: 2743] Re: Squeakland 2005j 前リリース版公開
+</A></li>
+	<LI>次の記事 <A HREF="002749.html">[Squeak-ja: 2749] 図形の往復運動
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2746">[ 日付 ]</a>
+              <a href="thread.html#2746">[ スレッド ]</a>
+              <a href="subject.html#2746">[ 件名 ]</a>
+              <a href="author.html#2746">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

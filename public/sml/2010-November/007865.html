@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7865] プログラム整形（フォーマット）
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207865%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclbSUwJWklYEAwN0EhSiVVJSkhPCVeJUMlSCFLGyhC%3F%3D&In-Reply-To=%3C4CEAE808.9060203%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007864.html">
+   <LINK REL="Next"  HREF="007866.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7865] プログラム整形（フォーマット）</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207865%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVclbSUwJWklYEAwN0EhSiVVJSkhPCVeJUMlSCFLGyhC%3F%3D&In-Reply-To=%3C4CEAE808.9060203%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 7865] プログラム整形（フォーマット）">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2010年 11月 23日 (火) 07:00:40 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007864.html">[SML 7864] Re: インクリメンタル・サーチ・ダイアログ
+</A></li>
+        <LI>次の記事 <A HREF="007866.html">[SML 7866] 第26回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7865">[ 日付 ]</a>
+              <a href="thread.html#7865">[ スレッド ]</a>
+              <a href="subject.html#7865">[ 件名 ]</a>
+              <a href="author.html#7865">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、皆さん、青木淳＠京都宇治です。
+
+プログラム整形（フォーマット）のためのプログラミング・イディ
+オムをまとめておきます。基本的には構文木を生成し、それを基に
+して整形することになります。
+
+【旧来からの構文木を利用】メッセージパターン無し
+
+|<i> aCode aTree |
+</I>aCode := '
+^
+3
++
+4
+'.
+aTree := Compiler new
+            parse: aCode
+            in: nil class
+            noPattern: true
+            notifying: nil.
+^aTree formattedCode
+
+【旧来からの構文木を利用】メッセージパターン有り
+
+|<i> aCode aTree |
+</I>aCode := '
+zzz
+^
+3
++
+4
+'.
+aTree := Compiler new
+            parse: aCode
+            in: nil class
+            noPattern: false
+            notifying: nil.
+^aTree formattedCode
+
+【リファクタリング・ブラウザの構文木を利用】メッセージパターン無し
+
+|<i> aCode aTree |
+</I>aCode := '
+^
+3
++
+4
+'.
+aTree := Refactory.Browser.RBParser parseExpression: aCode.
+^aTree formattedCode
+
+【リファクタリング・ブラウザの構文木を利用】メッセージパターン有り
+
+|<i> aCode aTree |
+</I>aCode := '
+zzz
+^
+3
++
+4
+'.
+aTree := Refactory.Browser.RBParser parseMethod: aCode.
+^aTree formattedCode
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007864.html">[SML 7864] Re: インクリメンタル・サーチ・ダイアログ
+</A></li>
+	<LI>次の記事 <A HREF="007866.html">[SML 7866] 第26回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7865">[ 日付 ]</a>
+              <a href="thread.html#7865">[ スレッド ]</a>
+              <a href="subject.html#7865">[ 件名 ]</a>
+              <a href="author.html#7865">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7523] 座標のストリーム出力（aPoint printOn: aStream）
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207523%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOkJJOCROJTklSCVqITwlYD1QTk8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIUobKEJhUG9pbnQgcHJpbnRPbjogYVN0cmVhbRskQiFLGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007522.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7523] 座標のストリーム出力（aPoint printOn: aStream）</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207523%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOkJJOCROJTklSCVqITwlYD1QTk8bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIUobKEJhUG9pbnQgcHJpbnRPbjogYVN0cmVhbRskQiFLGyhC%3F%3D&In-Reply-To="
+       TITLE="[SML 7523] 座標のストリーム出力（aPoint printOn: aStream）">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 4月 30日 (木) 20:47:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007522.html">[SML 7522] 第7回Smalltalk勉強会＠京都
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7523">[ 日付 ]</a>
+              <a href="thread.html#7523">[ スレッド ]</a>
+              <a href="subject.html#7523">[ 件名 ]</a>
+              <a href="author.html#7523">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>再度、ポストします。小さな画像を添付したのが原因か、午前中に
+下記のメールをポストしたのだけれど、配送されないようなので。
+画像が無くとも大丈夫でしょう。
+
+--- 青木淳＠京都宇治
+
+-------- Original Message --------
+Subject: 座標のストリーム出力（aPoint printOn: aStream）
+Date: Thu, 30 Apr 2009 10:57:08 +0900
+From: AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;
+To: Smalltalkers' Salon Mailing List &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sml ＠ smalltalk.jp</A>&gt;
+
+こんにちは、青木淳＠京都上賀茂です。
+
+座標（Point）のストリームへの出力 （printOn: aStream）ですが、
+いままでは以下のようになっていました。
+
+printOn: aStream
+    &quot;Append to the argument aStream in terms of infix notation.&quot;
+
+    x printOn: aStream.
+    aStream nextPut: $@.
+    y printOn: aStream
+
+二項メッセージのセレクタとの関係で曖昧（あやふや）なところが
+ありましたよね。
+
+たとえば、y 座標が負数だったとき、@ の直後にマイナスが続くた
+め、<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">100 ＠ -200</A> となってしまいます。
+
+これでは、100 @ -200 なのか、100 @- 200 なのか、判然としない
+でしょ。（いままででは、LL(1) でやることができずに、この場合
+に限って LR(1) もどきに遂行して、無理矢理に 100 @ -200 と解釈
+していたのです。）
+
+で、これからは Point の printOn: aStream は以下のようになり、
+
+printOn: aStream
+    &quot;Append to the argument aStream in terms of infix notation.&quot;
+
+    x printOn: aStream.
+    aStream nextPutAll: ' @ '.
+    y printOn: aStream
+
+必ず @ の前後にスペースが入ります。これからは形式を改めて書き
+なさいね！ということです。フォーマッタにかけていれば大丈夫。
+
+新しい Smalltalk（おそらく VisualWorks 7.7 以降）では、y 座標
+がマイナスのときに、@ の後ろにスペースを空けないと、エラーに
+なっちゃいますので、気をつけてくださいませ。
+
+参考のため、<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">100 ＠ -200</A> を評価（Do it）した際に出現する例外ウィ
+ンドウの画像を添えておきます。@- という二項メッセージセレクタ
+がわからないよ！と言われるんです。
+
+同様に、100,-200 と書いて、じゅん for Smalltalk の二次元座標
+を得ようとしても、,- がわからないよ！と言われます。
+
+Smalltalk コンパイラの字句解析や構文解析に無理矢理なところが
+なくなって良くなったと私は思います。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007522.html">[SML 7522] 第7回Smalltalk勉強会＠京都
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7523">[ 日付 ]</a>
+              <a href="thread.html#7523">[ スレッド ]</a>
+              <a href="subject.html#7523">[ 件名 ]</a>
+              <a href="author.html#7523">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

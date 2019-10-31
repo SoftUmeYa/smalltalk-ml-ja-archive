@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3879] Re: Object特異的な情報を含むメッセージの発信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203879%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uJEskRCQkGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=003401c8b34e%247c232c40%244da415ca%40hbyori2c37">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003876.html">
+   <LINK REL="Next"  HREF="003880.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3879] Re: Object特異的な情報を含むメッセージの発信について</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203879%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9iamVjdBskQkZDMFsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRSokSj5wSnMkcjReJGAlYSVDJTshPCU4JE5ILz8uJEskRCQkGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEYbKEI%3D%3F%3D&In-Reply-To=003401c8b34e%247c232c40%244da415ca%40hbyori2c37"
+       TITLE="[Squeak-ja: 3879] Re: Object特異的な情報を含むメッセージの発信について">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2008年 5月 13日 (火) 02:49:15 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003876.html">[Squeak-ja: 3876]  Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+        <LI>次の記事 <A HREF="003880.html">[Squeak-ja: 3880] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3879">[ 日付 ]</a>
+              <a href="thread.html#3879">[ スレッド ]</a>
+              <a href="subject.html#3879">[ 件名 ]</a>
+              <a href="author.html#3879">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  鶴井さん
+
+&gt;<i> &gt;  オブジェクト間のやりとりというものは、すべて「メッセージ」という概念
+</I>&gt;<i> &gt; で抽象化されていますが、メッセージには「引数」を付けて送ることができ、
+</I>&gt;<i> &gt; メッセージ送信者自身を現す&quot;self&quot;を含め、送信者が「知っている」(送信者
+</I>&gt;<i> &gt; が参照可能である)任意のオブジェクト、またはそれらを含む任意の式を引数
+</I>&gt;<i> &gt; とすることができます。というわけで、阿部さんの言うように一般的には
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; b message: self.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; というメッセージをaが実行すれば良いことになります。
+</I>&gt;<i> この場合、送信者ａを指定するにはどうすれば宜しいですか？
+</I>&gt;<i> 送信者は暗黙にプログラマーだけかと思っていました。GUIでのevent handlingで予め用意されている場合以外は。
+</I>
+  あるメソッドの中でaという変数にあるオブジェクトが束縛されているなら、
+
+  b message: a
+
+と書けばよいということでしょうか。
+
+  (私の書いたのは微妙に間違いがあって、「送信者を現すself」と書いたの
+は話をややこしくしたかもしれません。厳密に言えば「送信者」は「メソッド
+を実行しているコンテキスト」ということになりますので。ただ、その辺は今
+はあまり気にする必要はないと思われます。)
+
+  例えばWorkspaceとTranscriptを開き(VisualWorksならデフォルトですで
+に開かれていると思いますが)、Workspaceのほうに
+
+  Transcript show: 'abc'.
+
+と書いてdo it したり、
+
+  Transcript show: 3 printString.
+
+と書いてdo it したり、
+
+  | a b |
+  a := 'abc'.
+  b := 'def'.
+  Transcript show: a.
+  Transcript space.
+  Transcript show: b.
+  Transcript space.
+  Transcript show: a, b.
+
+という8行を書いてそれを選択してdo it してみてください。aやbやそれを演
+算した結果をTranscriptオブジェクトへのメッセージ送信に付加できることが
+わかるかと思います。
+
+-- Yoshiki
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003876.html">[Squeak-ja: 3876]  Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+	<LI>次の記事 <A HREF="003880.html">[Squeak-ja: 3880] Re: Object特異的な情報を含むメッセージの発信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3879">[ 日付 ]</a>
+              <a href="thread.html#3879">[ スレッド ]</a>
+              <a href="subject.html#3879">[ 件名 ]</a>
+              <a href="author.html#3879">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

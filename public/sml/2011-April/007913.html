@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7913] Squeak/Pharoの低レベルGUIのしくみ?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207913%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCJE5EYyVsJVklaxsoQkdVSQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4kNyQvJF8bKEI/%3F%3D&In-Reply-To=%3C4DA69367.2020407%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007910.html">
+   <LINK REL="Next"  HREF="007914.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7913] Squeak/Pharoの低レベルGUIのしくみ?</H1>
+    <B>Hiroki Horiuchi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207913%5D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrL1BoYXJvGyRCJE5EYyVsJVklaxsoQkdVSQ%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4kNyQvJF8bKEI/%3F%3D&In-Reply-To=%3C4DA69367.2020407%40gmail.com%3E"
+       TITLE="[SML 7913] Squeak/Pharoの低レベルGUIのしくみ?">x19290 ＠ gmail.com
+       </A><BR>
+    <I>2011年 4月 14日 (木) 15:25:43 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007910.html">[SML 7910] Pharo 1.2.1 is out
+</A></li>
+        <LI>次の記事 <A HREF="007914.html">[SML 7914] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7913">[ 日付 ]</a>
+              <a href="thread.html#7913">[ スレッド ]</a>
+              <a href="subject.html#7913">[ 件名 ]</a>
+              <a href="author.html#7913">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは。
+
+Squeak/Pharoの、低レベルGUIのしくみに興味があります。それで手持ちの環境(
+Pharo 1.2.1 + Debian GNU/Linux)でxtrace(1)を使って外から調べました。
+
+リクエストに関しては、最初の方でCreateWindowが2回だけ行われたあとは、
+PutImageが盛んに行われていることがわかりました。このPutImageがどういった
+経緯で呼ばれているのかがわかれば、低レベルGUIの出力方面については、かな
+り調べられると思うのですが、その経緯の見当がまったくつきません。
+
+一方、イベントについては、これらがどのように処理されているのか、まったく
+わかりません。
+
+これらの不明点について、ヒントをいただけませんか? よろしくお願いします。
+--
+堀内寛己(ほりうちひろき)
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007910.html">[SML 7910] Pharo 1.2.1 is out
+</A></li>
+	<LI>次の記事 <A HREF="007914.html">[SML 7914] Re: Squeak/Pharoの低レベルGUIのしくみ?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7913">[ 日付 ]</a>
+              <a href="thread.html#7913">[ スレッド ]</a>
+              <a href="subject.html#7913">[ 件名 ]</a>
+              <a href="author.html#7913">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

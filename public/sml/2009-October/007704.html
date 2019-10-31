@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7704] Re: HttpClientによるログイン認証について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207704%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=6465BAEB-6982-42B7-AC36-BE30F432E9FF%40sie.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007703.html">
+   <LINK REL="Next"  HREF="007705.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7704] Re: HttpClientによるログイン認証について</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207704%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=6465BAEB-6982-42B7-AC36-BE30F432E9FF%40sie.dendai.ac.jp"
+       TITLE="[SML 7704] Re: HttpClientによるログイン認証について">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 10月 27日 (火) 15:47:18 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007703.html">[SML 7703] Re: HttpClientによるログイン認証について
+</A></li>
+        <LI>次の記事 <A HREF="007705.html">[SML 7705] Re: HttpClientによるログイン認証について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7704">[ 日付 ]</a>
+              <a href="thread.html#7704">[ スレッド ]</a>
+              <a href="subject.html#7704">[ 件名 ]</a>
+              <a href="author.html#7704">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>久保田吉彦さんは書きました:
+&gt;<i> 青木先生のおっしゃった通り、デバッガを見たらエンコーダが入っている 
+</I>&gt;<i> IdentityDictionaryに'euc-jp'が入っていませんでした。そのためKey not 
+</I>&gt;<i> foundのExceptionが出ているようです。
+</I>
+だいぶ昔ですが、私も似たような状況に陥ったことがよみがえり、
+とっさに（脊髄反射で）、もしや！思ったのですが、当たりでしたか…。
+
+&gt;<i> 原因は判ったのですが、どう対処していいやら分りません。どなたか対処方法ご 
+</I>&gt;<i> 存知のかたいらっしゃいませんでしょうか。
+</I>&gt;<i> #うーん、なさけない
+</I>
+お使いの環境が Windows 版の VisualWorks ならば、
+エンコーディングシンボルの #euc-jp を
+#JapaneseEUC に写像すればいいと思います。
+
+VisualWorks の日本語版でなければ、Jpl を援用できます。
+<A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/">http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/</A>
+
+これまた久保田さんのコードを確かめもせずに、
+応答しておりますので、とんちんかんなフォローやもしれませぬ。
+その際には、あしからず、ご容赦くださいませ。
+
+--- 青木淳＠取り急ぎ
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007703.html">[SML 7703] Re: HttpClientによるログイン認証について
+</A></li>
+	<LI>次の記事 <A HREF="007705.html">[SML 7705] Re: HttpClientによるログイン認証について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7704">[ 日付 ]</a>
+              <a href="thread.html#7704">[ スレッド ]</a>
+              <a href="subject.html#7704">[ 件名 ]</a>
+              <a href="author.html#7704">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

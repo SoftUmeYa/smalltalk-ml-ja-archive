@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2235] Re: プログラミングの質問です
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202235%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002234.html">
+   <LINK REL="Next"  HREF="002236.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2235] Re: プログラミングの質問です</H1>
+    <B>Kondo, Fumito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202235%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVXJW0lMCVpJV8bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJXMlMCROPEFMZCRHJDkbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2235] Re: プログラミングの質問です">fumito.kondo ＠ hp.com
+       </A><BR>
+    <I>2005年 1月  2日 (日) 15:06:28 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002234.html">[Squeak-ja: 2234] Vector の 2004 年ベストオンラインソフト
+</A></li>
+        <LI>次の記事 <A HREF="002236.html">[Squeak-ja: 2236] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2235">[ 日付 ]</a>
+              <a href="thread.html#2235">[ スレッド ]</a>
+              <a href="subject.html#2235">[ 件名 ]</a>
+              <a href="author.html#2235">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川さん・髟阡
+
+う髟阡擦韻泙靴討Ⅳ瓩任箸逅擦瓦兇い泙后
+
+いろいろとう髟阡擦蠅♢箸逅擦瓦兇い泙后
+
+参考にさせていただきます。
+
+
+近藤史人
+シニウ髟阡札灰鵐汽襯織鵐
+日本ヒュ・踉札譽奪函逅札僖奪㎜ド㈱
+Fumito Kondo
+Senior Consultant
+Hewlett-Pakard Japan, Ltd.
+Phone: +81-52-566-5900
+Fax:     +81-52-5990
+e-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Fumito.Kondo ＠ hp.com</A>
+
+-----Original Message-----
+From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A> [mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>] On Behalf Of Koji Yokokawa
+Sent: Saturday, January 01, 2005 1:25 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 2233] Re: プログラミングの遡笋任
+
+
+横川です。
+う髟阡擦韻泙靴討Ⅳ瓩任箸逅擦瓦兇い泙后
+
+ぼくもマルチエ・踉札献Д鵐箸剖縮♢って・髟阡縱陌鶉囁瘠夬崧ぢの拡張としてキャラクタエ・踉
+ジェントを簡単に動かす仕組みSwimmy(<A HREF="http://yengawa.homedns.org:8888/Swimmy">http://yengawa.homedns.org:8888/Swimmy</A>)を作っ
+ています。
+
+MorphicでЫ萢鬚垢襪砲ぢつのデザインが考えられます。
+
+ひとつは各エ・踉札献Д鵐箸♣踉捌律的処理をするためにMorphicのstepの仕組みを利用するデザ
+インです。
+stepは定期的にActiveWorldから呼び出されます。エ・踉札献Д鵐ぢ匹にMorphを1つ対応させ
+ればMorph毎のstepの中に各エ・踉札献Д鵐箸陸踉捌律的処理を書くことができます。
+このデザインはMorphicとの深頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂届＠ Ⅷ召發い窪踉至軽なのでお薦瘢雹めです。
+
+でも・髟阡札─ジェント毎にMorphのインスタンスは大きすぎるならば・髟阡三譴弔酪鴃ぢがその
+Morph内部に表┐鬚垢襪世韻陸苳皿さなエ・踉札献Д鵐箸鬚燭気麒飮垢襯妊競ぅ鵑砲覆蠅泙后
+標準で入っているStarSqueakが良い例なので参箸靴堂さい。
+# できればKedamaを参箸靴燭曚逅擦♢いい㎠
+
+
+ 汝薔 咳 偵屋梓 渦艮戯咳 ㎗弘柾鈔鍖 弐迚 質 頒兎就蔗痕轣跛跌㍻隴轣蛹轣遲跚齡蜴肬髟縺覘裃⊂胚迚闔粹 ＠ 蒡闕鹿曽 阡綺
+
+守梅沢さんの界踉捌在Squeakプログラミングの本で・髟阡囁瘠プログラムの勉強中の近藤といいます。すみません。遡笋気擦討世気ぁ
+鹿評守
+鹿評守巣恟鳰ぢにたくさんのエ・踉札献Д鵐箸鬢苳肢せて・髟阡擦修譴れがⅣ貌阿泪襯船─ジェントのウ髟阡札廛螢院ションをプログラミングで作りたいと思っていますが・髟阡擦海逅擦い逅擦海箸鬚垢襪砲蓮Agentという瘢雹クラスを作り・髟阡巣恟鳰ぢで動く各々のエ・踉札献Д鵐伐菫釮蓮インスタンスとして作るとすると・髟阡擦修虜櫃法drawOn:メソッドにaCanvasという瘢雹引数を書いて・髟阡恟鳬 嚼痺ぢでクラス new openInWorldを　“do it”するという瘢雹方法で出来るのでしょう瘢雹か？
+</I>&gt;<i> 　Active Worldで動く・髟阡参菫釮離ぅ鵐好織鵐垢鬟廛蹈哀薀爨苳糸では・髟阡擦匹里茲逅擦飽靴┐个いい里♢㎠蠅泙擦鵝Ｇ濛瑤気鵑遼椶任蓮画像がひとつなので・髟阡黼趾にメソッドを送れば・髟阡餐犧遒任④襪茲逅擦砲覆辰討い泙垢♤複数の画像エ・踉札献Д鵐箸魄靴い燭う苳詞合・髟阡擦匹里茲逅擦砲茲逅擦砲垢譴个茲蹐靴い任靴腓逅擦㎜
+鹿評守
+鹿評守
+鹿評守近藤史人
+</I>&gt;<i> シニウ髟阡札灰鵐汽襯織鵐
+鹿評守日本ヒュ・踉札譽奪函逅札僖奪㎜ド㈱
+</I>&gt;<i> Fumito Kondo
+</I>&gt;<i> Senior Consultant
+</I>&gt;<i> Hewlett-Pakard Japan, Ltd.
+</I>&gt;<i> Phone: +81-52-566-5900
+</I>&gt;<i> Fax:     +81-52-5990
+</I>&gt;<i> e-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Fumito.Kondo ＠ hp.com</A>
+</I>
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2005 ＠ yengawa.jpn.org</A>&gt;
+    self new!
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002234.html">[Squeak-ja: 2234] Vector の 2004 年ベストオンラインソフト
+</A></li>
+	<LI>次の記事 <A HREF="002236.html">[Squeak-ja: 2236] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2235">[ 日付 ]</a>
+              <a href="thread.html#2235">[ スレッド ]</a>
+              <a href="subject.html#2235">[ 件名 ]</a>
+              <a href="author.html#2235">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

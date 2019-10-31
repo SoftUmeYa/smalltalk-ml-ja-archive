@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2354] Spam: Re: [N7]file inできない？ない？
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202354%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3BhbTogUmU6IFtON11maWxlIGlu%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckLSRKJCQhKSRKJCQhKRsoQg%3D%3D%3F%3D&In-Reply-To=422667EB.6000601%40m2.pbc.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002353.html">
+   <LINK REL="Next"  HREF="002357.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2354] Spam: Re: [N7]file inできない？ない？</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202354%5D%20%3D%3Fiso-2022-jp%3Fb%3FU3BhbTogUmU6IFtON11maWxlIGlu%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckLSRKJCQhKSRKJCQhKRsoQg%3D%3D%3F%3D&In-Reply-To=422667EB.6000601%40m2.pbc.ne.jp"
+       TITLE="[Squeak-ja: 2354] Spam: Re: [N7]file inできない？ない？">yoshiki ＠ squeakland.org
+       </A><BR>
+    <I>2005年 3月  3日 (木) 10:41:04 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002353.html">[Squeak-ja: 2353] [N7]file inできない？
+</A></li>
+        <LI>次の記事 <A HREF="002357.html">[Squeak-ja: 2357] Re: Spam: Re: [N7]file inできない？ない？
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2354">[ 日付 ]</a>
+              <a href="thread.html#2354">[ スレッド ]</a>
+              <a href="subject.html#2354">[ 件名 ]</a>
+              <a href="author.html#2354">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  おおしまです。
+
+ファイルインの仕方に工夫が要ります。
+
+&gt;<i> 川村です。お世話になってます。
+</I>&gt;<i> N6.1でfile outしたソースがNihongo7(3/2版)で読み込みに失敗します。
+</I>&gt;<i> 具体的にはN6.1で書いていたソースをfile outしてN7でfile inしようとしたら、
+</I>&gt;<i> &lt;&lt;&lt;This string contains a character (ascii value 132) that is not
+</I>&gt;<i> normally used in code&gt;&gt;&gt;
+</I>&gt;<i> というメッセージで'Syntax Error'となりました。上記の部分は日本語でコメン
+</I>&gt;<i> トを記述している
+</I>&gt;<i> ところです。もちろんN6.1では問題なく読み込みできます。
+</I>&gt;<i> 
+</I>&gt;<i> 読み込みに失敗したソースを添付します。
+</I>
+  Nihongo7(というかSqueak 3.8)から、UTF-8なファイルアウトの頭にはBOMが
+付いていないといけないことになりました。移行のためには、Nihongo7のワー
+クスペースで
+
+f _ FileStream readOnlyFileNamed: 'VS-Image.st'.
+f fileInEncodingName: 'utf-8'.
+f close.
+
+のようにしてファイルインし、結果をその後書き出すようにしてください。
+
+  ご不便を掛けてすみません。
+
+-- Yoshiki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002353.html">[Squeak-ja: 2353] [N7]file inできない？
+</A></li>
+	<LI>次の記事 <A HREF="002357.html">[Squeak-ja: 2357] Re: Spam: Re: [N7]file inできない？ない？
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2354">[ 日付 ]</a>
+              <a href="thread.html#2354">[ スレッド ]</a>
+              <a href="subject.html#2354">[ 件名 ]</a>
+              <a href="author.html#2354">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2655] 日本語のUTF-8
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202655%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsJE4bKEJVVEYtOA%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002649.html">
+   <LINK REL="Next"  HREF="002656.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2655] 日本語のUTF-8</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202655%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCRnxLXDhsJE4bKEJVVEYtOA%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2655] 日本語のUTF-8">koubo2005 ＠ yengawa.jpn.org
+       </A><BR>
+    <I>2005年 9月 23日 (金) 09:33:54 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002649.html">[Squeak-ja: 2649] Re: [ANNOUNCE] 音楽イベント「The Musical Box」
+</A></li>
+        <LI>次の記事 <A HREF="002656.html">[Squeak-ja: 2656] Re: 日本語のUTF-8
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2655">[ 日付 ]</a>
+              <a href="thread.html#2655">[ スレッド ]</a>
+              <a href="subject.html#2655">[ 件名 ]</a>
+              <a href="author.html#2655">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+UTF-8で書いた日本語をSqueakで読む方法を個人メールで聞いたのですが、情報
+共有のため流します。
+
+
+&gt;<i> 山宮です。
+</I>&gt;<i> 
+</I>&gt;<i> UTF-8 自体には「日本語である」という情報が無いので日本語に出来ません。
+</I>&gt;<i> なので例えば
+</I>&gt;<i> ((FileStream readOnlyFileNamed: 'UTF8.txt') converter: UTF8TextConverter new) contents collect: [:c | (Character leadingChar: JapaneseEnvironment leadingChar code: c charCode)]
+</I>&gt;<i> のように一つ一つの文字に「日本語である」と明示的におしえてあげ
+</I>&gt;<i> なくてはなりません。(もっと探せばスマートな方法があると思います。)
+</I>&gt;<i> 
+</I>&gt;<i> Koji Yokokawa wrote:
+</I>&gt;<i> &gt; 横川です。
+</I>&gt;<i> &gt; SqueakのMultilingualとLocaleについて教えてください。
+</I>&gt;<i> &gt; (詳しいお二人に出してます。)
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Squeak3.8でLocaleをenなどにしているとUTF-8で書いた日本語の内部表現
+</I>&gt;<i> &gt; &lt;WideString&gt;がShift-JISなどと異なるのですが、どうしてですか?
+</I>&gt;<i> &gt; あらかじめLocaleをjaにしておくと一致するのですが、UTF-8で読んだ日本語文
+</I>&gt;<i> &gt; 字をLocaleに左右されずに常にShift-JISやEUC-JPと一致させるにはどうすれば
+</I>&gt;<i> &gt; よいのか悩んでます。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 具体的には同じ文字をUTF-8とShift-JISで書いたファイルを用意して以下を実行
+</I>&gt;<i> &gt; するとイメージのLocaleによらず常に同じになることを期待してたのです。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; ((FileStream readOnlyFileNamed: 'UTF8.txt') converter: UTF8TextConverter
+</I>&gt;<i> &gt; new) contents 
+</I>&gt;<i> &gt; = 
+</I>&gt;<i> &gt; ((FileStream readOnlyFileNamed: 'SJIS.txt') converter: ShiftJISTextConverter
+</I>&gt;<i> &gt; new) contents
+</I>
+
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2005 ＠ yengawa.jpn.org</A>&gt;
+    self new!
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002649.html">[Squeak-ja: 2649] Re: [ANNOUNCE] 音楽イベント「The Musical Box」
+</A></li>
+	<LI>次の記事 <A HREF="002656.html">[Squeak-ja: 2656] Re: 日本語のUTF-8
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2655">[ 日付 ]</a>
+              <a href="thread.html#2655">[ スレッド ]</a>
+              <a href="subject.html#2655">[ 件名 ]</a>
+              <a href="author.html#2655">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

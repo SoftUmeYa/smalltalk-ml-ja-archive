@@ -1,0 +1,1503 @@
+From nishis ＠ zephyr.dti.ne.jp  Wed Jun  1 08:07:15 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2460] OSX での日本語入力
+Message-ID: <429CEE23.8070403@zephyr.dti.ne.jp>
+
+Nihongo5 という二世代前のイメージを， Mac OSX 10.3.9 / 10.2.8 で使ってま
+す． NetMorph がプリ・インストールされているイメージです．
+
+上記 Jaguar と Panther の両方，または Panther のみで日本語入力を可能にす
+るには何を用意すればよろしいでしょうか．windows マシンに切り替えろという
+のはナシでお願いします．m(_ _)m
+
+[Squeak-ja] m17n for 3.6 beta
+on 03.8.14 1:31 AM, kimurako@mac.com wrote:
+>>ただ、VMには、やはり、以下のページのものを使って下さい。
+>>http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/
+
+を参考に
+Squeak VM ml-030424
+で起動してみましたが，いずれも文字化けしてしまいます．エディタ等外部アプ
+リケイションで一度受けてコピペするのも面倒だし．何か他に用意するものがあ
+るのでしょうか．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From tetha ＠ st.rim.or.jp  Wed Jun  1 12:04:41 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2461] Re: OSX での日本語入力
+In-Reply-To: <429CEE23.8070403@zephyr.dti.ne.jp>
+References: <429CEE23.8070403@zephyr.dti.ne.jp>
+Message-ID: <9A3BFDDC-0200-468E-8653-2C216D9995DA@st.rim.or.jp>
+
+林です。こんにちは。
+
+# 手元で確認してないので申し訳ないのですが…
+
+Nihongo5 自体は、Nihongo6 とほぼ同等だった（Mac OS  
+X 関係のパッチが含まれ
+てる）ように記憶してます。
+ですので、イメージの内部状態に依存している話ではないかと思われま 
+す。
+
+     LanguageEnvironment class >> startUp
+
+メソッドを手で実行してみるとどうでしょうか？
+
+なお、VM については
+     http://squeak.hp.infoseek.co.jp/nihongo.htm
+にあるものをお使いください。
+（Squeak VM ml-030424 ですと Panther ではクラッシュ 
+してしまいます）
+
+
+では。
+
+
+On 2005/06/01, at 8:07, NISHIHARA Satoshi wrote:
+
+> Nihongo5 という二世代前のイメージを， Mac OSX 10.3.9 /  
+> 10.2.8 で使ってま
+> す． NetMorph がプリ・インストールされているイメージです．
+>
+> 上記 Jaguar と Panther の両方，または  
+> Panther のみで日本語入力を可能にす
+> るには何を用意すればよろしいでしょうか．windows マシンに 
+> 切り替えろという
+> のはナシでお願いします．m(_ _)m
+>
+> [Squeak-ja] m17n for 3.6 beta
+> on 03.8.14 1:31 AM, kimurako@mac.com wrote:
+>
+>>> ただ、VMには、やはり、以下のページのものを使って下さい。
+>>> http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/
+>>>
+>
+> を参考に
+> Squeak VM ml-030424
+> で起動してみましたが，いずれも文字化けしてしまいます．エディタ 
+> 等外部アプ
+> リケイションで一度受けてコピペするのも面倒だし．何か他に用意す 
+> るものがあ
+> るのでしょうか．
+>
+> -- 
+> --------------------------------------------
+> 西原聡士 (NISHIHARA Satoshi)
+> e-mail: mailto:nishis@zephyr.dti.ne.jp
+> URL:    http://www.zephyr.dti.ne.jp/~nishis/
+> --------------------------------------------
+>
+
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From nishis ＠ zephyr.dti.ne.jp  Thu Jun  2 00:39:34 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2462] Re: OSX での日本語入力
+In-Reply-To: <9A3BFDDC-0200-468E-8653-2C216D9995DA@st.rim.or.jp>
+References: <429CEE23.8070403@zephyr.dti.ne.jp>
+	<9A3BFDDC-0200-468E-8653-2C216D9995DA@st.rim.or.jp>
+Message-ID: <429DD6B6.6070407@zephyr.dti.ne.jp>
+
+on 05.6.1 0:04 PM, Tetsuya HAYASHI wrote:
+> 林です。こんにちは。
+
+林さん，こんばんは．
+
+
+> # 手元で確認してないので申し訳ないのですが…
+> 
+> Nihongo5 自体は、Nihongo6 とほぼ同等だった（Mac OS  
+> X 関係のパッチが含まれ
+> てる）ように記憶してます。
+> ですので、イメージの内部状態に依存している話ではないかと思われま 
+> す。
+> 
+>      LanguageEnvironment class >> startUp
+> メソッドを手で実行してみるとどうでしょうか？
+
+Squeak 3.7.4Beta1j と http://squeak.hp.infoseek.co.jp/nihongo.htm にある
+ Squeak 3.8.6Beta6.app で試しました．
+いずれもダメでした．
+LanguageEnvironment クラスには startUp メソッドは切ってありません．だも
+んで Behavior クラスの startUp が実行されとります．
+
+SqueakNihongo7 ではいずれも問題なくきちんと動作します．
+
+動かない方は，http://swikis.ddo.jp/NetMorph に置いてある
+ftp://swikis.ddo.jp/NetMorph/demoImages/NetMorphJLocalDemo20030620.zip
+というイメージです．
+aboutThisSystem すると，
+
+Squeak3.5
+latest update: #5180
+Current Change Set: Unnamed1
+M17n 3.0
+Nihongo5
+
+が返ります．
+
+> なお、VM については
+>      http://squeak.hp.infoseek.co.jp/nihongo.htm
+> にあるものをお使いください。
+> （Squeak VM ml-030424 ですと Panther ではクラッシュ 
+> してしまいます）
+
+え，そうなんですか．まだクラッシュはしてないんですが，念のため使用を中止
+しました．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From tetha ＠ st.rim.or.jp  Thu Jun  2 07:41:25 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:11 2007
+Subject: [Squeak-ja: 2463] Re: OSX での日本語入力
+In-Reply-To: <429DD6B6.6070407@zephyr.dti.ne.jp>
+References: <429CEE23.8070403@zephyr.dti.ne.jp>
+	<9A3BFDDC-0200-468E-8653-2C216D9995DA@st.rim.or.jp>
+	<429DD6B6.6070407@zephyr.dti.ne.jp>
+Message-ID: <4196B580-05E9-4FCE-8C75-07FF9B89BB68@st.rim.or.jp>
+
+林です。どうも。
+
+　VM 関係ですが、混乱させてしまってすみません。
+# その場その場のデフォルトを前提にしてしまってたものですので。
+
+結論からいきますと以下の組み合わせを試してみてはどうでしょうか。
+
+     VM : Squeak VM ml-030424　（←ダメと言ってたのにすみません）
+     VI へのパッチ： ML-patch-MacOSX.1.cs　（以下の  
+URL）
+http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/ML-patch- 
+MacOSX.1.cs
+
+
+　なお、VM についてはまだファイル名の UTF-8 対応する 
+前のものです
+（こっちの方がいいかも）。
+Panther で落ちる件ですが、VM 3.7 シリーズで報告されてた話 
+です。
+(VM3.6 では大丈夫なのかも？)
+SystemWindow をつまんで動かす時にクラッシュすることが報告されて
+ました。
+　もし、同様のことが起きるようでしたら、以下の VM を試して 
+みて
+ください。
+http://utopos.dyndns.info:8080/SqueakLearner/uploads/89/ 
+Squeak_360Beta3-J-20031105.app.zip
+
+On 2005/06/02, at 0:39, NISHIHARA Satoshi wrote:
+
+> Squeak 3.7.4Beta1j と http://squeak.hp.infoseek.co.jp/ 
+> nihongo.htm にある
+>  Squeak 3.8.6Beta6.app で試しました．
+> いずれもダメでした．
+> LanguageEnvironment クラスには startUp メソッドは切って 
+> ありません．だも
+> んで Behavior クラスの startUp が実行されとります．
+>
+> SqueakNihongo7 ではいずれも問題なくきちんと動作します．
+>
+> 動かない方は，http://swikis.ddo.jp/NetMorph に置いてある
+> ftp://swikis.ddo.jp/NetMorph/demoImages/NetMorphJLocalDemo20030620.zip
+> というイメージです．
+> aboutThisSystem すると，
+>
+> Squeak3.5
+> latest update: #5180
+> Current Change Set: Unnamed1
+> M17n 3.0
+> Nihongo5
+>
+> が返ります．
+>
+>
+>> なお、VM については
+>>      http://squeak.hp.infoseek.co.jp/nihongo.htm
+>> にあるものをお使いください。
+>> （Squeak VM ml-030424 ですと Panther ではクラッシュ
+>> してしまいます）
+>>
+>
+> え，そうなんですか．まだクラッシュはしてないんですが，念のため 
+> 使用を中止
+> しました．
+>
+> -- 
+> --------------------------------------------
+> 西原聡士 (NISHIHARA Satoshi)
+> e-mail: mailto:nishis@zephyr.dti.ne.jp
+> URL:    http://www.zephyr.dti.ne.jp/~nishis/
+> --------------------------------------------
+>
+
+
+From nishis ＠ zephyr.dti.ne.jp  Thu Jun  2 09:07:32 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2464] Re: OSX での日本語入力
+In-Reply-To: <4196B580-05E9-4FCE-8C75-07FF9B89BB68@st.rim.or.jp>
+References: <429CEE23.8070403@zephyr.dti.ne.jp>	<9A3BFDDC-0200-468E-8653-2C216D9995DA@st.rim.or.jp>	<429DD6B6.6070407@zephyr.dti.ne.jp>
+	<4196B580-05E9-4FCE-8C75-07FF9B89BB68@st.rim.or.jp>
+Message-ID: <429E4DC4.6070807@zephyr.dti.ne.jp>
+
+動きました．
+
+on 05.6.2 7:41 AM, Tetsuya HAYASHI wrote:
+> 結論からいきますと以下の組み合わせを試してみてはどうでしょうか。
+>      VM : Squeak VM ml-030424　（←ダメと言ってたのにすみません）
+>      VI へのパッチ： ML-patch-MacOSX.1.cs　（以下のURL）
+> http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/ML-patch- 
+> MacOSX.1.cs
+
+上記のうち，チェンジ・セットだけでもエエようです．ファイル・インして保存
+した後は，Squeak VM ml-030424，
+Squeak 3.8.6Beta6.app (http://squeak.hp.infoseek.co.jp/nihongo.htm)，
+Squeak 3.7.4Beta1j のいずれでも，日本語入力が可能になります．
+
+ちなみに，J.M.McIntosh さんのhttp:
+//homepage.mac.com/johnmci/.Public/Squeak%203.8.6Beta6.app.sit
+でも動きます．
+より新しい
+http://homepage.mac.com/johnmci/.Public/Squeak%203.8.6Beta6.app.sit
+ではダメでした．
+
+> SystemWindow をつまんで動かす時にクラッシュすることが報告されて
+> ました。
+
+SystemWindow とはルート・ウィンドウのことでしょうか？　それとも，ワーク
+スペース等のクラシカルな内部ウィンドウ？　いずれもクラッシュしませんでした．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From tetha ＠ st.rim.or.jp  Thu Jun  2 10:27:00 2005
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2465] Re: OSX での日本語入力
+In-Reply-To: <429E4DC4.6070807@zephyr.dti.ne.jp>
+References: <429CEE23.8070403@zephyr.dti.ne.jp>	<9A3BFDDC-0200-468E-8653-2C216D9995DA@st.rim.or.jp>	<429DD6B6.6070407@zephyr.dti.ne.jp>
+	<4196B580-05E9-4FCE-8C75-07FF9B89BB68@st.rim.or.jp>
+	<429E4DC4.6070807@zephyr.dti.ne.jp>
+Message-ID: <F7938C29-4F22-4C72-97E0-FC7D98DF24C1@st.rim.or.jp>
+
+林です。ども。
+
+On 2005/06/02, at 9:07, NISHIHARA Satoshi wrote:
+
+> 動きました．
+
+一安心です。
+
+> on 05.6.2 7:41 AM, Tetsuya HAYASHI wrote:
+>
+>> 結論からいきますと以下の組み合わせを試してみてはどうでしょう 
+>> か。
+>>      VM : Squeak VM ml-030424　（←ダメと言ってたのにすみませ 
+>> ん）
+>>      VI へのパッチ： ML-patch-MacOSX.1.cs　（以下の 
+>> URL）
+>> http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/ML-patch-
+>> MacOSX.1.cs
+>>
+>
+> 上記のうち，チェンジ・セットだけでもエエようです．ファイル・イ 
+> ンして保存
+> した後は，Squeak VM ml-030424，
+> Squeak 3.8.6Beta6.app (http://squeak.hp.infoseek.co.jp/ 
+> nihongo.htm)，
+> Squeak 3.7.4Beta1j のいずれでも，日本語入力が可能になります．
+>
+> ちなみに，J.M.McIntosh さんのhttp:
+> //homepage.mac.com/johnmci/.Public/Squeak%203.8.6Beta6.app.sit
+> でも動きます．
+> より新しい
+> http://homepage.mac.com/johnmci/.Public/Squeak%203.8.6Beta6.app.sit
+> ではダメでした．
+
+たぶん、日本語入力に関してはトラブルは無いかと思いますが、日本語の
+ファイル名については、VM 3.7, 3.8 バージョンですとエラーに 
+なってし
+まうと思います。
+
+>> SystemWindow をつまんで動かす時にクラッシュすることが報告されて
+>> ました。
+>>
+>
+> SystemWindow とはルート・ウィンドウのことでしょうか？　それと 
+> も，ワーク
+> スペース等のクラシカルな内部ウィンドウ？　いずれもクラッシュし 
+> ませんでした．
+
+内部ウィンドウの方です。
+3.6 バージョンだと安定してるのかもしれません。
+
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+From kuwatani ＠ akademia.co.jp  Thu Jun  2 21:02:45 2005
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2466] サーバ停止のお知らせ
+Message-ID: <20050602210245WRZ-2f@akademia.co.jp>
+
+Squeak-jaのメンバーの皆様
+
+サーバの管理をしています桑谷と申します．
+
+このたびメーリングリストを運用している建物の電気工事のため下記の日程で
+サーバを停止します．あしからず御了承ください．
+
+                                    記
+
+            日時：6月3日(金) 21:00 〜 6月4日(土) 12:00
+
+                                                              以上
+
+________________________________________
+桑谷剛史
+kuwatani@akademia.co.jp
+
+
+
+From abee.abe ＠ nifty.ne.jp  Tue Jun  7 21:56:39 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2467] Re: Squeak のコンサート、展示などのご案内
+In-Reply-To: <287073018F1FCC48B871980C94CB156503C0CAC9@tkoexc02.asiapacific.cpqcorp.net>
+References: <287073018F1FCC48B871980C94CB156503C0CAC9@tkoexc02.asiapacific.cpqcorp.net>
+Message-ID: <42A59987130.20EEABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Fri, 27 May 2005 18:29:07 +0900
+"Kondo, Fumito" <fumito.kondo@hp.com> wrote:
+>「世界ミーム博覧会2005」では、技術展にSqueakが展示されたり、コンサートで
+>Squeakを用いたマルチエージェントモデルによる音楽の演奏会があったり、また、
+>6月24日は、Alan Kayさんも万博瀬戸会場に来て、簡単な講演と子供たちとの交流
+>を予定しております。
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-May/002454.html
+
+このアランさんの講演日時について、近藤さんに教えてもらいました。
+
+6/24(金) 11:00-12:00
+愛・地球博 瀬戸会場 市民パビリオン 対話劇場
+
+とのことです。
+また、私は日本HPのボランティアと共に、6/24, 25の両日、対話劇場でSqueakの
+デモを行う予定です。
+
+愛知万博にお出かけの際はぜひお立ち寄りください。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From tak ＠ metatoys.org  Wed Jun  8 10:36:57 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2468] SqueakNihongo CD-ROM用
+Message-ID: <42A64BB9.9050901@metatoys.org>
+
+山宮＠精華町です。
+
+お問い合わせを受けたのをきっかけに、
+Squeak をインストールしなくても実行出来るようにしたファイルの一式を作
+成してみました(windows 用)。CD-ROM 等から直接実行できますので、ワーク
+ショップ等でアクセス制限の厳しい PC で利用するのに便利です。
+
+ダウンロード先
+
+http://metatoys.org/pub/nihongo7/squeakKit.zip
+
+! 使い方
+
+zip ファイルを展開した物を CD-ROM に焼いてください。プロジェクトの保存
+場所を共有ディレクトリ等に設定する場合は、焼く前に「プロジェクトの保存
+方法」の設定をしておいて下さい。
+
+! 起動方法
+
+焼いたCD-ROM を
+SqueakPlugin.image を Squeak.exe にドロップして下さい。
+
+! プロジェクトの保存方法
+
+「公開する」ボタンによるプロジェクトの保存場所として、標準で 「このディ
+レクトリ\ユーザ名」設定されていますが、書き込み権限の問題でこの場所に
+書けない場合、ネットワークドライブや USB メモリ等の別の場所を設定する
+事が出来ます。Squeak を起動する前にディレクトリを作成し、書き込み可能
+である事を確認しておいて下さい。
+
+「prefs\knownServers\projects.txt」ファイルをメモ帳などで開く
+
+name:	projects
+directory:	C:\Projects
+type:	file
+
+の directory: 以下のディレクトリを書き換えて保存(\\ から始まるパスは使えません)。
+
+すると、「公開する」や「探す」ボタンでディレクトリの名前が現れます。
+(ファイル名や name: の内容は何でも良い)
+
+! 開発者メモ
+
+このファイルは、基本的に SqueakNihongo7 インストーラーとして配布してい
+る物と同一です。違いは以下の通りです。
+
+- 上記 projects.txt ファイルを添付してある。
+- Web プラグイン用セキュリティの設定を行っていない(プリファレンス設定 "Preferences disable: #automaticKeyGeneration")
+
+Web プラグイン用セキュリティ設定とは、Web ブラウザ経由でプロジェクトを
+読み込む時の特有の設定で、特定ディレクトリ意外は書き込めないように自動
+的に制限する方法です。しかしながら、この設定では起動時に暗証キーを作業
+ディレクトリに書き込む必要があるため、CD-ROM 直接実行では使えません(こ
+の場合 Web プラグインとしては使えないのでどのみち必要無いです)。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Sat Jun 11 00:30:46 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2469] [N7]HttpUrlの不具合
+Message-ID: <42A9B226.9040202@m2.pbc.ne.jp>
+
+川村です。お世話になっています。
+
+日本語７でHttpUrlクラスのBasic認証チェックでrealmフィールドがうまくとれ
+ないバグがあります。このためBasic認証がうまくいかず無限ループになってし
+まいます。確認は下記コードで'debug it'すればできます。
+例)
+| h |
+h := HttpUrl absoluteFromText: 'http://hogehoge.jp'.
+h checkAuthorization:
+'HTTP/1.1 401 Authorization Required
+Date: Mon, 10 Jun 2002 17:12:23 GMT
+Server: Apache/1.3.24 (Unix)
+WWW-Authenticate: Basic realm="member only"
+Connection: close
+Content-Type: text/html; charset=iso-8859-1' retry: [].
+h realm
+--> ''
+
+やっつけで直したい場合は
+HttpUrl>>checkAuthorization:retry:
+を下記のように直せばＯＫです。
+
+| oldRealm i end encoded |
+((webDocument isString)
+and: [(webDocument beginsWith: 'HTTP/1.0 401')
+or: [webDocument beginsWith: 'HTTP/1.1 401']])
+ifFalse: [^self].
+
+oldRealm _ realm.
+i _ webDocument findString: 'realm="'.
+i = 0 ifTrue: [^self].
+end _ webDocument indexOf: $" startingAt: i+7."hkawa"
+realm _ webDocument copyFrom: i+7 to: end-1."hkawa"
+"realm _ (webDocument findTokens: '""') at: 2."
+
+Passwords ifNil: [Passwords _ Dictionary new].
+encoded _ Passwords at: realm ifAbsent: [nil].
+(oldRealm = realm) & (encoded~~ nil) "hkawa"
+ifTrue: [^self].
+(oldRealm ~= realm) & (encoded ~~ nil)
+ifTrue: [^ retryBlock value]
+ifFalse: ["ask the user"
+self askNamePassword ifTrue: [^ retryBlock value]]
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.6.6 - Release Date: 2005/06/08
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From suto ＠ amcac.ac.jp  Mon Jun 13 12:41:45 2005
+From: suto ＠ amcac.ac.jp (suto)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2470] viewer window
+Message-ID: <82e5e5739da305f97b35d1bd29e9149e@amcac.ac.jp>
+
+秋田公立美術工芸短期大学の須藤です。
+お世話になっています。
+
+本学の演習で少しずつSqueakToysを使わせているのですが、
+少し困ったことがありますので助けて下さい。
+
+演習中、たまに「ビューワ」を出すために「目玉」ハロをクリックすると、
+見慣れたビューワではなく、「Vocabulary of ○○（オブジェクトの名前）」という
+ペインで構成されたウインドウが出てくるようになってしまう学生が居ます。
+どのような操作をしたらそうなってしまったか、本人たちは覚えていません。
+このような状態になってしまったとき、通常のビューアに戻す方法が分かりません。
+一度 Squeak を終了して起動してもダメで、現在はOSの再起動で対応しています。
+使用している環境は、knoppix ＋Squeak 6.1（日本語）です。
+
+情報が有りましたらお教え下さい。
+よろしくお願いします。
+
+---
+須藤秀紹（すとうひでつぐ）
+秋田公立美術工芸短期大学 産業デザイン学科
+〒010-1632 秋田市新屋大川町12-3
+TEL 018-888-8108 / FAX 018-888-8109
+http://www.amcac.ac.jp/~suto
+
+
+From yoshiki ＠ squeakland.org  Mon Jun 13 13:00:33 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2471] Re: viewer window
+In-Reply-To: <82e5e5739da305f97b35d1bd29e9149e@amcac.ac.jp>
+References: <82e5e5739da305f97b35d1bd29e9149e@amcac.ac.jp>
+Message-ID: <upsuqewim.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> 演習中、たまに「ビューワ」を出すために「目玉」ハロをクリックすると、
+> 見慣れたビューワではなく、「Vocabulary of ○○（オブジェクトの名前）」という
+> ペインで構成されたウインドウが出てくるようになってしまう学生が居ます。
+> どのような操作をしたらそうなってしまったか、本人たちは覚えていません。
+> このような状態になってしまったとき、通常のビューアに戻す方法が分かりません。
+> 一度 Squeak を終了して起動してもダメで、現在はOSの再起動で対応しています。
+> 使用している環境は、knoppix ＋Squeak 6.1（日本語）です。
+
+  思わず、Shiftキーを押してしまっているか、という可能性が高いです。
+
+  vocabularyを見る機能は必要ないので、shiftが押されていてもビューワを
+出す、というほうが良いかもしれませんね。
+
+  実例報告をどうもありがとうございます。作っていたりすると気が付かない
+不具合は多いので、このような報告はとても参考になります。ありがとうござ
+います。
+
+-- Yoshiki
+
+From k.suzaki ＠ aist.go.jp  Mon Jun 13 15:49:39 2005
+From: k.suzaki ＠ aist.go.jp (Kuniyasu Suzaki)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2472] Re: viewer window
+In-Reply-To: <82e5e5739da305f97b35d1bd29e9149e@amcac.ac.jp>
+References: <82e5e5739da305f97b35d1bd29e9149e@amcac.ac.jp>
+Message-ID: <20050613.154939.52159537.k.suzaki@aist.go.jp>
+
+
+須崎＠産総研です。
+技術的なリプライでなくて済みませんが。
+
+ >>From: suto <suto@amcac.ac.jp>
+ >>Subject: [Squeak-ja: 2470] viewer window
+ >>
+ >>秋田公立美術工芸短期大学の須藤です。
+ >>お世話になっています。
+ >>
+ >>本学の演習で少しずつSqueakToysを使わせているのですが、
+ >>少し困ったことがありますので助けて下さい。
+ >>
+ >>演習中、たまに「ビューワ」を出すために「目玉」ハロをクリックすると、
+ >>見慣れたビューワではなく、「Vocabulary of ○○（オブジェクトの名前）」という
+ >>ペインで構成されたウインドウが出てくるようになってしまう学生が居ます。
+ >>どのような操作をしたらそうなってしまったか、本人たちは覚えていません。
+ >>このような状態になってしまったとき、通常のビューアに戻す方法が分かりません。
+ >>一度 Squeak を終了して起動してもダメで、現在はOSの再起動で対応しています。
+ >>使用している環境は、knoppix ＋Squeak 6.1（日本語）です。
+
+こちらは下記のものですか。
+＃ squeak は見当たりませんが。
+   http://www.alpha.co.jp/knoppix/intro/case_amcac.shtml
+
+２年ぐらい前にこちらから出したものは squeak 3.4	+ knoppix 3.2 でした。
+   http://unit.aist.go.jp/itri/knoppix/news/news030826.html
+
+------
+suzaki
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Mon Jun 13 21:03:09 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2473] Re: [N7]HttpUrlの不具合
+In-Reply-To: <42A9B226.9040202@m2.pbc.ne.jp>
+References: <42A9B226.9040202@m2.pbc.ne.jp>
+Message-ID: <42AD75FD.5020403@m2.pbc.ne.jp>
+
+HttpUrlクラス利用時の注意点
+
+川村です。お世話になっています。
+HttpUrlクラスで、Swikiサイト全体にBasic認証がかかっている場合にPOSTメ
+ソッドでアクセスする時の注意点についてご報告します。
+
+HttpUrlでPOSTメソッドでアクセスする場合は、おおよそ次のようになります。
+1)Basic認証がないとみなして1度POSTメソッドをWebサーバに投げる
+2)Webサーバのレスポンスコードが401の場合,Basic認証がかかっているとして
+ユーザにUser名、パスワードを問い合わせる。この内容を Authorization: ヘッ
+ダに次の形式で埋め込んで再度POSTメソッドをWebサーバに投げる。
+Authorization: Basic ********
+注)'********'部分はuser:passwordをBase64エンコードしたもの
+3)HTTPSocket class>>httpPost*は後述する理由により、常にレスポンスコード
+401を返す。
+4) 1)へ
+というわけで、無限ループに落ち込んでしまいます。するとユーザはユーザ名か
+パスワードが間違えていると勘違いする。
+
+HTTPSocket class>>httpPost*が常にレスポンスコード401を返す理由:
+SwikiはPOSTに成功すると別URLへリダイレクトさせます。しかし、HTTPSocket>>
+httpPost*の実装はリダイレクト先のページ取得時に上記のAuthorization: ヘッ
+ダをつけないまま、アクセスします。するとそのリダイレクト先も認証がかかっ
+ているので401を返す。もともとはAuthorization: ヘッダをつけていたようです
+が、その部分はコメントアウトされていました（なにか理由があったのでしょう
+ね）。
+
+★GETメソッドではリダイレクト先のページ取得時にもAuthorization: ヘッダを
+付加するので問題ない。
+
+それでは
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.6.9 - Release Date: 2005/06/11
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Jun 15 16:17:54 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2474] 「自由自在 Squeakプログラミング」増刷します
+Message-ID: <JM200506151617547.9986875@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+おかげさまで「自由自在 Squeakプログラミング」が、増刷の運びとなりました。
+
+今回は、あくまで増刷のため、大きな修正は加えられませんが、初版発行から
+9ヶ月程度たちますし、ある程度、更新できる部分はしたいと思っております。
+
+現在わかっている正誤につきましては、
+http://swikis.ddo.jp/squeak/4
+にまとめてあります。
+
+これ以外にも、お気づきの点などありましたら、このMLないし、本人宛にメール
+いただければと思います。
+
+#印刷の都合上、勝手ながら6/19までが目処となります。
+
+よろしくお願い申し上げます。
+---
+[:masashi | ^umezawa]
+
+From koubo2005 ＠ yengawa.jpn.org  Wed Jun 15 16:37:15 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2475] Re: 「自由自在 Squeakプログラミング」増刷します
+In-Reply-To: <JM200506151617547.9986875@mars.dti.ne.jp>
+References: <JM200506151617547.9986875@mars.dti.ne.jp>
+Message-ID: <20050615162136.DB6B.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+増刷おめでとうございます。
+Squeakのリファレンスにとどまらずオブジェクト指向の基本概念もおさえられて
+いるので便利に使わせてもらっています。
+
+もれていたのがありますので報告します。
+
+P.556 図13.27
+ClassDescriptin → ClassDescription
+
+
+On Wed, 15 Jun 2005 16:17:54 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+
+> こんにちは
+> 梅澤です。
+> 
+> おかげさまで「自由自在 Squeakプログラミング」が、増刷の運びとなりました。
+> 
+> 今回は、あくまで増刷のため、大きな修正は加えられませんが、初版発行から
+> 9ヶ月程度たちますし、ある程度、更新できる部分はしたいと思っております。
+> 
+> 現在わかっている正誤につきましては、
+> http://swikis.ddo.jp/squeak/4
+> にまとめてあります。
+> 
+> これ以外にも、お気づきの点などありましたら、このMLないし、本人宛にメール
+> いただければと思います。
+> 
+> #印刷の都合上、勝手ながら6/19までが目処となります。
+> 
+> よろしくお願い申し上げます。
+> ---
+> [:masashi | ^umezawa]
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From suto ＠ amcac.ac.jp  Wed Jun 15 16:51:28 2005
+From: suto ＠ amcac.ac.jp (suto)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2476] Re: viewer window
+In-Reply-To: <upsuqewim.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+References: <82e5e5739da305f97b35d1bd29e9149e@amcac.ac.jp>
+	<upsuqewim.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+Message-ID: <d20115b660443513955bc3b31da1f56e@amcac.ac.jp>
+
+おおしま様：
+
+秋田公立美術工芸短期大学の須藤です。
+情報を頂きましてありがとうございます。
+
+>
+>> 演習中、たまに「ビューワ」を出すために「目玉」ハロをクリックすると、
+>> 見慣れたビューワではなく、「Vocabulary of ○○（オブジェクトの名前）」という
+>> ペインで構成されたウインドウが出てくるようになってしまう学生が居ます。
+>> どのような操作をしたらそうなってしまったか、本人たちは覚えていません。
+>> このような状態になってしまったとき、通常のビューアに戻す方法が分かりません。
+>> 一度 Squeak を終了して起動してもダメで、現在はOSの再起動で対応しています。
+>> 使用している環境は、knoppix ＋Squeak 6.1（日本語）です。
+>
+>   思わず、Shiftキーを押してしまっているか、という可能性が高いです。
+>
+>   vocabularyを見る機能は必要ないので、shiftが押されていてもビューワを
+> 出す、というほうが良いかもしれませんね。
+>
+
+再現性のあるものなので「思わず押してしまっている」ということは無いと思う、
+もしかしてと「CAPS」を入れた状態で試してみたら再現しました。
+「CAPS」オンでも「 Vocabulary of 〜」が開いてしまうのですね。
+対処方法が判明して助かりました。
+
+
+
+>   実例報告をどうもありがとうございます。作っていたりすると気が付かない
+> 不具合は多いので、このような報告はとても参考になります。ありがとうござ
+> います。
+>
+
+
+まだまだ手探りで演習をしている段階です。
+これからもいろいろと分からないことが出てくる可能性がありますので、
+よろしくお願いします。
+どうもありがとうございました。
+
+---
+須藤秀紹（すとうひでつぐ）
+秋田公立美術工芸短期大学 産業デザイン学科
+〒010-1632 秋田市新屋大川町12-3
+TEL 018-888-8108 / FAX 018-888-8109
+http://www.amcac.ac.jp/~suto
+
+
+From yoshiki ＠ squeakland.org  Wed Jun 15 21:39:45 2005
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2477] Re: viewer window
+In-Reply-To: <d20115b660443513955bc3b31da1f56e@amcac.ac.jp>
+References: <82e5e5739da305f97b35d1bd29e9149e@amcac.ac.jp>
+	<upsuqewim.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+	<d20115b660443513955bc3b31da1f56e@amcac.ac.jp>
+Message-ID: <u4qbzequm.wl@YOSHIKI-T2.mb.infoweb.ne.jp>
+
+  おおしまです。
+
+> >   思わず、Shiftキーを押してしまっているか、という可能性が高いです。
+> >
+> >   vocabularyを見る機能は必要ないので、shiftが押されていてもビューワを
+> > 出す、というほうが良いかもしれませんね。
+> >
+> 
+> 再現性のあるものなので「思わず押してしまっている」ということは無いと思う、
+> もしかしてと「CAPS」を入れた状態で試してみたら再現しました。
+> 「CAPS」オンでも「 Vocabulary of 〜」が開いてしまうのですね。
+> 対処方法が判明して助かりました。
+
+  あ、書きかけていたつもりだったのですが、僕の書いた説明から「押してし
+まっているか、あるいはCAPSが入っているか」の「、」以降がなくなってしまっ
+ていました^^;原因がわかって何よりです。
+
+> まだまだ手探りで演習をしている段階です。
+> これからもいろいろと分からないことが出てくる可能性がありますので、
+> よろしくお願いします。
+> どうもありがとうございました。
+
+  こちらこそよろしくお願いします。
+
+-- Yoshiki
+
+From kawa90 ＠ m2.pbc.ne.jp  Fri Jun 17 00:49:18 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2478] [N7]HttpSocket クラスについて
+Message-ID: <42B19F7E.20906@m2.pbc.ne.jp>
+
+川村です。いつもお世話になってます。
+pukiwikiにファイルアップロードするものを作っていて気がついたことを報告し
+ます。
+
+HttpSocket class>>httpPostMultipart:args:accept:request:で
+'Content-Disposition'ヘッダ形式が一般的なものと異なってました。
+
+--- HTML4.0仕様書では(http://www.w3.org/TR/REC-html40/interact/forms.html)
+Content-Disposition: form-data; name="xxx"; filename="yyy.txt"
+---
+Squeakでは(日本語7)
+---
+Content-disposition: multipart/form-data; name="xxx" filename="yyy.txt"
+---
+・'name'の後のデリミタ';'がない
+・'Disposition'が小文字
+・'multipart/form-data'って？
+
+サーバ側の実装により正しくForm送信がうまくいかない場合が出てきます。実際
+pukiwikiではHTML4.0仕様書の定義で厳格に解析しているようで、アップでき
+ず、新たにHttpSocket class>>httpPostMultipart:args:accept:request:をベー
+スに実装しました。
+
+少なくとも、デリミタ';'がないのはまずいのでは。。。
+
+それでは
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.7.5/18 - Release Date: 2005/06/15
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From suto ＠ amcac.ac.jp  Fri Jun 17 08:59:41 2005
+From: suto ＠ amcac.ac.jp (suto)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2479] Re: viewer window ( squeak in knoppix for 秋美 )
+In-Reply-To: <20050613.154939.52159537.k.suzaki@aist.go.jp>
+References: <82e5e5739da305f97b35d1bd29e9149e@amcac.ac.jp>
+	<20050613.154939.52159537.k.suzaki@aist.go.jp>
+Message-ID: <00cfaad4f3ea9394c2a0b0f8cf86351f@amcac.ac.jp>
+
+産総研 須崎様：
+
+秋田公立美術工芸短期大学の須藤です。
+
+>>> 使用している環境は、knoppix ＋Squeak 6.1（日本語）です。
+>
+> こちらは下記のものですか。
+> ＃ squeak は見当たりませんが。
+>    http://www.alpha.co.jp/knoppix/intro/case_amcac.shtml
+>
+
+はい、このシステムです。
+このページではSqueakのことはふれられていませんが、
+実際には上記のバージョンを収録させて頂きました。
+今のところ、私が担当している「情報デザイン演習」という
+専攻科の講義でのみ使わせてもらってます。
+できれば他の講義にも展開して行きたいと考えています。
+
+
+> ２年ぐらい前にこちらから出したものは squeak 3.4	+ knoppix 3.2 でした。
+>    http://unit.aist.go.jp/itri/knoppix/news/news030826.html
+>
+
+
+上記のシステムは「美大の情報リテラシー教育」に特化して
+カスタマイズしてもらったものです。
+本年度から新しくなったシステムなので、
+まだまだ手探り状態です。
+
+
+---
+須藤秀紹（すとうひでつぐ）
+秋田公立美術工芸短期大学 産業デザイン学科
+〒010-1632 秋田市新屋大川町12-3
+TEL 018-888-8108 / FAX 018-888-8109
+http://www.amcac.ac.jp/~suto
+
+
+From kuwatani ＠ akademia.co.jp  Fri Jun 17 13:11:02 2005
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2480] サーバ停止のお知らせ
+Message-ID: <200506171311026$Zni9@akademia.co.jp>
+
+Squeak-jaのメンバーの皆様
+
+サーバの管理をしています桑谷と申します．
+
+このたびメーリングリストを運用している建物の電気工事のため下記の日程で
+サーバを停止します．あしからず御了承ください．
+
+                                    記
+
+            日時：6月17日(金) 21:00 〜 6月18日(土) 12:00
+
+                                                              以上
+
+________________________________________
+桑谷剛史
+kuwatani@akademia.co.jp
+
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Jun 20 22:12:56 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2481] LLDN 開催のお知らせ
+Message-ID: <JQ200506202212567.1105218@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+下記のように、今年も軽量プログラミング言語の大会(LLDN)が行われます。
+
+去年は、Squeakデモも10分の割には不思議に盛り上がり、またプログラミング
+コンテストには林さんが出場され、見事Squeakで優勝を勝ち取られました。
+
+今年もSqueakは参加します。言語の近況紹介(Language Update)と、
+プログラミングコンテスト(どう書く)です。
+
+夏のお祭りですので、参加されたい方はどうぞ。
+
+---
+=====================================================================
+           Lightweight Language Day and Night 開催のお知らせ          
+ =====================================================================
+ 
+   2003年はLL Saturday、2004年はLL Weekend、そして今年はLLDN。
+ 
+   軽量プログラミング言語に関するイベントとして多くの方に、参加、注目い
+ ただいているLightweight Languageカンファレンスですが、みなさまのご意見
+ を参考にして進化しています。
+ 
+   ・ 濃い内容だし、扱う言語も多いので1日では
+   ・ さすがに2日間参加するのは
+   ・ より知識を深めるためのイベントを期待したい
+   ・ お祭り的なイベントを期待したい
+ 
+   一見すると相反するような要望もありますが、なるべくみなさまのご要望に
+ こたえて行きたいと考えています。そこで今年は、1日をもう少し長く利用し、
+ 昼の部と夜の部に分けて開催します。昼の部は少しアカデミックに、夜の部は
+ お祭り的な要素を増幅させたものを企画中です。
+ 
+   昼の部、夜の部ということで「Lightweight Language Day and Night」（通称
+ LLDN）なのです。
+ 
+   一昨年、昨年に引き続き、各プログラミング言語コミュニティの協力を得て、
+ それぞれの言語の特徴などを比較しながら理解できるセッションを多数用意する
+ 予定です。
+ 
+   各言語に関してなら、そのコミュニティ主催の勉強会やカンファレンスが企画
+ されることもありますが、LLDNのようにいろいろな言語が一堂に会す催しは、そ
+ う多くはありません。LLDNは、さまざまな軽量プログラミング言語の面白さや楽
+ しさを体験できるまたとない機会です。ぜひ、ご参加ください。
+ 
+ ◆開催概要
+ 
+ 名称：Lightweight Language Day and Night (通称: LLDN)
+ 主催：LLDN実行委員会
+ 協賛：(株)アスキー、日本UNIXユーザ会、Kahuaプロジェクト、
+       Tokyo Perl Mongers、日本PHPユーザ会、日本Pythonユーザ会、
+       日本Rubyの会 ほか
+ 
+ 開催日          ：2005年8月27日(土)
+ 時間  （昼の部）：10:00〜16:30（予定）
+       （夜の部）：19:00〜22:00（予定）
+ 場所  （昼の部）：四谷区民ホール
+   （http://www.city.shinjuku.tokyo.jp/division/261300yotsuya/kuminhall/）
+       （夜の部）：ロフトプラスワン（http://www.loft-prj.co.jp/PLUSONE/）
+ 参加費（昼の部）：1,500円
+       （夜の部）：1,500円（Tシャツ付き、飲食代別）
+ 定員  （昼の部）：350名（予定）
+       （夜の部）：120名（予定）
+ 
+ 内容：軽量プログラミング言語に関する総合カンファレンスです。
+       各出版社による関連書籍の展示・販売も行う予定です。
+ URL ：http://ll.jus.or.jp/2005/
+ 
+ 参加申込: 2005年6月頃に申し込み開始を予定
+ 
+ 問い合わせ先：LLDN 実行委員会
+               E-mail：info2005@ll.jus.or.jp 
+ 
+ ※ 詳しい情報は、http://ll.jus.or.jp/2005/ にて発表していきます。
+ ======================================================================
+---
+ 
+---
+[:masashi | ^umezawa]
+
+From umejava ＠ mars.dti.ne.jp  Tue Jun 21 14:08:02 2005
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2482] 和田小学校でのSqueakToysワークショップ
+Message-ID: <JJ200506211408023.3566828@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+IT Media Newsに、先日行われた和田小学校でのSqueakToysワークショップの模様が
+掲載されていますね。
+http://www.itmedia.co.jp/news/articles/0506/20/news088.html
+
+ご参考まで。
+---
+[:masashi | ^umezawa]
+
+From abee.abe ＠ nifty.ne.jp  Tue Jun 21 15:03:53 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2483] Re: 和田小学校での SqueakToys ワークショップ
+In-Reply-To: <JJ200506211408023.3566828@mars.dti.ne.jp>
+References: <JJ200506211408023.3566828@mars.dti.ne.jp>
+Message-ID: <42B7ADC91D9.4937ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Tue, 21 Jun 2005 14:08:02 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>IT Media Newsに、先日行われた和田小学校でのSqueakToysワークショップの模様が
+>掲載されていますね。
+>http://www.itmedia.co.jp/news/articles/0506/20/news088.html
+
+紹介ありがとうございます。今回はたくさん取り上げられているようです。
+
+“パソコンの父”アラン・ケイ氏が和田小学校を訪問——プログラミング言語
+“Squeak”でアイデアを具現化する授業を見学
+http://ascii24.com/news/i/keyp/article/2005/06/20/656519-000.html
+
+フォトレポート：アラン・ケイのSqueakが日本の小学校にお目見え
+http://japan.cnet.com/news/biz/story/0,2000050156,20084587,00.htm
+
+日本HP、杉並区の小学校で「アラン・ケイワークショップ」を開催
+http://pc.watch.impress.co.jp/docs/2005/0621/hp.htm
+
+アラン・ケイ氏が杉並の小学校を訪問、スクイーク使ったパソコン授業を見学
+http://www.computernews.com/DailyNews/2005/06/20050620191290EC88E42020.htm
+http://newsflash.nifty.com/news/td/td__bcn_2005062021.htm
+http://headlines.yahoo.co.jp/hl?a=20050620-00000021-bcn-sci
+
+和田小におけるスクイークの取り組みは、日本HPからの機器の寄贈をきっかけと
+して、1年ほど前に始まりました。日本HPは単に物を提供して終わりにするのでは
+なく、社員やOB、家族によるボランティア団体「HP-Squeakers」を組織して、カ
+リキュラムの作成や授業の支援などを行っています。
+
+http://h50146.www5.hp.com/info/feature/coverstory/05hpsqueakers.html
+
+私はHP-Squeakersのアドバイザとしてお手伝いしているのですが(上記の記事に社
+員とあるのは間違いです)、今回の訪問は、これまでの取り組みの成果をアランさ
+んに見ていただき、今後の進め方などを先生方や HP-Squeakersのメンバとディス
+カッションするために行われました(対外的には日本HPの社会貢献活動の宣伝です
+が :-)。
+
+ベールに包まれていた和田小の活動内容もそろそろディスクローズしていきます
+ので、今後にご期待ください(狼少年にならないよう自戒を込めて)。
+
+ //abee
+
+P.S. 6/24, 25は世界ミーム博です。アランさんの講演などもありますので、こち
+らもどうぞよろしくお願いします。
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-May/002454.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-June/002467.html
+
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From takeda ＠ kwansei.ac.jp  Tue Jun 21 15:05:11 2005
+From: takeda ＠ kwansei.ac.jp (Takeda Toshiyuki)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2484] Re: 和田小学校でのSqueakToysワークショップ
+In-Reply-To: <JJ200506211408023.3566828@mars.dti.ne.jp>
+References: <JJ200506211408023.3566828@mars.dti.ne.jp>
+Message-ID: <9B3B2E1A-0969-47CD-92E3-0ECD00DE6C27@kwansei.ac.jp>
+
+武田です。
+
+CNETにもありました。
+
+http://www.japan.cnet.com/news/biz/story/0,2000050156,20084587,00.htm
+
+On 2005/06/21, at 14:08, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> IT Media Newsに、先日行われた和田小学校でのSqueakToys 
+> ワークショップの模様が
+> 掲載されていますね。
+> http://www.itmedia.co.jp/news/articles/0506/20/news088.html
+>
+> ご参考まで。
+> ---
+> [:masashi | ^umezawa]
+>
+
+
+From tak ＠ metatoys.org  Fri Jun 24 14:11:47 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2485] Squeak Nihongo 7 update (#100)
+Message-ID: <42BB9613.7020907@metatoys.org>
+
+山宮です。スクイークのプラグインイメージと Windows 用のインストーラを
+更新し、公開ました。このアップデートでは、関西大学で6月11日に行ったワー
+クショップで出た不具合を修正しています(全部じゃないですが)。
+
+http://squeakland.jp/plugin/installers/SqueakNihongo7Installer.exe インストーラ
+http://squeakland.jp/developer/download/image/SqueakPluginNihongo7.zip プラグインイメージ
+
+公開しなおしたのはプラグイン版(ワークショップ用)のみです。他の開発者版
+など、他のイメージの方は各自 [ヘルプ] - [サーバーからアップデートを取
+得] よりアップデートして下さい。
+
+公開に当たって勝手に squeakland.jp のダウンロードのリンクを変更しまし
+た。http://squeakland.jp/plugin/download.html mac ユーザ用はまだですが、
+mac 開発者の方も頑張ってください。
+
+* 5月21日以降の更新
+
+0100dontUseHaloTranstion.cs
+スケッチ再描画時ハロが出たままになる潜在的問題(テーマを設定し直した時) - 山宮
+
+0099showProjectSaveError.cs
+プロジェクト保存失敗でちゃんとエラーを出す。 - 山宮
+http://bugs.impara.de/view.php?id=1341
+
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From kawa90 ＠ m2.pbc.ne.jp  Sat Jun 25 01:09:01 2005
+From: kawa90 ＠ m2.pbc.ne.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2486] Re: [N7]HttpUrlの不具合
+In-Reply-To: <42AD75FD.5020403@m2.pbc.ne.jp>
+References: <42A9B226.9040202@m2.pbc.ne.jp> <42AD75FD.5020403@m2.pbc.ne.jp>
+Message-ID: <42BC301D.6070102@m2.pbc.ne.jp>
+
+HttpUrlクラス利用時の注意点（続編）
+
+SwikiのBasic認証がかかっているページに大きなファイルをUpしようと
+HttpUrl>>postMultipartFormArgs:などを使う場合に下記の理由から
+例外ConnectionTimedOutが発生して中断してしまいます。
+
+1)Basic認証がかかっていないとみなしHTTPSocketで送信を試みます。
+2)認証がかかっているため、上記送信のSocketを相手から切断されて、
+OldSocket>>>sendData:でタイムアウトの例外（実際はタイムアウトでは
+ないのですが…）が発生します。小さなデータでは送信が切断前に完了
+するため問題ありません。
+
+それでは。
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+http://squeak.qp.land.to/
+http://blog.goo.ne.jp/hkawa90/ (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.0/27 - Release Date: 2005/06/23
+
+__________________________________
+Save the earth
+http://pr.mail.yahoo.co.jp/ondanka/
+
+
+From "土本 (Florian) 強  Mon Jun 27 02:11:45 2005
+From: "土本 (Florian) 強 ("土本 (Florian) 強)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2487] Re: Squeak Nihongo 7 update (#100)
+In-Reply-To: <42BB9613.7020907@metatoys.org>
+References: <42BB9613.7020907@metatoys.org>
+Message-ID: <20050627015210.BBAA.FLORIAN@seagreen.ocn.ne.jp>
+
+　土本( Florian )です。
+
+メール「[Squeak-ja: 2485] Squeak Nihongo 7 update (#100)」(2005/06/24 14:11) に於いて
+「Takashi Yamamiya」 語りて曰く、
+
+tak> 山宮です。スクイークのプラグインイメージと Windows 用のインストーラを
+tak> 更新し、公開ました。このアップデートでは、関西大学で6月11日に行ったワー
+tak> クショップで出た不具合を修正しています(全部じゃないですが)。
+
+　Windows用のインストーラに関していくつか報告です。
+
+1.インストールページ
+(http://squeakland.jp/plugin/installers/win-std.html)の記述が間違って
+いる。
+　SqueakNihongo6.1のインストーラも残ってはいるのですが、「ダウンロード」
+という言葉に対するリンクがSqueakNihongo7につながっているのであれば、
+
+> スタートメニューを開き、「すべてのプログラム」の「SqueakNihongo6.1」にある「SqueakNihongo6.1」を選択するとスクイークが起動します。
+
+　という記述は、SqueakNihongo7に統一した方が良いと思います。
+
+
+2.インストーラに一部英語が残っている。
+　Cancelしたときの文言が英語のままです。実用上問題はありませんが、小学
+生が家のパソコンにインストールする時に混乱するかもしれません。
+　インストーラ側が行っている処理で変更不可能なのかもしれませんが、でき
+れば日本語の文言に直した方が良いと思います。
+
+
+　重箱の隅ばかりの報告で申し訳ありません。
+
+
+　では、失礼します。
+
+-----------------------------------------------------------------
+土本( Florian )強/florian@seagreen.ocn.ne.jp
+Florian's Neo Pages http://www.cise.co.jp/%7eflorian/
+/* 朝には消えたあの歌声をいつまでも聞いてた
+   僕らが残したあの足跡をいつまでも追ってた */
+=================================================================
+
+
+From tak ＠ metatoys.org  Mon Jun 27 08:08:59 2005
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2488] Re: Squeak Nihongo 7 update (#100)
+In-Reply-To: <20050627015210.BBAA.FLORIAN@seagreen.ocn.ne.jp>
+References: <42BB9613.7020907@metatoys.org>
+	<20050627015210.BBAA.FLORIAN@seagreen.ocn.ne.jp>
+Message-ID: <42BF358B.2040507@metatoys.org>
+
+山宮です。
+ご報告有難うございます。
+
+> 　Windows用のインストーラに関していくつか報告です。
+> 
+> 1.インストールページ
+> (http://squeakland.jp/plugin/installers/win-std.html)の記述が間違って
+> いる。
+> 　SqueakNihongo6.1のインストーラも残ってはいるのですが、「ダウンロード」
+> という言葉に対するリンクがSqueakNihongo7につながっているのであれば、
+> 
+> 
+>>スタートメニューを開き、「すべてのプログラム」の「SqueakNihongo6.1」にある「SqueakNihongo6.1」を選択するとスクイークが起動します。
+> 
+> 
+> 　という記述は、SqueakNihongo7に統一した方が良いと思います。
+
+お恥ずかしい。。。早速直しました。
+
+> 2.インストーラに一部英語が残っている。
+> 　Cancelしたときの文言が英語のままです。実用上問題はありませんが、小学
+> 生が家のパソコンにインストールする時に混乱するかもしれません。
+> 　インストーラ側が行っている処理で変更不可能なのかもしれませんが、でき
+> れば日本語の文言に直した方が良いと思います。
+
+これは私も気になっているのですが、使っているインストーラ作成ソフトが古いからか、
+どうも上手く日本語になってくれないのです。大体インストーラで必要な作業は
+分かってきたので他の新しいフリーの作成ソフトで作るという手もありますが。
+
+> 　重箱の隅ばかりの報告で申し訳ありません。
+いえいえ、大歓迎です。
+
+-- 
+Takashi Yamamiya := http://metatoys.org/
+
+
+From miyasaka ＠ iris.dti.ne.jp  Tue Jun 28 14:56:34 2005
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2489] お知らせ
+In-Reply-To: <42BF358B.2040507@metatoys.org>
+Message-ID: <200506280556.j5S5uWNd001771@smtp01.dti.ne.jp>
+
+Squeak-jaの皆様へ
+
+こんにちは。
+デジタルハリウッド大学院の宮坂です。
+
+ショートノーティスで恐縮ですが、７月３日にスクイークワークショップを開催する
+ことになりました。
+対象者はキッズ（5〜8才）で、親子の共同作業で作品を作って頂く予定です。
+（主催者の希望によりこの年齢層が対象となりました）
+
+下記ＵＲＬから申し込みが行えますので、ご興味ある方は是非いらしてください。
+http://www.kds.kddi.com/detail/kids_050703.html
+世界聴診器のモーフを使ったゲームを作成する予定です。
+対象年齢が低いので、子供が絵を描いて保護者の方がプログラミングするという、
+ファミリーで楽しむワークショップにしたいと思います。
+
+今年度も、数回のワークショップ開催を予定しています。
+随時お知らせさせていただきますので、今後ともよろしくお願いいたします！！
+
+-------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+-------------------------------------------
+e-mail : miyasaka@iris.dti.ne.jp
+homepage : http://mts-j.hiho.jp/
+
+
+From suto ＠ amcac.ac.jp  Thu Jun 30 09:23:44 2005
+From: suto ＠ amcac.ac.jp (suto)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2490] SqueakToysの変数
+Message-ID: <a682cd2f28c5804220fea95aca0b26d0@amcac.ac.jp>
+
+秋田公立美術工芸短期大学の須藤です。
+いつもお世話になっています。
+
+SqueakToysのタイルプログラミング（？）の変数についての質問です。
+
+（１）
+関数に「引数」を設定したとき、その引数を表すタイルを条件分岐のタイル（テスト）の
+条件部分に入れようとしても入ってくれないのですが、
+引数を見て処理を条件分岐させることはできないのでしょうか？
+
+（２）
+また、関数を再帰的に呼び出すとき、
+「現在の引数に１を足した数を引数として再帰呼び出し」のようなことをやりたいのですが、
+「引数に１を足す」方法が分かりません。可能でしょうか？
+
+（３）
+上記の解決策として、「変数」を新たに作成して「引数」を代入し、
+条件分岐などはこの変数を参照することで処理しています。
+しかし、ここで作成された変数はいわゆるグローバル変数（インスタンス変数？）のようで、
+再帰呼び出しを行うと期待した結果を得ることができません。
+（現在は再帰から返ってきたところで引数を再代入することで回避）
+いわゆるローカル変数を使うにはどうすればいいのでしょうか？
+
+（３）に関しては、（２）が解決すれば Lisp でいうところの破壊的代入をしない、
+という作戦でなんとかなりそうと予想しています。
+
+使用している環境は、knoppix ＋Squeak 6.1（日本語）です。
+よろしくお願いします。
+
+---
+須藤秀紹（すとうひでつぐ）
+秋田公立美術工芸短期大学 産業デザイン学科
+〒010-1632 秋田市新屋大川町12-3
+TEL 018-888-8108 / FAX 018-888-8109
+http://www.amcac.ac.jp/~suto
+
+
+From abee.abe ＠ nifty.ne.jp  Thu Jun 30 20:24:53 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:12 2007
+Subject: [Squeak-ja: 2491] Re: SqueakToys の変数
+In-Reply-To: <a682cd2f28c5804220fea95aca0b26d0@amcac.ac.jp>
+References: <a682cd2f28c5804220fea95aca0b26d0@amcac.ac.jp>
+Message-ID: <42C3D685291.84F7ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 30 Jun 2005 09:23:44 +0900
+suto <suto@amcac.ac.jp> wrote:
+>（１）
+>関数に「引数」を設定したとき、その引数を表すタイルを条件分岐のタイル（テスト）の
+>条件部分に入れようとしても入ってくれないのですが、
+>引数を見て処理を条件分岐させることはできないのでしょうか？
+
+テストに入れられるフレーズ(たとえば[楕円の][x座標]など)をダミーで入れてお
+き、引数付スクリプタの引数部分をクリックして取り出せる引数のタイル([数値]
+など)を古いテストの上にドラッグして置き換えれば大丈夫です。
+
+とても変ですが今はこうなっています。この操作はオレンジハロのタイルでレシー
+バを差し替えるなど、他でも応用が効くので覚えておくと便利です。
+
+>（２）
+>また、関数を再帰的に呼び出すとき、
+>「現在の引数に１を足した数を引数として再帰呼び出し」のようなことをやりたいのですが、
+>「引数に１を足す」方法が分かりません。可能でしょうか？
+
+引数の定数([5]など)の右にある緑の三角をクリックして式を伸ばし、先程と同じ
+ように定数を引数タイルで置き換えてやればいけます。
+
+>（３）
+>上記の解決策として、「変数」を新たに作成して「引数」を代入し、
+>条件分岐などはこの変数を参照することで処理しています。
+>しかし、ここで作成された変数はいわゆるグローバル変数（インスタンス変数？）のようで、
+>再帰呼び出しを行うと期待した結果を得ることができません。
+>（現在は再帰から返ってきたところで引数を再代入することで回避）
+>いわゆるローカル変数を使うにはどうすればいいのでしょうか？
+
+入れ物などをつかって、スタックを自分で作って管理するという荒業があります
+が、それ自体が目的でない限りお勧めしません。その部分だけSmalltalkで書くこ
+とも出来ます。プロジェクト置き場には、ドラゴン曲線など、まだ引数がなかっ
+た時代の力作があります。
+
+http://swikis.ddo.jp/abee/14
+
+>（３）に関しては、（２）が解決すれば Lisp でいうところの破壊的代入をしない、
+>という作戦でなんとかなりそうと予想しています。
+
+再帰を使ってスパイラルを描くプロジェクト(recursiveSpiral.pr)を作ってみま
+したのでご覧ください。
+
+http://swikis.ddo.jp/abee/3#bottom
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+

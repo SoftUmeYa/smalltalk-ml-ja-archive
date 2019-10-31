@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2291] Nihongo7 　 EncodedCharSet Class &gt;&gt; charFromUnicode: での indexOf:
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202291%5D%20%3D%3Fiso-2022-jp%3Fb%3FTmlob25nbzcgGyRCISEbKEIgRW5j%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3Fb2RlZENoYXJTZXQgQ2xhc3MgPj4gY2hhckZyb21Vbmljb2RlOiA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckThsoQiBpbmRleE9mOg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002290.html">
+   <LINK REL="Next"  HREF="002292.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2291] Nihongo7 　 EncodedCharSet Class &gt;&gt; charFromUnicode: での indexOf:</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202291%5D%20%3D%3Fiso-2022-jp%3Fb%3FTmlob25nbzcgGyRCISEbKEIgRW5j%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3Fb2RlZENoYXJTZXQgQ2xhc3MgPj4gY2hhckZyb21Vbmljb2RlOiA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEckThsoQiBpbmRleE9mOg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2291] Nihongo7 　 EncodedCharSet Class &gt;&gt; charFromUnicode: での indexOf:">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2005年 2月  1日 (火) 18:32:13 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002290.html">[Squeak-ja: 2290] ETV 特集「これからの科学、これからの社会」〜京都賞歴代受賞者からのメッセージ〜
+</A></li>
+        <LI>次の記事 <A HREF="002292.html">[Squeak-ja: 2292] Re: Nihongo7 　 EncodedCharSet Class &gt;&gt; charFromUnicode: での  indexOf:
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2291">[ 日付 ]</a>
+              <a href="thread.html#2291">[ スレッド ]</a>
+              <a href="subject.html#2291">[ 件名 ]</a>
+              <a href="author.html#2291">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>高橋＠池袋です。
+山宮さんにＣ４会場で「変換tableをリニアサーチしているらしい」と口答でお伝えした
+のは EncodedCharSet のclass method charFromUnicode: のself ucsTable indexOf: ...
+の箇所です。
+
+　Nihongo7の該当methodを見たところ 6.1と変わりないようです。
+
+　実は去年の７月頃 数MByteのShiftJISの文書に整形を施して再びshiftJISで
+書き出すという処理をMacOSX上のNihongo6.1で行い正しく動作するものの思ったより遅い
+ので調べ始め、そのままうっちゃりになっていました。
+
+
+dic _ Dictionary new.
+a _ UCSTable jisx0208Table.
+a to: a size do:[ :n | ((a at:n) ~=-1) ifTrue:[ dic at:(a at:n) put:n]]
+
+などといういい加減な辞書を用意して indexOf: と速度比較なんぞをしたりしていま
+したが実際のmethodを変更しての動作検証や速度比較はまだです。
+
+当方特に困っているわけでもなく、正常に動作している部分ですので現状のままで
+ＯＫのような気がしてきています。
+
+（何かの）ご参考になれば幸いです。
+
+
+-------------------------------
+^. .^    Kouji Takahashi  &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tako ＠ aquilax.co.jp</A>&gt;
+ ='=     Tel +81-3-3986-4834    Fax +81-3-5992-0792
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002290.html">[Squeak-ja: 2290] ETV 特集「これからの科学、これからの社会」〜京都賞歴代受賞者からのメッセージ〜
+</A></li>
+	<LI>次の記事 <A HREF="002292.html">[Squeak-ja: 2292] Re: Nihongo7 　 EncodedCharSet Class &gt;&gt; charFromUnicode: での  indexOf:
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2291">[ 日付 ]</a>
+              <a href="thread.html#2291">[ スレッド ]</a>
+              <a href="subject.html#2291">[ 件名 ]</a>
+              <a href="author.html#2291">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

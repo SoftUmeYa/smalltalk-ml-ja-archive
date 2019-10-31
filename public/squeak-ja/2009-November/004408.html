@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4408] Re: SqueakDBXの導入について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204408%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0RCWBskQiROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRjNGfiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004407.html">
+   <LINK REL="Next"  HREF="004409.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4408] Re: SqueakDBXの導入について</H1>
+    <B>daisuke yamashita</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204408%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNxdWVha0RCWBskQiROGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRjNGfiRLJEQkJCRGGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 4408] Re: SqueakDBXの導入について">y.daisuke.homeaddres ＠ gmail.com
+       </A><BR>
+    <I>2009年 11月  2日 (月) 00:36:03 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004407.html">[Squeak-ja: 4407] Re: SqueakDBXの導入について
+</A></li>
+        <LI>次の記事 <A HREF="004409.html">[Squeak-ja: 4409] Re: SqueakDBXの導入について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4408">[ 日付 ]</a>
+              <a href="thread.html#4408">[ スレッド ]</a>
+              <a href="subject.html#4408">[ 件名 ]</a>
+              <a href="author.html#4408">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>度々の投稿申し訳ありません。
+ヤマシタです。
+
+阿部さんにご対応頂き、以下にファイルがアップされていますので、ご確認ください。
+<A HREF="http://squeakland.jp/squeakja/DebugReport-20091031182059.zip">http://squeakland.jp/squeakja/DebugReport-20091031182059.zip</A>
+
+時間の都合をつけ、Linuxでも調査をしてみたいと思います。
+
+また、色々対応してみたり、ネットで調べたりしたのですが、
+以下で何をしているのかわからないので、ご教授頂けないでしょうか？
+
+<A HREF="http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX&#12288;&#12424;&#12426;">http://squeakdbx.smallworks.com.ar/Compiling%20and%20installing%20OpenDBX　より</A>
+
+現在発生しているエラーからFFI関連とOSX用の設定があやしいと思っています。
+
+◆不明な点
+・OpenDBX and FFIで記載の内容はすべて、/usr/local/libに存在している。
+   PATH関係のチェックでなにをどうすれば良いのかわからない。
+　他、多分記載の意味が理解できていない。。。と思います。
+
+・Problems with Mac OSで記載のVM内のsymlinkは作成済み。
+・plistのSqueakDebugの0から1には変更済み。
+・We also hunt in the .apps resources folder
+　standard Plugins directory
+　the current directory ./
+　the vm directory
+　and lastly frameworks in
+　以下記載の、ディレクトリがなく、なにをどうしていいのかわからない。
+
+◆OpenDBX and FFI
+
+You can have a common problem which is that SqueakDBX, trough FFI,
+cannot find openDBX library.
+It can be this: If you compile openDBX by yourself,
+the operation system will put all those files in the directory
+associated for things compiled by the user.
+For example, in most Linux distributions, it is /usr/local/lib.
+However if you install it from binaries (.deb, .rpm or whatever) it
+will put the installed application in /usr/lib.
+We have situations when FFI was looking in one of those directories or
+in different order.
+Here you can do two things: copy all the files of openDBX to the other
+directory, or create
+symbolic links. The openDBX compilation resulted files and directories are:
+directory /usr/local/lib/opendbx with 5 files inside per backend you
+compile some libopendbx(10) in /usr/local/lib
+file /usr/local/lib/pkgconfig/opendbx.pc
+
+If you try to run any test and you get a ’unable to find function
+address’ this means FFI doesn’t find the openDBX shared library.
+In this case, there are some things you can do:
+Evaluate ’OpenDBX current’. You should have a subclass of OpenDBX that
+represents your OS.
+For example, if you are in Mac OS, you must have an OpenDBXMacOSX instance.
+check PATH variable: This depends on the OS. For example, in Linux you
+should have: /usr/lib and /usr/local/lib.
+check DYLD_LIBRARY_PATH or LD_LIBRARY_PATH variable. For example, in
+Linux you should have: /usr/lib and /usr/local/lib.
+Be sure the file of the shared library has the correct name.
+Perhaps if you install openDBX from binaries (suppose .deb) it will
+create the file libopendbx.so.1.
+But FFI will search for libopendbx.so.
+So, in this case, the simpler solution is to copy and rename (or just
+rename) libopendbx.so.1 to libopendbx.so and should work like a charm.
+
+◆Problems with Mac OS:
+
+Check the property SqueakPluginsBuiltInOrLocalOnly in Info.plist de la
+VM. This should be in false.
+Put a symlink to the opendbx library inside the Squeak directory.
+In other words create the link in the Resources directory of the
+SqueakVM package:
+cd Squeak 3.8.18beta3U.app/Contents/Resources/
+ln -s /usr/local/lib/libopendbx.dylib opendbx
+<A HREF="http://smalltalkconsulting.com/html/squeakinfoplist.html">http://smalltalkconsulting.com/html/squeakinfoplist.html</A>
+
+Set SqueakDebug to 1 and it will print lots of information about where
+it’s trying to find the indicated library.
+You will need to start the VM from a terminal session command line to
+see the log messages.
+When SqueakPluginsBuiltInOrLocalOnly is false we look in more places.
+
+Environment variables it uses are:
+
+SQUEAK_PLUGIN_PATH
+VM_LIBDIR
+VM_X11DIR
+
+We also hunt in the .apps resources folder
+standard Plugins directory
+the current directory ./
+the vm directory
+and lastly frameworks in
+
+&quot;/CoreServices.framework/Frameworks&quot;,
+
+&quot;/ApplicationServices.framework/Frameworks&quot;,
+&quot;/Carbon.framework/Frameworks&quot;,
+
+
+When SqueakPluginsBuiltInOrLocalOnly is true we only look in
+
+the.apps resources folder
+standard Plugins directory
+and lastly frameworks in
+
+
+&quot;/CoreServices.framework/Frameworks&quot;,
+&quot;/ApplicationServices.framework/Frameworks&quot;,
+&quot;/Carbon.framework/Frameworks&quot;,
+
+その他、これまでに調べた内容を記載しておきます。
+
+・参考文献／リンク等
+
+<A HREF="http://lists.gforge.inria.fr/pipermail/pharo-project/2009-August/012820.html">http://lists.gforge.inria.fr/pipermail/pharo-project/2009-August/012820.html</A>
+<A HREF="http://dreamsofascorpion.blogspot.com/2008/05/using-opendbx-with-squeak.html">http://dreamsofascorpion.blogspot.com/2008/05/using-opendbx-with-squeak.html</A>
+<A HREF="http://smalltalkimpressions.blogspot.com/2009/01/squeakdbx.html">http://smalltalkimpressions.blogspot.com/2009/01/squeakdbx.html</A>
+
+かなり、的外れな内容かも知れませんが、ご教授頂けると幸いです。
+以上、何卒宜しくお願い致します。
+
+====
+dai_yamashita
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004407.html">[Squeak-ja: 4407] Re: SqueakDBXの導入について
+</A></li>
+	<LI>次の記事 <A HREF="004409.html">[Squeak-ja: 4409] Re: SqueakDBXの導入について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4408">[ 日付 ]</a>
+              <a href="thread.html#4408">[ スレッド ]</a>
+              <a href="subject.html#4408">[ 件名 ]</a>
+              <a href="author.html#4408">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

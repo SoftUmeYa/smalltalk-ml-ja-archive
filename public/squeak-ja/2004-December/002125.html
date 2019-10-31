@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2125] 大島さん、安部さん　ご回答ありがとうございました。
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202125%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmdFZyQ1JHMhIjBCSXQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDUkcyEhJDQyc0V6JCIkaiQsJEgkJiQ0JDYkJCReGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckPyEjGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002123.html">
+   <LINK REL="Next"  HREF="002126.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2125] 大島さん、安部さん　ご回答ありがとうございました。</H1>
+    <B>kouhei saito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202125%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmdFZyQ1JHMhIjBCSXQbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDUkcyEhJDQyc0V6JCIkaiQsJEgkJiQ0JDYkJCReGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJDckPyEjGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2125] 大島さん、安部さん　ご回答ありがとうございました。">zaki_k_saito ＠ s8.dion.ne.jp
+       </A><BR>
+    <I>2004年 12月 18日 (土) 11:50:17 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002123.html">[Squeak-ja: 2123] Re: TrueTypeフォントについて
+</A></li>
+        <LI>次の記事 <A HREF="002126.html">[Squeak-ja: 2126] Re: すみません阿部さんでした。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2125">[ 日付 ]</a>
+              <a href="thread.html#2125">[ スレッド ]</a>
+              <a href="subject.html#2125">[ 件名 ]</a>
+              <a href="author.html#2125">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　
+
+　　大島さん、安部さん　ご回答ありがとうございました。
+
+　　よく理解できました。
+
+　　入会手続きしないで、いきなり質問メールを
+　　してしまい、大変失礼しました。
+
+　　入会手続きさせていただきます。
+　　今後ともよろしくお願いします。
+
+
+　　で、早速ですが、もう一件質問があります。
+
+　　固定小数点数値(FixedPoint)があるといいなあ
+    と思っていまして、
+　　Squeak3.7-5989-full.imageをのぞいてみたところ
+　　ScaledDecimalとして実装されていて、安心しました。
+
+　　これは以降のSqueakNihongoにも反映されるので
+　　しょうか？
+
+
+--------------------------------------------------------------------
+
+　　ただちょっと、気になったのですが
+
+    Squeak3.7-5989-full.imageのScaledDecimalでは
+
+    12.34s  printIt --&gt;  12.33s2
+    と表示されてしまいます。
+
+    12.34s  inspect --&gt;  fraction:(3473401212609495/281474976710656)
+                         scale:2　
+　　ですが、
+
+　　ただしくは、
+　　　　　　fraction:(617/50)
+    　　　　scale:2
+    でよいのではと思いますが。
+
+　　今後の勉強のため
+　　コードを追いかけてみようと
+　　考え始めています。(^^!
+
+    でも、解明された方はぜひお教えください。
+
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;<i>斉藤さん
+</I>
+&gt;&gt;<i> いつも楽しく拝見しております。
+</I>
+&gt;<i>  僕もいつもいろいろ勉強させてもらっています。
+</I>
+&gt;&gt;<i> SqueakNihongo6.1でSmalltalkを入門中ですが、
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ・クラス名
+</I>&gt;&gt;<i> ・インスタンス変数名
+</I>&gt;&gt;<i> ・クラス変数名
+</I>&gt;&gt;<i> ・クラスインスタンス変数名
+</I>&gt;&gt;<i> ・インスタンスメッソド名
+</I>&gt;&gt;<i> ・クラスメッソド名
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> を日本語で定義しています。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 動作的には、まったく問題はないのですが、
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 原則的に、上記変数名等に日本語を
+</I>&gt;&gt;<i> 使用し続けていてよろしいものでしょうか？
+</I>
+&gt;<i>  原則としては、大丈夫です。はい。
+</I>
+&gt;<i>  Smalltalkの場合、もともとは大文字と小文字の使い分けをいろいろなとこ
+</I>&gt;<i>ろでしていたわけですが、日本語のように大文字小文字の区別がない場合には
+</I>&gt;<i>「どこでもどちらでも使える」というようにしています。
+</I>&gt;<i>
+</I>&gt;<i>  将来まじめにやりだしたときに問題になりうるのは、日本語の記号を名前の
+</I>&gt;<i>一部に使っていたりする場合ですね。実は現在は通ってしまっていますが、
+</I>&gt;<i>Unicodeが主張する&quot;letter&quot;に分類されるものだけを名前に使えるようにする、
+</I>&gt;<i>というのは比較的正しいように感じていますので。
+</I>&gt;<i>
+</I>&gt;<i>  というわけで、漢字カタカナひらがなの類は、遠慮なく使ってやってくださ
+</I>&gt;<i>い。
+</I>
+&gt;<i>-- Yoshiki
+</I>
+&gt;<i>阿部@新百合です。
+</I>&gt;<i>はじめまして。
+</I>
+&gt;<i>On Thu, 16 Dec 2004 20:55:40 +0900
+</I>&gt;<i>&quot;kouhei saito&quot; &lt;zaki_k_saito ＠ s8.dion.ne.jp&gt; wrote:
+</I>&gt;&gt;<i>SqueakNihongo6.1でSmalltalkを入門中ですが、
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>・クラス名
+</I>&gt;&gt;<i>・インスタンス変数名
+</I>&gt;&gt;<i>・クラス変数名
+</I>&gt;&gt;<i>・クラスインスタンス変数名
+</I>&gt;&gt;<i>・インスタンスメッソド名
+</I>&gt;&gt;<i>・クラスメッソド名
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>を日本語で定義しています。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>動作的には、まったく問題はないのですが、
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>原則的に、上記変数名等に日本語を
+</I>&gt;&gt;<i>使用し続けていてよろしいものでしょうか？
+</I>
+&gt;<i>Smalltalkには、変数名やクラス名などについて、いくつかの命名規則があります。
+</I>&gt;<i>たとえば、クラス名は大文字で始まるとか、一時変数は小文字で始まるなどがそ
+</I>&gt;<i>うです。
+</I>&gt;<i>日本語の場合、大文字、小文字の区別がありませんので、コンパイル時になんで
+</I>&gt;<i>も通すようになっています。Character&gt;&gt;canBeGlobalVarInitialとそのセンダを
+</I>&gt;<i>ご覧ください。
+</I>
+&gt;<i>ただし、字面をぱっと見て直ぐにインスタンスかクラスか分からなかったりする
+</I>&gt;<i>のは、結構不便です。かといって、不定冠詞のaをつけて「a変数」のようにする
+</I>&gt;<i>のもいまひとつの気もします。
+</I>&gt;<i>
+</I>&gt;<i>あと、作成したものを海外の人に渡したり、仮名漢字変換がストレスになったり
+</I>&gt;<i>ということがあるかもしれません。
+</I>&gt;<i>また、大部分のクラスライブラリは英語で書かれているので、結果として英語と
+</I>&gt;<i>日本語の混在が避けられず、コードの見た目が気持ち悪いような気もします。
+</I>&gt;<i>
+</I>&gt;<i>でも、ご自分が使われていて日本語のほうが便利ということであれば、使うのが
+</I>&gt;<i>良いと思います。
+</I>
+ &gt;//abee
+&gt;<i>--
+</I>&gt;<i>阿部 和広  EMAIL abee.abe ＠ nifty.ne.jp
+</I>
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20041218/2f9a724e/attachment.html">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20041218/2f9a724e/attachment.html</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002123.html">[Squeak-ja: 2123] Re: TrueTypeフォントについて
+</A></li>
+	<LI>次の記事 <A HREF="002126.html">[Squeak-ja: 2126] Re: すみません阿部さんでした。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2125">[ 日付 ]</a>
+              <a href="thread.html#2125">[ スレッド ]</a>
+              <a href="subject.html#2125">[ 件名 ]</a>
+              <a href="author.html#2125">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

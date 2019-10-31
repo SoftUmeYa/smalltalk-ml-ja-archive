@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2296] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202296%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283OiBTcXVlYWtW%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FTTMuNi4zLUpQYXRjaGVkIBskQiRHRjA6biQ7JDobKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002295.html">
+   <LINK REL="Next"  HREF="002297.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2296] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず</H1>
+    <B>e-itoh ＠ ygu.ac.jp</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202296%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE5paG9uZ283OiBTcXVlYWtW%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FTTMuNi4zLUpQYXRjaGVkIBskQiRHRjA6biQ7JDobKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2296] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず">e-itoh ＠ ygu.ac.jp
+       </A><BR>
+    <I>2005年 2月  3日 (木) 20:18:14 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002295.html">[Squeak-ja: 2295] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+</A></li>
+        <LI>次の記事 <A HREF="002297.html">[Squeak-ja: 2297] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2296">[ 日付 ]</a>
+              <a href="thread.html#2296">[ スレッド ]</a>
+              <a href="subject.html#2296">[ 件名 ]</a>
+              <a href="author.html#2296">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>伊藤です。
+
+なんとか解決したような気がします。
+武田先生のパッチを当てたあとで、添付のパッチをあてれば日本語
+入力できます。
+原因は、自分のlanguageEnvironmentにleadingCharを送るべきところを、
+unicodeClassに送るように（昔のままに）なっていたことです。
+
+みなさまありがとうございました。
+また、immパッチに問題があるという旨の発言については撤回いたします。
+申し訳ございませんでした。＞廣島さま
+
+
+ 
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: EUCTextConverter nextFromStream bugfix.1.cs
+型:         application/octet-stream
+サイズ:     905 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050203/8e5e337b/EUCTextConverternextFromStreambugfix.1.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20050203/8e5e337b/EUCTextConverternextFromStreambugfix.1.obj</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002295.html">[Squeak-ja: 2295] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作せず
+</A></li>
+	<LI>次の記事 <A HREF="002297.html">[Squeak-ja: 2297] Re: Nihongo7: SqueakVM3.6.3-JPatched で動作
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2296">[ 日付 ]</a>
+              <a href="thread.html#2296">[ スレッド ]</a>
+              <a href="subject.html#2296">[ 件名 ]</a>
+              <a href="author.html#2296">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

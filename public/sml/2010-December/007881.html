@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7881] Re: 連想計算というリフレクティブな手法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207881%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3C874FA6E5-83B7-4CC0-9039-E22BDEC9A3C2%40shinsahara.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007874.html">
+   <LINK REL="Next"  HREF="007882.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7881] Re: 連想計算というリフレクティブな手法</H1>
+    <B>Shin Sahara from Home</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207881%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3C874FA6E5-83B7-4CC0-9039-E22BDEC9A3C2%40shinsahara.com%3E"
+       TITLE="[SML 7881] Re: 連想計算というリフレクティブな手法">shinsahara ＠ shinsahara.com
+       </A><BR>
+    <I>2010年 12月 17日 (金) 10:24:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007874.html">[SML 7874] Re: 連想計算というリフレクティブな手法
+</A></li>
+        <LI>次の記事 <A HREF="007882.html">[SML 7882] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7881">[ 日付 ]</a>
+              <a href="thread.html#7881">[ スレッド ]</a>
+              <a href="subject.html#7881">[ 件名 ]</a>
+              <a href="author.html#7881">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>佐原です。
+
+VDM++だと、高階関数使ってもリフレクション的なことはできそうもないので、数値アルゴリズムで作りました :-)
+リフレクション使うより速いので、シンボリック実行しているVDM++インタープリタでも、fastFib(-1)からfastFib(100)まで全部計算しても、一瞬で終わりますが、多倍長計算できないのでfastFib(92)=7540113804746369024までしか計算できません。
+fastFib(93)からfastFib(100)までは、fastFib(100)の場合、Error 4065: Value 3.542248481792631E20 is not a nat　などと怒られます :-)
+
+class Fibonacci
+values
+static sqrt5 = new MATH().sqrt(5);
+static phi = (1+sqrt5) / 2;
+
+functions
+static public fastFib : nat +&gt; nat
+fastFib(n) ==
+	floor (phi ** n / sqrt5 + 0.5);
+
+end Fibonacci
+
+On 2010/12/14, at 17:56, AOKI Atsushi wrote:
+
+&gt;<i> (10/12/14 17:11), Narita Takaoki wrote:
+</I>&gt;&gt;<i> 同様にぎやかしですが、それどころか Smalltalk にもなってません。
+</I>&gt;<i> 
+</I>&gt;<i> おぉ！いとにぎやかし。
+</I>&gt;<i> 
+</I>&gt;&gt;<i> 計算量は、O(log(n))なので、数値格納のメモリーさえ確保できれば20
+</I>&gt;&gt;<i> 万項目くらいまでなら我慢できる時間で計算可能ですが、計算できたか
+</I>&gt;&gt;<i> らって何に使うんでしょうね・・・
+</I>&gt;<i> 
+</I>&gt;<i> 何に使う、何に役立つ、・・・
+</I>&gt;<i> そんなんばかりを追っていたら、科学することが伝わらないかしらん。
+</I>&gt;<i> 
+</I>&gt;<i> --- 青木淳＠本日も学生たちとペアプログラミング
+</I>&gt;<i> 
+</I>
+
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss @ shinsahara.com    <A HREF="http://shinsahara.com">http://shinsahara.com</A>
+Mobile:  +81-80-1114-3378(in the world), +81-80-3089-7518(in the world)
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007874.html">[SML 7874] Re: 連想計算というリフレクティブな手法
+</A></li>
+	<LI>次の記事 <A HREF="007882.html">[SML 7882] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7881">[ 日付 ]</a>
+              <a href="thread.html#7881">[ スレッド ]</a>
+              <a href="subject.html#7881">[ 件名 ]</a>
+              <a href="author.html#7881">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

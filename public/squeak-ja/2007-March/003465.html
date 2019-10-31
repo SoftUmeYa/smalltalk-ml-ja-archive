@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3465] Re: 正７角形の処理についてお教えください
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203465%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkA1IzczUTdBJE4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPWhNfSRLJEQkJCRGJCo2NSQoJC8kQCQ1JCQbKEI%3D%3F%3D&In-Reply-To=001001c76b43%2405bc5d00%240201a8c0%40shojiparu">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003463.html">
+   <LINK REL="Next"  HREF="003466.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3465] Re: 正７角形の処理についてお教えください</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203465%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkA1IzczUTdBJE4bKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPWhNfSRLJEQkJCRGJCo2NSQoJC8kQCQ1JCQbKEI%3D%3F%3D&In-Reply-To=001001c76b43%2405bc5d00%240201a8c0%40shojiparu"
+       TITLE="[Squeak-ja: 3465] Re: 正７角形の処理についてお教えください">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2007年 3月 21日 (水) 17:18:58 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003463.html">[Squeak-ja: 3463] 正７角形の処理についてお教えください
+</A></li>
+        <LI>次の記事 <A HREF="003466.html">[Squeak-ja: 3466] Re: 正７角形の処理についてお教えください
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3465">[ 日付 ]</a>
+              <a href="thread.html#3465">[ スレッド ]</a>
+              <a href="subject.html#3465">[ 件名 ]</a>
+              <a href="author.html#3465">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Wed, 21 Mar 2007 07:56:36 +0900
+田中　昭二 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">interact ＠ s-paru.com</A>&gt; wrote:
+&gt;<i>「スクイークに『回すと進める』のタイルスクリプトを使って『正多角形』を
+</I>&gt;<i>書かせるときに、３６０度を割り切れない数＝辺の正多角形処理は、どう処理
+</I>&gt;<i>しているのでしょうか？」と言った2人のお母さんからの質問内容でした。
+</I>&gt;<i>
+</I>&gt;<i>　その時は、講師の阿部和広先生からお聞きしていたので、
+</I>&gt;<i>
+</I>&gt;<i>「スクイークは、小数点以下の端数を出さず『分数式のまま』計算するので、
+</I>&gt;<i>原点（最初の座標）に戻ってきます」と説明させていただきました。
+</I>
+これは誤りでした。EToysの「回す」は、SmalltalkのPlayerというクラスの
+turn:というインスタンスメソッドで処理されるのですが、その中で引数は浮動小
+数点数 (Float)に変換されていました。したがって、回転させた後の「向き
+(heading)」の値も分数でなく浮動小数点数で保持しています。
+同様に「進める」はforward:で処理されますが、これもFloatに変換されていまし
+た。したがって、x座標、y座標などの値もFloatです。お詫びして訂正します。
+
+「進める」「回す」を実現するためには割り算だけでなく、進める距離と回す角
+度を、画面上の直交座標における差分に変換するために三角関数なども用いられ
+ています。
+したがって、「回す」の引数が割り切れることだけではなく、これらに関わる計
+算全体の精度も影響します。これらが十分なため、結果として始点にもどってく
+るという理解でいかがでしょうか。
+このとき、ビューワのそれぞれのフレーズタイルの左にあるメニューから「小数
+の桁数…」を選び、桁数を増やしてみると実は誤差が出ている(こともある)こと
+が分かります。
+
+&gt;<i>　つぎに、「座標軸」と「向き」「シータ値」を見ながら実行する様子をAVI
+</I>&gt;<i>ファイルにまとめました。
+</I>&gt;<i>
+</I>&gt;<i>　「くるまのx座標、y座標、向き」が原点に戻ってくると、「シータ値」以外
+</I>&gt;<i>は少しずつ違ってきました。
+</I>
+違っている数は10^-13〜14というオーダですからほとんど0ですね。これが誤差で
+すが、前述の「小数の桁数」が0なのに小数点以下が表示されてしまうのはバグだ
+と思います。
+
+&gt;<i>　また中心から円に内接する正７角形をスクイークに書かせると、外延の出発
+</I>&gt;<i>点に正確に戻ってきました。
+</I>
+この方法だと、都度原点からの距離と角度を与えて極座標から直交座標に変換し
+ているので、回って「戻ってきている」わけではないと思います。
+
+&gt;<i>　子どもたちにもお母さんたちにも「文字を少なく、オブジェクト指向で説明
+</I>&gt;<i>する」というコンセプトですので、端的に表記したいのですが、スクイークに
+</I>&gt;<i>『回すと進める』のタイルスクリプトを実行する場合の説明方法をお教えくだ
+</I>&gt;<i>さい。
+</I>
+このケースでは、オブジェクト指向とはあまり関係ないように思います。
+計算機における数の表現方法と誤差、それを表示する際の問題ではないでしょう
+か。
+本来、EToysはこれらを隠して、数学のモデルをそのまま扱えるようになっている
+べきですが、残念ながらまだ不完全だと言うことだと思います。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003463.html">[Squeak-ja: 3463] 正７角形の処理についてお教えください
+</A></li>
+	<LI>次の記事 <A HREF="003466.html">[Squeak-ja: 3466] Re: 正７角形の処理についてお教えください
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3465">[ 日付 ]</a>
+              <a href="thread.html#3465">[ スレッド ]</a>
+              <a href="subject.html#3465">[ 件名 ]</a>
+              <a href="author.html#3465">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3403] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203403%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IDMuOS04Vk0bJEJNUSROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrSW1tWDExUGx1Z2luGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=45B75C63.5030303%40yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003402.html">
+   <LINK REL="Next"  HREF="003405.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3403] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ</H1>
+    <B>Tsutomu Hiroshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203403%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IDMuOS04Vk0bJEJNUSROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrSW1tWDExUGx1Z2luGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=45B75C63.5030303%40yahoo.co.jp"
+       TITLE="[Squeak-ja: 3403] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ">tsutomu ＠ nucba.ac.jp
+       </A><BR>
+    <I>2007年 2月 14日 (水) 13:21:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003402.html">[Squeak-ja: 3402] Re: Squeakland.jp 異常？ &amp; C4 参加希望　空騒ぎ
+</A></li>
+        <LI>次の記事 <A HREF="003405.html">[Squeak-ja: 3405] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3403">[ 日付 ]</a>
+              <a href="thread.html#3403">[ スレッド ]</a>
+              <a href="subject.html#3403">[ 件名 ]</a>
+              <a href="author.html#3403">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>廣島です．
+
+&gt;<i> 川村です。
+</I>&gt;<i> 
+</I>&gt;<i> 遅れましたが、Linux(Ubuntu 6.10)でビルド実行しました。残念ながら、わたし
+</I>&gt;<i> の環境ではキー入力した段階でSegmentation faultとなってしまいました。
+</I>&gt;<i> 環境は次の通りです。
+</I>&gt;<i> Linux(Ubuntu 6.10),Kernel 2.6.17,gcc version 4.1.2,XIM(SCIM+Anthy),UTF-8
+</I>&gt;<i> です。EUC-jpなら動くかもしれません。後ほど試してみます。
+</I>&gt;<i> 
+</I>&gt;<i> それでは。
+</I>&gt;<i> 
+</I>&gt;<i> gdbでおちたところで'where'：
+</I>&gt;<i> #0 x2sqKeyInput (xevt=0xbfcd363c)
+</I>&gt;<i> at
+</I>&gt;<i> /home/kawa90/work/squeak/vm/Squeak-3.9-8/platforms/unix/vm-display-X11/sqUnixX11.c:1450
+</I>
+落ちたところのソースから推測すると，
+XCreateFontSet か XExtentsOfFontSet の返値が NULL なのかもしれません．
+XIM用のフォントは
+
+#define FONTNAME      &quot;-*-*-medium-r-normal--14-*&quot;
+
+とハードコードしてありますが，これがいけないのかも．
+次の調査用プログラムをコンパイル(gcc -lX11)して，
+引数に　&quot;-*-*-medium-r-normal--14-*&quot;　を与えて起動してみてください．
+もし Fail したなら，引数を &quot;-*-*-medium-r-normal--*&quot; 等，
+いろいろ変えてみて Fail しないパターンをお教え下さい．
+策を考えます．
+ただ，すぐに返事は書けないと思いますので，気長に待って下さい．
+＝＝＝＝
+廣島　勉
+
+/* 調査用プログラムソースここから */
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;X11/Xlib.h&gt;
+#include &lt;X11/Xlocale.h&gt;
+int
+main(int argc, char *argv[])
+{
+  char **fname, *def;
+  int num, i;
+  Display *d;
+  XFontSet fs;
+  XFontStruct **fstr;
+
+  if (argv[1])
+  {
+    printf(&quot;pattern: %s\n&quot;, argv[1]);
+    setlocale(LC_ALL, &quot;&quot;);
+    d = XOpenDisplay(NULL);
+
+    fs = XCreateFontSet(d, argv[1], &amp;fname, &amp;num, &amp;def);
+
+    printf(&quot;default: %s\n&quot;, def);
+    for (i = 0; i &lt; num; ++ i)
+    {
+      printf(&quot;missing: %s\n&quot;, fname[i]);
+    }
+
+    if (fs != NULL)
+    {
+      printf(&quot;found: &quot;);
+      num = XFontsOfFontSet(fs, &amp;fstr, &amp;fname);
+      if (num &gt; 0)
+      {
+	printf(&quot;%s&quot;, fname[0]);
+	for (i = 1; i &lt; num; ++ i)
+	{
+	  printf(&quot;,%s&quot;, fname[i]);
+	}
+	printf(&quot;\n&quot;);
+      }
+      if (XExtentsOfFontSet(fs) == NULL)
+      {
+	printf(&quot;Failed XExtentsOfFontSet\n&quot;);
+      }
+
+      XFreeFontSet(d, fs);
+    }
+    else
+    {
+      printf(&quot;Failed XCreateFontSet\n&quot;);
+    }
+
+    XCloseDisplay(d);
+  }
+  return 0;
+}
+/* ソースここまで */
+
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003402.html">[Squeak-ja: 3402] Re: Squeakland.jp 異常？ &amp; C4 参加希望　空騒ぎ
+</A></li>
+	<LI>次の記事 <A HREF="003405.html">[Squeak-ja: 3405] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3403">[ 日付 ]</a>
+              <a href="thread.html#3403">[ スレッド ]</a>
+              <a href="subject.html#3403">[ 件名 ]</a>
+              <a href="author.html#3403">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3036] Re: Wiki としての SuperSwiki
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203036%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=JT200607082237346.2718343%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003034.html">
+   <LINK REL="Next"  HREF="003038.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3036] Re: Wiki としての SuperSwiki</H1>
+    <B>NAKATA, Shunsuke</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203036%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=JT200607082237346.2718343%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3036] Re: Wiki としての SuperSwiki">scriptonwikipage ＠ yahoo.co.jp
+       </A><BR>
+    <I>2006年 7月  9日 (日) 20:23:11 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003034.html">[Squeak-ja: 3034] Re: Wiki としての SuperSwiki
+</A></li>
+        <LI>次の記事 <A HREF="003038.html">[Squeak-ja: 3038] Re: Wiki としての  SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3036">[ 日付 ]</a>
+              <a href="thread.html#3036">[ スレッド ]</a>
+              <a href="subject.html#3036">[ 件名 ]</a>
+              <a href="author.html#3036">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>中田です。
+
+梅澤さん、返信ありがとうございます。
+
+チュートリアルやデモを拝見しました。
+おっしゃるとおり、驚愕すべきものですね。
+さすが、Smalltalk 文化は時代の先を行っていると思いました。
+
+
+
+&gt;&gt;&gt;&gt;<i> ただし、本当に何でもできて、あまりに危険でも
+</I>&gt;&gt;&gt;&gt;<i> あるので、通常はデプロイ時にoffにしてしまいます。
+</I>
+そうですね。((perl))プラグインも同様の問題を抱えており、
+Wifkyの開発者も、使用はイントラネットなど閉じた環境内
+に制限すべきであり、インターネットなど不特定の人が
+アクセスする環境での使用は避けるように警告しています。
+
+現状の((perl))プラグインは、単に指定されたページの内容を
+読み込んで評価する(eval)しているだけなので、ファイル削除や
+システムアクセスなどPerlのできることはすべてできる状態です。
+
+ですが、この点に関しては、Java Applet が用いている手法の
+「サンドボックスモデル」によって回避できる問題だと考えています。
+この場合だと、それをサーバサイドで行うというものです。
+
+残念ながら現在のPerlにはそのような機能を実現する方法がないので、
+今とのころ((perl))プラグインではこの方法を回避できません。
+Smalltalk/Squeakにサンドボックスの仕組みを実現する方法があれば、
+Webブラウザー上でのプラグイン(アプリケーション)開発もできますね。
+
+
+
+現在のSeasideやPierは非常に強力ですが、残念ながら、
+ホームページビルダーとしての用法に留まっています。
+ビルダーの機能はそれはそれで非常に重要なものですが、
+サイト管理者が作成するページをクライアントが閲覧する、
+サービスや情報の流れが一方通行になってしまいがちです。
+
+Wikipediaの成功が示しているのは、情報提供者と情報利用者の
+区別のないサイトのあり方の優位性だと思っています。
+
+そういう意味で、SeadieやPierの今後の展開が楽しみですね。。。。
+
+--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+<A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003034.html">[Squeak-ja: 3034] Re: Wiki としての SuperSwiki
+</A></li>
+	<LI>次の記事 <A HREF="003038.html">[Squeak-ja: 3038] Re: Wiki としての  SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3036">[ 日付 ]</a>
+              <a href="thread.html#3036">[ スレッド ]</a>
+              <a href="subject.html#3036">[ 件名 ]</a>
+              <a href="author.html#3036">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

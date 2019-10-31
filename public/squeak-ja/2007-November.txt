@@ -1,0 +1,1236 @@
+From sato_hirokazu ＠ tba.t-com.ne.jp  Thu Nov  1 02:49:00 2007
+From: sato_hirokazu ＠ tba.t-com.ne.jp (Hirokazu Sato)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3762] Re: Squeak日本語とPostgresqlとの接続
+In-Reply-To: <JM200710302351416.2212531@mars.dti.ne.jp>
+References: <297BCD5C-A8F6-406E-B91D-4787E8317582@tba.t-com.ne.jp>
+	<JM200710302351416.2212531@mars.dti.ne.jp>
+Message-ID: <13670482-756D-4035-8471-D35CF4CF3EE8@tba.t-com.ne.jp>
+
+梅澤さん
+
+こんばんは。さとうです。
+
+早速のご回答ありがとうございます。
+また梅澤さん自ら実際にインストールして試していただいたとのこと、
+光栄です。
+
+ご回答頂いた内容を試したところDBへの書込み及び結果の参 
+照ともに
+バッチリうまく行きました。
+ありがとうございました。
+
+通信系のエラーメッセージだったので、postgresV2が２バイトの
+ハンドリングができないのかと思ってしまい、それ以上考えが
+およびませんでした。
+
+> SeasideとPostgreSQLというのは面白い組み合わせですね。
+> 私もちょっとインストールして試してみました。
+
+
+SeasideだとAjaxも使えるし、Webの入力インター 
+フェースを作るには、
+面白そうだったのでフロントエンドに持ってきて、バックエンドには、
+高機能なフリーのRDBMSとしてPosgtreSQLにしています。
+
+では、失礼します。
+
+--
+さとうひろかず
+
+
+
+On 2007年 10月 30日 , at 23:51, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> SeasideとPostgreSQLというのは面白い組み合わせですね。
+> 私もちょっとインストールして試してみました。
+>
+> Windows XPで、PostgreSQLのデフォルトエンコーディングをUTF8 
+> にしています。
+>
+> con execute: ('insert into fruits values (''スイカ'',''123'')'  
+> convertToEncoding: #utf8).
+>
+> のようにすると、値がちゃんと入りました。
+> Squeakの多バイト文字列はUnicodeに準じた独自表現なので、
+> convertToEncoding: #utf8などを文字列に送って、DBのエ 
+> ンコーディングに
+> 合わせた上でDBに渡す必要があります。
+>
+> 得られるPGResult内の文字列も、単なるByteString 
+> になってしまっているので、
+> これもエンコードを指定して、Squeakの多バイト文字列に 
+> 戻す必要があります。
+>
+> '文字化け文字列' convertFromEncoding: #utf8.
+>
+> のようにします。
+>
+> もう少しラッピングするなり、パッチを当てるなりしないと使い 
+> にくいですが、
+> 基本的な考え方はこのような感じです。
+>
+> では。
+>
+> Hirokazu Sato <sato_hirokazu@tba.t-com.ne.jp> wrote:
+>> こんばんは。
+>>
+>> 岡山でエンジニアをしています、さとうと申します。
+>> seasideを使って、Web経由でDBに書き込みができる自
+>> 部門の業務画面を
+>> 作ってあげようと思い、おおむねできたのでテストで日本語を入力
+>> してみたら、
+>> 以下のエラーがでてうまくDBに書き込みができません。
+>> 切り分けのため以下のコードを実行してみましたが同様の結果にな
+>> ります。
+>> ("日本語"の部分を半角英数にするとインサートできます）
+>>
+>> | dbconn |
+>> dbconn _ PGConnection new.
+>> dbconn startup.
+>> dbconn execute: 'insert into t-table values
+>> (''2007/10/29'',''10:22'',''日本語'',''test'')'.
+>> dbconn terminate.
+>>
+>>
+>> エラー内容：
+>> "ConnectionClosed: Connection closed while waiting for data."
+>>
+>>
+>> 試している環境：　OS: OSX 10.3.9
+>>                                     VM: Squeak 3.8.18beta1U
+>>                  Image: Seaside-JPatched070105　
+>>                                     PostgresqlClient:
+>>                  PostgreSQL Client for Squeak(PosgresV2)
+>>                   Published version: 1.0
+>>                   Created: 1 February 2006 5:13:15 pm
+>>
+>> 　特に環境にこだわりはありません。
+>> 　会社で利用するときはWindowsやLinuxプラット
+>> フォームになると思います。
+>>
+>> 皆様の中でうまく行っている実績があれば特に環境にはこだわりま
+>> せんので、
+>> ご教授頂きたいです。
+>> よろしくお願いします。
+>>
+>> --
+>> さとうひろかず
+>>
+>
+> ---
+> [:masashi | ^umezawa]
+>
+>
+>
+
+
+
+
+From yoshiki ＠ vpri.org  Thu Nov  1 15:52:57 2007
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3763] Re: Unix用のリクエストいくつか
+In-Reply-To: <472562C6.60108@nucba.ac.jp>
+References: <JO200710141835045.20654593@mars.dti.ne.jp>
+	<FE54F3CF-C85A-49F9-8C8B-EE4D99DE412C@gmail.com>
+	<JC200710222352313.4754328@mars.dti.ne.jp>
+	<472562C6.60108@nucba.ac.jp>
+Message-ID: <ulk9ilanq.wl%yoshiki@vpri.org>
+
+  大島です。
+
+  うーむ。これは鋭いですね。バッファを巨大にするという手段で対処できる
+ものなのでしょうか。
+
+  ところで、最近3.9-12のolpcブランチを見ています。以前、日本語入力のと
+ころを見ると言っては見たもののあまり手が進んでいないのですが(UTF32を
+EventBufferに入れて返すというようなところは書きましたが)、もし気合があ
+りましたら、是非3.9-12ベースで日本語入力(およびその他のinput methodを
+要求する言語の入力)ができるパッチを作ってはいただけないでしょうか?世界
+の人に使われるチャンスです。
+
+  ご検討ください。
+
+-- Yoshiki
+
+At Mon, 29 Oct 2007 13:34:14 +0900,
+Tsutomu Hiroshima wrote:
+> 
+> 廣島です．お久しぶりです．
+> 遅ればせながら，エラーをこちらでも確認しました．
+> 
+> platforms/unix/vm/sqUnixEvent.c
+> 
+> で，インプットイベントの循環バッファのサイズが，
+> 
+> #define IEB_SIZE         64     /* must be power of 2 */
+> 
+> となっています．
+> 変換文字列が一定数以上だとバッファを1周して
+> 変換文字列の最初を上書きしてしまい問題が生じるようです．
+> utf8 あ 11文字で 33 バイト，
+> EventKeyDown と EventKeyChar のイベントが各バイトで生じるので，
+> 66個のイベントが一度に生じます．計算はぴったり合います．
+> 
+> さて，どう対処したものか？
+> =================
+> 廣島　勉
+> Tsutomu Hiroshima
+
+From kuwatani ＠ akademia.co.jp  Thu Nov  1 19:59:43 2007
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3764] Re: 保存書庫の不具合について
+In-Reply-To: <471FE01D.8090205@akademia.co.jp>
+References: <471762DD113.3A4AABEE@smtp.nifty.com>	<471F1695.9040502@akademia.co.jp>	<f64639926ae9eba419dca6b9efe939d1@openedu.org>
+	<471FE01D.8090205@akademia.co.jp>
+Message-ID: <4729B19F.4070504@akademia.co.jp>
+
+桑谷です．
+
+Tsuyoshi KUWATANI さんは書きました:
+> 桑谷です．
+> 
+> Takeshi MUTOH さんは書きました:
+>> これですが、どうもメールに添付されている番号([Squeak-ja: 3718])とアーカ 
+>> イブ上での番号がずれてませんでしょうか?
+>>
+>> 例えば、「Squeakers' Night in 九州」の記事のメールに付けられた番号は、
+>>     [Squeak-ja: 3720]
+>> ですが、アーカイブでは3702になっているようです。
+>>     http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003702.html
+> 
+> 途中3693から3710のメールがアーカイブされていないようで番号とファイル名が
+> ずれてしまっているようです．抜けたメールを復活させてアーカイブを
+> 再構築したいと思います．
+> 
+
+大変遅くなりましたが抜けていたメールを復活させて
+アーカイブを再構築しましたのでお知らせします．
+
+http://www.smalltalk.jp/pipermail/squeak-ja/
+
+-- 
+桑谷 剛史(Tsuyoshi KUWATANI)
+kuwatani@akademia.co.jp
+
+
+From abee ＠ squeakland.jp  Thu Nov  1 20:37:34 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3765] Re: 保存書庫の不具合について
+In-Reply-To: <4729B19F.4070504@akademia.co.jp>
+References: <471FE01D.8090205@akademia.co.jp> <4729B19F.4070504@akademia.co.jp>
+Message-ID: <4729BA7E9A.5B33ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 01 Nov 2007 19:59:43 +0900
+Tsuyoshi KUWATANI <kuwatani@akademia.co.jp> wrote:
+>大変遅くなりましたが抜けていたメールを復活させて
+>アーカイブを再構築しましたのでお知らせします．
+>
+>http://www.smalltalk.jp/pipermail/squeak-ja/
+
+ありがとうございます。
+しかし、現在も保存書庫への登録が止まっており、3737以降がアーカイブされて
+いないようです。
+
+http://www.nabble.com/-Squeak-ja%3A-3743--%E4%BF%9D%E5%AD%98%E6%9B%B8%E5%BA%AB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6-tf4706863.html
+
+お手数ですが、よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Thu Nov  1 22:13:21 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3766] Re: Squeakers' Night in 九州
+In-Reply-To: <JD200710242036095.1772687@mars.dti.ne.jp>
+References: <JD200710242036095.1772687@mars.dti.ne.jp>
+Message-ID: <JU200711012213213.1126390@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+「Squeakers' Night in 九州」ですが、正式な開催日時が決まりました。
+http://swikis.ddo.jp/umejava/45
+
+2007/12/7(金) 18:00-20:00、サイバー大学 福岡キャンパス 教室です。
+
+例によって発表者、参加者を募集します。
+
+発表者は上記Wikiに自由に書き込んでいただければと思います。
+
+事前の申し込みは不要ですが、大体の人数を把握したいので
+参加を希望される方は、私宛にメールをいただければ幸いです。
+
+それでは、九州でお会いしましょう。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> さて、例年行っておりますSqueakers' Nightですが、
+> http://swikis.ddo.jp/umejava/38
+> 
+> 東京ばかりでは不公平という話もありますので、これからは全国行脚
+> していくことにします。
+> 
+> 第一弾として、まずは九州でやってみようかと考えています。
+> 
+> Squeak-jaは12月8日のOSC Fukuokaに出展します。
+> http://www.ospn.jp/osc2007-fukuoka/
+> 
+> そこで、これに合わせて「Squeakers' Night in 九州」を行います。
+> 
+> 会場はサイバー大学福岡キャンパスのどこかになる予定です。
+> http://www.cyber-u.ac.jp/campus/support/facilities.html
+> 
+> 日時についてですが、いくつか候補があります。
+> 
+> 12月7日(金) 夕方-夜
+> 12月8日(土) 夕方-夜
+> 12月9日(日) 昼間
+> 
+> です。
+> 
+> 皆さん、特にご希望はありますでしょうか。声を上げていただければ、
+> 柔軟に対応したいと思います。
+> 
+> また、さらにディープな集まりを求める方は、「Camp Smalltalk in 九州」
+> をやってみるという話もあります。これはデモ大会ではなく、開発合宿の
+> ようなものです。やはり声が上がり、参加人数がある程度集まれば、こちら
+> の用意もしたいと思います。
+> 
+> 日本に数名しかいない希少種、Smalltalkerに触れる良い機会ですよ。
+> 
+> ではでは。Go Smalltalk!
+> 
+
+---
+[:masashi | ^umezawa]
+
+From tsutomu ＠ nucba.ac.jp  Fri Nov  2 12:34:15 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3767] Re: Unix用のリクエストいくつか
+In-Reply-To: <ulk9ilanq.wl%yoshiki@vpri.org>
+References: <JO200710141835045.20654593@mars.dti.ne.jp>	<FE54F3CF-C85A-49F9-8C8B-EE4D99DE412C@gmail.com>	<JC200710222352313.4754328@mars.dti.ne.jp>	<472562C6.60108@nucba.ac.jp>
+	<ulk9ilanq.wl%yoshiki@vpri.org>
+Message-ID: <472A9AB7.7080207@nucba.ac.jp>
+
+廣島です．
+
+>  うーむ。これは鋭いですね。バッファを巨大にするという手段で対処できる
+> ものなのでしょうか。
+
+サブジェクトを変えてしまったので，
+もしかして気づいておられないのでしょうか．
+3756 で対処したパッチをあげました．
+テストをお願いします．
+
+3.9-12 ベースについては調査の上改めて投稿します．
+-- 
+廣島　勉
+
+From yoshiki ＠ vpri.org  Fri Nov  2 15:00:52 2007
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3768] Re: Unix用のリクエストいくつか
+In-Reply-To: <472A9AB7.7080207@nucba.ac.jp>
+References: <JO200710141835045.20654593@mars.dti.ne.jp>
+	<FE54F3CF-C85A-49F9-8C8B-EE4D99DE412C@gmail.com>
+	<JC200710222352313.4754328@mars.dti.ne.jp>
+	<472562C6.60108@nucba.ac.jp> <ulk9ilanq.wl%yoshiki@vpri.org>
+	<472A9AB7.7080207@nucba.ac.jp>
+Message-ID: <u640lkwyz.wl%yoshiki@vpri.org>
+
+  廣島さん
+
+> >  うーむ。これは鋭いですね。バッファを巨大にするという手段で対処できる
+> > ものなのでしょうか。
+> 
+> サブジェクトを変えてしまったので，
+> もしかして気づいておられないのでしょうか．
+> 3756 で対処したパッチをあげました．
+> テストをお願いします．
+
+  メールの流れについていけていませんでした。すみません。
+
+> 3.9-12 ベースについては調査の上改めて投稿します．
+
+  よろしくお願いします。
+
+-- Yoshiki
+
+From miyasaka ＠ iris.dti.ne.jp  Fri Nov  2 21:16:28 2007
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3769] 【参加者募集】スクイーク体験ワークショップ（大人向け）
+Message-ID: <4b24f0d0711020516m49f6398dlc90763234089ceeb@mail.gmail.com>
+
+Squeak-jaの皆様へ
+
+こんばんは。
+デジタルハリウッド大学院の宮坂です。
+
+先日、阿部さんからもご紹介がありましたが、科学技術振興機構(JST)が行う「サイエンスアゴラ2007」にて行うスクイークの体験ワークショップ（大人向け）を行ないます。
+ただいま参加者募集中ですので、ご興味ありそうな方にご紹介いただけますでしょうか。
+（当日はOLPCの実機も展示される予定です）
+
+■タイトル
+スクイーク実践事例&体験ワークショップ
+
+■日時
+11月25日(日)
+13:00-14:30　第１部：スクイークの基本操作（初心者向け）
+15:00-16:30　第２部：スクイークを使った実践カリキュラム（経験者向け）
+
+■対象者
+子ども向けのコンピュータを活用した科学・数学教育に興味のある大学生、社会人、小中学校の教員など。（大人向けのワークショップです）
+
+■会場
+国際交流研究大学村　東京国際交流館　会議室１
+http://scienceportal.jp/scienceagora/agora2007/map.html
+
+■定員
+第１部スクイークの基本操作（初心者向け）　：　20名程度
+第２部実践カリキュラム（経験者向け）　：　20名程度
+
+■お申し込み
+詳しくはこちらをご覧ください。
+http://mts-j.hiho.jp/2007/10/agora2007.html
+
+以上、よろしくお願いいたします。
+
+-- 
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学大学院
+デジタルコンテンツ研究科　研究員
+---------------------------------------------
+
+From tsutomu ＠ nucba.ac.jp  Sat Nov  3 02:33:22 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3770] OLPC-VM ImmX11 パッチ
+Message-ID: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+
+大島さん，それから OLPC に興味のある皆さん，
+
+叩き台として，SqueakImmX11Plugin4e を
+
+svn export http://squeakvm.org/svn/squeak/branches/olpc
+
+で，取ってきたブランチに適用したものを作成しました．
+
+http://opinion.nucba.ac.jp/~tsutomu/squeak/OLPCSqueakImmX11-test0.tar.gz
+
+に置きましたので試して下さい．
+
+廣島　勉
+
+From tsutomu ＠ nucba.ac.jp  Sat Nov  3 14:05:14 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3771] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+Message-ID: <37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+
+現在僕の所では日本語は入力可能ですが，
+インプットメソッドを介さない英語の入力で
+subscript out of bounds: 0
+のエラーになります．
+廣島　勉
+
+From tsutomu ＠ nucba.ac.jp  Sat Nov  3 14:35:48 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3772] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>
+	<37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+Message-ID: <37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp>
+
+
+> 現在僕の所では日本語は入力可能ですが，
+> インプットメソッドを介さない英語の入力で
+> subscript out of bounds: 0
+> のエラーになります．
+
+場当たり的に修正したものを test1 としました．
+
+http://opinion.nucba.ac.jp/~tsutomu/squeak/OLPCSqueakImmX11-test1.tar.gz
+
+です．
+
+廣島　勉
+
+From umejava ＠ mars.dti.ne.jp  Sun Nov  4 22:00:17 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:57 2007
+Subject: [Squeak-ja: 3773] Re: SqueakImmX11Plugin4e
+In-Reply-To: <36518.125.196.190.185.1193703088.risu@mail.nucba.ac.jp>
+References: <36518.125.196.190.185.1193703088.risu@mail.nucba.ac.jp>
+Message-ID: <JV200711042200176.5377046@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+遅ればせながらGentooとFedoraでコンパイルして試してみました。
+
+11文字はクリアしましたが、今度は未確定文字列の文字数が22文字を超えると、
+やはり同じエラーが起きてしまいました。
+
+取り急ぎご報告まで。
+
+Hiroshima Tsutomu Kougi <tsutomu@nucba.ac.jp> wrote:
+> 廣島です．
+> UNIX VM で件のインプットイベント循環バッファの問題を回避したパッチを作成しま
+> した．
+> 興味のある方はテストをお願いします．
+> 
+> 大まかな解決策は次の通りです．
+> 
+> Xutf8LookupStrings 等で製作した文字列バッファをグローバルで保持し，
+> インプットイベントバッファの空きの分だけ転送する．
+> 以降，イベントハンドラでは文字列バッファが空になるまで転送を繰り返す．
+> その間は新規イベントを受け付けず，
+> イメージがイベントハンドラの合間でインプットイベントバッファを処理するのを待
+> つ．
+> 
+> 元々の VM の考え方では，
+> キー入力は 1 バイトずつで完結しているものとしていて，
+> 文字列バッファの最初の 1 バイトだけをインプットイベントバッファに転送して残
+> りは捨てる．
+> インプットイベントバッファが溢れたら古いイベントから捨てる
+> という手順でした
+> 
+> 小さくない変更なので他の所に影響が出るかもしれません．
+> 特にある期間新規イベントを受け付けないことがある当たりが心配です．
+> 
+> http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4e.tar.gz
+
+---
+[:masashi | ^umezawa]
+
+From tsutomu ＠ nucba.ac.jp  Mon Nov  5 13:30:40 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3774] SqueakImmX11Plugin4f
+Message-ID: <472E9C70.3040804@nucba.ac.jp>
+
+廣島です．梅澤さん，ありがとうございます．
+
+> 11文字はクリアしましたが、今度は未確定文字列の文字数が22文字を超えると、
+> やはり同じエラーが起きてしまいました。
+
+22 文字の場合，こちらではエラーになったりならなかったりです．
+IEB が入力文字列で埋まってしまっている所に，
+何か他のイベントが突っ込まれて
+IEB が上書きされているように思います．
+/* そうならないように新規イベントを受け付けないようにしたつもりなのですが */
+
+入力文字列は小分けにして IEB に送っているのですが，
+一度に送り込む数を制限して，IEB に空きを残す様にしました．
+
+http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4f.tar.gz
+
+また，テストをお願いします．
+
+反応が鈍くなるようなら，IEB サイズを増加する等の調整が必要かもしれません．
+
+-- 
+廣島　勉
+
+From tsutomu ＠ nucba.ac.jp  Mon Nov  5 13:47:14 2007
+From: tsutomu ＠ nucba.ac.jp (Tsutomu Hiroshima)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3775] Re: OLPC-VM ImmX11 パッチ
+In-Reply-To: <37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp>
+References: <21361.125.196.190.185.1194024802.risu@mail.nucba.ac.jp>	<37199.125.196.190.185.1194066314.risu@mail.nucba.ac.jp>
+	<37732.125.196.190.185.1194068148.risu@mail.nucba.ac.jp>
+Message-ID: <472EA052.1090204@nucba.ac.jp>
+
+度々，失礼します．
+3773 で，梅澤さんがご指摘のエラーは OLPC のパッチでも問題となりますので，
+同様に変更して test2 にしました．
+
+http://opinion.nucba.ac.jp/~tsutomu/squeak/OLPCSqueakImmX11-test2.tar.gz
+
+-- 
+廣島　勉
+
+From ro ＠ bjbsh.com  Wed Nov  7 18:01:09 2007
+From: ro ＠ bjbsh.com (Lu Yifeng)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3776] イベントレコーダーの不具合
+Message-ID: <019001c8211c$bd17beb0$8f00a8c0@crop.bjbsh.com>
+
+盧です。
+
+イベントレコーダーで、初心者向けのチュートリアルを
+作成するとき、見つけた不具合ですが、対応方法が
+あれば、教えていただきたいです。
+
+イベントレコーダーの「記録」機能を起動してから、
+「ナビゲータ」中の「ペイントツール」ボタンをクリックして、
+描きモードに入り、絵を描いたり、色を選択する「スポイド」を
+使って、色を選択したりする。最後は、「停止」機能で、
+イベントの記録を完了します。
+
+次、イベントレコーダーの「再生」機能で実行するとき、
+イベントの再生は、「スポイド」をクリックするまで、
+うまく再現できましたが、「スポイド」をクリックした瞬間、
+イベントの再生は、停止した状態で、イベントの再生は、
+進まなくなりました。
+
+何か対応方法があるでしょうか
+
+よろしくお願い致します。
+
+
+
+
+From abee ＠ squeakland.jp  Thu Nov  8 02:32:47 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3777] Re: イベントレコーダーの不具合
+In-Reply-To: <019001c8211c$bd17beb0$8f00a8c0@crop.bjbsh.com>
+References: <019001c8211c$bd17beb0$8f00a8c0@crop.bjbsh.com>
+Message-ID: <2d5d52a80711070932u38646aefvf75bcd33a87eea4c@mail.gmail.com>
+
+阿部@福山です。
+
+07/11/07 に Lu Yifeng<ro@bjbsh.com> さんは書きました:
+> イベントレコーダーで、初心者向けのチュートリアルを
+> 作成するとき、見つけた不具合ですが、対応方法が
+> あれば、教えていただきたいです。
+
+現象をSqueakland 2005J2で確認しました。
+残念ながら、今のところ対応方法が見つかりません。
+このバグが修正されるまでにはしばらく時間がかかると思われます。
+ただ、同様の問題がOLPC版のEvent Theatreにも見つかったので、対応される可能性は高いです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From yoshiki ＠ vpri.org  Sat Nov 10 08:59:10 2007
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3778] Re: イベントレコーダーの不具合
+In-Reply-To: <2d5d52a80711070932u38646aefvf75bcd33a87eea4c@mail.gmail.com>
+References: <019001c8211c$bd17beb0$8f00a8c0@crop.bjbsh.com>
+	<2d5d52a80711070932u38646aefvf75bcd33a87eea4c@mail.gmail.com>
+Message-ID: <ufxzfotrl.wl%yoshiki@vpri.org>
+
+  大島です。
+
+> > イベントレコーダーで、初心者向けのチュートリアルを
+> > 作成するとき、見つけた不具合ですが、対応方法が
+> > あれば、教えていただきたいです。
+> 
+> 現象をSqueakland 2005J2で確認しました。
+> 残念ながら、今のところ対応方法が見つかりません。
+> このバグが修正されるまでにはしばらく時間がかかると思われます。
+
+  そうですね。
+
+> ただ、同様の問題がOLPC版のEvent Theatreにも見つかったので、対応される可能性は高いです。
+
+  いや、そのロジックには抜け穴があると思います。
+
+  ペイントツールでないところのスポイトはある種の対応が数ヶ月前になされ
+ましたが、それでもEventThreatre内では動作がおかしいですね。再生時には、
+Event Theatreの後ろにあるものの色を拾ってしまうようです。
+
+-- Yoshiki
+
+
+From umejava ＠ mars.dti.ne.jp  Sat Nov 10 22:22:47 2007
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3779] Re: SqueakImmX11Plugin4f
+In-Reply-To: <472E9C70.3040804@nucba.ac.jp>
+References: <472E9C70.3040804@nucba.ac.jp>
+Message-ID: <JJ200711102222474.2658593@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ずいぶん遅くなりましたが、さきほどコンパイルして試してみました。
+
+今回は調子よく動いているようです。
+
+とりあえずご報告まで。
+
+Tsutomu Hiroshima <tsutomu@nucba.ac.jp> wrote:
+> 廣島です．梅澤さん，ありがとうございます．
+> 
+> > 11文字はクリアしましたが、今度は未確定文字列の文字数が22文字を超えると、
+> > やはり同じエラーが起きてしまいました。
+> 
+> 22 文字の場合，こちらではエラーになったりならなかったりです．
+> IEB が入力文字列で埋まってしまっている所に，
+> 何か他のイベントが突っ込まれて
+> IEB が上書きされているように思います．
+> /* そうならないように新規イベントを受け付けないようにしたつもりなのですが */
+> 
+> 入力文字列は小分けにして IEB に送っているのですが，
+> 一度に送り込む数を制限して，IEB に空きを残す様にしました．
+> 
+> http://opinion.nucba.ac.jp/~tsutomu/squeak/SqueakImmX11Plugin4f.tar.gz
+> 
+> また，テストをお願いします．
+> 
+> 反応が鈍くなるようなら，IEB サイズを増加する等の調整が必要かもしれません．
+> 
+> -- 
+> 廣島　勉
+
+---
+[:masashi | ^umezawa]
+
+From sonoda ＠ laptop-jp.org  Wed Nov 14 13:52:18 2007
+From: sonoda ＠ laptop-jp.org (Y.Sonoda)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3780] 第１回Squeakワークショップin長崎
+Message-ID: <7f3aeb4c0711132052o693c2ee1k97ee733c38358d39@mail.gmail.com>
+
+Squeak-jaの皆様
+
+苑田です。
+（名前で登録しなおしました）
+
+来月あたまのOSC2007in福岡のあと、阿部さんに長崎に来ていただけることに
+なりました。それで急遽Squeakの紹介の場を作ろうと場所などの手配をして
+いたのですが、ようやく場所が確保できましたので、下記の案内をさせていた
+だきます。
+
+なにぶん西の果て、長崎での開催ですので、本ＭＬに参加の方で出席される
+方はいないのではないかと思う次第ですが、お知り合いの方で長崎、あるいは
+長崎近郊にお住まいでSqueakにご興味のありそうな方がおられましたら、
+ご紹介いただけると幸いです。
+
+当初無料での開催を考えておりましたが、せっかく阿部さんにきていただくので
+思う存分実際にSqueakを参加者にいじってもらってその感動を他の方々にも
+広げていただきたいと、PCやプロジェクタなどが揃っているところを探すのに
+少々手間取った次第です。設備をお借りするのに若干の費用がかかるのですが
+今後細々とでも長くこういった機会の提供を続けていくことを考え、苦慮の末
+参加される方々に若干の負担（５００円、ワンコインです！）をしていただくことに
+いたしました。
+
+幸い、長崎大学教育学部のコンピュータルーム（PC約５０台ほど設置、プロジェクタ
+スクリーンあり）という最高の環境をお借りすることが出来たので、非常に中身の
+濃いワークショップになるのではと期待しています。
+
+あわせて今回のイベントも含め今後の情報提供用に、
+　"OLPC volunteer team, Japan" http://www.laptop-jp.org/
+なんて勝手サイトを立ち上げました。
+"team"なんて名前をつけてますが、基本的にはいまのところ私一人です。
+長崎の地元を中心にSqueakやOLPCの支援活動を今後広げていけたら、
+という希望的観測をこめて、グループ名にしています。
+今回のワークショップを通してこの活動に協力いただける人が増えればと
+願う次第です。
+
+よろしくお願いします。
+
+（一般向けの案内を転載していますので、本ＭＬに参加の方々には
+　くどいところがあるやもしれませんが、ご了承ください）
+-----------------------------
+
+第１回Squeakワークショップin長崎
+
+■１．目的■
+
+　子供が生まれながらに持つ自ら学ぶ力を利用し、「学ぶ事を学ぶ(Learning learning)」能力を伸ばす"Squeak
+Etoys"という学習ソフトウェアに関するワークショップです。ワークショップでは、実際にSqueak
+Etoysを使って作品を作りながら、どのように子供たちの考える力を伸ばすのか、ハンズオン方式で講習します。また現在このSqueak
+Etoysを活用し開発途上国に向けた教育プロジェクトを推進している"OLPC (One Laptop Per
+Child)"の活動についても紹介します。
+
+　★当日はOLPCが開発した100ドルPC-"XO"の実物をご覧いただけます！★
+
+■２．主催・共催・講師■
+
+　　主催　：　OLPC volunteer team, Japan
+　　共催　：　Viewpoints Research Institute, 　Squeakland.jp
+　　講師　：　阿部和広（サイバー大学客員教授、Squeakland Associate）
+　　協力　：　長崎大学, 　長崎Apple User Group
+
+■３．日時・場所・受講料ほか■
+
+　　日時：2007年12月9日(日)
+　　　　　12:00〜13:00　受付
+　　　　　13:00〜17:00　ワークショップ
+
+　　場所：長崎大学教育学部 第２コンピュータ室
+　　　　　（〒852-8521 長崎市文教町1-14）
+　　　　　※駐車場がございませんので公共交通機関にてお越しください。
+
+　　参加料：５００円／名
+　　　　（施設利用料ほか、支払い方法に付いては参加の方々に後日
+　　　　連絡いたします。）
+
+　　参加者の持参物：筆記用具、
+　　　　※ワークショップでの制作物（プログラム）をお持ち帰りになりたい場合は
+　　　　　USBメモリスティックなど各自ご持参ください。
+　　　　　またノートPCなどをお持ちの方は持参いただいてご自身のPCでの
+　　　　　受講もOKです。ただしウィルスチェックを確実にお願いいたします。
+
+　　　　（※18:00くらいから近くで懇親会も検討しております。併せて出席を
+　　　　　ご検討いただけると幸いです。場所・予算については追ってMLにて
+　　　　　ご連絡いたします。）
+
+■４．プログラム■
+　　13:00 はじめに（SqueakそしてOLPCについて）
+　　13:30 Squeak Etoysとは
+　　14:00 Squeak Etoys演習
+　　16:30 作品発表とリフレクション(振り返り)
+　　17:00 終了
+
+■５．受講対象者■
+　　・Squeakに興味のある方
+　　・Squeakを使って子供たちに学習の機会を提供する事に興味のある方
+　　・Squeakを使って「学ぶ事を学ぶ」ための学習コンテンツ制作に興味のある方
+　　・Squeakコミュニティに貢献したいと思っている方
+　　・そしてOLPCプロジェクトへの貢献に興味のある方。
+
+■６．募集者数■
+　　・２０名程度
+
+■７．募集者に必要と思われる予備知識■
+　　・Windowsの基本的オペレーション
+　　（起動・停止ができて、キーボード・マウスが使えれば結構です）
+
+■８．ワークショップで学べる事■
+　　・OLPCプロジェクトの概要
+　　・Squeakのインストール方法／起動方法
+　　・Squeakによるコンテンツ制作方法
+　　・Squeakでのコンテンツ公開方法、等
+
+■９．募集（告知）方法■
+　　告知：
+　　　　(1) OLPC volunteer team, Japanサイト
+　　　　　　　http://www.laptop-jp.org/、及び告知用ML（目下準備中）
+　　　　(2) Squeakland.jpコミュニティサイト、及びSqueak-ja ML
+　　　　(3) mixi, OLPC, Squeak関連コミュニティ
+　　　　(4)その他長崎県下への告知で使える様々な手段
+
+　　募集期間：　2007年11月12日(月)〜12月3日(月)
+
+　　募集方法：　以下まで必要事項を記入の上、メールにてお申し込みください。
+　　　　　　　　　　先着順とさせていただきます。
+
+　　申し込みのあて先：info@laptop-jp.org
+
+　　内容：Subject(標題)に「ワークショップ参加希望」と書いて、
+　　　　・お名前
+　　　　・メールアドレス（ワークショップの連絡用です）
+　　　　・郵便番号・住所
+　　　　・電話番号
+　　　　・ノートPCを持参されますか？　[はい・いいえ]
+　　　　・懇親会の出欠　  　　　　　　  [はい・いいえ]
+ 　　　　(※懇親会費用は実費となります。5,000円程度を予定)
+
+　　※いただいた個人情報に関しては厳重に管理し、本ワークショップ以外の
+　　　　用途には用いません。
+
+■１０．その他■
+　御質問などございましたら下記までお問い合わせください。
+ 　　お問い合わせメールアドレス： info@laptop-jp.org
+
+以上
+
+From abee ＠ squeakland.jp  Wed Nov 14 16:22:16 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3781] KOF2007 無事終了しました。
+In-Reply-To: <4721BCC6C3.0C61ABEE@smtp.nifty.com>
+References: <4711CDCE157.FC35ABEE@smtp.nifty.com>
+	<4721BCC6C3.0C61ABEE@smtp.nifty.com>
+Message-ID: <473AA22829A.5506ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+11/9, 10の二日間に渡って開催されたKOF2007ですが、お陰様でSqueak-jaのブー
+ス展示、ステージ発表、ユーザ企画共に無事終了しました。
+来場者は速報値で約1200人とのことですが、会場がコンパクトなためか、大変密
+度が濃いイベントのように感じられました。
+私たちの展示も常に人が絶えることがなく、多くの人にSqueak関連書籍、デモ、
+OLPC XOを見てもらうことができました。大藤さん自ら展示即売された「もえすく」
+もなかなかの人気でした。
+山宮さんの発表は、朝一にもかかわらずステージが見えないほどの盛況で、山宮
+さんも地元と言うこともあってか水を得た魚のようでありました。この様子は動
+画で見ることができます。
+
+http://cliplife.jp/clip/?content_id=2uupmf21
+
+ユーザ企画での大藤さんの発表は、中学校でのEtoysの活用に関するもので、実際
+に生徒の皆さんが作品を製作する過程や、そこで作られた作品を紹介するもので
+した。
+私は普段小学生を相手にすることが多いのですが、それと比べるとさすがに完成
+度の高いものが多かったように思います。独りよがりにならないよう生徒同士で
+レビューをさせるところなど大変興味深かったです。
+私のはいつもどおりのOLPCの紹介とXOに搭載されているEtoysのデモでありました。
+
+ネットを検索するとちらほらと感想などがアップされているようです。
+
+http://animemo.seesaa.net/article/65581205.html
+http://www.webspiritus.com/blojsom/blog/default/2007/11/13/Kansai-Open-Source-cont
+http://execyou.blogspot.com/2007/11/kof2007.html
+http://blog.ofg.jp/?eid=706132
+http://d.hatena.ne.jp/mjh/20071110#1194697916
+http://mizomemo.blogspot.com/2007/11/kof2007.html
+http://d.hatena.ne.jp/propella/20071114/p2
+
+皆様ありがとうございました。
+次は12/7のSqueakers' Night in 九州、12/8のOSC2007 Fukuoka、さきほど苑田さ
+んからアナウンスのあった12/9の第1回Squeakワークショップin長崎です。
+多数のご参加をお待ちしております。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From nagasakiinjapan ＠ yahoo.co.jp  Wed Nov 14 20:16:09 2007
+From: nagasakiinjapan ＠ yahoo.co.jp (林 光宏)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3782] はじめまして。
+In-Reply-To: <7f3aeb4c0711132052o693c2ee1k97ee733c38358d39@mail.gmail.com>
+Message-ID: <20071114111609.77491.qmail@web3014.mail.tnz.yahoo.co.jp>
+
+Squeak-jaの皆様
+  苑田さん
+   
+  今回初めてメールさせていただきます。林と申します。長崎県で中学校技術の教員をしています。
+  スクイークに興味があり生徒に何度か動く車など作らせたことがあります。
+   
+  いままでメーリングリストに登録して、みなさんの活動をすごいなあと思いながら見てるだけでしたが、なんと長崎で「第１回Squeakワークショップin長崎」があるとのことびっくりしています。
+  ぜひ参加させてほしいです。
+  なにぶん、スクイークのことなどほとんど知らない私ですが、もっと勉強したいなあと思っています。よろしくお願いします。
+   
+  あとで申し込みのあて先にもメールしておきます。
+   
+   
+  林　光宏
+
+ 
+
+ 
+---------------------------------
+New Design Yahoo! JAPAN  2008/01/01
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071114/07365dac/attachment.html
+From sonoda ＠ laptop-jp.org  Thu Nov 15 20:17:14 2007
+From: sonoda ＠ laptop-jp.org (Y.Sonoda)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3783] Re: はじめまして。
+In-Reply-To: <20071114111609.77491.qmail@web3014.mail.tnz.yahoo.co.jp>
+References: <7f3aeb4c0711132052o693c2ee1k97ee733c38358d39@mail.gmail.com>
+	<20071114111609.77491.qmail@web3014.mail.tnz.yahoo.co.jp>
+Message-ID: <7f3aeb4c0711150317x17d58ca5qad68c34d1747e005@mail.gmail.com>
+
+林様、ＭＬの皆様
+
+苑田です。
+
+申し込みをありがとうございました。
+実はメールでのお申し込みをいただいたのは林さんが一番です！
+すでに申し込み受付のメールは私信にてお送りしておりますが、
+あらためまして、ワークショップのほうよろしくお願いいたします。
+
+皆様：
+まだ正式な申し込みをいただいているのは数名の方のみですが、
+申し込みを非公式に表明されておられる方が数名おられるので、
+近郊で参加を考えておられる方がおられましたら、お早目に申し込み
+いただいたほうがよろしいかもしれません。
+
+失礼します。
+
+07/11/14 に 林 光宏<nagasakiinjapan@yahoo.co.jp> さんは書きました:
+> Squeak-jaの皆様
+> 苑田さん
+>
+> 今回初めてメールさせていただきます。林と申します。長崎県で中学校技術の教員をしています。
+> スクイークに興味があり生徒に何度か動く車など作らせたことがあります。
+>
+> いままでメーリングリストに登録して、みなさんの活動をすごいなあと思いながら見てるだけでしたが、なんと長崎で「第１回Squeakワークショップin長崎」があるとのことびっくりしています。
+> ぜひ参加させてほしいです。
+> なにぶん、スクイークのことなどほとんど知らない私ですが、もっと勉強したいなあと思っています。よろしくお願いします。
+>
+> あとで申し込みのあて先にもメールしておきます。
+>
+>
+> 林　光宏
+>
+>
+> ________________________________
+> New Design Yahoo! JAPAN 2008/01/01
+>
+>
+>
+
+From sonoda ＠ laptop-jp.org  Thu Nov 15 20:23:01 2007
+From: sonoda ＠ laptop-jp.org (Y.Sonoda)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3784] サイトが落ちてしまいました（涙）
+Message-ID: <7f3aeb4c0711150323s2790650dx21102c58b656d38d@mail.gmail.com>
+
+Squeak-MLの皆様
+
+苑田です。
+
+先日アナウンスした長崎でのワークショップの主催となっている
+OLPC volunteer team, Japanサイトなのですが、はやくもEngadgetや
+/.サイトで紹介されてしまったので、あわてて整備をしておりましたら、
+とつぜんサイトが表示されなくなってしまいました。
+
+あまりにもタイミングが良すぎますが、意図したものではございません（汗）
+
+いまDrupalを使っているのですが、どーもモジュールをたくさん入れすぎたか
+メモリを食うモジュールをactivateしてしまったことによってphpのメモリ
+不足が発生しているのではと考えております。
+
+なにぶん家に帰らないと対処ができないので、あとしばらくこのままです。
+
+あまり見ておられる方はいないと思いますが、もしサイトが落ちている
+ことで何か書き込みなりありましたら、「落ちてるらしいよ」とそっと
+レスいただくか、あるいはあそこに書き込みがあったよ、と教えて
+いただけると非常に助かります。
+
+本人非常にあせっているのですが、いかんせんなんともしがたい状況に
+ありまして。。。
+
+From abee ＠ squeakland.jp  Sun Nov 18 15:17:48 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3785] Squeakland.jp が停止していました。
+Message-ID: <473FD90C3A6.357FABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2007/11/18 06:30くらいから15:00くらいまでの間、Squeakland.jpが停止してい
+ました。現在は復旧しています。
+
+http://squeakland.jp
+
+また、SuperSwikiのレスポンスが非常に悪くなることがある(Webで画面が表示さ
+れるのに時間がかかる。ナビゲータの「探す」がタイムアウトする)という状況が
+数日前から続いています。今のところこの原因は不明です。
+
+http://squeakland.jp/super
+
+代わりにSuperSwiki2をお使いください。
+
+http://squeakland.jp/super2
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Mon Nov 26 16:43:56 2007
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:58 2007
+Subject: [Squeak-ja: 3786] 『オープンソースカンファレンス 2007 Fukuoka 』のご案内
+Message-ID: <474A793C1AC.EFDAABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+12/8に開催されるOSC2007 Fukuokaの受付が開始されましたのでお知らせします。
+Squeak-jaは14:00-14:45に3F-Aで行われるセミナー、「100ドルノートPCとEtoys、
+開発環境としてのSqueak」を私と梅澤さんとで行います。
+
+http://www.ospn.jp/osc2007-fukuoka/modules/eguide/event.php?eid=20
+
+事前登録制ですので、以下のページからお願いします。
+
+http://www.ospn.jp/osc2007-fukuoka/
+
+セミナーの時間以外はブース展示も行っています。
+ブースにはOLPC XOもありますし、梅澤さん、横川さん、南谷さんもいますので、
+SeasideやSmalltalkのディープな質問をするのも良いのではないでしょうか。ま
+た、アカデミアさんの協力により、 Squeak関連書籍、 DVD、ハードなどの展示も
+行います。
+
+多数の参加をお待ちしています。
+
+前日の12/7にはSqueakers' Night in 九州、翌日の12/9には第1回Squeakワークシ
+ョップ in 長崎がありますので、こちらもよろしくお願いします。
+
+http://swikis.ddo.jp/umejava/45
+http://www.laptop-jp.org/node/20
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+Forwarded by Kazuhiro ABE <abee@squeakland.jp>
+---------------- Original message follows ----------------
+============================================================================
+                      セミナー事前登録受付開始！！
+            『オープンソースカンファレンス2007 Fukuoka』のご案内            
+============================================================================
+
+オープンソースの最新情報をお伝えするイベント「オープンソースカンファレンス」
+を、12月8日(土)に開催します。
+
+九州では初めての開催。沢山のOSSコミュニティ・企業・関連団体が一堂に介し、
+オープンソースの「今」を伝えます。
+
+各種セミナーや展示、そしてすべてが無料！
+OSS初心者から上級者まで、よりわかりやすく、楽しめる企画が満載です。
+
+ここでしか得られない貴重な情報や人脈、ビジネスチャンスを探しに、是非
+ご来場ください。
+
+オープンソース最前線で活躍する方々と気軽に出会えるのもOSCならではの魅力！
+あなたのご来場をお待ちしております。
+
+                                     オープンソースカンファレンス実行委員会
+
+──────────────────────────────────────
+  ■□■-■□■-【オープンソースカンファレンス2007 Fukuoka】-■□■-■□■
+    ★セミナー事前登録受付中！⇒⇒ http://www.ospn.jp/osc2007-fukuoka/
+
+※「新規参加登録」にて、ユーザ登録と参加セッション登録を行ってください。
+
+  ◆2007年12月8日(土)    ◆参加費：無料
+  ◆アスクビル (JR博多駅 筑紫口より徒歩5分/地下鉄博多駅 17番出口より徒歩3分)
+  ◆内容：オープンソース関連の最新情報提供 (展示・セミナー)
+  ◆主催：オープンソースカンファレンス実行委員会
+  ◆共催：(財)九州システム情報技術研究所
+          福岡OSS研究会
+          福岡産学ジョイントプラザ実行委員会
+          福岡市
+          福岡商工会議所
+──────────────────────────────────────
+
+----------------------------------------------------------------------------
+セミナー一覧タイムテーブルはこちら
+
+ → http://www.ospn.jp/osc2007-fukuoka/modules/eventrsv/index.php?id=1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+▼オフィシャルホームページは開催までにどんどん更新されています！
+
+                   ▽▼OSC2007 Fukuoka Webサイト▼▽
+                  http://www.ospn.jp/osc2007-fukuoka/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■来場者プレゼント
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+会場にご来場いただき、オープンソースに関する意識調査アンケートにご協力いただ
+いた方から抽選で素敵な景品をプレゼントいたします。
+(一例) HP ProLiant ML115 (デュアルコア AMD Opteron 1210/SLES10付) 1名様
+       NEC バザールでござーるグッズセット 1名様
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■事前登録についてのお願い
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+セミナーは、聴講できる人数に限りがあるため、事前登録による人数把握を行って
+おります。事前登録にご協力をお願いいたします。
+
+事前登録はこちらから →→→ http://www.ospn.jp/osc2007-fukuoka/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■参加団体一覧（2007年11月26日現在）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+----------------------------------------------------------------------------
+●協賛
+・NEC
+・日本ヒューレット・パッカード株式会社
+・株式会社ワイズノット
+・日本AMD
+・ターボリナックス株式会社
+・ノベル株式会社
+・株式会社野村総合研究所
+・NECソフト株式会社
+・有限責任中間法人JPCERTコーディネーションセンター
+・株式会社インフォネット
+・日本仮想化技術株式会社
+・リナックスアカデミー
+・SRA OSS, Inc. 日本支社
+・株式会社NTTデータ
+・KLab株式会社
+・有限会社ユウシステム
+・株式会社IDGジャパン
+・株式会社アスキー
+・株式会社インプレスIT(ThinkIT)
+・株式会社インプレスジャパン
+・株式会社オライリー・ジャパン
+・株式会社技術評論社(Software Design)
+・株式会社翔泳社
+・ソフトバンク クリエイティブ株式会社
+・株式会社日経BP - 日経Linux
+・株式会社毎日コミュニケーションズ
+----------------------------------------------------------------------------
+●後援：
+・有限責任中間法人 Mozilla Japan
+・特定非営利活動法人エルピーアイジャパン
+・日本Linux協会
+・日本UNIXユーザ会
+----------------------------------------------------------------------------
+●参加グループ（50音順・敬称略）：
+・Firebird日本ユーザー会
+・KNOPPIX/Math Project
+・KNOPPIX教育利用研究会
+・Linux Users in Kyushu
+・Linuxユーザクラブおおいた
+・OpenOffice.orgドキュメントプロジェクト
+・OSASK計画
+・Plone研究会
+・Rubyビジネスコモンズ
+・Seasarファウンデーション
+・Squeak-ja
+・Xoops9
+・大分県オープンソースソフトウェア研究会
+・菅 雄一
+・特定非営利活動法人 新潟オープンソース協会
+・日本LDAPユーザ会
+・日本MySQLユーザ会
+・日本NetBSDユーザーグループ
+・日本PostgreSQLユーザ会
+・日本Rubyの会
+・日本viユーザ会
+・日本Zopeユーザー会
+・もじら組
+----------------------------------------------------------------------------
+●企画運営：株式会社びぎねっと
+----------------------------------------------------------------------------
+■最新情報は → http://www.ospn.jp/osc2007-fukuoka/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□■ 開催概要 ■□━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■名    称：『オープンソースカンファレンス2007 Fukuoka』
+■会    期： 2007年12月8日(土)
+■開催時間： 10:00〜17:00 (受付開始 9：30〜)
+■入 場 料： 無料 (セミナーは事前登録をお願いします)
+■場    所： アスクビル
+             福岡県福岡市博多区博多駅東1丁目16-25
+             JR博多駅 筑紫口より徒歩5分/地下鉄博多駅 17番出口より徒歩3分
+■公式 URL： http://www.ospn.jp/osc2007-fukuoka/
+■主    催： オープンソースカンファレンス実行委員会
+■共    催：(財)九州システム情報技術研究所
+            福岡OSS研究会
+            福岡産学ジョイントプラザ実行委員会
+            福岡市
+            福岡商工会議所
+============================================================================
+問い合わせ先：オープンソースカンファレンス 事務局 (osc2007@Begi.net)
+============================================================================
+

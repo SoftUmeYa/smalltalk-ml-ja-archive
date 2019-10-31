@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3978] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203978%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bBsoQiBzdCA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskTkZmGyhCIChTcXVlYWszLjkuMS1maW5h%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FbC03MDc1Sik%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003977.html">
+   <LINK REL="Next"  HREF="003979.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3978] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203978%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkZ8S1w4bBsoQiBzdCA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lJCVzJTklSCE8JWskTkZmGyhCIChTcXVlYWszLjkuMS1maW5h%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FbC03MDc1Sik%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3978] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2008年 9月  3日 (水) 10:27:25 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003977.html">[Squeak-ja: 3977] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+</A></li>
+        <LI>次の記事 <A HREF="003979.html">[Squeak-ja: 3979] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3978">[ 日付 ]</a>
+              <a href="thread.html#3978">[ スレッド ]</a>
+              <a href="subject.html#3978">[ 件名 ]</a>
+              <a href="author.html#3978">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　大島さん、お返事ありがとうございます。
+
+　DumpしたところBOMは付いていません。（新旧imageいずれのfileOutも）
+
+　クラスをfileOutしたstファイルには
+ef bb bf (HEX)が 'From Squeak...' の前に付いていますが
+クラスカテゴリからのstファイルには 'From Squeak...'ごと
+欠落しています。
+
+　また別のカテゴリからのstファイルでうまくインストールできた物も
+ありました(日本語使用のもの)。
+
+　utf-8はチンプンカンプンです。はずしていたらごめんなさい。
+
+
+At 8:09 AM 08.9.3, Yoshiki Ohshima wrote:
+&gt;<i> &gt; 　対処法でfileInしたものをSqueak3.9.1-final-7075Jから
+</I>&gt;<i> &gt; fileOutし直した stファイルは問題なく「インストール」可能。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 　×と○のstファイルを比較してもほとんど違いが無いよう。
+</I>&gt;<i> &gt;     class定義の 変数名リスト末尾のspaceの有無ぐらい。
+</I>&gt;<i> 
+</I>&gt;<i>   ファイルの頭の3バイトが、Byte Ordr Markと呼ばれるUTF-8を表すためのバ
+</I>&gt;<i> イト列になって出てきていると思います。たとえば、
+</I>&gt;<i> 
+</I>&gt;<i>   (FileStream readOnlyFileNamed: 'foo.cs') binary next: 3.
+</I>&gt;<i> 
+</I>&gt;<i> という式をそれらのファイルで実行すると、返ってくる結果が違うはずです。
+</I>&gt;<i> 
+</I>&gt;<i> -- Yoshiki
+</I>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003977.html">[Squeak-ja: 3977] Re: 日本語 st のインストールの謎  (Squeak3.9.1-final-7075J)
+</A></li>
+	<LI>次の記事 <A HREF="003979.html">[Squeak-ja: 3979] Re: 日本語 st のインストールの謎 (Squeak3.9.1-final-7075J)
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3978">[ 日付 ]</a>
+              <a href="thread.html#3978">[ スレッド ]</a>
+              <a href="subject.html#3978">[ 件名 ]</a>
+              <a href="author.html#3978">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

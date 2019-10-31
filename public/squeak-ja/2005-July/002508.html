@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2508] Re: Windows 版 Squeak での UDP パケット受信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202508%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=JA200507042301466.1919406%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002502.html">
+   <LINK REL="Next"  HREF="002503.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2508] Re: Windows 版 Squeak での UDP パケット受信について</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202508%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=JA200507042301466.1919406%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 2508] Re: Windows 版 Squeak での UDP パケット受信について">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 7月  5日 (火) 21:37:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002502.html">[Squeak-ja: 2502] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+        <LI>次の記事 <A HREF="002503.html">[Squeak-ja: 2503] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2508">[ 日付 ]</a>
+              <a href="thread.html#2508">[ スレッド ]</a>
+              <a href="subject.html#2508">[ 件名 ]</a>
+              <a href="author.html#2508">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。
+receiveUDPDataInto:についてもう少し調べてみました。
+
+Windows版VMでは3.5から実装されていて、ほとんど変更ありません。
+しかしこの実装では動かないことを確認しています。理由はUDPパケッ
+ト受信すべきところを、UDPパケット送信関数を呼び出しています。
+
+で、Unix版VMをみると、Windows版と実装が違いなんか動きそうな
+ソースです（環境がないので、確認していません)。
+
+あくまでも推測ですが、動くサンプルはUnix版で確認されたものでは
+ないかと。。。Windows環境でUDPはあまり需要がないのか？(Googleで
+探してみると、ポツポツとreceiveUDPDataInto:が動かないという記述が
+あります)
+
+で、receiveUDPDataInto:についてVMソースで
+sqSocketReceiveUDPDataBufCountaddressportmoreFlag関数を
+--------cut here---------
+int result;
+struct sockaddr_in saddr;
+int addrSize= sizeof(saddr);
+
+if (!SocketValid(s)) return -1;
+if(UDPSocketType != s-&gt;socketType) return -1;
+if(bufSize &lt;= 0) return -1;
+memset(&amp;saddr, 0, sizeof(saddr));
+result = recvfrom(SOCKET(s), (void *)buf, bufSize, 0,
+(struct sockaddr *)&amp;saddr, &amp;addrSize);
+if(result &gt;= 0) {
+*address= ntohl(saddr.sin_addr.s_addr);
+*port= ntohs(saddr.sin_port);
+} else
+result = 0;
+return result;
+--------cut here---------
+とし(Unix版のパクリ)、VMを再構築するとWindowsで動作するように
+なります。
+
+暇な方は上記修正版VM(Ver 3.7.1)を下記においておいたので試してみてください。
+<A HREF="http://squeak.qp.land.to/index.php?plugin=attach&amp;pcmd=open&amp;file=Squeak.zip&amp;refer=%A5%D5%A5%A1%A5%A4%A5%EB%C3%D6%A4%AD%BE%EC">http://squeak.qp.land.to/index.php?plugin=attach&amp;pcmd=open&amp;file=Squeak.zip&amp;refer=%A5%D5%A5%A1%A5%A4%A5%EB%C3%D6%A4%AD%BE%EC</A>
+
+それでは
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://squeak.qp.land.to/">http://squeak.qp.land.to/</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.323 / Virus Database: 267.8.9/39 - Release Date: 2005/07/04
+
+__________________________________
+Save the earth
+<A HREF="http://pr.mail.yahoo.co.jp/ondanka/">http://pr.mail.yahoo.co.jp/ondanka/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002502.html">[Squeak-ja: 2502] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+	<LI>次の記事 <A HREF="002503.html">[Squeak-ja: 2503] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2508">[ 日付 ]</a>
+              <a href="thread.html#2508">[ スレッド ]</a>
+              <a href="subject.html#2508">[ 件名 ]</a>
+              <a href="author.html#2508">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

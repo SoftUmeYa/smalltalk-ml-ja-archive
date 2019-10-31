@@ -1,0 +1,1742 @@
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Nov  1 08:28:08 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Sat Nov  1 08:28:18 2008
+Subject: [Squeak-ja: 4055] Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+In-Reply-To: <2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+Message-ID: <490B9488.9050106@mx2.ttcn.ne.jp>
+
+寳迫です．
+＃件名を変更しました．
+
+お世話になっております．只今、LinuxでScratch1.3を日本語化して動かす実験
+を続けておりますが、日本語入力に関して、少々行き詰まってしまいまして、識
+者の皆様のご意見を伺いたいと思ってメールしました．
+
+以前に紹介した方法で、Linux上でのScratch1.3の日本語表示については問題な
+くできました．
+http://4oc.blogspot.com/2008/10/linuxscratch13.html
+
+その後、一緒に研究を進めて頂いている方々とやり取りをしている中で、「日本
+語入力が文字化けする」という話が出て参りました．私も早速テストをしてみま
+したが、私の方法では、日本語入力（IM）がつながらないことがわかり、
+SqueakLandから、日本語パッチの当たった「3.7-7JPatched」をダウンロードし
+て、Linux版Scratch1.2に付属していた3.9-8と入れ替えて使うことにしました．
+＃この時点で、Linux版Squeakの日本語表示及び日本語入力に問題がないことを
+確認しました．
+
+すると、Scratch1.3でも日本語入力がつながるようになり、入力そのものはでき
+るようになったのですが、文字化けが発生してしまいました．どうやら文字コー
+ドの扱いに関わる問題のようです．
+
+3.7-7JPatchedとSqueak2005J2の組み合わせでは、全く問題がなかったことを考
+えると．Scratch.image（1.3）の問題なのではないかと推察しました．このこと
+について、解決のヒントになるような情報を探してみましたが、解決に至ってお
+りません．そこで識者の皆様に、お知恵を拝借できればと思い、メールをさせて
+頂いた次第です．よろしくお願い致します．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From yoshiki ＠ vpri.org  Sat Nov  1 09:19:21 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Sat Nov  1 09:19:42 2008
+Subject: [Squeak-ja: 4056] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+In-Reply-To: <490B9488.9050106@mx2.ttcn.ne.jp>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp>
+Message-ID: <uiqr8paba.wl%yoshiki@vpri.org>
+
+At Sat, 01 Nov 2008 08:28:08 +0900,
+yhousako wrote:
+> 
+> 3.7-7JPatchedとSqueak2005J2の組み合わせでは、全く問題がなかったことを考
+> えると．Scratch.image（1.3）の問題なのではないかと推察しました．このこと
+> について、解決のヒントになるような情報を探してみましたが、解決に至ってお
+> りません．そこで識者の皆様に、お知恵を拝借できればと思い、メールをさせて
+> 頂いた次第です．よろしくお願い致します．
+
+  惜しいですね。
+
+  最近は本家のVM (3.10.3)にも廣島さんが作ってくれたものを基にした日本
+語入力を可能にするオプションがついていて、Etoysのイメージであればちゃ
+んと入力できるはず、なのですが、いつからかまた壊れてしまっているのです
+よね。
+
+  寳迫さんの手引きに従って環境を整えた後、3.10.3 VMで
+
+  squeak -vm-display-X11 -compositioninput Scratch.image
+
+のようにして起動すると、UTF-8の文字列が入力されているようなのですが、
+入力したものは化けてしまいます。
+
+  機会があったら直してみたいと思いますし、Johnにもコンタクトしてみたい
+と思います。
+
+-- Yoshiki
+
+
+
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Nov  1 16:22:34 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Sat Nov  1 16:22:45 2008
+Subject: [Squeak-ja: 4057] Re: Linux版Scratch1.3の日本語入力について
+In-Reply-To: <uiqr8paba.wl%yoshiki@vpri.org>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>	<48F09F06.1040806@mx2.ttcn.ne.jp>	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>	<490B9488.9050106@mx2.ttcn.ne.jp>
+	<uiqr8paba.wl%yoshiki@vpri.org>
+Message-ID: <490C03BA.2000809@mx2.ttcn.ne.jp>
+
+寳迫です．
+
+大島さん．早速のお返事を頂きありがとうございます．
+
+Yoshiki Ohshima さんは書きました:
+>   最近は本家のVM (3.10.3)にも廣島さんが作ってくれたものを基にした日本
+> 語入力を可能にするオプションがついていて、Etoysのイメージであればちゃ
+> んと入力できるはず、なのですが、いつからかまた壊れてしまっているのです
+> よね。
+
+Mac版のScratch.image（1.3）を利用して起動する実験も行ってみましたが、結
+果は同じでした．SqueakVMとScratch.imageとの間に、何らかの問題があるのだ
+ろうと思います．
+
+もう少し、実験できそうなことがありそうなので、試してみようと思いますが、
+万年ド素人なので限界に近い状況にあることは間違いなさそうです．
+
+>   機会があったら直してみたいと思いますし、Johnにもコンタクトしてみたい
+> と思います。
+
+ありがとうございます．お手数をおかけして申し訳ありませんが、よろしくお願
+い致します．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee ＠ squeakland.jp  Sat Nov  1 21:22:26 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Sat Nov  1 21:22:39 2008
+Subject: [Squeak-ja: 4058] Re: Linux版Scratch1.3の日本語入力について
+In-Reply-To: <490C03BA.2000809@mx2.ttcn.ne.jp>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>
+	<48F09F06.1040806@mx2.ttcn.ne.jp>
+	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>
+	<490B9488.9050106@mx2.ttcn.ne.jp> <uiqr8paba.wl%yoshiki@vpri.org>
+	<490C03BA.2000809@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80811010522m6e85f564w8da5706e62c7905a@mail.gmail.com>
+
+こんにちは、阿部です。
+
+根本的な解決策ではありませんが、他のアプリケーションからのコピー&ペーストではどうでしょう。たぶん、文字入力と同じロジックを通っているような気もするので、駄目なような気もします。
+現時点では1.3のソースコードは公開されていないので、大島さんの書かれているように、基本的にはScratchチームに現象を報告して対応を待つことになります。
+場当たり的な対応としては、イメージの期待するエンコーディングに合わせて、ソースを変更できるVMの方を変えるというアイデアもあるかもしれません。
+いずれにしても、日本語が入力できないことで、Scratchでできることが大きく損なわれることはないと思うので、カリキュラムの方にエネルギーを注いだほうが建設的かもしれません。
+たとえば、川口市メディアセブン/CDCでは英語版(1.2.1)の頃からワークショップをされていました(日本語のメッセージが必要な場合は文字を絵に描いて対応)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From tetha ＠ st.rim.or.jp  Mon Nov  3 05:45:13 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Mon Nov  3 05:45:22 2008
+Subject: [Squeak-ja: 4059] Fwd: Dynabook の素顔：申込み開始しました
+References: <b672abbe0810270556s7db4a335o20cbe2f2d56f3813@mail.gmail.com>
+Message-ID: <268C61F2-C924-44AC-8442-CDB30FA56998@st.rim.or.jp>
+
+こんにちは。
+林　徹也です。
+
+他の勉強会 ML からの転載です。ご了承ください。
+
+ちょっとどたんば(かつ地域限定)になってしまいまし 
+たが、今週の水曜日 11/5(水) に以下のような講演を阿部さん 
+にしていただくことになりました。
+ご興味のある方ふるってご参加ください。
+なお、申し込みは、以下の勉強会のMLに参加して投稿していただく 
+か、
+私 ( tetha@mac.com ) 宛にメールをください。
+
+以上、よろしくお願い申し上げます。
+--
+
+Begin forwarded message:
+
+> 差出人: "Yuichi Hasegawa" <hase@starlight-storm.com>
+> 日時: 2008年10月27日 21:56:59:JST
+> 宛先: fowmember@googlegroups.com
+> 件名: Dynabook の素顔：申込み開始しました
+> 返信先: fowmember@googlegroups.com
+>
+>
+> 皆様
+> こんばんわ。長谷川です。
+>
+> 11/5(水)。「Dynabook の素顔 - コンピュー 
+> タと教育 -」の申し込みを開始します。
+> #申し込み方法は、中程にあります。
+> ダイナブック (Dynabook)
+> とは、東芝のノートパソコンの話ではなく、アラン・ケイが提唱 
+> した、人間の思考を増幅させるための、理想のコンピュータのこ 
+> とです。現在のパソコンで普通にみられる、GUIやマウス， 
+> そしてオブジェクト指向言語もすべて、このダイナブックという 
+> 理想のコンピュータを実現するために生まれてきたと言って良い 
+> でしょう。
+> ダイナブックの話は、これからの若い人達には是非、聞いて欲し 
+> いです。
+>
+> ----------
+> タイトル：Dynabook の素顔 - コンピュータと教育 -
+> 講師：阿部和広さん（http://www.cyber-u.ac.jp/faculty/common/teacher/a 
+> be_kazuhiro.html）
+> 日時：11/5(水) 19:00~20:30
+> 場所：高円寺　フルネストレーニングルーム（http:// 
+> www.fullness.co.jp/mroom/images/map.gif）
+> 参加費：無料
+> 募集人数：30名（先着順）
+> お申し込み方法：uwatari@fullness.co.jp宛に、タイトル 
+> 「勉強会申し込み」でお申し込みください。
+> セミナ終了後に懇親会を予定しております。
+>
+> <メーリングリストへの参加お申し込み>
+> 株式会社フルネスのトレーニングルームを使った無料勉強会のお知らせは、http://g 
+> roups.google.com/group/fowmemberに登録することで、受け取る 
+> ことができます。
+>
+> <今後の予定>
+> ＊11/19 知っ得　納得　Webフレームワーク
+> 　・米林正明さん（株式会社ABBY：http:// 
+> www.abby.co.jp/）
+> ＊11月中旬 Scala入門
+> 　・羽生田栄一さん（株式会社豆蔵：http:// 
+> www.mamezou.com/）
+> 　・x.tokyo主催（http://groups.google.com/group/ 
+> x_tokyo）
+> ＊12月3日 Seasideによるコンポーネント指向のWeb 
+> アプリケーション開発
+> 　・梅澤真史さん（SoftUmeYa：http://softumeya.com/）
+> ----------
+>
+> 以上です。よろしくお願い致します。
+> -- 
+> // 長谷川 裕一
+>
+> --~--~---------~--~----~------------~-------~--~----~
+> このメッセージは、次の Google グループへの参加を申し 
+> 込まれたことを確認す
+> るために送信されました。 Google グループ "FoW!"  
+> グループ。
+> このグループに投稿するには、次の宛先にメールを送信してくださ 
+> い。 fowmember@googlegroups.com
+> このグループから退会するには、次へメールをお送りください。  
+> fowmember+unsubscribe@googlegroups.com
+> その他のオプションについては、次の URL からグループに 
+> アクセスしてくださ
+> い。 http://groups.google.com/group/fowmember?hl=ja
+> -~----------~----~----~----~------~----~------~--~---
+>
+
+--
+林 徹也 Tetsuya HAYASHI
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From yhousako ＠ mx2.ttcn.ne.jp  Mon Nov  3 17:52:10 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Mon Nov  3 17:52:22 2008
+Subject: [Squeak-ja: 4060] Re: Linux版Scratch1.3の日本語入力について
+In-Reply-To: <2d5d52a80811010522m6e85f564w8da5706e62c7905a@mail.gmail.com>
+References: <2d5d52a80809030558j16c8844dva30b169e7defff86@mail.gmail.com>	<48F09F06.1040806@mx2.ttcn.ne.jp>	<2d5d52a80810110645v4d34a16bs88282bcf7d95831d@mail.gmail.com>	<490B9488.9050106@mx2.ttcn.ne.jp>
+	<uiqr8paba.wl%yoshiki@vpri.org>	<490C03BA.2000809@mx2.ttcn.ne.jp>
+	<2d5d52a80811010522m6e85f564w8da5706e62c7905a@mail.gmail.com>
+Message-ID: <490EBBBA.1060802@mx2.ttcn.ne.jp>
+
+寳迫＠風邪を引いてダウンしておりましたです．
+＃完全復活に向けてリハビリ中です．(^_^;;;
+
+Kazuhiro ABE さんは書きました:
+> 根本的な解決策ではありませんが、他のアプリケーションからのコピー&ペーストではどうでしょう。
+
+ダメもとでやってみましたが、あっさりOKでした．Ubuntu8.10上のテキストエ
+ディタで日本語を打ち込み、それをコピペするとスプライトもファイル名なども
+文字化けしませんでした．
+
+SCIM+Anthyという環境で日本語入力をしていますが、他のでやってみるとまた違
+うのかも知れません．
+
+> 日本語が入力できないことで、Scratchでできることが大きく損なわれることはないと思うので、
+(snip)
+
+確かにその通りだと思います．今、この環境を使ってどのような学習活動を行わ
+せようか思案中です．子どもたちの実態を考えますと、大成功か大失敗のどちら
+かになりそうな気がして、かなり頭を悩ませております．
+
+そのうち、ご報告できることがありましたら、また書かせて頂きます．
+よろしくお願い致します．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From inosig ＠ carrot.ocn.ne.jp  Mon Nov  3 23:31:23 2008
+From: inosig ＠ carrot.ocn.ne.jp (inosig@carrot.ocn.ne.jp)
+Date: Mon Nov  3 23:31:26 2008
+Subject: [Squeak-ja: 4061] 阿部先生の講演会参加申し込み
+In-Reply-To: <268C61F2-C924-44AC-8442-CDB30FA56998@st.rim.or.jp>
+References: <b672abbe0810270556s7db4a335o20cbe2f2d56f3813@mail.gmail.com>
+	<268C61F2-C924-44AC-8442-CDB30FA56998@st.rim.or.jp>
+Message-ID: <490F0B3B.5010008@carrot.ocn.ne.jp>
+
+港区の井上<inosig@carrot.ocn.ne.jp>と申します。
+
+阿部先生の講演会もう定員に達してしまったでしょうか。もし空き
+がありましたら受講したいのでよろしくお願いします。
+From tetha ＠ st.rim.or.jp  Tue Nov  4 04:24:59 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Tue Nov  4 04:25:10 2008
+Subject: [Squeak-ja: 4062] Re: 阿部先生の講演会参加申し込み
+In-Reply-To: <490F0B3B.5010008@carrot.ocn.ne.jp>
+References: <b672abbe0810270556s7db4a335o20cbe2f2d56f3813@mail.gmail.com>
+	<268C61F2-C924-44AC-8442-CDB30FA56998@st.rim.or.jp>
+	<490F0B3B.5010008@carrot.ocn.ne.jp>
+Message-ID: <4EFB5031-5DB9-4BD6-8B25-1D959025C4CD@st.rim.or.jp>
+
+井上さん
+はじめまして、林です。
+
+講演／勉強会の件はまだ大丈夫です。
+（こちらこそ連絡遅れてしまい申し訳ありません）
+是非、お越しください(^_^)
+
+なにかご不明な点ありましたらまたご連絡いただければと思います。
+
+以上、よろしくお願い申し上げます
+--
+
+On 2008/11/03, at 23:31, inosig@carrot.ocn.ne.jp wrote:
+
+> 港区の井上<inosig@carrot.ocn.ne.jp>と申します。
+>
+> 阿部先生の講演会もう定員に達してしまったでしょうか。もし空き
+> がありましたら受講したいのでよろしくお願いします。
+>
+>
+
+--
+林 徹也 Tetsuya HAYASHI
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Nov  5 22:08:27 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Nov  5 22:08:46 2008
+Subject: [Squeak-ja: 4063] 第3回Smalltalk勉強会のお知らせ
+Message-ID: <JM200811052208275.881171@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さてさて、京都でもSmalltalk勉強会があったようですが、こちら東京では
+3回目となる11月のSmalltalk勉強会の日程が決まりました。
+
+日時: 2008/11/19(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト:
+ 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」または
+ 「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai3kaismalltalkbenkyoukai
+
+今回はあえて水曜日にしてみました。いつも金曜日は用事があって、という
+方、チャンスですよ。
+
+お気軽に、どしどしお越しください。
+
+---
+[:masashi | ^umezawa]
+From ykoubo2008 ＠ yengawa.com  Thu Nov  6 16:51:06 2008
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Thu Nov  6 16:51:19 2008
+Subject: [Squeak-ja: 4064] Make: Tokyo Meetingへ出展します
+Message-ID: <20081106155317.F2A6.56563FCC@yengawa.com>
+
+横川＠ヱンガワシステムズです。
+
+今週土曜に多摩美で開催されるMake:Tokyo Meeting O2に出展します。
+http://jp.makezine.com/blog/2008/11/make_tokyo_meeting_02_update.html
+
+Gainer IOボードによってSqueakと実世界をつなぐライブラリ「Squeak+Gainer」
+の紹介をします。
+http://lab.yengawa.com:8080/seaside/ypier/Projects/SqueakGainer
+当日はその場でSmalltalkオブジェクトと実世界をつないで、いろいろと遊んで
+みようと思っています。
+プレゼンテーションもやります。
+15:40-16:00　横川耕二（Squeak+Gainer）
+
+ぜひ遊びに来てください。
+
+-- !
+Koji Yokokawa <ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From abee ＠ squeakland.jp  Fri Nov  7 01:48:58 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Nov  7 01:49:27 2008
+Subject: [Squeak-ja: 4065] Re: Make: Tokyo Meetingへ出展します
+In-Reply-To: <20081106155317.F2A6.56563FCC@yengawa.com>
+References: <20081106155317.F2A6.56563FCC@yengawa.com>
+Message-ID: <2d5d52a80811060848w333277a5icbed639713281eb6@mail.gmail.com>
+
+こんにちは、阿部です。
+私もお手伝いに伺います。
+うまくいけば、OLPC XO上で動くSqueak+Gainerもお見せできるかもしれません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/11/06 16:51 Koji Yokokawa <ykoubo2008@yengawa.com>:
+> 横川＠ヱンガワシステムズです。
+>
+> 今週土曜に多摩美で開催されるMake:Tokyo Meeting O2に出展します。
+> http://jp.makezine.com/blog/2008/11/make_tokyo_meeting_02_update.html
+>
+> Gainer IOボードによってSqueakと実世界をつなぐライブラリ「Squeak+Gainer」
+> の紹介をします。
+> http://lab.yengawa.com:8080/seaside/ypier/Projects/SqueakGainer
+> 当日はその場でSmalltalkオブジェクトと実世界をつないで、いろいろと遊んで
+> みようと思っています。
+> プレゼンテーションもやります。
+> 15:40-16:00　横川耕二（Squeak+Gainer）
+>
+> ぜひ遊びに来てください。
+>
+> -- !
+> Koji Yokokawa <ykoubo2008@yengawa.com>
+>    http://www.yengawa.com/
+>    ^self new!
+From tetha ＠ st.rim.or.jp  Wed Nov 12 20:56:53 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Wed Nov 12 20:57:02 2008
+Subject: [Squeak-ja: 4066] Fwd: "Dynabookの素顔"を公開します
+References: <b672abbe0811100618l7a8a1a2dx69e01f68891dde3a@mail.gmail.com>
+Message-ID: <C9D6E605-C855-4A92-9D40-10A4E3559EB8@st.rim.or.jp>
+
+みなさま、こんばんは。林徹也です。
+
+先日行われました勉強会 FoW! の模様を録画したムービーが 
+公開されました。
+以下の URL であります。
+
+http://gallery.me.com/hasegawadanna#100000
+
+今回、
+	遠隔地で無理だったです…；
+	惜しくも逃してしまった…；
+	どたんばでとても間に合わないですよ、もっと早く教えてください…。
+
+といった、みなみなさま。
+どうぞ、お楽しみください。
+
+最後になりましたが、阿部さん、あらためて今回はどうもありがと 
+うございました。
+
+では。
+
+P.S.
+ちなみにアクセスが殺到すると、ちょっと一時的に見れなくなるか 
+もしれません。(^^;;
+--
+
+Begin forwarded message:
+
+> 差出人: "Yuichi Hasegawa" <hase@starlight-storm.com>
+> 日時: 2008年11月10日 23:18:22:JST
+> 宛先: fowmember@googlegroups.com
+> 件名: "Dynabookの素顔"を公開します
+> 返信先: fowmember@googlegroups.com
+>
+>
+> こんばんわ。
+> 長谷川@スタッフです。
+>
+> 先日おこなわれました「Dynabookの素顔」の模様を公開し 
+> ました。
+> 当日来ることのできなかった方、もう一度あの感動を味わいたい 
+> 方、必見です♪
+> http://gallery.me.com/hasegawadanna
+>
+> 公開を快く許可して頂いた講師の阿部さん、ありがとうございました。
+>
+> 以上です。よろしくお願い致します。
+> -- 
+> // 長谷川 裕一
+
+--
+林 徹也 Tetsuya HAYASHI
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From abee ＠ squeakland.jp  Fri Nov 14 16:13:11 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Fri Nov 14 16:13:25 2008
+Subject: [Squeak-ja: 4067] ICJS Event: The One-Laptop-Per-Child project
+Message-ID: <2d5d52a80811132313k1ee4c4b0i77b20daa5c506d97@mail.gmail.com>
+
+こんにちは、阿部です。
+11/19(水)の19:00-21:30に三田のテンプル大学ジャパンキャンパス三田校舎でOLPCについてお話します。
+
+ICJS Event: The One-Laptop-Per-Child project
+http://www.tuj.ac.jp/events/2008/1119.html
+
+タイトルにOLPCと付いていますが、例によってSqueak
+Etoysとそれにまつわる話が多くなると思います。また、恐ろしいことに英語での発表ですが、根性でがんばります。
+残念ながらSmalltalk勉強会と被ってしまったのですが、子供よりの話に興味のある方は、どうぞご参加ください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From umejava ＠ mars.dti.ne.jp  Fri Nov 14 21:31:04 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov 14 21:31:12 2008
+Subject: [Squeak-ja: 4068] 「SeasideへGO!!」の第三回
+Message-ID: <JZ200811142131042.265781@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ちょっと忙しくてアナウンスが遅れてしまいましたが、「Seaside へ GO!!」
+の第三回が掲載されました。
+
+今回はコンポーネントの連携についてです。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/seaside3/index.html
+
+エレガントでかつ高速にWebアプリが作れる感じが伝わればと思っています。
+お楽しみ下さい。
+
+次回はDB接続です。連載に合わせて現在のSeasideJに各種DBを入れた
+SeasideJPlusDBと呼ばれるべきものを作っています。
+
+まだ作っている最中なので、安定した動きは保証できませんが、
+興味のある人はこちらもどうぞ。
+ftp://swikis.ddo.jp/tmp/SeasideJPlusDB081114-sq39.zip
+
+SStoreとOmniBase、Glorpが入っています。DB接続のサンプルなどはまだ全く
+用意できていません。とりあえずMacやらLinuxで立ち上がるかどうかだけ
+でも確認していただけると助かります。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From shortsleeved ＠ mac.com  Sat Nov 15 10:06:13 2008
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Sat Nov 15 10:06:36 2008
+Subject: [Squeak-ja: 4069] Re: 「SeasideへGO!!」の第三回
+In-Reply-To: <JZ200811142131042.265781@mars.dti.ne.jp>
+References: <JZ200811142131042.265781@mars.dti.ne.jp>
+Message-ID: <CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+
+佐藤です。
+
+On 2008/11/14, at 21:31, Masashi Umezawa wrote:
+
+> まだ作っている最中なので、安定した動きは保証できませんが、
+> 興味のある人はこちらもどうぞ。
+> ftp://swikis.ddo.jp/tmp/SeasideJPlusDB081114-sq39.zip
+>
+> SStoreとOmniBase、Glorpが入っています。DB 
+> 接続のサンプルなどはまだ全く
+> 用意できていません。とりあえずMacやらLinuxで立 
+> ち上がるかどうかだけ
+> でも確認していただけると助かります。
+
+
+iMac G5 (PPC) + OS X 10.5.4 の環境で起動できました。
+次回の「SeasideへGO!!」も楽しみにしています。
+
+以上です。
+--
+shortsleeved@mac.com
+
+
+
+From mha03030 ＠ nifty.com  Tue Nov 18 00:03:11 2008
+From: mha03030 ＠ nifty.com (koike)
+Date: Tue Nov 18 00:03:24 2008
+Subject: [Squeak-ja: 4070] ScratchでNECのロボットPaPeRoをコントロール
+In-Reply-To: <CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+References: <JZ200811142131042.265781@mars.dti.ne.jp>
+	<CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+Message-ID: <17E17791-C3A6-4AFA-AE9D-EFCABD91875E@nifty.com>
+
+蔵工業大学の小池です。
+
+ScratchでNECのロボットPaPeRoが
+コントロールできるようになったそうです。
+
+
+［iEXPO2008］“3歳児とペア・プログラミン 
+グ”，NECがロボットによるビジュアル開発をデモ
+http://itpro.nikkeibp.co.jp/article/NEWS/20081112/319115/
+
+
+小池研究室は、Scratchではありませんが、SqueakとPaPeRo 
+を
+それぞれ使用して研究活動をしているので
+興味深いです。
+
+ということは、原理的には、SqueakでPaPeRoをコント 
+ロールもできるのでしょうか。
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）Ph.D
+   武蔵工業大学　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.musashi-tech.ac.jp/~koike/
+（研究室ブログ発信中！）
+2009年4月から東京都市大学に名称変更します！
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+
+From abee ＠ squeakland.jp  Tue Nov 18 01:26:47 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Nov 18 01:26:58 2008
+Subject: [Squeak-ja: 4071] Re: ScratchでNECのロボットPaPeRoをコントロール
+In-Reply-To: <17E17791-C3A6-4AFA-AE9D-EFCABD91875E@nifty.com>
+References: <JZ200811142131042.265781@mars.dti.ne.jp>
+	<CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+	<17E17791-C3A6-4AFA-AE9D-EFCABD91875E@nifty.com>
+Message-ID: <2d5d52a80811170826r375003eeicdd4456ac6dcd98c@mail.gmail.com>
+
+こんにちは、阿部です。
+
+ScratchとPaPeRoをつなぐ研究は前からやっていて、1月のメディアラボ研究発表会でも公開されていたようです。
+http://www.atmarkit.co.jp/news/200801/17/mit.html
+http://ascii.jp/elem/000/000/101/101017/
+
+画面を見る限り、このときは1.3のベータを使っていますが、今回は1.3ですね。
+また、11/8に開催された高山サイエンスタウンフェスティバルでは、一般の子供を対象にしたワークショップも行われたようです。
+http://www.science-plaza.or.jp/topics/fes_web/index.html
+
+Squeakからコントロールできるかどうかは、APIやプロトコルを教えてもらえるかどうかによります。
+NECの方に聞いてみるとよいのかもしれません。私も興味があります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/11/18 0:00 koike <mha03030@nifty.com>:
+> 武蔵工業大学の小池です。
+>
+> ScratchでNECのロボットPaPeRoが
+> コントロールできるようになったそうです。
+>
+>
+> ［iEXPO2008］"3歳児とペア・プログラミング"，NECがロボットによるビジュアル開発をデモ
+> http://itpro.nikkeibp.co.jp/article/NEWS/20081112/319115/
+>
+>
+> 小池研究室は、Scratchではありませんが、SqueakとPaPeRoを
+> それぞれ使用して研究活動をしているので
+> 興味深いです。
+>
+> ということは、原理的には、SqueakでPaPeRoをコントロールもできるのでしょうか。
+From ykoubo2008 ＠ yengawa.com  Tue Nov 18 02:15:31 2008
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Tue Nov 18 02:15:43 2008
+Subject: [Squeak-ja: 4072] Re: ScratchでNECのロボットPaPeRoをコントロール
+In-Reply-To: <17E17791-C3A6-4AFA-AE9D-EFCABD91875E@nifty.com>
+References: <CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+	<17E17791-C3A6-4AFA-AE9D-EFCABD91875E@nifty.com>
+Message-ID: <20081118013317.03AC.56563FCC@yengawa.com>
+
+横川です。
+そういえば先日PaPeRoの開発環境を作るのを手伝ったとき「PaPeRoをSqueakで操っ
+てみたいですね」なんて話してましたね。
+
+> ということは、原理的には、SqueakでPaPeRoをコント 
+> ロールもできるのでしょうか。
+
+できると思います。
+PaPeRoはTCP/IPを介して通信してましたから、その上のAPIがわかればSqueakか
+らコントロールできます。
+
+写真を見ると前面中央センサーの値も取れるようですね。とすると、話をさせる
+ような単にCGIでコマンドを投げるだけのものではないかもしれません。
+
+NECの中の人から仕組みを教えてもらうことはできないでしょうか?
+
+
+On Tue, 18 Nov 2008 00:03:11 +0900
+koike <mha03030@nifty.com> wrote:
+
+> 蔵工業大学の小池です。
+> 
+> ScratchでNECのロボットPaPeRoが
+> コントロールできるようになったそうです。
+> 
+> 
+> ［iEXPO2008］“3歳児とペア・プログラミン 
+> グ”，NECがロボットによるビジュアル開発をデモ
+> http://itpro.nikkeibp.co.jp/article/NEWS/20081112/319115/
+> 
+> 
+> 小池研究室は、Scratchではありませんが、SqueakとPaPeRo 
+> を
+> それぞれ使用して研究活動をしているので
+> 興味深いです。
+> 
+> ということは、原理的には、SqueakでPaPeRoをコント 
+> ロールもできるのでしょうか。
+> _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+>    小池星多（こいけせいた）Ph.D
+>    武蔵工業大学　環境情報学部　教職課程
+>    情報デザイン研究室
+>    E-mail: mha03030@nifty.com
+>    Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+> Tel  045-910-2912(直通）
+>    http://www.yc.musashi-tech.ac.jp/~koike/
+> （研究室ブログ発信中！）
+> 2009年4月から東京都市大学に名称変更します！
+>    _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+> 
+> 
+> 
+
+-- !
+Koji Yokokawa <ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From mha03030 ＠ nifty.com  Tue Nov 18 14:18:16 2008
+From: mha03030 ＠ nifty.com (koike)
+Date: Tue Nov 18 14:18:38 2008
+Subject: [Squeak-ja: 4073] Re: ScratchでNECのロボットPaPeRoをコントロール
+In-Reply-To: <2d5d52a80811170826r375003eeicdd4456ac6dcd98c@mail.gmail.com>
+References: <JZ200811142131042.265781@mars.dti.ne.jp>
+	<CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+	<17E17791-C3A6-4AFA-AE9D-EFCABD91875E@nifty.com>
+	<2d5d52a80811170826r375003eeicdd4456ac6dcd98c@mail.gmail.com>
+Message-ID: <9599F2D6-2B61-472A-97FD-AF1D40330F8C@nifty.com>
+
+阿部さん
+武蔵工業大学の小池です。
+
+ありがとうございます。
+
+>
+> ［iEXPO2008］"3歳児とペア・プログラミン 
+> グ"，NECがロボットによるビジュアル開発をデモ
+> http://itpro.nikkeibp.co.jp/article/NEWS/20081112/319115/
+
+のシステムをさわったり、手に入れる機会もあると思いますので、
+そのときに、APIのことなども聞いてみます。
+
+
+
+
+
+On 2008/11/18, at 1:26, Kazuhiro ABE wrote:
+
+こんにちは、阿部です。
+
+ScratchとPaPeRoをつなぐ研究は前からやっていて、1 
+月のメディアラボ研究発表会でも公開されていたようです。
+http://www.atmarkit.co.jp/news/200801/17/mit.html
+http://ascii.jp/elem/000/000/101/101017/
+
+画面を見る限り、このときは1.3のベータを使っていますが、今回は 
+1.3ですね。
+また、11/8に開催された高山サイエンスタウンフェスティバ 
+ルでは、一般の子供を対象にしたワークショップも行われたようです。
+http://www.science-plaza.or.jp/topics/fes_web/index.html
+
+Squeakからコントロールできるかどうかは、APIやプロトコル 
+を教えてもらえるかどうかによります。
+NECの方に聞いてみるとよいのかもしれません。私も興味があります。
+
+//abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/11/18 0:00 koike <mha03030@nifty.com>:
+> 武蔵工業大学の小池です。
+>
+> ScratchでNECのロボットPaPeRoが
+> コントロールできるようになったそうです。
+>
+>
+> ［iEXPO2008］"3歳児とペア・プログラミン 
+> グ"，NECがロボットによるビジュアル開発をデモ
+> http://itpro.nikkeibp.co.jp/article/NEWS/20081112/319115/
+>
+>
+> 小池研究室は、Scratchではありませんが、Squeakと 
+> PaPeRoを
+> それぞれ使用して研究活動をしているので
+> 興味深いです。
+>
+> ということは、原理的には、SqueakでPaPeRoをコン 
+> トロールもできるのでしょうか。
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）Ph.D
+   武蔵工業大学　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.musashi-tech.ac.jp/~koike/
+（研究室ブログ発信中！）
+2009年4月から東京都市大学に名称変更します！
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+
+From mha03030 ＠ nifty.com  Tue Nov 18 14:20:34 2008
+From: mha03030 ＠ nifty.com (koike)
+Date: Tue Nov 18 14:20:56 2008
+Subject: [Squeak-ja: 4074] Re: ScratchでNECのロボットPaPeRoをコントロール
+In-Reply-To: <20081118013317.03AC.56563FCC@yengawa.com>
+References: <CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+	<17E17791-C3A6-4AFA-AE9D-EFCABD91875E@nifty.com>
+	<20081118013317.03AC.56563FCC@yengawa.com>
+Message-ID: <0C9CF009-C8AA-41B1-9C19-D3C350938683@nifty.com>
+
+横川さん
+小池です。
+
+ありがとうございます。
+
+PaPeRoの開発環境の選択肢が増えればいいと思いました。
+
+機会があれば、このシステムの仕組みについて
+メーカーに聞いてみます。
+
+
+
+
+On 2008/11/18, at 2:15, Koji Yokokawa wrote:
+
+横川です。
+そういえば先日PaPeRoの開発環境を作るのを手伝ったとき「PaPeRo 
+をSqueakで操っ
+てみたいですね」なんて話してましたね。
+
+> ということは、原理的には、SqueakでPaPeRoをコント
+> ロールもできるのでしょうか。
+
+できると思います。
+PaPeRoはTCP/IPを介して通信してましたから、その上の 
+APIがわかればSqueakか
+らコントロールできます。
+
+写真を見ると前面中央センサーの値も取れるようですね。とする 
+と、話をさせる
+ような単にCGIでコマンドを投げるだけのものではないかもし 
+れません。
+
+NECの中の人から仕組みを教えてもらうことはできないでしょうか?
+
+
+On Tue, 18 Nov 2008 00:03:11 +0900
+koike <mha03030@nifty.com> wrote:
+
+> 蔵工業大学の小池です。
+>
+> ScratchでNECのロボットPaPeRoが
+> コントロールできるようになったそうです。
+>
+>
+> ［iEXPO2008］“3歳児とペア・プログラミン
+> グ”，NECがロボットによるビジュアル開発をデモ
+> http://itpro.nikkeibp.co.jp/article/NEWS/20081112/319115/
+>
+>
+> 小池研究室は、Scratchではありませんが、Squeakと 
+> PaPeRo
+> を
+> それぞれ使用して研究活動をしているので
+> 興味深いです。
+>
+> ということは、原理的には、SqueakでPaPeRoをコント
+> ロールもできるのでしょうか。
+> _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+>   小池星多（こいけせいた）Ph.D
+>   武蔵工業大学　環境情報学部　教職課程
+>   情報デザイン研究室
+>   E-mail: mha03030@nifty.com
+>   Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+> Tel  045-910-2912(直通）
+>   http://www.yc.musashi-tech.ac.jp/~koike/
+> （研究室ブログ発信中！）
+> 2009年4月から東京都市大学に名称変更します！
+>   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+>
+>
+>
+
+-- !
+Koji Yokokawa <ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   小池星多（こいけせいた）Ph.D
+   武蔵工業大学　環境情報学部　教職課程
+   情報デザイン研究室
+   E-mail: mha03030@nifty.com
+   Address:   〒224-8551　神奈川県横浜市都筑区牛久保西3-3-1
+Tel  045-910-2912(直通）
+   http://www.yc.musashi-tech.ac.jp/~koike/
+（研究室ブログ発信中！）
+2009年4月から東京都市大学に名称変更します！
+   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+
+From newapplesho ＠ gmail.com  Tue Nov 18 21:46:59 2008
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Tue Nov 18 21:47:14 2008
+Subject: [Squeak-ja: 4075] XMLの処理パッケージについて
+In-Reply-To: <CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+References: <JZ200811142131042.265781@mars.dti.ne.jp>
+	<CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+Message-ID: <9B90540B-6D2E-47DD-9ABD-4E3BE3D3FFB5@gmail.com>
+
+吉田 翔です．
+Squeak 3.9でXMLの処理をさせたいと思って，SqueakMapや 
+SqueakSourceで
+パッケージを探してみましたが．どれがよいのか分かりませんでした．
+
+おすすめなパッケージがありましたら，教えていただけないでしょうか．
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Nov 18 22:35:44 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Nov 18 22:35:53 2008
+Subject: [Squeak-ja: 4076] Re: XMLの処理パッケージについて
+In-Reply-To: <9B90540B-6D2E-47DD-9ABD-4E3BE3D3FFB5@gmail.com>
+References: <JZ200811142131042.265781@mars.dti.ne.jp>
+	<CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+	<9B90540B-6D2E-47DD-9ABD-4E3BE3D3FFB5@gmail.com>
+Message-ID: <JW200811182235445.5841234@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+基本はYAXOの最新のもので良いと思います。
+http://www.squeaksource.com/XMLSupport.html
+
+ただし、安定度からいうと、SIXXのSAR内に含まれるバージョンの
+YAXOを使うのが安全かもしれません。SIXXのリリースの際にいろいろと
+テストされていますので。
+http://map.squeak.org/package/60663648-6b83-4b61-9f06-e58c33565d75/autoversion/10
+
+ではでは。
+
+Sho Yoshida <newapplesho@gmail.com> wrote:
+> 吉田 翔です．
+> Squeak 3.9でXMLの処理をさせたいと思って，SqueakMapや 
+> SqueakSourceで
+> パッケージを探してみましたが．どれがよいのか分かりませんでした．
+> 
+> おすすめなパッケージがありましたら，教えていただけないでしょうか．
+> 
+
+---
+[:masashi | ^umezawa]
+From newapplesho ＠ gmail.com  Wed Nov 19 06:30:29 2008
+From: newapplesho ＠ gmail.com (Sho Yoshida)
+Date: Wed Nov 19 06:30:45 2008
+Subject: [Squeak-ja: 4077] Re: XMLの処理パッケージについて
+In-Reply-To: <JW200811182235445.5841234@mars.dti.ne.jp>
+References: <JZ200811142131042.265781@mars.dti.ne.jp>
+	<CCAC2FD8-2E42-4C67-8EF9-3CB9926ACFA1@mac.com>
+	<9B90540B-6D2E-47DD-9ABD-4E3BE3D3FFB5@gmail.com>
+	<JW200811182235445.5841234@mars.dti.ne.jp>
+Message-ID: <798881F7-BD14-4315-A1C6-4770FBA20CE8@gmail.com>
+
+吉田です．
+
+梅澤さん，ありがとうございます．
+SIXXを使いたいと思います．
+
+YAXOはsqueaksourceだとXMLSupportというタイトルに 
+代わっていたんですね．
+
+
+On 2008/11/18, at 22:35, Masashi Umezawa wrote:
+
+> こんにちは
+> 梅澤です。
+>
+> 基本はYAXOの最新のもので良いと思います。
+> http://www.squeaksource.com/XMLSupport.html
+>
+> ただし、安定度からいうと、SIXXのSAR内に含まれる 
+> バージョンの
+> YAXOを使うのが安全かもしれません。SIXXのリリースの際 
+> にいろいろと
+> テストされていますので。
+> http://map.squeak.org/package/60663648-6b83-4b61-9f06-e58c33565d75/autoversion/10
+>
+> ではでは。
+
+- - - -
+Sho Yoshida
+newapplesho@gmail.com
+
+
+From umejava ＠ mars.dti.ne.jp  Fri Nov 21 23:50:37 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov 21 23:50:50 2008
+Subject: [Squeak-ja: 4078] SeasideJOnePlusDB
+Message-ID: <JN200811212350374.5019437@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+まだテストが不十分な気もしますが、こういうものはフィードバックを
+受けてなんぼだと思いますので、アナウンスします。
+
+SeasideJOnePlusDB
+ftp://swikis.ddo.jp/SeasideJ/one/SeasideJOne-081116-plusDB.zip
+
+以下ReadMeより。
+---
+Seaside日本語パッチ版に、データベース関連のパッケージを追加したものです。
+
+ベース:
+SeasideJ 2008/09/08版
+
+追加されたDBパッケージ:
+-SStore
++南谷千城さんの手による超簡易なデータベースもどきです。
++http://squeaksource.blueplane.jp/SStore.html
+
+-OmniBase
++高速で軽量なOODBです。日本語化パッチ(OmniBaseJ)、ファサード(DBAccessor)が加わっています。
++http://www.gorisek.com/WikiDoc/WikiPage (本家)
++http://swikis.ddo.jp/umejava/24 (OmniBaseJ)
+
+-Glorp
++Smalltalk界では定番のObject-Relational Mapperです。各種DBにつながりますが、Postgres用のコネクタを入れておきました。Unicodeパッチ(GlorpI18N)も当たっています。
++http://www.glorp.org
+---
+
+サンプルはまだ入っていません。次回の更新時に同梱する計画です。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Nov 22 14:15:40 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Sat Nov 22 14:15:50 2008
+Subject: [Squeak-ja: 4079] Linux版Scratch1.3の楽器音について
+Message-ID: <4927957C.40002@mx2.ttcn.ne.jp>
+
+宝迫＠所沢市立小学校教員です．
+
+毎度お世話になっております．m(_ _)m
+
+下記のサイトでLinux版のScratch1.3のインストーラを見つけて使ってみました．
+http://www.notesmine.com/scratch_installer
+
+Win版のScratchを使わなくて良くなった分、少し手間がかからなくなりました
+が、それでもXOのPluginが必要でした．（顛末は↓）
+http://4oc.blogspot.com/2008/11/linuxscratch13.html
+
+さて本題ですが、このところ、KNOPPIXでScratchを動かす実験をしているのです
+が、「楽器音が鳴らない」という現象に遭遇してしまい、頭を悩ませております．
+
+「ニャー」を鳴らすことはできますし、スプライトの「音」タグから
+media/sounds内の音のファイルを読み込んで鳴らすこともできます．しかし、
+「○の音符を○拍鳴らす」や「○のドラムを○拍鳴らす」だと音が出ません．
+
+同じことをMacでやってみると、問題なく音が鳴ります．聞こえてくる音に聞き
+覚えがあるので、もしかすると、Scratchからシステム標準のMIDI音源をコント
+ロールして鳴らしているのではないかと思った次第です．
+
+この理解に間違いがないのだとすると、Linuxで楽器音を鳴らすためには、MIDI
+音源の導入からやらないとダメなのだろうと考えています．
+＃実は、別の需要でMIDI音源の導入に取り組みましたが、挫折をしたままになっ
+ております．orz
+
+これまでの私の理解の中に、「それは違う」ということがありましたらご指摘頂
+ければ幸いです．また、Linux版のScratchで楽器音を鳴らすための良いアイデア
+などがございましたら、アドバイス頂けるとありがたいです．お世話になってば
+かりで恐縮ですが、よろしくお願い致します．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From umejava ＠ mars.dti.ne.jp  Mon Nov 24 21:26:08 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Nov 24 21:26:22 2008
+Subject: [Squeak-ja: 4080] 第4回Smalltalk勉強会の発表者を募集しています
+Message-ID: <JZ200811242126088.7312484@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+第4回Smalltalk勉強会の日時が決まりました。
+日時: 2008/12/19(金) 18:30-21:30 (3時間程度)
+場所: 株式会社豆蔵
+
+今回は年末スペシャルと銘打ち、いつもより広めの会場でセミナー+LT大会を
+予定しています。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+
+特に「レストアSmalltalk大集合」で、我こそはという方、ご自慢のSmalltalk
+持参でぜひご参戦いただければと思います。
+
+皆でSmalltalkを盛り上げていきましょう。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From abee ＠ squeakland.jp  Tue Nov 25 02:26:18 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Nov 25 02:26:29 2008
+Subject: [Squeak-ja: 4081] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <4927957C.40002@mx2.ttcn.ne.jp>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+
+こんにちは、阿部です。
+今の段階では、OLPC XOも含めてLinux版では楽器の音は鳴らないようです。
+大島さんがJohnさんに聞いてくれているようなので、もしかしたらなにか分かるかもしれません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/11/22 14:15 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> 宝迫＠所沢市立小学校教員です．
+>
+> 毎度お世話になっております．m(_ _)m
+>
+> 下記のサイトでLinux版のScratch1.3のインストーラを見つけて使ってみました．
+> http://www.notesmine.com/scratch_installer
+>
+> Win版のScratchを使わなくて良くなった分、少し手間がかからなくなりました
+> が、それでもXOのPluginが必要でした．（顛末は↓）
+> http://4oc.blogspot.com/2008/11/linuxscratch13.html
+>
+> さて本題ですが、このところ、KNOPPIXでScratchを動かす実験をしているのです
+> が、「楽器音が鳴らない」という現象に遭遇してしまい、頭を悩ませております．
+>
+> 「ニャー」を鳴らすことはできますし、スプライトの「音」タグから
+> media/sounds内の音のファイルを読み込んで鳴らすこともできます．しかし、
+> 「○の音符を○拍鳴らす」や「○のドラムを○拍鳴らす」だと音が出ません．
+>
+> 同じことをMacでやってみると、問題なく音が鳴ります．聞こえてくる音に聞き
+> 覚えがあるので、もしかすると、Scratchからシステム標準のMIDI音源をコント
+> ロールして鳴らしているのではないかと思った次第です．
+>
+> この理解に間違いがないのだとすると、Linuxで楽器音を鳴らすためには、MIDI
+> 音源の導入からやらないとダメなのだろうと考えています．
+> ＃実は、別の需要でMIDI音源の導入に取り組みましたが、挫折をしたままになっ
+> ております．orz
+>
+> これまでの私の理解の中に、「それは違う」ということがありましたらご指摘頂
+> ければ幸いです．また、Linux版のScratchで楽器音を鳴らすための良いアイデア
+> などがございましたら、アドバイス頂けるとありがたいです．お世話になってば
+> かりで恐縮ですが、よろしくお願い致します．
+>
+> ------------------------------------------------------------------
+> 寳迫　芳人：yhousako@gmail.com
+> みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+> 指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+> 全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+> つれづれなるままに…：http://4oc.blogspot.com/
+From yoshiki ＠ vpri.org  Tue Nov 25 02:53:39 2008
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Tue Nov 25 02:54:18 2008
+Subject: [Squeak-ja: 4082] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+Message-ID: <uljv9au3g.wl%yoshiki@vpri.org>
+
+At Tue, 25 Nov 2008 02:26:18 +0900,
+Kazuhiro ABE wrote:
+> 
+> こんにちは、阿部です。
+> 今の段階では、OLPC XOも含めてLinux版では楽器の音は鳴らないようです。
+> 大島さんがJohnさんに聞いてくれているようなので、もしかしたらなにか分かるかもしれません。
+
+  Johnからの話では、Scratchは確かに外部MIDIを要求しているが、Timidity
+などがないとLinuxはサポートしていないし、Squeak側のprimitiveもそれらを
+使うようになっていないということでした。SqueakはSqueak内でMIDIから波形
+合成することもできるのですが、楽器の種類が少なくて何十とはサポートでき
+ないため問題であるということでした。将来的には楽器の種類を減らしてもよ
+いだろうとは言っていましたが。
+
+  というわけで、ピアノとかいったときにピアノの音がしなくてもよければ内
+部MIDIを使うように変えるか(コードをどこか1行変更しなくてはいけませんが)
+sound pluginに新しいコードを追加する必要があるかと思います。
+
+-- Yoshiki
+
+From abee ＠ squeakland.jp  Tue Nov 25 16:35:20 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Tue Nov 25 16:35:31 2008
+Subject: [Squeak-ja: 4083] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <uljv9au3g.wl%yoshiki@vpri.org>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+	<uljv9au3g.wl%yoshiki@vpri.org>
+Message-ID: <2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+
+こんにちは、阿部です。
+
+1.2.1のコードをチラ見してみました。
+Squeak組み込みのソフトシンセであるScorePlayerはSimpleMIDIPortのインスタンスをhas-aしており、ポートを切り替えると演奏の処理をデリゲートするようになっているようです。
+対するScratchNotePlayerは、演奏する際に出力先がSimpleMIDIPortのインスタンスであることを期待しているので(playOn:,
+drumOn:)、もしScorePlayerを使うなら、それがSimpleMIDIPortのように見えるラッパを書くか、条件分岐で切り替えることになりそうです。
+1行では済まなさそうですが、どのくらいのニーズがあるでしょうか。また、いずれにしてもソースをいじれない1.3には即対応はできません(1.2.1用に作ったものを提案することはできる)。
+組み込みシンセサイザの音がどのくらいしょぼいかは普通のSqueakに適当なMIDIファイルをドロップしてScorePlayerMorphを開くとわかります(左上の<>メニューでポートを切り替え可能)。
+
+2008/11/25 2:53 Yoshiki Ohshima <yoshiki@vpri.org>:
+>  というわけで、ピアノとかいったときにピアノの音がしなくてもよければ内
+> 部MIDIを使うように変えるか(コードをどこか1行変更しなくてはいけませんが)
+> sound pluginに新しいコードを追加する必要があるかと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From tetha ＠ st.rim.or.jp  Wed Nov 26 12:48:09 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Wed Nov 26 12:48:25 2008
+Subject: [Squeak-ja: 4084] 12/3 Seaside セミナーのお知らせ (Was: Fwd: Scala入門の募集開始です
+Message-ID: <b8c2540c0811251948v51aea171x36cb08916cef53dc@mail.gmail.com>
+
+マルチポスト失礼いたします。
+林徹也です。
+
+先日の阿部さんによるDynabookのセミナーに続きまして FoW勉強会にて梅澤さんによる
+
+ "Seasideによるコンポーネント指向のWebアプリケーション開発"
+
+の講演が行われます。
+みなさまお誘い合わせの上、ふるってご参加ください。
+
+日時： 2008/12/03 19:00
+場所： フルネス 6F
+
+申し込みは引用元メールの連絡先まで、もしくは私 ( tetha@mac.com )までご連絡ください。
+なおこの申し込み手続きは人数確認の都合のようで、特に受講証や返信などはなされてないということです。
+
+以上、よろしくお願い申しあげます。
+
+P.S.
+アナウンスが遅れ気味なので引用元は本日の分の案内になってます。あしからず(^^;;
+
+--
+
+---------- Forwarded message ----------
+From: Yuichi Hasegawa <hase@starlight-storm.com>
+Date: Thu, 20 Nov 2008 23:43:01 +0900
+Subject: Scala入門の募集開始です
+To: fowmember@googlegroups.com
+
+
+こんばんわ。
+長谷川です。
+
+勉強会の受講募集を開始します。
+お申込み先：uwatari@fullness.co.jp
+
+#お申し込み後、受講受付のメールは発送しておりません。
+#なお、当日は混雑が予想されるため、受講をお断りする場合も御座います。ご了承ください。
+
+----------
+x.tokyo主催（http://groups.google.com/group/x_tokyo）
+
+タイトル:  Scala入門
+講師：羽生田栄一さん（株式会社豆蔵：http://www.mamezou.com/）
+日時：11/26(水) 19:00~20:30
+場所：高円寺　フルネストレーニングルーム（http://www.fullness.co.jp/mroom/images/map.gif）
+参加費：無料
+募集人数：30名（先着順）
+セミナ終了後に懇親会を予定しております。
+
+<今後の予定>
+＊12月3日 Seasideによるコンポーネント指向のWebアプリケーション開発
+・梅澤真史さん（SoftUmeYa：http://softumeya.com/）
+＊12月中旬 知っ得 納得 Webフレームワーク（SpringMVC編かな？）
+----------
+
+-- 
+// 長谷川 裕一
+
+--~--~---------~--~----~------------~-------~--~----~
+このメッセージは、次の Google グループへの参加を申し込まれたことを確認す
+るために送信されました。 Google グループ "FoW!" グループ。
+ このグループに投稿するには、次の宛先にメールを送信してください。 fowmember@googlegroups.com
+ このグループから退会するには、次へメールをお送りください。 fowmember+unsubscribe@googlegroups.com
+ その他のオプションについては、次の URL からグループにアクセスしてくださ
+い。 http://groups.google.com/group/fowmember?hl=ja
+-~----------~----~----~----~------~----~------~--~---
+From yhousako ＠ mx2.ttcn.ne.jp  Wed Nov 26 22:19:11 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Wed Nov 26 22:19:28 2008
+Subject: [Squeak-ja: 4085] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>	<uljv9au3g.wl%yoshiki@vpri.org>
+	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+Message-ID: <492D4CCF.5040708@mx2.ttcn.ne.jp>
+
+阿部様
+
+宝迫です．面倒なことに突き合わせてしまって申し訳ありません．m(_ _)m
+以下、インラインにてお返事をさせて頂きます．
+
+Kazuhiro ABE さんは書きました:
+> Squeak組み込みのソフトシンセであるScorePlayerはSimpleMIDIPortのインスタンスをhas-aしており、
+(snip)
+
+Squeakには、ソフトシンセが組み込まれていたのですね．これがScratchで使え
+ると良いのですけど、そうするためには、ソースをかなりいじらないといけない
+ということはわかりました．
+
+> 1行では済まなさそうですが、どのくらいのニーズがあるでしょうか。
+
+そもそも、LinuxでScratchを使おう（実験とか、趣味とかというレベルではな
+く、学校の授業などで実際に使うという意味）としている方がどのくらいいるか
+ということを考えると、それほど多くなさそうです．ましてや、Picoボードとの
+組み合わせで、「楽器を作ろう」などということを考えているのは、さらに少数
+派ではないかと自覚しております．
+
+しかしながら、このことが教育現場におけるこれからの情報機器の活用に示唆を
+与えるものになるなら、そして、新しい道筋を開くものになるなら、是非成功さ
+せたいと思っています．
+
+> いずれにしてもソースをいじれない1.3には即対応はできません
+
+了解しました．すぐに対応できないことがわかりましたので、どのような授業に
+するかという根本的なところも見直しながら、ScratchとPicoボードを使った授
+業を再考していきたいと思います．
+
+何かご報告できることがありましたら、またお知らせ致します．たびたび、お手
+を煩わせてしまい、申し訳ありませんでした．ありがとうございました．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+-- 
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee ＠ squeakland.jp  Wed Nov 26 22:55:08 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Wed Nov 26 22:55:18 2008
+Subject: [Squeak-ja: 4086] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <492D4CCF.5040708@mx2.ttcn.ne.jp>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+	<uljv9au3g.wl%yoshiki@vpri.org>
+	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+	<492D4CCF.5040708@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80811260555q4561e1f9m101c02887ab23e07@mail.gmail.com>
+
+こんにちは、阿部です。
+そういうことでしたら、あらかじめ複数の音色と音階の音をサンプリングしておいて鳴らすのはいかがでしょうか(「音」の「録音」や「読み込み」)。それぞれに名前を付けてリスト(配列)に入れればスクリプトからこれらの音を制御できます。Scratchの「鳴らす」も結局は決められた音色と音階の音しか出せないので、意味的にはほぼ等価になります(準備は面倒ですが)。
+Squeakであれば、手間と引き換えに、音の合成も含めてほぼなんでもできるといってよいくらいの自由度がありますが、Scratchの場合は洗練と単純さがある反面、可能なことが制限されています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+2008/11/26 22:19 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> そもそも、LinuxでScratchを使おう（実験とか、趣味とかというレベルではな
+> く、学校の授業などで実際に使うという意味）としている方がどのくらいいるか
+> ということを考えると、それほど多くなさそうです．ましてや、Picoボードとの
+> 組み合わせで、「楽器を作ろう」などということを考えているのは、さらに少数
+> 派ではないかと自覚しております．
+>
+> しかしながら、このことが教育現場におけるこれからの情報機器の活用に示唆を
+> 与えるものになるなら、そして、新しい道筋を開くものになるなら、是非成功さ
+> せたいと思っています．
+>
+>> いずれにしてもソースをいじれない1.3には即対応はできません
+>
+> 了解しました．すぐに対応できないことがわかりましたので、どのような授業に
+> するかという根本的なところも見直しながら、ScratchとPicoボードを使った授
+> 業を再考していきたいと思います．
+From yhousako ＠ mx2.ttcn.ne.jp  Thu Nov 27 03:32:44 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Thu Nov 27 03:32:59 2008
+Subject: [Squeak-ja: 4087] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <2d5d52a80811260555q4561e1f9m101c02887ab23e07@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>	<uljv9au3g.wl%yoshiki@vpri.org>	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>	<492D4CCF.5040708@mx2.ttcn.ne.jp>
+	<2d5d52a80811260555q4561e1f9m101c02887ab23e07@mail.gmail.com>
+Message-ID: <492D964C.30808@mx2.ttcn.ne.jp>
+
+宝迫です．
+＃同時進行で、Win版のScratchをWineで動かす方法についても試しております．
+
+Kazuhiro ABE さんは書きました:
+> こんにちは、阿部です。
+> そういうことでしたら、あらかじめ複数の音色と音階の音をサンプリングしておいて
+> 鳴らすのはいかがでしょうか(「音」の「録音」や「読み込み」)。
+
+はい．これも考えております．授業の時間が限られているので、どのように授業
+を組み立てるか詰めの作業が必要なのですが、対象が小学生なので、音を取り込
+むところから子どもたちにやらせてみても面白いのではないかと思っています．
+
+音の出る楽器や空き缶やビンなどを用意しておいて（あるいは予め用意させてお
+いて）、マイクを使ってScratchで録音し、それをPicoボードで制御しながら合
+奏してみるなんていうことを考えています．
+
+その際、予めサンプルとしていくつかの音を録音しておいて、子どもたちに使わ
+せるということも考えています．
+
+いずれにしても、できるだけシンプルで、気軽にできるような方法を考えたいと
+思っています．
+
+明日（既に今日）、別の研究の研究授業も控えておりますので、この辺で失礼を
+させて頂きます．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From yhousako ＠ mx2.ttcn.ne.jp  Thu Nov 27 03:49:27 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Thu Nov 27 03:49:38 2008
+Subject: [Squeak-ja: 4088] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <uljv9au3g.wl%yoshiki@vpri.org>
+References: <4927957C.40002@mx2.ttcn.ne.jp>	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+	<uljv9au3g.wl%yoshiki@vpri.org>
+Message-ID: <492D9A37.1060300@mx2.ttcn.ne.jp>
+
+宝迫です．
+
+今頃気づいたのですが、[Squeak-ja: 4082] と[Squeak-ja: 4083]の間にメール
+を送ったつもりが、送信用のメールアドレスを間違えて送り損ねていたようで
+す．m(_ _)m 改めて送信させて頂きます．
+
+----------------------------------------------------------
+
+阿部様、大島様、皆様
+
+宝迫です．お世話になっております．お休みのところ遅くまで対応して頂きあり
+がとうございます．（深謝）
+
+以下、まとめレスにて失礼させて頂きます．
+
+Yoshiki Ohshima さんは書きました:
+> At Tue, 25 Nov 2008 02:26:18 +0900,
+> Kazuhiro ABE wrote:
+>> こんにちは、阿部です。
+>> 今の段階では、OLPC XOも含めてLinux版では楽器の音は鳴らないようです。
+>> 大島さんがJohnさんに聞いてくれているようなので、もしかしたらなにか分かるかもしれません。
+> 
+>   Johnからの話では、Scratchは確かに外部MIDIを要求しているが、Timidity
+> などがないとLinuxはサポートしていないし、Squeak側のprimitiveもそれらを
+> 使うようになっていないということでした。
+
+だとすると、LinuxでGM、GSなどに対応したMIDI音源を用意できたとしても、
+Scratchからはコントロールできないことになりますね．残念です．
+
+> SqueakはSqueak内でMIDIから波形合成することもできるのですが、楽器の種類
+> が少なくて何十とはサポートできないため問題であるということでした。将来
+> 的には楽器の種類を減らしてもよいだろうとは言っていましたが。
+
+たしかに、128音色を全て作るのは大変ではないかと思います．でも、あるとあ
+りがたいかも知れません．
+
+何か別の「あるもの」との組み合わせで、上手く使える方があると良いでしょう
+けど．
+
+>   というわけで、ピアノとかいったときにピアノの音がしなくてもよければ内
+> 部MIDIを使うように変えるか(コードをどこか1行変更しなくてはいけませんが)
+> sound pluginに新しいコードを追加する必要があるかと思います。
+
+私には、何をどうすればよいのかわからないのですが、この改造が、今後の
+Scratchの開発に寄与するものであれば、是非お願いしたいと思います．しか
+し、この方向性が今後のScratchに役に立たないのであれば、あまりお手を煩わ
+せるのは心苦しいので、これだけの情報をご提供頂いただけで十分です．
+
+ありがとうございました．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From abee ＠ squeakland.jp  Thu Nov 27 19:05:54 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Nov 27 19:06:04 2008
+Subject: [Squeak-ja: 4089] Scratch 1.3.1がリリースされました。
+Message-ID: <2d5d52a80811270205n12829f29ue0c7a8f6f401f5ff@mail.gmail.com>
+
+こんにちは、阿部です。
+11/22にScratch 1.3.1がリリースされていました。
+http://scratch.wik.is/Scratch_1.3.1_Release_Notes
+
+新機能はなく、いくつかのバグフィックスと言語の追加が行われているようです。
+リリースにポルトガルのMagellanコンピュータのサポートについて書かれていますが、これは先日50万台の導入が決まったIntel
+Classmate PCのことだと思われます(単価は助成金を引いて50ユーロ(約6100円)。OSはWindows XP)。
+Scratchは1024x768以上の解像度を想定していますが、Classmate
+PCは800x480もしくは1024x600なので、低解像度用の対応が行われているのかもしれません(単に800x600に落としただけでは変化ありませんでした)。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From abee ＠ squeakland.jp  Thu Nov 27 19:27:30 2008
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Nov 27 19:27:40 2008
+Subject: [Squeak-ja: 4090] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <492D964C.30808@mx2.ttcn.ne.jp>
+References: <4927957C.40002@mx2.ttcn.ne.jp>
+	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>
+	<uljv9au3g.wl%yoshiki@vpri.org>
+	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>
+	<492D4CCF.5040708@mx2.ttcn.ne.jp>
+	<2d5d52a80811260555q4561e1f9m101c02887ab23e07@mail.gmail.com>
+	<492D964C.30808@mx2.ttcn.ne.jp>
+Message-ID: <2d5d52a80811270227qce51b83o63c33bf360a48a2a@mail.gmail.com>
+
+こんにちは、阿部です。
+
+2008/11/27 3:32 yhousako <yhousako@mx2.ttcn.ne.jp>:
+> ＃同時進行で、Win版のScratchをWineで動かす方法についても試しております．
+
+Wineについては、以前に武藤さんがFreeBSDで試されていました。
+
+http://qml.610t.org/squeak/Scratch.html
+http://qml.610t.org/squeak/Squeak2007.html
+
+Linuxとはまた違うと思いますが、もしScratch.dllの動作に問題があるようなら、シリアルポートを使ったPicoBoardに影響があるかもしれません。
+
+> はい．これも考えております．授業の時間が限られているので、どのように授業
+> を組み立てるか詰めの作業が必要なのですが、対象が小学生なので、音を取り込
+> むところから子どもたちにやらせてみても面白いのではないかと思っています．
+
+それは面白そうですね。
+
+> 音の出る楽器や空き缶やビンなどを用意しておいて（あるいは予め用意させてお
+> いて）、マイクを使ってScratchで録音し、それをPicoボードで制御しながら合
+> 奏してみるなんていうことを考えています．
+
+以前にSqueakで似たような授業のお手伝いをしたことがあります。
+このときは図工と音楽のジョイントで、水彩画で描いた魚の絵をSqueakに取り込んでスクリプトで泳がせ、それにマッチした楽器の音を鳴らすというものでした。
+とても面白かったのですが、自由に鳴らさせると子供たちが興奮してしまい、そのフィードバックで教室中で乱打する感じになりがちなので、学習のめあてに沿うようにうまく指導する必要があるように思いました。
+
+> その際、予めサンプルとしていくつかの音を録音しておいて、子どもたちに使わ
+> せるということも考えています．
+>
+> いずれにしても、できるだけシンプルで、気軽にできるような方法を考えたいと
+> 思っています．
+
+はい、そう思います。
+一般に、かちっとした教材をあらかじめ用意するよりも、子供たち自身に教材を作らせるほうがうまくいくような印象を持っています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+From tetha ＠ st.rim.or.jp  Fri Nov 28 07:08:01 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Fri Nov 28 07:08:14 2008
+Subject: [Squeak-ja: 4091] 正式アナウンス(Was: Fwd: お申込み開始：Seasideによるコンポーネント指向のWebアプリケーション開発
+References: <b672abbe0811260706s26e10f87ie32ea853ca9d4f5a@mail.gmail.com>
+Message-ID: <89C9AEB2-B1BC-48E7-ABC5-F937108A8521@st.rim.or.jp>
+
+たびたびのマルチポスト恐縮です。
+林徹也です。
+
+正式なアナウンスがありましたので、念のため転送させていただきます。
+
+みなさまよろしくお願い申し上げます。
+--
+
+
+Begin forwarded message:
+
+> 差出人: "Yuichi Hasegawa" <hase@starlight-storm.com>
+> 日時: 2008年11月27日 0:06:20:JST
+> 宛先: fowmember@googlegroups.com
+> 件名: お申込み開始：Seasideによるコンポーネント 
+> 指向のWebアプリケーション開発
+> 返信先: fowmember@googlegroups.com
+>
+>
+> こんばんわ。
+> 長谷川@スタッフです。
+>
+> つづけてになりますが、勉強会の受講募集を開始します。
+> 年末も近くなり、飲み会会場の確保も難しくなったため、おそら 
+> く今年度最後の勉強会です。盛り上がりましょう！
+>
+> お申込み先：uwatari@fullness.co.jp
+> #お申し込み後、受講受付のメールは発送しておりません。
+> ----------
+> タイトル:  Seasideによるコンポーネント指向のWeb 
+> アプリケーション開発
+> 講師：梅澤真史さん（SoftUmeYa：http:// 
+> softumeya.com/）
+> 日時：12/3(水) 19:00~20:30
+> 場所：高円寺　フルネストレーニングルーム（http:// 
+> www.fullness.co.jp/mroom/images/map.gif）
+> 参加費：無料
+> 募集人数：30名（先着順）
+> セミナ終了後に懇親会を予定しております。
+>
+> <今後の予定>
+> ＊12月中旬か来年… 知っ得 納得 Web 
+> フレームワーク（SpringMVC編かな？）
+> ----------
+>
+> -- 
+> // 長谷川 裕一
+>
+> --~--~---------~--~----~------------~-------~--~----~
+> このメッセージは、次の Google グループへの参加を申し 
+> 込まれたことを確認す
+> るために送信されました。 Google グループ "FoW!"  
+> グループ。
+> このグループに投稿するには、次の宛先にメールを送信してくださ 
+> い。 fowmember@googlegroups.com
+> このグループから退会するには、次へメールをお送りください。  
+> fowmember+unsubscribe@googlegroups.com
+> その他のオプションについては、次の URL からグループに 
+> アクセスしてくださ
+> い。 http://groups.google.com/group/fowmember?hl=ja
+> -~----------~----~----~----~------~----~------~--~---
+>
+
+--
+林 徹也 Tetsuya HAYASHI
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From yhousako ＠ mx2.ttcn.ne.jp  Fri Nov 28 23:53:15 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Fri Nov 28 23:53:25 2008
+Subject: [Squeak-ja: 4092] Re: Linux版Scratch1.3の楽器音について
+In-Reply-To: <2d5d52a80811270227qce51b83o63c33bf360a48a2a@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>	<uljv9au3g.wl%yoshiki@vpri.org>	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>	<492D4CCF.5040708@mx2.ttcn.ne.jp>	<2d5d52a80811260555q4561e1f9m101c02887ab23e07@mail.gmail.com>	<492D964C.30808@mx2.ttcn.ne.jp>
+	<2d5d52a80811270227qce51b83o63c33bf360a48a2a@mail.gmail.com>
+Message-ID: <493005DB.2040609@mx2.ttcn.ne.jp>
+
+阿部様、皆様
+
+宝迫です．お世話になっております．
+
+Kazuhiro ABE さんは書きました:
+>> ＃同時進行で、Win版のScratchをWineで動かす方法についても試しております．
+> 
+> Wineについては、以前に武藤さんがFreeBSDで試されていました。
+(snip)
+> Linuxとはまた違うと思いますが、もしScratch.dllの動作に問題があるようなら、
+> シリアルポートを使ったPicoBoardに影響があるかもしれません。
+
+既知の問題だったのですね．いくつかのLinux環境でWine + Scratch1.3.1(Win)
++ Picoボードを試してみましたが、上手く動きませんでした．これでは、たとえ
+MIDI音源が使えるようになったとしてもダメなのです．
+
+> 以前にSqueakで似たような授業のお手伝いをしたことがあります。
+> このときは図工と音楽のジョイントで、水彩画で描いた魚の絵をSqueakに取り込んで
+> スクリプトで泳がせ、それにマッチした楽器の音を鳴らすというものでした。
+
+こちらも面白そうです．
+
+> とても面白かったのですが、自由に鳴らさせると子供たちが興奮してしまい、その
+> フィードバックで教室中で乱打する感じになりがちなので、学習のめあてに沿うよう
+> にうまく指導する必要があるように思いました。
+
+さもありなんという感じが致します．(^_^;;;
+
+多分、十分な広さのあるところで、他のチームには秘密でやるような仕掛け（つ
+いたてを立てて、作業自体を他から見えなくするとか）があれば、うまくいった
+のかも知れません．
+＃そういう環境でPCが使えるところが本校にはないので、狭いPC室でどうすれば
+よいのか考えています．
+
+また、報告できることがありましたらご連絡致します．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/
+From yhousako ＠ mx2.ttcn.ne.jp  Sat Nov 29 11:14:12 2008
+From: yhousako ＠ mx2.ttcn.ne.jp (yhousako)
+Date: Sat Nov 29 11:14:20 2008
+Subject: [Squeak-ja: 4093] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+In-Reply-To: <2d5d52a80811270227qce51b83o63c33bf360a48a2a@mail.gmail.com>
+References: <4927957C.40002@mx2.ttcn.ne.jp>	<2d5d52a80811240926md4a8bb4nf5d8df9df5dfe9a1@mail.gmail.com>	<uljv9au3g.wl%yoshiki@vpri.org>	<2d5d52a80811242335p542a36ffxd88ba614e5908d61@mail.gmail.com>	<492D4CCF.5040708@mx2.ttcn.ne.jp>	<2d5d52a80811260555q4561e1f9m101c02887ab23e07@mail.gmail.com>	<492D964C.30808@mx2.ttcn.ne.jp>
+	<2d5d52a80811270227qce51b83o63c33bf360a48a2a@mail.gmail.com>
+Message-ID: <4930A574.8020804@mx2.ttcn.ne.jp>
+
+宝迫です．お世話になっております．
+
+ご存知の方にとっては「何を今さら」というようなことだと思いますが、一連の
+実験作業中に個人的に教えて頂いたことをこちらにもシェアしておきます．
+
+KNOPPIX5.3.1DVDで、Win版のScratch1.3.1をWine環境で動かし、Timidityをサウ
+ンドサーバとして動かしてMIDIの音を鳴らすことができました．
+
+＃WineとTimidityは、はじめから導入されています．
+
+【手順】
+1.Scratchのダウンロードサイトから、Win版のScratch1.3.1のインストーラをダ
+ウンロードし、Wineを使ってインストールする．
+＃一度、Scratchが起動するので、終了させておく．
+
+2.このままだと文字が豆腐になるので、「locale/ja.po」にWinで使うフォント
+を明示的に指定する．（今回は「IPAGothic」を使用）
+＃それでも、ボタンよりも文字が大きくて少し変ですが．
+＃Wineで使われるものは、「$HOME/.wine/drive_C/」の中にインストールされて
+います．
+
+3.コンソールから「timidity -Os -iA」として、Timidityを起動する．
+
+4.Scratch(Win)をWineで起動する．
+
+以上でMIDIの音が出るようになりました．ただし、「ニャー」の音がとぎれとぎ
+れになったり、スプライトの動きがぎこちなかったりします．また、Picoボード
+はやはりまともに動きませんでした．
+
+------------------------------------------------------------------
+寳迫　芳人：yhousako@gmail.com
+みんなで教育を考えよう！：http://www.geocities.jp/yhousako/
+指導案＆教材集：http://www2.ttcn.ne.jp/yhousako/
+全国城跡ネットワーク：http://www.geocities.jp/shiroato_net/
+つれづれなるままに…：http://4oc.blogspot.com/

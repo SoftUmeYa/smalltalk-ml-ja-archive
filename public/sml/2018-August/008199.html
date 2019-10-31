@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8199] Re: Pharoとデータベース
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208199%5D%20Re%3A%20%3D%3Futf-8%3Fb%3FUGhhcm/jgajjg4fjg7zjgr/jg5njg7zjgrk%3D%3F%3D&In-Reply-To=%3Cfd09f869-20b2-7164-1464-057f8b340037%40hb.tp1.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008198.html">
+   <LINK REL="Next"  HREF="008201.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8199] Re: Pharoとデータベース</H1>
+    <B>Narita @ TOPPA</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208199%5D%20Re%3A%20%3D%3Futf-8%3Fb%3FUGhhcm/jgajjg4fjg7zjgr/jg5njg7zjgrk%3D%3F%3D&In-Reply-To=%3Cfd09f869-20b2-7164-1464-057f8b340037%40hb.tp1.jp%3E"
+       TITLE="[SML 8199] Re: Pharoとデータベース">narita_takaoki ＠ hb.tp1.jp
+       </A><BR>
+    <I>2018年 8月  3日 (金) 12:53:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008198.html">[SML 8198] Re: Pharoとデータベース
+</A></li>
+        <LI>次の記事 <A HREF="008201.html">[SML 8201] Re: Pharoとデータベース
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8199">[ 日付 ]</a>
+              <a href="thread.html#8199">[ スレッド ]</a>
+              <a href="subject.html#8199">[ 件名 ]</a>
+              <a href="author.html#8199">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ML に返信したつもりで、ご本人様直接に返してました。
+
+On 2018/07/31 19:29, 五十嵐雅哉 wrote:
+ &gt; 初心者質問です。
+ &gt;
+ &gt; リレーショナル・データベース（RB）とPharoのコラボを考えていますが、RBで 
+できことはPharoでは容易なような気もします。
+ &gt; 想定しているRBが大規模なものではないのですが、Collection系で間に合いそう 
+な気もします。RBも基本、何らかの言語で開発されているとも思うのですが、 
+Pharoでできればそれでいいのでしょうか？
+
+RB というよりはデータベース（DB）ソフトウェアを使う理由ですが、データ
+量的な問題は別とすると、データの永続化を考えなければ現状使う意味はあ
+まり無いと思います。
+
+永続化を前提として、一貫性等の整合性を維持しようとすると結構面倒なこ
+とが生じるので、そこらへんを DB などに押し付けて済ますというのが一つ
+の解決法だと思います。
+
+なので結局のところ、この永続化にまつわる厄介ごとを全部自分で解決つけ
+られ、実行時効率の要求にも応えられ、信頼性を保証するためのエンジニア
+リングプロセスも問題にしないなら、自分でやってしまうのはアリでしょう。
+
+もしくは永続化は考えないし、途中で問題があってプログラムが止まったり
+したときも、そこまでのデータ操作は全て捨てて問題ないですよ、みたいな
+状況なら、異種のアーキテクチャの DB と協調するようにするコストが無駄
+ですから DB を使わないとなるでしょう。
+
+別な言い方をすると、MVC モデルの M の部分を RB にやらせる方が要求に
+対応したシステムの構築が楽なら RB を使った方が良いし、そうじゃなくて
+M の部分は最低限単に実行中のデータを保持していれば十分にすぎないなら
+RB をわざわざ使う理由が無いと思います。
+
+安直に、永続化が必要としても、「データを書き込んでいるときにプログラ
+ムが何らかの理由で止まる※」という状況を考え、それでも大して困らない
+と言えるなら DB はいらないと言っても良いかもしれません。
+
+※もちろん最悪書き込み中のファイル等の中身は破壊されるわけです。
+
+もちろん永続化がいらないなら DB はいらないでしょうし。
+
+大筋はそんな感じではなかろうかと思います。データ量や実行時効率の問題
+が絡んだ実際的な判断は、また別になるでしょうけれど。
+
+-- 
+近江屋  成田 隆興
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008198.html">[SML 8198] Re: Pharoとデータベース
+</A></li>
+	<LI>次の記事 <A HREF="008201.html">[SML 8201] Re: Pharoとデータベース
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8199">[ 日付 ]</a>
+              <a href="thread.html#8199">[ スレッド ]</a>
+              <a href="subject.html#8199">[ 件名 ]</a>
+              <a href="author.html#8199">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,743 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Mar  4 10:28:15 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Mar  4 10:28:25 2009
+Subject: [SML 7483] Re: ブラックブック買いました
+In-Reply-To: <1F940411C7064C548D7BBAEF01769333@sunaoPC>
+References: <1F940411C7064C548D7BBAEF01769333@sunaoPC>
+Message-ID: <49ADD92F.5030805@cc.kyoto-su.ac.jp>
+
+青木＠京都産業大学です。
+
+sunao furukawa さんは書きました:
+> 　遅ればせながら、ブラックブックこと「Smalltalkで学ぶオブジェクト指向プ
+> ログラミングの本質」を今日購入しました。近所の書店で注文してバレンタイン
+> デーの今日購入できて、まるで誰かからブラックチョコレートをプレゼントされ
+> たような感じです。
+
+ブラックチョコ（ブラックブック）をバレンタインデーに買い求め
+ていただきまして有り難うございます。
+
+> 　そんな私が今日買ったブラックブックの中で一番興味深かったところはバイト
+> コードのところです。
+
+Smalltalk は仮想マシンの門からくぐってゆくのが王道だろうと思
+います。時間はかかりますが、プログラミングの粋や花に遭遇でき、
+とてもおすすめです。
+
+> 　私は、住所は岩手なので東京や京都での勉強会には出席するのは残念ながらか
+> ないませんが、勉強会の資料などがありがたくも公開されているのでこれからも
+> 勉強会の内容や様子をそのような形で知ることができれば幸せです。これからも
+> 勉強会が盛り上がることを祈っています。
+
+私の妻が盛岡出身なので、岩手に足を運ぶ機会が多々あります。こ
+れから相まみえることもあろうかと思いますので、よろしくです。
+
+今夜「第５回 Smalltalk 勉強会＠京都」があります。ブラックブッ
+クの第３章の基本的な文法のところを、時間をかけて進めています。
+
+おそらく、今夜は「変数」のあたりが主題になり、順調ならば「ブ
+ロック」までゆくかどうか、というところだと思います。
+
+そう言えば、特殊変数（模擬変数や擬似変数もしくはシュード変数
+と呼ばれることがあります）のくだりで、昨年８月に東京電機大学
+の久保田吉彦さんからご指摘がありました。
+
+８７ページのプログラムに間違いがあるのです。「it sender」の
+部分を「it」だけに改めていただけると幸いです。正しくは以下。
+
+| aContext aBlock |
+[:aClass :thisMessage |
+aContext := thisContext.
+aBlock := [:context |
+(aClass == context receiver class and: [thisMessage == context selector])
+    ifTrue: [^true].
+context sender ifNotNil: [:it | aBlock value: it]].
+aBlock value: aContext sender.
+^false]
+    value: TextEditorController
+    value: #printIt
+
+改めないと、コンテクストチェインを飛び飛びに追ってしまうこと
+になりますね。ご指摘を有り難うございました、久保田さん。この
+場を借りまして、皆さんにお知らせ、ということで。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+> 
+
+From h-asaoka ＠ sra.co.jp  Wed Mar  4 22:53:45 2009
+From: h-asaoka ＠ sra.co.jp (ASAOKA Hiroko)
+Date: Wed Mar  4 22:53:57 2009
+Subject: [SML 7484] Re: 第5回Smalltalk勉強会＠京都
+In-Reply-To: <49A50E59.20204@cc.kyoto-su.ac.jp>
+References: <49A50E59.20204@cc.kyoto-su.ac.jp>
+Message-ID: <49AE87E9.2020205@sra.co.jp>
+
+浅岡です。
+
+「第５回 Smalltalk 勉強会＠京都」の報告です。
+年度末のお忙しい時期に、
+参加してくださったみなさま、ありがとうございました。
+
+そして藤田さん、また差し入れをありがとうございました☆
+
+
+本日配布したアーカイブはJun775のものです。
+
+ブラックブックの３章のバイト配列から説明を行いました。
+バイト配列、配列、束縛参照、
+nil、true、false と続き、
+３.４章の一時変数まで（p.74）の説明となりました。
+
+プログラムの読み方
+シングルトンの作成方法
+ブロッククロージャを作成したバイトコードの見方
+オブジェクトのコピー
+などなど、テキストとは違う説明も交えて、
+みんなで疑問に思ったところを話し合いながら進めております。
+
+質問も気軽に飛び交うような雰囲気になってきていますので、
+ゆっくりですが、よく考えるのには良いペースなのではないかと思っています。
+
+ちょっとゆっくりすぎる！ということもあるかとは思いますので、
+忌憚のないご意見をお願いいたします。
+
+
+次回の勉強会は４月１日になります。
+＃エイプリルフール！
+
+会場は、京都駅前のキャンパスプラザですが、
+今までの６階の講習室ではなく、
+２階の第２会議室に変更となりますので
+ご注意くださいませ。
+
+お待ちしております。
+
+-- 
+    浅岡 浩子(ASAOKA Hiroko)
+        http://www.sra.co.jp/people/h-asaoka/
+        mailto:h-asaoka@sra.co.jp
+
+    京都産業大学 青木研究室
+    〒603-8555 京都市北区上賀茂本山
+    1402研究室（１号館４階）
+From kuwatani ＠ akademia.co.jp  Sun Mar  8 12:56:51 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Sun Mar  8 12:56:56 2009
+Subject: [SML 7485] テストメールです
+Message-ID: <49B34203.8010007@akademia.co.jp>
+
+桑谷です．
+
+テスト中です．
+
+--
+kuwatani@akademia.co.jp
+From kuwatani ＠ akademia.co.jp  Sun Mar  8 13:29:28 2009
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Sun Mar  8 13:29:36 2009
+Subject: [SML 7486] Re: メーリングリストの一時停止及び運用ドメインの変更のお知らせ
+In-Reply-To: <49A3DA3C.1020300@akademia.co.jp>
+References: <49A3DA3C.1020300@akademia.co.jp>
+Message-ID: <49B349A8.9000201@akademia.co.jp>
+
+SMLメンバーのみなさま
+
+メーリングリストの運用を行っている桑谷です。
+
+予定しておりましたサーバメンテナンスおよび運用ドメインの変更が
+完了しました．メールアドレスおよびホームページのアドレスが変更に
+なった以外は今まで通りご利用いただけます．
+
+ メールアドレス: sml@smalltalk.jp
+ ホームページ: http://www.smalltalk.jp/SML/index.html
+
+今後ともよろしくお願いします．
+
+(2009/02/24 20:30), Tsuyoshi KUWATANI さんは書きました:
+> SMLメンバーのみなさま
+> 
+> メーリングリストの運用を行っている桑谷です。
+> 
+> メーリングリストを運用しているサーバのメンテナンスに伴い
+> 下記の期間，メーリングリストのサービスを一時停止いたします．
+> 
+>   日 時：2009年3月8日(日)　7:30 〜 13:30
+>   内 容：電源設備の定期点検によるサービスの停止
+> 
+> また，以前(といっても半年近く前[SML 7419]ですが)アナウンスしていました
+> メーリングリストの運用ドメインの変更作業を
+> メーリングリストの一時停止に合わせて行いたいと思います．
+> 
+>   旧: sml@akademia.co.jp
+>   新: sml@smalltalk.jp
+> 
+> SMLの登録者の情報はそのまま引き継ぎますので
+> 再登録などは必要ありませんが、メールの振り分け設定の変更など
+> 行って頂くことになります。
+> 
+> メーリングリストの復旧，ドメインの移行が終了次第お知らせいたします．
+> ご迷惑をおかけしますが，よろしくお願いします．
+> 
+
+
+-- 
+桑谷 剛史
+kuwatani@akademia.co.jp
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Mar  8 13:52:20 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Mar  8 13:52:35 2009
+Subject: [SML 7487] Re: メーリングリストの一時停止及び運用ドメインの変更のお知らせ
+In-Reply-To: <49B349A8.9000201@akademia.co.jp>
+References: <49A3DA3C.1020300@akademia.co.jp> <49B349A8.9000201@akademia.co.jp>
+Message-ID: <49B34F04.9090703@cc.kyoto-su.ac.jp>
+
+ごくろうさまでした。こちらこそ今後ともよろしくお願いします。
+
+--- 青木淳＠京都宇治
+
+Tsuyoshi KUWATANI さんは書きました:
+> SMLメンバーのみなさま
+> 
+> メーリングリストの運用を行っている桑谷です。
+> 
+> 予定しておりましたサーバメンテナンスおよび運用ドメインの変更が
+> 完了しました．メールアドレスおよびホームページのアドレスが変更に
+> なった以外は今まで通りご利用いただけます．
+> 
+>  メールアドレス: sml@smalltalk.jp
+>  ホームページ: http://www.smalltalk.jp/SML/index.html
+> 
+> 今後ともよろしくお願いします．
+From umejava ＠ mars.dti.ne.jp  Mon Mar 16 21:41:33 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Mar 16 21:42:06 2009
+Subject: [SML 7488] 第7回Smalltalk勉強会のお知らせ
+Message-ID: <JxJc7Xkw1BEfb7FMFTeniLQA7@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。今回も水曜日です。
+
+日時: 2009/3/25(水) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai7kaismalltalkbenkyoukai
+
+今回は「ファイル操作」を仮のテーマとします。「外の世界につながらない」
+と何かと批判されがちなSmalltalkですが、実は日常のちょっとした業務にも
+使えるということがわかっていただけるのではと思います。
+
+参加表明は特に必要ありません。ふらりとどうぞ。
+気になる方はこのMLにメールを送っていただいても良いです。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Mar 17 20:21:58 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Mar 17 20:22:13 2009
+Subject: [SML 7489] 京都でのSmalltalk勉強会の会場
+Message-ID: <49BF87D6.7060100@cc.kyoto-su.ac.jp>
+
+こんばんは、青木淳＠京都産業大学です。車が黄砂まみれに…。
+
+京都でのSmalltalk勉強会の会場ですが、5月の第1水曜日の6日が休
+日ですので、次週の13日に開催します。その際、会場が2階の第2会
+議室ではなく、4階の第4講義室になりますので、ご注意ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+
+第6回 Smalltalk勉強会＠京都
+日時：2009年04月01日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+
+第7回 Smalltalk勉強会＠京都
+日時：2009年05月13日（水）19:00〜21:00
+キャンパスプラザ京都 4階 第4講義室　　←ここだけ会場が異なる
+
+第8回 Smalltalk勉強会＠京都
+日時：2009年06月03日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+
+　　　：
+　　　：
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Mar 25 09:00:42 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Mar 25 09:00:53 2009
+Subject: [SML 7490] 第6回Smalltalk勉強会＠京都
+Message-ID: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+
+おはようございます、京都産業大学の青木です。
+
+京都では賀茂川（鴨川）のほとりの桜が咲き始めました。開花日が
+23日でしたから。京都御所の西側（ザ・パレスサイドホテルの隣）
+の旧有栖川宮邸の桜が満開です。
+
+さて、来週の今日（エイプリルフールの4月1日(水) 19:00〜21:00）
+第6回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+ご参集ください。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto6
+
+第6回 Smalltalk勉強会＠京都
+日時：2009年04月01日（水）19:00〜21:00
+キャンパスプラザ京都 2階 第2会議室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+私的変数そして共有変数へとテキストにそって進めてゆきます。ま
+た、Smalltalkにおける数論を解題したいと思います。整数・分数・
+実数（浮動小数点数・固定小数点数）・複素数・座標（２次元座標
+・３次元座標）などを型にとらわれずに演算できる重送信メカニズ
+ムを紹介します。ノート型のパーソナルコンピュータ（Windows
+Vista/XP または Mac OS X (on Intel Mac)）をご持参ください。
+最新の「じゅん for Smalltalk（Jun776）」も配布いたします。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Mar 26 19:40:54 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Mar 26 19:41:02 2009
+Subject: [SML 7491] Re: 京都でのSmalltalk勉強会の会場
+In-Reply-To: <49BF87D6.7060100@cc.kyoto-su.ac.jp>
+References: <49BF87D6.7060100@cc.kyoto-su.ac.jp>
+Message-ID: <49CB5BB6.7030807@cc.kyoto-su.ac.jp>
+
+こんばんは、青木＠京都産業大学です。
+
+次々回（5月13日）の京都でのSmalltalk勉強会の開催会場ですが、
+諸般の事情で以下のように変更になりました。
+
+第7回 Smalltalk勉強会＠京都
+日時：2009年05月13日（水）19:00〜21:00
+キャンパスプラザ京都 5階 第2共同研究室（←この部屋の所在を、当日、立て看板にて案内します）
+
+すでにウェブページの案内も修正しておきました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto7
+
+二転三転して申し訳ありません。よろしくお願い申し上げます。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+私は書きました:
+>
+> こんばんは、青木淳＠京都産業大学です。車が黄砂まみれに…。
+>
+> 京都でのSmalltalk勉強会の会場ですが、5月の第1水曜日の6日が休
+> 日ですので、次週の13日に開催します。その際、会場が2階の第2会
+> 議室ではなく、4階の第4講義室になりますので、ご注意ください。
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+>
+> 第6回 Smalltalk勉強会＠京都
+> 日時：2009年04月01日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+>
+> 第7回 Smalltalk勉強会＠京都
+> 日時：2009年05月13日（水）19:00〜21:00
+> キャンパスプラザ京都 4階 第4講義室　　←ここだけ会場が異なる
+>
+> 第8回 Smalltalk勉強会＠京都
+> 日時：2009年06月03日（水）19:00〜21:00
+> キャンパスプラザ京都 2階 第2会議室
+>
+> 　　　：
+> 　　　：
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From mutoh ＠ openedu.org  Sun Mar 29 19:54:49 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Sun Mar 29 19:55:09 2009
+Subject: [SML 7492] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+Message-ID: <86fxgwwqdi.wl%mutoh@openedu.org>
+
+むとう＠奈良のおうちです。
+
+At Wed, 25 Mar 2009 09:00:42 +0900,
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> さて、来週の今日（エイプリルフールの4月1日(水) 19:00〜21:00）
+> 第6回Smalltalk勉強会＠京都を開催いたします。万障繰り合わせて
+> ご参集ください。
+
+なんか、2回に一回程度の学習効果が上がらない参加方法を続けてますが、今
+回は参加できそうです。
+
+私は、主にSqueak+FreeBSDな人なのですが、
+- Squeak+Gainer http://lab.yengawa.com:8080/seaside/ypier/Projects/SqueakGainer
+- PicoBoard+Scratch http://scratch.mit.edu/
+に興味のある方、おられます?
+
+デモできますけど、勉強会時間以外で、ロビーとかで遊んでて怒られないんで
+しょうかね?
+
+
+あと、その日は暇なので、少し早めに会場に行くこともできるんですが、勉強
+会前に腹ごしらえしようという人いませんかね?
+いたら、ご一緒したいなと。
+
+ではでは、当日よろしくお願いします。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・にんげんは一度に一つの亊しかでけへんいうとるやろ
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+From atsushi ＠ cc.kyoto-su.ac.jp  Sun Mar 29 21:19:10 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Sun Mar 29 21:19:22 2009
+Subject: [SML 7493] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <86fxgwwqdi.wl%mutoh@openedu.org>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org>
+Message-ID: <49CF673E.2090109@cc.kyoto-su.ac.jp>
+
+こんばんは、青木＠京都宇治です。
+
+Takeshi MUTOH さんは書きました:
+> なんか、2回に一回程度の学習効果が上がらない参加方法を続けてますが、
+> 今回は参加できそうです。
+
+お待ちしています。今回は遠方（長野県小淵沢と神奈川県藤沢）か
+らの参加があります。エイプリルフールではないですよ。:-)
+
+> 私は、主にSqueak+FreeBSDな人なのですが、
+> - Squeak+Gainer http://lab.yengawa.com:8080/seaside/ypier/Projects/SqueakGainer
+> - PicoBoard+Scratch http://scratch.mit.edu/
+> に興味のある方、おられます?
+> デモできますけど、勉強会時間以外で、ロビーとかで遊んでて怒られないんで
+> しょうかね?
+
+下記のスペースが利用できます。もちろん開催会場（第２会議室）
+でも構いません。
+
+１Ｆ【パソコンコーナー】【情報交流プラザ】
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=587&frmCd=14-1-0-0-0
+２Ｆ【ロビー】【第２会議室】
+http://www.consortium.or.jp/contents_detail.php?co=cat&frmId=588&frmCd=14-1-0-0-0
+
+キャンパスプラザ京都は２１時半が退館時刻になりますので、開始
+時刻の１９時よりも前に行うのが良かろうと思います。準備のため
+浅岡さんと私は１８時に会場入りしていますから、お手数でなけれ
+ばデモしてくださいまし。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From mutsuki.nakajima ＠ gmail.com  Mon Mar 30 11:01:26 2009
+From: mutsuki.nakajima ＠ gmail.com (Mutsuki Nakajima)
+Date: Mon Mar 30 11:01:35 2009
+Subject: [SML 7494] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <49CF673E.2090109@cc.kyoto-su.ac.jp>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org> <49CF673E.2090109@cc.kyoto-su.ac.jp>
+Message-ID: <8cdfcfef0903291901o7dcd0116le67e6109fdccd8f8@mail.gmail.com>
+
+こんにちは、中嶋＠小淵沢です。
+
+4/1には小淵沢より参加いたします。よろしくお願いします。
+
+「青春18きっぷ」を利用し、7時間の電車の旅をいたします。
+信濃、甲斐、飛騨より参加される方、ぜひご連絡ください。
+ブラックブック片手に、予習をしながら長旅を共にしましょう。
+ちなみに、藤沢からいらっしゃる方と大垣で合流予定です。
+桜を見たりSmalltalkのお話しをしたり、楽しみにしています。
+
+青木さん、小淵沢は山梨県ですよ。隣の駅は長野県ですが。
+
+なかじま、
+
+2009/03/29 21:19 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+> こんばんは、青木＠京都宇治です。
+>
+> Takeshi MUTOH さんは書きました:
+>> なんか、2回に一回程度の学習効果が上がらない参加方法を続けてますが、
+>> 今回は参加できそうです。
+>
+> お待ちしています。今回は遠方（長野県小淵沢と神奈川県藤沢）か
+> らの参加があります。エイプリルフールではないですよ。:-)
+From atsushi ＠ cc.kyoto-su.ac.jp  Tue Mar 31 06:19:19 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Tue Mar 31 06:19:29 2009
+Subject: [SML 7495] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <8cdfcfef0903291901o7dcd0116le67e6109fdccd8f8@mail.gmail.com>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8cdfcfef0903291901o7dcd0116le67e6109fdccd8f8@mail.gmail.com>
+Message-ID: <49D13757.3090903@cc.kyoto-su.ac.jp>
+
+Mutsuki Nakajima さんは書きました:
+> 青木さん、小淵沢は山梨県ですよ。隣の駅は長野県ですが。
+
+これはしたり…。
+
+--- 青木淳
+From itoh-private ＠ itolab.com  Tue Mar 31 08:19:48 2009
+From: itoh-private ＠ itolab.com (Eiichiro Ito)
+Date: Tue Mar 31 08:19:59 2009
+Subject: [SML 7496] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <8cdfcfef0903291901o7dcd0116le67e6109fdccd8f8@mail.gmail.com>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8cdfcfef0903291901o7dcd0116le67e6109fdccd8f8@mail.gmail.com>
+Message-ID: <49D15394.8030502@itolab.com>
+
+伊藤です。はじめまして。
+
+当方甲府在住です。
+近所にSmalltalkerの方がいらっしゃるとは嬉しい限りです。
+＃ついつい反応してしまいました。
+4/1は仕事の関係で行くことはできませんが、いずれ参加させて
+いただければと思っております。
+よろしくお願いいたします。
+
+Mutsuki Nakajima さんは書きました:
+> こんにちは、中嶋＠小淵沢です。
+> 
+> 4/1には小淵沢より参加いたします。よろしくお願いします。
+> 
+> 「青春18きっぷ」を利用し、7時間の電車の旅をいたします。
+> 信濃、甲斐、飛騨より参加される方、ぜひご連絡ください。
+> ブラックブック片手に、予習をしながら長旅を共にしましょう。
+> ちなみに、藤沢からいらっしゃる方と大垣で合流予定です。
+> 桜を見たりSmalltalkのお話しをしたり、楽しみにしています。
+> 
+> 青木さん、小淵沢は山梨県ですよ。隣の駅は長野県ですが。
+> 
+> なかじま、
+From mutsuki.nakajima ＠ gmail.com  Tue Mar 31 10:13:06 2009
+From: mutsuki.nakajima ＠ gmail.com (Mutsuki Nakajima)
+Date: Tue Mar 31 10:13:14 2009
+Subject: [SML 7497] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <49D15394.8030502@itolab.com>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org> <49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8cdfcfef0903291901o7dcd0116le67e6109fdccd8f8@mail.gmail.com>
+	<49D15394.8030502@itolab.com>
+Message-ID: <8cdfcfef0903301813p7a54c1c7g5a80953e412d58af@mail.gmail.com>
+
+伊藤さま、
+
+私の方は、ウィークデーはほぼ毎日のように
+甲府を通過し四ツ谷まで通勤しております。
+
+東京の勉強会に参加し終電で帰るというのも
+意外と楽しめるかもしれません。といいつつ、
+東京にも一度しか参加していないのですが。
+
+どうぞよろしくお願いいたします。
+
+なかじま、
+
+2009/03/31 8:19 Eiichiro Ito <itoh-private@itolab.com>:
+> 伊藤です。はじめまして。
+>
+> 当方甲府在住です。
+> 近所にSmalltalkerの方がいらっしゃるとは嬉しい限りです。
+> ＃ついつい反応してしまいました。
+> 4/1は仕事の関係で行くことはできませんが、いずれ参加させて
+> いただければと思っております。
+> よろしくお願いいたします。
+>
+> Mutsuki Nakajima さんは書きました:
+>> こんにちは、中嶋＠小淵沢です。
+>>
+>> 4/1には小淵沢より参加いたします。よろしくお願いします。
+>>
+>> 「青春18きっぷ」を利用し、7時間の電車の旅をいたします。
+>> 信濃、甲斐、飛騨より参加される方、ぜひご連絡ください。
+>> ブラックブック片手に、予習をしながら長旅を共にしましょう。
+>> ちなみに、藤沢からいらっしゃる方と大垣で合流予定です。
+>> 桜を見たりSmalltalkのお話しをしたり、楽しみにしています。
+>>
+>> 青木さん、小淵沢は山梨県ですよ。隣の駅は長野県ですが。
+>>
+>> なかじま、
+From shin-sahara ＠ kuzo.csk.com  Tue Mar 31 14:17:11 2009
+From: shin-sahara ＠ kuzo.csk.com (佐原 伸)
+Date: Tue Mar 31 14:17:22 2009
+Subject: [SML 7498] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <49D13757.3090903@cc.kyoto-su.ac.jp>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>
+	<8cdfcfef0903291901o7dcd0116le67e6109fdccd8f8@mail.gmail.com>
+	<49D13757.3090903@cc.kyoto-su.ac.jp>
+Message-ID: <F84D5DDC-B5CB-48CD-9876-293A9A0B994A@kuzo.csk.com>
+
+佐原です。
+
+On 2009/03/31, at 6:19, AOKI Atsushi wrote:
+
+> Mutsuki Nakajima さんは書きました:
+>> 青木さん、小淵沢は山梨県ですよ。隣の駅は長野県ですが。
+>
+> これはしたり…。
+>
+> --- 青木淳
+
+やっぱり、越後人は武田信玄の領地と認めたくないのかな :-)
+
+とちょっかいを出したので、行くかもしれません。
+ただし、風邪気味なので、今晩決定します。
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Mobile:  +81-80-1114-3378(in the world), +81-80-3089-7518(in the world)
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/sml/attachments/20090331/f1030e04/attachment.htm
+From nisinaka ＠ sra.co.jp  Tue Mar 31 18:07:10 2009
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Tue Mar 31 18:07:20 2009
+Subject: [SML 7499] [ANNOUNCE] Jun for Java (Jun721)
+Message-ID: <20090331180641.EA44.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン721を公開します。
+
+  バージョン713からの主な変更点は、以下の通りです。
+
+    * (modification) JunOpenGL3dCompoundObject を Jun721 相当に更
+      新しました。コンパウンドオブジェクトと各コンポーネントの両
+      方がテクスチャを持つ場合に限って、テクスチャを有効にするよ
+      うに修正しています。
+
+    * (new feature) Wavefront OBJ/MTL ファイルのパーサを実装しま
+      した。これは Albert Kerssies が「じゅん for Smalltalk」に寄
+      贈してくれたものです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/721/OBJViewer.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/721/panda.obj
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/721/panda.mtl
+
+    * (modification) Lisp S-式との相互変換のためのメソッド 
+      (toLispList や fromLispList など) を、
+      jp.co.sra.jun.geometry.* および
+      jp.co.sra.jun.collections.sequences.* のクラス群に実装しま
+      した。.
+
+    * (modification) JunProgress を Jun715 相当に更新しました。
+      StBlockValued<Float> インタフェースを実装しています。
+
+    * (modification) Morph アイコンを追加し、JunOpaqueImageIcons 
+      クラスから参照できるようになっています。
+
+    * (bug fix) Jun3dPoint#outerProduct_() が間違ったメソッドを呼
+      び出していました。
+
+    * (modification) StPL の
+      SystemResourceSupport#createImage([String|URL]) が OBSOLETE
+      であるため、使わないように修正しました。このメソッドは、異
+      なるクラスローダで読み込まれたクラスから呼び出したときに、
+      正しく動作していませんでした。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+From mutoh ＠ openedu.org  Tue Mar 31 19:41:38 2009
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Tue Mar 31 19:41:51 2009
+Subject: [SML 7500] Re: 第6回Smalltalk勉強会＠京都
+In-Reply-To: <49CF673E.2090109@cc.kyoto-su.ac.jp>
+References: <49C9742A.8000908@cc.kyoto-su.ac.jp>
+	<86fxgwwqdi.wl%mutoh@openedu.org>
+	<49CF673E.2090109@cc.kyoto-su.ac.jp>
+Message-ID: <8663hqvusd.wl%mutoh@openedu.org>
+
+むとう＠おしごとばです。
+さあ、帰ろう。
+
+返信が遅くなってすみません。
+
+At Sun, 29 Mar 2009 21:19:10 +0900,
+AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp> wrote:
+> > 私は、主にSqueak+FreeBSDな人なのですが、
+> > - Squeak+Gainer http://lab.yengawa.com:8080/seaside/ypier/Projects/SqueakGainer
+> > - PicoBoard+Scratch http://scratch.mit.edu/
+> > に興味のある方、おられます?
+> > デモできますけど、勉強会時間以外で、ロビーとかで遊んでて怒られないんで
+> > しょうかね?
+  (snip)
+> キャンパスプラザ京都は２１時半が退館時刻になりますので、開始
+> 時刻の１９時よりも前に行うのが良かろうと思います。準備のため
+> 浅岡さんと私は１８時に会場入りしていますから、お手数でなけれ
+> ばデモしてくださいまし。
+
+はい、そんなに重いものでもないので、18:00に勉強会会場に入って、デモで
+きるようにしておきます。
+# 見たいという人がいないのが、ちょっと心配(;-;)
+
+では、明日よろしくお願いします。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://qml.610T.org/
+ ・にんげんは一度に一つの亊しかでけへんいうとるやろ
+ ・自転車操業中 	    http://qml.610T.org/cycling/
+From umejava ＠ mars.dti.ne.jp  Tue Mar 31 23:07:02 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Mar 31 23:07:32 2009
+Subject: [SML 7501] SmallTalk R4.1だそうです
+Message-ID: <JxFoE4p2RKOfgU0gB8n5FF6Ac@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+東京のSmalltalk勉強会では、VisualWorksとSqueakの両方を対象に進めて
+いるのですが、どうにも微妙な違いが多く、学習の妨げとなっていました。
+
+もっと誰もが簡単に使える、パワフルな処理系はないものか、と思って
+いたところ、SmallTalk R4.1なるものが存在することがわかりました。
+
+http://smalltalk.smalltalk-users.jp/
+#どうやらObjectWorks R4.1の傍系のようです。
+
+Adele Goldbergさんが、昔オープンソース化しようとしていた、あの4.1が
+ついに満を持して復活したのでしょうか。よくわからないものの、とにかく
+強力な機能に満ちあふれています。
+
+(サイトを引用します)
+- Rubyばりにpが使える。デバッグに最適
+- PHPのようにGOTOをサポート
+- JavaのごとくFinalクラスをサポート
+- Eiffelのようにaliasが使える!?
+- C++にあまり似ていないfriendメソッドが使える。enemyメソッドも使える!
+- 31個までのwith:のサポート...
+
+いい感じですね。以後の勉強会ではこのSmallTalk R4.1をデフォルトの
+Smalltalkとして進めていこうと思います。
+
+ではでは。
+
+---
+[:masashi | ^umezawa]

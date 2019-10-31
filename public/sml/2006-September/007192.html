@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7192] Re: SystemBrowserの&quot;▲▼&quot;について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207192%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN5c3RlbUJyb3dzZXIbJEIkThsoQiI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIiUiJxsoQiIbJEIkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=45173444.5050400%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007190.html">
+   <LINK REL="Next"  HREF="007196.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7192] Re: SystemBrowserの&quot;▲▼&quot;について</H1>
+    <B>NOBUTAKA Terauchi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207192%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN5c3RlbUJyb3dzZXIbJEIkThsoQiI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCIiUiJxsoQiIbJEIkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=45173444.5050400%40sra.co.jp"
+       TITLE="[SML 7192] Re: SystemBrowserの&quot;▲▼&quot;について">europa ＠ ps.inforyoma.or.jp
+       </A><BR>
+    <I>2006年 9月 26日 (火) 21:02:35 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007190.html">[SML 7190] Re: SystemBrowserの&quot;▲▼&quot;について
+</A></li>
+        <LI>次の記事 <A HREF="007196.html">[SML 7196] Re: SystemBrowserの&quot;▲▼&quot;について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7192">[ 日付 ]</a>
+              <a href="thread.html#7192">[ スレッド ]</a>
+              <a href="subject.html#7192">[ 件名 ]</a>
+              <a href="author.html#7192">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは、寺内です。
+
+返信が遅くなり、申し訳ありません。
+
+&gt;<i> Refactory.Browser.ProtocolItemNavigatorPart の iconFor: をご
+</I>&gt;<i> 覧になってくださいませ。
+</I>
+Refactory.Browser.ProtocolItemNavigatorPart&gt;&gt;iconFor:の中で確認
+したい部分を下記に記します。
+
+-----
+isOverridden := self isMethodOverridden: aMethodDefinition.
+(self isOverridingMethod: aMethodDefinition)
+	ifTrue:
+		[^isOverridden
+			ifTrue: [ListIconLibrary visualFor: #upDownArrow]
+			ifFalse: [ListIconLibrary visualFor: #upArrow]]
+	ifFalse: [isOverridden ifTrue: [^ListIconLibrary visualFor: #downArrow]].
+
+isOverridingMethod: は aMethodDefinition がスーパークラスから継承
+してきたメソッドをオーバーライドしているか？を判定するメソッド。
+
+isMethodOverridden: は aMethodDefinition がサブクラスでメソッドが
+オーバーライドされているか？を判定するメソッド。
+
+上記内容が正しいとするなら、
+
+1. &quot;▲&quot;は、スーパークラスから継承してきたメソッドをオーバーライド
+   している場合に表示される。
+
+2. &quot;▼&quot;は、サブクラスでメソッドがオーバーライドされている場合に表
+   示される。
+
+3. &quot;▲▼&quot;は、1,2の両方が当てはまる場合。
+-----
+
+という理解で良いのでしょうか？
+Refactory.Browser.ProtocolItemNavigatorPart&gt;&gt;iconFor:の一部だけを
+参照、メッセージ名を参考にして考えていますので、間違いがあるかも
+しれません。
+ほかの部分は追いかけきれていません。
+もし、間違いがあれば指摘していただきたいと思います。
+
+あと、濱崎さんに指摘されたことですが、確かにSmalltalkイディオムを
+全然進めることができていません。
+そのため、本に回答が載っていることなども質問してしまったかもしれ
+ません。
+まずは、Smalltalkイディオムを読み進め、そこで理解できない箇所が
+出てくれば投稿したいと思います。
+たぶん、すぐに出てくると思いますが。
+
+ありがとうございました。
+
+
+---
+NOBUTAKA Terauchi&lt;<A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">europa ＠ ps.inforyoma.or.jp</A>&gt;
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007190.html">[SML 7190] Re: SystemBrowserの&quot;▲▼&quot;について
+</A></li>
+	<LI>次の記事 <A HREF="007196.html">[SML 7196] Re: SystemBrowserの&quot;▲▼&quot;について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7192">[ 日付 ]</a>
+              <a href="thread.html#7192">[ スレッド ]</a>
+              <a href="subject.html#7192">[ 件名 ]</a>
+              <a href="author.html#7192">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

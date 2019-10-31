@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7902] Re: 第29回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207902%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIyORskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3C4D6E5822.1060505%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007901.html">
+   <LINK REL="Next"  HREF="007903.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7902] Re: 第29回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207902%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCQmgbKEIyORskQjJzGyhCU21hbGx0YWxr%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=%3C4D6E5822.1060505%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 7902] Re: 第29回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2011年 3月  2日 (水) 23:45:54 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007901.html">[SML 7901] Re: 第29回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007903.html">[SML 7903] Re: 第29回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7902">[ 日付 ]</a>
+              <a href="thread.html#7902">[ スレッド ]</a>
+              <a href="subject.html#7902">[ 件名 ]</a>
+              <a href="author.html#7902">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは、青木＠京都宇治です。
+
+今年度の最後の勉強会が完了しました。古風なブラウザをしつこく
+やっていましたが、ここで打ち止めにしたいと思います。いままで
+の成果をウェブにあげておきました。
+
+<A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto29">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto29</A>
+
+以下はマックユーザのための「VisualWorks NC」起動用ランチャー
+のプログラムをアップルスクリプトで書き下したものです。本日の
+勉強会で披露しました。
+
+tell application &quot;Finder&quot;
+    set aPath to get (path to me)
+    set aFolder to get (folder of aPath as Unicode text)
+    set aDirectory to get POSIX path of aFolder
+end tell
+set aShellScript to &quot;(cd &quot; &amp; aDirectory &amp; &quot;; ./visual.app/Contents/MacOS/visual ./visualnc.im 2&gt;/dev/null)&quot;
+do shell script aShellScript
+
+アップルスクリプトのエディタを用いてアプリケーションに仕立て
+あげ、それを仮想マシンと仮想イメージが存在するディレクトリに
+置くように設（しつら）えてあります。
+
+上記のアップルスクリプトを簡単に解説しておくと、この仕立て上
+げたアプリケーションが存在するディレクトリをファインダに頼ん
+で獲得し、そのディレクトリへ移動して仮想マシンに仮想イメージ
+を食べさせるシェルスクリプトを作り上げ、それを実行するという
+ものです。
+
+ダブルクリックしたら、ドックに格納しておくと便利だと思います。
+あくまでも雛型ですので、どうぞ皆さんで工夫をしてくださいませ。
+
+新年度（４月）からは新ネタでやってゆきたいと思います。新たに
+参加するには絶好のチャンスです！
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007901.html">[SML 7901] Re: 第29回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007903.html">[SML 7903] Re: 第29回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7902">[ 日付 ]</a>
+              <a href="thread.html#7902">[ スレッド ]</a>
+              <a href="subject.html#7902">[ 件名 ]</a>
+              <a href="author.html#7902">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

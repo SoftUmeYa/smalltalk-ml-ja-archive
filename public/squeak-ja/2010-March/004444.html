@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4444] drawOn中のエラーについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204444%5D%20%3D%3Fiso-2022-jp%3Fb%3FZHJhd09uGyRCQ2YkTiUoJWkbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004443.html">
+   <LINK REL="Next"  HREF="004445.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4444] drawOn中のエラーについて</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204444%5D%20%3D%3Fiso-2022-jp%3Fb%3FZHJhd09uGyRCQ2YkTiUoJWkbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 4444] drawOn中のエラーについて">itoh-private ＠ itolab.com
+       </A><BR>
+    <I>2010年 3月 22日 (月) 23:19:20 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004443.html">[Squeak-ja: 4443] 第18回Smalltalk勉強会のお知らせ
+</A></li>
+        <LI>次の記事 <A HREF="004445.html">[Squeak-ja: 4445] Re: drawOn中のエラーについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4444">[ 日付 ]</a>
+              <a href="thread.html#4444">[ スレッド ]</a>
+              <a href="subject.html#4444">[ 件名 ]</a>
+              <a href="author.html#4444">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山梨学院大学の伊藤です。
+
+いつも質問ばかりですみません。
+PluggableTextMorphを使ってコンソール（あるいはTranscript）のようなモーフを
+作っています。テキスト入力のたびに、入力文字列を追加するようにしています。
+たいがいうまくいくのですが、何度か（数回〜十数回）入力しているうちにエラー
+が発生して、モーフが赤く塗りつぶされた×印となってしまいます。
+
+エラーの発生するタイミングは不定期ですが、いつもエラー内容は同じようです。
+MultiNewParagraph(NewParagraph)のfastFindFirstLineSuchThat: lineBlock
+でインスタンス変数linesにsizeを送った時点で、sizeのレシーバがnilだといって
+エラーになるのですが、デバッガで調べてもちゃんと値は入っているし、インス
+ペクタ上でsizeを送ってもきちんと値が出ます。
+
+Mantisでは過去のsqueakのバージョンで同様のエラーが出た指摘があるのですが、
+特にその後フォローされていないようです。（し、同じものかもわかりません）
+
+どなたか回避策をお持ちの方はいらっしゃいませんでしょうか。
+また、赤いエラー画面を解除する方法ってないのでしょうか。
+
+よろしくお願いいたします。
+
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     4462 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20100322/ecc647fb/SqueakDebug.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20100322/ecc647fb/SqueakDebug.obj</A>
+-------------- next part --------------
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004443.html">[Squeak-ja: 4443] 第18回Smalltalk勉強会のお知らせ
+</A></li>
+	<LI>次の記事 <A HREF="004445.html">[Squeak-ja: 4445] Re: drawOn中のエラーについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4444">[ 日付 ]</a>
+              <a href="thread.html#4444">[ スレッド ]</a>
+              <a href="subject.html#4444">[ 件名 ]</a>
+              <a href="author.html#4444">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

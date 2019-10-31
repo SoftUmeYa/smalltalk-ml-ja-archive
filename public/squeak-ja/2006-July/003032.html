@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3032] Re: Wiki としての  SuperSwiki
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203032%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgIFN1cGVyU3dpa2k%3D%3F%3D&In-Reply-To=20060708073650.6929.qmail%40web2915.mail.tnz.yahoo.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003031.html">
+   <LINK REL="Next"  HREF="003033.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3032] Re: Wiki としての  SuperSwiki</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203032%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgIFN1cGVyU3dpa2k%3D%3F%3D&In-Reply-To=20060708073650.6929.qmail%40web2915.mail.tnz.yahoo.co.jp"
+       TITLE="[Squeak-ja: 3032] Re: Wiki としての  SuperSwiki">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2006年 7月  8日 (土) 19:12:46 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003031.html">[Squeak-ja: 3031] Wiki としての SuperSwiki
+</A></li>
+        <LI>次の記事 <A HREF="003033.html">[Squeak-ja: 3033]  Re: Wiki としての  SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3032">[ 日付 ]</a>
+              <a href="thread.html#3032">[ スレッド ]</a>
+              <a href="subject.html#3032">[ 件名 ]</a>
+              <a href="author.html#3032">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+
+&gt;<i> -----
+</I>&gt;<i> Swikiには、プラグインの仕組みは、ありますでしょうか。
+</I>&gt;<i> また、それはどのようなものでしょうか。
+</I>&gt;<i> -----
+</I>
+Swikiにはいくつかの派生系があってややこしくなっています。
+
+-旧Swiki
+ もはや古くほとんど使われません。しかしPluggable Web Serverというものの上で
+ 動いており、簡易なプラグインの仕組みのようなものはありました。
+ 
+-ComSwiki
+ 現在もっとも広く使われているSqueakのWikiです。ComancheというWebサーバの上で
+ 動いています。もともとプラグインの仕組みはありませんでしたが、バージョン1.5
+ からプラグインタグをサポートするようになっています。
+ 
+ <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002773.html">http://www.smalltalk.jp/pipermail/squeak-ja/2005-December/002773.html</A>
+ 
+正確にSwikiと呼べるのはこれだけです。SuperSwikiと混乱されてしまっている
+ようですので、そちらも解説しておきます。
+
+-SuperSwiki
+ ComSwikiに、eToysプロジェクトのアップロード/閲覧機能などを付け加えたもの。
+ WikiというよりはWikiの上で動いているアプリです。
+
+-SuperSwiki2
+ SuperSwikiのクローン実装。プロジェクトのアップロード/閲覧にフォーカスし、
+ プロジェクトの自動分類、バックアップ、複数サイトのマージ、RSS配信など
+ 便利な機能を追加したもの。SuperSwikiにおいてWikiを使う人はあまりいなかった
+ ので、代わりに掲示板システムを搭載しています。
+
+ご質問の意図は、Squeak上のWikiで、プラグインの仕組みをサポートしたものがあるか
+ととらえて良いかと思いますが、そうすると正直Swikiシリーズは時代遅れです。
+
+いまはPierという全く新しいWikiがSqueakで作られつつあります。そちらが
+おそらくイメージされているものにもっとも近いでしょう。
+
+ここの動画を見ると、どんなものか、概要がつかめると思います。
+<A HREF="http://www.lukas-renggli.ch/smalltalk/pier">http://www.lukas-renggli.ch/smalltalk/pier</A>
+
+横川さんの解説も参考になるかと思います。
+<A HREF="http://yengawa.homedns.org:8888/YengawaWiki/30">http://yengawa.homedns.org:8888/YengawaWiki/30</A>
+
+Pierの欠点としては、「いまだalphaで動作が安定しない」「野望が高すぎて
+ライブラリが巨大」というのがあります。
+
+私は個人的にはもっと軽量で、かつプラグインもサポートしたWikiを作りたく
+思っています。それはScallionと呼ばれる予定です。
+
+では。
+
+ 
+&gt;<i> Wikiクローンの一つであるWifkyにはWifkyページとして
+</I>&gt;<i> 書かれたスクリプト(Perlですが)を、実行できるプラグイン
+</I>&gt;<i> があります。
+</I>&gt;<i> 
+</I>&gt;<i> ((perl ページ名 引数1 引数2 …))
+</I>&gt;<i> 
+</I>&gt;<i> WikiはWebブラウザ上でページを編集・作成できるツールです
+</I>&gt;<i> ので、
+</I>&gt;<i> 上のプラグインを使えば、プラグインの開発・編集も
+</I>&gt;<i> Webブラウザ上でできるという、優れものです。
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://wifky.sourceforge.jp/cgi-bin/index.cgi?p=(2006.06.17">http://wifky.sourceforge.jp/cgi-bin/index.cgi?p=(2006.06.17</A>)+%A5%DA%A1%BC%A5%B8%C6%E2%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8%BC%C2%B9%D4%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3%A4%F2%B8%F8%B3%AB%A4%B7%A4%DE%A4%B7%A4%BF%A1%A3
+</I>&gt;<i> <A HREF="http://wifky.sourceforge.jp/cgi-bin/index.cgi?p=%5Bplugin%5D+%A5%DA%A1%BC%A5%B8%C6%E2%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8%BC%C2%B9%D4">http://wifky.sourceforge.jp/cgi-bin/index.cgi?p=%5Bplugin%5D+%A5%DA%A1%BC%A5%B8%C6%E2%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8%BC%C2%B9%D4</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 一見それだけの機能ですが、この機能は、
+</I>&gt;<i> Webブラウザ上で多くの人が開発に関与できるという点で、
+</I>&gt;<i> 『アプリケーションの協調的な促成開発』
+</I>&gt;<i>  &quot;Collaborative RAD&quot; ができる可能性を
+</I>&gt;<i> 示唆していると考えています。
+</I>&gt;<i> 
+</I>&gt;<i> ---
+</I>&gt;<i> 稼動中のシステムの拡張・変更もそのシステム上で行う
+</I>&gt;<i> システムといえば、Squeakもそうですね。
+</I>&gt;<i> SuperSwikiには上のようなプラグインがあるとすれば、
+</I>&gt;<i> もっと先進しているのではないか、と思いますが、、、
+</I>&gt;<i> いかがでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> よろしければ、教えてください。
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> --------------------------------------
+</I>&gt;<i> Let's start Yahoo! Auction  -  Free Campaign Now!
+</I>&gt;<i> <A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+</I>
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003031.html">[Squeak-ja: 3031] Wiki としての SuperSwiki
+</A></li>
+	<LI>次の記事 <A HREF="003033.html">[Squeak-ja: 3033]  Re: Wiki としての  SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3032">[ 日付 ]</a>
+              <a href="thread.html#3032">[ スレッド ]</a>
+              <a href="subject.html#3032">[ 件名 ]</a>
+              <a href="author.html#3032">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

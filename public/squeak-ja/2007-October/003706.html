@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3706] Re: Unix用のリクエストいくつか
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203706%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVuaXgbJEJNUSROJWobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lKCU5JUgkJCQvJEQkKxsoQg%3D%3D%3F%3D&In-Reply-To=JO200710141835045.20654593%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003668.html">
+   <LINK REL="Next"  HREF="003710.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3706] Re: Unix用のリクエストいくつか</H1>
+    <B>Sho Yoshida</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203706%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVuaXgbJEJNUSROJWobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lKCU5JUgkJCQvJEQkKxsoQg%3D%3D%3F%3D&In-Reply-To=JO200710141835045.20654593%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3706] Re: Unix用のリクエストいくつか">newapplesho ＠ gmail.com
+       </A><BR>
+    <I>2007年 10月 22日 (月) 18:00:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003668.html">[Squeak-ja: 3668] Unix用のリクエストいくつか
+</A></li>
+        <LI>次の記事 <A HREF="003710.html">[Squeak-ja: 3710] Re: Unix用のリクエストいくつか
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3706">[ 日付 ]</a>
+              <a href="thread.html#3706">[ スレッド ]</a>
+              <a href="subject.html#3706">[ 件名 ]</a>
+              <a href="author.html#3706">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>吉田　翔です．
+
+FedoraCore7とUtuntu6.10でVMを使ってみたところ， 
+「あ」を連続で11回打った後に「Enter」をするとエラー 
+がでてしまいました．
+さらに一度エラーがあると日本語入力ができなくなってしまいます．
+
+対処方法がわからないので教えていただけないでしょうか．
+情報として何を渡せばいいのかわからないので，Debug.logをそ 
+のまま添付します．
+
+よろしくお願いいたします．
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: SqueakDebug.log
+型:         application/octet-stream
+サイズ:     2414 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071022/ff2091e1/SqueakDebug.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20071022/ff2091e1/SqueakDebug.obj</A>
+-------------- next part --------------
+
+On 2007/10/14, at 18:35, Masashi Umezawa wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;<i> 2005J3のリリースの際に、もう一つ入れて欲しいパッチがあります。
+</I>&gt;<i>
+</I>&gt;<i> Unix(Linux,BSD)環境で全画面表示を行った際にIMのフォーカ 
+</I>&gt;<i> スが失われてしまう
+</I>&gt;<i> 問題のパッチです。
+</I>&gt;<i>
+</I>&gt;<i> 画面が狭い環境ではWebブラウザからプロジェクト起動後、全 
+</I>&gt;<i> 画面表示に切り替える
+</I>&gt;<i> 場合もあるかと思います。そのときに現状では日本語が入力できなく 
+</I>&gt;<i> なってしまい
+</I>&gt;<i> 非常に不便です。
+</I>&gt;<i>
+</I>&gt;<i> もともと廣島さんがパッチを書かれたもので、これまで何度か話題に 
+</I>&gt;<i> なっています。
+</I>&gt;<i> <A HREF="http://www.smalltalk.jp/Squeak-ja/archives/">http://www.smalltalk.jp/Squeak-ja/archives/</A> 
+</I>&gt;<i> lists.squeakfoundation.org/squeak-ja/2004-June/001636.html
+</I>&gt;<i> <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003111.html">http://www.smalltalk.jp/pipermail/squeak-ja/2006-September/003111.html</A>
+</I>&gt;<i>
+</I>&gt;<i> ちょっとだけ改訂した版を添付します。(CompositionWindowFocusFix. 
+</I>&gt;<i> 1.cs)
+</I>&gt;<i> 基本的な中身は変わっておらず、インデントを整理し、代入 
+</I>&gt;<i> を:=に変換しただけ
+</I>&gt;<i> のものです。
+</I>&gt;<i>
+</I>&gt;<i> さらに、廣島さんのSqueakImmX11Plugin4d.tar.gzを適用し、 
+</I>&gt;<i> コンパイル
+</I>&gt;<i> したLinux用のVMを下記に置きました。
+</I>&gt;<i> <A HREF="ftp://swikis.ddo.jp/SqueakDevJa/linux/SqueakVM3.9-8-JPatched.tgz">ftp://swikis.ddo.jp/SqueakDevJa/linux/SqueakVM3.9-8-JPatched.tgz</A>
+</I>&gt;<i>
+</I>&gt;<i> 現状のコンパイル済みLinux用VM(3.7-7ベース)を 
+</I>&gt;<i> 置き換えるものとして
+</I>&gt;<i> 考えています。
+</I>&gt;<i> <A HREF="http://squeakland.jp/plugin/installers/ux.html">http://squeakland.jp/plugin/installers/ux.html</A>
+</I>&gt;<i>
+</I>&gt;<i> Linux使いの方は、上記VMとCompositionWindowFocusFix. 
+</I>&gt;<i> 1.csの両方をお試し
+</I>&gt;<i> いただけると助かります。(当方ではVine 4.1とFedora  
+</I>&gt;<i> Core 6で確認しています)
+</I>&gt;<i>
+</I>&gt;<i> ではでは。
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa]&lt;CompositionWindowFocusFix.1.cs&gt;
+</I>
+- - - -
+Sho Yoshida
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003668.html">[Squeak-ja: 3668] Unix用のリクエストいくつか
+</A></li>
+	<LI>次の記事 <A HREF="003710.html">[Squeak-ja: 3710] Re: Unix用のリクエストいくつか
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3706">[ 日付 ]</a>
+              <a href="thread.html#3706">[ スレッド ]</a>
+              <a href="subject.html#3706">[ 件名 ]</a>
+              <a href="author.html#3706">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

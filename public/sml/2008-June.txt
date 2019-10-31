@@ -1,0 +1,197 @@
+From nisinaka ＠ sra.co.jp  Thu Jun 12 15:28:38 2008
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Mon Jun 16 11:49:35 2008
+Subject: [SML 7362] [ANNOUNCE] Jun for Java (Jun701)
+Message-ID: <20080612152409.19B1.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン701を公開します。
+
+  バージョン700からの主な変更点は、以下の通りです。
+
+    * (modification) 総称(Generics)を導入し、不要なキャストを削除
+      しました。
+
+    * (bug fix) JunFileNavigator のバグを修正しました。ルートディ
+      レクトリのサブディレクトリをカレントファイルとして指定する
+      と、例外を発生する場合がありました。
+
+    * (new feature) JunPairObject と JunTrioObject は、それぞれ2
+      つ/3つのオブジェクトを要素として持つための総称クラスです。
+      これまで Object[] として扱ってきたものを置き換えることによ
+      り、不要なキャストを無くすことができます。
+
+    * (new feature) JunAbstractDialog は、accept/cancel のボタン
+      を持つダイアログのための抽象クラスです。
+
+    * (incompatibility) レンダリングモードを指定するオプションは
+      不要になったため、削除しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Jun 14 04:50:54 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Jun 16 11:56:07 2008
+Subject: [SML 7363] ブラックブック
+Message-ID: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+
+ＳＭＬの皆さんへ
+
+青木＠京都宇治です。お待たせをしています本、580ページで、CD-
+ROM付属、4,200円+税。装丁デザイン（本の表紙）も決まりました。
+黒地に金色の帯になります。
+
+出版社（日経BP社）としては、コンピュータ書でない雰囲気を醸し
+出したい、内容的にもそんなフツーの本ではない、徹底的に荘厳に、
+というライトモチーフだそうです。
+
+Smalltalk の本はブルーブックやオレンジブックというように、色
+で呼ばれてきた経緯がありますので、どうぞ「ブラックブック」と
+呼んでくださいませ。いよいよ発刊が迫ってきました！請うご期待。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From shinsahara ＠ shinsahara.com  Sat Jun 14 09:33:44 2008
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Mon Jun 16 11:57:48 2008
+Subject: [SML 7364] Re: ブラックブック
+In-Reply-To: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+Message-ID: <59C9854D-67E3-4666-AE6E-51BFA50F4D75@shinsahara.com>
+
+佐原です。
+
+On 2008/06/14, at 4:50, AOKI Atsushi wrote:
+
+> ＳＭＬの皆さんへ
+>
+> 青木＠京都宇治です。お待たせをしています本、580ページ 
+> で、CD-
+> ROM付属、4,200円+税。装丁デザイン（本の表紙）も 
+> 決まりました。
+> 黒地に金色の帯になります。
+
+京都まで買いに行きます :-)
+
+> 出版社（日経BP社）としては、コンピュータ書でない雰囲 
+> 気を醸し
+> 出したい、内容的にもそんなフツーの本ではない、徹底的に荘厳に、
+> というライトモチーフだそうです。
+>
+> Smalltalk の本はブルーブックやオレンジブックというように、色
+> で呼ばれてきた経緯がありますので、どうぞ「ブラックブック」と
+> 呼んでくださいませ。いよいよ発刊が迫ってきました！請うご期待。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+>
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+From nishis ＠ zephyr.dti.ne.jp  Sat Jun 14 11:29:02 2008
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Mon Jun 16 11:57:48 2008
+Subject: [SML 7365] Re: ブラックブック
+In-Reply-To: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+Message-ID: <48532CEE.3010307@zephyr.dti.ne.jp>
+
+on 08.6.14 4:50 AM, AOKI Atsushi wrote:
+> Smalltalk の本はブルーブックやオレンジブックというように、色
+> で呼ばれてきた経緯がありますので、どうぞ「ブラックブック」と
+> 呼んでくださいませ。いよいよ発刊が迫ってきました！請うご期待。
+
+カバー画像見ましたが， Starless and Book of Black ですね〜．
+なんとなくゴスっぽい雰囲気が．
+
+♪バカボ〜ン空手バカボ〜ン♪
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+From kuwatani ＠ akademia.co.jp  Mon Jun 23 10:46:17 2008
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Wed Jun 25 18:05:02 2008
+Subject: [SML 7366] 緊急メンテナンス工事のお知らせ
+Message-ID: <485F0069.6060507@akademia.co.jp>
+
+SMLにご参加のみなさま
+
+メーリングリストの管理をしている 桑谷 です．
+
+下記日程で、当社が使用しているプロバイダー内でネットワーク工事が
+行われることになりました。
+
+ご迷惑をお掛けいたしますが、ご理解頂きますようお願い致します。
+
+　　　　　　　　　　　　　　　  記
+
+
+１.日　時： 2008年6月26日(木)　AM6:30 〜 AM8:30
+　　　　　　　
+２.内 容：ネットワーク工事
+
+３.対 象：SMLメーリングリスト
+
+４.影 響：工事時間中、サービスのご利用ができない場合があります。
+
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　        以上
+
+-- 
+kuwatani@akademia.co.jp
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jun 25 19:08:17 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jun 26 02:38:29 2008
+Subject: [SML 7367] Re: ブラックブック
+In-Reply-To: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+References: <4852CF9E.4020906@cc.kyoto-su.ac.jp>
+Message-ID: <48621911.7020603@cc.kyoto-su.ac.jp>
+
+青木＠京都産業大学です。
+
+発売日が７月２８日（月）に決まりました。あと１ヶ月あまりです。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+> ＳＭＬの皆さんへ
+> 
+> 青木＠京都宇治です。お待たせをしています本、580ページで、CD-
+> ROM付属、4,200円+税。装丁デザイン（本の表紙）も決まりました。
+> 黒地に金色の帯になります。
+> 
+> 出版社（日経BP社）としては、コンピュータ書でない雰囲気を醸し
+> 出したい、内容的にもそんなフツーの本ではない、徹底的に荘厳に、
+> というライトモチーフだそうです。
+> 
+> Smalltalk の本はブルーブックやオレンジブックというように、色
+> で呼ばれてきた経緯がありますので、どうぞ「ブラックブック」と
+> 呼んでくださいませ。いよいよ発刊が迫ってきました！請うご期待。
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

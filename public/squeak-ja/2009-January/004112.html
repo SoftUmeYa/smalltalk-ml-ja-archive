@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4112] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204112%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLJE5GfEtcGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=2d5d52a80812302308r70c510e1p499b203581037ed%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="004113.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4112] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について</H1>
+    <B>yhousako</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204112%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjFTeW50aBskQiFLJE5GfEtcGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCOGxGfk5PJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=2d5d52a80812302308r70c510e1p499b203581037ed%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4112] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について">yhousako ＠ mx2.ttcn.ne.jp
+       </A><BR>
+    <I>2009年 1月  1日 (木) 02:16:49 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="004113.html">[Squeak-ja: 4113] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4112">[ 日付 ]</a>
+              <a href="thread.html#4112">[ スレッド ]</a>
+              <a href="subject.html#4112">[ 件名 ]</a>
+              <a href="author.html#4112">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>宝迫＠新年になってしまいましたです．
+（喪中につき、年頭のご挨拶は失礼させて頂いております）
+
+文字列の長さについて確認しました．いろいろ調べているうちに、年を越してし
+まいましたが、結論から言うと1文字でもダメです．
+
+【実験したこと】
+OSP基本パッケージv2でScratchSynthを起動し、保存（名前を付けて保存）をク
+リックして保存の窓を開きました．その上でファイル名を入力する欄を一度ク
+リックし、「a」キーを押して「あ」と出てエンターキーで確定しただけでも前
+回同様のエラーメッセージが表示されます．KNOPPIX Edu 7（5.1.1ベース）でも
+同じでした．
+
+同じことをKNOPPIX5.3.1やUbuntu8.10でやりましたが、こちらは問題ありません
+でした．
+
+機械を換えて、同じ実験をしてみましたが、結果も同じでした．KNOPPIX5.1.1と
+5.3.1の間には、これ以外にも様々な違いがあって、悩まされております．
+
+Kazuhiro ABE さんは書きました:
+&gt;<i> こんにちは、阿部です。
+</I>&gt;<i> 確認ありがとうございます。
+</I>&gt;<i> OSP基本パッケージv2の問題ですが、確定前の文字列を11文字以上入力していないでしょうか。この場合、私のUbuntu
+</I>&gt;<i> 8.10でも同じエラーが出ることを確認しています。
+</I>&gt;<i> これは3.7-7JPatchedの既知のバグです。
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html">http://www.smalltalk.jp/pipermail/squeak-ja/2007-October/003706.html</A>
+</I>&gt;<i> (イメージが違うのでエラーは違いますが原因は同じ)
+</I>&gt;<i> 
+</I>&gt;<i> とりあえずの対処法としては文節を短く区切って確定してもらうことになると思います。
+</I>&gt;<i> このバグを修正したバージョンを廣島さんが作ってくれているので、大島さんが作ってくれたパッチと合わせてScratchにも適用できないか調べてみます。
+</I>&gt;<i> 大島さん、4108で書かれていた「新しいVM」というのは具体的にはどれを指すのでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i>  //abee
+</I>&gt;<i> --
+</I>&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>
+------------------------------------------------------------------
+寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="004113.html">[Squeak-ja: 4113] Re: Linux版Scratch1.3（改め1.3.1Synth）の日本語入力について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4112">[ 日付 ]</a>
+              <a href="thread.html#4112">[ スレッド ]</a>
+              <a href="subject.html#4112">[ 件名 ]</a>
+              <a href="author.html#4112">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

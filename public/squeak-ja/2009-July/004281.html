@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4281] Re: swiki1.5でa  Primitive Has failed
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204281%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHN3aWtpMS41GyRCJEcbKEJh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FICBQcmltaXRpdmUgSGFzIGZhaWxlZA%3D%3D%3F%3D&In-Reply-To=uws6i4t05.wl%25yoshiki%40vpri.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004280.html">
+   <LINK REL="Next"  HREF="004282.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4281] Re: swiki1.5でa  Primitive Has failed</H1>
+    <B>&quot;土本 (Florian) 強</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204281%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHN3aWtpMS41GyRCJEcbKEJh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FICBQcmltaXRpdmUgSGFzIGZhaWxlZA%3D%3D%3F%3D&In-Reply-To=uws6i4t05.wl%25yoshiki%40vpri.org"
+       TITLE="[Squeak-ja: 4281] Re: swiki1.5でa  Primitive Has failed">&quot;土本 (Florian) 強
+       </A><BR>
+    <I>2009年 7月  9日 (木) 21:37:38 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004280.html">[Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed
+</A></li>
+        <LI>次の記事 <A HREF="004282.html">[Squeak-ja: 4282] Squeakの指導の件
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4281">[ 日付 ]</a>
+              <a href="thread.html#4281">[ スレッド ]</a>
+              <a href="subject.html#4281">[ 件名 ]</a>
+              <a href="author.html#4281">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>　土本です。
+　ちょっと時間を使って追いかけてみました。
+
+メール「[Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed」(2009/07/09 09:09) に於いて
+「Yoshiki Ohshima」 語りて曰く、
+
+Yoshiki&gt; &gt; String class(Behavior)&gt;&gt;basicNew:
+Yoshiki&gt; &gt; String class(Behavior)&gt;&gt;new;
+Yoshiki&gt; &gt; String(SequenceableCollection)&gt;&gt;copyFrom:to:
+Yoshiki&gt; &gt; XmlSwikiStorage&gt;&gt;loadPage:from:startingAt:
+Yoshiki&gt; &gt; 
+Yoshiki&gt; &gt; 　辺りからのエラーのようです。basicNew(&lt;primitive: 71&gt;)が正常に動かない
+Yoshiki&gt; &gt; 状況というとオブジェクトメモリが不足しているのでしょうか？
+Yoshiki&gt; 
+Yoshiki&gt;   プラットフォームによってはそうかもしれませんが、new: (new;ではないで
+Yoshiki&gt; すよね)でのエラーの場合、インデックスの計算が間違っていて負の数がnew:
+Yoshiki&gt; に渡っているということもありますね。やはり実際のデータと渡っている引数
+Yoshiki&gt; の値を見てみるのが良いのではないでしょうか。
+
+　具体的には、String&gt;&gt;copyFrom:to:する際にコピー先サイズがマイナスになっ
+ているためにprimitive:71に失敗しているようです。なぜこんな変な値になって
+いるかというと、
+
+---
+	t4 := t2 findString: '&lt;version date=&quot;' startingAt: t3.
+	t5 := t2 findString: '&quot; time=&quot;' staringAt: t4.
+---
+
+　として見ているため、「&lt;version date=&quot;」も「&quot; time=&quot;」もないページ(ファ
+イルが壊れているとか)でおかしな値になっているようです。
+　とりあえず、
+
+	swiki/&lt;wiki名&gt;/pages/*.xml
+
+　で、明らかに壊れているページのデータを補完してやることで解決しました。
+　なんというか……、Swikiは便利なんですがエラー処理甘いですね。
+
+　では。
+
+!
+土本(Florian)強 mailto: '&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">florian ＠ seagreen.ocn.ne.jp</A>&gt;'
+                blog:  '<A HREF="http://d.hatena.ne.jp/Florian/'">http://d.hatena.ne.jp/Florian/'</A>
+                webto:   '<A HREF="http://florianswiki.dyndns.org/Web/'">http://florianswiki.dyndns.org/Web/'</A>
+openInWorld. &quot;do it.&quot;
+!
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004280.html">[Squeak-ja: 4280] Re: swiki1.5でa  Primitive Has failed
+</A></li>
+	<LI>次の記事 <A HREF="004282.html">[Squeak-ja: 4282] Squeakの指導の件
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4281">[ 日付 ]</a>
+              <a href="thread.html#4281">[ スレッド ]</a>
+              <a href="subject.html#4281">[ 件名 ]</a>
+              <a href="author.html#4281">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

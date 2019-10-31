@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3048] Re: PluggableTextMorphをつまむ方法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203048%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZVRleHRNb3Jw%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaBskQiRyJEQkXiRgSn1LIRsoQg%3D%3D%3F%3D&In-Reply-To=BIEDLAGDKLHEABOHHEOHEEKFCBAA.kubo-o%40mbox.kyoto-inet.or.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003047.html">
+   <LINK REL="Next"  HREF="003043.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3048] Re: PluggableTextMorphをつまむ方法</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203048%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFBsdWdnYWJsZVRleHRNb3Jw%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FaBskQiRyJEQkXiRgSn1LIRsoQg%3D%3D%3F%3D&In-Reply-To=BIEDLAGDKLHEABOHHEOHEEKFCBAA.kubo-o%40mbox.kyoto-inet.or.jp"
+       TITLE="[Squeak-ja: 3048] Re: PluggableTextMorphをつまむ方法">koubo2006 ＠ yengawa.jpn.org
+       </A><BR>
+    <I>2006年 7月 13日 (木) 22:27:35 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003047.html">[Squeak-ja: 3047] Re: PluggableTextMorphをつまむ方法
+</A></li>
+        <LI>次の記事 <A HREF="003043.html">[Squeak-ja: 3043] 子供未来博への出展のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3048">[ 日付 ]</a>
+              <a href="thread.html#3048">[ スレッド ]</a>
+              <a href="subject.html#3048">[ 件名 ]</a>
+              <a href="author.html#3048">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+ちょこっと補足。
+
+鷲見さんのアイデアの実装例はこんな感じです。
+カードの周りに余白を作って、そこをつまめるようにしました。
+クラスは新しく定義してませんが、クラスを作ったときもレイアウトの方法は同
+じものが使えます。
+
+&gt;<i> あるいは、カードを a PluggableTextMorph だけではなく、a Rectangle-
+</I>&gt;<i> Morph のようなクリックしてピックアップできるタイプのモーフのサブ
+</I>&gt;<i> モーフとして a PlugableTextMorph を組み合わせた、複合モーフのクラスとして
+</I>&gt;<i> 新しく定義する…という方法もあるかもしれません。
+</I>
+----
+|<i> model field card |
+</I>model := ProcessBrowser new.
+model openAsMorph.
+
+field := PluggableTextMorph
+   on: model
+   text: #selectedMethod
+   accept: nil
+   readSelection: nil
+   menu: nil.
+field center: Point fromUser.
+card := BorderedMorph new.
+card layoutPolicy: ProportionalLayout new.
+card addMorph: field 
+	fullFrame: (LayoutFrame
+		fractions: (0 @ 0 corner: 1.0 @ 1.0)
+		offsets: (10 @ 10 corner: -10 @ -10)).
+card extent: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">100 ＠ 100.</A>
+card color: Color white.
+card openInWorld.
+
+----
+
+
+On Wed, 12 Jul 2006 22:19:55 +0900
+&quot;kubo-o&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kubo-o ＠ mbox.kyoto-inet.or.jp</A>&gt; wrote:
+
+&gt;<i> 鷲見さん、早速ありがとうございました。
+</I>&gt;<i> on:のはたらきについてはよく判りました。
+</I>&gt;<i> もう一つの方のことですが、a Rectangle-Morph のようなクリックしてピックアップ
+</I>&gt;<i> できるタイプのモーフでないと、PluggableTextMorphは直接にはmouseでつかめない
+</I>&gt;<i> のでしょうか。
+</I>&gt;<i> はじめにworld上でopenInHnadをやるときだけはつかめていますが。
+</I>&gt;<i> on:などの引数付きのPluggableTextMorphに、なにか他の引数を追加すれば、
+</I>&gt;<i> eventhandlingが使えるのでしょうか。
+</I>&gt;<i> 久保　道
+</I>&gt;<i> 
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>
+</I>&gt;<i> [mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>]On Behalf Of Masato Sumi
+</I>&gt;<i> Sent: Wednesday, July 12, 2006 5:20 PM
+</I>&gt;<i> To: Squeak discussion in Japanese
+</I>&gt;<i> Subject: [Squeak-ja: 3044] Re: PluggableTextMorphをつまむ方法
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 久保さん、ごきげんよう。鷲見です。
+</I>&gt;<i> 
+</I>&gt;<i> on: のところに挿入する引数は、このカード（a PluggableTextMorph）に
+</I>&gt;<i> 入力された内容を別のオブジェクト（モデルと呼ぶ）で管理しているときに
+</I>&gt;<i> それを当てはめます。たとえば、
+</I>&gt;<i> 
+</I>&gt;<i> | model field |
+</I>&gt;<i> model := ProcessBrowser new.
+</I>&gt;<i> model openAsMorph.
+</I>&gt;<i> 
+</I>&gt;<i> field := PluggableTextMorph
+</I>&gt;<i>    on: model
+</I>&gt;<i>    text: #selectedMethod
+</I>&gt;<i>    accept: nil
+</I>&gt;<i>    readSelection: nil
+</I>&gt;<i>    menu: nil.
+</I>&gt;<i> field center: Point fromUser.
+</I>&gt;<i> field openInWorld.
+</I>&gt;<i> 
+</I>&gt;<i> というスクリプトを評価して、クリックして指定した場所に a Pluggable-
+</I>&gt;<i> TextMorph を設置してから、同時に開くプロセスブラウザの右手のリスト
+</I>&gt;<i> から適当な項目を選んだときに起こることを観察してみてください。
+</I>&gt;<i> 
+</I>&gt;<i> この仕組みはカードを動かす目的とは直接関係ないので、たとえば、
+</I>&gt;<i> alt/cmd + ドラッグでの移動を使う…というのではダメでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> あるいは、カードを a PluggableTextMorph だけではなく、a Rectangle-
+</I>&gt;<i> Morph のようなクリックしてピックアップできるタイプのモーフのサブ
+</I>&gt;<i> モーフとして a PlugableTextMorph を組み合わせた、複合モーフのクラスとして
+</I>&gt;<i> 新しく定義する…という方法もあるかもしれません。
+</I>&gt;<i> 
+</I>&gt;<i> 06/07/12 に kubo-o&lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kubo-o ＠ mbox.kyoto-inet.or.jp</A>&gt; さんは書きました:
+</I>&gt;<i> &gt; handlesMouseDown:やmouseDown:を
+</I>&gt;<i> &gt; 作用させるにはどうすればよいのでしょうか。
+</I>&gt;<i> &gt; 上のon:selfの「selfを自分のクラスのinstanceで
+</I>&gt;<i> &gt; 置き換えるのかとも思うのですが、
+</I>&gt;<i> &gt; よく判っていません。
+</I>&gt;<i> &gt; そもそもon:はどういう機能を持つのでしょうか。
+</I>&gt;<i> &gt; どうか宜しくお願い致します。
+</I>&gt;<i> &gt; 久保　道
+</I>&gt;<i> 
+</I>&gt;<i> --
+</I>&gt;<i> Masato Sumi
+</I>
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2006 ＠ yengawa.jpn.org</A>&gt;
+    <A HREF="http://yengawa.com/">http://yengawa.com/</A>
+    ^self new!
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003047.html">[Squeak-ja: 3047] Re: PluggableTextMorphをつまむ方法
+</A></li>
+	<LI>次の記事 <A HREF="003043.html">[Squeak-ja: 3043] 子供未来博への出展のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3048">[ 日付 ]</a>
+              <a href="thread.html#3048">[ スレッド ]</a>
+              <a href="subject.html#3048">[ 件名 ]</a>
+              <a href="author.html#3048">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

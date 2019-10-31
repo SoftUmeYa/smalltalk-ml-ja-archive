@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3738] Re: 非 Morph  を ObjectsTool  へ追加する方法について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203738%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkhzGyhCIE1vcnBoICA%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJHIbKEIgT2JqZWN0c1Rvb2wgIBskQiRYREkyQyQ5GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJGtKfUshJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003737.html">
+   <LINK REL="Next"  HREF="003740.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3738] Re: 非 Morph  を ObjectsTool  へ追加する方法について</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203738%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkhzGyhCIE1vcnBoICA%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJHIbKEIgT2JqZWN0c1Rvb2wgIBskQiRYREkyQyQ5GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJGtKfUshJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3738] Re: 非 Morph  を ObjectsTool  へ追加する方法について">e-itoh ＠ ygu.ac.jp
+       </A><BR>
+    <I>2007年 10月 27日 (土) 22:41:57 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003737.html">[Squeak-ja: 3737] Re: 非 Morph を ObjectsTool へ追加する方法について
+</A></li>
+        <LI>次の記事 <A HREF="003740.html">[Squeak-ja: 3740] まだ未解決です。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3738">[ 日付 ]</a>
+              <a href="thread.html#3738">[ スレッド ]</a>
+              <a href="subject.html#3738">[ 件名 ]</a>
+              <a href="author.html#3738">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>伊藤です。
+
+阿部さん、こんばんは。
+早速アドバイスいただきありがとうございます。
+
+なるほど、Morph&gt;&gt;supplementaryPartsDescriptionsは見落としてい
+ました。
+Toolsではなく別のカテゴリを作りたかったのでMorphクラスをいじ
+らないとだめのようですね。
+
+#よく考えたらDrag and Dropも実装しようとすると、SystemWindow
+#ではダメなので、もういっそのことMorphでやり直した方がいいか
+#もと思い始めてきました。
+
+お忙しいところありがとうございました。
+
+--- &quot;Kazuhiro ABE&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>&gt; ---
+
+&gt;<i>阿部@新百合です。
+</I>&gt;<i>
+</I>&gt;<i>On Sat, 27 Oct 2007 21:26:36 +0900 (JST)
+</I>&gt;<i>&quot;Eiichiro Ito&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">e-itoh ＠ ygu.ac.jp</A>&gt; wrote:
+</I>&gt;&gt;<i>BrowserやWorkspaceのようにObjectsToolに登録する方法をご存じ
+</I>&gt;&gt;<i>の方がいらっしゃったら教えていただけませんでしょうか？
+</I>&gt;<i>
+</I>&gt;<i>ToolsカテゴリでよろしければクラスメソッドにregisterInFlapsRegistryを定義
+</I>&gt;<i>し、それを実行すれば登録されるようです(あと登録を解除する為のunloadも)。
+</I>&gt;<i>具体的な定義については、implementorsで他のクラスの実装例をご覧ください。
+</I>&gt;<i>もしTools以外にする場合は、Morph&gt;&gt;supplementaryPartsDescriptionsあたりを
+</I>&gt;<i>いじることになると思います。
+</I>&gt;<i>
+</I>&gt;<i> //abee
+</I>&gt;<i>--
+</I>&gt;<i>阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003737.html">[Squeak-ja: 3737] Re: 非 Morph を ObjectsTool へ追加する方法について
+</A></li>
+	<LI>次の記事 <A HREF="003740.html">[Squeak-ja: 3740] まだ未解決です。
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3738">[ 日付 ]</a>
+              <a href="thread.html#3738">[ スレッド ]</a>
+              <a href="subject.html#3738">[ 件名 ]</a>
+              <a href="author.html#3738">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

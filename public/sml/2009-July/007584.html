@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7584] Re: 第9回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207584%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCORskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A4A6318.10201%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007580.html">
+   <LINK REL="Next"  HREF="007585.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7584] Re: 第9回Smalltalk勉強会＠京都</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207584%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCORskQjJzGyhCU21hbGx0%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A4A6318.10201%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7584] Re: 第9回Smalltalk勉強会＠京都">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2009年 7月  2日 (木) 15:39:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007580.html">[SML 7580] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007585.html">[SML 7585] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7584">[ 日付 ]</a>
+              <a href="thread.html#7584">[ スレッド ]</a>
+              <a href="subject.html#7584">[ 件名 ]</a>
+              <a href="author.html#7584">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠京都上賀茂です。
+
+昨夜のSmalltalk勉強会@京都の報告をさせていただきます。テキス
+トの3.6を簡単に済ませて、山場の3.7の「ブロック」に入りました。
+
+ブロッククロージャが実行算法（アルゴリズム）と実行環境（コン
+テクスト）を閉包するものであることを、参加いただいた方々に得
+心していただけたように思います。
+
+勉強会で用いた特別資料をウェブ公開させていただきます。昨夜は、
+インスタンス・評価（引数無しの実行）・評価（引数付きの実行）・
+評価（引数の間引き実行）・評価（引数の間引き実行）を行いまし
+た。cull系のメッセージ群が目新しかったのではないでしょうか。
+
+<A HREF="http://www.cc.kyoto-su.ac.jp/atsushi/Programs/BlockClosure/index-j.html">http://www.cc.kyoto-su.ac.jp/atsushi/Programs/BlockClosure/index-j.html</A>
+
+この特別資料は、まだまだ加筆したいと思っていますので、今後に
+期待してくださいませ。
+
+また、濱崎さんより助太刀のプログラムを提示していただき、なお
+一層の理解と行解が進んだように思いますので、そのプログラムも
+濱崎さんに成り代わりまして私から紹介させていただきます。
+
+次のプログラムを実行すると、ブロックを調べるためのインスペク
+タが開いてきます。そのインスペクタのウィンドウの下部ペインに
+はself valueと入力されているはずです。
+
+|<i> aValue aBlock |
+</I>aValue := 2.
+aBlock :=
+        [| a b c |
+        a := b := c := aValue.
+        (a * b * c) yourself].
+anInspector := Tools.Trippy.InspectorShell new.
+((anInspector class classPool)
+    at: #EvaluationPaneWasLastShown put: true;
+    at: #SharedTextHolder) value: 'self value'.
+anInspector
+    open;
+    inspect: aBlock
+
+では、self valueを評価（実行）してください。8と応答されると思
+います。
+
+その次に、下記のプログラムを実行してください。トランスクリプ
+トにはProgram finished.と出力されます。
+
+|<i> aValue aBlock |
+</I>aValue := 2.
+aBlock :=
+        [| a b c |
+        a := b := c := aValue.
+        (a * b * c) yourself].
+anInspector := Tools.Trippy.InspectorShell new.
+((anInspector class classPool)
+    at: #EvaluationPaneWasLastShown put: true;
+    at: #SharedTextHolder) value: 'self value'.
+anInspector
+    open;
+    inspect: aBlock.
+aValue := 3.
+Transcript
+    clear;
+    nextPutAll: 'Program finished.'
+
+そして、同様にインスペクタの中でself valueを評価してください。
+今度は27と応答されると思います。
+
+実行が完了しているはずのプログラムの実行環境をブロックが保持
+していることがお分かりですか。
+
+それが証拠に、最初のプログラムで、(a * b * c) yourselfの前に
+^をつけて、同じことをしてみると、アラート（ウォークバック）が
+現れます。戻るべきコンテクストが無いんだけど…、と言われます。
+
+|<i> aValue aBlock |
+</I>aValue := 2.
+aBlock :=
+        [| a b c |
+        a := b := c := aValue.
+        ^(a * b * c) yourself].
+anInspector := Tools.Trippy.InspectorShell new.
+((anInspector class classPool)
+    at: #EvaluationPaneWasLastShown put: true;
+    at: #SharedTextHolder) value: 'self value'.
+anInspector
+    open;
+    inspect: aBlock
+
+実行算法（アルゴリズム）と実行環境（コンテクスト）の双方を閉
+包するブロッククロージャは、様々な常識的な定義の再考察を迫っ
+てきます。たとえば、一時変数の説明の言い回しも考え直さねばな
+らんなぁ〜、とね。
+
+来月はブロッククロージャ第２段として、プログラム制御構造を核
+にして行いたいと思います。分岐・繰り返し・再帰・巻き戻し・例
+外はもとより、並行・約束・継続までをやりたいと目論んでいます。
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007580.html">[SML 7580] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007585.html">[SML 7585] Re: 第9回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7584">[ 日付 ]</a>
+              <a href="thread.html#7584">[ スレッド ]</a>
+              <a href="subject.html#7584">[ 件名 ]</a>
+              <a href="author.html#7584">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

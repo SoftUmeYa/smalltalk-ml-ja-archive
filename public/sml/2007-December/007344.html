@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7344] Re: 合計ぜすに平均を
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207344%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjlnN1ckPCQ5JEtKPzZRJHIbKEI%3D%3F%3D&In-Reply-To=475F794B.1070702%40sra.co.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007343.html">
+   <LINK REL="Next"  HREF="007345.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7344] Re: 合計ぜすに平均を</H1>
+    <B>Shin Sahara from Home</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207344%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjlnN1ckPCQ5JEtKPzZRJHIbKEI%3D%3F%3D&In-Reply-To=475F794B.1070702%40sra.co.jp"
+       TITLE="[SML 7344] Re: 合計ぜすに平均を">shinsahara ＠ shinsahara.com
+       </A><BR>
+    <I>2007年 12月 13日 (木) 15:27:39 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007343.html">[SML 7343] Re: 合計ぜすに平均を
+</A></li>
+        <LI>次の記事 <A HREF="007345.html">[SML 7345] Jun758 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7344">[ 日付 ]</a>
+              <a href="thread.html#7344">[ スレッド ]</a>
+              <a href="subject.html#7344">[ 件名 ]</a>
+              <a href="author.html#7344">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>佐原です。
+
+On 2007/12/12, at 15:01, AOKI Atsushi wrote:
+
+&gt;<i> 青木＠ＳＲＡ先端技術研究所です。
+</I>&gt;<i>
+</I>&gt;<i> 一見、簡単そうな「平均（相加平均）を求める」プログラムを考え
+</I>&gt;<i> てみましょう。実は大変に奥深い内容を含みます。皆さんのプログ
+</I>&gt;<i> ラミングに対する話題のネタにしていただければ幸いです。
+</I>&gt;<i>
+</I>&gt;<i> たとえば、９９９人の成績（百点満点）の平均を求めるプログラム
+</I>&gt;<i> なんて、誰にでも作れそうですが、はたして本当でしょうか？
+</I>&gt;<i>
+</I>&gt;<i> まず、９９９人の成績の仮データを生成するところが難しいでしょ。
+</I>&gt;<i> 乱数を使えば、なんとかなりそうですが、一様分布しか得られない
+</I>&gt;<i> ことが多いはず。実際には正規分布しますもん。正規分布した仮の
+</I>&gt;<i> 成績データを即座に作り出せるプログラマが少ないですよね。
+</I>&gt;<i>
+</I>&gt;<i> それに、平均を求めるのに、９９９人の成績を合計して、人数で割
+</I>&gt;<i> る、なんてことをしたら、それこそペケ（平均プログラマ以下）。
+</I>
+でも、1 / numberOfPeople　って、結局、全体を人数で割る 
+ことに変わりないような気がするのですが...
+
+私が作ったVDM++のライブラリでは、以下のようにペケしていま 
+す :-)
+もちろん、こうした方が「証明が簡単なんだもん」という言い訳が 
+あります。
+
+--列sの要素の平均を求める
+static public 平均を得る[@型]: seq of @型 -&gt;  [real]
+平均を得る(列) == if 列 = [] then nil else  
+平均を得る補助関数[@型](0)(0)(列);
+
+static 平均を得る補助関数[@型] : @型 -&gt; @型 -&gt;  
+seq of @型 -&gt; real
+平均を得る補助関数(合計)(要素数)(列) ==
+	cases 列 :
+	[先頭] ^ 後続列	-&gt; 平均を得る補助関数[@ 
+型](合計 + 先頭)(要素数 + 1)(後続列),
+	[]			-&gt; 合計 / 要素数
+	end;
+
+以上。
+
+	Σ忘年会＋宴会 = 99.2kg
+
+&gt;<i> 合計を使わないこと、９９９人も仮であり、人数はこれからもどん
+</I>&gt;<i> どん増えて、合計は桁あふれする恐れがあること、それでも即時に
+</I>&gt;<i> 平均を応答できなければならないこと、これらを満たすプログラム
+</I>&gt;<i> （平均というオブジェクト）の作成です。
+</I>&gt;<i>
+</I>&gt;<i> 末尾に完全なプログラム（Smalltalk らしいメタなプログ 
+</I>&gt;<i> ラム）を
+</I>&gt;<i> 添付しておきますが、要と記すと以下のようになります。
+</I>&gt;<i>
+</I>&gt;<i> | normalDistribution numberOfPeople averageValue resultValue |
+</I>&gt;<i> normalDistribution := JunNormalDistribution mean: 50 deviation: 15.
+</I>&gt;<i> numberOfPeople := 0.
+</I>&gt;<i> averageValue := 0.
+</I>&gt;<i> 999 timesRepeat:
+</I>&gt;<i>        [resultValue := 0 max: (normalDistribution next min: 100).
+</I>&gt;<i>        numberOfPeople := numberOfPeople + 1.
+</I>&gt;<i>        averageValue := averageValue + ((resultValue - averageValue)  
+</I>&gt;<i> * (1 / numberOfPeople))].
+</I>&gt;<i> ^averageValue
+</I>&gt;<i>
+</I>&gt;<i> 平均５０点で偏差１５の正規分布した仮の成績データをこしらえな
+</I>&gt;<i> がら、合計をすることなく、平均を計算しています。多倍長整数演
+</I>&gt;<i> 算、分数、そして、浮動小数点ではない固定小数点数、などが具備
+</I>&gt;<i> されたオブジェクト指向プログラミング言語ならではですね。
+</I>&gt;<i>
+</I>&gt;<i> 新たな成績（resultValue）を加えたときの新たな平均と 
+</I>&gt;<i> は、その成
+</I>&gt;<i> 績の昔の平均からのズレ（resultValue - averageValue） 
+</I>&gt;<i> に対して
+</I>&gt;<i> 影響力（1 / numberOfPeople）を乗じたものを、昔の平均 
+</I>&gt;<i> に加えた
+</I>&gt;<i> ものである、というところにあります。
+</I>&gt;<i>
+</I>&gt;<i> 多くの人の中で一人だけ突出しても、その影響は大したことないの
+</I>&gt;<i> が明解です。また、総数を２とした特殊な場合、足して２で割れば
+</I>&gt;<i> いいことも導出されます。
+</I>&gt;<i>
+</I>&gt;<i> ３０、５０、７０、９０、・・・、と来たとき、私たちはいちいち
+</I>&gt;<i> 合計して総数で割って平均なんか求めていないのよねぇ〜。突出を
+</I>&gt;<i> 演出したい（自分の影響力を出したい）のに、衆（多勢）を頼むな
+</I>&gt;<i> んて可笑し過ぎますぅ〜。
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i> R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> | aClass normalDistribution averageObject |
+</I>&gt;<i> aClass := Smalltalk.Jun
+</I>&gt;<i>            defineClass: #JunAverageObject
+</I>&gt;<i>            superclass: #{Jun.JunAbstractObject}
+</I>&gt;<i>            indexedType: #none
+</I>&gt;<i>            private: false
+</I>&gt;<i>            instanceVariableNames: 'numberOfPeople averageValue '
+</I>&gt;<i>            classInstanceVariableNames: ''
+</I>&gt;<i>            imports: ''
+</I>&gt;<i>            category: 'Jun-Goodies-Misc'.
+</I>&gt;<i> aClass
+</I>&gt;<i>    compile: 'initialize
+</I>&gt;<i>    super initialize.
+</I>&gt;<i>    numberOfPeople := 0.
+</I>&gt;<i>    averageValue := 0'
+</I>&gt;<i>        classified: 'initialize-release' asSymbol;
+</I>&gt;<i>    compile: 'value
+</I>&gt;<i>    ^averageValue'
+</I>&gt;<i>        classified: 'accessing' asSymbol;
+</I>&gt;<i>    compile: 'add: resultValue
+</I>&gt;<i>    numberOfPeople := numberOfPeople + 1.
+</I>&gt;<i>    averageValue := averageValue + ((resultValue - averageValue) *  
+</I>&gt;<i> (1 / numberOfPeople))'
+</I>&gt;<i>        classified: 'adding' asSymbol.
+</I>&gt;<i> (Kernel.Parcel parcelNamed: 'Jun') addClass: aClass.
+</I>&gt;<i> (Store.Registry packageNamed: 'Jun-Goodies-Misc')  
+</I>&gt;<i> addEntiretyOfClass: aClass.
+</I>&gt;<i>
+</I>&gt;<i> [normalDistribution := JunNormalDistribution mean: 50 deviation: 15.
+</I>&gt;<i> averageObject := aClass new.
+</I>&gt;<i> 999 timesRepeat: [averageObject add: (0 max: (normalDistribution  
+</I>&gt;<i> next min: 100))].
+</I>&gt;<i> ^averageObject value]
+</I>&gt;<i>        ensure: [aClass removeFromSystem]
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i>
+</I>
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: <A HREF="http://www.akademia.co.jp/mailman/listinfo/sml">ss ＠ shinsahara.com</A>    <A HREF="http://shinsahara.com">http://shinsahara.com</A>
+Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007343.html">[SML 7343] Re: 合計ぜすに平均を
+</A></li>
+	<LI>次の記事 <A HREF="007345.html">[SML 7345] Jun758 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7344">[ 日付 ]</a>
+              <a href="thread.html#7344">[ スレッド ]</a>
+              <a href="subject.html#7344">[ 件名 ]</a>
+              <a href="author.html#7344">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

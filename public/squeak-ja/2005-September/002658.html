@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2658] SmallWiki1 日本語テスト
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202658%5D%20%3D%3Fiso-2022-jp%3Fb%3FU21hbGxXaWtpMSAbJEJGfEtcGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCOGwlRiU5JUgbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002662.html">
+   <LINK REL="Next"  HREF="002664.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2658] SmallWiki1 日本語テスト</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202658%5D%20%3D%3Fiso-2022-jp%3Fb%3FU21hbGxXaWtpMSAbJEJGfEtcGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCOGwlRiU5JUgbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2658] SmallWiki1 日本語テスト">koubo2005 ＠ yengawa.jpn.org
+       </A><BR>
+    <I>2005年 9月 26日 (月) 18:26:12 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002662.html">[Squeak-ja: 2662] Re: 教えてください
+</A></li>
+        <LI>次の記事 <A HREF="002664.html">[Squeak-ja: 2664] 「すくすくスクイーク」公開のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2658">[ 日付 ]</a>
+              <a href="thread.html#2658">[ スレッド ]</a>
+              <a href="subject.html#2658">[ 件名 ]</a>
+              <a href="author.html#2658">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+最近いくつかの重要サイトでも使われはじめているSamllWiki1ですが、日本語が
+使えなくて残念に思っていた人も多いと思います。
+そこでSmallWiki1 for Squeakでも日本語を使えるようにしました。Charsetを設
+定できるようにした本格派(?)です。
+こんな感じ。。。
+<A HREF="http://yengawa.homedns.org:8888/YengawaWiki/uploads/15/SW1-Charset-View.png">http://yengawa.homedns.org:8888/YengawaWiki/uploads/15/SW1-Charset-View.png</A>
+
+
+まだほとんどテストしていないので、興味ある方はぜひインストールして試して
+みてください。
+ご協力お願いします。
+
+
+試し方
+------
+まだCharset版はSqueakMapにあがっていないので、次の手順でおねがいします。
+ベースイメージはSqueak3.8です(3.7以前ではインストールできません)。
+<A HREF="http://ftp.squeak.org/3.8/win/Squeak3.8-current-win-full.zip">http://ftp.squeak.org/3.8/win/Squeak3.8-current-win-full.zip</A>
+
+1. Squeakを立ち上げ、SqueakMapから現行のSmallWikiをインストール。
+SqueakMap Package Loarderでネットワークから最新版(0.9.53)をインストール
+する。
+途中で出るダイアログには次のもの以外は「Ok」を選択。
+「load old dependency KomService-gk.1 ?」→「No」
+
+2. Charestが使えるバージョンをロードする。
+<A HREF="http://www.squeaksource.com/smallwiki1/SmallWiki-chbu-0.9.53-sam.23.mcz">http://www.squeaksource.com/smallwiki1/SmallWiki-chbu-0.9.53-sam.23.mcz</A>
+をIEなどでダウンロードして、Squeakの画面へドロップし「load version」を選
+択。
+
+3. SmallWikiを起動。
+Squeak画面に出てきた「Welcome to SmallWiki」にしたがって普通に起動する。
+
+以下をDoItすればとりあえず動きます。
+server := SWKom startOn: 8080.
+server basePath: '<A HREF="http://localhost:8080'.">http://localhost:8080'.</A>
+
+4. [admin:components]でCharsetを設定。
+先ずは、Loginページからadminとしてログイン(パスワードはデフォルトだと
+「smallwiki」)。
+次に、ページ上部のメニューadmin→componentsページでCharset設定しSaveする。
+(UTF-8, Shift-JIS, EUC-JPなど)
+
+こんな感じ。
+<A HREF="http://yengawa.homedns.org:8888/YengawaWiki/uploads/15/SW1-Charset-Components.png">http://yengawa.homedns.org:8888/YengawaWiki/uploads/15/SW1-Charset-Components.png</A>
+
+5. 日本語で書き込み。
+Editで日本語を書いてみる。
+
+タイトル、内容、検索に日本語を使えるはずです。
+
+
+
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2005 ＠ yengawa.jpn.org</A>&gt;
+    self new!
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002662.html">[Squeak-ja: 2662] Re: 教えてください
+</A></li>
+	<LI>次の記事 <A HREF="002664.html">[Squeak-ja: 2664] 「すくすくスクイーク」公開のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2658">[ 日付 ]</a>
+              <a href="thread.html#2658">[ スレッド ]</a>
+              <a href="subject.html#2658">[ 件名 ]</a>
+              <a href="author.html#2658">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

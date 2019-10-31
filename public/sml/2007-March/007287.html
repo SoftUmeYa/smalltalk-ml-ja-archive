@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7287] Jun728 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207287%5D%20Jun728%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007286.html">
+   <LINK REL="Next"  HREF="007288.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7287] Jun728 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207287%5D%20Jun728%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7287] Jun728 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 3月  7日 (水) 04:01:26 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007286.html">[SML 7286] [ANNOUNCE] Jun for Java (Jun642)
+</A></li>
+        <LI>次の記事 <A HREF="007288.html">[SML 7288] Jpl022 and Jun731 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7287">[ 日付 ]</a>
+              <a href="thread.html#7287">[ スレッド ]</a>
+              <a href="subject.html#7287">[ 件名 ]</a>
+              <a href="author.html#7287">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+じゅんの最新バージョン【Jun728】をアップロードしました。
+
+　<A HREF="http://www.sra.co.jp/public/sra/technical/jun/">http://www.sra.co.jp/public/sra/technical/jun/</A>
+　<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+　<A HREF="ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/">ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/</A>
+
+３次元オブジェクトのためのカタログ（複数のビューファインダが
+整然と並んで一覧表になったもの）を用意しました。次のページを
+参照してください。
+
+　<A HREF="http://www.sra.co.jp/people/aoki/Jun/Topics/Catalog/">http://www.sra.co.jp/people/aoki/Jun/Topics/Catalog/</A>
+
+LST ファイル群が置いてあるディレクトリからも、カタログを作成
+できます。また、下記のようなページも簡単に生み出せます。
+
+　<A HREF="http://www.sra.co.jp/people/aoki/Jun/Topics/Catalog/Jun727C3O/">http://www.sra.co.jp/people/aoki/Jun/Topics/Catalog/Jun727C3O/</A>
+
+カタログファイル（C3O ファイル）としてセーブすると、投影、照
+明、運動量など、各種のパラメータ群も一緒に保存しますので、か
+なり重宝するじゃないかと思います。書き出されたファイルサイズ
+は大きくなりますが、zip や gzip をすれば可搬的になるでしょう。
+
+なお、カタログの中のビューファインダのマウス操作ですが、赤ボ
+タンが選択で、黄ボタンがポップアップメニュー、ダブルクリック
+でウェジェット付きビューファインダのオープン、長押し＆ドラッ
+グで場所替え、なのですが、修飾キーで以下のことができます。
+
+　altDown &amp; 赤ボタンで grab（注視点を中心に回転）
+　altDown &amp; 黄ボタンで drag（投影面上で平行移動）
+
+カタログ以外にも、いろいろ手を加えています。バージョンブラウ
+ザで差分を読み取ってもらえると助かります。その方法は次の通り。
+
+古いじゅんを「Jun705」とし、新しいじゅんを「Jun728」としたら、
+その差分を得るために、ソースコードのアーカイブをダウンロード
+して展開します。
+
+|<i> oldVersion newVersion baseString |
+</I>oldVersion := 'Jun705'.
+newVersion := 'Jun728'.
+baseString := '<A HREF="http://www.sra.co.jp/people/aoki/st/jun/versions/'.">http://www.sra.co.jp/people/aoki/st/jun/versions/'.</A>
+(Array with: oldVersion with: newVersion) do:
+        [:versionString |
+        | urlString |
+        urlString := baseString , versionString , '.tar.gz'.
+        (JunTGZ
+            extract: (JunURL named: urlString)
+            to: Filename defaultDirectory
+            log: Transcript) ifNil: [^false]].
+^true
+
+約４０万行以上のソースコードを一気に比較し、差分を観るための
+ブラウザを開きます。（私のマシンで５分ほどかかります。）
+
+|<i> oldVersion newVersion oldDirectory newDirectory aBrowser |
+</I>oldVersion := 'Jun705'.
+newVersion := 'Jun728'.
+oldDirectory := Filename defaultDirectory construct: oldVersion.
+newDirectory := Filename defaultDirectory construct: newVersion.
+aBrowser := JunSourceCodeDifferenceBrowser
+            openOnDirectoryName: oldDirectory
+            withDirectoryName: newDirectory.
+aBrowser doSpawnModifiedClasses.
+^aBrowser
+
+どうぞ、お楽しみください。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007286.html">[SML 7286] [ANNOUNCE] Jun for Java (Jun642)
+</A></li>
+	<LI>次の記事 <A HREF="007288.html">[SML 7288] Jpl022 and Jun731 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7287">[ 日付 ]</a>
+              <a href="thread.html#7287">[ スレッド ]</a>
+              <a href="subject.html#7287">[ 件名 ]</a>
+              <a href="author.html#7287">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3822] 巨大 image 用 VM (MacOSX PowerPC) 求む
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203822%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCNXBCZxsoQiBpbWFnZSA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTVEbKEIgVk0gKE1hY09TWCBQb3dlclBDKSAbJEI1YSRgGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003821.html">
+   <LINK REL="Next"  HREF="003834.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3822] 巨大 image 用 VM (MacOSX PowerPC) 求む</H1>
+    <B>Kouji takahashi</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203822%5D%20%3D%3Fiso-2022-jp%3Fb%3FGyRCNXBCZxsoQiBpbWFnZSA%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCTVEbKEIgVk0gKE1hY09TWCBQb3dlclBDKSAbJEI1YSRgGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 3822] 巨大 image 用 VM (MacOSX PowerPC) 求む">tako ＠ aquilax.co.jp
+       </A><BR>
+    <I>2008年 2月 13日 (水) 10:49:27 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003821.html">[Squeak-ja: 3821] SeasideJインストール済みイメージ更新
+</A></li>
+        <LI>次の記事 <A HREF="003834.html">[Squeak-ja: 3834] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3822">[ 日付 ]</a>
+              <a href="thread.html#3822">[ スレッド ]</a>
+              <a href="subject.html#3822">[ 件名 ]</a>
+              <a href="author.html#3822">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>高橋＠池袋です。
+
+MaxOSX用の SqueakPlugin-dev-527.image baseの巨大image用の
+VMはありますか？
+
+各種データを読み込んでファイルサイズが 483.6Mになって
+しまったimageを使用中。ここ数週間で更に100M程度大きくなる
+予定です。
+
+--------
+　 Squeak3.0.app(SqueakVM 3.8.8b14)では正常起動しなくなった
+ので info.plistのSqueakMaxHeapSize を 800 * 1024 * 1024に
+変更して使っています。問題は一応解決しているのですが
+このVMは 32bitクリーンでは無いですよね？　ちょっと心配。
+John M McIntoshさんの squeakinfoplist.htmlでは 3.8.18以降が
+32bitクリーンと記載されています。
+
+　正常起動しなくなった時の症状は
+image読み込み、各種Windowが表示されるがマウスクリックに無反応。
+10秒程度放置すると VMが勝手に終了。SqueakDebug.logは更新されていない。
+　SqueakMaxHeapSize 640 * 1024 * 1024
+
+--------
+　Squeak.orgのdownloadサイトの Squeak-3.9-8.app(3.9a-7024)では
+defaultの状態で正常に動作するようですが、
+　1.ファイルパス MacOS→ Unix への変更が必要
+　2.ファイル名に日本語が使えない？
+などの問題があります。
+
+--------
+ここで質問ですが
+
+巨大日本語imageを扱うノウハウを教えて下さい。
+
+Squeak3.0.app(SqueakVM 3.8.8b14)相当の32bitクリーンVMはありますか？
+
+MaxHeapSizeを 1024*1024*1024 まで大きくしていっても大丈夫でしょうか？
+　iMac G5（物理メモリ 1.5G）Mac OSX 10.4.11 です。
+　必要ならIntelMac、 OSX 10.5への変更も可能です。
+
+Squeak-3.9-8.app(3.9a-7024)を Squeak3.0.app(SqueakVM 3.8.8b14)同等に
+するのは info.plistの細工程度では難しいですか？
+　ファイル名の記載。日本語対応
+
+その他アイデア・ヒントがあれば教えて下さい。
+
+よろしくお願いします。
+
+--------
+追伸
+　デブサミ参加の皆さんお手伝いできなくてすみません。
+
+　２年に１度の健康保険の改正作業をしています。もちろんSqueakで。
+上記 imageには、保険請求可能な全薬剤などの情報が満載されています。
+
+
+
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003821.html">[Squeak-ja: 3821] SeasideJインストール済みイメージ更新
+</A></li>
+	<LI>次の記事 <A HREF="003834.html">[Squeak-ja: 3834] Re: 巨大 image 用 VM (MacOSX PowerPC) 求む
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3822">[ 日付 ]</a>
+              <a href="thread.html#3822">[ スレッド ]</a>
+              <a href="subject.html#3822">[ 件名 ]</a>
+              <a href="author.html#3822">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

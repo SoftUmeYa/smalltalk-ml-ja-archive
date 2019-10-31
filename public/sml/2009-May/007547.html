@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7547] Re: 第7回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207547%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0C5244.8060807%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007546.html">
+   <LINK REL="Next"  HREF="007544.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7547] Re: 第7回Smalltalk勉強会＠京都</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207547%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNxskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=4A0C5244.8060807%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7547] Re: 第7回Smalltalk勉強会＠京都">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 5月 16日 (土) 01:04:49 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007546.html">[SML 7546] Re: Cのポインタ
+</A></li>
+        <LI>次の記事 <A HREF="007544.html">[SML 7544] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7547">[ 日付 ]</a>
+              <a href="thread.html#7547">[ スレッド ]</a>
+              <a href="subject.html#7547">[ 件名 ]</a>
+              <a href="author.html#7547">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは。
+ゆうべは遅くまで起きていたので、今朝（もう昨日の朝ですね。。。）は
+眠たかったです。
+
+&gt;<i> センダの話題のところで出てきた
+</I>&gt;<i> &gt; Compiler evaluate: 'self printString' for: 3 logged: false
+</I>&gt;<i> &gt; のお話は、その場ではちょっと消化不良だったので、帰宅してから
+</I>&gt;<i> &gt; Compilerのやっていることを読んでおりました。
+</I>&gt;<i>
+</I>
+何が消化不良だったのかというと、
+
+「メッセージ送信はどこにいったの？？？」
+
+だったんです。（ブラックブックやSmalltalkイディオムの中では、
+「センダ」、「レシーバ」は、メッセージ送信の概念の中で語られて
+いますから。）
+
+それでCompiler class&gt;&gt;evaluate:for:logged:から読み始めると、
+引数の文字列で表現されているプログラムからCompiledMethodを
+作って 、そのメソッドをどのクラスのメソッド辞書にも登録せずに
+直接実行しているところに辿り着いたという訳です。
+(Compiler evaluate: 'self halt' for: 3 logged: false. を実行して、デバッガの
+助けも借りました。）
+
+Compiler evaluate: 'thisContext sender receiver printString' for: 3 logged:
+&gt;<i> false
+</I>&gt;<i>
+</I>&gt;<i> これは誰のために評価するのかという立場を明示したプログラムで
+</I>&gt;<i> して、thisContext(aMethodContext)にsenderとreceiverの単項メッ
+</I>&gt;<i> セージを送信しています。
+</I>
+
+&gt;<i> '3'が応答されるまでの経緯を追うことができれば、センダとレシー
+</I>&gt;<i> バの柵（しがらみ）が分かると思います。
+</I>
+
+とは言え、MethodContextのインスタンスが作られるのは仮想マシン
+内部での出来事なので、完全に追うのは難しいかと思います。
+ブルーブックを読みましょう(^^)
+（デバッガ＆インスペクタの助けを借りれば、ブルーブックを読まず
+とも、なんとかなるかなあ。。。）
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20090516/19230a95/attachment.htm">http://www.smalltalk.jp/pipermail/sml/attachments/20090516/19230a95/attachment.htm</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007546.html">[SML 7546] Re: Cのポインタ
+</A></li>
+	<LI>次の記事 <A HREF="007544.html">[SML 7544] Re: 第7回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7547">[ 日付 ]</a>
+              <a href="thread.html#7547">[ スレッド ]</a>
+              <a href="subject.html#7547">[ 件名 ]</a>
+              <a href="author.html#7547">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

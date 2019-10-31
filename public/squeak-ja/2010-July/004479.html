@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4479] Re: Etoysでのモーフの複製でトラブル
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204479%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3lzGyRCJEckTiViGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlVSROSiNAPSRHJUglaSVWJWsbKEI%3D%3F%3D&In-Reply-To=20100720191805885764.GyazMail.inoue%40ma.ns.tcu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004478.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4479] Re: Etoysでのモーフの複製でトラブル</H1>
+    <B>TAKAHASHI Makoto</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204479%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEV0b3lzGyRCJEckTiViGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlVSROSiNAPSRHJUglaSVWJWsbKEI%3D%3F%3D&In-Reply-To=20100720191805885764.GyazMail.inoue%40ma.ns.tcu.ac.jp"
+       TITLE="[Squeak-ja: 4479] Re: Etoysでのモーフの複製でトラブル">makoto ＠ kobe-u.ac.jp
+       </A><BR>
+    <I>2010年 7月 20日 (火) 23:35:09 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004478.html">[Squeak-ja: 4478] Re: Etoysでのモーフの複製でトラブル
+</A></li>
+        
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4479">[ 日付 ]</a>
+              <a href="thread.html#4479">[ スレッド ]</a>
+              <a href="subject.html#4479">[ 件名 ]</a>
+              <a href="author.html#4479">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>高橋です。
+
+フラップに入れてその複製（兄弟ではないようです）を取出すと確かに
+スクリプトは正しくできていました。（コード表示で確かめました。）
+同じような機能をもつモーフメーカーでもうまく動作しましたが，遊び場を
+部品箱にして使う方法は単なる複製と同じでうまくいきませんでした。
+これらの違いがどこにあるのかは，Etoys3の内部をご存知のかたに
+解説をお願いしたいところです。
+
+iNOUE Koich!さんの『[Squeak-ja: 4478] Re: Etoysでのモーフの複製でトラブル』
+ (Tue, 20 Jul 2010 19:18:05 +0900)の件について
+&gt;<i> 井上です。
+</I>&gt;<i> 
+</I>&gt;<i> 高橋さんどうもありがとうございます。そういう事情があったのですね。それな
+</I>&gt;<i> らば造り直さなくてはマズイのですが、実はその後、うまい？方法で解決できま
+</I>&gt;<i> したので報告します。
+</I>&gt;<i> 
+</I>&gt;<i> その方法とは、うちの息子がよくやることなのですが、モーフを部品のフラップ
+</I>&gt;<i> の中に入れてモーフ生成ボタンにしてしまい、なおかつそのボタンの複製を作品
+</I>&gt;<i> の中に取り出してしまうというものです。こういうボタンを左上に配置したプロ
+</I>&gt;<i> ジェクトを
+</I>&gt;<i> <A HREF="http://www.ns.tcu.ac.jp/~inoue/Squeak_Seminar/solarsystem.011.pr">http://www.ns.tcu.ac.jp/~inoue/Squeak_Seminar/solarsystem.011.pr</A>
+</I>&gt;<i> に置きましたので、見てみてください。これでなぜ演算子の優先順位の問題が解
+</I>&gt;<i> 決されているのかは分かりませんが（兄弟を作ることになるのでしょうか？）、
+</I>&gt;<i> 当初の目的である惑星をたくさん作ることはできましたので、まあいいかと思っ
+</I>&gt;<i> ています。(^^;
+</I>&gt;<i> 
+</I>&gt;<i> TAKAHASHI MakotoさんがTue, 20 Jul 2010 14:38:58 +0900に
+</I>&gt;<i> 「[Squeak-ja: 4477] Re: Etoysでのモーフの複製でトラブル」の件で：
+</I>&gt;&gt;<i> 神戸大学の高橋です。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Etoys3 と SqueakLand2005J2 で式の計算の順序の約束が異なる
+</I>&gt;&gt;<i> のが原因ではないでしょうか。2005J2では，演算子に関わらず右結合
+</I>&gt;&gt;<i> で計算しますが，Etoys3ではそれが通常の計算規約（足し算より
+</I>&gt;&gt;<i> かけ算の方が結合の強さが大きいなど）に変更されています。
+</I>&gt;&gt;<i> 2005J2で作られた作品のスクリプトは，Etoys3でも2005J2での順序を
+</I>&gt;&gt;<i> 尊重して実行されるが，そこで複製したオブジェクトのスクリプトは
+</I>&gt;&gt;<i> Etoys3での規則で計算されてしまうようです。
+</I>&gt;&gt;<i> 井上さんのsolarsysytemのプロジェクトのスクリプトに質量をgmrの
+</I>&gt;&gt;<i> ３乗で割る部分がありますが，ここがそのように計算されていないために
+</I>&gt;&gt;<i> 他の変数が巨大な値をとってしまいフリーズしているように思います。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 複製ではなく兄弟を作るともとのスクリプトを共有するためそのまま
+</I>&gt;&gt;<i> でも動くようです。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 変数が多い場合やスクリプトが巨大になると全体が一度に表示できないのは
+</I>&gt;&gt;<i> 私も困っていますが，私は以下のような対処をしています。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> １　変数のカテゴリのモーフを取り出して，そのy座標を動かすことで全体をみる。
+</I>&gt;&gt;<i> ２　変数のカテゴリのモーフを取り出して，その拡大率を小さくして（縮小して）
+</I>&gt;&gt;<i> 　　全体をみる。
+</I>&gt;<i> 
+</I>&gt;<i> 変数のカテゴリーのモーフを取り出して上下させて見る！思いつきませんでし
+</I>&gt;<i> た。すごい裏技ですね。Etoys3で前に比べて文字が大きめなのは子供に見やすく
+</I>&gt;<i> ということなんでしょうか。
+</I></PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004478.html">[Squeak-ja: 4478] Re: Etoysでのモーフの複製でトラブル
+</A></li>
+	
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4479">[ 日付 ]</a>
+              <a href="thread.html#4479">[ スレッド ]</a>
+              <a href="subject.html#4479">[ 件名 ]</a>
+              <a href="author.html#4479">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7664] HTMLの取得がうまくできません
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207664%5D%20%3D%3Fiso-2022-jp%3Fb%3FSFRNTBskQiROPGhGQCQsJCYkXiQvJEcbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJC0kXiQ7JHMbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007659.html">
+   <LINK REL="Next"  HREF="007665.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7664] HTMLの取得がうまくできません</H1>
+    <B>久保田 吉彦</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207664%5D%20%3D%3Fiso-2022-jp%3Fb%3FSFRNTBskQiROPGhGQCQsJCYkXiQvJEcbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJC0kXiQ7JHMbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[SML 7664] HTMLの取得がうまくできません">kubota ＠ sie.dendai.ac.jp
+       </A><BR>
+    <I>2009年 9月 28日 (月) 12:25:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007659.html">[SML 7659] Re: Smalltalk合同勉強会@名古屋
+</A></li>
+        <LI>次の記事 <A HREF="007665.html">[SML 7665] Re: HTMLの取得がうまくできません
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7664">[ 日付 ]</a>
+              <a href="thread.html#7664">[ スレッド ]</a>
+              <a href="subject.html#7664">[ 件名 ]</a>
+              <a href="author.html#7664">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、東京電機大学の久保田と申します。
+
+自家製ニコ生アラートのようなものをVisualWorksで作成しよう 
+と思い、下記のプログラムでニコニコ生放送のページの情報を取得しよ 
+うとしました。
+
+|<i> anURL readStream writeStream |
+</I>anURL := JunURL named: '<A HREF="http://live.nicovideo.jp/recent?">http://live.nicovideo.jp/recent?</A> 
+p=1&amp;tab=common' .
+JunControlUtility
+	assert:[readStream := anURL readStream.
+			writeStream := 'nico.html' asFilename writeStream]
+	do:[[readStream atEnd not] whileTrue:
+			[writeStream nextPutAll:(JunStringUtility getLine: readStream)]]
+	ensure:[writeStream close.
+			readStream close].
+
+困っているのはWebブラウザでURLを開いたときに取得でき 
+るHTMLと異なった情報を持ってきてしまうことです。
+nico.htmlを開くと'エラーが発生しました'と書かれた 
+ページが表示されます。
+
+いまのところ同じURLのHTMLを取得するプログラムを 
+JavaとPythonで書いてみましたが、こちらでは期待した情報が得 
+られました。
+
+プログラムのどこがいけないのでしょうか?
+ご存知の方教えていただけませんでしょうか。
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007659.html">[SML 7659] Re: Smalltalk合同勉強会@名古屋
+</A></li>
+	<LI>次の記事 <A HREF="007665.html">[SML 7665] Re: HTMLの取得がうまくできません
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7664">[ 日付 ]</a>
+              <a href="thread.html#7664">[ スレッド ]</a>
+              <a href="subject.html#7664">[ 件名 ]</a>
+              <a href="author.html#7664">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4245] Re: Mac版Etoysのinfo.plistについての質問
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204245%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYxskQkhHGyhCRXRveXM%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEJpbmZvLnBsaXN0GyRCJEskRCQkJEYkTjxBTGQbKEI%3D%3F%3D&In-Reply-To=20090518225013743624.GyazMail.inoue%40ma.ns.tcu.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004244.html">
+   <LINK REL="Next"  HREF="004247.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4245] Re: Mac版Etoysのinfo.plistについての質問</H1>
+    <B>TAKAHASHI Makoto</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204245%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1hYxskQkhHGyhCRXRveXM%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEJpbmZvLnBsaXN0GyRCJEskRCQkJEYkTjxBTGQbKEI%3D%3F%3D&In-Reply-To=20090518225013743624.GyazMail.inoue%40ma.ns.tcu.ac.jp"
+       TITLE="[Squeak-ja: 4245] Re: Mac版Etoysのinfo.plistについての質問">makoto ＠ kobe-u.ac.jp
+       </A><BR>
+    <I>2009年 5月 18日 (月) 23:12:55 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004244.html">[Squeak-ja: 4244] Re: Mac版Etoysのinfo.plistについての質問
+</A></li>
+        <LI>次の記事 <A HREF="004247.html">[Squeak-ja: 4247] Re: Mac版Etoysのinfo.plistについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4245">[ 日付 ]</a>
+              <a href="thread.html#4245">[ スレッド ]</a>
+              <a href="subject.html#4245">[ 件名 ]</a>
+              <a href="author.html#4245">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>井上様
+
+神戸大学の高橋真です。
+
+すいません。私の最初の質問の書き方が悪かったです。申し訳ありません。
+書いている途中で書き直したため誤解を招く書き方をしていました。
+質問の最初の部分は
+
+---------
+デジタルハリウッド大学院の宮坂さんが作成されたEtoysのimageファイル等を
+上書きするインストーラでは，Etoysを起動したときに現れるEtoysのウィンドウの
+タイトルを「etoys」から「Squesketoys」に変更するため
+WindowTitle=&quot;Squeak Etoys&quot;
+を追加したetoys.iniを作成して，Etoys.app内のetoys.iniを上書きしているそうです。
+---------
+
+とすべきでした。インストーラのウインドウのタイトルではなく，Etoysを起動した
+ときのEtoysのウインドウのタイトル（Mac版ではetoys.image）の部分をEtoysの
+info.plistを書き換えて変更したいということです。
+
+最初の質問に補足すると，
+SqueakWindowHasTitle
+というkeyはあり，それをnoにするとタイトルは消せます。
+
+あやふやな質問を出してしまい申し訳ありません。
+
+++ iNOUE Koich!さんの『[Squeak-ja: 4244] Re: Mac版Etoysのinfo.plistについての質問』
+|<i> (Mon, 18 May 2009 22:50:13 +0900)の件について
+</I>--
+&gt;<i> PackageMakerでパッケージを作ったことしかないんですが、Info.plistにはパッ
+</I>&gt;<i> ケージ名やバージョンやインストールロケーションが定義されてはいるものの、
+</I>&gt;<i> インストーラウィンドウのタイトルは定義されてないように思います。Windows
+</I>&gt;<i> でできることとMacintoshでできることは異なりますから、これに関しては諦め
+</I>&gt;<i> るしかないかもしれません。エントリが定義されていてもインストーラがそれを
+</I>&gt;<i> 認識できないのでは仕方ありませんから。
+</I>&gt;<i> WindowTitleはおそらくパッケージ名であろうと思います。インストーラを造る
+</I>&gt;<i> ときにパッケージ名をSqueak eToyにしてみてはいかがでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> TAKAHASHI MakotoさんがMon, 18 May 2009 15:43:05 +0900に
+</I>&gt;<i> 「[Squeak-ja: 4243] Mac版Etoysのinfo.plistについての質問」の件で：
+</I>&gt;&gt;<i> 神戸大学の高橋です。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Mac版Etoysのinfo.plistについての質問です。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> デジタルハリウッド大学院の宮坂さんが作成されたEtoysのimageファイル等を
+</I>&gt;&gt;<i> 上書きするインストーラでは，ウィンドウのタイトルを「etoys」から「Squesk
+</I>&gt;&gt;<i> etoys」に変更するためetoys.iniに
+</I>&gt;&gt;<i> WindowTitle=&quot;Squeak Etoys&quot;
+</I>&gt;&gt;<i> と記載して元ファイルを上書きしているそうです。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> これと同じことをMac版でもしたいのですが，Macでiniファイルに相当するのは
+</I>&gt;&gt;<i> info.plistだと思い，info.plistの変更を考えました。
+</I>&gt;&gt;<i> Etoys内のinfo.plistには，WindowTitleに相当するkeyがないため，新たに
+</I>&gt;&gt;<i> WindowTitleやSqueakWindowTitleなどのkeyを作成してみましたが，変更は
+</I>&gt;&gt;<i> 反映されませんでした。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> info.plistに新たにkeyを定義することはできないのでしょうか。
+</I>&gt;&gt;<i> また，上記のWindowTitleの変更に相当することをMac版で行うにはどのように
+</I>&gt;&gt;<i> したらよろしいでしょうか。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> どなたかお知恵をお貸しいただけないでしょうか。
+</I>&gt;&gt;<i> よろしくお願いいたします。
+</I></PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004244.html">[Squeak-ja: 4244] Re: Mac版Etoysのinfo.plistについての質問
+</A></li>
+	<LI>次の記事 <A HREF="004247.html">[Squeak-ja: 4247] Re: Mac版Etoysのinfo.plistについての質問
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4245">[ 日付 ]</a>
+              <a href="thread.html#4245">[ スレッド ]</a>
+              <a href="subject.html#4245">[ 件名 ]</a>
+              <a href="author.html#4245">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

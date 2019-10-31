@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3262] Re: squeak 初心者の質問：モーフの指定
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203262%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHNxdWVhayAbJEI9aT80GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPFQkTjxBTGQhJyViITwlVSROO1hEahsoQg%3D%3D%3F%3D&In-Reply-To=p04320444c19c10ddb50f%40amateras.ma.ns.musashi-tech.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003258.html">
+   <LINK REL="Next"  HREF="003264.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3262] Re: squeak 初心者の質問：モーフの指定</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203262%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IHNxdWVhayAbJEI9aT80GyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCPFQkTjxBTGQhJyViITwlVSROO1hEahsoQg%3D%3D%3F%3D&In-Reply-To=p04320444c19c10ddb50f%40amateras.ma.ns.musashi-tech.ac.jp"
+       TITLE="[Squeak-ja: 3262] Re: squeak 初心者の質問：モーフの指定">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2006年 12月  6日 (水) 21:14:48 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003258.html">[Squeak-ja: 3258] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+        <LI>次の記事 <A HREF="003264.html">[Squeak-ja: 3264] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3262">[ 日付 ]</a>
+              <a href="thread.html#3262">[ スレッド ]</a>
+              <a href="subject.html#3262">[ 件名 ]</a>
+              <a href="author.html#3262">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>井上さん、こんばんは。
+林です。
+
+On 2006/12/06, at 15:26, iNOUE Koich! wrote:
+
+&gt;<i> Toshiyuki Takeda さんが 2006.12.6ごろに
+</I>&gt;<i> 「[Squeak-ja: 3257] Re: squeak 初心者の質問：モーフの指定」の件で：
+</I>&gt;&gt;<i> ワークスペースのメニューで、&quot;create textual references to dropped
+</I>&gt;&gt;<i> morphs&quot;にチェックを選ぶとドロップしたモーフをワークスペース内で扱う
+</I>&gt;&gt;<i> ことができるようになります。
+</I>&gt;<i>
+</I>&gt;<i> workspaceのメニューのどこに・・・と思いましたが、左のバッテンマークの
+</I>&gt;<i> 右にあるメニューの一番下ですね。ありがとうございます！これは面白い。け
+</I>&gt;<i> れど、ドロップしたとたんモーフがゴミ箱に直行するのですが、これはこうい
+</I>&gt;<i> うものなんでしょうか？
+</I>
+もし、フラップからダイレクトに workspace にドロップすると、ゴミ箱にサヨナ
+ラしてしまうようです。一度、ワールドにおいてあげる必要があるようです。
+
+&gt;&gt;<i> モーフのハロからメニューを出して、デバッグから「モーフの検査」
+</I>&gt;&gt;<i> (inspect)、「モーフを探索する」(explore)を選ぶと、モーフの中身をみら
+</I>&gt;&gt;<i> れたり、いじくれたりするので、これもおすすめです。
+</I>&gt;<i>
+</I>&gt;<i> 実は・・・「モーフの検査」はやってみたのですが、そこにa StarMorph&lt;星
+</I>&gt;&gt;<i> (811)とあるタイトルの通りに入れてもダメでしたのでこれはまた別なんだろ
+</I>&gt;<i> うと思っていました。実際はa星811という名前でworkspaceに入りましたの
+</I>&gt;<i> で、関係はあったのですね。inspectやexploreでいろいろ調査してみます。
+</I>
+この場合の a星811 というのは、「ワークスペース変数」という変数で、オブジ
+ェクトのポインタも代入された状態にしてくれてるはずです。
+梅澤さんの本にもあるかと思いますが、その他にも&quot;ワークスペース変数&quot;で検索
+すると色々情報が見つかるかと思います（別な処理系や環境も出て来ますが…
+適宜キーワードを追加されて…）。
+頑張って（？）遊んでみてください。私も勉強になります。
+
+--
+林 徹也 Tetsuya HAYASHI 
+<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ mac.com</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003258.html">[Squeak-ja: 3258] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+	<LI>次の記事 <A HREF="003264.html">[Squeak-ja: 3264] Re: squeak 初心者の質問：モーフの指定
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3262">[ 日付 ]</a>
+              <a href="thread.html#3262">[ スレッド ]</a>
+              <a href="subject.html#3262">[ 件名 ]</a>
+              <a href="author.html#3262">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

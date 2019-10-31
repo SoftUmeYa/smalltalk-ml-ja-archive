@@ -1,0 +1,317 @@
+From ume ＠ softumeya.com  Thu Aug  2 23:01:32 2018
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Thu, 2 Aug 2018 23:01:32 +0900
+Subject: [SML 8198] Re: Pharoとデータベース
+In-Reply-To: <EBB373FF-1C82-4D9F-94C1-A3B59940FC8C@icloud.com>
+References: <EBB373FF-1C82-4D9F-94C1-A3B59940FC8C@icloud.com>
+Message-ID: <CAH3eEdTM=xU6YWBzhFMZs8ao8K8abWjYEe5Bghi6y6m5f-tkAg@mail.gmail.com>
+
+梅゜キ、ヌ、ケ。」
+
+Pharo、ォ、餝DB、ヒ・「・ッ・サ・ケ、ケ、襪砲惑lorpやKobatiといったORマッパーを使うことになります。
+
+「Pharo5 (Smalltalk) + Glorp (ORM) + SQLite3 のチュートリアルでひっかかったところ等のメモ」
+https://qiita.com/sumim/items/19cc812821159b205581
+
+「SQLマッピングフレームワーク「Kobati」のはなし」
+https://www.slideshare.net/kazukiminamitani/sqlkobati
+
+RDBの良さは、広く使われており、Pharo以外の他のツールで読み書きが可能というところだと思います。
+データの可搬性を考慮するならば良い選択肢と思います。
+
+ただしオブジェクトの世界とRDBの世界はかなり違うものなので、Pharoからは使いにくい部分も多々あります。
+
+オブジェクトをそのまま格納したいということであれば、大がかりにはなりますが、GemStone/SなどのOODBを
+使う手もあります。
+https://gemtalksystems.com/products/gs64/
+
+もう少し気軽にということであればNeo4jなどのGraph DBもおすすめです。こちらはオブジェクトの
+ネットワーク構造をそのままDBに落とし込めるので、RDBよりはSmalltalkとの親和性が高いと思います。
+
+「Neo4reStの紹介」(第39回Smalltalk勉強会(兼忘年会))
+https://drive.google.com/file/d/0B-QQfEn6pNsXcm03OWJ3clJYUE0/view
+https://atnd.org/events/23037
+
+「Manipulating Neo4j from Pharo Smalltalk」(第103回Smalltalk勉強会)
+https://github.com/quentinplessis/smalltalk-neo4j
+https://smalltalk.connpass.com/event/64380/
+
+データ量がそれほどでもなく、複数のツールから同時に使うことがないという場合は、単にPharoのオブジェクトを
+ファイルに保存してしまうという手もあるかと思います。Fuelを使うと、任意の複雑な構造のオブジェクトを
+ファイルに保存することができます。
+https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/Fuel/Fuel.html
+
+以上、ご参考まで。
+
+2018年7月31日 19:29 五十嵐雅哉 <nez.squeak ＠ icloud.com>:
+> 初心者質問です。
+>
+> リレーショナル・データベース（RB）とPharoのコラボを考えていますが、RBでできことはPharoでは容易なような気もします。
+> 想定しているRBが大規模なものではないのですが、Collection系で間に合いそうな気もします。RBも基本、何らかの言語で開発されているとも思うのですが、Pharoでできればそれでいいのでしょうか？
+>
+> 五十嵐　雅哉
+> 吉備高原医療リハビリテーションセンター　内科
+> 〒716-1241　岡山県加賀郡吉備中央町吉川7511
+> telephone ?0866-56-7141
+> cellphone 080-3296-1961
+> mail nez.squeak ＠ icloud.com
+>
+>
+
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+
+From narita_takaoki ＠ hb.tp1.jp  Fri Aug  3 12:53:48 2018
+From: narita_takaoki ＠ hb.tp1.jp (Narita @ TOPPA)
+Date: Fri, 3 Aug 2018 12:53:48 +0900
+Subject: [SML 8199] Re: Pharoとデータベース
+In-Reply-To: <EBB373FF-1C82-4D9F-94C1-A3B59940FC8C@icloud.com>
+References: <EBB373FF-1C82-4D9F-94C1-A3B59940FC8C@icloud.com>
+Message-ID: <fd09f869-20b2-7164-1464-057f8b340037@hb.tp1.jp>
+
+ML 、ヒハヨソョ、キ、ソ、ト、筅熙ヌ。「、エヒワソヘヘヘトセタワ、ヒハヨ、キ、ニ、゛、キ、ソ。」
+
+On 2018/07/31 19:29, グススヘ晗ネ wrote:
+ > ス鯀エシヤシチフ荀ヌ、ケ。」
+ >
+ > ・譟璽轡腑淵襦Ε如璽織戞璽后片B）とPharoのコラボを考えていますが、RBで 
+できことはPharoでは容易なような気もします。
+ > 想定しているRBが大規模なものではないのですが、Collection系で間に合いそう 
+な気もします。RBも基本、何らかの言語で開発されているとも思うのですが、 
+Pharoでできればそれでいいのでしょうか？
+
+RB というよりはデータベース（DB）ソフトウェアを使う理由ですが、データ
+量的な問題は別とすると、データの永続化を考えなければ現状使う意味はあ
+まり無いと思います。
+
+永続化を前提として、一貫性等の整合性を維持しようとすると結構面倒なこ
+とが生じるので、そこらへんを DB などに押し付けて済ますというのが一つ
+の解決法だと思います。
+
+なので結局のところ、この永続化にまつわる厄介ごとを全部自分で解決つけ
+られ、実行時効率の要求にも応えられ、信頼性を保証するためのエンジニア
+リングプロセスも問題にしないなら、自分でやってしまうのはアリでしょう。
+
+もしくは永続化は考えないし、途中で問題があってプログラムが止まったり
+したときも、そこまでのデータ操作は全て捨てて問題ないですよ、みたいな
+状況なら、異種のアーキテクチャの DB と協調するようにするコストが無駄
+ですから DB を使わないとなるでしょう。
+
+別な言い方をすると、MVC モデルの M の部分を RB にやらせる方が要求に
+対応したシステムの構築が楽なら RB を使った方が良いし、そうじゃなくて
+M の部分は最低限単に実行中のデータを保持していれば十分にすぎないなら
+RB をわざわざ使う理由が無いと思います。
+
+安直に、永続化が必要としても、「データを書き込んでいるときにプログラ
+ムが何らかの理由で止まる※」という状況を考え、それでも大して困らない
+と言えるなら DB はいらないと言っても良いかもしれません。
+
+※もちろん最悪書き込み中のファイル等の中身は破壊されるわけです。
+
+もちろん永続化がいらないなら DB はいらないでしょうし。
+
+大筋はそんな感じではなかろうかと思います。データ量や実行時効率の問題
+が絡んだ実際的な判断は、また別になるでしょうけれど。
+
+-- 
+近江屋  成田 隆興
+
+From nez.squeak ＠ icloud.com  Mon Aug  6 16:58:37 2018
+From: nez.squeak ＠ icloud.com (五十嵐雅哉)
+Date: Mon, 06 Aug 2018 16:58:37 +0900
+Subject: [SML 8200] Re: Pharoとデータベース
+In-Reply-To: <CAH3eEdTM=xU6YWBzhFMZs8ao8K8abWjYEe5Bghi6y6m5f-tkAg@mail.gmail.com>
+References: <EBB373FF-1C82-4D9F-94C1-A3B59940FC8C@icloud.com>
+ <CAH3eEdTM=xU6YWBzhFMZs8ao8K8abWjYEe5Bghi6y6m5f-tkAg@mail.gmail.com>
+Message-ID: <F5230B83-8AE6-46DC-B003-55C07812915D@icloud.com>
+
+梅゜キヘヘ。。
+
+・「・ノ・ミ・、・ケ、、、ソ、タ、ュ、「、熙ャ、ネ、ヲ、エ、カ、、、゛、ケ。」
+Fuel、ネ、ヲハ，鮓‘い靴燭い隼廚い泙后
+
+五十嵐　雅哉
+吉備高原医療リハビリテーションセンター　内科
+〒716-1241　岡山県加賀郡吉備中央町吉川7511
+telephone ?0866-56-7141
+cellphone 080-3296-1961
+mail nez.squeak ＠ icloud.com
+
+
+
+
+
+
+
+
+
+
+> 2018/08/02 23:01、Masashi Umezawa <ume ＠ softumeya.com>のメール:
+> 
+> 梅澤です。
+> 
+> PharoからRDBにアクセスするにはGlorpやKobatiといったORマッパーを使うことになります。
+> 
+> 「Pharo5 (Smalltalk) + Glorp (ORM) + SQLite3 のチュートリアルでひっかかったところ等のメモ」
+> https://qiita.com/sumim/items/19cc812821159b205581
+> 
+> 「SQLマッピングフレームワーク「Kobati」のはなし」
+> https://www.slideshare.net/kazukiminamitani/sqlkobati
+> 
+> RDBの良さは、広く使われており、Pharo以外の他のツールで読み書きが可能というところだと思います。
+> データの可搬性を考慮するならば良い選択肢と思います。
+> 
+> ただしオブジェクトの世界とRDBの世界はかなり違うものなので、Pharoからは使いにくい部分も多々あります。
+> 
+> オブジェクトをそのまま格納したいということであれば、大がかりにはなりますが、GemStone/SなどのOODBを
+> 使う手もあります。
+> https://gemtalksystems.com/products/gs64/
+> 
+> もう少し気軽にということであればNeo4jなどのGraph DBもおすすめです。こちらはオブジェクトの
+> ネットワーク構造をそのままDBに落とし込めるので、RDBよりはSmalltalkとの親和性が高いと思います。
+> 
+> 「Neo4reStの紹介」(第39回Smalltalk勉強会(兼忘年会))
+> https://drive.google.com/file/d/0B-QQfEn6pNsXcm03OWJ3clJYUE0/view
+> https://atnd.org/events/23037
+> 
+> 「Manipulating Neo4j from Pharo Smalltalk」(第103回Smalltalk勉強会)
+> https://github.com/quentinplessis/smalltalk-neo4j
+> https://smalltalk.connpass.com/event/64380/
+> 
+> データ量がそれほどでもなく、複数のツールから同時に使うことがないという場合は、単にPharoのオブジェクトを
+> ファイルに保存してしまうという手もあるかと思います。Fuelを使うと、任意の複雑な構造のオブジェクトを
+> ファイルに保存することができます。
+> https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/Fuel/Fuel.html
+> 
+> 以上、ご参考まで。
+> 
+> 2018年7月31日 19:29 五十嵐雅哉 <nez.squeak ＠ icloud.com>:
+>> 初心者質問です。
+>> 
+>> リレーショナル・データベース（RB）とPharoのコラボを考えていますが、RBでできことはPharoでは容易なような気もします。
+>> 想定しているRBが大規模なものではないのですが、Collection系で間に合いそうな気もします。RBも基本、何らかの言語で開発されているとも思うのですが、Pharoでできればそれでいいのでしょうか？
+>> 
+>> 五十嵐　雅哉
+>> 吉備高原医療リハビリテーションセンター　内科
+>> 〒716-1241　岡山県加賀郡吉備中央町吉川7511
+>> telephone ?0866-56-7141
+>> cellphone 080-3296-1961
+>> mail nez.squeak ＠ icloud.com
+>> 
+>> 
+> 
+> -- 
+> "SoftUmeYa, LLC"
+> [:masashi | ^umezawa]
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20180806/a469d59b/attachment.html>
+
+From nez.squeak ＠ icloud.com  Mon Aug  6 17:00:18 2018
+From: nez.squeak ＠ icloud.com (五十嵐雅哉)
+Date: Mon, 06 Aug 2018 17:00:18 +0900
+Subject: [SML 8201] Re: Pharoとデータベース
+In-Reply-To: <fd09f869-20b2-7164-1464-057f8b340037@hb.tp1.jp>
+References: <EBB373FF-1C82-4D9F-94C1-A3B59940FC8C@icloud.com>
+ <fd09f869-20b2-7164-1464-057f8b340037@hb.tp1.jp>
+Message-ID: <57C24EBB-3EA9-4B33-89B5-E1EF057CA3F6@icloud.com>
+
+タョナトヘヘ
+
+・「・ノ・ミ・、・ケ、、、ソ、タ、ュ、「、熙ャ、ネ、ヲ、エ、カ、、、゛、ケ。」
+MVC、ホマテ、マ。「、ネ、ニ、篏イケヘ、ヒ、ハ、熙゛、キ、ソ。」
+
+グススヘ。イ晗ネ
+オネネ篋カー衾ナ・マ・モ・ニ。シ・キ・逾サ・ソ。シ。。ニ箚ハ
+「ゥ716-1241。。イャサウクゥイテイ豬患犯羆祥㌦叛511
+telephone ?0866-56-7141
+cellphone 080-3296-1961
+mail nez.squeak ＠ icloud.com
+
+
+
+
+
+
+
+
+
+
+> 2018/08/03 12:53、Narita @ TOPPA <narita_takaoki ＠ hb.tp1.jp>のメール:
+> 
+> ML に返信したつもりで、ご本人様直接に返してました。
+> 
+> On 2018/07/31 19:29, 五十嵐雅哉 wrote:
+> > 初心者質問です。
+> >
+> > リレーショナル・データベース（RB）とPharoのコラボを考えていますが、RBで できことはPharoでは容易なような気もします。
+> > 想定しているRBが大規模なものではないのですが、Collection系で間に合いそう な気もします。RBも基本、何らかの言語で開発されているとも思うのですが、 Pharoでできればそれでいいのでしょうか？
+> 
+> RB というよりはデータベース（DB）ソフトウェアを使う理由ですが、データ
+> 量的な問題は別とすると、データの永続化を考えなければ現状使う意味はあ
+> まり無いと思います。
+> 
+> 永続化を前提として、一貫性等の整合性を維持しようとすると結構面倒なこ
+> とが生じるので、そこらへんを DB などに押し付けて済ますというのが一つ
+> の解決法だと思います。
+> 
+> なので結局のところ、この永続化にまつわる厄介ごとを全部自分で解決つけ
+> られ、実行時効率の要求にも応えられ、信頼性を保証するためのエンジニア
+> リングプロセスも問題にしないなら、自分でやってしまうのはアリでしょう。
+> 
+> もしくは永続化は考えないし、途中で問題があってプログラムが止まったり
+> したときも、そこまでのデータ操作は全て捨てて問題ないですよ、みたいな
+> 状況なら、異種のアーキテクチャの DB と協調するようにするコストが無駄
+> ですから DB を使わないとなるでしょう。
+> 
+> 別な言い方をすると、MVC モデルの M の部分を RB にやらせる方が要求に
+> 対応したシステムの構築が楽なら RB を使った方が良いし、そうじゃなくて
+> M の部分は最低限単に実行中のデータを保持していれば十分にすぎないなら
+> RB をわざわざ使う理由が無いと思います。
+> 
+> 安直に、永続化が必要としても、「データを書き込んでいるときにプログラ
+> ムが何らかの理由で止まる※」という状況を考え、それでも大して困らない
+> と言えるなら DB はいらないと言っても良いかもしれません。
+> 
+> ※もちろん最悪書き込み中のファイル等の中身は破壊されるわけです。
+> 
+> もちろん永続化がいらないなら DB はいらないでしょうし。
+> 
+> 大筋はそんな感じではなかろうかと思います。データ量や実行時効率の問題
+> が絡んだ実際的な判断は、また別になるでしょうけれど。
+> 
+> -- 
+> 近江屋  成田 隆興
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20180806/53d16f06/attachment-0001.html>
+
+From ume ＠ softumeya.com  Wed Aug 15 22:34:52 2018
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Wed, 15 Aug 2018 22:34:52 +0900
+Subject: [SML 8202]
+	第115回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdRN48D2zYMW28DxxJqOH6W=rEN36DHQ=ABEQ6Zm_K+=1w@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai115kaismalltalkbenkyoukai
+
+日時: 2018/8/29(水) 19:00-21:00
+場所: SORABITO株式会社
+
+今回はTarandocという、JSON永続化ライブラリの話をしようと思います。
+タプルDBのTarantalkに、ドキュメント指向なAPIをかぶせたものです。
+
+事前の申し込みは不要です。ふらりとどうぞ。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

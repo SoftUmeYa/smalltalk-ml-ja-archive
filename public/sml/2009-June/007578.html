@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7578] [ANNOUNCE] Jun for Java (Jun729)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207578%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun729%29&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007577.html">
+   <LINK REL="Next"  HREF="007579.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7578] [ANNOUNCE] Jun for Java (Jun729)</H1>
+    <B>Yoshiyuki NISHINAKA</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207578%5D%20%5BANNOUNCE%5D%20Jun%20for%20Java%20%28Jun729%29&In-Reply-To="
+       TITLE="[SML 7578] [ANNOUNCE] Jun for Java (Jun729)">nisinaka ＠ sra.co.jp
+       </A><BR>
+    <I>2009年 6月 25日 (木) 16:04:46 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007577.html">[SML 7577] 第9回Smalltalk勉強会＠京都
+</A></li>
+        <LI>次の記事 <A HREF="007579.html">[SML 7579] Duration
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7578">[ 日付 ]</a>
+              <a href="thread.html#7578">[ スレッド ]</a>
+              <a href="subject.html#7578">[ 件名 ]</a>
+              <a href="author.html#7578">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>「じゅん for Java」のバージョン729を公開します。
+
+  バージョン721からの主な変更点は、以下の通りです。
+
+    * (new feature) JunDummyWriterは、書き出した文字の数を数える
+      ためだけのクラスです。
+
+    * (new feature) JunOpenGLCatalogModelは、いくつもの三次元オブ
+      ジェクトをひとつのウィンドウ上で閲覧し、操作するためのアプ
+      リケーションです。三次元オブジェクトをLSTファイルとして書き
+      出したり、読み込んだりして、カタログの内容を表示するHTMLファ
+      イルを生成することができます。
+
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/729/Catalog.png">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/729/Catalog.png</A>
+        <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/News/729/CatalogHTML/index.html">http://www.sra.co.jp/people/nisinaka/Jun4Java/News/729/CatalogHTML/index.html</A>
+
+    * (modification) JunOpenGLRendererを変更し、直接
+      JunOpenGLRenderingContextを受け取ってレンダリングを行うので
+      はなく、JunOpenGLDrawableを受け取るようにしました。これによっ
+      て、レンダラを指定する際に、具体的なレンダリングコンテキス
+      トを設定できるようになりました。
+
+    * (new feature) JunLispConverterは、一種のファクトリクラスで、
+      Lispリストを解釈して、オブジェクトを生成します。生成するオ
+      ブジェクトのクラスは、JunLispListを引数とするコンストラクタ
+      を定義し、あらかじめJunLispConverterに登録して使います。
+
+    * (modification) 幾何関連のクラスやOpenGL 3Dオブジェクト関連
+      のクラスを、JunLispConverterに登録し、Lispリストの形式から
+      オブジェクトが生成できるようにしました。
+
+    * (new feature) JunLispObjectインタフェースを導入し、クラス群
+      とJunLispConsの直接的な依存関係を排除しました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    <A HREF="ftp://ftp.sra.co.jp/pub/lang/java/jun4java/">ftp://ftp.sra.co.jp/pub/lang/java/jun4java/</A>
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    <A HREF="http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html">http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html</A>
+
+
+                                 西中 芳幸 (<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">nisinaka ＠ sra.co.jp</A>)
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007577.html">[SML 7577] 第9回Smalltalk勉強会＠京都
+</A></li>
+	<LI>次の記事 <A HREF="007579.html">[SML 7579] Duration
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7578">[ 日付 ]</a>
+              <a href="thread.html#7578">[ スレッド ]</a>
+              <a href="subject.html#7578">[ 件名 ]</a>
+              <a href="author.html#7578">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

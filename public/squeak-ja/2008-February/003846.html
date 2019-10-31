@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3846] Re: ループしているプロセスの停止について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203846%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVrITwlVyQ3JEYbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkayVXJW0lOyU5JE5EZDtfJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=JT200802151353268.6813125%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003826.html">
+   <LINK REL="Next"  HREF="003817.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3846] Re: ループしているプロセスの停止について</H1>
+    <B>久保　道</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203846%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVrITwlVyQ3JEYbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkayVXJW0lOyU5JE5EZDtfJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=JT200802151353268.6813125%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3846] Re: ループしているプロセスの停止について">kubo-o ＠ mbox.kyoto-inet.or.jp
+       </A><BR>
+    <I>2008年 2月 23日 (土) 21:29:17 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003826.html">[Squeak-ja: 3826] Re: ループしているプロセスの停止について
+</A></li>
+        <LI>次の記事 <A HREF="003817.html">[Squeak-ja: 3817] Seaside入門をオープンソースカンファレンス2008 Tokyo/Springでやります
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3846">[ 日付 ]</a>
+              <a href="thread.html#3846">[ スレッド ]</a>
+              <a href="subject.html#3846">[ 件名 ]</a>
+              <a href="author.html#3846">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>梅澤さん、ありがとうございました。
+ご教示いただいたようにして、
+すっかりきれいに消えました。
+戯れに？processをさわって、
+お手数をかけました。
+おかげさまで、またSqueakの
+奥深さを垣間見た気がして、
+うれしいです。
+久保　道
+
+-----Original Message-----
+From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A> [mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>]
+On Behalf Of Masashi Umezawa
+Sent: Friday, February 15, 2008 1:53 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3826] Re: ループしているプロセスの停止について
+
+こんにちは
+梅澤です。
+
+すでにループしてしまっているイメージをなんとか救いたいということでしたら、
+私であればまず、LineMorphのopenInWorldを一時的にoverrideします。
+
+LineMorph&gt;&gt;openInWorld
+    ^self
+
+その後で、ProcessBrowserを使ってプロセスを殺します。
+Worldメニューのデバッグ-&gt;open process browserです。
+
+優先度40のプロセスがおそらく2つ上がっていると思います。the UI processの
+ほうはMorphicのおおもとのループですから止めてはいけません。
+
+Delayでwaitしながら進んでいるプロセスを選択してterminateさせます。
+
+プロセスを殺した後で、LineMorphのopenInWorldを消しておけばよいでしょう。
+
+ProcessBrowserについて詳しくは「自由自在」の12章です。
+
+久保　道 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kubo-o ＠ mbox.kyoto-inet.or.jp</A>&gt; wrote:
+&gt;<i> 阿部さん、さっそく教えていただいて、
+</I>&gt;<i> ありがとうございました。
+</I>&gt;<i> ただ、前回書きましたように私の場合は、
+</I>&gt;<i> ご指示くださったように
+</I>&gt;<i> 「まずは変数に入れたほうが良い」という点が
+</I>&gt;<i> できていなかったので、困っています。
+</I>&gt;<i> 最終的には必要なcodeだけ取り出して
+</I>&gt;<i> 別につくりなおすことにします。
+</I>&gt;<i> お返事遅れて失礼いたしました。
+</I>&gt;<i> 久保　道
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>
+</I>[mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">squeak-ja-bounces ＠ smalltalk.jp</A>]
+&gt;<i> On Behalf Of Kazuhiro ABE
+</I>&gt;<i> Sent: Thursday, February 07, 2008 4:14 PM
+</I>&gt;<i> To: Squeak discussion in Japanese
+</I>&gt;<i> Subject: [Squeak-ja: 3816] Re: ループしているプロセスの停止について
+</I>&gt;<i>
+</I>&gt;<i> 阿部@新百合です。
+</I>&gt;<i>
+</I>&gt;<i> いきなりforkを送ると、あとでそのプロセスを捕まえにくくなるので、まずは変
+</I>&gt;<i> 数に入れたほうが良いと思います。
+</I>&gt;<i>
+</I>&gt;<i> arm := LineMorph from: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">290 ＠ 300</A> to: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">710 ＠ 300</A>  color: Color black width: 5.
+</I>&gt;<i> process := [[ arm openInWorld.
+</I>&gt;<i>    ( Delay forSeconds: 1) wait] repeat] newProcess.
+</I>&gt;<i> process resume
+</I>&gt;<i>
+</I>&gt;<i> これを終了するときは以下のようにします。
+</I>&gt;<i>
+</I>&gt;<i> process terminate
+</I>&gt;<i>
+</I>&gt;<i> 他どのようなメソッドがあるかはProcessクラスのインスタンスメソッドを見てく
+</I>&gt;<i> ださい。
+</I>&gt;<i> forkは単なる予約語ではなく、メッセージですから、ブロックにforkを送ったと
+</I>&gt;<i> きになにが起こっているかを考える必要があります。
+</I>&gt;<i> ワークスペースなどでforkを選択し、Alt+bを押すとその定義を調べることができ
+</I>&gt;<i> ます。
+</I>&gt;<i> せっかく中身を参照できるわけですから、今回の問題に限らず、分からないこと
+</I>&gt;<i> があったら、中を調べてみるのは良い習慣だと思います。
+</I>&gt;<i>
+</I>&gt;<i> また、自由自在では一章を費やして並行処理について解説しています(第12章)。
+</I>&gt;<i>
+</I>&gt;<i>  //abee
+</I>&gt;<i> --
+</I>&gt;<i> 阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</I>&gt;<i>
+</I>&gt;<i> No virus found in this incoming message.
+</I>&gt;<i> Checked by AVG.
+</I>&gt;<i> Version: 7.5.516 / Virus Database: 269.19.21/1267 - Release Date:
+</I>2008/02/08
+&gt;<i> 20:12
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> No virus found in this outgoing message.
+</I>&gt;<i> Checked by AVG.
+</I>&gt;<i> Version: 7.5.516 / Virus Database: 269.20.5/1279 - Release Date:
+</I>2008/02/14
+&gt;<i> 18:35
+</I>&gt;<i>
+</I>
+
+
+---
+[:masashi | ^umezawa]
+
+No virus found in this incoming message.
+Checked by AVG.
+Version: 7.5.516 / Virus Database: 269.20.9/1292 - Release Date: 2008/02/21
+16:09
+
+
+No virus found in this outgoing message.
+Checked by AVG.
+Version: 7.5.516 / Virus Database: 269.20.9/1294 - Release Date: 2008/02/22
+18:39
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003826.html">[Squeak-ja: 3826] Re: ループしているプロセスの停止について
+</A></li>
+	<LI>次の記事 <A HREF="003817.html">[Squeak-ja: 3817] Seaside入門をオープンソースカンファレンス2008 Tokyo/Springでやります
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3846">[ 日付 ]</a>
+              <a href="thread.html#3846">[ スレッド ]</a>
+              <a href="subject.html#3846">[ 件名 ]</a>
+              <a href="author.html#3846">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

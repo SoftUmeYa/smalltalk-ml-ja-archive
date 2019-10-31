@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2498] Re: Windows 版 Squeak での UDP パケット受信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202498%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=9D83E7CF-D8F5-4B32-B66B-7972C794BF11%40kwansei.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002497.html">
+   <LINK REL="Next"  HREF="002499.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2498] Re: Windows 版 Squeak での UDP パケット受信について</H1>
+    <B>e-itoh ＠ ygu.ac.jp</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202498%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpbmRvd3MgGyRCSEcbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrIBskQiRHJE4bKEIgVURQIBskQiVRJTElQyVIPHU/LiRLGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=9D83E7CF-D8F5-4B32-B66B-7972C794BF11%40kwansei.ac.jp"
+       TITLE="[Squeak-ja: 2498] Re: Windows 版 Squeak での UDP パケット受信について">e-itoh ＠ ygu.ac.jp
+       </A><BR>
+    <I>2005年 7月  4日 (月) 20:26:47 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002497.html">[Squeak-ja: 2497] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+        <LI>次の記事 <A HREF="002499.html">[Squeak-ja: 2499] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2498">[ 日付 ]</a>
+              <a href="thread.html#2498">[ スレッド ]</a>
+              <a href="subject.html#2498">[ 件名 ]</a>
+              <a href="author.html#2498">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山梨学院大学の伊藤です。
+
+川村さん、武田さん、ご返事くださいましてありがとうございます。
+
+川村さん＞下記症状の件、私も遭遇して結局ＶＭを再構築したらうまくいきました。
+　早速ホームページを拝見しながら、VMの再構築にチャレンジしております。
+こちらも初めてなので試行錯誤中です。
+
+武田さん＞receiveUDPDataInto:ではなく、receiveDataInto:を使ってもう 
+　　　　＞まくいきませんか？
+　試してみたところ、やはり同様にUnixでは動作するものの、Windowsでは
+動作しませんでした。
+停止する箇所は、delay waitではなく、Socket::waitForDataIfClosedに変
+わりましたが。
+
+　他にもアドバイスなどございましたらよろしくお願いいたします。
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002497.html">[Squeak-ja: 2497] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+	<LI>次の記事 <A HREF="002499.html">[Squeak-ja: 2499] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2498">[ 日付 ]</a>
+              <a href="thread.html#2498">[ スレッド ]</a>
+              <a href="subject.html#2498">[ 件名 ]</a>
+              <a href="author.html#2498">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

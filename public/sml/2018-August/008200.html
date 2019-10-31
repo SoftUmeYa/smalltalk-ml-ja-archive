@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8200] Re: Pharoとデータベース
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208200%5D%20Re%3A%20%3D%3Futf-8%3Fb%3FUGhhcm/jgajjg4fjg7zjgr/jg5njg7zjgrk%3D%3F%3D&In-Reply-To=%3CF5230B83-8AE6-46DC-B003-55C07812915D%40icloud.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="008201.html">
+   <LINK REL="Next"  HREF="008202.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8200] Re: Pharoとデータベース</H1>
+    <B>五十嵐雅哉</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208200%5D%20Re%3A%20%3D%3Futf-8%3Fb%3FUGhhcm/jgajjg4fjg7zjgr/jg5njg7zjgrk%3D%3F%3D&In-Reply-To=%3CF5230B83-8AE6-46DC-B003-55C07812915D%40icloud.com%3E"
+       TITLE="[SML 8200] Re: Pharoとデータベース">nez.squeak ＠ icloud.com
+       </A><BR>
+    <I>2018年 8月  6日 (月) 16:58:37 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="008201.html">[SML 8201] Re: Pharoとデータベース
+</A></li>
+        <LI>次の記事 <A HREF="008202.html">[SML 8202]	第115回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8200">[ 日付 ]</a>
+              <a href="thread.html#8200">[ スレッド ]</a>
+              <a href="subject.html#8200">[ 件名 ]</a>
+              <a href="author.html#8200">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>梅澤様　
+
+アドバイスをいただきありがとうございます。
+Fuelを使う方法を検討したいと思います。
+
+
+五十嵐　雅哉
+吉備高原医療リハビリテーションセンター　内科
+〒716-1241　岡山県加賀郡吉備中央町吉川7511
+telephone &#8237;0866-56-7141
+cellphone 080-3296-1961
+mail <A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">nez.squeak ＠ icloud.com</A>
+
+
+
+
+
+
+
+
+
+
+&gt;<i> 2018/08/02 23:01、Masashi Umezawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">ume ＠ softumeya.com</A>&gt;のメール:
+</I>&gt;<i> 
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i> 
+</I>&gt;<i> PharoからRDBにアクセスするにはGlorpやKobatiといったORマッパーを使うことになります。
+</I>&gt;<i> 
+</I>&gt;<i> 「Pharo5 (Smalltalk) + Glorp (ORM) + SQLite3 のチュートリアルでひっかかったところ等のメモ」
+</I>&gt;<i> <A HREF="https://qiita.com/sumim/items/19cc812821159b205581">https://qiita.com/sumim/items/19cc812821159b205581</A>
+</I>&gt;<i> 
+</I>&gt;<i> 「SQLマッピングフレームワーク「Kobati」のはなし」
+</I>&gt;<i> <A HREF="https://www.slideshare.net/kazukiminamitani/sqlkobati">https://www.slideshare.net/kazukiminamitani/sqlkobati</A>
+</I>&gt;<i> 
+</I>&gt;<i> RDBの良さは、広く使われており、Pharo以外の他のツールで読み書きが可能というところだと思います。
+</I>&gt;<i> データの可搬性を考慮するならば良い選択肢と思います。
+</I>&gt;<i> 
+</I>&gt;<i> ただしオブジェクトの世界とRDBの世界はかなり違うものなので、Pharoからは使いにくい部分も多々あります。
+</I>&gt;<i> 
+</I>&gt;<i> オブジェクトをそのまま格納したいということであれば、大がかりにはなりますが、GemStone/SなどのOODBを
+</I>&gt;<i> 使う手もあります。
+</I>&gt;<i> <A HREF="https://gemtalksystems.com/products/gs64/">https://gemtalksystems.com/products/gs64/</A>
+</I>&gt;<i> 
+</I>&gt;<i> もう少し気軽にということであればNeo4jなどのGraph DBもおすすめです。こちらはオブジェクトの
+</I>&gt;<i> ネットワーク構造をそのままDBに落とし込めるので、RDBよりはSmalltalkとの親和性が高いと思います。
+</I>&gt;<i> 
+</I>&gt;<i> 「Neo4reStの紹介」(第39回Smalltalk勉強会(兼忘年会))
+</I>&gt;<i> <A HREF="https://drive.google.com/file/d/0B-QQfEn6pNsXcm03OWJ3clJYUE0/view">https://drive.google.com/file/d/0B-QQfEn6pNsXcm03OWJ3clJYUE0/view</A>
+</I>&gt;<i> <A HREF="https://atnd.org/events/23037">https://atnd.org/events/23037</A>
+</I>&gt;<i> 
+</I>&gt;<i> 「Manipulating Neo4j from Pharo Smalltalk」(第103回Smalltalk勉強会)
+</I>&gt;<i> <A HREF="https://github.com/quentinplessis/smalltalk-neo4j">https://github.com/quentinplessis/smalltalk-neo4j</A>
+</I>&gt;<i> <A HREF="https://smalltalk.connpass.com/event/64380/">https://smalltalk.connpass.com/event/64380/</A>
+</I>&gt;<i> 
+</I>&gt;<i> データ量がそれほどでもなく、複数のツールから同時に使うことがないという場合は、単にPharoのオブジェクトを
+</I>&gt;<i> ファイルに保存してしまうという手もあるかと思います。Fuelを使うと、任意の複雑な構造のオブジェクトを
+</I>&gt;<i> ファイルに保存することができます。
+</I>&gt;<i> <A HREF="https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/Fuel/Fuel.html">https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/Fuel/Fuel.html</A>
+</I>&gt;<i> 
+</I>&gt;<i> 以上、ご参考まで。
+</I>&gt;<i> 
+</I>&gt;<i> 2018年7月31日 19:29 五十嵐雅哉 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">nez.squeak ＠ icloud.com</A>&gt;:
+</I>&gt;&gt;<i> 初心者質問です。
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> リレーショナル・データベース（RB）とPharoのコラボを考えていますが、RBでできことはPharoでは容易なような気もします。
+</I>&gt;&gt;<i> 想定しているRBが大規模なものではないのですが、Collection系で間に合いそうな気もします。RBも基本、何らかの言語で開発されているとも思うのですが、Pharoでできればそれでいいのでしょうか？
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 五十嵐　雅哉
+</I>&gt;&gt;<i> 吉備高原医療リハビリテーションセンター　内科
+</I>&gt;&gt;<i> 〒716-1241　岡山県加賀郡吉備中央町吉川7511
+</I>&gt;&gt;<i> telephone &#8237;0866-56-7141
+</I>&gt;&gt;<i> cellphone 080-3296-1961
+</I>&gt;&gt;<i> mail <A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">nez.squeak ＠ icloud.com</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> &quot;SoftUmeYa, LLC&quot;
+</I>&gt;<i> [:masashi | ^umezawa]
+</I>
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: &lt;<A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20180806/a469d59b/attachment.html">http://www.smalltalk.jp/pipermail/sml/attachments/20180806/a469d59b/attachment.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="008201.html">[SML 8201] Re: Pharoとデータベース
+</A></li>
+	<LI>次の記事 <A HREF="008202.html">[SML 8202]	第115回Smalltalk勉強会のお知らせ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8200">[ 日付 ]</a>
+              <a href="thread.html#8200">[ スレッド ]</a>
+              <a href="subject.html#8200">[ 件名 ]</a>
+              <a href="author.html#8200">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

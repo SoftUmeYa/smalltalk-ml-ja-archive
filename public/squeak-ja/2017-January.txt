@@ -1,0 +1,32 @@
+From ume ＠ softumeya.com  Tue Jan 17 23:53:06 2017
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 17 Jan 2017 23:53:06 +0900
+Subject: [Squeak-ja: 4757]
+	第96回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdQ6sUMUAuzNf0VdcRppVy5ijO67CAydtPQmGE+2ceA2Cg@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai96kaismalltalkbenkyoukai
+
+日時: 2017/1/30(月) 19:00-21:00
+場所:  SORABITO株式会社
+
+今回は私が最近開発したTarantalkというライブラリの話をします。
+https://github.com/mumez/Tarantalk
+
+ロシアで作られたTarantoolというDB付きのLua実行環境があるのですが、それとの通信を可能にするというものです。
+https://tarantool.org/
+
+Tarantalkにより、PharoからLuaの関数をリモート呼び出ししたり、タプルDBに各種データを保存したりできます。各種マイクロサービスとの連携、統合が、Luaのエコシステムを活用しつつできるようになります。SmalltalkとLua、なかなか良い組み合わせですよ。
+
+お申し込みはこちらから
+https://smalltalk.connpass.com/event/48815/
+
+お気軽にどうぞ。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

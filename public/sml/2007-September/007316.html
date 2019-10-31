@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7316] Re: ブロック生成のメタプログラミング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207316%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=86c0320c0709110930y220bba20u20726ab378f93920%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007315.html">
+   <LINK REL="Next"  HREF="007317.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7316] Re: ブロック生成のメタプログラミング</H1>
+    <B>NISHIHARA Satoshi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207316%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=86c0320c0709110930y220bba20u20726ab378f93920%40mail.gmail.com"
+       TITLE="[SML 7316] Re: ブロック生成のメタプログラミング">nishis ＠ zephyr.dti.ne.jp
+       </A><BR>
+    <I>2007年 9月 12日 (水) 02:12:52 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007315.html">[SML 7315] Re: ブロック生成のメタプログラミング
+</A></li>
+        <LI>次の記事 <A HREF="007317.html">[SML 7317] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7316">[ 日付 ]</a>
+              <a href="thread.html#7316">[ スレッド ]</a>
+              <a href="subject.html#7316">[ 件名 ]</a>
+              <a href="author.html#7316">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>on 07.9.12 1:30 AM, Masato Sumi wrote:
+&gt;<i> たとえば Symbol に次のような振る舞いの #value: 、#value:value: を
+</I>&gt;<i> 定義しても、同じようなことは可能だと思うのです。
+</I>&gt;<i> 
+</I>&gt;<i> Symbol &gt;&gt; value: anObject
+</I>&gt;<i>     ^anObject perform: self
+</I>&gt;<i> 
+</I>&gt;<i> Symbol &gt;&gt; value: anObject value: argument
+</I>&gt;<i>     ^anObject perform: self with: argument
+</I>&gt;<i> 
+</I>&gt;<i> (1 to: 10) select: #even    &quot;=&gt; #(2 4 6 8 10) &quot;
+</I>&gt;<i> #(a b c) with: #(1 2 3) collect: #-&gt;   &quot;=&gt;  {#a-&gt;1 . #b-&gt;2 . #c-&gt;3} &quot;
+</I>&gt;<i> (1 to: 10) inject: 0 into: #+   &quot;=&gt; 55 &quot;
+</I>
+これは
+<A HREF="http://blog.3plus4.org/2007/03/27/selectors-as-blocks/">http://blog.3plus4.org/2007/03/27/selectors-as-blocks/</A>
+で Alan Knight さんが付けてたコメントと同じですね．
+
+&gt;<i> 自分なりに考えてみたところでは、実際にブロックを生成することで、通常、
+</I>&gt;<i> ブロックを引数に取るメソッド呼び出しのシグネチャのようなものを変えないため…、
+</I>&gt;<i> あるいは、シンボルがセレクタとしてまだ機能しないときの遅延処理のため…、
+</I>&gt;<i> といったものを思いつきましたが、他にもあれば教えていただければ幸いです。
+</I>&gt;<i> 
+</I>&gt;<i> なお、#asBlockFor: のほうは、ある種のカリー化なので、ブロックをアドホックに
+</I>&gt;<i> 生成する意義は大いにあると分かります。
+</I>
+すぐに思い付くのが，
+((0 to: 9) select: [:each | #odd value: each]) fold: [:x :y | x perform:
+#* with: y].
+または
+((0 to: 9) select: [:each | #odd value: each]) fold: [:x :y | #* value:
+x value: y].
+と書くところが
+((0 to: 9) select: #odd asBlock) fold: #* asBlock.
+で済むこと．ブロックを明示的に指定する必要がないこと．かな〜．
+
+たぶんポイントは
+
+on 07.9.6 10:12 AM, AOKI Atsushi wrote:
+&gt;<i> asBlock / asBlockFor: のメッセージに応えられる他のオブジェク
+</I>&gt;<i> トの候補としては Message / MessageSend / BlockClosure などの
+</I>&gt;<i> オブジェクトたちがあげられると思います。
+</I>
+にあると思うんですが．シンボルだけが使えてもあんまご利益がないと言うか，
+説得力に欠けるというか．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    <A HREF="http://www.zephyr.dti.ne.jp/~nishis/">http://www.zephyr.dti.ne.jp/~nishis/</A>
+--------------------------------------------
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007315.html">[SML 7315] Re: ブロック生成のメタプログラミング
+</A></li>
+	<LI>次の記事 <A HREF="007317.html">[SML 7317] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7316">[ 日付 ]</a>
+              <a href="thread.html#7316">[ スレッド ]</a>
+              <a href="subject.html#7316">[ 件名 ]</a>
+              <a href="author.html#7316">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7876] Re: 連想計算というリフレクティブな手法
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207876%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3CAANLkTi%3D0Gre%2BV914wVNJ0seeghwytg_TKZN9ED2MKZg8%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007875.html">
+   <LINK REL="Next"  HREF="007878.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7876] Re: 連想計算というリフレクティブな手法</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207876%5D%20Re%3A%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCTyJBWzdXOzskSCQkJCYlaiVVJWwlLyVGJSMbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJVYkSjxqSyEbKEI%3D%3F%3D&In-Reply-To=%3CAANLkTi%3D0Gre%2BV914wVNJ0seeghwytg_TKZN9ED2MKZg8%40mail.gmail.com%3E"
+       TITLE="[SML 7876] Re: 連想計算というリフレクティブな手法">ume ＠ softumeya.com
+       </A><BR>
+    <I>2010年 12月 14日 (火) 22:34:29 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007875.html">[SML 7875] Re: 連想計算というリフレクティブな手法
+</A></li>
+        <LI>次の記事 <A HREF="007878.html">[SML 7878] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7876">[ 日付 ]</a>
+              <a href="thread.html#7876">[ スレッド ]</a>
+              <a href="subject.html#7876">[ 件名 ]</a>
+              <a href="author.html#7876">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+いやあ、盛り上がっていますねー。奇しくも今年最後のSmalltalk勉強会は
+Smalltalk Superpowersで締めくくろうと思っています。(いつもの案内メール
+別途書きます)
+<A HREF="http://atnd.org/events/11043">http://atnd.org/events/11043</A>
+
+皆さんのちょっとやり過ぎ間のある高等テクニック、ぜひ紹介させていただきたく
+思います。
+
+ではでは。
+
+2010年12月14日20:04 Masato Sumi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">sumi ＠ seagreen.ocn.ne.jp</A>&gt;:
+&gt;<i> sumim です。
+</I>&gt;<i>
+</I>&gt;<i> まだ流れを追いきれていないので、Smalltalk的に書き直せていませんが、
+</I>&gt;<i> とりあえず成田さんのCLのコードをSmalltalkで動くよう直訳してみました。
+</I>&gt;<i> Squeak4.1とVisualWorks7.7で動作します。
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> | sequentialSquare compositionOp fibo fibonacci |
+</I>&gt;<i>
+</I>&gt;<i> sequentialSquare := nil.
+</I>&gt;<i> sequentialSquare := [:compOp :operator :n |
+</I>&gt;<i>   n &lt; 1 ifTrue: [nil] ifFalse: [
+</I>&gt;<i>   n = 1 ifTrue: [operator] ifFalse: [
+</I>&gt;<i>   n &gt; 1
+</I>&gt;<i>      ifTrue: [
+</I>&gt;<i>         n odd ifTrue: [
+</I>&gt;<i>            compOp
+</I>&gt;<i>               value: (sequentialSquare
+</I>&gt;<i>                  value: compOp value: operator value: n - 1)
+</I>&gt;<i>               value: operator]
+</I>&gt;<i>      ifFalse: [
+</I>&gt;<i>         | sqOp |
+</I>&gt;<i>         sqOp := sequentialSquare
+</I>&gt;<i>            value: compOp value: operator value: n / 2.
+</I>&gt;<i>         compOp value: sqOp value: sqOp]]]]].
+</I>&gt;<i>
+</I>&gt;<i> compositionOp := [:func1 :func2 |
+</I>&gt;<i>   [:x | func1 value: (func2 value: x)]].
+</I>&gt;<i>
+</I>&gt;<i> fibo := [:x | Array with: x first + (x at: 2) with: x first].
+</I>&gt;<i>
+</I>&gt;<i> fibonacci := [:x |
+</I>&gt;<i>   x &lt; 1 ifTrue: [nil] ifFalse: [
+</I>&gt;<i>   x = 1
+</I>&gt;<i>      ifTrue: [1]
+</I>&gt;<i>      ifFalse: [
+</I>&gt;<i>         ((sequentialSquare
+</I>&gt;<i>               value: compositionOp value: fibo value: x - 1)
+</I>&gt;<i>            value: #(1 0)) first]]].
+</I>&gt;<i>
+</I>&gt;<i> fibonacci value: 1000
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 2010年12月14日17:11 Narita Takaoki &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">Narita.Takaoki ＠ exc.epson.co.jp</A>&gt;:
+</I>&gt;&gt;<i> 成田です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> sumim こと鷲見です。
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 連想計算でもリフレクティブでもないので恐縮ですが、
+</I>&gt;&gt;&gt;<i> にぎやかしにと、２つほど考えてみました。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 同様にぎやかしですが、それどころか Smalltalk にもなってません。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> これを Smalltalk 的に書くとしたら？で詰まってしまった・・・
+</I>&gt;&gt;<i> Common Lisp で書いてしまいましたが：
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> (defun sequential-square (comp-op operator n)
+</I>&gt;&gt;<i>  (assert (integerp n) (n)) ;; 本質には関係しないので無視してください。
+</I>&gt;&gt;<i>  (cond ((&lt; n 1) nil)
+</I>&gt;&gt;<i>        ((= n 1) operator)
+</I>&gt;&gt;<i>        ((&gt; n 1)
+</I>&gt;&gt;<i>         (cond ((oddp n)
+</I>&gt;&gt;<i>                (funcall comp-op
+</I>&gt;&gt;<i>                 (sequential-square comp-op operator (1- n)) operator))
+</I>&gt;&gt;<i>               ('t
+</I>&gt;&gt;<i>                (let
+</I>&gt;&gt;<i>                 ((sq-op (sequential-square comp-op operator (/ n 2))))
+</I>&gt;&gt;<i>                 (funcall comp-op sq-op sq-op)))))))
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> (defun composition-op (func1 func2)
+</I>&gt;&gt;<i>  (lambda (x) (funcall func1 (funcall func2 x))))
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> (defun fibo (x) (list (+ (car x) (cadr x)) (car x)))
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> (defun fibonacci (x)
+</I>&gt;&gt;<i>  (cond ((&lt; x 1) nil)
+</I>&gt;&gt;<i>        ((= x 1) 1) ;; かなりインチキ
+</I>&gt;&gt;<i>        ('t
+</I>&gt;&gt;<i>         (car
+</I>&gt;&gt;<i>          (funcall
+</I>&gt;&gt;<i>           (sequential-square #'composition-op #'fibo (1- x)) '(1 0))))))
+</I>&gt;<i>
+</I>
+-- 
+&quot;SoftUmeYa, LLC&quot;
+[:masashi | ^umezawa]
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007875.html">[SML 7875] Re: 連想計算というリフレクティブな手法
+</A></li>
+	<LI>次の記事 <A HREF="007878.html">[SML 7878] Re: 連想計算というリフレクティブな手法
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7876">[ 日付 ]</a>
+              <a href="thread.html#7876">[ スレッド ]</a>
+              <a href="subject.html#7876">[ 件名 ]</a>
+              <a href="author.html#7876">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

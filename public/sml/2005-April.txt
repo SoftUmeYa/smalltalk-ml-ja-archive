@@ -1,0 +1,502 @@
+From aoki ＠ sra.co.jp  Mon Apr 11 02:40:46 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7071] Jun627 for Smalltalk
+Message-ID: <4259651E.6080109@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun627」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ビューファインダのライトをすべて消すためのメッセージを新設
+　しました。
+
+◆平面上に乗っている点群を扱うクラスを新設しました。
+
+◆視点・注視点・上方向ベクトル・ズーム高を指定して、３次元オ
+　ブジェクトを表示するメッセージを新設しました。
+
+◆直線の法線単位ベクトルを求めるメソッドに不具合がありました。
+　修正を施しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Tue Apr 12 10:41:11 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7072] Jun628 for Smalltalk
+Message-ID: <425B2737.3040708@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun628」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆３次元幾何ポリゴンの抽象化できるメソッドをスーパークラスへ
+　と持ち上げました。
+
+◆ランチャーの再オープンメッセージのスペルミスを正しました。
+
+◆点群を有する３次元幾何オブジェクトと３次元描画オブジェクト
+  に、点群を配列として答えるメッセージ（asArrayOfPoints）を追
+  加しました。
+
+◆マルチディスプレイの大きさを配列にして答えるメッセージの集
+　約を行いました。
+
+◆プログラム制御構造に「do: aBlock framesPerSecond: aNumber」
+  を追加しました。
+
+◆フラックスに時間を守る機構（framesPerSecond）を加えました。
+  これにより、マシンの速度に依存せずに、フラックスの再生を行
+  えます。また、ムービーの生成時にも、１秒あたりのフレーム枚
+  数をきちんと指定して書き出すように改めました。したがって、
+  錯覚を表現しているクラスにも、同様な機能が加わりました。
+
+◆フラックスをウィンドウとして開く際に、現在に描画しているオ
+  ブジェクトの境界箱の中心に注視点をもってきていましたが、フ
+  ラックス全体の境界箱の中心に注視点の設定を改めました。今ま
+  でのように、現在に描画しているオブジェクトの境界箱の中心に
+  合わせたい場合は、ウィンドウを開く際にシフトキー修飾をして
+  ください。
+
+◆座標・直線・角度からでも、同次座標変換行列（トランスフォー
+  メーション）のインスタンスを生成するメッセージを増やしまし
+  た。
+  　　　(aJunPoint transformationToTranslate)
+  　　　(aJunPoint transformationToScale)
+  　　　(aJunPoint transformationToRotate: anAngle)
+  　　　(aJunAngle transformationToRotate)
+  　　　(aJunAngle transformationToRotate: aLine)
+  　　　(aJunAngle transformationToRotateX)
+  　　　(aJunAngle transformationToRotateY)
+  　　　(aJunAngle transformationToRotateZ)
+  　　　(aJunLine transformationToRotate: anAngle)
+
+◆３次元座標に半径と法線を指定して円を生成するメッセージを新
+  設しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Tue Apr 12 23:01:54 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7073] Jun629 for Smalltalk
+Message-ID: <425BD4D2.2040103@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun629」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆平面上の点群を扱うオブジェクトにおいて、境界条件を厳密に計
+　算するようにしました。
+
+◆ユニファイルリストにおいて、パターン（ワイルドカードなど）
+  を有効／無効にするためのチェックボックスのオン／オフに連動
+  して、パターンの入力フィールドが出現／消去するように改めま
+  した。
+
+◆プログラム制御構造の時間を守る機構において、ゼロ以下を指定
+　すること、ただ単に aBlock を評価するように変更しました。
+
+◆三角形分割の例題プログラムのアニメーションに時間のくくりを
+  つけました。１番の例題の不具合も直しておきました。
+
+◆２次元と３次元のペンプロッタをランチャーから開けるようにし
+　ました。
+
+◆ペンプロッタの例題プログラムのアニメーションに時間のくくり
+　をつけました。
+
+◆スピロデザインの削除と押込みに不具合がありましたので、修正
+　を施しました。
+
+◆電光掲示板の描画スクロール速度をあげるための機能を付加しま
+　した。シフトやボタンダウンがアクセルペダルとして働きます。
+
+◆ゲージだけを乗せたウィンドウを開く際に、大きさの初期値が不
+  適切でしたので改めました。
+
+◆ファイル番号付けとファイルダンプの例題プログラムにおいて、
+　ファイル名やディレクトリ名を訊ねるように書き改めました。
+
+◆マウスカーサのアニメータの例題プログラムを直して、きちんと
+　マウスカーサの形状が変わるのを確認できるようにしました。
+
+◆３次元チャートの軸ラベルのバックグラウンドがきちんと出ない
+　という不具合がありました。修正を施しました。
+
+◆３次元グラファのアークが texture のメッセージに適切に答えら
+　れませんでしたので改めました。
+
+◆イメージディスペンサの例題プログラム中のファイル名が相対パ
+  スであったため動かない場合がありました。絶対パスにすること
+  で対処しました。
+
+◆パラメトリック幾何オブジェクト群のサブクラス応答性を適切に
+　しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From abee.abe ＠ nifty.ne.jp  Thu Apr 14 00:45:13 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Nov  2 10:50:56 2007
+Subject: [SML 7074] Re: 日経バイト連載に関して
+In-Reply-To: <422E22CC.4060108@sra.co.jp>
+References: <41CA31CE.9080006@sra.co.jp> <422E22CC.4060108@sra.co.jp>
+Message-ID: <425D3E8924A.4372ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 09 Mar 2005 07:10:20 +0900
+AOKI Atsushi <aoki@sra.co.jp> wrote:
+>日経バイト連載の件ですが、誌面刷新の２００５年４月号の発刊が
+>３月２２日と迫ってきました。１２回（丸１年間）連載の初稿が掲
+>載されています。「プログラマ道場○」の始まり。
+
+お試しキャンペーンで4月号をもらえるようです。
+http://coin.nikkeibp.co.jp/coin/nby/200504/
+
+# Googleでsqueak(not smalltalk)を検索すると広告が出ました。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From aoki ＠ sra.co.jp  Thu Apr 14 00:58:32 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7075] Re: 日経バイト連載に関して
+In-Reply-To: <425D3E8924A.4372ABEE.ABE@smtp.nifty.com>
+References: <41CA31CE.9080006@sra.co.jp> <422E22CC.4060108@sra.co.jp>
+	<425D3E8924A.4372ABEE.ABE@smtp.nifty.com>
+Message-ID: <425D41A8.7030901@sra.co.jp>
+
+Kazuhiro ABE wrote:
+> お試しキャンペーンで4月号をもらえるようです。
+> http://coin.nikkeibp.co.jp/coin/nby/200504/
+> # Googleでsqueak(not smalltalk)を検索すると広告が出ました。
+
+ほぉ！
+
+// R2D2 (AOKI Atsushi)
+
+
+
+From nishis ＠ zephyr.dti.ne.jp  Thu Apr 14 22:47:16 2005
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7076] Re: 日経バイト連載に関して
+In-Reply-To: <425D3E8924A.4372ABEE.ABE@smtp.nifty.com>
+References: <41CA31CE.9080006@sra.co.jp> <422E22CC.4060108@sra.co.jp>
+	<425D3E8924A.4372ABEE.ABE@smtp.nifty.com>
+Message-ID: <425E7464.9080302@zephyr.dti.ne.jp>
+
+on 05.4.14 0:45 AM, Kazuhiro ABE wrote:
+> お試しキャンペーンで4月号をもらえるようです。
+> http://coin.nikkeibp.co.jp/coin/nby/200504/
+
+秋葉原でふつうに買いました．ただ入荷数が少ないらしく，先週だかにはもうな
+くなってましたが X-(．
+
+●移転する前の四谷で聴いたプレゼンみたいでしたね〜＞連載初回．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+e-mail: mailto:nishis@zephyr.dti.ne.jp
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From seki.at.druby.org ＠ gmail.com  Thu Apr 14 22:56:48 2005
+From: seki.at.druby.org ＠ gmail.com (Masatoshi SEKI)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7077] Re: 日経バイト連載に 関して
+In-Reply-To: <425E7464.9080302@zephyr.dti.ne.jp>
+References: <41CA31CE.9080006@sra.co.jp> <422E22CC.4060108@sra.co.jp>
+	<425D3E8924A.4372ABEE.ABE@smtp.nifty.com>
+	<425E7464.9080302@zephyr.dti.ne.jp>
+Message-ID: <57a8e86805041406566811d9ea@mail.gmail.com>
+
+咳といいます。
+
+> > お試しキャンペーンで4月号をもらえるようです。
+> > http://coin.nikkeibp.co.jp/coin/nby/200504/
+> 
+> 秋葉原でふつうに買いました．ただ入荷数が少ないらしく，先週だかにはもうな
+> くなってましたが X-(．
+
+「伝説のSmalltaler」ってあってます?
+
+From aoki ＠ sra.co.jp  Thu Apr 14 23:24:20 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7078] Jun630 for Smalltalk
+Message-ID: <425E7D14.6080107@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun630」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆ビューファインダのフラッシュ（水に流す）系のメッセージ群を
+  整備しました。描画オブジェクト・プロジェクタ・ライト・選択
+  オブジェクトに及んでいます。
+
+◆ビューファインダのビューのデフォルトクラスを定義して参照す
+  るように変更しました。そして、ビューのアクセスメッセージ群
+  を整備しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From abee.abe ＠ nifty.ne.jp  Thu Apr 14 23:36:31 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7079] Re: 日経バイト連載に関して
+In-Reply-To: <425E7464.9080302@zephyr.dti.ne.jp>
+References: <425D3E8924A.4372ABEE.ABE@smtp.nifty.com>
+	<425E7464.9080302@zephyr.dti.ne.jp>
+Message-ID: <425E7FEF3B8.0092ABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 14 Apr 2005 22:47:16 +0900
+NISHIHARA Satoshi <nishis@zephyr.dti.ne.jp> wrote:
+>●移転する前の四谷で聴いたプレゼンみたいでしたね〜＞連載初回．
+
+ここで最初の2ページを読めます。
+http://coin.nikkeibp.co.jp/coin/nby/edm/five/five.html#2
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+From aoki ＠ sra.co.jp  Mon Apr 18 00:32:19 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7080] Jun631 for Smalltalk
+Message-ID: <42628183.2090403@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun631」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆表示モデルと画像表示モデルのユーティリティに、ウィンドウの
+　ラベルを指定して開くメッセージを用意しました。
+
+◆エッジのデコレーションの定数を答えるクラスを新設しました。
+
+◆じゅんのアプリケーションモデルに、ウィンドウが閉じられた際
+　にフックするブロッククロージャを設定できるようにしました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Wed Apr 20 11:22:55 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7081] Jun632 for Smalltalk
+Message-ID: <4265BCFF.7070007@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun632」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆アルゴリズムのアニメーションおよびムービー作成の例題を増や
+  しました。
+
+  ■ボロノイとドロネー
+  http://www.sra.co.jp/smalltalk/jun/Topics/VoronoiAndDelaunay/
+  ■細線化（芯線化）
+  http://www.sra.co.jp/smalltalk/jun/Topics/Thinning/
+  ■モンテカルロ法（Monte Carlo Method）
+  http://www.sra.co.jp/smalltalk/jun/Topics/MonteCarlo/
+
+◆イメージユーティリティを新設しました。任意のパレットと深度
+  を持った画像を現在のパレットと深度に高速に変換するための機
+  能、クリップボードとのやり取り、スクリーンからの切り取り、
+  画像ファイルの読み書き機能などを内包しています。
+
+◆イメージアジャスタの機能を、より安定化させました。32 と 24
+  ビット幅の相互変換の間にあった不具合を取り除いていますので、
+  少々低速になりましたが…。
+
+◆じゅんのアプリケーションモデルにおいて、モデル間の親密さを
+  ハンドリングできるようにしました。これにより様々なウィンド
+  ウをグループ化して扱うことができます。たとえば、あるウィン
+  ドウが閉まると、それに関連するウィンドウたちを一気に閉じる
+  ことなど。
+
+◆VisualWorks 7.x になってから、ウィンドウが閉まる際の通知事
+  象のプロトコルカテゴリが、events から interface closing に
+  変わりましたので、それにあわせました。
+
+◆画像表示 MVC および何でもオブジェクト表示 MVC において、マ
+  ウスの赤ボタンを押すと、正規化座標やスクリーン座標が表示さ
+  れますが、VisualWorks 7.x になってから、白地に文字ができな
+  いという不具合がありました。修正を施しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Sun Apr 24 21:52:58 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:57 2007
+Subject: [SML 7082] Jun633 for Smalltalk
+Message-ID: <426B96AA.4050905@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+フリーソフトウェア【じゅん「Jun633」】をアップロードしました。
+次のウェブページの［新着情報（News）］をご覧ください。
+
+http://www.sra.co.jp/smalltalk/jun/
+http://www.sra.co.jp/smalltalk/jun/htmls/News.html
+
+直にダウンロードする方々は、次のＵＲＩをご利用ください。
+
+ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/
+
+また、米シンコムさんのＦＴＰサーバからもダウンロードできます。
+
+ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/
+
+変更点は下記の通りです。
+
+------------------------------------------------------------
+【変更点】
+
+◆８近傍を指定された色で塗りつぶしながら、構成テキストを描画
+　するメソッドを最適化しました。
+
+◆２次元座標の近傍点を答える際に、２６近傍のメッセージを発信
+　していました。８近傍を答えるように改めました。
+
+◆手書きノートと手書きページの背景色を白色に改めました。
+
+◆ビューファインダのドラッグ操作とグラブ操作を、赤ボタンだけ
+　とするのではなく、マウスのいずれのボタンでも繰り返すように
+　変更しました。
+
+◆ビューファインダのボタン設定をシンボルで行えるメッセージを
+　新設しました。
+
+◆インヘリタンス関係にあるクラス間において、重複しているメッ
+　セージを削除しました。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+

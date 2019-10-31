@@ -1,0 +1,1232 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Dec  3 08:41:39 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Dec  3 08:41:48 2008
+Subject: [SML 7425] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <492A48E0.2010006@gaia.eonet.ne.jp>
+References: <492A0060.1090107@gaia.eonet.ne.jp>	<492A06BF.3050006@cc.kyoto-su.ac.jp>
+	<492A48E0.2010006@gaia.eonet.ne.jp>
+Message-ID: <4935C7B3.9070004@cc.kyoto-su.ac.jp>
+
+青木淳＠京都産業大学です。
+
+備忘のために再度のアナウンスをさせてくださいませ。京都におい
+て毎月第一水曜日にする「Smalltalk 勉強会」ですが、今日です！
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+
+参加登録や参加申込などは必要ございません。万障繰り合わせてご
+参集ください。
+
+じゅんの開発途中バージョン「Jun772h（最後のhは、a,b,c,d,e,f,
+g,hのhで、すでに公開済みのJun772よりもマイナーバージョンで8つ
+進んだもの）」を差し上げます。可聴化の部分に進展があります。
+その話をするやもしれません…。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Wed Dec  3 08:50:36 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Wed Dec  3 08:50:46 2008
+Subject: [SML 7426] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <JL200811242125296.7273640@mars.dti.ne.jp>
+References: <JL200811242125296.7273640@mars.dti.ne.jp>
+Message-ID: <JX200812030850367.4666734@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+かなり発表予定が充実してきました。
+http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+
+「あのSmalltalkがないじゃないか!」という方、ぜひご参戦ください。
+
+「なんだか濃ゆい。」という方、大丈夫です。お気軽にご参加ください。
+
+ではでは。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 第4回Smalltalk勉強会の日時が決まりました。
+> 日時: 2008/12/19(金) 18:30-21:30 (3時間程度)
+> 場所: 株式会社豆蔵
+> 
+> 今回は年末スペシャルと銘打ち、いつもより広めの会場でセミナー+LT大会を
+> 予定しています。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+> 
+> 特に「レストアSmalltalk大集合」で、我こそはという方、ご自慢のSmalltalk
+> 持参でぜひご参戦いただければと思います。
+> 
+> 皆でSmalltalkを盛り上げていきましょう。
+> 
+> ではでは。
+> ---
+> [:masashi | ^umezawa]
+
+---
+[:masashi | ^umezawa]
+From mutsuki.nakajima ＠ gmail.com  Wed Dec  3 10:57:59 2008
+From: mutsuki.nakajima ＠ gmail.com (Mutsuki Nakajima)
+Date: Wed Dec  3 10:58:12 2008
+Subject: [SML 7427] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <JX200812030850367.4666734@mars.dti.ne.jp>
+References: <JL200811242125296.7273640@mars.dti.ne.jp>
+	<JX200812030850367.4666734@mars.dti.ne.jp>
+Message-ID: <8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+
+こんにちは、
+
+とても面白そうなので、
+山奥から上京してみようと思います。
+
+他には、
+Dolphin Smalltalk
+VisualAge Smalltalk
+などもありますが、
+Smalltalk-80
+も見てみたいですね。
+あとは、BYTE本とか。
+どなたかお持ちですか？
+
+なかじま、
+
+2008/12/03 8:50 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+> こんにちは
+> 梅澤です。
+>
+> かなり発表予定が充実してきました。
+> http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+>
+> 「あのSmalltalkがないじゃないか!」という方、ぜひご参戦ください。
+>
+> 「なんだか濃ゆい。」という方、大丈夫です。お気軽にご参加ください。
+>
+> ではでは。
+>
+> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>> こんにちは
+>> 梅澤です。
+>>
+>> 第4回Smalltalk勉強会の日時が決まりました。
+>> 日時: 2008/12/19(金) 18:30-21:30 (3時間程度)
+>> 場所: 株式会社豆蔵
+>>
+>> 今回は年末スペシャルと銘打ち、いつもより広めの会場でセミナー+LT大会を
+>> 予定しています。
+>> http://www.smalltalk-users.jp/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+>>
+>> 特に「レストアSmalltalk大集合」で、我こそはという方、ご自慢のSmalltalk
+>> 持参でぜひご参戦いただければと思います。
+>>
+>> 皆でSmalltalkを盛り上げていきましょう。
+>>
+>> ではでは。
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Dec  3 11:17:41 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Dec  3 11:17:51 2008
+Subject: [SML 7428] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+References: <JL200811242125296.7273640@mars.dti.ne.jp>	<JX200812030850367.4666734@mars.dti.ne.jp>
+	<8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+Message-ID: <4935EC45.3010401@cc.kyoto-su.ac.jp>
+
+Mutsuki Nakajima さんは書きました:
+> とても面白そうなので、
+> 山奥から上京してみようと思います。
+
+この京は東の京ですよね。
+上洛ではないですもんね。:-)
+
+> あとは、BYTE本とか。
+> どなたかお持ちですか？
+
+はい、私、持っていますよ！
+
+--- 青木淳＠京都産業大学
+From mutsuki.nakajima ＠ gmail.com  Wed Dec  3 11:47:02 2008
+From: mutsuki.nakajima ＠ gmail.com (Mutsuki Nakajima)
+Date: Wed Dec  3 11:47:12 2008
+Subject: [SML 7429] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <4935EC45.3010401@cc.kyoto-su.ac.jp>
+References: <JL200811242125296.7273640@mars.dti.ne.jp>
+	<JX200812030850367.4666734@mars.dti.ne.jp>
+	<8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+	<4935EC45.3010401@cc.kyoto-su.ac.jp>
+Message-ID: <8cdfcfef0812021847t5db34ed4ta4da3afcf46147d8@mail.gmail.com>
+
+青木さん、
+
+いつかは必ずや上洛したく。
+その折には、生BYTE本を拝ませてくださいませ。
+
+なかじま、
+
+2008/12/03 11:17 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+> Mutsuki Nakajima さんは書きました:
+>> とても面白そうなので、
+>> 山奥から上京してみようと思います。
+>
+> この京は東の京ですよね。
+> 上洛ではないですもんね。:-)
+>
+>> あとは、BYTE本とか。
+>> どなたかお持ちですか？
+>
+> はい、私、持っていますよ！
+>
+> --- 青木淳＠京都産業大学
+>
+From sumi ＠ seagreen.ocn.ne.jp  Wed Dec  3 12:24:09 2008
+From: sumi ＠ seagreen.ocn.ne.jp (Masato Sumi)
+Date: Wed Dec  3 12:24:20 2008
+Subject: [SML 7430] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <4935EC45.3010401@cc.kyoto-su.ac.jp>
+References: <JL200811242125296.7273640@mars.dti.ne.jp>
+	<JX200812030850367.4666734@mars.dti.ne.jp>
+	<8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+	<4935EC45.3010401@cc.kyoto-su.ac.jp>
+Message-ID: <86c0320c0812021924s3c3356c2m2dc8ac84ebe73175@mail.gmail.com>
+
+鷲見です。
+
+今回は特に濃さげなのに（いつも）参加できなくて残念です。
+
+PPS のはありませんが、比較的 XEROXオリジナルの Smalltalk-80
+に近い GUI を有する Apple Smalltalk なら手元にありますので
+どなたかに託すことは可能だと思います。Mac Plus のエミュレータ用
+ディスクイメージになっていますので、すぐ動かせます。
+
+あと、映像資料にとどまりますが、1978年ごろの Smalltalk-76 が
+動作する様子が、
+
+http://www.cs.washington.edu/research/constraints/videos/thinglab-1978.mov
+
+で見ることができます。QuickTime Player で cmd/ctr + K にて
+呼び出せるA/Vコントロールで三倍速くらいで再生すると退屈しなくて
+よいと思います。登場する ThingLab 自体も Squeak2.3 で動くので、
+映像と同様のデモをすると一部のマニアにウケるかもしれません。
+摂氏・華氏コンバータくらいですが動作するイメージも手元にあります。
+
+1978年というと Apple のジョブズたちが PARC を訪れ Lisa ひいては
+後の Macintosh の GUI の方向性にヒントを得たとき（1979年）に
+ちかいので、そちらの方面に興味のある方にも感慨深いものでしょう。
+
+それと、Smalltalk-76 が Java VM上に再現された
+処理系も公開されています。GUI こそ Swing に置き換わっていますが
+ブートストラップは当時のものを利用した本格派です。
+
+http://home.netsurf.de/helge.horch/esug/index.html
+
+メタクラスがなく、制御文もメッセージ式でない Smalltalk-76 は、
+今流行りの Ruby に（-80より）比較的似ているとアラン・ケイが
+言ったとか言わなかったとかいう話も聞いています。
+
+参考まで 100 までの素数を求めるコードを両者の共通点が
+際だつように書いてみたものを以下に。（前者は、前述の
+エミュのワークスペースなどにコピペしてそのまま評価できます）
+
+"Smalltalk-76"
+limit ← 100.
+primes ← #() asStream.
+primes next ← 2.
+for% i from: (3 to: limit by: 2) do% [
+   isprime ← true.
+   for% prime from: primes contents do% [
+      i \ prime = 0 ? [isprime ← false]].
+   isprime ? [primes next ← i]].
+^primes contents
+
+#ruby
+limit = 100
+primes = []
+primes << 2
+for i in (3..limit) do
+  is_prime = true
+  for prime in primes do
+    i % prime == 0 ? is_prime = false : nil
+  end
+  is_prime ? primes << i : nil
+end
+primes
+
+
+-- 
+Masato Sumi
+From masuda ＠ im.dendai.ac.jp  Wed Dec  3 12:44:57 2008
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Wed Dec  3 12:45:09 2008
+Subject: [SML 7431] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+References: <JL200811242125296.7273640@mars.dti.ne.jp>
+	<JX200812030850367.4666734@mars.dti.ne.jp>
+	<8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+Message-ID: <20081203.124457.73651806.masuda@im.dendai.ac.jp>
+
+> From: "Mutsuki Nakajima" <mutsuki.nakajima@gmail.com>
+> 
+> あとは、BYTE本とか。
+> どなたかお持ちですか？
+
+2冊持ってます。(^.^;;) 取っとく用と取っとく用です。
+
+------
+〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp                TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7Emasuda/     FAX 03-5280-3592
+It's more fun to compute!
+From nishis ＠ zephyr.dti.ne.jp  Wed Dec  3 21:43:46 2008
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Wed Dec  3 21:44:27 2008
+Subject: [SML 7432] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+References: <JL200811242125296.7273640@mars.dti.ne.jp>	<JX200812030850367.4666734@mars.dti.ne.jp>
+	<8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+Message-ID: <49367F02.1000608@zephyr.dti.ne.jp>
+
+もしかして，なんか凄いことになってますか？　わたしのゴーストが「その日そ
+こには近寄るな」と囁いているんですが…… (笑)．
+
+BYTE本は増田先生がお持ちになるでしょうから，ブルーブックでも持って来ますか？
+
+＃『ススメ』を持って行きますので，サインお願いします＞なかじまさん
+
+on 08.12.3 10:57 AM, Mutsuki Nakajima wrote:
+> こんにちは、
+> 
+> とても面白そうなので、
+> 山奥から上京してみようと思います。
+> 
+> 他には、
+> Dolphin Smalltalk
+> VisualAge Smalltalk
+> などもありますが、
+> Smalltalk-80
+> も見てみたいですね。
+> あとは、BYTE本とか。
+> どなたかお持ちですか？
+> 
+> なかじま、
+> 
+> 2008/12/03 8:50 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+>> こんにちは
+>> 梅澤です。
+>>
+>> かなり発表予定が充実してきました。
+>> http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+>>
+>> 「あのSmalltalkがないじゃないか!」という方、ぜひご参戦ください。
+>>
+>> 「なんだか濃ゆい。」という方、大丈夫です。お気軽にご参加ください。
+>>
+>> ではでは。
+>>
+>> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>>> こんにちは
+>>> 梅澤です。
+>>>
+>>> 第4回Smalltalk勉強会の日時が決まりました。
+>>> 日時: 2008/12/19(金) 18:30-21:30 (3時間程度)
+>>> 場所: 株式会社豆蔵
+>>>
+>>> 今回は年末スペシャルと銘打ち、いつもより広めの会場でセミナー+LT大会を
+>>> 予定しています。
+>>> http://www.smalltalk-users.jp/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+>>>
+>>> 特に「レストアSmalltalk大集合」で、我こそはという方、ご自慢のSmalltalk
+>>> 持参でぜひご参戦いただければと思います。
+>>>
+>>> 皆でSmalltalkを盛り上げていきましょう。
+>>>
+>>> ではでは。
+> 
+
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+From mutsuki.nakajima ＠ gmail.com  Wed Dec  3 22:22:42 2008
+From: mutsuki.nakajima ＠ gmail.com (Mutsuki Nakajima)
+Date: Wed Dec  3 22:23:30 2008
+Subject: [SML 7433] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <49367F02.1000608@zephyr.dti.ne.jp>
+References: <JL200811242125296.7273640@mars.dti.ne.jp>
+	<JX200812030850367.4666734@mars.dti.ne.jp>
+	<8cdfcfef0812021757u4601e0e5o1b939928b35e3d82@mail.gmail.com>
+	<49367F02.1000608@zephyr.dti.ne.jp>
+Message-ID: <8cdfcfef0812030522o63be5846pf9e1f638a062a38c@mail.gmail.com>
+
+なんだか、Smalltalk博物館みたいなことになってきましたね。
+わくわく。
+
+2008/12/03 21:43 NISHIHARA Satoshi <nishis@zephyr.dti.ne.jp>:
+> もしかして，なんか凄いことになってますか？　わたしのゴーストが「その日そ
+> こには近寄るな」と囁いているんですが…… (笑)．
+>
+> BYTE本は増田先生がお持ちになるでしょうから，ブルーブックでも持って来ますか？
+>
+> ＃『ススメ』を持って行きますので，サインお願いします＞なかじまさん
+>
+> on 08.12.3 10:57 AM, Mutsuki Nakajima wrote:
+>> こんにちは、
+>>
+>> とても面白そうなので、
+>> 山奥から上京してみようと思います。
+>>
+>> 他には、
+>> Dolphin Smalltalk
+>> VisualAge Smalltalk
+>> などもありますが、
+>> Smalltalk-80
+>> も見てみたいですね。
+>> あとは、BYTE本とか。
+>> どなたかお持ちですか？
+>>
+>> なかじま、
+>>
+>> 2008/12/03 8:50 Masashi Umezawa <umejava@mars.dti.ne.jp>:
+>>> こんにちは
+>>> 梅澤です。
+>>>
+>>> かなり発表予定が充実してきました。
+>>> http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+>>>
+>>> 「あのSmalltalkがないじゃないか!」という方、ぜひご参戦ください。
+>>>
+>>> 「なんだか濃ゆい。」という方、大丈夫です。お気軽にご参加ください。
+>>>
+>>> ではでは。
+>>>
+>>> Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>>>> こんにちは
+>>>> 梅澤です。
+>>>>
+>>>> 第4回Smalltalk勉強会の日時が決まりました。
+>>>> 日時: 2008/12/19(金) 18:30-21:30 (3時間程度)
+>>>> 場所: 株式会社豆蔵
+>>>>
+>>>> 今回は年末スペシャルと銘打ち、いつもより広めの会場でセミナー+LT大会を
+>>>> 予定しています。
+>>>> http://www.smalltalk-users.jp/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1
+>>>>
+>>>> 特に「レストアSmalltalk大集合」で、我こそはという方、ご自慢のSmalltalk
+>>>> 持参でぜひご参戦いただければと思います。
+>>>>
+>>>> 皆でSmalltalkを盛り上げていきましょう。
+>>>>
+>>>> ではでは。
+From osamu_hamasaki ＠ nifty.com  Wed Dec  3 23:39:24 2008
+From: osamu_hamasaki ＠ nifty.com (Osamu Hamasaki)
+Date: Wed Dec  3 23:40:49 2008
+Subject: [SML 7434] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <4935C7B3.9070004@cc.kyoto-su.ac.jp>
+References: <492A0060.1090107@gaia.eonet.ne.jp>	<492A06BF.3050006@cc.kyoto-su.ac.jp>
+	<492A48E0.2010006@gaia.eonet.ne.jp>
+	<4935C7B3.9070004@cc.kyoto-su.ac.jp>
+Message-ID: <F08E920E-705E-49AE-B128-0C25CAF56C62@nifty.com>
+
+濱崎です。
+
+今日の第２回Smalltalk勉強会＠京都、講師の皆さん、ありが 
+とうございました。
+
+今日のお話の中で、「最近は言語処理系を作るというのはほとんど 
+ないよね」と
+いうのがあったと思います。
+
+それに関し、最近こんな本を見つけました。まだ平積み (^^)  
+だったので最近出版されたようです。
+
+　　スクリプトエンジンプログラミング
+　　http://www.amazon.co.jp/スクリプトエンジン-プ 
+ログラミング-坂本-千尋/dp/4797347627
+
+本屋でぱらぱらっとめくった程度ですが、字句解析とか各種構文解 
+析法も解説されていましたし、
+サンプルコードもついていたように思います。
+
+プログラミング処理系については、コンピュータサイエンス系の学 
+部の教科書的なものが
+これまでもいろいろ出ていましたが、こんな本が出版されるという 
+ことは、スクリプト言語の
+処理系を作るというのが、実際に業界でニーズとしてあるようです。
+
+＃そういえば、この本も黒かったなあ。。。
+
+以上です。
+
+On 2008/12/03, at 8:41, AOKI Atsushi wrote:
+
+> 青木淳＠京都産業大学です。
+>
+> 備忘のために再度のアナウンスをさせてくださいませ。京都におい
+> て毎月第一水曜日にする「Smalltalk 勉強会」ですが、今 
+> 日です！
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+>
+> 参加登録や参加申込などは必要ございません。万障繰り合わせてご
+> 参集ください。
+>
+> じゅんの開発途中バージョン「Jun772h（最後のh 
+> は、a,b,c,d,e,f,
+> g,hのhで、すでに公開済みのJun772よりもマイナー 
+> バージョンで8つ
+> 進んだもの）」を差し上げます。可聴化の部分に進展があります。
+> その話をするやもしれません…。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From osamu_hamasaki ＠ nifty.com  Thu Dec  4 00:05:38 2008
+From: osamu_hamasaki ＠ nifty.com (Osamu Hamasaki)
+Date: Thu Dec  4 00:07:15 2008
+Subject: [SML 7435] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <4935C7B3.9070004@cc.kyoto-su.ac.jp>
+References: <492A0060.1090107@gaia.eonet.ne.jp>	<492A06BF.3050006@cc.kyoto-su.ac.jp>
+	<492A48E0.2010006@gaia.eonet.ne.jp>
+	<4935C7B3.9070004@cc.kyoto-su.ac.jp>
+Message-ID: <7219505C-0AF1-46AA-B095-C86F3F8BDE19@nifty.com>
+
+濱崎です。
+
+ついでにもう一つ。
+
+「京都には”すもーるとーく”という名前の喫茶店がある」という 
+お話がありましたが、
+ここのことです。
+
+　　　巣望瑠唐紅
+　　　http://kyoto.kibune.or.jp/smalltalk/
+
+[SML 6220]で梅澤さんが紹介されていました。
+
+＃Smalltalkに関係ない話ばっかりですみません (^^;;
+
+以上です。
+
+On 2008/12/03, at 8:41, AOKI Atsushi wrote:
+
+> 青木淳＠京都産業大学です。
+>
+> 備忘のために再度のアナウンスをさせてくださいませ。京都におい
+> て毎月第一水曜日にする「Smalltalk 勉強会」ですが、今 
+> 日です！
+>
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+>
+> 参加登録や参加申込などは必要ございません。万障繰り合わせてご
+> 参集ください。
+>
+> じゅんの開発途中バージョン「Jun772h（最後のh 
+> は、a,b,c,d,e,f,
+> g,hのhで、すでに公開済みのJun772よりもマイナー 
+> バージョンで8つ
+> 進んだもの）」を差し上げます。可聴化の部分に進展があります。
+> その話をするやもしれません…。
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.akademia.co.jp/pipermail/sml/attachments/20081204/00bb9a4c/attachment.html
+From umejava ＠ mars.dti.ne.jp  Thu Dec  4 00:31:58 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  4 00:32:11 2008
+Subject: [SML 7436] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <F08E920E-705E-49AE-B128-0C25CAF56C62@nifty.com>
+References: <492A0060.1090107@gaia.eonet.ne.jp>
+	<492A06BF.3050006@cc.kyoto-su.ac.jp>
+	<492A48E0.2010006@gaia.eonet.ne.jp>
+	<4935C7B3.9070004@cc.kyoto-su.ac.jp>
+	<F08E920E-705E-49AE-B128-0C25CAF56C62@nifty.com>
+Message-ID: <JW200812040031584.2877250@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+言語処理系を自分で作るという話ですと最近はOMetaが便利ですよ。
+ftp://swikis.ddo.jp/SqueakDevJa/events/ScalaOff2008/OMetaIntro.pdf
+
+VisualWorksにも移植したので、よろしければお使いください。
+http://swikis.ddo.jp/umejava/50
+
+Osamu Hamasaki <osamu_hamasaki@nifty.com> wrote:
+> 濱崎です。
+> 
+> 今日の第２回Smalltalk勉強会＠京都、講師の皆さん、ありが 
+> とうございました。
+> 
+> 今日のお話の中で、「最近は言語処理系を作るというのはほとんど 
+> ないよね」と
+> いうのがあったと思います。
+> 
+> それに関し、最近こんな本を見つけました。まだ平積み (^^)  
+> だったので最近出版されたようです。
+> 
+> 　　スクリプトエンジンプログラミング
+> 　　http://www.amazon.co.jp/スクリプトエンジン-プ 
+> ログラミング-坂本-千尋/dp/4797347627
+> 
+> 本屋でぱらぱらっとめくった程度ですが、字句解析とか各種構文解 
+> 析法も解説されていましたし、
+> サンプルコードもついていたように思います。
+> 
+> プログラミング処理系については、コンピュータサイエンス系の学 
+> 部の教科書的なものが
+> これまでもいろいろ出ていましたが、こんな本が出版されるという 
+> ことは、スクリプト言語の
+> 処理系を作るというのが、実際に業界でニーズとしてあるようです。
+> 
+> ＃そういえば、この本も黒かったなあ。。。
+> 
+> 以上です。
+> 
+> On 2008/12/03, at 8:41, AOKI Atsushi wrote:
+> 
+> > 青木淳＠京都産業大学です。
+> >
+> > 備忘のために再度のアナウンスをさせてくださいませ。京都におい
+> > て毎月第一水曜日にする「Smalltalk 勉強会」ですが、今 
+> > 日です！
+> >
+> > http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+> >
+> > 参加登録や参加申込などは必要ございません。万障繰り合わせてご
+> > 参集ください。
+> >
+> > じゅんの開発途中バージョン「Jun772h（最後のh 
+> > は、a,b,c,d,e,f,
+> > g,hのhで、すでに公開済みのJun772よりもマイナー 
+> > バージョンで8つ
+> > 進んだもの）」を差し上げます。可聴化の部分に進展があります。
+> > その話をするやもしれません…。
+> >
+> > ------------------------------------------------------------
+> > AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Dec  4 08:24:00 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Dec  4 08:24:10 2008
+Subject: [SML 7437] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <7219505C-0AF1-46AA-B095-C86F3F8BDE19@nifty.com>
+References: <492A0060.1090107@gaia.eonet.ne.jp>	<492A06BF.3050006@cc.kyoto-su.ac.jp>	<492A48E0.2010006@gaia.eonet.ne.jp>	<4935C7B3.9070004@cc.kyoto-su.ac.jp>
+	<7219505C-0AF1-46AA-B095-C86F3F8BDE19@nifty.com>
+Message-ID: <49371510.1050705@cc.kyoto-su.ac.jp>
+
+おはようございます、青木です。
+
+上賀茂にある京都産業大学には７時半より前に到着するのですが、
+自宅のある宇治を出る時には、日が昇っていない今日この頃です。
+
+Osamu Hamasaki さんは書きました:
+> 「京都には”すもーるとーく”という名前の喫茶店がある」というお話がありまし 
+> たが、ここのことです。
+> 　　　巣望瑠唐紅
+> 　　　http://kyoto.kibune.or.jp/smalltalk/
+
+はい、その通りです。今年の初夏、川床料理が食べたい！と言う
+浅岡さんと澤本さんのリクエストに応えて、大学から鞍馬街道を
+北上し、貴船川に沿って登って行った際に、２人にも教えました。
+
+近所になりますので、貴船や鞍馬などにお出かけのときには、私
+たちのところにお立ち寄りくださいませ。
+
+--- 青木淳＠今日の昼食は大原の紫蘇餅を食べにゆこうかしらん。
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Dec  4 08:24:11 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Dec  4 08:24:23 2008
+Subject: [SML 7438] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <JW200812040031584.2877250@mars.dti.ne.jp>
+References: <492A0060.1090107@gaia.eonet.ne.jp>	<492A06BF.3050006@cc.kyoto-su.ac.jp>	<492A48E0.2010006@gaia.eonet.ne.jp>	<4935C7B3.9070004@cc.kyoto-su.ac.jp>	<F08E920E-705E-49AE-B128-0C25CAF56C62@nifty.com>
+	<JW200812040031584.2877250@mars.dti.ne.jp>
+Message-ID: <4937151B.1020300@cc.kyoto-su.ac.jp>
+
+青木です。
+
+Masashi Umezawa さんは書きました:
+> 言語処理系を自分で作るという話ですと最近はOMetaが便利ですよ。
+> ftp://swikis.ddo.jp/SqueakDevJa/events/ScalaOff2008/OMetaIntro.pdf
+> VisualWorksにも移植したので、よろしければお使いください。
+> http://swikis.ddo.jp/umejava/50
+
+気軽に言語処理系を作れるように、というのがいいですね。昨夜の
+勉強会で、プログラミング言語をいくつか習い覚えたら、コンパイ
+ラを出力するコンパイラなどの「メタ言語処理系」を習い覚える方
+へと向かうのが佳いよ、という話をさせていただきました。これは
+まさにうってつけですね。
+
+LL(k)やLR(k)などの導出や還元、バッカス記法や生成規則からの左
+再帰性の除去、正規表現やパターンマッチング、自動人形などなど、
+メタ言語処理系の製作にかかわると、様々の技法を手中に収めるこ
+とができると同時に、プログラミング言語の地平を俯瞰することが
+できます。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+
+
+From h-asaoka ＠ sra.co.jp  Thu Dec  4 10:27:07 2008
+From: h-asaoka ＠ sra.co.jp (ASAOKA Hiroko)
+Date: Thu Dec  4 10:27:25 2008
+Subject: [SML 7439] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <4937151B.1020300@cc.kyoto-su.ac.jp>
+References: <492A0060.1090107@gaia.eonet.ne.jp>	<492A06BF.3050006@cc.kyoto-su.ac.jp>	<492A48E0.2010006@gaia.eonet.ne.jp>	<4935C7B3.9070004@cc.kyoto-su.ac.jp>	<F08E920E-705E-49AE-B128-0C25CAF56C62@nifty.com>	<JW200812040031584.2877250@mars.dti.ne.jp>
+	<4937151B.1020300@cc.kyoto-su.ac.jp>
+Message-ID: <493731EB.1050903@sra.co.jp>
+
+おはようございます、浅岡です。
+
+昨夜の「第2回Smalltalk勉強会＠京都」には
+20人の参集をいただき、ありがとうございました。
+今後のためにダイジェストを記しておきます。
+
+１）Jun772h
+
+最後の「h」が意味するところ（開発途中バージョン）
+じゅんに新たな著作者が加わったこと
+Windows 版において MIDI をたたけるようになったこと
+「きらきら星」や「かえるのうた（輪唱も含む）」のデモ
+＃共創：どなたか Mac OS X 版や Linux 版をこしらえてください
+
+２）ミニトーク「Making of BlackBook」
+
+出版社と著者をめぐる裏話
+著者３人の間の逸話
+「はじめに」に対する「おわりに」があった？
+「平積み」「面出し」「棚差し」の秘話！
+＃「面出し」は「面展（めんてん）」や「面陳（めんちん）」とも言う
+
+３）テキストの「はじめに」の部分
+
+オブジェクトの「構造」や「機能」の話ではなく「発生」の話を中心に
+テキストの「はじめに」の母体になっている多数のスライドを披露
+＃ooの元来はメッセージ（話しかけること）でしょ
+＃メッセージを受けつけないものをooに登場させないでね
+＃クラスにもメッセージを受信させようとするとメタクラスが…循環に
+
+
+以上です。
+
+まだ書き足りないと思いますので
+他にフォローしていただけるかたがいらしたら、
+よろしくお願いします。
+
+-- 
+    浅岡 浩子(ASAOKA Hiroko)
+        http://www.sra.co.jp/people/h-asaoka/
+        mailto:h-asaoka@sra.co.jp
+
+    京都産業大学 青木研究室
+    〒603-8555 京都市北区上賀茂本山
+    1402研究室（１号館４階）
+From takaoki ＠ aisoft.co.jp  Thu Dec  4 12:14:24 2008
+From: takaoki ＠ aisoft.co.jp (takaoki@aisoft.co.jp)
+Date: Thu Dec  4 12:14:35 2008
+Subject: [SML 7440] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: Your message of "Thu, 04 Dec 2008 08:24:11 JST."
+	<4937151B.1020300@cc.kyoto-su.ac.jp> 
+Message-ID: <200812040314.MAA29283@basashi.aisoft.co.jp>
+
+成田です。
+
+In message <4937151B.1020300@cc.kyoto-su.ac.jp>you write:
+>Masashi Umezawa さんは書きました:
+>> 言語処理系を自分で作るという話ですと最近はOMetaが便利ですよ。
+	:
+>気軽に言語処理系を作れるように、というのがいいですね。
+
+世間ではどうも言語処理系を作ると言うのは大仕事という認識のようで、
+言語処理系を構成しちゃった方が楽なのに(面白いのに)というような場
+合でも手段の候補にさえ上がらないことが多いような。
+
+なんか「最適化」を含めた「コード生成」がすごい難しく、その道の専
+門家以外手をだしちゃいけない印象を受けるみたいですね。というか、
+言語処理系を作るなら実効時効率性をどれほど要求されているかの如何
+に関わらず可能な限り実効時効率性を高くできないといけなくて、そう
+できないら言語処理系は作るべきではないと勝手に思い込んでいるふし
+もある。
+
+;; 「〜解析」も障壁らしい。;-(
+
+そんなこんななので「言語処理系を作るなんて、そんな恐れ多い・・・」
+という反応になるみたいです。で、中を覗いて見ることさえしない。
+
+結構ベテランと言われる人まで言語処理系をいじったことさえないとい
+う状況が生じている原因は、そんなところなんだろうかと推測。
+
+その挙げ句、
+
+>LL(k)やLR(k)などの導出や還元、バッカス記法や生成規則からの左
+>再帰性の除去、正規表現やパターンマッチング、自動人形などなど、
+
+こういうことが分かっていないので、
+
+>メタ言語処理系の製作にかかわると、様々の技法を手中に収めるこ
+>とができると同時に、プログラミング言語の地平を俯瞰することが
+>できます
+
+容易に推測つくように、コンパイラとかの動作(限界、出来ることと出来
+ないこと)の理解とか、ソースコードからどういうオブジェクトコードが
+生成されるかの推定とか、そもそも言語仕様が何故そうなっているかの
+理解とかが出来ていないエンジニアがいて・・・トホホな感じになるこ
+とがある。
+
+;; 例えばフォームとセマンティクスの話が分別できない人もいて、もう
+;; ガックシだということもあったりする。
+
+そういうことがあるので、スクリプト言語処理系を作るのが流行ったり
+してくれると嬉しいのですが、いまいち燃え上がる気配は・・・?
+
+まずはやっぱり「簡単に作れるんだよぉ」ってところからでしょうかねぇ？
+
+--
+    Narita Takaoki @
+      Imaging Products Software Engineering Planning Department,
+        SEDC, SEIKO EPSON CORPORATION
+    mailto:Narita.Takaoki@exc.epson.co.jp
+From ttn13w30a9 ＠ mx1.ttcn.ne.jp  Fri Dec  5 03:17:21 2008
+From: ttn13w30a9 ＠ mx1.ttcn.ne.jp (Atsushi Tanabe)
+Date: Fri Dec  5 03:16:52 2008
+Subject: [SML 7441] Re: 第2回Smalltalk勉強会＠京都
+References: <200812040314.MAA29283@basashi.aisoft.co.jp>
+Message-ID: <002d01c9563c$8d1b8fb0$0201a8c0@afina>
+
+はじめまして、田辺と申します。
+
+参考までに、スクリプト言語処理系についてですが、
+実務で下手に作られて困ったという話もあります。
+
+言語仕様が練られてない、言語処理系が適切にエラーを報告しない
+など中途半端な出来の処理系が作られることがあるそうです。
+
+とあるブログに、ゲームの開発現場の苦労話として書かれていました。
+
+でも、実用的なものを簡単に作れると楽ですよね。
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Dec  5 08:13:44 2008
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Fri Dec  5 08:13:54 2008
+Subject: [SML 7442] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <002d01c9563c$8d1b8fb0$0201a8c0@afina>
+References: <200812040314.MAA29283@basashi.aisoft.co.jp>
+	<002d01c9563c$8d1b8fb0$0201a8c0@afina>
+Message-ID: <49386428.4070509@cc.kyoto-su.ac.jp>
+
+Atsushi Tanabe さんは書きました:
+> はじめまして、田辺と申します。
+
+はじめまして、青木です。（おそらく「はじめまして」ですよね、
+ｖかでお会いしていたら、ごめんなさい。）
+
+> 参考までに、スクリプト言語処理系についてですが、
+> 実務で下手に作られて困ったという話もあります。
+
+突破にはそれに先立つ蓄積の量がものを言います。時を味方につけ
+るというか、時を流すというか、急いてしまう（すぐに実務に適用
+しちゃう）ことに対する我慢がいるように思います。
+
+> 言語仕様が練られてない、言語処理系が適切にエラーを報告しない
+> など中途半端な出来の処理系が作られることがあるそうです。
+
+コンパイラ・コンパイラなどのメタ系でも、例外処理を上手に記述
+できるものが少ないです。プログラミング言語の言語仕様記述形式
+の中にも編み込み難いですから…。
+
+> とあるブログに、ゲームの開発現場の苦労話として書かれていました。
+> でも、実用的なものを簡単に作れると楽ですよね。
+
+ドライビング・フォースは多数死（数多の駄作）が支えますので、
+私は駄作を産み出すことに躊躇しないようにしています。実用的な
+ものになるかは、ともかくとして、まずは簡単に作れることのほう
+が大切だろうと。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From umejava ＠ mars.dti.ne.jp  Fri Dec  5 10:17:24 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Dec  5 10:17:32 2008
+Subject: [SML 7443] OMetaの例 was: Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <JW200812040031584.2877250@mars.dti.ne.jp>
+References: <492A0060.1090107@gaia.eonet.ne.jp>
+	<492A06BF.3050006@cc.kyoto-su.ac.jp>
+	<492A48E0.2010006@gaia.eonet.ne.jp>
+	<4935C7B3.9070004@cc.kyoto-su.ac.jp>
+	<F08E920E-705E-49AE-B128-0C25CAF56C62@nifty.com>
+	<JW200812040031584.2877250@mars.dti.ne.jp>
+Message-ID: <JP200812051017249.7584609@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+OMetaの反応が良かったので、どんなものが作れるのか、例を示しておきます。
+
+JavaScript版OMetaですが、様々な言語の例があります。
+(Firefoxで見るのが良いでしょう)
+http://jarrett.cs.ucla.edu/ometa-js/
+
+Flashで動くSmalltalkのインタープリタを作ってみたりした例もあります。
+http://blog.smoaktalk.com/2008/07/simple-smalltalk-interpreter-in-flash.html
+
+Smalltalk版のOMetaにはJavaScriptのインタープリタが入っているので、こちらで
+遊んでみるもの面白いでしょう。
+
+上記のページでもわかりますが、実にインタラクティブに作れるというのが
+OMetaの良いところです。ちょっと試してちょっと拡張という、細かなサイクル
+を繰り返すことができます。またOMetaのコードそのものが、宣言的なので、
+ぱっと見ただけで言語仕様が大体わかるというのも良いですね。
+
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+> こんにちは
+> 梅澤です。
+> 
+> 言語処理系を自分で作るという話ですと最近はOMetaが便利ですよ。
+> ftp://swikis.ddo.jp/SqueakDevJa/events/ScalaOff2008/OMetaIntro.pdf
+> 
+> VisualWorksにも移植したので、よろしければお使いください。
+> http://swikis.ddo.jp/umejava/50
+> 
+---
+[:masashi | ^umezawa]
+From tomohiro ＠ sra.co.jp  Fri Dec  5 11:24:48 2008
+From: tomohiro ＠ sra.co.jp (Tomohiro Oda)
+Date: Fri Dec  5 11:25:00 2008
+Subject: [SML 7444] Re: 第2回Smalltalk勉強会＠京都
+In-Reply-To: <49386428.4070509@cc.kyoto-su.ac.jp>
+References: <200812040314.MAA29283@basashi.aisoft.co.jp>	<002d01c9563c$8d1b8fb0$0201a8c0@afina>
+	<49386428.4070509@cc.kyoto-su.ac.jp>
+Message-ID: <493890F0.2050101@sra.co.jp>
+
+おだです。
+
+はるか昔の卒論でミニ関数型言語処理系をつくって以来、
+ちょくちょくと簡易処理系を書いてます。
+
+> ドライビング・フォースは多数死（数多の駄作）が支えますので、
+> 私は駄作を産み出すことに躊躇しないようにしています。
+
+まったくもってその通りだと思います。
+＃そうとでも思わないと、私の星数多の駄作が浮かばれません :-)
+しかし、世の中のイメージというものは、職人は駄作をつくらない、
+一発必中をもって好しとする、というところがあると思います。
+
+> 実用的な
+> ものになるかは、ともかくとして、まずは簡単に作れることのほう
+> が大切だろうと。
+
+少なくとも、いつでも簡単に作れる、いつでも簡単に捨てられる、
+という心構えは大事かと思います。メタ系に限らず、何でも。
+---
+おだ
+From nisinaka ＠ sra.co.jp  Fri Dec  5 16:20:16 2008
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Dec  5 16:20:26 2008
+Subject: [SML 7445] [ANNOUNCE] Jun for Java (Jun713)
+Message-ID: <20081205161246.359F.FC60F5D5@sra.co.jp>
+
+「じゅん for Java」のバージョン713を公開します。
+
+  バージョン705からの主な変更点は、以下の通りです。
+
+    * (modification) @deprecated なメソッドである File#toURL() を
+      使わないようにしました。
+
+    * (incompatibility) JunImageStream クラスのメソッド 
+      'ImageStreamClassForFileName_(File)' を 
+      'ImageStreamClassForFile_(File)' に改名しました。
+
+    * (new feature) JunMorphModel は、画像のモーフィング(Morphing)
+      を行うためのアプリケーションです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/713/MorphModel.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/713/MorphModel.gif
+
+    * (new feature) JunImageUtility クラスに、3種類の画像の操作
+      (warping/blending/morphing)を行うメソッドを実装しました。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/713/Warping.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/713/Blending.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/713/Morphing.png
+
+    * (modification) JunSmallCompiler が JunLine を処理できるよう
+      になりました。
+
+    * (modification) JunAbstractObject およびそのサブクラスに、
+      LISP の S-式との相互変換のための基本機能を実装しました。
+
+    * (bug fix) Jun2dLine クラスの static メソッド 
+      'Between_and_(JunPoint,JunPoint)' とインスタンスメソッド 
+      'between_and_(JunPoint,JunPoint)' に不具合があり、適切に 
+      Jun2dLine のインスタンスを生成できていませんでした。
+
+    * (new feature) JunHuffmanCoder は、ハフマン符号化を行うエン
+      コーダです。
+
+    * (modification) JunGeometry および JunOpenGL3dObejct の具象
+      サブクラスをシリアル化可能(Serializable)にしました。
+
+    * (modification) JunFileNavigator を Jun706 相当に更新し、ファ
+      イルリストの幅をマウス操作で変更できるようになりました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+From tetha ＠ st.rim.or.jp  Sun Dec  7 22:54:48 2008
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Sun Dec  7 22:54:59 2008
+Subject: [SML 7446] 先日のFoW さんの件です。(Fwd: SeasideのMovieをアップしました
+References: <b672abbe0812031630u42b64beaq8bdd1704ed99161@mail.gmail.com>
+Message-ID: <8127DB81-5527-41E8-A06B-765CF44496AE@st.rim.or.jp>
+
+みなさん、こんばんは。
+林徹也です。
+連絡が遅れてしまいましたが、先日のFoWの様子のムービーが 
+アップロードされました。
+今回、来られなかったみなさまも是非、お楽しみください。
+
+
+では。
+--
+
+
+Begin forwarded message:
+
+> 差出人: "Yuichi Hasegawa" <hase@starlight-storm.com>
+> 日時: 2008年12月4日 9:30:54:JST
+> 宛先: fowmember@googlegroups.com
+> 件名: SeasideのMovieをアップしました
+> 返信先: fowmember@googlegroups.com
+>
+>
+> おはようございます。
+> 長谷川です。
+>
+> 　昨日おこなわれました「Seasideによるコンポーネント指向の 
+> Webアプリケーション」の模様をUPしましたので、お知らせ 
+> します。
+> 　タイトルが長かったので縮めて「Seaside」です(^^;)
+> 　http://gallery.me.com/hasegawadanna
+>
+> 　講師の梅澤さん、ありがとうございました。
+>
+> 以上です。よろしくお願い致します。
+> -- 
+> // 長谷川 裕一
+>
+> --~--~---------~--~----~------------~-------~--~----~
+> このメッセージは、次の Google グループへの参加を申し 
+> 込まれたことを確認す
+> るために送信されました。 Google グループ "FoW!"  
+> グループ。
+> このグループに投稿するには、次の宛先にメールを送信してくださ 
+> い。 fowmember@googlegroups.com
+> このグループから退会するには、次へメールをお送りください。  
+> fowmember+unsubscribe@googlegroups.com
+> その他のオプションについては、次の URL からグループに 
+> アクセスしてくださ
+> い。 http://groups.google.com/group/fowmember?hl=ja
+> -~----------~----~----~----~------~----~------~--~---
+>
+
+--
+林 徹也 Tetsuya HAYASHI
+tetha@st.rim.or.jp, tetha@mac.com
+
+
+
+From umejava ＠ mars.dti.ne.jp  Tue Dec  9 23:18:20 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Dec  9 23:18:29 2008
+Subject: [SML 7447] Seasideによるコンポーネント指向のWebアプリケーション開発 on Google Video
+Message-ID: <JJ200812092318205.8393687@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+先日行われました勉強会FoW!でのセミナ
+「Seasideによるコンポーネント指向のWebアプリケーション開発」ですが、
+FoW!さんのご協力でGoogle Videoに載せてもらいましたので紹介しておきます。
+
+http://video.google.com/videoplay?docid=-1664398313656904232&ei=Rmw-SfWfJYaEwgO4vZCiCQ&q=fow
+
+阿部さんの「Dynabook の素顔」もありますね。
+http://video.google.com/videoplay?docid=-6242005289341417733&ei=Rmw-SfWfJYaEwgO4vZCiCQ&hl=ja
+
+ちなみに勉強会FoW!ではSmalltalk3部作として、林さんによるGNU Smalltalkのお話も
+予定されているようですので、こちらのほうも楽しみに待っていましょう。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From ykoubo2008 ＠ yengawa.com  Wed Dec 10 13:58:04 2008
+From: ykoubo2008 ＠ yengawa.com (Koji Yokokawa)
+Date: Wed Dec 10 13:58:14 2008
+Subject: [SML 7448] Re: 第4回Smalltalk勉強会の発表者を募集しています
+In-Reply-To: <86c0320c0812021924s3c3356c2m2dc8ac84ebe73175@mail.gmail.com>
+References: <4935EC45.3010401@cc.kyoto-su.ac.jp>
+	<86c0320c0812021924s3c3356c2m2dc8ac84ebe73175@mail.gmail.com>
+Message-ID: <20081210120929.B362.56563FCC@yengawa.com>
+
+鷲見さん
+横川です。
+ご無沙汰してます。
+
+昨夜MacBookを手に入れたので、これからいろいろいじってみようとワクワクし
+てます。
+Apple Smalltalk 面白そうですね。ぼくは勉強会に参加できるので代理紹介しま
+しょうか?
+
+
+On Wed, 3 Dec 2008 12:24:09 +0900
+"Masato Sumi" <sumi@seagreen.ocn.ne.jp> wrote:
+
+> 鷲見です。
+> 
+> 今回は特に濃さげなのに（いつも）参加できなくて残念です。
+> 
+> PPS のはありませんが、比較的 XEROXオリジナルの Smalltalk-80
+> に近い GUI を有する Apple Smalltalk なら手元にありますので
+> どなたかに託すことは可能だと思います。Mac Plus のエミュレータ用
+> ディスクイメージになっていますので、すぐ動かせます。
+> 
+> あと、映像資料にとどまりますが、1978年ごろの Smalltalk-76 が
+> 動作する様子が、
+> 
+> http://www.cs.washington.edu/research/constraints/videos/thinglab-1978.mov
+> 
+> で見ることができます。QuickTime Player で cmd/ctr + K にて
+> 呼び出せるA/Vコントロールで三倍速くらいで再生すると退屈しなくて
+> よいと思います。登場する ThingLab 自体も Squeak2.3 で動くので、
+> 映像と同様のデモをすると一部のマニアにウケるかもしれません。
+> 摂氏・華氏コンバータくらいですが動作するイメージも手元にあります。
+> 
+> 1978年というと Apple のジョブズたちが PARC を訪れ Lisa ひいては
+> 後の Macintosh の GUI の方向性にヒントを得たとき（1979年）に
+> ちかいので、そちらの方面に興味のある方にも感慨深いものでしょう。
+> 
+> それと、Smalltalk-76 が Java VM上に再現された
+> 処理系も公開されています。GUI こそ Swing に置き換わっていますが
+> ブートストラップは当時のものを利用した本格派です。
+> 
+> http://home.netsurf.de/helge.horch/esug/index.html
+> 
+> メタクラスがなく、制御文もメッセージ式でない Smalltalk-76 は、
+> 今流行りの Ruby に（-80より）比較的似ているとアラン・ケイが
+> 言ったとか言わなかったとかいう話も聞いています。
+> 
+> 参考まで 100 までの素数を求めるコードを両者の共通点が
+> 際だつように書いてみたものを以下に。（前者は、前述の
+> エミュのワークスペースなどにコピペしてそのまま評価できます）
+> 
+> "Smalltalk-76"
+> limit ← 100.
+> primes ← #() asStream.
+> primes next ← 2.
+> for% i from: (3 to: limit by: 2) do% [
+>    isprime ← true.
+>    for% prime from: primes contents do% [
+>       i \ prime = 0 ? [isprime ← false]].
+>    isprime ? [primes next ← i]].
+> ^primes contents
+> 
+> #ruby
+> limit = 100
+> primes = []
+> primes << 2
+> for i in (3..limit) do
+>   is_prime = true
+>   for prime in primes do
+>     i % prime == 0 ? is_prime = false : nil
+>   end
+>   is_prime ? primes << i : nil
+> end
+> primes
+> 
+> 
+> -- 
+> Masato Sumi
+> 
+
+-- !
+Koji Yokokawa <ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From umejava ＠ mars.dti.ne.jp  Tue Dec 23 10:08:27 2008
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Dec 23 10:08:36 2008
+Subject: [SML 7449] 第4回Smalltalk勉強会の資料をアップしました
+Message-ID: <JK200812231008276.6849546@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+先日19日に行われました第4回Smalltalk勉強会年末スペシャルですが、大いに
+盛り上がりました。普段はあまり来られないような顔ぶれも集まり、まれに見る
+濃さになったと思います。
+
+当日の資料を下記にアップしました。
+http://sites.google.com/a/smalltalk-users.jp/home/Home/gao-zhi/dai4kaismalltalkbenkyoukai-1/shiryou
+
+少しでも雰囲気が伝わればと思います。
+
+またこのようなスペシャルを定期的に行っていきますので、よろしくお願いします。
+
+通常版も1月に予定されていますので、こちらのほうもお気軽にどうぞ。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From yasuda ＠ mfc.bakkers.gr.jp  Thu Dec 25 10:07:19 2008
+From: yasuda ＠ mfc.bakkers.gr.jp (Yasuda Yutaka)
+Date: Thu Dec 25 10:07:31 2008
+Subject: [SML 7450] Kay 博士京都大学にて講演
+Message-ID: <60AA6979-996D-47E4-BCA2-19F383CCC095@mfc.bakkers.gr.jp>
+
+京都産業大学の安田です。
+
+ご存じの方も多そうですが、とりあえずSML
+では流れていなかったようなので。。。
+
+1/19-22 に、京大で C5 がありますが、
+http://www.cm.is.ritsumei.ac.jp/c5-09/
+
+それと同時に Kay 博士の講演・祝賀会もある
+ようです。（事前申し込みページ有り）
+
+アランケイ博士京都大学名誉博士号授与記念
+講演会および祝賀会 参加募集
+http://www.dl.kuis.kyoto-u.ac.jp/gcoe/event/53/
+
+（C5 のプログラムでは当日キーノートスピーチ
+　があるので、それと兼ねている？のかしら？）
+
+近いのと、火曜はたまたま授業がない日なので
+行ってみようと思っています。せっかくなので
+C5 も少し聴かせてもらおうかな。。。
+
+でわでわ							Yasu.
+

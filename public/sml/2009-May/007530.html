@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7530] Re: オーバロードはポリモフィズムか?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207530%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUqITwlUCVtITwlSSRPJV0bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolYiVVJSMlOiVgJCsbKEI/%3F%3D&In-Reply-To=49F95C83.5090202%40im.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007528.html">
+   <LINK REL="Next"  HREF="007531.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7530] Re: オーバロードはポリモフィズムか?</H1>
+    <B>Sako Hiroshi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207530%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiUqITwlUCVtITwlSSRPJV0bKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolYiVVJSMlOiVgJCsbKEI/%3F%3D&In-Reply-To=49F95C83.5090202%40im.dendai.ac.jp"
+       TITLE="[SML 7530] Re: オーバロードはポリモフィズムか?">sakoh ＠ ba2.so-net.ne.jp
+       </A><BR>
+    <I>2009年 5月  2日 (土) 18:14:22 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007528.html">[SML 7528] Re: オーバロードはポリモフィズムか?
+</A></li>
+        <LI>次の記事 <A HREF="007531.html">[SML 7531] Re: オーバロードはポリモフィズムか?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7530">[ 日付 ]</a>
+              <a href="thread.html#7530">[ スレッド ]</a>
+              <a href="subject.html#7530">[ 件名 ]</a>
+              <a href="author.html#7530">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>酒匂です。
+
+&gt;<i> そもそもポリモフィズムの定義って何ですかね。
+</I>
+Polymorphism （多相性）の本来の意味は、ある「名前」で参照されるものの
+実体として、 多く(poly) の形(morph)をとることができるという
+だけですね。
+
+anObject
+
+という名札（変数）をプログラムテキスト中にみたとしたら、
+それは、その文脈で anObject という名前で「呼ばれている」
+ある実体を示しているわけです（もちろん未初期化 ... 特定の
+実体と関連付けられていない場合もあります）。
+
+よく Smalltalk や Ruby は型のない言語だと言われますが、
+実体（オブジェクト）そのものに型はあって、ただ
+プログラムテキスト中に現れる名札（変数）に
+事前に受け入れ可能な型が定義されていないというだけに
+過ぎません。
+
+さて Smalltalk などでは、anObject という変数に
+任意の実体を代入できますから、anObject は多相的です。
+また強い型付けのある言語では
+
+anObject : aType
+
+などとして（言語は特定していません）anObject が受け入れ可能な
+実体の型を宣言することができますが、通常は aType だけではなく
+aType から派生した型の実体も受け入れ可能であることを意味して
+います。この場合 aType の実体、aTypeのサブタイプの実体などが
+anObject と結びつきますから、やはり多相性があるということに
+なります。
+
+さて、こうしてポリモフィズム（多相性）そのものは、「ある名札（変数）
+に、「複数」の「形」の実体を代入できるということ」であることがわかりました。
+
+で、次のステップです。
+
+多相性があるということは、プログラムテキスト中に
+
+anObject.my_method(arg)
+
+とか
+
+anObject myMetho: arg
+
+という表記を見ても、実行時にはどこで定義されている my_method なり
+myMethod が呼び出されるか、実行前には決定する事が
+できないことを意味します。
+
+anObject.my_method(arg)
+
+の地点に実行がさしかかると、anObject が多相的な名札（変数）の場合
+実体のクラスは aType とは限りませんから、実際に結びついている
+実体の型を調べて、その型に定義されている my_method(arg) を呼び出す
+必要があります。このように実行時に結びつくべきメソッドを決める
+ことを動的束縛 (dynamic bindings) と呼びますよね。
+
+ということで、
+
+多相性＋動的束縛
+
+により、オブジェクト指向システムは柔軟性を手に入れています。
+さて、そうすると、次の疑問は動的に束縛すべき相手を
+どのように決定するかということになるわけですね。。。
+
+オーバーロードのない言語なら、単純に my_method の定義が見つかるまで
+検索して呼び出す・・・すなわちメソッド名を検索キーにして
+上位クラスに向かって探しに行くだけですが、オーバーロードがある言語の場合
+メソッド名とシグニチャをキーにして検索しにいくということですね。
+
+ということで、やっと最初の疑問に戻るのですが、
+
+「ポリモフィズムを実現する方法。。。」
+
+という表現は
+
+「ポリモフィズムに対する動的束縛を支援する方法として
+オーバーライド（再定義）やオーバーロード（多重定義）がある」
+
+といった表現が省略されたものと考えることができるのではないでしょうか。
+
+ここまで書いてきて、このメーリングリストのメンバーには
+釈迦に説法の内容だなと思いましたが、一応お送りすることと致します。
+
+以上です。
+
+2009/4/30 Hidetaka MASUDA &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">masuda ＠ im.dendai.ac.jp</A>&gt;:
+&gt;<i> 増田＠電大です。
+</I>&gt;<i>
+</I>&gt;<i> 最近、悩んでいることがあります。「ポリモフィズムを実現する方法の一つに
+</I>&gt;<i> オーバロードがある」って書いてあるWebページをよく見るんです。何か気持悪
+</I>&gt;<i> いんです。メソッドのシグネチャ (メソッド名、引数、戻り値の型) が違うのに
+</I>&gt;<i> ポリモフィズムと言うんだろうかと。
+</I>&gt;<i>
+</I>&gt;<i> ・抽象クラスの抽象メソッドを具象クラスでオーバライドする
+</I>&gt;<i> ・(Javaなどの)インタフェースを宣言して、実装クラスでメソッドを実装する
+</I>&gt;<i>
+</I>&gt;<i> の2つはポリモフィズムを実現する方法だと思うんですが。なぜなら、メッセー
+</I>&gt;<i> ジの送り手は一切変更なしで動きますよね。オーバロードは引数の数なんかが変
+</I>&gt;<i> わったら送り手はそれに合わせて変更しないとだめですよね。
+</I>&gt;<i>
+</I>&gt;<i> そもそもポリモフィズムの定義って何ですかね。
+</I>&gt;<i>
+</I>&gt;<i> 「同じメッセージを異なるオブジェクトに送った場合、メッセージを受け取った
+</I>&gt;<i> オブジェクトの種類によって異なる動作をしてもよい。」と思っていたんです。
+</I>&gt;<i> 「同じメッセージ」とは「メソッドのシグネチャが同じ」という意味です。
+</I>&gt;<i> 「メッセージ名が同じ」という意味ではありません。
+</I>&gt;<i>
+</I>&gt;<i> いかがでしょうか?
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> ------
+</I>&gt;<i> 〒101-8457 東京電機大学 未来科学部 情報メディア学科  増田 英孝
+</I>&gt;<i> E-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">masuda ＠ im.dendai.ac.jp</A>                TEL 03-5280-3551
+</I>&gt;<i> <A HREF="http://www.cdl.im.dendai.ac.jp/%7emasuda/">http://www.cdl.im.dendai.ac.jp/%7emasuda/</A>     FAX 03-5280-3592
+</I>&gt;<i> It's more fun to compute!
+</I>&gt;<i>
+</I>
+
+
+-- 
+Sako Hiroshi
+<A HREF="http://d.hatena.ne.jp/ardbeg1958/">http://d.hatena.ne.jp/ardbeg1958/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007528.html">[SML 7528] Re: オーバロードはポリモフィズムか?
+</A></li>
+	<LI>次の記事 <A HREF="007531.html">[SML 7531] Re: オーバロードはポリモフィズムか?
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7530">[ 日付 ]</a>
+              <a href="thread.html#7530">[ スレッド ]</a>
+              <a href="subject.html#7530">[ 件名 ]</a>
+              <a href="author.html#7530">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

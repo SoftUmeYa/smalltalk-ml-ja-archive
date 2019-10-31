@@ -1,0 +1,2540 @@
+From koubo2006 ＠ yengawa.jpn.org  Fri Nov  3 02:35:28 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3188] [ANN] Posing Tools
+Message-ID: <20061103020410.0236.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+やまもとさんのZooDeskTop(http://languagegame.org:8080/zoo/194 )に入って
+いるToyPoserにインスパイアされて、もう少し汎用的なモノを作ってみました。
+
+Posing Tools
+http://yengawa.homedns.org:8888/YengawaWiki/38
+
+操り人形の支持棒みたいなPivotという道具でモーフを操ってポーズをつけます。
+Pivotはどこにでも付けられるので人型じゃないものも自由に作れます。
+ポーズが決まったらCameraでパシャッと撮りましょう。
+
+暇なときに遊んでみてください。
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From lingmu ＠ agate.plala.or.jp  Fri Nov  3 07:47:48 2006
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3189] Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+Message-ID: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+
+最近、Ｓｑｕｅａｋを始めたばかりの鈴木と申します。
+いろんなＳｑｕｅａｋに関するWebを見てみましたが、いまいち何が出来るのか
+よく分かりません。
+「スクイークであそぼう」を読んで、簡単に遊べることは分かりましたが、現在
+メインで使っている
+Windowsのアプリケーションソフトや、それで作成されたデータをＳｑｕｅａｋ
+へ入力したり、逆に
+ＳｑｕｅａｋからWindows側へデータを受け渡したりする事は可能なのでしょう
+か。
+ 
+ちなみにプログラミングに関しては、今までVisual Basic6.0の経験があるだけ
+で、オブジェクト指向
+プログラミングに関しては未経験です。
+ 
+最近、PocketPC hp iPAQ rx1950を購入しました。iPAQ上でもＳｑｕｅａｋを動
+かすことが出来るらしい
+のですが、具体的にはでおのように操作するのでしょうか。
+ 
+以上、参考になる情報があれば教えて下さい。
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20061103/835f8df4/attachment.htm
+From mutoh ＠ openedu.org  Fri Nov  3 09:18:23 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3190] iPAQでSqueak(was Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係)
+In-Reply-To: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+Message-ID: <86zmb9fkmo.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+前半は他に人にお任せします。
+
+At Fri, 3 Nov 2006 07:47:48 +0900,
+"Shinji Suzuki" <lingmu@agate.plala.or.jp> wrote:
+> 最近、PocketPC hp iPAQ rx1950を購入しました。iPAQ上でもＳｑｕｅａｋを動
+> かすことが出来るらしい
+> のですが、具体的にはでおのように操作するのでしょうか。
+
+こちらも大島さんにお任せした方が良いのかもしれませんが…
+
+WindowsMobile 5.0 for PocketPCが動いているような新しい機種で動くVMにつ
+いてはよくわからないんですが、iPAQ3660(PocketPC 2000)はいま目の前で
+Squeakが動いています。
+
+手順は、大島さんのページか、まだ書きかけの私のページを参照して下さい。
+	http://www.is.titech.ac.jp/~ohshima/squeak/WinCE/
+	http://qml.610t.org/squeak/iPAQ3660.html
+
+
+便乗質問なんですが、iPAQでキー入力はソフトウエアキーボードからできるの
+ですが、Altを入力する手段って無いんですかね?
+調べても、専用キーボードを使ったらという話ばかりで、こんな古いののって
+なぁと思いつつ。
+# 古いイメージでdo-itなんかが出来ないなと。
+
+では。
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From yoshiki ＠ squeakland.org  Fri Nov  3 09:48:23 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3191] Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+In-Reply-To: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+Message-ID: <u7iyd4ap4.wl%yoshiki@squeakland.org>
+
+  鈴木さんこんにちは、大島です。
+
+> いろんなＳｑｕｅａｋに関するWebを見てみましたが、いまいち何が出来るのかよく分かりません。
+> 「スクイークであそぼう」を読んで、簡単に遊べることは分かりましたが、現在メインで使っている
+> Windowsのアプリケーションソフトや、それで作成されたデータをＳｑｕｅａｋへ入力したり、逆に
+> ＳｑｕｅａｋからWindows側へデータを受け渡したりする事は可能なのでしょうか。
+
+  アプリケーションやデータにもよりますが、マルチメディア系のデータ、例
+えば画像や動画や音声ファイルなどであれば、形式を変換したりすることによっ
+て取り込めるものは多いです。まだ、OpenOffice.orgのファイルも一部読めた
+りする工夫をしている人はいます。
+
+  「スクイークであそぼう」で取り扱っているのは、実はeToysというSqueak
+の「部分」です。eToysの下にあるSqueakの本体のほうはどちらかといえば現
+状プログラミングシステムと思っておくべきもので、その部分を使って新しい
+アプリケーションを作ってみたりするためのものと思っておくのが良いかもし
+れません。
+
+> ちなみにプログラミングに関しては、今までVisual Basic6.0の経験があるだけで、オブジェクト指向
+> プログラミングに関しては未経験です。
+
+  eToysでもかなりのことはできます。Squeakの部分に関しては、「オブジェ
+クト指向プログラミングの勉強」のために使うというのが良いかもしれません。
+梅澤さんの「自由自在Squeakプログラミング (単行本)」を読みながら、いろ
+いろ試されてはいかがでしょうか。
+
+-- Yoshiki
+
+From umejava ＠ mars.dti.ne.jp  Fri Nov  3 13:47:11 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3192] Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+In-Reply-To: <u7iyd4ap4.wl%yoshiki@squeakland.org>
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+	<u7iyd4ap4.wl%yoshiki@squeakland.org>
+Message-ID: <JR2006110313471111.3449875@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> > ちなみにプログラミングに関しては、今までVisual Basic6.0の経験があるだけで、オブジェクト指向
+> > プログラミングに関しては未経験です。
+> 
+>   eToysでもかなりのことはできます。Squeakの部分に関しては、「オブジェ
+> クト指向プログラミングの勉強」のために使うというのが良いかもしれません。
+> 梅澤さんの「自由自在Squeakプログラミング (単行本)」を読みながら、いろ
+> いろ試されてはいかがでしょうか。
+> 
+
+「自由自在」はもともと下記の"Happy Squeaking!!"が元になっていますので、
+まずはこちらがお気軽かもしれません。タダですし。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/Squeak/squeak.html
+
+1回目から3回目くらいまでがオブジェクト指向プログラミングの入門としては
+お勧めです。
+
+http://ftp.squeak.org/ からSqueak 2.2あたりをダウンロードしてやってみる
+ことになります。レトロな感じです。
+
+最近のものが良ければ「自由自在」をどうぞ。ただしこちらはオブジェクト指向
+プログラミングの入門というよりは、Squeakによりフォーカスした形で書いています。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From lingmu ＠ agate.plala.or.jp  Sat Nov  4 22:04:05 2006
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3193] Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+	<u7iyd4ap4.wl%yoshiki@squeakland.org>
+Message-ID: <005b01c70011$b55921f0$0400a8c0@shinji1>
+
+大島　様
+
+アドバイスありがとうございました。
+
+>  eToysでもかなりのことはできます。Squeakの部分に関しては、「オブジェ
+> クト指向プログラミングの勉強」のために使うというのが良いかもしれません。
+> 梅澤さんの「自由自在Squeakプログラミング (単行本)」を読みながら、いろ
+> いろ試されてはいかがでしょうか。
+
+「自由自在Squeakプログラミング 」は購入しましたが、まだ最初の部分しか読んで
+ありません。
+１４章の「VMプライグインの作成」を読むと、多分プラグインを作成すれば基本的に
+何でも出来そうに見えます。
+いつの日か、コンピューターに合わせてプログラミングするのではなく、自分のアイデ 
+
+アを実現するためにプログラミングを利用するレベルにまでなれば楽しいのにと、夢見 
+
+ています。
+
+鈴木
+
+
+
+
+
+From abee ＠ squeakland.jp  Sun Nov  5 11:11:22 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3194] いちかわさんのeToysのリファレンスブック
+Message-ID: <2d5d52a80611041811t657ba3acq478f5663e99d51a5@mail.gmail.com>
+
+阿部@和歌山です。
+
+今まで、eToysのスクリプトに関する網羅的なリファレンスがないことが永らく
+問題になっていました。
+先日、いちかわあいこさんがSuperSwiki2にアップロードされた「リファレンス
+ブック」は、まさにこの問題に対する解になっていると思います。
+
+http://squeakland.jp/seaside/SBSuperSwiki/e666d9b8-4332-490e-9d85-412104620f3e
+
+しかも、このリファレンス自体がeToysで作られており、Squeakのダイナミック
+でメタなところを活かしたものになっています。つまり、解説された動きを確認
+できるだけでなく、このリファレンス自体がeToys作品の事例にもなっています。
+Smalltalkでは市川さんの「スクイークSmalltalk初めの一歩」などの優れた事
+例がありましたが、eToysでははじめてかもしれません。
+最近、山宮さんのDaemon Castleや宮坂さんのチュートリアル、大藤さんの
+もえすくなど、eToysを独習するしくみが出来つつあるので、とてもうれしいです。
+
+あまりにもすばらしいので皆さんもぜひご覧になってください。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Mon Nov  6 16:20:02 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3195] Re: いちかわさんの eToys のリファレンスブック
+In-Reply-To: <2d5d52a80611041811t657ba3acq478f5663e99d51a5@mail.gmail.com>
+References: <2d5d52a80611041811t657ba3acq478f5663e99d51a5@mail.gmail.com>
+Message-ID: <p043204e5c17490512002@amateras.ma.ns.musashi-tech.ac.jp>
+
+こういうのは少し興味を持ちだしたあたりで網羅的にいろいろ知りたい時に役
+立ちますね。何もかもすべて全部解説すると相当大きなサイズになるでしょう
+から、厳選するなり分割するなりが必要でしょうか。
+
+Kazuhiro ABE さんが 2006.11.5ごろに
+「[Squeak-ja: 3194] いちかわさんのeToysのリファレンスブッ」の件で：
+> あまりにもすばらしいので皆さんもぜひご覧になってください。
+
+ところが、早速使ってみましたが、テキストに日本語が入りません。こちらの
+環境はMacOSX10.4.8で、ダウンロードしてきたばかりのホヤホヤの
+SqueakPlugin2005Jです。このプロジェクトではなければ日本語が入ります。
+どうしたものでしょうか？
+--
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/             井上
+.
+
+From abee ＠ squeakland.jp  Mon Nov  6 17:22:04 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3196] Re: いちかわさんの eToys のリファレンスブック
+In-Reply-To: <p043204e5c17490512002@amateras.ma.ns.musashi-tech.ac.jp>
+References: <2d5d52a80611041811t657ba3acq478f5663e99d51a5@mail.gmail.com>
+	<p043204e5c17490512002@amateras.ma.ns.musashi-tech.ac.jp>
+Message-ID: <454EF0AC1AF.FED9ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 6 Nov 2006 16:20:02 +0900
+iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp> wrote:
+>こういうのは少し興味を持ちだしたあたりで網羅的にいろいろ知りたい時に役
+>立ちますね。何もかもすべて全部解説すると相当大きなサイズになるでしょう
+>から、厳選するなり分割するなりが必要でしょうか。
+
+私は多少大きくてもまとまっていたほうが便利なような気がします。
+高速でインターネットを使える環境も一般化し、オフラインでもCD-RやUSBメモリ
+の容量を考えると、大きさはそれほど問題ではないと思います。
+
+いちかわさんがこのMLをお読みになっているかどうか分からないので、作品のコ
+メント欄に書かれると良いのかもしれません。
+
+# いま、SuperSwiki2は落ちてるっぽいです。
+
+>Kazuhiro ABE さんが 2006.11.5ごろに
+>「[Squeak-ja: 3194] いちかわさんのeToysのリファレンスブッ」の件で：
+>> あまりにもすばらしいので皆さんもぜひご覧になってください。
+>
+>ところが、早速使ってみましたが、テキストに日本語が入りません。こちらの
+>環境はMacOSX10.4.8で、ダウンロードしてきたばかりのホヤホヤの
+>SqueakPlugin2005Jです。このプロジェクトではなければ日本語が入ります。
+
+ほかのMacユーザの皆さんはいかがでしょうか。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tetha ＠ st.rim.or.jp  Mon Nov  6 17:49:41 2006
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3197] Re: いちかわさんの eToys のリファレンスブック
+In-Reply-To: <p043204e5c17490512002@amateras.ma.ns.musashi-tech.ac.jp>
+References: <2d5d52a80611041811t657ba3acq478f5663e99d51a5@mail.gmail.com>
+	<p043204e5c17490512002@amateras.ma.ns.musashi-tech.ac.jp>
+Message-ID: <8586797F-A636-48E7-B6C1-60065D5D05AF@st.rim.or.jp>
+
+みなさん、こんばんは。
+色々ありましてご無沙汰してました…。
+林です。
+
+On 2006/11/06, at 16:20, iNOUE Koich! wrote:
+
+> ところが、早速使ってみましたが、テキストに日本語が入りません。 
+> こちらの
+> 環境はMacOSX10.4.8で、ダウンロードしてきたばかりのホヤホ 
+> ヤの
+> SqueakPlugin2005Jです。このプロジェクトではなければ日本語が入 
+> ります。
+> どうしたものでしょうか？
+
+こちらも MacOSX10.4.8, Safari 2.0.4 で再現しました。
+
+どうも二つのバグが関係してるように見えます。
+一つは、Safari などのブラウザ内で実行するときのバグ。
+もう一つは、文字コードの切り替え（Win→Macとか）に関 
+するバグです。
+
+前者については残念ながら、Safari などブラウザの中で日本語 
+を入力するのは難しいようです（以前は入力出来たのですが）。
+当面、プロジェクトをダウンロードして利用することになりそうです。
+（ブラウザプラグインの見直しが必要？？）
+
+後者については、対処療法になってしまいますが…。
+
+1) プロジェクトをダウンロードして、それをアプリで立ち上げたスク 
+イークで読み込む
+2) 言語メニューで、一旦、English に切り替えてから再び  
+Japanese にする
+3) 念のため、これをローカルディスクの My Squeak に保存する
+
+といった方法で回避出来ませんでしょうか？
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+
+
+From abee ＠ squeakland.jp  Mon Nov  6 20:44:43 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3198] eToys で二足歩行ロボットを制御
+Message-ID: <454F202B16B.FEDAABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+eToysをつかって二足歩行ロボットを制御するプロジェクトを作ってみました。
+ロボットはATR/ヴィストンのRobovie-MSです。
+
+http://swikis.ddo.jp/WorldStethoscope/37
+
+意図としては、入れ物を使ったアニメーションと同じように、ロボットのモーシ
+ョンを作れることを狙ってみました。ロボットは状態のかたまりなので、これを
+状態遷移と捕らえることもできます。このとき、各関節の角度はコンピュータ的
+な 8bitの整数とかではなく度(degree)で表せるようにしています。
+
+10/28-29, 11/3-5には、このプロジェクトとRobovie-MS 12台を使った小学生向け
+のワークショップを和歌山県のBig-Uで行いました。
+ロボットは現実のさまざまな制約を受けるため、スクイークで作った作品をその
+まま置き換えるだけでは、うまく動きません。実施にあたってはこのあたりに気
+をつけて準備する必要がありました。
+結果、なかなか面白いものができたように思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From tetha ＠ st.rim.or.jp  Mon Nov  6 21:07:02 2006
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3199] Re: いちかわさんの eToys のリファレンスブック
+In-Reply-To: <454EF0AC1AF.FED9ABEE@smtp.nifty.com>
+References: <2d5d52a80611041811t657ba3acq478f5663e99d51a5@mail.gmail.com>
+	<p043204e5c17490512002@amateras.ma.ns.musashi-tech.ac.jp>
+	<454EF0AC1AF.FED9ABEE@smtp.nifty.com>
+Message-ID: <2138504B-F101-442D-AA22-3C5CF83486F3@st.rim.or.jp>
+
+林です。
+
+On 2006/11/06, at 17:22, Kazuhiro ABE wrote:
+
+> ほかのMacユーザの皆さんはいかがでしょうか。
+
+便乗質問になってしまい恐縮ですが、Linux ユーザの方々はいか 
+がでしょう？
+
+# 内部的な話になりますが、作品（プロジェクト）を読み込む度に
+# HandMorph が増えていくことと関係がありそうです。
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+
+
+
+From abee ＠ squeakland.jp  Tue Nov  7 02:44:34 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3200] 新型世界聴診器が発売されました
+Message-ID: <454F74822F8.EB4CABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+長らくお待たせしました。先日、アカデミアより新型の世界聴診器が発売されま
+した。お陰さまで、初期ロットの100台はすでに完売し、現在第2ロットとなって
+います。
+
+http://www.academianetwork.co.jp/service/stethoscope2/
+
+世界聴診器は、明るさや電圧などを音の高さに変換する装置です。単体でも遊べ
+る他、スクイークに接続することで音の周波数を数値として扱うことができます。
+新型には以下のような特徴があります。
+
+超小型
+旧型に比べて大幅な小型化を実現しています(単3乾電池2本分)。機能は基本的に
+旧型と変わりません(温度センサはオプション)。
+
+完成品 
+多くの方からいただいた組み立てが大変とのご意見にお応えして完成品としまし
+た(製造元 イーエスピー企画)。 
+
+オールインワン 
+電池以外に必要なイヤホンや光センサ、接続ケーブル、CD-ROMなどがすべて含ま
+れているため、届いたらすぐに使うことができます。 
+
+ローコスト 
+製造、販売元の協力により、類似の商品と比べても非常に安い5,000円(税込)を実
+現しました。
+また、電池を006Pから、より入手の容易な単3乾電池にしました(マンガン可)。こ
+れにより、使用コストも安くなりました。 
+
+拡張性 
+センサケーブルの先端はミノムシクリップになっており、市販や自作のセンサを
+取り付けることができます(測定範囲はDC 0-5Vで出力は0-5KHz)。また、これらの
+電源として使えるDC 5Vの出力も用意しています。 
+また、汎用の組込用プロセッサとシリアルポートを搭載しており、ファームウェ
+アを書き換えることでバージョンアップや拡張が可能です。 
+
+マニュアルは以下からダウンロードできます。
+http://swikis.ddo.jp/WorldStethoscope/41
+
+どうぞよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From Fumito.Kondo ＠ hp.com  Tue Nov  7 09:33:11 2006
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3201] Re: 新型世界聴診器が発売されました
+In-Reply-To: <454F74822F8.EB4CABEE@smtp.nifty.com>
+Message-ID: <D9AA43C8AA00FB4DA2E57AA62A7934FA0255003C@TKOEXC22.asiapacific.cpqcorp.net>
+
+阿部さん、
+
+お久しぶりです。
+ＨＰの近藤です。
+
+新型の世界聴診器のご案内ありがとうございます。
+
+これなら私にでも使えそうです。
+
+早速注文しました。
+
+近藤史人
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kazuhiro ABE
+Sent: Tuesday, November 07, 2006 2:45 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3200] 新型世界聴診器が発売されました
+
+阿部@新百合です。
+
+長らくお待たせしました。先日、アカデミアより新型の世界聴診器が発売されま
+した。お陰さまで、初期ロットの100台はすでに完売し、現在第2ロットとなって
+います。
+
+http://www.academianetwork.co.jp/service/stethoscope2/
+
+世界聴診器は、明るさや電圧などを音の高さに変換する装置です。単体でも遊べ
+る他、スクイークに接続することで音の周波数を数値として扱うことができます。
+新型には以下のような特徴があります。
+
+超小型
+旧型に比べて大幅な小型化を実現しています(単3乾電池2本分)。機能は基本的に
+旧型と変わりません(温度センサはオプション)。
+
+完成品
+多くの方からいただいた組み立てが大変とのご意見にお応えして完成品としまし
+た(製造元 イーエスピー企画)。 
+
+オールインワン
+電池以外に必要なイヤホンや光センサ、接続ケーブル、CD-ROMなどがすべて含ま
+れているため、届いたらすぐに使うことができます。 
+
+ローコスト
+製造、販売元の協力により、類似の商品と比べても非常に安い5,000円(税込)を実
+現しました。
+また、電池を006Pから、より入手の容易な単3乾電池にしました(マンガン可)。こ
+れにより、使用コストも安くなりました。 
+
+拡張性
+センサケーブルの先端はミノムシクリップになっており、市販や自作のセンサを
+取り付けることができます(測定範囲はDC 0-5Vで出力は0-5KHz)。また、これらの
+電源として使えるDC 5Vの出力も用意しています。 
+また、汎用の組込用プロセッサとシリアルポートを搭載しており、ファームウェ
+アを書き換えることでバージョンアップや拡張が可能です。 
+
+マニュアルは以下からダウンロードできます。
+http://swikis.ddo.jp/WorldStethoscope/41
+
+どうぞよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Tue Nov  7 15:18:03 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3202] Re: 新型世界聴診器が発売されました
+In-Reply-To: <D9AA43C8AA00FB4DA2E57AA62A7934FA0255003C@TKOEXC22.asiapacific.cpqcorp.net>
+References: <454F74822F8.EB4CABEE@smtp.nifty.com>
+	<D9AA43C8AA00FB4DA2E57AA62A7934FA0255003C@TKOEXC22.asiapacific.cpqcorp.net>
+Message-ID: <4550251B256.84FAABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+こちらこそ、ご無沙汰しています。
+
+On Tue, 7 Nov 2006 09:33:11 +0900
+"Kondo, Fumito" <Fumito.Kondo@hp.com> wrote:
+>これなら私にでも使えそうです。
+>
+>早速注文しました。
+
+ありがとうございます。早速、多数の方からご注文いただいているようです。合
+わせてお礼申し上げます。また、お待たせして申し訳ありませんでした。
+
+近藤さんのように、実際に演奏される方から見ると、新型の音質はご満足いただ
+けないかもしれません(もちろん、FFTで取り込む分には十分なのです)。エレクト
+リカルというかインダストリアルノイズ系です。旧型はアナログだったのですが、
+新型はデジタルなのでこの影響が出ています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From Fumito.Kondo ＠ hp.com  Tue Nov  7 18:16:20 2006
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3203] Re: 新型世界聴診器が発売されました
+In-Reply-To: <4550251B256.84FAABEE@smtp.nifty.com>
+Message-ID: <D9AA43C8AA00FB4DA2E57AA62A7934FA025503F7@TKOEXC22.asiapacific.cpqcorp.net>
+
+阿部さん、
+
+インダストリアルノイズ系を楽しみにしてます。
+
+近藤
+
+ 
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kazuhiro ABE
+Sent: Tuesday, November 07, 2006 3:18 PM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3202] Re: 新型世界聴診器が発売されました
+
+阿部@新百合です。
+
+こちらこそ、ご無沙汰しています。
+
+On Tue, 7 Nov 2006 09:33:11 +0900
+"Kondo, Fumito" <Fumito.Kondo@hp.com> wrote:
+>これなら私にでも使えそうです。
+>
+>早速注文しました。
+
+ありがとうございます。早速、多数の方からご注文いただいているようです。合
+わせてお礼申し上げます。また、お待たせして申し訳ありませんでした。
+
+近藤さんのように、実際に演奏される方から見ると、新型の音質はご満足いただ
+けないかもしれません(もちろん、FFTで取り込む分には十分なのです)。エレクト
+リカルというかインダストリアルノイズ系です。旧型はアナログだったのですが、
+新型はデジタルなのでこの影響が出ています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From htakada ＠ acm.org  Tue Nov  7 18:33:53 2006
+From: htakada ＠ acm.org (Hideyuki Takada)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3204] C5 2007参加登録開始！
+Message-ID: <45505301.7070004@acm.org>
+
+皆様
+
+立命館大学の高田です。
+
+来年 1月24日から26日に京都大学にて開催されます国際会議 C5 2007 の参加登
+録受付が始まりましたのでご案内致します。
+
+今回は，割安で泊まれるホテルもご用意しておりますので，ぜひご利用下さい。
+（部屋数に限りがありますので，お早めにお申し込み下さい）。
+
+プログラムにつきましては，順次 Web 上でご案内していく予定です。
+
+たくさんのご参加をお待ち申し上げております。
+
+-----
+CALL FOR PARTICIPATION
+
+The Fifth International Conference on
+Creating, Connecting and Collaborating through Computing (C5 2007)
+
+January 24-26, 2007, Kyoto University, Kyoto, Japan
+http://www.cm.is.ritsumei.ac.jp/c5-07/
+
+Organized by
+ Hewlett-Packard Company
+ Kyoto University 21st Century COE Program for Knowledge Society
+Infrastructure
+ Viewpoints Research Institute
+
+SCOPE
+ Computers, networks, and other forms of technology are now pervasive
+ in our information-based society. However, most users still function
+ as passive consumers of technology. To evolve into a true knowledge
+ society, it is critical that we transform computer-based human
+ activities to engage users in the active process of creating,
+ connecting, and collaborating together.
+
+ The C5 conference is for researchers, technology developers,
+ educators, and technology users who are concerned about developing
+ and enabling human-oriented creation, connection, and collaboration
+ processes. C5 is an international forum for presenting ongoing work
+ as well as new work currently under development and for discussing
+ future needs and directions in creative computing and multimedia
+ authoring environments. We welcome equally the submission of
+ technical papers and practitioner/experience reports for paper
+ presentations. In addition, we are adding a workshop track for the
+ third day of the conference and are soliciting proposals for half-day
+ and full-day interactive workshops.
+
+REGISTRATION FEE
+ Early Registration Rate (on or before Jan. 10): 10,000 JPY
+ Standard Registration Rate (after Jan. 11 and on-site): 12,000 JPY
+ Student Rate (Banquet excluded): 3,000 JPY
+ Extra Banquet (per one person): 5,000 JPY
+ Extra Preliminary Proceedings: 2,000 JPY
+
+ Early and standard registration rates include a copy of preliminary
+ proceedings (on CD) and banquet. Student rate includes a copy of
+ preliminary proceedings (on CD). Student registrants who want to
+ attend the banquet need to pay for the extra banquet fee. Authors also
+ have to register based on their status (regular or student). Authors
+ whose papers are included in the proceedings will receive a copy of
+ the formal proceedings published by the IEEE Computer Society after
+ the conference. Reprints of papers and additional copies of the formal
+ proceedings can be purchased from the IEEE Computer Society.
+
+REGISTRATION FORM
+ Registration should be made by E-mail or FAX. Registration Form is
+ available below. (E-mail address and FAX number is included in the
+ form.)
+
+ http://www.cm.is.ritsumei.ac.jp/c5-07/c5reg.doc (MS-WORD)
+ http://www.cm.is.ritsumei.ac.jp/c5-07/c5reg.pdf (PDF)
+ http://www.cm.is.ritsumei.ac.jp/c5-07/c5reg.txt (Plain Text)
+
+ Please note that credit card payment is only accepted through fax
+ registration to protect your personal information. If you prefer to
+ register by E-mail, please pay on-site by Japanese cash.
+
+HOTEL RESERVATION FORM
+ A group block of rooms at the following 2 hotels has been reserved
+ for this conference with special rates. For reservation, please send
+ the following form by E-mail or Fax by December 20, 2006. Rooms are
+ assigned by the first-come-first-served basis.
+ (E-mail address and FAX number is included in the form.)
+
+ http://www.cm.is.ritsumei.ac.jp/c5-07/c5hotel.doc (MS-WORD)
+ http://www.cm.is.ritsumei.ac.jp/c5-07/c5hotel.pdf (PDF)
+ http://www.cm.is.ritsumei.ac.jp/c5-07/c5hotel.txt (Plain Text)
+
+ *Holiday Inn Kyoto (http://www.hi-kyoto.co.jp/)
+   Single Room -  8,000 JPY (+500 JPY for breakfast)
+   Double Room - 11,000 JPY (+1,000 JPY for breakfast)
+
+   Shuttle Bus available between Kyoto Station and Hotel. Wireless LAN
+   available at Lobby. Major credit cards acceptable. About 10 minutes
+   to Kyoto University by Kyoto City Bus (#206).
+
+ *Co-op Inn Kyoto (http://www.coopinn.jp/)
+   Single Room -  5,000 JPY (+800 JPY for breakfast)
+   Double Room -  9,200 JPY (+1,600 JPY for breakfast)
+
+   In-room Internet available for free. Major credit cards acceptable.
+   About 15 minutes to Kyoto University by Kyoto City Bus (#201).
+
+ORGANIZING COMMITTEE
+
+Honorary Co-Chairs
+ Alan Kay, Viewpoints Research Institute, USA
+ Makoto Nagao, National Institute of Information and Communications
+Technology (NICT), Japan
+
+Conference Co-Chairs
+ Kim Rose, Viewpoints Research Institute, USA
+ Katsumi Tanaka , Kyoto University, Japan
+
+Program Co-Chairs
+ Benay Dara-Abrams, DALaboratories, USA
+ Rieko Kadobayashi, National Institute of Information and Communications
+Technology (NICT), Japan
+ Rick McGeer, Hewlett-Packard Company, USA
+ Kazuyuki Moriya, Kyoto University, Japan
+
+Workshop Track Chair
+ Benay Dara-Abrams, DALaboratories, USA
+
+Local Arrangement Chair
+ Hajime Kita, Kyoto University, Japan
+
+Publicity and Publication Chair
+ Hideyuki Takada, Ritsumeikan University, Japan
+
+Program Committee
+ Michael Bischoff, University of Applied Sciences Luebeck, Germany
+ Masahiro Fujita, University of Tokyo, Japan
+ Mark Guzdial, Georgia Institute of Technology, USA
+ Masaki Hayashi, Sega Sammy Media, Inc., Japan
+ Tsuneo Jozen, Osaka Electro-Communication University, Japan
+ Shinichi Konomi, University of Tokyo, Japan
+ Julian Lombardi, Duke University, USA
+ Maic Masuch, Otto-von-Guericke-University of Magdeburg, Germany
+ Mark McCahill, University of Minnesota, USA
+ Maggie McPherson, University of Leeds, UK
+ John David Miller, Intel Corporation, USA
+ Shinya Nakagawa, HP Labs, Japan
+ Haruhiko Okumura, Mie University, Japan
+ Zhiyong Peng, Wuhan University, China
+ Ian Piumarta, Viewpoints Research Institute, USA
+ Andreas Raab, Qwaq, Inc., USA
+ David Reed, MIT Media Lab/HP Labs, USA
+ Nathanael Scharli, Google, Switzerland
+ David Smith, Qwaq, Inc., USA
+ Kazutoshi Sumiya, University of Hyogo, Japan
+ Toshiyuki Takeda, Kwansei Gakuin University, Japan
+ Shin'ichi Ueshima, Kansai University, Japan
+
+
+-- 
+Hideyuki Takada, Ph.D
+Department of Computer Science
+College of Information Science and Engineering, Ritsumeikan University
+
+From makoto ＠ kobe-u.ac.jp  Tue Nov  7 21:11:00 2006
+From: makoto ＠ kobe-u.ac.jp (TAKAHASHI Makoto)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3205] Re: いちかわさんの eToys のリファレンスブック
+In-Reply-To: <2138504B-F101-442D-AA22-3C5CF83486F3@st.rim.or.jp>
+References: <2d5d52a80611041811t657ba3acq478f5663e99d51a5@mail.gmail.com>
+	<p043204e5c17490512002@amateras.ma.ns.musashi-tech.ac.jp>
+	<454EF0AC1AF.FED9ABEE@smtp.nifty.com>
+	<2138504B-F101-442D-AA22-3C5CF83486F3@st.rim.or.jp>
+Message-ID: <20061107211100.424028.29ab1d62@kobe-u.ac.jp>
+
+高橋真＠神戸大学です。
+
+このリファランスブックは本当によくできていると思います。
+私自身気がつかなかった使い方もあり大変参考になりました。
+
+++ Tetsuya HAYASHIさんの『[Squeak-ja: 3199] Re: いちかわさんの eToys のリファレンスブック』
+| (Mon, 6 Nov 2006 21:07:02 +0900)の件について
+--
+> 便乗質問になってしまい恐縮ですが、Linux ユーザの方々はいかがでしょう？
+
+梅澤さんのsqueakware-edu-0.3を利用して授業を行っているところでしたので
+試してみました。>梅澤さん、大変重宝しています。ありがとうございます。
+
+アプリケーションで起動したスクイークでは日本語が文字化けしましたが、
+ブラウザーのKonquerorでは文字化けせずに表示できました。
+アプリケーションも[Squeak-ja: 3197] の方法でプロジェクトを保存し直すと
+文字化けが解消されました。
+
+From tetha ＠ st.rim.or.jp  Tue Nov  7 22:29:25 2006
+From: tetha ＠ st.rim.or.jp (Tetsuya HAYASHI)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3206] Re: いちかわさんの eToys のリファレンスブック
+In-Reply-To: <2138504B-F101-442D-AA22-3C5CF83486F3@st.rim.or.jp>
+References: <2d5d52a80611041811t657ba3acq478f5663e99d51a5@mail.gmail.com>
+	<p043204e5c17490512002@amateras.ma.ns.musashi-tech.ac.jp>
+	<454EF0AC1AF.FED9ABEE@smtp.nifty.com>
+	<2138504B-F101-442D-AA22-3C5CF83486F3@st.rim.or.jp>
+Message-ID: <76E59E59-C030-40AB-B942-80E4181A7B81@st.rim.or.jp>
+
+林です。ども。
+
+On 2006/11/06, at 21:07, Tetsuya HAYASHI wrote:
+
+> # 内部的な話になりますが、作品（プロジェクト）を読み込む度に
+> # HandMorph が増えていくことと関係がありそうです。
+
+↑まず、これですが私の勘違いでした。すみません。
+
+On 2006/11/07, at 21:11, TAKAHASHI Makoto wrote:
+> アプリケーションで起動したスクイークでは日本語が文字化けしまし 
+> たが、
+> ブラウザーのKonquerorでは文字化けせずに表示できました。
+> アプリケーションも[Squeak-ja: 3197] の方法でプロジェクト 
+> を保存し直すと
+> 文字化けが解消されました。
+
+高橋さん、Linux での動作確認ありがとうございます。
+
+どうも以前から潜在していたバグのようです。
+井上さん、ご報告ありがとうございます。
+
+このバグについては、MANTIS-J 改め Squeak-ja BTS に登 
+録しておきました。
+
+http://squeak.pinkzo.net/bugs/
+
+--
+Tetsuya HAYASHI <tetha@st.rim.or.jp>
+
+
+From epi9tetus ＠ gmail.com  Wed Nov  8 01:40:27 2006
+From: epi9tetus ＠ gmail.com (EPI♪)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3207] Re: モーフパッケージ化システム
+In-Reply-To: <6544a1da0610180535v471ed561xa415a625aed4e10b@mail.gmail.com>
+References: <86bqofemu7.wl%mutoh@openedu.org>
+	<001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC>
+	<001401c6f26c$b4fbd2f0$6c0aa8c0@KSPC>
+	<6544a1da0610180535v471ed561xa415a625aed4e10b@mail.gmail.com>
+Message-ID: <7aa126770611070840t36cee739ya7e42eed521f87da@mail.gmail.com>
+
+カテ違いかも知れないのですが、小学生のWSの後で以下のような声を聞きました。
+
+アニメーションのおたまじゃくしを競争させたいけれど、色違いを沢山つくるのに
+時間がかかって云々・・・と言うものです。
+
+一つのアニメーションを作成後にコピーして色違いを複製、必要な個数を作った後で
+目的のタイルを任意の対象のみ差し替えるようなことがしたかったそうです。
+
+「増やす」「色違い」などが含まれたキットを用いて自分で描いた図を動かすような
+ことが出来ると、図（アニメーション）の作成部分で時間を短縮できるので、目的の
+タイルのテストにより多くの時間が使えて、子ども達の集中力も保てるのでは無いかと
+思い投稿しました。
+
+トピックを勘違いしているようでしたら、お許しください。
+
+あぴ
+
+From e-itoh ＠ ygu.ac.jp  Wed Nov  8 10:23:07 2006
+From: e-itoh ＠ ygu.ac.jp (Eiichiro Ito)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3208] Re: eToys で二足歩行ロボットを制御
+In-Reply-To: <454F202B16B.FEDAABEE@smtp.nifty.com>
+References: <454F202B16B.FEDAABEE@smtp.nifty.com>
+Message-ID: <4551317B.8040802@ygu.ac.jp>
+
+伊藤です。こんにちは。
+
+いつぞや見せていただいたものですね。面白そうです。
+そのうち、どんなカリキュラムにしたのか教えてください。
+＃私も４足以外に手を出そうかと考えております。
+
+Kazuhiro ABE wrote:
+> 阿部@新百合です。
+> 
+> eToysをつかって二足歩行ロボットを制御するプロジェクトを作ってみました。
+> ロボットはATR/ヴィストンのRobovie-MSです。
+> 
+> http://swikis.ddo.jp/WorldStethoscope/37
+> 
+> 意図としては、入れ物を使ったアニメーションと同じように、ロボットのモーシ
+> ョンを作れることを狙ってみました。ロボットは状態のかたまりなので、これを
+> 状態遷移と捕らえることもできます。このとき、各関節の角度はコンピュータ的
+> な 8bitの整数とかではなく度(degree)で表せるようにしています。
+> 
+> 10/28-29, 11/3-5には、このプロジェクトとRobovie-MS 12台を使った小学生向け
+> のワークショップを和歌山県のBig-Uで行いました。
+> ロボットは現実のさまざまな制約を受けるため、スクイークで作った作品をその
+> まま置き換えるだけでは、うまく動きません。実施にあたってはこのあたりに気
+> をつけて準備する必要がありました。
+> 結果、なかなか面白いものができたように思います。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+
+
+From yoshiki ＠ squeakland.org  Wed Nov  8 15:58:31 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3209] Re: iPAQでSqueak(was Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係)
+In-Reply-To: <86zmb9fkmo.wl%mutoh@openedu.org>
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+	<86zmb9fkmo.wl%mutoh@openedu.org>
+Message-ID: <u8ximh1bc.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+> 便乗質問なんですが、iPAQでキー入力はソフトウエアキーボードからできるの
+> ですが、Altを入力する手段って無いんですかね?
+> 調べても、専用キーボードを使ったらという話ばかりで、こんな古いののって
+> なぁと思いつつ。
+> # 古いイメージでdo-itなんかが出来ないなと。
+
+  記憶がかなりあいまいですが、ソフトウェアキーボードのAltキーやShiftキー
+はは、次のキーを押すまで残るようになっていませんでしたっけ? そのときに
+タップすると、Shiftタップになった気がします。
+
+「古いイメージ」にもよりますが、スクロールバーの片隅にある誰にも分から
+ないようなところを押すとメニューが出る、という仕組みはMVC時代からずっ
+とあるので、それを使う、という手もあるでしょうか。
+
+-- Yoshiki
+
+From yoshiki ＠ squeakland.org  Wed Nov  8 17:34:31 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3210] Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+In-Reply-To: <005b01c70011$b55921f0$0400a8c0@shinji1>
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+	<u7iyd4ap4.wl%yoshiki@squeakland.org>
+	<005b01c70011$b55921f0$0400a8c0@shinji1>
+Message-ID: <u3b8ugwvc.wl%yoshiki@squeakland.org>
+
+  鈴木さん
+
+> 「自由自在Squeakプログラミング 」は購入しましたが、まだ最初の部分し
+> か読んでありません。１４章の「VMプライグインの作成」を読むと、多分プ
+> ラグインを作成すれば基本的に何でも出来そうに見えます。いつの日か、コ
+> ンピューターに合わせてプログラミングするのではなく、自分のアイデ ア
+> を実現するためにプログラミングを利用するレベルにまでなれば楽しいのに
+> と、夢見 ています。
+
+  Squeak Virtual Machine(Squeak VM)というのは「Squeak用の仮想的な機械」
+ということですが、「(仮想的だけど立派な)機械」ということでもあります。
+専用の命令セットがあって、画像や音声の出力、音声の入力、ユーザーからの
+キーボードやマウスの入力などを処理できるものです。考え方を変えて「そう
+いう機械を使っているんだ」と思うと、特にプラグインを書かなくても「やり
+たいことは何でも」できます。さらに言うと、Windowsなどでは画面に何かを
+表示するときのやり方を変えることはなかなかできないわけですが、Squeakな
+ら簡単にできたりするので「なんでもできる」のはかえってプラグインなどと
+は言わずにSqueakのなかでこそ、という考え方もできます。
+
+  というわけで、例えば今Squeak内にあるツールを使ってみて、その機能を実
+現しているコードのどこか数行を変えてツールの振る舞いを変えてみる、とい
+うようなことをして、徐々に自分の使いたいツールに変容させていく、という
+ようなことをなさってみるのも一案かもしれません。
+
+-- Yoshiki
+
+
+From lingmu ＠ agate.plala.or.jp  Wed Nov  8 21:50:52 2006
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3211] Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1><u7iyd4ap4.wl%yoshiki@squeakland.org><005b01c70011$b55921f0$0400a8c0@shinji1>
+	<u3b8ugwvc.wl%yoshiki@squeakland.org>
+Message-ID: <003b01c70334$86cf8c40$0400a8c0@shinji1>
+
+大島　様
+
+
+>  Squeak Virtual Machine(Squeak VM)というのは「Squeak用の仮想的な機械」
+> ということですが、「(仮想的だけど立派な)機械」ということでもあります。
+> 専用の命令セットがあって、画像や音声の出力、音声の入力、ユーザーからの
+> キーボードやマウスの入力などを処理できるものです。考え方を変えて「そう
+> いう機械を使っているんだ」と思うと、特にプラグインを書かなくても「やり
+> たいことは何でも」できます。さらに言うと、Windowsなどでは画面に何かを
+> 表示するときのやり方を変えることはなかなかできないわけですが、Squeakな
+> ら簡単にできたりするので「なんでもできる」のはかえってプラグインなどと
+> は言わずにSqueakのなかでこそ、という考え方もできます。
+>
+>  というわけで、例えば今Squeak内にあるツールを使ってみて、その機能を実
+> 現しているコードのどこか数行を変えてツールの振る舞いを変えてみる、とい
+> うようなことをして、徐々に自分の使いたいツールに変容させていく、という
+> ようなことをなさってみるのも一案かもしれません。
+>
+
+アドバイスありがとうございます。
+Windowsに比べて自分で機能を拡張できるため自由度がかなりあるようですね。
+とても興味がわいてきました。
+
+ところで、Squeakで外部のハードを制御しようとした場合はどうでしょうか。
+私自身、Windowsで市販のハードしか制御したことがありません。それもすでにあ
+るドライバーとライブラリーを使ったプログラミングしか経験がないのですが、
+Squeakで外部のハードを制御することは可能なのでしょうか。
+Windowsであれば、市販品でＰＣＩボード、ＵＳＢ、ＲＳ−２３２Ｃ、ＧＰＩＢ等で制御可能
+な多くのハードが溢れています。基本的に、これらのWindows用のハードをSqueak
+で制御することは出来きないように思います。もしやるのであれば、全て自分でプロ
+グラミングしなければならないのでしょうか。
+ここらへんが、まだ全然分かっていません。もし、お分かりでしたらアドバイスを宜しく
+お願いします。
+
+鈴木
+
+
+
+
+
+
+
+From miyasaka ＠ iris.dti.ne.jp  Thu Nov  9 02:19:54 2006
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3212] 世界聴診器のワークショップのお知らせ（小４〜６）
+Message-ID: <4b24f0d0611080919k104eb7f3q4f0e3cf63076096@mail.gmail.com>
+
+squeak-jaのみなさまへ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+新型世界聴診器の発売、うれしいニュースですね！
+私どもデジハリ大学院でもたくさん購入させていただきました。
+活用させていただきます！
+
+ということで、下記のとおり小学生を対象としたスクイーク＆世界聴診器ワークショップを開催します。
+ご興味ある方は、ぜひお子様と一緒に遊びに来てください。
+
+＜みなさまへお願い＞
+今回は、秋葉原と八王子で開催予定なのですが、八王子会場は今回が初めてということもあり、参加者募集に苦慮しております。
+恐れ入りますが、八王子近辺にお住まいのお知り合いの方がいらしたら、このワークショップをご紹介いただければ幸いです。
+
+−−−−−−−−−−−−−−−−−−−−−−−−−−−
+■タイトル
+「パソコンでたのしいゲームを作ろう！」ワークショップ
+たのしいゲームを作って、海外の子ども達と遊ぼう！
+
+■日時
+秋葉原会場　3回コース　12/2日(土)、1/13(土)、2/10(土)
+八王子会場　2回コース　11/26日(日)、1/14(日)
+各回13:00-16:30
+
+■内容
+【第１部】スクイークの基礎
+スクイークを使って、プログラミングの基礎を習得します。
+【第２部】スクイークの応用
+音や光、電圧の変化をスクイークに取り込むことができる「世界聴診器」という道具を使って、自分なりのコントローラーの設計・制作実習と、そのコントローラーを活用したゲームを作ります。
+【第３部】：作品発表会（国際交流）
+テレビ会議を使って海外の子ども達にワークショップで作った作品の発表会を行います。（秋葉原会場のみ）
+
+■お申し込み方法
+詳しくはこちらをご覧ください。
+http://mts-j.hiho.jp/2006/10/itc-ws.html
+
+−−−−−−−−−−−−−−−−−−−−−−−−−−−
+
+なお、秋葉原会場で行う2/10の作品発表会を兼ねた国際交流セッションでは、スクイークをネパールで教えていた早坂吉昭さんの協力により、ネパールの子供たちと日本の子供たちが相互に作品発表を行うようなイベントを計画中です。
+スカイプのビデオ会議機能を使って、ネパールとデジハリ大学の教室を結ぶ予定。
+どうなることやら、ご期待ください！
+
+以上、よろしくお願いいたします！！
+
+--
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+http://mts-j.hiho.jp/
+http://www.dhw.co.jp/gs/
+---------------------------------------------
+
+From yoshiki ＠ squeakland.org  Thu Nov  9 05:06:11 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3213] Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+In-Reply-To: <003b01c70334$86cf8c40$0400a8c0@shinji1>
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+	<u7iyd4ap4.wl%yoshiki@squeakland.org>
+	<005b01c70011$b55921f0$0400a8c0@shinji1>
+	<u3b8ugwvc.wl%yoshiki@squeakland.org>
+	<003b01c70334$86cf8c40$0400a8c0@shinji1>
+Message-ID: <ur6wdg0uk.wl%yoshiki@squeakland.org>
+
+  鈴木さん
+
+
+> ところで、Squeakで外部のハードを制御しようとした場合はどうでしょうか。
+> 私自身、Windowsで市販のハードしか制御したことがありません。それもすでにあ
+> るドライバーとライブラリーを使ったプログラミングしか経験がないのですが、
+> Squeakで外部のハードを制御することは可能なのでしょうか。
+
+  その場合は「仮想的な機械」の枠をちょっと超えなくてはならないのですが、
+Windows経由でやることになります。
+
+> Windowsであれば、市販品でＰＣＩボード、ＵＳＢ、ＲＳ−２３２Ｃ、ＧＰＩＢ等で制御可能
+> な多くのハードが溢れています。基本的に、これらのWindows用のハードをSqueak
+> で制御することは出来きないように思います。もしやるのであれば、全て自分でプロ
+> グラミングしなければならないのでしょうか。
+> ここらへんが、まだ全然分かっていません。もし、お分かりでしたらアドバイスを宜しく
+> お願いします。
+
+  うまく書かれたライブラリやドライバが提供されているのであれば、Squeak 
+の持つFFI(Foreign Function Interface)を使って、1, 2行のSquerakコードに
+よってライブラリ内のある関数を呼び出すことができます。うまく書かれてい
+ないライブラリの場合は確かにプラグインを書かないとだめかもしれません。
+ちなみに、シリアルやネットワークなら仮想機械が面倒を見てくれるので、
+Squeakのオブジェクトとして扱えます。
+
+-- Yoshiki
+
+
+From lingmu ＠ agate.plala.or.jp  Thu Nov  9 06:52:31 2006
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3214] Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1><u7iyd4ap4.wl%yoshiki@squeakland.org><005b01c70011$b55921f0$0400a8c0@shinji1><u3b8ugwvc.wl%yoshiki@squeakland.org><003b01c70334$86cf8c40$0400a8c0@shinji1>
+	<ur6wdg0uk.wl%yoshiki@squeakland.org>
+Message-ID: <001301c70380$31c79890$0400a8c0@shinji1>
+
+大島　様
+
+>  うまく書かれたライブラリやドライバが提供されているのであれば、Squeak
+> の持つFFI(Foreign Function Interface)を使って、1, 2行のSquerakコードに
+> よってライブラリ内のある関数を呼び出すことができます。うまく書かれてい
+> ないライブラリの場合は確かにプラグインを書かないとだめかもしれません。
+> ちなみに、シリアルやネットワークなら仮想機械が面倒を見てくれるので、
+> Squeakのオブジェクトとして扱えます。
+>
+
+シリアルが制御できるならば、多くの機器が利用できそうです。
+ネットワークが利用出来ると言う事は、インサーネット対応の制御機器をコント
+ロールできると考えてよろしいのでしょうか。
+
+鈴木 
+
+
+
+From takemura ＠ bre.soc.i.kyoto-u.ac.jp  Thu Nov  9 20:16:09 2006
+From: takemura ＠ bre.soc.i.kyoto-u.ac.jp (Kentaro Takemura)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3215] Re: モーフパッケージ化システム
+References: <86bqofemu7.wl%mutoh@openedu.org><001c01c6f1d2$696ec0d0$6c0aa8c0@KSPC><001401c6f26c$b4fbd2f0$6c0aa8c0@KSPC><6544a1da0610180535v471ed561xa415a625aed4e10b@mail.gmail.com>
+	<7aa126770611070840t36cee739ya7e42eed521f87da@mail.gmail.com>
+Message-ID: <001401c703f0$74f36110$3e1aee0a@tam>
+
+京大アランケイ研の竹村　顕大朗です
+
+
+> カテ違いかも知れないのですが、小学生のWSの後で以下のような声を聞きました。
+>
+> アニメーションのおたまじゃくしを競争させたいけれど、色違いを沢山つくるのに
+> 時間がかかって云々・・・と言うものです。
+>
+> 一つのアニメーションを作成後にコピーして色違いを複製、必要な個数を作った後で 
+> 
+> 目的のタイルを任意の対象のみ差し替えるようなことがしたかったそうです。
+>
+
+上記の例がいまいち把握できないのですが、
+これは
+
+アニメーションに必要な絵を一通り描く
+↓
+入れ物に入れる
+↓
+適当なモーフ（以下ダミー）を描いてそこにアニメーションが表示されるようにスクリプトを組む
+↓
+ダミーを動かすためのスクリプトを作る
+↓
+ダミーと入れ物をコピー
+↓
+各入れ物内の絵の色を変える
+↓
+それぞれのスクリプトの中身を調整
+
+という作業をしたかったということでしょうか？
+
+あるいは、赤、青、緑とおたまじゃくしを作ったとして
+赤のおたまじゃくしの動きはこう、青はこう、緑はこうと
+後でまとめて設定できるようにしたかったということでしょうか？
+
+> 「増やす」「色違い」などが含まれたキットを用いて自分で描いた図を動かすような 
+> 
+> ことが出来ると、図（アニメーション）の作成部分で時間を短縮できるので、目的の 
+> 
+> タイルのテストにより多くの時間が使えて、子ども達の集中力も保てるのでは無いかと
+> 思い投稿しました。
+>
+> トピックを勘違いしているようでしたら、お許しください。
+>
+> あぴ
+>
+
+例がうまく把握できないので的外れなことを言っているかもしれませんが、
+とりあえず私の考えでは
+例えば、アニメーション用専用のキットがあり、「増やす」「色違い」といったタイルがあった方が
+はかどるというワークショップを予定している場合、
+そのワークショップの関係者がそのような項目を追加して
+ワークショップに最適なキットを作り出せるような仕組みにしたいと考えています。
+
+それでは
+
+-/*/*-/-*/*--/*/*-/-*/-*-/*-*/
+京都大学大学院　情報学研究科
+社会情報学専攻
+竹村　顕大朗
+takemura@bre.soc.i.kyoto-u.ac.jp
+/-*-*/-*/*-/-*/-/*/*-*-/*/-*-/ 
+
+
+From mutoh ＠ openedu.org  Sat Nov 11 09:19:50 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3216] Re: iPAQでSqueak(was Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係)
+In-Reply-To: <u8ximh1bc.wl%yoshiki@squeakland.org>
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+	<86zmb9fkmo.wl%mutoh@openedu.org>
+	<u8ximh1bc.wl%yoshiki@squeakland.org>
+Message-ID: <86odre6di1.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+返事が遅くなってスミマセン(_O_)
+
+At Tue, 07 Nov 2006 22:58:31 -0800,
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+> > 便乗質問なんですが、iPAQでキー入力はソフトウエアキーボードからできるの
+> > ですが、Altを入力する手段って無いんですかね?
+> > 調べても、専用キーボードを使ったらという話ばかりで、こんな古いののって
+> > なぁと思いつつ。
+> > # 古いイメージでdo-itなんかが出来ないなと。
+>   記憶がかなりあいまいですが、ソフトウェアキーボードのAltキーやShiftキー
+> はは、次のキーを押すまで残るようになっていませんでしたっけ? そのときに
+> タップすると、Shiftタップになった気がします。
+
+iPAQ3660の場合、ソフトキーボードにはCtrlとShift(↑)はあるんですが、Alt
+は無いんですよね。
+
+確かに、CtrlタップとShiftタップは有効でした。
+# タップした後もCtrlとShiftは消えないので注意;-)
+
+> 「古いイメージ」にもよりますが、スクロールバーの片隅にある誰にも分から
+> ないようなところを押すとメニューが出る、という仕組みはMVC時代からずっ
+> とあるので、それを使う、という手もあるでしょうか。
+
+手元のMiniSqueakを考えていたので、2.2あたりということでしょうか。
+
+で、確かにスクロールバーの横あたりのタップでメニューが出てきました。
+こちらの方法でなんとかなりそうです。
+
+ありがとうございます(_O_)
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From abee ＠ squeakland.jp  Mon Nov 13 01:02:26 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3217] Re: eToys で二足歩行ロボットを制御
+In-Reply-To: <4551317B.8040802@ygu.ac.jp>
+References: <454F202B16B.FEDAABEE@smtp.nifty.com> <4551317B.8040802@ygu.ac.jp>
+Message-ID: <455745922BB.A1F3ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Wed, 08 Nov 2006 10:23:07 +0900
+Eiichiro Ito <e-itoh@ygu.ac.jp> wrote:
+>いつぞや見せていただいたものですね。面白そうです。
+
+はい、ものを作ってから実際にワークショップを開催するまでに、かなりの時間
+がかかってしまいました。
+
+>そのうち、どんなカリキュラムにしたのか教えてください。
+
+二足歩行ロボットというと、大人はすぐに歩かせたり戦わせたりしようとします
+が、あえてそうせず、コンピュータの内部状態を現実世界に反映する手段として
+用いました。子供たちは、他の先生にお願いして、すでにDrive a Carをみっちり
+とやっていたので、スクイークの基本はできていると言う前提です。
+
+ロボットのそれぞれの関節(サーボモータ)は-90度から90度の範囲で動きます。こ
+の角度をスライダの値としました。肩、腕、脚など関節は全部で17個(17自由度)
+あるので、スライダも17個あります。これらを入れ物に入れ、ポーズと名づけま
+した。
+ポーズには「メッセージ送信」というスクリプトがあり、これをビックリしたり、
+チクタクしたりすることで、自分の持つスライダの状態をロボットに送信するこ
+とができます。メッセージを受信したロボットはそれぞれの関節を指定された角
+度に動かします。
+
+# ここで言う「メッセージ」はSmalltalkではなく、Robovie-MSの仕様書で使われ
+# ている用語です。
+
+ポーズを複製して入れ物にいれ、カーソルを「以下を足す」でインクリメントし
+つつ、メッセージ送信すると連続した動きを表現することができます。これをモー
+ションと名づけました。これは状態遷移であり、スクイークでよくやるアニメー
+ションと同じでもあります。
+
+一通りモーションで遊んでから、個々のスライダのビューワを開き、自分の書い
+たスクリプトでも関節を動かせることを示しました。使ったのは、おなじみの絵
+に描いたハンドルで、この向きを腕の角度に反映させました。ここまで話すと、
+ひとつのハンドルで複数の関節を動かしたり、それぞれの関節にハンドルをつけ
+たりなどの応用はすぐに思いつくようです(このとき、ロボットは線対称なので、
+左右でモータの回転方向が逆になります。角度に-1を掛けるとよいことに気付く
+かどうかというのは面白いチャレンジでした)。
+続いて、テストとの組み合わせと言うことで、画面の車がゴールしたらバンザイ
+する方法を説明し、自由製作に入りました。
+
+この自由製作に入る前に、まずコンピュータを閉じ、まずアイデアを紙に整理し
+てから、作り始めるようにしました。こうすることで、自分のスキルに合ってい
+ないものや曖昧なもの、偶然に頼るものをなくすことができたようです。
+
+興味深かったのは、作品にロボットを使わなかった子供がほとんどだったことで
+す。これは必ずしもロボットが嫌いと言うわけではなく、やっているときは皆と
+ても楽しそうだったのに、結果としてはそうなりました。
+思うに、ロボットの形や仕組みの制約が大きくて、自分の思いを実現するには自
+由度が足らなかったのではないでしょうか。なんでも自由に描けるスクイークだ
+けの方がその点有利です。
+
+見た目が派手なこともあって、ロボットを使うと子供が喜ぶからという理由でワー
+クショップを開くケースがありますが、このあたりを考えてみる必要があると思
+います。とはいえ、正確な角度をぴしっと表現できるサーボモータは便利なので、
+カリキュラムの作り方によっては、良いものができる可能性があります。
+
+>＃私も４足以外に手を出そうかと考えております。
+
+おお、風太を想像してしまいました。
+
+ //abee
+--
+阿部 和広  MAIL abee@squeakland.jp
+
+From Fumito.Kondo ＠ hp.com  Mon Nov 13 09:42:40 2006
+From: Fumito.Kondo ＠ hp.com (Kondo, Fumito)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3218] Re: eToys で二足歩行ロボットを制御
+In-Reply-To: <455745922BB.A1F3ABEE@smtp.nifty.com>
+Message-ID: <D9AA43C8AA00FB4DA2E57AA62A7934FA025D2539@TKOEXC22.asiapacific.cpqcorp.net>
+
+阿部さん、
+
+つまらない質問で恐縮ですが、Robovie-MSは、RS232Cのインターフェースでコンピュータと通信するようですが、いまどきのNotePCには、 RS232Cのインターフェースって付いていないように思うのですが、どのようにしてPCと繋いだのですか？
+
+近藤史人
+
+
+
+-----Original Message-----
+From: squeak-ja-bounces@smalltalk.jp [mailto:squeak-ja-bounces@smalltalk.jp] On Behalf Of Kazuhiro ABE
+Sent: Monday, November 13, 2006 1:02 AM
+To: Squeak discussion in Japanese
+Subject: [Squeak-ja: 3217] Re: eToys で二足歩行ロボットを制御
+
+阿部@新百合です。
+
+On Wed, 08 Nov 2006 10:23:07 +0900
+Eiichiro Ito <e-itoh@ygu.ac.jp> wrote:
+>いつぞや見せていただいたものですね。面白そうです。
+
+はい、ものを作ってから実際にワークショップを開催するまでに、かなりの時間
+がかかってしまいました。
+
+>そのうち、どんなカリキュラムにしたのか教えてください。
+
+二足歩行ロボットというと、大人はすぐに歩かせたり戦わせたりしようとします
+が、あえてそうせず、コンピュータの内部状態を現実世界に反映する手段として
+用いました。子供たちは、他の先生にお願いして、すでにDrive a Carをみっちり
+とやっていたので、スクイークの基本はできていると言う前提です。
+
+ロボットのそれぞれの関節(サーボモータ)は-90度から90度の範囲で動きます。こ
+の角度をスライダの値としました。肩、腕、脚など関節は全部で17個(17自由度)
+あるので、スライダも17個あります。これらを入れ物に入れ、ポーズと名づけま
+した。
+ポーズには「メッセージ送信」というスクリプトがあり、これをビックリしたり、
+チクタクしたりすることで、自分の持つスライダの状態をロボットに送信するこ
+とができます。メッセージを受信したロボットはそれぞれの関節を指定された角
+度に動かします。
+
+# ここで言う「メッセージ」はSmalltalkではなく、Robovie-MSの仕様書で使われ
+# ている用語です。
+
+ポーズを複製して入れ物にいれ、カーソルを「以下を足す」でインクリメントし
+つつ、メッセージ送信すると連続した動きを表現することができます。これをモー
+ションと名づけました。これは状態遷移であり、スクイークでよくやるアニメー
+ションと同じでもあります。
+
+一通りモーションで遊んでから、個々のスライダのビューワを開き、自分の書い
+たスクリプトでも関節を動かせることを示しました。使ったのは、おなじみの絵
+に描いたハンドルで、この向きを腕の角度に反映させました。ここまで話すと、
+ひとつのハンドルで複数の関節を動かしたり、それぞれの関節にハンドルをつけ
+たりなどの応用はすぐに思いつくようです(このとき、ロボットは線対称なので、
+左右でモータの回転方向が逆になります。角度に-1を掛けるとよいことに気付く
+かどうかというのは面白いチャレンジでした)。
+続いて、テストとの組み合わせと言うことで、画面の車がゴールしたらバンザイ
+する方法を説明し、自由製作に入りました。
+
+この自由製作に入る前に、まずコンピュータを閉じ、まずアイデアを紙に整理し
+てから、作り始めるようにしました。こうすることで、自分のスキルに合ってい
+ないものや曖昧なもの、偶然に頼るものをなくすことができたようです。
+
+興味深かったのは、作品にロボットを使わなかった子供がほとんどだったことで
+す。これは必ずしもロボットが嫌いと言うわけではなく、やっているときは皆と
+ても楽しそうだったのに、結果としてはそうなりました。
+思うに、ロボットの形や仕組みの制約が大きくて、自分の思いを実現するには自
+由度が足らなかったのではないでしょうか。なんでも自由に描けるスクイークだ
+けの方がその点有利です。
+
+見た目が派手なこともあって、ロボットを使うと子供が喜ぶからという理由でワー
+クショップを開くケースがありますが、このあたりを考えてみる必要があると思
+います。とはいえ、正確な角度をぴしっと表現できるサーボモータは便利なので、
+カリキュラムの作り方によっては、良いものができる可能性があります。
+
+>＃私も４足以外に手を出そうかと考えております。
+
+おお、風太を想像してしまいました。
+
+ //abee
+--
+阿部 和広  MAIL abee@squeakland.jp
+
+From yoshiki ＠ squeakland.org  Mon Nov 13 13:06:07 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:37 2007
+Subject: [Squeak-ja: 3219] Re: Ｓｑｕｅａｋと他のWindowsアプリ、データとの関係
+In-Reply-To: <001301c70380$31c79890$0400a8c0@shinji1>
+References: <000001c6fed0$ecdf2ee0$0400a8c0@shinji1>
+	<u7iyd4ap4.wl%yoshiki@squeakland.org>
+	<005b01c70011$b55921f0$0400a8c0@shinji1>
+	<u3b8ugwvc.wl%yoshiki@squeakland.org>
+	<003b01c70334$86cf8c40$0400a8c0@shinji1>
+	<ur6wdg0uk.wl%yoshiki@squeakland.org>
+	<001301c70380$31c79890$0400a8c0@shinji1>
+Message-ID: <u64dkf0sw.wl%yoshiki@squeakland.org>
+
+  鈴木さん
+
+> >  うまく書かれたライブラリやドライバが提供されているのであれば、Squeak
+> > の持つFFI(Foreign Function Interface)を使って、1, 2行のSquerakコードに
+> > よってライブラリ内のある関数を呼び出すことができます。うまく書かれてい
+> > ないライブラリの場合は確かにプラグインを書かないとだめかもしれません。
+> > ちなみに、シリアルやネットワークなら仮想機械が面倒を見てくれるので、
+> > Squeakのオブジェクトとして扱えます。
+> >
+> 
+> シリアルが制御できるならば、多くの機器が利用できそうです。
+> ネットワークが利用出来ると言う事は、インサーネット対応の制御機器をコント
+> ロールできると考えてよろしいのでしょうか。
+
+  そうですね。サーバーもクライアントもSqueakで書けますので、既存のもの
+をコントロールするのもよし、新たにサーバーを書いてもよしだと思います。
+
+-- Yoshiki
+
+From abee ＠ squeakland.jp  Mon Nov 13 13:32:55 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3220] Re: eToys で二足歩行ロボットを制御
+In-Reply-To: <D9AA43C8AA00FB4DA2E57AA62A7934FA025D2539@TKOEXC22.asiapacific.cpqcorp.net>
+References: <455745922BB.A1F3ABEE@smtp.nifty.com>
+	<D9AA43C8AA00FB4DA2E57AA62A7934FA025D2539@TKOEXC22.asiapacific.cpqcorp.net>
+Message-ID: <4557F5777E.C8B3ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 13 Nov 2006 09:42:40 +0900
+"Kondo, Fumito" <Fumito.Kondo@hp.com> wrote:
+>つまらない質問で恐縮ですが、Robovie-MSは、RS232Cのインターフェースでコン
+>ピュータと通信するようですが、いまどきのNotePCには、 RS232Cのインターフェー
+>スって付いていないように思うのですが、どのようにしてPCと繋いだのですか？
+
+USB変換ケーブルを使っています。これでWindows(Squeak)からはCOM?として見え
+ます。色々なものが市販されていますが、私はCロボ用のものを使いました。
+
+http://www.academianetwork.co.jp/service/crobo/
+
+ちなみに、ソフトは以前にここでご紹介したシリアルポートを制御するモーフを
+ベースに用いています。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-August/002562.html
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From miyasaka ＠ iris.dti.ne.jp  Mon Nov 13 14:39:01 2006
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3221] お知らせと制作中の教材について
+Message-ID: <4b24f0d0611122139n58edbcb8i27ed3d08bd8e4380@mail.gmail.com>
+
+squeak-jaのみなさまへ
+
+お世話になっております。
+デジタルハリウッド大学院の宮坂です。
+先日、11/11に八王子にて学生や社会人を対象にした世界聴診器のワークショップを開催しました。
+講師をしていただいた阿部さん、また、参加されたみなさん、ありがとうございました。
+別途当Webサイトにてその模様をご報告させていただきます。
+
+下記２点についてご連絡させていただきます。
+
+■お知らせ
+現在、HP社の瓜谷様やビューポイントテクノロジーの阿部様と、スクイークの教育関係者のための事例発表会（C4）を開催する方向で検討を進めております。
+まだ詳細はこれから検討するのですが、いまのところ、下記の日程で開催する予定ですので、とりあえずご興味ある方は日程を空けておいていただければ幸いです。
+−日時：　2007年2月10日（土）　10:30-13:00
+−場所：　東京
+まだ関係者が多忙なため詳細が決まっていないのですが、近日中に改めてご連絡させていただきますので、いましばらくお待ちいただけますでしょうか。
+（阿部さん、補足があればお願いします！）
+
+■制作中のコンテンツ
+現在、私どものほうでは、このようなコンテンツを制作中です。
+http://mts-j.hiho.jp/2006/11/prototype.html
+このページの下段にも書いてある通り、いろいろ試行錯誤しながらやっているところですので、皆様からのご意見・ご感想・アドバイスなどいただければ幸いです
+（上記URLに掲載されているメールアドレスまでフィードバックいただけるとうれしいです！）
+
+最近は、スクイークの教材に関する話題が多くてとてもうれしく思います。
+大藤さんの「もえすく」や、いちかわさんのリファレンスは本当にすばらしかったですね。
+今後とも情報交換のほど、よろしくお願いいたします！！
+
+--
+宮坂俊夫 (Toshio Miyasaka )
+---------------------------------------------
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+http://mts-j.hiho.jp/
+http://www.dhw.co.jp/gs/
+---------------------------------------------
+
+From abee ＠ squeakland.jp  Mon Nov 13 21:07:26 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3222] Re: Ｓｑｕｅａｋと他の Windows アプリ、データとの関係
+In-Reply-To: <u64dkf0sw.wl%yoshiki@squeakland.org>
+References: <001301c70380$31c79890$0400a8c0@shinji1>
+	<u64dkf0sw.wl%yoshiki@squeakland.org>
+Message-ID: <45585FFE1AA.C8BEABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 12 Nov 2006 20:06:07 -0800
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>> シリアルが制御できるならば、多くの機器が利用できそうです。
+>> ネットワークが利用出来ると言う事は、インサーネット対応の制御機器をコント
+>> ロールできると考えてよろしいのでしょうか。
+>
+>  そうですね。サーバーもクライアントもSqueakで書けますので、既存のもの
+>をコントロールするのもよし、新たにサーバーを書いてもよしだと思います。
+
+何人かのSqueakerと一緒に、ネットワークを使った情報家電のプロトタイプ開発
+を請け負ったことがあります。上から下まで自由に弄れ、(品質はさておき)ライ
+ブラリの充実しているSqueak向きの仕事でした。
+スケジュールは厳しいものでしたが、短い期間で実際に動くものを作るのは
+Smalltalkの得意分野と言っても良いと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From lingmu ＠ agate.plala.or.jp  Mon Nov 13 22:15:07 2006
+From: lingmu ＠ agate.plala.or.jp (Shinji Suzuki)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3223] Re: Ｓｑｕｅａｋと他の Windows アプリ、データとの関係
+References: <001301c70380$31c79890$0400a8c0@shinji1><u64dkf0sw.wl%yoshiki@squeakland.org>
+	<45585FFE1AA.C8BEABEE@smtp.nifty.com>
+Message-ID: <004301c70725$be21f7b0$0400a8c0@shinji1>
+
+皆様、色々とアドバイスありがとうございました。
+まだ良く理解できているわけではないですが、どても可能性があるようで興味が
+わいてきました。
+以前買った、「アラン・ケイ」という本のSmallTalkに関する論文を読み返してみました。
+最初読んだときは、よく分からなかったのですがなんとなく目指しているものが見えて 
+
+きたような感じです。
+
+鈴木より
+
+
+
+
+
+> 阿部@新百合です。
+>
+> On Sun, 12 Nov 2006 20:06:07 -0800
+> Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>>> シリアルが制御できるならば、多くの機器が利用できそうです。
+>>> ネットワークが利用出来ると言う事は、インサーネット対応の制御機器をコント
+>>> ロールできると考えてよろしいのでしょうか。
+>>
+>>  そうですね。サーバーもクライアントもSqueakで書けますので、既存のもの
+>>をコントロールするのもよし、新たにサーバーを書いてもよしだと思います。
+>
+> 何人かのSqueakerと一緒に、ネットワークを使った情報家電のプロトタイプ開発
+> を請け負ったことがあります。上から下まで自由に弄れ、(品質はさておき)ライ
+> ブラリの充実しているSqueak向きの仕事でした。
+> スケジュールは厳しいものでしたが、短い期間で実際に動くものを作るのは
+> Smalltalkの得意分野と言っても良いと思います。
+>
+> //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+> 
+
+
+
+From tak ＠ metatoys.org  Thu Nov 16 03:13:43 2006
+From: tak ＠ metatoys.org (Takashi Yamamiya)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3224] KOF 2006 いよいよ今週です。(11月17,18日)
+Message-ID: <455B58D7.1040903@metatoys.org>
+
+山宮＠上新庄です。
+
+いよいよ今週末金曜日、大阪南港で KOF 2006 が開かれます。KOF 2006 とは、
+大阪で開かれるオープンソースの祭典で、オープンソースに関わる沢山の人が
+集まって楽しく日ごろの成果を発表する会らしいです。スクイークも元気一杯
+参加します。今回特に武藤さんが気合の入った準備をされています。
+
+http://qml.610t.org/squeak/KOF2006.html
+
+両日参加は武藤さん、梅澤さんとわたくし、
+金曜日のみ参加が武田さん、
+土曜日に大藤が来れるかもしれなくて、
+あと南谷さんも来られるという噂もあるのですが、どうなんですか？
+
+と、こんな感じでやりますので、全国のスクイーカーの皆様のご参加をお待ち
+しております。
+
+
+From ka.minami ＠ nifty.com  Thu Nov 16 13:35:11 2006
+From: ka.minami ＠ nifty.com (Kazuki Minamitani)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3225] Re: [kof2006:53] KOF 2006 いよいよ今週です。(11月17,18日)
+In-Reply-To: <455B58D7.1040903@metatoys.org>
+References: <455B58D7.1040903@metatoys.org>
+Message-ID: <5CC709389A749Aka.minami@nifty.com>
+
+南谷です。
+こんにちは。
+
+On Thu, 16 Nov 2006 03:13:43 +0900 
+Takashi Yamamiya <tak@metatoys.org> wrote:
+
+>山宮＠上新庄です。
+>
+>いよいよ今週末金曜日、大阪南港で KOF 2006 が開かれます。KOF 2006 とは、
+>大阪で開かれるオープンソースの祭典で、オープンソースに関わる沢山の人が
+>集まって楽しく日ごろの成果を発表する会らしいです。スクイークも元気一杯
+>参加します。今回特に武藤さんが気合の入った準備をされています。
+>
+>http://qml.610t.org/squeak/KOF2006.html
+>
+>両日参加は武藤さん、梅澤さんとわたくし、
+>金曜日のみ参加が武田さん、
+>土曜日に大藤が来れるかもしれなくて、
+>あと南谷さんも来られるという噂もあるのですが、どうなんですか？
+
+アクションなくてすみません。
+
+両日参加でお願いします。
+雑務要員で使ってやってください。
+
+
+--
+南谷 千城
+e-mail: ka.minami@nifty.com
+
+From abee ＠ squeakland.jp  Thu Nov 16 16:24:24 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3226] C4 について  (was: Re: お知らせと制作中の教材について  )
+In-Reply-To: <4b24f0d0611122139n58edbcb8i27ed3d08bd8e4380@mail.gmail.com>
+References: <4b24f0d0611122139n58edbcb8i27ed3d08bd8e4380@mail.gmail.com>
+Message-ID: <455C1228200.6214ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 13 Nov 2006 14:39:01 +0900
+"Toshio Miyasaka" <miyasaka@iris.dti.ne.jp> wrote:
+>現在、HP社の瓜谷様やビューポイントテクノロジーの阿部様と、スクイークの教育関係者のための事例発表会（C4）を開催する方向で検討を進めております。
+>まだ詳細はこれから検討するのですが、いまのところ、下記の日程で開催する予定ですので、とりあえずご興味ある方は日程を空けておいていただければ幸いです。
+>−日時：　2007年2月10日（土）　10:30-13:00
+>−場所：　東京
+>まだ関係者が多忙なため詳細が決まっていないのですが、近日中に改めてご連絡させていただきますので、いましばらくお待ちいただけますでしょうか。
+>（阿部さん、補足があればお願いします！）
+
+C4はいままでC5の併設イベントとして行われてきました。
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2004-December/002194.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-January/002254.html
+
+C5はちゃんとした学会なので、論文の査読もあり、発表も英語で行われるので、
+現場でスクイークを使っている学校の先生やNPOなどの方には少し敷居が高いもの
+でした。
+そこで、各地での実践内容やカリキュラムについて、フランクに話し合う場を提
+供しようと言うのがC4の狙いです(ちなみにC4はCurriculum Curriculum
+Curriculum Curriculumの略で、Kim Roseさんの命名です)。ノリとしては学会に
+対する分科会や研究会のような感じかもしれません。発表原稿だけで論文は必要
+ありませんし、発表も日本語です (たぶん 1件 30分くらい)。
+
+昨年はC5の会場がバークレーだったこともあって行われませんでしたが、HPSSKの
+イベントがそれに代わる物だったと思います。
+
+http://h50146.www5.hp.com/info/feature/coverstory/05apj_hp-ssk_kn3.html
+
+今回は、C5と時期的に離れてしまうのですが、会場を東京に移し、宮坂さんはじ
+めデジタルハリウッド大学の協力を得て行う予定です。まだ詳細は未定なのです
+が前日の2/9には都内の公立小学校でスクイークの公開研究授業が行われるという
+話もあります。
+
+ネタをお持ちの方はぜひお願いします。また、以前のC4では発表する人と聴衆の
+間に距離感があって、なかなか議論ぽくならなかったというご指摘もありました。
+プログラム内容についてのご提案も合わせてお待ちしています。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From csdpp363 ＠ ybb.ne.jp  Fri Nov 17 05:08:19 2006
+From: csdpp363 ＠ ybb.ne.jp (藤岡　董)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3227] 18日（土）大阪南港ＫＯＦ２００６を見に行きます。藤岡
+References: <455B58D7.1040903@metatoys.org>
+Message-ID: <000501c709ba$f5dda860$0403a8c0@FM4D8C73527130>
+
+「関西オープンソース２００６」の関係者の皆様へ
+
+大阪、茨木の藤岡　董（フジオカ　タダス）と申します。
+
+明日、大阪南港で開かれている「関西オープンソース２００６」を見学に行きますので、 
+
+
+関係者の皆様はじめ、大藤泰生さま、何卒、宜しくお願いします。
+
+***************************
+* 藤岡　董 （Fujioka Tadasu )
+* E-Mail  csdpp363@ybb.ne.jp
+* TEL  　： 072-622-6826
+* FAX   ： 050-1414-6826
+* 携帯　 ： 090-8658-7113
+***************************
+----- Original Message ----- 
+From: "Takashi Yamamiya" <tak@metatoys.org>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Cc: <kof2006@qml.610t.org>
+Sent: Thursday, November 16, 2006 3:13 AM
+Subject: [Squeak-ja: 3224] KOF 2006 いよいよ今週です。(11月17,18日)
+
+
+> 山宮＠上新庄です。
+>
+> いよいよ今週末金曜日、大阪南港で KOF 2006 が開かれます。KOF 2006 とは、
+> 大阪で開かれるオープンソースの祭典で、オープンソースに関わる沢山の人が
+> 集まって楽しく日ごろの成果を発表する会らしいです。スクイークも元気一杯
+> 参加します。今回特に武藤さんが気合の入った準備をされています。
+>
+> http://qml.610t.org/squeak/KOF2006.html
+>
+> 両日参加は武藤さん、梅澤さんとわたくし、
+> 金曜日のみ参加が武田さん、
+> 土曜日に大藤が来れるかもしれなくて、
+> あと南谷さんも来られるという噂もあるのですが、どうなんですか？
+>
+> と、こんな感じでやりますので、全国のスクイーカーの皆様のご参加をお待ち
+> しております。
+>
+> 
+
+
+
+From yoshiki ＠ squeakland.org  Tue Nov 21 07:07:02 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3228] ライセンス変更願い
+Message-ID: <uhcwtbwmx.wl%yoshiki@squeakland.org>
+
+  大島です。
+
+  一部の開発者の方々はすでにご存知のように、Squeakのコードを書いてメイ
+ンストリームやSqueaklandのイメージにコードが採用されている人々に対して、
+Viewpoints Researchから「提供してくださったコードのライセンス変更に同
+意してくれないだろうか」というメールが送られています。僕の知る限り廣島
+さん(が正しい感じでしたっけ)?以外のコントリビュータのメールアドレスは
+正しくこちらで管理しているリストに載っているようではありますが、漏れや
+間違いがあるかもしれません。メールが届かなくて、かつ自分が書いたコード
+がSqueakのイメージに入っている、または入ったことがあるという方は、僕ま
+で是非連絡してください。
+
+  そのメールにはいくつか埋めるべき空欄があります。最初の"entered into
+as of"の後には、サインをする日の日付、2番目の"Supplier"の前には自分の
+名前を読めるようにアルファベットで、3番目の"address is"の後は住所を書
+いてください。最後に、一番下のところに自分の署名を書きたいように書いて、
+
+Viewpoints Research Institute
+1209 Grand Central Avenue,
+Glendale, CA 91201 USA
+まで送ってください。ちなみに、"91201"というのはzipコードと呼ばれる郵便番
+号で、"Glendale, CA"はカリフォルニア州ぐれんでーる市ということです。
+
+  よろしくお願いします。
+
+-- Yoshiki
+
+
+From hachi ＠ asu.ac.jp  Tue Nov 21 08:17:26 2006
+From: hachi ＠ asu.ac.jp (H.Hachisuka)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3229] Re: ライセンス変更願い
+In-Reply-To: <uhcwtbwmx.wl%yoshiki@squeakland.org>
+References: <uhcwtbwmx.wl%yoshiki@squeakland.org>
+Message-ID: <45623786.1030400@asu.ac.jp>
+
+ごぶさたしてます蜂須賀です。
+
+11/17に、なぜか私の所にも「SOFTWARE DISTRIBUTION AGREEMENT」というタイト
+ルのPDFが添付されたメール届きました。これは以下の件と関係するのでしょう
+か？それとも.....
+
+>   大島です。
+> 
+>   一部の開発者の方々はすでにご存知のように、Squeakのコードを書いてメイ
+> ンストリームやSqueaklandのイメージにコードが採用されている人々に対して、
+> Viewpoints Researchから「提供してくださったコードのライセンス変更に同
+> 意してくれないだろうか」というメールが送られています。僕の知る限り廣島
+> さん(が正しい感じでしたっけ)?以外のコントリビュータのメールアドレスは
+> 正しくこちらで管理しているリストに載っているようではありますが、漏れや
+> 間違いがあるかもしれません。メールが届かなくて、かつ自分が書いたコード
+> がSqueakのイメージに入っている、または入ったことがあるという方は、僕ま
+> で是非連絡してください。
+> 
+>   そのメールにはいくつか埋めるべき空欄があります。最初の"entered into
+> as of"の後には、サインをする日の日付、2番目の"Supplier"の前には自分の
+> 名前を読めるようにアルファベットで、3番目の"address is"の後は住所を書
+> いてください。最後に、一番下のところに自分の署名を書きたいように書いて、
+> 
+> Viewpoints Research Institute
+> 1209 Grand Central Avenue,
+> Glendale, CA 91201 USA
+> まで送ってください。ちなみに、"91201"というのはzipコードと呼ばれる郵便番
+> 号で、"Glendale, CA"はカリフォルニア州ぐれんでーる市ということです。
+> 
+>   よろしくお願いします。
+> 
+> -- Yoshiki
+
+-- 
+/*
+　愛知産業大学 総務部ITサポート室
+　蜂須賀 仁志 / e-mail: hachi@asu.ac.jp
+                jpnic handle: HH420JP
+　444-0005 愛知県岡崎市岡町原山12-5
+　TEL:  0564-48-4511 FAX: 0564-48-7756
+　直通: 0564-48-4536(ITサポート室)
+*/
+
+From yoshiki ＠ squeakland.org  Tue Nov 21 14:19:48 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3230] Re: ライセンス変更願い
+In-Reply-To: <45623786.1030400@asu.ac.jp>
+References: <uhcwtbwmx.wl%yoshiki@squeakland.org> <45623786.1030400@asu.ac.jp>
+Message-ID: <u8xi5bcln.wl%yoshiki@squeakland.org>
+
+  蜂須賀さん
+
+> 11/17に、なぜか私の所にも「SOFTWARE DISTRIBUTION AGREEMENT」というタイト
+> ルのPDFが添付されたメール届きました。これは以下の件と関係するのでしょう
+> か？それとも.....
+
+  はい、実はそうです。蜂須賀さんの書かれたSuperSwikiとShift-JIS関係の
+コードがSqueakland版に取り込まれています。当時は暗黙的な紳士的協定の元
+で行ったのですが、このたびちゃんと「オープンなものとしてリリースします」
+という一筆を皆さんから取り付けておこうではないかということになりました。
+
+  本当にお手数をおかけして申し訳ありませんが、世の中にオープンに出して
+いるのだよということを明文化できるようにする、という趣旨をご理解の上で
+送っていただけると助かります。
+
+-- Yoshiki
+
+From shortsleeved ＠ mac.com  Tue Nov 21 21:30:38 2006
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3231] Re: ライセンス変更願い
+In-Reply-To: <uhcwtbwmx.wl%yoshiki@squeakland.org>
+References: <uhcwtbwmx.wl%yoshiki@squeakland.org>
+Message-ID: <1AC5CDAB-E9C7-44B8-8D69-DA8B2134D2E3@mac.com>
+
+大島様、
+shortsleevedです。
+
+SqueakPlugin-dev-527のイメージで、 
+MacUnicodeInputInterpreterクラスのいくつかのメソッドに私のイニ 
+シャルがスタンプされてるのですが、この件に該当しますでしょうか。
+過去メールの[Squeak-ja: 2704]のときのやつです。
+
+以上、よろしくお願いします。
+
+
+On 2006/11/21, at 7:07, Yoshiki Ohshima wrote:
+
+>   大島です。
+>
+>   一部の開発者の方々はすでにご存知のように、Squeakのコー 
+> ドを書いてメイ
+> ンストリームやSqueaklandのイメージにコードが採用されてい 
+> る人々に対して、
+> Viewpoints Researchから「提供してくださったコードのライセンス 
+> 変更に同
+> 意してくれないだろうか」というメールが送られています。僕の知る 
+> 限り廣島
+> さん(が正しい感じでしたっけ)?以外のコントリビュー 
+> タのメールアドレスは
+> 正しくこちらで管理しているリストに載っているようではあります 
+> が、漏れや
+> 間違いがあるかもしれません。メールが届かなくて、かつ自分が書い 
+> たコード
+> がSqueakのイメージに入っている、または入ったことがあると 
+> いう方は、僕ま
+> で是非連絡してください。
+>
+>   そのメールにはいくつか埋めるべき空欄があります。最初 
+> の"entered into
+> as of"の後には、サインをする日の日付、2番目 
+> の"Supplier"の前には自分の
+> 名前を読めるようにアルファベットで、3番目の"address  
+> is"の後は住所を書
+> いてください。最後に、一番下のところに自分の署名を書きたいよう 
+> に書いて、
+>
+> Viewpoints Research Institute
+> 1209 Grand Central Avenue,
+> Glendale, CA 91201 USA
+> まで送ってください。ちなみに、"91201"というのはzip 
+> コードと呼ばれる郵便番
+> 号で、"Glendale, CA"はカリフォルニア州ぐれんでーる市とい 
+> うことです。
+>
+>   よろしくお願いします。
+>
+> -- Yoshiki
+>
+
+
+From yoshiki ＠ squeakland.org  Wed Nov 22 01:47:36 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:38 2007
+Subject: [Squeak-ja: 3232] Re: ライセンス変更願い
+In-Reply-To: <1AC5CDAB-E9C7-44B8-8D69-DA8B2134D2E3@mac.com>
+References: <uhcwtbwmx.wl%yoshiki@squeakland.org>
+	<1AC5CDAB-E9C7-44B8-8D69-DA8B2134D2E3@mac.com>
+Message-ID: <uvel8agrb.wl%yoshiki@squeakland.org>
+
+  shortsleevedさんこんにちは
+
+  'ts'がバッティングしていてTorstenにとられてしまっていたのですね。ぜ
+ひとも送っていただきたいと思います。
+
+  関係者に事情を説明しますので、ちょっとお待ちください。
+
+  ただ、実は
+
+http://www.vpri.org/agreement/SqueakDistributionAgreement.pdf
+
+にダウンロードできるPDFがありますので、署名して送っていただいても良い
+かとは思います。
+
+  よろしくお願いします。
+
+-- Yoshiki
+
+At Tue, 21 Nov 2006 21:30:38 +0900,
+shortsleeved wrote:
+> 
+> 大島様、
+> shortsleevedです。
+> 
+> SqueakPlugin-dev-527のイメージで、 
+> MacUnicodeInputInterpreterクラスのいくつかのメソッドに私のイニ 
+> シャルがスタンプされてるのですが、この件に該当しますでしょうか。
+> 過去メールの[Squeak-ja: 2704]のときのやつです。
+> 
+> 以上、よろしくお願いします。
+> 
+> 
+> On 2006/11/21, at 7:07, Yoshiki Ohshima wrote:
+> 
+> >   大島です。
+> >
+> >   一部の開発者の方々はすでにご存知のように、Squeakのコー 
+> > ドを書いてメイ
+> > ンストリームやSqueaklandのイメージにコードが採用されてい 
+> > る人々に対して、
+> > Viewpoints Researchから「提供してくださったコードのライセンス 
+> > 変更に同
+> > 意してくれないだろうか」というメールが送られています。僕の知る 
+> > 限り廣島
+> > さん(が正しい感じでしたっけ)?以外のコントリビュー 
+> > タのメールアドレスは
+> > 正しくこちらで管理しているリストに載っているようではあります 
+> > が、漏れや
+> > 間違いがあるかもしれません。メールが届かなくて、かつ自分が書い 
+> > たコード
+> > がSqueakのイメージに入っている、または入ったことがあると 
+> > いう方は、僕ま
+> > で是非連絡してください。
+> >
+> >   そのメールにはいくつか埋めるべき空欄があります。最初 
+> > の"entered into
+> > as of"の後には、サインをする日の日付、2番目 
+> > の"Supplier"の前には自分の
+> > 名前を読めるようにアルファベットで、3番目の"address  
+> > is"の後は住所を書
+> > いてください。最後に、一番下のところに自分の署名を書きたいよう 
+> > に書いて、
+> >
+> > Viewpoints Research Institute
+> > 1209 Grand Central Avenue,
+> > Glendale, CA 91201 USA
+> > まで送ってください。ちなみに、"91201"というのはzip 
+> > コードと呼ばれる郵便番
+> > 号で、"Glendale, CA"はカリフォルニア州ぐれんでーる市とい 
+> > うことです。
+> >
+> >   よろしくお願いします。
+> >
+> > -- Yoshiki
+> >
+> 
+
+From abee ＠ squeakland.jp  Wed Nov 22 02:26:37 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3233] Re: KOF 2006 いよいよ今週です。 (11 月 17,18 日  )
+In-Reply-To: <455B58D7.1040903@metatoys.org>
+References: <455B58D7.1040903@metatoys.org>
+Message-ID: <456336CD325.ECF2ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+参加した皆様、お疲れ様でした。
+今回の出展が日経ITproの記事になっていますね。
+
+コミュニティが育てる・作る言語，フレームワーク，ERP，SNS---「関西オープンソース2006」レポート
+http://itpro.nikkeibp.co.jp/article/NEWS/20061120/254228/
+
+Alan Keyや基盤などややtypoが目立ちますが、1ページ目だし好意的な記事だと思
+います。
+ここからSqueakland.jpにリンクしてもらったお陰か、11/20のヒット数が前日の
+15993から22826に増えました。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From shortsleeved ＠ mac.com  Wed Nov 22 06:20:09 2006
+From: shortsleeved ＠ mac.com (shortsleeved)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3234] Re: ライセンス変更願い
+In-Reply-To: <uvel8agrb.wl%yoshiki@squeakland.org>
+References: <uhcwtbwmx.wl%yoshiki@squeakland.org>
+	<1AC5CDAB-E9C7-44B8-8D69-DA8B2134D2E3@mac.com>
+	<uvel8agrb.wl%yoshiki@squeakland.org>
+Message-ID: <A5410487-3FBD-47DC-909F-84E99E887C05@mac.com>
+
+shortsleevedです。
+
+了解しました。
+PDFを印刷して送付させていただこうと思います。
+
+On 2006/11/22, at 1:47, Yoshiki Ohshima wrote:
+
+>   shortsleevedさんこんにちは
+>
+>   'ts'がバッティングしていてTorstenにとられてしまってい 
+> たのですね。ぜ
+> ひとも送っていただきたいと思います。
+>
+>   関係者に事情を説明しますので、ちょっとお待ちください。
+>
+>   ただ、実は
+>
+> http://www.vpri.org/agreement/SqueakDistributionAgreement.pdf
+>
+> にダウンロードできるPDFがありますので、署名して送ってい 
+> ただいても良い
+> かとは思います。
+>
+>   よろしくお願いします。
+>
+> -- Yoshiki
+>
+> At Tue, 21 Nov 2006 21:30:38 +0900,
+> shortsleeved wrote:
+>>
+>> 大島様、
+>> shortsleevedです。
+>>
+>> SqueakPlugin-dev-527のイメージで、
+>> MacUnicodeInputInterpreterクラスのいくつかのメソッドに私のイニ
+>> シャルがスタンプされてるのですが、この件に該当しますでしょう 
+>> か。
+>> 過去メールの[Squeak-ja: 2704]のときのやつです。
+>>
+>> 以上、よろしくお願いします。
+>>
+>>
+>> On 2006/11/21, at 7:07, Yoshiki Ohshima wrote:
+>>
+>>>   大島です。
+>>>
+>>>   一部の開発者の方々はすでにご存知のように、Squeakのコー
+>>> ドを書いてメイ
+>>> ンストリームやSqueaklandのイメージにコードが採用されてい
+>>> る人々に対して、
+>>> Viewpoints Researchから「提供してくださったコードのライセンス
+>>> 変更に同
+>>> 意してくれないだろうか」というメールが送られています。僕の知る
+>>> 限り廣島
+>>> さん(が正しい感じでしたっけ)?以外のコントリビュー
+>>> タのメールアドレスは
+>>> 正しくこちらで管理しているリストに載っているようではあります
+>>> が、漏れや
+>>> 間違いがあるかもしれません。メールが届かなくて、かつ自分が書い
+>>> たコード
+>>> がSqueakのイメージに入っている、または入ったことがあると
+>>> いう方は、僕ま
+>>> で是非連絡してください。
+>>>
+>>>   そのメールにはいくつか埋めるべき空欄があります。最初
+>>> の"entered into
+>>> as of"の後には、サインをする日の日付、2番目
+>>> の"Supplier"の前には自分の
+>>> 名前を読めるようにアルファベットで、3番目の"address
+>>> is"の後は住所を書
+>>> いてください。最後に、一番下のところに自分の署名を書きたいよう
+>>> に書いて、
+>>>
+>>> Viewpoints Research Institute
+>>> 1209 Grand Central Avenue,
+>>> Glendale, CA 91201 USA
+>>> まで送ってください。ちなみに、"91201"というのはzip
+>>> コードと呼ばれる郵便番
+>>> 号で、"Glendale, CA"はカリフォルニア州ぐれんでーる市とい
+>>> うことです。
+>>>
+>>>   よろしくお願いします。
+>>>
+>>> -- Yoshiki
+>>>
+>>
+
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Fri Nov 24 00:04:01 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3235] Re: ゲームを使用不可にしたい
+In-Reply-To: <433F88AE191.D651ABEE@smtp.nifty.com>
+References: <20051002144353955963.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<20051002152144206348.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<433F88AE191.D651ABEE@smtp.nifty.com>
+Message-ID: <20061124000401838187.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+井上＠武蔵工大です。
+
+Kazuhiro ABEさんがSun, 02 Oct 2005 16:13:50 +0900に
+「[Squeak-ja: 2669] Re: ゲームを使用不可にしたい」の件で：
+>> ゲームのプログラムを削除かdisableするにはどうしたらいいでしょう？
+> 
+> いくつか方法がありますが、SqueakMapを使った方法をご紹介します。
+> ワールドメニューの「開く・・・」から「SqueakMapパッケージ・ローダー」を選
+> び、左上のリストから「GamesRemoval」を選択して、右ボタンメニューで「
+> Install」を選びます。何度か確認がでますがすべて「はい」で構いません。
+> 最後にイメージを保存します。
+
+最新のSqueakを新にインストールしてみたところ、ずいぶん前に阿部さんに教え
+て頂いたこの方法が使えませんでした。ワールドメニューの開くからSqueakMap
+パッケージローダを選択すると、
+
+Reading an instance of SMMaintainableObject.
+Which modern class should it translate for?
+Let me type the name now
+Let me think about it
+Let me find a conversion file on the disk
+
+と出て、どれを選択してもうまく行きません。GamesRemovalを実行するにはどう
+したらよいのでしょう？
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From abee ＠ squeakland.jp  Fri Nov 24 18:31:07 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3236] Re: ゲームを使用不可にしたい
+In-Reply-To: <20061124000401838187.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+References: <433F88AE191.D651ABEE@smtp.nifty.com>
+	<20061124000401838187.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+Message-ID: <4566BBDB328.2B60ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+私のところでは状況を再現できなかったのですが(Squeakland 2005J, Windows
+XP SP2)、以下の方法でいかがでしょう。
+パッケージの実体である以下のファイルをブラウザなどでダウンロードし、
+
+http://minnow.cc.gatech.edu/squeak/uploads/2590/GamesRemoval-asm.1.cs
+
+このファイルをSqueakのウィンドウにドロップするとメニューがでますので、
+「新しいチェンジ・セットにインストール」を選べば大丈夫だと思います。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From mutoh ＠ openedu.org  Sun Nov 26 09:11:26 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3237] KOF2006報告
+Message-ID: <86slg75aoh.wl%mutoh@openedu.org>
+
+むとう@おうちです。
+
+関西オープンソース2006に御来場いただいた皆様、ありがとうございました。
+また、スタッフとして働いて下さった皆様、お疲れさまでした。
+
+関連情報などは、適宜
+	http://qml.610t.org/squeak/KOF2006.html
+にも書いてますので、ご参照下さい。
+
+
+遅くなりましたが、報告です。
+
+
+初日は、二日目に比べるとあまり混んでなく、主に他のブース展示などの方々
+が来られていたようでした。それでも、お客さんは切れる感じではなかったで
+す。
+
+展示は、OLPC開発基板、世界聴診器、タブレットPCでの実演、PDAがいっぱい
+と言う感じでした。
+世界聴診器では2つぐらい隣のブースにテルミンを演奏できるという人がいて、
+実際にチューリップ(♪咲いた、咲いた、チューリップの…)を演奏してくださっ
+たりしていました。
+実際に電子回路を専門とされている方からは、真空管版の世界聴診器というア
+イデアも飛び出していました。
+
+
+懇親会では、たべもの無くなるの早かったです。
+最後には、30円引きのシールを貼ったおにぎりとか、プリングルスとかも出て
+きてましたけども。
+スポンサー提供のビールは白ビールも黒ビールもおいしかったです。
+で、一部には近くに住んでいる人とお話したりと地域性の高いイベントならで
+はと言ったこともあったようです。
+実行委員長の中野秀男先生からは、コミュニティが集まって、イベント会場の
+情報交換をするために設けてる場でもある旨伺いました。その上で、Squeakは
+関西で勉強会とかしないのという質問もありました。
+多分、やらんといかんですねぇ…
+
+
+二日目は、かなり人が多かったです。展示開始直後に、高校生の集団が入って
+きたりと、ちょっと驚きました。社会見学の一環かなにからしかったです。
+
+この日は配置を変え、PDAは必要最小限だけをブース奥の椅子に展示しました。
+前日はほとんど使っていない書籍も同じように椅子の上に配置し、適宜用途に
+応じてこの本がお薦めという形で紹介していました。
+
+コンピュータは、
+- OLPC+世界聴診器
+- Cロボがつながったもの
+- Seasideが動いているもの(適宜Croquetなども)
+- 配布CD-ROMと同じSqueakware-edu環境でSqueakToysを動かしているもの(適宜Croquetやもえすくなども)
+の4台構成で展示していました。
+
+Webアプリ関係で苦労されている方なのだと思いますが、梅澤さんのSeasideの
+説明を聞くと、いろいろ質問されて、かなり長い間おられる方も何人かいて、
+非常に印象的でした。
+Webアプリ系は普及の突破口なのかもなぁと思いました。
+
+
+で、私が行ったステージ発表の"We're Squeakers"ですが、アプリケーション
+立ち上げすぎて、デモが上手くできず、もたもたした発表になってしまいまし
+た。すいません(_O_)
+本来は、司会の人との掛け合いもありなのですが、トラブルで余裕が無くなっ
+て、掛け合いになってませんでした(_O_)
+朝になってから、Squeak image作って、会場でNetMorphは使えるかとか
+Seasideは梅澤さんのLL Ring2006の借りたりとか、ODECoが動かないことに気
+がついたりとか、泥縄の準備ではまってしまいました。次回があればもう少し
+余裕を持って準備をして、望みたいと思います(_O_)
+この発表の様子はYouTubeで公開されるという話もあるのですが、今のところ
+まだ公開されていないようです。"kof2006"で検索すると、一部の(というかひ
+とつの;-)発表は既にあるので、そのうち公開されるのかもしれません。
+
+
+配布したCD-ROMの"KOF2006 Squeakers CDROM"ですが、お蔭様で手元には2枚し
+か残らなかったので、無事98枚配布することができました。
+データやプログラムのベースとして御協力いただいた皆様、ありがとうござい
+ました。
+このCDのisoイメージは梅澤さんの御好意でBittorrentで公開させていただく
+ことになりました。
+	ftp://swikis.ddo.jp/SqueakDevJa/KOF/kof2006.iso.torrent
+
+
+展示終了後、ブースの4名で打上げを行いました。
+他のコミュニティでも何故かそうなのですが、コミュニティの年齢があがって
+いくよねぇなどの話をしてました。「若い血を入れねば!!」ということでこう
+いう機会も重要なのかなと思いました。
+後は、古いコンピュータの話などで盛り上がってました。
+
+
+関西でもワークショップしないんですかという要望も何度か聞いたので、そう
+いう機会をこれから作っていければなぁと思います。
+また、その時が来ましたら、会場提供や御協力お願いします。
+
+
+では、長くなりましたが、これで。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From inoue ＠ ma.ns.musashi-tech.ac.jp  Sun Nov 26 13:32:13 2006
+From: inoue ＠ ma.ns.musashi-tech.ac.jp (iNOUE Koich!)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3238] Re: ゲームを使用不可にしたい
+In-Reply-To: <4566BBDB328.2B60ABEE@smtp.nifty.com>
+References: <433F88AE191.D651ABEE@smtp.nifty.com>
+	<20061124000401838187.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+	<4566BBDB328.2B60ABEE@smtp.nifty.com>
+Message-ID: <20061126133213615483.GyazMail.inoue@ma.ns.musashi-tech.ac.jp>
+
+Kazuhiro ABEさんがFri, 24 Nov 2006 18:31:07 +0900に
+「[Squeak-ja: 3236] Re: ゲームを使用不可にしたい」の件で：
+> http://minnow.cc.gatech.edu/squeak/uploads/2590/GamesRemoval-asm.1.cs
+> 
+> このファイルをSqueakのウィンドウにドロップするとメニューがでますので、
+> 「新しいチェンジ・セットにインストール」を選べば大丈夫だと思います。
+
+これで削除ができました。どうもありがとうございます。
+
+[Squeak-ja: 3235]で書いた時点ではあのようなメッセージが出たのですが、先
+ほど同じことを行うと、今度は（正確に思い出せませんが）「SqueakMapをアッ
+プデートするか」と言われ、はいと答えていくとおそらくネットワークからダウ
+ンロードしてきていろいろインストールされたようです。ただし、一番最後に
+「エラーが起こったがデバッガを開くか」と言われて終了しました。その後もう
+一度SqueakMapパッケージローダからGamesRemovalを選択してインストールしよ
+うとすると、今度はバージョンが違うと言われてしまいました。
+
+The package has no published release for your Squeak version, try 
+releases for any version?
+→はい
+The package has no published release at all, take the latest of the 
+unpublished releases?
+→はい
+The packages you are about to install is not listed as being compatible 
+with your image version (SqueakLand 3.8), so the package may not work 
+properly. Do you still want to proceed with the install?
+→はい
+Error occured during install:
+SystemDictionary>>changes
+Would you like to open a debugger?
+
+デバッガを開いても私には分かりませんのでAbandonしました。
+-- 
+https://www.ns.musashi-tech.ac.jp/%7einoue/Signature/               井上
+.
+
+From umejava ＠ mars.dti.ne.jp  Sun Nov 26 14:30:19 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3239] Re: KOF2006報告
+In-Reply-To: <86slg75aoh.wl%mutoh@openedu.org>
+References: <86slg75aoh.wl%mutoh@openedu.org>
+Message-ID: <JB200611261430198.4025859@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> 配布したCD-ROMの"KOF2006 Squeakers CDROM"ですが、お蔭様で手元には2枚し
+> か残らなかったので、無事98枚配布することができました。
+> データやプログラムのベースとして御協力いただいた皆様、ありがとうござい
+> ました。
+> このCDのisoイメージは梅澤さんの御好意でBittorrentで公開させていただく
+> ことになりました。
+>   ftp://swikis.ddo.jp/SqueakDevJa/KOF/kof2006.iso.torrent
+> 
+
+BitTorrentが面倒!という方は直接FTPでどうぞ。家サーバですので、あまり
+込まないような時間帯にお願いします。(統計的には早朝か夕方です。夜型の
+人が多いようで深夜帯は結構込んでいます。)
+
+ftp://swikis.ddo.jp/SqueakDevJa/KOF/kof2006.iso
+
+ではでは。
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Thu Nov 30 01:26:35 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3240] HPSSK の最終選考会が行われました。
+Message-ID: <456DB4BB261.71F9ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+一年前にここでもお知らせしたHPスーパーサイエンスキッズプロジェクトですが、
+
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-October/002677.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-November/002715.html
+
+11/26にその最終選考会がお台場の科学未来館で開催されました。
+その結果、5人のスーパーサイエンスキッズが選ばれ、アメリカ行きの切符を手に
+しました。
+
+http://h50146.www5.hp.com/info/newsroom/pr/fy2007/fy07-012.html
+http://www.sugiyama-style.tv/archives/50666666.html
+
+去年はプロジェクトの立ち上げということもあり、今後の活動を示すデモンスト
+レーションとしてのワークショップでしたが、今回は最終審査ということで厳格
+に行いました。
+
+当日示した課題は与えられた素材(ペットボトル、棒、糸、輪ゴム、粘土、懐中電
+灯、世界聴診器、スクイークなど)だけをつかって、対象物(「スクイークであそ
+ぼう」)の質量を測定し、その結果と理由をプレゼンテーションするというのです。
+この中で基準になるのはペットボトルに入った 500mlの水だけです。時間は3時間
+でした。
+
+結果は、私たちの想像を上回るもので、予想していた天秤とゴムの伸びだけでは
+なく、水面の高さを基準にしたもの、スポンジの縮む量を比較したものなどのバ
+リエーションに富んでいました。一番近かった子は誤差2.8%です(本は467g)。
+もちろん、この結果だけでなく、そこにいたるプロセスや考え方を見ないといけ
+ませんし、年齢による違いも考慮しなければなりません(幅は小3から中3まで)。
+必然的に審査は数点を争う熾烈なものとなりました。とてもつらかったです。 
+
+また、これと並行して、米村でんじろうプロダクションのチャーリー西村さんに
+よるサイエンスショーも行われました。私はこちらは見られなかったのですが、
+テレビでおなじみの科学実験とスクイークを組み合わせた斬新なものだったと聞
+いています。こちらは林さんにがんばってもらいました。
+
+この一年間に行ったワークショップは50回以上、延べ参加者は約600名になります
+(協力、協賛イベントなどを入れると延べ約1,600人)。
+今回のイベントはこれらの締め括りとなるものですが、来月には次年度のワーク
+ショップもはじまりますし、来年にはアメリカツアーもあります。
+
+これからもHPSSKをよろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Thu Nov 30 17:02:36 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3241] Re: HPSSK の最終選考会が行われました。
+In-Reply-To: <456DB4BB261.71F9ABEE@smtp.nifty.com>
+References: <456DB4BB261.71F9ABEE@smtp.nifty.com>
+Message-ID: <456E901C1C1.03D7ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Thu, 30 Nov 2006 01:26:35 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+>11/26にその最終選考会がお台場の科学未来館で開催されました。
+
+11/29付けのMSN毎日インタラクティブに記事が載りました。
+
+ＩＴのある教室：スーパーサイエンスキッズ５人決まる　末来の科学者育てるプロジェクト−教育：MSN毎日インタラクティブ
+http://www.mainichi-msn.co.jp/shakai/edu/news/20061129org00m040016000c.html
+
+11/30付の電波新聞 3面にも、
+
+５人のスーパーサイエンスキッズ誕生
+日本ＨＰが協賛　最終選考会を開催
+
+という記事が掲載されているそうです。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Thu Nov 30 23:40:03 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:39 2007
+Subject: [Squeak-ja: 3242] Squeakers' Night in 未来パーティ 2.0
+Message-ID: <JC200611302340036.10096515@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+さて、関西オープンソース2006での盛り上がりもつかの間、来年にはまたまた
+Squeaker達の集まりが開催できる運びとなりました。
+
+その名も「Squeakers' Night in 未来パーティ 2.0」です。
+http://swikis.ddo.jp/umejava/38
+
+今回はアキバテクノクラブさんが主催です。
+http://www.akiba-sangaku.jp/
+
+場所及び日程:
+2007/01/27(土) 秋葉原ダイビル5Fアキバテクノクラブ
+
+スケジュール:
+16:00 BOF
+17:00 集合・準備
+17:30-18:20 Seasideチュートリアル(梅澤)
+18:20-18:40 万かつサンド・名刺交換など
+18:40-20:30 発表・ディスカッション
+20:30-21:00 かたづけ
+
+長めです。今年の目玉はSeasideチュートリアルです。まだマテリアルができて
+いませんが、正月にがんばって作ります。
+
+もちろん万かつサンドもでます! (差し入れも歓迎します)
+
+事前の申し込みは不要ですが、大体の人数を把握したいので、参加希望の方はこの
+MLか私宛(umejava@mars.dti.ne.jp)にお返事いただければと思います。
+
+発表者も募集しています。下記のサイトに直接書き込みをお願いします。
+http://swikis.ddo.jp/umejava/38
+
+なお、当日は、アキバテクノクラブさんで準備中のSNSへのメンバー登録がある
+そうです。名前とメールアドレス程度の簡単なものだそうですので、お気軽にお考え
+ください。
+
+それではよろしくお願い申し上げます。
+
+---
+[:masashi | ^umezawa]
+

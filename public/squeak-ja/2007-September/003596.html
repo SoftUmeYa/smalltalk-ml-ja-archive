@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3596] Re: Seasideでローカルディレクトリのファイルを扱うには
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203596%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYXNpZGUbJEIkRyVtGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyVrJUclIyVsJS8lSCVqJE4lVSUhJSQlayRyGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMDckJiRLJE8bKEI%3D%3F%3D&In-Reply-To=73446BF9-CD2B-4634-8FB6-0387EAFB60D1%40gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003593.html">
+   <LINK REL="Next"  HREF="003597.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3596] Re: Seasideでローカルディレクトリのファイルを扱うには</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203596%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNlYXNpZGUbJEIkRyVtGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCITwlKyVrJUclIyVsJS8lSCVqJE4lVSUhJSQlayRyGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCMDckJiRLJE8bKEI%3D%3F%3D&In-Reply-To=73446BF9-CD2B-4634-8FB6-0387EAFB60D1%40gmail.com"
+       TITLE="[Squeak-ja: 3596] Re: Seasideでローカルディレクトリのファイルを扱うには">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2007年 9月 11日 (火) 12:15:55 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003593.html">[Squeak-ja: 3593] Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+        <LI>次の記事 <A HREF="003597.html">[Squeak-ja: 3597] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3596">[ 日付 ]</a>
+              <a href="thread.html#3596">[ スレッド ]</a>
+              <a href="subject.html#3596">[ 件名 ]</a>
+              <a href="author.html#3596">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+&gt;<i> Seasideでローカルディレクトリにあるファイルを扱いたいのですが， 
+</I>&gt;<i> どのようにすればいいでしょうか．
+</I>&gt;<i> 特に今CSSで以下のような記述をしたときにどうすればいいのか 
+</I>&gt;<i> 困っています．
+</I>&gt;<i> 
+</I>&gt;<i> body {
+</I>&gt;<i>    background: #e5e5dd url(./back.jpg) repeat-y;
+</I>&gt;<i>    color: #333333;
+</I>&gt;<i>    margin: 0pt;
+</I>&gt;<i>    padding: 0pt;
+</I>&gt;<i> }
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 自分なりに少し調べてみてWAFileLibraryのSubclassを作 
+</I>&gt;<i> ることで画像を扱えるようですが，Classを使わず扱うことはで 
+</I>&gt;<i> きないのでしょうか．
+</I>&gt;<i> 
+</I>
+お手軽なのはComanche(KomHttpServer)の機能を使うことです。
+
+(詳しくは
+<A HREF="http://www.shaffer-consulting.com/david/Seaside/GettingSoftware/index.html">http://www.shaffer-consulting.com/david/Seaside/GettingSoftware/index.html</A>
+に記載があります)。
+
+Seasideをストップした後、
+
+|<i> ma seaside |
+</I>seaside := KomSeasideJ default.
+ma := ModuleAssembly core.
+ma serverRoot: (FileDirectory default directoryNamed: 'FileRoot') fullName.
+ma alias: '/seaside' to: [ma addPlug: [:request | seaside process: request]].
+ma documentRoot: (FileDirectory default directoryNamed: 'FileRoot') fullName.
+ma directoryIndex: 'index.html index.htm'.
+ma serveFiles.
+(HttpService startOn: 9090 named: 'httpd') plug: ma rootModule
+
+という感じで、静的ドキュメントをサーブできるようにして立ち上げ直します。
+FileRoot以下にファイルを置けば、通常のWebサーバのようにアクセスできます。
+
+---
+[:masashi | ^umezawa]
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003593.html">[Squeak-ja: 3593] Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+	<LI>次の記事 <A HREF="003597.html">[Squeak-ja: 3597] Re: Seasideでローカルディレクトリのファイルを扱うには
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3596">[ 日付 ]</a>
+              <a href="thread.html#3596">[ スレッド ]</a>
+              <a href="subject.html#3596">[ 件名 ]</a>
+              <a href="author.html#3596">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

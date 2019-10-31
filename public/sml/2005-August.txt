@@ -1,0 +1,183 @@
+From aoki ＠ sra.co.jp  Sun Aug  7 21:58:41 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7112] Re: Smalltalkerのための初等数学
+In-Reply-To: <42E6E9A3.5020202@sra.co.jp>
+References: <42E6E9A3.5020202@sra.co.jp>
+Message-ID: <42F60581.2060003@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+> 今「Smalltalker のための初等数学」を書き下ろしています。数の
+> 種類・集合・写像などを題目にかかげて、数学的操作のいかほどま
+> で、Smalltalk にて可能なのかを明らかにしています。
+
+執筆途中ですが、公開に踏み切ります。利用していただければ幸い
+です。まだ、集合のところしかありません、しかも加筆しなければ
+ならないところ「〜・・・」が残っています。あしからず。
+
+http://www.sra.co.jp/people/aoki/Mathematics/PrimaryMath/
+http://www.sra.co.jp/people/aoki/Mathematics/PrimaryMath/Set/
+
+また、ＳＲＡ本社のホームページの「技術情報」から「じゅん」が
+たどれるようになっています。
+
+http://www.sra.co.jp/
+http://www.sra.co.jp/public/sra/technical/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Tue Aug  9 17:00:29 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7113] Re: Smalltalkerのための初等数学
+In-Reply-To: <42F60581.2060003@sra.co.jp>
+References: <42E6E9A3.5020202@sra.co.jp> <42F60581.2060003@sra.co.jp>
+Message-ID: <42F8629D.30806@sra.co.jp>
+
+ＳＲＡ先端技術研究所（京都産業大学非常勤講師）の青木です。
+
+オブジェクトの挙動を把握するのに状態遷移（有限状態マシン）を
+用いることが多いと思います。そのため、大学の講義において、私
+は下記のような「小舟」の問題を学生に課します。
+
+------------------------------------------------------------
+
+小舟に乗って川を渡ろうとしている人がいる。この人は狼と羊と菜
+を持っている。しかし、川を渡るための小舟には、一回に持って渡
+れるものがたった一つという制限がある。狼を持って渡ろうとする
+と、渡っている間に羊が菜を食べてしまう。菜を持って渡ろうとす
+ると、渡っている間に狼が羊を食べてしまう。すべてのものを安全
+に対岸に渡すためのダイナミックモデル (状態遷移図) を作成せよ。
+
+------------------------------------------------------------
+
+しかしながら、なかなか、この問題を解ける学生がいません。他の
+授業で高等数学を課しているわりには、初等数学のプログラミング
+が下手なのです。見方というか考え方を実践に移せないのでしょう。
+
+私ならば、{'人', '狼', '羊', '菜'} という全体集合を作り、さら
+に無効となる集合を要素とする集合 {{'狼', '羊'}, {'羊', '菜'},
+{'狼', '羊', '菜'}} を用意します。
+
+そして、全体集合の「べき集合」すなわち、全体集合のすべて部分
+集合を要素とする集合を作り、それぞれの部分集合および補集合が
+無効となる集合に含まれていないか否かを調べます。
+
+先日にアナウンスさせてもらった「Smalltalker のための初等数学」
+http://www.sra.co.jp/people/aoki/Mathematics/PrimaryMath/
+http://www.sra.co.jp/people/aoki/Mathematics/PrimaryMath/Set/
+を用いれば、次のようにプログラミングすることができます。
+
+| universalSet invalidSet powerSet |
+universalSet := PrimaryMath.Set withAll: #('人' '狼' '羊' '菜').
+invalidSet := PrimaryMath.Set
+            with: (PrimaryMath.Set withAll: #('狼' '羊'))
+            with: (PrimaryMath.Set withAll: #('羊' '菜'))
+            with: (PrimaryMath.Set withAll: #('狼' '羊' '菜')).
+powerSet := universalSet powerSet.
+Transcript clear.
+powerSet do:
+        [:aSet |
+        | complementarySet aBoolean |
+        complementarySet := universalSet complement: aSet.
+        aBoolean := (invalidSet
+                        detect: [:each | each = aSet]
+                        ifNone: [nil]) isNil
+                    and:
+                        [(invalidSet
+                            detect: [:each | each = complementarySet]
+                            ifNone: [nil]) isNil].
+        Transcript
+            nextPutAll: aSet printString , ' - ';
+            nextPutAll: complementarySet printString;
+            nextPutAll: ' ==> ' , aBoolean printString;
+            cr;
+            flush].
+^powerSet
+
+このプログラムを実行してみると、以下のようにトランスクリプト
+へ出力されます。
+
+{} - {'人', '狼', '羊', '菜'} ==> true
+{'人'} - {'狼', '羊', '菜'} ==> false
+{'狼'} - {'人', '羊', '菜'} ==> true
+{'羊'} - {'人', '狼', '菜'} ==> true
+{'菜'} - {'人', '狼', '羊'} ==> true
+{'人', '狼'} - {'羊', '菜'} ==> false
+{'人', '羊'} - {'狼', '菜'} ==> true
+{'人', '菜'} - {'狼', '羊'} ==> false
+{'狼', '羊'} - {'人', '菜'} ==> false
+{'狼', '菜'} - {'人', '羊'} ==> true
+{'羊', '菜'} - {'人', '狼'} ==> false
+{'人', '狼', '羊'} - {'菜'} ==> true
+{'人', '狼', '菜'} - {'羊'} ==> true
+{'人', '羊', '菜'} - {'狼'} ==> true
+{'狼', '羊', '菜'} - {'人'} ==> false
+{'人', '狼', '羊', '菜'} - {} ==> true
+
+あとは、真（true）になっているところを状態にして、それらを線
+で結んで遷移にしてゆけば、状態遷移図のできあがり、となります。
+http://www.sra.co.jp/people/aoki/misc/jpgs/kobune.jpg
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From aoki ＠ sra.co.jp  Fri Aug 12 10:23:59 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7114] あらんけい
+Message-ID: <42FBFA2F.70003@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+先週、京都産業大学の集中講義に出かけた際に、ＴＡ（講義助手）
+のひとりから、宝塚歌劇団に「とうこ」こと「安蘭けい」さんがい
+ることを教えてもらいました。
+
+http://www.mxtv.co.jp/takarazuka/guest/171.html
+
+伸びやかな声を持つ男役だそうです。今、私の周りでファンになっ
+てゆく方々が多いのです。Smalltalker の方々にとっても意味深な
+お名前ですからね。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From abee.abe ＠ nifty.ne.jp  Sat Aug 13 21:39:42 2005
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro Abe)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7115] Re: あらんけい
+In-Reply-To: <42FBFA2F.70003@sra.co.jp>
+References: <42FBFA2F.70003@sra.co.jp>
+Message-ID: <42FDEA0E.1090305@nifty.ne.jp>
+
+阿部@シカゴです。
+SqueakFest 2005に参加しています。
+http://interactive.colum.edu/partners/squeakfest/SFest05webwelcome.aspx
+(サーバ不調です。Googleキャッシュには残っています)
+
+こちら時間の昨日にはAlanさんのキーノートがありました。その内容は大島さん
+の日記に詳しく載っています。
+http://d.hatena.ne.jp/squeaker/20050811
+
+最近は$100 laptop computerの実現に注力されています。
+
+AOKI Atsushi wrote:
+> 伸びやかな声を持つ男役だそうです。今、私の周りでファンになっ
+> てゆく方々が多いのです。Smalltalker の方々にとっても意味深な
+> お名前ですからね。
+
+Community Business ScotlandのマネージャにもAlan Kayさんという人がいて、
+何度か来日されているようです。
+
+ //abee
+--
+阿部 和広  EMAIL abee.abe@nifty.ne.jp
+
+

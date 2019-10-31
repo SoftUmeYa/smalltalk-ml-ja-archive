@@ -1,0 +1,161 @@
+From aoki ＠ sra.co.jp  Thu Sep  1 16:32:58 2005
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7116] Re: Smalltalkerのための初等数学
+In-Reply-To: <42F8629D.30806@sra.co.jp>
+References: <42E6E9A3.5020202@sra.co.jp> <42F60581.2060003@sra.co.jp>
+	<42F8629D.30806@sra.co.jp>
+Message-ID: <4316AEAA.8070304@sra.co.jp>
+
+ＳＲＡ先端技術研究所の青木です。
+
+小舟の問題ですが、いろんな方々に挑戦していただけて、嬉しいか
+ぎりです。この SML ではないのですが、他のメーリングリストでは、
+SPIN や NuSMV そして VDM++ などのプログラムも出てきて、とても
+参考になります。Squeak, Ruby, Java, Prolog, Lisp などのプログ
+ラムもチラホラと。
+
+理解ではなく、行解して会得することが大切です。ぜひ、手持ちの
+Smalltalk で、状態遷移図を描き出せるところまで、行き着いてく
+ださいまし。そして、それを SML へと投稿できるプログラマの登場
+を願っていまぁ〜す。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From nisinaka ＠ sra.co.jp  Wed Sep  7 18:47:42 2005
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7117] [ANNOUNCE] Jun for Java (Jun527)
+In-Reply-To: <20050711153422.0B79.NISINAKA@sra.co.jp>
+References: <20050610215112.5FD3.NISINAKA@sra.co.jp>
+	<20050711153422.0B79.NISINAKA@sra.co.jp>
+Message-ID: <20050907184553.F2F4.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン527を公開します。
+
+  バージョン516からの主な変更点は、以下の通りです。
+
+    * JunMultiMediaExtraModel は JunMultiMediaViewer に用いられる
+      クラスで、画像、動画、音声、テキスト以外のファイルを扱いま
+      す。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/527/Extra.png
+
+    * JunMoviePlayer のバグを修正しました。トラッカーの有無が正し
+      く判断できなくなっていました。
+
+    * デフォルトのビューモードを SWING に変更しました。
+
+    * JunImageStream がデフォルトで "Java Image I/O" を利用するよ
+      うになりました。これにより JAI と JIMI は J2SDK1.4 において 
+      BMP ファイルを書き出すためだけに用いられることになります。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From koubo2005 ＠ yengawa.jpn.org  Wed Sep 14 16:08:07 2005
+From: koubo2005 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7118] [ANNOUNCE] 音楽イベント「The Musical Box」
+Message-ID: <20050914160607.F3DC.KOUBO2005@yengawa.jpn.org>
+
+横川です。
+Squeakを使った音楽イベントをお知らせします。
+# SML, Squeak-jaのマルチポストです。
+
+----------------------------------------
+『The Musical Box - Squeak Musik Nacht』
+
+Squeakを使って音楽を奏でるセッションをします。コンピュータ音楽に興味があ
+る人やSqueakを使ってクールなサウンドを作りたい人は気軽に参加してください
+な。音楽を聴くだけじゃなくて背景や技術なども語りますよ。
+出し物少ないので飛び入り大歓迎ヽ(´ー｀)ノ
+(詳細 http://yengawa.homedns.org:8888/YengawaWiki/14)
+
+! 日時: 
+2005年9月19日(月)敬老の日 
+18:30(開場18:00) 〜 20:00
+予約なし
+
+! 場所: 
+Mota Jump
+下北沢駅南口より徒歩約2分
+http://www.mota-jump.com/
+東京都世田谷区北沢2-12-2 RAIN FOREST BLDG 2F
+TEL/FAX : 03-3487-0890 
+地図 http://www.mota-jump.com/map.html
+
+! 参加費
+1,000円(1ドリンク付き)
+
+!! 出し物
+! 西原
+Mock シリーズ打ち止めにつき，豪華 2.5 本立て大放出！
+なんと傍迷惑な．もしかしたら「その他」があるかも．
+
+! 横川
+マルチエージェント分散音楽環境Symphonyシステムの紹介とプチデモ。
+Musique de Swimmyもあるかも。
+
+----------------------------------------
+
+-- !
+Koji Yokokawa <koubo2005@yengawa.jpn.org>
+    self new!
+
+
+From kondo ＠ sra.co.jp  Thu Sep 15 11:07:38 2005
+From: kondo ＠ sra.co.jp (Kondo Hirotsugu)
+Date: Fri Nov  2 10:50:58 2007
+Subject: [SML 7119] Re: Smalltalkerのための初等数学
+In-Reply-To: <4316AEAA.8070304@sra.co.jp>
+References: <42F8629D.30806@sra.co.jp> <4316AEAA.8070304@sra.co.jp>
+Message-ID: <20050915110434.A2B5.KONDO@sra.co.jp>
+
+近藤です。
+
+昨日じゅんMLの方には流したのですが、SMLにも流すべしと
+青木さんに言われたので、流します。
+
+> ＳＲＡ先端技術研究所の青木です。
+> 
+> 小舟の問題ですが、いろんな方々に挑戦していただけて、嬉しいか
+> ぎりです。この SML ではないのですが、他のメーリングリストでは、
+> SPIN や NuSMV そして VDM++ などのプログラムも出てきて、とても
+> 参考になります。Squeak, Ruby, Java, Prolog, Lisp などのプログ
+> ラムもチラホラと。
+
+私なりのアプローチで、この問題を解いてみました。
+使用言語はJavaです（だからこっちには投稿しなかったのですが）。
+
+詳細は、下記ページにまとめました。
+
+http://www.sra.co.jp/people/kondo/business/java/river/index.html
+
+まだ最短経路の抽出とか、結果のグラフィカルな表示とか、
+やれることは色々ありますね。
+
+それでは。
+
+---
+Kondo Hirotsugu (kondo@sra.co.jp)
+SRA / Global IT Service Company
+Industry System division
+
+

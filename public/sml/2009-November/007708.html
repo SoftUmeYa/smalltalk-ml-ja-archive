@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7708] Re: HttpClientによるログイン認証について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207708%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=B71A7F0C-23C7-4BD6-8803-34E21FD4BED1%40sie.dendai.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007707.html">
+   <LINK REL="Next"  HREF="007709.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7708] Re: HttpClientによるログイン認証について</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207708%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IEh0dHBDbGllbnQbJEIkSyRoJGsbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJW0lMCUkJXNHJz5aJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=B71A7F0C-23C7-4BD6-8803-34E21FD4BED1%40sie.dendai.ac.jp"
+       TITLE="[SML 7708] Re: HttpClientによるログイン認証について">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2009年 11月  3日 (火) 21:26:09 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007707.html">[SML 7707] Smalltalk合同勉強会@名古屋のプログラム確定です
+</A></li>
+        <LI>次の記事 <A HREF="007709.html">[SML 7709] Re: 第13回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7708">[ 日付 ]</a>
+              <a href="thread.html#7708">[ スレッド ]</a>
+              <a href="subject.html#7708">[ 件名 ]</a>
+              <a href="author.html#7708">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+私のところでは1,2のどちらで試しても
+Unhandled exception: CA Not in Trust Registry!
+と出ます。
+
+どうやらSecurity.X509.X509Registry&gt;&gt;readTrustedCertificatesFromFile:
+で.pemファイルを読み込まないといけないような感じなのですが、
+その辺りはクリアされているのでしょうか。
+
+
+久保田 吉彦 &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">kubota ＠ sie.dendai.ac.jp</A>&gt; wrote:
+&gt;<i> 電大の久保田です。
+</I>&gt;<i> 
+</I>&gt;<i> 青木先生の助言で無事mixiにログインしてページ情報を得ること 
+</I>&gt;<i> ができました。
+</I>&gt;<i> ありがとうございました。
+</I>&gt;<i> 
+</I>&gt;<i> これでひと安心と思っていたのですがまた問題がでてきました。 
+</I>&gt;<i> HTTPSでの通信です。
+</I>&gt;<i> ニコニコ動画にログインするプログラムを書いてみました。
+</I>&gt;<i> 
+</I>&gt;<i> 1)nicoLoginその1を使った場合Unhandled exception:  
+</I>&gt;<i> NetHttpMovedError(302 Found)がでる。
+</I>&gt;<i> 2)nicoLoginその2を使った場合Unhandled exception:  
+</I>&gt;<i> WSAECONNABORTEDがでる。
+</I>&gt;<i> 
+</I>&gt;<i> といった状況です。リダイレクトの設定はNet.Settings  
+</I>&gt;<i> httpRedirectRequest: true.にしています。ネットワークプログラムは 
+</I>&gt;<i> ほとんど書いたことがないので良く分らないのですが、1)の場合 
+</I>&gt;<i> リダイレクト可の設定にしてあるのになぜExceptionが出るのか 
+</I>&gt;<i> わかりませんまた、2)の場合HTTPでのmixiへのログ 
+</I>&gt;<i> インが出きたのにHTTPSでの通信の場合なぜ 
+</I>&gt;<i> WSAECONNABORTEDが出るのか分りません。どなたかご存知のかたいらっ 
+</I>&gt;<i> しゃいませんか?
+</I>&gt;<i> それともニコニコ動画のページはプログラムではログインできない作り 
+</I>&gt;<i> になっているのでしょうか?
+</I>&gt;<i> 
+</I>&gt;<i> ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー 
+</I>&gt;<i> ーー
+</I>&gt;<i> &quot;nicoLogin := '<A HREF="https://secure.nicovideo.jp/secure/login?">https://secure.nicovideo.jp/secure/login?</A> 
+</I>&gt;<i> site=niconico'.&quot; &quot;その1&quot;
+</I>&gt;<i> nicoLogin := '<A HREF="https://secure.nicovideo.jp/secure/login_form'.">https://secure.nicovideo.jp/secure/login_form'.</A>  
+</I>&gt;<i> &quot;その2&quot;
+</I>&gt;<i> nicoTopPage := '<A HREF="http://www.nicovideo.jp'.">http://www.nicovideo.jp'.</A>
+</I>&gt;<i> inputUserName := 'email'.
+</I>&gt;<i> inputPassword := 'password'.
+</I>&gt;<i> inputNextURL := 'next_url'.
+</I>&gt;<i> 
+</I>&gt;<i> client := Net.HttpClient new.
+</I>&gt;<i> client enableCookies: true.   
+</I>&gt;<i> httpRequest := HttpRequest post:nicoLogin.
+</I>&gt;<i> httpRequest
+</I>&gt;<i>       userAgent: 'VW76NC';
+</I>&gt;<i>       addFormKey: 'email' value: 'いーめーるあどれす';
+</I>&gt;<i>       addFormKey: 'password' value: 'ぱすわーど';
+</I>&gt;<i>       addFormKey: 'next_url' value:''.
+</I>&gt;<i> httpResponse := client executeRequest: httpRequest. &quot;&lt;=ここで 
+</I>&gt;<i> Net.HttpMovedError(302 Found)が発生&quot;
+</I>&gt;<i> httpRequest inspect.
+</I>&gt;<i> agent :=client cookieAgent.
+</I>&gt;<i> agent cacheCookies: true.
+</I>&gt;<i> 
+</I>&gt;<i> getMethod := HttpRequest get: nicoTopPage.
+</I>&gt;<i> getMethod userAgent:'VW76NC'.
+</I>&gt;<i> response := client executeRequest: getMethod. &quot;&lt;=ここで 
+</I>&gt;<i> WSAECONNABORTEDが発生&quot;
+</I>&gt;<i> ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー 
+</I>&gt;<i> ーー
+</I>&gt;<i> 
+</I>&gt;<i> 久保田吉彦
+</I>&gt;<i> 東京電機大学 情報環境学部 情報環境学科
+</I>&gt;<i> 
+</I>&gt;<i> On 2009/10/27, at 15:47, AOKI Atsushi wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; 久保田吉彦さんは書きました:
+</I>&gt;<i> &gt;&gt; 青木先生のおっしゃった通り、デバッガを見たらエンコーダが入っ 
+</I>&gt;<i> &gt;&gt; ている
+</I>&gt;<i> &gt;&gt; IdentityDictionaryに'euc-jp'が入っていませんでした。そ 
+</I>&gt;<i> &gt;&gt; のためKey not
+</I>&gt;<i> &gt;&gt; foundのExceptionが出ているようです。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; だいぶ昔ですが、私も似たような状況に陥ったことがよみがえり、
+</I>&gt;<i> &gt; とっさに（脊髄反射で）、もしや！思ったのですが、当たりでした 
+</I>&gt;<i> &gt; か…。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt; 原因は判ったのですが、どう対処していいやら分りません。どなた 
+</I>&gt;<i> &gt;&gt; か対処方法ご
+</I>&gt;<i> &gt;&gt; 存知のかたいらっしゃいませんでしょうか。
+</I>&gt;<i> &gt;&gt; #うーん、なさけない
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; お使いの環境が Windows 版の VisualWorks ならば、
+</I>&gt;<i> &gt; エンコーディングシンボルの #euc-jp を
+</I>&gt;<i> &gt; #JapaneseEUC に写像すればいいと思います。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; VisualWorks の日本語版でなければ、Jpl を援用できます。
+</I>&gt;<i> &gt; <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/">http://www.cc.kyoto-su.ac.jp/~atsushi/Jpl/</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; これまた久保田さんのコードを確かめもせずに、
+</I>&gt;<i> &gt; 応答しておりますので、とんちんかんなフォローやもしれませぬ。
+</I>&gt;<i> &gt; その際には、あしからず、ご容赦くださいませ。
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --- 青木淳＠取り急ぎ
+</I>
+
+
+---
+[:masashi | ^umezawa]
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007707.html">[SML 7707] Smalltalk合同勉強会@名古屋のプログラム確定です
+</A></li>
+	<LI>次の記事 <A HREF="007709.html">[SML 7709] Re: 第13回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7708">[ 日付 ]</a>
+              <a href="thread.html#7708">[ スレッド ]</a>
+              <a href="subject.html#7708">[ 件名 ]</a>
+              <a href="author.html#7708">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

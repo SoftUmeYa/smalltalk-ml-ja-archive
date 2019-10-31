@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3383] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203383%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IDMuOS04Vk0bJEJNUSROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrSW1tWDExUGx1Z2luGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=86r6tjfnfr.wl%25mutoh%40openedu.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003379.html">
+   <LINK REL="Next"  HREF="003368.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3383] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203383%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IDMuOS04Vk0bJEJNUSROGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FU3F1ZWFrSW1tWDExUGx1Z2luGyRCJVElQyVBGyhC%3F%3D&In-Reply-To=86r6tjfnfr.wl%25mutoh%40openedu.org"
+       TITLE="[Squeak-ja: 3383] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ">kawa90 ＠ yahoo.co.jp
+       </A><BR>
+    <I>2007年 1月 27日 (土) 09:37:05 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003379.html">[Squeak-ja: 3379] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+        <LI>次の記事 <A HREF="003368.html">[Squeak-ja: 3368] Seasideチュートリアルの資料を置きました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3383">[ 日付 ]</a>
+              <a href="thread.html#3383">[ スレッド ]</a>
+              <a href="subject.html#3383">[ 件名 ]</a>
+              <a href="author.html#3383">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。
+むとうさま、
+<A HREF="http://homepage3.nifty.com/rio_i/lab/xlib/012xim.htm">http://homepage3.nifty.com/rio_i/lab/xlib/012xim.htm</A>
+にあるサンプルプログラム　 012xim_root.c　をコンパイル・実行してみました。
+■UTF-8
+問題なく動きました。
+関係しそうな環境変数を以下に示します。
+XMODIFIERS=@im=SCIM
+LANG=ja_JP.UTF-8
+GDM_LANG=ja_JP.UTF-8
+LANGUAGE=ja_JP.UTF-8
+GTK_IM_MODULE=scim
+
+■EUC-jp
+プログラムは&quot;Couldn't open input method.&quot;と言うメッセージで異常終了しま
+した。
+関係しそうな環境変数を以下に示します。
+XMODIFIERS=@im=SCIM
+LANG=ja_JP.eucJP
+GDM_LANG=ja_JP.eucJP
+LANGUAGE=ja_JP.eucJP
+GTK_IM_MODULE=scim
+
+それでは。
+
+Takeshi MUTOH wrote:
+&gt;<i> むとう@おうちです。
+</I>&gt;<i>
+</I>&gt;<i> Squeak BoFもそろそろ終わりころと思われるC5に参加しているので、反応が遅
+</I>&gt;<i> くて申し訳ありません。
+</I>&gt;<i>
+</I>&gt;<i> At Wed, 24 Jan 2007 22:30:58 +0900,
+</I>&gt;<i> Hideo Kawamura &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kawa90 ＠ yahoo.co.jp</A>&gt; wrote:
+</I>&gt;<i>   
+</I>&gt;&gt;<i> euc-jpで実行してみました。落ちることはなかったが、日本語入力ができなかった。
+</I>&gt;&gt;<i> コンソールに、XOpenIM() failed　となっていました。ちなみにeuc-jpでは以前
+</I>&gt;&gt;<i> の日本語パッチがあたったVMも、同じ現象でした。ちなみに使用したイメージは
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> すいません、手元のSLAXで一度コンパイルから試してみます。
+</I>&gt;<i> 少しお待ちを。
+</I>&gt;<i> # もし、buildログがありましたら、いただけると何か分かるかもしれません。
+</I>&gt;<i>
+</I>&gt;<i> あと、日本語入力には何をお使いになられてますでしょうか?
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>&gt;&gt;<i> SqueakPlugin-dev-527.image です。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> わたしの環境が悪いのかも...
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> このイメージを良く知らないのですが、XIM関連のコードが入ったものなんで
+</I>&gt;<i> すかね?
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>&gt;&gt;<i> # Squeakでは日本語入力をあきらめていたりする...
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> そんな悲しいこといわないでくださいよぉ(;-;)
+</I>&gt;<i>   
+</I>
+--------------------------------------
+Start Yahoo! Auction now! Check out the cool campaign
+<A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003379.html">[Squeak-ja: 3379] Re: 3.9-8VM用のSqueakImmX11Pluginパッチ
+</A></li>
+	<LI>次の記事 <A HREF="003368.html">[Squeak-ja: 3368] Seasideチュートリアルの資料を置きました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3383">[ 日付 ]</a>
+              <a href="thread.html#3383">[ スレッド ]</a>
+              <a href="subject.html#3383">[ 件名 ]</a>
+              <a href="author.html#3383">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

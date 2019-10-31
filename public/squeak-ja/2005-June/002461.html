@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2461] Re: OSX での日本語入力
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202461%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9TWCAbJEIkRyRORnwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=429CEE23.8070403%40zephyr.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002460.html">
+   <LINK REL="Next"  HREF="002462.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2461] Re: OSX での日本語入力</H1>
+    <B>Tetsuya HAYASHI</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202461%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE9TWCAbJEIkRyRORnwbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEZ%2BTk8bKEI%3D%3F%3D&In-Reply-To=429CEE23.8070403%40zephyr.dti.ne.jp"
+       TITLE="[Squeak-ja: 2461] Re: OSX での日本語入力">tetha ＠ st.rim.or.jp
+       </A><BR>
+    <I>2005年 6月  1日 (水) 12:04:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002460.html">[Squeak-ja: 2460] OSX での日本語入力
+</A></li>
+        <LI>次の記事 <A HREF="002462.html">[Squeak-ja: 2462] Re: OSX での日本語入力
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2461">[ 日付 ]</a>
+              <a href="thread.html#2461">[ スレッド ]</a>
+              <a href="subject.html#2461">[ 件名 ]</a>
+              <a href="author.html#2461">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>林です。こんにちは。
+
+# 手元で確認してないので申し訳ないのですが…
+
+Nihongo5 自体は、Nihongo6 とほぼ同等だった（Mac OS  
+X 関係のパッチが含まれ
+てる）ように記憶してます。
+ですので、イメージの内部状態に依存している話ではないかと思われま 
+す。
+
+     LanguageEnvironment class &gt;&gt; startUp
+
+メソッドを手で実行してみるとどうでしょうか？
+
+なお、VM については
+     <A HREF="http://squeak.hp.infoseek.co.jp/nihongo.htm">http://squeak.hp.infoseek.co.jp/nihongo.htm</A>
+にあるものをお使いください。
+（Squeak VM ml-030424 ですと Panther ではクラッシュ 
+してしまいます）
+
+
+では。
+
+
+On 2005/06/01, at 8:07, NISHIHARA Satoshi wrote:
+
+&gt;<i> Nihongo5 という二世代前のイメージを， Mac OSX 10.3.9 /  
+</I>&gt;<i> 10.2.8 で使ってま
+</I>&gt;<i> す． NetMorph がプリ・インストールされているイメージです．
+</I>&gt;<i>
+</I>&gt;<i> 上記 Jaguar と Panther の両方，または  
+</I>&gt;<i> Panther のみで日本語入力を可能にす
+</I>&gt;<i> るには何を用意すればよろしいでしょうか．windows マシンに 
+</I>&gt;<i> 切り替えろという
+</I>&gt;<i> のはナシでお願いします．m(_ _)m
+</I>&gt;<i>
+</I>&gt;<i> [Squeak-ja] m17n for 3.6 beta
+</I>&gt;<i> on 03.8.14 1:31 AM, <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">kimurako ＠ mac.com</A> wrote:
+</I>&gt;<i>
+</I>&gt;&gt;&gt;<i> ただ、VMには、やはり、以下のページのものを使って下さい。
+</I>&gt;&gt;&gt;<i> <A HREF="http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/">http://utopos.dyndns.info:8080/SqueakLearner/uploads/59/</A>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> を参考に
+</I>&gt;<i> Squeak VM ml-030424
+</I>&gt;<i> で起動してみましたが，いずれも文字化けしてしまいます．エディタ 
+</I>&gt;<i> 等外部アプ
+</I>&gt;<i> リケイションで一度受けてコピペするのも面倒だし．何か他に用意す 
+</I>&gt;<i> るものがあ
+</I>&gt;<i> るのでしょうか．
+</I>&gt;<i>
+</I>&gt;<i> -- 
+</I>&gt;<i> --------------------------------------------
+</I>&gt;<i> 西原聡士 (NISHIHARA Satoshi)
+</I>&gt;<i> e-mail: mailto:<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">nishis ＠ zephyr.dti.ne.jp</A>
+</I>&gt;<i> URL:    <A HREF="http://www.zephyr.dti.ne.jp/~nishis/">http://www.zephyr.dti.ne.jp/~nishis/</A>
+</I>&gt;<i> --------------------------------------------
+</I>&gt;<i>
+</I>
+
+
+--
+Tetsuya HAYASHI &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">tetha ＠ st.rim.or.jp</A>&gt;
+PGP: 5C 7D 4C 07 DA 73 74 C4  1F 6D 87 EE FD 09 0D FE
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002460.html">[Squeak-ja: 2460] OSX での日本語入力
+</A></li>
+	<LI>次の記事 <A HREF="002462.html">[Squeak-ja: 2462] Re: OSX での日本語入力
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2461">[ 日付 ]</a>
+              <a href="thread.html#2461">[ スレッド ]</a>
+              <a href="subject.html#2461">[ 件名 ]</a>
+              <a href="author.html#2461">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

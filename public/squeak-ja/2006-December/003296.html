@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3296] Re: 他のアプリケーションファイル起動
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203296%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkI%2BJE4lIiVXJWobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTEhPCU3JWclcyVVJSElJCVrNS9GMBsoQg%3D%3D%3F%3D&In-Reply-To=000001c71eff%2461c60690%240400a8c0%40shinji1">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003294.html">
+   <LINK REL="Next"  HREF="003297.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3296] Re: 他のアプリケーションファイル起動</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203296%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkI%2BJE4lIiVXJWobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJTEhPCU3JWclcyVVJSElJCVrNS9GMBsoQg%3D%3D%3F%3D&In-Reply-To=000001c71eff%2461c60690%240400a8c0%40shinji1"
+       TITLE="[Squeak-ja: 3296] Re: 他のアプリケーションファイル起動">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2006年 12月 14日 (木) 17:09:01 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003294.html">[Squeak-ja: 3294] 他のアプリケーションファイル起動
+</A></li>
+        <LI>次の記事 <A HREF="003297.html">[Squeak-ja: 3297] Re: 他のアプリケーションファイル起動
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3296">[ 日付 ]</a>
+              <a href="thread.html#3296">[ スレッド ]</a>
+              <a href="subject.html#3296">[ 件名 ]</a>
+              <a href="author.html#3296">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Thu, 14 Dec 2006 06:40:59 +0900
+&quot;Shinji Suzuki&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">lingmu ＠ agate.plala.or.jp</A>&gt; wrote:
+&gt;<i>Squeakを使って、Windowsの他のアプリケーションファイルを起動することは出
+</I>&gt;<i>来るのでしょうか。
+</I>
+できるでもあり、できないでもあります。
+
+開発者版(<A HREF="http://squeakland.jp/developer/">http://squeakland.jp/developer/</A>)であれば、Smalltalkを使って以下
+のように書けます。
+
+Win32Shell new shellOpen: 'C:\WINDOWS\Web\Wallpaper\Windows XP.jpg'.
+Win32Shell new shellOpen: 'C:\windows\system32\notepad.exe'.
+
+詳しくは市川さんの解説をご覧ください。
+
+<A HREF="http://squeak.qp.land.to/wiki/index.php?Win32Shell">http://squeak.qp.land.to/wiki/index.php?Win32Shell</A>
+
+eToysユーザが使っている通常版(<A HREF="http://squeakland.jp/plugin/download.html">http://squeakland.jp/plugin/download.html</A>)
+ではできません。単にこの機能を隠しているのではなく、丸ごと削除されていま
+す。これは安全に配慮したためです(ネットからダウンロードした作品を開いた瞬
+間にディスクがフォーマットされたりしないように)。
+
+別にアプリケーションを開くのではなく、他のWindowsのアプリケーションで作成
+されたファイルをSqueakの中で開くという意味でしたら、いくつかのフォーマッ
+トに対応しています。そのファイルを直接Squeakのウィンドウにドラッグ&amp;ドロッ
+プしてみてください。うまく行けば適切なモーフが開きます。
+あるいは、ナビゲータの「探す」ボタンを長押しし「任意のファイルを探す」を
+選んでください。
+
+この中にないものでも内部的には対応しているものもあります。具体的な種類を
+教えてください。対応していなくても自分でCやSlangやSmalltalkのプログラムを
+書いて対応させることもできます(もちろんそれなりに工数はかかります)。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003294.html">[Squeak-ja: 3294] 他のアプリケーションファイル起動
+</A></li>
+	<LI>次の記事 <A HREF="003297.html">[Squeak-ja: 3297] Re: 他のアプリケーションファイル起動
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3296">[ 日付 ]</a>
+              <a href="thread.html#3296">[ スレッド ]</a>
+              <a href="subject.html#3296">[ 件名 ]</a>
+              <a href="author.html#3296">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

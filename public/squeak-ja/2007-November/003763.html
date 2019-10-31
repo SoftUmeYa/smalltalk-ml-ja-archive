@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3763] Re: Unix用のリクエストいくつか
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203763%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVuaXgbJEJNUSROJWobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lKCU5JUgkJCQvJEQkKxsoQg%3D%3D%3F%3D&In-Reply-To=472562C6.60108%40nucba.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003762.html">
+   <LINK REL="Next"  HREF="003767.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3763] Re: Unix用のリクエストいくつか</H1>
+    <B>Yoshiki Ohshima</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203763%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVuaXgbJEJNUSROJWobKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJS8lKCU5JUgkJCQvJEQkKxsoQg%3D%3D%3F%3D&In-Reply-To=472562C6.60108%40nucba.ac.jp"
+       TITLE="[Squeak-ja: 3763] Re: Unix用のリクエストいくつか">yoshiki ＠ vpri.org
+       </A><BR>
+    <I>2007年 11月  1日 (木) 15:52:57 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003762.html">[Squeak-ja: 3762] Re: Squeak日本語とPostgresqlとの接続
+</A></li>
+        <LI>次の記事 <A HREF="003767.html">[Squeak-ja: 3767] Re: Unix用のリクエストいくつか
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3763">[ 日付 ]</a>
+              <a href="thread.html#3763">[ スレッド ]</a>
+              <a href="subject.html#3763">[ 件名 ]</a>
+              <a href="author.html#3763">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  大島です。
+
+  うーむ。これは鋭いですね。バッファを巨大にするという手段で対処できる
+ものなのでしょうか。
+
+  ところで、最近3.9-12のolpcブランチを見ています。以前、日本語入力のと
+ころを見ると言っては見たもののあまり手が進んでいないのですが(UTF32を
+EventBufferに入れて返すというようなところは書きましたが)、もし気合があ
+りましたら、是非3.9-12ベースで日本語入力(およびその他のinput methodを
+要求する言語の入力)ができるパッチを作ってはいただけないでしょうか?世界
+の人に使われるチャンスです。
+
+  ご検討ください。
+
+-- Yoshiki
+
+At Mon, 29 Oct 2007 13:34:14 +0900,
+Tsutomu Hiroshima wrote:
+&gt;<i> 
+</I>&gt;<i> 廣島です．お久しぶりです．
+</I>&gt;<i> 遅ればせながら，エラーをこちらでも確認しました．
+</I>&gt;<i> 
+</I>&gt;<i> platforms/unix/vm/sqUnixEvent.c
+</I>&gt;<i> 
+</I>&gt;<i> で，インプットイベントの循環バッファのサイズが，
+</I>&gt;<i> 
+</I>&gt;<i> #define IEB_SIZE         64     /* must be power of 2 */
+</I>&gt;<i> 
+</I>&gt;<i> となっています．
+</I>&gt;<i> 変換文字列が一定数以上だとバッファを1周して
+</I>&gt;<i> 変換文字列の最初を上書きしてしまい問題が生じるようです．
+</I>&gt;<i> utf8 あ 11文字で 33 バイト，
+</I>&gt;<i> EventKeyDown と EventKeyChar のイベントが各バイトで生じるので，
+</I>&gt;<i> 66個のイベントが一度に生じます．計算はぴったり合います．
+</I>&gt;<i> 
+</I>&gt;<i> さて，どう対処したものか？
+</I>&gt;<i> =================
+</I>&gt;<i> 廣島　勉
+</I>&gt;<i> Tsutomu Hiroshima
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003762.html">[Squeak-ja: 3762] Re: Squeak日本語とPostgresqlとの接続
+</A></li>
+	<LI>次の記事 <A HREF="003767.html">[Squeak-ja: 3767] Re: Unix用のリクエストいくつか
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3763">[ 日付 ]</a>
+              <a href="thread.html#3763">[ スレッド ]</a>
+              <a href="subject.html#3763">[ 件名 ]</a>
+              <a href="author.html#3763">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

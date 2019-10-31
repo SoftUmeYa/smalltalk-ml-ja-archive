@@ -1,0 +1,509 @@
+From squeak ＠ cheshireneko.com  Fri Mar 13 17:54:07 2015
+From: squeak ＠ cheshireneko.com (Squeak)
+Date: Fri, 13 Mar 2015 17:54:07 +0900
+Subject: [SML 8113]
+ stringを評価可能オブジェクトに変更する方法について
+Message-ID: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+
+まだ春の気配のない北海道です。
+
+aにストリングを代入します。
+a := ’10 > age’
+このストリングをストリングとしてではなくて、式( 10 > age )として評価する方法を教えていただければ助かります。
+a asContext　かと思ったのですが、違うようです。
+as*を検索しましたが、よくわかりませんでした。
+よろしくお願いします。
+
+NEZ.CheshireNEKO.Squeak
+CheshireNEKO Company
+squeak ＠ cheshireneko.com
+
+
+
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20150313/c11a834d/attachment.html>
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Mar 13 18:53:10 2015
+From: atsushi ＠ cc.kyoto-su.ac.jp (青木 淳)
+Date: Fri, 13 Mar 2015 18:53:10 +0900
+Subject: [SML 8114] Re:
+ stringを評価可能オブジェクトに変更する方法について
+In-Reply-To: <5502B1F2.1050607@cc.kyoto-su.ac.jp>
+References: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+ <5502B1F2.1050607@cc.kyoto-su.ac.jp>
+Message-ID: <5502B386.8030609@cc.kyoto-su.ac.jp>
+
+スュヒコ、譴泙靴拭嶝queak4.4」で正常動作の確認したことを。
+
+--- 青木淳＠京都産業大学コンピュータ理工学部
+
+On 2015/03/13 18:46, 青木 淳 wrote:
+> 簡単には二つの方法があると思います。
+>
+> 【selfを用いる方法：ageがselfになってしまいますが、簡便です。】
+>
+>      | age aString aBoolean |
+>      age := 7.
+>      aString := '10 > self'.
+>      aBoolean := Compiler
+>                  evaluate: aString
+>                  for: age
+>                  logged: true.
+>      ^ aBoolean
+>
+> 【thisContextを用いる方法：実行している文脈を引き継いで評価します。】
+>
+>      | age aString aBoolean |
+>      age := 7.
+>      aString := '10 > age'.
+>      aBoolean := Compiler new
+>                  evaluate: aString
+>                  in: thisContext
+>                  to: self
+>                  notifying: nil
+>                  ifFail: [^ #failedDoit].
+>      ^ aBoolean
+>
+> 以上、速攻レスポンスでした。
+>
+> --- 青木淳＠京都産業大学コンピュータ理工学部
+>
+> On 2015/03/13 17:54, Squeak wrote:
+>> まだ春の気配のない北海道です。
+>>
+>> aにストリングを代入します。
+>> a := ’10 > age’
+>> このストリングをストリングとしてではなくて、式( 10 > age )として評価する方法を教えていただければ助かります。
+>> a asContext　かと思ったのですが、違うようです。
+>> as*を検索しましたが、よくわかりませんでした。
+>> よろしくお願いします。
+>>
+>> NEZ.CheshireNEKO.Squeak
+>> CheshireNEKO Company
+>> squeak ＠ cheshireneko.com <mailto:squeak ＠ cheshireneko.com>
+>
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Fri Mar 13 18:46:26 2015
+From: atsushi ＠ cc.kyoto-su.ac.jp (青木 淳)
+Date: Fri, 13 Mar 2015 18:46:26 +0900
+Subject: [SML 8115] Re:
+ stringを評価可能オブジェクトに変更する方法について
+In-Reply-To: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+References: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+Message-ID: <5502B1F2.1050607@cc.kyoto-su.ac.jp>
+
+エハテア、ヒ、マニト、ホハ，♢△襪隼廚い泙后
+【selfを用いる方法：ageがselfになってしまいますが、簡便です。】
+
+	| age aString aBoolean |
+	age := 7.
+	aString := '10 > self'.
+	aBoolean := Compiler
+				evaluate: aString
+				for: age
+				logged: true.
+	^ aBoolean
+
+【thisContextを用いる方法：実行している文脈を引き継いで評価します。】
+
+	| age aString aBoolean |
+	age := 7.
+	aString := '10 > age'.
+	aBoolean := Compiler new
+				evaluate: aString
+				in: thisContext
+				to: self
+				notifying: nil
+				ifFail: [^ #failedDoit].
+	^ aBoolean
+
+以上、速攻レスポンスでした。
+
+--- 青木淳＠京都産業大学コンピュータ理工学部
+
+On 2015/03/13 17:54, Squeak wrote:
+> まだ春の気配のない北海道です。
+>
+> aにストリングを代入します。
+> a := ’10 > age’
+> このストリングをストリングとしてではなくて、式( 10 > age )として評価する方法を教えていただければ助かります。
+> a asContext　かと思ったのですが、違うようです。
+> as*を検索しましたが、よくわかりませんでした。
+> よろしくお願いします。
+>
+> NEZ.CheshireNEKO.Squeak
+> CheshireNEKO Company
+> squeak ＠ cheshireneko.com <mailto:squeak ＠ cheshireneko.com>
+
+From nodas ＠ mwa.biglobe.ne.jp  Fri Mar 13 18:20:39 2015
+From: nodas ＠ mwa.biglobe.ne.jp (Shinichi Noda)
+Date: Fri, 13 Mar 2015 18:20:39 +0900
+Subject: [SML 8116] Re:
+ stringを評価可能オブジェクトに変更する方法について
+In-Reply-To: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+References: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+Message-ID: <5502ABE7.4000304@mwa.biglobe.ne.jp>
+
+
+Compiler evaluate: '10 > age'
+
+、キ、ォ、キ、ウ、譴世悲geが何かわからないので多分エラーがでます。
+ageをグローバル変数にしてどこからでも見えるようにすればいいと思います。
+
+On 2015/03/13 17:54, Squeak wrote:
+> まだ春の気配のない北海道です。
+>
+> aにストリングを代入します。
+> a := ’10 > age’
+> このストリングをストリングとしてではなくて、式( 10 > age )として評価す 
+> る方法を教えていただければ助かります。
+> a asContext　かと思ったのですが、違うようです。
+> as*を検索しましたが、よくわかりませんでした。
+> よろしくお願いします。
+>
+> NEZ.CheshireNEKO.Squeak
+> CheshireNEKO Company
+> squeak ＠ cheshireneko.com <mailto:squeak ＠ cheshireneko.com>
+>
+>
+>
+>
+>
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20150313/b3d65496/attachment.html>
+
+From squeak ＠ cheshireneko.com  Fri Mar 13 19:07:42 2015
+From: squeak ＠ cheshireneko.com (Squeak)
+Date: Fri, 13 Mar 2015 19:07:42 +0900
+Subject: [SML 8117] Re:
+ stringを評価可能オブジェクトに変更する方法について
+In-Reply-To: <5502B1F2.1050607@cc.kyoto-su.ac.jp>
+References: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+ <5502B1F2.1050607@cc.kyoto-su.ac.jp>
+Message-ID: <2F1ADDA9-A7E9-40FE-92A5-F876003FAB6E@cheshireneko.com>
+
+青フレタ霏ク。「チ盞゛、ホハヨソョ、「、熙ャ、ネ、ヲ、エ、カ、、、゛、キ、ソ。」
+テメニノ、オ、サ、ニトコ、、、ニ、ェ、熙゛、ケ。」
+
+チ眥ョサ釥キ、ニ、゜、ソ、、、ネサラ、、、゛、ケ。」
+
+
+> 2015/03/13 18:46。「タトフレ ス゜ <atsushi 。cc.kyoto-su.ac.jp> のメール：
+> 
+> 簡単には二つの方法があると思います。
+> 
+> 【selfを用いる方法：ageがselfになってしまいますが、簡便です。】
+> 
+> 	| age aString aBoolean |
+> 	age := 7.
+> 	aString := '10 > self'.
+> 	aBoolean := Compiler
+> 				evaluate: aString
+> 				for: age
+> 				logged: true.
+> 	^ aBoolean
+> 
+> 【thisContextを用いる方法：実行している文脈を引き継いで評価します。】
+> 
+> 	| age aString aBoolean |
+> 	age := 7.
+> 	aString := '10 > age'.
+> 	aBoolean := Compiler new
+> 				evaluate: aString
+> 				in: thisContext
+> 				to: self
+> 				notifying: nil
+> 				ifFail: [^ #failedDoit].
+> 	^ aBoolean
+> 
+> 以上、速攻レスポンスでした。
+> 
+> --- 青木淳＠京都産業大学コンピュータ理工学部
+> 
+> On 2015/03/13 17:54, Squeak wrote:
+>> まだ春の気配のない北海道です。
+>> 
+>> aにストリングを代入します。
+>> a := ’10 > age’
+>> このストリングをストリングとしてではなくて、式( 10 > age )として評価する方法を教えていただければ助かります。
+>> a asContext　かと思ったのですが、違うようです。
+>> as*を検索しましたが、よくわかりませんでした。
+>> よろしくお願いします。
+>> 
+>> NEZ.CheshireNEKO.Squeak
+>> CheshireNEKO Company
+>> squeak ＠ cheshireneko.com <mailto:squeak ＠ cheshireneko.com>
+
+NEZ.CheshireNEKO.Squeak
+CheshireNEKO Company
+squeak ＠ cheshireneko.com
+
+
+
+
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20150313/5aa2ee4b/attachment-0001.html>
+
+From squeak ＠ cheshireneko.com  Sat Mar 14 08:22:49 2015
+From: squeak ＠ cheshireneko.com (Squeak)
+Date: Sat, 14 Mar 2015 08:22:49 +0900
+Subject: [SML 8118] Re:
+ stringを評価可能オブジェクトに変更する方法について
+In-Reply-To: <5502ABE7.4000304@mwa.biglobe.ne.jp>
+References: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+ <5502ABE7.4000304@mwa.biglobe.ne.jp>
+Message-ID: <681FAEEA-4FDC-4159-AEC3-71D820EDCBAA@cheshireneko.com>
+
+、エサリナヲ、「、熙ャ、ネ、ヲ、エ、カ、、、゛、ケ。」
+
+コ」トォ。「シツコン、ヒニー、ォ、キ、ニ、゜、ソ、ネ、ウ、悅「ホセハζ阿茲Δ任后
+NEZ.CheshireNEKO.Squeak
+CheshireNEKO Company
+squeak ＠ cheshireneko.com
+
+
+
+
+
+> 2015/03/13 18:20、Shinichi Noda <nodas ＠ mwa.biglobe.ne.jp> のメール：
+> 
+> 
+> Compiler evaluate: '10 > age'
+> 
+> しかしこれだとageが何かわからないので多分エラーがでます。
+> ageをグローバル変数にしてどこからでも見えるようにすればいいと思います。
+> 
+> On 2015/03/13 17:54, Squeak wrote:
+>> まだ春の気配のない北海道です。
+>> 
+>> aにストリングを代入します。
+>> a := ’10 > age’
+>> このストリングをストリングとしてではなくて、式( 10 > age )として評価する方法を教えていただければ助かります。
+>> a asContext　かと思ったのですが、違うようです。
+>> as*を検索しましたが、よくわかりませんでした。
+>> よろしくお願いします。
+>> 
+>> NEZ.CheshireNEKO.Squeak
+>> CheshireNEKO Company
+>> squeak ＠ cheshireneko.com <mailto:squeak ＠ cheshireneko.com>
+>> 
+>> 
+>> 
+>> 
+>> 
+> 
+
+
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <http://www.smalltalk.jp/pipermail/sml/attachments/20150314/8b1e312a/attachment.html>
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Mar 14 09:36:27 2015
+From: atsushi ＠ cc.kyoto-su.ac.jp (青木 淳)
+Date: Sat, 14 Mar 2015 09:36:27 +0900
+Subject: [SML 8119] Re:
+ stringを評価可能オブジェクトに変更する方法について
+In-Reply-To: <681FAEEA-4FDC-4159-AEC3-71D820EDCBAA@cheshireneko.com>
+References: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+ <5502ABE7.4000304@mwa.biglobe.ne.jp>
+ <681FAEEA-4FDC-4159-AEC3-71D820EDCBAA@cheshireneko.com>
+Message-ID: <5503828B.3040109@cc.kyoto-su.ac.jp>
+
+、ェ、マ、隍ヲ、エ、カ、、、゛、ケ。「タトフレ、ヌ、ケ。」
+
+On 2015/03/13 19:07, Squeak wrote:
+ > タトフレタ霏ク。「チ盞゛、ホハヨソョ、「、熙ャ、ネ、ヲ、エ、カ、、、゛、キ、ソ。」
+ > テメニノ、オ、サ、ニトコ、、、ニ、ェ、熙゛、ケ。」
+ > チ眥ョサ釥キ、ニ、゜、ソ、、、ネサラ、、、゛、ケ。」
+
+タロテ釥ノ、ヌ、、、ソ、タ、ュトヒ、゜ニ蠅泙后
+On 2015/03/14 8:22, Squeak wrote:
+ > ご指摘ありがとうございます。
+ > 今朝、実際に動かしてみたところ、両方共動くようです。
+
+それは、それは、良かった、幸いでした。
+
+Smalltalk（Squeakでも、VisualWorksでも、…）において、メッセ
+ージの本体（メソッド）を探す出すには、大別するとふた通りある
+と存じます。
+
+一つ目は、メッセージ名を推測して、メッセージとその本体である
+メソッドを探し出す方法です。（squeak ＠ cheshireneko.comさんが
+用いた方法になります。）
+
+二つ目は、レシーバであるオブジェクトを頼りにして、メッセージ
+とその本体であるメソッドを探し出す方法です。
+
+今回、私は二つ目の方法を用いました。文字列を評価して結果を出
+しているオブジェクトの代表格は、あらゆるエディタの代表格であ
+る「ParagraphEditor」、そして、「Debugger」になります。また、
+「Inspector」がありましょう。それらが共通して発信しているメッ
+セージを探すのです。きっと「評価【evaluate】」しているにちが
+いない！と。
+
+すると、以下のものたちが見つかります。あとは、これらの実装者
+をブラウズするだけですよね。
+
+#evaluate:in:to:notifying:ifFail:logged:
+#evaluateSelection
+#evaluateSelectionAndDo:
+#evaluate:in:to:notifying:ifFail:
+#evaluate:in:to:
+
+以上、速攻の指南でした。お役に立つならば幸いです。
+
+--- 青木淳＠以下に二つ目の方法のプログラムを添えておきます。
+
+	| collectionOfClasses aSet aCollection |
+	collectionOfClasses := OrderedCollection new.
+	collectionOfClasses add: ParagraphEditor.
+	collectionOfClasses add: Debugger.
+	collectionOfClasses add: Inspector.
+	aSet := Set new.
+	collectionOfClasses
+		do: [:aClass | aClass
+				methodsDo: [:aMethod | aMethod
+						messagesDo: [:aMessage | aSet add: aMessage]]].
+	aCollection := aSet
+				select: [:aMessage | 'evaluate*' match: aMessage asString].
+	Transcript clear.
+	aCollection
+		do: [:aMessage | Transcript cr; show: aMessage printString].
+	^ aCollection
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Sat Mar 14 10:30:47 2015
+From: atsushi ＠ cc.kyoto-su.ac.jp (青木 淳)
+Date: Sat, 14 Mar 2015 10:30:47 +0900
+Subject: [SML 8120] Re:
+ stringを評価可能オブジェクトに変更する方法について
+In-Reply-To: <5503828B.3040109@cc.kyoto-su.ac.jp>
+References: <AC0996D9-B596-428A-BC91-C781734092EE@cheshireneko.com>
+ <5502ABE7.4000304@mwa.biglobe.ne.jp>
+ <681FAEEA-4FDC-4159-AEC3-71D820EDCBAA@cheshireneko.com>
+ <5503828B.3040109@cc.kyoto-su.ac.jp>
+Message-ID: <55038F47.6040101@cc.kyoto-su.ac.jp>
+
+・皈ス・テ・ノ・ヨ・鬣ヲ・カ、ォ、ッ、隍ヲ、ヒイ韻靴討澆泙靴拭
+	| aString aCollection aSet |
+	aString := 'evaluate*'.
+	aCollection := OrderedCollection new.
+	aCollection add: ParagraphEditor.
+	aCollection add: Debugger.
+	aCollection add: Inspector.
+	aSet := Set new.
+	aCollection
+		do: [:aClass | aClass
+				methodsDo: [:aMethod | aMethod
+						messagesDo: [:aMessage | aSet add: aMessage]]].
+	aCollection := aSet select: [:aMessage | aString match: aMessage asString].
+	Transcript clear.
+	aCollection
+		do: [:aMessage |
+			Transcript cr; show: aMessage printString.
+			SystemNavigation default browseAllImplementorsOf: aMessage].
+	^ aCollection
+
+--- 青木淳
+
+On 2015/03/14 9:36, 青木 淳 wrote:
+> おはようございます、青木です。
+>
+> On 2015/03/13 19:07, Squeak wrote:
+>  > 青木先生、早急の返信ありがとうございました。
+>  > 著書を拝読させて頂いております。
+>  > 早速試してみたいと思います。
+>
+> 拙著作を読んでいただき痛み入ります。
+>
+> On 2015/03/14 8:22, Squeak wrote:
+>  > ご指摘ありがとうございます。
+>  > 今朝、実際に動かしてみたところ、両方共動くようです。
+>
+> それは、それは、良かった、幸いでした。
+>
+> Smalltalk（Squeakでも、VisualWorksでも、…）において、メッセ
+> ージの本体（メソッド）を探す出すには、大別するとふた通りある
+> と存じます。
+>
+> 一つ目は、メッセージ名を推測して、メッセージとその本体である
+> メソッドを探し出す方法です。（squeak ＠ cheshireneko.comさんが
+> 用いた方法になります。）
+>
+> 二つ目は、レシーバであるオブジェクトを頼りにして、メッセージ
+> とその本体であるメソッドを探し出す方法です。
+>
+> 今回、私は二つ目の方法を用いました。文字列を評価して結果を出
+> しているオブジェクトの代表格は、あらゆるエディタの代表格であ
+> る「ParagraphEditor」、そして、「Debugger」になります。また、
+> 「Inspector」がありましょう。それらが共通して発信しているメッ
+> セージを探すのです。きっと「評価【evaluate】」しているにちが
+> いない！と。
+>
+> すると、以下のものたちが見つかります。あとは、これらの実装者
+> をブラウズするだけですよね。
+>
+> #evaluate:in:to:notifying:ifFail:logged:
+> #evaluateSelection
+> #evaluateSelectionAndDo:
+> #evaluate:in:to:notifying:ifFail:
+> #evaluate:in:to:
+>
+> 以上、速攻の指南でした。お役に立つならば幸いです。
+>
+> --- 青木淳＠以下に二つ目の方法のプログラムを添えておきます。
+>
+>      | collectionOfClasses aSet aCollection |
+>      collectionOfClasses := OrderedCollection new.
+>      collectionOfClasses add: ParagraphEditor.
+>      collectionOfClasses add: Debugger.
+>      collectionOfClasses add: Inspector.
+>      aSet := Set new.
+>      collectionOfClasses
+>          do: [:aClass | aClass
+>                  methodsDo: [:aMethod | aMethod
+>                          messagesDo: [:aMessage | aSet add: aMessage]]].
+>      aCollection := aSet
+>                  select: [:aMessage | 'evaluate*' match: aMessage asString].
+>      Transcript clear.
+>      aCollection
+>          do: [:aMessage | Transcript cr; show: aMessage printString].
+>      ^ aCollection
+>
+>
+
+From ume ＠ softumeya.com  Tue Mar 17 23:58:15 2015
+From: ume ＠ softumeya.com (Masashi Umezawa)
+Date: Tue, 17 Mar 2015 23:58:15 +0900
+Subject: [SML 8121]
+	第74回Smalltalk勉強会のお知らせ
+Message-ID: <CAH3eEdSk1QoVMcvwr+kuqc2aBtq7Nd9zpJFmKOr_TOzGzAKXfw@mail.gmail.com>
+
+こんにちは
+梅澤です。
+
+定例のSmalltalk勉強会のお知らせです。
+
+日時: 2015/3/30(月) 19:00-21:00 (2時間)
+場所: シンコム・システムズ・ジャパン株式会社
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai74kaismalltalkbenkyoukai
+
+今回は「春のGemStoneまつり」です。以前にも取り上げたことがありますが、GemStone/Sについてビューポイントテクノロジーの林さんがお話されます。
+GemStoneは永続オブジェクトがサーバ側で生きたまま存在している本物のOODBです。きっと興味深い話が聞けることでしょう。
+
+事前申し込みは不要です。お気軽にお越しください。
+-- 
+"SoftUmeYa, LLC"
+[:masashi | ^umezawa]
+

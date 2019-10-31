@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7814] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207814%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVidW50dSAxMC4wNExUUxskQiRHGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FSnVuGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkLEk9PCgkNSRsGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kNyQ/GyhC%3F%3D&In-Reply-To=4C03AFC9.9000806%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="007815.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7814] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました</H1>
+    <B>hirowadenden</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207814%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFVidW50dSAxMC4wNExUUxskQiRHGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FSnVuGyRCJE4bKEJPcGVuR0wgZXhhbXBsZXMbJEIkLEk9PCgkNSRsGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJF4kNyQ/GyhC%3F%3D&In-Reply-To=4C03AFC9.9000806%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7814] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました">hirowadenden ＠ hera.eonet.ne.jp
+       </A><BR>
+    <I>2010年 6月  1日 (火) 20:00:52 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="007815.html">[SML 7815] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7814">[ 日付 ]</a>
+              <a href="thread.html#7814">[ スレッド ]</a>
+              <a href="subject.html#7814">[ 件名 ]</a>
+              <a href="author.html#7814">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ハンドル名で失礼します、hirowadendenと申します。
+
+(2010年05月31日 21:47), AOKI Atsushi wrote:
+&gt;<i> (10/05/31 21:33), hirowadenden wrote:
+</I>&gt;&gt;<i> ベンチマークで表示されたViewfinder(an ApplicationWindow)に対して
+</I>&gt;&gt;<i> メッセージcompleteContentsOfArea: aRectangleを(aRectangleを変えながら)
+</I>&gt;&gt;<i> 送ってみました。
+</I>&gt;&gt;<i> ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されていない
+</I>&gt;&gt;<i> 場合は、指定した領域の画像(a Depth32Image)が返ってきました。
+</I>&gt;&gt;<i> ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+</I>&gt;&gt;<i> 領域と重なる場合は、incompleteAreaCopySignalが発生しました。
+</I>&gt;<i> 
+</I>&gt;<i> この現象は、かつて私も遭遇したことがあります。
+</I>&gt;<i> 遠い昔、マックの仮想マシンでも同様でした。
+</I>
+上記の動作は予想される結果であるように思ったのですが、違うのでしょうか?
+　ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されていない
+場合、指定した領域の画像が得られるのは正常時の正しい動作である(これは
+合っていますよね?)。
+　ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+領域と重なる場合、隠されている部分の画像データがdamagedになっており
+完全な画像内容を取得出来ないので、incompleteAreaCopySignalが発生するのだと
+思いました(これが間違っているのですね?)。
+
+報告した結果に、ちょっと自信がなくなったので、もう少し調べたところ、使用する
+window managerにより結果が変わることが分かりました。今使用しているGNOME
+desktopには、軽量の'metacity'と、OpenGLを使ってdesktopに効果をつける
+'compiz'という二つのwindow managerがあるようです。
+'metacity'を使った場合は前回報告した上記のような結果になります。
+'compiz'を使った場合、メッセージcompleteContentsOfArea: aRectangleは
+ViewfinderのaRectangleで指定した領域が、他のウインドウなどで隠されている
+どうかにかかわらず指定した領域の画像(a Depth32Image)を返します。
+'compiz'の場合の動作が正しいと考えてよいのでしょうか?
+
+また、window managerに'metacity','compiz'のいずれを使った場合でも
+JunBenchmark new show3dObjectは&lt;primitive: 1102&gt;がfailedの
+Exceptionになります。
+
+-- hirowadenden
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="007815.html">[SML 7815] Re: Ubuntu 10.04LTSでJunのOpenGL examplesが表示されました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7814">[ 日付 ]</a>
+              <a href="thread.html#7814">[ スレッド ]</a>
+              <a href="subject.html#7814">[ 件名 ]</a>
+              <a href="author.html#7814">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

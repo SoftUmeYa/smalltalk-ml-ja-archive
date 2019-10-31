@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3395] Re: 教育用ＰＣ リナックスで再生
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203395%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=20070130.210847.00806777.okumura%40edu.mie-u.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003393.html">
+   <LINK REL="Next"  HREF="003394.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3395] Re: 教育用ＰＣ リナックスで再生</H1>
+    <B>Kuniyasu Suzaki</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203395%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQjY1MGlNUSNQI0MbKEIg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJWolSiVDJS8lOSRHOkZAOBsoQg%3D%3D%3F%3D&In-Reply-To=20070130.210847.00806777.okumura%40edu.mie-u.ac.jp"
+       TITLE="[Squeak-ja: 3395] Re: 教育用ＰＣ リナックスで再生">k.suzaki ＠ aist.go.jp
+       </A><BR>
+    <I>2007年 1月 31日 (水) 14:32:43 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003393.html">[Squeak-ja: 3393] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+        <LI>次の記事 <A HREF="003394.html">[Squeak-ja: 3394] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3395">[ 日付 ]</a>
+              <a href="thread.html#3395">[ スレッド ]</a>
+              <a href="subject.html#3395">[ 件名 ]</a>
+              <a href="author.html#3395">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+須崎です。
+
+ &gt;&gt;From: Haruhiko Okumura &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">okumura ＠ edu.mie-u.ac.jp</A>&gt;
+ &gt;&gt;Subject: [Squeak-ja: 3393] Re: 教育用ＰＣ リナックスで再生
+ &gt;&gt;
+ &gt;&gt;奥村です。
+ &gt;&gt;
+ &gt;&gt;&quot;ひでたん&quot; &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hidetan ＠ gmail.com</A>&gt; wrote:
+ &gt;&gt;
+ &gt;&gt;&gt; 圧縮アルゴリズムを変更(zlib -&gt; libbzip2)した，cloop を試してみたのです
+ &gt;&gt;&gt; が，伸長時間が長くなりアプリケーションの起動に時間を要してしまうように
+ &gt;&gt;&gt; なってしまいました．その時は，とりあえず実装しやすさと圧縮率優先で，
+ &gt;&gt;&gt; libbzip2 を使いました．
+ &gt;&gt;&gt; 
+ &gt;&gt;&gt; 今の cloop は LZMA を使っているので，圧縮にかなり時間を要しますが，圧
+ &gt;&gt;&gt; 縮率と伸長時間のパフォーマンスは良くなっているようです．
+ &gt;&gt;
+ &gt;&gt;今はLZMAを使っているのですか。存じませんでした。それならたぶんパフォー
+ &gt;&gt;マンスも考えてベストな選択だと思います。
+
+ちょっと毛色が違うのですが、組み込み用 HTTP-FUSE CLOOP を先々週の 
+Linux Conference Australia で（代理）発表してきました。
+   &quot;HTTP-FUSE CLOOP with Software RAID and DNS-Balance for Embedded Linux&quot;
+    Jun Kanai, Kuniyasu Suzaki, Toshiki Yagi, Mitaro Namiki
+    <A HREF="http://lca2007.linux.org.au/talk/171">http://lca2007.linux.org.au/talk/171</A>
+    スライド資料 <A HREF="http://unit.aist.go.jp/itri/knoppix/20070118-LCA-HTTP-FUSE.pdf">http://unit.aist.go.jp/itri/knoppix/20070118-LCA-HTTP-FUSE.pdf</A>
+
+HTTP-FUSE CLOOP とは CLOOP のように１ファイルに固めるのではなく、256KB 
+毎に切ったブロック毎にファイルの圧縮保存し、ドライバが必要に応じて該当
+ファイルをHTTPでダウンロード／展開するものです。
+
+これをストレージが小さい組み込み機器に適用する話ですが、組み込みでは 
+CPU(SH4, ARM が遅いので圧縮を LZO あるいは無圧縮にした方が効率的であ
+る話をしてきました。
+
+これの日本語の発表はCELF(Consumer Electronics Linux Forum )にあります。
+    <A HREF="http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree12">http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree12</A>
+    スライド資料
+    <A HREF="http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree12?action=AttachFile&amp;amp;do=get&amp;amp;target=Kanai_CELF.pdf">http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree12?action=AttachFile&amp;amp;do=get&amp;amp;target=Kanai_CELF.pdf</A>
+
+ちなみに丹さん（お久しぶり:-）の件は下記の論文に詳しい記述があります。
+   ブロックソート法を用いた圧縮ループバックブロックデバイスの実装と評価
+   <A HREF="http://www.alpha.co.jp/biz/products/knoppix/download/paper/IPSJ_2005_03_paper.pdf">http://www.alpha.co.jp/biz/products/knoppix/download/paper/IPSJ_2005_03_paper.pdf</A>
+
+P.S.
+このMLではオフトプですね。_o_
+------
+suzaki
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003393.html">[Squeak-ja: 3393] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+	<LI>次の記事 <A HREF="003394.html">[Squeak-ja: 3394] Re: 教育用ＰＣ リナックスで再生
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3395">[ 日付 ]</a>
+              <a href="thread.html#3395">[ スレッド ]</a>
+              <a href="subject.html#3395">[ 件名 ]</a>
+              <a href="author.html#3395">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

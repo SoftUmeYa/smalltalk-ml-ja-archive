@@ -1,0 +1,724 @@
+From aoki ＠ sra.co.jp  Mon Dec 11 10:54:18 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7241] 日本語を扱えるようにするプログラムについて
+Message-ID: <457CBA4A.7010608@sra.co.jp>
+
+青木です。
+
+日経ソフトウエアの連載が始まって、VisualWorks 7,4,1 NC + Jun
+705 を入手された方々も多かろうと思います。母体が英語版ですの
+で、日本語を扱うことができませんが、私のところには、Jpl と呼
+ばれるプログラムがあり、日本語を扱うことができます。
+
+最新バージョンは、Jpl017 で、VisualWorks NC の中に標準で含ま
+れているインプットマネージャ（UI.WindowsInputManager）を改良
+して、日本語入力ができるようにしています。
+
+入力ウィンドウが下部に開く方式です。インライン入力はできませ
+んが、シンコム・システムズ・ジャパンの日本語化プログラムに抵
+触することはありません。ですからフリーソフトウェアおよびオー
+プンソースソフトウェアとして出すことができます。
+
+次期の VisualWorks 7.5 NC + Windows Vista（ベータ2）でも動作
+することを確認しています。たぶん UI.X11InputManager を改良す
+ることで、Linux や Mac OS X でも、日本語を扱えるのではないか
+と思います。（まだ着手していませんが…）
+
+このメーリングリストで VisualWorks NC のためのオープン（また
+はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+関して、皆さんのご意見をお願いします。
+
+「ぜひ、出してほしい」「いままで通りでよい」「商売の邪魔にな
+るので、出さないで」など、忌憚のないところをお知らせください。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From umejava ＠ mars.dti.ne.jp  Mon Dec 11 13:14:01 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7242] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457CBA4A.7010608@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+Message-ID: <JT200612111314016.1704000@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+> このメーリングリストで VisualWorks NC のためのオープン（また
+> はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+> 関して、皆さんのご意見をお願いします。
+> 
+> 「ぜひ、出してほしい」「いままで通りでよい」「商売の邪魔にな
+> るので、出さないで」など、忌憚のないところをお知らせください。
+> 
+
+ぜひぜひ、出していただければと思います。
+
+現在公開中のJpLocaleも、もはや最新のVWではまともに動かなくなっています。
+http://swikis.ddo.jp/umejava/5
+
+そのため、フリーのSmalltalk環境で日本語を扱おうとすると、現状はSqueakに
+選択肢が限られてしまっていました。
+
+Squeakも良いのですが、VisualWorksには、Squeakとは違った魅力が多くあります。
+実行速度が速く、堅牢で、外部世界との接続(COM, CORBA, SOAPなど)がしやすい、
+そんなSmalltalkもあるということを、広く世に知らしめるべきではないでしょうか。
+
+コミュニティとしては間違いなくプラスでしょうし、コミュニティが育てば
+商用の話もきっと増えてくると思います。
+
+---
+[:masashi | ^umezawa]
+
+From aoki ＠ sra.co.jp  Mon Dec 11 13:20:54 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7243] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <JT200612111314016.1704000@mars.dti.ne.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+	<JT200612111314016.1704000@mars.dti.ne.jp>
+Message-ID: <457CDCA6.9080506@sra.co.jp>
+
+Masashi Umezawa wrote:
+> ぜひぜひ、出していただければと思います。
+
+フォローをありがとうございます。梅澤さんの言、痛み入りました。
+
+メーリングリストのような公？の場で物を言うのをはばかるという
+方々は、下記の回答用紙をご利用ください。（お名前およびメール
+アドレスを必ず伏せさせていただきますので。）
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+以下の部分を埋めて「aoki@sra.co.jp 」までご返送ください。
+
+------------------------------------------------------------
+【日本語を扱えるようにするプログラムの公開について】
+
+　　□賛成
+　　□反対
+
+  　■ご意見・ご要望などありましたら、以下にお書きください。
+  　
+
+------------------------------------------------------------
+
+
+
+From masuda ＠ im.dendai.ac.jp  Mon Dec 11 13:26:12 2006
+From: masuda ＠ im.dendai.ac.jp (Hidetaka MASUDA)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7244] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457CBA4A.7010608@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+Message-ID: <200612111326.CHH17669.EBBNTV@im.dendai.ac.jp>
+
+増田＠電大です。
+
+"[SML 7241] 日本語を扱えるようにするプログラムについて" において、
+"AOKI Atsushi <aoki@sra.co.jp>"さんは書きました：
+
+> このメーリングリストで VisualWorks NC のためのオープン（また
+> はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+> 関して、皆さんのご意見をお願いします。
+> 
+> 「ぜひ、出してほしい」「いままで通りでよい」「商売の邪魔にな
+> るので、出さないで」など、忌憚のないところをお知らせください。
+
+是非出して欲しいと思います。学生は日本語が扱えないと冷たいです。できれ
+ば最初からイメージ内に入っていてくれるとさらにうれしいです。
+
+------
+〒101-8457 東京電機大学 工学部 情報メディア学科  増田 英孝
+E-mail: masuda@im.dendai.ac.jp            TEL 03-5280-3551
+http://www.cdl.im.dendai.ac.jp/%7emasuda/ FAX 03-5280-3592
+It's more fun to compute!
+
+From shin-sahara ＠ kuzo.csk.com  Mon Dec 11 14:12:40 2006
+From: shin-sahara ＠ kuzo.csk.com (佐原 伸)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7245] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457CBA4A.7010608@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+Message-ID: <AD8C6A9C-FA64-448E-A971-F28B5977361A@kuzo.csk.com>
+
+佐原です。
+
+On 2006/12/11, at 10:54, AOKI Atsushi wrote:
+
+> 青木です。
+>
+> 日経ソフトウエアの連載が始まって、VisualWorks 7,4,1 NC + Jun
+> 705 を入手された方々も多かろうと思います。母体が英語版ですの
+> で、日本語を扱うことができませんが、私のところには、Jpl  
+> と呼
+> ばれるプログラムがあり、日本語を扱うことができます。
+>
+> 最新バージョンは、Jpl017 で、VisualWorks NC の中に 
+> 標準で含ま
+> れているインプットマネージャ（UI.WindowsInputManager）を 
+> 改良
+> して、日本語入力ができるようにしています。
+>
+> 入力ウィンドウが下部に開く方式です。インライン入力はできませ
+> んが、シンコム・システムズ・ジャパンの日本語化プログラムに抵
+> 触することはありません。ですからフリーソフトウェアおよびオー
+> プンソースソフトウェアとして出すことができます。
+>
+> 次期の VisualWorks 7.5 NC + Windows Vista（ベータ 
+> 2）でも動作
+> することを確認しています。たぶん UI.X11InputManager を改 
+> 良す
+> ることで、Linux や Mac OS X でも、日本語を扱えるの 
+> ではないか
+> と思います。（まだ着手していませんが…）
+>
+> このメーリングリストで VisualWorks NC のためのオープン 
+> （また
+> はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+> 関して、皆さんのご意見をお願いします。
+>
+> 「ぜひ、出してほしい」「いままで通りでよい」「商売の邪魔にな
+> るので、出さないで」など、忌憚のないところをお知らせください。
+
+「ぜひ、出してほしい」ですね。
+日本語が識別子として使えるVDM-SL, VDM++という形式仕様記述 
+言語で書いた仕様をCORBAサーバーとして動かすことができるの 
+で、VisualWorksでクライアント側のGUIを記述すると、プ 
+ロトタイピングツールとして使えるのではないかと考えているからです。
+
+仕様はVDM、実装はSmalltalkというのはマンチェスター大 
+学の流儀ですが、最近は廃れているみたいで、復活させたいなと思って 
+います。
+
+ところで、日本語しか入力できないんですか？
+最近は、ハングルでもタッチタイプできるようになったので、ハングル 
+でも入力したいんですが... :-)
+
+	95kg
+
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+
+------------------------------------------------------------------------
+Shin Sahara
+Executive General Manager for VDM
+Telecommunications Group
+CSK Systems Corporation
+E-Mail: ss@shinsahara.com(I can read anywhere), sahara@csk-inet.or.jp  
+(I can read in CSK only)
+Phone: +81-3-6901-5104
+Fax: +81-3-6901-5111
+Mobile: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+
+
+From kubota ＠ sie.dendai.ac.jp  Mon Dec 11 15:01:50 2006
+From: kubota ＠ sie.dendai.ac.jp (久保田 吉彦)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7246] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457CBA4A.7010608@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+Message-ID: <A9C6CBEC-6A22-4D28-BAE5-6B76952884F3@sie.dendai.ac.jp>
+
+久保田@電大と申します。
+
+日本語が扱えないと学生が拒否反応を示するので、
+アカデミックライセンスの購入を考えていましたが高いのであきらめて 
+いた所です。
+
+是非、出して頂けませんか。
+
+久保田吉彦
+東京電機大学 情報環境学部 情報環境学科
+
+On 2006/12/11, at 10:54, AOKI Atsushi wrote:
+
+> 青木です。
+>
+> 日経ソフトウエアの連載が始まって、VisualWorks 7,4,1 NC + Jun
+> 705 を入手された方々も多かろうと思います。母体が英語版ですの
+> で、日本語を扱うことができませんが、私のところには、Jpl  
+> と呼
+> ばれるプログラムがあり、日本語を扱うことができます。
+>
+> 最新バージョンは、Jpl017 で、VisualWorks NC の中に 
+> 標準で含ま
+> れているインプットマネージャ（UI.WindowsInputManager）を 
+> 改良
+> して、日本語入力ができるようにしています。
+>
+> 入力ウィンドウが下部に開く方式です。インライン入力はできませ
+> んが、シンコム・システムズ・ジャパンの日本語化プログラムに抵
+> 触することはありません。ですからフリーソフトウェアおよびオー
+> プンソースソフトウェアとして出すことができます。
+>
+> 次期の VisualWorks 7.5 NC + Windows Vista（ベータ 
+> 2）でも動作
+> することを確認しています。たぶん UI.X11InputManager を改 
+> 良す
+> ることで、Linux や Mac OS X でも、日本語を扱えるの 
+> ではないか
+> と思います。（まだ着手していませんが…）
+>
+> このメーリングリストで VisualWorks NC のためのオープン 
+> （また
+> はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+> 関して、皆さんのご意見をお願いします。
+>
+> 「ぜひ、出してほしい」「いままで通りでよい」「商売の邪魔にな
+> るので、出さないで」など、忌憚のないところをお知らせください。
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From takaoki ＠ aisoft.co.jp  Mon Dec 11 15:09:38 2006
+From: takaoki ＠ aisoft.co.jp (takaoki@aisoft.co.jp)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7247] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: Your message of "Mon, 11 Dec 2006 13:26:12 JST."
+	<200612111326.CHH17669.EBBNTV@im.dendai.ac.jp> 
+Message-ID: <200612110609.PAA15637@basashi.aisoft.co.jp>
+
+成田@エプソンです。
+
+In message <200612111326.CHH17669.EBBNTV@im.dendai.ac.jp>you write:
+>増田＠電大です。
+>
+>"[SML 7241] 日本語を扱えるようにするプログラムについて" において、
+>"AOKI Atsushi <aoki@sra.co.jp>"さんは書きました：
+>
+>> このメーリングリストで VisualWorks NC のためのオープン（また
+>> はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+>> 関して、皆さんのご意見をお願いします。
+>> 
+>> 「ぜひ、出してほしい」「いままで通りでよい」「商売の邪魔にな
+>> るので、出さないで」など、忌憚のないところをお知らせください。
+
+私も是非出して欲しいです。
+
+>是非出して欲しいと思います。学生は日本語が扱えないと冷たいです。できれ
+>ば最初からイメージ内に入っていてくれるとさらにうれしいです。
+
+学生でなくてもちょっとしたツール作成でも日本語を入出力できないと
+いうのはネックです。なので最近はこの手の自家製ツールはほとんど
+Common Lisp で作っちゃってます。
+
+できればやっぱり VisualWorks で作りたいのですが、仕事を楽にする
+簡易なツールを作るのに日本語化と格闘はしたくないし、工数が捻出で
+きないし・・・で使える言語でこれら比較衡量すると Common Lisp か
+Java になってしまう。けれど Java は面倒なので大抵 Lisp です。
+
+VisualWorks を使いたい私でさえこうなんだから、そうじゃない人にお
+いておや、というところでしょうか。
+
+--
+    Narita Takaoki @ Imaging Products Software Engineering Design Department,
+            IPSEDC, EPSON
+    mailto:Narita.Takaoki@exc.epson.co.jp
+
+From k-ki ＠ a01.itscom.net  Mon Dec 11 17:31:52 2006
+From: k-ki ＠ a01.itscom.net (SHIMADA Keiki)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7248] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457CBA4A.7010608@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+Message-ID: <457D1778.3070500@a01.itscom.net>
+
+島田と申します。
+
+AOKI Atsushi wrote:
+> このメーリングリストで VisualWorks NC のためのオープン（また
+> はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+> 関して、皆さんのご意見をお願いします。
+
+コンピューティングに関しては、Emacs使いのようにSmalltalk環境の中に
+「住む」ことが理想だとずっと思ってきたのですが、最新のVisualWorks
+では日本語が入力できないため、あきらめていました。
+
+ぜひ、出して下さい。
+よろしくお願いします。
+
+-- 
+島田慶樹（SHIMADA Keiki）
+cake@users.sourceforge.jp
+
+From koubo2006 ＠ yengawa.jpn.org  Mon Dec 11 20:07:05 2006
+From: koubo2006 ＠ yengawa.jpn.org (Koji Yokokawa)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7249] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457CBA4A.7010608@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+Message-ID: <20061211183826.C87C.KOUBO2006@yengawa.jpn.org>
+
+横川です。
+
+日本語入力の公開に賛成です。
+ぜひ出して欲しいです。
+
+しかし、なぜシンコム・システムズ・ジャパンさんが日本語入力機能をNC版とし
+て提供していないのかは依然として不思議です。
+NCで日本語を入力できるようになることはコミュニティ発展を促進するはずです。
+会社の事情があるのかもしれませんが、日本のVWコミュニティの現状を考えて、
+NC版の日本語入力についてもう一度検討していただきたいところです。
+
+
+On Mon, 11 Dec 2006 10:54:18 +0900
+AOKI Atsushi <aoki@sra.co.jp> wrote:
+
+
+> このメーリングリストで VisualWorks NC のためのオープン（また
+> はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+> 関して、皆さんのご意見をお願いします。
+
+
+-- !
+Koji Yokokawa <koubo2006@yengawa.jpn.org>
+    http://yengawa.com/
+    ^self new!
+
+
+From abee.abe ＠ nifty.ne.jp  Mon Dec 11 22:07:43 2006
+From: abee.abe ＠ nifty.ne.jp (Kazuhiro ABE)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7250] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457CBA4A.7010608@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+Message-ID: <457D581F87.352CABEE.ABE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Mon, 11 Dec 2006 10:54:18 +0900
+AOKI Atsushi <aoki@sra.co.jp> wrote:
+>このメーリングリストで VisualWorks NC のためのオープン（また
+>はフリー）な日本語を扱えるようにするプログラムの公開の是非に
+>関して、皆さんのご意見をお願いします。
+
+私は最近VisualWorksを使っていないので、意見を言える立場ではないかもしれま
+せんが、日本において日本語を扱えるようにするのは必要条件だと思うので、ぜ
+ひ出していただければと思います。
+
+同じ議論は2002年12月にもありました。以下のスレッドをご覧ください。
+
+http://www.akademia.co.jp/Smalltalk/SML/archives/SRA.archives/2002-December/006020.html
+
+この4年の間に状況が変わったかどうかに興味があります。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From takaoki ＠ aisoft.co.jp  Tue Dec 12 15:06:25 2006
+From: takaoki ＠ aisoft.co.jp (takaoki@aisoft.co.jp)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7251] 若干の事故 ^H^H 自己フォロー ( 日本語を扱えるように ...)
+In-Reply-To: Your message of "Mon, 11 Dec 2006 15:09:38 JST."
+	<200612110609.PAA15637@basashi.aisoft.co.jp> 
+Message-ID: <200612120606.PAA24849@basashi.aisoft.co.jp>
+
+成田です。
+
+In message <200612110609.PAA15637@basashi.aisoft.co.jp>you write:
+>成田@エプソンです。
+	:
+>できればやっぱり VisualWorks で作りたいのですが、仕事を楽にする
+>簡易なツールを作るのに日本語化と格闘はしたくないし、工数が捻出で
+
+いけない、いけない。仕事じゃないです。「趣味」ですな。;-)
+
+リスク解析のプログラム書いてみたりとか、シミュレーションしてみた
+りとかして、書いて動かして感んじて学ぶことに意義があるようなもの
+は、抽象度の高い言語でないと、ことの本質を感得しづらい。
+
+# 学びたい事が「C言語」とかなら別だけれど。
+
+おまけで入出力するデータも認識しやすい漢字混じりの日本語がありが
+たい。
+
+# 日本文化の有利な点の一つではなかろうか？これを使わない手は無い。
+
+といったところでしょうか。
+
+昔の議論も読み直してみたけれど、大上段に構えて広範に深く考えなく
+ても現状あまり問題なさそうな。
+
+あまり Smalltalk 的ではないけれど、目的のシステムが動いていたとき
+に入出力くらいは日本語が良いなぁというのが多くの日本人なのではな
+かろうかと。
+
+それが実用のシステムなら余計にそうだけれど、実用じゃない学生さん
+が演習などで作るプログラムでもその方が達成感が若干違ってより嬉し
+いということなのでしょう。これが結構「選択」の主要な要因というの
+が現状かもしれない。
+
+# 給与明細に Narita Takaoki なんてのより 成田 隆興 の方が実感あ
+# って嬉しい。(^^;
+
+--
+    Narita Takaoki @ Imaging Products Software Engineering Design Department,
+            IPSEDC, EPSON
+    mailto:Narita.Takaoki@exc.epson.co.jp
+
+From aoki ＠ sra.co.jp  Tue Dec 12 22:32:24 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7252] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457CBA4A.7010608@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp>
+Message-ID: <457EAF68.3010404@sra.co.jp>
+
+青木です。
+
+実は、今、売られている日経ソフトウエアの２００７年１月号の付
+録 CD-ROM に収められている VisualWorks 7.4.1 NC ＋ Jun705 に
+は、Jpl をオンラインで導入できる機能が内蔵されています。
+
+JunURL＞requestInternetConnection
+このメソッドで、インターネット接続方式（直接接続またはプロキ
+シを介しての接続なのか）を設定した後に、
+
+JunSystem＞downloadAndInstallJplFrom:
+このメソッドで、Jpl をダウンロード解凍展開してインストールで
+きます。引数である URL 文字列はコメントを見ればわかります。
+
+この機能は Jun700 以上であれば内蔵されていますので、どうぞ試
+してみてください。次の画像２枚も参考になります。
+
+http://www.sra.co.jp/people/aoki/misc/jpgs/Jpl1.jpg
+http://www.sra.co.jp/people/aoki/misc/jpgs/Jpl2.jpg
+
+じゅんランチャーのウィンドウラベルとメニューバーが日本語に変
+わっているでしょ。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Wed Dec 13 14:16:04 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:02 2007
+Subject: [SML 7253] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457EAF68.3010404@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp> <457EAF68.3010404@sra.co.jp>
+Message-ID: <457F8C94.5010908@sra.co.jp>
+
+青木です。
+
+たいへん多くの方々から「VisualWorks 7.x NC」で日本語を扱える
+ようにするプログラムを公開してほしいとの要望をいただきました。
+
+パッケージやパーセルそしてソースコードを整備した【Jpl020】を
+公開しました。自由にお使いください。
+
+http://www.sra.co.jp/people/aoki/Jpl/
+
+このプログラムはフリーウェアです（フリーソフトウェアではあり
+ません）。したがって、このプログラムを用いた際の損害に対する
+免責を除き、どんなライセンスもサポートもありません。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+From nisinaka ＠ sra.co.jp  Wed Dec 13 16:25:53 2006
+From: nisinaka ＠ sra.co.jp (Yoshiyuki NISHINAKA)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7254] [ANNOUNCE] Jun for Java (Jun637)
+Message-ID: <20061213162517.9E68.NISINAKA@sra.co.jp>
+
+「じゅん for Java」のバージョン637を公開します。
+
+  バージョン633からの主な変更点は、以下の通りです。
+
+    * (modification) JunTextEditor において、編集の可否を指定でき
+      るようにしました。
+
+    * (new feature) JunFileNavigator は、３つのカラムを使ってファ
+      イルシステムを表示するクラスです。中央のカラムには、現在選
+      択しているファイル(またはディレクトリ)とその兄弟(同じディレ
+      クトリに含まれるファイル群)が表示されます。左のカラムには、
+      現在選択しているファイルを含む親ディレクトリとその兄弟が表
+      示されます。右のカラムには、現在選択しているのがディレクト
+      リならばその子供の一覧が、ファイルならばその詳細情報が表示
+      されます。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/FileNavigator.png
+
+    * (new feature) JunMultiMediaNavigator は JunMultiMediaViewer 
+      を修正し、JunFileModel の代わりに JunFileNavigator を使うよ
+      うにしたものです。
+
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_image.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_movie.png
+        http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/MultiMediaNavigator_text.png
+
+    * (new feature) JunFileRequesterDialog は JunFileDialog を修
+      正し、JunFileModel の代わりに JunFileNavigator を使うように
+      したものです。「じゅん for Java」ライブラリの中で 
+      JunFileDialog を使っている箇所は、JunFileRequesterDialog を
+      使うように変更しました。
+
+		http://www.sra.co.jp/people/nisinaka/Jun4Java/News/637/FileRequesterDialog.png
+
+    * (bug fix) JunImageToAscii が正しく動作しなくなっていたので、
+      再実装して、Jun668 相当に更新しました。
+
+    * (bug fix) Jun2dPoint/Jun3dPoint の比較のためのメソッドで、
+      引数が null の場合に例外が発生していたバグを修正しました。
+
+    * (bug fix) Intel Mac における QuickTime インタフェースの、バ
+      イトオーダーによる問題に対応しました。
+
+    * (bug fix) JunOpenGLProjector のバグを修正しました。注視点の
+      指定が反映されない場合がありました。
+
+    * (bug fix) Jun2dPoint において、指定した点との中点を求めるメ
+      ソッドの計算が誤っていました。
+
+
+  「じゅん for Java」は、以下のURLからダウンロードすることができ 
+  ます。
+
+    ftp://ftp.sra.co.jp/pub/lang/java/jun4java/
+
+  「じゅん for Java」は、オープンソースソフトウェアとして無償で提
+  供している三次元グラフィックおよびマルチメディアを用いたアプ  
+  リケーション構築のためのフレームワークです。「じゅん for Java」 
+  に関する詳細は、以下のURLを参照してください。
+
+    http://www.sra.co.jp/people/nisinaka/Jun4Java/index-j.html
+
+
+                                 西中 芳幸 (nisinaka@sra.co.jp)
+
+
+From aoki ＠ sra.co.jp  Wed Dec 13 17:52:54 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7255] 【じゅん (Jun708)】と【ケモじゅん (ChemoJun053)】
+Message-ID: <457FBF66.3000508@sra.co.jp>
+
+青木です。
+
+【じゅん (Jun708)】と【ケモじゅん (ChemoJun053)】をリリース。
+
+http://www.sra.co.jp/people/aoki/Jun/
+http://research.nii.ac.jp/~cheminfo/ChemoJun/
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From k-ki ＠ a01.itscom.net  Mon Dec 25 10:59:54 2006
+From: k-ki ＠ a01.itscom.net (SHIMADA Keiki)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7256] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <457F8C94.5010908@sra.co.jp>
+References: <457CBA4A.7010608@sra.co.jp> <457EAF68.3010404@sra.co.jp>
+	<457F8C94.5010908@sra.co.jp>
+Message-ID: <458F309A.6080507@a01.itscom.net>
+
+島田といいます。
+青木さん、Jpl公開ありがとうございました。
+
+確認ですが、このML以外のSmalltalkコミュニティでも
+Jplの存在と在り処をお知らせしてもいいでしょうか？
+
+-- 
+島田慶樹（SHIMADA Keiki）
+cake@users.sourceforge.jp
+
+From aoki ＠ sra.co.jp  Mon Dec 25 20:36:22 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7257] Re: 日本語を扱えるようにするプログラムについて
+In-Reply-To: <458F309A.6080507@a01.itscom.net>
+References: <457CBA4A.7010608@sra.co.jp>
+	<457EAF68.3010404@sra.co.jp>	<457F8C94.5010908@sra.co.jp>
+	<458F309A.6080507@a01.itscom.net>
+Message-ID: <458FB7B6.70304@sra.co.jp>
+
+島田慶樹さん、そして、皆さまへ
+
+メールを有り難うございます。ＳＲＡ先端技術研究所の青木です。
+
+> 青木さん、Jpl公開ありがとうございました。
+
+どういたしまして。お役に立つなら幸いです。
+
+> 確認ですが、このML以外のSmalltalkコミュニティでも
+> Jplの存在と在り処をお知らせしてもいいでしょうか？
+
+はい、どうぞ、どうぞ。
+http://www.sra.co.jp/people/aoki/Jpl/
+
+皆さんがさらにプログラミングを施して、良いものに仕立てあげて
+いただくために、フリーフェアとして出しました。ですから、その
+まま使うのではなくて、もっといい感じに育てあげてくださいまし。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+
+From aoki ＠ sra.co.jp  Wed Dec 27 13:00:32 2006
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Nov  2 10:51:03 2007
+Subject: [SML 7258] Re: タイトルは「Smalltalk道場」
+In-Reply-To: <4564FA57.6070809@sra.co.jp>
+References: <453DD5B7.9030705@sra.co.jp> <4564FA57.6070809@sra.co.jp>
+Message-ID: <4591EFE0.1060409@sra.co.jp>
+
+青木です。
+
+日経ソフトウエア連載の「Smalltalk 道場」ですが、現在、第５回
+までを書き下ろし、すでに日経ＢＰ社への入稿を終えております。
+（直弟子が第６回を執筆しているところです。）
+
+今、書店に並んでいるのは、第２回の「メッセージ送信（Message
+Passing）」です。デバッガを用いながら、メッセージ式（文法）
+の説明を行っています。このやり方も新機軸でしょ。ぜひ伝承して
+いただきたいと思います。
+
+連載のサポートページを用意していますので、どうぞご利用くださ
+いませ。このページは連載の予告としても機能すると思いますから。
+
+http://www.sra.co.jp/people/aoki/NikkeiSoftware/
+
+来年の３月２３日に発刊されるであろう第５回の「時計」では、メ
+タプログラミング（プログラムをプログラムで作ること、プログラ
+ミングをプログラミングすること）で、デザインパターンの一つで
+あるＭＶＣプログラミングを遂行しました。（大学ではこれぐらい
+まで教え込んでほしいと思います。）
+
+『プログラムの作成も、プログラムの一部なのですね。』というこ
+とを実感していただける内容です。一度作成したクラスやメソッド
+を消したり、パッケージやカテゴリを削ったり、新たなものに置き
+換えたりするのですが、それも稼働中に、プログラムを停止するこ
+となく、プログラム自身でプログラムを操ります。（アラン・ケイ
+さんが生体をアナロジーにして語る"アレ"ですね。）
+
+こうした訓練を積むと、多重メタプログラミングの作法が担保され、
+プログラマが自らのツールを自ら作り出す礎が確立されます。新し
+い開発環境の出現に振り回される（あるいは待ち焦がれる）ことも
+なくなります。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7327] Re: ブロック生成のメタプログラミング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207327%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=86c0320c0709120610p396079a6k36dd1ee0147b6cfb%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007325.html">
+   <LINK REL="Next"  HREF="007328.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7327] Re: ブロック生成のメタプログラミング</H1>
+    <B>Tomohiro Oda</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207327%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=86c0320c0709120610p396079a6k36dd1ee0147b6cfb%40mail.gmail.com"
+       TITLE="[SML 7327] Re: ブロック生成のメタプログラミング">tomohiro ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 9月 12日 (水) 23:12:34 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007325.html">[SML 7325] Re: ブロック生成のメタプログラミング
+</A></li>
+        <LI>次の記事 <A HREF="007328.html">[SML 7328] ????????????????????????????????
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7327">[ 日付 ]</a>
+              <a href="thread.html#7327">[ スレッド ]</a>
+              <a href="subject.html#7327">[ 件名 ]</a>
+              <a href="author.html#7327">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>おだです。
+
+&gt;<i> そうした「思いこみ」を裏切らないために、ただシンボルを渡すのではなく
+</I>&gt;<i> シンボルに asBlock メッセージを送って返る値がブロックであることを
+</I>&gt;<i> 陽にすることはコードの読みくだしのしやすさを確保するのにもきわめて大事な
+</I>&gt;<i> ことなのだとあらためて実感できます。ｗ
+</I>
+私などはよくクロージャを変数に代入しておいて、do:やcollect:等のenumerating
+をおこなうのですが（Junの中にも沢山例が見つかると思います)、その場合にもasBlockを
+入れておくのが作法になるでしょうね。
+
+triangleBlock := [:node | triangulator addNode: node].
+nodes1 do: triangleBlock asBlock.
+nodes2 do: triangleBlock asBlock.
+
+個人的にはasBlockよりはasClosureな気分ですが、命名権は創作者にあるので
+素直に従うことにします。
+---
+おだ
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007325.html">[SML 7325] Re: ブロック生成のメタプログラミング
+</A></li>
+	<LI>次の記事 <A HREF="007328.html">[SML 7328] ????????????????????????????????
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7327">[ 日付 ]</a>
+              <a href="thread.html#7327">[ スレッド ]</a>
+              <a href="subject.html#7327">[ 件名 ]</a>
+              <a href="author.html#7327">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

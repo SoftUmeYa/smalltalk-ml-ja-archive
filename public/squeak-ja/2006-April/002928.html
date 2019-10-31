@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2928] Re: [Q]SqueakLandとSqueak.orgイメージ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202928%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFtRXVNxdWVha0xhbmQ%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEgbKEJTcXVlYWsub3JnGyRCJSQlYSE8JTgbKEI%3D%3F%3D&In-Reply-To=JN200604102257004.1828109%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002924.html">
+   <LINK REL="Next"  HREF="002927.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2928] Re: [Q]SqueakLandとSqueak.orgイメージ</H1>
+    <B>Koji Yokokawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202928%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFtRXVNxdWVha0xhbmQ%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEgbKEJTcXVlYWsub3JnGyRCJSQlYSE8JTgbKEI%3D%3F%3D&In-Reply-To=JN200604102257004.1828109%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 2928] Re: [Q]SqueakLandとSqueak.orgイメージ">koubo2006 ＠ yengawa.jpn.org
+       </A><BR>
+    <I>2006年 4月 12日 (水) 13:47:40 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002924.html">[Squeak-ja: 2924] Re: [Q]SqueakLandとSqueak.orgイメージ
+</A></li>
+        <LI>次の記事 <A HREF="002927.html">[Squeak-ja: 2927] Re: [Q]SqueakLandとSqueak.orgイメージ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2928">[ 日付 ]</a>
+              <a href="thread.html#2928">[ スレッド ]</a>
+              <a href="subject.html#2928">[ 件名 ]</a>
+              <a href="author.html#2928">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川です。
+
+String&gt;&gt;unescapePercentsWithTextEncoding: のこのチェンジは'+'→Space変換も
+入ってる完全版ですね。Web系では致命的な不具合ですが、Squeak3.9でもまだ反
+映されてませんでした。
+
+
+On Mon, 10 Apr 2006 22:57:00 +0900
+Masashi Umezawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">umejava ＠ mars.dti.ne.jp</A>&gt; wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i> 
+</I>&gt;<i> 基本的にはSqueakLand2005Jのほうがリリースも後ですので、そちらが良いのでは
+</I>&gt;<i> ないでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> ただSqueakの常として完璧ということはなく、必要に応じてパッチをあてていくこと
+</I>&gt;<i> が必要になります。
+</I>&gt;<i> 
+</I>&gt;<i> 特にWeb系のアプリであれば、
+</I>&gt;<i> <A HREF="http://www.kukakuka.jp/squeak/bugs/view.php?id=66">http://www.kukakuka.jp/squeak/bugs/view.php?id=66</A>
+</I>&gt;<i> 
+</I>&gt;<i> のパッチは必須と思います。
+</I>&gt;<i> 
+</I>&gt;<i> ではでは。
+</I>&gt;<i> 
+</I>&gt;<i> Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2006 ＠ yengawa.jpn.org</A>&gt; wrote:
+</I>&gt;<i> &gt; 横川です。
+</I>&gt;<i> &gt; Squeakのパッケージ化されたアプリを作ろうとしていて、ベースにするイメージ
+</I>&gt;<i> &gt; にはどれがいいか調べてます。
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; SquakLandのSqueakLand2005JとSqueak.orgのSqueak3.8+Japanese Environmentの
+</I>&gt;<i> &gt; 二つが候補です。
+</I>&gt;<i> &gt; ほとんど同じだと思っていましたが、基本的なところが微妙に違ってるように見
+</I>&gt;<i> &gt; えます(Squeak.keyを生成するところとか気になる)。
+</I>&gt;<i> &gt; でも具体的にどこがどう違うのかわからないので、なにか情報はありませんか?
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; SqueakLand2005J開発者版
+</I>&gt;<i> &gt; <A HREF="http://squeakland.jp/developer/download/image/SqueakPlugin-dev-527.zip">http://squeakland.jp/developer/download/image/SqueakPlugin-dev-527.zip</A>
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Squeak3.8-6665-basic + Japanese Environment(SqueakMap)
+</I>&gt;<i> &gt; <A HREF="http://ftp.squeak.org/current_stable/Squeak3.8-6665-basic.zip">http://ftp.squeak.org/current_stable/Squeak3.8-6665-basic.zip</A>
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; -- !
+</I>&gt;<i> &gt; Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2006 ＠ yengawa.jpn.org</A>&gt;
+</I>&gt;<i> &gt;     <A HREF="http://yengawa.com/">http://yengawa.com/</A>
+</I>&gt;<i> &gt;     ^self new!
+</I>&gt;<i> 
+</I>&gt;<i> ---
+</I>&gt;<i> [:masashi | ^umezawa]
+</I>
+-- !
+Koji Yokokawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">koubo2006 ＠ yengawa.jpn.org</A>&gt;
+    <A HREF="http://yengawa.com/">http://yengawa.com/</A>
+    ^self new!
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002924.html">[Squeak-ja: 2924] Re: [Q]SqueakLandとSqueak.orgイメージ
+</A></li>
+	<LI>次の記事 <A HREF="002927.html">[Squeak-ja: 2927] Re: [Q]SqueakLandとSqueak.orgイメージ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2928">[ 日付 ]</a>
+              <a href="thread.html#2928">[ スレッド ]</a>
+              <a href="subject.html#2928">[ 件名 ]</a>
+              <a href="author.html#2928">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

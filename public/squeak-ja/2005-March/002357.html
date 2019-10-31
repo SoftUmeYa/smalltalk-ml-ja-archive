@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2357] Re: Spam: Re: [N7]file inできない？ない？
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202357%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNwYW06IFJlOiBbTjddZmls%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FZSBpbhskQiRHJC0kSiQkISkkSiQkISkbKEI%3D%3F%3D&In-Reply-To=u1xax1p73.wl%40YOSHIKI-T2.mb.infoweb.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002354.html">
+   <LINK REL="Next"  HREF="002360.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2357] Re: Spam: Re: [N7]file inできない？ない？</H1>
+    <B>Hideo Kawamura</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202357%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFNwYW06IFJlOiBbTjddZmls%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FZSBpbhskQiRHJC0kSiQkISkkSiQkISkbKEI%3D%3F%3D&In-Reply-To=u1xax1p73.wl%40YOSHIKI-T2.mb.infoweb.ne.jp"
+       TITLE="[Squeak-ja: 2357] Re: Spam: Re: [N7]file inできない？ない？">kawa90 ＠ m2.pbc.ne.jp
+       </A><BR>
+    <I>2005年 3月  3日 (木) 10:53:41 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002354.html">[Squeak-ja: 2354] Spam: Re: [N7]file inできない？ない？
+</A></li>
+        <LI>次の記事 <A HREF="002360.html">[Squeak-ja: 2360] 使い込んだイメージファイルが全く開けなくなりました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2357">[ 日付 ]</a>
+              <a href="thread.html#2357">[ スレッド ]</a>
+              <a href="subject.html#2357">[ 件名 ]</a>
+              <a href="author.html#2357">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>川村です。お世話になってます。
+解決しました。
+
+ありがとうございました。
+
+Yoshiki Ohshima wrote:
+
+&gt;<i>  おおしまです。
+</I>&gt;<i>
+</I>&gt;<i>ファイルインの仕方に工夫が要ります。
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>川村です。お世話になってます。
+</I>&gt;&gt;<i>N6.1でfile outしたソースがNihongo7(3/2版)で読み込みに失敗します。
+</I>&gt;&gt;<i>具体的にはN6.1で書いていたソースをfile outしてN7でfile inしようとしたら、
+</I>&gt;&gt;<i>&lt;&lt;&lt;This string contains a character (ascii value 132) that is not
+</I>&gt;&gt;<i>normally used in code&gt;&gt;&gt;
+</I>&gt;&gt;<i>というメッセージで'Syntax Error'となりました。上記の部分は日本語でコメン
+</I>&gt;&gt;<i>トを記述している
+</I>&gt;&gt;<i>ところです。もちろんN6.1では問題なく読み込みできます。
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>読み込みに失敗したソースを添付します。
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  Nihongo7(というかSqueak 3.8)から、UTF-8なファイルアウトの頭にはBOMが
+</I>&gt;<i>付いていないといけないことになりました。移行のためには、Nihongo7のワー
+</I>&gt;<i>クスペースで
+</I>&gt;<i>
+</I>&gt;<i>f _ FileStream readOnlyFileNamed: 'VS-Image.st'.
+</I>&gt;<i>f fileInEncodingName: 'utf-8'.
+</I>&gt;<i>f close.
+</I>&gt;<i>
+</I>&gt;<i>のようにしてファイルインし、結果をその後書き出すようにしてください。
+</I>&gt;<i>
+</I>&gt;<i>  ご不便を掛けてすみません。
+</I>&gt;<i>
+</I>&gt;<i>-- Yoshiki
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+<A HREF="http://www.realintegrity.net/~squeak/pukiwiki">http://www.realintegrity.net/~squeak/pukiwiki</A>
+<A HREF="http://blog.goo.ne.jp/hkawa90/">http://blog.goo.ne.jp/hkawa90/</A> (blog)
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Anti-Virus.
+Version: 7.0.308 / Virus Database: 266.6.0 - Release Date: 2005/03/02
+
+__________________________________
+Let's Celebrate Together!
+Yahoo! JAPAN
+<A HREF="http://pr.mail.yahoo.co.jp/so2005/">http://pr.mail.yahoo.co.jp/so2005/</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002354.html">[Squeak-ja: 2354] Spam: Re: [N7]file inできない？ない？
+</A></li>
+	<LI>次の記事 <A HREF="002360.html">[Squeak-ja: 2360] 使い込んだイメージファイルが全く開けなくなりました
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2357">[ 日付 ]</a>
+              <a href="thread.html#2357">[ スレッド ]</a>
+              <a href="subject.html#2357">[ 件名 ]</a>
+              <a href="author.html#2357">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

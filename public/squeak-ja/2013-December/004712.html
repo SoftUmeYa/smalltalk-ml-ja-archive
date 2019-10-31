@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4712] Re: Pharo 3.0 betaについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204712%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FUGhhcm8gMy4wIGJldGEbJEIkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=%3C52B4F62D.1080400%40kind.ocn.ne.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004711.html">
+   <LINK REL="Next"  HREF="004713.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4712] Re: Pharo 3.0 betaについて</H1>
+    <B>Sunao Furukawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=Re%3A%20%5BSqueak-ja%3A%204712%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FUGhhcm8gMy4wIGJldGEbJEIkSyREJCQkRhsoQg%3D%3D%3F%3D&In-Reply-To=%3C52B4F62D.1080400%40kind.ocn.ne.jp%3E"
+       TITLE="[Squeak-ja: 4712] Re: Pharo 3.0 betaについて">sadie ＠ kind.ocn.ne.jp
+       </A><BR>
+    <I>2013年 12月 21日 (土) 11:00:13 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004711.html">[Squeak-ja: 4711] Re:	Pharo 3.0 betaについて
+</A></li>
+        <LI>次の記事 <A HREF="004713.html">[Squeak-ja: 4713] Re:	Pharo 3.0 betaについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4712">[ 日付 ]</a>
+              <a href="thread.html#4712">[ スレッド ]</a>
+              <a href="subject.html#4712">[ 件名 ]</a>
+              <a href="author.html#4712">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>どうもありがとうございます。古川です。
+梅澤さん、Pharoの話にも関わらず、すばやく詳しいレスありがとうございます。
+早速ですが、UIPainter試してみました。
+Workspaceからだと私にはうまくできなかったので、
+Monticelloからロードしてみました。
+Toolsにも表示されて少し感動しましたが、
+あまり、うまくは動いてくれませんでした。
+せめてテストコードは...と思いNautilusの中でRun testsを実行するのが限界で
+した。
+UIPainterTestは黄色でした。よくわかりませんが、グレーのテストもありました。
+あまり参考にはならないかもしれませんが報告させていただきます。
+御返答ありがとうございました。
+ちなみにPharoの話題ってSMLに出したほうがいいですか？
+失礼してばかりで申し訳ありません。
+
+(2013/12/20 20:54), Masashi Umezawa wrote:
+
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i>
+</I>&gt;<i> Pharoの話題とはちょっと珍しいですね。
+</I>&gt;<i>
+</I>&gt;<i> 期待外れとのことでしたが、Pharo 2.0が出たのが今年の3月ですから、まあそんなものではないでしょうか。
+</I>&gt;<i> むしろ少ないリソースでよくやっていると思います。
+</I>&gt;<i>
+</I>&gt;<i> Smalltalk allClasses size で見ますと、
+</I>&gt;<i>
+</I>&gt;<i> Pharo 2.0 =&gt; 3250
+</I>&gt;<i> Pharo 3.0(beta) =&gt; 3848
+</I>&gt;<i>
+</I>&gt;<i> となっていました。クラス数が多ければ良いというものではありませんが、着実に育ってきています。
+</I>&gt;<i>
+</I>&gt;<i> - AthensというCairoを利用したベクターグラフィックエンジン
+</I>&gt;<i> - Opalという新たなコンパイラ
+</I>&gt;<i> - Continuationのサポート
+</I>&gt;<i> - InspectorやDebuggerがSpec UIベースに書き換えられた
+</I>&gt;<i>
+</I>&gt;<i> あたりが目玉と思います。
+</I>&gt;<i>
+</I>&gt;<i> 2013年12月20日 11:27 Sunao Furukawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">sadie ＠ kind.ocn.ne.jp</A>&gt;:
+</I>&gt;&gt;<i> 古川と申します。
+</I>&gt;&gt;<i> 先日、Pharo 3.0のベータ版が出ていましたので早速、試してみたのですが、
+</I>&gt;&gt;<i> あまりPharo 2.0と変わっていないのではないかと思いました。
+</I>&gt;&gt;<i> というのは、以前、forum.world.stだかどこだかでPharo 3.0からは、
+</I>&gt;&gt;<i> Visual GUI Builderがついてくるという未確認情報を見ていて楽しみにしていた
+</I>&gt;&gt;<i> のですが、
+</I>&gt;&gt;<i> Code Freezeしたにもかかわらず何もないと思いました。
+</I>&gt;&gt;<i> sourcesファイルもPharoV20のままでメジャーバージョンアップなのに、
+</I>&gt;&gt;<i> PharoV20.sourcesのままなのって思いました。
+</I>&gt;&gt;<i> これから中身が変わるっていう可能性ってあるのでしょうか？
+</I>&gt;&gt;<i> Code FreezeしたらBug Fix以外の変更は無いと思うのですが。
+</I>&gt;&gt;<i> Visual GUI Builderについて詳しい方、情報があれば教えてください。
+</I>&gt;&gt;<i> 今後もPolymorphをUIthemeのように使うことになるのでしょうか。
+</I>&gt;&gt;<i> なんか残念でした。
+</I>&gt;&gt;<i> 以上、私の話を聞いていただいてありがとうございました。
+</I>&gt;<i> おそらくUIPainterのことと思います。今年のGoogle Summer of Codeで始まったプロジェクトでまだまだバリバリ開発中のようです。
+</I>&gt;<i> <A HREF="http://uipainter-gsoc.over-blog.com/">http://uipainter-gsoc.over-blog.com/</A>
+</I>&gt;<i> <A HREF="http://smalltalkhub.com/#!/~ErwanDouaille/UIPainter/commits">http://smalltalkhub.com/#!/~ErwanDouaille/UIPainter/commits</A>
+</I>&gt;<i>
+</I>&gt;<i> エラーが出まくりますが、いちおう下記で入ります。
+</I>&gt;<i> Gofer new　smalltalkhubUser: 'ErwanDouaille' project: 'UIPainter';
+</I>&gt;<i>     configurationOf: 'UIPainter';
+</I>&gt;<i>     load.
+</I>&gt;<i>
+</I>&gt;<i> ConfigurationOfUIPainter load
+</I>&gt;<i>
+</I>&gt;<i> ちなみにソースファイルがPharoV20.sourcesのままとなっているのは、しばらく続くような気がします。Squeakも4.4でありながらSqueakV41.sourcesですし。
+</I>&gt;<i>
+</I>&gt;<i> ソースファイルはもともと殿堂入りしたソースが格納されるものなので、.changes等に比べると更新される度合いは低いと言えます。また、.sourcesに殿堂入りさせるとソースの変更履歴がクラスブラウザからのversions等で見られなくなるので、あまり頻繁に更新するとかえって不便だったりします。
+</I>&gt;<i>
+</I>&gt;<i> しかしながらPharo 2.0の.changesが700kb程度、Pharo
+</I>&gt;<i> 3.0の.changesが28MB程度となっていますので、そろそろ.changesを整理して.sourcesに反映させる頃合いと思う人もいるかもしれません。最終版では.sourcesが更新される可能性も、まだ残っています。.
+</I>&gt;<i>
+</I>&gt;<i> ではでは。
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004711.html">[Squeak-ja: 4711] Re:	Pharo 3.0 betaについて
+</A></li>
+	<LI>次の記事 <A HREF="004713.html">[Squeak-ja: 4713] Re:	Pharo 3.0 betaについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4712">[ 日付 ]</a>
+              <a href="thread.html#4712">[ スレッド ]</a>
+              <a href="subject.html#4712">[ 件名 ]</a>
+              <a href="author.html#4712">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

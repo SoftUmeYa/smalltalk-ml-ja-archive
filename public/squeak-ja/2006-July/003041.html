@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3041] Re: Wiki としての SuperSwiki
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203041%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=20060711220016.F703.KOUBO2006%40yengawa.jpn.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003040.html">
+   <LINK REL="Next"  HREF="003045.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3041] Re: Wiki としての SuperSwiki</H1>
+    <B>NAKATA, Shunsuke</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203041%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFdpa2kgGyRCJEgkNyRGGyhC%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4bKEIgU3VwZXJTd2lraQ%3D%3D%3F%3D&In-Reply-To=20060711220016.F703.KOUBO2006%40yengawa.jpn.org"
+       TITLE="[Squeak-ja: 3041] Re: Wiki としての SuperSwiki">scriptonwikipage ＠ yahoo.co.jp
+       </A><BR>
+    <I>2006年 7月 12日 (水) 03:32:33 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003040.html">[Squeak-ja: 3040] Re: Wiki としての SuperSwiki
+</A></li>
+        <LI>次の記事 <A HREF="003045.html">[Squeak-ja: 3045] Re: Wiki としての SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3041">[ 日付 ]</a>
+              <a href="thread.html#3041">[ スレッド ]</a>
+              <a href="subject.html#3041">[ 件名 ]</a>
+              <a href="author.html#3041">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>横川さま
+
+中田です。返信ありがとうございます。
+
+&gt;&gt;&gt;&gt;<i> 高階の抽象化とその視覚化にはぼくも興味があって、
+</I>&gt;&gt;&gt;&gt;<i> IPA未踏プロジェクトのSwimmyで試みました。
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://yengawa.homedns.org:8888/Swimmy">http://yengawa.homedns.org:8888/Swimmy</A>
+</I>&gt;&gt;&gt;&gt;<i> Etoyですでにプログラムされた複数のオブジェクトをさらに組み合わせて
+</I>&gt;&gt;&gt;&gt;<i> 別のプログラムを構成する仕組みで、状態遷移図を視覚化に使いました。
+</I>&gt;&gt;&gt;&gt;<i> 可能性はありそうだけど、どう利用するかが難しくて課題を残してます。
+</I>
+サイトを拝見し、イメージファイルも開いてみましたが、、、
+今ひとつ操作法がよくわかりませんでした。。。。
+(Squeakにまだ慣れてないのが大きな理由かも知れませんが)
+
+サイトに書かれていた英文の説明をみましたが、
+エージェントシステムとのことですね。
+
+残念ながら、私はエージェントのことは詳しくないのですが、
+テンプレートや高階関数が要素同士を強く結合させるものだとしたら、
+エージェントは弱く結合するというイメージでよろしいでしょうか。
+
+エージェント技術の用途が見えない、ひとつの理由は、
+この技術の特性によるものがあると思います。
+コーディング作業が主体をしめる現状のプログラミング環境に
+適しているのは、静的な方つまりテンプレートや高階関数です。
+
+そしてもうひとつの理由は、エージェント技術が未成熟である
+ことにあるのではないでしょうか。エージェントを動作させる
+環境や言語など、基盤となる技術は十分だ思われますが、
+実用的なフレームワークは(恐らく)存在しないのではありませんか。
+
+今でこそ当たり前になっているテンプレートの技術も、
+「汎用プログラミング」という手法として古くから一部の
+計算機科学者には知られていましたし、Ada言語でもgeneric機構
+として採用されていました。しかし、それが今のように実用
+目的に用いられるまでには、SmalltalkのCollectionを含めて、
+ライブラリー・フレームワークの試行錯誤の蓄積があったからです。
+C++のテンプレートライブラリーはそれらの経験に基づくものです。
+
+エージェントの場合、ソフトウェア世界をどのようにすれば、
+過不足なくモデル化すればいいか、つまり、エージェントの
+語彙をどのように設定するか、語彙のフレームワークがまだ
+成熟していないのではないでしょうか。
+
+例えば「テレビのリモコン操作」などのようにな余りにも狭い世界で
+語彙を決めると、テレビ以外の装置の操作ができないものとなります。
+動的な性質をもつエージェントである必要すらなく、普通のオブジェクト
+で十分となってしまうわけです。
+
+だからといって、具体的な目標がないままだと先には進めませんので、
+手始めには、既存のオブジェクト技術で作られたものをエージェント
+でつくり直してみるというのはどうでしょうか。簡単なところでは、
+ウィンドウツールキットをエージェントで書いたらどうなるでしょう。
+その中で、どのような語彙が共通化できて、どのような語彙は共通化
+できないかが見えてくるのではないでしょうか。うまくすれば、
+その語彙はトランザクション制御やファイル操作やデータベース処理
+にさえ使えるかもしれません。
+
+
+
+慣れた行動は別としても、私たちが何かをする時、とりわけ新しい何か
+を考えたり・作り出すときには頭の中には「イメージ」があります。
+イメージという思考思考過程は、これまでの経験から得たものの流れを、
+そのとき考えているものに &quot;当てはめる&quot; 過程が大きいと思います。
+
+難しく言えば、既知の物事との「同型性」(数学用語) を見つけて、
+それ関連づいている解法(アルゴリズム)を当てはめるというわけです。
+逆に言えば、当てはめることのできる経験、つまり、思考の雛形
+がなければ、物事を解決できないといえます。
+
+
+実用性が確かめられた多くの雛形が出揃った段階で、「利用者＝作成者」
+の環境は本当の意味で実現するのではないでしょうか。その時には、
+利用者(＝作成者)は既存の雛形をいくつかつなぎ合わせて、自分の目下の
+問題を簡単に解決している、という姿を私はイメージしています。
+&quot;つなぎ合わせる&quot; 作業を通して、利用者はそれと知らずにプログラミング
+行為をしているというわけです。
+
+
+
+&gt;&gt;&gt;&gt;<i> Web2.0時代のWikipediaを考えるならば、ある項目を引くと世界中の人々が
+</I>&gt;&gt;&gt;&gt;<i> ブログなどの中にばらばらに書いたその項目への記述を集めて表示する
+</I>&gt;&gt;&gt;&gt;<i> ようなものになるのでは?と夢想してます。
+</I>&gt;&gt;&gt;&gt;<i> そして、それができるようなハイパー・ブログ・サーバ(?)を作ろうと模索中。
+</I>&gt;&gt;&gt;&gt;<i> もちろん&quot;Seaside上で&quot;です。
+</I>
+私の場合 Wikipedia のよいところは、協調作業 (コラボレーション) にある
+と考えています。さまざまな人が互いの成果を確認し、評価し、その上で、
+必要なら修正や追加をする、というプロセスを経て、個々の記事はより完成度の
+高いものになり、またWikipedia 全体としては、より広い世界を網羅することに
+なっている、それがWikipediaそのものと考えています。
+
+ブログの集約という形になりますと、この協調作業という過程を経ることが
+できなため、個々の記事としてもサイト全体としても完成度の低いものになる
+のではないかと思います。
+
+
+いかがでしょうか。
+
+(全体としてずいぶんと長くなってしまいました。。。)
+--------------------------------------
+Let's start Yahoo! Auction  -  Free Campaign Now!
+<A HREF="http://pr.mail.yahoo.co.jp/auction/">http://pr.mail.yahoo.co.jp/auction/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003040.html">[Squeak-ja: 3040] Re: Wiki としての SuperSwiki
+</A></li>
+	<LI>次の記事 <A HREF="003045.html">[Squeak-ja: 3045] Re: Wiki としての SuperSwiki
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3041">[ 日付 ]</a>
+              <a href="thread.html#3041">[ スレッド ]</a>
+              <a href="subject.html#3041">[ 件名 ]</a>
+              <a href="author.html#3041">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

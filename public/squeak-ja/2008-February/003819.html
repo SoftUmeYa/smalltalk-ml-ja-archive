@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3819] Re: Monticelloについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203819%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1vbnRpY2VsbG8%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=JX200710300835537.2520015%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003818.html">
+   <LINK REL="Next"  HREF="003836.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3819] Re: Monticelloについて</H1>
+    <B>Masashi Umezawa</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203819%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IE1vbnRpY2VsbG8%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=JX200710300835537.2520015%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3819] Re: Monticelloについて">umejava ＠ mars.dti.ne.jp
+       </A><BR>
+    <I>2008年 2月 11日 (月) 21:02:40 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003818.html">[Squeak-ja: 3818] JPEG EXIF
+</A></li>
+        <LI>次の記事 <A HREF="003836.html">[Squeak-ja: 3836] Re: Monticelloについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3819">[ 日付 ]</a>
+              <a href="thread.html#3819">[ スレッド ]</a>
+              <a href="subject.html#3819">[ 件名 ]</a>
+              <a href="author.html#3819">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは
+梅澤です。
+
+ものすごく古い話題なのですが、Monticelloの日本語対応パッチを更新しました。
+今回から日本語を公開時コメントに含めても、ファイルを壊さずに使うことが
+出来ます。(BOMつきUTF8で書きます)
+
+ただし、このパッチが当たっていない外部のシステム(SqueakSourceなど)を
+使う場合、MCZとしてちゃんと認識してくれないという問題が起こります。
+
+対策としては
+
+-別システムにも出来る限りパッチを当てる(無理な場合があります)
+-日本語の公開時コメントは内部でコントロールできるシステムにのみ利用する
+
+といった形になります。日本語の公開コメントを使わない場合、互換性は
+保たれますので、いずれにせよ入れておいて損はないパッチと言えます。
+
+ではでは。
+
+Masashi Umezawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">umejava ＠ mars.dti.ne.jp</A>&gt; wrote:
+&gt;<i> こんにちは
+</I>&gt;<i> 梅澤です。
+</I>&gt;<i> 
+</I>&gt;<i> デバッグログを見るに、
+</I>&gt;<i> MczInstaller&gt;&gt;extractVersionInfoでこけていますね。
+</I>&gt;<i> 
+</I>&gt;<i> &gt; なお、Monticelloの公開時コメントやパッケージ名に日本語を使ったり
+</I>&gt;<i> &gt; すると、きっと動かないと思います。ソースコード(とクラスコメント)内に
+</I>&gt;<i> &gt; 日本語を使うことができるようになったという程度のものです。
+</I>&gt;<i> 
+</I>&gt;<i> と書きましたが、公開時コメントで日本語を過去に使ったことがある.mcz
+</I>&gt;<i> を使われているのだと思います。
+</I>&gt;<i> 
+</I>&gt;<i> .mczファイルを展開してできるversionというファイルを見ると、日本語
+</I>&gt;<i> が含まれたりしていませんでしょうか。
+</I>&gt;<i> 
+</I>&gt;<i> つまりもう少し修正が必要なのですが、範囲が大きくなりそうなので保留中です。
+</I>&gt;<i> 
+</I>&gt;<i> Sho Yoshida &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">newapplesho ＠ gmail.com</A>&gt; wrote:
+</I>&gt;<i> &gt; 吉田です．
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 梅澤さん，何度もすみません．
+</I>&gt;<i> &gt; 違うイメージにMonticello-m17n-patch.7.csをfile inして 
+</I>&gt;<i> &gt; mczファイルを作成し，読み込んだところエラーが起こってしまいま 
+</I>&gt;<i> &gt; した．
+</I>&gt;<i> &gt; ただ，Monticello-m17n-patch.7.csをfile inしたあとに 
+</I>&gt;<i> &gt; Monticello-m17n-patch.4.cをfile inしてmczファイル 
+</I>&gt;<i> &gt; を作成するとうまくいきました．
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 僕のSqueakの環境が悪いのでしょうか．
+</I>&gt;<i> &gt; よろしくお願いいたします．
+</I>---
+[:masashi | ^umezawa]
+-------------- next part --------------
+テキスト形式以外の添付ファイルを保管しました...
+ファイル名: Monticello-m17n-patch.20.cs
+型:         application/octet-stream
+サイズ:     4099 バイト
+説明:       無し
+URL:        <A HREF="http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080211/cdaf8c6f/Monticello-m17n-patch.20.obj">http://www.smalltalk.jp/pipermail/squeak-ja/attachments/20080211/cdaf8c6f/Monticello-m17n-patch.20.obj</A>
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003818.html">[Squeak-ja: 3818] JPEG EXIF
+</A></li>
+	<LI>次の記事 <A HREF="003836.html">[Squeak-ja: 3836] Re: Monticelloについて
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3819">[ 日付 ]</a>
+              <a href="thread.html#3819">[ スレッド ]</a>
+              <a href="subject.html#3819">[ 件名 ]</a>
+              <a href="author.html#3819">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

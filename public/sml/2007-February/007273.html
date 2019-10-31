@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7273] Jun721 for Smalltalk
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207273%5D%20Jun721%20for%20Smalltalk&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007285.html">
+   <LINK REL="Next"  HREF="007284.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7273] Jun721 for Smalltalk</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207273%5D%20Jun721%20for%20Smalltalk&In-Reply-To="
+       TITLE="[SML 7273] Jun721 for Smalltalk">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 2月 11日 (日) 18:29:09 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007285.html">[SML 7285] Re: メッセージパッシング
+</A></li>
+        <LI>次の記事 <A HREF="007284.html">[SML 7284] Jun723 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7273">[ 日付 ]</a>
+              <a href="thread.html#7273">[ スレッド ]</a>
+              <a href="subject.html#7273">[ 件名 ]</a>
+              <a href="author.html#7273">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>ＳＲＡ先端技術研究所の青木です。
+
+オランダから届いた寄贈プログラムおよびドイツとスイスからの改
+善提案を組み込んで【Jun721】を作成しました。
+
+　　　　　　　　　　　　クラス数：    903
+　　　　　　　　　　　メソッド数： 30,921
+　　　　　　　　　　　ステップ数：412,056
+　　１メソッドあたりのステップ数：     13.3
+
+　　<A HREF="http://www.sra.co.jp/public/sra/technical/jun/">http://www.sra.co.jp/public/sra/technical/jun/</A>
+　　<A HREF="ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/">ftp://ftp.sra.co.jp/pub/lang/smalltalk/jun/</A>
+　　<A HREF="ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/">ftp://ftp.cincomsmalltalk.com/pub/goodies/Jun/</A>
+
+フレームバッファ・オブジェクト拡張における画像化が高速になり
+ました。フレームバッファによる高速３次元描画が可能なディスプ
+レイアダプタ（グラフィックカード）を搭載しているマシンを使用
+しているならば、次のメッセージ式をぜひお試しください。
+
+　JunClassGraphUtility showBigCityOf: Object
+
+Windows Vista / XP / 2000 &amp; VisualWorks 7.4.1 以上の組み合わ
+せのみの拡張となります。ただし、新しいバージョンの opengl32.
+dll ならびに glu32.dll をお使いください。
+
+　○最適：　opengl32.dll　5.1　OpenGL Client DLL
+　○最適：　glu32.dll 　　5.1　OpenGL Utility Library DLL
+
+　×不可：　opengl32.dll　4.0　OpenGL Client DLL
+　×不可：　glu32.dll 　　4.0　OpenGL Utility Library DLL
+
+また、テクスチャ・マッピングの描画を、より軽快に行う改善も施
+しました。
+
+さらに、材質（*.mtl）と物体（*.obj）のパーザも組み込んでいま
+す。サブセットですが、とても役に立つと思います。
+
+そして、幾何オブジェクトの文字列へのシリアライズ化（Ｓ式への
+変換）も強化しました。
+
+＃ヨーロッパの方々はプログラムコードをきちんと読んでいると思
+＃います。寄贈してくるコードの質も高いし量もあります。こちら
+＃に噛み砕く牙が無いと切羽詰ってしまうでしょうね。それにして
+＃も有り難や！感謝！です。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007285.html">[SML 7285] Re: メッセージパッシング
+</A></li>
+	<LI>次の記事 <A HREF="007284.html">[SML 7284] Jun723 for Smalltalk
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7273">[ 日付 ]</a>
+              <a href="thread.html#7273">[ スレッド ]</a>
+              <a href="subject.html#7273">[ 件名 ]</a>
+              <a href="author.html#7273">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4106] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204106%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjEbJEIhSyROM1o0bzI7JEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=2d5d52a80812282144v16face9bkd41b43eb97124a39%40mail.gmail.com">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004105.html">
+   <LINK REL="Next"  HREF="004107.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4106] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について</H1>
+    <B>yhousako</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204106%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IExpbnV4GyRCSEcbKEJTY3Jh%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FdGNoMS4zGyRCIUoyfiRhGyhCMS4zLjEbJEIhSyROM1o0bzI7JEsbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJEQkJCRGGyhC%3F%3D&In-Reply-To=2d5d52a80812282144v16face9bkd41b43eb97124a39%40mail.gmail.com"
+       TITLE="[Squeak-ja: 4106] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について">yhousako ＠ mx2.ttcn.ne.jp
+       </A><BR>
+    <I>2008年 12月 29日 (月) 23:31:45 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004105.html">[Squeak-ja: 4105] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+</A></li>
+        <LI>次の記事 <A HREF="004107.html">[Squeak-ja: 4107] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4106">[ 日付 ]</a>
+              <a href="thread.html#4106">[ スレッド ]</a>
+              <a href="subject.html#4106">[ 件名 ]</a>
+              <a href="author.html#4106">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>宝迫です．恥ずかしながら、大きな勘違いをしておりました．(^_^;;;
+そのために、動作確認でもさらに勘違いをしました．
+
+【勘違い1】
+Scratchの内部に完全なGM音源を持っていると思いこんでいました．阿部さんの
+メールを良く読んでいれば読み取れたはずなのですが、思い込みとは恐ろしいも
+のです．（反省）
+
+【勘違い2】
+GM音源では打楽器音は鍵盤に割り振られるので、「音階になっている」というこ
+とが「鍵盤に割り振られている」と同義であると勘違いをしておりました．これ
+も前のメールを良く読んでいればわかったはずでした．（赤面）
+
+改めて動作確認をしました．
+
+【動作確認の結果】
+「楽器を○にする」で音色の変更はできました．「○の音符を…」と「○のドラム
+を…」は、同じ動作になっています．「楽器を○にする」で音色を変えると、「○
+のドラムを…」で鳴る音も変わります．これも、［4101］で解説して頂いた通り
+です．
+
+Kazuhiro ABE さんは書きました:
+&gt;<i> これらはFM音源ですが、もともとの定義が悪く、ほとんど音色の違いが分かりません。
+</I>
+2オペレータくらいでしょうか？確かに、音色の違いはわかりにくいと思いました．
+
+&gt;<i> 音量については、人間の感覚的なラウドネス曲線に対する補正を行っていないので、
+</I>&gt;<i> 周波数と音量が比例して感じられるのだと思います。
+</I>&gt;<i> <A HREF="http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A">http://ja.wikipedia.org/wiki/%E7%AD%89%E3%83%A9%E3%82%A6%E3%83%89%E3%83%8D%E3%82%B9%E6%9B%B2%E7%B7%9A</A>
+</I>&gt;<i> この対応をするかどうかですね。
+</I>
+この辺りも、普通のGM音源なら問題ないはずのところですよね．現実の問題とし
+ては、補正しないと実用的ではないと思います．簡単にできればよいのですが、
+いかがでしょうか．
+
+&gt;<i> 「調べる」については、今回いじっていないので、これとは別のScratch Boardまわりの問題ですね。
+</I>&gt;<i> ご存知と思いますが、以下のページにあるようにフィードバックを返してもらえるとよいと思います。
+</I>&gt;<i> <A HREF="http://info.scratch.mit.edu/Linux_installer">http://info.scratch.mit.edu/Linux_installer</A>
+</I>
+今まで使っていなかったので、気づかなかったのだと思いますが、「調べる」の
+「音量」がどうも上手く動かないようです．（「スライダー…」は関係がなかった）
+
+こちらで確認したところ、Picoボードを挿していなくても同じで、スクリプトに
+何も組んでいない状態かスクリプトを組んであってもScratchを起動してから一
+度も音を出していない状態なら、「音量」にチェックを入れても動作に問題はあ
+りません．ところが、何らかの音（「ニャー」も含む）を出そうとすると、ダメ
+なのです．
+
+フィードバックに協力したいのは山々ですが、英語がからっきしダメなので、何
+をどうしたらよいかよく分かりません．(^_^;;;
+
+------------------------------------------------------------------
+寳迫　芳人：<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">yhousako ＠ gmail.com</A>
+みんなで教育を考えよう！：<A HREF="http://www.geocities.jp/yhousako/">http://www.geocities.jp/yhousako/</A>
+指導案＆教材集：<A HREF="http://www2.ttcn.ne.jp/yhousako/">http://www2.ttcn.ne.jp/yhousako/</A>
+全国城跡ネットワーク：<A HREF="http://www.geocities.jp/shiroato_net/">http://www.geocities.jp/shiroato_net/</A>
+つれづれなるままに…：<A HREF="http://4oc.blogspot.com/">http://4oc.blogspot.com/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004105.html">[Squeak-ja: 4105] Re: Linux版Scratch1.3（改め1.3.1）の楽器音について
+</A></li>
+	<LI>次の記事 <A HREF="004107.html">[Squeak-ja: 4107] Re: Linux版Scratch1.3の日本語入力について（Was: Re: Scratch 1.3がリリースされました。）
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4106">[ 日付 ]</a>
+              <a href="thread.html#4106">[ スレッド ]</a>
+              <a href="subject.html#4106">[ 件名 ]</a>
+              <a href="author.html#4106">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

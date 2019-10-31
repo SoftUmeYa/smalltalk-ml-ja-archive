@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 8158]	NesTalkをpharo5.0に移植途中なのですが・・・
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208158%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FTmVzVGFsaxskQiRyGyhCcGhhcm81LjAbJEIkSzBcPyIbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRVNDZiRKJE4kRyQ5JCwhJiEmISYbKEI%3D%3F%3D&In-Reply-To=%3C000001d26f1b%249829c4c0%24c87d4e40%24%40kind.ocn.ne.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   
+   <LINK REL="Next"  HREF="008159.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 8158]	NesTalkをpharo5.0に移植途中なのですが・・・</H1>
+    <B>Sunao Furukawa</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%208158%5D%0A%09%3D%3Fiso-2022-jp%3Fb%3FTmVzVGFsaxskQiRyGyhCcGhhcm81LjAbJEIkSzBcPyIbKEI%3D%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCRVNDZiRKJE4kRyQ5JCwhJiEmISYbKEI%3D%3F%3D&In-Reply-To=%3C000001d26f1b%249829c4c0%24c87d4e40%24%40kind.ocn.ne.jp%3E"
+       TITLE="[SML 8158]	NesTalkをpharo5.0に移植途中なのですが・・・">sadie ＠ kind.ocn.ne.jp
+       </A><BR>
+    <I>2017年 1月 15日 (日) 19:39:04 JST</I>
+    <P><UL>
+        
+        <LI>次の記事 <A HREF="008159.html">[SML 8159] Re:	NesTalkをpharo5.0に移植途中なのですが・・・
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8158">[ 日付 ]</a>
+              <a href="thread.html#8158">[ スレッド ]</a>
+              <a href="subject.html#8158">[ 件名 ]</a>
+              <a href="author.html#8158">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>古川と申します。
+NesTalkでマリオを動かす
+<A HREF="http://oohito.com/nqthm/archives/2060">http://oohito.com/nqthm/archives/2060</A>
+を参考に
+NesTalkをpharo 5.0に移植しようと思って作業しているのですが、
+FileStreamのメソッドをdeprecated:にすればいいと思っていました。
+しかし、validate:aByteArrayの引数で具体的な値が入りません。
+pharo2.0でやれば、シンボルのブロックが代入されているところで、
+pharo5.0ではFileStreamの変数が指定されています。
+どう直したらいいでしょう。
+
+変更したメソッドを書いておきます。なお、BabyMockはsmalltalkhubから
+loadしました。
+--------------------------------------------------------------
+romFile: path
+	^ FileSystem disk / path binaryReadStreamDo:
+		[:stream | self readCartridge: stream]
+
+---------------------------------------------------------------
+readCartridge: stream
+	| roms vroms header |
+	stream deprecated: 'binary'.
+	header := NtCartridgeHeader fromByteArray: (stream deprecated:
+'next: 16').
+	roms := self readRoms: stream header: header.
+	vroms := self readVroms: stream header: header.
+	^ self new
+		setHeader: header
+		roms: roms
+		vroms: vroms
+		tiles: (self tilesPerVrom: vroms)
+----------------------------------------------------------------
+虫のいい話で申し訳ありません。ポイントは'next: 16'がdeprecated:にした時に
+値を読み込まないことだと思います。
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>次の記事 <A HREF="008159.html">[SML 8159] Re:	NesTalkをpharo5.0に移植途中なのですが・・・
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#8158">[ 日付 ]</a>
+              <a href="thread.html#8158">[ スレッド ]</a>
+              <a href="subject.html#8158">[ 件名 ]</a>
+              <a href="author.html#8158">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

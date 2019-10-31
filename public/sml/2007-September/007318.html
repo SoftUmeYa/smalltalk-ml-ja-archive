@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7318] Re: ブロック生成のメタプログラミング
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207318%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46E6CEE9.8030201%40zephyr.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007317.html">
+   <LINK REL="Next"  HREF="007319.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7318] Re: ブロック生成のメタプログラミング</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40akademia.co.jp?Subject=%5BSML%207318%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQiVWJW0lQyUvQDhALiROJWEbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJT8lVyVtJTAlaSVfJXMlMBsoQg%3D%3D%3F%3D&In-Reply-To=46E6CEE9.8030201%40zephyr.dti.ne.jp"
+       TITLE="[SML 7318] Re: ブロック生成のメタプログラミング">aoki ＠ sra.co.jp
+       </A><BR>
+    <I>2007年 9月 12日 (水) 03:53:51 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007317.html">[SML 7317] Re: ブロック生成のメタプログラミング
+</A></li>
+        <LI>次の記事 <A HREF="007319.html">[SML 7319] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7318">[ 日付 ]</a>
+              <a href="thread.html#7318">[ スレッド ]</a>
+              <a href="subject.html#7318">[ 件名 ]</a>
+              <a href="author.html#7318">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんばんは、青木です。
+
+西原さんがほとんどのことを言及されていますので、ブロックの動
+的な生成（その都度で生成すること）に関してのみ、鷲見さんが思
+いつかれた以外で、私の思うところを捕捉しておきます。
+
+あるメソッド内でブロックを静的に応答してしまうと、当該のブロ
+ックはコンパイルされたメソッドのリテラルフレームに格納されて
+しまいます。ブロックを静的に応答するところが複数（数カ所）に
+及ぶ場合も同様になります。
+
+これではインスペクタやデバッカなどのプログラミングツールの効
+力を殺いでしまうことになりかねません。ソースコードを得ようと
+すると、ブロックを保持しているメソッドのソースコードを引っぱ
+ってくることになるからです。
+
+先の私のメールにおいて、なにゆえ逆コンパイルされたソースコー
+ドを指示したのか、その意図を汲み取れる方々には、私の企ても伝
+わるだろうと慮ってのことです。
+
+また、仮想マシンはバイト幅でアドレッシングできるところまで手
+が延びますので、応答されるブロックの静的生成および動的生成の
+如何に関わらず、ブロック変数（引数）の総数はバイト幅アドレッ
+シングによって抑制されています。
+
+これをベタに書き下してしまうと、ブロックの取り得る引数の総数
+分だけのディスパッチッイングを行うプログラムとなります。あま
+りに醜悪でしょう。
+
+そこをユニバーサル・メッセージ（万能関数）を用いたメタプログ
+ラミング（高階関数）手法で実装したブロックの動的生成で切り抜
+けた、というところでしょうか。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        <A HREF="http://www.sra.co.jp/people/aoki/">http://www.sra.co.jp/people/aoki/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007317.html">[SML 7317] Re: ブロック生成のメタプログラミング
+</A></li>
+	<LI>次の記事 <A HREF="007319.html">[SML 7319] Re: ブロック生成のメタプログラミング
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7318">[ 日付 ]</a>
+              <a href="thread.html#7318">[ スレッド ]</a>
+              <a href="subject.html#7318">[ 件名 ]</a>
+              <a href="author.html#7318">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2185] Re: SuperSwiki 活用計画
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202185%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM2hNUTdXMmgbKEI%3D%3F%3D&In-Reply-To=41CD7878.5080509%40metatoys.org">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002183.html">
+   <LINK REL="Next"  HREF="002186.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2185] Re: SuperSwiki 活用計画</H1>
+    <B>H.Hachisuka</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202185%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kg%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCM2hNUTdXMmgbKEI%3D%3F%3D&In-Reply-To=41CD7878.5080509%40metatoys.org"
+       TITLE="[Squeak-ja: 2185] Re: SuperSwiki 活用計画">hachi ＠ asu.ac.jp
+       </A><BR>
+    <I>2004年 12月 26日 (日) 12:07:34 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002183.html">[Squeak-ja: 2183] SuperSwiki 活用計画
+</A></li>
+        <LI>次の記事 <A HREF="002186.html">[Squeak-ja: 2186] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2185">[ 日付 ]</a>
+              <a href="thread.html#2185">[ スレッド ]</a>
+              <a href="subject.html#2185">[ 件名 ]</a>
+              <a href="author.html#2185">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>蜂須賀です。
+
+&gt;<i> 山宮です。
+</I>&gt;<i> 
+</I>&gt;<i> ここ数日ずっと蜂須賀さんのコードを試してみて、かなり上手く行っているの
+</I>&gt;<i> を確認しています。こういうのは沢山の人で試してみた方が良いと思うので、
+</I>&gt;<i> 蜂須賀さんのコードもアップデートストリームに入れてみたらと思うのですが、
+</I>&gt;<i> 如何でしょうか? *1
+</I>
+　うまくいっているという事が嬉しいですネ。是非たくさんの人に試してもらっ
+ていい物にしてやってください。
+
+　初心者みたいな質問で恐縮なのですが、&quot;アップデートストリーム&quot;とは何なん
+でしょうか？どっかから最新の物や開発中のコードがゲットできる仕組みなので
+しょうか？
+
+&gt;<i> ついでに公開 SuperSwiki サーバも立ち上げて、標準で公開するボタンを押し
+</I>&gt;<i> た時にそちらに繋がるようにすれば良いのではないかと思います。新しく出来
+</I>&gt;<i> た squeakland.jp に SuperSwiki を置けるとベストだと思います。*2
+</I>&gt;<i> 
+</I>&gt;<i> 本当に大丈夫かな?という不安はあるのですが、squeakland.jp も春までは仮
+</I>&gt;<i> 公開という位置づけとの事ですので、逆に言えば春までには安定稼動出来るよ
+</I>&gt;<i> う今から試してみたいと言う心積りです。 &gt; 石塚さん
+</I>
+　「プロジェクト置き場」のような感じになるのでしょうか？SuperSwiki +
+Squeak という組み合わせは、とても相性がよく使い勝手もいいので、体感でき
+るサイトがあってもいいと思います。
+　SuperSwikiの環境は構築も簡単なので、使いやすさ体感してもらって「じゃあ
+自分の所でも...」となるといいですね。
+
+&gt;<i> *1
+</I>&gt;<i> 
+</I>&gt;<i> 蜂須賀さんのコードでは、サーバにアップされるファイル名は sjis 固定、ロー
+</I>&gt;<i> カルに保存される物はプラットフォーム依存になります。両者は同じファイル
+</I>&gt;<i> 名ですが、実は元々似て非なる物で、ローカルファイルの実体が zip ファイ
+</I>&gt;<i> ルなのに対して、サーバ上の物はその内容を展開した物です。
+</I>
+　余談なのですが、以前、Nihongo4を使用してパソコンサークルを行った際には
+展開せずにアップロードするようにした物を使っていた記憶があります。
+Nihongo4の時は、展開するとたくさんのファイルとフォルダが出来ていたりする
+上に、画像が壊れたりする時があったからだったと記憶しています。
+
+　Nihongo6になってから、展開されたファイルを見てみると.pr, .rc.gz, .html
+の３つしかなく、.rc.gzは実際には0バイトですし、.htmlファイルもSuperSwiki
+では使用されていないようです。zipファイルである必要があるのか？サーバと
+ローカルで変える必要があるのか？という疑問が私の中にはあるのですが....本
+当に余談でスミマセン。
+
+&gt;<i> 
+</I>&gt;<i> *2
+</I>&gt;<i> 
+</I>&gt;<i> 新しくポートを公開しなくて良いように、apache 経由で SuperSwiki を稼動
+</I>&gt;<i> させる実験をしましたので、置いても良いのでしたら自分で置きます。不満と
+</I>&gt;<i> しては、ウェブから見たときに英語になる事や、プロジェクトの作者や紹介文
+</I>&gt;<i> が表示されない事などありますが、使いながらの方が早く直ってゆく気がしま
+</I>&gt;<i> す。
+</I>
+　「apache経由」というと、mod_proxyみたいなもので実現されているのでしょ
+うか？セキュリティにも関係しそうなので、あまり深い事は聞かない方がいいか
+しら.....
+
+
+-- 
+/*
+　愛知産業大学 事務部情報管理課
+　蜂須賀 仁志 / e-mail: <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">hachi ＠ asu.ac.jp</A>
+                jpnic handle: HH420JP
+　444-0005 愛知県岡崎市岡町原山12-5
+　TEL: 0564-48-4511 FAX: 0564-48-7756
+*/
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002183.html">[Squeak-ja: 2183] SuperSwiki 活用計画
+</A></li>
+	<LI>次の記事 <A HREF="002186.html">[Squeak-ja: 2186] Re: SuperSwiki 活用計画
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2185">[ 日付 ]</a>
+              <a href="thread.html#2185">[ スレッド ]</a>
+              <a href="subject.html#2185">[ 件名 ]</a>
+              <a href="author.html#2185">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

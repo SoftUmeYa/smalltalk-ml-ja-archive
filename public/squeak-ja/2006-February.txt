@@ -1,0 +1,1372 @@
+From abee ＠ squeakland.jp  Wed Feb  1 02:10:17 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:24 2007
+Subject: [Squeak-ja: 2846] swikis.ddo.jp が落ちています。
+Message-ID: <43DF99F935F.8B62ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+梅澤さんの家サーバであるswikis.ddo.jpが先ほどから落ちています。ディスクク
+ラッシュとのことです。
+このため、プロジェクト置き場、NetMorph、世界聴診器などのページも軒並み使
+えなくなっています。
+
+コンテンツは断片的にarchive.orgやGoogleのキャッシュに残っていますが、復旧
+は予断を許しません。
+
+http://web.archive.org/web/*/http://swikis.ddo.jp
+http://72.14.203.104/search?q=cache:hJidAescdHwJ:swikis.ddo.jp/
+
+梅澤さんのボランティア精神によって支えられて来たこのSwikiですが、落ちたの
+は今回が初めてではなく、かなりの綱渡り運用でした。
+
+http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2003-September/000568.html
+http://www.smalltalk.jp/pipermail/squeak-ja/2005-April/002415.html
+
+そろそろ別の方法を考えたほうが良いかもしれません。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From miyasaka ＠ iris.dti.ne.jp  Wed Feb  1 13:00:03 2006
+From: miyasaka ＠ iris.dti.ne.jp (Toshio Miyasaka)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2847] ワークショップのお知らせ＆報告（デジハリ）
+Message-ID: <001001c626e3$fbb654e0$6501a8c0@miyasaka>
+
+Squeak-jaの皆様へ
+
+いつもお世話になっております。
+デジタルハリウッド大学院の宮坂です。
+
+最近では、HPスーパーサイエンスキッズのワークショップが秋葉原のデジタルハリ
+ウッド大学を会場に開催されており、HP-Squeakersの皆様にはお世話になっておりま
+す。おかげさまで、デジハリ側でのスクイーク熱も徐々に高まりつつあり、デジハリ
+大学では大学生主導によるスクイークのサークル活動も立上げ準備中です。今後の展
+開にご期待ください。
+
+さて、ワークショップのお知らせと、活動報告を簡単にさせていただきます。
+
+１．お知らせ
+
+２月中に３回、原宿のKDDIデザイニングスタジオでワークショップをさせていただけ
+ることになっています。
+詳細はこちらをご覧ください。
+http://www.kds.kddi.com/whatsnew/06013111.html
+主催者側が参加者募集に苦労しているようですので、ご興味ありそうな方にご紹介い
+ただければ幸いです。
+初回は、今週の日曜日（2月5日）です。参加申し込みは、上記のURLよりできますの
+で）
+
+主催者の希望により「ブロマイドを作ろう」とか「1年後の僕へおくるメッセージ」
+など、ちょっと面白いタイトルがついていますが、内容は、スクイークを使ったアニ
+メーションです。この会場でのワークショップは、参加者が小学校低学年以下の子ど
+も達が多く、また時間も限られているので、プログラミングを教えるというよりも、
+「スクイークでデジタルコンテンツを作ることの楽しさを伝える」ことに主眼をおい
+たものになっております。
+
+
+２．ワークショップ活動報告
+
+先日、藤沢市の市民団体主催によるAD/HD、LDといった発達障害をもった児童向けの
+スクイークワークショップ（３回）が終わりました。
+さすがに月１回で1回９０分という制約のなかでは、HPスーパーサイエンスキッズの
+ワークショップのようなすごい作品は難しく、「進む」「回る」「跳ね返る」を使っ
+た簡単なプログラムでしたが、「モノづくりのたのしさ」を伝えることはできたかと
+思います。
+
+障害をもった子ども達と一緒にスクイークをするのは初めての経験だったので、主に
+次のような点を工夫しました。
+１）ハロの出し方は、通常の「ALT+クリック」という「協調運動（ふたつの動作の組
+み合わせ）」は上手くできない児童もいるということだったので、「右クリック」で
+出るように設定を替えておきました。（全てが３ボタンマウスなら中央ボタンでもよ
+かったのですが、主催者側で用意されたPCは古いものも多かったので。。。）
+２）絵を描くことが難しい子も多かったので、部品の「四角形」や「楕円」を組み合
+わせてクルマの形を作り、それを「長方形ツール」でひとつのオブジェクトにしてか
+ら色を変える、というような進めかたをしました。
+３）「１５分に一回のサプライズ」を意識しました。これは本職の先生から指導いた
+だいたのですが、特にこうした障害をもった子ども達の場合には、集中力を維持させ
+るために１５分おきくらいにに「ハッ」とさせるなにかが必須とのこと。カリキュラ
+ムの流れの中で、こうしたメリハリを意識しました。
+
+主催者の方からは、こうした障害を持っている子ども達にワークショップを通して
+「自分にもできるんだ」という自信をもってほしい、ということを最初に言われてい
+ましたが、ワークショップの最後に「これで君達もプログラマーの仲間入りだね！」
+という話をしたところ、参加してくれた子ども達皆が目をキラキラさせてはにかんで
+いたのがとても印象的でした。これも、スクイークの不思議な魔法の力ですね。さす
+がです！
+
+今回も、我々のプロジェクトメンバー一同、スクイークを通して、とても貴重な経験
+をすることができました。
+スクイークの関係者の皆様、いつも本当にありがとうございます。
+
+以上、簡単ですが、お知らせとご報告まで。
+今後ともよろしくお願いいたします！！
+
+-------------------------------------------
+宮坂俊夫 (Toshio Miyasaka )
+デジタルハリウッド大学院
+デジタルコンテンツ研究科　研究員
+http://mts-j.hiho.jp/
+http://www.dhw.co.jp/gs/
+-------------------------------------------
+Tel : 070-6566-0623
+Fax : 020-4666-0069 (D-FAX)
+e-mail : miyasaka@iris.dti.ne.jp
+mobile : miyasaka0623_wan_wan@di.pdx.ne.jp
+-------------------------------------------
+
+
+From tomoyu-n ＠ tokyo-cafe.com  Wed Feb  1 13:28:52 2006
+From: tomoyu-n ＠ tokyo-cafe.com (根岸 智幸)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2848] Re: swikis.ddo.jp が落ちています。
+In-Reply-To: <43DF99F935F.8B62ABEE@smtp.nifty.com>
+References: <43DF99F935F.8B62ABEE@smtp.nifty.com>
+Message-ID: <78A75F2A-2DBC-4A13-A23C-C83D7628D5F1@tokyo-cafe.com>
+
+ご無沙汰しています。
+
+元アスキーの根岸です。
+
+現在は、ライブドアでライブドアグルメを運営しています。
+ホスティングには、どのくらいの容量とか、トラフィックが必要なので 
+しょうか？
+
+もしお手伝いできるようでした、言ってください。
+
+考えられるのは、
+
+(1) 以前、個人で「東京グルメ」を運営していたときの自宅サーバが、 
+まだ残っています。
+あまり容量やトラフィックが多くなく、ほかにもミラーが準備できるな 
+ら、
+こちらでホスティングすることも可能かもしれません。
+
+(2) お約束はできませんが、ライブドアでホスティングしてもらえない 
+か、
+相談してみる手もあります。昔、ringにも参加していたし、基本 
+的にオープンソースの
+会社なので、脈はあると思います。
+（世間で言われているような虚業の会社ではないで、ご安心ください）
+
+
+
+
+On 2006/02/01, at 2:10, Kazuhiro ABE wrote:
+
+> 阿部@新百合です。
+>
+> 梅澤さんの家サーバであるswikis.ddo.jpが先ほどから落ちて 
+> います。ディスクク
+> ラッシュとのことです。
+> このため、プロジェクト置き場、NetMorph、世界聴診器などの 
+> ページも軒並み使
+> えなくなっています。
+>
+> コンテンツは断片的にarchive.orgやGoogleのキャッ 
+> シュに残っていますが、復旧
+> は予断を許しません。
+>
+> http://web.archive.org/web/*/http://swikis.ddo.jp
+> http://72.14.203.104/search?q=cache:hJidAescdHwJ:swikis.ddo.jp/
+>
+> 梅澤さんのボランティア精神によって支えられて来たこの 
+> Swikiですが、落ちたの
+> は今回が初めてではなく、かなりの綱渡り運用でした。
+>
+> http://www.smalltalk.jp/Squeak-ja/archives/ 
+> lists.squeakfoundation.org/squeak-ja/2003-September/000568.html
+> http://www.smalltalk.jp/pipermail/squeak-ja/2005-April/002415.html
+>
+> そろそろ別の方法を考えたほうが良いかもしれません。
+>
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+>
+>
+>
+
+
+From gen_suzuki ＠ nifty.com  Wed Feb  1 15:18:24 2006
+From: gen_suzuki ＠ nifty.com (gen_suzuki@nifty.com)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2849] Re: swikis.ddo.jp が落ちています。
+In-Reply-To: <43DF99F935F.8B62ABEE@smtp.nifty.com>
+References: <43DF99F935F.8B62ABEE@smtp.nifty.com>
+Message-ID: <20060201150354.4DCB.GEN_SUZUKI@nifty.com>
+
+鈴木＠アカデミアシステムズです
+
+現在、弊社（アカデミアシステムズ株式会社）がsqueak-jaのＭＬ用に
+ご提供している、smalltalk.jpドメイン用のマシンを
+ご利用いただく案も可能です。
+
+根岸さまのサーバーや梅澤さまのサーバとミラーできれば、
+安全性が増すかとも思います。
+
+
+
+On Wed, 01 Feb 2006 02:10:17 +0900
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+
+> 阿部@新百合です。
+> 
+> 梅澤さんの家サーバであるswikis.ddo.jpが先ほどから落ちています。ディスクク
+> ラッシュとのことです。
+> このため、プロジェクト置き場、NetMorph、世界聴診器などのページも軒並み使
+> えなくなっています。
+> 
+> コンテンツは断片的にarchive.orgやGoogleのキャッシュに残っていますが、復旧
+> は予断を許しません。
+> 
+> http://web.archive.org/web/*/http://swikis.ddo.jp
+> http://72.14.203.104/search?q=cache:hJidAescdHwJ:swikis.ddo.jp/
+> 
+> 梅澤さんのボランティア精神によって支えられて来たこのSwikiですが、落ちたの
+> は今回が初めてではなく、かなりの綱渡り運用でした。
+> 
+> http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2003-September/000568.html
+> http://www.smalltalk.jp/pipermail/squeak-ja/2005-April/002415.html
+> 
+> そろそろ別の方法を考えたほうが良いかもしれません。
+> 
+>  //abee
+> --
+> 阿部 和広  EMAIL abee@squeakland.jp
+
+===============================================================
+鈴木　元
+アカデミアシステムズ株式会社
+
+gen@akademia.co.jp
+gen_suzuki@nifty.com
+
+ΑΚΑΔΗΜΙΑ Towards Seamless Networked Society 挑戦+開放+愉快！
+===============================================================
+
+
+
+From umejava ＠ mars.dti.ne.jp  Wed Feb  1 19:34:00 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2850] Re: swikis.ddo.jp が落ちています。
+In-Reply-To: <43DF99F935F.8B62ABEE@smtp.nifty.com>
+References: <43DF99F935F.8B62ABEE@smtp.nifty.com>
+Message-ID: <JD200602011934005.45434640@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+ご心配をおかけしました。先ほどようやく復旧いたしました。
+
+データも特に失われていないと思います。壊れたファイルシステムからぎりぎりの
+ところで救出しました。たまたま家にあった2.5インチHDDが功を奏しました。
+
+さて、ホスティングの件ですが、根岸様、鈴木様、お声をかけていただいて
+ありがとうございます。
+
+基本的にはSSHなどでリモート管理がきちんとできる環境であれば、特に自宅に
+こだわるものではありません。速度も現状のADSLに比べれば格段に有利と思われます。
+
+Squeakland.jpが現状、教育にフォーカスしたポータルになっているわけですが、
+よりSqueakの発展を加速してくためには、もっといろいろな側面からのポータルが
+複数必要になってくると思われます。多様性あってこそのSqueakですから。
+
+いくつかアイデアがありますので、その節はぜひご協力いただければと思います。
+
+よろしくお願い申し上げます。
+
+Kazuhiro ABE <abee@squeakland.jp> wrote:
+> 阿部@新百合です。
+> 
+> 梅澤さんの家サーバであるswikis.ddo.jpが先ほどから落ちています。ディスクク
+> ラッシュとのことです。
+> このため、プロジェクト置き場、NetMorph、世界聴診器などのページも軒並み使
+> えなくなっています。
+> 
+> コンテンツは断片的にarchive.orgやGoogleのキャッシュに残っていますが、復旧
+> は予断を許しません。
+> 
+> http://web.archive.org/web/*/http://swikis.ddo.jp
+> http://72.14.203.104/search?q=cache:hJidAescdHwJ:swikis.ddo.jp/
+> 
+> 梅澤さんのボランティア精神によって支えられて来たこのSwikiですが、落ちたの
+> は今回が初めてではなく、かなりの綱渡り運用でした。
+> 
+> http://www.smalltalk.jp/Squeak-ja/archives/lists.squeakfoundation.org/squeak-ja/2003-September/000568.html
+> http://www.smalltalk.jp/pipermail/squeak-ja/2005-April/002415.html
+> 
+> そろそろ別の方法を考えたほうが良いかもしれません。
+> 
+
+---
+[:masashi | ^umezawa]
+
+From mutoh ＠ openedu.org  Thu Feb  2 16:56:36 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2851] UNIXでのSqueak (web browser) Pluginの動作に付いて
+Message-ID: <ddoe1q9osr.wl%mutoh@openedu.org>
+
+むとうです。
+
+いま、FreeBSD portsのSqueak pluginを動作させるパッチを作って入れてもら
+おうと作業しています。
+# XIMの前に、受け入れてもらえそうなところから;-)
+# 例によって、 http://qml.610t.org/squeak/plugin.html を見てください。
+
+で、FreeBSDでブラウザプラグインを動作させて気がついたのですが、
+SqueakLand版のSqueakPlugin.imageではupdateがかかるのですが、アップデー
+トが全部適用された後で、どうもイメージが保存できないようでNotifierが上
+がります(Error: Failed to write image file (disk full?))。
+
+Windows版やMac OS X版でイメージをSqueakPlugin.imageに置き換えても特に
+問題なく動くようですが、これはどの辺が悪いのでしょうか?
+
+御存じの方がおられましたら、情報提供お願いします(_o_)
+# いっそ、SqueakPlugin2005Jを突っ込んでしまおうか…
+
+では。
+--
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+　
+
+From mutoh ＠ openedu.org  Thu Feb  2 20:46:31 2006
+From: mutoh ＠ openedu.org (Takeshi MUTOH)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2852] Re: UNIXでのSqueak (web browser) Pluginの動作に付いて
+In-Reply-To: <ddoe1q9osr.wl%mutoh@openedu.org>
+References: <ddoe1q9osr.wl%mutoh@openedu.org>
+Message-ID: <ddmzha9e5k.wl%mutoh@openedu.org>
+
+むとうです。
+
+すいません、自己レスです。
+
+At Thu, 02 Feb 2006 16:56:36 +0900,
+Takeshi MUTOH <mutoh@openedu.org> wrote:
+> で、FreeBSDでブラウザプラグインを動作させて気がついたのですが、
+> SqueakLand版のSqueakPlugin.imageではupdateがかかるのですが、アップデー
+> トが全部適用された後で、どうもイメージが保存できないようでNotifierが上
+> がります(Error: Failed to write image file (disk full?))。
+
+かなり基本的なところでボケてました。
+データとしてインストールしていたので、writableビットが落ちてました(;-;)
+
+
+とりあえず、イメージの保存で問題は無くなったのですが、保存後にsqueakく
+んのスプラッシュから実際のプロジェクトに移行せず、リロードするなりしな
+いと動かないみたいです。
+
+
+一人で騒いで、ごめんなさい(_o_)
+-- 
+武藤 武士＠「あおによし」自宅より 
+ E-mail:mutoh@openedu.org	URL:http://610T.org/
+ ・水面の泡のように、フラフラ揺れたり、沈んだり浮かんだり
+ ・「責任を持てないうちは責任のある地位にならないのが責任のある態度」
+
+From tango ＠ eggegg.co.jp  Fri Feb  3 17:44:25 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2853] 画像を背景として設定
+References: <ddoe1q9osr.wl%mutoh@openedu.org>
+Message-ID: <007101c6289e$0b4bab10$6dc4d2ca@gomes>
+
+やまもとです
+
+
+Squeakland 2005Jで画像を背景に設定すると
+デスクトップ上のオブジェクトを移動させると
+スタンプされていきます。
+以前この現象は解消されたと思っていたのですが
+今回また元に戻っちゃったのでしょうか？
+一応、ご報告。
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+From abee ＠ squeakland.jp  Sat Feb  4 06:54:39 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2854] Re: 画像を背景として設定
+In-Reply-To: <007101c6289e$0b4bab10$6dc4d2ca@gomes>
+References: <ddoe1q9osr.wl%mutoh@openedu.org>
+	<007101c6289e$0b4bab10$6dc4d2ca@gomes>
+Message-ID: <2d5d52a80602031354n77481d6l@mail.gmail.com>
+
+阿部@大阪です。
+
+06/02/03 に Thoru Yamamoto<tango@eggegg.co.jp> さんは書きました:
+> Squeakland 2005Jで画像を背景に設定すると
+> デスクトップ上のオブジェクトを移動させると
+> スタンプされていきます。
+> 以前この現象は解消されたと思っていたのですが
+> 今回また元に戻っちゃったのでしょうか？
+
+やってみたのですが、うまくいくようです(WinXP SP2)。
+よろしければお使いの環境などを教えていただけますか。
+あるいはおかしくなったプロジェクトやイメージをどこかに置いてもらえると助かります。
+
+ //abee
+
+From korakurider ＠ yahoo.co.jp  Sat Feb  4 10:22:59 2006
+From: korakurider ＠ yahoo.co.jp (korakurider@yahoo.co.jp)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2855] Re: 画像を背景として設定
+In-Reply-To: <2d5d52a80602031354n77481d6l@mail.gmail.com>
+References: <ddoe1q9osr.wl%mutoh@openedu.org>
+	<007101c6289e$0b4bab10$6dc4d2ca@gomes>
+	<2d5d52a80602031354n77481d6l@mail.gmail.com>
+Message-ID: <JW200602041022592.295244@yahoo.co.jp>
+
+Korakuriderです。
+山本さんに再現ケースを教えていただいて、少し調べてみました。
+http://www.kukakuka.jp/squeak/bugs/view.php?id=70
+
+
+Kazuhiro ABE <abee@squeakland.jp>さん：
+> 阿部@大阪です。
+> 
+> 06/02/03 に Thoru Yamamoto<tango@eggegg.co.jp> さんは書きました:
+> > Squeakland 2005Jで画像を背景に設定すると
+> > デスクトップ上のオブジェクトを移動させると
+> > スタンプされていきます。
+> > 以前この現象は解消されたと思っていたのですが
+> > 今回また元に戻っちゃったのでしょうか？
+> 
+> やってみたのですが、うまくいくようです(WinXP SP2)。
+> よろしければお使いの環境などを教えていただけますか。
+> あるいはおかしくなったプロジェクトやイメージをどこかに置いてもらえると
+助かります。
+> 
+>  //abee
+
+--------------------------------------
+GANBARE! NIPPON!
+Yahoo! JAPAN JOC OFFICIAL INTERNET PORTAL SITE PARTNER
+http://pr.mail.yahoo.co.jp/ganbare-nippon/
+
+From abee ＠ squeakland.jp  Sat Feb  4 10:41:55 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2856] Re: 画像を背景として設定
+In-Reply-To: <JW200602041022592.295244@yahoo.co.jp>
+Message-ID: <20060204014155.42445.qmail@web3207.mail.bbt.yahoo.co.jp>
+
+阿部@大阪です。
+確認しました。
+
+--- korakurider@yahoo.co.jp からのメッセージ：
+> 山本さんに再現ケースを教えていただいて、少し調べてみま
+した。
+> http://www.kukakuka.jp/squeak/bugs/view.php?id=70
+
+ペイントで描いたスケッチを背景にするのがキーですね。
+赤ハロメニューを使った場合でも、画像ファイルのドラッグ&
+ドロップでは大丈夫でした。以後、Mantis-Jでフォローします
+。
+
+ //abee
+
+From tango ＠ eggegg.co.jp  Sat Feb  4 18:24:09 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2857] Re: 画像を背景として設定
+References: <ddoe1q9osr.wl%mutoh@openedu.org><007101c6289e$0b4bab10$6dc4d2ca@gomes><2d5d52a80602031354n77481d6l@mail.gmail.com>
+	<JW200602041022592.295244@yahoo.co.jp>
+Message-ID: <003601c6296c$c429fa50$6dc4d2ca@gomes>
+
+やまもとです。
+
+Korakuriderさんフォローありがとうございます。
+
+FileListから画像を背景にするときも起こるようです。
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+
+
+
+----- Original Message ----- 
+From: <korakurider@yahoo.co.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Saturday, February 04, 2006 10:22 AM
+Subject: [Squeak-ja: 2855] Re: 画像を背景として設定
+
+
+> Korakuriderです。
+> 山本さんに再現ケースを教えていただいて、少し調べてみました。
+> http://www.kukakuka.jp/squeak/bugs/view.php?id=70
+>
+>
+> Kazuhiro ABE <abee@squeakland.jp>さん：
+> > 阿部@大阪です。
+> >
+> > 06/02/03 に Thoru Yamamoto<tango@eggegg.co.jp> さんは書きました:
+> > > Squeakland 2005Jで画像を背景に設定すると
+> > > デスクトップ上のオブジェクトを移動させると
+> > > スタンプされていきます。
+> > > 以前この現象は解消されたと思っていたのですが
+> > > 今回また元に戻っちゃったのでしょうか？
+> >
+> > やってみたのですが、うまくいくようです(WinXP SP2)。
+> > よろしければお使いの環境などを教えていただけますか。
+> > あるいはおかしくなったプロジェクトやイメージをどこかに置いてもらえると
+> 助かります。
+> >
+> >  //abee
+>
+> --------------------------------------
+> GANBARE! NIPPON!
+> Yahoo! JAPAN JOC OFFICIAL INTERNET PORTAL SITE PARTNER
+> http://pr.mail.yahoo.co.jp/ganbare-nippon/
+>
+
+
+
+From tango ＠ eggegg.co.jp  Sat Feb  4 19:04:53 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2858] Re: 画像を背景として設定
+References: <ddoe1q9osr.wl%mutoh@openedu.org><007101c6289e$0b4bab10$6dc4d2ca@gomes><2d5d52a80602031354n77481d6l@mail.gmail.com><JW200602041022592.295244@yahoo.co.jp>
+	<003601c6296c$c429fa50$6dc4d2ca@gomes>
+Message-ID: <000501c62972$75e39ee0$6dc4d2ca@gomes>
+
+やまもとです。
+
+
+> FileListから画像を背景にするときも起こるようです。
+
+と書きましたがいくつかの画像で試してみると
+問題なく（？？）背景にできるようです。
+もしかしたらはじめに試していた画像に問題があるかも。
+（実を言うとanimeGifでやっていた・・・・涙）
+もうちょっと調べてみて報告させていただきまする。
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+
+
+
+From kawa90 ＠ yahoo.co.jp  Sat Feb  4 20:48:55 2006
+From: kawa90 ＠ yahoo.co.jp (Hideo Kawamura)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2859] Re: 画像を背景として設定
+In-Reply-To: <000501c62972$75e39ee0$6dc4d2ca@gomes>
+References: <ddoe1q9osr.wl%mutoh@openedu.org><007101c6289e$0b4bab10$6dc4d2ca@gomes><2d5d52a80602031354n77481d6l@mail.gmail.com><JW200602041022592.295244@yahoo.co.jp>	<003601c6296c$c429fa50$6dc4d2ca@gomes>
+	<000501c62972$75e39ee0$6dc4d2ca@gomes>
+Message-ID: <43E494A7.3010309@yahoo.co.jp>
+
+かわむらです。
+
+透過なイメージで起きますね。なのでＧＩＦだけでなく透過なPNGでも同じこと
+が起きます。これは前から仕様だとおもってました。
+
+それでは
+
+Thoru Yamamoto wrote:
+> やまもとです。
+>
+>
+>   
+>> FileListから画像を背景にするときも起こるようです。
+>>     
+>
+> と書きましたがいくつかの画像で試してみると
+> 問題なく（？？）背景にできるようです。
+> もしかしたらはじめに試していた画像に問題があるかも。
+> （実を言うとanimeGifでやっていた・・・・涙）
+> もうちょっと調べてみて報告させていただきまする。
+> -------------------------------
+> Thoru Yamamoto
+> mail :    tango@eggegg.co.jp
+> www:    http://www.thoruman.com
+> -------------------------------
+>
+>
+>
+>
+>   
+
+
+-- 
+--------------
+Hideo Kawamura(川村 秀男)
+HP: http://squeak.qp.land.to/
+Blog: http://squeak.qp.land.to/mt
+Mail: kawa90 @ yahoo co jp
+
+
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.375 / Virus Database: 267.15.1/250 - Release Date: 2006/02/03
+
+--------------------------------------
+GANBARE! NIPPON!
+Yahoo! JAPAN JOC OFFICIAL INTERNET PORTAL SITE PARTNER
+http://pr.mail.yahoo.co.jp/ganbare-nippon/
+
+From tango ＠ eggegg.co.jp  Sat Feb  4 21:38:04 2006
+From: tango ＠ eggegg.co.jp (Thoru Yamamoto)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2860] Re: 画像を背景として設定
+References: <ddoe1q9osr.wl%mutoh@openedu.org><007101c6289e$0b4bab10$6dc4d2ca@gomes><2d5d52a80602031354n77481d6l@mail.gmail.com><JW200602041022592.295244@yahoo.co.jp>	<003601c6296c$c429fa50$6dc4d2ca@gomes><000501c62972$75e39ee0$6dc4d2ca@gomes>
+	<43E494A7.3010309@yahoo.co.jp>
+Message-ID: <001401c62987$d9fdcad0$6dc4d2ca@gomes>
+
+やまもとです。
+
+> 透過なイメージで起きますね。なのでＧＩＦだけでなく透過なPNGでも同じこと
+> が起きます。これは前から仕様だとおもってました。
+
+なるほど「透過な画像」で納得です。そうなってまする。
+さすが画像関係は強いっすね。＜かわむらさん
+
+
+-------------------------------
+Thoru Yamamoto
+mail :    tango@eggegg.co.jp
+www:    http://www.thoruman.com
+-------------------------------
+----- Original Message ----- 
+From: "Hideo Kawamura" <kawa90@yahoo.co.jp>
+To: "Squeak discussion in Japanese" <squeak-ja@smalltalk.jp>
+Sent: Saturday, February 04, 2006 8:48 PM
+Subject: [Squeak-ja: 2859] Re: 画像を背景として設定
+
+
+> かわむらです。
+>
+> 透過なイメージで起きますね。なのでＧＩＦだけでなく透過なPNGでも同じこと
+> が起きます。これは前から仕様だとおもってました。
+>
+> それでは
+>
+> Thoru Yamamoto wrote:
+> > やまもとです。
+> >
+> >
+> >
+> >> FileListから画像を背景にするときも起こるようです。
+> >>
+> >
+> > と書きましたがいくつかの画像で試してみると
+> > 問題なく（？？）背景にできるようです。
+> > もしかしたらはじめに試していた画像に問題があるかも。
+> > （実を言うとanimeGifでやっていた・・・・涙）
+> > もうちょっと調べてみて報告させていただきまする。
+> > -------------------------------
+> > Thoru Yamamoto
+> > mail :    tango@eggegg.co.jp
+> > www:    http://www.thoruman.com
+> > -------------------------------
+> >
+> >
+> >
+> >
+> >
+>
+>
+> -- 
+> --------------
+> Hideo Kawamura(川村 秀男)
+> HP: http://squeak.qp.land.to/
+> Blog: http://squeak.qp.land.to/mt
+> Mail: kawa90 @ yahoo co jp
+>
+>
+>
+> -- 
+> No virus found in this outgoing message.
+> Checked by AVG Free Edition.
+> Version: 7.1.375 / Virus Database: 267.15.1/250 - Release Date: 2006/02/03
+>
+> --------------------------------------
+> GANBARE! NIPPON!
+> Yahoo! JAPAN JOC OFFICIAL INTERNET PORTAL SITE PARTNER
+> http://pr.mail.yahoo.co.jp/ganbare-nippon/
+>
+
+
+
+From kuwatani ＠ akademia.co.jp  Thu Feb  9 15:24:16 2006
+From: kuwatani ＠ akademia.co.jp (Tsuyoshi KUWATANI)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2861] メーリングリストの一時停止のお知らせ
+Message-ID: <43EAE010.8050609@akademia.co.jp>
+
+Squeak-ja参加者の皆様
+
+Squeak-jaの管理をしています 桑谷 です．
+
+メーリングリストを運用しているサーバが置いてある建物が
+電気工事のため下記の日程で停電になることになりました．
+よってその間はメーリングリストを一時停止します．
+ご迷惑をおかけします．何卒よろしくお願い致します．
+
+                            記
+
+         日時：2006年2月11日(土) 18:00〜22:00
+         内容：メーリングリストの一時停止
+
+                                                   以上
+--------
+桑谷剛史＠Squeak-ja管理人
+
+
+
+From tako ＠ aquilax.co.jp  Thu Feb  9 17:46:30 2006
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2862] 求人 Squeak プログラマ その後
+Message-ID: <20060209084630.5E0AB43736@1server.aquilax.co.jp>
+
+　昨年 12月14日に、Squeak求人ポストをした池袋(アキラックス)です。
+危機を脱することができました。どうもありがとうございました。
+
+簡単に経緯をご報告します。
+
+----　リプライ
+　17:41のポストに対し20:01にアカデミアシステムズ鈴木 元　社長より
+最初のリプライをいただきました。
+
+その後、翌15日 10:25、19日にも別の方からのリプライをいただきました。
+
+
+----　遠隔開発
+　期限のあった唯一の案件（エンドユーザに配付するメンテナンスツール）は
+アカデミアシステムズさんに引き受けていただけ、1月31日に無事納品して
+いただきました。
+
+　実際の開発は鳥取のアカデミアシステムズ本社で行っていただきましたが、
+VNC+電話での最初のミーティングのあと、アカデミアシステムズさんの
+C-Roomでの毎週金曜日の定例会議(５分程度)＋数回のメール交換だけで
+私の簡単なスケッチから、希望通りのＧＵＩを組み立てていただけました。
+
+　遠隔でのコラボレーションがこれほどスムーズに出来たことに驚きました。
+設計の詳細に立ち入らなくても「ブラウザライク」とか「〜にように」との
+指定で実装が進み、クラス構成も簡単に理解できるものを作っていただけました。
+
+　アカデミアシステムズの担当の桑谷さんの理解力に負うところが大きいとは
+思いますが、Squeak環境に接することでつちかわれた 「Squeak文化」 が
+相互理解の基盤としてうまく機能したように思います。
+
+----
+　明日の午後には、15日にリプライをいただいた方とミーティングの予定です。
+
+ではでは
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Aquilax Inc. (www.aquilax.co.jp)
+
+
+
+From tako ＠ aquilax.co.jp  Fri Feb 10 11:15:10 2006
+From: tako ＠ aquilax.co.jp (Kouji takahashi)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2863] IntelMac での SqueakLandJ2005 tinyBenchmarks
+Message-ID: <20060210021515.072954375B@1server.aquilax.co.jp>
+
+　高橋＠池袋です。
+
+　現行の IntelとPowerPCのiMac上でSqueakLand J2005 の
+tinyBenchmarks を行いました。
+
+                        bytecode/sec    sends/sec  : 私的処理
+Intel iMac 2.0G(667M) :  50,473.520   : 2,270,514  : 82,551ms 
+iMacG5     2.1G(700M) : 150,888,365   : 6,279,058  : 29,003ms
+()内はバスクロック↑  :      2.98倍   :    2.76倍  : 　2.84倍
+
+
+私的処理はShift-JISファイルを読み込み、image内のデータから
+検索を行う処理の timoRun
+
+日々使いのimage（SqueakLand J2005開発者版が元 ＋
+Squeak 3.0.app (MacOSX)を USB 2.0 Flash メモリに入れ
+店員さんの了承を得て展示されているiMacでテストしました。
+
+　どうということはないのですがご参考まで
+
+
+
+-------------------------------
+^. .^    Kouji Takahashi  <tako@aquilax.co.jp>
+ ='=     Aquilax Inc. (www.aquilax.co.jp)
+
+
+
+From okumura ＠ edu.mie-u.ac.jp  Fri Feb 10 11:24:24 2006
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2864] Re: IntelMac での  SqueakLandJ2005 tinyBenchmarks
+In-Reply-To: <20060210021515.072954375B@1server.aquilax.co.jp>
+References: <20060210021515.072954375B@1server.aquilax.co.jp>
+Message-ID: <20060210.112424.81791919.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+ええっ，Intelのほうが3倍 *遅い* んですね？ どうしてなんでしょう？
+
+tako@aquilax.co.jp (Kouji takahashi) wrote:
+
+>                         bytecode/sec    sends/sec  : 私的処理
+> Intel iMac 2.0G(667M) :  50,473.520   : 2,270,514  : 82,551ms 
+> iMacG5     2.1G(700M) : 150,888,365   : 6,279,058  : 29,003ms
+> ()内はバスクロック↑  :      2.98倍   :    2.76倍  : 　2.84倍
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From yoshiki ＠ squeakland.org  Fri Feb 10 11:40:52 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2865] Re: IntelMac での SqueakLandJ2005 tinyBenchmarks
+In-Reply-To: <20060210.112424.81791919.okumura@edu.mie-u.ac.jp>
+References: <20060210021515.072954375B@1server.aquilax.co.jp>
+	<20060210.112424.81791919.okumura@edu.mie-u.ac.jp>
+Message-ID: <uirrovsuj.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> ええっ，Intelのほうが3倍 *遅い* んですね？ どうしてなんでしょう？
+
+  数字を見たのはこれが初めてなので興味深いです。これは、やっぱり
+PowerPCのエミュレーションをしているからなのでしょうかね? 正式なVMとし
+てJohn Mcからリリースされるまでには、いろいろなプラグインの検証などが
+行われなくてはいけないでしょうが、micro benchmarksなら、リコンパイルす
+るだけでも動いて、よりフェアな比較になるとも思います。
+
+  それほど驚くべき数字にはならないかもしれませんが、それでも楽しみです
+ね。
+
+-- Yoshiki
+
+> tako@aquilax.co.jp (Kouji takahashi) wrote:
+> 
+> >                         bytecode/sec    sends/sec  : 私的処理
+> > Intel iMac 2.0G(667M) :  50,473.520   : 2,270,514  : 82,551ms 
+> > iMacG5     2.1G(700M) : 150,888,365   : 6,279,058  : 29,003ms
+> > ()内はバスクロック↑  :      2.98倍   :    2.76倍  : 　2.84倍
+
+From okumura ＠ edu.mie-u.ac.jp  Fri Feb 10 12:02:07 2006
+From: okumura ＠ edu.mie-u.ac.jp (Haruhiko Okumura)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2866] Re: IntelMac での SqueakLandJ2005 tinyBenchmarks
+In-Reply-To: <uirrovsuj.wl%yoshiki@squeakland.org>
+References: <20060210021515.072954375B@1server.aquilax.co.jp>
+	<20060210.112424.81791919.okumura@edu.mie-u.ac.jp>
+	<uirrovsuj.wl%yoshiki@squeakland.org>
+Message-ID: <20060210.120207.120901865.okumura@edu.mie-u.ac.jp>
+
+奥村です。
+
+すみません，ちゃんと読みませんでした。再makeしたんじゃなくて，エミュレー
+ションなんですね。
+
+エミュレーションで3倍遅い程度なら，納得できる数字でした。
+
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+
+>   おおしまです。
+> 
+> > ええっ，Intelのほうが3倍 *遅い* んですね？ どうしてなんでしょう？
+> 
+>   数字を見たのはこれが初めてなので興味深いです。これは、やっぱり
+> PowerPCのエミュレーションをしているからなのでしょうかね? 正式なVMとし
+> てJohn Mcからリリースされるまでには、いろいろなプラグインの検証などが
+> 行われなくてはいけないでしょうが、micro benchmarksなら、リコンパイルす
+> るだけでも動いて、よりフェアな比較になるとも思います。
+> 
+>   それほど驚くべき数字にはならないかもしれませんが、それでも楽しみです
+> ね。
+> 
+> -- Yoshiki
+> 
+> > tako@aquilax.co.jp (Kouji takahashi) wrote:
+> > 
+> > >                         bytecode/sec    sends/sec  : 私的処理
+> > > Intel iMac 2.0G(667M) :  50,473.520   : 2,270,514  : 82,551ms 
+> > > iMacG5     2.1G(700M) : 150,888,365   : 6,279,058  : 29,003ms
+> > > ()内はバスクロック↑  :      2.98倍   :    2.76倍  : 　2.84倍
+
+-- 
+奥村晴彦 http://oku.edu.mie-u.ac.jp/~okumura/
+〒514-8507 三重大学教育学部情報教育課程
+
+From nishis ＠ zephyr.dti.ne.jp  Fri Feb 10 23:02:38 2006
+From: nishis ＠ zephyr.dti.ne.jp (NISHIHARA Satoshi)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2867] Re: IntelMac での SqueakLandJ2005 tinyBenchmarks
+In-Reply-To: <20060210021515.072954375B@1server.aquilax.co.jp>
+References: <20060210021515.072954375B@1server.aquilax.co.jp>
+Message-ID: <43EC9CFE.1080506@zephyr.dti.ne.jp>
+
+西原@風邪でダウンです．
+
+on 06.2.10 11:15 AM, Kouji takahashi wrote:
+> 　現行の IntelとPowerPCのiMac上でSqueakLand J2005 の
+> tinyBenchmarks を行いました。
+> 
+>                         bytecode/sec    sends/sec  : 私的処理
+> Intel iMac 2.0G(667M) :  50,473.520   : 2,270,514  : 82,551ms 
+> iMacG5     2.1G(700M) : 150,888,365   : 6,279,058  : 29,003ms
+> ()内はバスクロック↑  :      2.98倍   :    2.76倍  : 　2.84倍
+
+G5 と比べちゃ可哀想だと思ったので PowerBook 系と (笑)．
+
+                        bytecode/sec    sends/sec
+PBG4 12.1/867/640     :  64,000,000   : 2,845,602
+PBG4 15.2/15G/1536    : 104,746,317   : 4,775,850
+
+VM は 3.8.9beta10，VI は 3.9a-6720 です． VM 3.8.10beta7 は
+Jaguar では動きませんでした．体感で 867MHz の G4 book より遅い
+という感じなんでしょうか．
+
+-- 
+--------------------------------------------
+西原聡士 (NISHIHARA Satoshi)
+URL:    http://www.zephyr.dti.ne.jp/~nishis/
+--------------------------------------------
+
+From yoshiki ＠ squeakland.org  Sun Feb 12 16:39:28 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2868] Squeak Board Election
+Message-ID: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+
+  開発者向けSqueakの本家squeak-devコミュニティで、ボードメンバーの選
+挙が行われることが決まっています。議題は、Squeakの方向性を決めるボード
+メンバーを選ぶ、というものだけです。投票権は
+
+  1. SqueakPeopleというコミュニティサイト
+     (http://people.squeakfoundation.org/)にアカウントを持っていて、
+     "Apprentice"以上にランクされている人
+
+  2. 日本のコミュニティ連絡係である大島が、選挙管理委員会(Squeak
+     Election Team)に伝える名簿
+     に乗っている人。
+
+という2種類の人に与えられることになります。Squeak-jaを読んでいる人で、
+SqueakPeopleに登録している人は余り多くないようですが、後者は2/17までに
+僕が名簿(メールアドレス)をまとめることになっています。
+
+  これからSqueakPeopleに登録したい方はぜひともしていただいてよいですし
+(すでに登録されている人からランクを認めてもらわないと"Apprentice"には
+なれないのですが、僕に言ってくださればランク付けします)、あるいは僕宛
+に2/16頃までにメールを送ってくだされば、2/17にまとめたものをElection
+Teamに送ります。
+
+  ちなみに、日本からは梅澤さんか僕が立候補することになりそうです。せっ
+かくですので、日本の活動のvisibilityを少し高めていこうではありませんか。
+
+  というわけで、ご検討ください。
+
+-- Yoshiki
+
+From umejava ＠ mars.dti.ne.jp  Sun Feb 12 22:18:23 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2869] Re: Squeak Board Election
+In-Reply-To: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+Message-ID: <JT200602122218236.2291859@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+どうもSqueakPeopleのランク制度が日本人のメンタリティには合わない気が
+するのですよね。入りにくさを感じてしまいます。
+
+そんな場合は大島さんに気軽に「投票希望」とメールいただければと
+思います。
+
+投票用のメアドが簡単に登録でき、かつ本人が特定できる(いたずら防止)ような
+システムはどこかに転がっていないものでしょうか。Seasideで作ると楽なような
+気もしますね。
+
+ちなみにボードメンバーですが、私はまずは大島さんが適任であろうと思っています。
+Squeak-devの活動は、実はあんまり追えていませんし。
+
+Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>   開発者向けSqueakの本家squeak-devコミュニティで、ボードメンバーの選
+> 挙が行われることが決まっています。議題は、Squeakの方向性を決めるボード
+> メンバーを選ぶ、というものだけです。投票権は
+> 
+>   1. SqueakPeopleというコミュニティサイト
+>      (http://people.squeakfoundation.org/)にアカウントを持っていて、
+>      "Apprentice"以上にランクされている人
+> 
+>   2. 日本のコミュニティ連絡係である大島が、選挙管理委員会(Squeak
+>      Election Team)に伝える名簿
+>      に乗っている人。
+> 
+> という2種類の人に与えられることになります。Squeak-jaを読んでいる人で、
+> SqueakPeopleに登録している人は余り多くないようですが、後者は2/17までに
+> 僕が名簿(メールアドレス)をまとめることになっています。
+> 
+>   これからSqueakPeopleに登録したい方はぜひともしていただいてよいですし
+> (すでに登録されている人からランクを認めてもらわないと"Apprentice"には
+> なれないのですが、僕に言ってくださればランク付けします)、あるいは僕宛
+> に2/16頃までにメールを送ってくだされば、2/17にまとめたものをElection
+> Teamに送ります。
+> 
+>   ちなみに、日本からは梅澤さんか僕が立候補することになりそうです。せっ
+> かくですので、日本の活動のvisibilityを少し高めていこうではありませんか。
+> 
+>   というわけで、ご検討ください。
+> 
+> -- Yoshiki
+
+---
+[:masashi | ^umezawa]
+
+From abee ＠ squeakland.jp  Sun Feb 12 22:57:45 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2870] Re: Squeak Board Election
+In-Reply-To: <JT200602122218236.2291859@mars.dti.ne.jp>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+	<JT200602122218236.2291859@mars.dti.ne.jp>
+Message-ID: <43EF3ED926D.7DCEABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+On Sun, 12 Feb 2006 22:18:23 +0900
+Masashi Umezawa <umejava@mars.dti.ne.jp> wrote:
+>どうもSqueakPeopleのランク制度が日本人のメンタリティには合わない気が
+>するのですよね。入りにくさを感じてしまいます。
+
+確かにむず痒さを感じますね。
+
+# 早速の過分な評価をありがとうございます。
+
+Squeaker's Scrapbookのように書き込み数に応じてランクが上がるのならよいの
+でしょうか(私は半人前です)。
+
+http://squeak.sakura.ne.jp/
+
+>Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>>   開発者向けSqueakの本家squeak-devコミュニティで、ボードメンバーの選
+>> 挙が行われることが決まっています。議題は、Squeakの方向性を決めるボード
+>> メンバーを選ぶ、というものだけです。投票権は
+(snip)
+>>   これからSqueakPeopleに登録したい方はぜひともしていただいてよいですし
+>> (すでに登録されている人からランクを認めてもらわないと"Apprentice"には
+>> なれないのですが、僕に言ってくださればランク付けします)、あるいは僕宛
+>> に2/16頃までにメールを送ってくだされば、2/17にまとめたものをElection
+>> Teamに送ります。
+
+登録しておいて言うのもなんですが、選挙前に日本人がわらわら入ってくるとい
+うのはよいのですかね。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From takeda.toshiyuki ＠ gmail.com  Mon Feb 13 01:18:26 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2871] Re: Squeak Board Election
+In-Reply-To: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+Message-ID: <6544a1da0602120818i1f60f80dt76e6b147229b6ae2@mail.gmail.com>
+
+タケダです。なにやら投票があるぐらいは知っていたのですが、
+
+On 2/12/06, Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+>   開発者向けSqueakの本家squeak-devコミュニティで、ボードメンバーの選
+> 挙が行われることが決まっています。議題は、Squeakの方向性を決めるボード
+> メンバーを選ぶ、というものだけです。投票権は
+
+「Squeakの方向性を決める」の意味がわからないので教えていただけますか？
+
+＃今まではどこで方向性が決まっていたのでしょうか。
+
+From yoshiki ＠ squeakland.org  Mon Feb 13 04:27:38 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2872] Re: Squeak Board Election
+In-Reply-To: <6544a1da0602120818i1f60f80dt76e6b147229b6ae2@mail.gmail.com>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+	<6544a1da0602120818i1f60f80dt76e6b147229b6ae2@mail.gmail.com>
+Message-ID: <uzmkwv0lx.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> On 2/12/06, Yoshiki Ohshima <yoshiki@squeakland.org> wrote:
+> >   開発者向けSqueakの本家squeak-devコミュニティで、ボードメンバーの選
+> > 挙が行われることが決まっています。議題は、Squeakの方向性を決めるボード
+> > メンバーを選ぶ、というものだけです。投票権は
+> 
+> 「Squeakの方向性を決める」の意味がわからないので教えていただけますか？
+>
+> ＃今まではどこで方向性が決まっていたのでしょうか。
+
+  これまでの流れは、システムを大まかに分割したモジュールや新たな拡張ご
+とに「チーム」を作って、そのチームが実際の作業をする、というのがモデル
+になっています。ボードの仕事は、チームの承認をしたりパッケージングをし
+たりというのが任務です。
+
+  現在までの流れは、大まかにはデフォルトのイメージを小さくする、という
+ことではありました。それぞれのチームも、Morphicチームなどは比較的活動
+してはいたのですが、御存知のように全体として動きは遅いものでもありまし
+た。開発者向けは、Squeaklandみたいに用途が定まっているわけではないので、
+人それぞれ目的が変わってしまっているのが問題ではあります。ボードメンバー
+による合議制には限界もあるとは思いますが、一応選挙の形を経ることで、少
+しは"authority"を持って進めるようになることは期待されています。
+
+-- Yoshiki
+
+
+From yoshiki ＠ squeakland.org  Mon Feb 13 04:29:15 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2873] Re: Squeak Board Election
+In-Reply-To: <43EF3ED926D.7DCEABEE@smtp.nifty.com>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+	<JT200602122218236.2291859@mars.dti.ne.jp>
+	<43EF3ED926D.7DCEABEE@smtp.nifty.com>
+Message-ID: <uy80gv0j8.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+> 登録しておいて言うのもなんですが、選挙前に日本人がわらわら入ってくるとい
+> うのはよいのですかね。
+
+  わらわら入るのは別に日本人だけではないです。似たようなアナウンスはあ
+ちこちのコミュニティでなされています。というわけで、遠慮しないで登録し
+たい人は登録してみてください。
+
+-- Yoshiki
+
+
+From takeda.toshiyuki ＠ gmail.com  Mon Feb 13 12:20:34 2006
+From: takeda.toshiyuki ＠ gmail.com (Toshiyuki Takeda)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2874] Re: Squeak Board Election
+In-Reply-To: <uzmkwv0lx.wl%yoshiki@squeakland.org>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+	<6544a1da0602120818i1f60f80dt76e6b147229b6ae2@mail.gmail.com>
+	<uzmkwv0lx.wl%yoshiki@squeakland.org>
+Message-ID: <6544a1da0602121920s186b2aa1q897098f1d0438ca8@mail.gmail.com>
+
+タケダです。おおしまさん、ありがとうございます。
+なんとなくわかった気がします。
+
+選挙のことは以下も参照しました。
+当初のボードが7人いて、それを改選するわけですね。
+
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2006-January/099064.html
+http://lists.squeakfoundation.org/pipermail/squeak-dev/2006-February/100549.html
+
+From abee ＠ squeakland.jp  Mon Feb 13 17:47:21 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2875] 第 83 回コンピュータと教育研究発表会
+Message-ID: <43F04799170.E478ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+直前のご案内で申し訳ありません。2006/2/17(金), 18(土)に東京は小金井の東京
+学芸大学で「第83回コンピュータと教育研究発表会」が開催されます。
+
+http://www.ipsj.or.jp/09sig/kaikoku/2005/CE83.html
+
+2/17の16:30から2時間、Squeakの枠があり、私もお話させていただく予定です。
+座長はドリトルの兼宗先生です。
+
+一般の方も参加可能とのことです。
+
+研究発表会への参加方法
+http://ce.tt.tuat.ac.jp/index.php?%BB%B2%B2%C3%CA%FD%CB%A1#s2a04919
+
+よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From abee ＠ squeakland.jp  Mon Feb 13 17:56:58 2006
+From: abee ＠ squeakland.jp (Kazuhiro ABE)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2876] 教育用プログラミング言語に関するワークショップ  2006
+Message-ID: <43F049DA29C.E479ABEE@smtp.nifty.com>
+
+阿部@新百合です。
+
+2006/3/29(水)に東京の内田洋行 新川オフィス“CANVAS”で「教育用プログラミ
+ング言語に関するワークショップ2006」が開催されます。
+
+http://ce.tt.tuat.ac.jp/sigps/index.php?%B6%B5%B0%E9%CD%D1%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC%A4%CB%B4%D8%A4%B9%A4%EB%A5%EF%A1%BC%A5%AF%A5%B7%A5%E7%A5%C3%A5%D72006
+
+WG委員長の並木先生のお話では、LLDNの教育言語版とのことで、私は Squeak(と
+いうかeToysか)代表ということでお話しさせていただきます。
+
+参加方法などは上記Webページをご覧ください。よろしくお願いします。
+
+ //abee
+--
+阿部 和広  EMAIL abee@squeakland.jp
+
+From umejava ＠ mars.dti.ne.jp  Thu Feb 16 11:15:10 2006
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2877] SqueakSourceJベータ版
+Message-ID: <JE200602161115107.5074265@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+Squeak版のSourceForgeとも言えるSqueakSourceを日本語化して立ち上げました。
+
+SqueakSourceJ
+http://swikis.ddo.jp:9091/
+
+使い方はヘルプタブ、および「最初に読んでください」プロジェクトをご覧ください。
+
+川村さんの紹介もあります。
+http://squeak.qp.land.to/index.php?Squeak%2FSqueakSource
+
+自分用のやつをインストールしたいというかたは、以下です。
+http://swikis.ddo.jp/umejava/32
+
+便利なコードリポジトリとして自由に使えます。
+
+まだベータ版としての位置づけで少し不安定なところがあるかもしれませんが、
+使ってみないとなんとも言えない部分もあります。
+バックアップはちゃんと取っていますので、どしどしプロジェクトを登録して
+お試しください。
+
+---
+[:masashi | ^umezawa]
+
+From yoshiki ＠ squeakland.org  Fri Feb 17 06:15:56 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2878] Re: Squeak Board Election
+In-Reply-To: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+Message-ID: <ufymjuhrn.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  一週間ほど前に書きましたが、開発者向けSqueakのコミュニティで、「ボー
+ドメンバー」を選ぶ選挙が行われます。あと24時間ほどで選挙権(投票と被選
+挙権)の締め切りがあります。
+
+  結局、大島は立候補することになりました。日本のコミュニティでは、開発
+者向けよりは教育向けのeToysのほうが重要視されていると思うので、その辺
+も考慮しつつ調整していく役になりたいと思っています。
+
+  というわけで、もし投票をしたい人は、僕にメールアドレスを伝えてくださ
+るか、http://people.squeakfoundation.org/に登録し、そのことを伝えてく
+ださるかしてください。
+
+  よろしくお願いします。
+
+-- Yoshiki
+
+At Sat, 11 Feb 2006 23:39:28 -0800,
+Yoshiki Ohshima wrote:
+> 
+>   開発者向けSqueakの本家squeak-devコミュニティで、ボードメンバーの選
+> 挙が行われることが決まっています。議題は、Squeakの方向性を決めるボード
+> メンバーを選ぶ、というものだけです。投票権は
+> 
+>   1. SqueakPeopleというコミュニティサイト
+>      (http://people.squeakfoundation.org/)にアカウントを持っていて、
+>      "Apprentice"以上にランクされている人
+> 
+>   2. 日本のコミュニティ連絡係である大島が、選挙管理委員会(Squeak
+>      Election Team)に伝える名簿
+>      に乗っている人。
+> 
+> という2種類の人に与えられることになります。Squeak-jaを読んでいる人で、
+> SqueakPeopleに登録している人は余り多くないようですが、後者は2/17までに
+> 僕が名簿(メールアドレス)をまとめることになっています。
+> 
+>   これからSqueakPeopleに登録したい方はぜひともしていただいてよいですし
+> (すでに登録されている人からランクを認めてもらわないと"Apprentice"には
+> なれないのですが、僕に言ってくださればランク付けします)、あるいは僕宛
+> に2/16頃までにメールを送ってくだされば、2/17にまとめたものをElection
+> Teamに送ります。
+> 
+>   ちなみに、日本からは梅澤さんか僕が立候補することになりそうです。せっ
+> かくですので、日本の活動のvisibilityを少し高めていこうではありませんか。
+> 
+>   というわけで、ご検討ください。
+> 
+> -- Yoshiki
+
+From namiki ＠ cc.tuat.ac.jp  Mon Feb 20 15:58:09 2006
+From: namiki ＠ cc.tuat.ac.jp (Mitaro Namiki)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2879] 情報処理学会誌にITスクール記事
+Message-ID: <43F96881.6000104@cc.tuat.ac.jp>
+
+みなさま、農工大の並木です。
+
+Squeakを用いたITスクールについて、情報処理学会誌から依頼があり、
+2004年度と2005年度についての結果をまとめた記事が、
+今月２月号に掲載されました。
+
+並木美太郎：ITスクールによる高度IT人材育成事例について(その1)
+    〜高校生にeToysとSmalltalkでオブジェクト指向プログラミングを
+　　　教えてみて〜, 情報処理学会誌, Vol.47, No.2, pp.109-115 (2006.2)
+
+ページ数に限りがあり、いたらない点、ご不満な点もも多々あるかと
+思いますが、ご容赦ください。
+
+PS
+  2/17,18のコンピュータと教育研究会はありがとうございました。＞阿部様
+//
+
+
+
+From yoshiki ＠ squeakland.org  Thu Feb 23 17:52:28 2006
+From: yoshiki ＠ squeakland.org (Yoshiki Ohshima)
+Date: Thu Dec  6 11:03:25 2007
+Subject: [Squeak-ja: 2880] Re: Squeak Board Election
+In-Reply-To: <ufymjuhrn.wl%yoshiki@squeakland.org>
+References: <u1wy9vxe7.wl%yoshiki@squeakland.org>
+	<ufymjuhrn.wl%yoshiki@squeakland.org>
+Message-ID: <ulkw2sbhv.wl%yoshiki@squeakland.org>
+
+  おおしまです。
+
+  開発者向けSqueakコミュニティでの投票に関する話ですが、現在投票締め切
+りまで15時間ほどになっています。投票の意思を示された方で、まだ投票して
+いない方は届いているはずのメールに書かれたURLを訪れて投票してみてくだ
+さい。
+
+  よろしくお願いします。
+
+-- Yoshiki
+
+P.S.
+ちなみに、1から10までの点数を付けるとき、1が一番良いほうになっています。
+お間違えなきよう。
+

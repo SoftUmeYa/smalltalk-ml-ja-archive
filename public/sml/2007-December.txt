@@ -1,0 +1,352 @@
+From aoki ＠ sra.co.jp  Wed Dec 12 15:01:47 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Wed Dec 12 20:32:48 2007
+Subject: [SML 7341] 合計ぜすに平均を
+Message-ID: <475F794B.1070702@sra.co.jp>
+
+青木＠ＳＲＡ先端技術研究所です。
+
+一見、簡単そうな「平均（相加平均）を求める」プログラムを考え
+てみましょう。実は大変に奥深い内容を含みます。皆さんのプログ
+ラミングに対する話題のネタにしていただければ幸いです。
+
+たとえば、９９９人の成績（百点満点）の平均を求めるプログラム
+なんて、誰にでも作れそうですが、はたして本当でしょうか？
+
+まず、９９９人の成績の仮データを生成するところが難しいでしょ。
+乱数を使えば、なんとかなりそうですが、一様分布しか得られない
+ことが多いはず。実際には正規分布しますもん。正規分布した仮の
+成績データを即座に作り出せるプログラマが少ないですよね。
+
+それに、平均を求めるのに、９９９人の成績を合計して、人数で割
+る、なんてことをしたら、それこそペケ（平均プログラマ以下）。
+
+合計を使わないこと、９９９人も仮であり、人数はこれからもどん
+どん増えて、合計は桁あふれする恐れがあること、それでも即時に
+平均を応答できなければならないこと、これらを満たすプログラム
+（平均というオブジェクト）の作成です。
+
+末尾に完全なプログラム（Smalltalk らしいメタなプログラム）を
+添付しておきますが、要と記すと以下のようになります。
+
+| normalDistribution numberOfPeople averageValue resultValue |
+normalDistribution := JunNormalDistribution mean: 50 deviation: 15.
+numberOfPeople := 0.
+averageValue := 0.
+999 timesRepeat:
+        [resultValue := 0 max: (normalDistribution next min: 100).
+        numberOfPeople := numberOfPeople + 1.
+        averageValue := averageValue + ((resultValue - averageValue) * (1 / numberOfPeople))].
+^averageValue
+
+平均５０点で偏差１５の正規分布した仮の成績データをこしらえな
+がら、合計をすることなく、平均を計算しています。多倍長整数演
+算、分数、そして、浮動小数点ではない固定小数点数、などが具備
+されたオブジェクト指向プログラミング言語ならではですね。
+
+新たな成績（resultValue）を加えたときの新たな平均とは、その成
+績の昔の平均からのズレ（resultValue - averageValue）に対して
+影響力（1 / numberOfPeople）を乗じたものを、昔の平均に加えた
+ものである、というところにあります。
+
+多くの人の中で一人だけ突出しても、その影響は大したことないの
+が明解です。また、総数を２とした特殊な場合、足して２で割れば
+いいことも導出されます。
+
+３０、５０、７０、９０、・・・、と来たとき、私たちはいちいち
+合計して総数で割って平均なんか求めていないのよねぇ〜。突出を
+演出したい（自分の影響力を出したい）のに、衆（多勢）を頼むな
+んて可笑し過ぎますぅ〜。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+
+
+| aClass normalDistribution averageObject |
+aClass := Smalltalk.Jun
+            defineClass: #JunAverageObject
+            superclass: #{Jun.JunAbstractObject}
+            indexedType: #none
+            private: false
+            instanceVariableNames: 'numberOfPeople averageValue '
+            classInstanceVariableNames: ''
+            imports: ''
+            category: 'Jun-Goodies-Misc'.
+aClass
+    compile: 'initialize
+    super initialize.
+    numberOfPeople := 0.
+    averageValue := 0'
+        classified: 'initialize-release' asSymbol;
+    compile: 'value
+    ^averageValue'
+        classified: 'accessing' asSymbol;
+    compile: 'add: resultValue
+    numberOfPeople := numberOfPeople + 1.
+    averageValue := averageValue + ((resultValue - averageValue) * (1 / numberOfPeople))'
+        classified: 'adding' asSymbol.
+(Kernel.Parcel parcelNamed: 'Jun') addClass: aClass.
+(Store.Registry packageNamed: 'Jun-Goodies-Misc') addEntiretyOfClass: aClass.
+
+[normalDistribution := JunNormalDistribution mean: 50 deviation: 15.
+averageObject := aClass new.
+999 timesRepeat: [averageObject add: (0 max: (normalDistribution next min: 100))].
+^averageObject value]
+        ensure: [aClass removeFromSystem]
+
+
+------------------------------------------------------------
+From k-ki ＠ a01.itscom.net  Thu Dec 13 06:23:03 2007
+From: k-ki ＠ a01.itscom.net (SHIMADA Keiki)
+Date: Thu Dec 13 06:50:21 2007
+Subject: [SML 7342] Re: 合計ぜすに平均を
+In-Reply-To: <475F794B.1070702@sra.co.jp>
+References: <475F794B.1070702@sra.co.jp>
+Message-ID: <47605137.6050603@a01.itscom.net>
+
+こんにちは。SHIMADAといいます。
+
+Junに正規分布したサンプル数列を作り出すクラスがある、
+というお話はとても参考になりました。
+数学は苦手なほうなので、今度ソースを覗いてみようと思います。
+
+ところで質問なんですが、JunAverageObjectには桁あふれを考慮した
+コードが見当たらないようなんですが、これは僕が何か勘違いしている
+でしょうか？
+
+あと、
+
+> ３０、５０、７０、９０、・・・、と来たとき、私たちはいちいち
+> 合計して総数で割って平均なんか求めていないのよねぇ〜。突出を
+> 演出したい（自分の影響力を出したい）のに、衆（多勢）を頼むな
+> んて可笑し過ぎますぅ〜。
+
+平均を求めるのに重みづけして足していくというのは、文系の僕でも
+思いつく普通のアルゴリズムだと思うのですが、これは誰を笑って
+いるのでしょうか。
+身の回りにそういうコードを書いていた人がいたとか、Webで話題に
+なっていたとか、そういうこと？
+
+-- 
+Smalltalk allBehaviorsDo:[:each | each praise: 'Halleluja!!']
+島田慶樹（SHIMADA Keiki）
+cake@users.sourceforge.jp
+From aoki ＠ sra.co.jp  Thu Dec 13 10:42:30 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Thu Dec 13 11:08:39 2007
+Subject: [SML 7343] Re: 合計ぜすに平均を
+In-Reply-To: <47605137.6050603@a01.itscom.net>
+References: <475F794B.1070702@sra.co.jp> <47605137.6050603@a01.itscom.net>
+Message-ID: <47608E06.6010306@sra.co.jp>
+
+SHIMADA Keiki さんは書きました:
+> Junに正規分布したサンプル数列を作り出すクラスがある、
+> というお話はとても参考になりました。
+> 数学は苦手なほうなので、今度ソースを覗いてみようと思います。
+
+はい、ぜひソースコードを読んでくださいませ。じゅんの中には典
+型的な分布を表現したクラス群を実装しています。
+
+> ところで質問なんですが、JunAverageObjectには桁あふれを考慮した
+> コードが見当たらないようなんですが、これは僕が何か勘違いしている
+> でしょうか？
+
+勘違いではありませぬ、先のメールに添付したプログラムは皆さん
+のプログラミングの話題にしてもらうべく設（すつら）えたもので
+す。まさに、その部分をＳＭＬの方々に考えていただきたくて。
+
+> 平均を求めるのに重みづけして足していくというのは、文系の僕でも
+> 思いつく普通のアルゴリズムだと思うのですが、これは誰を笑って
+> いるのでしょうか。
+
+誰をも笑っているわけではありませぬ。強いて言えば私自身になり
+ますかね。
+
+> 身の回りにそういうコードを書いていた人がいたとか、Webで話題に
+> なっていたとか、そういうこと？
+
+年末や年度末が近づいてきて、平均を求めて、それを云々しようと
+する時期でもあります。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+From shinsahara ＠ shinsahara.com  Thu Dec 13 15:27:39 2007
+From: shinsahara ＠ shinsahara.com (Shin Sahara from Home)
+Date: Thu Dec 13 16:06:07 2007
+Subject: [SML 7344] Re: 合計ぜすに平均を
+In-Reply-To: <475F794B.1070702@sra.co.jp>
+References: <475F794B.1070702@sra.co.jp>
+Message-ID: <5FD93C0F-9124-44EF-81BE-B6E1DC4551FE@shinsahara.com>
+
+佐原です。
+
+On 2007/12/12, at 15:01, AOKI Atsushi wrote:
+
+> 青木＠ＳＲＡ先端技術研究所です。
+>
+> 一見、簡単そうな「平均（相加平均）を求める」プログラムを考え
+> てみましょう。実は大変に奥深い内容を含みます。皆さんのプログ
+> ラミングに対する話題のネタにしていただければ幸いです。
+>
+> たとえば、９９９人の成績（百点満点）の平均を求めるプログラム
+> なんて、誰にでも作れそうですが、はたして本当でしょうか？
+>
+> まず、９９９人の成績の仮データを生成するところが難しいでしょ。
+> 乱数を使えば、なんとかなりそうですが、一様分布しか得られない
+> ことが多いはず。実際には正規分布しますもん。正規分布した仮の
+> 成績データを即座に作り出せるプログラマが少ないですよね。
+>
+> それに、平均を求めるのに、９９９人の成績を合計して、人数で割
+> る、なんてことをしたら、それこそペケ（平均プログラマ以下）。
+
+でも、1 / numberOfPeople　って、結局、全体を人数で割る 
+ことに変わりないような気がするのですが...
+
+私が作ったVDM++のライブラリでは、以下のようにペケしていま 
+す :-)
+もちろん、こうした方が「証明が簡単なんだもん」という言い訳が 
+あります。
+
+--列sの要素の平均を求める
+static public 平均を得る[@型]: seq of @型 ->  [real]
+平均を得る(列) == if 列 = [] then nil else  
+平均を得る補助関数[@型](0)(0)(列);
+
+static 平均を得る補助関数[@型] : @型 -> @型 ->  
+seq of @型 -> real
+平均を得る補助関数(合計)(要素数)(列) ==
+	cases 列 :
+	[先頭] ^ 後続列	-> 平均を得る補助関数[@ 
+型](合計 + 先頭)(要素数 + 1)(後続列),
+	[]			-> 合計 / 要素数
+	end;
+
+以上。
+
+	Σ忘年会＋宴会 = 99.2kg
+
+> 合計を使わないこと、９９９人も仮であり、人数はこれからもどん
+> どん増えて、合計は桁あふれする恐れがあること、それでも即時に
+> 平均を応答できなければならないこと、これらを満たすプログラム
+> （平均というオブジェクト）の作成です。
+>
+> 末尾に完全なプログラム（Smalltalk らしいメタなプログ 
+> ラム）を
+> 添付しておきますが、要と記すと以下のようになります。
+>
+> | normalDistribution numberOfPeople averageValue resultValue |
+> normalDistribution := JunNormalDistribution mean: 50 deviation: 15.
+> numberOfPeople := 0.
+> averageValue := 0.
+> 999 timesRepeat:
+>        [resultValue := 0 max: (normalDistribution next min: 100).
+>        numberOfPeople := numberOfPeople + 1.
+>        averageValue := averageValue + ((resultValue - averageValue)  
+> * (1 / numberOfPeople))].
+> ^averageValue
+>
+> 平均５０点で偏差１５の正規分布した仮の成績データをこしらえな
+> がら、合計をすることなく、平均を計算しています。多倍長整数演
+> 算、分数、そして、浮動小数点ではない固定小数点数、などが具備
+> されたオブジェクト指向プログラミング言語ならではですね。
+>
+> 新たな成績（resultValue）を加えたときの新たな平均と 
+> は、その成
+> 績の昔の平均からのズレ（resultValue - averageValue） 
+> に対して
+> 影響力（1 / numberOfPeople）を乗じたものを、昔の平均 
+> に加えた
+> ものである、というところにあります。
+>
+> 多くの人の中で一人だけ突出しても、その影響は大したことないの
+> が明解です。また、総数を２とした特殊な場合、足して２で割れば
+> いいことも導出されます。
+>
+> ３０、５０、７０、９０、・・・、と来たとき、私たちはいちいち
+> 合計して総数で割って平均なんか求めていないのよねぇ〜。突出を
+> 演出したい（自分の影響力を出したい）のに、衆（多勢）を頼むな
+> んて可笑し過ぎますぅ〜。
+>
+> ------------------------------------------------------------
+> R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/
+>
+>
+> | aClass normalDistribution averageObject |
+> aClass := Smalltalk.Jun
+>            defineClass: #JunAverageObject
+>            superclass: #{Jun.JunAbstractObject}
+>            indexedType: #none
+>            private: false
+>            instanceVariableNames: 'numberOfPeople averageValue '
+>            classInstanceVariableNames: ''
+>            imports: ''
+>            category: 'Jun-Goodies-Misc'.
+> aClass
+>    compile: 'initialize
+>    super initialize.
+>    numberOfPeople := 0.
+>    averageValue := 0'
+>        classified: 'initialize-release' asSymbol;
+>    compile: 'value
+>    ^averageValue'
+>        classified: 'accessing' asSymbol;
+>    compile: 'add: resultValue
+>    numberOfPeople := numberOfPeople + 1.
+>    averageValue := averageValue + ((resultValue - averageValue) *  
+> (1 / numberOfPeople))'
+>        classified: 'adding' asSymbol.
+> (Kernel.Parcel parcelNamed: 'Jun') addClass: aClass.
+> (Store.Registry packageNamed: 'Jun-Goodies-Misc')  
+> addEntiretyOfClass: aClass.
+>
+> [normalDistribution := JunNormalDistribution mean: 50 deviation: 15.
+> averageObject := aClass new.
+> 999 timesRepeat: [averageObject add: (0 max: (normalDistribution  
+> next min: 100))].
+> ^averageObject value]
+>        ensure: [aClass removeFromSystem]
+>
+>
+> ------------------------------------------------------------
+>
+
+-----------------------------------------------------------------------
+Imagine the World Movement!
+Shin Sahara
+E-Mail: ss@shinsahara.com    http://shinsahara.com
+Phone: +81-80-5402-9755(in Japan and Corea), +81-80-5030-9755(in the  
+world except Corea)
+               +81-80-1114-3378(in Corea, Hong Kong, Taiwan, Europe)
+------------------------------------------------------------------------
+
+
+From aoki ＠ sra.co.jp  Fri Dec 28 10:41:30 2007
+From: aoki ＠ sra.co.jp (AOKI Atsushi)
+Date: Fri Dec 28 10:41:43 2007
+Subject: [SML 7345] Jun758 for Smalltalk
+Message-ID: <4774544A.6060507@sra.co.jp>
+
+青木＠大阪阿波座です。
+
+じゅんの今年最後のバージョン【Jun758】をアップロードしました。
+月亮心（月齢プログラム）の追加や逆行列を求めるガウス消去法の
+改良をはじめとした様々な修正を施しています。
+
+http://www.sra.co.jp/public/sra/technical/jun/
+http://www.sra.co.jp/people/aoki/Jun/htmls/News.html
+
+そして、じゅんのコピーレフトに、澤本依里さん（ＳＲＡ関西）と
+林康一郎さん（名村造船所）を加えました。
+
+http://www.sra.co.jp/people/aoki/Jun/htmls/License.html
+
+月齢カレンダーの生成機能を有する月亮心は（JunFeelTheMoon）は、
+
+http://www.sra.co.jp/people/aoki/Jun/Topics/FeelTheMoon/
+
+新たな直弟子である澤本さんとペアプログラミングで作成しました。
+
+＃年末年始は京都宇治です。関西で年越しをするのは２５年ぶり。
+
+------------------------------------------------------------
+R2D2 (AOKI Atsushi)        http://www.sra.co.jp/people/aoki/

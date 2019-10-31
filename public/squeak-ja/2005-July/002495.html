@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 2495] Windows 版 Squeak での UDP パケット受信について
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202495%5D%20%3D%3Fiso-2022-jp%3Fb%3FV2luZG93cyAbJEJIRxsoQiBTcXVl%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWsgGyRCJEckThsoQiBVRFAgGyRCJVElMSVDJUg8dT8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="002494.html">
+   <LINK REL="Next"  HREF="002496.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 2495] Windows 版 Squeak での UDP パケット受信について</H1>
+    <B>Eiichiro Ito</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%202495%5D%20%3D%3Fiso-2022-jp%3Fb%3FV2luZG93cyAbJEJIRxsoQiBTcXVl%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWsgGyRCJEckThsoQiBVRFAgGyRCJVElMSVDJUg8dT8uGyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCJEskRCQkJEYbKEI%3D%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 2495] Windows 版 Squeak での UDP パケット受信について">e-itoh ＠ ygu.ac.jp
+       </A><BR>
+    <I>2005年 7月  4日 (月) 18:28:21 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="002494.html">[Squeak-ja: 2494] Re: SqueakToys の変数
+</A></li>
+        <LI>次の記事 <A HREF="002496.html">[Squeak-ja: 2496] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2495">[ 日付 ]</a>
+              <a href="thread.html#2495">[ スレッド ]</a>
+              <a href="subject.html#2495">[ 件名 ]</a>
+              <a href="author.html#2495">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>山梨学院大学の伊藤です。
+
+いつも質問ばかりで恐縮ですが、どうも自分で解決できないようなので質問
+させてください。
+
+現在、とあるアプリケーションでUDP通信を利用したいと思っております。要
+するにAIBO上のC++プログラムと、Squeak上のプログラムとで定期的にUDPパケッ
+トを送りあうことを考えています。
+
+そこでUDPを利用したプログラムを書いているのですが、どうもUnixとWindows 
+で挙動が異なるので困っています。Unix上での通信は基本的に想像どおりに動
+くのですが、Windowsではうまく受信ができないようなのです。
+
+下は動作を確認するためのサンプルです、仮にプログラムreceiverとします。
+（ど素人のためのど素人によるSqueak入門から拝借いたしました）
+
+receiver := Socket newUDP setPort: 54321.
+buff := ByteArray new: 100.
+delay := Delay forMilliseconds: 100.
+received := nil.
+Transcript show: 'Receiver start'; cr.
+[received := receiver receiveUDPDataInto: buff.
+ received first isZero ] whileTrue: [ delay wait ].
+Transcript show: 'received(', buff, ')'; cr.
+Transcript show: 'Receiver end'; cr.
+
+これを一方のスクイークのWorkspaceで動かしておき、下のサンプル（sender）
+を別のスクイークで評価します。
+
+src := Socket newUDP.
+host := NetNameResolver addressFromString: '192.168.254.64'.
+src sendUDPData: 'Hello' toHost: host port: 54321.
+
+＃ipアドレスは仮のもので、receiverを起動しているPCに応じて適宜変えます。
+
+こうして、それぞれWindowsやUnix上で動かすと動作結果が変わります。
+
+receiver=Unix版     sender=Unix版    → OK
+receiver=Unix版     sender=Windows版 → OK
+receiver=Windows版  sender=Unix版    → NG
+receiver=Windows版  sender=Windows版 → NG
+
+結果から考えるにWindowsではUDPパケットの受信がうまくいかないようで、
+delay waitで止まったきりになります。受信メソッドとして
+receiveUDPDataInto:fromHost:port:を使った場合でも同様の結果となります。
+
+実際、WindowsでUDP通信を利用するにはどうすればよいのでしょうか？
+どなたかWindows版でUDPの通信に成功している方がいらっしゃれば、ご教示
+いただければと存じます。
+
+なお、環境は以下の通りです。
+
+[Image]
+  Squeak nihongo7
+
+[Unix VM: (squeak -version)]
+3.6.3 #1 2004年  4月 18日 日曜日 21:09:15 JST gcc 2.95.3
+Squeak3.6 of '6 October 2003' [latest update: #5429]
+Linux sk203 2.4.22-0vl2.8smp #1 SMP 2003年 12月 3日 水曜日 00:54:08 JST i686
+default plugin location: /usr/lib/squeak/3.6.3/*.so
+
+[Windows VM:(About Squeak)]
+Squeak 3.7.1 (release) from Sep 23 2004
+Compiler: gcc 2.95.2 19991024 (release)
+
+
+ 
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="002494.html">[Squeak-ja: 2494] Re: SqueakToys の変数
+</A></li>
+	<LI>次の記事 <A HREF="002496.html">[Squeak-ja: 2496] Re: Windows 版 Squeak での UDP パケット受信について
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#2495">[ 日付 ]</a>
+              <a href="thread.html#2495">[ スレッド ]</a>
+              <a href="subject.html#2495">[ 件名 ]</a>
+              <a href="author.html#2495">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

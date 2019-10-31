@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 3611] Re: SuperSwiki2 のバージョンアップ
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203611%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kyIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lUCE8JTglZyVzJSIlQyVXGyhC%3F%3D&In-Reply-To=JL200709281859188.8106406%40mars.dti.ne.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="003610.html">
+   <LINK REL="Next"  HREF="003612.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 3611] Re: SuperSwiki2 のバージョンアップ</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%203611%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IFN1cGVyU3dpa2kyIA%3D%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJE4lUCE8JTglZyVzJSIlQyVXGyhC%3F%3D&In-Reply-To=JL200709281859188.8106406%40mars.dti.ne.jp"
+       TITLE="[Squeak-ja: 3611] Re: SuperSwiki2 のバージョンアップ">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2007年 9月 28日 (金) 21:49:57 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="003610.html">[Squeak-ja: 3610] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+        <LI>次の記事 <A HREF="003612.html">[Squeak-ja: 3612] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3611">[ 日付 ]</a>
+              <a href="thread.html#3611">[ スレッド ]</a>
+              <a href="subject.html#3611">[ 件名 ]</a>
+              <a href="author.html#3611">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>阿部@新百合です。
+
+On Fri, 28 Sep 2007 18:59:18 +0900
+Masashi Umezawa &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">umejava ＠ mars.dti.ne.jp</A>&gt; wrote:
+&gt;<i>name:   SuperSwiki2
+</I>&gt;<i>directory:  /super/SuperSwikiProj
+</I>&gt;<i>type:   bss
+</I>&gt;<i>server: blueplane.jp:9090
+</I>&gt;<i>acceptsUploads: true
+</I>&gt;<i>
+</I>&gt;<i>となります。プロキシを指定できません。SuperSwiki2サーバのホストとポートを
+</I>&gt;<i>直に指定します。(技術的なことをいうと、プロキシとなっているApacheもDelegateも
+</I>&gt;<i>昨今HTTP1.1なので、つなぐことが出来ないのです。これはSqueakプラグイン側の
+</I>&gt;<i>問題です。)
+</I>
+ありがとうございます。これでアクセスできることを確認しました。
+前にも同じことを聞いたような気もします。すみません。
+
+&gt;<i>「探す」については実は問題があって、長押しで出てくる「SuperSwikiを検索」に
+</I>&gt;<i>ついてのみ日本語による検索ができません。(これは2でない旧SuperSwikiについても
+</I>&gt;<i>同じだと思います。)
+</I>&gt;<i>Squeakプラグイン側にパッチを当てる必要があります。参考までに添付してみました。
+</I>
+おお、ぜんぜん気付いていませんでした。確かに旧SuperSwikiでも検索できませ
+ん。梅澤さんのパッチで検索できるようになることを確認しました。これは意外
+と便利ですね。
+
+大島さん、よろしければこれをアップデートストリームに入れてもらえないでしょ
+うか。
+
+&gt;&gt;<i> うまく行けば、csにしてアップデートストリームに流してもらおうと思います。
+</I>&gt;&gt;<i> そうすれば現在のSuperSwiki(Squeakland.JP)と同じように、誰でもナビゲータの
+</I>&gt;&gt;<i> 「公開する」や「探す」でアクセス可能になります。
+</I>
+あらためてSqueakland2005J2をみたところ、インストール時に
+静的なファイルとしてprefs\knownServers\squeakland.jpを作成していますね。
+2005Jでは、JapaneseEnvironment&gt;&gt;setupSqueaklandSpecificsで
+ServerDirectoryに追加していたのですが、これは取りやめたと言うことでしょう
+か(&gt;山宮さん)。このメソッド自体は残っているのですが呼ばれていないようです。
+このメソッドを拡張するのは簡単ですが、どのように作るべきでしょうね。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="003610.html">[Squeak-ja: 3610] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+	<LI>次の記事 <A HREF="003612.html">[Squeak-ja: 3612] Re: SuperSwiki2 のバージョンアップ
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#3611">[ 日付 ]</a>
+              <a href="thread.html#3611">[ スレッド ]</a>
+              <a href="subject.html#3611">[ 件名 ]</a>
+              <a href="author.html#3611">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>

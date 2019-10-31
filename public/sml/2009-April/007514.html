@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7514] Re: 第6回Smalltalk勉強会＠京都
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207514%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNhskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=49D38B5F.9040609%40cc.kyoto-su.ac.jp">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007513.html">
+   <LINK REL="Next"  HREF="007515.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7514] Re: 第6回Smalltalk勉強会＠京都</H1>
+    <B>濱崎治</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=%5BSML%207514%5D%20%3D%3Fiso-2022-jp%3Fb%3FUmU6IBskQkJoGyhCNhskQjJzGyhCU21hbGx0%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FYWxrGyRCSlk2LzJxIXc1fkVUGyhC%3F%3D&In-Reply-To=49D38B5F.9040609%40cc.kyoto-su.ac.jp"
+       TITLE="[SML 7514] Re: 第6回Smalltalk勉強会＠京都">osamu.hamasaki ＠ gmail.com
+       </A><BR>
+    <I>2009年 4月  4日 (土) 15:08:14 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007513.html">[SML 7513] むとうデモの情報(was Re: 第6回Smalltalk勉強会＠京都)
+</A></li>
+        <LI>次の記事 <A HREF="007515.html">[SML 7515] Re: 第6回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7514">[ 日付 ]</a>
+              <a href="thread.html#7514">[ スレッド ]</a>
+              <a href="subject.html#7514">[ 件名 ]</a>
+              <a href="author.html#7514">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>濱崎です。
+先日の第６回Smalltalk勉強会＠京都は参加出来ず、残念でした。
+
+2009/04/02 0:42 AOKI Atsushi &lt;<A HREF="http://www.smalltalk.jp/mailman/listinfo/sml">atsushi ＠ cc.kyoto-su.ac.jp</A>&gt;:
+
+&gt;<i>
+</I>&gt;<i> 参考となるプログラム断片も公開（リンク）しておきました。
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto6">http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto6</A>
+</I>&gt;<i> <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/20090329/index-j.html">http://www.cc.kyoto-su.ac.jp/~atsushi/Programs/20090329/index-j.html</A>
+</I>&gt;<i>
+</I>&gt;<i> --- 青木淳＠京都宇治
+</I>&gt;<i>
+</I>
+このリンクにあったプログラムを見て、どんなお話をされたのか概ねイメージ出来ました。
+情報の公開、ありがとうございます。ダブルディスパッチなんかも、慣れるまでは何を
+やっているのか判りづらいので、今回は大変だったのでは、と想像します。
+
+ところで、公開して頂いたプログラム断片のうち、数を表すオブジェクト群の#generalityの値を
+調べるプログラムですが、下から２番目のものについて、以下の点で違和感を感じました。
+
+・#generalityを実装しているクラスを探しているが、見つけてきた「クラス」に#generalityを
+送信している。普通は、見つけてきたクラスの「インスタンス」にメッセージを送らないと
+メッセージを理解してくれない。（#generalityはたまたまクラスの方も応答してくれるように
+なっているので、このプログラムでもそれなりに動きますが。。。）
+
+ということで、見つけてきたクラスのインスタンスに#generalityを送信して、値を答えて
+もらうようにしたプログラムを書きました。こうすることにより、ソースコードを解析して
+値を取り出す必要もなくなっています。
+
+インスタンスを生成する為に#basicNewを使っているのですが、SmallIntegerは#basicNewを
+受け付けないので、例外を捕まえて#zeroを送り直しています。
+また、ArithmeticValueは#generalityを定義していますが、抽象クラスなので#generalityの
+メソッドは、以前に勉強会で話題になった、
+
+self subclassResponsibility
+
+と書かれています。なので、ここも例外を捕まえてリストする対象から外しています。
+
+あとついでに、「#generalityを実装しているクラス」ではなく、「#generalityに答えられる
+クラス」をリストするようにしてみました。実装しているクラスをリストしたい場合は、
+
+Smalltalk
+allBehaviorsDo:
+[:aClass | (aClass canUnderstand: messageSelector) ifTrue: [classes add:
+aClass]].
+
+の部分を
+
+Smalltalk
+allBehaviorsDo:
+[:aClass | (aClass includesSelector: messageSelector) ifTrue: [classes add:
+aClass]].
+
+に変更して下さい。
+
+＃「メッセージを定義しているクラスを探ためだけにMethodCollectorを使うのは、大げさな感じが
+＃した」というのもあり、こんな風に変えてみました。
+
+以上です。
+
+------- 以下、プログラム ----------
+
+|<i> classes messageSelector generalityTable aStream aModel |
+</I>messageSelector := #generality.
+classes := OrderedCollection new.
+Smalltalk
+allBehaviorsDo:
+[:aClass | (aClass canUnderstand: messageSelector) ifTrue: [classes add:
+aClass]].
+classes := classes select: [:class | class isMeta not and: [class isObsolete
+not]].
+generalityTable := Dictionary new.
+classes
+do:
+[:aClass |
+|<i> instanceCreationMessage anInstance |
+</I>instanceCreationMessage := #basicNew.
+[anInstance := aClass perform: instanceCreationMessage]
+on: Error
+do:
+[:exception |
+instanceCreationMessage := #zero.
+exception retry].
+[| aCollection |
+aCollection := generalityTable
+at: (anInstance perform: messageSelector)
+ifAbsentPut: [OrderedCollection new].
+aCollection add: aClass]
+on: SubclassResponsibilityError
+do: [:exception | exception return]].
+aStream := String new writeStream.
+[generalityTable associations asSortedCollection
+do:
+[:association |
+aStream
+nextPutAll: association key printString;
+nextPutAll: ' ('.
+association value
+do: [:aClass | aStream nextPutAll: aClass printString]
+separatedBy: [aStream space].
+aStream
+nextPutAll: ')';
+cr;
+flush]] ensure: [aStream close].
+aModel := ValueHolder with: aStream contents.
+TextEditorView
+    open: aModel
+    label: 'Implementors of ' , messageSelector printString
+    icon: (Icon constantNamed: #workspace)
+    extent: 350 @ 220.
+(aModel dependents detect: [:each | each isKindOf: TextEditorView])
+    controller
+    selectFrom: 1
+    to: aModel value size.
+^generalityTable
+-------------------
+
+Osamu Hamasaki
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: <A HREF="http://www.smalltalk.jp/pipermail/sml/attachments/20090404/2ae7c622/attachment.htm">http://www.smalltalk.jp/pipermail/sml/attachments/20090404/2ae7c622/attachment.htm</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007513.html">[SML 7513] むとうデモの情報(was Re: 第6回Smalltalk勉強会＠京都)
+</A></li>
+	<LI>次の記事 <A HREF="007515.html">[SML 7515] Re: 第6回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7514">[ 日付 ]</a>
+              <a href="thread.html#7514">[ スレッド ]</a>
+              <a href="subject.html#7514">[ 件名 ]</a>
+              <a href="author.html#7514">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SML 7885] Re: 継続(continuation)というスタイル
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207885%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCN1FCMxsoQihjb250aW51YXRpb24pGyRCJEgbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkJiU5JT8lJCVrGyhC%3F%3D&In-Reply-To=%3C4D0DBF5C.7050603%40cc.kyoto-su.ac.jp%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="007883.html">
+   <LINK REL="Next"  HREF="007886.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SML 7885] Re: 継続(continuation)というスタイル</H1>
+    <B>AOKI Atsushi</B>
+    <A HREF="mailto:sml%40smalltalk.jp?Subject=Re%3A%20%5BSML%207885%5D%20Re%3A%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCN1FCMxsoQihjb250aW51YXRpb24pGyRCJEgbKEI%3D%3F%3D%0A%20%3D%3Fiso-2022-jp%3Fb%3FGyRCJCQkJiU5JT8lJCVrGyhC%3F%3D&In-Reply-To=%3C4D0DBF5C.7050603%40cc.kyoto-su.ac.jp%3E"
+       TITLE="[SML 7885] Re: 継続(continuation)というスタイル">atsushi ＠ cc.kyoto-su.ac.jp
+       </A><BR>
+    <I>2010年 12月 19日 (日) 17:16:28 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="007883.html">[SML 7883] 継続(continuation)というスタイル
+</A></li>
+        <LI>次の記事 <A HREF="007886.html">[SML 7886] 第27回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7885">[ 日付 ]</a>
+              <a href="thread.html#7885">[ スレッド ]</a>
+              <a href="subject.html#7885">[ 件名 ]</a>
+              <a href="author.html#7885">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>青木＠京都宇治です。
+
+先のメールにて、継続（コンティニュエーション・パッシング・ス
+タイル）を用いて階乗計算を行うプログラムを紹介しましたが、
+
+|<i> factorial |
+</I>factorial :=
+        [:n :continuation |
+        (n isInteger not or: [n negative]) ifTrue: [^self error: 'boo!'].
+        n = 0
+            ifTrue: [continuation value: 1]
+            ifFalse: [factorial value: n - 1 value: [:a | continuation value: a * n]].
+        n halt].
+factorial value: 10 value: [:a | ^a]
+
+その実行過程をプログラム（ソースコード）として生成し、整形し、
+実行し、その結果を獲得するプログラムを書き下ろしてみました。
+
+|<i> anInteger anInterval aStream aCode aTree aResult |
+</I>anInteger := 10.
+anInterval := 0 to: anInteger.
+aStream := String new writeStream.
+aCode :=
+        [anInterval do:
+                [:n |
+                | s |
+                s := n printString.
+                aStream nextPutAll: '| con' , s , ' | con' , s , ' := '.
+                n &lt; anInterval last
+                    ifTrue: [aStream nextPutAll: '[:a' , s , ' | ']
+                    ifFalse: [aStream nextPutAll: '[:a | ^a]. ']].
+        anInterval reverse do:
+                [:n |
+                | s |
+                s := n printString.
+                aStream nextPutAll: 'con' , s , ' value: '.
+                n &gt; anInterval first
+                    ifTrue:
+                        [| r |
+                        r := (n - 1) printString.
+                        aStream nextPutAll: 'a' , r , ' * ' , s , ']. ']
+                    ifFalse: [aStream nextPutAll: '1']].
+        aStream contents]
+                ensure: [aStream close].
+aTree := Refactory.Browser.RBParser parseExpression: aCode.
+aCode := aTree formattedCode.
+aResult := Compiler evaluate: aCode.
+Transcript
+    clear;
+    nextPutAll: aCode;
+    cr;
+    nextPutAll: '==&gt; ';
+    nextPutAll: aResult printString.
+^aResult
+
+トランスクリプトには次のように出力されます。conNがfactorialN
+のコンティニュエーションを意味しています。
+
+|<i> con0 |
+</I>con0 :=
+        [:a0 |
+        | con1 |
+        con1 :=
+                [:a1 |
+                | con2 |
+                con2 :=
+                        [:a2 |
+                        | con3 |
+                        con3 :=
+                                [:a3 |
+                                | con4 |
+                                con4 :=
+                                        [:a4 |
+                                        | con5 |
+                                        con5 :=
+                                                [:a5 |
+                                                | con6 |
+                                                con6 :=
+                                                        [:a6 |
+                                                        | con7 |
+                                                        con7 :=
+                                                                [:a7 |
+                                                                | con8 |
+                                                                con8 :=
+                                                                        [:a8 |
+                                                                        | con9 |
+                                                                        con9 :=
+                                                                                [:a9 |
+                                                                                | con10 |
+                                                                                con10 := [:a | ^a].
+                                                                                con10 value: a9 * 10].
+                                                                        con9 value: a8 * 9].
+                                                                con8 value: a7 * 8].
+                                                        con7 value: a6 * 7].
+                                                con6 value: a5 * 6].
+                                        con5 value: a4 * 5].
+                                con4 value: a3 * 4].
+                        con3 value: a2 * 3].
+                con2 value: a1 * 2].
+        con1 value: a0 * 1].
+con0 value: 1
+==&gt; 3628800
+
+------------------------------------------------------------
+AOKI Atsushi          <A HREF="http://www.cc.kyoto-su.ac.jp/~atsushi/">http://www.cc.kyoto-su.ac.jp/~atsushi/</A>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="007883.html">[SML 7883] 継続(continuation)というスタイル
+</A></li>
+	<LI>次の記事 <A HREF="007886.html">[SML 7886] 第27回Smalltalk勉強会＠京都
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#7885">[ 日付 ]</a>
+              <a href="thread.html#7885">[ スレッド ]</a>
+              <a href="subject.html#7885">[ 件名 ]</a>
+              <a href="author.html#7885">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.akademia.co.jp/Smalltalk/SML/">SML メーリングリストの案内
+</a><br>
+</body></html>

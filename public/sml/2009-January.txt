@@ -1,0 +1,647 @@
+From atsushi ＠ cc.kyoto-su.ac.jp  Mon Jan  5 12:15:45 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Mon Jan  5 12:16:01 2009
+Subject: [SML 7451] 第3回Smalltalk勉強会＠京都
+Message-ID: <49617B61.6000700@cc.kyoto-su.ac.jp>
+
+あけましておめでとうございます、青木＠京都上賀茂です。
+
+今日が仕事始めの方々が多かろうと思います。京都の市街にもビジ
+ネスマンの姿が戻ってきました。
+
+さて、京都の駅前で行っている Smalltalk 勉強会ですが、予定通り
+に第3回を開催いたします。
+
+------------------------------------------------------------
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+
+第3回 Smalltalk勉強会＠京都
+日時：2009年01月07日（水）19:00〜21:00
+場所：キャンパスプラザ京都 6階 大学院サテライト 第2講習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+テキスト（ブラックブック）の第2章と第3章を中心に行ってゆきま
+す。ノート型のパーソナルコンピュータ（Windows Vista/XP または
+Mac OS X (on Intel Mac)）をご持参ください。最新の「じゅん for
+Smalltalk（現在、Jun773o で abc… の o = 15番目まで上がってま
+す）」を配布いたします。
+
+------------------------------------------------------------
+
+私は大晦日と元旦の両日以外、大学の研究室に出てきて Smalltalk
+プログラミングをしておりました。年末年始でかなりの量のプログ
+ラムを書き下ろしました。やはり、Smalltalk はしゃべりやすい！
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From osamu.hamasaki ＠ gmail.com  Tue Jan  6 23:53:03 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Tue Jan  6 23:57:14 2009
+Subject: [SML 7452] Re: 第3回Smalltalk勉強会＠京都
+In-Reply-To: <49617B61.6000700@cc.kyoto-su.ac.jp>
+References: <49617B61.6000700@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd30901060653ud0d782ah1ef13b8f79c9983e@mail.gmail.com>
+
+濱崎です。
+
+あけましておめでとうございます。本年もどうぞよろしくお願いします。
+
+明日のSmalltalk勉強会ですが、今週は上海で仕事をしてまして、残念ですが参加できません。
+
+また来月よろしくお願いします。
+
+ところで、毎回、資料を作ってきて下さいますが、あれはＷＥＢでの公開は出来ないものでしょうか？
+第２回のものはBlack Bookには書いてないお話とかが書かれていて、参考になるなあと思いました。ご検討頂ければ有難いです。
+
+Osamu Hamasaki
+
+
+
+2009/01/05 12:15 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+
+> あけましておめでとうございます、青木＠京都上賀茂です。
+>
+> 今日が仕事始めの方々が多かろうと思います。京都の市街にもビジ
+> ネスマンの姿が戻ってきました。
+>
+> さて、京都の駅前で行っている Smalltalk 勉強会ですが、予定通り
+> に第3回を開催いたします。
+>
+> ------------------------------------------------------------
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/<http://www.cc.kyoto-su.ac.jp/%7Eatsushi/Smalltalkers/>
+>
+> 第3回 Smalltalk勉強会＠京都
+> 日時：2009年01月07日（水）19:00〜21:00
+> 場所：キャンパスプラザ京都 6階 大学院サテライト 第2講習室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+>
+> テキスト（ブラックブック）の第2章と第3章を中心に行ってゆきま
+> す。ノート型のパーソナルコンピュータ（Windows Vista/XP または
+> Mac OS X (on Intel Mac)）をご持参ください。最新の「じゅん for
+> Smalltalk（現在、Jun773o で abc… の o = 15番目まで上がってま
+> す）」を配布いたします。
+>
+> ------------------------------------------------------------
+>
+> 私は大晦日と元旦の両日以外、大学の研究室に出てきて Smalltalk
+> プログラミングをしておりました。年末年始でかなりの量のプログ
+> ラムを書き下ろしました。やはり、Smalltalk はしゃべりやすい！
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/<http://www.cc.kyoto-su.ac.jp/%7Eatsushi/>
+>
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.akademia.co.jp/pipermail/sml/attachments/20090106/78b19038/attachment.htm
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan  7 08:46:12 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jan  7 08:46:25 2009
+Subject: [SML 7453] Re: 第3回Smalltalk勉強会＠京都
+In-Reply-To: <1bc06fd30901060653ud0d782ah1ef13b8f79c9983e@mail.gmail.com>
+References: <49617B61.6000700@cc.kyoto-su.ac.jp>
+	<1bc06fd30901060653ud0d782ah1ef13b8f79c9983e@mail.gmail.com>
+Message-ID: <4963ED44.8080506@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+濱崎治さんは書きました:
+> 明日のSmalltalk勉強会ですが、今週は上海で仕事をしてまして、残念ですが参
+> 加できません。
+
+まぁ！それは残念。濱崎さんに参加していただくと、乗せられて、
+オフレコを連発してしまうので、その面では好都合かも。:-)
+
+> また来月よろしくお願いします。
+
+はい、ぜひとも２月（第4回Smalltalk勉強会＠京都）にご参加を。
+
+> ところで、毎回、資料を作ってきて下さいますが、あれはＷＥＢでの公開は出来
+> ないものでしょうか？
+> 第２回のものはBlack Bookには書いてないお話とかが書かれていて、参考になる
+> なあと思いました。ご検討頂ければ有難いです。
+
+公開しておきました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto2
+補足資料：20081203_Smalltalk_handout.pdf
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From yoshiki ＠ vpri.org  Wed Jan  7 22:24:25 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Wed Jan  7 22:24:50 2009
+Subject: [SML 7454] Re: 第3回Smalltalk勉強会＠京都
+In-Reply-To: <49617B61.6000700@cc.kyoto-su.ac.jp>
+References: <49617B61.6000700@cc.kyoto-su.ac.jp>
+Message-ID: <u63kr9rli.wl%yoshiki@vpri.org>
+
+  今日は興味深い勉強会に寄せていただいて面白い経験になりました。
+
+  今朝以下のようなメールを書いたのですが、何らかの理由でSMLに届いてい
+なかったようです。普段はメールに確実性を求めないつもりではいますが、本
+を割引価格で入手できなかったのが心残りです^^;
+
+-- Yoshiki
+
+----------------------------------------------------------------
+  あけましておめでとうございます。
+
+  せっかく京都にいることもあるので、スポット参加ということになってしま
+いますが今日の勉強会に参加したいと思うのですが、可能でしょうか?
+
+  ブラックブックもはずかしながら未購入なのですが、もし可能であれば参加
+時に購入したいと思います。
+
+  よろしくお願いします。
+
+-- Yoshiki
+
+At Mon, 05 Jan 2009 12:15:45 +0900,
+AOKI Atsushi wrote:
+> 
+> あけましておめでとうございます、青木＠京都上賀茂です。
+> 
+> 今日が仕事始めの方々が多かろうと思います。京都の市街にもビジ
+> ネスマンの姿が戻ってきました。
+> 
+> さて、京都の駅前で行っている Smalltalk 勉強会ですが、予定通り
+> に第3回を開催いたします。
+> 
+> ------------------------------------------------------------
+> http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/
+> 
+> 第3回 Smalltalk勉強会＠京都
+> 日時：2009年01月07日（水）19:00〜21:00
+> 場所：キャンパスプラザ京都 6階 大学院サテライト 第2講習室
+> テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> 
+> テキスト（ブラックブック）の第2章と第3章を中心に行ってゆきま
+> す。ノート型のパーソナルコンピュータ（Windows Vista/XP または
+> Mac OS X (on Intel Mac)）をご持参ください。最新の「じゅん for
+> Smalltalk（現在、Jun773o で abc… の o = 15番目まで上がってま
+> す）」を配布いたします。
+> 
+> ------------------------------------------------------------
+> 
+> 私は大晦日と元旦の両日以外、大学の研究室に出てきて Smalltalk
+> プログラミングをしておりました。年末年始でかなりの量のプログ
+> ラムを書き下ろしました。やはり、Smalltalk はしゃべりやすい！
+> 
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jan  8 07:22:28 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jan  8 07:22:41 2009
+Subject: [SML 7455] Re: 第3回Smalltalk勉強会＠京都
+In-Reply-To: <4963ED44.8080506@cc.kyoto-su.ac.jp>
+References: <49617B61.6000700@cc.kyoto-su.ac.jp>	<1bc06fd30901060653ud0d782ah1ef13b8f79c9983e@mail.gmail.com>
+	<4963ED44.8080506@cc.kyoto-su.ac.jp>
+Message-ID: <49652B24.2010308@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+昨夜の「Smalltalk 勉強会＠京都」の報告です。まずは七草（正月
+早々）に会場へ足を運んでいただいた方々にお礼を申し上げます。
+
+ブラックブックの２章を中心に行いました。３章には入れませんで
+したが、テキスト（書き込んだプログラムの）選択やショートカッ
+トキーなど、２章を執筆した浅岡さんが中心になって話をしてくれ
+ました。本に書ききれなかった（余計な！？）ことを、忌憚なく喋
+らせていただきました。
+
+前半は Jun773r のアーカイブの配布、それを Jun773s に上げるた
+めのパッチプログラムの配布、澤本さんと年末年始にペアプログラ
+ミングした MIDI 関連ライブラリの紹介をさせていただきました。
+
+大晦日と元旦の両日を除いて、澤本さんと一緒にプログラミングに
+励んだ成果をクラス図（暫定版）にまとめておきました。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/pdfs/20090107_JunMidiClasses.pdf
+昨夜の勉強会の捕捉資料にしたいと思います。
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto3
+
+次回の勉強会は２月４日になります。万障繰り合わせて京都駅前の
+キャンパスプラザへご参集ください。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jan  8 07:23:03 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jan  8 07:23:17 2009
+Subject: [SML 7456] Re: 第3回Smalltalk勉強会＠京都
+In-Reply-To: <u63kr9rli.wl%yoshiki@vpri.org>
+References: <49617B61.6000700@cc.kyoto-su.ac.jp>
+	<u63kr9rli.wl%yoshiki@vpri.org>
+Message-ID: <49652B47.90500@cc.kyoto-su.ac.jp>
+
+青木＠京都宇治です。
+
+Yoshiki Ohshima さんは書きました:
+>
+>   今日は興味深い勉強会に寄せていただいて面白い経験になりました。
+>
+>   今朝以下のようなメールを書いたのですが、何らかの理由でSMLに届いてい
+> なかったようです。普段はメールに確実性を求めないつもりではいますが、本
+> を割引価格で入手できなかったのが心残りです^^;
+>
+> -- Yoshiki
+>
+> ----------------------------------------------------------------
+>   あけましておめでとうございます。
+>
+>   せっかく京都にいることもあるので、スポット参加ということになってしま
+> いますが今日の勉強会に参加したいと思うのですが、可能でしょうか?
+>
+>   ブラックブックもはずかしながら未購入なのですが、もし可能であれば参加
+> 時に購入したいと思います。
+>
+>   よろしくお願いします。
+>
+> -- Yoshiki
+
+そうなんです、昨夜の「Smalltalk 勉強会＠京都」に大島芳樹さん
+が突然に現れた格好になりました。SML に当該のメールが流れてい
+なかったものですから、私はかなりビックリしました。ロサンゼル
+スからお越しいただき有り難うございました。
+
+濱崎さんも、安田さんも、入れ違いになっちゃって残念でしたぁ〜
+
+久しぶりに下記（自分）のページを見ましたよ。みんな若いよね…
+http://www.sra.co.jp/people/aoki/Zau-Chu/
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+
+From osamu.hamasaki ＠ gmail.com  Fri Jan  9 00:07:28 2009
+From: osamu.hamasaki ＠ gmail.com (濱崎治)
+Date: Fri Jan  9 00:11:09 2009
+Subject: [SML 7457] Re: 第3回Smalltalk勉強会＠京都
+In-Reply-To: <49652B47.90500@cc.kyoto-su.ac.jp>
+References: <49617B61.6000700@cc.kyoto-su.ac.jp>
+	<u63kr9rli.wl%yoshiki@vpri.org> <49652B47.90500@cc.kyoto-su.ac.jp>
+Message-ID: <1bc06fd30901080707w2a0eb639h924677a00377f087@mail.gmail.com>
+
+濱崎です。
+
+ホントに残念でした。
+
+たしか何年か前に、大島さんにお会いしたような記憶がありまし。
+京都で最初のC5があったときだったような。。。
+
+また、機会があれば、是非お会いしたいです。
+
+Osamu Hamasaki
+
+
+
+2009/01/08 7:23 AOKI Atsushi <atsushi@cc.kyoto-su.ac.jp>:
+
+> 青木＠京都宇治です。
+>
+> Yoshiki Ohshima さんは書きました:
+> >
+> >   今日は興味深い勉強会に寄せていただいて面白い経験になりました。
+> >
+> >   今朝以下のようなメールを書いたのですが、何らかの理由でSMLに届いてい
+> > なかったようです。普段はメールに確実性を求めないつもりではいますが、本
+> > を割引価格で入手できなかったのが心残りです^^;
+> >
+> > -- Yoshiki
+> >
+> > ----------------------------------------------------------------
+> >   あけましておめでとうございます。
+> >
+> >   せっかく京都にいることもあるので、スポット参加ということになってしま
+> > いますが今日の勉強会に参加したいと思うのですが、可能でしょうか?
+> >
+> >   ブラックブックもはずかしながら未購入なのですが、もし可能であれば参加
+> > 時に購入したいと思います。
+> >
+> >   よろしくお願いします。
+> >
+> > -- Yoshiki
+>
+> そうなんです、昨夜の「Smalltalk 勉強会＠京都」に大島芳樹さん
+> が突然に現れた格好になりました。SML に当該のメールが流れてい
+> なかったものですから、私はかなりビックリしました。ロサンゼル
+> スからお越しいただき有り難うございました。
+>
+> 濱崎さんも、安田さんも、入れ違いになっちゃって残念でしたぁ〜
+>
+> 久しぶりに下記（自分）のページを見ましたよ。みんな若いよね…
+> http://www.sra.co.jp/people/aoki/Zau-Chu/
+>
+> ------------------------------------------------------------
+> AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/<http://www.cc.kyoto-su.ac.jp/%7Eatsushi/>
+>
+>
+-------------- next part --------------
+HTMLの添付ファイルを保管しました...
+URL: http://www.akademia.co.jp/pipermail/sml/attachments/20090109/0ad6eee8/attachment.html
+From umejava ＠ mars.dti.ne.jp  Mon Jan 12 21:51:44 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jan 12 21:52:15 2009
+Subject: [SML 7458] 第5回Smalltalk勉強会のお知らせ
+Message-ID: <JL200901122151444.5486656@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+勉強会のお知らせです。今年もSmalltalkを盛り上げていきましょう。
+
+日時: 2009/1/23(金) 19:00- (2,3時間程度)
+場所: シンコム・システムズ・ジャパン株式会社
+テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+または「自由自在Squeakプログラミング」
+
+詳しくは下記をどうぞ。
+http://www.smalltalk-users.jp/Home/gao-zhi/dai5kaismalltalkbenkyoukai
+
+今回は「制御構造を自分で作る」ことを仮のテーマとします。
+
+お気軽に、どしどしお越しください。
+
+---
+[:masashi | ^umezawa]
+From umejava ＠ mars.dti.ne.jp  Tue Jan 13 22:09:52 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Tue Jan 13 22:10:11 2009
+Subject: [SML 7459] SeasideJOnePlusDB正式版
+Message-ID: <JG2009011322095210.3214296@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+SeasideJOnePlusDBをこのたび更新しました。
+
+概要:
+http://swikis.ddo.jp/umejava/SeasideJOnePlus
+
+直リンク:
+ftp://swikis.ddo.jp/SeasideJ/one/SeasideJOne-090112-plusDB.zip
+
+SeasideJOneは展開するだけですぐにSeasideを試すことができるall-in-one
+パッケージです。Windows, Mac, Linuxのすべてで動作します。
+
+PlusDBバージョンにはSStoreという超簡易DB、OmniBaseというODBMSが搭載されて
+います。これらはいわゆる組み込みDBであり、Squeakイメージ内にインストール
+済みです。
+
+またObject-Relational MappingレイヤとしてGlorpが入っています。
+GlorpはいろいろなRDBMSにつながりますが、PostgreSQL用のコネクタがデフォルト
+で入っています。
+
+さて、今回の目玉はDB接続のためのサンプルの同梱です。
+http://swikis.ddo.jp/umejava/uploads/41/ReadMe-ToDoList.txt
+
+このToDoListのWebアプリは、SStoreとOmniBaseとGlorpの全てにつながるように
+なっています。各DB用のセッションアダプタクラスを切り替えるだけで、接続が
+切り替わります。
+
+SmalltalkでどうDBに接続するのかの手頃な例になっていると思いますので、ぜひ、
+お試し下さい。
+
+なお、PostgreSQLのインストールが面倒という方は、ブータブル版もあります。
+こちらはSqLinuxOSというSqueak入りのLinuxで実現されています。
+
+概要:
+http://swikis.ddo.jp/umejava/52
+
+直リンク:
+ftp://swikis.ddo.jp/SqueakDevJa/sqlos/SqLinuxOS2009-Seaside.iso.zip
+
+isoファイルをVMwareなどで起動すれば、既存の環境を一切汚さずに、
+SeasideJOnePlusDBを試すことができます。(PostgresのサービスがSqLinuxOS
+で自動起動するようになっています)
+
+さらにSeasideとDBとの連携については、SeasideへGO!!でより詳しく扱っていく
+予定です。こちらもよろしくお願いします。
+http://www.ogis-ri.co.jp/otc/hiroba/technical/seaside/
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From tmiya ＠ bu.iij4u.or.jp  Thu Jan 15 07:13:19 2009
+From: tmiya ＠ bu.iij4u.or.jp (Takashi MIYAMOTO)
+Date: Thu Jan 15 07:13:34 2009
+Subject: [SML 7460] 第5回Smalltalk勉強会参加希望
+Message-ID: <7912C8B5-DE43-4B84-B7C4-EE38D01CC356@bu.iij4u.or.jp>
+
+はじめまして
+
+Smalltalk勉強会に参加させて頂きたく思い、このMaling List 
+に参加させて
+頂きました。
+いままでSmalltalkは、ちょっと本を買ってみては挫折という 
+感じで、初心者
+ですが宜しくお願い致します。
+
+===================================
+Takashi Miyamoto
+
+
+
+
+From atsushi ＠ cc.kyoto-su.ac.jp  Thu Jan 15 19:13:01 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Thu Jan 15 19:13:20 2009
+Subject: [SML 7461] Jun774 for Smalltalk
+Message-ID: <496F0C2D.9070309@cc.kyoto-su.ac.jp>
+
+青木＠京都上賀茂です。
+
+お待たせをしました。MIDIのためのクラス群を含んだ【Jun774】を
+アップロードしました。カテゴリ『Jun-MIDI』の中に収録されてい
+る例題プログラムを動かしてみれば、百の説明よりも多くを得るこ
+とができると思います。
+
+http://www.sra.co.jp/people/aoki/Jun/htmls/News.html
+
+音を出せるのは Windows Vista / XP です。特に Windows XP な人
+はサウンドミキサーのシンセサイザのボリュームを上げておくこと
+を忘れずに。Windows Media Player が動くとそのボリュームを0に
+しますので、気をつけてくださいませ。
+
+# Mac OS X で楽しめるのは JunMidiRecorder にある例題プログラ
+# ムぐらいかしらん…。音は出ませんが、MIDIファイルは作れます。
+
+さらに詳しいことは澤本依里さんから追ってあると思います。もっ
+と奇抜なプログラミング界面を年度末までに用意しますから、お楽
+しみに。
+
+# 今、研究室では、Smalltalk のプログラムが、ネット上に落ちて
+# いるMIDIファイルを探してきて、エンドレスで再生（演奏）して
+# います。さっきまでウィリアムテル序曲がかかっていました。現
+# 在はフィガロの結婚の序曲。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/
+From umejava ＠ mars.dti.ne.jp  Thu Jan 15 23:16:44 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Thu Jan 15 23:17:14 2009
+Subject: [SML 7462] Re: 第5回Smalltalk勉強会参加希望
+In-Reply-To: <7912C8B5-DE43-4B84-B7C4-EE38D01CC356@bu.iij4u.or.jp>
+References: <7912C8B5-DE43-4B84-B7C4-EE38D01CC356@bu.iij4u.or.jp>
+Message-ID: <JC200901152316446.4975500@mars.dti.ne.jp>
+
+はじめまして。
+梅澤と申します。
+
+ご参加表明、ありがとうございます。お待ちしております。
+
+東京は参加人数が少なめで講師役の割合が多いという状況ですので、
+初心者の方も置いてきぼりになることなく学ぶことができます。
+
+Takashi MIYAMOTO <tmiya@bu.iij4u.or.jp> wrote:
+> はじめまして
+> 
+> Smalltalk勉強会に参加させて頂きたく思い、このMaling List 
+> に参加させて
+> 頂きました。
+> いままでSmalltalkは、ちょっと本を買ってみては挫折という 
+> 感じで、初心者
+> ですが宜しくお願い致します。
+> 
+> ===================================
+> Takashi Miyamoto
+> 
+
+---
+[:masashi | ^umezawa]
+From admin ＠ yengawa.com  Fri Jan 16 01:47:20 2009
+From: admin ＠ yengawa.com (Koji Yokokawa)
+Date: Fri Jan 16 01:47:45 2009
+Subject: [SML 7463] C5 2009で研究報告します
+Message-ID: <496F6898.3000704@yengawa.com>
+
+横川です。
+来週2009年1月19-22日に京都で開催されるC5国際カンファレンスでSqueakで作っ
+たツールの研究報告をします。
+Smalltalkの話は直接は出てきませんが、利用例としてお知らせします。
+(http://www.cm.is.ritsumei.ac.jp/c5-09/ )
+
+"Integration of Expression and Analysis using Constructive Scrapbook"
+Takeshi Sunaga, Koji Yokokawa and Won Jae-sung
+
+1月20日(火曜日)15:20-
+(http://www.cm.is.ritsumei.ac.jp/c5-09/index.php?Program#s9eec23e )
+
+多摩美術大学 須永研究室で研究している市民芸術のための表現ツール
+「CSbook」の報告です。このプロジェクトではワーキングプロトタイプによる
+Activity Based Design手法を使ってツールデザインを行っています。Squeakを
+使ってアジャイルプロセスでプロトタイプを作成しました。
+
+C5へ参加される人は気軽にお声がけください。
+
+-- !
+Koji Yokokawa <ykoubo2008@yengawa.com>
+    http://www.yengawa.com/
+    ^self new!
+
+From tetha ＠ st.rim.or.jp  Fri Jan 23 08:57:07 2009
+From: tetha ＠ st.rim.or.jp (tetha@st.rim.or.jp)
+Date: Fri Jan 23 08:57:23 2009
+Subject: [SML 7464] Re: 第5回Smalltalk勉強会のお知らせ
+In-Reply-To: <JL200901122151444.5486656@mars.dti.ne.jp>
+References: <JL200901122151444.5486656@mars.dti.ne.jp>
+Message-ID: <b8c2540c0901221557p12389399hadfc53be40f28811@mail.gmail.com>
+
+林徹也です。
+つまらないものですが京都みやげをお持ちします。
+紙筒とかご用意されるといいかもしれません。
+ただ人数分はありませんので、抽選なりなんなりよしなに。
+
+# すでに今朝の東西線で少し損耗してしまいましたが(>_<)
+
+
+
+09/01/12 に Masashi Umezawa<umejava@mars.dti.ne.jp> さんは書きました:
+> こんにちは
+> 梅澤です。
+>
+> 勉強会のお知らせです。今年もSmalltalkを盛り上げていきましょう。
+>
+> 日時: 2009/1/23(金) 19:00- (2,3時間程度)
+> 場所: シンコム・システムズ・ジャパン株式会社
+> テキスト: 「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+> または「自由自在Squeakプログラミング」
+>
+> 詳しくは下記をどうぞ。
+> http://www.smalltalk-users.jp/Home/gao-zhi/dai5kaismalltalkbenkyoukai
+>
+> 今回は「制御構造を自分で作る」ことを仮のテーマとします。
+>
+> お気軽に、どしどしお越しください。
+>
+> ---
+> [:masashi | ^umezawa]
+>
+>
+>
+From yoshiki ＠ vpri.org  Fri Jan 23 17:35:18 2009
+From: yoshiki ＠ vpri.org (Yoshiki Ohshima)
+Date: Fri Jan 23 17:35:48 2009
+Subject: [SML 7465] Re: 第5回Smalltalk勉強会のお知らせ
+In-Reply-To: <b8c2540c0901221554m11fbf7a4m79ae9f0d09258e28@mail.gmail.com>
+References: <JC200901122152296.5530828@mars.dti.ne.jp>
+	<b8c2540c0901221554m11fbf7a4m79ae9f0d09258e28@mail.gmail.com>
+Message-ID: <u7i4mv2rd.wl%yoshiki@vpri.org>
+
+  僕はおみやげはないのですが(いやげものもありませんが)、Bert
+Freudenbergを連れて参加します。よろしくお願いします。
+
+-- Yoshiki
+From umejava ＠ mars.dti.ne.jp  Mon Jan 26 21:35:56 2009
+From: umejava ＠ mars.dti.ne.jp (Masashi Umezawa)
+Date: Mon Jan 26 21:36:15 2009
+Subject: [SML 7466] 出張! Smalltalk勉強会のお知らせ
+Message-ID: <JL200901262135562.653125@mars.dti.ne.jp>
+
+こんにちは
+梅澤です。
+
+先日の第5回Smalltalk勉強会は盛り上がりましたね。特にBertさんのfor文は
+秀逸であったと思います。
+
+さて、Smalltalk-users.jpでは、2/12,13のデブサミ2009でブース展示します。
+http://codezine.jp/devsumi/2009/
+
+12日には、さらに、「出張! Smalltalk勉強会」を行います。
+
+普段Smalltalk勉強会に足を運びたくてもできない、あるいはSmalltalkのことを
+よく知らない初心者向けのセッションとなっています。
+http://www.seshop.com/event/dev/2009/timetable/Default.asp?mode=detail&eid=124&sid=790&tr=17%5FReject+Live+%21#790
+http://www.smalltalk-users.jp/Home/gao-zhi/shutchousmalltalkbenkyoukaidebusami2009
+
+通常デブサミのセッションは参加登録が必要ですが、本セッションははぐれもの
+のため、自由参加となっています。お気軽に遊びに来て下さい。
+
+ではでは。
+---
+[:masashi | ^umezawa]
+From atsushi ＠ cc.kyoto-su.ac.jp  Wed Jan 28 15:37:22 2009
+From: atsushi ＠ cc.kyoto-su.ac.jp (AOKI Atsushi)
+Date: Wed Jan 28 15:37:36 2009
+Subject: [SML 7467] 第4回Smalltalk勉強会＠京都
+Message-ID: <497FFD22.9070906@cc.kyoto-su.ac.jp>
+
+青木淳＠京都上賀茂です。
+
+来週の今日（2009年02月04日(水)）に第4回Smalltalk勉強会＠京都
+を開催いたします。文法の詳説を予定しています。メッセージによ
+るプログラム制御構造が解題の中心になると思います。また、仮想
+マシンのバイトコードへとプログラムを翻訳する言語処理系として
+の面も概説する所存です。万障繰り合わせてご参集くださいませ。
+
+http://www.cc.kyoto-su.ac.jp/~atsushi/Smalltalkers/index-j.html#SmalltalkSalonAtKyoto4
+
+第4回 Smalltalk勉強会＠京都
+日時　　：2009年02月04日（水）19:00〜21:00
+場所　　：キャンパスプラザ京都 6階 大学院サテライト 第2講習室
+テキスト：ブラックブック「Smalltalkで学ぶオブジェクト指向プログラミングの本質」
+
+前回はテキスト（ブラックブック）の第2章でしたので、今回は第3
+章を行ってゆきます。ノート型のパーソナルコンピュータ（Windows
+Vista/XP または Mac OS X (on Intel Mac)）をご持参ください。最
+新の「じゅん for Smalltalk（Jun774d）」も配布いたします。
+
+------------------------------------------------------------
+AOKI Atsushi          http://www.cc.kyoto-su.ac.jp/~atsushi/

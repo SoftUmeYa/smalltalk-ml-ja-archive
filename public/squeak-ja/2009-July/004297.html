@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Squeak-ja: 4297] Scratch 1.4の日本語翻訳ファイルの誤りについて
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204297%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCAxLjQbJEIkTkZ8GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEtdTHUlVSUhJSQlayROOG0kaiRLJEQkJCRGGyhC%3F%3D&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf8">
+   <LINK REL="Previous"  HREF="004299.html">
+   <LINK REL="Next"  HREF="004298.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Squeak-ja: 4297] Scratch 1.4の日本語翻訳ファイルの誤りについて</H1>
+    <B>Kazuhiro ABE</B>
+    <A HREF="mailto:squeak-ja%40smalltalk.jp?Subject=%5BSqueak-ja%3A%204297%5D%20%3D%3Fiso-2022-jp%3Fb%3FU2NyYXRjaCAxLjQbJEIkTkZ8GyhC%3F%3D%0A%09%3D%3Fiso-2022-jp%3Fb%3FGyRCS1w4bEtdTHUlVSUhJSQlayROOG0kaiRLJEQkJCRGGyhC%3F%3D&In-Reply-To="
+       TITLE="[Squeak-ja: 4297] Scratch 1.4の日本語翻訳ファイルの誤りについて">abee ＠ squeakland.jp
+       </A><BR>
+    <I>2009年 7月 22日 (水) 00:23:19 JST</I>
+    <P><UL>
+        <LI>前の記事 <A HREF="004299.html">[Squeak-ja: 4299] Re: Squeakの指導の件
+</A></li>
+        <LI>次の記事 <A HREF="004298.html">[Squeak-ja: 4298] Re: Squeakの指導の件
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4297">[ 日付 ]</a>
+              <a href="thread.html#4297">[ スレッド ]</a>
+              <a href="subject.html#4297">[ 件名 ]</a>
+              <a href="author.html#4297">[ 著者 ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>こんにちは、阿部です。
+ユーザのご指摘によりScratch 1.4の日本語翻訳ファイルに間違いが見つかりましたのでお知らせします。
+
+・演算カテゴリのブロック[( ) を ( ) で割った余り]の引数順が逆になっている。
+たとえば、[(9) を (7) で割った余り]が2となるべきところ(9 \\ 7)、7になります(7 \\ 9)。
+これは言語を「日本語」にした場合のみ起こり、「にほんご」(ひらがな)では大丈夫です。
+
+・見た目カテゴリのブロック[( ) 番目にする]は[( ) 層下げる]の誤り。
+スプライトの前後関係に関する機能ですが、表示レイヤの絶対位置ではなく相対位置を変えるものでした。
+「日本語」と「にほんご」の両方に問題があります。
+
+これらを修正した翻訳ファイルを以下に置きました。
+<A HREF="http://squeakland.jp/abee/tmp/japo090721.zip">http://squeakland.jp/abee/tmp/japo090721.zip</A>
+
+展開したファイルを、Scratchをインストールした場所にあるlocaleフォルダ内の同名のファイルと置き換えてお使いください。
+たぶん次バージョンにこの修正も含まれると思われますが、しばらくの間はインストール後に手動でこの作業をお願いします。
+
+これに限らず、なにか気づかれたことがありましたら、お気軽にお寄せください。
+
+ //abee
+--
+阿部 和広  EMAIL <A HREF="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">abee ＠ squeakland.jp</A>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>前の記事 <A HREF="004299.html">[Squeak-ja: 4299] Re: Squeakの指導の件
+</A></li>
+	<LI>次の記事 <A HREF="004298.html">[Squeak-ja: 4298] Re: Squeakの指導の件
+</A></li>
+         <LI> <B>記事の並び順:</B> 
+              <a href="date.html#4297">[ 日付 ]</a>
+              <a href="thread.html#4297">[ スレッド ]</a>
+              <a href="subject.html#4297">[ 件名 ]</a>
+              <a href="author.html#4297">[ 著者 ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://www.smalltalk.jp/mailman/listinfo/squeak-ja">Squeak-ja メーリングリストの案内
+</a><br>
+</body></html>
